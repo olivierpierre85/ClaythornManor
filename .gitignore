@@ -1,0 +1,7 @@
+renpy-7.4.11-sdk.zip
+renpy-7.4.11-sdk/*
+Murder-*
+**/*.rpyc
+**/*.rpymc
+Murder/game/saves/*
+Murder/game/cache/*

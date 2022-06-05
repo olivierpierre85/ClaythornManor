@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/scripts/character_selection.rpy", line 6, in script
+    jump soldier_start
+ScriptError: could not find label 'soldier_start'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/scripts/character_selection.rpy", line 6, in script
+    jump soldier_start
+  File "C:\Users\arthu\Documents\VisualNovelProject\renpy-7.4.11-sdk/renpy/ast.py", line 1757, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\arthu\Documents\VisualNovelProject\renpy-7.4.11-sdk/renpy/script.py", line 918, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'soldier_start'.
+
+Windows-10-10.0.19041
+Ren'Py 7.4.11.2266
+Murder 1.0
+Sat Apr  9 17:53:39 2022

@@ -1,0 +1,12 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label ending_day1_simple is defined twice, at File "game/scripts/Soldier/Endings/ending_day1_simple.rpy", line 4:
+label ending_day1_simple:
+and File "game/scripts/Soldier/ending_day1_simple.rpyc", line 4:
+label ending_day1_simple:
+
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Mon Apr 18 12:33:36 2022
