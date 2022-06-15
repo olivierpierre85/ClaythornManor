@@ -2,8 +2,8 @@
 
 # The game starts here.
 label start:
-    # TODO Menu Image
-    scene great_hall
+    # Debug Menu
+    jump debug_choice
 
     # These display lines of dialogue.
     jump character_selection

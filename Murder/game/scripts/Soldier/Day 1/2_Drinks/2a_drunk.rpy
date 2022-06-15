@@ -1,6 +1,15 @@
 label soldier_day1_drinks_drunk:
+  
   "The middle aged man has a glass of whisky on hand"
+  
   soldier "Hello sir, how are you ?"
+
+  show drunk asleep
+
   drunk "(Snore...)"
 
-  jump ending_day1_simple
+  narrator "it's seems hopeless to talk to him"
+
+  hide drunk asleep
+
+  jump soldier_day1_drinks_introduction_choice

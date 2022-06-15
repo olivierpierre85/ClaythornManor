@@ -1,9 +1,10 @@
 label character_selection:
-  system "Select Your Character"
+  scene
+  narrator "Select Your Character"
 
   menu:
     "The Soldier":
-        jump soldier_introduction
+      jump soldier_day1_arrival_introduction
 
     "The Captain (Locked)" if char_captain:
-        system "You lose old fart 2 save"
+      narrator "You lose old fart 2 save"
