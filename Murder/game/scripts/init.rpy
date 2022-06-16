@@ -5,10 +5,11 @@ define soldier = Character("The Soldier")
 define host = Character("The Host")
 define nurse = Character("The Nurse")
 define drunk = Character("The Drunk")
-define butler = Character("The Butler")
+image side butler = "../images/characters/butler.png"
+define butler = Character("The Butler", image="butler")
 
 define doctor = Character("The Doctor", image="doctor")
-# image side doctor happy = "../images/characters/doctor_happy.png"
+
 # image side doctor = "../images/characters/doctor_neutral.png"
 # image side doctor surprised = "../images/characters/doctor_surprised.png"
 

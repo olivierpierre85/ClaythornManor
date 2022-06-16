@@ -1,7 +1,6 @@
 # Introduction for soldier
 label soldier_day1_dinner_introduction:
 
-  show butler happy
   butler "Diner is served"
 
   narrator "Everyone moves to the dining room"
