@@ -4,12 +4,12 @@ label soldier_day1_drinks_drunk:
   
   soldier "Hello sir, how are you ?"
 
-  show drunk asleep
+  show drunk
 
   drunk "(Snore...)"
 
   narrator "it's seems hopeless to talk to him"
 
-  hide drunk asleep
+  hide drunk
 
   jump soldier_day1_drinks_introduction_choice

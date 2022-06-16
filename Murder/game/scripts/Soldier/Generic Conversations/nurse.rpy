@@ -12,7 +12,7 @@ label nurse_generic():
 
 
 label nurse_generic_1:
-  show nurse nervous
+  show nurse
 
   "The woman seems a bit nervous"
 
@@ -22,7 +22,7 @@ label nurse_generic_1:
 
   soldier "Nice to meet you miss Baxter."
 
-  hide nurse nervous
+  hide nurse
 
   return
 
