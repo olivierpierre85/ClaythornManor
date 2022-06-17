@@ -12,8 +12,11 @@ label soldier_day1_arrival_introduction:
 
   # Entrance in Manor
   # show host at truecenter
+  show butler
+  
   butler "Welcome Sir. We are glad to see you. Have some drinks before diner, not everyone has arrived yet."
-  # hide host
+  
+  hide butler
 
   # Ending
   jump soldier_day1_drinks_introduction

@@ -1,11 +1,10 @@
 # All variables
 # 1. Declare All characters used by this game.
 
-define soldier = Character("The Soldier")
+define soldier = Character("The Soldier", image="soldier")
 define host = Character("The Host")
 define nurse = Character("The Nurse")
 define drunk = Character("The Drunk")
-image side butler = "../images/characters/butler.png"
 define butler = Character("The Butler", image="butler")
 
 define doctor = Character("The Doctor", image="doctor")
