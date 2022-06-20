@@ -1,10 +1,6 @@
 # Introduction for soldier
 label soldier_day1_dinner_introduction:
 
-  butler "Diner is served"
-
-  narrator "Everyone moves to the dining room"
-
   scene dining_hall
 
   narrator "You're ended up sitting between the nurse you talked to before, and a middle aged man"

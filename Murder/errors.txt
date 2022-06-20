@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/scripts/Soldier/Day 1/2_Drinks/1_introduction.rpy", line 15: expected statement.
+    text menu_soldier_day1_drinks_introduction
+                                              ^
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Mon Jun 20 10:41:42 2022

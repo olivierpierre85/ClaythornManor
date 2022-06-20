@@ -12,7 +12,8 @@ label nurse_generic():
 
 
 label nurse_generic_1:
-  show nurse
+  
+  show nurse scared
 
   "The woman seems a bit nervous"
 
