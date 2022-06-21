@@ -1,37 +1,35 @@
-# Generic conversations with betweesn the nurse and the soldier
+# Generic conversations with between the nurse and the soldier
 
-label nurse_generic():
+label nurse_generic:
 
   if soldier_generic_nurse == 0:
-    call nurse_generic_1
-    $ soldier_generic_nurse = soldier_generic_nurse + 1
+
+    show nurse scared
+
+    "The woman seems a bit nervous"
+
+    soldier "Hi miss ..."
+
+    nurse "Miss Baxter, Amalia Baxter."
+
+    $ nurse_name = "Amalia Baxter"
+
+    soldier "Nice to meet you miss Baxter. I am Ted Haring"
+
+    nurse "Likewise."
+    
   else:
-    call nurse_generic_end
+    show nurse scared
 
-  return
+    soldier "Hi again Miss Baxter."
 
+    nurse "Mister Harring. I am glad we can continue our conversation"
 
-label nurse_generic_1:
-  
-  show nurse scared
-
-  "The woman seems a bit nervous"
-
-  soldier "Hi miss ..."
-
-  nurse "Miss Baxter, Amalia Baxter."
-
-  soldier "Nice to meet you miss Baxter. I dont like thiqsQSs"
-
-  $ nurse_name = "Amalia Baxter"
-
-  nurse "Likewise"
+  # After greeting, general discussion
+  call nurse_generic_choices
 
   hide nurse
 
-  return
-
-label nurse_generic_end:
-  nurse "Sorry, but I don't think I have nothing to say to you anymore at the moment." 
+  $ soldier_generic_nurse = soldier_generic_nurse + 1
 
   return

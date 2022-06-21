@@ -45,13 +45,23 @@ label soldier_day1_dinner_introduction:
 
 label soldier_day1_dinner_introduction_choice:  
 
+  $ time_left = 90
+
   show nurse at right
   show doctor at left
 
-  menu:
-    set menu_soldier_day1_dinner_introduction
-    "Talk to Daniel Baldwin":
-        jump soldier_day1_dinner_doctor
+  if time_left > 0:
+    menu:
+      set menu_soldier_day1_dinner_introduction
+      "Talk to Daniel Baldwin":
+          hide nurse
+          hide doctor
+          jump soldier_day1_dinner_doctor
 
-    "Talk to Amalia Baxter":
-        jump soldier_day1_dinner_nurse
+      "Talk to Amalia Baxter":
+          hide nurse
+          hide doctor
+          jump soldier_day1_dinner_nurse
+  
+  else:
+    "The dinner is ending"

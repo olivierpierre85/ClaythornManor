@@ -14,7 +14,11 @@ label soldier_day1_arrival_introduction:
   # show host at truecenter
   show butler
   
-  butler "Welcome Sir. We are glad to see you. Have some drinks before diner, not everyone has arrived yet."
+  butler "Welcome Sir. We are glad to see you."
+
+  butler "Please give your bags to the footman, he will carry them to your room."
+
+  butler "And if you are ready, you can have some drinks before dinner? Not everyone has arrived yet."
   
   hide butler
 

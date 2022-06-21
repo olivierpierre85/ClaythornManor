@@ -7,3 +7,4 @@ Murder/game/saves/*
 Murder/game/cache/*
 Murder/log.txt
 Murder/traceback.txt
+Murder/errors.txt

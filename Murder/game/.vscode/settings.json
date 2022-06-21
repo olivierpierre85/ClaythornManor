@@ -1,5 +1,10 @@
 {
   "files.exclude": {
     "**/*.rpyc": true
-  }
+  },
+  "cSpell.words": [
+    "elif",
+    "Harring",
+    "truecenter"
+  ]
 }

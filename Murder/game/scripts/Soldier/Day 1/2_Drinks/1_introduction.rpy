@@ -31,7 +31,7 @@ label soldier_day1_drinks_introduction_choice:
 
   show butler 
 
-  butler "Diner is served. Please follow me to the dining room."
+  butler "Dinner is served. Please follow me to the dining room."
 
   hide butler 
 
