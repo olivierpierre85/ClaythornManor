@@ -27,9 +27,11 @@ label soldier_day1_drinks_introduction_choice:
         hide drunk
         call soldier_day1_drinks_nurse
 
+  narrator "You would like to keep talking, but you are interrupted by the butler entering the room."
+
   show butler 
 
-  butler "Diner is served"
+  butler "Diner is served. Please follow me to the dining room."
 
   hide butler 
 

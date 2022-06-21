@@ -1,4 +1,4 @@
-# Generic conversations with between the nurse and the soldier
+# Generic conversations with betweesn the nurse and the soldier
 
 label nurse_generic():
 
@@ -21,7 +21,11 @@ label nurse_generic_1:
 
   nurse "Miss Baxter, Amalia Baxter."
 
-  soldier "Nice to meet you miss Baxter."
+  soldier "Nice to meet you miss Baxter. I dont like thiqsQSs"
+
+  $ nurse_name = "Amalia Baxter"
+
+  nurse "Likewise"
 
   hide nurse
 

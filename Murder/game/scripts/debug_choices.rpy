@@ -1,8 +1,12 @@
-label debug_choice:
+label debug_choices:
   menu: 
+    "character_selection":
+      jump character_selection
+    
     # Soldier Possibilities
+    # TODO set necessary var selector before soldier selection?
     "soldier_day1_arrival_introduction":
-      # TODO set necessary var?
+      
       jump soldier_day1_arrival_introduction
 
     "soldier_day1_drinks_introduction":
