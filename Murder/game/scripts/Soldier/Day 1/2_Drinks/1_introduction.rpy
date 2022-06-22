@@ -1,4 +1,7 @@
 label soldier_day1_drinks_introduction:
+
+  $ current_time = "7PM"
+
   scene tea_room
 
   soldier "I look around the room, see multiple persons already engage in conversation."

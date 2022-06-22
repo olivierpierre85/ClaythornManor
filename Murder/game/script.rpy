@@ -2,6 +2,9 @@
 
 # The game starts here.
 label start:
+
+    show screen current_time
+    
     # Debug Menu
     jump debug_choices
 

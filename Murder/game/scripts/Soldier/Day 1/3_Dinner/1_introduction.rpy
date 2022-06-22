@@ -1,6 +1,8 @@
 # Introduction for soldier
 label soldier_day1_dinner_introduction:
 
+  $ current_time = "8PM"
+
   scene dining_hall
 
   narrator """

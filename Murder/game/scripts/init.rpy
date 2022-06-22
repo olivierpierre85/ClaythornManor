@@ -30,3 +30,5 @@ define menu_doctor_generic = set()
 
 # Global Variable
 define time_left = 0
+define current_day = "Friday"
+define current_time = "6PM"
