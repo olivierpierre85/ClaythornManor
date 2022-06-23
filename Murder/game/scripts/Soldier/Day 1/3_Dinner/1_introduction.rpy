@@ -66,4 +66,14 @@ label soldier_day1_dinner_introduction_choice:
           jump soldier_day1_dinner_nurse
   
   else:
-    "The dinner is ending"
+    narrator "The dinner is ending"
+
+    narrator "The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or that we can simply go to our room."
+
+  jump soldier_day1_evening_introduction
+
+    
+
+
+
+

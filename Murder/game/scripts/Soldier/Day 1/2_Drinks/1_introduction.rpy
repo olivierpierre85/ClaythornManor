@@ -9,26 +9,31 @@ label soldier_day1_drinks_introduction:
 
   $ menu_soldier_day1_drinks_introduction = set()
 
-  jump soldier_day1_drinks_introduction_choice
+  # not necessary apparently
+  # jump soldier_day1_drinks_introduction_choice 
 
 label soldier_day1_drinks_introduction_choice:  
 
   show nurse at right
 
-  if "Talk to the man" not in menu_soldier_day1_drinks_introduction:
-    show drunk at left
+  # Example if you want to hide characters that can't be selected 
+  # if "Talk to the man" not in menu_soldier_day1_drinks_introduction:
+  show drunk at left
 
-  menu:
-    set menu_soldier_day1_drinks_introduction
-    "Talk to the man":
-        hide nurse
-        hide drunk
-        jump soldier_day1_drinks_drunk
+  $ time_left = 30
 
-    "Talk to the woman":
-        hide nurse
-        hide drunk
-        call soldier_day1_drinks_nurse
+  if time_left > 0:
+    menu:
+      set menu_soldier_day1_drinks_introduction
+      "Talk to the man":
+          hide nurse
+          hide drunk
+          jump soldier_day1_drinks_drunk
+
+      "Talk to the woman":
+          hide nurse
+          hide drunk
+          jump soldier_day1_drinks_nurse
 
   narrator "You would like to keep talking, but you are interrupted by the butler entering the room."
 
