@@ -16,4 +16,7 @@ label debug_choices:
       $ soldier_generic_nurse = 1
       jump soldier_day1_dinner_introduction
 
+    "soldier_day1_evening_introduction":
+      jump soldier_day1_evening_introduction
+
 

@@ -1,7 +1,7 @@
 # Introduction for soldier
 label soldier_day1_dinner_introduction:
 
-  $ current_time = "8PM"
+  $ current_time = "7PM"
 
   scene dining_hall
 
@@ -68,9 +68,15 @@ label soldier_day1_dinner_introduction_choice:
   else:
     narrator "The dinner is ending"
 
-    narrator "The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or that we can simply go to our room."
+    narrator "The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or for those tired by the journey, you can simply go to bed."
 
-  jump soldier_day1_evening_introduction
+    narrator "Since you haven't been able to see your room, you decide to go there first."
+
+    narrator "You ask the footman to show you the way."
+
+    jump soldier_day1_evening_introduction
+
+  
 
     
 

@@ -27,8 +27,9 @@ define menu_soldier_day1_drinks_introduction = set()
 define menu_soldier_day1_dinner_introduction = set()
 define menu_nurse_generic = set()
 define menu_doctor_generic = set()
+define menu_map_choices = set()
 
 # Global Variable
 define time_left = 0
 define current_day = "Friday"
-define current_time = "6PM"
+define current_time = "5PM"
