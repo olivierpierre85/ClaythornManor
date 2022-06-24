@@ -31,7 +31,7 @@ label soldier_day1_evening_map_choices:
     menu:
       set menu_map_choices
       "Meet the others in the billiard room":
-        "billiard room"
+        call soldier_day1_evening_billiard_room
         $ time_left = time_left - 30
         jump soldier_day1_evening_map_choices
 

@@ -4,11 +4,13 @@ define soldier_name = "Ted Haring"
 define soldier  = Character("soldier_name", image="soldier", dynamic=True)
 define nurse_name = "Woman"
 define nurse    = Character("nurse_name", image="nurse", dynamic=True)
+define doctor_name = "Man in a hat"
+define doctor   = Character("doctor_name", image="doctor", dynamic=True)
 define host     = Character("The Host", image="host")
 
 define drunk    = Character("The Drunk", image="drunk")
 define butler   = Character("The Butler", image="butler")
-define doctor   = Character("The Doctor", image="doctor")
+
 
 # 2. Characters locked
 default char_soldier = True

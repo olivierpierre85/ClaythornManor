@@ -39,7 +39,8 @@ label soldier_day1_dinner_introduction:
 
   It's name card reads 'Doctor Daniel Baldwin'
   """
-
+  
+  $ doctor_name = "Doctor Daniel Baldwin"
 
   $ menu_soldier_day1_dinner_introduction = set()
 
