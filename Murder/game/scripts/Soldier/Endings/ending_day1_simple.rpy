@@ -1,9 +1,11 @@
-# Ending
-# Conditions for ending :
-# 
-label ending_day1_simple:
+# Ending for soldier
 
-  narrator "You died old man 2"
+# DAY 1
+# Either the soldier as drank sherry after dinner and die, or he hasn't and is still alive
+label soldier_ending_day1:
+
+
+  narrator ""
   $ char_captain = True
 
   # Ending

@@ -21,7 +21,7 @@ label soldier_day1_evening_introduction:
   # reset choices
   $ menu_map_choices = set()
   # Set how much time until next phase (min)
-  $ time_left = 1200
+  $ time_left = 120
 
   jump soldier_day1_evening_map_choices
 
@@ -55,4 +55,6 @@ label soldier_day1_evening_map_choices:
         scene bedroom_soldier
         jump soldier_day1_evening_map_choices
 
-  jump ending_day1_simple
+  "Feeling tired, you decide it's late enough and you go to bed."
+
+  jump soldier_ending_day1

@@ -18,13 +18,15 @@ default char_captain = False
 
 # 3. Objects ( 0 not found, 1 found, 2 in you possession)
 
+# Actions with impact 
+default soldier_day1_drank_sherry = False
 
 # 4. Insights 
 # Knowledge acquired in game to unlock some dialogs
 define soldier_generic_nurse = 0
 define soldier_generic_doctor = 0
 
-# 5. menu sets
+# 5. menu sets TODO Not necessary
 define menu_soldier_day1_drinks_introduction = set()
 define menu_soldier_day1_dinner_introduction = set()
 define menu_nurse_generic = set()
