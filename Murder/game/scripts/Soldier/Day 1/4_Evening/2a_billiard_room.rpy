@@ -18,6 +18,7 @@ label soldier_day1_evening_billiard_room:
         'text': 'Go to the bar to have a drink',
         'redirect': 'soldier_day1_evening_billiard_room_bar',
         'time_spent': 10,
+        'condition': 'soldier_nurse_location', #TODO move to choice outside
       },
       { 
         'text': 'Talk to Daniel Baldwin',
@@ -27,7 +28,7 @@ label soldier_day1_evening_billiard_room:
       { 
         'text': 'Approach the large group of people',
         'redirect': 'soldier_day1_evening_billiard_room_group',
-        'time_spent': 150,
+        'time_spent': 50,
       },
       { 
         'text': 'Engage with the butler',
@@ -70,8 +71,14 @@ label soldier_day1_evening_billiard_room_group:
   return
 
 label soldier_day1_evening_billiard_room_butler:
-  "Where is Miss Baxter"
+  "Where is Miss Baxter ? "
+  butler "it's a bit personal."
+
+  # TODO develop choices to convince Butler
+
   # TODO unlock nurse room position on the map
+  butler "Fine. You'll find miss Baxter in the Sun room."
+  $ soldier_nurse_location = True
   return
 
 label soldier_day1_evening_billiard_room_cancel:

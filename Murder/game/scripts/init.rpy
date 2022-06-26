@@ -25,6 +25,7 @@ default soldier_day1_drank_sherry = False
 # Knowledge acquired in game to unlock some dialogs
 define soldier_generic_nurse = 0
 define soldier_generic_doctor = 0
+define soldier_nurse_location = False
 
 # 5. menu sets TODO Not necessary
 define menu_soldier_day1_drinks_introduction = set()

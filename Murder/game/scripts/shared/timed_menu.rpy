@@ -1,9 +1,13 @@
 label timed_menu(menu_options = []):
-
   python:
     # choices = [(item[0], i) for i, item in enumerate(menu_options)]
-    choices = [(item['text'], i) for i, item in enumerate(menu_options)]
+    choices = []
+    for i, item in enumerate(menu_options):
+      if (not item.has_key('condition')) or eval(item['condition']):
+        choices.append((item['text'], i)) 
     choice = menu(choices)
+    # read choices
+
 
   # Add time 
   $ choice_time_spent = menu_options[choice]['time_spent']

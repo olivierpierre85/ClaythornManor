@@ -36,6 +36,7 @@ label soldier_day1_evening_map_choices:
         jump soldier_day1_evening_map_choices
 
       "Go knock on the the door of Amalia Baxter":
+        # TODO only if you got nurse location
         call soldier_day1_evening_nurse_room
         $ time_left = time_left - 60
         jump soldier_day1_evening_map_choices
@@ -50,11 +51,19 @@ label soldier_day1_evening_map_choices:
         $ time_left = time_left - 60
         jump soldier_day1_evening_map_choices
 
-      "You give up and go to bed":
+      "You give up and go back to your room":
+        # TODO only if you got out a bit
         $ time_left = 0
         scene bedroom_soldier
         jump soldier_day1_evening_map_choices
 
   "Feeling tired, you decide it's late enough and you go to bed."
+
+  "You Notice something on your bed. a letter."
+
+  # TODO play music SCARY
+
+  # SHOW PNG LETTER.
+
 
   jump soldier_ending_day1
