@@ -1,5 +1,7 @@
 label soldier_day1_evening_billiard_room:
 
+  $ soldier_day1_evening_left_bedroom = True
+
   scene billiard_room
 
   "You see multiple people in the room."
@@ -15,13 +17,7 @@ label soldier_day1_evening_billiard_room:
   "And the butler is silent in a corner."
 
   python:
-    menu_options = [
-      { 
-        'text': 'Go to the bar to have a drink',
-        'redirect': 'soldier_day1_evening_billiard_room_bar',
-        'time_spent': 10,
-        'condition': 'soldier_nurse_location', #TODO move to choice outside
-      },
+    menus_options['soldier_day1_evening_billiard_room_menu_options'] = [
       { 
         'text': 'Talk to Daniel Baldwin',
         'redirect': 'soldier_day1_evening_billiard_room_doctor',
@@ -33,22 +29,40 @@ label soldier_day1_evening_billiard_room:
         'time_spent': 50,
       },
       { 
-        'text': 'Engage with the butler',
+        'text': 'Ask the butler about Amelia',
         'redirect': 'soldier_day1_evening_billiard_room_butler',
         'time_spent': 20,
       },
       { 
-        'text': 'You leave the room',
-        'redirect': 'soldier_day1_evening_billiard_room_cancel',
+        'text': 'Go to the bar to have a drink',
+        'redirect': 'soldier_day1_evening_billiard_room_bar_1',
         'time_spent': 10,
-      }
+      },
+      { 
+        'text': 'Have another drink',
+        'redirect': 'soldier_day1_evening_billiard_room_bar_2',
+        'time_spent': 10,
+        'condition': 'soldier_day1_drank_sherry',
+      },
+      { 
+        'text': 'Maybe a Last drink',
+        'redirect': 'soldier_day1_evening_billiard_room_bar_3',
+        'time_spent': 10,
+        'condition': 'soldier_day1_drank_sherry_2',
+      },
+      { 
+        'text': 'Leave the room',
+        'redirect': 'soldier_day1_evening_billiard_room_cancel',
+        'time_spent': 0,
+        'early_exit': True,
+      },
     ]
 
-  call timed_menu(menu_options)
+  call timed_menu('soldier_day1_evening_billiard_room_menu_options')
 
   return
 
-label soldier_day1_evening_billiard_room_bar:
+label soldier_day1_evening_billiard_room_bar_1:
   "Your pour yourself a glass of sherry from the bottle lying at the bar"
   "You start to relax a little"
 
@@ -63,6 +77,17 @@ label soldier_day1_evening_billiard_room_bar:
   $ soldier_day1_drank_sherry = True
 
   return
+
+label soldier_day1_evening_billiard_room_bar_2:
+  "Another drink"
+  $ soldier_day1_drank_sherry_2 = True
+  return
+
+label soldier_day1_evening_billiard_room_bar_3:
+  "One last drink"
+  $ soldier_day1_drank_sherry_3 = True
+  return
+
 
 label soldier_day1_evening_billiard_room_doctor:
   "choice 2 is cool"
@@ -85,4 +110,6 @@ label soldier_day1_evening_billiard_room_butler:
 
 label soldier_day1_evening_billiard_room_cancel:
   "You don't feel like staying in this room and leave"
+  scene hallway
+
   return

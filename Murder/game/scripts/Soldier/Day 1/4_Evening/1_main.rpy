@@ -18,15 +18,15 @@ label soldier_day1_evening_main:
 
   $ time_left = 120
 
-  $ soldier_day1_evening_left_bedroom = False
+  define soldier_day1_evening_left_bedroom = False
 
   python:
-    menu_options = [
+    menus_options['soldier_day1_evening_main_menu_options'] = [
       { 
         'text': 'Go knock on the the door of Amalia Baxter',
         'redirect': 'soldier_day1_evening_nurse_room',
         'time_spent': 60,
-        'condition': 'soldier_nurse_location', #TODO move to choice outside
+        'condition': 'soldier_nurse_location',
       },
       { 
         'text': 'Meet the others in the billiard room',
@@ -40,18 +40,18 @@ label soldier_day1_evening_main:
       },
       { 
         'text': 'You give up and go back to your room',
-        'redirect': 'soldier_day1_evening_kitchens',
-        'time_spent': 120,
+        'redirect': 'soldier_day1_evening_cancel',
         'condition': 'soldier_day1_evening_left_bedroom',
+        'time_spent': 0,
+        'early_exit': True,
       },
     ]
 
-  # Allow to go back to the bedroom if you left it earlier
-  $ soldier_day1_evening_left_bedroom = True
-
-  call timed_menu(menu_options)
+  call timed_menu('soldier_day1_evening_main_menu_options')
 
   "Feeling tired, you decide it's late enough and you go to bed."
+
+  scene bedroom_soldier
 
   "You Notice something on your bed. a letter."
 
@@ -60,11 +60,16 @@ label soldier_day1_evening_main:
   # SHOW PNG LETTER.
 
   if soldier_day1_drank_sherry:
+
     jump soldier_ending_day1_poisoned
+
   else:
+
     jump soldier_day2_breakfast_main
   
 label soldier_day1_evening_kitchens:
+
+  $ soldier_day1_evening_left_bedroom = True
 
   scene hallway
 
@@ -76,12 +81,15 @@ label soldier_day1_evening_kitchens:
 
   return
 
-label soldier_day1_evening_scullery:
-  "What the hell is a scullery ?"
-
-  "Anyway, there is nothing there"
-
+label soldier_day1_evening_cancel:
   return
+
+# label soldier_day1_evening_scullery:
+#   "What the hell is a scullery ?"
+
+#   "Anyway, there is nothing there"
+
+#   return
   
 #   # Introduce map choice
 

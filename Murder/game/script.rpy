@@ -2,7 +2,6 @@
 
 # The game starts here.
 label start:
-
     
     # TODO how to add a shortcut to game menu. Below not working
     # $ config.keymap['in_game_menu'] = ['m']
