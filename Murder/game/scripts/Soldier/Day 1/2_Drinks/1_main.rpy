@@ -1,28 +1,28 @@
-label soldier_day1_drinks_introduction:
+label soldier_day1_drinks_main:
 
   scene tea_room
 
   soldier "I look around the room, see multiple persons already engage in conversation."
   soldier "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
 
-  $ menu_soldier_day1_drinks_introduction = set()
+  $ menu_soldier_day1_drinks_main = set()
 
   # not necessary apparently
-  # jump soldier_day1_drinks_introduction_choice 
+  # jump soldier_day1_drinks_main_choice 
 
-label soldier_day1_drinks_introduction_choice:  
+label soldier_day1_drinks_main_choice:  
 
   show nurse at right
 
   # Example if you want to hide characters that can't be selected 
-  # if "Talk to the man" not in menu_soldier_day1_drinks_introduction:
+  # if "Talk to the man" not in menu_soldier_day1_drinks_main:
   show drunk at left
 
   $ time_left = 30
 
   if time_left > 0:
     menu:
-      set menu_soldier_day1_drinks_introduction
+      set menu_soldier_day1_drinks_main
       "Talk to the man":
           hide nurse
           hide drunk
@@ -43,4 +43,4 @@ label soldier_day1_drinks_introduction_choice:
 
   narrator "Everyone moves to the dining room"
 
-  jump soldier_day1_dinner_introduction
+  jump soldier_day1_dinner_main

@@ -1,5 +1,5 @@
 # Introduction for soldier
-label soldier_day1_dinner_introduction:
+label soldier_day1_dinner_main:
 
   $ current_time = "7PM"
 
@@ -42,11 +42,11 @@ label soldier_day1_dinner_introduction:
   
   $ doctor_name = "Doctor Daniel Baldwin"
 
-  $ menu_soldier_day1_dinner_introduction = set()
+  $ menu_soldier_day1_dinner_main = set()
 
-  jump soldier_day1_dinner_introduction_choice
+  jump soldier_day1_dinner_main_choice
 
-label soldier_day1_dinner_introduction_choice:  
+label soldier_day1_dinner_main_choice:  
 
   $ time_left = 90
 
@@ -55,7 +55,7 @@ label soldier_day1_dinner_introduction_choice:
 
   if time_left > 0:
     menu:
-      set menu_soldier_day1_dinner_introduction
+      set menu_soldier_day1_dinner_main
       "Talk to Daniel Baldwin":
           hide nurse
           hide doctor
@@ -75,7 +75,7 @@ label soldier_day1_dinner_introduction_choice:
 
     narrator "You ask the footman to show you the way."
 
-    jump soldier_day1_evening_introduction
+    jump soldier_day1_evening_main
 
   
 

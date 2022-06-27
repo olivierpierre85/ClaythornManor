@@ -12,4 +12,4 @@ label soldier_day1_drinks_drunk:
 
   hide drunk
 
-  jump soldier_day1_drinks_introduction_choice
+  jump soldier_day1_drinks_main_choice

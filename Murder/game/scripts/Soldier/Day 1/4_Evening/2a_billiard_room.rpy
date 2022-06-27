@@ -1,5 +1,7 @@
 label soldier_day1_evening_billiard_room:
 
+  scene billiard_room
+
   "You see multiple people in the room."
 
   "Amalia Baxter doesn't seem to be here."
@@ -38,7 +40,7 @@ label soldier_day1_evening_billiard_room:
       { 
         'text': 'You leave the room',
         'redirect': 'soldier_day1_evening_billiard_room_cancel',
-        'time_spent': 150,
+        'time_spent': 10,
       }
     ]
 

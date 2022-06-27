@@ -1,5 +1,5 @@
 # Introduction for soldier
-label soldier_day1_arrival_introduction:
+label soldier_day1_arrival_main:
 
   # TODO Menu Image
   scene great_hall
@@ -23,4 +23,4 @@ label soldier_day1_arrival_introduction:
   hide butler
 
   # Ending
-  jump soldier_day1_drinks_introduction
+  jump soldier_day1_drinks_main

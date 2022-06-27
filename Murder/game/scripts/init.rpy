@@ -28,8 +28,8 @@ define soldier_generic_doctor = 0
 define soldier_nurse_location = False
 
 # 5. menu sets TODO Not necessary
-define menu_soldier_day1_drinks_introduction = set()
-define menu_soldier_day1_dinner_introduction = set()
+define menu_soldier_day1_drinks_main = set()
+define menu_soldier_day1_dinner_main = set()
 define menu_nurse_generic = set()
 define menu_doctor_generic = set()
 define menu_map_choices = set()
