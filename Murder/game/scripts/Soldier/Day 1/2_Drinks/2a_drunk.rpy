@@ -1,4 +1,7 @@
 label soldier_day1_drinks_drunk:
+
+  hide nurse
+  hide drunk
   
   show drunk
 
@@ -12,4 +15,4 @@ label soldier_day1_drinks_drunk:
 
   hide drunk
 
-  jump soldier_day1_drinks_main_choice
+  return

@@ -13,13 +13,11 @@ label timed_menu(menu_id = "", choice=0):
   # read the choices
   $ choice = menu(choices)
 
-  # $ choice_time_spent[menu_id] = menus_options[menu_id][choice]['time_spent']
-  # $ choice_redirect[menu_id] = menus_options[menu_id][choice]['redirect']
-  # $ choice_early_exit[menu_id] = menus_options[menu_id][choice].has_key('early_exit') and menus_options[menu_id][choice]['early_exit']
+  # After selection, decrease the time life, 
+  if menus_options[menu_id][choice].has_key('time_spent'):
+    $ time_left -= menus_options[menu_id][choice]['time_spent']
 
-  # After selection, decrease the time life, then hide the menu if necessary
-  $ time_left -= menus_options[menu_id][choice]['time_spent']
-
+  # Hides the menu if necessary
   if not menus_options[menu_id][choice].has_key('keep_alive') or not menus_options[menu_id][choice]['keep_alive']:
     $ menus_options[menu_id][choice]['hidden'] = True
 
@@ -36,6 +34,8 @@ label timed_menu(menu_id = "", choice=0):
       return
     
     call timed_menu(menu_id, choice)
+
+    return
   
 
 

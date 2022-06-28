@@ -42,40 +42,36 @@ label soldier_day1_dinner_main:
   
   $ doctor_name = "Doctor Daniel Baldwin"
 
-  $ menu_soldier_day1_dinner_main = set()
-
-  jump soldier_day1_dinner_main_choice
-
-label soldier_day1_dinner_main_choice:  
-
   $ time_left = 90
 
   show nurse at right
   show doctor at left
 
-  if time_left > 0:
-    menu:
-      set menu_soldier_day1_dinner_main
-      "Talk to Daniel Baldwin":
-          hide nurse
-          hide doctor
-          jump soldier_day1_dinner_doctor
+  python:
+    menus_options['soldier_day1_dinner_main'] = [
+      { 
+        'text': 'Talk to Daniel Baldwin',
+        'redirect': 'soldier_day1_dinner_doctor',
+        'time_spent': 20,
+      },
+      { 
+        'text': 'Talk to Amalia Baxter',
+        'redirect': 'soldier_day1_dinner_nurse',
+        'time_spent': 0,
+      }
+    ]
 
-      "Talk to Amalia Baxter":
-          hide nurse
-          hide doctor
-          jump soldier_day1_dinner_nurse
-  
-  else:
-    narrator "The dinner is ending"
+  call timed_menu('soldier_day1_dinner_main')
 
-    narrator "The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or for those tired by the journey, you can simply go to bed."
+  narrator "The dinner is ending"
 
-    narrator "Since you haven't been able to see your room, you decide to go there first."
+  narrator "The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or for those tired by the journey, you can simply go to bed."
 
-    narrator "You ask the footman to show you the way."
+  narrator "Since you haven't been able to see your room, you decide to go there first."
 
-    jump soldier_day1_evening_main
+  narrator "You ask the footman to show you the way."
+
+  jump soldier_day1_evening_main
 
   
 

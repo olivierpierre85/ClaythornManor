@@ -5,7 +5,7 @@ label soldier_day1_drinks_main:
   soldier "I look around the room, see multiple persons already engage in conversation."
   soldier "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
 
-  $ menu_soldier_day1_drinks_main = set()
+  # $ menu_soldier_day1_drinks_main = set()
 
   # not necessary apparently
   # jump soldier_day1_drinks_main_choice 
@@ -20,18 +20,19 @@ label soldier_day1_drinks_main_choice:
 
   $ time_left = 30
 
-  if time_left > 0:
-    menu:
-      set menu_soldier_day1_drinks_main
-      "Talk to the man":
-          hide nurse
-          hide drunk
-          jump soldier_day1_drinks_drunk
+  python:
+    menus_options['soldier_day1_drinks_main'] = [
+      { 
+        'text': 'Talk to the man',
+        'redirect': 'soldier_day1_drinks_drunk',
+      },
+      { 
+        'text': 'Talk to the woman',
+        'redirect': 'soldier_day1_drinks_nurse',
+      }
+    ]
 
-      "Talk to the woman":
-          hide nurse
-          hide drunk
-          jump soldier_day1_drinks_nurse
+  call timed_menu('soldier_day1_drinks_main')
 
   narrator "You would like to keep talking, but you are interrupted by the butler entering the room."
 

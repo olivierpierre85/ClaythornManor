@@ -5,7 +5,7 @@ label soldier_day1_evening_billiard_room:
   scene billiard_room
 
   # Hides explanation on re-entry
-  if menus_options['soldier_day1_evening_main_menu_options'][1]['text'] != 'Go back to the billiard room':
+  if menus_options['soldier_day1_evening_main'][1]['text'] != 'Go back to the billiard room':
 
     """
     You see multiple people in the room.
@@ -14,7 +14,7 @@ label soldier_day1_evening_billiard_room:
 
     But you recognize Doctor Baldwin in conversation with another man.
 
-    The rest of the guest are grouped together and are talking loudly.
+    The rest of the guests are grouped together and are talking loudly.
 
     There is also a choice of alcohol near the bar.
 
@@ -22,7 +22,7 @@ label soldier_day1_evening_billiard_room:
     """
 
   python:
-    menus_options['soldier_day1_evening_billiard_room_menu_options'] = [
+    menus_options['soldier_day1_evening_billiard_room'] = [
       { 
         'text': 'Talk to Daniel Baldwin',
         'redirect': 'soldier_day1_evening_billiard_room_doctor',
@@ -63,7 +63,7 @@ label soldier_day1_evening_billiard_room:
       },
     ]
 
-  call timed_menu('soldier_day1_evening_billiard_room_menu_options')
+  call timed_menu('soldier_day1_evening_billiard_room')
 
   return
 
@@ -103,6 +103,7 @@ label soldier_day1_evening_billiard_room_group:
   return
 
 label soldier_day1_evening_billiard_room_butler:
+  show butler
   "Where is Miss Baxter ? "
   butler "it's a bit personal."
 
@@ -111,12 +112,15 @@ label soldier_day1_evening_billiard_room_butler:
   # TODO unlock nurse room position on the map
   butler "Fine. You'll find miss Baxter in the Sun room."
   $ soldier_nurse_location = True
+
+  hide butler
+  
   return
 
 label soldier_day1_evening_billiard_room_cancel:
   "You don't feel like staying in this room and leave"
   # TODO Change name of options ??
-  $ menus_options['soldier_day1_evening_main_menu_options'][1]['text'] = 'Go back to the billiard room'
+  $ menus_options['soldier_day1_evening_main'][1]['text'] = 'Go back to the billiard room'
   scene hallway
 
   return

@@ -1,30 +1,32 @@
 label doctor_generic_choices:
-  if time_left > 0:
-    menu:
-      set menu_doctor_generic
-      "What do you do in life ?":
-        call doctor_generic_job
-        $ time_left = time_left - 30
-        call doctor_generic_choices
-        return
+  python:
+    menus_options['doctor_generic_choices'] = [
+      { 
+        'text': 'What do you do in life ?',
+        'redirect': 'doctor_generic_job',
+        'time_spent': 20,
+      },
+      { 
+        'text': 'Why were you invited here ?',
+        'redirect': 'doctor_generic_heroic_act',
+        'time_spent': 10,
+      },
+      { 
+        'text': 'Where are you from',
+        'redirect': 'doctor_generic_background',
+        'time_spent': 10,
+      },
+      { 
+        'text': 'You have nothing to ask',
+        'redirect': 'doctor_generic_cancel',
+        'time_spent': 0,
+        'early_exit': True,
+      },
+    ]
 
-      "Why were you invited here ?":
-        call doctor_generic_heroic_act
-        $ time_left = time_left - 60
-        call doctor_generic_choices
-        return
-      
-      "Where are you from":
-        call doctor_generic_background
-        $ time_left = time_left - 60
-        call doctor_generic_choices
-        return
-
-      "You have nothing to ask":
-        # TODO MAKE SURE THE CHOICE IS ALWAYS PRESENT DESPITE MENUSET
-        return
-  else:
-    return
+  call timed_menu('doctor_generic_choices')
+  
+  return
 
 label doctor_generic_job:
   doctor "I am a doctor."
@@ -35,5 +37,8 @@ label doctor_generic_heroic_act:
   return
 
 label doctor_generic_background:
-  doctor "I am from Candy Ci"
+  doctor "I am from Candy City"
+  return
+
+label doctor_generic_cancel:
   return

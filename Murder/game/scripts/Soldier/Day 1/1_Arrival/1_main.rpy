@@ -22,5 +22,4 @@ label soldier_day1_arrival_main:
   
   hide butler
 
-  # Ending
   jump soldier_day1_drinks_main

@@ -1,29 +1,32 @@
 label nurse_generic_choices:
-  if time_left > 0:
-    menu:
-      set menu_nurse_generic
-      "What do you do in life ?":
-        call nurse_generic_job
-        $ time_left = time_left - 30
-        call nurse_generic_choices
-        return
+  python:
+    menus_options['nurse_generic_choices'] = [
+      { 
+        'text': 'What do you do in life ?',
+        'redirect': 'nurse_generic_job',
+        'time_spent': 20,
+      },
+      { 
+        'text': 'Why were you invited here ?',
+        'redirect': 'nurse_generic_heroic_act',
+        'time_spent': 10,
+      },
+      { 
+        'text': 'Where are you from',
+        'redirect': 'nurse_generic_background',
+        'time_spent': 10,
+      },
+      { 
+        'text': 'You have nothing to ask',
+        'redirect': 'nurse_generic_cancel',
+        'time_spent': 0,
+        'early_exit': True,
+      },
+    ]
 
-      "Why were you invited here ?":
-        call nurse_generic_heroic_act
-        $ time_left = time_left - 60
-        call nurse_generic_choices
-        return
-      
-      "Where are you from":
-        call nurse_generic_background
-        $ time_left = time_left - 60
-        call nurse_generic_choices
-        return
-
-      "You have nothing to ask":
-        return
-  else:
-    return
+  call timed_menu('nurse_generic_choices')
+  
+  return
 
 label nurse_generic_job:
   nurse "I am a nurse."
@@ -35,4 +38,7 @@ label nurse_generic_heroic_act:
 
 label nurse_generic_background:
   nurse "I am from Sausage Island"
+  return
+
+label nurse_generic_cancel:
   return
