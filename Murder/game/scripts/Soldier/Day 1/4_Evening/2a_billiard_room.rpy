@@ -4,17 +4,22 @@ label soldier_day1_evening_billiard_room:
 
   scene billiard_room
 
-  "You see multiple people in the room."
+  # Hides explanation on re-entry
+  if menus_options['soldier_day1_evening_main_menu_options'][1]['text'] != 'Go back to the billiard room':
 
-  "Amalia Baxter doesn't seem to be here."
+    """
+    You see multiple people in the room.
+  
+    Amalia Baxter doesn't seem to be here.
 
-  "But you recognize Doctor Baldwin in conversation with another man."
+    But you recognize Doctor Baldwin in conversation with another man.
 
-  "The rest of the guest seem are grouped together and are talking loudly"
+    The rest of the guest are grouped together and are talking loudly.
 
-  "There is also a choice of alcohol near the bar."
+    There is also a choice of alcohol near the bar.
 
-  "And the butler is silent in a corner."
+    And the butler is silent in a corner.
+    """
 
   python:
     menus_options['soldier_day1_evening_billiard_room_menu_options'] = [
@@ -110,6 +115,8 @@ label soldier_day1_evening_billiard_room_butler:
 
 label soldier_day1_evening_billiard_room_cancel:
   "You don't feel like staying in this room and leave"
+  # TODO Change name of options ??
+  $ menus_options['soldier_day1_evening_main_menu_options'][1]['text'] = 'Go back to the billiard room'
   scene hallway
 
   return

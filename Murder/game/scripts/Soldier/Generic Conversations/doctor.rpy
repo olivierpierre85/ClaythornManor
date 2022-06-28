@@ -19,6 +19,8 @@ label doctor_generic():
 
     call doctor_generic_choices
 
+    return
+
   else:
     doctor "Sorry, but I don't think I have anything to say to you anymore at the moment." 
 

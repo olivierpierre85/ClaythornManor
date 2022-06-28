@@ -6,5 +6,5 @@ label character_selection:
     "The Soldier":
       jump soldier_day1_arrival_main
 
-    "The Captain (Locked)" if char_captain:
-      narrator "You lose old fart 2 save"
+    "The Captain (New)" if char_captain:
+      jump captain_day1_arrival_main

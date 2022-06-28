@@ -32,6 +32,7 @@ label soldier_day1_evening_main:
         'text': 'Meet the others in the billiard room',
         'redirect': 'soldier_day1_evening_billiard_room',
         'time_spent': 10,
+        'keep_alive': True,
       },
       { 
         'text': 'Go to the kitchens',
