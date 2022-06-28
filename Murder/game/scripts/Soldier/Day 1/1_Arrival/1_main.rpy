@@ -5,20 +5,26 @@ label soldier_day1_arrival_main:
   scene great_hall
 
   # First Part, train explanation
-  soldier "After a long journey, I finally reached my destination : Mandrake Manor"
-  soldier "A footman opens the main entrance for me, and someone greets me"
+  soldier "I finally reached my destination."
+  soldier "A butler opens the main entrance for me, and greets me"
 
-  # Arrival to manor
-
-  # Entrance in Manor
   # show host at truecenter
   show butler
   
-  butler "Welcome Sir. We are glad to see you."
 
-  butler "Please give your bags to the footman, he will carry them to your room."
+  butler """
 
-  butler "And if you are ready, you can have some drinks before dinner? Not everyone has arrived yet."
+  Welcome Sir. We are glad to see you.
+
+  Please give your bags to the footman, he will carry them to your room.
+
+  I am afraid you won't have time to go change right now.
+  
+  Everyone is already there, and our will be greeting you very soon.
+
+  So if you follow me into the tea room, you can join the rest of the party for some drinks.
+  
+  """
   
   hide butler
 

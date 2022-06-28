@@ -4,7 +4,7 @@ label character_selection:
 
   menu:
     "The Soldier":
-      jump soldier_day1_arrival_main
+      jump soldier_introduction
 
     "The Captain (New)" if char_captain:
       jump captain_day1_arrival_main
