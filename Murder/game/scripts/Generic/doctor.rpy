@@ -33,7 +33,7 @@ label doctor_generic_job:
   return
 
 label doctor_generic_heroic_act:
-  doctor "During the war, I saved a poor man's life. It was nothing really. I don't think I deserve to have been invited"
+  doctor "During the war, I saved a poor man's life. It was nothing really. I don't think I deserve to have been invited."
   return
 
 label doctor_generic_background:

@@ -35,7 +35,12 @@ label soldier_day1_evening_main:
         'keep_alive': True,
       },
       { 
-        'text': 'Go to the kitchens',
+        'text': 'Go have a look in the library.',
+        'redirect': 'soldier_day1_evening_library',
+        'time_spent': 10,
+      },
+      { 
+        'text': 'Go downstairs to visit the kitchens',
         'redirect': 'soldier_day1_evening_kitchens',
         'time_spent': 10,
       },
@@ -79,6 +84,28 @@ label soldier_day1_evening_kitchens:
   butler "I am sorry sir, but the kitchen is for the staff only."
 
   hide butler
+
+  return
+
+label soldier_day1_evening_library:
+
+  $ soldier_day1_evening_left_bedroom = True
+  
+  "You look around the library."
+
+  soldier "Why am I doing here ? I can barely read."
+
+  "On a reading table, you see a book still open."
+
+  "You check the title."
+
+  "\"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\""
+
+  soldier "Yeah, I am not reading that."
+
+  "You leave the library."
+
+  # TODO add trivia, The soldier can't read well
 
   return
 

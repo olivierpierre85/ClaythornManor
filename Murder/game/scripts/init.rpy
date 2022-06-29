@@ -29,19 +29,14 @@ define soldier_generic_nurse = 0
 define soldier_generic_doctor = 0
 define soldier_nurse_location = False
 
-# 5. menu sets TODO Not necessary
-# define menu_soldier_day1_drinks_main = set()
-define menu_soldier_day1_dinner_main = set()
-define menu_nurse_generic = set()
-define menu_doctor_generic = set()
-define menu_map_choices = set()
-
 # Global Variable
 define time_left = 0
 define current_day = "Friday"
 define current_time = "5PM"
 
 define menus_options = dict()
+
+define current_character = "soldier"
 
 # Generic menu
 #TODO how to have it in the right file ?
@@ -59,7 +54,7 @@ init python:
     },
     { 
       'text': 'What do you think of this place',
-      'redirect': 'nurse_generic_location',
+      'redirect': 'nurse_generic_manor',
       'time_spent': 10,
     },
     { 
