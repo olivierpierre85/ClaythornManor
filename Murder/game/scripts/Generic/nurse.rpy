@@ -1,29 +1,3 @@
-init python:
-  menus_options['nurse_generic_choices'] = [
-    { 
-      'text': 'What do you do in life ?',
-      'redirect': 'nurse_generic_job',
-      'time_spent': 20,
-    },
-    { 
-      'text': 'Why were you invited here ?',
-      'redirect': 'nurse_generic_heroic_act',
-      'time_spent': 10,
-    },
-    { 
-      'text': 'Where are you from',
-      'redirect': 'nurse_generic_background',
-      'time_spent': 10,
-    },
-    { 
-      'text': 'You have nothing more to ask',
-      'redirect': 'nurse_generic_cancel',
-      'time_spent': 0,
-      'early_exit': True,
-      'keep_alive': True,
-    },
-  ]
-
 label nurse_generic_choices:
 
   call timed_menu('nurse_generic_choices')
@@ -45,6 +19,10 @@ label nurse_generic_heroic_act:
 
 label nurse_generic_background:
   nurse "I am from Sausage Island"
+  return
+  
+label nurse_generic_location:
+  nurse "It is certainly spooky right ?"
   return
 
 label nurse_generic_cancel:

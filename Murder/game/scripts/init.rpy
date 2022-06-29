@@ -44,3 +44,34 @@ define current_time = "5PM"
 define menus_options = dict()
 
 # Generic menu
+#TODO how to have it in the right file ?
+init python:
+  menus_options['nurse_generic_choices'] = [
+    { 
+      'text': 'What do you do in life ?',
+      'redirect': 'nurse_generic_job',
+      'time_spent': 20,
+    },
+    { 
+      'text': 'Why were you invited here ?',
+      'redirect': 'nurse_generic_heroic_act',
+      'time_spent': 10,
+    },
+    { 
+      'text': 'What do you think of this place',
+      'redirect': 'nurse_generic_location',
+      'time_spent': 10,
+    },
+    { 
+      'text': 'Where are you from',
+      'redirect': 'nurse_generic_background',
+      'time_spent': 10,
+    },
+    { 
+      'text': 'You have nothing more to ask',
+      'redirect': 'nurse_generic_cancel',
+      'time_spent': 0,
+      'early_exit': True,
+      'keep_alive': True,
+    },
+  ]
