@@ -3,7 +3,7 @@ label soldier_introduction:
   scene train station
   # Introduction music - train sound
 
-   # show driver
+  # show driver
 
   "driver" "Welcome sir. I can take your luggage and you can follow me into the car."
 
@@ -40,13 +40,13 @@ label soldier_introduction:
 
   soldier """
 
-  More formalities and thanks, follow. But that's the general idea of this invitation.
+  More information and thanks follow, but that's about the content of it.
 
-  Well, I can't really say no to this amount of money. Certainly not now. 
+  Well, I couldn't really say no to this amount of money. Certainly not now anyway. 
   
   So I feel like I didn't have much choice.
 
-  But still there is part of me thinking:
+  But still, there is part of me thinking:
 
   Maybe I never should have come.
  

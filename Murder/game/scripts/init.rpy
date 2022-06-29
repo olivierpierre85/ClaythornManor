@@ -42,3 +42,5 @@ define current_day = "Friday"
 define current_time = "5PM"
 
 define menus_options = dict()
+
+# Generic menu
