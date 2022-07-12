@@ -1,4 +1,4 @@
-label soldier_day1_evening_nurse_room:
+label hero_day1_evening_nurse_room:
   
   scene hallway
 
@@ -6,13 +6,13 @@ label soldier_day1_evening_nurse_room:
 
   nurse "What are you doing here ?"
 
-  soldier "I am sorry, I thought we could continue our conversation from earlier."
+  hero "I am sorry, I thought we could continue our conversation from earlier."
 
   nurse "Certainly not. I am going to bed, please leave."
 
   # TODO unlock dialog
 
-  soldier "Of course, I am sorry"
+  hero "Of course, I am sorry"
 
   "You leave, embarrassed"
 

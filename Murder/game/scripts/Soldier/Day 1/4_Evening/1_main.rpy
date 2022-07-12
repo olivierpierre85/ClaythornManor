@@ -1,8 +1,8 @@
-label soldier_day1_evening_main:
+label hero_day1_evening_main:
 
   $ current_time = "10PM"
 
-  scene bedroom_soldier
+  scene bedroom_hero
 
   narrator """
 
@@ -18,46 +18,46 @@ label soldier_day1_evening_main:
 
   $ time_left = 120
 
-  define soldier_day1_evening_left_bedroom = False
+  define hero_day1_evening_left_bedroom = False
 
   python:
-    menus_options['soldier_day1_evening_main'] = [
+    menus_options['hero_day1_evening_main'] = [
       { 
         'text': 'Go knock on the the door of Amalia Baxter',
-        'redirect': 'soldier_day1_evening_nurse_room',
+        'redirect': 'hero_day1_evening_nurse_room',
         'time_spent': 60,
-        'condition': 'soldier_nurse_location',
+        'condition': 'hero_nurse_location',
       },
       { 
         'text': 'Meet the others in the billiard room',
-        'redirect': 'soldier_day1_evening_billiard_room',
+        'redirect': 'hero_day1_evening_billiard_room',
         'time_spent': 10,
         'keep_alive': True,
       },
       { 
         'text': 'Go have a look in the library.',
-        'redirect': 'soldier_day1_evening_library',
+        'redirect': 'hero_day1_evening_library',
         'time_spent': 10,
       },
       { 
         'text': 'Go downstairs to visit the kitchens',
-        'redirect': 'soldier_day1_evening_kitchens',
+        'redirect': 'hero_day1_evening_kitchens',
         'time_spent': 10,
       },
       { 
         'text': 'You give up and go back to your room',
-        'redirect': 'soldier_day1_evening_cancel',
-        'condition': 'soldier_day1_evening_left_bedroom',
+        'redirect': 'hero_day1_evening_cancel',
+        'condition': 'hero_day1_evening_left_bedroom',
         'time_spent': 0,
         'early_exit': True,
       },
     ]
 
-  call timed_menu('soldier_day1_evening_main')
+  call timed_menu('hero_day1_evening_main')
 
   "Feeling tired, you decide it's late enough and you go to bed."
 
-  scene bedroom_soldier
+  scene bedroom_hero
 
   "You Notice something on your bed. a letter."
 
@@ -65,17 +65,17 @@ label soldier_day1_evening_main:
 
   # SHOW PNG LETTER.
 
-  if soldier_day1_drank_sherry:
+  if hero_day1_drank_sherry:
 
-    jump soldier_ending_day1_poisoned
+    jump hero_ending_day1_poisoned
 
   else:
 
-    jump soldier_day2_breakfast_main
+    jump hero_day2_breakfast_main
   
-label soldier_day1_evening_kitchens:
+label hero_day1_evening_kitchens:
 
-  $ soldier_day1_evening_left_bedroom = True
+  $ hero_day1_evening_left_bedroom = True
 
   scene hallway
 
@@ -87,13 +87,13 @@ label soldier_day1_evening_kitchens:
 
   return
 
-label soldier_day1_evening_library:
+label hero_day1_evening_library:
 
-  $ soldier_day1_evening_left_bedroom = True
+  $ hero_day1_evening_left_bedroom = True
   
   "You look around the library."
 
-  soldier "Why am I doing here ? I can barely read."
+  hero "Why am I doing here ? I can barely read."
 
   "On a reading table, you see a book still open."
 
@@ -101,13 +101,13 @@ label soldier_day1_evening_library:
 
   "\"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\""
 
-  soldier "Yeah, I am not reading that."
+  hero "Yeah, I am not reading that."
 
   "You leave the library."
 
-  # TODO add trivia, The soldier can't read well
+  # TODO add trivia, The hero can't read well
 
   return
 
-label soldier_day1_evening_cancel:
+label hero_day1_evening_cancel:
   return

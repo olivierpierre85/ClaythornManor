@@ -28,8 +28,8 @@ label nurse_generic_heroic_act:
   
   return
 
-# label soldier_generic_heroic_act:
-#   soldier """
+# label hero_generic_heroic_act:
+#   hero """
 #   Me, well I don't think I deserve it either to be honest.
 
 #   Like yourself, it was during the war.
@@ -48,7 +48,7 @@ label nurse_generic_manor:
 
   # TODO  keep a generic response OR try to have a response different for different characters ?
   $ responses = dict()
-  $ responses["soldier"] = "I agree, I was a bit afraid of that at first."
+  $ responses["hero"] = "I agree, I was a bit afraid of that at first."
 
   $ renpy.say(eval(current_character), responses[current_character])
   return

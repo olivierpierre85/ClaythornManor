@@ -1,5 +1,5 @@
-# Introduction for soldier
-label soldier_day1_arrival_main:
+# Introduction for hero
+label hero_day1_arrival_main:
 
   #TODO show from exterior
 
@@ -7,8 +7,8 @@ label soldier_day1_arrival_main:
   scene great_hall
 
   # First Part, train explanation
-  soldier "I finally reached my destination."
-  soldier "While the driver is unloading my bags from the car, a butler opens the main entrance and greets me."
+  hero "I finally reached my destination."
+  hero "While the driver is unloading my bags from the car, a butler opens the main entrance and greets me."
 
   # show host at truecenter
   show butler
@@ -27,4 +27,4 @@ label soldier_day1_arrival_main:
   
   hide butler
 
-  jump soldier_day1_drinks_main
+  jump hero_day1_drinks_main

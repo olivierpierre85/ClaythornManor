@@ -1,4 +1,4 @@
-label soldier_introduction:
+label hero_introduction:
   
   scene train station
   # Introduction music - train sound
@@ -7,7 +7,7 @@ label soldier_introduction:
 
   "driver" "Welcome sir. I can take your luggage and you can follow me into the car."
 
-  soldier """
+  hero """
   As I approach Mandrake Manor, I am starting to have doubts about the whole trip.
 
   It is strange enough to be invited out of the blue, by someone I never heard of.
@@ -38,7 +38,7 @@ label soldier_introduction:
 
   """
 
-  soldier """
+  hero """
 
   More information and thanks follow, but that's about the content of it.
 
@@ -55,4 +55,4 @@ label soldier_introduction:
 
   # TODO CREDIT SCREEN, Mandrake MANOR, with sound
 
-  jump soldier_day1_arrival_main
+  jump hero_day1_arrival_main

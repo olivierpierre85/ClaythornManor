@@ -1,8 +1,8 @@
-# Ending for soldier
+# Ending for hero
 
 # DAY 1
-# Either the soldier as drank sherry after dinner and die, or he hasn't and is still alive
-label soldier_ending_day1_poisoned:
+# Either the hero as drank sherry after dinner and die, or he hasn't and is still alive
+label hero_ending_day1_poisoned:
 
   # Add sad sound
 

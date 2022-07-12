@@ -1,7 +1,7 @@
 # All variables
 # 1. Declare All characters used by this game.
-define soldier_name = "Ted Haring"
-define soldier  = Character("soldier_name", image="soldier", dynamic=True)
+define hero_name = "Ted Haring"
+define hero  = Character("hero_name", image="hero", dynamic=True)
 define nurse_name = "Woman"
 define nurse    = Character("nurse_name", image="nurse", dynamic=True)
 define doctor_name = "Man in a hat"
@@ -13,21 +13,21 @@ define butler   = Character("The Butler", image="butler")
 
 
 # 2. Characters locked
-default char_soldier = True
+default char_hero = True
 default char_captain = False
 
 # 3. Objects ( 0 not found, 1 found, 2 in you possession)
 
 # Actions with impact 
-default soldier_day1_drank_sherry = False
-default soldier_day1_drank_sherry_2 = False
-default soldier_day1_drank_sherry_3 = False
+default hero_day1_drank_sherry = False
+default hero_day1_drank_sherry_2 = False
+default hero_day1_drank_sherry_3 = False
 
 # 4. Insights 
 # Knowledge acquired in game to unlock some dialogs
-define soldier_generic_nurse = 0
-define soldier_generic_doctor = 0
-define soldier_nurse_location = False
+define hero_generic_nurse = 0
+define hero_generic_doctor = 0
+define hero_nurse_location = False
 
 # Global Variable
 define time_left = 0
@@ -36,7 +36,7 @@ define current_time = "5PM"
 
 define menus_options = dict()
 
-define current_character = "soldier"
+define current_character = "hero"
 
 # Generic menu
 #TODO how to have it in the right file ?

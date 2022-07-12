@@ -1,10 +1,10 @@
-label soldier_day2_breakfast_main:
+label hero_day2_breakfast_main:
 
-  scene bedroom_soldier
+  scene bedroom_hero
 
   "You slept through the night."
 
-  if (soldier_day1_drank_sherry_3):
+  if (hero_day1_drank_sherry_3):
     "You have a bad hangover. But you'll power through."
   
   "After getting ready, you leave your room to have breakfast."

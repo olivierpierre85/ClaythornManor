@@ -1,11 +1,11 @@
-label soldier_day1_evening_billiard_room:
+label hero_day1_evening_billiard_room:
 
-  $ soldier_day1_evening_left_bedroom = True
+  $ hero_day1_evening_left_bedroom = True
 
   scene billiard_room
 
   # Hides explanation on re-entry
-  if menus_options['soldier_day1_evening_main'][1]['text'] != 'Go back to the billiard room':
+  if menus_options['hero_day1_evening_main'][1]['text'] != 'Go back to the billiard room':
 
     """
     You see multiple people in the room.
@@ -22,87 +22,87 @@ label soldier_day1_evening_billiard_room:
     """
 
   python:
-    menus_options['soldier_day1_evening_billiard_room'] = [
+    menus_options['hero_day1_evening_billiard_room'] = [
       { 
         'text': 'Talk to Daniel Baldwin',
-        'redirect': 'soldier_day1_evening_billiard_room_doctor',
+        'redirect': 'hero_day1_evening_billiard_room_doctor',
         'time_spent': 50,
       },
       { 
         'text': 'Approach the large group of people',
-        'redirect': 'soldier_day1_evening_billiard_room_group',
+        'redirect': 'hero_day1_evening_billiard_room_group',
         'time_spent': 50,
       },
       { 
         'text': 'Ask the butler about Amelia',
-        'redirect': 'soldier_day1_evening_billiard_room_butler',
+        'redirect': 'hero_day1_evening_billiard_room_butler',
         'time_spent': 20,
       },
       { 
         'text': 'Go to the bar to have a drink',
-        'redirect': 'soldier_day1_evening_billiard_room_bar_1',
+        'redirect': 'hero_day1_evening_billiard_room_bar_1',
         'time_spent': 10,
       },
       { 
         'text': 'Have another drink',
-        'redirect': 'soldier_day1_evening_billiard_room_bar_2',
+        'redirect': 'hero_day1_evening_billiard_room_bar_2',
         'time_spent': 10,
-        'condition': 'soldier_day1_drank_sherry',
+        'condition': 'hero_day1_drank_sherry',
       },
       { 
         'text': 'Maybe a Last drink',
-        'redirect': 'soldier_day1_evening_billiard_room_bar_3',
+        'redirect': 'hero_day1_evening_billiard_room_bar_3',
         'time_spent': 10,
-        'condition': 'soldier_day1_drank_sherry_2',
+        'condition': 'hero_day1_drank_sherry_2',
       },
       { 
         'text': 'Leave the room',
-        'redirect': 'soldier_day1_evening_billiard_room_cancel',
+        'redirect': 'hero_day1_evening_billiard_room_cancel',
         'time_spent': 0,
         'early_exit': True,
       },
     ]
 
-  call timed_menu('soldier_day1_evening_billiard_room')
+  call timed_menu('hero_day1_evening_billiard_room')
 
   return
 
-label soldier_day1_evening_billiard_room_bar_1:
+label hero_day1_evening_billiard_room_bar_1:
   "Your pour yourself a glass of sherry from the bottle lying at the bar"
   "You start to relax a little"
 
   "The drunk man who was asleep before is near the bar, barely holding up"
 
-  soldier "Hi there"
+  hero "Hi there"
 
   "The mans stares at you but makes no sound"
 
   "You leave him at the bar, distraught."
 
-  $ soldier_day1_drank_sherry = True
+  $ hero_day1_drank_sherry = True
 
   return
 
-label soldier_day1_evening_billiard_room_bar_2:
+label hero_day1_evening_billiard_room_bar_2:
   "Another drink"
-  $ soldier_day1_drank_sherry_2 = True
+  $ hero_day1_drank_sherry_2 = True
   return
 
-label soldier_day1_evening_billiard_room_bar_3:
+label hero_day1_evening_billiard_room_bar_3:
   "One last drink"
-  $ soldier_day1_drank_sherry_3 = True
+  $ hero_day1_drank_sherry_3 = True
   return
 
 
-label soldier_day1_evening_billiard_room_doctor:
+label hero_day1_evening_billiard_room_doctor:
   "choice 2 is cool"
   return
 
-label soldier_day1_evening_billiard_room_group:
+label hero_day1_evening_billiard_room_group:
   "choice 3 very long"
   return
 
-label soldier_day1_evening_billiard_room_butler:
+label hero_day1_evening_billiard_room_butler:
   show butler
   "Where is Miss Baxter ? "
   butler "it's a bit personal."
@@ -111,16 +111,16 @@ label soldier_day1_evening_billiard_room_butler:
 
   # TODO unlock nurse room position on the map
   butler "Fine. You'll find miss Baxter in the Sun room."
-  $ soldier_nurse_location = True
+  $ hero_nurse_location = True
 
   hide butler
   
   return
 
-label soldier_day1_evening_billiard_room_cancel:
+label hero_day1_evening_billiard_room_cancel:
   "You don't feel like staying in this room and leave"
   # TODO Change name of options ??
-  $ menus_options['soldier_day1_evening_main'][1]['text'] = 'Go back to the billiard room'
+  $ menus_options['hero_day1_evening_main'][1]['text'] = 'Go back to the billiard room'
   scene hallway
 
   return

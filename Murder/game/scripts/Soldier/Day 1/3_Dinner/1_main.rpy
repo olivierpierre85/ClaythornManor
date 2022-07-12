@@ -1,5 +1,5 @@
-# Introduction for soldier
-label soldier_day1_dinner_main:
+# Introduction for hero
+label hero_day1_dinner_main:
 
   $ current_time = "7PM"
 
@@ -48,20 +48,20 @@ label soldier_day1_dinner_main:
   show doctor at left
 
   python:
-    menus_options['soldier_day1_dinner_main'] = [
+    menus_options['hero_day1_dinner_main'] = [
       { 
         'text': 'Talk to Daniel Baldwin',
-        'redirect': 'soldier_day1_dinner_doctor',
+        'redirect': 'hero_day1_dinner_doctor',
         'time_spent': 20,
       },
       { 
         'text': 'Talk to Amalia Baxter',
-        'redirect': 'soldier_day1_dinner_nurse',
+        'redirect': 'hero_day1_dinner_nurse',
         'time_spent': 0,
       }
     ]
 
-  call timed_menu('soldier_day1_dinner_main')
+  call timed_menu('hero_day1_dinner_main')
 
   narrator "The dinner is ending"
 
@@ -71,7 +71,7 @@ label soldier_day1_dinner_main:
 
   narrator "You ask the footman to show you the way."
 
-  jump soldier_day1_evening_main
+  jump hero_day1_evening_main
 
   
 

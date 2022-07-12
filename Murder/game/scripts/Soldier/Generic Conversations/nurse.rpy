@@ -1,27 +1,27 @@
-# Generic conversations with between the nurse and the soldier
+# Generic conversations with between the nurse and the hero
 
 label nurse_generic:
 
-  if soldier_generic_nurse == 0:
+  if hero_generic_nurse == 0:
 
     show nurse scared
 
     "The woman seems a bit nervous"
 
-    soldier "Hi miss ..."
+    hero "Hi miss ..."
 
     nurse "Miss Baxter, Amalia Baxter."
 
     $ nurse_name = "Amalia Baxter"
 
-    soldier "Nice to meet you miss Baxter. I am Ted Haring"
+    hero "Nice to meet you miss Baxter. I am Ted Haring"
 
     nurse "Likewise."
     
   else:
     show nurse scared
 
-    soldier "Hi again Miss Baxter."
+    hero "Hi again Miss Baxter."
 
     nurse "Mister Harring. I am glad we can continue our conversation"
 
@@ -30,6 +30,6 @@ label nurse_generic:
 
   hide nurse
 
-  $ soldier_generic_nurse = soldier_generic_nurse + 1
+  $ hero_generic_nurse = hero_generic_nurse + 1
 
   return

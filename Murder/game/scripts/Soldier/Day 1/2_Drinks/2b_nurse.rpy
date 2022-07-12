@@ -1,4 +1,4 @@
-label soldier_day1_drinks_nurse:
+label hero_day1_drinks_nurse:
 
   hide nurse
   hide drunk

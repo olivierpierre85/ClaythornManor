@@ -3,8 +3,8 @@ label character_selection:
   narrator "Select Your Character"
 
   menu:
-    "The Soldier":
-      jump soldier_introduction
+    "The hero":
+      jump hero_introduction
 
     "The Captain (New)" if char_captain:
       jump captain_day1_arrival_main

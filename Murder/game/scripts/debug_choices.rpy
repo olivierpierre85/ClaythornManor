@@ -3,20 +3,20 @@ label debug_choices:
     "character_selection":
       jump character_selection
     
-    # Soldier Possibilities
-    # TODO set necessary var selector before soldier selection?
-    "soldier_day1_arrival_main":
+    # hero Possibilities
+    # TODO set necessary var selector before hero selection?
+    "hero_day1_arrival_main":
       
-      jump soldier_day1_arrival_main
+      jump hero_day1_arrival_main
 
-    "soldier_day1_drinks_main":
-      jump soldier_day1_drinks_main
+    "hero_day1_drinks_main":
+      jump hero_day1_drinks_main
 
-    "soldier_day1_dinner_main":
-      $ soldier_generic_nurse = 1
-      jump soldier_day1_dinner_main
+    "hero_day1_dinner_main":
+      $ hero_generic_nurse = 1
+      jump hero_day1_dinner_main
 
-    "soldier_day1_evening_main":
-      jump soldier_day1_evening_main
+    "hero_day1_evening_main":
+      jump hero_day1_evening_main
 
 

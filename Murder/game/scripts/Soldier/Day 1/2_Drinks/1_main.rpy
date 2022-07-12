@@ -1,9 +1,9 @@
-label soldier_day1_drinks_main:
+label hero_day1_drinks_main:
 
   scene tea_room
 
-  soldier "I look around the room, see multiple persons already engage in conversation."
-  soldier "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
+  hero "I look around the room, see multiple persons already engage in conversation."
+  hero "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
 
   show nurse at right
 
@@ -12,18 +12,18 @@ label soldier_day1_drinks_main:
   $ time_left = 30
 
   python:
-    menus_options['soldier_day1_drinks_main'] = [
+    menus_options['hero_day1_drinks_main'] = [
       { 
         'text': 'Talk to the man',
-        'redirect': 'soldier_day1_drinks_drunk',
+        'redirect': 'hero_day1_drinks_drunk',
       },
       { 
         'text': 'Talk to the woman',
-        'redirect': 'soldier_day1_drinks_nurse',
+        'redirect': 'hero_day1_drinks_nurse',
       }
     ]
 
-  call timed_menu('soldier_day1_drinks_main')
+  call timed_menu('hero_day1_drinks_main')
 
   narrator "You would like to keep talking, but you are interrupted by the butler entering the room."
 
@@ -35,4 +35,4 @@ label soldier_day1_drinks_main:
 
   narrator "Everyone moves to the dining room"
 
-  jump soldier_day1_dinner_main
+  jump hero_day1_dinner_main
