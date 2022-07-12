@@ -1,4 +1,4 @@
-label hero_day1_evening_main:
+label hero_day1_evening:
 
   $ current_time = "10PM"
 
@@ -21,7 +21,7 @@ label hero_day1_evening_main:
   define hero_day1_evening_left_bedroom = False
 
   python:
-    menus_options['hero_day1_evening_main'] = [
+    menus_options['hero_day1_evening'] = [
       { 
         'text': 'Go knock on the the door of Amalia Baxter',
         'redirect': 'hero_day1_evening_nurse_room',
@@ -53,7 +53,7 @@ label hero_day1_evening_main:
       },
     ]
 
-  call timed_menu('hero_day1_evening_main')
+  call timed_menu('hero_day1_evening')
 
   "Feeling tired, you decide it's late enough and you go to bed."
 
@@ -71,7 +71,7 @@ label hero_day1_evening_main:
 
   else:
 
-    jump hero_day2_breakfast_main
+    jump hero_day2_breakfast
   
 label hero_day1_evening_kitchens:
 

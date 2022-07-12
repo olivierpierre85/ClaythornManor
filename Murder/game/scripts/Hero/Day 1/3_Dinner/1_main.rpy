@@ -1,5 +1,5 @@
 # Introduction for hero
-label hero_day1_dinner_main:
+label hero_day1_dinner:
 
   $ current_time = "7PM"
 
@@ -48,7 +48,7 @@ label hero_day1_dinner_main:
   show doctor at left
 
   python:
-    menus_options['hero_day1_dinner_main'] = [
+    menus_options['hero_day1_dinner'] = [
       { 
         'text': 'Talk to Daniel Baldwin',
         'redirect': 'hero_day1_dinner_doctor',
@@ -61,7 +61,7 @@ label hero_day1_dinner_main:
       }
     ]
 
-  call timed_menu('hero_day1_dinner_main')
+  call timed_menu('hero_day1_dinner')
 
   narrator "The dinner is ending"
 
@@ -71,7 +71,7 @@ label hero_day1_dinner_main:
 
   narrator "You ask the footman to show you the way."
 
-  jump hero_day1_evening_main
+  jump hero_day1_evening
 
   
 

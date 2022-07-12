@@ -7,4 +7,4 @@ label character_selection:
       jump hero_introduction
 
     "The Captain (New)" if char_captain:
-      jump captain_day1_arrival_main
+      jump captain_day1_arrival

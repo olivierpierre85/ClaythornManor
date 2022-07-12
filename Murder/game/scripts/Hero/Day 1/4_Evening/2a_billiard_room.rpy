@@ -5,7 +5,7 @@ label hero_day1_evening_billiard_room:
   scene billiard_room
 
   # Hides explanation on re-entry
-  if menus_options['hero_day1_evening_main'][1]['text'] != 'Go back to the billiard room':
+  if menus_options['hero_day1_evening'][1]['text'] != 'Go back to the billiard room':
 
     """
     You see multiple people in the room.
@@ -120,7 +120,7 @@ label hero_day1_evening_billiard_room_butler:
 label hero_day1_evening_billiard_room_cancel:
   "You don't feel like staying in this room and leave"
   # TODO Change name of options ??
-  $ menus_options['hero_day1_evening_main'][1]['text'] = 'Go back to the billiard room'
+  $ menus_options['hero_day1_evening'][1]['text'] = 'Go back to the billiard room'
   scene hallway
 
   return

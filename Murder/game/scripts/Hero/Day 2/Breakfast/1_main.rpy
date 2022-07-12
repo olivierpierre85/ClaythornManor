@@ -1,4 +1,4 @@
-label hero_day2_breakfast_main:
+label hero_day2_breakfast:
 
   scene bedroom_hero
 

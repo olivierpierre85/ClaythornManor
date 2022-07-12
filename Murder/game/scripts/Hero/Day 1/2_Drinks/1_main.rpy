@@ -1,4 +1,4 @@
-label hero_day1_drinks_main:
+label hero_day1_drinks:
 
   scene tea_room
 
@@ -12,7 +12,7 @@ label hero_day1_drinks_main:
   $ time_left = 30
 
   python:
-    menus_options['hero_day1_drinks_main'] = [
+    menus_options['hero_day1_drinks'] = [
       { 
         'text': 'Talk to the man',
         'redirect': 'hero_day1_drinks_drunk',
@@ -23,7 +23,7 @@ label hero_day1_drinks_main:
       }
     ]
 
-  call timed_menu('hero_day1_drinks_main')
+  call timed_menu('hero_day1_drinks')
 
   narrator "You would like to keep talking, but you are interrupted by the butler entering the room."
 
@@ -35,4 +35,4 @@ label hero_day1_drinks_main:
 
   narrator "Everyone moves to the dining room"
 
-  jump hero_day1_dinner_main
+  jump hero_day1_dinner

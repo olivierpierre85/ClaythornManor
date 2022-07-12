@@ -55,4 +55,4 @@ label hero_introduction:
 
   # TODO CREDIT SCREEN, Mandrake MANOR, with sound
 
-  jump hero_day1_arrival_main
+  jump hero_day1_arrival

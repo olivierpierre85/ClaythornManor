@@ -1,5 +1,5 @@
 # Introduction for hero
-label hero_day1_arrival_main:
+label hero_day1_arrival:
 
   #TODO show from exterior
 
@@ -27,4 +27,4 @@ label hero_day1_arrival_main:
   
   hide butler
 
-  jump hero_day1_drinks_main
+  jump hero_day1_drinks
