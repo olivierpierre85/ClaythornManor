@@ -53,15 +53,17 @@ Lady Introduction speech
 
 - Drink sherry only once
 - Drink plenty of sherry =&gt; (link:&quot;drink sherry&quot;)[(set: $hero_is_drunk to true)]
-- Talk with crowd (general conversation about the host, Meet new people :
-	- The captain
+- Talk with crowd (general conversation about the host, Meet new people (captain?))
 - (link:&quot;Talk with butler&quot;)[(set: $hero_nurse_room to true)] 
 [[Exit billiard-&gt;hero-day1-evening]]</tw-passagedata><tw-passagedata pid="9" name="hero-day1-evening-nurse-room" tags="" position="1650,500" size="200,100">//Day 1 - Evening - NURSE ROOM//
 
 Knock on the door
 
 The nurse tells you to go away
-[[Go back to hallway-&gt;hero-day1-evening]]</tw-passagedata><tw-passagedata pid="10" name="hero-ending-day1-poisoned" tags="ENDING" position="1900,625" size="200,100">DEATH - poisoned</tw-passagedata><tw-passagedata pid="11" name="DAY 2" tags="" position="2200,350" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="hero-day2-breakfast" tags="" position="2200,500" size="200,100">You wake up 
+[[Go back to hallway-&gt;hero-day1-evening]]</tw-passagedata><tw-passagedata pid="10" name="hero-ending-day1-poisoned" tags="ENDING" position="1900,625" size="200,100">DEATH - poisoned</tw-passagedata><tw-passagedata pid="11" name="DAY 2" tags="" position="2200,350" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="hero-day2-breakfast" tags="" position="2200,500" size="200,100">//Day 1 - Breakfast//
+
+You wake up 
+
 (if:$hero_is_drunk is true)[with a hangover and late (less time to discuss)]
 
 go to the breakfast to eat at your seat
@@ -70,9 +72,9 @@ Like before your seated next to doctor and nurse
 
 Before general discussion. The nurse and the doctor notice someone people are missing, but not too worried
 
-GENERIC ONLY one choice this time
-[[Talk nurse-&gt;nurse-generic-choices]]
-[[Talk to doctor -&gt;doctor-generic-choices]]
+
+- [[Talk nurse-&gt;nurse-generic-choices]]
+- [[Talk to doctor -&gt;doctor-generic-choices]]
 
 Interrupted by agitation of the footman and butler
 They ask the butler to come with them
@@ -81,9 +83,10 @@ You ask why, and
 -[[Follow them -&gt;hero-day2-follow]]
 -[[Stay here to discuss with the nurse-&gt;nurse-generic-choices]]
 
-The doctor comes back and the host tells everybody what&#39;s happenend
+The doctor comes back and the host tells everybody about the murder
 
-Scary stuff</tw-passagedata><tw-passagedata pid="13" name="hero-day2-follow" tags="" position="2250,650" size="200,100">See the body of ?????
+The host tells that they call the police</tw-passagedata><tw-passagedata pid="13" name="hero-day2-follow" tags="" position="2250,650" size="200,100">//Day 1 - Breakfast - FOLLOW//
+See the body of ?????
 
 The doctor can tell it&#39;s dead
 
