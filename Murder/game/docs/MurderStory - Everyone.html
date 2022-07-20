@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play MurderStory - Everyone.</tw-noscript></noscript></tw-story>
-<tw-storydata name="MurderStory - Everyone" startnode="1" creator="Twine" creator-version="2.3.16" ifid="41E3D48B-A65A-48D0-8D72-BF4D037FBAA8" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="DEATH" color="red"></tw-tag>,<tw-tag name="Day1" color="green"></tw-tag>,<tw-tag name="ENDING" color="red"></tw-tag>,<tw-tag name="SURVIVE" color="green"></tw-tag>,<tw-tag name="ending" color="green"></tw-tag><tw-passagedata pid="1" name="hero-introduction" tags="" position="650,500" size="200,100">At a train station
+<tw-storydata name="MurderStory - Everyone" startnode="1" creator="Twine" creator-version="2.3.16" ifid="41E3D48B-A65A-48D0-8D72-BF4D037FBAA8" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="DEATH" color="red"></tw-tag>,<tw-tag name="Day1" color="green"></tw-tag>,<tw-tag name="ENDING" color="red"></tw-tag>,<tw-tag name="SURVIVE" color="green"></tw-tag>,<tw-tag name="ending" color="green"></tw-tag>,<tw-tag name="IMPORTANT" color="yellow"></tw-tag><tw-passagedata pid="1" name="hero-introduction" tags="" position="650,500" size="200,100">At a train station
 
 Take a car to the main house
 
@@ -53,7 +53,7 @@ Lady Introduction speech
 
 (if:$hero_is_drunk is true)[[[Go to bed -&gt;hero-day2-breakfast]]]
 (elseif:$hero_is_poisoned is true)[[[Go to bed -&gt;hero-ending-day1-poisoned]]]
-(else: )[[[Go to bed -&gt;hero-day2-breakfast]]]</tw-passagedata><tw-passagedata pid="7" name="hero-day1-evening-billiard-room" tags="" position="1650,500" size="200,100">//Day 1 - Evening - BILLIARD ROOM//
+(else: )[[[Go to bed -&gt;hero-day2-breakfast]]]</tw-passagedata><tw-passagedata pid="7" name="hero-day1-evening-billiard-room" tags="IMPORTANT" position="1650,500" size="200,100">//Day 1 - Evening - BILLIARD ROOM//
 
 - (link:&quot;drink sherry once switch drink with the drunk&quot;)[(set: $hero_is_poisoned to true)]
 - (link:&quot;drink plenty of sherry&quot;)[(set: $hero_is_drunk to true)]
@@ -109,11 +109,18 @@ The doctor can tell it&#39;s dead
 
 Cause =&gt; POISON !!!!!!
 
-[[return in the dinner room -&gt;hero-day2-breakfast]]</tw-passagedata><tw-passagedata pid="13" name="psychic-introduction" tags="" position="650,1000" size="200,100">
+[[return in the dinner room -&gt;hero-day2-breakfast]]</tw-passagedata><tw-passagedata pid="13" name="psychic-introduction" tags="" position="650,1000" size="200,100">PSYCHIC
+
+Decides to have a fun week-end,
+
+Mental health issue clues over the day
+(NO I really hear them, you&#39;ll find out she is not a fraud but a believer see also hero)
+
+
 You arrive at the station at the same time as other persons
 
 take the car and make conversation with :
-- ?The broken face
+- The captain
 - ?
 
 
@@ -177,7 +184,7 @@ Back in your room
 - You Barricade yourself
 - [[You Explore the house (most people are hiding in their room)-&gt;hero-day2-evening-house]]
 
-[[You finally go to sleep-&gt;hero-day3-breakfast]]</tw-passagedata><tw-passagedata pid="20" name="hero-day2-evening-house" tags="" position="3550,650" size="200,100">//Day 2 - Evening - Explore 8PM//
+[[You finally go to sleep-&gt;hero-day3-morning]]</tw-passagedata><tw-passagedata pid="20" name="hero-day2-evening-house" tags="" position="3550,650" size="200,100">//Day 2 - Evening - Explore 8PM//
 
 You explore:
 
@@ -187,7 +194,7 @@ You explore:
 -
 
 
-[[Go back to bed-&gt;hero-day2-evening]]</tw-passagedata><tw-passagedata pid="21" name="hero-day3-breakfast" tags="" position="3850,500" size="200,100">//Day 3 - Morning - 6 AM//
+[[Go back to bed-&gt;hero-day2-evening]]</tw-passagedata><tw-passagedata pid="21" name="hero-day3-morning" tags="" position="3850,500" size="200,100">//Day 3 - Morning - 6 AM//
 
 You wake up scared, and go check on the others
 
@@ -210,7 +217,7 @@ The captain says that in any case he&#39;ll leave and get the authorities
 
 - [[Follow the captain-&gt;hero-day3-escape]]
 
-- [[Stay with the ladies-&gt;hero-day3-morning]]
+- [[Stay with the ladies-&gt;hero-day3-morning-stay]]
 
 </tw-passagedata><tw-passagedata pid="22" name="DAY 3" tags="" position="3850,350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="DAY 1" tags="" position="650,350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="hero-day3-escape" tags="" position="4100,800" size="200,100">//Day 3 - Morning - Escape//
 
@@ -242,13 +249,15 @@ and realize you are a fraud who caused suffering to his wife
 
 (link:&quot;Talk with captain&quot;)[(set: $captain_generic to $captain_generic + 1)]
 
-(if: (history:)&#39;s length &gt; 0)[(link: &quot;↶&quot;)[(goto: (history:)&#39;s last)]]</tw-passagedata><tw-passagedata pid="27" name="hero-day3-dinner" tags="" position="4350,500" size="200,100">//Day 3 - Morning - 10 AM//
+(if: (history:)&#39;s length &gt; 0)[(link: &quot;↶&quot;)[(goto: (history:)&#39;s last)]]</tw-passagedata><tw-passagedata pid="27" name="hero-day3-lunch" tags="" position="4350,500" size="200,100">//Day 3 - Morning - 12 PM//
 
 Miam miam
 
 [[If you have switch/or hide poison-&gt;hero-day3-ending-stabbed]]
 
-[[Eat-&gt;hero-day3-ending-alone]]</tw-passagedata><tw-passagedata pid="28" name="hero-day3-morning" tags="" position="4100,500" size="200,100">They offer to prepare the dinner
+[[Eat-&gt;hero-day3-ending-alone]]</tw-passagedata><tw-passagedata pid="28" name="hero-day3-morning-stay" tags="" position="4100,500" size="200,100">//Day 3 - Morning - 11 AM//
+
+They offer to prepare the dinner
 
 - [[Explore the manor more-&gt;hero-day3-explore]]
 
@@ -256,11 +265,11 @@ Miam miam
 TODO If you know about the poison, you can switch it with piment and save yourself.
 
 
-[[It&#39;s ready!!-&gt;hero-day3-dinner]]</tw-passagedata><tw-passagedata pid="29" name="hero-day3-explore" tags="" position="4150,650" size="200,100">plenty to see
+[[It&#39;s ready!!-&gt;hero-day3-lunch]]</tw-passagedata><tw-passagedata pid="29" name="hero-day3-explore" tags="" position="4150,650" size="200,100">plenty to see
 
 
 
-[[go to the kitchen watch over the two women cooking-&gt;hero-day3-dinner]]</tw-passagedata><tw-passagedata pid="30" name="hero-day3-ending-stabbed" tags="DEATH" position="4600,500" size="200,100">
+[[go to the kitchen watch over the two women cooking-&gt;hero-day3-lunch]]</tw-passagedata><tw-passagedata pid="30" name="hero-day3-ending-stabbed" tags="DEATH" position="4600,500" size="200,100">
 
 You announce that you suspected one of the woman to be the killer
 
@@ -322,6 +331,7 @@ Lady Introduction speech
 - Visit kitchen =&gt; Dead End
 - [[Go to billiard to meet the other-&gt;hero-day1-evening-billiard-room]]
 - Visit library =&gt; Clue about gentry book 
+- [[[Go to attic-&gt;psychic-day2-attic]]]
 
 
 [[[Go to bed -&gt;psychic-day2-breakfast]]]</tw-passagedata><tw-passagedata pid="36" name="psychic-day2-breakfast" tags="" position="2200,1000" size="200,100">//Day 2 - Breakfast - 10 am//
@@ -382,10 +392,10 @@ you probably have nothing more to say to the captain, who is looking weird at yo
 
 Back in your room
 
-- [[You finally go to sleep-&gt;psychic-day3-breakfast]]
+- [[You finally go to sleep-&gt;psychic-day3-morning]]
 - [[IF you talked too much to the captain-&gt;psychic-day2-ending-kabool]]
 
-</tw-passagedata><tw-passagedata pid="44" name="psychic-day3-breakfast" tags="" position="3850,1000" size="200,100">//Day 3 - Morning - 6 AM//
+</tw-passagedata><tw-passagedata pid="44" name="psychic-day3-morning" tags="" position="3850,1000" size="200,100">//Day 3 - Morning - 6 AM//
 
 You wake up scared, and go check on the others
 
@@ -408,8 +418,72 @@ The captain says that in any case he&#39;ll leave and get the authorities
 
 - [[Follow the captain-&gt;psychic-day3-escape-ending]]
 
-- [[Stay with the host-&gt;psychic-day3-morning]]</tw-passagedata><tw-passagedata pid="45" name="psychic-day2-ending-kabool" tags="DEATH" position="3550,1150" size="200,100">Killed by the captain who is mad at you, and who thinks it&#39;s a good opportunity</tw-passagedata><tw-passagedata pid="46" name="psychic-day3-escape-ending" tags="DEATH" position="4100,1150" size="100,100">Even if you don&#39;t tell him anything the captain figures out who you are and kills you
-Kaboom</tw-passagedata><tw-passagedata pid="47" name="psychic-day3-morning" tags="" position="4100,1000" size="200,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+- [[Stay with the host-&gt;psychic-day3-morning-stay]]</tw-passagedata><tw-passagedata pid="45" name="psychic-day2-ending-kabool" tags="DEATH" position="3550,1150" size="200,100">Killed by the captain who is mad at you, and who thinks it&#39;s a good opportunity</tw-passagedata><tw-passagedata pid="46" name="psychic-day3-escape-ending" tags="DEATH" position="4100,1150" size="200,100">Even if you don&#39;t tell him anything the captain figures out who you are and kills you
+Kaboom</tw-passagedata><tw-passagedata pid="47" name="psychic-day3-morning-stay" tags="" position="4100,1000" size="200,100">//Day 3 - Morning - 11 AM//
+
+Talk about making dinner
+
+Get paranoid about the host
+
+[[Kill the host-&gt;psychic-day3-lunch]]
+[[Or just eat-&gt;psychic-day3-lunch]]</tw-passagedata><tw-passagedata pid="48" name="psychic-day3-lunch" tags="" position="4348.333333333333,1000" size="200,100">//Day 3 - Morning - 12 PM//
+
+Miam miam
+
+if you are alone,
+
+the old man from the attic comes to sit with you
+
+If not you ask about the old man to the host. She starts telling she doesn&#39;t know what she is talking about
+
+[[You eat anyway-&gt;psychic-day3-ending-poisoned]]</tw-passagedata><tw-passagedata pid="49" name="psychic-day3-ending-poisoned" tags="DEATH" position="4601.666666666666,1000" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="psychic-day2-attic" tags="IMPORTANT" position="1648.3333333333333,998.3333333333334" size="200,100">You meet a new character
+A old man living in the attic
+
+unlock only when you go there, not in the main timeline
+</tw-passagedata><tw-passagedata pid="51" name="doctor-introduction" tags="" position="650,1325" size="200,100">The doctor
+
+Drug addict, feverish.
+
+Needs the money
+
+
+
+Will receive scary letter that warns him (from the drunk? the nurse?)
+
+
+if the psychic has visited the attic, you learn about her mental illness, she because prime suspect
+
+
+[[go to start-&gt;doctor-day1-drinks]]</tw-passagedata><tw-passagedata pid="52" name="doctor-day1-drinks" tags="" position="900,1325" size="200,100">//Day 1 - Arrival - 5PM//
+
+Greeted by butler 
+
+go for drinks in tea room
+
+Everyone gather around the captain who has a lot
+to say about his bravery (learn about him)
+
+Notice drunk in the corner
+
+Examine in detail more people
+
+[[time for dinner-&gt;doctor-day1-dinner]]</tw-passagedata><tw-passagedata pid="53" name="doctor-day1-dinner" tags="" position="1150,1325" size="200,100">//Day 1 - Dinner - 6PM//
+
+Lady Introduction speech
+
+End of the table,
+
+Only talks to the hero (the hero is the one asking the questions mostly)
+
+(&quot;well he is asking plenty of questions, maybe I should reciprocate, nahhh, you think about drugs)
+ 
+[[go to evening-&gt;doctor-day1-evening]]</tw-passagedata><tw-passagedata pid="54" name="doctor-day1-evening" tags="" position="1400,1325" size="200,100">//Day 1 - Evening - 8PM//
+
+
+Visit possibilities
+
+- talk to the broken face appart?
+- talk to the nurse?</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
