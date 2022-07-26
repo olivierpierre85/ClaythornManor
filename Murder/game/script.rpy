@@ -2,9 +2,9 @@
 
 # The game starts here.
 label start:
-    
-    # TODO how to add a shortcut to game menu. Below not working
-    # $ config.keymap['in_game_menu'] = ['m']
+
+    # Default Menu screen when press ESC in-game
+    $ _game_menu_screen = "characters"
 
     show screen current_time
 

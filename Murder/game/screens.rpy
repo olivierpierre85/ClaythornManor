@@ -246,7 +246,7 @@ screen quick_menu():
     zorder 100
 
     if quick_menu and not renpy.get_screen('choice'):
-
+        # TODO OLPI => configure menu to remove save/load, add map and character,...
         hbox:
             style_prefix "quick"
 
@@ -296,6 +296,7 @@ style quick_button_text:
 
 screen navigation():
     style_prefix "navigation"
+    # TODO configure MENU 
 
     hbox:
 
@@ -304,15 +305,17 @@ screen navigation():
         spacing 25
         xoffset -25
 
-        textbutton _("Save") action ShowMenu("save")
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("Map") action ShowMenu("manor_map")
+        textbutton _("Characters") action ShowMenu("characters")
+        textbutton _("Storyline") action ShowMenu("storyline")
         textbutton _("Options") action ShowMenu("preferences")
         textbutton _("History") action ShowMenu("history")
-        textbutton _("About") action ShowMenu("about")
+        # textbutton _("About") action ShowMenu("about")
         textbutton _("Help") action ShowMenu("help")
+        textbutton _("Resume") action Return() 
         textbutton _("Quit") action Show("confirmbutton")
 
-    textbutton _("Return") action Return() xalign 0.95 yalign 0.93
+    #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 
 
 style navigation_button
