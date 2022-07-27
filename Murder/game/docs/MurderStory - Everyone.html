@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play MurderStory - Everyone.</tw-noscript></noscript></tw-story>
-<tw-storydata name="MurderStory - Everyone" startnode="1" creator="Twine" creator-version="2.3.16" ifid="41E3D48B-A65A-48D0-8D72-BF4D037FBAA8" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="DEATH" color="red"></tw-tag>,<tw-tag name="Day1" color="green"></tw-tag>,<tw-tag name="ENDING" color="red"></tw-tag>,<tw-tag name="EXPLORATION" color="blue"></tw-tag>,<tw-tag name="EXPlORATION" color="blue"></tw-tag>,<tw-tag name="IMPORTANT" color="yellow"></tw-tag>,<tw-tag name="SURVIVE" color="green"></tw-tag>,<tw-tag name="ending" color="green"></tw-tag><tw-passagedata pid="1" name="hero-introduction" tags="" position="650,500" size="200,100">At a train station
+<tw-storydata name="MurderStory - Everyone" startnode="1" creator="Twine" creator-version="2.3.16" ifid="41E3D48B-A65A-48D0-8D72-BF4D037FBAA8" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="DEATH" color="red"></tw-tag>,<tw-tag name="Day1" color="green"></tw-tag>,<tw-tag name="ENDING" color="red"></tw-tag>,<tw-tag name="EXPLORATION" color="blue"></tw-tag>,<tw-tag name="EXPlORATION" color="blue"></tw-tag>,<tw-tag name="IMPORTANT" color="yellow"></tw-tag>,<tw-tag name="SURVIVE" color="green"></tw-tag>,<tw-tag name="ending" color="green"></tw-tag>,<tw-tag name="BIG-QUESTIONS" color="purple"></tw-tag><tw-passagedata pid="1" name="hero-introduction" tags="" position="650,500" size="200,100">At a train station
 
 Take a car to the main house
 
@@ -125,7 +125,7 @@ You arrive at the station at the same time as other persons
 SPECIAL POWER : ???
 
 
-[[go to start-&gt;psychic-day1-drinks]]</tw-passagedata><tw-passagedata pid="14" name="hero-day2-luncheon" tags="" position="2500,500" size="200,100">//Day 2 - Breakfast - 12 am//
+[[go to start-&gt;psychic-day1-drinks]]</tw-passagedata><tw-passagedata pid="14" name="hero-day2-luncheon" tags="" position="2500,500" size="200,100">//Day 2 - Lunch - 12 am//
 
 You take back your place at luncheon
 
@@ -306,11 +306,17 @@ you haven&#39;t seen it coming
 What is happening ? Why am I the only survivor ?
 
 
-</tw-passagedata><tw-passagedata pid="32" name="hero-day3-ending-alone" tags="SURVIVE" position="4600,650" size="200,100">You look the two women dying in front of you
+You undertstand everything when talking to the nurse
+
+[[YOU can pretend you are happy and survive alone-&gt;hero-ending-alone]]
+-you unlock the nurse timeline history
+YOU can try to arrest her and die-&gt; You unlock the ONE LAST TIME timeline</tw-passagedata><tw-passagedata pid="32" name="hero-day3-ending-alone" tags="BIG-QUESTIONS" position="4600,650" size="200,100">You look the two women dying in front of you
 
 not cool
 
 IF you reach there and have all the ending=&gt; new option
+
+OR if you have understood everything already =&gt; and you can try the very elaborate questionnaire to pass
 
 [[Am I the baddy ?-&gt;hero-day3-real-ending]]</tw-passagedata><tw-passagedata pid="33" name="psychic-day1-drinks" tags="" position="900,1000" size="200,100">//Day 1 - Arrival - 5PM//
 
@@ -355,7 +361,7 @@ after the event, you can
 - [[talk to the captain-&gt;captain-generic-choices]]
 - [[explore-&gt;psychic-day2-breakfast-explore]]
 
-[[Time for luncheon-&gt;psychic-day2-luncheon]]</tw-passagedata><tw-passagedata pid="37" name="psychic-day2-breakfast-explore" tags="" position="2250,1150" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="psychic-day2-luncheon" tags="" position="2500,1000" size="200,100">//Day 2 - Breakfast - 12 am//
+[[Time for luncheon-&gt;psychic-day2-luncheon]]</tw-passagedata><tw-passagedata pid="37" name="psychic-day2-breakfast-explore" tags="" position="2250,1150" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="psychic-day2-luncheon" tags="" position="2500,1000" size="200,100">//Day 2 - Lunch - 12 am//
 
 You take back your place at luncheon
 
@@ -608,7 +614,7 @@ But the hero is most likely alive now
 after the event, you can
 - [[talk to the broken-&gt;broken-face-generic-choices]]
 
-[[Time for luncheon-&gt;nurse-day2-luncheon]]</tw-passagedata><tw-passagedata pid="70" name="nurse-day2-luncheon" tags="" position="2500,1625" size="200,100">//Day 2 - Breakfast - 12 am//
+[[Time for luncheon-&gt;nurse-day2-luncheon]]</tw-passagedata><tw-passagedata pid="70" name="nurse-day2-luncheon" tags="" position="2500,1625" size="200,100">//Day 2 - Lunch - 12 am//
 
 You take back your place at luncheon
 
@@ -659,7 +665,7 @@ While learning about the host, you notice some weird habits. You can&#39;t unloc
 
 You also notice the footman are doing basic mistakes. You&#39;ll ask the host what about that. She&#39;ll reply yes they might be new, she fluster, she doesn&#39;t seem to know what he means.
  
-[[go to evening-&gt;host-day1-evening]]</tw-passagedata><tw-passagedata pid="77" name="host-generic-choices" tags="" position="1825,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="78" name="host-day1-evening" tags="" position="1400,1900" size="200,100">//Day 1 - Evening - 8PM//
+[[go to evening-&gt;captain-day1-evening]]</tw-passagedata><tw-passagedata pid="77" name="host-generic-choices" tags="" position="1825,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="78" name="captain-day1-evening" tags="" position="1400,1900" size="200,100">//Day 1 - Evening - 8PM//
 
 - Visit manor
 - Go to billiard room to entertain people again (Maybe you&#39;ll realize that talking is not the best use of your time)
@@ -677,7 +683,7 @@ If not, you examine the manor in more details
 
 If not same story as hero main
 
-[[Time for luncheon-&gt;captain-day2-luncheon]]</tw-passagedata><tw-passagedata pid="80" name="captain-day2-luncheon" tags="" position="2500,1900" size="200,100">//Day 2 - Breakfast - 12 am//
+[[Time for luncheon-&gt;captain-day2-luncheon]]</tw-passagedata><tw-passagedata pid="80" name="captain-day2-luncheon" tags="" position="2500,1900" size="200,100">//Day 2 - Lunch - 12 am//
 
 You take back your place at luncheon
 
@@ -821,7 +827,7 @@ Lady Introduction speech
 [[go to evening-&gt;broken-day1-evening]]</tw-passagedata><tw-passagedata pid="97" name="drunk-generic-choices" tags="" position="1575,100" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="98" name="broken-day1-evening" tags="" position="1400,2300" size="200,100">//Day 1 - Evening - 8PM//
 
 - usual places to visit
-- Only him can wear the livery and explore the kitchen (will take down his mask, you can see in the mirror he is not a monster) Find the poison, replace it with salt. [[[Go to bed -&gt;broken-day2-breakfast]]]
+- Only him can wear the livery and explore the kitchen (will take down his mask, you can see in the mirror he is not a monster) Find the poison, replace it with salt. [[Go to bed -&gt;broken-day2-breakfast]]
 - Drink with the drunk until he is incoherent. But when very drunk, he tells you about something terrible he did. 
 
 Don&#39;t change the poison and :
@@ -841,7 +847,7 @@ You have more time since nobody died.
 - you better tell someone about the poison in the kitchen. You show it to the doctor for a quick examination. It&#39;s not rat poison =&gt; But more likely a strong poison made for humans. Somebody is trying to commit a crime here. But who ?
 
 
-[[Time for luncheon-&gt;broken-day2-luncheon]]</tw-passagedata><tw-passagedata pid="100" name="broken-day2-poisoned" tags="DEATH" position="1450,2450" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="101" name="broken-day2-luncheon" tags="" position="2500,2300" size="200,100">//Day 2 - Breakfast - 12 am//
+[[Time for luncheon-&gt;broken-day2-luncheon]]</tw-passagedata><tw-passagedata pid="100" name="broken-day2-poisoned" tags="DEATH" position="1450,2450" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="101" name="broken-day2-luncheon" tags="" position="2500,2300" size="200,100">//Day 2 - Luncheon - 12 am//
 
 You take back your place at luncheon
 
@@ -913,7 +919,7 @@ BUT all the staff is gone.... WTF???
 The captain says that in any case he&#39;ll leave and get the authorities himself
 
 - [[Follow the captain-&gt;broken-day3-escape]]
-- [[Stay with the ladies-&gt;broken-day3-morning-stay]]</tw-passagedata><tw-passagedata pid="107" name="broken-day2-evening-house" tags="EXPLORATION" position="3550,2450" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="108" name="broken-day3-escape" tags="DEATH" position="4100,2450" size="200,100">//Day 3 - Morning - Escape//
+- [[Stay with the ladies-&gt;broken-day3-morning-stay]]</tw-passagedata><tw-passagedata pid="107" name="broken-day2-evening-house" tags="EXPLORATION" position="3550,2450" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="108" name="broken-day3-escape" tags="DEATH" position="3900,2450" size="200,100">//Day 3 - Morning - Escape//
 
 you get into one of the car remaining (the others are missing)
 
@@ -937,6 +943,8 @@ Fast travel.
 
 SUPER POWER: Don&#39;t kill the doctor. Which means the nurse won&#39;t be able to sleep of, because the doctor will be alive after the hunt ?
 
+WHAT will allow you to spare the doc?????????????????
+
 
 [[go to start-&gt;drunk-day1-drinks]]</tw-passagedata><tw-passagedata pid="112" name="drunk-day1-drinks" tags="" position="900,2600" size="200,100">//Day 1 - Arrival - 5PM//
 
@@ -945,7 +953,15 @@ You are wakon up by the butler, you don&#39;t remember how you arrived there.
 
 
 
-[[time for dinner-&gt;drunk-day1-dinner]]</tw-passagedata><tw-passagedata pid="113" name="drunk-day1-dinner" tags="" position="1150,2600" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="114" name="host-introduction" tags="" position="650,2875" size="200,100">The host
+[[time for dinner-&gt;drunk-day1-dinner]]</tw-passagedata><tw-passagedata pid="113" name="drunk-day1-dinner" tags="" position="1150,2600" size="200,100">//Day 1 - Dinner - 6PM//
+
+Lady Introduction speech
+
+Speak ? 
+
+
+
+[[go to evening-&gt;drunk-day1-evening]]</tw-passagedata><tw-passagedata pid="114" name="host-introduction" tags="" position="650,2900" size="200,100">The host
 
 
 You start the day with explanation to the staff.
@@ -953,10 +969,163 @@ You start the day with explanation to the staff.
 It&#39;s a play, a big play for fun. And a lot of money.
 
 
-SUPER POWER: 
 
 
-[[go to start-&gt;host-day1-drinks]]</tw-passagedata><tw-passagedata pid="115" name="host-day1-drinks" tags="" position="900,2875" size="200,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+SUPER POWER: Confess and be spared??? But should be killed in the main timeline She is at breakfast
+
+
+[[go to start-&gt;host-day1-dinner]]</tw-passagedata><tw-passagedata pid="115" name="drunk-day1-evening" tags="" position="1400,2600" size="200,100">//Day 1 - Evening - 8PM//
+
+- usual places to visit but get lost
+- just reach the billiard room IF you drink the broken face drink, you die If you are not too drunk?????? No forget the poisoned stuff for the drunk
+
+
+When you go back to your room, you find the letter saying:
+
+Look at you pitiful thing, ???? why poisoned if supposed to kill doctor????? The man who ruined your life is there and didn&#39;t even recognize him. What do you want to do? Stay drunk for the rest of our life.
+
+
+You don&#39;t know what to do so you
+
+[[stop drinking and go to bed -&gt;drunk-day2-breakfast]]
+
+[[drink yourself to death-&gt;drunk-day2-alcohol-death]]
+
+</tw-passagedata><tw-passagedata pid="116" name="drunk-day2-breakfast" tags="" position="2200,2600" size="200,100">//Day 2 - Breakfast - 10 am//
+
+You wake up 
+
+See the letter and come up with a plan. You will kill that son of a bitch
+
+But first you&#39;ll have to go to breakfast and pretend to be drunk
+
+[[Time for luncheon-&gt;drunk-day2-luncheon]]</tw-passagedata><tw-passagedata pid="117" name="drunk-day2-alcohol-death" tags="DEATH" position="1450,2750" size="200,100">Too much of a good thing</tw-passagedata><tw-passagedata pid="118" name="drunk-day2-luncheon" tags="" position="2500,2600" size="200,100">//Day 2 - Breakfast - 12 am//
+
+You take back your place at luncheon
+
+Manage to not appear drunk.
+
+go back to your bedroom to change for:
+
+[[The hunt-&gt;drunk-day2-hunt]]</tw-passagedata><tw-passagedata pid="119" name="drunk-day2-hunt" tags="" position="2750,2600" size="200,100">//Day 2 - The Hunt - 2 PM//
+
+You are ready to kill the bastard. 
+
+
+[[You kill him-&gt;drunk-day2-drinks]]
+
+
+If you have unlock ??? you have this option
+[[You spare him-&gt;drunk-day2-drinks]]</tw-passagedata><tw-passagedata pid="120" name="drunk-day2-drinks" tags="" position="3000,2600" size="200,100">//Day 2 - Drinks - 5 PM//
+Copy of text with and without death.
+
+In any case, the drunk is poisoned as planned
+
+[[Time for dinner anyway-&gt;drunk-day2-dinner]]</tw-passagedata><tw-passagedata pid="121" name="drunk-day2-dinner" tags="" position="3250,2600" size="200,100">
+//Day 2 - Dinner - 8 PM//
+
+Host speech to say that the police should arrive 
+
+you drink or you don&#39;t, it doesnt matter
+
+[[Then back to your room-&gt;drunk-day2-evening]]</tw-passagedata><tw-passagedata pid="122" name="drunk-day2-evening" tags="" position="3500,2600" size="200,100">//Day 2 - Evening - 8PM//
+
+Back in your room
+
+Whatever was your choice, you are feeling with guilt, drank a lot and went to sleep.
+
+[[You finally go to sleep-&gt;drunk-day2-poisoned]]</tw-passagedata><tw-passagedata pid="123" name="drunk-day2-poisoned" tags="DEATH" position="3600,2725" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="124" name="hero-ending-alone" tags="" position="5625,650" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="125" name="host-day1-dinner" tags="" position="1150,2900" size="200,100">//Day 1 - Dinner - 6PM//
+
+First, pep talk with staff, explanation of everything.
+
+Then greet the guest
+
+
+
+[[go to evening-&gt;host-day1-evening]]</tw-passagedata><tw-passagedata pid="126" name="host-day1-evening" tags="" position="1400,2900" size="200,100">//Day 1 - Evening - 8PM//
+
+Go with what is written in the main timeline
+
+[[Don&#39;t wory too much-&gt;host-day2-breakfast]]</tw-passagedata><tw-passagedata pid="127" name="host-day2-breakfast" tags="" position="2200,2900" size="200,100">//Day 2 - Breakfast - 10 am//
+
+You wake up 
+
+See the dead.
+
+Panic,
+
+try to call the cops.
+
+You don&#39;t like this game anymore
+
+[[Time for luncheon-&gt;host-day2-luncheon]]</tw-passagedata><tw-passagedata pid="128" name="host-day2-luncheon" tags="" position="2500,2900" size="200,100">//Day 2 - Breakfast - 12 am//
+
+You keep on following the plan despite doubts
+
+go back to your bedroom to change for:
+
+[[The hunt-&gt;host-day2-hunt]]</tw-passagedata><tw-passagedata pid="129" name="host-day2-hunt" tags="" position="2750,2900" size="200,100">//Day 2 - The Hunt - 2 PM//
+
+assit to the event
+
+
+panic more
+
+[[drink-&gt;host-day2-drinks]]</tw-passagedata><tw-passagedata pid="130" name="host-day2-drinks" tags="" position="3000,2900" size="200,100">//Day 2 - Drinks - 5 PM//
+Copy of text with and without death.
+
+In any case, the drunk is poisoned as planned
+
+[[Time for dinner anyway-&gt;host-day2-dinner]]</tw-passagedata><tw-passagedata pid="131" name="host-day2-dinner" tags="" position="3250,2900" size="200,100">//Day 2 - Dinner - 8 PM//
+
+Host speech to say that the police should arrive 
+
+you drink or you don&#39;t, it doesnt matter
+
+[[Then back to your room-&gt;host-day2-evening]]</tw-passagedata><tw-passagedata pid="132" name="host-day2-evening" tags="" position="3500,2900" size="200,100">//Day 2 - Evening - 8PM//
+
+Back in your room
+
+
+[[You finally go to sleep-&gt;host-day3-morning]]</tw-passagedata><tw-passagedata pid="133" name="host-day3-morning" tags="" position="3850,2900" size="200,100">You wake up scared, and go check on the others
+
+In the tea room, the people left are:
+The hero
+The host
+The captain
+The psychic
+
+Ok now it is way too many dead.
+
+big discussion
+
+
+[[You come clean-&gt;host-day3-burned]]
+
+[[ You say nothing-&gt;host-day3-poisoned]]
+
+</tw-passagedata><tw-passagedata pid="134" name="host-day3-burned" tags="DEATH" position="4100,3050" size="200,100">Explained to whole thing
+
+How everyone is related in a way
+
+If we can find how, maybe we can solve this.
+
+someone say, it can only be people alive.
+
+Unless someone is faking? Search the room and find=&gt; Everyone is missing.
+They have been moved ?????
+
+
+The captain decide to leave but he is warned.
+
+But if need be there is emergency CAR =&gt;&gt;&gt;&gt;&gt; Phone??????
+
+Before they left by foot</tw-passagedata><tw-passagedata pid="135" name="host-day3-poisoned" tags="DEATH" position="4100,2900" size="200,100">Same time line  as hero, you let the captain go,
+
+you are poisoned,....</tw-passagedata><tw-passagedata pid="136" name="nurse-prologue" tags="" position="400,1625" size="200,100">once the host has explained how everyone is related. and you&#39;ve find out the killer. The prolog dialog is unlock.
+
+It explains the whole story, with every characters involved implications.
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
