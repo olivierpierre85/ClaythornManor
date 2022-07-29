@@ -11,7 +11,10 @@ label timed_menu(menu_id = "", choice=0):
     return
   
   # read the choices
-  $ choice = menu(choices)
+  if True:  # TODO diff between normal menu and map menu
+    $ choice = renpy.call_screen('in_game_menu', _layers="screens") 
+  else: 
+    $ choice = menu(choices)
 
   # After selection, decrease the time life, 
   if menus_options[menu_id][choice].has_key('time_spent'):

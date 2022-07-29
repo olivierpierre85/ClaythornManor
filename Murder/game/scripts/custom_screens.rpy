@@ -27,7 +27,15 @@ screen in_game_menu:
         xoffset -30
         yoffset 30
         idle "images/ui/back_btn.png"
-        action Return()
+        action Return(1)
+
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        xoffset 100
+        yoffset 100
+        idle "images/ui/back_btn.png"
+        action Return(2)
 
 # Display of manor map in menu
 screen manor_map:
