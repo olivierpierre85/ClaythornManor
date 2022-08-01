@@ -1,4 +1,7 @@
 label host_welcome_speech:
+  
+  show host at character_talking_left
+
   host """ 
   Welcome every one. I am sorry to have kept you waiting. Now that we are all gather here, I would like again to show you my gratitude.
 
@@ -14,3 +17,7 @@ label host_welcome_speech:
 
   The second gift, is a price of ten thousands pounds to share among yourselves. It's my way to thank people so selfless as to help other people.
   """
+  
+  "Our host then sits down to her chair."
+
+  hide host

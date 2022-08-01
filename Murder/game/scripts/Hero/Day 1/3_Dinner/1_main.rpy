@@ -5,22 +5,17 @@ label hero_day1_dinner:
 
   scene dining_hall
 
-  narrator """
-  Every one sits at a place with their names on them.
+  # narrator """
+  # Every one sits at a place with their names on them.
 
-  You turn your attention to the group of people seated a the table, and count TODO persons.
+  # You turn your attention to the group of people seated a the table, and count TODO persons.
 
-  While you are examining everyone, a old lady enters the room, and takes her place at the end of the table.
+  # While you are examining everyone, a old lady enters the room, and takes her place at the end of the table.
 
-  """
+  # """
 
-  show host 
 
   call host_welcome_speech
-
-  "Our host then sits down to her chair."
-
-  hide host
 
   narrator "After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host"
 
