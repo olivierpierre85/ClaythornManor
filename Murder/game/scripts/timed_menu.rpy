@@ -11,7 +11,7 @@ label timed_menu(menu_id = "", choice=0):
     return
   
   # read the choices
-  if True:  # TODO diff between normal menu and map menu
+  if False:  # TODO diff between normal menu and map menu
     $ choice = renpy.call_screen('in_game_menu', _layers="screens") 
   else: 
     $ choice = menu(choices)
