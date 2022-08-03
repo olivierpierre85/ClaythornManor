@@ -15,48 +15,54 @@ label hero_day1_dinner:
   # """
 
 
-  call host_welcome_speech
+  # call host_welcome_speech
 
-  narrator "After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host"
+  # narrator "After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host"
 
-  host "Please no need to thank me. The food will be served, enjoy your meal."
+  # host "Please no need to thank me. The food will be served, enjoy your meal."
 
-  narrator "The butler then enters the room, accompany by a footman."
+  # narrator "The butler then enters the room, accompany by a footman."
 
-  narrator """
-  They proceed in serving the first dish and pouring drinks to everyone.
+  # narrator """
+  # They proceed in serving the first dish and pouring drinks to everyone.
   
-  The mood starts to relax, and the sound of different conversations fills the room.
+  # The mood starts to relax, and the sound of different conversations fills the room.
 
-  You then turn your attention to the guests next to you
+  # You then turn your attention to the guests next to you
 
-  You are sitting between Amalia Baxter, and a middle aged man wearing a bowl hat.
+  # You are sitting between Amalia Baxter, and a middle aged man wearing a bowl hat.
 
-  It's name card reads 'Doctor Daniel Baldwin'
-  """
+  # It's name card reads 'Doctor Daniel Baldwin'
+  # """
   
   $ doctor_name = "Doctor Daniel Baldwin"
 
-  $ time_left = 90
+  # $ time_left = 90
 
-  show psychic at character_choice_right
-  show doctor at character_choice_left
+  $ current_menu = TimedMenu([
+    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_dinner_doctor'),
+    TimedMenuChoice('Talk to Amalia Baxter', 'hero_day1_dinner_psychic')
+  ], 90)
+  call run_menu(current_menu)
 
-  python:
-    menus_options['hero_day1_dinner'] = [
-      { 
-        'text': 'Talk to Daniel Baldwin',
-        'redirect': 'hero_day1_dinner_doctor',
-        'time_spent': 20,
-      },
-      { 
-        'text': 'Talk to Amalia Baxter',
-        'redirect': 'hero_day1_dinner_nurse',
-        'time_spent': 0,
-      }
-    ]
+  # show psychic at character_choice_right
+  # show doctor at character_choice_left
 
-  call timed_menu('hero_day1_dinner')
+  # python:
+  #   menus_options['hero_day1_dinner'] = [
+  #     { 
+  #       'text': 'Talk to Daniel Baldwin',
+  #       'redirect': 'hero_day1_dinner_doctor',
+  #       'time_spent': 20,
+  #     },
+  #     { 
+  #       'text': 'Talk to Amalia Baxter',
+  #       'redirect': 'hero_day1_dinner_nurse',
+  #       'time_spent': 0,
+  #     }
+  #   ]
+
+  # call timed_menu('hero_day1_dinner')
 
   narrator "The dinner is ending"
 

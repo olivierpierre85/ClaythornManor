@@ -4,6 +4,8 @@ define hero_name = "Ted Haring"
 define hero  = Character("hero_name", image="hero", dynamic=True)
 define nurse_name = "Woman"
 define nurse    = Character("nurse_name", image="nurse", dynamic=True)
+define psychic_name = "Woman"
+define psychic    = Character("psychic_name", image="psychic", dynamic=True)
 define doctor_name = "Man in a hat"
 define doctor   = Character("doctor_name", image="doctor", dynamic=True)
 define host     = Character("The Host", image="host")
@@ -26,6 +28,7 @@ default hero_day1_drank_sherry_3 = False
 # 4. Insights 
 # Knowledge acquired in game to unlock some dialogs
 define hero_generic_nurse = 0
+define hero_generic_psychic = 0
 define hero_generic_doctor = 0
 define hero_nurse_location = False
 

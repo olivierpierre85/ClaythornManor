@@ -16,10 +16,10 @@ init -1 python:
     # Possible choices for a menu
     class TimedMenuChoice:
     
-        def __init__(self, text, redirect, choice_time=0, choice_repeat = False, hidden = False, keep_alive = False):
+        def __init__(self, text, redirect, time_spent=0, choice_repeat = False, hidden = False, keep_alive = False):
             self.text = text
             self.redirect = redirect
-            self.choice_time = choice_time
+            self.time_spent = time_spent
             self.choice_repeat = choice_repeat
             self.hidden = hidden
             self.keep_alive = keep_alive
@@ -27,14 +27,15 @@ init -1 python:
     # A Timed
     class TimedMenu:
     
-        def __init__(self, choices = [], time_left = 0):
+        def __init__(self, choices = []):
             self.choices = choices
-            self.time_left = time_left
     
         def is_valid(self):
-            if len(self.get_visible_choices())>0:
-                return True
-            return False
+            if len(self.get_visible_choices())<=0:
+                return False
+            if time_left <= 0:
+                return False
+            return True
 
         def get_visible_choices(self):
             visible_choices = []
@@ -48,6 +49,9 @@ init -1 python:
 
             if not self.choices[selected_choice].keep_alive:
                 self.choices[selected_choice].hidden = True
+
+            global time_left
+            time_left -= self.choices[selected_choice].time_spent
 
             return selected_choice
 

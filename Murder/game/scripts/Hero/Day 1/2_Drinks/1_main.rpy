@@ -5,9 +5,10 @@ label hero_day1_drinks:
   hero "I look around the room, see multiple persons already engage in conversation."
   hero "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
 
-  show psychic at character_choice_right
+  # TODO should be included in the TIMED menu class (show character choice or something??)
+  # show psychic at character_choice_right
 
-  show drunk at character_choice_left
+  # show drunk at character_choice_left
 
   $ time_left = 30
     
@@ -19,7 +20,7 @@ label hero_day1_drinks:
 
   narrator "You would like to keep talking, but you are interrupted by the butler entering the room."
 
-  show butler 
+  show butler at truecenter
 
   butler "Dinner is served. Please follow me to the dining room."
 
