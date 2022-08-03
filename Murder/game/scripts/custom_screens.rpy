@@ -70,26 +70,34 @@ screen characters:
 
         style_prefix "characters" #???
 
+        #Two hbox of 4 characters
         hbox:
-            imagebutton:
-                idle "images/ui/lad_btn.png"
-                action ShowMenu("character_detail", "lad")
-
-            imagebutton:
+            vbox:
+                textbutton _("The Lad") action ShowMenu("character_detail", "lad")
+                imagebutton:
+                    idle "images/characters/lad.png"
+                    action ShowMenu("character_detail", "lad")
+            
+            vbox:
                 xoffset 30
-                idle "images/ui/captain_btn.png"
-                action ShowMenu("character_detail", "captain")
-        
+                textbutton _("The Captain") action ShowMenu("character_detail", "captain")
+                imagebutton:
+                    idle"images/characters/captain.png"
+                    action ShowMenu("character_detail", "captain")  
+
         hbox:
-            yoffset 50
-            imagebutton:
-                idle "images/ui/lad_btn.png"
-                action ShowMenu("character_detail", "lad")
-
-            imagebutton:
-                xoffset 30
-                idle "images/ui/captain_btn.png"
-                action ShowMenu("character_detail", "captain")
+            yoffset 30
+            vbox:
+                # Text unknow character
+                if False:
+                    textbutton _( "The Psychic") action ShowMenu("character_detail", "psychic")
+                    imagebutton:
+                        idle"images/characters/psychic.png"
+                        action ShowMenu("character_detail", "psychic")  
+                else:
+                    textbutton _("Locked")
+                    imagebutton:
+                        idle"images/ui/locked_character.png"
 
 screen character_detail(selected_char):
     tag menu # ????
