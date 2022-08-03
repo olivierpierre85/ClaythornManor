@@ -39,8 +39,8 @@ label hero_day1_dinner:
 
   $ time_left = 90
 
-  show nurse at right
-  show doctor at left
+  show psychic at character_choice_right
+  show doctor at character_choice_left
 
   python:
     menus_options['hero_day1_dinner'] = [

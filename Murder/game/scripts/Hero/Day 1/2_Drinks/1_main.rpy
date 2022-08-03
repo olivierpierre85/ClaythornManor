@@ -5,25 +5,17 @@ label hero_day1_drinks:
   hero "I look around the room, see multiple persons already engage in conversation."
   hero "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
 
-  show nurse at right
+  show psychic at character_choice_right
 
-  show drunk at left
+  show drunk at character_choice_left
 
   $ time_left = 30
-
-  python:
-    menus_options['hero_day1_drinks'] = [
-      { 
-        'text': 'Talk to the man',
-        'redirect': 'hero_day1_drinks_drunk',
-      },
-      { 
-        'text': 'Talk to the woman',
-        'redirect': 'hero_day1_drinks_nurse',
-      }
-    ]
-
-  call timed_menu('hero_day1_drinks')
+    
+  $ current_menu = TimedMenu([
+      TimedMenuChoice('Talk To the man', 'hero_day1_drinks_drunk'),
+      TimedMenuChoice('Talk To the woman', 'hero_day1_drinks_psychic')
+    ])
+  call run_menu(current_menu)
 
   narrator "You would like to keep talking, but you are interrupted by the butler entering the room."
 
