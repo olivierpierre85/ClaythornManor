@@ -1,13 +1,16 @@
-label psychic_generic_choices:
-
-  # Needed to be able to come back to the menu
-  $ return_menu = current_menu 
-  $ current_menu = TimedMenu([
+init python:
+  psychic_generic_menu = TimedMenu([
     TimedMenuChoice('What do you do in life ?', 'psychic_generic_job', 20),
     TimedMenuChoice('Why were you invited here ?', 'psychic_generic_heroic_act', 20),
     TimedMenuChoice('Where are you from ?', 'psychic_generic_background', 20),
     TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
   ])
+
+label psychic_generic_choices:
+
+  # Needed to be able to come back to the menu
+  $ return_menu = current_menu 
+  $ current_menu = psychic_generic_menu
   call run_menu(current_menu, return_menu)
   
   return

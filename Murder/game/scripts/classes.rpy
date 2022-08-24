@@ -1,24 +1,29 @@
 # a label is mandatory for the call expression, because of limitations with the python function (a call can't be returned inside python code)
 label run_menu(current_menu, return_menu = None):
     $ print(len(current_menu.choices))
+    $ print(return_menu)
     if current_menu.is_valid():
         $ print("Menu Valid")
+        $ print("Menu 1 : " + current_menu.choices[0].text)
+        #$ print("REturn menu 1 : " + return_menu.choices[0].text)
         $ selected_choice = current_menu.display_choices()
 
-        $ print(current_menu.choices[selected_choice].text)
-        $ print("Call " + current_menu.choices[selected_choice].redirect)
-        call expression current_menu.choices[selected_choice].redirect
-
+        # $ print("chose:", current_menu.choices[selected_choice].text)
+        # $ print("Call " + current_menu.choices[selected_choice].redirect)
+        # call expression current_menu.choices[selected_choice].redirect
+        # $ print("Menu After call : " + current_menu.choices[0].text)
+        # $ print("choice : " + current_menu.choices[selected_choice].text)
+        # $ print("Total : " + str(len(current_menu.choices)))
         if current_menu.choices[selected_choice].early_exit:
             if return_menu:
                 call run_menu(return_menu)
-            else:
-                return
+            return
         else:
+            call expression current_menu.choices[selected_choice].redirect
             call run_menu(current_menu, return_menu)
-
-    if return_menu:
-        call run_menu(return_menu)
+    else:
+        if return_menu:
+            call run_menu(return_menu)
 
     return
 
@@ -35,7 +40,8 @@ init -1 python:
             choice_repeat = False, 
             hidden = False, 
             keep_alive = False, 
-            early_exit = False
+            early_exit = False,
+            condition = None,
         ):
             self.text = text
             self.redirect = redirect
@@ -44,6 +50,13 @@ init -1 python:
             self.hidden = hidden
             self.keep_alive = keep_alive
             self.early_exit = early_exit
+            self.condition = condition
+        
+        def get_condition(self):
+            if self.condition:
+                return eval(self.condition)
+
+            return True
 
     # A Timed
     class TimedMenu:
@@ -61,7 +74,7 @@ init -1 python:
         def get_visible_choices(self):
             visible_choices = []
             for i, choice in enumerate(self.choices):
-                if not choice.hidden:
+                if not choice.hidden and choice.get_condition():
                     visible_choices.append((choice.text, i))
             return visible_choices
 
