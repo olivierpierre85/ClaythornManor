@@ -6,9 +6,9 @@ label psychic_generic:
 
     show psychic
 
-    "The woman seems a bit nervous"
+    # "The woman seems a bit nervous"
 
-    hero "Hi miss ..."
+    # hero "Hi miss ..."
 
     psychic "Miss Baxter, Amalia Baxter."
 
@@ -28,8 +28,9 @@ label psychic_generic:
   # After greeting, general discussion
   call psychic_generic_choices
 
-  hide psychic
+# NOT REACHABLE ANymore
+  # hide psychic
 
-  $ hero_generic_psychic = hero_generic_psychic + 1
+  # $ hero_generic_psychic = hero_generic_psychic + 1
 
-  return
+  # return

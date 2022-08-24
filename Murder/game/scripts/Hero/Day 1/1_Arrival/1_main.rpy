@@ -11,7 +11,7 @@ label hero_day1_arrival:
   hero "While the driver is unloading my bags from the car, a butler opens the main entrance and greets me."
 
   # show host at truecenter
-  show butler
+  show butler at truecenter
 
   butler """
 

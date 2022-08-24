@@ -11,12 +11,12 @@ label hero_day1_drinks:
   # show drunk at character_choice_left
 
   $ time_left = 30
-    
   $ current_menu = TimedMenu([
-      TimedMenuChoice('Talk To the man', 'hero_day1_drinks_drunk'),
+      TimedMenuChoice('Talk To the man', 'hero_day1_drinks_drunk', 10),
       TimedMenuChoice('Talk To the woman', 'hero_day1_drinks_psychic')
     ])
   call run_menu(current_menu)
+  $ current_menu = None
 
   narrator "You would like to keep talking, but you are interrupted by the butler entering the room."
 

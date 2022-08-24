@@ -4,66 +4,76 @@ label hero_day1_evening_billiard_room:
 
   scene billiard_room
 
-  # Hides explanation on re-entry
-  if menus_options['hero_day1_evening'][1]['text'] != 'Go back to the billiard room':
+  # TODO Hides explanation on re-entry
+  #if menus_options['hero_day1_evening'][1]['text'] != 'Go back to the billiard room':
 
-    """
-    You see multiple people in the room.
-  
-    Amalia Baxter doesn't seem to be here.
+  """
+  You see multiple people in the room.
 
-    But you recognize Doctor Baldwin in conversation with another man.
+  Amalia Baxter doesn't seem to be here.
 
-    The rest of the guests are grouped together and are talking loudly.
+  But you recognize Doctor Baldwin in conversation with another man.
 
-    There is also a choice of alcohol near the bar.
+  The rest of the guests are grouped together and are talking loudly.
 
-    And the butler is silent in a corner.
-    """
+  There is also a choice of alcohol near the bar.
 
-  python:
-    menus_options['hero_day1_evening_billiard_room'] = [
-      { 
-        'text': 'Talk to Daniel Baldwin',
-        'redirect': 'hero_day1_evening_billiard_room_doctor',
-        'time_spent': 50,
-      },
-      { 
-        'text': 'Approach the large group of people',
-        'redirect': 'hero_day1_evening_billiard_room_group',
-        'time_spent': 50,
-      },
-      { 
-        'text': 'Ask the butler about Amelia',
-        'redirect': 'hero_day1_evening_billiard_room_butler',
-        'time_spent': 20,
-      },
-      { 
-        'text': 'Go to the bar to have a drink',
-        'redirect': 'hero_day1_evening_billiard_room_bar_1',
-        'time_spent': 10,
-      },
-      { 
-        'text': 'Have another drink',
-        'redirect': 'hero_day1_evening_billiard_room_bar_2',
-        'time_spent': 10,
-        'condition': 'hero_day1_drank_sherry',
-      },
-      { 
-        'text': 'Maybe a Last drink',
-        'redirect': 'hero_day1_evening_billiard_room_bar_3',
-        'time_spent': 10,
-        'condition': 'hero_day1_drank_sherry_2',
-      },
-      { 
-        'text': 'Leave the room',
-        'redirect': 'hero_day1_evening_billiard_room_cancel',
-        'time_spent': 0,
-        'early_exit': True,
-      },
-    ]
+  And the butler is silent in a corner.
+  """
 
-  call timed_menu('hero_day1_evening_billiard_room')
+  $ return_menu = current_menu 
+  $ current_menu = TimedMenu([
+    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_evening_billiard_room_doctor', 50),
+    TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
+    TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
+    TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
+  ])
+  call run_menu(current_menu, return_menu)
+
+  # python:
+    
+  #   menus_options['hero_day1_evening_billiard_room'] = [
+  #     { 
+  #       'text': 'Talk to Daniel Baldwin',
+  #       'redirect': 'hero_day1_evening_billiard_room_doctor',
+  #       'time_spent': 50,
+  #     },
+  #     { 
+  #       'text': 'Approach the large group of people',
+  #       'redirect': 'hero_day1_evening_billiard_room_group',
+  #       'time_spent': 50,
+  #     },
+  #     { 
+  #       'text': 'Ask the butler about Amelia',
+  #       'redirect': 'hero_day1_evening_billiard_room_butler',
+  #       'time_spent': 20,
+  #     },
+  #     { 
+  #       'text': 'Go to the bar to have a drink',
+  #       'redirect': 'hero_day1_evening_billiard_room_bar_1',
+  #       'time_spent': 10,
+  #     },
+  #     { 
+  #       'text': 'Have another drink',
+  #       'redirect': 'hero_day1_evening_billiard_room_bar_2',
+  #       'time_spent': 10,
+  #       'condition': 'hero_day1_drank_sherry',
+  #     },
+  #     { 
+  #       'text': 'Maybe a Last drink',
+  #       'redirect': 'hero_day1_evening_billiard_room_bar_3',
+  #       'time_spent': 10,
+  #       'condition': 'hero_day1_drank_sherry_2',
+  #     },
+  #     { 
+  #       'text': 'Leave the room',
+  #       'redirect': 'hero_day1_evening_billiard_room_cancel',
+  #       'time_spent': 0,
+  #       'early_exit': True,
+  #     },
+  #   ]
+
+  # call timed_menu('hero_day1_evening_billiard_room')
 
   return
 
@@ -120,7 +130,7 @@ label hero_day1_evening_billiard_room_butler:
 label hero_day1_evening_billiard_room_cancel:
   "You don't feel like staying in this room and leave"
   # TODO Change name of options ??
-  $ menus_options['hero_day1_evening'][1]['text'] = 'Go back to the billiard room'
+  # $ menus_options['hero_day1_evening'][1]['text'] = 'Go back to the billiard room'
   scene hallway
 
   return

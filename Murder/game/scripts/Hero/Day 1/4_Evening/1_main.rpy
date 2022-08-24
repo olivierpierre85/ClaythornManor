@@ -20,40 +20,50 @@ label hero_day1_evening:
 
   define hero_day1_evening_left_bedroom = False
 
-  python:
-    menus_options['hero_day1_evening'] = [
-      { 
-        'text': 'Go knock on the the door of Amalia Baxter',
-        'redirect': 'hero_day1_evening_nurse_room',
-        'time_spent': 60,
-        'condition': 'hero_nurse_location',
-      },
-      { 
-        'text': 'Meet the others in the billiard room',
-        'redirect': 'hero_day1_evening_billiard_room',
-        'time_spent': 10,
-        'keep_alive': True,
-      },
-      { 
-        'text': 'Go have a look in the library.',
-        'redirect': 'hero_day1_evening_library',
-        'time_spent': 10,
-      },
-      { 
-        'text': 'Go downstairs to visit the kitchens',
-        'redirect': 'hero_day1_evening_kitchens',
-        'time_spent': 10,
-      },
-      { 
-        'text': 'You give up and go back to your room',
-        'redirect': 'hero_day1_evening_cancel',
-        'condition': 'hero_day1_evening_left_bedroom',
-        'time_spent': 0,
-        'early_exit': True,
-      },
-    ]
+  $ current_menu = TimedMenu([
+    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 40), # TODO aDD condition
+    TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 10, keep_alive = True),
+    TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
+    TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
+    TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)# TODO aDD condition
+  ])
+  call run_menu(current_menu)
+  $ current_menu =  None
 
-  call timed_menu('hero_day1_evening')
+  # python:
+  #   menus_options['hero_day1_evening'] = [
+  #     { 
+  #       'text': 'Go knock on the the door of Amalia Baxter',
+  #       'redirect': 'hero_day1_evening_nurse_room',
+  #       'time_spent': 60,
+  #       'condition': 'hero_nurse_location',
+  #     },
+  #     { 
+  #       'text': 'Meet the others in the billiard room',
+  #       'redirect': 'hero_day1_evening_billiard_room',
+  #       'time_spent': 10,
+  #       'keep_alive': True,
+  #     },
+  #     { 
+  #       'text': 'Go have a look in the library.',
+  #       'redirect': 'hero_day1_evening_library',
+  #       'time_spent': 10,
+  #     },
+  #     { 
+  #       'text': 'Go downstairs to visit the kitchens',
+  #       'redirect': 'hero_day1_evening_kitchens',
+  #       'time_spent': 10,
+  #     },
+  #     { 
+  #       'text': 'You give up and go back to your room',
+  #       'redirect': 'hero_day1_evening_cancel',
+  #       'condition': 'hero_day1_evening_left_bedroom',
+  #       'time_spent': 0,
+  #       'early_exit': True,
+  #     },
+  #   ]
+
+  # call timed_menu('hero_day1_evening')
 
   "Feeling tired, you decide it's late enough and you go to bed."
 

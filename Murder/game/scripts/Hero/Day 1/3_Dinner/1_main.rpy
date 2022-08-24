@@ -37,16 +37,20 @@ label hero_day1_dinner:
   
   $ doctor_name = "Doctor Daniel Baldwin"
 
-  # $ time_left = 90
+  $ time_left = 60
+
+  show psychic at character_choice_right
+  show doctor at character_choice_left
 
   $ current_menu = TimedMenu([
-    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_dinner_doctor'),
-    TimedMenuChoice('Talk to Amalia Baxter', 'hero_day1_dinner_psychic')
-  ], 90)
+    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_dinner_doctor', keep_alive = True),
+    TimedMenuChoice('Talk to Amalia Baxter', 'hero_day1_dinner_psychic', keep_alive = True)
+  ])
   call run_menu(current_menu)
+  $ current_menu =  None
 
-  # show psychic at character_choice_right
-  # show doctor at character_choice_left
+  hide psychic
+  hide doctor
 
   # python:
   #   menus_options['hero_day1_dinner'] = [

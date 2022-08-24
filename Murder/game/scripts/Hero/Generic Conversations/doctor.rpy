@@ -9,7 +9,7 @@ label doctor_generic():
 
     doctor "Hi, I am doctor Daniel Baldwin."
 
-    show doctor happy
+    show doctor
 
     hero "Nice to meet you doctor."
 
