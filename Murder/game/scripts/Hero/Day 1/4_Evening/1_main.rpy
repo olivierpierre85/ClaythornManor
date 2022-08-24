@@ -25,13 +25,13 @@ label hero_day1_evening:
 
   """
 
-  $ time_left = 120
+  $ time_left = 1200
 
   define hero_day1_evening_left_bedroom = False
 
-  $ current_menu = hero_day1_evening_menu
-  call run_menu(current_menu)
-  $ current_menu =  None
+  #$ current_menu = hero_day1_evening_menu
+  call run_menu(hero_day1_evening_menu)
+  # $ current_menu =  None
 
   # python:
   #   menus_options['hero_day1_evening'] = [

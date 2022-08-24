@@ -1,32 +1,46 @@
 # a label is mandatory for the call expression, because of limitations with the python function (a call can't be returned inside python code)
-label run_menu(current_menu, return_menu = None):
-    $ print(len(current_menu.choices))
-    $ print(return_menu)
+# label run_menu(current_menu, return_menu = None):
+#     $ print(len(current_menu.choices))
+#     $ print(return_menu)
+#     if current_menu.is_valid():
+#         $ print("Menu Valid")
+#         $ print("Menu 1 : " + current_menu.choices[0].text)
+#         #$ print("REturn menu 1 : " + return_menu.choices[0].text)
+#         $ selected_choice = current_menu.display_choices()
+
+#         # $ print("chose:", current_menu.choices[selected_choice].text)
+#         # $ print("Call " + current_menu.choices[selected_choice].redirect)
+#         # call expression current_menu.choices[selected_choice].redirect
+#         # $ print("Menu After call : " + current_menu.choices[0].text)
+#         # $ print("choice : " + current_menu.choices[selected_choice].text)
+#         # $ print("Total : " + str(len(current_menu.choices)))
+#         if current_menu.choices[selected_choice].early_exit:
+#             if return_menu:
+#                 call run_menu(return_menu)
+#             return
+#         else:
+#             call expression current_menu.choices[selected_choice].redirect
+#             call run_menu(current_menu, return_menu)
+#     else:
+#         if return_menu:
+#             call run_menu(return_menu)
+
+#     return
+label run_menu(current_menu):
+    $ print("run menu")
+    $ print("Menu 1 : " + current_menu.choices[0].text)
     if current_menu.is_valid():
-        $ print("Menu Valid")
-        $ print("Menu 1 : " + current_menu.choices[0].text)
-        #$ print("REturn menu 1 : " + return_menu.choices[0].text)
+        $ print("Menu valid ")
         $ selected_choice = current_menu.display_choices()
-
-        # $ print("chose:", current_menu.choices[selected_choice].text)
-        # $ print("Call " + current_menu.choices[selected_choice].redirect)
-        # call expression current_menu.choices[selected_choice].redirect
-        # $ print("Menu After call : " + current_menu.choices[0].text)
-        # $ print("choice : " + current_menu.choices[selected_choice].text)
-        # $ print("Total : " + str(len(current_menu.choices)))
         if current_menu.choices[selected_choice].early_exit:
-            if return_menu:
-                call run_menu(return_menu)
-            return
-        else:
-            call expression current_menu.choices[selected_choice].redirect
-            call run_menu(current_menu, return_menu)
+            $ current_menu.early_exit = True
+        $ print("Call redirect : " + current_menu.choices[selected_choice].redirect)
+        call expression current_menu.choices[selected_choice].redirect
+        $ print("Back from recirect : " + current_menu.choices[selected_choice].redirect)
+        call run_menu(current_menu)
     else:
-        if return_menu:
-            call run_menu(return_menu)
-
+        $ print("Menu not valid ")
     return
-
 
 init -1 python:
     # Possible choices for a menu
@@ -63,11 +77,13 @@ init -1 python:
     
         def __init__(self, choices = []):
             self.choices = choices
+            self.early_exit = False
     
         def is_valid(self):
-            if len(self.get_visible_choices())<=0:
+            if len(self.get_visible_choices()) <= 0:
                 return False
-            if time_left <= 0:
+                
+            if time_left <= 0 or self.early_exit:
                 return False
             return True
 

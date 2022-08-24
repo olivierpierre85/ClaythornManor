@@ -1,3 +1,11 @@
+init python:
+  hero_day1_evening_billiard_room_menu = TimedMenu([
+    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_evening_billiard_room_doctor', 50),
+    TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
+    TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
+    TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
+  ])
+
 label hero_day1_evening_billiard_room:
 
   $ hero_day1_evening_left_bedroom = True
@@ -21,14 +29,7 @@ label hero_day1_evening_billiard_room:
   And the butler is silent in a corner.
   """
 
-  $ return_menu = current_menu 
-  $ current_menu = TimedMenu([
-    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_evening_billiard_room_doctor', 50),
-    TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
-    TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
-    TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
-  ])
-  call run_menu(current_menu, return_menu) # go back to return_menu when over
+  call run_menu(hero_day1_evening_billiard_room_menu) # go back to return_menu when over
 
   return
 
