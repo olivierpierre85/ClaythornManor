@@ -3,6 +3,9 @@ init python:
     TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_evening_billiard_room_doctor', 50),
     TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
     TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
+    TimedMenuChoice('Go to the bar to have a drink', 'hero_day1_evening_billiard_room_bar_1', 20),
+    TimedMenuChoice('Have another drink', 'hero_day1_evening_billiard_room_bar_2', 20, condition = 'hero_day1_drank_sherry'),
+    TimedMenuChoice('Maybe one last drink', 'hero_day1_evening_billiard_room_bar_3', 20, condition = 'hero_day1_drank_sherry_2'),
     TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
   ])
 
@@ -13,21 +16,27 @@ label hero_day1_evening_billiard_room:
   scene billiard_room
 
   # TODO Hides explanation on re-entry
-  #if menus_options['hero_day1_evening'][1]['text'] != 'Go back to the billiard room':
+  if not hero_day1_evening_billiard_room_menu.early_exit:
 
-  """
-  You see multiple people in the room.
+    """
+    You see multiple people in the room.
 
-  Amalia Baxter doesn't seem to be here.
+    Amalia Baxter doesn't seem to be there.
 
-  But you recognize Doctor Baldwin in conversation with another man.
+    But you recognize Doctor Baldwin in conversation with another man.
 
-  The rest of the guests are grouped together and are talking loudly.
+    The rest of the guests are grouped together and are talking loudly.
 
-  There is also a choice of alcohol near the bar.
+    There is also a choice of alcohol near the bar.
 
-  And the butler is silent in a corner.
-  """
+    And the butler is silent in a corner.
+    """
+
+  else:
+    # Reset menu
+    $ hero_day1_evening_billiard_room_menu.early_exit = False
+
+    "You are back in the Billiard Room"
 
   call run_menu(hero_day1_evening_billiard_room_menu) # go back to return_menu when over
 
@@ -62,7 +71,9 @@ label hero_day1_evening_billiard_room_bar_3:
 
 
 label hero_day1_evening_billiard_room_doctor:
-  "choice 2 is cool"
+  
+  call doctor_generic
+
   return
 
 label hero_day1_evening_billiard_room_group:
