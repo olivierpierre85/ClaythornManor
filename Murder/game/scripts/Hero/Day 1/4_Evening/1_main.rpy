@@ -1,11 +1,11 @@
-init python:
-  hero_day1_evening_menu = TimedMenu([
-    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 40, condition = 'hero_nurse_location'), # TODO aDD condition
-    TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 10, keep_alive = True),
-    TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
-    TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
-    TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)# TODO aDD condition
-  ])
+# init python:
+  # hero_day1_evening_menu = TimedMenu([
+  #   TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 40, condition = 'hero_nurse_location'), # TODO aDD condition
+  #   TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 10, keep_alive = True),
+  #   TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
+  #   TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
+  #   TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)# TODO aDD condition
+  # ])
 
 label hero_day1_evening:
 
@@ -28,6 +28,14 @@ label hero_day1_evening:
   $ time_left = 120
 
   define hero_day1_evening_left_bedroom = False
+
+  $ hero_day1_evening_menu = TimedMenu([
+    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 40, condition = 'hero_nurse_location'), # TODO aDD condition
+    TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 10, keep_alive = True),
+    TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
+    TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
+    TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)# TODO aDD condition
+  ])
 
   call run_menu(hero_day1_evening_menu)
 

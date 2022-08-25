@@ -1,13 +1,13 @@
-init python:
-  hero_day1_evening_billiard_room_menu = TimedMenu([
-    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_evening_billiard_room_doctor', 50),
-    TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
-    TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
-    TimedMenuChoice('Go to the bar to have a drink', 'hero_day1_evening_billiard_room_bar_1', 20),
-    TimedMenuChoice('Have another drink', 'hero_day1_evening_billiard_room_bar_2', 20, condition = 'hero_day1_drank_sherry'),
-    TimedMenuChoice('Maybe one last drink', 'hero_day1_evening_billiard_room_bar_3', 20, condition = 'hero_day1_drank_sherry_2'),
-    TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
-  ])
+# init python:
+#   hero_day1_evening_billiard_room_menu = TimedMenu([
+#     TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_evening_billiard_room_doctor', 50),
+#     TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
+#     TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
+#     TimedMenuChoice('Go to the bar to have a drink', 'hero_day1_evening_billiard_room_bar_1', 20),
+#     TimedMenuChoice('Have another drink', 'hero_day1_evening_billiard_room_bar_2', 20, condition = 'hero_day1_drank_sherry'),
+#     TimedMenuChoice('Maybe one last drink', 'hero_day1_evening_billiard_room_bar_3', 20, condition = 'hero_day1_drank_sherry_2'),
+#     TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
+#   ])
 
 label hero_day1_evening_billiard_room:
 
@@ -16,7 +16,8 @@ label hero_day1_evening_billiard_room:
   scene billiard_room
 
   # TODO Hides explanation on re-entry
-  if not hero_day1_evening_billiard_room_menu.early_exit:
+  $ first_time = not 'hero_day1_evening_billiard_room_menu' in locals()
+  if first_time: # and not hero_day1_evening_billiard_room_menu.early_exit:
 
     """
     You see multiple people in the room.
@@ -31,6 +32,16 @@ label hero_day1_evening_billiard_room:
 
     And the butler is silent in a corner.
     """
+
+    $ hero_day1_evening_billiard_room_menu = TimedMenu([
+      TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_evening_billiard_room_doctor', 50),
+      TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
+      TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
+      TimedMenuChoice('Go to the bar to have a drink', 'hero_day1_evening_billiard_room_bar_1', 20),
+      TimedMenuChoice('Have another drink', 'hero_day1_evening_billiard_room_bar_2', 20, condition = 'hero_day1_drank_sherry'),
+      TimedMenuChoice('Maybe one last drink', 'hero_day1_evening_billiard_room_bar_3', 20, condition = 'hero_day1_drank_sherry_2'),
+      TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
+    ])
 
   else:
     # Reset menu

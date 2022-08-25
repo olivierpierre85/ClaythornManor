@@ -1,13 +1,14 @@
-init python:
-  doctor_generic_menu = TimedMenu([
-    TimedMenuChoice('What do you do in life ?', 'doctor_generic_job', 20),
-    TimedMenuChoice('Why were you invited here ?', 'doctor_generic_heroic_act', 20),
-    TimedMenuChoice('Where are you from ?', 'doctor_generic_background', 20),
-    TimedMenuChoice('You don\'t have anymore questions for him', 'doctor_generic_cancel', 0, keep_alive = True, early_exit = True)
-  ])
-    
+ 
 label doctor_generic_choices:
-  
+
+  if not 'doctor_generic_menu' in locals():
+    $ doctor_generic_menu = TimedMenu([
+      TimedMenuChoice('What do you do in life ?', 'doctor_generic_job', 20),
+      TimedMenuChoice('Why were you invited here ?', 'doctor_generic_heroic_act', 20),
+      TimedMenuChoice('Where are you from ?', 'doctor_generic_background', 20),
+      TimedMenuChoice('You don\'t have anymore questions for him', 'doctor_generic_cancel', 0, keep_alive = True, early_exit = True)
+    ])
+
   call run_menu(doctor_generic_menu)
   
   return
