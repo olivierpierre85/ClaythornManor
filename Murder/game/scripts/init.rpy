@@ -13,6 +13,9 @@ define host     = Character("The Host", image="host")
 define drunk    = Character("The Drunk", image="drunk")
 define butler   = Character("The Butler", image="butler")
 
+define broken_name = "Masked Man"
+define broken   = Character("broken_name", image="broken", dynamic=True)
+
 
 # 2. Characters locked
 default char_hero = True
@@ -21,9 +24,8 @@ default char_captain = False
 # 3. Objects ( 0 not found, 1 found, 2 in you possession)
 
 # Actions with impact 
-default hero_day1_drank_sherry = False
-default hero_day1_drank_sherry_2 = False
-default hero_day1_drank_sherry_3 = False
+default hero_day1_drinks = 0
+default hero_day1_poisoned = False
 
 # 4. Insights 
 # Knowledge acquired in game to unlock some dialogs

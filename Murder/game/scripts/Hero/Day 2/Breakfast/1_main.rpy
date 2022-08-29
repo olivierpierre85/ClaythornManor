@@ -4,7 +4,7 @@ label hero_day2_breakfast:
 
   "You slept through the night."
 
-  if (hero_day1_drank_sherry_3):
+  if (hero_day1_drinks > 2):
     "You have a bad hangover. But you'll power through."
   
   "After getting ready, you leave your room to have breakfast."

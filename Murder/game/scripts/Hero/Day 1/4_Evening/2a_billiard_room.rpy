@@ -1,17 +1,9 @@
-# init python:
-#   hero_day1_evening_billiard_room_menu = TimedMenu([
-#     TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_evening_billiard_room_doctor', 50),
-#     TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
-#     TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
-#     TimedMenuChoice('Go to the bar to have a drink', 'hero_day1_evening_billiard_room_bar_1', 20),
-#     TimedMenuChoice('Have another drink', 'hero_day1_evening_billiard_room_bar_2', 20, condition = 'hero_day1_drank_sherry'),
-#     TimedMenuChoice('Maybe one last drink', 'hero_day1_evening_billiard_room_bar_3', 20, condition = 'hero_day1_drank_sherry_2'),
-#     TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
-#   ])
-
 label hero_day1_evening_billiard_room:
 
   $ hero_day1_evening_left_bedroom = True
+
+  # Change menu text
+  $ hero_day1_evening_menu.choices[1].text = "Go back to the billiard room"
 
   scene billiard_room
 
@@ -38,8 +30,8 @@ label hero_day1_evening_billiard_room:
       TimedMenuChoice('Approach the large group of people', 'hero_day1_evening_billiard_room_group', 20),
       TimedMenuChoice('Ask the butler about Amelia', 'hero_day1_evening_billiard_room_butler', 20),
       TimedMenuChoice('Go to the bar to have a drink', 'hero_day1_evening_billiard_room_bar_1', 20),
-      TimedMenuChoice('Have another drink', 'hero_day1_evening_billiard_room_bar_2', 20, condition = 'hero_day1_drank_sherry'),
-      TimedMenuChoice('Maybe one last drink', 'hero_day1_evening_billiard_room_bar_3', 20, condition = 'hero_day1_drank_sherry_2'),
+      TimedMenuChoice('Have another drink', 'hero_day1_evening_billiard_room_bar_2', 20, condition = 'hero_day1_drinks == 1'),
+      TimedMenuChoice('Maybe one last drink', 'hero_day1_evening_billiard_room_bar_3', 20, condition = 'hero_day1_drinks == 2'),
       TimedMenuChoice('Leave the room', 'hero_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
     ])
 
@@ -55,29 +47,71 @@ label hero_day1_evening_billiard_room:
 
 
 label hero_day1_evening_billiard_room_bar_1:
-  "Your pour yourself a glass of sherry from the bottle lying at the bar"
-  "You start to relax a little"
+
+  "You approach the bar"
 
   "The drunk man who was asleep before is near the bar, barely holding up"
 
-  hero "Hi there"
+  hero "Hello sir."
 
   "The mans stares at you but makes no sound"
 
-  "You leave him at the bar, distraught."
+  show broken at truecenter
 
-  $ hero_day1_drank_sherry = True
+  broken "Don't mind him, he seems to be totally out of it."
+
+  "You are taken aback by the masked man. You haven't noticed he was next to you."
+
+  hero "Yeah, he was already asleep when I arrived. It's impressive he managed to make it through dinner."
+
+  broken """
+    He barely did. I was seating next to him at dinner and it was impossible to have him say anything coherent.
+
+    He could eat it's food though. You could tell he is used to function like this. Poor fellow.
+
+    Anyway, I am Thomas Moody.
+    """
+
+  $ broken_name = "Thomas Moody"
+
+  hero "Ted Harring, how do you do."
+
+  broken """
+    Nice to meet you mister Harring. I guess you came here for drink.
+
+    But the choice of drinks is rather small I am afraid. There's only Sherry or Port.
+
+    But if you want something stronger, I can offer you whisky from my personal stash.
+    """
+
+  menu:
+    "He shows you his flask."
+
+    "Accept the whisky":
+      hero "Thank you, whisky would be great."
+      $ hero_day1_poisoned = True
+
+    "Drink something else":
+      "That's ok thank you. I actually like sherry."
+  
+  $ hero_day1_drinks = hero_day1_drinks + 1
+
+  broken "Cheers Mister Harring. Now if you don't mind, I'll see what this group is talking about."
+
+  "Thomas Moody joins the group of people talking."
+
+  hide broken
 
   return
 
 label hero_day1_evening_billiard_room_bar_2:
   "Another drink"
-  $ hero_day1_drank_sherry_2 = True
+  $ hero_day1_drinks = hero_day1_drinks + 1
   return
 
 label hero_day1_evening_billiard_room_bar_3:
   "One last drink"
-  $ hero_day1_drank_sherry_3 = True
+  $ hero_day1_drinks = hero_day1_drinks + 1
   return
 
 

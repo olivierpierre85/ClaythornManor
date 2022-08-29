@@ -1,6 +1,6 @@
 label psychic_generic_choices:
 
-  if not psychic_generic_menu in locals():
+  if not 'psychic_generic_menu' in locals():
     $ psychic_generic_menu = TimedMenu([
       TimedMenuChoice('What do you do in life ?', 'psychic_generic_job', 20),
       TimedMenuChoice('Why were you invited here ?', 'psychic_generic_heroic_act', 20),
