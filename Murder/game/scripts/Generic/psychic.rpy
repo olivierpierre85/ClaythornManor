@@ -14,10 +14,8 @@ label psychic_generic_choices:
 label psychic_generic_job:
   psychic "I am a psychic. I work in an hospital in London."
 
-  # Special label/function that will also play sound
-  $ renpy.notify("You found the occupation for The psychic")
-  #TODO problem, they superpose, thus erasing the previous message. They should be queue or something...
-  $ renpy.notify("You have unlock a new Character (The psychic)")
+  call check_characters_knowledge('psychic','job') 
+
   return
 
 label psychic_generic_heroic_act:
@@ -32,22 +30,15 @@ label psychic_generic_heroic_act:
   "After this short explanation, she asks about your own reason. And you tell her your story."
 
   psychic "I assume most people are here because of something during the war."
+
+  call check_characters_knowledge('psychic','heroic act') 
   
   return
 
-# label hero_generic_heroic_act:
-#   hero """
-#   Me, well I don't think I deserve it either to be honest.
-
-#   Like yourself, it was during the war.
-
-
-#   """
-
-#   return
-
 label psychic_generic_background:
   psychic "I am from Sausage Island"
+
+  call check_characters_knowledge('psychic','background') 
   return
   
 label psychic_generic_manor:

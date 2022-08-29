@@ -1,11 +1,16 @@
 # All variables
 # 1. Declare All characters used by this game.
+define characters_knowledge = dict()
+
 define hero_name = "Ted Haring"
 define hero  = Character("hero_name", image="hero", dynamic=True)
 define nurse_name = "Woman"
 define nurse    = Character("nurse_name", image="nurse", dynamic=True)
+
 define psychic_name = "Woman"
 define psychic    = Character("psychic_name", image="psychic", dynamic=True)
+define characters_knowledge['psychic'] = set()
+
 define doctor_name = "Man in a hat"
 define doctor   = Character("doctor_name", image="doctor", dynamic=True)
 define host     = Character("The Host", image="host")
@@ -42,36 +47,3 @@ define current_time = "5PM"
 define menus_options = dict()
 
 define current_character = "hero"
-
-# Generic menu
-#TODO how to have it in the right file ?
-init python:
-  menus_options['nurse_generic_choices'] = [
-    { 
-      'text': 'What do you do in life ?',
-      'redirect': 'nurse_generic_job',
-      'time_spent': 20,
-    },
-    { 
-      'text': 'Why were you invited here ?',
-      'redirect': 'nurse_generic_heroic_act',
-      'time_spent': 10,
-    },
-    { 
-      'text': 'What do you think of this place',
-      'redirect': 'nurse_generic_manor',
-      'time_spent': 10,
-    },
-    { 
-      'text': 'Where are you from',
-      'redirect': 'nurse_generic_background',
-      'time_spent': 10,
-    },
-    { 
-      'text': 'You have nothing more to ask',
-      'redirect': 'nurse_generic_cancel',
-      'time_spent': 0,
-      'early_exit': True,
-      'keep_alive': True,
-    },
-  ]

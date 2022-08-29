@@ -84,6 +84,7 @@ label hero_day1_evening_billiard_room_bar_1:
     But if you want something stronger, I can offer you whisky from my personal stash.
     """
 
+  # TODO maybe no choice at all, it is too obvious to be able to refuse
   menu:
     "He shows you his flask."
 

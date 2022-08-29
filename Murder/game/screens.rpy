@@ -1215,7 +1215,6 @@ screen notify(message):
 
     timer 3.25 action Hide('notify')
 
-
 transform notify_appear:
     on show:
         alpha 0
