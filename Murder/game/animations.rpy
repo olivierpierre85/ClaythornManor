@@ -15,6 +15,12 @@ transform page_button_right():
     linear 1.0 xpos 1825
     repeat
 
+transform button0():
+    subpixel True
+    alpha -0.2
+    xpos -50
+    linear 0.5 xpos 0 alpha 1.0
+
 transform button1():
     subpixel True
     alpha 0.0

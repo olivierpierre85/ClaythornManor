@@ -31,7 +31,7 @@ label check_characters_knowledge(character, knowledge):
   if  knowledge not in characters_knowledge[character]:
     $ characters_knowledge[character].add(knowledge)
     # Special label/function that will also play sound
-    $ renpy.notify_small("You have found the " + knowledge + " of The " + character)
+    $ renpy.notify("You have found the " + knowledge + " of The " + character)
 
     if len(characters_knowledge[character]) == 3:
       # Unlock a character

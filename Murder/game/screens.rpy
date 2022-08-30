@@ -298,22 +298,32 @@ screen navigation():
     style_prefix "navigation"
     # TODO configure MENU 
 
+    # TODO keep last opened menu from (Story line, charact,...)
+    $ _game_menu_screen = "characters"
+
     hbox:
 
         yalign 0.15
         xalign 0.5
         spacing 25
         xoffset -25
-
-        textbutton _("Map") action ShowMenu("manor_map")
-        textbutton _("Characters") action ShowMenu("characters")
-        textbutton _("Storyline") action ShowMenu("storyline")
-        textbutton _("Options") action ShowMenu("preferences")
-        textbutton _("History") action ShowMenu("history")
-        # textbutton _("About") action ShowMenu("about")
-        textbutton _("Help") action ShowMenu("help")
-        textbutton _("Resume") action Return() 
-        textbutton _("Quit") action Show("confirmbutton")
+        # Menu from start screen
+        if main_menu:
+            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Options") action ShowMenu("preferences")
+            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Return") action Return() 
+        # In game menu
+        else:
+            textbutton _("Map") action ShowMenu("manor_map")
+            textbutton _("Characters") action ShowMenu("characters")
+            textbutton _("Storyline") action ShowMenu("storyline")
+            textbutton _("History") action ShowMenu("history")
+            # textbutton _("About") action ShowMenu("about")
+            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Options") action ShowMenu("preferences")
+            textbutton _("Resume") action Return() 
+            textbutton _("Quit") action Show("confirmbutton")
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 
@@ -350,16 +360,22 @@ screen main_menu():
     vbox:
         xpos 280
         ypos 330
-        textbutton _("Start") action Start() at button1
+        $ last_save = renpy.newest_slot(r"auto+")
+        $ print(str(len(last_save)))
+        if last_save is not None:
+            $ name, page = last_save.split("-")
+            $ print(name, page)
+            # textbutton _("Continue") action FileLoad(name, page) at button0
+            textbutton _("Continue") action FileLoad (1, confirm = False, page = "auto", newest = True)
+        # textbutton _("Continue") action Start() at button0
+        textbutton _("New Game") action Start() at button1
         textbutton _("Load") action ShowMenu("load") at button2
         textbutton _("Options") action ShowMenu("preferences")at button3
         textbutton _("Help") action ShowMenu("help") at button4
-        textbutton _("About") action ShowMenu("about") at button5
-        textbutton _("Quit") action Quit(confirm=not main_menu) at button6
+        # textbutton _("About") action ShowMenu("about") at button5
+        textbutton _("Quit") action Quit(confirm=not main_menu) at button5
 
     add "gui/overlay/main_menu_logo.png"
-
-
 
 
 style main_menu_frame is empty
