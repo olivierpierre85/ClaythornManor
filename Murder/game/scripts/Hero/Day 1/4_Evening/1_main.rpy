@@ -63,7 +63,7 @@ label hero_day1_evening_kitchens:
 
   scene hallway
 
-  show butler
+  show butler at truecenter
 
   butler "I am sorry sir, but the kitchen is for the staff only."
 

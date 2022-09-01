@@ -4,6 +4,6 @@ label hero_day1_drinks_psychic:
 
   call psychic_generic
 
-
+  hide psychic
 
   return

@@ -43,8 +43,8 @@ label hero_day1_dinner:
   show doctor at character_choice_left
 
   $ current_menu = TimedMenu([
-    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_dinner_doctor', keep_alive = True),
-    TimedMenuChoice('Talk to Amalia Baxter', 'hero_day1_dinner_psychic', keep_alive = True)
+    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_dinner_doctor'),
+    TimedMenuChoice('Talk to Amalia Baxter', 'hero_day1_dinner_psychic')
   ])
   call run_menu(current_menu)
   $ current_menu =  None

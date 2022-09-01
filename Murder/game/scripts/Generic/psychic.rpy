@@ -7,8 +7,9 @@ label psychic_generic_choices:
       TimedMenuChoice('Where are you from ?', 'psychic_generic_background', 20),
       TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
     ])
+
   call run_menu(psychic_generic_menu)
-  
+
   return
 
 label psychic_generic_job:

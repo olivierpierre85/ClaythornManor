@@ -10,6 +10,8 @@ label run_menu(current_menu):
 
         call run_menu(current_menu)
 
+    $ current_menu.early_exit = False
+
     return
 
 init -1 python:
