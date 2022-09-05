@@ -13,103 +13,56 @@ screen in_game_menu_btn:
         yoffset 30
         idle "images/ui/menu_btn.png"
         action ShowMenu("in_game_map_menu")
-
-
-screen map_menu_test(title, scroll=None, yinitial=0.0):
-
-    style_prefix "game_menu"
-
-    add gui.game_menu_background
-
-    frame:
-        style "game_menu_outer_frame"
-
-        hbox:
-
-            ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
-                style_prefix "navigation"
-                textbutton _("Where to go ?") action None
-
-            frame:
-                style "game_menu_content_frame"
-
-                viewport:
-                    xoffset -250
-                    yoffset 100
-                    yinitial yinitial
-                    scrollbars "vertical"
-                    mousewheel True
-                    draggable True
-                    pagekeys True
-
-                    side_yfill True
-
-                    vbox:
-                        transclude
         
 
 screen in_game_map_menu:
+    tag menu_map_choice
     style_prefix "game_menu"
 
     add gui.game_menu_background
 
     frame:
         style "game_menu_outer_frame"
+        frame:
 
-        hbox:
+            style "game_menu_content_frame"
+            add "gui/overlay/history_overlay.png":
+                yoffset -350
+            vbox:
+                xalign 0.5
+                text "Where do you want to go ? ":
+                    xalign 0.5
+                imagemap: 
+                    xalign 0.5                       
+                    idle "images/ui/map_bw.png"
+                    hover "images/ui/map_bw_hover.png"
+                    hotspot (29, 95, 255, 502) action Return(0)
+                    hotspot (288, 95, 300, 100) action Return(1)
 
-            ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
-                style_prefix "navigation"
-                textbutton _("Where to go ?") action None
-
-            frame:
-                style "game_menu_content_frame"
-
-                viewport:
-                    xoffset -250
-                    yoffset 100
-                    yinitial 0.0
-                    scrollbars "vertical"
-                    mousewheel True
-                    draggable True
-                    pagekeys True
-
-                    side_yfill True
-
-                    vbox:
-                        transclude
-            
-                        imagemap:
-                            idle "images/ui/map_bw.png"
-                            hotspot (0, 0, 100, 100) action Return(1)
-    # use map_menu_test(_("Map ofs"), scroll="viewport"):
-
-    #     imagemap:
-    #         idle "images/ui/map_bw.png"
-    #         hotspot (0, 0, 100, 100) action Return(1)
-
-# Display of manor map in menu
+# Display of manor map in menu ? Really needed???
 screen manor_map:
     tag menu
 
+
     ## TODO OLPI Add a image of the map
     ## add text with explanation of previously visited rooms if needed
-    use game_menu(_("Map of The Manor"), scroll="viewport"):
+    use game_menu(_("Map of The Manor")):
 
         style_prefix "map"
 
         $ hovered_value = "Choose a direction"
+        
         vbox:
             imagemap:
+                yoffset 150
                 idle "images/ui/map_bw.png"
+                hover "gui/overlay/history_overlay.png"
 
             # hotspot (244, 232, 75, 73) action Return()
 
-            text _(hovered_value)
+            text _(hovered_value):
+                xalign 0.5
+        
 
 
 # Display of storyline tree
