@@ -8,7 +8,7 @@ label psychic_generic:
 
     # "The woman seems a bit nervous"
 
-    # hero "Hi miss ..."
+    hero "Hi miss ..."
 
     psychic "Miss Baxter, Amalia Baxter."
 

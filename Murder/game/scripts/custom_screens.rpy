@@ -5,37 +5,92 @@ screen current_time:
     text "[current_time], [current_day]"
 
 screen in_game_menu_btn:
+    # TODO Menu button
     imagebutton:
         xalign 1.0
         yalign 0.0
         xoffset -30
         yoffset 30
         idle "images/ui/menu_btn.png"
-        action ShowMenu("in_game_menu")
+        action ShowMenu("in_game_map_menu")
 
 
+screen map_menu_test(title, scroll=None, yinitial=0.0):
 
-screen in_game_menu:
-    zorder 2
-    modal False
+    style_prefix "game_menu"
 
-    text "MENU TODO  sous menu"
+    add gui.game_menu_background
 
-    imagebutton:
-        xalign 1.0
-        yalign 0.0
-        xoffset -30
-        yoffset 30
-        idle "images/ui/back_btn.png"
-        action Return(1)
+    frame:
+        style "game_menu_outer_frame"
 
-    imagebutton:
-        xalign 1.0
-        yalign 0.0
-        xoffset 100
-        yoffset 100
-        idle "images/ui/back_btn.png"
-        action Return(2)
+        hbox:
+
+            ## Reserve space for the navigation section.
+            frame:
+                style "game_menu_navigation_frame"
+                style_prefix "navigation"
+                textbutton _("Where to go ?") action None
+
+            frame:
+                style "game_menu_content_frame"
+
+                viewport:
+                    xoffset -250
+                    yoffset 100
+                    yinitial yinitial
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+                    pagekeys True
+
+                    side_yfill True
+
+                    vbox:
+                        transclude
+        
+
+screen in_game_map_menu:
+    style_prefix "game_menu"
+
+    add gui.game_menu_background
+
+    frame:
+        style "game_menu_outer_frame"
+
+        hbox:
+
+            ## Reserve space for the navigation section.
+            frame:
+                style "game_menu_navigation_frame"
+                style_prefix "navigation"
+                textbutton _("Where to go ?") action None
+
+            frame:
+                style "game_menu_content_frame"
+
+                viewport:
+                    xoffset -250
+                    yoffset 100
+                    yinitial 0.0
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+                    pagekeys True
+
+                    side_yfill True
+
+                    vbox:
+                        transclude
+            
+                        imagemap:
+                            idle "images/ui/map_bw.png"
+                            hotspot (0, 0, 100, 100) action Return(1)
+    # use map_menu_test(_("Map ofs"), scroll="viewport"):
+
+    #     imagemap:
+    #         idle "images/ui/map_bw.png"
+    #         hotspot (0, 0, 100, 100) action Return(1)
 
 # Display of manor map in menu
 screen manor_map:
@@ -47,8 +102,15 @@ screen manor_map:
 
         style_prefix "map"
 
+        $ hovered_value = "Choose a direction"
         vbox:
-            text _("Tea room")
+            imagemap:
+                idle "images/ui/map_bw.png"
+
+            # hotspot (244, 232, 75, 73) action Return()
+
+            text _(hovered_value)
+
 
 # Display of storyline tree
 screen storyline:

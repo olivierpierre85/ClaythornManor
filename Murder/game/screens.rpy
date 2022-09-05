@@ -299,6 +299,7 @@ screen navigation():
     # TODO configure MENU 
 
     # TODO keep last opened menu from (Story line, charact,...)
+    # Force characters to be default 
     $ _game_menu_screen = "characters"
 
     hbox:
@@ -324,6 +325,7 @@ screen navigation():
             textbutton _("Options") action ShowMenu("preferences")
             textbutton _("Resume") action Return() 
             textbutton _("Quit") action Show("confirmbutton")
+
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 

@@ -47,3 +47,5 @@ define current_time = "5PM"
 define menus_options = dict()
 
 define current_character = "hero"
+
+#define map_menu = False

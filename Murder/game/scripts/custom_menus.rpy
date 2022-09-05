@@ -2,7 +2,13 @@ label run_menu(current_menu):
 
     if current_menu.is_valid():
 
-        $ selected_choice = current_menu.display_choices()
+        if current_menu.is_map:
+            #$ map_menu = True
+            $ selected_choice = renpy.call_screen('in_game_map_menu', _layers="screens") 
+            #$ map_menu = False
+        else:
+            $ selected_choice = current_menu.display_choices()
+        
         if current_menu.choices[selected_choice].early_exit:
             $ current_menu.early_exit = True
 
@@ -47,9 +53,10 @@ init -1 python:
     # A Timed
     class TimedMenu:
     
-        def __init__(self, choices = []):
+        def __init__(self, choices = [], is_map = False):
             self.choices = choices
             self.early_exit = False
+            self.is_map = is_map
     
         def is_valid(self):
             if len(self.get_visible_choices()) <= 0:

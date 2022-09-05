@@ -35,7 +35,7 @@ label hero_day1_evening:
     TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
     TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
     TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)
-  ])
+  ], True)
 
   call run_menu(hero_day1_evening_menu)
 
