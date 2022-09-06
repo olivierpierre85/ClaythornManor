@@ -1,29 +1,22 @@
-# init python:
-  # hero_day1_evening_menu = TimedMenu([
-  #   TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 40, condition = 'hero_nurse_location'), # TODO aDD condition
-  #   TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 10, keep_alive = True),
-  #   TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
-  #   TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
-  #   TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)# TODO aDD condition
-  # ])
-
 label hero_day1_evening:
 
   $ current_time = "10PM"
 
   scene bedroom_hero
 
-  narrator """
+  # narrator """
 
-  You're entering your bedroom. 
+  # You're entering your bedroom. 
 
-  It is tidy, but a bit run down.
+  # It is tidy, but a bit run down.
 
-  After checking all your effects are in order, you realize that you still have plenty of time before you could sleep.
+  # After checking all your effects are in order, you realize that you still have plenty of time before you could sleep.
 
-  So you go out of your room to ....
+  # So you go out of your room to ....
 
-  """
+  # """
+
+  "You go to"
 
   $ time_left = 120
 
@@ -35,7 +28,7 @@ label hero_day1_evening:
     TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
     TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
     TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)
-  ], True)
+  ], is_map = True)
 
   call run_menu(hero_day1_evening_menu)
 

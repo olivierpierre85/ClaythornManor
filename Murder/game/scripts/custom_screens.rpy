@@ -32,8 +32,8 @@ transform map_button_right():
     linear 1.0 xpos 0
     repeat
 
-screen in_game_map_menu:
-    
+screen in_game_map_menu(choices):
+
     modal True
 
     zorder 200
@@ -44,7 +44,6 @@ screen in_game_map_menu:
     # Logic change based on floor
     $ left_floor = current_floor - 1
     $ right_floor = current_floor + 1
-
 
     frame:
         vbox:
@@ -69,12 +68,14 @@ screen in_game_map_menu:
                     if current_floor == 1:
                         hotspot (29, 95, 255, 502):
                             action Return(0)
-                            tooltip "Go to the scullery ?" 
-                        hotspot (288, 95, 300, 100) action Return(1)
+                            tooltip "[choices[0].text]" 
+                        hotspot (288, 95, 300, 100):
+                            action Return(1)
+                            tooltip "[choices[1].text]"
                     elif current_floor == 0:
                         hotspot (29, 95, 255, 502):
-                            action Return(0)
-                            tooltip "Go to the scullery ?KITCHEN"
+                            action Return(1)
+                            tooltip "[choices[1].text]"
                 
                 imagebutton:
                     idle "gui/button/page_button_right_idle.png" 
@@ -93,9 +94,9 @@ screen in_game_map_menu:
 
             label [str(current_floor)]:
                 xalign 0.5
+                
 
-
-# Display of manor map in menu ? Really needed???
+# Display of manor map in menu => Make it more like
 screen manor_map:
     tag menu
 

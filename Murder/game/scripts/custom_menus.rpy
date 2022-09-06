@@ -4,11 +4,12 @@ label run_menu(current_menu):
 
         if current_menu.is_map:
             #$ map_menu = True
-            $ selected_choice = renpy.call_screen('in_game_map_menu', _layers="screens") 
+            $ selected_choice = renpy.call_screen('in_game_map_menu', choices=current_menu.choices) 
             #$ map_menu = False
         else:
             $ selected_choice = current_menu.display_choices()
         
+        # TODO not better inside classe?
         if current_menu.choices[selected_choice].early_exit:
             $ current_menu.early_exit = True
 

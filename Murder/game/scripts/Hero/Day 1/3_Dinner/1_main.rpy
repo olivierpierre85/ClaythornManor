@@ -47,7 +47,7 @@ label hero_day1_dinner:
   $ current_menu = TimedMenu([
     TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_dinner_doctor'),
     TimedMenuChoice('Talk to Amalia Baxter', 'hero_day1_dinner_psychic')
-  ], True)
+  ])
   call run_menu(current_menu)
   $ current_menu =  None
 

@@ -363,10 +363,10 @@ screen main_menu():
         xpos 280
         ypos 330
         $ last_save = renpy.newest_slot(r"auto+")
-        $ print(str(len(last_save)))
+        #$ print(str(len(last_save)))
         if last_save is not None:
             $ name, page = last_save.split("-")
-            $ print(name, page)
+            #$ print(name, page)
             # textbutton _("Continue") action FileLoad(name, page) at button0
             textbutton _("Continue") action FileLoad (1, confirm = False, page = "auto", newest = True)
         # textbutton _("Continue") action Start() at button0
