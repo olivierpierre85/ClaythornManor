@@ -15,29 +15,70 @@ screen in_game_menu_btn:
         action ShowMenu("in_game_map_menu")
         
 
-screen in_game_map_menu:
-    tag menu_map_choice
-    style_prefix "game_menu"
+# Moving buttons for map choice menu
+transform map_button_left():
+    subpixel True
+    yalign 0.5
+    xpos 15
+    linear 1.0 xpos 0
+    linear 1.0 xpos 15
+    repeat
 
-    add gui.game_menu_background
+transform map_button_right():
+    subpixel True
+    yalign 0.5
+    xpos 0
+    linear 1.0 xpos 15
+    linear 1.0 xpos 0
+    repeat
+
+screen in_game_map_menu:
+    modal True
+
+    zorder 200
+
+    # Copy of the confirm style (TODO change later properly)
+    style_prefix "confirm"
 
     frame:
-        style "game_menu_outer_frame"
-        frame:
 
-            style "game_menu_content_frame"
-            add "gui/overlay/history_overlay.png":
-                yoffset -350
-            vbox:
-                xalign 0.5
-                text "Where do you want to go ? ":
-                    xalign 0.5
+        vbox:
+            xalign .5
+            yalign .5
+            spacing 45
+
+            hbox:
+                imagebutton:
+                    idle "gui/button/page_button_left_idle.png" 
+                    hover "gui/button/page_button_left_hover.png" 
+                    yalign 0.5 
+                    xoffset 0 
+                    action Return(3) # TODO call back with parameter for different FLOOR
+                    at map_button_left
+
+                
                 imagemap: 
                     xalign 0.5                       
                     idle "images/ui/map_bw.png"
                     hover "images/ui/map_bw_hover.png"
-                    hotspot (29, 95, 255, 502) action Return(0)
+                    hotspot (29, 95, 255, 502):
+                        action Return(0)
+                        tooltip "Go to the scullery ?" 
                     hotspot (288, 95, 300, 100) action Return(1)
+                
+                imagebutton:
+                    idle "gui/button/page_button_right_idle.png" 
+                    hover "gui/button/page_button_right_hover.png" 
+                    yalign 0.5 
+                    xoffset 0 
+                    action Return(3) # TODO call back with parameter for different FLOOR
+                    at map_button_right
+            
+            $ tooltip = GetTooltip()
+            if not tooltip:
+                $ tooltip = "Where do you want to go ?"
+            label [tooltip]:
+                xalign 0.5
 
 # Display of manor map in menu ? Really needed???
 screen manor_map:
