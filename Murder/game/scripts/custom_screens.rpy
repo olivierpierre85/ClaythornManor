@@ -42,8 +42,33 @@ screen in_game_map_menu(choices):
     style_prefix "confirm"
 
     # Logic change based on floor
+    
     $ left_floor = current_floor - 1
     $ right_floor = current_floor + 1
+    $ print("left :" + str(left_floor))
+    $ print("right :" + str(right_floor))
+
+    python:
+        rooms = [
+            Room('nurse_room', 'Sun Room', 1, (29, 95, 255, 502)),
+            Room('billiard_room', 'Billiard room', 0, (29, 95, 255, 502))
+            # Room('Go have a look in the library', 'hero_day1_evening_library', 40),
+            # Room('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
+            # Room('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)
+        ]
+
+        # For each Room, check if the menu has a possible option for the floor
+        # If there is add it to the map options
+        hotspots = []
+        for room in rooms:
+            for idx, choice in enumerate(choices):
+                if room.id == choice.room and room.floor == current_floor:
+                    hotspots.append(Hotspot(choice.text, idx, room.area_points))
+        
+        print(str(hotspots[0].area_points[0]))
+
+    # Full Map of the MANOR (TODO put somewhere else)
+    # Loop over choices
 
     frame:
         vbox:
@@ -51,50 +76,54 @@ screen in_game_map_menu(choices):
             yalign .5
             spacing 45
 
+
+            label "Where do you want to go ?":
+                style "confirm_prompt" # TODO specific styling
+                xalign 0.5
+
             hbox:
-                imagebutton:
-                    idle "gui/button/page_button_left_idle.png" 
-                    hover "gui/button/page_button_left_hover.png" 
-                    yalign 0.5 
-                    xoffset 0 
-                    if current_floor > MIN_FLOOR:
-                        action SetVariable("current_floor", left_floor)
-                        at map_button_left
+                if current_floor > MIN_FLOOR:
+                    imagebutton:
+                        idle "gui/button/page_button_left_idle.png" 
+                        hover "gui/button/page_button_left_hover.png" 
+                        yalign 0.5 
+                        xoffset 0                     
+                        action SetVariable("current_floor", left_floor) at map_button_left
+                else:
+                    imagebutton:
+                        idle "gui/button/page_button_left_idle.png" 
+                        yalign 0.5 
+                        xoffset 0                     
                 
                 imagemap: 
                     xalign 0.5                       
                     idle "images/ui/map_bw_idle_[current_floor].png"
                     hover "images/ui/map_bw_hover_[current_floor].png"
-                    if current_floor == 1:
-                        hotspot (29, 95, 255, 502):
-                            action Return(0)
-                            tooltip "[choices[0].text]" 
-                        hotspot (288, 95, 300, 100):
-                            action Return(1)
-                            tooltip "[choices[1].text]"
-                    elif current_floor == 0:
-                        hotspot (29, 95, 255, 502):
-                            action Return(1)
-                            tooltip "[choices[1].text]"
-                
-                imagebutton:
-                    idle "gui/button/page_button_right_idle.png" 
-                    hover "gui/button/page_button_right_hover.png" 
-                    yalign 0.5 
-                    xoffset 0 
-                    if current_floor < MAX_FLOOR:
-                        action SetVariable("current_floor", right_floor) # TODO call back with parameter for different FLOOR
-                        at map_button_right
+                    for hot in hotspots:
+                        hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
+                            action Return(hot.position)
+                            tooltip "[hot.description]"
+                    
+                if current_floor < MAX_FLOOR:
+                    imagebutton:
+                        idle "gui/button/page_button_right_idle.png" 
+                        hover "gui/button/page_button_right_hover.png" 
+                        yalign 0.5 
+                        xoffset 0                     
+                        action SetVariable("current_floor", right_floor) at map_button_right
+                else:
+                    imagebutton:
+                        idle "gui/button/page_button_right_idle.png" 
+                        yalign 0.5 
+                        xoffset 0                     
+
             
             $ tooltip = GetTooltip()
             if not tooltip:
-                $ tooltip = "click on a room to go there"
+                $ tooltip = "Click on a room to move there"
             label [tooltip]:
                 xalign 0.5
 
-            label [str(current_floor)]:
-                xalign 0.5
-                
 
 # Display of manor map in menu => Make it more like
 screen manor_map:

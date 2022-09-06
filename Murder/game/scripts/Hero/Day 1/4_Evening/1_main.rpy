@@ -23,8 +23,8 @@ label hero_day1_evening:
   define hero_day1_evening_left_bedroom = False
 
   $ hero_day1_evening_menu = TimedMenu([
-    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 40, condition = 'hero_nurse_location'),
-    TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 10, keep_alive = True),
+    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 40, condition = 'hero_nurse_location', room = 'nurse_room'),
+    TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 10, keep_alive = True, room = 'billiard_room'),
     TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
     TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
     TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)

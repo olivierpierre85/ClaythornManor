@@ -35,6 +35,7 @@ init -1 python:
             keep_alive = False, 
             early_exit = False,
             condition = None,
+            room = None,
         ):
             self.text = text
             self.redirect = redirect
@@ -44,6 +45,7 @@ init -1 python:
             self.keep_alive = keep_alive
             self.early_exit = early_exit
             self.condition = condition
+            self.room = room
         
         def get_condition(self):
             if self.condition:
@@ -84,4 +86,30 @@ init -1 python:
             time_left -= self.choices[selected_choice].time_spent
 
             return selected_choice
+
+    class Room:
+        def __init__(
+            self, 
+            id,
+            name, 
+            floor, 
+            area_points, 
+        ):
+            self.id = id
+            self.name = name
+            self.floor = floor
+            self.area_points = area_points
+    
+    class Hotspot:
+        def __init__(
+            self, 
+            description, 
+            position,
+            area_points, 
+        ):
+            self.description = description
+            self.position = position
+            self.area_points = area_points
+
+
 
