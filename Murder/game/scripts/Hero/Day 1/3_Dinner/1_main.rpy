@@ -3,6 +3,8 @@ label hero_day1_dinner:
 
   $ current_time = "7PM"
 
+  $ current_floor = 0
+
   scene dining_hall
 
   # narrator """

@@ -12,7 +12,7 @@ screen in_game_menu_btn:
         xoffset -30
         yoffset 30
         idle "images/ui/menu_btn.png"
-        action ShowMenu("in_game_map_menu")
+        # action ShowMenu("in_game_map_menu")
         
 
 # Moving buttons for map choice menu
@@ -33,15 +33,20 @@ transform map_button_right():
     repeat
 
 screen in_game_map_menu:
+    
     modal True
 
     zorder 200
 
-    # Copy of the confirm style (TODO change later properly)
+    # Copy of the confirm style (TODO change later properly to a map style)
     style_prefix "confirm"
 
-    frame:
+    # Logic change based on floor
+    $ left_floor = current_floor - 1
+    $ right_floor = current_floor + 1
 
+
+    frame:
         vbox:
             xalign .5
             yalign .5
@@ -53,32 +58,42 @@ screen in_game_map_menu:
                     hover "gui/button/page_button_left_hover.png" 
                     yalign 0.5 
                     xoffset 0 
-                    action Return(3) # TODO call back with parameter for different FLOOR
-                    at map_button_left
-
+                    if current_floor > MIN_FLOOR:
+                        action SetVariable("current_floor", left_floor)
+                        at map_button_left
                 
                 imagemap: 
                     xalign 0.5                       
-                    idle "images/ui/map_bw.png"
-                    hover "images/ui/map_bw_hover.png"
-                    hotspot (29, 95, 255, 502):
-                        action Return(0)
-                        tooltip "Go to the scullery ?" 
-                    hotspot (288, 95, 300, 100) action Return(1)
+                    idle "images/ui/map_bw_idle_[current_floor].png"
+                    hover "images/ui/map_bw_hover_[current_floor].png"
+                    if current_floor == 1:
+                        hotspot (29, 95, 255, 502):
+                            action Return(0)
+                            tooltip "Go to the scullery ?" 
+                        hotspot (288, 95, 300, 100) action Return(1)
+                    elif current_floor == 0:
+                        hotspot (29, 95, 255, 502):
+                            action Return(0)
+                            tooltip "Go to the scullery ?KITCHEN"
                 
                 imagebutton:
                     idle "gui/button/page_button_right_idle.png" 
                     hover "gui/button/page_button_right_hover.png" 
                     yalign 0.5 
                     xoffset 0 
-                    action Return(3) # TODO call back with parameter for different FLOOR
-                    at map_button_right
+                    if current_floor < MAX_FLOOR:
+                        action SetVariable("current_floor", right_floor) # TODO call back with parameter for different FLOOR
+                        at map_button_right
             
             $ tooltip = GetTooltip()
             if not tooltip:
-                $ tooltip = "Where do you want to go ?"
+                $ tooltip = "click on a room to go there"
             label [tooltip]:
                 xalign 0.5
+
+            label [str(current_floor)]:
+                xalign 0.5
+
 
 # Display of manor map in menu ? Really needed???
 screen manor_map:
