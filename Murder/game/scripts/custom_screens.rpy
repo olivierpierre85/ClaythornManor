@@ -32,6 +32,46 @@ transform map_button_right():
     linear 1.0 xpos 0
     repeat
 
+# Copy of in_game_map_menu because problem with var when use in sub screen
+screen show_map:
+
+    # TODO aLIGN PROPERLY
+
+    $ left_floor = current_floor - 1
+    $ right_floor = current_floor + 1
+    hbox:
+        if current_floor > MIN_FLOOR:
+            imagebutton:
+                idle "gui/button/page_button_left_idle.png" 
+                hover "gui/button/page_button_left_hover.png" 
+                yalign 0.5 
+                xoffset 0                     
+                action SetVariable("current_floor", left_floor) at map_button_left
+        else:
+            imagebutton:
+                idle "gui/button/page_button_left_idle.png" 
+                yalign 0.5 
+                xoffset 0                     
+        
+        imagemap: 
+            xalign 0.5                       
+            idle "images/ui/map_bw_idle_[current_floor].png"
+            hover "images/ui/map_bw_hover_[current_floor].png"
+            
+        if current_floor < MAX_FLOOR:
+            imagebutton:
+                idle "gui/button/page_button_right_idle.png" 
+                hover "gui/button/page_button_right_hover.png" 
+                yalign 0.5 
+                xoffset 0                     
+                action SetVariable("current_floor", right_floor) at map_button_right
+        else:
+            imagebutton:
+                idle "gui/button/page_button_right_idle.png" 
+                yalign 0.5 
+                xoffset 0              
+
+
 screen in_game_map_menu(choices):
 
     modal True
@@ -41,14 +81,12 @@ screen in_game_map_menu(choices):
     # Copy of the confirm style (TODO change later properly to a map style)
     style_prefix "confirm"
 
-    # Logic change based on floor
-    
-    $ left_floor = current_floor - 1
-    $ right_floor = current_floor + 1
-    $ print("left :" + str(left_floor))
-    $ print("right :" + str(right_floor))
-
     python:
+        # Logic change based on floor
+        left_floor = current_floor - 1
+        right_floor = current_floor + 1
+
+        # Full Map of the MANOR
         rooms = [
             Room('nurse_room', 'Sun Room', 1, (29, 95, 255, 502)),
             Room('billiard_room', 'Billiard room', 0, (29, 95, 255, 502))
@@ -64,11 +102,6 @@ screen in_game_map_menu(choices):
             for idx, choice in enumerate(choices):
                 if room.id == choice.room and room.floor == current_floor:
                     hotspots.append(Hotspot(choice.text, idx, room.area_points))
-        
-        print(str(hotspots[0].area_points[0]))
-
-    # Full Map of the MANOR (TODO put somewhere else)
-    # Loop over choices
 
     frame:
         vbox:
@@ -81,6 +114,8 @@ screen in_game_map_menu(choices):
                 style "confirm_prompt" # TODO specific styling
                 xalign 0.5
 
+
+            # use show_map # TODO problem with hot var in tooltip not working, so we need to duplicate code
             hbox:
                 if current_floor > MIN_FLOOR:
                     imagebutton:
@@ -115,9 +150,8 @@ screen in_game_map_menu(choices):
                     imagebutton:
                         idle "gui/button/page_button_right_idle.png" 
                         yalign 0.5 
-                        xoffset 0                     
+                        xoffset 0       
 
-            
             $ tooltip = GetTooltip()
             if not tooltip:
                 $ tooltip = "Click on a room to move there"
@@ -129,25 +163,11 @@ screen in_game_map_menu(choices):
 screen manor_map:
     tag menu
 
-
     ## TODO OLPI Add a image of the map
     ## add text with explanation of previously visited rooms if needed
     use game_menu(_("Map of The Manor")):
 
-        style_prefix "map"
-
-        $ hovered_value = "Choose a direction"
-        
-        vbox:
-            imagemap:
-                yoffset 150
-                idle "images/ui/map_bw.png"
-                hover "gui/overlay/history_overlay.png"
-
-            # hotspot (244, 232, 75, 73) action Return()
-
-            text _(hovered_value):
-                xalign 0.5
+        use show_map
         
 
 

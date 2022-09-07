@@ -15,13 +15,18 @@ label doctor_generic():
 
     hide doctor
     
-    $ hero_generic_doctor = hero_generic_doctor + 1
+    $ hero_generic_doctor = hero_generic_doctor + 1 #TODO replace by already met Boolean
 
     call doctor_generic_choices
 
     return
 
   else:
-    doctor "Sorry, but I don't think I have anything to say to you anymore at the moment." 
+    
+    hero "Hi again ..."
+
+    call doctor_generic_choices
+
+    return 
 
   return

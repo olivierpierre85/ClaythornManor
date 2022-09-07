@@ -49,5 +49,6 @@ define menus_options = dict()
 define current_character = "hero"
 
 define current_floor = 1 # 1 Equal ground floor, 0 is kitchen floor
+define tooltip = "Click on a room to move there"
 define MIN_FLOOR = 0
 define MAX_FLOOR = 1 # TODO Add floors
