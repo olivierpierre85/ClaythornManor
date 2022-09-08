@@ -323,6 +323,7 @@ screen navigation():
             # textbutton _("About") action ShowMenu("about")
             textbutton _("Help") action ShowMenu("help")
             textbutton _("Options") action ShowMenu("preferences")
+            textbutton _("Save") action ShowMenu("save")
             textbutton _("Resume") action Return() 
             textbutton _("Quit") action Show("confirmbutton")
 
@@ -363,11 +364,12 @@ screen main_menu():
         xpos 280
         ypos 330
         $ last_save = renpy.newest_slot(r"auto+")
+        # $ last_save = renpy.newest_slot()
         #$ print(str(len(last_save)))
         if last_save is not None:
-            $ name, page = last_save.split("-")
-            #$ print(name, page)
-            # textbutton _("Continue") action FileLoad(name, page) at button0
+            # $ name, page = last_save.split("-")
+            # $ print(name, page)
+            # textbutton _("Continue") action FileLoad(name, page)
             textbutton _("Continue") action FileLoad (1, confirm = False, page = "auto", newest = True)
         # textbutton _("Continue") action Start() at button0
         textbutton _("New Game") action Start() at button1

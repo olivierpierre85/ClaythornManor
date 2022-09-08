@@ -44,7 +44,6 @@ screen manor_map:
     use game_menu(_("Map of The Manor")):
 
         # Copy of in_game_map_menu because problem with var when use in sub screen
-
         $ left_floor = current_floor - 1
         $ right_floor = current_floor + 1
         hbox:
@@ -67,6 +66,7 @@ screen manor_map:
                 xalign 0.5                       
                 idle "images/ui/map_bw_idle_[current_floor].png"
                 hover "images/ui/map_bw_hover_[current_floor].png"
+                text "blah blah blah" 
                 
             if current_floor < MAX_FLOOR:
                 imagebutton:
@@ -79,7 +79,7 @@ screen manor_map:
                 imagebutton:
                     idle "gui/button/page_button_right_idle.png" 
                     yalign 0.5 
-                    xoffset 0              
+                    xoffset 0       
 
 
 screen in_game_map_menu(choices):
@@ -149,6 +149,16 @@ screen in_game_map_menu(choices):
                             action Return(hot.position)
                             tooltip "[hot.description]"
                     
+                    # TODO make use map_extra_info for other map too
+                                        # Add extra information over map
+                    if current_floor == 1:
+                        text "Super duper room floor 1":
+                            pos(54,200)
+                            color "#be0c0c"
+                            size 30
+                            font "gui/font/BurtonScratch-Regular.ttf"
+
+                    
                 if current_floor < MAX_FLOOR:
                     imagebutton:
                         idle "gui/button/page_button_right_idle.png" 
@@ -167,6 +177,8 @@ screen in_game_map_menu(choices):
                 $ tooltip = "Click on a room to move there"
             label [tooltip]:
                 xalign 0.5
+
+    
         
 
 
