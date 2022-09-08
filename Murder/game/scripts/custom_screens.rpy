@@ -5,6 +5,23 @@ screen current_time:
 
     text "[current_time], [current_day]"
 
+    imagebutton:
+        xoffset 30
+        yoffset 50
+        idle "images/ui/clock_small.png" 
+    
+    
+    add "images/ui/clock_needle_small_full_rotate.png" yoffset 50 xoffset 30 #  at rotate
+
+transform rotate:
+    yoffset 50
+    xoffset 30 
+    # xanchor 0.5
+    # yanchor 0.5
+    # xalign 0.5
+    # yalign 0.5
+    rotate 90
+
 screen in_game_menu_btn:
 
     style_prefix "confirm" # TODO use own style
