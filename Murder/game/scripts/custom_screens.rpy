@@ -6,14 +6,16 @@ screen current_time:
     text "[current_time], [current_day]"
 
 screen in_game_menu_btn:
-    # TODO Menu button
-    imagebutton:
+
+    style_prefix "confirm" # TODO use own style
+    frame:
         xalign 1.0
         yalign 0.0
         xoffset -30
         yoffset 30
-        idle "images/ui/menu_btn.png"
-        action ShowMenu("manor_map")
+        ypadding 10
+
+        textbutton _("Menu") action ShowMenu("manor_map")
         
 
 # Moving buttons for map choice menu
