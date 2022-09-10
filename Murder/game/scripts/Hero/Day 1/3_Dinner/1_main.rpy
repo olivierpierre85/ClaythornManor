@@ -1,7 +1,7 @@
 # Introduction for hero
 label hero_day1_dinner:
 
-  $ current_time = "7PM"
+  $ current_time = time(17,00,00)
 
   $ current_floor = 0
 

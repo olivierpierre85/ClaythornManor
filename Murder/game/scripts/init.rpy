@@ -40,9 +40,13 @@ define hero_generic_doctor = 0
 define hero_nurse_location = False
 
 # Global Variable
+init -100 python:
+  from datetime import datetime, time, timedelta, date
 define time_left = 0
 define current_day = "Friday"
-define current_time = "5PM"
+# define current_time = "05:00PM" 
+define current_time = time(17,00,00)
+define hours_angle = 0
 
 define menus_options = dict()
 
@@ -52,3 +56,4 @@ define current_floor = 1 # 1 Equal ground floor, 0 is kitchen floor
 define tooltip = "Click on a room to move there"
 define MIN_FLOOR = 0
 define MAX_FLOOR = 1 # TODO Add floors
+

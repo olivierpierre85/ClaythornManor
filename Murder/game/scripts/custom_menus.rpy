@@ -2,18 +2,22 @@ label run_menu(current_menu):
 
     if current_menu.is_valid():
 
-        if current_menu.is_map:
-            #$ map_menu = True
-            $ selected_choice = renpy.call_screen('in_game_map_menu', choices=current_menu.choices) 
-            #$ map_menu = False
-        else:
-            $ selected_choice = current_menu.display_choices()
+        # if current_menu.is_map:
+        #     $ selected_choice = renpy.call_screen('in_game_map_menu', choices=current_menu.choices) 
+        # else:
+        $ selected_choice = current_menu.display_choices()
         
-        # TODO not better inside classe?
         if current_menu.choices[selected_choice].early_exit:
             $ current_menu.early_exit = True
 
         call expression current_menu.choices[selected_choice].redirect
+
+        # Change current time
+        $ print(current_time)
+        if time_left > 0:
+            $ dt = datetime.combine(date.today(), current_time) + timedelta(minutes=current_menu.choices[selected_choice].time_spent)
+            $ current_time = dt.time()
+        $ print(current_time)
 
         call run_menu(current_menu)
 
@@ -77,13 +81,17 @@ init -1 python:
             return visible_choices
 
         def display_choices(self):
-            selected_choice = menu(self.get_visible_choices())
+            if current_menu.is_map:
+                selected_choice = renpy.call_screen('in_game_map_menu', choices=self.choices) 
+            else:
+                selected_choice = menu(self.get_visible_choices())
 
             if not self.choices[selected_choice].keep_alive:
                 self.choices[selected_choice].hidden = True
 
             global time_left
             time_left -= self.choices[selected_choice].time_spent
+            print(time_left)
 
             return selected_choice
 

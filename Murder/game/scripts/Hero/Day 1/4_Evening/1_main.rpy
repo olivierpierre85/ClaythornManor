@@ -1,6 +1,7 @@
 label hero_day1_evening:
 
-  $ current_time = "10PM"
+  $ current_time =  time(22,00,00)
+
 
   scene bedroom_hero
 
@@ -23,14 +24,16 @@ label hero_day1_evening:
   define hero_day1_evening_left_bedroom = False
 
   $ hero_day1_evening_menu = TimedMenu([
-    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 40, condition = 'hero_nurse_location', room = 'nurse_room'),
-    TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 10, keep_alive = True, room = 'billiard_room'),
+    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 240, condition = 'hero_nurse_location', room = 'nurse_room'),
+    TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
     TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40),
     TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
     TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)
   ], is_map = True)
 
   call run_menu(hero_day1_evening_menu)
+
+  $ current_time =  time(23,59,00)
 
   "You are now feeling tired, you decide it's late enough and you go to bed."
 

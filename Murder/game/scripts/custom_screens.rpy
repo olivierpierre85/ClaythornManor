@@ -1,9 +1,30 @@
 screen current_time:
-    # TODO analog clock
-    zorder 1
     modal False
 
-    text "[current_time], [current_day]"
+
+    # $ current_hour = current_time[0:2]
+    # $ current_minutes = current_time[3:5]
+    # $ current_period = current_time[5:7]
+    # $ current_period = "PM"
+    $ current_hour = current_time.hour
+    $ current_minutes = current_time.minute
+    if current_hour >= 12:
+        $ current_period = "Afternoon"
+    else:
+        $ current_period = "Morning"
+
+
+    $ hours_angle = ((int(current_hour) * 60) + int(current_minutes))/2
+
+    $ minutes_angle = int(current_minutes) * 6
+
+    add "images/ui/day_background.png"
+
+    # if current_period == "AM":
+    #     text "[current_day] Morning" xoffset 20
+    # else:
+    #     text "[current_day] Afternoon" xoffset 20
+    text "[current_day] [current_period]" xoffset 20
 
     imagebutton:
         xoffset 30
@@ -11,16 +32,19 @@ screen current_time:
         idle "images/ui/clock_small.png" 
     
     
-    add "images/ui/clock_needle_small_full_rotate.png" yoffset 50 xoffset 30 #  at rotate
+    add "images/ui/clock_hours.png" at rotate_hours(hours_angle) # yoffset 50 xoffset 30 #  at rotate
 
-transform rotate:
-    yoffset 50
-    xoffset 30 
-    # xanchor 0.5
-    # yanchor 0.5
-    # xalign 0.5
-    # yalign 0.5
-    rotate 90
+    add "images/ui/clock_minutes.png" at rotate_minutes(minutes_angle) # yoffset 50 xoffset 30 #  at rotate
+
+transform rotate_hours( angle = 0 ):
+    xoffset -16
+    yoffset 31
+    rotate angle
+
+transform rotate_minutes( angle = 0 ):
+    xoffset -16
+    yoffset 31
+    rotate angle
 
 screen in_game_menu_btn:
 
