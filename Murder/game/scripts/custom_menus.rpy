@@ -17,6 +17,7 @@ label run_menu(current_menu):
         if time_left > 0:
             $ dt = datetime.combine(date.today(), current_time) + timedelta(minutes=current_menu.choices[selected_choice].time_spent)
             $ current_time = dt.time()
+            play sound "audio/sound_effects/clock.wav"
         $ print(current_time)
 
         call run_menu(current_menu)

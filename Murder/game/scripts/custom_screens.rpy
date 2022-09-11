@@ -10,6 +10,7 @@ screen current_time:
     $ current_minutes = current_time.minute
     if current_hour >= 12:
         $ current_period = "Afternoon"
+        $ current_hour = current_hour - 12
     else:
         $ current_period = "Morning"
 
@@ -20,31 +21,25 @@ screen current_time:
 
     add "images/ui/day_background.png"
 
-    # if current_period == "AM":
-    #     text "[current_day] Morning" xoffset 20
-    # else:
-    #     text "[current_day] Afternoon" xoffset 20
     text "[current_day] [current_period]" xoffset 20
 
     imagebutton:
         xoffset 30
         yoffset 50
         idle "images/ui/clock_small.png" 
-    
-    
-    add "images/ui/clock_hours.png" at rotate_hours(hours_angle) # yoffset 50 xoffset 30 #  at rotate
 
-    add "images/ui/clock_minutes.png" at rotate_minutes(minutes_angle) # yoffset 50 xoffset 30 #  at rotate
-
+    add "images/ui/clock_hours.png" at rotate_hours(hours_angle)
+    add "images/ui/clock_minutes.png" at rotate_minutes(minutes_angle)
+        
 transform rotate_hours( angle = 0 ):
     xoffset -16
     yoffset 31
-    rotate angle
+    linear 3.0 rotate angle
 
 transform rotate_minutes( angle = 0 ):
     xoffset -16
     yoffset 31
-    rotate angle
+    linear 3.0 rotate angle
 
 screen in_game_menu_btn:
 

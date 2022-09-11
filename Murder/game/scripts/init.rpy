@@ -47,6 +47,7 @@ define current_day = "Friday"
 # define current_time = "05:00PM" 
 define current_time = time(17,00,00)
 define hours_angle = 0
+define first_display = True
 
 define menus_options = dict()
 

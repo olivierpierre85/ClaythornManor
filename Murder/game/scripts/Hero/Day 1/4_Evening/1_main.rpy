@@ -1,7 +1,7 @@
 label hero_day1_evening:
 
   $ current_time =  time(22,00,00)
-
+  play sound "<from 0 to 3.0>audio/sound_effects/clock.ogg"
 
   scene bedroom_hero
 
