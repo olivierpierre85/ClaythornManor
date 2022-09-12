@@ -54,22 +54,6 @@ label hero_day1_dinner:
   hide psychic
   hide doctor
 
-  # python:
-  #   menus_options['hero_day1_dinner'] = [
-  #     { 
-  #       'text': 'Talk to Daniel Baldwin',
-  #       'redirect': 'hero_day1_dinner_doctor',
-  #       'time_spent': 20,
-  #     },
-  #     { 
-  #       'text': 'Talk to Amalia Baxter',
-  #       'redirect': 'hero_day1_dinner_nurse',
-  #       'time_spent': 0,
-  #     }
-  #   ]
-
-  # call timed_menu('hero_day1_dinner')
-
   narrator "The dinner is ending"
 
   narrator "The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or for those tired by the journey, you can simply go to bed."

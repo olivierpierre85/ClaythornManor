@@ -3,7 +3,15 @@
 define characters_knowledge = dict()
 
 define hero_name = "Ted Haring"
-define hero  = Character("hero_name", image="hero", dynamic=True)
+define hero  = Character("hero_name", image="hero", dynamic=True, what_style="hero_style")
+# TODO find a way to extend say_dialog instead of copying everything
+style hero_style:
+    properties gui.text_properties("dialogue")
+    color "#9c1a1a"
+    xpos gui.dialogue_xpos
+    xsize gui.dialogue_width
+    ypos gui.dialogue_ypos - 17
+
 define nurse_name = "Woman"
 define nurse    = Character("nurse_name", image="nurse", dynamic=True)
 

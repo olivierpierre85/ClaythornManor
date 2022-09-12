@@ -2,21 +2,20 @@ label run_menu(current_menu):
 
     if current_menu.is_valid():
 
-        # if current_menu.is_map:
-        #     $ selected_choice = renpy.call_screen('in_game_map_menu', choices=current_menu.choices) 
-        # else:
         $ selected_choice = current_menu.display_choices()
         
         if current_menu.choices[selected_choice].early_exit:
             $ current_menu.early_exit = True        
         
         # Change current time
-        if time_left > 0 :
-            $ dt = datetime.combine(date.today(), current_time) + timedelta(minutes=current_menu.choices[selected_choice].time_spent)
-            $ current_time = dt.time()
-            call change_time(current_time.hour, current_time.minute)
+        $ time_diff = None
+        if time_left > 0 and current_menu.choices[selected_choice].time_spent:
+            $ time_diff = datetime.combine(date.today(), current_time) + timedelta(minutes=current_menu.choices[selected_choice].time_spent)
 
         call expression current_menu.choices[selected_choice].redirect
+
+        if time_diff:
+            call change_time(time_diff.time().hour, time_diff.time().minute)
 
         call run_menu(current_menu)
 

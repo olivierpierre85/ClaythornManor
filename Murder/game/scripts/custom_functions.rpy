@@ -41,4 +41,5 @@ label check_characters_knowledge(character, knowledge):
 label change_time(hours,minutes):
   $ current_time =  time(hours,minutes,00)
   play sound "<from 0 to 3.0>audio/sound_effects/clock.ogg"
+  
   return
