@@ -1,11 +1,6 @@
 screen current_time:
     modal False
 
-
-    # $ current_hour = current_time[0:2]
-    # $ current_minutes = current_time[3:5]
-    # $ current_period = current_time[5:7]
-    # $ current_period = "PM"
     $ current_hour = current_time.hour
     $ current_minutes = current_time.minute
     if current_hour >= 12:
@@ -16,12 +11,16 @@ screen current_time:
 
 
     $ hours_angle = ((int(current_hour) * 60) + int(current_minutes))/2
-
+    
     $ minutes_angle = int(current_minutes) * 6
+    # Terrible quickfix to force clockwise rotation... (constant) TODO  replace???
+    python:
+        while old_minutes_angle > minutes_angle:
+            minutes_angle = minutes_angle + 360
 
     add "images/ui/day_background.png"
 
-    text "[current_day] [current_period]" xoffset 20
+    text "[current_day] [current_period], [minutes_angle]" xoffset 20
 
     imagebutton:
         xoffset 30
@@ -30,16 +29,18 @@ screen current_time:
 
     add "images/ui/clock_hours.png" at rotate_hours(hours_angle)
     add "images/ui/clock_minutes.png" at rotate_minutes(minutes_angle)
+
+    $ old_minutes_angle = minutes_angle
         
 transform rotate_hours( angle = 0 ):
     xoffset -16
     yoffset 31
-    linear 3.0 rotate angle
+    linear 3.0 rotate angle 
 
 transform rotate_minutes( angle = 0 ):
     xoffset -16
-    yoffset 31
-    linear 3.0 rotate angle
+    yoffset 31 
+    linear 3.0 rotate angle 
 
 screen in_game_menu_btn:
 

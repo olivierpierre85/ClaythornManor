@@ -8,17 +8,15 @@ label run_menu(current_menu):
         $ selected_choice = current_menu.display_choices()
         
         if current_menu.choices[selected_choice].early_exit:
-            $ current_menu.early_exit = True
-
-        call expression current_menu.choices[selected_choice].redirect
-
+            $ current_menu.early_exit = True        
+        
         # Change current time
-        $ print(current_time)
-        if time_left > 0:
+        if time_left > 0 :
             $ dt = datetime.combine(date.today(), current_time) + timedelta(minutes=current_menu.choices[selected_choice].time_spent)
             $ current_time = dt.time()
-            play sound "audio/sound_effects/clock.wav"
-        $ print(current_time)
+            call change_time(current_time.hour, current_time.minute)
+
+        call expression current_menu.choices[selected_choice].redirect
 
         call run_menu(current_menu)
 
