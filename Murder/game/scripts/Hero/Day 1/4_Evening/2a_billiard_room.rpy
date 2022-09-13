@@ -79,22 +79,17 @@ label hero_day1_evening_billiard_room_bar_1:
   broken """
     Nice to meet you mister Harring. I guess you came here for drink.
 
-    But the choice of drinks is rather small I am afraid. There's only Sherry or Port.
+    The choice of drinks is rather small I am afraid. There's only Sherry or Port.
 
-    But if you want something stronger, I can offer you whisky from my personal stash.
+    But luckily, I've come prepared
     """
 
-  # TODO maybe no choice at all, it is too obvious to be able to refuse
-  menu:
-    "He shows you his flask."
+    "Before you could say anything. He reaches down is coat pocket and get a flask, then start pouring you a glass"
 
-    "Accept the whisky":
-      hero "Thank you, whisky would be great."
-      $ hero_day1_poisoned = True
+  broken "You'll probably enjoy this more."
 
-    "Drink something else":
-      "That's ok thank you. I actually like sherry."
-  
+  hero "Well ..., Thanks. Cheers"
+
   $ hero_day1_drinks = hero_day1_drinks + 1
 
   broken "Cheers Mister Harring. Now if you don't mind, I'll see what this group is talking about."

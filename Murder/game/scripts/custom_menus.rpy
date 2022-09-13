@@ -79,8 +79,12 @@ init -1 python:
             return visible_choices
 
         def display_choices(self):
-            if test_mode:
-                selected_choice = 0 #TODO get Choices list from saved file NOT always first choice
+
+            # DEBUG MODE
+            if test_mode and len(test_choices) > 0:
+                selected_choice = test_choices.pop(0) 
+                print("Selected Choice:" + str(selected_choice))
+            # NORMAL MODE
             else:
                 if current_menu.is_map:
                     selected_choice = renpy.call_screen('in_game_map_menu', choices=self.choices) 
