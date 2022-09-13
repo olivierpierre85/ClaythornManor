@@ -1,6 +1,6 @@
 # All variables
 # 1. Declare All characters used by this game.
-define characters_knowledge = dict()
+default characters_knowledge = dict()
 
 define hero_name = "Ted Haring"
 define hero  = Character("hero_name", image="hero", dynamic=True, what_style="hero_style")
@@ -17,7 +17,7 @@ define nurse    = Character("nurse_name", image="nurse", dynamic=True)
 
 define psychic_name = "Woman"
 define psychic    = Character("psychic_name", image="psychic", dynamic=True)
-define characters_knowledge['psychic'] = set()
+
 
 define doctor_name = "Man in a hat"
 define doctor   = Character("doctor_name", image="doctor", dynamic=True)
@@ -48,8 +48,12 @@ define hero_generic_doctor = 0
 define hero_nurse_location = False
 
 # Global Variable
+
+# CLOCK
 init -100 python:
-  from datetime import datetime, time, timedelta, date
+    from datetime import datetime, time, timedelta, date
+    renpy.music.register_channel("clock", "sfx", loop=False)
+
 define time_left = 0
 define current_day = "Friday"
 # define current_time = "05:00PM" 

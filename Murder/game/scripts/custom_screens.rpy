@@ -217,7 +217,18 @@ screen in_game_map_menu(choices):
 
     
         
+# Display of storyline tree
+screen objects:
+    tag menu
 
+    ## TODO OLPI Add a image of the map
+    ## add text with explanation of previously visited rooms if needed
+    use game_menu(_("Objects"), scroll="viewport"):
+
+        style_prefix "object"
+
+        vbox:
+            text _("TODO imagemap with all objects, explanation on hover?")
 
 # Display of storyline tree
 screen storyline:
@@ -230,7 +241,7 @@ screen storyline:
         style_prefix "map"
 
         vbox:
-            text _("story tree")
+            text _("TODO story tree (One image map by user, possibility to change user with small button face")
 
 # Display of manor map in menu
 screen characters:

@@ -19,4 +19,9 @@ label debug_choices:
     "hero_day1_evening":
       jump hero_day1_evening
 
+    "Test Hero full run":
+      $ test_mode = True
+      jump hero_day1_arrival
+      
+
 

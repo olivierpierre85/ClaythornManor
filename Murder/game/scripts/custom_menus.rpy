@@ -79,17 +79,19 @@ init -1 python:
             return visible_choices
 
         def display_choices(self):
-            if current_menu.is_map:
-                selected_choice = renpy.call_screen('in_game_map_menu', choices=self.choices) 
+            if test_mode:
+                selected_choice = 0 #TODO get Choices list from saved file NOT always first choice
             else:
-                selected_choice = menu(self.get_visible_choices())
+                if current_menu.is_map:
+                    selected_choice = renpy.call_screen('in_game_map_menu', choices=self.choices) 
+                else:
+                    selected_choice = menu(self.get_visible_choices())
 
             if not self.choices[selected_choice].keep_alive:
                 self.choices[selected_choice].hidden = True
 
             global time_left
             time_left -= self.choices[selected_choice].time_spent
-            print(time_left)
 
             return selected_choice
 

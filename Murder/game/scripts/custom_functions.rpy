@@ -14,7 +14,28 @@ transform character_choice_right:
   xpos 1600  
   ypos 250
 
-# NOT needed, imprint frame in picture
+label check_characters_knowledge(character, knowledge):
+  if  knowledge not in characters_knowledge[character]:
+    $ characters_knowledge[character].add(knowledge)
+    
+    $ renpy.notify("You have found the " + knowledge + " of The " + character)
+    play sound "audio/sound_effects/unlock.ogg"
+
+    if len(characters_knowledge[character]) == 3:
+      # Unlock a character
+      pause 2.0
+      play sound "audio/sound_effects/unlock_char.ogg"
+      $ renpy.notify("You have unlock a new Character : The " + character)
+  return
+
+label change_time(hours,minutes):
+  $ current_time =  time(hours,minutes,00)
+  play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"
+  
+  return
+
+
+  # NOT needed, imprint frame in picture
 # label show_character(character, talk_position = character_talking_left):
 #   $ renpy.show(character, at_list=[talk_position])
 #   # $ renpy.show("painting_frame", at_list=[talk_position], tag=character)
@@ -26,20 +47,3 @@ transform character_choice_right:
 #   return
 
 # Copy from screens.rpy
-
-label check_characters_knowledge(character, knowledge):
-  if  knowledge not in characters_knowledge[character]:
-    $ characters_knowledge[character].add(knowledge)
-    # Special label/function that will also play sound
-    $ renpy.notify("You have found the " + knowledge + " of The " + character)
-
-    if len(characters_knowledge[character]) == 3:
-      # Unlock a character
-      $ renpy.notify("You have unlock a new Character : The " + character)
-  return
-
-label change_time(hours,minutes):
-  $ current_time =  time(hours,minutes,00)
-  play sound "<from 0 to 3.0>audio/sound_effects/clock.ogg"
-  
-  return

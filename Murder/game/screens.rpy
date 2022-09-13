@@ -318,6 +318,7 @@ screen navigation():
         else:
             textbutton _("Map") action ShowMenu("manor_map")
             textbutton _("Characters") action ShowMenu("characters")
+            textbutton _("Objects") action ShowMenu("objects")
             textbutton _("Storyline") action ShowMenu("storyline")
             textbutton _("History") action ShowMenu("history")
             # textbutton _("About") action ShowMenu("about")

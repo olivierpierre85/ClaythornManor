@@ -7,7 +7,6 @@ label hero_day1_drinks:
 
   # TODO should be included in the TIMED menu class (show character choice or something??)
   # show psychic at character_choice_right
-
   # show drunk at character_choice_left
 
   $ time_left = 30
