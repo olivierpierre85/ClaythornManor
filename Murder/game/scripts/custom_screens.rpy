@@ -135,9 +135,9 @@ screen in_game_map_menu(choices):
 
         # Full Map of the MANOR
         rooms = [
-            Room('nurse_room',      'Sun Room',         1, (29, 95, 255, 502)),
-            Room('billiard_room',   'Billiard room',    0, (29, 95, 255, 502))
-            # Room('Go have a look in the library', 'hero_day1_evening_library', 40),
+            Room('nurse_room',      'Sun Room',         1, (0, 100, 200, 100)),
+            Room('billiard_room',   'Billiard room',    0, (0, 100, 200, 100)),
+            Room('library',         'Library',          0, (200, 100, 200, 100))
             # Room('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
             # Room('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)
         ]
@@ -148,7 +148,12 @@ screen in_game_map_menu(choices):
         for room in rooms:
             for idx, choice in enumerate(choices):
                 if room.id == choice.room and room.floor == current_floor:
-                    hotspots.append(Hotspot(choice.text, idx, room.area_points))
+                    if not choice.hidden:
+                        hotspots.append(Hotspot(choice.text, idx, room.area_points))
+                    # else:
+                        #hotspots.append(Hotspot("No point going there? or maybe hide ?", idx, room.area_points))
+                    
+                        
 
     frame:
         vbox:
@@ -181,10 +186,13 @@ screen in_game_map_menu(choices):
                     xalign 0.5                       
                     idle "images/ui/map_bw_idle_[current_floor].png"
                     hover "images/ui/map_bw_hover_[current_floor].png"
+                    
+                    # for hot in hotspots:
                     for hot in hotspots:
                         hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
                             action Return(hot.position)
-                            tooltip "[hot.description]"
+                            tooltip hot.description
+
                     
                     # TODO make use map_extra_info for other map too
                                         # Add extra information over map

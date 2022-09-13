@@ -8,12 +8,12 @@ label start():
 
     $ characters_knowledge['psychic'] = set() #TODO reset all
 
+    $ test_mode = False
+
     show screen current_time
 
     show screen in_game_menu_btn
-
-    $ test_mode = False
-
+    
     # Debug Menu # TODO remove when prod
     jump debug_choices
 

@@ -84,7 +84,7 @@ label hero_day1_evening_billiard_room_bar_1:
     But luckily, I've come prepared
     """
 
-    "Before you could say anything. He reaches down is coat pocket and get a flask, then start pouring you a glass"
+  "Before you could say anything. He reaches down is coat pocket and get a flask, then start pouring you a glass"
 
   broken "You'll probably enjoy this more."
 
