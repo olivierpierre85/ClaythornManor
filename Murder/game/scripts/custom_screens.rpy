@@ -254,7 +254,7 @@ screen storyline:
             text _("TODO story tree (One image map by user, possibility to change user with small button face")
 
 screen characters:
-    tag menu # ????
+    tag menu
     use game_menu(_("Characters")):
         fixed:
             xalign 0.5
@@ -273,8 +273,11 @@ screen character_selection:
     frame:
         xalign .5
         yalign .5
-        margin (310,110,310,130)
-        
+        margin (310,110,310,150)
+        label "With whom will you start the adventure again ?":
+            yoffset -50
+            style "confirm_prompt" # TODO specific styling TODO space after label .... why so complicated.....
+            xalign 0.5
         use character_list(True)
 
 screen character_list(is_selection = False):
