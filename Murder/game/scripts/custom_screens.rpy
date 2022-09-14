@@ -103,7 +103,7 @@ screen manor_map:
                 xalign 0.5                       
                 idle "images/ui/map_bw_idle_[current_floor].png"
                 hover "images/ui/map_bw_hover_[current_floor].png"
-                text "blah blah blah" 
+                use map_information
                 
             if current_floor < MAX_FLOOR:
                 imagebutton:
@@ -118,6 +118,21 @@ screen manor_map:
                     yalign 0.5 
                     xoffset 0       
 
+screen map_information:
+    if current_floor == 1:
+        if map_info['hero_room'] == True:
+            text "Hero room room floor 1":
+                pos(200,100)
+                color "#be0c0c"
+                size 30
+                font "gui/font/BurtonScratch-Regular.ttf"
+        
+        if map_info['psychic_room'] == True:
+            text "Psychic room":
+                pos(0,100)
+                color "#be0c0c"
+                size 30
+                font "gui/font/BurtonScratch-Regular.ttf"
 
 screen in_game_map_menu(choices):
 
@@ -135,11 +150,11 @@ screen in_game_map_menu(choices):
 
         # Full Map of the MANOR
         rooms = [
-            Room('nurse_room',      'Sun Room',         1, (0, 100, 200, 100)),
+            Room('nurse_room',      'Y Room',           1, (0, 100, 200, 100)),
+            Room('hero_room',       'X ROOM',           1, (200, 100, 200, 100)),
+
             Room('billiard_room',   'Billiard room',    0, (0, 100, 200, 100)),
             Room('library',         'Library',          0, (200, 100, 200, 100))
-            # Room('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10),
-            # Room('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True)
         ]
 
         # For each Room, check if the menu has a possible option for the floor
@@ -152,9 +167,6 @@ screen in_game_map_menu(choices):
                         hotspots.append(Hotspot(choice.text, idx, room.area_points))
                     # else:
                         #hotspots.append(Hotspot("No point going there? or maybe hide ?", idx, room.area_points))
-                    
-                        
-
     frame:
         vbox:
             xalign .5
@@ -193,16 +205,7 @@ screen in_game_map_menu(choices):
                             action Return(hot.position)
                             tooltip hot.description
 
-                    
-                    # TODO make use map_extra_info for other map too
-                                        # Add extra information over map
-                    if current_floor == 1:
-                        text "Super duper room floor 1":
-                            pos(54,200)
-                            color "#be0c0c"
-                            size 30
-                            font "gui/font/BurtonScratch-Regular.ttf"
-
+                    use map_information
                     
                 if current_floor < MAX_FLOOR:
                     imagebutton:
@@ -223,8 +226,7 @@ screen in_game_map_menu(choices):
             label [tooltip]:
                 xalign 0.5
 
-    
-        
+
 # Display of storyline tree
 screen objects:
     tag menu
@@ -251,41 +253,66 @@ screen storyline:
         vbox:
             text _("TODO story tree (One image map by user, possibility to change user with small button face")
 
-# Display of manor map in menu
 screen characters:
     tag menu # ????
-    use game_menu(_("Characters"), scroll="viewport"):
+    use game_menu(_("Characters")):
+        fixed:
+            xalign 0.5
+            yoffset 120
+            xoffset -100
 
-        style_prefix "characters" #???
+            use character_list
 
-        #Two hbox of 4 characters
+screen character_selection:
+    modal True
+    zorder 200
+
+    # Copy of the confirm style (TODO change later properly to a map style)
+    style_prefix "confirm"
+    
+    frame:
+        xalign .5
+        yalign .5
+        margin (310,110,310,130)
+        
+        use character_list(True)
+
+screen character_list(is_selection = False):
+    #Two hbox of 4 characters
+    python:
+        #TODO Move to somewhere else? Take from Character class?
+        char_list = [
+            [("The Lad", "lad"), ("The Psychic", "psychic"), ("The Captain", "captain"), ("The Broken Face", "broken")],
+            [("The Doctor", "doctor"), ("The Drunk", "drunk"), ("The Host", "host"), ("The Nurse", "nurse")]
+        ]
+        char_x_offset = 0
+        char_y_offset = 0
+
+    for char_sub_list in char_list:
         hbox:
-            vbox:
-                textbutton _("The Lad") action ShowMenu("character_detail", "lad")
-                imagebutton:
-                    idle "images/characters/lad.png"
-                    action ShowMenu("character_detail", "lad")
-            
-            vbox:
-                xoffset 30
-                textbutton _("The Captain") action ShowMenu("character_detail", "captain")
-                imagebutton:
-                    idle"images/characters/captain.png"
-                    action ShowMenu("character_detail", "captain")  
+            yoffset char_y_offset
+            for char in char_sub_list:
+                vbox:
+                    xoffset char_x_offset
+                    textbutton char[0]:
+                        if is_selection:
+                            action Return(char[1])
+                        else:
+                            action ShowMenu("character_detail", char[1])
+                    imagebutton:
+                        idle "images/characters/" + char[1] +".png"
+                        if is_selection:
+                            action Return(char[1])
+                        else:
+                            action ShowMenu("character_detail", char[1])
+                $ char_x_offset += 50
 
-        hbox:
-            yoffset 30
-            vbox:
-                # Text unknow character
-                if False:
-                    textbutton _( "The Psychic") action ShowMenu("character_detail", "psychic")
-                    imagebutton:
-                        idle"images/characters/psychic.png"
-                        action ShowMenu("character_detail", "psychic")  
-                else:
-                    textbutton _("Locked")
-                    imagebutton:
-                        idle"images/ui/locked_character.png"
+        $ char_x_offset = 0
+
+        if is_selection:
+            $ char_y_offset += 340
+        else:
+            $ char_y_offset += 340
 
 screen character_detail(selected_char):
     tag menu # ????

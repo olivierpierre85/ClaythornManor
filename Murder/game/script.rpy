@@ -7,6 +7,9 @@ label start():
     $ _game_menu_screen = "manor_map"
 
     $ characters_knowledge['psychic'] = set() #TODO reset all
+    $ map_info = dict()
+    $ map_info['hero_room'] = True
+    $ map_info['psychic_room'] = True
 
     $ test_mode = False
 

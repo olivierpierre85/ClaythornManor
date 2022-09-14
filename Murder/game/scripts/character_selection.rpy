@@ -1,10 +1,9 @@
 label character_selection:
-  scene
+  scene black_background
   narrator "Select Your Character"
 
-  menu:
-    "The hero":
-      jump hero_introduction
-
-    "The Captain (New)" if char_captain:
-      jump captain_day1_arrival
+  $ selected_choice = renpy.call_screen('character_selection') 
+  if selected_choice == 'lad':
+        jump hero_introduction
+  else:
+        jump hero_day1_evening
