@@ -19,7 +19,8 @@ label check_characters_knowledge(character, knowledge):
     $ characters_knowledge[character].add(knowledge)
     
     $ renpy.notify("You have found the " + knowledge + " of The " + character)
-    play sound "audio/sound_effects/unlock.ogg"
+    play sound "audio/sound_effects/writing_short.ogg"
+    # play sound "audio/sound_effects/unlock.ogg"
 
     if len(characters_knowledge[character]) == 3:
       # Unlock a character
