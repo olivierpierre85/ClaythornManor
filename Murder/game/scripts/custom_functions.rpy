@@ -3,16 +3,18 @@ transform character_talking_left:
   ypos 520
 
 transform character_talking_right:
-  xpos 1450  
-  ypos 520
+  zoom 1.3
+  xpos 1600  
+  ypos 600
 
 transform character_choice_left:
   xpos 100  
   ypos 250
 
 transform character_choice_right:
+  zoom 1
   xpos 1600  
-  ypos 250
+  ypos 300
 
 label check_characters_knowledge(character, knowledge):
   if  knowledge not in characters_knowledge[character]:

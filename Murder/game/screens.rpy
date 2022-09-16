@@ -380,7 +380,7 @@ screen main_menu():
         # textbutton _("About") action ShowMenu("about") at button5
         textbutton _("Quit") action Quit(confirm=not main_menu) at button5
 
-    add "gui/overlay/main_menu_logo.png"
+    # add "gui/overlay/main_menu_logo.png"
 
 
 style main_menu_frame is empty

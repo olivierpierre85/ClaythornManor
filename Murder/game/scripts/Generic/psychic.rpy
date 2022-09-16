@@ -1,5 +1,7 @@
 label psychic_generic_choices:
 
+  show psychic at character_choice_right
+
   if not 'psychic_generic_menu' in locals():
     $ psychic_generic_menu = TimedMenu([
       TimedMenuChoice('What do you do in life ?', 'psychic_generic_job', 20),
@@ -10,12 +12,16 @@ label psychic_generic_choices:
 
   call run_menu(psychic_generic_menu)
 
+  hide psychic
   return
 
 label psychic_generic_job:
+  show psychic at character_talking_right
   psychic "I am a psychic. I work in an hospital in London."
 
   call check_characters_knowledge('psychic','job') 
+
+  show psychic at character_choice_right
 
   return
 

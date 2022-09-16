@@ -2,6 +2,8 @@ label hero_day1_drinks:
 
   scene tea_room
 
+  play music "audio/music/Upbeat.mp3"
+
   hero "I look around the room, see multiple persons already engage in conversation."
   hero "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
 
@@ -26,5 +28,7 @@ label hero_day1_drinks:
   hide butler 
 
   narrator "Everyone moves to the dining room"
+
+  stop music
 
   jump hero_day1_dinner

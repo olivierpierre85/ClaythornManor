@@ -20,7 +20,7 @@ screen current_time:
 
     add "images/ui/day_background.png"
 
-    text "[current_day] [current_period], [minutes_angle]" xoffset 20
+    text "[current_day] [current_period]" xoffset 20
 
     imagebutton:
         xoffset 30
@@ -44,6 +44,10 @@ transform rotate_minutes( angle = 0 ):
 
 screen in_game_menu_btn:
 
+    modal False
+
+    zorder 1000
+
     style_prefix "confirm" # TODO use own style
     frame:
         xalign 1.0
@@ -51,7 +55,6 @@ screen in_game_menu_btn:
         xoffset -30
         yoffset 30
         ypadding 10
-
         textbutton _("Menu") action ShowMenu("manor_map")
         
 
