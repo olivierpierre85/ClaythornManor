@@ -15,10 +15,21 @@ label hero_day1_arrival:
 
   butler """
 
-  Welcome Sir. We are glad to see you.
+  Welcome Sir. May I help you ?
 
-  I am afraid you won't have time to go change right now.
-  
+  """
+
+  $ hero_details.introduce()
+
+  hero "Hello, I am Ted Harring, I was invited by Lady TODO"
+
+  butler """
+
+  Yes, of course Mr Harring.
+
+  Welcome at Claythorn Manor.
+
+  I am afraid you won't have time to go change right now. 
   Everyone is already there, and our host will be greeting all of you very soon.
 
   So if you follow me into the tea room, you can join the rest of the party for some drinks.

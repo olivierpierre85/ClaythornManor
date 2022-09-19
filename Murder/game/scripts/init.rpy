@@ -2,8 +2,6 @@
 # 1. Declare All characters used by this game.
 default characters_knowledge = dict()
 
-define hero_name = "Ted Haring"
-define hero  = Character("hero_name", image="hero", dynamic=True, what_style="hero_style")
 # TODO find a way to extend say_dialog instead of copying everything
 style hero_style:
     properties gui.text_properties("dialogue")
@@ -46,27 +44,3 @@ define hero_generic_nurse = 0
 define hero_generic_psychic = 0
 define hero_generic_doctor = 0
 define hero_nurse_location = False
-
-# Global Variable
-
-# CLOCK
-init -100 python:
-    from datetime import datetime, time, timedelta, date
-    renpy.music.register_channel("clock", "sfx", loop=False)
-
-define time_left = 0
-define current_day = "Friday"
-# define current_time = "05:00PM" 
-define current_time = time(17,00,00)
-define hours_angle = 0
-define old_minutes_angle = 0 
-
-define menus_options = dict()
-
-define current_character = "hero"
-
-define current_floor = 1 # 1 Equal ground floor, 0 is kitchen floor
-define tooltip = "Click on a room to move there"
-define MIN_FLOOR = 0
-define MAX_FLOOR = 1 # TODO Add floors
-

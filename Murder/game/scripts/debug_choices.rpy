@@ -51,6 +51,9 @@ label debug_choices:
       $ test_choices = hero_evening_doctor
       jump hero_introduction
 
+    "hero_day1_arrival":
+      jump hero_day1_arrival
+
     "hero_day1_evening":
       jump hero_day1_evening
       
