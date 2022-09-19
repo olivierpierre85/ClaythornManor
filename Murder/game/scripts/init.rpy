@@ -13,9 +13,6 @@ style hero_style:
 define nurse_name = "Woman"
 define nurse    = Character("nurse_name", image="nurse", dynamic=True)
 
-define psychic_name = "Woman"
-define psychic    = Character("psychic_name", image="psychic", dynamic=True)
-
 
 define doctor_name = "Man in a hat"
 define doctor   = Character("doctor_name", image="doctor", dynamic=True)

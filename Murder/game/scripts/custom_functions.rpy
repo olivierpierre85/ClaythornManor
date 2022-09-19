@@ -16,21 +16,6 @@ transform character_choice_right:
   xpos 1600  
   ypos 300
 
-label check_characters_knowledge(character, knowledge):
-  if  knowledge not in characters_knowledge[character]:
-    $ characters_knowledge[character].add(knowledge)
-    
-    $ renpy.notify("You have found the " + knowledge + " of The " + character)
-    play sound "audio/sound_effects/writing_short.ogg"
-    # play sound "audio/sound_effects/unlock.ogg"
-
-    if len(characters_knowledge[character]) == 3:
-      # Unlock a character
-      pause 2.0
-      play sound "audio/sound_effects/unlock_char.ogg"
-      $ renpy.notify("You have unlock a new Character : The " + character)
-  return
-
 label change_time(hours,minutes):
   $ current_time =  time(hours,minutes,00)
   play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"

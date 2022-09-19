@@ -4,8 +4,7 @@ label psychic_generic:
 
   show psychic at character_talking_right
 
-  if hero_generic_psychic == 0:
-
+  if not psychic_details.know_real_name:
 
     # "The woman seems a bit nervous"
 
@@ -13,7 +12,7 @@ label psychic_generic:
 
     psychic "Miss Baxter, Amalia Baxter."
 
-    $ psychic_name = "Amalia Baxter"
+    $ psychic_details.introduce()
 
     hero "Nice to meet you miss Baxter. I am Ted Haring"
 

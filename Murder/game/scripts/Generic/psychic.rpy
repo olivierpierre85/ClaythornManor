@@ -19,7 +19,8 @@ label psychic_generic_job:
   show psychic at character_talking_right
   psychic "I am a psychic. I work in an hospital in London."
 
-  call check_characters_knowledge('psychic','job') 
+  #call check_characters_knowledge(psychic_details, 'job') 
+  $ psychic_details.check_characters_knowledge('job')
 
   show psychic at character_choice_right
 
@@ -45,7 +46,8 @@ label psychic_generic_heroic_act:
 label psychic_generic_background:
   psychic "I am from Sausage Island"
 
-  call check_characters_knowledge('psychic','background') 
+  $ psychic_details.check_characters_knowledge('background')
+
   return
   
 label psychic_generic_manor:
