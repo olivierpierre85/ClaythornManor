@@ -12,6 +12,7 @@ label init_characters:
             locked = False,
             know_real_name = False,
             real_name = "Ted Harring",
+            nickname = "The Lad",
             description_short = "Young Lad",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information
@@ -20,14 +21,15 @@ label init_characters:
 
         # 2. The Psychic
         psychic_extra_information = [
-            CharacterInformation(0, "background", "Born in Candy City") , 
-            CharacterInformation(1, "job", "A psychic, and a famous one apparently")
+            CharacterInformation(0, "background", "Born in Candy City.") , 
+            CharacterInformation(1, "job", "A psychic, and a famous one apparently.")
         ]
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
             locked = True,
             know_real_name = False,
             real_name = "Amalia Baxter",
+            nickname = "The Psychic",
             description_short = "Middle-age Woman",
             description_long = "Old lady",
             information_list = psychic_extra_information
@@ -44,20 +46,16 @@ label init_characters:
         #     [("The Doctor", "doctor"), ("The Drunk", "drunk"), ("The Host", "host"), ("The Nurse", "nurse")]
         # ]
 
-
-        def get_char(text_id):
-            if text_id == "lad":
-                return lad_details
-            elif text_id == "psychic":
-                return psychic_details
-            else:
-                return False
-
-
-
     return
 
 init -100 python:
+    def get_char(text_id):
+        if text_id == "lad":
+            return lad_details
+        elif text_id == "psychic":
+            return psychic_details
+        else:
+            return False
 # Python Classes
     class CharacterDetails():
         def __init__(
@@ -66,6 +64,7 @@ init -100 python:
             locked = True,
             know_real_name = False,
             real_name = "",
+            nickname = "",
             description_short = "",
             description_long = "",
             information_list = []
@@ -74,6 +73,7 @@ init -100 python:
             self.locked = locked
             self.know_real_name = False    
             self.real_name = real_name 
+            self.nickname = nickname
             self.description_short = description_short
             self.description_long = description_long
             self.information_list = information_list
@@ -171,17 +171,17 @@ screen character_list(is_selection = False):
             for char in char_sub_list:
                 vbox:
                     xoffset char_x_offset
-                    textbutton char.get_name():
+                    textbutton char.nickname:
                         if is_selection:
                             action Return(char.text_id)
                         else:
-                            action ShowMenu("character_detail", char.text_id)
+                            action ShowMenu("character_details", char.text_id)
                     imagebutton:
                         idle "images/characters/" + char.text_id +".png"
                         if is_selection:
                             action Return(char.text_id)
                         else:
-                            action ShowMenu("character_detail", char.text_id)
+                            action ShowMenu("character_details", char.text_id)
                 $ char_x_offset += 50
 
         $ char_x_offset = 0
@@ -191,16 +191,27 @@ screen character_list(is_selection = False):
         else:
             $ char_y_offset += 340
 
-screen character_detail(selected_char):
+screen character_details(selected_char):
     $ current_char = get_char(selected_char)
     tag menu # ????
     use game_menu(_("Characters"), scroll="viewport"):
 
         style_prefix "characters" #???
 
-        vbox:
-            text current_char.get_name()
-            add "images/characters/" + selected_char +".png"
+        hbox:
+            vbox:
+                text current_char.nickname
+                add "images/characters/" + selected_char +".png"
+            vbox:
+                offset (40,40)
+                text "Name : " + current_char.get_name()
+                text current_char.description_long
+                for info in current_char.information_list:
+                    if not info.locked:
+                        text info.content
         
         # TODO show bottom right
-        textbutton _("Return") action ShowMenu("characters") xalign 0.95 yalign 0.93
+        textbutton _("Return"): 
+            xalign 1.0 
+            yalign 0.0
+            action ShowMenu("characters") 

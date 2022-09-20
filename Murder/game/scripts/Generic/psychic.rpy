@@ -39,7 +39,7 @@ label psychic_generic_heroic_act:
 
   psychic "I assume most people are here because of something during the war."
 
-  call check_characters_knowledge('psychic','heroic act') 
+  $ psychic_details.check_characters_knowledge('heroic act') 
   
   return
 
