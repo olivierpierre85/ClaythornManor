@@ -130,7 +130,6 @@ label lad_day1_evening_billiard_room_butler:
 
   # TODO unlock nurse room position on the map
   butler "Fine. You'll find miss Baxter in the Sun room."
-  $ lad_nurse_location = True
 
   hide butler
   

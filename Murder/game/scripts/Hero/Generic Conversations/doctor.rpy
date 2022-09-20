@@ -2,7 +2,8 @@
 
 label doctor_generic():
 
-  if lad_generic_doctor == 0:
+  # if lad_generic_doctor == 0:
+  if True:
     show doctor
 
     lad "Hi sir ..."
@@ -15,7 +16,7 @@ label doctor_generic():
 
     hide doctor
     
-    $ lad_generic_doctor = lad_generic_doctor + 1 #TODO replace by already met Boolean
+    # $ lad_generic_doctor = lad_generic_doctor + 1 #TODO replace by already met Boolean
 
     call doctor_generic_choices
 

@@ -23,7 +23,7 @@ label lad_day1_evening:
   define lad_day1_evening_left_bedroom = False
 
   $ lad_day1_evening_menu = TimedMenu([
-    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_nurse_room', 55, condition = 'lad_nurse_location', room = 'nurse_room'),
+    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_nurse_room', 55, room = 'psychic_room'),
     TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
     TimedMenuChoice('Go have a look in the library', 'lad_day1_evening_library', 40, room = 'library'),
     TimedMenuChoice('Go downstairs to visit the kitchens', 'lad_day1_evening_kitchens', 10, room = 'kitchens'),
@@ -44,13 +44,13 @@ label lad_day1_evening:
 
   # SHOW PNG LETTER.
 
-  if lad_day1_poisoned:
+  # if lad_day1_poisoned:
 
-    jump lad_ending_day1_poisoned
+  jump lad_ending_day1_poisoned
 
-  else:
+  # else:
 
-    jump lad_day2_breakfast
+  #   jump lad_day2_breakfast
   
 label lad_day1_evening_kitchens:
 

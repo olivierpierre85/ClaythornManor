@@ -1,12 +1,24 @@
 # Characters description
+style narrator_style:
+    properties gui.text_properties("dialogue")
+    color gui.idle_small_color 
+    xpos gui.dialogue_xpos
+    xsize gui.dialogue_width
+    ypos gui.dialogue_ypos - 17
+
 label init_characters:
+    # Inside voice style
+    define narrator = Character(None, what_style="narrator_style")
+
+    # Non Playable Characters
+    define butler   = Character("The Butler", image="butler")
+
     python:
         # 1. The Lad
         lad_extra_information = [
             CharacterInformation(0, "background", "Born in Derbshire, he comes from an orphanage.") , 
             CharacterInformation(1, "job", "He is fishmonger")
         ]
-
         lad_details  = CharacterDetails(
             text_id = "lad", 
             locked = False,
@@ -17,7 +29,9 @@ label init_characters:
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information
             )
-        lad  = Character("lad_details.get_name()", image="lad", dynamic=True, what_style="lad_style")
+        lad = Character("lad_details.get_name()", image="lad", dynamic=True)
+
+        lad_day1_drinks = 0
 
         # 2. The Psychic
         psychic_extra_information = [
@@ -34,17 +48,103 @@ label init_characters:
             description_long = "Old lady",
             information_list = psychic_extra_information
         )
-        psychic    = Character("psychic_details.get_name()", image="psychic", dynamic=True)
+        psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)
 
-        # 3. The Doctor
-
-        char_list = [ 
-            [ lad_details ] , 
-            [ psychic_details ] 
+        # 3. The Drunk
+        drunk_extra_information = [
         ]
-        #     [("The Lad", "lad"), ("The Psychic", "psychic"), ("The Captain", "captain"), ("The Broken Face", "broken")],
-        #     [("The Doctor", "doctor"), ("The Drunk", "drunk"), ("The Host", "host"), ("The Nurse", "nurse")]
-        # ]
+        drunk_details  = CharacterDetails(
+            text_id = "drunk", 
+            locked = True,
+            know_real_name = False,
+            real_name = "TODO",
+            nickname = "The Drunk",
+            description_short = "Drunk Man",
+            description_long = "Drunk Man, not so good looking",
+            information_list = drunk_extra_information
+        )
+        drunk = Character("drunk_details.get_name()", image="drunk", dynamic=True)
+        
+        # 4. The Doctor
+        doctor_extra_information = [
+        ]
+        doctor_details  = CharacterDetails(
+            text_id = "doctor", 
+            locked = True,
+            know_real_name = False,
+            real_name = "",
+            nickname = "The Doctor",
+            description_short = "Middle-age Woman",
+            description_long = "Old lady",
+            information_list = doctor_extra_information
+        )
+        doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
+
+        # 5. The Host
+        host_extra_information = [
+        ]
+        host_details  = CharacterDetails(
+            text_id = "host", 
+            locked = True,
+            know_real_name = False,
+            real_name = "TODO",
+            nickname = "The Host",
+            description_short = "Middle-age Woman",
+            description_long = "Old Rich lady",
+            information_list = host_extra_information
+        )
+        host = Character("host_details.get_name()", image="host", dynamic=True)
+        
+        # 6. The Broken Face
+        broken_extra_information = [
+        ]
+        broken_details  = CharacterDetails(
+            text_id = "broken", 
+            locked = True,
+            know_real_name = False,
+            real_name = "",
+            nickname = "The Broken Face",
+            description_short = "Middle-age Woman",
+            description_long = "Old lady",
+            information_list = broken_extra_information
+        )
+        broken = Character("broken_details.get_name()", image="broken", dynamic=True)
+
+        # 7. The Captain
+        captain_extra_information = [
+        ]
+        captain_details  = CharacterDetails(
+            text_id = "captain", 
+            locked = True,
+            know_real_name = False,
+            real_name = "",
+            nickname = "The captain Face",
+            description_short = "",
+            description_long = "",
+            information_list = captain_extra_information
+        )
+        captain = Character("captain_details.get_name()", image="captain", dynamic=True)
+        
+        # 8. The Nurse
+        nurse_extra_information = [
+        ]
+        nurse_details  = CharacterDetails(
+            text_id = "nurse", 
+            locked = True,
+            know_real_name = False,
+            real_name = "",
+            nickname = "The Nurse ",
+            description_short = "",
+            description_long = "",
+            information_list = nurse_extra_information
+        )
+        nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
+
+        # X. Character full List
+        char_list = [ 
+            [ lad_details, doctor_details, host_details, drunk_details ] , 
+            [ psychic_details, broken_details, captain_details, nurse_details ] 
+        ]
 
     return
 
@@ -52,8 +152,20 @@ init -100 python:
     def get_char(text_id):
         if text_id == "lad":
             return lad_details
+        elif text_id == "doctor":
+            return doctor_details
+        elif text_id == "host":
+            return host_details
+        elif text_id == "drunk":
+            return drunk_details
         elif text_id == "psychic":
             return psychic_details
+        elif text_id == "broken":
+            return broken_details
+        elif text_id == "captain":
+            return captain_details
+        elif text_id == "nurse":
+            return nurse_details
         else:
             return False
 # Python Classes
@@ -200,18 +312,43 @@ screen character_details(selected_char):
 
         hbox:
             vbox:
-                text current_char.nickname
+                text current_char.nickname:
+                    size 48
+                    font gui.name_text_font
+                    line_leading 10
+                    line_spacing 10
+                    color gui.accent_color
+                    # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
                 add "images/characters/" + selected_char +".png"
             vbox:
-                offset (40,40)
-                text "Name : " + current_char.get_name()
+                xoffset 40 
+                textbutton _("Return"): 
+                    xalign 1.0 
+                    yalign 0.0
+                    xpos 1000
+                    action ShowMenu("characters") 
+                
+                hbox:
+                    
+                    yalign 0.5
+                    text "Name:  ":
+                        color gui.accent_color
+                    if current_char.know_real_name:
+                        text current_char.real_name 
+                    else:
+                        text "Unknow" 
+
+                text "Description: " color gui.accent_color
                 text current_char.description_long
                 for info in current_char.information_list:
                     if not info.locked:
                         text info.content
         
+                textbutton _("Return"): 
+                    xalign 1.0 
+                    yalign 0.0
+                    xpos 1000
+                    action ShowMenu("characters") 
+        
         # TODO show bottom right
-        textbutton _("Return"): 
-            xalign 1.0 
-            yalign 0.0
-            action ShowMenu("characters") 
+
