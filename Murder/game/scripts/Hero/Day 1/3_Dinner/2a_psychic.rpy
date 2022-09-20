@@ -1,4 +1,4 @@
-label hero_day1_dinner_psychic:
+label lad_day1_dinner_psychic:
 
   scene dining_hall
 

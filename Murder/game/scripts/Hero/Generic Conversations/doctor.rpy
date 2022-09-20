@@ -2,20 +2,20 @@
 
 label doctor_generic():
 
-  if hero_generic_doctor == 0:
+  if lad_generic_doctor == 0:
     show doctor
 
-    hero "Hi sir ..."
+    lad "Hi sir ..."
 
     doctor "Hi, I am doctor Daniel Baldwin."
 
     show doctor
 
-    hero "Nice to meet you doctor."
+    lad "Nice to meet you doctor."
 
     hide doctor
     
-    $ hero_generic_doctor = hero_generic_doctor + 1 #TODO replace by already met Boolean
+    $ lad_generic_doctor = lad_generic_doctor + 1 #TODO replace by already met Boolean
 
     call doctor_generic_choices
 
@@ -23,7 +23,7 @@ label doctor_generic():
 
   else:
     
-    hero "Hi again ..."
+    lad "Hi again ..."
 
     call doctor_generic_choices
 

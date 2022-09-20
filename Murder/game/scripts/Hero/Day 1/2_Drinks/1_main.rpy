@@ -1,11 +1,11 @@
-label hero_day1_drinks:
+label lad_day1_drinks:
 
   scene tea_room
 
   play music "audio/music/Upbeat.mp3"
 
-  hero "I look around the room, see multiple persons already engage in conversation."
-  hero "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
+  lad "I look around the room, see multiple persons already engage in conversation."
+  lad "Two persons seem alone, a middle age man sitting on a couch, and a young woman"
 
   # TODO should be included in the TIMED menu class (show character choice or something??)
   # show psychic at character_choice_right
@@ -13,8 +13,8 @@ label hero_day1_drinks:
 
   $ time_left = 30
   $ current_menu = TimedMenu([
-      TimedMenuChoice('Talk To the man', 'hero_day1_drinks_drunk', 10),
-      TimedMenuChoice('Talk To the woman', 'hero_day1_drinks_psychic')
+      TimedMenuChoice('Talk To the man', 'lad_day1_drinks_drunk', 10),
+      TimedMenuChoice('Talk To the woman', 'lad_day1_drinks_psychic')
     ])
   call run_menu(current_menu)
   $ current_menu = None
@@ -31,4 +31,4 @@ label hero_day1_drinks:
 
   stop music
 
-  jump hero_day1_dinner
+  jump lad_day1_dinner

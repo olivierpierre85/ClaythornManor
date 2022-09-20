@@ -1,4 +1,4 @@
-label hero_day1_drinks_drunk:
+label lad_day1_drinks_drunk:
 
   hide nurse
   hide drunk
@@ -7,7 +7,7 @@ label hero_day1_drinks_drunk:
 
   "The middle aged man has a glass of whisky on hand"
   
-  hero "Hello sir, how are you ?"
+  lad "Hello sir, how are you ?"
 
   drunk "(Snore...)"
 

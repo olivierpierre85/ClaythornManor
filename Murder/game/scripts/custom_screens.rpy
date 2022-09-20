@@ -123,8 +123,8 @@ screen manor_map:
 
 screen map_information:
     if current_floor == 1:
-        if map_info['hero_room'] == True:
-            text "Hero room room floor 1":
+        if map_info['lad_room'] == True:
+            text "Lad room room floor 1":
                 pos(200,100)
                 color "#be0c0c"
                 size 30
@@ -154,7 +154,7 @@ screen in_game_map_menu(choices):
         # Full Map of the MANOR
         rooms = [
             Room('nurse_room',      'Y Room',           1, (0, 100, 200, 100)),
-            Room('hero_room',       'X ROOM',           1, (200, 100, 200, 100)),
+            Room('lad_room',        'X ROOM',           1, (200, 100, 200, 100)),
 
             Room('billiard_room',   'Billiard room',    0, (0, 100, 200, 100)),
             Room('library',         'Library',          0, (200, 100, 200, 100))
@@ -255,80 +255,3 @@ screen storyline:
 
         vbox:
             text _("TODO story tree (One image map by user, possibility to change user with small button face")
-
-screen characters:
-    tag menu
-    use game_menu(_("Characters")):
-        fixed:
-            xalign 0.5
-            yoffset 120
-            xoffset -100
-
-            use character_list
-
-screen character_selection:
-    modal True
-    zorder 200
-
-    # Copy of the confirm style (TODO change later properly to a map style)
-    style_prefix "confirm"
-    
-    frame:
-        xalign .5
-        yalign .5
-        margin (310,110,310,150)
-        label "Select your character":
-            yoffset -50
-            style "confirm_prompt" # TODO specific styling TODO space after label .... why so complicated.....
-            xalign 0.5
-        use character_list(True)
-
-screen character_list(is_selection = False):
-    #Two hbox of 4 characters
-    python:
-        #TODO Move to somewhere else? Take from Character class?
-        char_list = [
-            [("The Lad", "lad"), ("The Psychic", "psychic"), ("The Captain", "captain"), ("The Broken Face", "broken")],
-            [("The Doctor", "doctor"), ("The Drunk", "drunk"), ("The Host", "host"), ("The Nurse", "nurse")]
-        ]
-        char_x_offset = 0
-        char_y_offset = 0
-
-    for char_sub_list in char_list:
-        hbox:
-            yoffset char_y_offset
-            for char in char_sub_list:
-                vbox:
-                    xoffset char_x_offset
-                    textbutton char[0]:
-                        if is_selection:
-                            action Return(char[1])
-                        else:
-                            action ShowMenu("character_detail", char[1])
-                    imagebutton:
-                        idle "images/characters/" + char[1] +".png"
-                        if is_selection:
-                            action Return(char[1])
-                        else:
-                            action ShowMenu("character_detail", char[1])
-                $ char_x_offset += 50
-
-        $ char_x_offset = 0
-
-        if is_selection:
-            $ char_y_offset += 340
-        else:
-            $ char_y_offset += 340
-
-screen character_detail(selected_char):
-    tag menu # ????
-    use game_menu(_("Characters"), scroll="viewport"):
-
-        style_prefix "characters" #???
-
-        vbox:
-            text _(selected_char)
-
-        
-        # TODO show bottom right
-        textbutton _("Return") action ShowMenu("characters") xalign 0.95 yalign 0.93

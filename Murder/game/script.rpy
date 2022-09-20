@@ -15,7 +15,7 @@ define old_minutes_angle = 0
 
 define menus_options = dict()
 
-define current_character = "hero"
+define current_character = "lad"
 
 define current_floor = 1 # 1 Equal ground floor, 0 is kitchen floor
 define tooltip = "Click on a room to move there"
@@ -32,7 +32,7 @@ label start():
 
     $ characters_knowledge['psychic'] = set() #TODO reset all
     $ map_info = dict()
-    $ map_info['hero_room'] = True
+    $ map_info['lad_room'] = True
     $ map_info['psychic_room'] = True
 
     $ test_mode = False

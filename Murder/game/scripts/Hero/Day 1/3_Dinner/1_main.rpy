@@ -1,5 +1,5 @@
 # Introduction for hero
-label hero_day1_dinner:
+label lad_day1_dinner:
 
   call change_time(18,00)
 
@@ -45,8 +45,8 @@ label hero_day1_dinner:
   show doctor at character_choice_left
 
   $ current_menu = TimedMenu([
-    TimedMenuChoice('Talk to Daniel Baldwin', 'hero_day1_dinner_doctor'),
-    TimedMenuChoice('Talk to Amalia Baxter', 'hero_day1_dinner_psychic')
+    TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_dinner_doctor'),
+    TimedMenuChoice('Talk to Amalia Baxter', 'lad_day1_dinner_psychic')
   ])
   call run_menu(current_menu)
   $ current_menu =  None
@@ -62,7 +62,7 @@ label hero_day1_dinner:
 
   narrator "You ask the footman to show you the way."
 
-  jump hero_day1_evening
+  jump lad_day1_evening
 
   
 

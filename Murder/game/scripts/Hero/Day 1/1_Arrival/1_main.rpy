@@ -1,5 +1,5 @@
 # Introduction for hero
-label hero_day1_arrival:
+label lad_day1_arrival:
 
   #TODO show from exterior
 
@@ -7,8 +7,8 @@ label hero_day1_arrival:
   scene great_hall
 
   # First Part, train explanation
-  hero "I finally reached my destination."
-  hero "While the driver is unloading my bags from the car, a butler opens the main entrance and greets me."
+  lad "I finally reached my destination."
+  lad "While the driver is unloading my bags from the car, a butler opens the main entrance and greets me."
 
   # show host at truecenter
   show butler at truecenter
@@ -19,9 +19,9 @@ label hero_day1_arrival:
 
   """
 
-  $ hero_details.introduce()
+  lad "Hello, I am Ted Harring, I was invited by Lady TODO"
 
-  hero "Hello, I am Ted Harring, I was invited by Lady TODO"
+  $ lad_details.introduce()
 
   butler """
 
@@ -38,4 +38,4 @@ label hero_day1_arrival:
   
   hide butler
 
-  jump hero_day1_drinks
+  jump lad_day1_drinks

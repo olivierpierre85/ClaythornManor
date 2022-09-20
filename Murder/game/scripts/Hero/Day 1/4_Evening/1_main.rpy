@@ -1,4 +1,4 @@
-label hero_day1_evening:
+label lad_day1_evening:
 
   call change_time(22,00)
 
@@ -20,17 +20,17 @@ label hero_day1_evening:
 
   $ time_left = 120
 
-  define hero_day1_evening_left_bedroom = False
+  define lad_day1_evening_left_bedroom = False
 
-  $ hero_day1_evening_menu = TimedMenu([
-    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'hero_day1_evening_nurse_room', 55, condition = 'hero_nurse_location', room = 'nurse_room'),
-    TimedMenuChoice('Meet the others in the billiard room', 'hero_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
-    TimedMenuChoice('Go have a look in the library', 'hero_day1_evening_library', 40, room = 'library'),
-    TimedMenuChoice('Go downstairs to visit the kitchens', 'hero_day1_evening_kitchens', 10, room = 'kitchens'),
-    TimedMenuChoice('You give up and go back to your room', 'hero_day1_evening_cancel', early_exit = True, room = 'hero_room')
+  $ lad_day1_evening_menu = TimedMenu([
+    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_nurse_room', 55, condition = 'lad_nurse_location', room = 'nurse_room'),
+    TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
+    TimedMenuChoice('Go have a look in the library', 'lad_day1_evening_library', 40, room = 'library'),
+    TimedMenuChoice('Go downstairs to visit the kitchens', 'lad_day1_evening_kitchens', 10, room = 'kitchens'),
+    TimedMenuChoice('You give up and go back to your room', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
   ], is_map = True)
 
-  call run_menu(hero_day1_evening_menu)
+  call run_menu(lad_day1_evening_menu)
 
   call change_time(23,59)
 
@@ -44,17 +44,17 @@ label hero_day1_evening:
 
   # SHOW PNG LETTER.
 
-  if hero_day1_poisoned:
+  if lad_day1_poisoned:
 
-    jump hero_ending_day1_poisoned
+    jump lad_ending_day1_poisoned
 
   else:
 
-    jump hero_day2_breakfast
+    jump lad_day2_breakfast
   
-label hero_day1_evening_kitchens:
+label lad_day1_evening_kitchens:
 
-  $ hero_day1_evening_left_bedroom = True
+  $ lad_day1_evening_left_bedroom = True
 
   scene hallway
 
@@ -66,13 +66,13 @@ label hero_day1_evening_kitchens:
 
   return
 
-label hero_day1_evening_library:
+label lad_day1_evening_library:
 
-  $ hero_day1_evening_left_bedroom = True
+  $ lad_day1_evening_left_bedroom = True
   
   "You look around the library."
 
-  hero "Why am I doing here ? I can barely read."
+  lad "Why am I doing here ? I can barely read."
 
   "On a small table, you see a open book."
 
@@ -80,13 +80,13 @@ label hero_day1_evening_library:
 
   "\"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\""
 
-  hero "Yeah, I am not reading that."
+  lad "Yeah, I am not reading that."
 
   "You leave the library."
 
-  # TODO add trivia, The hero can't read well
+  # TODO add trivia, The lad can't read well
 
   return
 
-label hero_day1_evening_cancel:
+label lad_day1_evening_cancel:
   return

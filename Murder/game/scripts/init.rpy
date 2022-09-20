@@ -3,7 +3,7 @@
 default characters_knowledge = dict()
 
 # TODO find a way to extend say_dialog instead of copying everything
-style hero_style:
+style lad_style:
     properties gui.text_properties("dialogue")
     color "#9c1a1a"
     xpos gui.dialogue_xpos
@@ -26,18 +26,18 @@ define broken   = Character("broken_name", image="broken", dynamic=True)
 
 
 # 2. Characters locked
-default char_hero = True
+default char_lad = True
 default char_captain = False
 
 # 3. Objects ( 0 not found, 1 found, 2 in you possession)
 
 # Actions with impact 
-default hero_day1_drinks = 0
-default hero_day1_poisoned = False
+default lad_day1_drinks = 0
+default lad_day1_poisoned = False
 
 # 4. Insights 
 # Knowledge acquired in game to unlock some dialogs
-define hero_generic_nurse = 0
-define hero_generic_psychic = 0
-define hero_generic_doctor = 0
-define hero_nurse_location = False
+define lad_generic_nurse = 0
+define lad_generic_psychic = 0
+define lad_generic_doctor = 0
+define lad_nurse_location = False

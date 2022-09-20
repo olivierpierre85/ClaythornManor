@@ -51,16 +51,16 @@ Lady Introduction speech
 - Visit kitchen =&gt; Dead End
 - [[Go to billiard to meet the other-&gt;hero-day1-evening-billiard-room]]
 - Visit library =&gt; Clue about gentry book 
-(if:$hero_nurse_room is true)[[[- Go to nurse room-&gt;hero-day1-evening-nurse-room]]]
+(if:$lad_nurse_room is true)[[[- Go to nurse room-&gt;hero-day1-evening-nurse-room]]]
 
-(if:$hero_is_drunk is true)[[[Go to bed -&gt;hero-day2-breakfast]]]
-(elseif:$hero_is_poisoned is true)[[[Go to bed -&gt;hero-ending-day1-poisoned]]]
+(if:$lad_is_drunk is true)[[[Go to bed -&gt;hero-day2-breakfast]]]
+(elseif:$lad_is_poisoned is true)[[[Go to bed -&gt;hero-ending-day1-poisoned]]]
 (else: )[[[Go to bed -&gt;hero-day2-breakfast]]]</tw-passagedata><tw-passagedata pid="7" name="hero-day1-evening-billiard-room" tags="IMPORTANT" position="1650,500" size="200,100">//Day 1 - Evening - BILLIARD ROOM//
 
-- (link:&quot;drink sherry once switch drink with the Broken FACE&quot;)[(set: $hero_is_poisoned to true)]
-- (link:&quot;drink plenty of sherry&quot;)[(set: $hero_is_drunk to true)]
+- (link:&quot;drink sherry once switch drink with the Broken FACE&quot;)[(set: $lad_is_poisoned to true)]
+- (link:&quot;drink plenty of sherry&quot;)[(set: $lad_is_drunk to true)]
 - Talk with crowd (general conversation about the host, Meet new people (captain?))
-- (link:&quot;Talk with butler&quot;)[(set: $hero_nurse_room to true)] 
+- (link:&quot;Talk with butler&quot;)[(set: $lad_nurse_room to true)] 
 [[Exit billiard-&gt;hero-day1-evening]]</tw-passagedata><tw-passagedata pid="8" name="hero-day1-evening-nurse-room" tags="" position="1650,650" size="200,100">//Day 1 - Evening - NURSE ROOM//
 
 Knock on the door
@@ -70,7 +70,7 @@ The nurse tells you to go away
 
 You eat/drank something that wasn&#39;t suppose to be for you</tw-passagedata><tw-passagedata pid="10" name="DAY 2" tags="" position="2200,350" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="hero-day2-breakfast" tags="" position="2200,500" size="200,100">//Day 2 - Breakfast - 10 am//
 
-You wake up (if:$hero_is_drunk is true)[with a hangover and late (less time to discuss)]
+You wake up (if:$lad_is_drunk is true)[with a hangover and late (less time to discuss)]
 
 go to the breakfast to eat at your seat
 

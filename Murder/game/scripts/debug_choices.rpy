@@ -3,20 +3,20 @@ label debug_choices:
     test_mode = True
     test_choices = []
 
-    hero_dinner_simple = [
+    lad_dinner_simple = [
         0, # Talk to the man => not needed?
         1, # Talk to the woman
         3, # Learn nothing about the psychic
       ]
 
-    hero_evening_simple = hero_dinner_simple + [
+    lad_evening_simple = lad_dinner_simple + [
       0, # Doctor
       3, # Early leave
       1, # Psychic
       3, # Early leave
     ]
 
-    hero_evening_doctor = hero_dinner_simple + [
+    lad_evening_doctor = lad_dinner_simple + [
       0, # Learn about the doctor Doctor 
       0,
       1,
@@ -25,7 +25,7 @@ label debug_choices:
       3, # Early leave
     ]
 
-    hero_end_day1_doctor = hero_evening_doctor + [
+    lad_end_day1_doctor = lad_evening_doctor + [
       0, # Learn about the doctor Doctor 
       0,
       1,
@@ -38,24 +38,24 @@ label debug_choices:
     "character_selection":
       jump character_selection
 
-    "Hero Drinks":
+    "lad Drinks":
       $ test_choices = []
-      jump hero_introduction
+      jump lad_introduction
 
-    "Hero Dinner":
-      $ test_choices = hero_dinner_simple
-      jump hero_introduction
+    "lad Dinner":
+      $ test_choices = lad_dinner_simple
+      jump lad_introduction
 
-    "Hero Evening":
-      # $ test_choices = hero_evening_simple
-      $ test_choices = hero_evening_doctor
-      jump hero_introduction
+    "lad Evening":
+      # $ test_choices = lad_evening_simple
+      $ test_choices = lad_evening_doctor
+      jump lad_introduction
 
-    "hero_day1_arrival":
-      jump hero_day1_arrival
+    "lad_day1_arrival":
+      jump lad_day1_arrival
 
-    "hero_day1_evening":
-      jump hero_day1_evening
+    "lad_day1_evening":
+      jump lad_day1_evening
       
 
 

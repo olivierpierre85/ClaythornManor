@@ -1,8 +1,8 @@
 # Ending for hero
 
 # DAY 1
-# Either the hero as drank sherry after dinner and die, or he hasn't and is still alive
-label hero_ending_day1_poisoned:
+# Either the lad as drank sherry after dinner and die, or he hasn't and is still alive
+label lad_ending_day1_poisoned:
 
   # Add sad sound
 
@@ -18,7 +18,7 @@ label hero_ending_day1_poisoned:
 
     But in life, people often die without knowing why. 
     
-    Even thought we always believe being the hero in our story, sometimes we are just pawns.
+    Even thought we always believe being the lad in our story, sometimes we are just pawns.
 
     Don't worry, you'll have more chances at changing the fate of this character.
 
