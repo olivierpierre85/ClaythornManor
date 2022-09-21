@@ -318,13 +318,13 @@ screen navigation():
         else:
             textbutton _("Map") action ShowMenu("manor_map")
             textbutton _("Characters") action ShowMenu("characters")
-            textbutton _("Objects") action ShowMenu("objects")
+            # textbutton _("Objects") action ShowMenu("objects")
             textbutton _("Storyline") action ShowMenu("storyline")
             textbutton _("History") action ShowMenu("history")
             # textbutton _("About") action ShowMenu("about")
             textbutton _("Help") action ShowMenu("help")
             textbutton _("Options") action ShowMenu("preferences")
-            textbutton _("Save") action ShowMenu("save")
+            # textbutton _("Save") action ShowMenu("save")
             textbutton _("Resume") action Return() 
             textbutton _("Quit") action Show("confirmbutton")
 
@@ -460,6 +460,12 @@ screen game_menu(title, scroll=None, yinitial=0.0):
                         pagekeys True
 
                         side_yfill True
+
+                        transclude
+                elif scroll == "fixed": # OLPI changes
+                    fixed:
+                        xoffset -450
+                        yoffset 115
 
                         transclude
 

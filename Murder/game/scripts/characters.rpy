@@ -141,10 +141,13 @@ label init_characters:
         nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
 
         # X. Character full List
+        # TODO only use the flat one (refacto use chara)
         char_list = [ 
             [ lad_details, doctor_details, host_details, drunk_details ] , 
             [ psychic_details, broken_details, captain_details, nurse_details ] 
         ]
+
+        char_list_flat = [lad_details, doctor_details, host_details, drunk_details, psychic_details, broken_details, captain_details, nurse_details]
 
     return
 

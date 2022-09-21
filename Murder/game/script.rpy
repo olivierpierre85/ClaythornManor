@@ -27,6 +27,8 @@ label start():
 
     call init_characters
 
+    call init_storylines
+
     # Default Menu screen when press ESC in-game
     $ _game_menu_screen = "manor_map"
 
