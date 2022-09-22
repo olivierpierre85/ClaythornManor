@@ -12,7 +12,7 @@ label init_characters:
 
     # Non Playable Characters
     define butler   = Character("The Butler", image="butler")
-    image side butler = "images/characters/butler_framed.png"
+    image side butler = "images/characters/butler_framed_02.png"
 
     python:
         # 1. The Lad
@@ -149,6 +149,10 @@ label init_characters:
         ]
 
         char_list_flat = [lad_details, doctor_details, host_details, drunk_details, psychic_details, broken_details, captain_details, nurse_details]
+
+    # TODO add all side image
+    # image side lad = "images/characters/lad.png"
+    # image side broken = "images/characters/borken.png"
 
     return
 
