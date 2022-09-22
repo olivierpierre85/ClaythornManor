@@ -12,6 +12,7 @@ label init_characters:
 
     # Non Playable Characters
     define butler   = Character("The Butler", image="butler")
+    image side butler = "images/characters/butler_framed.png"
 
     python:
         # 1. The Lad

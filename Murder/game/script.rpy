@@ -32,6 +32,7 @@ label start():
     # Default Menu screen when press ESC in-game
     $ _game_menu_screen = "manor_map"
 
+    # TODO move to a map SCRIPT page
     $ map_info = dict()
     $ map_info['lad_room'] = True
     $ map_info['psychic_room'] = True
