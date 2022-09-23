@@ -1,9 +1,29 @@
+transform character_choice_left:
+  xpos 100  
+  ypos 300
+
+transform character_choice_right:
+  zoom 1
+  xpos 1600  
+  ypos 300
+
 label run_menu(current_menu):
 
     if current_menu.is_valid():
+        # Show choices when activated
+        if current_menu.image_left:
+            $ renpy.show(current_menu.image_left, at_list=[character_choice_left])
+        if current_menu.image_right:
+            $ renpy.show(current_menu.image_right, at_list=[character_choice_right])
 
         $ selected_choice = current_menu.display_choices()
-        
+
+        # Hide choices when activated
+        if current_menu.image_left:
+            $ renpy.hide(current_menu.image_left)
+        if current_menu.image_right:
+            $ renpy.hide(current_menu.image_right)
+
         if current_menu.choices[selected_choice].early_exit:
             $ current_menu.early_exit = True        
         
@@ -58,10 +78,12 @@ init -1 python:
     # A Timed
     class TimedMenu:
     
-        def __init__(self, choices = [], is_map = False):
+        def __init__(self, choices = [], is_map = False, image_left = None, image_right = None):
             self.choices = choices
-            self.early_exit = False
+            self.early_exit = False # TODO add in parand and TEST A LOT
             self.is_map = is_map
+            self.image_left = image_left
+            self.image_right = image_right
     
         def is_valid(self):
             if len(self.get_visible_choices()) <= 0:

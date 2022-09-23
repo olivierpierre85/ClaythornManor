@@ -15,7 +15,7 @@ label lad_day1_drinks:
   $ current_menu = TimedMenu([
       TimedMenuChoice('Talk To the man', 'lad_day1_drinks_drunk', 10),
       TimedMenuChoice('Talk To the woman', 'lad_day1_drinks_psychic')
-    ])
+    ], image_left = "drunk", image_right = "psychic")
   call run_menu(current_menu)
   $ current_menu = None
 

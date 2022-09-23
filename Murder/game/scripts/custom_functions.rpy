@@ -7,15 +7,6 @@ transform character_talking_right:
   xpos 1600  
   ypos 600
 
-transform character_choice_left:
-  xpos 100  
-  ypos 250
-
-transform character_choice_right:
-  zoom 1
-  xpos 1600  
-  ypos 300
-
 label change_time(hours,minutes):
   $ current_time =  time(hours,minutes,00)
   play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"

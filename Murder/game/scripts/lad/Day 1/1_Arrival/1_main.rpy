@@ -7,11 +7,8 @@ label lad_day1_arrival:
   scene great_hall
 
   # First Part, train explanation
-  lad "I finally reached my destination."
-  lad "While the driver is unloading my bags from the car, a butler opens the main entrance and greets me."
-
-  # show host at truecenter
-  # show butler at truecenter
+  "You finally reached your destination."
+  "While the driver is unloading my bags from the car, a butler opens the main entrance and greets you."
 
   butler """
 
@@ -30,7 +27,7 @@ label lad_day1_arrival:
   Welcome at Claythorn Manor.
 
   I am afraid you won't have time to go change right now. 
-  Everyone is already there, and our host will be greeting all of you very soon.
+  Everyone is already there, and dinner will be ready very soon.
 
   So if you follow me into the tea room, you can join the rest of the party for some drinks.
   
