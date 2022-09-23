@@ -6,12 +6,23 @@ style narrator_style:
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos - 17
 
+style letter_style:
+    properties gui.text_properties("dialogue")
+    color gui.idle_small_color
+    font gui.name_text_font
+    xpos gui.dialogue_xpos
+    xsize gui.dialogue_width
+    ypos gui.dialogue_ypos - 10
+
 label init_characters:
     # Inside voice style
     define narrator = Character(None, what_style="narrator_style")
 
     # Non Playable Characters
-    define butler   = Character("The Butler", image="butler")
+    define letter       = Character("The Letter", what_style="letter_style")
+    define butler       = Character("The Butler", image="butler")
+    define footman      = Character("The Footman", image="footman")
+
     #  image side butler = "images/characters/butler_framed_02.png"
 
     python:

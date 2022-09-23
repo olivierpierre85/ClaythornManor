@@ -1,58 +1,80 @@
 label lad_introduction:
   
-  scene train station
-  # Introduction music - train sound
+    scene train_inside
+    # train sound
 
-  # show driver
+    """
+    As I approach Aberdeen station, I am reading yet another time the letter that made me come on this whole trip.
+    """
 
-  "driver" "Welcome sir. I can take your luggage and you can follow me into the car."
+    letter """
+    Congratulation Mister Haring,
 
-  lad """
-  As I approach Mandrake Manor, I am starting to have doubts about the whole trip.
+    Due to your recent actions, you have been selected as one of the recipients of the \"Exceptional Act of Bravery Award\".
 
-  It is strange enough to be invited out of the blue, by someone I never heard of.
+    This award comes with a price money of two thousand pounds.
+    
+    You'll be receiving the price along with seven other courageous persons. And you will all be enjoying a weekend of leisure at Claythorne Manor.
 
-  But as I am in the back seat of a car driving to the Manor, I am an uneasy to find it to be so far from every where else.
+    All you have to do is be at the Aberdeen Station, around 4PM, and a driver will pick you up to the place.
 
-  It must have been more than half an hour since we run into any places that looked habited.
+    Hoping ,.....
 
-  And to make matter worse, a look at the sky tells me that a storm is coming. 
+    """
 
-  I grab the letter that is a the origin of this trip and read it again for the ten times.
-  """ 
+    """
+    More detailed information follows, but that's about the content of it.
 
-  "letter" """
+    TODO Happy and surprised
 
-  Congratulation mister Haring,
+    Well, I couldn't really say no to this amount of money.
+    
+    So I feel like I didn't have much choice.
 
-  Due to you extraordinary act of bravery at the battle of the Somme, you have been selected as the recipients of the 'TODO' Extraordinary Bravery Award.
+    But still, there is part of me thinking:
 
-  This award comes with a price money of two thousand pounds.
-  
-  You'll be receiving the price along with seven other courageous persons, and will be enjoying a weed-end of leisure at Mandrake Manor.
+    Maybe I never should have come.
+    
+    """
 
-  All you have to do is be at the Aberdeen Station, around 4PM, and a driver will pick you up to the place.
+    # Dramatic music, Start of Theme ?
+    # PAUSE
 
-  Hoping ,.....
+    scene train_station
+    
+    "As I step off the train, a young man approaches me."
 
+    footman "Welcome sir. Are you by any chance, heading to Claythorne Manor ?"
 
-  """
+    lad "Yes, as a matter of fact I am."
 
-  lad """
+    "And for proof, I show him the letter that I still had in my hands."
+    
+    footman "Very well Sir. I can take your luggage and you can follow me into the car."
 
-  More information and thanks follow, but that's about the content of it.
+    "He then grabs my small luggage and load ti into the boot."
 
-  Well, I couldn't really say no to this amount of money. Certainly not now anyway. 
-  
-  So I feel like I didn't have much choice.
+    "I enter the car."
 
-  But still, there is part of me thinking:
+    # TODO sound of car closing
 
-  Maybe I never should have come.
- 
-  """
+    scene inside_car
 
+    """
+    I try to relax, in the car.
 
-  # TODO CREDIT SCREEN, Mandrake MANOR, with sound
+    After leaving Aberdeen, we are riding more into the country side. Then into what looks like a large forest.
 
-  jump lad_day1_arrival
+    After a while we can't see any trace of houses or farms.
+
+    I am an uneasy to find it to be so far from every where else.
+
+    And to make matter worse, a look at the sky tells me that a storm is coming. 
+
+    Finally an impressive mansion appears in the horizon.
+    """
+
+    scene manor_exterior
+    # TODO Scary music (short), plus thunder
+
+    jump lad_day1_arrival

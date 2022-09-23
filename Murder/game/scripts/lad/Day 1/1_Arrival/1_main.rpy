@@ -7,8 +7,8 @@ label lad_day1_arrival:
   scene great_hall
 
   # First Part, train explanation
-  "You finally reached your destination."
-  "While the driver is unloading my bags from the car, a butler opens the main entrance and greets you."
+  "I finally reached my destination."
+  "While the driver is unloading my bag from the car, a butler opens the main entrance and greets me."
 
   butler """
 
@@ -32,7 +32,10 @@ label lad_day1_arrival:
   So if you follow me into the tea room, you can join the rest of the party for some drinks.
   
   """
+
+  """
+  Well it's not like I have multiple change of clothes anyway. So I follow him.
+  """
   
-  hide butler
 
   jump lad_day1_drinks

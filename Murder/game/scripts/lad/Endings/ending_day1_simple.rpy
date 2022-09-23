@@ -4,9 +4,9 @@
 # Either the lad as drank sherry after dinner and die, or he hasn't and is still alive
 label lad_ending_day1_poisoned:
 
-  # Add sad sound
+    # Add sad sound
 
-  """
+    """
 
     You don't wake up. 
 
@@ -17,7 +17,7 @@ label lad_ending_day1_poisoned:
     And you probably didn't.
 
     But in life, people often die without knowing why. 
-    
+
     Even thought we always believe being the lad in our story, sometimes we are just pawns.
 
     Don't worry, you'll have more chances at changing the fate of this character.
@@ -33,15 +33,15 @@ label lad_ending_day1_poisoned:
     You'll get to play different characters.
 
     And you'll have to. 
-    
-    Because otherwise, you'll never discover to whole Truth of what happened this week-end, at Mandrake Castle.
 
-  """
+    Because otherwise, you'll never discover to whole Truth of what happened this week-end, at Claythorne Castle.
 
-  # Unlock captain
-  $ char_captain = True
+    """
 
-  # Ending
-  jump character_selection
+    # Unlock captain
+    $ char_captain = True
+
+    # Ending
+    jump character_selection
 
 
