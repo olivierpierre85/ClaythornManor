@@ -1,33 +1,41 @@
 label lad_introduction:
   
     scene train_inside
-    # train sound
+    play sound train_moving
 
     """
     As I approach Aberdeen station, I am reading yet another time the letter that made me come on this whole trip.
     """
 
     letter """
-    Congratulation Mister Haring,
 
-    Due to your recent actions, you have been selected as one of the recipients of the \"Exceptional Act of Bravery Award\".
+    September 5th, 1924
 
-    This award comes with a price money of two thousand pounds.
+    Mister Haring,
+
+    I am pleased to announce that you have been selected as one of the recipients of the \"Exceptional Act of Bravery Award\".
+
+    You'll be receiving the price, along with seven other courageous persons, at a reception organized in your honor. 
     
-    You'll be receiving the price along with seven other courageous persons. And you will all be enjoying a weekend of leisure at Claythorne Manor.
+    As a thank you, a weekend of leisure at Claythorne Manor as been planned for all of you to enjoy.
 
-    All you have to do is be at the Aberdeen Station, around 4PM, and a driver will pick you up to the place.
+    After which, a price money of two thousand pounds will be handed to you.
+    
+    It is mandatory to be present in person in order to receive this prize.  
+
+    All you have to do is be at the Aberdeen Station, on the 13th of October around 4PM, where someone will drive you to the manor.
 
     Hoping ,.....
 
     """
 
     """
-    More detailed information follows, but that's about the content of it.
+    More thanks and information follows, but that's about the content of it.
 
-    TODO Happy and surprised
+    I couldn't really believe it at first. I don't think I am that deserving. 
+    At least no more than hundreds of guys in this country.
 
-    Well, I couldn't really say no to this amount of money.
+    But in the end, no matter the reason, I can't possibly say no to this amount of money.
     
     So I feel like I didn't have much choice.
 
@@ -37,6 +45,7 @@ label lad_introduction:
     
     """
 
+    # TODO THEME ANIMATION AND SONG
     # Dramatic music, Start of Theme ?
     # PAUSE
 
@@ -48,13 +57,11 @@ label lad_introduction:
 
     lad "Yes, as a matter of fact I am."
 
-    "And for proof, I show him the letter that I still had in my hands."
+    "As proof, I show him the letter that I still had in my hands."
     
     footman "Very well Sir. I can take your luggage and you can follow me into the car."
 
-    "He then grabs my small luggage and load ti into the boot."
-
-    "I enter the car."
+    "He then grabs my small luggage and load it into the boot of the car."
 
     # TODO sound of car closing
 
@@ -72,6 +79,8 @@ label lad_introduction:
     And to make matter worse, a look at the sky tells me that a storm is coming. 
 
     Finally an impressive mansion appears in the horizon.
+
+    TODO DESCRIBE THE MANOR
     """
 
     scene manor_exterior

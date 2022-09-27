@@ -3,6 +3,8 @@ label lad_day1_arrival:
 
   #TODO show from exterior
 
+  call change_time(17,30)
+
   # TODO Menu Image
   scene great_hall
 

@@ -209,6 +209,6 @@ init python:
 # define build.itch_project = "renpytom/test-project"
 
 # My config variables
-define config.rollback_enabled = False
+define config.rollback_enabled = True #TODO Put back to false when game finished (OR env VAR ?)
 define config.has_autosave = True
 define config.autosave_on_quit = True
