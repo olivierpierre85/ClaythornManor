@@ -37,7 +37,7 @@ label init_characters:
             know_real_name = False,
             real_name = "Ted Harring",
             nickname = "The Lad",
-            description_short = "Young Lad",
+            description_short = "Yourself",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information
             )

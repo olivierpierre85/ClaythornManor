@@ -1,27 +1,26 @@
 label lad_introduction:
   
     scene train_inside
-    play sound train_moving
 
     """
-    As I approach Aberdeen station, I am reading yet another time the letter that made me come on this whole trip.
+    As I approach my destination, I am reading yet another time the letter that made me come on this trip.
     """
 
     letter """
 
     September 5th, 1924
 
-    Mister Haring,
+    Dear Mister Haring,
 
     I am pleased to announce that you have been selected as one of the recipients of the \"Exceptional Act of Bravery Award\".
 
-    You'll be receiving the price, along with seven other courageous persons, at a reception organized in your honor. 
+    You'll be receiving the prize, along with seven other courageous persons, at a reception organized in your honor. 
     
-    As a thank you, a weekend of leisure at Claythorne Manor as been planned for all of you to enjoy.
+    As a thank you, a weekend of leisure at Claythorn Manor as been planned for all of you to enjoy.
 
-    After which, a price money of two thousand pounds will be handed to you.
+    After which, a prize money of one thousand pounds will be handed to you.
     
-    It is mandatory to be present in person in order to receive this prize.  
+    Please note that your presence is mandatory in order to receive the prize.  
 
     All you have to do is be at the Aberdeen Station, on the 13th of October around 4PM, where someone will drive you to the manor.
 
@@ -32,8 +31,13 @@ label lad_introduction:
     """
     More thanks and information follows, but that's about the content of it.
 
-    I couldn't really believe it at first. I don't think I am that deserving. 
-    At least no more than hundreds of guys in this country.
+    It is signed by Lady Claythorn. 
+    
+    I've never heard of her.
+
+    I couldn't really believe it at first. 
+    
+    I don't think I am that deserving. At least no more than hundreds of guys in this country.
 
     But in the end, no matter the reason, I can't possibly say no to this amount of money.
     
@@ -45,45 +49,59 @@ label lad_introduction:
     
     """
 
+    play sound train_moving # arrival?
+
+    play music intro
+
     # TODO THEME ANIMATION AND SONG
     # Dramatic music, Start of Theme ?
+    # end with 
     # PAUSE
+    pause 5.0
 
+    stop music
     scene train_station
     
     "As I step off the train, a young man approaches me."
 
-    footman "Welcome sir. Are you by any chance, heading to Claythorne Manor ?"
+    footman "Welcome sir. Are you by any chance, heading to Claythorn Manor ?"
 
     lad "Yes, as a matter of fact I am."
 
-    "As proof, I show him the letter that I still had in my hands."
+    "As proof, I hand the letter that I still had in my hands to him ."
     
     footman "Very well Sir. I can take your luggage and you can follow me into the car."
 
-    "He then grabs my small luggage and load it into the boot of the car."
+    "And like that we were on our way."
 
-    # TODO sound of car closing
-
+    # play sound car_start not great ?
     scene inside_car
 
+    # TODO add real conversation ???? Yes if too short....
     """
-    I try to relax, in the car.
+    After leaving Aberdeen, we are riding into the country side. Then into what looks like a large forest.
 
-    After leaving Aberdeen, we are riding more into the country side. Then into what looks like a large forest.
+    About twenty minutes later, there is no trace of human life at all.
 
-    After a while we can't see any trace of houses or farms.
+    There is only woods so far as I can see.
 
-    I am an uneasy to find it to be so far from every where else.
+    I am a little an uneasy to find it to be so far from every where else.
 
     And to make matter worse, a look at the sky tells me that a storm is coming. 
 
-    Finally an impressive mansion appears in the horizon.
+    I tried to talk to the driver. He tells me he is a footman for Lady Claythorn. 
+    
+    But I can't get anymore from him. Maybe he is not supposed to make small talk with guests.
 
-    TODO DESCRIBE THE MANOR
+    I feel weird because I'm not used to be treated like. It is usually more the other way around.
+
+    I wonder if I'll manage to blend in with the other folks at the manor.
+
+    They might be more accustomed to this kind of treatment.
+
+    But on the other hand maybe not. Maybe Lady Claythorn gets a kick of helping people like me.
+
+    We'll see.
     """
-
-    scene manor_exterior
-    # TODO Scary music (short), plus thunder
 
     jump lad_day1_arrival
