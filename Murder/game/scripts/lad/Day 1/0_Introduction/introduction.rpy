@@ -2,6 +2,7 @@ label lad_introduction:
   
     scene train_inside
 
+    #TODO longer introduction? sound?
     """
     As I approach my destination, I am reading yet another time the letter that made me come on this trip.
     """
@@ -49,7 +50,7 @@ label lad_introduction:
     
     """
 
-    play sound train_moving # arrival?
+    play sound train_moving
 
     play music intro
 
@@ -74,24 +75,34 @@ label lad_introduction:
 
     "And like that we were on our way."
 
-    # play sound car_start not great ?
+
     scene inside_car
 
-    # TODO add real conversation ???? Yes if too short....
+    lad """ 
+    So you are lady Claythorn driver ?
     """
-    After leaving Aberdeen, we are riding into the country side. Then into what looks like a large forest.
 
-    About twenty minutes later, there is no trace of human life at all.
+    footman """
+    Yes, I mean,.. no.
+    I am actually her footman. But I can also drive people when necessary.
+    """
 
-    There is only woods so far as I can see.
+    lad """
+    Oh. So there is no driver at Claythorn Manor ?
+    """
 
-    I am a little an uneasy to find it to be so far from every where else.
+    footman """
+    Well, ... not that I know of sir.
 
-    And to make matter worse, a look at the sky tells me that a storm is coming. 
+    But I am sorry, I must concentrate on the road ahead. Lady Claythorn doesn't like it when I am distracted.
+    """
 
-    I tried to talk to the driver. He tells me he is a footman for Lady Claythorn. 
-    
-    But I can't get anymore from him. Maybe he is not supposed to make small talk with guests.
+    lad "Of course, I am sorry."
+
+    footman "No need for apologies Sir."
+
+    """
+    Hum, it looks like I have made him uneasy. Maybe he is not supposed to make small talk with guests.
 
     I feel weird because I'm not used to be treated like. It is usually more the other way around.
 
@@ -102,6 +113,16 @@ label lad_introduction:
     But on the other hand maybe not. Maybe Lady Claythorn gets a kick of helping people like me.
 
     We'll see.
+
+    After leaving Aberdeen, we are riding into the country side. Then into what looks like a large forest.
+
+    About twenty minutes later, there is no trace of human life at all.
+
+    There is only woods so far as I can see.
+
+    I am a little an uneasy to find it to be so far from every where else.
+
+    And to make matter worse, a look at the sky tells me that a storm is coming. 
     """
 
     jump lad_day1_arrival

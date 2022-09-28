@@ -1,29 +1,22 @@
-# Generic conversations with between the psychic and the hero
-
+# Generic conversations with between the psychic and the lad
 label psychic_generic:
 
-  show psychic at character_talking_right
+    if not psychic_details.know_real_name:
 
-  if not psychic_details.know_real_name:
+        lad "Hi miss ..."
 
-    # "The woman seems a bit nervous"
+        psychic "Miss Baxter, Amalia Baxter."
 
-    lad "Hi miss ..."
+        $ psychic_details.introduce()
 
-    psychic "Miss Baxter, Amalia Baxter."
+        lad "Nice to meet you miss Baxter. I am Ted Haring."
 
-    $ psychic_details.introduce()
+        psychic "Nice to meet you mister Haring."
+        
+    else:
 
-    lad "Nice to meet you miss Baxter. I am Ted Haring"
+        lad "Hi again Miss Baxter."
 
-    psychic "Likewise."
+        psychic "Oh Mister Harring. I am glad we can continue our conversation."
     
-  else:
-
-    lad "Hi again Miss Baxter."
-
-    psychic "Mister Harring. I am glad we can continue our conversation"
-  
-  call psychic_generic_choices
-
-  hide psychic
+    call psychic_generic_choices
