@@ -23,8 +23,6 @@ label lad_day1_drinks:
 
     "You would like to keep talking, but you are interrupted by the butler entering the room."
 
-    show butler at truecenter
-
     butler "Dinner is served. Please follow me to the dining room."
 
     hide butler 

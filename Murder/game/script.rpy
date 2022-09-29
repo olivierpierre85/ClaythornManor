@@ -15,7 +15,7 @@ define old_minutes_angle = 0
 
 define menus_options = dict()
 
-define current_character = "lad"
+
 
 define current_floor = 1 # 1 Equal ground floor, 0 is kitchen floor
 define tooltip = "Click on a room to move there"
@@ -26,6 +26,8 @@ define MAX_FLOOR = 1 # TODO Add floors
 label start():
 
     call init_characters
+
+    $ current_character = lad_details
 
     call init_storylines
 

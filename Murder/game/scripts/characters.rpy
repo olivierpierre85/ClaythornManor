@@ -187,6 +187,7 @@ init -100 python:
             return nurse_details
         else:
             return False
+
 # Python Classes
     class CharacterDetails():
         def __init__(
@@ -198,7 +199,8 @@ init -100 python:
             nickname = "",
             description_short = "",
             description_long = "",
-            information_list = []
+            information_list = [],
+            has_met = set()
         ):
             self.text_id = text_id
             self.locked = locked
@@ -208,6 +210,7 @@ init -100 python:
             self.description_short = description_short
             self.description_long = description_long
             self.information_list = information_list
+            self.has_met = has_met
 
         def get_name(self):
             if self.know_real_name:
@@ -306,13 +309,13 @@ screen character_list(is_selection = False):
                         if is_selection:
                             action Return(char.text_id)
                         else:
-                            action ShowMenu("character_details", char.text_id)
+                            action ShowMenu("character_details", char)
                     imagebutton:
                         idle "images/characters/" + char.text_id +".png"
                         if is_selection:
                             action Return(char.text_id)
                         else:
-                            action ShowMenu("character_details", char.text_id)
+                            action ShowMenu("character_details", char)
                 $ char_x_offset += 50
 
         $ char_x_offset = 0
@@ -323,7 +326,7 @@ screen character_list(is_selection = False):
             $ char_y_offset += 340
 
 screen character_details(selected_char):
-    $ current_char = get_char(selected_char)
+    # $ selected_char = get_char(char_id)
     tag menu # ????
     use game_menu(_("Characters"), scroll="viewport"):
 
@@ -331,14 +334,14 @@ screen character_details(selected_char):
 
         hbox:
             vbox:
-                text current_char.nickname:
+                text selected_char.nickname:
                     size 48
                     font gui.name_text_font
                     line_leading 10
                     line_spacing 10
                     color gui.accent_color
                     # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
-                add "images/characters/" + selected_char +".png"
+                add "images/characters/" + selected_char.text_id +".png"
             vbox:
                 xoffset 40 
                 textbutton _("Return"): 
@@ -352,14 +355,14 @@ screen character_details(selected_char):
                     yalign 0.5
                     text "Name:  ":
                         color gui.accent_color
-                    if current_char.know_real_name:
-                        text current_char.real_name 
+                    if selected_char.know_real_name:
+                        text selected_char.real_name 
                     else:
                         text "Unknow" 
 
                 text "Description: " color gui.accent_color
-                text current_char.description_long
-                for info in current_char.information_list:
+                text selected_char.description_long
+                for info in selected_char.information_list:
                     if not info.locked:
                         text info.content
         

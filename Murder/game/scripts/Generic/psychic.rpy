@@ -1,6 +1,33 @@
-    label psychic_generic_choices:
+# Generic psychic Dialogs.
+# Accessible from :
+#                   - The lad
 
-    show psychic at character_choice_right
+# TODO add extrachoice possibilities?
+label psychic_generic:
+
+    if 'psychic' not in current_character.has_met:
+
+        if current_character.text_id == "lad":
+
+            lad "Hi miss ..."
+
+            psychic "Miss Baxter, Amalia Baxter."
+
+            $ psychic_details.introduce()
+
+            lad "Nice to meet you miss Baxter. I am Ted Haring."
+
+            psychic "Nice to meet you mister Haring."
+        
+        # elif current_character.text_id == "TODO": # Maybe need a default options ? with a current char and current_char_details
+
+        $ current_character.has_met.add('psychic')
+        
+    else:
+
+        lad "Hi again Miss Baxter."
+
+        psychic "Oh Mister Harring. I am glad we can continue our conversation."
 
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([
@@ -12,21 +39,17 @@
 
     call run_menu(psychic_generic_menu)
 
-    hide psychic
+    #hide psychic
     return
 
-    label psychic_generic_job:
-    show psychic at character_talking_right
-    psychic "I am a psychic. I work in an hospital in London."
+label psychic_generic_job:
+    psychic "Oh dear, I do a lot of things."
 
-    #call check_characters_knowledge(psychic_details, 'job') 
     $ psychic_details.check_characters_knowledge('job')
 
-    show psychic at character_choice_right
-
     return
 
-    label psychic_generic_heroic_act:
+label psychic_generic_heroic_act:
     psychic """
     Well, I think it's for something I have done during the war.
 
@@ -43,14 +66,14 @@
     
     return
 
-    label psychic_generic_background:
+label psychic_generic_background:
     psychic "I am from Sausage Island"
 
     $ psychic_details.check_characters_knowledge('background')
 
     return
     
-    label psychic_generic_manor:
+label psychic_generic_manor:
     psychic "It is certainly spooky right ?"
 
     # TODO  keep a generic response OR try to have a response different for different characters ?
@@ -60,5 +83,5 @@
     $ renpy.say(eval(current_character), responses[current_character])
     return
 
-    label psychic_generic_cancel:
+label psychic_generic_cancel:
     return
