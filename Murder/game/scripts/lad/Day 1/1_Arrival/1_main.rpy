@@ -31,7 +31,7 @@ label lad_day1_arrival:
 
     scene great_hall
     
-    call change_time(17,30)
+    call change_time(18,00)
 
     butler """
 

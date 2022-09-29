@@ -5,9 +5,9 @@ label lad_day1_drinks:
     play music "audio/music/Upbeat.mp3"
 
     """
-    I look around the room and see multiple persons already engage in conversation.
+    I enter the room where I see a few people already engaged in conversation.
     
-    But two persons are sitting alone. A middle age man sitting on a couch, and a young woman.
+    But two persons are alone. A middle age man sitting on a couch, and a young woman standing by herself.
 
     They seem more approachable than the rest.
 
@@ -57,6 +57,6 @@ label lad_day1_drinks_drunk:
 
     drunk "(Snore...)"
 
-    "It's seems hopeless to talk to him."
+    "He reeks of booze, and is deep asleep. It's useless talking to him."
 
     return

@@ -63,13 +63,13 @@ label lad_introduction:
     stop music
     scene train_station
     
-    "As I step off the train, a young man approaches me."
+    "As I step off the train, a man approaches me."
 
     footman "Welcome sir. Are you by any chance, heading to Claythorn Manor ?"
 
     lad "Yes, as a matter of fact I am."
 
-    "As proof, I hand the letter that I still had in my hands to him ."
+    "As proof, I hand him the letter that I still had in my hands."
     
     footman "Very well Sir. I can take your luggage and you can follow me into the car."
 
@@ -79,12 +79,12 @@ label lad_introduction:
     scene inside_car
 
     lad """ 
-    So you are lady Claythorn driver ?
+    So you are lady Claythorn's driver ?
     """
 
     footman """
     Yes, I mean,.. no.
-    I am actually her footman. But I can also drive people when necessary.
+    I am actually her footman. But I also drive people when necessary.
     """
 
     lad """
