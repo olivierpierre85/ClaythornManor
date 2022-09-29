@@ -28,8 +28,8 @@ label init_characters:
     python:
         # 1. The Lad
         lad_extra_information = [
-            CharacterInformation(0, "background", "Born in Derbshire, he comes from an orphanage.") , 
-            CharacterInformation(1, "job", "He is fishmonger")
+            CharacterInformation(0, "background", "Born in ???") , 
+            CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today.")
         ]
         lad_details  = CharacterDetails(
             text_id = "lad", 
@@ -39,7 +39,8 @@ label init_characters:
             nickname = "The Lad",
             description_short = "Yourself",
             description_long = "Good Looking lad, in his early twenties.",
-            information_list = lad_extra_information
+            information_list = lad_extra_information,
+            has_met = set()
             )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 
@@ -47,8 +48,9 @@ label init_characters:
 
         # 2. The Psychic
         psychic_extra_information = [
-            CharacterInformation(0, "background", "Born in Candy City.") , 
-            CharacterInformation(1, "job", "A psychic, and a famous one apparently.")
+            CharacterInformation(0, "background", "A psychic, and a famous one apparently."), 
+            CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house."), 
+            CharacterInformation(2, "age", "She was .... SO she must be ????")
         ]
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
@@ -221,7 +223,7 @@ init -100 python:
         def introduce(self):
             self.know_real_name = True
         
-        def check_characters_knowledge(self, text_id):
+        def add_knowledge(self, text_id):
             for info in self.information_list:
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
@@ -235,6 +237,14 @@ init -100 python:
                         renpy.pause(2)
                         renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
                         renpy.notify("You have unlock a new Character : The " + self.text_id)
+        
+        def check_knowledge_unlocked(self, text_id):
+            for info in self.information_list:
+                if text_id == info.text_id:
+                    return not info.locked
+
+            return True
+
         
         def all_information_unlocked(self):
             for info in self.information_list:

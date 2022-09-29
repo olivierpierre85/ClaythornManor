@@ -13,6 +13,9 @@ label lad_day1_drinks:
 
     """
 
+
+label breakpoint:
+    
     $ time_left = 30
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk To the man', 'lad_day1_drinks_drunk', 10),

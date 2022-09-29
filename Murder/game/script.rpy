@@ -13,6 +13,8 @@ define current_time = time(17,00,00)
 define hours_angle = 0
 define old_minutes_angle = 0 
 
+define current_year = "1924"
+
 define menus_options = dict()
 
 
@@ -24,6 +26,8 @@ define MAX_FLOOR = 1 # TODO Add floors
 
 # The game starts here.
 label start():
+
+    # TODO SOME INIT should be reset at character selection, check which ones
 
     call init_characters
 

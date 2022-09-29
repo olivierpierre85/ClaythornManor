@@ -9,7 +9,7 @@ label lad_introduction:
 
     letter """
 
-    September 5th, 1924
+    September 5th, [current_year]
 
     Dear Mister Haring,
 
