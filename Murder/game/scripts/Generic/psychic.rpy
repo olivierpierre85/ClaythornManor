@@ -35,11 +35,10 @@ label psychic_generic:
         TimedMenuChoice('Why were you invited here ?', 'psychic_generic_heroic_act', 20),
         TimedMenuChoice('Where are you from ?', 'psychic_generic_background', 20),
         TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
-        ])
+        ], image_right = "psychic")
 
     call run_menu(psychic_generic_menu)
 
-    #hide psychic
     return
 
 label psychic_generic_job:
