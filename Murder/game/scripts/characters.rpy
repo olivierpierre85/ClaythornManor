@@ -29,7 +29,7 @@ label init_characters:
         # 1. The Lad
         lad_extra_information = [
             CharacterInformation(0, "background", "Born in ???") , 
-            CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today.")
+            CharacterInformation(2, "age", "He was fifteen at the end of the war. That would make him 22 years old today.")
         ]
         lad_details  = CharacterDetails(
             text_id = "lad", 
@@ -37,7 +37,7 @@ label init_characters:
             know_real_name = False,
             real_name = "Ted Harring",
             nickname = "The Lad",
-            description_short = "Yourself",
+            description_short = "Young man",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
             has_met = set()
@@ -48,7 +48,7 @@ label init_characters:
 
         # 2. The Psychic
         psychic_extra_information = [
-            CharacterInformation(0, "background", "A psychic, and a famous one apparently."), 
+            CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently."), 
             CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house."), 
             CharacterInformation(2, "age", "She was .... SO she must be ????")
         ]

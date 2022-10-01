@@ -30,7 +30,7 @@ label psychic_generic:
 
             psychic "Oh Mister Harring. I am glad we can continue our conversation."
 
-        # elif current_character.text_id == "TODO": # Maybe need a default options ? with a current char and current_char_details
+        # elif current_character.text_id == "# Maybe need a default options ? with a current char and current_char_details
 
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([
@@ -60,7 +60,7 @@ label psychic_generic_weather:
 
 label psychic_generic_age:
 
-    psychic """
+    psychic angry """
     I beg your pardon ?
 
     You are not really asking me that ? Were you raised in a barn ?
@@ -76,22 +76,99 @@ label psychic_generic_age:
     
 
 label psychic_generic_heroic_act:
-    psychic """
-    I was invited here for something I have done a couple of years back.
-
-    You actually might remember the event. It was in all the papers at the time.
-
-    TODO Kidnapping story
-
-    You see, my talent. I am lucky enough to help some people who despertaly need help
-
-    """
-
-    $ psychic_details.add_knowledge('heroic act') 
-    
-
     if current_character.text_id == "lad":
-        "After this short explanation, she asks about your own reason. And you tell her your story."
+
+        psychic """
+        I was invited here for something I have done a couple of years back.
+
+        You actually might remember the event. It was in all the papers at the time.
+
+        You see, with my talent, I am sometimes able to help some people who desperately need it.
+
+        One day, a young couple came to see me.
+
+        Their new born child, not even one year old, had been kidnapped.
+
+        The police had no clues of what could have happened.
+
+        Desperate, they asked for my help.
+
+        Right away, I could tell the child was still alive.
+
+        """
+
+        lad """
+        Really ?! You can also talk to babies ?
+        """
+
+        psychic """
+        Not exactly talk, but I can feel them, their presence.
+
+        This time, I was certain the child was still alive. But in great danger.
+
+        I could see him with a specific person that I described to the couple.
+
+        They were able to identified her immediately.
+
+        She was an old family friend who was often at their house.
+
+        Nobody had suspected her until then.
+
+        But it turns out I was right. The baby was with her.
+
+        She was arrested and the baby safely returned to their parents.
+
+        My popularity grew quite a lot after that.
+        """
+
+        lad """
+        Wait, I don't understand.
+        
+        How did you know the child was in danger ?
+        
+        You can also communicate with people who are still alive ?
+        """
+
+        psychic """
+        In a sense yes.
+
+        Like I said, there is more to my gift that just talking with the dead.
+
+        I can also sense if someone life is at risk. 
+
+        Some say it is because when someone is close to the other world, we can sense them almost like they are already there.
+
+        But for myself, I think it's something else entirely.
+
+        I believe I can only talk to the dead.
+
+        So when I can sense someone who is still alive. It means to me that there is a version of them that is not.
+
+        I am not sure if you understand what I mean.
+        """
+
+        lad """
+        I don't know.
+
+        You mean someone can be dead and alive at the same time ?
+
+        """
+
+        psychic """
+        Yes. I believe some version of the person died in an other realm of existence. 
+        
+        Then they came back to help a version of them who is still alive.
+
+        I am sorry. That must sound like nonsense to you.
+
+        Forget I said anything. I get carried away sometimes.
+
+        But tell me. Why were you invited yourself ?
+        """
+
+        $ psychic_details.add_knowledge('heroic act') 
+    
+        "So I tell her my story."
 
         psychic "Oh how interesting ! I assumed most people were here because of something they did during the war."
 
@@ -104,15 +181,54 @@ label psychic_generic_heroic_act:
     return
 
 label psychic_generic_background:
-    psychic """
-    Oh dear, I do a lot of things.
+    if current_character.text_id == "lad":
+        psychic """
+        Oh dear, I do a lot of things.
 
-    But what takes up the most of my time is my readings.
+        But since my husband's death, what takes up the most of my time is the seances I frequently organized.
 
-    TODO find info on old psychic
+        """
 
+        lad """
+        Seances ? You mean like talking to the dead ?
+        """
 
-    """
+        psychic """
+        Well simply put yes. But there is more to it than that of course.
+        """
+
+        lad """
+        I have never been to one of those 'seance'. How does that work ?
+        """
+
+        psychic """
+        There is not a single way of doing it.
+
+        Myself, I usually ask people to bring items of loved one who have passed.
+
+        Thanks to those, I am able to form a bond with the soul of the deceased.
+
+        Then, they talk to me. Sometimes it's only a whisper. Sometimes I can see them clearly, just like I see you now.
+
+        And in rare occasions, they can take over my body and talk directly to their relatives through me.
+
+        """
+
+        lad """
+        You mean like being possessed ?
+        """
+
+        psychic """
+        Yes, but don't worry, there is nothing unholy about it.
+
+        It just mean the dead has something so important to communicate that they use the more efficient way to do so.
+
+        I only last for a few moment. I always regained full power right after.
+        """
+
+        """
+        Well, that doesn't make me feel good.
+        """
 
     $ psychic_details.add_knowledge('background')
 
