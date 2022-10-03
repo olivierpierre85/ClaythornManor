@@ -50,6 +50,8 @@ label lad_introduction:
     
     """
 
+    $ host_details.introduce()
+
     play sound train_moving
 
     play music danger_01

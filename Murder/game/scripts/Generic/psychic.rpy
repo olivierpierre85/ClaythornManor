@@ -35,7 +35,7 @@ label psychic_generic:
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([
             TimedMenuChoice('Talk about the weather', 'psychic_generic_weather', 5),
-            TimedMenuChoice('Ask about her', 'psychic_generic_background', 15),
+            TimedMenuChoice('Ask her about herself', 'psychic_generic_background', 15),
             TimedMenuChoice('Talk about the manor', 'psychic_generic_manor', 10),
             TimedMenuChoice('Ask her her age', 'psychic_generic_age', 5),
             TimedMenuChoice('Ask her about the invitation', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
@@ -47,6 +47,8 @@ label psychic_generic:
     return
 
 label psychic_generic_weather:
+
+    # TODO adapt depeding of the day
 
     psychic """
     Well, it is not very original to ask about such things when meeting someone new.

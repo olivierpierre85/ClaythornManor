@@ -88,8 +88,8 @@ label init_characters:
             know_real_name = False,
             real_name = "",
             nickname = "The Doctor",
-            description_short = "Middle-age Woman",
-            description_long = "Old lady",
+            description_short = "Middle-age man",
+            description_long = "Serious Middle-age man with glasses.",
             information_list = doctor_extra_information
         )
         doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
@@ -101,10 +101,10 @@ label init_characters:
             text_id = "host", 
             locked = True,
             know_real_name = False,
-            real_name = "TODO",
+            real_name = "Lady Claythorn",
             nickname = "The Host",
-            description_short = "Middle-age Woman",
-            description_long = "Old Rich lady",
+            description_short = "Older Lady",
+            description_long = "The lady of the mansion",
             information_list = host_extra_information
         )
         host = Character("host_details.get_name()", image="host", dynamic=True)

@@ -6,7 +6,7 @@ label debug_choices:
         lad_dinner_simple = [
             0, # Talk to the man => not needed?
             1, # Talk to the woman
-            3, # Learn nothing about the psychic
+            5, # Learn nothing about the psychic
         ]
 
         lad_evening_simple = lad_dinner_simple + [
@@ -41,7 +41,6 @@ label debug_choices:
             jump lad_introduction
         "lad_day1_drinks":
             jump lad_day1_drinks
-            
             
         "character_selection":
             jump character_selection

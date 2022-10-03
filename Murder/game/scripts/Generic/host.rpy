@@ -11,9 +11,9 @@ label host_welcome_speech:
 
   My first gift to you, is this stay in my manor. You will fully be catered too, with the most refine food expertly prepared by my personal cook.
 
-  During the three days we will spend together, we'll also enjoy various activities I am sure you will love
+  During the three days we will spend together, we'll also enjoy various activities I am sure you will love.
 
-  The second gift, is a price of ten thousands pounds to share among yourselves. It's my way to thank people so selfless as to help other people.
+  The second gift, is a price of eight thousands pounds to share among yourselves. It's my way to thank people so selfless as to help other people.
   """
   
   "Our host then sits down to her chair."
