@@ -52,7 +52,7 @@ label lad_introduction:
 
     play sound train_moving
 
-    play music intro
+    play music danger_01
 
     # TODO THEME ANIMATION AND SONG
     # Dramatic music, Start of Theme ?

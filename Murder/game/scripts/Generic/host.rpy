@@ -1,6 +1,4 @@
 label host_welcome_speech:
-  
-  show host at character_talking_left
 
   host """ 
   Welcome every one. I am sorry to have kept you waiting. Now that we are all gather here, I would like again to show you my gratitude.

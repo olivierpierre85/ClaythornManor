@@ -34,12 +34,12 @@ label psychic_generic:
 
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([
-        TimedMenuChoice('Talk about the weather', 'psychic_generic_weather', 20),
-        TimedMenuChoice('Ask about her situation', 'psychic_generic_background', 20),
-        TimedMenuChoice('Talk about the manor', 'psychic_generic_manor', 20),
-        TimedMenuChoice('Ask her her age', 'psychic_generic_age', 20),
-        TimedMenuChoice('Ask her about the invitation', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
-        TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
+            TimedMenuChoice('Talk about the weather', 'psychic_generic_weather', 5),
+            TimedMenuChoice('Ask about her', 'psychic_generic_background', 15),
+            TimedMenuChoice('Talk about the manor', 'psychic_generic_manor', 10),
+            TimedMenuChoice('Ask her her age', 'psychic_generic_age', 5),
+            TimedMenuChoice('Ask her about the invitation', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
+            TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "psychic")
 
     call run_menu(psychic_generic_menu)
@@ -69,7 +69,7 @@ label psychic_generic_age:
     """
 
     """
-    You mutter an apology and quickly change the subject.
+    I mutter an apology and quickly change the subject.
     """
 
     return
@@ -77,6 +77,8 @@ label psychic_generic_age:
 
 label psychic_generic_heroic_act:
     if current_character.text_id == "lad":
+
+        play music mysterious_01 fadeout 2.0 fadein 2.0
 
         psychic """
         I was invited here for something I have done a couple of years back.
@@ -177,6 +179,8 @@ label psychic_generic_heroic_act:
         psychic "Really? I thought you were older."
 
         $ lad_details.add_knowledge('age') 
+
+        stop music fadeout 3.0
     
     return
 

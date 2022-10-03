@@ -1,7 +1,7 @@
 # Introduction for hero
 label lad_day1_dinner:
 
-    call change_time(18,00)
+    call change_time(18,30)
 
     $ current_floor = 0
 
