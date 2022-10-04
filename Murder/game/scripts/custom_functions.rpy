@@ -13,7 +13,6 @@ label change_time(hours,minutes):
   
   return
 
-
   # NOT needed, imprint frame in picture
 # label show_character(character, talk_position = character_talking_left):
 #   $ renpy.show(character, at_list=[talk_position])

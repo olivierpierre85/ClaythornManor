@@ -1,22 +1,46 @@
 label lad_day1_evening:
 
-  call change_time(22,00)
+  call change_time(21,00)
 
-  scene bedroom_hero
+  scene hallway
 
-  # narrator """
+  "He takes me through the grand staircase, on to the first floor."
 
-  # You're entering your bedroom. 
+  $ current_floor = 2
 
-  # It is tidy, but a bit run down.
+  footman """
+  There you go sir.
 
-  # After checking all your effects are in order, you realize that you still have plenty of time before you could sleep.
+  You have the 'Williams The Conqueror' room.
 
-  # So you go out of your room to ....
+  I hope it's to your liking.
+  """
 
-  # """
+  # Unlock lad room position OR TODO unlock FULL map with dialog, you found a map of the room as  decoration
+  $ map_info['lad_room'] = True
 
-  "You go to"
+  scene bedroom_lad
+
+  """
+  I enter the bedroom. 
+  
+  I can't believe it, it's bigger than my apartment.
+  """
+
+  lad "That will do great, thank you."
+
+  """
+  The footman exits the room.
+
+  I look around me in disbelief.
+  
+  After a while I unpack my small luggage.
+
+  Well that didn't take long.
+
+  So what do I do now ?
+
+  """
 
   $ time_left = 120
 
@@ -32,7 +56,7 @@ label lad_day1_evening:
 
   call run_menu(lad_day1_evening_menu)
 
-  call change_time(23,59)
+  call change_time(23,00)
 
   "You are now feeling tired, you decide it's late enough and you go to bed."
 

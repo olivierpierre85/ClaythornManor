@@ -39,8 +39,8 @@ label debug_choices:
             jump breakpoint
         "jump lad_introduction":
             jump lad_introduction
-        "lad_day1_drinks":
-            jump lad_day1_drinks
+        "lad_day1_evening":
+            jump lad_day1_evening
             
         "character_selection":
             jump character_selection

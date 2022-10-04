@@ -122,9 +122,9 @@ screen manor_map:
                     xoffset 0       
 
 screen map_information:
-    if current_floor == 1:
+    if current_floor == 2:
         if map_info['lad_room'] == True:
-            text "Lad room room floor 1":
+            text "Ted Harring":
                 pos(200,100)
                 color "#be0c0c"
                 size 30
@@ -153,11 +153,10 @@ screen in_game_map_menu(choices):
 
         # Full Map of the MANOR
         rooms = [
-            Room('nurse_room',      'Y Room',           1, (0, 100, 200, 100)),
-            Room('lad_room',        'X ROOM',           1, (200, 100, 200, 100)),
-
-            Room('billiard_room',   'Billiard room',    0, (0, 100, 200, 100)),
-            Room('library',         'Library',          0, (200, 100, 200, 100))
+            Room('nurse_room',      'Y Room',           2, (0, 100, 200, 100)),
+            Room('lad_room',        'William the Conqueror Bedroom',           2, (200, 100, 200, 100)),
+            Room('billiard_room',   'Billiard room',    1, (0, 100, 200, 100)),
+            Room('library',         'Library',          1, (200, 100, 200, 100))
         ]
 
         # For each Room, check if the menu has a possible option for the floor
