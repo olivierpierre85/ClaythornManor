@@ -22,7 +22,7 @@ define menus_options = dict()
 define current_floor = 1 # 1 Equal ground floor, 0 is kitchen floor
 define tooltip = "Click on a room to move there"
 define MIN_FLOOR = 0
-define MAX_FLOOR = 1 # TODO Add floors
+define MAX_FLOOR = 2 # TODO Add floors
 
 # The game starts here.
 label start():
@@ -40,8 +40,8 @@ label start():
 
     # TODO move to a map SCRIPT page
     $ map_info = dict()
-    $ map_info['lad_room'] = True
-    $ map_info['psychic_room'] = True
+    $ map_info['lad_room'] = False
+    $ map_info['psychic_room'] = False
 
     $ test_mode = False
 
