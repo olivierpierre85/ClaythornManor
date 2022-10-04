@@ -50,7 +50,8 @@ label init_characters:
         psychic_extra_information = [
             CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently."), 
             CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house."), 
-            CharacterInformation(2, "age", "She was .... SO she must be ????")
+            CharacterInformation(2, "age", "She was .... SO she must be ????"),
+            CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.")
         ]
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
@@ -64,8 +65,30 @@ label init_characters:
         )
         psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)
 
-        # 3. The Drunk
+        # 3. The Doctor
+        doctor_extra_information = [
+            CharacterInformation(0, "background", "He's a doctor and runs an hospital."), 
+            CharacterInformation(0, "heroic act", "He has stayed at his charity hospital for 10 years. Which is quite an achievement."), 
+            CharacterInformation(1, "status", "Not wealthy."),
+            CharacterInformation(2, "age", "He is 39 years old.")
+        ]
+        doctor_details  = CharacterDetails(
+            text_id = "doctor", 
+            locked = True,
+            know_real_name = False,
+            real_name = "Daniel Baldwin",
+            nickname = "The Doctor",
+            description_short = "Middle-age man",
+            description_long = "Serious Middle-age man with glasses.",
+            information_list = doctor_extra_information
+        )
+        doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
+
+        # 4. The Drunk
         drunk_extra_information = [
+            CharacterInformation(0, "background", ""), 
+            CharacterInformation(1, "status", ""),
+            CharacterInformation(2, "age", "?")
         ]
         drunk_details  = CharacterDetails(
             text_id = "drunk", 
@@ -78,21 +101,6 @@ label init_characters:
             information_list = drunk_extra_information
         )
         drunk = Character("drunk_details.get_name()", image="drunk", dynamic=True)
-        
-        # 4. The Doctor
-        doctor_extra_information = [
-        ]
-        doctor_details  = CharacterDetails(
-            text_id = "doctor", 
-            locked = True,
-            know_real_name = False,
-            real_name = "",
-            nickname = "The Doctor",
-            description_short = "Middle-age man",
-            description_long = "Serious Middle-age man with glasses.",
-            information_list = doctor_extra_information
-        )
-        doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
 
         # 5. The Host
         host_extra_information = [
