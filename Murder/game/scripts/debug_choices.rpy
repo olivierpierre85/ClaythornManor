@@ -35,13 +35,10 @@ label debug_choices:
         ]
     
     menu: 
-        "last breakpoint":
-            jump breakpoint
         "jump lad_introduction":
             jump lad_introduction
         "lad_day1_evening":
             jump lad_day1_evening
-            
         "character_selection":
             jump character_selection
 

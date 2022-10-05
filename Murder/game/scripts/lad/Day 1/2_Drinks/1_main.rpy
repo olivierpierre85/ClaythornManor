@@ -12,9 +12,6 @@ label lad_day1_drinks:
     They seem more approachable than the rest.
 
     """
-
-
-label breakpoint:
     
     $ time_left = 30
     $ current_menu = TimedMenu([

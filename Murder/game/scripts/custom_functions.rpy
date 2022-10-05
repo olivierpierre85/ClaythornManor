@@ -1,19 +1,26 @@
 transform character_talking_left:
-  xpos 250  
-  ypos 520
+    xpos 250  
+    ypos 520
 
 transform character_talking_right:
-  zoom 1.3
-  xpos 1600  
-  ypos 600
+    zoom 1.3
+    xpos 1600  
+    ypos 600
 
 label change_time(hours,minutes):
-  $ current_time =  time(hours,minutes,00)
-  play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"
-  
-  return
+    $ current_time =  time(hours,minutes,00)
+    play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"
 
-  # NOT needed, imprint frame in picture
+return
+
+label breakpoint:
+    menu:
+        "keep going":
+            "DEBUG"
+
+    return
+
+# NOT needed, imprint frame in picture
 # label show_character(character, talk_position = character_talking_left):
 #   $ renpy.show(character, at_list=[talk_position])
 #   # $ renpy.show("painting_frame", at_list=[talk_position], tag=character)
