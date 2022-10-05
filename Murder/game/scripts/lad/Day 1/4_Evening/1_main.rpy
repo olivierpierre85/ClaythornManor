@@ -6,12 +6,12 @@ label lad_day1_evening:
 
   "He takes me through the grand staircase, on to the first floor."
 
-  $ current_floor = 2
+  call change_floor(2)
 
   footman """
   There you go sir.
 
-  You have the 'Williams The Conqueror' room.
+  You have the 'William The Conqueror' room.
 
   I hope it's to your liking.
   """
@@ -51,16 +51,16 @@ label lad_day1_evening:
     TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
     TimedMenuChoice('Go have a look in the library', 'lad_day1_evening_library', 40, room = 'library'),
     TimedMenuChoice('Go downstairs to visit the kitchens', 'lad_day1_evening_kitchens', 10, room = 'kitchens'),
-    TimedMenuChoice('You give up and go back to your room', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
+    TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
   ], is_map = True)
 
   call run_menu(lad_day1_evening_menu)
 
   call change_time(23,00)
 
-  "You are now feeling tired, you decide it's late enough and you go to bed."
+  "You are feeling tired. You decide it's late enough and you go to bed."
 
-  scene bedroom_hero
+  scene bedroom_lad
 
   "You Notice something on your bed. a letter."
 

@@ -171,9 +171,8 @@ label init_characters:
 
         char_list_flat = [lad_details, doctor_details, host_details, drunk_details, psychic_details, broken_details, captain_details, nurse_details]
 
-    # TODO add all side image
-    # image side lad = "images/characters/lad.png"
-    # image side broken = "images/characters/borken.png"
+    # INIT first character
+    $ current_character = lad_details
 
     return
 

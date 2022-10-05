@@ -17,31 +17,19 @@ define current_year = "1924"
 
 define menus_options = dict()
 
-
-
-define current_floor = 1 # 1 Equal ground floor, 0 is kitchen floor
-define tooltip = "Click on a room to move there"
-define MIN_FLOOR = 0
-define MAX_FLOOR = 2 # TODO Add floors
-
 # The game starts here.
 label start():
+
+    # Default Menu screen when press ESC in-game
+    $ _game_menu_screen = "manor_map"
 
     # TODO SOME INIT should be reset at character selection, check which ones
 
     call init_characters
 
-    $ current_character = lad_details
-
     call init_storylines
 
-    # Default Menu screen when press ESC in-game
-    $ _game_menu_screen = "manor_map"
-
-    # TODO move to a map SCRIPT page
-    $ map_info = dict()
-    $ map_info['lad_room'] = False
-    $ map_info['psychic_room'] = False
+    call  init_map
 
     $ test_mode = False
 

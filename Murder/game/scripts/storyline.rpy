@@ -1,7 +1,10 @@
 label init_storylines:
     $ current_storyline = "The Lad"
+    return
+
 transform character_storyline:
     zoom 0.4
+
 # Display of storyline tree
 screen storyline:
     tag menu
