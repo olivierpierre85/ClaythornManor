@@ -71,16 +71,7 @@ label lad_day1_evening:
   # else:
 
   #   jump lad_day2_breakfast
-  
-label lad_day1_evening_downstairs:
 
-  scene basement_stairs
-
-  butler "Excuse me sir, but downstairs is for staff only."
-
-  lad "Oh I am sorry, I didn't know."
-
-  return
 
 label lad_day1_evening_library:
 
