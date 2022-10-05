@@ -77,8 +77,6 @@ label lad_introduction:
 
     "And like that we were on our way."
 
-    call breakpoint
-
     scene inside_car
 
     lad """ 

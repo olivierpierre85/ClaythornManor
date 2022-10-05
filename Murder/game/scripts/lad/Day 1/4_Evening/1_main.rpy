@@ -16,8 +16,7 @@ label lad_day1_evening:
   I hope it's to your liking.
   """
 
-  # Unlock lad room position OR TODO unlock FULL map with dialog, you found a map of the room as  decoration
-  $ map_info['lad_room'] = True
+  call unlock_map('lad_room')
 
   scene bedroom_lad
 
@@ -44,13 +43,13 @@ label lad_day1_evening:
 
   $ time_left = 120
 
-  define lad_day1_evening_left_bedroom = False
-
   $ lad_day1_evening_menu = TimedMenu([
     TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_nurse_room', 55, room = 'psychic_room'),
     TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
     TimedMenuChoice('Go have a look in the library', 'lad_day1_evening_library', 40, room = 'library'),
-    TimedMenuChoice('Go downstairs to visit the kitchens', 'lad_day1_evening_kitchens', 10, room = 'kitchens'),
+    TimedMenuChoice('Go downstairs', 'lad_day1_evening_downstairs', 10, room = 'kitchens'),
+    TimedMenuChoice('Go downstairs', 'lad_day1_evening_downstairs', 10, room = 'scullery'),
+    TimedMenuChoice('Go downstairs', 'lad_day1_evening_downstairs', 10, room = 'garage'),
     TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
   ], is_map = True)
 
@@ -76,39 +75,38 @@ label lad_day1_evening:
 
   #   jump lad_day2_breakfast
   
-label lad_day1_evening_kitchens:
+label lad_day1_evening_downstairs:
 
-  $ lad_day1_evening_left_bedroom = True
+  scene basement_stairs
 
-  scene hallway
+  butler "Excuse me sir, but downstairs is for staff only."
 
-  show butler at truecenter
-
-  butler "I am sorry sir, but the kitchen is for the staff only."
-
-  hide butler
+  lad "Oh I am sorry, I didn't know."
 
   return
 
 label lad_day1_evening_library:
 
-  $ lad_day1_evening_left_bedroom = True
+  scene library
   
-  "You look around the library."
+  """
+  It's a very nice library. But what am I doing here ? I can barely read.
 
-  lad "Why am I doing here ? I can barely read."
+  """
 
-  "On a small table, you see a open book."
+  $ lad_details.add_knowledge('education')
 
-  "You check the title."
+  """
+  There is an open book on a small table.
 
-  "\"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\""
+  \"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\"
 
-  lad "Yeah, I am not reading that."
+  Yeah, I am not reading that.
 
-  "You leave the library."
+  I probably better go elsewhere.
 
-  # TODO add trivia, The lad can't read well
+  """
+  # TODO add info on BOOK ???
 
   return
 

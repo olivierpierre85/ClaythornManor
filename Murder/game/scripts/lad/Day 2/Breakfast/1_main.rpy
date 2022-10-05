@@ -1,6 +1,6 @@
 label lad_day2_breakfast:
 
-  scene bedroom_hero
+  scene bedroom_lad
 
   "You slept through the night."
 

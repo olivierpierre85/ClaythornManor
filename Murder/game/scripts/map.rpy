@@ -20,10 +20,26 @@ label init_map:
     define MIN_FLOOR = 0
     define MAX_FLOOR = 2 # TODO Add floors
 
-    # TODO move to a map SCRIPT page
-    $ map_info = dict()
-    $ map_info['lad_room'] = False
-    $ map_info['psychic_room'] = False
+    # TODO replace by a nice loop or class
+    python:
+        # Full Map of the MANOR
+        rooms = [
+            # Bedrooms
+            Room(2, (0, 100, 200, 100),     'psychic_room',     'George III Bedroom'),
+            Room(2, (200, 100, 200, 100),   'lad_room',         'William the Conqueror Bedroom'),
+            Room(2, (300, 100, 200, 100),   'host_room',        'Richard III Bedroom'),
+            # Ground Floor
+            Room(1, (0, 100, 200, 100),     'billiard_room',    'Billiard room'),
+            Room(1, (200, 100, 200, 100),   'library',          'Library'),
+            # Basement
+            Room(0, (0, 100, 200, 100),   'kitchen',          'Kitchen'),
+            Room(0, (200, 100, 200, 100),   'scullery',         'Scullery'),
+            Room(0, (300, 100, 200, 100),   'garage',           'Garage'),
+        ]
+        # Info locked TODO put in the ROOM class?????
+        map_info = dict()
+        map_info['lad_room'] = False
+        map_info['psychic_room'] = False
 
     call change_floor(1) # ground floor
 
@@ -36,6 +52,15 @@ label change_floor(floor):
     # 3 = Attic /..???? 
     $ current_floor = floor
     $ selected_floor = floor 
+
+    return
+
+label unlock_map(room):
+    python:
+        if not map_info[room]:
+            map_info[room] = True
+            renpy.notify("You have written new information on the map.")
+            renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
     return
 
@@ -116,14 +141,6 @@ screen in_game_map_menu(choices):
         left_floor = selected_floor - 1
         right_floor = selected_floor + 1
 
-        # Full Map of the MANOR
-        rooms = [
-            Room('nurse_room',      'Y Room',           2, (0, 100, 200, 100)),
-            Room('lad_room',        'William the Conqueror Bedroom',           2, (200, 100, 200, 100)),
-            Room('billiard_room',   'Billiard room',    1, (0, 100, 200, 100)),
-            Room('library',         'Library',          1, (200, 100, 200, 100))
-        ]
-
         # For each Room, check if the menu has a possible option for the floor
         # If there is one, add it to the map options
         hotspots = []
@@ -132,8 +149,7 @@ screen in_game_map_menu(choices):
                 if room.id == choice.room and room.floor == selected_floor:
                     if not choice.hidden:
                         hotspots.append(Hotspot(choice.text, idx, room.area_points))
-                    # else:
-                        #hotspots.append(Hotspot("No point going there? or maybe hide ?", idx, room.area_points))
+
     frame:
         vbox:
             xalign .5
@@ -198,10 +214,10 @@ init -1 python:
     class Room:
         def __init__(
             self, 
-            id,
-            name, 
             floor, 
             area_points, 
+            id,
+            name
         ):
             self.id = id
             self.name = name
