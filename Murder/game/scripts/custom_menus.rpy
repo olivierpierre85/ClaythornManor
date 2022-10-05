@@ -10,7 +10,7 @@ transform character_choice_right:
 label run_menu(current_menu):
 
     if current_menu.is_valid():
-        # Show choices when activated
+        # Show characters when activated
         if current_menu.image_left:
             $ renpy.show(current_menu.image_left, at_list=[character_choice_left])
         if current_menu.image_right:

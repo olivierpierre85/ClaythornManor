@@ -182,7 +182,6 @@ screen in_game_map_menu(choices):
                     idle "images/ui/map_bw_idle_[selected_floor].png"
                     hover "images/ui/map_bw_hover_[selected_floor].png"
                     
-                    # for hot in hotspots:
                     for hot in hotspots:
                         hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
                             action Return(hot.position)
