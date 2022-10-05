@@ -47,9 +47,6 @@ label lad_day1_evening:
     TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_nurse_room', 55, room = 'psychic_room'),
     TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
     TimedMenuChoice('Go have a look in the library', 'lad_day1_evening_library', 40, room = 'library'),
-    TimedMenuChoice('Go downstairs', 'lad_day1_evening_downstairs', 10, room = 'kitchens'),
-    TimedMenuChoice('Go downstairs', 'lad_day1_evening_downstairs', 10, room = 'scullery'),
-    TimedMenuChoice('Go downstairs', 'lad_day1_evening_downstairs', 10, room = 'garage'),
     TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
   ], is_map = True)
 

@@ -10,6 +10,7 @@ transform character_choice_right:
 label run_menu(current_menu):
 
     if current_menu.is_valid():
+        $ print(current_menu.default_visited)
         # Show characters when activated
         if current_menu.image_left:
             $ renpy.show(current_menu.image_left, at_list=[character_choice_left])
@@ -24,15 +25,15 @@ label run_menu(current_menu):
         if current_menu.image_right:
             $ renpy.hide(current_menu.image_right)
 
-        if current_menu.choices[selected_choice].early_exit:
+        if selected_choice.early_exit:
             $ current_menu.early_exit = True        
         
         # Change current time
         $ time_diff = None
-        if time_left > 0 and current_menu.choices[selected_choice].time_spent:
-            $ time_diff = datetime.combine(date.today(), current_time) + timedelta(minutes=current_menu.choices[selected_choice].time_spent)
+        if time_left > 0 and selected_choice.time_spent:
+            $ time_diff = datetime.combine(date.today(), current_time) + timedelta(minutes=selected_choice.time_spent)
 
-        call expression current_menu.choices[selected_choice].redirect
+        call expression selected_choice.redirect
 
         if time_diff:
             call change_time(time_diff.time().hour, time_diff.time().minute)
@@ -80,10 +81,11 @@ init -1 python:
     
         def __init__(self, choices = [], is_map = False, image_left = None, image_right = None):
             self.choices = choices
-            self.early_exit = False # TODO add in parand and TEST A LOT
             self.is_map = is_map
             self.image_left = image_left
             self.image_right = image_right
+            self.early_exit = False
+            self.default_visited = []
     
         def is_valid(self):
             if len(self.get_visible_choices()) <= 0:
@@ -104,20 +106,31 @@ init -1 python:
 
             # DEBUG MODE
             if test_mode and len(test_choices) > 0:
-                selected_choice = test_choices.pop(0) 
+                selected_choice_i = test_choices.pop(0) 
+                selected_choice = self.choices[selected_choice_i]
                 print("Selected Choice:" + str(selected_choice))
             # NORMAL MODE
             else:
                 if current_menu.is_map:
-                    selected_choice = renpy.call_screen('in_game_map_menu', choices=self.choices) 
-                else:
-                    selected_choice = menu(self.get_visible_choices())
+                    room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
 
-            if not self.choices[selected_choice].keep_alive:
-                self.choices[selected_choice].hidden = True
+                    selected_choice = None
+                    for c in self.choices:
+                        if c.room == room_id:
+                            selected_choice = c
+                    
+                    if not selected_choice:
+                        selected_choice = TimedMenuChoice('FILLER CHOICE', room_id + '_default', 5)
+                        self.default_visited.append(room_id)
+                else:
+                    selected_choice_i = menu(self.get_visible_choices())
+                    selected_choice = self.choices[selected_choice_i]
+
+            if not selected_choice.keep_alive:
+                selected_choice.hidden = True
 
             global time_left
-            time_left -= self.choices[selected_choice].time_spent
+            time_left -= selected_choice.time_spent
 
             return selected_choice
 

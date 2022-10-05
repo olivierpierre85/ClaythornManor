@@ -27,14 +27,14 @@ label init_map:
             # Bedrooms
             Room(2, (0, 100, 200, 100),     'psychic_room',     'George III Bedroom'),
             Room(2, (200, 100, 200, 100),   'lad_room',         'William the Conqueror Bedroom'),
-            Room(2, (300, 100, 200, 100),   'host_room',        'Richard III Bedroom'),
+            Room(2, (400, 100, 200, 100),   'host_room',        'Richard III Bedroom'),
             # Ground Floor
             Room(1, (0, 100, 200, 100),     'billiard_room',    'Billiard room'),
             Room(1, (200, 100, 200, 100),   'library',          'Library'),
             # Basement
             Room(0, (0, 100, 200, 100),   'kitchen',          'Kitchen'),
             Room(0, (200, 100, 200, 100),   'scullery',         'Scullery'),
-            Room(0, (300, 100, 200, 100),   'garage',           'Garage'),
+            Room(0, (400, 100, 200, 100),   'garage',           'Garage'),
         ]
         # Info locked TODO put in the ROOM class?????
         map_info = dict()
@@ -127,7 +127,7 @@ screen map_information:
                 size 30
                 font "gui/font/BurtonScratch-Regular.ttf"
 
-screen in_game_map_menu(choices):
+screen in_game_map_menu(timed_menu):
 
     modal True
 
@@ -137,18 +137,36 @@ screen in_game_map_menu(choices):
     style_prefix "confirm"
 
     python:
+        choices = timed_menu.choices
         # Logic change based on floor
         left_floor = selected_floor - 1
         right_floor = selected_floor + 1
 
-        # For each Room, check if the menu has a possible option for the floor
-        # If there is one, add it to the map options
+        
+        # TODO fix or remove.NOT VISIBLE at the moment, because inactive hotspot are invisible????
+        ALREADY_TRIED_CHOICE = "I already went there." 
+
         hotspots = []
         for room in rooms:
-            for idx, choice in enumerate(choices):
-                if room.id == choice.room and room.floor == selected_floor:
-                    if not choice.hidden:
-                        hotspots.append(Hotspot(choice.text, idx, room.area_points))
+            if room.floor == selected_floor:
+                new_hotspot = None
+                # TODO check if idx still needed ?
+                for idx, choice in enumerate(choices): 
+                    if room.id == choice.room:
+                        if not choice.hidden:
+                            new_hotspot = Hotspot(choice.text, idx, room.area_points, room.id)
+                        else:
+                            new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
+                
+                # When the room is not in the menu, default values applies
+                if not new_hotspot:
+                    if room.id in timed_menu.default_visited:
+                        new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
+                    else:
+                        new_hotspot = Hotspot(room.name, idx, room.area_points, room.id, active = True)
+
+                hotspots.append(new_hotspot)
+                        
 
     frame:
         vbox:
@@ -184,7 +202,10 @@ screen in_game_map_menu(choices):
                     
                     for hot in hotspots:
                         hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
-                            action Return(hot.position)
+                            if hot.active:
+                                action Return(hot.room)
+                            else:
+                                action None
                             tooltip hot.description
 
                     use map_information
@@ -229,7 +250,11 @@ init -1 python:
             description, 
             position,
             area_points, 
+            room,
+            active = True
         ):
             self.description = description
             self.position = position
             self.area_points = area_points
+            self.room = room
+            self.active = active
