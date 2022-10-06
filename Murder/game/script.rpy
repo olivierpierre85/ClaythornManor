@@ -6,16 +6,14 @@ init -100 python:
     from datetime import datetime, time, timedelta, date
     renpy.music.register_channel("clock", "sfx", loop=False)
 
+# TODO move to init var ? Sort it out
 define time_left = 0
 define current_day = "Friday"
-# define current_time = "05:00PM" 
 define current_time = time(17,00,00)
 define hours_angle = 0
 define old_minutes_angle = 0 
 
 define current_year = "1924"
-
-define menus_options = dict()
 
 # The game starts here.
 label start():
@@ -23,7 +21,7 @@ label start():
     # Default Menu screen when press ESC in-game
     $ _game_menu_screen = "manor_map"
 
-    # TODO SOME INIT should be reset at character selection, check which ones
+    call init_variables
 
     call init_characters
 
@@ -42,5 +40,10 @@ label start():
 
     # These display lines of dialogue.
     jump character_selection
+
+    return
+
+label init_variables:
+    $ lad_day1_evening_billiard_room_visited = False
 
     return

@@ -11,6 +11,8 @@ label doctor_generic():
 
       lad "Nice to meet you doctor."
 
+      $ current_character.has_met.add('doctor')
+
   else:
     
     lad "Hello again Doctor."

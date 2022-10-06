@@ -120,6 +120,7 @@ label init_characters:
         
         # 6. The Broken Face
         broken_extra_information = [
+            CharacterInformation(0, "mask", "He wears mask that hides most of hist face. Probably because of an injury during the war."), 
         ]
         broken_details  = CharacterDetails(
             text_id = "broken", 
@@ -127,8 +128,8 @@ label init_characters:
             know_real_name = False,
             real_name = "",
             nickname = "The Broken Face",
-            description_short = "Middle-age Woman",
-            description_long = "Old lady",
+            description_short = "Masked Man",
+            description_long = "A middle age man with a mask on his face.",
             information_list = broken_extra_information
         )
         broken = Character("broken_details.get_name()", image="broken", dynamic=True)

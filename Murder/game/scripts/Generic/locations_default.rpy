@@ -36,7 +36,9 @@ label bedroom_default:
     
     scene hallway
     
-    "I try to knock but nobody answers"
+    "I knock on the door."
+
+    "Nobody answers."
 
     return
 

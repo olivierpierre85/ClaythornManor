@@ -23,7 +23,7 @@ label lad_day1_evening:
   """
   I enter the bedroom. 
   
-  I can't believe it, it's bigger than my apartment.
+  It's bigger than my apartment. And more luxurious than I could have dreamed of.
   """
 
   lad "That will do great, thank you."
@@ -35,18 +35,16 @@ label lad_day1_evening:
   
   After a while I unpack my small luggage.
 
-  Well that didn't take long.
-
-  So what do I do now ?
+  Well that didn't take long. So what do I do now ?
 
   """
 
   $ time_left = 120
 
   $ lad_day1_evening_menu = TimedMenu([
-    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_nurse_room', 55, room = 'psychic_room'),
+    TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_psychic_room', 55, room = 'psychic_room'),
     TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
-    TimedMenuChoice('Go have a look in the library', 'lad_day1_evening_library', 40, room = 'library'),
+    TimedMenuChoice('Library', 'lad_day1_evening_library', 40, room = 'library'),
     TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
   ], is_map = True)
 
@@ -54,11 +52,11 @@ label lad_day1_evening:
 
   call change_time(23,00)
 
-  "You are feeling tired. You decide it's late enough and you go to bed."
+  "I am feeling tired. It's probably best if I go to bed now."
 
   scene bedroom_lad
 
-  "You Notice something on your bed. a letter."
+  "NOW WHAT ??? You Notice something on your bed. a letter."
 
   # TODO play music SCARY
 
@@ -95,6 +93,22 @@ label lad_day1_evening_library:
 
   """
   # TODO add info on BOOK ???
+
+  return
+
+label lad_day1_evening_psychic_room:
+  
+  scene hallway
+
+  "I knock on the door."
+
+  psychic "Yes ? Who is it ?"
+
+  lad "Hi, it's Ted Harring. I thought we could continue our conversation from earlier."
+
+  psychic "Oh Mister Harring. I am afraid I was getting ready to bed. We can talk again tomorrow."
+
+  lad "Of course, I am sorry."
 
   return
 

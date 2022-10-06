@@ -1,4 +1,33 @@
 label debug_choices:
+    call debug_routes
+    
+    menu: 
+        "lad Drinks":
+            $ test_choices = []
+            jump lad_introduction
+
+        "lad Dinner":
+            $ test_choices = lad_dinner_simple
+            jump lad_introduction
+
+        "lad Evening":
+            # $ test_choices = lad_evening_simple
+            $ test_choices = lad_evening_doctor
+            jump lad_introduction
+        
+        "lad Evening - Billiard":
+            $ test_choices = lad_day1_billiard
+            jump lad_introduction
+
+        "lad_day1_arrival":
+            jump lad_day1_arrival
+
+        "lad_day1_evening":
+            jump lad_day1_evening
+
+    return
+
+label debug_routes:
     python:
         test_mode = True
         test_choices = []
@@ -25,41 +54,7 @@ label debug_choices:
             3, # Early leave
         ]
 
-        lad_end_day1_doctor = lad_evening_doctor + [
-            0, # Learn about the doctor Doctor 
-            0,
-            1,
-            3, # Early leave
-            1, # Psychic
-            3, # Early leave
+
+        lad_day1_billiard = lad_evening_doctor + [
+            1, # Billiard Room 
         ]
-    
-    menu: 
-        "jump lad_introduction":
-            jump lad_introduction
-        "lad_day1_evening":
-            jump lad_day1_evening
-        "character_selection":
-            jump character_selection
-
-        "lad Drinks":
-            $ test_choices = []
-            jump lad_introduction
-
-        "lad Dinner":
-            $ test_choices = lad_dinner_simple
-            jump lad_introduction
-
-        "lad Evening":
-            # $ test_choices = lad_evening_simple
-            $ test_choices = lad_evening_doctor
-            jump lad_introduction
-
-        "lad_day1_arrival":
-            jump lad_day1_arrival
-
-        "lad_day1_evening":
-            jump lad_day1_evening
-      
-
-

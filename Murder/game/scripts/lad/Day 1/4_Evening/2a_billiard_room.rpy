@@ -1,144 +1,165 @@
 label lad_day1_evening_billiard_room:
 
-  $ lad_day1_evening_left_bedroom = True
+    $ lad_day1_evening_left_bedroom = True
 
-  # Change menu text
-  $ lad_day1_evening_menu.choices[1].text = "Go back to the billiard room"
+    # Change menu text
+    $ lad_day1_evening_menu.choices[1].text = "Go back to the billiard room"
 
-  scene billiard_room
+    scene billiard_room
 
-  # TODO Hides explanation on re-entry
-  $ first_time = not 'lad_day1_evening_billiard_room_menu' in locals()
-  if first_time: # and not lad_day1_evening_billiard_room_menu.early_exit:
 
-    """
-    You see multiple people in the room.
+    if not lad_day1_evening_billiard_room_visited:
 
-    Amalia Baxter doesn't seem to be there.
+        """
+        Almost everyone I saw at dinner are here.
 
-    But you recognize Doctor Baldwin in conversation with another man.
+        Except for Amalia Baxter and our host.
 
-    The rest of the guests are grouped together and are talking loudly.
+        I recognize Doctor Baldwin sitting on a chair alone.
 
-    There is also a choice of alcohol near the bar.
+        There is also a choice of alcohol near the bar.
 
-    And the butler is silent in a corner.
-    """
+        The rest of the guests are grouped together and are talking loudly.
 
-    $ lad_day1_evening_billiard_room_menu = TimedMenu([
-      TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_billiard_room_doctor', 50),
-      TimedMenuChoice('Approach the large group of people', 'lad_day1_evening_billiard_room_group', 20),
-      TimedMenuChoice('Ask the butler about Amelia', 'lad_day1_evening_billiard_room_butler', 20),
-      TimedMenuChoice('Go to the bar to have a drink', 'lad_day1_evening_billiard_room_bar_1', 20),
-      TimedMenuChoice('Have another drink', 'lad_day1_evening_billiard_room_bar_2', 20, condition = 'lad_day1_drinks == 1'),
-      TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 20, condition = 'lad_day1_drinks == 2'),
-      TimedMenuChoice('Leave the room', 'lad_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
-    ])
+        And the butler is silent in a corner.
+        """
 
-  else:
-    # Reset menu
-    $ lad_day1_evening_billiard_room_menu.early_exit = False
+        $ lad_day1_evening_billiard_room_menu = TimedMenu([
+            TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_billiard_room_doctor', 50),
+            TimedMenuChoice('Approach the large group of people', 'lad_day1_evening_billiard_room_group', 20),
+            TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
+            TimedMenuChoice('Go to the bar to have a drink', 'lad_day1_evening_billiard_room_bar_1', 20),
+            TimedMenuChoice('Have another drink', 'lad_day1_evening_billiard_room_bar_2', 20, condition = 'lad_day1_drinks == 1'),
+            TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 20, condition = 'lad_day1_drinks == 2'),
+            TimedMenuChoice('Leave the room', 'lad_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
+        ])
 
-    "You are back in the Billiard Room"
+        $ lad_day1_evening_billiard_room_visited = True
 
-  call run_menu(lad_day1_evening_billiard_room_menu) # go back to return_menu when over
+    else:
+        # Reset menu
+        $ lad_day1_evening_billiard_room_menu.early_exit = False
 
-  return
+        "You are back in the Billiard Room"
+
+    call run_menu(lad_day1_evening_billiard_room_menu) # go back to return_menu when over
+
+    return
 
 
 label lad_day1_evening_billiard_room_bar_1:
 
-  "You approach the bar"
+    "I approach the bar."
 
-  "The drunk man who was asleep before is near the bar, barely holding up"
+    "The man I saw in the tea room is also there."
 
-  lad "Hello sir."
+    lad "Hello sir."
 
-  "The mans stares at you but makes no sound"
+    drunk "..."
 
-  show broken at truecenter
+    "The man stares at me but makes no sound."
 
-  broken "Don't mind him, he seems to be totally out of it."
+    broken "Don't mind him, he seems to be totally out of it."
 
-  "You are taken aback by the masked man. You haven't noticed he was next to you."
+    """
+    I am taken aback by the man who approached me.
 
-  lad "Yeah, he was already asleep when I arrived. It's impressive he managed to make it through dinner."
+    He wears one of those masks I've seen on wounded soldiers from the war.
 
-  broken """
-    He barely did. I was seating next to him at dinner and it was impossible to have him say anything coherent.
+    There were so badly injured that they have to hide their face.
 
-    He could eat it's food though. You could tell he is used to function like this. Poor fellow.
+    Poor guy.
 
-    Anyway, I am Thomas Moody.
     """
 
-  $ broken_name = "Thomas Moody"
+    $ doctor_details.add_knowledge('mask') 
 
-  lad "Ted Harring, how do you do."
+    broken """
+        He was already asleep when I arrived. It's impressive that he managed to still be here.
 
-  broken """
-    Nice to meet you mister Harring. I guess you came here for drink.
+        I was seating next to him at dinner and it was impossible to have him say anything coherent.
 
-    The choice of drinks is rather small I am afraid. There's only Sherry or Port.
+        He could eat it's food though. You could tell he is used to function like this. Poor fellow.
 
-    But luckily, I've come prepared
+        Anyway, I am Thomas Moody.
+        """
+
+    $ current_character.has_met.add('broken')
+    $ broken_details.introduce()
+
+    lad "Ted Harring, how do you do."
+
+    broken """
+    Nice to meet you mister Harring. I guess you came here for a drink.
+
+    The choice is rather restricted I am afraid. There's only Sherry or Port.
+
+    But luckily, I've come prepared.
     """
 
-  "Before you could say anything. He reaches down is coat pocket and get a flask, then start pouring you a glass"
+    """
+    Before I could say anything. He reaches down his coat pocket and took a flask out. 
+    
+    Then he starts pouring me a glass.
+    
+    """
 
-  broken "You'll probably enjoy this more."
+    broken "You'll probably enjoy this more."
 
-  lad "Well ..., Thanks. Cheers"
+    "Ok, I can't really say no to that."
 
-  $ lad_day1_drinks = lad_day1_drinks + 1
+    lad "Well ..., Thanks. Cheers."
 
-  broken "Cheers Mister Harring. Now if you don't mind, I'll see what this group is talking about."
+    #TODO if needed for the story about drunk and puking ADD here that the drunk asks for a drink
 
-  "Thomas Moody joins the group of people talking."
+    $ lad_day1_drinks = lad_day1_drinks + 1
 
-  hide broken
+    broken "Cheers Mister Harring. Now if you don't mind, I'll see what this group is talking about."
 
-  return
+    "He joins the group of people talking."
+
+    return
 
 label lad_day1_evening_billiard_room_bar_2:
-  "Another drink"
-  $ lad_day1_drinks = lad_day1_drinks + 1
-  return
+    "Another drink"
+    $ lad_day1_drinks = lad_day1_drinks + 1
+    return
 
 label lad_day1_evening_billiard_room_bar_3:
-  "One last drink"
-  $ lad_day1_drinks = lad_day1_drinks + 1
-  return
+    "One last drink"
+    $ lad_day1_drinks = lad_day1_drinks + 1
+    return
 
 
 label lad_day1_evening_billiard_room_doctor:
   
-  call doctor_generic
+    call doctor_generic
 
-  return
+    return
 
 label lad_day1_evening_billiard_room_group:
-  "choice 3 very long"
-  return
+    "choice 3 very long"
+    return
 
 label lad_day1_evening_billiard_room_butler:
-  show butler
-  "Where is Miss Baxter ? "
-  butler "it's a bit personal."
+    
+    lad "Where is Miss Baxter ? "
 
-  # TODO develop choices to convince Butler
+    butler "it's a bit personal."
 
-  # TODO unlock nurse room position on the map
-  butler "Fine. You'll find miss Baxter in the Sun room."
+    # TODO develop choices to convince Butler
 
-  hide butler
-  
-  return
+    # TODO unlock nurse room position on the map
+    butler "Fine. You'll find miss Baxter in the Sun room."
+
+    hide butler
+    
+    return
 
 label lad_day1_evening_billiard_room_cancel:
-  "You don't feel like staying in this room and leave"
-  # TODO Change name of options ??
-  # $ menus_options['lad_day1_evening'][1]['text'] = 'Go back to the billiard room'
-  scene hallway
+    
+    "You don't feel like staying in this room and leave"
 
-  return
+    scene hallway
+
+    return
