@@ -45,8 +45,6 @@ label init_characters:
             )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 
-        lad_day1_drinks = 0
-
         # 2. The Psychic
         psychic_extra_information = [
             CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently."), 
@@ -120,13 +118,13 @@ label init_characters:
         
         # 6. The Broken Face
         broken_extra_information = [
-            CharacterInformation(0, "mask", "He wears mask that hides most of hist face. Probably because of an injury during the war."), 
+            CharacterInformation(0, "mask", "A broken face or 'Gueule Cassée'. He wears mask that hides most of hist face because of an injury during the war."), 
         ]
         broken_details  = CharacterDetails(
             text_id = "broken", 
             locked = True,
             know_real_name = False,
-            real_name = "",
+            real_name = "Thomas Moody",
             nickname = "The Broken Face",
             description_short = "Masked Man",
             description_long = "A middle age man with a mask on his face.",
@@ -141,10 +139,10 @@ label init_characters:
             text_id = "captain", 
             locked = True,
             know_real_name = False,
-            real_name = "",
+            real_name = "TODO",
             nickname = "The captain Face",
-            description_short = "",
-            description_long = "",
+            description_short = "Older Indian man",
+            description_long = "TODO",
             information_list = captain_extra_information
         )
         captain = Character("captain_details.get_name()", image="captain", dynamic=True)

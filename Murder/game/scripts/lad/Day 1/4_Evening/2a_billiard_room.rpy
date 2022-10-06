@@ -27,7 +27,7 @@ label lad_day1_evening_billiard_room:
         $ lad_day1_evening_billiard_room_menu = TimedMenu([
             TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_billiard_room_doctor', 50),
             TimedMenuChoice('Approach the large group of people', 'lad_day1_evening_billiard_room_group', 20),
-            TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
+            # TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day1_evening_billiard_room_bar_1', 20),
             TimedMenuChoice('Have another drink', 'lad_day1_evening_billiard_room_bar_2', 20, condition = 'lad_day1_drinks == 1'),
             TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 20, condition = 'lad_day1_drinks == 2'),
@@ -62,27 +62,27 @@ label lad_day1_evening_billiard_room_bar_1:
     broken "Don't mind him, he seems to be totally out of it."
 
     """
-    I am taken aback by the man who approached me.
+    I am startled by a man who approached me.
 
     He wears one of those masks I've seen on wounded soldiers from the war.
 
-    There were so badly injured that they have to hide their face.
+    There were so badly injured that they have to hide their faces.
 
-    Poor guy.
+    He pretended not to notice my surprise and kept on talking.
 
     """
 
     $ doctor_details.add_knowledge('mask') 
 
     broken """
-        He was already asleep when I arrived. It's impressive that he managed to still be here.
+    He was already asleep when I arrived. It's impressive that he managed to still be here.
 
-        I was seating next to him at dinner and it was impossible to have him say anything coherent.
+    I was seating next to him at dinner and it was impossible to have him say anything coherent.
 
-        He could eat it's food though. You could tell he is used to function like this. Poor fellow.
+    He could eat it's food though. You could tell he is used to function like this. Poor fellow.
 
-        Anyway, I am Thomas Moody.
-        """
+    Anyway, I am Thomas Moody.
+    """
 
     $ current_character.has_met.add('broken')
     $ broken_details.introduce()
@@ -106,17 +106,39 @@ label lad_day1_evening_billiard_room_bar_1:
 
     broken "You'll probably enjoy this more."
 
-    "Ok, I can't really say no to that."
+    "I can't really say no to that."
 
     lad "Well ..., Thanks. Cheers."
 
     #TODO if needed for the story about drunk and puking ADD here that the drunk asks for a drink
-
+    $ lad_day1_poisoned = True
     $ lad_day1_drinks = lad_day1_drinks + 1
 
     broken "Cheers Mister Harring. Now if you don't mind, I'll see what this group is talking about."
 
     "He joins the group of people talking."
+
+    return
+
+label lad_day1_evening_billiard_room_group:
+    """
+    I walk to the main group in the room.
+
+    They seem to have an animated discussion.
+
+    The one talking is a older indian man.
+    """
+
+    # TODO extract speech to put in captain generic file ? multiple parts ?
+    captain """
+    That's when I knew I had to leave the army.
+
+    The last war was the one too many.
+
+    TODO complete with relavent information when needed.
+
+    add extra character to join the conversation ?
+    """
 
     return
 
@@ -137,24 +159,18 @@ label lad_day1_evening_billiard_room_doctor:
 
     return
 
-label lad_day1_evening_billiard_room_group:
-    "choice 3 very long"
-    return
-
-label lad_day1_evening_billiard_room_butler:
+# label lad_day1_evening_billiard_room_butler:
     
-    lad "Where is Miss Baxter ? "
+#     lad "Where is Miss Baxter ? "
 
-    butler "it's a bit personal."
+#     butler "it's a bit personal."
 
-    # TODO develop choices to convince Butler
+#     # TODO develop choices to convince Butler
 
-    # TODO unlock nurse room position on the map
-    butler "Fine. You'll find miss Baxter in the Sun room."
-
-    hide butler
+#     # TODO unlock nurse room position on the map
+#     butler "Fine. You'll find miss Baxter in the Sun room."
     
-    return
+#     return
 
 label lad_day1_evening_billiard_room_cancel:
     

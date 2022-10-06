@@ -44,6 +44,9 @@ label start():
     return
 
 label init_variables:
-    $ lad_day1_evening_billiard_room_visited = False
+    python:
+        lad_day1_evening_billiard_room_visited = False
+        lad_day1_drinks = 0
+        lad_day1_poisoned
 
     return

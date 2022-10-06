@@ -37,7 +37,8 @@ label psychic_generic:
             TimedMenuChoice('Talk about the weather', 'psychic_generic_weather', 5),
             TimedMenuChoice('Ask her about herself', 'psychic_generic_background', 15),
             TimedMenuChoice('Talk about the manor', 'psychic_generic_manor', 10),
-            TimedMenuChoice('Ask her her age', 'psychic_generic_age', 5),
+            TimedMenuChoice('How old are you ?', 'psychic_generic_age', 5),
+            TimedMenuChoice('What room are you in ?', 'psychic_generic_room', 5),
             TimedMenuChoice('Why were you invited here ?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
             TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "psychic")
@@ -59,6 +60,18 @@ label psychic_generic_weather:
     """
 
     return
+
+label psychic_generic_room:
+    psychic """
+    That's a strange question.
+
+    But if you must know, my room is 'the George III'
+    """
+
+    $ unlock_map('psychic_room')
+
+    return
+
 
 label psychic_generic_age:
 

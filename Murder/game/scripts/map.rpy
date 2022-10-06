@@ -22,7 +22,7 @@ label init_map:
 
     # TODO replace by a nice loop or class
     python:
-        # Full Map of the MANOR
+        # Full Map of the MANOR TODO no need to init each time
         rooms = [
             # Bedrooms
             Room(2, (0, 100, 200, 100),     'psychic_room',     'George III Bedroom'),
