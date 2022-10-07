@@ -68,7 +68,7 @@ label psychic_generic_room:
     But if you must know, my room is 'the George III'
     """
 
-    $ unlock_map('psychic_room')
+    call unlock_map('psychic_room')
 
     return
 

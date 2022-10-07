@@ -1,0 +1,23 @@
+
+NEW GAME
+-----------
+0, # Talk To the man
+1, # Talk To the woman
+3, # How old are you ?
+1, # Ask her about herself
+0, # Talk to Daniel Baldwin
+2, # Why were you invited here ?
+3, # Talk about the manor
+1, # Ask him about himself
+4, # Ask him his age
+0, # Talk about the weather
+3, # Go to sleep
+1, # Talk To the woman
+4, # What room are you in ?
+2, # Talk about the manor
+5, # Why were you invited here ?
+0, # Talk to Daniel Baldwin
+5, # You don't have anymore questions for him
+1, # Talk to Amalia Baxter
+0, # Talk about the weather
+6, # You don't have anymore questions for her

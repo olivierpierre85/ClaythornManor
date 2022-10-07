@@ -45,8 +45,14 @@ label start():
 
 label init_variables:
     python:
+        # Technical Variables
+        f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")
+        f.write("NEW GAME\n-----------\n")
+        f.close()
+
+        # Story Variables
         lad_day1_evening_billiard_room_visited = False
         lad_day1_drinks = 0
-        lad_day1_poisoned
+        lad_day1_poisoned = False
 
     return

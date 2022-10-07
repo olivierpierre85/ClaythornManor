@@ -115,16 +115,23 @@ init -1 python:
                     room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
 
                     selected_choice = None
-                    for c in self.choices:
+                    for idx, c in enumerate(self.choices):
                         if c.room == room_id:
                             selected_choice = c
+                            selected_choice_i = idx
                     
                     if not selected_choice:
                         selected_choice = TimedMenuChoice('FILLER CHOICE', room_id + '_default', 5)
                         self.default_visited.append(room_id)
+                        selected_choice_i = -1
                 else:
                     selected_choice_i = menu(self.get_visible_choices())
                     selected_choice = self.choices[selected_choice_i]
+
+            # RECORD history to save DEBUG TODO ReMOVE in PROD
+            f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")
+            f.write(str(selected_choice_i) + ',' + ' # ' + selected_choice.text + '\n')
+            f.close()
 
             if not selected_choice.keep_alive:
                 selected_choice.hidden = True
