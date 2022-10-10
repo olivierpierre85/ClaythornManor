@@ -8,3 +8,4 @@ Murder/game/cache/*
 Murder/log.txt
 Murder/traceback.txt
 Murder/errors.txt
+Murder/choices_history.txt

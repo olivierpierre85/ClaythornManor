@@ -4,7 +4,7 @@
 # Either the lad as drank sherry after dinner and die, or he hasn't and is still alive
 label lad_ending_day1_poisoned:
 
-    # Add sad sound
+    call death_screen_transition
 
     """
 
@@ -18,7 +18,7 @@ label lad_ending_day1_poisoned:
 
     But in life, people often die without knowing why. 
 
-    Even thought we always believe being the lad in our story, sometimes we are just pawns.
+    Even thought we always believe being the hero in our story, sometimes we are just pawns.
 
     Don't worry, you'll have more chances at changing the fate of this character.
 
@@ -37,6 +37,8 @@ label lad_ending_day1_poisoned:
     Because otherwise, you'll never discover to whole Truth of what happened this week-end, at Claythorne Castle.
 
     """
+
+    hide screen centered_text
 
     # Unlock captain
     $ char_captain = True

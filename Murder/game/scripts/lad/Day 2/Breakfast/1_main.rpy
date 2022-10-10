@@ -1,6 +1,8 @@
 label lad_day2_breakfast:
 
-  scene bedroom_lad
+  call black_screen_transition("The Lad - Day 2")
+
+  scene bedroom_lad with irisout
 
   "You slept through the night."
 

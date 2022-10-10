@@ -2,8 +2,6 @@ label lad_day1_drinks:
   
     scene tea_room
 
-    play music upbeat_01
-
     """
     I enter the room where I see a few people already in conversation.
     
@@ -15,8 +13,8 @@ label lad_day1_drinks:
     
     $ time_left = 30
     $ current_menu = TimedMenu([
-        TimedMenuChoice('Talk To the man', 'lad_day1_drinks_drunk', 5),
-        TimedMenuChoice('Talk To the woman', 'lad_day1_drinks_psychic', 5)
+        TimedMenuChoice('Talk to the man', 'lad_day1_drinks_drunk', 5),
+        TimedMenuChoice('Talk to the woman', 'lad_day1_drinks_psychic', 5)
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
     $ current_menu = None

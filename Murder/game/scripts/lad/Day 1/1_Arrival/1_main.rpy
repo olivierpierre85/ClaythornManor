@@ -4,7 +4,6 @@ label lad_day1_arrival:
     play sound thunder loop
     scene manor_exterior
 
-
     """
     Finally an impressive mansion appears in the horizon.
 
@@ -31,9 +30,11 @@ label lad_day1_arrival:
     stop sound
     
     call black_screen_transition("The Lad - Day 1")
-    scene great_hall with wipedown
+    scene great_hall with irisout
     
     call change_time(18,00)
+
+    play music upbeat_01 fadein 10.0
 
     butler """
 
