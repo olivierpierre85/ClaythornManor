@@ -52,7 +52,7 @@ label doctor_generic_background:
 
   It's a charity hospital for persons in need.
 
-  Before that I worked a bit of everywhere.
+  Before that I worked a bit everywhere.
 
   I also served in the war twice. 
 

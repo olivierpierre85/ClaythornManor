@@ -6,6 +6,9 @@ label debug_choices:
             $ test_choices = debug_path_01
             jump lad_introduction
 
+        "lad_introduction":
+            jump lad_introduction
+
         "lad_day1_arrival":
             jump lad_day1_arrival
 

@@ -4,6 +4,7 @@ label lad_day1_arrival:
     play sound thunder loop
     scene manor_exterior
 
+
     """
     Finally an impressive mansion appears in the horizon.
 
@@ -28,8 +29,9 @@ label lad_day1_arrival:
     """
 
     stop sound
-
-    scene great_hall
+    
+    call black_screen_transition("The Lad - Day 1")
+    scene great_hall with wipedown
     
     call change_time(18,00)
 

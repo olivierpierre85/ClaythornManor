@@ -2,6 +2,8 @@
 label downstairs_default:
     scene basement_stairs
 
+    "I was on my way to the basement, when the butler stopped me."
+
     butler "Excuse me sir, but downstairs is for staff only."
 
     # TODO GET CURRENT TALKER ..... for default text? or personalized text ?
@@ -28,7 +30,7 @@ label tea_room_default:
     
     "It's empty"
 
-    "No need to stay here"
+    "No need to stay here."
 
     return
 

@@ -42,6 +42,18 @@ transform rotate_minutes( angle = 0 ):
     yoffset 31 
     linear 3.0 rotate angle 
 
+# BLACK transition
+label black_screen_transition(display_text):
+    scene black_background with wipedown
+    show screen centered_text(display_text)
+    play sound gong
+    pause 2.0
+    hide screen centered_text
+    return 
+
+screen centered_text(display_text):
+    text display_text xalign 0.5 yalign 0.5
+
 screen in_game_menu_btn:
 
     modal False
