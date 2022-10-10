@@ -328,7 +328,7 @@ screen character_list(is_selection = False):
                         else:
                             action ShowMenu("character_details", char)
                     imagebutton:
-                        idle "images/characters/" + char.text_id +".png"
+                        idle "images/characters/side " + char.text_id +".png"
                         if is_selection:
                             action Return(char.text_id)
                         else:
@@ -358,7 +358,7 @@ screen character_details(selected_char):
                     line_spacing 10
                     color gui.accent_color
                     # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
-                add "images/characters/" + selected_char.text_id +".png"
+                add "images/characters/side " + selected_char.text_id +".png"
             vbox:
                 xoffset 40 
                 textbutton _("Return"): 
