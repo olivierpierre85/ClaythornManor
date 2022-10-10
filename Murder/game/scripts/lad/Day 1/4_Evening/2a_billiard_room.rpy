@@ -150,6 +150,8 @@ label lad_day1_evening_billiard_room_bar_2:
 label lad_day1_evening_billiard_room_bar_3:
     "One last drink"
     $ lad_day1_drinks = lad_day1_drinks + 1
+    # TODO add blur effect if drunk, puke noise... Or just black out 
+
     return
 
 
@@ -158,19 +160,6 @@ label lad_day1_evening_billiard_room_doctor:
     call doctor_generic
 
     return
-
-# label lad_day1_evening_billiard_room_butler:
-    
-#     lad "Where is Miss Baxter ? "
-
-#     butler "it's a bit personal."
-
-#     # TODO develop choices to convince Butler
-
-#     # TODO unlock nurse room position on the map
-#     butler "Fine. You'll find miss Baxter in the Sun room."
-    
-#     return
 
 label lad_day1_evening_billiard_room_cancel:
     

@@ -1,56 +1,56 @@
 label lad_day1_evening:
 
-    # call change_time(21,00)
+    call change_time(21,00)
 
-    # scene hallway
+    scene hallway
 
-    # "He takes me through the grand staircase, on to the first floor."
+    "He takes me through the grand staircase, on to the first floor."
 
-    # call change_floor(2)
+    call change_floor(2)
 
-    # footman """
-    # There you go sir.
+    footman """
+    There you go sir.
 
-    # You have the 'William The Conqueror' room.
+    You have the 'William The Conqueror' room.
 
-    # I hope it's to your liking.
-    # """
+    I hope it's to your liking.
+    """
 
-    # call unlock_map('lad_room')
+    call unlock_map('lad_room')
 
-    # scene bedroom_lad
+    scene bedroom_lad
 
-    # """
-    # I enter the bedroom. 
+    """
+    I enter the bedroom. 
     
-    # It's bigger than my apartment. And more luxurious than I could have dreamed of.
-    # """
+    It's bigger than my apartment. And more luxurious than I could have dreamed of.
+    """
 
-    # lad "That will do great, thank you."
+    lad "That will do great, thank you."
 
-    # """
-    # The footman exits the room.
+    """
+    The footman exits the room.
 
-    # I look around me in disbelief.
+    I look around me in disbelief.
     
-    # After a while I unpack my small luggage.
+    After a while I unpack my small luggage.
 
-    # Well that didn't take long. So what do I do now ?
+    Well that didn't take long. So what do I do now ?
 
-    # """
+    """
 
-    # $ time_left = 120
+    $ time_left = 120
 
-    # $ lad_day1_evening_menu = TimedMenu([
-    #     TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_psychic_room', 55, room = 'psychic_room'),
-    #     TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
-    #     TimedMenuChoice('Library', 'lad_day1_evening_library', 40, room = 'library'),
-    #     TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
-    # ], is_map = True)
+    $ lad_day1_evening_menu = TimedMenu([
+        TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_psychic_room', 55, room = 'psychic_room'),
+        TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
+        TimedMenuChoice('Library', 'lad_day1_evening_library', 40, room = 'library'),
+        TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
+    ], is_map = True)
 
-    # call run_menu(lad_day1_evening_menu)
+    call run_menu(lad_day1_evening_menu)
 
-    # call change_time(23,00)
+    call change_time(23,00)
 
     "I am feeling tired. It's probably best if I go to bed now."
 

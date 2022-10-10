@@ -27,13 +27,14 @@ label init_map:
             # Bedrooms
             Room(2, (0, 100, 200, 100),     'psychic_room',     'George III Bedroom'),
             Room(2, (200, 100, 200, 100),   'lad_room',         'William the Conqueror Bedroom'),
-            Room(2, (400, 100, 200, 100),   'host_room',        'Richard III Bedroom'),
+            Room(2, (400, 100, 200, 100),   'host_room',        'Henry IV Bedroom'),
+            Room(2, (600, 100, 200, 100),   'broken_room',      'Richard III Bedroom'),
             # Ground Floor
             Room(1, (0, 100, 200, 100),     'billiard_room',    'Billiard room'),
             Room(1, (200, 100, 200, 100),   'library',          'Library'),
             Room(1, (400, 100, 200, 100),   'tea_room',         'Tea room'),
             # Basement
-            Room(0, (0, 100, 200, 100),     'kitchen',            'Kitchen'),
+            Room(0, (0, 100, 200, 100),     'kitchen',           'Kitchen'),
             Room(0, (200, 100, 200, 100),   'scullery',         ' Scullery'),
             Room(0, (400, 100, 200, 100),   'garage',           'Garage'),
         ]

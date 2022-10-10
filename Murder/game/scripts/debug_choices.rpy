@@ -15,6 +15,10 @@ label debug_choices:
         "lad_day1_evening":
             jump lad_day1_evening
 
+        "lad_day2_breakfast":
+            jump lad_day2_breakfast
+            
+
     return
 
 label debug_routes:
@@ -35,34 +39,3 @@ label debug_routes:
             0,# Talk about the weather
             3,# Go to sleep
         ]
-
-        # debug_path = [
-
-        # ]
-
-        # lad_dinner_simple = [
-        #     0, # Talk to the man => not needed?
-        #     1, # Talk to the woman
-        #     5, # Learn nothing about the psychic
-        # ]
-
-        # lad_evening_simple = lad_dinner_simple + [
-        #     0, # Doctor
-        #     3, # Early leave
-        #     1, # Psychic
-        #     3, # Early leave
-        # ]
-
-        # lad_evening_doctor = lad_dinner_simple + [
-        #     0, # Learn about the doctor Doctor 
-        #     0,
-        #     1,
-        #     3, # Early leave
-        #     1, # Psychic
-        #     3, # Early leave
-        # ]
-
-
-        # lad_day1_billiard = lad_evening_doctor + [
-        #     1, # Billiard Room 
-        # ]

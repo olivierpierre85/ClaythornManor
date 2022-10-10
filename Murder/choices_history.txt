@@ -21,3 +21,19 @@ NEW GAME
 1, # Talk to Amalia Baxter
 0, # Talk about the weather
 6, # You don't have anymore questions for her
+1, # Stay there and finish breakfast
+6, # You don't have anymore questions for her
+1, # Stay there and finish breakfast
+6, # You don't have anymore questions for her
+1, # Stay there and finish breakfast
+6, # You don't have anymore questions for her
+0, # Follow them
+1, # Stay there and finish breakfast
+6, # You don't have anymore questions for her
+1, # Stay there and finish breakfast
+6, # You don't have anymore questions for her
+6, # You don't have anymore questions for her
+1, # Stay there and finish breakfast
+3, # How old are you ?
+6, # You don't have anymore questions for her
+0, # Follow them
