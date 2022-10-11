@@ -6,13 +6,12 @@ label lad_day2_breakfast:
 
     call change_time(9,00)
 
-    """"
+    """
     I slept through the night. 
     
-    The storm from yesterday has subsided and the weather is clearer now.
+    The storm from yesterday has passed and the weather is clearer now.
 
     """
-
 
 
     if (lad_day1_drinks > 2):
@@ -107,14 +106,15 @@ label lad_day2_breakfast:
     Everything is happening fast. What should I do ?
     """
 
-    $ time_left = 30
-
+    
     $ lad_day1_evening_menu = TimedMenu([
-        TimedMenuChoice('Follow them', 'lad_day2_breakfast_follow', 30, condition = 'lad_day2_breakfast_eat == False'),
-        TimedMenuChoice('Stay there and finish breakfast', 'lad_day2_breakfast_eat', condition = 'lad_day2_breakfast_follow == False')
+        TimedMenuChoice('Follow them', 'lad_day2_breakfast_follow', 30, early_exit = True ),
+        TimedMenuChoice('Stay there and finish breakfast', 'lad_day2_breakfast_eat', early_exit = True)
     ])
-
+    $ time_left = 30
     call run_menu(lad_day1_evening_menu)
+
+    call change_time(9,30)
 
     if lad_day2_breakfast_follow:
 
@@ -123,7 +123,6 @@ label lad_day2_breakfast:
 
         She has regained her composure when she sees the doctor.
         """
-
 
     else:
 
@@ -184,24 +183,31 @@ label lad_day2_breakfast:
     """
 
     doctor """
-    I can't say anything definitive for now. I need to call the town to ask for an ambulance.
+    I can't say anything definitive for now. We need to call the town to ask for an ambulance.
     """
 
     # TODO quid lines ? broken ? or the host pretends everything is fine so everyone stays here ?
     host """
     Yes of course.
 
-    Don't worry, I'll take care of it myself.
-
+    My butler will do what's necessary.
     """
 
-    jump lad_day2_luncheon
+    doctor """
+    Very well.
+    """
+
+    """
+    We then keep on eating in a sad silence.
+
+    Nobody dares to speak much.
+    """
+
+    jump lad_day2_morning
 
 
 
 label lad_day2_breakfast_eat:
-
-    $ lad_day2_breakfast_eat = True
 
     psychic -angry "I wonder what this is about."
 

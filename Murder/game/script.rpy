@@ -46,7 +46,7 @@ label start():
 label init_variables:
     python:
         # Technical Variables
-        test_mode = True
+        test_mode = False
 
         if test_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")
@@ -59,6 +59,5 @@ label init_variables:
         lad_day1_poisoned = False
 
         lad_day2_breakfast_follow = False
-        lad_day2_breakfast_eat = False
 
     return

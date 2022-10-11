@@ -17,7 +17,6 @@ label lad_day1_drinks:
         TimedMenuChoice('Talk to the woman', 'lad_day1_drinks_psychic', 5)
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
-    $ current_menu = None
 
     "Suddenly, the butler comes into the room."
 
