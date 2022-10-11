@@ -3,34 +3,35 @@
 #                   - The lad
 
 # ?TODO add extra choices possibilities?
-label psychic_generic:
+label psychic_generic(skip_intro = False):
 
-    if 'psychic' not in current_character.has_met:
+    if not skip_intro:
+        if 'psychic' not in current_character.has_met:
 
-        if current_character.text_id == "lad":
+            if current_character.text_id == "lad":
 
-            lad "Hi miss ..."
+                lad "Hi miss ..."
 
-            psychic "Miss Baxter, Amalia Baxter."
+                psychic "Miss Baxter, Amalia Baxter."
 
-            $ psychic_details.introduce()
+                $ psychic_details.introduce()
 
-            lad "Nice to meet you miss Baxter. I am Ted Haring."
+                lad "Nice to meet you miss Baxter. I am Ted Haring."
 
-            psychic "Nice to meet you mister Haring."
-        
-        # elif current_character.text_id == "TODO": # Maybe need a default options ? with a current char and current_char_details
+                psychic "Nice to meet you mister Haring."
+            
+            # elif current_character.text_id == "TODO": # Maybe need a default options ? with a current char and current_char_details
 
-        $ current_character.has_met.add('psychic')
-        
-    else:
-        if current_character.text_id == "lad":
+            $ current_character.has_met.add('psychic')
+            
+        else:
+            if current_character.text_id == "lad":
 
-            lad "Hi again Miss Baxter."
+                lad "Hi again Miss Baxter."
 
-            psychic "Oh Mister Harring. I am glad we can continue our conversation."
+                psychic "Oh Mister Harring. I am glad we can continue our conversation."
 
-        # elif current_character.text_id == "# Maybe need a default options ? with a current char and current_char_details
+            # elif current_character.text_id == "# Maybe need a default options ? with a current char and current_char_details
 
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([

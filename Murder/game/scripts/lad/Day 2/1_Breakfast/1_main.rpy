@@ -6,12 +6,19 @@ label lad_day2_breakfast:
 
     call change_time(9,00)
 
-    "You slept through the night."
+    """"
+    I slept through the night. 
+    
+    The storm from yesterday has subsided and the weather is clearer now.
+
+    """
+
+
 
     if (lad_day1_drinks > 2):
-        "You have a bad hangover. But you'll power through."
+        "Hee, I have a bad hangover this morning. Why did I drink that much ?"
     
-    "After getting ready, you leave your room to have breakfast."
+    "After getting ready, I leave my room to have breakfast."
 
     scene dining_hall
 
@@ -77,6 +84,8 @@ label lad_day2_breakfast:
     I can tell that is not good news.
 
     She looks shocked and worried. Then stands up and walks in my direction.
+
+    She stops in front a the doctor.
     """
 
     host """
@@ -109,11 +118,82 @@ label lad_day2_breakfast:
 
     if lad_day2_breakfast_follow:
 
-        "As we entered the dining room again. The host explains briefly what has happened"
+        """
+        As we entered the dining room again, the host just finished explaining the situation.
+
+        She has regained her composure when she sees the doctor.
+        """
+
 
     else:
 
-        "TODO Full sumary of what Happened in FOLLOW O"
+        """
+        Suddenly, Lady Claythorn and the butler are back in the room.
+        """
+
+        captain "Lady Claythorn, what is happening ? "
+
+        """
+        The lady is visibly distressed.
+        """
+
+        host """
+        I am sorry to announce such horrible news everyone.
+
+        But it appears Mister Moody passed away in his sleep tonight.
+        """
+
+        play music scary_01
+
+        """
+        The room became instantly silent.
+        """
+
+        captain """
+        Do we know what has happened ?
+        """
+
+        host """
+        Doctor baldwin is examining him right now.
+
+        He will probably tell us more later.
+        """
+
+        """
+        She then sat down to her chair.
+
+        Everybody looks distressed.
+
+        I turn over to Amalia Baxter.
+        """
+
+        lad """
+        How terrible.
+        """
+
+        psychic """
+        Yes, such sad news.
+        """
+
+        """
+        We keep eating slowing in silent for a moment when the doctor enters the room.
+        """
+
+    host -surprised """
+    Doctor Baldwin. Can you tell us more about what happened ?
+    """
+
+    doctor """
+    I can't say anything definitive for now. I need to call the town to ask for an ambulance.
+    """
+
+    # TODO quid lines ? broken ? or the host pretends everything is fine so everyone stays here ?
+    host """
+    Yes of course.
+
+    Don't worry, I'll take care of it myself.
+
+    """
 
     jump lad_day2_luncheon
 
@@ -127,7 +207,7 @@ label lad_day2_breakfast_eat:
 
     lad "Me too, and I have a bad feeling about it."
 
-    call psychic_generic
+    call psychic_generic(skip_intro = True)
     
     return
 

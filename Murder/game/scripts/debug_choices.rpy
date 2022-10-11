@@ -2,15 +2,15 @@ label debug_choices:
     call debug_routes
     
     menu: 
-        "debug_path_01":
-            $ test_choices = debug_path_01
+        "debug_lad_first_death":
+            $ test_choices = debug_lad_first_death
             jump lad_introduction
 
         "lad_introduction":
             jump lad_introduction
 
-        "lad_day1_arrival":
-            jump lad_day1_arrival
+        "lad_day2_breakfast_follow":
+            jump lad_day2_breakfast_follow
 
         "lad_day1_evening":
             jump lad_day1_evening
@@ -37,5 +37,18 @@ label debug_routes:
             1,# Ask him about himself
             4,# Ask him his age
             0,# Talk about the weather
-            3,# Go to sleep
+        ]
+
+        debug_lad_first_death = [
+            1, # Talk to the woman
+            6, # You don't have anymore questions for her
+            0, # Talk to the man
+            1, # Talk to Amalia Baxter
+            6, # You don't have anymore questions for her
+            0, # Talk to Daniel Baldwin
+            5, # You don't have anymore questions for him
+            1, # Meet the others in the billiard room
+            2, # Go to the bar to have a drink
+            5, # Leave the room
+            3, # Go to sleep
         ]

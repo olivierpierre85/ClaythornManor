@@ -42,6 +42,7 @@ label init_map:
         map_info = dict()
         map_info['lad_room'] = False
         map_info['psychic_room'] = False
+        map_info['broken_room'] = False
 
     call change_floor(1) # ground floor
 
@@ -123,6 +124,13 @@ screen map_information:
                 font "gui/font/BurtonScratch-Regular.ttf"
         
         if map_info['psychic_room'] == True:
+            text "Amelia Baxter":
+                pos(0,100)
+                color "#be0c0c"
+                size 30
+                font "gui/font/BurtonScratch-Regular.ttf"
+        
+        if map_info['broken_room'] == True:
             text "Psychic room":
                 pos(0,100)
                 color "#be0c0c"

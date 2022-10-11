@@ -44,7 +44,7 @@ transform rotate_minutes( angle = 0 ):
 
 # BLACK transition
 label black_screen_transition(display_text):
-    scene black_background with irisin #wipedown
+    scene black_background with irisin
     show screen centered_text(display_text)
     play sound gong
     pause 2.0
@@ -53,7 +53,7 @@ label black_screen_transition(display_text):
 
 # Death transition
 label death_screen_transition:
-    scene black_background with irisin 
+    scene black_background with wipedown
     show screen centered_text("You are Dead")
     play sound gong
     pause 5.0

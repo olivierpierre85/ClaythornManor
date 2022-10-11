@@ -140,9 +140,9 @@ label init_characters:
             locked = True,
             know_real_name = False,
             real_name = "TODO",
-            nickname = "The captain Face",
+            nickname = "The Captain",
             description_short = "Older Indian man",
-            description_long = "TODO",
+            description_long = "Older Indian man with a serious attitude.",
             information_list = captain_extra_information
         )
         captain = Character("captain_details.get_name()", image="captain", dynamic=True)

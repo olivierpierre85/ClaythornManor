@@ -34,7 +34,7 @@ label lad_ending_day1_poisoned:
 
     And you'll have to. 
 
-    Because otherwise, you'll never discover to whole Truth of what happened this week-end, at Claythorne Castle.
+    Because otherwise, you'll never discover to whole Truth of what happened this week-end, at Claythorn Castle.
 
     """
 
