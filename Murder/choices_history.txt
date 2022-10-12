@@ -108,3 +108,17 @@ NEW GAME
 5, # Why were you invited here ?
 6, # You don't have anymore questions for her
 0, # Go on the hunt and risk to embarrass yourself, or worse
+0, # Talk to the man
+1, # Talk to the woman
+6, # You don't have anymore questions for her
+0, # Talk to Daniel Baldwin
+0, # Talk to the man
+0, # Talk to the man
+0, # Talk to the man
+1, # Talk to the woman
+6, # You don't have anymore questions for her
+0, # Talk to Daniel Baldwin
+4, # Ask him his age
+0, # Talk about the weather
+3, # Talk about the manor
+0, # The Doctor and the Drunk

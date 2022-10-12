@@ -56,7 +56,7 @@ label lad_day2_morning_breakfast_over:
     """
 
     $ lad_day2_morning_menu = TimedMenu([
-        TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_morning_hunt', early_exit = True),
+        TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_hunt', early_exit = True),
         TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_morning_nohunt', early_exit = True)
     ])
     $ time_left = 1 # Trick to avoid problems, todo, find a better way
