@@ -91,3 +91,20 @@ NEW GAME
 -----------
 NEW GAME
 -----------
+0, # Go on the hunt and risk to embarrass yourself, or worse
+0, # Talk to the man
+1, # Talk to the woman
+3, # How old are you ?
+4, # What room are you in ?
+1, # Ask her about herself
+0, # Talk to Daniel Baldwin
+5, # You don't have anymore questions for him
+1, # Talk to Amalia Baxter
+2, # Talk about the manor
+6, # You don't have anymore questions for her
+0, # Go knock on the the door of Amalia Baxter
+3, # Go to sleep
+1, # Stay there and finish breakfast
+5, # Why were you invited here ?
+6, # You don't have anymore questions for her
+0, # Go on the hunt and risk to embarrass yourself, or worse
