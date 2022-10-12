@@ -61,7 +61,7 @@ label lad_day2_morning_hunt:
     """
 
     lad """
-    Perfect, thanks
+    Perfect, thanks.
     """
 
     """
@@ -70,6 +70,14 @@ label lad_day2_morning_hunt:
     Well, I something happens to me, at least I'll look good.
 
     I'll go outside meet the others.
+    """
+
+    scene manor_garden
+
+    """
+    I join the others in the garden.
+
+    They
     """
 
 
