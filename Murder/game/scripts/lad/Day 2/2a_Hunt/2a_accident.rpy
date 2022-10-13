@@ -20,7 +20,7 @@ label lad_day2_hunt_accident:
 
     As per usual, the footman is silent.
 
-    That means the doctor and I are the only to talk.
+    That means the doctor and I are the only ones to talk.
     """
 
     if not 'doctor' in current_character.has_met:
@@ -67,13 +67,13 @@ label lad_day2_hunt_accident:
     footman """
     Alright, if you are all set. We can go again.
 
-    Hopefully we'll be more lucky this time.
+    Hopefully we'll be luckier this time.
     """
 
 
     # TODO play music suspensful_01 fadein 5.0
     """
-    And for a while we weren't. 
+    For a while we weren't. 
     
     But then I spotted something looking like a rabbit afar.
 
@@ -83,7 +83,7 @@ label lad_day2_hunt_accident:
 
     So I put the gun on aiming position.
 
-    But as soon as I do it. The drunk who was behind realize what's happening.
+    But as soon as I do it. The drunk who was behind me realize what's happening.
     """
 
     drunk """
@@ -102,10 +102,37 @@ label lad_day2_hunt_accident:
     pause 2.0
 
     """
-    I stop immediately
+    He missed by far. 
+    
+    And it's too late for me to try again, the rabbit has ran away now.
+
+    I am a bit pissed but then I hear a cry.
     """
     # Add cry sound.
+    play sound dying_in_pain
 
+    """
+    I turn around and see the doctor lying down in agony
+    """
+
+    # TODO play sad music
+    footman """
+    Sir sir are you okay...
+
+    """
+
+    """
+    I watch in silence the scene of the footman trying to help him.
+
+    I start to shout for help.
+
+    In the distance I hear the other group responding.
+
+    By the time they reached us it's was too late.
+
+    Daniel Baldwin had bleed to death and was lying there in the forest.
+
+    """
 
     return
 

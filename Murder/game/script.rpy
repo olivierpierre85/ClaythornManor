@@ -29,8 +29,6 @@ label start():
 
     call  init_map
 
-    
-
     show screen current_time
 
     show screen in_game_menu_btn
@@ -59,5 +57,6 @@ label init_variables:
         lad_day1_poisoned = False
 
         lad_day2_breakfast_follow = False
+        lad_day2_hunt = False
 
     return

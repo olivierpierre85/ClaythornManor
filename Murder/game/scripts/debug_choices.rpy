@@ -9,11 +9,8 @@ label debug_choices:
         "lad_introduction":
             jump lad_introduction
 
-        "lad_day2_breakfast":
-            jump lad_day2_breakfast
-
-        "lad_day2_morning":
-            jump lad_day2_morning
+        "lad_day1_evening":
+            jump lad_day1_evening
 
         "lad_day2_breakfast":
             jump lad_day2_breakfast

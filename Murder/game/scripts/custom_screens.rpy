@@ -5,7 +5,7 @@ screen current_time:
     $ current_minutes = current_time.minute
     if current_hour >= 12:
         $ current_period = "Afternoon"
-        $ current_hour = current_hour - 12
+        # $ current_hour = current_hour - 12
     else:
         $ current_period = "Morning"
 

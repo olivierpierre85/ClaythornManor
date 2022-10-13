@@ -6,6 +6,8 @@ label lad_day2_hunt:
 
     call change_time(11,00)
 
+    $ lad_day2_hunt = True
+
     """
     Well I don't know if it's my best idea.
 
@@ -139,7 +141,6 @@ label lad_day2_hunt:
     $ time_left = 1
     call run_menu(lad_day2_hunt_menu)
 
-    # TODO go back to mansion
-
+    jump lad_day2_afternoon
 
     return

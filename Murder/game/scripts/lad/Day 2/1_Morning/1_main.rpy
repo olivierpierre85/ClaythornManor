@@ -38,7 +38,9 @@ label lad_day2_morning:
     Hello Mister Harring. How are you ?
     """
 
-    lad "Very well thank you."
+    lad """
+    Very well thank you.
+    """
 
     psychic """
     I was wondering if everyone was gonna join us on time.
