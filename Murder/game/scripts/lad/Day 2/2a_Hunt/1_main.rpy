@@ -4,6 +4,8 @@ label lad_day2_hunt:
 
     play music upbeat_02 fadein 10.0
 
+    call change_time(11,00)
+
     """
     Well I don't know if it's my best idea.
 
@@ -88,7 +90,7 @@ label lad_day2_hunt:
 
     He has a gun on hand. That can't be safe.
 
-    I approach the Butler.
+    I approach the butler.
     """
 
     lad """
@@ -115,16 +117,15 @@ label lad_day2_hunt:
     Good, now that everybody is ready, I propose that we split into two groups.
 
     It will be easier to spot game this way.
-
     """
 
     # TODO more explanation about the program, where to meet again....
 
 
     """
-    People agree and the Indian man ask to join our host.
+    People agree and the older gentleman asked to join our host.
 
-    The drunk man insists on going with the doctor, who agrees.
+    The drunk man insists on going with the doctor, who accepts.
 
     I am the odd one out.
 

@@ -122,3 +122,14 @@ NEW GAME
 0, # Talk about the weather
 3, # Talk about the manor
 0, # The Doctor and the Drunk
+0, # The Doctor and the Drunk
+0, # The Doctor and the Drunk
+1, # Ask him about himself
+5, # You don't have anymore questions for him
+0, # The Doctor and the Drunk
+5, # You don't have anymore questions for him
+0, # The Doctor and the Drunk
+5, # You don't have anymore questions for him
+0, # The Doctor and the Drunk
+5, # You don't have anymore questions for him
+0, # The Doctor and the Drunk
