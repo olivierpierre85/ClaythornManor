@@ -136,7 +136,7 @@ label lad_day2_hunt:
 
     $ lad_day2_hunt_menu = TimedMenu([
         TimedMenuChoice('The Doctor and the Drunk', 'lad_day2_hunt_accident', early_exit = True ),
-        TimedMenuChoice('The Lady and the Indian Man', 'lad_day2_hunt_fine', early_exit = True)
+        TimedMenuChoice('The Lady and the Indian Man', 'lad_day2_hunt_noaccident', early_exit = True)
     ], image_left = "drunk", image_left_2 = "doctor", image_right = "host", image_right_2 = "captain")
     $ time_left = 1
     call run_menu(lad_day2_hunt_menu)

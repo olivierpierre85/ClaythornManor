@@ -34,6 +34,16 @@ label tea_room_default:
 
     return
 
+label billiard_room_default:
+    
+    scene billiard_room
+    
+    "It's empty"
+
+    "No need to stay here."
+
+    return
+
 label bedroom_default:
     
     scene hallway
@@ -41,6 +51,42 @@ label bedroom_default:
     "I knock on the door."
 
     "Nobody answers."
+
+    return
+
+label lad_library:
+
+    # TODO booleon
+
+    if lad_visited_library:
+        """
+        I have been there already.
+
+        """
+    else:
+
+        scene library
+        
+        """
+        It's a very nice library. But what am I doing here ? I can barely read.
+
+        """
+
+        $ lad_details.add_knowledge('education')
+
+        """
+        There is an open book on a small table.
+
+        \"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\"
+
+        Yeah, I am not reading that.
+
+        I probably better go elsewhere.
+
+        """
+        # TODO add info on BOOK ???
+
+        $ lad_visited_library = True
 
     return
 

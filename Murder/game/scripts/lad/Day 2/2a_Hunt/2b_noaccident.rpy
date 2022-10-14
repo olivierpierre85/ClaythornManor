@@ -43,7 +43,7 @@ label lad_day2_hunt_noaccident:
     Then I've also been involved in the Chinese rebellion. Then ...
     """
 
-    $ captain.details.add_knowledge('wars')
+    $ captain_details.add_knowledge('wars')
 
     """
     Those talks about war must have made Lady Claythorn uneasy, because she suddenly interrupts us.
@@ -54,7 +54,7 @@ label lad_day2_hunt_noaccident:
     """
 
     captain """
-    Yes it's a perfect spot
+    Yes it's a perfect spot.
     """
 
     """

@@ -1,5 +1,5 @@
 label lad_day2_afternoon:
-    call black_screen_transition("Day 2 - Afternoon") # Good ?
+    call black_screen_transition("Day 2 - Afternoon Evening?") # Good ?
     scene tea_room with fade
     
     if lad_day2_hunt:

@@ -44,7 +44,7 @@ label lad_day1_evening:
     $ lad_day1_evening_menu = TimedMenu([
         TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_psychic_room', 55, room = 'psychic_room'),
         TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
-        TimedMenuChoice('Library', 'lad_day1_evening_library', 40, room = 'library'),
+        TimedMenuChoice('Library', 'lad_library', 40, room = 'library'),
         TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
     ], is_map = True)
 
@@ -69,32 +69,6 @@ label lad_day1_evening:
     else:
 
         jump lad_day2_morning
-
-
-label lad_day1_evening_library:
-
-    scene library
-    
-    """
-    It's a very nice library. But what am I doing here ? I can barely read.
-
-    """
-
-    $ lad_details.add_knowledge('education')
-
-    """
-    There is an open book on a small table.
-
-    \"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\"
-
-    Yeah, I am not reading that.
-
-    I probably better go elsewhere.
-
-    """
-    # TODO add info on BOOK ???
-
-    return
 
 label lad_day1_evening_psychic_room:
   

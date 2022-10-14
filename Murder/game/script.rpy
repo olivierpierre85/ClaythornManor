@@ -56,6 +56,7 @@ label init_variables:
         lad_day1_drinks = 0
         lad_day1_poisoned = False
 
+        lad_visited_library = False
         lad_day2_breakfast_follow = False
         lad_day2_hunt = False
 
