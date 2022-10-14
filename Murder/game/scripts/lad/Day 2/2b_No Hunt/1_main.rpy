@@ -11,7 +11,7 @@ label lad_day2_morning_nohunt:
 
     They are in the tea room, waiting for a small luncheon to be served.
 
-    I retreated in my room.
+    I retreated in my room to change.
 
     Now what should I do ?
 
@@ -27,4 +27,4 @@ label lad_day2_morning_nohunt:
 
     "Suddenly, the hunting partying enters the li...."
 
-    return
+    jump lad_day2_afternoon

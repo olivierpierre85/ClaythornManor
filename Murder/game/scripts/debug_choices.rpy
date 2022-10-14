@@ -12,8 +12,8 @@ label debug_choices:
         "lad_day1_evening":
             jump lad_day1_evening
 
-        "lad_day2_breakfast":
-            jump lad_day2_breakfast
+        "lad_day2_evening_tea_room":
+            jump lad_day2_evening_tea_room
         
         "lad_day2_hunt":
             jump lad_day2_hunt
