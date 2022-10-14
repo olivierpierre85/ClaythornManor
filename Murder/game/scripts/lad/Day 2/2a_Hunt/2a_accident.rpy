@@ -108,7 +108,7 @@ label lad_day2_hunt_accident:
 
     I am a bit pissed but then I hear a cry.
     """
-    # Add cry sound.
+
     play sound dying_in_pain
 
     """
@@ -118,7 +118,6 @@ label lad_day2_hunt_accident:
     # TODO play sad music
     footman """
     Sir sir are you okay...
-
     """
 
     """
@@ -131,7 +130,6 @@ label lad_day2_hunt_accident:
     By the time they reached us it's was too late.
 
     Daniel Baldwin had bleed to death and was lying there in the forest.
-
     """
 
     return

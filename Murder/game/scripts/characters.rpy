@@ -134,6 +134,7 @@ label init_characters:
 
         # 7. The Captain
         captain_extra_information = [
+            CharacterInformation(0, "wars", "A veteran of several wars, he fought in Burma, China, and in the Great War."), 
         ]
         captain_details  = CharacterDetails(
             text_id = "captain", 
