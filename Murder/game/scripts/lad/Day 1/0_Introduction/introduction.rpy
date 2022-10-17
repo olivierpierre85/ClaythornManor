@@ -50,7 +50,7 @@ label lad_introduction:
     
     """
 
-    $ host_details.introduce()
+    # $ host_details.introduce()
 
     play sound train_moving
 

@@ -2,7 +2,7 @@ label lad_day1_drinks:
   
     scene tea_room
 
-    # Introduced EVERYONE !
+    # Introduces EVERYONE !
     """
     As I enter the room, the butler introduces me, almost shouting.
     """
@@ -23,13 +23,17 @@ label lad_day1_drinks:
     """
     hide captain
 
-
-    show drunk at truecenter
+    show nurse at truecenter
     butler """
-    The man sitting on the couch, looking rather exhausted is Morton Webster. 
+    He is in conversation with Rosalind Marshman.
     """
-    hide drunk
+    hide nurse
 
+    show doctor at truecenter
+    butler """
+    And the man with the glasses is Daniel Baldwin.
+    """
+    hide doctor
 
     show broken at truecenter
     butler """
@@ -38,25 +42,18 @@ label lad_day1_drinks:
     """
     hide broken
 
-
-    show nurse at truecenter
+    show drunk at truecenter
     butler """
-    The lady talking with captain is Rosalind Marshman. 
+    The man sitting on the couch, looking rather exhausted is Samuel Manning
+. 
     """
-    hide nurse
-
-    show doctor at truecenter
-    butler """
-    Daniel Baldwin is also with them.
-    """
-    hide doctor
+    hide drunk
 
     show psychic at truecenter
     butler """
     The older lady in the corner of the room is Amalia Baxter.
     """
     hide psychic
-
 
     lad """
     I don't see our host in the room.
@@ -73,15 +70,15 @@ label lad_day1_drinks:
 
     Most of the guests are already in conversation.
     
-    But Amalia Baxter and Morton Webster are alone.
+    But Amalia Baxter and Samuel Manning are alone.
 
     They seem more approachable than the rest.
     """
     
     $ time_left = 30
     $ current_menu = TimedMenu([
-        TimedMenuChoice('Talk to the Morton Webster', 'lad_day1_drinks_drunk', 5),
-        TimedMenuChoice('Talk to the Amalia Baxter', 'lad_day1_drinks_psychic', 5)
+        TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
+        TimedMenuChoice('Talk to Amalia Baxter', 'lad_day1_drinks_psychic', 5)
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 
@@ -101,6 +98,16 @@ label lad_day1_drinks_psychic:
     """
     I am approaching the middle-aged lady.
     """
+
+    lad """
+    Nice to meet you miss Baxter. I am Ted Haring.
+    """
+
+    psychic """
+    Nice to meet you mister Haring.
+    """
+    
+    $ current_character.has_met.add('psychic')
 
     call psychic_generic
 

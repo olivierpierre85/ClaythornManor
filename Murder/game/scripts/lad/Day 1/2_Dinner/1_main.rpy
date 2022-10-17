@@ -16,7 +16,7 @@ label lad_day1_dinner:
 
     call host_welcome_speech
 
-    "After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host"
+    "After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host."
 
     host "Please no need to thank me. The food will be served, enjoy your meal."
 
@@ -31,12 +31,10 @@ label lad_day1_dinner:
 
     You then turn your attention to the guests next to you.
 
-    You are sitting between Amalia Baxter, and a middle aged man wearing glasses.
-
-    It's name card reads 'Doctor Daniel Baldwin'
+    You are sitting between Amalia Baxter, and Daniel Baldwin.
     """
 
-    $ doctor_details.introduce()
+    # $ doctor_details.introduce()
 
     $ time_left = 60
 
@@ -62,6 +60,14 @@ label lad_day1_dinner:
 
   
 label lad_day1_dinner_psychic:
+    
+    lad """
+    Hi again Miss Baxter.
+    """
+
+    psychic """
+    Oh Mister Harring. I am glad we can continue our conversation.
+    """
 
     call psychic_generic
     
@@ -69,6 +75,8 @@ label lad_day1_dinner_psychic:
     
 
 label lad_day1_dinner_doctor:
+
+    call doctor_lad_introduction
 
     call doctor_generic
 

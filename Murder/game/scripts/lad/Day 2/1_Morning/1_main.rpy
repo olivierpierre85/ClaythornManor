@@ -10,14 +10,15 @@ label lad_day2_morning:
     I slept through the night. 
     
     The storm from yesterday has passed and the weather is clearer now.
-
     """
 
 
     if (lad_day1_drinks > 2):
-        "Hee, I have a bad hangover this morning. Why did I drink that much ?"
+        "Annnd, I have a bad hangover this morning. Why did I drink that much ?"
     
-    "After getting ready, I leave my room to have breakfast."
+    """
+    After getting ready, I leave my room to have breakfast.
+    """
 
     scene dining_hall
 
@@ -31,7 +32,6 @@ label lad_day2_morning:
     So I take my seat at the same place than yesterday trying not to be noticed.
 
     Daniel Baldwin and Amalia Baxter are already there.
-
     """
 
     psychic """
@@ -47,34 +47,36 @@ label lad_day2_morning:
     
     There are still a few people missing.
 
-    For instance, I don't know if you noticed the drunk man yesterday. 
+    For instance, I don't know if you noticed Mister Manning yesterday. 
 
     He was so drunk that I wouldn't be surprised if we don't see him before noon.
     """
 
-    "I nod. Not sure what to say."
+    """
+    I nod. Not sure what to say.
+    """
 
     if 'broken' in current_character.has_met:
 
-        "I check around the room."
+        "I look around the room."
 
         lad """
 
-        I don\'t see the man with a mask either.
+        I don\'t see the man with the mask either, Thomas Moody.
 
         I talked to him yesterday and he seemed fine to me.
         """
     
     """
-    As I begin to eat, the drunk man from yesterday enters the room.
+    As I begin to eat, the Samuel Manning enters the room.
 
     He stumbled to the buffet table and picks up a plate, visibly shaking.    
     """
 
     psychic angry """
-    Well, I spoke too soon. Here he is. And in such state.
+    Well, I spoke too soon. Here he is. And in such a state.
 
-    What a shame.
+    How dreadful.
     """
 
     """
@@ -86,7 +88,7 @@ label lad_day2_morning:
 
     She looks shocked and worried. Then stands up and walks in my direction.
 
-    She stops in front a the doctor.
+    She stops in front of the doctor.
     """
 
     host """
@@ -215,7 +217,7 @@ label lad_day2_breakfast_eat:
 
     lad "Me too, and I have a bad feeling about it."
 
-    call psychic_generic(skip_intro = True)
+    call psychic_generic()
     
     return
 

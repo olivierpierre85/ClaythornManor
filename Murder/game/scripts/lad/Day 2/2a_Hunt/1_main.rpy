@@ -11,15 +11,14 @@ label lad_day2_hunt:
     """
     Well I don't know if it's my best idea.
 
-    But I guess I didn't feel it was right stay behind with the ladies.
-
+    But I guess it didn't feel right to stay behind with the ladies.
     """
 
     #     I wonder what it says about me I wonder.
     # TODO easter egg only if it's the first choice
 
     butler """
-    So it's your first hunt mister Harring ?
+    So, it's your first hunt mister Harring ?
     """
  
     lad """
@@ -37,7 +36,7 @@ label lad_day2_hunt:
     """
 
     butler """
-    No just you. I will be with Lady Claythorn and the others insisted they didn't need help.
+    No just you. I will be with Lady Claythorn, and the others insisted they didn't need help.
     """
 
     lad """
@@ -45,7 +44,7 @@ label lad_day2_hunt:
     """
 
     butler """
-    I think we will encounter wild birds mostly. But we might also run into some deers or wild pigs.
+    I think we will encounter wild birds mostly. But we might also run into some rabbits, or even deers.
     """
 
     lad """
@@ -55,12 +54,13 @@ label lad_day2_hunt:
     butler """
     Not if you don't get too close to them. And again you won't be alone, so there is no reason be scared.
     """
+
     lad """
     I am not scared, just curious.
     """
 
     butler """
-    Right. Anyway, you can pick up this gun and wear the clothes I lay down on the table.
+    Right. Anyway, you can pick up this gun and wear the clothes I laid down on the table.
 
     Come join the others outside when you are ready.
     """
@@ -73,8 +73,6 @@ label lad_day2_hunt:
     I am trying the clothes before me. They fit perfectly.
 
     Well, if something happens to me, at least I'll look good.
-
-    I'll go outside meet the others.
     """
 
     scene manor_garden
@@ -82,11 +80,11 @@ label lad_day2_hunt:
     """
     I join the others in the garden.
 
-    They all look quite comfortable in in their hunting clothes.
+    They all look quite comfortable in their hunting clothes.
 
-    There is Doctor Baldwin, the old Indian man, Lady Claythorn and her staff.
+    There is Doctor Baldwin, the Sushil Sinha, Lady Claythorn and her staff.
 
-    And even the drunk guy is here.
+    And even Samuel Manning is here.
 
     Wait what ?!
 
@@ -125,7 +123,7 @@ label lad_day2_hunt:
 
 
     """
-    People agree and the older gentleman asked to join our host.
+    People agree and the indian man asked to partner with our host.
 
     The drunk man insists on going with the doctor, who accepts.
 

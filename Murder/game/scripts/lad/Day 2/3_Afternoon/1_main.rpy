@@ -1,6 +1,6 @@
 label lad_day2_afternoon:
-    call black_screen_transition("Day 2 - Afternoon Evening?") # Good ?
-    scene tea_room with fade
+    call black_screen_transition("Day 2 - Evening???.") # Good ?
+    scene great_hall with irisout
     
     if lad_day2_hunt:
         """
@@ -10,7 +10,9 @@ label lad_day2_afternoon:
         """
     else:
         """
-        Suddenly, the hunting partying enters the li....
+        Suddenly, the hunting partying enters the l
+
+        Thebp
         """
 
     return

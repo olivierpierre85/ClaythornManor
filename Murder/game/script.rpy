@@ -60,4 +60,6 @@ label init_variables:
         lad_day2_breakfast_follow = False
         lad_day2_hunt = False
 
+        TIME_MAX = 999999
+
     return

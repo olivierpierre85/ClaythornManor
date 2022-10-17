@@ -6,15 +6,15 @@ label lad_day2_hunt_noaccident:
     """
     Following our hostess was probably the safest course.
 
-    The only problem is that her and her companion, a retired military captain, are both in their element.
+    The only problem is that she and Sushil Sinha are both in their element.
 
     While I am clearly not.
 
     They already shot a few rabbits and a pheasant.
 
-    Out of pity, they also try to help me shoot a rabbit that came on to my path.
+    Out of pity, they also try to help me shoot a beautiful deer that came on to my path.
 
-    But their guidance was unsuccessful. I only managed to scare the poor animal away.
+    But their guidance was unsuccessful. I only managed to scare the animal away.
     """
 
     captain """
@@ -82,11 +82,11 @@ label lad_day2_hunt_noaccident:
     # TODO play music scary...
 
     """
-    We quickly reached the other.
+    We quickly reached the others.
 
     Doctor Baldwin was lying down on the floor.
 
-    Next to him was the older man, shacking.
+    Next to him was Samuel Manning, shacking.
     """
 
     drunk """
@@ -100,9 +100,9 @@ label lad_day2_hunt_noaccident:
     """
     We examined the doctor.
 
-    It was too late.
+    It is too late.
 
-    He had bled to death.
+    He has bled to death.
     """
 
     return

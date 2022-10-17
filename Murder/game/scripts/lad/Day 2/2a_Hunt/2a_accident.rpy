@@ -4,7 +4,7 @@ label lad_day2_hunt_accident:
     call change_time(12,00)
 
     """
-    Despite the risks, I decided to follow the doctor and the drunk fellow.
+    Despite the risks, I decided to follow the doctor Baldwin and Samuel Manning.
 
     At least, this way I probably won't be the one embarrassing myself.
 
@@ -14,19 +14,14 @@ label lad_day2_hunt_accident:
 
     The four of us sat down in a clearing where we are sharing a small picnic.
 
-    The drunk is very silent, and busy drinking from a pocket flask.
+    Mister Manning is silent, busy drinking from a pocket flask.
 
     He looks serious, even nervous.
 
-    As per usual, the footman is silent.
+    As per usual, the footman is doesn't say a word.
 
     That means the doctor and I are the only ones to talk.
     """
-
-    if not 'doctor' in current_character.has_met:
-        # TODO introduction in generic ???
-        doctor "I am sorry we actually havent been formaly introduce...TODO"
-
     
     doctor """
     So Mister Harring, how do you like it here ?
@@ -55,6 +50,7 @@ label lad_day2_hunt_accident:
 
     Let's change the subject.
     """
+
     $ time_left = 30
     call doctor_generic
 
@@ -77,13 +73,13 @@ label lad_day2_hunt_accident:
     
     But then I spotted something looking like a rabbit afar.
 
-    The doctor was ahead of me and didn't see it.
+    Daniel Baldwin was ahead of me and didn't see it.
 
     I point at my prey to the footman and he nods in approval.
 
     So I put the gun on aiming position.
 
-    But as soon as I do it. The drunk who was behind me realize what's happening.
+    But as soon as I do it. Samuel Manning, who was behind me, realizes what's happening.
     """
 
     drunk """
@@ -112,12 +108,12 @@ label lad_day2_hunt_accident:
     play sound dying_in_pain
 
     """
-    I turn around and see the doctor lying down in agony
+    I turn around and see the doctor lying down in agony.
     """
 
     # TODO play sad music
     footman """
-    Sir sir are you okay...
+    Sir, sir are you okay...
     """
 
     """
@@ -127,9 +123,9 @@ label lad_day2_hunt_accident:
 
     In the distance I hear the other group responding.
 
-    By the time they reached us it's was too late.
+    By the time they reached us, it is too late.
 
-    Daniel Baldwin had bleed to death and was lying there in the forest.
+    Daniel Baldwin has bled to death and is lying there in the forest.
     """
 
     return

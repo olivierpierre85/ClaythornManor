@@ -7,7 +7,7 @@ label lad_day2_morning_nohunt:
     """
     I turned down the invitation for the hunt.
 
-    So I stayed with Amalia Baxter and the nurse.TODO introduce everyone.
+    So I stayed with Amalia Baxter and the Rosalind Marshman.
 
     They are in the tea room, waiting for a small luncheon to be served.
 
@@ -22,9 +22,13 @@ label lad_day2_morning_nohunt:
     call run_menu(TimedMenu([
             TimedMenuChoice('Meet the others in the Tea Room', 'lad_day2_evening_tea_room', 0, keep_alive = True, room = 'tea_room'),
             TimedMenuChoice('Library', 'lad_library', 40, room = 'library'), # condition not visited ?
-            TimedMenuChoice('Sleep until the others return.', 'lad_day2_nohunt_cancel', early_exit = True, room = 'lad_room')
+            TimedMenuChoice('Take a nap until the others return', 'lad_day2_nohunt_cancel', early_exit = True, room = 'lad_room')
         ], is_map = True))
 
-    "Suddenly, the hunting partying enters the li...."
+    """
+    Suddenly, I hear noises from the entrance hall.
+    
+    I decide to go and see what's happening.
+    """
 
     jump lad_day2_afternoon

@@ -11,7 +11,7 @@ label lad_day1_evening_billiard_room:
     if not lad_day1_evening_billiard_room_visited:
 
         """
-        Almost everyone I saw at dinner are here.
+        Almost everyone I saw at dinner is here.
 
         Except for Amalia Baxter and our host.
 
@@ -51,7 +51,7 @@ label lad_day1_evening_billiard_room_bar_1:
 
     "I approach the bar."
 
-    "The man I saw in the tea room is also there."
+    "Samuel Manning is there."
 
     lad "Hello sir."
 
@@ -68,8 +68,7 @@ label lad_day1_evening_billiard_room_bar_1:
 
     There were so badly injured that they have to hide their faces.
 
-    He pretended not to notice my surprise and kept on talking.
-
+    He pretends not to notice my surprise and keeps on talking.
     """
 
     $ doctor_details.add_knowledge('mask') 
@@ -85,7 +84,7 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     $ current_character.has_met.add('broken')
-    $ broken_details.introduce()
+    # $ broken_details.introduce()
 
     lad "Ted Harring, how do you do."
 
@@ -100,15 +99,14 @@ label lad_day1_evening_billiard_room_bar_1:
     """
     Before I could say anything. He reaches down his coat pocket and took a flask out. 
     
-    Then he starts pouring me a glass.
-    
+    Then he starts pouring me a glass of what looks like whisky.
     """
 
     broken "You'll probably enjoy this more."
 
     "I can't really say no to that."
 
-    lad "Well ..., Thanks. Cheers."
+    lad "Thanks. Cheers."
 
     #TODO if needed for the story about drunk and puking ADD here that the drunk asks for a drink
     $ lad_day1_poisoned = True
@@ -126,7 +124,7 @@ label lad_day1_evening_billiard_room_group:
 
     They seem to have an animated discussion.
 
-    The one talking is a older indian man.
+    The one currently talking is the older indian man.
     """
 
     # TODO extract speech to put in captain generic file ? multiple parts ?
@@ -134,10 +132,10 @@ label lad_day1_evening_billiard_room_group:
     That's when I knew I had to leave the army.
 
     The last war was the one too many.
+    """
 
-    TODO complete with relavent information when needed.
-
-    add extra character to join the conversation ?
+    """
+    TODO put needed information => LATER
     """
 
     return
@@ -156,7 +154,15 @@ label lad_day1_evening_billiard_room_bar_3:
 
 
 label lad_day1_evening_billiard_room_doctor:
-  
+      
+    if current_character.text_id == "lad":
+
+        call doctor_lad_introduction
+
+    else:
+        
+        lad "Hello again Doctor."
+
     call doctor_generic
 
     return

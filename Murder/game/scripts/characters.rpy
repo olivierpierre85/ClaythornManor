@@ -35,7 +35,7 @@ label init_characters:
         lad_details  = CharacterDetails(
             text_id = "lad", 
             locked = False,
-            know_real_name = False,
+            know_real_name = True,
             real_name = "Ted Harring",
             nickname = "The Lad",
             description_short = "Young man",
@@ -55,11 +55,11 @@ label init_characters:
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
             locked = True,
-            know_real_name = False,
+            know_real_name = True,
             real_name = "Amalia Baxter",
             nickname = "The Psychic",
             description_short = "Middle-age Woman",
-            description_long = "Old lady",
+            description_long = "Middle-aged woman, looking a bit eccentric.",
             information_list = psychic_extra_information
         )
         psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)
@@ -74,7 +74,7 @@ label init_characters:
         doctor_details  = CharacterDetails(
             text_id = "doctor", 
             locked = True,
-            know_real_name = False,
+            know_real_name = True,
             real_name = "Daniel Baldwin",
             nickname = "The Doctor",
             description_short = "Middle-age man",
@@ -92,11 +92,12 @@ label init_characters:
         drunk_details  = CharacterDetails(
             text_id = "drunk", 
             locked = True,
-            know_real_name = False,
-            real_name = "Morton Webster",
+            know_real_name = True,
+            real_name = "Samuel Manning
+",
             nickname = "The Drunk",
             description_short = "Drunk Man",
-            description_long = "Drunk Man, not so good looking",
+            description_long = "Old man, looking 'exhausted'.",
             information_list = drunk_extra_information
         )
         drunk = Character("drunk_details.get_name()", image="drunk", dynamic=True)
@@ -107,11 +108,11 @@ label init_characters:
         host_details  = CharacterDetails(
             text_id = "host", 
             locked = True,
-            know_real_name = False,
+            know_real_name = True,
             real_name = "Lady Claythorn",
             nickname = "The Host",
             description_short = "Older Lady",
-            description_long = "The lady of the mansion",
+            description_long = "The lady of the mansion.",
             information_list = host_extra_information
         )
         host = Character("host_details.get_name()", image="host", dynamic=True)
@@ -123,11 +124,11 @@ label init_characters:
         broken_details  = CharacterDetails(
             text_id = "broken", 
             locked = True,
-            know_real_name = False,
+            know_real_name = True,
             real_name = "Thomas Moody",
             nickname = "The Broken Face",
             description_short = "Masked Man",
-            description_long = "A middle age man with a mask on his face.",
+            description_long = "A man with a mask on his face.",
             information_list = broken_extra_information
         )
         broken = Character("broken_details.get_name()", image="broken", dynamic=True)
@@ -139,11 +140,11 @@ label init_characters:
         captain_details  = CharacterDetails(
             text_id = "captain", 
             locked = True,
-            know_real_name = False,
+            know_real_name = True,
             real_name = "Sushil Sinha",
             nickname = "The Captain",
             description_short = "Older Indian man",
-            description_long = "Older Indian man with a serious attitude.",
+            description_long = "Older man from India.",
             information_list = captain_extra_information
         )
         captain = Character("captain_details.get_name()", image="captain", dynamic=True)
@@ -154,11 +155,11 @@ label init_characters:
         nurse_details  = CharacterDetails(
             text_id = "nurse", 
             locked = True,
-            know_real_name = False,
+            know_real_name = True,
             real_name = "Rosalind Marshman",
             nickname = "The Nurse",
             description_short = "",
-            description_long = "",
+            description_long = "Middle-aged woman.",
             information_list = nurse_extra_information
         )
         nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
@@ -204,7 +205,7 @@ init -100 python:
             self, 
             text_id,
             locked = True,
-            know_real_name = False,
+            know_real_name = True,
             real_name = "",
             nickname = "",
             description_short = "",
@@ -223,10 +224,10 @@ init -100 python:
             self.has_met = has_met
 
         def get_name(self):
-            if self.know_real_name:
-                return self.real_name
-            else:
-                return self.description_short
+            # if self.know_real_name:
+            return self.real_name
+            # else:
+            #     return self.description_short
         
         def introduce(self):
             self.know_real_name = True
@@ -373,10 +374,7 @@ screen character_details(selected_char):
                     yalign 0.5
                     text "Name:  ":
                         color gui.accent_color
-                    if selected_char.know_real_name:
-                        text selected_char.real_name 
-                    else:
-                        text "Unknow" 
+                    text selected_char.real_name 
 
                 text "Description: " color gui.accent_color
                 text selected_char.description_long

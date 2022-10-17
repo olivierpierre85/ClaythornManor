@@ -11,7 +11,7 @@ label lad_day2_morning_breakfast_over:
     host """
     Well, as I told you before, activities were planned for the day.
 
-    This morning those who wished, we were supposed to go on a hunt.
+    This morning those who wished were supposed to go on a hunt.
 
     It's a sad affair that has happened, but it's not a reason to stay here doing nothing.
 
@@ -34,7 +34,6 @@ label lad_day2_morning_breakfast_over:
     But of course, you can decide to just stay here.
 
     You can relax and enjoy the warmth of the house until the others return.
-
     """
 
     """
@@ -46,7 +45,7 @@ label lad_day2_morning_breakfast_over:
 
     And I might not be the only one out of my depth if Lady Claythorn is right. 
 
-    So I won't be embarrassed.
+    So I shouldn't be embarrassed.
 
     On the other hand, I have never even held a gun in my life.
 
@@ -59,7 +58,7 @@ label lad_day2_morning_breakfast_over:
         TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_hunt', early_exit = True),
         TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_morning_nohunt', early_exit = True)
     ])
-    $ time_left = 1 # Trick to avoid problems, todo, find a better way
+    $ time_left = TIME_MAX # Trick to avoid problems, todo, find a better way
     call run_menu(lad_day2_morning_menu)
 
     jump lad_day2_afternoon

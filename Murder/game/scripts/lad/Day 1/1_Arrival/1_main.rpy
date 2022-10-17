@@ -44,7 +44,7 @@ label lad_day1_arrival:
 
     lad "Hello, I am Ted Harring, I was invited by Lady Claythorn."
 
-    $ lad_details.introduce()
+    # $ lad_details.introduce()
 
     butler """
 

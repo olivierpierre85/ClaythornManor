@@ -19,7 +19,7 @@ label lad_day2_breakfast_follow:
     butler "Correct Sir."
 
     call unlock_map('broken_room')
-    $ broken_details.introduce() 
+    # $ broken_details.introduce() 
 
     "We all enter the room."
 
@@ -55,19 +55,27 @@ label lad_day2_breakfast_follow:
     I'll come back downstairs when I know more.
     """
 
-    butler "Come with me My Lady."
+    butler """
+    Come with me My Lady.
+    """
     
     host """
     Oh... Of course...
     """
 
-    "The butler escorts the Lady out of the room."
+    """
+    The butler escorts the Lady out of the room.
 
-    "The doctor turns himself towards me."
+    The doctor turns himself towards me.
+    """
 
-    doctor "And why are you here again ?"
+    doctor """
+    And why are you here again ?
+    """
 
-    lad "Well, I was... I wanted to .."
+    lad """
+    Well, I was... I wanted to ..
+    """
 
     doctor """
     Never mind. Since you are here make yourself useful.
@@ -113,7 +121,6 @@ label lad_day2_breakfast_follow:
     He then leaves the room.
 
     I followed him back to the dining hall.
-    
     """
 
     scene dining_hall
