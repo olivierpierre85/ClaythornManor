@@ -93,8 +93,7 @@ label init_characters:
             text_id = "drunk", 
             locked = True,
             know_real_name = True,
-            real_name = "Samuel Manning
-",
+            real_name = "Samuel Manning",
             nickname = "The Drunk",
             description_short = "Drunk Man",
             description_long = "Old man, looking 'exhausted'.",

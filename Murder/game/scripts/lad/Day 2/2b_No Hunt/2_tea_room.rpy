@@ -26,6 +26,7 @@ label lad_day2_evening_tea_room:
     nurse """
     Miss Baxter was actually talking about ghosts and how she can talk to dead people.
     """
+
     # TODO if the psychic knowledge not known, make resume it here ? or just call the text?
     if psychic_details.check_knowledge_unlocked('heroic act'):
         lad """
@@ -38,15 +39,15 @@ label lad_day2_evening_tea_room:
         """
 
         psychic """
-        It really is. But not to bored miss TODO, I won't enter into the details. we can talk about it at another time.
+        It really is. But not to bored miss Marshman, I won't go into details, we can talk about it at another time.
         """
 
     nurse """
-    Anyway, you were saying that you feeling the poor guy who died last night.
+    Anyway, you were saying that you hearing the poor guy who died last night.
     """
 
     psychic """
-    Right, I have the feeling, something is not right about his death.
+    That's right. And I have the feeling that something is not right about his death.
     """
 
     nurse """
@@ -54,15 +55,49 @@ label lad_day2_evening_tea_room:
     """
 
     psychic """
-    I have this recurrent feeling of him, ...
+    I am hearing him, and he is disturbed. The sign of an unnatural death.
+
+    There is something wrong here but I can't figure out what.
+
+    But sorry dear, I am not trying to scare you.
+
+    It might be nothing.
+
+    In any case, we'll know more about it when the police will arrive.
     """
 
+    lad """
+    That's true, we are still waiting for them right.
 
+    How could Lady Claythorn left and don't let anyone taking care of this ?
+    """
 
+    psychic """
+    Well, she have staff to deal with that sort of things.
+    """
 
+    lad """
+    Aren't they all out on the hunt ?
+    """
 
+    psychic """
+    Oh no dear, there are still are all the kitchen staff, and the maids who remains in the mansion.
 
+    All of this is very well organized in such a house.
+    """
 
+    nurse """
+    Yes, and let's not forget that it may take a while for the police to reach us anyway.
 
+    It's not like it is a real emergency. THey might not arrived until later this evening.
+    """
+    
+    """
+    Okay then. It's a bit weird to think there is a dead guy upstairs, and that nobody is doing anything about it.
+    
+    In any case, they both went back to their earlier conversation.
+
+    I don't think I should stay here.
+    """
 
     return
