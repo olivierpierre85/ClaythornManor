@@ -2,19 +2,86 @@ label lad_day1_drinks:
   
     scene tea_room
 
+    # Introduced EVERYONE !
     """
-    I enter the room where I see a few people already in conversation.
+    As I enter the room, the butler introduces me, almost shouting.
+    """
+
+    butler """
+    Mister Ted Haring.
+    """
+
+    """
+    Everyone turns their head to me and nod a hello.
+
+    From a distance, the butler gives me a short introduction of every guests.
+    """
+
+    show captain at truecenter
+    butler """ 
+    The older man talking is from India and his name is Sushil Sinha.
+    """
+    hide captain
+
+
+    show drunk at truecenter
+    butler """
+    The man sitting on the couch, looking rather exhausted is Morton Webster. 
+    """
+    hide drunk
+
+
+    show broken at truecenter
+    butler """
+    Don't be alarmed by the man in the mask. 
+    He is a war veteran named Thomas Moody.
+    """
+    hide broken
+
+
+    show nurse at truecenter
+    butler """
+    The lady talking with captain is Rosalind Marshman. 
+    """
+    hide nurse
+
+    show doctor at truecenter
+    butler """
+    Daniel Baldwin is also with them.
+    """
+    hide doctor
+
+    show psychic at truecenter
+    butler """
+    The older lady in the corner of the room is Amalia Baxter.
+    """
+    hide psychic
+
+
+    lad """
+    I don't see our host in the room.
+    """
+
+    butler """
+    Lady Claythorn is still busy at the moment.
+
+    You'll meet her at dinner.
+    """
+
+    """
+    After this introduction he leaves me and go stand in the corner of the room.
+
+    Most of the guests are already in conversation.
     
-    But two persons are alone. A middle age man sitting on a couch, and a young woman standing by herself.
+    But Amalia Baxter and Morton Webster are alone.
 
     They seem more approachable than the rest.
-
     """
     
     $ time_left = 30
     $ current_menu = TimedMenu([
-        TimedMenuChoice('Talk to the man', 'lad_day1_drinks_drunk', 5),
-        TimedMenuChoice('Talk to the woman', 'lad_day1_drinks_psychic', 5)
+        TimedMenuChoice('Talk to the Morton Webster', 'lad_day1_drinks_drunk', 5),
+        TimedMenuChoice('Talk to the Amalia Baxter', 'lad_day1_drinks_psychic', 5)
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 
@@ -45,7 +112,6 @@ label lad_day1_drinks_drunk:
     I am heading toward the older man.
 
     He has a glass of whisky on hand. His gaze is empty.
-    
     """
     
     lad "Hello sir, how are you ?"
