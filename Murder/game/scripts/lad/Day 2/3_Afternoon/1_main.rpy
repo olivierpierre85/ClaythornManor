@@ -1,5 +1,5 @@
 label lad_day2_afternoon:
-    call black_screen_transition("Day 2 - Evening???.") # Good ?
+    call black_screen_transition("Day 2 - afternoon") # Good ?
     scene great_hall with irisout
 
     call change_time(15,00)
@@ -40,17 +40,35 @@ label lad_day2_afternoon:
     I am sorry dear, I am afraid that he is.
     """
 
-    if lad_day2_hunt:
-        """
-        We explained what happened.
-        """
-    else:
-        "TODO explain in details"
+    psychic """
+    But but, what happened ?
+    """
 
     captain """
-    Well it's a another reason for an ambulance to come.
+    An accident. 
+    """
 
-    Has anyone from the city arrived here yet ?
+    drunk sad """
+    It was I swear. I have no idea why I hit him.
+    I was aiming at a rabbit. I didn't even notice him.
+    """
+
+    """
+    Everybody turns at him.
+    """
+        
+    psychic angry """
+    Fool ! I bet you were too drunk, that's why you hit him.
+
+    You could barely walk this morning. How come they gave you a gun ?
+    """
+
+    captain """
+    Please, there is no need to blame anyone now. It's too late.
+
+    We'll let the police deal with him.
+
+    By the way, has anyone from the city arrived here yet ?
     """
 
     nurse """
@@ -62,21 +80,57 @@ label lad_day2_afternoon:
     captain """
     We better tell them to hurry up then.
 
-    Lady Claythorn where is your phone ?
+    Lady Claythorn where is the phone ?
     """
 
     host """
-    It's in the TODO
-
-    But don't worry I'll take care of it myself.
+    Don't worry, I'll take care of it myself.
     """
 
     """
     She leaves the group with the butler on her trail.
+
+    Now everyone is silent.
+
+    And most of them stare at Sam Manning with hate.
+
+    Then the host comes back.
     """
 
+    host """
+    I just spoke with the police. They are not coming today.
+    """
 
+    captain """
+    What !? Why ?
+    """
 
+    host """
+    They were halfway there. But they ran into a huge tree blocking the road. 
+    
+    There was no way to move it.
+    
+    They say they will be back tomorrow with some help.
+    """
+
+    psychic """
+    But,... what are we gonna do with him ?
+    """
+
+    captain """
+    I'll carry him to his bed. 
+    
+    That's probably the best for the moment.
+
+    Can someone help me carry him.
+    """
+
+    lad """
+    I'll come with you.
+    """
+    
+    # ?????
+    scene bedroom_doctor
 
     return
 
