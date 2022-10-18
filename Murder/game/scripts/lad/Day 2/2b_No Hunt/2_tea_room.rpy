@@ -14,11 +14,6 @@ label lad_day2_evening_tea_room:
     You should join us.
     """
 
-    # Needed ?
-    """
-    There is something about the way she said that that makes me uneasy.
-    """
-
     lad """
     Of course, I'll be glad to discuss with for a bit. What were you talking about ?
     """
@@ -89,15 +84,70 @@ label lad_day2_evening_tea_room:
     nurse """
     Yes, and let's not forget that it may take a while for the police to reach us anyway.
 
-    It's not like it is a real emergency. THey might not arrived until later this evening.
+    It's not like it is a real emergency. They might not arrived until later this evening.
     """
-    
-    """
-    Okay then. It's a bit weird to think there is a dead guy upstairs, and that nobody is doing anything about it.
-    
-    In any case, they both went back to their earlier conversation.
 
-    I don't think I should stay here.
     """
+    It's creepy to think there is a dead guy upstairs, and that nobody is doing anything about it.
+
+    He is there in his room, like nothing happened.
+
+    Weird.
+
+    While we are still talking the butler enters the room.
+    """
+
+    # TODO THey eat a  small lunch + time jump ?
+
+    cook """
+    I am glad you are all here.
+
+    I just finished to cook a small luncheon.
+    
+    I can bring it to you if you want.
+    """
+
+    psychic """
+    Thank you miss, that would be lovely.
+
+    But I am terribly sorry, are you the cook ?
+
+    I thought I saw you cleaning up my room this morning.
+    """
+
+    cook """
+    Um, ... the true is I am the cook, but also a maid when needed.
+    """
+
+    psychic """
+    A cook and a maid ? That's a lot of work you must have.
+    """
+
+    cook """
+    Oh don't worry about me, I can handle it.
+
+    I will fetch your food now.
+    """
+    
+    psychic """
+    Well, it's worse than I thought. A cook that doubles up as a maid.
+
+    I've never seen something like this.
+    """
+
+    """
+    Miss Marshman and I stay silent. 
+
+    I guess she doesn't know more than I do about the running of a house.
+
+    Or maybe she doesn't want to say bad things about our host.
+
+    After a while the cook comes with our food and we enjoy it exchanging banalities.
+
+    Then I decide I don't have much to say to them, so I leave.
+    """
+
+    # TODO OR I SHOOULD ADD GENERIC NURSE AND PSYCHIC ??? 
+
 
     return

@@ -21,6 +21,9 @@ label debug_choices:
         "lad_day2_morning_nohunt":
             jump lad_day2_morning_nohunt
 
+        "lad_day2_afternoon":
+            jump lad_day2_afternoon
+
     return
 
 label debug_routes:
