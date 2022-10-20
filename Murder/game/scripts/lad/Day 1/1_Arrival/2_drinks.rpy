@@ -82,7 +82,15 @@ label lad_day1_drinks:
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 
-    "Suddenly, the butler comes into the room."
+    play sound dinner_gong
+
+    """
+    A gong sound. 
+
+    What is that ?
+
+    Then the butler comes into the room.
+    """
 
     butler "Dinner is served. Please follow me to the dining room."
 

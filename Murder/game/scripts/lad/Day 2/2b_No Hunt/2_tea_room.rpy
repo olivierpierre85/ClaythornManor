@@ -27,7 +27,7 @@ label lad_day2_evening_tea_room:
         lad """
         Oh yes, we talked about it already.
         """
-
+        
     else:
         lad """
         Really ? How fascinating. 

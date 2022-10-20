@@ -29,6 +29,7 @@ label init_map:
             Room(2, (200, 100, 200, 100),   'lad_room',         'William the Conqueror Bedroom'),
             Room(2, (400, 100, 200, 100),   'host_room',        'Henry IV Bedroom'),
             Room(2, (600, 100, 200, 100),   'broken_room',      'Richard III Bedroom'),
+            Room(2, (800, 100, 200, 100),   'doctor_room',      'Edward II Bedroom'),
             # Ground Floor
             Room(1, (0, 100, 200, 100),     'billiard_room',    'Billiard room'),
             Room(1, (200, 100, 200, 100),   'library',          'Library'),

@@ -3,6 +3,8 @@ label lad_day2_afternoon:
     scene great_hall # with irisout
 
     call change_time(15,00)
+
+    call change_floor(1)
     
     if lad_day2_hunt:
         """

@@ -69,7 +69,8 @@ label init_characters:
             CharacterInformation(0, "background", "He's a doctor and runs an hospital."), 
             CharacterInformation(0, "heroic act", "He has stayed at his charity hospital for 10 years. Which is quite an achievement."), 
             CharacterInformation(1, "status", "Not wealthy."),
-            CharacterInformation(2, "age", "He is 39 years old.")
+            CharacterInformation(2, "age", "He is 39 years old."),
+            CharacterInformation(3, "addict", "An opium addict.")
         ]
         doctor_details  = CharacterDetails(
             text_id = "doctor", 
