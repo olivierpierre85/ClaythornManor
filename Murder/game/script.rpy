@@ -21,7 +21,7 @@ label start():
     # Default Menu screen when press ESC in-game
     $ _game_menu_screen = "manor_map"
 
-    call init_variables
+    call init_technical_variables
 
     call init_characters
 
@@ -36,12 +36,14 @@ label start():
     # Debug Menu # TODO remove when prod
     jump debug_choices
 
+    call init_story_variables # TODO put at each loop
+
     # These display lines of dialogue.
     jump character_selection
 
     return
 
-label init_variables:
+label init_technical_variables:
     python:
         # Technical Variables
         test_mode = False
@@ -51,7 +53,13 @@ label init_variables:
             f.write("NEW GAME\n-----------\n")
             f.close()
 
-        # Story Variables
+        TIME_MAX = 999999
+
+    return
+
+label init_story_variables:
+    python:
+        # Lad Variables
         lad_day1_evening_billiard_room_visited = False
         lad_day1_drinks = 0
         lad_day1_poisoned = False
@@ -59,7 +67,5 @@ label init_variables:
         lad_visited_library = False
         lad_day2_breakfast_follow = False
         lad_day2_hunt = False
-
-        TIME_MAX = 999999
-
+    
     return

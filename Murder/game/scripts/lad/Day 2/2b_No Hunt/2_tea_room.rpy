@@ -11,7 +11,7 @@ label lad_day2_evening_tea_room:
 
     Misses Baxter was just talking about something fascinating.
 
-    You should join us.
+    You should sit with us.
     """
 
     lad """
@@ -30,11 +30,13 @@ label lad_day2_evening_tea_room:
 
     else:
         lad """
-        Really how fascinating. 
+        Really ? How fascinating. 
         """
 
         psychic """
-        It really is. But not to bored miss Marshman, I won't go into details, we can talk about it at another time.
+        yes, but to not bored miss Marsh, I won't go into details again.
+        
+        But if you'd like, we can talk about it at another time.
         """
 
     nurse """
@@ -136,7 +138,7 @@ label lad_day2_evening_tea_room:
     """
 
     """
-    Miss Marshman and I stay silent. 
+    Miss Marsh and I stay silent. 
 
     I guess she doesn't know more than I do about the running of a house.
 

@@ -9,7 +9,7 @@ label lad_day2_morning_nohunt:
     """
     I turned down the invitation for the hunt.
 
-    So I stayed with Amalia Baxter and the Rosalind Marshman.
+    So I stayed with Amalia Baxter and the Rosalind Marsh.
 
     They are in the tea room, waiting for a small luncheon to be served.
 

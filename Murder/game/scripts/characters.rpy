@@ -155,7 +155,7 @@ label init_characters:
             text_id = "nurse", 
             locked = True,
             know_real_name = True,
-            real_name = "Rosalind Marshman",
+            real_name = "Rosalind Marsh",
             nickname = "The Nurse",
             description_short = "",
             description_long = "Middle-aged woman.",
@@ -278,11 +278,12 @@ label character_selection:
     scene black_background
     narrator "Select Your Character"
 
+
     $ selected_choice = renpy.call_screen('character_selection') 
     if selected_choice == 'lad':
-            jump lad_introduction
+        jump lad_introduction
     else:
-            jump lad_day1_evening
+        jump lad_day1_evening
 
 # SCREENS
 screen characters:

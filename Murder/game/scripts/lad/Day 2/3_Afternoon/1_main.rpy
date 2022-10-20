@@ -1,6 +1,6 @@
 label lad_day2_afternoon:
     call black_screen_transition("Day 2 - afternoon") # Good ?
-    scene great_hall with irisout
+    scene great_hall # with irisout
 
     call change_time(15,00)
     
@@ -49,7 +49,8 @@ label lad_day2_afternoon:
     """
 
     drunk sad """
-    It was I swear. I have no idea why I hit him.
+    It was I swear. I have no idea how I could have hit him.
+    
     I was aiming at a rabbit. I didn't even notice him.
     """
 
@@ -129,8 +130,5 @@ label lad_day2_afternoon:
     I'll come with you.
     """
     
-    # ?????
-    scene bedroom_doctor
-
-    return
+    jump lad_day2_afternoon_bedroom
 

@@ -40,9 +40,6 @@ label lad_ending_day1_poisoned:
 
     hide screen centered_text
 
-    # Unlock captain
-    $ char_captain = True
-
     # Ending
     jump character_selection
 

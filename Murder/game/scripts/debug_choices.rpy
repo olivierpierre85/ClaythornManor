@@ -23,6 +23,9 @@ label debug_choices:
 
         "lad_day2_afternoon":
             jump lad_day2_afternoon
+            
+        "lad_day2_afternoon_bedroom":
+            jump lad_day2_afternoon_bedroom
 
     return
 

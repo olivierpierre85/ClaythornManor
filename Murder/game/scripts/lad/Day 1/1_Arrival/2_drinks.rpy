@@ -25,7 +25,7 @@ label lad_day1_drinks:
 
     show nurse at truecenter
     butler """
-    He is in conversation with Rosalind Marshman.
+    He is in conversation with Rosalind Marsh.
     """
     hide nurse
 
