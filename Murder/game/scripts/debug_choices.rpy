@@ -9,24 +9,29 @@ label debug_choices:
         "lad_introduction":
             jump lad_introduction
 
-        "lad_day1_drinks":
-            jump lad_day1_drinks
+        # "lad_day1_drinks":
+        #     jump lad_day1_drinks
 
-        "lad_day2_evening_tea_room":
-            jump lad_day2_evening_tea_room
+        # "lad_day2_evening_tea_room":
+        #     jump lad_day2_evening_tea_room
         
-        "lad_day2_hunt":
-            jump lad_day2_hunt
+        # "lad_day2_hunt":
+        #     jump lad_day2_hunt
             
-        "lad_day2_morning_nohunt":
-            jump lad_day2_morning_nohunt
+        # "lad_day2_morning_nohunt":
+        #     jump lad_day2_morning_nohunt
 
-        "lad_day2_afternoon":
-            jump lad_day2_afternoon
+        # "lad_day2_afternoon":
+        #     jump lad_day2_afternoon
             
         "lad_day2_afternoon_bedroom":
             jump lad_day2_afternoon_bedroom
+            
+        "lad_day2_evening":
+            jump lad_day2_evening
 
+        "lad_day3_morning":
+            jump lad_day3_morning
     return
 
 label debug_routes:

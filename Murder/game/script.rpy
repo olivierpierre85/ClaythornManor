@@ -33,10 +33,12 @@ label start():
 
     show screen in_game_menu_btn
     
+    call init_story_variables # TODO put at each loop
+    
     # Debug Menu # TODO remove when prod
     jump debug_choices
 
-    call init_story_variables # TODO put at each loop
+    
 
     # These display lines of dialogue.
     jump character_selection
