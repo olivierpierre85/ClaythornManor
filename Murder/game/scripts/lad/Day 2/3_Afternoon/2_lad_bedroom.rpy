@@ -147,29 +147,38 @@ label lad_day2_afternoon_bedroom:
 
     call change_time(17,00)
 
-    $ time_left = 120
+    $ time_left = 90
 
+    # TODO More possibilities 
     call run_menu(TimedMenu([
-            TimedMenuChoice('Meet the others in the Tea Room', 'lad_day2_evening_tea_room', 120, room = 'tea_room'),
             TimedMenuChoice('Library', 'lad_library', 10, room = 'library'), # condition not visited ?
             TimedMenuChoice('Richard III Bedroom', 'lad_day2_broken_room', 20, room = 'broken_room'),
             TimedMenuChoice('Edward II Bedroom', 'lad_day2_doctor_room', 20, room = 'doctor_room'),
-            TimedMenuChoice('Rest in your room until dinner.', 'TODOTODO', early_exit = True, room = 'lad_room'),
+            TimedMenuChoice('Rest in your room until dinner.', 'lad_day2_afternoon_skip', early_exit = True, room = 'lad_room'),
         ], is_map = True))
 
 
-    call change_time(19,00)
+    call change_time(18,30)
 
     play sound dinner_gong
 
     """
     I hear the gong.
 
-    I should join everyone in the dining hall.
+    I should go to the dining hall.
     """
 
-    #jump TOTOTOTod
+    jump lad_day2_evening
 
+label lad_day2_afternoon_skip:
+
+    """
+    I can't think of anything interesting to do now.
+
+    So I better rest.
+    """
+
+    return
 
 label lad_day2_doctor_room:
 
@@ -192,7 +201,9 @@ label lad_day2_doctor_room:
 
     He has almost a dozen of those bottles.
 
-    Laudanum, I heard that before, it's opium.
+    Laudanum... , I heard that before.
+    
+    It's opium.
 
     Looks like the doctor wasn't using it only on patients.
     """
