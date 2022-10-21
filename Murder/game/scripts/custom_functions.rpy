@@ -20,6 +20,20 @@ label breakpoint:
 
     return
 
+label change_room(new_room):
+    python:
+        renpy.scene()
+        renpy.show(new_room)
+
+        current_room = new_room
+
+        for room in rooms:
+            if new_room == room.name:
+                current_floor = room.floor # TODO not working
+
+
+    return
+
 # NOT needed, imprint frame in picture
 # label show_character(character, talk_position = character_talking_left):
 #   $ renpy.show(character, at_list=[talk_position])

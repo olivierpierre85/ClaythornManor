@@ -57,6 +57,8 @@ label init_technical_variables:
 
         TIME_MAX = 999999
 
+        current_room = "outside"
+
     return
 
 label init_story_variables:

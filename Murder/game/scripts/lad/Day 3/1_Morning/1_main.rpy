@@ -4,7 +4,7 @@ label lad_day3_morning:
 
     call black_screen_transition("Sunday")
 
-    scene bedroom_lad with irisout
+    call change_room('lad_room')
 
     play sound door_knock
     
