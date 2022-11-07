@@ -26,11 +26,12 @@ label change_room(new_room):
         renpy.show(new_room)
 
         current_room = new_room
-
+        print(new_room)
         for room in rooms:
-            if new_room == room.name:
+            print(room.name)
+            if new_room == room.id:
+                print(room.floor)
                 current_floor = room.floor # TODO not working
-
 
     return
 

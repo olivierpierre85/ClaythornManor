@@ -88,11 +88,51 @@ label lad_day3_morning:
     If that can appease you.
     """
 
-    # TODO choice of where to go ?
-    # Or directed 
+    """
+    We decide it's better we check again every room together.
+
+    So first we go to ...
+    """
+
+    $ time_left = 90
+    # TODO test every room before it's over
+    # WHERE TO FIND the captain ? in it's room ?
+    call run_menu(TimedMenu([
+        TimedMenuChoice('Library', 'lad_day3_morning_library', 10, room = 'library'), # condition not already visited ?
+        TimedMenuChoice('Richard III Bedroom', 'lad_day3_morning_broken_room', 20, room = 'broken_room'),
+        TimedMenuChoice('Edward II Bedroom', 'lad_day3_morning_doctor_room', 20, room = 'doctor_room'),
+        TimedMenuChoice('Captain', 'lad_day3_morning_captain_room', 20, room = 'captain_room'),
+        TimedMenuChoice('Go to sleep and hope for the best.', 'lad_day3_morning_sleep', early_exit = True, room = 'lad_room'),
+    ], is_map = True))
+
+    """
+    I believe we looked everywhere.
+
+    So we settled in the tea room to discuss what will be our next move.
+    """
+
+    captain """
+    That's unbelievable, but it looks like we are the three remaining living souls in this place.
+    """
 
     return
 
+label lad_day3_morning_captain_room:
 
+    call change_room('captain_room')
+
+    play sound door_knock
+
+    lad """
+    Captain !
+
+    Are you here ?
+    """
+
+    captain """
+    Yes, who is it ?
+    """
+
+    return 
 
     
