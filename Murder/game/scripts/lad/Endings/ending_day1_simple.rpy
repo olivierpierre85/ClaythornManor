@@ -6,8 +6,8 @@ label lad_ending_day1_poisoned:
 
     call death_screen_transition
 
+    #TODO factorize depending on how many death
     """
-
     You don't wake up. 
 
     You died during the night.
@@ -38,9 +38,47 @@ label lad_ending_day1_poisoned:
 
     """
 
-    hide screen centered_text
 
-    # Ending
+    # TODO make a function that reset var, and hide text
+    hide screen centered_text
     jump character_selection
 
+# DAY 3
+label lad_gun_downed_ending:
 
+    call death_screen_transition
+
+    """
+    Well you are dead.
+
+    Shot to death.
+
+    And no explanation was given.
+
+    If you feel you are owned one think again.
+
+    Why would someone explains their victims why they are killing them.
+
+    That would make no sense.
+
+    If you want a better explanation, then you will have to get it yourself.
+    """
+
+    hide screen centered_text
+
+    jump character_selection
+
+label lad_ending_day3_poisoned:
+
+    call death_screen_transition
+
+    #TODO factorize depending on how many death
+    """
+    You don't feel too good
+
+    """
+
+
+    # TODO make a function that reset var, and hide text
+    hide screen centered_text
+    jump character_selection

@@ -71,5 +71,8 @@ label init_story_variables:
         lad_visited_library = False
         lad_day2_breakfast_follow = False
         lad_day2_hunt = False
+        lad_day3_morning_captain_found = False
+        lad_day3_gun_downed = False
+        lad_day3_poisoned = False
     
     return

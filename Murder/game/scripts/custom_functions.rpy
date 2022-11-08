@@ -30,8 +30,8 @@ label change_room(new_room):
         for room in rooms:
             print(room.name)
             if new_room == room.id:
-                print(room.floor)
-                current_floor = room.floor # TODO not working
+                current_floor = room.floor
+                selected_floor = room.floor
 
     return
 

@@ -25,30 +25,36 @@ label init_map:
         # Full Map of the MANOR TODO no need to init each time
         rooms = [
             # Bedrooms
-            Room(2, (0, 100, 200, 100),     'psychic_room',     'George III Bedroom'),
-            Room(2, (200, 100, 200, 100),   'lad_room',         'William the Conqueror Bedroom'),
-            Room(2, (400, 100, 200, 100),   'host_room',        'Henry IV Bedroom'),
-            Room(2, (600, 100, 200, 100),   'broken_room',      'Richard III Bedroom'),
-            Room(2, (800, 100, 200, 100),   'doctor_room',      'Edward II Bedroom'),
-            Room(2, (0, 200, 200, 100),     'captain_room',     'George I Bedroom'),
+            Room(2, (0, 100, 200, 100),     'psychic_room',     'George III Bedroom (Psychic)'),
+            Room(2, (200, 100, 200, 100),   'lad_room',         'William the Conqueror Bedroom (Lad)' ),
+            Room(2, (400, 100, 200, 100),   'host_room',        'Henry IV Bedroom (Host)'),
+            Room(2, (600, 100, 200, 100),   'broken_room',      'Richard III Bedroom (broken)'),
+            Room(2, (800, 100, 200, 100),   'doctor_room',      'Edward II Bedroom (doctor)'),
+            Room(2, (0, 200, 200, 100),     'captain_room',     'George I Bedroom (captain)'),
             # Ground Floor
             Room(1, (0, 100, 200, 100),     'billiard_room',    'Billiard room'),
             Room(1, (200, 100, 200, 100),   'library',          'Library'),
             Room(1, (400, 100, 200, 100),   'tea_room',         'Tea room'),
+            Room(1, (0, 200, 200, 100),     'manor_garden',   'Garden'),
+            Room(1, (200, 200, 200, 100),    'forest',          'Forest'),
             # Basement
             Room(0, (0, 100, 200, 100),     'kitchen',          'Kitchen'),
-            Room(0, (200, 100, 200, 100),   'scullery',         ' Scullery'),
+            Room(0, (200, 100, 200, 100),   'scullery',         'Scullery'),
             Room(0, (400, 100, 200, 100),   'garage',           'Garage'),
+            Room(0, (0, 200, 200, 100),     'gun_room',         'Gun room'),
         ]
         # Info locked TODO put in the ROOM class?????
         map_info = dict()
         map_info['lad_room'] = False
         map_info['psychic_room'] = False
         map_info['broken_room'] = False
+        map_info['host_room'] = False
+        map_info['captain_room'] = False
 
     call change_floor(1) # ground floor
 
     return
+
 
 label change_floor(floor):
     # 0 = basement
@@ -133,7 +139,14 @@ screen map_information:
                 font "gui/font/BurtonScratch-Regular.ttf"
         
         if map_info['broken_room'] == True:
-            text "Psychic room":
+            text "Thomas Moody":
+                pos(0,100)
+                color "#be0c0c"
+                size 30
+                font "gui/font/BurtonScratch-Regular.ttf"
+        
+        if map_info['broken_room'] == True:
+            text "Lady Claythorn":
                 pos(0,100)
                 color "#be0c0c"
                 size 30
@@ -164,7 +177,7 @@ screen in_game_map_menu(timed_menu):
                 new_hotspot = None
                 # TODO check if idx still needed ?
                 for idx, choice in enumerate(choices): 
-                    if room.id == choice.room:
+                    if room.id == choice.room and choice.get_condition():
                         if not choice.hidden:
                             new_hotspot = Hotspot(choice.text, idx, room.area_points, room.id)
                         else:
@@ -243,6 +256,13 @@ screen in_game_map_menu(timed_menu):
 
 # Python classes
 init -1 python:
+    def default_room_text(room_id):
+        for room in rooms:
+            if room.id == room_id:
+                # TODO if map unlock, show the name of the person, not the name of the room
+                return room.name
+        return "-"
+
     class Room:
         def __init__(
             self, 

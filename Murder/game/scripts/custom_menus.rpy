@@ -128,11 +128,14 @@ init -1 python:
             # NORMAL MODE
             else:
                 if current_menu.is_map:
+                    global selected_floor
+                    global current_floor
+                    selected_floor = current_floor
                     room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
 
                     selected_choice = None
                     for idx, c in enumerate(self.choices):
-                        if c.room == room_id:
+                        if c.room == room_id and c.get_condition():
                             selected_choice = c
                             selected_choice_i = idx
                     

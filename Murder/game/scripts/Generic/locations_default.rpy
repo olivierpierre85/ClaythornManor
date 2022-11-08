@@ -13,6 +13,38 @@ label downstairs_default:
 
     return
 
+label gun_room_default:
+    call change_room('gun_room')
+    
+    """
+    A room filled with guns.
+
+    I better not touch them, I might hurt myself.
+    """
+
+    return
+
+label generic_exterior_bad_weather:
+    scene great_hall
+    """
+    I reach the great hall to go out. 
+    
+    But the weather is so bad I don't think it's a good idea.
+    """
+    return
+
+label manor_exterior_default:
+    # TODO adapt depending on the weather
+    call generic_exterior_bad_weather
+
+    return
+
+label forest_default:
+    # TODO adapt depending on the weather
+    call generic_exterior_bad_weather
+
+    return
+
 label garage_default:
     
     # Answers different based on the day (first day weather is too bad)
