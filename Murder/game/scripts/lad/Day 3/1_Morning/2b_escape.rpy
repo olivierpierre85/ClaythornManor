@@ -51,6 +51,8 @@ label lad_day3_escape:
     You don't really think I would have just let you get away so easily.
     """
 
+    # FOLLOWS TWO a gun shots, but the captain is dead too, but the killer was behind the forest and kills the captains 
+
     $ lad_day3_gun_downed = True
     # TODO IF you took a gun from the gun room ! The captain will see it and wrestle you for IT
     # ?TODO find a way to load it? If it is loaded?

@@ -36,6 +36,7 @@ label lad_day3_stay:
 
     That's probably for the best.
     """
+
     # TODO Unlock NOT a cook for the lad ???
 
     """
@@ -45,8 +46,31 @@ label lad_day3_stay:
     call change_room('dining_hall')
 
     lad """
-    TODO 
-    What's happening to me????
+    We start to eat in silence, there is not much more we want to talk about.
+
+    After I finished my plate, I want to stand to help Amalia Baxter do the dishes.
+
+    Not that it really matter now.
+
+    It's just something more to do while waiting.
+
+    But as soon I stand up, I realize I can't stay on my feet.
+
+    My head is dizzy. 
+
+    I feel that I am about to faint.
+
+    I look to Amelia Baxter.
+
+    She observes me with a blank stare, not surprised by my reaction.
+    """
+
+    lad """
+    What... did ... you do ... to my food ???
+    """
+
+    """
+    That's the last thing I can say before I fall on the ground.
     """
 
     $ lad_day3_poisoned = True
