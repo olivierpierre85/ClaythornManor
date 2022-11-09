@@ -1,10 +1,8 @@
 label lad_day2_morning_nohunt:
     # call black_screen_transition("The Lad - Inside") # Good ?
-    scene bedroom_lad
+    call  change_room('lad_room')
 
     call change_time(11,00)
-
-    call change_floor(2)
 
     """
     I turned down the invitation for the hunt.

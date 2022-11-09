@@ -58,6 +58,7 @@ label init_technical_variables:
         TIME_MAX = 999999
 
         current_room = "outside"
+        seen_tutorial_add_knowledge = False
 
     return
 

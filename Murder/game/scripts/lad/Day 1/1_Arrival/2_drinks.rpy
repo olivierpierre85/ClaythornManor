@@ -85,7 +85,7 @@ label lad_day1_drinks:
     play sound dinner_gong
 
     """
-    A gong sound. 
+    A gong rings. 
 
     What is that ?
 

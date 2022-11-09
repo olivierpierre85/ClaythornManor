@@ -14,6 +14,10 @@ style letter_style:
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos - 10
 
+style progress_bar:
+    left_bar Frame("gui/bar/progress_bar_left.png", gui.bar_borders)
+    right_bar Frame("gui/bar/progress_bar_right.png", gui.bar_borders)
+
 label init_characters:
     # Inside voice style
     define narrator = Character(None, what_style="narrator_style")
@@ -47,10 +51,10 @@ label init_characters:
 
         # 2. The Psychic
         psychic_extra_information = [
-            CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently."), 
-            CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house."), 
+            CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently.", is_important = True), 
+            CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house.", is_important = True), 
             CharacterInformation(2, "age", "She was .... SO she must be ????"),
-            CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.")
+            CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.", is_important = True)
         ]
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
@@ -228,6 +232,24 @@ init -100 python:
             return self.real_name
             # else:
             #     return self.description_short
+
+        def get_progress(self):
+            print("get progress")
+            total_info = 0
+            total_unlocked = 0
+            progress = 0
+            for info in self.information_list:
+                
+                if info.is_important:
+                    total_info += 1
+                    if not info.locked:
+                        print('unlocked')
+                        total_unlocked += 1
+            
+            if total_unlocked == 0:
+                return progress
+            else:
+                return int(total_unlocked / total_info * 100)
         
         def introduce(self):
             self.know_real_name = True
@@ -246,6 +268,11 @@ init -100 python:
                         renpy.pause(2)
                         renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
                         renpy.notify("You have unlock a new Character : The " + self.text_id)
+            # TODO if first time, add a call to an explanation NOT WORKING, MUST BE PUT INSIDE A LABEL ???
+            # global seen_tutorial_add_knowledge
+            # if not seen_tutorial_add_knowledge:
+            #     seen_tutorial_add_knowledge = True
+            #     renpy.call('tutorial_add_knowledge')
         
         def check_knowledge_unlocked(self, text_id):
             for info in self.information_list:
@@ -267,18 +294,19 @@ init -100 python:
             order,
             text_id,             
             content, 
-            locked = True
+            locked = True,
+            is_important = False
         ):
             self.order = order
             self.text_id = text_id
             self.content = content
             self.locked = locked
+            self.is_important = is_important
 
 # LABELS
 label character_selection:
     scene black_background
     narrator "Select Your Character"
-
 
     $ selected_choice = renpy.call_screen('character_selection') 
     if selected_choice == 'lad':
@@ -350,7 +378,7 @@ screen character_details(selected_char):
     tag menu # ????
     use game_menu(_("Characters"), scroll="viewport"):
 
-        style_prefix "characters" #???
+        #style_prefix "characters" #???
 
         hbox:
             vbox:
@@ -362,6 +390,22 @@ screen character_details(selected_char):
                     color gui.accent_color
                     # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
                 add "images/characters/side " + selected_char.text_id +".png"
+                if selected_char.get_progress() == 100:
+                    text "Unlocked":
+                        size 36
+                        xalign 0.5
+                else:
+                    text "Locked":
+                        # yoffset -25 inside
+                        size 36
+                        xalign 0.5
+                bar:
+                    value selected_char.get_progress() 
+                    range 100
+                    xmaximum 260
+                    style 'progress_bar'
+
+                
             vbox:
                 xoffset 40 
                 textbutton _("Return"): 
@@ -370,8 +414,7 @@ screen character_details(selected_char):
                     xpos 1000
                     action ShowMenu("characters") 
                 
-                hbox:
-                    
+                hbox:                    
                     yalign 0.5
                     text "Name:  ":
                         color gui.accent_color

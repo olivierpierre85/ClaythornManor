@@ -6,8 +6,6 @@ label lad_day1_evening:
 
     "He takes me through the grand staircase, on to the first floor."
 
-    call change_floor(2)
-
     footman """
     There you go sir.
 
@@ -18,7 +16,7 @@ label lad_day1_evening:
 
     call unlock_map('lad_room')
 
-    scene bedroom_lad
+    call  change_room('lad_room')
 
     """
     I enter the bedroom. 
@@ -54,7 +52,7 @@ label lad_day1_evening:
 
     "I am feeling tired. It's probably best if I go to bed now."
 
-    scene bedroom_lad
+    call  change_room('lad_room')
 
     "NOW WHAT ??? You Notice something on your bed. a letter."
 

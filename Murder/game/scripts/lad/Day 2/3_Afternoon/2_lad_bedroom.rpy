@@ -1,9 +1,7 @@
 label lad_day2_afternoon_bedroom:
-    scene bedroom_lad
+    call  change_room('lad_room')
 
     call change_time(16,00)
-
-    call change_floor(2)
 
     """
     So we carried Doctor Baldwin to his room and lay him down on his bed.
