@@ -344,7 +344,7 @@ screen character_selection:
         xalign .5
         yalign .5
         margin (310,110,310,150)
-        label "Select your character":
+        label "Select your Character":
             yoffset -50
             style "confirm_prompt" # TODO specific styling TODO space after label .... why so complicated.....
             xalign 0.5
@@ -363,18 +363,23 @@ screen character_list(is_selection = False):
                     xoffset char_x_offset
                     textbutton char.nickname:
                         if is_selection:
-                            action Return(char.text_id)
+                            if char.is_unlocked():
+                                action Return(char.text_id)
                         else:
                             action ShowMenu("character_details", char)
                     imagebutton:
                         if char.is_unlocked():
                             idle "images/characters/side/side " + char.text_id + ".png"
+                            hover "images/characters/side_hover/side " + char.text_id + " hover.png"
                         else:
                             idle "images/characters/side_bw/side " + char.text_id + " bw.png"
+
                         if is_selection:
-                            action Return(char.text_id)
+                            if char.is_unlocked():
+                                action Return(char.text_id)   
                         else:
                             action ShowMenu("character_details", char)
+                
                 $ char_x_offset += 50
 
         $ char_x_offset = 0
