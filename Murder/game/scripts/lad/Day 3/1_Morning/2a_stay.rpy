@@ -73,6 +73,8 @@ label lad_day3_stay:
     That's the last thing I can say before I fall on the ground.
     """
 
+    $ current_character.intuitions.add('psychic_poisons')
+
     $ lad_day3_poisoned = True
     # TODO special action (find the poison) to unlock TRUE ending first part=> Am I the baddy ?
 

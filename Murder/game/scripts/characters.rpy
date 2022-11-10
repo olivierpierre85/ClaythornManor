@@ -217,7 +217,8 @@ init -100 python:
             description_short = "",
             description_long = "",
             information_list = [],
-            has_met = set()
+            has_met = set(),
+            intuitions_list = set(),
         ):
             self.text_id = text_id
             self.locked = locked
@@ -236,22 +237,27 @@ init -100 python:
             #     return self.description_short
 
         def get_progress(self):
-            print("get progress")
             total_info = 0
             total_unlocked = 0
             progress = 0
             for info in self.information_list:
-                
                 if info.is_important:
                     total_info += 1
                     if not info.locked:
-                        print('unlocked')
                         total_unlocked += 1
-            
-            if total_unlocked == 0:
-                return progress
+            if total_info == 0:
+                return 100
+            elif total_unlocked == 0:
+                return 0
             else:
                 return int(total_unlocked / total_info * 100)
+
+        def is_unlocked(self):
+            for info in self.information_list:
+                if info.is_important and info.locked:
+                    return False
+            return True
+
         
         def introduce(self):
             self.know_real_name = True
@@ -361,7 +367,10 @@ screen character_list(is_selection = False):
                         else:
                             action ShowMenu("character_details", char)
                     imagebutton:
-                        idle "images/characters/side " + char.text_id +".png"
+                        if char.is_unlocked():
+                            idle "images/characters/side/side " + char.text_id + ".png"
+                        else:
+                            idle "images/characters/side_bw/side " + char.text_id + " bw.png"
                         if is_selection:
                             action Return(char.text_id)
                         else:
@@ -391,21 +400,23 @@ screen character_details(selected_char):
                     line_spacing 10
                     color gui.accent_color
                     # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
-                add "images/characters/side " + selected_char.text_id +".png"
-                if selected_char.get_progress() == 100:
+                
+                if selected_char.is_unlocked():
+                    add "images/characters/side/side " + selected_char.text_id +".png"
                     text "Unlocked":
                         size 36
                         xalign 0.5
                 else:
+                    add "images/characters/side_bw/side " + selected_char.text_id +" bw.png"
                     text "Locked":
                         # yoffset -25 inside
                         size 36
                         xalign 0.5
-                bar:
-                    value selected_char.get_progress() 
-                    range 100
-                    xmaximum 260
-                    style 'progress_bar'
+                    bar:
+                        value selected_char.get_progress() 
+                        range 100
+                        xmaximum 260
+                        style 'progress_bar'
 
                 
             vbox:
