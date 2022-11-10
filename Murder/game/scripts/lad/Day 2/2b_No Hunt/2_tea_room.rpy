@@ -99,7 +99,6 @@ label lad_day2_evening_tea_room:
     While we are still talking the butler enters the room.
     """
 
-    # TODO THey eat a  small lunch + time jump ?
 
     cook """
     I am glad you are all here.
@@ -126,7 +125,7 @@ label lad_day2_evening_tea_room:
     """
 
     cook """
-    Oh don't worry about me, I can handle it.
+    Oh don't worry about me. I can handle it.
 
     I will fetch your food now.
     """

@@ -14,7 +14,6 @@ label lad_day2_morning_nohunt:
     I retreated in my room to change.
 
     Now what should I do ?
-
     """
 
     $ time_left = 240

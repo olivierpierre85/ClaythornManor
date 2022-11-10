@@ -54,7 +54,8 @@ label init_characters:
             CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently.", is_important = True), 
             CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house.", is_important = True), 
             CharacterInformation(2, "age", "She was .... SO she must be ????"),
-            CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.", is_important = True)
+            CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.", is_important = True),
+            CharacterInformation(3, "lie", "She sometimes/always lie about what she sees ?", is_important = True)
         ]
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
@@ -70,11 +71,12 @@ label init_characters:
 
         # 3. The Doctor
         doctor_extra_information = [
-            CharacterInformation(0, "background", "He's a doctor and runs an hospital."), 
-            CharacterInformation(0, "heroic act", "He has stayed at his charity hospital for 10 years. Which is quite an achievement."), 
-            CharacterInformation(1, "status", "Not wealthy."),
+            CharacterInformation(0, "background", "He's a doctor and runs an hospital.", is_important = True), 
+            CharacterInformation(0, "heroic act", "He has stayed at his charity hospital for 10 years. Which is quite an achievement.", is_important = True), 
+            CharacterInformation(1, "status", "Not wealthy.", is_important = True),
             CharacterInformation(2, "age", "He is 39 years old."),
-            CharacterInformation(3, "addict", "An opium addict.")
+            CharacterInformation(3, "addict", "An opium addict.", is_important = True),
+            CharacterInformation(3, "lie", "He stays to run an hospital because he has an easy access to drugs.", is_important = True)
         ]
         doctor_details  = CharacterDetails(
             text_id = "doctor", 
