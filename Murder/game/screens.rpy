@@ -1234,7 +1234,7 @@ style skip_triangle:
 
 screen notify(message):
 
-    zorder 100
+    zorder 1000
     style_prefix "notify"
 
     frame at notify_appear:

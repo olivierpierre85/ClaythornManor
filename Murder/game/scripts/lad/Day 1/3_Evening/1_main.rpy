@@ -40,7 +40,7 @@ label lad_day1_evening:
     $ time_left = 120
 
     $ lad_day1_evening_menu = TimedMenu([
-        TimedMenuChoice('Go knock on the the door of Amalia Baxter', 'lad_day1_evening_psychic_room', 55, room = 'psychic_room'),
+        TimedMenuChoice('Go knock on the the door of Amelia Baxter', 'lad_day1_evening_psychic_room', 55, room = 'psychic_room'),
         TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
         TimedMenuChoice('Library', 'lad_library', 40, room = 'library'),
         TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')

@@ -126,7 +126,7 @@ label lad_day3_morning:
     # TODO the captain saw a car in the garage BUT it's out of gas, AND he can't find the keys, so we'll need to walk
 
     $ lad_day3_escape_menu = TimedMenu([
-        TimedMenuChoice('Stay here with Amalia', 'lad_day3_stay', early_exit = True ),
+        TimedMenuChoice('Stay here with Amelia', 'lad_day3_stay', early_exit = True ),
         TimedMenuChoice('Follow Sushil', 'lad_day3_escape', early_exit = True)
     ], image_left = "psychic",  image_right = "captain")
     $ time_left = 1
@@ -187,7 +187,7 @@ label lad_day3_morning_captain_room:
     call unlock_map('captain_room')
 
     lad """
-    It's Ted Harring. I am here with Amalia Baxter.
+    It's Ted Harring. I am here with Amelia Baxter.
 
     We would like to talk to you.
     """
@@ -250,7 +250,7 @@ label lad_day3_morning_captain_room:
     """
 
     """
-    Amalia seemed nervous when she answered.
+    Amelia seemed nervous when she answered.
     """
 
     captain """

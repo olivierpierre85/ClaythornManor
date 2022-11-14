@@ -12,7 +12,7 @@ label psychic_generic(skip_intro = False):
 
     #             lad "Hi miss ..."
 
-    #             psychic "Miss Baxter, Amalia Baxter."
+    #             psychic "Miss Baxter, Amelia Baxter."
 
     #             $ psychic_details.introduce()
 

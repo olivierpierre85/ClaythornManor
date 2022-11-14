@@ -23,9 +23,9 @@ label init_characters:
     define narrator = Character(None, what_style="narrator_style")
 
     # Non Playable Characters
-    define letter       = Character("The Letter", what_style="letter_style")
-    define butler       = Character("The Butler", image="butler")
-    define footman      = Character("The Footman", image="footman")
+    define letter       = Character("Letter", what_style="letter_style")
+    define butler       = Character("Butler", image="butler")
+    define footman      = Character("Footman", image="footman")
 
     #  image side butler = "images/characters/butler_framed_02.png"
 
@@ -61,7 +61,7 @@ label init_characters:
             text_id = "psychic", 
             locked = True,
             know_real_name = True,
-            real_name = "Amalia Baxter",
+            real_name = "Amelia Baxter",
             nickname = "The Psychic",
             description_short = "Middle-age Woman",
             description_long = "Middle-aged woman, looking a bit eccentric.",
@@ -361,7 +361,7 @@ screen character_list(is_selection = False):
             for char in char_sub_list:
                 vbox:
                     xoffset char_x_offset
-                    textbutton char.nickname:
+                    textbutton char.real_name:
                         if is_selection:
                             if char.is_unlocked():
                                 action Return(char.text_id)
@@ -400,7 +400,7 @@ screen character_details(selected_char):
 
         hbox:
             vbox:
-                text selected_char.nickname:
+                text selected_char.real_name:
                     size 48
                     font gui.name_text_font
                     line_leading 10
@@ -434,23 +434,25 @@ screen character_details(selected_char):
                     xpos 1000
                     action ShowMenu("characters") 
                 
-                hbox:                    
-                    yalign 0.5
-                    text "Name:  ":
-                        color gui.accent_color
-                    text selected_char.real_name 
+                # hbox:                    
+                #     yalign 0.5
+                #     text "Name:  ":
+                #         color gui.accent_color
+                #     text selected_char.real_name 
 
                 text "Description: " color gui.accent_color
-                text selected_char.description_long
+                for i in range(12):
+                    text selected_char.description_long
+                
                 for info in selected_char.information_list:
                     if not info.locked:
                         text info.content
         
-                textbutton _("Return"): 
-                    xalign 1.0 
-                    yalign 0.0
-                    xpos 1000
-                    action ShowMenu("characters") 
+                # textbutton _("Return"): 
+                #     xalign 1.0 
+                #     yalign 0.0
+                #     xpos 1000
+                #     action ShowMenu("characters") 
         
         # TODO show bottom right
 

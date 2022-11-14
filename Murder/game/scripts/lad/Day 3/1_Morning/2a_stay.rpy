@@ -1,18 +1,18 @@
 label lad_day3_stay:
     """
-    I don't feel comfortable leaving Amalia Baxter alone in here.
+    I don't feel comfortable leaving Amelia Baxter alone in here.
 
     After all we don't know that there is no killer left in the building.
 
     And in any case, I don't think I can trust to follow this guy in the forest.
 
-    If Amalia's feeling is correct, he very well might be the killer.
+    If Amelia's feeling is correct, he very well might be the killer.
 
     So I figure it's best we stay there, and be on our guards.
 
     If we are lucky, the captain will come back with reinforcements and everything will be fine.
 
-    After a while sitting anxiously, Amalia stands up.
+    After a while sitting anxiously, Amelia stands up.
     """
 
     psychic """
@@ -48,7 +48,7 @@ label lad_day3_stay:
     lad """
     We start to eat in silence, there is not much more we want to talk about.
 
-    After I finished my plate, I want to stand to help Amalia Baxter do the dishes.
+    After I finished my plate, I want to stand to help Amelia Baxter do the dishes.
 
     Not that it really matter now.
 

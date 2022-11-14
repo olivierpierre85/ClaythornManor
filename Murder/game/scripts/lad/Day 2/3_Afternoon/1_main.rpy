@@ -20,7 +20,7 @@ label lad_day2_afternoon:
         """
         I can see the hunting partying entering the house.
 
-        Amalia and Rosalind were already there, near the entrance.
+        Amelia and Rosalind were already there, near the entrance.
 
         Lady Claythorn enters first, visibly shocked.
 

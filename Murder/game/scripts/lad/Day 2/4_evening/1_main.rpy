@@ -19,7 +19,7 @@ label lad_day2_evening:
 
     The poor guy didn't even object.
 
-    I take my usual seat, with only Amalia Baxter next to me now.
+    I take my usual seat, with only Amelia Baxter next to me now.
     """
 
     host """

@@ -13,7 +13,7 @@ label lad_day1_evening_billiard_room:
         """
         Almost everyone I saw at dinner is here.
 
-        Except for Amalia Baxter and our host.
+        Except for Amelia Baxter and our host.
 
         I recognize Doctor Baldwin sitting on a chair alone.
 

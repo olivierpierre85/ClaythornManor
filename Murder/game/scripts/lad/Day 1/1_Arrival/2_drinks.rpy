@@ -51,7 +51,7 @@ label lad_day1_drinks:
 
     show psychic at truecenter
     butler """
-    The older lady in the corner of the room is Amalia Baxter.
+    The older lady in the corner of the room is Amelia Baxter.
     """
     hide psychic
 
@@ -70,7 +70,7 @@ label lad_day1_drinks:
 
     Most of the guests are already in conversation.
     
-    But Amalia Baxter and Samuel Manning are alone.
+    But Amelia Baxter and Samuel Manning are alone.
 
     They seem more approachable than the rest.
     """
@@ -78,7 +78,7 @@ label lad_day1_drinks:
     $ time_left = 30
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
-        TimedMenuChoice('Talk to Amalia Baxter', 'lad_day1_drinks_psychic', 5),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5),
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 

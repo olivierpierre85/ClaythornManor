@@ -145,7 +145,7 @@ screen map_information:
                 size 30
                 font "gui/font/BurtonScratch-Regular.ttf"
         
-        if map_info['broken_room'] == True:
+        if map_info['host_room'] == True:
             text "Lady Claythorn":
                 pos(0,100)
                 color "#be0c0c"

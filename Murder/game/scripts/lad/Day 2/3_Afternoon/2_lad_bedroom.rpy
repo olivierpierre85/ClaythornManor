@@ -20,7 +20,7 @@ label lad_day2_afternoon_bedroom:
     """
 
     """
-    Amalia Baxter... What does she want ?
+    Amelia Baxter... What does she want ?
     """
 
     # TODO CHoice of letting her in or not ?

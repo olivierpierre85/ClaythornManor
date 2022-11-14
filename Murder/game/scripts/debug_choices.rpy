@@ -56,7 +56,7 @@ label debug_routes:
             1, # Talk to the woman
             6, # You don't have anymore questions for her
             0, # Talk to the man
-            1, # Talk to Amalia Baxter
+            1, # Talk to Amelia Baxter
             6, # You don't have anymore questions for her
             0, # Talk to Daniel Baldwin
             5, # You don't have anymore questions for him

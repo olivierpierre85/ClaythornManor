@@ -32,7 +32,7 @@ label lad_day2_morning:
 
     So I take my seat at the same place than yesterday trying not to be noticed.
 
-    Daniel Baldwin and Amalia Baxter are already there.
+    Daniel Baldwin and Amelia Baxter are already there.
     """
 
     psychic """
@@ -168,7 +168,7 @@ label lad_day2_morning:
 
         Everybody looks distressed.
 
-        I turn over to Amalia Baxter.
+        I turn over to Amelia Baxter.
         """
 
         lad """

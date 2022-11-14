@@ -31,7 +31,7 @@ label lad_day1_dinner:
 
     You then turn your attention to the guests next to you.
 
-    You are sitting between Amalia Baxter, and Daniel Baldwin.
+    You are sitting between Amelia Baxter, and Daniel Baldwin.
     """
 
     # $ doctor_details.introduce()
@@ -40,7 +40,7 @@ label lad_day1_dinner:
 
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_dinner_doctor'),
-        TimedMenuChoice('Talk to Amalia Baxter', 'lad_day1_dinner_psychic')
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_dinner_psychic')
     ], image_left = "doctor", image_right = "psychic")
     call run_menu(current_menu)
 
