@@ -373,6 +373,8 @@ screen character_list(is_selection = False):
                             hover "images/characters/side_hover/side " + char.text_id + " hover.png"
                         else:
                             idle "images/characters/side_bw/side " + char.text_id + " bw.png"
+                            if not is_selection:
+                                hover "images/characters/side_bw_hover/side " + char.text_id + " bw hover.png"
 
                         if is_selection:
                             if char.is_unlocked():
