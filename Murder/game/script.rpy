@@ -2,9 +2,10 @@
 # Global Variable
 
 # CLOCK
-init -100 python:
+init -1000 python:
     from datetime import datetime, time, timedelta, date
     renpy.music.register_channel("clock", "sfx", loop=False)
+    current_music = 'upbeat'
 
 # TODO move to init var ? Sort it out
 define time_left = 0
@@ -59,6 +60,8 @@ label init_technical_variables:
 
         current_room = "outside"
         seen_tutorial_add_knowledge = False
+
+        current_music = 'upbeat'
 
     return
 

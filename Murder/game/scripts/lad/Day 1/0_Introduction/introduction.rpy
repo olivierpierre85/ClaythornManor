@@ -2,13 +2,15 @@ label lad_introduction:
   
     scene train_inside
 
-    #TODO longer introduction? sound?
+    play sound train_moving loop
+
+    $ play_music('chill')
+
     """
     As I approach my destination, I am reading yet another time the letter that made me come on this trip.
     """
 
     letter """
-
     September 5th, [current_year]
 
     Dear Mister Haring,
@@ -26,7 +28,6 @@ label lad_introduction:
     All you have to do is be at the Aberdeen Station, on the 13th of October around 4PM, where someone will drive you to the manor.
 
     Hoping ,.....
-
     """
 
     """
@@ -50,20 +51,11 @@ label lad_introduction:
     
     """
 
-    # $ host_details.introduce()
+    play sound train_stopping
 
-    play sound train_moving
-
-    play music danger_01
-
-    # TODO THEME ANIMATION AND SONG
-    # Dramatic music, Start of Theme ?
-    # end with 
-    # PAUSE
-    pause 5.0
-
-    stop music
     scene train_station
+
+    pause 5.0
     
     "As I step off the train, a man approaches me."
 

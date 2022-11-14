@@ -9,11 +9,12 @@ label debug_choices:
         "lad_introduction":
             jump lad_introduction
 
-        # "lad_day1_drinks":
-        #     jump lad_day1_drinks
+        "lad_day1_drinks":
+            jump lad_day1_drinks
 
-        # "lad_day2_evening_tea_room":
-        #     jump lad_day2_evening_tea_room
+        "lad_day2_dinner":
+            $ test_choices = debug_lad_evening
+            jump lad_day2_evening_tea_room
         
         # "lad_day2_hunt":
         #     jump lad_day2_hunt
@@ -24,14 +25,14 @@ label debug_choices:
         # "lad_day2_afternoon":
         #     jump lad_day2_afternoon
             
-        "lad_day2_afternoon_bedroom":
-            jump lad_day2_afternoon_bedroom
+        # "lad_day2_afternoon_bedroom":
+        #     jump lad_day2_afternoon_bedroom
             
-        "lad_day2_evening":
-            jump lad_day2_evening
+        # "lad_day2_evening":
+        #     jump lad_day2_evening
 
-        "lad_day3_morning":
-            jump lad_day3_morning
+        # "lad_day3_morning":
+        #     jump lad_day3_morning
     return
 
 label debug_routes:
@@ -50,6 +51,12 @@ label debug_routes:
             1,# Ask him about himself
             4,# Ask him his age
             0,# Talk about the weather
+        ]
+
+        debug_lad_evening = [
+            1, # Talk to the woman
+            6, # You don't have anymore questions for her
+            0, # Talk to the man
         ]
 
         debug_lad_first_death = [

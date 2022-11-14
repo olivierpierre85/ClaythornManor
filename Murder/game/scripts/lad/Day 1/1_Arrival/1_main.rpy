@@ -1,7 +1,10 @@
 # Introduction for hero
 label lad_day1_arrival:
-
+    
+    stop music fadeout 3.0
+    
     play sound thunder loop
+    
     scene manor_exterior
 
     """
@@ -24,30 +27,26 @@ label lad_day1_arrival:
     While the driver is unloading my bag from the car, I walk towards the entrance, where a butler opens the door to greet me.
 
     I walk into the most impressive hall I ever been in.
-    
     """
 
     stop sound
     
-    call black_screen_transition("The Lad - Day 1")
-    scene great_hall with irisout
+    call black_screen_transition("Ted Harring - Friday")
+    # scene great_hall with irisout
+
+    call change_room('great_hall')
     
     call change_time(18,00)
 
     play music upbeat_01 fadein 10.0
 
     butler """
-
     Good afternoon Sir.
-
     """
 
     lad "Hello, I am Ted Harring, I was invited by Lady Claythorn."
 
-    # $ lad_details.introduce()
-
     butler """
-
     Yes, of course Mr Harring.
 
     Welcome to Claythorn Manor.
@@ -57,7 +56,6 @@ label lad_day1_arrival:
     Everyone is already there, and dinner will be ready very soon.
 
     So if you follow me into the tea room, you can join the rest of the party for some drinks.
-    
     """
 
     """

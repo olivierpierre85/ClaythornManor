@@ -60,7 +60,9 @@ label lad_day2_hunt:
     """
 
     butler """
-    Right. Anyway, you can pick up this gun and wear the clothes I laid down on the table.
+    Right. 
+    
+    Anyway, you can pick up this gun and wear the clothes I laid down on the table.
 
     Come join the others outside when you are ready.
     """

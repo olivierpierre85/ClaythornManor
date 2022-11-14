@@ -20,10 +20,12 @@ label breakpoint:
 
     return
 
-label change_room(new_room):
+label change_room(new_room, fadeout = None):
     python:
         renpy.scene()
         renpy.show(new_room)
+        # if fadeout:
+        renpy.with_statement(irisout)
 
         current_room = new_room
         print(new_room)
@@ -34,6 +36,25 @@ label change_room(new_room):
                 selected_floor = room.floor
 
     return
+
+# Smart music changes
+init python:
+    def play_music(music_style):
+        # renpy.music.get_playing(channel='music')
+        global current_music
+        previous_music = current_music
+        current_music = music_style
+        upbeat_list = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3','audio/music/upbeat_03.mp3', 'audio/music/upbeat_04.mp3']
+        chill_list = ['audio/music/chill_01.mp3']
+        
+        if music_style == 'chill':
+            renpy.play(chill_list, channel='music')
+        elif music_style == 'upbeat':
+            renpy.play(upbeat_list, channel='upbeat')
+
+        # if music_style == 'previous':
+
+        return
 
 # NOT needed, imprint frame in picture
 # label show_character(character, talk_position = character_talking_left):
