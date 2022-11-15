@@ -38,41 +38,87 @@ screen storyline:
                 #     yoffset 20 
                 #     xalign 0.5                       
                 #     idle "images/ui/storyline_background.jpg"
+                viewport:
+                    yinitial 0.0
+                    scrollbars "horizontal"
                     
-                vbox:
-                    offset (20, 10) 
-                    for i in range(3):
-                        text "Day " + str(i):
-                            font gui.name_text_font
-                            color "#FFFFFF"
+                    mousewheel True
+                    draggable True
+
+                    xsize 1700
+                    
+                    yoffset 20
+                    ysize 500
+
+                    hbox:
+                        yfill True
+
                         
                         $ image_time = "images/ui/rectangle_06.png"
                         $ image_arrow = "images/ui/arrow_straight_03.png"
-                        for j in range(2):
-                            hbox:
-                                imagemap: 
-                                    idle image_time
-                                    text "Drinks{image=images/ui/intuition_icon.png}" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                                add image_arrow
-                                imagemap: 
-                                    idle image_time
-                                    text "Dinner" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                                add image_arrow
-                                imagemap: 
-                                    idle image_time
-                                    text "Evening" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                                add image_arrow
-                                imagemap: 
-                                    idle image_time
-                                    text "Day 2 breakfast" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                                add image_arrow
-                                imagemap: 
-                                    idle image_time
-                                    text "THe hunt" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                                add image_arrow
-                                imagemap: 
-                                    idle image_time
-                                    text "DEAD" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                        vbox:
+                            yalign 0.5
+                            # text "Friday":
+                            #     font gui.name_text_font
+                            #     color "#FFFFFF"
+                            imagemap: 
+                                idle image_time
+                                text "Drinks{image=images/ui/intuition_icon.png}" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                        vbox:
+                            yalign 0.5
+                            add image_arrow
+                        vbox:
+                            yalign 0.5
+                            imagemap: 
+                                idle image_time
+                                text "Dinner" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            imagemap: 
+                                idle image_time
+                                text "DEATH" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                        vbox:
+                            yalign 0.5
+                            add image_arrow
+                            add image_arrow
+                        vbox:
+                            yalign 0.5
+                            imagemap: 
+                                idle image_time
+                                text "Evening" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            imagemap: 
+                                idle image_time
+                                text "Other D" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            imagemap: 
+                                idle image_time
+                                text "X" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                        vbox:
+                            yalign 0.5
+                            add image_arrow
+                            add image_arrow
+                            add image_arrow
+                            # add image_arrow
+                            # imagemap: 
+                            #     idle image_time
+                            #     text "Evening" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            # add image_arrow
+                            # imagemap: 
+                            #     idle image_time
+                            #     text "Day 2 breakfast" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            # add image_arrow
+                            # imagemap: 
+                            #     idle image_time
+                            #     text "THe hunt" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            # add image_arrow
+                            # imagemap: 
+                            #     idle image_time
+                            #     text "DEAD" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            # add image_arrow
+                            # imagemap: 
+                            #     idle image_time
+                            #     text "DEAD" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            # add image_arrow
+                            # imagemap: 
+                            #     idle image_time
+                            #     text "DEAD" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
                     # hbox:
                     #     add "images/ui/rectangle_empty.png"
                     #     add "images/ui/arrow_empty.png"
