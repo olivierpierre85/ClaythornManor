@@ -8,6 +8,7 @@ label doctor_generic():
         TimedMenuChoice('Why were you invited here ?', 'doctor_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
         TimedMenuChoice('Talk about the manor', 'doctor_generic_manor', 10),
         TimedMenuChoice('Ask him his age', 'doctor_generic_age', 5),
+        TimedMenuChoice('What room are you in ?', 'doctor_generic_room', 5),
         # TimedMenuChoice('Ask about the others', 'doctor_generic_others', 5),
         TimedMenuChoice('You don\'t have anymore questions for him', 'doctor_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "doctor")
@@ -112,6 +113,13 @@ label doctor_generic_age:
         lad "Actually I am not sure."
 
     $ doctor_details.add_knowledge('age') 
+    
+    return
+
+label doctor_generic_room:
+    doctor "I am in the Edward II room."
+
+    call unlock_map('doctor_room')
     
     return
 

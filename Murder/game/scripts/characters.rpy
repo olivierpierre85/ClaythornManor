@@ -441,8 +441,7 @@ screen character_details(selected_char):
                 #     text selected_char.real_name 
 
                 text "Description: " color gui.accent_color
-                for i in range(12):
-                    text selected_char.description_long
+                text selected_char.description_long
                 
                 for info in selected_char.information_list:
                     if not info.locked:

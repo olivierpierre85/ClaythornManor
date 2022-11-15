@@ -50,6 +50,7 @@ label init_map:
         map_info['broken_room'] = False
         map_info['host_room'] = False
         map_info['captain_room'] = False
+        map_info['doctor_room'] = False
 
     call change_floor(1) # ground floor
 
@@ -148,6 +149,12 @@ screen map_information:
         if map_info['host_room'] == True:
             text "Lady Claythorn":
                 pos(0,100)
+                color "#be0c0c"
+                size 30
+                font "gui/font/BurtonScratch-Regular.ttf"
+        if map_info['doctor_room'] == True:
+            text doctor_details.real_name:
+                pos(800,100)
                 color "#be0c0c"
                 size 30
                 font "gui/font/BurtonScratch-Regular.ttf"

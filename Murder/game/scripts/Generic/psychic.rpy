@@ -5,34 +5,6 @@
 # ?TODO add extra choices possibilities?
 label psychic_generic(skip_intro = False):
 
-    # if not skip_intro:
-    #     if 'psychic' not in current_character.has_met:
-
-    #         if current_character.text_id == "lad":
-
-    #             lad "Hi miss ..."
-
-    #             psychic "Miss Baxter, Amelia Baxter."
-
-    #             $ psychic_details.introduce()
-
-    #             lad "Nice to meet you miss Baxter. I am Ted Haring."
-
-    #             psychic "Nice to meet you mister Haring."
-            
-    #         # elif current_character.text_id == "TODO": # Maybe need a default options ? with a current char and current_char_details
-
-    #         $ current_character.has_met.add('psychic')
-            
-    #     else:
-    #         if current_character.text_id == "lad":
-
-    #             lad "Hi again Miss Baxter."
-
-    #             psychic "Oh Mister Harring. I am glad we can continue our conversation."
-
-            # elif current_character.text_id == "# Maybe need a default options ? with a current char and current_char_details
-
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([
             TimedMenuChoice('Talk about the weather', 'psychic_generic_weather', 5),
