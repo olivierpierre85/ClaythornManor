@@ -13,13 +13,57 @@ label psychic_generic(skip_intro = False):
             TimedMenuChoice('How old are you ?', 'psychic_generic_age', 5),
             TimedMenuChoice('What room are you in ?', 'psychic_generic_room', 5),
             TimedMenuChoice('Why were you invited here ?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
+            TimedMenuChoice('What do you think of the other guests ?', 'psychic_generic_other_guests', 0),
             TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "psychic")
 
     call run_menu(psychic_generic_menu)
 
     return
+
+label psychic_generic_other_guests:
+
+    # TODO if period is drinks ignore question
+    if True:
+
+        psychic """
+        I've just met them. So I can't say to know a lot yet.
+
+        All I know is that this guy over there ...
+        """
+
+        """
+        She points at Sushil Sinha.
+        """
+
+        psychic """
+        ... is monopolizing the conversation.
+
+        And he is very noisy too.
+
+        It's not very tactful if you ask me.
+
+        That's why I rather stay away from the group.
+        """
     
+    else
+
+        if not 'psychic_generic_other_guests_menu' in locals():
+            $ psychic_generic_other_guests_menu = TimedMenu([
+                TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk', 5),
+                TimedMenuChoice('Talk about something else', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
+            ], image_right = "psychic")
+
+        call run_menu(psychic_generic_other_guests_menu)
+
+    return
+
+label psychic_generic_drunk:
+    psychic """
+    He is not a very reliable man I think.
+    """
+    return
+
 label psychic_generic_weather:
 
     # TODO adapt depeding of the day

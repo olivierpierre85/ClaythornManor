@@ -76,6 +76,7 @@ label doctor_generic_heroic_act:
 
     Still, it's always nice to get some recognition.
     """
+    
     return
 
 label doctor_generic_manor:
