@@ -1,5 +1,5 @@
 label init_storylines:
-    $ current_storyline = "The Lad"
+    $ current_storyline = "lad"
     return
 
 transform character_storyline:
@@ -25,50 +25,64 @@ screen storyline:
                     spacing 20
                     for char in char_list_flat:
                         imagebutton:
-                            idle "images/characters/" + char.text_id +".png" at character_storyline
-                            action SetVariable("current_storyline", char.nickname) 
+                            if char.text_id == current_storyline:
+                                idle "images/characters/side/side " + char.text_id +".png" at character_storyline
+                            else:
+                                idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_storyline
+                                hover "images/characters/side/side " + char.text_id + ".png"
+                            
+                            action SetVariable("current_storyline", char.text_id) 
                 
                 # Storyline
-                imagemap:
-                    yoffset 20 
-                    xalign 0.5                       
-                    idle "images/ui/storyline_background.jpg"
+                # imagemap:
+                #     yoffset 20 
+                #     xalign 0.5                       
+                #     idle "images/ui/storyline_background.jpg"
                     
-                    vbox:
-                        text current_storyline:
+                vbox:
+                    offset (20, 10) 
+                    for i in range(3):
+                        text "Day " + str(i):
                             font gui.name_text_font
-                            color "#000000"
-                        offset (20, 10) 
-                        hbox:
-                            imagemap: 
-                                idle "images/ui/rectangle_03.png"
-                                text "Drinks" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#000000"
-                            add "images/ui/arrow_straight.png"
-                            imagemap: 
-                                idle "images/ui/rectangle_03.png"
-                                text "Dinner" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#000000"
-                            add "images/ui/arrow_straight.png"
-                            imagemap: 
-                                idle "images/ui/rectangle_03.png"
-                                text "Evening" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#000000"
-                            add "images/ui/arrow_straight.png"
-                            imagemap: 
-                                idle "images/ui/rectangle_03.png"
-                                text "Day 2 breakfast" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#000000"
-                            add "images/ui/arrow_straight.png"
-                            imagemap: 
-                                idle "images/ui/rectangle_03.png"
-                                text "THe hunt" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#000000"
-                        hbox:
-                            add "images/ui/rectangle_empty.png"
-                            add "images/ui/arrow_empty.png"
-                            add "images/ui/rectangle_empty.png"
-                            add "images/ui/arrow_empty.png"
-                            add "images/ui/rectangle_empty.png"
-                            add "images/ui/arrow_fork.png"
-                            imagemap: 
-                                idle "images/ui/rectangle_03.png"
-                                text "DEAD" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#000000"
+                            color "#FFFFFF"
+                        
+                        $ image_time = "images/ui/rectangle_06.png"
+                        $ image_arrow = "images/ui/arrow_straight_03.png"
+                        for j in range(2):
+                            hbox:
+                                imagemap: 
+                                    idle image_time
+                                    text "Drinks{image=images/ui/intuition_icon.png}" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                add image_arrow
+                                imagemap: 
+                                    idle image_time
+                                    text "Dinner" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                add image_arrow
+                                imagemap: 
+                                    idle image_time
+                                    text "Evening" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                add image_arrow
+                                imagemap: 
+                                    idle image_time
+                                    text "Day 2 breakfast" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                add image_arrow
+                                imagemap: 
+                                    idle image_time
+                                    text "THe hunt" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                add image_arrow
+                                imagemap: 
+                                    idle image_time
+                                    text "DEAD" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                    # hbox:
+                    #     add "images/ui/rectangle_empty.png"
+                    #     add "images/ui/arrow_empty.png"
+                    #     add "images/ui/rectangle_empty.png"
+                    #     add "images/ui/arrow_empty.png"
+                    #     add "images/ui/rectangle_empty.png"
+                    #     add "images/ui/arrow_fork.png"
+                    #     imagemap: 
+                    #         idle image_time
+                    #         text "DEAD" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#FFFFFF"
             vbox:
                 yoffset 150
                 spacing 30
