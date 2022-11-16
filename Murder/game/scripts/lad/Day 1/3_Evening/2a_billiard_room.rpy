@@ -82,8 +82,8 @@ label lad_day1_evening_billiard_room_bar_1:
 
     Anyway, I am Thomas Moody.
     """
+    $ drunk_details.add_knowledge('addict') 
 
-    $ current_character.has_met.add('broken')
     # $ broken_details.introduce()
 
     lad "Ted Harring, how do you do."

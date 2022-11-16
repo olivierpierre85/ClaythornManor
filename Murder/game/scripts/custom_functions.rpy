@@ -42,17 +42,17 @@ init python:
     def play_music(music_style):
         # renpy.music.get_playing(channel='music')
         global current_music
-        previous_music = current_music
-        current_music = music_style
-        upbeat_list = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3','audio/music/upbeat_03.mp3', 'audio/music/upbeat_04.mp3']
-        chill_list = ['audio/music/chill_01.mp3']
-        
-        if music_style == 'chill':
-            renpy.play(chill_list, channel='music')
-        elif music_style == 'upbeat':
-            renpy.play(upbeat_list, channel='upbeat')
+        if music_style == 'previous':
+            current_music = previous_music
+        else:
+            previous_music = current_music
+            current_music = music_style
 
-        # if music_style == 'previous':
+        track_lists = dict()
+        track_lists['upbeat'] = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3','audio/music/upbeat_03.mp3', 'audio/music/upbeat_04.mp3']
+        track_lists['chill'] = ['audio/music/chill_01.mp3']
+            
+        renpy.music.play(track_lists[current_music], loop=True, fadein = 10, fadeout = 5)
 
         return
 

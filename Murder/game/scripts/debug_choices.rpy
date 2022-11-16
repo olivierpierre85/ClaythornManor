@@ -9,8 +9,8 @@ label debug_choices:
         "lad_introduction":
             jump lad_introduction
 
-        "lad_day1_drinks":
-            jump lad_day1_drinks
+        "lad_day1_arrival":
+            jump lad_day1_arrival
 
         "lad_day2_dinner":
             $ test_choices = debug_lad_evening

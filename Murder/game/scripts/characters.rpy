@@ -94,7 +94,8 @@ label init_characters:
         drunk_extra_information = [
             CharacterInformation(0, "background", ""), 
             CharacterInformation(1, "status", ""),
-            CharacterInformation(2, "age", "?")
+            CharacterInformation(2, "age", "?"),
+            CharacterInformation(3, "addict", "Likes to drink a bit too much.", is_important = True),
         ]
         drunk_details  = CharacterDetails(
             text_id = "drunk", 
@@ -267,7 +268,7 @@ init -100 python:
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
                     info.locked = False
-                    renpy.notify("You have found the " + text_id + " of " + self.get_name())
+                    renpy.notify("You have found information about " + self.get_name())
                     renpy.play("audio/sound_effects/writing_short.ogg", "sound")
                     # play sound "audio/sound_effects/unlock.ogg"
 

@@ -43,9 +43,9 @@ transform rotate_minutes( angle = 0 ):
     linear 3.0 rotate angle 
 
 # BLACK transition
-label black_screen_transition(display_text):
+label black_screen_transition(display_text, display_text_2 = None):
     scene black_background with irisin
-    show screen centered_text(display_text)
+    show screen centered_text(display_text, display_text_2)
     play sound gong
     pause 2.0
     hide screen centered_text
@@ -60,12 +60,22 @@ label death_screen_transition:
     # 
     return
 
-screen centered_text(display_text):
-    text display_text:
+screen centered_text(display_text, display_text_2 = None):
+    vbox:
         xalign 0.5 
         yalign 0.5
-        font gui.name_text_font
-        size gui.name_text_size
+        text display_text:
+            xalign 0.5 
+            yalign 0.5
+            font gui.name_text_font
+            size gui.name_text_size
+        if display_text_2:
+            text display_text_2:
+                xalign 0.5 
+                yalign 0.5
+                yoffset 20
+                font gui.name_text_font
+                size gui.name_text_size
 
 screen in_game_menu_btn:
 

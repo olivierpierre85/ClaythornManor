@@ -31,14 +31,15 @@ label lad_day1_arrival:
 
     stop sound
     
-    call black_screen_transition("Ted Harring - Friday")
+    call black_screen_transition("Ted Harring", "Friday")
     # scene great_hall with irisout
 
     call change_room('great_hall')
     
     call change_time(18,00)
 
-    play music upbeat_01 fadein 10.0
+    $ play_music('upbeat')
+    # play music upbeat_01 fadein 10.0
 
     butler """
     Good afternoon Sir.

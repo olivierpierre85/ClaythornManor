@@ -7,9 +7,9 @@ label psychic_generic(skip_intro = False):
 
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([
-            TimedMenuChoice('Talk about the weather', 'psychic_generic_weather', 5),
-            TimedMenuChoice('Ask her about herself', 'psychic_generic_background', 15),
-            TimedMenuChoice('Talk about the manor', 'psychic_generic_manor', 10),
+            TimedMenuChoice('What do you think of this weather ?', 'psychic_generic_weather', 5),
+            TimedMenuChoice('Tell me more about yourself', 'psychic_generic_background', 15),
+            TimedMenuChoice('What do you think of this place ?', 'psychic_generic_manor', 10),
             TimedMenuChoice('How old are you ?', 'psychic_generic_age', 5),
             TimedMenuChoice('What room are you in ?', 'psychic_generic_room', 5),
             TimedMenuChoice('Why were you invited here ?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
@@ -46,7 +46,7 @@ label psychic_generic_other_guests:
         That's why I rather stay away from the group.
         """
     
-    else
+    else:
 
         if not 'psychic_generic_other_guests_menu' in locals():
             $ psychic_generic_other_guests_menu = TimedMenu([
