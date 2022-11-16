@@ -118,4 +118,34 @@ label lad_introduction:
     And to make matter worse, a look at the sky tells me that a storm is coming. 
     """
 
+    stop music fadeout 3.0
+    
+    play sound thunder loop
+    
+    scene manor_exterior
+
+    """
+    Finally an impressive mansion appears in the horizon.
+
+    It's bigger than any of the houses I've seen in London. 
+
+    A big country house. 
+
+    Everyone who is someone in England used to have one.
+
+    Now I've heard a lot of people can't afford them anymore.
+
+    They are sold, turned into hotels, or even abandoned. Left there to rot.
+
+    While I can barely afford to pay rent for my miserable place.
+    
+    What a shame.
+
+    While the driver is unloading my bag from the car, I walk towards the entrance, where a butler opens the door to greet me.
+
+    I walk into the most impressive hall I ever been in.
+    """
+
+    stop sound
+    
     jump lad_day1_arrival

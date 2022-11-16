@@ -1,5 +1,6 @@
 label host_welcome_speech:
 
+  # TODO add applause somewhere?
   host """ 
   Welcome every one. I am sorry to have kept you waiting. Now that we are all gather here, I would like again to show you my gratitude.
 

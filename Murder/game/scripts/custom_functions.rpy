@@ -7,11 +7,19 @@ transform character_talking_right:
     xpos 1600  
     ypos 600
 
-label change_time(hours,minutes):
-    $ current_time =  time(hours,minutes,00)
+label change_time(hours, minutes, phase = None, day = None, ):
+    python:
+        current_time =  time(hours,minutes,00)
+        
+        if phase:
+            current_phase = phase
+
+        if day:
+            current_day =  day
+
     play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"
 
-return
+    return
 
 label breakpoint:
     menu:
@@ -24,8 +32,8 @@ label change_room(new_room, fadeout = None):
     python:
         renpy.scene()
         renpy.show(new_room)
-        # if fadeout:
-        renpy.with_statement(irisout)
+        if fadeout:
+            renpy.with_statement(fadeout)
 
         current_room = new_room
         print(new_room)

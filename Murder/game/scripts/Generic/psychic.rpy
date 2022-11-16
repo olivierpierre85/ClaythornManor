@@ -24,7 +24,7 @@ label psychic_generic(skip_intro = False):
 label psychic_generic_other_guests:
 
     # TODO if period is drinks ignore question
-    if True:
+    if current_day == "Friday" and current_phase == "Arrival":
 
         psychic """
         I've just met them. So I can't say to know a lot yet.
@@ -47,7 +47,7 @@ label psychic_generic_other_guests:
         """
     
     else:
-
+        # TODO extend to phases
         if not 'psychic_generic_other_guests_menu' in locals():
             $ psychic_generic_other_guests_menu = TimedMenu([
                 TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk', 5),

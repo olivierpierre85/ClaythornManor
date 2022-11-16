@@ -9,8 +9,6 @@ init -1000 python:
 
 # TODO move to init var ? Sort it out
 define time_left = 0
-define current_day = "Friday"
-define current_time = time(17,00,00)
 define hours_angle = 0
 define old_minutes_angle = 0 
 
@@ -67,6 +65,9 @@ label init_technical_variables:
 
 label init_story_variables:
     python:
+        current_day = "Friday"
+        current_time = time(17,00,00)
+
         # Lad Variables
         lad_day1_evening_billiard_room_visited = False
         lad_day1_drinks = 0
