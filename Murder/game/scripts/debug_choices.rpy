@@ -13,8 +13,7 @@ label debug_choices:
             jump lad_day1_arrival
 
         "lad_day2_dinner":
-            $ test_choices = debug_lad_evening
-            jump lad_day2_evening_tea_room
+            jump lad_day1_dinner
         
         # "lad_day2_hunt":
         #     jump lad_day2_hunt

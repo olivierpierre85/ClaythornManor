@@ -1,9 +1,13 @@
-# Introduction for hero
+# --------------------------------------------
+#               Ted Harring
+#           Friday 18:10 Arrival
+#
+#   Alive: Everyone
 label lad_day1_arrival:
     
     call black_screen_transition("Ted Harring", "Friday")
 
-    call change_room('great_hall')
+    call change_room('great_hall', irisout)
     
     call change_time(18,10, 'Arrival', 'Friday')
 
@@ -39,13 +43,15 @@ label lad_day1_arrival:
     """
 
     butler """
-    Mister Ted Haring.
+    Mister TED HARRING.
     """
 
     """
-    Everyone turns their head to me and nod a hello.
+    Everyone turns their head to me. 
+    
+    Some nods at me, others barely acknowledge me.
 
-    From a distance, the butler gives me a short introduction of every guests.
+    From a distance, the butler gives me a short introduction of every guest.
     """
 
     show captain at truecenter
@@ -56,27 +62,27 @@ label lad_day1_arrival:
 
     show nurse at truecenter
     butler """
-    He is in conversation with Rosalind Marsh.
+    He is in conversation with Rosalind Marsh...
     """
     hide nurse
 
     show doctor at truecenter
     butler """
-    And the man with the glasses is Daniel Baldwin.
+    .. and with Daniel Baldwin. The man with the glasses.
     """
     hide doctor
 
     show broken at truecenter
     butler """
     Don't be alarmed by the man in the mask. 
+
     He is a war veteran named Thomas Moody.
     """
     hide broken
 
     show drunk at truecenter
     butler """
-    The man sitting on the couch, looking rather exhausted is Samuel Manning
-. 
+    The man sitting on the couch, looking rather exhausted is Samuel Manning.
     """
     hide drunk
 
@@ -106,7 +112,7 @@ label lad_day1_arrival:
     They seem more approachable than the rest.
     """
     
-    $ time_left = 30
+    $ time_left = 300 #TODO PUt back to 30/20?
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
         TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5),
@@ -123,7 +129,9 @@ label lad_day1_arrival:
     Then the butler comes into the room.
     """
 
-    butler "Dinner is served. Please follow me to the dining room."
+    butler """
+    Dinner is served. Please follow me to the dining room.
+    """
 
     """
     Oh ok. The gong warns people that dinner is served.

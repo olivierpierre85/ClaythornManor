@@ -49,7 +49,7 @@ label change_room(new_room, fadeout = None):
 init python:
     def play_music(music_style):
         # renpy.music.get_playing(channel='music')
-        global current_music
+        global current_music, previous_music
         if music_style == 'previous':
             current_music = previous_music
         else:

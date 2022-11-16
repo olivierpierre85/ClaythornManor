@@ -17,6 +17,8 @@ label host_welcome_speech:
   The second gift, is a price of eight thousands pounds to share among yourselves. It's my way to thank people so selfless as to help other people.
   """
   
-  "Our host then sits down to her chair."
+  """
+  Our host then sits down on her chair.
+  """
 
   hide host

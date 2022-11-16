@@ -1,26 +1,33 @@
-# Introduction for hero
+# --------------------------------------------
+#               Ted Harring
+#           Friday 18:30 Arrival
+#
+#   Alive: Everyone
 label lad_day1_dinner:
 
-    call change_time(18,30)
+    call change_room('dining_hall')
+    
+    call change_time(18,30, 'Dinner', 'Friday')
 
-    scene dining_hall
+    $ play_music('chill')
 
     """
     Everyone sits at a place with their names on them.
 
-    You turn your attention to the group of people seated a the table, and count eight persons.
-
-    While you are examining everyone, an older lady enters the room. She takes her place at the center of the table.
-
+    While I am examining everyone, Lady Claythorn enters the room. 
+    
+    She takes her place at the table.
     """
 
     call host_welcome_speech
 
-    "After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host."
+    """
+    After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host.
+    """
 
-    host "Please no need to thank me. The food will be served, enjoy your meal."
-
-    play music upbeat_02
+    host """
+    Please no need to thank me. The food will be served, enjoy your meal.
+    """
 
     """
     The butler then enters the room, accompany by the footman.
@@ -29,9 +36,9 @@ label lad_day1_dinner:
     
     The mood starts to relax, and the sound of different conversations fills the room.
 
-    You then turn your attention to the guests next to you.
+    I turn my attention to the guests next to me.
 
-    You are sitting between Amelia Baxter, and Daniel Baldwin.
+    I am sitting between Amelia Baxter, and Daniel Baldwin.
     """
 
     # $ doctor_details.introduce()
@@ -76,7 +83,17 @@ label lad_day1_dinner_psychic:
 
 label lad_day1_dinner_doctor:
 
-    call doctor_lad_introduction
+    lad """
+    Hello. I am Ted Harring.
+    """
+
+    doctor """
+    Hi mister Haring, I am doctor Daniel Baldwin.
+    """
+
+    lad """
+    Nice to meet you doctor.
+    """
 
     call doctor_generic
 

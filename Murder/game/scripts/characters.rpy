@@ -33,7 +33,7 @@ label init_characters:
         # 1. The Lad
         lad_extra_information = [
             CharacterInformation(0, "background", "Born in ???") , 
-            CharacterInformation(2, "age", "He was fifteen at the end of the war. That would make him 22 years old today."),
+            CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
             CharacterInformation(3, "education", "Not a great reader.")
         ]
         lad_details  = CharacterDetails(
@@ -143,6 +143,7 @@ label init_characters:
         # 7. The Captain
         captain_extra_information = [
             CharacterInformation(0, "wars", "A veteran of several wars, he fought in Burma, China, and in the Great War."), 
+            CharacterInformation(1, "talker", "Likes to tell stories in front of an audience.")
         ]
         captain_details  = CharacterDetails(
             text_id = "captain", 

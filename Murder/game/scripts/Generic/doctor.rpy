@@ -9,7 +9,7 @@ label doctor_generic():
         TimedMenuChoice('Talk about the manor', 'doctor_generic_manor', 10),
         TimedMenuChoice('Ask him his age', 'doctor_generic_age', 5),
         TimedMenuChoice('What room are you in ?', 'doctor_generic_room', 5),
-        # TimedMenuChoice('Ask about the others', 'doctor_generic_others', 5),
+        TimedMenuChoice('Ask about the others', 'doctor_generic_other_guests', 0),
         TimedMenuChoice('You don\'t have anymore questions for him', 'doctor_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "doctor")
 
@@ -17,17 +17,17 @@ label doctor_generic():
     
     return
 
-label doctor_lad_introduction:
+# label doctor_lad_introduction:
 
-    lad "Hello. I am Ted Harring"
+#     lad "Hello. I am Ted Harring"
 
-    doctor "Hi mister Haring, I am doctor Daniel Baldwin."
+#     doctor "Hi mister Haring, I am doctor Daniel Baldwin."
 
-    lad "Nice to meet you doctor."
+#     lad "Nice to meet you doctor."
 
-    $ current_character.has_met.add('doctor')
+#     $ current_character.has_met.add('doctor')
 
-    return
+#     return
 
 label doctor_generic_others:
 

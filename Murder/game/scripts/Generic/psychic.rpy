@@ -7,13 +7,15 @@ label psychic_generic(skip_intro = False):
 
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([
-            TimedMenuChoice('What do you think of this weather ?', 'psychic_generic_weather', 5),
-            TimedMenuChoice('Tell me more about yourself', 'psychic_generic_background', 15),
-            TimedMenuChoice('What do you think of this place ?', 'psychic_generic_manor', 10),
-            TimedMenuChoice('How old are you ?', 'psychic_generic_age', 5),
-            TimedMenuChoice('What room are you in ?', 'psychic_generic_room', 5),
-            TimedMenuChoice('Why were you invited here ?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
-            TimedMenuChoice('What do you think of the other guests ?', 'psychic_generic_other_guests', 0),
+            TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
+            TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
+            TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_sunday', 5, condition = "current_day == 'Sunday'"),
+            TimedMenuChoice('Tell me more about yourself.', 'psychic_generic_background', 15),
+            TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
+            TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 10),
+            TimedMenuChoice('How old are you?', 'psychic_generic_age', 5),
+            TimedMenuChoice('What room are you in?', 'psychic_generic_room', 5),
+            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests', 0),
             TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "psychic")
 
@@ -21,52 +23,8 @@ label psychic_generic(skip_intro = False):
 
     return
 
-label psychic_generic_other_guests:
 
-    # TODO if period is drinks ignore question
-    if current_day == "Friday" and current_phase == "Arrival":
-
-        psychic """
-        I've just met them. So I can't say to know a lot yet.
-
-        All I know is that this guy over there ...
-        """
-
-        """
-        She points at Sushil Sinha.
-        """
-
-        psychic """
-        ... is monopolizing the conversation.
-
-        And he is very noisy too.
-
-        It's not very tactful if you ask me.
-
-        That's why I rather stay away from the group.
-        """
-    
-    else:
-        # TODO extend to phases
-        if not 'psychic_generic_other_guests_menu' in locals():
-            $ psychic_generic_other_guests_menu = TimedMenu([
-                TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk', 5),
-                TimedMenuChoice('Talk about something else', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
-            ], image_right = "psychic")
-
-        call run_menu(psychic_generic_other_guests_menu)
-
-    return
-
-label psychic_generic_drunk:
-    psychic """
-    He is not a very reliable man I think.
-    """
-    return
-
-label psychic_generic_weather:
-
-    # TODO adapt depeding of the day
+label psychic_generic_weather_friday:
 
     psychic """
     Well, it is not very original to ask about such things when meeting someone new.
@@ -78,11 +36,35 @@ label psychic_generic_weather:
 
     return
 
+label psychic_generic_weather_saturday:
+
+    psychic """
+    I must say that last night was quite scary.
+
+    It has been a while since I've experienced a storm like that.
+
+    We should consider ourselves lucky if there is no damage to the manor.
+    """
+
+    return
+
+label psychic_generic_weather_sunday:
+
+    psychic """
+    Really, you want to talk about the weather with everything that is happening around us?
+
+    What is wrong with you?
+    """
+
+    # TODO achievement ? Cool during the storm
+    return
+
 label psychic_generic_room:
+
     psychic """
     That's a strange question.
 
-    But if you must know, my room is 'the George III'
+    But if you must know, my room is the \"George III\"
     """
 
     call unlock_map('psychic_room')
@@ -108,6 +90,7 @@ label psychic_generic_age:
     
 
 label psychic_generic_heroic_act:
+    
     if current_character.text_id == "lad":
 
         play music mysterious_01 fadeout 2.0 fadein 2.0
@@ -128,7 +111,6 @@ label psychic_generic_heroic_act:
         Desperate, they asked for my help.
 
         Right away, I could tell the child was still alive.
-
         """
 
         lad """
@@ -213,6 +195,8 @@ label psychic_generic_heroic_act:
         $ lad_details.add_knowledge('age') 
 
         stop music fadeout 3.0
+
+        $ play_music('previous')
     
     return
 
@@ -222,7 +206,6 @@ label psychic_generic_background:
         Oh dear, I do a lot of things.
 
         But since my husband's death, what takes up the most of my time is the seances I frequently organized.
-
         """
 
         lad """
@@ -247,7 +230,6 @@ label psychic_generic_background:
         Then, they talk to me. Sometimes it's only a whisper. Sometimes I can see them clearly, just like I see you now.
 
         And in rare occasions, they can take over my body and talk directly to their relatives through me.
-
         """
 
         lad """
