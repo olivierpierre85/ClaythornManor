@@ -3,13 +3,14 @@ label doctor_generic():
 
     if not 'doctor_generic_menu' in locals():
         $ doctor_generic_menu = TimedMenu([
-        TimedMenuChoice('Talk about the weather', 'doctor_generic_weather', 5),
-        TimedMenuChoice('Ask him about himself', 'doctor_generic_background', 20),
-        TimedMenuChoice('Why were you invited here ?', 'doctor_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
-        TimedMenuChoice('Talk about the manor', 'doctor_generic_manor', 10),
-        TimedMenuChoice('Ask him his age', 'doctor_generic_age', 5),
-        TimedMenuChoice('What room are you in ?', 'doctor_generic_room', 5),
-        TimedMenuChoice('Ask about the others', 'doctor_generic_other_guests', 0),
+        TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
+        TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
+        TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20),
+        TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 20, condition = "doctor_details.check_knowledge_unlocked('background')"),
+        TimedMenuChoice('What do you think of this place?', 'doctor_generic_manor', 10),
+        TimedMenuChoice('How old are you?', 'doctor_generic_age', 5),
+        TimedMenuChoice('What room are you in?', 'doctor_generic_room', 5),
+        TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_friday', 5, condition = "current_day == 'Friday'"),
         TimedMenuChoice('You don\'t have anymore questions for him', 'doctor_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "doctor")
 
@@ -17,24 +18,8 @@ label doctor_generic():
     
     return
 
-# label doctor_lad_introduction:
+label doctor_generic_weather_friday:
 
-#     lad "Hello. I am Ted Harring"
-
-#     doctor "Hi mister Haring, I am doctor Daniel Baldwin."
-
-#     lad "Nice to meet you doctor."
-
-#     $ current_character.has_met.add('doctor')
-
-#     return
-
-label doctor_generic_others:
-
-    return
-
-label doctor_generic_weather:
-    # TODO adapt depending of the day
     doctor """
     A dreadful storm if you ask me.
 
@@ -43,7 +28,16 @@ label doctor_generic_weather:
 
     return
 
+label doctor_generic_weather_saturday:
+    
+    doctor """
+    We are lucky the weather improved greatly today.
+    """
+
+    return
+
 label doctor_generic_background:
+
     doctor """
     I am the chief physician at St Margaret's Hospital.
 
@@ -61,6 +55,7 @@ label doctor_generic_background:
     return
 
 label doctor_generic_heroic_act:
+
     doctor """
     Well, I celebrated my ten years at the St Margaret's recently.
 
@@ -80,6 +75,7 @@ label doctor_generic_heroic_act:
     return
 
 label doctor_generic_manor:
+
     doctor """
     It's a nice house.
 
@@ -103,7 +99,7 @@ label doctor_generic_manor:
 
         "Well, that's a bit comforting."
 
-    $ doctor_details.add_knowledge('status') 
+        $ doctor_details.add_knowledge('status') 
 
     return
 

@@ -115,7 +115,7 @@ label lad_day1_arrival:
     $ time_left = 300 #TODO PUt back to 30/20?
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5), # keep_alive = True, TODO keep alive to allow more choices if leaving by mistakes ?
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 
