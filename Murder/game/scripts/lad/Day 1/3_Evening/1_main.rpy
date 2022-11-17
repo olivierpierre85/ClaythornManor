@@ -1,6 +1,11 @@
+# --------------------------------------------
+#               Ted Harring
+#           Friday 21:00 Evening
+#
+#   Alive: Everyone
 label lad_day1_evening:
 
-    call change_time(21,00)
+    call change_time(21,00, 'Dinner', 'Evening')
 
     scene hallway
 
@@ -16,7 +21,7 @@ label lad_day1_evening:
 
     call unlock_map('lad_room')
 
-    call  change_room('lad_room')
+    call change_room('lad_room')
 
     """
     I enter the bedroom. 
@@ -34,19 +39,13 @@ label lad_day1_evening:
     After a while I unpack my small luggage.
 
     Well that didn't take long. So what do I do now ?
-
     """
+
+    $ play_music('upbeat')
 
     $ time_left = 120
 
-    $ lad_day1_evening_menu = TimedMenu([
-        TimedMenuChoice('Go knock on the the door of Amelia Baxter', 'lad_day1_evening_psychic_room', 55, room = 'psychic_room'),
-        TimedMenuChoice('Meet the others in the billiard room', 'lad_day1_evening_billiard_room', 0, keep_alive = True, room = 'billiard_room'),
-        TimedMenuChoice('Library', 'lad_library', 40, room = 'library'),
-        TimedMenuChoice('Go to sleep', 'lad_day1_evening_cancel', early_exit = True, room = 'lad_room')
-    ], is_map = True)
-
-    call run_menu(lad_day1_evening_menu)
+    call run_menu(lad_map_menu)
 
     call change_time(23,00)
 
@@ -76,7 +75,15 @@ label lad_day1_evening_psychic_room:
 
     psychic "Yes ? Who is it ?"
 
-    lad "Hi, it's Ted Harring. I thought we could continue our conversation from earlier."
+    lad "Hi, it's Ted Harring."
+
+    psychic """
+    Oh. What do you want mister Harring?
+    """
+    
+    lad """
+    I am not sure. But maybe we could continue our conversation from earlier.
+    """
 
     psychic "Oh Mister Harring. I am afraid I was getting ready to bed. We can talk again tomorrow."
 

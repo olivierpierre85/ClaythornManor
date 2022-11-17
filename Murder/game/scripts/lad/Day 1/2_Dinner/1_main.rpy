@@ -5,7 +5,7 @@
 #   Alive: Everyone
 label lad_day1_dinner:
 
-    call change_room('dining_hall')
+    call change_room('dining_room')
     
     call change_time(18,30, 'Dinner', 'Friday')
 
@@ -63,6 +63,8 @@ label lad_day1_dinner:
     I ask the footman to show me the way.
     """
 
+    stop music fadeout 10.0
+    
     jump lad_day1_evening
 
   

@@ -1,6 +1,6 @@
 label lad_day2_evening:
     call black_screen_transition("Day 2 - Evening") # Good ?
-    scene dining_hall # with irisout
+    scene dining_room # with irisout
 
     call change_time(18,30)
 

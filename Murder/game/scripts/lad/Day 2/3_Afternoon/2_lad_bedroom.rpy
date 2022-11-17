@@ -163,7 +163,7 @@ label lad_day2_afternoon_bedroom:
     """
     I hear the gong.
 
-    I should go to the dining hall.
+    I should go to the dining room.
     """
 
     jump lad_day2_evening

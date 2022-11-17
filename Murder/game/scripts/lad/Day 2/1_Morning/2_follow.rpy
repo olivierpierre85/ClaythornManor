@@ -120,9 +120,9 @@ label lad_day2_breakfast_follow:
     """
     He then leaves the room.
 
-    I followed him back to the dining hall.
+    I followed him back to the dining room.
     """
 
-    scene dining_hall
+    scene dining_room
 
     return

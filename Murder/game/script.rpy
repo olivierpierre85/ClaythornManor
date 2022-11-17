@@ -22,17 +22,19 @@ label start():
 
     call init_technical_variables
 
+    call init_map
+
+    call init_story_variables # TODO put at each loop
+
     call init_characters
 
     call init_storylines
 
-    call  init_map
 
     show screen current_time
 
     show screen in_game_menu_btn
     
-    call init_story_variables # TODO put at each loop
     
     # Debug Menu # TODO remove when prod
     jump debug_choices
@@ -68,16 +70,6 @@ label init_story_variables:
         current_day = "Friday"
         current_time = time(17,00,00)
 
-        # Lad Variables
-        lad_day1_evening_billiard_room_visited = False
-        lad_day1_drinks = 0
-        lad_day1_poisoned = False
-
-        lad_visited_library = False
-        lad_day2_breakfast_follow = False
-        lad_day2_hunt = False
-        lad_day3_morning_captain_found = False
-        lad_day3_gun_downed = False
-        lad_day3_poisoned = False
+    call init_lad
     
     return

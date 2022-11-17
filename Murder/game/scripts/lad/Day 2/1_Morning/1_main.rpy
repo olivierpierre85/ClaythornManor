@@ -21,7 +21,7 @@ label lad_day2_morning:
     After getting ready, I leave my room to have breakfast.
     """
 
-    scene dining_hall
+    scene dining_room
 
     """
     Most of the guests are already in the dining room.

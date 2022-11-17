@@ -43,7 +43,7 @@ label lad_day3_stay:
     When everything is ready we take our plates to the dining room.
     """
 
-    call change_room('dining_hall')
+    call change_room('dining_room')
 
     lad """
     We start to eat in silence, there is not much more we want to talk about.

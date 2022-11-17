@@ -1,6 +1,6 @@
 label lad_day2_morning_breakfast_over:
 
-    scene dining_hall
+    scene dining_room
 
     call change_time(10,00)
 

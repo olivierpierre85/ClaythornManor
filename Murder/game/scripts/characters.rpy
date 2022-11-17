@@ -31,23 +31,23 @@ label init_characters:
 
     python:
         # 1. The Lad
-        lad_extra_information = [
-            CharacterInformation(0, "background", "Born in ???") , 
-            CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
-            CharacterInformation(3, "education", "Not a great reader.")
-        ]
-        lad_details  = CharacterDetails(
-            text_id = "lad", 
-            locked = False,
-            know_real_name = True,
-            real_name = "Ted Harring",
-            nickname = "The Lad",
-            description_short = "Young man",
-            description_long = "Good Looking lad, in his early twenties.",
-            information_list = lad_extra_information,
-            has_met = set()
-            )
-        lad = Character("lad_details.get_name()", image="lad", dynamic=True)
+        # lad_extra_information = [
+        #     CharacterInformation(0, "background", "Born in ???") , 
+        #     CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
+        #     CharacterInformation(3, "education", "Not a great reader.")
+        # ]
+        # lad_details  = CharacterDetails(
+        #     text_id = "lad", 
+        #     locked = False,
+        #     know_real_name = True,
+        #     real_name = "Ted Harring",
+        #     nickname = "The Lad",
+        #     description_short = "Young man",
+        #     description_long = "Good Looking lad, in his early twenties.",
+        #     information_list = lad_extra_information,
+        #     has_met = set()
+        #     )
+        # lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 
         # 2. The Psychic
         psychic_extra_information = [
