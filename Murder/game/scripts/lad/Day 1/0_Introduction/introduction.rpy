@@ -1,5 +1,7 @@
 label lad_introduction:
-  
+    
+    call change_time(17,00, 'Evening', 'Friday')
+
     scene train_inside
 
     play sound train_moving loop

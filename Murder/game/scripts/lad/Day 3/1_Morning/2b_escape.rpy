@@ -1,5 +1,5 @@
 label lad_day3_escape:
-    call change_room('manor_garden')
+    $ change_room('garden')
 
     """
     It may be dangerous but I still prefer going with the Captain than staying in the manor.

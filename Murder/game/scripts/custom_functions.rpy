@@ -7,6 +7,7 @@ transform character_talking_right:
     xpos 1600  
     ypos 600
 
+# TODO put in python function for consistency
 label change_time(hours, minutes, phase = None, day = None, ):
     python:
         current_time =  time(hours,minutes,00)
@@ -28,25 +29,42 @@ label breakpoint:
 
     return
 
-label change_room(new_room, fadeout = None):
-    python:
+# label change_room(new_room, fadeout = None):
+#     python:
+#         renpy.scene()
+#         renpy.show(new_room)
+#         if fadeout:
+#             renpy.with_statement(fadeout)
+
+#         current_room = new_room
+#         print(new_room)
+#         for room in rooms:
+#             print(room.name)
+#             if new_room == room.id:
+#                 current_floor = room.floor
+#                 selected_floor = room.floor
+
+#     return
+
+# Smart music changes
+init python:
+    def change_room(new_room, fadeout = None):
+        global current_floor, selected_floor, current_room
+
         renpy.scene()
         renpy.show(new_room)
+
         if fadeout:
             renpy.with_statement(fadeout)
 
         current_room = new_room
-        print(new_room)
         for room in rooms:
-            print(room.name)
             if new_room == room.id:
                 current_floor = room.floor
                 selected_floor = room.floor
 
-    return
+        return
 
-# Smart music changes
-init python:
     def play_music(music_style):
         # renpy.music.get_playing(channel='music')
         global current_music, previous_music

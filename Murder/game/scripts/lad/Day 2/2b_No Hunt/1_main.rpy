@@ -1,6 +1,6 @@
 label lad_day2_morning_nohunt:
     # call black_screen_transition("The Lad - Inside") # Good ?
-    call  change_room('lad_room')
+    $ change_room('lad_room')
 
     call change_time(11,00)
 

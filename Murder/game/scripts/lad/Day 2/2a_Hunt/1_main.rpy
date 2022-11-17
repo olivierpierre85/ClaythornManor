@@ -77,7 +77,7 @@ label lad_day2_hunt:
     Well, if something happens to me, at least I'll look good.
     """
 
-    scene manor_garden
+    $ change_room('garden')
 
     """
     I join the others in the garden.

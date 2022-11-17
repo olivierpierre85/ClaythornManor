@@ -27,7 +27,7 @@ label lad_day3_stay:
     Okay, I am coming with you.
     """
 
-    call change_room('kitchen')
+    $ change_room('kitchen')
 
     """
     I take a seat while she prepares the food.
@@ -43,7 +43,7 @@ label lad_day3_stay:
     When everything is ready we take our plates to the dining room.
     """
 
-    call change_room('dining_room')
+    $ change_room('dining_room')
 
     lad """
     We start to eat in silence, there is not much more we want to talk about.

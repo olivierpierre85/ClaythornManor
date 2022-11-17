@@ -1,11 +1,12 @@
 label init_lad:
+    call change_time(17,00, 'Evening', "Friday")
+
     python:
         # Story Variables
         lad_day1_evening_billiard_room_visited = False
         lad_day1_drinks = 0
         lad_day1_poisoned = False
 
-        lad_visited_library = False
         lad_day2_breakfast_follow = False
         lad_day2_hunt = False
         lad_day3_morning_captain_found = False
@@ -32,13 +33,31 @@ label init_lad:
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 
         # Map choices
+        # TODO BEFORE REWRITE VAR, check it exists, and if some fields are already hidden
+        # => change those fields to special var that will display an icon, or another style
+        # for already visited path
+        # https://lemmasoft.renai.us/forums/viewtopic.php?f=8&t=25453&p=313338&hilit=caption.replace#p313338
         lad_map_menu = TimedMenu([
             # Friday specific choices
             TimedMenuChoice(
-                'Go knock on the the door of Amelia Baxter', 
+                default_room_text('psychic_room'), 
                 'lad_day1_evening_psychic_room', 
-                55, 
+                10, 
                 room = 'psychic_room', 
+                condition = "current_day == 'Friday'"
+            ),
+            TimedMenuChoice(
+                default_room_text('host_room'), 
+                'lad_day1_evening_host_room', 
+                10, 
+                room = 'host_room', 
+                condition = "current_day == 'Friday'"
+            ),
+            TimedMenuChoice(
+                default_room_text('garden'), 
+                'garden_friday', 
+                5, 
+                room = 'garden', 
                 condition = "current_day == 'Friday'"
             ),
             TimedMenuChoice(
@@ -55,7 +74,7 @@ label init_lad:
                 early_exit = True, 
                 room = 'lad_room',
                 condition = "current_day == 'Friday'"
-            )
+            ),
             # Generic choices
             TimedMenuChoice(
                 default_room_text('library'), 

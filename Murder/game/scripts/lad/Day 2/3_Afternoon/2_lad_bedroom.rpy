@@ -1,5 +1,5 @@
 label lad_day2_afternoon_bedroom:
-    call  change_room('lad_room')
+    $ change_room('lad_room')
 
     call change_time(16,00)
 

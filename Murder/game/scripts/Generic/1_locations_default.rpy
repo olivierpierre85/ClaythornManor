@@ -4,7 +4,7 @@ label downstairs_default:
 
     "I was on my way to the basement, when the butler stopped me."
 
-    butler "Excuse me sir, but downstairs is for staff only."
+    butler "I am sorry, but downstairs is for staff only." 
 
     # TODO GET CURRENT TALKER ..... for default text? or personalized text ?
     # $ default_char = get_char(current_character.text_id)
@@ -14,7 +14,7 @@ label downstairs_default:
     return
 
 label gun_room_default:
-    call change_room('gun_room')
+    $ change_room('gun_room')
     
     """
     A room filled with guns.
@@ -24,24 +24,29 @@ label gun_room_default:
 
     return
 
-label generic_exterior_bad_weather:
-    scene great_hall
-    """
-    I reach the great hall to go out. 
+
+label garden_friday:
+    $ change_room('great_hall')
     
-    But the weather is so bad I don't think it's a good idea.
     """
+    I reach the great hall and get ready to open the door. 
+    
+    But the weather is so bad, only someone crazy would go out now.
+
+    I'd better do something else at the moment.
+    """
+
     return
 
-label manor_exterior_default:
-    # TODO adapt depending on the weather
-    call generic_exterior_bad_weather
+label garden_default:
 
-    return
+    $ change_room('garden')
+    
+    """
+    Beautiful garden.
 
-label forest_default:
-    # TODO adapt depending on the weather
-    call generic_exterior_bad_weather
+    But not much to do here.
+    """
 
     return
 
@@ -58,7 +63,17 @@ label garage_default:
 
 label tea_room_default:
     
-    scene tea_room
+    $ change_room('tea_room')
+    
+    "It's empty"
+
+    "No need to stay here."
+
+    return
+
+label dining_room_default:
+    
+    $ change_room('dining_room')
     
     "It's empty"
 
@@ -68,7 +83,7 @@ label tea_room_default:
 
 label billiard_room_default:
     
-    scene billiard_room
+    $ change_room('billiard_room')
     
     "It's empty"
 
@@ -83,42 +98,6 @@ label bedroom_default:
     "I knock on the door."
 
     "Nobody answers."
-
-    return
-
-label lad_library:
-
-    # TODO booleon
-
-    if lad_visited_library:
-        """
-        I have been there already.
-
-        """
-    else:
-
-        scene library
-        
-        """
-        It's a very nice library. But what am I doing here ? I can barely read.
-
-        """
-
-        $ lad_details.add_knowledge('education')
-
-        """
-        There is an open book on a small table.
-
-        \"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\"
-
-        Yeah, I am not reading that.
-
-        I probably better go elsewhere.
-
-        """
-        # TODO add info on BOOK ???
-
-        $ lad_visited_library = True
 
     return
 

@@ -5,7 +5,7 @@
 #   Alive: Everyone
 label lad_day1_dinner:
 
-    call change_room('dining_room')
+    $ change_room('dining_room')
     
     call change_time(18,30, 'Dinner', 'Friday')
 

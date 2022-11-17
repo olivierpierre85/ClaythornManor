@@ -7,7 +7,7 @@ label lad_day1_arrival:
     
     call black_screen_transition("Ted Harring", "Friday")
 
-    call change_room('great_hall', irisout)
+    $ change_room('great_hall', irisout)
     
     call change_time(18,10, 'Arrival', 'Friday')
 
@@ -35,7 +35,7 @@ label lad_day1_arrival:
     Well it's not like I have multiple change of clothes anyway. So I follow him.
     """
 
-    call change_room('tea_room')
+    $ change_room('tea_room')
 
     # Introduces EVERYONE !
     """

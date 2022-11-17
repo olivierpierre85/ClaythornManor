@@ -1,12 +1,9 @@
 label lad_day1_evening_billiard_room:
 
-    $ lad_day1_evening_left_bedroom = True
+    $ change_room('billiard_room')
 
-    # Change menu text
-    $ lad_day1_evening_menu.choices[1].text = "Go back to the billiard room"
-
-    scene billiard_room
-
+    # Change menu text TODO too dangerous, see at the end we want to keep that
+    # $ lad_day1_evening_menu.choices[1].text = "Go back to the billiard room"
 
     if not lad_day1_evening_billiard_room_visited:
 
@@ -28,21 +25,22 @@ label lad_day1_evening_billiard_room:
             TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_billiard_room_doctor', 50),
             TimedMenuChoice('Approach the large group of people', 'lad_day1_evening_billiard_room_group', 20),
             # TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
+            # TimedMenuChoice('Ask the butler about our Lady Claythorn room', 'lad_day1_evening_billiard_room_butler', 20),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day1_evening_billiard_room_bar_1', 20),
             TimedMenuChoice('Have another drink', 'lad_day1_evening_billiard_room_bar_2', 20, condition = 'lad_day1_drinks == 1'),
             TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 20, condition = 'lad_day1_drinks == 2'),
             TimedMenuChoice('Leave the room', 'lad_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
-        $ lad_day1_evening_billiard_room_visited = True
-
     else:
         # Reset menu
         $ lad_day1_evening_billiard_room_menu.early_exit = False
 
-        "You are back in the Billiard Room"
+        """
+        You are back in the Billiard Room.
+        """
 
-    call run_menu(lad_day1_evening_billiard_room_menu) # go back to return_menu when over
+    call run_menu(lad_day1_evening_billiard_room_menu)
 
     return
 
@@ -82,6 +80,7 @@ label lad_day1_evening_billiard_room_bar_1:
 
     Anyway, I am Thomas Moody.
     """
+
     $ drunk_details.add_knowledge('addict') 
 
     # $ broken_details.introduce()
@@ -119,6 +118,7 @@ label lad_day1_evening_billiard_room_bar_1:
     return
 
 label lad_day1_evening_billiard_room_group:
+
     """
     I walk to the main group in the room.
 
@@ -155,13 +155,13 @@ label lad_day1_evening_billiard_room_bar_3:
 
 label lad_day1_evening_billiard_room_doctor:
       
-    if current_character.text_id == "lad":
+    lad """
+    Hello Doctor.
+    """
 
-        call doctor_lad_introduction
-
-    else:
-        
-        lad "Hello again Doctor."
+    doctor """
+    Mister Haring.
+    """
 
     call doctor_generic
 

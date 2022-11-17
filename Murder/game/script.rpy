@@ -66,9 +66,6 @@ label init_technical_variables:
     return
 
 label init_story_variables:
-    python:
-        current_day = "Friday"
-        current_time = time(17,00,00)
 
     call init_lad
     

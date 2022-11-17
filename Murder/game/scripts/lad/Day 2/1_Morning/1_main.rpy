@@ -3,7 +3,7 @@ label lad_day2_morning:
     call black_screen_transition("The Lad - Day 2")
 
     scene bedroom_lad with irisout
-    call change_room('lad_room')
+    $ change_room('lad_room')
 
     call change_time(9,00)
 

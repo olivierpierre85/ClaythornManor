@@ -5,7 +5,7 @@
 #   Alive: Everyone
 label lad_day1_evening:
 
-    call change_time(21,00, 'Dinner', 'Evening')
+    call change_time(21,00, 'Evening')
 
     scene hallway
 
@@ -21,7 +21,7 @@ label lad_day1_evening:
 
     call unlock_map('lad_room')
 
-    call change_room('lad_room')
+    $ change_room('lad_room')
 
     """
     I enter the bedroom. 
@@ -51,7 +51,7 @@ label lad_day1_evening:
 
     "I am feeling tired. It's probably best if I go to bed now."
 
-    call  change_room('lad_room')
+    $ change_room('lad_room')
 
     "NOW WHAT ??? You Notice something on your bed. a letter."
 
@@ -66,6 +66,28 @@ label lad_day1_evening:
     else:
 
         jump lad_day2_morning
+
+label lad_day1_evening_host_room:
+    
+    scene hallway
+
+    "I knock on the door."
+
+    psychic "Yes ?"
+
+    lad """
+    Lady Claythorn, it's Ted Harring.
+
+    I was hoping we could talk?   
+    """
+
+    host """
+    I am sorry, but it's a very bad time mister Harring.
+
+    Why don't you meet the others in the billiard room?.
+    """
+
+    return
 
 label lad_day1_evening_psychic_room:
   

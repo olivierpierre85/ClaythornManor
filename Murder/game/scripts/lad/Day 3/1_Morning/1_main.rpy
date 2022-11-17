@@ -4,7 +4,7 @@ label lad_day3_morning:
 
     call black_screen_transition("Sunday")
 
-    call change_room('lad_room')
+    $ change_room('lad_room')
 
     play sound door_knock
     
@@ -109,7 +109,7 @@ label lad_day3_morning:
         TimedMenuChoice('Go wait for Sushil', 'lad_day3_morning_give_up', early_exit = True, room = 'tea_room', condition = "lad_day3_morning_captain_found"),
     ], is_map = True))
 
-    call change_room('tea_room')
+    $ change_room('tea_room')
 
     """
     I don't think we'll find something now.
@@ -149,7 +149,7 @@ label lad_day3_morning_give_up:
 
 label lad_day3_morning_gun_room:
 
-    call change_room('gun_room')
+    $ change_room('gun_room')
 
     """
     A room filled with guns.
@@ -196,7 +196,7 @@ label lad_day3_morning_captain_room:
     Alright come on in.
     """
 
-    call change_room('captain_room')
+    $ change_room('captain_room')
 
     """
     We enter the bedroom.
@@ -313,7 +313,7 @@ label lad_day3_morning_host_room:
     I have no choice but to follow her.
     """
 
-    call change_room('host_room')
+    $ change_room('host_room')
 
     """
     It's empty.
@@ -355,6 +355,6 @@ label lad_day3_morning_drunk_room:
         Move aside, I am gonna open it.
         """
 
-        call change_room('drunk_room')
+        $ change_room('drunk_room')
 
     return

@@ -24,6 +24,7 @@ label init_map:
     python:
         # Full Map of the MANOR TODO no need to init each time
         rooms = [
+            # TODO a Third floor? Servants quarters?
             # Bedrooms
             Room(2, (0, 100, 200, 100),     'psychic_room',     'George III Bedroom (Psychic)'),
             Room(2, (200, 100, 200, 100),   'lad_room',         'William the Conqueror Bedroom (Lad)' ),
@@ -31,19 +32,23 @@ label init_map:
             Room(2, (600, 100, 200, 100),   'broken_room',      'Richard III Bedroom (broken)'),
             Room(2, (800, 100, 200, 100),   'doctor_room',      'Edward II Bedroom (doctor)'),
             Room(2, (0, 200, 200, 100),     'captain_room',     'George I Bedroom (captain)'),
+            Room(2, (200, 200, 200, 100),   'drunk_room',       'George IV Bedroom (drunk)'),
+            Room(2, (400, 200, 200, 100),   'nurse_room',       'Elizabeth I Bedroom (nurse)'),
             # Ground Floor
             Room(1, (0, 100, 200, 100),     'billiard_room',    'Billiard room'),
             Room(1, (200, 100, 200, 100),   'library',          'Library'),
             Room(1, (400, 100, 200, 100),   'tea_room',         'Tea room'),
-            Room(1, (0, 200, 200, 100),     'manor_garden',   'Garden'),
-            Room(1, (200, 200, 200, 100),    'forest',          'Forest'),
+            Room(1, (600, 100, 200, 100),   'dining_room',      'Dining Room'),
+            Room(1, (0, 200, 200, 100),     'garden',           'Garden'),
+            # TODO where to put the footman extra livery ?
             # Basement
             Room(0, (0, 100, 200, 100),     'kitchen',          'Kitchen'),
             Room(0, (200, 100, 200, 100),   'scullery',         'Scullery'),
             Room(0, (400, 100, 200, 100),   'garage',           'Garage'),
-            Room(0, (0, 200, 200, 100),     'gun_room',         'Gun room'),
+            # TODO add other servants only rooms ? Food locker for instance? closed for suspens ?
+            Room(0, (0, 200, 200, 100),     'gun_room',         'Gun room'), #TODO check in basement ?
         ]
-        # Info locked TODO put in the ROOM class?????
+        # TODO put in the ROOM class?????
         map_info = dict()
         map_info['lad_room'] = False
         map_info['psychic_room'] = False

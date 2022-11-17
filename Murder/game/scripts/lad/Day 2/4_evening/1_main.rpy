@@ -73,7 +73,7 @@ label lad_day2_evening:
     I should go back to my room.
     """
 
-    call  change_room('lad_room')
+    $ change_room('lad_room')
 
     """
     Before trying to sleep, I better move the some furniture in front of the door.
