@@ -67,27 +67,27 @@ label lad_day1_evening:
 
         jump lad_day2_morning
 
-label lad_day1_evening_host_room:
-    
-    scene hallway
+# label lad_day1_evening_host_room:
+# NO- She is in the billiard room
+#     scene hallway
 
-    "I knock on the door."
+#     "I knock on the door."
 
-    psychic "Yes ?"
+#     psychic "Yes ?"
 
-    lad """
-    Lady Claythorn, it's Ted Harring.
+#     lad """
+#     Lady Claythorn, it's Ted Harring.
 
-    I was hoping we could talk?   
-    """
+#     I was hoping we could talk?   
+#     """
 
-    host """
-    I am sorry, but it's a very bad time mister Harring.
+#     host """
+#     I am sorry, but it's a very bad time mister Harring.
 
-    Why don't you meet the others in the billiard room?.
-    """
+#     Why don't you meet the others in the billiard room?.
+#     """
 
-    return
+#     return
 
 label lad_day1_evening_psychic_room:
   

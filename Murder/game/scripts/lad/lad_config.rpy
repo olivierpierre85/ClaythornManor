@@ -46,13 +46,13 @@ label init_lad:
                 room = 'psychic_room', 
                 condition = "current_day == 'Friday'"
             ),
-            TimedMenuChoice(
-                default_room_text('host_room'), 
-                'lad_day1_evening_host_room', 
-                10, 
-                room = 'host_room', 
-                condition = "current_day == 'Friday'"
-            ),
+            # TimedMenuChoice(
+            #     default_room_text('host_room'), 
+            #     'lad_day1_evening_host_room', 
+            #     10, 
+            #     room = 'host_room', 
+            #     condition = "current_day == 'Friday'"
+            # ),
             TimedMenuChoice(
                 default_room_text('garden'), 
                 'garden_friday', 
