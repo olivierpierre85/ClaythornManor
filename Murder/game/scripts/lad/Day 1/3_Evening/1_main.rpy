@@ -49,7 +49,11 @@ label lad_day1_evening:
 
     call change_time(23,00)
 
-    "I am feeling tired. It's probably best if I go to bed now."
+    """
+    I am feeling tired. It's probably best if I go to bed now.
+    """
+
+    stop music fadeout 5.0
 
     $ change_room('lad_room')
 

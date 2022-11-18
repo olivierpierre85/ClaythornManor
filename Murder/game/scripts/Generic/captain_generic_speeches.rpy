@@ -13,6 +13,11 @@ label captain_billiard_room_speech_part_1:
 label captain_billiard_room_speech_part_2:
 
     captain """
+    They sieged beijing where 
+
+
+
+
     To restore order, major europeans powers group themselves to 
     ...
     """
@@ -21,11 +26,25 @@ label captain_billiard_room_speech_part_2:
 
     # Show old china ?
 
-    scene boxer with fade
+    scene boxer_fight with fade
 
     captain """
     ....
+
     ...
+    
+    ...
+    
+    ...
+    
+    ...
+    
+    ...
+    
+    ...
+    
+    ...
+    
     """
 
     scene billiard_room with fade
