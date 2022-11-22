@@ -1,38 +1,38 @@
 label psychic_generic_other_guests:
 
-    if current_day == "Friday":
+    # TODO extend to phases
+    if not 'psychic_generic_other_guests_menu' in locals():
+        $ psychic_generic_other_guests_menu = TimedMenu([
+            TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk', 5),
+            TimedMenuChoice('Talk about something else', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
+        ], image_right = "psychic")
 
-        psychic """
-        I've just met them. So I can't say to know a lot yet.
+    call run_menu(psychic_generic_other_guests_menu)
 
-        All I know is that this guy over there ...
-        """
+    return
 
-        """
-        She points at Sushil Sinha.
-        """
-
-        psychic """
-        ... is monopolizing the conversation.
-
-        And he is very noisy too.
-
-        It's not very tactful if you ask me.
-
-        That's why I rather stay away from the group.
-        """
-
-        $ captain_details.add_knowledge('talker') 
+label psychic_generic_other_guests_friday:
     
-    else:
-        # TODO extend to phases
-        if not 'psychic_generic_other_guests_menu' in locals():
-            $ psychic_generic_other_guests_menu = TimedMenu([
-                TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk', 5),
-                TimedMenuChoice('Talk about something else', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
-            ], image_right = "psychic")
+    # DRINKS AND DINNER
+    psychic """
+    I've just met them. So I can't say to know a lot yet.
 
-        call run_menu(psychic_generic_other_guests_menu)
+    All I know is that this guy over there ...
+    """
+
+    """
+    She points at Sushil Sinha.
+    """
+
+    psychic """
+    ... is monopolizing the conversation.
+
+    And he is very noisy too.
+
+    It's not very tactful if you ask me.
+    """
+
+    $ captain_details.add_knowledge('talker') 
 
     return
 

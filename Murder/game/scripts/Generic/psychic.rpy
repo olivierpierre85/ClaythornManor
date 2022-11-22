@@ -15,7 +15,8 @@ label psychic_generic(skip_intro = False):
             TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 10),
             TimedMenuChoice('How old are you?', 'psychic_generic_age', 5),
             TimedMenuChoice('What room are you in?', 'psychic_generic_room', 5),
-            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests', 0),
+            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 0, condition = "current_day == 'Friday'"),
+            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests', 0, condition = "not current_day == 'Friday'"),
             TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "psychic")
 
