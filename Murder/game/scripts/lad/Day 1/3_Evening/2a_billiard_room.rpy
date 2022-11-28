@@ -154,7 +154,7 @@ label lad_day1_evening_billiard_room_group:
     """
 
     call run_menu(TimedMenu([
-            TimedMenuChoice('Continue to listen anyway', 'lad_day1_evening_billiard_room_group_part_2', 50, early_exit = True),
+            TimedMenuChoice('Continue to listen anyway', 'lad_day1_evening_billiard_room_group_part_2', 120, early_exit = True),
             TimedMenuChoice('I would rather do something else', 'lad_day1_evening_billiard_group_cancel', 5, early_exit = True)
         ])
     )

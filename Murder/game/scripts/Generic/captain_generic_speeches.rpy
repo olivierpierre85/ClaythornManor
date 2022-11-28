@@ -87,9 +87,7 @@ label captain_billiard_room_speech_part_2:
 
     But not in the same outrageous manner as other nations.
 
-    Even the press reported that :
-    
-    \"Looting on the part of British troops was carried out in the most orderly manner.\"
+    At least, looting on the part of British troops was carried out in the most orderly manner.
     
     We held loot auctions everyday except Sunday in front of the main-gate to the British Legation.
 
@@ -103,11 +101,27 @@ label captain_billiard_room_speech_part_2:
 
     I still stayed a few more months in China to insure the peaceful transition.
 
-    And was send to England later.TODO.....
+    At the end, my commanders were really pleased with me. 
+    
+    So I got to go to london to join a training regiment near London.
+
+    That was very rare for someone of Indian descent.
+
+    In any case, that's why I live in England today.
     """
 
     scene billiard_room with fade
 
     $ play_music('previous')
+
+    """
+    Wait, that was the original question ?
+
+    Why he is living in England ?
+
+    That was quite a long explanation.
+    """
+
+    $ captain_details.add_knowledge('talker') 
 
     return
