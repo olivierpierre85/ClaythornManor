@@ -103,7 +103,7 @@ label captain_billiard_room_speech_part_2:
 
     At the end, my commanders were really pleased with me. 
     
-    So I got to go to london to join a training regiment near London.
+    So I got to go to london to lead a training regiment near London.
 
     That was very rare for someone of Indian descent.
 
@@ -119,7 +119,7 @@ label captain_billiard_room_speech_part_2:
 
     Why he is living in England ?
 
-    That was quite a long explanation.
+    It took long enough.
     """
 
     $ captain_details.add_knowledge('talker') 

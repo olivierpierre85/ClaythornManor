@@ -50,7 +50,11 @@ label lad_day1_evening:
     call change_time(23,00)
 
     """
-    I am feeling tired. It's probably best if I go to bed now.
+    It's getting kinda late now.
+
+    I am exhausted from the trip. 
+    
+    It's probably best if I go to bed now.
     """
 
     stop music fadeout 5.0
@@ -114,6 +118,8 @@ label lad_day1_evening_psychic_room:
     psychic "Oh Mister Harring. I am afraid I was getting ready to bed. We can talk again tomorrow."
 
     lad "Of course, I am sorry."
+
+    call unlock_map('psychic_room')
 
     return
 
