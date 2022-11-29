@@ -19,7 +19,7 @@ label lad_day1_evening:
     I hope it's to your liking.
     """
 
-    call unlock_map('lad_room')
+    $ unlock_map('lad_room')
 
     $ change_room('lad_room')
 
@@ -119,7 +119,7 @@ label lad_day1_evening_psychic_room:
 
     lad "Of course, I am sorry."
 
-    call unlock_map('psychic_room')
+    $ unlock_map('psychic_room')
 
     return
 

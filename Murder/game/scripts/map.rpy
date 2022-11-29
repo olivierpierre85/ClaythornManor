@@ -48,19 +48,29 @@ label init_map:
             # TODO add other servants only rooms ? Food locker for instance? closed for suspens ?
             Room(0, (0, 200, 200, 100),     'gun_room',         'Gun room'), #TODO check in basement ?
         ]
-        # TODO put in the ROOM class?????
-        map_info = dict()
-        map_info['lad_room'] = False
-        map_info['psychic_room'] = False
-        map_info['broken_room'] = False
-        map_info['host_room'] = False
-        map_info['captain_room'] = False
-        map_info['doctor_room'] = False
+        # TODO put in the ROOM class????? NOT if multiple info by room? Check at the end
+        map_information = [
+            MapInfo('psychic_room', 'Amalia Baxter',    2, (0, 100, 200, 100)),
+            MapInfo('lad_room',     'Ted Harring',      2, (200, 100, 200, 100)),
+            MapInfo('broken_room',  'Thomas Moody',     2, (600, 100, 200, 100)),
+            MapInfo('host_room',    'Lady Claythorn',   2, (400, 100, 200, 100)),
+            MapInfo('captain_room', 'Sushil Sinha',     2, (0, 200, 200, 100)),
+            MapInfo('doctor_room',  'Daniel Baldwin',   2, (800, 100, 200, 100))
+        ]
 
     call change_floor(1) # ground floor
 
     return
 
+init python:
+    def unlock_map(room):
+        for info in map_information:
+            if info.id == room and not info.active:
+                info.active = True
+                renpy.notify("You have written new information on the map.")
+                renpy.play("audio/sound_effects/writing_short.ogg", "sound")
+
+        return
 
 label change_floor(floor):
     # 0 = basement
@@ -72,14 +82,7 @@ label change_floor(floor):
 
     return
 
-label unlock_map(room):
-    python:
-        if not map_info[room]:
-            map_info[room] = True
-            renpy.notify("You have written new information on the map.")
-            renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
-    return
 
 
 # Display of manor map in menu => Make it more like
@@ -129,40 +132,14 @@ screen manor_map:
                     xoffset 0       
 
 screen map_information:
-    if selected_floor == 2:
-        if map_info['lad_room'] == True:
-            text "Ted Harring":
-                pos(200,100)
-                color "#be0c0c"
-                size 30
-                font "gui/font/BurtonScratch-Regular.ttf"
-        
-        if map_info['psychic_room'] == True:
-            text "Amelia Baxter":
-                pos(0,100)
-                color "#be0c0c"
-                size 30
-                font "gui/font/BurtonScratch-Regular.ttf"
-        
-        if map_info['broken_room'] == True:
-            text "Thomas Moody":
-                pos(0,100)
-                color "#be0c0c"
-                size 30
-                font "gui/font/BurtonScratch-Regular.ttf"
-        
-        if map_info['host_room'] == True:
-            text "Lady Claythorn":
-                pos(0,100)
-                color "#be0c0c"
-                size 30
-                font "gui/font/BurtonScratch-Regular.ttf"
-        if map_info['doctor_room'] == True:
-            text doctor_details.real_name:
-                pos(800,100)
-                color "#be0c0c"
-                size 30
-                font "gui/font/BurtonScratch-Regular.ttf"
+
+    for info in map_information:
+        if info.floor == selected_floor and info.active:
+                text info.name:
+                    pos info.area_points
+                    color "#be0c0c"
+                    size 30
+                    font "gui/font/BurtonScratch-Regular.ttf"
 
 screen in_game_map_menu(timed_menu):
 
@@ -288,6 +265,21 @@ init -1 python:
             self.floor = floor
             self.area_points = area_points
     
+    class MapInfo:
+        def __init__(
+            self, 
+            id,
+            name,
+            floor, 
+            area_points,
+            active = False
+        ):
+            self.id = id
+            self.name = name
+            self.floor = floor
+            self.area_points = area_points
+            self.active = active
+
     class Hotspot:
         def __init__(
             self, 

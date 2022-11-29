@@ -13,6 +13,7 @@ label lad_day3_escape:
     I don't think it's gonna be an easy walk.
 
     The roads must still be muddy, and if I recall well, the trip to the next house must be at least 10 miles.
+    
     Maybe more.
 
     So it's not a gonna be picnic.

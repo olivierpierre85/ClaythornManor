@@ -116,7 +116,7 @@ label doctor_generic_age:
 label doctor_generic_room:
     doctor "I am in the Edward II room."
 
-    call unlock_map('doctor_room')
+    $ unlock_map('doctor_room')
     
     return
 

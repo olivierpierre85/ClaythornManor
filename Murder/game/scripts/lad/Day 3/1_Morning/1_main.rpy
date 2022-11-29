@@ -184,7 +184,7 @@ label lad_day3_morning_captain_room:
     Yes, what is it ?
     """
 
-    call unlock_map('captain_room')
+    $ unlock_map('captain_room')
 
     lad """
     It's Ted Harring. I am here with Amelia Baxter.
@@ -279,7 +279,7 @@ label lad_day3_morning_host_room:
     This is Lady Claythorn Room.
     """
 
-    call unlock_map('host_room')
+    $ unlock_map('host_room')
 
     lad """
     Miss Claythorn ?

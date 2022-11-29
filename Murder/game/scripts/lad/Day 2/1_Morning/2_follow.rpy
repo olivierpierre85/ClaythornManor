@@ -18,7 +18,7 @@ label lad_day2_breakfast_follow:
 
     butler "Correct Sir."
 
-    call unlock_map('broken_room')
+    $ unlock_map('broken_room')
     # $ broken_details.introduce() 
 
     "We all enter the room."
