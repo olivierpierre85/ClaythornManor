@@ -28,7 +28,7 @@ label lad_day1_evening_billiard_room:
             # TimedMenuChoice('Ask the butler about our Lady Claythorn room', 'lad_day1_evening_billiard_room_butler', 20),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day1_evening_billiard_room_bar_1', 20),
             TimedMenuChoice('Have another drink', 'lad_day1_evening_billiard_room_bar_2', 20, condition = 'lad_day1_drinks == 1'),
-            TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 20, condition = 'lad_day1_drinks == 2'),
+            TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 120, condition = 'lad_day1_drinks == 2'),
             TimedMenuChoice('Leave the room', 'lad_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -76,7 +76,7 @@ label lad_day1_evening_billiard_room_bar_1:
 
     I was seating next to him at dinner and it was impossible to have him say anything coherent.
 
-    He could eat it's food though. You could tell he is used to function like this. Poor fellow.
+    He could eat his food though. You could tell he is used to function like this. Poor fellow.
 
     Anyway, I am Thomas Moody.
     """
@@ -176,13 +176,40 @@ label lad_day1_evening_billiard_room_group_part_2:
     return
 
 label lad_day1_evening_billiard_room_bar_2:
-    "Another drink"
+    """
+    I really don't feel comfortable here.
+
+    Perhaps another drink will help me relax.
+
+    So I decide to go back to the bar and pour myself a sherry.
+    """
+
     $ lad_day1_drinks = lad_day1_drinks + 1
+
     return
 
 label lad_day1_evening_billiard_room_bar_3:
-    "One last drink"
-    $ lad_day1_drinks = lad_day1_drinks + 1
+    
+    """
+    Well, I haven't tried the Port yet.
+
+    It's probably better then what I am used to.
+
+    So I pour myself one.
+
+    It's exquisite.
+
+    So good that it would be stupid not the drink another one.
+
+    So I did.
+
+    And another, ...
+
+    And an other, ...
+    """
+
+    $ lad_day1_poisoned = False
+    $ lad_day1_drunk = True
     # TODO add blur effect if drunk, puke noise... Or just black out 
 
     return

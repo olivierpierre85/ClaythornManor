@@ -49,23 +49,52 @@ label lad_day1_evening:
 
     call change_time(23,00)
 
-    """
-    It's getting kinda late now.
+    stop music fadeout 5.0
 
-    I am exhausted from the trip. 
-    
-    It's probably best if I go to bed now.
-    """
+    if lad_day1_drunk:
+        """
+        Wow I don't feel great.
+
+        And worst, I think I might be getting sick.
+
+        I better go back to my room.
+        """
+    else: 
+        """
+        It's getting kinda late now.
+
+        I am exhausted from the trip. 
+        
+        It's probably best if I go to bed now.
+        """
 
     stop music fadeout 5.0
 
     $ change_room('lad_room')
 
-    "NOW WHAT ??? You Notice something on your bed. a letter."
+    if lad_day1_drunk:
 
-    # TODO play music SCARY
+        """
+        I rush to my room.
 
-    # SHOW PNG LETTER.
+        Find the toilet and puke all the Port I have been drinking.
+
+        Great. If I didn't look stupid enough before that will do it.
+
+        I go to bed before I do anything stupid.
+
+        And I fall asleep almost instantly.
+        """
+
+    else:
+
+        """
+        It's been a long day.
+
+        So I change a get directly into my bed.
+
+        I fall asleep almost instantly.
+        """
 
     if lad_day1_poisoned:
 
@@ -74,6 +103,8 @@ label lad_day1_evening:
     else:
 
         jump lad_day2_morning
+        
+    return
 
 # label lad_day1_evening_host_room:
 # NO- She is in the billiard room

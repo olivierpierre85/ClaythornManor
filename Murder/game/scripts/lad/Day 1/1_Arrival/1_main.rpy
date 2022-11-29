@@ -112,7 +112,8 @@ label lad_day1_arrival:
     They seem more approachable than the rest.
     """
     
-    $ time_left = 300 #TODO PUt back to 30/20?
+    $ time_left = 30 
+    
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
         TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5), # keep_alive = True, TODO keep alive to allow more choices if leaving by mistakes ?

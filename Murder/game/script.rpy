@@ -39,7 +39,6 @@ label start():
     # Debug Menu # TODO remove when prod
     jump debug_choices
 
-    
 
     # These display lines of dialogue.
     jump character_selection
@@ -62,6 +61,8 @@ label init_technical_variables:
         seen_tutorial_add_knowledge = False
 
         current_music = 'upbeat'
+
+        first_death = True
 
     return
 

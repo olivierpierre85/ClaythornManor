@@ -59,15 +59,26 @@ label debug_routes:
         ]
 
         debug_lad_first_death = [
-            1, # Talk to the woman
-            6, # You don't have anymore questions for her
-            0, # Talk to the man
             1, # Talk to Amelia Baxter
-            6, # You don't have anymore questions for her
+            3, # Tell me more about yourself.
+            4, # Why were you invited here?
+            1, # Talk to Amelia Baxter
+            0, # What do you think of this weather?
+            5, # What do you think of this place?
+            6, # How old are you?
+            8, # What do you think of the other guests?
+            10, # You don't have anymore questions for her
             0, # Talk to Daniel Baldwin
-            5, # You don't have anymore questions for him
-            1, # Meet the others in the billiard room
+            2, # Tell me more about yourself.
+            3, # Why were you invited here?
+            4, # Library
+            -1, # FILLER CHOICE
+            2, # Meet the others in the billiard room
+            0, # Talk to Daniel Baldwin
+            4, # What do you think of this place?
+            7, # What do you think of the other guests?
+            0, # What do you think of this weather?
+            8, # You don't have anymore questions for him
             2, # Go to the bar to have a drink
-            5, # Leave the room
-            3, # Go to sleep
+            3 # Have another drink
         ]

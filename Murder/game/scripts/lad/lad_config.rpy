@@ -6,6 +6,7 @@ label init_lad:
         lad_day1_evening_billiard_room_visited = False
         lad_day1_drinks = 0
         lad_day1_poisoned = False
+        lad_day1_drunk = False
 
         lad_day2_breakfast_follow = False
         lad_day2_hunt = False
