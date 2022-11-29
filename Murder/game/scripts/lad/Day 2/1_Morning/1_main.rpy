@@ -1,11 +1,12 @@
 label lad_day2_morning:
 
-    call black_screen_transition("The Lad - Day 2")
+    call black_screen_transition("Ted Harring", "Saturday")
 
-    scene bedroom_lad with irisout
+    scene lad_room with irisout
+    
     $ change_room('lad_room')
 
-    call change_time(9,00)
+    call change_time(9,00, 'Morning', 'Saturday')
 
     """
     I slept through the night. 
@@ -14,8 +15,12 @@ label lad_day2_morning:
     """
 
 
-    if (lad_day1_drinks > 2):
-        "Annnd, I have a bad hangover this morning. Why did I drink that much ?"
+    if lad_day1_drunk :
+        """
+        Oh my god my head hurts.
+
+        Why did I drink so much yesterday ?
+        """
     
     """
     After getting ready, I leave my room to have breakfast.
@@ -26,7 +31,7 @@ label lad_day2_morning:
     """
     Most of the guests are already in the dining room.
 
-    There is a breakfast buffet. So I fix myself a plate. Eggs, bacon, bread,... with no particular logic.
+    There is a breakfast buffet. So I fix myself a plate: Eggs, bacon, bread,... with no particular logic.
 
     I have know idea if it is what I am supposed to do.
 
@@ -69,7 +74,7 @@ label lad_day2_morning:
         """
     
     """
-    As I begin to eat, the Samuel Manning enters the room.
+    As I begin to eat, Samuel Manning enters the room.
 
     He stumbled to the buffet table and picks up a plate, visibly shaking.    
     """
@@ -87,14 +92,14 @@ label lad_day2_morning:
 
     I can tell that is not good news.
 
-    She looks shocked and worried. Then stands up and walks in my direction.
-
-    She stops in front of the doctor.
+    She looks shocked and worried. 
+    
+    She stands up and walks in my direction, then stops in front of the doctor.
     """
 
     host """
 
-    Doctor Baldwin, I am sorry to interrupt you breakfast, but would you mind coming with us ?
+    Doctor Baldwin, I am sorry to interrupt your breakfast, but would you mind coming with us?
 
     We need your assistance.
     """
@@ -110,16 +115,15 @@ label lad_day2_morning:
     """
     Everything is happening fast. What should I do ?
     """
-
     
     $ lad_day1_evening_menu = TimedMenu([
         TimedMenuChoice('Follow them', 'lad_day2_breakfast_follow', 30, early_exit = True ),
-        TimedMenuChoice('Stay there and finish breakfast', 'lad_day2_breakfast_eat', early_exit = True)
+        TimedMenuChoice('Stay there and finish the most important meal of the day', 'lad_day2_breakfast_eat', early_exit = True)
     ])
     $ time_left = 30
     call run_menu(lad_day1_evening_menu)
 
-    call change_time(9,30)
+    call change_time(9,30) #Needed ?
 
     if lad_day2_breakfast_follow:
 
@@ -183,6 +187,8 @@ label lad_day2_morning:
         We keep eating slowing in silent for a moment when the doctor enters the room.
         """
 
+    
+
     host -surprised """
     Doctor Baldwin. Can you tell us more about what happened ?
     """
@@ -205,18 +211,35 @@ label lad_day2_morning:
     """
     We then keep on eating in a sad silence.
 
-    Nobody dares to speak much.
+    Nobody talks much.
     """
+
+    stop music fadeout 5.0
 
     jump lad_day2_morning_breakfast_over
 
 
-
 label lad_day2_breakfast_eat:
 
-    psychic -angry "I wonder what this is about."
+    psychic -angry """
+    I wonder what this is about.
+    """
 
-    lad "Me too, and I have a bad feeling about it."
+    lad """
+    Me too.I have a bad feeling about it.
+    """
+
+    psychic """
+    Well no reason to worry now.
+
+    We just have to wait and see.
+    """
+
+    """
+    That's right.
+
+    We should probably talk about something else.
+    """
 
     call psychic_generic()
     

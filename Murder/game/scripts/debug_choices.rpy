@@ -17,6 +17,9 @@ label debug_choices:
         
         "lad_day1_evening":
             jump lad_day1_evening
+
+        "lad_day2_morning":
+            jump lad_day2_morning
             
         # "lad_day2_morning_nohunt":
         #     jump lad_day2_morning_nohunt

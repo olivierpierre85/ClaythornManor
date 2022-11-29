@@ -1,6 +1,6 @@
 label lad_day2_morning_breakfast_over:
 
-    scene dining_room
+    $ change_room('dining_room')
 
     call change_time(10,00)
 
@@ -22,6 +22,8 @@ label lad_day2_morning_breakfast_over:
     A murmur of assent runs through the assembly.
     """
 
+    $ play_music('chill')
+
     host """
     Excellent.
 
@@ -35,6 +37,8 @@ label lad_day2_morning_breakfast_over:
 
     You can relax and enjoy the warmth of the house until the others return.
     """
+
+    
 
     """
     A hunt... A real aristocratic hunt.

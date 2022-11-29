@@ -23,7 +23,7 @@ label lad_day2_breakfast_follow:
 
     "We all enter the room."
 
-    scene bedroom_broken
+    $ change_room('bedroom_broken')
 
     butler "He is here in his bed. He was not responding at all when I tried to wake him up."
 
@@ -123,6 +123,6 @@ label lad_day2_breakfast_follow:
     I followed him back to the dining room.
     """
 
-    scene dining_room
+    $ change_room('dining_room')
 
     return

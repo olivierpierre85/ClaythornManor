@@ -3,7 +3,7 @@
 #                   - The lad
 
 # ?TODO add extra choices possibilities?
-label psychic_generic(skip_intro = False):
+label psychic_generic:
 
     if not 'psychic_generic_menu' in locals():
         $ psychic_generic_menu = TimedMenu([
@@ -16,7 +16,7 @@ label psychic_generic(skip_intro = False):
             TimedMenuChoice('How old are you?', 'psychic_generic_age', 5),
             TimedMenuChoice('What room are you in?', 'psychic_generic_room', 5),
             TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 0, condition = "current_day == 'Friday'"),
-            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests', 0, condition = "not current_day == 'Friday'"),
+            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
             TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "psychic")
 
