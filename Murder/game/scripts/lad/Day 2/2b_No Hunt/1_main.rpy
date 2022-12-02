@@ -1,9 +1,15 @@
 label lad_day2_nohunt:
+
+    # TODO, not a lot to do except knocking on doors?
+    # OR MAYBE ALLOWED TO ENTER SOME PEOPLE ROOMS
+    
     call black_screen_transition("Ted Harring", "The Hunt")
 
     $ change_room('lad_room')
 
     call change_time(11,00, 'Hunt', 'Saturday')
+
+    $ play_music('upbeat')
 
     """
     I turned down the invitation for the hunt.

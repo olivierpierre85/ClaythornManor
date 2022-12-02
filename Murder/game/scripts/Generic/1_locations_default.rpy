@@ -51,16 +51,18 @@ label garden_default:
     return
 
 label garage_default:
-    
-    $ change_room('garage')
 
-    """
-    The garage is ??
-    """
+    call downstairs_default
+    
+    # $ change_room('garage')
+
+    # """
+    # The garage is now accessible??? Or is ???? Maybe not if downstairs.
+    # """
 
     return
 
-label garage_default_friday:
+label garage_friday:
     
     # Answers different based on the day (first day weather is too bad)
     """
