@@ -1,7 +1,9 @@
 label lad_day2_hunt_accident:
 
     scene forest
-    call change_time(12,00)
+    call change_time(12,00, 'Hunt', 'Saturday')
+
+    $ play_music('chill')
 
     """
     Despite the risks, I decided to follow the doctor Baldwin and Samuel Manning.
@@ -45,6 +47,8 @@ label lad_day2_hunt_accident:
     Yes, I've been born and raised there.
     """
 
+    $ lad_details.add_knowledge('background') 
+
     """
     But I don't really want to talk about that.
 
@@ -66,8 +70,8 @@ label lad_day2_hunt_accident:
     Hopefully we'll be luckier this time.
     """
 
+    pause 2.0
 
-    # TODO play music suspensful_01 fadein 5.0
     """
     For a while we weren't. 
     
@@ -105,13 +109,18 @@ label lad_day2_hunt_accident:
     I am a bit pissed but then I hear a cry.
     """
 
-    play sound dying_in_pain
+    play music [ danger_01, scary_01]
+
+    # play sound dying_in_pain TODO better sound
 
     """
     I turn around and see the doctor lying down in agony.
     """
 
-    # TODO play sad music
+    doctor """
+    Argghhhh....
+    """
+
     footman """
     Sir, sir are you okay...
     """
@@ -120,13 +129,24 @@ label lad_day2_hunt_accident:
     I watch in silence the scene of the footman trying to help him.
 
     I start to shout for help.
+    """
 
+    lad """
+    HELP !!!
+
+    Someone has been shot ! 
+    """
+
+    # TODO develop arrival of others
+    """
     In the distance I hear the other group responding.
 
     By the time they reached us, it is too late.
 
-    Daniel Baldwin has bled to death and is lying there in the forest.
+    Daniel Baldwin has bled to death and is lying lifeless in the forest.
     """
+
+    pause 2.0
 
     return
 

@@ -22,8 +22,6 @@ label lad_day2_morning_breakfast_over:
     A murmur of assent runs through the assembly.
     """
 
-    $ play_music('chill')
-
     host """
     Excellent.
 
@@ -37,8 +35,6 @@ label lad_day2_morning_breakfast_over:
 
     You can relax and enjoy the warmth of the house until the others return.
     """
-
-    
 
     """
     A hunt... A real aristocratic hunt.
@@ -60,7 +56,7 @@ label lad_day2_morning_breakfast_over:
 
     $ lad_day2_morning_menu = TimedMenu([
         TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_hunt', early_exit = True),
-        TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_morning_nohunt', early_exit = True)
+        TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_nohunt', early_exit = True)
     ])
     $ time_left = TIME_MAX # Trick to avoid problems, todo, find a better way
     call run_menu(lad_day2_morning_menu)

@@ -11,6 +11,7 @@ label doctor_generic():
         TimedMenuChoice('How old are you?', 'doctor_generic_age', 5),
         TimedMenuChoice('What room are you in?', 'doctor_generic_room', 5),
         TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_friday', 5, condition = "current_day == 'Friday'"),
+        TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_saturday', 5, condition = "current_day == 'Saturday'"),
         TimedMenuChoice('You don\'t have anymore questions for him', 'doctor_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "doctor")
 
@@ -32,6 +33,10 @@ label doctor_generic_weather_saturday:
     
     doctor """
     We are lucky the weather improved greatly today.
+
+    For a while I thought we would be trapped inside the manor the whole weekend.
+
+    But everything seems fine now.
     """
 
     return

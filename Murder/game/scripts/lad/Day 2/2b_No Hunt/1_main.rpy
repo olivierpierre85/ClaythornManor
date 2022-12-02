@@ -1,13 +1,14 @@
-label lad_day2_morning_nohunt:
-    # call black_screen_transition("The Lad - Inside") # Good ?
+label lad_day2_nohunt:
+    call black_screen_transition("Ted Harring", "The Hunt")
+
     $ change_room('lad_room')
 
-    call change_time(11,00)
+    call change_time(11,00, 'Hunt', 'Saturday')
 
     """
     I turned down the invitation for the hunt.
 
-    So I stayed with Amelia Baxter and the Rosalind Marsh.
+    So I am staying inside with Amelia Baxter and Rosalind Marsh.
 
     They are in the tea room, waiting for a small luncheon to be served.
 
@@ -18,12 +19,7 @@ label lad_day2_morning_nohunt:
 
     $ time_left = 240
 
-    call run_menu(TimedMenu([
-            TimedMenuChoice('Meet the others in the Tea Room', 'lad_day2_evening_tea_room', 120, room = 'tea_room'),
-            TimedMenuChoice('Library', 'lad_library', 10, room = 'library'), # condition not visited ?
-            TimedMenuChoice('Take a nap until the others return', 'lad_day2_nohunt_cancel', early_exit = True, room = 'lad_room'),
-            TimedMenuChoice('Richard III Bedroom', 'lad_day2_broken_room', 20, room = 'broken_room')
-        ], is_map = True))
+    call run_menu(lad_map_menu)
 
     """
     Suddenly, I hear noises from the entrance hall.
@@ -32,6 +28,7 @@ label lad_day2_morning_nohunt:
     """
 
     jump lad_day2_afternoon
+    
 
 label lad_day2_broken_room:
 
@@ -57,7 +54,38 @@ label lad_day2_broken_room:
     Well, now that I am here. Maybe I should take a look quickly . 
 
     Something might help me understand what happened.
-    """
-    # TODO FIRST REAL INVESTIGATiON CLUE
 
+    So I look around the room.
+
+    I don't see nothing of the ordinary.
+
+    He seems peaceful in his sleep.
+
+    His mask is still on. 
+    
+    The doctor didn't even remove it to examine him.
+
+    Well, if the doctor didn't, I certainly won't either.
+
+    On a chair next the the bed are his clothes, meticulously folded.
+
+    There is a whisky flask on the night stand.
+
+    It's on its side, empty.
+
+    Next to it is a stain. 
+    
+    I suppose it should be whisky, but it has a weird color.
+
+    A light shade of green.
+
+    That's strange.
+
+    I should ask Doctor Baldwin about it.
+    """
+
+    $ broken_details.add_knowledge('green_liquid') # TODO link to billiard room option to not drink the whisky?
+
+    # TODO add sound for CLUE???
+    # TODO FIRST REAL INVESTIGATiON CLUE ? ADD INTUITION when come back to 
     return

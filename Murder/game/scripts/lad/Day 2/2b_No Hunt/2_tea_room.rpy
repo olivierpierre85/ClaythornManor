@@ -1,5 +1,7 @@
 label lad_day2_evening_tea_room:
 
+    $ change_room('tea_room')
+
     """
     The two ladies are sipping team and talking.
 
@@ -96,11 +98,11 @@ label lad_day2_evening_tea_room:
 
     Weird.
 
-    While we are still talking the butler enters the room.
+    While we are still talking, a young woman enters the room.
     """
 
 
-    cook """
+    maid """
     I am glad you are all here.
 
     I just finished to cook a small luncheon.
@@ -116,7 +118,7 @@ label lad_day2_evening_tea_room:
     I thought I saw you cleaning up my room this morning.
     """
 
-    cook """
+    maid """
     Um, ... the true is I am the cook, but also a maid when needed.
     """
 
@@ -124,7 +126,7 @@ label lad_day2_evening_tea_room:
     A cook and a maid ? That's a lot of work you must have.
     """
 
-    cook """
+    maid """
     Oh don't worry about me. I can handle it.
 
     I will fetch your food now.
@@ -145,7 +147,7 @@ label lad_day2_evening_tea_room:
 
     After a while the cook comes with our food and we enjoy it exchanging banalities.
 
-    Then I decide I don't have much to say to them, so I leave.
+    After a while I realize I don't have much to say to them, so I leave.
     """
 
     # TODO OR I SHOOULD ADD GENERIC NURSE AND PSYCHIC ??? 

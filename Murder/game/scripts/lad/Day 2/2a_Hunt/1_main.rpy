@@ -1,10 +1,10 @@
 label lad_day2_hunt:
-    call black_screen_transition("The Lad - The Hunt") # Good ?
+    call black_screen_transition("Ted Harring", "The Hunt") # Good ? TODO check consistency with no hunt
     scene gun_room
 
     play music upbeat_02 fadein 10.0
 
-    call change_time(11,00)
+    call change_time(11,00, 'Hunt', 'Saturday')
 
     $ lad_day2_hunt = True
 
@@ -14,7 +14,7 @@ label lad_day2_hunt:
     But I guess it didn't feel right to stay behind with the ladies.
     """
 
-    #     I wonder what it says about me I wonder.
+    # I wonder what it says about me I wonder.
     # TODO easter egg only if it's the first choice
 
     butler """
@@ -36,7 +36,11 @@ label lad_day2_hunt:
     """
 
     butler """
-    No just you. I will be with Lady Claythorn, and the others insisted they didn't need help.
+    It will be just you I believe. I will be with Lady Claythorn, and the others insisted they didn't need help.
+    """
+
+    """
+    Of course. So I will be the weak link today. Great.
     """
 
     lad """
@@ -74,10 +78,10 @@ label lad_day2_hunt:
     """
     I am trying the clothes before me. They fit perfectly.
 
-    Well, if something happens to me, at least I'll look good.
+    If something happens to me, at least I'll look good.
     """
 
-    $ change_room('garden')
+    $ change_room('manor_garden')
 
     """
     I join the others in the garden.
@@ -96,7 +100,7 @@ label lad_day2_hunt:
     """
 
     lad """
-    Is it okay for him to have a gun ? He looked a bit drunk this morning.
+    Is it okay for Mister Manning to have a gun ? He looked a bit drunk this morning.
     """
 
     butler """
@@ -123,7 +127,6 @@ label lad_day2_hunt:
 
     # TODO more explanation about the program, where to meet again....
 
-
     """
     People agree and the indian man asked to partner with our host.
 
@@ -135,8 +138,8 @@ label lad_day2_hunt:
     """
 
     $ lad_day2_hunt_menu = TimedMenu([
-        TimedMenuChoice('The Doctor and the Drunk', 'lad_day2_hunt_accident', early_exit = True ),
-        TimedMenuChoice('The Lady and the Indian Man', 'lad_day2_hunt_noaccident', early_exit = True)
+        TimedMenuChoice('Daniel Baldwin and Samuel Manning', 'lad_day2_hunt_accident', early_exit = True ),
+        TimedMenuChoice('Lady Claythorn and Sushil Sinha', 'lad_day2_hunt_noaccident', early_exit = True)
     ], image_left = "drunk", image_left_2 = "doctor", image_right = "host", image_right_2 = "captain")
     $ time_left = 1
     call run_menu(lad_day2_hunt_menu)

@@ -26,29 +26,14 @@ label init_characters:
     define letter       = Character("Letter", what_style="letter_style")
     define butler       = Character("Butler", image="butler")
     define footman      = Character("Footman", image="footman")
+    define maid_name    = "Young woman"
+    define maid         = Character(maid_name, image="maid")
 
     #  image side butler = "images/characters/butler_framed_02.png"
 
     python:
-        # 1. The Lad
-        # lad_extra_information = [
-        #     CharacterInformation(0, "background", "Born in ???") , 
-        #     CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
-        #     CharacterInformation(3, "education", "Not a great reader.")
-        # ]
-        # lad_details  = CharacterDetails(
-        #     text_id = "lad", 
-        #     locked = False,
-        #     know_real_name = True,
-        #     real_name = "Ted Harring",
-        #     nickname = "The Lad",
-        #     description_short = "Young man",
-        #     description_long = "Good Looking lad, in his early twenties.",
-        #     information_list = lad_extra_information,
-        #     has_met = set()
-        #     )
-        # lad = Character("lad_details.get_name()", image="lad", dynamic=True)
-
+        # 1. The Lad IN OWN FILE
+        
         # 2. The Psychic
         psychic_extra_information = [
             CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently.", is_important = True), 
@@ -127,6 +112,7 @@ label init_characters:
         # 6. The Broken Face
         broken_extra_information = [
             CharacterInformation(0, "mask", "A broken face or 'Gueule Cassée'. He wears mask that hides most of hist face because of an injury during the war."), 
+            CharacterInformation(1, "green_liquid", "After his dead, a green liquid was found on his bed stand (TODO put somewhere else?)"), 
         ]
         broken_details  = CharacterDetails(
             text_id = "broken", 

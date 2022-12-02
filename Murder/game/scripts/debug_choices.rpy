@@ -12,8 +12,8 @@ label debug_choices:
         "lad_day1_arrival":
             jump lad_day1_arrival
 
-        "lad_day2_dinner":
-            jump lad_day1_dinner
+        # "lad_day2_dinner":
+        #     jump lad_day1_dinner
         
         "lad_day1_evening":
             jump lad_day1_evening
@@ -21,8 +21,11 @@ label debug_choices:
         "lad_day2_morning":
             jump lad_day2_morning
             
-        # "lad_day2_morning_nohunt":
-        #     jump lad_day2_morning_nohunt
+        "lad_day2_hunt":
+            jump lad_day2_hunt
+
+        "lad_day2_nohunt":
+            jump lad_day2_nohunt
 
         # "lad_day2_afternoon":
         #     jump lad_day2_afternoon

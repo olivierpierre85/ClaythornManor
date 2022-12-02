@@ -1,7 +1,7 @@
 label lad_day2_hunt_noaccident:
 
     scene forest
-    call change_time(12,30)
+    call change_time(12,30, 'Hunt', 'Saturday')
 
     """
     Following our hostess was probably the safest course.
@@ -34,13 +34,13 @@ label lad_day2_hunt_noaccident:
     """
 
     lad """
-    You fought in other wars ?
+    You fought in many other wars?
     """
 
     captain """
     Of course, I started my career in India and fought my first battle during the war with Burma.
 
-    Then I've also been involved in the Chinese rebellion. Then ...
+    I've also been involved in the Chinese rebellion. Then ...
     """
 
     $ captain_details.add_knowledge('wars')
@@ -86,7 +86,7 @@ label lad_day2_hunt_noaccident:
 
     Doctor Baldwin was lying down on the floor.
 
-    Next to him was Samuel Manning, shacking.
+    Next to him was Samuel Manning, shaking.
     """
 
     drunk """

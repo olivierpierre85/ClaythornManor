@@ -14,6 +14,16 @@ label doctor_generic_other_guests_friday:
 
     return
 
+label doctor_generic_other_guests_saturday:
+    
+    doctor """
+    I haven't talk in details to anyone yet. 
+    
+    So I don't really have an opinion on the guests.
+    """
+
+    return
+
 label doctor_generic_other_guests:
 
     if not 'doctor_generic_other_guests_menu' in locals():

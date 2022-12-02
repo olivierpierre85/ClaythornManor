@@ -2,12 +2,12 @@
 label downstairs_default:
     scene basement_stairs
 
-    "I was on my way to the basement, when the butler stopped me."
+    """
+    I was on my way to the basement, when someone stops me.
+    """
 
-    butler "I am sorry, but downstairs is for staff only." 
+    maid "I am sorry, but downstairs is for staff only." 
 
-    # TODO GET CURRENT TALKER ..... for default text? or personalized text ?
-    # $ default_char = get_char(current_character.text_id)
     if current_character.text_id == "lad":
         lad "Oh I am sorry, I didn't know."
 
@@ -40,7 +40,7 @@ label garden_friday:
 
 label garden_default:
 
-    $ change_room('garden')
+    $ change_room('manor_garden')
     
     """
     Beautiful garden.
@@ -52,11 +52,21 @@ label garden_default:
 
 label garage_default:
     
+    $ change_room('garage')
+
+    """
+    The garage is ??
+    """
+
+    return
+
+label garage_default_friday:
+    
     # Answers different based on the day (first day weather is too bad)
     """
     There is a garage outside.
 
-    But I am not getting out while there is a storm.
+    But I am not getting out while there is a storm. TODO or can't access
     """
 
     return

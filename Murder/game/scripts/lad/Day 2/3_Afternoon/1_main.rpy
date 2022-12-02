@@ -1,5 +1,5 @@
 label lad_day2_afternoon:
-    call black_screen_transition("Day 2 - afternoon") # Good ?
+    call black_screen_transition("Ted Harring", "Saturday Afternoon")
     scene great_hall # with irisout
 
     call change_time(15,00)
@@ -7,16 +7,19 @@ label lad_day2_afternoon:
     call change_floor(1)
     
     if lad_day2_hunt:
+
         """
-        The rest happened feels like a blur for me.
+        The rest happened so fast, it felt like a blur for me.
 
         After the screaming and crying in the woods, Captain Sinha took charge.
 
-        He made us transported the Doctor on a makeshift stretcher.
+        He made us carry the doctor on a makeshift stretcher.
  
         It took a while but we finally reached the mansion.
         """
+
     else:
+        
         """
         I can see the hunting partying entering the house.
 
@@ -28,6 +31,8 @@ label lad_day2_afternoon:
 
         They are dragging someone on a makeshift stretcher.
         """
+
+        play music scary_01
 
     # TODO play dramatic music
     psychic surprised """

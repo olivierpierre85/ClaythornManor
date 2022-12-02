@@ -1,5 +1,5 @@
 label init_lad:
-    call change_time(17,00, 'Evening', "Friday")
+    call change_time(17,00, 'Evening', 'Friday')
 
     python:
         # Story Variables
@@ -16,7 +16,7 @@ label init_lad:
 
         # Character Class
         lad_extra_information = [
-            CharacterInformation(0, "background", "Born in ???") , 
+            CharacterInformation(0, "background", "Born and raised in London.") , 
             CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
             CharacterInformation(3, "education", "Not a great reader.")
         ]
@@ -38,6 +38,8 @@ label init_lad:
         # => change those fields to special var that will display an icon, or another style
         # for already visited path
         # https://lemmasoft.renai.us/forums/viewtopic.php?f=8&t=25453&p=313338&hilit=caption.replace#p313338
+        condition_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
+        condition_friday = "current_day == 'Friday'"
         lad_map_menu = TimedMenu([
             # Friday specific choices
             TimedMenuChoice(
@@ -45,7 +47,7 @@ label init_lad:
                 'lad_day1_evening_psychic_room', 
                 10, 
                 room = 'psychic_room', 
-                condition = "current_day == 'Friday'"
+                condition = condition_friday
             ),
             # TimedMenuChoice(
             #     default_room_text('host_room'), 
@@ -59,7 +61,7 @@ label init_lad:
                 'garden_friday', 
                 5, 
                 room = 'garden', 
-                condition = "current_day == 'Friday'"
+                condition = condition_friday
             ),
             TimedMenuChoice(
                 'Meet the others in the billiard room', 
@@ -67,14 +69,36 @@ label init_lad:
                 0, 
                 keep_alive = True, 
                 room = 'billiard_room', 
-                condition = "current_day == 'Friday'"
+                condition = condition_friday
             ),
             TimedMenuChoice(
                 'Go to sleep', 
                 'lad_day1_evening_cancel', 
                 early_exit = True, 
                 room = 'lad_room',
-                condition = "current_day == 'Friday'"
+                condition = condition_friday
+            ),
+            # Saturday, During the Hunt
+            TimedMenuChoice(
+                'Meet the others in the Tea Room', 
+                'lad_day2_evening_tea_room', 
+                120, 
+                room = 'tea_room',
+                condition = condition_hunt
+            ),
+            TimedMenuChoice(
+                'Take a nap until the others return', 
+                'lad_day2_nohunt_cancel', 
+                early_exit = True, 
+                room = 'lad_room',
+                condition = condition_hunt
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'lad_day2_broken_room', 
+                20, 
+                room = 'broken_room',
+                condition = condition_hunt
             ),
             # Generic choices
             TimedMenuChoice(
