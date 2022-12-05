@@ -18,13 +18,34 @@ label psychic_generic_other_guests:
 
     return
 
-label psychic_generic_other_guests_saturday_morning:
+label psychic_generic_other_guests_saturday:
+
     psychic """
     I haven't had time to make an opinion everyone yet.
 
     I was just able to get to know Captain Sinha, our host and the sorry drunk there.
 
     And I could only exchange a few words with our hostess, Lady Claythorn.
+    """
+
+    return
+
+label psychic_generic_other_guests_saturday_morning:
+    call psychic_generic_other_guests_saturday
+
+    call psychic_generic_other_guests
+
+    $ psychic_generic_other_guests_saturday_morning_ask = True
+
+    return
+
+label psychic_generic_other_guests_saturday_hunt:
+
+    if not psychic_generic_other_guests_saturday_morning_ask:
+        call psychic_generic_other_guests_saturday
+
+    psychic """
+    I also talked a bit with Miss Marsh.
     """
 
     call psychic_generic_other_guests
@@ -90,6 +111,7 @@ label psychic_generic_captain_saturday_morning:
     $ captain_details.add_knowledge('talker') 
 
     return
+
 
 label psychic_generic_host_saturday_morning:
 

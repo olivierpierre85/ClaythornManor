@@ -42,7 +42,7 @@ label debug_choices:
 
 label debug_routes:
     python:
-        test_mode = True
+        # test_mode = True
         test_choices = []
 
         debug_path_01 = [

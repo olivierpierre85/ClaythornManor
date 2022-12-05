@@ -13,6 +13,9 @@ label init_lad:
         lad_day3_morning_captain_found = False
         lad_day3_gun_downed = False
         lad_day3_poisoned = False
+        lad_has_met_maid = False
+        lad_day2_nohunt_has_visited_tea_room = False
+        psychic_generic_other_guests_saturday_morning_ask = False
 
         # Character Class
         lad_extra_information = [
@@ -84,7 +87,15 @@ label init_lad:
                 'lad_day2_evening_tea_room', 
                 120, 
                 room = 'tea_room',
-                condition = condition_hunt
+                condition = condition_hunt,
+                keep_alive = True, 
+            ),
+            TimedMenuChoice(
+                'Go back to the Tea Room', 
+                'lad_day2_evening_tea_room_return',  
+                room = 'tea_room',
+                condition = condition_hunt + " and " + "lad_day2_nohunt_has_visited_tea_room",
+                keep_alive = True, 
             ),
             TimedMenuChoice(
                 'Take a nap until the others return', 

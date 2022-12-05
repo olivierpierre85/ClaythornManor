@@ -17,9 +17,14 @@ label psychic_generic:
             TimedMenuChoice('What room are you in?', 'psychic_generic_room', 5),
             TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 0, condition = "current_day == 'Friday'"),
             TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
+            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Hunt')"),
             TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "psychic")
+    else:
+        # Reset if previous early exit
+        $ psychic_generic_menu.early_exit = False
 
+    $ print(psychic_generic_menu.is_valid())
     call run_menu(psychic_generic_menu)
 
     return

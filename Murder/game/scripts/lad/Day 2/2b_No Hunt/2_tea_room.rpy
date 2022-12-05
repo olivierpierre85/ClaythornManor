@@ -3,7 +3,9 @@ label lad_day2_evening_tea_room:
     $ change_room('tea_room')
 
     """
-    The two ladies are sipping team and talking.
+    Amelia Baxter and Rosalind Marsh are in the room.
+    
+    They are drinking tea and talking calmly.
 
     I join them.
     """
@@ -11,7 +13,7 @@ label lad_day2_evening_tea_room:
     nurse """
     Oh Mister Harring, I am glad you are here.
 
-    Misses Baxter was just talking about something fascinating.
+    Miss Baxter was just talking about something fascinating.
 
     You should sit with us.
     """
@@ -36,13 +38,13 @@ label lad_day2_evening_tea_room:
         """
 
         psychic """
-        yes, but to not bored miss Marsh, I won't go into details again.
+        Yes, but to not bored miss Marsh, I won't go into details again.
         
         But if you'd like, we can talk about it at another time.
         """
 
     nurse """
-    Anyway, you were saying that you hearing the poor guy who died last night.
+    Anyway, you were saying that you we were worried about the poor guy who died last night.
     """
 
     psychic """
@@ -54,7 +56,7 @@ label lad_day2_evening_tea_room:
     """
 
     psychic """
-    I am hearing him, and he is disturbed. The sign of an unnatural death.
+    I am sensing him, and he is disturbed. The sign of an unnatural death.
 
     There is something wrong here but I can't figure out what.
 
@@ -68,25 +70,46 @@ label lad_day2_evening_tea_room:
     lad """
     That's true, we are still waiting for them right.
 
-    How could Lady Claythorn left and don't let anyone taking care of this ?
+    But Lady Claythorn left and don't let anyone taking care of this ?
     """
 
     psychic """
     Well, she have staff to deal with that sort of things.
     """
 
-    lad """
-    Aren't they all out on the hunt ?
-    """
+    if lad_has_met_maid:
+
+        lad """
+        Oh right, like the girl I met trying to go downstairs.
+        """
+
+        psychic """
+        What were you trying to do downstairs ?
+
+        That's not a place where we should venture Mister Harring.
+
+        But in any case, there is probably a lot more staff that you haven't met yet.
+
+        They are needed to run such a big house.
+        """
+
+    else:
+        lad """
+        Aren't they all out on the hunt ?
+        """
+
+        psychic """
+        Oh no dear, there are still are all the kitchen staff, and the maids who remains in the mansion.
+
+        All of this is very well organized in such a house.
+        """
 
     psychic """
-    Oh no dear, there are still are all the kitchen staff, and the maids who remains in the mansion.
-
-    All of this is very well organized in such a house.
+    So don't worry, there will definitely be someone to deal with the police.
     """
 
     nurse """
-    Yes, and let's not forget that it may take a while for the police to reach us anyway.
+    Yes, and it may take a while for the police to reach us anyway.
 
     It's not like it is a real emergency. They might not arrived until later this evening.
     """
@@ -98,12 +121,12 @@ label lad_day2_evening_tea_room:
 
     Weird.
 
-    While we are still talking, a young woman enters the room.
+    While we are talking, someone enters the room.
     """
 
 
     maid """
-    I am glad you are all here.
+    I am glad to find you all here.
 
     I just finished to cook a small luncheon.
     
@@ -113,13 +136,13 @@ label lad_day2_evening_tea_room:
     psychic """
     Thank you miss, that would be lovely.
 
-    But I am terribly sorry, are you the cook ?
-
-    I thought I saw you cleaning up my room this morning.
+    But I am terribly sorry, did you say you cooked it ?
+    
+    Are you the cook ? I thought I saw you cleaning up my room this morning.
     """
 
     maid """
-    Um, ... the true is I am the cook, but also a maid when needed.
+    Um, ... the true is I am the cook. But I sometimes help out as a maid when needed.
     """
 
     psychic """
@@ -139,7 +162,7 @@ label lad_day2_evening_tea_room:
     """
 
     """
-    Miss Marsh and I stay silent. 
+    Miss Marsh and I remain silent. 
 
     I guess she doesn't know more than I do about the running of a house.
 
@@ -147,10 +170,59 @@ label lad_day2_evening_tea_room:
 
     After a while the cook comes with our food and we enjoy it exchanging banalities.
 
-    After a while I realize I don't have much to say to them, so I leave.
+    When we are all finished Rosalind Marsh stands up.
     """
 
-    # TODO OR I SHOOULD ADD GENERIC NURSE AND PSYCHIC ??? 
+    nurse """
+    That was great. 
 
+    No if you'll excuse me, I think I will retreat to my room to rest a little.
+
+    I afraid that I haven't slept very well tonight.
+
+    This storm got me up all night.
+    """
+
+    psychic """
+    Of course, we understand.
+
+    We'll see you later.
+    """
+
+    """
+    Rosalind Marsh then exists the tea room.
+
+    I am left alone with Amalia Baxter.
+    """
+
+    psychic """
+    It looks it's just you and me Mister Harring.
+    """
+
+    $ lad_day2_nohunt_has_visited_tea_room = True
+
+    call psychic_generic
+
+    return
+
+label lad_day2_evening_tea_room_return:
+
+    $ change_room('tea_room')    
+
+    """
+    I return to the tea room.
+
+    Amalia Baxter is still there, reading a book.
+
+    I approach her.
+    """
+
+    psychic """
+    Yes Mister Harring. 
+
+    What can I do for you ?
+    """
+
+    call psychic_generic
 
     return

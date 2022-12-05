@@ -1,7 +1,10 @@
 label lad_day2_nohunt:
 
     # TODO, not a lot to do except knocking on doors?
-    # OR MAYBE ALLOWED TO ENTER SOME PEOPLE ROOMS
+    # LATER ADD access to SOME PEOPLE ROOMS
+    # AND other places
+    # unlock more dialogs with MAID
+    # Add puzzles or locked doors?
     
     call black_screen_transition("Ted Harring", "The Hunt")
 
