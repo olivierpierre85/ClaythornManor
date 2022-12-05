@@ -44,7 +44,9 @@ label init_lad:
         condition_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
         condition_friday = "current_day == 'Friday'"
         lad_map_menu = TimedMenu([
-            # Friday specific choices
+            # -------------------------
+            # Friday
+            # -------------------------
             TimedMenuChoice(
                 default_room_text('psychic_room'), 
                 'lad_day1_evening_psychic_room', 
@@ -81,7 +83,9 @@ label init_lad:
                 room = 'lad_room',
                 condition = condition_friday
             ),
+            # -------------------------
             # Saturday, During the Hunt
+            # -------------------------
             TimedMenuChoice(
                 'Meet the others in the Tea Room', 
                 'lad_day2_evening_tea_room', 
@@ -100,6 +104,7 @@ label init_lad:
             TimedMenuChoice(
                 'Take a nap until the others return', 
                 'lad_day2_nohunt_cancel', 
+                240, 
                 early_exit = True, 
                 room = 'lad_room',
                 condition = condition_hunt

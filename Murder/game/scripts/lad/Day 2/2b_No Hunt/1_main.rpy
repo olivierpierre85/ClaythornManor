@@ -98,3 +98,16 @@ label lad_day2_broken_room:
     # TODO add sound for CLUE???
     # TODO FIRST REAL INVESTIGATiON CLUE ? ADD INTUITION when come back to 
     return
+
+
+label lad_day2_nohunt_cancel:
+
+    $ change_room('lad_room')
+
+    """
+    I don't think there is anything interesting to do now.
+
+    So I will lay on my bed for while
+    """
+
+    return

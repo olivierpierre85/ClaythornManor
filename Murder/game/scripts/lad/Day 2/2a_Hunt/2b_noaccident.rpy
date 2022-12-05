@@ -42,6 +42,7 @@ label lad_day2_hunt_noaccident:
 
     I've also been involved in the Chinese rebellion. Then ...
     """
+    # TODO little difference if you have listened to the speech
 
     $ captain_details.add_knowledge('wars')
 
