@@ -4,6 +4,7 @@ label init_lad:
     python:
         # Story Variables
         lad_day1_evening_billiard_room_visited = False
+        lad_day2_evening_billiard_room_visited = False
         lad_day1_drinks = 0
         lad_day1_poisoned = False
         lad_day1_drunk = False
@@ -43,6 +44,7 @@ label init_lad:
         # https://lemmasoft.renai.us/forums/viewtopic.php?f=8&t=25453&p=313338&hilit=caption.replace#p313338
         condition_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
         condition_friday = "current_day == 'Friday'"
+        condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
         lad_map_menu = TimedMenu([
             # -------------------------
             # Friday
@@ -88,7 +90,7 @@ label init_lad:
             # -------------------------
             TimedMenuChoice(
                 'Meet the others in the Tea Room', 
-                'lad_day2_evening_tea_room', 
+                'lad_day2_hunt_tea_room', 
                 120, 
                 room = 'tea_room',
                 condition = condition_hunt,
@@ -96,7 +98,7 @@ label init_lad:
             ),
             TimedMenuChoice(
                 'Go back to the Tea Room', 
-                'lad_day2_evening_tea_room_return',  
+                'lad_day2_hunt_tea_room_return',  
                 room = 'tea_room',
                 condition = condition_hunt + " and " + "lad_day2_nohunt_has_visited_tea_room",
                 keep_alive = True, 
@@ -116,7 +118,34 @@ label init_lad:
                 room = 'broken_room',
                 condition = condition_hunt
             ),
+            # -------------------------
+            # Saturday, Evening
+            # -------------------------
+            TimedMenuChoice(
+                default_room_text('doctor_room'), 
+                'lad_day2_doctor_room', 
+                20, 
+                room = 'doctor_room',
+                condition = condition_saturday_evening
+            ),
+            TimedMenuChoice(
+                'Go to sleep and hope for the best.', 
+                'lad_day2_evening_sleep',
+                early_exit = True, 
+                room = 'lad_room',
+                condition = condition_saturday_evening
+            ),
+            TimedMenuChoice(
+                'Check if there is someone in the Billiard Room', 
+                'lad_day2_evening_billiard_room', 
+                10, 
+                room = 'billiard_room',
+                condition = condition_saturday_evening,
+                keep_alive = True, 
+            ),
+            # -------------------------
             # Generic choices
+            # -------------------------
             TimedMenuChoice(
                 default_room_text('library'), 
                 'lad_library', 

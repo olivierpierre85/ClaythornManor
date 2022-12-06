@@ -1,4 +1,4 @@
-label lad_day2_evening_tea_room:
+label lad_day2_hunt_tea_room:
 
     $ change_room('tea_room')
 
@@ -205,7 +205,7 @@ label lad_day2_evening_tea_room:
 
     return
 
-label lad_day2_evening_tea_room_return:
+label lad_day2_hunt_tea_room_return:
 
     $ change_room('tea_room')    
 

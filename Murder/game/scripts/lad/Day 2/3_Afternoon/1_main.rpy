@@ -135,6 +135,40 @@ label lad_day2_afternoon:
     lad """
     I'll come with you.
     """
+
+    $ change_room("doctor_room")
+
+    """
+    So we carried Doctor Baldwin to his room and lay him down on his bed.
+
+    Then Sushil put the blanket over him.
+    """
+
+    captain """
+    Alright. It's better this way.
+
+    I am gonna head down now.
+
+    I don't like to let Samuel Manning out of my sight.
+    """
+
+    """
+    I nod.
+    """
+
+    captain """
+    By the way, you better go change before coming back.
+    """
+
+    """
+    I look at my clothes.
+
+    They are stained with blood.
+
+    Luckily, there were not really mine.
+
+    But in any case I should go change them.
+    """
     
     jump lad_day2_afternoon_bedroom
 

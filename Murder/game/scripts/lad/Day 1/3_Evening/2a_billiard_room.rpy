@@ -7,6 +7,8 @@ label lad_day1_evening_billiard_room:
 
     if not lad_day1_evening_billiard_room_visited:
 
+        $ lad_day1_evening_billiard_room_visited = True
+
         """
         Almost everyone I saw at dinner is here.
 
@@ -37,7 +39,7 @@ label lad_day1_evening_billiard_room:
         $ lad_day1_evening_billiard_room_menu.early_exit = False
 
         """
-        You are back in the Billiard Room.
+        I am back in the Billiard Room.
         """
 
     call run_menu(lad_day1_evening_billiard_room_menu)

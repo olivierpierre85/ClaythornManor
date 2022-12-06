@@ -1,10 +1,10 @@
 label lad_day3_morning:
 
-    call change_time(7,00)
+    call black_screen_transition("Ted Harring", "Sunday")
 
-    call black_screen_transition("Sunday")
+    call change_time(7,00, "Morning", "Sunday")
 
-    $ change_room('lad_room')
+    $ change_room('lad_room', irisout)
 
     play sound door_knock
     
@@ -21,7 +21,7 @@ label lad_day3_morning:
     """
     Miss Baxter again ?
 
-    What could she want ?
+    What is it now ?
     """
 
     lad """

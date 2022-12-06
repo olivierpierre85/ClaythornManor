@@ -1,14 +1,10 @@
 label lad_day2_afternoon_bedroom:
     $ change_room('lad_room')
 
-    call change_time(16,00)
+    call change_time(18,00)
 
     """
-    So we carried Doctor Baldwin to his room and lay him down on his bed.
-
-    Afterwards, I retreated to my room to change my clothes.
-
-    They were stained with blood.
+    So I retreated to my room to get clean clothes.
 
     As I was preparing to go downstairs again, someone knocks on my door.
     """
@@ -23,15 +19,11 @@ label lad_day2_afternoon_bedroom:
     Amelia Baxter... What does she want ?
     """
 
-    # TODO CHoice of letting her in or not ?
-
     lad """
     Come on in Mrs Baxter. The door is open.
     """
 
     play sound door_open
-
-    # play mystery music
 
     psychic """
     I am sorry to intrude, but I think we should talk.
@@ -90,7 +82,7 @@ label lad_day2_afternoon_bedroom:
     """
 
     lad """
-    You can 'feel' it ?
+    You can \"feel\" it ?
     """
 
     psychic """
@@ -139,22 +131,7 @@ label lad_day2_afternoon_bedroom:
     It's probably nonsense.
 
     But still ...
-
-    What should I do now ?
     """
-
-    call change_time(17,00)
-
-    $ time_left = 90
-
-    # TODO More possibilities 
-    call run_menu(TimedMenu([
-            TimedMenuChoice('Library', 'lad_library', 10, room = 'library'), # condition not visited ?
-            TimedMenuChoice('Richard III Bedroom', 'lad_day2_broken_room', 20, room = 'broken_room'),
-            TimedMenuChoice('Edward II Bedroom', 'lad_day2_doctor_room', 20, room = 'doctor_room'),
-            TimedMenuChoice('Rest in your room until dinner.', 'lad_day2_afternoon_skip', early_exit = True, room = 'lad_room'),
-        ], is_map = True))
-
 
     call change_time(18,30)
 
@@ -163,56 +140,10 @@ label lad_day2_afternoon_bedroom:
     """
     I hear the gong.
 
+    Looks like everything that happened didn't disturb the order in the house.
+
     I should go to the dining room.
     """
 
     jump lad_day2_evening
-
-label lad_day2_afternoon_skip:
-
-    """
-    I can't think of anything interesting to do now.
-
-    So I better rest.
-    """
-
-    return
-
-label lad_day2_doctor_room:
-
-    scene bedroom_doctor
-
-    """
-    I don't feel good being in here.
-
-    But I might as well look for something useful.
-
-    I look over his personal effects when I stubble into his medication suitcase.
-
-    There is nothing out of the ordinary in there.
-
-    A stethoscope, bandages, a few bottle of medications,...
-
-    There is one in particular that he has more that the others. 
-    
-    Laudanum is written on the label.
-
-    He has almost a dozen of those bottles.
-
-    Laudanum... , I heard that before.
-    
-    It's opium.
-
-    Looks like the doctor wasn't using it only on patients.
-    """
-
-    $ doctor_details.add_knowledge('addict') 
-
-    """
-    And I might as well take a few for myself.
-    """
-
-    # TODO is the lad a thief ? likely ADD HERE
-
-    return
 

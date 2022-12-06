@@ -9,17 +9,17 @@ label debug_choices:
         "lad_introduction":
             jump lad_introduction
 
-        "lad_day1_arrival":
-            jump lad_day1_arrival
+        # "lad_day1_arrival":
+        #     jump lad_day1_arrival
 
         # "lad_day2_dinner":
         #     jump lad_day1_dinner
         
-        "lad_day1_evening":
-            jump lad_day1_evening
+        # "lad_day1_evening":
+        #     jump lad_day1_evening
 
-        "lad_day2_morning":
-            jump lad_day2_morning
+        # "lad_day2_morning":
+        #     jump lad_day2_morning
             
         "lad_day2_hunt":
             jump lad_day2_hunt
@@ -27,14 +27,14 @@ label debug_choices:
         "lad_day2_nohunt":
             jump lad_day2_nohunt
 
-        # "lad_day2_afternoon":
-        #     jump lad_day2_afternoon
+        "lad_day2_afternoon":
+            jump lad_day2_afternoon
             
         # "lad_day2_afternoon_bedroom":
         #     jump lad_day2_afternoon_bedroom
             
-        # "lad_day2_evening":
-        #     jump lad_day2_evening
+        "lad_day2_evening":
+            jump lad_day2_evening
 
         # "lad_day3_morning":
         #     jump lad_day3_morning
