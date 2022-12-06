@@ -64,6 +64,8 @@ label lad_day2_hunt_noaccident:
     But we didn't have time to eat, that we heard a shot not far from us.
     """
 
+    stop music fadeout 3.0
+
     play sound gun
 
     captain """
@@ -80,7 +82,7 @@ label lad_day2_hunt_noaccident:
     I stood up and we ran in the direction of the cry.
     """
 
-    # TODO play music scary...
+    play music danger_01 fadein 5.0
 
     """
     We quickly reached the others.
@@ -105,5 +107,9 @@ label lad_day2_hunt_noaccident:
 
     He has bled to death.
     """
+
+    stop music fadeout 5.0
+
+    pause 2.0
 
     return

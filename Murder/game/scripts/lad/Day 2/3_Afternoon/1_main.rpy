@@ -1,10 +1,9 @@
 label lad_day2_afternoon:
     call black_screen_transition("Ted Harring", "Saturday Afternoon")
-    scene great_hall # with irisout
 
-    call change_time(15,00)
+    call change_time(15,00, 'Afternoon', 'Saturday')
 
-    call change_floor(1)
+    $ change_room("great_hall", irisout)
     
     if lad_day2_hunt:
 
@@ -16,7 +15,7 @@ label lad_day2_afternoon:
         He made us carry the doctor on a makeshift stretcher.
  
         It took a while but we finally reached the mansion.
-        """
+        """        
 
     else:
         
@@ -32,7 +31,7 @@ label lad_day2_afternoon:
         They are dragging someone on a makeshift stretcher.
         """
 
-        play music scary_01
+    play music mysterious_01
 
     # TODO play dramatic music
     psychic surprised """

@@ -36,6 +36,8 @@ label lad_day2_nohunt:
     I decide to go and see what's happening.
     """
 
+    stop music fadeout 5.0
+
     jump lad_day2_afternoon
     
 

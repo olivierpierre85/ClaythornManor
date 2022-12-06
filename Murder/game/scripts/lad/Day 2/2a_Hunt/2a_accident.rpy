@@ -98,6 +98,7 @@ label lad_day2_hunt_accident:
 
     play sound gun
 
+    stop music fadeout 5.0
     # TODO stop music
     pause 2.0
 
@@ -109,7 +110,7 @@ label lad_day2_hunt_accident:
     I am a bit pissed but then I hear a cry.
     """
 
-    play music [ danger_01, scary_01]
+    play music danger_01 fadein 5.0
 
     # play sound dying_in_pain TODO better sound
 
@@ -147,6 +148,8 @@ label lad_day2_hunt_accident:
     """
 
     pause 2.0
+
+    stop music fadeout 5.0
 
     return
 
