@@ -39,7 +39,7 @@ label lad_day2_evening:
     """
 
     lad """
-    I am sorry, but I don't see Samuel Manning here.
+    Miss Baxter, I don't see Samuel Manning here.
 
     Do you know where he is ?
     """
@@ -67,18 +67,20 @@ label lad_day2_evening:
     """    
 
     """
-    Afterwards, I don't have the strength to make small talk.
+    Alright. That's one fewer thing to be concerned about I guess.
 
-    So I eat in silence.
+    None of us has much will to make small talk.
 
-    After dinner is over, most people retreat to their room.
+    So we eat in silence.
+
+    When dinner is over, most people retreat to their room.
 
     I doubt a lot of them will want to discuss over drinks now.
 
     What will I do ?
     """
 
-    play music sad_01 fadein 5.0
+    play music sad_01 fadein 5.0 # TODO music
 
     call change_time(21,00)
 

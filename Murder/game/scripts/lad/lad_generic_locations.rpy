@@ -19,4 +19,16 @@ label lad_library:
     """
     # TODO add info on BOOK ???
 
+    $ lad_library_visited = True
+
+    return
+
+label lad_library_visited:
+
+    $ change_room('library')
+
+    """
+    There is nothing different from last time I was in there.
+    """
+
     return

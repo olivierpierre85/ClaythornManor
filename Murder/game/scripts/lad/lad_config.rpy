@@ -3,12 +3,12 @@ label init_lad:
 
     python:
         # Story Variables
+        lad_library_visited = False
         lad_day1_evening_billiard_room_visited = False
         lad_day2_evening_billiard_room_visited = False
         lad_day1_drinks = 0
         lad_day1_poisoned = False
         lad_day1_drunk = False
-
         lad_day2_breakfast_follow = False
         lad_day2_hunt = False
         lad_day3_morning_captain_found = False
@@ -153,6 +153,16 @@ label init_lad:
                 room = 'library',
                 condition = "(not current_day == 'Sunday')"
             ),
+            TimedMenuChoice(
+                default_room_text('library'), 
+                'lad_library_visited', 
+                20, 
+                room = 'library',
+                condition = "(not current_day == 'Sunday' and lad_library_visited)",
+                keep_alive = True, 
+            ),
+
+            
         ], is_map = True)
 
     return
