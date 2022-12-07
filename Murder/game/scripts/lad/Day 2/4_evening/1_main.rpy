@@ -92,30 +92,46 @@ label lad_day2_evening:
 
     stop music fadeout 5.0
 
-    """
-    I am tired of wandering inside this house.
+    if lad_day2_drunk :
 
-    Beside, with all that happened today, I am exhausted.
+        """
+        Gee, I am not thinking straight.
 
-    I should go back to my room.
-    """
+        I better go to bed now.
+        """
 
-    $ change_room('lad_room')
+        $ change_room('lad_room')
 
-    """
-    Before trying to sleep, I better move the some furniture in front of the door.
+        """
+        I fell asleep as soon as I lay on my bed.
+        """
+    
+    else:
 
-    It's better to be careful.
-    """
+        """
+        I am tired of wandering inside this house.
 
-    #TODO add moving furniture sound
-    pause 2.0
+        Beside, with all that happened today, I am exhausted.
 
-    """
-    Ok, that should do it.
+        I should go back to my room.
+        """
 
-    I can rest peacefully now.
-    """
+        $ change_room('lad_room')
+
+        """
+        Before trying to sleep, I better move the some furniture in front of the door.
+
+        It's better to be careful.
+        """
+
+        #TODO add moving furniture sound
+        pause 2.0
+
+        """
+        Ok, that should do it.
+
+        I can rest peacefully now.
+        """
 
     jump lad_day3_morning
 

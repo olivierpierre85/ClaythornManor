@@ -18,6 +18,8 @@ label init_lad:
         lad_day2_nohunt_has_visited_tea_room = False
         psychic_generic_other_guests_saturday_morning_ask = False
         lad_day2_believe_psychic = False
+        lad_day2_drinks = 0
+        lad_day2_drunk = False
 
         # Character Class
         lad_extra_information = [
