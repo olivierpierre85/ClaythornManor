@@ -17,6 +17,7 @@ label init_lad:
         lad_has_met_maid = False
         lad_day2_nohunt_has_visited_tea_room = False
         psychic_generic_other_guests_saturday_morning_ask = False
+        lad_day2_believe_psychic = False
 
         # Character Class
         lad_extra_information = [
@@ -133,6 +134,13 @@ label init_lad:
                 'lad_day2_evening_sleep',
                 early_exit = True, 
                 room = 'lad_room',
+                condition = condition_saturday_evening
+            ),
+            TimedMenuChoice(
+                default_room_text('psychic_room'), 
+                'lad_day2_evening_psychic_room',
+                20,
+                room = 'psychic_room',
                 condition = condition_saturday_evening
             ),
             TimedMenuChoice(

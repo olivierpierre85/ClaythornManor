@@ -117,14 +117,10 @@ label lad_day2_afternoon_bedroom:
     And you are strong enough to protect me in case their is a direct confrontation.
 
     So I made a bet to confide in you.
-    
-    I hope I was right.
     """
 
     """
     I don't know what to say.
-
-    But she leaves before I could answer.
 
     A murder ?
 
@@ -140,10 +136,34 @@ label lad_day2_afternoon_bedroom:
     """
     I hear the gong.
 
-    Looks like everything that happened didn't disturb the order in the house.
-
-    I should go to the dining room.
+    Everything that happened didn't disturb the order in the house apparently.
     """
+
+    psychic """
+    Looks like it's dinner time.
+
+    Not that I have much of an appetite.
+
+    But we should head downstairs anyway.
+    """
+
+    """
+    I nod in agreement.
+    """
+
+    psychic """
+    But if you want to discuss this further. Come and see me in my room after dinner.
+    """
+
+    if not is_unlock_map('psychic_room'):
+
+        psychic """
+        I am in the \"George III\" room.
+        """
+
+        $ unlock_map('psychic_room')
+
+
 
     jump lad_day2_evening
 

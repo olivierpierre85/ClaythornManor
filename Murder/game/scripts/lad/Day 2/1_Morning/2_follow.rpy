@@ -23,7 +23,7 @@ label lad_day2_breakfast_follow:
 
     "We all enter the room."
 
-    $ change_room('bedroom_broken')
+    $ change_room('broken_room')
 
     butler "He is here in his bed. He was not responding at all when I tried to wake him up."
 

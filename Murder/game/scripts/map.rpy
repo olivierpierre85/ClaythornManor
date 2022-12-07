@@ -63,6 +63,7 @@ label init_map:
     return
 
 init python:
+    
     def unlock_map(room):
         for info in map_information:
             if info.id == room and not info.active:
@@ -71,6 +72,13 @@ init python:
                 renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
         return
+
+    def is_unlock_map(room):
+        for info in map_information:
+            if info.id == room:
+                return info.active
+
+        return False
 
 label change_floor(floor):
     # 0 = basement

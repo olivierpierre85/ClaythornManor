@@ -43,7 +43,7 @@ label lad_day2_nohunt:
 
 label lad_day2_broken_room:
 
-    scene bedroom_broken
+    $ change_room('broken_room')
 
     if lad_day2_breakfast_follow:
 
