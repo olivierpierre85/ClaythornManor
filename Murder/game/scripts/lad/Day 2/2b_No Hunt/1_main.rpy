@@ -86,13 +86,11 @@ label lad_day2_broken_room:
 
     Next to it is a stain. 
     
-    I suppose it should be whisky, but it has a weird color.
+    I suppose it should be whisky, but it has a weird colour.
 
     A light shade of green.
 
     That's strange.
-
-    I should ask Doctor Baldwin about it.
     """
 
     $ broken_details.add_knowledge('green_liquid') # TODO link to billiard room option to not drink the whisky?

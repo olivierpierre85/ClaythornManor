@@ -92,15 +92,32 @@ label lad_day2_evening:
 
     stop music fadeout 5.0
 
-    if lad_day2_drunk :
+    if lad_day2_drunk:
 
         """
         Gee, I am not thinking straight.
 
-        I better go to bed now.
+        I rush to my room.
         """
 
         $ change_room('lad_room')
+
+        """
+        I quickly reach the toilet and puke all I have been drinking.
+
+        I better go to bed now.
+        """
+
+        if lad_day1_drunk:
+            """
+            Alright, two days in a row.
+
+            What does it say about me?
+            """
+
+            $ lad_details.add_knowledge('poor_drinker') 
+
+            # TODO achievement. DRUNK OR CHEATED DEATH IF drank poison
 
         """
         I fell asleep as soon as I lay on my bed.
@@ -139,124 +156,33 @@ label lad_day2_evening_sleep:
 
     return
 
-label lad_day2_evening_psychic_room:
-    
-    scene hallway
-    
-    lad """
-    Miss Baxter ?
+label lad_day2_broken_room_back:
 
-    Are you here ? It's Ted Harring
-    """
+    $ change_room('broken_room')
 
-    """
-    She slightly opens the door and look in the hallway.
+    """ 
+    My conversation with Sushil made me think.
 
-    She looks worried.
-    """
+    Maybe I should try to drink from the flask.
 
-    psychic """
-    Mister Harring, are you alone ?
-    """
+    At least I would now for sure if something is not right.
 
-    lad """
-    I am.
-    """
+    I reach for the flask next to the nightstand.
 
-    psychic """
-    Come on in then.
-    """
+    It's empty now.
 
-    $ change_room('psychic_room')
+    All of its contents is lying on the nightstand, and some on the floor.
 
-    psychic """
-    So have you given any thought about what I told you ?
+    I could lick some of it.
 
-    You agree that something not right is happening ?
-    """
+    But even I am not so low class as this.
 
-    call run_menu(TimedMenu([
-        TimedMenuChoice('I think you might be right', 'lad_day2_believe_psychic', 10, early_exit = True ),
-        TimedMenuChoice('No, you are clearly hallucinating things', 'lad_day2_believe_dont_believe_psychic', early_exit = True)
-    ]))
+    I will just wait for the experts to have an answer.
+    """    
 
     return
 
-label lad_day2_believe_psychic:
 
-    lad """
-    I am not sure yet. But what happened is strange enough so we can take some precautions.
-    """
-
-    psychic """
-    I am glad you agree.
-
-    Here what I think we should do :
-
-    Go back to your room and close the door shut.
-
-    Tomorrow morning, the first one to get up of the two of us will wake the other up.
-
-    Then we stick together the whole day until we are free to leave.
-
-    What do you think of that ?
-    """
-
-    lad """
-    It sounds like a good plan.
-
-    Let's do it.
-    """
-
-    psychic """
-    Great !
-
-    In the meantime, is there something else you wanted to talk about ?
-    """
-
-    call psychic_generic
-
-    $ lad_day2_believe_psychic = True
-
-    return
-
-label lad_day2_believe_dont_believe_psychic:
-
-    lad """
-    I am sorry, but I think you are imagining things here.
-
-    What happened today was just an unfortunate coincidence.
-
-    There are no reasons to panic.
-    """
-
-    psychic angry """
-    Really ?! That's what you think ?
-
-    You believe I hallucinate things ?!
-
-    Well if that's the case you better leave my room !
-    """
-
-    lad """
-    No that's not what I meant. I am sorry.
-    """
-
-    psychic """
-    Too late for that Mister Harring.
-
-    Please leave my room.
-
-    And good luck to you.
-    """
-
-    """
-    I have no choice but to leave.
-    """
-
-    scene hallway
-
-    return
 
 label lad_day2_doctor_room:
 

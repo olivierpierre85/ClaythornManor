@@ -4,28 +4,36 @@ label init_lad:
     python:
         # Story Variables
         lad_library_visited = False
+        lad_has_met_maid = False
+        psychic_generic_other_guests_saturday_morning_ask = False
+
         lad_day1_evening_billiard_room_visited = False
-        lad_day2_evening_billiard_room_visited = False
         lad_day1_drinks = 0
         lad_day1_poisoned = False
-        lad_day1_drunk = False
+        lad_day1_drunk = False # Means he drank poison, but rejected it (used again on day 2 evening with the captain)
+
         lad_day2_breakfast_follow = False
         lad_day2_hunt = False
-        lad_day3_morning_captain_found = False
-        lad_day3_gun_downed = False
-        lad_day3_poisoned = False
-        lad_has_met_maid = False
+        lad_day2_saw_accident = False
+        lad_day2_evening_billiard_room_visited = False
         lad_day2_nohunt_has_visited_tea_room = False
-        psychic_generic_other_guests_saturday_morning_ask = False
         lad_day2_believe_psychic = False
         lad_day2_drinks = 0
         lad_day2_drunk = False
+        lad_day2_evening_billiard_room_captain_talked = False
+        lad_day2_evening_taste_from_flask = False
+        lad_day2_poisoned = False
+
+        lad_day3_morning_captain_found = False
+        lad_day3_gun_downed = False
+        lad_day3_poisoned = False
 
         # Character Class
         lad_extra_information = [
             CharacterInformation(0, "background", "Born and raised in London.") , 
             CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
-            CharacterInformation(3, "education", "Not a great reader.")
+            CharacterInformation(3, "education", "Not a great reader."),
+            CharacterInformation(4, "poor_drinker", "Can't hold his liqueur.")
         ]
         lad_details  = CharacterDetails(
             text_id = "lad", 
@@ -119,7 +127,7 @@ label init_lad:
                 'lad_day2_broken_room', 
                 20, 
                 room = 'broken_room',
-                condition = condition_hunt
+                condition = condition_hunt + " or " + condition_saturday_evening
             ),
             # -------------------------
             # Saturday, Evening
@@ -152,6 +160,13 @@ label init_lad:
                 room = 'billiard_room',
                 condition = condition_saturday_evening,
                 keep_alive = True, 
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'lad_day2_broken_room_back', 
+                10, 
+                room = 'broken_room',
+                condition = "lad_day2_evening_taste_from_flask"
             ),
             # -------------------------
             # Generic choices

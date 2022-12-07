@@ -16,6 +16,7 @@ label lad_day2_evening_billiard_room:
 
         $ lad_day2_evening_billiard_room_menu = TimedMenu([
             TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain', 20),
+            TimedMenuChoice('Talk again to Sushil Sinha', 'lad_day2_evening_billiard_room_captain_2', 10, condition="lad_day2_evening_billiard_room_captain_talked == True"),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day2_evening_billiard_room_bar', 10),
             TimedMenuChoice('Have another drink, for the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_day2_drinks == 1'),
             TimedMenuChoice('I think I still need of few more drinks', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_day2_drinks == 2'),
@@ -35,13 +36,245 @@ label lad_day2_evening_billiard_room:
 
     return
 
-label lad_day2_evening_billiard_room_captain:
+label lad_day2_evening_billiard_room_captain_hypothesis_cancel:
+
+    return
+    
+label lad_day2_evening_billiard_room_captain_hypothesis_doctor:
+
+    captain """
+    And what if he was?
+
+    A lot of people are, especially doctors.
+
+    In any case, opium addicts often die of overdose.
+    
+    Not shot in the chest.
+    """
 
     """
-    Captain TODO
+    Okay, I have no answer to that.
     """
 
     return
+
+label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
+
+    captain """
+    Really? 
+
+    He seemed pretty drunk to me.
+    """
+
+    lad """
+    Yes, in the early morning. And then again before the accident happened.
+
+    But not right before the hunt started.
+    """
+
+    captain """
+    Well if that is true, breakfast might have sobered him up.
+
+    And then I suppose he drank more during the hunt.
+    """
+
+    if lad_day2_saw_accident:
+
+        captain """
+        You were there with him right?
+
+        Did you see him drink?
+        """
+
+        lad """
+        Well, I think so.
+
+        He was keeping mostly to himself but I did see him drink from his flask.
+        """
+
+
+    return
+
+label lad_day2_evening_billiard_room_captain_hypothesis_broken:
+
+    captain """
+    A weird liquid?
+
+    What type of liquid?
+    """
+
+    lad """
+    A greenish liquid.
+
+    It was coming from his flask.
+    """
+
+    captain """
+    So?
+    """
+
+    lad """
+    Well, green is the color of poison. No?
+
+    In any case, it's not the normal colour of alcohol.
+    """
+
+    captain """
+    Not of any alcohol you know perhaps.
+
+    But I do know multiple liqueurs that have a greenish colour.
+
+    Absinthe, Chartreuse, Creme de menthe,...  and there are probably even more.
+
+    So I wouldn't scream poison next time you see a green drink.
+    """
+
+    if not lad_day1_drunk:
+
+        captain """
+        Of course, if you had tasted the drink it would another matter.
+
+        Have you?
+        """
+
+        lad """
+        No, of course not. I wouldn't risk it.
+        """
+
+        captain """
+        Then we will have to wait for the experts to analyze it.
+
+        But I bet they won't find anything out the ordinary.
+        """
+
+        $ lad_day2_evening_taste_from_flask = True
+
+    else:
+        # TODO ONLY POSSIBLE WAY TO MAKE THE CAPTAIN SUSPICIOUS ??WHAT TO MALE of it now?
+        lad """
+        But the flask didn't have any of those alcohols.
+
+        I tasted it and it was just whisky.
+
+        I am sure of that.
+        """
+
+    return
+
+label lad_day2_evening_billiard_room_captain_2:
+
+    captain """
+    Yes mister Harring?
+
+    Do you have anything to add to our last conversation?
+    """
+
+    call run_menu(lad_day2_evening_billiard_room_captain_hypothesis_menu)
+
+    return
+
+
+label lad_day2_evening_billiard_room_captain:
+
+    """
+    I take a seat in front of Sushil Sinha.
+
+    If he is disturbed by the events of the day, he doesn't show it.
+    """
+
+    captain """
+    Good evening Mister Harring.
+
+    It's nice to see someone else not scared out of their wit tonight.
+
+    The reaction of the others is pretty ridiculous to me.
+    """
+
+    lad """
+    You don't think we should be at least a little worried?
+    """
+
+    captain """
+    Absolutely not. What happened today were obviously accidents.
+
+    There is no reason to think otherwise.
+
+    And now everyone is placating themselves in their rooms, like some mysterious murderer is going to take them.
+    """
+
+    lad """
+    You don't think there is a murderer among us then?
+    """
+
+    captain """
+    Of course there is.
+    
+    His name is Samuel Manning.
+
+    Once the police come, they will probably charge him with involuntary manslaughter.
+
+    It's most likely he'll be sent to prison for a long time.
+
+    But he won't cause anymore harm tonight. You can be sure of that.
+    """
+
+    lad """
+    What makes you so sure?
+
+    You must admit that two deaths happening in the same day is quite rare occurrence.
+    """
+
+    captain """
+    Sadly I'll have to disagree with you.
+
+    It happened to me more times that I could count.
+
+    And I know what you are gonna say. 
+    
+    We are not at war anymore. It's not the same.
+
+    True. But on the other hand, I don't think it is so improbable.
+
+    I think everyone is overreacting because they are not used to death like I am.
+
+    Once you remove fear from the equation, you'll realize there is nothing abnormal about the events of today.
+
+    Don't you think?
+
+    Or you have tangible evidences to believe otherwise ?
+    """
+
+    $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu([
+        TimedMenuChoice('I believe Daniel Baldwin was an opium addict{image=images/ui/intuition_icon.png}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="doctor_details.check_knowledge_unlocked('addict')" ),
+        TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody{image=images/ui/intuition_icon.png}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="broken_details.check_knowledge_unlocked('green_liquid')" ),
+        TimedMenuChoice('I am not sure Samuel Manning was really drunk when the accident occurred', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
+        TimedMenuChoice('I don\'t see any reasons to be suspicious.', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit = True ),
+    ])
+
+    call run_menu(lad_day2_evening_billiard_room_captain_hypothesis_menu)
+
+    lad """
+    Ok. I guess there is nothing really suspicious in the end.
+    """
+
+    captain """
+    Exactly.
+
+    Two sad unrelated accidents is the most simple and logical explanation here.
+
+    And like the famous saying goes, the most simple explanation is usually the best.
+
+    Now if you'll excuse me, I would like to finish my book.
+    """
+
+    lad """
+    Of course.
+    """
+
+    $ lad_day2_evening_billiard_room_captain_talked = True
+
+    return
+
 
 label lad_day2_evening_billiard_room_bar:
 
@@ -117,6 +350,7 @@ label lad_day2_evening_billiard_room_bar_4:
     """
 
     $ lad_day2_drunk = True
+    $ lad_day2_poisoned = False
 
     return
 
