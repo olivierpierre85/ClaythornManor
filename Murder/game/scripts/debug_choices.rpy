@@ -36,6 +36,10 @@ label debug_choices:
         "lad_day2_evening":
             jump lad_day2_evening
 
+        "lad_day3_morning":
+            $ lad_day2_believe_psychic = True
+            jump lad_day3_morning
+
         # "lad_day3_morning":
         #     jump lad_day3_morning
     return

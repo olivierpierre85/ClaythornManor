@@ -1,10 +1,16 @@
 label lad_day3_morning:
-
+    
     call black_screen_transition("Ted Harring", "Sunday")
 
-    call change_time(7,00, "Morning", "Sunday")
-
     $ change_room('lad_room', irisout)
+
+    if lad_day2_believe_psychic:
+        call change_time(7,00, "Morning", "Sunday")
+        # You talked to and believed psychic
+        # So she came to wake you at dawn
+    else:
+        # Otherwise, you'll have less time to explore
+        call change_time(8,00, "Morning", "Sunday")
 
     play sound door_knock
     
@@ -14,94 +20,173 @@ label lad_day3_morning:
 
     play sound door_knock
 
+    if lad_day2_drunk:
+            """
+            My head hurts like crazy.
+
+            Oh my god, I wish I could sleep more.
+            """    
+
     psychic """
     Mister Harring are you there ?
     """
     
-    """
-    Miss Baxter again ?
+    if lad_day2_believe_psychic:
 
-    What is it now ?
-    """
+        """
+        Miss Baxter ?
 
-    lad """
-    I am coming !
-    """
+        Right, we agreed to wake each other up.
 
-    """
-    I dress up in a hurry and open the door.
-    """
+        I just didn't think it would be that early.
+        """
 
-    lad """
-    Miss Baxter, what is happening ?
-    """
+        lad """
+        I am coming !
+        """
 
-    psychic """
-    I am not sure but I don't like it.
+        """
+        I dress up in a hurry and open the door.
 
-    I woke early as usual and tried to get a cup of tea before breakfast.
+        Amalia Baxter enters, visibly nervous.
+        """
 
-    But no one is there.
-    """
+        psychic """
+        I believe I was right yesterday.
 
-    lad """
-    What do you mean ?
-    """
+        Something strange is happening.
+        """
 
-    psychic """
-    That the staff is gone, all of them.
+        lad """
+        What do you mean?
+        """
 
-    I tried the kitchen, outside, the whole place even.
+        psychic """
+        I didn't run into any staff members on my way here.
 
-    I saw nobody.
-    """
+        At this hour, they should be busy with the fires, the cleaning, setting up breakfast.
 
-    lad """
-    Can't they be still asleep ?
-    """
+        But I saw nor heard anything.
 
-    psychic """
-    Oh Mister Harring, that's impossible.
+        It's quite as a cemetery in here.
+        """
 
-    They are supposed to be awake since dawn to get the house ready for the day.
+        lad """
+        Are you sure it's not normal.?
 
-    They couldn't have just slept in.
+        It's still very early.
+        """
 
-    I also went to check on misses Claythorn and she doesn't answer.
-    """
+        psychic """
+        I don't think so.
 
-    lad """
-    Don't worry, I am sure it's not so bad.
-    """
+        I woke at this hour yesterday and the house was teeming with life.
 
-    psychic """
-    I don't know.
+        Something is amiss I am telling you.
+        """
 
-    But I don't want to keep on searching alone.
+        lad """
+        Okay, if you say so.
 
-    Would please accompany me to check on the others ?
-    """
+        We better look into it then.
+        """
 
-    lad """
-    Well, I am awake now so why not.
+        
 
-    If that can appease you.
-    """
+    else:
+        """
+        Miss Baxter again ?
 
-    """
-    We decide it's better we check again every room together.
+        What is it now ?
+        """
 
-    So first we go to ...
-    """
+        lad """
+        I am coming !
+        """
 
-    $ time_left = 90
+        """
+        I dress up in a hurry and open the door.
+        """
+
+        lad """
+        Miss Baxter, is everything alright?
+        """
+
+        psychic """
+        I don't know.
+
+        I think something weird happening.
+        """
+
+        """
+        I woke early as usual and tried to get a cup of tea before breakfast.
+
+        But no one is there.
+        """
+
+        lad """
+        What do you mean ?
+        """
+
+        psychic """
+        That the staff is gone, all of them.
+
+        I tried the kitchen, outside, the whole place even.
+
+        I didn't see anybody.
+        """
+
+        lad """
+        Can't they be still asleep ?
+        """
+
+        psychic """
+        Oh Mister Harring, that's impossible.
+
+        They are supposed to be awake since dawn to get the house ready for the day.
+
+        They couldn't have just slept in.
+
+        I also went to check on misses Claythorn and she doesn't answer.
+        """
+
+        lad """
+        Don't worry, I am sure it's not so bad.
+        """
+
+        psychic """
+        I don't know.
+
+        But I don't want to keep on searching alone.
+
+        Would please accompany me to check on the others ?
+        """
+
+        lad """
+        Well, I am awake now so why not.
+
+        If that can appease you.
+        """
+
+        """
+        We decide it's better we check again every room together.
+
+        So first we go to ...
+        """
+        
     # TODO test every room before it's over
     
+    if lad_day2_believe_psychic:
+        $ time_left = 120
+    else:
+        $ time_left = 60
 
+    call run_menu(lad_map_menu)
+
+    call change_time(9,00)
+
+    # TODO force one choice to go downstairs ?
     call run_menu(TimedMenu([
-        TimedMenuChoice('Library', 'lad_day3_morning_library', 10, room = 'library'), # condition not already visited ?
-        TimedMenuChoice('Richard III Bedroom', 'lad_day3_morning_broken_room', 20, room = 'broken_room'),
-        TimedMenuChoice('Edward II Bedroom', 'lad_day3_morning_doctor_room', 20, room = 'doctor_room'),
         TimedMenuChoice(default_room_text('host_room'), 'lad_day3_morning_host_room', 20, room = 'host_room'),
         TimedMenuChoice(default_room_text('drunk_room'), 'lad_day3_morning_drunk_room', 20, room = 'drunk_room'),
         TimedMenuChoice(default_room_text('captain_room'), 'lad_day3_morning_captain_room', 20, room = 'captain_room'),
@@ -291,12 +376,12 @@ label lad_day3_morning_host_room:
     There is no response.
     """
 
-    psychic """
-    I told you she was not there.
-    """
+    # psychic """
+    # I told you she was not there.
+    # """
 
     """
-    As she is saying that, she lay her on hand on the clutch.
+    Then, she put her on hand on the clutch.
 
     The door opens.
     """
@@ -348,7 +433,7 @@ label lad_day3_morning_drunk_room:
 
         It's closed.
 
-        The captain as the key.
+        The captain has the key.
         """
     else:
         captain """
@@ -358,3 +443,24 @@ label lad_day3_morning_drunk_room:
         $ change_room('drunk_room')
 
     return
+
+label lad_day3_morning_psychic_room:
+
+    $ change_room('psychic_room')
+
+    psychic """
+    What are you doing in my room?
+
+    You don't think someone is hiding here?
+    """
+
+    lad """
+    Probably not, but it's better to be thorough.
+    """
+
+    """
+    But she is right.
+
+    There is nothing or nobody here.
+    """
+    

@@ -53,9 +53,12 @@ label init_lad:
         # => change those fields to special var that will display an icon, or another style
         # for already visited path
         # https://lemmasoft.renai.us/forums/viewtopic.php?f=8&t=25453&p=313338&hilit=caption.replace#p313338
+
         condition_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
         condition_friday = "current_day == 'Friday'"
         condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
+        condition_sunday_morning = "(current_day == 'Sunday' and current_phase == 'Morning')"
+
         lad_map_menu = TimedMenu([
             # -------------------------
             # Friday
@@ -167,6 +170,23 @@ label init_lad:
                 10, 
                 room = 'broken_room',
                 condition = "lad_day2_evening_taste_from_flask"
+            ),
+            # -------------------------
+            # Saturday, Evening
+            # -------------------------
+            TimedMenuChoice(
+                default_room_text('psychic_room'), 
+                'lad_day3_morning_psychic_room',
+                10,
+                room = 'psychic_room',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                default_room_text('host_room'), 
+                'lad_day3_morning_host_room', 
+                20, 
+                room = 'host_room',
+                condition = condition_sunday_morning
             ),
             # -------------------------
             # Generic choices
