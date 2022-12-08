@@ -141,7 +141,8 @@ label lad_day2_evening:
         It's better to be careful.
         """
 
-        #TODO add moving furniture sound
+        play sound moving_furniture
+        
         pause 2.0
 
         """

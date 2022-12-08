@@ -16,7 +16,7 @@ label lad_day2_evening_billiard_room:
 
         $ lad_day2_evening_billiard_room_menu = TimedMenu([
             TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain', 20),
-            TimedMenuChoice('Talk again to Sushil Sinha', 'lad_day2_evening_billiard_room_captain_2', 10, condition="lad_day2_evening_billiard_room_captain_talked == True"),
+            TimedMenuChoice('Talk again to Sushil Sinha', 'lad_day2_evening_billiard_room_captain_2', condition="lad_day2_evening_billiard_room_captain_talked == True"),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day2_evening_billiard_room_bar', 10),
             TimedMenuChoice('Have another drink, for the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_day2_drinks == 1'),
             TimedMenuChoice('I think I still need of few more drinks', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_day2_drinks == 2'),
@@ -245,8 +245,8 @@ label lad_day2_evening_billiard_room_captain:
     """
 
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu([
-        TimedMenuChoice('I believe Daniel Baldwin was an opium addict{image=images/ui/intuition_icon.png}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="doctor_details.check_knowledge_unlocked('addict')" ),
-        TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody{image=images/ui/intuition_icon.png}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="broken_details.check_knowledge_unlocked('green_liquid')" ),
+        TimedMenuChoice('I believe Daniel Baldwin was an opium addict {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="doctor_details.check_knowledge_unlocked('addict')" ),
+        TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="broken_details.check_knowledge_unlocked('green_liquid')" ),
         TimedMenuChoice('I am not sure Samuel Manning was really drunk when the accident occurred', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
         TimedMenuChoice('I don\'t see any reasons to be suspicious.', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit = True ),
     ])

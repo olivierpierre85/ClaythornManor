@@ -209,7 +209,13 @@ screen choice(items):
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
+            # OLPI add intuition button
+            if "{{intuition}}" in i.caption:
+                textbutton i.caption.replace("{{intuition}}", "" ) + " {image=images/ui/intuition_icon.png}" action i.action
+            elif "{{observation}}" in i.caption:
+                textbutton i.caption.replace("{{observation}}", "" ) + " {image=images/ui/observation_icon.png}" action i.action
+            else:
+                textbutton i.caption action i.action
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
