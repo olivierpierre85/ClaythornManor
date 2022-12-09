@@ -27,13 +27,15 @@ label init_lad:
         lad_day3_morning_captain_found = False
         lad_day3_gun_downed = False
         lad_day3_poisoned = False
+        lad_day3_seen_car = False
 
         # Character Class
         lad_extra_information = [
             CharacterInformation(0, "background", "Born and raised in London.") , 
             CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
             CharacterInformation(3, "education", "Not a great reader."),
-            CharacterInformation(4, "poor_drinker", "Can't hold his liqueur.")
+            CharacterInformation(4, "poor_drinker", "Can't hold his liqueur."),
+            CharacterInformation(5, "drive", "Can't drive.")
         ]
         lad_details  = CharacterDetails(
             text_id = "lad", 
@@ -172,7 +174,7 @@ label init_lad:
                 condition = "lad_day2_evening_taste_from_flask"
             ),
             # -------------------------
-            # Saturday, Evening
+            # Sunday Search
             # -------------------------
             TimedMenuChoice(
                 default_room_text('psychic_room'), 
@@ -186,6 +188,34 @@ label init_lad:
                 'lad_day3_morning_host_room', 
                 20, 
                 room = 'host_room',
+                condition = condition_sunday_morning
+            ),            
+            TimedMenuChoice(
+                default_room_text('kitchen'), 
+                'lad_day3_morning_kitchen', 
+                10, 
+                room = 'kitchen',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                default_room_text('scullery'), 
+                'lad_day3_morning_scullery', 
+                10, 
+                room = 'scullery',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                default_room_text('garage'), 
+                'lad_day3_morning_garage', 
+                10, 
+                room = 'garage',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                default_room_text('gun_room'), 
+                'lad_day3_morning_gun_room', 
+                10, 
+                room = 'gun_room',
                 condition = condition_sunday_morning
             ),
             # -------------------------
@@ -207,7 +237,6 @@ label init_lad:
                 keep_alive = True, 
             ),
 
-            
         ], is_map = True)
 
     return

@@ -232,28 +232,6 @@ label lad_day3_morning_give_up:
 
     return
 
-label lad_day3_morning_gun_room:
-
-    $ change_room('gun_room')
-
-    """
-    A room filled with guns.
-
-    Normally I wouldn't touch them.
-
-    But I think because of the circumstances, I think I can make an exception.
-
-    I look around and find a small handgun.
-
-    It's not loaded but it might deter someone to attack me.
-
-    So I take it.
-    """
-
-    # TODO add handgun to tools?
-
-    return
-
 
 label lad_day3_morning_captain_room:
 

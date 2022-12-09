@@ -29,7 +29,9 @@ label lad_day1_evening:
     It's bigger than my apartment. And more luxurious than I could have dreamed of.
     """
 
-    lad "That will do great, thank you."
+    lad """
+    That will do great, thank you.
+    """
 
     """
     The footman exits the room.

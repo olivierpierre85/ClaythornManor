@@ -40,7 +40,8 @@ label init_characters:
             CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house.", is_important = True), 
             CharacterInformation(2, "age", "She was .... SO she must be ????"),
             CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.", is_important = True),
-            CharacterInformation(3, "lie", "She sometimes/always lie about what she sees ?", is_important = True)
+            CharacterInformation(4, "lie", "She sometimes/always lie about what she sees ?", is_important = True),
+            CharacterInformation(5, "drive", "Doesn't have a driving license.")
         ]
         psychic_details  = CharacterDetails(
             text_id = "psychic", 

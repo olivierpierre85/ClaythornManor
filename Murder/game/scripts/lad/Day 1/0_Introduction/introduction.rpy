@@ -50,7 +50,6 @@ label lad_introduction:
     But still, there is part of me thinking:
 
     Maybe I never should have come.
-    
     """
 
     play sound train_stopping
