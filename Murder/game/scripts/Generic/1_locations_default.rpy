@@ -75,6 +75,16 @@ label garage_friday:
 
     return
 
+label library_default:
+    
+    $ change_room('library')
+    
+    "It's empty"
+
+    "No need to stay here."
+
+    return
+
 label tea_room_default:
     
     $ change_room('tea_room')

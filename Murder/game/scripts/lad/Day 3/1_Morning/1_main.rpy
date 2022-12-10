@@ -173,8 +173,6 @@ label lad_day3_morning:
 
         So first we go to ...
         """
-        
-    # TODO test every room before it's over
     
     if lad_day2_believe_psychic:
         $ time_left = 120
@@ -184,15 +182,6 @@ label lad_day3_morning:
     call run_menu(lad_map_menu)
 
     call change_time(9,00)
-
-    # TODO force one choice to go downstairs ?
-    call run_menu(TimedMenu([
-        TimedMenuChoice(default_room_text('host_room'), 'lad_day3_morning_host_room', 20, room = 'host_room'),
-        TimedMenuChoice(default_room_text('drunk_room'), 'lad_day3_morning_drunk_room', 20, room = 'drunk_room'),
-        TimedMenuChoice(default_room_text('captain_room'), 'lad_day3_morning_captain_room', 20, room = 'captain_room'),
-        TimedMenuChoice(default_room_text('gun_room'), 'lad_day3_morning_gun_room', 20, room = 'gun_room'),
-        TimedMenuChoice('Go wait for Sushil', 'lad_day3_morning_give_up', early_exit = True, room = 'tea_room', condition = "lad_day3_morning_captain_found"),
-    ], is_map = True))
 
     $ change_room('tea_room')
 
@@ -204,7 +193,61 @@ label lad_day3_morning:
 
     captain """
     That's unbelievable, but it looks like we are the three remaining living souls in this place.
+
+    Did you find anything?
     """
+
+    lad """
+    Nothing.
+
+    There is nobody left it seems.
+
+    Except for the bodies.
+
+    Did you check on Samuel Manning by the way?
+
+    You are the only one who has the key to its room.
+    """
+
+    captain """
+    No, I figured he could not have moved.
+
+    But you are right it's better to go and check ourselves.
+    """
+
+    lad """
+    I think so too.
+
+    We will follow you.
+    """
+
+    """
+    Amelia gave me a concerned stare, but doesn't say a thing.
+
+    She follow us anyway.
+    """
+
+    scene hallway
+
+    $ unlock_map('drunk_room')
+
+    captain """
+    Mister Manning, are you there?
+    """
+
+    """
+    No answers.
+    """
+
+    captain """
+    OK, I am going in.
+    """
+
+    """
+    He opens up the door and we follow him in.
+    """
+
+    $ change_room('drunk_room')
 
     # TODO add call with telephone ? Room with a telephone ?
 
@@ -231,214 +274,4 @@ label lad_day3_morning:
 label lad_day3_morning_give_up:
 
     return
-
-
-label lad_day3_morning_captain_room:
-
-    scene hallway
-
-    play sound door_knock
-
-    lad """
-    Is there someone in there ?
-    """
-
-    captain """
-    Yes, what is it ?
-    """
-
-    $ unlock_map('captain_room')
-
-    lad """
-    It's Ted Harring. I am here with Amelia Baxter.
-
-    We would like to talk to you.
-    """
-
-    captain """
-    Alright come on in.
-    """
-
-    $ change_room('captain_room')
-
-    """
-    We enter the bedroom.
-
-    It is very tidy.
-
-    The captain is already dressed.
-
-    He was reading a book sitting on a chair.
-
-    As we enter, he stands up, looking surprised.
-    """
-
-    captain """
-    Well, I was not expecting visitors this early.
-    
-    What can I do for you ?
-    """
-
-    # TODO add if depending on the number of rooms already visited, specially the host room
-    psychic """
-    We believe something strange is going on.
-
-    This morning, you and mister Harring are the only persons I encountered so far.
-
-    We don't seem to find any of the servants, nor any other guests so far.
-    """
-
-    captain """
-    Now that you mention it, nobody came to tend the fire this morning.
-
-    It's rather unusual.
-
-    But I don't think it is that concerning. There probably is very going explanation.
-    """
-
-    lad """
-    We hope so too. 
-
-    But just in case, we where looking inside the manor for someone to explain us what's happening.
-    """
-
-    captain """
-    I understand. I can come with you if you want.
-    """
-
-    psychic """
-    Thank you but,... maybe,... maybe it's best if we split up.
-
-    We could cover more ground this way.
-    """
-
-    """
-    Amelia seemed nervous when she answered.
-    """
-
-    captain """
-    Good thinking. I'll look on my own, and we can meet later.
-
-    Maybe in the tea room ?
-    """
-
-    psychic """
-    That sounds perfect.
-
-    See you then.
-    """
-
-    $ lad_day3_morning_captain_found = True
-
-    return 
-
-label lad_day3_morning_host_room:
-
-    scene hallway
-
-    play sound door_knock
-
-    psychic """
-    This is Lady Claythorn Room.
-    """
-
-    $ unlock_map('host_room')
-
-    lad """
-    Miss Claythorn ?
-
-    Are you there ?
-    """
-
-    """
-    There is no response.
-    """
-
-    # psychic """
-    # I told you she was not there.
-    # """
-
-    """
-    Then, she put her on hand on the clutch.
-
-    The door opens.
-    """
-
-    lad surprised """
-    What are you doing ? 
-
-    We can't enter like that !
-    """
-
-    """
-    But it's too late. She's already rushed inside.
-
-    I have no choice but to follow her.
-    """
-
-    $ change_room('host_room')
-
-    """
-    It's empty.
-
-    The wardrobe is wide open. There are some clothes on the floor.
-    """
-
-    psychic """
-    It looks like she left in a hurry.
-    """
-
-    """
-    We looked for a clue of what happened but found nothing.
-    """
-
-    psychic """
-    Well, she either have left, or she is still hiding somewhere in the manor.
-
-    There is no need to dwell here any longer.
-    """
-    
-    return 
-
-label lad_day3_morning_drunk_room:
-
-    scene hallway
-
-    # TODO without captain, not possible,
-    if not lad_day3_morning_captain_found:
-        """
-        Samuel Manning room.
-
-        It's closed.
-
-        The captain has the key.
-        """
-    else:
-        captain """
-        Move aside, I am gonna open it.
-        """
-
-        $ change_room('drunk_room')
-
-    return
-
-label lad_day3_morning_psychic_room:
-
-    $ change_room('psychic_room')
-
-    psychic """
-    What are you doing in my room?
-
-    You don't think someone is hiding here?
-    """
-
-    lad """
-    Probably not, but it's better to be thorough.
-    """
-
-    """
-    But she is right.
-
-    There is nothing or nobody here.
-    """
     

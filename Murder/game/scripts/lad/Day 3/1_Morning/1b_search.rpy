@@ -2,6 +2,20 @@
 # FOR special rooms not visited before, KEEP THEM or not ?
 # FIRST lets forget all special room
 
+label lad_day3_morning_garden:
+
+    $ change_room('manor_garden')
+    
+    """
+    We go out into the garden to check.
+
+    But there is no trace of anyone.
+
+    Lady Claythorn car is not there either.
+    """
+
+    return
+
 label lad_day3_morning_kitchen:
 
     $ change_room('kitchen')
@@ -69,7 +83,7 @@ label lad_day3_take_gun:
     lad """
     Alright, I'll take this with me.
 
-    But there is no bullets in it.
+    But there are no bullets in it.
     """
 
     psychic """
@@ -144,7 +158,7 @@ label lad_day3_morning_garage:
 
     That's where lady Claythorn car should be.
 
-    But instead there is only parts of other vehicules and an old model in a shabby state.
+    But instead there is only parts of other cars and an old model in a shabby state.
     """
 
     lad """

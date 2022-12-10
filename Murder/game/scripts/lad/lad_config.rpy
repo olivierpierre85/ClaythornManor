@@ -177,10 +177,45 @@ label init_lad:
             # Sunday Search
             # -------------------------
             TimedMenuChoice(
+                default_room_text('lad_room'), 
+                'lad_day3_morning_lad_room',
+                10,
+                room = 'lad_room',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
                 default_room_text('psychic_room'), 
                 'lad_day3_morning_psychic_room',
                 10,
                 room = 'psychic_room',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                default_room_text('drunk_room'), 
+                'lad_day3_morning_drunk_room',
+                10,
+                room = 'drunk_room',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                default_room_text('doctor_room'), 
+                'lad_day3_morning_doctor_room',
+                10,
+                room = 'doctor_room',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                default_room_text('broken_room'), 
+                'lad_day3_morning_broken_room',
+                10,
+                room = 'broken_room',
+                condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                default_room_text('captain_room'), 
+                'lad_day3_morning_captain_room',
+                10,
+                room = 'captain_room',
                 condition = condition_sunday_morning
             ),
             TimedMenuChoice(
@@ -189,7 +224,14 @@ label init_lad:
                 20, 
                 room = 'host_room',
                 condition = condition_sunday_morning
-            ),            
+            ),
+            TimedMenuChoice(
+                default_room_text('nurse_room'), 
+                'lad_day3_morning_nurse_room', 
+                10, 
+                room = 'nurse_room',
+                condition = condition_sunday_morning
+            ),                  
             TimedMenuChoice(
                 default_room_text('kitchen'), 
                 'lad_day3_morning_kitchen', 
@@ -217,6 +259,13 @@ label init_lad:
                 10, 
                 room = 'gun_room',
                 condition = condition_sunday_morning
+            ),
+            TimedMenuChoice(
+                'Go wait for Sushil', 
+                'lad_day3_morning_give_up', 
+                early_exit = True, 
+                room = 'tea_room', 
+                condition = "lad_day3_morning_captain_found"
             ),
             # -------------------------
             # Generic choices
