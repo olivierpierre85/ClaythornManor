@@ -68,11 +68,11 @@ label lad_day3_morning:
 
         But I saw nor heard anything.
 
-        It's quite as a cemetery in here.
+        It's quiet as a cemetery in here.
         """
 
         lad """
-        Are you sure it's not normal.?
+        Are you sure it's not normal?
 
         It's still very early.
         """
@@ -179,6 +179,8 @@ label lad_day3_morning:
     else:
         $ time_left = 90
 
+    $ play_music('sad')
+
     call run_menu(lad_map_menu)
 
     call change_time(11,00)
@@ -263,7 +265,7 @@ label lad_day3_morning:
 
     $ change_room('drunk_room')
     
-    play music scary_01
+    play music scary_01 fadein 5.0
 
     """
     What we see inside is the most horrific thing I have ever seen.
@@ -345,8 +347,10 @@ label lad_day3_morning:
 
     So Sushil took us back to the tea room.
     """
+
+    stop music fadeout 5.0
     
-    jump lad_day3_noon
+    jump lad_day3_afternoon
 
     return
 

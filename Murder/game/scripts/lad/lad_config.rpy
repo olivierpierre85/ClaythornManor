@@ -35,7 +35,8 @@ label init_lad:
             CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
             CharacterInformation(3, "education", "Not a great reader."),
             CharacterInformation(4, "poor_drinker", "Can't hold his liqueur."),
-            CharacterInformation(5, "drive", "Can't drive.")
+            CharacterInformation(5, "drive", "He never learned how to drive.")
+            CharacterInformation(6, "cook", "He is not much of a cook.")
         ]
         lad_details  = CharacterDetails(
             text_id = "lad", 

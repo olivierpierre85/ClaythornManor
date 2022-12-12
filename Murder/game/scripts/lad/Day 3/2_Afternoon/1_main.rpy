@@ -7,10 +7,12 @@ label lad_day3_afternoon:
     call change_time(12,00, "Afternoon", "Sunday")
 
     """
-    After leaving us in the tea room to gather our strength, Mister Sinha left to explore the mansion a bit more.
+    After leaving us in the tea room to gather our strength, Sushil Sinha left to explore the mansion a bit more.
 
     When he came back, we were starting to feel a bit better.
     """
+
+    $ play_music('mysterious')
 
     captain """
     I just tried the phone, it's not working.
@@ -25,7 +27,7 @@ label lad_day3_afternoon:
     psychic """
     But,... can't we stay here and wait for the police?
 
-    They were supposed to come here today, they might arrive any moment;
+    They were supposed to come here today, they might arrive any moment.
     """
 
     captain """
@@ -43,9 +45,9 @@ label lad_day3_afternoon:
     """
 
     psychic """
-    So you think it was a setup?
+    So you think they never called.
 
-    That she never called the police.
+    That the police has no idea what has happened here.
 
     Those were just lies she told us.
     """
@@ -53,21 +55,17 @@ label lad_day3_afternoon:
     captain """
     That's the most logical explanation for me.
 
-    Nobody was around the phone calls that Miss Claythorn and her butler supposedly made.
+    Nobody was around when phone calls were made.
 
-    So there is no way to know if they actually made them.
-
-    And there disappearence this morning probably means they were in on it together.
-    
-    Probably the whole staff was.
+    So there is no way to know if they actually happened.
     """
 
     lad """
-    But in on what?
+    But why?
 
     What would they want to do something like this?
 
-    I don't understand what is happening and why!
+    I don't understand what is happening.
     """
 
     captain """
@@ -85,27 +83,114 @@ label lad_day3_afternoon:
 
     We are miles from the next town.
 
-    I can't walk that far.
+    I can't walk that far. 
+    
+    And even if I could do it physically, I am not equipped for it.
     """
 
+    """
+    Captain Sinha and I consider this for a while.
+    """
 
-    # TODO add call with telephone ? Room with a telephone ?
+    captain """
+    Maybe you are right.
 
-    # TODO the captain OR YOU saw a car in the garage BUT it's out of gas, AND he can't find the keys, so we'll need to walk
+    It's gonna be a long walk, and the weather could turn any minute.
 
-    # TODO captain asks about the gun room. Tell him you have it or not ?
+    We could be caught in an another storm.
+
+    It's probably not safe for you to come with us.
+    """
+
+    psychic surprised """
+    But you are not gonna leave me alone here?!
+
+    What will happen to me?
+    """
+
+    captain """
+    We could lock you in a room and gave you a gun for your defense.
+
+    That's not ideal of course.
+
+    It might be best that one of us stays with you here.
+    """
+
+    psychic """
+    Yes !
+
+    Mister Harring can stay here with me right!
+
+    The two of us will be safe until you return with some help.
+    """
+
+    captain """
+    This is perhaps the wisest choice.
+
+    What do you think Mister Harring?
+    """
+    
     $ lad_day3_escape_menu = TimedMenu([
+        TimedMenuChoice('We could take the old from the garage {{observation}}', 'lad_day3_leave_with_car', condition= "lad_day3_seen_car"),
         TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', early_exit = True ),
-        TimedMenuChoice('Follow Sushil Sinha', 'lad_day3_escape', early_exit = True)
+        TimedMenuChoice('Follow Sushil Sinha. Amalia Baxter will {i}probably{/i} be fine on her own', 'lad_day3_escape', early_exit = True)
     ], image_left = "psychic",  image_right = "captain")
+
     $ time_left = 1
+
     call run_menu(lad_day3_escape_menu)
 
-    # TODO handle possible endings
-    # TODO add switch on the 
-    # TODO more logic in ending names
+    # TODO handle possible endings, add switch on the  more logic in ending names
     if lad_day3_gun_downed:
+
         jump lad_gun_downed_ending
+
     elif lad_day3_poisoned:
+
         jump lad_ending_day3_poisoned
 
+label lad_day3_leave_with_car:
+
+    lad """
+    Wait, there is still a car in the garage.
+
+    We went there earlier and saw an old car.
+
+    Maybe it's still working well.
+
+    We don't know how to drive it, but maybe you do?
+    """
+
+    captain """
+    I can drive yes.
+
+    And I saw the car you mentioned too.
+
+    I even tried to start it.
+
+    No luck.
+
+    I don't think anything is wrong with it. It's probably out of gas.
+
+    But I couldn't find any in the garage.
+
+    So I am afraid this car won't be of any use to us.
+
+    Unless you saw a jerrycan somewhere else in the house?
+    """
+
+    lad """
+    No. No I didn't.
+    """
+
+    psychic """
+    Me neither.
+    """
+
+    captain """
+    Too bad.
+
+    We don't have a choice but to leave on foot then.
+    """
+
+    return

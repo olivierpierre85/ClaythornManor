@@ -77,6 +77,8 @@ init python:
         track_lists = dict()
         track_lists['upbeat'] = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3', 'audio/music/upbeat_04.mp3']
         track_lists['chill'] = ['audio/music/chill_01.mp3', 'audio/music/chill_02.mp3']
+        track_lists['sad'] = ['audio/music/sad_01.mp3', 'audio/music/sad_02.mp3']
+        track_lists['mysterious'] = ['audio/music/mysterious_01.mp3', 'audio/music/mysterious_01.mp3']
             
         renpy.music.play(track_lists[current_music], loop=True, fadein = 10, fadeout = 5)
 

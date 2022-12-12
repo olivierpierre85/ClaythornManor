@@ -1,6 +1,10 @@
 label lad_day3_escape:
     $ change_room('garden')
 
+    call change_time(13,00, "Escape", "Sunday")
+
+    # TODO captain asks about the gun room. Tell him you have it or not ?
+
     """
     It may be dangerous but I still prefer going with the Captain than staying in the manor.
 

@@ -46,7 +46,7 @@ label lad_day3_morning_captain_room:
     """
 
     captain """
-    Yes, what is it ?
+    Yes, what is it?
     """
 
     $ unlock_map('captain_room')
