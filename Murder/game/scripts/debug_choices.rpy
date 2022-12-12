@@ -21,14 +21,14 @@ label debug_choices:
         # "lad_day2_morning":
         #     jump lad_day2_morning
             
-        "lad_day2_hunt":
-            jump lad_day2_hunt
+        # "lad_day2_hunt":
+        #     jump lad_day2_hunt
 
-        "lad_day2_nohunt":
-            jump lad_day2_nohunt
+        # "lad_day2_nohunt":
+        #     jump lad_day2_nohunt
 
-        "lad_day2_afternoon":
-            jump lad_day2_afternoon
+        # "lad_day2_afternoon":
+        #     jump lad_day2_afternoon
             
         # "lad_day2_afternoon_bedroom":
         #     jump lad_day2_afternoon_bedroom
@@ -39,9 +39,11 @@ label debug_choices:
         "lad_day3_morning":
             $ lad_day2_believe_psychic = True
             jump lad_day3_morning
+        
+        "lad_day3_afternoon":
+            $ lad_day2_believe_psychic = True
+            jump lad_day3_afternoon
 
-        # "lad_day3_morning":
-        #     jump lad_day3_morning
     return
 
 label debug_routes:
