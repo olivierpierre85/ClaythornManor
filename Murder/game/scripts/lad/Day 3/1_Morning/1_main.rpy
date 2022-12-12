@@ -5,12 +5,12 @@ label lad_day3_morning:
     $ change_room('lad_room', irisout)
 
     if lad_day2_believe_psychic:
-        call change_time(7,00, "Morning", "Sunday")
+        call change_time(8,00, "Morning", "Sunday")
         # You talked to and believed psychic
         # So she came to wake you at dawn
     else:
         # Otherwise, you'll have less time to explore
-        call change_time(8,00, "Morning", "Sunday")
+        call change_time(9,30, "Morning", "Sunday")
 
     play sound door_knock
     
@@ -175,13 +175,13 @@ label lad_day3_morning:
         """
     
     if lad_day2_believe_psychic:
-        $ time_left = 120
+        $ time_left = 150
     else:
-        $ time_left = 60
+        $ time_left = 90
 
     call run_menu(lad_map_menu)
 
-    call change_time(9,00)
+    call change_time(11,00)
 
     $ change_room('tea_room')
 
@@ -224,12 +224,14 @@ label lad_day3_morning:
     """
     Amelia gave me a concerned stare, but doesn't say a thing.
 
-    She follow us anyway.
+    She follows us anyway.
     """
 
     scene hallway
 
     $ unlock_map('drunk_room')
+
+    play sound door_knock
 
     captain """
     Mister Manning, are you there?
@@ -245,29 +247,106 @@ label lad_day3_morning:
 
     """
     He opens up the door and we follow him in.
+
+    As I enter the room the captain suddenly tries to stop.
+    """
+
+    captain """
+    No stay there.
+
+    Don't enter.
+    """
+
+    """
+    But it's already too late.
     """
 
     $ change_room('drunk_room')
+    
+    play music scary_01
 
-    # TODO add call with telephone ? Room with a telephone ?
+    """
+    What we see inside is the most horrific thing I have ever seen.
 
-    # TODO the captain saw a car in the garage BUT it's out of gas, AND he can't find the keys, so we'll need to walk
+    Samuel Manning is in his bed. 
 
-    $ lad_day3_escape_menu = TimedMenu([
-        TimedMenuChoice('Stay here with Amelia', 'lad_day3_stay', early_exit = True ),
-        TimedMenuChoice('Follow Sushil', 'lad_day3_escape', early_exit = True)
-    ], image_left = "psychic",  image_right = "captain")
-    $ time_left = 1
-    call run_menu(lad_day3_escape_menu)
+    Covered in blood, his throat cut of in several places.
 
-    # TODO handle possible endings
-    # TODO add switch on the 
-    # TODO more logic in ending names
-    if lad_day3_gun_downed:
-        jump lad_gun_downed_ending
-    elif lad_day3_poisoned:
-        jump lad_ending_day3_poisoned
+    He is pure white. His eyes are still opened, fixed in a terrified gaze.
 
+    Miss Baxter let out a scream.
+    """
+
+    #TODO add woman scream?
+
+
+    captain """
+    Miss Baxter, please don't stay here.
+    """
+
+    """
+    She is unable to say anything.
+
+    Her eyes are fixated toward the dead body in the bed.
+
+    Sushil Sinha take her by the arm and drag her out of the room.
+
+    Unable to stay there longer, I follow them outside.
+    """
+
+    scene hallway
+
+    captain """
+    I am sorry you had to see that.
+
+    I should not have let you enter this room.
+    """
+
+    psychic surprised """
+    Is ... he ... dead?
+    """
+
+    captain """
+    I am afraid he is.
+    """
+
+    lad surprised """
+    Are you sure?
+
+    Shouldn't we check his pulse.
+
+    Maybe,... maybe he can still be saved.
+    """
+
+    """
+    The words are coming slowly out of my mouth.
+
+    I realize I am shaking.
+    """
+
+    captain """
+    Sorry but it's too late.
+
+    I have seen enough dead bodies to know this.
+
+    The poor guy has been dead for a long time.
+
+    Probably since last night.
+    """
+
+    psychic """
+    Oh my god.
+    """
+
+    """
+    She starts to cry.
+
+    I am still shaking from shock.
+
+    So Sushil took us back to the tea room.
+    """
+    
+    jump lad_day3_noon
 
     return
 

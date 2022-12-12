@@ -1,8 +1,9 @@
 label lad_day3_stay:
+
     """
     I don't feel comfortable leaving Amelia Baxter alone in here.
 
-    After all we don't know that there is no killer left in the building.
+    After all, we don't know that there is no killer left in the building.
 
     And in any case, I don't think I can trust to follow this guy in the forest.
 
