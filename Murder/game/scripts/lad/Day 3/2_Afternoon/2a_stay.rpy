@@ -43,13 +43,13 @@ label lad_day3_stay:
     psychic """
     There is not much.
 
-    But I found TODO FOOD victorian food.
+    But I think I can manage a light luncheon if you are not picky.
     """
 
     """
     I take a seat while she prepares the food.
 
-    I offered to help her but she declines.
+    I offer to help but she declines.
 
     That's probably for the best.
 
@@ -58,15 +58,58 @@ label lad_day3_stay:
 
     $ lad_details.add_knowledge('cook') 
 
+    $ change_room('dining_room')
+
     """
-    When everything is ready we take our plates to the dining room.
+    When everything is ready I offer to carry the plates to the dining room.
+
+    I put them on the table at our usuals places.
+
+    Then I excuse myself.
+    """
+
+    psychic """
+    Where are you going mister Harring?
+
+    It's better that we stick together at all time.
+    """
+
+    lad """
+    I understand, but there is one thing I need to do alone.
+
+    You see, we haven't left each other company the whole day and...
+    """
+
+    psychic """
+    Say no more, I understand.
+
+    I guess this was inevitable. 
+
+    I would like to go to actually.
+
+    Let's meet here in a few minutes.
+    """
+
+    lad """
+    Of course.
+    """
+
+    $ change_room('lad_room')
+
+    """
+    I proceed to go back to room and back as fast as I could.
+
+    I looked frenetically around me while doing so. Checking every corner.
+
+    When I came back, Miss Baxter is already seated at the table.
     """
 
     $ change_room('dining_room')
-
-    # TODO SWITCH PLATE? HOW INTERACTION WITH CHOICE 
+    
     lad """
-    We start to eat in silence. There is not much more we want to talk about.
+    I take my place in front of her and we start eating in silence. 
+    
+    There is not much we want to talk about.
 
     After I finished my plate, I want to stand to help her do the dishes.
 
@@ -88,29 +131,31 @@ label lad_day3_stay:
     lad """
     What... did ... you do ... to my food ???
     """
-    psychic """
-    Your food? I did nothing with it.
 
-    But I taught you might have.
+    # psychic """
+    # Your food? I did nothing with it.
 
-    So I switched our plates before handing them to you.
+    # But I taught you might have.
 
-    You see, I never really trusted you Mister Harring.
+    # So I switched our plates before handing them to you.
 
-    It looks like I was right to do so.
+    # You see, I never really trusted you Mister Harring.
+
+    # It looks like I was right to do so.
+    # """
+
     """
-
-    """
-    I try to answer, but nothings comes out of my mouth.
+    I try to keep on talking. But no sound comes out of my mouth.
     
-    I fall onto the ground.
+    I fall on the ground.
     """
 
-    #TODO sound falling sound
+    play sound body_fall
 
-    $ current_character.intuitions.add('psychic_poisons')
+    # $ current_character.intuitions.add('psychic_poisons')
+    # $ doctor_details.add_knowledge('age') 
 
     $ lad_day3_poisoned = True
-    # TODO special action (find the poison) to unlock TRUE ending first part=> Am I the baddy ?
+    # TODO special action (SWITCH PLATES) to unlock TRUE ending first part=> Am I the baddy ?
 
     return
