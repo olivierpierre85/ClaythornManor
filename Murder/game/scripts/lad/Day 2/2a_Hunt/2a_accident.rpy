@@ -47,7 +47,7 @@ label lad_day2_hunt_accident:
     Yes, I've been born and raised there.
     """
 
-    $ lad_details.add_knowledge('background') 
+    $ lad_details.unlock_knowledge('background') 
 
     """
     But I don't really want to talk about that.

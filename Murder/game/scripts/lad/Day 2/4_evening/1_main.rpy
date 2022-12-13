@@ -115,7 +115,7 @@ label lad_day2_evening:
             What does it say about me?
             """
 
-            $ lad_details.add_knowledge('poor_drinker') 
+            $ lad_details.unlock_knowledge('poor_drinker') 
 
             # TODO achievement. DRUNK OR CHEATED DEATH IF drank poison
 
@@ -213,7 +213,7 @@ label lad_day2_doctor_room:
     Looks like the doctor wasn't using it only on patients.
     """
 
-    $ doctor_details.add_knowledge('addict') 
+    $ doctor_details.unlock_knowledge('addict') 
 
     """
     Just in case, I might as well take a few for myself.

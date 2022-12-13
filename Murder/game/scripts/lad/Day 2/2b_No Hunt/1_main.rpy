@@ -93,7 +93,7 @@ label lad_day2_broken_room:
     That's strange.
     """
 
-    $ broken_details.add_knowledge('green_liquid') # TODO link to billiard room option to not drink the whisky?
+    $  lad_details.unlock_observation('green_liquid') # TODO link to billiard room option to not drink the whisky?
 
     # TODO add sound for CLUE???
     # TODO FIRST REAL INVESTIGATiON CLUE ? ADD INTUITION when come back to 

@@ -158,8 +158,6 @@ label lad_day1_drinks_psychic:
     psychic """
     Nice to meet you mister Haring.
     """
-    
-    # $ current_character.has_met.add('psychic')
 
     call psychic_generic
 

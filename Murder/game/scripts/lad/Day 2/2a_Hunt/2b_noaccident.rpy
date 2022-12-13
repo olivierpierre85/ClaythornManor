@@ -44,7 +44,7 @@ label lad_day2_hunt_noaccident:
     """
     # TODO little difference if you have listened to the speech
 
-    $ captain_details.add_knowledge('wars')
+    $ captain_details.unlock_knowledge('wars')
 
     """
     Those talks about war must have made Lady Claythorn uneasy, because she suddenly interrupts us.

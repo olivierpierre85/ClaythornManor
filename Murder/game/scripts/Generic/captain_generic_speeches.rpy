@@ -122,6 +122,6 @@ label captain_billiard_room_speech_part_2:
     It took long enough.
     """
 
-    $ captain_details.add_knowledge('talker') 
+    $ captain_details.unlock_knowledge('talker') 
 
     return

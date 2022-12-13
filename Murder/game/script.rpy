@@ -58,7 +58,7 @@ label init_technical_variables:
         TIME_MAX = 999999
 
         current_room = "outside"
-        seen_tutorial_add_knowledge = False
+        seen_tutorial_unlock_knowledge = False
 
         current_music = 'upbeat'
 

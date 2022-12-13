@@ -33,16 +33,20 @@ label debug_choices:
         # "lad_day2_afternoon_bedroom":
         #     jump lad_day2_afternoon_bedroom
             
-        "lad_day2_evening":
+        "lad_day2_evening WITH unlocked":
+            $ lad_details.unlock_object('gun')
+            $ lad_details.unlock_intuition('psychic_poisons')
+            $ lad_details.unlock_observation('green_liquid')
+            $ doctor_details.unlock_knowledge('addict')
             jump lad_day2_evening
 
-        "lad_day3_morning":
-            $ lad_day2_believe_psychic = True
-            jump lad_day3_morning
+        # "lad_day3_morning":
+        #     $ lad_day2_believe_psychic = True
+        #     jump lad_day3_morning
         
-        "lad_day3_afternoon":
-            $ lad_day2_believe_psychic = True
-            jump lad_day3_afternoon
+        # "lad_day3_afternoon":
+        #     $ lad_day2_believe_psychic = True
+        #     jump lad_day3_afternoon
 
     return
 

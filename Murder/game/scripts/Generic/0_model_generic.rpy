@@ -1,19 +1,19 @@
  
 label todo_generic():
 
-  if 'todo' not in current_character.has_met:
+  # if 'todo' not in current_character.has_met:
     
-    if current_character.text_id == "lad":
+  #   if current_character.text_id == "lad":
 
-      lad "Hi sir ..."
+  #     lad "Hi sir ..."
 
-      todo "Hi, I am todo Daniel Baldwin."
+  #     todo "Hi, I am todo Daniel Baldwin."
 
-      lad "Nice to meet you todo."
+  #     lad "Nice to meet you todo."
 
-  else:
+  # else:
     
-    lad "Hello again todo."
+  #   lad "Hello again todo."
 
   if not 'todo_generic_menu' in locals():
     $ todo_generic_menu = TimedMenu([

@@ -56,7 +56,7 @@ label lad_day3_stay:
     It's not like I could do much anyway.
     """
 
-    $ lad_details.add_knowledge('cook') 
+    $ lad_details.unlock_knowledge('cook') 
 
     $ change_room('dining_room')
 
@@ -152,8 +152,7 @@ label lad_day3_stay:
 
     play sound body_fall
 
-    # $ current_character.intuitions.add('psychic_poisons')
-    # $ doctor_details.add_knowledge('age') 
+    $ lad_details.unlock_intuition('psychic_poisons')
 
     $ lad_day3_poisoned = True
     # TODO special action (SWITCH PLATES) to unlock TRUE ending first part=> Am I the baddy ?

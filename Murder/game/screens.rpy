@@ -209,11 +209,12 @@ screen choice(items):
 
     vbox:
         for i in items:
-            # OLPI add intuition button
             if "{{intuition}}" in i.caption:
                 textbutton i.caption.replace("{{intuition}}", "" ) + " {image=images/ui/intuition_icon.png}" action i.action
             elif "{{observation}}" in i.caption:
                 textbutton i.caption.replace("{{observation}}", "" ) + " {image=images/ui/observation_icon.png}" action i.action
+            elif "{{object}}" in i.caption:
+                textbutton i.caption.replace("{{object}}", "" ) + " {image=images/ui/objects_icon.png}" action i.action
             else:
                 textbutton i.caption action i.action
 

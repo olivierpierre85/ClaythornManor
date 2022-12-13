@@ -11,7 +11,7 @@ label psychic_generic:
             TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
             TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_sunday', 5, condition = "current_day == 'Sunday'"),
             TimedMenuChoice('Tell me more about yourself.', 'psychic_generic_background', 15),
-            TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.check_knowledge_unlocked('background')"),
+            TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.is_knowledge_unlocked('background')"),
             TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 10),
             TimedMenuChoice('How old are you?', 'psychic_generic_age', 5),
             TimedMenuChoice('What room are you in?', 'psychic_generic_room', 5, condition = "not is_unlock_map('psychic_room')"),
@@ -188,7 +188,7 @@ label psychic_generic_heroic_act:
         But tell me. Why were you invited yourself ?
         """
 
-        $ psychic_details.add_knowledge('heroic act') 
+        $ psychic_details.unlock_knowledge('heroic act') 
     
         "So I tell her my story."
 
@@ -198,7 +198,7 @@ label psychic_generic_heroic_act:
 
         psychic "Really? I thought you were older."
 
-        $ lad_details.add_knowledge('age') 
+        $ lad_details.unlock_knowledge('age') 
 
         stop music fadeout 3.0
 
@@ -254,7 +254,7 @@ label psychic_generic_background:
         Well, that doesn't make me feel good.
         """
 
-    $ psychic_details.add_knowledge('background')
+    $ psychic_details.unlock_knowledge('background')
 
     return
     
@@ -297,7 +297,7 @@ label psychic_generic_manor:
         Am I the only one in here who has never had a butler waiting on him ?
         """
 
-    $ psychic_details.add_knowledge('status')
+    $ psychic_details.unlock_knowledge('status')
     
     return
 

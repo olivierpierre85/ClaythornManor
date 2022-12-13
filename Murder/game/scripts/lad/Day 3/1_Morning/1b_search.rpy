@@ -187,7 +187,7 @@ label lad_day3_morning_garage:
     Because I sure can't.
     """
 
-    $ psychic_details.add_knowledge('drive')
+    $ psychic_details.unlock_knowledge('drive')
 
     lad """
     Not really, no.
@@ -199,7 +199,7 @@ label lad_day3_morning_garage:
     It's not like I could afford a car anyway.
     """
 
-    $ lad_details.add_knowledge('drive')
+    $ lad_details.unlock_knowledge('drive')
 
     $ lad_day3_seen_car = True
 

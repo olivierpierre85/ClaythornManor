@@ -10,7 +10,7 @@ label doctor_generic_other_guests_friday:
     Because I don't think I was able to add anything to the conversation.
     """
 
-    $ captain_details.add_knowledge('talker') 
+    $ captain_details.unlock_knowledge('talker') 
 
     return
 

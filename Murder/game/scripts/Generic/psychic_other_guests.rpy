@@ -85,7 +85,7 @@ label psychic_generic_other_guests_friday:
     It's not very tactful if you ask me.
     """
 
-    $ captain_details.add_knowledge('talker') 
+    $ captain_details.unlock_knowledge('talker') 
 
     return
 
@@ -97,7 +97,7 @@ label psychic_generic_drunk_saturday_morning:
     We better stay away from him.
     """
 
-    $ drunk_details.add_knowledge('addict') 
+    $ drunk_details.unlock_knowledge('addict') 
 
     return
 
@@ -121,7 +121,7 @@ label psychic_generic_captain_saturday_morning:
     I suggest you do the same, unless you want to be bored to death.
     """
 
-    $ captain_details.add_knowledge('talker') 
+    $ captain_details.unlock_knowledge('talker') 
 
     return
 
@@ -144,7 +144,7 @@ label psychic_generic_host_saturday_morning:
     I don't like that.
     """
 
-    $ host_details.add_knowledge('down_to_earth') 
+    $ host_details.unlock_knowledge('down_to_earth') 
 
     return
 
@@ -158,7 +158,7 @@ label psychic_generic_nurse_saturday_hunt:
     So I believe the prize money could help her retire.
     """
 
-    $ nurse_details.add_knowledge('job') 
+    $ nurse_details.unlock_knowledge('job') 
 
     return
 

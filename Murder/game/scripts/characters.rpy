@@ -114,8 +114,7 @@ label init_characters:
         
         # 6. The Broken Face
         broken_extra_information = [
-            CharacterInformation(0, "mask", "A broken face or 'Gueule Cassée'. He wears mask that hides most of hist face because of an injury during the war."), 
-            CharacterInformation(1, "green_liquid", "After his dead, a green liquid was found on his bed stand (TODO put somewhere else?)"), 
+            CharacterInformation(0, "mask", "A broken face or 'Gueule Cassée'. He wears mask that hides most of hist face because of an injury during the war.")            
         ]
         broken_details  = CharacterDetails(
             text_id = "broken", 
@@ -210,8 +209,6 @@ init -100 python:
             description_short = "",
             description_long = "",
             information_list = [],
-            has_met = set(),
-            intuitions_list = set(),
         ):
             self.text_id = text_id
             self.locked = locked
@@ -221,19 +218,60 @@ init -100 python:
             self.description_short = description_short
             self.description_long = description_long
             self.information_list = information_list
-            self.has_met = has_met
 
         def get_name(self):
             # if self.know_real_name:
             return self.real_name
             # else:
             #     return self.description_short
+        
+        # ---------------
+        # KNOWLEDGE
+        # ---------------
+        def get_knowledge(self):
+            knowledge_list = []
+            for info in self.information_list:
+                if info.type == 'knowledge':
+                    knowledge_list.append(info)
+            return knowledge_list
 
-        def get_progress(self):
+        def unlock_knowledge(self, text_id):
+            for info in self.get_knowledge():
+                if text_id == info.text_id and info.locked:
+                    # Unlock the info
+                    info.locked = False
+                    renpy.notify("You have found information about " + self.get_name())
+                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
+                    # play sound "audio/sound_effects/unlock.ogg"
+
+                    if self.all_knowledge_unlocked():
+                        # Unlock a character
+                        renpy.pause(2)
+                        renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
+                        renpy.notify("You have unlock a new Character : The " + self.text_id)
+            # TODO if first time, add a call to an explanation NOT WORKING, MUST BE PUT INSIDE A LABEL ???
+            # global seen_tutorial_unlock_knowledge
+            # if not seen_tutorial_unlock_knowledge:
+            #     seen_tutorial_unlock_knowledge = True
+            #     renpy.call('tutorial_unlock_knowledge')
+        
+        def is_knowledge_unlocked(self, text_id):
+            for info in self.get_knowledge():
+                if text_id == info.text_id:
+                    return not info.locked
+            return False
+
+        def all_knowledge_unlocked(self):
+            for info in self.get_knowledge():
+                if info.locked:
+                    return False
+            return True
+
+        def get_character_progress(self):
             total_info = 0
             total_unlocked = 0
             progress = 0
-            for info in self.information_list:
+            for info in self.get_knowledge():
                 if info.is_important:
                     total_info += 1
                     if not info.locked:
@@ -245,49 +283,82 @@ init -100 python:
             else:
                 return int(total_unlocked / total_info * 100)
 
-        def is_unlocked(self):
-            for info in self.information_list:
+        def is_character_unlocked(self):
+            for info in self.get_knowledge():
                 if info.is_important and info.locked:
                     return False
             return True
 
-        
-        def introduce(self):
-            self.know_real_name = True
-        
-        def add_knowledge(self, text_id):
+        # ---------------
+        # Observation
+        # ---------------
+        def get_observations(self):
+            observation_list = []
             for info in self.information_list:
+                if info.type == 'observation':
+                    observation_list.append(info)
+            return observation_list
+
+        def unlock_observation(self, text_id):
+            for info in self.get_observations():
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
                     info.locked = False
-                    renpy.notify("You have found information about " + self.get_name())
+                    renpy.notify("You have made a new observation")
                     renpy.play("audio/sound_effects/writing_short.ogg", "sound")
-                    # play sound "audio/sound_effects/unlock.ogg"
-
-                    if self.all_information_unlocked():
-                        # Unlock a character
-                        renpy.pause(2)
-                        renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
-                        renpy.notify("You have unlock a new Character : The " + self.text_id)
-            # TODO if first time, add a call to an explanation NOT WORKING, MUST BE PUT INSIDE A LABEL ???
-            # global seen_tutorial_add_knowledge
-            # if not seen_tutorial_add_knowledge:
-            #     seen_tutorial_add_knowledge = True
-            #     renpy.call('tutorial_add_knowledge')
         
-        def check_knowledge_unlocked(self, text_id):
-            for info in self.information_list:
+        def is_observation_unlocked(self, text_id):
+            for info in self.get_observations():
                 if text_id == info.text_id:
                     return not info.locked
-
-            return True
-
+            return False
         
-        def all_information_unlocked(self):
+        # ---------------
+        # Intuition
+        # ---------------
+        def get_intuitions(self):
+            intuition_list = []
             for info in self.information_list:
-                if info.locked:
-                    return False
-            return True
+                if info.type == 'intuition':
+                    intuition_list.append(info)
+            return intuition_list
+
+        def unlock_intuition(self, text_id):
+            for info in self.get_intuitions():
+                if text_id == info.text_id and info.locked:
+                    # Unlock the info
+                    info.locked = False
+                    renpy.notify("You have a new intuition")
+                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
+        
+        def is_intuition_unlocked(self, text_id):
+            for info in self.get_intuitions():
+                if text_id == info.text_id:
+                    return not info.locked
+            return False
+
+        # ---------------
+        # object
+        # ---------------
+        def get_objects(self):
+            object_list = []
+            for info in self.information_list:
+                if info.type == 'object':
+                    object_list.append(info)
+            return object_list
+
+        def unlock_object(self, text_id):
+            for info in self.get_objects():
+                if text_id == info.text_id and info.locked:
+                    # Unlock the info
+                    info.locked = False
+                    renpy.notify("You have found a new object")
+                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
+        
+        def is_object_unlocked(self, text_id):
+            for info in self.get_objects():
+                if text_id == info.text_id:
+                    return not info.locked
 
     class CharacterInformation:
         def __init__(
@@ -296,13 +367,15 @@ init -100 python:
             text_id,             
             content, 
             locked = True,
-            is_important = False
+            is_important = False,
+            type = 'knowledge'
         ):
             self.order = order
             self.text_id = text_id
             self.content = content
             self.locked = locked
             self.is_important = is_important
+            self.type = type
 
 # LABELS
 label character_selection:
@@ -356,12 +429,12 @@ screen character_list(is_selection = False):
                     xoffset char_x_offset
                     textbutton char.real_name:
                         if is_selection:
-                            if char.is_unlocked():
+                            if char.is_character_unlocked():
                                 action Return(char.text_id)
                         else:
                             action ShowMenu("character_details", char)
                     imagebutton:
-                        if char.is_unlocked():
+                        if char.is_character_unlocked():
                             idle "images/characters/side/side " + char.text_id + ".png"
                             hover "images/characters/side_hover/side " + char.text_id + " hover.png"
                         else:
@@ -370,7 +443,7 @@ screen character_list(is_selection = False):
                                 hover "images/characters/side_bw_hover/side " + char.text_id + " bw hover.png"
 
                         if is_selection:
-                            if char.is_unlocked():
+                            if char.is_character_unlocked():
                                 action Return(char.text_id)   
                         else:
                             action ShowMenu("character_details", char)
@@ -401,7 +474,7 @@ screen character_details(selected_char):
                     color gui.accent_color
                     # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
                 
-                if selected_char.is_unlocked():
+                if selected_char.is_character_unlocked():
                     add "images/characters/side/side " + selected_char.text_id +".png"
                     text "Unlocked":
                         size 36
@@ -413,7 +486,7 @@ screen character_details(selected_char):
                         size 36
                         xalign 0.5
                     bar:
-                        value selected_char.get_progress() 
+                        value selected_char.get_character_progress() 
                         range 100
                         xmaximum 260
                         style 'progress_bar'

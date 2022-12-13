@@ -62,12 +62,11 @@ label lad_day2_morning:
     I nod. Not sure what to say.
     """
 
-    if 'broken' in current_character.has_met:
+    if lad_day1_drinks > 0:
 
         "I look around the room."
 
         lad """
-
         I don\'t see the man with the mask either, Thomas Moody.
 
         I talked to him yesterday and he seemed fine to me.

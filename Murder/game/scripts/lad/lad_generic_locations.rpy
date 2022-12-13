@@ -6,7 +6,7 @@ label lad_library:
     It's a very nice library. But what am I doing here ? I can barely read.
     """
 
-    $ lad_details.add_knowledge('education')
+    $ lad_details.unlock_knowledge('education')
 
     """
     There is an open book on a small table.

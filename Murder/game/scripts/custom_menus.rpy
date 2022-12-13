@@ -106,8 +106,7 @@ init -1 python:
         def is_valid(self):
             if len(self.get_visible_choices()) <= 0:
                 return False
-            print(time_left)
-            print(self.early_exit)
+                
             if time_left <= 0 or self.early_exit:
                 return False
 

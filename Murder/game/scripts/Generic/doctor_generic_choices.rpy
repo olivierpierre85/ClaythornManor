@@ -6,7 +6,7 @@ label doctor_generic():
             TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
             TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
             TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20),
-            TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 20, condition = "doctor_details.check_knowledge_unlocked('background')"),
+            TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 20, condition = "doctor_details.is_knowledge_unlocked('background')"),
             TimedMenuChoice('What do you think of this place?', 'doctor_generic_manor', 10),
             TimedMenuChoice('How old are you?', 'doctor_generic_age', 5),
             TimedMenuChoice('What room are you in?', 'doctor_generic_room', 5),
@@ -58,7 +58,7 @@ label doctor_generic_background:
     In the last one of course, but I was also in China during the insurrection.
     """
 
-    $ doctor_details.add_knowledge('background') 
+    $ doctor_details.unlock_knowledge('background') 
 
     return
 
@@ -107,7 +107,7 @@ label doctor_generic_manor:
 
         "Well, that's a bit comforting."
 
-        $ doctor_details.add_knowledge('status') 
+        $ doctor_details.unlock_knowledge('status') 
 
     return
 
@@ -117,7 +117,7 @@ label doctor_generic_age:
     if current_character.text_id == "lad":
         lad "Actually I am not sure."
 
-    $ doctor_details.add_knowledge('age') 
+    $ doctor_details.unlock_knowledge('age') 
     
     return
 

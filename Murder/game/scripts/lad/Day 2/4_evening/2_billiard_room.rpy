@@ -245,8 +245,10 @@ label lad_day2_evening_billiard_room_captain:
     """
 
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu([
-        TimedMenuChoice('I believe Daniel Baldwin was an opium addict {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="doctor_details.check_knowledge_unlocked('addict')" ),
-        TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="broken_details.check_knowledge_unlocked('green_liquid')" ),
+        TimedMenuChoice('I have a intuition {{intuition}}', 'TODO', 10, condition="lad_details.is_intuition_unlocked('psychic_poisons')" ),
+        TimedMenuChoice('I have a gun, I do what I want {{object}}', 'TODO', 10, condition="lad_details.is_object_unlocked('gun')" ),
+        TimedMenuChoice('I believe Daniel Baldwin was an opium addict {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="doctor_details.is_knowledge_unlocked('addict')" ),
+        TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.is_observation_unlocked('green_liquid')" ),
         TimedMenuChoice('I am not sure Samuel Manning was really drunk when the accident occurred', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
         TimedMenuChoice('I don\'t see any reasons to be suspicious.', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit = True ),
     ])

@@ -31,12 +31,19 @@ label init_lad:
 
         # Character Class
         lad_extra_information = [
+            # knowledge
             CharacterInformation(0, "background", "Born and raised in London.") , 
             CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
             CharacterInformation(3, "education", "Not a great reader."),
             CharacterInformation(4, "poor_drinker", "Can't hold his liqueur."),
             CharacterInformation(5, "drive", "He never learned how to drive."),
-            CharacterInformation(6, "cook", "He is not much of a cook.")
+            CharacterInformation(6, "cook", "He is not much of a cook."),
+            # Observations
+            CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", type="observation"), 
+            # Objects
+            CharacterInformation(1, "gun", "", type="object"), 
+            # Intuitions
+            CharacterInformation(1, "psychic_poisons", "Sunday, Amalia Baxter poisoned your food.", type="intuition"), 
         ]
         lad_details  = CharacterDetails(
             text_id = "lad", 
@@ -47,7 +54,6 @@ label init_lad:
             description_short = "Young man",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
-            has_met = set()
             )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 
