@@ -46,8 +46,13 @@ label debug_choices:
         
         "lad_day3_afternoon":
             $ lad_day2_believe_psychic = True
+            $ first_death = False
             $ lad_details.unlock_intuition('psychic_poisons')
             jump lad_day3_afternoon
+
+        "lad_day3_stay":
+            $ lad_details.unlock_intuition('psychic_poisons')
+            jump lad_day3_stay
 
     return
 

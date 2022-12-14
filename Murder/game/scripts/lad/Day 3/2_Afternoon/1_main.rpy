@@ -149,12 +149,14 @@ label lad_day3_afternoon:
 
         jump lad_ending_day3_poisoned
     
+    elif lad_day3_ending == "fell":
+
+        jump lad_ending_day3_fell
+
     elif lad_day3_ending == "survived":
+        #TODO  IF ALL finished UNLOCK NOT AN ENDING BUT LAST PART     
+        jump lad_ending_day3_survived    
 
-        #TODO  IF ALL finished UNLOCK
-
-        jump lad_ending_day3_survived
-    
     return
 
 label lad_day3_leave_with_car:

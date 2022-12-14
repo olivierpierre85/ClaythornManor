@@ -1,8 +1,5 @@
 # Ending for hero
 
-# DAY 1
-# Either the lad as drank sherry after dinner and die, or he hasn't and is still alive
-
 label ending_generic:
 
     if first_death:
@@ -22,7 +19,7 @@ label ending_generic:
 
         And you'll have to. 
 
-        Because otherwise, you'll never discover to whole truth of what happened that week-end, at Claythorn Manor.
+        Because otherwise, you'll never discover to whole truth about what happened that week-end, at Claythorn Manor.
         """
 
         $ first_death = False
@@ -36,7 +33,7 @@ label lad_ending_day1_poisoned:
 
     call death_screen_transition
 
-    play music mysterious_01
+    # play music mysterious_01
 
     """
     You don't wake up. 
@@ -73,7 +70,7 @@ label lad_gun_downed_ending:
 
     That would make no sense.
 
-    If you want a better explanation, then you will have to get it yourself.
+    If you want a better explanation, then you will have to find it yourself.
     """
 
     jump ending_generic
@@ -82,14 +79,38 @@ label lad_ending_day3_poisoned:
 
     call death_screen_transition
 
-    #TODO factorize depending on how many death
     """
-    You don't feel too good.
+    You lay on the floor, saliva coming from you month.
 
+    Whatever poison you ate, it now runs through your veins.
 
+    Let that be a lesson to you.
 
+    Never trust anyone.
     """
 
+    $ lad_details.unlock_intuition('psychic_poisons')
 
-    # TODO make a function that reset var, and hide text
+    jump ending_generic
+
+label lad_ending_day3_fell:
+
+    call death_screen_transition
+
+    """
+    You fell.
+
+    Right on the picked fence.
+
+    An iron pole got through your belly.
+
+    You didn't stand a chance.
+
+    But you were so close to escaping though.
+
+    How frustrating it must be.
+
+    You'll have to be more careful next time.   
+    """
+
     jump ending_generic

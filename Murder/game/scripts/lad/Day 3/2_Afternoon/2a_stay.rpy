@@ -2,6 +2,8 @@ label lad_day3_stay:
 
     call change_time(13,00, "Afternoon", "Sunday")
 
+    $ change_room("tea_room")
+
     """
     I don't feel comfortable leaving Amelia Baxter alone in here.
 
@@ -112,7 +114,7 @@ label lad_day3_stay:
     if lad_details.is_intuition_unlocked('psychic_poisons'):
 
         """
-        I see her enter her room but as I was supposed to reach mine, some weird feeling overwhelms me. 
+        I see her enter her room but as I was supposed to leave for mine, some weird feeling overwhelms me. 
 
         I don't know what it is but it tells me to not go to my room.
 
@@ -124,7 +126,7 @@ label lad_day3_stay:
         $ time_left = 1
         call run_menu( TimedMenu([
             TimedMenuChoice('I am being paranoid. Besides I can\'t hold it any longer', 'lad_day3_afternoon_toilet', early_exit = True ),
-            TimedMenuChoice('Go back downstairs', 'lad_day3_afternoon_no_toilet', early_exit = True)
+            TimedMenuChoice('Go back downstairs{{intuition}}', 'lad_day3_afternoon_no_toilet', early_exit = True)
             ])
         )
     else:
@@ -137,15 +139,17 @@ label lad_day3_afternoon_toilet:
 
     """
     I see her enter her room then I head to mine.
-
-    As I am walking in the hallway, I am looking frenetically around me.
-
-    It feels like someone could jump from a corner at any moment.
-
-    I better not waste any time.
-    """   
+    """
 
     $ change_room('lad_room')
+
+    """
+    As I walked in the hallway, I was looking frenetically around me.
+
+    It felt like someone could jump from a corner at any moment.
+
+    I better not waste any time.
+    """       
 
     pause 2.0
 
@@ -161,21 +165,25 @@ label lad_day3_afternoon_toilet:
     She was even faster than I was.
 
     She must be scared too.
-    """
 
-    pause 1.0
-
-    """
     I take my place in front of her and we start eating in silence. 
     
     There is not much we want to talk about.
+    """
 
+    pause 2.0
+
+    """
     After I finished my plate, I offer to help her do the dishes.
 
     Not that it really matters now.
 
     It's just something more to do while waiting.
+    """
 
+    play music danger_01 fadein 5.0 fadeout 2.0
+
+    """
     But as soon I stand up, I realize I can't stay on my feet.
 
     My head is dizzy. 
@@ -184,11 +192,13 @@ label lad_day3_afternoon_toilet:
 
     I look to Amelia Baxter.
 
-    She observes me with a blank stare, not surprised by my reaction.
+    She looks back at me with a blank stare. 
+    
+    There is no sign of surprise in her look.
     """
 
-    lad """
-    What... did ... you do ... to my food ???
+    lad surprised """
+    What... did ... you do ... to my food ?
     """
 
     # psychic """
@@ -205,15 +215,19 @@ label lad_day3_afternoon_toilet:
 
     """
     I try to keep on talking. But no sound comes out of my mouth.
-    
-    I fall on the ground.
     """
 
     play sound body_fall
 
-    $ lad_details.unlock_intuition('psychic_poisons')
+    stop music fadeout 2.0
+
+    """
+    I fall on the ground.
+    """
 
     $ lad_day3_ending = "poisoned"
+
+    
 
     return
 
@@ -228,7 +242,9 @@ label lad_day3_afternoon_no_toilet:
     """
     Then, I try to make sense of what is happening.
 
-    I am putting my trust on a eccentric older lady because I don't think she could hurt me.
+    I am putting my trust in a eccentric older lady, why?
+    
+    Because I don't think she could hurt me?
 
     Not directly at least.
 
@@ -236,15 +252,17 @@ label lad_day3_afternoon_no_toilet:
 
     I look at our plates, they look normal to me.
 
-    And I was with her the whole time, so there is no way she could have tampered with.
+    And I was with her the whole time, so there is no way she could have tampered with them.
 
     At least I think.
 
-    Just to be sure, I could switch them.
+    I am not so sure now.
 
     It's probably for nothing, but it's better to be safe than sorry.
 
-    So I trade plates and sat down at my place, waiting for Miss Baxter to return.
+    So I switch my plate with Miss Baxter's.
+    
+    Then I sat down at my place, waiting for her to return.
     """
 
     pause 2.0
@@ -255,18 +273,206 @@ label lad_day3_afternoon_no_toilet:
     She couldn't have stayed very long in her room.
 
     But that make sense, she must be terrified.
+
+    There is indeed a worried look on her face.
+    """
+
+    psychic """
+    Mister Harring... You were fast.
+    """
+
+    lad """
+    So were you.
+    """
+
+    psychic """
+    Right.
+    """
+
+    """
+    She gave me a concerned look, then sits down at her place.
+    
+    We start eating in silence. 
+    """
+
+    pause 2.0
+
+    """
+    After we are finished, I stand up and offer to make the dishes.
+    """
+
+    psychic """
+    No don't worry, I can do it myself.
+    """
+
+    """
+    She stands up, but seems a bit disoriented.
+    """
+
+    psychic """
+    I feel woozy.
+
+    What's happening to me?
+    """
+
+    play sound body_fall
+
+    play music danger_01 fadein 5.0
+
+    """
+    Then she suddenly fells on the ground.
+
+    I rush next to her.
+    """
+
+    psychic surprised """
+    Mister Harring.
+
+    So it was you.
+    
+    But why?
+    """
+
+    lad surprised """
+    What?
+
+    No, I don't understand what's happening...
+
+    I have nothing to do with this I,...
+    """
+
+    psychic """
+    Shhh, there is no need to pretend now.
+
+    Is it because you found out the truth about me?
+    
+    That I was a fraud...
+
+    That I could never talk with the dead... 
+
+    Well it doesn't matter anymore.
+
+    I guess I was wrong to bet on you.
+
+    I ...
+    """
+
+    """
+    But she can't finish her sentence.
+    """
+
+    $ psychic_details.unlock_knowledge('lie') 
+
+    $ play_music('scary')
+
+    pause 2.0
+
+    """
+    Oh my god.
+
+    What's happening?
+
+    Who did this to her?
+    """
+
+    lad """
+    Hey!!! 
+
+    Who is here !?
+
+    Where are you !?
+
+    Show Yourself!!!
     """
 
     pause 1.0
 
     """
-    I take my place in front of her and we start eating in silence. 
-    
-    There is not much we want to talk about.
+    No answers.
+
+    I can't stay here.
+
+    I need to go out fast.
     """
 
-    
+    $ change_room("great_hall")
 
-    $ lad_day3_ending = "survived"
+    """
+    I run to the entrance hall and rush to the door.
+    """
+
+    play sound door_locked
+
+    """
+    It's locked.
+
+    What the hell.
+
+    Who did this?
+
+    I need to get out.
+
+    I think I hear footsteps in the distance.
+    """
+
+    lad surprised """
+    Who is it?
+    """
+
+    """
+    I don't know what to do.
+    
+    In a state of panic I run to my room.
+    """
+
+    $ change_room("lad_room")
+
+    """
+    I close the door right after I enter.
+    
+    Oh my god.
+    
+    How will I get out now?
+    
+    The only way out is ...
+    """
+
+    pause 1.0
+
+    """
+    I look at my window.
+
+    It is not too high.
+
+    Maybe I can safely go down there.
+
+    I open the window.
+
+    At least it is not locked.
+
+    Down there I can see a picked fence.
+    
+    But if I can control my fall, I should be able to avoid it.
+
+    All I have to do ...
+    """
+
+    play sound door_rattling
+
+    """
+    Someone is coming.
+
+    I don't have time.
+
+    I grab the window sill.
+
+    If I can fell slowly I can ...
+    """
+
+    $ lad_day3_ending = "fell"
+
+    stop sound
+
+    stop music fadeout 5.0
 
     return

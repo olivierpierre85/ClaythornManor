@@ -1,4 +1,5 @@
 label lad_day3_escape:
+    
     $ change_room('garden')
 
     call change_time(13,00, "Afternoon", "Sunday")
