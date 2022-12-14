@@ -1,6 +1,6 @@
 label lad_day3_escape:
-    
-    $ change_room('garden')
+
+    $ change_room('manor_garden')
 
     call change_time(13,00, "Afternoon", "Sunday")
 
@@ -30,36 +30,43 @@ label lad_day3_escape:
 
     scene forest_road
 
-    """
-    We leave the garden and we have walked for about a hour when Sushil stops.
-    """
+    if lad_details.is_object_unlocked('gun') :
 
-    lad """
-    Is everything fine ?
-    """
+        """
+        We have walked for about a hour when he stops.
+        """
 
-    captain """
-    I don't know, you tell me
-    """
+        lad """
+        Is something wrong?
+        """
 
-    """
-    I then get a gun from his back pocket and points it at me.
-    """
+        captain """
+        I don't know, you tell me.
+        """
 
-    # TODO play music scary
-    lad """
-    What the hell ?!
-    """
+        play music danger_01 fadein 2.0
 
-    captain """
-    Oh don't look so surprised.
+        """
+        I then get a gun from his back pocket and points it at me.
+        """
 
-    You don't really think I would have just let you get away so easily.
-    """
+        # TODO play music scary
+        lad surprised """
+        What the hell ?!
+        """
 
-    # FOLLOWS TWO a gun shots, but the captain is dead too, but the killer was behind the forest and kills the captains 
+        captain """
+        Oh don't look so surprised.
 
-    $ lad_day3_gun_downed = True
+        You don't really think I would have just let you get away so easily.
+        """
+
+        play sound gun
+
+        $ lad_day3_ending = "gun_downed"
+
+            # FOLLOWS TWO a gun shots, but the captain is dead too, but the killer was behind the forest and kills the captains 
+    
     # TODO IF you took a gun from the gun room ! The captain will see it and wrestle you for IT
     # ?TODO find a way to load it? If it is loaded?
     # ENDING DEATH
