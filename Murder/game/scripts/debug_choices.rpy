@@ -40,13 +40,14 @@ label debug_choices:
             $ doctor_details.unlock_knowledge('addict')
             jump lad_day2_evening
 
-        # "lad_day3_morning":
-        #     $ lad_day2_believe_psychic = True
-        #     jump lad_day3_morning
+        "lad_day3_morning":
+            $ lad_day2_believe_psychic = True
+            jump lad_day3_morning
         
-        # "lad_day3_afternoon":
-        #     $ lad_day2_believe_psychic = True
-        #     jump lad_day3_afternoon
+        "lad_day3_afternoon":
+            $ lad_day2_believe_psychic = True
+            $ lad_details.unlock_intuition('psychic_poisons')
+            jump lad_day3_afternoon
 
     return
 

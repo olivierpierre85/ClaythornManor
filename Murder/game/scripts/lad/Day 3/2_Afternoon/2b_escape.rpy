@@ -1,7 +1,7 @@
 label lad_day3_escape:
     $ change_room('garden')
 
-    call change_time(13,00, "Escape", "Sunday")
+    call change_time(13,00, "Afternoon", "Sunday")
 
     # TODO captain asks about the gun room. Tell him you have it or not ?
 
@@ -24,7 +24,7 @@ label lad_day3_escape:
     """
 
     """
-    And like that he started to move towards the exit gate.
+    And like that, he started to move towards the exit gate.
     """
 
     scene forest_road

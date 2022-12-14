@@ -25,7 +25,7 @@ label lad_day3_afternoon:
     """
 
     psychic """
-    But,... can't we stay here and wait for the police?
+    But,... shouldn't we wait for the police?
 
     They were supposed to come here today, they might arrive any moment.
     """
@@ -55,7 +55,7 @@ label lad_day3_afternoon:
     captain """
     That's the most logical explanation for me.
 
-    Nobody was around when phone calls were made.
+    Nobody was around when the phone calls were made.
 
     So there is no way to know if they actually happened.
     """
@@ -141,13 +141,21 @@ label lad_day3_afternoon:
     call run_menu(lad_day3_escape_menu)
 
     # TODO handle possible endings, add switch on the  more logic in ending names
-    if lad_day3_gun_downed:
+    if lad_day3_ending == "gun_downed":
 
         jump lad_gun_downed_ending
 
-    elif lad_day3_poisoned:
+    elif lad_day3_ending ==  "poisoned":
 
         jump lad_ending_day3_poisoned
+    
+    elif lad_day3_ending == "survived":
+
+        #TODO  IF ALL finished UNLOCK
+
+        jump lad_ending_day3_survived
+    
+    return
 
 label lad_day3_leave_with_car:
 

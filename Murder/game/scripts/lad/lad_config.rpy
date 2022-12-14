@@ -25,8 +25,7 @@ label init_lad:
         lad_day2_poisoned = False
 
         lad_day3_morning_captain_found = False
-        lad_day3_gun_downed = False
-        lad_day3_poisoned = False
+        lad_day3_ending = ""
         lad_day3_seen_car = False
 
         # Character Class
