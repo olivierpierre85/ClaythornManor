@@ -101,27 +101,27 @@ screen in_game_menu_btn:
         textbutton _("Menu") action ShowMenu("manor_map")
 
 # Display of storyline tree
-screen objects:
-    tag menu
+# screen objects:
+#     tag menu
 
-    ## TODO OLPI Add a image of the map
-    ## add text with explanation of previously visited rooms if needed
-    use game_menu(_("Objects"), scroll="viewport"):
+#     ## TODO OLPI Add a image of the map
+#     ## add text with explanation of previously visited rooms if needed
+#     use game_menu(_("Objects"), scroll="viewport"):
 
-        style_prefix "object"
+#         style_prefix "object"
 
-        vbox:
-            text _("TODO imagemap with all objects, explanation on hover?")
+#         vbox:
+#             text _("TODO imagemap with all objects, explanation on hover?")
 
 # Display of storyline tree
-screen storyline:
-    tag menu
+# screen storyline:
+#     tag menu
 
-    ## TODO OLPI Add a image of the map
-    ## add text with explanation of previously visited rooms if needed
-    use game_menu(_("Storyline"), scroll="viewport"):
+#     ## TODO OLPI Add a image of the map
+#     ## add text with explanation of previously visited rooms if needed
+#     use game_menu(_("Storyline"), scroll="viewport"):
 
-        style_prefix "map"
+#         style_prefix "map"
 
-        vbox:
-            text _("TODO story tree (One image map by user, possibility to change user with small button face")
+#         vbox:
+#             text _("TODO story tree (One image map by user, possibility to change user with small button face")

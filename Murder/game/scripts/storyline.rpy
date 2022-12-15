@@ -15,9 +15,9 @@ screen storyline:
     use game_menu(_("Storyline"), scroll="fixed"):
 
         hbox:
-            spacing 20
+            spacing 10
             vbox:
-                xminimum 1700
+                xminimum 1400
                 xalign 0.5
                 # Character choice
                 hbox:
@@ -130,10 +130,48 @@ screen storyline:
                     #         idle image_time
                     #         text "DEAD" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#FFFFFF"
             vbox:
-                yoffset 150
-                spacing 30
-                for char in char_list_flat[:4]:
-                    imagebutton:
-                        idle "images/characters/" + char.text_id +".png" at character_storyline
-                        action SetVariable("current_storyline", char.text_id) 
+                spacing 10
+                xminimum 400
+                yalign 0.0
+                vbox:
+                    yalign 0.0
+                    yminimum 300
+                    text "Observations":
+                        font gui.name_text_font
+                        color gui.accent_color
+                    
+                    text "There was a green liquid next to Thomas Moody death bed.":
+                        size 24
+                    text "There is an old car in the garage, but with no gas in it.":
+                        size 24
+                    text "There is an old car in the garage, but with no gas in its.":
+                        size 24
+
+                vbox:
+                    yalign 0.0
+                    yminimum 200
+                    text "Intuitions":
+                        yalign 0.0
+                        font gui.name_text_font
+                        color gui.accent_color
+                    text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in its.":
+                        size 24
+                        yalign 0.0
+                vbox:
+                    spacing 20
+                    text "Objects":
+                        font gui.name_text_font
+                        color gui.accent_color
+                    hbox:
+                        spacing 25
+                        add "images/objects/gun.png"
+                        add "images/objects/gun.png"
+                        add "images/objects/gun.png"
+                        add "images/objects/gun.png"
+                # yoffset 50
+                # spacing 30
+                # for char in char_list_flat[:4]:
+                #     imagebutton:
+                #         idle "images/characters/" + char.text_id +".png" at character_storyline
+                #         action SetVariable("current_storyline", char.text_id) 
             
