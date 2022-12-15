@@ -57,7 +57,15 @@ label death_screen_transition:
     show screen centered_text("You are Dead")
     play sound gong
     pause 5.0
-    # 
+    
+    return
+
+label survive_screen_transition:
+    scene black_background with wipeup
+    show screen centered_text("You Survived")
+    play sound gong
+    pause 5.0
+
     return
 
 screen centered_text(display_text, display_text_2 = None):

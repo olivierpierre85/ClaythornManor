@@ -333,7 +333,7 @@ init -100 python:
         
         def is_intuition_unlocked(self, text_id):
             for info in self.get_intuitions():
-                if text_id == info.text_id:
+                if text_id == info.text_id:                    
                     return not info.locked
             return False
 
@@ -359,6 +359,7 @@ init -100 python:
             for info in self.get_objects():
                 if text_id == info.text_id:
                     return not info.locked
+            return False
 
     class CharacterInformation:
         def __init__(

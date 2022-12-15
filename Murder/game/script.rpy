@@ -63,6 +63,7 @@ label init_technical_variables:
         current_music = 'upbeat'
 
         first_death = True
+        first_survive = True
 
     return
 

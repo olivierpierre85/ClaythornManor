@@ -2,6 +2,8 @@
 
 label ending_generic:
 
+    stop music fadeout 2.0
+
     if first_death:
 
         """
@@ -23,6 +25,33 @@ label ending_generic:
         """
 
         $ first_death = False
+
+    hide screen centered_text
+    jump character_selection
+
+    return
+
+label survived_generic:
+
+    stop music fadeout 2.0
+
+    if first_survive:
+
+        """
+        You made it out alive.
+
+        But it's not the ideal ending either.
+
+        Don't get me wrong, that's still impressive.
+
+        But surviving Claythorn Manor is nothing but the first step.
+
+        You're goal is to save everyone.
+
+        And that would require to start the story again.
+        """
+
+        $ first_survive = False
 
     hide screen centered_text
     jump character_selection
@@ -114,3 +143,55 @@ label lad_ending_day3_fell:
     """
 
     jump ending_generic
+
+
+label lad_ending_day3_escape:
+
+    scene police_station
+
+    """
+    After what seemed like an eternity, I finally reached town.
+
+    I rushed into the police station and told them everything.
+
+    I was exhausted panicked, and I probably looked like a maniac.
+
+    But they agreed to go and check anyway.
+    """
+
+
+    """
+    I was too tired and too scared to follow them, but they told me everything when they came back.
+    """
+
+    pause 1
+
+    """
+    They found the body of Sushil Sinha on the road, probably where I last saw him.
+
+    He was shot in the head.
+    
+    At that point, the two police officers took the matter seriously.
+
+    They rushed to Claythorn Manor.
+
+    There, they found that all of the guests were dead.
+
+    Samuel Manning, Thomas Moody and Daniel Baldwin where still in their bed.
+
+    They had to force open the door of Rosalind Marsh. 
+    
+    She was lying lifeless in her bed, just like the others.
+
+    And poor Miss Baxter, she was lying dead in the hallway. 
+    
+    She was stabbed in the back.
+
+    She didn't even had time to reach her room.
+
+    We still have no idea where Lady Claythorn and her staff is.
+    """
+
+    call survive_screen_transition
+
+    jump survived_generic

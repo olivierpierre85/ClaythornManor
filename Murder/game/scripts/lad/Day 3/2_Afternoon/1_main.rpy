@@ -109,9 +109,9 @@ label lad_day3_afternoon:
     """
 
     captain """
-    We could lock you in a room and gave you a gun for your defense.
+    We could lock you in a room.
 
-    That's not ideal of course.
+    But that's not ideal of course.
 
     It might be best that one of us stays with you here.
     """
@@ -153,6 +153,10 @@ label lad_day3_afternoon:
 
         jump lad_ending_day3_fell
 
+    elif lad_day3_ending == "escape":
+        #TODO  IF ALL finished UNLOCK NOT AN ENDING BUT LAST PART     
+        jump lad_ending_day3_escape   
+    
     elif lad_day3_ending == "survived":
         #TODO  IF ALL finished UNLOCK NOT AN ENDING BUT LAST PART     
         jump lad_ending_day3_survived    
@@ -166,7 +170,7 @@ label lad_day3_leave_with_car:
 
     We went there earlier and saw an old car.
 
-    Maybe it's still working well.
+    Maybe it's still working.
 
     We don't know how to drive it, but maybe you do?
     """
