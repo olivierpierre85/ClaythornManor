@@ -1,6 +1,7 @@
 # --------------------------------------------
 #               Ted Harring
 #           Friday 21:00 Evening
+#   Playtime : about 10 min from start
 #
 #   Alive: Everyone
 label lad_day1_evening:

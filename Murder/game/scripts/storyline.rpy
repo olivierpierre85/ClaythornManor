@@ -52,7 +52,6 @@ screen storyline:
 
                     hbox:
                         yfill True
-
                         
                         $ image_time = "images/ui/rectangle_06.png"
                         $ image_arrow = "images/ui/arrow_straight_03.png"
@@ -95,83 +94,66 @@ screen storyline:
                             add image_arrow
                             add image_arrow
                             add image_arrow
-                            # add image_arrow
-                            # imagemap: 
-                            #     idle image_time
-                            #     text "Evening" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                            # add image_arrow
-                            # imagemap: 
-                            #     idle image_time
-                            #     text "Day 2 breakfast" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                            # add image_arrow
-                            # imagemap: 
-                            #     idle image_time
-                            #     text "THe hunt" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                            # add image_arrow
-                            # imagemap: 
-                            #     idle image_time
-                            #     text "DEAD" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                            # add image_arrow
-                            # imagemap: 
-                            #     idle image_time
-                            #     text "DEAD" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                            # add image_arrow
-                            # imagemap: 
-                            #     idle image_time
-                            #     text "DEAD" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                    # hbox:
-                    #     add "images/ui/rectangle_empty.png"
-                    #     add "images/ui/arrow_empty.png"
-                    #     add "images/ui/rectangle_empty.png"
-                    #     add "images/ui/arrow_empty.png"
-                    #     add "images/ui/rectangle_empty.png"
-                    #     add "images/ui/arrow_fork.png"
-                    #     imagemap: 
-                    #         idle image_time
-                    #         text "DEAD" offset (20,20) font "gui/font/BurtonScratch-Regular.ttf" color "#FFFFFF"
             vbox:
+                xminimum 420
                 spacing 10
-                xminimum 400
-                yalign 0.0
-                vbox:
-                    yalign 0.0
-                    yminimum 300
-                    text "Observations":
-                        font gui.name_text_font
-                        color gui.accent_color
-                    
-                    text "There was a green liquid next to Thomas Moody death bed.":
-                        size 24
-                    text "There is an old car in the garage, but with no gas in it.":
-                        size 24
-                    text "There is an old car in the garage, but with no gas in its.":
-                        size 24
+                #vbox:
+                text "Information":
+                    font gui.name_text_font
+                    color gui.accent_color
+                # vbox:
+                #     yoffset 10                        
+                #     spacing 5
+                #     yalign 0.0
+                #     text "A green liquid next to Thomas Moody bed":
+                #         yalign 0.0
+                #         size 24
+                #     text "An old car without gas in the garage":
+                #         yalign 0.0
+                #         size 24
+                hbox:
+                    spacing 25
+                    add "images/objects/gun.png"
+                    add "images/objects/gun.png"
+                    add "images/objects/gun.png"
+                    add "images/objects/gun.png"
 
-                vbox:
-                    yalign 0.0
-                    yminimum 200
-                    text "Intuitions":
-                        yalign 0.0
-                        font gui.name_text_font
-                        color gui.accent_color
-                    text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in its.":
-                        size 24
-                        yalign 0.0
-                vbox:
-                    spacing 20
-                    text "Objects":
-                        font gui.name_text_font
-                        color gui.accent_color
-                    hbox:
-                        spacing 25
-                        add "images/objects/gun.png"
-                        add "images/objects/gun.png"
-                        add "images/objects/gun.png"
-                        add "images/objects/gun.png"
+            #vbox:
+                #ypos 300
+                text "Intuitions":
+                    font gui.name_text_font
+                    color gui.accent_color
+                # vbox:
+                #     yoffset 10
+                #     text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in it":
+                #         size 24
+                #         yalign 0.0
+                hbox:
+                    spacing 25
+                    add "images/objects/gun.png"
+                    add "images/objects/gun.png"
+                    add "images/objects/gun.png"
+            #vbox:
+                # ypos 550
+                text "Objects":
+                    font gui.name_text_font
+                    color gui.accent_color
+                hbox:
+                    spacing 25
+                    add "images/objects/gun.png"
+                    add "images/objects/gun.png"
+                    add "images/objects/gun.png"
+                    add "images/objects/gun.png"
                 # yoffset 50
                 # spacing 30
                 # for char in char_list_flat[:4]:
                 #     imagebutton:
                 #         idle "images/characters/" + char.text_id +".png" at character_storyline
                 #         action SetVariable("current_storyline", char.text_id) 
+
+                text "Detail":
+                    font gui.name_text_font
+                    color gui.accent_color
+
+                text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in it"
             

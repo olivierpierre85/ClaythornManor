@@ -272,7 +272,7 @@ label psychic_generic_manor:
 
     That's not a lot when you entertain guests.
 
-    And I don't think the money is a problem.
+    And I don't think money is a problem.
 
     Lady Claythorn couldn't possibly give away so much money if she had enough resources.
 
@@ -284,7 +284,7 @@ label psychic_generic_manor:
 
     In any case, she should have a made more of an effort for this weekend.
 
-    I hope we won't suffer inconvenience because of this.
+    I hope we won't suffer any inconvenience because of this.
 
     """
 

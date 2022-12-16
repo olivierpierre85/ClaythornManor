@@ -10,6 +10,7 @@
     "Claythorn",
     "elif",
     "Harring",
+    "hbox",
     "imagebutton",
     "keymap",
     "Marsh",
@@ -19,9 +20,11 @@
     "textbutton",
     "truecenter",
     "xalign",
+    "xminimum",
     "xoffset",
     "yalign",
     "yoffset",
+    "ypos",
     "zorder"
   ]
 }
