@@ -40,7 +40,10 @@ screen storyline:
                 #     idle "images/ui/storyline_background.jpg"
                 viewport:
                     yinitial 0.0
-                    scrollbars "horizontal"
+                    scrollbars "vertical"
+
+                    $ image_time = "images/ui/rectangle_08.png"
+                    $ image_arrow = "images/ui/arrow_straight_03.png"
                     
                     mousewheel True
                     draggable True
@@ -48,112 +51,141 @@ screen storyline:
                     xsize 1700
                     
                     yoffset 20
-                    ysize 500
+                    ysize 400
+                    vbox:
+                        # grid 2 1:
+                        #     xsize 200
 
-                    hbox:
-                        yfill True
-                        
-                        $ image_time = "images/ui/rectangle_06.png"
-                        $ image_arrow = "images/ui/arrow_straight_03.png"
-                        vbox:
-                            yalign 0.5
-                            # text "Friday":
-                            #     font gui.name_text_font
-                            #     color "#FFFFFF"
+
+                        #     text "Friday":
+                        #         xsize 200
+                        #         font gui.name_text_font
+                        #         color "#FFFFFF"
+
+                        #     text "Friday":
+                        #         xsize 200
+                        #         font gui.name_text_font
+                        #         color "#FFFFFF"
+                        grid 8 6:
+                            # spacing 70
+                            xfill True
+                            vbox:
+                                text "Friday" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Start" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+
+                            vbox:
+                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+
+                            vbox:
+                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+
+                            vbox:
+                                text "Saturday" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Morning" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+
+                            vbox:
+                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+
+                            vbox:
+                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+
+                            vbox:
+                                text "Sunday" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Morning" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+
+                            vbox:
+                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+
+                            for j in range(4):
+                                for i in range(8):
+                                    imagemap: 
+                                        idle image_time
+                                        text "-" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+
+                            for i in range(4):
+                                imagemap: 
+                                    idle image_time
+                                    text "12/10 - 18:00" xalign 0.5 yalign 0.5 size 16 font gui.name_text_font color "#FFFFFF"
                             imagemap: 
                                 idle image_time
-                                text "Drinks{image=images/ui/intuition_icon.png}" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                        vbox:
-                            yalign 0.5
-                            add image_arrow
-                        vbox:
-                            yalign 0.5
-                            imagemap: 
-                                idle image_time
-                                text "Dinner" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                            imagemap: 
-                                idle image_time
-                                text "DEATH" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                        vbox:
-                            yalign 0.5
-                            add image_arrow
-                            add image_arrow
-                        vbox:
-                            yalign 0.5
-                            imagemap: 
-                                idle image_time
-                                text "Evening" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                            imagemap: 
-                                idle image_time
-                                text "Other D" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                            imagemap: 
-                                idle image_time
-                                text "X" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-                        vbox:
-                            yalign 0.5
-                            add image_arrow
-                            add image_arrow
-                            add image_arrow
-            vbox:
-                xminimum 420
-                spacing 10
-                #vbox:
-                text "Information":
-                    font gui.name_text_font
-                    color gui.accent_color
-                # vbox:
-                #     yoffset 10                        
-                #     spacing 5
-                #     yalign 0.0
-                #     text "A green liquid next to Thomas Moody bed":
-                #         yalign 0.0
-                #         size 24
-                #     text "An old car without gas in the garage":
-                #         yalign 0.0
-                #         size 24
+                                text "Dead" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+
+                            text ""
+                            text ""
+                            text ""
+
                 hbox:
+                    yoffset 50
                     spacing 25
                     add "images/objects/gun.png"
                     add "images/objects/gun.png"
                     add "images/objects/gun.png"
                     add "images/objects/gun.png"
+            # vbox:
+            #     xminimum 420
+            #     spacing 10
+            #     #vbox:
+            #     text "Information":
+            #         font gui.name_text_font
+            #         color gui.accent_color
+            #     # vbox:
+            #     #     yoffset 10                        
+            #     #     spacing 5
+            #     #     yalign 0.0
+            #     #     text "A green liquid next to Thomas Moody bed":
+            #     #         yalign 0.0
+            #     #         size 24
+            #     #     text "An old car without gas in the garage":
+            #     #         yalign 0.0
+            #     #         size 24
+            #     hbox:
+            #         spacing 25
+            #         add "images/objects/gun.png"
+            #         add "images/objects/gun.png"
+            #         add "images/objects/gun.png"
+            #         add "images/objects/gun.png"
 
-            #vbox:
-                #ypos 300
-                text "Intuitions":
-                    font gui.name_text_font
-                    color gui.accent_color
-                # vbox:
-                #     yoffset 10
-                #     text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in it":
-                #         size 24
-                #         yalign 0.0
-                hbox:
-                    spacing 25
-                    add "images/objects/gun.png"
-                    add "images/objects/gun.png"
-                    add "images/objects/gun.png"
-            #vbox:
-                # ypos 550
-                text "Objects":
-                    font gui.name_text_font
-                    color gui.accent_color
-                hbox:
-                    spacing 25
-                    add "images/objects/gun.png"
-                    add "images/objects/gun.png"
-                    add "images/objects/gun.png"
-                    add "images/objects/gun.png"
-                # yoffset 50
-                # spacing 30
-                # for char in char_list_flat[:4]:
-                #     imagebutton:
-                #         idle "images/characters/" + char.text_id +".png" at character_storyline
-                #         action SetVariable("current_storyline", char.text_id) 
+            # vbox:
+            #     ypos 300
+            #     text "Intuitions":
+            #         font gui.name_text_font
+            #         color gui.accent_color
+            #     # vbox:
+            #     #     yoffset 10
+            #     #     text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in it":
+            #     #         size 24
+            #     #         yalign 0.0
+            #     hbox:
+            #         spacing 25
+            #         add "images/objects/gun.png"
+            #         add "images/objects/gun.png"
+            #         add "images/objects/gun.png"
+            # #vbox:
+            #     # ypos 550
+            #     text "Objects":
+            #         font gui.name_text_font
+            #         color gui.accent_color
+            #     hbox:
+            #         spacing 25
+            #         add "images/objects/gun.png"
+            #         add "images/objects/gun.png"
+            #         add "images/objects/gun.png"
+            #         add "images/objects/gun.png"
+            #     # yoffset 50
+            #     # spacing 30
+            #     # for char in char_list_flat[:4]:
+            #     #     imagebutton:
+            #     #         idle "images/characters/" + char.text_id +".png" at character_storyline
+            #     #         action SetVariable("current_storyline", char.text_id) 
 
-                text "Detail":
-                    font gui.name_text_font
-                    color gui.accent_color
+            #     text "Detail":
+            #         font gui.name_text_font
+            #         color gui.accent_color
 
-                text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in it"
+            #     text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in it"
             
