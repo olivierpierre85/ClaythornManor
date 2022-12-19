@@ -65,7 +65,7 @@ label init_technical_variables:
         first_death = True
         first_survive = True
 
-        info_screen_toggle = False
+        action_needed_fix = False # Use to have a valid action that does nothing
 
     return
 

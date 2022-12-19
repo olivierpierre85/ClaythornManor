@@ -113,35 +113,37 @@ screen storyline:
                     color gui.accent_color
                 hbox:
                     spacing 25
-                    for item in lad_details.get_objects():
-                        imagebutton:
-                            action SetVariable("info_screen_toggle", True) #NOT used but needed for tooltip
-                            idle item.image_file                            
-                            tooltip "{image=images/ui/objects_icon.png} " + item.content
+                    for test in range(3):
+                        for item in lad_details.get_objects():
+                            imagebutton:
+                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+                                idle item.image_file                            
+                                tooltip "{image=images/ui/objects_icon.png} " + item.content
+                        
                 hbox:
                     spacing 25
                     for item in lad_details.get_observations():
                         imagebutton:
-                            action SetVariable("info_screen_toggle", True) #NOT used but needed for tooltip
+                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
                             idle item.image_file                            
                             tooltip "{image=images/ui/observation_icon.png} " + item.content
                 hbox:
                     spacing 25
                     for item in lad_details.get_intuitions():
                         imagebutton:
-                            action SetVariable("info_screen_toggle", True) #NOT used but needed for tooltip
+                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
                             idle item.image_file                            
                             tooltip "{image=images/ui/intuition_icon.png} " + item.content
 
                 text "Endings":
                     font gui.name_text_font
                     color gui.accent_color
-                    
+
                 hbox:
                     spacing 25
                     for item in lad_details.get_endings():
                         imagebutton:
-                            action SetVariable("info_screen_toggle", True) #NOT used but needed for tooltip
+                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
                             idle item.image_file                            
                             tooltip str(item.content)
 
@@ -159,4 +161,4 @@ screen storyline:
                 xalign 0.5
                 yalign 0.5
                 text tooltip
-                # textbutton "Cancel" action SetVariable("info_screen_toggle", False )
+                # textbutton "Cancel" action SetVariable("action_needed_fix", False )
