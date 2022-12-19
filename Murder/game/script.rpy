@@ -65,6 +65,8 @@ label init_technical_variables:
         first_death = True
         first_survive = True
 
+        info_screen_toggle = False
+
     return
 
 label init_story_variables:

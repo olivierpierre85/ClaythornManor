@@ -51,54 +51,41 @@ screen storyline:
                     xsize 1700
                     
                     yoffset 20
-                    ysize 400
+                    ysize 550
                     vbox:
-                        # grid 2 1:
-                        #     xsize 200
-
-
-                        #     text "Friday":
-                        #         xsize 200
-                        #         font gui.name_text_font
-                        #         color "#FFFFFF"
-
-                        #     text "Friday":
-                        #         xsize 200
-                        #         font gui.name_text_font
-                        #         color "#FFFFFF"
                         grid 8 6:
                             # spacing 70
                             xfill True
                             vbox:
-                                text "Friday" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Friday" xalign 0 yalign 0.5 font gui.name_text_font color gui.accent_color
                                 text "Start" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text ""
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "" 
                                 text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "Saturday" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Saturday" xalign 0 yalign 0.5 font gui.name_text_font color gui.accent_color
                                 text "Morning" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "" 
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "" 
                                 text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "Sunday" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Sunday" xalign 0 yalign 0.5 font gui.name_text_font color gui.accent_color
                                 text "Morning" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text ""
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             for j in range(4):
@@ -118,74 +105,58 @@ screen storyline:
                             text ""
                             text ""
                             text ""
-
+            vbox:
+                xminimum 420
+                spacing 10
+                text "Unlocked":
+                    font gui.name_text_font
+                    color gui.accent_color
                 hbox:
-                    yoffset 50
                     spacing 25
-                    add "images/objects/gun.png"
-                    add "images/objects/gun.png"
-                    add "images/objects/gun.png"
-                    add "images/objects/gun.png"
-            # vbox:
-            #     xminimum 420
-            #     spacing 10
-            #     #vbox:
-            #     text "Information":
-            #         font gui.name_text_font
-            #         color gui.accent_color
-            #     # vbox:
-            #     #     yoffset 10                        
-            #     #     spacing 5
-            #     #     yalign 0.0
-            #     #     text "A green liquid next to Thomas Moody bed":
-            #     #         yalign 0.0
-            #     #         size 24
-            #     #     text "An old car without gas in the garage":
-            #     #         yalign 0.0
-            #     #         size 24
-            #     hbox:
-            #         spacing 25
-            #         add "images/objects/gun.png"
-            #         add "images/objects/gun.png"
-            #         add "images/objects/gun.png"
-            #         add "images/objects/gun.png"
+                    for item in lad_details.get_objects():
+                        imagebutton:
+                            action SetVariable("info_screen_toggle", True) #NOT used but needed for tooltip
+                            idle item.image_file                            
+                            tooltip "{image=images/ui/objects_icon.png} " + item.content
+                hbox:
+                    spacing 25
+                    for item in lad_details.get_observations():
+                        imagebutton:
+                            action SetVariable("info_screen_toggle", True) #NOT used but needed for tooltip
+                            idle item.image_file                            
+                            tooltip "{image=images/ui/observation_icon.png} " + item.content
+                hbox:
+                    spacing 25
+                    for item in lad_details.get_intuitions():
+                        imagebutton:
+                            action SetVariable("info_screen_toggle", True) #NOT used but needed for tooltip
+                            idle item.image_file                            
+                            tooltip "{image=images/ui/intuition_icon.png} " + item.content
 
-            # vbox:
-            #     ypos 300
-            #     text "Intuitions":
-            #         font gui.name_text_font
-            #         color gui.accent_color
-            #     # vbox:
-            #     #     yoffset 10
-            #     #     text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in it":
-            #     #         size 24
-            #     #         yalign 0.0
-            #     hbox:
-            #         spacing 25
-            #         add "images/objects/gun.png"
-            #         add "images/objects/gun.png"
-            #         add "images/objects/gun.png"
-            # #vbox:
-            #     # ypos 550
-            #     text "Objects":
-            #         font gui.name_text_font
-            #         color gui.accent_color
-            #     hbox:
-            #         spacing 25
-            #         add "images/objects/gun.png"
-            #         add "images/objects/gun.png"
-            #         add "images/objects/gun.png"
-            #         add "images/objects/gun.png"
-            #     # yoffset 50
-            #     # spacing 30
-            #     # for char in char_list_flat[:4]:
-            #     #     imagebutton:
-            #     #         idle "images/characters/" + char.text_id +".png" at character_storyline
-            #     #         action SetVariable("current_storyline", char.text_id) 
+                text "Endings":
+                    font gui.name_text_font
+                    color gui.accent_color
+                    
+                hbox:
+                    spacing 25
+                    for item in lad_details.get_endings():
+                        imagebutton:
+                            action SetVariable("info_screen_toggle", True) #NOT used but needed for tooltip
+                            idle item.image_file                            
+                            tooltip str(item.content)
 
-            #     text "Detail":
-            #         font gui.name_text_font
-            #         color gui.accent_color
+    $ tooltip = GetTooltip()
 
-            #     text "{image=images/ui/intuition_icon.png}  There is an old car in the garage, but with no gas in it"
-            
+    if tooltip:
+
+        nearrect:
+            focus "tooltip"
+            prefer_top True
+
+            frame:
+                style_prefix "confirm"
+                padding (50,50,50,50)
+                xalign 0.5
+                yalign 0.5
+                text tooltip
+                # textbutton "Cancel" action SetVariable("info_screen_toggle", False )

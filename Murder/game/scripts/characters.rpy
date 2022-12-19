@@ -360,6 +360,28 @@ init -100 python:
                 if text_id == info.text_id:
                     return not info.locked
             return False
+            
+        # ---------------
+        # ending
+        # ---------------
+        def get_endings(self):
+            ending_list = []
+            for info in self.information_list:
+                if info.type == 'ending':
+                    ending_list.append(info)
+            return ending_list
+
+        def unlock_ending(self, text_id):
+            for info in self.get_endings():
+                if text_id == info.text_id and info.locked:
+                    # Unlock the info
+                    info.locked = False
+        
+        def is_ending_unlocked(self, text_id):
+            for info in self.get_endings():
+                if text_id == info.text_id:
+                    return not info.locked
+            return False
 
     class CharacterInformation:
         def __init__(
@@ -369,7 +391,8 @@ init -100 python:
             content, 
             locked = True,
             is_important = False,
-            type = 'knowledge'
+            type = 'knowledge',
+            image_file = None
         ):
             self.order = order
             self.text_id = text_id
@@ -377,6 +400,7 @@ init -100 python:
             self.locked = locked
             self.is_important = is_important
             self.type = type
+            self.image_file = image_file
 
 # LABELS
 label character_selection:
