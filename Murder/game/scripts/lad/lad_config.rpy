@@ -46,6 +46,7 @@ label init_lad:
             # Endings
             CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="images/info_cards/gun.png"), 
         ]
+
         lad_details  = CharacterDetails(
             text_id = "lad", 
             locked = False,
@@ -55,7 +56,7 @@ label init_lad:
             description_short = "Young man",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
-            )
+        )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 
         # Map choices

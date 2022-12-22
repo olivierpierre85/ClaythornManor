@@ -209,6 +209,7 @@ init -100 python:
             description_short = "",
             description_long = "",
             information_list = [],
+            checkpoints = [],
         ):
             self.text_id = text_id
             self.locked = locked
@@ -218,6 +219,7 @@ init -100 python:
             self.description_short = description_short
             self.description_long = description_long
             self.information_list = information_list
+            self.checkpoints = checkpoints
 
         def get_name(self):
             # if self.know_real_name:
@@ -360,6 +362,14 @@ init -100 python:
                 if text_id == info.text_id:
                     return not info.locked
             return False
+
+        def get_all_objects_unlocked(self):
+            objects_unlocked = []
+            for info in self.get_objects():
+                if info.locked:
+                    objects_unlocked.append(info.text_id)
+            print(objects_unlocked)
+            return objects_unlocked
             
         # ---------------
         # ending
@@ -382,6 +392,43 @@ init -100 python:
                 if text_id == info.text_id:
                     return not info.locked
             return False
+
+        # ---------------
+        # Checkpoints
+        # ---------------
+        def add_checkpoint(self):
+            new_checkpoint = Checkpoint(
+                run = 1,
+                position = 5,
+                objects = self.get_all_objects_unlocked(),
+                observations = [],
+            )
+            self.checkpoints.append(new_checkpoint)
+
+        # DEBUG FUNCTION
+        def print_checkpoints(self):
+            for checkpoint in self.checkpoints:
+                print(checkpoint)
+
+
+
+    class Checkpoint():
+        def __init__(
+            self, 
+            run,
+            position,
+            objects = [],
+            observations = [],
+            
+        ):
+            
+            self.run = run,
+            self.position = position,
+            self.objects = objects,
+            self.observations = observations,
+        
+        def __str__(self):
+            return 'Run:' + str(self.run) + '; position:' + str(self.position) + '; objects:' + str(self.objects)
 
     class CharacterInformation:
         def __init__(
