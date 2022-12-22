@@ -46,6 +46,10 @@ label start():
     return
 
 label init_technical_variables:
+    
+    define config.mouse = { }
+    define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
+    define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]
     python:
         # Technical Variables
         test_mode = False

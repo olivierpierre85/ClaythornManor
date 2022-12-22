@@ -57,35 +57,35 @@ screen storyline:
                             # spacing 70
                             xfill True
                             vbox:
-                                text "Friday" xalign 0 yalign 0.5 font gui.name_text_font color gui.accent_color
-                                text "Start" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Friday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
+                                text "Start" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text ""
+                                text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "" 
+                                text "" font gui.name_text_font
                                 text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "Saturday" xalign 0 yalign 0.5 font gui.name_text_font color gui.accent_color
-                                text "Morning" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Saturday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
+                                text "Morning" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "" 
+                                text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "" 
+                                text "" font gui.name_text_font
                                 text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text "Sunday" xalign 0 yalign 0.5 font gui.name_text_font color gui.accent_color
-                                text "Morning" xalign 0 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                text "Sunday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
+                                text "Morning" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
-                                text ""
+                                text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             for j in range(4):
@@ -116,6 +116,7 @@ screen storyline:
                     for test in range(3):
                         for item in lad_details.get_objects():
                             imagebutton:
+                                mouse "hover"
                                 action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
                                 idle item.image_file                            
                                 tooltip "{image=images/ui/objects_icon.png} " + item.content
