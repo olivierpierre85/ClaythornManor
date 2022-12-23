@@ -438,6 +438,20 @@ init -100 python:
                 observations = []
             )
             self.checkpoints.append(new_checkpoint)
+            new_checkpoint = Checkpoint(
+                run = 3,
+                position = 2,
+                objects = self.get_all_objects_unlocked(),
+                observations = []
+            )
+            self.checkpoints.append(new_checkpoint)
+            new_checkpoint = Checkpoint(
+                run = 3,
+                position = 3,
+                objects = self.get_all_objects_unlocked(),
+                observations = []
+            )
+            self.checkpoints.append(new_checkpoint)
 
         # DEBUG FUNCTION
         def print_checkpoints(self):
@@ -449,8 +463,13 @@ init -100 python:
                 if checkpoint.run == run and checkpoint.position == position:
                     return True
             return False
-            
 
+        def get_checkpoint(self, run, position):
+            for checkpoint in self.checkpoints:
+                if checkpoint.run == run and checkpoint.position == position:
+                    return checkpoint
+            return None
+            
         def get_max_run(self):
             if self.checkpoints:
                 return self.checkpoints[-1].run
@@ -465,16 +484,19 @@ init -100 python:
             self, 
             run,
             position,
-            objects = [],
-            observations = [],
-            
+            objects,
+            observations,
         ):
             
             self.run = run
             self.position = position
-            self.objects = objects
-            self.observations = observations
-        
+            self.objects = objects or []
+            self.observations = observations or []
+            self.created = datetime.now()
+
+        def get_format_created(self):
+            return self.created.strftime("%a %b, %H:%M")
+
         def __str__(self):
             return 'Run:' + str(self.run) + '; position:' + str(self.position) + '; objects:' + str(self.objects)
 

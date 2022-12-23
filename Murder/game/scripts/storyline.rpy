@@ -25,9 +25,10 @@ screen storyline:
                     spacing 20
                     for char in char_list_flat:
                         imagebutton:
+                            mouse "hover" 
                             if char.text_id == current_storyline.text_id:
                                 idle "images/characters/side/side " + char.text_id +".png" at character_storyline
-                            else:
+                            else:                                
                                 idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_storyline
                                 hover "images/characters/side/side " + char.text_id + ".png"
                             
@@ -45,8 +46,8 @@ screen storyline:
                     $ image_time = "images/ui/rectangle_09.png"
                     $ image_time_right = "images/ui/rectangle_09_right.png"
                     $ image_time_new = "images/ui/rectangle_09_new.png"
+                    $ image_time_new_2 = "images/ui/rectangle_09_new_2.png"
                     $ image_arrow = "images/ui/arrow_straight_03.png"
-                    
                     
                     mousewheel True
                     draggable True
@@ -97,15 +98,27 @@ screen storyline:
                                 for i in range(8):
                                     if current_storyline.has_checkpoint(j+1, i+1):
                                         imagemap: 
+                                            
                                             if current_storyline.has_checkpoint(j+1, i+2):
                                                 idle image_time_right
                                             else:
                                                 idle image_time
-                                            text str(current_storyline.get_max_run()) xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                            textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()):
+                                                mouse "hover" 
+                                                action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1)) #NOT used but needed for tooltip
+                                                # xoffset 22 
+                                                yalign 0.5                
+                                                text_font gui.name_text_font 
+                                                text_color "#FFFFFF"
+                                                text_size 18
+                                                padding (25,25,25,25)
+                                                
                                     else:
                                         if current_storyline.has_checkpoint(j+1, i+2):
-                                            imagemap: 
-                                                idle image_time_new
+                                            if current_storyline.has_checkpoint(j+2, i+2):
+                                                image image_time_new_2
+                                            else:
+                                                image image_time_new
                                         else:
                                             text ""
 
@@ -123,6 +136,8 @@ screen storyline:
             vbox:
                 xminimum 420
                 spacing 10
+                if current_checkpoint:
+                    text current_checkpoint.get_format_created() + str(current_checkpoint.position)
                 text "Unlocked":
                     font gui.name_text_font
                     color gui.accent_color

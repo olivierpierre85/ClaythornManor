@@ -69,6 +69,8 @@ label init_technical_variables:
         first_death = True
         first_survive = True
 
+        current_checkpoint = None
+
         action_needed_fix = False # Use to have a valid action that does nothing
 
     return
