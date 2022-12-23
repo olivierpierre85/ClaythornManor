@@ -42,8 +42,11 @@ screen storyline:
                     yinitial 0.0
                     scrollbars "vertical"
 
-                    $ image_time = "images/ui/rectangle_08.png"
+                    $ image_time = "images/ui/rectangle_09.png"
+                    $ image_time_right = "images/ui/rectangle_09_right.png"
+                    $ image_time_new = "images/ui/rectangle_09_new.png"
                     $ image_arrow = "images/ui/arrow_straight_03.png"
+                    
                     
                     mousewheel True
                     draggable True
@@ -92,16 +95,19 @@ screen storyline:
                             # Checkpoints CONTENT
                             for j in range(current_storyline.get_max_run()):
                                 for i in range(8):
-                                    $ print(current_storyline)
-                                    # $ print(current_storyline.print_checkpoints())
                                     if current_storyline.has_checkpoint(j+1, i+1):
                                         imagemap: 
-                                            idle image_time
-                                            text current_storyline.get_name() + str(current_storyline.get_max_run()) xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                            if current_storyline.has_checkpoint(j+1, i+2):
+                                                idle image_time_right
+                                            else:
+                                                idle image_time
+                                            text str(current_storyline.get_max_run()) xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
                                     else:
-                                        imagemap: 
-                                            idle image_time
-                                            text "Empty" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                        if current_storyline.has_checkpoint(j+1, i+2):
+                                            imagemap: 
+                                                idle image_time_new
+                                        else:
+                                            text ""
 
                             # for i in range(4):
                             #     imagemap: 

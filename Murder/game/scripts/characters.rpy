@@ -433,7 +433,7 @@ init -100 python:
             self.checkpoints.append(new_checkpoint)
             new_checkpoint = Checkpoint(
                 run = 2,
-                position = 1,
+                position = 2,
                 objects = self.get_all_objects_unlocked(),
                 observations = []
             )
