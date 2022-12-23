@@ -1,5 +1,5 @@
 label init_storylines:
-    $ current_storyline = "lad"
+    $ current_storyline = lad_details
     return
 
 transform character_storyline:
@@ -9,9 +9,9 @@ transform character_storyline:
 screen storyline:
     tag menu
 
-    
+    $ 
     ## TODO OLPI Add a image of the map
-    ## add text with explanation of previously visited rooms if needed
+    ## add text with explanation of previously visited rooms if needed (You visited this place already, no action?)
     use game_menu(_("Storyline"), scroll="fixed"):
 
         hbox:
@@ -25,13 +25,13 @@ screen storyline:
                     spacing 20
                     for char in char_list_flat:
                         imagebutton:
-                            if char.text_id == current_storyline:
+                            if char.text_id == current_storyline.text_id:
                                 idle "images/characters/side/side " + char.text_id +".png" at character_storyline
                             else:
                                 idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_storyline
                                 hover "images/characters/side/side " + char.text_id + ".png"
                             
-                            action SetVariable("current_storyline", char.text_id) 
+                            action SetVariable("current_storyline", char) 
                 
                 # Storyline
                 # imagemap:
@@ -53,9 +53,10 @@ screen storyline:
                     yoffset 20
                     ysize 550
                     vbox:
-                        grid 8 6:
+                        grid 8 current_storyline.get_max_run() + 1:
                             # spacing 70
                             xfill True
+                            # TITLES
                             vbox:
                                 text "Friday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
                                 text "Start" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
@@ -88,23 +89,31 @@ screen storyline:
                                 text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
-                            for j in range(4):
+                            # Checkpoints CONTENT
+                            for j in range(current_storyline.get_max_run()):
                                 for i in range(8):
-                                    imagemap: 
-                                        idle image_time
-                                        text "-" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                    $ print(current_storyline)
+                                    # $ print(current_storyline.print_checkpoints())
+                                    if current_storyline.has_checkpoint(j+1, i+1):
+                                        imagemap: 
+                                            idle image_time
+                                            text current_storyline.get_name() + str(current_storyline.get_max_run()) xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                                    else:
+                                        imagemap: 
+                                            idle image_time
+                                            text "Empty" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
 
-                            for i in range(4):
-                                imagemap: 
-                                    idle image_time
-                                    text "12/10 - 18:00" xalign 0.5 yalign 0.5 size 16 font gui.name_text_font color "#FFFFFF"
-                            imagemap: 
-                                idle image_time
-                                text "Dead" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
+                            # for i in range(4):
+                            #     imagemap: 
+                            #         idle image_time
+                            #         text "12/10 - 18:00" xalign 0.5 yalign 0.5 size 16 font gui.name_text_font color "#FFFFFF"
+                            # imagemap: 
+                            #     idle image_time
+                            #     text "Dead" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
 
-                            text ""
-                            text ""
-                            text ""
+                            # text ""
+                            # text ""
+                            # text ""
             vbox:
                 xminimum 420
                 spacing 10

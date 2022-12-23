@@ -2,8 +2,6 @@ label lad_day3_afternoon:
 
     $ lad_details.add_checkpoint() 
 
-    $ lad_details.print_checkpoints()
-
     call black_screen_transition("Ted Harring", "Sunday Afternoon")
 
     $ change_room("tea_room", irisout)

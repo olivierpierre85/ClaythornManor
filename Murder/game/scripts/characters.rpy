@@ -208,8 +208,7 @@ init -100 python:
             nickname = "",
             description_short = "",
             description_long = "",
-            information_list = [],
-            checkpoints = [],
+            information_list = []
         ):
             self.text_id = text_id
             self.locked = locked
@@ -219,7 +218,7 @@ init -100 python:
             self.description_short = description_short
             self.description_long = description_long
             self.information_list = information_list
-            self.checkpoints = checkpoints
+            self.checkpoints = []
 
         def get_name(self):
             # if self.know_real_name:
@@ -399,9 +398,44 @@ init -100 python:
         def add_checkpoint(self):
             new_checkpoint = Checkpoint(
                 run = 1,
+                position = 1,
+                objects = [],
+                observations = []
+            )
+            self.checkpoints.append(new_checkpoint)
+            new_checkpoint = Checkpoint(
+                run = 1,
+                position = 2,
+                objects = [],
+                observations = []
+            )
+            self.checkpoints.append(new_checkpoint)
+            new_checkpoint = Checkpoint(
+                run = 1,
+                position = 3,
+                objects = [],
+                observations = []
+            )
+            self.checkpoints.append(new_checkpoint)
+            new_checkpoint = Checkpoint(
+                run = 1,
+                position = 4,
+                objects = [],
+                observations = []
+            )
+            self.checkpoints.append(new_checkpoint)
+            new_checkpoint = Checkpoint(
+                run = 1,
                 position = 5,
                 objects = self.get_all_objects_unlocked(),
-                observations = [],
+                observations = []
+            )
+            self.checkpoints.append(new_checkpoint)
+            new_checkpoint = Checkpoint(
+                run = 2,
+                position = 1,
+                objects = self.get_all_objects_unlocked(),
+                observations = []
             )
             self.checkpoints.append(new_checkpoint)
 
@@ -410,7 +444,21 @@ init -100 python:
             for checkpoint in self.checkpoints:
                 print(checkpoint)
 
+        def has_checkpoint(self, run, position):
+            for checkpoint in self.checkpoints:
+                if checkpoint.run == run and checkpoint.position == position:
+                    return True
+            return False
+            
 
+        def get_max_run(self):
+            if self.checkpoints:
+                return self.checkpoints[-1].run
+            else:
+                return 0
+
+        def __str__(self):
+            return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
 
     class Checkpoint():
         def __init__(
@@ -422,10 +470,10 @@ init -100 python:
             
         ):
             
-            self.run = run,
-            self.position = position,
-            self.objects = objects,
-            self.observations = observations,
+            self.run = run
+            self.position = position
+            self.objects = objects
+            self.observations = observations
         
         def __str__(self):
             return 'Run:' + str(self.run) + '; position:' + str(self.position) + '; objects:' + str(self.objects)
