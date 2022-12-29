@@ -177,7 +177,7 @@ label lad_ending_day3_escape:
 
     There, they found that all of the guests were dead.
 
-    Samuel Manning, Thomas Moody and Daniel Baldwin where still in their bed.
+    Samuel Manning, Thomas Moody and Daniel Baldwin were still in their bed.
 
     They had to force open the door of Rosalind Marsh. 
     

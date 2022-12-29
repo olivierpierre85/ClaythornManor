@@ -107,9 +107,12 @@ screen storyline:
                                                 mouse "hover" 
                                                 action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1)) #NOT used but needed for tooltip
                                                 # xoffset 22 
-                                                yalign 0.5                
+                                                yalign 0.5
+                                                if current_checkpoint and current_checkpoint.run == current_storyline.get_checkpoint(j+1, i+1).run and current_checkpoint.position == current_storyline.get_checkpoint(j+1, i+1).position:                
+                                                    text_color "#FFFFFF"
+                                                else:
+                                                    text_color gui.accent_color
                                                 text_font gui.name_text_font 
-                                                text_color "#FFFFFF"
                                                 text_size 18
                                                 padding (25,25,25,25)
                                                 
@@ -121,62 +124,78 @@ screen storyline:
                                                 image image_time_new
                                         else:
                                             text ""
-
-                            # for i in range(4):
-                            #     imagemap: 
-                            #         idle image_time
-                            #         text "12/10 - 18:00" xalign 0.5 yalign 0.5 size 16 font gui.name_text_font color "#FFFFFF"
-                            # imagemap: 
-                            #     idle image_time
-                            #     text "Dead" xalign 0.5 yalign 0.5 font gui.name_text_font color "#FFFFFF"
-
-                            # text ""
-                            # text ""
-                            # text ""
             vbox:
                 xminimum 420
-                spacing 10
-                if current_checkpoint:
-                    text current_checkpoint.get_format_created() + str(current_checkpoint.position)
-                text "Unlocked":
-                    font gui.name_text_font
-                    color gui.accent_color
-                hbox:
-                    spacing 25
-                    for test in range(3):
-                        for item in lad_details.get_objects():
+                vbox:
+                    yminimum 120
+                    yoffset -20
+                    text "Endings Reached":
+                        font gui.name_text_font
+                        color gui.accent_color
+
+                    hbox:
+                        yoffset 10
+                        spacing 25
+                        for item in lad_details.get_endings():
                             imagebutton:
-                                mouse "hover"
                                 action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
                                 idle item.image_file                            
-                                tooltip "{image=images/ui/objects_icon.png} " + item.content
-                        
-                hbox:
-                    spacing 25
-                    for item in lad_details.get_observations():
-                        imagebutton:
-                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-                            idle item.image_file                            
-                            tooltip "{image=images/ui/observation_icon.png} " + item.content
-                hbox:
-                    spacing 25
-                    for item in lad_details.get_intuitions():
-                        imagebutton:
-                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-                            idle item.image_file                            
-                            tooltip "{image=images/ui/intuition_icon.png} " + item.content
+                                tooltip str(item.content)
 
-                text "Endings":
-                    font gui.name_text_font
-                    color gui.accent_color
+                if current_checkpoint:
+                    vbox:
+                        ysize 65
+                        hbox:
+                            # TODO should also be in one                 
+                            text current_checkpoint.get_format_created() + str(current_checkpoint.position) + " "
+                            imagebutton: 
+                                yalign 0.5
+                                mouse "hover"
+                                auto "images/ui/cancel_icon_small_%s.png"
+                                action SetVariable("current_checkpoint", None)
+                else:
+                    hbox:
+                        ysize 65
+                        text "Current Checkpoint"
+                vbox:
+                    ysize 350
+                    text "Unlocked":
+                        font gui.name_text_font
+                        color gui.accent_color
+                    hbox:
+                        spacing 25
+                        for test in range(3):
+                            for item in lad_details.get_objects():
+                                imagebutton:
+                                    mouse "hover"
+                                    action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+                                    idle item.image_file                            
+                                    tooltip "{image=images/ui/objects_icon.png} " + item.content
+                            
+                    hbox:
+                        spacing 25
+                        for item in lad_details.get_observations():
+                            imagebutton:
+                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+                                idle item.image_file                            
+                                tooltip "{image=images/ui/observation_icon.png} " + item.content
+                    hbox:
+                        spacing 25
+                        for item in lad_details.get_intuitions():
+                            imagebutton:
+                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+                                idle item.image_file                            
+                                tooltip "{image=images/ui/intuition_icon.png} " + item.content
 
-                hbox:
-                    spacing 25
-                    for item in lad_details.get_endings():
-                        imagebutton:
-                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-                            idle item.image_file                            
-                            tooltip str(item.content)
+                if current_checkpoint:                    
+                    imagebutton:
+                        auto 'images/ui/button_%s_small.png'                       
+                        mouse "hover"
+                        action SetVariable("action_needed_fix", None) # CONFIRM WINDOW => Start at saved thingy 
+                    # TODO TERRIBLE positionning, but works SHOULD BE in image map...
+                    text "Start again from there":
+                        yoffset -60
+                        xoffset 65
 
     $ tooltip = GetTooltip()
 
