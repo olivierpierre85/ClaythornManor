@@ -6,6 +6,8 @@
 #   Alive: Everyone
 label lad_day1_evening:
 
+    $ lad_details.add_checkpoint() 
+
     call change_time(21,00, 'Evening')
 
     scene hallway

@@ -404,62 +404,15 @@ init -100 python:
         # Checkpoints
         # ---------------
         def add_checkpoint(self):
+            global current_position, current_run
             new_checkpoint = Checkpoint(
-                run = 1,
-                position = 1,
-                objects = [],
-                observations = []
-            )
-            self.checkpoints.append(new_checkpoint)
-            new_checkpoint = Checkpoint(
-                run = 1,
-                position = 2,
-                objects = [],
-                observations = []
-            )
-            self.checkpoints.append(new_checkpoint)
-            new_checkpoint = Checkpoint(
-                run = 1,
-                position = 3,
-                objects = [],
-                observations = []
-            )
-            self.checkpoints.append(new_checkpoint)
-            new_checkpoint = Checkpoint(
-                run = 1,
-                position = 4,
-                objects = [],
-                observations = []
-            )
-            self.checkpoints.append(new_checkpoint)
-            new_checkpoint = Checkpoint(
-                run = 1,
-                position = 5,
-                objects = self.get_all_objects_unlocked(),
-                observations = []
-            )
-            self.checkpoints.append(new_checkpoint)
-            new_checkpoint = Checkpoint(
-                run = 2,
-                position = 2,
-                objects = self.get_all_objects_unlocked(),
-                observations = []
-            )
-            self.checkpoints.append(new_checkpoint)
-            new_checkpoint = Checkpoint(
-                run = 3,
-                position = 2,
-                objects = self.get_all_objects_unlocked(),
-                observations = []
-            )
-            self.checkpoints.append(new_checkpoint)
-            new_checkpoint = Checkpoint(
-                run = 3,
-                position = 3,
+                run = current_run,
+                position = current_position,
                 objects = copy.deepcopy(self.get_objects()),
-                observations = []
+                observations = copy.deepcopy(self.get_observations()),
             )
             self.checkpoints.append(new_checkpoint)
+            current_position = current_position + 1
 
         # DEBUG FUNCTION
         def print_checkpoints(self):

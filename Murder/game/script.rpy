@@ -67,6 +67,8 @@ label init_technical_variables:
         seen_tutorial_unlock_knowledge = False
 
         current_music = 'upbeat'
+        current_run = 1
+        current_position = 1
 
         first_death = True
         first_survive = True

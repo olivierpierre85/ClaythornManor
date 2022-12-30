@@ -1,5 +1,7 @@
 label lad_day2_morning:
 
+    $ lad_details.add_checkpoint() 
+
     call black_screen_transition("Ted Harring", "Saturday")
 
     scene lad_room with irisout

@@ -173,8 +173,12 @@ screen storyline:
                             
                     hbox:
                         spacing 25
-                        for item in lad_details.get_observations():                            
-                            use info_card(item, "{image=images/ui/observation_icon.png} ")
+                        if current_checkpoint:
+                            for item in current_checkpoint.observations:                             
+                                use info_card(item, "{image=images/ui/observation_icon.png} ")
+                        else:
+                            for item in lad_details.get_observations():                            
+                                use info_card(item, "{image=images/ui/observation_icon.png} ")
 
                     hbox:
                         spacing 25
