@@ -38,13 +38,13 @@ label init_lad:
             CharacterInformation(5, "drive", "He never learned how to drive."),
             CharacterInformation(6, "cook", "He is not much of a cook."),
             # Observations
-            CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", type="observation", image_file="images/info_cards/poison.png"), 
+            CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", type="observation", image_file="poison"), 
             # Objects
-            CharacterInformation(1, "gun", "A empty handgun found in the gun room", type="object", image_file="images/info_cards/gun.png"), 
+            CharacterInformation(1, "gun", "A empty handgun found in the gun room", type="object", image_file="gun"), 
             # Intuitions
-            CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", type="intuition", image_file="images/info_cards/gun.png"), 
+            CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", type="intuition", image_file="gun"), 
             # Endings
-            CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="images/info_cards/gun.png"), 
+            CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun"), 
         ]
 
         lad_details  = CharacterDetails(

@@ -46,10 +46,12 @@ label debug_choices:
         
         "lad_day3_afternoon":
             $ lad_day2_believe_psychic = True
-            #$ lad_details.unlock_object('gun')
+            $ lad_details.unlock_object('gun')
             $ first_death = False
             $ lad_details.unlock_intuition('psychic_poisons')
             $ lad_details.unlock_ending('gunned_down')
+            # $ lad_details.unlock_observation('green_liquid')
+            $ lad_details.reset_information()
             jump lad_day3_afternoon
 
         # "lad_day3_stay":

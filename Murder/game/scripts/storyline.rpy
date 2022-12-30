@@ -164,28 +164,22 @@ screen storyline:
                         color gui.accent_color
                     hbox:
                         spacing 25
-                        for test in range(3):
+                        if current_checkpoint:
+                            for item in current_checkpoint.objects: 
+                                use info_card(item,"{image=images/ui/objects_icon.png} " )    
+                        else:
                             for item in lad_details.get_objects():
-                                imagebutton:
-                                    mouse "hover"
-                                    action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-                                    idle item.image_file                            
-                                    tooltip "{image=images/ui/objects_icon.png} " + item.content
+                                use info_card(item,"{image=images/ui/objects_icon.png} " )
                             
                     hbox:
                         spacing 25
-                        for item in lad_details.get_observations():
-                            imagebutton:
-                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-                                idle item.image_file                            
-                                tooltip "{image=images/ui/observation_icon.png} " + item.content
+                        for item in lad_details.get_observations():                            
+                            use info_card(item, "{image=images/ui/observation_icon.png} ")
+
                     hbox:
                         spacing 25
                         for item in lad_details.get_intuitions():
-                            imagebutton:
-                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-                                idle item.image_file                            
-                                tooltip "{image=images/ui/intuition_icon.png} " + item.content
+                            use info_card(item, "{image=images/ui/intuition_icon.png} ")
 
                 if current_checkpoint:                    
                     imagebutton:
@@ -212,3 +206,17 @@ screen storyline:
                 yalign 0.5
                 text tooltip
                 # textbutton "Cancel" action SetVariable("action_needed_fix", False )
+
+screen info_card(item, icon_file):  
+    imagebutton:                        
+        mouse "hover"
+        action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+        if not item.discovered:
+            idle "images/info_cards/question_mark_bw.png"   
+            tooltip "Hidden"
+        elif item.locked: 
+            idle "images/info_cards/" + item.image_file + "_bw.png"     
+            tooltip icon_file + item.content
+        else:
+            idle "images/info_cards/" + item.image_file + ".png"                                
+            tooltip icon_file + item.content

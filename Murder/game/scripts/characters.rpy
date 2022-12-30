@@ -226,6 +226,10 @@ init -100 python:
             # else:
             #     return self.description_short
         
+        def reset_information(self):
+            for info in self.information_list:
+                info.locked = True
+
         # ---------------
         # KNOWLEDGE
         # ---------------
@@ -241,6 +245,7 @@ init -100 python:
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
                     info.locked = False
+                    info.discovered = True
                     renpy.notify("You have found information about " + self.get_name())
                     renpy.play("audio/sound_effects/writing_short.ogg", "sound")
                     # play sound "audio/sound_effects/unlock.ogg"
@@ -305,6 +310,7 @@ init -100 python:
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
                     info.locked = False
+                    info.discovered = True
                     renpy.notify("You have made a new observation")
                     renpy.play("audio/sound_effects/writing_short.ogg", "sound")
         
@@ -329,6 +335,7 @@ init -100 python:
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
                     info.locked = False
+                    info.discovered = True
                     renpy.notify("You have a new intuition")
                     renpy.play("audio/sound_effects/writing_short.ogg", "sound")
         
@@ -353,6 +360,7 @@ init -100 python:
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
                     info.locked = False
+                    info.discovered = True
                     renpy.notify("You have found a new object")
                     renpy.play("audio/sound_effects/writing_short.ogg", "sound")
         
@@ -448,7 +456,7 @@ init -100 python:
             new_checkpoint = Checkpoint(
                 run = 3,
                 position = 3,
-                objects = self.get_all_objects_unlocked(),
+                objects = copy.deepcopy(self.get_objects()),
                 observations = []
             )
             self.checkpoints.append(new_checkpoint)
@@ -518,6 +526,7 @@ init -100 python:
             self.is_important = is_important
             self.type = type
             self.image_file = image_file
+            self.discovered = False
 
 # LABELS
 label character_selection:
