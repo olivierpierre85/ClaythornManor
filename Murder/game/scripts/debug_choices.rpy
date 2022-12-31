@@ -2,8 +2,8 @@ label debug_choices:
     call debug_routes
     
     menu: 
-        "debug_lad_first_death":
-            $ test_choices = debug_lad_first_death
+        "debug_lad_day2":
+            $ test_choices = debug_lad_day2
             jump lad_introduction
 
         "lad_introduction":
@@ -45,13 +45,16 @@ label debug_choices:
             jump lad_day3_morning
         
         "lad_day3_afternoon":
+            $ lad_details.unlock_observation('green_liquid')
+            $ lad_details.test_checkpoint()
+
             $ lad_day2_believe_psychic = True
             $ lad_details.unlock_object('gun')
             $ first_death = False
             $ lad_details.unlock_intuition('psychic_poisons')
             $ lad_details.unlock_ending('gunned_down')
-            # $ lad_details.unlock_observation('green_liquid')
             $ lad_details.reset_information()
+            $ lad_details.unlock_object('gun')
             jump lad_day3_afternoon
 
         # "lad_day3_stay":
@@ -65,46 +68,18 @@ label debug_routes:
         # test_mode = True
         test_choices = []
 
-        debug_path_01 = [
-            0,# Talk To the man
-            1,# Talk To the woman
-            3,# How old are you ?
-            1,# Ask her about herself
-            0,# Talk to Daniel Baldwin
-            2,# Why were you invited here ?
-            3,# Talk about the manor
-            1,# Ask him about himself
-            4,# Ask him his age
-            0,# Talk about the weather
-        ]
-
-        debug_lad_evening = [
-            1, # Talk to the woman
-            6, # You don't have anymore questions for her
-            0, # Talk to the man
+        debug_lad_day2 = [
+            0, # Talk to Samuel Manning
+            1, # Talk to Amelia Baxter
+            11, # You don't have anymore questions for her
+            0, # Talk to Daniel Baldwin
+            9, # You don't have anymore questions for him
+            1, # Talk to Amelia Baxter
+            11, # You don't have anymore questions for her
+            3, # Go to sleep
         ]
 
         debug_lad_first_death = [
-            1, # Talk to Amelia Baxter
-            3, # Tell me more about yourself.
-            4, # Why were you invited here?
-            1, # Talk to Amelia Baxter
-            0, # What do you think of this weather?
-            5, # What do you think of this place?
-            6, # How old are you?
-            8, # What do you think of the other guests?
-            10, # You don't have anymore questions for her
-            0, # Talk to Daniel Baldwin
-            2, # Tell me more about yourself.
-            3, # Why were you invited here?
-            4, # Library
-            -1, # FILLER CHOICE
-            2, # Meet the others in the billiard room
-            0, # Talk to Daniel Baldwin
-            4, # What do you think of this place?
-            7, # What do you think of the other guests?
-            0, # What do you think of this weather?
-            8, # You don't have anymore questions for him
-            2, # Go to the bar to have a drink
-            3 # Have another drink
         ]
+
+    return

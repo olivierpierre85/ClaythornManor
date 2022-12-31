@@ -1,6 +1,6 @@
 label lad_day2_afternoon:
 
-    $ lad_details.add_checkpoint() 
+    $ lad_details.add_checkpoint("lad_day2_afternoon") 
     
     call black_screen_transition("Ted Harring", "Saturday Afternoon")
 

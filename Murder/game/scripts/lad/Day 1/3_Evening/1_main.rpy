@@ -6,7 +6,7 @@
 #   Alive: Everyone
 label lad_day1_evening:
 
-    $ lad_details.add_checkpoint() 
+    $ lad_details.add_checkpoint("lad_day1_evening") 
 
     call change_time(21,00, 'Evening')
 

@@ -93,12 +93,11 @@ screen storyline:
                                 text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
-                            # Checkpoints CONTENT
+                            # Checkpoints CONTENT TODO clean +1 etc,...
                             for j in range(current_storyline.get_max_run()):
                                 for i in range(8):
                                     if current_storyline.has_checkpoint(j+1, i+1):
                                         imagemap: 
-                                            
                                             if current_storyline.has_checkpoint(j+1, i+2):
                                                 idle image_time_right
                                             else:
@@ -164,21 +163,22 @@ screen storyline:
                         color gui.accent_color
                     hbox:
                         spacing 25
-                        if current_checkpoint:
-                            for item in current_checkpoint.objects: 
-                                use info_card(item,"{image=images/ui/objects_icon.png} " )    
-                        else:
-                            for item in lad_details.get_objects():
-                                use info_card(item,"{image=images/ui/objects_icon.png} " )
-                            
+                        # if current_checkpoint:
+                        #     for item in current_checkpoint.objects: 
+                        #         use info_card(item,"{image=images/ui/objects_icon.png} " )    
+                        # else:
+                        for item in lad_details.get_objects():
+                            if current_checkpoint:
+                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.text_id in current_checkpoint.objects )
+                            else:
+                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
                     hbox:
                         spacing 25
-                        if current_checkpoint:
-                            for item in current_checkpoint.observations:                             
-                                use info_card(item, "{image=images/ui/observation_icon.png} ")
-                        else:
-                            for item in lad_details.get_observations():                            
-                                use info_card(item, "{image=images/ui/observation_icon.png} ")
+                        for item in lad_details.get_observations():                            
+                            if current_checkpoint:
+                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.text_id in current_checkpoint.observations )
+                            else:
+                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
 
                     hbox:
                         spacing 25
@@ -189,7 +189,7 @@ screen storyline:
                     imagebutton:
                         auto 'images/ui/button_%s_small.png'                       
                         mouse "hover"
-                        action SetVariable("action_needed_fix", None) # CONFIRM WINDOW => Start at saved thingy 
+                        action Call("start_again") # CONFIRM WINDOW => Start at saved thingy 
                     # TODO TERRIBLE positionning, but works SHOULD BE in image map...
                     text "Start again from there":
                         yoffset -60
@@ -211,14 +211,14 @@ screen storyline:
                 text tooltip
                 # textbutton "Cancel" action SetVariable("action_needed_fix", False )
 
-screen info_card(item, icon_file):  
+screen info_card(item, icon_file, locked = True):  
     imagebutton:                        
         mouse "hover"
         action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
         if not item.discovered:
             idle "images/info_cards/question_mark_bw.png"   
             tooltip "Hidden"
-        elif item.locked: 
+        elif locked: 
             idle "images/info_cards/" + item.image_file + "_bw.png"     
             tooltip icon_file + item.content
         else:

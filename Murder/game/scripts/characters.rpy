@@ -319,6 +319,13 @@ init -100 python:
                 if text_id == info.text_id:
                     return not info.locked
             return False
+
+        def get_all_observations_unlocked(self):
+            unlocked = []
+            for info in self.get_observations():
+                if info.locked:
+                    unlocked.append(info.text_id)
+            return unlocked
         
         # ---------------
         # Intuition
@@ -375,7 +382,6 @@ init -100 python:
             for info in self.get_objects():
                 if info.locked:
                     objects_unlocked.append(info.text_id)
-            print(objects_unlocked)
             return objects_unlocked
             
         # ---------------
@@ -403,13 +409,39 @@ init -100 python:
         # ---------------
         # Checkpoints
         # ---------------
-        def add_checkpoint(self):
+        def test_checkpoint(self):
+            global current_position
+            i_test = 1
+            for i_label in [
+                    'lad_introduction',
+                    'lad_day1_arrival',
+                    'lad_day1_evening',
+                    'lad_day2_morning',
+                    'lad_day2_afternoon',
+                    'lad_day2_evening',
+                    'lad_day3_morning',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 1,
+                        position = i_test,
+                        objects = self.get_all_objects_unlocked(),
+                        observations = self.get_all_observations_unlocked(),
+                        label_id = i_label
+                    )
+                )
+                i_test += 1
+                current_position += 1
+
+            return
+
+        def add_checkpoint(self, label_id = ""):
             global current_position, current_run
             new_checkpoint = Checkpoint(
                 run = current_run,
-                position = current_position,
-                objects = copy.deepcopy(self.get_objects()),
-                observations = copy.deepcopy(self.get_observations()),
+                position = current_position + 1,
+                objects = self.get_all_objects_unlocked(), # copy.deepcopy(self.get_objects()),
+                observations = self.get_all_observations_unlocked(), # copy.deepcopy(self.get_observations()),
+                label_id = label_id
             )
             self.checkpoints.append(new_checkpoint)
             current_position = current_position + 1
@@ -447,13 +479,14 @@ init -100 python:
             position,
             objects,
             observations,
+            label_id
         ):
-            
             self.run = run
             self.position = position
             self.objects = objects or []
             self.observations = observations or []
             self.created = datetime.now()
+            self.label_id = label_id
 
         def get_format_created(self):
             return self.created.strftime("%a %b, %H:%M")

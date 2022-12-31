@@ -1,5 +1,5 @@
 label lad_day2_evening:
-    $ lad_details.add_checkpoint() 
+    $ lad_details.add_checkpoint("lad_day2_evening") 
     
     # call black_screen_transition("Day 2 - Evening") # Good ?
     $ change_room('dining_room') 

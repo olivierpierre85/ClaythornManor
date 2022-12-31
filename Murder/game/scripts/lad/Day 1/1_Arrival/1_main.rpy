@@ -5,7 +5,7 @@
 #   Alive: Everyone
 label lad_day1_arrival:
 
-    $ lad_details.add_checkpoint() 
+    $ lad_details.add_checkpoint("lad_day1_arrival") 
     
     call black_screen_transition("Ted Harring", "Friday")
 

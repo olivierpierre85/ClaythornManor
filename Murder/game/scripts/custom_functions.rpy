@@ -85,6 +85,10 @@ init python:
 
         return
 
+label start_again():
+    
+    $ renpy.jump(current_checkpoint.label_id)
+
 # NOT needed, imprint frame in picture
 # label show_character(character, talk_position = character_talking_left):
 #   $ renpy.show(character, at_list=[talk_position])
