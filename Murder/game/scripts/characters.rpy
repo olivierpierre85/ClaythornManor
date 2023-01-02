@@ -228,7 +228,8 @@ init -100 python:
         
         def reset_information(self):
             for info in self.information_list:
-                info.locked = True
+                if info.type in ['observation', 'object']:
+                    info.locked = True
 
         # ---------------
         # KNOWLEDGE
@@ -305,14 +306,15 @@ init -100 python:
                     observation_list.append(info)
             return observation_list
 
-        def unlock_observation(self, text_id):
+        def unlock_observation(self, text_id, show_notification = True):
             for info in self.get_observations():
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
                     info.locked = False
                     info.discovered = True
-                    renpy.notify("You have made a new observation")
-                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
+                    if show_notification:
+                        renpy.notify("You have made a new observation")
+                        renpy.play("audio/sound_effects/writing_short.ogg", "sound")
         
         def is_observation_unlocked(self, text_id):
             for info in self.get_observations():
@@ -362,14 +364,15 @@ init -100 python:
                     object_list.append(info)
             return object_list
 
-        def unlock_object(self, text_id):
+        def unlock_object(self, text_id, show_notification = True):
             for info in self.get_objects():
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
                     info.locked = False
                     info.discovered = True
-                    renpy.notify("You have found a new object")
-                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
+                    if show_notification:
+                        renpy.notify("You have found a new object")
+                        renpy.play("audio/sound_effects/writing_short.ogg", "sound")
         
         def is_object_unlocked(self, text_id):
             for info in self.get_objects():
@@ -435,16 +438,20 @@ init -100 python:
             return
 
         def add_checkpoint(self, label_id = ""):
-            global current_position, current_run
-            new_checkpoint = Checkpoint(
-                run = current_run,
-                position = current_position + 1,
-                objects = self.get_all_objects_unlocked(), # copy.deepcopy(self.get_objects()),
-                observations = self.get_all_observations_unlocked(), # copy.deepcopy(self.get_observations()),
-                label_id = label_id
-            )
-            self.checkpoints.append(new_checkpoint)
-            current_position = current_position + 1
+            global current_position, current_run, has_been_restarted
+
+            if not has_been_restarted:
+                new_checkpoint = Checkpoint(
+                    run = current_run,
+                    position = current_position + 1,
+                    objects = self.get_all_objects_unlocked(), # copy.deepcopy(self.get_objects()),
+                    observations = self.get_all_observations_unlocked(), # copy.deepcopy(self.get_observations()),
+                    label_id = label_id
+                )
+                self.checkpoints.append(new_checkpoint)
+                current_position = current_position + 1
+            else:
+                has_been_restarted = False
 
         # DEBUG FUNCTION
         def print_checkpoints(self):
@@ -464,10 +471,12 @@ init -100 python:
             return None
             
         def get_max_run(self):
-            if self.checkpoints:
-                return self.checkpoints[-1].run
-            else:
-                return 0
+            max_run = 0
+            for checkpoint in self.checkpoints:
+                if checkpoint.run > max_run:
+                    max_run = checkpoint.run
+
+            return max_run
 
         def __str__(self):
             return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
@@ -520,8 +529,27 @@ label character_selection:
     narrator "Select Your Character"
 
     $ selected_choice = renpy.call_screen('character_selection') 
+
+    $ current_position = 0
+
+
+    
     if selected_choice == 'lad':
+        $ current_character = lad_details
+        $ current_run = current_character.get_max_run() + 1
+
+        call init_story_variables 
+        call init_storylines
+
         jump lad_introduction
+    elif selected_choice == 'psychic':
+        $ current_character = psychic_details
+        $ current_run = current_character.get_max_run() + 1
+
+        call init_story_variables 
+        call init_storylines
+
+        jump psychic_introduction
     else:
         jump lad_day1_evening
 

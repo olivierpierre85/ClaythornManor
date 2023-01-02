@@ -70,6 +70,8 @@ label init_technical_variables:
         current_run = 1
         current_position = 0
 
+        has_been_restarted = False
+
         first_death = True
         first_survive = True
 

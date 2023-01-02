@@ -45,6 +45,7 @@ label debug_choices:
             jump lad_day3_morning
         
         "lad_day3_afternoon":
+            call unlock_psychic 
             $ lad_details.unlock_observation('green_liquid')
             $ lad_details.test_checkpoint()
 
@@ -61,6 +62,15 @@ label debug_choices:
         #     $ lad_details.unlock_intuition('psychic_poisons')
         #     jump lad_day3_stay
 
+    return
+
+label unlock_psychic:
+
+    $ psychic_details.unlock_knowledge('background') 
+    $ psychic_details.unlock_knowledge('status') 
+    $ psychic_details.unlock_knowledge('heroic act') 
+    $ psychic_details.unlock_knowledge('lie') 
+    
     return
 
 label debug_routes:

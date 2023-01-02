@@ -86,8 +86,38 @@ init python:
         return
 
 label start_again():
+
+    python:
+        print(current_checkpoint)
+        # Change current character
+        current_character = current_storyline
+        
+        # For this character, update run +1  in all checkpoint above this
+        for checkpoint in current_character.checkpoints:
+            if checkpoint.run > current_checkpoint.run:
+                checkpoint.run += 1
+
+        # change current run to += 1
+        current_run = current_checkpoint.run + 1
+        # Deduct one position because a new checkpoint will immediately be created with pos + 1
+        current_position = current_checkpoint.position - 1 
+
+        # Reset object, observation, choices...
+        current_character.reset_information()
+
+        # TODO hide notifications in unlock
+        # re run objects and observations from checkpoint
+        for item in current_checkpoint.objects:
+            current_character.unlock_object(item, False)
+
+        for item in current_checkpoint.observations:
+            current_character.unlock_observation(item, False)
+
+        global has_been_restarted
+        has_been_restarted = True
+        renpy.jump(current_checkpoint.label_id) 
     
-    $ renpy.jump(current_checkpoint.label_id)
+    return
 
 # NOT needed, imprint frame in picture
 # label show_character(character, talk_position = character_talking_left):

@@ -1,5 +1,5 @@
 label init_storylines:
-    $ current_storyline = lad_details
+    $ current_storyline = current_character
     return
 
 transform character_storyline:
@@ -9,7 +9,7 @@ transform character_storyline:
 screen storyline:
     tag menu
 
-    $ 
+    $ print(current_checkpoint)
     ## TODO OLPI Add a image of the map
     ## add text with explanation of previously visited rooms if needed (You visited this place already, no action?)
     use game_menu(_("Storyline"), scroll="fixed"):
@@ -176,9 +176,9 @@ screen storyline:
                         spacing 25
                         for item in lad_details.get_observations():                            
                             if current_checkpoint:
-                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.text_id in current_checkpoint.observations )
+                                use info_card(item,"{image=images/ui/observation_icon.png} ", item.text_id in current_checkpoint.observations )
                             else:
-                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
+                                use info_card(item,"{image=images/ui/observation_icon.png} ", item.locked )
 
                     hbox:
                         spacing 25
@@ -189,7 +189,7 @@ screen storyline:
                     imagebutton:
                         auto 'images/ui/button_%s_small.png'                       
                         mouse "hover"
-                        action Call("start_again") # CONFIRM WINDOW => Start at saved thingy 
+                        action Start("start_again")
                     # TODO TERRIBLE positionning, but works SHOULD BE in image map...
                     text "Start again from there":
                         yoffset -60
