@@ -452,6 +452,7 @@ init -100 python:
                 current_position = current_position + 1
             else:
                 has_been_restarted = False
+                current_position = current_position + 1
 
         # DEBUG FUNCTION
         def print_checkpoints(self):
