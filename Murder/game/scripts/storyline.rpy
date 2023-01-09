@@ -194,8 +194,8 @@ screen storyline:
                     imagebutton:
                         auto 'images/ui/button_%s_small.png'                       
                         mouse "hover"
-                        action Start("start_again")
-                    # TODO TERRIBLE positionning, but works SHOULD BE in image map...
+                        action Show("confirm_restart")
+                    # TODO TERRIBLE positioning, but works SHOULD BE in image map...
                     text "Start again from there":
                         yoffset -60
                         xoffset 65
@@ -229,6 +229,36 @@ screen info_card(item, icon_file, locked = True):
             idle "images/info_cards/" + item.image_file + "_bw.png"                                
             tooltip icon_file + item.content
     
+
+screen confirm_restart():
+
+    ## Ensure other screens do not get input while this screen is displayed.
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+
+    frame:
+
+        vbox:
+            xalign .5
+            yalign .5
+            spacing 45
+
+            label _("Are you sure you want to restart from there?"):
+                style "confirm_prompt"
+                xalign 0.5
+
+            hbox:
+                xalign 0.5
+                spacing 100
+
+                textbutton _("Restart") action Start("start_again")
+                textbutton _("Cancel") action Hide("confirm_restart")
+
 init -100 python:
     class Checkpoint():
         def __init__(
