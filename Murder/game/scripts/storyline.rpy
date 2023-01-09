@@ -103,17 +103,18 @@ screen storyline:
                                                 idle image_time_right
                                             else:
                                                 idle image_time
-                                            textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()):
+                                            textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_up()) + "\n" + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
                                                 mouse "hover" 
                                                 action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
-                                                # xoffset 22 
+                                                xoffset -10 
                                                 yalign 0.5
+                                                xalign 0.5
                                                 if current_checkpoint and current_checkpoint.run == current_storyline.get_checkpoint(j+1, i+1).run and current_checkpoint.position == current_storyline.get_checkpoint(j+1, i+1).position:                
                                                     text_color "#FFFFFF"
                                                 else:
                                                     text_color gui.accent_color
                                                 text_font gui.name_text_font 
-                                                text_size 18
+                                                text_size 20
                                                 padding (25,25,25,25)
                                                 
                                     else:
@@ -277,7 +278,14 @@ init -100 python:
             self.label_id = label_id
 
         def get_format_created(self):
-            return self.created.strftime("%a %b, %H:%M")
+            # return self.created.strftime("%a %b, %H:%M")
+            return self.created.strftime("%a %b")
+
+        def get_format_created_up(self):
+            return self.created.strftime("%a %b")
+
+        def get_format_created_down(self):
+            return self.created.strftime("%H:%M")
         
         def debug_string(self):
             return 'Run:' + str(self.run) + '; position:' + str(self.position) + '; gun:' + str(len(self.objects))

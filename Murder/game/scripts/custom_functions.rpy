@@ -88,7 +88,6 @@ init python:
 label start_again():
 
     python:
-        print(current_checkpoint)
         # Change current character
         current_character = current_storyline
         
