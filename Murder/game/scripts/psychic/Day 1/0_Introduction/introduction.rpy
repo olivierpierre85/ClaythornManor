@@ -57,7 +57,7 @@ label psychic_introduction:
     """
 
     footman """
-    Yes of course. You must be Miss Baxter.
+    Yes of course. You must be Amalia Baxter.
     """
 
     psychic """
@@ -129,3 +129,70 @@ label psychic_introduction:
     drunk """ 
     I am indeed.
     """
+
+    footman """
+    Perfect, that's everyone who was supposed to be on this train.
+    
+    You can follow me to the car and we will be on our way.
+
+    It should be about an hour to reach the manor.
+    """
+
+    scene inside_car
+
+    """
+    I took a seat on the back.
+
+    Sushil Sinha joins me.
+    """
+
+    captain """
+    I hope you don't mind if I seat with you.
+
+    I think it is better to let mister Manning sitting in front.
+    """
+
+    psychic """
+    Of course.
+    """
+
+    """
+    I understand too well what he means.
+
+    Samuel Manning seems to be out of it.
+
+    He tries to make small talk with the driver, but his speech is incoherent.
+
+    The poor lad tries his best to ignore him and to focus on the road.
+
+    When he realizes nobody wants to talk with him, Samuel Manning took a sip of a flask and instantly falls asleep on his seat.
+
+    The driver sigh in relief.
+    """
+
+    captain """
+    Well, he certainly had one too many.
+
+    I hope he can sleep it off.
+
+    It would be shameful if our host greets him in this state.
+    """
+
+    psychic """
+    You are certainly right.
+
+    But enough about him.
+
+    I would rather talk about something else if you don't mind.
+    """
+
+    captain """
+    Not at all.
+    """
+
+    $ time_left = 30
+
+    call captain_generic
+
+    #
+

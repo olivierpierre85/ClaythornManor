@@ -1,106 +1,115 @@
-# Generic psychic Dialogs.
+# Generic captain Dialogs.
 # Accessible from :
 #                   - The lad
 
 # ?TODO add extra choices possibilities?
-label psychic_generic:
+label captain_generic:
 
-    if not 'psychic_generic_menu' in locals():
-        $ psychic_generic_menu = TimedMenu([
-            TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
-            TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
-            TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_sunday', 5, condition = "current_day == 'Sunday'"),
-            TimedMenuChoice('Tell me more about yourself.', 'psychic_generic_background', 15),
-            TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.is_knowledge_unlocked('background')"),
-            TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 10),
-            TimedMenuChoice('How old are you?', 'psychic_generic_age', 5),
-            TimedMenuChoice('What room are you in?', 'psychic_generic_room', 5, condition = "not is_unlock_map('psychic_room')"),
-            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 0, condition = "current_day == 'Friday'"),
-            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
-            TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Hunt')"),
-            TimedMenuChoice('You don\'t have anymore questions for her', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
-        ], image_right = "psychic")
+    if not 'captain_generic_menu' in locals():
+        $ captain_generic_menu = TimedMenu([
+            TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
+            TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
+            TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_sunday', 5, condition = "current_day == 'Sunday'"),
+            TimedMenuChoice('Tell me more about yourself.', 'captain_generic_background', 15),
+            TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act', 20, condition = "captain_details.is_knowledge_unlocked('background')"),
+            TimedMenuChoice('What do you think of this place?', 'captain_generic_manor', 10),
+            TimedMenuChoice('Where are you from?', 'captain_generic_origin', 5),
+            TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = "not is_unlock_map('captain_room')"),
+            TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = "current_day == 'Friday'"),
+            TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
+            TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Hunt')"),
+            TimedMenuChoice('You don\'t have anymore questions for her', 'captain_generic_cancel', 0, keep_alive = True, early_exit = True)
+        ], image_right = "captain")
     else:
         # Reset if previous early exit
-        $ psychic_generic_menu.early_exit = False
+        $ captain_generic_menu.early_exit = False
 
-    call run_menu(psychic_generic_menu)
-
-    return
-
-
-label psychic_generic_weather_friday:
-
-    psychic """
-    Well, it is not very original to ask about such things when meeting someone new.
-
-    But it is true that is not your average rain. It looks more like a dangerous storm to me.
-
-    And since we are basically in the middle of nowhere, that's reason enough to be a little nervous I suppose.
-    """
-
-    return
-
-label psychic_generic_weather_saturday:
-
-    psychic """
-    I must say that last night was quite scary.
-
-    It has been a while since I've experienced a storm like that.
-
-    We should consider ourselves lucky if there is no damage to the manor.
-    """
-
-    return
-
-label psychic_generic_weather_sunday:
-
-    psychic """
-    Really, you want to talk about the weather with everything that is happening around us?
-
-    What is wrong with you?
-    """
-
-    # TODO achievement ? Cool during the storm
-    return
-
-label psychic_generic_room:
-
-    psychic """
-    That's a strange question.
-
-    But if you must know, my room is the \"George III\"
-    """
-
-    $ unlock_map('psychic_room')
+    call run_menu(captain_generic_menu)
 
     return
 
 
-label psychic_generic_age:
+label captain_generic_weather_friday:
 
-    psychic angry """
-    I beg your pardon ?
+    captain """
+    I can see a storm is coming.
 
-    You are not really asking me that ? Were you raised in a barn ?
-
-    Only a person without any social skills would ask that to a respectable lady.
+    And it looks like a big one.
     """
 
+    return
+
+label captain_generic_weather_saturday:
+
+    captain """
+    d
     """
-    I mutter an apology and quickly change the subject.
+
+    return
+
+label captain_generic_weather_sunday:
+
+    captain """
+    d
     """
+
+    return
+
+label captain_generic_room:
+
+    captain """
+    d
+    """
+
+    $ unlock_map('captain_room')
+
+    return
+
+
+label captain_generic_origin:
+
+    captain """
+    I come directly from London.
+
+    I have been living there for the last two decades.    
+    """
+
+    if current_character.text_id == "psychic":
+
+        psychic """
+        London.
+
+        Right.
+
+        But that's not what I meant. I wanted to say where do you come from before arriving in England?
+        """
+
+        captain """
+        Oh ... I was raised in Calcutta. 
+        
+        But I've been living in the UK for so long I don't even think about it anymore.
+        """
+
+        psychic """
+        Alright. Calcutta behind in the far east right?
+        """
+
+        captain """
+        In North India yes.
+        """
+
+
 
     return
     
 
-label psychic_generic_heroic_act:
+label captain_generic_heroic_act:
     
     if current_character.text_id == "lad":
 
         play music mysterious_01 fadeout 2.0 fadein 2.0
 
-        psychic """
+        captain """
         I was invited here for something I have done a couple of years back.
 
         You actually might remember the event. It was in all the papers at the time.
@@ -122,7 +131,7 @@ label psychic_generic_heroic_act:
         Really ?! You can also talk to babies ?
         """
 
-        psychic """
+        captain """
         Not exactly talk, but I can feel them, their presence.
 
         This time, I was certain the child was still alive. But in great danger.
@@ -150,7 +159,7 @@ label psychic_generic_heroic_act:
         You can also communicate with people who are still alive ?
         """
 
-        psychic """
+        captain """
         In a sense yes.
 
         Like I said, there is more to my gift that just talking with the dead.
@@ -175,7 +184,7 @@ label psychic_generic_heroic_act:
 
         """
 
-        psychic """
+        captain """
         Yes. I believe some version of the person died in an other realm of existence. 
         
         Then they came back to help a version of them who is still alive.
@@ -187,15 +196,15 @@ label psychic_generic_heroic_act:
         But tell me. Why were you invited yourself ?
         """
 
-        $ psychic_details.unlock_knowledge('heroic act') 
+        $ captain_details.unlock_knowledge('heroic act') 
     
         "So I tell her my story."
 
-        psychic "Oh how interesting ! I assumed most people were here because of something they did during the war."
+        captain "Oh how interesting ! I assumed most people were here because of something they did during the war."
 
         lad "It would have been difficult for me. I was but sixteen when the war ended."
 
-        psychic "Really? I thought you were older."
+        captain "Really? I thought you were older."
 
         $ lad_details.unlock_knowledge('age') 
 
@@ -205,9 +214,9 @@ label psychic_generic_heroic_act:
     
     return
 
-label psychic_generic_background:
+label captain_generic_background:
     if current_character.text_id == "lad":
-        psychic """
+        captain """
         Oh dear, I do a lot of things.
 
         But since my husband's death, what takes up the most of my time is the seances I frequently organized.
@@ -217,7 +226,7 @@ label psychic_generic_background:
         Seances ? You mean like talking to the dead ?
         """
 
-        psychic """
+        captain """
         Well simply put yes. But there is more to it than that of course.
         """
 
@@ -225,7 +234,7 @@ label psychic_generic_background:
         I have never been to one of those 'seance'. How does that work ?
         """
 
-        psychic """
+        captain """
         There is not a single way of doing it.
 
         Myself, I usually ask people to bring items of loved one who have passed.
@@ -241,7 +250,7 @@ label psychic_generic_background:
         You mean like being possessed ?
         """
 
-        psychic """
+        captain """
         Yes, but don't worry, there is nothing unholy about it.
 
         It just mean the dead has something so important to communicate that they use the more efficient way to do so.
@@ -253,12 +262,12 @@ label psychic_generic_background:
         Well, that doesn't make me feel good.
         """
 
-    $ psychic_details.unlock_knowledge('background')
+    $ captain_details.unlock_knowledge('background')
 
     return
     
-label psychic_generic_manor:
-    psychic """
+label captain_generic_manor:
+    captain """
     Such a magnificent house right ?
 
     Even if the style is not very recent, it still has a lot of cachet. 
@@ -296,9 +305,9 @@ label psychic_generic_manor:
         Am I the only one in here who has never had a butler waiting on him ?
         """
 
-    $ psychic_details.unlock_knowledge('status')
+    $ captain_details.unlock_knowledge('status')
     
     return
 
-label psychic_generic_cancel:
+label captain_generic_cancel:
     return
