@@ -47,6 +47,7 @@ screen storyline:
                     $ image_time_right = "images/ui/rectangle_09_right.png"
                     $ image_time_new = "images/ui/rectangle_09_new.png"
                     $ image_time_new_2 = "images/ui/rectangle_09_new_2.png"
+                    $ image_time_new_3 = "images/ui/rectangle_09_new_3.png"
                     $ image_arrow = "images/ui/arrow_straight_03.png"
                     
                     mousewheel True
@@ -104,7 +105,7 @@ screen storyline:
                                                 idle image_time
                                             textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()):
                                                 mouse "hover" 
-                                                action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1)) #NOT used but needed for tooltip
+                                                action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
                                                 # xoffset 22 
                                                 yalign 0.5
                                                 if current_checkpoint and current_checkpoint.run == current_storyline.get_checkpoint(j+1, i+1).run and current_checkpoint.position == current_storyline.get_checkpoint(j+1, i+1).position:                
@@ -122,7 +123,11 @@ screen storyline:
                                             else:
                                                 image image_time_new
                                         else:
-                                            text ""
+                                            # IF next column has a checkpoint
+                                            if current_storyline.has_checkpoint_in_column(j+1, i+2):
+                                                image image_time_new_3
+                                            else:
+                                                text ""
             vbox:
                 xminimum 420
                 vbox:
@@ -146,7 +151,7 @@ screen storyline:
                         ysize 65
                         hbox:
                             # TODO should also be in one                 
-                            text current_checkpoint.get_format_created() + str(current_checkpoint.position) + " "
+                            text current_checkpoint.debug_string() # + " " str(current_checkpoint.position) + " "
                             imagebutton: 
                                 yalign 0.5
                                 mouse "hover"
@@ -169,14 +174,14 @@ screen storyline:
                         # else:
                         for item in lad_details.get_objects():
                             if current_checkpoint:
-                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.text_id in current_checkpoint.objects )
+                                use info_card(item,"{image=images/ui/objects_icon.png} ", not item.text_id in current_checkpoint.objects )
                             else:
                                 use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
                     hbox:
                         spacing 25
                         for item in lad_details.get_observations():                            
                             if current_checkpoint:
-                                use info_card(item,"{image=images/ui/observation_icon.png} ", item.text_id in current_checkpoint.observations )
+                                use info_card(item,"{image=images/ui/observation_icon.png} ", not item.text_id in current_checkpoint.observations )
                             else:
                                 use info_card(item,"{image=images/ui/observation_icon.png} ", item.locked )
 
@@ -198,7 +203,6 @@ screen storyline:
     $ tooltip = GetTooltip()
 
     if tooltip:
-
         nearrect:
             focus "tooltip"
             prefer_top True
@@ -218,9 +222,35 @@ screen info_card(item, icon_file, locked = True):
         if not item.discovered:
             idle "images/info_cards/question_mark_bw.png"   
             tooltip "Hidden"
-        elif locked: 
-            idle "images/info_cards/" + item.image_file + "_bw.png"     
+        elif not locked: 
+            idle "images/info_cards/" + item.image_file + ".png"     
             tooltip icon_file + item.content
         else:
-            idle "images/info_cards/" + item.image_file + ".png"                                
+            idle "images/info_cards/" + item.image_file + "_bw.png"                                
             tooltip icon_file + item.content
+    
+init -100 python:
+    class Checkpoint():
+        def __init__(
+            self, 
+            run,
+            position,
+            objects,
+            observations,
+            label_id
+        ):
+            self.run = run
+            self.position = position
+            self.objects = objects or []
+            self.observations = observations or []
+            self.created = datetime.now()
+            self.label_id = label_id
+
+        def get_format_created(self):
+            return self.created.strftime("%a %b, %H:%M")
+        
+        def debug_string(self):
+            return 'Run:' + str(self.run) + '; position:' + str(self.position) + '; gun:' + str(len(self.objects))
+
+        def __str__(self):
+            return 'Run:' + str(self.run) + '; position:' + str(self.position) + '; objects:' + str(self.objects)

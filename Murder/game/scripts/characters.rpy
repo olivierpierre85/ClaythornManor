@@ -325,7 +325,7 @@ init -100 python:
         def get_all_observations_unlocked(self):
             unlocked = []
             for info in self.get_observations():
-                if info.locked:
+                if not info.locked:
                     unlocked.append(info.text_id)
             return unlocked
         
@@ -383,7 +383,7 @@ init -100 python:
         def get_all_objects_unlocked(self):
             objects_unlocked = []
             for info in self.get_objects():
-                if info.locked:
+                if not info.locked:
                     objects_unlocked.append(info.text_id)
             return objects_unlocked
             
@@ -427,8 +427,8 @@ init -100 python:
                 self.checkpoints.append( Checkpoint(
                         run = 1,
                         position = i_test,
-                        objects = self.get_all_objects_unlocked(),
-                        observations = self.get_all_observations_unlocked(),
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
                         label_id = i_label
                     )
                 )
@@ -444,8 +444,8 @@ init -100 python:
                 new_checkpoint = Checkpoint(
                     run = current_run,
                     position = current_position + 1,
-                    objects = self.get_all_objects_unlocked(), # copy.deepcopy(self.get_objects()),
-                    observations = self.get_all_observations_unlocked(), # copy.deepcopy(self.get_observations()),
+                    objects = copy.deepcopy(self.get_all_objects_unlocked()), 
+                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
                     label_id = label_id
                 )
                 self.checkpoints.append(new_checkpoint)
@@ -462,6 +462,13 @@ init -100 python:
         def has_checkpoint(self, run, position):
             for checkpoint in self.checkpoints:
                 if checkpoint.run == run and checkpoint.position == position:
+                    return True
+            return False
+        
+        # TODO not ok all the time rethink
+        def has_checkpoint_in_column(self, run, position):
+            for checkpoint in self.checkpoints:
+                if checkpoint.run > run and checkpoint.position == position:
                     return True
             return False
 
@@ -481,28 +488,6 @@ init -100 python:
 
         def __str__(self):
             return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
-
-    class Checkpoint():
-        def __init__(
-            self, 
-            run,
-            position,
-            objects,
-            observations,
-            label_id
-        ):
-            self.run = run
-            self.position = position
-            self.objects = objects or []
-            self.observations = observations or []
-            self.created = datetime.now()
-            self.label_id = label_id
-
-        def get_format_created(self):
-            return self.created.strftime("%a %b, %H:%M")
-
-        def __str__(self):
-            return 'Run:' + str(self.run) + '; position:' + str(self.position) + '; objects:' + str(self.objects)
 
     class CharacterInformation:
         def __init__(

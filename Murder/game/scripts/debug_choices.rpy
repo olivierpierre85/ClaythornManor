@@ -49,13 +49,15 @@ label debug_choices:
             $ lad_details.unlock_observation('green_liquid')
             $ lad_details.test_checkpoint()
 
-            $ lad_day2_believe_psychic = True
+            $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
             $ lad_details.unlock_object('gun')
             $ first_death = False
             $ lad_details.unlock_intuition('psychic_poisons')
             $ lad_details.unlock_ending('gunned_down')
+            
             $ lad_details.reset_information()
             $ lad_details.unlock_object('gun')
+
             jump lad_day3_afternoon
 
         # "lad_day3_stay":
