@@ -269,7 +269,8 @@ init -100 python:
             position,
             objects,
             observations,
-            label_id
+            label_id,
+            saved_variables,
         ):
             self.run = run
             self.position = position
@@ -277,6 +278,7 @@ init -100 python:
             self.observations = observations or []
             self.created = datetime.now()
             self.label_id = label_id
+            self.saved_variables = saved_variables
 
         def get_format_created(self):
             # return self.created.strftime("%a %b, %H:%M")

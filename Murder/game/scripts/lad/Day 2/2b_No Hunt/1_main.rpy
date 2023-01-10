@@ -28,7 +28,7 @@ label lad_day2_nohunt:
 
     $ time_left = 240
 
-    call run_menu(lad_map_menu)
+    call run_menu(lad_details.saved_variables["map_menu"])
 
     """
     Suddenly, I hear noises from the entrance hall.

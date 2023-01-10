@@ -432,7 +432,8 @@ init -100 python:
                         position = i_test,
                         objects = copy.deepcopy(self.get_all_objects_unlocked()),
                         observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                        label_id = i_label
+                        label_id = i_label,
+                        saved_variables = current_character.saved_variables
                     )
                 )
                 i_test += 1
@@ -449,7 +450,8 @@ init -100 python:
                     position = current_position + 1,
                     objects = copy.deepcopy(self.get_all_objects_unlocked()), 
                     observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                    label_id = label_id
+                    label_id = label_id,
+                    saved_variables = current_character.saved_variables
                 )
                 self.checkpoints.append(new_checkpoint)
                 current_position = current_position + 1

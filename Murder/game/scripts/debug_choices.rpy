@@ -47,6 +47,7 @@ label debug_choices:
         "lad_day3_afternoon":
             call unlock_psychic 
             $ lad_details.unlock_observation('green_liquid')
+            $ lad_details.saved_variables['library_visited'] = True
             $ lad_details.test_checkpoint()
 
             $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)

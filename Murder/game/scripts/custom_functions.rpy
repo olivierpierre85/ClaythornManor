@@ -111,6 +111,8 @@ label start_again():
 
         for item in current_checkpoint.observations:
             current_character.unlock_observation(item, False)
+        
+        current_character.saved_variables = checkpoint.saved_variables
 
         global has_been_restarted
         has_been_restarted = True

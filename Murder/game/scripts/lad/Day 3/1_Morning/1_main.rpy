@@ -183,7 +183,7 @@ label lad_day3_morning:
 
     $ play_music('sad')
 
-    call run_menu(lad_map_menu)
+    call run_menu(lad_details.saved_variables["map_menu"])
 
     call change_time(11,00)
 
