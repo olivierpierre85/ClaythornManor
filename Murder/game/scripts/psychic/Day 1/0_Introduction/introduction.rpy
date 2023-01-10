@@ -2,7 +2,7 @@ label psychic_introduction:
 
     $ psychic_details.add_checkpoint("psychic_introduction") 
     
-    call change_time(17,00, 'Evening', 'Friday')
+    call change_time(16,30, 'Evening', 'Friday')
 
     scene train_inside
 
@@ -190,9 +190,44 @@ label psychic_introduction:
     Not at all.
     """
 
-    $ time_left = 30
+    $ time_left = 1
 
     call captain_generic
 
-    #
+    # Arrival to manor
+    stop music fadeout 3.0
+    
+    play sound thunder loop
+    
+    scene manor_exterior
+
+    """
+    After what seems to be an eternity, a impressive manor appears on the horizon.
+
+    It finally shut down Mister Sinha.
+    """
+
+    captain """
+    Oh, it looks like we are arriving at our destination.
+
+    What a magnificent home.
+    """
+
+
+    """
+
+    He is right, it it beautiful.
+
+    But the storm that has fallen upon us gave it something of a sinister look.
+
+    Nevertheless, it's appearance reassures me.
+
+    With such a house, our host has to be someone really wealthy.
+
+    Now I can finally relax, knowing that everything will be fine here.
+    """
+
+    stop sound
+    
+    jump psychic_day1_arrival
 

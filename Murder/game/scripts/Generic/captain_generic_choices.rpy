@@ -7,18 +7,18 @@ label captain_generic:
 
     if not 'captain_generic_menu' in locals():
         $ captain_generic_menu = TimedMenu([
-            TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
-            TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
-            TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_sunday', 5, condition = "current_day == 'Sunday'"),
-            TimedMenuChoice('Tell me more about yourself.', 'captain_generic_background', 15),
-            TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act', 20, condition = "captain_details.is_knowledge_unlocked('background')"),
-            TimedMenuChoice('What do you think of this place?', 'captain_generic_manor', 10),
+            # TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
+            # TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
+            # TimedMenuChoice('What do you think of this weather?', 'captain_generic_weather_sunday', 5, condition = "current_day == 'Sunday'"),
+            # TimedMenuChoice('Tell me more about yourself.', 'captain_generic_background', 15),
+            # TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act', 20, condition = "captain_details.is_knowledge_unlocked('background')"),
+            # TimedMenuChoice('What do you think of this place?', 'captain_generic_manor', 10),
             TimedMenuChoice('Where are you from?', 'captain_generic_origin', 5),
-            TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = "not is_unlock_map('captain_room')"),
-            TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = "current_day == 'Friday'"),
-            TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
-            TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Hunt')"),
-            TimedMenuChoice('You don\'t have anymore questions for her', 'captain_generic_cancel', 0, keep_alive = True, early_exit = True)
+            # TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = "not is_unlock_map('captain_room')"),
+            # TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = "current_day == 'Friday'"),
+            # TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
+            # TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Hunt')"),
+            # TimedMenuChoice('You don\'t have anymore questions for her', 'captain_generic_cancel', 0, keep_alive = True, early_exit = True)
         ], image_right = "captain")
     else:
         # Reset if previous early exit
@@ -96,7 +96,25 @@ label captain_generic_origin:
 
         captain """
         In North India yes.
+
+        I was born there.
+
+        TODO long story
         """
+
+        """
+        My god, he is ready to tell me his whole life story.
+
+        How rude.
+
+        And there is no way to avoid him here.
+
+        So I nod in assent and barely listens to what he is saying.
+        """
+
+        $ captain_details.unlock_knowledge('talker') 
+
+
 
     return
     

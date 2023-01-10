@@ -33,7 +33,7 @@ label captain_introduction:
     captain """
     Excuse me young man. 
     
-    How you working for Lady Claythorn?
+    Are you working for Lady Claythorn?
     """
 
     footman """
@@ -55,15 +55,13 @@ label captain_introduction:
     """
 
     """
-    After a while an older lady joins me.
+    After a while an older lady named Amelia Baxter joins us.
 
-    Then inebriated gentleman erupts from the train at the last minute.
+    Then, an inebriated gentleman erupts from the train at the last minute.
 
-    I am surprised that is also a guest.
+    I am surprised that he is also a guest.
 
-    When we reach the car, I quickly sit with the older Lady to avoid an accident.
-
-    Then we left.
+    When we reach the car, I quickly sit with miss Baxter.
     """
 
     scene inside_car
@@ -73,12 +71,14 @@ label captain_introduction:
 
     So I have only the older lady to make conversation with.
 
-    She asked me a few questions, some of them borderline racist.
+    She asked me a few questions. Some of them have a tinge of racism to them.
 
-    It would be impolite not to ask something in return.
+    Sadly, it's something I am too familiar with, so I say nothing.
+
+    No matter how I feel, I have learned it's better to stay polite.
+
+    But to avoid another inappropriate question, I decide to monopolize the conversation while we stay in the car.
+
+    Let's see how she likes it be forced to listen to something she doesn't want to.
     """
-
-    $ time_left = 30
-
-    call psychic_generic
 

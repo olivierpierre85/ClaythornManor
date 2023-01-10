@@ -65,6 +65,9 @@ label debug_choices:
         #     jump lad_day3_stay
         "psychic_introduction":
             jump psychic_introduction
+        
+        "captain_introduction":
+            jump captain_introduction
 
 
     return

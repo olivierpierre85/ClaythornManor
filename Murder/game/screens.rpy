@@ -221,10 +221,11 @@ screen choice(items):
                 
             if i.chosen:
                 textbutton btn_text:
+                    mouse "hover"
                     action i.action
                     text_color gui.insensitive_color
             else:
-                textbutton btn_text action i.action
+                textbutton btn_text mouse "hover" action i.action
             
 
 
