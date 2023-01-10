@@ -2,6 +2,7 @@ label init_storylines:
     $ current_storyline = current_character
     return
 
+# TODO change size in png gimp
 transform character_storyline:
     zoom 0.4
 

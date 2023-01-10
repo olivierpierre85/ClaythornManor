@@ -19,7 +19,7 @@ label lad_library:
     """
     # TODO add info on BOOK ???
 
-    $ lad_library_visited = True
+    $ lad_details.saved_variables["library_visited"] = True
 
     return
 
