@@ -3,6 +3,8 @@ label init_lad:
 
     python:
         # Story Variables
+        lad_saved_variables = dict()
+        
         lad_library_visited = False
         lad_has_met_maid = False
         psychic_generic_other_guests_saturday_morning_ask = False
@@ -56,6 +58,7 @@ label init_lad:
             description_short = "Young man",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
+            saved_variables = lad_saved_variables
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 

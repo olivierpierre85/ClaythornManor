@@ -209,14 +209,23 @@ screen choice(items):
 
     vbox:
         for i in items:
+
             if "{{intuition}}" in i.caption:
-                textbutton i.caption.replace("{{intuition}}", "" ) + " {image=images/ui/intuition_icon.png}" action i.action
+                $ btn_text = i.caption.replace("{{intuition}}", "" ) + " {image=images/ui/intuition_icon.png}" 
             elif "{{observation}}" in i.caption:
-                textbutton i.caption.replace("{{observation}}", "" ) + " {image=images/ui/observation_icon.png}" action i.action
+                $ btn_text = i.caption.replace("{{observation}}", "" ) + " {image=images/ui/observation_icon.png}"
             elif "{{object}}" in i.caption:
-                textbutton i.caption.replace("{{object}}", "" ) + " {image=images/ui/objects_icon.png}" action i.action
+                $ btn_text = i.caption.replace("{{object}}", "" ) + " {image=images/ui/objects_icon.png}"
             else:
-                textbutton i.caption action i.action
+                $ btn_text = i.caption
+                
+            if i.chosen:
+                textbutton btn_text:
+                    action i.action
+                    text_color gui.insensitive_color
+            else:
+                textbutton btn_text action i.action
+            
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,

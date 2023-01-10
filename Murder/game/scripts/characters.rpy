@@ -202,13 +202,14 @@ init -100 python:
         def __init__(
             self, 
             text_id,
+            information_list,            
+            saved_variables = dict(),
             locked = True,
             know_real_name = True,
             real_name = "",
             nickname = "",
             description_short = "",
-            description_long = "",
-            information_list = []
+            description_long = ""            
         ):
             self.text_id = text_id
             self.locked = locked
@@ -217,8 +218,10 @@ init -100 python:
             self.nickname = nickname
             self.description_short = description_short
             self.description_long = description_long
-            self.information_list = information_list
+            self.information_list = information_list or []
+            self.saved_variables = saved_variables or dict()
             self.checkpoints = []
+            
 
         def get_name(self):
             # if self.know_real_name:
