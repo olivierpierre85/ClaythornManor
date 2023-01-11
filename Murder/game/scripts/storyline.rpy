@@ -10,7 +10,6 @@ transform character_storyline:
 screen storyline:
     tag menu
 
-    $ print(current_checkpoint)
     ## TODO OLPI Add a image of the map
     ## add text with explanation of previously visited rooms if needed (You visited this place already, no action?)
     use game_menu(_("Storyline"), scroll="fixed"):
@@ -151,9 +150,10 @@ screen storyline:
                 if current_checkpoint:
                     vbox:
                         ysize 65
-                        hbox:
-                            # TODO should also be in one                 
+                        hbox:            
                             text current_checkpoint.debug_string() # + " " str(current_checkpoint.position) + " "
+                            # $ test_menu = str(current_checkpoint.saved_variables["psychic_generic_menu"])
+                            # text test_menu
                             imagebutton: 
                                 yalign 0.5
                                 mouse "hover"

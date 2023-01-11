@@ -12,11 +12,11 @@ label debug_choices:
         # "lad_day1_arrival":
         #     jump lad_day1_arrival
 
-        # "lad_day2_dinner":
-        #     jump lad_day1_dinner
+        "lad_day2_dinner":
+            jump lad_day1_dinner
         
-        "lad_day1_evening":
-            jump lad_day1_evening
+        # "lad_day1_evening":
+        #     jump lad_day1_evening
 
         # "lad_day2_morning":
         #     jump lad_day2_morning
@@ -65,6 +65,7 @@ label debug_choices:
         #     $ lad_details.unlock_intuition('psychic_poisons')
         #     jump lad_day3_stay
         "psychic_introduction":
+            $ current_character = psychic_details
             jump psychic_introduction
         
         "captain_introduction":

@@ -2,11 +2,15 @@ label init_lad:
     call change_time(17,00, 'Evening', 'Friday')
 
     call lad_config_map
+    
+    call lad_config_menu
 
     python:
         # Story Variables
         lad_saved_variables = {
             "map_menu" : lad_map_menu,
+            "psychic_generic_menu" : psychic_generic_menu_lad,
+            # "doctor_generic_menu" : doctor_generic_menu
             "library_visited" : False
         }
 

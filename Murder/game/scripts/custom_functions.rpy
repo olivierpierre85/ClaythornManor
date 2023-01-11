@@ -104,15 +104,15 @@ label start_again():
         # Reset object, observation, choices...
         current_character.reset_information()
 
-        # TODO hide notifications in unlock
         # re run objects and observations from checkpoint
         for item in current_checkpoint.objects:
             current_character.unlock_object(item, False)
 
         for item in current_checkpoint.observations:
             current_character.unlock_observation(item, False)
-        
-        current_character.saved_variables = checkpoint.saved_variables
+
+        # current_character.saved_variables = dict()
+        current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 
         global has_been_restarted
         has_been_restarted = True

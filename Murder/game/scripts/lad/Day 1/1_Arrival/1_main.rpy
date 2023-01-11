@@ -1,6 +1,6 @@
 # --------------------------------------------
 #               Ted Harring
-#           Friday 18:10 Arrival
+#           Friday 18:10 Arrival/Afternoon
 #
 #   Alive: Everyone
 label lad_day1_arrival:
@@ -10,6 +10,7 @@ label lad_day1_arrival:
     call black_screen_transition("Ted Harring", "Friday")
 
     $ change_room('great_hall', irisout)
+
     
     call change_time(18,10, 'Arrival', 'Friday')
 
@@ -115,6 +116,8 @@ label lad_day1_arrival:
     """
     
     $ time_left = 30 
+    $ print('TEST psychic generic -2')
+    $ print(current_character.saved_variables["psychic_generic_menu"])
     
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
@@ -148,6 +151,8 @@ label lad_day1_arrival:
 
 
 label lad_day1_drinks_psychic:
+    $ print('TEST psychic generic -1')
+    $ print(current_character.saved_variables["psychic_generic_menu"])
 
     """
     I am approaching the middle-aged lady.

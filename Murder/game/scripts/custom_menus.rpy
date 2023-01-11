@@ -161,6 +161,13 @@ init -1 python:
 
             return selected_choice
 
+        def __str__(self):
+            menu_str = ""
+            for choice in self.choices:
+                if not choice.hidden and ((not choice.condition) or eval(choice.condition)):
+                    menu_str += choice.text + "\n"
+            return menu_str
+
     class Room:
         def __init__(
             self, 
