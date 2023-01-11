@@ -66,7 +66,7 @@ label lad_config_map:
                 'Go back to the Tea Room', 
                 'lad_day2_hunt_tea_room_return',  
                 room = 'tea_room',
-                condition = condition_hunt + " and " + "lad_day2_nohunt_has_visited_tea_room",
+                condition = condition_hunt + " and " + "lad_details.saved_variables['day2_nohunt_has_visited_tea_room']",
                 keep_alive = True, 
             ),
             TimedMenuChoice(
@@ -121,7 +121,7 @@ label lad_config_map:
                 'lad_day2_broken_room_back', 
                 10, 
                 room = 'broken_room',
-                condition = "lad_day2_evening_taste_from_flask"
+                condition = 'lad_details.saved_variables["day2_evening_taste_from_flask"]'
             ),
             # -------------------------
             # Sunday Search
@@ -215,7 +215,7 @@ label lad_config_map:
                 'lad_day3_morning_give_up', 
                 early_exit = True, 
                 room = 'tea_room', 
-                condition = "lad_day3_morning_captain_found"
+                condition = 'lad_details.saved_variables["day3_morning_captain_found"]'
             ),
             # -------------------------
             # Generic choices

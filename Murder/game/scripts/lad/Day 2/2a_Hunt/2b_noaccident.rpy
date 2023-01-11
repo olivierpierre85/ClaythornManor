@@ -112,6 +112,6 @@ label lad_day2_hunt_noaccident:
 
     pause 2.0
 
-    $ lad_day2_saw_accident = True
+    $ lad_details.saved_variables["day2_saw_accident"] = True
 
     return

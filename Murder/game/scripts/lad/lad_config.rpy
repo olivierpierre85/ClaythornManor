@@ -9,36 +9,38 @@ label init_lad:
         # Story Variables
         lad_saved_variables = {
             "map_menu" : lad_map_menu,
+
             "psychic_generic_menu" : psychic_generic_menu_lad,
             "psychic_generic_other_guests_menu": psychic_generic_other_guests_menu_lad,
+
             "doctor_generic_menu" : doctor_generic_menu_lad,
             "doctor_generic_other_guests_menu": doctor_generic_other_guests_menu_lad,
-            "library_visited" : False
+
+            "library_visited" : False,
+            "has_met_maid" : False,
+            "psychic_generic_other_guests_saturday_morning_ask" : False,
+
+            "day1_evening_billiard_room_visited" : False,
+            "day1_drinks" : 0,
+            "day1_poisoned" : False,
+            "day1_drunk" : False, # Means he drank poison, but rejected it (used again on day 2 evening with the captain)
+            
+            "day2_breakfast_follow" : False,
+            "day2_hunt" : False,
+            "day2_saw_accident" : False,
+            "day2_evening_billiard_room_visited" : False,
+            "day2_nohunt_has_visited_tea_room" : False,
+            "day2_believe_psychic" : False,
+            "day2_drinks" : 0,
+            "day2_drunk" : False,
+            "day2_evening_billiard_room_captain_talked" : False,
+            "day2_evening_taste_from_flask" : False,
+            "day2_poisoned" : False,
+
+            "day3_morning_captain_found" : False,
+            "day3_ending" : "",
+            "day3_seen_car" : False,
         }
-
-        lad_has_met_maid = False
-        psychic_generic_other_guests_saturday_morning_ask = False
-
-        lad_day1_evening_billiard_room_visited = False
-        lad_day1_drinks = 0
-        lad_day1_poisoned = False
-        lad_day1_drunk = False # Means he drank poison, but rejected it (used again on day 2 evening with the captain)
-
-        lad_day2_breakfast_follow = False
-        lad_day2_hunt = False
-        lad_day2_saw_accident = False
-        lad_day2_evening_billiard_room_visited = False
-        lad_day2_nohunt_has_visited_tea_room = False
-        lad_day2_believe_psychic = False
-        lad_day2_drinks = 0
-        lad_day2_drunk = False
-        lad_day2_evening_billiard_room_captain_talked = False
-        lad_day2_evening_taste_from_flask = False
-        lad_day2_poisoned = False
-
-        lad_day3_morning_captain_found = False
-        lad_day3_ending = ""
-        lad_day3_seen_car = False
 
         # Character Class
         lad_extra_information = [

@@ -2,9 +2,9 @@ label lad_day2_evening_billiard_room:
 
     $ change_room('billiard_room')
 
-    if not lad_day2_evening_billiard_room_visited:
+    if not lad_details.saved_variables["day2_evening_billiard_room_visited"]:
 
-        $ lad_day2_evening_billiard_room_visited = True
+        $ lad_details.saved_variables["day2_evening_billiard_room_visited"] = True
 
         """
         As I expected, not a lot of people are there.
@@ -16,11 +16,11 @@ label lad_day2_evening_billiard_room:
 
         $ lad_day2_evening_billiard_room_menu = TimedMenu([
             TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain', 20),
-            TimedMenuChoice('Talk again to Sushil Sinha', 'lad_day2_evening_billiard_room_captain_2', condition="lad_day2_evening_billiard_room_captain_talked == True"),
+            TimedMenuChoice('Talk again to Sushil Sinha', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] == True'),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day2_evening_billiard_room_bar', 10),
-            TimedMenuChoice('Have another drink, for the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_day2_drinks == 1'),
-            TimedMenuChoice('I think I still need of few more drinks', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_day2_drinks == 2'),
-            TimedMenuChoice('Oh what the hell, maybe I should just get plastered', 'lad_day2_evening_billiard_room_bar_4', 120, condition = 'lad_day2_drinks == 3'),
+            TimedMenuChoice('Have another drink, for the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_details.saved_variables["day2_drinks"] == 1'),
+            TimedMenuChoice('I think I still need of few more drinks', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_details.saved_variables["day2_drinks"] == 2'),
+            TimedMenuChoice('Oh what the hell, maybe I should just get plastered', 'lad_day2_evening_billiard_room_bar_4', 120, condition = 'lad_details.saved_variables["day2_drinks"] == 3'),
             TimedMenuChoice('Leave the room', 'lad_day2_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -78,7 +78,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
     And then I suppose he drank more during the hunt.
     """
 
-    if lad_day2_saw_accident:
+    if lad_details.saved_variables["day2_saw_accident"]:
 
         captain """
         You were there with him right?
@@ -129,7 +129,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
     So I wouldn't scream poison next time you see a green drink.
     """
 
-    if not lad_day1_drunk:
+    if not lad_details.saved_variables["day1_drunk"]:
 
         captain """
         Of course, if you had tasted the drink it would another matter.
@@ -147,7 +147,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
         But I bet they won't find anything out the ordinary.
         """
 
-        $ lad_day2_evening_taste_from_flask = True
+        $ lad_details.saved_variables["day2_evening_taste_from_flask"] = True
 
     else:
         # TODO ONLY POSSIBLE WAY TO MAKE THE CAPTAIN SUSPICIOUS ??WHAT TO MALE of it now?
@@ -273,7 +273,7 @@ label lad_day2_evening_billiard_room_captain:
     Of course.
     """
 
-    $ lad_day2_evening_billiard_room_captain_talked = True
+    $ lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] = True
 
     return
 
@@ -284,7 +284,7 @@ label lad_day2_evening_billiard_room_bar:
     There is not much of choice of drinks. So I drink a glass of sherry.
     """
 
-    $ lad_day2_drinks = lad_day2_drinks + 1
+    $ lad_details.saved_variables["day2_drinks"] = lad_details.saved_variables["day2_drinks"] + 1
 
     return
 
@@ -298,7 +298,7 @@ label lad_day2_evening_billiard_room_bar_2:
     So I pour myself another sherry.
     """
 
-    $ lad_day2_drinks = lad_day2_drinks + 1
+    $ lad_details.saved_variables["day2_drinks"] = lad_details.saved_variables["day2_drinks"] + 1
 
     return
 
@@ -335,7 +335,7 @@ label lad_day2_evening_billiard_room_bar_3:
     Maybe he is right.
     """
 
-    $ lad_day2_drinks = lad_day2_drinks + 1
+    $ lad_details.saved_variables["day2_drinks"] = lad_details.saved_variables["day2_drinks"] + 1
 
     return
 
@@ -351,8 +351,8 @@ label lad_day2_evening_billiard_room_bar_4:
     Beside, one more can't hurt.
     """
 
-    $ lad_day2_drunk = True
-    $ lad_day2_poisoned = False
+    $ lad_details.saved_variables["day2_drunk"] = True
+    $ lad_details.saved_variables["day2_poisoned"] = False
 
     return
 

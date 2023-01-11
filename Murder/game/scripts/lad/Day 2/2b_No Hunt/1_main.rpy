@@ -45,7 +45,7 @@ label lad_day2_broken_room:
 
     $ change_room('broken_room')
 
-    if lad_day2_breakfast_follow:
+    if lad_details.saved_variables["day2_breakfast_follow"]:
 
         """
         The poor man is still there. I don't think he moved.

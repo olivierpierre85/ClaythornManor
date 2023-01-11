@@ -130,7 +130,7 @@ label lad_day3_morning_captain_room:
     See you then.
     """
 
-    $ lad_day3_morning_captain_found = True
+    $ lad_details.saved_variables["day3_morning_captain_found"] = True
 
     return 
 
@@ -207,7 +207,7 @@ label lad_day3_morning_drunk_room:
     scene hallway
 
     # # TODO without captain, not possible,
-    # if not lad_day3_morning_captain_found:
+    # if not lad_details.saved_variables["day3_morning_captain_found"]:
 
     psychic """
     It's Samuel Manning room.

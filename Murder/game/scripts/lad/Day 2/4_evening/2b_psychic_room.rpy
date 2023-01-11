@@ -75,7 +75,7 @@ label lad_day2_believe_psychic:
 
     call psychic_generic
 
-    $ lad_day2_believe_psychic = True
+    $ lad_details.saved_variables["day2_believe_psychic"] = True
 
     return
 

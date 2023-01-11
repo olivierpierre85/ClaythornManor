@@ -20,7 +20,7 @@ label lad_day3_morning_kitchen:
 
     $ change_room('kitchen')
 
-    if lad_day2_believe_psychic:
+    if lad_details.saved_variables["day2_believe_psychic"]:
         psychic """
         You see.
 
@@ -201,6 +201,6 @@ label lad_day3_morning_garage:
 
     $ lad_details.unlock_knowledge('drive')
 
-    $ lad_day3_seen_car = True
+    $ lad_details.saved_variables["day3_seen_car"] = True
 
     return

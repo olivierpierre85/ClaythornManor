@@ -6,7 +6,7 @@ label lad_day3_morning:
 
     $ change_room('lad_room', irisout)
 
-    if lad_day2_believe_psychic:
+    if lad_details.saved_variables["day2_believe_psychic"]:
         call change_time(8,00, "Morning", "Sunday")
         # You talked to and believed psychic
         # So she came to wake you at dawn
@@ -22,7 +22,7 @@ label lad_day3_morning:
 
     play sound door_knock
 
-    if lad_day2_drunk:
+    if lad_details.saved_variables["day2_drunk"]:
             """
             My head hurts like crazy.
 
@@ -33,7 +33,7 @@ label lad_day3_morning:
     Mister Harring are you there ?
     """
     
-    if lad_day2_believe_psychic:
+    if lad_details.saved_variables["day2_believe_psychic"]:
 
         """
         Miss Baxter ?
@@ -176,7 +176,7 @@ label lad_day3_morning:
         So first we go to ...
         """
     
-    if lad_day2_believe_psychic:
+    if lad_details.saved_variables["day2_believe_psychic"]:
         $ time_left = 150
     else:
         $ time_left = 90

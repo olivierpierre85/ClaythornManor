@@ -11,7 +11,7 @@ label downstairs_default:
     if current_character.text_id == "lad":
         lad "Oh I am sorry, I didn't know."
 
-        $ lad_has_met_maid = True
+        $ lad_details.saved_variables["has_met_maid"] = True
 
     return
 

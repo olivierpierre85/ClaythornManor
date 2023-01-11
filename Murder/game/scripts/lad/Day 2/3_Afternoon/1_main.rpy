@@ -8,7 +8,7 @@ label lad_day2_afternoon:
 
     $ change_room("great_hall", irisout)
     
-    if lad_day2_hunt:
+    if lad_details.saved_variables["day2_hunt"]:
 
         """
         The rest happened so fast, it felt like a blur for me.

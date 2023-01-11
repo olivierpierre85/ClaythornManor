@@ -225,7 +225,7 @@ label lad_day3_afternoon_toilet:
     I fall on the ground.
     """
 
-    $ lad_day3_ending = "poisoned"
+    $ lad_details.saved_variables["day3_ending"] = "poisoned"
 
     
 
@@ -469,7 +469,7 @@ label lad_day3_afternoon_no_toilet:
     If I can fell slowly I can ...
     """
 
-    $ lad_day3_ending = "fell"
+    $ lad_details.saved_variables["day3_ending"] = "fell"
 
     stop sound
 

@@ -6,7 +6,7 @@ label lad_day2_hunt:
 
     call change_time(11,00, 'Hunt', 'Saturday')
 
-    $ lad_day2_hunt = True
+    $ lad_details.saved_variables["day2_hunt"] = True
 
     """
     Well I don't know if it's my best idea.

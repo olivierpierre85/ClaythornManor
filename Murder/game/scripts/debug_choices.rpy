@@ -41,7 +41,7 @@ label debug_choices:
         #     jump lad_day2_evening
 
         # "lad_day3_morning":
-        #     $ lad_day2_believe_psychic = True
+        #     $ lad_details.saved_variables["day2_believe_psychic"] = True
         #     jump lad_day3_morning
         
         "lad_day3_afternoon":

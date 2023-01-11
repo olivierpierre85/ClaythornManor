@@ -54,7 +54,7 @@ label init_technical_variables:
     define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]
     python:
         # Technical Variables
-        test_mode = False
+        test_mode = True
 
         if test_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")

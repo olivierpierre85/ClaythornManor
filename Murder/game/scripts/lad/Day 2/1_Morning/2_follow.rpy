@@ -1,6 +1,6 @@
 label lad_day2_breakfast_follow:
 
-    $ lad_day2_breakfast_follow  = True
+    $ lad_details.saved_variables["day2_breakfast_follow"]  = True
 
     scene hallway
 

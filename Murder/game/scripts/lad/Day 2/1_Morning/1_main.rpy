@@ -17,7 +17,7 @@ label lad_day2_morning:
     """
 
 
-    if lad_day1_drunk :
+    if lad_details.saved_variables["day1_drunk"] :
         """
         Oh my god my head hurts.
 
@@ -64,7 +64,7 @@ label lad_day2_morning:
     I nod. Not sure what to say.
     """
 
-    if lad_day1_drinks > 0:
+    if lad_details.saved_variables["day1_drinks"] > 0:
 
         "I look around the room."
 
@@ -126,7 +126,7 @@ label lad_day2_morning:
 
     call change_time(9,30) #Needed ?
 
-    if lad_day2_breakfast_follow:
+    if lad_details.saved_variables["day2_breakfast_follow"]:
 
         """
         As we entered the dining room again, the host just finished explaining the situation.

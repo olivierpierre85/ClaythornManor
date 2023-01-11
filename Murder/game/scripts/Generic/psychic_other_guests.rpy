@@ -22,13 +22,13 @@ label psychic_generic_other_guests_saturday_morning:
 
     call psychic_generic_other_guests
 
-    $ psychic_generic_other_guests_saturday_morning_ask = True
+    $ lad_details.saved_variables["psychic_generic_other_guests_saturday_morning_ask"] = True
 
     return
 
 label psychic_generic_other_guests_saturday_hunt:
 
-    if not psychic_generic_other_guests_saturday_morning_ask:
+    if not lad_details.saved_variables["psychic_generic_other_guests_saturday_morning_ask"]:
 
         call psychic_generic_other_guests_saturday
 

@@ -94,7 +94,7 @@ label lad_day2_evening:
 
     stop music fadeout 5.0
 
-    if lad_day2_drunk:
+    if lad_details.saved_variables["day2_drunk"]:
 
         """
         Gee, I am not thinking straight.
@@ -110,7 +110,7 @@ label lad_day2_evening:
         I better go to bed now.
         """
 
-        if lad_day1_drunk:
+        if lad_details.saved_variables["day1_drunk"]:
             """
             Alright, two days in a row.
 

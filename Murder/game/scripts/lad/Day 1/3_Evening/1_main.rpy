@@ -56,7 +56,7 @@ label lad_day1_evening:
 
     stop music fadeout 5.0
 
-    if lad_day1_drunk:
+    if lad_details.saved_variables["day1_drunk"]:
         """
         Wow I don't feel great.
 
@@ -77,7 +77,7 @@ label lad_day1_evening:
 
     $ change_room('lad_room')
 
-    if lad_day1_drunk:
+    if lad_details.saved_variables["day1_drunk"]:
 
         """
         I rush to my room.
@@ -101,7 +101,7 @@ label lad_day1_evening:
         I fall asleep almost instantly.
         """
 
-    if lad_day1_poisoned:
+    if lad_details.saved_variables["day1_poisoned"]:
 
         jump lad_ending_day1_poisoned
 

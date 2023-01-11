@@ -77,7 +77,7 @@ label lad_day2_hunt_tea_room:
     Well, she have staff to deal with that sort of things.
     """
 
-    if lad_has_met_maid:
+    if lad_details.saved_variables["has_met_maid"]:
 
         lad """
         Oh right, like the girl I met trying to go downstairs.
@@ -199,7 +199,7 @@ label lad_day2_hunt_tea_room:
     It looks it's just you and me Mister Harring.
     """
 
-    $ lad_day2_nohunt_has_visited_tea_room = True
+    $ lad_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
 
     call psychic_generic
 

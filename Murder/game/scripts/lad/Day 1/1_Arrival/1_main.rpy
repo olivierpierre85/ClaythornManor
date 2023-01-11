@@ -151,8 +151,6 @@ label lad_day1_arrival:
 
 
 label lad_day1_drinks_psychic:
-    $ print('TEST psychic generic -1')
-    $ print(current_character.saved_variables["psychic_generic_menu"])
 
     """
     I am approaching the middle-aged lady.

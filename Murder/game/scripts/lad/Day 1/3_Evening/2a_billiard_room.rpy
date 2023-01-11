@@ -5,9 +5,9 @@ label lad_day1_evening_billiard_room:
     # Change menu text TODO too dangerous, see at the end we want to keep that
     # $ lad_day1_evening_menu.choices[1].text = "Go back to the billiard room"
 
-    if not lad_day1_evening_billiard_room_visited:
+    if not lad_details.saved_variables["day1_evening_billiard_room_visited"]:
 
-        $ lad_day1_evening_billiard_room_visited = True
+        $ lad_details.saved_variables["day1_evening_billiard_room_visited"] = True
 
         """
         Almost everyone I saw at dinner is here.
@@ -29,8 +29,8 @@ label lad_day1_evening_billiard_room:
             # TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
             # TimedMenuChoice('Ask the butler about our Lady Claythorn room', 'lad_day1_evening_billiard_room_butler', 20),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day1_evening_billiard_room_bar_1', 20),
-            TimedMenuChoice('Have another drink', 'lad_day1_evening_billiard_room_bar_2', 20, condition = 'lad_day1_drinks == 1'),
-            TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 120, condition = 'lad_day1_drinks == 2'),
+            TimedMenuChoice('Have another drink', 'lad_day1_evening_billiard_room_bar_2', 20, condition = 'lad_details.saved_variables["day1_drinks"] == 1'),
+            TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 120, condition = 'lad_details.saved_variables["day1_drinks"] == 2'),
             TimedMenuChoice('Leave the room', 'lad_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -112,8 +112,8 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     #TODO if needed for the story about drunk and puking ADD here that the drunk asks for a drink
-    $ lad_day1_poisoned = True
-    $ lad_day1_drinks = lad_day1_drinks + 1
+    $ lad_details.saved_variables["day1_poisoned"] = True
+    $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
 
     broken """
     Cheers Mister Harring. Now if you don't mind, I'll see what this group is talking about.
@@ -186,7 +186,7 @@ label lad_day1_evening_billiard_room_bar_2:
     So I decide to go back to the bar and pour myself a sherry.
     """
 
-    $ lad_day1_drinks = lad_day1_drinks + 1
+    $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
 
     return
 
@@ -210,8 +210,8 @@ label lad_day1_evening_billiard_room_bar_3:
     And an other, ...
     """
 
-    $ lad_day1_poisoned = False
-    $ lad_day1_drunk = True
+    $ lad_details.saved_variables["day1_poisoned"] = False
+    $ lad_details.saved_variables["day1_drunk"] = True
     # TODO add blur effect if drunk, puke noise... Or just black out 
 
     return
