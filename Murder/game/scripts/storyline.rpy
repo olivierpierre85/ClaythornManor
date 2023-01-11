@@ -57,48 +57,59 @@ screen storyline:
                     
                     yoffset 20
                     ysize 550
+                    $ checkpoint_x = 170
                     vbox:
-                        grid 9 current_storyline.get_max_run() + 1:
-                            # spacing 70
-                            xfill True
+                        hbox:
                             # TITLES
                             vbox:
+                                xminimum checkpoint_x
                                 text "Friday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
                                 text "Start" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
+                                xminimum checkpoint_x
                                 text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
+                                xminimum checkpoint_x
                                 text "" font gui.name_text_font
                                 text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
+                                xminimum checkpoint_x
                                 text "Saturday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
                                 text "Morning" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
+                                xminimum checkpoint_x
                                 text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
+                                xminimum checkpoint_x
                                 text "" font gui.name_text_font
                                 text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
+                                xminimum checkpoint_x
                                 text "Sunday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
                                 text "Morning" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
+                                xminimum checkpoint_x
                                 text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
                             vbox:
+                                xminimum checkpoint_x/2
                                 text "" font gui.name_text_font
 
-                            # Checkpoints CONTENT TODO clean +1 etc,...
-                            for j in range(current_storyline.get_max_run()):
-                                for i in range(9):
+                        for j in range(current_storyline.get_max_run() + 1):
+                            for i in range(9):
+                                hbox:
+                                # grid 9 current_storyline.get_max_run() + 1:
+                                    # spacing 70
+                                    xfill True
                                     if current_storyline.has_checkpoint(j+1, i+1):
                                         if current_storyline.get_checkpoint(j+1, i+1).ending:
                                             imagebutton:
