@@ -215,7 +215,6 @@ label psychic_introduction:
 
 
     """
-
     He is right, it it beautiful.
 
     But the storm that has fallen upon us gave it something of a sinister look.
@@ -224,10 +223,20 @@ label psychic_introduction:
 
     With such a house, our host has to be someone really wealthy.
 
-    Now I can finally relax, knowing that everything will be fine here.
+    Now I can finally relax. Everything will be fine here.
     """
 
     stop sound
+
+    pause 1.0
+
+    """
+    The three of us walked towards the entrance while the drive takes care our luggage.
+
+    Samuel Manning woke when the car stopped. He looks a tad better than earlier.
+
+    When we reach the main door, a butler greets us.
+    """
     
     jump psychic_day1_arrival
 

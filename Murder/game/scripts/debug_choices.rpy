@@ -64,13 +64,16 @@ label debug_choices:
         # "lad_day3_stay":
         #     $ lad_details.unlock_intuition('psychic_poisons')
         #     jump lad_day3_stay
-        "psychic_introduction":
-            $ current_character = psychic_details
-            jump psychic_introduction
+        # "psychic_introduction":
+        #     $ current_character = psychic_details
+        #     jump psychic_introduction
         
-        "captain_introduction":
-            jump captain_introduction
+        # "captain_introduction":
+        #     jump captain_introduction
 
+        "psychic_day1_arrival":
+            $ current_character = psychic_details
+            jump psychic_day1_arrival
 
     return
 
