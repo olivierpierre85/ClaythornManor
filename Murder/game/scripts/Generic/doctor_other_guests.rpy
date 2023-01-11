@@ -1,3 +1,9 @@
+label doctor_generic_other_guests:
+
+    call run_menu(current_character.saved_variables["doctor_generic_other_guests_menu"])
+
+    return
+
 label doctor_generic_other_guests_friday:
     
     doctor """
@@ -21,18 +27,6 @@ label doctor_generic_other_guests_saturday:
     
     So I don't really have an opinion on the guests.
     """
-
-    return
-
-label doctor_generic_other_guests:
-
-    if not 'doctor_generic_other_guests_menu' in locals():
-        $ doctor_generic_other_guests_menu = TimedMenu([
-            TimedMenuChoice('What about Samuel Manning?', 'doctor_generic_drunk', 5),
-            TimedMenuChoice('I want to talk about something else.', 'doctor_generic_cancel', 0, keep_alive = True, early_exit = True)
-        ], image_right = "doctor")
-
-    call run_menu(doctor_generic_other_guests_menu)
 
     return
 

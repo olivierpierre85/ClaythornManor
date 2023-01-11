@@ -1,25 +1,6 @@
 label psychic_generic_other_guests:
 
-    $ condition_saturday_morning = "(current_day == 'Saturday' and current_phase == 'Morning')"
-    $ condition_saturday_morning_or_hunt = "(current_day == 'Saturday' and (current_phase == 'Morning' or current_phase == 'Hunt'))"
-    $ condition_saturday_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
-
-    if not 'psychic_generic_other_guests_menu' in locals():
-        $ psychic_generic_other_guests_menu = TimedMenu([
-            # Saturday Morning
-            TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk_saturday_morning', 5, condition = condition_saturday_morning_or_hunt ),
-            TimedMenuChoice('Ask about Sushil Sinha', 'psychic_generic_captain_saturday_morning', 5, condition = condition_saturday_morning_or_hunt),
-            TimedMenuChoice('Ask about Lady Claythorn', 'psychic_generic_host_saturday_morning', 5, condition = condition_saturday_morning_or_hunt),
-            TimedMenuChoice('Ask about Rosalind Marsh', 'psychic_generic_nurse_saturday_hunt', 5, condition = condition_saturday_hunt),
-
-            # TimedMenuChoice('Ask about Thomas Moody', 'psychic_generic_broken_saturday_morning', 5, condition = "current_day == 'Saturday' and current_phase=='Morning'"),
-            # TimedMenuChoice('Ask about Rosalind Marsh', 'psychic_generic_nurse_saturday_morning', 5, condition = "current_day == 'Saturday' and current_phase=='Morning'"),
-            # TimedMenuChoice('Ask about Daniel Baldwin', 'psychic_generic_doctor_saturday_morning', 5, condition = "current_day == 'Saturday' and current_phase=='Morning'"),
-            # Always Generic 
-            TimedMenuChoice('Talk about something else', 'psychic_generic_cancel', 0, keep_alive = True, early_exit = True)
-        ], image_right = "psychic")
-
-    call run_menu(psychic_generic_other_guests_menu)
+    call run_menu(current_character.saved_variables["psychic_generic_other_guests_menu"])
 
     return
 

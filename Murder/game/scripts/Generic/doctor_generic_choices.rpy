@@ -1,24 +1,10 @@
  
 label doctor_generic():
 
-    if not 'doctor_generic_menu' in locals():
-        $ doctor_generic_menu = TimedMenu([
-            TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
-            TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
-            TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20),
-            TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 20, condition = "doctor_details.is_knowledge_unlocked('background')"),
-            TimedMenuChoice('What do you think of this place?', 'doctor_generic_manor', 10),
-            TimedMenuChoice('How old are you?', 'doctor_generic_age', 5),
-            TimedMenuChoice('What room are you in?', 'doctor_generic_room', 5),
-            TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_friday', 5, condition = "current_day == 'Friday'"),
-            TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_saturday', 5, condition = "current_day == 'Saturday'"),
-            TimedMenuChoice('You don\'t have anymore questions for him', 'doctor_generic_cancel', 0, keep_alive = True, early_exit = True)
-            ], image_right = "doctor")
-    else:
-        # Reset if previous early exit
-        $ doctor_generic_menu.early_exit = False
+    # Reset if previous early exit
+    $ current_character.saved_variables["doctor_generic_menu"].early_exit = False
 
-    call run_menu(doctor_generic_menu)
+    call run_menu(current_character.saved_variables["doctor_generic_menu"])
     
     return
 
