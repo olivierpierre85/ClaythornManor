@@ -58,7 +58,7 @@ screen storyline:
                     yoffset 20
                     ysize 550
                     vbox:
-                        grid 8 current_storyline.get_max_run() + 1:
+                        grid 9 current_storyline.get_max_run() + 1:
                             # spacing 70
                             xfill True
                             # TITLES
@@ -93,29 +93,39 @@ screen storyline:
                             vbox:
                                 text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            vbox:
+                                text "" font gui.name_text_font
 
                             # Checkpoints CONTENT TODO clean +1 etc,...
                             for j in range(current_storyline.get_max_run()):
-                                for i in range(8):
+                                for i in range(9):
                                     if current_storyline.has_checkpoint(j+1, i+1):
-                                        imagemap: 
-                                            if current_storyline.has_checkpoint(j+1, i+2):
-                                                idle image_time_right
-                                            else:
-                                                idle image_time
-                                            textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_up()) + "\n" + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
-                                                mouse "hover" 
-                                                action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
-                                                xoffset -10 
-                                                yalign 0.5
-                                                xalign 0.5
-                                                if current_checkpoint and current_checkpoint.run == current_storyline.get_checkpoint(j+1, i+1).run and current_checkpoint.position == current_storyline.get_checkpoint(j+1, i+1).position:                
-                                                    text_color "#FFFFFF"
+                                        if current_storyline.get_checkpoint(j+1, i+1).ending:
+                                            imagebutton:
+                                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+                                                idle current_storyline.get_checkpoint(j+1, i+1).ending.image_file                            
+                                                tooltip str(current_storyline.get_checkpoint(j+1, i+1).ending.content)
+
+                                        else:
+                                            imagemap:
+                                                if current_storyline.has_checkpoint(j+1, i+2):
+                                                    idle image_time_right
                                                 else:
-                                                    text_color gui.accent_color
-                                                text_font gui.name_text_font 
-                                                text_size 20
-                                                padding (25,25,25,25)
+                                                    idle image_time
+
+                                                textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_up()) + "\n" + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
+                                                    mouse "hover" 
+                                                    action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
+                                                    xoffset -10 
+                                                    yalign 0.5
+                                                    xalign 0.5
+                                                    if current_checkpoint and current_checkpoint.run == current_storyline.get_checkpoint(j+1, i+1).run and current_checkpoint.position == current_storyline.get_checkpoint(j+1, i+1).position:                
+                                                        text_color "#FFFFFF"
+                                                    else:
+                                                        text_color gui.accent_color
+                                                    text_font gui.name_text_font 
+                                                    text_size 20
+                                                    padding (25,25,25,25)
                                                 
                                     else:
                                         if current_storyline.has_checkpoint(j+1, i+2):
@@ -271,6 +281,7 @@ init -100 python:
             observations,
             label_id,
             saved_variables,
+            ending = None
         ):
             self.run = run
             self.position = position
@@ -279,6 +290,7 @@ init -100 python:
             self.created = datetime.now()
             self.label_id = label_id
             self.saved_variables = saved_variables
+            self.ending = ending
 
         def get_format_created(self):
             # return self.created.strftime("%a %b, %H:%M")

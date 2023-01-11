@@ -438,6 +438,17 @@ init -100 python:
                 )
                 i_test += 1
                 current_position += 1
+            # #Add ending for fun
+            # self.checkpoints.append( Checkpoint(
+            #         run = 1,
+            #         position = 8,
+            #         objects = copy.deepcopy(self.get_all_objects_unlocked()),
+            #         observations = copy.deepcopy(self.get_all_observations_unlocked()),
+            #         label_id = i_label,
+            #         saved_variables = copy.deepcopy(current_character.saved_variables),
+            #         ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
+            #     )
+            # )
 
             return
 
@@ -455,6 +466,24 @@ init -100 python:
                 )
                 self.checkpoints.append(new_checkpoint)
                 current_position = current_position + 1
+            else:
+                has_been_restarted = False
+                current_position = current_position + 1
+        
+        def add_ending_checkpoint(self, ending):
+            global current_position, current_run, has_been_restarted
+
+            if not has_been_restarted:
+                new_checkpoint = Checkpoint(
+                    run = current_run,
+                    position = current_position + 1,
+                    objects = [], 
+                    observations = [],
+                    label_id = "",
+                    saved_variables = [],
+                    ending = ending
+                )
+                self.checkpoints.append(new_checkpoint)
             else:
                 has_been_restarted = False
                 current_position = current_position + 1

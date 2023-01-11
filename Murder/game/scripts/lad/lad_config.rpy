@@ -58,7 +58,8 @@ label init_lad:
             # Intuitions
             CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", type="intuition", image_file="gun"), 
             # Endings
-            CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun"), 
+            CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed"), 
+            CharacterInformation(2, "poisoned", "You were poisoned", type="ending", image_file="poisoned"), 
         ]
 
         lad_details  = CharacterDetails(
