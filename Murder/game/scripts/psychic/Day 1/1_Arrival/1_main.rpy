@@ -155,8 +155,20 @@ label psychic_day1_arrival:
     """
 
     """
-    That was loud enough.
+    The butler almost shouted the new guest name/
+
+    A good looking young man.
+
+    He looks unsure.
+
+    You can tell by his clothes alone that he is not in his natural element here.
+
+    After some hesitation, he comes towards me.
     """
+
+    call lad_day1_drinks_psychic_encounter
+
+    # TODO different story if you talk to drunk man before? TOo complicated now
 
 
     

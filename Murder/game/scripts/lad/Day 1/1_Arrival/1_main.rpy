@@ -156,6 +156,15 @@ label lad_day1_drinks_psychic:
     I am approaching the middle-aged lady.
     """
 
+    call lad_day1_drinks_psychic_encounter
+
+    call psychic_generic
+
+    return
+
+# Dialog also in psychic side TODO move into global label ?
+label lad_day1_drinks_psychic_encounter:
+
     lad """
     Nice to meet you miss Baxter. I am Ted Haring.
     """
@@ -163,8 +172,6 @@ label lad_day1_drinks_psychic:
     psychic """
     Nice to meet you mister Haring.
     """
-
-    call psychic_generic
 
     return
 
