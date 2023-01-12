@@ -536,19 +536,28 @@ init -100 python:
 
             # IF next position is a checkpoint
             if self.has_checkpoint(run, position+1):
-                if self.has_checkpoint(run+1, position+1) and self.has_checkpoint_in_column(run, position+1):
-                    return image_checkpoint_double_corner
-                else:
+                # If above there is a checkpoint=> simple corner, 
+                # If last line => simple corner
+                if self.has_checkpoint(run+1, position) or run == self.get_max_run() or self.next_checkpoint_in_column(run, position) > -1:
                     return image_checkpoint_corner
+                else:                    
+                    return image_checkpoint_double_corner
+                    
 
             else:
-                # IF next column has a checkpoint
-                if self.has_checkpoint_in_column(run, position+1):
+                # IF next column has a checkpoint BUT not before current column
+                if self.next_checkpoint_in_column(run, position+1) > -1 and ( self.next_checkpoint_in_column(run, position) == -1 or self.next_checkpoint_in_column(run, position+1) < self.next_checkpoint_in_column(run, position)):
                     return image_checkpoint_line
                 else:
                     return image_checkpoint_empty
 
             return image_checkpoint_empty
+
+        def next_checkpoint_in_column(self, run, position):
+            for checkpoint in self.checkpoints:
+                if checkpoint.run > run and checkpoint.position == position:
+                    return checkpoint.run
+            return -1
 
 
         def has_checkpoint_in_column(self, run, position):
