@@ -84,5 +84,7 @@ label init_technical_variables:
 label init_story_variables:
 
     call init_lad
+
+    call init_psychic
     
     return

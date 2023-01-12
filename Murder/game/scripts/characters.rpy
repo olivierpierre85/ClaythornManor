@@ -35,25 +35,6 @@ label init_characters:
         # 1. The Lad IN OWN FILE
         
         # 2. The Psychic
-        psychic_extra_information = [
-            CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently.", is_important = True), 
-            CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house.", is_important = True), 
-            CharacterInformation(2, "age", "She was .... SO she must be ????"),
-            CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.", is_important = True),
-            CharacterInformation(4, "lie", "She is a fraud. All she said about talking with spirit was a lie.", is_important = True),
-            CharacterInformation(5, "drive", "Doesn't have a driving license.")
-        ]
-        psychic_details  = CharacterDetails(
-            text_id = "psychic", 
-            locked = True,
-            know_real_name = True,
-            real_name = "Amelia Baxter",
-            nickname = "The Psychic",
-            description_short = "Middle-age Woman",
-            description_long = "Middle-aged woman, looking a bit eccentric.",
-            information_list = psychic_extra_information
-        )
-        psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)
 
         # 3. The Doctor
         doctor_extra_information = [
@@ -425,6 +406,7 @@ init -100 python:
                     'lad_day2_afternoon',
                     'lad_day2_evening',
                     'lad_day3_morning',
+                    'lad_day3_afternoon',
                 ]:
                 self.checkpoints.append( Checkpoint(
                         run = 1,
@@ -438,16 +420,16 @@ init -100 python:
                 i_test += 1
                 current_position += 1
             # #Add ending for fun
-            # self.checkpoints.append( Checkpoint(
-            #         run = 1,
-            #         position = 8,
-            #         objects = copy.deepcopy(self.get_all_objects_unlocked()),
-            #         observations = copy.deepcopy(self.get_all_observations_unlocked()),
-            #         label_id = i_label,
-            #         saved_variables = copy.deepcopy(current_character.saved_variables),
-            #         ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
-            #     )
-            # )
+            self.checkpoints.append( Checkpoint(
+                    run = 1,
+                    position = 8,
+                    objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                    label_id = i_label,
+                    saved_variables = copy.deepcopy(current_character.saved_variables),
+                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
+                )
+            )
 
             return
 
@@ -510,6 +492,17 @@ init -100 python:
                 if checkpoint.run == run and checkpoint.position == position:
                     return checkpoint
             return None
+
+        def get_init_checkpoint(self):
+            global current_storyline
+            return Checkpoint(
+                        run = 1,
+                        position = 0,
+                        objects = [],
+                        observations = [],
+                        label_id = current_storyline.text_id + "_introduction",
+                        saved_variables = eval(current_storyline.text_id + "_init_variables")
+                    )
             
         def get_max_run(self):
             max_run = 0

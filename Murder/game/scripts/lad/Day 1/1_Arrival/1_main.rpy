@@ -116,8 +116,6 @@ label lad_day1_arrival:
     """
     
     $ time_left = 30 
-    $ print('TEST psychic generic -2')
-    $ print(current_character.saved_variables["psychic_generic_menu"])
     
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),

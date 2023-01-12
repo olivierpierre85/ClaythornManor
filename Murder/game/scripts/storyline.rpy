@@ -42,15 +42,6 @@ screen storyline:
                 viewport:
                     yinitial 0.0
                     scrollbars "vertical"
-
-                    $ image_checkpoint = "images/ui/rectangle_progress.png"
-                    $ image_checkpoint_right = "images/ui/rectangle_progress_right.png"
-                    $ image_checkpoint_empty = "images/ui/rectangle_progress_empty.png"
-                    $ image_time_new = "images/ui/rectangle_09_new.png"
-                    $ image_time_new_2 = "images/ui/rectangle_09_new_2.png"
-                    $ image_time_new_3 = "images/ui/rectangle_09_new_3.png"
-                    $ image_time_small = "images/ui/rectangle_09_small.png"
-                    $ image_arrow = "images/ui/arrow_straight_03.png"
                     
                     mousewheel True
                     draggable True
@@ -107,12 +98,33 @@ screen storyline:
                                 xminimum checkpoint_x/2
                                 text "" font gui.name_text_font
 
+                        $ image_checkpoint = "images/ui/progress/rectangle_progress.png"
+                        $ image_checkpoint_right = "images/ui/progress/rectangle_progress_right.png"
+                        $ image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
+                        $ image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
+                        $ image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
+                        $ image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
+                        
+                        
+                        $ image_checkpoint_start = "images/ui/progress/rectangle_small.png"
+                        $ image_checkpoint_start_empty = "images/ui/progress/rectangle_small_empty.png"
+                        $ image_checkpoint_start_selected = "images/ui/progress/rectangle_small_selected.png"
+                        
                         for j in range(current_storyline.get_max_run() + 1):
                             hbox:
                                 xalign 0
 
-                                imagebutton:
-                                    idle image_time_small
+                                if j == 0:
+                                        imagebutton:
+                                            mouse 'hover'
+                                            if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:
+                                                idle image_checkpoint_start_selected
+                                            else:
+                                                idle image_checkpoint_start
+                                            action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                                else:
+                                    imagebutton:
+                                        idle image_checkpoint_start_empty
 
                                 for i in range(8):                                        
                                     if current_storyline.has_checkpoint(j+1, i+1):

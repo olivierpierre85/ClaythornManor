@@ -49,7 +49,6 @@ label lad_day1_evening:
     $ play_music('upbeat')
 
     $ time_left = 120
-    $ print(lad_details.saved_variables["map_menu"].get_visible_choices() )
     call run_menu(lad_details.saved_variables["map_menu"])
 
     call change_time(23,00)

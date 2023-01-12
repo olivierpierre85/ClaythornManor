@@ -7,7 +7,7 @@ label init_lad:
 
     python:
         # Story Variables
-        lad_saved_variables = {
+        lad_init_variables = {
             "map_menu" : lad_map_menu,
 
             "psychic_generic_menu" : psychic_generic_menu_lad,
@@ -71,7 +71,7 @@ label init_lad:
             description_short = "Young man",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
-            saved_variables = lad_saved_variables
+            saved_variables = copy.deepcopy(lad_init_variables)
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 
