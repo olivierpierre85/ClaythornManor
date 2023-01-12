@@ -43,11 +43,13 @@ screen storyline:
                     yinitial 0.0
                     scrollbars "vertical"
 
-                    $ image_time = "images/ui/rectangle_09.png"
-                    $ image_time_right = "images/ui/rectangle_09_right.png"
+                    $ image_checkpoint = "images/ui/rectangle_progress.png"
+                    $ image_checkpoint_right = "images/ui/rectangle_progress_right.png"
+                    $ image_checkpoint_empty = "images/ui/rectangle_progress_empty.png"
                     $ image_time_new = "images/ui/rectangle_09_new.png"
                     $ image_time_new_2 = "images/ui/rectangle_09_new_2.png"
                     $ image_time_new_3 = "images/ui/rectangle_09_new_3.png"
+                    $ image_time_small = "images/ui/rectangle_09_small.png"
                     $ image_arrow = "images/ui/arrow_straight_03.png"
                     
                     mousewheel True
@@ -57,12 +59,13 @@ screen storyline:
                     
                     yoffset 20
                     ysize 550
-                    $ checkpoint_x = 170
+                    $ checkpoint_x = 173
+                    $ checkpoint_x_small = 105
                     vbox:
                         hbox:
                             # TITLES
                             vbox:
-                                xminimum checkpoint_x
+                                xminimum checkpoint_x_small
                                 text "Friday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
                                 text "Start" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
@@ -105,11 +108,13 @@ screen storyline:
                                 text "" font gui.name_text_font
 
                         for j in range(current_storyline.get_max_run() + 1):
-                            for i in range(9):
-                                hbox:
-                                # grid 9 current_storyline.get_max_run() + 1:
-                                    # spacing 70
-                                    xfill True
+                            hbox:
+                                xalign 0
+
+                                imagebutton:
+                                    idle image_time_small
+
+                                for i in range(8):                                        
                                     if current_storyline.has_checkpoint(j+1, i+1):
                                         if current_storyline.get_checkpoint(j+1, i+1).ending:
                                             imagebutton:
@@ -120,11 +125,11 @@ screen storyline:
                                         else:
                                             imagemap:
                                                 if current_storyline.has_checkpoint(j+1, i+2):
-                                                    idle image_time_right
+                                                    idle image_checkpoint_right
                                                 else:
-                                                    idle image_time
+                                                    idle image_checkpoint
 
-                                                textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_up()) + "\n" + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
+                                                textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
                                                     mouse "hover" 
                                                     action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
                                                     xoffset -10 
@@ -135,7 +140,7 @@ screen storyline:
                                                     else:
                                                         text_color gui.accent_color
                                                     text_font gui.name_text_font 
-                                                    text_size 20
+                                                    text_size 18
                                                     padding (25,25,25,25)
                                                 
                                     else:
@@ -304,8 +309,7 @@ init -100 python:
             self.ending = ending
 
         def get_format_created(self):
-            # return self.created.strftime("%a %b, %H:%M")
-            return self.created.strftime("%a %b")
+            return self.created.strftime("%a %b, %H:%M")
 
         def get_format_created_up(self):
             return self.created.strftime("%a %b")

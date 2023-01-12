@@ -419,7 +419,6 @@ init -100 python:
             global current_position
             i_test = 1
             for i_label in [
-                    'lad_introduction',
                     'lad_day1_arrival',
                     'lad_day1_evening',
                     'lad_day2_morning',
