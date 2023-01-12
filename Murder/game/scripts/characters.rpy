@@ -431,6 +431,53 @@ init -100 python:
                 )
             )
 
+            i_test = 2
+            for i_label in [
+                    'lad_day1_evening',
+                    'lad_day2_morning',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 2,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
+
+            i_test = 3
+            for i_label in [
+                    'lad_day2_morning',
+                    'lad_day2_afternoon',
+                    'lad_day2_evening',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 3,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
+            i_test = 2
+            for i_label in [
+                    'lad_day2_afternoon',
+                    'lad_day2_evening',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 4,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
             return
 
         def add_checkpoint(self, label_id = ""):
@@ -480,7 +527,30 @@ init -100 python:
                     return True
             return False
         
-        # TODO not ok all the time rethink
+        def get_checkpoint_filler(self, run, position):
+            # TODO put in constants somewhere
+            image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
+            image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
+            image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
+            image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
+
+            # IF next position is a checkpoint
+            if self.has_checkpoint(run, position+1):
+                if self.has_checkpoint(run+1, position+1) and self.has_checkpoint_in_column(run, position+1):
+                    return image_checkpoint_double_corner
+                else:
+                    return image_checkpoint_corner
+
+            else:
+                # IF next column has a checkpoint
+                if self.has_checkpoint_in_column(run, position+1):
+                    return image_checkpoint_line
+                else:
+                    return image_checkpoint_empty
+
+            return image_checkpoint_empty
+
+
         def has_checkpoint_in_column(self, run, position):
             for checkpoint in self.checkpoints:
                 if checkpoint.run > run and checkpoint.position == position:

@@ -51,7 +51,7 @@ screen storyline:
                     yoffset 20
                     ysize 550
                     $ checkpoint_x = 173
-                    $ checkpoint_x_small = 105
+                    $ checkpoint_x_small = 100
                     vbox:
 
                         hbox:
@@ -100,18 +100,13 @@ screen storyline:
                                 text "" font gui.name_text_font
 
                         $ image_checkpoint = "images/ui/progress/rectangle_progress.png"
-                        $ image_checkpoint_right = "images/ui/progress/rectangle_progress_right.png"
-                        $ image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
-                        $ image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
-                        $ image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
-                        $ image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
-                        
+                        $ image_checkpoint_right = "images/ui/progress/rectangle_progress_right.png"                       
                         
                         $ image_checkpoint_start = "images/ui/progress/rectangle_small.png"
                         $ image_checkpoint_start_empty = "images/ui/progress/rectangle_small_empty.png"
                         $ image_checkpoint_start_selected = "images/ui/progress/rectangle_small_selected.png"
                         
-                        for j in range(current_storyline.get_max_run() + 1):
+                        for j in range(current_storyline.get_max_run()):
                             hbox:
 
                                 xalign 0
@@ -158,17 +153,8 @@ screen storyline:
                                                     padding (25,25,25,25)
                                                 
                                     else:
-                                        if current_storyline.has_checkpoint(j+1, i+2):
-                                            if current_storyline.has_checkpoint(j+2, i+2):
-                                                image image_checkpoint_corner
-                                            else:
-                                                image image_checkpoint_double_corner
-                                        else:
-                                            # IF next column has a checkpoint
-                                            if current_storyline.has_checkpoint_in_column(j+1, i+2):
-                                                image image_checkpoint_line
-                                            else:
-                                                text ""
+                                        image current_storyline.get_checkpoint_filler(j+1, i+1)
+
             vbox:
                 xminimum 420
                 vbox:
