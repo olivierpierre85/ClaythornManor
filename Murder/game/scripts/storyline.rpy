@@ -53,6 +53,7 @@ screen storyline:
                     $ checkpoint_x = 173
                     $ checkpoint_x_small = 105
                     vbox:
+
                         hbox:
                             # TITLES
                             vbox:
@@ -112,6 +113,7 @@ screen storyline:
                         
                         for j in range(current_storyline.get_max_run() + 1):
                             hbox:
+
                                 xalign 0
 
                                 if j == 0:
@@ -152,19 +154,19 @@ screen storyline:
                                                     else:
                                                         text_color gui.accent_color
                                                     text_font gui.name_text_font 
-                                                    text_size 18
+                                                    text_size 20
                                                     padding (25,25,25,25)
                                                 
                                     else:
                                         if current_storyline.has_checkpoint(j+1, i+2):
                                             if current_storyline.has_checkpoint(j+2, i+2):
-                                                image image_time_new_2
+                                                image image_checkpoint_corner
                                             else:
-                                                image image_time_new
+                                                image image_checkpoint_double_corner
                                         else:
                                             # IF next column has a checkpoint
                                             if current_storyline.has_checkpoint_in_column(j+1, i+2):
-                                                image image_time_new_3
+                                                image image_checkpoint_line
                                             else:
                                                 text ""
             vbox:
