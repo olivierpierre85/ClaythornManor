@@ -126,7 +126,7 @@ screen storyline:
                                     imagebutton:
                                         if current_storyline.has_checkpoint_in_column(j,1):
                                             if current_storyline.has_checkpoint(j+1, 1):
-                                                if current_storyline.has_checkpoint_in_column(j+2,1):
+                                                if current_storyline.has_checkpoint_in_column(j+1,1):
                                                     idle image_checkpoint_start_double_corner
                                                 else:
                                                     idle image_checkpoint_start_corner

@@ -1,6 +1,6 @@
 label lad_introduction:
 
-    $ lad_details.add_checkpoint("lad_introduction") 
+    #$ lad_details.add_checkpoint("lad_introduction") 
     
     call change_time(17,00, 'Evening', 'Friday')
 

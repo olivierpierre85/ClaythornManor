@@ -88,18 +88,27 @@ init python:
 label start_again():
 
     python:
+        global has_been_restarted
+
         # Change current character
         current_character = current_storyline
         
-        # For this character, update run +1  in all checkpoint above this
-        for checkpoint in current_character.checkpoints:
-            if checkpoint.run > current_checkpoint.run:
-                checkpoint.run += 1
+        # Restart from zero
+        if  current_checkpoint.run == 1 and  current_checkpoint.position == 0:
+            current_position = 0
+            current_run = current_character.get_max_run() + 1
+        else:
+            has_been_restarted = True
+            
+            # For this character, update run +1  in all checkpoint above this
+            for checkpoint in current_character.checkpoints:
+                if checkpoint.run > current_checkpoint.run:
+                    checkpoint.run += 1
 
-        # change current run to += 1
-        current_run = current_checkpoint.run + 1
-        # Deduct one position because a new checkpoint will immediately be created with pos + 1
-        current_position = current_checkpoint.position - 1 
+            # change current run to += 1
+            current_run = current_checkpoint.run + 1
+            # Deduct one position because a new checkpoint will immediately be created with pos + 1
+            current_position = current_checkpoint.position - 1 
 
         # Reset object, observation, choices...
         current_character.reset_information()
@@ -113,8 +122,6 @@ label start_again():
 
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 
-        global has_been_restarted
-        has_been_restarted = True
         renpy.jump(current_checkpoint.label_id) 
     
     return

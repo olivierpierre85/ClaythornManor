@@ -431,10 +431,10 @@ init -100 python:
                 )
             )
 
-            i_test = 2
+
+            i_test = 7
             for i_label in [
-                    'lad_day1_evening',
-                    'lad_day2_morning',
+                    'lad_day3_afternoon',
                 ]:
                 self.checkpoints.append( Checkpoint(
                         run = 2,
@@ -447,6 +447,32 @@ init -100 python:
                 )
                 i_test += 1
 
+            i_test = 2
+            for i_label in [
+                    'lad_day1_evening',
+                    'lad_day2_morning',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 3,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
+            self.checkpoints.append( Checkpoint(
+                    run = 3,
+                    position = 4,
+                    objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                    label_id = i_label,
+                    saved_variables = copy.deepcopy(current_character.saved_variables),
+                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
+                )
+            )
+
             i_test = 3
             for i_label in [
                     'lad_day2_morning',
@@ -454,7 +480,7 @@ init -100 python:
                     'lad_day2_evening',
                 ]:
                 self.checkpoints.append( Checkpoint(
-                        run = 3,
+                        run = 4,
                         position = i_test,
                         objects = copy.deepcopy(self.get_all_objects_unlocked()),
                         observations = copy.deepcopy(self.get_all_observations_unlocked()),
@@ -469,7 +495,7 @@ init -100 python:
                     'lad_day2_evening',
                 ]:
                 self.checkpoints.append( Checkpoint(
-                        run = 4,
+                        run = 5,
                         position = i_test,
                         objects = copy.deepcopy(self.get_all_objects_unlocked()),
                         observations = copy.deepcopy(self.get_all_observations_unlocked()),
@@ -485,7 +511,7 @@ init -100 python:
                     'lad_day2_afternoon'
                 ]:
                 self.checkpoints.append( Checkpoint(
-                        run = 5,
+                        run = 6,
                         position = i_test,
                         objects = copy.deepcopy(self.get_all_objects_unlocked()),
                         observations = copy.deepcopy(self.get_all_observations_unlocked()),
@@ -556,8 +582,10 @@ init -100 python:
                 # If last line => simple corner
                 if ( self.has_checkpoint(run+1, position) or 
                     run == self.get_max_run() or  
-                    ( self.next_checkpoint_in_column(run, position) > -1 
-                        and self.next_checkpoint_in_column(run, position) < self.next_checkpoint_in_column(run, position+1))):
+                    (self.next_checkpoint_in_column(run, position) > -1 
+                        and self.next_checkpoint_in_column(run, position) < self.next_checkpoint_in_column(run, position+1))
+                    or not self.has_checkpoint_in_column(run, position)
+                    ):
                     return image_checkpoint_corner
                 else:                    
                     return image_checkpoint_double_corner
