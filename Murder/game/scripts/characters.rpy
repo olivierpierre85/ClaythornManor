@@ -478,6 +478,22 @@ init -100 python:
                     )
                 )
                 i_test += 1
+            
+            i_test = 1
+            for i_label in [
+                    'lad_day2_morning',
+                    'lad_day2_afternoon'
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 5,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
             return
 
         def add_checkpoint(self, label_id = ""):
@@ -538,11 +554,13 @@ init -100 python:
             if self.has_checkpoint(run, position+1):
                 # If above there is a checkpoint=> simple corner, 
                 # If last line => simple corner
-                if self.has_checkpoint(run+1, position) or run == self.get_max_run() or self.next_checkpoint_in_column(run, position) > -1:
+                if ( self.has_checkpoint(run+1, position) or 
+                    run == self.get_max_run() or  
+                    ( self.next_checkpoint_in_column(run, position) > -1 
+                        and self.next_checkpoint_in_column(run, position) < self.next_checkpoint_in_column(run, position+1))):
                     return image_checkpoint_corner
                 else:                    
                     return image_checkpoint_double_corner
-                    
 
             else:
                 # IF next column has a checkpoint BUT not before current column

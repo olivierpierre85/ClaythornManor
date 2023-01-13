@@ -111,7 +111,6 @@ label start_again():
         for item in current_checkpoint.observations:
             current_character.unlock_observation(item, False)
 
-        # current_character.saved_variables = dict()
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 
         global has_been_restarted

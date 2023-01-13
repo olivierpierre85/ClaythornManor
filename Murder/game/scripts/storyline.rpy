@@ -105,6 +105,9 @@ screen storyline:
                         $ image_checkpoint_start = "images/ui/progress/rectangle_small.png"
                         $ image_checkpoint_start_empty = "images/ui/progress/rectangle_small_empty.png"
                         $ image_checkpoint_start_selected = "images/ui/progress/rectangle_small_selected.png"
+                        $ image_checkpoint_start_corner = "images/ui/progress/rectangle_small_corner.png"
+                        $ image_checkpoint_start_line = "images/ui/progress/rectangle_small_line.png"
+                        $ image_checkpoint_start_double_corner = "images/ui/progress/rectangle_small_double_corner.png"
                         
                         for j in range(current_storyline.get_max_run()):
                             hbox:
@@ -112,16 +115,25 @@ screen storyline:
                                 xalign 0
 
                                 if j == 0:
-                                        imagebutton:
-                                            mouse 'hover'
-                                            if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:
-                                                idle image_checkpoint_start_selected
-                                            else:
-                                                idle image_checkpoint_start
-                                            action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                                    imagebutton:
+                                        mouse 'hover'
+                                        if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:
+                                            idle image_checkpoint_start_selected
+                                        else:
+                                            idle image_checkpoint_start
+                                        action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
                                 else:
                                     imagebutton:
-                                        idle image_checkpoint_start_empty
+                                        if current_storyline.has_checkpoint_in_column(j,1):
+                                            if current_storyline.has_checkpoint(j+1, 1):
+                                                if current_storyline.has_checkpoint_in_column(j+2,1):
+                                                    idle image_checkpoint_start_double_corner
+                                                else:
+                                                    idle image_checkpoint_start_corner
+                                            else:
+                                                idle image_checkpoint_start_line
+                                        else:
+                                            idle image_checkpoint_start_empty
 
                                 for i in range(8):                                        
                                     if current_storyline.has_checkpoint(j+1, i+1):
