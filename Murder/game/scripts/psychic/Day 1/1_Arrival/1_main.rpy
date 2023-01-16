@@ -155,7 +155,7 @@ label psychic_day1_arrival:
     """
 
     """
-    The butler almost shouted the new guest name/
+    The butler almost shouted the new guest name.
 
     A good looking young man.
 
