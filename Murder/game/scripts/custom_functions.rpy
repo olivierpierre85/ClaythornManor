@@ -87,6 +87,8 @@ init python:
 
 label start_again():
 
+    hide screen centered_text
+
     python:
         global has_been_restarted, current_character, current_storyline
 

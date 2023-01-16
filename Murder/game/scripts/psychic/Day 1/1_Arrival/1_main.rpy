@@ -172,6 +172,8 @@ label psychic_day1_arrival:
 
     call lad_generic
 
+    jump character_selection
+
 
     
 

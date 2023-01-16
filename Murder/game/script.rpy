@@ -35,8 +35,7 @@ label start():
     show screen in_game_menu_btn
     
     # Debug Menu # TODO remove when prod
-    #jump debug_choices
-
+    jump debug_choices
 
     # These display lines of dialogue.
     jump character_selection
