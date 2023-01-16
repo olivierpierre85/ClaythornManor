@@ -1,15 +1,10 @@
 label lad_config_menu:
 
-    # TODO Clean conditions => and same for everyone
-
-    $ condition_saturday_morning = "(current_day == 'Saturday' and current_phase == 'Morning')"
-    $ condition_saturday_morning_or_hunt = "(current_day == 'Saturday' and (current_phase == 'Morning' or current_phase == 'Hunt'))"
-    $ condition_saturday_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
-
+    # PSYCHIC
     $ psychic_generic_menu_lad = TimedMenu([
-        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
-        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
-        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_sunday', 5, condition = "current_day == 'Sunday'"),
+        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_friday', 5, condition = condition_friday),
+        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday', 5, condition = condition_saturday),
+        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_sunday', 5, condition = condition_sunday),
         TimedMenuChoice('Tell me more about yourself.', 'psychic_generic_background', 15),
         TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 20, condition = "psychic_details.is_knowledge_unlocked('background')"),
         TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor_lad', 10),

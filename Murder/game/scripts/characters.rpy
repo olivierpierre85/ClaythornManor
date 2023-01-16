@@ -154,6 +154,7 @@ label init_characters:
 
     # INIT first character
     $ current_character = lad_details
+    $ current_storyline = lad_details # TODO move
 
     return
 
@@ -524,21 +525,24 @@ init -100 python:
 
         def add_checkpoint(self, label_id = ""):
             global current_position, current_run, has_been_restarted
-
+            
+            print("Wtf run" + str(current_run))
+            current_position = current_position + 1
             if not has_been_restarted:
                 new_checkpoint = Checkpoint(
                     run = current_run,
-                    position = current_position + 1,
+                    position = current_position,
                     objects = copy.deepcopy(self.get_all_objects_unlocked()), 
                     observations = copy.deepcopy(self.get_all_observations_unlocked()),
                     label_id = label_id,
                     saved_variables = copy.deepcopy(current_character.saved_variables)
                 )
                 self.checkpoints.append(new_checkpoint)
-                current_position = current_position + 1
+                
+                print(self)
+                print(str(new_checkpoint))
             else:
                 has_been_restarted = False
-                current_position = current_position + 1
         
         def add_ending_checkpoint(self, ending):
             global current_position, current_run, has_been_restarted
@@ -630,7 +634,7 @@ init -100 python:
                     )
             
         def get_max_run(self):
-            max_run = 0
+            max_run = 1
             for checkpoint in self.checkpoints:
                 if checkpoint.run > max_run:
                     max_run = checkpoint.run
@@ -665,30 +669,18 @@ label character_selection:
     scene black_background
     narrator "Select Your Character"
 
-    $ selected_choice = renpy.call_screen('character_selection') 
+    python:
+        selected_choice = renpy.call_screen('character_selection') 
 
-    $ current_position = 0
+        current_position = 0
 
+        current_character = eval(selected_choice + "_details")
+        current_run = current_character.get_max_run() + 1 # TODO WTF?
+        current_storyline = current_character
 
-    
-    if selected_choice == 'lad':
-        $ current_character = lad_details
-        $ current_run = current_character.get_max_run() + 1
+        current_checkpoint = current_character.get_init_checkpoint()
 
-        call init_story_variables 
-        call init_storylines
-
-        jump lad_introduction
-    elif selected_choice == 'psychic':
-        $ current_character = psychic_details
-        $ current_run = current_character.get_max_run() + 1
-
-        call init_story_variables 
-        call init_storylines
-
-        jump psychic_introduction
-    else:
-        jump lad_day1_evening
+    jump start_again
 
 # SCREENS
 screen characters:

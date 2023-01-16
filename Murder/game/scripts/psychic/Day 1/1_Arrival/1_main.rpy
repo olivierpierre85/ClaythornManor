@@ -170,6 +170,8 @@ label psychic_day1_arrival:
 
     # TODO different story if you talk to drunk man before? TOo complicated now
 
+    call lad_generic
+
 
     
 

@@ -71,7 +71,8 @@ label init_lad:
             description_short = "Young man",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
-            saved_variables = copy.deepcopy(lad_init_variables)
+            saved_variables = copy.deepcopy(lad_init_variables),
+            # start_checkpoint = 
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 

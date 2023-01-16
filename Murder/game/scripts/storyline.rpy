@@ -1,6 +1,6 @@
-label init_storylines:
-    $ current_storyline = current_character
-    return
+# label init_storylines:
+#     $ current_storyline = current_character
+#     return
 
 # TODO change size in png gimp
 transform character_storyline:
@@ -17,7 +17,7 @@ screen storyline:
         hbox:
             spacing 10
             vbox:
-                xminimum 1400
+                xminimum 1420
                 xalign 0.5
                 # Character choice
                 hbox:
@@ -135,7 +135,8 @@ screen storyline:
                                         else:
                                             idle image_checkpoint_start_empty
 
-                                for i in range(8):                                        
+                                for i in range(8): 
+                                    $print(current_storyline)                                       
                                     if current_storyline.has_checkpoint(j+1, i+1):
                                         if current_storyline.get_checkpoint(j+1, i+1).ending:
                                             imagebutton:

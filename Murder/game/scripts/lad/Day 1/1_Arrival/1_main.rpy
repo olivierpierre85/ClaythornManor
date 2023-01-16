@@ -4,13 +4,12 @@
 #
 #   Alive: Everyone
 label lad_day1_arrival:
-
-    $ lad_details.add_checkpoint("lad_day1_arrival") 
+    
+    $ current_character.add_checkpoint("lad_day1_arrival") 
     
     call black_screen_transition("Ted Harring", "Friday")
 
     $ change_room('great_hall', irisout)
-
     
     call change_time(18,10, 'Arrival', 'Friday')
 

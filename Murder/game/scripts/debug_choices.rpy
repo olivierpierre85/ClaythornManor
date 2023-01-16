@@ -2,6 +2,10 @@ label debug_choices:
     call debug_routes
     
     menu: 
+        "character selection":
+            call unlock_psychic 
+            jump character_selection
+        
         "debug_lad_day2":
             $ test_choices = debug_lad_day2
             jump lad_introduction

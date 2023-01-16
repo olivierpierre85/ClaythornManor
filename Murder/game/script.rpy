@@ -26,20 +26,16 @@ label start():
 
     call init_map
 
-    call init_story_variables # TODO put at each loop
+    call init_story_variables
 
     call init_characters
-
-    call init_storylines
-
 
     show screen current_time
 
     show screen in_game_menu_btn
     
-    
     # Debug Menu # TODO remove when prod
-    jump debug_choices
+    #jump debug_choices
 
 
     # These display lines of dialogue.
@@ -54,6 +50,7 @@ label init_technical_variables:
     define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]
     python:
         # Technical Variables
+        # TODO delete those in character select AND start again
         test_mode = False
 
         if test_mode:
@@ -67,8 +64,9 @@ label init_technical_variables:
         seen_tutorial_unlock_knowledge = False
 
         current_music = 'upbeat'
-        current_run = 1
-        current_position = 0
+
+        current_run = 1 # TODO move
+        current_position = 0 # TODO move
 
         has_been_restarted = False
 
@@ -79,12 +77,19 @@ label init_technical_variables:
 
         action_needed_fix = False # Use to have a valid action that does nothing
 
+        # Conditions for menu shortcuts
+        condition_saturday_morning = "(current_day == 'Saturday' and current_phase == 'Morning')"
+        condition_saturday_morning_or_hunt = "(current_day == 'Saturday' and (current_phase == 'Morning' or current_phase == 'Hunt'))"
+        condition_saturday_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
+        condition_saturday = "current_day == 'Saturday'"
+        condition_friday = "current_day == 'Friday'"
+        condition_sunday = "current_day == 'Sunday'"
+
     return
 
 label init_story_variables:
 
     call init_lad
-
     call init_psychic
     
     return

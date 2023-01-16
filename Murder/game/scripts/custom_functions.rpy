@@ -88,7 +88,7 @@ init python:
 label start_again():
 
     python:
-        global has_been_restarted
+        global has_been_restarted, current_character, current_storyline
 
         # Change current character
         current_character = current_storyline
@@ -96,7 +96,11 @@ label start_again():
         # Restart from zero
         if  current_checkpoint.run == 1 and  current_checkpoint.position == 0:
             current_position = 0
-            current_run = current_character.get_max_run() + 1
+            if len(current_character.checkpoints) > 0:
+                current_run = current_character.get_max_run() + 1
+            else:
+                # First run
+                current_run = 1 
         else:
             has_been_restarted = True
             

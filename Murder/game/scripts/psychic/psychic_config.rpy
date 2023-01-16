@@ -2,12 +2,15 @@ label init_psychic:
 
     # call psychic_config_map
     
-    # call psychic_config_menu
+    call psychic_config_menu
 
     python:
         # Story Variables
         psychic_init_variables = {
             # "map_menu" : psychic_map_menu,
+            
+            "lad_generic_menu" : lad_generic_menu_psychic
+
         }
 
         psychic_extra_information = [
