@@ -1,13 +1,9 @@
-# label init_storylines:
-#     $ current_storyline = current_character
-#     return
-
 # TODO change size in png gimp
-transform character_storyline:
+transform character_progress:
     zoom 0.4
 
-# Display of storyline tree
-screen storyline:
+# Display of Progress tree
+screen progress:
     tag menu
 
     ## TODO OLPI Add a image of the map
@@ -27,9 +23,9 @@ screen storyline:
                         imagebutton:
                             mouse "hover" 
                             if char.text_id == current_storyline.text_id:
-                                idle "images/characters/side/side " + char.text_id +".png" at character_storyline
+                                idle "images/characters/side/side " + char.text_id +".png" at character_progress
                             else:                                
-                                idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_storyline
+                                idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_progress
                                 hover "images/characters/side/side " + char.text_id + ".png"
                             
                             action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
@@ -130,8 +126,7 @@ screen storyline:
                                         else:
                                             idle image_checkpoint_start_empty
 
-                                for i in range(8): 
-                                    $print(current_storyline)                                       
+                                for i in range(8):                               
                                     if current_storyline.has_checkpoint(j+1, i+1):
                                         if current_storyline.get_checkpoint(j+1, i+1).ending:
                                             imagebutton:

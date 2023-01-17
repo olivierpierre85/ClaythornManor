@@ -337,7 +337,7 @@ screen navigation():
             textbutton _("Map") action ShowMenu("manor_map")
             textbutton _("Characters") action ShowMenu("characters")
             # textbutton _("Objects") action ShowMenu("objects")
-            textbutton _("Progress") action ShowMenu("storyline")
+            textbutton _("Progress") action ShowMenu("progress")
             textbutton _("History") action ShowMenu("history")
             # textbutton _("About") action ShowMenu("about")
             textbutton _("Help") action ShowMenu("help")
