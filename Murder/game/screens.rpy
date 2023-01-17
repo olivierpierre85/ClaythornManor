@@ -27,6 +27,7 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    mouse "hover"
 
 style button_text is gui_text:
     properties gui.text_properties("button")
@@ -705,7 +706,6 @@ style slot_button:
 style slot_button_text:
     properties gui.button_text_properties("slot_button")
 
-
 ## Preferences screen ##########################################################
 ##
 ## The preferences screen allows the player to configure the game to better suit
@@ -732,10 +732,10 @@ screen preferences():
 
         ##BARS
 
-        hotbar (264, 452, 499, 42) value Preference('music volume')
-        hotbar (264, 563, 499, 42) value Preference('sound volume')
-        hotbar (264, 674, 499, 42) value Preference('text speed')
-        hotbar (264, 785, 499, 42) value Preference('auto-forward time')
+        hotbar (264, 452, 499, 42) mouse "hover" value Preference('music volume')
+        hotbar (264, 563, 499, 42) mouse "hover" value Preference('sound volume')
+        hotbar (264, 674, 499, 42) mouse "hover" value Preference('text speed')
+        hotbar (264, 785, 499, 42) mouse "hover" value Preference('auto-forward time')
 
         ##BAR LABELS
         text _("Music") xpos 264 ypos 411

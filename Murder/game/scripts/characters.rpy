@@ -728,6 +728,7 @@ screen character_list(is_selection = False):
                         else:
                             action ShowMenu("character_details", char)
                     imagebutton:
+                        mouse "hover"
                         if char.is_character_unlocked():
                             idle "images/characters/side/side " + char.text_id + ".png"
                             hover "images/characters/side_hover/side " + char.text_id + " hover.png"

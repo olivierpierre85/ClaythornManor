@@ -109,6 +109,7 @@ screen manor_map:
             xoffset -175
             if selected_floor > MIN_FLOOR:
                 imagebutton:
+                    mouse "hover"
                     idle "gui/button/page_button_left_idle.png" 
                     hover "gui/button/page_button_left_hover.png" 
                     yalign 0.5 
@@ -116,6 +117,7 @@ screen manor_map:
                     action SetVariable("selected_floor", left_floor) at map_button_left
             else:
                 imagebutton:
+                    mouse "hover"
                     idle "gui/button/page_button_left_idle.png" 
                     yalign 0.5 
                     xoffset 0                     
@@ -128,6 +130,7 @@ screen manor_map:
                 
             if selected_floor < MAX_FLOOR:
                 imagebutton:
+                    mouse "hover"
                     idle "gui/button/page_button_right_idle.png" 
                     hover "gui/button/page_button_right_hover.png" 
                     yalign 0.5 
@@ -135,6 +138,7 @@ screen manor_map:
                     action SetVariable("selected_floor", right_floor) at map_button_right
             else:
                 imagebutton:
+                    mouse "hover"
                     idle "gui/button/page_button_right_idle.png" 
                     yalign 0.5 
                     xoffset 0       
@@ -206,6 +210,7 @@ screen in_game_map_menu(timed_menu):
             hbox:
                 if selected_floor > MIN_FLOOR:
                     imagebutton:
+                        mouse "hover"
                         idle "gui/button/page_button_left_idle.png" 
                         hover "gui/button/page_button_left_hover.png" 
                         yalign 0.5 
@@ -213,6 +218,7 @@ screen in_game_map_menu(timed_menu):
                         action SetVariable("selected_floor", left_floor) at map_button_left
                 else:
                     imagebutton:
+                        mouse "hover"
                         idle "gui/button/page_button_left_idle.png" 
                         yalign 0.5 
                         xoffset 0                     
@@ -234,6 +240,7 @@ screen in_game_map_menu(timed_menu):
                     
                 if selected_floor < MAX_FLOOR:
                     imagebutton:
+                        mouse "hover"
                         idle "gui/button/page_button_right_idle.png" 
                         hover "gui/button/page_button_right_hover.png" 
                         yalign 0.5 
@@ -241,6 +248,7 @@ screen in_game_map_menu(timed_menu):
                         action SetVariable("selected_floor", right_floor) at map_button_right
                 else:
                     imagebutton:
+                        mouse "hover"
                         idle "gui/button/page_button_right_idle.png" 
                         yalign 0.5 
                         xoffset 0       

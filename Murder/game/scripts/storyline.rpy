@@ -140,6 +140,7 @@ screen storyline:
                                     if current_storyline.has_checkpoint(j+1, i+1):
                                         if current_storyline.get_checkpoint(j+1, i+1).ending:
                                             imagebutton:
+                                                mouse "hover"
                                                 action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
                                                 idle current_storyline.get_checkpoint(j+1, i+1).ending.image_file                            
                                                 tooltip str(current_storyline.get_checkpoint(j+1, i+1).ending.content)
