@@ -168,7 +168,7 @@ label psychic_day1_arrival:
 
     call lad_day1_drinks_psychic_encounter
 
-    # TODO different story if you talk to drunk man before? TOo complicated now
+    $ time_left = 20
 
     call lad_generic
 

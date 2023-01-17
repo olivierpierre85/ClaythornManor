@@ -29,7 +29,8 @@ label init_psychic:
             nickname = "The Psychic",
             description_short = "Middle-age Woman",
             description_long = "Middle-aged woman, looking a bit eccentric.",
-            information_list = psychic_extra_information
+            information_list = psychic_extra_information,
+            saved_variables = psychic_init_variables
         )
         psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)
 

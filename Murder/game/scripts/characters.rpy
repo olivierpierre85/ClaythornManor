@@ -525,8 +525,7 @@ init -100 python:
 
         def add_checkpoint(self, label_id = ""):
             global current_position, current_run, has_been_restarted
-            
-            print("Wtf run" + str(current_run))
+
             current_position = current_position + 1
             if not has_been_restarted:
                 new_checkpoint = Checkpoint(
@@ -539,8 +538,6 @@ init -100 python:
                 )
                 self.checkpoints.append(new_checkpoint)
                 
-                print(self)
-                print(str(new_checkpoint))
             else:
                 has_been_restarted = False
         

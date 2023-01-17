@@ -5,12 +5,12 @@
 
 # ?TODO add extra choices possibilities?
 label lad_generic:
-
+    
     # Reset if previous early exit
     $ current_character.saved_variables["lad_generic_menu"].early_exit = False
-
+    $ print(current_character.saved_variables["lad_generic_menu"].is_valid())
     call run_menu(current_character.saved_variables["lad_generic_menu"])
-
+    $ print("exit run")
     return
 
 
@@ -28,25 +28,10 @@ label lad_generic_weather_friday:
 
 label lad_generic_weather_saturday:
 
-    psychic """
-    I must say that last night was quite scary.
-
-    It has been a while since I've experienced a storm like that.
-
-    We should consider ourselves lucky if there is no damage to the manor.
-    """
-
     return
 
 label lad_generic_weather_sunday:
 
-    psychic """
-    Really, you want to talk about the weather with everything that is happening around us?
-
-    What is wrong with you?
-    """
-
-    # TODO achievement ? Cool during the storm
     return
 
 label lad_generic_room_friday:
@@ -61,7 +46,6 @@ label lad_generic_room_friday:
 
 label lad_generic_room_psychic:
 
-    # TODO show it here of in the lad storyline? Or both?
     lad """
     Oh I am in the \"William the Conqueror\" Bedroom.
     """
@@ -107,18 +91,18 @@ label lad_generic_room_psychic:
     return
 
 
-label lad_generic_age:
+label lad_generic_age_psychic:
 
-    psychic angry """
-    I beg your pardon ?
-
-    You are not really asking me that ? Were you raised in a barn ?
-
-    Only a person without any social skills would ask that to a respectable lady.
+    lad """
+    I am 22 years old.
     """
 
-    """
-    I mutter an apology and quickly change the subject.
+    psychic """
+    Really, I would I have pegged him older than that.
+
+    I guess it's his rugged look.
+
+    Life is not easy for the working class.
     """
 
     return
@@ -126,211 +110,25 @@ label lad_generic_age:
 
 label lad_generic_heroic_act:
 
-    play music mysterious_01 fadeout 2.0 fadein 2.0
-
-    psychic """
-    I was invited here for something I have done a couple of years back.
-
-    You actually might remember the event. It was in all the papers at the time.
-
-    You see, with my talent, I am sometimes able to help some people who desperately need it.
-
-    One day, a young couple came to see me.
-
-    Their new born child, not even one year old, had been kidnapped.
-
-    The police had no clues of what could have happened.
-
-    Desperate, they asked for my help.
-
-    Right away, I could tell the child was still alive.
-    """
-
     lad """
-    Really ?! You can also talk to babies ?
-    """
-
-    psychic """
-    Not exactly talk, but I can feel them, their presence.
-
-    This time, I was certain the child was still alive. But in great danger.
-
-    I could see him with a specific person that I described to the couple.
-
-    They were able to identified her immediately.
-
-    She was an old family friend who was often at their house.
-
-    Nobody had suspected her until then.
-
-    But it turns out I was right. The baby was with her.
-
-    She was arrested and the baby safely returned to their parents.
-
-    My popularity grew quite a lot after that.
-    """
-
-    lad """
-    Wait, I don't understand.
     
-    How did you know the child was in danger ?
-    
-    You can also communicate with people who are still alive ?
-    """
-
-    psychic """
-    In a sense yes.
-
-    Like I said, there is more to my gift that just talking with the dead.
-
-    I can also sense if someone life is at risk. 
-
-    Some say it is because when someone is close to the other world, we can sense them almost like they are already there.
-
-    But for myself, I think it's something else entirely.
-
-    I believe I can only talk to the dead.
-
-    So when I can sense someone who is still alive. It means to me that there is a version of them that is not.
-
-    I am not sure if you understand what I mean.
-    """
-
-    lad """
-    I don't know.
-
-    You mean someone can be dead and alive at the same time ?
 
     """
-
-    psychic """
-    Yes. I believe some version of the person died in an other realm of existence. 
-    
-    Then they came back to help a version of them who is still alive.
-
-    I am sorry. That must sound like nonsense to you.
-
-    Forget I said anything. I get carried away sometimes.
-
-    But tell me. Why were you invited yourself ?
-    """
-
-    $ lad_details.unlock_knowledge('heroic act') 
-
-    "So I tell her my story."
-
-    psychic "Oh how interesting ! I assumed most people were here because of something they did during the war."
-
-    lad "It would have been difficult for me. I was but sixteen when the war ended."
-
-    psychic "Really? I thought you were older."
-
-    $ lad_details.unlock_knowledge('age') 
-
-    stop music fadeout 3.0
-
-    $ play_music('previous')
-    
-    return
-
-label lad_generic_background:
-    
-    psychic """
-    Oh dear, I do a lot of things.
-
-    But since my husband's death, what takes up the most of my time is the seances I frequently organized.
-    """
-
-    lad """
-    Seances ? You mean like talking to the dead ?
-    """
-
-    psychic """
-    Well simply put yes. But there is more to it than that of course.
-    """
-
-    lad """
-    I have never been to one of those 'seance'. How does that work ?
-    """
-
-    psychic """
-    There is not a single way of doing it.
-
-    Myself, I usually ask people to bring items of loved one who have passed.
-
-    Thanks to those, I am able to form a bond with the soul of the deceased.
-
-    Then, they talk to me. Sometimes it's only a whisper. Sometimes I can see them clearly, just like I see you now.
-
-    And in rare occasions, they can take over my body and talk directly to their relatives through me.
-    """
-
-    lad """
-    You mean like being possessed ?
-    """
-
-    psychic """
-    Yes, but don't worry, there is nothing unholy about it.
-
-    It just mean the dead has something so important to communicate that they use the more efficient way to do so.
-
-    I only last for a few moment. I always regained full power right after.
-    """
-
-    """
-    Well, that doesn't make me feel good.
-    """
-
-    $ lad_details.unlock_knowledge('background')
-
-    return
-    
-label lad_generic_manor_lad:
-
-    call lad_generic_manor
-
-    """
-    Okay. I would not have thought of that.
-
-    She seems in her element here.
-
-    Am I the only one in here who has never had a butler waiting on him ?
-    """
-
-    $ lad_details.unlock_knowledge('status')
 
     return
 
 label lad_generic_manor:
-    psychic """
-    Such a magnificent house right ?
-
-    Even if the style is not very recent, it still has a lot of cachet. 
     
-    You don't see a lot of that type of place anymore.
+    lad """
+    It's very nice.
 
-    The only problem I see is there is not a lot of help for a house this big.
+    A bit far out of town I think.
 
-    I only noticed one footman and the butler so far.
-
-    That's not a lot when you entertain guests.
-
-    And I don't think money is a problem.
-
-    Lady Claythorn couldn't possibly give away so much money if she had enough resources.
-
-    More likely, she couldn't find enough people to come live here.
-    
-    It has become very hard to recruit good help since the war.
-
-    And it must be especially difficult when you are so far away from a city.
-
-    In any case, she should have a made more of an effort for this weekend.
-
-    I hope we won't suffer any inconvenience because of this.
+    But I suppose some people like the isolation.
     """
-    
+
     return
 
 label lad_generic_cancel:
+
     return
