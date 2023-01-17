@@ -1143,6 +1143,11 @@ style confirm_frame:
     xalign .5
     yalign .5
 
+style clock_frame:
+    background Frame(["gui/clock_frame_white.png"], Borders(60, 60, 60, 60), tile=gui.frame_tile)
+    xalign .5
+    yalign .5
+
 style confirm_prompt_text:
     text_align 0.5
     layout "subtitle"

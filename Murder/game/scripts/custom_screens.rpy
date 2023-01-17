@@ -4,10 +4,10 @@ screen current_time:
     $ current_hour = current_time.hour
     $ current_minutes = current_time.minute
     if current_hour >= 12:
-        $ current_period = "Afternoon"
+        $ current_period = "PM"
         # $ current_hour = current_hour - 12
     else:
-        $ current_period = "Morning"
+        $ current_period = "AM"
 
 
     $ hours_angle = ((int(current_hour) * 60) + int(current_minutes))/2
@@ -18,17 +18,33 @@ screen current_time:
         while old_minutes_angle > minutes_angle:
             minutes_angle = minutes_angle + 360
 
-    add "images/ui/day_background.png"
-
-    text "[current_day] [current_period]" xoffset 20
-
     imagebutton:
         xoffset 30
         yoffset 50
         idle "images/ui/clock_small.png" 
 
+    # DAYS
+    style_prefix "clock"
+    frame:
+        xalign 0.0
+        yalign 0.0
+        xoffset 105
+        yoffset 185
+        ypadding 2
+        xpadding 2
+        # Todo get PHASE?
+        text current_day[:3] + ", " + current_period:
+            size 16
+            color gui.choice_button_text_insensitive_color
+            bold True
+
+    # needle
     add "images/ui/clock_hours.png" at rotate_hours(hours_angle)
     add "images/ui/clock_minutes.png" at rotate_minutes(minutes_angle)
+
+
+
+
 
     $ old_minutes_angle = minutes_angle
         

@@ -124,8 +124,8 @@ screen manor_map:
             
             imagemap: 
                 xalign 0.5                       
-                idle "images/ui/map_bw_idle_[selected_floor].png"
-                hover "images/ui/map_bw_hover_[selected_floor].png"
+                idle "images/ui/map/map_bw_idle_[selected_floor].png"
+                hover "images/ui/map/map_bw_hover_[selected_floor].png"
                 use map_information
                 
             if selected_floor < MAX_FLOOR:
@@ -225,8 +225,8 @@ screen in_game_map_menu(timed_menu):
                 
                 imagemap: 
                     xalign 0.5                       
-                    idle "images/ui/map_bw_idle_[selected_floor].png"
-                    hover "images/ui/map_bw_hover_[selected_floor].png"
+                    idle "images/ui/map/map_bw_idle_[selected_floor].png"
+                    hover "images/ui/map/map_bw_hover_[selected_floor].png"
                     
                     for hot in hotspots:
                         hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
