@@ -32,13 +32,8 @@ screen storyline:
                                 idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_storyline
                                 hover "images/characters/side/side " + char.text_id + ".png"
                             
-                            action SetVariable("current_storyline", char) 
+                            action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
                 
-                # Storyline
-                # imagemap:
-                #     yoffset 20 
-                #     xalign 0.5                       
-                #     idle "images/ui/storyline_background.jpg"
                 viewport:
                     yinitial 0.0
                     scrollbars "vertical"
@@ -114,7 +109,7 @@ screen storyline:
 
                                 xalign 0
 
-                                if j == 0:
+                                if j == 0 and current_storyline.is_character_unlocked():
                                     imagebutton:
                                         mouse 'hover'
                                         if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:

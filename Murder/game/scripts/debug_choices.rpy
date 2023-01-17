@@ -49,7 +49,7 @@ label debug_choices:
         #     jump lad_day3_morning
         
         "lad_day3_afternoon":
-            call unlock_psychic 
+            # call unlock_psychic 
             $ lad_details.unlock_observation('green_liquid')
             $ lad_details.saved_variables['library_visited'] = True
             $ lad_details.test_checkpoint()
