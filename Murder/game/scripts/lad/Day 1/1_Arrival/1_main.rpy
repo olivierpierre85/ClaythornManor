@@ -1,8 +1,10 @@
 # --------------------------------------------
-#               Ted Harring
-#           Friday 18:10 Arrival/Afternoon
+#  Ted Harring
+#           
+#  Friday 18:15 Arrival/Afternoon
 #
-#   Alive: Everyone
+#  Alive: Everyone
+# --------------------------------------------
 label lad_day1_arrival:
     
     $ current_character.add_checkpoint("lad_day1_arrival") 
@@ -11,7 +13,7 @@ label lad_day1_arrival:
 
     $ change_room('great_hall', irisout)
     
-    call change_time(18,10, 'Arrival', 'Friday')
+    call change_time(18,15, 'Arrival', 'Friday')
 
     $ play_music('upbeat')
 

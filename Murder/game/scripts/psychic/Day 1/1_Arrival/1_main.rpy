@@ -1,8 +1,9 @@
 # --------------------------------------------
-#               Ted Harring
-#           Friday 17:30 Arrival
+#               Amalia Baxter
+#           Friday 16:30 Arrival
 #
 #   Alive: Everyone
+# --------------------------------------------
 label psychic_day1_arrival:
 
     $ psychic_details.add_checkpoint("psychic_day1_arrival") 
@@ -11,7 +12,7 @@ label psychic_day1_arrival:
 
     $ change_room('great_hall', irisout)
     
-    call change_time(17,30, 'Arrival', 'Friday')
+    call change_time(16,30, 'Arrival', 'Friday')
 
     $ play_music('upbeat')
 
@@ -110,7 +111,7 @@ label psychic_day1_arrival:
 
     $ change_room("tea_room")
 
-    call change_time(18,00, 'Arrival', 'Friday')
+    call change_time(18,15, 'Arrival', 'Friday')
 
     butler """
     Miss Baxter.
@@ -172,7 +173,29 @@ label psychic_day1_arrival:
 
     call lad_generic
 
-    jump character_selection
+    play sound dinner_gong
+
+    """
+    A gong rings. 
+
+    What is that ?
+
+    Then the butler comes into the room.
+    """
+
+    butler """
+    Dinner is served. Please follow me to the dining room.
+    """
+
+    """
+    Oh ok. The gong warns people that dinner is served.
+
+    Rich people live differently that's for sure.
+    """
+
+    stop music fadeout 5.0
+
+    jump psychic_day1_dinner
 
 
     

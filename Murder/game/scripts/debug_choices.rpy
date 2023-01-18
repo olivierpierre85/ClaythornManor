@@ -21,8 +21,8 @@ label debug_choices:
         # "lad_day1_arrival":
         #     jump lad_day1_arrival
 
-        "lad_day2_dinner":
-            jump lad_day1_dinner
+        # "lad_day2_dinner":
+        #     jump lad_day1_dinner
         
         # "lad_day1_evening":
         #     jump lad_day1_evening
@@ -53,29 +53,30 @@ label debug_choices:
         #     $ lad_details.saved_variables["day2_believe_psychic"] = True
         #     jump lad_day3_morning
         
-        "lad_day3_afternoon":
-            # call unlock_psychic 
-            $ lad_details.unlock_observation('green_liquid')
-            $ lad_details.saved_variables['library_visited'] = True
-            $ lad_details.test_checkpoint()
+        # "lad_day3_afternoon":
+        #     # call unlock_psychic 
+        #     $ lad_details.unlock_observation('green_liquid')
+        #     $ lad_details.saved_variables['library_visited'] = True
+        #     $ lad_details.test_checkpoint()
 
-            $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
-            $ lad_details.unlock_object('gun')
-            $ first_death = False
-            $ lad_details.unlock_intuition('psychic_poisons')
-            $ lad_details.unlock_ending('gunned_down')
+        #     $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
+        #     $ lad_details.unlock_object('gun')
+        #     $ first_death = False
+        #     $ lad_details.unlock_intuition('psychic_poisons')
+        #     $ lad_details.unlock_ending('gunned_down')
             
-            $ lad_details.reset_information()
-            $ lad_details.unlock_object('gun')
+        #     $ lad_details.reset_information()
+        #     $ lad_details.unlock_object('gun')
 
-            jump lad_day3_afternoon
+        #     jump lad_day3_afternoon
 
         # "lad_day3_stay":
         #     $ lad_details.unlock_intuition('psychic_poisons')
         #     jump lad_day3_stay
-        # "psychic_introduction":
-        #     $ current_character = psychic_details
-        #     jump psychic_introduction
+
+        "psychic_introduction":
+            $ current_character = psychic_details
+            jump psychic_introduction
         
         # "captain_introduction":
         #     jump captain_introduction

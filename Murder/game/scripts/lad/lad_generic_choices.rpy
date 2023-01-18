@@ -8,23 +8,11 @@ label lad_generic:
     
     # Reset if previous early exit
     $ current_character.saved_variables["lad_generic_menu"].early_exit = False
-    $ print(current_character.saved_variables["lad_generic_menu"].is_valid())
+
     call run_menu(current_character.saved_variables["lad_generic_menu"])
-    $ print("exit run")
-    return
-
-
-label lad_generic_weather_friday:
-
-    psychic """
-    Well, it is not very original to ask about such things when meeting someone new.
-
-    But it is true that is not your average rain. It looks more like a dangerous storm to me.
-
-    And since we are basically in the middle of nowhere, that's reason enough to be a little nervous I suppose.
-    """
 
     return
+
 
 label lad_generic_weather_saturday:
 
