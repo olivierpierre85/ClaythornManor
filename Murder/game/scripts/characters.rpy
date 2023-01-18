@@ -677,6 +677,9 @@ label character_selection:
 
         current_checkpoint = current_character.get_init_checkpoint()
 
+    show screen current_time
+    show screen in_game_menu_btn
+    
     jump start_again
 
 # SCREENS

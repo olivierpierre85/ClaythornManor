@@ -30,9 +30,6 @@ label start():
 
     call init_characters
 
-    show screen current_time
-
-    show screen in_game_menu_btn
     
     # Debug Menu # TODO remove when prod
     jump debug_choices

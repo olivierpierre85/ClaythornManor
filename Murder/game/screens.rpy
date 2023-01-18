@@ -1144,7 +1144,7 @@ style confirm_frame:
     yalign .5
 
 style clock_frame:
-    background Frame(["gui/clock_frame_white.png"], Borders(60, 60, 60, 60), tile=gui.frame_tile)
+    background Frame(["images/ui/clock_frame_white_2.png"], Borders(60, 60, 60, 60), tile=gui.frame_tile)
     xalign .5
     yalign .5
 

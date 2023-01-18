@@ -110,10 +110,6 @@ label lad_generic_age_psychic:
 
 label lad_generic_heroic_act:
 
-    lad """
-    
-
-    """
 
     return
 

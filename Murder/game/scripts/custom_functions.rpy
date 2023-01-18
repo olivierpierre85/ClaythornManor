@@ -18,6 +18,25 @@ label change_time(hours, minutes, phase = None, day = None, ):
         if day:
             current_day =  day
 
+        # Compute for clock rotation
+        current_hour = current_time.hour
+        current_minutes = current_time.minute
+        extra_rotation = 0
+        if current_hour >= 12:
+            current_period = "PM"
+        else:
+            current_period = "AM"
+        
+        if current_day == "Saturday":
+            extra_rotation += 2
+        elif current_day == "Sunday":
+            extra_rotation += 4
+
+        hours_angle = (360 * extra_rotation) + ((int(current_hour) * 60) + int(current_minutes))/2
+        # print(extra_rotation, "-", hours_angle)
+        
+        minutes_angle = (360 * current_hour) + int(current_minutes) * 6 # + (360 * extra_rotation * 24) TOO fast?
+
     play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"
 
     return
@@ -129,7 +148,7 @@ label start_again():
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 
         renpy.jump(current_checkpoint.label_id) 
-    
+
     return
 
 # NOT needed, imprint frame in picture

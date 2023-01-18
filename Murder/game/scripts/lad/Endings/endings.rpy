@@ -27,6 +27,7 @@ label ending_generic:
         $ first_death = False
 
     hide screen centered_text
+
     jump character_selection
 
     return

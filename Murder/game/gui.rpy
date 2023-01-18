@@ -63,6 +63,8 @@ define gui.name_text_font = "gui/font/Redressed.ttf"
 ## The font used for out-of-game text.
 define gui.interface_text_font = "gui/font/Jost-Light.ttf"
 
+define gui.clock_text_font = "gui/font/PlayfairDisplay-Italic-VariableFont_wght.ttf"
+
 ## The size of normal dialogue text.
 define gui.text_size = 33
 

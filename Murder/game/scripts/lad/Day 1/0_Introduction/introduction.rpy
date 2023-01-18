@@ -1,7 +1,27 @@
 label lad_introduction:
 
-    #$ lad_details.add_checkpoint("lad_introduction") 
+    "TIME TEST 17000 friday"
+
     
+    call change_time(18,00, 'Evening', 'Friday')
+    "TIME TEST 18000 friday"
+
+    call change_time(23,00, 'Evening', 'Friday')
+    "TIME TEST 23000 friday"
+
+    call change_time(07,00, 'Evening', 'Saturday')
+    "TIME TEST 07 Saturdaty"
+
+    call change_time(11,00, 'Evening', 'Saturday')
+    "TIME TEST 11 Saturdaty"
+
+    call change_time(12,01, 'Evening', 'Saturday')
+    "TIME TEST 12:01 Saturdaty"
+
+    call change_time(13,00, 'Evening', 'Saturday')
+    "TIME TEST 13 Saturdaty"
+
+
     call change_time(17,00, 'Evening', 'Friday')
 
     scene train_inside
