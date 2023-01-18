@@ -1,31 +1,6 @@
 screen current_time:
     modal False
 
-    # python:
-    #     current_hour = current_time.hour
-    #     current_minutes = current_time.minute
-    #     extra_hour_rotation = 0
-    #     if current_hour >= 12:
-    #         current_period = "PM"
-    #         extra_hour_rotation += 1
-    #     else:
-    #         current_period = "AM"
-        
-    #     if current_day == "Saturday":
-    #         extra_hour_rotation += 2
-    #     elif current_day == "Sunday":
-    #         extra_hour_rotation += 4
-
-    #     hours_angle = (360 * extra_hour_rotation) + ((int(current_hour) * 60) + int(current_minutes))/2
-    #     print(hours_angle)
-        
-    #     minutes_angle = int(current_minutes) * 6
-    
-    # Terrible quickfix to force clockwise rotation... (constant) TODO  replace???
-    # python:
-    #     while old_minutes_angle > minutes_angle:
-    #         minutes_angle = minutes_angle + 360
-
     image "images/ui/clock_small.png":
         xoffset 30
         yoffset 20
@@ -46,21 +21,19 @@ screen current_time:
             font gui.clock_text_font
             bold True
 
-    # needle
     add "images/ui/clock_hours.png" at rotate_hours(hours_angle)
     add "images/ui/clock_minutes.png" at rotate_minutes(minutes_angle)
 
-    # $ old_minutes_angle = minutes_angle
-        
+
 transform rotate_hours( angle = 0 ):
     xoffset -16
     yoffset 1
-    linear 3.0 rotate angle 
+    linear show_hours_movement rotate angle 
 
 transform rotate_minutes( angle = 0 ):
     xoffset -16
     yoffset 1 
-    linear 3.0 rotate angle 
+    linear show_minutes_movement rotate angle 
 
 # BLACK transition
 label black_screen_transition(display_text, display_text_2 = None):

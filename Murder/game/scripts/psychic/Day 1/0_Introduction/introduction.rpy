@@ -2,7 +2,7 @@ label psychic_introduction:
 
     # $ psychic_details.add_checkpoint("psychic_introduction") 
     
-    call change_time(16,30, 'Evening', 'Friday')
+    call change_time(16,30, 'Evening', 'Friday', hide_minutes = True)
 
     scene train_inside
 

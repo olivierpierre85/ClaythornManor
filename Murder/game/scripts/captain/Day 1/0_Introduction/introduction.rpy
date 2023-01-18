@@ -2,7 +2,7 @@ label captain_introduction:
 
     $ captain_details.add_checkpoint("captain_introduction") 
     
-    call change_time(17,00, 'Evening', 'Friday')
+    call change_time(17,00, 'Evening', 'Friday', hide_minutes = True)
 
     scene train_inside
 

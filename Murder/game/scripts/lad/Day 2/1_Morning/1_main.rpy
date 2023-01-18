@@ -8,7 +8,7 @@ label lad_day2_morning:
     
     $ change_room('lad_room')
 
-    call change_time(9,00, 'Morning', 'Saturday')
+    call change_time(9,00, 'Morning', 'Saturday', hide_minutes = True)
 
     """
     I slept through the night. 

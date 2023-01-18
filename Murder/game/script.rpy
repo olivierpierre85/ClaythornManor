@@ -12,7 +12,6 @@ init -1000 python:
 # TODO move to init var ? Sort it out
 define time_left = 0
 define hours_angle = 0
-define old_minutes_angle = 0 
 
 define current_year = "1924"
 
@@ -48,6 +47,10 @@ label init_technical_variables:
         # Technical Variables
         # TODO delete those in character select AND start again
         test_mode = False
+
+        show_minutes_movement = 0
+        show_hours_movement = 0
+        skip_clock_movement = True
 
         if test_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")

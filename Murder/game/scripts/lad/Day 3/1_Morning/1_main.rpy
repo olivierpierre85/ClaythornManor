@@ -7,12 +7,12 @@ label lad_day3_morning:
     $ change_room('lad_room', irisout)
 
     if lad_details.saved_variables["day2_believe_psychic"]:
-        call change_time(8,00, "Morning", "Sunday")
+        call change_time(8,00, "Morning", "Sunday", hide_minutes = True)
         # You talked to and believed psychic
         # So she came to wake you at dawn
     else:
         # Otherwise, you'll have less time to explore
-        call change_time(9,30, "Morning", "Sunday")
+        call change_time(9,30, "Morning", "Sunday", hide_minutes = True)
 
     play sound door_knock
     
@@ -93,7 +93,6 @@ label lad_day3_morning:
         We better look into it then.
         """
 
-        
 
     else:
         """

@@ -8,8 +8,18 @@ transform character_talking_right:
     ypos 600
 
 # TODO put in python function for consistency
-label change_time(hours, minutes, phase = None, day = None, ):
+label change_time(hours, minutes, phase = None, day = None, hide_minutes = False):
     python:
+        if skip_clock_movement:
+            show_minutes_movement = 0
+            show_hours_movement = 0
+        else:
+            show_hours_movement = 3
+            if hide_minutes:
+                show_minutes_movement = 0
+            else:
+                show_minutes_movement = 3
+
         current_time =  time(hours,minutes,00)
         
         if phase:
@@ -33,11 +43,12 @@ label change_time(hours, minutes, phase = None, day = None, ):
             extra_rotation += 4
 
         hours_angle = (360 * extra_rotation) + ((int(current_hour) * 60) + int(current_minutes))/2
-        # print(extra_rotation, "-", hours_angle)
         
-        minutes_angle = (360 * current_hour) + int(current_minutes) * 6 # + (360 * extra_rotation * 24) TOO fast?
+        minutes_angle = (360 * (current_hour) ) + int(current_minutes) * 6 # + (360 * extra_rotation * 24) TOO fast?
 
     play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"
+
+    $ skip_clock_movement = False
 
     return
 
@@ -146,6 +157,8 @@ label start_again():
             current_character.unlock_observation(item, False)
 
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
+
+        skip_clock_movement = True # Don't show move clock at first change time
 
         renpy.jump(current_checkpoint.label_id) 
 
