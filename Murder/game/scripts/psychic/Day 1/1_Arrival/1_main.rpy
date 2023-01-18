@@ -25,7 +25,7 @@ label psychic_day1_arrival:
 
     In the meantime, you can enjoy some drinks in the tea room.
 
-    Or, for those who wish to change before, I can show you room right now.
+    Or, if you wish to change, I can show you to your room right now.
     """
 
     drunk """
@@ -59,7 +59,7 @@ label psychic_day1_arrival:
     psychic """
     Miss Baxter.
 
-    I think I'll refresh a bit in my room.
+    I think I'll refresh a bit in my room first.
 
     It has been a very long trip.
     """

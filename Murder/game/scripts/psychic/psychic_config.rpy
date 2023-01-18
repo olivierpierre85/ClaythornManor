@@ -8,9 +8,8 @@ label init_psychic:
         # Story Variables
         psychic_init_variables = {
             # "map_menu" : psychic_map_menu,
-            
-            "lad_generic_menu" : lad_generic_menu_psychic
-
+            "lad_generic_menu" : lad_generic_menu_psychic,
+            "captain_generic_menu" : captain_generic_menu_psychic
         }
 
         psychic_extra_information = [
@@ -19,7 +18,8 @@ label init_psychic:
             CharacterInformation(2, "age", "She was .... SO she must be ????"),
             CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.", is_important = True),
             CharacterInformation(4, "lie", "She is a fraud. All she said about talking with spirit was a lie.", is_important = True),
-            CharacterInformation(5, "drive", "Doesn't have a driving license.")
+            CharacterInformation(5, "drive", "Doesn't have a driving license."),
+            CharacterInformation(6, "racist", "She believes only white people come from England.")
         ]
         psychic_details  = CharacterDetails(
             text_id = "psychic", 

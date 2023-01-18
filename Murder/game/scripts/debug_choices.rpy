@@ -75,6 +75,7 @@ label debug_choices:
         #     jump lad_day3_stay
 
         "psychic_introduction":
+            call unlock_psychic
             $ current_character = psychic_details
             jump psychic_introduction
         
@@ -82,6 +83,7 @@ label debug_choices:
         #     jump captain_introduction
 
         "psychic_day1_arrival":
+            call unlock_psychic
             $ current_character = psychic_details
             jump psychic_day1_arrival
 

@@ -190,9 +190,11 @@ label psychic_introduction:
     Not at all.
     """
 
-    $ time_left = 1
+    $ time_left = 6
 
     call captain_generic
+
+    call change_time(16,15, 'Evening', 'Friday')
 
     # Arrival to manor
     stop music fadeout 3.0
@@ -226,8 +228,6 @@ label psychic_introduction:
     Now I can finally relax. Everything will be fine here.
     """
 
-    stop sound
-
     pause 1.0
 
     """
@@ -237,6 +237,8 @@ label psychic_introduction:
 
     When we reach the main door, a butler greets us.
     """
+
+    stop sound
     
     jump psychic_day1_arrival
 
