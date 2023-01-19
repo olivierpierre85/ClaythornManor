@@ -45,12 +45,14 @@ label init_lad:
         # Character Class
         lad_extra_information = [
             # knowledge
-            CharacterInformation(0, "background", "Born and raised in London.") , 
-            CharacterInformation(2, "age", "He was 15 at the end of the war. That would make him 22 years old today."),
-            CharacterInformation(3, "education", "Not a great reader."),
-            CharacterInformation(4, "poor_drinker", "Can't hold his liqueur."),
-            CharacterInformation(5, "drive", "He never learned how to drive."),
-            CharacterInformation(6, "cook", "He is not much of a cook."),
+            CharacterInformation(0, "origin", "Born and raised in London."), 
+            CharacterInformation(10, "job", "A seller of stuff..."), 
+            CharacterInformation(11, "thief", "... of stolen stuff apparently."), 
+            CharacterInformation(20, "age", "He is 22 years old. He was only 15 at the end of the war."),
+            CharacterInformation(30, "education", "Not a great reader."),
+            CharacterInformation(40, "poor_drinker", "Can't hold his liqueur."),
+            CharacterInformation(50, "drive", "He never learned how to drive."),
+            CharacterInformation(60, "cook", "He is not much of a cook."),
             # Observations
             CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", type="observation", image_file="poison"), 
             # Objects
@@ -71,8 +73,7 @@ label init_lad:
             description_short = "Young man",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
-            saved_variables = copy.deepcopy(lad_init_variables),
-            # start_checkpoint = 
+            saved_variables = copy.deepcopy(lad_init_variables), # copy so the init variables can be used again.
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 

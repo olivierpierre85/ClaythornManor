@@ -1,4 +1,7 @@
 
+label generic_cancel:
+    return
+    
 label downstairs_default:
     scene basement_stairs
 

@@ -113,6 +113,3 @@ label doctor_generic_room:
     $ unlock_map('doctor_room')
     
     return
-
-label doctor_generic_cancel:
-    return

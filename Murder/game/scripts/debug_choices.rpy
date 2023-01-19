@@ -87,6 +87,11 @@ label debug_choices:
             $ current_character = psychic_details
             jump psychic_day1_arrival
 
+        "psychic_day1_dinner":
+            call unlock_psychic
+            $ current_character = psychic_details
+            jump psychic_day1_dinner
+
     return
 
 label unlock_psychic:

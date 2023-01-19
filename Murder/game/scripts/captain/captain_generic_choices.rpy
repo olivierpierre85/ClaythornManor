@@ -112,23 +112,54 @@ label captain_generic_origin_psychic_2:
 
 label captain_generic_heroic_act:
     
+    """ TODO
+    Held a important trench when everyone else ordered retreat
+    """
     
     
     return
 
-label captain_generic_background:
-    
-
-    return
     
 label captain_generic_manor:
+
     captain """
     o
     """
 
+    return 
 
-    
+label captain_generic_room_friday:
+
+    captain """
+    I am not sure actually.
+
+    I guess I'll see after dinner.
+    """
+
     return
 
-label captain_generic_cancel:
+label captain_generic_age_psychic:
+    
+    captain """
+    Why?
+
+    You can't tell the age of an Indian man?
+    """
+
+    psychic """
+    No, I am just asking out of curiosity.
+
+    I didn't mean anything by it.
+    """
+
+    captain """
+    Humphh.
+
+    Alright then.
+    
+    I am 56 years old.
+    """
+
+    $ captain_details.unlock_knowledge('age')
+    
     return

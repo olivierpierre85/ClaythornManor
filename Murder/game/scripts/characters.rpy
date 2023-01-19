@@ -110,21 +110,6 @@ label init_characters:
         broken = Character("broken_details.get_name()", image="broken", dynamic=True)
 
         # 7. The Captain
-        captain_extra_information = [
-            CharacterInformation(0, "wars", "A veteran of several wars, he fought in Burma, China, and in the Great War."), 
-            CharacterInformation(1, "talker", "Likes to tell stories in front of an audience.")
-        ]
-        captain_details  = CharacterDetails(
-            text_id = "captain", 
-            locked = True,
-            know_real_name = True,
-            real_name = "Sushil Sinha",
-            nickname = "The Captain",
-            description_short = "Older Indian man",
-            description_long = "Older man from India.",
-            information_list = captain_extra_information
-        )
-        captain = Character("captain_details.get_name()", image="captain", dynamic=True)
         
         # 8. The Nurse
         nurse_extra_information = [

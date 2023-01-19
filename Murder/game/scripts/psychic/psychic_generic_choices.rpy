@@ -286,6 +286,3 @@ label psychic_generic_manor:
     """
     
     return
-
-label psychic_generic_cancel:
-    return

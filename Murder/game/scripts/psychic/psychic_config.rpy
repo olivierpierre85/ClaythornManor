@@ -9,7 +9,11 @@ label init_psychic:
         psychic_init_variables = {
             # "map_menu" : psychic_map_menu,
             "lad_generic_menu" : lad_generic_menu_psychic,
-            "captain_generic_menu" : captain_generic_menu_psychic
+            "lad_generic_other_guests_menu" : lad_generic_other_guests_menu_psychic,
+            "captain_generic_menu" : captain_generic_menu_psychic,
+
+            # story var
+            "knows_lad_background" : False
         }
 
         psychic_extra_information = [
