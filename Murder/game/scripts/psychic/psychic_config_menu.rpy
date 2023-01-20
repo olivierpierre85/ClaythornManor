@@ -1,19 +1,20 @@
 label psychic_config_menu:
 
     # CAPTAIN
+    $ condition_captain_origin = "current_character.saved_variables['knows_captain_real_origin']"
     $ captain_generic_menu_psychic = TimedMenu([
         # In the car ((not really a choice))
         TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', 5),
-        TimedMenuChoice('I mean, where are you \"Really\" from?', 'captain_generic_origin_psychic_2', 5 , condition = "psychic_details.is_knowledge_unlocked('racist')"),
+        TimedMenuChoice('I mean, where are you \"Really\" from?', 'captain_generic_origin_psychic_2', 5 , condition = "current_character.saved_variables['knows_captain_origin']"),
         # Real Generics
-        TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act_psychic', 20),
-        TimedMenuChoice('What do you think of this place?', 'captain_generic_manor', 10),
-        TimedMenuChoice('How old are you?', 'captain_generic_age_psychic', 5),
-        TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 5, condition = condition_friday),
-        TimedMenuChoice('What room are you in?', 'captain_generic_room_psychic', 5, condition = "not " + condition_friday),
-        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_friday),
+        TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act_psychic', 20, condition = condition_captain_origin),
+        TimedMenuChoice('What do you think of this place?', 'captain_generic_manor_psychic', 10, condition = condition_captain_origin),
+        TimedMenuChoice('How old are you?', 'captain_generic_age_psychic', 5, condition = condition_captain_origin),
+        TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 5, condition = condition_captain_origin + "and " + condition_friday),
+        TimedMenuChoice('What room are you in?', 'captain_generic_room_psychic', 5, condition = condition_captain_origin + "and " + " not " + condition_friday),
+        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_captain_origin + "and " + condition_friday),
         # exit
-        TimedMenuChoice('On second thought, I would rather stay silent than speak to him.', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+        TimedMenuChoice('On second thought, I\'d better not talk to him', 'generic_cancel', 0, keep_alive = True, early_exit = True, condition = condition_captain_origin )
     
     ], image_right = "captain")
 

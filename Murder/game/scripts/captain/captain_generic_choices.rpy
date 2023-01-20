@@ -71,6 +71,7 @@ label captain_generic_origin_psychic_1:
     """
 
     $ psychic_details.unlock_knowledge("racist")
+    $ current_character.saved_variables["knows_captain_origin"] = True
 
     return 
 
@@ -88,16 +89,51 @@ label captain_generic_origin_psychic_2:
 
     captain """
     In North India yes.
-
-    I was born there.
     """
 
+    # ChatGPT
     captain """
-    TODO add chatGPT story here (all long story by captain should be chat GPT)
+    I was born there in 1870. 
+    
+    Growing up, I was always fascinated by the stories of the Raj army and their brave officers. 
+    
+    I knew from a young age that I wanted to join the army and serve my country.
+
+    As I grew older, I began to prepare myself for the rigorous training that would be required to become an officer in the Raj army. 
+    
+    I studied hard and practiced my shooting and horseback riding skills. 
+    
+    I also learned about the history of India and the British Raj, so that I could understand the context of the conflicts that the army was involved in.
+
+    Finally, in 1890, I was accepted into the Raj army as a cadet. 
+    
+    The training was grueling, but I was determined to succeed. 
+    
+    I was taught how to march, how to shoot, and how to lead my men in battle. 
+    
+    I also learned about strategy and tactics, so that I could make quick decisions in the heat of battle.
+
+    After two years of training, I was finally commissioned as an officer. 
+    
+    I was assigned to a regiment and sent to the frontier, where I would be fighting against the tribes that were trying to rebel against the British Raj.
+
+    It was a difficult and dangerous assignment, but I was determined to do my best. 
+    
+    I led my men into battle and fought bravely, always thinking of the safety and well-being of my men. 
+    
+    I was able to successfully quell the rebellion, and my men and I returned home as heroes.
+
+    I continued to serve in the Raj army for many years, rising through the ranks and taking on more responsibility. 
+
+    As the years went by, I was increasingly exposed to the ways of the British army and began to adopt their techniques and strategies. 
+    
+    I was eventually sent to London to train new officers, ...
     """
 
+    # where I finished my career as a respected trainer in the British army.
+
     """
-    My god, he is ready to tell me his whole life story.
+    My god, he is going to tell me his whole life story.
 
     How rude.
 
@@ -108,22 +144,93 @@ label captain_generic_origin_psychic_2:
 
     $ captain_details.unlock_knowledge('talker') 
 
+    $ current_character.saved_variables["knows_captain_real_origin"] = True
+    
+
     return
 
-label captain_generic_heroic_act:
+label captain_generic_heroic_act_psychic:
     
-    """ TODO
-    Held a important trench when everyone else ordered retreat
+    captain """
+    It is because of my actions during the Great War.
     """
+
+    #chatGPT
+    captain """
+    It was 1917, and I was serving in the Mesopotamia campaign. 
     
+    Our regiment was tasked with taking control of a heavily fortified Turkish position. 
+    
+    The battle was intense and brutal, with heavy gunfire and explosions all around us.
+
+    I led my men through the chaos, urging them forward and providing cover fire. 
+    
+    Despite the danger, we were able to push through the enemy lines and take control of the position.
+
+    I was severely injured in the battle, but I refused to be taken off the field until the objective was secured. 
+    
+    My actions, bravery and leadership inspired my men and led to the success of our mission.
+
+    For my actions, I was awarded the Military Cross, one of the highest honors that can be given to an officer of the British army. 
+    
+    I was proud to have served my country and to have played a role in the ultimate victory of the Great War.
+    """
+
+    """
+    Well, he certainly likes to tell a story in full.
+
+    That was my fault for asking.
+    """
+
     
     return
 
     
-label captain_generic_manor:
+label captain_generic_manor_psychic:
 
     captain """
-    o
+    It's a splendid place.
+
+    A bit old, and it could used some renovations.
+
+    But I know it is no easy task.
+    """
+
+    #chatGPT
+    captain """
+    As someone who has seen my fair share of grand buildings and stately homes, I can confidently say that renovating an old Victorian mansion is no easy feat. 
+    
+    The challenge lies in balancing the preservation of the building's historical integrity with the necessary updates and modernizations for contemporary living.
+
+    One issue that often arises is the cost of renovations. 
+    
+    Victorian mansions were built with materials and techniques that are not always easily replicated today, making repairs and replacements quite expensive. 
+    
+    Additionally, many of these homes have unique architectural features that require specialized skills and knowledge to maintain.
+
+    Another obstacle to overcome is the potential for structural issues. 
+    
+    Victorian mansions are often quite old, and over time, they can suffer from wear and tear. 
+    
+    This means that any renovation work will need to be done with an eye towards ensuring the building's stability and safety.
+
+    Personally, I believe that renovating an old Victorian mansion is a noble endeavor. 
+    
+    These buildings are a testament to a bygone era and preserving them for future generations is important. 
+    
+    However, it is crucial to approach the task with a realistic understanding of the challenges and costs involved. 
+    
+    A balance must be struck between maintaining the historical integrity of the building and ensuring that it is functional and comfortable for modern living.
+
+    Ultimately, renovating an old Victorian mansion is not for the faint of heart, but for those who are willing to put in the time, effort, and resources, the end result can be truly spectacular.
+    """
+
+    """
+    Another long story.
+
+    But how does he know such things?
+
+    Is he one of those bookish people who read about everything and anything?
     """
 
     return 

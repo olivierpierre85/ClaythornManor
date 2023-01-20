@@ -206,7 +206,7 @@ label psychic_introduction:
     """
     After what seems to be an eternity, a impressive manor appears on the horizon.
 
-    It finally shut down Mister Sinha.
+    That finally put an end to Captain Sinha speech.
     """
 
     captain """

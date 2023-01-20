@@ -13,7 +13,9 @@ label init_psychic:
             "captain_generic_menu" : captain_generic_menu_psychic,
 
             # story var
-            "knows_lad_background" : False
+            "knows_lad_background" : False,
+            "knows_captain_origin" : False,
+            "knows_captain_real_origin" : False,
         }
 
         psychic_extra_information = [
