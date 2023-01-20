@@ -19,7 +19,17 @@ label psychic_config_menu:
     ], image_right = "captain")
 
 
-
+    $ captain_generic_other_guests_menu_psychic = TimedMenu([
+        # Friday
+        TimedMenuChoice('Ask about Samuel Manning', 'captain_generic_drunk_friday_psychic', 5, condition = condition_friday ),
+        TimedMenuChoice('Ask about Lady Claythorn', 'captain_generic_host_friday_psychic', 5, condition = condition_friday),
+        TimedMenuChoice('Ask about Rosalind Marsh', 'captain_generic_nurse_friday', 5, condition = condition_friday),        
+        TimedMenuChoice('Ask about Thomas Moody', 'captain_generic_broken_friday', 20, condition = condition_friday),
+        TimedMenuChoice('Ask about Ted Harring', 'captain_generic_lad_friday_psychic', 10, condition = condition_friday),
+        TimedMenuChoice('Ask about Daniel Baldwin', 'captain_generic_doctor_friday', 5, condition = condition_friday),
+        # Always Generic 
+        TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "captain")
     # LAD
 
     $ lad_generic_menu_psychic = TimedMenu([

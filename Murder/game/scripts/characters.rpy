@@ -114,7 +114,8 @@ label init_characters:
         # 8. The Nurse
         nurse_extra_information = [
             CharacterInformation(1, "job", "A nurse.", is_important = True), 
-            CharacterInformation(0, "todo", "todo", is_important = True)
+            CharacterInformation(2, "clothes", "Discreet but well dressed.", is_important = True),
+            CharacterInformation(0, "todo", "todo", is_important = True),
         ]
         nurse_details  = CharacterDetails(
             text_id = "nurse", 

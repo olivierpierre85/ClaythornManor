@@ -93,7 +93,7 @@ label captain_generic_origin_psychic_2:
 
     # ChatGPT
     captain """
-    I was born there in 1870. 
+    I was born there in 1868. 
     
     Growing up, I was always fascinated by the stories of the Raj army and their brave officers. 
     
@@ -181,7 +181,6 @@ label captain_generic_heroic_act_psychic:
 
     That was my fault for asking.
     """
-
     
     return
 
@@ -233,6 +232,8 @@ label captain_generic_manor_psychic:
     Is he one of those bookish people who read about everything and anything?
     """
 
+    $ captain_details.unlock_knowledge('mansion')
+
     return 
 
 label captain_generic_room_friday:
@@ -250,7 +251,9 @@ label captain_generic_age_psychic:
     captain """
     Why?
 
-    You can't tell the age of an Indian man?
+    Is it because you can't guess my age since I am Indian?
+
+    A lot of people can't.
     """
 
     psychic """

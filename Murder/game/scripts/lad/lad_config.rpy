@@ -53,6 +53,7 @@ label init_lad:
             CharacterInformation(40, "poor_drinker", "Can't hold his liqueur."),
             CharacterInformation(50, "drive", "He never learned how to drive."),
             CharacterInformation(60, "cook", "He is not much of a cook."),
+            CharacterInformation(70, "poor", "It's rather obvious he is not from the upper class, to say the least."),
             # Observations
             CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", type="observation", image_file="poison"), 
             # Objects

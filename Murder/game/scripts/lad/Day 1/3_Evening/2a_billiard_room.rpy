@@ -71,7 +71,7 @@ label lad_day1_evening_billiard_room_bar_1:
     He pretends not to notice my surprise and keeps on talking.
     """
 
-    $ doctor_details.unlock_knowledge('mask') 
+    $ broken_details.unlock_knowledge('mask') 
 
     broken """
     He was already asleep when I arrived. It's impressive that he managed to still be here.
