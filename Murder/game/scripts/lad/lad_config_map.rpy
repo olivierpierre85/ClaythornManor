@@ -46,7 +46,7 @@ label lad_config_map:
             ),
             TimedMenuChoice(
                 'Go to sleep', 
-                'lad_day1_evening_cancel', 
+                'generic_cancel', 
                 early_exit = True, 
                 room = 'lad_room',
                 condition = condition_friday

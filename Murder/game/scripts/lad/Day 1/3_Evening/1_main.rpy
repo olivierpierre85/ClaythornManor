@@ -157,6 +157,3 @@ label lad_day1_evening_psychic_room:
     $ unlock_map('psychic_room')
 
     return
-
-label lad_day1_evening_cancel:
-    return
