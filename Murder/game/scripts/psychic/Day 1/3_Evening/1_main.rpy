@@ -1,5 +1,5 @@
 # --------------------------------------------
-#               Amalia Baxter
+#               Amelia Baxter
 #           Friday 21:00 Evening
 #   Playtime : about 10 min from start
 #

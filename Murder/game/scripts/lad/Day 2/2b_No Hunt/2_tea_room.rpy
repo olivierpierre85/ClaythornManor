@@ -192,7 +192,7 @@ label lad_day2_hunt_tea_room:
     """
     Rosalind Marsh then exists the tea room.
 
-    I am left alone with Amalia Baxter.
+    I am left alone with Amelia Baxter.
     """
 
     psychic """
@@ -212,7 +212,7 @@ label lad_day2_hunt_tea_room_return:
     """
     I return to the tea room.
 
-    Amalia Baxter is still there, reading a book.
+    Amelia Baxter is still there, reading a book.
 
     I approach her.
     """

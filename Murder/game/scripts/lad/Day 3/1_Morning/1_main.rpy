@@ -50,7 +50,7 @@ label lad_day3_morning:
         """
         I dress up in a hurry and open the door.
 
-        Amalia Baxter enters, visibly nervous.
+        Amelia Baxter enters, visibly nervous.
         """
 
         psychic """

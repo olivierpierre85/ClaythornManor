@@ -1,14 +1,14 @@
 # --------------------------------------------
-#               Amalia Baxter
+#               Amelia Baxter
 #           Friday 16:30 Arrival
 #
-#   Alive: Everyone
+#  Alive: Everyone
 # --------------------------------------------
 label psychic_day1_arrival:
 
     $ psychic_details.add_checkpoint("psychic_day1_arrival") 
     
-    call black_screen_transition("Amalia Baxter", "Friday")
+    call black_screen_transition("Amelia Baxter", "Friday")
 
     $ change_room('great_hall', irisout)
     

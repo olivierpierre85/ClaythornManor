@@ -57,7 +57,7 @@ label psychic_introduction:
     """
 
     footman """
-    Yes of course. You must be Amalia Baxter.
+    Yes of course. You must be Amelia Baxter.
     """
 
     psychic """

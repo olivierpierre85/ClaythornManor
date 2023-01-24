@@ -50,7 +50,7 @@ label init_map:
         ]
         # TODO put in the ROOM class????? NOT if multiple info by room? Check at the end
         map_information = [
-            MapInfo('psychic_room', 'Amalia Baxter',    2, (0, 100, 200, 100)),
+            MapInfo('psychic_room', 'Amelia Baxter',    2, (0, 100, 200, 100)),
             MapInfo('lad_room',     'Ted Harring',      2, (200, 100, 200, 100)),
             MapInfo('broken_room',  'Thomas Moody',     2, (600, 100, 200, 100)),
             MapInfo('host_room',    'Lady Claythorn',   2, (400, 100, 200, 100)),

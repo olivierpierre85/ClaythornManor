@@ -93,7 +93,7 @@ label lad_day3_escape:
     """
 
     """
-    Amalia Baxter is visibly scared out of her mind.
+    Amelia Baxter is visibly scared out of her mind.
 
     But the natural authority of Sushil Sinha makes her nod in acquiesce.
     """
@@ -115,7 +115,7 @@ label lad_day3_escape:
     """
     
     """
-    We leave Amalia Baxter behind us and we exit the manor.
+    We leave Amelia Baxter behind us and we exit the manor.
     """
 
     $ change_room('manor_garden')

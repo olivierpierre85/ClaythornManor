@@ -1,6 +1,6 @@
 # --------------------------------------------
 #               Ted Harring
-#           Friday 18:30 Arrival
+#           Friday 18:30 Dinner
 #
 #   Alive: Everyone
 label lad_day1_dinner:
