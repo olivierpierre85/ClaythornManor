@@ -14,11 +14,17 @@ label init_psychic:
 
             "captain_generic_menu" : captain_generic_menu_psychic,
             "captain_generic_other_guests_menu" : captain_generic_other_guests_menu_psychic,
+
+            "doctor_generic_menu" : doctor_generic_menu_psychic,
+            "doctor_generic_other_guests_menu": doctor_generic_other_guests_menu_psychic,
+
+            "knows_doctor_background": False,
             
             # story var
             "knows_lad_background" : False,
             "knows_captain_origin" : False,
             "knows_captain_real_origin" : False,
+            "day1_evening_billiard_room_visited" : False,
         }
 
         psychic_extra_information = [

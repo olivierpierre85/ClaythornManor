@@ -2,9 +2,6 @@ label lad_day1_evening_billiard_room:
 
     $ change_room('billiard_room')
 
-    # Change menu text TODO too dangerous, see at the end we want to keep that
-    # $ lad_day1_evening_menu.choices[1].text = "Go back to the billiard room"
-
     if not lad_details.saved_variables["day1_evening_billiard_room_visited"]:
 
         $ lad_details.saved_variables["day1_evening_billiard_room_visited"] = True
@@ -174,6 +171,14 @@ label lad_day1_evening_billiard_group_cancel:
 label lad_day1_evening_billiard_room_group_part_2:
 
     call captain_billiard_room_speech_part_2
+
+    """
+    Wait, that was the original question ?
+
+    Why he is living in England ?
+
+    It took long enough.
+    """
 
     return
 

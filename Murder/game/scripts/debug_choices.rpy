@@ -27,8 +27,8 @@ label debug_choices:
         # "lad_day1_evening":
         #     jump lad_day1_evening
 
-        # "lad_day2_morning":
-        #     jump lad_day2_morning
+        "lad_day2_morning":
+            jump lad_day2_morning
             
         # "lad_day2_hunt":
         #     jump lad_day2_hunt
@@ -93,6 +93,12 @@ label debug_choices:
             $ current_character = psychic_details
             jump psychic_day1_dinner
 
+        "psychic_day1_evening":
+            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+            call unlock_psychic
+            $ current_character = psychic_details
+            jump psychic_day1_evening
+            
     return
 
 label unlock_psychic:

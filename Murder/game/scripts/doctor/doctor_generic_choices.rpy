@@ -44,7 +44,9 @@ label doctor_generic_background:
     In the last one of course, but I was also in China during the insurrection.
     """
 
-    $ doctor_details.unlock_knowledge('background') 
+    $ doctor_details.unlock_knowledge('background')
+     
+    $ current_character.saved_variables["knows_doctor_background"] = True
 
     return
 

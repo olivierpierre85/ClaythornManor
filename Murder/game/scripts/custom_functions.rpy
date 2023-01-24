@@ -176,3 +176,24 @@ label start_again():
 #   return
 
 # Copy from screens.rpy
+
+# TODO remove when game finished
+label work_in_progress:
+
+    hide screen current_time
+    hide screen in_game_menu_btn
+
+    scene black_background with wipedown
+    show screen centered_text("The story is over for now.")
+    play sound gong
+    pause 5.0
+
+    """
+    You've reached to end of the story written so far.
+
+    But don't worry, the rest of this game will be done soon!
+    """
+
+    hide screen centered_text
+
+    jump character_selection

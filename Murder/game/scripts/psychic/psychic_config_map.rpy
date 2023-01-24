@@ -23,7 +23,7 @@ label psychic_config_map:
             # ),
             TimedMenuChoice(
                 'Meet the others in the billiard room', 
-                'lad_day1_evening_billiard_room', 
+                'psychic_day1_evening_billiard_room', 
                 0, 
                 keep_alive = True, 
                 room = 'billiard_room', 
@@ -37,7 +37,6 @@ label psychic_config_map:
                 'psychic_library', 
                 20, 
                 room = 'library',
-                condition = "(not current_day == 'Sunday')"
             ),
 
         ], is_map = True)

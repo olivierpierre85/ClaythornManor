@@ -28,7 +28,9 @@ label lad_day2_morning:
     After getting ready, I leave my room to have breakfast.
     """
 
-    scene dining_room
+    call change_time(9,30)
+
+    $ change_room('dining_room')
 
     """
     Most of the guests are already in the dining room.
@@ -42,76 +44,21 @@ label lad_day2_morning:
     Daniel Baldwin and Amelia Baxter are already there.
     """
 
-    psychic """
-    Hello Mister Harring. How are you ?
-    """
+    call day2_breakfast_lad_psychic
 
-    lad """
-    Very well thank you.
-    """
+    # """
+    # I nod. Not sure what to say.
+    # """
 
-    psychic """
-    I was wondering if everyone was gonna join us on time.
-    
-    There are still a few people missing.
+    # if lad_details.saved_variables["day1_drinks"] > 0:
 
-    For instance, I don't know if you noticed Mister Manning yesterday. 
+    #     "I look around the room."
 
-    He was so drunk that I wouldn't be surprised if we don't see him before noon.
-    """
+    #     lad """
+    #     I don\'t see the man with the mask either, Thomas Moody.
 
-    """
-    I nod. Not sure what to say.
-    """
-
-    if lad_details.saved_variables["day1_drinks"] > 0:
-
-        "I look around the room."
-
-        lad """
-        I don\'t see the man with the mask either, Thomas Moody.
-
-        I talked to him yesterday and he seemed fine to me.
-        """
-    
-    """
-    As I begin to eat, Samuel Manning enters the room.
-
-    He stumbled to the buffet table and picks up a plate, visibly shaking.    
-    """
-
-    psychic angry """
-    Well, I spoke too soon. Here he is. And in such a state.
-
-    How dreadful.
-    """
-
-    """
-    At the same moment, the butler rushes inside the room.
-    
-    He goes to Lady Claythorn and whispers something in her ears.
-
-    I can tell that is not good news.
-
-    She looks shocked and worried. 
-    
-    She stands up and walks in my direction, then stops in front of the doctor.
-    """
-
-    host """
-
-    Doctor Baldwin, I am sorry to interrupt your breakfast, but would you mind coming with us?
-
-    We need your assistance.
-    """
-
-    """
-    Without hesitation, Daniel Baldwin stands up.
-    """
-
-    doctor """
-    Of course, I'll follow you.
-    """
+    #     I talked to him yesterday and he seemed fine to me.
+    #     """
 
     """
     Everything is happening fast. What should I do ?
@@ -124,7 +71,7 @@ label lad_day2_morning:
     $ time_left = 30
     call run_menu(lad_day1_evening_menu)
 
-    call change_time(9,30) #Needed ?
+    call change_time(10,00)
 
     if lad_details.saved_variables["day2_breakfast_follow"]:
 
@@ -136,84 +83,9 @@ label lad_day2_morning:
 
     else:
 
-        """
-        Suddenly, Lady Claythorn and the butler are back in the room.
-        """
+        call day2_breakfast_host_death
 
-        captain "Lady Claythorn, what is happening ? "
-
-        """
-        The lady is visibly distressed.
-        """
-
-        host """
-        I am sorry to announce such horrible news everyone.
-
-        But it appears Mister Moody passed away in his sleep tonight.
-        """
-
-        play music scary_01
-
-        """
-        The room became instantly silent.
-        """
-
-        captain """
-        Do we know what has happened ?
-        """
-
-        host """
-        Doctor baldwin is examining him right now.
-
-        He will probably tell us more later.
-        """
-
-        """
-        She then sat down to her chair.
-
-        Everybody looks distressed.
-
-        I turn over to Amelia Baxter.
-        """
-
-        lad """
-        How terrible.
-        """
-
-        psychic """
-        Yes, such sad news.
-        """
-
-        """
-        We keep eating slowing in silent for a moment when the doctor enters the room.
-        """
-
-    
-
-    host -surprised """
-    Doctor Baldwin. Can you tell us more about what happened ?
-    """
-
-    doctor """
-    I can't say anything definitive for now. We need to call the town to ask for an ambulance.
-    """
-
-    # TODO quid lines ? broken ? or the host pretends everything is fine so everyone stays here ?
-    host """
-    Yes of course.
-
-    My butler will do what's necessary.
-    """
-
-    doctor """
-    Very well.
-    """
-
-    """
-    We then keep on eating in a sad silence.
-
-    Nobody talks much.
-    """
+    call day2_breakfast_host_death_doctor
 
     stop music fadeout 5.0
 

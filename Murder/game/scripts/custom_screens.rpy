@@ -44,6 +44,7 @@ label black_screen_transition(display_text, display_text_2 = None):
     hide screen centered_text
     return 
 
+
 # Death transition
 label death_screen_transition:
     hide screen current_time

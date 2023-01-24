@@ -1,7 +1,7 @@
 label captain_billiard_room_speech_part_1:
     
     captain """
-    So it was in June of 1900, so some of you might remember.
+    It was in June of 1900, so some of you might remember.
 
     A group of rebels, called the \"Boxers\", had taken up arms against foreign presence in their country.
 
@@ -113,14 +113,6 @@ label captain_billiard_room_speech_part_2:
     scene billiard_room with fade
 
     $ play_music('previous')
-
-    """
-    Wait, that was the original question ?
-
-    Why he is living in England ?
-
-    It took long enough.
-    """
 
     $ captain_details.unlock_knowledge('talker') 
 

@@ -1,5 +1,26 @@
 label psychic_config_menu:
+    #---------------------------------------------------------------------
+    # DOCTOR
+    $ doctor_generic_menu_psychic = TimedMenu([
+        TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
+        TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
+        TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20),
+        TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 20, condition = "current_character.saved_variables['knows_doctor_background']"),
+        TimedMenuChoice('What do you think of this place?', 'doctor_generic_manor', 10),
+        TimedMenuChoice('How old are you?', 'doctor_generic_age', 5),
+        TimedMenuChoice('What room are you in?', 'doctor_generic_room', 5),
+        TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_friday', 5, condition = "current_day == 'Friday'"),
+        TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_saturday', 5, condition = "current_day == 'Saturday'"),
+        TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "doctor")
 
+    $ doctor_generic_other_guests_menu_psychic = TimedMenu([
+        TimedMenuChoice('What about Samuel Manning?', 'doctor_generic_drunk', 5),
+        TimedMenuChoice('I want to talk about something else.', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "doctor")
+
+
+    #---------------------------------------------------------------------
     # CAPTAIN
     $ condition_captain_origin = "current_character.saved_variables['knows_captain_real_origin']"
     $ captain_generic_menu_psychic = TimedMenu([
@@ -30,6 +51,8 @@ label psychic_config_menu:
         # Always Generic 
         TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "captain")
+    
+    #---------------------------------------------------------------------
     # LAD
 
     $ lad_generic_menu_psychic = TimedMenu([

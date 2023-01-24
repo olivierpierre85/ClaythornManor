@@ -106,7 +106,6 @@ label lad_gun_downed_ending:
     If you want a better explanation, then you will have to find it yourself.
     """
 
-
     jump ending_generic
 
 label lad_ending_day3_poisoned:
