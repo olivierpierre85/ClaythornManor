@@ -27,7 +27,7 @@ label lad_day2_hunt_tea_room:
     """
 
     # TODO if the psychic knowledge not known, make resume it here ? or just call the text?
-    if psychic_details.is_knowledge_unlocked('heroic act'):
+    if current_character.saved_variables['knows_psychic_background']:
         lad """
         Oh yes, we talked about it already.
         """

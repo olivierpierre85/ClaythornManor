@@ -236,7 +236,8 @@ label psychic_generic_background:
     Well, that doesn't make me feel good.
     """
 
-    $ psychic_details.unlock_knowledge('background')
+    $ lad_details.unlock_knowledge('background')
+    $ lad_details.saved_variables['knows_psychic_background'] = True
 
     return
     

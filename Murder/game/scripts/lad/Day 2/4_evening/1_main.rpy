@@ -216,6 +216,7 @@ label lad_day2_doctor_room:
     """
 
     $ doctor_details.unlock_knowledge('addict') 
+    $ current_character.saved_variables['knows_doctor_addict'] = True
 
     """
     Just in case, I might as well take a few for myself.

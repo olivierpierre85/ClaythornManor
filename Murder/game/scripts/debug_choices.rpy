@@ -104,6 +104,7 @@ label debug_choices:
 label unlock_psychic:
 
     $ psychic_details.unlock_knowledge('background') 
+    $ lad_details.saved_variables['knows_psychic_background'] = True
     $ psychic_details.unlock_knowledge('status') 
     $ psychic_details.unlock_knowledge('heroic act') 
     $ psychic_details.unlock_knowledge('lie') 

@@ -81,6 +81,7 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     $ drunk_details.unlock_knowledge('addict') 
+    $ current_character.saved_variables['knows_doctor_addict'] = True
 
     lad "Ted Harring, how do you do."
 
