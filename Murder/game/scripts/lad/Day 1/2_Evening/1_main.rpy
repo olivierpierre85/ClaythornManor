@@ -3,7 +3,7 @@
 #           
 #   Friday - Arrival/Afternoon
 # 
-#   21:00 -> 23:00
+#   18:30 -> 23:00
 #
 #   Music: Upbeat
 #
@@ -11,22 +11,77 @@
 #       - Dinner Room : Everyone
 #
 #   Notes : 
+#       - Generic Psychic OR Doctor, 60 minutes (Dinner)
 #       - Map visit, 90 minutes
-#       - Generic Doctor, 80 minutes
+#       - Generic Doctor, 80 minutes (Tea Room)
 # --------------------------------------------
 label lad_day1_evening:
 
-    call change_time(21,00, 'Evening', 'Friday')
+    call change_time(18,30)
 
-    $ lad_details.add_checkpoint("lad_day1_evening") 
+    call black_screen_transition("Ted Harring", "Friday Evening")
 
-    call black_screen_transition("Ted Harring", "Friday Afternoon")
+    $ change_room('dining_room', irisout)
 
-    $ change_room('hallway', irisout)
+    """
+    Everyone sits at a place with their names on them.
+
+    While I am examining everyone, Lady Claythorn enters the room. 
+    
+    She takes her place at the table.
+    """
+
+    call host_welcome_speech
+
+    """
+    After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host.
+    """
+
+    host """
+    Please no need to thank me. The food will be served, enjoy your meal.
+    """
+
+    """
+    The butler then enters the room, accompany by the footman.
+    
+    They proceed in serving the first dish and pouring drinks to everyone.
+    
+    The mood starts to relax, and the sound of different conversations fills the room.
+
+    I turn my attention to the guests next to me.
+
+    I am sitting between Amelia Baxter, and Daniel Baldwin.
+    """
+
+    $ time_left = 60
+
+    $ current_menu = TimedMenu([
+        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'), # SHould they be keep_alive ?
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic')
+    ], image_left = "doctor", image_right = "psychic")
+    call run_menu(current_menu)
+
+    stop music fadeout 5.0
+
+    """
+    The dinner is ending.
+
+    The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or for those tired by the journey, we can simply go to bed.
+
+    Since I haven't been able to see my room, I better go there first.
+
+    I ask the footman to show me the way.
+    """
+
+    call change_time(21,00)
+
+    $ change_room('hallway')
 
     $ play_music('upbeat')
 
-    "The footman takes me through the grand staircase, on to the first floor."
+    """
+    The footman takes me through the grand staircase, on to the first floor.
+    """
 
     footman """
     There you go sir.
@@ -73,6 +128,7 @@ label lad_day1_evening:
     stop music fadeout 5.0
 
     if lad_details.saved_variables["day1_drunk"]:
+
         """
         Wow I don't feel great.
 
@@ -80,7 +136,9 @@ label lad_day1_evening:
 
         I better go back to my room.
         """
+
     else: 
+
         """
         It's getting kinda late now.
 
@@ -150,5 +208,38 @@ label lad_day1_evening_psychic_room:
     lad "Of course, I am sorry."
 
     $ unlock_map('psychic_room')
+
+    return
+
+label lad_day1_evening_dinner_psychic:
+    
+    lad """
+    Hi again Miss Baxter.
+    """
+
+    psychic """
+    Oh Mister Harring. I am glad we can continue our conversation.
+    """
+
+    call psychic_generic
+    
+    return
+    
+
+label lad_day1_evening_dinner_doctor:
+
+    lad """
+    Hello. I am Ted Harring.
+    """
+
+    doctor """
+    Hi mister Haring, I am doctor Daniel Baldwin.
+    """
+
+    lad """
+    Nice to meet you doctor.
+    """
+
+    call doctor_generic
 
     return

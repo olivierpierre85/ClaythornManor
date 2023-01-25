@@ -55,17 +55,17 @@ screen progress:
                             vbox:
                                 xminimum checkpoint_x
                                 text "" font gui.name_text_font
-                                text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
-
-                            vbox:
-                                xminimum checkpoint_x
-                                text "" font gui.name_text_font
                                 text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
                                 xminimum checkpoint_x
                                 text "Saturday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
                                 text "Morning" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            
+                            vbox:
+                                xminimum checkpoint_x
+                                text "" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
+                                text "The Hunt" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                             vbox:
                                 xminimum checkpoint_x

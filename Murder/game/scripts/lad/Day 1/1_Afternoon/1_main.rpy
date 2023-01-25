@@ -1,29 +1,191 @@
 # --------------------------------------------
 #   Lad
 #           
-#   Friday - Arrival/Afternoon
-# 
-#   18:15 -> 21:00 
+#   Friday - Afternoon
+#   
+#   17:30 -> 18:30
 #
-#   Music: Upbeat
+#   Music: Chill
 #
-#   Position
-#       - Tea Room : Everyone else
-#       - Host Room : host
+#   Alive: Everyone
 #
 #   Notes : 
 #       - Generic Psychic, 15 minutes
-#       - Generic Psychic OR Doctor, 60 minutes
 # --------------------------------------------
-label lad_day1_afternoon:
+label lad_introduction:
 
-    call change_time(18,15, 'Afternoon', 'Friday')
-    
-    $ current_character.add_checkpoint("lad_day1_afternoon") 
-    
     call black_screen_transition("Ted Harring", "Friday Afternoon")
 
-    $ change_room('great_hall', irisout)
+    call change_time(17,30, 'Afternoon', 'Friday', hide_minutes = True)
+
+    scene train_inside
+
+    play sound train_moving loop
+
+    $ play_music('chill')
+
+    """
+    As I approach my destination, I am reading yet another time the letter that made me come on this trip.
+    """
+
+    letter """
+    September 5th, [current_year]
+
+    Dear Mister Haring,
+
+    I am pleased to announce that you have been selected as one of the recipients of the \"Exceptional Act of Bravery Award\".
+
+    You'll be receiving the prize, along with seven other courageous persons, at a reception organized in your honor. 
+    
+    As a thank you, a weekend of leisure at Claythorn Manor as been planned for all of you to enjoy.
+
+    After which, a prize money of one thousand pounds will be handed to you.
+    
+    Please note that your presence is mandatory in order to receive the prize.  
+
+    All you have to do is be at the Aberdeen Station, on the 13th of October around 4PM, where someone will drive you to the manor.
+
+    Hoping ,.....
+    """
+
+    """
+    More thanks and information follows, but that's about the content of it.
+
+    It is signed by Lady Claythorn. 
+    
+    I've never heard of her.
+
+    I couldn't really believe it at first. 
+    
+    I don't think I am that deserving. At least no more than hundreds of guys in this country.
+
+    But in the end, no matter the reason, I can't possibly say no to this amount of money.
+    
+    So I feel like I didn't have much choice.
+
+    But still, there is part of me thinking:
+
+    Maybe I never should have come to Claythorn Manor.
+    """
+
+    # TODO intro screen, song ...
+
+    play sound train_stopping
+
+    scene train_station
+
+    pause 5.0
+    
+    """
+    As I step off the train, a man approaches me.
+    """
+
+    footman """
+    Welcome sir. Are you by any chance, heading to Claythorn Manor?
+    """
+
+    lad """
+    Yes, as a matter of fact I am.
+    """
+
+    """
+    As proof, I hand him the letter that I still had in my hands.
+    """
+    
+    footman """
+    Very well Sir. I can take your luggage and you can follow me into the car.
+    """
+
+    """
+    And like that we were on our way.
+    """
+
+    scene inside_car
+
+    lad """ 
+    So you are lady Claythorn's driver?
+    """
+
+    footman """
+    Yes, I mean,.. no.
+    I am actually her footman. But I also drive people when necessary.
+    """
+
+    lad """
+    Oh. So there is no driver at Claythorn Manor?
+    """
+
+    footman """
+    Well, ... not that I know of sir.
+
+    But I am sorry, I must concentrate on the road ahead. Lady Claythorn doesn't like it when I am distracted.
+    """
+
+    lad """
+    Of course, I am sorry.
+    """
+
+    footman """
+    No need for apologies Sir.
+    """
+
+    """
+    Hum, it looks like I have made him uneasy. Maybe he is not supposed to make small talk with guests.
+
+    I feel weird because I'm not used to be treated like. It is usually more the other way around.
+
+    I wonder if I'll manage to blend in with the other folks at the manor.
+
+    They might be more accustomed to this kind of treatment.
+
+    But on the other hand maybe not. Maybe Lady Claythorn gets a kick of helping people like me.
+
+    We'll see.
+
+    After leaving Aberdeen, we are riding into the country side. Then into what looks like a large forest.
+
+    About twenty minutes later, there is no trace of human life at all.
+
+    There is only woods so far as I can see.
+
+    I am a little an uneasy to find it to be so far from every where else.
+
+    And to make matter worse, a look at the sky tells me that a storm is coming. 
+    """
+
+    stop music fadeout 3.0
+    
+    play sound thunder loop
+    
+    scene manor_exterior
+
+    """
+    Finally an impressive mansion appears in the horizon.
+
+    It's bigger than any of the houses I've seen in London. 
+
+    A big country house. 
+
+    Everyone who is someone in England used to have one.
+
+    Now I've heard a lot of people can't afford them anymore.
+
+    They are sold, turned into hotels, or even abandoned. Left there to rot.
+
+    While I can barely afford to pay rent for my miserable place.
+    
+    What a shame.
+
+    While the driver is unloading my bag from the car, I walk towards the entrance, where a butler opens the door to greet me.
+
+    I walk into the most impressive hall I ever been in.
+    """
+
+    stop sound
+
+    call change_time(18,15)
+
+    $ change_room('great_hall')
 
     $ play_music('upbeat')
 
@@ -152,58 +314,6 @@ label lad_day1_afternoon:
     Rich people live differently that's for sure.
     """
 
-    $ change_room('dining_room')
-
-    """
-    Everyone sits at a place with their names on them.
-
-    While I am examining everyone, Lady Claythorn enters the room. 
-    
-    She takes her place at the table.
-    """
-
-    call host_welcome_speech
-
-    """
-    After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host.
-    """
-
-    host """
-    Please no need to thank me. The food will be served, enjoy your meal.
-    """
-
-    """
-    The butler then enters the room, accompany by the footman.
-    
-    They proceed in serving the first dish and pouring drinks to everyone.
-    
-    The mood starts to relax, and the sound of different conversations fills the room.
-
-    I turn my attention to the guests next to me.
-
-    I am sitting between Amelia Baxter, and Daniel Baldwin.
-    """
-
-    $ time_left = 60
-
-    $ current_menu = TimedMenu([
-        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_afternoon_dinner_doctor'), # SHould they be keep_alive ?
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_afternoon_dinner_psychic')
-    ], image_left = "doctor", image_right = "psychic")
-    call run_menu(current_menu)
-
-    stop music fadeout 5.0
-
-    """
-    The dinner is ending.
-
-    The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or for those tired by the journey, we can simply go to bed.
-
-    Since I haven't been able to see my room, I better go there first.
-
-    I ask the footman to show me the way.
-    """
-    
     jump lad_day1_evening
 
 
@@ -245,38 +355,5 @@ label lad_day1_drinks_drunk:
     drunk "(Snore...)"
 
     "He reeks of booze, and is deep asleep. It's useless talking to him."
-
-    return
-
-label lad_day1_afternoon_dinner_psychic:
-    
-    lad """
-    Hi again Miss Baxter.
-    """
-
-    psychic """
-    Oh Mister Harring. I am glad we can continue our conversation.
-    """
-
-    call psychic_generic
-    
-    return
-    
-
-label lad_day1_afternoon_dinner_doctor:
-
-    lad """
-    Hello. I am Ted Harring.
-    """
-
-    doctor """
-    Hi mister Haring, I am doctor Daniel Baldwin.
-    """
-
-    lad """
-    Nice to meet you doctor.
-    """
-
-    call doctor_generic
 
     return
