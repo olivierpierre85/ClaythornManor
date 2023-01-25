@@ -1,4 +1,22 @@
+# --------------------------------------------
+#   Lad
+#           
+#   Saturday - Morning
+# 
+#   9:00 -> 11:00
+#
+#   Music: chill
+#
+#   Position
+#       - Dinner Room : Everyone else
+#       - Dead : Broken
+#   
+#   Notes : 
+#       - Generic Psychic,25 minutes
+# --------------------------------------------
 label lad_day2_morning:
+
+    call change_time(9,00, 'Morning', 'Saturday', hide_minutes = True)
 
     $ lad_details.add_checkpoint("lad_day2_morning") 
 
@@ -8,7 +26,7 @@ label lad_day2_morning:
     
     $ change_room('lad_room')
 
-    call change_time(9,00, 'Morning', 'Saturday', hide_minutes = True)
+    $ play_music('upbeat')
 
     """
     I slept through the night. 
@@ -46,29 +64,17 @@ label lad_day2_morning:
 
     call day2_breakfast_lad_psychic
 
-    # """
-    # I nod. Not sure what to say.
-    # """
-
-    # if lad_details.saved_variables["day1_drinks"] > 0:
-
-    #     "I look around the room."
-
-    #     lad """
-    #     I don\'t see the man with the mask either, Thomas Moody.
-
-    #     I talked to him yesterday and he seemed fine to me.
-    #     """
-
     """
     Everything is happening fast. What should I do ?
     """
-    
+
+    $ time_left = 30
+
     $ lad_day1_evening_menu = TimedMenu([
         TimedMenuChoice('Follow them', 'lad_day2_breakfast_follow', 30, early_exit = True ),
-        TimedMenuChoice('Stay there and finish the most important meal of the day', 'lad_day2_breakfast_eat', early_exit = True)
+        TimedMenuChoice('Stay there and finish the most important meal of the day', 'lad_day2_breakfast_eat', 5, early_exit = True)
     ])
-    $ time_left = 30
+    
     call run_menu(lad_day1_evening_menu)
 
     call change_time(10,00)
@@ -89,12 +95,45 @@ label lad_day2_morning:
 
     stop music fadeout 5.0
 
-    jump lad_day2_morning_breakfast_over
+    """
+    When every one is done eating, Lady Claythorn speaks up.
+    """
+
+    call host_broken_death_speech
+
+    """
+    A hunt... A real aristocratic hunt.
+
+    That is something to see.
+
+    It's not like I will have this opportunity often.
+
+    And I might not be the only one out of my depth if Lady Claythorn is right. 
+
+    So I shouldn't be embarrassed.
+
+    On the other hand, I have never even held a gun in my life.
+
+    Those older guys may not be gentry, but they've probably learned how to shoot during the war.
+
+    So what should I do ?
+    """
+
+    $ time_left = TIME_MAX # Trick to avoid problems, todo, find a better way
+
+    $ lad_day2_morning_menu = TimedMenu([
+        TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_hunt', early_exit = True),
+        TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_no_hunt', early_exit = True)
+    ])
+    
+    call run_menu(lad_day2_morning_menu)
+
+    jump lad_day2_afternoon
 
 
 label lad_day2_breakfast_eat:
 
-    psychic -angry """
+    psychic """
     I wonder what this is about.
     """
 

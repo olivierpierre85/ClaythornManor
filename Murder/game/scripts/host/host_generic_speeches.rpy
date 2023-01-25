@@ -21,4 +21,37 @@ label host_welcome_speech:
   Our host then sits down on her chair.
   """
 
-  hide host
+  return
+
+
+label host_broken_death_speech:
+    
+    host """
+    Well, as I told you before, activities were planned for the day.
+
+    This morning those who wished were supposed to go on a hunt.
+
+    It's a sad affair that has happened, but it's not a reason to stay here doing nothing.
+
+    So, if nobody disagrees, I propose that we continue according to what was planned.
+    """
+
+    """
+    A murmur of assent runs through the assembly.
+    """
+
+    host """
+    Excellent.
+
+    Everything is ready for those who wish to join the hunt. 
+    
+    I know most of you are probably not accustomed with this type of event.
+
+    That's why our staff can lend you everything you will need, clothes, the guns. And they will also assist you during the whole event.
+
+    But of course, you can decide to just stay here.
+
+    You can relax and enjoy the warmth of the house until the others return.
+    """
+
+    return

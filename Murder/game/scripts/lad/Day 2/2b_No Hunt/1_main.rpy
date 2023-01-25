@@ -1,4 +1,21 @@
-label lad_day2_nohunt:
+# --------------------------------------------
+#   Lad
+#           
+#   Saturday - The Hunt
+# 
+#   11:00 -> 15:00
+#
+#   Music: chill
+#
+#   Position
+#       - House, Tea room : nurse, psychic, lad
+#       - Forest : host, captain,  doctor, drunk
+#       - Dead : Broken
+#
+#   Notes : 
+#       - Generic psychic, 120 minutes, ?TODO too long?
+# --------------------------------------------
+label lad_day2_no_hunt:
 
     # TODO, not a lot to do except knocking on doors?
     # LATER ADD access to SOME PEOPLE ROOMS
@@ -26,7 +43,7 @@ label lad_day2_nohunt:
     Now what should I do ?
     """
 
-    $ time_left = 240
+    $ time_left = 240 # TODO too long do something
 
     call run_menu(lad_details.saved_variables["map_menu"])
 
@@ -100,7 +117,7 @@ label lad_day2_broken_room:
     return
 
 
-label lad_day2_nohunt_cancel:
+label lad_day2_no_hunt_cancel:
 
     $ change_room('lad_room')
 

@@ -1,3 +1,19 @@
+# --------------------------------------------
+#   Lad
+#           
+#   Saturday - Afternoon
+# 
+#   15:00 ->
+#
+#   Music: ?
+#
+#   Position
+#       - House: Everyone else
+#       - Dead : broken, doctor
+#
+#   Notes : 
+#       - Generic psychic, 120 minutes, ?TODO too long?
+# --------------------------------------------
 label lad_day2_afternoon:
 
     $ lad_details.add_checkpoint("lad_day2_afternoon") 

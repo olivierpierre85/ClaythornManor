@@ -1,23 +1,37 @@
 # --------------------------------------------
-#               Ted Harring
-#           Friday 21:00 Evening
-#   Playtime : about 10 min from start
+#   Lad
+#           
+#   Friday - Arrival/Afternoon
+# 
+#   21:00 -> 23:00
 #
-#   Alive: Everyone
+#   Music: Upbeat
+#
+#   Position
+#       - Dinner Room : Everyone
+#
+#   Notes : 
+#       - Map visit, 90 minutes
+#       - Generic Doctor, 80 minutes
+# --------------------------------------------
 label lad_day1_evening:
-
-    $ lad_details.add_checkpoint("lad_day1_evening") 
 
     call change_time(21,00, 'Evening', 'Friday')
 
-    scene hallway
+    $ lad_details.add_checkpoint("lad_day1_evening") 
 
-    "He takes me through the grand staircase, on to the first floor."
+    call black_screen_transition("Ted Harring", "Friday Afternoon")
+
+    $ change_room('hallway', irisout)
+
+    $ play_music('upbeat')
+
+    "The footman takes me through the grand staircase, on to the first floor."
 
     footman """
     There you go sir.
 
-    You have the 'William The Conqueror' room.
+    You have the \"William The Conqueror\" room.
 
     I hope it's to your liking.
     """
@@ -48,7 +62,10 @@ label lad_day1_evening:
 
     $ play_music('upbeat')
 
-    $ time_left = 120
+    call change_time(21,30)
+
+    $ time_left = 90
+
     call run_menu(lad_details.saved_variables["map_menu"])
 
     call change_time(23,00)
@@ -109,28 +126,6 @@ label lad_day1_evening:
         jump lad_day2_morning
         
     return
-
-# label lad_day1_evening_host_room:
-# NO- She is in the billiard room
-#     scene hallway
-
-#     "I knock on the door."
-
-#     psychic "Yes ?"
-
-#     lad """
-#     Lady Claythorn, it's Ted Harring.
-
-#     I was hoping we could talk?   
-#     """
-
-#     host """
-#     I am sorry, but it's a very bad time mister Harring.
-
-#     Why don't you meet the others in the billiard room?.
-#     """
-
-#     return
 
 label lad_day1_evening_psychic_room:
   

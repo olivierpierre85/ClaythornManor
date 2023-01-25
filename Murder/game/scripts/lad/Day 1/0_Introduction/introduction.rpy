@@ -1,6 +1,19 @@
+# --------------------------------------------
+#   Lad
+#           
+#   Friday - Introduction
+#   
+#   17:30 -> 18:15
+#
+#   Music: Chill
+#
+#   Alive: Everyone
+#
+#   Notes : 
+# --------------------------------------------
 label lad_introduction:
-    
-    call change_time(17,00, 'Evening', 'Friday', hide_minutes = True)
+
+    call change_time(17,30, 'Introduction', 'Friday', hide_minutes = True)
 
     scene train_inside
 
@@ -58,22 +71,34 @@ label lad_introduction:
 
     pause 5.0
     
-    "As I step off the train, a man approaches me."
+    """
+    As I step off the train, a man approaches me.
+    """
 
-    footman "Welcome sir. Are you by any chance, heading to Claythorn Manor ?"
+    footman """
+    Welcome sir. Are you by any chance, heading to Claythorn Manor?
+    """
 
-    lad "Yes, as a matter of fact I am."
+    lad """
+    Yes, as a matter of fact I am.
+    """
 
-    "As proof, I hand him the letter that I still had in my hands."
+    """
+    As proof, I hand him the letter that I still had in my hands.
+    """
     
-    footman "Very well Sir. I can take your luggage and you can follow me into the car."
+    footman """
+    Very well Sir. I can take your luggage and you can follow me into the car.
+    """
 
-    "And like that we were on our way."
+    """
+    And like that we were on our way.
+    """
 
     scene inside_car
 
     lad """ 
-    So you are lady Claythorn's driver ?
+    So you are lady Claythorn's driver?
     """
 
     footman """
@@ -82,7 +107,7 @@ label lad_introduction:
     """
 
     lad """
-    Oh. So there is no driver at Claythorn Manor ?
+    Oh. So there is no driver at Claythorn Manor?
     """
 
     footman """
@@ -91,9 +116,13 @@ label lad_introduction:
     But I am sorry, I must concentrate on the road ahead. Lady Claythorn doesn't like it when I am distracted.
     """
 
-    lad "Of course, I am sorry."
+    lad """
+    Of course, I am sorry.
+    """
 
-    footman "No need for apologies Sir."
+    footman """
+    No need for apologies Sir.
+    """
 
     """
     Hum, it looks like I have made him uneasy. Maybe he is not supposed to make small talk with guests.
@@ -149,4 +178,4 @@ label lad_introduction:
 
     stop sound
     
-    jump lad_day1_arrival
+    jump lad_day1_afternoon

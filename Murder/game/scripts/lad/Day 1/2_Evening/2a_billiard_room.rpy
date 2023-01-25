@@ -21,7 +21,7 @@ label lad_day1_evening_billiard_room:
         """
 
         $ lad_day1_evening_billiard_room_menu = TimedMenu([
-            TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_billiard_room_doctor', 50),
+            TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_billiard_room_doctor', 10),
             TimedMenuChoice('Approach the large group of people', 'lad_day1_evening_billiard_room_group', 10),
             # TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
             # TimedMenuChoice('Ask the butler about our Lady Claythorn room', 'lad_day1_evening_billiard_room_butler', 20),
@@ -46,17 +46,27 @@ label lad_day1_evening_billiard_room:
 
 label lad_day1_evening_billiard_room_bar_1:
 
-    "I approach the bar."
+    """
+    I approach the bar.
 
-    "Samuel Manning is there."
+    Samuel Manning is there.
+    """
 
-    lad "Hello sir."
+    lad """
+    Hello sir.
+    """
 
-    drunk "..."
+    drunk """
+    ...
+    """
 
-    "The man stares at me but makes no sound."
+    """
+    The man stares at me but makes no sound.
+    """
 
-    broken "Don't mind him, he seems to be totally out of it."
+    broken """
+    Don't mind him, he seems to be totally out of it.
+    """
 
     """
     I am startled by the man who approaches me.

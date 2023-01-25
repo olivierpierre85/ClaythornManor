@@ -1,10 +1,28 @@
+# --------------------------------------------
+#   Lad
+#           
+#   Saturday - The Hunt
+# 
+#   11:00 -> 15:00
+#
+#   Music: chill
+#
+#   Position
+#       - House, Tea room : nurse, psychic 
+#       - Forest : host, captain, lad, doctor, drunk
+#       - Dead : Broken
+#
+#   Notes : 
+#       - Generic doctor, 30 minutes
+# --------------------------------------------
 label lad_day2_hunt:
+    call change_time(11,00, 'Hunt', 'Saturday')
+
     call black_screen_transition("Ted Harring", "The Hunt") # Good ? TODO check consistency with no hunt
+    
     scene gun_room
 
-    play music upbeat_02 fadein 10.0
-
-    call change_time(11,00, 'Hunt', 'Saturday')
+    play music upbeat_02 fadein 10.0 # TODO
 
     $ lad_details.saved_variables["day2_hunt"] = True
 
@@ -14,19 +32,18 @@ label lad_day2_hunt:
     But I guess it didn't feel right to stay behind with the ladies.
     """
 
-    # I wonder what it says about me I wonder.
-    # TODO easter egg only if it's the first choice
+    # TODO achievement,  Hunt like a man
 
     butler """
-    So, it's your first hunt mister Harring ?
+    So, it's your first hunt mister Harring?
     """
  
     lad """
-    Yes indeed. I don't even know how to use a rifle.
+    Yes. I must admit that I don't even know how to use a rifle.
     """
 
     butler """
-    Don't worry sir. A footman will follow you and will reload the gun for you.
+    Not to worry sir. A footman will follow you and will reload the gun for you.
     
     All you have to do is point at you target when you encountered something, and pull the trigger.
     """

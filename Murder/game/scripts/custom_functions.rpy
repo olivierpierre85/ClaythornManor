@@ -96,8 +96,12 @@ init python:
         return
 
     def play_music(music_style):
-        # renpy.music.get_playing(channel='music')
         global current_music, previous_music
+        
+        # Don't restart same music already in play
+        if current_music == music_style:
+            return 
+        
         if music_style == 'previous':
             current_music = previous_music
         else:

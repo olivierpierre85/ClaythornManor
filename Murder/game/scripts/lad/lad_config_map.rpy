@@ -71,7 +71,7 @@ label lad_config_map:
             ),
             TimedMenuChoice(
                 'Take a nap until the others return', 
-                'lad_day2_nohunt_cancel', 
+                'lad_day2_no_hunt_cancel', 
                 240, 
                 early_exit = True, 
                 room = 'lad_room',
