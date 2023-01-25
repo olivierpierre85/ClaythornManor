@@ -1,7 +1,7 @@
 label day2_breakfast_lad_psychic:
 
     psychic """
-    Hello Mister Harring. How are you ?
+    Hello Mister Harring. How are you?
     """
 
     lad """
@@ -63,7 +63,7 @@ label day2_breakfast_host_death:
     Suddenly, Lady Claythorn and the butler are back in the room.
     """
 
-    captain "Lady Claythorn, what is happening ? "
+    captain "Lady Claythorn, what is happening? "
 
     """
     The lady is visibly distressed.
@@ -82,7 +82,7 @@ label day2_breakfast_host_death:
     """
 
     captain """
-    Do we know what has happened ?
+    Do we know what has happened?
     """
 
     host """
@@ -114,14 +114,14 @@ label day2_breakfast_host_death:
 label day2_breakfast_host_death_doctor:
 
     host -surprised """
-    Doctor Baldwin. Can you tell us more about what happened ?
+    Doctor Baldwin. Can you tell us more about what happened?
     """
 
     doctor """
     I can't say anything definitive for now. We need to call the town to ask for an ambulance.
     """
 
-    # TODO quid lines ? broken ? or the host pretends everything is fine so everyone stays here ?
+    # TODO quid lines? broken? or the host pretends everything is fine so everyone stays here?
     host """
     Yes of course.
 

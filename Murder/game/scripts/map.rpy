@@ -40,13 +40,13 @@ label init_map:
             Room(1, (400, 100, 200, 100),   'tea_room',         'Tea room'),
             Room(1, (600, 100, 200, 100),   'dining_room',      'Dining Room'),
             Room(1, (0, 200, 200, 100),     'garden',           'Garden'),
-            # TODO where to put the footman extra livery ?
+            # TODO where to put the footman extra livery?
             # Basement
             Room(0, (0, 100, 200, 100),     'kitchen',          'Kitchen'),
             Room(0, (200, 100, 200, 100),   'scullery',         'Scullery'),
             Room(0, (400, 100, 200, 100),   'garage',           'Garage'),
-            # TODO add other servants only rooms ? Food locker for instance? closed for suspens ?
-            Room(0, (0, 200, 200, 100),     'gun_room',         'Gun room'), #TODO check in basement ?
+            # TODO add other servants only rooms? Food locker for instance? closed for suspens?
+            Room(0, (0, 200, 200, 100),     'gun_room',         'Gun room'), #TODO check in basement?
         ]
         # TODO put in the ROOM class????? NOT if multiple info by room? Check at the end
         map_information = [
@@ -176,7 +176,7 @@ screen in_game_map_menu(timed_menu):
         for room in rooms:
             if room.floor == selected_floor:
                 new_hotspot = None
-                # TODO check if idx still needed ?
+                # TODO check if idx still needed?
                 for idx, choice in enumerate(choices): 
                     if room.id == choice.room and choice.get_condition():
                         if not choice.hidden:
@@ -201,7 +201,7 @@ screen in_game_map_menu(timed_menu):
             spacing 45
 
 
-            label "Where do you want to go ?":
+            label "Where do you want to go?":
                 style "confirm_prompt" # TODO specific styling
                 xalign 0.5
 

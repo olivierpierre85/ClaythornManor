@@ -58,7 +58,7 @@ label lad_day1_evening:
     $ time_left = 60
 
     $ current_menu = TimedMenu([
-        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'), # SHould they be keep_alive ?
+        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'), # SHould they be keep_alive?
         TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic')
     ], image_left = "doctor", image_right = "psychic")
 
@@ -115,7 +115,7 @@ label lad_day1_evening:
     
     After a while I unpack my small luggage.
 
-    Well that didn't take long. So what do I do now ?
+    Well that didn't take long. So what do I do now?
     """
 
     $ play_music('upbeat')
@@ -194,7 +194,7 @@ label lad_day1_evening_psychic_room:
 
     "I knock on the door."
 
-    psychic "Yes ? Who is it ?"
+    psychic "Yes? Who is it?"
 
     lad "Hi, it's Ted Harring."
 

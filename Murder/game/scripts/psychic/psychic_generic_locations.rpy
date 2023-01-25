@@ -9,7 +9,7 @@ label psychic_library:
 
     But I don't feel like reading now.
     """
-    # TODO add info on BOOK ???
+    # TODO add info on BOOK???
     # $ psychic_details.saved_variables["library_visited"] = True
 
     return

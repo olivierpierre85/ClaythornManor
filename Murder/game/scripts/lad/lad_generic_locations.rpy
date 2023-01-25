@@ -3,7 +3,7 @@ label lad_library:
     $ change_room('library') 
     
     """
-    It's a very nice library. But what am I doing here ? I can barely read.
+    It's a very nice library. But what am I doing here? I can barely read.
     """
 
     $ lad_details.unlock_knowledge('education')
@@ -17,7 +17,7 @@ label lad_library:
 
     I probably better go look elsewhere.
     """
-    # TODO add info on BOOK ???
+    # TODO add info on BOOK???
 
     $ lad_details.saved_variables["library_visited"] = True
 

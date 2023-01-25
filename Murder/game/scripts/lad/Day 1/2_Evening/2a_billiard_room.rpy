@@ -150,7 +150,7 @@ label lad_day1_evening_billiard_room_group:
 
     I was just telling everyone here a story.
 
-    Where was I ?
+    Where was I?
 
     Oh Right.
     """
@@ -184,9 +184,9 @@ label lad_day1_evening_billiard_room_group_part_2:
     call captain_billiard_room_speech_part_2
 
     """
-    Wait, that was the original question ?
+    Wait, that was the original question?
 
-    Why he is living in England ?
+    Why he is living in England?
 
     It took long enough.
     """

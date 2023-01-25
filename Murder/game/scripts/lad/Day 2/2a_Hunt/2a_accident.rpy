@@ -26,9 +26,9 @@ label lad_day2_hunt_accident:
     """
     
     doctor """
-    So Mister Harring, how do you like it here ?
+    So Mister Harring, how do you like it here?
 
-    It's a nice place they have there, don't they ?
+    It's a nice place they have there, don't they?
     """
 
     lad """
@@ -40,7 +40,7 @@ label lad_day2_hunt_accident:
     doctor """
     Oh, you're a city chap then. 
     
-    London ?
+    London?
     """
 
     lad """
@@ -99,7 +99,7 @@ label lad_day2_hunt_accident:
     play sound gun
 
     $ stop_music()
-    
+
     pause 2.0
 
     """

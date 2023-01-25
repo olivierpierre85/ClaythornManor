@@ -89,7 +89,7 @@ label doctor_generic_manor:
     """
 
     if current_character.text_id == "lad":
-        lad "So you are not accustomed to having a butler, and footmen around ?"
+        lad "So you are not accustomed to having a butler, and footmen around?"
 
         doctor "No, I can't say that I am."
 
@@ -100,7 +100,7 @@ label doctor_generic_manor:
     return
 
 label doctor_generic_age:
-    doctor "I am 39 nine years. Why do you ask ?"
+    doctor "I am 39 nine years. Why do you ask?"
 
     if current_character.text_id == "lad":
         lad "Actually I am not sure."

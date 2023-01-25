@@ -3,9 +3,9 @@ label lad_day2_evening_psychic_room:
     scene hallway
     
     lad """
-    Miss Baxter ?
+    Miss Baxter?
 
-    Are you here ? It's Ted Harring
+    Are you here? It's Ted Harring
     """
 
     """
@@ -15,7 +15,7 @@ label lad_day2_evening_psychic_room:
     """
 
     psychic """
-    Mister Harring, are you alone ?
+    Mister Harring, are you alone?
     """
 
     lad """
@@ -29,9 +29,9 @@ label lad_day2_evening_psychic_room:
     $ change_room('psychic_room')
 
     psychic """
-    So have you given any thought about what I told you ?
+    So have you given any thought about what I told you?
 
-    You agree that something not right is happening ?
+    You agree that something not right is happening?
     """
 
     call run_menu(TimedMenu([
@@ -58,7 +58,7 @@ label lad_day2_believe_psychic:
 
     Then we stick together the whole day until we are free to leave.
 
-    What do you think of that ?
+    What do you think of that?
     """
 
     lad """
@@ -70,7 +70,7 @@ label lad_day2_believe_psychic:
     psychic """
     Great !
 
-    In the meantime, is there something else you wanted to talk about ?
+    In the meantime, is there something else you wanted to talk about?
     """
 
     call psychic_generic
@@ -90,9 +90,9 @@ label lad_day2_believe_dont_believe_psychic:
     """
 
     psychic angry """
-    Really ?! That's what you think ?
+    Really?! That's what you think?
 
-    You believe I hallucinate things ?!
+    You believe I hallucinate things?!
 
     Well if that's the case you better leave my room !
     """

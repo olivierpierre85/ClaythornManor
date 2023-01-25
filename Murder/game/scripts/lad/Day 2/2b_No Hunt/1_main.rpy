@@ -13,7 +13,7 @@
 #       - Dead : Broken
 #
 #   Notes : 
-#       - Generic psychic, 120 minutes, ?TODO too long?
+#       - Generic psychic, 120 minutes,?TODO too long?
 # --------------------------------------------
 label lad_day2_no_hunt:
 
@@ -40,7 +40,7 @@ label lad_day2_no_hunt:
 
     I retreated in my room to change.
 
-    Now what should I do ?
+    Now what should I do?
     """
 
     $ time_left = 240 # TODO too long do something
@@ -113,7 +113,7 @@ label lad_day2_broken_room:
     $  lad_details.unlock_observation('green_liquid') # TODO link to billiard room option to not drink the whisky?
 
     # TODO add sound for CLUE???
-    # TODO FIRST REAL INVESTIGATiON CLUE ? ADD INTUITION when come back to 
+    # TODO FIRST REAL INVESTIGATiON CLUE? ADD INTUITION when come back to 
     return
 
 

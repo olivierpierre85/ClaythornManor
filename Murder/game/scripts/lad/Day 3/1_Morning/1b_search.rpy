@@ -1,5 +1,5 @@
 # LAST DAY we can search EVERYWHERE
-# FOR special rooms not visited before, KEEP THEM or not ?
+# FOR special rooms not visited before, KEEP THEM or not?
 # FIRST lets forget all special room
 
 label lad_day3_morning_garden:
@@ -33,7 +33,7 @@ label lad_day3_morning_kitchen:
         Ok I admit that is very strange indeed.
         """
 
-    #TODO LOOK AROUND and Might find poison is choice ?????
+    #TODO LOOK AROUND and Might find poison is choice?????
     
     return
 

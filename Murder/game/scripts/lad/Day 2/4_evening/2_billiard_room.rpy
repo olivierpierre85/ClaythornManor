@@ -150,7 +150,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
         $ lad_details.saved_variables["day2_evening_taste_from_flask"] = True
 
     else:
-        # TODO ONLY POSSIBLE WAY TO MAKE THE CAPTAIN SUSPICIOUS ??WHAT TO MALE of it now?
+        # TODO ONLY POSSIBLE WAY TO MAKE THE CAPTAIN SUSPICIOUS??WHAT TO MALE of it now?
         lad """
         But the flask didn't have any of those alcohols.
 
@@ -241,7 +241,7 @@ label lad_day2_evening_billiard_room_captain:
 
     Don't you think?
 
-    Or you have tangible evidences to believe otherwise ?
+    Or you have tangible evidences to believe otherwise?
     """
 
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu([

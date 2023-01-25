@@ -3,7 +3,7 @@
 #                   - The lad
 #                   - The Captain? TODO not sure
 
-# ?TODO add extra choices possibilities?
+#?TODO add extra choices possibilities?
 label psychic_generic:
 
     # Reset if previous early exit
@@ -46,7 +46,7 @@ label psychic_generic_weather_sunday:
     What is wrong with you?
     """
 
-    # TODO achievement ? Cool during the storm
+    # TODO achievement? Cool during the storm
     return
 
 label psychic_generic_room:
@@ -65,9 +65,9 @@ label psychic_generic_room:
 label psychic_generic_age:
 
     psychic angry """
-    I beg your pardon ?
+    I beg your pardon?
 
-    You are not really asking me that ? Were you raised in a barn ?
+    You are not really asking me that? Were you raised in a barn?
 
     Only a person without any social skills would ask that to a respectable lady.
     """
@@ -102,7 +102,7 @@ label psychic_generic_heroic_act:
     """
 
     lad """
-    Really ?! You can also talk to babies ?
+    Really?! You can also talk to babies?
     """
 
     psychic """
@@ -128,9 +128,9 @@ label psychic_generic_heroic_act:
     lad """
     Wait, I don't understand.
     
-    How did you know the child was in danger ?
+    How did you know the child was in danger?
     
-    You can also communicate with people who are still alive ?
+    You can also communicate with people who are still alive?
     """
 
     psychic """
@@ -154,7 +154,7 @@ label psychic_generic_heroic_act:
     lad """
     I don't know.
 
-    You mean someone can be dead and alive at the same time ?
+    You mean someone can be dead and alive at the same time?
 
     """
 
@@ -167,7 +167,7 @@ label psychic_generic_heroic_act:
 
     Forget I said anything. I get carried away sometimes.
 
-    But tell me. Why were you invited yourself ?
+    But tell me. Why were you invited yourself?
     """
 
     $ psychic_details.unlock_knowledge('heroic act') 
@@ -197,7 +197,7 @@ label psychic_generic_background:
     """
 
     lad """
-    Seances ? You mean like talking to the dead ?
+    Seances? You mean like talking to the dead?
     """
 
     psychic """
@@ -205,7 +205,7 @@ label psychic_generic_background:
     """
 
     lad """
-    I have never been to one of those 'seance'. How does that work ?
+    I have never been to one of those 'seance'. How does that work?
     """
 
     psychic """
@@ -221,7 +221,7 @@ label psychic_generic_background:
     """
 
     lad """
-    You mean like being possessed ?
+    You mean like being possessed?
     """
 
     psychic """
@@ -250,7 +250,7 @@ label psychic_generic_manor_lad:
 
     She seems in her element here.
 
-    Am I the only one in here who has never had a butler waiting on him ?
+    Am I the only one in here who has never had a butler waiting on him?
     """
 
     $ psychic_details.unlock_knowledge('status')
@@ -259,7 +259,7 @@ label psychic_generic_manor_lad:
 
 label psychic_generic_manor:
     psychic """
-    Such a magnificent house right ?
+    Such a magnificent house right?
 
     Even if the style is not very recent, it still has a lot of cachet. 
     

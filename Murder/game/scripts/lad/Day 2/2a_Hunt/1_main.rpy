@@ -19,7 +19,7 @@ label lad_day2_hunt:
 
     call change_time(11,00, 'Hunt', 'Saturday')
 
-    call black_screen_transition("Ted Harring", "The Hunt") # Good ? TODO check consistency with no hunt
+    call black_screen_transition("Ted Harring", "The Hunt") # Good? TODO check consistency with no hunt
     
     scene gun_room
 
@@ -50,7 +50,7 @@ label lad_day2_hunt:
     """
 
     lad """
-    All right, that sounds easy enough. Will everyone have a footman as well ?
+    All right, that sounds easy enough. Will everyone have a footman as well?
     """
 
     butler """
@@ -62,7 +62,7 @@ label lad_day2_hunt:
     """
 
     lad """
-    I see. And what kind of animal are we hunting today ?
+    I see. And what kind of animal are we hunting today?
     """
 
     butler """
@@ -70,7 +70,7 @@ label lad_day2_hunt:
     """
 
     lad """
-    Aren't those dangerous ?
+    Aren't those dangerous?
     """
 
     butler """
@@ -110,7 +110,7 @@ label lad_day2_hunt:
 
     And even Samuel Manning is here.
 
-    Wait what ?!
+    Wait what?!
 
     He has a gun on hand. That can't be safe.
 
@@ -118,7 +118,7 @@ label lad_day2_hunt:
     """
 
     lad """
-    Is it okay for Mister Manning to have a gun ? He looked a bit drunk this morning.
+    Is it okay for Mister Manning to have a gun? He looked a bit drunk this morning.
     """
 
     butler """
@@ -150,7 +150,7 @@ label lad_day2_hunt:
 
     I am the odd one out.
 
-    Which group should I join ?
+    Which group should I join?
     """
 
     $ lad_day2_hunt_menu = TimedMenu([

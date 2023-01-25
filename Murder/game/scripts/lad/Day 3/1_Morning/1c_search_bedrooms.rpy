@@ -42,7 +42,7 @@ label lad_day3_morning_captain_room:
     play sound door_knock
 
     lad """
-    Is there someone in there ?
+    Is there someone in there?
     """
 
     captain """
@@ -78,7 +78,7 @@ label lad_day3_morning_captain_room:
     captain """
     Well, I was not expecting visitors this early.
     
-    What can I do for you ?
+    What can I do for you?
     """
 
     # TODO add if depending on the number of rooms already visited, specially the host room
@@ -167,7 +167,7 @@ label lad_day3_morning_host_room:
     """
 
     lad surprised """
-    What are you doing ? 
+    What are you doing? 
 
     We can't enter like that !
     """

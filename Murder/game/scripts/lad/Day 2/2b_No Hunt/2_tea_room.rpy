@@ -19,14 +19,14 @@ label lad_day2_hunt_tea_room:
     """
 
     lad """
-    Of course, I'll be glad to discuss with for a bit. What were you talking about ?
+    Of course, I'll be glad to discuss with for a bit. What were you talking about?
     """
 
     nurse """
     Miss Baxter was actually talking about ghosts and how she can talk to dead people.
     """
 
-    # TODO if the psychic knowledge not known, make resume it here ? or just call the text?
+    # TODO if the psychic knowledge not known, make resume it here? or just call the text?
     if current_character.saved_variables['knows_psychic_background']:
         lad """
         Oh yes, we talked about it already.
@@ -34,7 +34,7 @@ label lad_day2_hunt_tea_room:
         
     else:
         lad """
-        Really ? How fascinating. 
+        Really? How fascinating. 
         """
 
         psychic """
@@ -52,7 +52,7 @@ label lad_day2_hunt_tea_room:
     """
 
     nurse """
-    What do you mean ?
+    What do you mean?
     """
 
     psychic """
@@ -70,7 +70,7 @@ label lad_day2_hunt_tea_room:
     lad """
     That's true, we are still waiting for them right.
 
-    But Lady Claythorn left and don't let anyone taking care of this ?
+    But Lady Claythorn left and don't let anyone taking care of this?
     """
 
     psychic """
@@ -84,7 +84,7 @@ label lad_day2_hunt_tea_room:
         """
 
         psychic """
-        What were you trying to do downstairs ?
+        What were you trying to do downstairs?
 
         That's not a place where we should venture Mister Harring.
 
@@ -95,7 +95,7 @@ label lad_day2_hunt_tea_room:
 
     else:
         lad """
-        Aren't they all out on the hunt ?
+        Aren't they all out on the hunt?
         """
 
         psychic """
@@ -136,9 +136,9 @@ label lad_day2_hunt_tea_room:
     psychic """
     Thank you miss, that would be lovely.
 
-    But I am terribly sorry, did you say you cooked it ?
+    But I am terribly sorry, did you say you cooked it?
     
-    Are you the cook ? I thought I saw you cleaning up my room this morning.
+    Are you the cook? I thought I saw you cleaning up my room this morning.
     """
 
     maid """
@@ -146,7 +146,7 @@ label lad_day2_hunt_tea_room:
     """
 
     psychic """
-    A cook and a maid ? That's a lot of work you must have.
+    A cook and a maid? That's a lot of work you must have.
     """
 
     maid """
@@ -220,7 +220,7 @@ label lad_day2_hunt_tea_room_return:
     psychic """
     Yes Mister Harring. 
 
-    What can I do for you ?
+    What can I do for you?
     """
 
     call psychic_generic

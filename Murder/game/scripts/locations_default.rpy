@@ -62,7 +62,7 @@ label garage_default:
     # $ change_room('garage')
 
     # """
-    # The garage is now accessible??? Or is ???? Maybe not if downstairs.
+    # The garage is now accessible??? Or is???? Maybe not if downstairs.
     # """
 
     return

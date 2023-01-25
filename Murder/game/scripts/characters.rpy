@@ -227,7 +227,7 @@ init -100 python:
                         renpy.pause(2)
                         renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
                         renpy.notify("You have unlock a new Character : The " + self.text_id)
-            # TODO if first time, add a call to an explanation NOT WORKING, MUST BE PUT INSIDE A LABEL ???
+            # TODO if first time, add a call to an explanation NOT WORKING, MUST BE PUT INSIDE A LABEL???
             # global seen_tutorial_unlock_knowledge
             # if not seen_tutorial_unlock_knowledge:
             #     seen_tutorial_unlock_knowledge = True
@@ -740,7 +740,7 @@ screen character_list(is_selection = False):
 
 screen character_details(selected_char):
     # $ selected_char = get_char(char_id)
-    tag menu # ????
+    tag menu #????
     use game_menu(_("Characters"), scroll="viewport"):
 
         #style_prefix "characters" #???

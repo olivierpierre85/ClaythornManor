@@ -3,7 +3,7 @@
 #                   - The lad
 #                   - The Captain? TODO not sure
 
-# ?TODO add extra choices possibilities?
+#?TODO add extra choices possibilities?
 label lad_generic:
     
     # Reset if previous early exit

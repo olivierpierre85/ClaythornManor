@@ -14,7 +14,7 @@ label lad_day2_breakfast_follow:
 
     butler "There we are. Thomas Moody's room."
 
-    doctor "Is he the chap with the mask ?"
+    doctor "Is he the chap with the mask?"
 
     butler "Correct Sir."
 
@@ -41,9 +41,9 @@ label lad_day2_breakfast_follow:
 
     host surprised """
 
-    Dead ?!!!
+    Dead?!!!
 
-    How could that be ?
+    How could that be?
 
     """
 
@@ -70,7 +70,7 @@ label lad_day2_breakfast_follow:
     """
 
     doctor """
-    And why are you here again ?
+    And why are you here again?
     """
 
     lad """
@@ -88,7 +88,7 @@ label lad_day2_breakfast_follow:
     """
 
     lad """
-    So, what could have caused this doctor ?
+    So, what could have caused this doctor?
     """
 
     doctor """
@@ -102,7 +102,7 @@ label lad_day2_breakfast_follow:
     """
 
     lad """
-    So it's a natural death ?
+    So it's a natural death?
     """
 
     doctor """

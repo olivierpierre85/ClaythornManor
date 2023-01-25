@@ -10,7 +10,7 @@
 #   Position
 #       - House: lad, captain, psychic
 #       - Dead : broken, doctor, drunk
-#       - ? : Host, nurse
+#       -? : Host, nurse
 #
 #   Notes : 
 #       - 

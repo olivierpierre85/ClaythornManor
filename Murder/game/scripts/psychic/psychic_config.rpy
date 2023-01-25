@@ -30,7 +30,7 @@ label init_psychic:
         psychic_extra_information = [
             CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently.", is_important = True), 
             CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house.", is_important = True), 
-            CharacterInformation(2, "age", "She was .... SO she must be ????"),
+            CharacterInformation(2, "age", "She was .... SO she must be????"),
             CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.", is_important = True),
             CharacterInformation(4, "lie", "She is a fraud. All she said about talking with spirit was a lie.", is_important = True),
             CharacterInformation(5, "drive", "Doesn't have a driving license."),

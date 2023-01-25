@@ -5,12 +5,12 @@
 # 
 #   8:00 / 9:30) -> 12:00
 #
-#   Music: ?
+#   Music:?
 #
 #   Position
 #       - House: lad, captain, psychic
 #       - Dead : broken, doctor, drunk
-#       - ? : Host, nurse
+#       -? : Host, nurse
 #
 #   Notes : 
 #       - 
@@ -47,13 +47,13 @@ label lad_day3_morning:
             """    
 
     psychic """
-    Mister Harring are you there ?
+    Mister Harring are you there?
     """
     
     if lad_details.saved_variables["day2_believe_psychic"]:
 
         """
-        Miss Baxter ?
+        Miss Baxter?
 
         Right, we agreed to wake each other up.
 
@@ -113,9 +113,9 @@ label lad_day3_morning:
 
     else:
         """
-        Miss Baxter again ?
+        Miss Baxter again?
 
-        What is it now ?
+        What is it now?
         """
 
         lad """
@@ -143,7 +143,7 @@ label lad_day3_morning:
         """
 
         lad """
-        What do you mean ?
+        What do you mean?
         """
 
         psychic """
@@ -155,7 +155,7 @@ label lad_day3_morning:
         """
 
         lad """
-        Can't they be still asleep ?
+        Can't they be still asleep?
         """
 
         psychic """
@@ -177,7 +177,7 @@ label lad_day3_morning:
 
         But I don't want to keep on searching alone.
 
-        Would please accompany me to check on the others ?
+        Would please accompany me to check on the others?
         """
 
         lad """

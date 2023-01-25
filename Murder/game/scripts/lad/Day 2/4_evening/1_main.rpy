@@ -46,7 +46,7 @@ label lad_day2_evening:
     lad """
     Miss Baxter, I don't see Samuel Manning here.
 
-    Do you know where he is ?
+    Do you know where he is?
     """
 
     psychic """
@@ -54,7 +54,7 @@ label lad_day2_evening:
     """
 
     lad """
-    Really, how come ?
+    Really, how come?
     """
 
     psychic """
@@ -82,7 +82,7 @@ label lad_day2_evening:
 
     I doubt a lot of them will want to discuss over drinks now.
 
-    What will I do ?
+    What will I do?
     """
 
     $ play_music('sad')
@@ -225,7 +225,7 @@ label lad_day2_doctor_room:
     Just in case, I might as well take a few for myself.
     """
 
-    # TODO is the lad a thief ? likely ADD HERE
+    # TODO is the lad a thief? likely ADD HERE
     # TODO add LAUDANUM IN THE OBJECTS LIST?
 
     return

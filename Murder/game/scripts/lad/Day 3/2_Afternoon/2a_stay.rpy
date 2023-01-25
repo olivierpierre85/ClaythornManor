@@ -198,7 +198,7 @@ label lad_day3_afternoon_toilet:
     """
 
     lad surprised """
-    What... did ... you do ... to my food ?
+    What... did ... you do ... to my food?
     """
 
     # psychic """

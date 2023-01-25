@@ -39,7 +39,7 @@ label lad_day2_morning:
         """
         Oh my god my head hurts.
 
-        Why did I drink so much yesterday ?
+        Why did I drink so much yesterday?
         """
     
     """
@@ -65,7 +65,7 @@ label lad_day2_morning:
     call day2_breakfast_lad_psychic
 
     """
-    Everything is happening fast. What should I do ?
+    Everything is happening fast. What should I do?
     """
 
     $ time_left = 30
@@ -116,7 +116,7 @@ label lad_day2_morning:
 
     Those older guys may not be gentry, but they've probably learned how to shoot during the war.
 
-    So what should I do ?
+    So what should I do?
     """
 
     $ time_left = TIME_MAX # Trick to avoid problems, todo, find a better way

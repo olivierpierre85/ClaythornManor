@@ -5,14 +5,14 @@
 # 
 #   15:00 -> 18:30
 #
-#   Music: ?
+#   Music:?
 #
 #   Position
 #       - House: Everyone else
 #       - Dead : broken, doctor
 #
 #   Notes : 
-#       - Generic psychic, 120 minutes, ?TODO too long?
+#       - Generic psychic, 120 minutes,?TODO too long?
 # --------------------------------------------
 label lad_day2_afternoon:
 
@@ -56,9 +56,9 @@ label lad_day2_afternoon:
     psychic surprised """
     Oh my God ! What Happened !?
 
-    Is that Doctor Baldwin. Is he injured ?
+    Is that Doctor Baldwin. Is he injured?
 
-    Oh no ? Is he dead ?
+    Oh no? Is he dead?
     """
 
     captain """
@@ -66,7 +66,7 @@ label lad_day2_afternoon:
     """
 
     psychic """
-    But but, what happened ?
+    But but, what happened?
     """
 
     captain """
@@ -86,7 +86,7 @@ label lad_day2_afternoon:
     psychic angry """
     Fool ! I bet you were too drunk, that's why you hit him.
 
-    You could barely walk this morning. How come they gave you a gun ?
+    You could barely walk this morning. How come they gave you a gun?
     """
 
     captain """
@@ -94,7 +94,7 @@ label lad_day2_afternoon:
 
     We'll let the police deal with him.
 
-    By the way, has anyone from the city arrived here yet ?
+    By the way, has anyone from the city arrived here yet?
     """
 
     nurse """
@@ -106,7 +106,7 @@ label lad_day2_afternoon:
     captain """
     We better tell them to hurry up then.
 
-    Lady Claythorn where is the phone ?
+    Lady Claythorn where is the phone?
     """
 
     host """
@@ -128,7 +128,7 @@ label lad_day2_afternoon:
     """
 
     captain """
-    What !? Why ?
+    What !? Why?
     """
 
     host """
@@ -140,7 +140,7 @@ label lad_day2_afternoon:
     """
 
     psychic """
-    But,... what are we gonna do with him ?
+    But,... what are we gonna do with him?
     """
 
     captain """

@@ -2,7 +2,7 @@
 # Accessible from :
 #                   - The lad
 
-# ?TODO add extra choices possibilities?
+#?TODO add extra choices possibilities?
 label captain_generic:
 
     # Reset if previous early exit

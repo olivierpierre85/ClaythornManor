@@ -295,7 +295,7 @@ label lad_introduction:
     
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5), # keep_alive = True, TODO keep alive to allow more choices if leaving by mistakes ?
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5), # keep_alive = True, TODO keep alive to allow more choices if leaving by mistakes?
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 
@@ -328,7 +328,7 @@ label lad_day1_drinks_psychic:
 
     return
 
-# Dialog also in psychic side TODO move into global label ?
+# Dialog also in psychic side TODO move into global label?
 label lad_day1_drinks_psychic_encounter:
 
     lad """
@@ -349,7 +349,7 @@ label lad_day1_drinks_drunk:
     He has a glass of whisky on hand. His gaze is empty.
     """
     
-    lad "Hello sir, how are you ?"
+    lad "Hello sir, how are you?"
 
     drunk "(Snore...)"
 

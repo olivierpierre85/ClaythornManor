@@ -12,11 +12,11 @@ label lad_day2_afternoon_bedroom:
     play sound door_knock
 
     psychic """
-    Mister Harring, can I come in ?
+    Mister Harring, can I come in?
     """
 
     """
-    Amelia Baxter... What does she want ?
+    Amelia Baxter... What does she want?
     """
 
     lad """
@@ -38,7 +38,7 @@ label lad_day2_afternoon_bedroom:
     """
 
     lad """
-    What do you mean ?
+    What do you mean?
     """
 
     psychic """
@@ -46,11 +46,11 @@ label lad_day2_afternoon_bedroom:
     """
 
     lad """
-    What makes you think that ?
+    What makes you think that?
     """
 
     psychic """
-    Don't you think is strange two different persons died in the same place, of two different causes ?
+    Don't you think is strange two different persons died in the same place, of two different causes?
     """
 
     lad """
@@ -68,7 +68,7 @@ label lad_day2_afternoon_bedroom:
     """
 
     lad """
-    So what, you think he faked the accident ?
+    So what, you think he faked the accident?
 
     He could have simply drank too much during the hunt.
     """
@@ -82,7 +82,7 @@ label lad_day2_afternoon_bedroom:
     """
 
     lad """
-    You can \"feel\" it ?
+    You can \"feel\" it?
     """
 
     psychic """
@@ -94,7 +94,7 @@ label lad_day2_afternoon_bedroom:
     """
 
     lad """
-    You are afraid of Samuel Manning ?
+    You are afraid of Samuel Manning?
     """
 
     psychic """
@@ -122,7 +122,7 @@ label lad_day2_afternoon_bedroom:
     """
     I don't know what to say.
 
-    A murder ?
+    A murder?
 
     It's probably nonsense.
 

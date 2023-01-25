@@ -120,7 +120,7 @@ label lad_day3_escape:
 
     $ change_room('manor_garden')
 
-    # TODO captain asks about the gun room. Tell him you have it or not ?
+    # TODO captain asks about the gun room. Tell him you have it or not?
 
     captain """
     That was rather ungentlemanly to leave her alone like that.

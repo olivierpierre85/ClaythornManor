@@ -53,7 +53,7 @@ label psychic_day1_arrival:
     """
 
     butler """
-    What about you miss ... ?
+    What about you miss ...?
     """
 
     psychic """
@@ -178,7 +178,7 @@ label psychic_day1_arrival:
     """
     A gong rings. 
 
-    What is that ?
+    What is that?
 
     Then the butler comes into the room.
     """

@@ -9,7 +9,7 @@ init -1000 python:
     renpy.music.register_channel("clock", "sfx", loop=False)
     current_music = 'upbeat'
 
-# TODO move to init var ? Sort it out
+# TODO move to init var? Sort it out
 define time_left = 0
 define hours_angle = 0
 

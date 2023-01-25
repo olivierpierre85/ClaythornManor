@@ -51,7 +51,7 @@ label lad_day2_hunt_noaccident:
     """
 
     host """
-    Well, I think it's time for luncheon. How do you feel about settling here for our picnic ?
+    Well, I think it's time for luncheon. How do you feel about settling here for our picnic?
     """
 
     captain """
