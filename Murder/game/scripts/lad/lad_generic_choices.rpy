@@ -171,7 +171,7 @@ label lad_generic_heroic_act_psychic:
 
     # todo scene fire_building
 
-    play music mysterious_03 fadeout 2.0 fadein 2.0
+    $ play_music('mysterious', 3,fadeout_val=2, fadein_val=2 )
 
     lad """
     I was just going home one day, it was rather late.

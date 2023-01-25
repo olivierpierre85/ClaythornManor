@@ -181,7 +181,7 @@ label lad_day3_afternoon_toilet:
     It's just something more to do while waiting.
     """
 
-    play music danger_01 fadein 5.0 fadeout 2.0
+    $ play_music('danger', fadeout_val=2)
 
     """
     But as soon I stand up, I realize I can't stay on my feet.
@@ -219,7 +219,7 @@ label lad_day3_afternoon_toilet:
 
     play sound body_fall
 
-    stop music fadeout 2.0
+    $ stop_music(2)
 
     """
     I fall on the ground.
@@ -317,7 +317,7 @@ label lad_day3_afternoon_no_toilet:
 
     play sound body_fall
 
-    play music danger_01 fadein 5.0
+    $ play_music('danger')
 
     """
     Then she suddenly fells on the ground.
@@ -473,6 +473,6 @@ label lad_day3_afternoon_no_toilet:
 
     stop sound
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     return

@@ -75,7 +75,7 @@ label day2_breakfast_host_death:
     But it appears Mister Moody passed away in his sleep tonight.
     """
 
-    play music scary_01
+    $ play_music('scary')
 
     """
     The room became instantly silent.

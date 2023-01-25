@@ -5,7 +5,7 @@
 # 
 #   18:30 -> 23:00
 #
-#   Music: Upbeat
+#   Music: chill
 #
 #   Position
 #       - Dinner Room : Everyone
@@ -30,6 +30,8 @@ label lad_day1_evening:
     
     She takes her place at the table.
     """
+
+    $ play_music('chill', 2)
 
     call host_welcome_speech
 
@@ -59,9 +61,10 @@ label lad_day1_evening:
         TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'), # SHould they be keep_alive ?
         TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic')
     ], image_left = "doctor", image_right = "psychic")
+
     call run_menu(current_menu)
 
-    stop music fadeout 5.0
+    $ stop_music
 
     """
     The dinner is ending.
@@ -77,7 +80,7 @@ label lad_day1_evening:
 
     $ change_room('hallway')
 
-    $ play_music('upbeat')
+    $ play_music('upbeat', 2)
 
     """
     The footman takes me through the grand staircase, on to the first floor.
@@ -125,7 +128,7 @@ label lad_day1_evening:
 
     call change_time(23,00)
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     if lad_details.saved_variables["day1_drunk"]:
 
@@ -147,7 +150,7 @@ label lad_day1_evening:
         It's probably best if I go to bed now.
         """
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     $ change_room('lad_room')
 

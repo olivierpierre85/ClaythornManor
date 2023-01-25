@@ -64,7 +64,7 @@ label lad_day2_hunt_noaccident:
     But we didn't have time to eat, that we heard a shot not far from us.
     """
 
-    stop music fadeout 3.0
+    $ stop_music(3)
 
     play sound gun
 
@@ -82,7 +82,7 @@ label lad_day2_hunt_noaccident:
     I stood up and we ran in the direction of the cry.
     """
 
-    play music danger_01 fadein 5.0
+    $ play_music('danger')
 
     """
     We quickly reached the others.
@@ -108,7 +108,7 @@ label lad_day2_hunt_noaccident:
     He has bled to death.
     """
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     pause 2.0
 

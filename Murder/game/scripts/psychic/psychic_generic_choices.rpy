@@ -81,7 +81,7 @@ label psychic_generic_age:
 
 label psychic_generic_heroic_act:
 
-    play music mysterious_01 fadeout 2.0 fadein 2.0
+    $ play_music('mysterious')
 
     psychic """
     I was invited here for something I have done a couple of years back.
@@ -182,7 +182,7 @@ label psychic_generic_heroic_act:
 
     $ lad_details.unlock_knowledge('age') 
 
-    stop music fadeout 3.0
+    $ stop_music(3)
 
     $ play_music('previous')
     

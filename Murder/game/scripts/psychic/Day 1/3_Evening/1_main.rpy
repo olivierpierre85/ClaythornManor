@@ -25,7 +25,7 @@ label psychic_day1_evening:
 
     call change_time(23,00)
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     """
     It's been a long day.

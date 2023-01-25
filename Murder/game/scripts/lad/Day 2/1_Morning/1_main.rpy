@@ -93,7 +93,7 @@ label lad_day2_morning:
 
     call day2_breakfast_host_death_doctor
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     """
     When every one is done eating, Lady Claythorn speaks up.

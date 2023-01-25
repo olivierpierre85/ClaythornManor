@@ -2,7 +2,7 @@
 
 label ending_generic:
 
-    stop music fadeout 2.0
+    $ stop_music(2)
 
     if first_death:
 
@@ -34,7 +34,7 @@ label ending_generic:
 
 label survived_generic:
 
-    stop music fadeout 2.0
+    $ stop_music(2)
 
     if first_survive:
 
@@ -63,7 +63,7 @@ label lad_ending_day1_poisoned:
 
     call death_screen_transition
 
-    # play music mysterious_01
+    # $ play_music('mysterious')
 
     """
     You don't wake up. 

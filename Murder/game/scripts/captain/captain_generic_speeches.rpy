@@ -20,7 +20,7 @@ label captain_billiard_room_speech_part_2:
     There, the besieged did their best to resists the chinese assaults, but it was obvious to everyone that they wouldn't last very long.
     """
 
-    play music boxer_01 fadein 10.0
+    $ play_music('boxer', fadein_val=10.0)
 
     scene boxer_fight with fade
 

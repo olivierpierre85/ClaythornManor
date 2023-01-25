@@ -283,7 +283,7 @@ label lad_day3_morning:
 
     $ change_room('drunk_room')
     
-    play music scary_01 fadein 5.0
+    $ play_music('scary')
 
     """
     What we see inside is the most horrific thing I have ever seen.
@@ -366,7 +366,7 @@ label lad_day3_morning:
     So Sushil took us back to the tea room.
     """
 
-    stop music fadeout 5.0
+    $ stop_music()
     
     jump lad_day3_afternoon
 

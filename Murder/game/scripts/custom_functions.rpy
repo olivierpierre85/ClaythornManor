@@ -95,7 +95,7 @@ init python:
 
         return
 
-    def play_music(music_style):
+    def play_music(music_style, start_song = 1, fadein_val = 5, fadeout_val = 5, loop_val = True):
         global current_music, previous_music
         
         # Don't restart same music already in play
@@ -110,12 +110,30 @@ init python:
 
         track_lists = dict()
         track_lists['upbeat'] = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3', 'audio/music/upbeat_04.mp3']
-        track_lists['chill'] = ['audio/music/chill_01.mp3', 'audio/music/chill_02.mp3']
+        track_lists['chill'] = ['audio/music/chill_01.mp3', 'audio/music/chill_02.mp3', 'audio/music/chill_03.mp3']
         track_lists['sad'] = ['audio/music/sad_01.mp3', 'audio/music/sad_02.mp3']
         track_lists['mysterious'] = ['audio/music/mysterious_01.mp3', 'audio/music/mysterious_01.mp3']
         track_lists['scary'] = ['audio/music/scary_01.mp3']
+        track_lists['boxer'] = ['audio/music/boxer_01.mp3']
             
-        renpy.music.play(track_lists[current_music], loop=True, fadein = 5, fadeout = 5)
+        if start_song == 1:
+            track_list_ordered = track_lists[current_music]
+        elif start_song == 2:
+            track_list_ordered = track_lists[current_music][1:3] + [track_lists[current_music][0]]
+        else:
+            track_list_ordered = [track_lists[current_music][2]] + track_lists[current_music][0:2]
+
+        renpy.music.play(track_list_ordered, loop=loop_val, fadein=fadein_val, fadeout=fadeout_val)
+
+        return
+    
+    def stop_music(fadeout_length = 5):
+        global current_music, previous_music
+        
+        previous_music = current_music
+        current_music = "none"
+
+        renpy.music.stop(fadeout=fadeout_length)
 
         return
 

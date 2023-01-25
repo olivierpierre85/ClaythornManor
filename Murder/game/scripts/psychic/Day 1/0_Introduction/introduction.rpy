@@ -197,7 +197,7 @@ label psychic_introduction:
     call change_time(16,15, 'Evening', 'Friday')
 
     # Arrival to manor
-    stop music fadeout 3.0
+    $ stop_music(3)
     
     play sound thunder loop
     

@@ -153,7 +153,7 @@ label lad_introduction:
     And to make matter worse, a look at the sky tells me that a storm is coming. 
     """
 
-    stop music fadeout 3.0
+    $ stop_music()
     
     play sound thunder loop
     
@@ -183,17 +183,21 @@ label lad_introduction:
 
     stop sound
 
+    pause 2.0
+
     call change_time(18,15)
 
-    $ change_room('great_hall')
+    $ change_room('great_hall', dissolve)
 
     $ play_music('upbeat')
 
     butler """
-    Good afternoon Sir.
+    Welcome Sir.
     """
 
-    lad "Hello, I am Ted Harring, I was invited by Lady Claythorn."
+    lad """
+    Hello, I am Ted Harring, I was invited by Lady Claythorn.
+    """
 
     butler """
     Yes, of course Mr Harring.
@@ -307,11 +311,7 @@ label lad_introduction:
     Dinner is served. Please follow me to the dining room.
     """
 
-    """
-    Oh a gong warns people that dinner is served.
-
-    Rich people live differently that's for sure.
-    """
+    $ stop_music()
 
     jump lad_day1_evening
 

@@ -53,7 +53,7 @@ label lad_day2_no_hunt:
     I decide to go and see what's happening.
     """
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     jump lad_day2_afternoon
     

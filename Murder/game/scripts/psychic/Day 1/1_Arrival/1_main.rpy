@@ -193,7 +193,7 @@ label psychic_day1_arrival:
     Rich people live differently that's for sure.
     """
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     jump psychic_day1_dinner
 

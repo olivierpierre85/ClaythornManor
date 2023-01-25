@@ -85,7 +85,7 @@ label lad_day2_evening:
     What will I do ?
     """
 
-    play music sad_01 fadein 5.0 # TODO music
+    $ play_music('sad')
 
     call change_time(21,00)
 
@@ -95,7 +95,7 @@ label lad_day2_evening:
 
     call change_time(22,30)
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     if lad_details.saved_variables["day2_drunk"]:
 

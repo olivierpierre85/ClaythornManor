@@ -50,7 +50,7 @@ label lad_day2_afternoon:
         They are dragging someone on a makeshift stretcher.
         """
 
-    play music mysterious_01
+    $ play_music('mysterious')
 
     # TODO play dramatic music
     psychic surprised """

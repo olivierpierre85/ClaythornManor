@@ -37,7 +37,7 @@ label lad_day2_breakfast_follow:
     He is dead.
     """
 
-    play music scary_01
+    $ play_music('scary')
 
     host surprised """
 

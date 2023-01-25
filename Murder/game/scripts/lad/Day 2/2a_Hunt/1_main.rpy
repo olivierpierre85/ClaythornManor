@@ -23,7 +23,7 @@ label lad_day2_hunt:
     
     scene gun_room
 
-    play music upbeat_02 fadein 10.0 # TODO
+    $ play_music('upbeat', 2, fadein_val=10.0)
 
     $ lad_details.saved_variables["day2_hunt"] = True
 

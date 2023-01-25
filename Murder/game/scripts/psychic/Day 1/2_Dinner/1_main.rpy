@@ -56,9 +56,10 @@ label psychic_day1_dinner:
         TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain'), # SHould they be keep_alive ?
         TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad')
     ], image_left = "captain", image_right = "lad")
+    
     call run_menu(current_menu)
 
-    stop music fadeout 5.0
+    $ stop_music()
 
     """
     The dinner is over.
@@ -72,7 +73,7 @@ label psychic_day1_dinner:
     In any case, I should retire to my room first.
     """
 
-    stop music fadeout 10.0
+    $ stop_music(10)
     
     jump psychic_day1_evening
 

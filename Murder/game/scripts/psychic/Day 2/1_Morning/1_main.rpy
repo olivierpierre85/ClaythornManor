@@ -60,7 +60,7 @@ label psychic_day2_morning:
 
     call day2_breakfast_host_death_doctor
 
-    stop music fadeout 5.0
+    $ stop_music()
 
 
     # TODO

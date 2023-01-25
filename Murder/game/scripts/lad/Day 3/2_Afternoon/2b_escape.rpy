@@ -164,7 +164,7 @@ label lad_day3_escape:
         I don't know, you tell me.
         """
 
-        play music danger_01 fadein 2.0
+        $ play_music('danger')
 
         """
         He gets a gun from his back pocket and points it at me.
@@ -228,7 +228,7 @@ label lad_day3_escape:
         What do you mean?
         """
 
-        play music danger_01 fadeout 2.0
+        $ play_music('danger')
 
         captain """
         I heard footsteps coming from the forest.
