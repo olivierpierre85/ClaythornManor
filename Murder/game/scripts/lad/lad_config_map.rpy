@@ -212,7 +212,7 @@ label lad_config_map:
             ),
             TimedMenuChoice(
                 'Go wait for Sushil', 
-                'lad_day3_morning_give_up', 
+                'generic_cancel', 
                 early_exit = True, 
                 room = 'tea_room', 
                 condition = 'lad_details.saved_variables["day3_morning_captain_found"]'

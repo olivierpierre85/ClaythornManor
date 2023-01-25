@@ -1,10 +1,13 @@
 label lad_day2_evening:
-    $ lad_details.add_checkpoint("lad_day2_evening") 
-    
-    # call black_screen_transition("Day 2 - Evening") # Good ?
-    $ change_room('dining_room') 
 
     call change_time(18,30, "Evening", "Saturday")
+
+    $ lad_details.add_checkpoint("lad_day2_evening") 
+
+    call black_screen_transition("Ted Harring", "Saturday Evening")
+
+    $ change_room("dining_room", irisout)
+    
 
     """
     When I enter the room, the mood is rather gloom.

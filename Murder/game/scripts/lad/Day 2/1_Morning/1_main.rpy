@@ -12,7 +12,7 @@
 #       - Dead : Broken
 #   
 #   Notes : 
-#       - Generic Psychic,25 minutes
+#       - Generic Psychic, 25 minutes
 # --------------------------------------------
 label lad_day2_morning:
 

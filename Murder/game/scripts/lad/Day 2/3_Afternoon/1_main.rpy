@@ -3,7 +3,7 @@
 #           
 #   Saturday - Afternoon
 # 
-#   15:00 ->
+#   15:00 -> 18:30
 #
 #   Music: ?
 #
@@ -16,11 +16,11 @@
 # --------------------------------------------
 label lad_day2_afternoon:
 
+    call change_time(15,00, 'Afternoon', 'Saturday')
+
     $ lad_details.add_checkpoint("lad_day2_afternoon") 
     
     call black_screen_transition("Ted Harring", "Saturday Afternoon")
-
-    call change_time(15,00, 'Afternoon', 'Saturday')
 
     $ change_room("great_hall", irisout)
     
@@ -189,5 +189,6 @@ label lad_day2_afternoon:
     But in any case I should go change them.
     """
     
-    jump lad_day2_afternoon_bedroom
+    call lad_day2_afternoon_bedroom
 
+    jump lad_day2_evening

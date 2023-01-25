@@ -155,7 +155,7 @@ label lad_day2_afternoon_bedroom:
     But if you want to discuss this further. Come and see me in my room after dinner.
     """
 
-    if not is_unlock_map('psychic_room'):
+    if not is_unlock_map('psychic_room'): #TODO if lad knows psychic?
 
         psychic """
         I am in the \"George III\" room.
@@ -163,7 +163,5 @@ label lad_day2_afternoon_bedroom:
 
         $ unlock_map('psychic_room')
 
-
-
-    jump lad_day2_evening
+    return
 

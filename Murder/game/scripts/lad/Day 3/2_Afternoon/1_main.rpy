@@ -1,12 +1,29 @@
+# --------------------------------------------
+#   Lad
+#           
+#   Sunday - Afternoon
+# 
+#   12:00 -> Ending
+#
+#   Music: mysterious
+#
+#   Position
+#       - House: lad, captain, psychic
+#       - Dead : broken, doctor, drunk
+#       - ? : Host, nurse
+#
+#   Notes : 
+#       - 
+# --------------------------------------------
 label lad_day3_afternoon:
 
+    call change_time(12,00, "Afternoon", "Sunday")
+    
     $ lad_details.add_checkpoint("lad_day3_afternoon") 
 
     call black_screen_transition("Ted Harring", "Sunday Afternoon")
 
     $ change_room("tea_room", irisout)
-
-    call change_time(12,00, "Afternoon", "Sunday")
 
     """
     After leaving us in the tea room to gather our strength, Sushil Sinha left to explore the mansion a bit more.

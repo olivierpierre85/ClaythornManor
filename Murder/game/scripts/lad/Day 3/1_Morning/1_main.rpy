@@ -1,3 +1,20 @@
+# --------------------------------------------
+#   Lad
+#           
+#   Sunday - Morning
+# 
+#   8:00 / 9:30) -> 12:00
+#
+#   Music: ?
+#
+#   Position
+#       - House: lad, captain, psychic
+#       - Dead : broken, doctor, drunk
+#       - ? : Host, nurse
+#
+#   Notes : 
+#       - 
+# --------------------------------------------
 label lad_day3_morning:
 
     $ lad_details.add_checkpoint("lad_day3_morning") 
@@ -354,8 +371,3 @@ label lad_day3_morning:
     jump lad_day3_afternoon
 
     return
-
-label lad_day3_morning_give_up:
-
-    return
-    

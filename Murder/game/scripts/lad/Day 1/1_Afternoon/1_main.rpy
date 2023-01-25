@@ -213,7 +213,6 @@ label lad_introduction:
 
     $ change_room('tea_room')
 
-    # Introduces EVERYONE !
     """
     As I enter the room, the butler introduces me, almost shouting.
     """

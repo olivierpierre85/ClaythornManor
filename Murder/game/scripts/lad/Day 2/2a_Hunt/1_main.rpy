@@ -16,6 +16,7 @@
 #       - Generic doctor, 30 minutes
 # --------------------------------------------
 label lad_day2_hunt:
+
     call change_time(11,00, 'Hunt', 'Saturday')
 
     call black_screen_transition("Ted Harring", "The Hunt") # Good ? TODO check consistency with no hunt
@@ -131,7 +132,7 @@ label lad_day2_hunt:
     """
 
     """
-    Still, I better stay away from him.
+    Still, I'd better stay away from him.
 
     The butler then addresses the whole group.
     """
@@ -142,10 +143,8 @@ label lad_day2_hunt:
     It will be easier to spot game this way.
     """
 
-    # TODO more explanation about the program, where to meet again....
-
     """
-    People agree and the indian man asked to partner with our host.
+    People agree and Sushil Sinha asked to partner with our host.
 
     The drunk man insists on going with the doctor, who accepts.
 
