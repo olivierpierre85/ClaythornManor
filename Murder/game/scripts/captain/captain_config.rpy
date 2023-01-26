@@ -1,6 +1,5 @@
 label init_captain:
-    call change_time(17,00, 'Evening', 'Friday') #TODO check
-
+    
     # call captain_config_map
     
     # call captain_config_menu

@@ -1,6 +1,5 @@
 label init_lad:
-    call change_time(17,00, 'Evening', 'Friday')
-
+    
     call lad_config_map
     
     call lad_config_menu

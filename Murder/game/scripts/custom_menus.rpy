@@ -122,10 +122,10 @@ init -1 python:
         def display_choices(self):
 
             # DEBUG MODE
-            if test_mode and len(test_choices) > 0:
+            if len(test_choices) > 0:
                 selected_choice_i = test_choices.pop(0) 
                 selected_choice = self.choices[selected_choice_i]
-                print("Selected Choice:" + str(selected_choice))
+                # print("Selected Choice:" + str(selected_choice))
             # NORMAL MODE
             else:
                 if current_menu.is_map:

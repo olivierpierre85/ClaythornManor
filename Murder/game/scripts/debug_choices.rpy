@@ -1,10 +1,12 @@
 label debug_choices:
     call debug_routes
 
-    show screen current_time
+    $ skip_clock_movement = True
+
+    # show screen current_time
     show screen in_game_menu_btn
 
-    $ skip_clock_movement = True
+    
     
     menu: 
         "character selection":

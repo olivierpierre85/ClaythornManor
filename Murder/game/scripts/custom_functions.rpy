@@ -46,6 +46,8 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
         
         minutes_angle = (360 * (current_hour) ) + int(current_minutes) * 6 # + (360 * extra_rotation * 24) TOO fast?
 
+    show screen current_time
+    
     play clock "<from 0 to 3.0>audio/sound_effects/clock.ogg"
 
     $ skip_clock_movement = False

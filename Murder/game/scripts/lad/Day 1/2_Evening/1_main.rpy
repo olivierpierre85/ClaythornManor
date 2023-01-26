@@ -16,7 +16,7 @@
 #       - Generic Doctor, 80 minutes (Tea Room)
 # --------------------------------------------
 label lad_day1_evening:
-
+    
     call change_time(18,30, "Evening", "Friday" )
 
     $ current_character.add_checkpoint("lad_day1_evening") 

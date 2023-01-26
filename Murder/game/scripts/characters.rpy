@@ -665,12 +665,11 @@ label character_selection:
         current_position = 0
 
         current_character = eval(selected_choice + "_details")
-        current_run = current_character.get_max_run() + 1 # TODO WTF?
+        current_run = current_character.get_max_run() + 1 # TODO why? wtf?
         current_storyline = current_character
 
         current_checkpoint = current_character.get_init_checkpoint()
 
-    show screen current_time
     show screen in_game_menu_btn
     
     jump start_again
