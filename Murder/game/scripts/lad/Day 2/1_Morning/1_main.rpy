@@ -36,6 +36,7 @@ label lad_day2_morning:
 
 
     if lad_details.saved_variables["day1_drunk"] :
+        
         """
         Oh my god my head hurts.
 

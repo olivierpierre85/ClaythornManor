@@ -281,7 +281,7 @@ label lad_day2_evening_billiard_room_captain:
 label lad_day2_evening_billiard_room_bar:
 
     """
-    There is not much of choice of drinks. So I drink a glass of sherry.
+    There is not a large choice of drinks. So I drink a glass of sherry.
     """
 
     $ lad_details.saved_variables["day2_drinks"] = lad_details.saved_variables["day2_drinks"] + 1

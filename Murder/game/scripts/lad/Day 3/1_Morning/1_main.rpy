@@ -3,7 +3,7 @@
 #           
 #   Sunday - Morning
 # 
-#   8:00 / 9:30) -> 12:00
+#   8:00 / 9:30 -> 12:00
 #
 #   Music:?
 #
@@ -13,7 +13,7 @@
 #       -? : Host, nurse
 #
 #   Notes : 
-#       - 
+#       - Map 90, 150 minutes
 # --------------------------------------------
 label lad_day3_morning:
 
@@ -193,8 +193,11 @@ label lad_day3_morning:
         """
     
     if lad_details.saved_variables["day2_believe_psychic"]:
+
         $ time_left = 150
+
     else:
+
         $ time_left = 90
 
     $ play_music('sad')
@@ -298,7 +301,6 @@ label lad_day3_morning:
     """
 
     #TODO add woman scream?
-
 
     captain """
     Miss Baxter, please don't stay here.

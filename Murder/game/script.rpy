@@ -58,6 +58,7 @@ label init_technical_variables:
             f.close()
 
         TIME_MAX = 999999
+        TIME_LOW = 5
 
         current_room = "outside"
         seen_tutorial_unlock_knowledge = False

@@ -1,3 +1,20 @@
+# --------------------------------------------
+#   Lad
+#           
+#   Saturday - Evening
+# 
+#   18:30 -> 23h
+#
+#   Music: sad
+#
+#   Position
+#       - House: Everyone else
+#       - Dead : broken, doctor
+#
+#   Notes : 
+#       - Convince captain
+#       - Map 90 minutes
+# --------------------------------------------
 label lad_day2_evening:
 
     call change_time(18,30, "Evening", "Saturday")
@@ -8,6 +25,7 @@ label lad_day2_evening:
 
     $ change_room("dining_room", irisout)
     
+    $ play_music('sad')
 
     """
     When I enter the room, the mood is rather gloom.
@@ -84,8 +102,6 @@ label lad_day2_evening:
 
     What will I do?
     """
-
-    $ play_music('sad')
 
     call change_time(21,00)
 
