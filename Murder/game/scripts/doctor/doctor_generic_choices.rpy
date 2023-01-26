@@ -68,6 +68,7 @@ label doctor_generic_heroic_act:
     Still, it's always nice to get some recognition.
     """
     
+    #TODO heroic act unlock 
     return
 
 label doctor_generic_manor:
@@ -112,6 +113,7 @@ label doctor_generic_age:
 label doctor_generic_room:
     doctor "I am in the Edward II room."
 
+    # TODO more dialog if lad, or broken(invite to room?)
     $ unlock_map('doctor_room')
     
     return

@@ -61,9 +61,12 @@ label survived_generic:
 
 label lad_ending_day1_poisoned:
 
+    $ lad_details.unlock_ending('poisoned')
+    $ lad_details.add_ending_checkpoint(ending = lad_details.get_ending('poisoned'))
+    
     call death_screen_transition
 
-    # $ play_music('mysterious')
+    $ play_music('mysterious')
 
     """
     You don't wake up. 
@@ -76,7 +79,7 @@ label lad_ending_day1_poisoned:
 
     And you probably didn't.
 
-    But in real life, people often die without knowing why.
+    But sometimes, people die without knowing why.
     """
 
     jump ending_generic

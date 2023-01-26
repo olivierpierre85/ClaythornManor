@@ -367,6 +367,13 @@ init -100 python:
                 if info.type == 'ending':
                     ending_list.append(info)
             return ending_list
+        
+        def get_ending(self, ending_id):
+            ending_list = []
+            for info in self.information_list:
+                if info.type == 'ending' and info.text_id == ending_id:
+                    return info
+            return None
 
         def unlock_ending(self, text_id):
             for info in self.get_endings():

@@ -17,7 +17,9 @@
 # --------------------------------------------
 label lad_day1_evening:
 
-    call change_time(18,30)
+    call change_time(18,30, "Evening", "Friday" )
+
+    $ current_character.add_checkpoint("lad_day1_evening") 
 
     call black_screen_transition("Ted Harring", "Friday Evening")
 

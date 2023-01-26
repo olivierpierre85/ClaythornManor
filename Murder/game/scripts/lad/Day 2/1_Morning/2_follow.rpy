@@ -19,7 +19,6 @@ label lad_day2_breakfast_follow:
     butler "Correct Sir."
 
     $ unlock_map('broken_room')
-    # $ broken_details.introduce() 
 
     "We all enter the room."
 
@@ -30,6 +29,8 @@ label lad_day2_breakfast_follow:
     """
     The doctor approaches the bed. He takes the wrist of the man.
     """
+
+    $ stop_music(fadeout_length=1)
 
     doctor """
     No pulse.

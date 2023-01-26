@@ -56,6 +56,7 @@ label day2_breakfast_lad_psychic:
     doctor """
     Of course, I'll follow you.
     """
+    return
 
 label day2_breakfast_host_death:
     

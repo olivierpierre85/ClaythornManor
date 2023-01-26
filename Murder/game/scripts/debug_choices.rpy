@@ -11,8 +11,8 @@ label debug_choices:
             call unlock_psychic 
             jump character_selection
         
-        "debug_lad_day2":
-            $ test_choices = debug_lad_day2
+        "debug_lad":
+            $ test_choices = debug_lad_poisoned_day1
             jump lad_introduction
 
         "lad_introduction":
@@ -116,7 +116,7 @@ label debug_routes:
         # test_mode = True
         test_choices = []
 
-        debug_lad_day2 = [
+        debug_lad_poisoned_day1 = [
             0, # Talk to Samuel Manning
             1, # Talk to Amelia Baxter
             11, # You don't have anymore questions for her
@@ -124,6 +124,9 @@ label debug_routes:
             9, # You don't have anymore questions for him
             1, # Talk to Amelia Baxter
             11, # You don't have anymore questions for her
+            2, # Meet the others in the billiard room
+            2, # Go to the bar to have a drink
+            5, # Leave the room
             3, # Go to sleep
         ]
 

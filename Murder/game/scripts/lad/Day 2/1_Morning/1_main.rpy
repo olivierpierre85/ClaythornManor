@@ -26,7 +26,7 @@ label lad_day2_morning:
     
     $ change_room('lad_room')
 
-    $ play_music('upbeat')
+    $ play_music('upbeat', 3)
 
     """
     I slept through the night. 
@@ -90,15 +90,17 @@ label lad_day2_morning:
 
     else:
 
+        $ stop_music()
+
         call day2_breakfast_host_death
 
-    call day2_breakfast_host_death_doctor
-
-    $ stop_music()
+    call day2_breakfast_host_death_doctor    
 
     """
     When every one is done eating, Lady Claythorn speaks up.
     """
+
+    $ stop_music()
 
     call host_broken_death_speech
 

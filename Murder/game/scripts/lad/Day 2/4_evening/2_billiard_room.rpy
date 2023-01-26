@@ -14,6 +14,7 @@ label lad_day2_evening_billiard_room:
         Well at least, the bar is still there.
         """
 
+        # TODO add interaction with the butler
         $ lad_day2_evening_billiard_room_menu = TimedMenu([
             TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain', 20),
             TimedMenuChoice('Talk again to Sushil Sinha', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] == True'),

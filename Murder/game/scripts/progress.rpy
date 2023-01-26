@@ -173,9 +173,13 @@ screen progress:
                         spacing 25
                         for item in lad_details.get_endings():
                             imagebutton:
-                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-                                idle item.image_file                            
-                                tooltip str(item.content)
+                                if item.locked:
+                                    idle "images/info_cards/question_mark_bw.png"
+                                else: 
+                                    idle item.image_file
+                                    tooltip str(item.content)  
+                                    action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip                   
+                                
 
                 if current_checkpoint:
                     vbox:

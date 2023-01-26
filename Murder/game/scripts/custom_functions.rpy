@@ -182,6 +182,8 @@ label start_again():
 
         skip_clock_movement = True # Don't show move clock at first change time
 
+        stop_music(1)
+
         renpy.jump(current_checkpoint.label_id) 
 
     return
