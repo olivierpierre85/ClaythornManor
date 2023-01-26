@@ -1,3 +1,17 @@
+# --------------------------------------------
+#   Psychic
+#           
+#   Saturday - Morning
+#   
+#   08:30 -> 11:00
+#
+#   Music: chill
+#
+#   Alive: Everyone
+#
+#   Notes : 
+#       - Generic Lad ?
+# --------------------------------------------
 label psychic_day2_morning:
 
     $ current_character.add_checkpoint("psychic_day2_morning") 
@@ -46,14 +60,6 @@ label psychic_day2_morning:
 
     call captain_generic
 
-    # $ psychic_day1_evening_menu = TimedMenu([
-    #     TimedMenuChoice('Follow them', 'lad_day2_breakfast_follow', 30, early_exit = True ),
-    #     TimedMenuChoice('Stay there and finish the most important meal of the day', 'lad_day2_breakfast_eat', early_exit = True)
-    # ])
-    # call run_menu(psychic_day1_evening_menu)
-
-    # TODO generic captain or eat in silence
-
     call change_time(10,00)
 
     call day2_breakfast_host_death
@@ -61,7 +67,6 @@ label psychic_day2_morning:
     call day2_breakfast_host_death_doctor
 
     $ stop_music()
-
 
     # TODO
     jump work_in_progress

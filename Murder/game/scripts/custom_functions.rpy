@@ -111,8 +111,8 @@ init python:
         track_lists = dict()
         track_lists['upbeat'] = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3', 'audio/music/upbeat_04.mp3']
         track_lists['chill'] = ['audio/music/chill_01.mp3', 'audio/music/chill_02.mp3', 'audio/music/chill_03.mp3']
-        track_lists['sad'] = ['audio/music/sad_01.mp3', 'audio/music/sad_02.mp3']
-        track_lists['mysterious'] = ['audio/music/mysterious_01.mp3', 'audio/music/mysterious_01.mp3']
+        track_lists['sad'] = ['audio/music/sad_01.mp3', 'audio/music/sad_02.mp3', 'audio/music/sad_03.mp3']
+        track_lists['mysterious'] = ['audio/music/mysterious_01.mp3', 'audio/music/mysterious_02.mp3', 'audio/music/mysterious_03.mp3']
         track_lists['scary'] = ['audio/music/scary_01.mp3']
         track_lists['boxer'] = ['audio/music/boxer_01.mp3']
             
