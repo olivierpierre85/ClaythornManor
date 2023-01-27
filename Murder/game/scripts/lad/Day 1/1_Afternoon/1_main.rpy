@@ -162,7 +162,7 @@ label lad_introduction:
     """
     Finally an impressive mansion appears in the horizon.
 
-    It's bigger than any of the houses I've seen in London. 
+    It's bigger than any of the houses I've ever see. 
 
     A big country house. 
 

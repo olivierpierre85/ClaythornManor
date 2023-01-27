@@ -80,14 +80,14 @@ label breakpoint:
 
 # Smart music changes
 init python:
-    def change_room(new_room, fadeout = None):
+    def change_room(new_room, transition = None):
         global current_floor, selected_floor, current_room
 
         renpy.scene()
         renpy.show(new_room)
 
-        if fadeout:
-            renpy.with_statement(fadeout)
+        if transition:
+            renpy.with_statement(transition)
 
         current_room = new_room
         for room in rooms:
@@ -120,6 +120,7 @@ init python:
         track_lists['mysterious'] = ['audio/music/mysterious_01.mp3', 'audio/music/mysterious_02.mp3', 'audio/music/mysterious_03.mp3']
         track_lists['scary'] = ['audio/music/scary_01.mp3']
         track_lists['boxer'] = ['audio/music/boxer_01.mp3']
+        track_lists['danger'] = ['audio/music/danger_01.mp3']
             
         if current_start_song == 1:
             track_list_ordered = track_lists[current_music]

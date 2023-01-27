@@ -5,7 +5,7 @@
 # 
 #   15:00 -> 18:30
 #
-#   Music: mysterious
+#   Music: sad
 #
 #   Position
 #       - House: Everyone else
@@ -27,7 +27,7 @@ label lad_day2_afternoon:
     if lad_details.saved_variables["day2_hunt"]:
 
         """
-        The rest happened so fast, it felt like a blur for me.
+        The rest happened so fast, it felt like a blur to me.
 
         After the screaming and crying in the woods, Captain Sinha took charge.
 
@@ -50,7 +50,7 @@ label lad_day2_afternoon:
         They are dragging someone on a makeshift stretcher.
         """
 
-    $ play_music('mysterious')
+    $ play_music('sad')
 
     # TODO play dramatic music
     psychic surprised """
@@ -80,7 +80,7 @@ label lad_day2_afternoon:
     """
 
     """
-    Everybody turns at him.
+    Everybody turns to him.
     """
         
     psychic angry """
@@ -148,7 +148,7 @@ label lad_day2_afternoon:
     
     That's probably the best for the moment.
 
-    Can someone help me carry him.
+    Can someone help me?
     """
 
     lad """
@@ -158,7 +158,7 @@ label lad_day2_afternoon:
     $ change_room("doctor_room")
 
     """
-    So we carried Doctor Baldwin to his room and lay him down on his bed.
+    So we dragged Doctor Baldwin to his room and laid him down on his bed.
 
     Then Sushil put the blanket over him.
     """

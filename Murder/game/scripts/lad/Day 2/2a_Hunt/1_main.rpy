@@ -5,7 +5,7 @@
 # 
 #   11:00 -> 15:00
 #
-#   Music: chill
+#   Music: upbeat
 #
 #   Position
 #       - House, Tea room : nurse, psychic 
@@ -23,7 +23,7 @@ label lad_day2_hunt:
     
     scene gun_room
 
-    $ play_music('upbeat', 2, fadein_val=10.0)
+    $ play_music('upbeat', 1, fadein_val=10.0)
 
     $ lad_details.saved_variables["day2_hunt"] = True
 
@@ -112,7 +112,7 @@ label lad_day2_hunt:
 
     Wait what?!
 
-    He has a gun on hand. That can't be safe.
+    How on earth was he allowed to come with us?!
 
     I approach the butler.
     """

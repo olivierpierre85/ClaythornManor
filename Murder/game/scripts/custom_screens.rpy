@@ -35,6 +35,19 @@ transform rotate_minutes( angle = 0 ):
     yoffset 1 
     linear show_minutes_movement rotate angle 
 
+# WAIT in the same room
+label wait_screen_transition():
+    
+    scene black_background with dissolve
+
+    pause 1
+
+    $ renpy.scene()
+    $ renpy.show(current_room)
+    $ renpy.with_statement(dissolve)
+
+    return 
+
 # BLACK transition
 label black_screen_transition(display_text, display_text_2 = None):
     scene black_background with irisin

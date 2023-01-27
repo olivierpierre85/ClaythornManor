@@ -63,6 +63,8 @@ label lad_day2_broken_room:
 
     $ change_room('broken_room')
 
+    $ play_music('sad', 2)
+
     if lad_details.saved_variables["day2_breakfast_follow"]:
 
         """
@@ -80,7 +82,7 @@ label lad_day2_broken_room:
         """
 
     """
-    Well, now that I am here. Maybe I should take a look quickly . 
+    Well, now that I am here. Maybe I should take a look quickly. 
 
     Something might help me understand what happened.
 
@@ -109,12 +111,20 @@ label lad_day2_broken_room:
     A light shade of green.
 
     That's strange.
+
+    What could it be?
+
+    That's all I could notice in the room.
     """
 
     $  lad_details.unlock_observation('green_liquid') # TODO link to billiard room option to not drink the whisky?
 
+    pause 1.0
     # TODO add sound for CLUE???
     # TODO FIRST REAL INVESTIGATiON CLUE? ADD INTUITION when come back to 
+
+    $ play_music('previous')
+
     return
 
 
@@ -125,7 +135,9 @@ label lad_day2_no_hunt_cancel:
     """
     I don't think there is anything interesting to do now.
 
-    So I will lay on my bed for while
+    So I will lay on my bed for while.
     """
+
+    call wait_screen_transition()
 
     return

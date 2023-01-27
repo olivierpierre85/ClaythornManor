@@ -34,7 +34,7 @@ label lad_day2_hunt_noaccident:
     """
 
     lad """
-    You fought in many other wars?
+    Did you fight in many wars?
     """
 
     captain """

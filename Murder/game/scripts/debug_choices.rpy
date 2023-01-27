@@ -32,24 +32,24 @@ label debug_choices:
         "lad_day2_morning":
             jump lad_day2_morning
             
-        # "lad_day2_hunt":
-        #     jump lad_day2_hunt
+        "lad_day2_hunt":
+            jump lad_day2_hunt
 
-        # "lad_day2_no_hunt":
-        #     jump lad_day2_no_hunt
+        "lad_day2_no_hunt":
+            jump lad_day2_no_hunt
 
-        # "lad_day2_afternoon":
-        #     jump lad_day2_afternoon
+        "lad_day2_afternoon":
+            jump lad_day2_afternoon
             
         # "lad_day2_afternoon_bedroom":
         #     jump lad_day2_afternoon_bedroom
             
-        # "lad_day2_evening WITH unlocked":
-        #     #$ lad_details.unlock_object('gun')
-        #     $ lad_details.unlock_intuition('psychic_poisons')
-        #     $ lad_details.unlock_observation('green_liquid')
-        #     $ doctor_details.unlock_knowledge('addict')
-        #     jump lad_day2_evening
+        "lad_day2_evening WITH unlocked":
+            #$ lad_details.unlock_object('gun')
+            $ lad_details.unlock_intuition('psychic_poisons')
+            $ lad_details.unlock_observation('green_liquid')
+            $ doctor_details.unlock_knowledge('addict')
+            jump lad_day2_evening
 
         # "lad_day3_morning":
         #     $ lad_details.saved_variables["day2_believe_psychic"] = True

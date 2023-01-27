@@ -116,7 +116,11 @@ label psychic_generic_host_saturday_morning:
 
     What was event better, is that she addressed me as an equal.
 
-    That's very different that most noble people I've met, who would look down on people like you, ..., and me.
+    That's very different that most noble people I've met.
+    
+    They usually look down on people like you, ...
+    
+    ... and me.
     """
 
     """

@@ -136,7 +136,7 @@ label lad_day2_afternoon_bedroom:
     """
     I hear the gong.
 
-    Everything that happened didn't disturb the order in the house apparently.
+    Everything that happened didn't disturb the order of the house apparently.
     """
 
     psychic """

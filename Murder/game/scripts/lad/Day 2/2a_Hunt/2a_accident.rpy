@@ -20,7 +20,7 @@ label lad_day2_hunt_accident:
 
     He looks serious, even nervous.
 
-    As per usual, the footman is doesn't say a word.
+    As per usual, the footman doesn't say a word.
 
     That means the doctor and I are the only ones to talk.
     """
@@ -34,7 +34,7 @@ label lad_day2_hunt_accident:
     lad """
     That's for certain. It's a nice change of scenery for me.
 
-    I usually don't see nature very often.
+    I don't often get to see nature like this.
     """
 
     doctor """
@@ -44,7 +44,7 @@ label lad_day2_hunt_accident:
     """
 
     lad """
-    Yes, I've been born and raised there.
+    Birmingham. I was born and raised there.
     """
 
     $ lad_details.unlock_knowledge('background') 

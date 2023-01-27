@@ -19,7 +19,9 @@ label lad_day2_hunt_tea_room:
     """
 
     lad """
-    Of course, I'll be glad to discuss with for a bit. What were you talking about?
+    Of course, I'll be glad to discuss with you for a bit. 
+    
+    What were you talking about?
     """
 
     nurse """
@@ -178,7 +180,7 @@ label lad_day2_hunt_tea_room:
 
     No if you'll excuse me, I think I will retreat to my room to rest a little.
 
-    I afraid that I haven't slept very well tonight.
+    I am afraid that I haven't slept very well tonight.
 
     This storm got me up all night.
     """

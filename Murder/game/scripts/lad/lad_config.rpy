@@ -47,7 +47,7 @@ label init_lad:
         # Character Class
         lad_extra_information = [
             # knowledge
-            CharacterInformation(0, "origin", "Born and raised in London."), 
+            CharacterInformation(0, "origin", "Born and raised in Birmingham."), 
             CharacterInformation(10, "job", "A seller of stuff..."), 
             CharacterInformation(11, "thief", "... of stolen stuff apparently."), 
             CharacterInformation(20, "age", "He is 22 years old. He was only 15 at the end of the war."),
