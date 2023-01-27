@@ -98,7 +98,7 @@ init python:
         return
 
     def play_music(music_style, start_song = 1, fadein_val = 5, fadeout_val = 5, loop_val = True):
-        global current_music, previous_music
+        global current_music, previous_music, current_start_song, previous_start_song
         
         # Don't restart same music already in play
         if current_music == music_style:
@@ -106,9 +106,12 @@ init python:
         
         if music_style == 'previous':
             current_music = previous_music
+            current_start_song = previous_start_song
         else:
             previous_music = current_music
+            previous_start_song = current_start_song
             current_music = music_style
+            current_start_song = start_song
 
         track_lists = dict()
         track_lists['upbeat'] = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3', 'audio/music/upbeat_04.mp3']
@@ -118,9 +121,9 @@ init python:
         track_lists['scary'] = ['audio/music/scary_01.mp3']
         track_lists['boxer'] = ['audio/music/boxer_01.mp3']
             
-        if start_song == 1:
+        if current_start_song == 1:
             track_list_ordered = track_lists[current_music]
-        elif start_song == 2:
+        elif current_start_song == 2:
             track_list_ordered = track_lists[current_music][1:3] + [track_lists[current_music][0]]
         else:
             track_list_ordered = [track_lists[current_music][2]] + track_lists[current_music][0:2]

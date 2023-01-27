@@ -7,7 +7,8 @@ init -1000 python:
     import copy
 
     renpy.music.register_channel("clock", "sfx", loop=False)
-    current_music = 'upbeat'
+    current_music = 'none'
+    current_start_song = 1
 
 # TODO move to init var? Sort it out
 define time_left = 0
@@ -62,8 +63,6 @@ label init_technical_variables:
 
         current_room = "outside"
         seen_tutorial_unlock_knowledge = False
-
-        current_music = 'upbeat'
 
         current_run = 1 # TODO move
         current_position = 0 # TODO move
