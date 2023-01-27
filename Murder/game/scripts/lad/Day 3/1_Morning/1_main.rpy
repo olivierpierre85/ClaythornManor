@@ -5,7 +5,7 @@
 # 
 #   8:00 / 9:30 -> 12:00
 #
-#   Music:?
+#   Music: mysterious
 #
 #   Position
 #       - House: lad, captain, psychic
@@ -19,7 +19,7 @@ label lad_day3_morning:
 
     $ lad_details.add_checkpoint("lad_day3_morning") 
     
-    call black_screen_transition("Ted Harring", "Sunday")
+    call black_screen_transition("Ted Harring", "Sunday Morning")
 
     $ change_room('lad_room', irisout)
 
@@ -134,9 +134,7 @@ label lad_day3_morning:
         I don't know.
 
         I think something weird happening.
-        """
 
-        """
         I woke early as usual and tried to get a cup of tea before breakfast.
 
         But no one is there.
@@ -165,7 +163,7 @@ label lad_day3_morning:
 
         They couldn't have just slept in.
 
-        I also went to check on misses Claythorn and she doesn't answer.
+        I also went to check on Lady Claythorn and she doesn't answer.
         """
 
         lad """
@@ -200,7 +198,7 @@ label lad_day3_morning:
 
         $ time_left = 90
 
-    $ play_music('sad')
+    $ play_music('mysterious', 2)
 
     call run_menu(lad_details.saved_variables["map_menu"])
 
@@ -286,7 +284,7 @@ label lad_day3_morning:
 
     $ change_room('drunk_room')
     
-    $ play_music('scary')
+    $ play_music('scary', fadeout_val = 1)
 
     """
     What we see inside is the most horrific thing I have ever seen.

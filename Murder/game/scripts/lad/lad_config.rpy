@@ -17,6 +17,7 @@ label init_lad:
             "doctor_generic_other_guests_menu": doctor_generic_other_guests_menu_lad,
 
             "knows_doctor_background": False,
+            "knows_doctor_addict": False,
 
             "library_visited" : False,
             "has_met_maid" : False,
@@ -33,6 +34,7 @@ label init_lad:
             "day2_evening_billiard_room_visited" : False,
             "day2_nohunt_has_visited_tea_room" : False,
             "day2_believe_psychic" : False,
+
             "day2_drinks" : 0,
             "day2_drunk" : False,
             "day2_evening_billiard_room_captain_talked" : False,
@@ -65,6 +67,7 @@ label init_lad:
             # Endings
             CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed"), 
             CharacterInformation(2, "poisoned", "You were poisoned", type="ending", image_file="poisoned"), 
+            CharacterInformation(3, "fell", "You fell on a picked fence", type="ending", image_file="poisoned"), 
         ]
 
         lad_details  = CharacterDetails(

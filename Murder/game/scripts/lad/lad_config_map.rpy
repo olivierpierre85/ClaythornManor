@@ -102,7 +102,7 @@ label lad_config_map:
                 condition = condition_saturday_evening
             ),
             TimedMenuChoice(
-                default_room_text('psychic_room'), 
+                'Have a talk with Amelia Baxter', 
                 'lad_day2_evening_psychic_room',
                 20,
                 room = 'psychic_room',

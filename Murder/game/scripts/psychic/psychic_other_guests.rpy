@@ -26,6 +26,71 @@ label psychic_generic_other_guests_saturday_morning:
 
     return
 
+label psychic_generic_other_guests_saturday_evening:
+    # TODO move this to before choices, and leave only thinking about who is involved?
+    psychic """
+    Good question, we'll be stronger if we know who to be wary of.
+
+    I've thought about it and Samuel Manning of course is the prime suspect.
+
+    But he is locked in his room now, so I wouldn't worry about him too much.
+
+    If what I fear is true, he got help from someone else.
+    """
+
+    lad """
+    Do you mean a guest? Or someone in the staff could also be involved?
+    """
+
+    psychic """
+    I wouldn't rule anything, but it's seems less likely that the staff or Lady Claythorn would be involved.
+
+    This would require a tremendous operation.
+
+    No, a more plausible theory is that one or two people heard about the event.
+    
+    They then stole the place of real guest to infiltrate the place.
+    """
+
+    lad """
+    But why would they do that?
+    """
+
+    psychic """
+    Well, it's rather obvious isn't it?
+
+    The price money of course.
+
+    It was mentioned in the invitation letter, the prize will be handed in bearers bond.
+    """
+
+    lad """
+    Bearers bond? What are those?
+    """
+
+    psychic """
+    That's a note that you can exchange at the bank without having to prove your identity.
+
+    So it's almost as easy to use as cash.
+    """
+
+    lad """
+    So you think it could be a simple robbery?
+    
+    Why not just simply attack the manor?
+    """
+
+    psychic """
+    It's way easier to enter incognito.
+
+    Observe the castle and then take down potential threat discretely.
+
+    That's the most likely explanation I could come up with.
+    """
+
+    return
+    
+
 label psychic_generic_other_guests_saturday_hunt:
 
     if not lad_details.saved_variables["psychic_generic_other_guests_saturday_morning_ask"]:

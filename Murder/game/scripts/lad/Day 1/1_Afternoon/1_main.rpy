@@ -39,9 +39,9 @@ label lad_introduction:
     
     As a thank you, a weekend of leisure at Claythorn Manor as been planned for all of you to enjoy.
 
-    After which, a prize money of one thousand pounds will be handed to you.
+    After which, a prize money of one thousand pounds in bearers bond will be handed to you.
     
-    Please note that your presence is mandatory in order to receive the prize.  
+    Please note that your presence is mandatory in order to receive the prize.
 
     All you have to do is be at the Aberdeen Station, on the 13th of October around 4PM, where someone will drive you to the manor.
 

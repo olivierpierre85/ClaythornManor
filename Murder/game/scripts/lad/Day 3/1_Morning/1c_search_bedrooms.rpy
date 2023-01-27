@@ -85,7 +85,7 @@ label lad_day3_morning_captain_room:
     psychic """
     We believe something strange is going on.
 
-    This morning, you and mister Harring are the only persons I encountered so far.
+    You and mister Harring are the only persons I encountered this morning,.
 
     We don't seem to find any of the servants, nor any other guests so far.
     """

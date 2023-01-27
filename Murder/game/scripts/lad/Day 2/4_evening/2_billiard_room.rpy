@@ -93,6 +93,13 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
         He was keeping mostly to himself but I did see him drink from his flask.
         """
 
+        captain """
+        Well, there you have it then.
+        """
+    
+    lad """
+    I guess.
+    """
 
     return
 
@@ -246,8 +253,6 @@ label lad_day2_evening_billiard_room_captain:
     """
 
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu([
-        TimedMenuChoice('I have a intuition {{intuition}}', 'TODO', 10, condition="lad_details.is_intuition_unlocked('psychic_poisons')" ),
-        TimedMenuChoice('I have a gun, I do what I want {{object}}', 'TODO', 10, condition="lad_details.is_object_unlocked('gun')" ),
         TimedMenuChoice('I believe Daniel Baldwin was an opium addict {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']" ),
         TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.is_observation_unlocked('green_liquid')" ),
         TimedMenuChoice('I am not sure Samuel Manning was really drunk when the accident occurred', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
@@ -257,7 +262,7 @@ label lad_day2_evening_billiard_room_captain:
     call run_menu(lad_day2_evening_billiard_room_captain_hypothesis_menu)
 
     lad """
-    Ok. I guess there is nothing really suspicious in the end.
+    Ok. Maybe there is nothing really suspicious in the end.
     """
 
     captain """

@@ -36,7 +36,7 @@ label lad_day3_stay:
     Okay, I am coming with you.
     """
 
-    $ change_room('kitchen')
+    $ change_room('kitchen', dissolve)
 
     """
     We looked around to find something.
@@ -60,7 +60,7 @@ label lad_day3_stay:
 
     $ lad_details.unlock_knowledge('cook') 
 
-    $ change_room('dining_room')
+    $ change_room('dining_room', dissolve)
 
     """
     When everything is ready I offer to carry the plates to the dining room.
@@ -375,6 +375,11 @@ label lad_day3_afternoon_no_toilet:
     Who did this to her?
     """
 
+    """
+    TODO footsteps?
+    Paranoid?
+    """
+    
     lad """
     Hey!!! 
 

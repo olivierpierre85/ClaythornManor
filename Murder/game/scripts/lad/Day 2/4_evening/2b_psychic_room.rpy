@@ -50,6 +50,14 @@ label lad_day2_believe_psychic:
     psychic """
     I am glad you agree.
 
+    I've given this a lot of thought, and I think 
+    """
+    #TODO merge with other guests
+
+
+
+
+    psychic """
     Here what I think we should do :
 
     Go back to your room and close the door shut.

@@ -5,7 +5,7 @@
 # 
 #   18:30 -> 23h
 #
-#   Music: mysterious
+#   Music: sad
 #
 #   Position
 #       - House: Everyone else
@@ -25,7 +25,7 @@ label lad_day2_evening:
 
     $ change_room("dining_room", irisout)
     
-    $ play_music('mysterious', 2)
+    $ play_music('sad', 3)
 
     """
     When I enter the room, the mood is rather gloom.
