@@ -214,6 +214,8 @@ label lad_day1_evening_psychic_room:
 
     $ unlock_map('psychic_room')
 
+    $ lad_details.saved_variables['knows_psychic_room'] = True
+
     return
 
 label lad_day1_evening_dinner_psychic:

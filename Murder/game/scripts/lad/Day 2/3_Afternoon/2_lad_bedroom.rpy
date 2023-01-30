@@ -1,4 +1,5 @@
 label lad_day2_afternoon_bedroom:
+    
     $ change_room('lad_room')
 
     call change_time(18,00)
@@ -152,16 +153,20 @@ label lad_day2_afternoon_bedroom:
     """
 
     psychic """
-    But if you want to discuss this further. Come and see me in my room after dinner.
+    But I think we should discuss this further. 
+    
+    If you agree come and see me in my room after dinner.
     """
 
-    if not is_unlock_map('psychic_room'): #TODO if lad knows psychic?
+    if not lad_details.saved_variables['knows_psychic_room']: #TODO if lad knows psychic?
 
         psychic """
         I am in the \"George III\" room.
         """
 
         $ unlock_map('psychic_room')
+
+        $ lad_details.saved_variables['knows_psychic_room'] = True
 
     return
 

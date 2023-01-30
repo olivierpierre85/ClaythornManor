@@ -12,6 +12,7 @@ label init_lad:
             "psychic_generic_menu" : psychic_generic_menu_lad,
             "psychic_generic_other_guests_menu": psychic_generic_other_guests_menu_lad,
             "knows_psychic_background": False,
+            "knows_psychic_room": False,
             
             "doctor_generic_menu" : doctor_generic_menu_lad,
             "doctor_generic_other_guests_menu": doctor_generic_other_guests_menu_lad,

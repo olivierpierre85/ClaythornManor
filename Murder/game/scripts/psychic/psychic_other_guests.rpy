@@ -25,70 +25,6 @@ label psychic_generic_other_guests_saturday_morning:
     $ lad_details.saved_variables["psychic_generic_other_guests_saturday_morning_ask"] = True
 
     return
-
-label psychic_generic_other_guests_saturday_evening:
-    # TODO move this to before choices, and leave only thinking about who is involved?
-    psychic """
-    Good question, we'll be stronger if we know who to be wary of.
-
-    I've thought about it and Samuel Manning of course is the prime suspect.
-
-    But he is locked in his room now, so I wouldn't worry about him too much.
-
-    If what I fear is true, he got help from someone else.
-    """
-
-    lad """
-    Do you mean a guest? Or someone in the staff could also be involved?
-    """
-
-    psychic """
-    I wouldn't rule anything, but it's seems less likely that the staff or Lady Claythorn would be involved.
-
-    This would require a tremendous operation.
-
-    No, a more plausible theory is that one or two people heard about the event.
-    
-    They then stole the place of real guest to infiltrate the place.
-    """
-
-    lad """
-    But why would they do that?
-    """
-
-    psychic """
-    Well, it's rather obvious isn't it?
-
-    The price money of course.
-
-    It was mentioned in the invitation letter, the prize will be handed in bearers bond.
-    """
-
-    lad """
-    Bearers bond? What are those?
-    """
-
-    psychic """
-    That's a note that you can exchange at the bank without having to prove your identity.
-
-    So it's almost as easy to use as cash.
-    """
-
-    lad """
-    So you think it could be a simple robbery?
-    
-    Why not just simply attack the manor?
-    """
-
-    psychic """
-    It's way easier to enter incognito.
-
-    Observe the castle and then take down potential threat discretely.
-
-    That's the most likely explanation I could come up with.
-    """
-
-    return
     
 
 label psychic_generic_other_guests_saturday_hunt:
@@ -212,19 +148,75 @@ label psychic_generic_nurse_saturday_hunt:
 
     return
 
-# label psychic_generic_broken_saturday_morning:
+label psychic_generic_other_guests_saturday_evening:
 
-#     psychic """
-#     broken
-#     """
+    psychic """
+    Good question, we'll be stronger if we know who to be wary of.
 
-#     return
+    I've thought about it and Samuel Manning of course is the prime suspect.
 
-# label psychic_generic_doctor_saturday_morning:
+    But he is locked in his room now, so I wouldn't worry about him too much.
 
-#     psychic """
-#     doctor
-#     """
+    The other obvious suspect is Thomas Moody. 
+    
+    The fact that he wears a mask is the perfect way to hide his true identity.
 
-#     return
+    But it was obviously not him.
 
+    So that leaves us three persons to worry about : Sushil Sinha, Lady Claythorn and Rosalind Marsh.
+    """
+    
+    call psychic_generic_other_guests
+
+    return
+
+label psychic_generic_captain_saturday_evening:
+
+    psychic """
+    Captain Sinha is the one I am the most worried about.
+
+    He the strongest of us, has military experience.
+    
+    And he often took command during dramatic moments.
+
+    Which means he can try to drive us where he wants.
+
+    But he is also the one that locked Samuel Manning, so I am not sure.
+    """
+
+    return
+
+
+label psychic_generic_host_saturday_evening:
+
+    psychic """
+    If the money is not the reason behind the murders, then I suppose she would be suspicious.
+
+    After all, she is the one who called all of us here.
+
+    But as I said, it would be a lot of work to organize all this, and for what?
+
+    To kill a few of her enemies?
+
+    That seem a bit far fetched.
+
+    Also, she seemed very nice to me. 
+
+    But of course that doesn't mean much.
+    """
+
+    return
+
+label psychic_generic_nurse_saturday_evening:
+
+    psychic """
+    Miss Marsh definitely doesn't have the type of a killer.
+
+    But that's not a reason enough to think she couldn't be.
+
+    She is very discreet.
+
+    That could be a way to be able to search the manor while she relies on an accomplice for the more \"physical\" part of the robbery.
+    """
+
+    return

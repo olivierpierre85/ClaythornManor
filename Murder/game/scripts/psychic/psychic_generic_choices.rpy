@@ -59,6 +59,8 @@ label psychic_generic_room:
 
     $ unlock_map('psychic_room')
 
+    $ current_character.saved_variables['knows_psychic_room'] = True
+
     return
 
 

@@ -50,18 +50,74 @@ label lad_day2_believe_psychic:
     psychic """
     I am glad you agree.
 
-    I've given this a lot of thought, and I think 
+    I've given this a lot of thought, and I think if what I fear is true, he got help from someone else.
     """
-    #TODO merge with other guests
 
-
-
+    lad """
+    Do you mean a guest? Or someone in the staff could also be involved?
+    """
 
     psychic """
-    Here what I think we should do :
+    I wouldn't rule anything, but it's seems less likely that the staff or Lady Claythorn would be involved.
 
-    Go back to your room and close the door shut.
+    This would require a tremendous operation.
 
+    No, a more plausible theory is that one or two people heard about the event.
+    
+    They then stole the place of real guest to infiltrate the place.
+    """
+
+    lad """
+    But why would they do that?
+    """
+
+    psychic """
+    Well, it's rather obvious isn't it?
+
+    The price money of course.
+
+    It was mentioned in the invitation letter, the prize will be handed in bearers bond.
+    """
+
+    lad """
+    Bearers bond?
+    """
+
+    psychic """
+    That's a note that you can exchange at the bank without having to prove your identity.
+
+    So it's almost as easy to use as cash.
+    """
+
+    lad """
+    Yes that's a lot of money hidden somewhere in the manor.
+    """
+
+    lad """
+    So you think it could be a simple robbery?
+    
+    Why not just simply attack the manor?
+    """
+
+    psychic """
+    It's easier to enter incognito.
+
+    To first observe and then take down potential threats discretely.
+
+    That's the most likely explanation I could come up with.
+    """
+
+    lad """
+    I guess that's possible.
+
+    But there is no way to determine who could be involved.
+    """
+
+    psychic """
+    Precisely.
+
+    That's why I think we should hide safely in our rooms tonight.
+    
     Tomorrow morning, the first one to get up of the two of us will wake the other up.
 
     Then we stick together the whole day until we are free to leave.
