@@ -40,6 +40,7 @@ label init_map:
             Room(1, (400, 100, 200, 100),   'tea_room',         'Tea room'),
             Room(1, (600, 100, 200, 100),   'dining_room',      'Dining Room'),
             Room(1, (0, 200, 200, 100),     'garden',           'Garden'),
+            Room(1, (200 , 200, 200, 100),     'servantTODO',          'Servant Stairs'),
             # TODO where to put the footman extra livery?
             # Basement
             Room(0, (0, 100, 200, 100),     'kitchen',          'Kitchen'),
