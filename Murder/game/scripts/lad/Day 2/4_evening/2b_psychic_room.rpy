@@ -53,6 +53,8 @@ label lad_day2_believe_psychic:
     I've given this a lot of thought, and I think if what I fear is true, he got help from someone else.
     """
 
+    $ play_music("mysterious")
+
     lad """
     Do you mean a guest? Or someone in the staff could also be involved?
     """
@@ -74,7 +76,7 @@ label lad_day2_believe_psychic:
     psychic """
     Well, it's rather obvious isn't it?
 
-    The price money of course.
+    The prize money of course.
 
     It was mentioned in the invitation letter, the prize will be handed in bearers bond.
     """
@@ -124,6 +126,8 @@ label lad_day2_believe_psychic:
 
     What do you think of that?
     """
+
+    $ play_music("previous")
 
     lad """
     It sounds like a good plan.

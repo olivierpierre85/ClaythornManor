@@ -25,11 +25,39 @@ label lad_day3_morning_nurse_room:
     """
 
     """
-    And before I could say anything, she tries to open the door.
+    And before I could say anything, she opens the door.
+    """
+
+    $ change_room("nurse_room")
+
+    psychic """
+    She is not here.
+
+    And the room is neatly ordered.
+
+    No sign of struggle or hurry here.
+    """
+
+    lad """
+    Where could she be?
     """
 
     psychic """
-    It's locked.
+    I don't know.
+
+    This place is not that big.
+
+    We should have run into her.
+    
+    In any case, let's look around.
+
+    There might some clue on where she could be.
+    """
+
+    pause 1.0
+    
+    """
+    We looked for a while but found nothing of interest.
     """
 
     return
@@ -216,9 +244,19 @@ label lad_day3_morning_drunk_room:
     $ unlock_map('drunk_room')
 
     lad """
-    It's closed.
+    Mister Manning?
 
-    The captain has the key.
+    Are you alright?
+    """
+
+    """
+    No answer.
+    """
+
+    lad """
+    Well the door is closed anyway.
+
+    Mister Sinha has the key.
     """
 
     # else:

@@ -188,9 +188,9 @@ label lad_ending_day3_escape:
 
     Samuel Manning, Thomas Moody and Daniel Baldwin were still in their bed.
 
-    They had to force open the door of Rosalind Marsh. 
-    
-    She was lying lifeless in her bed, just like the others.
+    They found Rosalind Marsh in the attic. 
+
+    She was shot in the head.
 
     And poor Miss Baxter, she was lying dead in the hallway. 
     

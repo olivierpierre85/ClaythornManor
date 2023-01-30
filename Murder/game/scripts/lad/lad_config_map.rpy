@@ -178,7 +178,7 @@ label lad_config_map:
             TimedMenuChoice(
                 default_room_text('nurse_room'), 
                 'lad_day3_morning_nurse_room', 
-                10, 
+                20, 
                 room = 'nurse_room',
                 condition = condition_sunday_morning
             ),                  

@@ -52,6 +52,8 @@ label run_menu(current_menu):
         if time_diff:
             call change_time(time_diff.time().hour, time_diff.time().minute)
 
+        pause 1.0 
+        
         call run_menu(current_menu)
 
     $ current_menu.early_exit = False
