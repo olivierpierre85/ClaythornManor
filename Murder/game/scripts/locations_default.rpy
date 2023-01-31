@@ -1,7 +1,16 @@
 
 label generic_cancel:
     return
-    
+
+label attic_default:
+    scene attic
+
+    """
+    The door to the servants stairs is closed.
+    """
+
+    return
+
 label downstairs_default:
     scene basement_stairs
 
@@ -116,6 +125,30 @@ label bedroom_default:
 
     return
 
+label entrance_hall_default:
+    
+    scene great_hall
+    
+    """
+    Impressive entrance hall
+    
+    But it's empty.
+    """
+
+    return
+
+label portrait_gallery_default:
+    
+    scene portrait_gallery
+    
+    """
+    Creepy portrait gallery.
+
+    Not much to do here.
+    """
+
+    return
+
 # Downstairs
 label kitchen_default:
     call downstairs_default
@@ -128,7 +161,28 @@ label scullery_default:
 label gun_room_default:
     call downstairs_default
     return
-    
+
+# Attic
+label storage_default:
+    call attic_default
+    return
+
+label males_room_default:
+    call attic_default
+    return
+
+label butler_room_room_default:
+    call attic_default
+    return
+
+label servant_stairs_1_default:
+    call attic_default
+    return
+
+label servant_stairs_2_default:
+    call attic_default
+    return
+
 # All bedrooms
 label host_room_default:
     call bedroom_default
