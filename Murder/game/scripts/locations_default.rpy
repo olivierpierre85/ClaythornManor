@@ -18,18 +18,6 @@ label downstairs_default:
 
     return
 
-label gun_room_default:
-    $ change_room('gun_room')
-    
-    """
-    A room filled with guns.
-
-    I better not touch them, I might hurt myself.
-    """
-
-    return
-
-
 label garden_friday:
     $ change_room('great_hall')
     
@@ -137,6 +125,10 @@ label scullery_default:
     call downstairs_default
     return
 
+label gun_room_default:
+    call downstairs_default
+    return
+    
 # All bedrooms
 label host_room_default:
     call bedroom_default

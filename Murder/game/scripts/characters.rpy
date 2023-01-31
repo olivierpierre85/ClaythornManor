@@ -1,4 +1,5 @@
 # Characters description
+# TODO REWRITE EVERYTHING
 style narrator_style:
     properties gui.text_properties("dialogue")
     color gui.idle_small_color 
