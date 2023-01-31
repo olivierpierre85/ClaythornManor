@@ -179,16 +179,35 @@ screen progress:
                                     idle item.image_file
                                     tooltip str(item.content)  
                                     action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip                   
-                                
 
+                vbox:
+                    yminimum 120
+                    text "Intuitions Gained":
+                        font gui.name_text_font
+                        color gui.accent_color
+
+                    hbox:
+                        yoffset 10
+                        spacing 25
+                        for item in lad_details.get_intuitions():
+                            imagebutton:
+                                if item.locked:
+                                    idle "images/info_cards/question_mark_bw.png"
+                                else: 
+                                    idle item.image_file
+                                    tooltip str(item.content)  
+                                    action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
                 if current_checkpoint:
-                    vbox:
+                    vbox:                        
                         ysize 65
-                        hbox:            
-                            text current_checkpoint.debug_string() # + " " str(current_checkpoint.position) + " "
-                            # $ test_menu = str(current_checkpoint.saved_variables["psychic_generic_menu"])
-                            # text test_menu
+                        yoffset 20
+                        hbox:    
+                                                        
+                            text current_checkpoint.get_format_created()        
+                            # text current_checkpoint.debug_string() # + " " str(current_checkpoint.position) + " "
+                            text " Checkpoint"
                             imagebutton: 
+                                xoffset 10
                                 yalign 0.5
                                 mouse "hover"
                                 auto "images/ui/cancel_icon_small_%s.png"
@@ -196,35 +215,54 @@ screen progress:
                 else:
                     hbox:
                         ysize 65
+                        yoffset 20
                         text "Current Checkpoint"
                 vbox:
-                    ysize 350
-                    text "Unlocked":
+                    ysize 230
+                    yoffset 10
+                    text "Important information":
                         font gui.name_text_font
                         color gui.accent_color
-                    hbox:
-                        spacing 25
-                        # if current_checkpoint:
-                        #     for item in current_checkpoint.objects: 
-                        #         use info_card(item,"{image=images/ui/objects_icon.png} " )    
-                        # else:
+                    # IN GRID
+                    grid 5 2:
+                        spacing 13
+                        $ grid_fill = 10
                         for item in lad_details.get_objects():
+                            $ grid_fill -= 1
                             if current_checkpoint:
                                 use info_card(item,"{image=images/ui/objects_icon.png} ", not item.text_id in current_checkpoint.objects )
                             else:
                                 use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
-                    hbox:
-                        spacing 25
-                        for item in lad_details.get_observations():                            
-                            if current_checkpoint:
-                                use info_card(item,"{image=images/ui/observation_icon.png} ", not item.text_id in current_checkpoint.observations )
-                            else:
-                                use info_card(item,"{image=images/ui/observation_icon.png} ", item.locked )
+                        
+                        if grid_fill > 0 :
+                            for i_fill in range(grid_fill):
+                                # TODO empty image
+                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
 
-                    hbox:
-                        spacing 25
-                        for item in lad_details.get_intuitions():
-                            use info_card(item, "{image=images/ui/intuition_icon.png} ")
+                    # IN TWO ROW
+                    # hbox:
+                    #     spacing 25
+                    #     # if current_checkpoint:
+                    #     #     for item in current_checkpoint.objects: 
+                    #     #         use info_card(item,"{image=images/ui/objects_icon.png} " )    
+                    #     # else:
+                    #     for item in lad_details.get_objects():
+                    #         if current_checkpoint:
+                    #             use info_card(item,"{image=images/ui/objects_icon.png} ", not item.text_id in current_checkpoint.objects )
+                    #         else:
+                    #             use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
+                    # hbox:
+                    #     spacing 25
+                    #     for item in lad_details.get_observations():                            
+                    #         if current_checkpoint:
+                    #             use info_card(item,"{image=images/ui/observation_icon.png} ", not item.text_id in current_checkpoint.observations )
+                    #         else:
+                    #             use info_card(item,"{image=images/ui/observation_icon.png} ", item.locked )
+
+                    # hbox:
+                    #     spacing 25
+                    #     for item in lad_details.get_intuitions():
+                    #         use info_card(item, "{image=images/ui/intuition_icon.png} ")
 
                 if current_checkpoint:                    
                     imagebutton:
