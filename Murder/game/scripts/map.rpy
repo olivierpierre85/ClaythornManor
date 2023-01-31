@@ -18,45 +18,57 @@ transform map_button_right():
 label init_map:
     define tooltip = "Click on a room to move there"
     define MIN_FLOOR = 0
-    define MAX_FLOOR = 2 # TODO Add floors
+    define MAX_FLOOR = 3
 
     # TODO replace by a nice loop or class
     python:
         # Full Map of the MANOR TODO no need to init each time
         rooms = [
-            # TODO a Third floor? Servants quarters?
+            # Attic
+            Room(3, (165, 90, 270, 523),   'storage',         'Storage Room' ),
+            
+            Room(3, (512, 204, 242, 127),   'males_room',      'Male Servants Room' ),
+            Room(3, (512, 332, 242, 129),   'females_room',     'Female Servants Room' ),
+            Room(3, (512, 460, 242, 155),   'butler_room',      'Butler\'s Room' ),
             # Bedrooms
-            Room(2, (0, 100, 200, 100),     'psychic_room',     'George III Bedroom (Psychic)'),
-            Room(2, (200, 100, 200, 100),   'lad_room',         'William the Conqueror Bedroom (Lad)' ),
-            Room(2, (400, 100, 200, 100),   'host_room',        'Henry IV Bedroom (Host)'),
-            Room(2, (600, 100, 200, 100),   'broken_room',      'Richard III Bedroom (broken)'),
-            Room(2, (800, 100, 200, 100),   'doctor_room',      'Edward II Bedroom (doctor)'),
-            Room(2, (0, 200, 200, 100),     'captain_room',     'George I Bedroom (captain)'),
-            Room(2, (200, 200, 200, 100),   'drunk_room',       'George IV Bedroom (drunk)'),
-            Room(2, (400, 200, 200, 100),   'nurse_room',       'Elizabeth I Bedroom (nurse)'),
+            Room(2, (25, 90, 205, 190),   'lad_room',         'William the Conqueror Bedroom (Lad)' ),
+            Room(2, (25, 280, 205, 130),   'doctor_room',      'Edward II Bedroom (doctor)'),
+            Room(2, (25, 410, 205, 100),     'captain_room',     'George I Bedroom (captain)'),
+            Room(2, (25, 510, 205, 105),     'psychic_room',     'George III Bedroom (Psychic)'),
+            
+            Room(2, (717, 90, 178, 190),   'host_room',        'Henry IV Bedroom (Host)'),
+            Room(2, (717, 280, 178, 130),   'drunk_room',       'George IV Bedroom (drunk)'),
+            Room(2, (717, 410, 178, 100),   'broken_room',      'Richard III Bedroom (broken)'),
+            Room(2, (717, 510, 178, 105),   'nurse_room',       'Elizabeth I Bedroom (nurse)'),
+            
+            Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), # TODO Extra livery?
             # Ground Floor
-            Room(1, (0, 100, 200, 100),     'billiard_room',    'Billiard room'),
-            Room(1, (200, 100, 200, 100),   'library',          'Library'),
-            Room(1, (400, 100, 200, 100),   'tea_room',         'Tea room'),
-            Room(1, (600, 100, 200, 100),   'dining_room',      'Dining Room'),
-            Room(1, (0, 200, 200, 100),     'garden',           'Garden'),
-            Room(1, (200 , 200, 200, 100),     'servantTODO',          'Servant Stairs'),
-            # TODO where to put the footman extra livery?
+            Room(1, (25, 397, 230, 218),   'library',          'Library'),
+            Room(1, (25, 90, 230, 305),   'tea_room',         'Tea room'),
+            Room(1, (691, 90, 205, 204),     'billiard_room',    'Billiard room'),
+            Room(1, (691, 295, 205, 319),   'dining_room',      'Dining Room'),
+            Room(1, (360, 552, 203, 60),     'garden',           'Garden'),
+            Room(1, (256, 293, 435, 260),     'entrance_hall',           'Entrance Hall'),
+            Room(1, (256 , 90, 435, 105),     'servant_stairs_1',          'Servant Stairs'), # TODO Extra livery?
+            Room(1, (256 , 195, 435, 100),     'portrait_gallery',          'Portrait Gallery'),
             # Basement
-            Room(0, (0, 100, 200, 100),     'kitchen',          'Kitchen'),
-            Room(0, (200, 100, 200, 100),   'scullery',         'Scullery'),
-            Room(0, (400, 100, 200, 100),   'garage',           'Garage'),
-            # TODO add other servants only rooms? Food locker for instance? closed for suspens?
-            Room(0, (0, 200, 200, 100),     'gun_room',         'Gun room'), #TODO check in basement?
+            Room(0, (25, 205, 360, 407),     'kitchen',          'Kitchen'),
+            Room(0, (25, 90, 360, 118),   'scullery',         'Scullery'),
+            Room(0, (691, 90, 206, 525),   'garage',           'Garage'),
+            Room(0, (385, 333, 306, 280),     'gun_room',         'Gun room'), #TODO check in basement geniric?
         ]
         # TODO put in the ROOM class????? NOT if multiple info by room? Check at the end
+        y_map_info_offset = 60
+        x_map_info_offset = 10
         map_information = [
-            MapInfo('psychic_room', 'Amelia Baxter',    2, (0, 100, 200, 100)),
-            MapInfo('lad_room',     'Ted Harring',      2, (200, 100, 200, 100)),
-            MapInfo('broken_room',  'Thomas Moody',     2, (600, 100, 200, 100)),
-            MapInfo('host_room',    'Lady Claythorn',   2, (400, 100, 200, 100)),
-            MapInfo('captain_room', 'Sushil Sinha',     2, (0, 200, 200, 100)),
-            MapInfo('doctor_room',  'Daniel Baldwin',   2, (800, 100, 200, 100))
+            MapInfo('psychic_room', 'Amelia Baxter',    2, (25 + x_map_info_offset, 510 + y_map_info_offset, 205, 105)),
+            MapInfo('lad_room',     'Ted Harring',      2, (25 + x_map_info_offset, 90 + 100, 205, 190)),
+            MapInfo('broken_room',  'Thomas Moody',     2, (717 + x_map_info_offset, 410 + y_map_info_offset, 178, 100)),
+            MapInfo('host_room',    'Lady Claythorn',   2, (717 + x_map_info_offset, 90 + 100 , 178, 190)),
+            MapInfo('captain_room', 'Sushil Sinha',     2, (25 + x_map_info_offset, 410 + y_map_info_offset, 205, 100)),
+            MapInfo('doctor_room',  'Daniel Baldwin',   2, (25 + x_map_info_offset, 280 + y_map_info_offset, 205, 130)),
+            MapInfo('drunk_room',  'Samuel Manning',   2, (717 + x_map_info_offset, 280 + y_map_info_offset, 178, 130)),
+            MapInfo('nurse_room',  'Rosalind Marsh',   2, (717 + x_map_info_offset, 510 + y_map_info_offset, 178, 105)),
         ]
 
     call change_floor(1) # ground floor
@@ -106,8 +118,8 @@ screen manor_map:
         $ left_floor = selected_floor - 1
         $ right_floor = selected_floor + 1
         hbox:
-            yoffset 120
-            xoffset -175
+            yoffset 130
+            xoffset -120
             if selected_floor > MIN_FLOOR:
                 imagebutton:
                     mouse "hover"
@@ -125,8 +137,8 @@ screen manor_map:
             
             imagemap: 
                 xalign 0.5                       
-                idle "images/ui/map/map_bw_idle_[selected_floor].png"
-                hover "images/ui/map/map_bw_hover_[selected_floor].png"
+                idle "images/ui/map/map_idle_[selected_floor].png"
+                hover "images/ui/map/map_hover_[selected_floor].png"
                 use map_information
                 
             if selected_floor < MAX_FLOOR:
@@ -226,8 +238,8 @@ screen in_game_map_menu(timed_menu):
                 
                 imagemap: 
                     xalign 0.5                       
-                    idle "images/ui/map/map_bw_idle_[selected_floor].png"
-                    hover "images/ui/map/map_bw_hover_[selected_floor].png"
+                    idle "images/ui/map/map_idle_[selected_floor].png"
+                    hover "images/ui/map/map_hover_[selected_floor].png"
                     
                     for hot in hotspots:
                         hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
