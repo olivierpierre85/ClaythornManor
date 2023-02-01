@@ -64,15 +64,24 @@ label init_lad:
             # Objects
             CharacterInformation(1, "gun", "A empty handgun found in the gun room", type="object", image_file="gun"), 
             # Intuitions
-            CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", type="intuition", image_file="gun"), 
-            # Endings
-            CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed"), 
-            CharacterInformation(2, "poisoned", "You were poisoned", type="ending", image_file="poisoned"), 
-            CharacterInformation(3, "fell", "You fell on a picked fence", type="ending", image_file="poisoned"), 
+
         ]
         lad_important_choices = CharacterInformationList ([
             CharacterInformation(0, "hunt", "You decided to go hunting", type="choice", image_file="gun")
         ])
+
+        lad_endings = CharacterInformationList ([
+            CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed"), 
+            CharacterInformation(2, "poisoned", "You were poisoned", type="ending", image_file="poisoned"), 
+            CharacterInformation(3, "fell", "You fell on a picked fence", type="ending", image_file="poisoned"), 
+        ])
+
+        lad_intuitions = CharacterInformationList ([            
+                CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", type="intuition", image_file="gun"), 
+            ],
+            notification_text = "You have a new intuition",
+            notification_sound = "audio/sound_effects/writing_short.ogg"
+        )
 
         lad_details  = CharacterDetails(
             text_id = "lad", 
@@ -84,6 +93,8 @@ label init_lad:
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
             important_choices = lad_important_choices,
+            endings = lad_endings,
+            intuitions = lad_intuitions,
             saved_variables = copy.deepcopy(lad_init_variables), # copy so the init variables can be used again.
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)

@@ -51,7 +51,9 @@ label init_characters:
             description_short = "Middle-age man",
             description_long = "Serious Middle-age man with glasses.",
             information_list = doctor_extra_information,
-            important_choices = []
+            important_choices = [],
+            endings = [],
+            intuitions = []
         )
         doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
 
@@ -71,7 +73,9 @@ label init_characters:
             description_short = "Drunk Man",
             description_long = "Old man, looking 'exhausted'.",
             information_list = drunk_extra_information,
-            important_choices = []
+            important_choices = [],
+            endings = [],
+            intuitions = []
         )
         drunk = Character("drunk_details.get_name()", image="drunk", dynamic=True)
 
@@ -89,7 +93,9 @@ label init_characters:
             description_short = "Older Lady",
             description_long = "The lady of the mansion.",
             information_list = host_extra_information,
-            important_choices = []
+            important_choices = [],
+            endings = [],
+            intuitions = []
         )
         host = Character("host_details.get_name()", image="host", dynamic=True)
         
@@ -106,7 +112,9 @@ label init_characters:
             description_short = "Masked Man",
             description_long = "A man with a mask on his face.",
             information_list = broken_extra_information,
-            important_choices = []
+            important_choices = [],
+            endings = [],
+            intuitions = []
         )
         broken = Character("broken_details.get_name()", image="broken", dynamic=True)
 
@@ -127,7 +135,9 @@ label init_characters:
             description_short = "",
             description_long = "Middle-aged woman.",
             information_list = nurse_extra_information,
-            important_choices = []
+            important_choices = [],
+            endings = [],
+            intuitions = []
         )
         nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
 
@@ -192,8 +202,12 @@ init -100 python:
         def __init__(
             self, 
             information_list,
+            notification_text = None,
+            notification_sound = None
         ):
             self.information_list = information_list
+            self.notification_text = notification_text
+            self.notification_sound = notification_sound
 
         def __str__(self):
             return self.information_list
@@ -201,13 +215,22 @@ init -100 python:
         def get_list(self):
             return self.information_list
         
-        def unlock(self, text_id, notification=False):
+        def get_item(self, text_id ):
+            for info in self.information_list:
+                if text_id == info.text_id: 
+                    return info
+        
+        def unlock(self, text_id, notification=True):
             for info in self.information_list:
                 if text_id == info.text_id and info.locked:
                     info.locked = False
                     info.discovered = True
-                    # if notification:
-        
+                    if notification:
+                        if self.notification_text:
+                            renpy.notify(self.notification_text)
+                        if self.notification_sound:
+                            renpy.play(self.notification_sound, "sound")
+
         def is_unlocked(self, text_id):
             for info in self.information_list:
                 if text_id == info.text_id:
@@ -220,7 +243,6 @@ init -100 python:
                 if not info.locked:
                     unlocked.append(info.text_id)
             return unlocked
-
     
     class CharacterInformation:
         def __init__(
@@ -247,7 +269,9 @@ init -100 python:
             self, 
             text_id,
             information_list,
-            important_choices,            
+            important_choices,
+            endings,      
+            intuitions,  
             saved_variables = dict(),
             locked = True,
             know_real_name = True,
@@ -265,6 +289,8 @@ init -100 python:
             self.description_long = description_long
             self.information_list = information_list or []
             self.important_choices = important_choices or []
+            self.endings = endings or []
+            self.intuitions = intuitions or []
             self.saved_variables = saved_variables or dict()
             self.checkpoints = []
             
@@ -282,8 +308,6 @@ init -100 python:
 
             for important_choice in self.important_choices.information_list:
                 important_choice.locked = True
-
-
 
         # ---------------
         # KNOWLEDGE
@@ -382,31 +406,6 @@ init -100 python:
                 if not info.locked:
                     unlocked.append(info.text_id)
             return unlocked
-        
-        # ---------------
-        # Intuition
-        # ---------------
-        def get_intuitions(self):
-            intuition_list = []
-            for info in self.information_list:
-                if info.type == 'intuition':
-                    intuition_list.append(info)
-            return intuition_list
-
-        def unlock_intuition(self, text_id):
-            for info in self.get_intuitions():
-                if text_id == info.text_id and info.locked:
-                    # Unlock the info
-                    info.locked = False
-                    info.discovered = True
-                    renpy.notify("You have a new intuition")
-                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
-        
-        def is_intuition_unlocked(self, text_id):
-            for info in self.get_intuitions():
-                if text_id == info.text_id:                    
-                    return not info.locked
-            return False
 
         # ---------------
         # object
@@ -444,37 +443,6 @@ init -100 python:
 
 
         # ---------------
-        # ending
-        # ---------------
-        def get_endings(self):
-            ending_list = []
-            for info in self.information_list:
-                if info.type == 'ending':
-                    ending_list.append(info)
-            return ending_list
-        
-        def get_ending(self, ending_id):
-            ending_list = []
-            for info in self.information_list:
-                if info.type == 'ending' and info.text_id == ending_id:
-                    return info
-            return None
-
-        def unlock_ending(self, text_id):
-            for info in self.get_endings():
-                if text_id == info.text_id and info.locked:
-                    # Unlock the info
-                    info.locked = False
-        
-        def is_ending_unlocked(self, text_id):
-            for info in self.get_endings():
-                if text_id == info.text_id:
-                    return not info.locked
-            return False
-
-
-
-        # ---------------
         # Checkpoints
         # ---------------
         
@@ -506,6 +474,7 @@ init -100 python:
                     position = current_position + 1,
                     objects = [], 
                     observations = [],
+                    important_choices = [],
                     label_id = "",
                     saved_variables = [],
                     ending = ending

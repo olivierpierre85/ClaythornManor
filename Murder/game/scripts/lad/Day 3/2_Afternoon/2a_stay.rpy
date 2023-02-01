@@ -111,7 +111,7 @@ label lad_day3_stay:
     """
 
 
-    if lad_details.is_intuition_unlocked('psychic_poisons'):
+    if lad_details.intuitions.is_unlocked('psychic_poisons'):
 
         """
         I see her enter her room but as I was supposed to leave for mine, some weird feeling overwhelms me. 

@@ -171,7 +171,7 @@ screen progress:
                     hbox:
                         yoffset 10
                         spacing 25
-                        for item in lad_details.get_endings():
+                        for item in lad_details.endings.get_list():
                             imagebutton:
                                 if item.locked:
                                     idle "images/info_cards/question_mark_bw.png"
@@ -189,7 +189,7 @@ screen progress:
                     hbox:
                         yoffset 10
                         spacing 25
-                        for item in lad_details.get_intuitions():
+                        for item in current_character.intuitions.get_list():
                             imagebutton:
                                 if item.locked:
                                     idle "images/info_cards/question_mark_bw.png"

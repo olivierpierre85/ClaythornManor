@@ -61,8 +61,8 @@ label survived_generic:
 
 label lad_ending_day1_poisoned:
 
-    $ lad_details.unlock_ending('poisoned')
-    $ lad_details.add_ending_checkpoint(ending = lad_details.get_ending('poisoned'))
+    $ lad_details.endings.unlock('poisoned')
+    $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('poisoned'))
     
     call death_screen_transition
 
@@ -127,7 +127,7 @@ label lad_ending_day3_poisoned:
     Never trust anyone.
     """
 
-    $ lad_details.unlock_intuition('psychic_poisons')
+    $ lad_details.intuitions.unlock('psychic_poisons')
 
     jump ending_generic
 
