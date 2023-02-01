@@ -18,17 +18,15 @@
 # --------------------------------------------
 label lad_day2_no_hunt:
 
-    # TODO, not a lot to do except knocking on doors?
-    # LATER ADD access to SOME PEOPLE ROOMS
-    # AND other places
-    # unlock more dialogs with MAID
-    # Add puzzles or locked doors?
+    call change_time(11,00, 'Hunt', 'Saturday')
+
+    $ current_character.add_checkpoint("lad_day2_no_hunt") 
     
     call black_screen_transition("Ted Harring", "The Hunt")
 
     $ change_room('lad_room')
 
-    call change_time(11,00, 'Hunt', 'Saturday')
+    
 
     $ play_music('upbeat')
 

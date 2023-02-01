@@ -70,6 +70,9 @@ label init_lad:
             CharacterInformation(2, "poisoned", "You were poisoned", type="ending", image_file="poisoned"), 
             CharacterInformation(3, "fell", "You fell on a picked fence", type="ending", image_file="poisoned"), 
         ]
+        lad_important_choices = CharacterInformationList ([
+            CharacterInformation(0, "hunt", "You decided to go hunting", type="choice", image_file="gun")
+        ])
 
         lad_details  = CharacterDetails(
             text_id = "lad", 
@@ -80,6 +83,7 @@ label init_lad:
             description_short = "Young man",
             description_long = "Good Looking lad, in his early twenties.",
             information_list = lad_extra_information,
+            important_choices = lad_important_choices,
             saved_variables = copy.deepcopy(lad_init_variables), # copy so the init variables can be used again.
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)

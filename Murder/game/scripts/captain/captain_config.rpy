@@ -17,6 +17,7 @@ label init_captain:
             CharacterInformation(20, "age",     "54 years old."),
             CharacterInformation(30, "mansion", "He knows a a lot about victorian mansions and their renovations."),
         ]
+        captain_important_choices = []
         captain_details  = CharacterDetails(
             text_id = "captain", 
             locked = True,
@@ -26,6 +27,7 @@ label init_captain:
             description_short = "Older Indian man",
             description_long = "Older man from India.",
             information_list = captain_extra_information,
+            important_choices = captain_important_choices,
             saved_variables = copy.deepcopy(captain_init_variables),
         )
         captain = Character("captain_details.get_name()", image="captain", dynamic=True)

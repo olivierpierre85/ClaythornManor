@@ -30,12 +30,8 @@ label init_characters:
     define maid_name    = "Young woman"
     define maid         = Character(maid_name, image="maid")
 
-    #  image side butler = "images/characters/butler_framed_02.png"
-
     python:
-        # 1. The Lad IN OWN FILE
-        
-        # 2. The Psychic
+        # 1. The Lad, The Psychic CAPTAIN IN OWN FILE
 
         # 3. The Doctor
         doctor_extra_information = [
@@ -54,7 +50,8 @@ label init_characters:
             nickname = "The Doctor",
             description_short = "Middle-age man",
             description_long = "Serious Middle-age man with glasses.",
-            information_list = doctor_extra_information
+            information_list = doctor_extra_information,
+            important_choices = []
         )
         doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
 
@@ -73,7 +70,8 @@ label init_characters:
             nickname = "The Drunk",
             description_short = "Drunk Man",
             description_long = "Old man, looking 'exhausted'.",
-            information_list = drunk_extra_information
+            information_list = drunk_extra_information,
+            important_choices = []
         )
         drunk = Character("drunk_details.get_name()", image="drunk", dynamic=True)
 
@@ -90,7 +88,8 @@ label init_characters:
             nickname = "The Host",
             description_short = "Older Lady",
             description_long = "The lady of the mansion.",
-            information_list = host_extra_information
+            information_list = host_extra_information,
+            important_choices = []
         )
         host = Character("host_details.get_name()", image="host", dynamic=True)
         
@@ -106,7 +105,8 @@ label init_characters:
             nickname = "The Broken Face",
             description_short = "Masked Man",
             description_long = "A man with a mask on his face.",
-            information_list = broken_extra_information
+            information_list = broken_extra_information,
+            important_choices = []
         )
         broken = Character("broken_details.get_name()", image="broken", dynamic=True)
 
@@ -126,7 +126,8 @@ label init_characters:
             nickname = "The Nurse",
             description_short = "",
             description_long = "Middle-aged woman.",
-            information_list = nurse_extra_information
+            information_list = nurse_extra_information,
+            important_choices = []
         )
         nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
 
@@ -144,6 +145,26 @@ label init_characters:
     $ current_storyline = lad_details # TODO move
 
     return
+
+# LABELS
+label character_selection:
+    scene black_background
+    narrator "Select Your Character"
+
+    python:
+        selected_choice = renpy.call_screen('character_selection') 
+
+        current_position = 0
+
+        current_character = eval(selected_choice + "_details")
+        current_run = current_character.get_max_run() + 1 # TODO why? wtf?
+        current_storyline = current_character
+
+        current_checkpoint = current_character.get_init_checkpoint()
+
+    show screen in_game_menu_btn
+    
+    jump start_again
 
 init -100 python:
     def get_char(text_id):
@@ -166,12 +187,67 @@ init -100 python:
         else:
             return False
 
-# Python Classes
+    # Python Classes
+    class CharacterInformationList:
+        def __init__(
+            self, 
+            information_list,
+        ):
+            self.information_list = information_list
+
+        def __str__(self):
+            return self.information_list
+
+        def get_list(self):
+            return self.information_list
+        
+        def unlock(self, text_id, notification=False):
+            for info in self.information_list:
+                if text_id == info.text_id and info.locked:
+                    info.locked = False
+                    info.discovered = True
+                    # if notification:
+        
+        def is_unlocked(self, text_id):
+            for info in self.information_list:
+                if text_id == info.text_id:
+                    return not info.locked
+            return False
+
+        def get_unlocked(self):
+            unlocked = []
+            for info in self.information_list:
+                if not info.locked:
+                    unlocked.append(info.text_id)
+            return unlocked
+
+    
+    class CharacterInformation:
+        def __init__(
+            self, 
+            order,
+            text_id,             
+            content, 
+            locked = True,
+            is_important = False,
+            type = 'knowledge',
+            image_file = None
+        ):
+            self.order = order
+            self.text_id = text_id
+            self.content = content
+            self.locked = locked
+            self.is_important = is_important
+            self.type = type
+            self.image_file = image_file
+            self.discovered = False
+
     class CharacterDetails():
         def __init__(
             self, 
             text_id,
-            information_list,            
+            information_list,
+            important_choices,            
             saved_variables = dict(),
             locked = True,
             know_real_name = True,
@@ -188,6 +264,7 @@ init -100 python:
             self.description_short = description_short
             self.description_long = description_long
             self.information_list = information_list or []
+            self.important_choices = important_choices or []
             self.saved_variables = saved_variables or dict()
             self.checkpoints = []
             
@@ -202,6 +279,11 @@ init -100 python:
             for info in self.information_list:
                 if info.type in ['observation', 'object']:
                     info.locked = True
+
+            for important_choice in self.important_choices.information_list:
+                important_choice.locked = True
+
+
 
         # ---------------
         # KNOWLEDGE
@@ -358,7 +440,9 @@ init -100 python:
                 if not info.locked:
                     objects_unlocked.append(info.text_id)
             return objects_unlocked
-            
+
+
+
         # ---------------
         # ending
         # ---------------
@@ -388,135 +472,12 @@ init -100 python:
                     return not info.locked
             return False
 
+
+
         # ---------------
         # Checkpoints
         # ---------------
-        def test_checkpoint(self):
-            global current_position
-            i_test = 1
-            for i_label in [
-                    'lad_day1_afternoon',
-                    'lad_day1_evening',
-                    'lad_day2_morning',
-                    'lad_day2_afternoon',
-                    'lad_day2_evening',
-                    'lad_day3_morning',
-                    'lad_day3_afternoon',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 1,
-                        position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-                current_position += 1
-            # #Add ending for fun
-            self.checkpoints.append( Checkpoint(
-                    run = 1,
-                    position = 8,
-                    objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                    label_id = i_label,
-                    saved_variables = copy.deepcopy(current_character.saved_variables),
-                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
-                )
-            )
-
-
-            i_test = 7
-            for i_label in [
-                    'lad_day3_afternoon',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 2,
-                        position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-
-            i_test = 2
-            for i_label in [
-                    'lad_day1_evening',
-                    'lad_day2_morning',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 3,
-                        position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-            self.checkpoints.append( Checkpoint(
-                    run = 3,
-                    position = 4,
-                    objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                    label_id = i_label,
-                    saved_variables = copy.deepcopy(current_character.saved_variables),
-                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
-                )
-            )
-
-            i_test = 3
-            for i_label in [
-                    'lad_day2_morning',
-                    'lad_day2_afternoon',
-                    'lad_day2_evening',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 4,
-                        position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-            i_test = 2
-            for i_label in [
-                    'lad_day2_afternoon',
-                    'lad_day2_evening',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 5,
-                        position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-            
-            i_test = 1
-            for i_label in [
-                    'lad_day2_morning',
-                    'lad_day2_afternoon'
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 6,
-                        position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-            return
-
+        
         def add_checkpoint(self, label_id = ""):
             global current_position, current_run, has_been_restarted
 
@@ -527,6 +488,7 @@ init -100 python:
                     position = current_position,
                     objects = copy.deepcopy(self.get_all_objects_unlocked()), 
                     observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                    important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = label_id,
                     saved_variables = copy.deepcopy(current_character.saved_variables)
                 )
@@ -554,9 +516,9 @@ init -100 python:
                 current_position = current_position + 1
 
         # DEBUG FUNCTION
-        def print_checkpoints(self):
-            for checkpoint in self.checkpoints:
-                print(checkpoint)
+        # def print_checkpoints(self):
+        #     for checkpoint in self.checkpoints:
+        #         print(checkpoint)
 
         def has_checkpoint(self, run, position):
             for checkpoint in self.checkpoints:
@@ -567,9 +529,13 @@ init -100 python:
         def get_checkpoint_filler(self, run, position):
             # TODO put in constants somewhere
             image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
+            image_checkpoint_empty_small = "images/ui/progress/rectangle_small_empty.png"
             image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
             image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
             image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
+
+            if position == 8:
+                return image_checkpoint_empty_small
 
             # IF next position is a checkpoint
             if self.has_checkpoint(run, position+1):
@@ -600,7 +566,6 @@ init -100 python:
                     return checkpoint.run
             return -1
 
-
         def has_checkpoint_in_column(self, run, position):
             for checkpoint in self.checkpoints:
                 if checkpoint.run > run and checkpoint.position == position:
@@ -620,6 +585,7 @@ init -100 python:
                         position = 0,
                         objects = [],
                         observations = [],
+                        important_choices = [],
                         label_id = current_storyline.text_id + "_introduction",
                         saved_variables = eval(current_storyline.text_id + "_init_variables")
                     )
@@ -635,177 +601,146 @@ init -100 python:
         def __str__(self):
             return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
 
-    class CharacterInformation:
-        def __init__(
-            self, 
-            order,
-            text_id,             
-            content, 
-            locked = True,
-            is_important = False,
-            type = 'knowledge',
-            image_file = None
-        ):
-            self.order = order
-            self.text_id = text_id
-            self.content = content
-            self.locked = locked
-            self.is_important = is_important
-            self.type = type
-            self.image_file = image_file
-            self.discovered = False
+        # FOR TEST
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+        def test_checkpoint(self):
+            global current_position
+            i_test = 1
+            for i_label in [
+                    'lad_day1_afternoon',
+                    'lad_day1_evening',
+                    'lad_day2_morning',
+                    'lad_day2_afternoon',
+                    'lad_day2_evening',
+                    'lad_day3_morning',
+                    'lad_day3_afternoon',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 1,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
+                current_position += 1
+            # #Add ending for fun
+            self.checkpoints.append( Checkpoint(
+                    run = 1,
+                    position = 8,
+                    objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                    important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                    label_id = i_label,
+                    saved_variables = copy.deepcopy(current_character.saved_variables),
+                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
+                )
+            )
 
-# LABELS
-label character_selection:
-    scene black_background
-    narrator "Select Your Character"
 
-    python:
-        selected_choice = renpy.call_screen('character_selection') 
+            i_test = 7
+            for i_label in [
+                    'lad_day3_afternoon',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 2,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
 
-        current_position = 0
+            i_test = 2
+            for i_label in [
+                    'lad_day1_evening',
+                    'lad_day2_morning',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 3,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
+            self.checkpoints.append( Checkpoint(
+                    run = 3,
+                    position = 4,
+                    objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                    important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                    label_id = i_label,
+                    saved_variables = copy.deepcopy(current_character.saved_variables),
+                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
+                )
+            )
 
-        current_character = eval(selected_choice + "_details")
-        current_run = current_character.get_max_run() + 1 # TODO why? wtf?
-        current_storyline = current_character
+            i_test = 3
+            for i_label in [
+                    'lad_day2_morning',
+                    'lad_day2_afternoon',
+                    'lad_day2_evening',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 4,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
+            i_test = 2
+            for i_label in [
+                    'lad_day2_afternoon',
+                    'lad_day2_evening',
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 5,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
+            
+            i_test = 1
+            for i_label in [
+                    'lad_day2_morning',
+                    'lad_day2_afternoon'
+                ]:
+                self.checkpoints.append( Checkpoint(
+                        run = 6,
+                        position = i_test,
+                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
+                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                        label_id = i_label,
+                        saved_variables = copy.deepcopy(current_character.saved_variables)
+                    )
+                )
+                i_test += 1
+            return
 
-        current_checkpoint = current_character.get_init_checkpoint()
 
-    show screen in_game_menu_btn
-    
-    jump start_again
 
-# SCREENS
-screen characters:
-    tag menu
-    use game_menu(_("Characters")):
-        fixed:
-            xalign 0.5
-            yoffset 120
-            xoffset -100
-
-            use character_list
-
-screen character_selection:
-    modal True
-    zorder 200
-
-    # Copy of the confirm style (TODO change later properly to a map style)
-    style_prefix "confirm"
-    
-    frame:
-        xalign .5
-        yalign .5
-        margin (310,110,310,150)
-        label "Select your Character":
-            yoffset -50
-            style "confirm_prompt" # TODO specific styling TODO space after label .... why so complicated.....
-            xalign 0.5
-        use character_list(True)
-
-screen character_list(is_selection = False):
-    #Two hbox of 4 characters
-    $ char_x_offset = 0
-    $ char_y_offset = 0
-
-    for char_sub_list in char_list:
-        hbox:
-            yoffset char_y_offset
-            for char in char_sub_list:
-                vbox:
-                    xoffset char_x_offset
-                    textbutton char.real_name:
-                        if is_selection:
-                            if char.is_character_unlocked():
-                                action Return(char.text_id)
-                        else:
-                            action ShowMenu("character_details", char)
-                    imagebutton:
-                        mouse "hover"
-                        if char.is_character_unlocked():
-                            idle "images/characters/side/side " + char.text_id + ".png"
-                            hover "images/characters/side_hover/side " + char.text_id + " hover.png"
-                        else:
-                            idle "images/characters/side_bw/side " + char.text_id + " bw.png"
-                            if not is_selection:
-                                hover "images/characters/side_bw_hover/side " + char.text_id + " bw hover.png"
-
-                        if is_selection:
-                            if char.is_character_unlocked():
-                                action Return(char.text_id)   
-                        else:
-                            action ShowMenu("character_details", char)
-                
-                $ char_x_offset += 50
-
-        $ char_x_offset = 0
-
-        if is_selection:
-            $ char_y_offset += 340
-        else:
-            $ char_y_offset += 340
-
-screen character_details(selected_char):
-    # $ selected_char = get_char(char_id)
-    tag menu #????
-    use game_menu(_("Characters"), scroll="viewport"):
-
-        #style_prefix "characters" #???
-
-        hbox:
-            vbox:
-                text selected_char.real_name:
-                    size 48
-                    font gui.name_text_font
-                    line_leading 10
-                    line_spacing 10
-                    color gui.accent_color
-                    # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
-                
-                if selected_char.is_character_unlocked():
-                    add "images/characters/side/side " + selected_char.text_id +".png"
-                    text "Unlocked":
-                        size 36
-                        xalign 0.5
-                else:
-                    add "images/characters/side_bw/side " + selected_char.text_id +" bw.png"
-                    text "Locked":
-                        # yoffset -25 inside
-                        size 36
-                        xalign 0.5
-                    bar:
-                        value selected_char.get_character_progress() 
-                        range 100
-                        xmaximum 260
-                        style 'progress_bar'
-
-                
-            vbox:
-                xoffset 40 
-                textbutton _("Return"): 
-                    xalign 1.0 
-                    yalign 0.0
-                    xpos 1000
-                    action ShowMenu("characters") 
-                
-                # hbox:                    
-                #     yalign 0.5
-                #     text "Name:  ":
-                #         color gui.accent_color
-                #     text selected_char.real_name 
-
-                text "Description: " color gui.accent_color
-                text selected_char.description_long
-                
-                for info in selected_char.information_list:
-                    if not info.locked:
-                        text info.content
-        
-                # textbutton _("Return"): 
-                #     xalign 1.0 
-                #     yalign 0.0
-                #     xpos 1000
-                #     action ShowMenu("characters") 
-        
-        # TODO show bottom right
 

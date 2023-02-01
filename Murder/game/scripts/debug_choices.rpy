@@ -29,8 +29,8 @@ label debug_choices:
         # "lad_day1_evening":
         #     jump lad_day1_evening
 
-        # "lad_day2_morning":
-        #     jump lad_day2_morning
+        "lad_day2_morning":
+            jump lad_day2_morning
             
         # "lad_day2_hunt":
         #     jump lad_day2_hunt
@@ -79,6 +79,8 @@ label debug_choices:
             
             $ lad_details.reset_information()
             $ lad_details.unlock_object('gun')
+
+            $ lad_details.important_choices.unlock('hunt')
 
             jump lad_day3_afternoon
 

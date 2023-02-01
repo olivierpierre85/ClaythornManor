@@ -36,6 +36,7 @@ label init_psychic:
             CharacterInformation(5, "drive", "Doesn't have a driving license."),
             CharacterInformation(6, "racist", "She believes only white people come from England.")
         ]
+        psychic_important_choices = []
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
             locked = True,
@@ -45,6 +46,7 @@ label init_psychic:
             description_short = "Middle-age Woman",
             description_long = "Middle-aged woman, looking a bit eccentric.",
             information_list = psychic_extra_information,
+            important_choices = psychic_important_choices,
             saved_variables = psychic_init_variables
         )
         psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)

@@ -86,9 +86,9 @@ screen progress:
                                 xminimum checkpoint_x
                                 text "" font gui.name_text_font
                                 text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
-                            vbox:
-                                xminimum checkpoint_x/2
-                                text "" font gui.name_text_font
+                            # vbox:
+                            #     xminimum checkpoint_x_small
+                            #     text "" font gui.name_text_font
 
                         $ image_checkpoint = "images/ui/progress/rectangle_progress.png"
                         $ image_checkpoint_right = "images/ui/progress/rectangle_progress_right.png"                       
@@ -227,42 +227,20 @@ screen progress:
                     grid 5 2:
                         spacing 13
                         $ grid_fill = 10
-                        for item in lad_details.get_objects():
+                        for item in ( lad_details.important_choices.get_list() +
+                                        lad_details.get_objects() + 
+                                            lad_details.get_observations()
+                                            ):
                             $ grid_fill -= 1
                             if current_checkpoint:
-                                use info_card(item,"{image=images/ui/objects_icon.png} ", not item.text_id in current_checkpoint.objects )
+                                use info_card(item)
                             else:
-                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
+                                use info_card(item)
                         
                         if grid_fill > 0 :
                             for i_fill in range(grid_fill):
                                 # TODO empty image
-                                use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
-
-                    # IN TWO ROW
-                    # hbox:
-                    #     spacing 25
-                    #     # if current_checkpoint:
-                    #     #     for item in current_checkpoint.objects: 
-                    #     #         use info_card(item,"{image=images/ui/objects_icon.png} " )    
-                    #     # else:
-                    #     for item in lad_details.get_objects():
-                    #         if current_checkpoint:
-                    #             use info_card(item,"{image=images/ui/objects_icon.png} ", not item.text_id in current_checkpoint.objects )
-                    #         else:
-                    #             use info_card(item,"{image=images/ui/objects_icon.png} ", item.locked )
-                    # hbox:
-                    #     spacing 25
-                    #     for item in lad_details.get_observations():                            
-                    #         if current_checkpoint:
-                    #             use info_card(item,"{image=images/ui/observation_icon.png} ", not item.text_id in current_checkpoint.observations )
-                    #         else:
-                    #             use info_card(item,"{image=images/ui/observation_icon.png} ", item.locked )
-
-                    # hbox:
-                    #     spacing 25
-                    #     for item in lad_details.get_intuitions():
-                    #         use info_card(item, "{image=images/ui/intuition_icon.png} ")
+                                use info_card(item)
 
                 if current_checkpoint:                    
                     imagebutton:
@@ -289,7 +267,25 @@ screen progress:
                 text tooltip
                 # textbutton "Cancel" action SetVariable("action_needed_fix", False )
 
-screen info_card(item, icon_file, locked = True):  
+screen info_card(item):  
+    python:
+        if item.type == 'object':
+            icon_file = "{image=images/ui/objects_icon.png} "
+        elif item.type == 'observation':
+            icon_file = "{image=images/ui/observation_icon.png} "
+        else:
+            icon_file = "(choice?) "
+        
+        if current_checkpoint:
+            if item.type == 'object':
+                locked = (not item.text_id in current_checkpoint.objects)
+            elif item.type == 'observation':
+                locked = (not item.text_id in current_checkpoint.observations)
+            else:
+                locked = (not item.text_id in current_checkpoint.important_choices)
+        else:
+            locked = item.locked
+
     imagebutton:                        
         mouse "hover"
         action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
@@ -341,6 +337,7 @@ init -100 python:
             position,
             objects,
             observations,
+            important_choices,
             label_id,
             saved_variables,
             ending = None
@@ -349,6 +346,7 @@ init -100 python:
             self.position = position
             self.objects = objects or []
             self.observations = observations or []
+            self.important_choices = important_choices or []
             self.created = datetime.now()
             self.label_id = label_id
             self.saved_variables = saved_variables

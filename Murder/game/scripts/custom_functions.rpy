@@ -183,6 +183,9 @@ label start_again():
 
         for item in current_checkpoint.observations:
             current_character.unlock_observation(item, False)
+        
+        for item in current_checkpoint.important_choices:
+            current_character.important_choices.unlock(item, False)
 
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 
