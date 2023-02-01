@@ -171,7 +171,7 @@ screen progress:
                     hbox:
                         yoffset 10
                         spacing 25
-                        for item in lad_details.endings.get_list():
+                        for item in current_storyline.endings.get_list():
                             imagebutton:
                                 if item.locked:
                                     idle "images/info_cards/question_mark_bw.png"
@@ -189,7 +189,7 @@ screen progress:
                     hbox:
                         yoffset 10
                         spacing 25
-                        for item in current_character.intuitions.get_list():
+                        for item in current_storyline.intuitions.get_list():
                             imagebutton:
                                 if item.locked:
                                     idle "images/info_cards/question_mark_bw.png"
@@ -227,9 +227,9 @@ screen progress:
                     grid 5 2:
                         spacing 13
                         $ grid_fill = 10
-                        for item in ( lad_details.important_choices.get_list() +
-                                        lad_details.get_objects() + 
-                                            lad_details.get_observations()
+                        for item in ( current_storyline.important_choices.get_list() +
+                                        current_storyline.objects.get_list() + 
+                                            current_storyline.observations.get_list()
                                             ):
                             $ grid_fill -= 1
                             if current_checkpoint:

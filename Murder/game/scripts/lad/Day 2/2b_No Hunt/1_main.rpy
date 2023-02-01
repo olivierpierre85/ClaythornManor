@@ -115,7 +115,7 @@ label lad_day2_broken_room:
     That's all I could notice in the room.
     """
 
-    $  lad_details.unlock_observation('green_liquid') # TODO link to billiard room option to not drink the whisky?
+    $  lad_details.observations.unlock('green_liquid') # TODO link to billiard room option to not drink the whisky?
 
     pause 1.0
     # TODO add sound for CLUE???

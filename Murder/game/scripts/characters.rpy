@@ -51,9 +51,11 @@ label init_characters:
             description_short = "Middle-age man",
             description_long = "Serious Middle-age man with glasses.",
             information_list = doctor_extra_information,
-            important_choices = [],
-            endings = [],
-            intuitions = []
+            important_choices = CharacterInformationList([]),
+            endings = CharacterInformationList([]),
+            intuitions = CharacterInformationList([]),
+            observations = CharacterInformationList([]),
+            objects = CharacterInformationList([]),
         )
         doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
 
@@ -73,9 +75,11 @@ label init_characters:
             description_short = "Drunk Man",
             description_long = "Old man, looking 'exhausted'.",
             information_list = drunk_extra_information,
-            important_choices = [],
-            endings = [],
-            intuitions = []
+            important_choices = CharacterInformationList([]),
+            endings = CharacterInformationList([]),
+            intuitions = CharacterInformationList([]),
+            observations = CharacterInformationList([]),
+            objects = CharacterInformationList([]),
         )
         drunk = Character("drunk_details.get_name()", image="drunk", dynamic=True)
 
@@ -93,9 +97,11 @@ label init_characters:
             description_short = "Older Lady",
             description_long = "The lady of the mansion.",
             information_list = host_extra_information,
-            important_choices = [],
-            endings = [],
-            intuitions = []
+            important_choices = CharacterInformationList([]),
+            endings = CharacterInformationList([]),
+            intuitions = CharacterInformationList([]),
+            observations = CharacterInformationList([]),
+            objects = CharacterInformationList([]),
         )
         host = Character("host_details.get_name()", image="host", dynamic=True)
         
@@ -112,9 +118,11 @@ label init_characters:
             description_short = "Masked Man",
             description_long = "A man with a mask on his face.",
             information_list = broken_extra_information,
-            important_choices = [],
-            endings = [],
-            intuitions = []
+            important_choices = CharacterInformationList([]),
+            endings = CharacterInformationList([]),
+            intuitions = CharacterInformationList([]),
+            observations = CharacterInformationList([]),
+            objects = CharacterInformationList([]),
         )
         broken = Character("broken_details.get_name()", image="broken", dynamic=True)
 
@@ -135,9 +143,11 @@ label init_characters:
             description_short = "",
             description_long = "Middle-aged woman.",
             information_list = nurse_extra_information,
-            important_choices = [],
-            endings = [],
-            intuitions = []
+            important_choices = CharacterInformationList([]),
+            endings = CharacterInformationList([]),
+            intuitions = CharacterInformationList([]),
+            observations = CharacterInformationList([]),
+            objects = CharacterInformationList([]),
         )
         nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
 
@@ -243,7 +253,7 @@ init -100 python:
                 if not info.locked:
                     unlocked.append(info.text_id)
             return unlocked
-    
+
     class CharacterInformation:
         def __init__(
             self, 
@@ -271,7 +281,9 @@ init -100 python:
             information_list,
             important_choices,
             endings,      
-            intuitions,  
+            intuitions,
+            objects,
+            observations,  
             saved_variables = dict(),
             locked = True,
             know_real_name = True,
@@ -291,6 +303,8 @@ init -100 python:
             self.important_choices = important_choices or []
             self.endings = endings or []
             self.intuitions = intuitions or []
+            self.objects = objects or []
+            self.observations = observations or [] 
             self.saved_variables = saved_variables or dict()
             self.checkpoints = []
             
@@ -375,74 +389,6 @@ init -100 python:
             return True
 
         # ---------------
-        # Observation
-        # ---------------
-        def get_observations(self):
-            observation_list = []
-            for info in self.information_list:
-                if info.type == 'observation':
-                    observation_list.append(info)
-            return observation_list
-
-        def unlock_observation(self, text_id, show_notification = True):
-            for info in self.get_observations():
-                if text_id == info.text_id and info.locked:
-                    # Unlock the info
-                    info.locked = False
-                    info.discovered = True
-                    if show_notification:
-                        renpy.notify("You have made a new observation")
-                        renpy.play("audio/sound_effects/writing_short.ogg", "sound")
-        
-        def is_observation_unlocked(self, text_id):
-            for info in self.get_observations():
-                if text_id == info.text_id:
-                    return not info.locked
-            return False
-
-        def get_all_observations_unlocked(self):
-            unlocked = []
-            for info in self.get_observations():
-                if not info.locked:
-                    unlocked.append(info.text_id)
-            return unlocked
-
-        # ---------------
-        # object
-        # ---------------
-        def get_objects(self):
-            object_list = []
-            for info in self.information_list:
-                if info.type == 'object':
-                    object_list.append(info)
-            return object_list
-
-        def unlock_object(self, text_id, show_notification = True):
-            for info in self.get_objects():
-                if text_id == info.text_id and info.locked:
-                    # Unlock the info
-                    info.locked = False
-                    info.discovered = True
-                    if show_notification:
-                        renpy.notify("You have found a new object")
-                        renpy.play("audio/sound_effects/writing_short.ogg", "sound")
-        
-        def is_object_unlocked(self, text_id):
-            for info in self.get_objects():
-                if text_id == info.text_id:
-                    return not info.locked
-            return False
-
-        def get_all_objects_unlocked(self):
-            objects_unlocked = []
-            for info in self.get_objects():
-                if not info.locked:
-                    objects_unlocked.append(info.text_id)
-            return objects_unlocked
-
-
-
-        # ---------------
         # Checkpoints
         # ---------------
         
@@ -454,8 +400,8 @@ init -100 python:
                 new_checkpoint = Checkpoint(
                     run = current_run,
                     position = current_position,
-                    objects = copy.deepcopy(self.get_all_objects_unlocked()), 
-                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                    objects = copy.deepcopy(self.objects.get_unlocked()), 
+                    observations = copy.deepcopy(self.observations.get_unlocked()),
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = label_id,
                     saved_variables = copy.deepcopy(current_character.saved_variables)
@@ -591,8 +537,8 @@ init -100 python:
                 self.checkpoints.append( Checkpoint(
                         run = 1,
                         position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        objects = copy.deepcopy(self.objects.get_unlocked()),
+                        observations = copy.deepcopy(self.observations.get_unlocked()),
                         important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                         label_id = i_label,
                         saved_variables = copy.deepcopy(current_character.saved_variables)
@@ -604,8 +550,8 @@ init -100 python:
             self.checkpoints.append( Checkpoint(
                     run = 1,
                     position = 8,
-                    objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                    objects = copy.deepcopy(self.objects.get_unlocked()),
+                    observations = copy.deepcopy(self.observations.get_unlocked()),
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = i_label,
                     saved_variables = copy.deepcopy(current_character.saved_variables),
@@ -621,8 +567,8 @@ init -100 python:
                 self.checkpoints.append( Checkpoint(
                         run = 2,
                         position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        objects = copy.deepcopy(self.objects.get_unlocked()),
+                        observations = copy.deepcopy(self.observations.get_unlocked()),
                         important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                         label_id = i_label,
                         saved_variables = copy.deepcopy(current_character.saved_variables)
@@ -638,8 +584,8 @@ init -100 python:
                 self.checkpoints.append( Checkpoint(
                         run = 3,
                         position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        objects = copy.deepcopy(self.objects.get_unlocked()),
+                        observations = copy.deepcopy(self.observations.get_unlocked()),
                         important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                         label_id = i_label,
                         saved_variables = copy.deepcopy(current_character.saved_variables)
@@ -649,8 +595,8 @@ init -100 python:
             self.checkpoints.append( Checkpoint(
                     run = 3,
                     position = 4,
-                    objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                    observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                    objects = copy.deepcopy(self.objects.get_unlocked()),
+                    observations = copy.deepcopy(self.observations.get_unlocked()),
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = i_label,
                     saved_variables = copy.deepcopy(current_character.saved_variables),
@@ -667,8 +613,8 @@ init -100 python:
                 self.checkpoints.append( Checkpoint(
                         run = 4,
                         position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        objects = copy.deepcopy(self.objects.get_unlocked()),
+                        observations = copy.deepcopy(self.observations.get_unlocked()),
                         important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                         label_id = i_label,
                         saved_variables = copy.deepcopy(current_character.saved_variables)
@@ -683,8 +629,8 @@ init -100 python:
                 self.checkpoints.append( Checkpoint(
                         run = 5,
                         position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        objects = copy.deepcopy(self.objects.get_unlocked()),
+                        observations = copy.deepcopy(self.observations.get_unlocked()),
                         important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                         label_id = i_label,
                         saved_variables = copy.deepcopy(current_character.saved_variables)
@@ -700,8 +646,8 @@ init -100 python:
                 self.checkpoints.append( Checkpoint(
                         run = 6,
                         position = i_test,
-                        objects = copy.deepcopy(self.get_all_objects_unlocked()),
-                        observations = copy.deepcopy(self.get_all_observations_unlocked()),
+                        objects = copy.deepcopy(self.objects.get_unlocked()),
+                        observations = copy.deepcopy(self.observations.get_unlocked()),
                         important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                         label_id = i_label,
                         saved_variables = copy.deepcopy(current_character.saved_variables)

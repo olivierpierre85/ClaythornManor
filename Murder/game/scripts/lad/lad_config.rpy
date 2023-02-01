@@ -58,13 +58,7 @@ label init_lad:
             CharacterInformation(40, "poor_drinker", "Can't hold his liqueur."),
             CharacterInformation(50, "drive", "He never learned how to drive."),
             CharacterInformation(60, "cook", "He is not much of a cook."),
-            CharacterInformation(70, "poor", "It's rather obvious he is not from the upper class, to say the least."),
-            # Observations
-            CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", type="observation", image_file="poison"), 
-            # Objects
-            CharacterInformation(1, "gun", "A empty handgun found in the gun room", type="object", image_file="gun"), 
-            # Intuitions
-
+            CharacterInformation(70, "poor", "It's rather obvious he is not from the upper class, to say the least.")
         ]
         lad_important_choices = CharacterInformationList ([
             CharacterInformation(0, "hunt", "You decided to go hunting", type="choice", image_file="gun")
@@ -77,9 +71,23 @@ label init_lad:
         ])
 
         lad_intuitions = CharacterInformationList ([            
-                CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", type="intuition", image_file="gun"), 
+                CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", type="intuition", image_file="gun")
             ],
             notification_text = "You have a new intuition",
+            notification_sound = "audio/sound_effects/writing_short.ogg"
+        )
+
+        lad_observations = CharacterInformationList ([    
+                CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", type="observation", image_file="poison") 
+            ],
+            notification_text = "You have made a new observation",
+            notification_sound = "audio/sound_effects/writing_short.ogg"
+        )  
+
+        lad_objects = CharacterInformationList ([  
+                CharacterInformation(1, "gun", "A empty handgun found in the gun room", type="object", image_file="gun")
+            ], 
+            notification_text = "You have found a new object",
             notification_sound = "audio/sound_effects/writing_short.ogg"
         )
 
@@ -95,6 +103,8 @@ label init_lad:
             important_choices = lad_important_choices,
             endings = lad_endings,
             intuitions = lad_intuitions,
+            observations = lad_observations,
+            objects = lad_objects,
             saved_variables = copy.deepcopy(lad_init_variables), # copy so the init variables can be used again.
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)

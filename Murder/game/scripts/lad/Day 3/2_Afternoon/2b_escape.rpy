@@ -150,7 +150,7 @@ label lad_day3_escape:
 
     scene forest_road
 
-    if lad_details.is_object_unlocked('gun') :
+    if lad_details.objects.is_unlocked('gun') :
 
         """
         We have walked for about a hour when he stops.

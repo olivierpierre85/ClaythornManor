@@ -179,10 +179,10 @@ label start_again():
 
         # re run objects and observations from checkpoint
         for item in current_checkpoint.objects:
-            current_character.unlock_object(item, False)
+            current_character.objects.unlock(item, False)
 
         for item in current_checkpoint.observations:
-            current_character.unlock_observation(item, False)
+            current_character.observations.unlock(item, False)
         
         for item in current_checkpoint.important_choices:
             current_character.important_choices.unlock(item, False)

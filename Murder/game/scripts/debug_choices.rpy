@@ -45,9 +45,9 @@ label debug_choices:
         #     jump lad_day2_afternoon_bedroom
             
         "lad_day2_evening WITH unlocked":
-            #$ lad_details.unlock_object('gun')
+            #$ lad_details.objects.unlock('gun')
             $ lad_details.intuitions.unlock('psychic_poisons')
-            $ lad_details.unlock_observation('green_liquid')
+            $ lad_details.observations.unlock('green_liquid')
             $ doctor_details.unlock_knowledge('addict')
 
             $ lad_details.saved_variables["day2_saw_accident"] = True
@@ -67,18 +67,18 @@ label debug_choices:
         
         "lad_day3_afternoon":
             # call unlock_psychic 
-            $ lad_details.unlock_observation('green_liquid')
+            $ lad_details.observations.unlock('green_liquid')
             $ lad_details.saved_variables['library_visited'] = True
             $ lad_details.test_checkpoint()
 
             $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
-            $ lad_details.unlock_object('gun')
+            $ lad_details.objects.unlock('gun')
             $ first_death = False
-            # $ lad_details.intuitions.unlock('psychic_poisons')
+            $ lad_details.intuitions.unlock('psychic_poisons')
             $ lad_details.endings.unlock('gunned_down')
             
             $ lad_details.reset_information()
-            $ lad_details.unlock_object('gun')
+            $ lad_details.objects.unlock('gun')
 
             $ lad_details.important_choices.unlock('hunt')
 
