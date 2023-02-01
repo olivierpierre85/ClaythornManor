@@ -202,10 +202,12 @@ screen progress:
                         ysize 65
                         yoffset 20
                         hbox:    
-                                                        
-                            text current_checkpoint.get_format_created()        
-                            # text current_checkpoint.debug_string() # + " " str(current_checkpoint.position) + " "
-                            text " Checkpoint"
+                            if current_checkpoint.position == 0:
+                                text "Start"
+                            else:                            
+                                text current_checkpoint.get_format_created()        
+                                # text current_checkpoint.debug_string() # + " " str(current_checkpoint.position) + " "
+                                text " Checkpoint"
                             imagebutton: 
                                 xoffset 10
                                 yalign 0.5
@@ -239,8 +241,7 @@ screen progress:
                         
                         if grid_fill > 0 :
                             for i_fill in range(grid_fill):
-                                # TODO empty image
-                                use info_card(item)
+                                use info_card()#TODO empty image (empty Checkpoint emptu...)
 
                 if current_checkpoint:                    
                     imagebutton:
@@ -267,29 +268,32 @@ screen progress:
                 text tooltip
                 # textbutton "Cancel" action SetVariable("action_needed_fix", False )
 
-screen info_card(item):  
+screen info_card(item=None):  
     python:
-        if item.type == 'object':
-            icon_file = "{image=images/ui/objects_icon.png} "
-        elif item.type == 'observation':
-            icon_file = "{image=images/ui/observation_icon.png} "
-        else:
-            icon_file = "(choice?) "
-        
-        if current_checkpoint:
+        if item:
             if item.type == 'object':
-                locked = (not item.text_id in current_checkpoint.objects)
+                icon_file = "{image=images/ui/objects_icon.png} "
             elif item.type == 'observation':
-                locked = (not item.text_id in current_checkpoint.observations)
+                icon_file = "{image=images/ui/observation_icon.png} "
             else:
-                locked = (not item.text_id in current_checkpoint.important_choices)
-        else:
-            locked = item.locked
+                icon_file = "(choice?) "
+            
+            if current_checkpoint:
+                if item.type == 'object':
+                    locked = (not item.text_id in current_checkpoint.objects)
+                elif item.type == 'observation':
+                    locked = (not item.text_id in current_checkpoint.observations)
+                else:
+                    locked = (not item.text_id in current_checkpoint.important_choices)
+            else:
+                locked = item.locked
 
     imagebutton:                        
         mouse "hover"
         action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-        if not item.discovered:
+        if not item:
+            idle "images/info_cards/empty.png"   
+        elif not item.discovered:
             idle "images/info_cards/question_mark_bw.png"   
             tooltip "Hidden"
         elif not locked: 
