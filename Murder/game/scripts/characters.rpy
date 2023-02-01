@@ -65,6 +65,7 @@ label init_characters:
             CharacterInformation(1, "status", ""),
             CharacterInformation(2, "age", "?"),
             CharacterInformation(3, "addict", "Likes to drink a bit too much.", is_important = True),
+            CharacterInformation(60, "???", "???", is_important = True),
         ]
         drunk_details  = CharacterDetails(
             text_id = "drunk", 
@@ -87,6 +88,7 @@ label init_characters:
         host_extra_information = [
             CharacterInformation(0, "todo", "todo", is_important = True), 
             CharacterInformation(1, "down_to_earth", "She's not looking down on \"lower\" class people.", is_important = True), 
+            CharacterInformation(60, "???", "???", is_important = True),
         ]
         host_details  = CharacterDetails(
             text_id = "host", 
@@ -107,7 +109,8 @@ label init_characters:
         
         # 6. The Broken Face
         broken_extra_information = [
-            CharacterInformation(0, "mask", "A broken face or 'Gueule Cassée'. He wears mask that hides most of hist face because of an injury during the war.")            
+            CharacterInformation(0, "mask", "A broken face or 'Gueule Cassée'. He wears mask that hides most of hist face because of an injury during the war."),
+            CharacterInformation(60, "???", "???", is_important = True),       
         ]
         broken_details  = CharacterDetails(
             text_id = "broken", 
@@ -133,6 +136,7 @@ label init_characters:
             CharacterInformation(1, "job", "A nurse.", is_important = True), 
             CharacterInformation(2, "clothes", "Discreet but well dressed.", is_important = True),
             CharacterInformation(0, "todo", "todo", is_important = True),
+            CharacterInformation(60, "???", "???", is_important = True),
         ]
         nurse_details  = CharacterDetails(
             text_id = "nurse", 

@@ -27,8 +27,8 @@ screen progress:
                             else:                                
                                 idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_progress
                                 hover "images/characters/side/side " + char.text_id + ".png"
-                            
-                            action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
+                            if char.is_character_unlocked():
+                                action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
                 
                 viewport:
                     yinitial 0.0
