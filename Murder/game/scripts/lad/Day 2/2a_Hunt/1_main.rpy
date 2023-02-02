@@ -138,7 +138,7 @@ label lad_day2_hunt:
     """
     Still, I'd better stay away from him.
 
-    The butler then addresses the whole group.
+    The butler then addresses everyone.
     """
 
     butler """

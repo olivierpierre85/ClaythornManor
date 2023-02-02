@@ -15,6 +15,14 @@ style letter_style:
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos - 10
 
+style tutorial_style:
+    properties gui.text_properties("dialogue")
+    color gui.idle_small_color
+    font gui.name_text_font
+    xpos gui.dialogue_xpos
+    xsize gui.dialogue_width
+    ypos gui.dialogue_ypos - 10
+
 style progress_bar:
     left_bar Frame("gui/bar/progress_bar_left.png", gui.bar_borders)
     right_bar Frame("gui/bar/progress_bar_right.png", gui.bar_borders)
@@ -24,6 +32,8 @@ label init_characters:
     define narrator = Character(None, what_style="narrator_style")
 
     # Non Playable Characters
+    define tutorial      = Character("Tutorial", what_style="tutorial_style")
+
     define letter       = Character("Letter", what_style="letter_style")
     define butler       = Character("Butler", image="butler")
     define footman      = Character("Footman", image="footman")
@@ -352,11 +362,12 @@ init -100 python:
                         renpy.pause(2)
                         renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
                         renpy.notify("You have unlock a new Character : The " + self.text_id)
-            # TODO if first time, add a call to an explanation NOT WORKING, MUST BE PUT INSIDE A LABEL???
-            # global seen_tutorial_unlock_knowledge
-            # if not seen_tutorial_unlock_knowledge:
-            #     seen_tutorial_unlock_knowledge = True
-            #     renpy.call('tutorial_unlock_knowledge')
+            
+            # TODO if first time, add a call to an explanation
+            global seen_tutorial_knowledge
+            if not seen_tutorial_knowledge:
+                seen_tutorial_knowledge = True
+                renpy.call('tutorial_unlock_knowledge')
         
         def is_knowledge_unlocked(self, text_id):
             for info in self.get_knowledge():

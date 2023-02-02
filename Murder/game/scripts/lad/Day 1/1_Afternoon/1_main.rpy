@@ -171,8 +171,6 @@ label lad_introduction:
     Now I've heard a lot of people can't afford them anymore.
 
     They are sold, turned into hotels, or even abandoned. Left there to rot.
-
-    While I can barely afford to pay rent for my miserable place.
     
     What a shame.
 

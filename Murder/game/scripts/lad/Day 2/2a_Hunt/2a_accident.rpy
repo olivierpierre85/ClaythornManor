@@ -123,7 +123,7 @@ label lad_day2_hunt_accident:
     """
 
     footman """
-    Sir, sir are you okay...
+    Sir, sir are you okay?
     """
 
     """

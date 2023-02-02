@@ -13,7 +13,7 @@
 #
 #   Notes : 
 #       - Convince captain
-#       - Map 90 minutes
+#       - Map 120 minutes
 # --------------------------------------------
 label lad_day2_evening:
 
@@ -105,11 +105,11 @@ label lad_day2_evening:
 
     call change_time(21,00)
 
-    $ time_left = 90
+    $ time_left = 120
 
     call run_menu(lad_details.saved_variables["map_menu"])
 
-    call change_time(22,30)
+    call change_time(23,00)
 
     $ stop_music()
 

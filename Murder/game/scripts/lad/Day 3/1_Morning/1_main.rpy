@@ -70,6 +70,8 @@ label lad_day3_morning:
         Amelia Baxter enters, visibly nervous.
         """
 
+        $ play_music('mysterious', 2)
+
         psychic """
         I believe I was right yesterday.
 
@@ -129,6 +131,8 @@ label lad_day3_morning:
         lad """
         Miss Baxter, is everything alright?
         """
+
+        $ play_music('mysterious', 2)
 
         psychic """
         I don't know.
@@ -198,7 +202,6 @@ label lad_day3_morning:
 
         $ time_left = 90
 
-    $ play_music('mysterious', 2)
 
     call run_menu(lad_details.saved_variables["map_menu"])
 

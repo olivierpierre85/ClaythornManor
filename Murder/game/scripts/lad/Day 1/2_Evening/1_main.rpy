@@ -57,7 +57,9 @@ label lad_day1_evening:
     I am sitting between Amelia Baxter, and Daniel Baldwin.
     """
 
-    $ time_left = 60
+    call change_time(19,00)
+
+    $ time_left = 120
 
     $ current_menu = TimedMenu([
         TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'), # SHould they be keep_alive?
@@ -65,6 +67,8 @@ label lad_day1_evening:
     ], image_left = "doctor", image_right = "psychic")
 
     call run_menu(current_menu)
+
+    call change_time(21,00)
 
     $ stop_music
 
@@ -78,7 +82,7 @@ label lad_day1_evening:
     I ask the footman to show me the way.
     """
 
-    call change_time(21,00)
+    
 
     $ change_room('hallway')
 
@@ -161,11 +165,11 @@ label lad_day1_evening:
         """
         I rush to my room.
 
-        Find the toilet and puke all the Port I have been drinking.
+        I go straight to the toilet and puke all the Port I have been drinking.
 
-        Great. If I didn't look stupid enough before that will do it.
+        Great. If I didn't look stupid enough before, that will do it.
 
-        I go to bed before I do anything stupid.
+        I should go to bed before I do anything more embarrassing.
 
         And I fall asleep almost instantly.
         """
@@ -225,7 +229,7 @@ label lad_day1_evening_dinner_psychic:
     """
 
     psychic """
-    Oh Mister Harring. I am glad we can continue our conversation.
+    Oh hello Mister Harring.
     """
 
     call psychic_generic

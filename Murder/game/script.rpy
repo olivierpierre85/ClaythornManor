@@ -62,7 +62,7 @@ label init_technical_variables:
         TIME_LOW = 5
 
         current_room = "outside"
-        seen_tutorial_unlock_knowledge = False
+        seen_tutorial_knowledge = False
 
         current_run = 1 # TODO move
         current_position = 0 # TODO move
