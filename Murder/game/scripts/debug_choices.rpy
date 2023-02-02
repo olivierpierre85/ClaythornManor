@@ -5,8 +5,6 @@ label debug_choices:
 
     # show screen current_time
     show screen in_game_menu_btn
-
-    
     
     menu: 
         "character selection":

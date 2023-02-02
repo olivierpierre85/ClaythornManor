@@ -31,6 +31,12 @@ label lad_day3_morning_nurse_room:
     $ change_room("nurse_room")
 
     psychic """
+    I believe it's Miss Marsh's Room.
+    """
+
+    $ unlock_map("nurse_room")
+
+    psychic """
     She is not here.
 
     And the room is neatly ordered.
