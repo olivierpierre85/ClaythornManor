@@ -39,7 +39,7 @@ label psychic_day2_morning:
 
     I grab a plate a the breakfast buffet, then sat down at the same place at the table than yesterday.
 
-    Captain Sinha is already there but I don't feel like talking with him.
+    Captain Sinha is there but I don't feel like talking with him.
 
     It is too soon for that.
 
