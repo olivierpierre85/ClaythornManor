@@ -102,7 +102,7 @@ label lad_generic_background_psychic:
     lad """
     There isn't much to say about me.
 
-    I was born and raise in London.
+    I was born and raise in Birmingham.
     
     And I am working there as a business associate.
     """
@@ -207,7 +207,11 @@ label lad_generic_heroic_act_psychic:
     I think they just wanted to sell papers. So they exaggerated what I had done.
 
     And they also omitted the worst part.
+    """
 
+    pause 1.0 
+
+    """
     The baby wasn't alone in the house of course.
 
     Why would he have been.
@@ -225,7 +229,7 @@ label lad_generic_heroic_act_psychic:
     They said they was nothing I could have done, but I am not sure.
     """
 
-    $ change_room('tea_room')
+    $ change_room('tea_room') # TODO PREVIOUS ROOM !!!!!!
 
     psychic """
     Don't say that. I am certain it was too late for her.

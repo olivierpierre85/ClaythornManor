@@ -108,10 +108,10 @@ label psychic_day1_evening_billiard_room_bar:
     No problem. I'll pour one for myself as well.
     """
 
-    psychic """
+    """
     He is slightly shaking while pouring the drinks.
 
-    Is he also a bit drunk?
+    Could he also be a bit drunk?
     """
 
     # TODO ADD fun question for a drunk lad.

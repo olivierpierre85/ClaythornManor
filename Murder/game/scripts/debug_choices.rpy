@@ -103,7 +103,7 @@ label debug_choices:
             $ psychic_details.saved_variables["knows_captain_real_origin"] = True
             call unlock_psychic
             $ current_character = psychic_details
-            jump psychic_day1_dinner
+            jump psychic_day1_evening
 
         "psychic_day1_evening":
             $ psychic_details.saved_variables["knows_captain_real_origin"] = True
