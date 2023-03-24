@@ -248,6 +248,7 @@ screen in_game_map_menu(timed_menu):
                             else:
                                 action None
                             tooltip hot.description
+                            mouse "hover"
 
                     use map_information
                     
