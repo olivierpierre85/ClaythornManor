@@ -127,7 +127,7 @@ init python:
         global current_music, previous_music
         
         previous_music = current_music
-        current_music = "none"
+        current_music = 'NONE'
 
         renpy.music.stop(fadeout=fadeout_length)
 

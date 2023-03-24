@@ -50,7 +50,7 @@ label init_characters:
             CharacterInformation(1, "status", "Not wealthy.", is_important = True),
             CharacterInformation(2, "age", "He is 39 years old."),
             CharacterInformation(3, "addict", "An opium addict.", is_important = True),
-            CharacterInformation(3, "lie", "He stays to run an hospital because he has an easy access to drugs.", is_important = True)
+            CharacterInformation(3, "fraud", "He Uses patients for an easy access to drugs.", is_important = True)
         ]
         doctor_details  = CharacterDetails(
             text_id = "doctor", 
