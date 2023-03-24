@@ -127,7 +127,7 @@ label lad_day2_believe_psychic:
     What do you think of that?
     """
 
-    $ play_music("previous")
+    $ play_music("PREVIOUS")
 
     lad """
     It sounds like a good plan.

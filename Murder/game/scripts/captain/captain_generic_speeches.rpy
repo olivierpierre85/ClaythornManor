@@ -112,7 +112,7 @@ label captain_billiard_room_speech_part_2:
 
     scene billiard_room with fade
 
-    $ play_music('previous')
+    $ play_music('PREVIOUS')
 
     $ captain_details.unlock_knowledge('talker') 
 

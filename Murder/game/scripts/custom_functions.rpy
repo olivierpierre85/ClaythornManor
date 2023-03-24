@@ -61,27 +61,15 @@ label breakpoint:
 
     return
 
-# label change_room(new_room, fadeout = None):
-#     python:
-#         renpy.scene()
-#         renpy.show(new_room)
-#         if fadeout:
-#             renpy.with_statement(fadeout)
-
-#         current_room = new_room
-#         print(new_room)
-#         for room in rooms:
-#             print(room.name)
-#             if new_room == room.id:
-#                 current_floor = room.floor
-#                 selected_floor = room.floor
-
-#     return
-
 # Smart music changes
 init python:
     def change_room(new_room, transition = None):
-        global current_floor, selected_floor, current_room
+        global current_floor, selected_floor, current_room, previous_room
+
+        if new_room == 'PREVIOUS':
+            new_room = previous_room
+        else:
+            previous_room = new_room
 
         renpy.scene()
         renpy.show(new_room)
@@ -104,7 +92,7 @@ init python:
         if current_music == music_style:
             return 
         
-        if music_style == 'previous':
+        if music_style == 'PREVIOUS':
             current_music = previous_music
             current_start_song = previous_start_song
         else:

@@ -3,6 +3,11 @@ label debug_choices:
 
     $ skip_clock_movement = True
 
+    # $ seen_tutorial_knowledge = True
+    # $ seen_tutorial_map = True
+    # $ seen_tutorial_unlock_character = True
+    # $ seen_tutorial_timeline = True
+
     # show screen current_time
     show screen in_game_menu_btn
     

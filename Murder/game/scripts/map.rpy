@@ -78,12 +78,16 @@ label init_map:
 init python:
     
     def unlock_map(room):
+        global seen_tutorial_map
         for info in map_information:
             if info.id == room and not info.active:
                 info.active = True
                 renpy.notify("You have written new information on the map.")
                 renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
+        if not seen_tutorial_map:
+            seen_tutorial_map = True
+            renpy.call('tutorial_map')
         return
 
     def is_unlock_map(room):

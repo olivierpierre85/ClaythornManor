@@ -184,7 +184,7 @@ label psychic_generic_heroic_act:
 
     $ lad_details.unlock_knowledge('age') 
 
-    $ play_music('previous')
+    $ play_music('PREVIOUS')
     
     return
 

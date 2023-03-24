@@ -26,6 +26,11 @@ label ending_generic:
 
         $ first_death = False
 
+    python:
+        if not seen_tutorial_timeline:
+            seen_tutorial_timeline = True
+            renpy.call('tutorial_map')
+
     hide screen centered_text
 
     jump character_selection

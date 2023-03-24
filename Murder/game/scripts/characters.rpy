@@ -348,6 +348,7 @@ init -100 python:
             return knowledge_list
 
         def unlock_knowledge(self, text_id):
+            global seen_tutorial_knowledge, seen_tutorial_unlock_character
             for info in self.get_knowledge():
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
@@ -362,12 +363,13 @@ init -100 python:
                         renpy.pause(2)
                         renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
                         renpy.notify("You have unlock a new Character : The " + self.text_id)
+                        if not seen_tutorial_unlock_character:
+                            seen_tutorial_unlock_character = True
+                            renpy.call('tutorial_unlock_character')
             
-            # TODO if first time, add a call to an explanation
-            global seen_tutorial_knowledge
             if not seen_tutorial_knowledge:
                 seen_tutorial_knowledge = True
-                renpy.call('tutorial_unlock_knowledge')
+                renpy.call('tutorial_knowledge')
         
         def is_knowledge_unlocked(self, text_id):
             for info in self.get_knowledge():

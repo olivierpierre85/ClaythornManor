@@ -121,7 +121,7 @@ label lad_day2_broken_room:
     # TODO add sound for CLUE???
     # TODO FIRST REAL INVESTIGATiON CLUE? ADD INTUITION when come back to 
 
-    $ play_music('previous')
+    $ play_music('PREVIOUS')
 
     return
 

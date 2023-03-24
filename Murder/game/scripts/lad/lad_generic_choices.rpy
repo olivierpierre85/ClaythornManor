@@ -229,7 +229,7 @@ label lad_generic_heroic_act_psychic:
     They said they was nothing I could have done, but I am not sure.
     """
 
-    $ change_room('tea_room') # TODO PREVIOUS ROOM !!!!!!
+    $ change_room('PREVIOUS') # TODO PREVIOUS ROOM !!!!!!
 
     psychic """
     Don't say that. I am certain it was too late for her.
@@ -255,7 +255,7 @@ label lad_generic_heroic_act_psychic:
     I don't know what to say here.
     """
 
-    $ play_music('previous')
+    $ play_music('PREVIOUS')
 
     return
 
