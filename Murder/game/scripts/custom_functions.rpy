@@ -101,23 +101,25 @@ init python:
             current_music = music_style
             current_start_song = start_song
 
-        track_lists = dict()
-        track_lists['upbeat'] = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3', 'audio/music/upbeat_04.mp3']
-        track_lists['chill'] = ['audio/music/chill_01.mp3', 'audio/music/chill_02.mp3', 'audio/music/chill_03.mp3']
-        track_lists['sad'] = ['audio/music/sad_01.mp3', 'audio/music/sad_02.mp3', 'audio/music/sad_03.mp3']
-        track_lists['mysterious'] = ['audio/music/mysterious_01.mp3', 'audio/music/mysterious_02.mp3', 'audio/music/mysterious_03.mp3']
-        track_lists['scary'] = ['audio/music/scary_01.mp3']
-        track_lists['boxer'] = ['audio/music/boxer_01.mp3']
-        track_lists['danger'] = ['audio/music/danger_01.mp3']
-            
-        if current_start_song == 1:
-            track_list_ordered = track_lists[current_music]
-        elif current_start_song == 2:
-            track_list_ordered = track_lists[current_music][1:3] + [track_lists[current_music][0]]
-        else:
-            track_list_ordered = [track_lists[current_music][2]] + track_lists[current_music][0:2]
+        if current_music != 'NONE':
 
-        renpy.music.play(track_list_ordered, loop=loop_val, fadein=fadein_val, fadeout=fadeout_val)
+            track_lists = dict()
+            track_lists['upbeat'] = ['audio/music/upbeat_01.mp3', 'audio/music/upbeat_02.mp3', 'audio/music/upbeat_04.mp3']
+            track_lists['chill'] = ['audio/music/chill_01.mp3', 'audio/music/chill_02.mp3', 'audio/music/chill_03.mp3']
+            track_lists['sad'] = ['audio/music/sad_01.mp3', 'audio/music/sad_02.mp3', 'audio/music/sad_03.mp3']
+            track_lists['mysterious'] = ['audio/music/mysterious_01.mp3', 'audio/music/mysterious_02.mp3', 'audio/music/mysterious_03.mp3']
+            track_lists['scary'] = ['audio/music/scary_01.mp3']
+            track_lists['boxer'] = ['audio/music/boxer_01.mp3']
+            track_lists['danger'] = ['audio/music/danger_01.mp3']
+                
+            if current_start_song == 1:
+                track_list_ordered = track_lists[current_music]
+            elif current_start_song == 2:
+                track_list_ordered = track_lists[current_music][1:3] + [track_lists[current_music][0]]
+            else:
+                track_list_ordered = [track_lists[current_music][2]] + track_lists[current_music][0:2]
+
+            renpy.music.play(track_list_ordered, loop=loop_val, fadein=fadein_val, fadeout=fadeout_val)
 
         return
     

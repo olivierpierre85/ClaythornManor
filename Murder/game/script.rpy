@@ -7,7 +7,7 @@ init -1000 python:
     import copy
 
     renpy.music.register_channel("clock", "sfx", loop=False)
-    current_music = 'none'
+    current_music = 'NONE'
     current_start_song = 1
 
 # TODO move to init var? Sort it out
