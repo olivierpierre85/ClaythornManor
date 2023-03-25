@@ -121,6 +121,8 @@ label bedroom_default:
     
     "I knock on the door."
 
+    play sound door_knock
+
     "Nobody answers."
 
     return

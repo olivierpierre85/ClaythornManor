@@ -24,9 +24,7 @@ label lad_day2_no_hunt:
     
     call black_screen_transition("Ted Harring", "The Hunt")
 
-    $ change_room('lad_room')
-
-    
+    $ change_room('lad_room')    
 
     $ play_music('upbeat')
 

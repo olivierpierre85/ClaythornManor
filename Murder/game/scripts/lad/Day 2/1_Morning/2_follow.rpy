@@ -41,11 +41,9 @@ label lad_day2_breakfast_follow:
     $ play_music('scary')
 
     host surprised """
-
     Dead?!!!
 
     How could that be?
-
     """
 
     doctor """
@@ -107,7 +105,7 @@ label lad_day2_breakfast_follow:
     """
 
     doctor """
-    I am not saying that either.
+    Probably, but I can't say for certain.
     
     I can't really rule out anything at this point.
 

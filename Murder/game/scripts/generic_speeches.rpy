@@ -119,7 +119,11 @@ label day2_breakfast_host_death_doctor:
     """
 
     doctor """
-    I can't say anything definitive for now. We need to call the town to ask for an ambulance.
+    I can't say anything definitive for now. 
+
+    But it's very likely a natural death. Maybe triggered by an old wound from the war.
+    
+    In any case, we need to call the town to ask for an ambulance.
     """
 
     # TODO quid lines? broken? or the host pretends everything is fine so everyone stays here?

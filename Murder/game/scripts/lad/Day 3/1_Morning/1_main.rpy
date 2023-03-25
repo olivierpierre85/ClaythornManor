@@ -3,7 +3,7 @@
 #           
 #   Sunday - Morning
 # 
-#   8:00 / 9:30 -> 12:00
+#   7:30 / 9:30 -> 12:00
 #
 #   Music: mysterious
 #
@@ -24,7 +24,7 @@ label lad_day3_morning:
     $ change_room('lad_room', irisout)
 
     if lad_details.saved_variables["day2_believe_psychic"]:
-        call change_time(8,00, "Morning", "Sunday", hide_minutes = True)
+        call change_time(7,30, "Morning", "Sunday", hide_minutes = True)
         # You talked to and believed psychic
         # So she came to wake you at dawn
     else:
@@ -196,11 +196,16 @@ label lad_day3_morning:
     
     if lad_details.saved_variables["day2_believe_psychic"]:
 
-        $ time_left = 150
+        $ time_left = 135
+
+        call change_time(8,45)
 
     else:
 
-        $ time_left = 90
+        $ time_left = 45
+
+        call change_time(10,15)
+
 
 
     call run_menu(lad_details.saved_variables["map_menu"])

@@ -7,6 +7,8 @@ label lad_day2_afternoon_bedroom:
     """
     So I retreated to my room to get clean clothes.
 
+    I also took the opportunity to have a bath.
+
     As I was preparing to go downstairs again, someone knocks on my door.
     """
 
