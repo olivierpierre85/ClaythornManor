@@ -109,3 +109,7 @@ screen in_game_menu_btn:
         yoffset 30
         ypadding 10
         textbutton _("Menu") action ShowMenu("manor_map")
+
+# simple empty
+label generic_cancel:
+    return

@@ -27,7 +27,7 @@ label init_map:
             # Attic
             Room(3, (165, 90, 270, 523),   'storage',         'Storage Room' ),
             
-            Room(3, (512, 204, 242, 127),   'males_room',      'Male Servants Room' ),
+            Room(3, (512, 204, 242, 127),   'males_room',      'Male Servants Room' ), # TODO Extra livery?
             Room(3, (512, 332, 242, 129),   'females_room',     'Female Servants Room' ),
             Room(3, (512, 460, 242, 155),   'butler_room',      'Butler\'s Room' ),
             # Bedrooms
@@ -41,7 +41,7 @@ label init_map:
             Room(2, (717, 410, 178, 100),   'broken_room',      'Richard III Bedroom (broken)'),
             Room(2, (717, 510, 178, 105),   'nurse_room',       'Elizabeth I Bedroom (nurse)'),
             
-            Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), # TODO Extra livery?
+            # Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), 
             # Ground Floor
             Room(1, (25, 397, 230, 218),   'library',          'Library'),
             Room(1, (25, 90, 230, 305),   'tea_room',         'Tea room'),
@@ -49,7 +49,7 @@ label init_map:
             Room(1, (691, 295, 205, 319),   'dining_room',      'Dining Room'),
             Room(1, (360, 552, 203, 60),     'garden',           'Garden'),
             Room(1, (256, 293, 435, 260),     'entrance_hall',           'Entrance Hall'),
-            Room(1, (256 , 90, 435, 105),     'servant_stairs_1',          'Servant Stairs'), # TODO Extra livery?
+            # Room(1, (256 , 90, 435, 105),     'servant_stairs_1',          'Servant Stairs'),
             Room(1, (256 , 195, 435, 100),     'portrait_gallery',          'Portrait Gallery'),
             # Basement
             Room(0, (25, 205, 360, 407),     'kitchen',          'Kitchen'),
