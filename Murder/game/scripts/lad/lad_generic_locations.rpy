@@ -35,20 +35,23 @@ label lad_library_visited:
 
 label attic_default:
 
-    scene attic_hallway
+    $ change_room("attic_hallway")
 
-    # TODO only if first time
-    """
-    I took the stairs to the attic.
+    if not lad_details.saved_variables['attic_visited']:
+        
+        """
+        I took the stairs to the attic.
 
-    I am not sure I can't be there.
-    """
+        I am not sure I can't be there.
+        """
+
+        $ lad_details.saved_variables["attic_visited"] = True
 
     return
 
 label downstairs_default:
 
-    scene basement_stairs
+    $ change_room("basement_stairs")
 
     """
     I was on my way to the basement, when someone stops me.
@@ -154,7 +157,7 @@ label billiard_room_default:
 
 label bedroom_default:
     
-    scene hallway
+    $ change_room("bedrooms_hallway")
     
     "I knock on the door."
 

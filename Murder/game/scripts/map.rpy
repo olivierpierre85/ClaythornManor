@@ -25,12 +25,15 @@ label init_map:
         # Full Map of the MANOR TODO no need to init each time
         rooms = [
             # Attic
+            Room(3, None,   'attic_hallway',         'Attic Hallway' ), # No area points so not a real destination
             Room(3, (165, 90, 270, 523),   'storage',         'Storage Room' ),
             
             Room(3, (512, 204, 242, 127),   'males_room',      'Male Servants Room' ), # TODO Extra livery?
             Room(3, (512, 332, 242, 129),   'females_room',     'Female Servants Room' ),
             Room(3, (512, 460, 242, 155),   'butler_room',      'Butler\'s Room' ),
             # Bedrooms
+            Room(2, None,   'bedrooms_hallway',         'Bedrooms Hallway' ), # No area points so not a real destination
+
             Room(2, (25, 90, 205, 190),   'lad_room',         'William the Conqueror Bedroom (Lad)' ),
             Room(2, (25, 280, 205, 130),   'doctor_room',      'Edward II Bedroom (doctor)'),
             Room(2, (25, 410, 205, 100),     'captain_room',     'George I Bedroom (captain)'),
@@ -43,6 +46,8 @@ label init_map:
             
             # Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), 
             # Ground Floor
+            Room(1, None,     'basement_stairs',          'Basement Stairs'),
+
             Room(1, (25, 397, 230, 218),   'library',          'Library'),
             Room(1, (25, 90, 230, 305),   'tea_room',         'Tea room'),
             Room(1, (691, 90, 205, 204),     'billiard_room',    'Billiard room'),
@@ -246,13 +251,14 @@ screen in_game_map_menu(timed_menu):
                     hover "images/ui/map/map_hover_[selected_floor].png"
                     
                     for hot in hotspots:
-                        hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
-                            if hot.active:
-                                action Return(hot.room)
-                            else:
-                                action None
-                            tooltip hot.description
-                            mouse "hover"
+                        if hot.area_points:
+                            hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
+                                if hot.active:
+                                    action Return(hot.room)
+                                else:
+                                    action None
+                                tooltip hot.description
+                                mouse "hover"
 
                     use map_information
                     

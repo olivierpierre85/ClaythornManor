@@ -21,6 +21,7 @@ label init_lad:
             "knows_doctor_addict": False,
 
             "library_visited" : False,
+            "attic_visited" : False,
             "has_met_maid" : False,
             "psychic_generic_other_guests_saturday_morning_ask" : False,
 
