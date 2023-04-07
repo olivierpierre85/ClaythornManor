@@ -251,6 +251,4 @@ label lad_day1_evening_billiard_room_cancel:
     
     "You don't feel like staying in this room and leave"
 
-    $ change_room("bedrooms_hallway")
-
     return
