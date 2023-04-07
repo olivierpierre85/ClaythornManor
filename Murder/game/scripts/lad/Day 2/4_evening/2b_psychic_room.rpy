@@ -1,6 +1,6 @@
 label lad_day2_evening_psychic_room:
     
-    scene hallway
+    $ change_room("bedrooms_hallway")
     
     lad """
     Miss Baxter?
@@ -181,6 +181,6 @@ label lad_day2_believe_dont_believe_psychic:
     I have no choice but to leave.
     """
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     return

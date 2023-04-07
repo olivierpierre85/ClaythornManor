@@ -313,7 +313,7 @@ label psychic_introduction:
     Of course, please follow me upstairs.
     """
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     butler """
     Here we are Miss.

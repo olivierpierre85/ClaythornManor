@@ -10,7 +10,7 @@ label lad_day3_morning_lad_room:
 
 label lad_day3_morning_nurse_room:
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
     
     """ 
     I knock on the door.
@@ -71,7 +71,7 @@ label lad_day3_morning_nurse_room:
 
 label lad_day3_morning_captain_room:
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     play sound door_knock
 
@@ -170,7 +170,7 @@ label lad_day3_morning_captain_room:
 
 label lad_day3_morning_host_room:
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     play sound door_knock
 
@@ -238,7 +238,7 @@ label lad_day3_morning_host_room:
 
 label lad_day3_morning_drunk_room:
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     # # TODO without captain, not possible,
     # if not lad_details.saved_variables["day3_morning_captain_found"]:

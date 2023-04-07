@@ -26,8 +26,9 @@ label debug_choices:
         # "lad_day1_afternoon":
         #     jump lad_day1_afternoon
 
-        # "lad_day2_dinner":
-        #     jump lad_day1_afternoon_dinner
+        "lad_day1_evening MAP":
+            $ test_choices = [0,9,1,12]
+            jump lad_day1_evening
         
         # "lad_day1_evening":
         #     jump lad_day1_evening
@@ -130,7 +131,7 @@ label unlock_psychic:
 
 label debug_routes:
     python:
-        # test_mode = True
+        # record_mode = True
         test_choices = []
 
         debug_lad_poisoned_day1 = [

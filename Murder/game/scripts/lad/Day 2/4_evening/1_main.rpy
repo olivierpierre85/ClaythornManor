@@ -130,6 +130,7 @@ label lad_day2_evening:
         """
 
         if lad_details.saved_variables["day1_drunk"]:
+            
             """
             Alright, two days in a row.
 
@@ -241,6 +242,7 @@ label lad_day2_doctor_room:
     Just in case, I might as well take a few for myself.
     """
 
+    # TODO add pocketing sound?
     # TODO is the lad a thief? likely ADD HERE
     # TODO add LAUDANUM IN THE OBJECTS LIST?
 

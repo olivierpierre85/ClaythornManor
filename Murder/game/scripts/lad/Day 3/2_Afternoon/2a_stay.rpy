@@ -98,7 +98,7 @@ label lad_day3_stay:
 
     pause 1.0
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     """
     I accompany Miss Baxter to her room.

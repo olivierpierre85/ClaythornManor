@@ -47,13 +47,13 @@ label init_technical_variables:
     python:
         # Technical Variables
         # TODO delete those in character select AND start again
-        test_mode = False
+        record_mode = True
 
         show_minutes_movement = 0
         show_hours_movement = 0
         skip_clock_movement = True
 
-        if test_mode:
+        if record_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")
             f.write("NEW GAME\n-----------\n")
             f.close()

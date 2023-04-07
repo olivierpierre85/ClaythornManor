@@ -24,6 +24,7 @@ label init_lad:
             "attic_visited" : False,
             "has_met_maid" : False,
             "psychic_generic_other_guests_saturday_morning_ask" : False,
+            "has_try_sneaking_downstairs" : 0,
 
             "day1_evening_billiard_room_visited" : False,
             "day1_drinks" : 0,

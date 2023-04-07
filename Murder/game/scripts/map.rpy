@@ -23,6 +23,9 @@ label init_map:
     # TODO replace by a nice loop or class
     python:
         # Full Map of the MANOR TODO no need to init each time
+        
+        # all rooms
+        # 'attic_hallway', 'storage', 'males_room', 'females_room', 'butler_room', 'bedrooms_hallway', 'lad_room', 'doctor_room', 'captain_room', 'psychic_room', 'host_room', 'drunk_room', 'broken_room', 'nurse_room', 'basement_stairs', 'library', 'tea_room', 'billiard_room', 'dining_room', 'garden', 'entrance_hall', 'portrait_gallery', 'kitchen', 'scullery', 'garage', 'gun_room'
         rooms = [
             # Attic
             Room(3, None,   'attic_hallway',         'Attic Hallway' ), # No area points so not a real destination

@@ -256,7 +256,7 @@ label lad_day3_morning:
     She follows us anyway.
     """
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     $ unlock_map('drunk_room')
 
@@ -322,7 +322,7 @@ label lad_day3_morning:
     Unable to stay there longer, I follow them outside.
     """
 
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     captain """
     I am sorry you had to see that.

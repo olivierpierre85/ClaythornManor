@@ -33,7 +33,7 @@ label lad_library_visited:
 
     return
 
-label attic_default:
+label lad_attic_default:
 
     $ change_room("attic_hallway")
 
@@ -42,14 +42,14 @@ label attic_default:
         """
         I took the stairs to the attic.
 
-        I am not sure I can't be there.
+        I am not sure I can be there.
         """
 
         $ lad_details.saved_variables["attic_visited"] = True
 
     return
 
-label downstairs_default:
+label lad_downstairs_default:
 
     $ change_room("basement_stairs")
 
@@ -59,14 +59,15 @@ label downstairs_default:
 
     maid "I am sorry, but downstairs is for staff only." 
 
-    if current_character.text_id == "lad":
-        lad "Oh I am sorry, I didn't know."
+    lad "Oh I am sorry, I didn't know."
 
-        $ lad_details.saved_variables["has_met_maid"] = True
+    $ lad_details.saved_variables["has_met_maid"] = True
+
+    $ lad_details.saved_variables["psychic_generic_other_guests_saturday_morning_ask"] = True
 
     return
 
-label garden_friday:
+label lad_garden_friday:
     
     $ change_room('great_hall')
     
@@ -80,7 +81,7 @@ label garden_friday:
 
     return
 
-label garden_default:
+label lad_garden_default:
 
     $ change_room('manor_garden')
     
@@ -92,9 +93,9 @@ label garden_default:
 
     return
 
-label garage_default:
+label lad_garage_default:
 
-    call downstairs_default
+    call lad_downstairs_default
     
     # $ change_room('garage')
 
@@ -104,18 +105,8 @@ label garage_default:
 
     return
 
-label garage_friday:
-    
-    # Answers different based on the day (first day weather is too bad)
-    """
-    There is a garage outside.
 
-    But I am not getting out while there is a storm. TODO or can't access
-    """
-
-    return
-
-label library_default:
+label lad_library_default:
     
     $ change_room('library')
     
@@ -125,7 +116,7 @@ label library_default:
 
     return
 
-label tea_room_default:
+label lad_tea_room_default:
     
     $ change_room('tea_room')
     
@@ -135,7 +126,7 @@ label tea_room_default:
 
     return
 
-label dining_room_default:
+label lad_dining_room_default:
     
     $ change_room('dining_room')
     
@@ -145,7 +136,7 @@ label dining_room_default:
 
     return
 
-label billiard_room_default:
+label lad_billiard_room_default:
     
     $ change_room('billiard_room')
     
@@ -155,19 +146,21 @@ label billiard_room_default:
 
     return
 
-label bedroom_default:
+label lad_bedroom_default:
     
     $ change_room("bedrooms_hallway")
-    
-    "I knock on the door."
 
     play sound door_knock
+    
+    """
+    I knock on the door.
 
-    "Nobody answers."
+    Nobody answers.
+    """
 
     return
 
-label entrance_hall_default:
+label lad_entrance_hall_default:
     
     scene great_hall
     
@@ -179,7 +172,7 @@ label entrance_hall_default:
 
     return
 
-label portrait_gallery_default:
+label lad_portrait_gallery_default:
     
     scene portrait_gallery
     
@@ -192,22 +185,22 @@ label portrait_gallery_default:
     return
 
 # Downstairs
-label kitchen_default:
-    call downstairs_default
+label lad_kitchen_default:
+    call lad_downstairs_default
     return
 
-label scullery_default:
-    call downstairs_default
+label lad_scullery_default:
+    call lad_downstairs_default
     return
 
-label gun_room_default:
-    call downstairs_default
+label lad_gun_room_default:
+    call lad_downstairs_default
     return
 
 # Attic
-label storage_default:
+label lad_storage_default:
 
-    call attic_default
+    call lad_attic_default
 
     """
     I try to open the attic storage room but it's closed.
@@ -215,19 +208,9 @@ label storage_default:
     
     return
 
-label females_room_default:
+label lad_females_room_default:
 
-    call attic_default
-
-    """
-    I try to open the room but it's closed.
-    """
-
-    return
-
-label males_room_default:
-
-    call attic_default
+    call lad_attic_default
 
     """
     I try to open the room but it's closed.
@@ -235,9 +218,19 @@ label males_room_default:
 
     return
 
-label butler_room_default:
+label lad_males_room_default:
+
+    call lad_attic_default
+
+    """
+    I try to open the room but it's closed.
+    """
+
+    return
+
+label lad_butler_room_default:
     
-    call attic_default
+    call lad_attic_default
 
     """
     I try to open the room but it's closed.
@@ -254,34 +247,34 @@ label butler_room_default:
 #     return
 
 # All bedrooms
-label host_room_default:
-    call bedroom_default
+label lad_host_room_default:
+    call lad_bedroom_default
     return
 
-label lad_room_default:
-    call bedroom_default
+label lad_lad_room_default:
+    call lad_bedroom_default
     return
 
-label psychic_room_default:
-    call bedroom_default
+label lad_psychic_room_default:
+    call lad_bedroom_default
     return
 
-label captain_room_default:
-    call bedroom_default
+label lad_captain_room_default:
+    call lad_bedroom_default
     return
 
-label broken_room_default:
-    call bedroom_default
+label lad_broken_room_default:
+    call lad_bedroom_default
     return
 
-label nurse_room_default:
-    call bedroom_default
+label lad_nurse_room_default:
+    call lad_bedroom_default
     return
 
-label doctor_room_default:
-    call bedroom_default
+label lad_doctor_room_default:
+    call lad_bedroom_default
     return
 
-label drunk_room_default:
-    call bedroom_default
+label lad_drunk_room_default:
+    call lad_bedroom_default
     return

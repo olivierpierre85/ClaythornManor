@@ -1,7 +1,7 @@
 # --------------------------------------------
 #   Lad
 #           
-#   Friday - Arrival/Afternoon
+#   Friday - Evening
 # 
 #   18:30 -> 23:00
 #
@@ -82,9 +82,7 @@ label lad_day1_evening:
     I ask the footman to show me the way.
     """
 
-    
-
-    $ change_room('hallway')
+    $ change_room('bedrooms_hallway')
 
     $ play_music('upbeat', 2)
 
@@ -128,7 +126,7 @@ label lad_day1_evening:
 
     call change_time(21,30)
 
-    $ time_left = 90
+    $ time_left = 900 # TODO put back 90
 
     call run_menu(lad_details.saved_variables["map_menu"])
 
@@ -196,7 +194,7 @@ label lad_day1_evening:
 
 label lad_day1_evening_psychic_room:
   
-    scene hallway
+    $ change_room("bedrooms_hallway")
 
     "I knock on the door."
 
