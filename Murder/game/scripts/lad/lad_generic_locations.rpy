@@ -67,20 +67,6 @@ label lad_downstairs_default:
 
     return
 
-label lad_garden_friday:
-    
-    $ change_room('great_hall')
-    
-    """
-    I reach the great hall and get ready to open the door. 
-    
-    But the weather is so bad, only someone crazy would go out now.
-
-    I'd better do something else at the moment.
-    """
-
-    return
-
 label lad_garden_default:
 
     $ change_room('manor_garden')
@@ -96,12 +82,6 @@ label lad_garden_default:
 label lad_garage_default:
 
     call lad_downstairs_default
-    
-    # $ change_room('garage')
-
-    # """
-    # The garage is now accessible??? Or is???? Maybe not if downstairs.
-    # """
 
     return
 
@@ -236,45 +216,4 @@ label lad_butler_room_default:
     I try to open the room but it's closed.
     """
 
-    return
-
-# label servant_stairs_1_default:
-#     call attic_default
-#     return
-
-# label servant_stairs_2_default:
-#     call attic_default
-#     return
-
-# All bedrooms
-label lad_host_room_default:
-    call lad_bedroom_default
-    return
-
-label lad_lad_room_default:
-    call lad_bedroom_default
-    return
-
-label lad_psychic_room_default:
-    call lad_bedroom_default
-    return
-
-label lad_captain_room_default:
-    call lad_bedroom_default
-    return
-
-label lad_broken_room_default:
-    call lad_bedroom_default
-    return
-
-label lad_nurse_room_default:
-    call lad_bedroom_default
-    return
-
-label lad_doctor_room_default:
-    call lad_bedroom_default
-    return
-
-label lad_drunk_room_default:
-    call lad_bedroom_default
     return

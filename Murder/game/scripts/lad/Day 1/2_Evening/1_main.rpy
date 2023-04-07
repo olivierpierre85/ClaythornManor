@@ -196,11 +196,19 @@ label lad_day1_evening_psychic_room:
   
     $ change_room("bedrooms_hallway")
 
-    "I knock on the door."
+    play sound door_knock
 
-    psychic "Yes? Who is it?"
+    """
+    I knock on the door.
+    """
 
-    lad "Hi, it's Ted Harring."
+    psychic """
+    Yes? Who is it?
+    """
+
+    lad """
+    Hi, it's Ted Harring.
+    """
 
     psychic """
     Oh. What do you want mister Harring?
@@ -210,9 +218,13 @@ label lad_day1_evening_psychic_room:
     I am not sure. But maybe we could continue our conversation from earlier.
     """
 
-    psychic "Oh Mister Harring. I am afraid I was getting ready to bed. We can talk again tomorrow."
+    psychic """
+    Oh Mister Harring. I am afraid I was getting ready to bed. We can talk again tomorrow.
+    """
 
-    lad "Of course, I am sorry."
+    lad """
+    Of course, I am sorry.
+    """
 
     $ unlock_map('psychic_room')
 
