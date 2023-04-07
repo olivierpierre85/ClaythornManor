@@ -11,12 +11,10 @@ label lad_config_map:
         condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
         condition_saturday_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
         condition_sunday = "(current_day == 'Sunday' and current_phase == 'Morning')"
-        # TimedMenuChoice(default_room_text('attic_hallway'), 'attic_hallway', 10, room='attic_hallway', condition=condition_friday),
-        # TimedMenuChoice(default_room_text('storage'), 'storage', 10, room='storage', condition=condition_friday),
+        # TimedMenuChoice(default_room_text('storage'), 'lad_day1_evening_storage', 10, room='storage', condition=condition_friday),
         # TimedMenuChoice(default_room_text('males_room'), 'lad_day1_evening_males_room', 10, room='males_room', condition=condition_friday),
         # TimedMenuChoice(default_room_text('females_room'), 'lad_day1_evening_females_room', 10, room='females_room', condition=condition_friday),
         # TimedMenuChoice(default_room_text('butler_room'), 'lad_day1_evening_butler_room', 10, room='butler_room', condition=condition_friday),
-        # TimedMenuChoice(default_room_text('bedrooms_hallway'), 'bedrooms_hallway', 10, room='bedrooms_hallway', condition=condition_friday),
         # TimedMenuChoice(default_room_text('lad_room'), 'lad_day1_evening_lad_room', 10, room='lad_room', condition=condition_friday),
         # TimedMenuChoice(default_room_text('doctor_room'), 'lad_day1_evening_doctor_room', 10, room='doctor_room', condition=condition_friday),
         # TimedMenuChoice(default_room_text('captain_room'), 'lad_day1_evening_captain_room', 10, room='captain_room', condition=condition_friday),
@@ -25,13 +23,12 @@ label lad_config_map:
         # TimedMenuChoice(default_room_text('drunk_room'), 'lad_day1_evening_drunk_room', 10, room='drunk_room', condition=condition_friday),
         # TimedMenuChoice(default_room_text('broken_room'), 'lad_day1_evening_broken_room', 10, room='broken_room', condition=condition_friday),
         # TimedMenuChoice(default_room_text('nurse_room'), 'lad_day1_evening_nurse_room', 10, room='nurse_room', condition=condition_friday),
-        # TimedMenuChoice(default_room_text('basement_stairs'), 'basement_stairs', 10, room='basement_stairs', condition=condition_friday),
         # TimedMenuChoice(default_room_text('library'), 'lad_day1_evening_library', 10, room='library', condition=condition_friday),
         # TimedMenuChoice(default_room_text('tea_room'), 'lad_day1_evening_tea_room', 10, room='tea_room', condition=condition_friday),
         # TimedMenuChoice(default_room_text('billiard_room'), 'lad_day1_evening_billiard_room', 10, room='billiard_room', condition=condition_friday),
         # TimedMenuChoice(default_room_text('dining_room'), 'lad_day1_evening_dining_room', 10, room='dining_room', condition=condition_friday),
-        # TimedMenuChoice(default_room_text('garden'), 'garden', 10, room='garden', condition=condition_friday),
-        # TimedMenuChoice(default_room_text('entrance_hall'), 'entrance_hall', 10, room='entrance_hall', condition=condition_friday),
+        # TimedMenuChoice(default_room_text('garden'), 'lad_day1_evening_garden', 10, room='garden', condition=condition_friday),
+        # TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day1_evening_entrance_hall', 10, room='entrance_hall', condition=condition_friday),
         # TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day1_evening_portrait_gallery', 10, room='portrait_gallery', condition=condition_friday),
         # TimedMenuChoice(default_room_text('kitchen'), 'lad_day1_evening_kitchen', 10, room='kitchen', condition=condition_friday),
         # TimedMenuChoice(default_room_text('scullery'), 'lad_day1_evening_scullery', 10, room='scullery', condition=condition_friday),
@@ -49,13 +46,6 @@ label lad_config_map:
                 room = 'psychic_room', 
                 condition = condition_friday
             ),
-            # TimedMenuChoice(
-            #     default_room_text('host_room'), 
-            #     'lad_day1_evening_host_room', 
-            #     10, 
-            #     room = 'host_room', 
-            #     condition = "current_day == 'Friday'"
-            # ),
             TimedMenuChoice(
                 default_room_text('garden'), 
                 'garden_friday', 
