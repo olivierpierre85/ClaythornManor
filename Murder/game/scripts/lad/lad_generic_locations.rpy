@@ -53,17 +53,55 @@ label lad_downstairs_default:
 
     $ change_room("basement_stairs")
 
-    """
-    I was on my way to the basement, when someone stops me.
-    """
+    if lad_details.saved_variables["has_try_sneaking_downstairs"] == 0:
 
-    maid "I am sorry, but downstairs is for staff only." 
+        """
+        I was on my way to the basement, when a young maid stops me.
+        """
 
-    lad "Oh I am sorry, I didn't know."
+        maid """
+        Hello Sir, can I help you?
+        """ 
 
-    $ lad_details.saved_variables["has_met_maid"] = True
+        lad """
+        Oh, don't mind me. I'm just taking a walk around.
+        """
 
-    $ lad_details.saved_variables["psychic_generic_other_guests_saturday_morning_ask"] = True
+        maid """
+        I'm sorry, but the basement is for staff only. 
+        
+        However, there are plenty of rooms upstairs that you can visit.
+        """
+
+        lad """
+        Of course, thank you.
+        """
+
+        # TODO add maid character menu????? TO say what????
+
+        $ lad_details.saved_variables["has_met_maid"] = True
+
+        $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 1
+
+    elif lad_details.saved_variables["has_try_sneaking_downstairs"] == 1: 
+        
+        maid """
+        You again Sir? As i already told you, I am afraid you are not allowed to be here.
+        """ 
+
+        lad """
+        Of course, I was just lost. I am terribly sorry.
+        """
+
+        maid """
+        It's alright, don't worry about it sir.
+        """
+
+        """
+        I better be careful. If I am caught here a third time, it will start to really look suspicious.
+        """
+
+        $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 2
 
     return
 

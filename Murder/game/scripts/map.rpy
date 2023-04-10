@@ -29,8 +29,8 @@ label init_map:
         rooms = [
             # Attic
             Room(3, None,   'attic_hallway',         'Attic Hallway' ), # No area points so not a real destination
-            Room(3, (165, 90, 270, 523),   'storage',         'Storage Room' ),
             
+            Room(3, (165, 90, 270, 523),   'storage',         'Storage Room' ),
             Room(3, (512, 204, 242, 127),   'males_room',      'Male Servants Room' ), # TODO Extra livery?
             Room(3, (512, 332, 242, 129),   'females_room',     'Female Servants Room' ),
             Room(3, (512, 460, 242, 155),   'butler_room',      'Butler\'s Room' ),

@@ -120,6 +120,12 @@ init -1 python:
                 if not choice.hidden and choice.get_condition():
                     visible_choices.append((choice.text, i))
             return visible_choices
+        
+        def hide_specific_choice(self, choice_to_hide):
+            for current_choice in self.choices:
+                if current_choice.text == choice_to_hide:
+                    current_choice.hidden = True
+
 
         def display_choices(self):
 
@@ -141,7 +147,7 @@ init -1 python:
                         if c.room == room_id and c.get_condition():
                             selected_choice = c
                             selected_choice_i = idx
-                    
+                    # LEGACY, normally not needed?
                     if not selected_choice:
                         selected_choice = TimedMenuChoice('FILLER CHOICE', current_character.text_id + "_" +room_id + '_default', 5)
                         self.default_visited.append(room_id)

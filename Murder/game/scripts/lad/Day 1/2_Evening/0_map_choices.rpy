@@ -1,19 +1,29 @@
 # Map choices for LAD, Friday evening
 # Downstairs
 label lad_day1_evening_kitchen:
-    call lad_downstairs_default
+    call lad_day1_evening_downstairs_default
     return
 
 label lad_day1_evening_scullery:
-    call lad_downstairs_default
+    call lad_day1_evening_downstairs_default
     return
 
 label lad_day1_evening_garage:
-    call lad_downstairs_default
+    call lad_day1_evening_downstairs_default
     return
 
 label lad_day1_evening_gun_room:
+    call lad_day1_evening_downstairs_default
+    return
+
+label lad_day1_evening_downstairs_default:
+        
     call lad_downstairs_default
+    # Hide all downstairs choices 
+    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
+    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
+    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
+    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
     return
 
 

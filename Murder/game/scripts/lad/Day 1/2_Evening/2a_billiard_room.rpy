@@ -209,7 +209,7 @@ label lad_day1_evening_billiard_room_bar_2:
 label lad_day1_evening_billiard_room_bar_3:
     
     """
-    Well, I haven't tried the Port yet.
+    Well, I haven't tried the Port wine yet.
 
     It's probably better then what I am used to.
 
@@ -249,6 +249,8 @@ label lad_day1_evening_billiard_room_doctor:
 
 label lad_day1_evening_billiard_room_cancel:
     
-    "You don't feel like staying in this room and leave"
+    """
+    I don't feel like staying in this room.
+    """
 
     return
