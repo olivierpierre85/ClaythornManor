@@ -187,14 +187,26 @@ label lad_entrance_hall_default:
 label lad_portrait_gallery_default:
     
     $ change_room("portrait_gallery")
+
+    if not lad_details.saved_variables["portrait_gallery_visited"]:
     
-    """
-    That's a creepy portrait gallery.
+        """
+        That's a creepy portrait gallery.
 
-    I don't recognize anyone, so I guess these are people from the Claythorn family.
-    """
+        I don't recognize anyone, so I guess these are people from the Claythorn family.
+        """
 
-    # TODO possibility to zoom on specific members ?
+        # TODO possibility to zoom on specific members ?
+
+        $ lad_details.saved_variables["portrait_gallery_visited"] = True
+    
+    else:
+
+        """
+        Nothing new here.
+
+        It still gives me a weird creepy feeling.
+        """
 
     return
 

@@ -63,28 +63,44 @@ label lad_day1_evening_portrait_gallery:
     return
 
 # Closed bedrooms
+label lad_bedroom_stay_away:
+
+    """
+    Should try to enter anyway?
+
+    No, that's probably a bad idea.
+    """
+    
+    return
+
 label lad_day1_evening_doctor_room:
     call lad_bedroom_default
+    call lad_bedroom_stay_away
     return
 
 label lad_day1_evening_captain_room:
     call lad_bedroom_default
+    call lad_bedroom_stay_away
     return
 
 label lad_day1_evening_host_room:
     call lad_bedroom_default
+    call lad_bedroom_stay_away
     return
 
 label lad_day1_evening_drunk_room:
     call lad_bedroom_default
+    call lad_bedroom_stay_away
     return
 
 label lad_day1_evening_broken_room:
     call lad_bedroom_default
+    call lad_bedroom_stay_away
     return
 
 label lad_day1_evening_nurse_room:
     call lad_bedroom_default
+    call lad_bedroom_stay_away
     return
 
 # Attic

@@ -47,7 +47,7 @@ label init_technical_variables:
     python:
         # Technical Variables
         # TODO delete those in character select AND start again
-        record_mode = True
+        record_mode = False
 
         show_minutes_movement = 0
         show_hours_movement = 0
