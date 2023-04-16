@@ -46,12 +46,6 @@ label lad_config_map:
                 room = 'psychic_room'
             ),
             TimedMenuChoice(
-                default_room_text('garden'), 
-                'lad_day1_evening_garden', 
-                5, 
-                room = 'garden'
-            ),
-            TimedMenuChoice(
                 'Meet the others in the billiard room', 
                 'lad_day1_evening_billiard_room', 
                 0, 
@@ -237,20 +231,20 @@ label lad_config_map:
             # -------------------------
             # Generic choices
             # -------------------------
-            TimedMenuChoice(
-                default_room_text('library'), 
-                'lad_library', 
-                20, 
-                room = 'library',
-                condition = "(not current_day == 'Sunday')"
-            ),
-            TimedMenuChoice(
-                default_room_text('library'), 
-                'lad_library_visited', 
-                20, 
-                room = 'library',
-                condition = "(not current_day == 'Sunday' and lad_details.saved_variables['library_visited'])"
-            ),
+            # TimedMenuChoice(
+            #     default_room_text('library'), 
+            #     'lad_library', 
+            #     20, 
+            #     room = 'library',
+            #     condition = "(not current_day == 'Sunday')"
+            # ),
+            # TimedMenuChoice(
+            #     default_room_text('library'), 
+            #     'lad_library_visited', 
+            #     20, 
+            #     room = 'library',
+            #     condition = "(not current_day == 'Sunday' and lad_details.saved_variables['library_visited'])"
+            # ),
 
         ], is_map = True)
 

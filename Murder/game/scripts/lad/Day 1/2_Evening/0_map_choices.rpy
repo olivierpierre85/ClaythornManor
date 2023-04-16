@@ -19,7 +19,7 @@ label lad_day1_evening_gun_room:
 label lad_day1_evening_downstairs_default:
         
     call lad_downstairs_default
-    # Hide all downstairs choices 
+    # Hide all downstairs choices for the current menu
     $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
     $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
     $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
@@ -28,6 +28,10 @@ label lad_day1_evening_downstairs_default:
 
 
 # First Floor
+label lad_day1_evening_library:
+    call lad_library_default
+    return
+
 label lad_day1_evening_tea_room:
     call lad_tea_room_default
     return

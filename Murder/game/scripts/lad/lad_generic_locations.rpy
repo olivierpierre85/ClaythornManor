@@ -1,35 +1,36 @@
-label lad_library:
+label lad_library_default:
 
     $ change_room('library') 
+
+    if not lad_details.saved_variables["library_visited"]:
     
-    """
-    It's a very nice library. But what am I doing here? I can barely read.
-    """
+        """
+        It's a very nice library. But what am I doing here? I can barely read.
+        """
 
-    $ lad_details.unlock_knowledge('education')
+        $ lad_details.unlock_knowledge('education')
 
-    """
-    There is an open book on a small table.
+        """
+        There is an open book on a small table.
 
-    \"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\"
+        \"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\"
 
-    Yeah, I am not reading that.
+        Yeah, I am not reading that.
 
-    I probably better go look elsewhere.
-    """
-    # TODO add info on BOOK???
+        I probably better go look elsewhere.
+        """
+        # TODO add info on BOOK???
 
-    $ lad_details.saved_variables["library_visited"] = True
+        $ lad_details.saved_variables["library_visited"] = True
+    
+    else:
 
-    return
+        """
+        There is nothing different from last time I was in there.
 
-label lad_library_visited:
+        No reason to look further.
+        """
 
-    $ change_room('library')
-
-    """
-    There is nothing different from last time I was in there.
-    """
 
     return
 
@@ -123,24 +124,15 @@ label lad_garage_default:
 
     return
 
-
-label lad_library_default:
-    
-    $ change_room('library')
-    
-    "It's empty"
-
-    "No need to stay here."
-
-    return
-
 label lad_tea_room_default:
     
     $ change_room('tea_room')
     
-    "It's empty"
+    """
+    There is nobody here.
 
-    "No need to stay here."
+    No need to stay any longer.
+    """
 
     return
 
@@ -148,9 +140,11 @@ label lad_dining_room_default:
     
     $ change_room('dining_room')
     
-    "It's empty"
-
-    "No need to stay here."
+    """
+    The dining room is empty at the moment.
+    
+    I shouldn't stay here.
+    """
 
     return
 
@@ -180,25 +174,27 @@ label lad_bedroom_default:
 
 label lad_entrance_hall_default:
     
-    scene great_hall
+    $ change_room("great_hall")
     
     """
-    Impressive entrance hall
+    It's certainly an impressive entrance hall.
     
-    But it's empty.
+    Nobody is here.
     """
 
     return
 
 label lad_portrait_gallery_default:
     
-    scene portrait_gallery
+    $ change_room("portrait_gallery")
     
     """
     That's a creepy portrait gallery.
 
     I don't recognize anyone, so I guess these are people from the Claythorn family.
     """
+
+    # TODO possibility to zoom on specific members ?
 
     return
 
