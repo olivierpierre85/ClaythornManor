@@ -42,7 +42,7 @@ label lad_day2_no_hunt:
 
     $ time_left = 240 # TODO too long do something
 
-    call run_menu(lad_details.saved_variables["map_menu"])
+    call run_menu(lad_details.saved_variables["day2_no_hunt_map_menu"])
 
     """
     Suddenly, I hear noises from the entrance hall.

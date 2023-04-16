@@ -85,6 +85,14 @@ label lad_downstairs_default:
         $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 1
 
     elif lad_details.saved_variables["has_try_sneaking_downstairs"] == 1: 
+
+        """
+        Let's see if I can check downstairs now.
+
+        I walk down the stairs slowly, being very careful not to attract attention.
+
+        But as I am stepping down to the basement, the same woman stops me.
+        """
         
         maid """
         You again Sir? As i already told you, I am afraid you are not allowed to be here.

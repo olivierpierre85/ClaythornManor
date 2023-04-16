@@ -46,37 +46,63 @@
 # TimedMenuChoice(default_room_text('garage'), 'lad_day1_evening_garage', 10, room='garage', condition=condition_friday),
 # TimedMenuChoice(default_room_text('gun_room'), 'lad_day1_evening_gun_room', 10, room='gun_room', condition=condition_friday),
 
-
-label lad_day1_evening_storage:
-    """
-    TODO
-    """
+# Downstairs
+label lad_day1_evening_kitchen:
+    call lad_day1_evening_downstairs_default
     return
 
-label lad_day1_evening_males_room:
-    """
-    TODO
-    """
+label lad_day1_evening_scullery:
+    call lad_day1_evening_downstairs_default
     return
 
-label lad_day1_evening_females_room:
-    """
-    TODO
-    """
+label lad_day1_evening_garage:
+    call lad_day1_evening_downstairs_default
     return
 
-label lad_day1_evening_butler_room:
-    """
-    TODO
-    """
+label lad_day1_evening_gun_room:
+    call lad_day1_evening_downstairs_default
     return
 
-label lad_day1_evening_lad_room:
-    """
-    TODO
-    """
+label lad_day1_evening_downstairs_default:
+    call lad_downstairs_default
+    # Hide all downstairs choices for the current menu
+    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
+    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
+    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
+    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
     return
 
+# First Stair
+label lad_day1_evening_library:
+    call lad_library_default
+    return
+
+label lad_day1_evening_tea_room:
+    call lad_tea_room_default
+    return
+
+label lad_day1_evening_billiard_room:
+    call lad_billiard_room_default
+    return
+
+label lad_day1_evening_dining_room:
+    call lad_dining_room_default
+    return
+
+
+label lad_day1_evening_garden:
+    call lad_garden_default
+    return
+
+label lad_day1_evening_entrance_hall:
+    call lad_entrance_hall_default
+    return
+
+label lad_day1_evening_portrait_gallery:
+    call lad_portrait_gallery_default
+    return
+
+# Bedrooms
 label lad_day1_evening_doctor_room:
     """
     TODO
@@ -119,67 +145,32 @@ label lad_day1_evening_nurse_room:
     """
     return
 
-label lad_day1_evening_library:
+# Attic    
+label lad_day1_evening_storage:
     """
     TODO
     """
     return
 
-label lad_day1_evening_tea_room:
+label lad_day1_evening_males_room:
     """
     TODO
     """
     return
 
-label lad_day1_evening_billiard_room:
+label lad_day1_evening_females_room:
     """
     TODO
     """
     return
 
-label lad_day1_evening_dining_room:
+label lad_day1_evening_butler_room:
     """
     TODO
     """
     return
 
-label lad_day1_evening_garden:
-    """
-    TODO
-    """
-    return
-
-label lad_day1_evening_entrance_hall:
-    """
-    TODO
-    """
-    return
-
-label lad_day1_evening_portrait_gallery:
-    """
-    TODO
-    """
-    return
-
-label lad_day1_evening_kitchen:
-    """
-    TODO
-    """
-    return
-
-label lad_day1_evening_scullery:
-    """
-    TODO
-    """
-    return
-
-label lad_day1_evening_garage:
-    """
-    TODO
-    """
-    return
-
-label lad_day1_evening_gun_room:
+label lad_day1_evening_lad_room:
     """
     TODO
     """

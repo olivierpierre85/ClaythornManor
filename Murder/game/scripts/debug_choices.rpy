@@ -27,20 +27,27 @@ label debug_choices:
         #     jump lad_day1_afternoon
 
         "lad_day1_evening MAP":
-            $ test_choices = [0,9,1,12]
+            $ test_choices = [0,9,1,12] #SKIP to map menu
             jump lad_day1_evening
         
         # "lad_day1_evening":
         #     jump lad_day1_evening
 
-        "lad_day2_morning":
-            jump lad_day2_morning
+        # "lad_day2_morning":
+        #     jump lad_day2_morning
             
         # "lad_day2_hunt":
         #     jump lad_day2_hunt
 
-        # "lad_day2_no_hunt":
-        #     jump lad_day2_no_hunt
+        "lad_day2_no_hunt MAP":
+            # Has try to go downstairs
+            $ lad_details.saved_variables["has_met_maid"] = True
+            $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 1
+            $ lad_details.saved_variables["library_visited"] = True
+            $ lad_details.saved_variables["portrait_gallery_visited"] = True
+            $ lad_details.saved_variables["attic_visited"] = True
+            
+            jump lad_day2_no_hunt
 
         "lad_day2_afternoon":
             jump lad_day2_afternoon

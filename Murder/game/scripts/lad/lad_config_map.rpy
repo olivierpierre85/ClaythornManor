@@ -62,22 +62,42 @@ label lad_config_map:
 
         # -------------------------
         # Saturday, During the Hunt
-        # -------------------------
-        lad_map_menu = TimedMenu([
-
+        # -------------------------        
+        lad_day2_no_hunt_map_menu = TimedMenu([
+            TimedMenuChoice(default_room_text('storage'), 'lad_day2_no_hunt_evening_storage', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'lad_day2_no_hunt_evening_males_room', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'lad_day2_no_hunt_evening_females_room', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'lad_day2_no_hunt_evening_butler_room', 10, room='butler_room'),
+            TimedMenuChoice(default_room_text('lad_room'), 'lad_day2_no_hunt_evening_lad_room', 10, room='lad_room'),
+            TimedMenuChoice(default_room_text('doctor_room'), 'lad_day2_no_hunt_evening_doctor_room', 10, room='doctor_room'),
+            TimedMenuChoice(default_room_text('captain_room'), 'lad_day2_no_hunt_evening_captain_room', 10, room='captain_room'),
+            TimedMenuChoice(default_room_text('psychic_room'), 'lad_day2_no_hunt_evening_psychic_room', 10, room='psychic_room'),
+            TimedMenuChoice(default_room_text('host_room'), 'lad_day2_no_hunt_evening_host_room', 10, room='host_room'),
+            TimedMenuChoice(default_room_text('drunk_room'), 'lad_day2_no_hunt_evening_drunk_room', 10, room='drunk_room'),
+            TimedMenuChoice(default_room_text('broken_room'), 'lad_day2_no_hunt_evening_broken_room', 10, room='broken_room'),
+            TimedMenuChoice(default_room_text('nurse_room'), 'lad_day2_no_hunt_evening_nurse_room', 10, room='nurse_room'),
+            TimedMenuChoice(default_room_text('library'), 'lad_day2_no_hunt_evening_library', 10, room='library'),
+            TimedMenuChoice(default_room_text('billiard_room'), 'lad_day2_no_hunt_evening_billiard_room', 10, room='billiard_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'lad_day2_no_hunt_evening_dining_room', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('garden'), 'lad_day2_no_hunt_evening_garden', 10, room='garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day2_no_hunt_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day2_no_hunt_evening_portrait_gallery', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('kitchen'), 'lad_day2_no_hunt_evening_kitchen', 10, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'lad_day2_no_hunt_evening_scullery', 10, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'lad_day2_no_hunt_evening_garage', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'lad_day2_no_hunt_evening_gun_room', 10, room='gun_room'),
             TimedMenuChoice(
                 'Meet the others in the Tea Room', 
                 'lad_day2_hunt_tea_room', 
                 120, 
                 room = 'tea_room',
-                condition = condition_saturday_hunt,
                 keep_alive = True, 
             ),
             TimedMenuChoice(
                 'Go back to the Tea Room', 
                 'lad_day2_hunt_tea_room_return',  
                 room = 'tea_room',
-                condition = condition_saturday_hunt + " and " + "lad_details.saved_variables['day2_nohunt_has_visited_tea_room']",
+                condition = "lad_details.saved_variables['day2_nohunt_has_visited_tea_room']",
                 keep_alive = True, 
             ),
             TimedMenuChoice(
@@ -85,8 +105,7 @@ label lad_config_map:
                 'lad_day2_no_hunt_cancel', 
                 240, 
                 early_exit = True, 
-                room = 'lad_room',
-                condition = condition_saturday_hunt
+                room = 'lad_room'
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
@@ -94,10 +113,13 @@ label lad_config_map:
                 20, 
                 room = 'broken_room',
                 condition = condition_saturday_hunt + " or " + condition_saturday_evening
-            ),
-            # -------------------------
-            # Saturday, Evening
-            # -------------------------
+            )
+        ], is_map = True)
+
+        # -------------------------
+        # Saturday, Evening
+        # -------------------------
+        lad_map_menu = TimedMenu([
             TimedMenuChoice(
                 default_room_text('doctor_room'), 
                 'lad_day2_doctor_room', 

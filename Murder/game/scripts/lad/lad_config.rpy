@@ -9,6 +9,7 @@ label init_lad:
         lad_init_variables = {
             "map_menu" : lad_map_menu,
             "day1_evening_map_menu" : lad_day1_evening_map_menu,
+            "day2_no_hunt_map_menu" : lad_day2_no_hunt_map_menu,
 
             "psychic_generic_menu" : psychic_generic_menu_lad,
             "psychic_generic_other_guests_menu": psychic_generic_other_guests_menu_lad,
