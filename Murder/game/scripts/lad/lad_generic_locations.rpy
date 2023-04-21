@@ -117,11 +117,16 @@ label lad_downstairs_default:
 label lad_garden_default:
 
     $ change_room('manor_garden')
+
+    # TODO expand, and add more time to option
+    # TODO move to no hunt if it's the only time where can you can go out!
     
     """
     Beautiful garden.
 
-    But not much to do here.
+    I wandered in it for a while, enjoying a relaxing walk.
+
+    but in the end, I didn't find anything of interest.
     """
 
     return

@@ -137,3 +137,33 @@ label lad_day2_no_hunt_cancel:
     call wait_screen_transition()
 
     return
+
+label lad_day2_no_hunt_nurse_room_busy:
+        
+    $ change_room("bedrooms_hallway")
+
+    play sound door_knock
+    
+    """
+    I knock on the door.
+    """
+
+    nurse """
+    Yes? Who is it?
+    """
+
+    lad """
+    It's Ted Harring.
+    """
+
+    nurse """
+    Ah, Mr. Harring, I'm afraid I'm quite exhausted at the moment. 
+    
+    Would you mind coming back later?
+    """
+
+    lad """
+    Of course not, sorry for bothering you.
+    """
+
+    return

@@ -104,74 +104,46 @@ label lad_day1_evening_portrait_gallery:
 
 # Bedrooms
 label lad_day1_evening_doctor_room:
-    """
-    TODO
-    """
+    call lad_bedroom_default
     return
 
 label lad_day1_evening_captain_room:
-    """
-    TODO
-    """
+    call lad_bedroom_default
     return
 
 label lad_day1_evening_psychic_room:
-    """
-    TODO
-    """
+    call lad_bedroom_default
     return
 
 label lad_day1_evening_host_room:
-    """
-    TODO
-    """
+    call lad_bedroom_default
     return
 
 label lad_day1_evening_drunk_room:
-    """
-    TODO
-    """
+    call lad_bedroom_default
     return
 
 label lad_day1_evening_broken_room:
-    """
-    TODO
-    """
+    call lad_bedroom_default
     return
 
 label lad_day1_evening_nurse_room:
-    """
-    TODO
-    """
+    call lad_bedroom_default
     return
 
 # Attic    
 label lad_day1_evening_storage:
-    """
-    TODO
-    """
+    call lad_storage_default
     return
 
 label lad_day1_evening_males_room:
-    """
-    TODO
-    """
+    call lad_males_room_default
     return
 
 label lad_day1_evening_females_room:
-    """
-    TODO
-    """
+    call lad_females_room_default
     return
 
 label lad_day1_evening_butler_room:
-    """
-    TODO
-    """
-    return
-
-label lad_day1_evening_lad_room:
-    """
-    TODO
-    """
+    call lad_butler_room_default
     return

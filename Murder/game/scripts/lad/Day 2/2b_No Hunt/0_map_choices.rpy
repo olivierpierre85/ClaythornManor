@@ -1,17 +1,17 @@
 # Downstairs
-label lad_day2_no_hunt_evening_kitchen:
+label lad_day2_no_hunt_kitchen:
     call lad_day2_no_hunt_downstairs_default
     return
 
-label lad_day2_no_hunt_evening_scullery:
+label lad_day2_no_hunt_scullery:
     call lad_day2_no_hunt_downstairs_default
     return
 
-label lad_day2_no_hunt_evening_garage:
+label lad_day2_no_hunt_garage:
     call lad_day2_no_hunt_downstairs_default
     return
 
-label lad_day2_no_hunt_evening_gun_room:
+label lad_day2_no_hunt_gun_room:
     call lad_day2_no_hunt_downstairs_default
     return
 
@@ -26,101 +26,142 @@ label lad_day2_no_hunt_downstairs_default:
 
 
 # First Floor
-label lad_day2_no_hunt_evening_library:
+label lad_day2_no_hunt_library:
     call lad_library_default
     return
 
-label lad_day2_no_hunt_evening_billiard_room:
+label lad_day2_no_hunt_billiard_room:
     call lad_billiard_room_default
     return
 
-label lad_day2_no_hunt_evening_dining_room:
+label lad_day2_no_hunt_dining_room:
     call lad_dining_room_default
     return
 
-
-label lad_day2_no_hunt_evening_garden:
+label lad_day2_no_hunt_garden:
     call lad_garden_default
     return
 
-label lad_day2_no_hunt_evening_entrance_hall:
+label lad_day2_no_hunt_entrance_hall:
     call lad_entrance_hall_default
     return
 
-label lad_day2_no_hunt_evening_portrait_gallery:
+label lad_day2_no_hunt_portrait_gallery:
     call lad_portrait_gallery_default
     return
 
 # Bedroom
-label lad_day2_no_hunt_evening_lad_room:
+label lad_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
+        
     """
-    TODO
+    Most people are out for the hunt, so I guess I could try to enter the room anyway.
+
+    But it won't look good if I am caught.
+
+    Why should I do?
     """
+
+    call run_menu(
+        TimedMenu([
+            TimedMenuChoice('Let\'s go in, what\'s the worst that could happen?', enter_result, enter_duration, early_exit = True),
+            TimedMenuChoice('I definitely shouldn\'t enter, that would be reckless!', 'lad_day2_no_hunt_default_room_no_enter', 5, early_exit = True),
+        ])
+    )
+
     return
 
-label lad_day2_no_hunt_evening_doctor_room:
+label lad_day2_no_hunt_default_room_no_enter:
+    
     """
-    TODO
+    It's better not to enter this room for now.
     """
+
     return
 
-label lad_day2_no_hunt_evening_captain_room:
+label lad_day2_no_hunt_default_room_locked:
+    
     """
-    TODO
+    I try to push the door opened.
+
+    It's locked.
     """
+
     return
 
-label lad_day2_no_hunt_evening_psychic_room:
-    """
-    TODO
-    """
+# Psychic
+label lad_day2_no_hunt_psychic_room:
+    
+    call lad_bedroom_default
+
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_psychic_room_enter')
+
     return
 
-label lad_day2_no_hunt_evening_host_room:
-    """
-    TODO
-    """
+label lad_day2_no_hunt_psychic_room_enter:
+    # May knows whose room it is so lock it to avoid weird dialog for now
+    call lad_day2_no_hunt_default_room_locked
+
     return
 
-label lad_day2_no_hunt_evening_drunk_room:
-    """
-    TODO
-    """
+# Doctor
+label lad_day2_no_hunt_doctor_room:
+
+    call lad_bedroom_default
+
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_doctor_room_enter')
+
     return
 
-label lad_day2_no_hunt_evening_broken_room:
-    """
-    TODO
-    """
+# Nurse
+label lad_day2_no_hunt_doctor_room_enter:
+    # May knows whose room it is so lock it to avoid weird dialog for now
+    call lad_day2_no_hunt_default_room_locked
+
     return
 
-label lad_day2_no_hunt_evening_nurse_room:
-    """
-    TODO
-    """
+label lad_day2_no_hunt_nurse_room:
+
+    call lad_bedroom_default
+
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_nurse_room_enter')
+
     return
+
+label lad_day2_no_hunt_nurse_room_enter:
+
+    call lad_day2_no_hunt_default_room_locked
+
+    return
+
+# Captain
+label lad_day2_no_hunt_captain_room:
+    call lad_bedroom_default
+    return
+
+# Host
+label lad_day2_no_hunt_host_room:
+    call lad_bedroom_default
+    return
+
+# Drunk
+label lad_day2_no_hunt_drunk_room:
+    call lad_bedroom_default
+    return
+
 
 # Attic
-label lad_day2_no_hunt_evening_storage:
-    """
-    TODO
-    """
+label lad_day2_no_hunt_storage:
+    call lad_storage_default
     return
 
-label lad_day2_no_hunt_evening_males_room:
-    """
-    TODO
-    """
+label lad_day2_no_hunt_males_room:
+    call lad_males_room_default
     return
 
-label lad_day2_no_hunt_evening_females_room:
-    """
-    TODO
-    """
+label lad_day2_no_hunt_females_room:
+    call lad_females_room_default
     return
 
-label lad_day2_no_hunt_evening_butler_room:
-    """
-    TODO
-    """
+label lad_day2_no_hunt_butler_room:
+    call lad_butler_room_default
     return

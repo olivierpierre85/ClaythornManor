@@ -198,7 +198,7 @@ label lad_day2_hunt_tea_room:
     """
 
     psychic """
-    It looks it's just you and me Mister Harring.
+    It looks it's just you and I Mister Harring.
     """
 
     $ lad_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
