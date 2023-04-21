@@ -39,6 +39,7 @@ label init_lad:
             "day2_saw_accident" : False,
             "day2_evening_billiard_room_visited" : False,
             "day2_nohunt_has_visited_tea_room" : False,
+            "day2_nohunt_bedroom_tries" : 0,
             "day2_believe_psychic" : False,
 
             "day2_drinks" : 0,

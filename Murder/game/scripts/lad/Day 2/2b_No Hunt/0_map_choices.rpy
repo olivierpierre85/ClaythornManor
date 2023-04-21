@@ -52,19 +52,53 @@ label lad_day2_no_hunt_portrait_gallery:
 
 # Bedroom
 label lad_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
+
+    python:
+        enter_text_list = [
+            "Let's go in, what's the worst that could happen?",
+            "It won't hurt to give it a try. Let's go in and find out.",
+            "Let's enter and see what happens, it can't be that bad.",
+            "What's the harm in entering? Let's go!",
+            "Come on, let's go inside. What's the worst that could go wrong?",
+            "Shall we enter? What's the worst that could occur?"
+        ]
+
+        no_enter_text_list= [
+            "I definitely shouldn't enter, that would be reckless!",
+            "I shouldn't go in, that's too dangerous!",
+            "I'd better not enter, it could be risky.",
+            "That's a bad idea, I shouldn't go inside.",
+            "I don't want to take unnecessary risks, I shouldn't go in.",
+            "It's not worth the danger, I'm not going in."
+        ]
+    
+        enter_text = enter_text_list[lad_details.saved_variables['day2_nohunt_bedroom_tries']]
+        no_enter_text = no_enter_text_list[lad_details.saved_variables['day2_nohunt_bedroom_tries']]
         
-    """
-    Most people are out for the hunt, so I guess I could try to enter the room anyway.
+    if lad_details.saved_variables['day2_nohunt_bedroom_tries'] == 0:
 
-    But it won't look good if I am caught.
+        """
+        Most people are out for the hunt, so I guess I could try to enter the room anyway.
 
-    Why should I do?
-    """
+        But it won't look good if I am caught.
+
+        Why should I do?
+        """
+
+        $ lad_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
+
+    else:
+
+        """
+        There seems to be nobody here as well.
+        """
+
+        $ lad_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
 
     call run_menu(
         TimedMenu([
-            TimedMenuChoice('Let\'s go in, what\'s the worst that could happen?', enter_result, enter_duration, early_exit = True),
-            TimedMenuChoice('I definitely shouldn\'t enter, that would be reckless!', 'lad_day2_no_hunt_default_room_no_enter', 5, early_exit = True),
+            TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit = True),
+            TimedMenuChoice(no_enter_text, 'lad_day2_no_hunt_default_room_no_enter', 5, early_exit = True),
         ])
     )
 
@@ -135,21 +169,47 @@ label lad_day2_no_hunt_nurse_room_enter:
 
 # Captain
 label lad_day2_no_hunt_captain_room:
+
     call lad_bedroom_default
+
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_captain_room_enter')
+
     return
 
 # Host
 label lad_day2_no_hunt_host_room:
+
     call lad_bedroom_default
+
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_host_room_enter')
+
+    return
+
+label lad_day2_no_hunt_host_room_enter:
+    
+    call lad_day2_no_hunt_default_room_locked
+
     return
 
 # Drunk
 label lad_day2_no_hunt_drunk_room:
+
     call lad_bedroom_default
+
+    """
+    After knocking, the door slightly opens.
+
+    It was not even closed.
+    """
+
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_drunk_room_enter')
+
     return
 
 
+# 
 # Attic
+# 
 label lad_day2_no_hunt_storage:
     call lad_storage_default
     return

@@ -167,3 +167,66 @@ label lad_day2_no_hunt_nurse_room_busy:
     """
 
     return
+
+label lad_day2_no_hunt_captain_room_enter:
+
+    """
+    Making sure no one's watching, I carefully nudge the door open.
+    """
+
+    play sound door_open
+
+    $ change_room('captain_room')
+
+    """ 
+    The door opens smoothly, allowing me to step inside the room.
+
+    It is extremely neat, with everything in its place.
+
+    Over in a corner, there's a valet stand holding a military uniform.
+
+    It's gotta be Sushil Sinha's room.
+    """
+    
+    $ unlock_map('captain_room')
+
+    """
+    Well, since I'm here, I might as well search around a little.
+    """
+
+    play sound searching
+
+    $ renpy.pause(5, hard=True)
+
+    $ change_room('captain_room') # TODO add effect same room
+    
+    """
+    I looked around for quite some time.
+
+    I thought I wouldn't find anything until I pulled open the bed drawers.
+
+    There was a gun and a few bullets inside.
+
+    It's not something most people carry, but I guess it's pretty usual for a military person.
+
+    The rest of the room is just plain ordinary.
+
+    I put everything in order and leave.
+    """
+
+    return
+
+label lad_day2_no_hunt_drunk_room_enter:
+
+    """
+    I sneakily push the door open, making sure nobody is watching me.
+    """
+
+    play sound door_open
+
+    $ change_room('drunk_room')
+    # could find the letter about the doctor, but complicated follow up
+    # Also, suspicion arrives way earlier if first choice
+    # OR the letter has been burned => only partial text... not enough to accuse
+
+    return
