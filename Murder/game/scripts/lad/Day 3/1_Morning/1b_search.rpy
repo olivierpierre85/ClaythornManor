@@ -108,6 +108,8 @@ label lad_day3_take_gun:
     But it's not very reassuring.
     """
 
+    $ lad_details.objects.unlock('gun')
+
     return
 
 label lad_day3_no_gun:

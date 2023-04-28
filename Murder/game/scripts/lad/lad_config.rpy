@@ -91,7 +91,8 @@ label init_lad:
         )  
 
         lad_objects = CharacterInformationList ([  
-                CharacterInformation(1, "gun", "A empty handgun found in the gun room", type="object", image_file="gun")
+                CharacterInformation(1, "gun", "A empty handgun found in the gun room", type="object", image_file="gun"),
+                CharacterInformation(2, "burned_letter", "A burned letter found in Samuel Manning's room", type="object", image_file="burned_letter")
             ], 
             notification_text = "You have found a new object",
             notification_sound = "audio/sound_effects/writing_short.ogg"

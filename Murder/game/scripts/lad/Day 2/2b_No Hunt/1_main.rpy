@@ -205,7 +205,7 @@ label lad_day2_no_hunt_captain_room_enter:
 
     I thought I wouldn't find anything until I pulled open the bed drawers.
 
-    There was a gun and a few bullets inside.
+    There is a gun and a few bullets inside.
 
     It's not something most people carry, but I guess it's pretty usual for a military person.
 
@@ -225,8 +225,73 @@ label lad_day2_no_hunt_drunk_room_enter:
     play sound door_open
 
     $ change_room('drunk_room')
-    # could find the letter about the doctor, but complicated follow up
-    # Also, suspicion arrives way earlier if first choice
-    # OR the letter has been burned => only partial text... not enough to accuse
+
+    """
+    The bedroom is messy and dimly lit and the smell of alcohol fills the air.
+
+    There are clothes all over the floor.
+
+    I think I can safely say it's Samuel Manning's room.
+    """
+
+    $ unlock_map('drunk_room')
+
+    """
+    I quickly scan the place but only find empty bottles of whisky.
+
+    Just as I am about to leave, something catches my eye in the fireplace.
+
+    A piece of white paper.
+
+    Curiosity gets the better of me, and I pick it up.
+
+    The writing on the paper is almost entirely burned. 
+    
+    I can only decipher parts of it.
+
+    There is a first part, written with an impeccable style.    
+    """
+
+    # TODO move full letter to generic when needed (drunk part)
+    # letter """
+    # In case you haven't recognized him, the doctor invited this weekend is the same one who treated your wife years ago.
+
+    # She never recovered due to his poor treatment and his withholding of medication for his own benefit.
+
+    # Do what you will with this information.
+    # """
+
+    # letter """
+    # The bastard must pay.
+
+    # Don't hesitate.
+    # """
+
+    letter """
+    *** treated you***
+
+    ** never recovered ***
+
+    Do what you ****.
+    """
+
+    """
+    Below that, there is an addition written in an almost indecipherable style:
+    """
+
+    letter """
+    The b*****
+
+    ****** hesitate.
+    """
+
+    """
+    Although I don't understand the meaning behind it, this letter must be important. 
+    
+    I decide to pocket it just in case.
+    """
+
+    $ lad_details.objects.unlock('burned_letter')
+
 
     return
