@@ -56,7 +56,7 @@ label debug_choices:
         # "lad_day2_afternoon_bedroom":
         #     jump lad_day2_afternoon_bedroom
             
-        "lad_day2_evening WITH unlocked":
+        "lad_day2_evening MAP":
             #$ lad_details.objects.unlock('gun')
             $ lad_details.intuitions.unlock('psychic_poisons')
             $ lad_details.observations.unlock('green_liquid')

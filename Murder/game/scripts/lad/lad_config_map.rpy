@@ -128,34 +128,48 @@ label lad_config_map:
         # -------------------------
         # Saturday, Evening
         # -------------------------
-        lad_map_menu = TimedMenu([
+        lad_day2_evening_map_menu = TimedMenu([
+            TimedMenuChoice(default_room_text('storage'), 'lad_day2_evening_storage', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'lad_day2_evening_males_room', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'lad_day2_evening_females_room', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'lad_day2_evening_butler_room', 10, room='butler_room'),
+            TimedMenuChoice(default_room_text('captain_room'), 'lad_day2_evening_captain_room', 10, room='captain_room'),
+            TimedMenuChoice(default_room_text('host_room'), 'lad_day2_evening_host_room', 10, room='host_room'),
+            TimedMenuChoice(default_room_text('drunk_room'), 'lad_day2_evening_drunk_room', 10, room='drunk_room'),
+            TimedMenuChoice(default_room_text('nurse_room'), 'lad_day2_evening_nurse_room', 10, room='nurse_room'),
+            TimedMenuChoice(default_room_text('library'), 'lad_day2_evening_library', 10, room='library'),
+            TimedMenuChoice(default_room_text('tea_room'), 'lad_day2_evening_tea_room', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'lad_day2_evening_dining_room', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('garden'), 'lad_day2_evening_garden', 10, room='garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day2_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('kitchen'), 'lad_day2_evening_kitchen', 10, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'lad_day2_evening_scullery', 10, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'lad_day2_evening_garage', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'lad_day2_evening_gun_room', 10, room='gun_room'),
             TimedMenuChoice(
                 default_room_text('doctor_room'), 
                 'lad_day2_doctor_room', 
                 20, 
                 room = 'doctor_room',
-                condition = condition_saturday_evening
             ),
             TimedMenuChoice(
                 'Go to sleep and hope for the best.', 
                 'lad_day2_evening_sleep',
                 early_exit = True, 
                 room = 'lad_room',
-                condition = condition_saturday_evening
             ),
             TimedMenuChoice(
                 'Have a talk with Amelia Baxter', 
                 'lad_day2_evening_psychic_room',
                 20,
                 room = 'psychic_room',
-                condition = condition_saturday_evening
             ),
             TimedMenuChoice(
                 'Check if there is someone in the Billiard Room', 
                 'lad_day2_evening_billiard_room', 
                 10, 
                 room = 'billiard_room',
-                condition = condition_saturday_evening,
                 keep_alive = True, 
             ),
             TimedMenuChoice(
@@ -165,9 +179,13 @@ label lad_config_map:
                 room = 'broken_room',
                 condition = 'lad_details.saved_variables["day2_evening_taste_from_flask"]'
             ),
-            # -------------------------
-            # Sunday Search
-            # -------------------------
+        ], is_map = True)    
+
+        # -------------------------
+        # Sunday Search
+        # -------------------------
+        lad_map_menu = TimedMenu([
+
             TimedMenuChoice(
                 default_room_text('lad_room'), 
                 'lad_day3_morning_lad_room',
