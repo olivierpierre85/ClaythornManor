@@ -50,6 +50,7 @@ label debug_choices:
             jump lad_day2_no_hunt
 
         "lad_day2_afternoon":
+            $ lad_details.objects.unlock('burned_letter')
             jump lad_day2_afternoon
             
         # "lad_day2_afternoon_bedroom":

@@ -103,6 +103,76 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
 
     return
 
+label lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter:
+
+    captain """
+    Really what makes you think that?
+    """
+
+    lad """
+    I found this piece of paper in Samuel Manning room while you were hunting.
+    """
+
+    captain """
+    Why on earth were you in his room?
+
+    You know what never mind.
+
+    I don't want to know.
+
+    Show me the paper.
+    """
+
+    """
+    I hand the letter to him.
+    """
+
+    captain """
+    We can barely read anything here, what do you believe it means?
+    """
+
+    lad """
+    Well, I am not sure, but it could be a threat, or blackmail, or ...
+    """
+
+    captain """
+    Or absolutely nothing.
+
+    You could make anything out of those words.
+
+    For instance :
+    """
+
+    letter """
+    The dogs treated you gently.
+
+    The horse recovered swiftly.
+
+    Do what you love.
+
+    The bird sang.
+
+    Cats don't hesitate.
+    """
+
+    lad """
+    It's certainly not that!
+    """
+
+    captain """
+    Probably not, but you can't say for sure can you?
+
+    So I am afraid we can't make much of this.
+    """
+
+    """
+    Maybe not.
+
+    But what with this poem though?
+    """
+
+    return
+
 label lad_day2_evening_billiard_room_captain_hypothesis_broken:
 
     captain """
@@ -255,7 +325,9 @@ label lad_day2_evening_billiard_room_captain:
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu([
         TimedMenuChoice('I believe Daniel Baldwin was an opium addict {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']" ),
         TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')" ),
+        TimedMenuChoice('I think Samuel Manning was given a reason to kill Daniel Baldwin', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10,  condition="lad_details.objects.is_unlocked('burned_letter')"  ),
         TimedMenuChoice('I am not sure Samuel Manning was really drunk when the accident occurred', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
+        # TODO when you have ALL the suspicious, you can convince the captain that something weird is happening. But what happens NEXT ???? TODO
         TimedMenuChoice('I don\'t see any reasons to be suspicious.', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit = True ),
     ])
 

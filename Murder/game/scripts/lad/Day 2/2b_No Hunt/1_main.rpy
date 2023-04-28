@@ -247,43 +247,18 @@ label lad_day2_no_hunt_drunk_room_enter:
 
     The writing on the paper is almost entirely burned. 
     
-    I can only decipher parts of it.
+    I can only read some of it.
 
     There is a first part, written with an impeccable style.    
     """
 
-    # TODO move full letter to generic when needed (drunk part)
-    # letter """
-    # In case you haven't recognized him, the doctor invited this weekend is the same one who treated your wife years ago.
-
-    # She never recovered due to his poor treatment and his withholding of medication for his own benefit.
-
-    # Do what you will with this information.
-    # """
-
-    # letter """
-    # The bastard must pay.
-
-    # Don't hesitate.
-    # """
-
-    letter """
-    *** treated you***
-
-    ** never recovered ***
-
-    Do what you ****.
-    """
+    call drunk_letter_first_part_burned
 
     """
     Below that, there is an addition written in an almost indecipherable style:
     """
 
-    letter """
-    The b*****
-
-    ****** hesitate.
-    """
+    call drunk_letter_second_part_burned
 
     """
     Although I don't understand the meaning behind it, this letter must be important. 
