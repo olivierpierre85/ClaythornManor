@@ -82,7 +82,7 @@ label lad_downstairs_default:
 
         $ lad_details.saved_variables["has_met_maid"] = True
 
-        $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 1
+        $ lad_details.saved_variables["has_try_sneaking_downstairs"] += 1
 
     elif lad_details.saved_variables["has_try_sneaking_downstairs"] == 1: 
 
@@ -110,7 +110,121 @@ label lad_downstairs_default:
         I better be careful. If I am caught here a third time, it will start to really look suspicious.
         """
 
-        $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 2
+        $ lad_details.saved_variables["has_try_sneaking_downstairs"] += 1
+    
+    elif lad_details.saved_variables["has_try_sneaking_downstairs"] == 2:
+
+        """
+        Maybe I am pushing my luck, trying to go downstairs, but I feel like I have to go there.
+        """
+
+        maid """
+        Mister Harring? I though I made myself clear earlier.
+
+        Why are you trying to do here?
+
+        You can't possibly make me believe that you lost yourself again?
+        """ 
+
+        call run_menu(
+            TimedMenu([
+                TimedMenuChoice("I know it sounds ridiculous, but I DID get lost again", lad_downstairs_lost, 5, early_exit = True),
+                TimedMenuChoice("Snzzzzz (Pretend you're sleepwalking)", lad_downstairs_sleepwalk, 5, early_exit = True),
+                TimedMenuChoice("Actually, I just wanted to talk to you (flirt your way out)", lad_downstairs_flirt, 5, early_exit = True),
+            ])
+        )
+
+        # TODO add menu with options => 
+        # -> Flirt with the maid : small menu open for her?
+        # -> Pretend your sleepwalking
+        
+
+        
+        $ lad_details.saved_variables["has_try_sneaking_downstairs"] += 1
+
+    return
+
+label lad_downstairs_lost:
+    # -> Clumsly say your lost, she is not buying it and call for help ! 
+    # The captain grabs you and ?kills you by accident? arrest and lock you in your room
+
+    return
+
+label lad_downstairs_sleepwalk:
+
+    # Pretend you're asleep, it' not working. Same result as before.
+    return
+
+label lad_downstairs_flirt:
+    # Only lad can pull this one off
+    
+    maid """
+    You wanted to see me?
+
+    Why?
+
+    The kitchen is closed, but I can fix you a plate of leftovers if you are still hungry.
+    """
+
+    lad """
+    Oh, uh, no thank you. I'm not really, um, hungry or anything.
+    """
+
+    maid """
+    What brings you here so late then?
+    """
+
+    lad """
+    I was just looking for someone I could talk to.
+    """
+
+    maid """
+    I see. Well, there are many people around if you're looking for company.
+    """
+
+    lad """
+    Yeah, I know. But I don't think anyone is as interesting as you.
+    """
+
+    """
+    Okay that was quite straightforward.
+
+    She seems speechless for a moment.
+
+    When she regains her composure, she appears annoyed.
+    """
+
+    maid """
+    That's kind of you to say. 
+    
+    However, I shouldn't have to tell you that it's inappropriate for you to flirt with me in this manner.
+    """
+
+    lad """
+    Oh, uh, I didn't mean to, um, make you uncomfortable or anything. 
+    
+    I was just looking for a friendly conversation.
+    """
+
+    maid """
+    I afraid I am too busy for this sir.
+
+    I must return to my tasks. 
+    
+    Good night.
+    """
+
+    lad """
+    Of course, Good night.
+    """
+
+    """
+    Alright that was uncomfortable.
+
+    But at least she doesn't think I was sneaking down here, that was a close call.
+
+    Still, I better look somewhere else.
+    """
 
     return
 

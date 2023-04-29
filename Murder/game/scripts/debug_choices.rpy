@@ -62,6 +62,8 @@ label debug_choices:
             $ lad_details.observations.unlock('green_liquid')
             $ doctor_details.unlock_knowledge('addict')
 
+            $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 2
+
             $ lad_details.saved_variables["day2_saw_accident"] = True
             jump lad_day2_evening
 
