@@ -78,8 +78,6 @@ label lad_downstairs_default:
         Of course, thank you.
         """
 
-        # TODO add maid character menu????? TO say what????
-
         $ lad_details.saved_variables["has_met_maid"] = True
 
         $ lad_details.saved_variables["has_try_sneaking_downstairs"] += 1
@@ -123,40 +121,84 @@ label lad_downstairs_default:
 
         Why are you trying to do here?
 
-        You can't possibly make me believe that you lost yourself again?
+        You can't possibly make me believe that you got lost again?
         """ 
 
         call run_menu(
             TimedMenu([
-                TimedMenuChoice("I know it sounds ridiculous, but I DID get lost again", lad_downstairs_lost, 5, early_exit = True),
-                TimedMenuChoice("Snzzzzz (Pretend you're sleepwalking)", lad_downstairs_sleepwalk, 5, early_exit = True),
-                TimedMenuChoice("Actually, I just wanted to talk to you (flirt your way out)", lad_downstairs_flirt, 5, early_exit = True),
+                # TimedMenuChoice("I know it sounds ridiculous, but I DID get lost again", 'lad_downstairs_lost', 5, early_exit = True),
+                TimedMenuChoice("Zzzzzz (Pretend you're sleepwalking)", 'lad_downstairs_sleepwalk', 10, early_exit = True),
+                TimedMenuChoice("Actually, I just wanted to talk to you (flirt your way out)", 'lad_downstairs_flirt', 10, early_exit = True),
             ])
         )
 
-        # TODO add menu with options => 
-        # -> Flirt with the maid : small menu open for her?
-        # -> Pretend your sleepwalking
-        
-
-        
         $ lad_details.saved_variables["has_try_sneaking_downstairs"] += 1
 
     return
 
 label lad_downstairs_lost:
-    # -> Clumsly say your lost, she is not buying it and call for help ! 
-    # The captain grabs you and ?kills you by accident? arrest and lock you in your room
+    # TODO. complicated arc with dead ending:
+    # Captain/butler overheard discussion with maid, you are locked to your room for the night
+    # over the night, somebody opens your door? who? psychic? nurse?
+    # But when the captain sees you, he is scared and shot you?
+
+    lad """
+    I am really sorry. This house too big.
+
+    I was on my way to the billiard room and I don't know how I ended up here.    
+    """
 
     return
 
 label lad_downstairs_sleepwalk:
 
-    # Pretend you're asleep, it' not working. Same result as before.
+    play sound snoring_long
+
+    """
+    I keep staring in front of me pretending not to have heard her.
+
+    I add a realistic snoring to sell the trick.
+
+    She looks at me, confused.
+
+    She hesitates, uncertain of what to do.
+    """
+
+    maid """
+    Sir, are you well?
+
+    Are you sleeping?
+    """
+
+    """
+    I keep saying nothing a slowly moves back up the stairs.
+
+    She doesn't follow me.
+
+    I think I am in the clear.
+    """
+
+    maid """
+    I know you are not asleep.
+
+    First your snore is obviously fake.
+
+    Second you are still fully clothed.
+    """
+
+    """
+    I can't break character.
+
+    I need to commit to the end, so I ignore her and keep moving up the stairs.
+
+    Once I reach the main floor, I look for somewhere else to go.
+    """
+
+    stop sound
+
     return
 
 label lad_downstairs_flirt:
-    # Only lad can pull this one off
     
     maid """
     You wanted to see me?
@@ -223,7 +265,7 @@ label lad_downstairs_flirt:
 
     But at least she doesn't think I was sneaking down here, that was a close call.
 
-    Still, I better look somewhere else.
+    Still, I better go look somewhere else.
     """
 
     return
