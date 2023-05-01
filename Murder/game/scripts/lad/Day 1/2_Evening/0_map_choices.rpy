@@ -66,7 +66,7 @@ label lad_day1_evening_portrait_gallery:
 label lad_bedroom_stay_away:
 
     """
-    Should try to enter anyway?
+    Should I try to enter anyway?
 
     No, that's probably a bad idea.
     """

@@ -30,16 +30,21 @@ label lad_day2_evening_library:
     call lad_library_default
     return
 
-# label lad_day2_evening_billiard_room:
-#     call lad_billiard_room_default
-#     return
-
 label lad_day2_evening_dining_room:
     call lad_dining_room_default
     return
 
 label lad_day2_evening_garden:
-    call lad_garden_default
+    
+    $ change_room('great_hall')
+    
+    """
+    I open the door to go to the garden.
+
+    But after a quick glance outside, I realize it's pitch black.
+
+    I don't think I will be able to do anything there at this hour.
+    """
     return
 
 label lad_day2_evening_entrance_hall:
@@ -48,6 +53,10 @@ label lad_day2_evening_entrance_hall:
 
 label lad_day2_evening_portrait_gallery:
     call lad_portrait_gallery_default
+    return
+
+label lad_day2_evening_tea_room:
+    call lad_tea_room_default
     return
 
 # Bedroom

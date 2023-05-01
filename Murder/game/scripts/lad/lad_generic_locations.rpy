@@ -31,7 +31,6 @@ label lad_library_default:
         No reason to look further.
         """
 
-
     return
 
 label lad_attic_default:
@@ -195,6 +194,8 @@ label lad_downstairs_sleepwalk:
     """
 
     stop sound
+
+    # TODO ALSO get caught here?
 
     return
 
