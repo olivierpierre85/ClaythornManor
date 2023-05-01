@@ -122,7 +122,6 @@ label lad_config_map:
                 'lad_day2_broken_room', 
                 20, 
                 room = 'broken_room',
-                condition = condition_saturday_hunt + " or " + condition_saturday_evening
             )
         ], is_map = True)
         # -------------------------
@@ -174,7 +173,21 @@ label lad_config_map:
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
+                'lad_day2_broken_room', 
+                20, 
+                room = 'broken_room',
+                condition="lad_details.observations.is_unlocked('green_liquid')==False"
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
                 'lad_day2_broken_room_back', 
+                10, 
+                room = 'broken_room',
+                condition="lad_details.observations.is_unlocked('green_liquid')"
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'lad_day2_broken_room_back_for_drink', 
                 10, 
                 room = 'broken_room',
                 condition = 'lad_details.saved_variables["day2_evening_taste_from_flask"]'

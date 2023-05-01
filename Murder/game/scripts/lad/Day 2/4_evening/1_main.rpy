@@ -184,23 +184,30 @@ label lad_day2_broken_room_back:
     $ change_room('broken_room')
 
     """ 
-    My conversation with Sushil made me think.
+    Even though I've already been here, I can't shake the feeling that I should check the room again. 
 
-    Maybe I should try to drink from the flask.
+    But everything looks exactly the same as before.
 
-    At least I would now for sure if something is not right.
+    I should look elsewhere.
+    """    
 
-    I reach for the flask next to the nightstand.
+    return
 
-    It's empty now.
+label lad_day2_broken_room_back_for_drink:
 
-    All of its contents is lying on the nightstand, and some on the floor.
+    $ change_room('broken_room')
 
-    I could lick some of it.
+    """ 
 
-    But even I am not so low class as this.
-
-    I will just wait for the experts to have an answer.
+    After talking with Sushil, my thoughts began to stir. Should I take a swig from the flask? 
+    
+    It would be the quickest way to know if something's wrong. 
+    
+    As I reach for it next to the nightstand, I find it's empty, its contents spilled on the nightstand and floor. 
+    
+    I briefly consider licking it, but quickly dismiss the idea as too low class, even for me. 
+    
+    Instead, I decide to wait for the experts to provide an answer.
     """    
 
     return

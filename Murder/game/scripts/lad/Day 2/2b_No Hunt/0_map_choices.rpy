@@ -146,13 +146,13 @@ label lad_day2_no_hunt_doctor_room:
 
     return
 
-# Nurse
 label lad_day2_no_hunt_doctor_room_enter:
     # May knows whose room it is so lock it to avoid weird dialog for now
     call lad_day2_no_hunt_default_room_locked
 
     return
 
+# Nurse
 label lad_day2_no_hunt_nurse_room:
 
     call lad_bedroom_default

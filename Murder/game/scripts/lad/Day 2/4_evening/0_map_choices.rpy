@@ -59,159 +59,99 @@ label lad_day2_evening_tea_room:
     call lad_tea_room_default
     return
 
-# Bedroom
-label lad_day2_evening_bedroom_try_enter(enter_result, enter_duration=5):
+# Bedrooms
+label lad_bedroom_stay_away_day2:
 
-    python:
-        enter_text_list = [
-            "Let's go in, what's the worst that could happen?",
-            "It won't hurt to give it a try. Let's go in and find out.",
-            "Let's enter and see what happens, it can't be that bad.",
-            "What's the harm in entering? Let's go!",
-            "Come on, let's go inside. What's the worst that could go wrong?",
-            "Shall we enter? What's the worst that could occur?"
-        ]
-
-        no_enter_text_list= [
-            "I definitely shouldn't enter, that would be reckless!",
-            "I shouldn't go in, that's too dangerous!",
-            "I'd better not enter, it could be risky.",
-            "That's a bad idea, I shouldn't go inside.",
-            "I don't want to take unnecessary risks, I shouldn't go in.",
-            "It's not worth the danger, I'm not going in."
-        ]
-    
-        enter_text = enter_text_list[lad_details.saved_variables['day2_nohunt_bedroom_tries']]
-        no_enter_text = no_enter_text_list[lad_details.saved_variables['day2_nohunt_bedroom_tries']]
-        
-    if lad_details.saved_variables['day2_nohunt_bedroom_tries'] == 0:
-
-        """
-        Most people are out for the hunt, so I guess I could try to enter the room anyway.
-
-        But it won't look good if I am caught.
-
-        Why should I do?
-        """
-
-        $ lad_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
-
-    else:
-
-        """
-        There seems to be nobody here as well.
-        """
-
-        $ lad_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
-
-    call run_menu(
-        TimedMenu([
-            TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit = True),
-            TimedMenuChoice(no_enter_text, 'lad_day2_evening_default_room_no_enter', enter_duration, early_exit = True),
-        ])
-    )
-
-    return
-
-label lad_day2_evening_default_room_no_enter:
-    
     """
-    It's better not to enter this room for now.
+    Should I try to enter anyway?
+
+    No, that's probably a bad idea.
+
+    Everyone is in the house now, so that would too risky.
     """
-
-    return
-
-label lad_day2_evening_default_room_locked:
     
-    """
-    I try to push the door opened.
-
-    It's locked.
-    """
-
     return
 
-# Psychic
-# label lad_day2_evening_psychic_room:
-    
-#     call lad_bedroom_default
-
-#     call lad_day2_evening_bedroom_try_enter('lad_day2_evening_psychic_room_enter')
-
-#     return
-
-label lad_day2_evening_psychic_room_enter:
-    # May knows whose room it is so lock it to avoid weird dialog for now
-    call lad_day2_evening_default_room_locked
-
-    return
-
-# Doctor
-label lad_day2_evening_doctor_room:
-
-    call lad_bedroom_default
-
-    call lad_day2_evening_bedroom_try_enter('lad_day2_evening_doctor_room_enter')
-
-    return
 
 # Nurse
-label lad_day2_evening_doctor_room_enter:
-    # May knows whose room it is so lock it to avoid weird dialog for now
-    call lad_day2_evening_default_room_locked
-
-    return
-
 label lad_day2_evening_nurse_room:
 
-    call lad_bedroom_default
+    $ change_room("bedrooms_hallway")
 
-    call lad_day2_evening_bedroom_try_enter('lad_day2_evening_nurse_room_enter')
+    play sound door_knock
+    
+    """
+    I knock on the door.
 
-    return
+    A low voice answers.
+    """
 
-label lad_day2_evening_nurse_room_enter:
+    nurse """
+    Yes? What is it?
+    """
+    
+    $ unlock_map('nurse_room')
 
-    call lad_day2_evening_default_room_locked
+    lad """
+    Miss Marsh, it's Ted Harring.
+
+    I was wondering if we could talk.
+    """
+
+    nurse """
+    It's incredibly late mister Harring.
+
+    Can't it wait in the morning?
+    """
+
+    lad """
+    Yes of course, sorry for disturbing you.
+    """
 
     return
 
 # Captain
 label lad_day2_evening_captain_room:
-
+    # In the billiard room
     call lad_bedroom_default
 
-    call lad_day2_evening_bedroom_try_enter('lad_day2_evening_captain_room_enter', enter_duration=20)
+    call lad_bedroom_stay_away_day2
 
     return
 
 # Host
 label lad_day2_evening_host_room:
-
+    # Preparing to leave
     call lad_bedroom_default
 
-    call lad_day2_evening_bedroom_try_enter('lad_day2_evening_host_room_enter')
-
-    return
-
-label lad_day2_evening_host_room_enter:
-    
-    call lad_day2_evening_default_room_locked
+    call lad_bedroom_stay_away_day2
 
     return
 
 # Drunk
 label lad_day2_evening_drunk_room:
 
-    call lad_bedroom_default
+    $ change_room("bedrooms_hallway")
+
+    play sound door_knock
+    
+    """
+    I knock on the door.
+    """
+
+    drunk """
+    Grrr, Mrrrr, Errrr
+    """
 
     """
-    After knocking, the door slightly opens.
+    I can hear Samuel Manning's voice, but it's incoherent and he's mostly just moaning
 
-    It was not even closed.
+    It's pretty clear that he's blind drunk.
+
+    I know that the door is closed, so no point in trying to enter.
     """
 
-    call lad_day2_evening_bedroom_try_enter('lad_day2_evening_drunk_room_enter', enter_duration=20)
+    $ unlock_map('drunk_room')
 
     return
 
