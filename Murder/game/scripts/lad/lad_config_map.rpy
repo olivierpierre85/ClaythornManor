@@ -197,91 +197,78 @@ label lad_config_map:
         # -------------------------
         # Sunday Search
         # -------------------------
-        lad_map_menu = TimedMenu([
-
+        lad_day3_morning_map_menu = TimedMenu([
             TimedMenuChoice(
                 default_room_text('lad_room'), 
                 'lad_day3_morning_lad_room',
                 10,
-                room = 'lad_room',
-                condition = condition_sunday
+                room = 'lad_room'
             ),
             TimedMenuChoice(
                 default_room_text('psychic_room'), 
                 'lad_day3_morning_psychic_room',
                 10,
-                room = 'psychic_room',
-                condition = condition_sunday
+                room = 'psychic_room'
             ),
             TimedMenuChoice(
                 default_room_text('drunk_room'), 
                 'lad_day3_morning_drunk_room',
                 10,
-                room = 'drunk_room',
-                condition = condition_sunday
+                room = 'drunk_room'
             ),
             TimedMenuChoice(
                 default_room_text('doctor_room'), 
                 'lad_day3_morning_doctor_room',
                 10,
-                room = 'doctor_room',
-                condition = condition_sunday
+                room = 'doctor_room'
             ),
             TimedMenuChoice(
                 default_room_text('broken_room'), 
                 'lad_day3_morning_broken_room',
                 10,
-                room = 'broken_room',
-                condition = condition_sunday
+                room = 'broken_room'
             ),
             TimedMenuChoice(
                 default_room_text('captain_room'), 
                 'lad_day3_morning_captain_room',
                 10,
-                room = 'captain_room',
-                condition = condition_sunday
+                room = 'captain_room'
             ),
             TimedMenuChoice(
                 default_room_text('host_room'), 
                 'lad_day3_morning_host_room', 
                 20, 
-                room = 'host_room',
-                condition = condition_sunday
+                room = 'host_room'
             ),
             TimedMenuChoice(
                 default_room_text('nurse_room'), 
                 'lad_day3_morning_nurse_room', 
                 20, 
-                room = 'nurse_room',
-                condition = condition_sunday
+                room = 'nurse_room'
             ),                  
             TimedMenuChoice(
                 default_room_text('kitchen'), 
                 'lad_day3_morning_kitchen', 
                 10, 
-                room = 'kitchen',
-                condition = condition_sunday
+                room = 'kitchen'
             ),
             TimedMenuChoice(
                 default_room_text('scullery'), 
                 'lad_day3_morning_scullery', 
                 10, 
-                room = 'scullery',
-                condition = condition_sunday
+                room = 'scullery'
             ),
             TimedMenuChoice(
                 default_room_text('garage'), 
                 'lad_day3_morning_garage', 
                 10, 
-                room = 'garage',
-                condition = condition_sunday
+                room = 'garage'
             ),
             TimedMenuChoice(
                 default_room_text('gun_room'), 
                 'lad_day3_morning_gun_room', 
                 10, 
-                room = 'gun_room',
-                condition = condition_sunday
+                room = 'gun_room'
             ),
             TimedMenuChoice(
                 'Go wait for Sushil', 
@@ -290,23 +277,6 @@ label lad_config_map:
                 room = 'tea_room', 
                 condition = 'lad_details.saved_variables["day3_morning_captain_found"]'
             ),
-            # -------------------------
-            # Generic choices
-            # -------------------------
-            # TimedMenuChoice(
-            #     default_room_text('library'), 
-            #     'lad_library', 
-            #     20, 
-            #     room = 'library',
-            #     condition = "(not current_day == 'Sunday')"
-            # ),
-            # TimedMenuChoice(
-            #     default_room_text('library'), 
-            #     'lad_library_visited', 
-            #     20, 
-            #     room = 'library',
-            #     condition = "(not current_day == 'Sunday' and lad_details.saved_variables['library_visited'])"
-            # ),
 
         ], is_map = True)
 

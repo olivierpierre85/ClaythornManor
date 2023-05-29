@@ -157,7 +157,7 @@ label lad_day3_morning:
         """
 
         lad """
-        Can't they be still asleep?
+        Couldn't they still be asleep?
         """
 
         psychic """
@@ -208,7 +208,7 @@ label lad_day3_morning:
 
 
 
-    call run_menu(lad_details.saved_variables["map_menu"])
+    call run_menu(lad_details.saved_variables["day3_morning_map_menu"])
 
     call change_time(11,00)
 

@@ -1,3 +1,284 @@
+# Downstairs
+
+label lad_day3_first_downstairs:
+
+    if not lad_details.saved_variables["day3_downstairs_visited"]:
+
+        $ change_room("basement_stairs")
+
+        """
+        I take the stairs to the basement, expecting to be stopped at any moment.
+
+        But there is nobody.
+
+        I can safely explore downstairs now.
+        """
+
+        $ lad_details.saved_variables["day3_downstairs_visited"] = True
+
+    return
+
+
+label lad_day3_morning_kitchen:
+
+    call lad_day3_first_downstairs
+
+    $ change_room('kitchen')
+
+    """
+    I reach the kitchen.
+
+    I guess it's a regular kitchen for a house of that size.
+
+    There are pots and pans laying around.
+    """
+        
+    psychic """
+    You see.
+
+    There is no one here.
+
+    Even though breakfast should be ready soon.
+    """
+
+    lad """
+    Ok I admit that is very strange indeed.
+    """
+
+    """
+    We look around a little but can't find anything of interest.
+    """
+    
+    return
+
+label lad_day3_morning_gun_room:
+
+    call lad_day3_first_downstairs
+
+    $ change_room('gun_room')
+
+    """
+    The gun room is a bit intimidating.
+
+    So much firepower for just one household.
+
+    It's making me uneasy.
+    """
+
+    lad """
+    Nobody is here.
+    """
+
+    psychic """
+    No indeed.
+
+    But it might be useful to get a weapon for protection you don't think?
+    """
+
+    """
+    Well, I don't have a lot of experience with guns.
+
+    It might be a bad idea.
+
+    But on the other hand, I don't know what we might encounter today.
+    """
+
+    call run_menu(TimedMenu([
+        TimedMenuChoice('Sure, I need a gun. It doesn\'t matter that I don\'know how to use it', 'lad_day3_take_gun', early_exit=True),
+        TimedMenuChoice('I would rather not. I could hurt myself.', 'lad_day3_no_gun', early_exit=True), 
+    ]))
+
+    return
+
+label lad_day3_take_gun:
+
+    lad """
+    You are right.
+
+    We better get something to defend ourselves.
+    """
+
+    """
+    Hunting rifles are a bit too large.
+
+    But I spot a revolver that fits my pocket.
+    """
+
+    lad """
+    Alright, I'll take this with me.
+
+    But there are no bullets in it.
+    """
+
+    psychic """
+    Sometimes, bullets are being kept separated from the guns.
+
+    It makes it less likely to have an accident.
+    """
+
+    lad """
+    Where could they be then?
+    """
+
+    psychic """
+    No idea.
+
+    But even empty, the gun can still scare away someone.
+    """
+
+    """
+    I guess.
+
+    But it's not very reassuring.
+    """
+
+    $ lad_details.objects.unlock('gun')
+
+    return
+
+label lad_day3_no_gun:
+
+    lad """
+    No I don't think so.
+
+    We might end up hurting ourselves.
+    """
+
+    psychic """
+    Alright, if that is what you want.
+    """
+
+    return
+
+label lad_day3_morning_scullery:
+
+    call lad_day3_first_downstairs
+
+    $ change_room('scullery')
+
+    """
+    Wait, what the hell is a scullery?
+    """
+
+    lad """
+    Do you know what room this is?
+    """
+
+    psychic """
+    The scullery.
+
+    That's mainly where they wash the dishes.
+
+    If you look down the sink full, there are a lot of dirty dishes.
+    
+    It seems nobody cleaned after supper yesterday.
+    """
+
+    """
+    Right.
+
+    It's empty anyway, no need to linger here.
+    """
+
+    return
+
+
+label lad_day3_morning_garage:
+
+    call lad_day3_first_downstairs
+
+    $ change_room('garage')
+
+    """
+    The garage.
+
+    That's where lady Claythorn car should be.
+
+    But instead there is only parts of other cars and an old model in a shabby state.
+    """
+
+    lad """
+    Did you come here in this car?
+    """
+
+    psychic """
+    No, of course not.
+    
+    Lady Claythorn's chauffeur drove us here in a Rolls Royce.
+
+    Not in this old thing.
+    """
+
+    lad """
+    Yeah me too.
+    """
+
+    lad """
+    But if everyone has left, we might need it if we want to reach the next town.
+    """
+
+    psychic """
+    Right. But do you know how to drive that?
+
+    Because I sure can't.
+    """
+
+    $ psychic_details.unlock_knowledge('drive')
+
+    lad """
+    Not really, no.
+
+    I never learn how to drive.
+    """
+
+    """
+    It's not like I could afford a car anyway.
+    """
+
+    $ lad_details.unlock_knowledge('drive')
+
+    $ lad_details.saved_variables["day3_seen_car"] = True
+
+    return
+
+
+# First Floor
+label lad_day3_morning_library:
+    call lad_library_default
+    return
+
+label lad_day3_morning_dining_room:
+    call lad_dining_room_default
+    return
+
+label lad_day3_morning_garden:
+
+    $ change_room('manor_garden')
+    
+    """
+    We go out into the garden to check.
+
+    But there is no trace of anyone.
+
+    Lady Claythorn car is not there either.
+    """
+
+    return
+
+
+label lad_day3_morning_entrance_hall:
+    call lad_entrance_hall_default
+    return
+
+label lad_day3_morning_portrait_gallery:
+    call lad_portrait_gallery_default
+    return
+
+label lad_day3_morning_tea_room:
+    call lad_tea_room_default
+    return
+
+# Bedrooms
 label lad_day3_morning_lad_room:
 
     """
@@ -328,4 +609,24 @@ label lad_day3_morning_broken_room:
     No need to stay longer.
     """
 
+    return
+
+
+# 
+# Attic
+# 
+label lad_day3_morning_storage:
+    call lad_storage_default
+    return
+
+label lad_day3_morning_males_room:
+    call lad_males_room_default
+    return
+
+label lad_day3_morning_females_room:
+    call lad_females_room_default
+    return
+
+label lad_day3_morning_butler_room:
+    call lad_butler_room_default
     return

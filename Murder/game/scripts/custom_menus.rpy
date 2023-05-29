@@ -149,7 +149,8 @@ init -1 python:
                             selected_choice_i = idx
                     # LEGACY, normally not needed?
                     if not selected_choice:
-                        selected_choice = TimedMenuChoice('FILLER CHOICE', current_character.text_id + "_" +room_id + '_default', 5)
+
+                        selected_choice = TimedMenuChoice('FILLER CHOICE', current_character.text_id + "_" +room_id + '_defaultERROR', 5)
                         self.default_visited.append(room_id)
                         selected_choice_i = -1
                 else:
