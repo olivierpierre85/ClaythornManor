@@ -198,6 +198,13 @@ label lad_config_map:
         # Sunday Search
         # -------------------------
         lad_day3_morning_map_menu = TimedMenu([
+            TimedMenuChoice(default_room_text('library'), 'lad_day3_morning_library', 10, room='library'),
+            TimedMenuChoice(default_room_text('tea_room'), 'lad_day3_morning_tea_room', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'lad_day3_morning_dining_room', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('garden'), 'lad_day3_morning_garden', 10, room='garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day3_morning_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('billiard_room'), 'lad_day3_morning_billiard_room', 10, room='billiard_room'),
             TimedMenuChoice(
                 default_room_text('lad_room'), 
                 'lad_day3_morning_lad_room',

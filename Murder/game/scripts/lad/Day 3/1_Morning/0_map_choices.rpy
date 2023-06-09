@@ -1,5 +1,4 @@
 # Downstairs
-
 label lad_day3_first_downstairs:
 
     if not lad_details.saved_variables["day3_downstairs_visited"]:
@@ -244,11 +243,33 @@ label lad_day3_morning_garage:
 
 # First Floor
 label lad_day3_morning_library:
-    call lad_library_default
+
+    $ change_room("library")
+    
+    """
+    We enter the small library and found it empty.
+
+    There is no room for anyone to hide in here.
+
+    Let's move on.
+    """
+    
     return
 
 label lad_day3_morning_dining_room:
-    call lad_dining_room_default
+
+    $ change_room("dining_room")
+
+    lad """
+    Nobody seems to be here.
+    """
+
+    psychic """
+    And the table is not set for breakfast either.
+
+    That's not normal.
+    """
+
     return
 
 label lad_day3_morning_garden:
@@ -256,26 +277,147 @@ label lad_day3_morning_garden:
     $ change_room('manor_garden')
     
     """
-    We go out into the garden to check.
+    We go out to explore the garden.
 
     But there is no trace of anyone.
 
     Lady Claythorn car is not there either.
+
+    I try to shout to attract attention.
+    """
+
+    lad """
+    HELLO ! Is anyone here ?
+
+    HELLO !!
+    """
+
+    """
+    No response.
+    """
+
+    psychic """
+    I don't think we need to break our lungs.
+
+    If someone is here we will find them.
+    """
+
+    """
+    Oh, was shouting not appropriate ?
+
+    I guess she will always think about decorum, no matter the situation.
+
+    Let's go back inside then.
     """
 
     return
 
 
 label lad_day3_morning_entrance_hall:
-    call lad_entrance_hall_default
+
+    $ change_room("great_hall")
+    
+    """
+    The entrance hall is usually the heart of the house.
+
+    But there is no any activity today.    
+    """
+
     return
 
 label lad_day3_morning_portrait_gallery:
-    call lad_portrait_gallery_default
+    
+    $ change_room("portrait_gallery")
+
+    """
+    The creepy portrait gallery.
+
+    The paintings seem to be looking at me.
+
+    But besides them, no one in here.
+    """
+
     return
 
 label lad_day3_morning_tea_room:
-    call lad_tea_room_default
+
+    $ change_room("tea_room")
+    
+    """
+    Here I am back in the first room I visited in the manor.
+
+    There is nothing left of the liveliness of that first day.
+
+    Now it stands silent and empty.
+    """
+
+    psychic """
+    No one is in here.
+
+    Let's look somewhere else.
+    """
+
+    lad """
+    Right, of course
+    """
+    
+    return
+
+label lad_day3_morning_billiard_room:
+
+    $ change_room("billiard_room")
+    
+    """
+    The billiard room is empty.
+
+    But the drinks are still there.
+
+    Maybe I should have a drink to calm down.
+    """
+
+    psychic """
+    Mister Harring, you are not thinking of drinking at this hour do you?
+    """
+
+    if lad_details.saved_variables["day1_drunk"] and lad_details.saved_variables["day2_drunk"]:
+        
+        lad """
+        I think a bit of sherry would do us good.
+
+        You know,... to settle our nerves.
+
+        Don't you want one?
+        """
+
+        psychic """
+        Certainly not!
+        """
+
+        lad """
+        Alright suits yourself.
+        """
+
+        """
+        She gives me a stare full of anger as I pulling myself a drink.
+
+        I don't want to drink it too fast, so I take it with me.
+
+        Now I will be more relaxed for our exploration.
+        """
+
+        # TODO achievement "Biggest drunkard" "You drank every occasion you had"
+    
+    else:
+        lad """
+        Hum, no of course not.
+        """
+
+        """
+        It's probably wiser anyway.
+
+        Let's explore somewhere else
+        """
+    
     return
 
 # Bedrooms
