@@ -207,41 +207,75 @@ label lad_day3_morning:
         call change_time(10,15)
 
 
-
     call run_menu(lad_details.saved_variables["day3_morning_map_menu"])
 
     call change_time(11,00)
 
     $ change_room('tea_room')
 
-    """
-    I don't think we'll find something now.
+    if lad_details.saved_variables["day3_morning_captain_found"]:
 
-    So we settled in the tea room to wait for the captain.
-    """
+        """
+        I don't think we'll find someone now.
 
-    captain """
-    That's unbelievable, but it looks like we are the three remaining living souls in this place.
+        So we settled in the tea room to wait for the captain.
+        """
 
-    Did you find anything?
-    """
+        captain """
+        That's unbelievable, but it looks like we are the three remaining living souls in this place.
+
+        Did you find anything?
+        """
+
+        lad """
+        Nothing.
+
+        There is nobody left it seems.
+
+        Except for the bodies.
+        """
+
+    else:
+
+        """
+        As we were getting discouraged, we settle in the tea room to rest.
+
+        But as we were sitting down, we heard an authoritative voice, shouting from outside the room.
+        """
+
+        captain """
+        Is there anyone here?
+        """
+
+        """
+        Without thinking, I answered.
+        """
+
+        lad """
+        Yes, Ted Harring. I'm here, and Amelia Baxter's with me.
+        """
+
+        """
+        Amelia tenses. I realize she thinks I shouldn't have answered so fast.
+
+        But it's too late now.
+
+        Soon enough, Captain Sinha enters the room with us.
+        """
+        
+        call lad_day3_morning_meeting_captain
+
 
     lad """
-    Nothing.
-
-    There is nobody left it seems.
-
-    Except for the bodies.
-
     Did you check on Samuel Manning by the way?
 
     You are the only one who has the key to its room.
     """
 
     captain """
-    No, I figured he could not have moved.
+    No, not yet, I figured he could not have moved.
 
-    But you are right it's better to go and check ourselves.
+    But you are right, it's better to go and check ourselves.
     """
 
     lad """

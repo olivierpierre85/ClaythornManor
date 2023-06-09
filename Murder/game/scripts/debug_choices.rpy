@@ -76,7 +76,7 @@ label debug_choices:
             $ unlock_map('nurse_room')
             $ unlock_map('broken_room')
             $ unlock_map('doctor_room')
-            $ lad_details.saved_variables["day2_believe_psychic"] = True
+            $ lad_details.saved_variables["day2_believe_psychic"] = False
             jump lad_day3_morning
         
         "lad_day3_afternoon":

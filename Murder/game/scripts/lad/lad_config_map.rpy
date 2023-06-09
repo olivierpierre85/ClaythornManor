@@ -195,7 +195,7 @@ label lad_config_map:
         ], is_map = True)    
 
         # -------------------------
-        # Sunday Search
+        # Sunday Search MAX 210 !
         # -------------------------
         lad_day3_morning_map_menu = TimedMenu([
             TimedMenuChoice(default_room_text('library'), 'lad_day3_morning_library', 10, room='library'),

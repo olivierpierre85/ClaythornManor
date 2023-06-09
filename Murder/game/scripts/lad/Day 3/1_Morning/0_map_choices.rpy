@@ -312,6 +312,43 @@ label lad_day3_morning_garden:
 
     return
 
+label lad_day3_morning_meeting_captain:
+
+    captain """
+    At last, living, breathing souls.
+
+    I was starting to feel like I was in a ghost house.
+    """
+
+    psychic """
+    Same here, you are the first person we've bumped into today too.
+    """
+
+    lad """
+    Do you have a clue about what's going on?
+    """
+
+    captain """
+    Nothing solid. All I know is I don't like it.
+    
+    People don't just up and leave their homes for no reason.
+    """
+
+    psychic """
+    They sure don't.
+    """
+
+    captain """
+    And then there's the matter of the suspicious deaths.
+
+    I could have shrugged them off as bad luck yesterday, but now... now I'm not so sure.
+    """
+
+    """
+    The conversation hangs in the air, a heavy silence stretching between us.
+    """
+
+    return
 
 label lad_day3_morning_entrance_hall:
 
@@ -320,8 +357,72 @@ label lad_day3_morning_entrance_hall:
     """
     The entrance hall is usually the heart of the house.
 
-    But there is no any activity today.    
+    But there is no any activity today.
+
+    Just in case, I try to call for someone.
     """
+
+    lad """
+    Is there anyone here?
+    """
+
+    """
+    I didn't really expect an answer.
+
+    But an authoritative voice comes from up the stairs.
+    """
+
+    captain """
+    Who goes there?
+    """
+
+    lad """
+    It's Ted Harring. I'm down here, and Amelia Baxter's with me.
+    """
+
+    captain """
+    Understood. I'm making my way down.
+    """
+
+    """
+    Soon enough, Captain Sinha steps into view, descending the staircase to join us on the ground floor.
+    """
+
+    call lad_day3_morning_meeting_captain
+
+    psychic """
+    Staying put isn't going to shed any light on this,
+    
+    We need to keep exploring the house.
+    """
+
+    captain """
+    Agreed. Now should we keep looking together?
+    """
+
+    psychic """
+    Thank you, but... maybe it would be better to split up. 
+    
+    We'd cover more ground that way.
+    """
+
+    """
+    Amelia seemed nervous when she answered.
+    """
+
+    captain """
+    Makes sense. Let's venture on our own and meet up later. 
+
+    How about the tea room?
+    """
+
+    psychic """
+    That's a good spot.
+
+    See you there.
+    """
+
+    $ lad_details.saved_variables["day3_morning_captain_found"] = True
 
     return
 
@@ -499,95 +600,26 @@ label lad_day3_morning_captain_room:
     play sound door_knock
 
     lad """
-    Is there someone in there?
+    No answers.
     """
 
-    captain """
-    Yes, what is it?
+    """
+    Before I could say anything, Amelia was already trying to open it.
+    """
+
+    play sound door_rattling
+
+    psychic """
+    It's closed.
+
+    I believe it's captain sinha room.
     """
 
     $ unlock_map('captain_room')
 
-    lad """
-    It's Ted Harring. I am here with Amelia Baxter.
-
-    We would like to talk to you.
-    """
-
-    captain """
-    Alright come on in.
-    """
-
-    $ change_room('captain_room')
-
-    """
-    We enter the bedroom.
-
-    It is very tidy.
-
-    The captain is already dressed.
-
-    He was reading a book sitting on a chair.
-
-    As we enter, he stands up, looking surprised.
-    """
-
-    captain """
-    Well, I was not expecting visitors this early.
-    
-    What can I do for you?
-    """
-
-    # TODO add if depending on the number of rooms already visited, specially the host room
     psychic """
-    We believe something strange is going on.
-
-    You and mister Harring are the only persons I encountered this morning,.
-
-    We don't seem to find any of the servants, nor any other guests so far.
+    But he is obviously not here.
     """
-
-    captain """
-    Now that you mention it, nobody came to tend the fire this morning.
-
-    It's rather unusual.
-
-    But I don't think it is that concerning. There probably is very going explanation.
-    """
-
-    lad """
-    We hope so too. 
-
-    But just in case, we where looking inside the manor for someone to explain us what's happening.
-    """
-
-    captain """
-    I understand. I can come with you if you want.
-    """
-
-    psychic """
-    Thank you but,... maybe,... maybe it's best if we split up.
-
-    We could cover more ground this way.
-    """
-
-    """
-    Amelia seemed nervous when she answered.
-    """
-
-    captain """
-    Good thinking. I'll look on my own, and we can meet later.
-
-    Maybe in the tea room?
-    """
-
-    psychic """
-    That sounds perfect.
-
-    See you then.
-    """
-
-    $ lad_details.saved_variables["day3_morning_captain_found"] = True
 
     return 
 
@@ -598,7 +630,7 @@ label lad_day3_morning_host_room:
     play sound door_knock
 
     psychic """
-    This is Lady Claythorn Room.
+    This is Lady Claythorn's Room.
     """
 
     $ unlock_map('host_room')
@@ -626,7 +658,7 @@ label lad_day3_morning_host_room:
     lad surprised """
     What are you doing? 
 
-    We can't enter like that !
+    We can't enter like that!
     """
 
     """
@@ -663,9 +695,6 @@ label lad_day3_morning_drunk_room:
 
     $ change_room("bedrooms_hallway")
 
-    # # TODO without captain, not possible,
-    # if not lad_details.saved_variables["day3_morning_captain_found"]:
-
     psychic """
     It's Samuel Manning room.
     """
@@ -687,13 +716,6 @@ label lad_day3_morning_drunk_room:
 
     Mister Sinha has the key.
     """
-
-    # else:
-    #     captain """
-    #     Move aside, I am gonna open it.
-    #     """
-
-    #     $ change_room('drunk_room')
 
     return
 
