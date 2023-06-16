@@ -62,8 +62,8 @@ label lad_day1_evening:
     $ time_left = 120
 
     $ current_menu = TimedMenu([
-        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'), # SHould they be keep_alive?
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic')
+        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor', keep_alive = True),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic', keep_alive = True)
     ], image_left = "doctor", image_right = "psychic")
 
     call run_menu(current_menu)
@@ -75,9 +75,9 @@ label lad_day1_evening:
     """
     The dinner is ending.
 
-    The host explain that we can continue to discuss and enjoy drinks in the billiard room. Or for those tired by the journey, we can simply go to bed.
+    The host explains that we can continue to discuss and enjoy drinks in the billiard room, or for those tired by the journey, we can simply go to bed.
 
-    Since I haven't been able to see my room, I better go there first.
+    Since I haven't been able to see my room, I'd better go there first.
 
     I ask the footman to show me the way.
     """
