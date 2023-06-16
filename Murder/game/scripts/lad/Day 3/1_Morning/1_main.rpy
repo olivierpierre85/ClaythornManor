@@ -311,11 +311,11 @@ label lad_day3_morning:
     """
     He opens up the door and we follow him in.
 
-    As I enter the room the captain suddenly tries to stop.
+    As I enter the room the captain suddenly tries to stop us.
     """
 
     captain """
-    No stay there.
+    No, stay there.
 
     Don't enter.
     """

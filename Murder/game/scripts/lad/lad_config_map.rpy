@@ -195,7 +195,7 @@ label lad_config_map:
         ], is_map = True)    
 
         # -------------------------
-        # Sunday Search MAX 210 !
+        # Sunday Search MAX 250 !
         # -------------------------
         lad_day3_morning_map_menu = TimedMenu([
             TimedMenuChoice(default_room_text('library'), 'lad_day3_morning_library', 10, room='library'),
@@ -205,6 +205,10 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day3_morning_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('billiard_room'), 'lad_day3_morning_billiard_room', 10, room='billiard_room'),
+            TimedMenuChoice(default_room_text('storage'), 'lad_day3_morning_storage', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'lad_day3_morning_males_room', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'lad_day3_morning_females_room', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'lad_day3_morning_butler_room', 10, room='butler_room'),
             TimedMenuChoice(
                 default_room_text('lad_room'), 
                 'lad_day3_morning_lad_room',

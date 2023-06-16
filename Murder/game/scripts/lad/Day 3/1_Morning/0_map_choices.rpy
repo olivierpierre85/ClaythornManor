@@ -600,7 +600,9 @@ label lad_day3_morning_captain_room:
     play sound door_knock
 
     lad """
-    No answers.
+    I knock on the door.
+
+    No answer.
     """
 
     """
@@ -612,13 +614,17 @@ label lad_day3_morning_captain_room:
     psychic """
     It's closed.
 
-    I believe it's captain sinha room.
+    I believe it's captain Sinha's room.
     """
 
     $ unlock_map('captain_room')
 
+    lad """
+    He is not here, apparently.
+    """
+
     psychic """
-    But he is obviously not here.
+    Let's look elsewhere then.
     """
 
     return 
@@ -645,20 +651,12 @@ label lad_day3_morning_host_room:
     There is no response.
     """
 
-    # psychic """
-    # I told you she was not there.
-    # """
-
     """
-    Then, she put her on hand on the clutch.
-
-    The door opens.
+    Amelia places her hand on the latch and opens the door.
     """
 
     lad surprised """
-    What are you doing? 
-
-    We can't enter like that!
+    What are you doing? We can't just enter like this!
     """
 
     """
@@ -670,9 +668,9 @@ label lad_day3_morning_host_room:
     $ change_room('host_room')
 
     """
-    It's empty.
-
-    The wardrobe is wide open. There are some clothes on the floor.
+    The room is empty. 
+    
+    The wardrobe is wide open, clothes scattered on the floor.
     """
 
     psychic """
@@ -680,13 +678,13 @@ label lad_day3_morning_host_room:
     """
 
     """
-    We looked for a clue of what happened but found nothing.
+    We search for a clue about what happened, but find nothing.
     """
 
     psychic """
-    Well, she either have left, or she is still hiding somewhere in the manor.
-
-    There is no need to dwell here any longer.
+    Well, she either left or she's still hiding somewhere in the manor. 
+    
+    There's no need to linger here any longer
     """
     
     return 
