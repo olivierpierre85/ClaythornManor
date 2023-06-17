@@ -136,9 +136,10 @@ init -1 python:
                 # print("Selected Choice:" + str(selected_choice))
             elif full_testing_mode:
                 # Take the first option
-                for choice in self.choices:
+                # for choice in self.choices:
                     
-                selected_choice = self.choices[0]
+                #     selected_choice = self.choices[0]
+                pass
             # NORMAL MODE
             else:
                 if current_menu.is_map:

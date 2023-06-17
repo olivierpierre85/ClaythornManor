@@ -303,7 +303,7 @@ label lad_day3_morning_garden:
     """
 
     """
-    Oh, was shouting not appropriate ?
+    Oh, was shouting not appropriate?
 
     I guess she will always think about decorum, no matter the situation.
 

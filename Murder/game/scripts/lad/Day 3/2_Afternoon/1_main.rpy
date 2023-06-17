@@ -150,7 +150,7 @@ label lad_day3_afternoon:
     """
     
     $ lad_day3_escape_menu = TimedMenu([
-        TimedMenuChoice('We could take the old from the garage {{observation}}', 'lad_day3_leave_with_car', condition= 'lad_details.saved_variables["day3_seen_car"]'),
+        TimedMenuChoice('We could take the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition= 'lad_details.saved_variables["day3_seen_car"]'),
         TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', early_exit = True ),
         TimedMenuChoice('Follow Sushil Sinha. Amelia Baxter will {i}probably{/i} be fine on her own', 'lad_day3_escape', early_exit = True)
     ], image_left = "psychic",  image_right = "captain")

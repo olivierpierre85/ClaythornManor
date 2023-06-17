@@ -65,7 +65,7 @@ label lad_introduction:
 
     But still, there is part of me thinking:
 
-    Maybe I never should have come to Claythorn Manor.
+    Maybe I never should have come.
     """
 
     # TODO intro screen, song ...
@@ -108,15 +108,18 @@ label lad_introduction:
 
     footman """
     Yes, I mean,.. no.
-    I am actually her footman. But I also drive people when necessary.
+
+    I am actually her footman. I also drive people when necessary.
     """
 
     lad """
-    Oh. So there is no driver at Claythorn Manor?
+    Oh. The driver must be busy because of all the people coming I guess.
+
+    Do you know how many people were invited this weekend?
     """
 
     footman """
-    Well, ... not that I know of sir.
+    Well, ... I am not sure sir. Half a dozen at least I believe.
 
     But I am sorry, I must concentrate on the road ahead. Lady Claythorn doesn't like it when I am distracted.
     """
