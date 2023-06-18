@@ -34,7 +34,7 @@ label lad_day2_evening_psychic_room:
     You agree that something not right is happening?
     """
 
-    call run_menu(TimedMenu([
+    call run_menu(TimedMenu("lad_day2_evening_psychic_room", [
         TimedMenuChoice('I think you might be right', 'lad_day2_believe_psychic', 10, early_exit = True ),
         TimedMenuChoice('No, you are clearly hallucinating things', 'lad_day2_believe_dont_believe_psychic', early_exit = True)
     ]))

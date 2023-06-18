@@ -124,7 +124,7 @@ label lad_downstairs_default:
         """ 
 
         call run_menu(
-            TimedMenu([
+            TimedMenu("lad_has_try_sneaking_downstairs", [
                 # TimedMenuChoice("I know it sounds ridiculous, but I DID get lost again", 'lad_downstairs_lost', 5, early_exit = True),
                 TimedMenuChoice("Zzzzzz (Pretend you're sleepwalking)", 'lad_downstairs_sleepwalk', 10, early_exit = True),
                 TimedMenuChoice("Actually, I just wanted to talk to you (flirt your way out)", 'lad_downstairs_flirt', 10, early_exit = True),

@@ -15,8 +15,9 @@ label lad_config_map:
         # -------------------------
         # Friday
         # -------------------------
-        lad_day1_evening_map_menu = TimedMenu([
-
+        lad_day1_evening_map_menu = TimedMenu(
+            "lad_day1_evening_map_menu", 
+            [
             # Default values
             TimedMenuChoice(default_room_text('storage'), 'lad_day1_evening_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'lad_day1_evening_males_room', 10, room='males_room'),
@@ -63,7 +64,7 @@ label lad_config_map:
         # -------------------------
         # Saturday, During the Hunt
         # -------------------------        
-        lad_day2_no_hunt_map_menu = TimedMenu([
+        lad_day2_no_hunt_map_menu = TimedMenu("lad_day2_no_hunt_map_menu", [
             TimedMenuChoice(default_room_text('storage'), 'lad_day2_no_hunt_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'lad_day2_no_hunt_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'lad_day2_no_hunt_females_room', 10, room='females_room'),
@@ -127,7 +128,7 @@ label lad_config_map:
         # -------------------------
         # Saturday, Evening
         # -------------------------
-        lad_day2_evening_map_menu = TimedMenu([
+        lad_day2_evening_map_menu = TimedMenu("lad_day2_evening_map_menu", [
             TimedMenuChoice(default_room_text('storage'), 'lad_day2_evening_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'lad_day2_evening_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'lad_day2_evening_females_room', 10, room='females_room'),
@@ -197,7 +198,7 @@ label lad_config_map:
         # -------------------------
         # Sunday Search MAX 250 !
         # -------------------------
-        lad_day3_morning_map_menu = TimedMenu([
+        lad_day3_morning_map_menu = TimedMenu("lad_day3_morning_map_menu", [
             TimedMenuChoice(default_room_text('library'), 'lad_day3_morning_library', 10, room='library'),
             TimedMenuChoice(default_room_text('tea_room'), 'lad_day3_morning_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day3_morning_dining_room', 10, room='dining_room'),

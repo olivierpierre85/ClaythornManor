@@ -70,13 +70,13 @@ label lad_day2_morning:
     """
 
     $ time_left = 30
-
-    $ lad_day1_evening_menu = TimedMenu([
-        TimedMenuChoice('Follow them', 'lad_day2_breakfast_follow', 30, early_exit = True ),
-        TimedMenuChoice('Stay there and finish the most important meal of the day', 'lad_day2_breakfast_eat', 5, early_exit = True)
-    ])
     
-    call run_menu(lad_day1_evening_menu)
+    call run_menu(
+        TimedMenu("lad_day2_morning_follow", [
+            TimedMenuChoice('Follow them', 'lad_day2_breakfast_follow', 30, early_exit = True ),
+            TimedMenuChoice('Stay there and finish the most important meal of the day', 'lad_day2_breakfast_eat', 5, early_exit = True)
+        ])
+    )
 
     call change_time(10,00)
 
@@ -123,13 +123,13 @@ label lad_day2_morning:
     """
 
     $ time_left = TIME_MAX # Trick to avoid problems, todo, find a better way
-
-    $ lad_day2_morning_menu = TimedMenu([
-        TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_hunt', early_exit = True),
-        TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_no_hunt', early_exit = True)
-    ])
     
-    call run_menu(lad_day2_morning_menu)
+    call run_menu(
+        TimedMenu("lad_day2_morning_hunt", [
+            TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_hunt', early_exit = True),
+            TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_no_hunt', early_exit = True)
+        ])
+    )
 
     jump lad_day2_afternoon
 

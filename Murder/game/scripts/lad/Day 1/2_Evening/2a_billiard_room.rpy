@@ -20,7 +20,7 @@ label lad_day1_evening_billiard_room:
         And the butler is silent in a corner near them.
         """
 
-        $ lad_day1_evening_billiard_room_menu = TimedMenu([
+        $ lad_day1_evening_billiard_room_menu = TimedMenu("lad_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_billiard_room_doctor', 10),
             TimedMenuChoice('Approach the large group of people', 'lad_day1_evening_billiard_room_group', 10),
             # TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
@@ -163,7 +163,7 @@ label lad_day1_evening_billiard_room_group:
     If I stay I might be stuck here for a while.
     """
 
-    call run_menu(TimedMenu([
+    call run_menu(TimedMenu("lad_day1_evening_billiard_room_group", [
             TimedMenuChoice('Continue to listen anyway', 'lad_day1_evening_billiard_room_group_part_2', 120, early_exit = True),
             TimedMenuChoice('I would rather do something else', 'lad_day1_evening_billiard_group_cancel', 5, early_exit = True)
         ])

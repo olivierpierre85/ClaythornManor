@@ -15,7 +15,7 @@ label lad_day2_evening_billiard_room:
         """
 
         # TODO add interaction with the butler
-        $ lad_day2_evening_billiard_room_menu = TimedMenu([
+        $ lad_day2_evening_billiard_room_menu = TimedMenu("lad_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain', 20),
             TimedMenuChoice('Talk again to Sushil Sinha', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] == True'),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day2_evening_billiard_room_bar', 10),
@@ -322,7 +322,7 @@ label lad_day2_evening_billiard_room_captain:
     Or you have tangible evidences to believe otherwise?
     """
 
-    $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu([
+    $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu("lad_day2_evening_billiard_room_captain_hypothesis_menu", [
         TimedMenuChoice('I believe Daniel Baldwin was an opium addict {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']" ),
         TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')" ),
         TimedMenuChoice('I think Samuel Manning was given a reason to kill Daniel Baldwin', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10,  condition="lad_details.objects.is_unlocked('burned_letter')"  ),

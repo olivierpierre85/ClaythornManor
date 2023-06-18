@@ -294,7 +294,7 @@ label lad_introduction:
     
     $ time_left = 15
     
-    $ current_menu = TimedMenu([
+    $ current_menu = TimedMenu("lad_introduction", [
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
         TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5), # keep_alive = True, TODO keep alive to allow more choices if leaving by mistakes?
         ], image_left = "drunk", image_right = "psychic")

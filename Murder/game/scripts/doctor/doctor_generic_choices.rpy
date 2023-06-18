@@ -39,9 +39,9 @@ label doctor_generic_background:
 
     Before that I worked a bit everywhere.
 
-    I also served in the war twice. 
+    I also served in the army several times. 
 
-    In the last one of course, but I was also in China during the insurrection.
+    The last one was the worst of course.
     """
 
     $ doctor_details.unlock_knowledge('background')

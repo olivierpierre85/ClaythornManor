@@ -18,7 +18,7 @@ label psychic_day1_evening_billiard_room:
         He is probably boring everyone.
         """
 
-        $ psychic_day1_evening_billiard_room_menu = TimedMenu([
+        $ psychic_day1_evening_billiard_room_menu = TimedMenu("psychic_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Daniel Baldwin', 'psychic_day1_evening_billiard_room_doctor', 10),
             TimedMenuChoice('Suffer an other story by Mister Sinha', 'psychic_day1_evening_billiard_room_group', 120),
             TimedMenuChoice('Go to the bar', 'psychic_day1_evening_billiard_room_bar', 20),

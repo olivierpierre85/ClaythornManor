@@ -124,7 +124,7 @@ label lad_day3_stay:
         """
 
         $ time_left = 1
-        call run_menu( TimedMenu([
+        call run_menu( TimedMenu("lad_day3_stay", [
             TimedMenuChoice('I am being paranoid. Besides I can\'t hold it any longer', 'lad_day3_afternoon_toilet', early_exit = True ),
             TimedMenuChoice('Go back downstairs{{intuition}}', 'lad_day3_afternoon_no_toilet', early_exit = True)
             ])

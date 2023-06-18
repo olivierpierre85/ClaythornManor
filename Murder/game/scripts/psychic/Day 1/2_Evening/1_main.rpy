@@ -63,12 +63,10 @@ label psychic_day1_evening:
 
     $ time_left = 60
 
-    $ current_menu = TimedMenu([
+    call run_menu(TimedMenu("psychic_day1_evening", [
         TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain'),
         TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad')
-    ], image_left = "captain", image_right = "lad")
-
-    call run_menu(current_menu)
+    ], image_left = "captain", image_right = "lad"))
 
     $ stop_music()
 

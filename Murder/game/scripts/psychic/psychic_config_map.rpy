@@ -2,7 +2,7 @@ label psychic_config_map:
     python:        
         # Map choices
 
-        psychic_map_menu = TimedMenu([
+        psychic_map_menu = TimedMenu("psychic_map_menu", [
             # -------------------------
             # Friday
             # -------------------------

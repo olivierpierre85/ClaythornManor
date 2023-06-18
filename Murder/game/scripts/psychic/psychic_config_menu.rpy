@@ -1,7 +1,7 @@
 label psychic_config_menu:
     #---------------------------------------------------------------------
     # DOCTOR
-    $ doctor_generic_menu_psychic = TimedMenu([
+    $ doctor_generic_menu_psychic = TimedMenu("doctor_generic_menu_psychic", [
         TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
         TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
         TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20),
@@ -14,7 +14,7 @@ label psychic_config_menu:
         TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "doctor")
 
-    $ doctor_generic_other_guests_menu_psychic = TimedMenu([
+    $ doctor_generic_other_guests_menu_psychic = TimedMenu("doctor_generic_other_guests_menu_psychic", [
         TimedMenuChoice('What about Samuel Manning?', 'doctor_generic_drunk', 5),
         TimedMenuChoice('I want to talk about something else.', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "doctor")
@@ -23,7 +23,7 @@ label psychic_config_menu:
     #---------------------------------------------------------------------
     # CAPTAIN
     $ condition_captain_origin = "current_character.saved_variables['knows_captain_real_origin']"
-    $ captain_generic_menu_psychic = TimedMenu([
+    $ captain_generic_menu_psychic = TimedMenu("captain_generic_menu_psychic", [
         # In the car ((not really a choice))
         TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', 5),
         TimedMenuChoice('I mean, where are you \"Really\" from?', 'captain_generic_origin_psychic_2', 5 , condition = "current_character.saved_variables['knows_captain_origin']"),
@@ -40,7 +40,7 @@ label psychic_config_menu:
     ], image_right = "captain")
 
 
-    $ captain_generic_other_guests_menu_psychic = TimedMenu([
+    $ captain_generic_other_guests_menu_psychic = TimedMenu("captain_generic_other_guests_menu_psychic", [
         # Friday
         TimedMenuChoice('Ask about Samuel Manning', 'captain_generic_drunk_friday_psychic', 5, condition = condition_friday ),
         TimedMenuChoice('Ask about Lady Claythorn', 'captain_generic_host_friday_psychic', 5, condition = condition_friday),
@@ -55,7 +55,7 @@ label psychic_config_menu:
     #---------------------------------------------------------------------
     # LAD
 
-    $ lad_generic_menu_psychic = TimedMenu([
+    $ lad_generic_menu_psychic = TimedMenu("lad_generic_menu_psychic", [
         TimedMenuChoice('Tell me more about yourself.', 'lad_generic_background_psychic', 15),
         TimedMenuChoice('Why were you invited here?', 'lad_generic_heroic_act_psychic', 20, condition = "psychic_details.saved_variables['knows_lad_background']"),
         TimedMenuChoice('What do you think of this place?', 'lad_generic_manor', 10),
@@ -68,7 +68,7 @@ label psychic_config_menu:
         TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "lad")
 
-    $ lad_generic_other_guests_menu_psychic = TimedMenu([
+    $ lad_generic_other_guests_menu_psychic = TimedMenu("lad_generic_other_guests_menu_psychic", [
     #     # Saturday Morning
     #     TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk_saturday_morning', 5, condition = condition_saturday_morning_or_hunt ),
     #     TimedMenuChoice('Ask about Sushil Sinha', 'psychic_generic_captain_saturday_morning', 5, condition = condition_saturday_morning_or_hunt),

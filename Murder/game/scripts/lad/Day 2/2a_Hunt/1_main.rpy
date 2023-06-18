@@ -157,7 +157,7 @@ label lad_day2_hunt:
     Which group should I join?
     """
 
-    $ lad_day2_hunt_menu = TimedMenu([
+    $ lad_day2_hunt_menu = TimedMenu("lad_day2_hunt_menu", [
         TimedMenuChoice('Daniel Baldwin and Samuel Manning', 'lad_day2_hunt_accident', early_exit = True ),
         TimedMenuChoice('Lady Claythorn and Sushil Sinha', 'lad_day2_hunt_noaccident', early_exit = True)
     ], image_left = "drunk", image_left_2 = "doctor", image_right = "host", image_right_2 = "captain")

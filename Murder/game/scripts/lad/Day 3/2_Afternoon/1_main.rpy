@@ -149,7 +149,7 @@ label lad_day3_afternoon:
     What do you think Mister Harring?
     """
     
-    $ lad_day3_escape_menu = TimedMenu([
+    $ lad_day3_escape_menu = TimedMenu("lad_day3_escape_menu", [
         TimedMenuChoice('We could take the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition= 'lad_details.saved_variables["day3_seen_car"]'),
         TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', early_exit = True ),
         TimedMenuChoice('Follow Sushil Sinha. Amelia Baxter will {i}probably{/i} be fine on her own', 'lad_day3_escape', early_exit = True)

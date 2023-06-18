@@ -1,7 +1,7 @@
 label lad_config_menu:
 
     # PSYCHIC
-    $ psychic_generic_menu_lad = TimedMenu([
+    $ psychic_generic_menu_lad = TimedMenu("psychic_generic_menu_lad", [
         TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_friday', 10, condition = condition_friday),
         TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday', 10, condition = condition_saturday),
         TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_sunday', 10, condition = condition_sunday),
@@ -17,7 +17,7 @@ label lad_config_menu:
         TimedMenuChoice('You don\'t have anymore questions for her', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "psychic")
 
-    $ psychic_generic_other_guests_menu_lad = TimedMenu([
+    $ psychic_generic_other_guests_menu_lad = TimedMenu("psychic_generic_other_guests_menu_lad", [
         # Saturday Morning
         TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk_saturday_morning', 10, condition = condition_saturday_morning_or_hunt ),
         TimedMenuChoice('Ask about Sushil Sinha', 'psychic_generic_captain_saturday_morning', 10, condition = condition_saturday_morning_or_hunt),
@@ -35,7 +35,7 @@ label lad_config_menu:
     ], image_right = "psychic")
 
     # DOCTOR
-    $ doctor_generic_menu_lad = TimedMenu([
+    $ doctor_generic_menu_lad = TimedMenu("doctor_generic_menu_lad", [
         TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 10, condition = "current_day == 'Friday'"),
         TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 10, condition = "current_day == 'Saturday'"),
         TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20),
@@ -48,7 +48,7 @@ label lad_config_menu:
         TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "doctor")
 
-    $ doctor_generic_other_guests_menu_lad = TimedMenu([
+    $ doctor_generic_other_guests_menu_lad = TimedMenu("doctor_generic_other_guests_menu_lad", [
         TimedMenuChoice('What about Samuel Manning?', 'doctor_generic_drunk', 10),
         TimedMenuChoice('I want to talk about something else.', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "doctor")

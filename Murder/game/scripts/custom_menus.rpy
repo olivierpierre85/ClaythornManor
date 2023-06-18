@@ -95,7 +95,8 @@ init -1 python:
     # A Timed
     class TimedMenu:
     
-        def __init__(self, choices = [], is_map = False, image_left = None, image_right = None, image_left_2 = None,image_right_2 = None,):
+        def __init__(self, id, choices = [], is_map = False, image_left = None, image_right = None, image_left_2 = None,image_right_2 = None,):
+            self.id = id
             self.choices = choices
             self.is_map = is_map
             self.image_left = image_left

@@ -61,9 +61,9 @@ label lad_day1_evening:
 
     $ time_left = 120
 
-    $ current_menu = TimedMenu([
-        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor', keep_alive = True),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic', keep_alive = True)
+    $ current_menu = TimedMenu("lad_day1_evening", [
+        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic')
     ], image_left = "doctor", image_right = "psychic")
 
     call run_menu(current_menu)
