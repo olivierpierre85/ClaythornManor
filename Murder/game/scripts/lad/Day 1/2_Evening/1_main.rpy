@@ -188,7 +188,9 @@ label lad_day1_evening:
 
     else:
 
-        jump lad_day2_morning
+        # TODO while testing full testing mode force always dying on first day
+        # jump lad_day2_morning
+        jump lad_ending_day1_poisoned
         
     return
 
