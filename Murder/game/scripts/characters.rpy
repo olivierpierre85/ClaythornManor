@@ -186,7 +186,10 @@ label character_selection:
     narrator "Select Your Character"
 
     python:
-        selected_choice = renpy.call_screen('character_selection') 
+        if not full_testing_mode:
+            selected_choice = renpy.call_screen('character_selection') 
+        else:
+            selected_choice = full_testing_mode_char
 
         current_position = 0
 
@@ -195,6 +198,7 @@ label character_selection:
         current_storyline = current_character
 
         current_checkpoint = current_character.get_init_checkpoint()
+        
 
     show screen in_game_menu_btn
     

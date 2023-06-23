@@ -50,11 +50,12 @@ label wait_screen_transition():
 
 # BLACK transition
 label black_screen_transition(display_text, display_text_2 = None):
-    scene black_background with irisin
-    show screen centered_text(display_text, display_text_2)
-    play sound gong
-    pause 3.0
-    hide screen centered_text
+    if not full_testing_mode:
+        scene black_background with irisin
+        show screen centered_text(display_text, display_text_2)
+        play sound gong
+        pause 3.0
+        hide screen centered_text
     return 
 
 

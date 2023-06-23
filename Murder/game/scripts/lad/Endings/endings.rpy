@@ -31,6 +31,11 @@ label ending_generic:
             seen_tutorial_timeline = True
             renpy.call('tutorial_map')
 
+        if full_testing_mode:
+            f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")
+            f.write('You are DEAD - TODO save last death info\n')
+            f.close()
+
     hide screen centered_text
 
     jump character_selection

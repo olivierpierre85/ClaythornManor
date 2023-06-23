@@ -30,9 +30,11 @@ label start():
 
     call init_characters
 
-    
+    $ full_testing_mode = False
+    $ full_testing_mode_char = "lad"
+
     # Debug Menu # TODO remove when prod
-    jump debug_choices
+    # jump debug_choices
 
     # These display lines of dialogue.
     jump character_selection
@@ -48,7 +50,6 @@ label init_technical_variables:
         # Technical Variables
         # TODO delete those in character select AND start again
         record_mode = False
-        full_testing_mode = False
 
         show_minutes_movement = 0
         show_hours_movement = 0

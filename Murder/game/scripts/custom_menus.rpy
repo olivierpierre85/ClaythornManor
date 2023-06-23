@@ -131,16 +131,22 @@ init -1 python:
         def display_choices(self):
 
             # DEBUG MODE
-            if len(test_choices) > 0:
+            if record_mode and len(test_choices) > 0:
                 selected_choice_i = test_choices.pop(0) 
                 selected_choice = self.choices[selected_choice_i]
                 # print("Selected Choice:" + str(selected_choice))
             elif full_testing_mode:
-                # Take the first option
-                # for choice in self.choices:
-                    
-                #     selected_choice = self.choices[0]
-                pass
+                # Take the first option available 
+                # then store it to avoid taking it again
+
+                current_choice = 0
+                (visible_choices_text, visible_choices_i) = self.get_visible_choices()[current_choice]
+                  
+                selected_choice = self.choices[visible_choices_i]
+
+                f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")
+                f.write(str(current_choice) + ',' + ' # ' + selected_choice.text + ", " + selected_choice.redirect+ '\n')
+                f.close()
             # NORMAL MODE
             else:
                 if current_menu.is_map:
