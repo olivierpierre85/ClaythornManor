@@ -15,7 +15,7 @@ label lad_day2_hunt_accident:
     
     Then we decided to stop for luncheon.
 
-    The four of us sat down in a clearing where we are sharing a small picnic.
+    The four of us sat down in a clearing where we are sHarring a small picnic.
 
     Mister Manning is silent, busy drinking from a pocket flask.
 

@@ -146,7 +146,7 @@ label lad_day1_evening_billiard_room_group:
     """
 
     captain """
-    Mister Haring.
+    Mister Harring.
 
     I was just telling everyone here a story.
 
@@ -240,7 +240,7 @@ label lad_day1_evening_billiard_room_doctor:
     """
 
     doctor """
-    Mister Haring.
+    Mister Harring.
     """
 
     call doctor_generic

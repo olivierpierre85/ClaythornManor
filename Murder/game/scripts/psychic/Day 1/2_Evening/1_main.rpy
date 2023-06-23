@@ -58,7 +58,7 @@ label psychic_day1_evening:
     
     On my left is Mister Sinha.
     
-    And Ted Haring is on my right.
+    And Ted Harring is on my right.
     """
 
     $ time_left = 60

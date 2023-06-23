@@ -45,11 +45,11 @@ label lad_day1_evening_garden:
     $ change_room('great_hall')
     
     """
-    I reach the great hall and get ready to open the door. 
-    
-    But the weather is so bad, only someone crazy would go out now.
+    I reach the great hall and prepare to open the door.
 
-    I'd better do something else at the moment.
+    However, the weather is so bad, only a madman would venture out now.
+
+    I'd be better off doing something else at the moment.
     """
 
     return

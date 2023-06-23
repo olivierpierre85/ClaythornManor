@@ -256,7 +256,7 @@ label lad_day1_evening_dinner_doctor:
     """
 
     doctor """
-    Hi mister Haring, I am doctor Daniel Baldwin.
+    Hi mister Harring, I am doctor Daniel Baldwin.
     """
 
     lad """

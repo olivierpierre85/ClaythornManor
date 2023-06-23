@@ -31,7 +31,7 @@ label lad_introduction:
     letter """
     September 5th, [current_year]
 
-    Dear Mister Haring,
+    Dear Mister Harring,
 
     I am pleased to announce that you have been selected as one of the recipients of the \"Exceptional Act of Bravery Award\".
 
@@ -63,12 +63,10 @@ label lad_introduction:
     
     So I feel like I didn't have much choice.
 
-    But still, there is part of me thinking:
+    But still, there is part of me thinking,
 
     Maybe I never should have come.
     """
-
-    # TODO intro screen, song ...
 
     play sound train_stopping
 
@@ -93,7 +91,7 @@ label lad_introduction:
     """
     
     footman """
-    Very well Sir. I can take your luggage and you can follow me into the car.
+    Very well Sir. Let me assist you with your luggage and you can follow me into the car.
     """
 
     """
@@ -133,27 +131,29 @@ label lad_introduction:
     """
 
     """
-    Hum, it looks like I have made him uneasy. Maybe he is not supposed to make small talk with guests.
+    I seem to have made him uneasy. Maybe he's not used to small talk with guests.
 
-    I feel weird because I'm not used to be treated like. It is usually more the other way around.
+    This feels odd, as I'm usually on the other end of this treatment.
 
-    I wonder if I'll manage to blend in with the other folks at the manor.
+    I wonder how well I'll blend in with the other folks at the manor.
 
-    They might be more accustomed to this kind of treatment.
+    They might be used to this kind of service.
 
-    But on the other hand maybe not. Maybe Lady Claythorn gets a kick of helping people like me.
+    But then again, maybe not. Maybe Lady Claythorn likes helping people like me.
 
     We'll see.
 
-    After leaving Aberdeen, we are riding into the country side. Then into what looks like a large forest.
+    After leaving Aberdeen, we move into the countryside, then into what seems like a vast forest.
 
-    About twenty minutes later, there is no trace of human life at all.
+    About twenty minutes later, all signs of human life disappear.
 
-    There is only woods so far as I can see.
+    It's nothing but dense woodland as far as the eye can see.
 
     I am a little an uneasy to find it to be so far from every where else.
 
-    And to make matter worse, a look at the sky tells me that a storm is coming. 
+    The isolation makes me feel a bit uneasy, being so far from everywhere else.
+
+    And the look of an approaching storm in the sky only adds to my discomfort.
     """
 
     $ stop_music()
@@ -163,9 +163,9 @@ label lad_introduction:
     scene manor_exterior
 
     """
-    Finally an impressive mansion appears in the horizon.
+    Eventually, an imposing mansion emerges on the horizon.
 
-    It's bigger than any of the houses I've ever see. 
+    It's bigger than any house I've ever seen.
 
     A big country house. 
 
@@ -177,9 +177,9 @@ label lad_introduction:
     
     What a shame.
 
-    While the driver is unloading my bag from the car, I walk towards the entrance, where a butler opens the door to greet me.
+    As the driver unloads my luggage from the car, I approach the entrance, where a butler opens the door to welcome me.
 
-    I walk into the most impressive hall I ever been in.
+    I step into the most remarkable hall I've ever set foot in.
     """
 
     stop sound
@@ -213,13 +213,13 @@ label lad_introduction:
     """
 
     """
-    Well it's not like I have multiple change of clothes anyway. So I follow him.
+    Well, it's not like I have multiple changes of clothes anyway. So, I follow him.
     """
 
     $ change_room('tea_room')
 
     """
-    As I enter the room, the butler introduces me, almost shouting.
+    As I step into the room, the butler loudly introduces me.
     """
 
     butler """
@@ -227,17 +227,18 @@ label lad_introduction:
     """
 
     """
-    Everyone turns their head to me. 
+    Everyone turns their head towards me.
     
-    Some nods at me, others barely acknowledge me.
+    Some people nod in my direction, while others barely acknowledge my presence.
 
-    From a distance, the butler gives me a short introduction of every guest.
+    From afar, the butler provides me with a brief introduction to each guest.
     """
 
     show captain at truecenter
     butler """ 
-    The older man talking is from India and his name is Sushil Sinha.
+    The older man talking is from India, and his name is Sushil Sinha.
     """
+
     hide captain
 
     show nurse at truecenter
@@ -283,11 +284,11 @@ label lad_introduction:
     """
 
     """
-    After this introduction he leaves me and go stand in the corner of the room.
+    After this introduction, he leaves me and goes to stand in the corner of the room.
 
-    Most of the guests are already in conversation.
-    
-    But Amelia Baxter and Samuel Manning are alone.
+    Most of the guests are already engaged in conversation.
+
+    However, Amelia Baxter and Samuel Manning are alone.
 
     They seem more approachable than the rest.
     """
@@ -309,7 +310,7 @@ label lad_introduction:
     """
 
     butler """
-    Dinner is served. Please follow me to the dining room.
+    Dinner is served. Please, follow me to the dining room.
     """
 
     $ stop_music()
@@ -320,7 +321,7 @@ label lad_introduction:
 label lad_day1_drinks_psychic:
 
     """
-    I am approaching the middle-aged lady.
+    I am approaching the middle-aged woman.
     """
 
     call lad_day1_drinks_psychic_encounter
@@ -333,11 +334,11 @@ label lad_day1_drinks_psychic:
 label lad_day1_drinks_psychic_encounter:
 
     lad """
-    Nice to meet you miss Baxter. I am Ted Haring.
+    Nice to meet you, Miss Baxter. I am Ted Harring.
     """
 
     psychic """
-    Nice to meet you mister Haring.
+    Nice to meet you, Mr. Harring.
     """
 
     return
@@ -345,15 +346,21 @@ label lad_day1_drinks_psychic_encounter:
 label lad_day1_drinks_drunk:
 
     """
-    I am heading toward the older man.
+    I am heading towards the older man.
 
-    He has a glass of whisky on hand. His gaze is empty.
+    He holds a glass of whiskey in his hand. His gaze is empty.
     """
     
-    lad "Hello sir, how are you?"
+    lad """
+    Hello sir, how are you?
+    """
 
-    drunk "(Snore...)"
+    drunk """
+    (Snore...)
+    """
 
-    "He reeks of booze, and is deep asleep. It's useless talking to him."
+    """
+    He reeks of booze, and he is deeply asleep. Talking to him is useless.
+    """
 
     return
