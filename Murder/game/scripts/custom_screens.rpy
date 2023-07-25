@@ -54,7 +54,7 @@ label black_screen_transition(display_text, display_text_2 = None):
         scene black_background with irisin
         show screen centered_text(display_text, display_text_2)
         play sound gong
-        pause 3.0
+        pause 4.0
         hide screen centered_text
     return 
 
@@ -86,15 +86,15 @@ screen centered_text(display_text, display_text_2 = None):
         text display_text:
             xalign 0.5 
             yalign 0.5
-            font gui.name_text_font
-            size gui.name_text_size
+            font gui.transition_top_text_font
+            size gui.transition_top_text_size
         if display_text_2:
             text display_text_2:
                 xalign 0.5 
                 yalign 0.5
                 yoffset 20
-                font gui.name_text_font
-                size gui.name_text_size
+                font gui.transition_bottom_text_font
+                size gui.transition_bottom_text_size
 
 screen in_game_menu_btn:
 

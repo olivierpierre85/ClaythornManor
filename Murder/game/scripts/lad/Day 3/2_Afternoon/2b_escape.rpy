@@ -317,7 +317,7 @@ label lad_day3_escape:
 
         But I can't stop.
 
-        When I found a rythm that's almost comfortable, I keep at it without stopping.
+        When I found a pace that's almost comfortable, I keep at it without stopping.
 
         Occasionally glancing back.
 

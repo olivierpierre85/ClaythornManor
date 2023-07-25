@@ -1,0 +1,175 @@
+
+0, # Talk to Samuel Manning, lad_day1_drinks_drunk
+0, # Talk to Amelia Baxter, lad_day1_drinks_psychic
+0, # What do you think of this weather?, psychic_generic_weather_friday
+0, # Talk to Daniel Baldwin, lad_day1_evening_dinner_doctor
+0, # What do you think of this weather?, doctor_generic_weather_friday
+0, # Tell me more about yourself., doctor_generic_background
+0, # Why were you invited here?, doctor_generic_heroic_act
+0, # What do you think of this place?, doctor_generic_manor
+0, # How old are you?, doctor_generic_age
+0, # What room are you in?, doctor_generic_room
+0, # What do you think of the other guests?, doctor_generic_other_guests_friday
+0, # You don't have anymore questions for him, generic_cancel
+0, # Talk to Amelia Baxter, lad_day1_evening_dinner_psychic
+0, # Tell me more about yourself., psychic_generic_background
+0, # Storage Room, lad_day1_evening_storage
+0, # Male Servants Room, lad_day1_evening_males_room
+0, # Female Servants Room, lad_day1_evening_females_room
+0, # Butler's Room, lad_day1_evening_butler_room
+0, # Edward II Bedroom (doctor), lad_day1_evening_doctor_room
+0, # George I Bedroom (captain), lad_day1_evening_captain_room
+0, # Henry IV Bedroom (Host), lad_day1_evening_host_room
+0, # George IV Bedroom (drunk), lad_day1_evening_drunk_room
+0, # Richard III Bedroom (broken), lad_day1_evening_broken_room
+0, # Talk to Samuel Manning, lad_day1_drinks_drunk
+0, # Talk to Amelia Baxter, lad_day1_drinks_psychic
+0, # What do you think of this weather?, psychic_generic_weather_friday
+0, # Talk to Daniel Baldwin, lad_day1_evening_dinner_doctor
+0, # What do you think of this weather?, doctor_generic_weather_friday
+0, # Tell me more about yourself., doctor_generic_background
+0, # Why were you invited here?, doctor_generic_heroic_act
+0, # What do you think of this place?, doctor_generic_manor
+0, # How old are you?, doctor_generic_age
+0, # What room are you in?, doctor_generic_room
+0, # What do you think of the other guests?, doctor_generic_other_guests_friday
+0, # You don't have anymore questions for him, generic_cancel
+0, # Talk to Amelia Baxter, lad_day1_evening_dinner_psychic
+0, # Tell me more about yourself., psychic_generic_background
+0, # Storage Room, lad_day1_evening_storage
+0, # Male Servants Room, lad_day1_evening_males_room
+0, # Female Servants Room, lad_day1_evening_females_room
+0, # Butler's Room, lad_day1_evening_butler_room
+0, # Edward II Bedroom (doctor), lad_day1_evening_doctor_room
+0, # George I Bedroom (captain), lad_day1_evening_captain_room
+0, # Henry IV Bedroom (Host), lad_day1_evening_host_room
+0, # George IV Bedroom (drunk), lad_day1_evening_drunk_room
+0, # Richard III Bedroom (broken), lad_day1_evening_broken_room
+You are DEAD - TODO save last death info
+0, # Talk to Samuel Manning, lad_day1_drinks_drunk
+0, # Talk to Amelia Baxter, lad_day1_drinks_psychic
+0, # What do you think of this weather?, psychic_generic_weather_friday
+0, # Talk to Daniel Baldwin, lad_day1_evening_dinner_doctor
+0, # What do you think of this weather?, doctor_generic_weather_friday
+0, # Tell me more about yourself., doctor_generic_background
+0, # Why were you invited here?, doctor_generic_heroic_act
+0, # What do you think of this place?, doctor_generic_manor
+0, # How old are you?, doctor_generic_age
+0, # What room are you in?, doctor_generic_room
+0, # What do you think of the other guests?, doctor_generic_other_guests_friday
+0, # You don't have anymore questions for him, generic_cancel
+0, # Talk to Amelia Baxter, lad_day1_evening_dinner_psychic
+0, # Tell me more about yourself., psychic_generic_background
+0, # Storage Room, lad_day1_evening_storage
+0, # Male Servants Room, lad_day1_evening_males_room
+0, # Female Servants Room, lad_day1_evening_females_room
+0, # Butler's Room, lad_day1_evening_butler_room
+0, # Edward II Bedroom (doctor), lad_day1_evening_doctor_room
+0, # George I Bedroom (captain), lad_day1_evening_captain_room
+0, # Henry IV Bedroom (Host), lad_day1_evening_host_room
+0, # George IV Bedroom (drunk), lad_day1_evening_drunk_room
+0, # Richard III Bedroom (broken), lad_day1_evening_broken_room
+0, # Talk to Samuel Manning, lad_day1_drinks_drunk
+0, # Talk to Amelia Baxter, lad_day1_drinks_psychic
+0, # What do you think of this weather?, psychic_generic_weather_friday
+0, # Talk to Daniel Baldwin, lad_day1_evening_dinner_doctor
+0, # What do you think of this weather?, doctor_generic_weather_friday
+0, # Tell me more about yourself., doctor_generic_background
+0, # Why were you invited here?, doctor_generic_heroic_act
+0, # What do you think of this place?, doctor_generic_manor
+0, # How old are you?, doctor_generic_age
+0, # What room are you in?, doctor_generic_room
+0, # What do you think of the other guests?, doctor_generic_other_guests_friday
+0, # You don't have anymore questions for him, generic_cancel
+0, # Talk to Amelia Baxter, lad_day1_evening_dinner_psychic
+0, # Tell me more about yourself., psychic_generic_background
+0, # Storage Room, lad_day1_evening_storage
+0, # Male Servants Room, lad_day1_evening_males_room
+0, # Female Servants Room, lad_day1_evening_females_room
+0, # Butler's Room, lad_day1_evening_butler_room
+0, # Edward II Bedroom (doctor), lad_day1_evening_doctor_room
+0, # George I Bedroom (captain), lad_day1_evening_captain_room
+0, # Talk to Samuel Manning, lad_day1_drinks_drunk
+0, # Talk to Amelia Baxter, lad_day1_drinks_psychic
+0, # What do you think of this weather?, psychic_generic_weather_friday
+0, # Talk to Daniel Baldwin, lad_day1_evening_dinner_doctor
+0, # What do you think of this weather?, doctor_generic_weather_friday
+0, # Tell me more about yourself., doctor_generic_background
+0, # Why were you invited here?, doctor_generic_heroic_act
+0, # What do you think of this place?, doctor_generic_manor
+0, # How old are you?, doctor_generic_age
+0, # What room are you in?, doctor_generic_room
+0, # What do you think of the other guests?, doctor_generic_other_guests_friday
+0, # You don't have anymore questions for him, generic_cancel
+0, # Talk to Amelia Baxter, lad_day1_evening_dinner_psychic
+0, # Tell me more about yourself., psychic_generic_background
+0, # Storage Room, lad_day1_evening_storage
+0, # Male Servants Room, lad_day1_evening_males_room
+0, # Female Servants Room, lad_day1_evening_females_room
+0, # Butler's Room, lad_day1_evening_butler_room
+0, # Edward II Bedroom (doctor), lad_day1_evening_doctor_room
+0, # George I Bedroom (captain), lad_day1_evening_captain_room
+0, # Henry IV Bedroom (Host), lad_day1_evening_host_room
+0, # George IV Bedroom (drunk), lad_day1_evening_drunk_room
+0, # Richard III Bedroom (broken), lad_day1_evening_broken_room
+0, # Talk to Samuel Manning, lad_day1_drinks_drunk
+0, # Talk to Amelia Baxter, lad_day1_drinks_psychic
+0, # What do you think of this weather?, psychic_generic_weather_friday
+0, # Talk to Daniel Baldwin, lad_day1_evening_dinner_doctor
+0, # What do you think of this weather?, doctor_generic_weather_friday
+0, # Tell me more about yourself., doctor_generic_background
+0, # Why were you invited here?, doctor_generic_heroic_act
+0, # What do you think of this place?, doctor_generic_manor
+0, # How old are you?, doctor_generic_age
+0, # What room are you in?, doctor_generic_room
+0, # What do you think of the other guests?, doctor_generic_other_guests_friday
+0, # You don't have anymore questions for him, generic_cancel
+0, # Talk to Amelia Baxter, lad_day1_evening_dinner_psychic
+0, # Tell me more about yourself., psychic_generic_background
+0, # Talk to Samuel Manning, lad_day1_drinks_drunk
+0, # Talk to Amelia Baxter, lad_day1_drinks_psychic
+0, # What do you think of this weather?, psychic_generic_weather_friday
+0, # Talk to Daniel Baldwin, lad_day1_evening_dinner_doctor
+0, # What do you think of this weather?, doctor_generic_weather_friday
+0, # Tell me more about yourself., doctor_generic_background
+0, # Why were you invited here?, doctor_generic_heroic_act
+0, # What do you think of this place?, doctor_generic_manor
+0, # How old are you?, doctor_generic_age
+0, # What room are you in?, doctor_generic_room
+0, # What do you think of the other guests?, doctor_generic_other_guests_friday
+0, # You don't have anymore questions for him, generic_cancel
+0, # Talk to Amelia Baxter, lad_day1_evening_dinner_psychic
+0, # Tell me more about yourself., psychic_generic_background
+0, # Storage Room, lad_day1_evening_storage
+0, # Male Servants Room, lad_day1_evening_males_room
+0, # Female Servants Room, lad_day1_evening_females_room
+0, # Butler's Room, lad_day1_evening_butler_room
+0, # Edward II Bedroom (doctor), lad_day1_evening_doctor_room
+0, # George I Bedroom (captain), lad_day1_evening_captain_room
+0, # Henry IV Bedroom (Host), lad_day1_evening_host_room
+0, # George IV Bedroom (drunk), lad_day1_evening_drunk_room
+0, # Richard III Bedroom (broken), lad_day1_evening_broken_room
+0, # Talk to Samuel Manning, lad_day1_drinks_drunk
+0, # Talk to Amelia Baxter, lad_day1_drinks_psychic
+0, # What do you think of this weather?, psychic_generic_weather_friday
+0, # Talk to Daniel Baldwin, lad_day1_evening_dinner_doctor
+0, # What do you think of this weather?, doctor_generic_weather_friday
+0, # Tell me more about yourself., doctor_generic_background
+0, # Why were you invited here?, doctor_generic_heroic_act
+0, # What do you think of this place?, doctor_generic_manor
+0, # How old are you?, doctor_generic_age
+0, # What room are you in?, doctor_generic_room
+0, # What do you think of the other guests?, doctor_generic_other_guests_friday
+0, # You don't have anymore questions for him, generic_cancel
+0, # Talk to Amelia Baxter, lad_day1_evening_dinner_psychic
+0, # Tell me more about yourself., psychic_generic_background
+0, # Storage Room, lad_day1_evening_storage
+0, # Male Servants Room, lad_day1_evening_males_room
+0, # Female Servants Room, lad_day1_evening_females_room
+0, # Butler's Room, lad_day1_evening_butler_room
+0, # Edward II Bedroom (doctor), lad_day1_evening_doctor_room
+0, # George I Bedroom (captain), lad_day1_evening_captain_room
+0, # Henry IV Bedroom (Host), lad_day1_evening_host_room
+0, # George IV Bedroom (drunk), lad_day1_evening_drunk_room
+0, # Richard III Bedroom (broken), lad_day1_evening_broken_room
+You are DEAD - TODO save last death info

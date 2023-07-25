@@ -83,6 +83,11 @@ define gui.notify_text_size = 24
 ## The size of the game's title.
 define gui.title_text_size = 75
 
+## The size and font of the game's transition text
+define gui.transition_top_text_size = 75
+define gui.transition_bottom_text_size = 180
+define gui.transition_top_text_font = "gui/font/Jost-Light.ttf"
+define gui.transition_bottom_text_font = "gui/font/PlayfairDisplay-Italic-VariableFont_wght.ttf"
 
 ## Main and Game Menus #########################################################
 

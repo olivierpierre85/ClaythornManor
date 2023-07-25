@@ -28,7 +28,7 @@ label tutorial_knowledge:
     
     Once you have acquired this knowledge, you will be able to restart the story from their perspective. 
     
-    While conversing with a character can unlock certain information, some facts can only be revealed at specific points in the story. 
+    While conversing with a character can unlock certain information, some facts can only be revealed at specific moments in the story. 
     
     The \"Characters\" menu gives you an estimation of how much essential information has been unlocked.
     """

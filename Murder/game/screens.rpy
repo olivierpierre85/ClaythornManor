@@ -340,7 +340,7 @@ screen navigation():
             # textbutton _("Objects") action ShowMenu("objects")
             if seen_tutorial_timeline:
                 textbutton _("Progress") action ShowMenu("progress")
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("Log") action ShowMenu("history")
             # textbutton _("About") action ShowMenu("about")
             textbutton _("Help") action ShowMenu("help")
             textbutton _("Options") action ShowMenu("preferences")
