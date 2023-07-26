@@ -264,9 +264,9 @@ label lad_day1_evening_billiard_room_butler:
     """
 
     butler """
-    Of course mister Harring.
+    Of course, Mr. Harring.
 
-    What is it ?
+    What is it?
     """
 
     lad """
@@ -278,23 +278,23 @@ label lad_day1_evening_billiard_room_butler:
     butler """
     I certainly do.
 
-    But I am not sure that I should tell you.
+    But I'm not sure that I should tell you.
 
     That's not very appropriate.
     """
 
     lad """
-    Hum, well, no, it's nothing like that. 
-    
-    I just like to finish the conversation we had before.
+    Hmm, well, no, it's nothing like that. 
 
-    I am sure Miss Baxter won't mind.
+    I'd just like to finish the conversation we had earlier.
+
+    I'm sure Miss Baxter won't mind.
     """
 
     butler """
-    Well, I suppose it's not a big secret which room are whose.
+    Well, I suppose it's not a big secret whose rooms are whose.
 
-    So I might as well tell you.
+    So, I might as well tell you.
 
     She is in the \"George III\" room.
     """
