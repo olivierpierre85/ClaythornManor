@@ -30,8 +30,8 @@ label debug_choices:
             $ test_choices = [0,9,1,12] #SKIP to map menu
             jump lad_day1_evening
         
-        # "lad_day1_evening":
-        #     jump lad_day1_evening
+        "lad_day1_evening":
+            jump lad_day1_evening
 
         # "lad_day2_morning":
         #     jump lad_day2_morning

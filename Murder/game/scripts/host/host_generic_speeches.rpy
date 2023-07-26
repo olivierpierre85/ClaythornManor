@@ -1,24 +1,29 @@
 label host_welcome_speech:
 
-  # TODO add applause somewhere?
   host """ 
-  Welcome every one. I am sorry to have kept you waiting. Now that we are all gather here, I would like again to show you my gratitude.
+  Welcome, everyone. My apologies for keeping you waiting. 
+  
+  Now that we are all gathered here, I would like to express my gratitude once again.
 
-  As you already know, you are all here because of an heroic act you've done in the past. 
+  As you're already aware, you are all here because of the heroic acts you've committed in the past.
 
-  I took notice of what you've done and took upon me to give you a formal thank you.
+  I took notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
 
-  I know the letter inviting you was rather vague, so I will clarify it now.
+  I realize the invitation letter you received was somewhat vague, so allow me to clarify its contents now.
 
-  My first gift to you, is this stay in my manor. You will fully be catered too, with the most refine food expertly prepared by my personal cook.
+  My first gift to you is this stay at my manor. 
+  
+  You will be fully catered to, enjoying the most refined food expertly prepared by my personal chef.
 
-  During the three days we will spend together, we'll also enjoy various activities I am sure you will love.
+  During the three days we will spend together, we'll also partake in various activities which I am sure you will find enjoyable.
 
-  The second gift, is a price of eight thousands pounds to share among yourselves. It's my way to thank people so selfless as to help other people.
+  My second gift is a sum of eight thousand pounds, to be shared among you. 
+  
+  This is my way of thanking those as selfless as yourselves, who help others without thought for reward.
   """
   
   """
-  Our host then sits down on her chair.
+  Following her speech, our host then settled back down in her chair.
   """
 
   return

@@ -7,24 +7,21 @@ label lad_day1_evening_billiard_room:
         $ lad_details.saved_variables["day1_evening_billiard_room_visited"] = True
 
         """
-        Almost everyone I saw at dinner is here.
+        Except for Amelia Baxter, everyone I saw at dinner is in this room.
 
-        Except for Amelia Baxter.
+        I recognize Doctor Baldwin, sitting alone on a chair.
 
-        I recognize Doctor Baldwin sitting on a chair alone.
+        There's also an array of alcohol near the bar.
 
-        There is also a choice of alcohol near the bar.
+        The remainder of the guests are clustered together, with Sushil Sinha leading the conversation.
 
-        The rest of the guests are grouped together. Sushil Sinha is leading the conversation.
-
-        And the butler is silent in a corner near them.
+        The butler stands silently in a corner near them.
         """
 
         $ lad_day1_evening_billiard_room_menu = TimedMenu("lad_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_billiard_room_doctor', 10),
             TimedMenuChoice('Approach the large group of people', 'lad_day1_evening_billiard_room_group', 10),
-            # TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
-            # TimedMenuChoice('Ask the butler about our Lady Claythorn room', 'lad_day1_evening_billiard_room_butler', 20),
+            TimedMenuChoice('Ask the butler about Amelia\'s room', 'lad_day1_evening_billiard_room_butler', 20),
             TimedMenuChoice('Go to the bar to have a drink', 'lad_day1_evening_billiard_room_bar_1', 20),
             TimedMenuChoice('Have another drink', 'lad_day1_evening_billiard_room_bar_2', 20, condition = 'lad_details.saved_variables["day1_drinks"] == 1'),
             TimedMenuChoice('Maybe one last drink', 'lad_day1_evening_billiard_room_bar_3', 120, condition = 'lad_details.saved_variables["day1_drinks"] == 2'),
@@ -104,7 +101,7 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     """
-    Before I could say anything. He reaches down his coat pocket and took a flask out. 
+    Before I could say anything, he reaches into his coat pocket and pulls out a flask.
     
     Then he starts pouring me a glass of what looks like whisky.
     """
@@ -124,7 +121,7 @@ label lad_day1_evening_billiard_room_bar_1:
     $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
 
     broken """
-    Cheers Mister Harring. Now if you don't mind, I'll see what this group is talking about.
+    Cheers, Mister Harring. Now if you don't mind, I'll see what this group is talking about.
     """
 
     """
@@ -136,9 +133,9 @@ label lad_day1_evening_billiard_room_bar_1:
 label lad_day1_evening_billiard_room_group:
 
     """
-    I walk to the main group in the room.
+    I walk toward the main group in the room.
 
-    Thomas Moody, Rosalind Marsh and Lady Claythorn are listening to the older indian man.
+    Thomas Moody, Rosalind Marsh and Lady Claythorn are listening to the older Indian man.
 
     Even the butler, who is standing on the corner next to them looks very interested in what is being said.
 
@@ -160,7 +157,7 @@ label lad_day1_evening_billiard_room_group:
     """
     This appears to be a long story. 
 
-    If I stay I might be stuck here for a while.
+    If I stay, I might be stuck here for a while.
     """
 
     call run_menu(TimedMenu("lad_day1_evening_billiard_room_group", [
@@ -174,7 +171,7 @@ label lad_day1_evening_billiard_room_group:
 label lad_day1_evening_billiard_group_cancel:
 
     """
-    I pretend I hear something coming from the other side of the room and leave the group quietly.
+    I pretend to hear something coming from the other side of the room and quietly leave the group.
     """
 
     return
@@ -188,18 +185,19 @@ label lad_day1_evening_billiard_room_group_part_2:
 
     Why he is living in England?
 
-    It took long enough.
+    That sure took long enough.
     """
 
     return
 
 label lad_day1_evening_billiard_room_bar_2:
+
     """
     I really don't feel comfortable here.
 
     Perhaps another drink will help me relax.
 
-    So I decide to go back to the bar and pour myself a sherry.
+    So, I decide to go back to the bar and pour myself a sherry.
     """
 
     $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
@@ -211,19 +209,19 @@ label lad_day1_evening_billiard_room_bar_3:
     """
     Well, I haven't tried the Port wine yet.
 
-    It's probably better then what I am used to.
+    It's probably better than what I'm used to.
 
-    So I pour myself one.
+    So, I pour myself a glass.
 
     It's exquisite.
 
-    So good that it would be stupid not the drink another one.
+    So good that it would be foolish not to have another one.
 
-    So I did.
+    So I do.
 
-    And another, ...
+    And another...
 
-    And an other, ...
+    And another...
     """
 
     $ lad_details.saved_variables["day1_poisoned"] = False
@@ -251,6 +249,60 @@ label lad_day1_evening_billiard_room_cancel:
     
     """
     I don't feel like staying in this room.
+    """
+
+    return
+
+label lad_day1_evening_billiard_room_butler:
+
+    lad """
+    I approach the butler.
+    """
+
+    lad """
+    Hello, I was wondering if you could help me.
+    """
+
+    butler """
+    Of course mister Harring.
+
+    What is it ?
+    """
+
+    lad """
+    I would like to talk to Miss Baxter.
+
+    Do you know where her room is?
+    """
+
+    butler """
+    I certainly do.
+
+    But I am not sure that I should tell you.
+
+    That's not very appropriate.
+    """
+
+    lad """
+    Hum, well, no, it's nothing like that. 
+    
+    I just like to finish the conversation we had before.
+
+    I am sure Miss Baxter won't mind.
+    """
+
+    butler """
+    Well, I suppose it's not a big secret which room are whose.
+
+    So I might as well tell you.
+
+    She is in the \"George III\" room.
+    """
+
+    $ unlock_map('psychic_room')
+
+    lad """
+    Thank you.
     """
 
     return

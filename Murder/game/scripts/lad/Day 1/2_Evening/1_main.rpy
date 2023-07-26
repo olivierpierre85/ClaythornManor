@@ -26,11 +26,11 @@ label lad_day1_evening:
     $ change_room('dining_room', irisout)
 
     """
-    Everyone sits at a place with their names on them.
+    Everyone takes a seat at the spot labeled with their names.
 
-    While I am examining everyone, Lady Claythorn enters the room. 
-    
-    She takes her place at the table.
+    As I observe each person, Lady Claythorn makes her entrance into the room.
+
+    She proceeds to take her seat at the table.
     """
 
     $ play_music('chill', 2)
@@ -38,23 +38,29 @@ label lad_day1_evening:
     call host_welcome_speech
 
     """
-    After the speech, everyone seems pleased. And a few of the guests started showing their appreciation to the host.
+    After the speech, everyone appeared pleased. 
+    
+    A few of the guests began to express their appreciation to the host.
     """
 
     host """
-    Please no need to thank me. The food will be served, enjoy your meal.
+    Please, there's no need to thank me. 
+    
+    The food will be served shortly. 
+    
+    Enjoy your meal.
     """
 
     """
-    The butler then enters the room, accompany by the footman.
-    
-    They proceed in serving the first dish and pouring drinks to everyone.
-    
-    The mood starts to relax, and the sound of different conversations fills the room.
+    At that moment, the butler entered the room, accompanied by the footman. 
 
-    I turn my attention to the guests next to me.
+    They began to serve the first dish and pour drinks for everyone.
 
-    I am sitting between Amelia Baxter, and Daniel Baldwin.
+    The mood in the room gradually relaxed, and the sound of various conversations filled the space.
+
+    I turned my attention to the guests seated next to me.
+
+    I found myself sitting between Amelia Baxter and Daniel Baldwin.
     """
 
     call change_time(19,00)
@@ -73,11 +79,11 @@ label lad_day1_evening:
     $ stop_music
 
     """
-    The dinner is ending.
+    The dinner is coming to an end.
 
-    The host explains that we can continue to discuss and enjoy drinks in the billiard room, or for those tired by the journey, we can simply go to bed.
+    The host explains that we can continue our discussion and enjoy drinks in the billiard room, or, for those tired from the journey, we can simply retire for the night.
 
-    Since I haven't been able to see my room, I'd better go there first.
+    Since I haven't seen my room yet, I should probably head there first.
 
     I ask the footman to show me the way.
     """
@@ -87,15 +93,15 @@ label lad_day1_evening:
     $ play_music('upbeat', 2)
 
     """
-    The footman takes me through the grand staircase, on to the first floor.
+    The footman escorts me up the grand staircase, leading me to the first floor.
     """
 
     footman """
-    There you go sir.
+    Here you are, sir.
 
-    You have the \"William The Conqueror\" room.
+    You've been assigned the \"William The Conqueror\" room.
 
-    I hope it's to your liking.
+    I hope it suits your taste.
     """
 
     $ unlock_map('lad_room')
@@ -103,23 +109,23 @@ label lad_day1_evening:
     $ change_room('lad_room')
 
     """
-    I enter the bedroom. 
-    
-    It's bigger than my apartment. And more luxurious than I could have dreamed of.
+    I step into the bedroom.
+
+    It's more spacious than my apartment, and more luxurious than I could have ever imagined.
     """
 
     lad """
-    That will do great, thank you.
+    This is perfect, thank you.
     """
 
     """
-    The footman exits the room.
+    The footman exists the room.
 
-    I look around me in disbelief.
-    
-    After a while I unpack my small luggage.
+    I look around in disbelief.
 
-    Well that didn't take long. So what do I do now?
+    After a while, I unpack my modest luggage.
+
+    That task didn't consume much time. So, what should I do now?
     """
 
     $ play_music('upbeat')
@@ -137,21 +143,21 @@ label lad_day1_evening:
     if lad_details.saved_variables["day1_drunk"]:
 
         """
-        Wow I don't feel great.
+        Wow, I'm not feeling well.
 
-        And worst, I think I might be getting sick.
+        Even worse, I think I might be getting sick.
 
-        I better go back to my room.
+        I'd better return to my room.
         """
 
     else: 
 
         """
-        It's getting kinda late now.
+        It's getting quite late now.
 
-        I am exhausted from the trip. 
-        
-        It's probably best if I go to bed now.
+        I'm exhausted from the trip.
+
+        Going to bed now is probably the best thing to do.
         """
 
     $ stop_music()
@@ -161,15 +167,15 @@ label lad_day1_evening:
     if lad_details.saved_variables["day1_drunk"]:
 
         """
-        I rush to my room.
+        I hurry to my room.
 
-        I go straight to the toilet and puke all the Port I have been drinking.
+        I head straight for the bathroom and throw up all the Port I've been drinking.
 
-        Great. If I didn't look stupid enough before, that will do it.
+        Great. If I didn't look foolish enough before, this surely seals it.
 
         I should go to bed before I do anything more embarrassing.
 
-        And I fall asleep almost instantly.
+        Almost instantly, I fall asleep.
         """
 
     else:
@@ -179,7 +185,7 @@ label lad_day1_evening:
 
         So I change a get directly into my bed.
 
-        I fall asleep almost instantly.
+        Almost instantly, I fall asleep.
         """
 
     if lad_details.saved_variables["day1_poisoned"]:
@@ -214,7 +220,7 @@ label lad_day1_evening_psychic_room:
     """
 
     psychic """
-    Oh. What do you want mister Harring?
+    Hello again. What do you want mister Harring?
     """
     
     lad """
@@ -222,11 +228,11 @@ label lad_day1_evening_psychic_room:
     """
 
     psychic """
-    Oh Mister Harring. I am afraid I was getting ready to bed. We can talk again tomorrow.
+    Oh, Mr. Harring. I'm afraid I was preparing for bed. We can speak again tomorrow.
     """
 
     lad """
-    Of course, I am sorry.
+    Of course, I apologize.
     """
 
     $ unlock_map('psychic_room')
@@ -242,7 +248,7 @@ label lad_day1_evening_dinner_psychic:
     """
 
     psychic """
-    Oh hello Mister Harring.
+    Hello Mister Harring.
     """
 
     call psychic_generic
