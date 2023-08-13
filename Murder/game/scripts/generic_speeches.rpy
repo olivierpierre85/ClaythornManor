@@ -1,19 +1,19 @@
 label day2_breakfast_lad_psychic:
 
     psychic """
-    Hello Mister Harring. How are you?
+    Hello, Mister Harring. How are you?
     """
 
     lad """
-    Very well thank you.
+    Very well, thank you.
     """
 
     psychic """
-    I was wondering if everyone was gonna join us on time.
-    
+    I was wondering if everyone would join us on time.
+        
     There are still a few people missing.
 
-    For instance, I don't think we will see Mister Manning anytime soon. 
+    For instance, I don't think we'll see Mister Manning anytime soon. 
 
     He was so drunk yesterday that I wouldn't be surprised if he doesn't show up before noon.
     """
@@ -21,7 +21,7 @@ label day2_breakfast_lad_psychic:
     """
     Suddenly, Samuel Manning enters the room.
 
-    He stumbled to the buffet table and picks up a plate, visibly shaking.    
+    He stumbles to the buffet table and picks up a plate, visibly shaking.    
     """
 
     psychic angry """
@@ -30,21 +30,20 @@ label day2_breakfast_lad_psychic:
     How dreadful.
     """
 
-    # TODO Same for psychic and lad? Change based on current char?
     """
-    At the same moment, the butler rushes inside the room.
-    
-    He goes to Lady Claythorn and whispers something in her ears.
+    At the same moment, the butler rushes into the room.
+        
+    He goes to Lady Claythorn and whispers something in her ear.
 
-    I can tell that is not good news.
+    I can tell it's not good news.
 
     She looks shocked and worried. 
-    
+
     She stands up and walks in my direction, then stops in front of the doctor.
     """
 
     host """
-    Doctor Baldwin, I am sorry to interrupt your breakfast, but would you mind coming with us?
+    Doctor Baldwin, I am sorry to interrupt your breakfast, but would you mind coming with me?
 
     We need your assistance.
     """
@@ -56,6 +55,7 @@ label day2_breakfast_lad_psychic:
     doctor """
     Of course, I'll follow you.
     """
+
     return
 
 label day2_breakfast_host_death:

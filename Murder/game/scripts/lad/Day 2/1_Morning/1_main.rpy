@@ -38,7 +38,7 @@ label lad_day2_morning:
     if lad_details.saved_variables["day1_drunk"] :
         
         """
-        Oh my god my head hurts.
+        Oh my God, my head hurts.
 
         Why did I drink so much yesterday?
         """
@@ -52,15 +52,17 @@ label lad_day2_morning:
     $ change_room('dining_room')
 
     """
-    Most of the guests are already in the dining room.
+    Most of the guests are already seated in the dining room.
 
-    There is a breakfast buffet. So I fix myself a plate: Eggs, bacon, bread,... with no particular logic.
+    There's a breakfast buffet set up. 
+    
+    I serve myself a plate with eggs, bacon, bread, and a few other items, not really following any specific order.
 
-    I have know idea if it is what I am supposed to do.
+    I have no idea if this is what I'm supposed to do.
 
-    So I take my seat at the same place than yesterday trying not to be noticed.
+    I quietly take the same seat I had yesterday, hoping to go unnoticed.
 
-    Daniel Baldwin and Amelia Baxter are already there.
+    Daniel Baldwin and Amelia Baxter are already present.
     """
 
     call day2_breakfast_lad_psychic
@@ -83,9 +85,9 @@ label lad_day2_morning:
     if lad_details.saved_variables["day2_breakfast_follow"]:
 
         """
-        As we entered the dining room again, the host just finished explaining the situation.
+        As we reentered the dining room, the host had just finished explaining the situation.
 
-        She has regained her composure when she sees the doctor.
+        She regained her composure when she saw the doctor.
         """
 
     else:
@@ -97,7 +99,7 @@ label lad_day2_morning:
     call day2_breakfast_host_death_doctor    
 
     """
-    When every one is done eating, Lady Claythorn speaks up.
+    When everyone is done eating, Lady Claythorn speaks up.
     """
 
     $ stop_music()
@@ -105,21 +107,21 @@ label lad_day2_morning:
     call host_broken_death_speech
 
     """
-    A hunt... A real aristocratic hunt.
+    A hunt... A true aristocratic hunt.
 
-    That is something to see.
+    Now that's something to witness.
 
-    It's not like I will have this opportunity often.
+    It's not as if I'll get this opportunity often.
 
-    And I might not be the only one out of my depth if Lady Claythorn is right. 
+    And I might not be the only one feeling out of place, especially if Lady Claythorn is right.
 
-    So I shouldn't be embarrassed.
+    So there's no need for embarrassment.
 
-    On the other hand, I have never even held a gun in my life.
+    However, I've never even held a gun in my life.
 
-    Those older guys may not be gentry, but they've probably learned how to shoot during the war.
+    Those older men might not be of the gentry, but they likely learned to shoot during the war.
 
-    So what should I do?
+    What should I do?
     """
 
     $ time_left = TIME_MAX # Trick to avoid problems, todo, find a better way
@@ -141,17 +143,17 @@ label lad_day2_breakfast_eat:
     """
 
     lad """
-    Me too.I have a bad feeling about it.
+    Me too. I have a bad feeling about it.
     """
 
     psychic """
-    Well no reason to worry now.
+    Well, there's no reason to worry now.
 
-    We just have to wait and see.
+    We'll just have to wait and see.
     """
 
     """
-    That's right.
+    You're right.
 
     We should probably talk about something else.
     """

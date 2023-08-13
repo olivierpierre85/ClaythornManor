@@ -5,18 +5,18 @@ label lad_day2_breakfast_follow:
     $ change_room("bedrooms_hallway")
 
     """
-    I jump from my seat and walks behind the doctor.
+    I jump from my seat and walk behind the doctor.
 
-    Soon, we stop in front the Richard III Bedroom.
+    Soon, we stop in front of the Richard III Bedroom.
 
-    They are so concerned that they don't say anything about my presence.
+    They're so concerned that they don't say anything about my presence.
     """
 
-    butler "There we are. Thomas Moody's room."
+    butler "Here we are. Thomas Moody's room."
 
-    doctor "Is he the chap with the mask?"
+    doctor "Is he the one with the mask?"
 
-    butler "Correct Sir."
+    butler "Correct, Sir."
 
     $ unlock_map('broken_room')
 
@@ -24,10 +24,12 @@ label lad_day2_breakfast_follow:
 
     $ change_room('broken_room')
 
-    butler "He is here in his bed. He was not responding at all when I tried to wake him up."
+    butler """
+    He's here in his bed. He didn't respond when I tried to wake him up.
+    """
 
     """
-    The doctor approaches the bed. He takes the wrist of the man.
+    The doctor approaches the bed and takes the man's wrist.
     """
 
     $ stop_music(fadeout_length=1)
@@ -35,7 +37,7 @@ label lad_day2_breakfast_follow:
     doctor """
     No pulse.
 
-    He is dead.
+    He's dead.
     """
 
     $ play_music('scary')
@@ -43,61 +45,61 @@ label lad_day2_breakfast_follow:
     host surprised """
     Dead?!!!
 
-    How could that be?
+    How is that possible?
     """
 
     doctor """
-    I don't know. I will have to examine him further.
+    I'm not sure yet. I'll need to examine him further.
 
-    You don't need to stay for that part.
+    You may want to leave for this part.
 
-    I'll come back downstairs when I know more.
+    I'll come back downstairs when I have more information.
     """
 
     butler """
-    Come with me My Lady.
+    Please come with me, My Lady.
     """
-    
+
     host """
-    Oh... Of course...
+    Oh... Yes, of course...
     """
 
     """
     The butler escorts the Lady out of the room.
 
-    The doctor turns himself towards me.
+    The doctor turns to face me.
     """
 
     doctor """
-    And why are you here again?
+    Why are you here?
     """
 
     lad """
-    Well, I was... I wanted to ..
+    I was just... I thought I could...
     """
 
     doctor """
-    Never mind. Since you are here make yourself useful.
+    Never mind. Since you're here, make yourself useful.
 
-    Help me turning him over to check for injury.
+    Help me turn him over to check for injuries.
     """
 
     """
-    He then thoroughly examined the body for a while.
+    He then examines the body thoroughly for a while.
     """
 
     lad """
-    So, what could have caused this doctor?
+    What could have caused this, Doctor?
     """
 
     doctor """
-    I am not sure. 
+    I'm uncertain. 
 
-    This guy seemed in good health.
+    He seemed in good health.
 
-    But with injuries like the ones he suffered during the war, you can never be sure.  
+    But with injuries like the ones he sustained during the war, one can never be too sure.  
 
-    A patient can be fine for years, then suddenly his body can give up.  
+    A patient can be stable for years, and then suddenly, his body can fail him.  
     """
 
     lad """
@@ -105,21 +107,21 @@ label lad_day2_breakfast_follow:
     """
 
     doctor """
-    Probably, but I can't say for certain.
-    
-    I can't really rule out anything at this point.
+    It's possible, but I can't confirm.
 
-    We would need a autopsy to be certain.
+    I can't rule out anything right now.
 
-    So the next thing to do now is to notify the authorities.
+    We'd need an autopsy for a definitive answer.
+
+    The next step is to notify the authorities.
 
     I need a phone.
     """
 
     """
-    He then leaves the room.
+    He then exits the room.
 
-    I followed him back to the dining room.
+    I follow him back to the dining room.
     """
 
     $ change_room('dining_room')
