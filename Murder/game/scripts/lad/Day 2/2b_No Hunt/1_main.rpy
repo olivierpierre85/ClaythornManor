@@ -31,23 +31,23 @@ label lad_day2_no_hunt:
     """
     I turned down the invitation for the hunt.
 
-    So I am staying inside with Amelia Baxter and Rosalind Marsh.
+    So, I'm staying inside with Amelia Baxter and Rosalind Marsh.
 
     They are in the tea room, waiting for a small luncheon to be served.
 
-    I retreated in my room to change.
+    I've retreated to my room to change.
 
-    Now what should I do?
+    Now, what should I do?
     """
 
-    $ time_left = 240 # TODO too long do something
+    $ time_left = 240 # TODO: Possibly too long; consider revising.
 
     call run_menu(lad_details.saved_variables["day2_no_hunt_map_menu"])
 
     """
     Suddenly, I hear noises from the entrance hall.
     
-    I decide to go and see what's happening.
+    I decide to see what's happening.
     """
 
     $ stop_music()
@@ -64,74 +64,71 @@ label lad_day2_broken_room:
     if lad_details.saved_variables["day2_breakfast_follow"]:
 
         """
-        The poor man is still there. I don't think he moved.
+        The poor man is still there. I don't think he's moved.
         """
 
     else:
 
         """
-        I don't know what kind of macabre feeling made me come here.
+        I don't know what morbid curiosity led me here.
 
-        But in case I had doubts, Thomas Moody is there. Not breathing.
+        But, if I had any doubts, Thomas Moody is there, lifeless.
 
         Gosh.
         """
 
     """
-    Well, now that I am here. Maybe I should take a look quickly. 
+    Now that I'm here, perhaps I should take a quick look.
 
-    Something might help me understand what happened.
+    There might be something that helps me understand what happened.
 
-    So I look around the room.
+    I look around the room.
 
-    I don't see nothing of the ordinary.
+    Nothing seems out of the ordinary.
 
-    He seems peaceful in his sleep.
+    He looks peaceful.
 
     His mask is still on. 
     
-    The doctor didn't even remove it to examine him.
+    The doctor didn't even remove it for the examination.
 
     Well, if the doctor didn't, I certainly won't either.
 
-    On a chair next the the bed are his clothes, meticulously folded.
+    On a chair next to the bed, his clothes are meticulously folded.
 
-    There is a whisky flask on the night stand.
+    There's a whiskey flask on the nightstand.
 
     It's on its side, empty.
 
     Next to it is a stain. 
     
-    I suppose it should be whisky, but it has a weird colour.
+    I suppose it's whiskey, but it's an odd shade of green.
 
-    A light shade of green.
-
-    That's strange.
+    That's peculiar.
 
     What could it be?
 
-    That's all I could notice in the room.
+    That's all I notice in the room.
     """
 
-    $  lad_details.observations.unlock('green_liquid') # TODO link to billiard room option to not drink the whisky?
+    $ lad_details.observations.unlock('green_liquid') # TODO: Link to billiard room option not to drink the whiskey?
 
     pause 1.0
-    # TODO add sound for CLUE???
-    # TODO FIRST REAL INVESTIGATiON CLUE? ADD INTUITION when come back to 
+    # TODO: Add sound effect for discovering a clue?
+    # TODO: FIRST REAL INVESTIGATION CLUE? Add intuition when returning to...
 
     $ play_music('PREVIOUS')
 
     return
-
 
 label lad_day2_no_hunt_cancel:
 
     $ change_room('lad_room')
 
     """
-    I don't think there is anything interesting to do now.
+    I don't think there's anything interesting to do now.
 
-    So I will lay on my bed for while.
+    So, I'll just lie down on my bed for a while.
     """
 
     call wait_screen_transition()
@@ -157,13 +154,13 @@ label lad_day2_no_hunt_nurse_room_busy:
     """
 
     nurse """
-    Ah, Mr. Harring, I'm afraid I'm quite exhausted at the moment. 
+    Ah, Mr. Harring, I'm quite exhausted at the moment. 
     
     Would you mind coming back later?
     """
 
     lad """
-    Of course not, sorry for bothering you.
+    Of course, sorry for bothering you.
     """
 
     return
@@ -171,7 +168,7 @@ label lad_day2_no_hunt_nurse_room_busy:
 label lad_day2_no_hunt_captain_room_enter:
 
     """
-    Making sure no one's watching, I carefully nudge the door open.
+    Ensuring no one's watching, I gently nudge the door open.
     """
 
     play sound door_open
@@ -179,39 +176,39 @@ label lad_day2_no_hunt_captain_room_enter:
     $ change_room('captain_room')
 
     """ 
-    The door opens smoothly, allowing me to step inside the room.
+    The door opens smoothly, and I step inside.
 
-    It is extremely neat, with everything in its place.
+    The room is impeccably neat.
 
-    Over in a corner, there's a valet stand holding a military uniform.
+    In one corner, a valet stand holds a military uniform.
 
-    It's gotta be Sushil Sinha's room.
+    This must be Sushil Sinha's room.
     """
     
     $ unlock_map('captain_room')
 
     """
-    Well, since I'm here, I might as well search around a little.
+    Now that I'm here, I should take a look around.
     """
 
     play sound searching
 
     $ renpy.pause(5, hard=True)
 
-    $ change_room('captain_room') # TODO add effect same room
+    $ change_room('captain_room') # TODO: Add visual effect for the same room?
     
     """
-    I looked around for quite some time.
+    I searched for quite a while.
 
-    I thought I wouldn't find anything until I pulled open the bed drawers.
+    I thought I'd found nothing until I opened the bed drawers.
 
-    There is a gun and a few bullets inside.
+    Inside is a gun and a few bullets.
 
-    It's not something most people carry, but I guess it's pretty usual for a military person.
+    It's unusual, but not surprising for someone in the military.
 
-    The rest of the room is just plain ordinary.
+    The rest of the room is unremarkable.
 
-    I put everything in order and leave.
+    I put everything back like it was and leave.
     """
 
     return
@@ -219,7 +216,7 @@ label lad_day2_no_hunt_captain_room_enter:
 label lad_day2_no_hunt_drunk_room_enter:
 
     """
-    I sneakily push the door open, making sure nobody is watching me.
+    I cautiously push the door open, ensuring no one sees me.
     """
 
     play sound door_open
@@ -237,36 +234,33 @@ label lad_day2_no_hunt_drunk_room_enter:
     $ unlock_map('drunk_room')
 
     """
-    I quickly scan the place but only find empty bottles of whisky.
+    I quickly scan the room but only find empty whiskey bottles.
 
-    Just as I am about to leave, something catches my eye in the fireplace.
+    As I'm about to leave, a piece of white paper in the fireplace catches my eye.
 
-    A piece of white paper.
-
-    Curiosity gets the better of me, and I pick it up.
+    Driven by curiosity, I pick it up.
 
     The writing on the paper is almost entirely burned. 
     
     I can only read some of it.
 
-    There is a first part, written with an impeccable style.    
+    There is a first part, written with an impeccable style.   
     """
 
     call drunk_letter_first_part_burned
 
     """
-    Below that, there is an addition written in an almost indecipherable style:
+    Below, another message is scribbled in a barely legible hand:
     """
 
     call drunk_letter_second_part_burned
 
     """
-    Although I don't understand the meaning behind it, this letter must be important. 
+    Even though its meaning eludes me, this letter seems significant.
     
-    I decide to pocket it just in case.
+    I decide to keep it, just in case.
     """
 
     $ lad_details.objects.unlock('burned_letter')
-
 
     return

@@ -5,94 +5,93 @@ label lad_day2_hunt_tea_room:
     """
     Amelia Baxter and Rosalind Marsh are in the room.
     
-    They are drinking tea and talking calmly.
+    They're drinking tea and talking calmly.
 
     I join them.
     """
 
     nurse """
-    Oh Mister Harring, I am glad you are here.
+    Oh Mister Harring, I'm glad you're here.
 
-    Miss Baxter was just talking about something fascinating.
+    Miss Baxter was just discussing something fascinating.
 
-    You should sit with us.
+    You should join us.
     """
 
     lad """
-    Of course, I'll be glad to discuss with you for a bit. 
+    Of course, I'd be happy to chat with you for a bit. 
     
     What were you talking about?
     """
 
     nurse """
-    Miss Baxter was actually talking about ghosts and how she can talk to dead people.
+    Miss Baxter was talking about how she can communicate with the dead.
     """
 
-    # TODO if the psychic knowledge not known, make resume it here? or just call the text?
+    # TODO if the psychic knowledge is not known, summarize it here? or just display the text?
     if current_character.saved_variables['knows_psychic_background']:
         lad """
-        Oh yes, we talked about it already.
+        Ah, yes, we've discussed that before.
         """
-        
     else:
         lad """
-        Really? How fascinating. 
+        Really? That's fascinating. 
         """
 
         psychic """
-        Yes, but to not bored miss Marsh, I won't go into details again.
+        Yes, but to not bore Miss Marsh, I won't go into the details again.
         
-        But if you'd like, we can talk about it at another time.
+        But if you're interested, we can discuss it another time.
         """
 
     nurse """
-    Anyway, you were saying that you we were worried about the poor guy who died last night.
+    Anyway, you mentioned being concerned about the man who died last night.
     """
 
     psychic """
-    That's right. And I have the feeling that something is not right about his death.
+    That's correct. I have a feeling that something is off about his death.
     """
 
     nurse """
     What do you mean?
     """
-
+    #TODO: WHY is she suspicious?
     psychic """
-    I am sensing him, and he is disturbed. The sign of an unnatural death.
+    I sense his spirit, and it's restless. It's a sign of an unnatural death.
 
-    There is something wrong here but I can't figure out what.
+    There's something amiss, but I can't pinpoint it.
 
-    But sorry dear, I am not trying to scare you.
+    But please, I don't mean to alarm you.
 
     It might be nothing.
 
-    In any case, we'll know more about it when the police will arrive.
+    In any case, we'll know more once the police arrive.
     """
 
     lad """
-    That's true, we are still waiting for them right.
+    That's true. We're still waiting for them, right?
 
-    But Lady Claythorn left and don't let anyone taking care of this?
+    But Lady Claythorn left and didn't assign anyone to handle this matter?
     """
 
     psychic """
-    Well, she have staff to deal with that sort of things.
+    Well, she has staff to manage such situations.
     """
 
     if lad_details.saved_variables["has_met_maid"]:
 
         lad """
-        Oh right, like the girl I met trying to go downstairs.
+        Ah, like the girl I encountered when I tried to go downstairs.
         """
 
         psychic """
-        What were you trying to do downstairs?
+        What were you attempting to do downstairs?
 
-        That's not a place where we should venture Mister Harring.
+        That area isn't somewhere we should wander into, Mister Harring.
 
-        But in any case, there is probably a lot more staff that you haven't met yet.
+        Regardless, there are probably many staff members you haven't met yet.
 
-        They are needed to run such a big house.
+        Such a large house requires a sizable team.
         """
 
     else:
@@ -101,104 +100,101 @@ label lad_day2_hunt_tea_room:
         """
 
         psychic """
-        Oh no dear, there are still are all the kitchen staff, and the maids who remains in the mansion.
+        No, dear. The kitchen staff and some maids remain in the mansion.
 
-        All of this is very well organized in such a house.
+        Everything in such a home is well-organized.
         """
 
     psychic """
-    So don't worry, there will definitely be someone to deal with the police.
+    So, don't worry. There will definitely be someone available to talk with the police.
     """
 
     nurse """
-    Yes, and it may take a while for the police to reach us anyway.
+    Indeed, and it might take a while for the police to get here.
 
-    It's not like it is a real emergency. They might not arrived until later this evening.
+    It's not a pressing emergency. They might not arrive until later this evening.
     """
 
     """
-    It's creepy to think there is a dead guy upstairs, and that nobody is doing anything about it.
+    It's creepy to realize there's a dead man upstairs, and no one's addressing the situation.
 
-    He is there in his room, like nothing happened.
+    He's there in his bed, as if nothing happened.
 
-    Weird.
+    Strange.
 
-    While we are talking, someone enters the room.
-    """
-
-
-    maid """
-    I am glad to find you all here.
-
-    I just finished to cook a small luncheon.
-    
-    I can bring it to you if you want.
-    """
-
-    psychic """
-    Thank you miss, that would be lovely.
-
-    But I am terribly sorry, did you say you cooked it?
-    
-    Are you the cook? I thought I saw you cleaning up my room this morning.
+    While we converse, someone enters the room.
     """
 
     maid """
-    Um, ... the true is I am the cook. But I sometimes help out as a maid when needed.
+    I'm relieved to find you all here.
+
+    I've prepared a light luncheon.
+    
+    Would you like me to bring it over?
     """
 
     psychic """
-    A cook and a maid? That's a lot of work you must have.
+    Thank you, Miss. That sounds wonderful.
+
+    But I must ask, did you cook it?
+    
+    Aren't you the maid? I thought I saw you tidying my room earlier.
     """
 
     maid """
-    Oh don't worry about me. I can handle it.
+    Well, ... the truth is, I am the cook. But I occasionally assist as a maid when needed.
+    """
 
-    I will fetch your food now.
+    psychic """
+    A cook and a maid? That's quite the workload.
+    """
+
+    maid """
+    Don't be concerned for me. I can manage.
+
+    I'll fetch your meal now.
     """
     
     psychic """
-    Well, it's worse than I thought. A cook that doubles up as a maid.
+    It seems worse than I initially thought. A cook who also acts as a maid.
 
-    I've never seen something like this.
+    That's rather unusual.
     """
 
     """
-    Miss Marsh and I remain silent. 
+    Miss Marsh and I stay silent. 
 
-    I guess she doesn't know more than I do about the running of a house.
+    Perhaps she's as clueless as I am about the workings of this household.
 
-    Or maybe she doesn't want to say bad things about our host.
+    Or she might be refraining from criticizing our host.
 
-    After a while the cook comes with our food and we enjoy it exchanging banalities.
+    After a moment, the cook returns with our food, and we enjoy a light chat while dining.
 
-    When we are all finished Rosalind Marsh stands up.
+    Once we're done, Rosalind Marsh stands up.
     """
 
     nurse """
-    That was great. 
+    That was delightful. 
 
-    No if you'll excuse me, I think I will retreat to my room to rest a little.
+    If you'll excuse me, I need to rest in my room for a bit.
 
-    I am afraid that I haven't slept very well tonight.
-
-    This storm got me up all night.
+    The storm kept me awake most of the night.
     """
 
     psychic """
-    Of course, we understand.
+    Certainly, we understand.
 
-    We'll see you later.
+    See you later.
     """
 
     """
-    Rosalind Marsh then exists the tea room.
+    Rosalind Marsh exits the tea room.
 
-    I am left alone with Amelia Baxter.
+    I'm left with Amelia Baxter.
     """
 
     psychic """
-    It looks it's just you and I Mister Harring.
+    It seems it's just you and me, Mister Harring.
     """
 
     $ lad_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
@@ -212,17 +208,17 @@ label lad_day2_hunt_tea_room_return:
     $ change_room('tea_room')    
 
     """
-    I return to the tea room.
+    I re-enter the tea room.
 
-    Amelia Baxter is still there, reading a book.
+    Amelia Baxter is still present, engrossed in a book.
 
     I approach her.
     """
 
     psychic """
-    Yes Mister Harring. 
+    Mister Harring? 
 
-    What can I do for you?
+    How may I assist you?
     """
 
     call psychic_generic

@@ -20,7 +20,6 @@ label lad_library_default:
         I probably better go look elsewhere.
         """
         # TODO add info on BOOK???
-
         $ lad_details.saved_variables["library_visited"] = True
     
     else:

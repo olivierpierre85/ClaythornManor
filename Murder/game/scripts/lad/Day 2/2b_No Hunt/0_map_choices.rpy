@@ -55,21 +55,21 @@ label lad_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
 
     python:
         enter_text_list = [
-            "Let's go in, what's the worst that could happen?",
+            "Let's go in. What's the worst that could happen?",
             "It won't hurt to give it a try. Let's go in and find out.",
-            "Let's enter and see what happens, it can't be that bad.",
+            "Let's enter and see what happens. It can't be that bad.",
             "What's the harm in entering? Let's go!",
-            "Come on, let's go inside. What's the worst that could go wrong?",
-            "Shall we enter? What's the worst that could occur?"
+            "Come on, let's go inside. What could go wrong?",
+            "Shall we enter? It's not like you'd be in any danger anyway."
         ]
 
-        no_enter_text_list= [
-            "I definitely shouldn't enter, that would be reckless!",
-            "I shouldn't go in, that's too dangerous!",
-            "I'd better not enter, it could be risky.",
-            "That's a bad idea, I shouldn't go inside.",
-            "I don't want to take unnecessary risks, I shouldn't go in.",
-            "It's not worth the danger, I'm not going in."
+        no_enter_text_list = [
+            "I definitely shouldn't enter. That would be reckless!",
+            "I shouldn't go in. That's too dangerous!",
+            "I'd better not enter. It could be risky.",
+            "That's a bad idea. I shouldn't go inside.",
+            "I don't want to take unnecessary risks. I shouldn't go in.",
+            "It's not worth the danger. I'm not going in."
         ]
     
         enter_text = enter_text_list[lad_details.saved_variables['day2_nohunt_bedroom_tries']]
@@ -80,9 +80,9 @@ label lad_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
         """
         Most people are out for the hunt, so I guess I could try to enter the room anyway.
 
-        But it won't look good if I am caught.
+        But it won't look good if I get caught.
 
-        Why should I do?
+        What should I do?
         """
 
         $ lad_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
@@ -99,8 +99,8 @@ label lad_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
         TimedMenu(
             id="lad_day2_no_hunt_bedroom_try_enter" + enter_result, 
             [
-                TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit = True),
-                TimedMenuChoice(no_enter_text, 'lad_day2_no_hunt_default_room_no_enter', enter_duration, early_exit = True),
+                TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
+                TimedMenuChoice(no_enter_text, 'lad_day2_no_hunt_default_room_no_enter', enter_duration, early_exit=True),
             ]
         )
     )
@@ -118,12 +118,13 @@ label lad_day2_no_hunt_default_room_no_enter:
 label lad_day2_no_hunt_default_room_locked:
     
     """
-    I try to push the door opened.
+    I try to push the door open.
 
     It's locked.
     """
 
     return
+
 
 # Psychic
 label lad_day2_no_hunt_psychic_room:
