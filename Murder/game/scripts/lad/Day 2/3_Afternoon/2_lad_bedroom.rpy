@@ -5,17 +5,17 @@ label lad_day2_afternoon_bedroom:
     call change_time(18,00)
 
     """
-    So I retreated to my room to get clean clothes.
+    So, I retreated to my room to fetch clean clothes.
 
     I also took the opportunity to have a bath.
 
-    As I was preparing to go downstairs again, someone knocks on my door.
+    As I was preparing to go downstairs again, someone knocked on my door.
     """
 
     play sound door_knock
 
     psychic """
-    Mister Harring, can I come in?
+    Mister Harring, may I come in?
     """
 
     """
@@ -23,21 +23,21 @@ label lad_day2_afternoon_bedroom:
     """
 
     lad """
-    Come on in Mrs Baxter. The door is open.
+    Come on in, Mrs. Baxter. The door is open.
     """
 
     play sound door_open
 
     psychic """
-    I am sorry to intrude, but I think we should talk.
+    I'm sorry to intrude, but I believe we should talk.
     """
 
     """
-    She doesn't wait for an answer and starts explaining.
+    She doesn't wait for an answer and begins explaining.
     """
 
     psychic """
-    There is something dangerous happening here.
+    Something dangerous is happening here.
     """
 
     lad """
@@ -45,43 +45,35 @@ label lad_day2_afternoon_bedroom:
     """
 
     psychic """
-    I mean that I don't think those deaths were an accident.
+    Don't you find it strange that two different people died in the same place, from two different causes?
     """
 
     lad """
-    What makes you think that?
-    """
-
-    psychic """
-    Don't you think is strange two different persons died in the same place, of two different causes?
-    """
-
-    lad """
-    Well, I don't know for Thomas Moody. 
+    Well, I don't know about Thomas Moody. 
     
     But for the doctor's death, you said it yourself: Samuel Manning was probably drunk. 
     
-    That's sad, but not really a surprise.
+    That's tragic, but not really surprising.
     """
 
     psychic """
-    That's what I thought at first. 
+    That's what I initially thought. 
 
-    But I just had a chat with the butler. He could swear that Samuel Manning was clear of mind when he gave him his gun.
+    However, I just spoke with the butler. He insisted that Samuel Manning was clear-minded when he handed him his gun.
     """
 
     lad """
-    So what, you think he faked the accident?
+    So, what, you think he staged the accident?
 
-    He could have simply drank too much during the hunt.
+    He might've just drank too much during the hunt.
     """
 
     psychic """
-    True, but it's still suspicious. 
+    Possibly, but it's still suspicious. 
 
-    And I have other reasons to believe there is something off here.
+    I have other reasons to believe something is amiss here.
 
-    Let's just say I can feel it.
+    Let's just say, I have a feeling.
     """
 
     lad """
@@ -89,47 +81,47 @@ label lad_day2_afternoon_bedroom:
     """
 
     psychic """
-    Don't mock what you don't understand Mister Harring.
+    Don't dismiss what you don't understand, Mister Harring.
 
-    But it's alright, I don't need you to believe me.
+    But it's okay. I don't need you to believe me.
 
-    I am just warning you to be careful.
+    I'm simply warning you to be cautious.
     """
 
     lad """
-    You are afraid of Samuel Manning?
+    Are you scared of Samuel Manning?
     """
 
     psychic """
-    Yes, but not only of him. 
+    Yes, but not just him. 
     
-    Other people may be involved in this.
+    Others might be involved too.
 
-    I don't think we can trust anyone.
+    I don't think we can trust anyone fully.
     """
 
     lad """
-    You seem to trust me. 
+    Yet, you seem to trust me.
     """
 
     psychic """
-    Well I wouldn't say that exactly. 
+    Well, I wouldn't put it that way. 
 
-    But if someone is after me, I couldn't defend myself. So I need an ally. 
+    If someone were after me, I'd be defenseless. So, I need an ally. 
 
-    And you are strong enough to protect me in case their is a direct confrontation.
+    You seem capable of defending both of us if there's a direct confrontation.
 
-    So I made a bet to confide in you.
+    So, I chose to confide in you.
     """
 
     """
-    I don't know what to say.
+    I'm at a loss for words.
 
     A murder?
 
-    It's probably nonsense.
+    It's probably just a wild theory.
 
-    But still ...
+    But still...
     """
 
     call change_time(18,30)
@@ -137,17 +129,17 @@ label lad_day2_afternoon_bedroom:
     play sound dinner_gong
 
     """
-    I hear the gong.
+    The gong sounds.
 
-    Everything that happened didn't disturb the order of the house apparently.
+    Everything that happened didn't disturbed the order of the house, it seems.
     """
 
     psychic """
-    Looks like it's dinner time.
+    It is dinner time.
 
-    Not that I have much of an appetite.
+    Not that I'm particularly hungry.
 
-    But we should head downstairs anyway.
+    But we should head downstairs regardless.
     """
 
     """
@@ -155,15 +147,15 @@ label lad_day2_afternoon_bedroom:
     """
 
     psychic """
-    But I think we should discuss this further. 
+    I believe we should continue this conversation later. 
     
-    If you agree come and see me in my room after dinner.
+    If you agree, come see me in my room after dinner.
     """
 
-    if not lad_details.saved_variables['knows_psychic_room']: #TODO if lad knows psychic?
+    if not lad_details.saved_variables['knows_psychic_room']: #TODO if lad knows psychic's room?
 
         psychic """
-        I am in the \"George III\" room.
+        I'm in the \"George III\" room.
         """
 
         $ unlock_map('psychic_room')
@@ -171,4 +163,3 @@ label lad_day2_afternoon_bedroom:
         $ lad_details.saved_variables['knows_psychic_room'] = True
 
     return
-

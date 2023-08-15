@@ -27,166 +27,164 @@ label lad_day2_afternoon:
     if lad_details.saved_variables["day2_hunt"]:
 
         """
-        The rest happened so fast, it felt like a blur to me.
+        Everything happened so quickly; it's all a blur.
 
         After the screaming and crying in the woods, Captain Sinha took charge.
 
-        He made us carry the doctor on a makeshift stretcher.
+        He had us carry the doctor on a makeshift stretcher.
  
-        It took a while but we finally reached the mansion.
+        It took a while, but we eventually reached the mansion.
         """        
 
     else:
         
         """
-        I can see the hunting partying entering the house.
+        I watch the hunting party enter the house.
 
-        Amelia and Rosalind were already there, near the entrance.
+        Amelia and Rosalind are already there, near the entrance.
 
-        Lady Claythorn enters first, visibly shocked.
+        Lady Claythorn enters first, looking visibly shocked.
 
-        Then the butler and footman followed suit.
+        Then the butler and footman follow.
 
-        They are dragging someone on a makeshift stretcher.
+        They're dragging someone on a makeshift stretcher.
         """
 
     $ play_music('sad')
 
     # TODO play dramatic music
     psychic surprised """
-    Oh my God ! What Happened !?
+    Oh my God! What happened!?
 
-    Is that Doctor Baldwin. Is he injured?
+    Is that Doctor Baldwin? Is he injured?
 
-    Oh no? Is he dead?
+    Oh no! Is he... dead?
     """
 
     captain """
-    I am sorry dear, I am afraid that he is.
+    I'm sorry, dear, but he is.
     """
 
     psychic """
-    But but, what happened?
+    But... what happened?
     """
 
     captain """
-    An accident. 
+    It was an accident. 
     """
 
     drunk sad """
-    It was I swear. I have no idea how I could have hit him.
+    I swear it was! I have no idea how I could have hit him.
     
-    I was aiming at a rabbit. I didn't even notice him.
+    I was aiming at a rabbit. I didn't even see him.
     """
 
     """
-    Everybody turns to him.
+    Everyone turns to him.
     """
         
     psychic angry """
-    Fool ! I bet you were too drunk, that's why you hit him.
+    You fool! You were probably too drunk, and that's why you hit him.
 
-    You could barely walk this morning. How come they gave you a gun?
+    You could barely walk this morning. Who gave you a gun?
     """
 
     captain """
-    Please, there is no need to blame anyone now. It's too late.
+    Please, there's no need to point fingers now. It's done.
 
-    We'll let the police deal with him.
+    The police will handle it.
 
-    By the way, has anyone from the city arrived here yet?
+    Speaking of which, has anyone from the city arrived yet?
     """
 
     nurse """
-    I am afraid not.
+    No, not yet.
 
-    We are still waiting for them.
+    We're still waiting for them.
     """
 
     captain """
-    We better tell them to hurry up then.
+    We should tell them to hurry.
 
-    Lady Claythorn where is the phone?
+    Lady Claythorn, where's the phone?
     """
 
     host """
-    Don't worry, I'll take care of it myself.
+    I'll handle it.
     """
 
     """
-    She leaves the group with the butler on her trail.
+    She leaves the group, with the butler following closely behind.
 
-    Now everyone is silent.
+    The room falls silent.
 
-    And most of them stare at Sam Manning with hate.
+    Most eyes are on Sam Manning, filled with disdain.
 
-    Then the host comes back.
+    Then, the hostess returns.
     """
 
     host """
-    I just spoke with the police. They are not coming today.
+    I just spoke with the police. They aren't coming today.
     """
 
     captain """
-    What !? Why?
+    What!? Why not?
     """
 
     host """
-    They were halfway there. But they ran into a huge tree blocking the road. 
+    They were on their way but encountered a huge tree blocking the road.
     
-    There was no way to move it.
+    They couldn't get past it.
     
-    They say they will be back tomorrow with some help.
+    They said they'll be back tomorrow with assistance.
     """
 
     psychic """
-    But,... what are we gonna do with him?
+    But... what are we going to do with him until then?
     """
 
     captain """
-    I'll carry him to his bed. 
+    We'll move him to his bed for now. 
     
-    That's probably the best for the moment.
+    It's the best we can do under the circumstances.
 
-    Can someone help me?
+    Anyone willing to help?
     """
 
     lad """
-    I'll come with you.
+    I will.
     """
 
     $ change_room("doctor_room")
 
     """
-    So we dragged Doctor Baldwin to his room and laid him down on his bed.
+    We carried Doctor Baldwin to his room and laid him on his bed.
 
-    Then Sushil put the blanket over him.
+    Sushil then covered him with a blanket.
     """
 
     captain """
-    Alright. It's better this way.
+    It's best this way for now.
 
-    I am gonna head down now.
-
-    I don't like to let Samuel Manning out of my sight.
+    I want to keep an eye on Samuel Manning.
     """
 
     """
-    I nod.
+    I nod in agreement.
     """
 
     captain """
-    By the way, you better go change before coming back.
+    You should change before rejoining us.
     """
 
     """
-    I look at my clothes.
+    I glance at my clothes.
 
-    They are stained with blood.
+    They're stained with blood.
 
-    Luckily, there were not really mine.
-
-    But in any case I should go change them.
+    Luckily, they aren't mine. 
+    
+    But I should still change them.
     """
     
     call lad_day2_afternoon_bedroom
