@@ -32,7 +32,7 @@ label lad_day2_hunt:
     $ lad_details.saved_variables["day2_hunt"] = True
 
     """
-    Well I don't know if it's my best idea.
+    Well, I don't know if this is my best idea.
 
     But I guess it didn't feel right to stay behind with the ladies.
     """
@@ -40,17 +40,17 @@ label lad_day2_hunt:
     # TODO achievement,  Hunt like a man
 
     butler """
-    So, it's your first hunt mister Harring?
+    So, this is your first hunt, Mister Harring?
     """
- 
+
     lad """
     Yes. I must admit that I don't even know how to use a rifle.
     """
 
     butler """
-    Not to worry sir. A footman will follow you and will reload the gun for you.
-    
-    All you have to do is point at you target when you encountered something, and pull the trigger.
+    Not to worry, sir. A footman will follow you and will reload the gun for you.
+
+    All you have to do is point at your target when you encounter something and pull the trigger.
     """
 
     lad """
@@ -58,11 +58,11 @@ label lad_day2_hunt:
     """
 
     butler """
-    It will be just you I believe. I will be with Lady Claythorn, and the others insisted they didn't need help.
+    It will be just you, I believe. I will be with Lady Claythorn, and the others insisted they didn't need help.
     """
 
     """
-    Of course. So I will be the weak link today. Great.
+    Of course. So, I'll be the weak link today. Great.
     """
 
     lad """
@@ -70,7 +70,7 @@ label lad_day2_hunt:
     """
 
     butler """
-    I think we will encounter wild birds mostly. But we might also run into some rabbits, or even deers.
+    I think we will mostly encounter wild birds. But we might also run into some rabbits or even deer.
     """
 
     lad """
@@ -78,7 +78,7 @@ label lad_day2_hunt:
     """
 
     butler """
-    Not if you don't get too close to them. And again you won't be alone, so there is no reason be scared.
+    Not if you don't get too close to them. And again, you won't be alone, so there's no reason to be scared.
     """
 
     lad """
@@ -86,11 +86,11 @@ label lad_day2_hunt:
     """
 
     butler """
-    Right. 
-    
-    Anyway, you can pick up this gun and wear the clothes I laid down on the table.
+    Right.
 
-    Come join the others outside when you are ready.
+    Anyway, you can pick up this gun and wear the clothes I laid out on the table.
+
+    Join the others outside when you're ready.
     """
 
     lad """
@@ -98,7 +98,7 @@ label lad_day2_hunt:
     """
 
     """
-    I am trying the clothes before me. They fit perfectly.
+    I try on the clothes before me. They fit perfectly.
 
     If something happens to me, at least I'll look good.
     """
@@ -110,29 +110,29 @@ label lad_day2_hunt:
 
     They all look quite comfortable in their hunting clothes.
 
-    There is Doctor Baldwin, the Sushil Sinha, Lady Claythorn and her staff.
+    There's Doctor Baldwin, Sushil Sinha, Lady Claythorn and her staff.
 
     And even Samuel Manning is here.
 
-    Wait what?!
+    Wait, what?!
 
-    How on earth was he allowed to come with us?!
+    How on earth was he allowed to come with us?
 
     I approach the butler.
     """
 
     lad """
-    Is it okay for Mister Manning to have a gun? He looked a bit drunk this morning.
+    Is it okay for Mister Manning to have a gun? He seemed a bit drunk this morning.
     """
 
     butler """
-    I was afraid of that at first too. But I just talked to him and I can assure you that he is perfectly fine.
+    I was concerned about that at first too. But I just spoke to him, and I can assure you he's perfectly fine.
 
-    He may have been a bit off because of yesterday, but the breakfast and the events of this morning must have sober him up.
+    He might have been a bit off because of yesterday, but the breakfast and the events of this morning must have sobered him up.
     """
 
     lad """
-    Ok, if you are sure.
+    Ok, if you're sure.
     """
 
     """
@@ -142,13 +142,13 @@ label lad_day2_hunt:
     """
 
     butler """
-    Good, now that everybody is ready, I propose that we split into two groups.
+    Good, now that everyone is ready, I propose we split into two groups.
 
-    It will be easier to spot game this way.
+    It will be easier to spot game that way.
     """
 
     """
-    People agree and Sushil Sinha asked to partner with our host.
+    People agree, and Sushil Sinha asks to partner with our host.
 
     The drunk man insists on going with the doctor, who accepts.
 

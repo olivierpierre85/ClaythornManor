@@ -12,11 +12,17 @@ label lad_day2_breakfast_follow:
     They're so concerned that they don't say anything about my presence.
     """
 
-    butler "Here we are. Thomas Moody's room."
+    butler """
+    Here we are. Thomas Moody's room.
+    """
 
-    doctor "Is he the one with the mask?"
+    doctor """
+    Is he the one with the mask?
+    """
 
-    butler "Correct, Sir."
+    butler """
+    Correct, Sir.
+    """
 
     $ unlock_map('broken_room')
 

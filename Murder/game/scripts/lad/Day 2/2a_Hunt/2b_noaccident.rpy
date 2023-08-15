@@ -4,64 +4,64 @@ label lad_day2_hunt_noaccident:
     call change_time(12,30, 'Hunt', 'Saturday')
 
     """
-    Following our hostess was probably the safest course.
+    Following our hostess seemed to be the safest course of action.
 
-    The only problem is that she and Sushil Sinha are both in their element.
+    The only problem is that both she and Sushil Sinha are completely in their element.
 
-    While I am clearly not.
+    While I clearly am not.
 
-    They already shot a few rabbits and a pheasant.
+    They've already shot a few rabbits and a pheasant.
 
-    Out of pity, they also try to help me shoot a beautiful deer that came on to my path.
+    Out of pity, they even tried to help me shoot a deer that crossed my path.
 
-    But their guidance was unsuccessful. I only managed to scare the animal away.
+    However, I merely managed to scare the animal away.
     """
 
     captain """
-    Poor luck Mr Harring. I am sure you'll get the next one.
+    Tough luck, Mr. Harring. I'm sure you'll get the next one.
     """
 
     lad """
-    Thank you, but I don't think I am made for this. I think I missed it by a couple of feet.
+    Thank you, but I don't think this is for me. I believe I missed it by several feet.
     """
 
     captain """
-    Don't worry, it's just that you lack the practice.
+    Don't fret, you just lack practice.
 
-    But it's just as well. You wouldn't want to have served in the war.
+    Then again, it might be for the best. You wouldn't have wanted to serve in the war.
 
-    It's was the bloodiest thing. Nothing compare to the previous conflicts I was in.
+    It was truly brutal. Nothing like the previous conflicts I participated in.
     """
 
     lad """
-    Did you fight in many wars?
+    Have you fought in many wars?
     """
 
     captain """
-    Of course, I started my career in India and fought my first battle during the war with Burma.
+    Indeed, I began my career in India and encountered my first battle during the war with Burma.
 
-    I've also been involved in the Chinese rebellion. Then ...
+    I was also involved in the Chinese rebellion. Then ...
     """
-    # TODO little difference if you have listened to the speech
+    # TODO adjust based on whether the player has listened to the speech
 
     $ captain_details.unlock_knowledge('wars')
 
     """
-    Those talks about war must have made Lady Claythorn uneasy, because she suddenly interrupts us.
+    Our conversation about the wars seemed to make Lady Claythorn uneasy, as she suddenly interrupts us.
     """
 
     host """
-    Well, I think it's time for luncheon. How do you feel about settling here for our picnic?
+    Well, I believe it's time for luncheon. How would you feel about settling here for our picnic?
     """
 
     captain """
-    Yes it's a perfect spot.
+    Yes, it's a perfect spot.
     """
 
     """
-    So we started preparing the picnic.
+    We began setting up the picnic.
 
-    But we didn't have time to eat, that we heard a shot not far from us.
+    However, before we could start eating, we heard a gunshot nearby.
     """
 
     $ stop_music(3)
@@ -69,44 +69,45 @@ label lad_day2_hunt_noaccident:
     play sound gun
 
     captain """
-    Ah, the others must have caught something. And they are not far from us.
+    Ah, it sounds like the others have caught something. And they're not far from here.
     """
 
     """
-    But the shot was followed soon by something else.
+    But soon after the gunshot, another sound followed.
 
-    A cry for help.
+    A desperate cry for help.
 
-    The captain heard it too, and jump on his feet.
+    The captain and I heard it, immediately jumping to our feet.
 
-    I stood up and we ran in the direction of the cry.
+    We rushed in the direction of the cry.
     """
 
     $ play_music('danger')
 
     """
-    We quickly reached the others.
+    Soon, we came upon the others.
 
-    Doctor Baldwin was lying down on the floor.
+    Doctor Baldwin was on the ground.
 
-    Next to him was Samuel Manning, shaking.
+    Standing beside him was Samuel Manning, visibly shaken.
     """
 
     drunk """
-    Oh my god, oh my god.
+    Oh my God, oh my God.
 
     It was an accident.
 
-    I don't know how it could have happened.
+    I can't believe this happened.
     """
 
     """
-    We examined the doctor.
+    We examine Doctor Baldwin.
 
     It is too late.
 
     He has bled to death.
     """
+
 
     $ stop_music()
 

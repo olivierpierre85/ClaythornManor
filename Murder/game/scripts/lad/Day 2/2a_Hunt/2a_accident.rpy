@@ -7,15 +7,15 @@ label lad_day2_hunt_accident:
     $ play_music('chill')
 
     """
-    Despite the risks, I decided to follow the doctor Baldwin and Samuel Manning.
+    Despite the risks, I decided to follow Doctor Baldwin and Samuel Manning.
 
-    At least, this way I probably won't be the one embarrassing myself.
+    At least this way, I probably won't be the one embarrassing myself.
 
-    We walked a while without encountering anything. 
+    We walked for a while without encountering anything.
     
-    Then we decided to stop for luncheon.
+    Then, we decided to stop for luncheon.
 
-    The four of us sat down in a clearing where we are sHarring a small picnic.
+    The four of us sat down in a clearing, sharing a small picnic.
 
     Mister Manning is silent, busy drinking from a pocket flask.
 
@@ -23,23 +23,23 @@ label lad_day2_hunt_accident:
 
     As per usual, the footman doesn't say a word.
 
-    That means the doctor and I are the only ones to talk.
+    That means the doctor and I are the only ones talking.
     """
     
     doctor """
-    So Mister Harring, how do you like it here?
+    So, Mister Harring, how are you finding it here?
 
-    It's a nice place they have there, don't they?
+    It's a lovely place they have, isn't it?
     """
 
     lad """
-    That's for certain. It's a nice change of scenery for me.
+    Certainly. It's a refreshing change of scenery for me.
 
     I don't often get to see nature like this.
     """
 
     doctor """
-    Oh, you're a city chap then. 
+    Ah, so you're a city chap. 
     
     London?
     """
@@ -67,35 +67,35 @@ label lad_day2_hunt_accident:
     """
 
     footman """
-    Alright, if you are all set. We can go again.
+    Alright, if everyone's ready, we can continue.
 
-    Hopefully we'll be luckier this time.
+    Hopefully, we'll have better luck this time.
     """
 
     pause 2.0
 
     """
-    For a while we weren't. 
+    For a while, we didn't. 
     
-    But then I spotted something looking like a rabbit afar.
+    But then, I spotted something that looked like a rabbit in the distance.
 
-    Daniel Baldwin was ahead of me and didn't see it.
+    Doctor Baldwin was ahead of me and didn't notice.
 
-    I point at my prey to the footman and he nods in approval.
+    I point out my prey to the footman, and he nods in approval.
 
-    So I put the gun on aiming position.
+    So, I get into an aiming position.
 
-    But as soon as I do it. Samuel Manning, who was behind me, realizes what's happening.
+    But as soon as I do, Samuel Manning, who was behind me, sees what's happening.
     """
 
     drunk """
-    Oh, a rabbit !
+    Oh, a rabbit!
     """
 
     """
-    He  cocks his gun, shaking a little.
+    He cocks his gun, shaking slightly.
 
-    Then fires it.
+    Then, he fires.
     """
 
     play sound gun
@@ -105,11 +105,11 @@ label lad_day2_hunt_accident:
     pause 2.0
 
     """
-    He missed by far. 
+    He missed by a mile. 
     
-    And it's too late for me to try again, the rabbit has ran away now.
+    By the time I could try again, the rabbit had run off.
 
-    I am a bit pissed but then I hear a cry.
+    I'm frustrated, but then I hear a cry.
     """
 
     $ play_music('danger')
@@ -117,106 +117,103 @@ label lad_day2_hunt_accident:
     # play sound dying_in_pain TODO better sound
 
     """
-    I turn around and spot the doctor in pain on the ground..
+    I turn around and see Doctor Baldwin crying in pain on the ground.
     """
 
     doctor """
-    Ughhh....
+    Ughhh...
     """
 
     footman """
-    Sir, sir, are you alright?
+    Sir, are you alright?
     """
 
     """
-    I begin to call for help.
-    """
-
-    lad """
-    HELP !!!
-
-    Somebody's been shot!
-    """
-
-    """
-    I face the footman.
+    I start to call for help.
     """
 
     lad """
-    Hurry, go get the others. We need their help.
+    HELP!!!
+
+    Someone's been shot!
+    """
+
+    """
+    I turn to the footman.
+    """
+
+    lad """
+    Hurry, fetch the others. We need help.
     """
 
     footman """
-    Yes, of course sir.
+    Yes, of course, sir.
     """
 
     drunk """
-    Oh no, oh no what have I done?!
+    Oh no, what have I done?!
 
     It was an accident.
 
-    An accident.
-
-    I didn't intend for this. Please believe me.
+    I never intended this. Please believe me.
     """
 
-
     """
-    I ignore Samuel Manning's babbling and sit beside the injured man.
+    I ignore Samuel Manning's pleas and sit beside the injured man.
 
-    I am at a loss for how to help.
+    I don't know how to help.
 
-    But, naturally, Daniel Baldwin knows.
+    But Doctor Baldwin does.
     """
 
     doctor """
-    Quick, remove my shirt.
+    Quickly, remove my shirt.
 
-    I have to see where the bullet entered.
+    I need to see where the bullet entered.
     """
 
     """
-    In a panic, I rip off his shirt, exposing his blood-soaked belly.
+    In my panic, I tear off his shirt, revealing his blood-soaked abdomen.
 
-    I notice a small puncture on his right side.
+    I notice a small entry wound on his right side.
 
-    It doesn't seem too bad.
+    It doesn't look too bad.
     """
 
     lad """
     I've found the wound.
 
-    Do you want me to apply pressure?
+    Should I apply pressure?
     """
 
     """
-    The doctor examines it himself.
+    The doctor inspects it himself.
 
-    Fear washes over his face.
+    A look of dread washes over his face.
     """
 
     doctor """
     There's no need.
 
-    The bullet pierced my liver.
+    The bullet has hit my liver.
     """
 
     lad """
-    But it's just a tiny hole, maybe we can...
+    But it's just a tiny hole. Maybe we can...
     """
 
     doctor """
-    No, we can't. Liver wounds aren't survivable.
+    No, we can't. Liver wounds are fatal.
 
     It's already too late.
     """
 
     """
-    He shoots a venomous glare at Samuel Manning but remains silent.
+    He casts a venomous glare at Samuel Manning but says nothing.
     """
 
     lad """
-    Can I do anything?
+    Is there anything I can do?
     """
 
     doctor """
@@ -224,9 +221,9 @@ label lad_day2_hunt_accident:
     """
 
     """
-    I search the area and locate his medical bag.
+    I search around and locate his medical bag.
 
-    I hand it to him.
+    I pass it to him.
     """
 
     doctor """
@@ -244,53 +241,53 @@ label lad_day2_hunt_accident:
 
     I'll lose consciousness soon.
 
-    And I likely won't wake up.
+    And likely, I won't awaken again.
     """
 
     """
-    What! Everything is happening too fast.
+    This is all happening too quickly.
     """
 
     lad """
     What can I do?
 
-    Do you have a message for someone?
+    Do you have any messages for anyone?
     """
 
     doctor """
     No, there's no one.
 
-    It doesn't matter.
+    It's inconsequential.
 
-    I never did anything worth anyone's attention.
+    I never did anything noteworthy.
 
-    I probably deserve this.
+    Perhaps I deserve this.
     """
 
     lad """
     Don't say that.
 
-    I am sure your patients would be...
+    Your patients would...
     """
 
     doctor """
     My patients won't care if I live or die.
 
-    I was awful to them.
+    I was cruel to them.
 
-    I exploited them to get drugs.
+    I took advantage of them to obtain drugs.
 
-    I definitely don't deserve an award.
+    I certainly don't merit sympathy.
 
-    I never should have come here.
+    I shouldn't have come here.
 
-    But I guess in a way it's a form of justice.
+    Yet, in a way, this feels like justice.
     """
 
     """
-    He coughs up some blood.
+    He coughs up blood.
 
-    And then he goes silent.
+    And then, silence.
     """
 
     pause 1.0
@@ -298,12 +295,13 @@ label lad_day2_hunt_accident:
     $ doctor_details.unlock_knowledge('fraud')
 
     """
-    After a while, the footman brings the others over.
+    After a while, the footman returns with the others.
 
-    By the time they arrive, it's too late.
+    By the time they get here, it's too late.
 
-    Daniel Baldwin has bled out and lies lifeless in the forest.
+    Doctor Baldwin has bled out, lying lifeless in the forest.
     """
+
 
     pause 2.0
 
