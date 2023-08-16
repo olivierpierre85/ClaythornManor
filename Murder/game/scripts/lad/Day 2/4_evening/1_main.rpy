@@ -28,79 +28,73 @@ label lad_day2_evening:
     $ play_music('sad', 3)
 
     """
-    When I enter the room, the mood is rather gloom.
+    As I enter the room, the atmosphere is gloomy.
 
-    Daniel Baldwin and Thomas Moody seats are empty.
+    The seats of Daniel Baldwin and Thomas Moody are empty.
 
-    And Samuel Manning is not there either. 
+    Samuel Manning is also absent.
 
-    I take my usual seat, with only Amelia Baxter next to me now.
+    I take my usual seat, with only Amelia Baxter beside me now.
     """
 
     host """
-    Now that everyone is here. I want to say how sorry I am for what happened today.
+    Now that everyone is here, I want to express my deepest regret for what happened today.
 
-    It's not how I imagine this week-end would be.
+    This isn't how I imagined our weekend.
 
-    I don't think any of us want more entertainment at this point.
+    I don't believe any of us are in the mood for more entertainment.
 
-    So tomorrow morning, you'll receive your rewards.
+    So, tomorrow morning, you'll receive your rewards.
     
-    Then we will wait until the police arrives.
+    Afterward, we'll wait for the police to arrive.
 
-    You'll be free to go back home as soon as the officers will say so.
+    You're free to head home as soon as the officers give the all-clear.
 
-    In the meantime, enjoy your meal.
+    For now, enjoy your dinner.
 
-    Afterwards, drinks will be available in the billiard room like yesterday. 
+    Drinks will be available in the billiard room afterward, as they were yesterday.
     """
 
     """
-    The food arrives right after the speech.
+    The food is served shortly after the speech.
 
-    But none of us have much of an appetite.
+    Yet, most of us have little appetite.
     """
 
     lad """
-    Miss Baxter, I don't see Samuel Manning here.
+    Miss Baxter, I don't see Samuel Manning. 
 
-    Do you know where he is?
+    Do you know where he might be?
     """
 
     psychic """
-    Locked in his room, that's where he is.
-    """
+    He's locked in his room.
 
-    lad """
-    Really, how come?
-    """
+    After you left, there was a heated debate about how to handle him.
 
-    psychic """
-    While you were away, we had a heated discussion of what to do with him.
-
-    Some were to attach him to a chair, other to let him be free.
+    Some wanted to tie him to a chair; others believed he should remain free.
     
-    In the end, Captain Sinha thought it was better to lock him in his room.
+    Ultimately, Captain Sinha decided it best to confine him to his room.
 
-    At least he didn't object.
+    Surprisingly, he didn't resist.
 
-    He is there now. 
+    That's where he is now. 
 
-    It was agreed that his dinner will be served there.
-    """    
+    It was agreed that his dinner would be served there.
+    """
 
     """
-    Alright. That's one fewer thing to be concerned about I guess.
+    Well, that's one less thing to worry about.
 
-    None of us has much will to make small talk.
+    No one seems up for small talk.
 
-    So we eat in silence.
+    Dinner passes in silence.
 
-    When dinner is over, most people retreat to their room.
+    Most guests retire to their rooms after eating.
 
-    I doubt a lot of them will want to discuss over drinks now.
+    Given the day's events, I doubt many are in the mood for drinks.
 
-    What will I do?
+    What should I do next?
     """
 
     call change_time(21,00)
@@ -116,7 +110,7 @@ label lad_day2_evening:
     if lad_details.saved_variables["day2_drunk"]:
 
         """
-        Gee, I am not thinking straight.
+        My head feels foggy.
 
         I rush to my room.
         """
@@ -124,33 +118,33 @@ label lad_day2_evening:
         $ change_room('lad_room')
 
         """
-        I quickly reach the toilet and puke all I have been drinking.
-
-        I better go to bed now.
+        I make it to the toilet just in time, emptying the contents of my stomach.
         """
 
         if lad_details.saved_variables["day1_drunk"]:
             
             """
-            Alright, two days in a row.
+            Drunk two days in a row.
 
-            What does it say about me?
+            What does this say about me?
             """
 
             $ lad_details.unlock_knowledge('poor_drinker') 
 
-            # TODO achievement. DRUNK OR CHEATED DEATH IF drank poison
+            # TODO: Achievement. DRUNK OR CHEATED DEATH IF drank poison.
 
         """
-        I fell asleep as soon as I lay on my bed.
+        It's best I get some rest now.
+
+        I fell asleep as soon as I lie down.
         """
     
     else:
 
         """
-        I am tired of wandering inside this house.
+        Wandering through this house has taken its toll.
 
-        Beside, with all that happened today, I am exhausted.
+        And with everything that happened today, I'm drained.
 
         I should go back to my room.
         """
@@ -158,9 +152,9 @@ label lad_day2_evening:
         $ change_room('lad_room')
 
         """
-        Before trying to sleep, I better move the some furniture in front of the door.
+        Before trying to sleep, it seems a good idea to barricade the door with some furniture.
 
-        It's better to be careful.
+        You can't be too cautious.
         """
 
         play sound moving_furniture
@@ -168,9 +162,9 @@ label lad_day2_evening:
         pause 2.0
 
         """
-        Ok, that should do it.
+        That should be enough.
 
-        I can rest peacefully now.
+        Now, I can rest peacefully.
         """
 
     jump lad_day3_morning
@@ -184,11 +178,11 @@ label lad_day2_broken_room_back:
     $ change_room('broken_room')
 
     """ 
-    Even though I've already been here, I can't shake the feeling that I should check the room again. 
+    Although I've been here before, I can't shake the feeling I should inspect the room once more.
 
-    But everything looks exactly the same as before.
+    Yet, everything looks the same as I remember.
 
-    I should look elsewhere.
+    Perhaps I should look elsewhere.
     """    
 
     return
@@ -198,48 +192,45 @@ label lad_day2_broken_room_back_for_drink:
     $ change_room('broken_room')
 
     """ 
+    After speaking with Sushil, I wonder if I should try the flask.
 
-    After talking with Sushil, my thoughts began to stir. Should I take a swig from the flask? 
-    
-    It would be the quickest way to know if something's wrong. 
-    
-    As I reach for it next to the nightstand, I find it's empty, its contents spilled on the nightstand and floor. 
-    
-    I briefly consider licking it, but quickly dismiss the idea as too low class, even for me. 
-    
-    Instead, I decide to wait for the experts to provide an answer.
+    A quick taste would clarify if something is wrong.
+
+    Reaching for it on the nightstand, I find it empty, with its contents spilled.
+
+    I briefly consider licking it but quickly dismiss the idea as too low-class, even for me.
+
+    I'll wait for the experts to provide an answer.
     """    
 
     return
-
-
 
 label lad_day2_doctor_room:
 
     $ change_room('doctor_room') 
 
     """
-    I didn't have the time earlier to take a good look at the room.
+    I didn't have time earlier to take a good look at the room.
 
     It feels a little weird being in here, but I might as well look for something useful.
 
-    I search his personal effects when I stubble into his medication suitcase.
+    I search his personal effects when I stumble upon his medication suitcase.
 
-    There is nothing out of the ordinary in there.
+    There's nothing out of the ordinary in there.
 
-    A stethoscope, bandages, a few bottle of medications,...
+    A stethoscope, bandages, a few bottles of medication,...
 
-    There is one in particular that he has more that the others. 
-    
-    Laudanum is written on the label.
+    There's one in particular that he has more of than the others.
+
+    "Laudanum" is written on the label.
 
     He has almost a dozen of those bottles.
 
-    Laudanum... , I heard that before.
-    
-    It's opium.
+    Laudanum... I've heard of that before.
 
-    Looks like the doctor wasn't using it only on patients.
+    It's essentially opium.
+
+    It looks like the doctor wasn't using it only on patients.
     """
 
     $ doctor_details.unlock_knowledge('addict') 
@@ -248,10 +239,8 @@ label lad_day2_doctor_room:
     """
     Just in case, I might as well take a few for myself.
     """
-
     # TODO add pocketing sound?
     # TODO is the lad a thief? likely ADD HERE
     # TODO add LAUDANUM IN THE OBJECTS LIST?
 
     return
-    

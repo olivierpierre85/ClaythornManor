@@ -7,21 +7,21 @@ label lad_day2_evening_billiard_room:
         $ lad_details.saved_variables["day2_evening_billiard_room_visited"] = True
 
         """
-        As I expected, not a lot of people are there.
+        Just as I expected, there aren't many people here.
 
-        I can only see Captain Sinha sitting on a couch and the butler in the corner.
+        I can only spot Captain Sinha sitting on a couch and the butler in the corner.
 
-        Well at least, the bar is still there.
+        At least the bar is still there.
         """
 
         # TODO add interaction with the butler
         $ lad_day2_evening_billiard_room_menu = TimedMenu("lad_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain', 20),
-            TimedMenuChoice('Talk again to Sushil Sinha', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] == True'),
-            TimedMenuChoice('Go to the bar to have a drink', 'lad_day2_evening_billiard_room_bar', 10),
-            TimedMenuChoice('Have another drink, for the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_details.saved_variables["day2_drinks"] == 1'),
-            TimedMenuChoice('I think I still need of few more drinks', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_details.saved_variables["day2_drinks"] == 2'),
-            TimedMenuChoice('Oh what the hell, maybe I should just get plastered', 'lad_day2_evening_billiard_room_bar_4', 120, condition = 'lad_details.saved_variables["day2_drinks"] == 3'),
+            TimedMenuChoice('Talk to Sushil Sinha again', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] == True'),
+            TimedMenuChoice('Go to the bar for a drink', 'lad_day2_evening_billiard_room_bar', 10),
+            TimedMenuChoice('Have another drink to calm the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_details.saved_variables["day2_drinks"] == 1'),
+            TimedMenuChoice('Maybe a few more drinks would help', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_details.saved_variables["day2_drinks"] == 2'),
+            TimedMenuChoice('Oh, what the hell, maybe I should just get plastered', 'lad_day2_evening_billiard_room_bar_4', 120, condition = 'lad_details.saved_variables["day2_drinks"] == 3'),
             TimedMenuChoice('Leave the room', 'lad_day2_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -30,7 +30,7 @@ label lad_day2_evening_billiard_room:
         $ lad_day2_evening_billiard_room_menu.early_exit = False
 
         """
-        You are back in the Billiard Room.
+        You're back in the Billiard Room.
         """
 
     call run_menu(lad_day2_evening_billiard_room_menu)
@@ -46,15 +46,15 @@ label lad_day2_evening_billiard_room_captain_hypothesis_doctor:
     captain """
     And what if he was?
 
-    A lot of people are, especially doctors.
+    Many people are, especially doctors.
 
-    In any case, opium addicts often die of overdose.
+    Regardless, opium addicts often die of an overdose.
     
-    Not shot in the chest.
+    Not from a gunshot to the chest.
     """
 
     """
-    Okay, I have no answer to that.
+    Well, I don't have a response to that.
     """
 
     return
@@ -64,41 +64,41 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
     captain """
     Really? 
 
-    He seemed pretty drunk to me.
+    He seemed quite drunk to me.
     """
 
     lad """
-    Yes, in the early morning. And then again before the accident happened.
+    Yes, early in the morning. And then again before the accident.
 
-    But not right before the hunt started.
+    But not right before the hunt began.
     """
 
     captain """
-    Well if that is true, breakfast might have sobered him up.
+    If that's true, maybe breakfast sobered him up.
 
-    And then I suppose he drank more during the hunt.
+    And I assume he had more drinks during the hunt.
     """
 
     if lad_details.saved_variables["day2_saw_accident"]:
 
         captain """
-        You were there with him right?
+        You were with him, weren't you?
 
         Did you see him drink?
         """
 
         lad """
-        Well, I think so.
+        I believe so.
 
-        He was keeping mostly to himself but I did see him drink from his flask.
+        He mostly kept to himself, but I did see him sip from his flask.
         """
 
         captain """
-        Well, there you have it then.
+        Well, there you have it, then.
         """
     
     lad """
-    I guess.
+    I suppose so.
     """
 
     return
@@ -106,17 +106,17 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
 label lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter:
 
     captain """
-    Really what makes you think that?
+    Really? What makes you think that?
     """
 
     lad """
-    I found this piece of paper in Samuel Manning room while you were hunting.
+    I found this piece of paper in Samuel Manning's room while you all were hunting.
     """
 
     captain """
     Why on earth were you in his room?
 
-    You know what never mind.
+    You know what, never mind.
 
     I don't want to know.
 
@@ -128,19 +128,19 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter:
     """
 
     captain """
-    We can barely read anything here, what do you believe it means?
+    It's hard to make out the words here. What do you think it means?
     """
 
     lad """
-    Well, I am not sure, but it could be a threat, or blackmail, or ...
+    I'm not entirely sure, but it might be a threat or blackmail, or...
     """
 
     captain """
-    Or absolutely nothing.
+    Or it could mean nothing.
 
-    You could make anything out of those words.
+    You can interpret those words in countless ways.
 
-    For instance :
+    For instance:
     """
 
     letter """
@@ -156,21 +156,24 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter:
     """
 
     lad """
-    It's certainly not that!
+    It's definitely not that!
     """
 
     captain """
-    Probably not, but you can't say for sure can you?
+    Probably not, but you can't be certain, can you?
 
-    So I am afraid we can't make much of this.
+    I'm afraid this doesn't help us much.
     """
 
     """
     Maybe not.
 
-    But what with this poem though?
+    But what about this poem though?
+
+    Did he just improvise it on the spot?
     """
 
+    #TODO: Way with words for Sushil sinha?
     return
 
 label lad_day2_evening_billiard_room_captain_hypothesis_broken:
@@ -178,13 +181,11 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
     captain """
     A weird liquid?
 
-    What type of liquid?
+    What kind of liquid?
     """
 
     lad """
-    A greenish liquid.
-
-    It was coming from his flask.
+    It was greenish and oozing from his flask.
     """
 
     captain """
@@ -192,27 +193,27 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
     """
 
     lad """
-    Well, green is the color of poison. No?
+    Well, green often indicates poison, right?
 
-    In any case, it's not the normal colour of alcohol.
+    At least, it's not a typical color for alcohol.
     """
 
     captain """
-    Not of any alcohol you know perhaps.
+    Maybe not for any alcohol you're familiar with.
 
-    But I do know multiple liqueurs that have a greenish colour.
+    I know of several liqueurs that have a greenish hue.
 
-    Absinthe, Chartreuse, Creme de menthe,...  and there are probably even more.
+    Absinthe, Chartreuse, Creme de menthe,... and there are likely more.
 
-    So I wouldn't scream poison next time you see a green drink.
+    So I wouldn't shout "poison" the next time you see a green drink.
     """
 
     if not lad_details.saved_variables["day1_drunk"]:
 
         captain """
-        Of course, if you had tasted the drink it would another matter.
+        Of course, if you had tasted the drink, it would be a different story.
 
-        Have you?
+        Did you try it?
         """
 
         lad """
@@ -220,21 +221,21 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
         """
 
         captain """
-        Then we will have to wait for the experts to analyze it.
+        Then we'll need to wait for the experts to analyze it.
 
-        But I bet they won't find anything out the ordinary.
+        But I bet they won't find anything unusual.
         """
 
         $ lad_details.saved_variables["day2_evening_taste_from_flask"] = True
 
     else:
-        # TODO ONLY POSSIBLE WAY TO MAKE THE CAPTAIN SUSPICIOUS??WHAT TO MALE of it now?
+        # TODO ONLY POSSIBLE WAY TO MAKE THE CAPTAIN SUSPICIOUS??WHAT TO MAKE OF IT NOW?
         lad """
-        But the flask didn't have any of those alcohols.
+        But the flask didn't contain any of those alcohols.
 
-        I tasted it and it was just whisky.
+        I tasted it, and it was just whisky.
 
-        I am sure of that.
+        I'm certain of that.
         """
 
     return
@@ -242,7 +243,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
 label lad_day2_evening_billiard_room_captain_2:
 
     captain """
-    Yes mister Harring?
+    Yes, Mister Harring?
 
     Do you have anything to add to our last conversation?
     """
@@ -251,100 +252,99 @@ label lad_day2_evening_billiard_room_captain_2:
 
     return
 
-
 label lad_day2_evening_billiard_room_captain:
 
     """
-    I take a seat in front of Sushil Sinha.
+    I take a seat opposite Sushil Sinha.
 
-    If he is disturbed by the events of the day, he doesn't show it.
+    If he's disturbed by the events of the day, he doesn't show it.
     """
 
     captain """
-    Good evening Mister Harring.
+    Good evening, Mister Harring.
 
-    It's nice to see someone else not scared out of their wit tonight.
+    It's nice to see someone else who isn't scared out of their wits tonight.
 
-    The reaction of the others is pretty ridiculous to me.
+    The reaction of the others seems quite ridiculous to me.
     """
 
     lad """
-    You don't think we should be at least a little worried?
+    You don't think we should be at least a bit worried?
     """
 
     captain """
-    Absolutely not. What happened today were obviously accidents.
+    Absolutely not. What happened today was obviously accidental.
 
-    There is no reason to think otherwise.
+    There's no reason to think otherwise.
 
-    And now everyone is placating themselves in their rooms, like some mysterious murderer is going to take them.
+    And now everyone is holed up in their rooms, as if some mysterious murderer is out to get them.
     """
 
     lad """
-    You don't think there is a murderer among us then?
+    So you don't believe there's a murderer among us?
     """
 
     captain """
-    Of course there is.
+    Of course, there is.
     
     His name is Samuel Manning.
 
-    Once the police come, they will probably charge him with involuntary manslaughter.
+    Once the police arrive, they'll probably charge him with involuntary manslaughter.
 
-    It's most likely he'll be sent to prison for a long time.
+    He's likely to be sent to prison for a long time.
 
-    But he won't cause anymore harm tonight. You can be sure of that.
+    But he won't cause any more harm tonight. Of that, you can be certain.
     """
 
     lad """
     What makes you so sure?
 
-    You must admit that two deaths happening in the same day is quite rare occurrence.
+    You must admit, two deaths in a single day is quite an uncommon occurrence.
     """
 
     captain """
-    Sadly I'll have to disagree with you.
+    Sadly, I'll have to disagree with you.
 
-    It happened to me more times that I could count.
+    It has happened to me more times than I can count.
 
-    And I know what you are gonna say. 
+    And I know what you're going to say. 
     
-    We are not at war anymore. It's not the same.
+    We're not at war anymore. It's not the same.
 
-    True. But on the other hand, I don't think it is so improbable.
+    True. But on the other hand, I don't believe it's that improbable.
 
-    I think everyone is overreacting because they are not used to death like I am.
+    I think everyone is overreacting because they're not accustomed to death like I am.
 
-    Once you remove fear from the equation, you'll realize there is nothing abnormal about the events of today.
+    Once you remove fear from the equation, you'll realize there's nothing abnormal about today's events.
 
-    Don't you think?
+    Don't you agree?
 
-    Or you have tangible evidences to believe otherwise?
+    Or do you have tangible evidence to believe otherwise?
     """
 
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu("lad_day2_evening_billiard_room_captain_hypothesis_menu", [
-        TimedMenuChoice('I believe Daniel Baldwin was an opium addict {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']" ),
-        TimedMenuChoice('I saw a strange liquid on the night stand of Thomas Moody {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')" ),
-        TimedMenuChoice('I think Samuel Manning was given a reason to kill Daniel Baldwin', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10,  condition="lad_details.objects.is_unlocked('burned_letter')"  ),
-        TimedMenuChoice('I am not sure Samuel Manning was really drunk when the accident occurred', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
-        # TODO when you have ALL the suspicious, you can convince the captain that something weird is happening. But what happens NEXT ???? TODO
+        TimedMenuChoice('I believe Daniel Baldwin had an opium addiction {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']" ),
+        TimedMenuChoice('I noticed a strange liquid on Thomas Moody\'s nightstand {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')" ),
+        TimedMenuChoice('I suspect Samuel Manning had a motive to harm Daniel Baldwin', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10,  condition="lad_details.objects.is_unlocked('burned_letter')"  ),
+        TimedMenuChoice('I doubt that Samuel Manning was truly inebriated at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
+        # TODO: If you have ALL the suspicions, you can convince the captain something strange is afoot. Need to decide next steps.
         TimedMenuChoice('I don\'t see any reasons to be suspicious.', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit = True ),
     ])
 
     call run_menu(lad_day2_evening_billiard_room_captain_hypothesis_menu)
 
     lad """
-    Ok. Maybe there is nothing really suspicious in the end.
+    Okay. Maybe there isn't anything particularly suspicious after all.
     """
 
     captain """
-    Exactly.
+    Precisely.
 
-    Two sad unrelated accidents is the most simple and logical explanation here.
+    Two unfortunate, unrelated accidents is the simplest and most logical explanation here.
 
-    And like the famous saying goes, the most simple explanation is usually the best.
+    As the famous saying goes, the simplest explanation is usually the best.
 
-    Now if you'll excuse me, I would like to finish my book.
+    Now, if you'll excuse me, I'd like to finish my book.
     """
 
     lad """
@@ -355,78 +355,77 @@ label lad_day2_evening_billiard_room_captain:
 
     return
 
-
 label lad_day2_evening_billiard_room_bar:
 
     """
-    There is not a large choice of drinks. So I drink a glass of sherry.
+    There isn't a wide variety of drinks. So, I have a glass of sherry.
     """
 
-    $ lad_details.saved_variables["day2_drinks"] = lad_details.saved_variables["day2_drinks"] + 1
+    $ lad_details.saved_variables["day2_drinks"] += 1
 
     return
 
 label lad_day2_evening_billiard_room_bar_2:
     
     """
-    With everything that has happened, one drink is probably not enough.
+    Given everything that's happened, one drink probably isn't enough.
 
-    I should have another one to help me relax.
+    I should have another to help me relax.
 
-    So I pour myself another sherry.
+    So, I pour myself another glass of sherry.
     """
 
-    $ lad_details.saved_variables["day2_drinks"] = lad_details.saved_variables["day2_drinks"] + 1
+    $ lad_details.saved_variables["day2_drinks"] += 1
 
     return
 
 label lad_day2_evening_billiard_room_bar_3:
     
     """
-    I can't seem to be able to get rid of my anxiety.
+    I can't seem to shake off my anxiety.
 
-    More drinks is probably the answer.
+    More drinks might be the answer.
     """
 
     pause 2.0
     # TODO sound of drink pouring
 
     """
-    After a few more drinks, the captain turns his head towards me.
+    After a few more drinks, the captain turns his head toward me.
     """
 
     captain """
-    Are you ok there?
+    Are you okay over there?
 
-    You sure you haven't had enough for tonight?
+    Are you sure you haven't had enough for tonight?
 
-    We may have to be sharp early tomorrow.
+    We might need to be sharp early tomorrow.
     """
 
     lad """
-    Naahhh, I am fine....
+    Nahhh, I'm fine...
     """
 
     """ 
-    Shit, am I slurring?
+    Damn, am I slurring?
 
-    Maybe he is right.
+    Maybe he's right.
     """
 
-    $ lad_details.saved_variables["day2_drinks"] = lad_details.saved_variables["day2_drinks"] + 1
+    $ lad_details.saved_variables["day2_drinks"] += 1
 
     return
 
 label lad_day2_evening_billiard_room_bar_4:
     
     """
-    I ignore the captain judgemental look and head again to the bar.
+    I ignore the captain's judgmental look and head back to the bar.
 
     Cut me some slack.
-    
+
     These are extraordinary circumstances.
 
-    Beside, one more can't hurt.
+    Besides, one more can't hurt.
     """
 
     $ lad_details.saved_variables["day2_drunk"] = True

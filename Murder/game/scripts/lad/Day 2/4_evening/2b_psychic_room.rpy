@@ -1,17 +1,17 @@
 label lad_day2_evening_psychic_room:
-    
+
     $ change_room("bedrooms_hallway")
-    
+
     lad """
     Miss Baxter?
 
-    Are you here? It's Ted Harring
+    Are you here? It's Ted Harring.
     """
 
     """
-    She slightly opens the door and look in the hallway.
+    She slightly opens the door and looks in the hallway.
 
-    She looks worried.
+    She seems worried.
     """
 
     psychic """
@@ -29,14 +29,14 @@ label lad_day2_evening_psychic_room:
     $ change_room('psychic_room')
 
     psychic """
-    So have you given any thought about what I told you?
+    So, have you given any thought to what I told you?
 
-    You agree that something not right is happening?
+    Do you agree that something isn't right?
     """
 
     call run_menu(TimedMenu("lad_day2_evening_psychic_room", [
         TimedMenuChoice('I think you might be right', 'lad_day2_believe_psychic', 10, early_exit = True ),
-        TimedMenuChoice('No, you are clearly hallucinating things', 'lad_day2_believe_dont_believe_psychic', early_exit = True)
+        TimedMenuChoice('No, you are clearly imagining things', 'lad_day2_believe_dont_believe_psychic', early_exit = True)
     ]))
 
     return
@@ -44,29 +44,27 @@ label lad_day2_evening_psychic_room:
 label lad_day2_believe_psychic:
 
     lad """
-    I am not sure yet. But what happened is strange enough so we can take some precautions.
+    I'm not sure yet. But what happened is strange enough that we should take some precautions.
     """
 
     psychic """
-    I am glad you agree.
+    I'm glad you agree.
 
-    I've given this a lot of thought, and I think if what I fear is true, he got help from someone else.
+    I've given this a lot of thought, and I believe if what I fear is true, Samuel Manning had help from someone else.
     """
 
     $ play_music("mysterious")
 
     lad """
-    Do you mean a guest? Or someone in the staff could also be involved?
+    Do you mean a guest? Or could someone from the staff be involved?
     """
 
     psychic """
-    I wouldn't rule anything, but it's seems less likely that the staff or Lady Claythorn would be involved.
+    I wouldn't rule anything out, but it seems less likely that the staff or Lady Claythorn would be involved.
 
-    This would require a tremendous operation.
+    Such an act would require a massive operation.
 
-    No, a more plausible theory is that one or two people heard about the event.
-    
-    They then stole the place of real guest to infiltrate the place.
+    No, a more plausible theory is that one or two individuals heard about the event and took the places of real guests to infiltrate the manor.
     """
 
     lad """
@@ -74,57 +72,57 @@ label lad_day2_believe_psychic:
     """
 
     psychic """
-    Well, it's rather obvious isn't it?
+    Well, it's rather obvious, isn't it?
 
-    The prize money of course.
+    The prize money, of course.
 
-    It was mentioned in the invitation letter, the prize will be handed in bearers bond.
+    It was mentioned in the invitation letter that the prize will be given in bearer's bonds.
     """
 
     lad """
-    Bearers bond?
+    Bearer's bonds?
     """
 
     psychic """
     That's a note that you can exchange at the bank without having to prove your identity.
 
-    So it's almost as easy to use as cash.
+    So, it's almost as easy to use as cash.
     """
 
     lad """
-    Yes that's a lot of money hidden somewhere in the manor.
+    That's a lot of money hidden somewhere in the manor.
     """
 
     lad """
-    So you think it could be a simple robbery?
+    So you think it could be a mere robbery?
     
-    Why not just simply attack the manor?
+    Why not just directly attack the manor?
     """
 
     psychic """
     It's easier to enter incognito.
 
-    To first observe and then take down potential threats discretely.
+    First, observe and then discreetly eliminate potential threats.
 
-    That's the most likely explanation I could come up with.
+    That's the most likely explanation I could think of.
     """
 
     lad """
-    I guess that's possible.
+    I suppose that's possible.
 
-    But there is no way to determine who could be involved.
+    But there's no way to determine who might be involved.
     """
 
     psychic """
-    Precisely.
+    Exactly.
 
-    That's why I think we should hide safely in our rooms tonight.
-    
-    Tomorrow morning, the first one to get up of the two of us will wake the other up.
+    That's why I suggest we stay safely in our rooms tonight.
 
-    Then we stick together the whole day until we are free to leave.
+    Tomorrow morning, the first one of us to wake up should alert the other.
 
-    What do you think of that?
+    Then we stick together the entire day until we can safely leave.
+
+    What do you think?
     """
 
     $ play_music("PREVIOUS")
@@ -136,9 +134,9 @@ label lad_day2_believe_psychic:
     """
 
     psychic """
-    Great !
+    Great!
 
-    In the meantime, is there something else you wanted to talk about?
+    Is there anything else you'd like to discuss?
     """
 
     call psychic_generic
@@ -150,27 +148,27 @@ label lad_day2_believe_psychic:
 label lad_day2_believe_dont_believe_psychic:
 
     lad """
-    I am sorry, but I think you are imagining things here.
+    I'm sorry, but I believe you might be overthinking things.
 
-    What happened today was just an unfortunate coincidence.
+    Today's incident was probably just an unfortunate coincidence.
 
-    There are no reasons to panic.
+    I don't see any reason to panic.
     """
 
     psychic angry """
     Really?! That's what you think?
 
-    You believe I hallucinate things?!
+    You think I'm just imagining things?!
 
-    Well if that's the case you better leave my room !
+    If that's your stance, then you better leave my room!
     """
 
     lad """
-    No that's not what I meant. I am sorry.
+    That's not what I meant. I'm sorry.
     """
 
     psychic """
-    Too late for that Mister Harring.
+    It's too late for apologies, Mister Harring.
 
     Please leave my room.
 

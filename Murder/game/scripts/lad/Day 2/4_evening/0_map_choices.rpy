@@ -35,15 +35,15 @@ label lad_day2_evening_dining_room:
     return
 
 label lad_day2_evening_garden:
-    
+
     $ change_room('great_hall')
-    
+
     """
     I open the door to go to the garden.
 
     But after a quick glance outside, I realize it's pitch black.
 
-    I don't think I will be able to do anything there at this hour.
+    I don't think I'll be able to do anything there at this hour.
     """
     return
 
@@ -67,11 +67,10 @@ label lad_bedroom_stay_away_day2:
 
     No, that's probably a bad idea.
 
-    Everyone is in the house now, so that would too risky.
+    Everyone is in the house now, so it would be too risky.
     """
     
     return
-
 
 # Nurse
 label lad_day2_evening_nurse_room:
@@ -99,13 +98,13 @@ label lad_day2_evening_nurse_room:
     """
 
     nurse """
-    It's incredibly late mister Harring.
+    It's incredibly late, Mister Harring.
 
-    Can't it wait in the morning?
+    Can't it wait until the morning?
     """
 
     lad """
-    Yes of course, sorry for disturbing you.
+    Yes, of course, sorry for disturbing you.
     """
 
     return
@@ -144,17 +143,16 @@ label lad_day2_evening_drunk_room:
     """
 
     """
-    I can hear Samuel Manning's voice, but it's incoherent and he's mostly just moaning
+    I can hear Samuel Manning's voice, but it's incoherent and he's mostly just moaning.
 
     It's pretty clear that he's blind drunk.
 
-    I know that the door is closed, so no point in trying to enter.
+    I know that the door is closed, so there's no point in trying to enter.
     """
 
     $ unlock_map('drunk_room')
 
     return
-
 
 # 
 # Attic
