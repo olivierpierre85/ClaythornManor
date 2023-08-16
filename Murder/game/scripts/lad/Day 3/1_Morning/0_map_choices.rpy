@@ -8,7 +8,7 @@ label lad_day3_first_downstairs:
         """
         I take the stairs to the basement, expecting to be stopped at any moment.
 
-        But there is nobody.
+        But no one is there.
 
         I can safely explore downstairs now.
         """
@@ -27,25 +27,25 @@ label lad_day3_morning_kitchen:
     """
     I reach the kitchen.
 
-    I guess it's a regular kitchen for a house of that size.
+    I guess it's a typical kitchen for a house of this size.
 
-    There are pots and pans laying around.
+    Pots and pans are scattered around.
     """
         
     psychic """
-    You see.
+    You see?
 
-    There is no one here.
+    No one is here.
 
-    Even though breakfast should be ready soon.
+    And yet, breakfast should be ready soon.
     """
 
     lad """
-    Ok I admit that is very strange indeed.
+    Ok, I admit that is very strange indeed.
     """
 
     """
-    We look around a little but can't find anything of interest.
+    We look around a bit but don't find anything of interest.
     """
     
     return
@@ -61,7 +61,7 @@ label lad_day3_morning_gun_room:
 
     So much firepower for just one household.
 
-    It's making me uneasy.
+    It makes me uneasy.
     """
 
     lad """
@@ -69,22 +69,22 @@ label lad_day3_morning_gun_room:
     """
 
     psychic """
-    No indeed.
+    No, indeed.
 
-    But it might be useful to get a weapon for protection you don't think?
+    But don't you think it might be useful to get a weapon for protection?
     """
 
     """
-    Well, I don't have a lot of experience with guns.
+    Well, I don't have much experience with guns.
 
     It might be a bad idea.
 
-    But on the other hand, I don't know what we might encounter today.
+    But then again, I don't know what we might encounter today.
     """
 
     call run_menu(TimedMenu("lad_day3_morning_gun_room", [
-        TimedMenuChoice('Sure, I need a gun. It doesn\'t matter that I don\'know how to use it', 'lad_day3_take_gun', early_exit=True),
-        TimedMenuChoice('I would rather not. I could hurt myself.', 'lad_day3_no_gun', early_exit=True), 
+        TimedMenuChoice('Sure, I need a gun. It doesn\'t matter that I don\'t know how to use it', 'lad_day3_take_gun', early_exit=True),
+        TimedMenuChoice('I would rather not. I might hurt myself.', 'lad_day3_no_gun', early_exit=True), 
     ]))
 
     return
@@ -94,11 +94,11 @@ label lad_day3_take_gun:
     lad """
     You are right.
 
-    We better get something to defend ourselves.
+    We should get something to defend ourselves.
     """
 
     """
-    Hunting rifles are a bit too large.
+    The hunting rifles are a bit too large.
 
     But I spot a revolver that fits my pocket.
     """
@@ -106,27 +106,27 @@ label lad_day3_take_gun:
     lad """
     Alright, I'll take this with me.
 
-    But there are no bullets in it.
+    However, there are no bullets in it.
     """
 
     psychic """
-    Sometimes, bullets are being kept separated from the guns.
+    Sometimes, bullets are kept separate from the guns.
 
-    It makes it less likely to have an accident.
+    It reduces the likelihood of accidents.
     """
 
     lad """
-    Where could they be then?
+    So, where could they be?
     """
 
     psychic """
-    No idea.
+    I have no idea.
 
-    But even empty, the gun can still scare away someone.
+    But even an empty gun can still scare someone away.
     """
 
     """
-    I guess.
+    I suppose.
 
     But it's not very reassuring.
     """
@@ -138,13 +138,13 @@ label lad_day3_take_gun:
 label lad_day3_no_gun:
 
     lad """
-    No I don't think so.
+    No, I don't think so.
 
     We might end up hurting ourselves.
     """
 
     psychic """
-    Alright, if that is what you want.
+    Alright, if that's what you want.
     """
 
     return
@@ -166,11 +166,11 @@ label lad_day3_morning_scullery:
     psychic """
     The scullery.
 
-    That's mainly where they wash the dishes.
+    It's primarily where they wash dishes.
 
-    If you look down the sink full, there are a lot of dirty dishes.
-    
-    It seems nobody cleaned after supper yesterday.
+    If you look in the sink, there are a lot of dirty dishes.
+
+    It seems nobody cleaned up after supper yesterday.
     """
 
     """
@@ -191,9 +191,9 @@ label lad_day3_morning_garage:
     """
     The garage.
 
-    That's where lady Claythorn car should be.
+    This is where Lady Claythorn's car should be.
 
-    But instead there is only parts of other cars and an old model in a shabby state.
+    But instead, there are only parts of other cars and an old model in a shabby state.
     """
 
     lad """
@@ -209,17 +209,17 @@ label lad_day3_morning_garage:
     """
 
     lad """
-    Yeah me too.
+    Me neither.
     """
 
     lad """
-    But if everyone has left, we might need it if we want to reach the next town.
+    But if everyone has left, we might need it to reach the next town.
     """
 
     psychic """
-    Right. But do you know how to drive that?
+    Right. But do you know how to drive it?
 
-    Because I sure can't.
+    Because I surely can't.
     """
 
     $ psychic_details.unlock_knowledge('drive')
@@ -227,7 +227,7 @@ label lad_day3_morning_garage:
     lad """
     Not really, no.
 
-    I never learn how to drive.
+    I never learned how to drive.
     """
 
     """
@@ -247,9 +247,9 @@ label lad_day3_morning_library:
     $ change_room("library")
     
     """
-    We enter the small library and found it empty.
+    We enter the small library and find it empty.
 
-    There is no room for anyone to hide in here.
+    There's no room for anyone to hide here.
 
     Let's move on.
     """
@@ -265,9 +265,9 @@ label lad_day3_morning_dining_room:
     """
 
     psychic """
-    And the table is not set for breakfast either.
+    And the table isn't set for breakfast either.
 
-    That's not normal.
+    That's unusual.
     """
 
     return
@@ -277,19 +277,19 @@ label lad_day3_morning_garden:
     $ change_room('manor_garden')
     
     """
-    We go out to explore the garden.
+    We venture out to explore the garden.
 
-    But there is no trace of anyone.
+    But there's no trace of anyone.
 
-    Lady Claythorn car is not there either.
+    Lady Claythorn's car isn't there either.
 
-    I try to shout to attract attention.
+    I try shouting to attract attention.
     """
 
     lad """
-    HELLO ! Is anyone here ?
+    HELLO! Is anyone here?
 
-    HELLO !!
+    HELLO!!
     """
 
     """
@@ -297,17 +297,17 @@ label lad_day3_morning_garden:
     """
 
     psychic """
-    I don't think we need to break our lungs.
+    I don't think shouting will help.
 
-    If someone is here we will find them.
+    If someone's here, we'll find them.
     """
 
     """
-    Oh, was shouting not appropriate?
+    Oh, was shouting inappropriate?
 
-    I guess she will always think about decorum, no matter the situation.
+    I guess she'll always prioritize decorum, no matter the situation.
 
-    Let's go back inside then.
+    Let's head back inside then.
     """
 
     return
@@ -321,31 +321,31 @@ label lad_day3_morning_meeting_captain:
     """
 
     psychic """
-    Same here, you are the first person we've bumped into today too.
+    We feel the same. You're the first person we've encountered today as well.
     """
 
     lad """
-    Do you have a clue about what's going on?
+    Do you have any idea what's going on?
     """
 
     captain """
-    Nothing solid. All I know is I don't like it.
+    Nothing concrete. All I know is, I don't like it.
     
-    People don't just up and leave their homes for no reason.
+    People don't just vanish from their homes without reason.
     """
 
     psychic """
-    They sure don't.
+    They certainly don't.
     """
 
     captain """
     And then there's the matter of the suspicious deaths.
 
-    I could have shrugged them off as bad luck yesterday, but now... now I'm not so sure.
+    I could've dismissed them as bad luck yesterday, but now... I'm not so certain.
     """
 
     """
-    The conversation hangs in the air, a heavy silence stretching between us.
+    The conversation lingers in the air, a heavy silence stretching between us.
     """
 
     return
@@ -357,19 +357,19 @@ label lad_day3_morning_entrance_hall:
     """
     The entrance hall is usually the heart of the house.
 
-    But there is no any activity today.
+    But there's no activity today.
 
-    Just in case, I try to call for someone.
+    Just in case, I try to call out for someone.
     """
 
     lad """
-    Is there anyone here?
+    Is anyone here?
     """
 
     """
     I didn't really expect an answer.
 
-    But an authoritative voice comes from up the stairs.
+    But an authoritative voice echoes from up the stairs.
     """
 
     captain """
@@ -381,27 +381,27 @@ label lad_day3_morning_entrance_hall:
     """
 
     captain """
-    Understood. I'm making my way down.
+    Understood. I'm on my way down.
     """
 
     """
-    Soon enough, Captain Sinha steps into view, descending the staircase to join us on the ground floor.
+    Soon enough, Captain Sinha comes into view, descending the staircase to join us on the ground floor.
     """
 
     call lad_day3_morning_meeting_captain
 
     psychic """
-    Staying put isn't going to shed any light on this,
+    Staying put won't give us any answers.
     
-    We need to keep exploring the house.
+    We need to continue exploring the house.
     """
 
     captain """
-    Agreed. Now should we keep looking together?
+    Agreed. Should we search together?
     """
 
     psychic """
-    Thank you, but... maybe it would be better to split up. 
+    Thank you, but... maybe it's better to split up. 
     
     We'd cover more ground that way.
     """
@@ -411,13 +411,13 @@ label lad_day3_morning_entrance_hall:
     """
 
     captain """
-    Makes sense. Let's venture on our own and meet up later. 
+    Makes sense. Let's proceed on our own and regroup later. 
 
     How about the tea room?
     """
 
     psychic """
-    That's a good spot.
+    That sounds good.
 
     See you there.
     """
@@ -445,21 +445,21 @@ label lad_day3_morning_tea_room:
     $ change_room("tea_room")
     
     """
-    Here I am back in the first room I visited in the manor.
+    Here I am, back in the first room I visited in the manor.
 
-    There is nothing left of the liveliness of that first day.
+    All the liveliness of that first day is gone.
 
-    Now it stands silent and empty.
+    Now, it stands silent and empty.
     """
 
     psychic """
-    No one is in here.
+    There's no one in here.
 
-    Let's look somewhere else.
+    Let's look elsewhere.
     """
 
     lad """
-    Right, of course
+    Right, of course.
     """
     
     return
@@ -471,52 +471,52 @@ label lad_day3_morning_billiard_room:
     """
     The billiard room is empty.
 
-    But the drinks are still there.
+    But the drinks remain untouched.
 
-    Maybe I should have a drink to calm down.
+    Perhaps I should have a drink to calm my nerves.
     """
 
     psychic """
-    Mister Harring, you are not thinking of drinking at this hour do you?
+    Mister Harring, you aren't considering drinking at this hour, are you?
     """
 
     if lad_details.saved_variables["day1_drunk"] and lad_details.saved_variables["day2_drunk"]:
         
         lad """
-        I think a bit of sherry would do us good.
+        I think a bit of sherry might be beneficial.
 
         You know,... to settle our nerves.
 
-        Don't you want one?
+        Don't you want some?
         """
 
         psychic """
-        Certainly not!
+        Absolutely not!
         """
 
         lad """
-        Alright suits yourself.
+        Alright, suit yourself.
         """
 
         """
-        She gives me a stare full of anger as I pulling myself a drink.
+        She gives me a disapproving stare as I pour myself a drink.
 
-        I don't want to drink it too fast, so I take it with me.
+        Not wanting to down it too quickly, I decide to take it with me.
 
-        Now I will be more relaxed for our exploration.
+        It should help relax me during our exploration.
         """
 
-        # TODO achievement "Biggest drunkard" "You drank every occasion you had"
+        # TODO achievement "Drink every chance you got."
     
     else:
         lad """
-        Hum, no of course not.
+        Uh, no, of course not.
         """
 
         """
-        It's probably wiser anyway.
+        That's probably the wiser choice.
 
-        Let's explore somewhere else
+        Let's explore further.
         """
     
     return
@@ -525,9 +525,9 @@ label lad_day3_morning_billiard_room:
 label lad_day3_morning_lad_room:
 
     """
-    No need to double check my room.
+    There's no need to double-check my room.
 
-    I know what's there.
+    I know what's in there.
     """
 
     return
@@ -539,33 +539,33 @@ label lad_day3_morning_nurse_room:
     """ 
     I knock on the door.
 
-    Nobody answers.
+    There's no response.
     """
 
     psychic """
-    No need for formalities.
+    There's no need for formalities now.
 
-    We better just try to enter.
+    We should just enter.
     """
 
     """
-    And before I could say anything, she opens the door.
+    Before I can react, she opens the door.
     """
 
     $ change_room("nurse_room")
 
     psychic """
-    I believe it's Miss Marsh's Room.
+    This is Miss Marsh's room.
     """
 
     $ unlock_map("nurse_room")
 
     psychic """
-    She is not here.
+    She isn't here.
 
-    And the room is neatly ordered.
+    Everything is neatly arranged.
 
-    No sign of struggle or hurry here.
+    No signs of a struggle or hasty departure.
     """
 
     lad """
@@ -573,21 +573,21 @@ label lad_day3_morning_nurse_room:
     """
 
     psychic """
-    I don't know.
+    I'm unsure.
 
-    This place is not that big.
+    The manor isn't that large.
 
-    We should have run into her.
-    
+    We should've encountered her by now.
+
     In any case, let's look around.
 
-    There might some clue on where she could be.
+    We might find a clue to her whereabouts.
     """
 
     pause 1.0
     
     """
-    We looked for a while but found nothing of interest.
+    We searched for a while but found nothing noteworthy.
     """
 
     return
@@ -602,29 +602,29 @@ label lad_day3_morning_captain_room:
     lad """
     I knock on the door.
 
-    No answer.
+    There's no response.
     """
 
     """
-    Before I could say anything, Amelia was already trying to open it.
+    Before I can say anything, Amelia is already trying the handle.
     """
 
     play sound door_rattling
 
     psychic """
-    It's closed.
+    It's locked.
 
-    I believe it's captain Sinha's room.
+    I believe this is Captain Sinha's room.
     """
 
     $ unlock_map('captain_room')
 
     lad """
-    He is not here, apparently.
+    He doesn't seem to be here.
     """
 
     psychic """
-    Let's look elsewhere then.
+    We should continue our search elsewhere.
     """
 
     return 
@@ -636,7 +636,7 @@ label lad_day3_morning_host_room:
     play sound door_knock
 
     psychic """
-    This is Lady Claythorn's Room.
+    This is Lady Claythorn's room.
     """
 
     $ unlock_map('host_room')
@@ -648,43 +648,43 @@ label lad_day3_morning_host_room:
     """
 
     """
-    There is no response.
+    There's no response.
     """
 
     """
-    Amelia places her hand on the latch and opens the door.
+    Amelia places her hand on the latch and gently opens the door.
     """
 
     lad surprised """
-    What are you doing? We can't just enter like this!
+    What are you doing? We can't just barge in like this!
     """
 
     """
-    But it's too late. She's already rushed inside.
+    But it's too late. She has already stepped inside.
 
-    I have no choice but to follow her.
+    Reluctantly, I follow her.
     """
 
     $ change_room('host_room')
 
     """
     The room is empty. 
-    
-    The wardrobe is wide open, clothes scattered on the floor.
+
+    The wardrobe stands open, its contents scattered about the floor.
     """
 
     psychic """
-    It looks like she left in a hurry.
+    It appears she left in haste.
     """
 
     """
-    We search for a clue about what happened, but find nothing.
+    We search for any clues about what might have happened, but come up empty.
     """
 
     psychic """
-    Well, she either left or she's still hiding somewhere in the manor. 
+    She's either left the manor or is still concealed somewhere within. 
     
-    There's no need to linger here any longer
+    We shouldn't linger here any longer.
     """
     
     return 
@@ -694,7 +694,7 @@ label lad_day3_morning_drunk_room:
     $ change_room("bedrooms_hallway")
 
     psychic """
-    It's Samuel Manning room.
+    This is Samuel Manning's room.
     """
 
     $ unlock_map('drunk_room')
@@ -702,7 +702,7 @@ label lad_day3_morning_drunk_room:
     lad """
     Mister Manning?
 
-    Are you alright?
+    Are you in there?
     """
 
     """
@@ -710,7 +710,7 @@ label lad_day3_morning_drunk_room:
     """
 
     lad """
-    Well the door is closed anyway.
+    The door's locked anyway.
 
     Mister Sinha has the key.
     """
@@ -722,19 +722,19 @@ label lad_day3_morning_psychic_room:
     $ change_room('psychic_room')
 
     psychic """
-    What are you doing in my room?
+    Why are we in my room?
 
-    You don't think someone is hiding here?
+    Surely you don't think someone's hiding here?
     """
 
     lad """
-    Probably not, but it's better to be thorough.
+    Probably not, but it's wise to be thorough.
     """
 
     """
     But she is right.
 
-    There is nothing or nobody here.
+    The room is empty.
     """
 
     return
@@ -744,13 +744,13 @@ label lad_day3_morning_doctor_room:
     $ change_room('doctor_room')
 
     """
-    I am back in Daniel Baldwin room.
+    I'm back in Daniel Baldwin's room.
 
-    His body is still on the bed.
+    His lifeless body still lies on the bed.
 
-    Besides there is nothing else out of the ordinary.
+    Aside from that, everything seems in order.
 
-    I don't want to dwell here more then I have to.
+    I don't wish to linger here any longer than necessary.
     """
 
     return
@@ -762,17 +762,16 @@ label lad_day3_morning_broken_room:
     $ unlock_map('broken_room')
 
     """
-    Thomas Moody's room.
+    I'm in Thomas Moody's room.
 
     He is still lying on the bed.
 
-    But I don't see anyone else here.
+    I see no one else around.
 
-    No need to stay longer.
+    I should move on.
     """
 
     return
-
 
 # 
 # Attic
