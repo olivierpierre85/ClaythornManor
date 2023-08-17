@@ -1,12 +1,12 @@
 label lad_day3_escape:
-    
+
     call change_time(13,00, "Afternoon", "Sunday")
 
     lad """
-    Well, I think I should come with you.
-
-    It will be safer if the two of us go.
-
+    I think I should come with you.
+    
+    It would be safer for both of us.
+    
     We don't know what's outside.
     """
 
@@ -16,18 +16,18 @@ label lad_day3_escape:
 
     psychic surprised """
     What?!
-
-    You can't abandoned me here!
-
-    There is a killer in this house.
-
-    When you'll come back, I'll be dead.
+    
+    You can't abandon me here!
+    
+    There's a killer in this house.
+    
+    When you come back, I might be dead.
     """
 
     captain """
-    There is no need to be so dramatic.
-
-    If you lock yourself up in your room, I am sure you'll be safe.
+    There's no need to be so dramatic.
+    
+    If you lock yourself in your room, you'll likely be safe.
     """
 
     psychic """
@@ -35,27 +35,27 @@ label lad_day3_escape:
     """
 
     captain """
-    That's different. Samuel Manning didn't suspect anyone would come for him.
-
-    He probably was killed in his sleep.
-
-    Or maybe he killed himself.
+    That's different. Samuel Manning didn't expect anyone would come for him.
     
-    So it will be different for you. You'll be on your guard.
+    He was probably killed in his sleep.
+    
+    Or maybe he took his own life.
+    
+    For you, it'll be different. You'll be on your guard.
     """
 
     psychic """
-    And what good does that make me when someone breaks down my door?
+    What good will that do when someone breaks down my door?
     """
 
     """
-    He pounders this for a second.
+    He ponders this for a second.
     """
 
     captain """
     Right. You might need a gun to defend yourself.
-
-    Here, you can take this one.
+    
+    Here, take this one.
     """
 
     """
@@ -67,55 +67,51 @@ label lad_day3_escape:
     """
 
     captain """
-    It's simple, if someones breaks down your bedroom door.
-
-    Just point it at them a press the trigger here.
-
-    There is nothing more to it.
+    It's simple. If someone breaks down your bedroom door, just point it at them and press the trigger.
+    
+    That's all there is to it.
     """
 
     psychic """
-    What, I don't know if I can do that, I, ...
+    I don't know if I can do that, I...
     """
 
     captain """
-    I am sure you can.
-
-    Now you should go to your room.
-
-    Close the door.
-
-    Even move some furniture in front of it if you can.
-
-    If anyone else than us tries to enter, just shoot at them.
-
+    I know you can.
+    
+    Now, go to your room and lock the door.
+    
+    Maybe even move some furniture in front of it.
+    
+    If anyone other than us tries to enter, shoot them.
+    
     Understood?
     """
 
     """
-    Amelia Baxter is visibly scared out of her mind.
-
-    But the natural authority of Sushil Sinha makes her nod in acquiesce.
+    Amelia Baxter is visibly terrified.
+    
+    But the natural authority of Sushil Sinha makes her nod in agreement.
     """
 
     captain """
-    Great.
-
-    Now will leave you for now. There is no time to waste.
-
+    Good.
+    
+    We'll leave you for now. Time is of the essence.
+    
     But we will come back for you, I promise.
     """
 
     """
-    And without waiting for a reply, he gestures me towards the entrance hall.
+    Without waiting for a reply, he gestures for me to follow him to the entrance hall.
     """
 
     captain """
-    Let's go mister Harring, the sooner the better.
+    Let's go, Mister Harring. The sooner, the better.
     """
     
     """
-    We leave Amelia Baxter behind us and we exit the manor.
+    We leave Amelia Baxter behind and exit the manor.
     """
 
     $ change_room('manor_garden')
@@ -123,37 +119,37 @@ label lad_day3_escape:
     # TODO captain asks about the gun room. Tell him you have it or not?
 
     captain """
-    That was rather ungentlemanly to leave her alone like that.
-
-    But I understand, I wouldn't want to stay in this house more than I have too either.
+    It was rather ungentlemanly to leave her alone like that.
+    
+    But I understand. I wouldn't want to remain in this house any longer than necessary either.
     """
 
     """
-    He says he understands, but his face tells me he doesn't approve.
-
-    He would have preferred I stayed in the house.
+    He says he understands, but his expression suggests disapproval.
+    
+    He likely would have preferred if I stayed in the house.
     """
 
     captain """
-    Anyway, I don't think it's gonna be an easy walk.
-
-    The roads must still be muddy, and if I recall well, the trip to the next house is at least 10 miles.
+    In any case, this won't be an easy journey.
     
-    Maybe more.
-
-    So we will probably be on the road for a few hours.
+    The roads are probably still muddy, and if I recall correctly, the distance to the next house is at least 10 miles.
+    
+    Maybe even more.
+    
+    It will likely take us a few hours on the road.
     """
 
     """
-    And like that, he started to move towards the exit gate.
+    With that, he begins moving towards the exit gate.
     """
 
     scene forest_road
 
-    if lad_details.objects.is_unlocked('gun') :
+    if lad_details.objects.is_unlocked('gun'):
 
         """
-        We have walked for about a hour when he stops.
+        We had been walking for about an hour when he stops.
         """
 
         lad """
@@ -167,7 +163,7 @@ label lad_day3_escape:
         $ play_music('danger')
 
         """
-        He gets a gun from his back pocket and points it at me.
+        He takes out a gun from his back pocket and points it at me.
         """
 
         lad surprised """
@@ -175,13 +171,13 @@ label lad_day3_escape:
         """
 
         captain """
-        Oh don't look so surprised.
-
-        You don't really think you fooled me do you?
-
-        I immediately saw the gun in your pocket this morning.
-
-        If you thought you could just wait for me to turn my back on you, I am sorry to disappoint you.
+        Oh, don't act so surprised.
+        
+        Did you really think you fooled me?
+        
+        I spotted the gun in your pocket this morning.
+        
+        If you were waiting for a chance to catch me off-guard, you're in for a disappointment.
         """
 
         lad surprised """
@@ -191,49 +187,48 @@ label lad_day3_escape:
         play sound gun
 
         """
-        He shot at me.
-
-        He missed.
-
-        For the first time he looks panicked.
-
+        He fires at me.
+        
+        He misses.
+        
+        For the first time, he looks panicked.
+        
         I reach for the gun in my pocket.
-
-        I point it at him, pull the trigger.
-
-        But realizes it's empty.
+        
+        Pointing it at him, I pull the trigger.
+        
+        But then realize it's empty.
         """
 
         play sound gun
 
         $ lad_details.saved_variables["day3_ending"] = "gun_downed"
 
-
-            # the captain is dead too, but the killer was behind the forest and kills the captains 
+        # the captain is dead too, but the killer was lurking in the forest and kills the captain 
     else:
 
         """
-        We walked for about an hour whe he stops.
+        We had been walking for about two hours when he stops.
         """
 
         captain """
         Wait!
-
-        Didn't you hear something?
+        
+        Did you hear that?
         """
 
         lad """
         Not really.
-
-        What do you mean?
+        
+        What are you referring to?
         """
 
         $ play_music('danger')
 
         captain """
-        I heard footsteps coming from the forest.
-
-        I believe someone is following us.
+        I heard footsteps from the forest.
+        
+        I think someone's following us.
         """
 
         lad surprised """
@@ -241,69 +236,67 @@ label lad_day3_escape:
         """
 
         captain """
-        Don't say a word.
-
-        Act like nothing unusual is happening.
+        Keep quiet.
+        
+        Pretend nothing's wrong.
         """
 
         lad """
-        What are we gonna do?
-
-        Should we run?
+        What should we do?
+        
+        Should we make a run for it?
         """
 
         captain """
-        No, I will try to surprise him.
-
-        I think I have a good idea of where he is.
-
-        I will run towards him.
-
-        At my signal, just start running on the road to distract him.
-
-        I will rush into the forest and try to disarm him.
-
-        Are you ready?
+        No, I'll try to ambush him.
+        
+        I think I've pinpointed his location.
+        
+        I'll charge at him.
+        
+        When I give the signal, start running on the road to divert his attention.
+        
+        I'll dash into the forest to try and disarm him.
+        
+        Ready?
         """
 
         lad """
         What?! No!
-
-        I am not ready, it's too dangerous.
+        
+        This is too risky!
         """
 
         captain """
-        Don't worry it will be fine.
-
-        At my signal.
-
+        Trust me, it'll work.
+        
+        On my mark.
+        
         Three.
-
+        
         Two.
-
+        
         One.
-
+        
         Go!
         """
 
         """
-        I don't have time to think.
-
-        Instinctively, I start running.
+        Before I can even think, I start running.
         """
 
         play sound gun
 
         """
-        A gun fires.
-
-        I turn my head and see Sushil Sinha collapsing on to ground.
-
-        But I can't stop.
-
-        My legs are pushing me faster.
-
-        I never ran so fast in my entire life.
+        A gunshot rings out.
+        
+        I glance back to see Sushil Sinha collapsing to the ground.
+        
+        But I can't halt.
+        
+        My legs push me forward faster than ever before.
+        
+        I've never run this fast in my entire life.
         """
 
         pause 1
@@ -311,17 +304,15 @@ label lad_day3_escape:
         $ play_music("mysterious")
 
         """
-        After a few minutes, I am totally out of breath.
-
-        I am not sprinting anymore. I just running slowly, barely faster than a fast walk.
-
+        Minutes later, I'm gasping for breath.
+        
+        I'm not sprinting anymore, just jogging — barely faster than a brisk walk.
+        
         But I can't stop.
-
-        When I found a pace that's almost comfortable, I keep at it without stopping.
-
-        Occasionally glancing back.
-
-        But I don't see anyone.
+        
+        I find a nearly comfortable pace and maintain it, occasionally glancing behind me.
+        
+        Thankfully, no one is in sight.
         """
 
         pause 2

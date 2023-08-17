@@ -5,57 +5,57 @@ label lad_day3_stay:
     $ change_room("tea_room")
 
     """
-    I don't feel comfortable leaving Amelia Baxter alone in here.
+    I don't feel comfortable leaving Amelia Baxter alone here.
 
-    And in any case, I don't like the idea to be alone with this guy in the forest.
+    And in any case, I don't like the idea of being alone with this guy in the forest.
 
-    For whole all know, he very well might be the killer.
+    For all we know, he might very well be the killer.
 
-    Miss Baxter doesn't seem to trust him anyway.
+    Miss Baxter doesn't seem to trust him either.
 
-    So I figure it's best we stay there, and be on our guards.
+    So I figure it's best for us to stay here and be on our guard.
 
-    If we are lucky, the captain will come back with reinforcements and everything will be fine.
+    If we're lucky, the captain will return with reinforcements, and everything will be fine.
     """
 
     pause 2.0
 
     """
-    After a while sitting anxiously, Amelia stands up.
+    After waiting anxiously for a while, Amelia stands up.
     """
 
     psychic """
-    Well, no point in waiting doing nothing.
+    Well, there's no point in waiting around doing nothing.
 
-    We haven't eaten anything since yesterday.
+    We haven't eaten since yesterday.
 
-    I could check the kitchen to see if there is anything I could prepare.
+    I could check the kitchen to see if there's anything I can prepare.
     """
 
     lad """
-    Okay, I am coming with you.
+    Okay, I'll come with you.
     """
 
     $ change_room('kitchen', dissolve)
 
     """
-    We looked around to find something.
+    We look around for something to eat.
     """
 
     psychic """
-    There is not much.
+    There isn't much.
 
-    But I think I can manage a light luncheon if you are not picky.
+    But I think I can manage a light luncheon if you're not picky.
     """
 
     """
     I take a seat while she prepares the food.
 
-    I offer to help but she declines.
+    I offer to help, but she declines.
 
     That's probably for the best.
 
-    It's not like I could do much anyway.
+    I couldn't do much to help anyway.
     """
 
     $ lad_details.unlock_knowledge('cook') 
@@ -63,33 +63,31 @@ label lad_day3_stay:
     $ change_room('dining_room', dissolve)
 
     """
-    When everything is ready I offer to carry the plates to the dining room.
+    When everything is ready, I offer to carry the plates to the dining room.
 
-    I put them on the table at our usuals places.
+    I set them at our usual places.
 
     Then I excuse myself.
     """
 
     psychic """
-    Where are you going mister Harring?
+    Where are you going, Mister Harring?
 
-    It's better that we stick together at all time.
+    It's better if we stick together at all times.
     """
 
     lad """
-    I understand, but there is one thing I need to do alone.
+    I understand, but there's something I need to do alone.
 
-    You see, we haven't left each other company the whole day and...
+    We haven't had a moment apart the entire day and...
     """
 
     psychic """
     Say no more, I understand.
 
-    I guess this was inevitable. 
+    I've been feeling the same. 
 
-    I would like to go too actually.
-
-    Let's meet here in a few minutes.
+    Let's meet back here in a few minutes.
     """
 
     lad """
@@ -105,27 +103,26 @@ label lad_day3_stay:
     """
 
     psychic """
-    That is where we split up.
+    This is where we part.
 
-    We can meet again in the dining room in a few minutes.
+    We'll meet again in the dining room in a few minutes.
     """
-
 
     if lad_details.intuitions.is_unlocked('psychic_poisons'):
 
         """
-        I see her enter her room but as I was supposed to leave for mine, some weird feeling overwhelms me. 
+        I see her enter her room, but as I'm about to leave for mine, a strange feeling overwhelms me.
 
-        I don't know what it is but it tells me to not go to my room.
+        Something tells me not to go to my room.
 
-        That I should go back to the dining room, now.
+        That I should return to the dining room immediately.
 
         What should I do?
         """
 
         $ time_left = 1
         call run_menu( TimedMenu("lad_day3_stay", [
-            TimedMenuChoice('I am being paranoid. Besides I can\'t hold it any longer', 'lad_day3_afternoon_toilet', early_exit = True ),
+            TimedMenuChoice('I\'m being paranoid. Besides, I really need to go', 'lad_day3_afternoon_toilet', early_exit = True ),
             TimedMenuChoice('Go back downstairs{{intuition}}', 'lad_day3_afternoon_no_toilet', early_exit = True)
             ])
         )
@@ -138,83 +135,81 @@ label lad_day3_stay:
 label lad_day3_afternoon_toilet:
 
     """
-    I see her enter her room then I head to mine.
+    After seeing her enter her room, I head to mine.
     """
 
     $ change_room('lad_room')
 
     """
-    As I walked in the hallway, I was looking frenetically around me.
+    As I walk down the hallway, I constantly look around.
 
-    It felt like someone could jump from a corner at any moment.
+    It feels like someone might jump out at me any moment.
 
-    I better not waste any time.
+    I shouldn't waste any time.
     """       
 
     pause 2.0
 
     """
-    Once I am done, I try to hurry back as fast as I could, almost running down the stairs. 
+    Once I'm done, I rush back as quickly as possible, nearly running down the stairs. 
     """
 
     $ change_room('dining_room')
     
     """
-    But when I came back, Miss Baxter is already seated at the table.
+    But when I return, Miss Baxter is already seated at the table.
 
-    She was even faster than I was.
+    She was even quicker than I was.
 
     She must be scared too.
 
-    I take my place in front of her and we start eating in silence. 
-    
-    There is not much we want to talk about.
+    I take my seat across from her, and we eat in silence. 
+
+    There's not much we want to discuss.
     """
 
     pause 2.0
 
     """
-    After I finished my plate, I offer to help her do the dishes.
+    After finishing my meal, I offer to help her with the dishes.
 
     Not that it really matters now.
 
-    It's just something more to do while waiting.
+    It's just something to do while we wait.
     """
 
     $ play_music('danger', fadeout_val=2)
 
     """
-    But as soon I stand up, I realize I can't stay on my feet.
+    But as soon as I stand up, I realize I can't stay on my feet.
 
-    My head is dizzy. 
+    My head spins, and I feel faint.
 
-    I feel that I am about to faint.
+    I turn to Amelia Baxter.
 
-    I look to Amelia Baxter.
+    She looks back at me emotionlessly.
 
-    She looks back at me with a blank stare. 
-    
-    There is no sign of surprise in her look.
+    There's no surprise in her eyes.
     """
 
     lad surprised """
-    What... did ... you do ... to my food?
+    What... did you... do to my food?
     """
 
     # psychic """
-    # Your food? I did nothing with it.
+    # Your food? I didn't tamper with it.
 
-    # But I taught you might have.
+    # But I thought you might have.
 
-    # So I switched our plates before handing them to you.
+    # So, I switched our plates before serving.
 
-    # You see, I never really trusted you Mister Harring.
+    # I never really trusted you, Mister Harring.
 
-    # It looks like I was right to do so.
+    # Seems I was right not to.
     # """
 
     """
-    I try to keep on talking. But no sound comes out of my mouth.
+    I try to speak further, but no words come out.
     """
 
     play sound body_fall
@@ -222,97 +217,94 @@ label lad_day3_afternoon_toilet:
     $ stop_music(2)
 
     """
-    I fall on the ground.
+    I collapse to the ground.
     """
 
     $ lad_details.saved_variables["day3_ending"] = "poisoned"
 
-    
-
     return
 
+
 label lad_day3_afternoon_no_toilet:
-    
+
     """
-    Instead of going to my room, I go down the stairs and back into the dining room.
+    Instead of going to my room, I go down the stairs and return to the dining room.
     """
 
     $ change_room('dining_room')
 
     """
-    Then, I try to make sense of what is happening.
+    I try to make sense of the situation.
 
-    I am putting my trust in a eccentric older lady, why?
-    
-    Because I don't think she could hurt me?
+    Why am I putting my trust in an eccentric older lady?
 
-    Not directly at least.
+    Because I believe she couldn't harm me?
 
-    But she could do it in a more subtle way.
+    Maybe not directly.
 
-    I look at our plates, they look normal to me.
+    But she could be more subtle about it.
 
-    And I was with her the whole time, so there is no way she could have tampered with them.
+    I inspect our plates; they seem normal.
+
+    I was with her the entire time, so there's no way she could've tampered with them.
 
     At least I think.
 
-    I am not so sure now.
+    Perhaps it's nothing, but it's better to be safe than sorry.
 
-    It's probably for nothing, but it's better to be safe than sorry.
-
-    So I switch my plate with Miss Baxter's.
+    I discreetly switch my plate with Miss Baxter's.
     
-    Then I sat down at my place, waiting for her to return.
+    I then take my seat, waiting for her to come back.
     """
 
     pause 2.0
 
     """
-    She comes back, very soon herself.
+    She returns rather quickly.
 
-    She couldn't have stayed very long in her room.
+    She couldn't have spent much time in her room.
 
-    But that make sense, she must be terrified.
+    That's understandable; she must be terrified.
 
-    There is indeed a worried look on her face.
+    Her face certainly shows concern.
     """
 
     psychic """
-    Mister Harring... You were fast.
+    Mister Harring... You were quick.
     """
 
     lad """
-    So were you.
+    As were you.
     """
 
     psychic """
-    Right.
+    Indeed.
     """
 
     """
-    She gave me a concerned look, then sits down at her place.
-    
-    We start eating in silence. 
+    She casts a concerned glance my way, then sits.
+
+    We dine in silence.
     """
 
     pause 2.0
 
     """
-    After we are finished, I stand up and offer to make the dishes.
+    After finishing, I rise and offer to wash the dishes.
     """
 
     psychic """
-    No don't worry, I can do it myself.
+    No, don't worry. I'll handle it.
     """
 
     """
-    She stands up, but seems a bit disoriented.
+    She stands but appears slightly off-balance.
     """
 
     psychic """
-    I feel woozy.
+    I feel faint...
 
-    What's happening to me?
+    What's happening?
     """
 
     play sound body_fall
@@ -320,15 +312,15 @@ label lad_day3_afternoon_no_toilet:
     $ play_music('danger')
 
     """
-    Then she suddenly fells on the ground.
+    Suddenly, she collapses.
 
-    I rush next to her.
+    I rush to her side.
     """
 
     psychic surprised """
-    Mister Harring.
+    Mister Harring...
 
-    So it was you.
+    Was it you?
     
     But why?
     """
@@ -336,19 +328,19 @@ label lad_day3_afternoon_no_toilet:
     lad surprised """
     What?
 
-    No, I don't understand what's happening...
+    I don't know what's going on...
 
-    I have nothing to do with this I,...
+    I had nothing to do with this, I promise...
     """
 
     psychic """
-    Shhh, there is no need to pretend now.
+    Shh... There's no need to feign innocence now.
 
-    Is it because you found out the truth about me?
-    
-    That I was a fraud...
+    Is it because you discovered the truth?
 
-    That I could never talk with the dead... 
+    That I'm a fraud...
+
+    That I could never commune with the dead, that... 
 
     Well it doesn't matter anymore.
 
@@ -358,7 +350,7 @@ label lad_day3_afternoon_no_toilet:
     """
 
     """
-    But she can't finish her sentence.
+    She can't finish her sentence.
     """
 
     $ psychic_details.unlock_knowledge('lie') 
@@ -370,40 +362,33 @@ label lad_day3_afternoon_no_toilet:
     """
     Oh my god.
 
-    What's happening?
+    What just happened?
 
-    Who did this to her?
+    Who did this?
     """
 
-    """
-    TODO footsteps?
-    Paranoid?
-    """
-    
     lad """
-    Hey!!! 
+    Hey! 
 
-    Who is here !?
+    Who's there?
 
-    Where are you !?
-
-    Show Yourself!!!
+    Show yourself!
     """
 
     pause 1.0
 
     """
-    No answers.
+    Only silence answers back.
 
     I can't stay here.
 
-    I need to go out fast.
+    I have to leave. Now.
     """
 
     $ change_room("great_hall")
 
     """
-    I run to the entrance hall and rush to the door.
+    I sprint to the entrance hall and bolt for the door.
     """
 
     play sound door_locked
@@ -411,9 +396,8 @@ label lad_day3_afternoon_no_toilet:
     """
     It's locked.
 
-    What the hell.
+    What the hell?
 
-    Who did this?
 
     I need to get out.
 
@@ -421,57 +405,55 @@ label lad_day3_afternoon_no_toilet:
     """
 
     lad surprised """
-    Who is it?
+    Who's there?
     """
 
     """
-    I don't know what to do.
-    
-    In a state of panic I run to my room.
+    Panic grips me.
+
+    I rush to my room.
     """
 
     $ change_room("lad_room")
 
     """
-    I close the door right after I enter.
+    Once inside, I slam the door shut.
     
-    Oh my god.
-    
-    How will I get out now?
-    
-    The only way out is ...
+    My thoughts race.
+
+    The only escape is...
     """
 
     pause 1.0
 
     """
-    I look at my window.
+    My gaze lands on the window.
 
-    It is not too high.
+    The drop isn't too far.
 
-    Maybe I can safely go down there.
+    I might be able to climb down safely.
 
-    I open the window.
+    I throw open the window.
 
-    At least it is not locked.
+    Thankfully, it isn't locked.
 
-    Down there I can see a picked fence.
-    
-    But if I can control my fall, I should be able to avoid it.
+    Below, a picket fence lurks.
 
-    All I have to do ...
+    But if I can guide my descent, I might avoid it.
+
+    I just need to...
     """
 
     play sound door_rattling
 
     """
-    Someone is coming.
+    Someone's there.
 
-    I don't have time.
+    Time is running out.
 
-    I grab the window sill.
+    Gripping the window sill, I prepare to jump.
 
-    If I can fell slowly I can ...
+    If I can control my fall, maybe I can...
     """
 
     $ lad_details.saved_variables["day3_ending"] = "fell"

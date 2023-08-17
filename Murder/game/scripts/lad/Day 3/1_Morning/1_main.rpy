@@ -18,38 +18,38 @@
 label lad_day3_morning:
 
     $ lad_details.add_checkpoint("lad_day3_morning") 
-    
+
     call black_screen_transition("Ted Harring", "Sunday Morning")
 
     $ change_room('lad_room', irisout)
 
     if lad_details.saved_variables["day2_believe_psychic"]:
-        call change_time(7,30, "Morning", "Sunday", hide_minutes = True)
-        # You talked to and believed psychic
+        call change_time(7, 30, "Morning", "Sunday", hide_minutes=True)
+        # You talked to and believed the psychic
         # So she came to wake you at dawn
     else:
         # Otherwise, you'll have less time to explore
-        call change_time(9,30, "Morning", "Sunday", hide_minutes = True)
+        call change_time(9, 30, "Morning", "Sunday", hide_minutes=True)
 
     play sound door_knock
-    
+
     """
-    I woke up suddenly with the sound of someone knocking frantically at the door.
+    I am awaken by the sound of frantic knocking at the door.
     """
 
     play sound door_knock
 
     if lad_details.saved_variables["day2_drunk"]:
-            """
-            My head hurts like crazy.
+        """
+        My head is throbbing.
 
-            Oh my god, I wish I could sleep more.
-            """    
+        I wish I could've slept longer.
+        """    
 
     psychic """
-    Mister Harring are you there?
+    Mister Harring, are you there?
     """
-    
+
     if lad_details.saved_variables["day2_believe_psychic"]:
 
         """
@@ -57,25 +57,25 @@ label lad_day3_morning:
 
         Right, we agreed to wake each other up.
 
-        I just didn't think it would be that early.
+        I just didn't expect it to be this early.
         """
 
         lad """
-        I am coming !
+        I'm coming!
         """
 
         """
-        I dress up in a hurry and open the door.
+        I quickly get dressed and open the door.
 
-        Amelia Baxter enters, visibly nervous.
+        Amelia Baxter enters, looking visibly nervous.
         """
 
         $ play_music('mysterious', 2)
 
         psychic """
-        I believe I was right yesterday.
+        I believe my hunch was right yesterday.
 
-        Something strange is happening.
+        Something strange is afoot.
         """
 
         lad """
@@ -83,65 +83,81 @@ label lad_day3_morning:
         """
 
         psychic """
-        I didn't run into any staff members on my way here.
+        I haven't seen any staff members on my way here.
 
-        At this hour, they should be busy with the fires, the cleaning, setting up breakfast.
+        At this hour, they should be busy with lighting fires, cleaning, and setting up breakfast.
 
-        But I saw nor heard anything.
+        Yet, I neither saw nor heard anyone.
 
-        It's quiet as a cemetery in here.
+        It's as silent as a graveyard in here.
         """
 
         lad """
-        Are you sure it's not normal?
-
-        It's still very early.
+        Are you sure it's not just because it's so early?
         """
 
         psychic """
-        I don't think so.
+        I'm certain.
 
-        I woke at this hour yesterday and the house was teeming with life.
+        I was up at this time yesterday, and the house was bustling with activity.
 
-        Something is amiss I am telling you.
+        Something's not right, I assure you.
         """
 
         lad """
-        Okay, if you say so.
+        Okay, if you say so. 
 
-        We better look into it then.
+        But how is that related to a robbery?
         """
 
+        psychic """
+        I'm not so sure anymore that this is about a robbery.
 
+        I have a feeling it could be something much worse.
+        """
+
+        """
+        A chill goes through my body.
+
+        Worse than a robbery? What could she mean?
+
+        But I'm hesitant to ask her.
+
+        Instead, I try to appear confident.
+        """
+
+        lad """
+        Alright, we'd better investigate then.
+        """
     else:
         """
-        Miss Baxter again?
+        Miss Baxter, again?
 
-        What is it now?
+        What does she want now?
         """
 
         lad """
-        I am coming !
+        I'm coming!
         """
 
         """
-        I dress up in a hurry and open the door.
+        I hastily dress and open the door.
         """
 
         lad """
-        Miss Baxter, is everything alright?
+        Miss Baxter, is everything okay?
         """
 
         $ play_music('mysterious', 2)
 
         psychic """
-        I don't know.
+        I'm not sure.
 
-        I think something weird happening.
+        Something unusual seems to be happening.
 
-        I woke early as usual and tried to get a cup of tea before breakfast.
+        I woke up early as always and wanted to get a cup of tea before breakfast.
 
-        But no one is there.
+        But, there's no one around.
         """
 
         lad """
@@ -149,62 +165,57 @@ label lad_day3_morning:
         """
 
         psychic """
-        That the staff is gone, all of them.
+        The staff is missing. Every single one of them.
 
-        I tried the kitchen, outside, the whole place even.
+        I searched everywhere - the kitchen, outdoors, everywhere.
 
-        I didn't see anybody.
+        I haven't found anyone.
         """
 
         lad """
-        Couldn't they still be asleep?
+        Perhaps they're still sleeping?
         """
 
         psychic """
-        Oh Mister Harring, that's impossible.
+        Oh, Mister Harring, that's highly unlikely.
 
-        They are supposed to be awake since dawn to get the house ready for the day.
+        They're usually up at dawn, preparing the house for the day.
 
-        They couldn't have just slept in.
+        It's inconceivable that they all overslept.
 
-        I also went to check on Lady Claythorn and she doesn't answer.
+        Moreover, I tried checking on Lady Claythorn, but she's not answering.
         """
 
         lad """
-        Don't worry, I am sure it's not so bad.
+        Try not to worry too much. I'm sure there's a reasonable explanation.
         """
 
         psychic """
-        I don't know.
+        I'm not so sure.
 
-        But I don't want to keep on searching alone.
+        But I don't want to continue my search alone.
 
-        Would please accompany me to check on the others?
+        Would you accompany me to check on the others?
         """
 
         lad """
-        Well, I am awake now so why not.
+        Well, since I'm up, I might as well.
 
-        If that can appease you.
+        If it helps put your mind at ease.
         """
 
         """
-        We decide it's better we check again every room together.
+        We decide it's best to check each room together.
 
-        So first we go to ...
+        So, we start with...
         """
-    
+
     if lad_details.saved_variables["day2_believe_psychic"]:
-
         $ time_left = 135
-
-        call change_time(8,45)
-
+        call change_time(8, 45)
     else:
-
         $ time_left = 45
-
-        call change_time(10,15)
+        call change_time(10, 15)
 
 
     call run_menu(lad_details.saved_variables["day3_morning_map_menu"])
@@ -216,13 +227,13 @@ label lad_day3_morning:
     if lad_details.saved_variables["day3_morning_captain_found"]:
 
         """
-        I don't think we'll find someone now.
+        I doubt we'll find anyone now.
 
         So we settled in the tea room to wait for the captain.
         """
 
         captain """
-        That's unbelievable, but it looks like we are the three remaining living souls in this place.
+        It's unbelievable, but it seems we're the only three living souls left here.
 
         Did you find anything?
         """
@@ -230,7 +241,7 @@ label lad_day3_morning:
         lad """
         Nothing.
 
-        There is nobody left it seems.
+        It seems everyone is gone.
 
         Except for the bodies.
         """
@@ -238,17 +249,17 @@ label lad_day3_morning:
     else:
 
         """
-        As we were getting discouraged, we settle in the tea room to rest.
+        Just when we started losing hope, we decided to rest in the tea room.
 
-        But as we were sitting down, we heard an authoritative voice, shouting from outside the room.
+        But as we settled down, an authoritative voice echoed from outside the room.
         """
 
         captain """
-        Is there anyone here?
+        Is anyone here?
         """
 
         """
-        Without thinking, I answered.
+        Without hesitation, I responded.
         """
 
         lad """
@@ -256,38 +267,37 @@ label lad_day3_morning:
         """
 
         """
-        Amelia tenses. I realize she thinks I shouldn't have answered so fast.
+        Amelia stiffens. I sense her unease, perhaps thinking I replied too quickly.
 
-        But it's too late now.
+        It's too late for second thoughts now.
 
-        Soon enough, Captain Sinha enters the room with us.
+        Captain Sinha soon joins us in the room.
         """
         
         call lad_day3_morning_meeting_captain
 
-
     lad """
-    Did you check on Samuel Manning by the way?
+    By the way, did you check on Samuel Manning?
 
-    You are the only one who has the key to its room.
+    You're the only one with the key to his room.
     """
 
     captain """
-    No, not yet, I figured he could not have moved.
+    No, not yet. I assumed he couldn't have gone far.
 
-    But you are right, it's better to go and check ourselves.
+    But you're right, we should check on him.
     """
 
     lad """
     I think so too.
 
-    We will follow you.
+    We'll follow you.
     """
 
     """
-    Amelia gave me a concerned stare, but doesn't say a thing.
+    Amelia shoots me a concerned look but remains silent.
 
-    She follows us anyway.
+    She follows us nonetheless.
     """
 
     $ change_room("bedrooms_hallway")
@@ -301,23 +311,21 @@ label lad_day3_morning:
     """
 
     """
-    No answers.
+    No response.
     """
 
     captain """
-    OK, I am going in.
+    Alright, I'm going in.
     """
 
     """
-    He opens up the door and we follow him in.
+    He unlocks the door, and we trail behind.
 
-    As I enter the room the captain suddenly tries to stop us.
+    But as I step inside, Captain Sinha tries to halt us.
     """
 
     captain """
-    No, stay there.
-
-    Don't enter.
+    Wait! Don't come in.
     """
 
     """
@@ -326,90 +334,80 @@ label lad_day3_morning:
 
     $ change_room('drunk_room')
     
-    $ play_music('scary', fadeout_val = 1)
+    $ play_music('scary', fadeout_val=1)
 
     """
-    What we see inside is the most horrific thing I have ever seen.
+    The sight inside is beyond horrifying.
 
-    Samuel Manning is in his bed. 
+    Samuel Manning lies in his bed, drenched in blood, his throat slashed multiple times.
 
-    Covered in blood, his throat cut of in several places.
+    Pale as a sheet, his eyes frozen in a ghastly stare.
 
-    He is pure white. His eyes are still opened, fixed in a terrified gaze.
-
-    Miss Baxter let out a scream.
+    Miss Baxter lets out a scream.
     """
 
-    #TODO add woman scream?
+    #TODO: add woman scream?
 
     captain """
-    Miss Baxter, please don't stay here.
+    Miss Baxter, please exit the room.
     """
 
     """
-    She is unable to say anything.
+    She's speechless, her gaze fixed on the macabre scene.
 
-    Her eyes are fixated toward the dead body in the bed.
-
-    Sushil Sinha take her by the arm and drag her out of the room.
-
-    Unable to stay there longer, I follow them outside.
+    Sushil Sinha gently pulls her arm, leading her out. I quickly follow.
     """
 
     $ change_room("bedrooms_hallway")
 
     captain """
-    I am sorry you had to see that.
+    I regret letting you see that.
 
-    I should not have let you enter this room.
+    You shouldn't have entered the room.
     """
 
     psychic surprised """
-    Is ... he ... dead?
+    Is... is he... dead?
     """
 
     captain """
-    I am afraid he is.
+    I'm afraid so.
     """
 
     lad surprised """
-    Are you sure?
+    Are you certain?
 
-    Shouldn't we check his pulse.
+    Shouldn't we check his pulse?
 
-    Maybe,... maybe he can still be saved.
+    Maybe... just maybe, there's a chance he's alive.
     """
 
     """
-    The words are coming slowly out of my mouth.
-
-    I realize I am shaking.
+    My voice trembles as I speak, realization dawning on me.
     """
 
     captain """
-    Sorry but it's too late.
+    I'm sorry, but it's too late.
 
-    I have seen enough dead bodies to know this.
+    I've seen enough to know. He's been gone for a while.
 
-    The poor guy has been dead for a long time.
-
-    Probably since last night.
+    Likely since last night.
     """
 
     psychic """
-    Oh my god.
+    Oh my God.
     """
 
     """
-    She starts to cry.
+    Tears spill from her eyes.
 
-    I am still shaking from shock.
+    The weight of shock renders me motionless.
 
-    So Sushil took us back to the tea room.
+    To help us recover, Sushil guides us back to the tea room.
     """
 
     $ stop_music()
-    
+
     jump lad_day3_afternoon
 
     return

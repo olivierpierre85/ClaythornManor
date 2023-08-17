@@ -26,158 +26,155 @@ label lad_day3_afternoon:
     $ change_room("tea_room", irisout)
 
     """
-    After leaving us in the tea room to gather our strength, Sushil Sinha left to explore the mansion a bit more.
+    After leaving us in the tea room to gather our strength, Sushil Sinha left to explore the mansion further.
 
-    When he came back, we were starting to feel a bit better.
+    When he returned, we were starting to feel a bit better.
     """
 
     $ play_music('mysterious')
 
     captain """
-    I just tried the phone, it's not working.
+    I just tried the phone, and it's not working.
 
-    So we can't call for help.
+    We can't call for help.
 
-    I don't think we have a choice, we have to leave this place.
+    I believe we don't have a choice but to leave this place.
 
-    The longer we stay here the more we are at risk something will happen to us.
+    The longer we stay, the more at risk we are.
     """
 
     psychic """
-    But,... shouldn't we wait for the police?
+    But... shouldn't we wait for the police?
 
-    They were supposed to come here today, they might arrive any moment.
+    They were expected today. They could arrive any moment.
     """
 
     captain """
     I wouldn't count on it.
 
-    For what I understand, there is no proof anyone called the police yesterday.
+    From what I gather, there's no evidence that the police were called yesterday.
     """
 
     psychic """
-    But Miss Claythorn she said...
+    But Miss Claythorn said...
     """
 
     """
-    She stops mid sentence, realizing the implication.
+    She stops mid-sentence, realizing the implication.
     """
 
     psychic """
-    So you think they never called.
+    So you believe they never called.
 
-    That the police has no idea what has happened here.
+    That the police have no idea about what's happened here.
 
-    Those were just lies she told us.
+    She lied to us.
     """
 
     captain """
-    That's the most logical explanation for me.
+    That's the most logical explanation.
 
-    Nobody was around when the phone calls were made.
+    No one was around when the phone calls were supposedly made.
 
-    So there is no way to know if they actually happened.
+    So, there's no way to verify if they actually happened.
     """
 
     lad """
     But why?
 
-    What would they want to do something like this?
+    Why would anyone do this?
 
-    I don't understand what is happening.
+    I don't understand what's happening.
     """
 
     captain """
-    Me neither.
+    Neither do I.
 
-    I tried thinking about it an I have no idea why we were all asked to come here.
+    I've thought about it, and I have no clue why we were all invited here.
 
-    But I know that was not to give us any money.
+    I'm sure it wasn't to give us any money.
 
-    In any case, all I know is we better leave this place as soon as possible.
+    In any case, all I know is we need to leave as soon as possible.
     """
 
     psychic """
     But how?
 
-    We are miles from the next town.
+    The nearest town is miles away.
 
     I can't walk that far. 
-    
-    And even if I could do it physically, I am not equipped for it.
+
+    And even if I could, I'm not prepared for such a journey.
     """
 
     """
-    Captain Sinha and I consider this for a while.
+    Captain Sinha and I consider this for a moment.
     """
 
     captain """
-    Maybe you are right.
+    You might be right.
 
-    It's gonna be a long walk, and the weather could turn any minute.
+    It would be a long walk, and the weather might turn at any moment.
 
-    We could be caught in an another storm.
+    We could get caught in another storm.
 
-    It's probably not safe for you to come with us.
+    It's probably unsafe for you to join us.
     """
 
     psychic surprised """
-    But you are not gonna leave me alone here?!
+    But you're not going to leave me here alone, are you?
 
-    What will happen to me?
+    What would become of me?
     """
 
     captain """
     We could lock you in a room.
 
-    But that's not ideal of course.
+    Though, that's far from ideal.
 
-    It might be best that one of us stays with you here.
+    Maybe one of us should stay with you.
     """
 
     psychic """
-    Yes !
+    Yes!
 
-    Mister Harring can stay here with me right!
+    Mister Harring can stay with me, right?
 
-    The two of us will be safe until you return with some help.
+    The two of us should be safe until you return with help.
     """
 
     captain """
-    This is perhaps the wisest choice.
+    That seems to be the wisest choice.
 
-    What do you think Mister Harring?
+    What do you think, Mister Harring?
     """
     
     $ lad_day3_escape_menu = TimedMenu("lad_day3_escape_menu", [
-        TimedMenuChoice('We could take the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition= 'lad_details.saved_variables["day3_seen_car"]'),
-        TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', early_exit = True ),
-        TimedMenuChoice('Follow Sushil Sinha. Amelia Baxter will {i}probably{/i} be fine on her own', 'lad_day3_escape', early_exit = True)
-    ], image_left = "psychic",  image_right = "captain")
+        TimedMenuChoice('We could use the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition='lad_details.saved_variables["day3_seen_car"]'),
+        TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', early_exit=True),
+        TimedMenuChoice('Follow Sushil Sinha. Amelia Baxter will {i}probably{/i} be fine on her own', 'lad_day3_escape', early_exit=True)
+    ], image_left="psychic",  image_right="captain")
 
     $ time_left = 1
 
     call run_menu(lad_day3_escape_menu)
 
-    # TODO handle possible endings, add switch on the  more logic in ending names
+    # TODO: Handle possible endings, add more logic for ending names
     if lad_details.saved_variables["day3_ending"] == "gun_downed":
-
         jump lad_gun_downed_ending
 
     elif lad_details.saved_variables["day3_ending"] ==  "poisoned":
-
         jump lad_ending_day3_poisoned
     
     elif lad_details.saved_variables["day3_ending"] == "fell":
-
         jump lad_ending_day3_fell
 
     elif lad_details.saved_variables["day3_ending"] == "escape":
-        #TODO  IF ALL finished UNLOCK NOT AN ENDING BUT LAST PART     
+        # TODO: IF ALL finished UNLOCK NOT AN ENDING BUT LAST PART     
         jump lad_ending_day3_escape   
     
     elif lad_details.saved_variables["day3_ending"] == "survived":
-        #TODO  IF ALL finished UNLOCK NOT AN ENDING BUT LAST PART     
+        # TODO: IF ALL finished UNLOCK NOT AN ENDING BUT LAST PART     
         jump lad_ending_day3_survived    
 
     return
@@ -185,45 +182,41 @@ label lad_day3_afternoon:
 label lad_day3_leave_with_car:
 
     lad """
-    Wait, there is still a car in the garage.
+    Wait, there's still a car in the garage.
 
-    We went there earlier and saw an old car.
+    We saw it earlier. It's an old model.
 
-    Maybe it's still working.
-
-    We don't know how to drive it, but maybe you do?
+    We don't know how to drive it, but perhaps you do?
     """
 
     captain """
-    I can drive yes.
+    I can drive, yes.
 
-    And I saw the car you mentioned too.
+    I saw the car you're talking about.
 
-    I even tried to start it.
+    I even tried to start it, but no luck.
 
-    No luck.
+    I don't think it's broken; it's probably just out of gas.
 
-    I don't think anything is wrong with it. It's probably out of gas.
+    I couldn't find any in the garage.
 
-    But I couldn't find any in the garage.
+    So, I'm afraid that car won't be much help.
 
-    So I am afraid this car won't be of any use to us.
-
-    Unless you saw a jerrycan somewhere else in the house?
+    Unless either of you spotted a jerrycan somewhere in the mansion?
     """
 
     lad """
-    No. No I didn't.
+    No, I haven't.
     """
 
     psychic """
-    Me neither.
+    Neither have I.
     """
 
     captain """
-    Too bad.
+    That's unfortunate.
 
-    We don't have a choice but to leave on foot then.
+    It seems we have no choice but to proceed on foot.
     """
 
     return
