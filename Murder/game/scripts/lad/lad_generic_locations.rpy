@@ -13,7 +13,7 @@ label lad_library_default:
         """
         There is an open book on a small table.
 
-        \"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.\"
+        "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
 
         Yeah, I am not reading that.
 

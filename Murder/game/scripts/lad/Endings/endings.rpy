@@ -7,21 +7,21 @@ label ending_generic:
     if first_death:
 
         """
-        Don't worry, you'll have more chances at changing the fate of this character.
+        Don't worry, you'll have more chances to change the fate of this character.
 
-        You can start again now. Ideally, you have learn something that will help you in your next attempts.
+        You can start again now. Ideally, you've learned something that will help you in your next attempts.
 
-        But maybe you have learned nothing.
+        But perhaps you haven't learned anything.
 
-        In this case, you'll better try to look at the story from a different point of view.
+        In that case, try to look at the story from a different perspective.
 
-        You see, this story is not about only one hero.
+        This story isn't about just one hero.
 
-        You'll get to play different characters.
+        You'll get to play as different characters.
 
-        And you'll have to. 
+        And you must.
 
-        Because otherwise, you'll never discover to whole truth about what happened that week-end, at Claythorn Manor.
+        Because otherwise, you'll never uncover the whole truth about what happened that weekend at Claythorn Manor.
         """
 
         $ first_death = False
@@ -42,6 +42,7 @@ label ending_generic:
 
     return
 
+
 label survived_generic:
 
     $ stop_music(2)
@@ -51,20 +52,21 @@ label survived_generic:
         """
         You made it out alive.
 
-        But it's not the ideal ending either.
+        But it's not the perfect ending either.
 
-        Don't get me wrong, that's still impressive.
+        Don't get me wrong, it's still an impressive feat.
 
-        But surviving Claythorn Manor is nothing but the first step.
+        But surviving Claythorn Manor is merely the first step.
 
-        You're goal is to save everyone.
+        Your goal is to save everyone.
 
-        And that would require to start the story again.
+        To do that, you might need to start the story over.
         """
 
         $ first_survive = False
 
     hide screen centered_text
+
     jump character_selection
 
     return
@@ -94,7 +96,6 @@ label lad_ending_day1_poisoned:
 
     jump ending_generic
 
-
 # DAY 3
 label lad_gun_downed_ending:
 
@@ -102,21 +103,20 @@ label lad_gun_downed_ending:
 
     # TODO ONE declaration of ENDINGs (not in characterINformation)
     $ lad_details.add_ending_checkpoint(ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed"))
-
-    """
-    Well you are dead.
+   """
+    Well, you're dead.
 
     Shot to death.
 
     And no explanation was given.
 
-    If you feel you are owned one, think again.
+    If you feel you're owed one, think again.
 
-    Why would someone explains their victims why they are killing them.
+    Why would someone explain to their victims why they're being killed?
 
-    That would make no sense.
+    It wouldn't make sense.
 
-    If you want a better explanation, then you will have to find it yourself.
+    If you want a clearer understanding, you'll have to seek it out yourself.
     """
 
     jump ending_generic
@@ -128,11 +128,11 @@ label lad_ending_day3_poisoned:
     $ lad_details.add_ending_checkpoint(ending = CharacterInformation(2, "poisoned", "You were poisoned", type="ending", image_file="poisoned"))
 
     """
-    You lay on the floor, saliva coming from you month.
+    You lay on the floor, saliva dripping from your mouth.
 
-    Whatever poison you ate, it now runs through your veins.
+    Whatever poison you ingested is now coursing through your veins.
 
-    Let that be a lesson to you.
+    Let this be a lesson to you.
 
     Never trust anyone.
     """
@@ -148,17 +148,17 @@ label lad_ending_day3_fell:
     """
     You fell.
 
-    Right on the picked fence.
+    Right onto the picket fence.
 
-    An iron pole got through your belly.
+    An iron pole pierced through your belly.
 
     You didn't stand a chance.
 
-    But you were so close to escaping though.
+    But you were so close to escaping.
 
-    How frustrating it must be.
+    It must be incredibly frustrating.
 
-    You'll have to be more careful next time.   
+    You'll need to be more cautious next time.
     """
 
     jump ending_generic
@@ -169,46 +169,39 @@ label lad_ending_day3_escape:
     scene police_station
 
     """
-    After what seemed like an eternity, I finally reached town.
+    After what felt like an eternity, I finally reached the town.
 
     I rushed into the police station and told them everything.
 
-    I was exhausted panicked, and I probably looked like a maniac.
+    I was exhausted, panicked, and probably came off as unhinged.
 
-    But they agreed to go and check anyway.
-    """
+    But they agreed to investigate the matter.
 
-
-    """
-    I was too tired and too scared to follow them, but they told me everything when they came back.
+    I was too drained and frightened to accompany them, but they told me everything when they came back.
     """
 
     pause 1
 
     """
-    They found the body of Sushil Sinha on the road, probably where I last saw him.
+    They discovered Sushil Sinha's body on the road, likely where I last saw him.
 
-    He was shot in the head.
-    
-    At that point, the two police officers took the matter seriously.
+    He'd been shot in the head.
 
-    They rushed to Claythorn Manor.
+    At that moment, the two police officers took the situation very seriously.
 
-    There, they found that all of the guests were dead.
+    They hastened to Claythorn Manor.
 
-    Samuel Manning, Thomas Moody and Daniel Baldwin were still in their bed.
+    There, they discovered that all of the guests had been killed.
 
-    They found Rosalind Marsh in the attic. 
+    Samuel Manning, Thomas Moody, and Daniel Baldwin hadn't left their beds.
 
-    She was shot in the head.
+    They found Rosalind Marsh in the attic, shot in the head.
 
-    And poor Miss Baxter, she was lying dead in the hallway. 
-    
-    She was stabbed in the back.
+    Poor Miss Baxter was found in the hallway, stabbed in the back.
 
-    She didn't even had time to reach her room.
+    She didn't even make it to her room.
 
-    We still have no idea where Lady Claythorn and her staff is.
+    We still have no idea where Lady Claythorn and her staff are.
     """
 
     call survive_screen_transition
