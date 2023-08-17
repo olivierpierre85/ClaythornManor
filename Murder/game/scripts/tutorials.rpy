@@ -1,3 +1,5 @@
+# TODO Clock (when first choice selected)
+
 label tutorial_knowledge:
     
     # tutorial """

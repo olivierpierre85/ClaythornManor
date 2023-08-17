@@ -186,7 +186,7 @@ label lad_introduction:
 
     pause 2.0
 
-    call change_time(18,15)
+    call change_time(18,10)
 
     $ change_room('great_hall', dissolve)
 
@@ -293,11 +293,11 @@ label lad_introduction:
     They seem more approachable than the rest.
     """
     
-    $ time_left = 15
+    $ time_left = 20
     
     $ current_menu = TimedMenu("lad_introduction", [
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 5), # keep_alive = True, TODO keep alive to allow more choices if leaving by mistakes?
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0), # keep_alive = True, TODO keep alive to allow more choices if leaving by mistakes?
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 

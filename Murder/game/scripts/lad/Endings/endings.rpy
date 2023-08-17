@@ -103,7 +103,7 @@ label lad_gun_downed_ending:
 
     # TODO ONE declaration of ENDINGs (not in characterINformation)
     $ lad_details.add_ending_checkpoint(ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed"))
-   """
+    """
     Well, you're dead.
 
     Shot to death.
