@@ -13,3 +13,4 @@ label lad_generic_other_guests_friday:
     """
 
     return
+

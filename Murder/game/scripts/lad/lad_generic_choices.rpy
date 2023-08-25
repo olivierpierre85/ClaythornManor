@@ -5,7 +5,7 @@
 
 #?TODO add extra choices possibilities?
 label lad_generic:
-    
+
     # Reset if previous early exit
     $ current_character.saved_variables["lad_generic_menu"].early_exit = False
 
@@ -27,7 +27,7 @@ label lad_generic_room_friday:
     lad """
     I don't know, I haven't been to my room yet.
 
-    I just arrived, I didn't realize I would be the last one here.
+    I just arrived, and I didn't realize I would be the last one here.
     """
 
     return
@@ -35,7 +35,7 @@ label lad_generic_room_friday:
 label lad_generic_room_psychic:
 
     lad """
-    Oh I am in the \"William the Conqueror\" Bedroom.
+    Oh, I am in the "William the Conqueror" Bedroom.
     """
 
     psychic """
@@ -46,10 +46,10 @@ label lad_generic_room_psychic:
     What do you mean?
     """
 
-    """
-    I have the \"George III\" Bedroom.
+    psychic """
+    I have the "George III" Bedroom.
 
-    A strange name as he is not one of our most famous king.
+    A strange name, as he is not one of our most famous kings.
 
     I wonder why they named a room after him.
     """
@@ -59,9 +59,9 @@ label lad_generic_room_psychic:
     """
 
     """
-    He is serious?
+    Is he serious?
 
-    Hasn't he heard of \"William the Conqueror\"?
+    Hasn't he heard of "William the Conqueror"?
     """
 
     psychic """
@@ -69,9 +69,9 @@ label lad_generic_room_psychic:
 
     That's not nothing.
 
-    On the other hands, he was sometimes also called the Bastard King.
+    On the other hand, he was sometimes also called the Bastard King.
 
-    So make that what you want.
+    So make of that what you will.
     """
 
     $ unlock_map('lad_room')
@@ -86,7 +86,7 @@ label lad_generic_age_psychic:
     """
 
     """
-    Really, I would I have pegged him older than that.
+    Really, I would have pegged him older than that.
 
     I guess it's his rugged look.
 
@@ -102,7 +102,7 @@ label lad_generic_background_psychic:
     lad """
     There isn't much to say about me.
 
-    I was born and raise in Birmingham.
+    I was born and raised in Birmingham.
     
     And I am working there as a business associate.
     """
@@ -114,11 +114,11 @@ label lad_generic_background_psychic:
     """
 
     lad """
-    Well,..., general sales.
+    Well, just regular sales.
     """
 
     psychic """
-    And you sell anything in particular?
+    And do you sell anything in particular?
     """
 
     lad """
@@ -130,7 +130,7 @@ label lad_generic_background_psychic:
     """
 
     lad """
-    No no, it's nothing like that.
+    No, no, it's nothing like that.
     """
 
     """
@@ -156,7 +156,7 @@ label lad_generic_heroic_act_psychic:
     """
 
     psychic """
-    How impressive! What I've done is nothing compare to that.
+    How impressive! What I've done is nothing compared to that.
     
     Please tell me more about it.    
     """
@@ -164,19 +164,19 @@ label lad_generic_heroic_act_psychic:
     lad """
     I don't know how impressive it really was.
     
-    It was more a matter of being at the right place at the right moment.
+    It was more a matter of being in the right place at the right moment.
     """
 
     pause 1
 
     # todo scene fire_building
 
-    $ play_music('mysterious', 3,fadeout_val=2, fadein_val=2 )
+    $ play_music('mysterious', 3, fadeout_val=2, fadein_val=2)
 
     lad """
-    I was just going home one day, it was rather late.
+    I was just going home one day; it was rather late.
 
-    On my way I happened to noticed smoke coming from a house across the street.
+    On my way, I happened to notice smoke coming from a house across the street.
 
     I was about to call for the firemen.
 
@@ -188,13 +188,13 @@ label lad_generic_heroic_act_psychic:
 
     A fire was spreading from one of the rooms.
 
-    Luckily, the one with the baby was still safe.
+    Luckily, the room with the baby was still safe.
 
-    So I ran into it, grabbed the baby and went downstairs as fast as I could.
+    So I ran into it, grabbed the baby, and went downstairs as fast as I could.
 
-    When I reached outside, I could here the firemen on their way.
+    When I reached outside, I could hear the firemen on their way.
 
-    The neighbours had already alerted them.
+    The neighbors had already alerted them.
 
     As soon as they arrived, I gave them the baby.
 
@@ -209,12 +209,12 @@ label lad_generic_heroic_act_psychic:
     And they also omitted the worst part.
     """
 
-    pause 1.0 
+    pause 1.0
 
     """
-    The baby wasn't alone in the house of course.
+    The baby wasn't alone in the house, of course.
 
-    Why would he have been.
+    Why would he have been?
 
     The fire was caused by the nanny.
     
@@ -226,7 +226,7 @@ label lad_generic_heroic_act_psychic:
 
     So when the firemen arrived, it was too late.
 
-    They said they was nothing I could have done, but I am not sure.
+    They said there was nothing I could have done, but I am not sure.
     """
 
     $ change_room('PREVIOUS') # TODO PREVIOUS ROOM !!!!!!
@@ -245,7 +245,7 @@ label lad_generic_heroic_act_psychic:
     But it's hard.
 
     I still have nightmares about it.
-    """    
+    """
 
     psychic """
     ...
@@ -264,7 +264,7 @@ label lad_generic_manor:
     lad """
     It's very nice.
 
-    A bit far out of town I think.
+    It's a bit far from town, I think.
 
     But I suppose some people like the isolation.
     """

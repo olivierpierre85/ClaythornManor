@@ -1,9 +1,9 @@
 label lad_library_default:
 
-    $ change_room('library') 
+    $ change_room('library')
 
     if not lad_details.saved_variables["library_visited"]:
-    
+
         """
         It's a very nice library. But what am I doing here? I can barely read.
         """
@@ -15,17 +15,17 @@ label lad_library_default:
 
         "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
 
-        Yeah, I am not reading that.
+        Yeah, I'm not reading that.
 
-        I probably better go look elsewhere.
+        I should probably look elsewhere.
         """
         # TODO add info on BOOK???
         $ lad_details.saved_variables["library_visited"] = True
-    
+
     else:
 
         """
-        There is nothing different from last time I was in there.
+        There is nothing different from the last time I was in here.
 
         No reason to look further.
         """
@@ -37,11 +37,11 @@ label lad_attic_default:
     $ change_room("attic_hallway")
 
     if not lad_details.saved_variables['attic_visited']:
-        
+
         """
         I took the stairs to the attic.
 
-        I am not sure I can be there.
+        I'm not sure if I should be here.
         """
 
         $ lad_details.saved_variables["attic_visited"] = True
@@ -55,20 +55,20 @@ label lad_downstairs_default:
     if lad_details.saved_variables["has_try_sneaking_downstairs"] == 0:
 
         """
-        I was on my way to the basement, when a young maid stops me.
+        I was on my way to the basement when a young maid stopped me.
         """
 
         maid """
         Hello Sir, can I help you?
-        """ 
+        """
 
         lad """
         Oh, don't mind me. I'm just taking a walk around.
         """
 
         maid """
-        I'm sorry, but the basement is for staff only. 
-        
+        I'm sorry, but the basement is for staff only.
+
         However, there are plenty of rooms upstairs that you can visit.
         """
 
@@ -80,53 +80,53 @@ label lad_downstairs_default:
 
         $ lad_details.saved_variables["has_try_sneaking_downstairs"] += 1
 
-    elif lad_details.saved_variables["has_try_sneaking_downstairs"] == 1: 
+    elif lad_details.saved_variables["has_try_sneaking_downstairs"] == 1:
 
         """
         Let's see if I can check downstairs now.
 
         I walk down the stairs slowly, being very careful not to attract attention.
 
-        But as I am stepping down to the basement, the same woman stops me.
+        But as I'm stepping down to the basement, the same woman stops me.
         """
-        
+
         maid """
-        You again Sir? As i already told you, I am afraid you are not allowed to be here.
-        """ 
+        You again, Sir? As I already told you, I'm afraid you're not allowed to be here.
+        """
 
         lad """
-        Of course, I was just lost. I am terribly sorry.
+        Of course, I was just lost. I'm terribly sorry.
         """
 
         maid """
-        It's alright, don't worry about it sir.
+        It's alright, don't worry about it, sir.
         """
 
         """
-        I better be careful. If I am caught here a third time, it will start to really look suspicious.
+        I'd better be careful. If I'm caught here a third time, it will really start to look suspicious.
         """
 
         $ lad_details.saved_variables["has_try_sneaking_downstairs"] += 1
-    
+
     elif lad_details.saved_variables["has_try_sneaking_downstairs"] == 2:
 
         """
-        Maybe I am pushing my luck, trying to go downstairs, but I feel like I have to go there.
+        Maybe I'm pushing my luck, trying to go downstairs, but I feel like I have to go there.
         """
 
         maid """
-        Mister Harring? I though I made myself clear earlier.
+        Mister Harring? I thought I made myself clear earlier.
 
-        Why are you trying to do here?
+        What are you trying to do here?
 
         You can't possibly make me believe that you got lost again?
-        """ 
+        """
 
         call run_menu(
             TimedMenu("lad_has_try_sneaking_downstairs", [
-                # TimedMenuChoice("I know it sounds ridiculous, but I DID get lost again", 'lad_downstairs_lost', 5, early_exit = True),
-                TimedMenuChoice("Zzzzzz (Pretend you're sleepwalking)", 'lad_downstairs_sleepwalk', 10, early_exit = True),
-                TimedMenuChoice("Actually, I just wanted to talk to you (flirt your way out)", 'lad_downstairs_flirt', 10, early_exit = True),
+                # TimedMenuChoice("I know it sounds ridiculous, but I DID get lost again", 'lad_downstairs_lost', 5, early_exit=True),
+                TimedMenuChoice("Zzzzzz (Pretend you're sleepwalking)", 'lad_downstairs_sleepwalk', 10, early_exit=True),
+                TimedMenuChoice("Actually, I just wanted to talk to you (flirt your way out)", 'lad_downstairs_flirt', 10, early_exit=True),
             ])
         )
 
@@ -135,15 +135,15 @@ label lad_downstairs_default:
     return
 
 label lad_downstairs_lost:
-    # TODO. complicated arc with dead ending:
-    # Captain/butler overheard discussion with maid, you are locked to your room for the night
-    # over the night, somebody opens your door? who? psychic? nurse?
-    # But when the captain sees you, he is scared and shot you?
+    # TODO: complicated arc with dead ending:
+    # Captain/butler overhears discussion with maid; you are locked in your room for the night.
+    # Over the night, somebody opens your door? Who? Psychic? Nurse?
+    # But when the captain sees you, he is scared and shoots you?
 
     lad """
-    I am really sorry. This house too big.
+    I'm really sorry. This house is too big.
 
-    I was on my way to the billiard room and I don't know how I ended up here.    
+    I was on my way to the billiard room and I don't know how I ended up here.
     """
 
     return
@@ -153,9 +153,9 @@ label lad_downstairs_sleepwalk:
     play sound snoring_long
 
     """
-    I keep staring in front of me pretending not to have heard her.
+    I keep staring in front of me, pretending not to have heard her.
 
-    I add a realistic snoring to sell the trick.
+    I add a realistic snore to sell the trick.
 
     She looks at me, confused.
 
@@ -165,23 +165,23 @@ label lad_downstairs_sleepwalk:
     maid """
     Sir, are you well?
 
-    Are you sleeping?
+    Are you sleepwalking?
     """
 
     """
-    I keep saying nothing a slowly moves back up the stairs.
+    I keep saying nothing and slowly move back up the stairs.
 
     She doesn't follow me.
 
-    I think I am in the clear.
+    I think I'm in the clear.
     """
 
     maid """
-    I know you are not asleep.
+    I know you're not asleep.
 
-    First your snore is obviously fake.
+    First, your snore is obviously fake.
 
-    Second you are still fully clothed.
+    Second, you're still fully clothed.
     """
 
     """
@@ -194,9 +194,10 @@ label lad_downstairs_sleepwalk:
 
     stop sound
 
-    # TODO ALSO get caught here?
+    # TODO: ALSO get caught here?
 
     return
+
 
 label lad_downstairs_flirt:
     
@@ -205,7 +206,7 @@ label lad_downstairs_flirt:
 
     Why?
 
-    The kitchen is closed, but I can fix you a plate of leftovers if you are still hungry.
+    The kitchen is closed, but I can fix you a plate of leftovers if you're still hungry.
     """
 
     lad """
@@ -217,7 +218,7 @@ label lad_downstairs_flirt:
     """
 
     lad """
-    I was just looking for someone I could talk to.
+    I was just looking for someone to talk to.
     """
 
     maid """
@@ -229,7 +230,7 @@ label lad_downstairs_flirt:
     """
 
     """
-    Okay that was quite straightforward.
+    Okay, that was quite straightforward.
 
     She seems speechless for a moment.
 
@@ -245,11 +246,11 @@ label lad_downstairs_flirt:
     lad """
     Oh, uh, I didn't mean to, um, make you uncomfortable or anything. 
     
-    I was just looking for a friendly conversation.
+    I was just looking for friendly conversation.
     """
 
     maid """
-    I afraid I am too busy for this sir.
+    I'm afraid I'm too busy for this, sir.
 
     I must return to my tasks. 
     
@@ -257,32 +258,33 @@ label lad_downstairs_flirt:
     """
 
     lad """
-    Of course, Good night.
+    Of course. Good night.
     """
 
     """
-    Alright that was uncomfortable.
+    Alright, that was uncomfortable.
 
-    But at least she doesn't think I was sneaking down here, that was a close call.
+    But at least she doesn't think I was sneaking down here; that was a close call.
 
-    Still, I better go look somewhere else.
+    Still, I'd better go look somewhere else.
     """
 
     return
+
 
 label lad_garden_default:
 
     $ change_room('manor_garden')
 
-    # TODO expand, and add more time to option
-    # TODO move to no hunt if it's the only time where can you can go out!
+    # TODO: Expand, and add more time to option
+    # TODO: Move to no hunt if it's the only time where you can go out
     
     """
-    Beautiful garden.
+    A beautiful garden.
 
     I wandered in it for a while, enjoying a relaxing walk.
 
-    but in the end, I didn't find anything of interest.
+    But in the end, I didn't find anything of interest.
     """
 
     return
@@ -321,7 +323,7 @@ label lad_billiard_room_default:
     
     $ change_room('billiard_room')
     
-    "It's empty"
+    "It's empty."
 
     "No need to stay here."
 
@@ -365,7 +367,7 @@ label lad_portrait_gallery_default:
         I don't recognize anyone, so I guess these are people from the Claythorn family.
         """
 
-        # TODO possibility to zoom on specific members ?
+        # TODO: Possibility to zoom in on specific members?
 
         $ lad_details.saved_variables["portrait_gallery_visited"] = True
     
@@ -374,7 +376,7 @@ label lad_portrait_gallery_default:
         """
         Nothing new here.
 
-        It still gives me a weird creepy feeling.
+        It still gives me a weird, creepy feeling.
         """
 
     return
@@ -398,7 +400,7 @@ label lad_storage_default:
     call lad_attic_default
 
     """
-    I try to open the attic storage room but it's closed.
+    I try to open the attic storage room, but it's closed.
     """
     
     return
@@ -408,7 +410,7 @@ label lad_females_room_default:
     call lad_attic_default
 
     """
-    I try to open the room but it's closed.
+    I try to open the room, but it's closed.
     """
 
     return
@@ -418,7 +420,7 @@ label lad_males_room_default:
     call lad_attic_default
 
     """
-    I try to open the room but it's closed.
+    I try to open the room, but it's closed.
     """
 
     return
@@ -428,7 +430,7 @@ label lad_butler_room_default:
     call lad_attic_default
 
     """
-    I try to open the room but it's closed.
+    I try to open the room, but it's closed.
     """
 
     return
