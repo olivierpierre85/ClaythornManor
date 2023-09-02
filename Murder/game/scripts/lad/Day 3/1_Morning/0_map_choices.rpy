@@ -535,6 +535,12 @@ label lad_day3_morning_lad_room:
 label lad_day3_morning_nurse_room:
 
     $ change_room("bedrooms_hallway")
+
+    psychic """
+    This is Miss Marsh's room.
+    """
+
+    $ unlock_map("nurse_room")
     
     """ 
     I knock on the door.
@@ -549,45 +555,17 @@ label lad_day3_morning_nurse_room:
     """
 
     """
-    Before I can react, she opens the door.
+    Before I can react, she tries to open the door.
     """
 
-    $ change_room("nurse_room")
+    play sound door_rattling
 
     psychic """
-    This is Miss Marsh's room.
-    """
+    It's locked.
 
-    $ unlock_map("nurse_room")
+    She must have gone out.
 
-    psychic """
-    She isn't here.
-
-    Everything is neatly arranged.
-
-    No signs of a struggle or hasty departure.
-    """
-
-    lad """
-    Where could she be?
-    """
-
-    psychic """
-    I'm unsure.
-
-    The manor isn't that large.
-
-    We should've encountered her by now.
-
-    In any case, let's look around.
-
-    We might find a clue to her whereabouts.
-    """
-
-    pause 1.0
-    
-    """
-    We searched for a while but found nothing noteworthy.
+    Let's try somewhere else.
     """
 
     return

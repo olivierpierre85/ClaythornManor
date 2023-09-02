@@ -195,7 +195,7 @@ label lad_ending_day3_escape:
 
     Samuel Manning, Thomas Moody, and Daniel Baldwin hadn't left their beds.
 
-    They found Rosalind Marsh in the attic, shot in the head.
+    They found Rosalind Marsh in the attic, shot in the head.(TODO double check this because maybe too big of a clue)
 
     Poor Miss Baxter was found in the hallway, stabbed in the back.
 
