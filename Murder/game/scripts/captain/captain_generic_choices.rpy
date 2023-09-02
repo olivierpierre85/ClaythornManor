@@ -16,7 +16,7 @@ label captain_generic:
 label captain_generic_weather_friday:
 
     captain """
-    I can see a storm is coming.
+    I can see that a storm is coming.
 
     And it looks like a big one.
     """
@@ -26,7 +26,7 @@ label captain_generic_weather_friday:
 label captain_generic_weather_saturday:
 
     captain """
-    d
+    (Placeholder for Saturday weather dialogue)
     """
 
     return
@@ -34,7 +34,7 @@ label captain_generic_weather_saturday:
 label captain_generic_weather_sunday:
 
     captain """
-    d
+    (Placeholder for Sunday weather dialogue)
     """
 
     return
@@ -42,7 +42,7 @@ label captain_generic_weather_sunday:
 label captain_generic_room:
 
     captain """
-    d
+    (Placeholder for room dialogue)
     """
 
     $ unlock_map('captain_room')
@@ -67,7 +67,7 @@ label captain_generic_origin_psychic_1:
     """
 
     captain """
-    I am sorry, what do you meant?
+    I am sorry, what did you mean?
     """
 
     $ psychic_details.unlock_knowledge("racist")
@@ -80,15 +80,15 @@ label captain_generic_origin_psychic_2:
     captain """
     Oh ... I was raised in Calcutta. 
     
-    But I've been living in the UK for so long I don't even think about it anymore.
+    But I've been living in the UK for so long that I don't even think about it anymore.
     """
 
     psychic """
-    Alright. Calcutta behind in the far east right?
+    Alright. Calcutta is in the far east, right?
     """
 
     captain """
-    In North India yes.
+    Yes, it's in North India.
     """
 
     # ChatGPT
@@ -250,22 +250,22 @@ label captain_generic_age_psychic:
     
     captain """
     Why?
-
-    Is it because you can't guess my age since I am Indian?
-
-    A lot of people can't.
+    
+    Are you having trouble guessing my age because I'm Indian?
+    
+    Many people do.
     """
 
     psychic """
-    No, I am just asking out of curiosity.
-
-    I didn't mean anything by it.
+    No, I'm merely asking out of curiosity.
+    
+    I didn't intend any offense.
     """
 
     captain """
-    Humphh.
-
-    Alright then.
+    Hmph.
+    
+    Very well.
     
     I am 56 years old.
     """
@@ -273,3 +273,4 @@ label captain_generic_age_psychic:
     $ captain_details.unlock_knowledge('age')
     
     return
+

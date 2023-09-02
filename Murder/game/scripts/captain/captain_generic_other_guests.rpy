@@ -9,9 +9,9 @@ label captain_generic_other_guests_friday:
     captain """
     Well, I don't know.
 
-    I don't have a strong opinion on anyone at this point.
+    I don't have a strong opinion about anyone at this point.
 
-    Do you mean someone in particular?
+    Do you have someone in particular in mind?
     """
 
     call captain_generic_other_guests
@@ -21,9 +21,9 @@ label captain_generic_other_guests_friday:
 label captain_generic_drunk_friday_psychic:
 
     captain """
-    Oh yes, our drunk friend.
+    Ah yes, our intoxicated friend.
 
-    Not much to say here that you haven't noticed yourself.
+    There's not much to say that you haven't already noticed yourself.
     """
 
     return
@@ -31,9 +31,9 @@ label captain_generic_drunk_friday_psychic:
 label captain_generic_host_friday_psychic:
 
     captain """
-    A charming lady for sure.
+    A charming lady, for sure.
 
-    Even though, there is someone about her that intrigues me.
+    However, there's something about her that intrigues me.
     """
 
     psychic """
@@ -45,13 +45,13 @@ label captain_generic_host_friday_psychic:
     """
     He seems unsure.
 
-    A bit embarrassed even.
+    A bit embarrassed, even.
     """
 
     captain """
-    I am sorry, I meant nothing special.
+    I'm sorry, I meant nothing specific.
 
-    I shouldn't talk about our gracious host anyway.
+    I shouldn't be talking about our gracious host in any case.
     """
 
     psychic """
@@ -59,9 +59,9 @@ label captain_generic_host_friday_psychic:
     """
 
     """
-    He knows more than he wants to say.
+    He knows more than he's willing to say.
 
-    But he won't say it with other people around us.
+    But he won't disclose it with other people around.
     """
 
     return
@@ -71,9 +71,9 @@ label captain_generic_nurse_friday:
     captain """
     A discreet woman.
 
-    She is dressed with style but in a humble way.
+    She's stylishly dressed, but in a humble way.
 
-    You can directly tell she is at ease in those kind of gatherings.
+    You can immediately tell she's at ease in these kinds of gatherings.
     """
 
     $ nurse_details.unlock_knowledge('clothes')
@@ -83,7 +83,7 @@ label captain_generic_nurse_friday:
 label captain_generic_broken_friday:
 
     captain """
-    One of our war hero I would say.
+    I'd say he's one of our war heroes.
     """
 
     # chatGPT
@@ -120,23 +120,23 @@ label captain_generic_broken_friday:
 label captain_generic_lad_friday_psychic:
 
     captain """
-    Mister Harring looks like a fine young fellow.
+    Mister Harring seems like a fine young fellow.
 
-    But you have talked to him more than I have.
+    But you've talked to him more than I have.
 
     You must have a more accurate opinion of him.
     """
 
     psychic """
-    That's true. Nevertheless, is there anything special you noticed about him?
+    That's true. Nevertheless, have you noticed anything specific about him?
     """
 
     captain """
-    Well, I just noticed that his clothes are dated, and a bit worn off.
+    Well, I did notice that his clothes are a bit dated and worn.
     
-    Either he doesn't care about his appearance or he can't afford more recent clothes.
+    Either he doesn't care about his appearance, or he can't afford more recent clothing.
 
-    I'll let you make your own mind about that.
+    I'll leave it to you to make your own judgment about that.
     """
 
     $ lad_details.unlock_knowledge('poor')
@@ -146,11 +146,11 @@ label captain_generic_lad_friday_psychic:
 label captain_generic_doctor_friday:
 
     captain """
-    At first glance, I would say he is an upper class gentleman.
+    At first glance, he seems like an upper-class gentleman.
 
-    He seemed a bit nervous tough.
+    However, he appeared a bit nervous.
 
-    I saw him fidgeting earlier, like he was nervous about something.
+    I noticed him fidgeting earlier, as if he were anxious about something.
     """
 
     return

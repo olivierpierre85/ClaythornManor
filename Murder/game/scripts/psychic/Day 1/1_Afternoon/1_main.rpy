@@ -348,6 +348,7 @@ label psychic_introduction:
 
     I should be fine there.
     """
+    
     pause 1.0
 
     """
