@@ -26,7 +26,7 @@ label lad_day3_afternoon:
     $ change_room("tea_room", irisout)
 
     """
-    After leaving us in the tea room to gather our strength, Sushil Sinha left to explore the mansion further.
+    After leaving us in the tea room to gather our strength, Sushil Sinha left to explore the mansion a bit further.
 
     When he returned, we were starting to feel a bit better.
     """

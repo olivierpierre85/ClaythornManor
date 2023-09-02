@@ -4,7 +4,7 @@ label lad_day3_morning_deaths:
 
     $ unlock_map('drunk_room')
 
-    play sound door_knock
+    play sound "door_knock"
 
     captain """
     Mister Manning, are you there?
@@ -19,7 +19,7 @@ label lad_day3_morning_deaths:
     """
 
     """
-    He unlocks the door, and we trail behind.
+    He unlocks the door, and we trail behind him.
 
     But as I step inside, Captain Sinha tries to halt us.
     """
@@ -111,15 +111,15 @@ label lad_day3_morning_deaths:
     # NEW TEXT
 
     captain """
-    Miss Baxter, you probably should rest here a little bit.
+    Miss Baxter, you should probably rest here for a little bit.
 
-    I have something to check out and I'll be back soon.
+    I have something to check out, and I'll be back soon.
 
     Mister Harring, would you mind coming with me?
     """
 
     """
-    I still shaken from what we saw, but doing something might help recover my senses.
+    I'm still shaken from what we saw, but doing something might help me recover my senses.
     """
 
     lad """
@@ -133,41 +133,93 @@ label lad_day3_morning_deaths:
     """
 
     captain """
-    don't worry this should only take a few minutes.
+    Don't worry, this should only take a few minutes.
     """ 
 
     """
-    He walks back up the stairs in front of another room.
+    He walks back up the stairs and stands in front of another room.
     """
 
     $ change_room("bedrooms_hallway")
 
     captain """
-    It's Miss Marsh's.
+    It's Miss Marsh's room.
 
     It was locked when I tried to open the door earlier.
 
-    At the time I didn't dare to fo further.
+    At the time, I didn't dare to go further.
 
-    But now I am afraid I have to open it by force.
+    But now, I'm afraid I have to open it by force.
     """
 
     lad """
-    You believe she could still be in there.
+    Do you believe she could still be in there?
 
-    Then she would be ...
+    Then she would be...
     """
 
     captain """
-    Dead I am afraid.
+    Dead, I'm afraid.
 
     After what we saw, I think it's a very strong possibility.
     """
 
     lad """
-    Oh my god.
+    Oh my God.
     """
 
-    #TODO write that their open the door by force, found the body of Rosalind Marsh dead, peaceful but with blood coming out of her month, like she was poisoned
+    """
+    Captain Sinha draws a deep breath, clenches his fists, and then forcefully kicks the door. 
+    
+    It bursts open with a deafening crack.
+    """
 
+    $ change_room("nurse_room")
 
+    """
+    The room is eerily quiet.
+    
+    And there she is—Rosalind Marsh—lying peacefully on her bed.
+    
+    There is a trace of blood on the corner of her mouth.
+    """
+
+    lad """
+    Is she...?
+    """
+
+    captain """
+    Dead, yes. It appears she was poisoned. 
+    """
+
+    """
+    My heart pounds in my chest. 
+    
+    The reality of two dead bodies sets in, and the room feels like it's closing in on me.
+    """
+
+    captain """
+    Let's return to the tea room. 
+    
+    We need to warn Miss Baxter and decide our next steps.
+    """
+
+    $ change_room("tea_room")
+
+    psychic """
+    You've been gone for a while. What happened?
+    """
+
+    captain """
+    I'm afraid we've found Miss Marsh. She has also passed away.
+    """
+
+    psychic """
+    No... Not another one...
+    """
+
+    """
+    Our eyes meet, and though no words are spoken, the gravity of the situation is understood by all.
+    """
+
+    return

@@ -193,9 +193,7 @@ label lad_ending_day3_escape:
 
     There, they discovered that all of the guests had been killed.
 
-    Samuel Manning, Thomas Moody, and Daniel Baldwin hadn't left their beds.
-
-    They found Rosalind Marsh in the attic, shot in the head.(TODO double check this because maybe too big of a clue)
+    Samuel Manning, Thomas Moody, Rosalind Marsh, and Daniel Baldwin still in their beds.
 
     Poor Miss Baxter was found in the hallway, stabbed in the back.
 
