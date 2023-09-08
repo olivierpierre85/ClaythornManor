@@ -7,13 +7,13 @@ label doctor_generic_other_guests:
 label doctor_generic_other_guests_friday:
     
     doctor """
-    Oh, I haven't talked with a lot of people so far.
+    Oh, I haven't talked to many people so far.
 
-    I think the only person I have heard talk is Mister Sinha.
+    I think the only person I've heard speak is Mister Sinha.
 
-    And I really just mean heard. 
+    And by "heard," I really just mean heard.
     
-    Because I don't think I was able to add anything to the conversation.
+    Because I don't think I was able to contribute anything to the conversation.
     """
 
     $ captain_details.unlock_knowledge('talker') 
@@ -23,9 +23,9 @@ label doctor_generic_other_guests_friday:
 label doctor_generic_other_guests_saturday:
     
     doctor """
-    I haven't talk in details to anyone yet. 
+    I haven't spoken in detail with anyone yet.
     
-    So I don't really have an opinion on the guests.
+    So, I don't really have an opinion on the guests.
     """
 
     return
@@ -33,9 +33,9 @@ label doctor_generic_other_guests_saturday:
 label doctor_generic_drunk:
 
     doctor """
-    Well, I think by now you can tell as well as I that he is a dangerous drunk.
+    Well, I think by now you can tell as well as I can that he is a dangerous drunk.
 
-    We better stay away from him.
+    We'd better stay away from him.
     """
 
     return

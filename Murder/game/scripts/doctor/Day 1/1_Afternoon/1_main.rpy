@@ -100,11 +100,10 @@ label doctor_introduction:
     pause 1.0
 
     """
-    TODO meet nurse and Broken
+    TODO: Meet nurse and Broken
     """
 
     scene inside_car
-
 
     $ time_left = 6
 
@@ -112,7 +111,7 @@ label doctor_introduction:
 
     call change_time(16,15, 'Evening', 'Friday')
 
-    # Arrival to manor
+    # Arrival at the manor
     $ stop_music(3)
     
     play sound thunder loop
@@ -120,26 +119,25 @@ label doctor_introduction:
     scene manor_exterior
 
     """
-    After what seems to be an eternity, a impressive manor appears on the horizon.
+    After what seems like an eternity, an impressive manor appears on the horizon.
 
-    That finally put an end to Captain Sinha speech.
+    That finally puts an end to Captain Sinha's speech.
     """
 
     captain """
-    Oh, it looks like we are arriving at our destination.
+    Oh, it looks like we're arriving at our destination.
 
     What a magnificent home.
     """
 
-
     """
-    He is right, it it beautiful.
+    He is right, it is beautiful.
 
-    But the storm that has fallen upon us gave it something of a sinister look.
+    But the storm that has fallen upon us gives it a somewhat sinister look.
 
-    Nevertheless, it's appearance reassures me.
+    Nevertheless, its appearance reassures me.
 
-    With such a house, our host has to be someone really wealthy.
+    With such a house, our host must be someone really wealthy.
 
     Now I can finally relax. Everything will be fine here.
     """
@@ -147,15 +145,14 @@ label doctor_introduction:
     pause 1.0
 
     """
-    The three of us walked towards the entrance while the drive takes care our luggage.
+    The three of us walk toward the entrance while the driver takes care of our luggage.
 
-    Samuel Manning woke when the car stopped. He looks a tad better than earlier.
+    Samuel Manning wakes up when the car stops. He looks a tad better than earlier.
 
     When we reach the main door, a butler greets us.
     """
 
     stop sound
-
 
     $ change_room('great_hall', dissolve)
     
@@ -164,7 +161,7 @@ label doctor_introduction:
     $ play_music('upbeat')
 
     butler """
-    Good afternoon everyone and welcome to Claythorn Manor.
+    Good afternoon, everyone, and welcome to Claythorn Manor.
 
     I am sorry that Lady Claythorn can't greet you herself.
 
@@ -176,19 +173,19 @@ label doctor_introduction:
     """
 
     drunk """
-    I am good. But I could use a drink.
+    I'm good. But I could use a drink.
 
     Which way is the tea room?
     """
 
     """
-    Amazing, he looked passed out drunk in the car.
+    Amazing, he looked passed-out drunk in the car.
     
     How can he possibly want another drink now?
     """
 
     butler """
-    Very well mister, you'll find the tea room on the door to your left.
+    Very well, sir, you'll find the tea room through the door to your left.
 
     Other guests who arrived earlier are already settled there.
 
@@ -200,13 +197,13 @@ label doctor_introduction:
     """
 
     butler """
-    What about you miss ...?
+    What about you, Miss ...?
     """
 
     psychic """
     Miss Baxter.
 
-    I think I'll refresh a bit in my room first.
+    I think I'll freshen up in my room first.
 
     It has been a very long trip.
     """
@@ -218,9 +215,9 @@ label doctor_introduction:
     $ change_room("bedrooms_hallway")
 
     butler """
-    Here we are Miss.
+    Here we are, Miss.
 
-    The \"George III Bedroom\".
+    The "George III Bedroom."
 
     I hope it is to your liking.
     """
@@ -234,13 +231,13 @@ label doctor_introduction:
     
     At the same time, the driver arrives with my luggage.
 
-    He leaves them there then excuse himself.
+    He leaves them there, then excuses himself.
     """
 
     butler """
-    Well it looks like you are all set.
+    Well, it looks like you're all set.
 
-    Please join us in the dining room when you are ready.
+    Please join us in the dining room when you're ready.
     """
 
     """
@@ -248,12 +245,13 @@ label doctor_introduction:
 
     It's a bit worn out but still looks great.
 
-    I should be fine there.
+    I should be fine here.
     """
+
     pause 1.0
 
     """
-    When I am ready, I head downstairs for the tea room.
+    When I'm ready, I head downstairs to the tea room.
     """
 
     $ change_room("tea_room")
@@ -273,7 +271,7 @@ label doctor_introduction:
     butler """
     Please make yourself at home.
 
-    Now if you'll excuse me, I heard the car is back with the last guest.
+    Now, if you'll excuse me, I heard the car is back with the last guest.
     """
 
     """
@@ -287,15 +285,15 @@ label doctor_introduction:
 
     I am not eager to listen to that again.
 
-    On a chair Samuel Manning is sitting alone with a glass on his hand.
+    On a chair, Samuel Manning is sitting alone with a glass in his hand.
 
     I can't believe it.
 
-    He is asleep again.
+    He's asleep again.
 
     Well, I guess I have no choice but to join the large group.
 
-    But before I could move the butler is back.
+    But before I can move, the butler is back.
     """
 
     butler """
@@ -303,13 +301,13 @@ label doctor_introduction:
     """
 
     """
-    The butler almost shouted the new guest name.
+    The butler almost shouts the new guest's name.
 
-    A good looking young man.
+    A good-looking young man.
 
     He looks unsure.
 
-    You can tell by his clothes alone that he is not in his natural element here.
+    You can tell by his clothes alone that he's not in his natural element here.
 
     After some hesitation, he comes towards me.
     """
@@ -329,7 +327,3 @@ label doctor_introduction:
     $ stop_music()
 
     jump psychic_day1_evening
-
-
-    
-
