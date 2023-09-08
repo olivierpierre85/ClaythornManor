@@ -1,9 +1,9 @@
 label drunk_letter_first_part:
 
     letter """
-    In case you haven't recognized him, the doctor invited this weekend is the same one who treated your wife years ago.
+    In case you haven't recognized him yet, the doctor invited this weekend is the same one who treated your wife years ago.
 
-    She never recovered due to his poor treatment and his withholding of medication for his own benefit.
+    She never recovered, due to his inadequate treatment and withholding of medication for his own benefit.
 
     Do what you will with this information.
     """
@@ -24,7 +24,7 @@ label drunk_letter_second_part:
 label drunk_letter_first_part_burned:
 
     letter """
-    *** treated you ***
+    *** treated yo***
 
     ** recovered ***
 
@@ -38,7 +38,7 @@ label drunk_letter_second_part_burned:
     letter """
     The b*****
 
-    ****** hesitate.
+    ***** hesitate.
     """
 
     return
