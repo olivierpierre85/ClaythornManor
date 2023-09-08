@@ -4,7 +4,7 @@ label lad_day3_morning_deaths:
 
     $ unlock_map('drunk_room')
 
-    play sound "door_knock"
+    play sound door_knock
 
     captain """
     Mister Manning, are you there?
