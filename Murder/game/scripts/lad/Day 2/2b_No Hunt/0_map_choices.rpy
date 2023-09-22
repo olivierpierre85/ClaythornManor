@@ -98,7 +98,7 @@ label lad_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
     call run_menu(
         TimedMenu(
             id="lad_day2_no_hunt_bedroom_try_enter" + enter_result, 
-            [
+            choices=[
                 TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
                 TimedMenuChoice(no_enter_text, 'lad_day2_no_hunt_default_room_no_enter', enter_duration, early_exit=True),
             ]
