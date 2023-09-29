@@ -16,87 +16,87 @@ label debug_choices:
             call unlock_psychic 
             jump character_selection
         
-        "debug_lad":
-            $ test_choices = debug_lad_poisoned_day1
-            jump lad_introduction
+        # "debug_lad":
+        #     $ test_choices = debug_lad_poisoned_day1
+        #     jump lad_introduction
 
-        "lad_introduction":
-            jump lad_introduction
+        # "lad_introduction":
+        #     jump lad_introduction
 
-        # "lad_day1_afternoon":
-        #     jump lad_day1_afternoon
+        # # "lad_day1_afternoon":
+        # #     jump lad_day1_afternoon
 
-        "lad_day1_evening MAP":
-            $ test_choices = [0,9,1,12] #SKIP to map menu
-            jump lad_day1_evening
+        # "lad_day1_evening MAP":
+        #     $ test_choices = [0,9,1,12] #SKIP to map menu
+        #     jump lad_day1_evening
         
-        "lad_day1_evening":
-            jump lad_day1_evening
+        # "lad_day1_evening":
+        #     jump lad_day1_evening
 
-        # "lad_day2_morning":
-        #     jump lad_day2_morning
+        # # "lad_day2_morning":
+        # #     jump lad_day2_morning
             
-        # "lad_day2_hunt":
-        #     jump lad_day2_hunt
+        # # "lad_day2_hunt":
+        # #     jump lad_day2_hunt
 
-        "lad_day2_no_hunt MAP":
-            # Has try to go downstairs
-            $ lad_details.saved_variables["has_met_maid"] = True
-            $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 1
-            $ lad_details.saved_variables["library_visited"] = True
-            $ lad_details.saved_variables["portrait_gallery_visited"] = True
-            $ lad_details.saved_variables["attic_visited"] = True
+        # "lad_day2_no_hunt MAP":
+        #     # Has try to go downstairs
+        #     $ lad_details.saved_variables["has_met_maid"] = True
+        #     $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 1
+        #     $ lad_details.saved_variables["library_visited"] = True
+        #     $ lad_details.saved_variables["portrait_gallery_visited"] = True
+        #     $ lad_details.saved_variables["attic_visited"] = True
             
-            jump lad_day2_no_hunt
+        #     jump lad_day2_no_hunt
 
-        "lad_day2_afternoon":
-            $ lad_details.objects.unlock('burned_letter')
-            jump lad_day2_afternoon
+        # "lad_day2_afternoon":
+        #     $ lad_details.objects.unlock('burned_letter')
+        #     jump lad_day2_afternoon
             
-        # "lad_day2_afternoon_bedroom":
-        #     jump lad_day2_afternoon_bedroom
+        # # "lad_day2_afternoon_bedroom":
+        # #     jump lad_day2_afternoon_bedroom
             
-        "lad_day2_evening MAP":
-            #$ lad_details.objects.unlock('gun')
-            $ lad_details.intuitions.unlock('psychic_poisons')
-            $ lad_details.observations.unlock('green_liquid')
-            $ doctor_details.unlock_knowledge('addict')
+        # "lad_day2_evening MAP":
+        #     #$ lad_details.objects.unlock('gun')
+        #     $ lad_details.intuitions.unlock('psychic_poisons')
+        #     $ lad_details.observations.unlock('green_liquid')
+        #     $ doctor_details.unlock_knowledge('addict')
 
-            $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 2
+        #     $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 2
 
-            $ lad_details.saved_variables["day2_saw_accident"] = True
-            jump lad_day2_evening
+        #     $ lad_details.saved_variables["day2_saw_accident"] = True
+        #     jump lad_day2_evening
 
-        "lad_day3_morning TES MAP":
-            $ unlock_map('captain_room')
-            $ unlock_map('host_room')
-            $ unlock_map('psychic_room')
-            $ unlock_map('lad_room')
-            $ unlock_map('drunk_room')
-            $ unlock_map('nurse_room')
-            $ unlock_map('broken_room')
-            $ unlock_map('doctor_room')
-            $ lad_details.saved_variables["day2_believe_psychic"] = True
-            jump lad_day3_morning
+        # "lad_day3_morning TES MAP":
+        #     $ unlock_map('captain_room')
+        #     $ unlock_map('host_room')
+        #     $ unlock_map('psychic_room')
+        #     $ unlock_map('lad_room')
+        #     $ unlock_map('drunk_room')
+        #     $ unlock_map('nurse_room')
+        #     $ unlock_map('broken_room')
+        #     $ unlock_map('doctor_room')
+        #     $ lad_details.saved_variables["day2_believe_psychic"] = True
+        #     jump lad_day3_morning
         
-        "lad_day3_afternoon":
-            call unlock_psychic 
-            $ lad_details.observations.unlock('green_liquid')
-            $ lad_details.saved_variables['library_visited'] = True
-            $ lad_details.test_checkpoint()
+        # "lad_day3_afternoon":
+        #     call unlock_psychic 
+        #     $ lad_details.observations.unlock('green_liquid')
+        #     $ lad_details.saved_variables['library_visited'] = True
+        #     $ lad_details.test_checkpoint()
 
-            $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
-            $ lad_details.objects.unlock('gun')
-            $ first_death = False
-            $ lad_details.intuitions.unlock('psychic_poisons')
-            $ lad_details.endings.unlock('gunned_down')
+        #     $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
+        #     $ lad_details.objects.unlock('gun')
+        #     $ first_death = False
+        #     $ lad_details.intuitions.unlock('psychic_poisons')
+        #     $ lad_details.endings.unlock('gunned_down')
             
-            $ lad_details.reset_information()
-            $ lad_details.objects.unlock('gun')
+        #     $ lad_details.reset_information()
+        #     $ lad_details.objects.unlock('gun')
 
-            $ lad_details.important_choices.unlock('hunt')
+        #     $ lad_details.important_choices.unlock('hunt')
 
-            jump lad_day3_afternoon
+        #     jump lad_day3_afternoon
 
         # "lad_day3_stay":
         #     $ lad_details.intuitions.unlock(('psychic_poisons')

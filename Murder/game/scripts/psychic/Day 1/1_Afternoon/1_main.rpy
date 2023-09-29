@@ -14,7 +14,7 @@
 # --------------------------------------------
 label psychic_introduction:
 
-    call change_time(15,30, 'Arrival', 'Friday', hide_minutes = True)
+    call change_time(15, 30, 'Arrival', 'Friday', hide_minutes=True)
 
     call black_screen_transition("Amelia Baxter", "Friday Afternoon")
 
@@ -27,19 +27,19 @@ label psychic_introduction:
     """
     I still can't believe I had to book the train ticket myself.
 
-    This invitation is really not what I would have expected.
+    This invitation really isn't what I would have expected.
 
-    Vague indications on how to reach the manor.
+    Vague instructions on how to reach the manor.
 
-    Not much information about the participants.
+    Little information about the participants.
 
-    I wouldn't be surprised if there was nobody at the train station.
+    I wouldn't be surprised if no one were at the train station to pick me up.
 
-    It could be just an elaborate prank.
+    This could just be an elaborate prank.
 
-    And with my luck, there won't be an other train until tomorrow.
+    And with my luck, there won't be another train until tomorrow.
 
-    So I will have to spend the night here.
+    That would mean spending the night here.
 
     What a waste of time that would be.
 
@@ -53,13 +53,13 @@ label psychic_introduction:
     pause 5.0
     
     """
-    I step of the train and try to look for someone who could help me.
+    I step off the train and look for someone who might be able to help me.
     """
 
     pause 1.0
 
     """
-    On the platform, I spot a young man in a footman livery.
+    On the platform, I spot a young man in footman's livery.
 
     He is talking to a tanned man with a serious look.
 
@@ -67,11 +67,11 @@ label psychic_introduction:
     """
 
     psychic """
-    Excuse me gentlemen. I am heading to Claythorn Manor, and I was wondering if you could help me.
+    Excuse me, gentlemen. I'm heading to Claythorn Manor and was wondering if you could assist me.
     """
 
     footman """
-    Yes of course. You must be Amelia Baxter.
+    Yes, of course. You must be Amelia Baxter.
     """
 
     psychic """
@@ -79,23 +79,23 @@ label psychic_introduction:
     """
 
     footman """
-    Perfect. I work for Lady Claythorn and I have been instructed to take you to the manor.
+    Perfect. I work for Lady Claythorn and have been instructed to take you to the manor.
     
     The gentleman here is also coming with us.
     """
 
     captain """
-    Nice to meet you miss Baxter.
+    Nice to meet you, Miss Baxter.
     """
 
     """
-    He takes my hand and kiss it lightly.
+    He takes my hand and kisses it lightly.
 
-    Here's someone with manner at least.
+    Here's someone with manners, at least.
     """
 
     psychic """
-    How do you do mister ...
+    How do you do, Mister ...
     """
 
     captain """
@@ -103,17 +103,17 @@ label psychic_introduction:
     """
 
     psychic """
-    Oh.
+    Ah.
     
-    Nice to meet you too mister... sir.
+    Nice to meet you too, Mr. Sinha.
     """
 
     footman """
-    I believe there is still someone on this train who should accompany us.
+    I believe there's still someone on this train who is supposed to accompany us.
 
-    A mister Manning.
+    A Mr. Manning.
 
-    You haven't met him by any chance?
+    Have either of you met him by any chance?
     """
 
     captain """
@@ -127,17 +127,17 @@ label psychic_introduction:
     footman """
     Alright, maybe he missed it. 
     
-    Let's wait a few minutes to be sure everyone has left this train, then  we can move on.
+    Let's wait a few minutes to be sure everyone has left this train, then we can move on.
     """
 
     """
-    As the train was ready to leave the station, I saw someone stumbling through a door, almost falling.
+    As the train prepares to leave the station, I see someone stumbling out of a door, almost falling.
 
-    Since we are the only persons left on the platform, he walks towards us, unsure. 
+    Since we're the only people left on the platform, he walks towards us, looking uncertain.
     """
 
     footman """
-    Hello sir. Are you Mister Manning?
+    Hello, sir. Are you Mr. Manning?
     """
 
     drunk """ 
@@ -147,57 +147,55 @@ label psychic_introduction:
     footman """
     Perfect, that's everyone who was supposed to be on this train.
     
-    You can follow me to the car and we will be on our way.
+    You can follow me to the car, and we'll be on our way.
 
-    It should be about an hour to reach the manor.
+    It should take about an hour to reach the manor.
     """
 
     scene inside_car
 
     """
-    I took a seat on the back.
+    I take a seat in the back.
 
     Sushil Sinha joins me.
     """
 
     captain """
-    I hope you don't mind if I seat with you.
+    I hope you don't mind my sitting with you.
 
-    I think it is better to let mister Manning sitting in front.
+    I think it's better to let Mr. Manning sit in front.
     """
 
     psychic """
-    Of course.
+    Of course not.
     """
 
     """
-    I understand too well what he means.
+    I understand all too well what he means.
 
-    Samuel Manning seems to be out of it.
+    Samuel Manning seems out of it.
 
     He tries to make small talk with the driver, but his speech is incoherent.
 
-    The poor lad tries his best to ignore him and to focus on the road.
+    The poor lad does his best to ignore him and focus on the road.
 
-    When he realizes nobody wants to talk with him, Samuel Manning took a sip of a flask and instantly falls asleep on his seat.
+    When he realizes no one wants to talk to him, Samuel Manning takes a sip from a flask and immediately falls asleep in his seat.
 
-    The driver sigh in relief.
+    The driver sighs in relief.
     """
 
     captain """
-    Well, he certainly had one too many.
+    Well, he's certainly had one too many.
 
     I hope he can sleep it off.
 
-    It would be shameful if our host greets him in this state.
+    It would be embarrassing for our host to greet him in this state.
     """
 
     psychic """
-    You are certainly right.
+    You're certainly right.
 
-    But enough about him.
-
-    I would rather talk about something else if you don't mind.
+    I'd rather discuss something else, if you don't mind.
     """
 
     captain """
@@ -218,42 +216,42 @@ label psychic_introduction:
     scene manor_exterior
 
     """
-    After what seems to be an eternity, a impressive manor appears on the horizon.
+    After what seems like an eternity, an impressive manor appears on the horizon.
 
-    That finally put an end to Captain Sinha speech.
+    That finally puts an end to Captain Sinha's speech.
     """
 
     captain """
-    Oh, it looks like we are arriving at our destination.
+    Ah, it looks like we're arriving at our destination.
 
     What a magnificent home.
     """
 
-
     """
-    He is right, it it beautiful.
+    He's right; it is beautiful.
 
-    But the storm that has fallen upon us gave it something of a sinister look.
+    However, the storm that has befallen us gives it a somewhat sinister look.
 
-    Nevertheless, it's appearance reassures me.
+    Nevertheless, its appearance reassures me.
 
-    With such a house, our host has to be someone really wealthy.
+    With such a house, our host must be incredibly wealthy.
 
-    Now I can finally relax. Everything will be fine here.
+    Now I can finally relax. 
+
+    Everything will be fine here.
     """
 
     pause 1.0
 
     """
-    The three of us walked towards the entrance while the drive takes care our luggage.
+    The three of us walk towards the entrance while the driver takes care of our luggage.
 
-    Samuel Manning woke when the car stopped. He looks a tad better than earlier.
+    Samuel Manning woke up when the car stopped. He looks somewhat better than earlier.
 
     When we reach the main door, a butler greets us.
     """
 
     stop sound
-
 
     $ change_room('great_hall', dissolve)
     
@@ -262,11 +260,11 @@ label psychic_introduction:
     $ play_music('upbeat')
 
     butler """
-    Good afternoon everyone and welcome to Claythorn Manor.
+    Good afternoon, everyone, and welcome to Claythorn Manor.
 
-    I am sorry that Lady Claythorn can't greet you herself.
+    I'm sorry that Lady Claythorn can't greet you herself.
 
-    She is still busy getting ready for tonight.
+    She is still busy preparing for tonight.
 
     In the meantime, you can enjoy some drinks in the tea room.
 
@@ -274,19 +272,19 @@ label psychic_introduction:
     """
 
     drunk """
-    I am good. But I could use a drink.
+    I'm good, but I could use a drink.
 
     Which way is the tea room?
     """
 
     """
-    Amazing, he looked passed out drunk in the car.
+    Amazing. He looked passed-out drunk in the car.
     
-    How can he possibly want another drink now?
+    How could he possibly want another drink now?
     """
 
     butler """
-    Very well mister, you'll find the tea room on the door to your left.
+    Very well, sir. You'll find the tea room through the door on your left.
 
     Other guests who arrived earlier are already settled there.
 
@@ -298,15 +296,15 @@ label psychic_introduction:
     """
 
     butler """
-    What about you miss ...?
+    What about you, Miss ...?
     """
 
     psychic """
     Miss Baxter.
 
-    I think I'll refresh a bit in my room first.
+    I think I'll freshen up in my room first.
 
-    It has been a very long trip.
+    It's been a very long trip.
     """
 
     butler """
@@ -316,11 +314,11 @@ label psychic_introduction:
     $ change_room("bedrooms_hallway")
 
     butler """
-    Here we are Miss.
+    Here we are, Miss.
 
-    The \"George III Bedroom\".
+    The "George III Bedroom."
 
-    I hope it is to your liking.
+    I hope it's to your liking.
     """
 
     $ unlock_map('psychic_room')
@@ -332,13 +330,13 @@ label psychic_introduction:
     
     At the same time, the driver arrives with my luggage.
 
-    He leaves them there then excuse himself.
+    He leaves them there and then excuses himself.
     """
 
     butler """
-    Well it looks like you are all set.
+    Well, it looks like you're all set.
 
-    Please join us in the dining room when you are ready.
+    Please join us in the dining room when you're ready.
     """
 
     """
@@ -346,13 +344,13 @@ label psychic_introduction:
 
     It's a bit worn out but still looks great.
 
-    I should be fine there.
+    I should be comfortable here.
     """
     
     pause 1.0
 
     """
-    When I am ready, I head downstairs for the tea room.
+    When I'm ready, I head downstairs to the tea room.
     """
 
     $ change_room("tea_room")
@@ -372,29 +370,29 @@ label psychic_introduction:
     butler """
     Please make yourself at home.
 
-    Now if you'll excuse me, I heard the car is back with the last guest.
+    Now, if you'll excuse me, I hear the car is back with the last guest.
     """
 
     """
     He leaves me on my own.
 
-    I take a look around the room.
+    I glance around the room.
 
     Almost everyone is gathered around Sushil Sinha.
 
-    He is in the middle of what sounds like another tedious story.
+    He's in the midst of what sounds like another tedious story.
 
-    I am not eager to listen to that again.
+    I'm not eager to listen to that again.
 
-    On a chair Samuel Manning is sitting alone with a glass on his hand.
+    On a chair, Samuel Manning is sitting alone with a glass in his hand.
 
     I can't believe it.
 
-    He is asleep again.
+    He's asleep again.
 
-    Well, I guess I have no choice but to join the large group.
+    Well, I guess I have no choice but to join the larger group.
 
-    But before I could move the butler is back.
+    But before I could move, the butler returns.
     """
 
     butler """
@@ -402,13 +400,13 @@ label psychic_introduction:
     """
 
     """
-    The butler almost shouted the new guest name.
+    The butler nearly shouts the name of the new guest.
 
-    A good looking young man.
+    A good-looking young man.
 
     He looks unsure.
 
-    You can tell by his clothes alone that he is not in his natural element here.
+    You can tell by his clothes alone that he's not in his natural element here.
 
     After some hesitation, he comes towards me.
     """
@@ -428,7 +426,3 @@ label psychic_introduction:
     $ stop_music()
 
     jump psychic_day1_evening
-
-
-    
-
