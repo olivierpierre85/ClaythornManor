@@ -174,7 +174,7 @@ label lad_generic_heroic_act_psychic:
     $ play_music('mysterious', 3, fadeout_val=2, fadein_val=2)
 
     lad """
-    I was just going home one day; it was rather late.
+    I was just going home one day, it was rather late.
 
     On my way, I happened to notice smoke coming from a house across the street.
 
@@ -211,7 +211,7 @@ label lad_generic_heroic_act_psychic:
 
     pause 1.0
 
-    """
+    lad """
     The baby wasn't alone in the house, of course.
 
     Why would he have been?
