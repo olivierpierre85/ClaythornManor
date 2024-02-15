@@ -11,7 +11,7 @@ label lad_day3_stay:
 
     For all we know, he might very well be the killer.
 
-    Miss Baxter doesn't seem to trust him either.
+    Miss Baxter doesn't seem to trusts him either.
 
     So I figure it's best for us to stay here and be on our guard.
 
@@ -276,11 +276,37 @@ label lad_day3_afternoon_toilet:
     # Seems I was right not to.
     # """
 
+    """
+    Rosalind Marsh is already at her place.
 
+    I sat down at my seat.
 
+    When Miss Baxter comes back, we start eating in silence.
 
+    There's not much we want to discuss.
+    """
 
+    pause 2.0
 
+    """
+    After finishing my meal, I offer to help her with the dishes.
+
+    Not that it really matters now.
+
+    It's just something to do while we wait.
+    """
+
+    $ play_music('danger', fadeout_val=2)
+
+    """
+    But as soon as I stand up, I realize I can't stay on my feet.
+
+    My head spins, and I feel faint.
+    """
+
+    lad surprised """
+    What's happening?
+    """
 
     """
     I try to speak further, but no words come out.
@@ -361,8 +387,7 @@ label lad_day3_afternoon_no_toilet:
 
     # We dine in silence.
     # """
-
-
+    
     """
     When I return, I see Miss Marsh with my plate in her hands.
     """
@@ -376,16 +401,16 @@ label lad_day3_afternoon_no_toilet:
     """
 
     nurse """
-    Oh nothing special, I just realized the plate set out for me is too filled.
+    Oh, nothing special. I just realized the plate set out for me is too full.
 
     I won't be able to eat that much.
 
-    But you are a strong gentleman, I am sure you won't mind switching with me?
+    But you are a strong gentleman; I am sure you won't mind switching with me, right?
     """
 
     lad """
-    I actually do mind. 
-    
+    I actually do mind.
+
     Not the quantity, but I already seasoned my plate exactly how I want it.
 
     I would prefer to keep it that way.
@@ -394,23 +419,23 @@ label lad_day3_afternoon_no_toilet:
     """
     Not a likely lie, but she doesn't have a response to it.
 
-    She hesitates a second.
+    She hesitates for a second.
     """
 
     nurse """
-    All right then. I'll switch with Miss Baxter then.
+    All right then. I'll switch with Miss Baxter instead.
 
     I am certain she won't mind.
     """
 
-    lad """
+    """
     Something bothers me about this.
 
     But I can't quite figure out what.
 
-    She's so quick exchanging the plates that I don't have time for an objection anyway.
+    She's so quick to exchange the plates that I don't have time for an objection anyway.
 
-    When miss Baxter comes back, we start eating in silence.
+    When Miss Baxter comes back, we start eating in silence.
     """
 
     pause 2.0
@@ -435,7 +460,7 @@ label lad_day3_afternoon_no_toilet:
 
     play sound body_fall
 
-    $ play_music('danger')
+    $ play_music("danger")
 
     """
     Suddenly, she collapses.
@@ -448,7 +473,7 @@ label lad_day3_afternoon_no_toilet:
 
     That doesn't make any sense.
 
-    I thought I ...
+    I thought I...
     """
 
     """
@@ -456,19 +481,19 @@ label lad_day3_afternoon_no_toilet:
     """
 
     psychic """
-    Oh Mister Harring, I shoudln't have lied to you.
+    Oh, Mister Harring, I shouldn't have lied to you.
     """
 
     lad """
-    What do you mean? Are you alright?
+    What do you mean? Are you all right?
     """
 
     psychic """
-    No I am not, but it's ok.
+    No, I am not, but it's okay.
 
     I should have been more honest with you.
 
-    You see I never was a psychic, that was just a lie.
+    You see, I never was a psychic; that was just a lie.
 
     I...
 
@@ -498,25 +523,169 @@ label lad_day3_afternoon_no_toilet:
     I was just...
     """
 
-    lad """
+    lad scared """
     Don't try to lie to me.
 
     I saw you switching plates. What kind of poison have you put in it?
     """
 
-    nurse """
-    Nothing, I
+    nurse scared """
+    Nothing, you don't understand.
+
+    That means 'my' plate was poisoned.
     """
 
-    ## TODO who has the gun? Lad or NURSE?
+    """
+    I am startled for a second at that response.
 
+    Wait, what about my plate then...
 
-    # Nurse 
+    Have I eaten the same thing as her?
 
-    # Lad, he points at her, after she grabbed a knife
-    # scare her, when she attacks him
+    Now that I think about it, I realize I am suddenly very tired.
+    """
 
+    lad scared """
+    God, you also poisoned me, didn't you.
+    """
 
+    nurse scared """
+    No ! I swear.
+    """    
+
+    """ 
+    My vision is getting blurry.
+
+    I am in danger here.
+    """
+
+    nurse scared """
+    Mister Harring, are you well?
+
+    You seem weird?"
+    """
+
+    """
+    She slowly approaches me.
+    """
+
+    lad scared """
+    Stay where you are!
+
+    Don't move.
+    """
+
+    #TODO if gun => point gun at her
+    if lad_details.objects.is_unlocked('burned_letter'):
+        """
+        I point the gun at her.
+
+        It's empty but she doesn't know it.
+        """
+
+        lad scared """
+        Move back or I'll shoot!
+        """
+
+        """
+        It seems to work. She jumps back.
+        """
+
+        nurse scared """
+        Don't shoot ! Please, I won't move.
+
+        I swear.
+        """
+    else:
+        """
+        She backs down a little.
+        """
+
+        nurse scared """
+        Of course.
+        """
+
+    """
+    I am not safe here.
+
+    I should move.
+
+    Collecting all my strengths I rush to the main staircase.
+    """
+
+    # TODO add blurry filter
+
+    # TODO Other ending? Nurse pulls gun out and shot me if I don't have the gun
+
+    $ change_room("great_hall")
+
+    """
+    I sprint to the entrance hall and bolt for the door.
+    """
+
+    play sound door_locked
+
+    """
+    It's locked.
+
+    What the hell?
+
+    My strengths are leaving me slowly.
+
+    I can barely see straight now.
+
+    I have to do something.
+
+    So I rush up the stairs then head to my room.
+    """
+
+    $ change_room("lad_room")
+
+    """
+    Once inside, I slam the door shut.
+    
+    My thoughts race.
+
+    I can't stay in here. 
+
+    She probably has a key.
+
+    And I will pass out any seconds now.
+
+    I need to escape.
+    """
+
+    pause 1.0
+
+    """
+    My gaze lands on the window.
+
+    The drop isn't too far.
+
+    I might be able to climb down safely.
+
+    I throw open the window.
+
+    Thankfully, it isn't locked.
+
+    Below, a picket fence lurks.
+
+    But if I can guide my descent, I might avoid it.
+
+    I just need to...
+    """
+
+    play sound door_rattling
+
+    """
+    She's there.
+
+    Time is running out.
+
+    Gripping the window sill, I prepare to jump.
+
+    If I can control my fall, maybe I can...
+    """
 
     $ lad_details.saved_variables["day3_ending"] = "fell"
 
