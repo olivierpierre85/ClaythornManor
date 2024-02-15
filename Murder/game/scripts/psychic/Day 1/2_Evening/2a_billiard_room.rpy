@@ -38,7 +38,7 @@ label psychic_day1_evening_billiard_room:
     return
 
 label psychic_day1_evening_billiard_room_doctor:
-      
+    
     psychic """
     Mister Baldwin, we haven't been introduced yet.
 

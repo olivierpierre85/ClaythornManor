@@ -79,24 +79,24 @@ label debug_choices:
         #     $ lad_details.saved_variables["day2_believe_psychic"] = True
         #     jump lad_day3_morning
         
-        # "lad_day3_afternoon":
-        #     call unlock_psychic 
-        #     $ lad_details.observations.unlock('green_liquid')
-        #     $ lad_details.saved_variables['library_visited'] = True
-        #     $ lad_details.test_checkpoint()
+        "lad_day3_afternoon":
+            call unlock_psychic 
+            $ lad_details.observations.unlock('green_liquid')
+            $ lad_details.saved_variables['library_visited'] = True
+            $ lad_details.test_checkpoint()
 
-        #     $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
-        #     $ lad_details.objects.unlock('gun')
-        #     $ first_death = False
-        #     $ lad_details.intuitions.unlock('psychic_poisons')
-        #     $ lad_details.endings.unlock('gunned_down')
+            $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
+            $ lad_details.objects.unlock('gun')
+            $ first_death = False
+            $ lad_details.intuitions.unlock('psychic_poisons')
+            $ lad_details.endings.unlock('gunned_down')
             
-        #     $ lad_details.reset_information()
-        #     $ lad_details.objects.unlock('gun')
+            $ lad_details.reset_information()
+            $ lad_details.objects.unlock('gun')
 
-        #     $ lad_details.important_choices.unlock('hunt')
+            $ lad_details.important_choices.unlock('hunt')
 
-        #     jump lad_day3_afternoon
+            jump lad_day3_afternoon
 
         # "lad_day3_stay":
         #     $ lad_details.intuitions.unlock(('psychic_poisons')
@@ -110,10 +110,12 @@ label debug_choices:
         # "captain_introduction":
         #     jump captain_introduction
 
-        "psychic_day1_arrival":
+        "psychic_day1_evening":
             call unlock_psychic
+            # TODO unlock First sushil sinha dialog (done in the car)
+            # TODO unlock room
             $ current_character = psychic_details
-            jump psychic_day1_arrival
+            jump psychic_day1_evening
 
         "psychic_day1_dinner":
             $ psychic_details.saved_variables["knows_captain_real_origin"] = True

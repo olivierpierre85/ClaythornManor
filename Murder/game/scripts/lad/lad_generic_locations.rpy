@@ -5,7 +5,9 @@ label lad_library_default:
     if not lad_details.saved_variables["library_visited"]:
 
         """
-        It's a very nice library. But what am I doing here? I can barely read.
+        It's a very nice library. But what am I doing here? 
+        
+        I can barely read.
         """
 
         $ lad_details.unlock_knowledge('education')

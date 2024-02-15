@@ -90,7 +90,7 @@ label psychic_generic_heroic_act:
 
     You actually might remember the event. It was in all the papers at the time.
 
-    You see, with my talent, I am sometimes able to help some people who desperately need it.
+    You see, with my talent, I am sometimes able to help some people who desperately needs it.
 
     One day, a young couple came to see me.
 
