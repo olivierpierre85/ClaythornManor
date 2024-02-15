@@ -61,17 +61,17 @@ label lad_downstairs_default:
         """
 
         maid """
-        Hello Sir, can I help you?
+        Hello Sir, may I help you?
         """
 
         lad """
-        Oh, don't mind me. I'm just taking a walk around.
+        Oh, don't mind me. I'm just taking a look around.
         """
 
         maid """
-        I'm sorry, but the basement is for staff only.
+        I'm sorry, but the basement is off-limits to guests.
 
-        However, there are plenty of rooms upstairs that you can visit.
+        However, there are plenty of rooms upstairs that you can explore.
         """
 
         lad """

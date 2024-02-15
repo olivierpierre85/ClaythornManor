@@ -31,5 +31,6 @@
     "yoffset",
     "ypos",
     "zorder"
-  ]
+  ],
+  "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }

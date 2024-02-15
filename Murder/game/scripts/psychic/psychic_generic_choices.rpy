@@ -69,9 +69,9 @@ label psychic_generic_age:
     psychic angry """
     I beg your pardon?
 
-    You are not really asking me that? Were you raised in a barn?
+    Are you really asking me that? Were you raised in a barn?
 
-    Only a person without any social skills would ask that to a respectable lady.
+    Only a person without any social skills would ask such a question of a respectable lady.
     """
 
     """
@@ -79,6 +79,7 @@ label psychic_generic_age:
     """
 
     return
+
     
 
 label psychic_generic_heroic_act:
