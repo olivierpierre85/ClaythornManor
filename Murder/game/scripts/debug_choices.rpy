@@ -90,10 +90,10 @@ label debug_choices:
             $ first_death = False
             $ lad_details.intuitions.unlock('psychic_poisons')
             $ lad_details.endings.unlock('gunned_down')
+
             
             $ lad_details.reset_information()
-            $ lad_details.objects.unlock('gun')
-
+            # $ lad_details.objects.unlock('gun')
             $ lad_details.important_choices.unlock('hunt')
 
             jump lad_day3_afternoon

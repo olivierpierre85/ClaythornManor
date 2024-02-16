@@ -1,5 +1,8 @@
 # Characters description
 # TODO REWRITE EVERYTHING
+# INFORMATION LIST should have ALL the information 
+# BUT now extra_information is list and others are CharacterInformationList
+
 style narrator_style:
     properties gui.text_properties("dialogue")
     color gui.idle_small_color 
@@ -272,6 +275,9 @@ init -100 python:
                     unlocked.append(info.text_id)
             return unlocked
 
+        def __iter__(self):
+            return iter(self.information_list)
+
     class CharacterInformation:
         def __init__(
             self, 
@@ -334,8 +340,12 @@ init -100 python:
             #     return self.description_short
         
         def reset_information(self):
-            for info in self.information_list:
-                if info.type in ['observation', 'object']:
+            for info in self.objects:
+                if info.type in ['observation', 'object']: # will be used after rewrite
+                    info.locked = True
+            
+            for info in self.observations:
+                if info.type in ['observation', 'object']: # will be used after rewrite
                     info.locked = True
 
             for important_choice in self.important_choices.information_list:
