@@ -11,7 +11,7 @@ label lad_day3_stay:
 
     For all we know, he might very well be the killer.
 
-    Miss Baxter doesn't seem to trusts him either.
+    Miss Baxter doesn't seem to trust him either.
 
     So I figure it's best for us to stay here and be on our guard.
 
@@ -39,21 +39,21 @@ label lad_day3_stay:
     $ change_room('basement_stairs', dissolve)
 
     """
-    We were heading to the lower floor, when we head a shout.
+    We were heading to the lower floor when we heard a shout.
     """
 
     nurse """
-    Hello ! Hello !
+    Hello! Hello!
 
     Is there someone here?
     """
 
     psychic """
-    Oh my god, Miss Mars, you're here!
+    Oh my God, Miss Marsh, you're here!
     """
 
     nurse """
-    Of course I am. I am afraid I over slept.
+    Of course I am. I'm afraid I overslept.
 
     I don't feel quite like myself today.
 
@@ -63,19 +63,19 @@ label lad_day3_stay:
     """
 
     psychic """
-    Oh my dear we don't know.
+    Oh my dear, we don't know.
     """
 
     """
     We updated her on what happened since this morning.
 
-    When we had finish told her the story, she remained relatively calm, considering the situation.
+    When we had finished telling her the story, she remained relatively calm, considering the situation.
     """
 
     nurse """
-    Poor Mister Manning, what a terrible fate.
+    Poor Mr. Manning, what a terrible fate.
 
-    And what a horror that must have been for you my dear.
+    And what horror that must have been for you, my dear.
 
     Are you all right?
     """
@@ -83,9 +83,9 @@ label lad_day3_stay:
     psychic """
     I am better now.
 
-    I'll be fine if I don't think about.
+    I'll be fine if I don't think about it.
 
-    About that, we were heading to the kitchen, to see of we can prepare some sort of meal.
+    Speaking of which, we were heading to the kitchen to see if we can prepare some sort of meal.
     """
 
     nurse """
@@ -93,7 +93,7 @@ label lad_day3_stay:
     """
 
     """
-    And just like, we headed downstairs to the kitchen.
+    And just like that, we headed downstairs to the kitchen.
     """
 
     $ change_room('kitchen', dissolve)
@@ -135,7 +135,7 @@ label lad_day3_stay:
     """
 
     psychic """
-    Where are you going, Mister Harring?
+    Where are you going, Mr. Harring?
 
     It's better if we stick together at all times.
     """
@@ -149,13 +149,13 @@ label lad_day3_stay:
     psychic """
     Say no more, I understand.
 
-    I am in the same situation.
+    I'm in the same situation.
 
-    What about you Miss Marsh?
+    What about you, Miss Marsh?
     """
 
     nurse """
-    Oh, I am fine thank you.
+    Oh, I'm fine, thank you.
 
     You both go, I'll finish preparing the table.
     """
@@ -308,35 +308,37 @@ label lad_day3_afternoon_no_toilet:
 
     I won't be able to eat that much.
 
-    But you are a strong gentleman; I am sure you won't mind switching with me, right?
+    But you are a strong gentleman.
+    
+    I am sure you won't mind switching with me, right?
     """
 
     lad """
     I actually do mind.
 
-    Not the quantity, but I already seasoned my plate exactly how I want it.
+    Not the quantity, but I already seasoned my plate exactly how I like it.
 
     I would prefer to keep it that way.
     """
 
     """
-    Not a likely lie, but she doesn't have a response to it.
+    It's not a likely lie, but she doesn't have a response to it.
 
-    She hesitates for a second.
+    She hesitates for a moment.
     """
 
     nurse """
-    All right then. I'll switch with Miss Baxter instead.
+    All right then. I'll swap with Miss Baxter instead.
 
-    I am certain she won't mind.
+    I'm certain she won't mind.
     """
 
     """
     Something bothers me about this.
 
-    But I can't quite figure out what.
+    But I can't quite figure out what it is.
 
-    She's so quick to exchange the plates that I don't have time for an objection anyway.
+    She's so quick to exchange the plates that I don't have time to raise an objection anyway.
 
     When Miss Baxter comes back, we start eating in silence.
     """
@@ -357,8 +359,6 @@ label lad_day3_afternoon_no_toilet:
 
     psychic """
     I feel faint...
-
-    What's happening?
     """
 
     play sound body_fall
@@ -374,29 +374,42 @@ label lad_day3_afternoon_no_toilet:
     psychic """
     What is happening?
 
-    That doesn't make any sense.
+    This doesn't make any sense.
 
     I thought I...
     """
 
     """
-    She realizes I am holding her hands.
+    She realizes I am holding her hand.
     """
 
+    # Important TED or Mr Harring? TED is STROng clue
     psychic """
-    Oh, Mister Harring, I shouldn't have lied to you.
+    Oh, Ted, I shouldn't have lied to you.
     """
 
     lad """
-    What do you mean? Are you all right?
+    What do you mean? Lie about what?
     """
 
     psychic """
-    No, I am not, but it's okay.
+    About everything.
 
-    I should have been more honest with you.
+    That... I've never been a psychic, that was just a lie.
 
-    You see, I never was a psychic; that was just a lie.
+    I am just an actress...
+
+    I...
+    """
+
+    lad """
+    Don't say anything, you need to keep your strength.
+    """
+
+    pyschic """
+    No it's too late for that.
+
+    I need to confess ... now...
 
     I...
 
@@ -413,23 +426,22 @@ label lad_day3_afternoon_no_toilet:
 
     pause 2.0
 
-    #TODO confrontation between Nurse and lad
     lad """
-    Oh my God!!
+    Oh my God!
 
-    What have you done.
+    What have you done?
     """
 
     nurse scared """
-    Nothing! I swear, I was just
+    Nothing! I swear, I was just...
 
-    I was just...
+    trying to...
     """
 
     lad scared """
     Don't try to lie to me.
 
-    I saw you switching plates. What kind of poison have you put in it?
+    I saw you swapping plates. What kind of poison did you put in there?
     """
 
     nurse scared """
@@ -439,9 +451,9 @@ label lad_day3_afternoon_no_toilet:
     """
 
     """
-    I am startled for a second at that response.
+    I am startled for a moment by that response.
 
-    Wait, what about my plate then...
+    Then I think, wait, what about my plate then...
 
     Have I eaten the same thing as her?
 
@@ -449,13 +461,14 @@ label lad_day3_afternoon_no_toilet:
     """
 
     lad scared """
-    God, you also poisoned me, didn't you.
+    God, you also poisoned me, didn't you?
     """
 
     nurse scared """
-    No ! I swear.
+    No! I swear.
     """    
 
+    #TODO Add blurry filter
     """ 
     My vision is getting blurry.
 
@@ -465,7 +478,7 @@ label lad_day3_afternoon_no_toilet:
     nurse scared """
     Mister Harring, are you well?
 
-    You seem weird?"
+    You look unwell.
     """
 
     """
@@ -475,19 +488,19 @@ label lad_day3_afternoon_no_toilet:
     lad scared """
     Stay where you are!
 
-    Don't move.
+    Don't come any closer.
     """
-
-    #TODO if gun => point gun at her
+label test:
+    # TODO: if gun => point the gun at her
     if lad_details.objects.is_unlocked('burned_letter'):
         """
         I point the gun at her.
 
-        It's empty but she doesn't know it.
+        It's empty, but she doesn't know that.
         """
 
         lad scared """
-        Move back or I'll shoot!
+        Move back, or I'll shoot!
         """
 
         """
@@ -495,7 +508,7 @@ label lad_day3_afternoon_no_toilet:
         """
 
         nurse scared """
-        Don't shoot ! Please, I won't move.
+        Don't shoot! Please, I won't move.
 
         I swear.
         """
@@ -505,25 +518,23 @@ label lad_day3_afternoon_no_toilet:
         """
 
         nurse scared """
-        Of course.
+        Alright, alright.
         """
 
     """
-    I am not safe here.
+    I'm not safe here.
 
-    I should move.
+    I need to move.
 
-    Collecting all my strengths I rush to the main staircase.
+    Gathering all my strength, I rush to the main staircase.
     """
 
-    # TODO add blurry filter
-
-    # TODO Other ending? Nurse pulls gun out and shot me if I don't have the gun
+    # TODO: Consider other ending? If the nurse has a gun and I don't, she shoots me
 
     $ change_room("great_hall")
 
     """
-    I sprint to the entrance hall and bolt for the door.
+    I sprint to the entrance hall and make a break for the door.
     """
 
     play sound door_locked
@@ -531,39 +542,37 @@ label lad_day3_afternoon_no_toilet:
     """
     It's locked.
 
-    What the hell?
+    How can this be?
 
-    My strengths are leaving me slowly.
+    My strength is fading slowly.
 
-    I can barely see straight now.
+    I must do something.
 
-    I have to do something.
-
-    So I rush up the stairs then head to my room.
+    So, with the last of my energy, I go up the stairs and head to my room.
     """
 
     $ change_room("lad_room")
 
     """
     Once inside, I slam the door shut.
-    
-    My thoughts race.
 
-    I can't stay in here. 
+    Panic floods my mind.
 
-    She probably has a key.
+    I can't stay here.
 
-    And I will pass out any seconds now.
+    She likely has a key.
 
-    I need to escape.
+    And I'm on the verge of passing out.
+
+    I need an escape route.
     """
 
     pause 1.0
 
     """
-    My gaze lands on the window.
+    My eyes fix on the window.
 
-    The drop isn't too far.
+    The fall doesn't look too severe.
 
     I might be able to climb down safely.
 
@@ -571,7 +580,7 @@ label lad_day3_afternoon_no_toilet:
 
     Thankfully, it isn't locked.
 
-    Below, a picket fence lurks.
+    Below, there is a picket fence.
 
     But if I can guide my descent, I might avoid it.
 
@@ -581,7 +590,7 @@ label lad_day3_afternoon_no_toilet:
     play sound door_rattling
 
     """
-    She's there.
+    She's right outside.
 
     Time is running out.
 

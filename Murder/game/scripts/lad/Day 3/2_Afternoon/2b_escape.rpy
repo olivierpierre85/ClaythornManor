@@ -292,7 +292,7 @@ label lad_day3_escape:
         
         I glance back to see Sushil Sinha collapsing to the ground.
         
-        But I can't halt.
+        But I can't stop.
         
         My legs push me forward faster than ever before.
         
@@ -308,7 +308,7 @@ label lad_day3_escape:
         
         I'm not sprinting anymore, just jogging — barely faster than a brisk walk.
         
-        But I can't stop.
+        But I have to keep going.
         
         I find a nearly comfortable pace and maintain it, occasionally glancing behind me.
         

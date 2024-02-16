@@ -182,6 +182,7 @@ label lad_ending_day3_escape:
 
     pause 1
 
+    # TODO check every death with last version
     """
     They discovered Sushil Sinha's body on the road, likely where I last saw him.
 
@@ -191,13 +192,17 @@ label lad_ending_day3_escape:
 
     They hastened to Claythorn Manor.
 
-    There, they discovered that all of the guests had been killed.
+    There, they discovered that all of the remaining guests had died.
 
-    Samuel Manning, Thomas Moody, Rosalind Marsh, and Daniel Baldwin still in their beds.
+    Samuel Manning, Thomas Moody, and Daniel Baldwin were still in their beds.
 
-    Poor Miss Baxter was found in the hallway, stabbed in the back.
-
+    Poor Miss Baxter was found in the hallway, probably poisoned.
+    
     She didn't even make it to her room.
+
+    Rosalind Marsh was apparently hiding in the attic. 
+
+    But that didn't help her, as she had in the back.    
 
     We still have no idea where Lady Claythorn and her staff are.
     """
