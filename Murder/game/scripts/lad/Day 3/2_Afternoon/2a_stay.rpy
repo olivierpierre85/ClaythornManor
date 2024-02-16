@@ -36,7 +36,7 @@ label lad_day3_stay:
     Okay, I'll come with you.
     """
 
-    $ change_room('basement stairs', dissolve)
+    $ change_room('basement_stairs', dissolve)
 
     """
     We were heading to the lower floor, when we head a shout.
@@ -73,17 +73,27 @@ label lad_day3_stay:
     """
 
     nurse """
-    what a tragic story.
+    Poor Mister Manning, what a terrible fate.
 
-    But I believe there's nothing for us to do now but wait.
+    And what a horror that must have been for you my dear.
+
+    Are you all right?
     """
 
     psychic """
-    We were heading to the kitchen, to see of we can prepare some sort of meal.
+    I am better now.
+
+    I'll be fine if I don't think about.
+
+    About that, we were heading to the kitchen, to see of we can prepare some sort of meal.
     """
 
     nurse """
     Right, it's a good idea. We might as well keep busy until someone comes back for us.
+    """
+
+    """
+    And just like, we headed downstairs to the kitchen.
     """
 
     $ change_room('kitchen', dissolve)
@@ -139,7 +149,7 @@ label lad_day3_stay:
     psychic """
     Say no more, I understand.
 
-    I've been feeling the same. 
+    I am in the same situation.
 
     What about you Miss Marsh?
     """
@@ -222,59 +232,6 @@ label lad_day3_afternoon_toilet:
     """
 
     $ change_room('dining_room')
-    
-    # Version with only psychic and lad
-    # """
-    # But when I return, Miss Baxter is already seated at the table.
-
-    # She was even quicker than I was.
-
-    # She must be scared too.
-
-    # I take my seat across from her, and we eat in silence. 
-
-    # There's not much we want to discuss.
-    # """
-
-    # pause 2.0
-
-    # """
-    # After finishing my meal, I offer to help her with the dishes.
-
-    # Not that it really matters now.
-
-    # It's just something to do while we wait.
-    # """
-
-    # $ play_music('danger', fadeout_val=2)
-
-    # """
-    # But as soon as I stand up, I realize I can't stay on my feet.
-
-    # My head spins, and I feel faint.
-
-    # I turn to Amelia Baxter.
-
-    # She looks back at me emotionlessly.
-
-    # There's no surprise in her eyes.
-    # """
-
-    # lad surprised """
-    # What... did you... do to my food?
-    # """
-
-    # psychic """
-    # Your food? I didn't tamper with it.
-
-    # But I thought you might have.
-
-    # So, I switched our plates before serving.
-
-    # I never really trusted you, Mister Harring.
-
-    # Seems I was right not to.
-    # """
 
     """
     Rosalind Marsh is already at her place.
@@ -333,60 +290,6 @@ label lad_day3_afternoon_no_toilet:
 
     $ change_room('dining_room')
 
-    # old version
-    # """
-    # I try to make sense of the situation.
-
-    # Why am I putting my trust in an eccentric older lady?
-
-    # Because I believe she couldn't harm me?
-
-    # Maybe not directly.
-
-    # But she could be more subtle about it.
-
-    # I inspect our plates; they seem normal.
-
-    # I was with her the entire time, so there's no way she could've tampered with them.
-
-    # At least I think.
-
-    # Perhaps it's nothing, but it's better to be safe than sorry.
-
-    # I discreetly switch my plate with Miss Baxter's.
-    
-    # I then take my seat, waiting for her to come back.
-    # """
-
-    # pause 2.0
-
-    # """
-    # She returns rather quickly.
-
-    # She couldn't have spent much time in her room.
-
-    # That's understandable; she must be terrified.
-
-    # Her face certainly shows concern.
-    # """
-
-    # psychic """
-    # Mister Harring... You were quick.
-    # """
-
-    # lad """
-    # As were you.
-    # """
-
-    # psychic """
-    # Indeed.
-    # """
-
-    # """
-    # She casts a concerned glance my way, then sits.
-
-    # We dine in silence.
-    # """
     
     """
     When I return, I see Miss Marsh with my plate in her hands.
@@ -694,151 +597,3 @@ label lad_day3_afternoon_no_toilet:
     $ stop_music()
 
     return
-
-    # OLD ENDING
-    # psychic surprised """
-    # Mister Harring...
-
-    # Was it you?
-    
-    # But why?
-    # """
-
-    # lad surprised """
-    # What?
-
-    # I don't know what's going on...
-
-    # I had nothing to do with this, I promise...
-    # """
-
-    # psychic """
-    # Shh... There's no need to feign innocence now.
-
-    # Is it because you discovered the truth?
-
-    # That I'm a fraud...
-
-    # That I could never commune with the dead, that... 
-
-    # Well it doesn't matter anymore.
-
-    # I guess I was wrong to bet on you.
-
-    # I ...
-    # """
-
-    # """
-    # She can't finish her sentence.
-    # """
-
-    # $ psychic_details.unlock_knowledge('lie') 
-
-    # $ play_music('scary')
-
-    # pause 2.0
-
-    # """
-    # Oh my god.
-
-    # What just happened?
-
-    # Who did this?
-    # """
-
-    # lad """
-    # Hey! 
-
-    # Who's there?
-
-    # Show yourself!
-    # """
-
-    # pause 1.0
-
-    # """
-    # Only silence answers back.
-
-    # I can't stay here.
-
-    # I have to leave. Now.
-    # """
-
-    # $ change_room("great_hall")
-
-    # """
-    # I sprint to the entrance hall and bolt for the door.
-    # """
-
-    # play sound door_locked
-
-    # """
-    # It's locked.
-
-    # What the hell?
-
-
-    # I need to get out.
-
-    # I think I hear footsteps in the distance.
-    # """
-
-    # lad surprised """
-    # Who's there?
-    # """
-
-    # """
-    # Panic grips me.
-
-    # I rush to my room.
-    # """
-
-    # $ change_room("lad_room")
-
-    # """
-    # Once inside, I slam the door shut.
-    
-    # My thoughts race.
-
-    # The only escape is...
-    # """
-
-    # pause 1.0
-
-    # """
-    # My gaze lands on the window.
-
-    # The drop isn't too far.
-
-    # I might be able to climb down safely.
-
-    # I throw open the window.
-
-    # Thankfully, it isn't locked.
-
-    # Below, a picket fence lurks.
-
-    # But if I can guide my descent, I might avoid it.
-
-    # I just need to...
-    # """
-
-    # play sound door_rattling
-
-    # """
-    # Someone's there.
-
-    # Time is running out.
-
-    # Gripping the window sill, I prepare to jump.
-
-    # If I can control my fall, maybe I can...
-    # """
-
-    # $ lad_details.saved_variables["day3_ending"] = "fell"
-
-    # stop sound
-
-    # $ stop_music()
-
-    # return
