@@ -25,25 +25,19 @@ label psychic_introduction:
     $ play_music('chill')
 
     """
-    I still can't believe I had to book the train ticket myself.
-
-    This invitation really isn't what I would have expected.
+    This invitation really isn't well-written.
 
     Vague instructions on how to reach the manor.
 
-    Little information about the participants.
+    Little information about who has been invited.
 
-    I wouldn't be surprised if no one were at the train station to pick me up.
+    I guess it wouldn't be surprising if most of the participants didn't come.
 
-    This could just be an elaborate prank.
+    I can't help feeling nervous about the whole thing.
 
-    And with my luck, there won't be another train until tomorrow.
+    Well, it's too late to back down now.
 
-    That would mean spending the night here.
-
-    What a waste of time that would be.
-
-    Well, we'll see.
+    We'll see what happens.
     """
 
     play sound train_stopping
@@ -53,7 +47,7 @@ label psychic_introduction:
     pause 5.0
     
     """
-    I step off the train and look for someone who might be able to help me.
+    I step off the train and look around me.
     """
 
     pause 1.0
@@ -216,7 +210,7 @@ label psychic_introduction:
     scene manor_exterior
 
     """
-    After what seems like an eternity, an impressive manor appears on the horizon.
+    After what seems like an eternity, the manor appears on the horizon.
 
     That finally puts an end to Captain Sinha's speech.
     """
@@ -228,17 +222,17 @@ label psychic_introduction:
     """
 
     """
-    He's right; it is beautiful.
+    He's right, it is beautiful.
 
     However, the storm that has befallen us gives it a somewhat sinister look.
 
     Nevertheless, its appearance reassures me.
 
-    With such a house, our host must be incredibly wealthy.
+    Such a house shows that its owner must be incredibly wealthy.
 
-    Now I can finally relax. 
+    Now I can finally relax.
 
-    Everything will be fine here.
+    Everything will be fine from now on.
     """
 
     pause 1.0
@@ -402,13 +396,11 @@ label psychic_introduction:
     """
     The butler nearly shouts the name of the new guest.
 
-    A good-looking young man.
+    He's a good-looking young man, but he looks unsure.
 
-    He looks unsure.
+    You can tell that he's not in his natural element here.
 
-    You can tell by his clothes alone that he's not in his natural element here.
-
-    After some hesitation, he comes towards me.
+    I smile at him and, after some hesitation, comes towards me.
     """
 
     call lad_day1_drinks_psychic_encounter

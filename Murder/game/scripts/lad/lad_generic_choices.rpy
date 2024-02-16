@@ -86,7 +86,7 @@ label lad_generic_age_psychic:
     """
 
     """
-    Really, I would have pegged him older than that.
+    That make sense, but he somewhat looks older than that.
 
     I guess it's his rugged look.
 
