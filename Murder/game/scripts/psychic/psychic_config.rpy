@@ -7,7 +7,8 @@ label init_psychic:
     python:
         # Story Variables
         psychic_init_variables = {
-            "map_menu" : psychic_map_menu,
+            # MAP Menus
+            "day1_evening_map_menu" : psychic_day1_evening_map_menu,
 
             "lad_generic_menu" : lad_generic_menu_psychic,
             "lad_generic_other_guests_menu" : lad_generic_other_guests_menu_psychic,
@@ -25,6 +26,7 @@ label init_psychic:
             "knows_captain_origin" : False,
             "knows_captain_real_origin" : False,
             "day1_evening_billiard_room_visited" : False,
+            "portrait_gallery_visited": False,
         }
 
         psychic_extra_information = [

@@ -111,19 +111,6 @@ label debug_choices:
         #     jump captain_introduction
 
         "psychic_day1_evening":
-            call unlock_psychic
-            # TODO unlock First sushil sinha dialog (done in the car)
-            # TODO unlock room
-            $ current_character = psychic_details
-            jump psychic_day1_evening
-
-        "psychic_day1_dinner":
-            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-            call unlock_psychic
-            $ current_character = psychic_details
-            jump psychic_day1_evening
-
-        "psychic_day1_evening":
             $ psychic_details.saved_variables["knows_captain_real_origin"] = True
             call unlock_psychic
             $ current_character = psychic_details

@@ -325,9 +325,11 @@ label lad_billiard_room_default:
     
     $ change_room('billiard_room')
     
-    "It's empty."
+    """
+    It's empty.
 
-    "No need to stay here."
+    "No need to stay here.
+    """
 
     return
 

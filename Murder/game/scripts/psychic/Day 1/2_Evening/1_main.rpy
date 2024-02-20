@@ -61,14 +61,15 @@ label psychic_day1_evening:
     And Ted Harring is on my right.
     """
 
-    $ time_left = 60
+    # TODO put it back after tests over
+    # $ time_left = 60
 
-    call run_menu(TimedMenu("psychic_day1_evening", [
-        TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain'),
-        TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad')
-    ], image_left = "captain", image_right = "lad"))
+    # call run_menu(TimedMenu("psychic_day1_evening", [
+    #     TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain'),
+    #     TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad')
+    # ], image_left = "captain", image_right = "lad"))
 
-    $ stop_music()
+    # $ stop_music()
 
     """
     The dinner is over.
@@ -100,7 +101,7 @@ label psychic_day1_evening:
 
     $ time_left = 120
     
-    call run_menu(psychic_details.saved_variables["map_menu"])
+    call run_menu(psychic_details.saved_variables["day1_evening_map_menu"])
 
     call change_time(23,00)
 

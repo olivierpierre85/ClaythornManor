@@ -97,7 +97,7 @@ label doctor_generic_manor:
         No, I can't say that I am.
         """
 
-        """"
+        """
         Well, that's somewhat comforting.
         """
 

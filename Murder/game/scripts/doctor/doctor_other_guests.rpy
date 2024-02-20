@@ -16,6 +16,12 @@ label doctor_generic_other_guests_friday:
     Because I don't think I was able to contribute anything to the conversation.
     """
 
+    if current_character.text_id == "psychic": 
+
+        """
+        Yes, I can understand that feeling.
+        """
+
     $ captain_details.unlock_knowledge('talker') 
 
     return

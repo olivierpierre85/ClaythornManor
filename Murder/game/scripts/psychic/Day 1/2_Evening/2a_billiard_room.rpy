@@ -7,16 +7,17 @@ label psychic_day1_evening_billiard_room:
         $ psychic_details.saved_variables["day1_evening_billiard_room_visited"] = True
 
         """
-        It seems that most guests have decided to come here.
+        It appears that most guests have chosen to gather here.
 
-        There is Daniel Baldwin alone in the corner.
+        Daniel Baldwin stands alone in the corner.
 
-        Ted Harring is at bar with Samuel Manning.
+        Ted Harring is at the bar with Samuel Manning.
 
-        And there is a circle around Sushil Sinha.
-        
-        He is probably boring everyone.
+        A crowd has formed around Sushil Sinha.
+
+        He is likely monopolizing the conversation.
         """
+
 
         $ psychic_day1_evening_billiard_room_menu = TimedMenu("psychic_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Daniel Baldwin', 'psychic_day1_evening_billiard_room_doctor', 10),
@@ -73,35 +74,34 @@ label psychic_day1_evening_billiard_room_group:
 
 label psychic_day1_evening_billiard_room_bar:
 
-    # Normal lad choices, but EXTRA question if drunk?
     psychic """
-    Hello again Mister Harring.
+    Hello again, Mister Harring.
 
     Mister Manning.
     """
 
     lad """
-    Oh hi Miss Baxter.
+    Oh, hi Miss Baxter.
 
-    Don't pay attention to mister Manning.
+    Don't mind Mister Manning.
 
-    I think he may have drank one too many.
+    I think he might have had one too many.
     """
 
     """
-    Yes, or ten too many more like.
+    Yes, or maybe ten too many.
     """
 
     lad """
-    Would like something to drink?
+    Would you like something to drink?
 
-    There is port and sherry.
+    We have port and sherry.
     """
 
     psychic """
-    That's not a lot of choice.
+    That's not a wide selection.
 
-    But a sherry will do. Thank you.
+    But I'll take a sherry, thank you.
     """
 
     lad """
@@ -109,12 +109,12 @@ label psychic_day1_evening_billiard_room_bar:
     """
 
     """
-    He is slightly shaking while pouring the drinks.
+    He is shaking slightly while pouring the drinks.
 
-    Could he also be a bit drunk?
+    Could he be a bit drunk as well?
     """
 
-    # TODO ADD fun question for a drunk lad.
+    # TODO: ADD fun question for a drunk lad.
     call lad_generic
 
     return
