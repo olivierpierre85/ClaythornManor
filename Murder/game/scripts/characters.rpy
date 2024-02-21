@@ -42,6 +42,8 @@ label init_characters:
     define footman      = Character("Footman", image="footman")
     define maid_name    = "Young woman"
     define maid         = Character(maid_name, image="maid")
+    define lord_name    = "Older Man"
+    define lord         = Character(lord_name, image="lord")
 
     python:
         # 1. The Lad, The Psychic CAPTAIN IN OWN FILE

@@ -27,6 +27,7 @@ label init_psychic:
             "knows_captain_real_origin" : False,
             "day1_evening_billiard_room_visited" : False,
             "portrait_gallery_visited": False,
+            "attic_visited": False,
         }
 
         psychic_extra_information = [

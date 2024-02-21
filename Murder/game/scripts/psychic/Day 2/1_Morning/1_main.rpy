@@ -14,39 +14,39 @@
 # --------------------------------------------
 label psychic_day2_morning:
 
-    $ current_character.add_checkpoint("psychic_day2_morning") 
+    $ current_character.add_checkpoint("psychic_day2_morning")
 
     call black_screen_transition("Amelia Baxter", "Saturday")
 
     scene psychic_room with irisout
-    
+
     $ change_room('psychic_room')
 
-    call change_time(8,30, 'Morning', 'Saturday', hide_minutes = True)
+    call change_time(8, 30, 'Morning', 'Saturday', hide_minutes=True)
 
     """
-    Despite the storm that raged all night, I manage to sleep relatively well.
+    Despite the storm that raged all night, I managed to sleep relatively well.
 
-    So I take my time getting ready then I head downstairs to the dining room.
+    So, I take my time getting ready and then I head downstairs to the dining room.
     """
 
     $ change_room('dining_room')
 
-    call change_time(9,20)
+    call change_time(9, 20)
 
     """
     Some of the guests are already eating.
 
-    I grab a plate a the breakfast buffet, then sat down at the same place at the table than yesterday.
+    I grab a plate at the breakfast buffet, then sit down in the same place at the table as yesterday.
 
-    Captain Sinha is there but I don't feel like talking with him.
+    Captain Sinha is there, but I don't feel like talking with him.
 
-    It is too soon for that.
+    It's too soon for that.
 
     After a while, Ted Harring joins me at the table.
     """
 
-    call change_time(9,30)
+    call change_time(9, 30)
 
     call day2_breakfast_lad_psychic
 
@@ -54,6 +54,14 @@ label psychic_day2_morning:
     For some reason, Ted Harring also stands up and follows them.
 
     I guess I am stuck with Sushil Sinha.
+    """
+
+    psychic """
+    Good morning, Mister Sinha.
+    """
+
+    captain """
+    Miss Baxter.
     """
 
     $ time_left = 30

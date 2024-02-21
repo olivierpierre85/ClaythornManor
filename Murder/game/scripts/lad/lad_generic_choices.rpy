@@ -214,7 +214,7 @@ label lad_generic_heroic_act_psychic:
     lad """
     The baby wasn't alone in the house, of course.
 
-    Why would he have been?
+    Why would they have been?
 
     The fire was caused by the nanny.
     
