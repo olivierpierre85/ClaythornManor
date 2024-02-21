@@ -9,6 +9,7 @@ label init_psychic:
         psychic_init_variables = {
             # MAP Menus
             "day1_evening_map_menu" : psychic_day1_evening_map_menu,
+            "day2_no_hunt_map_menu" : psychic_day2_no_hunt_map_menu,
 
             "lad_generic_menu" : lad_generic_menu_psychic,
             "lad_generic_other_guests_menu" : lad_generic_other_guests_menu_psychic,
