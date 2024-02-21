@@ -1,4 +1,4 @@
-label host_welcome_speech:
+label day1_host_welcome_speech:
 
     host """ 
     Welcome, everyone. My apologies for keeping you waiting. 
@@ -28,7 +28,97 @@ label host_welcome_speech:
 
     return
 
-label host_broken_death_speech:
+label day2_breakfast_host_death:
+
+    """
+    Suddenly, Lady Claythorn and the butler are back in the room.
+    """
+
+    captain """
+    Lady Claythorn, what is happening?
+    """
+
+    """
+    The lady is visibly distressed.
+    """
+
+    host """
+    I'm sorry to announce such horrible news, everyone.
+
+    It appears that Mister Moody passed away in his sleep last night.
+    """
+
+    $ play_music('scary')
+
+    """
+    The room instantly falls silent.
+    """
+
+    captain """
+    Do we know what happened?
+    """
+
+    host """
+    Doctor Baldwin is examining him right now.
+
+    He will likely tell us more later.
+    """
+
+    """
+    She then sits down in her chair.
+
+    Everyone looks shaken up.
+    """
+
+    lad """
+    How terrible.
+    """
+
+    psychic """
+    Yes, such sad news.
+    """
+
+    """
+    We continue eating slowly in silence for a moment when the doctor enters the room.
+    """
+
+    return
+
+label day2_breakfast_host_death_doctor:
+
+    host surprised """
+    Doctor Baldwin, can you tell us more about what happened?
+    """
+
+    doctor """
+    I can't say anything definitive for now.
+
+    But it's very likely a natural death, possibly triggered by an old wound from the war.
+    
+    In any case, we need to call the town to ask for an ambulance.
+    """
+
+    # TODO: Add lines? Are they broken? Or does the host pretend everything is fine so everyone stays here?
+    host """
+    Yes, of course.
+
+    My butler will take care of it.
+    """
+
+    doctor """
+    Very well.
+    """
+
+    """
+    We then continue eating in sad silence.
+
+    Nobody speaks much.
+    """
+
+    return
+
+
+label day2_breakfast_host_hunt:
     
     host """
     Well, as I mentioned earlier, activities were planned for today.

@@ -3,3 +3,7 @@ if current_character.text_id == "lad":
 
 # Generic var
 if not psychic_details.saved_variables['attic_visited']:
+
+
+# unfinished
+jump work_in_progress

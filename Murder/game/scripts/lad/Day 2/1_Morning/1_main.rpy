@@ -104,7 +104,7 @@ label lad_day2_morning:
 
     $ stop_music()
 
-    call host_broken_death_speech
+    call day2_breakfast_host_hunt
 
     """
     A hunt... A true aristocratic hunt.

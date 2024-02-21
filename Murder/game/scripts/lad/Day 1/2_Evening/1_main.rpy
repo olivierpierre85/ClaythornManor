@@ -35,7 +35,7 @@ label lad_day1_evening:
 
     $ play_music('chill', 2)
 
-    call host_welcome_speech
+    call day1_host_welcome_speech
 
     """
     After the speech, everyone appeared pleased. 

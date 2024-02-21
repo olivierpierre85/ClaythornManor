@@ -33,7 +33,7 @@ label psychic_day1_evening:
     She is wearing expensive clothing.
     """
 
-    call host_welcome_speech
+    call day1_host_welcome_speech
 
     """
     Well said.

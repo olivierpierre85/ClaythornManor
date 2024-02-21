@@ -7,7 +7,7 @@
 #
 #   Music: chill
 #
-#   Alive: Everyone
+#   Alive: Everyone but Broken
 #
 #   Notes : 
 #       - Generic Lad ?
@@ -27,7 +27,7 @@ label psychic_day2_morning:
     """
     Despite the storm that raged all night, I managed to sleep relatively well.
 
-    So, I take my time getting ready and then I head downstairs to the dining room.
+    So, I take my time getting ready and then head downstairs to the dining room.
     """
 
     $ change_room('dining_room')
@@ -37,9 +37,9 @@ label psychic_day2_morning:
     """
     Some of the guests are already eating.
 
-    I grab a plate at the breakfast buffet, then sit down in the same place at the table as yesterday.
+    I grab a plate at the breakfast buffet and then sit down at the same spot on the table as yesterday.
 
-    Captain Sinha is there, but I don't feel like talking with him.
+    Captain Sinha is there, but I don't feel like engaging in conversation with him.
 
     It's too soon for that.
 
@@ -53,7 +53,7 @@ label psychic_day2_morning:
     """
     For some reason, Ted Harring also stands up and follows them.
 
-    I guess I am stuck with Sushil Sinha.
+    It seems I am stuck with Sushil Sinha.
     """
 
     psychic """
@@ -68,7 +68,7 @@ label psychic_day2_morning:
 
     call captain_generic
 
-    call change_time(10,00)
+    call change_time(10, 00)
 
     call day2_breakfast_host_death
 
@@ -76,8 +76,19 @@ label psychic_day2_morning:
 
     $ stop_music()
 
-    # TODO
-    jump work_in_progress
+    call day2_breakfast_host_hunt
+
+    """
+    That's impressive.
+
+    People seem eager to move on really quickly.
+
+    Well, let them enjoy their game.
+
+    Obviously, I'll stay here this afternoon.
+    """
+    
+    jump psychic_day2_no_hunt
 
 
     
