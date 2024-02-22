@@ -21,28 +21,30 @@ label psychic_config_map:
         # Friday
         # -------------------------
         psychic_day1_evening_map_menu= TimedMenu("psychic_day1_evening_map_menu", [
-            # Default values
-            TimedMenuChoice(default_room_text('storage'), 'psychic_day1_evening_storage', 10, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'psychic_day1_evening_males_room', 10, room='males_room'),
-            TimedMenuChoice(default_room_text('females_room'), 'psychic_day1_evening_females_room', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day1_evening_butler_room', 10, room='butler_room'),
-            TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day1_evening_doctor_room', 10, room='doctor_room'),
-            TimedMenuChoice(default_room_text('captain_room'), 'psychic_day1_evening_captain_room', 10, room='captain_room'),
-            TimedMenuChoice(default_room_text('host_room'), 'psychic_day1_evening_host_room', 10, room='host_room'),
-            TimedMenuChoice(default_room_text('drunk_room'), 'psychic_day1_evening_drunk_room', 10, room='drunk_room'),
-            TimedMenuChoice(default_room_text('broken_room'), 'psychic_day1_evening_broken_room', 10, room='broken_room'),
-            TimedMenuChoice(default_room_text('nurse_room'), 'psychic_day1_evening_nurse_room', 10, room='nurse_room'),
-            TimedMenuChoice(default_room_text('lad_room'), 'psychic_day1_evening_lad_room', 10, room='lad_room'),
-
-            TimedMenuChoice(default_room_text('tea_room'), 'psychic_day1_evening_tea_room', 10, room='tea_room'),
-            TimedMenuChoice(default_room_text('dining_room'), 'psychic_day1_evening_dining_room', 10, room='dining_room'),
+            # Downstairs
+            TimedMenuChoice(default_room_text('kitchen'), 'psychic_day1_evening_downstairs_default', 10, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'psychic_day1_evening_downstairs_default', 10, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'psychic_day1_evening_downstairs_default', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'psychic_day1_evening_downstairs_default', 10, room='gun_room'),
+            # first floor
+            TimedMenuChoice(default_room_text('tea_room'), 'psychic_tea_room_default', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'psychic_dining_room_default', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day1_evening_garden', 10, room='manor_garden'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_day1_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('kitchen'), 'psychic_day1_evening_kitchen', 10, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'psychic_day1_evening_scullery', 10, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'psychic_day1_evening_garage', 10, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'psychic_day1_evening_gun_room', 10, room='gun_room'),
+            #Bedrooms
+            TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day1_evening_default_bedroom', 10, room='doctor_room'),
+            TimedMenuChoice(default_room_text('captain_room'), 'psychic_day1_evening_default_bedroom', 10, room='captain_room'),
+            TimedMenuChoice(default_room_text('host_room'), 'psychic_day1_evening_default_bedroom', 10, room='host_room'),
+            TimedMenuChoice(default_room_text('drunk_room'), 'psychic_day1_evening_default_bedroom', 10, room='drunk_room'),
+            TimedMenuChoice(default_room_text('broken_room'), 'psychic_day1_evening_default_bedroom', 10, room='broken_room'),
+            TimedMenuChoice(default_room_text('nurse_room'), 'psychic_day1_evening_default_bedroom', 10, room='nurse_room'),
+            TimedMenuChoice(default_room_text('lad_room'), 'psychic_day1_evening_default_bedroom', 10, room='lad_room'),
+            # attic
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day1_no_hunt_attic_default', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day1_no_hunt_attic_default', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day1_no_hunt_attic_default', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day1_no_hunt_attic_default', 10, room='butler_room'),
             # Specific actions
             TimedMenuChoice(
                 'Go to bed', 
@@ -64,25 +66,32 @@ label psychic_config_map:
         # Saturday, During the Hunt
         # -------------------------        
         psychic_day2_no_hunt_map_menu = TimedMenu("psychic_day2_no_hunt_map_menu", [
-            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_no_hunt_storage', 10, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_males_room', 10, room='males_room'),
-            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_females_room', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_butler_room', 10, room='butler_room'),
+            # Downstairs
+            TimedMenuChoice(default_room_text('kitchen'), 'psychic_day2_no_hunt_downstairs_default', 10, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'psychic_day2_no_hunt_downstairs_default', 10, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'psychic_day2_no_hunt_downstairs_default', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'psychic_day2_no_hunt_downstairs_default', 10, room='gun_room'),
+            # first floor
+            TimedMenuChoice(default_room_text('billiard_room'), 'psychic_billiard_room_default', 10, room='billiard_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'psychic_dining_room_default', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('manor_garden'), 'psychic_garden_default', 30, room='manor_garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
+            # Bedrooms
             TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day2_no_hunt_doctor_room', 10, room='doctor_room'),
             TimedMenuChoice(default_room_text('captain_room'), 'psychic_day2_no_hunt_captain_room', 10, room='captain_room'),
             TimedMenuChoice(default_room_text('psychic_room'), 'psychic_day2_no_hunt_psychic_room', 10, room='psychic_room'),
             TimedMenuChoice(default_room_text('host_room'), 'psychic_day2_no_hunt_host_room', 10, room='host_room'),
             TimedMenuChoice(default_room_text('drunk_room'), 'psychic_day2_no_hunt_drunk_room', 10, room='drunk_room'),
+            # Attic
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_default', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_default', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_default', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_default', 10, room='butler_room'),
+            
+            
             # TimedMenuChoice(default_room_text('library'), 'psychic_day2_no_hunt_library', 10, room='library'),
-            TimedMenuChoice(default_room_text('billiard_room'), 'psychic_day2_no_hunt_billiard_room', 10, room='billiard_room'),
-            TimedMenuChoice(default_room_text('dining_room'), 'psychic_day2_no_hunt_dining_room', 10, room='dining_room'),
-            TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day2_no_hunt_garden', 30, room='manor_garden'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_day2_no_hunt_entrance_hall', 10, room='entrance_hall'),
             # TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_day2_no_hunt_portrait_gallery', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('kitchen'), 'psychic_day2_no_hunt_kitchen', 10, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'psychic_day2_no_hunt_scullery', 10, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'psychic_day2_no_hunt_garage', 10, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'psychic_day2_no_hunt_gun_room', 10, room='gun_room'),
+
             # TimedMenuChoice(default_room_text('nurse_room'), 
             #     'psychic_day2_no_hunt_nurse_room_busy', 
             #     10, 

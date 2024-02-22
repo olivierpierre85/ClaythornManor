@@ -39,7 +39,7 @@ label psychic_library_look_for_lord:
     """
     I take a closer look at the book.
 
-    It's the 12th edition, printed in 1914. Just before the war started then.
+    It's the 8th edition, printed in 1894. A while ago then.
 
     Maybe I should check out "Lord Claythorn" in this book.
     """ 
@@ -49,7 +49,9 @@ label psychic_library_look_for_lord:
     pause 2.0
 
     """
-    It takes a while, but in the  end I found the page with the entries for Claythorn.
+    It takes a while, but in the end I found the page with the entries for Claythorn.
+
+    There are more than a dozen person of the same name.
     """
 
     return
@@ -58,19 +60,64 @@ label psychic_library_look_for_lord_succeed:
 
     if psychic_details.saved_variables['book_read']==False:
         call psychic_library_look_for_lord
+    else:
+
+        """
+        I reach again for the page with the Claythorn name.
+
+        Now I now which one to look at.
+        """
 
     """
-    YES,  got you
+    Nicholas Claythorn is the third entry in the book.
     """
+
+    letter """
+    NICHOLAS CRESWELL THE THIRD OF CLAYTHORN MANOR.
+
+    Born 22 June, 1813
+    Parents: Nicholas Creswell the second of Claythorn Manor and
+    Agnes Cicely
+
+    By Mary Kirwan, his wife, he had 1 son and 1 daughter.
+
+    1. Elisabeth, his heir born 1865
+    2. Andrew born 1867, death 1869
+
+    Lineage...
+    """
+
+    """
+    There is more information on the history of this place.
+
+    But something is not right.
+
+    Born in 1813.
+
+    Wait that would made him.
+
+    111 years old?
+
+    That can't be right.
+
+    If that was true, he would probably be the oldest man in England.
+
+    Maybe the world.
+
+    But he didn't look that old.
+    """
+
+    $ psychic_details.observations.unlock('lord')
 
     return
 
 label psychic_library_look_for_lord_failed:
 
-    if psychic_details.saved_variables['book_read']==False:
-        call psychic_library_look_for_lord
+    call psychic_library_look_for_lord
 
-    "No luck"
+    """
+    Without more information, I can't possibly guess which Claythorn this manor belongs to.
+    """
 
     return
 
@@ -314,13 +361,15 @@ label psychic_attic_default:
         $ psychic_details.saved_variables["attic_visited"] = True
 
     else:
-        # TODO  what to do later
+
         """
         I climbed the stairs to the attic.
 
         The room is filled with darkness.
 
-        I don't think I should explore this place any further.
+        I don't think I should venture here.
+
+        There is no reason for me to disturb Lord Claythorn any further.
         
         For now at least.
         """

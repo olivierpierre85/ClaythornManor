@@ -46,7 +46,7 @@ label init_psychic:
         psychic_endings = CharacterInformationList([])
 
         psychic_observations = CharacterInformationList ([    
-                CharacterInformation(1, "lord", "You learn the truth about the Lord", type="observation", image_file="poison") 
+                CharacterInformation(1, "lord", "Lord Claythorn is 111 years old", type="observation", image_file="poison") 
             ],
             notification_text = "You have made a new observation",
             notification_sound = "audio/sound_effects/writing_short.ogg"
