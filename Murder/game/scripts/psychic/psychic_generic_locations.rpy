@@ -18,11 +18,59 @@ label psychic_library_default:
     Here is an impressive library.
 
     "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." is open on a table.
+    """
 
+    """
     But I don't feel like reading now.
     """
 
-    $ psychic_details.saved_variables["library_visited"] = True
+    return
+
+label psychic_library_look_for_lord:
+
+    $ change_room('library') 
+    
+    """
+    Here is an impressive library.
+
+    "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." is open on a table.
+    """
+
+    """
+    I take a closer look at the book.
+
+    It's the 12th edition, printed in 1914. Just before the war started then.
+
+    Maybe I should check out "Lord Claythorn" in this book.
+    """ 
+
+    play sound page_turning
+
+    pause 2.0
+
+    """
+    It takes a while, but in the  end I found the page with the entries for Claythorn.
+    """
+
+    return
+
+label psychic_library_look_for_lord_succeed:
+
+    if psychic_details.saved_variables['book_read']==False:
+        call psychic_library_look_for_lord
+
+    """
+    YES,  got you
+    """
+
+    return
+
+label psychic_library_look_for_lord_failed:
+
+    if psychic_details.saved_variables['book_read']==False:
+        call psychic_library_look_for_lord
+
+    "No luck"
 
     return
 
@@ -59,6 +107,36 @@ label psychic_entrance_hall_default:
     
     But it is totally empty.
     """
+
+    return
+
+label psychic_portrait_gallery_look_for_lord:
+    
+    call psychic_portrait_gallery_default
+
+    """
+    Now, I realize that they are probably paintings of the Claythorn family here.
+
+    I should check if there is one with Lord Claythorn in here.
+    """
+
+    pause 2.0
+
+    """
+    It doesn't take long for me to spot him.
+
+    He looks exactly like as in real life.
+
+    I check on the label below the painting.
+
+    "Nicholas Claythorn, third of his name."
+
+    Nicholas is is first name then.
+
+    Good to know.
+    """
+
+    $ psychic_details.saved_variables['knows_lord_name'] = True
 
     return
 
@@ -150,8 +228,6 @@ label psychic_attic_default:
         lord """
         Oh, where are my manners?
 
-        My name is Reginald Claythorn.
-
         I am the Lord of this Manor, of course.
         """
 
@@ -176,7 +252,7 @@ label psychic_attic_default:
         """
 
         lord """
-        Yes, it's rather uncommon, but I like the calm here.
+        Yes, it's rather uncommon, but I enjoy how peaceful it is.
 
         Plus, I believe I have the biggest room in the manor.
         """

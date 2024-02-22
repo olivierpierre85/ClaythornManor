@@ -29,6 +29,8 @@ label init_psychic:
             "day1_evening_billiard_room_visited" : False,
             "portrait_gallery_visited": False,
             "attic_visited": False,
+            "knows_lord_name": False,
+            "book_read": False,
         }
 
         psychic_extra_information = [
@@ -42,6 +44,14 @@ label init_psychic:
         ]
         psychic_important_choices = CharacterInformationList([])
         psychic_endings = CharacterInformationList([])
+
+        psychic_observations = CharacterInformationList ([    
+                CharacterInformation(1, "lord", "You learn the truth about the Lord", type="observation", image_file="poison") 
+            ],
+            notification_text = "You have made a new observation",
+            notification_sound = "audio/sound_effects/writing_short.ogg"
+        )  
+
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
             locked = True,
@@ -54,7 +64,7 @@ label init_psychic:
             important_choices = psychic_important_choices,
             endings = psychic_endings,
             intuitions = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
+            observations = psychic_observations,
             objects = CharacterInformationList([]),
             saved_variables = psychic_init_variables
         )
