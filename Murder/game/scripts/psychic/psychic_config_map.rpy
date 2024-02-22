@@ -57,7 +57,7 @@ label psychic_config_map:
                 keep_alive = True, 
                 room = 'billiard_room'
             ),
-        ] + lord_choices
+        ] + copy.deepcopy(lord_choices)
         , is_map = True)
 
         # -------------------------
@@ -123,6 +123,6 @@ label psychic_config_map:
             #     20, 
             #     room = 'broken_room',
             # )
-        ] + lord_choices, 
+        ] + copy.deepcopy(lord_choices), 
         is_map = True)
     return
