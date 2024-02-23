@@ -39,9 +39,9 @@ label psychic_library_look_for_lord:
     """
     I take a closer look at the book.
 
-    It's the 8th edition, printed in 1894. A while ago then.
+    It's the 8th edition, printed in 1894. That was quite some time ago.
 
-    Maybe I should check out "Lord Claythorn" in this book.
+    Perhaps I should look up "Lord Claythorn" in this book.
     """ 
 
     play sound page_turning
@@ -49,80 +49,82 @@ label psychic_library_look_for_lord:
     pause 2.0
 
     """
-    It takes a while, but in the end I found the page with the entries for Claythorn Manor.
+    It takes some time, but eventually I find the page with the entries for Claythorn Manor.
 
-    There are more than a few places listed here.
+    There's quite a list of places mentioned here.
     """
 
     return
 
 label psychic_library_look_for_lord_succeed:
 
-    if psychic_details.saved_variables['book_read']==False:
+    if psychic_details.saved_variables['book_read'] == False:
         
         call psychic_library_look_for_lord
 
     else:
 
         """
-        I reach again for the page with the Claythorn name.
+        I turn back to the page with the Claythorn name.
 
-        Now I now which one to look at.
+        Now I know which one to look at.
         """
 
     """
-    There is only one place associated with a Nicholas.
+    There's only one place associated with a Nicholas.
     """
 
-    letter """
+    """
     Nicholas Creswell The Third of Claythorn Manor.
 
-    Born 22 June, 1813
+    Born on June 22, 1813.
 
-    Parents: Nicholas Creswell the second of Claythorn Manor and Agnes Cicely
+    His parents were Nicholas Creswell the Second of Claythorn Manor and Agnes Cicely.
 
-    By Mary Kirwan, his wife, he had 1 son and 1 daughter.
+    With Mary Kirwan, his wife, he fathered one son and one daughter:
 
-    1. Elisabeth, his heir born 1865
+    1. Elisabeth, his heir, born in 1865.
     
-    2. Andrew born 1867, death 1869
+    2. Andrew, born in 1867, died in 1869.
 
     Lineage...
     """
 
     """
-    There is more information on the history of this place.
+    There's additional information about the history of this place.
 
-    But something looks strange.
+    But something seems off.
 
     Born in 1813.
 
-    Wait that would made him.
+    Wait, that would make him...
 
     111 years old?
 
     That can't be right.
 
-    If that was true, he would probably be the oldest man in England.
+    If that were true, he'd likely be the oldest man in England.
 
-    Maybe the world.
+    Possibly even the world.
 
-    But he didn't look that old.
+    Yet he didn’t appear to be that old.
     """
 
     $ psychic_details.observations.unlock('lord')
 
     return
 
+
 label psychic_library_look_for_lord_failed:
 
     call psychic_library_look_for_lord
 
     """
-    Without more information, I can't possibly guess which Manor is the one I am in.
+    Without further information, I can't possibly guess which manor is the one I'm in.
     """
 
     return
+
 
 label psychic_tea_room_default:
     
@@ -165,9 +167,9 @@ label psychic_portrait_gallery_look_for_lord:
     call psychic_portrait_gallery_default
 
     """
-    Now, I realize that they are probably paintings of the Claythorn family here.
+    Now, I realize that there are probably paintings of the Claythorn family here.
 
-    I should check if there is one with Lord Claythorn in here.
+    I should check if there is one with Lord Claythorn in it.
     """
 
     pause 2.0
@@ -175,16 +177,17 @@ label psychic_portrait_gallery_look_for_lord:
     """
     It doesn't take long for me to spot him.
 
-    He looks exactly like as in real life.
+    He looks exactly as he does in real life.
 
-    I check on the label below the painting.
+    I check the label below the painting.
 
     "Nicholas III, of Claythorn Manor"
 
-    Nicholas is is first name then.
+    So, Nicholas is his first name.
     """
 
     $ psychic_details.saved_variables['knows_lord_name'] = True
+    $ lord_name = "Sir Nicholas"
 
     return
 
@@ -226,6 +229,7 @@ label psychic_bedroom_default:
     """
 
     return
+
 
 # Attic
 label psychic_attic_default:
@@ -364,64 +368,149 @@ label psychic_attic_default:
     else:
 
         """
-        I climbed the stairs to the attic.
+        I climb the stairs to the attic.
 
         The room is filled with darkness.
 
-        I don't think I should venture here.
+        I think I shouldn't venture here.
 
-        There is no reason for me to disturb Lord Claythorn any further.
-        
-        For now at least.
+        There's no reason for me to disturb Lord Claythorn any further,
+
+        at least for now.
         """
 
     return
 
 label psychic_attic_return:
 
-        $ change_room("attic_hallway")
+    $ change_room("attic_hallway")
 
-        """
-        I've decided to return to the attic.
+    """
+    I've decided to return to the attic.
 
-        I have some questions to ask the so-called "Lord" of this place.
+    I have some questions to ask the "Lord" of this place.
 
-        But I am sure I should?
-        """
+    But am I sure I should?
+    """
 
-        call run_menu(
-            TimedMenu("psychic_lord_ending_menu", [
-                TimedMenuChoice('Of course I should!', 'psychic_confront_lord', early_exit = True),
-                TimedMenuChoice('On second thought, it is rather scary. Let\'s back down', 'generic_cancel', early_exit = True)
-            ])
-        )
+    call run_menu(
+        TimedMenu("psychic_lord_ending_menu", [
+            TimedMenuChoice('Of course I should!', 'psychic_confront_lord', early_exit=True),
+            TimedMenuChoice("On second thought, it is rather scary. Let's back down.", 'generic_cancel', early_exit=True)
+        ])
+    )
 
-        """
-        I've changed my mind, I'd better leave him alone.
+    """
+    I've changed my mind, I'd better leave him alone.
 
-        God knows what I might start here.
-        """
+    God knows what I might stir up here.
+    """
 
-        return
+    return
 
 label psychic_confront_lord:
+
+    $ play_music('scary', 3)
+
+    """
+    I know I must confront him.
+
+    But what am I hoping to prove?
+
+    That's a dangerous path I fear I'm taking here.
+    """
 
     psychic """
     Sir Nicholas, are you here?
     """
 
-    $ play_music('mysterious')
+    pause 1.0
 
     lord """
-    Oh good, you came back.
+    Oh good, you've returned.
 
-    And you learned my name as well.
+    And you've learned my name as well.
 
     Impressive.
     """
 
+    psychic """
+    That's not all I've learned, though.
     """
-    TODO DEVELOP DEATH FILLED WITH CLUES
+
+    lord """
+    Really? What else?
     """
+
+    psychic """
+    That you are 111 years old.
+    """
+
+    lord """
+    Has it been that long already?
+
+    Well, I suppose that's true.
+    """
+
+    psychic """
+    No one can live this long.
+    """
+
+    lord """
+    Probably not.
+    """
+
+    psychic """
+    So, are you...
+
+    Are you...
+    """
+
+    lord """
+    Am I what, my dear?
+
+    Dead?
+    """
+
+    lord """
+    That's what you think, right?
+
+    Or rather, it's what you're hoping.
+
+    Because either I am a ghost...
+
+    Or maybe you're just losing your mind.
+    """
+
+
+    """
+    He inches closer to me.
+    """
+
+    lord angry """
+    So, which will it be?
+
+    That a liar, someone who preyed on the bereaved to make money,
+
+    is actually a real-life medium?
+
+    That it was in her all along?
+
+    Then maybe she wasn't really deceiving people her entire life.
+
+    But it's too simple now, isn't it?
+
+    You understand what's happening here, don't you?
+    """
+    
+    """
+    He is now almost next to my face.
+
+    I can't take this.
+
+    I slowly retreat back.
+    """
+
+    play sound body_fall
 
     jump psychic_ending_lord
