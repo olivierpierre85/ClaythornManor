@@ -508,7 +508,9 @@ label psychic_confront_lord:
 
     I can't take this.
 
-    I slowly retreat back.
+    I slowly take a step back.
+
+    But my foot doesn't find the ground behind me.
     """
 
     play sound body_fall
