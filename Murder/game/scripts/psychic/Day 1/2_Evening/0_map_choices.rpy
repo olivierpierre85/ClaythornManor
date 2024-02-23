@@ -44,7 +44,7 @@ label psychic_day1_evening_default_bedroom:
     return
 
 # Attic
-label psychic_day1_no_hunt_attic_default:
+label psychic_day1_evening_attic_default:
         
     call psychic_attic_default
     # Hide all downstairs choices for the current menu

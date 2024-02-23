@@ -49,9 +49,9 @@ label psychic_library_look_for_lord:
     pause 2.0
 
     """
-    It takes a while, but in the end I found the page with the entries for Claythorn.
+    It takes a while, but in the end I found the page with the entries for Claythorn Manor.
 
-    There are more than a dozen person of the same name.
+    There are more than a few places listed here.
     """
 
     return
@@ -59,7 +59,9 @@ label psychic_library_look_for_lord:
 label psychic_library_look_for_lord_succeed:
 
     if psychic_details.saved_variables['book_read']==False:
+        
         call psychic_library_look_for_lord
+
     else:
 
         """
@@ -69,19 +71,20 @@ label psychic_library_look_for_lord_succeed:
         """
 
     """
-    Nicholas Claythorn is the third entry in the book.
+    There is only one place associated with a Nicholas.
     """
 
     letter """
-    NICHOLAS CRESWELL THE THIRD OF CLAYTHORN MANOR.
+    Nicholas Creswell The Third of Claythorn Manor.
 
     Born 22 June, 1813
-    Parents: Nicholas Creswell the second of Claythorn Manor and
-    Agnes Cicely
+
+    Parents: Nicholas Creswell the second of Claythorn Manor and Agnes Cicely
 
     By Mary Kirwan, his wife, he had 1 son and 1 daughter.
 
     1. Elisabeth, his heir born 1865
+    
     2. Andrew born 1867, death 1869
 
     Lineage...
@@ -90,7 +93,7 @@ label psychic_library_look_for_lord_succeed:
     """
     There is more information on the history of this place.
 
-    But something is not right.
+    But something looks strange.
 
     Born in 1813.
 
@@ -116,7 +119,7 @@ label psychic_library_look_for_lord_failed:
     call psychic_library_look_for_lord
 
     """
-    Without more information, I can't possibly guess which Claythorn this manor belongs to.
+    Without more information, I can't possibly guess which Manor is the one I am in.
     """
 
     return
@@ -176,11 +179,9 @@ label psychic_portrait_gallery_look_for_lord:
 
     I check on the label below the painting.
 
-    "Nicholas Claythorn, third of his name."
+    "Nicholas III, of Claythorn Manor"
 
     Nicholas is is first name then.
-
-    Good to know.
     """
 
     $ psychic_details.saved_variables['knows_lord_name'] = True
@@ -242,7 +243,7 @@ label psychic_attic_default:
         As I move into the hallway, I hear something.
         """
 
-        $ play_music('mysterious', 3, fadeout_val=2, fadein_val=2)
+        $ play_music('mysterious')
 
         lord """
         Hello, is someone there?
@@ -359,7 +360,7 @@ label psychic_attic_default:
         $ play_music('PREVIOUS')
 
         $ psychic_details.saved_variables["attic_visited"] = True
-
+    
     else:
 
         """
@@ -376,43 +377,51 @@ label psychic_attic_default:
 
     return
 
-# TODO maybe won't ever be used? Find what to do with attic
-# label psychic_storage_default:
+label psychic_attic_return:
 
-#     call psychic_attic_default
+        $ change_room("attic_hallway")
 
-#     """
-#     I try to open the attic storage room, but it's closed.
-#     """
-    
-#     return
+        """
+        I've decided to return to the attic.
 
-# label psychic_females_room_default:
+        I have some questions to ask the so-called "Lord" of this place.
 
-#     call psychic_attic_default
+        But I am sure I should?
+        """
 
-#     """
-#     I try to open the room, but it's closed.
-#     """
+        call run_menu(
+            TimedMenu("psychic_lord_ending_menu", [
+                TimedMenuChoice('Of course I should!', 'psychic_confront_lord', early_exit = True),
+                TimedMenuChoice('On second thought, it is rather scary. Let\'s back down', 'generic_cancel', early_exit = True)
+            ])
+        )
 
-#     return
+        """
+        I've changed my mind, I'd better leave him alone.
 
-# label psychic_males_room_default:
+        God knows what I might start here.
+        """
 
-#     call psychic_attic_default
+        return
 
-#     """
-#     I try to open the room, but it's closed.
-#     """
+label psychic_confront_lord:
 
-#     return
+    psychic """
+    Sir Nicholas, are you here?
+    """
 
-# label psychic_butler_room_default:
-    
-#     call psychic_attic_default
+    $ play_music('mysterious')
 
-#     """
-#     I try to open the room, but it's closed.
-#     """
+    lord """
+    Oh good, you came back.
 
-#     return
+    And you learned my name as well.
+
+    Impressive.
+    """
+
+    """
+    TODO DEVELOP DEATH FILLED WITH CLUES
+    """
+
+    jump psychic_ending_lord
