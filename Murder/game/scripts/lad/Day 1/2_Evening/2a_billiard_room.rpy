@@ -296,7 +296,7 @@ label lad_day1_evening_billiard_room_butler:
 
     So, I might as well tell you.
 
-    She is in the \"George III\" room.
+    She is in the "Elizabeth I" room.
     """
 
     $ unlock_map('psychic_room')

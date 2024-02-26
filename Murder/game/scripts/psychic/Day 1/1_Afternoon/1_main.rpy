@@ -310,7 +310,7 @@ label psychic_introduction:
     butler """
     Here we are, Miss.
 
-    The "George III Bedroom."
+    The "Elizabeth I Bedroom."
 
     I hope it's to your liking.
     """

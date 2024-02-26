@@ -155,7 +155,7 @@ label lad_day2_afternoon_bedroom:
     if not lad_details.saved_variables['knows_psychic_room']: #TODO if lad knows psychic's room?
 
         psychic """
-        I'm in the \"George III\" room.
+        I'm in the "Elizabeth I" room.
         """
 
         $ unlock_map('psychic_room')

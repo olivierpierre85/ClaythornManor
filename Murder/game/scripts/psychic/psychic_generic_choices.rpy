@@ -54,7 +54,7 @@ label psychic_generic_room:
     psychic """
     That's a strange question.
 
-    But if you must know, my room is the \"George III\"
+    But if you must know, my room is "Elizabeth the First."
     """
 
     $ unlock_map('psychic_room')

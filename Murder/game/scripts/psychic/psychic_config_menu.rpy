@@ -4,14 +4,14 @@ label psychic_config_menu:
     $ nurse_generic_menu_psychic = TimedMenu("nurse_generic_menu_psychic", [
         # TimedMenuChoice('What do you think of this weather?', 'nurse_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
         TimedMenuChoice('What do you think of this weather?', 'nurse_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
-        # TimedMenuChoice('Tell me more about yourself.', 'nurse_generic_background', 20),
-        # TimedMenuChoice('Why were you invited here?', 'nurse_generic_heroic_act', 20, condition = "current_character.saved_variables['knows_nurse_background']"),
+        TimedMenuChoice('Tell me more about yourself.', 'nurse_generic_background', 20),
+        TimedMenuChoice('Why were you invited here?', 'nurse_generic_heroic_act', 20, condition = "current_character.saved_variables['knows_nurse_background']"),
         # TimedMenuChoice('What do you think of this place?', 'nurse_generic_manor', 10),
-        # TimedMenuChoice('How old are you?', 'nurse_generic_age', 5),
-        # TimedMenuChoice('What room are you in?', 'nurse_generic_room', 5),
+        TimedMenuChoice('How old are you?', 'nurse_generic_age', 10),
+        TimedMenuChoice('What room are you in?', 'nurse_generic_room', 10),
         # TimedMenuChoice('What do you think of the other guests?', 'nurse_generic_other_guests_friday', 5, condition = "current_day == 'Friday'"),
         # TimedMenuChoice('What do you think of the other guests?', 'nurse_generic_other_guests_saturday', 5, condition = "current_day == 'Saturday'"),
-        # TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+        # TimedMenuChoice('You don\'t have anymore questions for her', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "nurse")
 
     # $ nurse_generic_other_guests_menu_psychic = TimedMenu("nurse_generic_other_guests_menu_psychic", [

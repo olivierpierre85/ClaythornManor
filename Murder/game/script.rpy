@@ -98,5 +98,6 @@ label init_story_variables:
     call init_lad
     call init_psychic
     call init_captain
+    call init_nurse
     
     return

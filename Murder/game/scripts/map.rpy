@@ -40,12 +40,12 @@ label init_map:
             Room(2, (25, 90, 205, 190),   'lad_room',         'William the Conqueror Bedroom (Lad)' ),
             Room(2, (25, 280, 205, 130),   'doctor_room',      'Edward II Bedroom (doctor)'),
             Room(2, (25, 410, 205, 100),     'captain_room',     'George I Bedroom (captain)'),
-            Room(2, (25, 510, 205, 105),     'psychic_room',     'George III Bedroom (Psychic)'),
+            Room(2, (25, 510, 205, 105),     'psychic_room',     'Elizabeth I Bedroom (Psychic)'),
             
             Room(2, (717, 90, 178, 190),   'host_room',        'Henry IV Bedroom (Host)'),
             Room(2, (717, 280, 178, 130),   'drunk_room',       'George IV Bedroom (drunk)'),
             Room(2, (717, 410, 178, 100),   'broken_room',      'Richard III Bedroom (broken)'),
-            Room(2, (717, 510, 178, 105),   'nurse_room',       'Elizabeth I Bedroom (nurse)'),
+            Room(2, (717, 510, 178, 105),   'nurse_room',       'Queen Alexandra (nurse)'),
             
             # Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), 
             # Ground Floor

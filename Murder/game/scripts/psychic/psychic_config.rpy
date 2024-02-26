@@ -36,6 +36,7 @@ label init_psychic:
             "book_read": False,
             "day2_nohunt_bedroom_tries": 0,
             "day2_nohunt_has_visited_tea_room": False,
+            "knows_nurse_background": False,
         }
 
         psychic_extra_information = [

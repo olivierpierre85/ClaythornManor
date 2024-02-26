@@ -1,7 +1,6 @@
 # Generic nurse Dialogs.
 # Accessible from :
 #                   - The Psychic
-#                   - TODO not sure
 
 #?TODO add extra choices possibilities?
 label nurse_generic:
@@ -29,56 +28,13 @@ label nurse_generic_weather_sunday:
 
     return
 
-label nurse_generic_room_friday:
 
-    # lad """
-    # I don't know, I haven't been to my room yet.
+label nurse_generic_room:
 
-    # I just arrived, and I didn't realize I would be the last one here.
-    # """
+    nurse """
+    My room is named after "Queen Alexandra."
 
-    return
-
-label nurse_generic_room_psychic:
-
-    lad """
-    Oh, I am in the "William the Conqueror" Bedroom.
-    """
-
-    psychic """
-    An impressive king, better than mine.
-    """
-
-    lad """
-    What do you mean?
-    """
-
-    psychic """
-    I have the "George III" Bedroom.
-
-    A strange name, as he is not one of our most famous kings.
-
-    I wonder why they named a room after him.
-    """
-
-    lad """
-    And William the Conqueror is better?
-    """
-
-    """
-    Is he serious?
-
-    Hasn't he heard of "William the Conqueror"?
-    """
-
-    psychic """
-    Well, he was a French Duke who was able to take the throne of England from very powerful men.
-
-    That's not nothing.
-
-    On the other hand, he was sometimes also called the Bastard King.
-
-    So make of that what you will.
+    Like the queen mother, I believe.
     """
 
     $ unlock_map('nurse_room')
@@ -86,194 +42,116 @@ label nurse_generic_room_psychic:
     return
 
 
-label nurse_generic_age_psychic:
+label nurse_generic_age:
 
-    lad """
-    I am 22 years old.
-    """
+    nurse """
+    I am 42 years old.
 
-    """
-    That make sense, but he somewhat looks older than that.
+    It's hard to believe really.
 
-    I guess it's his rugged look.
-
-    Life is not easy for the working class.
+    I don't feel that old at all.
     """
 
     $ nurse_details.unlock_knowledge('age')
 
     return
 
-label nurse_generic_background_psychic:
+label nurse_generic_background:
     
-    lad """
-    There isn't much to say about me.
+    nurse """
+    Oh well, the most obvious thing about me is that I am a nurse.
 
-    I was born and raised in Birmingham.
-    
-    And I am working there as a business associate.
-    """
+    I started young and served in various wars. 
 
-    $ nurse_details.unlock_knowledge('background') 
+    Then I found a job at a hospital that I kept for a while.
 
-    psychic """
-    Interesting, in what type of business?
-    """
-
-    lad """
-    Well, just regular sales.
+    Now I mostly nurse the elderly. 
     """
 
     psychic """
-    And do you sell anything in particular?
+    In an old person's facility?
     """
 
-    lad """
-    A bit of everything, depending on the opportunities.
+    nurse """
+    No, not like that. I mostly assisted wealthier individuals who required special in-house assistance.
+    """
+
+    $ nurse_details.unlock_knowledge('manor') 
+
+    psychic """
+    Are you taking care of someone at the moment?
+    """
+
+    nurse """
+    Not lately.
+
+    And perhaps after I receive this prize, I won't have to.
+
+    Nursing is an amazing job that I love,
+
+    but it can be exhausting.
     """
 
     psychic """
-    You don't have a store then?
-    """
-
-    lad """
-    No, no, it's nothing like that.
-    """
-
-    """
-    He seems uneasy.
-
-    He is probably ashamed of what he is doing.
-
-    I shouldn't push him further.
+    Yes, one can imagine.
     """
 
     $ nurse_details.unlock_knowledge('job') 
 
-    $ psychic_details.saved_variables['knows_nurse_background'] = True
+    $ current_character.saved_variables['knows_nurse_background'] = True
 
     return
 
-label nurse_generic_heroic_act_psychic:
+label nurse_generic_heroic_act:
     
-    lad """
-    I was in the papers for rescuing a baby from a building on fire.
+    nurse """
+    It is nothing that I did, really.
 
-    It happened last year.
+    But it turns out I was the nurse who served for the longest during wartime in the whole country, apparently.
     """
 
     psychic """
-    How impressive! What I've done is nothing compared to that.
+    Oh my, that is extraordinary. 
+
+    But how many wars did you serve in?
+    """
+
+    nurse """
+    There have been quite a few, that's true.
+
+    I started my career really early during the Cretan Revolt, where I was stationed on a British frigate.
     
-    Please tell me more about it.    
-    """
+    But I truly experienced the horror of war for the first time during the Boxer Rebellion of 1899.
 
-    lad """
-    I don't know how impressive it really was.
+    The brutality of the combats, then later, the lives they left behind made an impression that would last my whole life.
     
-    It was more a matter of being in the right place at the right moment.
-    """
+    Afterwards, I followed the army again in small engagements in India.
 
-    pause 1
+    When the Great War started, I thought at first that I was too old to go.
 
-    # todo scene fire_building
+    But the atrocities I kept hearing about left me no choice.
 
-    $ play_music('mysterious', 3, fadeout_val=2, fadein_val=2)
+    I had to be there to help.
 
-    lad """
-    I was just going home one day, it was rather late.
+    It's what I do.
 
-    On my way, I happened to notice smoke coming from a house across the street.
-
-    I was about to call for the firemen.
-
-    But out of the window, I heard a baby screaming.
-
-    I couldn't possibly stay there and do nothing.
-
-    So without thinking about it, I forced the front door of the house and ran upstairs.
-
-    A fire was spreading from one of the rooms.
-
-    Luckily, the room with the baby was still safe.
-
-    So I ran into it, grabbed the baby, and went downstairs as fast as I could.
-
-    When I reached outside, I could hear the firemen on their way.
-
-    The neighbors had already alerted them.
-
-    As soon as they arrived, I gave them the baby.
-
-    Reporters were with them.
-
-    When they saw me, they decided it was a story worth printing.
-
-    But it wasn't really. Anyone would have done the same.
-
-    I think they just wanted to sell papers. So they exaggerated what I had done.
-
-    And they also omitted the worst part.
-    """
-
-    pause 1.0
-
-    lad """
-    The baby wasn't alone in the house, of course.
-
-    Why would they have been?
-
-    The fire was caused by the nanny.
-    
-    She had an attack and dropped a lamp on the floor.
-
-    That was her room that was on fire.
-
-    I didn't even check there.
-
-    So when the firemen arrived, it was too late.
-
-    They said there was nothing I could have done, but I am not sure.
-    """
-
-    $ change_room('PREVIOUS') # TODO PREVIOUS ROOM !!!!!!
-
-    psychic """
-    Don't say that. I am certain it was too late for her.
-
-    You did the only thing you could have done.
-
-    You shouldn't blame yourself.
-    """
-
-    lad """
-    I guess.
-
-    But it's hard.
-
-    I still have nightmares about it.
+    So I joined again and lasted throughout the whole duration of the war.
     """
 
     psychic """
-    ...
+    How commendable.
     """
-
-    """
-    I don't know what to say here.
-    """
-
-    $ play_music('PREVIOUS')
 
     return
 
 label nurse_generic_manor:
     
-    lad """
-    It's very nice.
-
-    It's a bit far from town, I think.
-
-    But I suppose some people like the isolation.
+    nurse """
+    It's a grand house. 
+    
+    I've been in houses of the same style, but none so big or impressive.
     """
+
+    $ nurse_details.unlock_knowledge('manor') 
 
     return

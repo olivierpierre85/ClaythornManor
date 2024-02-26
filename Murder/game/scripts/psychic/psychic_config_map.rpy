@@ -116,7 +116,7 @@ label psychic_config_map:
                 120, 
                 room = 'tea_room'
             ),
-            # Not needed
+            # Not needed right now
             # TimedMenuChoice(
             #     'Go back to the Tea Room', 
             #     'psychic_tea_room_default',  

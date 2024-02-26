@@ -39,23 +39,11 @@ label lad_generic_room_psychic:
     """
 
     psychic """
-    An impressive king, better than mine.
+    An impressive king.
     """
 
     lad """
-    What do you mean?
-    """
-
-    psychic """
-    I have the "George III" Bedroom.
-
-    A strange name, as he is not one of our most famous kings.
-
-    I wonder why they named a room after him.
-    """
-
-    lad """
-    And William the Conqueror is better?
+    Really, he was?
     """
 
     """

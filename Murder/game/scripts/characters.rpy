@@ -147,28 +147,7 @@ label init_characters:
         # 7. The Captain
         
         # 8. The Nurse
-        nurse_extra_information = [
-            CharacterInformation(1, "job", "A nurse.", is_important = True), 
-            CharacterInformation(2, "clothes", "Discreet but well dressed.", is_important = True),
-            CharacterInformation(0, "todo", "todo", is_important = True),
-            CharacterInformation(60, "???", "???", is_important = True),
-        ]
-        nurse_details  = CharacterDetails(
-            text_id = "nurse", 
-            locked = True,
-            know_real_name = True,
-            real_name = "Rosalind Marsh",
-            nickname = "The Nurse",
-            description_short = "",
-            description_long = "Middle-aged woman.",
-            information_list = nurse_extra_information,
-            important_choices = CharacterInformationList([]),
-            endings = CharacterInformationList([]),
-            intuitions = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
-            objects = CharacterInformationList([]),
-        )
-        nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
+
 
         # X. Character full List
         # TODO only use the flat one (refacto use chara)
