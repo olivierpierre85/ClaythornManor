@@ -163,6 +163,8 @@ label lad_day2_no_hunt_nurse_room_busy:
     Of course, sorry for bothering you.
     """
 
+    $ unlock_map('nurse_room')
+
     return
 
 label lad_day2_no_hunt_captain_room_enter:

@@ -1,38 +1,45 @@
-# Generic lad Dialogs.
+# Generic nurse Dialogs.
 # Accessible from :
 #                   - The Psychic
 #                   - TODO not sure
 
 #?TODO add extra choices possibilities?
-label lad_generic:
+label nurse_generic:
 
     # Reset if previous early exit
-    $ current_character.saved_variables["lad_generic_menu"].early_exit = False
+    $ current_character.saved_variables["nurse_generic_menu"].early_exit = False
 
-    call run_menu(current_character.saved_variables["lad_generic_menu"])
-
-    return
-
-
-label lad_generic_weather_saturday:
+    call run_menu(current_character.saved_variables["nurse_generic_menu"])
 
     return
 
-label lad_generic_weather_sunday:
 
-    return
+label nurse_generic_weather_saturday:
 
-label lad_generic_room_friday:
+    nurse """
+    This night was dreadful, wasn't it?
 
-    lad """
-    I don't know, I haven't been to my room yet.
-
-    I just arrived, and I didn't realize I would be the last one here.
+    I couldn't sleep at all.
     """
 
     return
 
-label lad_generic_room_psychic:
+
+label nurse_generic_weather_sunday:
+
+    return
+
+label nurse_generic_room_friday:
+
+    # lad """
+    # I don't know, I haven't been to my room yet.
+
+    # I just arrived, and I didn't realize I would be the last one here.
+    # """
+
+    return
+
+label nurse_generic_room_psychic:
 
     lad """
     Oh, I am in the "William the Conqueror" Bedroom.
@@ -74,12 +81,12 @@ label lad_generic_room_psychic:
     So make of that what you will.
     """
 
-    $ unlock_map('lad_room')
+    $ unlock_map('nurse_room')
 
     return
 
 
-label lad_generic_age_psychic:
+label nurse_generic_age_psychic:
 
     lad """
     I am 22 years old.
@@ -93,11 +100,11 @@ label lad_generic_age_psychic:
     Life is not easy for the working class.
     """
 
-    $ lad_details.unlock_knowledge('age')
+    $ nurse_details.unlock_knowledge('age')
 
     return
 
-label lad_generic_background_psychic:
+label nurse_generic_background_psychic:
     
     lad """
     There isn't much to say about me.
@@ -107,7 +114,7 @@ label lad_generic_background_psychic:
     And I am working there as a business associate.
     """
 
-    $ lad_details.unlock_knowledge('background') 
+    $ nurse_details.unlock_knowledge('background') 
 
     psychic """
     Interesting, in what type of business?
@@ -141,13 +148,13 @@ label lad_generic_background_psychic:
     I shouldn't push him further.
     """
 
-    $ lad_details.unlock_knowledge('job') 
+    $ nurse_details.unlock_knowledge('job') 
 
-    $ psychic_details.saved_variables['knows_lad_background'] = True
+    $ psychic_details.saved_variables['knows_nurse_background'] = True
 
     return
 
-label lad_generic_heroic_act_psychic:
+label nurse_generic_heroic_act_psychic:
     
     lad """
     I was in the papers for rescuing a baby from a building on fire.
@@ -259,7 +266,7 @@ label lad_generic_heroic_act_psychic:
 
     return
 
-label lad_generic_manor:
+label nurse_generic_manor:
     
     lad """
     It's very nice.

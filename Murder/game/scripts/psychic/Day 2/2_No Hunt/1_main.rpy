@@ -61,55 +61,97 @@ label psychic_day2_broken_room:
 
     $ play_music('sad', 2)
 
-    # """
-    # I don't know what morbid curiosity led me here.
+    """
+    The doctor left Thomas Moody's room open.
 
-    # But, if I had any doubts, Thomas Moody is there, lifeless.
+    I guess he didn't think someone would come to take a look.
 
-    # Gosh.
-    # """
+    I know I shouldn't have, but I couldn't resist.
 
-    # """
-    # Now that I'm here, perhaps I should take a quick look.
+    Maybe I didn't believe it.
 
-    # There might be something that helps me understand what happened.
+    But here he lies, dead in his bed.
 
-    # I look around the room.
+    I try to look at him, but the emotion is overwhelming.
 
-    # Nothing seems out of the ordinary.
+    I can't stay here any longer.
 
-    # He looks peaceful.
+    I rush out of the room.
+    """
 
-    # His mask is still on. 
-    
-    # The doctor didn't even remove it for the examination.
+    $ unlock_map('broken_room')
 
-    # Well, if the doctor didn't, I certainly won't either.
-
-    # On a chair next to the bed, his clothes are meticulously folded.
-
-    # There's a whiskey flask on the nightstand.
-
-    # It's on its side, empty.
-
-    # Next to it is a stain. 
-    
-    # I suppose it's whiskey, but it's an odd shade of green.
-
-    # That's peculiar.
-
-    # What could it be?
-
-    # That's all I notice in the room.
-    # """
-
-    # $ psychic_details.observations.unlock('green_liquid') # TODO: Link to billiard room option not to drink the whiskey?
-
-    # pause 1.0
+    pause 1.0
 
     $ play_music('PREVIOUS')
 
     return
+
+
+
+label psychic_day2_no_hunt_drunk_room_enter:
+
+    """
+    I push the door open quietly, making sure I'm unnoticed.
+    """
+
+    play sound door_open
+
+    $ change_room('drunk_room')
+
+    """
+    The room is untidy, dim, and reeks of alcohol.
+
+    Clothes are scattered on the floor.
+
+    This must be Samuel Manning's room.
+    """
+
+    $ unlock_map('drunk_room')
+
+    """
+    I scan the room quickly but only see empty whiskey bottles.
+
+    Honestly, this is just what I expected.
+
+    There's nothing else to do here.
+    """
+
+    return
+
+
+label psychic_day2_no_hunt_nurse_room_busy:
+    
+    $ change_room("bedrooms_hallway")
+
+    play sound door_knock
+    
+    """
+    I knock on the door.
+    """
+
+    nurse """
+    Yes? Who's there?
+    """
+
+    psychic """
+    It's Amelia Baxter.
+    """
+
+    nurse """
+    Oh, Mrs. Baxter, I'm really tired right now. 
+
+    Can you please come back a bit later?
+    """
+
+    psychic """
+    Of course, sorry for bothering you.
+    """
+    
+    $ unlock_map('nurse_room')
+    
+    return
+
 
 label psychic_day2_no_hunt_cancel:
 
@@ -125,3 +167,4 @@ label psychic_day2_no_hunt_cancel:
     call wait_screen_transition()
 
     return
+

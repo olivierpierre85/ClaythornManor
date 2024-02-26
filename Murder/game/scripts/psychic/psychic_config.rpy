@@ -20,6 +20,9 @@ label init_psychic:
             "doctor_generic_menu" : doctor_generic_menu_psychic,
             "doctor_generic_other_guests_menu": doctor_generic_other_guests_menu_psychic,
 
+            "nurse_generic_menu" : nurse_generic_menu_psychic,
+            # "nurse_generic_other_guests_menu" : nurse_generic_other_guests_menu_psychic,
+
             "knows_doctor_background": False,
             
             # story var
@@ -31,6 +34,8 @@ label init_psychic:
             "attic_visited": False,
             "knows_lord_name": False,
             "book_read": False,
+            "day2_nohunt_bedroom_tries": 0,
+            "day2_nohunt_has_visited_tea_room": False,
         }
 
         psychic_extra_information = [

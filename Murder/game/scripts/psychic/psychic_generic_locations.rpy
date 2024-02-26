@@ -150,6 +150,35 @@ label psychic_dining_room_default:
 
     return
 
+
+label psychic_billiard_room_default:
+    
+    $ change_room('billiard_room')
+    
+    """
+    The billiard room is empty right now.
+
+    I should leave.
+    """
+
+    return
+
+
+label psychic_garden_default:
+
+    $ change_room('manor_garden')
+    
+    """
+    A lovely garden.
+
+    I took a peaceful stroll through it.
+
+    Still, nothing caught my attention.
+    """
+
+    return
+
+
 label psychic_entrance_hall_default:
     
     $ change_room("great_hall")

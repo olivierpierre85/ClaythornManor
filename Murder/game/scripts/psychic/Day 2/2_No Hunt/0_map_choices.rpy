@@ -87,57 +87,42 @@ label psychic_day2_no_hunt_default_room_locked:
     return
 
 
-# Psychic
-label psychic_day2_no_hunt_psychic_room:
-    
+# Lad
+label psychic_day2_no_hunt_lad_room:
+
     call psychic_bedroom_default
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_psychic_room_enter')
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
 
     return
 
-label psychic_day2_no_hunt_psychic_room_enter:
-    # May knows whose room it is so lock it to avoid weird dialog for now
-    call psychic_day2_no_hunt_default_room_locked
-
-    return
 
 # Doctor
 label psychic_day2_no_hunt_doctor_room:
 
     call psychic_bedroom_default
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_doctor_room_enter')
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
 
     return
 
-label psychic_day2_no_hunt_doctor_room_enter:
-    # May knows whose room it is so lock it to avoid weird dialog for now
-    call psychic_day2_no_hunt_default_room_locked
-
-    return
 
 # Nurse
 label psychic_day2_no_hunt_nurse_room:
 
     call psychic_bedroom_default
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_nurse_room_enter')
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
 
     return
 
-label psychic_day2_no_hunt_nurse_room_enter:
-
-    call psychic_day2_no_hunt_default_room_locked
-
-    return
 
 # Captain
 label psychic_day2_no_hunt_captain_room:
 
     call psychic_bedroom_default
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_captain_room_enter', enter_duration=20)
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
 
     return
 
@@ -146,13 +131,7 @@ label psychic_day2_no_hunt_host_room:
 
     call psychic_bedroom_default
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_host_room_enter')
-
-    return
-
-label psychic_day2_no_hunt_host_room_enter:
-    
-    call psychic_day2_no_hunt_default_room_locked
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
 
     return
 
@@ -162,25 +141,13 @@ label psychic_day2_no_hunt_drunk_room:
     call psychic_bedroom_default
 
     """
-    After knocking, the door slightly opens.
+    The simple push I give to the door opens it.
 
-    It was not even closed.
+    I catch a glimpse inside his room from here.
+
+    It's quite messy.
     """
 
     call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_drunk_room_enter', enter_duration=20)
 
-    return
-
-
-# 
-# Attic
-# 
-label psychic_day2_evening_attic_default:
-        
-    call psychic_attic_default
-    # Hide all downstairs choices for the current menu
-    $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('storage'))
-    $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('males_room'))
-    $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('females_room'))
-    $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('butler_room'))
     return

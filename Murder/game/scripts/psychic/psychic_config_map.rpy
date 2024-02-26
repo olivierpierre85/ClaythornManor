@@ -84,7 +84,8 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('dining_room'), 'psychic_dining_room_default', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'psychic_garden_default', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
-            # Bedrooms
+            # Bedrooms 
+            TimedMenuChoice(default_room_text('lad_room'), 'psychic_day2_no_hunt_lad_room', 10, room='lad_room'),
             TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day2_no_hunt_doctor_room', 10, room='doctor_room'),
             TimedMenuChoice(default_room_text('captain_room'), 'psychic_day2_no_hunt_captain_room', 10, room='captain_room'),
             TimedMenuChoice(default_room_text('psychic_room'), 'psychic_day2_no_hunt_psychic_room', 10, room='psychic_room'),
@@ -95,49 +96,48 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_attic_default', 10, room='males_room', condition=attic_default),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_attic_default', 10, room='females_room', condition=attic_default),
             TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_attic_default', 10, room='butler_room', condition=attic_default),
-            # TimedMenuChoice(default_room_text('library'), 'psychic_day2_no_hunt_library', 10, room='library'),
-            # TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_day2_no_hunt_portrait_gallery', 10, room='portrait_gallery'),
 
-            # TimedMenuChoice(default_room_text('nurse_room'), 
-            #     'psychic_day2_no_hunt_nurse_room_busy', 
-            #     10, 
-            #     room='nurse_room',
-            #     condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
-            # ),
-            # TimedMenuChoice(
-            #     default_room_text('nurse_room'),
-            #     'psychic_day2_no_hunt_nurse_room',
-            #     15, 
-            #     room='nurse_room',
-            #     condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']==False"
-            # ),
+            TimedMenuChoice(default_room_text('nurse_room'), 
+                'psychic_day2_no_hunt_nurse_room_busy', 
+                10, 
+                room='nurse_room',
+                condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
+            ),
+            TimedMenuChoice(
+                default_room_text('nurse_room'),
+                'psychic_day2_no_hunt_nurse_room',
+                15, 
+                room='nurse_room',
+                condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']==False"
+            ),
             TimedMenuChoice(
                 'Meet Rosalind Marsh in the Tea Room', 
                 'psychic_day2_hunt_tea_room', 
                 120, 
-                room = 'tea_room',
-                keep_alive = True, 
+                room = 'tea_room'
             ),
+            # Not needed
             # TimedMenuChoice(
             #     'Go back to the Tea Room', 
-            #     'psychic_day2_hunt_tea_room_return',  
+            #     'psychic_tea_room_default',  
             #     room = 'tea_room',
             #     condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']",
             #     keep_alive = True, 
             # ),
-            # TimedMenuChoice(
-            #     'Take a nap until the others return', 
-            #     'psychic_day2_no_hunt_cancel', 
-            #     240, 
-            #     early_exit = True, 
-            #     room = 'psychic_room'
-            # ),
-            # TimedMenuChoice(
-            #     'Richard III Bedroom', 
-            #     'psychic_day2_broken_room', 
-            #     20, 
-            #     room = 'broken_room',
-            # )
+            TimedMenuChoice(
+                'Wait in your room the others return', 
+                'psychic_day2_no_hunt_cancel', 
+                240, 
+                early_exit = True, 
+                room = 'psychic_room'
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'psychic_day2_broken_room', 
+                20, 
+                room = 'broken_room',
+            )
         ] + copy.deepcopy(lord_choices), 
         is_map = True)
+        
     return

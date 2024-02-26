@@ -115,8 +115,8 @@ label debug_choices:
             call unlock_psychic
             $ current_character = psychic_details
 
-            $ psychic_details.observations.unlock('lord')
-            $ lord_name = "Sir Nicholas"
+            # $ psychic_details.observations.unlock('lord')
+            # $ lord_name = "Sir Nicholas"
             jump psychic_day1_evening
 
         "psychic_day2_morning":
