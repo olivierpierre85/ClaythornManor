@@ -3,24 +3,24 @@ label psychic_day2_hunt_tea_room:
     $ change_room("tea_room")
 
     """
-    As I enter the tea room, I can see Rosalind Marsh already seated at one of the tables.
-
-    I approach her.
+    When I walk into the tea room, Rosalind Marsh is already there, sitting at a table.
+    
+    I head over to her.
     """
 
     nurse """
-    Miss Baxter, would you like to sit with me?
+    Miss Baxter, would you like to join me?
     """
 
     psychic """
-    Of course.
+    Yes, thank you.
     """
 
     nurse """
-    We haven't had much time to discuss things, have we?
+    It seems we haven't really had a chance to talk yet, right?
     """
 
-    # Get only 45 minutes before being interrupted, but regain the time for later exploration.
+    # We have 45 minutes until we're interrupted
     $ remaining_time = time_left
     $ time_left = 45
 
@@ -28,28 +28,33 @@ label psychic_day2_hunt_tea_room:
 
     $ time_left += remaining_time
 
+    """
+    While we're talking, a staff member walks in.
+    """
+
     maid """
-    I am sorry to disturb you ladies, but would you like some lunch?
+    Excuse me for interrupting, but do you ladies need some lunch?
     """
 
     """
-    We make inconsequential chit-chat about the host.
+    We chat about trivial things related to the host.
 
-    When we finish, Rosalind Marsh stands up.
+    After our conversation, Rosalind gets up from her seat.
     """
 
     nurse """
-    Well, all these events have made me quite tired.
+    I'm quite worn out with all that's happened.
 
-    I will retire to my room for a while if you don't mind being alone for a bit.
+    I think I'll go rest in my room. Don't mind being on your own?
     """
 
     psychic """
-    Not at all.
+    Not a problem.
 
-    There is plenty to do here.
+    There's a lot I can do.
     """
 
     $ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
 
     return
+
