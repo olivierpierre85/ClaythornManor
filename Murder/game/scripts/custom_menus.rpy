@@ -14,7 +14,10 @@ transform character_choice_right_2:
   xpos 1300  
   ypos 500
 
-label run_menu(current_menu):
+label run_menu(current_menu, change_level=True):
+
+    if change_level:
+        $ menu_level += 1
 
     if current_menu.is_valid():
         # Show characters when activated
@@ -27,7 +30,7 @@ label run_menu(current_menu):
         if current_menu.image_right_2:
             $ renpy.show(current_menu.image_right_2, at_list=[character_choice_right_2])
 
-        $ selected_choice = current_menu.display_choices()
+        $  selected_choice[menu_level] = current_menu.display_choices()
 
         # Hide choices when activated
         if current_menu.image_left:
@@ -39,24 +42,27 @@ label run_menu(current_menu):
         if current_menu.image_right_2:
             $ renpy.hide(current_menu.image_right_2)
 
-        if selected_choice.early_exit:
+        if  selected_choice[menu_level].early_exit:
             $ current_menu.early_exit = True        
-        
+
+        call expression selected_choice[menu_level].redirect
+
         # Change current time
-        $ time_diff = None
-        # if time_left > 0 and selected_choice.time_spent:
-        if time_left > 0:
-            $ time_diff = datetime.combine(date.today(), current_time) + timedelta(minutes=selected_choice.time_spent)
+        $ time_diff[menu_level] = None
+        if time_left > 0 and  selected_choice[menu_level].time_spent:
+            $ time_diff[menu_level] = datetime.combine(date.today(), current_time) + timedelta(minutes=selected_choice[menu_level].time_spent)
 
-        call expression selected_choice.redirect
+        $ print("CHANGE TIME", menu_level, selected_choice[menu_level].time_spent, time_left)
+        if time_diff[menu_level]:
+            call change_time(time_diff[menu_level].time().hour, time_diff[menu_level].time().minute)
 
-        if time_diff:
-            $ print("CHANGE TIME", selected_choice.time_spent, time_left)
-            call change_time(time_diff.time().hour, time_diff.time().minute)
+        pause 0.7
 
-        pause 1.0 
-        
-        call run_menu(current_menu)
+        call run_menu(current_menu, change_level=False)
+
+    if change_level:
+        $ menu_level -= 1
+    
 
     $ current_menu.early_exit = False
 

@@ -24,12 +24,7 @@ label psychic_day2_hunt_tea_room:
     # $ remaining_time = time_left - 45
     # $ time_left = 45
 
-    # QUICKFIX TO KEEP THE 120 TO make the hour turn, but should
-    $ old_selected_choice = selected_choice
-
     call nurse_generic
-
-    $ time_diff = datetime.combine(date.today(), current_time) + timedelta(minutes=old_selected_choice.time_spent)
 
     """
     While we're talking, a staff member walks in.
