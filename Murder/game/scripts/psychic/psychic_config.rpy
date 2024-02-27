@@ -21,7 +21,7 @@ label init_psychic:
             "doctor_generic_other_guests_menu": doctor_generic_other_guests_menu_psychic,
 
             "nurse_generic_menu" : nurse_generic_menu_psychic,
-            # "nurse_generic_other_guests_menu" : nurse_generic_other_guests_menu_psychic,
+            "nurse_generic_other_guests_menu" : nurse_generic_other_guests_menu_psychic,
 
             "knows_doctor_background": False,
             
