@@ -18,7 +18,7 @@
 # --------------------------------------------
 label psychic_day2_no_hunt:
 
-    call change_time(11,00, 'Hunt', 'Saturday')
+    call change_time(11, 00, 'Hunt', 'Saturday')
 
     $ current_character.add_checkpoint("psychic_day2_no_hunt") 
     
@@ -29,15 +29,15 @@ label psychic_day2_no_hunt:
     $ play_music('upbeat')
 
     """
-    I explained to everyone I wouldn't go on the hunt with them.
+    I let everyone know that I'm opting out of the hunt.
     
-    Only Rosalind Marsh made the same choice.
+    It turns out Rosalind Marsh is the only one who made the same choice.
 
-    We are supposed to meet in a little while for a luncheon in the tea room.
+    We've agreed to meet shortly for luncheon in the tea room.
 
-    I went to my room to change.
+    Before that, I head to my quarters to change.
 
-    What should I do next?
+    Now, what should I do next?
     """
 
     $ time_left = 240 # TODO: Possibly too long; consider revising.
@@ -45,9 +45,9 @@ label psychic_day2_no_hunt:
     call run_menu(psychic_details.saved_variables["day2_no_hunt_map_menu"])
 
     """
-    I hear sounds from the entrance.
+    Sounds from the main entrance catch my attention.
 
-    I decide to check it out.
+    I should investigate.
     """
 
     $ stop_music()
@@ -64,7 +64,7 @@ label psychic_day2_broken_room:
     """
     The doctor left Thomas Moody's room open.
 
-    I guess he didn't think someone would come to take a look.
+    I guess he didn't think anyone would come to take a look.
 
     I know I shouldn't have, but I couldn't resist.
 
@@ -86,7 +86,6 @@ label psychic_day2_broken_room:
     $ play_music('PREVIOUS')
 
     return
-
 
 
 label psychic_day2_no_hunt_drunk_room_enter:
@@ -162,7 +161,6 @@ label psychic_day2_no_hunt_cancel:
 
     I'll just go lie on my bed for a bit.
     """
-
 
     call wait_screen_transition()
 
