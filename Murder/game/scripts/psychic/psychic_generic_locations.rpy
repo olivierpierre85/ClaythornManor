@@ -41,7 +41,7 @@ label psychic_library_look_for_lord:
 
     It's the 8th edition, printed in 1894. That was quite some time ago.
 
-    Perhaps I should look up "Lord Claythorn" in this book.
+    Perhaps I should look up information about the people living here.
     """ 
 
     play sound page_turning
@@ -74,7 +74,7 @@ label psychic_library_look_for_lord_succeed:
     There's only one place associated with a Nicholas.
     """
 
-    """
+    book """
     Nicholas Creswell The Third of Claythorn Manor.
 
     Born on June 22, 1813.
@@ -89,6 +89,9 @@ label psychic_library_look_for_lord_succeed:
 
     Lineage...
     """
+
+    # TODO should we unlock THe host age (NO because it's not the good one?) but the first name is not ok either?
+    # $ host_details.unlock_knowledge('name') 
 
     """
     There's additional information about the history of this place.

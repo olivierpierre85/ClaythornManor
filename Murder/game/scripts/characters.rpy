@@ -38,6 +38,7 @@ label init_characters:
     define tutorial      = Character("Tutorial", what_style="tutorial_style")
 
     define letter       = Character("Letter", what_style="letter_style")
+    define book       = Character("Book", what_style="letter_style")
     define butler       = Character("Butler", image="butler")
     define footman      = Character("Footman", image="footman")
     define maid_name    = "Young woman"
@@ -102,6 +103,7 @@ label init_characters:
         # 5. The Host
         host_extra_information = [
             CharacterInformation(0, "todo", "todo", is_important = True), 
+            # CharacterInformation(0, "name", "Her first name is Elisabeth", is_important = True), 
             CharacterInformation(1, "down_to_earth", "She's not looking down on \"lower\" class people.", is_important = True), 
             CharacterInformation(60, "???", "???", is_important = True),
         ]

@@ -44,12 +44,14 @@ label run_menu(current_menu):
         
         # Change current time
         $ time_diff = None
-        if time_left > 0 and selected_choice.time_spent:
+        # if time_left > 0 and selected_choice.time_spent:
+        if time_left > 0:
             $ time_diff = datetime.combine(date.today(), current_time) + timedelta(minutes=selected_choice.time_spent)
 
         call expression selected_choice.redirect
 
         if time_diff:
+            $ print("CHANGE TIME", selected_choice.time_spent, time_left)
             call change_time(time_diff.time().hour, time_diff.time().minute)
 
         pause 1.0 

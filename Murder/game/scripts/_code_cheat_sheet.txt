@@ -9,3 +9,5 @@ if not psychic_details.saved_variables['attic_visited']:
 jump work_in_progress
 
 $ lad_details.observations.unlock('green_liquid')
+
+$ lad_details.unlock_knowledge('background') 

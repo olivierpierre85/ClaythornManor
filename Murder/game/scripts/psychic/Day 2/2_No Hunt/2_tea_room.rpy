@@ -20,13 +20,16 @@ label psychic_day2_hunt_tea_room:
     It seems we haven't really had a chance to talk yet, right?
     """
 
-    # We have 45 minutes until we're interrupted
-    $ remaining_time = time_left
-    $ time_left = 45
+    # We have 45 minutes until we're interrupted NOT NEEDED NOW but could be working
+    # $ remaining_time = time_left - 45
+    # $ time_left = 45
+
+    # QUICKFIX TO KEEP THE 120 TO make the hour turn, but should
+    $ old_selected_choice = selected_choice
 
     call nurse_generic
 
-    $ time_left += remaining_time
+    $ time_diff = datetime.combine(date.today(), current_time) + timedelta(minutes=old_selected_choice.time_spent)
 
     """
     While we're talking, a staff member walks in.

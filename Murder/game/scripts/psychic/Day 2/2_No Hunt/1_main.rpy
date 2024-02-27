@@ -13,7 +13,7 @@
 #       - Dead : Broken
 #
 #   Notes : 
-#       - Generic psychic OR map, 120 minutes,?TODO too long?
+#       - Generic psychic OR map, 240 minutes,?TODO too long?
 #       
 # --------------------------------------------
 label psychic_day2_no_hunt:
@@ -35,7 +35,7 @@ label psychic_day2_no_hunt:
 
     We've agreed to meet shortly for luncheon in the tea room.
 
-    Before that, I head to my quarters to change.
+    Before that, I went to my quarters to change.
 
     Now, what should I do next?
     """
