@@ -104,10 +104,159 @@ label common_day2_afternoon_entrance_dialog:
 
     return
 
-label common_day2_afternoon_samuel_manning_discussion:
+label common_day2_afternoon_samuel_manning_discussion_part_1:
+
+    # Present: psychic, host, drunk, nurse, butler
+    # Later Captain
+    """
+    Lady Claythorn approaches her butler and talks to him.
+
+    Almost whispering.
+    """
+
+    host """
+    What should we do with him?
+
+    Certainly, we can't let him roam freely in here.
+    """
+
+    butler """
+    I don't know.
+
+    That should be a matter left to the police.
+
+    But given the circumstances, they are very unusual, so I'm unsure.
+    """
+
+    nurse """
+    That's true, but that is no excuse for doing nothing.
+
+    We need to think about our own safety.
+
+    I know he seems harmless right now, but that might not last.
+
+    Once he sobers up and reality sets in, God knows how he will react.
+
+    He could try to run away.
+    """
+
+    psychic """
+    Or he might try to hurt someone else.
+    """
+
+    nurse """
+    Precisely!
+
+    So we are in agreement; something needs to be done?
+    """
 
     """
-    TODO
+    Everyone agrees, albeit silently.
+    """
+
+    butler """
+    The best option is probably to lock him up in his room.
+
+    The doors are strong, and given his state, he likely couldn't open one even if it were locked.
+    """
+
+    host """
+    Yes, that sounds like the best solution.
+    """
+
+    """
+    At that moment, Sushil Sinha returns from upstairs.
+
+    Ted Harring is not with him.
+    """
+
+    return
+
+
+label common_day2_afternoon_samuel_manning_discussion_part_2:
+    
+    captain """
+    Mister Harring had to get a change of clothes; he will be back later.
+    """
+
+    host """
+    Ah, Captain! Good.
+
+    We were just discussing what to do with Samuel Manning.
+    """
+
+    captain """
+    Right.
+
+    And what is your plan?
+    """
+
+    host """
+    To lock him in his room.
+
+    At least until the authorities arrive.
+    """
+
+    captain """
+    I agree. That's probably the best course of action.
+    """
+
+    """
+    He then turns towards Mister Manning.
+    """
+
+    captain """
+    I hope you understand we don't have a choice right now.
+    """
+
+    """ 
+    Samuel Manning shows no sign of understanding what's happening.
+    """
+
+    drunk """
+    Huh? A choice for what?
+
+    What do you mean?
+    """
+
+    captain """
+    You will have to go to your room now.
+
+    We will lock the door from the outside so that you can't get out.
+
+    Do you understand?
+    """
+
+    drunk """
+    Yes, of course.
+
+    I understand.
+    """
+
+    captain """
+    Good, follow me.
+    """
+
+    """
+    The butler takes out a group of keys he has in his pocket.
+
+    He selects one of the keys and hands it to Mister Sinha.
+    """
+
+    butler """
+    Here is the key to the room.
+    """
+
+    captain """
+    Good, thank you.
+
+    Now, Mister Manning, let's go shall we?
+    """
+
+    """
+    Samuel Manning just nods, then stands up and follows Captain Sinha up the stairs.
+
+    He has an expression of defeat and incomprehension in his eyes.
     """
     
     return

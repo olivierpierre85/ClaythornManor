@@ -18,7 +18,7 @@ label psychic_day2_afternoon:
 
     call change_time(15,00, 'Afternoon', 'Saturday')
 
-    $ psychic_details.add_checkpoint("psychic_day2_afternoon") 
+    $ psychic_details.add_checkpoint("psychic_day2_afternoon")
     
     call black_screen_transition("Amelia Baxter", "Saturday Afternoon")
 
@@ -33,7 +33,7 @@ label psychic_day2_afternoon:
 
     Following close behind are the butler and footman.
 
-    They're carefully carrying someone on an improvised stretcher.
+    They carefully carry someone on an improvised stretcher.
     """
 
     $ play_music('sad')
@@ -41,14 +41,21 @@ label psychic_day2_afternoon:
     call common_day2_afternoon_entrance_dialog
 
     """
-    I watch Captain Sinha and Ted Harring carrying doctor Baldwin to his room.
+    I watch Captain Sinha and Ted Harring carry Doctor Baldwin to his room.
+
+    Now, the attention of everyone turns to Samuel Manning.
+
+    I realize no one has thought about restraining him in any way.
+
+    But it seems unnecessary as he is sitting on the stairs,
+
+    his gaze empty, apparently unaware of what is happening around him.
     """
 
-    # TODO discussion about samuel Manning 
-    call common_day2_afternoon_samuel_manning_discussion
+    call common_day2_afternoon_samuel_manning_discussion_part_1
 
-
+    call common_day2_afternoon_samuel_manning_discussion_part_2
 
     # AFTER discussion choice to either talk to ted harring OR leave him be????
-
+    jump work_in_progress
     # jump psychic_day2_evening
