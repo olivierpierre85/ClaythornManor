@@ -103,3 +103,11 @@ label common_day2_afternoon_entrance_dialog:
     """
 
     return
+
+label common_day2_afternoon_samuel_manning_discussion:
+
+    """
+    TODO
+    """
+    
+    return

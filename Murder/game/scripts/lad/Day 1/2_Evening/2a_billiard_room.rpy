@@ -152,7 +152,7 @@ label lad_day1_evening_billiard_room_group:
     Oh Right.
     """
 
-    call captain_billiard_room_speech_part_1
+    call common_day1_evening_captain_billiard_room_speech_part_1
 
     """
     This appears to be a long story. 
@@ -178,7 +178,7 @@ label lad_day1_evening_billiard_group_cancel:
 
 label lad_day1_evening_billiard_room_group_part_2:
 
-    call captain_billiard_room_speech_part_2
+    call common_day1_evening_captain_billiard_room_speech_part_2
 
     """
     Wait, that was the original question?

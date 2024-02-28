@@ -77,7 +77,7 @@ label lad_day2_afternoon_bedroom:
     """
 
     lad """
-    You can \"feel\" it?
+    You can "feel" it?
     """
 
     psychic """

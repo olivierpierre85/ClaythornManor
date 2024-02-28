@@ -44,9 +44,11 @@ label psychic_day2_afternoon:
     I watch Captain Sinha and Ted Harring carrying doctor Baldwin to his room.
     """
 
+    # TODO discussion about samuel Manning 
+    call common_day2_afternoon_samuel_manning_discussion
 
-    
-    
-    call psychic_day2_afternoon_bedroom
 
-    jump psychic_day2_evening
+
+    # AFTER discussion choice to either talk to ted harring OR leave him be????
+
+    # jump psychic_day2_evening

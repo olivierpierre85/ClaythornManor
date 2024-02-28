@@ -62,9 +62,9 @@ label psychic_day1_evening_billiard_room_group:
     The story has just begun.
     """
 
-    call captain_billiard_room_speech_part_1
+    call common_day1_evening_captain_billiard_room_speech_part_1
 
-    call captain_billiard_room_speech_part_2
+    call common_day1_evening_captain_billiard_room_speech_part_2
 
     """
     Well that was a long detour for such a simple question.

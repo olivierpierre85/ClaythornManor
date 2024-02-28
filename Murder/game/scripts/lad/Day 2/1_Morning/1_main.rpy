@@ -65,7 +65,7 @@ label lad_day2_morning:
     Daniel Baldwin and Amelia Baxter are already present.
     """
 
-    call day2_breakfast_lad_psychic
+    call common_day2_morning_lad_psychic
 
     """
     Everything is happening fast. What should I do?
@@ -94,9 +94,9 @@ label lad_day2_morning:
 
         $ stop_music()
 
-        call day2_breakfast_host_death
+        call common_day2_morning_host_death
 
-    call day2_breakfast_host_death_doctor    
+    call common_day2_morning_host_death_doctor    
 
     """
     When everyone is done eating, Lady Claythorn speaks up.
@@ -104,7 +104,7 @@ label lad_day2_morning:
 
     $ stop_music()
 
-    call day2_breakfast_host_hunt
+    call common_day2_morning_host_hunt
 
     """
     A hunt... A true aristocratic hunt.

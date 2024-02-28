@@ -1,18 +1,54 @@
-label captain_billiard_room_speech_part_1:
+# ------------------------------------
+#               HOST
+# ------------------------------------
+label common_day1_evening_host_welcome_speech:
     
-    captain """
-    It was in June of 1900, so some of you might remember.
+    host """ 
+    Welcome, everyone. My apologies for keeping you waiting. 
+    
+    Now that we're all gathered, I'd like to express my gratitude once more.
 
-    A group of rebels, called the \"Boxers,\" had taken up arms against foreign presence in their country.
+    As you already know, you are here because of the heroic acts you've committed in the past.
 
-    They were a group of mostly peasants, poorly armed.
+    I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
 
-    We called them \"Boxers\" because of their use of martial arts in their fights.
+    I realize the invitation letter you received was somewhat vague, so let me clarify its contents now.
+
+    My first gift to you is a stay at my manor. 
+    
+    You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
+
+    During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
+
+    My second gift is a sum of eight thousand pounds, to be shared among you. 
+    
+    This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
+    """
+    
+    """
+    Following her speech, our host settled back down in her chair.
     """
 
     return
 
-label captain_billiard_room_speech_part_2:
+# ------------------------------------
+#               CAPTAIN
+# ------------------------------------
+label common_day1_evening_captain_billiard_room_speech_part_1:
+    
+    captain """
+    It was in June of 1900, so some of you might remember.
+
+    A group of rebels, called the "Boxers," had taken up arms against foreign presence in their country.
+
+    They were a group of mostly peasants, poorly armed.
+
+    We called them "Boxers" because of their use of martial arts in their fights.
+    """
+
+    return
+
+label common_day1_evening_captain_billiard_room_speech_part_2:
 
     captain """
     They managed to surround the Europeans and Japanese in the \"International Legations\" quarter, in China's capital, Beijing.
@@ -55,7 +91,7 @@ label captain_billiard_room_speech_part_2:
 
     I was expecting the exactions of the Japanese and the Russians, who were known for their ruthlessness.
 
-    But in the end, our proud \"civilized\" European nations fared no better.
+    But in the end, our proud "civilized" European nations fared no better.
 
     The final assault of the besieged was also an example of a lack of discipline among the soldiers and their commanders.
 

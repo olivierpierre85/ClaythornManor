@@ -48,7 +48,7 @@ label psychic_day2_morning:
 
     call change_time(9, 30)
 
-    call day2_breakfast_lad_psychic
+    call common_day2_morning_lad_psychic
 
     """
     For some reason, Ted Harring also stands up and follows them.
@@ -70,13 +70,13 @@ label psychic_day2_morning:
 
     call change_time(10, 00)
 
-    call day2_breakfast_host_death
+    call common_day2_morning_host_death
 
-    call day2_breakfast_host_death_doctor
+    call common_day2_morning_host_death_doctor
 
     $ stop_music()
 
-    call day2_breakfast_host_hunt
+    call common_day2_morning_host_hunt
 
     """
     That's impressive.
