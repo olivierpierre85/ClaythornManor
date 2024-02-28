@@ -173,13 +173,13 @@ label character_selection:
 
     python:
         if not full_testing_mode:
-            selected_choice = renpy.call_screen('character_selection') 
+            character_choice = renpy.call_screen('character_selection') 
         else:
-            selected_choice = full_testing_mode_char
+            character_choice = full_testing_mode_char
 
         current_position = 0
 
-        current_character = eval(selected_choice + "_details")
+        current_character = eval(character_choice + "_details")
         current_run = current_character.get_max_run() + 1 # TODO why? wtf?
         current_storyline = current_character
 
