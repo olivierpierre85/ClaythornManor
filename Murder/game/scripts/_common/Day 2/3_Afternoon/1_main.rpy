@@ -174,7 +174,7 @@ label common_day2_afternoon_samuel_manning_discussion_part_1:
 label common_day2_afternoon_samuel_manning_discussion_part_2:
     
     captain """
-    Mister Harring needed to change his attire, he'll rejoin us shortly.
+    Mister Harring needed to change, he'll join us shortly.
     """
 
     host """
@@ -255,6 +255,21 @@ label common_day2_afternoon_samuel_manning_discussion_part_2:
     Samuel Manning offers a silent nod, rises, and follows Captain Sinha up the staircase.
 
     His gaze betrays a mix of resignation and confusion.
+    """
+    
+    return
+
+
+label common_day2_afternoon_samuel_manning_discussion_part_3:
+
+    host """
+    What a sad business.
+
+    But, sadly, there is nothing else to be done at the moment.
+
+    I suggest you all return to your rooms for now.
+
+    You'll hear the gong when dinner is ready.
     """
     
     return

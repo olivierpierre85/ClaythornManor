@@ -56,6 +56,16 @@ label psychic_day2_afternoon:
 
     call common_day2_afternoon_samuel_manning_discussion_part_2
 
+    """
+    We all watch the two men leave down the stairs.
+
+    Then an awkward silence fills the room.
+    """
+
+    call common_day2_afternoon_samuel_manning_discussion_part_3
+
+    call psychic_day2_afternoon_bedroom
+
     # AFTER discussion choice to either talk to ted harring OR leave him be????
     jump work_in_progress
-    # jump psychic_day2_evening
+    # jump psychic_day2_afternoon

@@ -11,3 +11,9 @@ jump work_in_progress
 $ lad_details.observations.unlock('green_liquid')
 
 $ lad_details.unlock_knowledge('background') 
+
+
+
+# Change rooms with TRANSITION
+$ change_room('lad_room')
+$ change_room('lad_room', dissolve)
