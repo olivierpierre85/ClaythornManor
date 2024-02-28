@@ -45,10 +45,12 @@ label psychic_day2_no_hunt:
     call run_menu(psychic_details.saved_variables["day2_no_hunt_map_menu"])
 
     """
-    Sounds from the main entrance catch my attention.
+    Suddenly, sounds from the main entrance catch my attention.
 
     I should investigate.
     """
+
+    pause 1.0
 
     $ stop_music()
 

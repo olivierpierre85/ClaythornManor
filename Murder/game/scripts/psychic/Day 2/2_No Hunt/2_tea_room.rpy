@@ -66,12 +66,6 @@ label psychic_day2_hunt_tea_room:
     There's plenty for me to do.
     """
 
-
-$ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
-
-return
-
-
     $ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
 
     return
