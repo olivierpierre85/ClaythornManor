@@ -26,6 +26,8 @@ label psychic_day2_hunt_tea_room:
 
     call nurse_generic
 
+    # $ time_left += remaining_time
+
     """
     While we're talking, a staff member walks in.
     """
@@ -34,23 +36,41 @@ label psychic_day2_hunt_tea_room:
     Excuse me for interrupting, but do you ladies need some lunch?
     """
 
+    nurse """
+    That would be lovely, thank you
     """
-    We chat about trivial things related to the host.
 
-    After our conversation, Rosalind gets up from her seat.
+    pause 1.0
+
+    """
+    After a few minutes, she returns with some plates.
+
+    As we eat, we chat about trivial matters related to the host.
+    """
+
+    pause 1.0
+
+    """
+    When our lunch is over, Rosalind rises from her seat.
     """
 
     nurse """
-    I'm quite worn out with all that's happened.
+    I'm quite exhausted with all that has happened.
 
-    I think I'll go rest in my room. Don't mind being on your own?
+    I think I'll retire to my room. Would you mind being alone?
     """
 
     psychic """
-    Not a problem.
+    Oh no, don't worry.
 
-    There's a lot I can do.
+    There's plenty for me to do.
     """
+
+
+$ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
+
+return
+
 
     $ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
 
