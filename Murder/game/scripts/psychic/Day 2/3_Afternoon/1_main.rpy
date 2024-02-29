@@ -67,5 +67,5 @@ label psychic_day2_afternoon:
     call psychic_day2_afternoon_bedroom
 
     # AFTER discussion choice to either talk to ted harring OR leave him be????
-    jump work_in_progress
-    # jump psychic_day2_afternoon
+
+    jump psychic_day2_evening

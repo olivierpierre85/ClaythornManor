@@ -31,6 +31,7 @@ label init_nurse:
             CharacterInformation(2, "clothes", "Discreet but well dressed.", is_important = True),
             CharacterInformation(3, "age", "42 years old", is_important = True),
             CharacterInformation(4, "manor", "Is familiar with grand mansions", is_important = True),
+            CharacterInformation(5, "sick", "She is coughing blood.", is_important = True),
             CharacterInformation(0, "todo", "todo", is_important = True),
             CharacterInformation(60, "???", "???", is_important = True),
         ]

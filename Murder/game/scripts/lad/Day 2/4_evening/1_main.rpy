@@ -35,53 +35,11 @@ label lad_day2_evening:
     Samuel Manning is also absent.
 
     I take my usual seat, with only Amelia Baxter beside me now.
+
+    Lady Claythorn starts a speech.
     """
 
-    host """
-    Now that everyone is here, I want to express my deepest regret for what happened today.
-
-    This isn't how I imagined our weekend.
-
-    I don't believe any of us are in the mood for more entertainment.
-
-    So, tomorrow morning, you'll receive your rewards.
-    
-    Afterward, we'll wait for the police to arrive.
-
-    You're free to head home as soon as the officers give the all-clear.
-
-    For now, enjoy your dinner.
-
-    Drinks will be available in the billiard room afterward, as they were yesterday.
-    """
-
-    """
-    The food is served shortly after the speech.
-
-    Yet, most of us have little appetite.
-    """
-
-    lad """
-    Miss Baxter, I don't see Samuel Manning. 
-
-    Do you know where he might be?
-    """
-
-    psychic """
-    He's locked in his room.
-
-    After you left, there was a heated debate about how to handle him.
-
-    Some wanted to tie him to a chair; others believed he should remain free.
-    
-    Ultimately, Captain Sinha decided it best to confine him to his room.
-
-    Surprisingly, he didn't resist.
-
-    That's where he is now. 
-
-    It was agreed that his dinner would be served there.
-    """
+    call common_day2_evening_dinner
 
     """
     Well, that's one less thing to worry about.
