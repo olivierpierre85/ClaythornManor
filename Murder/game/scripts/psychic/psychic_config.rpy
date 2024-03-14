@@ -38,6 +38,8 @@ label init_psychic:
             "day2_nohunt_bedroom_tries": 0,
             "day2_nohunt_has_visited_tea_room": False,
             "knows_nurse_background": False,
+            "day2_evening_billiard_room_visited": False,
+            "day2_evening_billiard_room_talk_to_captain": False,
         }
 
         psychic_extra_information = [

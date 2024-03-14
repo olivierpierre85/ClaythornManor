@@ -22,7 +22,7 @@ label lad_day2_evening_billiard_room:
             TimedMenuChoice('Have another drink to calm the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_details.saved_variables["day2_drinks"] == 1'),
             TimedMenuChoice('Maybe a few more drinks would help', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_details.saved_variables["day2_drinks"] == 2'),
             TimedMenuChoice('Oh, what the hell, maybe I should just get plastered', 'lad_day2_evening_billiard_room_bar_4', 120, condition = 'lad_details.saved_variables["day2_drinks"] == 3'),
-            TimedMenuChoice('Leave the room', 'lad_day2_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
+            TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
     else:
@@ -30,7 +30,7 @@ label lad_day2_evening_billiard_room:
         $ lad_day2_evening_billiard_room_menu.early_exit = False
 
         """
-        You're back in the Billiard Room.
+        I am back in the Billiard Room.
         """
 
     call run_menu(lad_day2_evening_billiard_room_menu)
@@ -431,7 +431,4 @@ label lad_day2_evening_billiard_room_bar_4:
     $ lad_details.saved_variables["day2_drunk"] = True
     $ lad_details.saved_variables["day2_poisoned"] = False
 
-    return
-
-label lad_day2_evening_billiard_room_cancel:
     return

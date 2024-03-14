@@ -12,7 +12,7 @@
 #       - Dead : broken, doctor
 #
 #   Notes : 
-#       -  
+#       -  captain generic
 # --------------------------------------------
 label psychic_day2_evening:
 
@@ -25,7 +25,6 @@ label psychic_day2_evening:
     $ change_room("dining_room", irisout)
     
     $ play_music('sad', 3)
-
 
     """
     As I step into the room, a somber ambiance surrounds me.
@@ -57,7 +56,6 @@ label psychic_day2_evening:
     What will I do?
     """
 
-
     $ time_left = 60
 
     call run_menu(psychic_details.saved_variables["day2_evening_map_menu"])
@@ -78,7 +76,7 @@ label psychic_day2_evening:
     After a little while, someone knocks on my door.
     """
 
-    # call TOdo
+    # call TOdo lad psychic conversation
 
     jump work_in_progress
 
