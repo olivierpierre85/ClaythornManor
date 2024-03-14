@@ -12,11 +12,11 @@
 #       - Dead : broken, doctor
 #
 #   Notes : 
-#       -  captain generic
+#       -  captain generic, lad generic
 # --------------------------------------------
 label psychic_day2_evening:
 
-    call change_time(18,30, "Evening", "Saturday")
+    call change_time(18, 30, "Evening", "Saturday")
 
     $ psychic_details.add_checkpoint("psychic_day2_evening") 
 
@@ -27,56 +27,64 @@ label psychic_day2_evening:
     $ play_music('sad', 3)
 
     """
-    As I step into the room, a somber ambiance surrounds me.
+    As I step into the room, a sombre ambience surrounds me.
 
-    The chairs where Daniel Baldwin and Thomas Moody usually sit are vacant.
+    The chairs where Daniel Baldwin and Thomas Moody usually sit are empty.
 
     Samuel Manning is not here either, obviously.
 
-    I settle into my familiar spot, with Ted Harring on my right.
+    I settle into my familiar spot, with Ted Harring to my right.
 
     Lady Claythorn stands up to speak.
     """
 
     call common_day2_evening_dinner
 
-    call change_time(21,00)
+    call change_time(21, 00)
 
     """
     We ate in silence.
 
-    After dinner, most retired to their rooms.
+    After dinner, most people retired to their rooms.
 
-    I wouldn't think many would join for a drink afterwards.
+    I don't think many would join for a drink afterwards.
 
     I probably should wait in my room for Ted Harring. 
 
-    But I could also take advantage that the Manor is almost empty.
+    But I could also take advantage of the fact that the Manor is almost empty.
 
-    What will I do?
+    What should I do?
     """
 
     $ time_left = 60
 
     call run_menu(psychic_details.saved_variables["day2_evening_map_menu"])
 
-    call change_time(22,00)
+    call change_time(22, 00)
 
-    """
-    No need to wander the house further.
+    if time_left <= 0:
+        """
+        There's no need to wander the house further.
 
-    I should get back to my room.
-    """
+        I should return to my room.
+        """
 
-    $ change_room('psychic_room', dissolve)
-
-    pause 2.0
-
-    """
-    After a little while, someone knocks on my door.
-    """
-
-    # call TOdo lad psychic conversation
+    call psychic_day2_evening_lad_discussion
 
     jump work_in_progress
+
+
+label psychic_day2_evening_cancel:
+
+    $ change_room('psychic_room')
+
+    """
+    There's nothing more I can do right now.
+
+    I'll just go and lie on my bed for a bit.
+    """
+
+    call wait_screen_transition()
+
+    return
 

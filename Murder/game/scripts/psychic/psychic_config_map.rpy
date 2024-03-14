@@ -181,8 +181,8 @@ label psychic_config_map:
 
             TimedMenuChoice(
                 'Wait in your room for Ted Harring', 
-                'psychic_day2_no_hunt_cancel', 
-                240, 
+                'psychic_day2_evening_cancel', 
+                0, 
                 early_exit = True, 
                 room = 'psychic_room'
             ),
