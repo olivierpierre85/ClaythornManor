@@ -41,5 +41,44 @@ label psychic_day2_evening:
 
     call common_day2_evening_dinner
 
+    call change_time(21,00)
+
+    """
+    We ate in silence.
+
+    After dinner, most retired to their rooms.
+
+    I wouldn't think many would join for a drink afterwards.
+
+    I probably should wait in my room for Ted Harring. 
+
+    But I could also take advantage that the Manor is almost empty.
+
+    What will I do?
+    """
+
+
+    $ time_left = 60
+
+    call run_menu(psychic_details.saved_variables["day2_evening_map_menu"])
+
+    call change_time(22,00)
+
+    """
+    No need to wander the house further.
+
+    I should get back to my room.
+    """
+
+    $ change_room('psychic_room', dissolve)
+
+    pause 2.0
+
+    """
+    After a little while, someone knocks on my door.
+    """
+
+    # call TOdo
+
     jump work_in_progress
 

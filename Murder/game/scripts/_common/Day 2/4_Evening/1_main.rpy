@@ -18,12 +18,14 @@ label common_day2_evening_dinner:
     Drinks will be available in the billiard room afterward, as they were yesterday.
     """
 
+    # TODO different reaction for each guest?
     """
     The food is served shortly after the speech.
 
     Yet, most of us have little appetite.
     """
 
+    # TODO only for lad and psychic
     lad """
     Miss Baxter, I don't see Samuel Manning. 
 
@@ -37,7 +39,7 @@ label common_day2_evening_dinner:
     
     Ultimately, we decided it best to confine him to his room.
 
-    Surprisingly, he didn't resist.
+    He didn't resist.
 
     That's where he is now. 
 

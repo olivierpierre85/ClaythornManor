@@ -64,8 +64,41 @@ label psychic_day2_afternoon:
 
     call common_day2_afternoon_samuel_manning_discussion_part_3
 
+    """
+    Before heading to my room, there is something I would like to understand.
+
+    I approach the butler.
+    """
+
+    butler """
+    Yes, Miss Baxter?
+    """
+
+    psychic """
+    I don't understand; how could you give a gun to someone so drunk?
+    """
+
+    butler """
+    I am so sorry, but he wasn't drunk when we talked this morning.
+
+    He was acting totally normally.
+
+    He probably got drunk during the day.
+
+    There was nothing I could have done.
+    """
+
+    psychic """
+    Right.
+    """
+
+    """
+    He did seem very drunk to me during breakfast though.
+
+    Interesting.
+    """
+
     call psychic_day2_afternoon_bedroom
 
-    # AFTER discussion choice to either talk to ted harring OR leave him be????
-
+    # After discussion choice: either talk to Ted Harring or leave him be?
     jump psychic_day2_evening

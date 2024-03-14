@@ -31,13 +31,15 @@ label psychic_day2_afternoon_bedroom:
 
     return
 
+
 label psychic_day2_afternoon_lad_discussion:
 
     $ change_room("bedrooms_hallway")
 
-    call common_day2_afternoon_lad_psychic_discussion_part1
+    call common_day2_afternoon_lad_psychic_discussion
 
     return
+
 
 label psychic_day2_afternoon_nurse_room_busy:
     

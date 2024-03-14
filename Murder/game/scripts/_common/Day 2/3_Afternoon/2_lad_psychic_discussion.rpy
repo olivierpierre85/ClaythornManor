@@ -9,9 +9,10 @@ label common_day2_afternoon_lad_psychic_discussion:
     Mister Harring, may I come in?
     """
 
-    """
-    Amelia Baxter... What does she want?
-    """
+    if current_character.text_id == "lad":
+        """
+        Amelia Baxter... What does she want?
+        """
 
     lad """
     Come on in, Mrs. Baxter. The door is open.
@@ -27,7 +28,6 @@ label common_day2_afternoon_lad_psychic_discussion:
     """
 
     if current_character.text_id == "lad":
-
         """
         She doesn't wait for an answer and begins explaining.
         """
