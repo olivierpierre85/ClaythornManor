@@ -4,11 +4,11 @@ label psychic_config_map:
 
         # LORD conditions, can happen at any time
         attic_visited = "psychic_details.saved_variables['attic_visited']"
-        attic_not_visited = "psychic_details.saved_variables['attic_visited']==False"
+        attic_not_visited = "not psychic_details.saved_variables['attic_visited']"
 
         knows_lord_name = "psychic_details.saved_variables['knows_lord_name']"
-        attic_visited_do_not_know_lord_name = "(psychic_details.saved_variables['attic_visited'] and psychic_details.saved_variables['knows_lord_name']==False)"
-        attic_default = "psychic_details.observations.is_unlocked('lord')==False"
+        attic_visited_do_not_know_lord_name = "(psychic_details.saved_variables['attic_visited'] and not psychic_details.saved_variables['knows_lord_name'])"
+        attic_default = "not psychic_details.observations.is_unlocked('lord')"
         attic_return = "psychic_details.observations.is_unlocked('lord')"
 
         lord_choices = [
@@ -108,7 +108,7 @@ label psychic_config_map:
                 'psychic_day2_no_hunt_nurse_room',
                 15, 
                 room='nurse_room',
-                condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']==False"
+                condition = "not psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             ),
             TimedMenuChoice(
                 'Meet Rosalind Marsh in the Tea Room', 
@@ -176,7 +176,7 @@ label psychic_config_map:
             #     'psychic_day2_no_hunt_nurse_room',
             #     15, 
             #     room='nurse_room',
-            #     condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']==False"
+            #     condition = "not psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             # ),
 
             TimedMenuChoice(

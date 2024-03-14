@@ -95,7 +95,7 @@ label lad_config_map:
                 'lad_day2_no_hunt_nurse_room',
                 15, 
                 room='nurse_room',
-                condition = "lad_details.saved_variables['day2_nohunt_has_visited_tea_room']==False"
+                condition = "not lad_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             ),
             TimedMenuChoice(
                 'Meet the others in the Tea Room', 
@@ -177,7 +177,7 @@ label lad_config_map:
                 'lad_day2_broken_room', 
                 20, 
                 room = 'broken_room',
-                condition="lad_details.observations.is_unlocked('green_liquid')==False"
+                condition="not lad_details.observations.is_unlocked('green_liquid')"
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
