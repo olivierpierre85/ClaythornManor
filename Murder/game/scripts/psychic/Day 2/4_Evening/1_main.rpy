@@ -71,7 +71,7 @@ label psychic_day2_evening:
 
     call psychic_day2_evening_lad_discussion
 
-    jump work_in_progress
+    jump psychic_day3_morning
 
 
 label psychic_day2_evening_cancel:
