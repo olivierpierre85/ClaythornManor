@@ -249,17 +249,26 @@ label common_day3_morning_lad_psychic_captain_deaths_end:
     You've been gone for a while. What happened?
     """
 
+    # TODO Marsh dead or alive??? NOW alive, but maybe add later a branch where she died
+    # captain """
+    # I'm afraid we've found Miss Marsh. She has also passed away.
+    # """
+
+    # psychic """
+    # No... Not another one...
+    # """
+
+    # if current_character.text_id == "lad":
+    #     """
+    #     Our eyes met, and although no words were spoken, the gravity of the situation was understood by all.
+    #     """
+
     captain """
-    I'm afraid we've found Miss Marsh. She has also passed away.
-    """
+    I'm afraid we couldn't find Miss Marsh.
 
-    psychic """
-    No... Not another one...
+    Her room was locked, so we forced it open.
+    
+    But it was all for naught, as it was empty.
     """
-
-    if current_character.text_id == "lad":
-        """
-        Our eyes meet, and though no words are spoken, the gravity of the situation is understood by all.
-        """
 
     return
