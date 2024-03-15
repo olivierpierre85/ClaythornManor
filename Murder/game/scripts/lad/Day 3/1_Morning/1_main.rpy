@@ -197,6 +197,12 @@ label lad_day3_morning:
 
     call common_day3_morning_lad_psychic_captain_deaths_end
 
+    """
+    We all remained silent for a while, none of us sure of what to do next.
+    """
+
+    pause 1.0
+
     $ stop_music()
 
     jump lad_day3_afternoon

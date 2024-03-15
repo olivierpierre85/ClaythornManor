@@ -143,7 +143,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
     #TODO: add woman scream?
 
     captain """
-    Miss Baxter, please exit the room.
+    Miss Baxter, please leave the room.
     """
 
     if current_character.text_id == "lad":
