@@ -97,7 +97,7 @@ label common_day3_morning_lad_psychic_tea_room_1:
 
     if current_character.text_id == "lad":
         """
-        Without hesitation, I responded.
+        I respond without hesitation.
         """
 
     lad """

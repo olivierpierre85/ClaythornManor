@@ -531,6 +531,8 @@ label lad_day3_morning_nurse_room:
     Let's try somewhere else.
     """
 
+    stop sound
+
     return
 
 
@@ -567,6 +569,8 @@ label lad_day3_morning_captain_room:
     psychic """
     We should continue our search elsewhere.
     """
+
+    stop sound
 
     return 
 

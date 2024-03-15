@@ -154,7 +154,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
         """
     else:
         """
-        Without a word, I get out.
+        Without a word, Sushil Sinha drags me out of the room.
         """
 
     $ change_room("bedrooms_hallway")
@@ -200,8 +200,6 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
     if current_character.text_id == "lad":
         """
-        Tears spill from her eyes.
-
         The weight of shock renders me motionless.
 
         To help us recover, Sushil guides us back to the tea room.

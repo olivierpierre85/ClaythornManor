@@ -67,17 +67,17 @@ label debug_choices:
         #     $ lad_details.saved_variables["day2_saw_accident"] = True
         #     jump lad_day2_evening
 
-        # "lad_day3_morning TES MAP":
-        #     $ unlock_map('captain_room')
-        #     $ unlock_map('host_room')
-        #     $ unlock_map('psychic_room')
-        #     $ unlock_map('lad_room')
-        #     $ unlock_map('drunk_room')
-        #     $ unlock_map('nurse_room')
-        #     $ unlock_map('broken_room')
-        #     $ unlock_map('doctor_room')
-        #     $ lad_details.saved_variables["day2_believe_psychic"] = True
-        #     jump lad_day3_morning
+        "lad_day3_morning TES MAP":
+            $ unlock_map('captain_room')
+            $ unlock_map('host_room')
+            $ unlock_map('psychic_room')
+            $ unlock_map('lad_room')
+            $ unlock_map('drunk_room')
+            $ unlock_map('nurse_room')
+            $ unlock_map('broken_room')
+            $ unlock_map('doctor_room')
+            $ lad_details.saved_variables["day2_believe_psychic"] = True
+            jump lad_day3_morning
         
         "lad_day3_afternoon":
             call unlock_psychic 
