@@ -60,75 +60,8 @@ label lad_day3_morning:
         I just didn't expect it to be this early.
         """
 
-        lad """
-        I'm coming!
-        """
+        call common_day3_morning_lad_psychic_journey
 
-        """
-        I quickly get dressed and open the door.
-
-        Amelia Baxter enters, looking visibly nervous.
-        """
-
-        $ play_music('mysterious', 2)
-
-        psychic """
-        I believe my hunch was right yesterday.
-
-        Something strange is afoot.
-        """
-
-        lad """
-        What do you mean?
-        """
-
-        psychic """
-        I haven't seen any staff members on my way here.
-
-        At this hour, they should be busy with lighting fires, cleaning, and setting up breakfast.
-
-        Yet, I neither saw nor heard anyone.
-
-        It's as silent as a graveyard in here.
-        """
-
-        lad """
-        Are you sure it's not just because it's so early?
-        """
-
-        psychic """
-        I'm certain.
-
-        I was up at this time yesterday, and the house was bustling with activity.
-
-        Something's not right, I assure you.
-        """
-
-        lad """
-        Okay, if you say so. 
-
-        But how is that related to a robbery?
-        """
-
-        psychic """
-        I'm not so sure anymore that this is about a robbery.
-
-        I have a feeling it could be something much worse.
-        """
-
-        """
-        A chill goes through my body.
-
-        Worse than a robbery? What could she mean?
-
-        But I'm hesitant to ask her.
-
-        Instead, I try to appear confident.
-        """
-
-        lad """
-        Alright, we'd better investigate then.
-        """
     else:
         """
         Miss Baxter, again?
@@ -254,53 +187,15 @@ label lad_day3_morning:
         But as we settled down, an authoritative voice echoed from outside the room.
         """
 
-        captain """
-        Is anyone here?
-        """
-
-        """
-        Without hesitation, I responded.
-        """
-
-        lad """
-        Yes, Ted Harring. I'm here, and Amelia Baxter's with me.
-        """
-
-        """
-        Amelia stiffens. I sense her unease, perhaps thinking I replied too quickly.
-
-        It's too late for second thoughts now.
-
-        Captain Sinha soon joins us in the room.
-        """
+        call common_day3_morning_lad_psychic_tea_room_1
         
-        call lad_day3_morning_meeting_captain
+    call common_day3_morning_lad_psychic_tea_room_2
 
-    lad """
-    By the way, did you check on Samuel Manning?
+    call common_day3_morning_lad_psychic_captain_death_manning
 
-    You're the only one with the key to his room.
-    """
+    call common_day3_morning_lad_psychic_captain_death_marsh
 
-    captain """
-    No, not yet. I assumed he couldn't have gone far.
-
-    But you're right, we should check on him.
-    """
-
-    lad """
-    I think so too.
-
-    We'll follow you.
-    """
-
-    """
-    Amelia shoots me a concerned look but remains silent.
-
-    She follows us nonetheless.
-    """
-
-    call lad_day3_morning_deaths
+    call common_day3_morning_lad_psychic_captain_deaths_end
 
     $ stop_music()
 

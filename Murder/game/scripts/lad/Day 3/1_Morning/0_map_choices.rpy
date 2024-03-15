@@ -312,43 +312,6 @@ label lad_day3_morning_garden:
 
     return
 
-label lad_day3_morning_meeting_captain:
-
-    captain """
-    At last, living, breathing souls.
-
-    I was starting to feel like I was in a ghost house.
-    """
-
-    psychic """
-    We feel the same. You're the first person we've encountered today as well.
-    """
-
-    lad """
-    Do you have any idea what's going on?
-    """
-
-    captain """
-    Nothing concrete. All I know is, I don't like it.
-    
-    People don't just vanish from their homes without reason.
-    """
-
-    psychic """
-    They certainly don't.
-    """
-
-    captain """
-    And then there's the matter of the suspicious deaths.
-
-    I could've dismissed them as bad luck yesterday, but now... I'm not so certain.
-    """
-
-    """
-    The conversation lingers in the air, a heavy silence stretching between us.
-    """
-
-    return
 
 label lad_day3_morning_entrance_hall:
 
@@ -388,7 +351,7 @@ label lad_day3_morning_entrance_hall:
     Soon enough, Captain Sinha comes into view, descending the staircase to join us on the ground floor.
     """
 
-    call lad_day3_morning_meeting_captain
+    call common_day3_morning_meeting_captain
 
     psychic """
     Staying put won't give us any answers.
