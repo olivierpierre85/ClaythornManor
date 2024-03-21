@@ -1,11 +1,21 @@
 label common_day3_afternoon_lad_psychic_captain_discussion:
 
     captain """
-    I just tried the phone, and it's not working.
+    I believe I've looked absolutely everywhere now.
 
-    We can't call for help.
+    There is no trace of anyone.
 
-    I believe we don't have a choice but to leave this place.
+    I also tried to use the telephone, and it's not working.
+
+    Thus, there is no way for us to call for help.
+    """
+
+    pause 1.0
+
+    """
+    The way I see it now, we don't have many options left.
+    
+    I believe we must leave this place.
 
     The longer we stay, the more at risk we are.
     """
@@ -26,16 +36,17 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
     But Miss Claythorn said...
     """
 
-    """
-    She stops mid-sentence, realizing the implication.
-    """
+    if current_character.text_id == "lad":
+        """
+        She stops mid-sentence, realising the implication.
+        """
 
     psychic """
     So you believe they never called.
 
     That the police have no idea about what's happened here.
 
-    She lied to us.
+    That she lied to us.
     """
 
     captain """
@@ -59,7 +70,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
 
     I've thought about it, and I have no clue why we were all invited here.
 
-    I'm sure it wasn't to give us any money.
+    I'm certain it wasn't to give us any money.
 
     In any case, all I know is we need to leave as soon as possible.
     """
@@ -99,7 +110,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
 
     Though, that's far from ideal.
 
-    Maybe one of us should stay with you.
+    Perhaps one of us should stay with you.
     """
 
     psychic """
@@ -115,3 +126,5 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
 
     What do you think, Mister Harring?
     """
+
+    return

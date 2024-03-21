@@ -159,7 +159,6 @@ label lad_day3_stay:
 
     You both go, I'll finish preparing the table.
     """
-    
 
     psychic """
     Very well.
