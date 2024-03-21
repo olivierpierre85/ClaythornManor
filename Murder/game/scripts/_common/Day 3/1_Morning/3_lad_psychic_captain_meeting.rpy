@@ -129,7 +129,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
         Pale as a sheet, his eyes frozen in a ghastly stare.
 
-        Miss Baxter lets out a small scream.
+        Miss Baxter almost screams.
         """
     else:
         """
@@ -137,10 +137,8 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
         Blood is all over him.
 
-        I let out a scream.
+        I let out a gasp.
         """
-
-    #TODO: add woman scream?
 
     captain """
     Miss Baxter, please leave the room.
@@ -189,7 +187,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
     captain """
     I'm sorry, but it's too late.
 
-    I've seen enough dead people to know. He's been gone for a while.
+    I've seen enough dead people to know. He's been gone for a long time.
 
     Likely since last night.
     """
@@ -264,11 +262,45 @@ label common_day3_morning_lad_psychic_captain_deaths_end:
     #     """
 
     captain """
-    I'm afraid we couldn't find Miss Marsh.
+    I'm afraid we haven't been able to find Miss Marsh.
 
     Her room was locked, so we forced it open.
-    
+
     But it was all for naught, as it was empty.
     """
+
+    psychic """
+    Well, what should we do now?
+    """
+
+    captain """
+    You both seem a bit shaken up.
+
+    That's not surprising, given what you've witnessed.
+
+    It's easier for me. 
+    
+    Sadly, I've seen my share of dead people.
+
+    So I suggest you two rest for a bit while I continue to explore the manor.
+
+    I'll be back soon.
+    """
+
+    if current_character.text_id == "lad":
+        """
+        I feel like I should accompany him.
+
+        But he is right, I am exhausted and overwhelmed.
+
+        So I just agree with a nod and sit down.
+        """
+
+    else:
+        """
+        I have no objection to that.
+
+        Ted Harring seems to want to say something, then changes his mind.
+        """
 
     return

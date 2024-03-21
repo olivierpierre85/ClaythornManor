@@ -92,12 +92,8 @@ label psychic_day3_morning:
 
     call common_day3_morning_lad_psychic_captain_deaths_end
 
-    """
-    Well, what now?
-    """
-
     pause 1.0
 
     $ stop_music()
 
-    jump work_in_progress
+    jump psychic_day3_afternoon
