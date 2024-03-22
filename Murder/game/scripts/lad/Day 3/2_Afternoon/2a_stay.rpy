@@ -405,7 +405,7 @@ label lad_day3_afternoon_no_toilet:
     Don't say anything, you need to keep your strength.
     """
 
-    pyschic """
+    psychic """
     No it's too late for that.
 
     I need to confess ... now...
@@ -489,7 +489,7 @@ label lad_day3_afternoon_no_toilet:
 
     Don't come any closer.
     """
-label test:
+
     # TODO: if gun => point the gun at her
     if lad_details.objects.is_unlocked('burned_letter'):
         """
