@@ -12,7 +12,8 @@ $ lad_details.observations.unlock('green_liquid')
 
 $ lad_details.unlock_knowledge('background') 
 
-
+$ play_music('mysterious', 2)
+$ stop_music()
 
 # Change rooms with TRANSITION
 $ change_room('lad_room')

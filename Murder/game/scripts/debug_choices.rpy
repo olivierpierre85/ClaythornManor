@@ -153,6 +153,15 @@ label debug_choices:
             call unlock_psychic
             $ current_character = psychic_details
             jump  psychic_day3_morning
+
+        "psychic_day3_afternoon":
+            $ psychic_details.saved_variables["knows_captain_origin"] = True
+            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+            call unlock_psychic
+            $ current_character = psychic_details
+            jump  psychic_day3_afternoon
+
+
             
     return
 

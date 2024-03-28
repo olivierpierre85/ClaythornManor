@@ -41,7 +41,7 @@ label psychic_day3_afternoon:
     Only a monster would leave you alone here in this condition.
     """
 
-    psychic """
+    psychic normal """
     Thank you Mister Haring! 
 
     That means the world to me.
@@ -66,7 +66,8 @@ label psychic_day3_afternoon:
     """
 
     """
-    And then he was on his way.
+    And then he is on his way.
     """
 
-    jump work_in_progress
+    jump psychic_day3_afternoon_stay
+

@@ -18,171 +18,13 @@ label lad_day3_stay:
     If we're lucky, the captain will return with reinforcements, and everything will be fine.
     """
 
-    pause 2.0
-
-    """
-    After waiting anxiously for a while, Amelia stands up.
-    """
-
-    psychic """
-    Well, there's no point in waiting around doing nothing.
-
-    We haven't eaten since yesterday.
-
-    I could check the kitchen to see if there's anything I can prepare.
-    """
-
-    lad """
-    Okay, I'll come with you.
-    """
-
-    $ change_room('basement_stairs', dissolve)
-
-    """
-    We were heading to the lower floor when we heard a shout.
-    """
-
-    nurse """
-    Hello! Hello!
-
-    Is there someone here?
-    """
-
-    psychic """
-    Oh my God, Miss Marsh, you're here!
-    """
-
-    nurse """
-    Of course I am. I'm afraid I overslept.
-
-    I don't feel quite like myself today.
-
-    It's possible I might be sick.
-
-    But where is everybody else?
-    """
-
-    psychic """
-    Oh my dear, we don't know.
-    """
-
-    """
-    We updated her on what happened since this morning.
-
-    When we had finished telling her the story, she remained relatively calm, considering the situation.
-    """
-
-    nurse """
-    Poor Mr. Manning, what a terrible fate.
-
-    And what horror that must have been for you, my dear.
-
-    Are you all right?
-    """
-
-    psychic """
-    I am better now.
-
-    I'll be fine if I don't think about it.
-
-    Speaking of which, we were heading to the kitchen to see if we can prepare some sort of meal.
-    """
-
-    nurse """
-    Right, it's a good idea. We might as well keep busy until someone comes back for us.
-    """
-
-    """
-    And just like that, we headed downstairs to the kitchen.
-    """
-
-    $ change_room('kitchen', dissolve)
-
-    """
-    We look around for something to eat.
-    """
-
-    psychic """
-    There isn't much.
-
-    But I think we can manage a light luncheon if you're not picky.
-    """
-
-    nurse """
-    I'll help you.
-    """
-
-    """
-    I take a seat while they prepare the food.
-
-    I offer to help, but they decline.
-
-    That's probably for the best.
-
-    I couldn't do much to help anyway.
-    """
-
-    $ lad_details.unlock_knowledge('cook') 
-
-    $ change_room('dining_room', dissolve)
-
-    """
-    When everything is ready, I offer to carry the plates to the dining room.
-
-    I set them at our usual places.
-
-    Then I excuse myself.
-    """
-
-    psychic """
-    Where are you going, Mr. Harring?
-
-    It's better if we stick together at all times.
-    """
-
-    lad """
-    I understand, but there's something I need to do alone.
-
-    We haven't had a moment apart the entire day and...
-    """
-
-    psychic """
-    Say no more, I understand.
-
-    I'm in the same situation.
-
-    What about you, Miss Marsh?
-    """
-
-    nurse """
-    Oh, I'm fine, thank you.
-
-    You both go, I'll finish preparing the table.
-    """
-
-    psychic """
-    Very well.
-
-    Let's meet back here in a few minutes then.
-    """
-
-    lad """
-    Of course.
-    """
-
     pause 1.0
 
-    $ change_room("bedrooms_hallway")
-
     """
-    I accompany Miss Baxter to her room.
+    As soon as Captain Sinha has left the room, Amelia stands up.
     """
 
-    psychic """
-    This is where we part.
-
-    We'll meet again in the dining room in a few minutes.
-    """
+    call common_day3_afternoon_lad_psychic_stay
 
     if lad_details.intuitions.is_unlocked('psychic_poisons'):
 
@@ -260,15 +102,7 @@ label lad_day3_afternoon_toilet:
     My head spins, and I feel faint.
     """
 
-    lad surprised """
-    What's happening?
-    """
-
-    """
-    I try to speak further, but no words come out.
-    """
-
-    play sound body_fall
+    call common_day3_afternoon_lad_falls
 
     $ stop_music(2)
 
@@ -475,7 +309,7 @@ label lad_day3_afternoon_no_toilet:
     """
 
     nurse scared """
-    Mister Harring, are you well?
+    Mister Harring, are you all right?
 
     You look unwell.
     """
@@ -491,7 +325,7 @@ label lad_day3_afternoon_no_toilet:
     """
 
     # TODO: if gun => point the gun at her
-    if lad_details.objects.is_unlocked('burned_letter'):
+    if lad_details.objects.is_unlocked('gun'):
         """
         I point the gun at her.
 

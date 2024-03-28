@@ -8,11 +8,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
     I also tried to use the telephone, and it's not working.
 
     Thus, there is no way for us to call for help.
-    """
 
-    pause 1.0
-
-    """
     The way I see it now, we don't have many options left.
     
     I believe we must leave this place.
@@ -34,15 +30,19 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
 
     psychic """
     But Miss Claythorn said...
+
+    She said...
     """
 
     if current_character.text_id == "lad":
         """
         She stops mid-sentence, realising the implication.
         """
+    else:
+        pause 1.0
 
     psychic """
-    So you believe they never called.
+    I see, you believe she never called.
 
     That the police have no idea about what's happened here.
 
@@ -126,5 +126,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
 
     What do you think, Mister Harring?
     """
+
+    pause 1.0
 
     return

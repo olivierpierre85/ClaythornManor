@@ -141,7 +141,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
         """
 
     captain """
-    Miss Baxter, please leave the room.
+    Miss Baxter, please don't stay here.
     """
 
     if current_character.text_id == "lad":
@@ -160,7 +160,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
     captain """
     I regret letting you see that.
 
-    You shouldn't have entered the room.
+    You shouldn't have entered.
     """
 
     psychic surprised """
