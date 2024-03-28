@@ -216,9 +216,9 @@ label lad_day3_afternoon_no_toilet:
     She realizes I am holding her hand.
     """
 
-    # Important TED or Mr Harring? TED is STROng clue
+    # TO OBVIOUS CLUE REMOVEImportant TED or Mr Harring? TED is STROng clue
     psychic """
-    Oh, Ted, I shouldn't have lied to you.
+    Oh, Ted, I shouldn't have lied.
     """
 
     lad """
@@ -228,9 +228,9 @@ label lad_day3_afternoon_no_toilet:
     psychic """
     About everything.
 
-    That... I've never been a psychic, that was just a lie.
+    That... I've never been a psychic...
 
-    I am just an actress...
+    I am ... just an actress...
 
     I...
     """
