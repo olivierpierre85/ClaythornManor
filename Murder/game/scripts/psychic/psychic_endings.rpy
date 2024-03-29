@@ -26,11 +26,28 @@ label psychic_ending_burns:
     """
     The smoke from the fire caused you to lose consciousness.
 
-    Needless to say, you didn't survive this.
+    Needless to say, you didn't survive it.
 
     The whole place burned down.
 
-    A tragic ending for Claythorn Manor, and everyone still within.
+    A tragic ending for Claythorn Manor and everyone still within.
     """
 
     jump ending_generic
+
+label psychic_ending_shot:
+
+    call death_screen_transition
+
+    """
+    You were shot.
+
+    That's on you for believing in the kindness of strangers.
+
+    In times of great pressure, sometimes the best course of action is to fight.
+
+    Keep that in mind for the future.
+    """
+
+    jump ending_generic
+

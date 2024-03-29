@@ -330,33 +330,62 @@ label psychic_day3_afternoon_gun_death:
 
 
 label psychic_day3_afternoon_convince_psychic:
-    #REDO ENTIRELY
-    play music "tense_background_music.ogg" fadeout 2.0
 
-    psychic "Please, we can talk this out. There's been a terrible misunderstanding."
-
-    """
-    The nurse's grip on the gun wavers, her eyes swimming with doubt and fear. For a fleeting moment, hope glimmers in the tense air.
+    psychic """
+    Don't do this. There's been a terrible misunderstanding.
     """
 
-    nurse "I... I don't know what to believe anymore."
+    """
+    The nurse's grip on the gun wavers, her eyes swimming with doubt and fear.
+    """
 
-    psychic "Trust me, no one else needs to get hurt. We can find a peaceful solution to this."
+    nurse """
+    I... I don't know what to believe anymore.
+
+    None of this makes sense.
+
+    But I can't trust you.
+    """
+
+    psychic """
+    Yes, you can. No one else needs to get hurt.
+    
+    We can find a peaceful solution to this.
+    """
 
     """
-    But the shadow of fear is too deep, too consuming. Her finger tightens on the trigger, driven by a desperate instinct to survive.
+    As I am talking, I also move slowly towards her.
+    """
+
+    nurse """
+    Wait!
+
+    Don't come so close; don't...
     """
 
     play sound gunshot
 
     """
-    A loud bang shatters the fragile hope, and darkness rushes in as I collapse to the ground.
+    A loud bang resonates in the room.
+
+    I look into Rosalind Marsh's eyes and see she's terrified.
     """
 
-    psychic "I... just wanted... to help..."
+    nurse """
+    No!
+
+    Look what you made me do!
+    """
+
+    psychic """
+    I... just wanted... to...
+    """
 
     """
-    The world fades away, my final thoughts filled with sorrow for the spiral of fear and violence that brought us here.
+    I look down at my stomach.
+
+    It's all covered in blood.
     """
 
     return
+
