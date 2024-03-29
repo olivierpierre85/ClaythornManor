@@ -220,37 +220,106 @@ label psychic_day3_afternoon_stay:
 
 label psychic_day3_afternoon_gun_death:
 
-    play sound "gunshot.wav"
-
-    psychic "I can't let you do this!"
-
     """
-    In a swift motion, I lunge for the gun, our bodies colliding in a desperate tangle. The struggle is fierce, each of us fueled by our own convictions.
-    """
+    Without hesitation I jump at her.
 
+    It was so fast that she didn't have time to react
     """
-    The sound of a gunshot pierces the air, halting the chaos in an instant.
+    
+    nurse surprised """
+    Wait! I'll shoot.
     """
 
     """
-    Silence descends, heavy and suffocating. I stand frozen, the nurse's body slumping to the ground. The gun, a cold weight in my hand, drops to the floor with a thud.
+    But I am already on her, grasping for the gun.
     """
 
-    psychic "No... This wasn't how it was supposed to end..."
-
-    """
-    Tears cloud my vision as I stare at the aftermath of our struggle. The room spins, a maelstrom of guilt and disbelief.
+    nurse """
+    Stop, I'll ...
     """
 
+    play sound gun
+
     """
-    The sound of footsteps approaches, but I can't move, trapped in a nightmare of my own making.
+    The sound of a gunshot pierces the air, stopping the fight.
+
+    Silence descends, heavy and suffocating. 
+    
+    I stand frozen, the nurse's body slumping to the ground. 
+    
+    The gun, a cold weight in my hand, drops to the floor with her.
     """
+
+    play sound body_fall
+
+    pause 1.0
+
+    # NOTE: She looks at THE body in disbelief. BUT it's not the nurse's body, it's TED HARRING's
+    psychic """
+    No... 
+
+    Tears cloud my vision as I stare at the horror scene in front me. 
+    
+    When I look at the dead body, the room spins, I am overwhelmed with guilt and disbelief.
+
+    As I feel myself falling, I try to grasp the table, but end up catching the table cloth instead.
+
+    It's not strong enough to prevent me from falling.
+    """
+
+    play sound body_fall
+
+    pause 1.0
+
+    """
+    I am on the floor, and in the process, I dragged most of the table contents with me.
+
+    There is broken glass all around me now, broken plates, food...
+
+    I try to stand up but hurt my hands on a shard of glass.
+
+    I fall again on my back.
+    """
+
+    play sound body_fall
+
+    """
+    Maybe I should just rest there.
+
+    I have almost no strength left anyway.
+
+    But I smell something.
+
+    Something burning.
+
+    Only then I see it,
+    
+    a candle. 
+
+    On its side.
+
+    And all around it, flames, 
+
+    going from the carpet to the entrance door.
+
+    This went extremely fast.
+
+    I try to stand up one last time and I manage to be on my feet.
+
+    But I can't see a way out.
+
+    Everything around me is engulfed in smoke so dense it's hard to breathe.
+
+    Then, the little strength I had left leaves me.
+    """
+
+    play sound body_fall
 
     return
 
 
 label psychic_day3_afternoon_convince_psychic:
-
+    #REDO ENTIRELY
     play music "tense_background_music.ogg" fadeout 2.0
 
     psychic "Please, we can talk this out. There's been a terrible misunderstanding."
