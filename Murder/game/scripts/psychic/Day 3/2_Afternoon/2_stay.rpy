@@ -57,7 +57,7 @@ label psychic_day3_afternoon_stay:
     """
 
     """
-    She checks his pulse.
+    She checks his heartbeat.
     """
 
     nurse """
@@ -209,6 +209,7 @@ label psychic_day3_afternoon_stay:
     Don't move. 
     """
 
+    $ time_left = 1
     call run_menu( TimedMenu("psychic_day3_stay", [
         TimedMenuChoice("Try to take the gun by force. It's probably not loaded, right?", 'psychic_day3_afternoon_gun_death', early_exit=True ),
         TimedMenuChoice("It's too risky, try to talk her out of it.", 'psychic_day3_afternoon_convince_psychic', early_exit=True)
@@ -221,9 +222,9 @@ label psychic_day3_afternoon_stay:
 label psychic_day3_afternoon_gun_death:
 
     """
-    Without hesitation I jump at her.
+    Without hesitation, I jump at her.
 
-    It was so fast that she didn't have time to react
+    It happened so swiftly that she didn't have time to react.
     """
     
     nurse surprised """
@@ -231,91 +232,101 @@ label psychic_day3_afternoon_gun_death:
     """
 
     """
-    But I am already on her, grasping for the gun.
+    But I am already upon her, grappling for the gun.
     """
 
+    $ stop_music()
+
     nurse """
-    Stop, I'll ...
+    Stop, or I'll ...
     """
 
     play sound gun
 
     """
-    The sound of a gunshot pierces the air, stopping the fight.
+    The sound of a gunshot pierces the air, ending the fight.
 
     Silence descends, heavy and suffocating. 
     
     I stand frozen, the nurse's body slumping to the ground. 
     
-    The gun, a cold weight in my hand, drops to the floor with her.
+    The gun, now a cold weight in my hand, drops to the floor alongside her.
     """
 
     play sound body_fall
+
+    $ play_music('sad', 3)
 
     pause 1.0
 
     # NOTE: She looks at THE body in disbelief. BUT it's not the nurse's body, it's TED HARRING's
     psychic """
     No... 
-
-    Tears cloud my vision as I stare at the horror scene in front me. 
-    
-    When I look at the dead body, the room spins, I am overwhelmed with guilt and disbelief.
-
-    As I feel myself falling, I try to grasp the table, but end up catching the table cloth instead.
-
-    It's not strong enough to prevent me from falling.
     """
 
-    play sound body_fall
+    """
+    Tears cloud my vision as I stare at the horrific scene before me. 
+    
+    When I look upon the dead body, the room spins, I am overwhelmed with guilt and disbelief.
+
+    As I feel myself falling, I attempt to grasp the table but end up catching the tablecloth instead.
+
+    It is not strong enough to prevent my fall.
+    """
+
+    play sound broken_glass
 
     pause 1.0
 
     """
-    I am on the floor, and in the process, I dragged most of the table contents with me.
+    I am on the floor, having dragged most of the table's contents down with me.
 
-    There is broken glass all around me now, broken plates, food...
+    Broken glass all around me now, shattered plates, spilled food...
 
-    I try to stand up but hurt my hands on a shard of glass.
+    I try to stand up but injure my hands on a shard of glass.
 
-    I fall again on my back.
+    Once again, I fall onto my back.
     """
 
     play sound body_fall
 
     """
-    Maybe I should just rest there.
+    Perhaps I should just rest here.
 
-    I have almost no strength left anyway.
+    I have almost no strength left, anyway.
 
     But I smell something.
 
-    Something burning.
+    Something is burning.
 
-    Only then I see it,
+    Only then do I see it,
     
-    a candle. 
+    a candle from the table, 
 
-    On its side.
+    now lying on the floor.
+    """
 
+    play sound fire loop
+
+    """
     And all around it, flames, 
 
-    going from the carpet to the entrance door.
+    spreading from the carpet to the entrance door.
 
-    This went extremely fast.
+    The fire is spreading rapidly.
 
-    I try to stand up one last time and I manage to be on my feet.
+    I make one last effort to stand and manage to get to my feet.
 
-    But I can't see a way out.
+    But I can see no way out.
 
-    Everything around me is engulfed in smoke so dense it's hard to breathe.
+    Everything surrounding me is engulfed in smoke, so thick it's hard to breathe.
 
-    Then, the little strength I had left leaves me.
+    Upon this sight, the little strength I had left ebbs away.
     """
 
     play sound body_fall
 
-    return
+    jump psychic_ending_burns
 
 
 label psychic_day3_afternoon_convince_psychic:
@@ -336,7 +347,7 @@ label psychic_day3_afternoon_convince_psychic:
     But the shadow of fear is too deep, too consuming. Her finger tightens on the trigger, driven by a desperate instinct to survive.
     """
 
-    play sound "gunshot.wav"
+    play sound gunshot
 
     """
     A loud bang shatters the fragile hope, and darkness rushes in as I collapse to the ground.
