@@ -33,7 +33,9 @@ label lad_day3_afternoon:
 
     $ play_music('mysterious')
 
-    call common_day3_afternoon_lad_psychic_captain_discussion
+    call common_day3_afternoon_lad_psychic_captain_discussion_1
+
+    call common_day3_afternoon_lad_psychic_captain_discussion_2
     
     $ lad_day3_escape_menu = TimedMenu("lad_day3_escape_menu", [
         TimedMenuChoice('We could use the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition='lad_details.saved_variables["day3_seen_car"]'),

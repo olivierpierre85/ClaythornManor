@@ -17,9 +17,8 @@ label psychic_ending_lord:
 
 
 label psychic_ending_burns:
-
-    # $ lad_details.endings.unlock('poisoned')
-    # $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('poisoned'))
+        
+    $ psychic_details.intuitions.unlock('leave_castle')    
     
     call death_screen_transition
 
@@ -33,6 +32,8 @@ label psychic_ending_burns:
     A tragic ending for Claythorn Manor and everyone still within.
     """
 
+    $ psychic_details.endings.unlock('burned')
+
     jump ending_generic
 
 label psychic_ending_shot:
@@ -42,12 +43,15 @@ label psychic_ending_shot:
     """
     You were shot.
 
-    That's on you for believing in the kindness of strangers.
+    That is on you for trusting strangers.
 
-    In times of great pressure, sometimes the best course of action is to fight.
+    In tough situations, sometimes the best course of action is to fight.
 
     Keep that in mind for the future.
     """
 
+    $ psychic_details.endings.unlock('shot')
+
     jump ending_generic
+
 

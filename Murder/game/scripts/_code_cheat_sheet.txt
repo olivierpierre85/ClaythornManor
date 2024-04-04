@@ -18,6 +18,9 @@ $ lad_details.unlock_knowledge('background')
 $ change_room('lad_room')
 $ change_room('lad_room', dissolve)
 
+# Stay same room, but wait
+call wait_screen_transition()
+
 MUSIC SOUND
 
 $ play_music('mysterious', 2)

@@ -77,7 +77,6 @@ label psychic_day3_morning:
 
     call common_day3_morning_lad_psychic_tea_room_2
 
-    # Keep full story or just a gist?
     call common_day3_morning_lad_psychic_captain_death_manning
 
     """

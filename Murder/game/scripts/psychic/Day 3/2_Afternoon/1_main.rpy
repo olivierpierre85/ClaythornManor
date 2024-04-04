@@ -33,7 +33,31 @@ label psychic_day3_afternoon:
 
     $ play_music('mysterious')
 
-    call common_day3_afternoon_lad_psychic_captain_discussion
+    call common_day3_afternoon_lad_psychic_captain_discussion_1
+    
+    """
+    WHATTTTT
+    """
+    
+    if psychic_details.intuitions.is_unlocked('leave_castle'):
+
+        """
+        Something isn't right.
+
+        I can feel it.
+
+        I know it makes no sense to go out right now, but something compels me to get out of here immediately.
+        """
+
+        $ time_left = 1
+        call run_menu( TimedMenu("psychic_day3_stay", [
+            TimedMenuChoice("Let's not take anymore risk and leave this place", 'psychic_day3_afternoon_escape', early_exit=True),        
+            TimedMenuChoice("I am not going out in this weather", 'common_day3_afternoon_lad_psychic_captain_discussion_2', early_exit=True),
+            ])
+        )        
+
+    else:
+        call common_day3_afternoon_lad_psychic_captain_discussion_2
 
     lad """
     Of course, I'll stay.

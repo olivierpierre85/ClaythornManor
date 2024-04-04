@@ -52,7 +52,11 @@ label init_psychic:
             CharacterInformation(6, "racist", "She believes only white people come from England.")
         ]
         psychic_important_choices = CharacterInformationList([])
-        psychic_endings = CharacterInformationList([])
+        
+        psychic_endings = CharacterInformationList ([
+            CharacterInformation(1, "burned", "You burn with the Manor", type="ending", image_file="gun_downed"), 
+            CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", type="ending", image_file="gun"),
+        ])
 
         psychic_observations = CharacterInformationList ([    
                 CharacterInformation(1, "lord", "Lord Claythorn is 111 years old", type="observation", image_file="poison") 
@@ -60,6 +64,13 @@ label init_psychic:
             notification_text = "You have made a new observation",
             notification_sound = "audio/sound_effects/writing_short.ogg"
         )  
+
+        psychic_intuitions = CharacterInformationList ([            
+                CharacterInformation(1, "leave_castle", "Don't stay in the manor more than you have too.", type="intuition", image_file="gun")
+            ],
+            notification_text = "You have a new intuition",
+            notification_sound = "audio/sound_effects/writing_short.ogg"
+        )
 
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
@@ -72,7 +83,7 @@ label init_psychic:
             information_list = psychic_extra_information,
             important_choices = psychic_important_choices,
             endings = psychic_endings,
-            intuitions = CharacterInformationList([]),
+            intuitions = psychic_intuitions,
             observations = psychic_observations,
             objects = CharacterInformationList([]),
             saved_variables = psychic_init_variables

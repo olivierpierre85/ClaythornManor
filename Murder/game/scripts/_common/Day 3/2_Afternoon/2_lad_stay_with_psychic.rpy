@@ -101,7 +101,6 @@ label common_day3_afternoon_lad_psychic_stay:
         So we went downstairs.
         """
 
-
     $ change_room('kitchen', dissolve)
 
     """
@@ -198,29 +197,6 @@ label common_day3_afternoon_lad_psychic_stay:
 
     pause 1.0
 
-    $ change_room("bedrooms_hallway", dissolve)
-
-    if current_character.text_id == "lad":
-        """
-        I accompany Miss Baxter to her room.
-        """
-    elif current_character.text_id == "psychic":
-        """
-        Mister Harring escorts me to my room.
-        """
-
-    psychic """
-    This is where we part.
-
-    We'll meet again in the dining room in a few minutes.
-    """
-
-    lad """
-    Alright, see you soon.
-    """
-
-    pause 1.0
-
     return
 
 
@@ -233,8 +209,6 @@ label common_day3_afternoon_lad_falls:
 
     Why am I...
     """
-
- 
 
     if current_character.text_id == "lad":
         """

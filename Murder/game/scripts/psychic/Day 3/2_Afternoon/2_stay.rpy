@@ -6,14 +6,20 @@ label psychic_day3_afternoon_stay:
 
     call common_day3_afternoon_lad_psychic_stay
 
-    $ change_room('dining_room', dissolve)
+    """
+    We both go on to our room, leaving Amelia Baxter alone in the dining room.
+    """
+
+    call wait_screen_transition()
 
     """
-    Rosalind Marsh and Ted Harring are already seated when I come back.
+    I did not waste time going to my room and back, but Rosalind Marsh and Ted Harring are already seated when I come back.
+
+    Ted Harring must have been very fast, I suppose he was scared to stay alone for too long.
 
     We start eating in silence, each deep in our own thoughts.
     """
-    
+
     pause 2.0
 
     """
@@ -210,9 +216,9 @@ label psychic_day3_afternoon_stay:
     """
 
     $ time_left = 1
-    call run_menu( TimedMenu("psychic_day3_stay", [
-        TimedMenuChoice("Try to take the gun by force. It's probably not loaded, right?", 'psychic_day3_afternoon_gun_death', early_exit=True ),
-        TimedMenuChoice("It's too risky, try to talk her out of it.", 'psychic_day3_afternoon_convince_psychic', early_exit=True)
+    call run_menu( TimedMenu("psychic_day3_stay", [        
+        TimedMenuChoice("Try to talk her", 'psychic_day3_afternoon_convince_psychic', early_exit=True),
+        TimedMenuChoice("Try to take the gun by force. It's probably not loaded anyway", 'psychic_day3_afternoon_gun_death', early_exit=True )
         ])
     )
 
@@ -322,6 +328,10 @@ label psychic_day3_afternoon_gun_death:
     Everything surrounding me is engulfed in smoke, so thick it's hard to breathe.
 
     Upon this sight, the little strength I had left ebbs away.
+
+    As I am about to lose consciousness, my last feeling is a strong sense.
+
+    I never should have stayed here, I should have left when I had the chance.
     """
 
     play sound body_fall
@@ -360,10 +370,10 @@ label psychic_day3_afternoon_convince_psychic:
     nurse """
     Wait!
 
-    Don't come so close; don't...
+    Don't come so close, don't...
     """
 
-    play sound gunshot
+    play sound gun
 
     """
     A loud bang resonates in the room.
@@ -387,5 +397,5 @@ label psychic_day3_afternoon_convince_psychic:
     It's all covered in blood.
     """
 
-    return
+    jump psychic_ending_shot
 

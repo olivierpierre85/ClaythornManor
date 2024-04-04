@@ -77,6 +77,7 @@ label debug_choices:
             $ unlock_map('broken_room')
             $ unlock_map('doctor_room')
             $ lad_details.saved_variables["day2_believe_psychic"] = True
+            
             jump lad_day3_morning
         
         "lad_day3_afternoon":
@@ -152,6 +153,7 @@ label debug_choices:
             $ psychic_details.saved_variables["knows_captain_real_origin"] = True
             call unlock_psychic
             $ current_character = psychic_details
+
             jump  psychic_day3_morning
 
         "psychic_day3_afternoon":
@@ -159,6 +161,8 @@ label debug_choices:
             $ psychic_details.saved_variables["knows_captain_real_origin"] = True
             call unlock_psychic
             $ current_character = psychic_details
+            $ psychic_details.intuitions.unlock('leave_castle')   
+            $ psychic_details.endings.unlock('burned')
             jump  psychic_day3_afternoon
 
 

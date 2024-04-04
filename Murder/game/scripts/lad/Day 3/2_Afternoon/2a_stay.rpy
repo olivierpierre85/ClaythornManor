@@ -26,6 +26,24 @@ label lad_day3_stay:
 
     call common_day3_afternoon_lad_psychic_stay
 
+    $ change_room("bedrooms_hallway", dissolve)
+
+    """
+    I accompany Miss Baxter to her room.
+    """
+
+    psychic """
+    This is where we part.
+
+    We'll meet again in the dining room in a few minutes.
+    """
+
+    lad """
+    Alright, see you soon.
+    """
+
+    pause 1.0
+
     if lad_details.intuitions.is_unlocked('psychic_poisons'):
 
         """

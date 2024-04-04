@@ -1,4 +1,4 @@
-label common_day3_afternoon_lad_psychic_captain_discussion:
+label common_day3_afternoon_lad_psychic_captain_discussion_1:
 
     captain """
     I believe I've looked absolutely everywhere now.
@@ -75,8 +75,23 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
     In any case, all I know is we need to leave as soon as possible.
     """
 
+    return
+
+
+label common_day3_afternoon_lad_psychic_captain_discussion_2:
+    
+    # Having intuition, decides to die anyway
+    if current_character.text_id == "psychic" and psychic_details.intuitions.is_unlocked('leave_castle'):
+        """
+        I disregard the uneasy feeling I've just experienced.
+
+        It's probably just nerves. 
+        
+        I definitely should stay here.
+        """
+
     psychic """
-    But how?
+    But how could we leave?
 
     The nearest town is miles away.
 
@@ -85,9 +100,10 @@ label common_day3_afternoon_lad_psychic_captain_discussion:
     And even if I could, I'm not prepared for such a journey.
     """
 
-    """
-    Captain Sinha and I consider this for a moment.
-    """
+    if current_character.text_id == "lad":
+        """
+        Captain Sinha and I consider this for a moment.
+        """
 
     captain """
     You might be right.
