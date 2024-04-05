@@ -61,13 +61,13 @@ label psychic_ending_escape:
     call survive_screen_transition
 
     """
-    You made it!
+    You've made it!
 
-    And you manage to save one person with you.
+    And you've managed to save one person with you.
 
     That's not bad, and you could stop there.
 
-    Not everybody needs an happy ending.
+    Not everybody needs a happy ending.
 
     And this one is as good as any.
 
@@ -76,4 +76,7 @@ label psychic_ending_escape:
     Or to keep playing.
     """
 
+    $ psychic_details.endings.unlock('escape')
+
     jump survived_generic
+

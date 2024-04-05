@@ -49,7 +49,7 @@ label psychic_day3_afternoon_escape:
 
     Captain Sinha has a large coat and sturdy boots with him.
 
-    Ted Harrington, on the other hand, doesn't seem to have changed his clothes at all.
+    Ted Harring, on the other hand, doesn't seem to have changed his clothes at all.
     """
 
     captain """
@@ -67,7 +67,9 @@ label psychic_day3_afternoon_escape:
     """
     We've been walking for a couple of miles already.
     
-    I am struggling to keep up but, besides that, everything is going smoothly, maybe too smoothly.
+    I am struggling to keep up but, besides that, everything is going smoothly.
+    
+    Maybe too smoothly.
     
     I stop to take a brief break.
     
@@ -76,7 +78,7 @@ label psychic_day3_afternoon_escape:
     Then...
     """
 
-    $ play_music('danger', loop=True)
+    $ play_music('danger')
 
     psychic """
     Captain, could you come and see something?
@@ -205,7 +207,7 @@ label psychic_day3_afternoon_escape:
     """
     He collapses after saying that.
 
-    There's no need to try to carry him any more.
+    There's no need to carry him any more.
 
     So I leave him and try to run to Ted Harring.
 
@@ -215,18 +217,18 @@ label psychic_day3_afternoon_escape:
     """
 
     $ stop_music()
+    
+    pause 1.0 
 
     $ change_room('police_station', dissolve)
+
+    $ play_music('end_credits')
 
     """
     I went as fast as I could but was never able to catch up with Ted Harring.
 
     At least until I reached the town.
-    """
-    
-    $ play_music('end_credits')
 
-    """
     I went straight to the police station and there he was.
 
     When I entered, he looked embarrassed to see me.

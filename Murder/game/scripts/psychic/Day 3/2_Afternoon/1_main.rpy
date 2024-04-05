@@ -35,10 +35,6 @@ label psychic_day3_afternoon:
 
     call common_day3_afternoon_lad_psychic_captain_discussion_1
     
-    """
-    WHATTTTT
-    """
-    
     if psychic_details.intuitions.is_unlocked('leave_castle'):
 
         """

@@ -56,6 +56,7 @@ label init_psychic:
         psychic_endings = CharacterInformationList ([
             CharacterInformation(1, "burned", "You burn with the Manor", type="ending", image_file="gun_downed"), 
             CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", type="ending", image_file="gun"),
+            CharacterInformation(2, "escape", "You escape with Ted Harring", type="ending", image_file="gun"),
         ])
 
         psychic_observations = CharacterInformationList ([    
