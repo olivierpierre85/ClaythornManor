@@ -2,7 +2,7 @@ label captain_introduction:
 
     $ captain_details.add_checkpoint("captain_introduction") 
     
-    call change_time(17,00, 'Evening', 'Friday', hide_minutes = True)
+    call change_time(17, 00, 'Evening', 'Friday', hide_minutes = True)
 
     scene train_inside
 
@@ -11,7 +11,45 @@ label captain_introduction:
     $ play_music('chill')
 
     """
-    TODO intro captain
+    I don't like it.
+
+    I don't like it one bit.
+
+    I am committing fraud, that's the only way to put it.
+
+    I don't understand where Lady Claythorn got the idea of this "heroic action" of mine.
+
+    She most certainly mistook me for another Indian soldier.
+
+    God knows it wouldn't be the first time.
+
+    Yet, her invitation was so vague it could still apply to me.
+
+    I look at it again, mostly trying to convince myself.
+    """
+
+    letter """
+    "... as a thank you for all the lives you saved during the war, I would ..."
+    """
+
+    """
+    Yet, I am sure I saved lives...
+
+    ... technically.
+
+    Many soldiers died because they didn't receive their rations on time.
+
+    Or because they didn't have the proper winter clothing.
+
+    But I know that can't be what she meant.
+
+    Well, it's too late now.
+
+    I don't have any choice but to act the part.
+    
+    I should be forthright, authoritative, and act as if I am used to leading dozens of men to their deaths.
+
+    How hard could that be?
     """
 
     play sound train_stopping

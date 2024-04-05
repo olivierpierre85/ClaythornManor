@@ -108,8 +108,9 @@ label debug_choices:
             $ current_character = psychic_details
             jump psychic_introduction
         
-        # "captain_introduction":
-        #     jump captain_introduction
+        "captain_introduction":
+            $ current_character = captain_details
+            jump captain_introduction
 
         # "psychic_day1_evening":
         #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
