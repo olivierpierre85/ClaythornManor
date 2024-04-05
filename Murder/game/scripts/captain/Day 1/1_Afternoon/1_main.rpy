@@ -82,4 +82,6 @@ label captain_introduction:
     Let's see how she likes being forced to listen to something she doesn't want to.
     """
 
+    jump work_in_progress
+
 
