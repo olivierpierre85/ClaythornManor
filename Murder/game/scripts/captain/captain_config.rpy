@@ -13,10 +13,10 @@ label init_captain:
         # Character Class
         captain_extra_information = [
             CharacterInformation(0, "wars",     "A veteran of several wars, he fought in Burma, China, and in the Great War."), 
-            CharacterInformation(10, "talker",  "Likes to tell stories in front of an audience."),
-            CharacterInformation(20, "age",     "54 years old."),
+            CharacterInformation(10, "talker",  "Likes to tell stories in front of an audience.", is_important = True),
+            CharacterInformation(20, "age",     "54 years old.", is_important = True),
             CharacterInformation(30, "mansion", "He knows a a lot about victorian mansions and their renovations."),
-            CharacterInformation(60, "ptsd", "scared of loud noises because of the war. Cowardly hide in his last battle. injured himself to get out of duty,", is_important = True),
+            CharacterInformation(60, "lie", "He pretends to be a captain.", is_important = True),
         ]
         captain_important_choices = CharacterInformationList([])
         captain_endings = CharacterInformationList([])

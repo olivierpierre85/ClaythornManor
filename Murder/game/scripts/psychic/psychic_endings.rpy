@@ -36,6 +36,7 @@ label psychic_ending_burns:
 
     jump ending_generic
 
+
 label psychic_ending_shot:
 
     call death_screen_transition
@@ -55,3 +56,24 @@ label psychic_ending_shot:
     jump ending_generic
 
 
+label psychic_ending_escape:
+    
+    call survive_screen_transition
+
+    """
+    You made it!
+
+    And you manage to save one person with you.
+
+    That's not bad, and you could stop there.
+
+    Not everybody needs an happy ending.
+
+    And this one is as good as any.
+
+    So it's up to you to just stop,
+
+    Or to keep playing.
+    """
+
+    jump survived_generic

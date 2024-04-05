@@ -1,15 +1,15 @@
 label psychic_day3_afternoon_escape:
 
     psychic """
-    You are right.
+    You're right.
 
-    I can't stay one minute more in this cursed place.
+    I can't stay one more minute in this cursed place.
     """
 
     captain """
     Are you sure?
 
-    It's not going to be an easy walk.
+    It won't be an easy walk.
     """
 
     psychic """
@@ -17,13 +17,13 @@ label psychic_day3_afternoon_escape:
     """
 
     captain """
-    Very well, let's get ready before leaving then.
+    Very well, let's get ready before we leave then.
 
-    I suggest we all get our more comfortable shoes, warm clothes and leave everything else here.
+    I suggest we all put on our most comfortable shoes, warm clothing and leave everything else here.
 
-    No need to be ecombered by our luggages. Hopefully we will come back to get them soon enough.
+    No need to be encumbered by our luggage. Hopefully, we will come back soon enough to retrieve it.
 
-    Let's get ready and meet in the main hall in 15 minutes then.
+    Let's get ready and meet in the main hall in 15 minutes.
 
     Do you agree?
     """
@@ -40,22 +40,24 @@ label psychic_day3_afternoon_escape:
 
     $ change_room('great_hall', dissolve)
 
+    # TODO on her room there is Rosalind Marsh, she stabs her. NEW SCENE WHEN ENDING REACHED
+    # TODO change grab what I need by something implying I killed Rosalind Marsh
     """
-    I rush to my room, take back what I need and go down the hall as fast as possible.
+    I rush to my room, grab what I need, and hurry down to the hall as fast as possible.
 
-    The other are already there.
-    
-    Captain Sinha has a large coat and big boots with him.
+    The others are already there.
 
-    Ted Harring on the other hand doesn't seem to have changed clothes at all.
+    Captain Sinha has a large coat and sturdy boots with him.
+
+    Ted Harrington, on the other hand, doesn't seem to have changed his clothes at all.
     """
 
     captain """
-    All right, if every one is ready, let's leave then.
+    All right, if everyone is ready, let's set out.
     """
 
     """
-    We then proceed to exit the house, leaving it's sinister shade behind us.
+    We then proceed to exit the house, leaving its impressive shadow behind us.
     """
 
     $ change_room('forest_road', dissolve)
@@ -63,23 +65,21 @@ label psychic_day3_afternoon_escape:
     $ stop_music()
 
     """
-    We have been walking a couple of miles already and everything is going smoothly, maybe too smoothly.
-
-    Except for the fact that I am trailing behind Ted Harring and Sushil Sinha.
-
-    I am clearly not build for this kind of activity
-
-    I stop for a while to take a little break.
+    We've been walking for a couple of miles already.
     
-    As I catching my break, look at the forest surrounding us.
-
+    I am struggling to keep up but, besides that, everything is going smoothly, maybe too smoothly.
+    
+    I stop to take a brief break.
+    
+    As I catch my breath, I look at the forest surrounding us.
+    
     Then...
     """
 
-    $ play_music('danger', 2)
+    $ play_music('danger', loop=True)
 
     psychic """
-    Captain, could come and see something?
+    Captain, could you come and see something?
     """
 
     captain """
@@ -87,54 +87,53 @@ label psychic_day3_afternoon_escape:
     """
 
     """
-    He retrace his steps to me level, while Ted Harring keeps on walking ahead.
+    He retraces his steps to my level, while Ted Harring continues walking ahead.
     """
 
     psychic """
-    Can you look this way, behind that huge oak tree.
+    Can you look over there, behind that huge oak tree?
 
-    I believe I saw something.
+    I thought I saw something.
 
-    I might be imagining things but it looked like a person.
+    I might be imagining things, but it looked like a person.
     """
 
     captain """
-    I can spot the tree, but see no one.
+    I can spot the tree but see no one.
     """
 
     psychic """
-    I don't see it anymore, but it was there a second ago.
+    I don't see it anymore, but it was definitely there a second ago.
 
-    I am certain of it.
+    I'm sure of it.
     """
 
     captain """
-    All right, I will go and check quickly.
+    Alright, I'll go and check quickly.
     """
 
     """
-    Without hesitation, he rush towards the large tree ahead.
+    Without hesitation, he rushes towards the large tree ahead.
     """
 
     play sound gun 
 
-
     psychic """
-    Captain !!
+    Captain!!
     """
 
     """
-    He stops right in his tracks.
+    The gunshot stops him in his tracks.
 
-    Looks like he is gonna collapsed but then comes back towards.
+    It looks like he's going to collapse, but then he steadies himself and comes back towards me.
     """
 
-    # I barely have the time to hide the smoking gun in my right hand.
+    # I barely have time to hide the smoking gun in my right hand.
 
     captain """
-    Damn, I didn't see this one coming.
+    Bloody hell, I didn't see that one coming.
 
-    Somebody his shot at us.
+    Somebody shot at us.
 
     Run!
     """
@@ -142,17 +141,17 @@ label psychic_day3_afternoon_escape:
     """
     He then began to limp as fast as he could.
 
-    I try to help him be carrying him.
+    I try to help him by carrying him.
     """
 
     captain """
-    Stops this nonsense,
+    Stop this nonsense,
 
     Run to safety.
     """
 
     psychic """
-    I can't leave you, you are injured, you need help.
+    I can't leave you; you are injured, you need help.
     """
 
     captain """
@@ -162,7 +161,7 @@ label psychic_day3_afternoon_escape:
     """
 
     """
-    I looked down and see that his shirt is bright red.
+    I looked down and saw that his shirt is bright red.
 
     He is right, the wound looks fatal.
 
@@ -172,13 +171,13 @@ label psychic_day3_afternoon_escape:
     psychic """
     It's not so bad.
 
-    I am sure you've had worst that this.
+    I am sure you've had worse than this.
     """
 
     captain """
-    Yeah right.
+    Yeah, right.
 
-    This weekend is the most action I've seen in my entire life.    
+    If only that were true.
     """
 
     psychic """
@@ -186,22 +185,77 @@ label psychic_day3_afternoon_escape:
     """
 
     captain """
-    Well there is no need to hide it now.
+    No need to hide it now.
 
-    I only fought one battle, and left in the middle of it.
+    This weekend was probably the most dangerous situation I've been in my life.
+
+    I only fought in one battle and left in the middle of it.
 
     I was never a captain.
 
-    I only pretented when I arrived to London because it was the only way to be treated decently.
+    I merely pretended when I arrived in London, because it was the only way to be treated decently.
 
-    I should ..
+    I shouldn't...
 
-    .. not have come here.
+    ...have come here.
     """
 
-    # REjoin ted harring
+    $ captain_details.unlock_knowledge('lie') 
 
-    # Escape TWO, rest is dead
+    """
+    He collapses after saying that.
 
+    There's no need to try to carry him any more.
 
-    jump work_in_progress
+    So I leave him and try to run to Ted Harring.
+
+    But he is already so far away, I can't see him.
+
+    I realise now that he didn't even try to help us.
+    """
+
+    $ stop_music()
+
+    $ change_room('police_station', dissolve)
+
+    """
+    I went as fast as I could but was never able to catch up with Ted Harring.
+
+    At least until I reached the town.
+    """
+    
+    $ play_music('end_credits')
+
+    """
+    I went straight to the police station and there he was.
+
+    When I entered, he looked embarrassed to see me.
+
+    Probably feeling the weight of the guilt of leaving me to an uncertain fate.
+    """
+
+    pause 1.0 
+    
+    """
+    But I was glad he had made it anyway.
+
+    I hugged him and told him about Sushil Sinha.
+
+    He replied that officers were on their way to Claythorn Manor.
+
+    We waited for them for a long time.
+
+    They came back only to confirm what we already knew.
+
+    Sushil Sinha had succumbed to his injuries.
+    
+    There was no one alive at the manor.
+
+    In addition to Samuel Manning, Thomas Moody, and Daniel Baldwin, they also found Rosalind Marsh's body.
+
+    She had been stabbed to death and was lying somewhere in the attic.
+
+    However, they found no trace of Lady Claythorn and her staff.
+    """
+
+    jump psychic_ending_escape

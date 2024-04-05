@@ -200,9 +200,9 @@ label lad_ending_day3_escape:
     
     She didn't even make it to her room.
 
-    Rosalind Marsh was apparently hiding in the attic. 
-
-    But that didn't help her, as she had in the back.    
+    Rosalind Marsh most likely died of the same cause. 
+    
+    Her body was found in the attic. 
 
     We still have no idea where Lady Claythorn and her staff are.
     """
