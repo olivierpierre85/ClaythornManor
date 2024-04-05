@@ -187,15 +187,15 @@ label psychic_day3_afternoon_escape:
     """
 
     captain """
-    No need to hide it now.
+    I've never fought a battle in my life,
 
-    This weekend was probably the most dangerous situation I've been in my life.
+    I am an...
 
-    I only fought in one battle and left in the middle of it.
+    ...administrative officer.
 
-    I was never a captain.
+    This weekend was definitely the most dangerous...
 
-    I merely pretended when I arrived in London, because it was the only way to be treated decently.
+    ...situation I've ever been in.
 
     I shouldn't...
 
@@ -213,7 +213,7 @@ label psychic_day3_afternoon_escape:
 
     But he is already so far away, I can't see him.
 
-    I realise now that he didn't even try to help us.
+    I realise that he didn't even try to help us.
     """
 
     $ stop_music()

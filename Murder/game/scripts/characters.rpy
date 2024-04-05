@@ -52,7 +52,7 @@ label init_characters:
         # 3. The Doctor
         doctor_extra_information = [
             CharacterInformation(0, "background", "He's a doctor and runs an hospital.", is_important = True), 
-            CharacterInformation(0, "heroic act", "He has stayed at his charity hospital for 10 years. Which is quite an achievement.", is_important = True), 
+            CharacterInformation(0, "heroic_act", "He has stayed at his charity hospital for 10 years. Which is quite an achievement.", is_important = True), 
             CharacterInformation(1, "status", "Not wealthy.", is_important = True),
             CharacterInformation(2, "age", "He is 39 years old."),
             CharacterInformation(3, "addict", "An opium addict.", is_important = True),

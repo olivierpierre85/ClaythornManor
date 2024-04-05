@@ -46,7 +46,7 @@ label init_psychic:
             CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently.", is_important = True), 
             CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house.", is_important = True), 
             CharacterInformation(2, "age", "She was .... SO she must be????"),
-            CharacterInformation(3, "heroic act", "She helped the police to find the kidnapper of a baby.", is_important = True),
+            CharacterInformation(3, "heroic_act", "She helped the police to find the kidnapper of a baby.", is_important = True),
             CharacterInformation(4, "lie", "She is not really a psychic. but an actress", is_important = True),
             CharacterInformation(5, "drive", "Doesn't have a driving license."),
             CharacterInformation(6, "racist", "She believes only white people come from England.")

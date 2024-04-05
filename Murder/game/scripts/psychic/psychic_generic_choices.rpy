@@ -173,7 +173,7 @@ label psychic_generic_heroic_act:
     But tell me. Why were you invited yourself?
     """
 
-    $ psychic_details.unlock_knowledge('heroic act') 
+    $ psychic_details.unlock_knowledge('heroic_act') 
 
     "So I tell her my story."
 
