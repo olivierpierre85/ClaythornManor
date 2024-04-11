@@ -38,7 +38,7 @@ label init_characters:
     define tutorial      = Character("Tutorial", what_style="tutorial_style")
 
     define letter       = Character("Letter", what_style="letter_style")
-    define book       = Character("Book", what_style="letter_style")
+    define book         = Character("Book", what_style="letter_style")
     define butler       = Character("Butler", image="butler")
     define footman      = Character("Footman", image="footman")
     define maid_name    = "Young woman"
@@ -334,6 +334,24 @@ init -100 python:
             for important_choice in self.important_choices.information_list:
                 important_choice.locked = True
 
+        def get_description_full(self):
+            text_with_holes = self.description_long
+            for char_info in self.information_list:
+                placeholder = f'<info:{char_info.text_id}>'
+                
+                if placeholder in text_with_holes:
+                    if char_info.locked:
+                        # Replace each character with '_' if it's a letter or a digit. Keep punctuation as is.
+                        masked_content = ''.join(['_' if c.isalnum() else c for c in char_info.content])
+                        text_with_holes = text_with_holes.replace(placeholder, masked_content)
+                    else:
+                        # When unlocked, wrap the content in <i> </i> to italicize it.
+                        italic_content = f'{{color=#766249}}{{i}}{char_info.content}{{/i}}{{/color}}'
+                        text_with_holes = text_with_holes.replace(placeholder, italic_content)
+            
+            return text_with_holes
+
+
         # ---------------
         # KNOWLEDGE
         # ---------------
@@ -402,10 +420,9 @@ init -100 python:
                     return False
             return True
 
-        # ---------------
-        # Checkpoints
-        # ---------------
-        
+        # ---------------------------------------------------------------------------------------
+        #                                Checkpoints
+        # ---------------------------------------------------------------------------------------
         def add_checkpoint(self, label_id = ""):
             global current_position, current_run, has_been_restarted
 

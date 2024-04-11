@@ -95,7 +95,7 @@ label lad_generic_background_psychic:
     And I am working there as a business associate.
     """
 
-    $ lad_details.unlock_knowledge('background') 
+    $ lad_details.unlock_knowledge('origin') 
 
     psychic """
     Interesting, in what type of business?

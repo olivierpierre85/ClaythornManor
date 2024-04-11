@@ -57,18 +57,6 @@ label init_lad:
         }
 
         # Character Class
-        lad_extra_information = [
-            # knowledge
-            CharacterInformation(0, "origin", "Born and raised in Birmingham."), 
-            CharacterInformation(10, "job", "A seller of stuff..."), 
-            CharacterInformation(11, "thief", "... of stolen stuff apparently."), 
-            CharacterInformation(20, "age", "He is 22 years old. He was only 15 at the end of the war."),
-            CharacterInformation(30, "education", "Not a great reader."),
-            CharacterInformation(40, "poor_drinker", "Can't hold his liqueur."),
-            CharacterInformation(50, "drive", "He never learned how to drive."),
-            CharacterInformation(60, "cook", "He is not much of a cook."),
-            CharacterInformation(70, "poor", "It's rather obvious he is not from the upper class, to say the least.")
-        ]
         lad_important_choices = CharacterInformationList ([
             CharacterInformation(0, "hunt", "You decided to go hunting", type="choice", image_file="gun")
         ])
@@ -101,6 +89,30 @@ label init_lad:
             notification_sound = "audio/sound_effects/writing_short.ogg"
         )
 
+        lad_extra_information = [
+            # knowledge
+            CharacterInformation(0, "origin", "Birmingham"), 
+            CharacterInformation(10, "job", "A seller of stuff..."), 
+            CharacterInformation(11, "thief", "... of stolen stuff apparently."), 
+            CharacterInformation(20, "age", "22 years old. Which means he was only 15"),
+            CharacterInformation(30, "education", "Not a great reader."),
+            CharacterInformation(40, "poor_drinker", "Can't hold his liqueur."),
+            CharacterInformation(50, "drive", "He never learned how to drive."),
+            CharacterInformation(60, "cook", "He is not much of a cook."),
+            CharacterInformation(70, "poor", "It's rather obvious he is not from the upper class, to say the least.")
+        ]
+
+        lad_description_full = """Good Looking young lad. 
+        He is only <info:age> at the end of the war. 
+        Born an raised in <info:origin>, we can't say he's coming from a wealthy family, nor even a decent family.
+        Actually, he didn't even have a family at all. He was raised in an orphanage.
+        Never knew his parents.
+        Such a childhood didn't give him great chances at a good, and, like a large number of people of his age, had to rely on the informal sector for a job.
+        One day he was at the right at the right moment. And against all odds, he did the right thing.
+        Saving a young baby from a burning building, that would make him the subject of an newspaper article.
+        That was enough for Lady Claythorn to invite him to her Manor. But ________ ___ __ __ __
+        """
+
         lad_details  = CharacterDetails(
             text_id = "lad", 
             locked = False,
@@ -108,7 +120,7 @@ label init_lad:
             real_name = "Ted Harring",
             nickname = "The Lad",
             description_short = "Young man",
-            description_long = "Good Looking lad, in his early twenties.",
+            description_long = lad_description_full,
             information_list = lad_extra_information,
             important_choices = lad_important_choices,
             endings = lad_endings,

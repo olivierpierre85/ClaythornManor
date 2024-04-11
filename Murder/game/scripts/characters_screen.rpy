@@ -111,9 +111,9 @@ screen character_details(selected_char):
                     xpos 1000
                     action ShowMenu("characters") 
 
-                text "Description: " color gui.accent_color
-                text selected_char.description_long
+                # text "Description: {color=#f00}Red{/color}" color gui.accent_color
+                text selected_char.get_description_full()
                 
-                for info in selected_char.information_list:
-                    if not info.locked:
-                        text info.content
+                # for info in selected_char.information_list:
+                #     if not info.locked:
+                #         text info.content

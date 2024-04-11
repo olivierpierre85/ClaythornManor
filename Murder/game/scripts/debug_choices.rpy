@@ -110,6 +110,8 @@ label debug_choices:
         
         "captain_introduction":
             $ current_character = captain_details
+            $ lad_details.unlock_knowledge('origin') 
+            $ lad_details.unlock_knowledge('age')
             jump captain_introduction
 
         # "psychic_day1_evening":
