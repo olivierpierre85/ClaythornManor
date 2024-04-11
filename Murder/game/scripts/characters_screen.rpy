@@ -71,12 +71,14 @@ screen character_list(is_selection = False):
 screen character_details(selected_char):
     # $ selected_char = get_char(char_id)
     tag menu #????
-    use game_menu(_("Characters"), scroll="viewport"):
+    use game_menu(_("Characters"), scroll="fixed"):
 
         #style_prefix "characters" #???
 
         hbox:
-            vbox:
+            xoffset 80
+            xminimum 1600
+            vbox yoffset -20:
                 text selected_char.real_name:
                     size 48
                     font gui.name_text_font
@@ -103,17 +105,31 @@ screen character_details(selected_char):
                         style 'progress_bar'
 
                 
-            vbox:
-                xoffset 40 
+            vbox:     
+                xoffset 50
+
+                hbox:
+                    ymaximum 600
+                    # text "Description: {color=#f00}Red{/color}" color gui.accent_color
+                    viewport id "char_description_viewport":
+                        draggable True # This allows the viewport to be dragged, but you can also use scrollbars
+                        mousewheel True # This enables scrolling with the mouse wheel
+                        # Your description text goes here
+                        vbox:
+                            spacing 15
+                            for line in selected_char.get_description_full():
+                                text line:
+                                    font gui.name_text_font
+                            # text selected_char.get_description_full():
+                            #     font gui.name_text_font
+                            #     line_leading  15
+
+                        # You can add more content here if necessary
+                    vbar value YScrollValue("char_description_viewport")
+                
                 textbutton _("Return"): 
+                    yoffset 20
                     xalign 1.0 
                     yalign 0.0
-                    xpos 1000
-                    action ShowMenu("characters") 
-
-                # text "Description: {color=#f00}Red{/color}" color gui.accent_color
-                text selected_char.get_description_full()
-                
-                # for info in selected_char.information_list:
-                #     if not info.locked:
-                #         text info.content
+                    xpos 1350
+                    action ShowMenu("characters")            

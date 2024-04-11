@@ -345,11 +345,11 @@ init -100 python:
                         masked_content = ''.join(['_' if c.isalnum() else c for c in char_info.content])
                         text_with_holes = text_with_holes.replace(placeholder, masked_content)
                     else:
-                        # When unlocked, wrap the content in <i> </i> to italicize it.
+                        # When unlocked, wrap the content in <i> </i> and gui.accent color
                         italic_content = f'{{color=#766249}}{{i}}{char_info.content}{{/i}}{{/color}}'
                         text_with_holes = text_with_holes.replace(placeholder, italic_content)
             
-            return text_with_holes
+            return textwrap.dedent(text_with_holes).split('\n')
 
 
         # ---------------

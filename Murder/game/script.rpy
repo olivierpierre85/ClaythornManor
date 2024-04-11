@@ -5,6 +5,7 @@
 init -1000 python:
     from datetime import datetime, time, timedelta, date
     import copy
+    import textwrap
 
     renpy.music.register_channel("clock", "sfx", loop=False)
     current_music = 'NONE'

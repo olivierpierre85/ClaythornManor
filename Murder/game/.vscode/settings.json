@@ -34,5 +34,6 @@
     "ypos",
     "zorder"
   ],
-  "CodeGPT.apiKey": "CodeGPT Plus Beta"
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "editor.wordWrap": "on"
 }
