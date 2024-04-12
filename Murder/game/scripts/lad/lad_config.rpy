@@ -106,10 +106,10 @@ label init_lad:
         Good Looking young lad. 
         He is only <info:age> at the end of the war.
         Born an raised in <info:origin>, we can't say he's coming from a wealthy family, nor even a decent family. Actually, he didn't even have a family at all. He was raised in an orphanage.
-        Such a childhood didn't give him great chances at a good, and, like a large number of people of his age, had to rely on the informal sector for a job.
+        With such a childhood didn't give him great chances at a good, and, like a large number of people of his age, had to rely on the informal sector for a job.
         One day, he ended up being at the right place at the right moment. And against all odds, he did the right thing. Saving a young baby from a burning building, that would make him the subject of an newspaper article. That was enough for Lady Claythorn to invite him to her Manor.
         His special skills include ___ ___ _. On the other hand, he won't be able to ___ ___ _  or ___ ___ _  if you need.
-                """
+        """
 
         lad_details  = CharacterDetails(
             text_id = "lad", 
