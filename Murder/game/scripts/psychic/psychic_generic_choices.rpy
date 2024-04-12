@@ -183,7 +183,7 @@ label psychic_generic_heroic_act:
 
     psychic "Really? I thought you were older."
 
-    $ lad_details.unlock_knowledge('age') 
+    $ lad_details.description_hidden.unlock('age') 
 
     $ play_music('PREVIOUS')
     
@@ -237,7 +237,7 @@ label psychic_generic_background:
     Well, that doesn't make me feel good.
     """
 
-    $ lad_details.unlock_knowledge('background')
+    $ lad_details.description_hidden.unlock('background')
     $ lad_details.saved_variables['knows_psychic_background'] = True
 
     return

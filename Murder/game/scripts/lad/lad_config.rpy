@@ -57,40 +57,33 @@ label init_lad:
         }
 
         # Character Class
-        lad_important_choices = CharacterInformationList ([
-            CharacterInformation(0, "hunt", "You decided to go hunting", type="choice", image_file="gun")
+        lad_important_choices = CharacterImportantChoiceList ([
+            CharacterInformation(0, "hunt", "You decided to go hunting", image_file="gun")
         ])
 
-        lad_endings = CharacterInformationList ([
-            CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed"), 
-            CharacterInformation(2, "poisoned", "You were poisoned", type="ending", image_file="poisoned"), 
-            CharacterInformation(3, "fell", "You fell on a picked fence", type="ending", image_file="poisoned"), 
+        lad_endings = CharacterEndingList ([
+            CharacterInformation(1, "gunned_down", "You die stoned to death", image_file="gun_downed"), 
+            CharacterInformation(2, "poisoned", "You were poisoned", image_file="poisoned"), 
+            CharacterInformation(3, "fell", "You fell on a picked fence", image_file="poisoned"), 
         ])
 
-        lad_intuitions = CharacterInformationList ([            
-                CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", type="intuition", image_file="gun")
-            ],
-            notification_text = "You have a new intuition",
-            notification_sound = "audio/sound_effects/writing_short.ogg"
+        lad_intuitions = CharacterIntuitionList ([            
+                CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", image_file="gun")
+            ]
         )
 
-        lad_observations = CharacterInformationList ([    
-                CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", type="observation", image_file="poison") 
-            ],
-            notification_text = "You have made a new observation",
-            notification_sound = "audio/sound_effects/writing_short.ogg"
+        lad_observations = CharacterObservationList ([    
+                CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", image_file="poison") 
+            ]
         )  
 
-        lad_objects = CharacterInformationList ([  
-                CharacterInformation(1, "gun", "A empty handgun found in the gun room", type="object", image_file="gun"),
-                CharacterInformation(2, "burned_letter", "A burned letter found in Samuel Manning's room", type="object", image_file="burned_letter")
-            ], 
-            notification_text = "You have found a new object",
-            notification_sound = "audio/sound_effects/writing_short.ogg"
+        lad_objects = CharacterObjectList([  
+                CharacterInformation(1, "gun", "A empty handgun found in the gun room", image_file="gun"),
+                CharacterInformation(2, "burned_letter", "A burned letter found in Samuel Manning's room", image_file="burned_letter")
+            ],
         )
 
-        lad_extra_information = [
-            # knowledge
+        lad_description_hidden = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "origin", "Birmingham"), 
             CharacterInformation(10, "job", "A seller of stuff..."), 
             CharacterInformation(11, "thief", "... of stolen stuff apparently."), 
@@ -100,7 +93,8 @@ label init_lad:
             CharacterInformation(50, "drive", "He never learned how to drive."),
             CharacterInformation(60, "cook", "He is not much of a cook."),
             CharacterInformation(70, "poor", "It's rather obvious he is not from the upper class, to say the least.")
-        ]
+            ], "Ted Harring"
+        )
 
         lad_description_full = """
         Good Looking young lad. 
@@ -119,13 +113,13 @@ label init_lad:
             nickname = "The Lad",
             description_short = "Young man",
             description_long = lad_description_full,
-            information_list = lad_extra_information,
+            description_hidden = lad_description_hidden,
             important_choices = lad_important_choices,
             endings = lad_endings,
             intuitions = lad_intuitions,
             observations = lad_observations,
             objects = lad_objects,
-            saved_variables = copy.deepcopy(lad_init_variables), # copy so the init variables can be used again.
+            saved_variables = copy.deepcopy(lad_init_variables), # copy so the init variables can be use again.
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 

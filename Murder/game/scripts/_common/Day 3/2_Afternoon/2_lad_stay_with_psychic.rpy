@@ -128,7 +128,7 @@ label common_day3_afternoon_lad_psychic_stay:
         I couldn't do much to help anyway.
         """
         
-        $ lad_details.unlock_knowledge('cook') 
+        $ lad_details.description_hidden.unlock('cook') 
 
     elif current_character.text_id == "psychic":
         """

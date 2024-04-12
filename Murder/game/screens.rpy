@@ -335,7 +335,7 @@ screen navigation():
         # In game menu
         else:
             textbutton _("Map") action ShowMenu("manor_map")
-            if seen_tutorial_knowledge:
+            if seen_tutorial_description_hidden:
                 textbutton _("Characters") action ShowMenu("characters")
             # textbutton _("Objects") action ShowMenu("objects")
             if seen_tutorial_timeline:

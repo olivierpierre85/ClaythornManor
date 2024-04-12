@@ -87,7 +87,7 @@ label lad_day2_evening:
             What does this say about me?
             """
 
-            $ lad_details.unlock_knowledge('poor_drinker') 
+            $ lad_details.description_hidden.unlock('poor_drinker') 
 
             # TODO: Achievement. DRUNK OR CHEATED DEATH IF drank poison.
 

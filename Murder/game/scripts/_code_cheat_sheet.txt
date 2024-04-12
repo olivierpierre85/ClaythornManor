@@ -10,7 +10,7 @@ jump work_in_progress
 
 $ lad_details.observations.unlock('green_liquid')
 
-$ lad_details.unlock_knowledge('background') 
+$ lad_details.description_hidden.unlock('background') 
 
 
 

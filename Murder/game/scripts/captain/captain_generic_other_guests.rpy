@@ -139,7 +139,7 @@ label captain_generic_lad_friday_psychic:
     I'll leave it to you to make your own judgment about that.
     """
 
-    $ lad_details.unlock_knowledge('poor')
+    $ lad_details.description_hidden.unlock('poor')
 
     return
 

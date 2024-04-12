@@ -66,7 +66,7 @@ label init_characters:
             nickname = "The Doctor",
             description_short = "Middle-age man",
             description_long = "Serious Middle-age man with glasses.",
-            information_list = doctor_extra_information,
+            description_hidden = doctor_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
             intuitions = CharacterInformationList([]),
@@ -91,7 +91,7 @@ label init_characters:
             nickname = "The Drunk",
             description_short = "Drunk Man",
             description_long = "Old man, looking 'exhausted'.",
-            information_list = drunk_extra_information,
+            description_hidden = drunk_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
             intuitions = CharacterInformationList([]),
@@ -115,7 +115,7 @@ label init_characters:
             nickname = "The Host",
             description_short = "Older Lady",
             description_long = "The lady of the mansion.",
-            information_list = host_extra_information,
+            description_hidden = host_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
             intuitions = CharacterInformationList([]),
@@ -137,7 +137,7 @@ label init_characters:
             nickname = "The Broken Face",
             description_short = "Masked Man",
             description_long = "A man with a mask on his face.",
-            information_list = broken_extra_information,
+            description_hidden = broken_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
             intuitions = CharacterInformationList([]),
@@ -217,7 +217,7 @@ init -100 python:
             self, 
             information_list,
             notification_text = None,
-            notification_sound = None
+            notification_sound = None,
         ):
             self.information_list = information_list
             self.notification_text = notification_text
@@ -234,16 +234,16 @@ init -100 python:
                 if text_id == info.text_id: 
                     return info
         
-        def unlock(self, text_id, notification=True):
+        def unlock(self, text_id):
             for info in self.information_list:
                 if text_id == info.text_id and info.locked:
                     info.locked = False
                     info.discovered = True
-                    if notification:
-                        if self.notification_text:
-                            renpy.notify(self.notification_text)
-                        if self.notification_sound:
-                            renpy.play(self.notification_sound, "sound")
+
+                    if self.notification_text:
+                        renpy.notify(self.notification_text)
+                    if self.notification_sound:
+                        renpy.play(self.notification_sound, "sound")
 
         def is_unlocked(self, text_id):
             for info in self.information_list:
@@ -260,6 +260,85 @@ init -100 python:
 
         def __iter__(self):
             return iter(self.information_list)
+
+    # Extensions of information list
+    class CharacterImportantChoiceList(CharacterInformationList):
+        def __init__(self, important_choice_list):
+            super().__init__(
+                important_choice_list,
+            )
+
+
+    class CharacterEndingList(CharacterInformationList):
+        def __init__(self, ending_list):
+            super().__init__(
+                ending_list,
+            )
+
+
+    class CharacterIntuitionList(CharacterInformationList):
+        def __init__(self, intuition_list):
+            super().__init__(
+                intuition_list,
+                notification_text = "You have a new intuition",
+                notification_sound = "audio/sound_effects/writing_short.ogg"
+            )
+
+
+    class CharacterObservationList(CharacterInformationList):
+        def __init__(self, observation_list):
+            super().__init__(
+                observation_list,
+                notification_text = "You have made a new observation",
+                notification_sound = "audio/sound_effects/writing_short.ogg"
+            )
+
+
+    class CharacterObjectList(CharacterInformationList):
+        def __init__(self, object_list):
+            super().__init__(
+                object_list,
+                notification_text="You have found a new object",
+                notification_sound="audio/sound_effects/writing_short.ogg",
+            )
+
+
+    class CharacterDescriptionHiddenList(CharacterInformationList):
+        def __init__(self, information_list, character_name):
+            super().__init__(
+                information_list,
+            )
+            self.character_name = character_name
+
+        def unlock(self, text_id):
+            global seen_tutorial_description_hidden, seen_tutorial_unlock_character
+            for info in self.information_list:
+                if text_id == info.text_id and info.locked:
+                    # Unlock the info
+                    info.locked = False
+                    info.discovered = True
+                    renpy.notify("You have found information about " + self.character_name)
+                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
+
+                    if self.all_knowledge_unlocked():
+                        # Unlock a character
+                        renpy.pause(2)
+                        renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
+                        renpy.notify("You have unlock a new Character : " + self.character_name)
+                        if not seen_tutorial_unlock_character:
+                            seen_tutorial_unlock_character = True
+                            renpy.call('tutorial_unlock_character')
+            
+            if not seen_tutorial_description_hidden:
+                seen_tutorial_description_hidden = True
+                renpy.call('tutorial_description_hidden')
+
+        def all_knowledge_unlocked(self):
+            for info in self.information_list:
+                if info.locked:
+                    return False
+            return True
+
 
     class CharacterInformation:
         def __init__(
@@ -285,7 +364,7 @@ init -100 python:
         def __init__(
             self, 
             text_id,
-            information_list,
+            description_hidden,
             important_choices,
             endings,      
             intuitions,
@@ -306,7 +385,7 @@ init -100 python:
             self.nickname = nickname
             self.description_short = description_short
             self.description_long = description_long
-            self.information_list = information_list or []
+            self.description_hidden = description_hidden or []
             self.important_choices = important_choices or []
             self.endings = endings or []
             self.intuitions = intuitions or []
@@ -324,19 +403,19 @@ init -100 python:
         
         def reset_information(self):
             for info in self.objects:
-                if info.type in ['observation', 'object']: # will be used after rewrite
+                if info.type in ['observation', 'object']:
                     info.locked = True
             
             for info in self.observations:
-                if info.type in ['observation', 'object']: # will be used after rewrite
+                if info.type in ['observation', 'object']:
                     info.locked = True
 
-            for important_choice in self.important_choices.information_list:
+            for important_choice in self.important_choices.description_hidden:
                 important_choice.locked = True
 
         def get_description_full(self):
             text_with_holes = self.description_long
-            for char_info in self.information_list:
+            for char_info in self.description_hidden:
                 placeholder = f'<info:{char_info.text_id}>'
                 
                 if placeholder in text_with_holes:
@@ -351,58 +430,14 @@ init -100 python:
             
             return textwrap.dedent(text_with_holes).split('\n')
 
-
         # ---------------
-        # KNOWLEDGE
+        # Character Unlocking
         # ---------------
-        def get_knowledge(self):
-            knowledge_list = []
-            for info in self.information_list:
-                if info.type == 'knowledge':
-                    knowledge_list.append(info)
-            return knowledge_list
-
-        def unlock_knowledge(self, text_id):
-            global seen_tutorial_knowledge, seen_tutorial_unlock_character
-            for info in self.get_knowledge():
-                if text_id == info.text_id and info.locked:
-                    # Unlock the info
-                    info.locked = False
-                    info.discovered = True
-                    renpy.notify("You have found information about " + self.get_name())
-                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
-                    # play sound "audio/sound_effects/unlock.ogg"
-
-                    if self.all_knowledge_unlocked():
-                        # Unlock a character
-                        renpy.pause(2)
-                        renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
-                        renpy.notify("You have unlock a new Character : The " + self.text_id)
-                        if not seen_tutorial_unlock_character:
-                            seen_tutorial_unlock_character = True
-                            renpy.call('tutorial_unlock_character')
-            
-            if not seen_tutorial_knowledge:
-                seen_tutorial_knowledge = True
-                renpy.call('tutorial_knowledge')
-        
-        def is_knowledge_unlocked(self, text_id):
-            for info in self.get_knowledge():
-                if text_id == info.text_id:
-                    return not info.locked
-            return False
-
-        def all_knowledge_unlocked(self):
-            for info in self.get_knowledge():
-                if info.locked:
-                    return False
-            return True
-
         def get_character_progress(self):
             total_info = 0
             total_unlocked = 0
             progress = 0
-            for info in self.get_knowledge():
+            for info in self.description_hidden:
                 if info.is_important:
                     total_info += 1
                     if not info.locked:
@@ -415,7 +450,7 @@ init -100 python:
                 return int(total_unlocked / total_info * 100)
 
         def is_character_unlocked(self):
-            for info in self.get_knowledge():
+            for info in self.description_hidden:
                 if info.is_important and info.locked:
                     return False
             return True

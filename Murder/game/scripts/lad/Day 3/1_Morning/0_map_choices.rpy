@@ -234,7 +234,7 @@ label lad_day3_morning_garage:
     It's not like I could afford a car anyway.
     """
 
-    $ lad_details.unlock_knowledge('drive')
+    $ lad_details.description_hidden.unlock('drive')
 
     $ lad_details.saved_variables["day3_seen_car"] = True
 

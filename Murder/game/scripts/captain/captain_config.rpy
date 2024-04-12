@@ -29,7 +29,7 @@ label init_captain:
             nickname = "The Captain",
             description_short = "Older Indian man",
             description_long = "Older man from India.",
-            information_list = captain_extra_information,
+            description_hidden = captain_extra_information,
             important_choices = captain_important_choices,
             endings = captain_endings,
             intuitions = CharacterInformationList([]),

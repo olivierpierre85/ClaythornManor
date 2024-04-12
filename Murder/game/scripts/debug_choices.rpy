@@ -3,7 +3,7 @@ label debug_choices:
 
     $ skip_clock_movement = True
 
-    $ seen_tutorial_knowledge = True
+    $ seen_tutorial_description_hidden = True
     $ seen_tutorial_map = True
     $ seen_tutorial_unlock_character = True
     $ seen_tutorial_timeline = True
@@ -49,9 +49,9 @@ label debug_choices:
             
         #     jump lad_day2_no_hunt
 
-        # "lad_day2_afternoon":
-        #     $ lad_details.objects.unlock('burned_letter')
-        #     jump lad_day2_afternoon
+        "lad_day2_afternoon":
+            $ lad_details.objects.unlock('burned_letter')
+            jump lad_day2_afternoon
             
         # # "lad_day2_afternoon_bedroom":
         # #     jump lad_day2_afternoon_bedroom
@@ -110,8 +110,8 @@ label debug_choices:
         
         "captain_introduction":
             $ current_character = captain_details
-            $ lad_details.unlock_knowledge('origin') 
-            $ lad_details.unlock_knowledge('age')
+            $ lad_details.description_hidden.unlock('origin') 
+            $ lad_details.description_hidden.unlock('age')
             jump captain_introduction
 
         # "psychic_day1_evening":

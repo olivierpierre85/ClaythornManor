@@ -10,7 +10,7 @@ label lad_library_default:
         I can barely read.
         """
 
-        $ lad_details.unlock_knowledge('education')
+        $ lad_details.description_hidden.unlock('education')
 
         """
         There is an open book on a small table.

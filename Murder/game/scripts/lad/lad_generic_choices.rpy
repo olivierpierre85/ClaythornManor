@@ -81,7 +81,7 @@ label lad_generic_age_psychic:
     Life is not easy for the working class.
     """
 
-    $ lad_details.unlock_knowledge('age')
+    $ lad_details.description_hidden.unlock('age')
 
     return
 
@@ -95,7 +95,7 @@ label lad_generic_background_psychic:
     And I am working there as a business associate.
     """
 
-    $ lad_details.unlock_knowledge('origin') 
+    $ lad_details.description_hidden.unlock('origin') 
 
     psychic """
     Interesting, in what type of business?
@@ -129,7 +129,7 @@ label lad_generic_background_psychic:
     I shouldn't push him further.
     """
 
-    $ lad_details.unlock_knowledge('job') 
+    $ lad_details.description_hidden.unlock('job') 
 
     $ psychic_details.saved_variables['knows_lad_background'] = True
 

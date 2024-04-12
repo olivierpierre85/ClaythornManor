@@ -51,7 +51,7 @@ label init_nurse:
             nickname = "The Nurse",
             description_short = "",
             description_long = "Middle-aged woman.",
-            information_list = nurse_extra_information,
+            description_hidden = nurse_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
             intuitions = CharacterInformationList([]),

@@ -81,7 +81,7 @@ label init_psychic:
             nickname = "The Psychic",
             description_short = "Middle-age Woman",
             description_long = "Middle-aged woman, looking a bit eccentric.",
-            information_list = psychic_extra_information,
+            description_hidden = psychic_extra_information,
             important_choices = psychic_important_choices,
             endings = psychic_endings,
             intuitions = psychic_intuitions,
