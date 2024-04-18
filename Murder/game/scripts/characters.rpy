@@ -245,7 +245,6 @@ init -100 python:
             content, 
             locked = True,
             is_important = False,
-            type = 'knowledge',
             image_file = None
         ):
             self.order = order
@@ -253,7 +252,6 @@ init -100 python:
             self.content = content
             self.locked = locked
             self.is_important = is_important
-            self.type = type
             self.image_file = image_file
             self.discovered = False
 
@@ -300,14 +298,12 @@ init -100 python:
         
         def reset_information(self):
             for info in self.objects:
-                if info.type in ['observation', 'object']:
-                    info.locked = True
+                info.locked = True
             
             for info in self.observations:
-                if info.type in ['observation', 'object']:
-                    info.locked = True
+                info.locked = True
 
-            for important_choice in self.important_choices.description_hidden:
+            for important_choice in self.important_choices:
                 important_choice.locked = True
 
         def get_description_full(self):
@@ -546,7 +542,7 @@ init -100 python:
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = i_label,
                     saved_variables = copy.deepcopy(current_character.saved_variables),
-                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
+                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", image_file="gun_downed")
                 )
             )
 
@@ -591,7 +587,7 @@ init -100 python:
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = i_label,
                     saved_variables = copy.deepcopy(current_character.saved_variables),
-                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed")
+                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", image_file="gun_downed")
                 )
             )
 

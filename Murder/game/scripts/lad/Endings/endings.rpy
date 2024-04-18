@@ -102,7 +102,7 @@ label lad_gun_downed_ending:
     call death_screen_transition
 
     # TODO ONE declaration of ENDINGs (not in characterINformation)
-    $ lad_details.add_ending_checkpoint(ending = CharacterInformation(1, "gunned_down", "You die stoned to death", type="ending", image_file="gun_downed"))
+    $ lad_details.add_ending_checkpoint(ending = CharacterInformation(1, "gunned_down", "You die stoned to death", image_file="gun_downed"))
     """
     Well, you're dead.
 
@@ -125,7 +125,7 @@ label lad_ending_day3_poisoned:
 
     call death_screen_transition
     
-    $ lad_details.add_ending_checkpoint(ending = CharacterInformation(2, "poisoned", "You were poisoned", type="ending", image_file="poisoned"))
+    $ lad_details.add_ending_checkpoint(ending = CharacterInformation(2, "poisoned", "You were poisoned", image_file="poisoned"))
 
     """
     You lay on the floor, saliva dripping from your mouth.

@@ -43,26 +43,22 @@ label init_psychic:
             "day2_evening_billiard_room_talk_to_captain": False,
         }
 
-        psychic_important_choices = CharacterInformationList([])
+        psychic_important_choices = CharacterImportantChoiceList([])
         
-        psychic_endings = CharacterInformationList ([
-            CharacterInformation(1, "burned", "You burn with the Manor", type="ending", image_file="gun_downed"), 
-            CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", type="ending", image_file="gun"),
-            CharacterInformation(2, "escape", "You escape with Ted Harring", type="ending", image_file="gun"),
+        psychic_endings = CharacterEndingList ([
+            CharacterInformation(1, "burned", "You burn with the Manor", image_file="gun_downed"), 
+            CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun"),
+            CharacterInformation(2, "escape", "You escape with Ted Harring", image_file="gun"),
         ])
 
-        psychic_observations = CharacterInformationList ([    
-                CharacterInformation(1, "lord", "Lord Claythorn is 111 years old", type="observation", image_file="poison") 
-            ],
-            notification_text = "You have made a new observation",
-            notification_sound = "audio/sound_effects/writing_short.ogg"
+        psychic_observations = CharacterObservationList ([    
+                CharacterInformation(1, "lord", "Lord Claythorn is 111 years old", image_file="poison") 
+            ]
         )  
 
-        psychic_intuitions = CharacterInformationList ([            
-                CharacterInformation(1, "leave_castle", "Don't stay in the manor more than you have too.", type="intuition", image_file="gun")
-            ],
-            notification_text = "You have a new intuition",
-            notification_sound = "audio/sound_effects/writing_short.ogg"
+        psychic_intuitions = CharacterIntuitionList ([            
+                CharacterInformation(1, "leave_castle", "Don't stay in the manor more than you have too.", image_file="gun")
+            ]
         )
 
         psychic_extra_information = CharacterDescriptionHiddenList([
@@ -92,7 +88,7 @@ label init_psychic:
             endings = psychic_endings,
             intuitions = psychic_intuitions,
             observations = psychic_observations,
-            objects = CharacterInformationList([]),
+            objects = CharacterObjectList([]),
             saved_variables = psychic_init_variables
         )
         psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)
