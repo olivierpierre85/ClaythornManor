@@ -292,7 +292,7 @@ label lad_day2_hunt_accident:
 
     pause 1.0
 
-    $ doctor_details.unlock_knowledge('fraud')
+    $ doctor_details.description_hidden.unlock('fraud')
 
     """
     After a while, the footman returns with the others.

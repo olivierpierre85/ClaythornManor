@@ -43,7 +43,7 @@ label doctor_generic_background:
     That one was the worst, of course.
     """
 
-    $ doctor_details.unlock_knowledge('background')
+    $ doctor_details.description_hidden.unlock('background')
      
     $ current_character.saved_variables["knows_doctor_background"] = True
 
@@ -101,7 +101,7 @@ label doctor_generic_manor:
         Well, that's somewhat comforting.
         """
 
-        $ doctor_details.unlock_knowledge('status') 
+        $ doctor_details.description_hidden.unlock('status') 
 
     return
 
@@ -116,7 +116,7 @@ label doctor_generic_age:
         Actually, I'm not sure.
         """
 
-    $ doctor_details.unlock_knowledge('age') 
+    $ doctor_details.description_hidden.unlock('age') 
     
     return
 

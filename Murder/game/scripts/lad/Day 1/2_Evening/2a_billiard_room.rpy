@@ -75,7 +75,7 @@ label lad_day1_evening_billiard_room_bar_1:
     He pretends not to notice my surprise and keeps on talking.
     """
 
-    $ broken_details.unlock_knowledge('mask') 
+    $ broken_details.description_hidden.unlock('mask') 
 
     broken """
     He was already asleep when I arrived. It's impressive that he managed to still be here.
@@ -87,10 +87,11 @@ label lad_day1_evening_billiard_room_bar_1:
     Anyway, I am Thomas Moody.
     """
 
-    $ drunk_details.unlock_knowledge('addict') 
-    $ current_character.saved_variables['knows_doctor_addict'] = True
+    $ drunk_details.description_hidden.unlock('addict') 
 
-    lad "Ted Harring, how do you do."
+    lad """
+    Ted Harring, how do you do.
+    """
 
     broken """
     Nice to meet you mister Harring. I guess you came here for a drink.

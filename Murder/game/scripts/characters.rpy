@@ -47,111 +47,8 @@ label init_characters:
     define lord         = Character(lord_name, image="lord")
 
     python:
-        # 1. The Lad, The Psychic CAPTAIN IN OWN FILE
 
-        # 3. The Doctor
-        doctor_extra_information = [
-            CharacterInformation(0, "background", "He's a doctor and runs an hospital.", is_important = True), 
-            CharacterInformation(0, "heroic_act", "He has stayed at his charity hospital for 10 years. Which is quite an achievement.", is_important = True), 
-            CharacterInformation(1, "status", "Not wealthy.", is_important = True),
-            CharacterInformation(2, "age", "He is 39 years old."),
-            CharacterInformation(3, "addict", "An opium addict.", is_important = True),
-            CharacterInformation(3, "fraud", "He Uses patients for an easy access to drugs.", is_important = True)
-        ]
-        doctor_details  = CharacterDetails(
-            text_id = "doctor", 
-            locked = True,
-            know_real_name = True,
-            real_name = "Daniel Baldwin",
-            nickname = "The Doctor",
-            description_short = "Middle-age man",
-            description_long = "Serious Middle-age man with glasses.",
-            description_hidden = doctor_extra_information,
-            important_choices = CharacterInformationList([]),
-            endings = CharacterInformationList([]),
-            intuitions = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
-            objects = CharacterInformationList([]),
-        )
-        doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
-
-        # 4. The Drunk
-        drunk_extra_information = [
-            CharacterInformation(0, "background", ""), 
-            CharacterInformation(1, "status", ""),
-            CharacterInformation(2, "age", "?"),
-            CharacterInformation(3, "addict", "Likes to drink a bit too much.", is_important = True),
-            CharacterInformation(60, "???", "???", is_important = True),
-        ]
-        drunk_details  = CharacterDetails(
-            text_id = "drunk", 
-            locked = True,
-            know_real_name = True,
-            real_name = "Samuel Manning",
-            nickname = "The Drunk",
-            description_short = "Drunk Man",
-            description_long = "Old man, looking 'exhausted'.",
-            description_hidden = drunk_extra_information,
-            important_choices = CharacterInformationList([]),
-            endings = CharacterInformationList([]),
-            intuitions = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
-            objects = CharacterInformationList([]),
-        )
-        drunk = Character("drunk_details.get_name()", image="drunk", dynamic=True)
-
-        # 5. The Host
-        host_extra_information = [
-            CharacterInformation(0, "todo", "todo", is_important = True), 
-            # CharacterInformation(0, "name", "Her first name is Elisabeth", is_important = True), 
-            CharacterInformation(1, "down_to_earth", "She's not looking down on \"lower\" class people.", is_important = True), 
-            CharacterInformation(60, "???", "???", is_important = True),
-        ]
-        host_details  = CharacterDetails(
-            text_id = "host", 
-            locked = True,
-            know_real_name = True,
-            real_name = "Lady Claythorn",
-            nickname = "The Host",
-            description_short = "Older Lady",
-            description_long = "The lady of the mansion.",
-            description_hidden = host_extra_information,
-            important_choices = CharacterInformationList([]),
-            endings = CharacterInformationList([]),
-            intuitions = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
-            objects = CharacterInformationList([]),
-        )
-        host = Character("host_details.get_name()", image="host", dynamic=True)
-        
-        # 6. The Broken Face
-        broken_extra_information = [
-            CharacterInformation(0, "mask", "A broken face or 'Gueule Cassée'. He wears mask that hides most of hist face because of an injury during the war."),
-            CharacterInformation(60, "???", "???", is_important = True),       
-        ]
-        broken_details  = CharacterDetails(
-            text_id = "broken", 
-            locked = True,
-            know_real_name = True,
-            real_name = "Thomas Moody",
-            nickname = "The Broken Face",
-            description_short = "Masked Man",
-            description_long = "A man with a mask on his face.",
-            description_hidden = broken_extra_information,
-            important_choices = CharacterInformationList([]),
-            endings = CharacterInformationList([]),
-            intuitions = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
-            objects = CharacterInformationList([]),
-        )
-        broken = Character("broken_details.get_name()", image="broken", dynamic=True)
-
-        # 7. The Captain
-        
-        # 8. The Nurse
-
-
-        # X. Character full List
+        #  Character full List
         # TODO only use the flat one (refacto use chara)
         char_list = [ 
             [ lad_details, doctor_details, host_details, drunk_details ] , 
@@ -320,7 +217,7 @@ init -100 python:
                     renpy.notify("You have found information about " + self.character_name)
                     renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
-                    if self.all_knowledge_unlocked():
+                    if self.all_description_hidden_unlocked():
                         # Unlock a character
                         renpy.pause(2)
                         renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
@@ -333,7 +230,7 @@ init -100 python:
                 seen_tutorial_description_hidden = True
                 renpy.call('tutorial_description_hidden')
 
-        def all_knowledge_unlocked(self):
+        def all_description_hidden_unlocked(self):
             for info in self.information_list:
                 if info.locked:
                     return False

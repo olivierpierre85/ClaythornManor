@@ -104,5 +104,9 @@ label init_story_variables:
     call init_psychic
     call init_captain
     call init_nurse
+    call init_doctor
+    call init_host
+    call init_broken
+    call init_drunk
     
     return

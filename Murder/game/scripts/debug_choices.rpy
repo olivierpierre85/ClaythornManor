@@ -60,7 +60,7 @@ label debug_choices:
         #     #$ lad_details.objects.unlock('gun')
         #     $ lad_details.intuitions.unlock('psychic_poisons')
         #     $ lad_details.observations.unlock('green_liquid')
-        #     $ doctor_details.unlock_knowledge('addict')
+        #     $ doctor_details.description_hidden.unlock('addict')
 
         #     $ lad_details.saved_variables["has_try_sneaking_downstairs"] = 2
 
@@ -112,6 +112,7 @@ label debug_choices:
             $ current_character = captain_details
             $ lad_details.description_hidden.unlock('origin') 
             $ lad_details.description_hidden.unlock('age')
+            $ doctor_details.description_hidden.unlock('addict') 
             jump captain_introduction
 
         # "psychic_day1_evening":
@@ -174,11 +175,11 @@ label debug_choices:
 
 label unlock_psychic:
 
-    $ psychic_details.unlock_knowledge('background') 
+    $ psychic_details.description_hidden.unlock('background') 
     $ lad_details.saved_variables['knows_psychic_background'] = True
-    $ psychic_details.unlock_knowledge('status') 
-    $ psychic_details.unlock_knowledge('heroic_act') 
-    $ psychic_details.unlock_knowledge('lie') 
+    $ psychic_details.description_hidden.unlock('status') 
+    $ psychic_details.description_hidden.unlock('heroic_act') 
+    $ psychic_details.description_hidden.unlock('lie') 
     
     return
 

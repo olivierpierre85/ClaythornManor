@@ -191,7 +191,7 @@ label lad_day2_doctor_room:
     It looks like the doctor wasn't using it only on patients.
     """
 
-    $ doctor_details.unlock_knowledge('addict') 
+    $ doctor_details.description_hidden.unlock('addict') 
     $ current_character.saved_variables['knows_doctor_addict'] = True
 
     """

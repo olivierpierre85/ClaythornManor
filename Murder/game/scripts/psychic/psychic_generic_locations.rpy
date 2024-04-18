@@ -91,7 +91,7 @@ label psychic_library_look_for_lord_succeed:
     """
 
     # TODO should we unlock THe host age (NO because it's not the good one?) but the first name is not ok either?
-    # $ host_details.unlock_knowledge('name') 
+    # $ host_details.description_hidden.unlock('name') 
 
     """
     There's additional information about the history of this place.

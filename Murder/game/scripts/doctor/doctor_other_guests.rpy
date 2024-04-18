@@ -22,7 +22,7 @@ label doctor_generic_other_guests_friday:
         Yes, I can understand that feeling.
         """
 
-    $ captain_details.unlock_knowledge('talker') 
+    $ captain_details.description_hidden.unlock('talker') 
 
     return
 

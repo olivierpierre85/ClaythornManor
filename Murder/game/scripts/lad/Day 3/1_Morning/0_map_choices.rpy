@@ -222,7 +222,7 @@ label lad_day3_morning_garage:
     Because I surely can't.
     """
 
-    $ psychic_details.unlock_knowledge('drive')
+    $ psychic_details.description_hidden.unlock('drive')
 
     lad """
     Not really, no.

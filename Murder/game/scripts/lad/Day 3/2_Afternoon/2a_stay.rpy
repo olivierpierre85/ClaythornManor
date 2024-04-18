@@ -271,7 +271,7 @@ label lad_day3_afternoon_no_toilet:
     She can't finish her sentence.
     """
 
-    $ psychic_details.unlock_knowledge('lie') 
+    $ psychic_details.description_hidden.unlock('lie') 
 
     $ play_music('scary')
 

@@ -44,7 +44,7 @@ label lad_day2_hunt_noaccident:
     """
     # TODO adjust based on whether the player has listened to the speech
 
-    $ captain_details.unlock_knowledge('wars')
+    $ captain_details.description_hidden.unlock('wars')
 
     """
     Our conversation about the wars seemed to make Lady Claythorn uneasy, as she suddenly interrupts us.

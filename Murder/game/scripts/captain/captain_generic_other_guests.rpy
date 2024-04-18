@@ -76,7 +76,7 @@ label captain_generic_nurse_friday:
     You can immediately tell she's at ease in these kinds of gatherings.
     """
 
-    $ nurse_details.unlock_knowledge('clothes')
+    $ nurse_details.description_hidden.unlock('clothes')
 
     return
 
@@ -113,7 +113,7 @@ label captain_generic_broken_friday:
     I hope that we can learn from the sacrifices of these soldiers and work towards a world where conflicts can be resolved without violence, and where the broken faces of war are a thing of the past.
     """
 
-    $ broken_details.unlock_knowledge('mask') 
+    $ broken_details.description_hidden.unlock('mask') 
 
     return
 

@@ -52,7 +52,7 @@ label nurse_generic_age:
     I don't feel that old at all.
     """
 
-    $ nurse_details.unlock_knowledge('age')
+    $ nurse_details.description_hidden.unlock('age')
 
     return
 
@@ -76,7 +76,7 @@ label nurse_generic_background:
     No, not like that. I mostly assisted wealthier individuals who required special in-house assistance.
     """
 
-    $ nurse_details.unlock_knowledge('manor') 
+    $ nurse_details.description_hidden.unlock('manor') 
 
     psychic """
     Are you taking care of someone at the moment?
@@ -96,7 +96,7 @@ label nurse_generic_background:
     Yes, one can imagine.
     """
 
-    $ nurse_details.unlock_knowledge('job') 
+    $ nurse_details.description_hidden.unlock('job') 
 
     $ current_character.saved_variables['knows_nurse_background'] = True
 
@@ -152,6 +152,6 @@ label nurse_generic_manor:
     I've been in houses of the same style, but none so big or impressive.
     """
 
-    $ nurse_details.unlock_knowledge('manor') 
+    $ nurse_details.description_hidden.unlock('manor') 
 
     return

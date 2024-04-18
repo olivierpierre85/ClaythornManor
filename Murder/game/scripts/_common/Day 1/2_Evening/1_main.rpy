@@ -150,6 +150,6 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     $ play_music('PREVIOUS')
 
-    $ captain_details.unlock_knowledge('talker') 
+    $ captain_details.description_hidden.unlock('talker') 
 
     return

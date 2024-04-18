@@ -202,7 +202,7 @@ label psychic_day3_afternoon_escape:
     ...have come here.
     """
 
-    $ captain_details.unlock_knowledge('lie') 
+    $ captain_details.description_hidden.unlock('lie') 
 
     """
     He collapses after saying that.

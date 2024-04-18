@@ -173,7 +173,7 @@ label psychic_generic_heroic_act:
     But tell me. Why were you invited yourself?
     """
 
-    $ psychic_details.unlock_knowledge('heroic_act') 
+    $ psychic_details.description_hidden.unlock('heroic_act') 
 
     "So I tell her my story."
 
@@ -254,7 +254,7 @@ label psychic_generic_manor_lad:
     Am I the only one in here who has never had a butler waiting on him?
     """
 
-    $ psychic_details.unlock_knowledge('status')
+    $ psychic_details.description_hidden.unlock('status')
 
     return
 

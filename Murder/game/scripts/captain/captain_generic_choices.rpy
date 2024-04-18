@@ -70,7 +70,7 @@ label captain_generic_origin_psychic_1:
     I am sorry, what did you mean?
     """
 
-    $ psychic_details.unlock_knowledge("racist")
+    $ psychic_details.description_hidden.unlock("racist")
     $ current_character.saved_variables["knows_captain_origin"] = True
 
     return 
@@ -142,7 +142,7 @@ label captain_generic_origin_psychic_2:
     So I nod in assent and barely listens to what he is saying.
     """
 
-    $ captain_details.unlock_knowledge('talker') 
+    $ captain_details.description_hidden.unlock('talker') 
 
     $ current_character.saved_variables["knows_captain_real_origin"] = True
     
@@ -232,7 +232,7 @@ label captain_generic_manor_psychic:
     Is he one of those bookish people who read about everything and anything?
     """
 
-    $ captain_details.unlock_knowledge('mansion')
+    $ captain_details.description_hidden.unlock('mansion')
 
     return 
 
@@ -270,7 +270,7 @@ label captain_generic_age_psychic:
     I am 56 years old.
     """
 
-    $ captain_details.unlock_knowledge('age')
+    $ captain_details.description_hidden.unlock('age')
     
     return
 

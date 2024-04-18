@@ -99,7 +99,7 @@ label psychic_day2_afternoon_nurse_room_busy:
     She's worse than she wants to show.
     """
 
-    $ nurse_details.unlock_knowledge('sick')
+    $ nurse_details.description_hidden.unlock('sick')
 
     nurse """
     Well, I should go now.
