@@ -4,6 +4,7 @@ label debug_choices:
     $ skip_clock_movement = True
 
     $ seen_tutorial_description_hidden = True
+    $ seen_tutorial_clock = True
     $ seen_tutorial_map = True
     $ seen_tutorial_unlock_character = True
     $ seen_tutorial_timeline = True
@@ -16,25 +17,25 @@ label debug_choices:
             call unlock_psychic 
             jump character_selection
         
-        # "debug_lad":
-        #     $ test_choices = debug_lad_poisoned_day1
-        #     jump lad_introduction
+        "debug_lad":
+            $ test_choices = debug_lad_poisoned_day1
+            jump lad_introduction
 
-        # "lad_introduction":
-        #     jump lad_introduction
+        "lad_introduction":
+            jump lad_introduction
 
-        # # "lad_day1_afternoon":
-        # #     jump lad_day1_afternoon
+        # "lad_day1_afternoon":
+        #     jump lad_day1_afternoon
 
-        # "lad_day1_evening MAP":
-        #     $ test_choices = [0,9,1,12] #SKIP to map menu
-        #     jump lad_day1_evening
+        "lad_day1_evening MAP":
+            $ test_choices = [0,9,1,12] #SKIP to map menu
+            jump lad_day1_evening
         
-        # "lad_day1_evening":
-        #     jump lad_day1_evening
+        "lad_day1_evening":
+            jump lad_day1_evening
 
-        # # "lad_day2_morning":
-        # #     jump lad_day2_morning
+        "lad_day2_morning":
+            jump lad_day2_morning
             
         # # "lad_day2_hunt":
         # #     jump lad_day2_hunt
@@ -49,9 +50,9 @@ label debug_choices:
             
         #     jump lad_day2_no_hunt
 
-        "lad_day2_afternoon":
-            $ lad_details.objects.unlock('burned_letter')
-            jump lad_day2_afternoon
+        # "lad_day2_afternoon":
+        #     $ lad_details.objects.unlock('burned_letter')
+        #     jump lad_day2_afternoon
             
         # # "lad_day2_afternoon_bedroom":
         # #     jump lad_day2_afternoon_bedroom
@@ -67,53 +68,53 @@ label debug_choices:
         #     $ lad_details.saved_variables["day2_saw_accident"] = True
         #     jump lad_day2_evening
 
-        "lad_day3_morning TES MAP":
-            $ unlock_map('captain_room')
-            $ unlock_map('host_room')
-            $ unlock_map('psychic_room')
-            $ unlock_map('lad_room')
-            $ unlock_map('drunk_room')
-            $ unlock_map('nurse_room')
-            $ unlock_map('broken_room')
-            $ unlock_map('doctor_room')
-            $ lad_details.saved_variables["day2_believe_psychic"] = True
+        # "lad_day3_morning TES MAP":
+        #     $ unlock_map('captain_room')
+        #     $ unlock_map('host_room')
+        #     $ unlock_map('psychic_room')
+        #     $ unlock_map('lad_room')
+        #     $ unlock_map('drunk_room')
+        #     $ unlock_map('nurse_room')
+        #     $ unlock_map('broken_room')
+        #     $ unlock_map('doctor_room')
+        #     $ lad_details.saved_variables["day2_believe_psychic"] = True
             
-            jump lad_day3_morning
+        #     jump lad_day3_morning
         
-        "lad_day3_afternoon":
-            call unlock_psychic 
-            $ lad_details.observations.unlock('green_liquid')
-            $ lad_details.saved_variables['library_visited'] = True
-            $ lad_details.test_checkpoint()
+        # "lad_day3_afternoon":
+        #     call unlock_psychic 
+        #     $ lad_details.observations.unlock('green_liquid')
+        #     $ lad_details.saved_variables['library_visited'] = True
+        #     $ lad_details.test_checkpoint()
 
-            $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
-            $ lad_details.objects.unlock('gun')
-            $ first_death = False
-            $ lad_details.intuitions.unlock('psychic_poisons')
-            $ lad_details.endings.unlock('gunned_down')
+        #     $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
+        #     $ lad_details.objects.unlock('gun')
+        #     $ first_death = False
+        #     $ lad_details.intuitions.unlock('psychic_poisons')
+        #     $ lad_details.endings.unlock('gunned_down')
 
             
-            $ lad_details.reset_information()
-            # $ lad_details.objects.unlock('gun')
-            $ lad_details.important_choices.unlock('hunt')
+        #     $ lad_details.reset_information()
+        #     # $ lad_details.objects.unlock('gun')
+        #     $ lad_details.important_choices.unlock('hunt')
 
-            jump lad_day3_afternoon
+        #     jump lad_day3_afternoon
 
         # "lad_day3_stay":
         #     $ lad_details.intuitions.unlock(('psychic_poisons')
         #     jump lad_day3_stay
 
-        "psychic_introduction":
-            call unlock_psychic
-            $ current_character = psychic_details
-            jump psychic_introduction
+        # "psychic_introduction":
+        #     call unlock_psychic
+        #     $ current_character = psychic_details
+        #     jump psychic_introduction
         
-        "captain_introduction":
-            $ current_character = captain_details
-            $ lad_details.description_hidden.unlock('origin') 
-            $ lad_details.description_hidden.unlock('age')
-            $ doctor_details.description_hidden.unlock('addict') 
-            jump captain_introduction
+        # "captain_introduction":
+        #     $ current_character = captain_details
+        #     $ lad_details.description_hidden.unlock('origin') 
+        #     $ lad_details.description_hidden.unlock('age')
+        #     $ doctor_details.description_hidden.unlock('addict') 
+        #     jump captain_introduction
 
         # "psychic_day1_evening":
         #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
@@ -131,43 +132,43 @@ label debug_choices:
         #     $ current_character = psychic_details
         #     jump psychic_day2_morning
         
-        "psychic_day2_no_hunt":
-            $ psychic_details.saved_variables["knows_captain_origin"] = True
-            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-            call unlock_psychic
-            $ current_character = psychic_details
-            jump psychic_day2_no_hunt
+        # "psychic_day2_no_hunt":
+        #     $ psychic_details.saved_variables["knows_captain_origin"] = True
+        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+        #     call unlock_psychic
+        #     $ current_character = psychic_details
+        #     jump psychic_day2_no_hunt
 
-        "psychic_day2_afternoon":
-            $ psychic_details.saved_variables["knows_captain_origin"] = True
-            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-            call unlock_psychic
-            $ current_character = psychic_details
-            jump psychic_day2_afternoon
+        # "psychic_day2_afternoon":
+        #     $ psychic_details.saved_variables["knows_captain_origin"] = True
+        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+        #     call unlock_psychic
+        #     $ current_character = psychic_details
+        #     jump psychic_day2_afternoon
 
-        "psychic_day2_evening":
-            $ psychic_details.saved_variables["knows_captain_origin"] = True
-            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-            call unlock_psychic
-            $ current_character = psychic_details
-            jump psychic_day2_evening
+        # "psychic_day2_evening":
+        #     $ psychic_details.saved_variables["knows_captain_origin"] = True
+        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+        #     call unlock_psychic
+        #     $ current_character = psychic_details
+        #     jump psychic_day2_evening
 
-        "psychic_day3_morning":
-            $ psychic_details.saved_variables["knows_captain_origin"] = True
-            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-            call unlock_psychic
-            $ current_character = psychic_details
+        # "psychic_day3_morning":
+        #     $ psychic_details.saved_variables["knows_captain_origin"] = True
+        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+        #     call unlock_psychic
+        #     $ current_character = psychic_details
 
-            jump  psychic_day3_morning
+        #     jump  psychic_day3_morning
 
-        "psychic_day3_afternoon":
-            $ psychic_details.saved_variables["knows_captain_origin"] = True
-            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-            call unlock_psychic
-            $ current_character = psychic_details
-            $ psychic_details.intuitions.unlock('leave_castle')   
-            $ psychic_details.endings.unlock('burned')
-            jump  psychic_day3_afternoon
+        # "psychic_day3_afternoon":
+        #     $ psychic_details.saved_variables["knows_captain_origin"] = True
+        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+        #     call unlock_psychic
+        #     $ current_character = psychic_details
+        #     $ psychic_details.intuitions.unlock('leave_castle')   
+        #     $ psychic_details.endings.unlock('burned')
+        #     jump  psychic_day3_afternoon
 
 
             

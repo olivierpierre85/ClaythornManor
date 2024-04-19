@@ -63,7 +63,7 @@ label breakpoint:
 
 # Smart music changes
 init python:
-    def change_room(new_room, transition = None):
+    def change_room(new_room, transition = dissolve):
         global current_floor, selected_floor, current_room, previous_room
         
         if not full_testing_mode:

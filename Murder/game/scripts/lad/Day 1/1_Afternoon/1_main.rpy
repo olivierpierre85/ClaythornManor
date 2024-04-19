@@ -18,7 +18,7 @@ label lad_introduction:
 
     call change_time(17,30, 'Afternoon', 'Friday', hide_minutes = True)
 
-    scene train_inside
+    $ change_room("train_inside")
 
     play sound train_moving loop
 
@@ -70,7 +70,7 @@ label lad_introduction:
 
     play sound train_stopping
 
-    scene train_station
+    $ change_room("train_station")
 
     pause 5.0
     
@@ -98,7 +98,7 @@ label lad_introduction:
     And like that we were on our way.
     """
 
-    scene inside_car
+    $ change_room("inside_car")
 
     lad """ 
     So you are lady Claythorn's driver?
@@ -149,8 +149,6 @@ label lad_introduction:
 
     It's nothing but dense woodland as far as the eye can see.
 
-    I am a little an uneasy to find it to be so far from every where else.
-
     The isolation makes me feel a bit uneasy, being so far from everywhere else.
 
     And the look of an approaching storm in the sky only adds to my discomfort.
@@ -160,12 +158,12 @@ label lad_introduction:
     
     play sound thunder loop
     
-    scene manor_exterior
+    $ change_room("manor_exterior")
 
     """
     Eventually, an imposing mansion emerges on the horizon.
 
-    It's bigger than any house I've ever seen.
+    It's bigger than any house I've ever been in.
 
     A big country house. 
 
@@ -182,7 +180,7 @@ label lad_introduction:
     I step into the most remarkable hall I've ever set foot in.
     """
 
-    stop sound
+    stop sound fadeout 2.0
 
     pause 2.0
 

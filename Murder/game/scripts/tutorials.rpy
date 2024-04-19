@@ -1,7 +1,32 @@
-# TODO Clock (when first choice selected)
+label tutorial_clock:
+
+    if not seen_tutorial_clock:
+
+        tutorial """
+        Wait, don't you hear something ticking?
+
+        If you haven't noticed it yet, look at the clock in the upper-left corner.
+        
+        There, you can see the current time, as well as the day.
+
+        This helpful tool will move as the story progresses, for example, when you start a new chapter of this story.
+
+        Also, when you are faced with multiple choices, each action will take a different amount of time.
+
+        And each scene has a limited duration.
+
+        This means you won't always have the possibility to explore every option in a list.
+
+        So make every choice count.
+        """
+
+        $ seen_tutorial_clock = True
+
+    return
+
 
 label tutorial_description_hidden:
-    # ChatGPT
+
     tutorial """
     Congratulations on discovering your first piece of information about a character! 
     
@@ -26,7 +51,7 @@ label tutorial_map:
     
     As a result, additional details have been added to the manor map to assist you in navigating the house. 
 
-    You can access this information by navigating to the \"Map\" menu.
+    You can access this information by navigating to the "Map" menu.
     """
 
     return

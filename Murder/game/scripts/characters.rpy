@@ -9,6 +9,7 @@ style narrator_style:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos - 17
+    italic True
 
 style letter_style:
     properties gui.text_properties("dialogue")
