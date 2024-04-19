@@ -294,8 +294,8 @@ label lad_introduction:
     $ time_left = 20
     
     $ current_menu = TimedMenu("lad_introduction", [
-        TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 5),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0), # keep_alive = True, TODO keep alive to allow more choices if leaving by mistakes?
+        TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 0),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0),
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 
@@ -322,24 +322,17 @@ label lad_day1_drinks_psychic:
     I am approaching the middle-aged woman.
     """
 
-    call lad_day1_drinks_psychic_encounter
+    call common_day1_drinks_lad_psychic_encounter
+
+    # Force tutorial clock before first menu
+    if not seen_tutorial_clock:
+        call change_time(18,15)
+        call tutorial_clock
 
     call psychic_generic
 
     return
 
-# Dialog also in psychic side TODO move into global label?
-label lad_day1_drinks_psychic_encounter:
-
-    lad """
-    Nice to meet you, Miss Baxter. I am Ted Harring.
-    """
-
-    psychic """
-    Nice to meet you, Mr. Harring.
-    """
-
-    return
 
 label lad_day1_drinks_drunk:
 
@@ -360,5 +353,7 @@ label lad_day1_drinks_drunk:
     """
     He reeks of booze, and he is deeply asleep. Talking to him is useless.
     """
+    call change_time(18,15)
+    call tutorial_clock
 
     return

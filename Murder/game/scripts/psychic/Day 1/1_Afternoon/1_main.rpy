@@ -403,7 +403,7 @@ label psychic_introduction:
     I smile at him and, after some hesitation, comes towards me.
     """
 
-    call lad_day1_drinks_psychic_encounter
+    call common_day1_drinks_lad_psychic_encounter
 
     $ time_left = 15
 

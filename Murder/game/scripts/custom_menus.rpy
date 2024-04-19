@@ -56,7 +56,6 @@ label run_menu(current_menu, change_level=True):
         # $ print("CHANGE TIME", menu_level, selected_choice[menu_level].time_spent, time_left)
         if time_diff[menu_level]:
             call change_time(time_diff[menu_level].time().hour, time_diff[menu_level].time().minute)
-            call tutorial_clock
 
         pause 0.7
 

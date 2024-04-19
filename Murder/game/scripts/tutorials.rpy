@@ -15,7 +15,7 @@ label tutorial_clock:
 
         And each scene has a limited duration.
 
-        This means you won't always have the possibility to explore every option in a list.
+        This means you won't always have the opportunity to explore every option on a list.
 
         So make every choice count.
         """
