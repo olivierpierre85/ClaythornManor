@@ -18,7 +18,7 @@ label doctor_introduction:
 
     call black_screen_transition("Daniel Baldwin", "Friday Afternoon")
 
-    scene train_inside with irisout 
+    $ change_room("train_inside")
 
     play sound train_moving loop
 
@@ -60,7 +60,7 @@ label doctor_introduction:
     Too late for that now.
     """
 
-    scene train_station
+    $ change_room("train_station")
 
     pause 5.0
     

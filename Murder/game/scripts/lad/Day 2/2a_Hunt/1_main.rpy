@@ -25,7 +25,7 @@ label lad_day2_hunt:
 
     call black_screen_transition("Ted Harring", "The Hunt") # Good? TODO check consistency with no hunt
     
-    scene gun_room
+    $ change_room("gun_room")
 
     $ play_music('upbeat', 1, fadein_val=10.0)
 

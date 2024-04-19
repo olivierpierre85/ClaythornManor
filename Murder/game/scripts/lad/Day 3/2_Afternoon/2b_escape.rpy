@@ -144,7 +144,7 @@ label lad_day3_escape:
     With that, he begins moving towards the exit gate.
     """
 
-    scene forest_road
+    $ change_room("forest_road")
 
     if lad_details.objects.is_unlocked('gun'):
 

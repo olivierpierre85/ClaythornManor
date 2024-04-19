@@ -166,7 +166,7 @@ label lad_ending_day3_fell:
 
 label lad_ending_day3_escape:
 
-    scene police_station
+    $ change_room("police_station")
 
     """
     After what felt like an eternity, I finally reached the town.

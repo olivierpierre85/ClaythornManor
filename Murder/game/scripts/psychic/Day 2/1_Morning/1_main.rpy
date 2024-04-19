@@ -18,7 +18,7 @@ label psychic_day2_morning:
 
     call black_screen_transition("Amelia Baxter", "Saturday")
 
-    scene psychic_room with irisout
+    $ change_room("psychic_room", irisout)
 
     $ change_room('psychic_room')
 

@@ -303,6 +303,8 @@ label lad_introduction:
 
     play sound dinner_gong
 
+    pause 1.0
+
     """
     What was that? A gong?
     """

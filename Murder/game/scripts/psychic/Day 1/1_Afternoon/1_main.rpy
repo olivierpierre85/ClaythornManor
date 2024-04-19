@@ -18,7 +18,7 @@ label psychic_introduction:
 
     call black_screen_transition("Amelia Baxter", "Friday Afternoon")
 
-    scene train_inside with irisout 
+    $ change_room("train_inside", irisout)
 
     play sound train_moving loop
 
@@ -42,7 +42,7 @@ label psychic_introduction:
 
     play sound train_stopping
 
-    scene train_station
+    $ change_room("train_station")
 
     pause 5.0
     
@@ -146,7 +146,7 @@ label psychic_introduction:
     It should take about an hour to reach the manor.
     """
 
-    scene inside_car
+    $ change_room("inside_car")
 
     """
     I take a seat in the back.
@@ -207,7 +207,7 @@ label psychic_introduction:
     
     play sound thunder loop
     
-    scene manor_exterior
+    $ change_room("manor_exterior")
 
     """
     After what seems like an eternity, the manor appears on the horizon.

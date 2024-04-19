@@ -334,6 +334,7 @@ screen navigation():
             textbutton _("Return") action Return() 
         # In game menu
         else:
+            # if seen_tutorial_map: # TODO: Not working because map default first view
             textbutton _("Map") action ShowMenu("manor_map")
             if seen_tutorial_description_hidden:
                 textbutton _("Characters") action ShowMenu("characters")

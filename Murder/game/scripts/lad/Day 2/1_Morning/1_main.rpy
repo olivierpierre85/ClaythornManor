@@ -22,7 +22,7 @@ label lad_day2_morning:
 
     call black_screen_transition("Ted Harring", "Saturday")
 
-    scene lad_room with irisout
+    $ change_room("lad_room", irisout)
     
     $ change_room('lad_room')
 

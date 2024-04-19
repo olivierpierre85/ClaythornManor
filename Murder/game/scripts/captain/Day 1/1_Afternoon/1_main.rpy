@@ -4,7 +4,7 @@ label captain_introduction:
     
     call change_time(17, 00, 'Evening', 'Friday', hide_minutes = True)
 
-    scene train_inside
+    $ change_room("train_inside")
 
     play sound train_moving loop
 
@@ -54,7 +54,7 @@ label captain_introduction:
 
     play sound train_stopping
 
-    scene train_station
+    $ change_room("train_station")
 
     pause 5.0
     
@@ -102,7 +102,7 @@ label captain_introduction:
     When we reach the car, I quickly sit with Miss Baxter.
     """
 
-    scene inside_car
+    $ change_room("inside_car")
 
     """
     The drunk quickly falls asleep.
