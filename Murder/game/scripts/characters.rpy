@@ -255,6 +255,7 @@ init -100 python:
             self.image_file = image_file
             self.discovered = False
 
+
     class CharacterDetails():
         def __init__(
             self, 
