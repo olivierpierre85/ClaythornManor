@@ -84,25 +84,36 @@ label init_lad:
         )
 
         lad_description_hidden = CharacterDescriptionHiddenList ([
+            CharacterInformation(0, "age", "22 years old - which means he was merely 15"),
             CharacterInformation(0, "origin", "Birmingham"), 
-            CharacterInformation(10, "job", "A seller of stuff..."), 
-            CharacterInformation(11, "thief", "... of stolen stuff apparently."), 
-            CharacterInformation(20, "age", "22 years old. Which means he was only 15"),
-            CharacterInformation(30, "education", "Not a great reader."),
-            CharacterInformation(40, "poor_drinker", "Can't hold his liqueur."),
-            CharacterInformation(50, "drive", "He never learned how to drive."),
-            CharacterInformation(60, "cook", "He is not much of a cook."),
-            CharacterInformation(70, "poor", "It's rather obvious he is not from the upper class, to say the least.")
+            CharacterInformation(0, "poor", "a wealthy family, nor even a decent one"),
+            CharacterInformation(0, "childhood", "he doesn't have a family at all; he was raised in an orphanage"),# LAST ONE!!!!!
+            CharacterInformation(0, "education", "the best education, and, like a large number of individuals from similar backgrounds, he can barely read"),
+            CharacterInformation(0, "job", "on the 'informal sector' for employment"), 
+            CharacterInformation(0, "thief", "sometimes means being on the wrong side of the law"), 
+            CharacterInformation(0, "heroic_act", "saving a young infant from a burning building. This act of heroism made him the subject of a newspaper article"), 
+            CharacterInformation(0, "poor_drinker", "drinker"),
+            CharacterInformation(0, "drive", "drive a car"),
+            CharacterInformation(0, "cook", "cook a meal"),
             ], "Ted Harring"
         )
 
+        lad_description_full_complete = """
+        A good-looking young lad, he is only "22 years old - which means he was merely 15" at the end of the war.
+        Born and raised in "Birmingham", we can't say he comes from "a wealthy family, nor even a decent one". In fact, "he doesn't have a family at all; he was raised in an orphanage".
+        His childhood didn't offer him "the best education, and, like a large number of individuals from similar backgrounds, he can barely read".
+        That is also why he had to rely "on the 'informal sector' for employment", and as everyone knows, this "sometimes means ending up on the wrong side of the law".
+        One day, he found himself in the right place at the right moment and, against all odds, did the right thing by "saving a young infant from a burning building. This act of heroism made him the subject of a newspaper article", which was enough for Lady Claythorn to invite him to her manor.
+        Not a great "drinker", he is not be able to "drive a car" or "cook a meal", should you require it.
+        """
+
         lad_description_full = """
-        Good Looking young lad. 
-        He is only <info:age> at the end of the war.
-        Born an raised in <info:origin>, we can't say he's coming from a wealthy family, nor even a decent family. Actually, he doesn't even have a family at all. He was raised in an orphanage.
-        With such a childhood didn't give him great chances at a good, and, like a large number of people of his age, had to rely on the informal sector for a job.
-        One day, he ended up being at the right place at the right moment. And against all odds, he did the right thing. Saving a young baby from a burning building, that would make him the subject of an newspaper article. That was enough for Lady Claythorn to invite him to her Manor.
-        His special skills include ___ ___ _. On the other hand, he won't be able to ___ ___ _  or ___ ___ _  if you need.
+        A good-looking young lad, he is only <info:age> at the end of the war.
+        Born and raised in <info:origin>, we can't say he comes from <info:poor>. In fact, <info:childhood>.
+        His childhood didn't offer him <info:education>.
+        That is also why he had to rely <info:job>, and as everyone knows, this <info:thief>.
+        One day, he found himself in the right place at the right moment and, against all odds, did the right thing by <info:heroic_act>, which was enough for Lady Claythorn to invite him to her manor.
+        Not a great <info:poor_drinker>, he is also not be able to <info:drive> or <info:cook>, should you require it.
         """
 
         lad_details  = CharacterDetails(

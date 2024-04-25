@@ -52,7 +52,7 @@ label tutorial_description_hidden:
 label tutorial_map:
 
     tutorial """
-    Well done on finding information about the manor! 
+    Well done, you just found new information about the manor. 
     
     As a result, additional details have been added to the manor map to assist you in navigating the house. 
 
@@ -72,7 +72,7 @@ label tutorial_unlock_character:
 
     This individuality may grant you access to specific choices unavailable to others.
 
-    Utilize the characters' full potential to unravel the mystery of this weekend.
+    Use the characters' full potential to unravel the mystery of this weekend.
     """
 
     return
@@ -84,7 +84,7 @@ label tutorial_timeline:
     
     However, there is no need to worry as you can use the skip button located at the bottom right of the screen to skip over any previously encountered dialogues. 
     
-    Furthermore, you now have access to the \"Progress\" menu, which provides you with an overview of each character's past progress. 
+    Furthermore, you now have access to the "Progress" menu, which provides you with an overview of each character's past progress. 
     
     It is possible to restart the story from various checkpoints that occurred during the weekend's events. 
     

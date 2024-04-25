@@ -21,7 +21,7 @@ style letter_style:
 
 style tutorial_style:
     properties gui.text_properties("dialogue")
-    color gui.idle_small_color
+    color gui.highlight_color
     font gui.name_text_font
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
@@ -320,7 +320,7 @@ init -100 python:
                         text_with_holes = text_with_holes.replace(placeholder, masked_content)
                     else:
                         # When unlocked, wrap the content in <i> </i> and gui.accent color
-                        italic_content = f'{{color=#766249}}{{i}}{char_info.content}{{/i}}{{/color}}'
+                        italic_content = f'{{color=#DBB100}}{{i}}{char_info.content}{{/i}}{{/color}}'
                         text_with_holes = text_with_holes.replace(placeholder, italic_content)
             
             return textwrap.dedent(text_with_holes).split('\n')

@@ -72,7 +72,14 @@ label init_psychic:
             ], psychic_name
         )
         psychic_description_full = """
-        Middle-aged woman, looking a bit eccentric.
+        Middle-aged woman, looking a bit eccentric, you can tell she knows her way around a grand house.
+        She is a woman of her era and conforms to most stereotypes, meaning that she can't drive, that she can be a tad racist.                
+        
+        Most of her time
+        She is a psychic, or at least that's what she is saying to everyone.
+        Her psychic abilities apparently helped her finding the kidnapper of????????.
+
+        That is peculiar, because on her deathbed, she confessed being a fraud, that she is nothing but an actress.
         """
 
         psychic_details  = CharacterDetails(

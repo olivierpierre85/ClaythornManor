@@ -3,11 +3,12 @@ label debug_choices:
 
     $ skip_clock_movement = True
 
-    # $ seen_tutorial_description_hidden = True
-    # $ seen_tutorial_clock = True
-    # $ seen_tutorial_map = True
-    # $ seen_tutorial_unlock_character = True
-    # $ seen_tutorial_timeline = True
+    # Comment to test tutorials
+    $ seen_tutorial_description_hidden = True
+    $ seen_tutorial_clock = True
+    $ seen_tutorial_map = True
+    $ seen_tutorial_unlock_character = True
+    $ seen_tutorial_timeline = True
 
     # show screen current_time
     show screen in_game_menu_btn
@@ -182,6 +183,22 @@ label unlock_psychic:
     $ psychic_details.description_hidden.unlock('heroic_act') 
     $ psychic_details.description_hidden.unlock('lie') 
     
+    return
+
+label unlock_lad:
+
+    $ lad_details.description_hidden.unlock('age')  # "22 years old - which means he was merely 15"
+    $ lad_details.description_hidden.unlock('origin')  # "Birmingham"
+    $ lad_details.description_hidden.unlock('poor')  # "a wealthy family, nor even a decent one"
+    $ lad_details.description_hidden.unlock('childhood')  # "he doesn't have a family at all; he was raised in an orphanage"
+    $ lad_details.description_hidden.unlock('education')  # "the best education, and, like a large number of individuals from similar backgrounds, he can barely read"
+    $ lad_details.description_hidden.unlock('job')  # "on the 'informal sector' for employment"
+    $ lad_details.description_hidden.unlock('thief')  # "sometimes means being on the wrong side of the law"
+    $ lad_details.description_hidden.unlock('heroic_act')  # "saving a young infant from a burning building. This act of heroism made him the subject of a newspaper article"
+    $ lad_details.description_hidden.unlock('poor_drinker')  # "drinker"
+    $ lad_details.description_hidden.unlock('drive')  # "drive a car"
+    $ lad_details.description_hidden.unlock('cook')  # "cook a meal"
+
     return
 
 label debug_routes:

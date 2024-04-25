@@ -110,11 +110,9 @@ screen character_details(selected_char):
 
                 hbox:
                     ymaximum 600
-                    # text "Description: {color=#f00}Red{/color}" color gui.accent_color
                     viewport id "char_description_viewport":
-                        draggable True # This allows the viewport to be dragged, but you can also use scrollbars
-                        mousewheel True # This enables scrolling with the mouse wheel
-                        # Your description text goes here
+                        draggable True 
+                        mousewheel True #
                         vbox:
                             spacing 15
                             for line in selected_char.get_description_full():

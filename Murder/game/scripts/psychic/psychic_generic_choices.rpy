@@ -46,7 +46,7 @@ label psychic_generic_weather_sunday:
     What is wrong with you?
     """
 
-    # TODO achievement? Cool during the storm
+    # TODO achievement? ALWAYS ASKING ABOUT WEATHER if all three dialog unlocked
     return
 
 label psychic_generic_room:
@@ -158,7 +158,6 @@ label psychic_generic_heroic_act:
     I don't know.
 
     You mean someone can be dead and alive at the same time?
-
     """
 
     psychic """
@@ -175,13 +174,21 @@ label psychic_generic_heroic_act:
 
     $ psychic_details.description_hidden.unlock('heroic_act') 
 
-    "So I tell her my story."
+    """
+    So I tell her my story.
+    """
 
-    psychic "Oh how interesting ! I assumed most people were here because of something they did during the war."
+    psychic """
+    Oh how interesting ! I assumed most people were here because of something they did during the war.
+    """
 
-    lad "It would have been difficult for me. I was but sixteen when the war ended."
+    lad """
+    It would have been difficult for me. I was but sixteen when the war ended.
+    """
 
-    psychic "Really? I thought you were older."
+    psychic """
+    Really? I thought you were older.
+    """
 
     $ lad_details.description_hidden.unlock('age') 
 

@@ -51,6 +51,9 @@ define gui.hover_muted_color = u'#7a0000'
 define gui.text_color = u'#ffffff'
 define gui.interface_text_color = u'#ffffff'
 
+## A golden color used as an accent for tutorials or highlighted sections
+define gui.highlight_color = u'#DBB100'
+
 
 ## Fonts and Font Sizes ########################################################
 
