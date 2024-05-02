@@ -97,15 +97,15 @@ label init_lad:
             CharacterInformation(0, "cook", "cook a meal"),
             ], "Ted Harring"
         )
-
-        lad_description_full_complete = """
-        A good-looking young lad, he is only "22 years old - which means he was merely 15" at the end of the war.
-        Born and raised in "Birmingham", we can't say he comes from "a wealthy family, nor even a decent one". In fact, "he doesn't have a family at all; he was raised in an orphanage".
-        His childhood didn't offer him "the best education, and, like a large number of individuals from similar backgrounds, he can barely read".
-        That is also why he had to rely "on the 'informal sector' for employment", and as everyone knows, this "sometimes means ending up on the wrong side of the law".
-        One day, he found himself in the right place at the right moment and, against all odds, did the right thing by "saving a young infant from a burning building. This act of heroism made him the subject of a newspaper article", which was enough for Lady Claythorn to invite him to her manor.
-        Not a great "drinker", he is also not able to "drive a car" or "cook a meal".
-        """
+        # Keep for easy Reading
+        # lad_description_full_complete = """
+        # A good-looking young lad, he is only "22 years old - which means he was merely 15" at the end of the war.
+        # Born and raised in "Birmingham", we can't say he comes from "a wealthy family, nor even a decent one". In fact, "he doesn't have a family at all; he was raised in an orphanage".
+        # His childhood didn't offer him "the best education, and, like a large number of individuals from similar backgrounds, he can barely read".
+        # That is also why he had to rely "on the 'informal sector' for employment", and as everyone knows, this "sometimes means ending up on the wrong side of the law".
+        # One day, he found himself in the right place at the right moment and, against all odds, did the right thing by "saving a young infant from a burning building. This act of heroism made him the subject of a newspaper article", which was enough for Lady Claythorn to invite him to her manor.
+        # Not a great "drinker", he is also not able to "drive a car" or "cook a meal".
+        # """
 
         lad_description_full = """
         A good-looking young lad, he is only <info:age> at the end of the war.

@@ -62,23 +62,36 @@ label init_psychic:
         )
 
         psychic_extra_information = CharacterDescriptionHiddenList([
-            CharacterInformation(0, "background", "", is_important = True), 
-            CharacterInformation(1, "status", "", is_important = True), 
-            CharacterInformation(2, "age", ""),
-            CharacterInformation(3, "heroic_act", "", is_important = True),
-            CharacterInformation(4, "lie", "", is_important = True),
-            CharacterInformation(5, "drive", ""),
-            CharacterInformation(6, "racist", "")
+            CharacterInformation(0, "background","psychic who claims to be able to converse with the dead" , is_important = True), 
+            CharacterInformation(1, "status", "London, she obviously knows her way around a grand house", is_important = True), 
+            CharacterInformation(2, "age", "disclose her age to anyone"),
+            CharacterInformation(3, "heroic_act", "abilities, she was able to help the police find the kidnapper of a Duke's young heir", is_important = True),
+            CharacterInformation(4, "lie", "deathbed, she confessed to being a fraud, admitting she is nothing but an actress", is_important = True),
+            CharacterInformation(5, "drive", "cannot drive"),
+            CharacterInformation(6, "racist", "a tad racist")
             ], psychic_name
-        )
+        )        
+        # Keep for easy Reading
+        # psychic_description_full_complete = """
+        # An eccentric-looking middle-aged woman, she won't disclose her age to anyone.
+        # Currently residing in London, she obviously knows her way around a grand house.
+        # She is a psychic who claims to be able to converse with the dead.
+        # Lady Claythorn invited her to the manor because, thanks to her abilities, she was able to help the police find the kidnapper of a Duke's young heir.
+        # That is peculiar because on her deathbed, she confessed to being a fraud, admitting she is nothing but an actress.
+        # Being a woman of her era, she conforms to most stereotypes, meaning that she cannot drive and that she can be a tad racist.
+        # """
+
         psychic_description_full = """
-        An eccentric-looking middle-aged woman, she won't disclose her age to anyone.
-        She currently resides in London, and she obviously knows her way around a grand house.
-        She is a psychic who claims to be able to converse with the dead.
-        She was invited to the manor because, thanks to her abilities, she was able to help the police find the kidnapper of a duke's young heir.
-        That is peculiar because on her deathbed, she confessed to being a fraud, admitting she is nothing but an actress.
-        Being a woman of her era, she conforms to most stereotypes, meaning that she can't drive and that she can be a tad racist.
+        An eccentric-looking middle-aged woman, she won't <info:age>.
+        Currently residing in <info:status>.
+        She is a <info:background>.
+        Lady Claythorn invited her to the manor because, thanks to her <info:heroic_act>.
+        That is peculiar because on her <info:lie>.
+        Being a woman of her era, she conforms to most stereotypes, meaning that she <info:drive> and that she can be <info:racist>.
         """
+
+
+
         # LATER  you discover that she is actually 42, and full story is told
 
         psychic_details  = CharacterDetails(

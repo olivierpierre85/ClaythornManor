@@ -78,6 +78,8 @@ label psychic_generic_age:
     I mutter an apology and quickly change the subject.
     """
 
+    $ psychic_details.description_hidden.unlock('age') 
+
     return
 
     
@@ -236,24 +238,8 @@ label psychic_generic_background:
     Well, that doesn't make me feel good.
     """
 
-    $ lad_details.description_hidden.unlock('background')
+    $ psychic_details.description_hidden.unlock('background')
     $ lad_details.saved_variables['knows_psychic_background'] = True
-
-    return
-    
-label psychic_generic_manor_lad:
-
-    call psychic_generic_manor
-
-    """
-    Okay. I would not have thought of that.
-
-    She seems in her element here.
-
-    Am I the only one in here who has never had a butler waiting on him?
-    """
-
-    $ psychic_details.description_hidden.unlock('status')
 
     return
 
@@ -288,5 +274,16 @@ label psychic_generic_manor:
 
     I hope we won't suffer any inconvenience because of this.
     """
+
+    if current_character.text_id == "lad":
+        """
+        Okay. I would not have thought of that.
+
+        She seems in her element here.
+
+        Am I the only one in here who has never had a butler waiting on him?
+        """
+
+    $ psychic_details.description_hidden.unlock('status')
     
     return

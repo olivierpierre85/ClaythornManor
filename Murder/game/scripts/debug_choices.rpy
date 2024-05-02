@@ -16,11 +16,13 @@ label debug_choices:
     menu: 
         "character selection":
             call unlock_psychic 
+            call unlock_lad
             jump character_selection
         
-        "debug_lad":
+        "debug_test":
             $ test_choices = debug_lad_poisoned_day1
             call unlock_lad
+            call unlock_psychic
             jump lad_introduction
 
         "lad_introduction":
@@ -183,6 +185,9 @@ label unlock_psychic:
     $ psychic_details.description_hidden.unlock('status') 
     $ psychic_details.description_hidden.unlock('heroic_act') 
     $ psychic_details.description_hidden.unlock('lie') 
+    $ psychic_details.description_hidden.unlock('age') 
+    $ psychic_details.description_hidden.unlock('drive') 
+    $ psychic_details.description_hidden.unlock('racist') 
     
     return
 

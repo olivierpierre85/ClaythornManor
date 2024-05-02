@@ -7,7 +7,7 @@ label lad_config_menu:
         TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_sunday', 10, condition = condition_sunday),
         TimedMenuChoice('Tell me more about yourself.', 'psychic_generic_background', 30),
         TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 30, condition = "current_character.saved_variables['knows_psychic_background']"),
-        TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor_lad', 20),
+        TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 20),
         TimedMenuChoice('How old are you?', 'psychic_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'psychic_generic_room', 10, condition = "not is_unlock_map('psychic_room')"),
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 10, condition = condition_friday),
