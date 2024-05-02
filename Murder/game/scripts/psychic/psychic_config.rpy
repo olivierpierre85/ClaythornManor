@@ -62,25 +62,24 @@ label init_psychic:
         )
 
         psychic_extra_information = CharacterDescriptionHiddenList([
-            CharacterInformation(0, "background", "A psychic. She can talk to the dead apparently.", is_important = True), 
-            CharacterInformation(1, "status", "Wealthy enough to know how many people are needed to run a big house.", is_important = True), 
-            CharacterInformation(2, "age", "She was .... SO she must be????"),
-            CharacterInformation(3, "heroic_act", "She helped the police to find the kidnapper of a baby.", is_important = True),
-            CharacterInformation(4, "lie", "She is not really a psychic. but an actress", is_important = True),
-            CharacterInformation(5, "drive", "Doesn't have a driving license."),
-            CharacterInformation(6, "racist", "She believes only white people come from England.")
+            CharacterInformation(0, "background", "", is_important = True), 
+            CharacterInformation(1, "status", "", is_important = True), 
+            CharacterInformation(2, "age", ""),
+            CharacterInformation(3, "heroic_act", "", is_important = True),
+            CharacterInformation(4, "lie", "", is_important = True),
+            CharacterInformation(5, "drive", ""),
+            CharacterInformation(6, "racist", "")
             ], psychic_name
         )
         psychic_description_full = """
-        Middle-aged woman, looking a bit eccentric, you can tell she knows her way around a grand house.
-        She is a woman of her era and conforms to most stereotypes, meaning that she can't drive, that she can be a tad racist.                
-        
-        Most of her time
-        She is a psychic, or at least that's what she is saying to everyone.
-        Her psychic abilities apparently helped her finding the kidnapper of????????.
-
-        That is peculiar, because on her deathbed, she confessed being a fraud, that she is nothing but an actress.
+        An eccentric-looking middle-aged woman, she won't disclose her age to anyone.
+        She currently resides in London, and she obviously knows her way around a grand house.
+        She is a psychic who claims to be able to converse with the dead.
+        She was invited to the manor because, thanks to her abilities, she was able to help the police find the kidnapper of a duke's young heir.
+        That is peculiar because on her deathbed, she confessed to being a fraud, admitting she is nothing but an actress.
+        Being a woman of her era, she conforms to most stereotypes, meaning that she can't drive and that she can be a tad racist.
         """
+        # LATER  you discover that she is actually 42, and full story is told
 
         psychic_details  = CharacterDetails(
             text_id = "psychic", 

@@ -20,6 +20,7 @@ label debug_choices:
         
         "debug_lad":
             $ test_choices = debug_lad_poisoned_day1
+            call unlock_lad
             jump lad_introduction
 
         "lad_introduction":

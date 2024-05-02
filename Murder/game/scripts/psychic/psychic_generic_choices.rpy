@@ -87,43 +87,35 @@ label psychic_generic_heroic_act:
     $ play_music('mysterious')
 
     psychic """
-    I was invited here for something I have done a couple of years back.
+    I was invited here because of something I did a couple of years ago.
 
-    You actually might remember the event. It was in all the papers at the time.
+    You might actually remember the event. It was in all the papers at the time.
 
-    You see, with my talent, I am sometimes able to help some people who desperately needs it.
+    You see, with my talent, I am sometimes able to help people who desperately need it.
 
-    One day, a young couple came to see me.
+    One day, a young couple came to see me. 
 
-    Their new born child, not even one year old, had been kidnapped.
+    Their only son, not even five years old, had been kidnapped.
 
-    The police had no clues of what could have happened.
+    The police had no clues about what might have happened.
 
-    Desperate, they asked for my help.
+    Desperate, they sought my help.
 
-    Right away, I could tell the child was still alive.
-    """
+    Right away, I could tell the child was still alive but in great danger.
 
-    lad """
-    Really?! You can also talk to babies?
-    """
+    I saw him with a specific individual whom I described to the couple.
 
-    psychic """
-    Not exactly talk, but I can feel them, their presence.
+    They were able to identify her immediately.
 
-    This time, I was certain the child was still alive. But in great danger.
+    She was an old family friend who often visited their house.
 
-    I could see him with a specific person that I described to the couple.
+    Nobody had suspected her until that point.
 
-    They were able to identified her immediately.
+    But it turned out I was right. The child was indeed with her.
 
-    She was an old family friend who was often at their house.
+    She was arrested and the boy was safely returned to his parents.
 
-    Nobody had suspected her until then.
-
-    But it turns out I was right. The baby was with her.
-
-    She was arrested and the baby safely returned to their parents.
+    Since they were prestigious members of the nobility, a duke and duchess, the story was prominent in the press.
 
     My popularity grew quite a lot after that.
     """
@@ -179,7 +171,7 @@ label psychic_generic_heroic_act:
     """
 
     psychic """
-    Oh how interesting ! I assumed most people were here because of something they did during the war.
+    Oh how interesting! I assumed most people were here because of something they did during the war.
     """
 
     lad """
@@ -266,12 +258,13 @@ label psychic_generic_manor_lad:
     return
 
 label psychic_generic_manor:
+
     psychic """
     Such a magnificent house right?
 
     Even if the style is not very recent, it still has a lot of cachet. 
     
-    You don't see a lot of that type of place anymore.
+    You don't see a lot of that type of place anymore. 
 
     The only problem I see is there is not a lot of help for a house this big.
 
@@ -288,6 +281,8 @@ label psychic_generic_manor:
     It has become very hard to recruit good help since the war.
 
     And it must be especially difficult when you are so far away from a city.
+    
+    Even in London, some of my neighbors are struggling finding employees.
 
     In any case, she should have a made more of an effort for this weekend.
 

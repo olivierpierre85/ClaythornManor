@@ -104,7 +104,7 @@ label init_lad:
         His childhood didn't offer him "the best education, and, like a large number of individuals from similar backgrounds, he can barely read".
         That is also why he had to rely "on the 'informal sector' for employment", and as everyone knows, this "sometimes means ending up on the wrong side of the law".
         One day, he found himself in the right place at the right moment and, against all odds, did the right thing by "saving a young infant from a burning building. This act of heroism made him the subject of a newspaper article", which was enough for Lady Claythorn to invite him to her manor.
-        Not a great "drinker", he is not be able to "drive a car" or "cook a meal", should you require it.
+        Not a great "drinker", he is also not able to "drive a car" or "cook a meal".
         """
 
         lad_description_full = """
@@ -113,7 +113,7 @@ label init_lad:
         His childhood didn't offer him <info:education>.
         That is also why he had to rely <info:job>, and as everyone knows, this <info:thief>.
         One day, he found himself in the right place at the right moment and, against all odds, did the right thing by <info:heroic_act>, which was enough for Lady Claythorn to invite him to her manor.
-        Not a great <info:poor_drinker>, he is also not be able to <info:drive> or <info:cook>, should you require it.
+        Not a great <info:poor_drinker>, he is also not able to <info:drive> or <info:cook>.
         """
 
         lad_details  = CharacterDetails(
