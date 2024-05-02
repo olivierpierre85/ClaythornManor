@@ -85,6 +85,7 @@ label lad_generic_age_psychic:
 
     return
 
+
 label lad_generic_background_psychic:
     
     lad """
