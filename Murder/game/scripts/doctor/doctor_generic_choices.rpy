@@ -67,7 +67,8 @@ label doctor_generic_heroic_act:
     Still, it's always nice to receive some recognition.
     """
     
-    #TODO: Unlock heroic act knowledge
+    $ doctor_details.description_hidden.unlock('heroic_act')
+    
     return
 
 label doctor_generic_manor:

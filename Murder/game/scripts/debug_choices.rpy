@@ -23,6 +23,7 @@ label debug_choices:
             $ test_choices = debug_lad_poisoned_day1
             call unlock_lad
             call unlock_psychic
+            call unlock_doctor
             jump lad_introduction
 
         "lad_introduction":
@@ -204,6 +205,17 @@ label unlock_lad:
     $ lad_details.description_hidden.unlock('poor_drinker')  # "drinker"
     $ lad_details.description_hidden.unlock('drive')  # "drive a car"
     $ lad_details.description_hidden.unlock('cook')  # "cook a meal"
+
+    return
+
+label unlock_doctor:
+
+    $ doctor_details.description_hidden.unlock('background')
+    $ doctor_details.description_hidden.unlock('heroic_act')
+    $ doctor_details.description_hidden.unlock('status') 
+    $ doctor_details.description_hidden.unlock('age') 
+    $ doctor_details.description_hidden.unlock('addict')
+    $ doctor_details.description_hidden.unlock('fraud')
 
     return
 
