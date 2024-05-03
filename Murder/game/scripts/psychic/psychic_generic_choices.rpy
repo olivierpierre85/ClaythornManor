@@ -57,9 +57,9 @@ label psychic_generic_room:
     But if you must know, my room is "Elizabeth the First."
     """
 
-    $ unlock_map('psychic_room')
+    $ unlock_map('bedroom_psychic')
 
-    $ current_character.saved_variables['knows_psychic_room'] = True
+    $ current_character.saved_variables['knows_bedroom_psychic'] = True
 
     return
 

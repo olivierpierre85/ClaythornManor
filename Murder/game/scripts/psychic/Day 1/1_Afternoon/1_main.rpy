@@ -315,9 +315,9 @@ label psychic_introduction:
     I hope it's to your liking.
     """
 
-    $ unlock_map('psychic_room')
+    $ unlock_map('bedroom_psychic')
 
-    $ change_room('psychic_room')
+    $ change_room('bedroom_psychic')
 
     """
     He opens my room and lets me in.

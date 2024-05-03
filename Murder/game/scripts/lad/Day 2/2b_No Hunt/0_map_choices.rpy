@@ -127,15 +127,15 @@ label lad_day2_no_hunt_default_room_locked:
 
 
 # Psychic
-label lad_day2_no_hunt_psychic_room:
+label lad_day2_no_hunt_bedroom_psychic:
     
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_psychic_room_enter')
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_psychic_enter')
 
     return
 
-label lad_day2_no_hunt_psychic_room_enter:
+label lad_day2_no_hunt_bedroom_psychic_enter:
     # May knows whose room it is so lock it to avoid weird dialog for now
     call lad_day2_no_hunt_default_room_locked
 

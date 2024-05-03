@@ -2,10 +2,10 @@
 # lad_day1_evening_males_room
 # lad_day1_evening_females_room
 # lad_day1_evening_butler_room
-# lad_day1_evening_lad_room
+# lad_day1_evening_bedroom_lad
 # lad_day1_evening_doctor_room
 # lad_day1_evening_captain_room
-# lad_day1_evening_psychic_room
+# lad_day1_evening_bedroom_psychic
 # lad_day1_evening_host_room
 # lad_day1_evening_drunk_room
 # lad_day1_evening_broken_room
@@ -26,10 +26,10 @@
 # TimedMenuChoice(default_room_text('males_room'), 'lad_day1_evening_males_room', 10, room='males_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('females_room'), 'lad_day1_evening_females_room', 10, room='females_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('butler_room'), 'lad_day1_evening_butler_room', 10, room='butler_room', condition=condition_friday),
-# TimedMenuChoice(default_room_text('lad_room'), 'lad_day1_evening_lad_room', 10, room='lad_room', condition=condition_friday),
+# TimedMenuChoice(default_room_text('bedroom_lad'), 'lad_day1_evening_bedroom_lad', 10, room='bedroom_lad', condition=condition_friday),
 # TimedMenuChoice(default_room_text('doctor_room'), 'lad_day1_evening_doctor_room', 10, room='doctor_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('captain_room'), 'lad_day1_evening_captain_room', 10, room='captain_room', condition=condition_friday),
-# TimedMenuChoice(default_room_text('psychic_room'), 'lad_day1_evening_psychic_room', 10, room='psychic_room', condition=condition_friday),
+# TimedMenuChoice(default_room_text('bedroom_psychic'), 'lad_day1_evening_bedroom_psychic', 10, room='bedroom_psychic', condition=condition_friday),
 # TimedMenuChoice(default_room_text('host_room'), 'lad_day1_evening_host_room', 10, room='host_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('drunk_room'), 'lad_day1_evening_drunk_room', 10, room='drunk_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('broken_room'), 'lad_day1_evening_broken_room', 10, room='broken_room', condition=condition_friday),
@@ -111,7 +111,7 @@ label lad_day1_evening_captain_room:
     call lad_bedroom_default
     return
 
-label lad_day1_evening_psychic_room:
+label lad_day1_evening_bedroom_psychic:
     call lad_bedroom_default
     return
 

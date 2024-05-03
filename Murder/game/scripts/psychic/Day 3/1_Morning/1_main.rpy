@@ -23,7 +23,7 @@ label psychic_day3_morning:
 
     call change_time(7, 0, "Morning", "Sunday", hide_minutes=True)
 
-    $ change_room('psychic_room', irisout)
+    $ change_room('bedroom_psychic', irisout)
 
     """
     I slept terribly last night.

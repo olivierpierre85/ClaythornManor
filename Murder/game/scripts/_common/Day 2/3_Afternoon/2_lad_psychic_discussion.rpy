@@ -21,7 +21,7 @@ label common_day2_afternoon_lad_psychic_discussion:
     play sound door_open
 
     if current_character.text_id == "psychic":
-        $ change_room('lad_room')
+        $ change_room('bedroom_lad')
 
     psychic """
     I'm sorry to intrude, but I believe we should talk.

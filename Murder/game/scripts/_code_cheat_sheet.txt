@@ -15,8 +15,8 @@ $ lad_details.description_hidden.unlock('background')
 TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
 
 # Change rooms with TRANSITION
-$ change_room('lad_room')
-$ change_room('lad_room', dissolve)
+$ change_room('bedroom_lad')
+$ change_room('bedroom_lad', dissolve)
 
 # Stay same room, but wait
 call wait_screen_transition()

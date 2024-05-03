@@ -88,7 +88,7 @@ label psychic_day2_no_hunt_default_room_locked:
 
 
 # Lad
-label psychic_day2_no_hunt_lad_room:
+label psychic_day2_no_hunt_bedroom_lad:
 
     call psychic_bedroom_default
 

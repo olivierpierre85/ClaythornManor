@@ -62,7 +62,7 @@ label lad_generic_room_psychic:
     So make of that what you will.
     """
 
-    $ unlock_map('lad_room')
+    $ unlock_map('bedroom_lad')
 
     return
 

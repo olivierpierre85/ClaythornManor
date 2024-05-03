@@ -107,7 +107,7 @@ label psychic_day2_evening_garden:
 
 
 # # Lad
-# label psychic_day2_evening_lad_room:
+# label psychic_day2_evening_bedroom_lad:
 
 #     call psychic_bedroom_default
 

@@ -74,7 +74,7 @@ label lad_day3_afternoon_toilet:
     After seeing her enter her room, I head to mine.
     """
 
-    $ change_room('lad_room')
+    $ change_room('bedroom_lad')
 
     """
     As I walk down the hallway, I constantly look around.
@@ -402,7 +402,7 @@ label lad_day3_afternoon_no_toilet:
     So, with the last of my energy, I go up the stairs and head to my room.
     """
 
-    $ change_room("lad_room")
+    $ change_room("bedroom_lad")
 
     """
     Once inside, I slam the door shut.

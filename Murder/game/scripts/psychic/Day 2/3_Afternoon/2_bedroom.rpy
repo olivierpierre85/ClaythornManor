@@ -1,6 +1,6 @@
 label psychic_day2_afternoon_bedroom:
     
-    $ change_room('psychic_room', dissolve)
+    $ change_room('bedroom_psychic', dissolve)
 
     call change_time(18, 00)
 
@@ -120,7 +120,7 @@ label psychic_day2_afternoon_nurse_room_busy:
 
 label psychic_day2_afternoon_cancel:
 
-    $ change_room('psychic_room')
+    $ change_room('bedroom_psychic')
 
     """
     That's about all I can manage right now.

@@ -87,7 +87,7 @@ label psychic_day1_evening:
 
     call change_time(21,00, 'Evening', 'Friday')
 
-    $ change_room('psychic_room', dissolve)
+    $ change_room('bedroom_psychic', dissolve)
 
     """
     Well, I am comfortably settled.
@@ -113,7 +113,7 @@ label psychic_day1_evening:
     It's time to go to bed.
     """
 
-    $ change_room('psychic_room')
+    $ change_room('bedroom_psychic')
 
     jump psychic_day2_morning
         

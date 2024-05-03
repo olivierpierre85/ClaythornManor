@@ -76,8 +76,8 @@ label debug_choices:
         # "lad_day3_morning TES MAP":
         #     $ unlock_map('captain_room')
         #     $ unlock_map('host_room')
-        #     $ unlock_map('psychic_room')
-        #     $ unlock_map('lad_room')
+        #     $ unlock_map('bedroom_psychic')
+        #     $ unlock_map('bedroom_lad')
         #     $ unlock_map('drunk_room')
         #     $ unlock_map('nurse_room')
         #     $ unlock_map('broken_room')

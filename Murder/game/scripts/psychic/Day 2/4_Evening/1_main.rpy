@@ -76,7 +76,7 @@ label psychic_day2_evening:
 
 label psychic_day2_evening_cancel:
 
-    $ change_room('psychic_room')
+    $ change_room('bedroom_psychic')
 
     """
     There's nothing more I can do right now.

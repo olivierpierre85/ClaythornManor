@@ -20,7 +20,7 @@ label common_day3_morning_lad_psychic_journey:
         He opens the door for me and I enter.
         """
 
-        $ change_room('lad_room')
+        $ change_room('bedroom_lad')
 
     $ play_music('mysterious', 2)
 

@@ -1,6 +1,6 @@
 label lad_day2_afternoon_bedroom:
     
-    $ change_room('lad_room')
+    $ change_room('bedroom_lad')
 
     call change_time(18,00)
 
@@ -14,14 +14,14 @@ label lad_day2_afternoon_bedroom:
 
     call common_day2_afternoon_lad_psychic_discussion
 
-    if not lad_details.saved_variables['knows_psychic_room']:
+    if not lad_details.saved_variables['knows_bedroom_psychic']:
 
         psychic """
         I'm in the "Elizabeth I" room.
         """
 
-        $ unlock_map('psychic_room')
+        $ unlock_map('bedroom_psychic')
 
-        $ lad_details.saved_variables['knows_psychic_room'] = True # TODO add automatic function in unlock map
+        $ lad_details.saved_variables['knows_bedroom_psychic'] = True # TODO add automatic function in unlock map
 
     return

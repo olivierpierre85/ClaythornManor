@@ -21,7 +21,7 @@ label lad_day3_morning:
 
     call black_screen_transition("Ted Harring", "Sunday Morning")
 
-    $ change_room('lad_room', irisout)
+    $ change_room('bedroom_lad', irisout)
 
     if lad_details.saved_variables["day2_believe_psychic"]:
         call change_time(7, 30, "Morning", "Sunday", hide_minutes=True)

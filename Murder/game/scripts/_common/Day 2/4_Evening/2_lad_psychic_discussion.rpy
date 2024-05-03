@@ -29,7 +29,7 @@ label common_day2_evening_lad_psychic_discussion_1:
     """
 
     if current_character.text_id == "lad":
-        $ change_room('psychic_room')
+        $ change_room('bedroom_psychic')
 
     psychic """
     So, have you given any thought to what I told you?

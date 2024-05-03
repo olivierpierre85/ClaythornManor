@@ -110,9 +110,9 @@ label lad_day1_evening:
     I hope it suits your taste.
     """
 
-    $ unlock_map('lad_room')
+    $ unlock_map('bedroom_lad')
 
-    $ change_room('lad_room')
+    $ change_room('bedroom_lad')
 
     """
     I step into the bedroom.
@@ -168,7 +168,7 @@ label lad_day1_evening:
 
     $ stop_music()
 
-    $ change_room('lad_room')
+    $ change_room('bedroom_lad')
 
     if lad_details.saved_variables["day1_drunk"]:
 
@@ -207,7 +207,7 @@ label lad_day1_evening:
         
     return
 
-label lad_day1_evening_psychic_room:
+label lad_day1_evening_bedroom_psychic:
   
     $ change_room("bedrooms_hallway")
 
@@ -241,9 +241,9 @@ label lad_day1_evening_psychic_room:
     Of course, I apologize.
     """
 
-    $ unlock_map('psychic_room')
+    $ unlock_map('bedroom_psychic')
 
-    $ lad_details.saved_variables['knows_psychic_room'] = True
+    $ lad_details.saved_variables['knows_bedroom_psychic'] = True
 
     return
 

@@ -73,7 +73,7 @@ label lad_day2_evening:
         I rush to my room.
         """
 
-        $ change_room('lad_room')
+        $ change_room('bedroom_lad')
 
         """
         I make it to the toilet just in time, emptying the contents of my stomach.
@@ -107,7 +107,7 @@ label lad_day2_evening:
         I should go back to my room.
         """
 
-        $ change_room('lad_room')
+        $ change_room('bedroom_lad')
 
         """
         Before trying to sleep, it seems a good idea to barricade the door with some furniture.

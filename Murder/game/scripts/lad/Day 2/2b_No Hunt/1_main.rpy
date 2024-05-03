@@ -24,7 +24,7 @@ label lad_day2_no_hunt:
     
     call black_screen_transition("Ted Harring", "The Hunt")
 
-    $ change_room('lad_room')    
+    $ change_room('bedroom_lad')    
 
     $ play_music('upbeat')
 
@@ -123,7 +123,7 @@ label lad_day2_broken_room:
 
 label lad_day2_no_hunt_cancel:
 
-    $ change_room('lad_room')
+    $ change_room('bedroom_lad')
 
     """
     I don't think there's anything interesting to do now.

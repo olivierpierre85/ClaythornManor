@@ -485,7 +485,7 @@ label lad_day3_morning_billiard_room:
     return
 
 # Bedrooms
-label lad_day3_morning_lad_room:
+label lad_day3_morning_bedroom_lad:
 
     """
     There's no need to double-check my room.
@@ -662,9 +662,9 @@ label lad_day3_morning_drunk_room:
 
     return
 
-label lad_day3_morning_psychic_room:
+label lad_day3_morning_bedroom_psychic:
 
-    $ change_room('psychic_room')
+    $ change_room('bedroom_psychic')
 
     psychic """
     Why are we in my room?

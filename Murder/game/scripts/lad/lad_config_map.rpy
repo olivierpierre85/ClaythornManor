@@ -41,10 +41,10 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('gun_room'), 'lad_day1_evening_gun_room', 10, room='gun_room'),
             # Specific actions
             TimedMenuChoice(
-                default_room_text('psychic_room'), 
-                'lad_day1_evening_psychic_room', 
+                default_room_text('bedroom_psychic'), 
+                'lad_day1_evening_bedroom_psychic', 
                 10, 
-                room = 'psychic_room'
+                room = 'bedroom_psychic'
             ),
             TimedMenuChoice(
                 'Meet the others in the billiard room', 
@@ -57,7 +57,7 @@ label lad_config_map:
                 'Go to sleep', 
                 'generic_cancel', 
                 early_exit = True, 
-                room = 'lad_room'
+                room = 'bedroom_lad'
             )
         ], is_map = True)
 
@@ -71,7 +71,7 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('butler_room'), 'lad_day2_no_hunt_butler_room', 10, room='butler_room'),
             TimedMenuChoice(default_room_text('doctor_room'), 'lad_day2_no_hunt_doctor_room', 10, room='doctor_room'),
             TimedMenuChoice(default_room_text('captain_room'), 'lad_day2_no_hunt_captain_room', 10, room='captain_room'),
-            TimedMenuChoice(default_room_text('psychic_room'), 'lad_day2_no_hunt_psychic_room', 10, room='psychic_room'),
+            TimedMenuChoice(default_room_text('bedroom_psychic'), 'lad_day2_no_hunt_bedroom_psychic', 10, room='bedroom_psychic'),
             TimedMenuChoice(default_room_text('host_room'), 'lad_day2_no_hunt_host_room', 10, room='host_room'),
             TimedMenuChoice(default_room_text('drunk_room'), 'lad_day2_no_hunt_drunk_room', 10, room='drunk_room'),
             TimedMenuChoice(default_room_text('library'), 'lad_day2_no_hunt_library', 10, room='library'),
@@ -116,7 +116,7 @@ label lad_config_map:
                 'lad_day2_no_hunt_cancel', 
                 240, 
                 early_exit = True, 
-                room = 'lad_room'
+                room = 'bedroom_lad'
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
@@ -157,13 +157,13 @@ label lad_config_map:
                 'Go to sleep and hope for the best.', 
                 'lad_day2_evening_sleep',
                 early_exit = True, 
-                room = 'lad_room',
+                room = 'bedroom_lad',
             ),
             TimedMenuChoice(
                 'Have a talk with Amelia Baxter', 
-                'lad_day2_evening_psychic_room',
+                'lad_day2_evening_bedroom_psychic',
                 20,
-                room = 'psychic_room',
+                room = 'bedroom_psychic',
             ),
             TimedMenuChoice(
                 'Check if there is someone in the Billiard Room', 
@@ -211,16 +211,16 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('females_room'), 'lad_day3_morning_females_room', 10, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'lad_day3_morning_butler_room', 10, room='butler_room'),
             TimedMenuChoice(
-                default_room_text('lad_room'), 
-                'lad_day3_morning_lad_room',
+                default_room_text('bedroom_lad'), 
+                'lad_day3_morning_bedroom_lad',
                 10,
-                room = 'lad_room'
+                room = 'bedroom_lad'
             ),
             TimedMenuChoice(
-                default_room_text('psychic_room'), 
-                'lad_day3_morning_psychic_room',
+                default_room_text('bedroom_psychic'), 
+                'lad_day3_morning_bedroom_psychic',
                 10,
-                room = 'psychic_room'
+                room = 'bedroom_psychic'
             ),
             TimedMenuChoice(
                 default_room_text('drunk_room'), 

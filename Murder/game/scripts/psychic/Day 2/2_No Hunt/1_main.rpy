@@ -24,7 +24,7 @@ label psychic_day2_no_hunt:
     
     call black_screen_transition("Amelia Baxter", "The Hunt")
 
-    $ change_room('psychic_room')    
+    $ change_room('bedroom_psychic')    
 
     $ play_music('upbeat')
 
@@ -156,7 +156,7 @@ label psychic_day2_no_hunt_nurse_room_busy:
 
 label psychic_day2_no_hunt_cancel:
 
-    $ change_room('psychic_room')
+    $ change_room('bedroom_psychic')
 
     """
     There's nothing more I can do right now.

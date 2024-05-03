@@ -18,9 +18,9 @@ label psychic_day2_morning:
 
     call black_screen_transition("Amelia Baxter", "Saturday")
 
-    $ change_room("psychic_room", irisout)
+    $ change_room("bedroom_psychic", irisout)
 
-    $ change_room('psychic_room')
+    $ change_room('bedroom_psychic')
 
     call change_time(8, 30, 'Morning', 'Saturday', hide_minutes=True)
 

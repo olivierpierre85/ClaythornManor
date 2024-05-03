@@ -46,7 +46,7 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('drunk_room'), 'psychic_day1_evening_default_bedroom', 10, room='drunk_room'),
             TimedMenuChoice(default_room_text('broken_room'), 'psychic_day1_evening_default_bedroom', 10, room='broken_room'),
             TimedMenuChoice(default_room_text('nurse_room'), 'psychic_day1_evening_default_bedroom', 10, room='nurse_room'),
-            TimedMenuChoice(default_room_text('lad_room'), 'psychic_day1_evening_default_bedroom', 10, room='lad_room'),
+            TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_lad'),
             # attic
             TimedMenuChoice(default_room_text('storage'), 'psychic_day1_evening_attic_default', 10, room='storage', condition=attic_default),
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day1_evening_attic_default', 10, room='males_room', condition=attic_default),
@@ -57,7 +57,7 @@ label psychic_config_map:
             TimedMenuChoice(
                 'Go to bed', 
                 'generic_cancel', 
-                room = 'psychic_room', 
+                room = 'bedroom_psychic', 
                 early_exit = True
             ),
             TimedMenuChoice(
@@ -85,10 +85,10 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('manor_garden'), 'psychic_garden_default', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
             # Bedrooms 
-            TimedMenuChoice(default_room_text('lad_room'), 'psychic_day2_no_hunt_lad_room', 10, room='lad_room'),
+            TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day2_no_hunt_doctor_room', 10, room='doctor_room'),
             TimedMenuChoice(default_room_text('captain_room'), 'psychic_day2_no_hunt_captain_room', 10, room='captain_room'),
-            TimedMenuChoice(default_room_text('psychic_room'), 'psychic_day2_no_hunt_psychic_room', 10, room='psychic_room'),
+            TimedMenuChoice(default_room_text('bedroom_psychic'), 'psychic_day2_no_hunt_bedroom_psychic', 10, room='bedroom_psychic'),
             TimedMenuChoice(default_room_text('host_room'), 'psychic_day2_no_hunt_host_room', 10, room='host_room'),
             TimedMenuChoice(default_room_text('drunk_room'), 'psychic_day2_no_hunt_drunk_room', 10, room='drunk_room'),
             # attic
@@ -129,7 +129,7 @@ label psychic_config_map:
                 'psychic_day2_no_hunt_cancel', 
                 240, 
                 early_exit = True, 
-                room = 'psychic_room'
+                room = 'bedroom_psychic'
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
@@ -152,7 +152,7 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day2_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
             # Bedrooms 
-            TimedMenuChoice(default_room_text('lad_room'), 'psychic_day2_evening_lad_room', 10, room='lad_room'),
+            TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day2_evening_doctor_room', 10, room='doctor_room'),
             TimedMenuChoice(default_room_text('captain_room'), 'psychic_day2_evening_captain_room', 10, room='captain_room'),
             TimedMenuChoice(default_room_text('host_room'), 'psychic_day2_evening_host_room', 10, room='host_room'),
@@ -184,7 +184,7 @@ label psychic_config_map:
                 'psychic_day2_evening_cancel', 
                 0, 
                 early_exit = True, 
-                room = 'psychic_room'
+                room = 'bedroom_psychic'
             ),
             # TimedMenuChoice(
             #     'Richard III Bedroom', 

@@ -1,6 +1,6 @@
 label psychic_day2_evening_lad_discussion:
 
-    $ change_room('psychic_room', dissolve)
+    $ change_room('bedroom_psychic', dissolve)
 
     pause 2.0
 

@@ -22,9 +22,9 @@ label lad_day2_morning:
 
     call black_screen_transition("Ted Harring", "Saturday")
 
-    $ change_room("lad_room", irisout)
+    $ change_room("bedroom_lad", irisout)
     
-    $ change_room('lad_room')
+    $ change_room('bedroom_lad')
 
     $ play_music('upbeat', 3)
 

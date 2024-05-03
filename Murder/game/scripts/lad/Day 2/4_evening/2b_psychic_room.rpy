@@ -1,10 +1,10 @@
-label lad_day2_evening_psychic_room:
+label lad_day2_evening_bedroom_psychic:
 
     $ change_room("bedrooms_hallway")
 
     call common_day2_evening_lad_psychic_discussion_1
 
-    call run_menu(TimedMenu("lad_day2_evening_psychic_room", [
+    call run_menu(TimedMenu("lad_day2_evening_bedroom_psychic", [
         TimedMenuChoice('I think you might be right', 'lad_day2_believe_psychic', 10, early_exit = True ),
         TimedMenuChoice('No, you are clearly imagining things', 'lad_day2_believe_dont_believe_psychic', early_exit = True)
     ]))
