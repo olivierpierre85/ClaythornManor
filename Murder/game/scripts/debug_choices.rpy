@@ -4,9 +4,9 @@ label debug_choices:
     $ skip_clock_movement = True
 
     # Comment to test tutorials
-    # $ seen_tutorial_description_hidden = True
-    # $ seen_tutorial_clock = True
-    # $ seen_tutorial_map = True
+    $ seen_tutorial_description_hidden = True
+    $ seen_tutorial_clock = True
+    $ seen_tutorial_map = True
     # $ seen_tutorial_unlock_character = True
     # $ seen_tutorial_timeline = True
 

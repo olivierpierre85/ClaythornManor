@@ -74,8 +74,8 @@ label lad_day1_evening:
     $ time_left = 120
 
     $ current_menu = TimedMenu("lad_day1_evening", [
-        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic')
+        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor', keep_alive = True,),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic', keep_alive = True,)
     ], image_left = "doctor", image_right = "psychic")
 
     call run_menu(current_menu)
@@ -105,7 +105,7 @@ label lad_day1_evening:
     footman """
     Here you are, sir.
 
-    You've been assigned the \"William The Conqueror\" room.
+    You've been assigned the "William The Conqueror" room.
 
     I hope it suits your taste.
     """

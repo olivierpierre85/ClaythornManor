@@ -174,7 +174,7 @@ screen map_information:
         if info.floor == selected_floor and info.active:
                 text info.name:
                     pos info.area_points
-                    color "#be0c0c"
+                    color gui.hover_muted_color
                     size 30
                     font "gui/font/BurtonScratch-Regular.ttf"
 
@@ -284,6 +284,7 @@ screen in_game_map_menu(timed_menu):
             if not tooltip:
                 $ tooltip = "Click on a room to move there"
             label [tooltip]:
+                text_color gui.highlight_color
                 xalign 0.5
 
 # Python classes

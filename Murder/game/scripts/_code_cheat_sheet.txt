@@ -12,7 +12,7 @@ $ lad_details.observations.unlock('green_liquid')
 
 $ lad_details.description_hidden.unlock('background') 
 
-
+TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
 
 # Change rooms with TRANSITION
 $ change_room('lad_room')
