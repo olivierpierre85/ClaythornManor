@@ -17,7 +17,7 @@
 # --------------------------------------------
 label lad_day1_evening:
     
-    call change_time(18,30, "Evening", "Friday" )
+    call change_time(18, 30, "Evening", "Friday")
 
     $ current_character.add_checkpoint("lad_day1_evening") 
 
@@ -26,9 +26,15 @@ label lad_day1_evening:
     $ change_room('dining_room', irisout)
 
     """
-    Everyone takes a seat at the spot labeled with their names.
+    Everyone takes a seat at the spot labelled with their names.
 
     As I observe each person, Lady Claythorn makes her entrance into the room.
+
+    She looks younger than I had imagined.
+
+    I don't know why, but I pictured an elderly bored lady. Yet, she looks nothing like that.
+    
+    Her clothes, which are the most impressive of anyone's in the room, make her status clear.
 
     She proceeds to take her seat at the table.
     """
@@ -125,7 +131,7 @@ label lad_day1_evening:
 
     After a while, I unpack my modest luggage.
 
-    That task didn't consume much time. So, what should I do now?
+    That task didn't take up much time. So, what should I do now?
     """
 
     $ play_music('upbeat')

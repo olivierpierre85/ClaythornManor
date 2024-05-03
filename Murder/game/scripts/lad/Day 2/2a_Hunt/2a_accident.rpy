@@ -299,7 +299,7 @@ label lad_day2_hunt_accident:
 
     By the time they get here, it's too late.
 
-    Doctor Baldwin has bled out, lying lifeless in the forest.
+    Doctor Baldwin has bled out, and he is lying lifeless in the forest.
     """
 
 
