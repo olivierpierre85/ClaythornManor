@@ -229,15 +229,26 @@ screen progress:
                     grid 5 2:
                         spacing 13
                         $ grid_fill = 10
-                        for item in ( current_storyline.important_choices.get_list() +
-                                        current_storyline.objects.get_list() + 
-                                            current_storyline.observations.get_list()
-                                            ):
+                        for item in current_storyline.important_choices.get_list():
                             $ grid_fill -= 1
                             if current_checkpoint:
-                                use info_card(item)
+                                use info_card(item, "choice")
                             else:
-                                use info_card(item)
+                                use info_card(item, "choice")
+                        
+                        for item in current_storyline.objects.get_list():
+                            $ grid_fill -= 1
+                            if current_checkpoint:
+                                use info_card(item, "objects")
+                            else:
+                                use info_card(item, "objects")
+
+                        for item in (current_storyline.observations.get_list()):
+                            $ grid_fill -= 1
+                            if current_checkpoint:
+                                use info_card(item, "observations")
+                            else:
+                                use info_card(item, "observations")
                         
                         if grid_fill > 0 :
                             for i_fill in range(grid_fill):
@@ -268,20 +279,20 @@ screen progress:
                 text tooltip
                 # textbutton "Cancel" action SetVariable("action_needed_fix", False )
 
-screen info_card(item=None):  
+screen info_card(item=None, item_type=None):  
     python:
         if item:
-            if item.type == 'object':
+            if item_type == 'object':
                 icon_file = "{image=images/ui/objects_icon.png} "
-            elif item.type == 'observation':
+            elif item_type == 'observation':
                 icon_file = "{image=images/ui/observation_icon.png} "
             else:
                 icon_file = "(choice?) "
             
             if current_checkpoint:
-                if item.type == 'object':
+                if item_type == 'object':
                     locked = (not item.text_id in current_checkpoint.objects)
-                elif item.type == 'observation':
+                elif item_type == 'observation':
                     locked = (not item.text_id in current_checkpoint.observations)
                 else:
                     locked = (not item.text_id in current_checkpoint.important_choices)
