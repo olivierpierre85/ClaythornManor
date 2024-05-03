@@ -220,6 +220,9 @@ screen choice(items):
             else:
                 $ btn_text = i.caption
                 
+            # Remove menu id between "{{" and "}}"
+            $ btn_text = re.sub(r"\{\{.*?\}\}", "", btn_text)
+
             if i.chosen:
                 textbutton btn_text:
                     mouse "hover"
