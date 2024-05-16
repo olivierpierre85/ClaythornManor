@@ -7,7 +7,7 @@ label debug_choices:
     $ seen_tutorial_description_hidden = True
     $ seen_tutorial_clock = True
     $ seen_tutorial_map = True
-    # $ seen_tutorial_unlock_character = True
+    $ seen_tutorial_unlock_character = True
     # $ seen_tutorial_timeline = True
 
     # show screen current_time
@@ -21,9 +21,10 @@ label debug_choices:
         
         "debug_test":
             $ test_choices = debug_lad_poisoned_day1
-            call unlock_lad
-            call unlock_psychic
-            call unlock_doctor
+            # call unlock_lad
+            # call unlock_psychic
+            # call unlock_doctor
+            call unlock_captain
             jump lad_introduction
 
         "lad_introduction":
@@ -216,6 +217,20 @@ label unlock_doctor:
     $ doctor_details.description_hidden.unlock('age') 
     $ doctor_details.description_hidden.unlock('addict')
     $ doctor_details.description_hidden.unlock('fraud')
+
+    return
+
+label unlock_captain:
+
+    $ captain_details.description_hidden.unlock('wars')
+    $ captain_details.description_hidden.unlock('talker')
+    $ captain_details.description_hidden.unlock('heroic_act') 
+    $ captain_details.description_hidden.unlock('city') 
+    $ captain_details.description_hidden.unlock('age')
+    $ captain_details.description_hidden.unlock('mansion')
+    $ captain_details.description_hidden.unlock('table') 
+    $ captain_details.description_hidden.unlock('family')
+    $ captain_details.description_hidden.unlock('lie')
 
     return
 

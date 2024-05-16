@@ -151,13 +151,11 @@ label captain_generic_origin_psychic_2:
 
 label captain_generic_heroic_act_psychic:
     
+    # AI generated
     captain """
-    It is because of my actions during the Great War.
-    """
+    It is most likely because of my actions during the Great War.
 
-    #chatGPT
-    captain """
-    It was 1917, and I was serving in the Mesopotamia campaign. 
+    In particular, those in 1917, during the Mesopotamian campaign.
     
     Our regiment was tasked with taking control of a heavily fortified Turkish position. 
     
@@ -179,7 +177,7 @@ label captain_generic_heroic_act_psychic:
     """
     Well, he certainly likes to tell a story in full.
 
-    That was my fault for asking.
+    That's my fault for asking.
     """
     
     return
