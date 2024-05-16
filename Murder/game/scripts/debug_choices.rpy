@@ -122,14 +122,15 @@ label debug_choices:
         #     $ doctor_details.description_hidden.unlock('addict') 
         #     jump captain_introduction
 
-        # "psychic_day1_evening":
-        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-        #     call unlock_psychic
-        #     $ current_character = psychic_details
+        "psychic_day1_evening":
+            $ psychic_details.saved_variables["knows_captain_origin"] = True
+            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+            call unlock_psychic
+            $ current_character = psychic_details
 
-        #     # $ psychic_details.observations.unlock('lord')
-        #     # $ lord_name = "Sir Nicholas"
-        #     jump psychic_day1_evening
+            # $ psychic_details.observations.unlock('lord')
+            # $ lord_name = "Sir Nicholas"
+            jump psychic_day1_evening
 
         # "psychic_day2_morning":
         #     $ psychic_details.saved_variables["knows_captain_origin"] = True

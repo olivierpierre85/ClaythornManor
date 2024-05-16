@@ -19,7 +19,7 @@ label init_captain:
             CharacterInformation(40, "city", "London"), # TODO unlock somewhere
             CharacterInformation(20, "age", "54 years ago"),
             CharacterInformation(30, "mansion", "running of a large mansion"),
-            CharacterInformation(30, "table", "proper table manners"),# TODO unlock 
+            CharacterInformation(30, "table", "proper table manners"), # TODO unlock if PSYCHIC talks first to the LAD !!!!!
             CharacterInformation(30, "family", "noble lineage ensured he received an education far superior to most"),            
             CharacterInformation(60, "lie", "they do not really include the fighting he claims to have participated in. As an administrative officer, he most likely spent most of his time behind desks", is_important = True),
             ], captain_name

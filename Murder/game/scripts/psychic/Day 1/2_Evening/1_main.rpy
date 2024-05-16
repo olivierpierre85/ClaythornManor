@@ -128,6 +128,8 @@ label psychic_day1_dinner_lad:
     Oh Mister Harring. I am glad we can continue our conversation.
     """
 
+    $ psychic_details.saved_variables["day1_evening_talk_to_lad"] = True
+
     call lad_generic
     
     return
@@ -140,6 +142,36 @@ label psychic_day1_dinner_captain:
 
     I should try to talk to him again.
     """
+
+    psychic """
+    Mister Sinha.
+    """
+
+    captain """
+    Miss Baxter.
+    """
+
+    if psychic_details.saved_variables["day1_evening_talk_to_lad"] and not psychic_details.saved_variables["day1_evening_talk_to_captain"]:
+
+        captain """
+        I don't want to make a big deal out of it, but I am the one on your left.
+        
+        You should have engaged the conversation with me first.
+        """
+
+        psychic """
+        Oh right, I am sorry.
+        """
+
+        """
+        What a stickler this guy.
+
+        Also, how does he know this?
+        """
+
+        $ captain_details.description_hidden.unlock('table') 
+
+        $ psychic_details.saved_variables["day1_evening_talk_to_captain"] = True
 
     call captain_generic
 

@@ -41,6 +41,8 @@ label init_psychic:
             "knows_nurse_background": False,
             "day2_evening_billiard_room_visited": False,
             "day2_evening_billiard_room_talk_to_captain": False,
+            "day1_evening_talk_to_lad": False,
+            "day1_evening_talk_to_captain": False,
         }
 
         psychic_important_choices = CharacterImportantChoiceList([])
