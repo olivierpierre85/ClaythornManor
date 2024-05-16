@@ -156,7 +156,7 @@ label psychic_day1_dinner_captain:
         captain """
         I don't want to make a big deal out of it, but I am the one on your left.
         
-        You should have engaged the conversation with me first.
+        You should have engaged in conversation with me first.
         """
 
         psychic """
@@ -164,7 +164,7 @@ label psychic_day1_dinner_captain:
         """
 
         """
-        What a stickler this guy.
+        What a stickler he is.
 
         Also, how does he know this?
         """
@@ -172,6 +172,7 @@ label psychic_day1_dinner_captain:
         $ captain_details.description_hidden.unlock('table') 
 
         $ psychic_details.saved_variables["day1_evening_talk_to_captain"] = True
+
 
     call captain_generic
 

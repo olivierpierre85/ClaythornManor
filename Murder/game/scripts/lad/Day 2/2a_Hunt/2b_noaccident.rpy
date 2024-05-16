@@ -43,8 +43,7 @@ label lad_day2_hunt_noaccident:
 
     I was also involved in the Chinese rebellion. Then ...
     """
-    # TODO adjust based on whether the player has listened to the speech
-
+    
     $ captain_details.description_hidden.unlock('wars')
 
     """

@@ -16,11 +16,11 @@ label init_captain:
             CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, China, or during the Great War"), 
             CharacterInformation(10, "talker",  "being at the centre of attention, so he tend to monopolize the conversation", is_important = True),
             CharacterInformation(40, "heroic_act", "was so heroic during the war", is_important = True),
-            CharacterInformation(40, "city", "London"), # TODO unlock somewhere
+            CharacterInformation(40, "city", "London"), # TODO unlock somewhere, ? In captain walkthroug?
             CharacterInformation(20, "age", "54 years ago"),
             CharacterInformation(30, "mansion", "running of a large mansion"),
-            CharacterInformation(30, "table", "proper table manners"), # TODO unlock if PSYCHIC talks first to the LAD !!!!!
-            CharacterInformation(30, "family", "noble lineage ensured he received an education far superior to most"),            
+            CharacterInformation(30, "table", "proper table manners"),
+            CharacterInformation(30, "family", "noble lineage ensured he received an education far superior to most"), # TODO unlock somewhere, ? In captain walkthroug?            
             CharacterInformation(60, "lie", "they do not really include the fighting he claims to have participated in. As an administrative officer, he most likely spent most of his time behind desks", is_important = True),
             ], captain_name
         )

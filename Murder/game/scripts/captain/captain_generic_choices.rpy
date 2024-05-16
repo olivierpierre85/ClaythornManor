@@ -179,6 +179,8 @@ label captain_generic_heroic_act_psychic:
 
     That's my fault for asking.
     """
+
+    $ captain_details.description_hidden.unlock('heroic_act') 
     
     return
 
