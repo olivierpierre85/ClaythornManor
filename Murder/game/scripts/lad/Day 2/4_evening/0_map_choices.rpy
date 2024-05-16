@@ -73,7 +73,7 @@ label lad_bedroom_stay_away_day2:
     return
 
 # Nurse
-label lad_day2_evening_nurse_room:
+label lad_day2_evening_bedroom_nurse:
 
     $ change_room("bedrooms_hallway")
 
@@ -89,7 +89,7 @@ label lad_day2_evening_nurse_room:
     Yes? What is it?
     """
     
-    $ unlock_map('nurse_room')
+    $ unlock_map('bedroom_nurse')
 
     lad """
     Miss Marsh, it's Ted Harring.
@@ -110,7 +110,7 @@ label lad_day2_evening_nurse_room:
     return
 
 # Captain
-label lad_day2_evening_captain_room:
+label lad_day2_evening_bedroom_captain:
     # In the billiard room
     call lad_bedroom_default
 
@@ -119,7 +119,7 @@ label lad_day2_evening_captain_room:
     return
 
 # Host
-label lad_day2_evening_host_room:
+label lad_day2_evening_bedroom_host:
     # Preparing to leave
     call lad_bedroom_default
 
@@ -128,7 +128,7 @@ label lad_day2_evening_host_room:
     return
 
 # Drunk
-label lad_day2_evening_drunk_room:
+label lad_day2_evening_bedroom_drunk:
 
     $ change_room("bedrooms_hallway")
 
@@ -150,7 +150,7 @@ label lad_day2_evening_drunk_room:
     I know that the door is closed, so there's no point in trying to enter.
     """
 
-    $ unlock_map('drunk_room')
+    $ unlock_map('bedroom_drunk')
 
     return
 

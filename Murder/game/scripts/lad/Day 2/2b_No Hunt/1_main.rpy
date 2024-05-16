@@ -55,9 +55,9 @@ label lad_day2_no_hunt:
     jump lad_day2_afternoon
     
 
-label lad_day2_broken_room:
+label lad_day2_bedroom_broken:
 
-    $ change_room('broken_room')
+    $ change_room('bedroom_broken')
 
     $ play_music('sad', 2)
 
@@ -135,7 +135,7 @@ label lad_day2_no_hunt_cancel:
 
     return
 
-label lad_day2_no_hunt_nurse_room_busy:
+label lad_day2_no_hunt_bedroom_nurse_busy:
         
     $ change_room("bedrooms_hallway")
 
@@ -163,11 +163,11 @@ label lad_day2_no_hunt_nurse_room_busy:
     Of course, sorry for bothering you.
     """
 
-    $ unlock_map('nurse_room')
+    $ unlock_map('bedroom_nurse')
 
     return
 
-label lad_day2_no_hunt_captain_room_enter:
+label lad_day2_no_hunt_bedroom_captain_enter:
 
     """
     Ensuring no one's watching, I gently nudge the door open.
@@ -175,7 +175,7 @@ label lad_day2_no_hunt_captain_room_enter:
 
     play sound door_open
 
-    $ change_room('captain_room')
+    $ change_room('bedroom_captain')
 
     """ 
     The door opens smoothly, and I step inside.
@@ -187,7 +187,7 @@ label lad_day2_no_hunt_captain_room_enter:
     This must be Sushil Sinha's room.
     """
     
-    $ unlock_map('captain_room')
+    $ unlock_map('bedroom_captain')
 
     """
     Now that I'm here, I should take a look around.
@@ -197,7 +197,7 @@ label lad_day2_no_hunt_captain_room_enter:
 
     $ renpy.pause(5, hard=True)
 
-    $ change_room('captain_room') # TODO: Add visual effect for the same room?
+    $ change_room('bedroom_captain') # TODO: Add visual effect for the same room?
     
     """
     I searched for quite a while.
@@ -215,7 +215,7 @@ label lad_day2_no_hunt_captain_room_enter:
 
     return
 
-label lad_day2_no_hunt_drunk_room_enter:
+label lad_day2_no_hunt_bedroom_drunk_enter:
 
     """
     I cautiously push the door open, ensuring no one sees me.
@@ -223,7 +223,7 @@ label lad_day2_no_hunt_drunk_room_enter:
 
     play sound door_open
 
-    $ change_room('drunk_room')
+    $ change_room('bedroom_drunk')
 
     """
     The bedroom is messy and dimly lit and the smell of alcohol fills the air.
@@ -233,7 +233,7 @@ label lad_day2_no_hunt_drunk_room_enter:
     I think I can safely say it's Samuel Manning's room.
     """
 
-    $ unlock_map('drunk_room')
+    $ unlock_map('bedroom_drunk')
 
     """
     I quickly scan the room but only find empty whiskey bottles.

@@ -3,13 +3,13 @@
 # lad_day1_evening_females_room
 # lad_day1_evening_butler_room
 # lad_day1_evening_bedroom_lad
-# lad_day1_evening_doctor_room
-# lad_day1_evening_captain_room
+# lad_day1_evening_bedroom_doctor
+# lad_day1_evening_bedroom_captain
 # lad_day1_evening_bedroom_psychic
-# lad_day1_evening_host_room
-# lad_day1_evening_drunk_room
-# lad_day1_evening_broken_room
-# lad_day1_evening_nurse_room
+# lad_day1_evening_bedroom_host
+# lad_day1_evening_bedroom_drunk
+# lad_day1_evening_bedroom_broken
+# lad_day1_evening_bedroom_nurse
 # lad_day1_evening_library
 # lad_day1_evening_tea_room
 # lad_day1_evening_billiard_room
@@ -27,13 +27,13 @@
 # TimedMenuChoice(default_room_text('females_room'), 'lad_day1_evening_females_room', 10, room='females_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('butler_room'), 'lad_day1_evening_butler_room', 10, room='butler_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('bedroom_lad'), 'lad_day1_evening_bedroom_lad', 10, room='bedroom_lad', condition=condition_friday),
-# TimedMenuChoice(default_room_text('doctor_room'), 'lad_day1_evening_doctor_room', 10, room='doctor_room', condition=condition_friday),
-# TimedMenuChoice(default_room_text('captain_room'), 'lad_day1_evening_captain_room', 10, room='captain_room', condition=condition_friday),
+# TimedMenuChoice(default_room_text('bedroom_doctor'), 'lad_day1_evening_bedroom_doctor', 10, room='bedroom_doctor', condition=condition_friday),
+# TimedMenuChoice(default_room_text('bedroom_captain'), 'lad_day1_evening_bedroom_captain', 10, room='bedroom_captain', condition=condition_friday),
 # TimedMenuChoice(default_room_text('bedroom_psychic'), 'lad_day1_evening_bedroom_psychic', 10, room='bedroom_psychic', condition=condition_friday),
-# TimedMenuChoice(default_room_text('host_room'), 'lad_day1_evening_host_room', 10, room='host_room', condition=condition_friday),
-# TimedMenuChoice(default_room_text('drunk_room'), 'lad_day1_evening_drunk_room', 10, room='drunk_room', condition=condition_friday),
-# TimedMenuChoice(default_room_text('broken_room'), 'lad_day1_evening_broken_room', 10, room='broken_room', condition=condition_friday),
-# TimedMenuChoice(default_room_text('nurse_room'), 'lad_day1_evening_nurse_room', 10, room='nurse_room', condition=condition_friday),
+# TimedMenuChoice(default_room_text('bedroom_host'), 'lad_day1_evening_bedroom_host', 10, room='bedroom_host', condition=condition_friday),
+# TimedMenuChoice(default_room_text('bedroom_drunk'), 'lad_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', condition=condition_friday),
+# TimedMenuChoice(default_room_text('bedroom_broken'), 'lad_day1_evening_bedroom_broken', 10, room='bedroom_broken', condition=condition_friday),
+# TimedMenuChoice(default_room_text('bedroom_nurse'), 'lad_day1_evening_bedroom_nurse', 10, room='bedroom_nurse', condition=condition_friday),
 # TimedMenuChoice(default_room_text('library'), 'lad_day1_evening_library', 10, room='library', condition=condition_friday),
 # TimedMenuChoice(default_room_text('tea_room'), 'lad_day1_evening_tea_room', 10, room='tea_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('billiard_room'), 'lad_day1_evening_billiard_room', 10, room='billiard_room', condition=condition_friday),
@@ -103,11 +103,11 @@ label lad_day1_evening_portrait_gallery:
     return
 
 # Bedrooms
-label lad_day1_evening_doctor_room:
+label lad_day1_evening_bedroom_doctor:
     call lad_bedroom_default
     return
 
-label lad_day1_evening_captain_room:
+label lad_day1_evening_bedroom_captain:
     call lad_bedroom_default
     return
 
@@ -115,19 +115,19 @@ label lad_day1_evening_bedroom_psychic:
     call lad_bedroom_default
     return
 
-label lad_day1_evening_host_room:
+label lad_day1_evening_bedroom_host:
     call lad_bedroom_default
     return
 
-label lad_day1_evening_drunk_room:
+label lad_day1_evening_bedroom_drunk:
     call lad_bedroom_default
     return
 
-label lad_day1_evening_broken_room:
+label lad_day1_evening_bedroom_broken:
     call lad_bedroom_default
     return
 
-label lad_day1_evening_nurse_room:
+label lad_day1_evening_bedroom_nurse:
     call lad_bedroom_default
     return
 

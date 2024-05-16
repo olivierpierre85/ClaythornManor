@@ -73,32 +73,32 @@ label lad_bedroom_stay_away:
     
     return
 
-label lad_day1_evening_doctor_room:
+label lad_day1_evening_bedroom_doctor:
     call lad_bedroom_default
     call lad_bedroom_stay_away
     return
 
-label lad_day1_evening_captain_room:
+label lad_day1_evening_bedroom_captain:
     call lad_bedroom_default
     call lad_bedroom_stay_away
     return
 
-label lad_day1_evening_host_room:
+label lad_day1_evening_bedroom_host:
     call lad_bedroom_default
     call lad_bedroom_stay_away
     return
 
-label lad_day1_evening_drunk_room:
+label lad_day1_evening_bedroom_drunk:
     call lad_bedroom_default
     call lad_bedroom_stay_away
     return
 
-label lad_day1_evening_broken_room:
+label lad_day1_evening_bedroom_broken:
     call lad_bedroom_default
     call lad_bedroom_stay_away
     return
 
-label lad_day1_evening_nurse_room:
+label lad_day1_evening_bedroom_nurse:
     call lad_bedroom_default
     call lad_bedroom_stay_away
     return

@@ -75,7 +75,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
     $ change_room("bedrooms_hallway")
 
-    $ unlock_map('drunk_room')
+    $ unlock_map('bedroom_drunk')
 
     play sound door_knock
 
@@ -117,7 +117,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
         But we are already in.
         """
 
-    $ change_room('drunk_room')
+    $ change_room('bedroom_drunk')
     
     $ play_music('scary', fadeout_val=1)
 

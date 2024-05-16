@@ -25,7 +25,7 @@ label init_map:
         # Full Map of the MANOR TODO no need to init each time
         
         # all rooms
-        # 'attic_hallway', 'storage', 'males_room', 'females_room', 'butler_room', 'bedrooms_hallway', 'bedroom_lad', 'doctor_room', 'captain_room', 'bedroom_psychic', 'host_room', 'drunk_room', 'broken_room', 'nurse_room', 'basement_stairs', 'library', 'tea_room', 'billiard_room', 'dining_room', 'garden', 'entrance_hall', 'portrait_gallery', 'kitchen', 'scullery', 'garage', 'gun_room'
+        # 'attic_hallway', 'storage', 'males_room', 'females_room', 'butler_room', 'bedrooms_hallway', 'bedroom_lad', 'bedroom_doctor', 'bedroom_captain', 'bedroom_psychic', 'bedroom_host', 'bedroom_drunk', 'bedroom_broken', 'bedroom_nurse', 'basement_stairs', 'library', 'tea_room', 'billiard_room', 'dining_room', 'garden', 'entrance_hall', 'portrait_gallery', 'kitchen', 'scullery', 'garage', 'gun_room'
         rooms = [
             # Attic
             Room(3, None,   'attic_hallway',         'Attic Hallway' ), # No area points so not a real destination
@@ -38,14 +38,14 @@ label init_map:
             Room(2, None,   'bedrooms_hallway',         'Bedrooms Hallway' ), # No area points so not a real destination
 
             Room(2, (25, 90, 205, 190),   'bedroom_lad',         'William the Conqueror Bedroom (Lad)' ),
-            Room(2, (25, 280, 205, 130),   'doctor_room',      'Edward II Bedroom (doctor)'),
-            Room(2, (25, 410, 205, 100),     'captain_room',     'George I Bedroom (captain)'),
+            Room(2, (25, 280, 205, 130),   'bedroom_doctor',      'Edward II Bedroom (doctor)'),
+            Room(2, (25, 410, 205, 100),     'bedroom_captain',     'George I Bedroom (captain)'),
             Room(2, (25, 510, 205, 105),     'bedroom_psychic',     'Elizabeth I Bedroom (Psychic)'),
             
-            Room(2, (717, 90, 178, 190),   'host_room',        'Henry IV Bedroom (Host)'),
-            Room(2, (717, 280, 178, 130),   'drunk_room',       'George IV Bedroom (drunk)'),
-            Room(2, (717, 410, 178, 100),   'broken_room',      'Richard III Bedroom (broken)'),
-            Room(2, (717, 510, 178, 105),   'nurse_room',       'Queen Alexandra (nurse)'),
+            Room(2, (717, 90, 178, 190),   'bedroom_host',        'Henry IV Bedroom (Host)'),
+            Room(2, (717, 280, 178, 130),   'bedroom_drunk',       'George IV Bedroom (drunk)'),
+            Room(2, (717, 410, 178, 100),   'bedroom_broken',      'Richard III Bedroom (broken)'),
+            Room(2, (717, 510, 178, 105),   'bedroom_nurse',       'Queen Alexandra (nurse)'),
             
             # Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), 
             # Ground Floor
@@ -71,12 +71,12 @@ label init_map:
         map_information = [
             MapInfo('bedroom_psychic', 'Amelia Baxter',    2, (25 + x_map_info_offset, 510 + y_map_info_offset, 205, 105)),
             MapInfo('bedroom_lad',     'Ted Harring',      2, (25 + x_map_info_offset, 90 + 100, 205, 190)),
-            MapInfo('broken_room',  'Thomas Moody',     2, (717 + x_map_info_offset, 410 + y_map_info_offset, 178, 100)),
-            MapInfo('host_room',    'Lady Claythorn',   2, (717 + x_map_info_offset, 90 + 100 , 178, 190)),
-            MapInfo('captain_room', 'Sushil Sinha',     2, (25 + x_map_info_offset, 410 + y_map_info_offset, 205, 100)),
-            MapInfo('doctor_room',  'Daniel Baldwin',   2, (25 + x_map_info_offset, 280 + y_map_info_offset, 205, 130)),
-            MapInfo('drunk_room',  'Samuel Manning',   2, (717 + x_map_info_offset, 280 + y_map_info_offset, 178, 130)),
-            MapInfo('nurse_room',  'Rosalind Marsh',   2, (717 + x_map_info_offset, 510 + y_map_info_offset, 178, 105)),
+            MapInfo('bedroom_broken',  'Thomas Moody',     2, (717 + x_map_info_offset, 410 + y_map_info_offset, 178, 100)),
+            MapInfo('bedroom_host',    'Lady Claythorn',   2, (717 + x_map_info_offset, 90 + 100 , 178, 190)),
+            MapInfo('bedroom_captain', 'Sushil Sinha',     2, (25 + x_map_info_offset, 410 + y_map_info_offset, 205, 100)),
+            MapInfo('bedroom_doctor',  'Daniel Baldwin',   2, (25 + x_map_info_offset, 280 + y_map_info_offset, 205, 130)),
+            MapInfo('bedroom_drunk',  'Samuel Manning',   2, (717 + x_map_info_offset, 280 + y_map_info_offset, 178, 130)),
+            MapInfo('bedroom_nurse',  'Rosalind Marsh',   2, (717 + x_map_info_offset, 510 + y_map_info_offset, 178, 105)),
         ]
 
     call change_floor(1) # ground floor

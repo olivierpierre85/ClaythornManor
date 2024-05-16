@@ -57,9 +57,9 @@ label psychic_day2_no_hunt:
     jump psychic_day2_afternoon
     
 
-label psychic_day2_broken_room:
+label psychic_day2_bedroom_broken:
 
-    $ change_room('broken_room')
+    $ change_room('bedroom_broken')
 
     $ play_music('sad', 2)
 
@@ -81,7 +81,7 @@ label psychic_day2_broken_room:
     I rush out of the room.
     """
 
-    $ unlock_map('broken_room')
+    $ unlock_map('bedroom_broken')
 
     pause 1.0
 
@@ -90,7 +90,7 @@ label psychic_day2_broken_room:
     return
 
 
-label psychic_day2_no_hunt_drunk_room_enter:
+label psychic_day2_no_hunt_bedroom_drunk_enter:
 
     """
     I push the door open quietly, making sure I'm unnoticed.
@@ -98,7 +98,7 @@ label psychic_day2_no_hunt_drunk_room_enter:
 
     play sound door_open
 
-    $ change_room('drunk_room')
+    $ change_room('bedroom_drunk')
 
     """
     The room is untidy, dim, and reeks of alcohol.
@@ -108,7 +108,7 @@ label psychic_day2_no_hunt_drunk_room_enter:
     This must be Samuel Manning's room.
     """
 
-    $ unlock_map('drunk_room')
+    $ unlock_map('bedroom_drunk')
 
     """
     I scan the room quickly but only see empty whiskey bottles.
@@ -121,7 +121,7 @@ label psychic_day2_no_hunt_drunk_room_enter:
     return
 
 
-label psychic_day2_no_hunt_nurse_room_busy:
+label psychic_day2_no_hunt_bedroom_nurse_busy:
     
     $ change_room("bedrooms_hallway")
 
@@ -149,7 +149,7 @@ label psychic_day2_no_hunt_nurse_room_busy:
     Of course, sorry for bothering you.
     """
     
-    $ unlock_map('nurse_room')
+    $ unlock_map('bedroom_nurse')
     
     return
 

@@ -40,12 +40,12 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             #Bedrooms
-            TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day1_evening_default_bedroom', 10, room='doctor_room'),
-            TimedMenuChoice(default_room_text('captain_room'), 'psychic_day1_evening_default_bedroom', 10, room='captain_room'),
-            TimedMenuChoice(default_room_text('host_room'), 'psychic_day1_evening_default_bedroom', 10, room='host_room'),
-            TimedMenuChoice(default_room_text('drunk_room'), 'psychic_day1_evening_default_bedroom', 10, room='drunk_room'),
-            TimedMenuChoice(default_room_text('broken_room'), 'psychic_day1_evening_default_bedroom', 10, room='broken_room'),
-            TimedMenuChoice(default_room_text('nurse_room'), 'psychic_day1_evening_default_bedroom', 10, room='nurse_room'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_drunk'),
+            TimedMenuChoice(default_room_text('bedroom_broken'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_broken'),
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_nurse'),
             TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_lad'),
             # attic
             TimedMenuChoice(default_room_text('storage'), 'psychic_day1_evening_attic_default', 10, room='storage', condition=attic_default),
@@ -86,28 +86,28 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
-            TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day2_no_hunt_doctor_room', 10, room='doctor_room'),
-            TimedMenuChoice(default_room_text('captain_room'), 'psychic_day2_no_hunt_captain_room', 10, room='captain_room'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_no_hunt_bedroom_doctor', 10, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day2_no_hunt_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 'psychic_day2_no_hunt_bedroom_psychic', 10, room='bedroom_psychic'),
-            TimedMenuChoice(default_room_text('host_room'), 'psychic_day2_no_hunt_host_room', 10, room='host_room'),
-            TimedMenuChoice(default_room_text('drunk_room'), 'psychic_day2_no_hunt_drunk_room', 10, room='drunk_room'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day2_no_hunt_bedroom_host', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day2_no_hunt_bedroom_drunk', 10, room='bedroom_drunk'),
             # attic
             TimedMenuChoice(default_room_text('storage'), 'psychic_day2_no_hunt_attic_default', 10, room='storage', condition=attic_default),
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_attic_default', 10, room='males_room', condition=attic_default),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_attic_default', 10, room='females_room', condition=attic_default),
             TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_attic_default', 10, room='butler_room', condition=attic_default),
 
-            TimedMenuChoice(default_room_text('nurse_room'), 
-                'psychic_day2_no_hunt_nurse_room_busy', 
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 
+                'psychic_day2_no_hunt_bedroom_nurse_busy', 
                 10, 
-                room='nurse_room',
+                room='bedroom_nurse',
                 condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             ),
             TimedMenuChoice(
-                default_room_text('nurse_room'),
-                'psychic_day2_no_hunt_nurse_room',
+                default_room_text('bedroom_nurse'),
+                'psychic_day2_no_hunt_bedroom_nurse',
                 15, 
-                room='nurse_room',
+                room='bedroom_nurse',
                 condition = "not psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             ),
             TimedMenuChoice(
@@ -133,9 +133,9 @@ label psychic_config_map:
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
-                'psychic_day2_broken_room', 
+                'psychic_day2_bedroom_broken', 
                 20, 
-                room = 'broken_room',
+                room = 'bedroom_broken',
             )
         ] + copy.deepcopy(lord_choices), 
         is_map = True)
@@ -153,10 +153,10 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
-            TimedMenuChoice(default_room_text('doctor_room'), 'psychic_day2_evening_doctor_room', 10, room='doctor_room'),
-            TimedMenuChoice(default_room_text('captain_room'), 'psychic_day2_evening_captain_room', 10, room='captain_room'),
-            TimedMenuChoice(default_room_text('host_room'), 'psychic_day2_evening_host_room', 10, room='host_room'),
-            TimedMenuChoice(default_room_text('drunk_room'), 'psychic_day2_evening_drunk_room', 10, room='drunk_room'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_evening_bedroom_doctor', 10, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day2_evening_bedroom_host', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day2_evening_bedroom_drunk', 10, room='bedroom_drunk'),
             # attic
             TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_default', 10, room='storage', condition=attic_default),
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_default', 10, room='males_room', condition=attic_default),
@@ -172,10 +172,10 @@ label psychic_config_map:
             ),
 
             # TimedMenuChoice(
-            #     default_room_text('nurse_room'),
-            #     'psychic_day2_no_hunt_nurse_room',
+            #     default_room_text('bedroom_nurse'),
+            #     'psychic_day2_no_hunt_bedroom_nurse',
             #     15, 
-            #     room='nurse_room',
+            #     room='bedroom_nurse',
             #     condition = "not psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             # ),
 
@@ -188,9 +188,9 @@ label psychic_config_map:
             ),
             # TimedMenuChoice(
             #     'Richard III Bedroom', 
-            #     'psychic_day2_broken_room', 
+            #     'psychic_day2_bedroom_broken', 
             #     20, 
-            #     room = 'broken_room',
+            #     room = 'bedroom_broken',
             # )
         ] + copy.deepcopy(lord_choices), 
         is_map = True)

@@ -37,7 +37,7 @@ label nurse_generic_room:
     Like the queen mother, I believe.
     """
 
-    $ unlock_map('nurse_room')
+    $ unlock_map('bedroom_nurse')
 
     return
 

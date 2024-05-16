@@ -24,11 +24,11 @@ label lad_day2_breakfast_follow:
     Correct, Sir.
     """
 
-    $ unlock_map('broken_room')
+    $ unlock_map('bedroom_broken')
 
     "We all enter the room."
 
-    $ change_room('broken_room')
+    $ change_room('bedroom_broken')
 
     butler """
     He's here in his bed. He didn't respond when I tried to wake him up.

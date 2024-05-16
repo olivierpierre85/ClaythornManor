@@ -131,9 +131,9 @@ label lad_day2_evening_sleep:
 
     return
 
-label lad_day2_broken_room_back:
+label lad_day2_bedroom_broken_back:
 
-    $ change_room('broken_room')
+    $ change_room('bedroom_broken')
 
     """ 
     Although I've been here before, I can't shake the feeling I should inspect the room once more.
@@ -145,9 +145,9 @@ label lad_day2_broken_room_back:
 
     return
 
-label lad_day2_broken_room_back_for_drink:
+label lad_day2_bedroom_broken_back_for_drink:
 
-    $ change_room('broken_room')
+    $ change_room('bedroom_broken')
 
     """ 
     After speaking with Sushil, I wonder if I should try the flask.
@@ -163,9 +163,9 @@ label lad_day2_broken_room_back_for_drink:
 
     return
 
-label lad_day2_doctor_room:
+label lad_day2_bedroom_doctor:
 
-    $ change_room('doctor_room') 
+    $ change_room('bedroom_doctor') 
 
     """
     I didn't have time earlier to take a good look at the room.

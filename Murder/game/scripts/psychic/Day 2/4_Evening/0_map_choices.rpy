@@ -117,7 +117,7 @@ label psychic_day2_evening_garden:
 
 
 # # Doctor
-# label psychic_day2_evening_doctor_room:
+# label psychic_day2_evening_bedroom_doctor:
 
 #     call psychic_bedroom_default
 
@@ -127,7 +127,7 @@ label psychic_day2_evening_garden:
 
 
 # # Nurse
-# label psychic_day2_evening_nurse_room:
+# label psychic_day2_evening_bedroom_nurse:
 
 #     call psychic_bedroom_default
 
@@ -137,7 +137,7 @@ label psychic_day2_evening_garden:
 
 
 # # Captain
-# label psychic_day2_evening_captain_room:
+# label psychic_day2_evening_bedroom_captain:
 
 #     call psychic_bedroom_default
 
@@ -146,7 +146,7 @@ label psychic_day2_evening_garden:
 #     return
 
 # # Host
-# label psychic_day2_evening_host_room:
+# label psychic_day2_evening_bedroom_host:
 
 #     call psychic_bedroom_default
 
@@ -155,7 +155,7 @@ label psychic_day2_evening_garden:
 #     return
 
 # # Drunk
-# label psychic_day2_evening_drunk_room:
+# label psychic_day2_evening_bedroom_drunk:
 
 #     call psychic_bedroom_default
 
@@ -167,7 +167,7 @@ label psychic_day2_evening_garden:
 #     It's quite messy.
 #     """
 
-#     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_drunk_room_enter', enter_duration=20)
+#     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_drunk_enter', enter_duration=20)
 
 #     return
 

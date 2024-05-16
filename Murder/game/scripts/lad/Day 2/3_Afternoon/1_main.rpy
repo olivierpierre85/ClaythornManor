@@ -54,7 +54,7 @@ label lad_day2_afternoon:
 
     call common_day2_afternoon_entrance_dialog
 
-    $ change_room("doctor_room")
+    $ change_room("bedroom_doctor")
 
     """
     We carried Doctor Baldwin to his room and laid him on his bed.

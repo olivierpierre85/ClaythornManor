@@ -22,7 +22,7 @@ label psychic_day2_afternoon_bedroom:
 
     $ time_left = 99 # TODO, change with option in menu? 
     call run_menu(TimedMenu("psychic_day2_afternoon_bedroom", [
-            TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_afternoon_nurse_room_busy', 10, early_exit=True),
+            TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_afternoon_bedroom_nurse_busy', 10, early_exit=True),
             TimedMenuChoice('Try to talk to Ted Harring', 'psychic_day2_afternoon_lad_discussion', 30, early_exit=True),
             TimedMenuChoice('Just have a quick nap instead', 'psychic_day2_afternoon_cancel', 30, early_exit=True),
             # Talk with host anyway??? Intuition things are not going according to plan.
@@ -41,7 +41,7 @@ label psychic_day2_afternoon_lad_discussion:
     return
 
 
-label psychic_day2_afternoon_nurse_room_busy:
+label psychic_day2_afternoon_bedroom_nurse_busy:
     
     $ change_room("bedrooms_hallway")
 

@@ -23,12 +23,12 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('males_room'), 'lad_day1_evening_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'lad_day1_evening_females_room', 10, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'lad_day1_evening_butler_room', 10, room='butler_room'),
-            TimedMenuChoice(default_room_text('doctor_room'), 'lad_day1_evening_doctor_room', 10, room='doctor_room'),
-            TimedMenuChoice(default_room_text('captain_room'), 'lad_day1_evening_captain_room', 10, room='captain_room'),
-            TimedMenuChoice(default_room_text('host_room'), 'lad_day1_evening_host_room', 10, room='host_room'),
-            TimedMenuChoice(default_room_text('drunk_room'), 'lad_day1_evening_drunk_room', 10, room='drunk_room'),
-            TimedMenuChoice(default_room_text('broken_room'), 'lad_day1_evening_broken_room', 10, room='broken_room'),
-            TimedMenuChoice(default_room_text('nurse_room'), 'lad_day1_evening_nurse_room', 10, room='nurse_room'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'lad_day1_evening_bedroom_doctor', 10, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'lad_day1_evening_bedroom_captain', 10, room='bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'lad_day1_evening_bedroom_host', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'lad_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
+            TimedMenuChoice(default_room_text('bedroom_broken'), 'lad_day1_evening_bedroom_broken', 10, room='bedroom_broken'),
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'lad_day1_evening_bedroom_nurse', 10, room='bedroom_nurse'),
             TimedMenuChoice(default_room_text('library'), 'lad_day1_evening_library', 10, room='library'),
             TimedMenuChoice(default_room_text('tea_room'), 'lad_day1_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day1_evening_dining_room', 10, room='dining_room'),
@@ -69,11 +69,11 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('males_room'), 'lad_day2_no_hunt_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'lad_day2_no_hunt_females_room', 10, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'lad_day2_no_hunt_butler_room', 10, room='butler_room'),
-            TimedMenuChoice(default_room_text('doctor_room'), 'lad_day2_no_hunt_doctor_room', 10, room='doctor_room'),
-            TimedMenuChoice(default_room_text('captain_room'), 'lad_day2_no_hunt_captain_room', 10, room='captain_room'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'lad_day2_no_hunt_bedroom_doctor', 10, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'lad_day2_no_hunt_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 'lad_day2_no_hunt_bedroom_psychic', 10, room='bedroom_psychic'),
-            TimedMenuChoice(default_room_text('host_room'), 'lad_day2_no_hunt_host_room', 10, room='host_room'),
-            TimedMenuChoice(default_room_text('drunk_room'), 'lad_day2_no_hunt_drunk_room', 10, room='drunk_room'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'lad_day2_no_hunt_bedroom_host', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'lad_day2_no_hunt_bedroom_drunk', 10, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('library'), 'lad_day2_no_hunt_library', 10, room='library'),
             TimedMenuChoice(default_room_text('billiard_room'), 'lad_day2_no_hunt_billiard_room', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day2_no_hunt_dining_room', 10, room='dining_room'),
@@ -84,17 +84,17 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('scullery'), 'lad_day2_no_hunt_scullery', 10, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'lad_day2_no_hunt_garage', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'lad_day2_no_hunt_gun_room', 10, room='gun_room'),
-            TimedMenuChoice(default_room_text('nurse_room'), 
-                'lad_day2_no_hunt_nurse_room_busy', 
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 
+                'lad_day2_no_hunt_bedroom_nurse_busy', 
                 10, 
-                room='nurse_room',
+                room='bedroom_nurse',
                 condition = "lad_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             ),
             TimedMenuChoice(
-                default_room_text('nurse_room'),
-                'lad_day2_no_hunt_nurse_room',
+                default_room_text('bedroom_nurse'),
+                'lad_day2_no_hunt_bedroom_nurse',
                 15, 
-                room='nurse_room',
+                room='bedroom_nurse',
                 condition = "not lad_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             ),
             TimedMenuChoice(
@@ -120,9 +120,9 @@ label lad_config_map:
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
-                'lad_day2_broken_room', 
+                'lad_day2_bedroom_broken', 
                 20, 
-                room = 'broken_room',
+                room = 'bedroom_broken',
             )
         ], is_map = True)
         # -------------------------
@@ -133,10 +133,10 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('males_room'), 'lad_day2_evening_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'lad_day2_evening_females_room', 10, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'lad_day2_evening_butler_room', 10, room='butler_room'),
-            TimedMenuChoice(default_room_text('captain_room'), 'lad_day2_evening_captain_room', 10, room='captain_room'),
-            TimedMenuChoice(default_room_text('host_room'), 'lad_day2_evening_host_room', 10, room='host_room'),
-            TimedMenuChoice(default_room_text('drunk_room'), 'lad_day2_evening_drunk_room', 10, room='drunk_room'),
-            TimedMenuChoice(default_room_text('nurse_room'), 'lad_day2_evening_nurse_room', 10, room='nurse_room'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'lad_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'lad_day2_evening_bedroom_host', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'lad_day2_evening_bedroom_drunk', 10, room='bedroom_drunk'),
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'lad_day2_evening_bedroom_nurse', 10, room='bedroom_nurse'),
             TimedMenuChoice(default_room_text('library'), 'lad_day2_evening_library', 10, room='library'),
             TimedMenuChoice(default_room_text('tea_room'), 'lad_day2_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day2_evening_dining_room', 10, room='dining_room'),
@@ -148,10 +148,10 @@ label lad_config_map:
             TimedMenuChoice(default_room_text('garage'), 'lad_day2_evening_garage', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'lad_day2_evening_gun_room', 10, room='gun_room'),
             TimedMenuChoice(
-                default_room_text('doctor_room'), 
-                'lad_day2_doctor_room', 
+                default_room_text('bedroom_doctor'), 
+                'lad_day2_bedroom_doctor', 
                 20, 
-                room = 'doctor_room',
+                room = 'bedroom_doctor',
             ),
             TimedMenuChoice(
                 'Go to sleep and hope for the best.', 
@@ -174,23 +174,23 @@ label lad_config_map:
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
-                'lad_day2_broken_room', 
+                'lad_day2_bedroom_broken', 
                 20, 
-                room = 'broken_room',
+                room = 'bedroom_broken',
                 condition="not lad_details.observations.is_unlocked('green_liquid')"
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
-                'lad_day2_broken_room_back', 
+                'lad_day2_bedroom_broken_back', 
                 10, 
-                room = 'broken_room',
+                room = 'bedroom_broken',
                 condition="lad_details.observations.is_unlocked('green_liquid')"
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
-                'lad_day2_broken_room_back_for_drink', 
+                'lad_day2_bedroom_broken_back_for_drink', 
                 10, 
-                room = 'broken_room',
+                room = 'bedroom_broken',
                 condition = 'lad_details.saved_variables["day2_evening_taste_from_flask"]'
             ),
         ], is_map = True)    
@@ -223,40 +223,40 @@ label lad_config_map:
                 room = 'bedroom_psychic'
             ),
             TimedMenuChoice(
-                default_room_text('drunk_room'), 
-                'lad_day3_morning_drunk_room',
+                default_room_text('bedroom_drunk'), 
+                'lad_day3_morning_bedroom_drunk',
                 10,
-                room = 'drunk_room'
+                room = 'bedroom_drunk'
             ),
             TimedMenuChoice(
-                default_room_text('doctor_room'), 
-                'lad_day3_morning_doctor_room',
+                default_room_text('bedroom_doctor'), 
+                'lad_day3_morning_bedroom_doctor',
                 10,
-                room = 'doctor_room'
+                room = 'bedroom_doctor'
             ),
             TimedMenuChoice(
-                default_room_text('broken_room'), 
-                'lad_day3_morning_broken_room',
+                default_room_text('bedroom_broken'), 
+                'lad_day3_morning_bedroom_broken',
                 10,
-                room = 'broken_room'
+                room = 'bedroom_broken'
             ),
             TimedMenuChoice(
-                default_room_text('captain_room'), 
-                'lad_day3_morning_captain_room',
+                default_room_text('bedroom_captain'), 
+                'lad_day3_morning_bedroom_captain',
                 10,
-                room = 'captain_room'
+                room = 'bedroom_captain'
             ),
             TimedMenuChoice(
-                default_room_text('host_room'), 
-                'lad_day3_morning_host_room', 
+                default_room_text('bedroom_host'), 
+                'lad_day3_morning_bedroom_host', 
                 20, 
-                room = 'host_room'
+                room = 'bedroom_host'
             ),
             TimedMenuChoice(
-                default_room_text('nurse_room'), 
-                'lad_day3_morning_nurse_room', 
+                default_room_text('bedroom_nurse'), 
+                'lad_day3_morning_bedroom_nurse', 
                 20, 
-                room = 'nurse_room'
+                room = 'bedroom_nurse'
             ),                  
             TimedMenuChoice(
                 default_room_text('kitchen'), 

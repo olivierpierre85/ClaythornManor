@@ -128,6 +128,6 @@ label doctor_generic_room:
     """
 
     # TODO: Add more dialogue if lad, or broken (invite to room?)
-    $ unlock_map('doctor_room')
+    $ unlock_map('bedroom_doctor')
     
     return

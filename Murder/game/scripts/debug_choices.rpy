@@ -75,14 +75,14 @@ label debug_choices:
         #     jump lad_day2_evening
 
         # "lad_day3_morning TES MAP":
-        #     $ unlock_map('captain_room')
-        #     $ unlock_map('host_room')
+        #     $ unlock_map('bedroom_captain')
+        #     $ unlock_map('bedroom_host')
         #     $ unlock_map('bedroom_psychic')
         #     $ unlock_map('bedroom_lad')
-        #     $ unlock_map('drunk_room')
-        #     $ unlock_map('nurse_room')
-        #     $ unlock_map('broken_room')
-        #     $ unlock_map('doctor_room')
+        #     $ unlock_map('bedroom_drunk')
+        #     $ unlock_map('bedroom_nurse')
+        #     $ unlock_map('bedroom_broken')
+        #     $ unlock_map('bedroom_doctor')
         #     $ lad_details.saved_variables["day2_believe_psychic"] = True
             
         #     jump lad_day3_morning

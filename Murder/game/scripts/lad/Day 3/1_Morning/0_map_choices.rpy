@@ -495,7 +495,7 @@ label lad_day3_morning_bedroom_lad:
 
     return
 
-label lad_day3_morning_nurse_room:
+label lad_day3_morning_bedroom_nurse:
 
     $ change_room("bedrooms_hallway")
 
@@ -503,7 +503,7 @@ label lad_day3_morning_nurse_room:
     This is Miss Marsh's room.
     """
 
-    $ unlock_map("nurse_room")
+    $ unlock_map("bedroom_nurse")
     
     """ 
     I knock on the door.
@@ -536,7 +536,7 @@ label lad_day3_morning_nurse_room:
     return
 
 
-label lad_day3_morning_captain_room:
+label lad_day3_morning_bedroom_captain:
 
     $ change_room("bedrooms_hallway")
 
@@ -560,7 +560,7 @@ label lad_day3_morning_captain_room:
     I believe this is Captain Sinha's room.
     """
 
-    $ unlock_map('captain_room')
+    $ unlock_map('bedroom_captain')
 
     lad """
     He doesn't seem to be here.
@@ -574,7 +574,7 @@ label lad_day3_morning_captain_room:
 
     return 
 
-label lad_day3_morning_host_room:
+label lad_day3_morning_bedroom_host:
 
     $ change_room("bedrooms_hallway")
 
@@ -584,7 +584,7 @@ label lad_day3_morning_host_room:
     This is Lady Claythorn's room.
     """
 
-    $ unlock_map('host_room')
+    $ unlock_map('bedroom_host')
 
     lad """
     Miss Claythorn?
@@ -610,7 +610,7 @@ label lad_day3_morning_host_room:
     Reluctantly, I follow her.
     """
 
-    $ change_room('host_room')
+    $ change_room('bedroom_host')
 
     """
     The room is empty. 
@@ -634,7 +634,7 @@ label lad_day3_morning_host_room:
     
     return 
 
-label lad_day3_morning_drunk_room:
+label lad_day3_morning_bedroom_drunk:
 
     $ change_room("bedrooms_hallway")
 
@@ -642,7 +642,7 @@ label lad_day3_morning_drunk_room:
     This is Samuel Manning's room.
     """
 
-    $ unlock_map('drunk_room')
+    $ unlock_map('bedroom_drunk')
 
     lad """
     Mister Manning?
@@ -684,9 +684,9 @@ label lad_day3_morning_bedroom_psychic:
 
     return
 
-label lad_day3_morning_doctor_room:
+label lad_day3_morning_bedroom_doctor:
 
-    $ change_room('doctor_room')
+    $ change_room('bedroom_doctor')
 
     """
     I'm back in Daniel Baldwin's room.
@@ -700,11 +700,11 @@ label lad_day3_morning_doctor_room:
 
     return
 
-label lad_day3_morning_broken_room:
+label lad_day3_morning_bedroom_broken:
 
-    $ change_room('broken_room')
+    $ change_room('bedroom_broken')
 
-    $ unlock_map('broken_room')
+    $ unlock_map('bedroom_broken')
 
     """
     I'm in Thomas Moody's room.

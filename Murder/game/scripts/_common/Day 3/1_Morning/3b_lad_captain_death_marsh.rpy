@@ -42,7 +42,7 @@ label common_day3_morning_lad_psychic_captain_marsh_empty:
     It bursts open with a deafening crack.
     """
 
-    $ change_room("nurse_room")
+    $ change_room("bedroom_nurse")
 
     """
     The room is eerily quiet.
@@ -107,7 +107,7 @@ label common_day3_morning_lad_psychic_captain_marsh_empty:
 #     It bursts open with a deafening crack.
 #     """
 
-#     $ change_room("nurse_room")
+#     $ change_room("bedroom_nurse")
 
 #     """
 #     The room is eerily quiet.

@@ -98,7 +98,7 @@ label psychic_day2_no_hunt_bedroom_lad:
 
 
 # Doctor
-label psychic_day2_no_hunt_doctor_room:
+label psychic_day2_no_hunt_bedroom_doctor:
 
     call psychic_bedroom_default
 
@@ -108,7 +108,7 @@ label psychic_day2_no_hunt_doctor_room:
 
 
 # Nurse
-label psychic_day2_no_hunt_nurse_room:
+label psychic_day2_no_hunt_bedroom_nurse:
 
     call psychic_bedroom_default
 
@@ -118,7 +118,7 @@ label psychic_day2_no_hunt_nurse_room:
 
 
 # Captain
-label psychic_day2_no_hunt_captain_room:
+label psychic_day2_no_hunt_bedroom_captain:
 
     call psychic_bedroom_default
 
@@ -127,7 +127,7 @@ label psychic_day2_no_hunt_captain_room:
     return
 
 # Host
-label psychic_day2_no_hunt_host_room:
+label psychic_day2_no_hunt_bedroom_host:
 
     call psychic_bedroom_default
 
@@ -136,7 +136,7 @@ label psychic_day2_no_hunt_host_room:
     return
 
 # Drunk
-label psychic_day2_no_hunt_drunk_room:
+label psychic_day2_no_hunt_bedroom_drunk:
 
     call psychic_bedroom_default
 
@@ -148,7 +148,7 @@ label psychic_day2_no_hunt_drunk_room:
     It's quite messy.
     """
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_drunk_room_enter', enter_duration=20)
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
 
     return
 

@@ -51,7 +51,7 @@ Lady Introduction speech
 - Visit kitchen =&gt; Dead End
 - [[Go to billiard to meet the other-&gt;hero-day1-evening-billiard-room]]
 - Visit library =&gt; Clue about gentry book 
-(if:$hero_nurse_room is true)[[[- Go to nurse room-&gt;hero-day1-evening-nurse-room]]]
+(if:$hero_bedroom_nurse is true)[[[- Go to nurse room-&gt;hero-day1-evening-nurse-room]]]
 
 (if:$hero_is_drunk is true)[[[Go to bed -&gt;hero-day2-breakfast]]]
 (elseif:$hero_is_poisoned is true)[[[Go to bed -&gt;hero-ending-day1-poisoned]]]
@@ -60,7 +60,7 @@ Lady Introduction speech
 - (link:&quot;drink sherry once switch drink with the Broken FACE&quot;)[(set: $hero_is_poisoned to true)]
 - (link:&quot;drink plenty of sherry&quot;)[(set: $hero_is_drunk to true)]
 - Talk with crowd (general conversation about the host, Meet new people (captain?))
-- (link:&quot;Talk with butler&quot;)[(set: $hero_nurse_room to true)] 
+- (link:&quot;Talk with butler&quot;)[(set: $hero_bedroom_nurse to true)] 
 [[Exit billiard-&gt;hero-day1-evening]]</tw-passagedata><tw-passagedata pid="8" name="hero-day1-evening-nurse-room" tags="" position="1650,650" size="200,100">//Day 1 - Evening - NURSE ROOM//
 
 Knock on the door

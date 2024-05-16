@@ -142,61 +142,61 @@ label lad_day2_no_hunt_bedroom_psychic_enter:
     return
 
 # Doctor
-label lad_day2_no_hunt_doctor_room:
+label lad_day2_no_hunt_bedroom_doctor:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_doctor_room_enter')
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_doctor_enter')
 
     return
 
-label lad_day2_no_hunt_doctor_room_enter:
+label lad_day2_no_hunt_bedroom_doctor_enter:
     # May knows whose room it is so lock it to avoid weird dialog for now
     call lad_day2_no_hunt_default_room_locked
 
     return
 
 # Nurse
-label lad_day2_no_hunt_nurse_room:
+label lad_day2_no_hunt_bedroom_nurse:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_nurse_room_enter')
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_nurse_enter')
 
     return
 
-label lad_day2_no_hunt_nurse_room_enter:
+label lad_day2_no_hunt_bedroom_nurse_enter:
 
     call lad_day2_no_hunt_default_room_locked
 
     return
 
 # Captain
-label lad_day2_no_hunt_captain_room:
+label lad_day2_no_hunt_bedroom_captain:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_captain_room_enter', enter_duration=20)
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_captain_enter', enter_duration=20)
 
     return
 
 # Host
-label lad_day2_no_hunt_host_room:
+label lad_day2_no_hunt_bedroom_host:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_host_room_enter')
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_host_enter')
 
     return
 
-label lad_day2_no_hunt_host_room_enter:
+label lad_day2_no_hunt_bedroom_host_enter:
     
     call lad_day2_no_hunt_default_room_locked
 
     return
 
 # Drunk
-label lad_day2_no_hunt_drunk_room:
+label lad_day2_no_hunt_bedroom_drunk:
 
     call lad_bedroom_default
 
@@ -206,7 +206,7 @@ label lad_day2_no_hunt_drunk_room:
     It was not even closed.
     """
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_drunk_room_enter', enter_duration=20)
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
 
     return
 

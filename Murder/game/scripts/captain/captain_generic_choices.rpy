@@ -45,7 +45,7 @@ label captain_generic_room:
     (Placeholder for room dialogue)
     """
 
-    $ unlock_map('captain_room')
+    $ unlock_map('bedroom_captain')
 
     return
 
