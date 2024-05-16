@@ -125,7 +125,7 @@ label psychic_generic_host_saturday_morning:
     """
 
     """
-    She paused a little too long before adding \"and me\".
+    She paused a little too long before adding "and me".
 
     I don't like that.
     """
