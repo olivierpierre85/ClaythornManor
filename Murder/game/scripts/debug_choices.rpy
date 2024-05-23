@@ -25,7 +25,8 @@ label debug_choices:
             # call unlock_psychic
             # call unlock_doctor
             # call unlock_captain
-            call unlock_nurse
+            # call unlock_nurse
+            # call unlock_host
             jump lad_introduction
 
         "lad_introduction":
@@ -246,6 +247,17 @@ label unlock_nurse:
     $ nurse_details.description_hidden.unlock('sick')
     $ nurse_details.description_hidden.unlock('heroic_act')
     $ nurse_details.description_hidden.unlock('lie') 
+
+    return
+
+label unlock_host:
+
+    $ host_details.description_hidden.unlock('name')
+    $ host_details.description_hidden.unlock('down_to_earth')
+    $ host_details.description_hidden.unlock('independent') 
+    $ host_details.description_hidden.unlock('guns') 
+    $ host_details.description_hidden.unlock('car')
+    $ host_details.description_hidden.unlock('lie') 
 
     return
 
