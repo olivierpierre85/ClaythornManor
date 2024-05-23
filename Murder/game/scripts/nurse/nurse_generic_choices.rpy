@@ -63,7 +63,7 @@ label nurse_generic_background:
 
     I started young and served in various wars. 
 
-    Then I found a job at a hospital that I kept for a while.
+    In peacetime, I usually took a job at a hospital.
 
     Now I mostly nurse the elderly. 
     """
@@ -73,17 +73,15 @@ label nurse_generic_background:
     """
 
     nurse """
-    No, not like that. I mostly assisted wealthier individuals who required special in-house assistance.
+    No, not like that. I mostly assist wealthier individuals who require special in-house assistance.
     """
-
-    $ nurse_details.description_hidden.unlock('manor') 
 
     psychic """
     Are you taking care of someone at the moment?
     """
 
     nurse """
-    Not lately.
+    Not right now.
 
     And perhaps after I receive this prize, I won't have to.
 
@@ -107,7 +105,7 @@ label nurse_generic_heroic_act:
     nurse """
     It is nothing that I did, really.
 
-    But it turns out I was the nurse who served for the longest during wartime in the whole country, apparently.
+    But it turns out I am the nurse who served in the most wars in the whole country, apparently.
     """
 
     psychic """
@@ -142,6 +140,8 @@ label nurse_generic_heroic_act:
     How commendable.
     """
 
+    $ nurse_details.description_hidden.unlock('heroic_act') 
+
     return
 
 label nurse_generic_manor:
@@ -149,7 +149,7 @@ label nurse_generic_manor:
     nurse """
     It's a grand house. 
     
-    I've been in houses of the same style, but none so big or impressive.
+    I've been in many houses of the same style, but none so big or impressive.
     """
 
     $ nurse_details.description_hidden.unlock('manor') 

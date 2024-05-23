@@ -13,12 +13,16 @@ label init_host:
         host_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "todo", "todo", is_important = True), 
             # CharacterInformation(0, "name", "Her first name is Elisabeth", is_important = True), 
-            CharacterInformation(1, "down_to_earth", "She's not looking down on \"lower\" class people.", is_important = True), 
+            CharacterInformation(1, "down_to_earth", "look down the \"lower class\" people.", is_important = True), 
             CharacterInformation(60, "???", "???", is_important = True),
             ], host_name
         )
 
         host_description_full = """
+        The lady of the mansion. Elegant and well spoken, she doesn't look down the "lower class" people.
+
+        """
+        host_description = """
         The lady of the mansion.
         """
 
@@ -29,7 +33,7 @@ label init_host:
             real_name = host_name,
             nickname = "The Host",
             description_short = "Older Lady",
-            description_long = host_description_full,
+            description_long = host_description,
             description_hidden = host_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),

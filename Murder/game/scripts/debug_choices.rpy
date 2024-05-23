@@ -24,7 +24,8 @@ label debug_choices:
             # call unlock_lad
             # call unlock_psychic
             # call unlock_doctor
-            call unlock_captain
+            # call unlock_captain
+            call unlock_nurse
             jump lad_introduction
 
         "lad_introduction":
@@ -218,6 +219,7 @@ label unlock_doctor:
     $ doctor_details.description_hidden.unlock('age') 
     $ doctor_details.description_hidden.unlock('addict')
     $ doctor_details.description_hidden.unlock('fraud')
+    $ doctor_details.description_hidden.unlock('gay')
 
     return
 
@@ -232,6 +234,18 @@ label unlock_captain:
     $ captain_details.description_hidden.unlock('table') 
     $ captain_details.description_hidden.unlock('family')
     $ captain_details.description_hidden.unlock('lie')
+
+    return
+
+label unlock_nurse:
+
+    $ nurse_details.description_hidden.unlock('job')
+    $ nurse_details.description_hidden.unlock('clothes')
+    $ nurse_details.description_hidden.unlock('age') 
+    $ nurse_details.description_hidden.unlock('manor') 
+    $ nurse_details.description_hidden.unlock('sick')
+    $ nurse_details.description_hidden.unlock('heroic_act')
+    $ nurse_details.description_hidden.unlock('lie') 
 
     return
 
