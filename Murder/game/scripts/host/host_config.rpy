@@ -20,12 +20,12 @@ label init_host:
             ], host_name
         )
 
-        host_description_full = """
-        Elegant and well-spoken, Lady Claythorn - first name Elisabeth - appears at first glance to embody everything expected of a wealthy lady.
-        However, if you delve deeper, you'll realise she's more independent than most women of her status. She is familiar with firearms and can also drive a car, which would raise more than a few eyebrows in her era.
-        And, for a member of the nobility, she does not look down upon 'lower class' individuals.
-        But as it turns out, she is not a progressive aristocrat close to the people. She is, in fact, one of the people - an out-of-work actress playing her most dangerous role.
-        """
+        # host_description_full = """
+        # Elegant and well-spoken, Lady Claythorn - first name Elisabeth - appears at first glance to embody everything expected of a wealthy lady.
+        # However, if you delve deeper, you'll realise she's more independent than most women of her status. She is familiar with firearms and can also drive a car, which would raise more than a few eyebrows in her era.
+        # And, for a member of the nobility, she does not look down upon 'lower class' individuals.
+        # But as it turns out, she is not a progressive aristocrat close to the people. She is, in fact, one of the people - an out-of-work actress playing her most dangerous role.
+        # """
 
         host_description = """
         Elegant and well-spoken, Lady Claythorn - first name <info:name> - appears at first glance to embody everything expected of a wealthy lady.

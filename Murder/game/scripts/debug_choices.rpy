@@ -27,6 +27,8 @@ label debug_choices:
             # call unlock_captain
             # call unlock_nurse
             # call unlock_host
+            # call unlock_broken
+            # call unlock_drunk
             jump lad_introduction
 
         "lad_introduction":
@@ -258,6 +260,31 @@ label unlock_host:
     $ host_details.description_hidden.unlock('guns') 
     $ host_details.description_hidden.unlock('car')
     $ host_details.description_hidden.unlock('lie') 
+
+    return
+
+label unlock_broken:
+
+    $ broken_details.description_hidden.unlock('mask')
+    $ broken_details.description_hidden.unlock('age')
+    $ broken_details.description_hidden.unlock('background') 
+    $ broken_details.description_hidden.unlock('job') 
+    $ broken_details.description_hidden.unlock('heroic_act')
+    $ broken_details.description_hidden.unlock('city')
+    $ broken_details.description_hidden.unlock('shy')
+    $ broken_details.description_hidden.unlock('lie') 
+
+    return
+
+label unlock_drunk:
+    $ drunk_details.description_hidden.unlock('background')
+    $ drunk_details.description_hidden.unlock('status')
+    $ drunk_details.description_hidden.unlock('age')
+    $ drunk_details.description_hidden.unlock('wife') 
+    $ drunk_details.description_hidden.unlock('addict') 
+    $ drunk_details.description_hidden.unlock('job')
+    $ drunk_details.description_hidden.unlock('heroic_act')
+    $ drunk_details.description_hidden.unlock('lie') 
 
     return
 
