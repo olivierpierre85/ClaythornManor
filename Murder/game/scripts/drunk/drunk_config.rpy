@@ -28,7 +28,6 @@ label init_drunk:
         His particular situation has given him certain skills: for one, <info:lie>.
         """
 
-
         # drunk_description_full = """
         # An older gentleman, raised in a prominent family, he hasn't been the same since the untimely death of his wife.
         # Still young and healthy, she would never have died if the doctor responsible for her operation hadn't been so high on opioids.
@@ -36,8 +35,6 @@ label init_drunk:
         # Now, almost all of them have left him; only the poorest and the most desperate would ever hire him. He assumes that this choice of clients has made him look like a fervent defender of the poor in the eyes of Lady Claythorn, hence his invitation.
         # His particular situation has given him certain skills: for one, he can sober up, or at least act sober enough when the situation demands it. He has also become rather good at feigning drunkenness to avoid unpleasant situations.
         # """
-
-
 
         drunk_details  = CharacterDetails(
             text_id = "drunk", 
