@@ -35,8 +35,6 @@ label lad_day2_no_hunt:
 
     They are in the tea room, waiting for a small luncheon to be served.
 
-    I've retreated to my room to change.
-
     Now, what should I do?
     """
 

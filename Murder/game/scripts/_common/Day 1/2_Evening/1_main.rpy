@@ -39,7 +39,7 @@ label common_day1_evening_captain_billiard_room_speech_part_1:
     captain """
     It was in June of 1900, so some of you might remember.
 
-    A group of rebels, called the "Boxers," had taken up arms against foreign presence in their country.
+    In China, a group of rebels, called the "Boxers," had taken up arms against foreign presence in their country.
 
     They were a group of mostly peasants, poorly armed.
 
@@ -51,7 +51,7 @@ label common_day1_evening_captain_billiard_room_speech_part_1:
 label common_day1_evening_captain_billiard_room_speech_part_2:
 
     captain """
-    They managed to surround the Europeans and Japanese in the \"International Legations\" quarter, in China's capital, Beijing.
+    They managed to surround the Europeans and Japanese in the "International Legations" quarter, in China's capital, Beijing.
 
     There, the besieged did their best to resist the Chinese assaults, but it was obvious to everyone that they wouldn't last very long.
     """

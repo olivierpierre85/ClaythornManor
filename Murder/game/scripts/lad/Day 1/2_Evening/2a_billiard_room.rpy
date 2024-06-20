@@ -134,7 +134,7 @@ label lad_day1_evening_billiard_room_bar_1:
 label lad_day1_evening_billiard_room_group:
 
     """
-    I walk toward the main group in the room.
+    I walk towards the main group in the room.
 
     Thomas Moody, Rosalind Marsh and Lady Claythorn are listening to the older Indian man.
 

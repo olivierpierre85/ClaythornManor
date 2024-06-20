@@ -64,7 +64,7 @@ label lad_day1_evening:
 
     The mood in the room gradually relaxed, and the sound of various conversations filled the space.
 
-    I turned my attention to the guests seated next to me.
+    I turn my attention to the guests seated next to me.
 
     I found myself sitting between Amelia Baxter and Daniel Baldwin.
     """
@@ -74,8 +74,8 @@ label lad_day1_evening:
     $ time_left = 120
 
     $ current_menu = TimedMenu("lad_day1_evening", [
-        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor', keep_alive = True,),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic', keep_alive = True,)
+        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor', keep_alive = False,),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic', keep_alive = False,)
     ], image_left = "doctor", image_right = "psychic")
 
     call run_menu(current_menu)
@@ -106,8 +106,6 @@ label lad_day1_evening:
     Here you are, sir.
 
     You've been assigned the "William The Conqueror" room.
-
-    I hope it suits your taste.
     """
 
     $ unlock_map('bedroom_lad')
@@ -120,8 +118,12 @@ label lad_day1_evening:
     It's more spacious than my apartment, and more luxurious than I could have ever imagined.
     """
 
+    footman """
+    I hope the room suits your taste.
+    """
+
     lad """
-    This is perfect, thank you.
+    This is ..., this is good  yes, thank you.
     """
 
     """
@@ -131,7 +133,7 @@ label lad_day1_evening:
 
     After a while, I unpack my modest luggage.
 
-    That task didn't take up much time. So, what should I do now?
+    It didn't take up much time. So, what should I do now?
     """
 
     $ play_music('upbeat')
