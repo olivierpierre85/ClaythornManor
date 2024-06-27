@@ -202,11 +202,13 @@ label lad_downstairs_sleepwalk:
 
 
 label lad_downstairs_flirt:
+
+    lad """
+    Actually, I just wanted to talk to you.
+    """
     
     maid """
-    You wanted to see me?
-
-    Why?
+    Really, Why?
 
     The kitchen is closed, but I can fix you a plate of leftovers if you're still hungry.
     """
@@ -328,7 +330,7 @@ label lad_billiard_room_default:
     """
     It's empty.
 
-    "No need to stay here.
+    No need to stay here.
     """
 
     return

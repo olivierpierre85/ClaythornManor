@@ -144,8 +144,6 @@ label psychic_generic_nurse_saturday_hunt:
     So I believe the prize money could help her retire.
     """
 
-    $ nurse_details.description_hidden.unlock('job') 
-
     return
 
 label psychic_generic_other_guests_saturday_evening:

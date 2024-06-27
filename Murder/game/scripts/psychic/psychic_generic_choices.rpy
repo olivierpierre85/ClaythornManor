@@ -252,11 +252,7 @@ label psychic_generic_manor:
     
     You don't see a lot of that type of place anymore. 
 
-    The only problem I see is there is not a lot of help for a house this big.
-
-    I only noticed one footman and the butler so far.
-
-    That's not a lot when you entertain guests.
+    The only problem is I don't see a lot of help for a house this big.
 
     And I don't think money is a problem.
 

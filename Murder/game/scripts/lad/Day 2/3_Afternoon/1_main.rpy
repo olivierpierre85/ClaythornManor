@@ -63,27 +63,27 @@ label lad_day2_afternoon:
     """
 
     captain """
-    It's best this way for now.
+    It's the best we can do at the moment.
+
+    We shouldn't linger here.
 
     I want to keep an eye on Samuel Manning.
     """
 
-    """
-    I nod in agreement.
+    lad """
+    Of course.
     """
 
     captain """
-    You should change before rejoining us.
+    Also Mister Harring, you might want to change before rejoining us.
     """
 
     """
     I glance at my clothes.
 
     They're stained with blood.
-
-    Luckily, they aren't mine. 
     
-    But I should still change them.
+    He is right, I can't go back downstairs looking like this.
     """
     
     call lad_day2_afternoon_bedroom

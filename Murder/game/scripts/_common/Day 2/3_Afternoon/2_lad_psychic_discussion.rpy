@@ -116,7 +116,7 @@ label common_day2_afternoon_lad_psychic_discussion:
 
         A murder?
 
-        It's probably just a wild theory.
+        She is probably paranoid.
 
         But still...
         """

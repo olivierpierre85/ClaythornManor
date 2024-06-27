@@ -13,7 +13,7 @@ label lad_day2_hunt_tea_room:
     nurse """
     Oh Mister Harring, I'm glad you're here.
 
-    Miss Baxter was just discussing something fascinating.
+    Miss Baxter and I were just discussing something fascinating.
 
     You should join us.
     """
@@ -30,10 +30,13 @@ label lad_day2_hunt_tea_room:
 
     # TODO if the psychic knowledge is not known, summarize it here? or just display the text?
     if current_character.saved_variables['knows_psychic_background']:
+
         lad """
         Ah, yes, we've discussed that before.
         """
+    
     else:
+
         lad """
         Really? That's fascinating. 
         """
@@ -59,9 +62,9 @@ label lad_day2_hunt_tea_room:
     psychic """
     I sense his spirit, and it's restless. It's a sign of an unnatural death.
 
-    There's something amiss, but I can't pinpoint it.
+    There's something amiss, I just can't figure what.
 
-    But please, I don't mean to alarm you.
+    But I don't mean to alarm you.
 
     It might be nothing.
 
@@ -116,17 +119,17 @@ label lad_day2_hunt_tea_room:
     """
 
     """
-    It's creepy to realize there's a dead man upstairs, and no one's addressing the situation.
+    It's creepy to realize there's a dead man upstairs.
 
     He's there in his bed, as if nothing happened.
 
     Strange.
 
-    While we converse, someone enters the room.
+    While we talk, someone enters the room.
     """
 
     maid """
-    I'm relieved to find you all here.
+    I'm glad to find you all here.
 
     I've prepared a light luncheon.
     
@@ -154,6 +157,10 @@ label lad_day2_hunt_tea_room:
 
     I'll fetch your meal now.
     """
+
+    """
+    She exits the room.
+    """
     
     psychic """
     It seems worse than I initially thought. A cook who also acts as a maid.
@@ -166,7 +173,7 @@ label lad_day2_hunt_tea_room:
 
     Perhaps she's as clueless as I am about the workings of this household.
 
-    Or she might be refraining from criticizing our host.
+    Or she might be refraining from criticising our host.
 
     After a moment, the cook returns with our food, and we enjoy a light chat while dining.
 
@@ -188,7 +195,7 @@ label lad_day2_hunt_tea_room:
     """
 
     """
-    Rosalind Marsh exits the tea room.
+    Rosalind Marsh leaves the tea room.
 
     I'm left with Amelia Baxter.
     """

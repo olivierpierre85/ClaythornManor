@@ -15,7 +15,7 @@ label common_day2_evening_dinner:
 
     For now, enjoy your dinner.
 
-    Drinks will be available in the billiard room afterward, as they were yesterday.
+    Drinks will be available in the billiard room afterwards, as they were yesterday.
     """
 
     # TODO different reaction for each guest?
