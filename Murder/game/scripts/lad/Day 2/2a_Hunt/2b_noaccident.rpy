@@ -82,14 +82,16 @@ label lad_day2_hunt_noaccident:
     We rushed in the direction of the cry.
     """
 
+    call wait_screen_transition()
+
     $ play_music('danger')
 
     """
     Soon, we came upon the others.
 
-    Doctor Baldwin was on the ground.
+    Doctor Baldwin is on the ground.
 
-    Standing beside him was Samuel Manning, visibly shaken.
+    Standing beside him is Samuel Manning, visibly shaken.
     """
 
     drunk """
@@ -101,13 +103,44 @@ label lad_day2_hunt_noaccident:
     """
 
     """
-    We examine Doctor Baldwin.
-
-    It is too late.
-
-    He has bled to death.
+    Captain Sinha grabbed him.
     """
 
+    captain """
+    What have you done, fool?
+    """
+
+    drunk """
+    I shot at a rabbit, but missed.
+
+    I didn't mean to hit him.
+
+    I didn't...
+    """
+
+    """
+    We look down at Daniel Baldwin.
+
+    Next to him are empty vials and a syringe.
+    """
+
+    footman """
+    He asked me to give him that.
+
+    Then he nodded off right after.
+    """
+
+    """
+    Captain Sinha sits next to the victim to check his pulse.
+    """
+
+    captain """
+    It is too late.
+
+    His heart has stopped.
+
+    He is dead.
+    """
 
     $ stop_music()
 

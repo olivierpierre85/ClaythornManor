@@ -99,7 +99,7 @@ label lad_day2_breakfast_follow:
     """
 
     doctor """
-    I'm uncertain. 
+    I'm not sure. 
 
     He seemed in good health.
 

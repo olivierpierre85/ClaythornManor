@@ -47,8 +47,8 @@ label debug_choices:
         "lad_day2_morning":
             jump lad_day2_morning
             
-        # # "lad_day2_hunt":
-        # #     jump lad_day2_hunt
+        "lad_day2_hunt":
+            jump lad_day2_hunt
 
         # "lad_day2_no_hunt MAP":
         #     # Has try to go downstairs

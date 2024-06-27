@@ -133,7 +133,7 @@ label lad_day2_hunt_accident:
     """
 
     lad """
-    HELP!!!
+    Help! Help!!!
 
     Someone's been shot!
     """
@@ -143,7 +143,7 @@ label lad_day2_hunt_accident:
     """
 
     lad """
-    Hurry, fetch the others. We need help.
+    Hurry, fetch the others.
     """
 
     footman """
@@ -234,14 +234,14 @@ label lad_day2_hunt_accident:
     He takes out a small vial and a syringe.
 
     He fills the syringe in. Then, without hesitation, he injects himself.
+
+    Then he does it a second time.
+
+    And a third.
     """
 
     doctor """
-    That's better.
-
-    I'll lose consciousness soon.
-
-    And likely, I won't awaken again.
+    Ahhhh, that's better.
     """
 
     """
@@ -250,17 +250,21 @@ label lad_day2_hunt_accident:
 
     lad """
     What can I do?
-
-    Do you have any messages for anyone?
     """
 
     doctor """
-    No, there's no one.
+    There is nothing to be done.
 
-    It's inconsequential.
+    I'll lose consciousness soon.
 
-    I never did anything noteworthy.
+    And likely, I won't awaken again.
+    """
 
+    """
+    I am speechless.
+    """
+
+    doctor """
     Perhaps I deserve this.
     """
 
@@ -275,7 +279,7 @@ label lad_day2_hunt_accident:
 
     I was cruel to them.
 
-    I took advantage of them to obtain drugs.
+    I took advantage of them, took the drugs they needed for myself.
 
     I certainly don't merit sympathy.
 
@@ -290,7 +294,7 @@ label lad_day2_hunt_accident:
     And then, silence.
     """
 
-    pause 1.0
+    pause 2.0
 
     $ doctor_details.description_hidden.unlock('fraud')
 
@@ -301,7 +305,6 @@ label lad_day2_hunt_accident:
 
     Doctor Baldwin has bled out, and he is lying lifeless in the forest.
     """
-
 
     pause 2.0
 
