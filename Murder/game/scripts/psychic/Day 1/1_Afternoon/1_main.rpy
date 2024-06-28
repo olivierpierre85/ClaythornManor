@@ -390,7 +390,7 @@ label psychic_introduction:
     """
 
     butler """
-    Mister TED HARRING.
+    Mister Ted Harring!
     """
 
     """

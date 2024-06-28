@@ -93,7 +93,7 @@ label lad_generic_background_psychic:
 
     I was born and raised in Birmingham.
     
-    And I am working there as a business associate.
+    I work there as a business associate.
     """
 
     $ lad_details.description_hidden.unlock('origin') 
@@ -158,7 +158,7 @@ label lad_generic_heroic_act_psychic:
 
     pause 1
 
-    # todo scene fire_building
+    $ change_room('house_on_fire')
 
     $ play_music('mysterious', 3, fadeout_val=2, fadein_val=2)
 
@@ -198,8 +198,6 @@ label lad_generic_heroic_act_psychic:
     And they also omitted the worst part.
     """
 
-    pause 1.0
-
     lad """
     The baby wasn't alone in the house, of course.
 
@@ -218,7 +216,7 @@ label lad_generic_heroic_act_psychic:
     They said there was nothing I could have done, but I am not sure.
     """
 
-    $ change_room('PREVIOUS') # TODO PREVIOUS ROOM !!!!!!
+    $ change_room('PREVIOUS') # TODO NOT WORKING BACK TO PREVIOUS
 
     psychic """
     Don't say that. I am certain it was too late for her.

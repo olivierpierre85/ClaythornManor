@@ -1,5 +1,7 @@
 label common_day3_afternoon_lad_psychic_stay:
 
+    $ stop_music(2)
+
     psychic """
     Well, there's no point in waiting around doing nothing.
 
@@ -10,9 +12,7 @@ label common_day3_afternoon_lad_psychic_stay:
 
     lad """
     Okay, I'll come with you.
-    """
-
-    $ stop_music()
+    """    
 
     $ change_room('basement_stairs', dissolve)
 
@@ -41,15 +41,15 @@ label common_day3_afternoon_lad_psychic_stay:
     """
 
     nurse """
-    Of course I am. 
+    Of course I am here. Why do you look so surprised?
     
-    I'm afraid I overslept.
+    I'm afraid I overslept. I don't feel quite like myself today.
 
-    I don't feel quite like myself today.
+    When I woke up, I went to check the dining room but found it empty.
 
-    It's possible I might be sick.
+    I wandered in the house for a while but I didn't see anyone until I met you.
 
-    But where is everybody else?
+    Where is everybody?
     """
 
     psychic """
@@ -102,6 +102,8 @@ label common_day3_afternoon_lad_psychic_stay:
         """
 
     $ change_room('kitchen', dissolve)
+
+    $ stop_music(2)
 
     """
     We look around for something to eat.

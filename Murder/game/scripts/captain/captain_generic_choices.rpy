@@ -80,7 +80,7 @@ label captain_generic_origin_psychic_2:
     captain """
     Oh ... I was raised in Calcutta. 
     
-    But I've been living in the UK for so long that I don't even think about it anymore.
+    But I've been living in England for so long that I don't even think about it anymore.
     """
 
     psychic """

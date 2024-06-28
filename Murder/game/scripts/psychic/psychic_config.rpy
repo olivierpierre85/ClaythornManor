@@ -68,7 +68,7 @@ label init_psychic:
             CharacterInformation(1, "status", "London, she obviously knows her way around a grand house", is_important = True), 
             CharacterInformation(2, "age", "disclose her age to anyone"),
             CharacterInformation(3, "heroic_act", "abilities, she was able to help the police find the kidnapper of a Duke's young heir", is_important = True),
-            CharacterInformation(4, "lie", "deathbed, she confessed to being a fraud, admitting she is nothing but an actress", is_important = True),
+            CharacterInformation(4, "lie", "deathbed, she confessed to being a fraud, admitting she is nothing but an con artist", is_important = True),
             CharacterInformation(5, "drive", "cannot drive"),
             CharacterInformation(6, "racist", "a tad racist")
             ], psychic_name

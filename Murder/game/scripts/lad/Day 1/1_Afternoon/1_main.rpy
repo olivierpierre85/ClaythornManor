@@ -221,7 +221,7 @@ label lad_introduction:
     """
 
     butler """
-    Mister TED HARRING.
+    Mister Ted Harring!
     """
 
     """

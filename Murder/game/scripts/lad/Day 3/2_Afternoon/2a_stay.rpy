@@ -1,6 +1,6 @@
 label lad_day3_stay:
 
-    call change_time(13,00, "Afternoon", "Sunday")
+    call change_time(13, 00, "Afternoon", "Sunday")
 
     $ change_room("tea_room")
 
@@ -20,8 +20,38 @@ label lad_day3_stay:
 
     pause 1.0
 
+    lad """
+    I think I should stay here.
     """
-    As soon as Captain Sinha has left the room, Amelia stands up.
+
+    psychic """
+    Yes! Thank you, Mister Harring.
+    """
+
+    captain """
+    It's decided then, I'll go alone.
+
+    And there is no time to lose, so I better leave immediately.
+    """
+
+    psychic """
+    Good thinking. And don't worry about us, we'll be fine here.
+
+    Be careful.
+    """
+
+    lad """
+    Good luck, Captain.
+    """
+
+    captain """
+    Thank you both. I will be back soon.
+    """
+
+    """
+    We watched him leave the room, and I can sense relief in Miss Baxter's eyes.
+
+    As soon as Captain Sinha is out of sight, she stands up.
     """
 
     call common_day3_afternoon_lad_psychic_stay
@@ -59,7 +89,7 @@ label lad_day3_stay:
         $ time_left = 1
         call run_menu( TimedMenu("lad_day3_stay", [
             TimedMenuChoice('I\'m being paranoid. Besides, I really need to go', 'lad_day3_afternoon_toilet', early_exit = True ),
-            TimedMenuChoice('Go back downstairs{{intuition}}', 'lad_day3_afternoon_no_toilet', early_exit = True)
+            TimedMenuChoice('Hold it in and go back downstairs{{intuition}}', 'lad_day3_afternoon_no_toilet', early_exit = True)
             ])
         )
     else:
@@ -72,16 +102,16 @@ label lad_day3_afternoon_toilet:
 
     """
     After seeing her enter her room, I head to mine.
+
+    As I walk down the hallway, I constantly look around.
+
+    It feels like someone might jump out at me any moment.
     """
 
     $ change_room('bedroom_lad')
 
     """
-    As I walk down the hallway, I constantly look around.
-
-    It feels like someone might jump out at me any moment.
-
-    I shouldn't waste any time.
+    Once I reached my room, I try not to waste anytime.
     """       
 
     pause 2.0
@@ -141,7 +171,6 @@ label lad_day3_afternoon_no_toilet:
 
     $ change_room('dining_room')
 
-    
     """
     When I return, I see Miss Marsh with my plate in her hands.
     """
@@ -155,7 +184,7 @@ label lad_day3_afternoon_no_toilet:
     """
 
     nurse """
-    Oh, nothing special. I just realized the plate set out for me is too full.
+    Oh, nothing special. I just realised the plate set out for me is too full.
 
     I won't be able to eat that much.
 
@@ -167,7 +196,7 @@ label lad_day3_afternoon_no_toilet:
     lad """
     I actually do mind.
 
-    Not the quantity, but I already seasoned my plate exactly how I like it.
+    Not the quantity, but I have already seasoned my plate exactly how I like it.
 
     I would prefer to keep it that way.
     """
@@ -196,6 +225,8 @@ label lad_day3_afternoon_no_toilet:
 
     pause 2.0
 
+    call wait_screen_transition()
+
     """
     After finishing, I rise and offer to wash the dishes.
     """
@@ -218,8 +249,6 @@ label lad_day3_afternoon_no_toilet:
 
     """
     Suddenly, she collapses.
-
-    I rush to her side.
     """
 
     psychic """
@@ -231,16 +260,41 @@ label lad_day3_afternoon_no_toilet:
     """
 
     """
-    She realizes I am holding her hand.
-    """
-
-    # TO OBVIOUS CLUE REMOVEImportant TED or Mr Harring? TED is STROng clue
-    psychic """
-    Oh, Ted, I shouldn't have lied.
+    I rush to her side.
     """
 
     lad """
-    What do you mean? Lie about what?
+    Are you alright?
+
+    Do you need a glass of water?
+    """
+
+    psychic """
+    No no, I don't need anything thank you.
+    """
+
+    """
+    Her expression subtly changes, from fright to resignation.
+    """
+
+    """
+    I feel... I feel I made a huge mistake.
+    """
+
+    lad """
+    What do you mean?
+    """
+
+    psychic """
+    It doesn't matter now.
+
+    It's too late it appears.
+    
+    Oh, Ted, I shouldn't have lied to you.
+    """
+
+    lad """
+    What are you talking about? Lie about what?
     """
 
     psychic """
@@ -248,7 +302,11 @@ label lad_day3_afternoon_no_toilet:
 
     That... I've never been a psychic...
 
-    I am ... just an actress...
+    I can't believe people fell for that act.
+
+    I am... a fraud... 
+    
+    A con artist...
 
     I...
     """
@@ -260,7 +318,7 @@ label lad_day3_afternoon_no_toilet:
     psychic """
     No it's too late for that.
 
-    I need to confess ... now...
+    I need to... now...
 
     I...
 
@@ -270,6 +328,8 @@ label lad_day3_afternoon_no_toilet:
     """
     She can't finish her sentence.
     """
+
+    $ stop_music(1)
 
     $ psychic_details.description_hidden.unlock('lie') 
 
@@ -406,7 +466,11 @@ label lad_day3_afternoon_no_toilet:
 
     """
     Once inside, I slam the door shut.
+    """
+    
+    play sound door_shut
 
+    """
     Panic floods my mind.
 
     I can't stay here.
@@ -423,7 +487,7 @@ label lad_day3_afternoon_no_toilet:
     """
     My eyes fix on the window.
 
-    The fall doesn't look too severe.
+    This bedroom is not too high.
 
     I might be able to climb down safely.
 
