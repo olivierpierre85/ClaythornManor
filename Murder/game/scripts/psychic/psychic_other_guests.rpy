@@ -7,7 +7,7 @@ label psychic_generic_other_guests:
 label psychic_generic_other_guests_saturday:
 
     psychic """
-    I haven't had time to make an opinion everyone yet.
+    I haven't had time to form an opinion of everyone yet.
 
     I was just able to get to know Captain Sinha, the sorry drunk that is Samuel Manning.
 
@@ -40,7 +40,7 @@ label psychic_generic_other_guests_saturday_hunt:
         """
 
     psychic """
-    Now, I also have talked a little with Miss Marsh.
+    Now, I have also talked a little with Miss Marsh.
     """
 
     call psychic_generic_other_guests
@@ -50,7 +50,7 @@ label psychic_generic_other_guests_saturday_hunt:
 label psychic_generic_other_guests_friday:
     # DRINKS AND DINNER
     psychic """
-    I've just met them. So I can't say to know a lot yet.
+    I've just met them. So I can't say I know a lot yet.
 
     All I know is that this guy over there ...
     """
@@ -60,7 +60,7 @@ label psychic_generic_other_guests_friday:
     """
 
     psychic """
-    ... is monopolizing the conversation.
+    ... is monopolising the conversation.
 
     And he is very noisy too.
 
@@ -92,13 +92,13 @@ label psychic_generic_captain_saturday_morning:
 
     I didn't think they would accept indigenous people in the British Army.
 
-    But beside that, he is exactly like other officer I met.
+    But beside that, he is exactly like other officers I have met.
 
     Bold, sure of himself, and not ashamed to talk about himself.
 
-    I bet he will keep on telling stories about his \"Glorious Days\" during one war or another.
+    I bet he will keep on telling stories about his "Glorious Days" during one war or another.
 
-    I think is in bad taste, so I will try to avoid him in the coming days.
+    I think it is in bad taste, so I will try to avoid him in the coming days.
 
     I suggest you do the same, unless you want to be bored to death.
     """
@@ -107,7 +107,6 @@ label psychic_generic_captain_saturday_morning:
 
     return
 
-
 label psychic_generic_host_saturday_morning:
 
     psychic """
@@ -115,9 +114,9 @@ label psychic_generic_host_saturday_morning:
 
     She seems delightful to me.
 
-    What was event better, is that she addressed me as an equal.
+    What was even better, is that she addressed me as an equal.
 
-    That's very different that most noble people I've met.
+    That's very different from most noble people I've met.
     
     They usually look down on people like you, ...
     
@@ -137,7 +136,7 @@ label psychic_generic_host_saturday_morning:
 label psychic_generic_nurse_saturday_hunt:
 
     psychic """
-    For what I've seen, I believe she is a very respectable woman.
+    From what I've seen, I believe she is a very respectable woman.
 
     She worked most of her life as a nurse.
 
@@ -151,7 +150,7 @@ label psychic_generic_other_guests_saturday_evening:
     psychic """
     Good question, we'll be stronger if we know who to be wary of.
 
-    I've thought about it and Samuel Manning of course is the prime suspect.
+    I've thought about it and Samuel Manning is of course the prime suspect.
 
     But he is locked in his room now, so I wouldn't worry about him too much.
 
@@ -159,9 +158,9 @@ label psychic_generic_other_guests_saturday_evening:
     
     The fact that he wears a mask is the perfect way to hide his true identity.
 
-    But it was obviously not him.
+    But he can't really hurt us anymore, can he?
 
-    So that leaves us three persons to worry about : Sushil Sinha, Lady Claythorn and Rosalind Marsh.
+    So that leaves us three persons to worry about: Sushil Sinha, Lady Claythorn and Rosalind Marsh.
     """
     
     call psychic_generic_other_guests
@@ -171,15 +170,13 @@ label psychic_generic_other_guests_saturday_evening:
 label psychic_generic_captain_saturday_evening:
 
     psychic """
-    Captain Sinha is the one I am the most worried about.
+    Captain Sinha is the one I am most worried about.
 
-    He the strongest of us, has military experience.
+    He is the strongest of us, has military experience.
     
-    And he often took command during dramatic moments.
+    And he often took command during dramatic moments, which means he can try to drive us where he wants.
 
-    Which means he can try to drive us where he wants.
-
-    But he is also the one that locked Samuel Manning, so I am not sure.
+    I would be very cautious around him if I were you.
     """
 
     return
@@ -188,15 +185,15 @@ label psychic_generic_captain_saturday_evening:
 label psychic_generic_host_saturday_evening:
 
     psychic """
-    If the money is not the reason behind the murders, then I suppose she would be suspicious.
+    If money is not the reason behind the murders, then I suppose she would be suspicious.
 
     After all, she is the one who called all of us here.
 
-    But as I said, it would be a lot of work to organize all this, and for what?
+    But as I said, it would be a lot of work to organise all this, and for what?
 
     To kill a few of her enemies?
 
-    That seem a bit far fetched.
+    That seems a bit far-fetched.
 
     Also, she seemed very nice to me. 
 
@@ -210,11 +207,11 @@ label psychic_generic_nurse_saturday_evening:
     psychic """
     Miss Marsh definitely doesn't have the type of a killer.
 
-    But that's not a reason enough to think she couldn't be.
+    But that's not reason enough to think she couldn't be.
 
     She is very discreet.
 
-    That could be a way to be able to search the manor while she relies on an accomplice for the more \"physical\" part of the robbery.
+    That could be a way to search the manor while she relies on an accomplice for the more "physical" part of the robbery.
     """
 
     return

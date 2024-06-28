@@ -19,8 +19,8 @@ define hours_angle = 0
 define current_year = "1924"
 
 define menu_level = -1
-define selected_choice = [None, None, None]
-define time_diff = [None, None, None]
+define selected_choice = [None, None, None, None]
+define time_diff = [None, None, None, None]
 
 # The game starts here.
 label start():

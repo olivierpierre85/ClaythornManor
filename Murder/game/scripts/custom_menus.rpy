@@ -30,9 +30,10 @@ label run_menu(current_menu, change_level=True):
         if current_menu.image_right_2:
             $ renpy.show(current_menu.image_right_2, at_list=[character_choice_right_2])
 
-        # $ print(menu_level, selected_choice, selected_choice[menu_level])
+        
         $  selected_choice[menu_level] = current_menu.display_choices()
-
+        $ print(menu_level, selected_choice, selected_choice[menu_level])
+        
         # Hide choices when activated
         if current_menu.image_left:
             $ renpy.hide(current_menu.image_left)

@@ -17,6 +17,20 @@ label lad_day2_believe_psychic:
 
     call psychic_generic
 
+    lad """
+    I think I should keep looking around the manor. I might learn something useful.
+    """
+
+    psychic """
+    It's not a bad idea. I will stay here tonight if you don't mind.
+
+    Good luck.
+    """
+
+    lad """
+    Thanks.
+    """
+
     $ lad_details.saved_variables["day2_believe_psychic"] = True
 
     return
