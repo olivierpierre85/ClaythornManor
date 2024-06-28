@@ -29,7 +29,7 @@ label ending_generic:
     python:
         if not seen_tutorial_timeline:
             seen_tutorial_timeline = True
-            renpy.call('tutorial_map')
+            renpy.call('tutorial_timeline')
 
         if full_testing_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")
@@ -166,11 +166,9 @@ label lad_ending_day3_fell:
 
 label lad_ending_day3_escape:
 
-    $ change_room("police_station")
+    $ change_room("police_station", irisin)
 
     """
-    After what felt like an eternity, I finally reached the town.
-
     I rushed into the police station and told them everything.
 
     I was exhausted, panicked, and probably came off as unhinged.
@@ -190,7 +188,7 @@ label lad_ending_day3_escape:
 
     At that moment, the two police officers took the situation very seriously.
 
-    They hastened to Claythorn Manor.
+    They rushed to Claythorn Manor.
 
     There, they discovered that all of the remaining guests had died.
 

@@ -78,37 +78,37 @@ label debug_choices:
             $ lad_details.saved_variables["day2_saw_accident"] = True
             jump lad_day2_evening
 
-        # "lad_day3_morning TES MAP":
-        #     $ unlock_map('bedroom_captain')
-        #     $ unlock_map('bedroom_host')
-        #     $ unlock_map('bedroom_psychic')
-        #     $ unlock_map('bedroom_lad')
-        #     $ unlock_map('bedroom_drunk')
-        #     $ unlock_map('bedroom_nurse')
-        #     $ unlock_map('bedroom_broken')
-        #     $ unlock_map('bedroom_doctor')
-        #     $ lad_details.saved_variables["day2_believe_psychic"] = True
+        "lad_day3_morning TES MAP":
+            $ unlock_map('bedroom_captain')
+            $ unlock_map('bedroom_host')
+            $ unlock_map('bedroom_psychic')
+            $ unlock_map('bedroom_lad')
+            $ unlock_map('bedroom_drunk')
+            $ unlock_map('bedroom_nurse')
+            $ unlock_map('bedroom_broken')
+            $ unlock_map('bedroom_doctor')
+            $ lad_details.saved_variables["day2_believe_psychic"] = True
             
-        #     jump lad_day3_morning
+            jump lad_day3_morning
         
-        # "lad_day3_afternoon":
-        #     call unlock_psychic 
-        #     $ lad_details.observations.unlock('green_liquid')
-        #     $ lad_details.saved_variables['library_visited'] = True
-        #     $ lad_details.test_checkpoint()
+        "lad_day3_afternoon":
+            call unlock_psychic 
+            $ lad_details.observations.unlock('green_liquid')
+            $ lad_details.saved_variables['library_visited'] = True
+            $ lad_details.test_checkpoint()
 
-        #     $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
-        #     $ lad_details.objects.unlock('gun')
-        #     $ first_death = False
-        #     $ lad_details.intuitions.unlock('psychic_poisons')
-        #     $ lad_details.endings.unlock('gunned_down')
+            $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
+            $ lad_details.objects.unlock('gun')
+            $ first_death = False
+            $ lad_details.intuitions.unlock('psychic_poisons')
+            $ lad_details.endings.unlock('gunned_down')
 
             
-        #     $ lad_details.reset_information()
-        #     # $ lad_details.objects.unlock('gun')
-        #     $ lad_details.important_choices.unlock('hunt')
+            $ lad_details.reset_information()
+            # $ lad_details.objects.unlock('gun')
+            $ lad_details.important_choices.unlock('hunt')
 
-        #     jump lad_day3_afternoon
+            jump lad_day3_afternoon
 
         # "lad_day3_stay":
         #     $ lad_details.intuitions.unlock(('psychic_poisons')

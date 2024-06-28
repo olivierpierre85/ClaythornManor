@@ -162,7 +162,7 @@ label lad_day3_morning:
         """
         I doubt we'll find anyone now.
 
-        So we settled in the tea room to wait for the captain.
+        So we settled in the tea room to wait for Captain Sinha.
         """
 
         captain """

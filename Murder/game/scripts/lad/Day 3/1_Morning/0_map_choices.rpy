@@ -155,17 +155,21 @@ label lad_day3_morning_scullery:
 
     $ change_room('scullery')
 
-    """
-    Wait, what the hell is a scullery?
-    """
-
     lad """
     Do you know what room this is?
     """
 
     psychic """
     The scullery.
+    """
 
+    """
+    Wait, what the hell is a scullery?
+
+    Miss Baxter must have noticed my puzzled look, because she went on explaining.
+    """
+
+    psychic """
     It's primarily where they wash dishes.
 
     If you look in the sink, there are a lot of dirty dishes.
@@ -180,6 +184,7 @@ label lad_day3_morning_scullery:
     """
 
     return
+
 
 
 label lad_day3_morning_garage:
@@ -287,9 +292,9 @@ label lad_day3_morning_garden:
     """
 
     lad """
-    HELLO! Is anyone here?
+    Hello! Is anyone here?
 
-    HELLO!!
+    Hello!!
     """
 
     """

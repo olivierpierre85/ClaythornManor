@@ -301,6 +301,8 @@ label lad_day3_escape:
 
         pause 1
 
+        call wait_screen_transition()
+
         $ play_music("mysterious")
 
         """
@@ -315,7 +317,11 @@ label lad_day3_escape:
         Thankfully, no one is in sight.
         """
 
-        pause 2
+        pause 1
+
+        """
+        After what felt like an eternity, I finally reached the town.
+        """
 
         $ lad_details.saved_variables["day3_ending"] = "escape"
 
