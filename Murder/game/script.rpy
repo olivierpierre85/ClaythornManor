@@ -70,6 +70,7 @@ label init_technical_variables:
         TIME_LOW = 5
 
         current_room = "outside"
+        previous_room = "outside"
         seen_tutorial_clock = False
         seen_tutorial_description_hidden = False
         seen_tutorial_map = False

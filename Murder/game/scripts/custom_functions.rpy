@@ -71,7 +71,7 @@ init python:
             if new_room == 'PREVIOUS':
                 new_room = previous_room
             else:
-                previous_room = new_room
+                previous_room = current_room
 
             renpy.scene()
             renpy.show(new_room)
