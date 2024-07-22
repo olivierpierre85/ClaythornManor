@@ -173,7 +173,7 @@ label lad_ending_day3_escape:
 
     I was exhausted, panicked, and probably came off as unhinged.
 
-    But they agreed to investigate the matter.
+    Yet, they agreed to investigate the matter.
 
     I was too drained and frightened to accompany them, but they told me everything when they came back.
     """
@@ -194,11 +194,11 @@ label lad_ending_day3_escape:
 
     Samuel Manning, Thomas Moody, and Daniel Baldwin were still in their beds.
 
-    Poor Miss Baxter was found in the hallway, probably poisoned.
+    Poor Miss Baxter was found lying lifeless in the hallway.
     
     She didn't even make it to her room.
 
-    Rosalind Marsh most likely died of the same cause. 
+    Rosalind Marsh was dead too. 
     
     Her body was found in the attic. 
 

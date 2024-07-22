@@ -220,7 +220,7 @@ label lad_day3_escape:
         lad """
         Not really.
         
-        What are you referring to?
+        What is it?
         """
 
         $ play_music('danger')
