@@ -38,7 +38,7 @@ label lad_day3_afternoon:
     call common_day3_afternoon_lad_psychic_captain_discussion_2
     
     $ lad_day3_escape_menu = TimedMenu("lad_day3_escape_menu", [
-        TimedMenuChoice('We could use the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition='lad_details.saved_variables["day3_seen_car"]'),
+        TimedMenuChoice('Propose to use the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition='lad_details.saved_variables["day3_seen_car"]'),
         TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', early_exit=True),
         TimedMenuChoice('Follow Sushil Sinha. Amelia Baxter will {i}probably{/i} be fine on her own', 'lad_day3_escape', early_exit=True)
     ], image_left="psychic",  image_right="captain")
@@ -70,9 +70,7 @@ label lad_day3_afternoon:
 label lad_day3_leave_with_car:
 
     lad """
-    Wait, there's still a car in the garage.
-
-    We saw it earlier. It's an old model.
+    Wait, we saw an old car in the garage earlier.
 
     We don't know how to drive it, but perhaps you do?
     """

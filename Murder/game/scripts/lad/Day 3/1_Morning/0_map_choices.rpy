@@ -83,8 +83,8 @@ label lad_day3_morning_gun_room:
     """
 
     call run_menu(TimedMenu("lad_day3_morning_gun_room", [
-        TimedMenuChoice('Sure, I need a gun. It doesn\'t matter that I don\'t know how to use it', 'lad_day3_take_gun', early_exit=True),
-        TimedMenuChoice('I would rather not. I might hurt myself.', 'lad_day3_no_gun', early_exit=True), 
+        TimedMenuChoice('Take the gun. It doesn\'t matter that I don\'t know how to use it', 'lad_day3_take_gun', early_exit=True),
+        TimedMenuChoice('Don\'t take the gun. You might hurt yourself.', 'lad_day3_no_gun', early_exit=True), 
     ]))
 
     return

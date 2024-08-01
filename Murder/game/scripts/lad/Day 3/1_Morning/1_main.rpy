@@ -155,7 +155,7 @@ label lad_day3_morning:
 
     call change_time(11,00)
 
-    $ change_room('tea_room')
+    $ change_room('tea_room', dissolve)
 
     if lad_details.saved_variables["day3_morning_captain_found"]:
 

@@ -21,7 +21,7 @@ label lad_day2_evening_billiard_room:
             TimedMenuChoice('Go to the bar for a drink', 'lad_day2_evening_billiard_room_bar', 10),
             TimedMenuChoice('Have another drink to calm the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_details.saved_variables["day2_drinks"] == 1'),
             TimedMenuChoice('Maybe a few more drinks would help', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_details.saved_variables["day2_drinks"] == 2'),
-            TimedMenuChoice('Oh, what the hell, maybe I should just get plastered', 'lad_day2_evening_billiard_room_bar_4', 120, condition = 'lad_details.saved_variables["day2_drinks"] == 3'),
+            TimedMenuChoice('Don\'t listen to him, just get plastered', 'lad_day2_evening_billiard_room_bar_4', 120, condition = 'lad_details.saved_variables["day2_drinks"] == 3'),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -38,10 +38,15 @@ label lad_day2_evening_billiard_room:
     return
 
 label lad_day2_evening_billiard_room_captain_hypothesis_cancel:
+    
 
     return
     
 label lad_day2_evening_billiard_room_captain_hypothesis_doctor:
+
+    lad """
+    I believe Daniel Baldwin had an opium addiction.
+    """
 
     captain """
     And what if he was?
@@ -60,6 +65,10 @@ label lad_day2_evening_billiard_room_captain_hypothesis_doctor:
     return
 
 label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
+
+    lad """
+    I doubt that Samuel Manning was truly drunk at the time of the accident.
+    """
 
     captain """
     Really? 
@@ -104,6 +113,10 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
     return
 
 label lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter:
+
+    lad """
+    I suspect Samuel Manning had a motive to harm Daniel Baldwin.
+    """
 
     captain """
     Really? What makes you think that?
@@ -177,6 +190,10 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter:
     return
 
 label lad_day2_evening_billiard_room_captain_hypothesis_broken:
+
+    lad """
+    I noticed a weird liquid on Thomas Moody\'s nightstand.
+    """
 
     captain """
     A weird liquid?
@@ -323,13 +340,21 @@ label lad_day2_evening_billiard_room_captain:
     """
 
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu("lad_day2_evening_billiard_room_captain_hypothesis_menu", [
-        TimedMenuChoice('I believe Daniel Baldwin had an opium addiction {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']" ),
-        TimedMenuChoice('I noticed a strange liquid on Thomas Moody\'s nightstand {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')" ),
-        TimedMenuChoice('I suspect Samuel Manning had a motive to harm Daniel Baldwin', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10,  condition="lad_details.objects.is_unlocked('burned_letter')"  ),
-        TimedMenuChoice('I doubt that Samuel Manning was truly inebriated at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
+        TimedMenuChoice('Reveal Daniel Baldwin\'s opium addiction{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']"),
+        TimedMenuChoice('Point out the strange liquid on Thomas Moody\'s room{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')"),
+        TimedMenuChoice('Accuse Samuel Manning of having a motive to harm Daniel Baldwin', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10, condition="lad_details.objects.is_unlocked('burned_letter')"),
+        TimedMenuChoice('Question Samuel Manning\'s state of inebriation at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10),
         # TODO: If you have ALL the suspicions, you can convince the captain something strange is afoot. Need to decide next steps.
-        TimedMenuChoice('I don\'t see any reasons to be suspicious.', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit = True ),
+        TimedMenuChoice('Accept you don\'t have any real suspicions', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit=True),
     ])
+    # $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu("lad_day2_evening_billiard_room_captain_hypothesis_menu", [
+    #     TimedMenuChoice('I believe Daniel Baldwin had an opium addiction {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']" ),
+    #     TimedMenuChoice('I noticed a strange liquid on Thomas Moody\'s nightstand {{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')" ),
+    #     TimedMenuChoice('I suspect Samuel Manning had a motive to harm Daniel Baldwin', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10,  condition="lad_details.objects.is_unlocked('burned_letter')"  ),
+    #     TimedMenuChoice('I doubt that Samuel Manning was truly inebriated at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10 ),
+    #     # TODO: If you have ALL the suspicions, you can convince the captain something strange is afoot. Need to decide next steps.
+    #     TimedMenuChoice('I don\'t see any reasons to be suspicious.', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit = True ),
+    # ])
 
     call run_menu(lad_day2_evening_billiard_room_captain_hypothesis_menu)
 

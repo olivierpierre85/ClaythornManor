@@ -19,17 +19,16 @@ label lad_config_menu:
 
     $ psychic_generic_other_guests_menu_lad = TimedMenu("psychic_generic_other_guests_menu_lad", [
         # Saturday Morning
-        TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk_saturday_morning', 10, condition = condition_saturday_morning_or_hunt ),
-        TimedMenuChoice('Ask about Sushil Sinha', 'psychic_generic_captain_saturday_morning', 10, condition = condition_saturday_morning_or_hunt),
-        TimedMenuChoice('Ask about Lady Claythorn', 'psychic_generic_host_saturday_morning', 10, condition = condition_saturday_morning_or_hunt),
-
-        TimedMenuChoice('Ask about Rosalind Marsh', 'psychic_generic_nurse_saturday_hunt', 10, condition = condition_saturday_hunt),
+        TimedMenuChoice('What do you think of Samuel Manning?', 'psychic_generic_drunk_saturday_morning', 10, condition = condition_saturday_morning_or_hunt ),
+        TimedMenuChoice('What do you think of Sushil Sinha?', 'psychic_generic_captain_saturday_morning', 10, condition = condition_saturday_morning_or_hunt),
+        TimedMenuChoice('What do you think of Lady Claythorn?', 'psychic_generic_host_saturday_morning', 10, condition = condition_saturday_morning_or_hunt),
+        TimedMenuChoice('What do you think of Rosalind Marsh?', 'psychic_generic_nurse_saturday_hunt', 10, condition = condition_saturday_hunt),
 
         # Saturday Evening
-        # TimedMenuChoice('Ask about Samuel Manning', 'psychic_generic_drunk_saturday_morning', 10, condition = condition_saturday_morning_or_hunt ),
-        TimedMenuChoice('Ask about Sushil Sinha', 'psychic_generic_captain_saturday_evening', 10, condition = condition_saturday_evening),
-        TimedMenuChoice('Ask about Lady Claythorn', 'psychic_generic_host_saturday_evening', 10, condition = condition_saturday_evening),
-        TimedMenuChoice('Ask about Rosalind Marsh', 'psychic_generic_nurse_saturday_evening', 10, condition = condition_saturday_evening),
+        # TimedMenuChoice('What do you think of Samuel Manning', 'psychic_generic_drunk_saturday_morning', 10, condition = condition_saturday_morning_or_hunt ),
+        TimedMenuChoice('What do you think of Sushil Sinha?', 'psychic_generic_captain_saturday_evening', 10, condition = condition_saturday_evening),
+        TimedMenuChoice('What do you think of Lady Claythorn?', 'psychic_generic_host_saturday_evening', 10, condition = condition_saturday_evening),
+        TimedMenuChoice('What do you think of Rosalind Marsh?', 'psychic_generic_nurse_saturday_evening', 10, condition = condition_saturday_evening),
         # Always Generic 
         TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "psychic")
