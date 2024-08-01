@@ -216,7 +216,7 @@ label lad_generic_heroic_act_psychic:
     They said there was nothing I could have done, but I am not sure.
     """
 
-    $ change_room('PREVIOUS') # TODO NOT WORKING BACK TO PREVIOUS
+    $ change_room('PREVIOUS')
 
     psychic """
     Don't say that. I am certain it was too late for her.
@@ -241,6 +241,8 @@ label lad_generic_heroic_act_psychic:
     """
     I don't know what to say here.
     """
+
+    $ lad_details.description_hidden.unlock('heroic_act') 
 
     $ play_music('PREVIOUS')
 

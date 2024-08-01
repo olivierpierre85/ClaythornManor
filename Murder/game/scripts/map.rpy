@@ -37,15 +37,15 @@ label init_map:
             # Bedrooms
             Room(2, None,   'bedrooms_hallway',         'Bedrooms Hallway' ), # No area points so not a real destination
 
-            Room(2, (25, 90, 205, 190),   'bedroom_lad',         'William the Conqueror Bedroom (Lad)' ),
-            Room(2, (25, 280, 205, 130),   'bedroom_doctor',      'Edward II Bedroom (doctor)'),
-            Room(2, (25, 410, 205, 100),     'bedroom_captain',     'George I Bedroom (captain)'),
-            Room(2, (25, 510, 205, 105),     'bedroom_psychic',     'Elizabeth I Bedroom (Psychic)'),
+            Room(2, (25, 90, 205, 190),   'bedroom_lad',         'William the Conqueror Bedroom' ), # (Lad)
+            Room(2, (25, 280, 205, 130),   'bedroom_doctor',      'Edward II Bedroom'), # (doctor)
+            Room(2, (25, 410, 205, 100),     'bedroom_captain',     'George I Bedroom'), # (captain)
+            Room(2, (25, 510, 205, 105),     'bedroom_psychic',     'Elizabeth I Bedroom'), # (Psychic)
             
-            Room(2, (717, 90, 178, 190),   'bedroom_host',        'Henry IV Bedroom (Host)'),
-            Room(2, (717, 280, 178, 130),   'bedroom_drunk',       'George IV Bedroom (drunk)'),
-            Room(2, (717, 410, 178, 100),   'bedroom_broken',      'Richard III Bedroom (broken)'),
-            Room(2, (717, 510, 178, 105),   'bedroom_nurse',       'Queen Alexandra (nurse)'),
+            Room(2, (717, 90, 178, 190),   'bedroom_host',        'Henry IV Bedroom'), #  (Host)
+            Room(2, (717, 280, 178, 130),   'bedroom_drunk',       'George IV Bedroom'), #  (drunk)
+            Room(2, (717, 410, 178, 100),   'bedroom_broken',      'Richard III Bedroom'), #  (broken)
+            Room(2, (717, 510, 178, 105),   'bedroom_nurse',       'Queen Alexandra'), # (nurse)
             
             # Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), 
             # Ground Floor

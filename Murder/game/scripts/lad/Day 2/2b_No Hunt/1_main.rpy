@@ -13,7 +13,7 @@
 #       - Dead : Broken
 #
 #   Notes : 
-#       - Generic psychic OR map, 120 minutes,?TODO too long?
+#       - Generic psychic OR map, 240 minutes,?TODO too long?
 #       
 # --------------------------------------------
 label lad_day2_no_hunt:
