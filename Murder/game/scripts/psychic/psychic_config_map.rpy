@@ -11,11 +11,13 @@ label psychic_config_map:
         attic_default = "not psychic_details.observations.is_unlocked('lord')"
         attic_return = "psychic_details.observations.is_unlocked('lord')"
 
+        attic_return_too_soon = "psychic_details.saved_variables['attic_visited'] and not psychic_details.observations.is_unlocked('lord')"
+
         lord_choices = [
             TimedMenuChoice(default_room_text('library'), 'psychic_library_default', 10, room='library', condition=attic_not_visited),
             TimedMenuChoice(default_room_text('library'), 'psychic_library_look_for_lord_failed', 20, room='library',condition=attic_visited_do_not_know_lord_name),
-            TimedMenuChoice(default_room_text('library'), 'psychic_library_look_for_lord_succeed', 20, room='library',condition=knows_lord_name),
-            TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_portrait_gallery_look_for_lord', 20, room='portrait_gallery',condition=attic_visited),   
+            TimedMenuChoice(default_room_text('library'), 'psychic_library_look_for_lord_succeed', 30, room='library',condition=knows_lord_name),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_portrait_gallery_look_for_lord', 40, room='portrait_gallery',condition=attic_visited),   
             TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_portrait_gallery_default', 10, room='portrait_gallery',condition=attic_not_visited),   
 
             TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='storage', condition=attic_return),
@@ -48,10 +50,10 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_nurse'),
             TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_lad'),
             # attic
-            TimedMenuChoice(default_room_text('storage'), 'psychic_day1_evening_attic_default', 10, room='storage', condition=attic_default),
-            TimedMenuChoice(default_room_text('males_room'), 'psychic_day1_evening_attic_default', 10, room='males_room', condition=attic_default),
-            TimedMenuChoice(default_room_text('females_room'), 'psychic_day1_evening_attic_default', 10, room='females_room', condition=attic_default),
-            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day1_evening_attic_default', 10, room='butler_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day1_evening_attic_default', 60, room='storage', condition=attic_default),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day1_evening_attic_default', 60, room='males_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day1_evening_attic_default', 60, room='females_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day1_evening_attic_default', 60, room='butler_room', condition=attic_default),
 
             # Specific actions
             TimedMenuChoice(
@@ -92,10 +94,15 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day2_no_hunt_bedroom_host', 10, room='bedroom_host'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day2_no_hunt_bedroom_drunk', 10, room='bedroom_drunk'),
             # attic
-            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_no_hunt_attic_default', 10, room='storage', condition=attic_default),
-            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_attic_default', 10, room='males_room', condition=attic_default),
-            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_attic_default', 10, room='females_room', condition=attic_default),
-            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_attic_default', 10, room='butler_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_no_hunt_attic_default', 60, room='storage', condition=attic_default),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_attic_default', 60, room='males_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_attic_default', 60, room='females_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_attic_default', 60, room='butler_room', condition=attic_default),
+            
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='storage', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
 
             TimedMenuChoice(default_room_text('bedroom_nurse'), 
                 'psychic_day2_no_hunt_bedroom_nurse_busy', 
@@ -162,6 +169,11 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_default', 10, room='males_room', condition=attic_default),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_default', 10, room='females_room', condition=attic_default),
             TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_default', 10, room='butler_room', condition=attic_default),
+
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_return_too_soon', 10, room='storage', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
 
             TimedMenuChoice(
                 'Check if there is someone in the Billiard Room', 

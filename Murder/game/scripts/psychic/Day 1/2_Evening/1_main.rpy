@@ -61,29 +61,30 @@ label psychic_day1_evening:
     And Ted Harring is on my right.
     """
 
-    $ time_left = 99 # TODO, change with option in menu? 
-    call run_menu(TimedMenu("psychic_day1_evening", [
-        TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain'),
-        TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad')
-    ], image_left = "captain", image_right = "lad"))
+    # TODO REACTIVATE
+    # $ time_left = 99 # TODO, change with option in menu? 
+    # call run_menu(TimedMenu("psychic_day1_evening", [
+    #     TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain'),
+    #     TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad')
+    # ], image_left = "captain", image_right = "lad"))
 
-    $ stop_music()
+    # $ stop_music()
 
-    """
-    The dinner is over.
+    # """
+    # The dinner is over.
 
-    The host gave us the opportunity to meet again for drinks. 
+    # The host gave us the opportunity to meet again for drinks. 
     
-    But I don't know, this was quite a long day.
+    # But I don't know, this was quite a long day.
     
-    Maybe I should just go to bed.
+    # Maybe I should just go to bed.
 
-    In any case, I should retire to my room first.
-    """
+    # In any case, I should retire to my room first.
+    # """
 
-    $ stop_music(10)
+    # $ stop_music(10)
 
-    pause 2.0
+    # pause 2.0
 
     call change_time(21,00, 'Evening', 'Friday')
 
