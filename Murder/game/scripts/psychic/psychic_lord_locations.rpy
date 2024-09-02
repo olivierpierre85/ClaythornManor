@@ -313,22 +313,32 @@ label psychic_portrait_gallery_look_for_lord:
 
 label psychic_confront_lord:
 
-    $ change_room("attic_hallway")
-
     $ play_music('scary', 3)
 
     """
-    I decide to follow him to his room.
-
     I know I must confront him.
 
     But what am I hoping to prove?
 
     That's a dangerous path I fear I'm taking here.
+
+    He is not in the hallway, so I head to his room.
+
+    I don't bother knocking and enter right away.
+    """
+
+    play sound door_open
+
+    $ change_room("attic_big_room")
+
+    """
+    It's even more decrepit than the rest of the attic.
+
+    Why would anyone decide to live here?
     """
 
     psychic """
-    Sir Nicholas, are you here?
+    Sir Nicholas, are you there?
     """
 
     pause 1.0
@@ -350,7 +360,9 @@ label psychic_confront_lord:
     """
 
     psychic """
-    That you're supposed to be 111 years old. Is this true?
+    That you're supposed to be 111 years old.
+    
+    Is this true?
     """
 
     lord """
@@ -385,12 +397,17 @@ label psychic_confront_lord:
     That's what you think, right?
 
     Or rather, it's what you're hoping.
-
-    Because either I am a ghost...
-
-    Or maybe you're just losing your mind.
     """
 
+    psychic surprised """
+    What do you mean?
+    """
+
+    lord """
+    Because either I am a ghost...
+
+    Or you're just losing your mind.
+    """
 
     """
     He inches closer to me.
@@ -405,9 +422,15 @@ label psychic_confront_lord:
 
     That it was in her all along?
 
-    Then maybe she wasn't really deceiving people her entire life.
+    I understand the appeal to believe that now.
 
-    But it's too simple now, isn't it?
+    That would mean that you weren't really deceiving people your entire life.
+
+    But that would be too easy, wouldn't it?
+
+    I am afraid there is only one other alternative.
+
+    You must see it too now.
 
     You understand what's happening here, don't you?
     """
@@ -417,9 +440,57 @@ label psychic_confront_lord:
 
     I can't take this.
 
-    I slowly take a step back.
+    I rush outside his room.
+    """
 
-    But my foot doesn't find the ground behind me.
+    $ change_room("attic_hallway")
+
+    """
+    But he is already there.
+
+    Standing in front of me.
+    """
+
+    lord angry """
+    Where are you going?
+
+    Do you think you can get rid of me that easily?
+    """
+
+    psychic surprised """
+    What do you want from me?
+    """
+
+    lord angry """
+    Me? I don't want anything.
+
+    The question is: what do you want?
+    """
+
+    """
+    I slowly take a step back towards the stairs.
+    """
+
+    lord angry """
+    Do you feel remorse maybe?
+    """
+
+    """
+    I take another step.
+    """
+
+    lord angry """
+    Some regret over what you've done?
+    """
+
+    psychic surprised """
+    Please, leave me alone.
+    """
+
+    """
+    I try to walk back further,
+
+    but my foot doesn't find the ground behind me.
     """
 
     play sound body_fall
