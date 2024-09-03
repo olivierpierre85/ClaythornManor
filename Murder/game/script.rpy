@@ -96,6 +96,7 @@ label init_technical_variables:
         condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
         condition_saturday = "current_day == 'Saturday'"
         condition_friday = "current_day == 'Friday'"
+        condition_friday_or_saturday = "current_day == 'Friday' or current_day == 'Saturday'"
         condition_sunday = "current_day == 'Sunday'"
         
 

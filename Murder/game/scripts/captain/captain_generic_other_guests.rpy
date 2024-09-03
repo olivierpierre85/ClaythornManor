@@ -26,6 +26,12 @@ label captain_generic_drunk_friday_psychic:
     There's not much to say that you haven't already noticed yourself.
     """
 
+    if current_character.text_id == "psychic":
+
+        """
+        I guess he's right about that.
+        """
+
     return
 
 label captain_generic_host_friday_psychic:
@@ -86,7 +92,6 @@ label captain_generic_broken_friday:
     I'd say he's one of our war heroes.
     """
 
-    # chatGPT
     captain """
     As a veteran of many battles, I have seen my fair share of horrors on the battlefield. 
     
@@ -114,6 +119,14 @@ label captain_generic_broken_friday:
     """
 
     $ broken_details.description_hidden.unlock('mask') 
+
+    if current_character.text_id == "psychic":
+
+        """
+        Well, that was another tedious speech.
+
+        That's my fault for asking I suppose.
+        """
 
     return
 

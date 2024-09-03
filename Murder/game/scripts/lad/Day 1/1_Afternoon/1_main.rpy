@@ -57,7 +57,7 @@ label lad_introduction:
 
     I couldn't really believe it at first. 
     
-    I don't think I am that deserving. At least no more than hundreds of guys in this country.
+    I don't think I am that deserving. At least no more than hundreds of other guys in this country.
 
     But in the end, no matter the reason, I can't possibly say no to this amount of money.
     

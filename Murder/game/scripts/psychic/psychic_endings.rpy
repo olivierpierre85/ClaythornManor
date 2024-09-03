@@ -8,7 +8,7 @@ label psychic_ending_lord:
     call death_screen_transition
 
     """
-    You violently the staircase.
+    You fell in the staircase.
 
     You are not sure what happened there in the attic, but it got the best of you.
     """

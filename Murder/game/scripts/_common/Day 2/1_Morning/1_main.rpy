@@ -89,6 +89,8 @@ label common_day2_morning_host_death_doctor:
     Nobody speaks much.
     """
 
+    pause 2.0
+
     return
 
 

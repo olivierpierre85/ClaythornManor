@@ -196,12 +196,6 @@ label psychic_library_look_for_lord:
 
     """
     I find multiple entries for families with the name Claythorn.
-
-    But I am not sure which one relates to the family living here.
-
-    How could I? I don't even know Lady Claythorn's first name.
-
-    No point in continuing to read this, I suppose.
     """
 
     $ psychic_details.saved_variables['book_read'] == True
@@ -278,7 +272,9 @@ label psychic_library_look_for_lord_failed:
     call psychic_library_look_for_lord
 
     """
-    Without further information, I can't possibly guess which manor is the one I'm in.
+    But I am not sure which one relates to the family living here.
+
+    How could I? I don't even know Lady Claythorn's first name.
     """
 
     return
