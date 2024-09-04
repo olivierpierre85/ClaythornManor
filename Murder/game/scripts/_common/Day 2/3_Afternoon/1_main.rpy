@@ -86,7 +86,7 @@ label common_day2_afternoon_entrance_dialog:
     They said they'll be back tomorrow with assistance.
     """
 
-    psychic """
+    psychic -angry """
     But... what are we going to do with him until then?
     """
 
@@ -135,7 +135,7 @@ label common_day2_afternoon_samuel_manning_discussion_part_1:
 
     Once the effect of the alcohol wanes and he grasps his situation, who knows how he'll respond.
 
-    There's a risk he could attempt escape.
+    There's a risk he could attempt to escape.
     """
 
     psychic """

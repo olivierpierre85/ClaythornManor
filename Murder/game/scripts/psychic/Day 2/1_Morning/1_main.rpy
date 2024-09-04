@@ -56,7 +56,7 @@ label psychic_day2_morning:
     It seems I am stuck with Sushil Sinha.
     """
 
-    psychic """
+    psychic -angry """
     Good morning, Mister Sinha.
     """
 

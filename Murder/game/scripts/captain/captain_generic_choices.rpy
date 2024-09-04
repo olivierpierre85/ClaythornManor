@@ -26,10 +26,13 @@ label captain_generic_weather_friday:
 label captain_generic_weather_saturday:
 
     captain """
-    (Placeholder for Saturday weather dialogue)
+    The little storm we had yesterday seems to have worn off.
+
+    The weather should improve from now on.
     """
 
     return
+
 
 label captain_generic_weather_sunday:
 
@@ -42,8 +45,30 @@ label captain_generic_weather_sunday:
 label captain_generic_room:
 
     captain """
-    (Placeholder for room dialogue)
+    The 'George I' Bedroom.
+
+    An ordinary room named after an ordinary King.
     """
+
+    if current_character.text_id == "psychic":
+
+        captain """
+        The only remarkable thing about 'George I' is that ...
+        """
+
+        psychic """
+        He was a foreigner, yes.
+
+        As the first King of the house of Hanover, he was born in Germany and had a very limited grasp of English.
+        """
+
+        captain """
+        Well, I was going to say his reign marked the beginning of the gradual transformation of the British monarchy into a more constitutional one,
+        
+        with real political power shifting towards Parliament and ministers.
+
+        But I guess you're right too.
+        """
 
     $ unlock_map('bedroom_captain')
 

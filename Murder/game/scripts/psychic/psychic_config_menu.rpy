@@ -53,7 +53,7 @@ label psychic_config_menu:
         TimedMenuChoice('What do you think of this place?', 'captain_generic_manor_psychic', 10, condition = condition_captain_origin),
         TimedMenuChoice('How old are you?', 'captain_generic_age_psychic', 5, condition = condition_captain_origin),
         TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 5, condition = condition_captain_origin + "and " + condition_friday),
-        TimedMenuChoice('What room are you in?', 'captain_generic_room_psychic', 5, condition = condition_captain_origin + "and " + " not " + condition_friday),
+        TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = condition_captain_origin + "and " + " not " + condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_captain_origin + "and " + condition_friday_or_saturday),
         # exit
         TimedMenuChoice('On second thought, I\'d better not talk to him', 'generic_cancel', 0, keep_alive = True, early_exit = True, condition = condition_captain_origin )

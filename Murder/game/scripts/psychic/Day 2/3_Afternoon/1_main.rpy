@@ -94,8 +94,6 @@ label psychic_day2_afternoon:
 
     """
     He did seem very drunk to me during breakfast though.
-
-    Interesting.
     """
 
     call psychic_day2_afternoon_bedroom
