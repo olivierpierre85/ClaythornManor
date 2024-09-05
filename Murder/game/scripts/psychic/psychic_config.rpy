@@ -38,6 +38,7 @@ label init_psychic:
             "book_read": False,
             "day2_nohunt_bedroom_tries": 0,
             "day2_nohunt_has_visited_tea_room": False,
+            "day2_afternoon_has_visited_lad": False,
             "knows_nurse_background": False,
             "day2_evening_billiard_room_visited": False,
             "day2_evening_billiard_room_talk_to_captain": False,

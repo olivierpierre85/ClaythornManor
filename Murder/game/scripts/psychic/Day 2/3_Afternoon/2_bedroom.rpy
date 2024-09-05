@@ -38,6 +38,8 @@ label psychic_day2_afternoon_lad_discussion:
 
     call common_day2_afternoon_lad_psychic_discussion
 
+    $ psychic_details.saved_variables['day2_afternoon_has_visited_lad'] = True
+
     return
 
 
@@ -59,6 +61,10 @@ label psychic_day2_afternoon_bedroom_nurse_busy:
     It's Amelia Baxter.
 
     I was hoping we could talk a bit.
+    """
+
+    """
+    She slightly opens the door but stays inside.
     """
 
     nurse """
@@ -114,6 +120,22 @@ label psychic_day2_afternoon_bedroom_nurse_busy:
     psychic """
     Of course, sorry for bothering you.
     """
+
+    $ change_room('bedroom_psychic')
+
+    """
+    I return to my room to rest.
+
+    Not much later, the gong rings.
+    """
+
+    call change_time(18,30)
+
+    play sound dinner_gong
+
+    """
+    Well, I'd better join the others downstairs.
+    """    
     
     return
 

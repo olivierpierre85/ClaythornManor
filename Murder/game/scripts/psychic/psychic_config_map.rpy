@@ -196,7 +196,16 @@ label psychic_config_map:
                 'psychic_day2_evening_cancel', 
                 0, 
                 early_exit = True, 
-                room = 'bedroom_psychic'
+                room = 'bedroom_psychic',
+                condition = "psychic_details.saved_variables['day2_afternoon_has_visited_lad']"
+            ),
+            TimedMenuChoice(
+                'Wait in your room', 
+                'psychic_day2_evening_cancel', 
+                0, 
+                early_exit = True, 
+                room = 'bedroom_psychic',
+                condition = "psychic_details.saved_variables['day2_afternoon_has_visited_lad']==False"
             ),
             # TimedMenuChoice(
             #     'Richard III Bedroom', 

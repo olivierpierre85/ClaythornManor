@@ -59,7 +59,7 @@ label lad_introduction:
     
     I don't think I am that deserving. At least no more than hundreds of other guys in this country.
 
-    But in the end, no matter the reason, I can't possibly say no to this amount of money.
+    But no matter the reason, I can't possibly say no to this amount of money.
     
     So I feel like I didn't have much choice.
 

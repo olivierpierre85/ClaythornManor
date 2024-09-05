@@ -27,7 +27,7 @@ label psychic_day2_evening:
     $ play_music('sad', 3)
 
     """
-    As I step into the room, a sombre ambience surrounds me.
+    As I step into the dining room, a sombre ambience surrounds me.
 
     The chairs where Daniel Baldwin and Thomas Moody usually sit are empty.
 
@@ -47,12 +47,24 @@ label psychic_day2_evening:
 
     After dinner, most people retired to their rooms.
 
-    I don't think many would join for a drink afterwards.
+    I don't think many will join for a drink afterwards.
 
-    I probably should wait in my room for Ted Harring. 
+    So I could also take advantage of the fact that the Manor is almost empty.
+    """
 
-    But I could also take advantage of the fact that the Manor is almost empty.
+    if psychic_details.saved_variables['day2_afternoon_has_visited_lad']:
+        
+        """
+        Or I could wait in my room for Ted Harring. 
+        """
 
+    else:
+        
+        """
+        Or maybe it's safer to just wait in my room.
+        """
+
+    """
     What should I do?
     """
 

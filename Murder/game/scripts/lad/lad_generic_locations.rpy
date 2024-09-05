@@ -288,7 +288,7 @@ label lad_garden_default:
 
     I wandered in it for a while, enjoying a relaxing walk.
 
-    But in the end, I didn't find anything of interest.
+    But I didn't find anything of interest.
     """
 
     return
