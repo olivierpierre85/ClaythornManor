@@ -32,7 +32,7 @@ label run_menu(current_menu, change_level=True):
 
         
         $  selected_choice[menu_level] = current_menu.display_choices()
-        $ print(menu_level, selected_choice, selected_choice[menu_level])
+        # $ print(menu_level, selected_choice, selected_choice[menu_level])
         
         # Hide choices when activated
         if current_menu.image_left:
@@ -146,9 +146,17 @@ init -1 python:
                 selected_choice = self.choices[selected_choice_i]
                 # print("Selected Choice:" + str(selected_choice))
             elif full_testing_mode:
-                # Take the first option available 
-                # then store it to avoid taking it again
+                # TODO Build a tree to take first option
+                # BUT IS MENU ID ENOUGH??? NO we can call this menu multiple time,
+                # We also need a Passage id, a real node identifier?
+                # NO We need => Correct ID, each choice must have a boolean, is this path full HOW DO THAT?
+                if (full_testing_mode_char, self.id) not in decision_tree:
+                    decision_tree[(full_testing_mode_char, self.id)] = self.get_visible_choices()
 
+                current_choice = decision_tree[("lad", self.id)].pop()
+
+                print("Id Menu:", self.id)
+                print("current_choice:", current_choice)
                 current_choice = 0
                 (visible_choices_text, visible_choices_i) = self.get_visible_choices()[current_choice]
                   

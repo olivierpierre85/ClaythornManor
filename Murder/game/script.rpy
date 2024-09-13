@@ -38,6 +38,7 @@ label start():
 
     $ full_testing_mode = True
     $ full_testing_mode_char = "lad"
+    $ decision_tree = []
 
     # Debug Menu # TODO remove when prod
     jump debug_choices
