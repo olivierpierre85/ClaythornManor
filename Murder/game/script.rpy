@@ -36,7 +36,7 @@ label start():
 
     call init_characters
 
-    $ full_testing_mode = True
+    $ full_testing_mode = False
     $ full_testing_mode_char = "lad"
     $ decision_tree = []
 

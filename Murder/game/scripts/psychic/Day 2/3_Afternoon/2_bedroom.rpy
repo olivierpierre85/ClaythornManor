@@ -142,7 +142,7 @@ label psychic_day2_afternoon_bedroom_nurse_busy:
 
 label psychic_day2_afternoon_cancel:
 
-    $ change_room('bedroom_psychic')
+    # $ change_room('bedroom_psychic')
 
     """
     That's about all I can manage right now.

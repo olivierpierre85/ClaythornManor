@@ -182,7 +182,7 @@ init -1 python:
                     if not selected_choice:
 
                         selected_choice = TimedMenuChoice('FILLER CHOICE', current_character.text_id + "_" +room_id + '_defaultERROR', 5)
-                        self.default_visited.append(room_id)
+                        self.default_visited.append(room_id) # TODO: Double check the use if this
                         selected_choice_i = -1
                 else:
                     selected_choice_i = menu(self.get_visible_choices())
