@@ -33,7 +33,7 @@ label lad_introduction:
 
     Dear Mister Harring,
 
-    I am pleased to announce that you have been selected as one of the recipients of the \"Exceptional Act of Bravery Award\".
+    I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Bravery Award".
 
     You'll be receiving the prize, along with seven other courageous persons, at a reception organized in your honor. 
     
@@ -49,9 +49,9 @@ label lad_introduction:
     """
 
     """
-    More thanks and information follows, but that's about the content of it.
+    More information follows, but that's about the content of it.
 
-    It is signed by Lady Claythorn. 
+    It is signed by "Lady Claythorn". 
     
     I've never heard of her.
 
