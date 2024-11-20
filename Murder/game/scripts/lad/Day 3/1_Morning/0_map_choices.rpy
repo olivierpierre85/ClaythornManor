@@ -475,6 +475,7 @@ label lad_day3_morning_billiard_room:
         """
 
         # TODO achievement "Drink every chance you got."
+        # TODO? "Object drink on hand?"
     
     else:
         lad """

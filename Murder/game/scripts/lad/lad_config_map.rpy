@@ -168,7 +168,7 @@ label lad_config_map:
             TimedMenuChoice(
                 'Check if there is someone in the Billiard Room', 
                 'lad_day2_evening_billiard_room', 
-                10, 
+                0, 
                 room = 'billiard_room',
                 keep_alive = True, 
             ),
