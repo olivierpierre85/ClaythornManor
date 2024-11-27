@@ -36,15 +36,15 @@ screen progress:
 
                     hbox:
                         xpos 50
-                        text current_storyline.real_name + " : ":
-                            yoffset -20
-                            font gui.name_text_font
-                            color gui.accent_color
+                        # text current_storyline.real_name:
+                        #     yoffset -20
+                        #     font gui.name_text_font
+                        #     color gui.accent_color
                         vbox:
                             yminimum 120
                             yoffset -20
                             xoffset 30
-                            text "Endings Reached":
+                            text current_storyline.real_name + "'s Endings":
                                 font gui.name_text_font
                                 color gui.accent_color
                             hbox:
@@ -63,7 +63,7 @@ screen progress:
                             yminimum 120
                             yoffset -20
                             xoffset 100
-                            text "Intuitions Gained":
+                            text current_storyline.real_name + "'s Intuitions":
                                 font gui.name_text_font
                                 color gui.accent_color
                             hbox:
