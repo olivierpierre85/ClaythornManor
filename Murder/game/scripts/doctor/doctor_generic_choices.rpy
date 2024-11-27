@@ -31,6 +31,7 @@ label doctor_generic_weather_saturday:
 
 label doctor_generic_background:
 
+    # TODO add city for the hospital (when i decide where he is from)
     doctor """
     I am the chief physician at St. Margaret's Hospital.
 
