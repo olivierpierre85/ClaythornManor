@@ -154,11 +154,12 @@ screen progress:
                                 if j == 0 and current_storyline.is_character_unlocked():
                                     imagebutton:
                                         mouse 'hover'
-                                        if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:
-                                            idle image_checkpoint_start_selected
-                                        else:
-                                            idle image_checkpoint_start
-                                        action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                                        # if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:
+                                        #     idle image_checkpoint_start_selected
+                                        # else:
+                                        idle image_checkpoint_start
+                                        # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                                        action ShowMenu("storyline_details", current_storyline.get_init_checkpoint())
                                 else:
                                     imagebutton:
                                         if current_storyline.has_checkpoint_in_column(j,1):
@@ -190,7 +191,8 @@ screen progress:
 
                                                 textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
                                                     mouse "hover" 
-                                                    action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
+                                                    # action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
+                                                    action ShowMenu("storyline_details", current_storyline.get_checkpoint(j+1, i+1))
                                                     xoffset -10 
                                                     yalign 0.5
                                                     xalign 0.5
@@ -355,6 +357,71 @@ screen confirm_restart():
 
                 textbutton _("Restart") action Start("start_again")
                 textbutton _("Cancel") action Hide("confirm_restart")
+
+
+screen storyline_details(selected_checkpoint):
+    # $ selected_char = get_char(char_id)
+    tag menu #????
+    use game_menu(_("Storyline"), scroll="fixed"):
+
+        #style_prefix "characters" #???
+
+        hbox:
+            xoffset 80
+            xminimum 1600
+            # vbox yoffset -20:
+            #     text selected_char.real_name:
+            #         size 48
+            #         font gui.name_text_font
+            #         line_leading 10
+            #         line_spacing 10
+            #         color gui.accent_color
+                    # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
+                
+                # if selected_char.is_character_unlocked():
+                #     add "images/characters/side/side " + selected_char.text_id +".png"
+                #     text "Unlocked":
+                #         size 36
+                #         xalign 0.5
+                # else:
+                #     add "images/characters/side_bw/side " + selected_char.text_id +" bw.png"
+                #     text "Locked":
+                #         # yoffset -25 inside
+                #         size 36
+                #         xalign 0.5
+                #     bar:
+                #         value selected_char.get_character_progress() 
+                #         range 100
+                #         xmaximum 260
+                #         style 'progress_bar'
+
+                
+            vbox:     
+                xoffset 50
+
+                # hbox:
+                #     ymaximum 600
+                #     viewport id "char_description_viewport":
+                #         draggable True 
+                #         mousewheel True #
+                #         vbox:
+                #             spacing 15
+                #             for line in selected_char.get_description_full():
+                #                 text line:
+                #                     font gui.name_text_font
+                #             # text selected_char.get_description_full():
+                #             #     font gui.name_text_font
+                #             #     line_leading  15
+
+                #         # You can add more content here if necessary
+                #     vbar value YScrollValue("char_description_viewport")
+                
+                textbutton _("Return"): 
+                    yoffset 20
+                    xalign 1.0 
+                    yalign 0.0
+                    xpos 1350
+                    action ShowMenu("progress")
 
 init -100 python:
     class Checkpoint():
