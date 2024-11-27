@@ -88,7 +88,7 @@ screen progress:
                     
                     yoffset 20
                     ysize 550
-                    $ checkpoint_x = 173
+                    $ checkpoint_x = 236
                     $ checkpoint_x_small = 100
 
                     hbox:
@@ -96,42 +96,43 @@ screen progress:
                         vbox:
                             xminimum checkpoint_x_small
                             text "Friday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
-                            text "Start" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:
                             xminimum checkpoint_x
                             text "" font gui.name_text_font
-                            text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:
                             xminimum checkpoint_x
                             text "Saturday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
-                            text "Morning" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
                         
                         vbox:
                             xminimum checkpoint_x
                             text "" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
-                            text "The Hunt" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:
                             xminimum checkpoint_x
                             text "" font gui.name_text_font
-                            text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:
                             xminimum checkpoint_x
                             text "" font gui.name_text_font
-                            text "Evening" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:
                             xminimum checkpoint_x
                             text "Sunday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
-                            text "Morning" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:
                             xminimum checkpoint_x
                             text "" font gui.name_text_font
-                            text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            # text "Afternoon" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
+                            text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
                         # vbox:
                         #     xminimum checkpoint_x_small
                         #     text "" font gui.name_text_font
