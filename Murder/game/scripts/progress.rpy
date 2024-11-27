@@ -136,6 +136,7 @@ screen progress:
                         #     xminimum checkpoint_x_small
                         #     text "" font gui.name_text_font
 
+                    # TODO move to init phase
                     $ image_checkpoint = "images/ui/progress/rectangle_progress.png"
                     $ image_checkpoint_right = "images/ui/progress/rectangle_progress_right.png"                       
                     
@@ -159,7 +160,7 @@ screen progress:
                                         # else:
                                         idle image_checkpoint_start
                                         # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
-                                        action ShowMenu("storyline_details", current_storyline.get_init_checkpoint())
+                                        action ShowMenu("storyline_details", current_storyline.get_init_checkpoint(), current_storyline)
                                 else:
                                     imagebutton:
                                         if current_storyline.has_checkpoint_in_column(j,1):
@@ -192,7 +193,7 @@ screen progress:
                                                 textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
                                                     mouse "hover" 
                                                     # action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
-                                                    action ShowMenu("storyline_details", current_storyline.get_checkpoint(j+1, i+1))
+                                                    action ShowMenu("storyline_details", current_storyline.get_checkpoint(j+1, i+1), current_storyline)
                                                     xoffset -10 
                                                     yalign 0.5
                                                     xalign 0.5
@@ -359,46 +360,28 @@ screen confirm_restart():
                 textbutton _("Cancel") action Hide("confirm_restart")
 
 
-screen storyline_details(selected_checkpoint):
-    # $ selected_char = get_char(char_id)
+screen storyline_details(selected_checkpoint, selected_char):
+
     tag menu #????
     use game_menu(_("Storyline"), scroll="fixed"):
-
-        #style_prefix "characters" #???
 
         hbox:
             xoffset 80
             xminimum 1600
-            # vbox yoffset -20:
-            #     text selected_char.real_name:
-            #         size 48
-            #         font gui.name_text_font
-            #         line_leading 10
-            #         line_spacing 10
-            #         color gui.accent_color
-                    # outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
-                
-                # if selected_char.is_character_unlocked():
-                #     add "images/characters/side/side " + selected_char.text_id +".png"
-                #     text "Unlocked":
-                #         size 36
-                #         xalign 0.5
-                # else:
-                #     add "images/characters/side_bw/side " + selected_char.text_id +" bw.png"
-                #     text "Locked":
-                #         # yoffset -25 inside
-                #         size 36
-                #         xalign 0.5
-                #     bar:
-                #         value selected_char.get_character_progress() 
-                #         range 100
-                #         xmaximum 260
-                #         style 'progress_bar'
-
+            vbox yoffset -20:
+                text selected_char.real_name:
+                    size 48
+                    font gui.name_text_font
+                    line_leading 10
+                    line_spacing 10
+                    color gui.accent_color
+                    outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
+                add "images/characters/side/side " + selected_char.text_id +".png"
                 
             vbox:     
                 xoffset 50
 
+                # TODO Add a list of all checkpoints at this TIME SO RETHINK ALL THAT
                 # hbox:
                 #     ymaximum 600
                 #     viewport id "char_description_viewport":
@@ -420,7 +403,7 @@ screen storyline_details(selected_checkpoint):
                     yoffset 20
                     xalign 1.0 
                     yalign 0.0
-                    xpos 1350
+                    xpos 350
                     action ShowMenu("progress")
 
 init -100 python:
