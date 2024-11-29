@@ -35,7 +35,7 @@ label psychic_day3_afternoon:
 
     call common_day3_afternoon_lad_psychic_captain_discussion_1
     
-if psychic_details.intuitions.is_unlocked('leave_castle'):
+    if psychic_details.intuitions.is_unlocked('leave_castle'):
 
         """
         Leave? I can't leave.

@@ -85,9 +85,8 @@ screen progress:
                     # draggable True
 
                     xsize 1700
-                    
                     yoffset 20
-                    ysize 550
+
                     $ checkpoint_x = 236
                     $ checkpoint_x_small = 100
 
@@ -136,80 +135,90 @@ screen progress:
                         # vbox:
                         #     xminimum checkpoint_x_small
                         #     text "" font gui.name_text_font
-
-                    # TODO move to init phase
-                    $ image_checkpoint = "images/ui/progress/rectangle_progress.png"
-                    $ image_checkpoint_right = "images/ui/progress/rectangle_progress_right.png"                       
                     
-                    $ image_checkpoint_start = "images/ui/progress/rectangle_small.png"
-                    $ image_checkpoint_start_empty = "images/ui/progress/rectangle_small_empty.png"
-                    $ image_checkpoint_start_selected = "images/ui/progress/rectangle_small_selected.png"
-                    $ image_checkpoint_start_corner = "images/ui/progress/rectangle_small_corner.png"
-                    $ image_checkpoint_start_line = "images/ui/progress/rectangle_small_line.png"
-                    $ image_checkpoint_start_double_corner = "images/ui/progress/rectangle_small_double_corner.png"
-                    
-                    for j in range(current_storyline.get_max_run()):
-                            hbox:
+                    for line_index, line in enumerate(lad_progress):
+                        hbox:
+                            xalign 0
+                            for chapter_index, chapter in enumerate(line):                          
+                                imagemap:
+                                    idle chapter.image_file
+                                    if chapter.text:
+                                        textbutton str(chapter.text): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
+                                            mouse "hover" 
+                                            # action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
+                                            action ShowMenu("storyline_details", chapter, current_storyline)
+                                            xoffset -20 
+                                            yoffset -5
+                                            yalign 0.5
+                                            xalign 0.5
+                                            text_color gui.accent_color
+                                            text_hover_color "#FFFFFF" 
+                                            text_font gui.name_text_font 
+                                            text_size 28
+                                            padding (25,25,25,25)
 
-                                xalign 0
+            #         for j in range(current_storyline.get_max_run()):
+            #                 hbox:
 
-                                if j == 0 and current_storyline.is_character_unlocked():
-                                    imagebutton:
-                                        mouse 'hover'
-                                        # if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:
-                                        #     idle image_checkpoint_start_selected
-                                        # else:
-                                        idle image_checkpoint_start
-                                        # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
-                                        action ShowMenu("storyline_details", current_storyline.get_init_checkpoint(), current_storyline)
-                                else:
-                                    imagebutton:
-                                        if current_storyline.has_checkpoint_in_column(j,1):
-                                            if current_storyline.has_checkpoint(j+1, 1):
-                                                if current_storyline.has_checkpoint_in_column(j+1,1):
-                                                    idle image_checkpoint_start_double_corner
-                                                else:
-                                                    idle image_checkpoint_start_corner
-                                            else:
-                                                idle image_checkpoint_start_line
-                                        else:
-                                            idle image_checkpoint_start_empty
+            #                     xalign 0
 
-                                for i in range(8):                               
-                                    if current_storyline.has_checkpoint(j+1, i+1):
-                                        if current_storyline.get_checkpoint(j+1, i+1).ending:
-                                            imagebutton:
-                                                mouse "hover"
-                                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-                                                idle current_storyline.get_checkpoint(j+1, i+1).ending.image_file                            
-                                                tooltip str(current_storyline.get_checkpoint(j+1, i+1).ending.content)
+            #                     if j == 0 and current_storyline.is_character_unlocked():
+            #                         imagebutton:
+            #                             mouse 'hover'
+            #                             # if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:
+            #                             #     idle image_checkpoint_start_selected
+            #                             # else:
+            #                             idle image_checkpoint_start
+            #                             # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+            #                             action ShowMenu("storyline_details", current_storyline.get_init_checkpoint(), current_storyline)
+            #                     else:
+            #                         imagebutton:
+            #                             if current_storyline.has_checkpoint_in_column(j,1):
+            #                                 if current_storyline.has_checkpoint(j+1, 1):
+            #                                     if current_storyline.has_checkpoint_in_column(j+1,1):
+            #                                         idle image_checkpoint_start_double_corner
+            #                                     else:
+            #                                         idle image_checkpoint_start_corner
+            #                                 else:
+            #                                     idle image_checkpoint_start_line
+            #                             else:
+            #                                 idle image_checkpoint_start_empty
 
-                                        else:
-                                            imagemap:
-                                                if current_storyline.has_checkpoint(j+1, i+2):
-                                                    idle image_checkpoint_right
-                                                else:
-                                                    idle image_checkpoint
+            #                     for i in range(8):                               
+            #                         if current_storyline.has_checkpoint(j+1, i+1):
+            #                             if current_storyline.get_checkpoint(j+1, i+1).ending:
+            #                                 imagebutton:
+            #                                     mouse "hover"
+            #                                     action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+            #                                     idle current_storyline.get_checkpoint(j+1, i+1).ending.image_file                            
+            #                                     tooltip str(current_storyline.get_checkpoint(j+1, i+1).ending.content)
 
-                                                textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
-                                                    mouse "hover" 
-                                                    # action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
-                                                    action ShowMenu("storyline_details", current_storyline.get_checkpoint(j+1, i+1), current_storyline)
-                                                    xoffset -10 
-                                                    yalign 0.5
-                                                    xalign 0.5
-                                                    if current_checkpoint and current_checkpoint.run == current_storyline.get_checkpoint(j+1, i+1).run and current_checkpoint.position == current_storyline.get_checkpoint(j+1, i+1).position:                
-                                                        text_color "#FFFFFF"
-                                                    else:
-                                                        text_color gui.accent_color
-                                                    text_font gui.name_text_font 
-                                                    text_size 20
-                                                    padding (25,25,25,25)
+            #                             else:
+            #                                 imagemap:
+            #                                     if current_storyline.has_checkpoint(j+1, i+2):
+            #                                         idle image_checkpoint_right
+            #                                     else:
+            #                                         idle image_checkpoint
+
+            #                                     textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
+            #                                         mouse "hover" 
+            #                                         # action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
+            #                                         action ShowMenu("storyline_details", current_storyline.get_checkpoint(j+1, i+1), current_storyline)
+            #                                         xoffset -10 
+            #                                         yalign 0.5
+            #                                         xalign 0.5
+            #                                         if current_checkpoint and current_checkpoint.run == current_storyline.get_checkpoint(j+1, i+1).run and current_checkpoint.position == current_storyline.get_checkpoint(j+1, i+1).position:                
+            #                                             text_color "#FFFFFF"
+            #                                         else:
+            #                                             text_color gui.accent_color
+            #                                         text_font gui.name_text_font 
+            #                                         text_size 20
+            #                                         padding (25,25,25,25)
                                                 
-                                    else:
-                                        image current_storyline.get_checkpoint_filler(j+1, i+1)
+            #                         else:
+            #                             image current_storyline.get_checkpoint_filler(j+1, i+1)
 
-            # vbox:
+            # # vbox:
             #     xminimum 20
                 
                 # TODO MOVE TO EXTRA SCREEN
@@ -408,6 +417,14 @@ screen storyline_details(selected_checkpoint, selected_char):
                     action ShowMenu("progress")
 
 init -100 python:
+
+    class Chapter:
+        def __init__(self, image_file, label=None, text=None):
+            self.image_file = image_file  # Mandatory
+            self.label = label  # Optional, default is None
+            self.text = text  # Optional, default is None
+
+
     class Checkpoint():
         def __init__(
             self, 

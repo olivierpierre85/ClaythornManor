@@ -50,6 +50,7 @@ label init_drunk:
             intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
+            progress = [],
         )
         drunk = Character("drunk_details.get_name()", image="drunk", dynamic=True)
 
