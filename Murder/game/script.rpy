@@ -114,10 +114,15 @@ label init_technical_variables:
         # Fillers
         image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
         image_checkpoint_empty_small = "images/ui/progress/rectangle_small_empty.png"
+        image_checkpoint_empty_filler = "images/ui/progress/rectangle_filler_empty.png"
+
         image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
         image_checkpoint_corner_merge = "images/ui/progress/rectangle_progress_corner_merge.png"          
         image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
         image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
+
+        # Endings
+        image_ending_question = "images/info_cards/question_mark_bw.png"
 
     return
 

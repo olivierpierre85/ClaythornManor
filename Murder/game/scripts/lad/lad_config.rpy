@@ -127,15 +127,43 @@ label init_lad:
                 Chapter(image_checkpoint_right, "lad_day2_evening", "Evening"),
                 Chapter(image_checkpoint_right, "lad_day3_morning", "Morning"),
                 Chapter(image_checkpoint_right, "lad_day3_afternoon", "Afternoon"),
+                Chapter(image_ending_question),
             ],
-            # Second line
+            # Second line, ...
             [
                 Chapter(image_checkpoint_empty_small),    
-                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_checkpoint_right, "lad_day2_no_hunt", "No Hunt"),
                 Chapter(image_checkpoint_corner_merge),
-            ]
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question),
+            ],
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question), # TODO Ending 
+                Chapter(image_checkpoint_empty_filler), # Empty filler after ending
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question),
+            ],
+                        [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question),
+            ],
         ]
 
         lad_details  = CharacterDetails(
