@@ -55,6 +55,7 @@ label init_captain:
             intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
+            progress = [],
             saved_variables = copy.deepcopy(captain_init_variables),
         )
         captain = Character("captain_details.get_name()", image="captain", dynamic=True)

@@ -48,6 +48,7 @@ label init_host:
             intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
+            progress = [],
         )
         host = Character("host_details.get_name()", image="host", dynamic=True)
     

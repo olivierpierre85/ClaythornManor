@@ -85,7 +85,7 @@ label debug_choices:
             
             jump lad_day3_morning
         
-        "lad_day3_afternoon":
+        "lad_day3_afternoon PROGRESS":
             call unlock_psychic 
             $ lad_details.observations.unlock('green_liquid')
             $ lad_details.saved_variables['library_visited'] = True
@@ -103,10 +103,10 @@ label debug_choices:
 
             jump lad_day3_afternoon
 
-        "lad_day3_stay":
-            $ lad_details.intuitions.unlock(('psychic_poisons'))
+        # "lad_day3_stay":
+        #     $ lad_details.intuitions.unlock(('psychic_poisons'))
             
-            jump lad_day3_stay
+        #     jump lad_day3_stay
 
         # "psychic_introduction":
         #     call unlock_psychic
@@ -156,29 +156,29 @@ label debug_choices:
             $ current_character = psychic_details
             jump psychic_day2_afternoon
 
-        # "psychic_day2_evening":
-        #     $ psychic_details.saved_variables["knows_captain_origin"] = True
-        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-        #     call unlock_psychic
-        #     $ current_character = psychic_details
-        #     jump psychic_day2_evening
+        "psychic_day2_evening":
+            $ psychic_details.saved_variables["knows_captain_origin"] = True
+            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+            call unlock_psychic
+            $ current_character = psychic_details
+            jump psychic_day2_evening
 
-        # "psychic_day3_morning":
-        #     $ psychic_details.saved_variables["knows_captain_origin"] = True
-        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-        #     call unlock_psychic
-        #     $ current_character = psychic_details
+        "psychic_day3_morning":
+            $ psychic_details.saved_variables["knows_captain_origin"] = True
+            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+            call unlock_psychic
+            $ current_character = psychic_details
 
-        #     jump  psychic_day3_morning
+            jump  psychic_day3_morning
 
-        # "psychic_day3_afternoon":
-        #     $ psychic_details.saved_variables["knows_captain_origin"] = True
-        #     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-        #     call unlock_psychic
-        #     $ current_character = psychic_details
-        #     $ psychic_details.intuitions.unlock('leave_castle')   
-        #     $ psychic_details.endings.unlock('burned')
-        #     jump  psychic_day3_afternoon
+        "psychic_day3_afternoon":
+            $ psychic_details.saved_variables["knows_captain_origin"] = True
+            $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+            call unlock_psychic
+            $ current_character = psychic_details
+            $ psychic_details.intuitions.unlock('leave_castle')   
+            $ psychic_details.endings.unlock('burned')
+            jump  psychic_day3_afternoon
 
 
             

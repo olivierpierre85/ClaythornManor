@@ -266,7 +266,8 @@ init -100 python:
             endings,      
             intuitions,
             objects,
-            observations,  
+            observations, 
+            progress, 
             saved_variables = dict(),
             locked = True,
             know_real_name = True,
@@ -288,6 +289,7 @@ init -100 python:
             self.intuitions = intuitions or []
             self.objects = objects or []
             self.observations = observations or [] 
+            self.progress = progress or [] 
             self.saved_variables = saved_variables or dict()
             self.checkpoints = []
             
@@ -404,11 +406,11 @@ init -100 python:
         
         def get_checkpoint_filler(self, run, position):
             # TODO put in constants somewhere
-            image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
-            image_checkpoint_empty_small = "images/ui/progress/rectangle_small_empty.png"
-            image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
-            image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
-            image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
+            # image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
+            # image_checkpoint_empty_small = "images/ui/progress/rectangle_small_empty.png"
+            # image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
+            # image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
+            # image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
 
             if position == 8:
                 return image_checkpoint_empty_small

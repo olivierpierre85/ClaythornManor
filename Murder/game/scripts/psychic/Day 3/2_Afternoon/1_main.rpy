@@ -38,16 +38,24 @@ label psychic_day3_afternoon:
     if psychic_details.intuitions.is_unlocked('leave_castle'):
 
         """
-        Something isn't right.
+        Leave? I can't leave.
 
-        I can feel it.
+        Yet something doesn't feel right. 
+        
+        I have a terrible premonition about this place.
+        
+        I can see it... burning.
+        
+        Gosh, it's like I can smell it too.
 
-        I know it makes no sense to go out right now, but something compels me to get out of here immediately.
+        What's happening to me? Am I losing my mind?
+
+        I know it makes no sense to go out right now, but everything in my body compels me to leave this place as fast as possible.
         """
 
         $ time_left = 1
         call run_menu( TimedMenu("psychic_day3_stay", [
-            TimedMenuChoice("Let's not take anymore risk and leave this place", 'psychic_day3_afternoon_escape', early_exit=True),        
+            TimedMenuChoice("Let's not take any chance and leave this place", 'psychic_day3_afternoon_escape', early_exit=True),        
             TimedMenuChoice("I am not going out in this weather", 'common_day3_afternoon_lad_psychic_captain_discussion_2', early_exit=True),
             ])
         )        

@@ -52,6 +52,7 @@ label init_broken:
             intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
+            progress = [],
         )
         broken = Character("broken_details.get_name()", image="broken", dynamic=True)
     

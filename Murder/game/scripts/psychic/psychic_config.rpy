@@ -111,6 +111,7 @@ label init_psychic:
             intuitions = psychic_intuitions,
             observations = psychic_observations,
             objects = CharacterObjectList([]),
+            progress = [],
             saved_variables = psychic_init_variables
         )
         psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)

@@ -224,15 +224,13 @@ label psychic_introduction:
     """
     He's right, it is beautiful.
 
-    However, the storm that has befallen us gives it a somewhat sinister look.
+    However, the storm gives it a somewhat sinister look.
 
     Nevertheless, its appearance reassures me.
 
     Such a house shows that its owner must be incredibly wealthy.
 
-    Now I can finally relax.
-
-    Everything will be fine from now on.
+    Everything should be fine from now on.
     """
 
     pause 1.0
@@ -305,7 +303,7 @@ label psychic_introduction:
     Of course, please follow me upstairs.
     """
 
-    $ change_room("bedrooms_hallway")
+    $ change_room("bedrooms_hallway", dissolve)
 
     butler """
     Here we are, Miss.
@@ -336,7 +334,7 @@ label psychic_introduction:
     """
     I nod and take a look at my room.
 
-    It's a bit worn out but still looks great.
+    It's a bit worn out but it still looks decent.
 
     I should be comfortable here.
     """
