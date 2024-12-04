@@ -120,13 +120,13 @@ label init_lad:
             # First Line
             [
                 Chapter(image_checkpoint_start), 
-                Chapter(image_checkpoint_right, "lad_day1_evening", "Evening"),
-                Chapter(image_checkpoint_right, "lad_day2_morning", "Morning"),
-                Chapter(image_checkpoint_right, "lad_day2_hunt", "The Hunt"),
-                Chapter(image_checkpoint_right, "lad_day2_afternoon", "Afternoon"),
-                Chapter(image_checkpoint_right, "lad_day2_evening", "Evening"),
-                Chapter(image_checkpoint_right, "lad_day3_morning", "Morning"),
-                Chapter(image_checkpoint_right, "lad_day3_afternoon", "Afternoon"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "Evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "The Hunt"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "Afternoon"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "Evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "Afternoon"),
                 Chapter(image_ending_question),
             ],
             # Second line, ...
@@ -134,24 +134,24 @@ label init_lad:
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_checkpoint_right, "lad_day2_no_hunt", "No Hunt"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_no_hunt", "No Hunt"),
                 Chapter(image_checkpoint_corner_merge),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question),
+                Chapter(image_ending_question, "ending", "gunned_down"),
             ],
             [
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question), # TODO Ending 
-                Chapter(image_checkpoint_empty_filler), # Empty filler after ending
+                Chapter(image_ending_question, "ending", "poisoned"),
+                Chapter(image_checkpoint_empty_filler),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question),
+                Chapter(image_ending_question, "ending", "poisoned"),
             ],
                         [
                 Chapter(image_checkpoint_empty_small),    
@@ -162,7 +162,7 @@ label init_lad:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question),
+                Chapter(image_ending_question, "ending", "fell"),
             ],
         ]
 

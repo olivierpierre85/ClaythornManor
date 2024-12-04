@@ -139,10 +139,13 @@ screen progress:
                     for line_index, line in enumerate(lad_progress):
                         hbox:
                             xalign 0
-                            for chapter_index, chapter in enumerate(line):                          
-                                imagemap:
-                                    idle chapter.image_file
-                                    if chapter.text:
+                            for chapter_index, chapter in enumerate(line):
+                                if chapter.chapter_type == "image":
+                                    imagemap:
+                                        idle chapter.image_file
+                                elif chapter.chapter_type == "checkpoint":                       
+                                    imagemap:
+                                        idle chapter.image_file
                                         textbutton str(chapter.text): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
                                             mouse "hover" 
                                             # action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
@@ -156,6 +159,14 @@ screen progress:
                                             text_font gui.name_text_font 
                                             text_size 28
                                             padding (25,25,25,25)
+                                elif chapter.chapter_type == "ending": 
+                                    imagebutton:
+                                        if current_storyline.endings.is_unlocked(chapter.label):
+                                            idle current_storyline.endings.get_item(chapter.label).image_file
+                                            tooltip str(current_storyline.endings.get_item(chapter.label).content)  
+                                            action SetVariable("action_needed_fix", True)
+                                        else:
+                                            idle chapter.image_file 
 
             #         for j in range(current_storyline.get_max_run()):
             #                 hbox:
@@ -419,8 +430,9 @@ screen storyline_details(selected_checkpoint, selected_char):
 init -100 python:
 
     class Chapter:
-        def __init__(self, image_file, label=None, text=None):
+        def __init__(self, image_file, chapter_type="image", label=None, text=None):
             self.image_file = image_file  # Mandatory
+            self.chapter_type = chapter_type  
             self.label = label  # Optional, default is None
             self.text = text  # Optional, default is None
 
