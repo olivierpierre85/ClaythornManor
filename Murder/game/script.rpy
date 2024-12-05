@@ -18,6 +18,7 @@ define hours_angle = 0
 
 define current_year = "1924"
 
+# var needed for imbricated menus choices
 define menu_level = -1
 define selected_choice = [None, None, None, None]
 define time_diff = [None, None, None, None]

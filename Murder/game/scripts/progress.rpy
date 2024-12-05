@@ -4,6 +4,7 @@ transform character_progress:
 
 # Display of Progress tree
 screen progress:
+
     tag menu
 
     ## TODO OLPI Add a image of the map
@@ -165,7 +166,10 @@ screen progress:
                                         # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
                                         action ShowMenu("storyline_details", "start", current_storyline)
 
+    use tooltip_display
 
+# Define a separate screen for tooltips
+screen tooltip_display():
     $ tooltip = GetTooltip()
 
     if tooltip:
@@ -175,11 +179,10 @@ screen progress:
 
             frame:
                 style_prefix "confirm"
-                padding (50,50,50,50)
+                padding (50, 50, 50, 50)
                 xalign 0.5
                 yalign 0.5
                 text tooltip
-                # textbutton "Cancel" action SetVariable("action_needed_fix", False )
 
 screen info_card(item=None, item_type=None):  
     python:
@@ -297,24 +300,15 @@ screen storyline_details(selected_chapter, selected_char):
                             $ grid_fill = 10
                             for item in current_storyline.important_choices.get_list():
                                 $ grid_fill -= 1
-                                if current_checkpoint:
-                                    use info_card(item, "choice")
-                                else:
-                                    use info_card(item, "choice")
+                                use info_card(item, "choice")
                             
                             for item in current_storyline.objects.get_list():
                                 $ grid_fill -= 1
-                                if current_checkpoint:
-                                    use info_card(item, "objects")
-                                else:
-                                    use info_card(item, "objects")
+                                use info_card(item, "objects")
 
                             for item in (current_storyline.observations.get_list()):
                                 $ grid_fill -= 1
-                                if current_checkpoint:
-                                    use info_card(item, "observations")
-                                else:
-                                    use info_card(item, "observations")
+                                use info_card(item, "observations")
                             
                             if grid_fill > 0 :
                                 for i_fill in range(grid_fill):
@@ -340,6 +334,8 @@ screen storyline_details(selected_chapter, selected_char):
                 xoffset 400  
                 yoffset -150  
                 action ShowMenu("progress")
+
+    use tooltip_display
 
 
 screen confirm_restart():
@@ -370,8 +366,6 @@ screen confirm_restart():
 
                 textbutton _("Restart") action Start("start_again")
                 textbutton _("Cancel") action Hide("confirm_restart")
-
-
 
 
 init -100 python:
