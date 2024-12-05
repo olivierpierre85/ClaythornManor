@@ -393,68 +393,76 @@ init -100 python:
                 has_been_restarted = False
                 current_position = current_position + 1
 
+        def get_checkpoints_by_chapter(self, chapter_label):
+            chapter_checkpoints = []
+            for checkpoint in self.checkpoints:
+                if checkpoint.label_id == chapter_label:
+                    chapter_checkpoints.append(checkpoint)
+
+            return chapter_checkpoints
+
         # DEBUG FUNCTION
         # def print_checkpoints(self):
         #     for checkpoint in self.checkpoints:
         #         print(checkpoint)
 
-        def has_checkpoint(self, run, position):
-            for checkpoint in self.checkpoints:
-                if checkpoint.run == run and checkpoint.position == position:
-                    return True
-            return False
+        # def has_checkpoint(self, run, position):
+        #     for checkpoint in self.checkpoints:
+        #         if checkpoint.run == run and checkpoint.position == position:
+        #             return True
+        #     return False
         
-        def get_checkpoint_filler(self, run, position):
-            # TODO put in constants somewhere
-            # image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
-            # image_checkpoint_empty_small = "images/ui/progress/rectangle_small_empty.png"
-            # image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
-            # image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
-            # image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
+        # def get_checkpoint_filler(self, run, position):
+        #     # TODO put in constants somewhere
+        #     # image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
+        #     # image_checkpoint_empty_small = "images/ui/progress/rectangle_small_empty.png"
+        #     # image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
+        #     # image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
+        #     # image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
 
-            if position == 8:
-                return image_checkpoint_empty_small
+        #     if position == 8:
+        #         return image_checkpoint_empty_small
 
-            # IF next position is a checkpoint
-            if self.has_checkpoint(run, position+1):
-                # If above there is a checkpoint=> simple corner, 
-                # If last line => simple corner
-                if ( self.has_checkpoint(run+1, position) or 
-                    run == self.get_max_run() or  
-                    (self.next_checkpoint_in_column(run, position) > -1 
-                        and self.next_checkpoint_in_column(run, position) < self.next_checkpoint_in_column(run, position+1))
-                    or not self.has_checkpoint_in_column(run, position)
-                    ):
-                    return image_checkpoint_corner
-                else:                    
-                    return image_checkpoint_double_corner
+        #     # IF next position is a checkpoint
+        #     if self.has_checkpoint(run, position+1):
+        #         # If above there is a checkpoint=> simple corner, 
+        #         # If last line => simple corner
+        #         if ( self.has_checkpoint(run+1, position) or 
+        #             run == self.get_max_run() or  
+        #             (self.next_checkpoint_in_column(run, position) > -1 
+        #                 and self.next_checkpoint_in_column(run, position) < self.next_checkpoint_in_column(run, position+1))
+        #             or not self.has_checkpoint_in_column(run, position)
+        #             ):
+        #             return image_checkpoint_corner
+        #         else:                    
+        #             return image_checkpoint_double_corner
 
-            else:
-                # IF next column has a checkpoint BUT not before current column
-                if self.next_checkpoint_in_column(run, position+1) > -1 and ( self.next_checkpoint_in_column(run, position) == -1 or self.next_checkpoint_in_column(run, position+1) < self.next_checkpoint_in_column(run, position)):
-                    return image_checkpoint_line
-                else:
-                    return image_checkpoint_empty
+        #     else:
+        #         # IF next column has a checkpoint BUT not before current column
+        #         if self.next_checkpoint_in_column(run, position+1) > -1 and ( self.next_checkpoint_in_column(run, position) == -1 or self.next_checkpoint_in_column(run, position+1) < self.next_checkpoint_in_column(run, position)):
+        #             return image_checkpoint_line
+        #         else:
+        #             return image_checkpoint_empty
 
-            return image_checkpoint_empty
+        #     return image_checkpoint_empty
 
-        def next_checkpoint_in_column(self, run, position):
-            for checkpoint in self.checkpoints:
-                if checkpoint.run > run and checkpoint.position == position:
-                    return checkpoint.run
-            return -1
+        # def next_checkpoint_in_column(self, run, position):
+        #     for checkpoint in self.checkpoints:
+        #         if checkpoint.run > run and checkpoint.position == position:
+        #             return checkpoint.run
+        #     return -1
 
-        def has_checkpoint_in_column(self, run, position):
-            for checkpoint in self.checkpoints:
-                if checkpoint.run > run and checkpoint.position == position:
-                    return True
-            return False
+        # def has_checkpoint_in_column(self, run, position):
+        #     for checkpoint in self.checkpoints:
+        #         if checkpoint.run > run and checkpoint.position == position:
+        #             return True
+        #     return False
 
-        def get_checkpoint(self, run, position):
-            for checkpoint in self.checkpoints:
-                if checkpoint.run == run and checkpoint.position == position:
-                    return checkpoint
-            return None
+        # def get_checkpoint(self, run, position):
+        #     for checkpoint in self.checkpoints:
+        #         if checkpoint.run == run and checkpoint.position == position:
+        #             return checkpoint
+        #     return None
 
         def get_init_checkpoint(self):
             global current_storyline

@@ -170,68 +170,6 @@ screen progress:
                                         # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
                                         action ShowMenu("storyline_details", "start", current_storyline)
 
-            #         for j in range(current_storyline.get_max_run()):
-            #                 hbox:
-
-            #                     xalign 0
-
-            #                     if j == 0 and current_storyline.is_character_unlocked():
-            #                         imagebutton:
-            #                             mouse 'hover'
-            #                             # if current_checkpoint and current_checkpoint.position == 0 and  current_checkpoint.run == 1:
-            #                             #     idle image_checkpoint_start_selected
-            #                             # else:
-            #                             idle image_checkpoint_start
-            #                             # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
-            #                             action ShowMenu("storyline_details", current_storyline.get_init_checkpoint(), current_storyline)
-            #                     else:
-            #                         imagebutton:
-            #                             if current_storyline.has_checkpoint_in_column(j,1):
-            #                                 if current_storyline.has_checkpoint(j+1, 1):
-            #                                     if current_storyline.has_checkpoint_in_column(j+1,1):
-            #                                         idle image_checkpoint_start_double_corner
-            #                                     else:
-            #                                         idle image_checkpoint_start_corner
-            #                                 else:
-            #                                     idle image_checkpoint_start_line
-            #                             else:
-            #                                 idle image_checkpoint_start_empty
-
-            #                     for i in range(8):                               
-            #                         if current_storyline.has_checkpoint(j+1, i+1):
-            #                             if current_storyline.get_checkpoint(j+1, i+1).ending:
-            #                                 imagebutton:
-            #                                     mouse "hover"
-            #                                     action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-            #                                     idle current_storyline.get_checkpoint(j+1, i+1).ending.image_file                            
-            #                                     tooltip str(current_storyline.get_checkpoint(j+1, i+1).ending.content)
-
-            #                             else:
-            #                                 imagemap:
-            #                                     if current_storyline.has_checkpoint(j+1, i+2):
-            #                                         idle image_checkpoint_right
-            #                                     else:
-            #                                         idle image_checkpoint
-
-            #                                     textbutton str(current_storyline.get_checkpoint(j+1, i+1).get_format_created()): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
-            #                                         mouse "hover" 
-            #                                         # action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
-            #                                         action ShowMenu("storyline_details", current_storyline.get_checkpoint(j+1, i+1), current_storyline)
-            #                                         xoffset -10 
-            #                                         yalign 0.5
-            #                                         xalign 0.5
-            #                                         if current_checkpoint and current_checkpoint.run == current_storyline.get_checkpoint(j+1, i+1).run and current_checkpoint.position == current_storyline.get_checkpoint(j+1, i+1).position:                
-            #                                             text_color "#FFFFFF"
-            #                                         else:
-            #                                             text_color gui.accent_color
-            #                                         text_font gui.name_text_font 
-            #                                         text_size 20
-            #                                         padding (25,25,25,25)
-                                                
-            #                         else:
-            #                             image current_storyline.get_checkpoint_filler(j+1, i+1)
-
-
 
     $ tooltip = GetTooltip()
 
@@ -287,7 +225,7 @@ screen info_card(item=None, item_type=None):
 screen storyline_details(selected_chapter, selected_char):
 
     tag menu
-    default selected_checkpoint = None  # Initialize selected_checkpoint
+    # default current_checkpoint = None  # Initialize current_checkpoint
 
     use game_menu(_("Storyline"), scroll="fixed"):
 
@@ -304,8 +242,6 @@ screen storyline_details(selected_chapter, selected_char):
                 vbox:
                     spacing 10
                     yalign 0.0
-
-
 
                     text selected_char.real_name:
                         size 48
@@ -332,7 +268,7 @@ screen storyline_details(selected_chapter, selected_char):
 
                     frame:
                         xmaximum 900  # Set a fixed width
-                        ymaximum 350  # Set a fixed height
+                        ymaximum 375  # Set a fixed height
                         has viewport:
                             draggable True 
                             mousewheel True
@@ -340,44 +276,71 @@ screen storyline_details(selected_chapter, selected_char):
 
                         vbox:
                             spacing 5
-                            textbutton "checkpoints list 1"
-                            textbutton "checkpoints list 2"
-                            textbutton "checkpoints list 1"
-                            textbutton "checkpoints list 2"
-                            textbutton "checkpoints list 1"
-                            textbutton "checkpoints list 2"
-                            textbutton "checkpoints list 2"
-                            textbutton "checkpoints list 1"
-                            textbutton "checkpoints list 2"
-                            textbutton "checkpoints list 1"
-                            textbutton "checkpoints list 2"
-                            # for checkpoint in get_checkpoints(selected_chapter, selected_char):
-                            #     textbutton checkpoint.name:
-                            #         action SetScreenVariable("selected_checkpoint", checkpoint)
-                            # Return button at the bottom right of the screen
+                            if selected_chapter == "start":
+                                textbutton str("Start"):
+                                    action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                            else:
+                                for checkpoint in selected_char.get_checkpoints_by_chapter(selected_chapter.label):
+                                    textbutton str(checkpoint.get_format_created()):
+                                        action SetVariable("current_checkpoint", checkpoint)
                     
-
-
                 # Right column: Details of the selected checkpoint (placeholder for now)
                 vbox:
                     spacing 10
                     yalign 0.0
                     xoffset 100
+                    xminimum 500
 
-                    if selected_checkpoint:
-                        text "Details for [selected_checkpoint.name]":
-                            size 32
+                    if current_checkpoint:
+                        text "Unlocked at Selected Checkpoint":
+                            
                             font gui.name_text_font
+                            color gui.accent_color
+                        # IN GRID
+                        grid 5 2:
+                            yoffset 30
+                            spacing 13
+                            $ grid_fill = 10
+                            for item in current_storyline.important_choices.get_list():
+                                $ grid_fill -= 1
+                                if current_checkpoint:
+                                    use info_card(item, "choice")
+                                else:
+                                    use info_card(item, "choice")
+                            
+                            for item in current_storyline.objects.get_list():
+                                $ grid_fill -= 1
+                                if current_checkpoint:
+                                    use info_card(item, "objects")
+                                else:
+                                    use info_card(item, "objects")
+
+                            for item in (current_storyline.observations.get_list()):
+                                $ grid_fill -= 1
+                                if current_checkpoint:
+                                    use info_card(item, "observations")
+                                else:
+                                    use info_card(item, "observations")
+                            
+                            if grid_fill > 0 :
+                                for i_fill in range(grid_fill):
+                                    use info_card()#TODO empty image (empty Checkpoint emptu...)
+
+                        # TODO REdo properly into a single button
+                        imagebutton:
+                            auto 'images/ui/button_%s_small.png'                       
+                            mouse "hover"
+                            action Show("confirm_restart")
+                        text "Start again from there":
+                            yoffset -70
+                            xoffset 70
+
                     else:
                         text "Select a checkpoint to see details.":
                             size 32
                             font gui.name_text_font
 
         fixed:
-            # Ensure the button is on top of other elements
-            # zorder 1
-
-            # Return Button
             textbutton _("Return"):
                 align (1.0, 1.0)  # Align to bottom right
                 xoffset 400  # Offset from the right edge
