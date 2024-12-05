@@ -119,14 +119,14 @@ label init_lad:
         lad_progress = [
             # First Line
             [
-                Chapter(image_checkpoint_start), 
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "The Hunt"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "Afternoon"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "Afternoon"),
+                Chapter(image_checkpoint_start, "start"), 
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "Evening", "Friday Evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "Morning", "Saturday Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "The Hunt", "Saturday - The Hunt"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "Afternoon", "Saturday Afternoon"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "Evening", "Saturday Evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "Morning", "Saturday Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "Afternoon", "Saturday Afternoon"),
                 Chapter(image_ending_question),
             ],
             # Second line, ...
@@ -134,7 +134,7 @@ label init_lad:
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_no_hunt", "No Hunt"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_no_hunt", "No Hunt", "Saturday - No Hunt"),
                 Chapter(image_checkpoint_corner_merge),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),

@@ -33,13 +33,8 @@ screen progress:
                                 if char.is_character_unlocked():
                                     action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
 
-
                     hbox:
                         xpos 50
-                        # text current_storyline.real_name:
-                        #     yoffset -20
-                        #     font gui.name_text_font
-                        #     color gui.accent_color
                         vbox:
                             yminimum 120
                             yoffset -20
@@ -167,6 +162,13 @@ screen progress:
                                             action SetVariable("action_needed_fix", True)
                                         else:
                                             idle chapter.image_file 
+                                elif chapter.chapter_type == "start": 
+                                    imagebutton:
+                                        mouse 'hover'
+                                        idle image_checkpoint_start
+                                        hover image_checkpoint_start_selected
+                                        # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                                        action ShowMenu("storyline_details", "start", current_storyline)
 
             #         for j in range(current_storyline.get_max_run()):
             #                 hbox:
@@ -229,7 +231,128 @@ screen progress:
             #                         else:
             #                             image current_storyline.get_checkpoint_filler(j+1, i+1)
 
-            # # vbox:
+
+
+    $ tooltip = GetTooltip()
+
+    if tooltip:
+        nearrect:
+            focus "tooltip"
+            prefer_top True
+
+            frame:
+                style_prefix "confirm"
+                padding (50,50,50,50)
+                xalign 0.5
+                yalign 0.5
+                text tooltip
+                # textbutton "Cancel" action SetVariable("action_needed_fix", False )
+
+screen info_card(item=None, item_type=None):  
+    python:
+        if item:
+            if item_type == 'object':
+                icon_file = "{image=images/ui/objects_icon.png} "
+            elif item_type == 'observation':
+                icon_file = "{image=images/ui/observation_icon.png} "
+            else:
+                icon_file = "(choice?) "
+            
+            if current_checkpoint:
+                if item_type == 'object':
+                    locked = (not item.text_id in current_checkpoint.objects)
+                elif item_type == 'observation':
+                    locked = (not item.text_id in current_checkpoint.observations)
+                else:
+                    locked = (not item.text_id in current_checkpoint.important_choices)
+            else:
+                locked = item.locked
+
+    imagebutton:                        
+        mouse "hover"
+        action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+        if not item:
+            idle "images/info_cards/empty.png"   
+        elif not item.discovered:
+            idle "images/info_cards/question_mark_bw.png"   
+            tooltip "Hidden"
+        elif not locked: 
+            idle "images/info_cards/" + item.image_file + ".png"     
+            tooltip icon_file + item.content
+        else:
+            idle "images/info_cards/" + item.image_file + "_bw.png"                                
+            tooltip icon_file + item.content
+
+
+# DETAIL for checkpoint
+screen storyline_details(selected_chapter, selected_char):
+
+    # current_storyline.get_init_checkpoint()
+    tag menu #????
+    use game_menu(_("Storyline"), scroll="fixed"):
+
+        hbox:
+            xalign 0 
+            xoffset 80
+            xminimum 1600
+            vbox yoffset -20:
+                text selected_char.real_name:
+                    size 48
+                    font gui.name_text_font
+                    line_leading 10
+                    line_spacing 10
+                    color gui.accent_color
+                    outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
+
+                # if selected_chapter == "start":
+                #     text "Friday Afternoon":
+                #         size 48
+                #         font gui.name_text_font
+                #         line_leading 10
+                #         line_spacing 10
+                #         color gui.accent_color
+                # else:
+                #     text selected_chapter.text_full:
+                #         size 48
+                #         font gui.name_text_font
+                #         line_leading 10
+                #         line_spacing 10
+                #         color gui.accent_color
+
+                add "images/characters/side/side " + selected_char.text_id +".png"
+                
+            vbox:
+                xalign 0     
+                xoffset 0
+                if selected_chapter == "start":
+                    text "Friday Afternoon":
+                        size 48
+                        font gui.name_text_font
+
+                else:
+                    text selected_chapter.text_full:
+                        size 48
+                        font gui.name_text_font
+
+                # TODO Add a list of all checkpoints at this TIME SO RETHINK ALL THAT
+                # hbox:
+                #     ymaximum 600
+                #     viewport id "char_description_viewport":
+                #         draggable True 
+                #         mousewheel True #
+                #         vbox:
+                #             spacing 15
+                #             for line in selected_char.get_description_full():
+                #                 text line:
+                #                     font gui.name_text_font
+                #             # text selected_char.get_description_full():
+                #             #     font gui.name_text_font
+                #             #     line_leading  15
+
+                #         # You can add more content here if necessary
+                #     vbar value YScrollValue("char_description_viewport")
+
+                            # # vbox:
             #     xminimum 20
                 
                 # TODO MOVE TO EXTRA SCREEN
@@ -299,57 +422,13 @@ screen progress:
                 #     text "Start again from there":
                 #         yoffset -60
                 #         xoffset 65
-
-    $ tooltip = GetTooltip()
-
-    if tooltip:
-        nearrect:
-            focus "tooltip"
-            prefer_top True
-
-            frame:
-                style_prefix "confirm"
-                padding (50,50,50,50)
-                xalign 0.5
-                yalign 0.5
-                text tooltip
-                # textbutton "Cancel" action SetVariable("action_needed_fix", False )
-
-screen info_card(item=None, item_type=None):  
-    python:
-        if item:
-            if item_type == 'object':
-                icon_file = "{image=images/ui/objects_icon.png} "
-            elif item_type == 'observation':
-                icon_file = "{image=images/ui/observation_icon.png} "
-            else:
-                icon_file = "(choice?) "
-            
-            if current_checkpoint:
-                if item_type == 'object':
-                    locked = (not item.text_id in current_checkpoint.objects)
-                elif item_type == 'observation':
-                    locked = (not item.text_id in current_checkpoint.observations)
-                else:
-                    locked = (not item.text_id in current_checkpoint.important_choices)
-            else:
-                locked = item.locked
-
-    imagebutton:                        
-        mouse "hover"
-        action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-        if not item:
-            idle "images/info_cards/empty.png"   
-        elif not item.discovered:
-            idle "images/info_cards/question_mark_bw.png"   
-            tooltip "Hidden"
-        elif not locked: 
-            idle "images/info_cards/" + item.image_file + ".png"     
-            tooltip icon_file + item.content
-        else:
-            idle "images/info_cards/" + item.image_file + "_bw.png"                                
-            tooltip icon_file + item.content
-    
+                
+                textbutton _("Return"): 
+                    yoffset 20
+                    xalign 1.0 
+                    yalign 0.0
+                    xpos 350
+                    action ShowMenu("progress")
 
 screen confirm_restart():
 
@@ -381,60 +460,17 @@ screen confirm_restart():
                 textbutton _("Cancel") action Hide("confirm_restart")
 
 
-screen storyline_details(selected_checkpoint, selected_char):
 
-    tag menu #????
-    use game_menu(_("Storyline"), scroll="fixed"):
-
-        hbox:
-            xoffset 80
-            xminimum 1600
-            vbox yoffset -20:
-                text selected_char.real_name:
-                    size 48
-                    font gui.name_text_font
-                    line_leading 10
-                    line_spacing 10
-                    color gui.accent_color
-                    outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
-                add "images/characters/side/side " + selected_char.text_id +".png"
-                
-            vbox:     
-                xoffset 50
-
-                # TODO Add a list of all checkpoints at this TIME SO RETHINK ALL THAT
-                # hbox:
-                #     ymaximum 600
-                #     viewport id "char_description_viewport":
-                #         draggable True 
-                #         mousewheel True #
-                #         vbox:
-                #             spacing 15
-                #             for line in selected_char.get_description_full():
-                #                 text line:
-                #                     font gui.name_text_font
-                #             # text selected_char.get_description_full():
-                #             #     font gui.name_text_font
-                #             #     line_leading  15
-
-                #         # You can add more content here if necessary
-                #     vbar value YScrollValue("char_description_viewport")
-                
-                textbutton _("Return"): 
-                    yoffset 20
-                    xalign 1.0 
-                    yalign 0.0
-                    xpos 350
-                    action ShowMenu("progress")
 
 init -100 python:
 
     class Chapter:
-        def __init__(self, image_file, chapter_type="image", label=None, text=None):
+        def __init__(self, image_file, chapter_type="image", label=None, text=None, text_full=None):
             self.image_file = image_file  # Mandatory
             self.chapter_type = chapter_type  
             self.label = label  # Optional, default is None
             self.text = text  # Optional, default is None
+            self.text_full = text_full  # Optional, default is None
 
 
     class Checkpoint():
