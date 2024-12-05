@@ -73,11 +73,6 @@ screen progress:
                                             tooltip str(item.content)  
                                             action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
                 vbox:
-                    # yinitial 0.0
-                    # scrollbars "vertical"
-                    
-                    # mousewheel True
-                    # draggable True
 
                     xsize 1700
                     yoffset 20
@@ -225,7 +220,6 @@ screen info_card(item=None, item_type=None):
 screen storyline_details(selected_chapter, selected_char):
 
     tag menu
-    # default current_checkpoint = None  # Initialize current_checkpoint
 
     use game_menu(_("Storyline"), scroll="fixed"):
 
@@ -267,8 +261,8 @@ screen storyline_details(selected_chapter, selected_char):
                             font gui.name_text_font
 
                     frame:
-                        xmaximum 900  # Set a fixed width
-                        ymaximum 375  # Set a fixed height
+                        xmaximum 900 
+                        ymaximum 375  
                         has viewport:
                             draggable True 
                             mousewheel True
@@ -284,7 +278,7 @@ screen storyline_details(selected_chapter, selected_char):
                                     textbutton str(checkpoint.get_format_created()):
                                         action SetVariable("current_checkpoint", checkpoint)
                     
-                # Right column: Details of the selected checkpoint (placeholder for now)
+                # Right column: Details of the selected checkpoint
                 vbox:
                     spacing 10
                     yalign 0.0
@@ -342,159 +336,11 @@ screen storyline_details(selected_chapter, selected_char):
 
         fixed:
             textbutton _("Return"):
-                align (1.0, 1.0)  # Align to bottom right
-                xoffset 400  # Offset from the right edge
-                yoffset -150  # Offset from the bottom edge
+                align (1.0, 1.0)
+                xoffset 400  
+                yoffset -150  
                 action ShowMenu("progress")
 
-
-
-
-# DETAIL for checkpoint
-# screen storyline_details(selected_chapter, selected_char):
-
-#     # current_storyline.get_init_checkpoint()
-#     tag menu #????
-#     use game_menu(_("Storyline"), scroll="fixed"):
-
-#         hbox:
-#             xalign 0 
-#             xoffset 80
-#             xminimum 1600
-#             vbox yoffset -20:
-#                 text selected_char.real_name:
-#                     size 48
-#                     font gui.name_text_font
-#                     line_leading 10
-#                     line_spacing 10
-#                     color gui.accent_color
-#                     outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
-
-#                 # if selected_chapter == "start":
-#                 #     text "Friday Afternoon":
-#                 #         size 48
-#                 #         font gui.name_text_font
-#                 #         line_leading 10
-#                 #         line_spacing 10
-#                 #         color gui.accent_color
-#                 # else:
-#                 #     text selected_chapter.text_full:
-#                 #         size 48
-#                 #         font gui.name_text_font
-#                 #         line_leading 10
-#                 #         line_spacing 10
-#                 #         color gui.accent_color
-
-#                 add "images/characters/side/side " + selected_char.text_id +".png"
-                
-#             vbox:
-#                 xalign 0     
-#                 xoffset 0
-#                 if selected_chapter == "start":
-#                     text "Friday Afternoon":
-#                         size 48
-#                         font gui.name_text_font
-
-#                 else:
-#                     text selected_chapter.text_full:
-#                         size 48
-#                         font gui.name_text_font
-
-#                 # TODO Add a list of all checkpoints at this TIME SO RETHINK ALL THAT
-#                 # hbox:
-#                 #     ymaximum 600
-#                 #     viewport id "char_description_viewport":
-#                 #         draggable True 
-#                 #         mousewheel True #
-#                 #         vbox:
-#                 #             spacing 15
-#                 #             for line in selected_char.get_description_full():
-#                 #                 text line:
-#                 #                     font gui.name_text_font
-#                 #             # text selected_char.get_description_full():
-#                 #             #     font gui.name_text_font
-#                 #             #     line_leading  15
-
-#                 #         # You can add more content here if necessary
-#                 #     vbar value YScrollValue("char_description_viewport")
-
-#                             # # vbox:
-#             #     xminimum 20
-                
-#                 # TODO MOVE TO EXTRA SCREEN
-#                 # if current_checkpoint:
-#                 #     vbox:                        
-#                 #         ysize 65
-#                 #         yoffset 20
-#                 #         hbox:    
-#                 #             if current_checkpoint.position == 0:
-#                 #                 text "Start"
-#                 #             else:                            
-#                 #                 text current_checkpoint.get_format_created()        
-#                 #                 # text current_checkpoint.debug_string() # + " " str(current_checkpoint.position) + " "
-#                 #                 text " Checkpoint"
-#                 #             imagebutton: 
-#                 #                 xoffset 10
-#                 #                 yalign 0.5
-#                 #                 mouse "hover"
-#                 #                 auto "images/ui/cancel_icon_small_%s.png"
-#                 #                 action SetVariable("current_checkpoint", None)
-#                 # else:
-#                 #     hbox:
-#                 #         ysize 65
-#                 #         yoffset 20
-#                 #         text "Current Checkpoint"
-#                 # vbox:
-#                 #     ysize 230
-#                 #     yoffset 10
-#                 #     text "Important information":
-#                 #         font gui.name_text_font
-#                 #         color gui.accent_color
-#                 #     # IN GRID
-#                 #     grid 5 2:
-#                 #         spacing 13
-#                 #         $ grid_fill = 10
-#                 #         for item in current_storyline.important_choices.get_list():
-#                 #             $ grid_fill -= 1
-#                 #             if current_checkpoint:
-#                 #                 use info_card(item, "choice")
-#                 #             else:
-#                 #                 use info_card(item, "choice")
-                        
-#                 #         for item in current_storyline.objects.get_list():
-#                 #             $ grid_fill -= 1
-#                 #             if current_checkpoint:
-#                 #                 use info_card(item, "objects")
-#                 #             else:
-#                 #                 use info_card(item, "objects")
-
-#                 #         for item in (current_storyline.observations.get_list()):
-#                 #             $ grid_fill -= 1
-#                 #             if current_checkpoint:
-#                 #                 use info_card(item, "observations")
-#                 #             else:
-#                 #                 use info_card(item, "observations")
-                        
-#                 #         if grid_fill > 0 :
-#                 #             for i_fill in range(grid_fill):
-#                 #                 use info_card()#TODO empty image (empty Checkpoint emptu...)
-
-#                 # if current_checkpoint:                    
-#                 #     imagebutton:
-#                 #         auto 'images/ui/button_%s_small.png'                       
-#                 #         mouse "hover"
-#                 #         action Show("confirm_restart")
-#                 #     # TODO TERRIBLE positioning, but works SHOULD BE in image map...
-#                 #     text "Start again from there":
-#                 #         yoffset -60
-#                 #         xoffset 65
-                
-#                 textbutton _("Return"): 
-#                     yoffset 20
-#                     xalign 1.0 
-#                     yalign 0.0
-#                     xpos 350
-#                     action ShowMenu("progress")
 
 screen confirm_restart():
 
