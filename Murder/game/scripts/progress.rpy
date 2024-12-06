@@ -127,7 +127,7 @@ screen progress:
                         #     xminimum checkpoint_x_small
                         #     text "" font gui.name_text_font
                     
-                    for line_index, line in enumerate(lad_progress):
+                    for line_index, line in enumerate(current_storyline.progress):
                         hbox:
                             xalign 0
                             for chapter_index, chapter in enumerate(line):

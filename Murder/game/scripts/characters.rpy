@@ -441,6 +441,7 @@ init -100 python:
                 (1, [
                     ('lad_day1_evening', [('object', 'gun')]), 
                     ('lad_day2_morning', [('important_choice', 'hunt')]),
+                    ('lad_day2_hunt', []),
                     ('lad_day2_afternoon', []),
                     ('lad_day2_evening', []),
                     ('lad_day3_morning', []),

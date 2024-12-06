@@ -92,10 +92,47 @@ label init_psychic:
         That is peculiar because on her <info:lie>.
         Being a woman of her era, she conforms to most stereotypes, meaning that she <info:drive> and that she can be <info:racist>.
         """
-
-
-
         # LATER  you discover that she is actually 42, and full story is told
+
+        psychic_progress = [
+            # First Line
+            [
+                Chapter(image_checkpoint_start, "start"), 
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day1_evening", "Evening", "Friday Evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_morning", "Morning", "Saturday Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_hunt", "The Hunt", "Saturday - The Hunt"),
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_afternoon", "Afternoon", "Saturday Afternoon"),
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_evening", "Evening", "Saturday Evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "Morning", "Saturday Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "Afternoon", "Saturday Afternoon"),
+                Chapter(image_ending_question),
+            ],
+            # Second line, ...
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question, "ending", "burned"),
+            ],
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_corner),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "poisoned"),
+                Chapter(image_checkpoint_empty_filler),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "shot"),
+            ],
+        ]
+
 
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
@@ -111,7 +148,7 @@ label init_psychic:
             intuitions = psychic_intuitions,
             observations = psychic_observations,
             objects = CharacterObjectList([]),
-            progress = [],
+            progress = psychic_progress,
             saved_variables = psychic_init_variables
         )
         psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)
