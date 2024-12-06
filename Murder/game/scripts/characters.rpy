@@ -432,187 +432,50 @@ init -100 python:
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
 
-        def lad_checkpoint(self):
+        def test_checkpoints(self):
             global current_run, current_position
 
             # Define test data: a list of tuples in the format:
             # (run_number, [list_of_labels], ending_label_if_any)
             test_data = [
-                (1, ['lad_day1_afternoon', 'lad_day1_evening', 'lad_day2_morning',
-                    'lad_day2_afternoon', 'lad_day2_evening', 'lad_day3_morning', 
-                    'lad_day3_afternoon'],
-                'lad_day3_afternoon'),
-                
-                (2, ['lad_day3_afternoon'], None),
-                
-                (3, ['lad_day1_evening', 'lad_day2_morning'], 'lad_day2_morning'),
-                
-                (4, ['lad_day2_morning', 'lad_day2_afternoon', 'lad_day2_evening'], None),
-                
-                (5, ['lad_day2_afternoon', 'lad_day2_evening'], None),
-                
-                (6, ['lad_day2_morning', 'lad_day2_afternoon'], None),
+                (1, [
+                    ('lad_day1_evening', [('object', 'gun')]), 
+                    ('lad_day2_morning', [('important_choice', 'hunt')]),
+                    ('lad_day2_afternoon', []),
+                    ('lad_day2_evening', []),
+                    ('lad_day3_morning', []),
+                    ('lad_day3_afternoon', []),
+                    ],
+                'gunned_down'),                
+                (2, [
+                    ('lad_day2_morning', [('object', 'gun'), ('important_choice', 'hunt')])
+                    ], 
+                'poisoned'),                
+                # (3, ['lad_day1_evening', 'lad_day2_morning'], 'poisoned'),                
+                # (4, ['lad_day2_morning', 'lad_day2_afternoon', 'lad_day2_evening'], None),                
+                # (5, ['lad_day2_afternoon', 'lad_day2_evening'], None),                
+                # (6, ['lad_day2_morning', 'lad_day2_afternoon'], None),
             ]
 
             # Loop through the predefined runs and labels
             for run, labels, ending_label in test_data:
                 current_run = run
-                for label_id in labels:
+                self.reset_information()
+                for label_id, unlocks in labels:
+                    for unlock_type, unlock_id in unlocks:
+                        if unlock_type == "object":
+                            self.objects.unlock(unlock_id)
+                        elif unlock_type == "important_choice":
+                            self.important_choices.unlock(unlock_id)
+                        elif unlock_type == "observation":
+                            self.observations.unlock(unlock_id)
+
                     self.add_checkpoint(label_id)
 
                 # If there's an ending, add an ending checkpoint
                 if ending_label:
-                    ending_info = CharacterInformation(
-                        1, 
-                        "gunned_down", 
-                        "You die stoned to death", 
-                        image_file="gun_downed"
-                    )
+                    self.endings.unlock(ending_label)
+                    ending_info = self.endings.get_item(ending_label)
                     self.add_ending_checkpoint(ending_info)
 
             return
-
-
-        # FOR TEST
-# --------------------------------------------------------------------
-# --------------------------------------------------------------------
-# --------------------------------------------------------------------
-# --------------------------------------------------------------------
-# --------------------------------------------------------------------
-        def test_checkpoint(self):
-            global current_position
-            i_test = 1
-            for i_label in [
-                    'lad_day1_afternoon',
-                    'lad_day1_evening',
-                    'lad_day2_morning',
-                    'lad_day2_afternoon',
-                    'lad_day2_evening',
-                    'lad_day3_morning',
-                    'lad_day3_afternoon',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 1,
-                        position = i_test,
-                        objects = copy.deepcopy(self.objects.get_unlocked()),
-                        observations = copy.deepcopy(self.observations.get_unlocked()),
-                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-                current_position += 1
-            # #Add ending for fun
-            self.checkpoints.append( Checkpoint(
-                    run = 1,
-                    position = 8,
-                    objects = copy.deepcopy(self.objects.get_unlocked()),
-                    observations = copy.deepcopy(self.observations.get_unlocked()),
-                    important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                    label_id = i_label,
-                    saved_variables = copy.deepcopy(current_character.saved_variables),
-                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", image_file="gun_downed")
-                )
-            )
-
-
-            i_test = 7
-            for i_label in [
-                    'lad_day3_afternoon',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 2,
-                        position = i_test,
-                        objects = copy.deepcopy(self.objects.get_unlocked()),
-                        observations = copy.deepcopy(self.observations.get_unlocked()),
-                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-
-            i_test = 2
-            for i_label in [
-                    'lad_day1_evening',
-                    'lad_day2_morning',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 3,
-                        position = i_test,
-                        objects = copy.deepcopy(self.objects.get_unlocked()),
-                        observations = copy.deepcopy(self.observations.get_unlocked()),
-                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-            self.checkpoints.append( Checkpoint(
-                    run = 3,
-                    position = 4,
-                    objects = copy.deepcopy(self.objects.get_unlocked()),
-                    observations = copy.deepcopy(self.observations.get_unlocked()),
-                    important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                    label_id = i_label,
-                    saved_variables = copy.deepcopy(current_character.saved_variables),
-                    ending = CharacterInformation(1, "gunned_down", "You die stoned to death", image_file="gun_downed")
-                )
-            )
-
-            i_test = 3
-            for i_label in [
-                    'lad_day2_morning',
-                    'lad_day2_afternoon',
-                    'lad_day2_evening',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 4,
-                        position = i_test,
-                        objects = copy.deepcopy(self.objects.get_unlocked()),
-                        observations = copy.deepcopy(self.observations.get_unlocked()),
-                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-            i_test = 2
-            for i_label in [
-                    'lad_day2_afternoon',
-                    'lad_day2_evening',
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 5,
-                        position = i_test,
-                        objects = copy.deepcopy(self.objects.get_unlocked()),
-                        observations = copy.deepcopy(self.observations.get_unlocked()),
-                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-            
-            i_test = 1
-            for i_label in [
-                    'lad_day2_morning',
-                    'lad_day2_afternoon'
-                ]:
-                self.checkpoints.append( Checkpoint(
-                        run = 6,
-                        position = i_test,
-                        objects = copy.deepcopy(self.objects.get_unlocked()),
-                        observations = copy.deepcopy(self.observations.get_unlocked()),
-                        important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                        label_id = i_label,
-                        saved_variables = copy.deepcopy(current_character.saved_variables)
-                    )
-                )
-                i_test += 1
-            return
-
-
-
-

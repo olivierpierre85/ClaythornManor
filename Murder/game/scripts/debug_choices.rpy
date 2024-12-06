@@ -89,7 +89,7 @@ label debug_choices:
             call unlock_psychic 
             $ lad_details.observations.unlock('green_liquid')
             $ lad_details.saved_variables['library_visited'] = True
-            $ lad_details.lad_checkpoint()
+            $ lad_details.test_checkpoints()
 
             $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
             $ lad_details.objects.unlock('gun')
