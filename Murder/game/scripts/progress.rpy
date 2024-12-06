@@ -137,19 +137,31 @@ screen progress:
                                 elif chapter.chapter_type == "checkpoint":                       
                                     imagemap:
                                         idle chapter.image_file
-                                        textbutton str(chapter.text): #+ " - " + str(current_storyline.get_checkpoint(j+1, i+1).get_format_created_down()):
-                                            mouse "hover" 
-                                            # action SetVariable("current_checkpoint", current_storyline.get_checkpoint(j+1, i+1))
-                                            action ShowMenu("storyline_details", chapter, current_storyline)
-                                            xoffset -20 
-                                            yoffset -5
-                                            yalign 0.5
-                                            xalign 0.5
-                                            text_color gui.accent_color
-                                            text_hover_color "#FFFFFF" 
-                                            text_font gui.name_text_font 
-                                            text_size 28
-                                            padding (25,25,25,25)
+                                        # Don't show if the character hasn't reached the chapter yet
+                                        if len(current_storyline.get_checkpoints_by_chapter(chapter.label))>0:
+                                            textbutton str(chapter.text):
+                                                mouse "hover" 
+                                                action ShowMenu("storyline_details", chapter, current_storyline)
+                                                xoffset -20 
+                                                yoffset -5
+                                                yalign 0.5
+                                                xalign 0.5
+                                                text_color gui.accent_color
+                                                text_hover_color "#FFFFFF" 
+                                                text_font gui.name_text_font 
+                                                text_size 28
+                                                padding (25,25,25,25)
+                                        else:
+                                            textbutton "?":
+                                                xoffset -20 
+                                                yoffset -5
+                                                yalign 0.5
+                                                xalign 0.5
+                                                text_color gui.accent_color
+                                                text_font gui.name_text_font 
+                                                text_size 28
+                                                padding (25,25,25,25)
+
                                 elif chapter.chapter_type == "ending": 
                                     imagebutton:
                                         if current_storyline.endings.is_unlocked(chapter.label):
@@ -163,7 +175,6 @@ screen progress:
                                         mouse 'hover'
                                         idle image_checkpoint_start
                                         hover image_checkpoint_start_selected
-                                        # action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
                                         action ShowMenu("storyline_details", "start", current_storyline)
 
     use tooltip_display

@@ -67,7 +67,7 @@ label init_characters:
 # LABELS
 label character_selection:
     scene black_background
-    narrator "Select Your Character"
+    narrator "Select a Character"
 
     python:
         if not full_testing_mode:
@@ -377,21 +377,22 @@ init -100 python:
         def add_ending_checkpoint(self, ending):
             global current_position, current_run, has_been_restarted
 
+            current_position = current_position + 1
+
             if not has_been_restarted:
                 new_checkpoint = Checkpoint(
                     run = current_run,
-                    position = current_position + 1,
-                    objects = [], 
-                    observations = [],
-                    important_choices = [],
-                    label_id = "",
-                    saved_variables = [],
+                    position = current_position,
+                    objects = copy.deepcopy(self.objects.get_unlocked()), 
+                    observations = copy.deepcopy(self.observations.get_unlocked()),
+                    important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
+                    label_id = "", # Adjust as needed if you want a specific label or you can pass it as a parameter
+                    saved_variables = copy.deepcopy(current_character.saved_variables),
                     ending = ending
                 )
                 self.checkpoints.append(new_checkpoint)
             else:
                 has_been_restarted = False
-                current_position = current_position + 1
 
         def get_checkpoints_by_chapter(self, chapter_label):
             chapter_checkpoints = []
@@ -425,31 +426,51 @@ init -100 python:
             return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
 
 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
 
+        def lad_checkpoint(self):
+            global current_run, current_position
 
+            # Define test data: a list of tuples in the format:
+            # (run_number, [list_of_labels], ending_label_if_any)
+            test_data = [
+                (1, ['lad_day1_afternoon', 'lad_day1_evening', 'lad_day2_morning',
+                    'lad_day2_afternoon', 'lad_day2_evening', 'lad_day3_morning', 
+                    'lad_day3_afternoon'],
+                'lad_day3_afternoon'),
+                
+                (2, ['lad_day3_afternoon'], None),
+                
+                (3, ['lad_day1_evening', 'lad_day2_morning'], 'lad_day2_morning'),
+                
+                (4, ['lad_day2_morning', 'lad_day2_afternoon', 'lad_day2_evening'], None),
+                
+                (5, ['lad_day2_afternoon', 'lad_day2_evening'], None),
+                
+                (6, ['lad_day2_morning', 'lad_day2_afternoon'], None),
+            ]
 
+            # Loop through the predefined runs and labels
+            for run, labels, ending_label in test_data:
+                current_run = run
+                for label_id in labels:
+                    self.add_checkpoint(label_id)
 
+                # If there's an ending, add an ending checkpoint
+                if ending_label:
+                    ending_info = CharacterInformation(
+                        1, 
+                        "gunned_down", 
+                        "You die stoned to death", 
+                        image_file="gun_downed"
+                    )
+                    self.add_ending_checkpoint(ending_info)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            return
 
 
         # FOR TEST
