@@ -330,9 +330,9 @@ screen storyline_details(selected_chapter, selected_char):
                             auto 'images/ui/button_%s_small.png'                       
                             mouse "hover"
                             action Show("confirm_restart")
-                        text "Start again from there":
+                        text "Restart From There":
                             yoffset -70
-                            xoffset 70
+                            xoffset 90
 
                     else:
                         text "Select a checkpoint to see details.":
