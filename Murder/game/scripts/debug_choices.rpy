@@ -19,6 +19,8 @@ label debug_choices:
         "character selection":
             call unlock_psychic 
             call unlock_lad
+            call unlock_doctor
+            
             jump character_selection
         
         "debug_test":
