@@ -2,6 +2,9 @@
 transform character_progress:
     zoom 0.4
 
+transform selected_character:
+    zoom 0.45
+
 # Display of Progress tree
 screen progress:
 
@@ -28,7 +31,7 @@ screen progress:
                                 mouse "hover" 
                                 if char.text_id == current_storyline.text_id:
                                     # idle "images/characters/side/side " + char.text_id +".png" at character_progress
-                                    idle "images/characters/side_hover/side " + char.text_id + " hover.png" at character_progress
+                                    idle "images/characters/side/side " + char.text_id + ".png" at selected_character
                                 else:                             
                                     if char.is_character_unlocked():
                                         idle "images/characters/side/side " + char.text_id + ".png" at character_progress
