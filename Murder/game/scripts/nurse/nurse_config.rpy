@@ -69,6 +69,7 @@ label init_nurse:
             intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
+            progress = [],
         )
         nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
 

@@ -20,7 +20,7 @@ screen character_selection:
         xalign .5
         yalign .5
         margin (310,110,310,150)
-        label "Select your Character":
+        label "Select a Character":
             yoffset -50
             style "confirm_prompt" # TODO specific styling TODO space after label .... why so complicated.....
             xalign 0.5

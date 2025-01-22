@@ -175,13 +175,16 @@ label start_again():
 
         # re run objects and observations from checkpoint
         for item in current_checkpoint.objects:
-            current_character.objects.unlock(item, False)
+            # current_character.objects.unlock(item, False)
+            current_character.objects.unlock(item)
 
         for item in current_checkpoint.observations:
-            current_character.observations.unlock(item, False)
+            # current_character.observations.unlock(item, False)
+            current_character.observations.unlock(item)
         
         for item in current_checkpoint.important_choices:
-            current_character.important_choices.unlock(item, False)
+            # current_character.important_choices.unlock(item, False)
+            current_character.important_choices.unlock(item)
 
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 

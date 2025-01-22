@@ -30,165 +30,165 @@ label psychic_day2_evening_garden:
 
 # First Floor
 
-# # Bedroom
-# label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=5):
+# Bedroom
+label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=5):
 
-#     python:
-#         enter_text_list = [
-#             "Let's go in. What's the worst that could happen?",
-#             "It won't hurt to give it a try. Let's go in and find out.",
-#             "Let's enter and see what happens. It can't be that bad.",
-#             "What's the harm in entering? Let's go!",
-#             "Come on, let's go inside. What could go wrong?",
-#             "Shall we enter? It's not like you'd be in any danger anyway."
-#         ]
+    python:
+        enter_text_list = [
+            "Let's go in. What's the worst that could happen?",
+            "It won't hurt to give it a try. Let's go in and find out.",
+            "Let's enter and see what happens. It can't be that bad.",
+            "What's the harm in entering? Let's go!",
+            "Come on, let's go inside. What could go wrong?",
+            "Shall we enter? It's not like you'd be in any danger anyway."
+        ]
 
-#         no_enter_text_list = [
-#             "I definitely shouldn't enter. That would be reckless!",
-#             "I shouldn't go in. That's too dangerous!",
-#             "I'd better not enter. It could be risky.",
-#             "That's a bad idea. I shouldn't go inside.",
-#             "I don't want to take unnecessary risks. I shouldn't go in.",
-#             "It's not worth the danger. I'm not going in."
-#         ]
+        no_enter_text_list = [
+            "I definitely shouldn't enter. That would be reckless!",
+            "I shouldn't go in. That's too dangerous!",
+            "I'd better not enter. It could be risky.",
+            "That's a bad idea. I shouldn't go inside.",
+            "I don't want to take unnecessary risks. I shouldn't go in.",
+            "It's not worth the danger. I'm not going in."
+        ]
     
-#         enter_text = enter_text_list[psychic_details.saved_variables['day2_nohunt_bedroom_tries']]
-#         no_enter_text = no_enter_text_list[psychic_details.saved_variables['day2_nohunt_bedroom_tries']]
+        enter_text = enter_text_list[psychic_details.saved_variables['day2_nohunt_bedroom_tries']]
+        no_enter_text = no_enter_text_list[psychic_details.saved_variables['day2_nohunt_bedroom_tries']]
         
-#     if psychic_details.saved_variables['day2_nohunt_bedroom_tries'] == 0:
+    if psychic_details.saved_variables['day2_nohunt_bedroom_tries'] == 0:
 
-#         """
-#         Most people are out for the hunt, so I guess I could try to enter the room anyway.
+        """
+        Most people are out for the hunt, so I guess I could try to enter the room anyway.
 
-#         But it won't look good if I get caught.
+        But it won't look good if I get caught.
 
-#         What should I do?
-#         """
+        What should I do?
+        """
 
-#         $ psychic_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
+        $ psychic_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
 
-#     else:
+    else:
 
-#         """
-#         There seems to be nobody here as well.
-#         """
+        """
+        There seems to be nobody here as well.
+        """
 
-#         $ psychic_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
+        $ psychic_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
 
-#     call run_menu(
-#         TimedMenu(
-#             id="psychic_day2_evening_bedroom_try_enter" + enter_result, 
-#             choices=[
-#                 TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
-#                 TimedMenuChoice(no_enter_text, 'psychic_day2_evening_default_room_no_enter', enter_duration, early_exit=True),
-#             ]
-#         )
-#     )
+    call run_menu(
+        TimedMenu(
+            id="psychic_day2_evening_bedroom_try_enter" + enter_result, 
+            choices=[
+                TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
+                TimedMenuChoice(no_enter_text, 'psychic_day2_evening_default_room_no_enter', enter_duration, early_exit=True),
+            ]
+        )
+    )
 
-#     return
+    return
 
-# label psychic_day2_evening_default_room_no_enter:
+label psychic_day2_evening_default_room_no_enter:
     
-#     """
-#     It's better not to enter this room for now.
-#     """
+    """
+    It's better not to enter this room for now.
+    """
 
-#     return
+    return
 
-# label psychic_day2_evening_default_room_locked:
+label psychic_day2_evening_default_room_locked:
     
-#     """
-#     I try to push the door open.
+    """
+    I try to push the door open.
 
-#     It's locked.
-#     """
+    It's locked.
+    """
 
-#     return
-
-
-# # Lad
-# label psychic_day2_evening_bedroom_lad:
-
-#     call psychic_bedroom_default
-
-#     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
-
-#     return
+    return
 
 
-# # Doctor
-# label psychic_day2_evening_bedroom_doctor:
+# Lad
+label psychic_day2_evening_bedroom_lad:
 
-#     call psychic_bedroom_default
+    call psychic_bedroom_default
 
-#     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
 
-#     return
-
-
-# # Nurse
-# label psychic_day2_evening_bedroom_nurse:
-
-#     call psychic_bedroom_default
-
-#     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
-
-#     return
+    return
 
 
-# # Captain
-# label psychic_day2_evening_bedroom_captain:
+# Doctor
+label psychic_day2_evening_bedroom_doctor:
 
-#     call psychic_bedroom_default
+    call psychic_bedroom_default
 
-#     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
 
-#     return
+    return
 
-# # Host
-# label psychic_day2_evening_bedroom_host:
 
-#     call psychic_bedroom_default
+# Nurse
+label psychic_day2_evening_bedroom_nurse:
 
-#     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_bedroom_default
 
-#     return
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
 
-# # Drunk
-# label psychic_day2_evening_bedroom_drunk:
+    return
 
-#     call psychic_bedroom_default
 
-#     """
-#     The simple push I give to the door opens it.
+# Captain
+label psychic_day2_evening_bedroom_captain:
 
-#     I catch a glimpse inside his room from here.
+    call psychic_bedroom_default
 
-#     It's quite messy.
-#     """
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
 
-#     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_drunk_enter', enter_duration=20)
+    return
 
-#     return
+# Host
+label psychic_day2_evening_bedroom_host:
 
-# # Attic
-# label psychic_day2_evening_attic_default:
+    call psychic_bedroom_default
+
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+
+    return
+
+# Drunk
+label psychic_day2_evening_bedroom_drunk:
+
+    call psychic_bedroom_default
+
+    """
+    The simple push I give to the door opens it.
+
+    I catch a glimpse inside his room from here.
+
+    It's quite messy.
+    """
+
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_drunk_enter', enter_duration=20)
+
+    return
+
+# Attic
+label psychic_day2_evening_attic_default:
         
-#     call psychic_attic_default
-#     # Hide all downstairs choices for the current menu
-#     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
-#     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
-#     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
-#     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
-#     return
+    call psychic_attic_default
+    # Hide all downstairs choices for the current menu
+    $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
+    $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
+    $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
+    $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
+    return
 
-# label psychic_day2_evening_attic_return_too_soon:
+label psychic_day2_evening_attic_return_too_soon:
 
-#     call psychic_attic_return_too_soon
-#     # Hide all upstairs choices for the current menu
-#     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
-#     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
-#     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
-#     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
+    call psychic_attic_return_too_soon
+    # Hide all upstairs choices for the current menu
+    $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
+    $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
+    $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
+    $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
 
-#     return
+    return

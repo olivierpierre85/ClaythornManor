@@ -18,6 +18,7 @@ define hours_angle = 0
 
 define current_year = "1924"
 
+# var needed for imbricated menus choices
 define menu_level = -1
 define selected_choice = [None, None, None, None]
 define time_diff = [None, None, None, None]
@@ -99,7 +100,33 @@ label init_technical_variables:
         condition_friday = "current_day == 'Friday'"
         condition_friday_or_saturday = "current_day == 'Friday' or current_day == 'Saturday'"
         condition_sunday = "current_day == 'Sunday'"
-        
+
+        # Image for progress view
+        image_checkpoint = "images/ui/progress/rectangle_progress.png"
+        image_checkpoint_right = "images/ui/progress/rectangle_progress_right.png"          
+                          
+        image_checkpoint_start = "images/ui/progress/rectangle_small.png"
+        image_checkpoint_start_empty = "images/ui/progress/rectangle_small_empty.png"
+        image_checkpoint_start_selected = "images/ui/progress/rectangle_small_selected.png"
+        image_checkpoint_start_corner = "images/ui/progress/rectangle_small_corner.png"
+        image_checkpoint_start_line = "images/ui/progress/rectangle_small_line.png"
+        image_checkpoint_start_double_corner = "images/ui/progress/rectangle_small_double_corner.png"
+
+        image_checkpoint_straight_line ="images/ui/progress/rectangle_progress_straight_line.png"
+        image_checkpoint_three_sides ="images/ui/progress/rectangle_progress_three_sides.png"
+
+        # Fillers
+        image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
+        image_checkpoint_empty_small = "images/ui/progress/rectangle_small_empty.png"
+        image_checkpoint_empty_filler = "images/ui/progress/rectangle_filler_empty.png"
+
+        image_checkpoint_corner = "images/ui/progress/rectangle_progress_corner.png"
+        image_checkpoint_corner_merge = "images/ui/progress/rectangle_progress_corner_merge.png"          
+        image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
+        image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
+
+        # Endings
+        image_ending_question = "images/info_cards/question_mark_bw.png"
 
     return
 
@@ -115,3 +142,4 @@ label init_story_variables:
     call init_drunk
     
     return
+

@@ -116,6 +116,56 @@ label init_lad:
         Not a great <info:poor_drinker>, he is also not able to <info:drive> or <info:cook>.
         """
 
+        lad_progress = [
+            # First Line
+            [
+                Chapter(image_checkpoint_start, "start"), 
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "Evening", "Friday Evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "Morning", "Saturday Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "The Hunt", "Saturday - The Hunt"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "Afternoon", "Saturday Afternoon"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "Evening", "Saturday Evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "Morning", "Saturday Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "Afternoon", "Saturday Afternoon"),
+                Chapter(image_ending_question),
+            ],
+            # Second line, ...
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_no_hunt", "No Hunt", "Saturday - No Hunt"),
+                Chapter(image_checkpoint_corner_merge),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question, "ending", "gunned_down"),
+            ],
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "poisoned"),
+                Chapter(image_checkpoint_empty_filler),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question, "ending", "poisoned"),
+            ],
+                        [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "fell"),
+            ],
+        ]
+
         lad_details  = CharacterDetails(
             text_id = "lad", 
             locked = False,
@@ -130,6 +180,7 @@ label init_lad:
             intuitions = lad_intuitions,
             observations = lad_observations,
             objects = lad_objects,
+            progress = lad_progress,
             saved_variables = copy.deepcopy(lad_init_variables), # copy so the init variables can be use again.
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)

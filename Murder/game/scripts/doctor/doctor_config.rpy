@@ -51,6 +51,7 @@ label init_doctor:
             intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
+            progress = [],
         )
         doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
 
