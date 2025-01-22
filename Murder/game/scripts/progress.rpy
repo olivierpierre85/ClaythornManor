@@ -27,12 +27,15 @@ screen progress:
                             imagebutton:
                                 mouse "hover" 
                                 if char.text_id == current_storyline.text_id:
-                                    idle "images/characters/side/side " + char.text_id +".png" at character_progress
-                                else:                                
-                                    idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_progress
-                                    hover "images/characters/side/side " + char.text_id + ".png"
-                                if char.is_character_unlocked():
-                                    action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
+                                    # idle "images/characters/side/side " + char.text_id +".png" at character_progress
+                                    idle "images/characters/side_hover/side " + char.text_id + " hover.png" at character_progress
+                                else:                             
+                                    if char.is_character_unlocked():
+                                        idle "images/characters/side/side " + char.text_id + ".png" at character_progress
+                                        hover "images/characters/side_hover/side " + char.text_id + " hover.png"
+                                        action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
+                                    else:
+                                        idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_progress
 
                     hbox:
                         xpos 50
