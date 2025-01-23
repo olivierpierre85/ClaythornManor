@@ -103,8 +103,8 @@ label init_psychic:
                 Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_hunt", "The Hunt", "Saturday - The Hunt"),
                 Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_afternoon", "Afternoon", "Saturday Afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_evening", "Evening", "Saturday Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "Morning", "Saturday Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "Afternoon", "Saturday Afternoon"),
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "Morning", "Sunday Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "Afternoon", "Sunday Afternoon"),
                 Chapter(image_ending_question),
             ],
             # Second line, ...

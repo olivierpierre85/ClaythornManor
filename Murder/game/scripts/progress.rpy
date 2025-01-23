@@ -5,6 +5,16 @@ transform character_progress:
 transform selected_character:
     zoom 0.45
 
+transform blink:
+    # alpha 1.0  # Change in color
+    # linear 0.5 alpha 0.3
+    # linear 0.5 alpha 1.0
+    zoom 1.0
+    # Grow to 1.2x size over 0.5 seconds
+    linear 0.7 zoom 1.2
+    linear 0.7 zoom 1.0
+    repeat
+
 # Display of Progress tree
 screen progress:
 
@@ -145,7 +155,9 @@ screen progress:
                                         idle chapter.image_file
                                         # Don't show if the character hasn't reached the chapter yet
                                         if len(current_storyline.get_checkpoints_by_chapter(chapter.label))>0:
-                                            textbutton str(chapter.text):
+                                            $ should_blink = current_day.lower() in chapter.text_full.lower() and current_phase.lower() in chapter.text_full.lower()
+
+                                            textbutton chapter.text:
                                                 mouse "hover" 
                                                 action ShowMenu("storyline_details", chapter, current_storyline)
                                                 xoffset -20 
@@ -156,7 +168,9 @@ screen progress:
                                                 text_hover_color "#FFFFFF" 
                                                 text_font gui.name_text_font 
                                                 text_size 28
-                                                padding (25,25,25,25)
+                                                padding (25, 25, 25, 25)
+                                                if should_blink:
+                                                    at blink
                                         else:
                                             textbutton "?":
                                                 xoffset -20 
