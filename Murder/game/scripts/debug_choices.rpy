@@ -1,3 +1,46 @@
+# Init variables for debug
+label init_debug:
+    $ hide_notifications = True
+
+    $ skip_clock_movement = True
+
+    # Comment to test tutorials
+    $ seen_tutorial_description_hidden = True
+    $ seen_tutorial_clock = True
+    $ seen_tutorial_map = True
+    $ seen_tutorial_unlock_character = True
+    $ seen_tutorial_timeline = True
+
+    # show screen current_time
+    show screen in_game_menu_btn
+
+    call unlock_bedrooms
+
+    call unlock_psychic 
+    call unlock_lad
+    call unlock_doctor
+
+    # TODO Add ALL checkpoints for LAD
+    $ lad_details.observations.unlock('green_liquid')
+    $ lad_details.saved_variables['library_visited'] = True
+    $ lad_details.test_checkpoints()
+
+    $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
+    $ lad_details.objects.unlock('gun')
+    $ first_death = False
+    $ lad_details.intuitions.unlock('psychic_poisons')
+    $ lad_details.endings.unlock('gunned_down')
+
+    $ lad_details.reset_information()
+    # $ lad_details.objects.unlock('gun')
+    $ lad_details.important_choices.unlock('hunt')
+
+    $ hide_notifications = False
+
+    return
+
+
+# OLD options to go directly to a checkpoint
 label debug_choices:
     call debug_routes
 

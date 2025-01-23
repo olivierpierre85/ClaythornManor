@@ -138,10 +138,11 @@ init -100 python:
                     info.locked = False
                     info.discovered = True
 
-                    if self.notification_text:
-                        renpy.notify(self.notification_text)
-                    if self.notification_sound:
-                        renpy.play(self.notification_sound, "sound")
+                    if not hide_notifications:
+                        if self.notification_text:
+                            renpy.notify(self.notification_text)
+                        if self.notification_sound:
+                            renpy.play(self.notification_sound, "sound")
 
         def is_unlocked(self, text_id):
             for info in self.information_list:
@@ -215,17 +216,19 @@ init -100 python:
                     # Unlock the info
                     info.locked = False
                     info.discovered = True
-                    renpy.notify("You have found information about " + self.character_name)
-                    renpy.play("audio/sound_effects/writing_short.ogg", "sound")
+                    if not hide_notifications:
+                        renpy.notify("You have found information about " + self.character_name)
+                        renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
                     if self.all_description_hidden_unlocked():
-                        # Unlock a character
-                        renpy.pause(2)
-                        renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
-                        renpy.notify("You have unlock a new Character : " + self.character_name)
-                        if not seen_tutorial_unlock_character:
-                            seen_tutorial_unlock_character = True
-                            renpy.call('tutorial_unlock_character')
+                        if not hide_notifications:
+                            # Unlock a character
+                            renpy.pause(2)
+                            renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
+                            renpy.notify("You have unlock a new Character : " + self.character_name)
+                            if not seen_tutorial_unlock_character:
+                                seen_tutorial_unlock_character = True
+                                renpy.call('tutorial_unlock_character')
             
             if not seen_tutorial_description_hidden:
                 seen_tutorial_description_hidden = True

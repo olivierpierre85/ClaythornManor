@@ -42,7 +42,10 @@ label start():
     $ decision_tree = []
 
     # Debug Menu # TODO remove when prod
-    jump debug_choices
+    # Old function, now replaced by init_debug
+    # jump debug_choices
+
+    call init_debug
 
     # These display lines of dialogue.
     jump character_selection

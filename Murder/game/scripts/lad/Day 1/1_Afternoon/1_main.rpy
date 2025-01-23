@@ -14,9 +14,9 @@
 # --------------------------------------------
 label lad_introduction:
 
-    call black_screen_transition("Ted Harring", "Friday Afternoon")
-
     call change_time(17,30, 'Afternoon', 'Friday', hide_minutes = True)
+
+    call black_screen_transition("Ted Harring", "Friday Afternoon")
 
     $ change_room("train_inside")
 
