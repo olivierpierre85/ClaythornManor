@@ -270,8 +270,9 @@ init -100 python:
             intuitions,
             objects,
             observations, 
-            progress, 
+            progress,
             saved_variables = dict(),
+            test_checkpoints = [],
             locked = True,
             know_real_name = True,
             real_name = "",
@@ -295,6 +296,7 @@ init -100 python:
             self.progress = progress or [] 
             self.saved_variables = saved_variables or dict()
             self.checkpoints = []
+            self.test_checkpoints = test_checkpoints or []
             
 
         def get_name(self):
@@ -428,41 +430,12 @@ init -100 python:
         def __str__(self):
             return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
 
-
-# --------------------------------------------------------------------
-# --------------------------------------------------------------------
-# --------------------------------------------------------------------
-# --------------------------------------------------------------------
-# --------------------------------------------------------------------
-
-        def test_checkpoints(self):
+        def load_test_checkpoints(self):
             global current_run, current_position
 
-            # Define test data: a list of tuples in the format:
-            # (run_number, [list_of_labels], ending_label_if_any)
-            test_data = [
-                (1, [
-                    ('lad_day1_evening', [('object', 'gun')]), 
-                    ('lad_day2_morning', [('important_choice', 'hunt')]),
-                    ('lad_day2_hunt', []),
-                    ('lad_day2_afternoon', []),
-                    ('lad_day2_evening', []),
-                    ('lad_day3_morning', []),
-                    ('lad_day3_afternoon', []),
-                    ],
-                'gunned_down'),                
-                (2, [
-                    ('lad_day2_morning', [('object', 'gun'), ('important_choice', 'hunt')])
-                    ], 
-                'poisoned'),                
-                # (3, ['lad_day1_evening', 'lad_day2_morning'], 'poisoned'),                
-                # (4, ['lad_day2_morning', 'lad_day2_afternoon', 'lad_day2_evening'], None),                
-                # (5, ['lad_day2_afternoon', 'lad_day2_evening'], None),                
-                # (6, ['lad_day2_morning', 'lad_day2_afternoon'], None),
-            ]
-
+            print(self.checkpoints)
             # Loop through the predefined runs and labels
-            for run, labels, ending_label in test_data:
+            for run, labels, ending_label in self.test_checkpoints:
                 current_run = run
                 self.reset_information()
                 for label_id, unlocks in labels:

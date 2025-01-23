@@ -4,6 +4,8 @@ label init_lad:
     
     call lad_config_menu
 
+    call lad_config_checkpoints
+
     python:
         # Story Variables
         lad_init_variables = {
@@ -182,6 +184,7 @@ label init_lad:
             objects = lad_objects,
             progress = lad_progress,
             saved_variables = copy.deepcopy(lad_init_variables), # copy so the init variables can be use again.
+            test_checkpoints = lad_test_checkpoints,
         )
         lad = Character("lad_details.get_name()", image="lad", dynamic=True)
 
