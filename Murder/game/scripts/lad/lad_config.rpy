@@ -4,7 +4,7 @@ label init_lad:
     
     call lad_config_menu
 
-    call lad_config_checkpoints
+    call lad_config_progress
 
     python:
         # Story Variables
@@ -117,56 +117,6 @@ label init_lad:
         One day, he found himself in the right place at the right moment and, against all odds, did the right thing by <info:heroic_act>, which was enough for Lady Claythorn to invite him to her manor.
         Not a great <info:poor_drinker>, he is also not able to <info:drive> or <info:cook>.
         """
-
-        lad_progress = [
-            # First Line
-            [
-                Chapter(image_checkpoint_start, "start"), 
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "Evening", "Friday Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "Morning", "Saturday Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "The Hunt", "Saturday - The Hunt"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "Afternoon", "Saturday Afternoon"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "Evening", "Saturday Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "Morning", "Sunday Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "Afternoon", "Sunday Afternoon"),
-                Chapter(image_ending_question),
-            ],
-            # Second line, ...
-            [
-                Chapter(image_checkpoint_empty_small),    
-                Chapter(image_checkpoint_line),
-                Chapter(image_checkpoint_corner),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_no_hunt", "No Hunt", "Saturday - No Hunt"),
-                Chapter(image_checkpoint_corner_merge),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "gunned_down"),
-            ],
-            [
-                Chapter(image_checkpoint_empty_small),    
-                Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "poisoned"),
-                Chapter(image_checkpoint_empty_filler),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "poisoned"),
-            ],
-                        [
-                Chapter(image_checkpoint_empty_small),    
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "fell"),
-            ],
-        ]
 
         lad_details  = CharacterDetails(
             text_id = "lad", 

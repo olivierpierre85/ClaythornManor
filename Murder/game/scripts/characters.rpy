@@ -433,10 +433,19 @@ init -100 python:
         def load_test_checkpoints(self):
             global current_run, current_position
 
-            print(self.checkpoints)
+            # # loop over all character possible checkpoints
+            # for labels, ending_label in self.test_checkpoints:
+
+            #     # Todo for each choices possibilities, generate a checkpoint
+
+            # # Unlock all endings 
+            # # TODO How to show link between choices and ENDING? do we need to?
+
+            
             # Loop through the predefined runs and labels
-            for run, labels, ending_label in self.test_checkpoints:
-                current_run = run
+            test_run = 0
+            for labels, ending_label in self.test_checkpoints:
+                current_run = test_run + 1
                 self.reset_information()
                 for label_id, unlocks in labels:
                     for unlock_type, unlock_id in unlocks:
@@ -448,6 +457,7 @@ init -100 python:
                             self.observations.unlock(unlock_id)
 
                     self.add_checkpoint(label_id)
+
 
                 # If there's an ending, add an ending checkpoint
                 if ending_label:
