@@ -156,9 +156,6 @@ label doctor_introduction:
     We exchange a few pleasantries, then go to the car and begin our journey to Claythorn Manor.
     """
 
-
-# Rewrite this renpy code so the dialogs are in british english, but in the style of ernest hemingway.
-label test:
     $ change_room("inside_car")
 
     """
