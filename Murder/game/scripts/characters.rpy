@@ -391,7 +391,7 @@ init -100 python:
                     objects = copy.deepcopy(self.objects.get_unlocked()), 
                     observations = copy.deepcopy(self.observations.get_unlocked()),
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
-                    label_id = "", # Adjust as needed if you want a specific label or you can pass it as a parameter
+                    label_id = ending.text_id,
                     saved_variables = copy.deepcopy(current_character.saved_variables),
                     ending = ending
                 )

@@ -187,7 +187,9 @@ screen progress:
                                         if current_storyline.endings.is_unlocked(chapter.label):
                                             idle current_storyline.endings.get_item(chapter.label).image_file
                                             tooltip str(current_storyline.endings.get_item(chapter.label).content)  
-                                            action SetVariable("action_needed_fix", True)
+                                            # action SetVariable("action_needed_fix", True)
+                                            mouse "hover"
+                                            action ShowMenu("storyline_details", chapter, current_storyline, True)
                                         else:
                                             idle chapter.image_file 
                                 elif chapter.chapter_type == "start": 
@@ -251,7 +253,7 @@ screen info_card(item=None, item_type=None):
             tooltip icon_file + item.content
 
 
-screen storyline_details(selected_chapter, selected_char):
+screen storyline_details(selected_chapter, selected_char, ending = False):
 
     tag menu
 
@@ -287,6 +289,10 @@ screen storyline_details(selected_chapter, selected_char):
 
                     if selected_chapter == "start":
                         text "Checkpoints for Friday Afternoon":
+                            size 48
+                            font gui.name_text_font
+                    elif ending:
+                        text current_storyline.endings.get_item(selected_chapter.label).content:
                             size 48
                             font gui.name_text_font
                     else:
@@ -346,13 +352,14 @@ screen storyline_details(selected_chapter, selected_char):
                                     use info_card()#TODO empty image (empty Checkpoint emptu...)
 
                         # TODO REdo properly into a single button
-                        imagebutton:
-                            auto 'images/ui/button_%s_small.png'                       
-                            mouse "hover"
-                            action Show("confirm_restart")
-                        text "Restart From There":
-                            yoffset -70
-                            xoffset 90
+                        if not ending:
+                            imagebutton:
+                                auto 'images/ui/button_%s_small.png'                       
+                                mouse "hover"
+                                action Show("confirm_restart")
+                            text "Restart From There":
+                                yoffset -70
+                                xoffset 90
 
                     else:
                         text "Select a checkpoint to see details.":
