@@ -436,31 +436,50 @@ init -100 python:
             test_run = 0
 
             # Loop over each chapter in the new definition
-            for (label, possible_unlocks) in self.test_checkpoints:
+            # for (label, possible_unlocks) in self.test_checkpoints:
+            for (chapter_label, toggle_list, possible_endings) in self.test_checkpoints:
 
-                # Generate all combinations of booleans for the toggles.
-                # For N toggles, we get 2^N combinations.
-                for combination in itertools.product([False, True], repeat=len(possible_unlocks)):
+                # Generate all boolean combinations: 2^N for N toggles
+                for combination in itertools.product([False, True], repeat=len(toggle_list)):
                     test_run += 1
                     current_run = test_run
 
-                    # Typically, you'd reset or start a fresh state for each new "run".
+                    # Reset or start fresh for each new "run"
                     self.reset_information()
 
-                    # Apply each toggle if it is True in the combination
-                    for index, is_unlocked in enumerate(combination):
+                    # Unlock toggles based on the combination
+                    toggles_dict = {}
+                    for i, is_unlocked in enumerate(combination):
+                        unlock_type, unlock_id = toggle_list[i]
+                        # Keep track of "unlock_id => True/False" so the conditions can check them easily
+                        toggles_dict[unlock_id] = is_unlocked
+
+                        # Actually unlock them in your data structures if True
                         if is_unlocked:
-                            unlock_type, unlock_id = possible_unlocks[index]
                             if unlock_type == "object":
                                 self.objects.unlock(unlock_id)
                             elif unlock_type == "important_choice":
                                 self.important_choices.unlock(unlock_id)
                             elif unlock_type == "observation":
                                 self.observations.unlock(unlock_id)
-                            # Add other unlock types if needed
+                            # ... Add more unlock types if needed
 
-                    # Create a checkpoint at this label with the toggles that were unlocked
-                    self.add_checkpoint(label)
+                    # Now check if any ending condition(s) apply
+                    triggered_endings = []
+                    for ending_info in possible_endings:
+                        if ending_info['condition'](toggles_dict):
+                            triggered_endings.append(ending_info['label'])
+
+                    # If one or more endings are triggered, skip normal checkpoint
+                    # and add an ending checkpoint for each triggered ending.
+                    if triggered_endings:
+                        for ending_label in triggered_endings:
+                            self.endings.unlock(ending_label)
+                            ending_info = self.endings.get_item(ending_label)
+                            self.add_ending_checkpoint(ending_info)
+                    else:
+                        # No ending triggered => add a normal checkpoint
+                        self.add_checkpoint(chapter_label)
 
 
             return

@@ -56,30 +56,33 @@ label lad_config_progress:
     # all the variables changes that will impact future actions... Each meaningful choice must have an image
 
         lad_test_checkpoints = [
-            ('lad_day1_evening', []),
-            ('lad_day2_morning', [('important_choice', 'whisky'), ('important_choice', 'day1_drunk'), ('important_choice', 'downstairs_1')]),
-            # TODO finish
+            (
+                'lad_day1_evening',
+                [],
+                []
+            ),
+            (
+                'lad_day2_morning',  # The normal label
+                [
+                    ('important_choice', 'whisky'),
+                    ('important_choice', 'day1_drunk'),
+                    ('important_choice', 'downstairs_1')
+                ],
+                [
+                    # This ending triggers if the player took whisky but isn't drunk => "killed_by_whisky"
+                    {
+                        'label': 'poisoned',
+                        'condition': lambda t: t['whisky'] and (not t['day1_drunk'])
+                    },
+                    # # Another example of an early ending
+                    # {
+                    #     'label': 'flooded_basement',
+                    #     'condition': lambda t: t['downstairs_1'] and t['whisky']
+                    # }
+                    # # You can keep adding more endings for this label...
+                ]
+            ),
+            # Add more chapters with toggles & possible endings as needed...
         ]
-        # OLD CHEKCPOINTS
-        # lad_test_checkpoints = [
-        #         ([
-        #             ('lad_day1_evening', [('object', 'gun')]), 
-        #             ('lad_day2_morning', [('important_choice', 'hunt')]),
-        #             ('lad_day2_hunt', []),
-        #             ('lad_day2_afternoon', []),
-        #             ('lad_day2_evening', []),
-        #             ('lad_day3_morning', []),
-        #             ('lad_day3_afternoon', []),
-        #             ],
-        #         'gunned_down'),                
-        #         ([
-        #             ('lad_day2_morning', [('object', 'gun'), ('important_choice', 'hunt')])
-        #             ], 
-        #         'poisoned'),                
-        #         # (3, ['lad_day1_evening', 'lad_day2_morning'], 'poisoned'),                
-        #         # (4, ['lad_day2_morning', 'lad_day2_afternoon', 'lad_day2_evening'], None),                
-        #         # (5, ['lad_day2_afternoon', 'lad_day2_evening'], None),                
-        #         # (6, ['lad_day2_morning', 'lad_day2_afternoon'], None),
-        #     ]
 
     return
