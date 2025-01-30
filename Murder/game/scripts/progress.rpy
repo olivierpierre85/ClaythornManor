@@ -329,9 +329,8 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                             # # You can also add offsets, align, or style here
                             # xalign 0.5
                             # yoffset 20
-                            align (0.5, 0.0)
+                            align (0.0, 0.0)
                             yoffset 20
-                            xoffset -100
 
                             text "Restart from there":
                                 xoffset 90
