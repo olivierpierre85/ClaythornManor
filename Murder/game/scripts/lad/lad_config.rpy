@@ -58,10 +58,10 @@ label init_lad:
         # Character Class day1_drunk
         lad_important_choices = CharacterImportantChoiceList ([
             CharacterInformation(0, "whisky", "You drank whisky from Thomas Moody's flask", image_file="whisky"),
-            CharacterInformation(0, "day1_drunk", "You got drunk the first night", image_file="gun"),
-            CharacterInformation(0, "downstairs_1", "You attempted to visit downstairs", image_file="gun"),
-            CharacterInformation(0, "downstairs_2", "You tried again to reach downstairs", image_file="gun"),
-            CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="gun"),
+            CharacterInformation(0, "day1_drunk", "You got drunk the first night", image_file="drunk"),
+            CharacterInformation(0, "downstairs_1", "You attempted to visit downstairs", image_file="downstairs"),
+            CharacterInformation(0, "downstairs_2", "You tried again to reach downstairs", image_file="downstairs_2"),
+            CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="downstairs_3"),
             CharacterInformation(0, "hunt", "You decided to go hunting", image_file="gun"),
         ])
 
