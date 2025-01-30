@@ -159,7 +159,7 @@ screen progress:
 
                                             textbutton chapter.text:
                                                 mouse "hover" 
-                                                action ShowMenu("storyline_details", chapter, current_storyline)
+                                                action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline)]
                                                 xoffset -20 
                                                 yoffset -5
                                                 yalign 0.5
@@ -314,9 +314,11 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                                 textbutton str("Start"):
                                     action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
                             else:
-                                for checkpoint in selected_char.get_checkpoints_by_chapter(selected_chapter.label):
-                                    textbutton str(checkpoint.get_format_created()):
+                                for i, checkpoint in enumerate(selected_char.get_checkpoints_by_chapter(selected_chapter.label)):
+                                    textbutton "{}: {}".format(i, checkpoint.get_format_created()):
                                         action SetVariable("current_checkpoint", checkpoint)
+                                        if current_checkpoint == checkpoint:
+                                            text_color gui.accent_color
                     
                 # Right column: Details of the selected checkpoint
                 vbox:
