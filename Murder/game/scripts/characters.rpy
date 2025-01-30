@@ -431,7 +431,7 @@ init -100 python:
             return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
 
         def load_test_checkpoints(self):
-            global current_run, current_position
+            global current_run
 
             test_run = 0
 
