@@ -118,7 +118,7 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     #TODO if needed for the story about drunk and puking ADD here that the drunk asks for a drink
-    $ lad_details.saved_variables["day1_poisoned"] = True
+    $ lad_details.important_choices.unlock('whisky')
     $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
 
     broken """
@@ -225,8 +225,7 @@ label lad_day1_evening_billiard_room_bar_3:
     And another...
     """
 
-    $ lad_details.saved_variables["day1_poisoned"] = False
-    $ lad_details.saved_variables["day1_drunk"] = True
+    $ lad_details.important_choices.unlock('day1_drunk')
     # TODO add blur effect if drunk, puke noise... Or just black out 
 
     return

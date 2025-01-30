@@ -57,7 +57,7 @@ label lad_config_progress:
 
         new_lad_test_checkpoints = [
             ('lad_day1_evening', []),
-            ('lad_day2_morning', [('important_choice', 'hunt')]),
+            ('lad_day2_morning', [('important_choice', 'whisky'), ('important_choice', 'drunk'), ('important_choice', 'downstairs_1')]),
         ]
         
         lad_test_checkpoints = [

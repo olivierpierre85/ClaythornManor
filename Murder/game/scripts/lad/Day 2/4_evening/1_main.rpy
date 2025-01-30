@@ -80,7 +80,7 @@ label lad_day2_evening:
         I make it to the toilet just in time, emptying the contents of my stomach.
         """
 
-        if lad_details.saved_variables["day1_drunk"]:
+        if lad_details.important_choices.is_unlocked('day1_drunk'):
             
             """
             Drunk two days in a row.

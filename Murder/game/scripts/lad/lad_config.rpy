@@ -31,12 +31,9 @@ label init_lad:
             "attic_visited" : False,
             "has_met_maid" : False,
             "psychic_generic_other_guests_saturday_morning_ask" : False,
-            "has_try_sneaking_downstairs" : 0,
 
             "day1_evening_billiard_room_visited" : False,
             "day1_drinks" : 0,
-            "day1_poisoned" : False,
-            "day1_drunk" : False, # Means he drank poison, but rejected it (used again on day 2 evening with the captain)
             
             "day2_breakfast_follow" : False,
             "day2_hunt" : False,
@@ -58,9 +55,14 @@ label init_lad:
             "day3_downstairs_visited" : False
         }
 
-        # Character Class
+        # Character Class day1_drunk
         lad_important_choices = CharacterImportantChoiceList ([
-            CharacterInformation(0, "hunt", "You decided to go hunting", image_file="gun")
+            CharacterInformation(0, "whisky", "You drank whisky from Thomas Moody's flask", image_file="whisky"),
+            CharacterInformation(0, "day1_drunk", "You got drunk the first night", image_file="gun"),
+            CharacterInformation(0, "downstairs_1", "You attempted to visit downstairs", image_file="gun"),
+            CharacterInformation(0, "downstairs_2", "You tried again to reach downstairs", image_file="gun"),
+            CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="gun"),
+            CharacterInformation(0, "hunt", "You decided to go hunting", image_file="gun"),
         ])
 
         lad_endings = CharacterEndingList ([

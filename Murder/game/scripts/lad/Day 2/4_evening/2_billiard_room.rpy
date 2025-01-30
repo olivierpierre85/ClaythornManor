@@ -225,7 +225,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
     So I wouldn't shout "poison" the next time you see a green drink.
     """
 
-    if not lad_details.saved_variables["day1_drunk"]:
+    if not lad_details.important_choices.is_unlocked('whisky'):
 
         captain """
         Of course, if you had tasted the drink, it would be a different story.
@@ -242,7 +242,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
 
         But I bet they won't find anything unusual.
         """
-
+        # TODO what is that??????
         $ lad_details.saved_variables["day2_evening_taste_from_flask"] = True
 
     else:

@@ -148,7 +148,7 @@ label lad_day1_evening:
 
     $ stop_music()
 
-    if lad_details.saved_variables["day1_drunk"]:
+    if lad_details.important_choices.is_unlocked('day1_drunk'):
 
         """
         Wow, I'm not feeling well.
@@ -172,7 +172,7 @@ label lad_day1_evening:
 
     $ change_room('bedroom_lad')
 
-    if lad_details.saved_variables["day1_drunk"]:
+    if lad_details.important_choices.is_unlocked('day1_drunk'):
 
         """
         I hurry to my room.
@@ -196,16 +196,14 @@ label lad_day1_evening:
         Almost instantly, I fall asleep.
         """
 
-    if lad_details.saved_variables["day1_poisoned"]:
+    # If you drank whisky and didn't puke it, you done
+    if lad_details.important_choices.is_unlocked('whisky') and not lad_details.important_choices.is_unlocked('day1_drunk'):
 
         jump lad_ending_day1_poisoned
 
     else:
 
-
         jump lad_day2_morning
-        # TODO while testing full testing mode force always dying on first day
-        # jump lad_ending_day1_poisoned
         
     return
 

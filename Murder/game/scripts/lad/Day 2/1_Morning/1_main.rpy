@@ -35,7 +35,7 @@ label lad_day2_morning:
     """
 
 
-    if lad_details.saved_variables["day1_drunk"] :
+    if lad_details.important_choices.is_unlocked('day1_drunk'):
         
         """
         Oh my God, my head hurts.

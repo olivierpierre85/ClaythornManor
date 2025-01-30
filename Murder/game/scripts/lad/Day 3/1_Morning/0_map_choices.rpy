@@ -448,7 +448,7 @@ label lad_day3_morning_billiard_room:
     Mister Harring, you aren't considering drinking at this hour, are you?
     """
 
-    if lad_details.saved_variables["day1_drunk"] and lad_details.saved_variables["day2_drunk"]:
+    if lad_details.important_choices.is_unlocked('day1_drunk') and lad_details.saved_variables["day2_drunk"]:
         
         lad """
         I think a bit of sherry might be beneficial.
