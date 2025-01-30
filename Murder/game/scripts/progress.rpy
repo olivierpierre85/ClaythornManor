@@ -320,6 +320,25 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                                         if current_checkpoint == checkpoint:
                                             text_color gui.accent_color
                     
+                    if current_checkpoint and not ending:
+                        
+                        button:
+                            action Show("confirm_restart")
+                            background "images/ui/button_idle_small.png"
+                            hover_background "images/ui/button_hover_small.png"
+                            # # You can also add offsets, align, or style here
+                            # xalign 0.5
+                            # yoffset 20
+                            align (0.5, 0.0)
+                            yoffset 20
+                            xoffset -100
+
+                            text "Restart from there":
+                                xoffset 90
+                                # Optional text styling
+                                color "#FFFFFF"
+                                align (0.5, 0.5)
+
                 # Right column: Details of the selected checkpoint
                 vbox:
                     spacing 10
@@ -353,16 +372,20 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                                 for i_fill in range(grid_fill):
                                     use info_card()#TODO empty image (empty Checkpoint emptu...)
 
-                        # TODO REdo properly into a single button
-                        if not ending:
-                            imagebutton:
-                                yoffset 70
-                                auto 'images/ui/button_%s_small.png'                       
-                                mouse "hover"
-                                action Show("confirm_restart")
-                            text "Restart From There":
-                                yoffset 0
-                                xoffset 90
+                        # if not ending:
+                        #     button:
+                        #         action Show("confirm_restart")
+                        #         background "images/ui/button_idle_small.png"
+                        #         hover_background "images/ui/button_hover_small.png"
+                        #         # You can also add offsets, align, or style here
+                        #         xalign 0.5
+                        #         yoffset 20
+
+                        #         text "Restart from there":
+                        #             # Optional text styling
+                        #             color "#FFFFFF"
+                        #             xalign 0.5
+                        #             yalign 0.5
 
                     else:
                         text "Select a checkpoint to see details.":
