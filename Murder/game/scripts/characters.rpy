@@ -433,34 +433,38 @@ init -100 python:
         def load_test_checkpoints(self):
             global current_run, current_position
 
-            test_run = 0
+            # List to keep track of all possible combinations of choices up to each chapter
+            current_combinations = [[]]
 
-            # Loop over each chapter in the new definition
-            for (label, possible_unlocks) in self.test_checkpoints:
+            for chapter_idx, (chapter_label, choices) in enumerate(self.test_checkpoints):
+                # Generate all possible subsets of choices for the current chapter
+                chapter_subsets = []
+                for bits in itertools.product([0, 1], repeat=len(choices)):
+                    subset = [choices[i] for i, bit in enumerate(bits) if bit]
+                    chapter_subsets.append(subset)
 
-                # Generate all combinations of booleans for the toggles.
-                # For N toggles, we get 2^N combinations.
-                for combination in itertools.product([False, True], repeat=len(possible_unlocks)):
-                    test_run += 1
-                    current_run = test_run
+                # Generate new combinations by combining existing ones with current chapter's subsets
+                new_combinations = []
+                for existing_combo in current_combinations:
+                    for subset in chapter_subsets:
+                        new_combo = existing_combo + subset
+                        new_combinations.append(new_combo)
 
-                    # Typically, you'd reset or start a fresh state for each new "run".
+                # Update current_combinations to the new ones
+                current_combinations = new_combinations
+
+                # Create checkpoints for the current chapter's label with all combinations up to here
+                for combo in current_combinations:
                     self.reset_information()
-
-                    # Apply each toggle if it is True in the combination
-                    for index, is_unlocked in enumerate(combination):
-                        if is_unlocked:
-                            unlock_type, unlock_id = possible_unlocks[index]
-                            if unlock_type == "object":
-                                self.objects.unlock(unlock_id)
-                            elif unlock_type == "important_choice":
-                                self.important_choices.unlock(unlock_id)
-                            elif unlock_type == "observation":
-                                self.observations.unlock(unlock_id)
-                            # Add other unlock types if needed
-
-                    # Create a checkpoint at this label with the toggles that were unlocked
-                    self.add_checkpoint(label)
-
+                    # Apply all unlocks in the combination
+                    for unlock_type, unlock_id in combo:
+                        if unlock_type == "object":
+                            self.objects.unlock(unlock_id)
+                        elif unlock_type == "important_choice":
+                            self.important_choices.unlock(unlock_id)
+                        elif unlock_type == "observation":
+                            self.observations.unlock(unlock_id)
+                    # Add checkpoint for this chapter's label
+                    self.add_checkpoint(chapter_label)
 
             return
