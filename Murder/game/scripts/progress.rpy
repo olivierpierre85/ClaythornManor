@@ -331,7 +331,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                             font gui.name_text_font
                             color gui.accent_color
                         # IN GRID
-                        grid 5 2:
+                        grid 5 4:
                             yoffset 30
                             spacing 13
                             $ grid_fill = 10
@@ -354,11 +354,12 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                         # TODO REdo properly into a single button
                         if not ending:
                             imagebutton:
+                                yoffset 70
                                 auto 'images/ui/button_%s_small.png'                       
                                 mouse "hover"
                                 action Show("confirm_restart")
                             text "Restart From There":
-                                yoffset -70
+                                yoffset 0
                                 xoffset 90
 
                     else:

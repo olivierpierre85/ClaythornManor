@@ -62,6 +62,8 @@ label init_lad:
             CharacterInformation(0, "downstairs_1", "You attempted to visit downstairs", image_file="downstairs"),
             CharacterInformation(0, "downstairs_2", "You tried again to reach downstairs", image_file="downstairs_2"),
             CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="downstairs_3"),
+            CharacterInformation(0, "day2_drunk", "You got drunk the second night", image_file="drunk_2"),
+            CharacterInformation(0, "day3_drunk", "You got drunk the third night", image_file="drunk_3"),
             CharacterInformation(0, "hunt", "You decided to go hunting", image_file="gun"),
         ])
 
