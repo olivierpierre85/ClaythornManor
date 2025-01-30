@@ -55,30 +55,31 @@ label lad_config_progress:
     # For each checkpoint we need to identify all the meaningful choice possibilities, that means
     # all the variables changes that will impact future actions... Each meaningful choice must have an image
 
-        new_lad_test_checkpoints = [
+        lad_test_checkpoints = [
             ('lad_day1_evening', []),
             ('lad_day2_morning', [('important_choice', 'whisky'), ('important_choice', 'drunk'), ('important_choice', 'downstairs_1')]),
+            # TODO finish
         ]
-        
-        lad_test_checkpoints = [
-                ([
-                    ('lad_day1_evening', [('object', 'gun')]), 
-                    ('lad_day2_morning', [('important_choice', 'hunt')]),
-                    ('lad_day2_hunt', []),
-                    ('lad_day2_afternoon', []),
-                    ('lad_day2_evening', []),
-                    ('lad_day3_morning', []),
-                    ('lad_day3_afternoon', []),
-                    ],
-                'gunned_down'),                
-                ([
-                    ('lad_day2_morning', [('object', 'gun'), ('important_choice', 'hunt')])
-                    ], 
-                'poisoned'),                
-                # (3, ['lad_day1_evening', 'lad_day2_morning'], 'poisoned'),                
-                # (4, ['lad_day2_morning', 'lad_day2_afternoon', 'lad_day2_evening'], None),                
-                # (5, ['lad_day2_afternoon', 'lad_day2_evening'], None),                
-                # (6, ['lad_day2_morning', 'lad_day2_afternoon'], None),
-            ]
+        # OLD CHEKCPOINTS
+        # lad_test_checkpoints = [
+        #         ([
+        #             ('lad_day1_evening', [('object', 'gun')]), 
+        #             ('lad_day2_morning', [('important_choice', 'hunt')]),
+        #             ('lad_day2_hunt', []),
+        #             ('lad_day2_afternoon', []),
+        #             ('lad_day2_evening', []),
+        #             ('lad_day3_morning', []),
+        #             ('lad_day3_afternoon', []),
+        #             ],
+        #         'gunned_down'),                
+        #         ([
+        #             ('lad_day2_morning', [('object', 'gun'), ('important_choice', 'hunt')])
+        #             ], 
+        #         'poisoned'),                
+        #         # (3, ['lad_day1_evening', 'lad_day2_morning'], 'poisoned'),                
+        #         # (4, ['lad_day2_morning', 'lad_day2_afternoon', 'lad_day2_evening'], None),                
+        #         # (5, ['lad_day2_afternoon', 'lad_day2_evening'], None),                
+        #         # (6, ['lad_day2_morning', 'lad_day2_afternoon'], None),
+        #     ]
 
     return

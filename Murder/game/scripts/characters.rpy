@@ -433,36 +433,34 @@ init -100 python:
         def load_test_checkpoints(self):
             global current_run, current_position
 
-            # # loop over all character possible checkpoints
-            # for labels, ending_label in self.test_checkpoints:
-
-            #     # Todo for each choices possibilities, generate a checkpoint
-
-            # # Unlock all endings 
-            # # TODO How to show link between choices and ENDING? do we need to?
-
-            
-            # Loop through the predefined runs and labels
             test_run = 0
-            for labels, ending_label in self.test_checkpoints:
-                current_run = test_run + 1
-                self.reset_information()
-                for label_id, unlocks in labels:
-                    for unlock_type, unlock_id in unlocks:
-                        if unlock_type == "object":
-                            self.objects.unlock(unlock_id)
-                        elif unlock_type == "important_choice":
-                            self.important_choices.unlock(unlock_id)
-                        elif unlock_type == "observation":
-                            self.observations.unlock(unlock_id)
 
-                    self.add_checkpoint(label_id)
+            # Loop over each chapter in the new definition
+            for (label, possible_unlocks) in self.test_checkpoints:
 
+                # Generate all combinations of booleans for the toggles.
+                # For N toggles, we get 2^N combinations.
+                for combination in itertools.product([False, True], repeat=len(possible_unlocks)):
+                    test_run += 1
+                    current_run = test_run
 
-                # If there's an ending, add an ending checkpoint
-                if ending_label:
-                    self.endings.unlock(ending_label)
-                    ending_info = self.endings.get_item(ending_label)
-                    self.add_ending_checkpoint(ending_info)
+                    # Typically, you'd reset or start a fresh state for each new "run".
+                    self.reset_information()
+
+                    # Apply each toggle if it is True in the combination
+                    for index, is_unlocked in enumerate(combination):
+                        if is_unlocked:
+                            unlock_type, unlock_id = possible_unlocks[index]
+                            if unlock_type == "object":
+                                self.objects.unlock(unlock_id)
+                            elif unlock_type == "important_choice":
+                                self.important_choices.unlock(unlock_id)
+                            elif unlock_type == "observation":
+                                self.observations.unlock(unlock_id)
+                            # Add other unlock types if needed
+
+                    # Create a checkpoint at this label with the toggles that were unlocked
+                    self.add_checkpoint(label)
+
 
             return

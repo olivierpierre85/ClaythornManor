@@ -7,6 +7,7 @@ init -1000 python:
     import copy
     import textwrap
     import re
+    import itertools
 
     renpy.music.register_channel("clock", "sfx", loop=False)
     current_music = 'NONE'
