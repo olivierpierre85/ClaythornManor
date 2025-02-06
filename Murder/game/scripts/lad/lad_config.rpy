@@ -68,8 +68,8 @@ label init_lad:
         ])
 
         lad_endings = CharacterEndingList ([
-            CharacterInformation(1, "gunned_down", "You die stoned to death", image_file="gun_downed"), 
-            CharacterInformation(2, "poisoned", "You were poisoned", image_file="poisoned"), 
+            CharacterInformation(1, "poisoned", "You died in your sleep", image_file="poisoned"), 
+            CharacterInformation(2, "gunned_down", "You die stoned to death", image_file="gun_downed"), 
             CharacterInformation(3, "fell", "You fell on a picked fence", image_file="poisoned"), 
         ])
 
