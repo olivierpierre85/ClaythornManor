@@ -29,8 +29,6 @@ label lad_day2_hunt:
 
     $ play_music('upbeat', 1, fadein_val=10.0)
 
-    $ lad_details.saved_variables["day2_hunt"] = True
-
     """
     Well, I don't know if this is my best idea.
 

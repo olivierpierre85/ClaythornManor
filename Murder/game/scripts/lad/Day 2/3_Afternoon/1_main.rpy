@@ -24,7 +24,7 @@ label lad_day2_afternoon:
 
     $ change_room("great_hall", irisout)
     
-    if lad_details.saved_variables["day2_hunt"]:
+    if lad_details.important_choices.is_unlocked('hunt'):
 
         """
         Everything happened so quickly; it's all a blur.

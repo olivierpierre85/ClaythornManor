@@ -454,6 +454,5 @@ label lad_day2_evening_billiard_room_bar_4:
     """
 
     $ lad_details.saved_variables["day2_drunk"] = True
-    $ lad_details.saved_variables["day2_poisoned"] = False
 
     return

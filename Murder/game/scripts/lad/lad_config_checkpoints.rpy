@@ -24,7 +24,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "gunned_down", "Gunned Down", "You were kill by Gun Shot"),
+                Chapter(image_ending_question, "ending", "gunned_down"),
             ],
             [
                 Chapter(image_checkpoint_empty_small),    
@@ -62,27 +62,41 @@ label lad_config_progress:
                 []
             ),
             (
-                'lad_day2_morning',  # The normal label
+                'lad_day2_morning',
                 [
                     ('important_choice', 'whisky'),
                     ('important_choice', 'day1_drunk'),
                     ('important_choice', 'downstairs_1')
                 ],
                 [
-                    # This ending triggers if the player took whisky but isn't drunk => "killed_by_whisky"
                     {
                         'label': 'poisoned',
-                        'condition_id': 'poisoned'
+                        'condition_id': 'poisoned' # => cond_killed_by_whisky
                     },
-                    # # Another example of an early ending
-                    # {
-                    #     'label': 'flooded_basement',
-                    #     'condition': lambda t: t['downstairs_1'] and t['whisky']
-                    # }
-                    # # You can keep adding more endings for this label...
                 ]
             ),
-            # Add more chapters with toggles & possible endings as needed...
+            (
+                'lad_day2_hunt',
+                [                 
+                ],
+                []
+            ),
+            (
+                'lad_day2_no_hunt',
+                [              
+                ],
+                []
+            ),
+            (
+                'lad_day2_afternoon',
+                [   
+                    ('important_choice', 'hunt'),               
+                    ('important_choice', 'hunt_captain_host'),
+                    ('important_choice', 'hunt_doctor_drunk'), # TODO: hide one because they are exclusive
+                ],
+                []
+            ),
+            
         ]
 
     return

@@ -47,7 +47,6 @@ label init_lad:
             "day2_drunk" : False,
             "day2_evening_billiard_room_captain_talked" : False,
             "day2_evening_taste_from_flask" : False,
-            "day2_poisoned" : False,
 
             "day3_morning_captain_found" : False,
             "day3_ending" : "",
@@ -60,26 +59,33 @@ label init_lad:
             CharacterInformation(0, "whisky", "You drank whisky from Thomas Moody's flask", image_file="whisky"),
             CharacterInformation(0, "day1_drunk", "You got drunk the first night", image_file="drunk"),
             CharacterInformation(0, "downstairs_1", "You attempted to visit downstairs", image_file="downstairs"),
+            CharacterInformation(0, "hunt", "You decided to go hunting", image_file="hunt"),
+            CharacterInformation(0, "hunt_captain_host", "You hunted with a Captain and a Lady", image_file="hunt_captain_host"),
+            CharacterInformation(0, "hunt_doctor_drunk", "You hunted with a Doctor  and a Drunk", image_file="hunt_doctor_drunk"),
+
+            # TODO believe or not the psychic TODO image for psychic
+
             CharacterInformation(0, "downstairs_2", "You tried again to reach downstairs", image_file="downstairs_2"),
             CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="downstairs_3"),
             CharacterInformation(0, "day2_drunk", "You got drunk the second night", image_file="drunk_2"),
             CharacterInformation(0, "day3_drunk", "You got drunk the third night", image_file="drunk_3"),
-            CharacterInformation(0, "hunt", "You decided to go hunting", image_file="gun"),
         ])
 
         lad_endings = CharacterEndingList ([
-            CharacterInformation(1, "poisoned", "You died in your sleep", image_file="poisoned"), 
-            CharacterInformation(2, "gunned_down", "You die stoned to death", image_file="gun_downed"), 
-            CharacterInformation(3, "fell", "You fell on a picked fence", image_file="poisoned"), 
+            CharacterInformation(1, "poisoned", "You died in your sleep", image_file="deathbed"), 
+            CharacterInformation(2, "gunned_down", "You were kill by Gun Shot", image_file="gun_firing"), 
+            CharacterInformation(3, "fell", "You got impaled on a picket fence", image_file="fence"), 
+            CharacterInformation(4, "fell", "You escaped, alone", image_file="escape_alone"), 
         ])
 
         lad_intuitions = CharacterIntuitionList ([            
-                CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", image_file="gun")
+                CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", image_file="poison_food")
             ]
         )
 
         lad_observations = CharacterObservationList ([    
-                CharacterInformation(1, "green_liquid", "There was a green liquid next to Thomas Moody death bed.", image_file="poison") 
+                CharacterInformation(1, "green_liquid", "There was a green liquid on Thomas Moody night stand.", image_file="poison_bedstand") 
+                # TODO add seen car in observation =>
             ]
         )  
 
