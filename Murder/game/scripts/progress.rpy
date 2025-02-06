@@ -224,8 +224,10 @@ screen info_card(item=None, item_type=None):
                 icon_file = "{image=images/ui/objects_icon.png} "
             elif item_type == 'observation':
                 icon_file = "{image=images/ui/observation_icon.png} "
+            elif item_type == 'choice':
+                icon_file = "{image=images/ui/choice_icon.png} "
             else:
-                icon_file = "(choice?) "
+                icon_file = "???"
             
             if current_checkpoint:
                 if item_type == 'object':
@@ -361,11 +363,11 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                             
                             for item in current_storyline.objects.get_list():
                                 $ grid_fill -= 1
-                                use info_card(item, "objects")
+                                use info_card(item, "object")
 
                             for item in (current_storyline.observations.get_list()):
                                 $ grid_fill -= 1
-                                use info_card(item, "observations")
+                                use info_card(item, "observation")
                             
                             if grid_fill > 0 :
                                 for i_fill in range(grid_fill):
