@@ -9,6 +9,8 @@ init -1000 python:
     import re
     import itertools
 
+    import endings_conditions
+
     renpy.music.register_channel("clock", "sfx", loop=False)
     current_music = 'NONE'
     current_start_song = 1
@@ -92,6 +94,7 @@ label init_technical_variables:
         first_survive = True
 
         current_checkpoint = None
+        current_day = None
 
         action_needed_fix = False # Use to have a valid action that does nothing
 

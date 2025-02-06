@@ -72,7 +72,7 @@ label lad_config_progress:
                     # This ending triggers if the player took whisky but isn't drunk => "killed_by_whisky"
                     {
                         'label': 'poisoned',
-                        'condition': lambda t: t['whisky'] and (not t['day1_drunk'])
+                        'condition_id': 'poisoned'
                     },
                     # # Another example of an early ending
                     # {

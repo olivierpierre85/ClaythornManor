@@ -435,11 +435,9 @@ init -100 python:
 
             test_run = 0
 
-            # Loop over each chapter in the new definition
-            # for (label, possible_unlocks) in self.test_checkpoints:
             for (chapter_label, toggle_list, possible_endings) in self.test_checkpoints:
 
-                # Generate all boolean combinations: 2^N for N toggles
+                # Generate all boolean combinations
                 for combination in itertools.product([False, True], repeat=len(toggle_list)):
                     test_run += 1
                     current_run = test_run
@@ -447,11 +445,10 @@ init -100 python:
                     # Reset or start fresh for each new "run"
                     self.reset_information()
 
-                    # Unlock toggles based on the combination
+                    # Build a dictionary of toggles => bool
                     toggles_dict = {}
                     for i, is_unlocked in enumerate(combination):
                         unlock_type, unlock_id = toggle_list[i]
-                        # Keep track of "unlock_id => True/False" so the conditions can check them easily
                         toggles_dict[unlock_id] = is_unlocked
 
                         # Actually unlock them in your data structures if True
@@ -462,12 +459,13 @@ init -100 python:
                                 self.important_choices.unlock(unlock_id)
                             elif unlock_type == "observation":
                                 self.observations.unlock(unlock_id)
-                            # ... Add more unlock types if needed
+                            # etc.
 
                     # Now check if any ending condition(s) apply
                     triggered_endings = []
                     for ending_info in possible_endings:
-                        if ending_info['condition'](toggles_dict):
+                        condition_func = endings_conditions.CONDITIONS_DICT[ending_info['condition_id']]
+                        if condition_func(toggles_dict):
                             triggered_endings.append(ending_info['label'])
 
                     # If one or more endings are triggered, skip normal checkpoint
@@ -475,8 +473,8 @@ init -100 python:
                     if triggered_endings:
                         for ending_label in triggered_endings:
                             self.endings.unlock(ending_label)
-                            ending_info = self.endings.get_item(ending_label)
-                            self.add_ending_checkpoint(ending_info)
+                            ending_data = self.endings.get_item(ending_label)
+                            self.add_ending_checkpoint(ending_data)
                     else:
                         # No ending triggered => add a normal checkpoint
                         self.add_checkpoint(chapter_label)
