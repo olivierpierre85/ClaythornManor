@@ -27,9 +27,9 @@ label ending_generic:
         $ first_death = False
 
     python:
-        if not seen_tutorial_timeline:
-            seen_tutorial_timeline = True
-            renpy.call('tutorial_timeline')
+        if not seen_tutorial_progress:
+            seen_tutorial_progress = True
+            renpy.call('tutorial_progress')
 
         if full_testing_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")

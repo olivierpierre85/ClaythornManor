@@ -77,7 +77,7 @@ label tutorial_unlock_character:
 
     return
 
-label tutorial_timeline:
+label tutorial_progress:
     
     tutorial """
     You now have to restart the story. 

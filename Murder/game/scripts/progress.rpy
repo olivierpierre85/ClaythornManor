@@ -328,15 +328,9 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                             action Show("confirm_restart")
                             background "images/ui/button_idle_small.png"
                             hover_background "images/ui/button_hover_small.png"
-                            # # You can also add offsets, align, or style here
-                            # xalign 0.5
-                            # yoffset 20
-                            align (0.0, 0.0)
-                            yoffset 20
+                            xysize (430, 65)
 
                             text "Restart from there":
-                                xoffset 90
-                                # Optional text styling
                                 color "#FFFFFF"
                                 align (0.5, 0.5)
 

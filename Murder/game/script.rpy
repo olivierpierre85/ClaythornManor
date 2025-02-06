@@ -83,7 +83,7 @@ label init_technical_variables:
         seen_tutorial_description_hidden = False
         seen_tutorial_map = False
         seen_tutorial_unlock_character = False
-        seen_tutorial_timeline = False
+        seen_tutorial_progress = False
 
         current_run = 1 # TODO move
         current_position = 0 # TODO move

@@ -92,7 +92,7 @@ label lad_config_progress:
                 [   
                     ('important_choice', 'hunt'),               
                     ('important_choice', 'hunt_captain_host'),
-                    ('important_choice', 'hunt_doctor_drunk'), # TODO: hide one because they are exclusive
+                    # ('important_choice', 'hunt_doctor_drunk'), # hide one because they are exclusive
                 ],
                 []
             ),

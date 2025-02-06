@@ -342,7 +342,7 @@ screen navigation():
             if seen_tutorial_description_hidden:
                 textbutton _("Characters") action ShowMenu("characters")
             # textbutton _("Objects") action ShowMenu("objects")
-            if seen_tutorial_timeline:
+            if seen_tutorial_progress:
                 textbutton _("Progress") action ShowMenu("progress")
             textbutton _("Log") action ShowMenu("history")
             # textbutton _("About") action ShowMenu("about")
