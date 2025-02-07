@@ -23,7 +23,7 @@ label lad_day3_morning:
 
     $ change_room('bedroom_lad', irisout)
 
-    if lad_details.saved_variables["day2_believe_psychic"]:
+    if lad_details.important_choices.is_unlocked('trust_psychic'):
         call change_time(7, 30, "Morning", "Sunday", hide_minutes=True)
         # You talked to and believed the psychic
         # So she came to wake you at dawn
@@ -50,7 +50,7 @@ label lad_day3_morning:
     Mister Harring, are you there?
     """
 
-    if lad_details.saved_variables["day2_believe_psychic"]:
+    if lad_details.important_choices.is_unlocked('trust_psychic'):
 
         """
         Miss Baxter?
@@ -143,7 +143,7 @@ label lad_day3_morning:
         So, we start with...
         """
 
-    if lad_details.saved_variables["day2_believe_psychic"]:
+    if lad_details.important_choices.is_unlocked('trust_psychic'):
         $ time_left = 135
         call change_time(8, 45)
     else:

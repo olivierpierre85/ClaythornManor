@@ -199,7 +199,7 @@ label lad_day1_evening:
     # If you drank whisky and didn't puke it, you done
     if lad_details.important_choices.is_unlocked('whisky') and not lad_details.important_choices.is_unlocked('day1_drunk'):
 
-        jump lad_ending_day1_poisoned
+        jump lad_ending_day1_deathbed
 
     else:
 

@@ -29,7 +29,7 @@ label lad_config_progress:
             [
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "poisoned"),
+                Chapter(image_ending_question, "ending", "deathbed"),
                 Chapter(image_checkpoint_empty_filler),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
@@ -70,8 +70,8 @@ label lad_config_progress:
                 ],
                 [
                     {
-                        'label': 'poisoned',
-                        'condition_id': 'poisoned' # => cond_killed_by_whisky
+                        'label': 'deathbed',
+                        'condition_id': 'deathbed' # => cond_killed_by_whisky
                     },
                 ]
             ),
@@ -96,7 +96,28 @@ label lad_config_progress:
                 ],
                 []
             ),
-            
+            (
+                'lad_day2_evening',
+                [              
+                ],
+                []
+            ),
+            (
+                'lad_day3_morning',
+                [   
+                    ('important_choice', 'trust_psychic'),         
+                    ('important_choice', 'day2_drunk'),      
+                ],
+                []
+            ),
+            (
+                'lad_day3_afternoon',
+                [   
+                    ('object', 'gun'),         
+                    ('observation', 'seen_car'),      
+                ],
+                []
+            ),
         ]
 
     return

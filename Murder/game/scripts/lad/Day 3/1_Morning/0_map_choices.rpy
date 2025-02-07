@@ -241,7 +241,7 @@ label lad_day3_morning_garage:
 
     $ lad_details.description_hidden.unlock('drive')
 
-    $ lad_details.saved_variables["day3_seen_car"] = True
+    $ lad_details.important_choices.unlock('seen_car')
 
     return
 

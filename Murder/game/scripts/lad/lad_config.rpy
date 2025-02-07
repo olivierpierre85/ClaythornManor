@@ -41,7 +41,6 @@ label init_lad:
             "day2_evening_billiard_room_visited" : False,
             "day2_nohunt_has_visited_tea_room" : False,
             "day2_nohunt_bedroom_tries" : 0,
-            "day2_believe_psychic" : False,
 
             "day2_drinks" : 0,
             "day2_drunk" : False,
@@ -50,7 +49,6 @@ label init_lad:
 
             "day3_morning_captain_found" : False,
             "day3_ending" : "",
-            "day3_seen_car" : False,
             "day3_downstairs_visited" : False
         }
 
@@ -63,19 +61,22 @@ label init_lad:
             CharacterInformation(0, "hunt_captain_host", "You hunted with a Captain and a Lady", image_file="hunt_captain_host"),
             CharacterInformation(0, "hunt_doctor_drunk", "You hunted with a Doctor  and a Drunk", image_file="hunt_doctor_drunk"),
 
-            # TODO believe or not the psychic TODO image for psychic
-
             CharacterInformation(0, "downstairs_2", "You tried again to reach downstairs", image_file="downstairs_2"),
-            CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="downstairs_3"),
             CharacterInformation(0, "day2_drunk", "You got drunk the second night", image_file="drunk_2"),
+            CharacterInformation(0, "trust_psychic", "You decided to trust Amelia Baxter", image_file="trust_psychic"),
+            
+            CharacterInformation(0, "abandoned_psychic", "You abandoned Amelia Baxter and left the manor", image_file="abandoned_psychic"),
+            # DO we need the alternative? You left ? 
+            CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="downstairs_3"),
             CharacterInformation(0, "day3_drunk", "You got drunk the third night", image_file="drunk_3"),
         ])
 
         lad_endings = CharacterEndingList ([
-            CharacterInformation(1, "poisoned", "You died in your sleep", image_file="deathbed"), 
+            CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed"), 
             CharacterInformation(2, "gunned_down", "You were kill by Gun Shot", image_file="gun_firing"), 
+            CharacterInformation(1, "poisoned", "You died in your sleep", image_file="deathbed"), 
             CharacterInformation(3, "fell", "You got impaled on a picket fence", image_file="fence"), 
-            CharacterInformation(4, "fell", "You escaped, alone", image_file="escape_alone"), 
+            CharacterInformation(4, "escape", "You escaped, alone", image_file="escape_alone"), 
         ])
 
         lad_intuitions = CharacterIntuitionList ([            
@@ -84,14 +85,16 @@ label init_lad:
         )
 
         lad_observations = CharacterObservationList ([    
-                CharacterInformation(1, "green_liquid", "There was a green liquid on Thomas Moody night stand.", image_file="poison_bedstand") 
+                CharacterInformation(1, "green_liquid", "There was a green liquid on Thomas Moody night stand.", image_file="poison_bedstand"), 
+                CharacterInformation(1, "seen_car", "There is a car in the basement, but without gas", image_file="seen_car"),
                 # TODO add seen car in observation =>
             ]
         )  
 
         lad_objects = CharacterObjectList([  
-                CharacterInformation(1, "gun", "A empty handgun found in the gun room", image_file="gun"),
-                CharacterInformation(2, "burned_letter", "A burned letter found in Samuel Manning's room", image_file="burned_letter")
+                CharacterInformation(1, "gun", "You took a empty handgun found in the gun room", image_file="gun"),
+                CharacterInformation(2, "burned_letter", "A burned letter found in Samuel Manning's room", image_file="burned_letter"),
+                # TODO: Add GAS ? Bullets ? Here or for someone else?
             ],
         )
 

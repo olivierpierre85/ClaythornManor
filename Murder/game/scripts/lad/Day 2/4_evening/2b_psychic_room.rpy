@@ -31,7 +31,7 @@ label lad_day2_believe_psychic:
     Thanks.
     """
 
-    $ lad_details.saved_variables["day2_believe_psychic"] = True
+    $ lad_details.important_choices.unlock('trust_psychic')
 
     return
 

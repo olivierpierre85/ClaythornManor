@@ -61,7 +61,7 @@ screen progress:
                                 color gui.accent_color
                             hbox:
                                 yoffset 10
-                                spacing 25
+                                spacing 15
                                 for item in current_storyline.endings.get_list():
                                     imagebutton:
                                         if item.locked:
@@ -80,7 +80,7 @@ screen progress:
                                 color gui.accent_color
                             hbox:
                                 yoffset 10
-                                spacing 25
+                                spacing 15
                                 for item in current_storyline.intuitions.get_list():
                                     imagebutton:
                                         if item.locked:
@@ -350,37 +350,22 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                         grid 5 4:
                             yoffset 30
                             spacing 13
-                            $ grid_fill = 10
+                            # $ grid_fill = 20
                             for item in current_storyline.important_choices.get_list():
-                                $ grid_fill -= 1
+                                # $ grid_fill -= 1
                                 use info_card(item, "choice")
                             
                             for item in current_storyline.objects.get_list():
-                                $ grid_fill -= 1
+                                # $ grid_fill -= 1
                                 use info_card(item, "object")
 
                             for item in (current_storyline.observations.get_list()):
-                                $ grid_fill -= 1
+                                # $ grid_fill -= 1
                                 use info_card(item, "observation")
                             
-                            if grid_fill > 0 :
-                                for i_fill in range(grid_fill):
-                                    use info_card()#TODO empty image (empty Checkpoint emptu...)
-
-                        # if not ending:
-                        #     button:
-                        #         action Show("confirm_restart")
-                        #         background "images/ui/button_idle_small.png"
-                        #         hover_background "images/ui/button_hover_small.png"
-                        #         # You can also add offsets, align, or style here
-                        #         xalign 0.5
-                        #         yoffset 20
-
-                        #         text "Restart from there":
-                        #             # Optional text styling
-                        #             color "#FFFFFF"
-                        #             xalign 0.5
-                        #             yalign 0.5
+                            # if grid_fill > 0 :
+                            #     for i_fill in range(grid_fill):
+                            #         use info_card()#TODO empty image (empty Checkpoint emptu...)
 
                     else:
                         text "Select a checkpoint to see details.":

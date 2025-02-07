@@ -71,10 +71,10 @@ label survived_generic:
 
     return
 
-label lad_ending_day1_poisoned:
+label lad_ending_day1_deathbed:
 
-    $ lad_details.endings.unlock('poisoned')
-    $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('poisoned'))
+    $ lad_details.endings.unlock('deathbed')
+    $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('deathbed'))
     
     call death_screen_transition
 

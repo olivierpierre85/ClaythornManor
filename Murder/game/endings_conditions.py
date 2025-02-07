@@ -6,7 +6,7 @@ def cond_killed_by_whisky(toggles):
 
 # Create the conditions dictionary.
 CONDITIONS_DICT = {
-    "poisoned": cond_killed_by_whisky,
+    "deathbed": cond_killed_by_whisky,
     # "flooded_basement": cond_flooded_basement,
     # add more conditions as needed...
 }
