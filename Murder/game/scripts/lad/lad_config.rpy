@@ -65,7 +65,8 @@ label init_lad:
             CharacterInformation(0, "day2_drunk", "You got drunk the second night", image_file="drunk_2"),
             CharacterInformation(0, "trust_psychic", "You decided to trust Amelia Baxter", image_file="trust_psychic"),
             
-            CharacterInformation(0, "abandoned_psychic", "You abandoned Amelia Baxter and left the manor", image_file="abandoned_psychic"),
+            CharacterInformation(0, "abandoned_psychic", "You abandoned Amelia Baxter and left the manor", image_file="leave_manor"),
+            CharacterInformation(0, "protect_food", "You prevented the switching of your plate", image_file="poison_food"),
             # DO we need the alternative? You left ? 
             CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="downstairs_3"),
             CharacterInformation(0, "day3_drunk", "You got drunk the third night", image_file="drunk_3"),
@@ -73,10 +74,10 @@ label init_lad:
 
         lad_endings = CharacterEndingList ([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed"), 
-            CharacterInformation(2, "gunned_down", "You were kill by Gun Shot", image_file="gun_firing"), 
-            CharacterInformation(1, "poisoned", "You died in your sleep", image_file="deathbed"), 
-            CharacterInformation(3, "fell", "You got impaled on a picket fence", image_file="fence"), 
-            CharacterInformation(4, "escape", "You escaped, alone", image_file="escape_alone"), 
+            CharacterInformation(2, "gunned_down", "You were kill by gun shot", image_file="gun_firing"), 
+            CharacterInformation(3, "poisoned", "Your food was poisoned", image_file="poison_food"), 
+            CharacterInformation(4, "fell", "You got impaled on a picket fence", image_file="fence"), 
+            CharacterInformation(5, "escape", "You escaped, alone", image_file="escape_alone"), 
         ])
 
         lad_intuitions = CharacterIntuitionList ([            

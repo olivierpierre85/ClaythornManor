@@ -48,8 +48,8 @@ label lad_day3_afternoon:
     call run_menu(lad_day3_escape_menu)
 
     # TODO: Handle possible endings, add more logic for ending names
-    if lad_details.saved_variables["day3_ending"] == "gun_downed":
-        jump lad_gun_downed_ending
+    if lad_details.saved_variables["day3_ending"] == "gunned_down":
+        jump lad_gunned_down_ending
 
     elif lad_details.saved_variables["day3_ending"] ==  "poisoned":
         jump lad_ending_day3_poisoned

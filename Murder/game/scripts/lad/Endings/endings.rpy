@@ -97,12 +97,12 @@ label lad_ending_day1_deathbed:
     jump ending_generic
 
 # DAY 3
-label lad_gun_downed_ending:
+label lad_gunned_down_ending:
 
     call death_screen_transition
 
     # TODO ONE declaration of ENDINGs (not in characterINformation)
-    $ lad_details.add_ending_checkpoint(ending = CharacterInformation(1, "gunned_down", "You die stoned to death", image_file="gun_downed"))
+    $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('gunned_down'))
     """
     Well, you're dead.
 

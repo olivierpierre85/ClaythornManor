@@ -49,7 +49,7 @@ label init_psychic:
         psychic_important_choices = CharacterImportantChoiceList([])
         
         psychic_endings = CharacterEndingList ([
-            CharacterInformation(1, "burned", "You burn with the Manor", image_file="gun_downed"), 
+            CharacterInformation(1, "burned", "You burn with the Manor", image_file="gunned_down"), 
             CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun"),
             CharacterInformation(2, "escape", "You escape with Ted Harring", image_file="gun"),
         ])

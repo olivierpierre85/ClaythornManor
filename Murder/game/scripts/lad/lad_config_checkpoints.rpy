@@ -12,7 +12,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "Evening", "Saturday Evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "Morning", "Sunday Morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "Afternoon", "Sunday Afternoon"),
-                Chapter(image_ending_question),
+                Chapter(image_ending_question, "ending", "poisoned"),
             ],
             # Second line, ...
             [
@@ -36,7 +36,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "poisoned"),
+                Chapter(image_ending_question, "ending", "fell"),
             ],
                         [
                 Chapter(image_checkpoint_empty_small),    
@@ -47,7 +47,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "fell"),
+                Chapter(image_ending_question, "ending", "escape"),
             ],
         ]
 
@@ -71,7 +71,7 @@ label lad_config_progress:
                 [
                     {
                         'label': 'deathbed',
-                        'condition_id': 'deathbed' # => cond_killed_by_whisky
+                        'condition_id': 'lad_deathbed'
                     },
                 ]
             ),
@@ -106,7 +106,8 @@ label lad_config_progress:
                 'lad_day3_morning',
                 [   
                     ('important_choice', 'trust_psychic'),         
-                    ('important_choice', 'day2_drunk'),      
+                    ('important_choice', 'day2_drunk'),  
+                    ('important_choice', 'downstairs_2'),  
                 ],
                 []
             ),
@@ -116,7 +117,34 @@ label lad_config_progress:
                     ('object', 'gun'),         
                     ('observation', 'seen_car'),      
                 ],
-                []
+                [
+                ]
+            ),
+            (
+                'lad_day3_endings_fake_chapter',
+                [   
+                    ('object', 'gun'),         
+                    ('important_choice', 'abandoned_psychic'),      
+                    ('important_choice', 'protect_food'),   
+                ],
+                [
+                    {
+                        'label': 'gunned_down',
+                        'condition_id': 'lad_gunned_down'
+                    },
+                    {
+                        'label': 'poisoned',
+                        'condition_id': 'lad_poisoned'
+                    },
+                    {
+                        'label': 'fell',
+                        'condition_id': 'lad_fell'
+                    },
+                    {
+                        'label': 'escape',
+                        'condition_id': 'lad_escape'
+                    },
+                ]
             ),
         ]
 

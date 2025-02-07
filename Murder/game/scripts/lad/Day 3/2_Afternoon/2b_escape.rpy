@@ -202,7 +202,7 @@ label lad_day3_escape:
 
         play sound gun
 
-        $ lad_details.saved_variables["day3_ending"] = "gun_downed"
+        $ lad_details.saved_variables["day3_ending"] = "gunned_down"
 
         # the captain is dead too, but the killer was lurking in the forest and kills the captain 
     else:

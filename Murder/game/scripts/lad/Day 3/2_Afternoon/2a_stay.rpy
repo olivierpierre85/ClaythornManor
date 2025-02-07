@@ -165,6 +165,8 @@ label lad_day3_afternoon_toilet:
 
 label lad_day3_afternoon_no_toilet:
 
+    $ lad_details.important_choices.unlock('protect_food')
+
     """
     Instead of going to my room, I go down the stairs and return to the dining room.
     """
