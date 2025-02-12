@@ -4,6 +4,8 @@ label init_psychic:
     
     call psychic_config_menu
 
+    call psychic_config_progress
+
     python:
         psychic_name = "Amelia Baxter"
         # Story Variables
@@ -94,46 +96,6 @@ label init_psychic:
         """
         # LATER  you discover that she is actually 42, and full story is told
 
-        psychic_progress = [
-            # First Line
-            [
-                Chapter(image_checkpoint_start, "start"), 
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day1_evening", "Evening", "Friday Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_morning", "Morning", "Saturday Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_hunt", "The Hunt", "Saturday - The Hunt"),
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_afternoon", "Afternoon", "Saturday Afternoon"),
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_evening", "Evening", "Saturday Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "Morning", "Sunday Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "Afternoon", "Sunday Afternoon"),
-                Chapter(image_ending_question),
-            ],
-            # Second line, ...
-            [
-                Chapter(image_checkpoint_empty_small),    
-                Chapter(image_checkpoint_line),
-                Chapter(image_checkpoint_line),
-                Chapter(image_checkpoint_line),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_line),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "burned"),
-            ],
-            [
-                Chapter(image_checkpoint_empty_small),    
-                Chapter(image_checkpoint_corner),
-                Chapter(image_checkpoint_three_sides),
-                Chapter(image_checkpoint_three_sides),
-                Chapter(image_checkpoint_straight_line),
-                Chapter(image_checkpoint_three_sides),
-                Chapter(image_ending_question, "ending", "poisoned"),
-                Chapter(image_checkpoint_empty_filler),
-                Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "shot"),
-            ],
-        ]
-
-
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
             locked = True,
@@ -149,7 +111,8 @@ label init_psychic:
             observations = psychic_observations,
             objects = CharacterObjectList([]),
             progress = psychic_progress,
-            saved_variables = psychic_init_variables
+            saved_variables = copy.deepcopy(psychic_init_variables),
+            test_checkpoints = psychic_test_checkpoints,
         )
         psychic = Character("psychic_details.get_name()", image="psychic", dynamic=True)
 

@@ -17,27 +17,13 @@ label init_debug:
     call unlock_bedrooms
 
     call unlock_psychic 
+    $ psychic_details.load_test_checkpoints()
     
     call unlock_lad
     $ lad_details.load_test_checkpoints()
     $ lad_details.intuitions.unlock('psychic_poisons')
     
     call unlock_doctor
-
-    # TODO Add ALL checkpoints for LAD
-    # $ lad_details.observations.unlock('green_liquid')
-    # $ lad_details.saved_variables['library_visited'] = True
-    
-
-    # $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
-    # $ lad_details.objects.unlock('gun')
-    # $ first_death = False
-    # $ lad_details.intuitions.unlock('psychic_poisons')
-    # $ lad_details.endings.unlock('gunned_down')
-
-    # $ lad_details.reset_information()
-    # # $ lad_details.objects.unlock('gun')
-    # $ lad_details.important_choices.unlock('hunt')
 
     $ hide_notifications = False
 

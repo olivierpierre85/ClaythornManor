@@ -170,6 +170,7 @@ screen progress:
                                                 text_size 28
                                                 padding (25, 25, 25, 25)
                                                 if should_blink:
+                                                    text_color "#FFFFFF"
                                                     at blink
                                         else:
                                             textbutton "?":
