@@ -71,7 +71,9 @@ define gui.interface_text_font = "gui/font/Jost-Light.ttf"
 
 define gui.clock_text_font = "gui/font/PlayfairDisplay-Italic-VariableFont_wght.ttf"
 
-define gui.map_writing_font = "gui/font/PermanentMarker-Regular.ttf"
+# define gui.map_writing_font = "gui/font/PermanentMarker-Regular.ttf"
+define gui.map_writing_font = "gui/font/RockSalt-Regular.ttf"
+
 
 ## The size of normal dialogue text.
 define gui.text_size = 33

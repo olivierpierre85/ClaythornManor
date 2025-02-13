@@ -175,7 +175,7 @@ screen map_information:
         if info.floor == selected_floor and info.active:
                 text info.name:
                     pos info.area_points
-                    size 20
+                    size 16
                     color gui.map_writing_color                    
                     font gui.map_writing_font
 
