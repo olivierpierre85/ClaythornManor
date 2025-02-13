@@ -152,7 +152,7 @@ label lad_day2_breakfast_eat:
     We'll just have to wait and see.
     """
 
-    """
+    lad """
     You're right.
 
     We should probably talk about something else.

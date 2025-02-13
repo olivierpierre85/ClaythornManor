@@ -123,7 +123,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     But not in the same outrageous manner as other nations.
 
-    At least, looting on the part of British troops was carried out in the most orderly manner.
+    At least, looting on the part of British troops was carried out in the most orderly fashion.
 
     We held loot auctions every day except Sunday in front of the main gate to the British Legation.
 
