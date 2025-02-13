@@ -54,6 +54,9 @@ define gui.interface_text_color = u'#ffffff'
 ## A golden color used as an accent for tutorials or highlighted sections
 define gui.highlight_color = u'#DBB100'
 
+## A golden color used as an accent for tutorials or highlighted sections
+define gui.map_writing_color = u'#000000'
+
 
 ## Fonts and Font Sizes ########################################################
 
@@ -67,6 +70,8 @@ define gui.name_text_font = "gui/font/Redressed.ttf"
 define gui.interface_text_font = "gui/font/Jost-Light.ttf"
 
 define gui.clock_text_font = "gui/font/PlayfairDisplay-Italic-VariableFont_wght.ttf"
+
+define gui.map_writing_font = "gui/font/PermanentMarker-Regular.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33

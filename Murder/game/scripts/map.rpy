@@ -175,9 +175,9 @@ screen map_information:
         if info.floor == selected_floor and info.active:
                 text info.name:
                     pos info.area_points
-                    color gui.hover_muted_color
-                    size 30
-                    font "gui/font/BurtonScratch-Regular.ttf"
+                    size 20
+                    color gui.map_writing_color                    
+                    font gui.map_writing_font
 
 screen in_game_map_menu(timed_menu):
 
