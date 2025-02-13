@@ -17,6 +17,8 @@ transform blink:
 
 # Display of Progress tree
 screen progress:
+    
+    on "show" action SetVariable("current_checkpoint", None)
 
     tag menu
 

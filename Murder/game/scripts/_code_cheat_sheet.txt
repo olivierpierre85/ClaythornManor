@@ -29,3 +29,10 @@ $ play_music('mysterious', 2)
 $ stop_music()
 
 play sound gun
+
+
+
+# Init a var at screen opening
+screen progress:
+    
+    on "show" action SetVariable("current_checkpoint", None)

@@ -43,7 +43,12 @@ label tutorial_description_hidden:
     It gives you an estimation of how much essential information has been unlocked, as well as a complete description of a character.
 
     At the beginning, the descriptions are riddled with holes. It's up to you to fill those holes to reveal someone's true story.
+
+    Check out for yourself.
     """
+
+    $ _game_menu_screen = "characters"
+    $ renpy.call_in_new_context("_game_menu", "navigation")
 
     return
 
@@ -52,12 +57,15 @@ label tutorial_description_hidden:
 label tutorial_map:
 
     tutorial """
-    Well done, you just found new information about the manor. 
+    Well done, you just found new information about the Manor. 
     
-    As a result, additional details have been added to the manor map to assist you in navigating the house. 
+    As a result, additional details have been added to the Manor map to assist you in navigating the house. 
 
-    You can access this information by navigating to the "Map" menu.
+    You can access this information by navigating to the "Map" menu here.
     """
+
+    $ _game_menu_screen = "manor_map"
+    $ renpy.call_in_new_context("_game_menu", "navigation")
 
     return
 
@@ -83,7 +91,14 @@ label tutorial_progress:
     You now have to restart the story. 
     
     However, there is no need to worry as you can use the skip button located at the bottom right of the screen to skip over any previously encountered dialogues. 
+    """
     
+    # TODO check if not mobile version =>
+    tutorial """
+    You can also use the "CTRL" key on you keyboard.
+    """
+    
+    tutorial """
     Furthermore, you now have access to the "Progress" menu, which provides you with an overview of each character's past progress. 
     
     It is possible to restart the story from various checkpoints that occurred during the weekend's events. 

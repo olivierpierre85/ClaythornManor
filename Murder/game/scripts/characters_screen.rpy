@@ -1,5 +1,6 @@
 # Character SCREENS
 screen characters:
+    modal True
     tag menu
     use game_menu(_("Characters")):
         fixed:

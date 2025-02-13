@@ -315,7 +315,9 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-screen navigation():
+screen navigation(tag="menu"):
+    modal True
+
     style_prefix "navigation"
     # TODO configure MENU 
 
@@ -337,8 +339,9 @@ screen navigation():
             textbutton _("Return") action Return() 
         # In game menu
         else:
-            # if seen_tutorial_map: # TODO: Not working because map default first view
-            textbutton _("Map") action ShowMenu("manor_map")
+            textbutton _("Resume") action Return() 
+            if seen_tutorial_map: # TODO: Not working because map default first view
+                textbutton _("Map") action ShowMenu("manor_map")
             if seen_tutorial_description_hidden:
                 textbutton _("Characters") action ShowMenu("characters")
             # textbutton _("Objects") action ShowMenu("objects")
@@ -349,7 +352,7 @@ screen navigation():
             textbutton _("Help") action ShowMenu("help")
             textbutton _("Options") action ShowMenu("preferences")
             # textbutton _("Save") action ShowMenu("save")
-            textbutton _("Resume") action Return() 
+
             textbutton _("Quit") action Show("confirmbutton")
 
 

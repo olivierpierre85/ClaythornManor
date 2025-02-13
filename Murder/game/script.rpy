@@ -44,10 +44,6 @@ label start():
     $ full_testing_mode_char = "lad"
     $ decision_tree = []
 
-    # Debug Menu # TODO remove when prod
-    # Old function, now replaced by init_debug
-    # jump debug_choices
-
     call init_debug
 
     # These display lines of dialogue.
@@ -64,6 +60,8 @@ label init_technical_variables:
         # Technical Variables
         # TODO delete those in character select AND start again
         record_mode = False
+
+        hide_notifications = False
 
         show_minutes_movement = 0
         show_hours_movement = 0
