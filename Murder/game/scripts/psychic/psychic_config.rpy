@@ -35,8 +35,6 @@ label init_psychic:
             "knows_captain_real_origin" : False,
             "day1_evening_billiard_room_visited" : False,
             "portrait_gallery_visited": False,
-            "attic_visited": False,
-            "knows_lord_name": False,
             "book_read": False,
             "day2_nohunt_bedroom_tries": 0,
             "day2_nohunt_has_visited_tea_room": False,
@@ -48,21 +46,26 @@ label init_psychic:
             "day1_evening_talk_to_captain": False,
         }
 
-        psychic_important_choices = CharacterImportantChoiceList([])
+        psychic_important_choices = CharacterImportantChoiceList([
+            CharacterInformation(0, "steal_gun", "You tried to take Rosalind's gun by force", image_file="gun"), 
+        ])
         
         psychic_endings = CharacterEndingList ([
-            CharacterInformation(1, "burned", "You burn with the Manor", image_file="gunned_down"), 
-            CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun"),
-            CharacterInformation(2, "escape", "You escape with Ted Harring", image_file="gun"),
+            CharacterInformation(0, "fell", "You fell down the stairs", image_file="gunned_down"),
+            CharacterInformation(1, "burned", "You were burned with the Manor", image_file="gunned_down"), 
+            CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing"),
+            CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape"),
         ])
 
-        psychic_observations = CharacterObservationList ([    
-                CharacterInformation(1, "lord", "Lord Claythorn is 111 years old", image_file="poison") 
+        psychic_observations = CharacterObservationList ([ 
+                CharacterInformation(0, "visited_attic", "You visited the attic and met the Lord of this place", image_file="lord"),   
+                CharacterInformation(1, "lord_name", "Lord Claythorn name is Nicholas", image_file="lord_2"), 
+                CharacterInformation(1, "lord_age", "Lord Claythorn is 111 years old", image_file="lord_3"), 
             ]
         )  
 
         psychic_intuitions = CharacterIntuitionList ([            
-                CharacterInformation(1, "leave_castle", "Don't stay in the manor more than you have too.", image_file="gun")
+                CharacterInformation(1, "leave_castle", "Don't stay in the manor more than you have too.", image_file="escape")
             ]
         )
 

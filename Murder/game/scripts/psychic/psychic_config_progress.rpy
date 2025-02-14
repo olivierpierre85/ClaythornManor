@@ -32,7 +32,7 @@ label psychic_config_progress:
                     Chapter(image_checkpoint_three_sides),
                     Chapter(image_checkpoint_straight_line),
                     Chapter(image_checkpoint_three_sides),
-                    Chapter(image_ending_question, "ending", "poisoned"),
+                    Chapter(image_ending_question, "ending", "fell"),
                     Chapter(image_checkpoint_empty_filler),
                     Chapter(image_checkpoint_corner),
                     Chapter(image_ending_question, "ending", "shot"),

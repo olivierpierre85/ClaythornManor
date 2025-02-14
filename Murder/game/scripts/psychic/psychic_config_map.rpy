@@ -3,15 +3,15 @@ label psychic_config_map:
         # Map choices
 
         # LORD conditions, can happen at any time
-        attic_visited = "psychic_details.saved_variables['attic_visited']"
-        attic_not_visited = "not psychic_details.saved_variables['attic_visited']"
+        attic_visited = "psychic_details.observations.is_unlocked('visited_attic')"
+        attic_not_visited = "not psychic_details.observations.is_unlocked('visited_attic')"
 
-        knows_lord_name = "psychic_details.saved_variables['knows_lord_name']"
-        attic_visited_do_not_know_lord_name = "(psychic_details.saved_variables['attic_visited'] and not psychic_details.saved_variables['knows_lord_name'])"
-        attic_default = "not psychic_details.observations.is_unlocked('lord')"
-        attic_return = "psychic_details.observations.is_unlocked('lord')"
+        knows_lord_name = "psychic_details.observations.is_unlocked('lord_name')"
+        attic_visited_do_not_know_lord_name = "(psychic_details.observations.is_unlocked('visited_attic') and not psychic_details.observations.is_unlocked('lord_name'))"
+        attic_default = "not psychic_details.observations.is_unlocked('lord_age')"
+        attic_return = "psychic_details.observations.is_unlocked('lord_age')"
 
-        attic_return_too_soon = "psychic_details.saved_variables['attic_visited'] and not psychic_details.observations.is_unlocked('lord')"
+        attic_return_too_soon = "psychic_details.observations.is_unlocked('visited_attic') and not psychic_details.observations.is_unlocked('lord')"
 
         lord_choices = [
             TimedMenuChoice(default_room_text('library'), 'psychic_library_default', 10, room='library', condition=attic_not_visited),

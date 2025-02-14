@@ -13,6 +13,8 @@ label psychic_ending_lord:
     You are not sure what happened there in the attic, but it got the best of you.
     """
 
+    $ psychic_details.endings.unlock('fell')
+
     jump ending_generic
 
 

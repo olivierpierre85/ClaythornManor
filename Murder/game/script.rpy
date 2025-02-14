@@ -44,7 +44,7 @@ label start():
     $ full_testing_mode_char = "lad"
     $ decision_tree = []
 
-    # call init_debug
+    call init_debug
 
     # These display lines of dialogue.
     jump character_selection

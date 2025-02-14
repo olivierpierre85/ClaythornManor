@@ -23,4 +23,8 @@ CONDITIONS_DICT = {
     "lad_poisoned": cond_lad_killed_poisoned,
     "lad_fell": cond_lad_killed_by_fall,
     "lad_escape": cond_lad_escape,
+    # "psychic_fell": cond_psychic_fell,
+    # "psychic_burned": cond_psychic_burned,
+    # "psychic_shot": cond_psychic_burned,
+    # "psychic_escape": cond_psychic_burned,
 }
