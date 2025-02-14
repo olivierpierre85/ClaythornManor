@@ -35,7 +35,7 @@ label lad_introduction:
 
     I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Bravery Award".
 
-    You'll be receiving the prize, along with seven other courageous persons, at a reception organized in your honor. 
+    You'll be receiving the prize, along with six other courageous persons, at a reception organized in your honor. 
     
     As a thank you, a weekend of leisure at Claythorn Manor as been planned for all of you to enjoy.
 
