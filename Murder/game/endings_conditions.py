@@ -16,6 +16,18 @@ def cond_lad_killed_by_fall(toggles):
 def cond_lad_escape(toggles):
     return toggles.get('abandoned_psychic', False) and not toggles.get('gun', False) and not toggles.get('protect_food', False)
 
+def cond_psychic_fell(toggles):
+    return toggles.get('visited_attic', False) and toggles.get('lord_name', False) and toggles.get('lord_age', False)
+
+def cond_psychic_burned(toggles):
+    return toggles.get('steal_gun', False)
+
+def cond_psychic_shot(toggles):
+    return not toggles.get('steal_gun', False)
+
+def cond_psychic_burned(toggles):
+    return toggles.get('leave_manor', False)
+
 # Create the conditions dictionary.
 CONDITIONS_DICT = {
     "lad_deathbed": cond_lad_killed_by_whisky,
@@ -23,8 +35,8 @@ CONDITIONS_DICT = {
     "lad_poisoned": cond_lad_killed_poisoned,
     "lad_fell": cond_lad_killed_by_fall,
     "lad_escape": cond_lad_escape,
-    # "psychic_fell": cond_psychic_fell,
-    # "psychic_burned": cond_psychic_burned,
-    # "psychic_shot": cond_psychic_burned,
-    # "psychic_escape": cond_psychic_burned,
+    "psychic_fell": cond_psychic_fell,
+    "psychic_burned": cond_psychic_burned,
+    "psychic_shot": cond_psychic_shot,
+    "psychic_escape": cond_psychic_burned,
 }

@@ -78,30 +78,38 @@ label psychic_config_progress:
             ),
             (
                 'psychic_day3_afternoon',
-                [],
                 [
+                    ('observation', 'visited_attic'),
+                    ('observation', 'lord_name'),
+                    ('observation', 'lord_age')
+                ],
+                [
+                    {
+                        'label': 'fell',
+                        'condition_id': 'psychic_fell'
+                    },
                 ]
             ),
             (
                 'psychic_day3_endings_fake_chapter',
-                [],
                 [
-                    # {
-                    #     'label': 'gunned_down',
-                    #     'condition_id': 'psychic_gunned_down'
-                    # },
-                    # {
-                    #     'label': 'poisoned',
-                    #     'condition_id': 'psychic_poisoned'
-                    # },
-                    # {
-                    #     'label': 'fell',
-                    #     'condition_id': 'psychic_fell'
-                    # },
-                    # {
-                    #     'label': 'escape',
-                    #     'condition_id': 'psychic_escape'
-                    # },
+                    ('important_choice', 'steal_gun'),
+                    ('important_choice', 'leave_manor'),
+                    
+                ],
+                [
+                    {
+                        'label': 'shot',
+                        'condition_id': 'psychic_shot'
+                    },
+                    {
+                        'label': 'burned',
+                        'condition_id': 'psychic_burned'
+                    },
+                    {
+                        'label': 'escape',
+                        'condition_id': 'psychic_escape'
+                    },
                 ]
             ),
         ]

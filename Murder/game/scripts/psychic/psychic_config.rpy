@@ -48,11 +48,12 @@ label init_psychic:
 
         psychic_important_choices = CharacterImportantChoiceList([
             CharacterInformation(0, "steal_gun", "You tried to take Rosalind's gun by force", image_file="gun"), 
+            CharacterInformation(0, "leave_manor", "You leave the manor while you still can", image_file="leave_manor"), 
         ])
         
         psychic_endings = CharacterEndingList ([
-            CharacterInformation(0, "fell", "You fell down the stairs", image_file="gunned_down"),
-            CharacterInformation(1, "burned", "You were burned with the Manor", image_file="gunned_down"), 
+            CharacterInformation(0, "fell", "You fell down the stairs", image_file="psychic_fell"),
+            CharacterInformation(1, "burned", "You were burned with the Manor", image_file="manor_burns"), 
             CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing"),
             CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape"),
         ])
@@ -65,7 +66,7 @@ label init_psychic:
         )  
 
         psychic_intuitions = CharacterIntuitionList ([            
-                CharacterInformation(1, "leave_castle", "Don't stay in the manor more than you have too.", image_file="escape")
+                CharacterInformation(1, "leave_castle", "Don't stay in the manor more than you have too.", image_file="manor_burns")
             ]
         )
 

@@ -1,5 +1,7 @@
 label psychic_day3_afternoon_escape:
 
+    $ psychic_details.important_choices.unlock('leave_manor')
+
     psychic """
     You're right.
 
