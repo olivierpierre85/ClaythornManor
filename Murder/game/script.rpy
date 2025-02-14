@@ -16,15 +16,15 @@ init -1000 python:
     current_start_song = 1
 
 # TODO move to init var? Sort it out
-define time_left = 0
-define hours_angle = 0
+default  time_left = 0
+default  hours_angle = 0
 
 define current_year = "1924"
 
 # var needed for imbricated menus choices
-define menu_level = -1
-define selected_choice = [None, None, None, None]
-define time_diff = [None, None, None, None]
+default  menu_level = -1
+default  selected_choice = [None, None, None, None]
+default  time_diff = [None, None, None, None]
 
 # The game starts here.
 label start():

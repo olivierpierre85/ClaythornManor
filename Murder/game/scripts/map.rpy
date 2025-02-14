@@ -16,7 +16,7 @@ transform map_button_right():
     repeat
 
 label init_map:
-    define tooltip = "Click on a room to move there"
+    default tooltip = "Click on a room to move there"
     define MIN_FLOOR = 0
     define MAX_FLOOR = 3
 
