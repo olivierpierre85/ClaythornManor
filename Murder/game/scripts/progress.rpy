@@ -74,34 +74,34 @@ screen progress:
                         vbox:
                             yminimum 120
                             # Params for intuition
-                            # yoffset -20
-                            # xoffset 100
-                            # text current_storyline.real_name + "'s Intuitions":
-                            #     font gui.name_text_font
-                            #     color gui.accent_color
-                            # hbox:
-                            #     yoffset 10
-                            #     spacing 15
-                            #     for item in current_storyline.intuitions.get_list():
-                            #         imagebutton:
-                            #             if item.locked:
-                            #                 idle "images/info_cards/question_mark_bw.png"
-                            #             else: 
-                            #                 idle item.image_file
-                            #                 tooltip str(item.content)  
-                            #                 action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
-                            # Current Status button
-                            yoffset 30
-                            xoffset 135
-                            button:
-                                action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
+                            yoffset -20
+                            xoffset 100
+                            text current_storyline.real_name + "'s Intuitions":
+                                font gui.name_text_font
+                                color gui.accent_color
+                            hbox:
+                                yoffset 10
+                                spacing 15
+                                for item in current_storyline.intuitions.get_list():
+                                    imagebutton:
+                                        if item.locked:
+                                            idle "images/info_cards/question_mark_bw.png"
+                                        else: 
+                                            idle item.image_file
+                                            tooltip str(item.content)  
+                                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
+                            # # Current Status button : discountinued
+                            # yoffset 30
+                            # xoffset 135
+                            # button:
+                            #     action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
                                 
-                                background "images/ui/button_idle_very_small.png"
-                                hover_background "images/ui/button_hover_very_small.png"
-                                xysize (300, 65)
-                                text "Current Status":
-                                    color "#FFFFFF"
-                                    align (0.5, 0.5)
+                            #     background "images/ui/button_idle_very_small.png"
+                            #     hover_background "images/ui/button_hover_very_small.png"
+                            #     xysize (300, 65)
+                            #     text "Current Status":
+                            #         color "#FFFFFF"
+                            #         align (0.5, 0.5)
                 vbox:
 
                     xsize 1700
@@ -172,7 +172,7 @@ screen progress:
 
                                             textbutton chapter.text:
                                                 mouse "hover" 
-                                                action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline)]
+                                                action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
                                                 xoffset -20 
                                                 yoffset -5
                                                 yalign 0.5
@@ -269,7 +269,7 @@ screen info_card(item=None, item_type=None):
             tooltip icon_file + item.content
 
 
-screen storyline_details(selected_chapter, selected_char, ending = False):
+screen storyline_details(selected_chapter, selected_char, ending = False, is_current = False):
 
     on "show" action SetVariable("current_checkpoint", None)
 
@@ -335,14 +335,44 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                             if selected_chapter == "start":
                                 textbutton str("Start"):
                                     action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                            elif selected_chapter == "current_status":
+                                textbutton str("See what's currently unlocked"):
+                                    action SetVariable("current_checkpoint", Checkpoint(
+                                            run = current_run,
+                                            position = current_position,
+                                            objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
+                                            observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
+                                            important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
+                                            label_id = "current",
+                                            saved_variables = copy.deepcopy(current_character.saved_variables),
+                                            ending = ending
+                                        ))
                             else:
+                                if is_current:
+                                    # TODO: maybe but in function for clarity
+                                    $ active_checkpoint = Checkpoint(
+                                            run = current_run,
+                                            position = current_position,
+                                            objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
+                                            observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
+                                            important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
+                                            label_id = "current",
+                                            saved_variables = copy.deepcopy(current_character.saved_variables),
+                                            ending = ending
+                                        )
+                                    textbutton str("See current status"):
+                                        if current_checkpoint and current_checkpoint.label_id == "current":
+                                            text_color gui.accent_color
+                                        action SetVariable("current_checkpoint", active_checkpoint)
                                 for i, checkpoint in enumerate(selected_char.get_checkpoints_by_chapter(selected_chapter.label)):
                                     textbutton "{}: {}".format(i, checkpoint.get_format_created()):
                                         action SetVariable("current_checkpoint", checkpoint)
                                         if current_checkpoint == checkpoint:
                                             text_color gui.accent_color
+                                
+
                     
-                    if current_checkpoint and not ending:
+                    if current_checkpoint and not ending and not is_current and not selected_chapter == "current_status":
                         
                         button:
                             action Show("confirm_restart")
@@ -361,11 +391,15 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
                     xoffset 100
                     xminimum 500
 
-                    if current_checkpoint:
-                        text "Unlocked at Selected Checkpoint":
-                            
-                            font gui.name_text_font
-                            color gui.accent_color
+                    if current_checkpoint :
+                        if current_checkpoint.label_id == "current":
+                            text "Unlocked at the moment":
+                                font gui.name_text_font
+                                color gui.accent_color
+                        else:
+                            text "Unlocked at Selected Checkpoint":
+                                font gui.name_text_font
+                                color gui.accent_color
                         # IN GRID
                         grid 5 4:
                             yoffset 30
