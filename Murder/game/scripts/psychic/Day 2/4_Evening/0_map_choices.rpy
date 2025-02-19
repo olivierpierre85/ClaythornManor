@@ -52,20 +52,16 @@ label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=5):
             "It's not worth the danger. I'm not going in."
         ]
     
-        enter_text = enter_text_list[psychic_details.saved_variables['day2_nohunt_bedroom_tries']]
-        no_enter_text = no_enter_text_list[psychic_details.saved_variables['day2_nohunt_bedroom_tries']]
+        enter_text = enter_text_list[psychic_details.saved_variables['day2_evening_bedroom_tries']]
+        no_enter_text = no_enter_text_list[psychic_details.saved_variables['day2_evening_bedroom_tries']]
         
-    if psychic_details.saved_variables['day2_nohunt_bedroom_tries'] == 0:
+    if psychic_details.saved_variables['day2_evening_bedroom_tries'] == 0:
 
         """
-        Most people are out for the hunt, so I guess I could try to enter the room anyway.
-
-        But it won't look good if I get caught.
-
-        What should I do?
+        Should I try to enter anyway?
         """
 
-        $ psychic_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
+        $ psychic_details.saved_variables['day2_evening_bedroom_tries'] += 1
 
     else:
 
@@ -73,7 +69,7 @@ label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=5):
         There seems to be nobody here as well.
         """
 
-        $ psychic_details.saved_variables['day2_nohunt_bedroom_tries'] += 1
+        $ psychic_details.saved_variables['day2_evening_bedroom_tries'] += 1
 
     call run_menu(
         TimedMenu(
@@ -154,20 +150,45 @@ label psychic_day2_evening_bedroom_host:
 
     return
 
+# Broken (if already seen in the afternoon)
+label psychic_day2_bedroom_broken_already_see:
+
+    $ change_room("bedrooms_hallway")
+
+    """
+    I stand once again in front of Thomas Moody's room.
+
+    I don't know what compelled me to come here again.
+
+    I try to open the door, but I can't. The memory of his dead body is still too fresh in my mind.
+
+    I'd better go somewhere else.
+    """
+
+    return
+
+
 # Drunk
 label psychic_day2_evening_bedroom_drunk:
 
-    call psychic_bedroom_default
+    $ change_room("bedrooms_hallway")
 
+    play sound door_knock
+    
     """
-    The simple push I give to the door opens it.
-
-    I catch a glimpse inside his room from here.
-
-    It's quite messy.
+    I knock on the door.
     """
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_drunk_enter', enter_duration=20)
+    drunk """
+    Grrr, Mrrrr, Errrr
+    """
+
+    """ I recognize Samuel Manning's voice, and it's clear he's too drunk to be coherent. 
+    
+    Since the door is locked, I decide not to interfere.
+    """
+
+    $ unlock_map('bedroom_drunk')
 
     return
 

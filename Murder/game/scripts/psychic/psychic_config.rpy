@@ -39,11 +39,13 @@ label init_psychic:
             "day2_nohunt_bedroom_tries": 0,
             "day2_nohunt_has_visited_tea_room": False,
             "day2_afternoon_has_visited_lad": False,
+            "day2_has_seen_bedroom_broken": False,
             "knows_nurse_background": False,
             "day2_evening_billiard_room_visited": False,
             "day2_evening_billiard_room_talk_to_captain": False,
             "day1_evening_talk_to_lad": False,
             "day1_evening_talk_to_captain": False,
+            "day2_evening_bedroom_tries": 0,
         }
 
         psychic_important_choices = CharacterImportantChoiceList([

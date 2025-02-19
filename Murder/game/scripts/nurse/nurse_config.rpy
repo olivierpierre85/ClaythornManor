@@ -43,7 +43,7 @@ label init_nurse:
         # She worked as nurse most of her life, mostly in the army or at an hospital.
         # Lately, she started to perform at home service for rich individuals. That's where she got accustomed with grand mansions and how they are run.
         # She fought in almost all british wars since the cretan revolt. This also includes the Boxers Rebellion and, of course, the Great War.
-        # She mostly keeps to herself, preferring to go to bed early, and avoiding getting out. Not because she is either shy or lazy, but because she suffers from an incurable disease that leaves her weak and tired. 
+        # She mostly keeps to herself, preferring to go to bed early, and avoiding getting out. Not because she is either shy or lazy, but because she suffers from an illness, in which a visible symptom is coughing blood. 
         # That's a shame, because years of robbing her rich clients left her with a large sum of money to her name.
         # """
 

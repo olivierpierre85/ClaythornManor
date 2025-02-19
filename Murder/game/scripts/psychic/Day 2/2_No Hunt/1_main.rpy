@@ -87,6 +87,8 @@ label psychic_day2_bedroom_broken:
 
     $ play_music('PREVIOUS')
 
+    $ psychic_details.saved_variables['day2_has_seen_bedroom_broken'] = True
+
     return
 
 

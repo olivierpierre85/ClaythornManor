@@ -309,10 +309,10 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                         text "Checkpoints for Friday Afternoon":
                             size 48
                             font gui.name_text_font
-                    elif selected_chapter == "current_status":
-                        text "Current Status":
-                            size 48
-                            font gui.name_text_font
+                    # elif selected_chapter == "current_status":
+                    #     text "Current Status":
+                    #         size 48
+                    #         font gui.name_text_font
                     elif ending:
                         text current_storyline.endings.get_item(selected_chapter.label).content:
                             size 48
@@ -335,18 +335,18 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                             if selected_chapter == "start":
                                 textbutton str("Start"):
                                     action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
-                            elif selected_chapter == "current_status":
-                                textbutton str("See what's currently unlocked"):
-                                    action SetVariable("current_checkpoint", Checkpoint(
-                                            run = current_run,
-                                            position = current_position,
-                                            objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
-                                            observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
-                                            important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
-                                            label_id = "current",
-                                            saved_variables = copy.deepcopy(current_character.saved_variables),
-                                            ending = ending
-                                        ))
+                            # elif selected_chapter == "current_status":
+                            #     textbutton str("See what's currently unlocked"):
+                            #         action SetVariable("current_checkpoint", Checkpoint(
+                            #                 run = current_run,
+                            #                 position = current_position,
+                            #                 objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
+                            #                 observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
+                            #                 important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
+                            #                 label_id = "current",
+                            #                 saved_variables = copy.deepcopy(current_character.saved_variables),
+                            #                 ending = ending
+                            #             ))
                             else:
                                 if is_current:
                                     # TODO: maybe but in function for clarity
@@ -372,7 +372,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                 
 
                     
-                    if current_checkpoint and not ending and not is_current and not selected_chapter == "current_status":
+                    if current_checkpoint and not ending and not current_checkpoint.label_id == "current":
                         
                         button:
                             action Show("confirm_restart")

@@ -207,12 +207,20 @@ label psychic_config_map:
                 room = 'bedroom_psychic',
                 condition = "psychic_details.saved_variables['day2_afternoon_has_visited_lad']==False"
             ),
-            # TimedMenuChoice(
-            #     'Richard III Bedroom', 
-            #     'psychic_day2_bedroom_broken', 
-            #     20, 
-            #     room = 'bedroom_broken',
-            # )
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'psychic_day2_bedroom_broken', 
+                20, 
+                room = 'bedroom_broken',
+                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == False"
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'psychic_day2_bedroom_broken_already_see', 
+                20, 
+                room = 'bedroom_broken',
+                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == True"
+            )
         ] + copy.deepcopy(lord_choices), 
         is_map = True)
     return
