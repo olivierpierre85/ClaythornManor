@@ -19,7 +19,7 @@ label psychic_day3_afternoon:
 
     call change_time(12,00, "Afternoon", "Sunday")
     
-    $ lad_details.add_checkpoint("psychic_day3_afternoon") 
+    $ psychic_details.add_checkpoint("psychic_day3_afternoon") 
 
     call black_screen_transition("Amelia Baxter", "Sunday Afternoon")
 
@@ -35,7 +35,7 @@ label psychic_day3_afternoon:
 
     call common_day3_afternoon_lad_psychic_captain_discussion_1
     
-    if psychic_details.intuitions.is_unlocked('leave_castle'):
+    if psychic_details.intuitions.is_unlocked('leave_manor'):
 
         """
         Leave? I can't leave.

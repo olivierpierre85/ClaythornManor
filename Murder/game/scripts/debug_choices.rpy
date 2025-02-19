@@ -16,14 +16,23 @@ label init_debug:
 
     call unlock_bedrooms
 
+    $ current_character = psychic_details
+    $ current_storyline = psychic_details
     call unlock_psychic 
+    # TODO: This should be linked to checkpoint?
+    $ psychic_details.saved_variables["knows_captain_origin"] = True
+    $ psychic_details.saved_variables["knows_captain_real_origin"] = True
     $ psychic_details.load_test_checkpoints()
+    $ psychic_details.intuitions.unlock('leave_manor')
+
     
-    call unlock_lad
-    $ lad_details.load_test_checkpoints()
-    $ lad_details.intuitions.unlock('psychic_poisons')
+    # $ current_character = lad_details
+    # $ current_storyline = lad_details # TODO move
+    # call unlock_lad
+    # $ lad_details.load_test_checkpoints()
+    # $ lad_details.intuitions.unlock('psychic_poisons')
     
-    call unlock_doctor
+    # call unlock_doctor
 
     $ hide_notifications = False
 
@@ -211,7 +220,7 @@ label debug_choices:
             $ psychic_details.saved_variables["knows_captain_real_origin"] = True
             call unlock_psychic
             $ current_character = psychic_details
-            $ psychic_details.intuitions.unlock('leave_castle')   
+            $ psychic_details.intuitions.unlock('leave_manor')   
             $ psychic_details.endings.unlock('burned')
             jump  psychic_day3_afternoon
 

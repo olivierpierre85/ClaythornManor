@@ -58,10 +58,6 @@ label init_characters:
 
         char_list_flat = [lad_details, doctor_details, host_details, drunk_details, psychic_details, broken_details, captain_details, nurse_details]
 
-    # INIT first character
-    $ current_character = lad_details
-    $ current_storyline = lad_details # TODO move
-
     return
 
 # LABELS
@@ -374,6 +370,9 @@ init -100 python:
                     label_id = label_id,
                     saved_variables = copy.deepcopy(current_character.saved_variables)
                 )
+                print(current_character)
+                print(current_character.saved_variables["captain_generic_menu"])
+                print(new_checkpoint.saved_variables["captain_generic_menu"])
                 self.checkpoints.append(new_checkpoint)
                 
             else:

@@ -11,7 +11,7 @@ label psychic_config_progress:
                     Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_evening", "Evening", "Saturday Evening"),
                     Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "Morning", "Sunday Morning"),
                     Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "Afternoon", "Sunday Afternoon"),
-                    Chapter(image_ending_question),
+                    Chapter(image_ending_question, "ending", "burned"),
                 ],
                 # Second line, ...
                 [
@@ -23,7 +23,7 @@ label psychic_config_progress:
                     Chapter(image_checkpoint_line),
                     Chapter(image_checkpoint_empty),
                     Chapter(image_checkpoint_double_corner),
-                    Chapter(image_ending_question, "ending", "burned"),
+                    Chapter(image_ending_question, "ending", "shot"),
                 ],
                 [
                     Chapter(image_checkpoint_empty_small),    
@@ -35,7 +35,7 @@ label psychic_config_progress:
                     Chapter(image_ending_question, "ending", "fell"),
                     Chapter(image_checkpoint_empty_filler),
                     Chapter(image_checkpoint_corner),
-                    Chapter(image_ending_question, "ending", "shot"),
+                    Chapter(image_ending_question, "ending", "escape")
                 ],
             ]
 

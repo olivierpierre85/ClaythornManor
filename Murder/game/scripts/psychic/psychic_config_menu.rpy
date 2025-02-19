@@ -46,8 +46,8 @@ label psychic_config_menu:
     $ condition_captain_origin = "current_character.saved_variables['knows_captain_real_origin']"
     $ captain_generic_menu_psychic = TimedMenu("captain_generic_menu_psychic", [
         # In the car ((not really a choice))
-        TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', 5),
-        TimedMenuChoice('I mean, where are you \"Really\" from?', 'captain_generic_origin_psychic_2', 5 , condition = "current_character.saved_variables['knows_captain_origin']"),
+        TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', 5, condition = "not current_character.saved_variables['knows_captain_origin']"),
+        TimedMenuChoice('I mean, where are you \"Really\" from?', 'captain_generic_origin_psychic_2', 5 , condition = "current_character.saved_variables['knows_captain_origin'] and not current_character.saved_variables['knows_captain_real_origin']" ),
         # Real Generics
         TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act_psychic', 20, condition = condition_captain_origin),
         TimedMenuChoice('What do you think of this place?', 'captain_generic_manor_psychic', 10, condition = condition_captain_origin),

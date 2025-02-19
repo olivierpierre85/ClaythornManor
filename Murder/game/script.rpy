@@ -40,6 +40,10 @@ label start():
 
     call init_characters
 
+    # INIT first character
+    $ current_character = lad_details
+    $ current_storyline = lad_details # TODO move
+
     $ full_testing_mode = False
     $ full_testing_mode_char = "lad"
     $ decision_tree = []

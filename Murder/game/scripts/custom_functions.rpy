@@ -144,12 +144,12 @@ label start_again():
     hide screen centered_text
 
     python:
-        global has_been_restarted, current_character, current_storyline
+        global has_been_restarted, current_character, current_storyline, current_checkpoint
 
         # Change current character
         current_character = current_storyline
         
-        # Restart from zero
+        # Restart from zero TODO: This is not necessary anymore
         if  current_checkpoint.run == 1 and  current_checkpoint.position == 0:
             current_position = 0
             if len(current_character.checkpoints) > 0:

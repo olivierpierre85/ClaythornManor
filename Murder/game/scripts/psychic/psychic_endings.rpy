@@ -20,7 +20,7 @@ label psychic_ending_lord:
 
 label psychic_ending_burns:
         
-    $ psychic_details.intuitions.unlock('leave_castle')    
+    $ psychic_details.intuitions.unlock('leave_manor')    
     
     call death_screen_transition
 

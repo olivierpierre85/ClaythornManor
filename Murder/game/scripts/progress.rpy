@@ -17,8 +17,6 @@ transform blink:
 
 # Display of Progress tree
 screen progress:
-    
-    on "show" action SetVariable("current_checkpoint", None)
 
     tag menu
 
@@ -192,7 +190,7 @@ screen progress:
                                             tooltip str(current_storyline.endings.get_item(chapter.label).content)  
                                             # action SetVariable("action_needed_fix", True)
                                             mouse "hover"
-                                            action ShowMenu("storyline_details", chapter, current_storyline, True)
+                                            action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, True)]
                                         else:
                                             idle chapter.image_file 
                                 elif chapter.chapter_type == "start": 
@@ -200,7 +198,7 @@ screen progress:
                                         mouse 'hover'
                                         idle image_checkpoint_start
                                         hover image_checkpoint_start_selected
-                                        action ShowMenu("storyline_details", "start", current_storyline)
+                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "start", current_storyline)]
 
     use tooltip_display
 
@@ -259,6 +257,8 @@ screen info_card(item=None, item_type=None):
 
 
 screen storyline_details(selected_chapter, selected_char, ending = False):
+
+    on "show" action SetVariable("current_checkpoint", None)
 
     tag menu
 

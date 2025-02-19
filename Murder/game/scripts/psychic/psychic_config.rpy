@@ -66,7 +66,7 @@ label init_psychic:
         )  
 
         psychic_intuitions = CharacterIntuitionList ([            
-                CharacterInformation(1, "leave_castle", "Don't stay in the manor more than you have too.", image_file="manor_burns")
+                CharacterInformation(1, "leave_manor", "Don't stay in the manor more than you have too.", image_file="manor_burns")
             ]
         )
 
