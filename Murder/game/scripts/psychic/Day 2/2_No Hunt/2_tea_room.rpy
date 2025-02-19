@@ -45,7 +45,7 @@ label psychic_day2_hunt_tea_room:
     """
     After a few minutes, she returns with some plates.
 
-    As we eat, we chat about trivial matters related to the host.
+    As we eat, we chat about trivial matters related to our host.
     """
 
     pause 1.0

@@ -73,22 +73,35 @@ screen progress:
                         
                         vbox:
                             yminimum 120
-                            yoffset -20
-                            xoffset 100
-                            text current_storyline.real_name + "'s Intuitions":
-                                font gui.name_text_font
-                                color gui.accent_color
-                            hbox:
-                                yoffset 10
-                                spacing 15
-                                for item in current_storyline.intuitions.get_list():
-                                    imagebutton:
-                                        if item.locked:
-                                            idle "images/info_cards/question_mark_bw.png"
-                                        else: 
-                                            idle item.image_file
-                                            tooltip str(item.content)  
-                                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
+                            # Params for intuition
+                            # yoffset -20
+                            # xoffset 100
+                            # text current_storyline.real_name + "'s Intuitions":
+                            #     font gui.name_text_font
+                            #     color gui.accent_color
+                            # hbox:
+                            #     yoffset 10
+                            #     spacing 15
+                            #     for item in current_storyline.intuitions.get_list():
+                            #         imagebutton:
+                            #             if item.locked:
+                            #                 idle "images/info_cards/question_mark_bw.png"
+                            #             else: 
+                            #                 idle item.image_file
+                            #                 tooltip str(item.content)  
+                            #                 action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
+                            # Current Status button
+                            yoffset 30
+                            xoffset 135
+                            button:
+                                action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
+                                
+                                background "images/ui/button_idle_very_small.png"
+                                hover_background "images/ui/button_hover_very_small.png"
+                                xysize (300, 65)
+                                text "Current Status":
+                                    color "#FFFFFF"
+                                    align (0.5, 0.5)
                 vbox:
 
                     xsize 1700
@@ -294,6 +307,10 @@ screen storyline_details(selected_chapter, selected_char, ending = False):
 
                     if selected_chapter == "start":
                         text "Checkpoints for Friday Afternoon":
+                            size 48
+                            font gui.name_text_font
+                    elif selected_chapter == "current_status":
+                        text "Current Status":
                             size 48
                             font gui.name_text_font
                     elif ending:
