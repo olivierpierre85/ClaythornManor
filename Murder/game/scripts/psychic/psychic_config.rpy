@@ -53,20 +53,20 @@ label init_psychic:
         
         psychic_endings = CharacterEndingList ([
             CharacterInformation(0, "fell", "You fell down the stairs", image_file="psychic_fell"),
-            CharacterInformation(1, "burned", "You were burned with the Manor", image_file="manor_burns"), 
+            CharacterInformation(1, "burned", "You were burned along with the manor", image_file="manor_burns"), 
             CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing"),
             CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape"),
         ])
 
         psychic_observations = CharacterObservationList ([ 
                 CharacterInformation(0, "visited_attic", "You visited the attic and met the Lord of this place", image_file="lord"),   
-                CharacterInformation(1, "lord_name", "Lord Claythorn name is Nicholas", image_file="lord_2"), 
+                CharacterInformation(1, "lord_name", "Lord Claythorn's name is Nicholas", image_file="lord_2"), 
                 CharacterInformation(1, "lord_age", "Lord Claythorn is 111 years old", image_file="lord_3"), 
             ]
         )  
 
         psychic_intuitions = CharacterIntuitionList ([            
-                CharacterInformation(1, "leave_manor", "Don't stay in the manor more than you have too.", image_file="manor_burns")
+                CharacterInformation(1, "leave_manor", "Don't stay in the manor longer than you have to.", image_file="manor_burns")
             ]
         )
 

@@ -52,52 +52,52 @@ label init_lad:
             "day3_downstairs_visited" : False
         }
 
-        # Character Class day1_drunk
         lad_important_choices = CharacterImportantChoiceList ([
             CharacterInformation(0, "whisky", "You drank whisky from Thomas Moody's flask", image_file="whisky"),
             CharacterInformation(0, "day1_drunk", "You got drunk the first night", image_file="drunk"),
-            CharacterInformation(0, "downstairs_1", "You attempted to visit downstairs", image_file="downstairs"),
+            CharacterInformation(0, "downstairs_1", "You attempted to go downstairs", image_file="downstairs"),
             CharacterInformation(0, "hunt", "You decided to go hunting", image_file="hunt"),
             CharacterInformation(0, "hunt_captain_host", "You hunted with a Captain and a Lady", image_file="hunt_captain_host"),
-            CharacterInformation(0, "hunt_doctor_drunk", "You hunted with a Doctor  and a Drunk", image_file="hunt_doctor_drunk"),
+            CharacterInformation(0, "hunt_doctor_drunk", "You hunted with a Doctor and a Drunk", image_file="hunt_doctor_drunk"),
 
-            CharacterInformation(0, "downstairs_2", "You tried again to reach downstairs", image_file="downstairs_2"),
+            CharacterInformation(0, "downstairs_2", "You tried again to go downstairs", image_file="downstairs_2"),
             CharacterInformation(0, "day2_drunk", "You got drunk the second night", image_file="drunk_2"),
             CharacterInformation(0, "trust_psychic", "You decided to trust Amelia Baxter", image_file="trust_psychic"),
             
             CharacterInformation(0, "abandoned_psychic", "You abandoned Amelia Baxter and left the manor", image_file="leave_manor"),
-            CharacterInformation(0, "protect_food", "You prevented the switching of your plate", image_file="poison_food"),
+            CharacterInformation(0, "protect_food", "You prevented your plate from being switched", image_file="poison_food"),
             # DO we need the alternative? You left ? 
-            CharacterInformation(0, "downstairs_3", "You pushed your luck a third time going downstairs", image_file="downstairs_3"),
+            CharacterInformation(0, "downstairs_3", "You pushed your luck a third time by going downstairs", image_file="downstairs_3"),
             CharacterInformation(0, "day3_drunk", "You got drunk the third night", image_file="drunk_3"),
         ])
 
         lad_endings = CharacterEndingList ([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed"), 
-            CharacterInformation(2, "gunned_down", "You were kill by gun shot", image_file="gun_firing"), 
+            CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing"), 
             CharacterInformation(3, "poisoned", "Your food was poisoned", image_file="poison_food"), 
             CharacterInformation(4, "fell", "You got impaled on a picket fence", image_file="fence"), 
             CharacterInformation(5, "escape", "You escaped, alone", image_file="escape"), 
         ])
 
         lad_intuitions = CharacterIntuitionList ([            
-                CharacterInformation(1, "psychic_poisons", "Sunday, your lunch was poisoned.", image_file="poison_food")
+                CharacterInformation(1, "psychic_poisons", "On Sunday, your lunch was poisoned.", image_file="poison_food")
             ]
         )
 
         lad_observations = CharacterObservationList ([    
-                CharacterInformation(1, "green_liquid", "There was a green liquid on Thomas Moody night stand.", image_file="poison_bedstand"), 
-                CharacterInformation(1, "seen_car", "There is a car in the basement, but without gas", image_file="seen_car"),
+                CharacterInformation(1, "green_liquid", "There was a green liquid on Thomas Moody's nightstand.", image_file="poison_bedstand"), 
+                CharacterInformation(1, "seen_car", "There is a car in the basement, but it has no gas", image_file="seen_car"),
                 # TODO add seen car in observation =>
             ]
         )  
 
         lad_objects = CharacterObjectList([  
-                CharacterInformation(1, "gun", "You took a empty handgun found in the gun room", image_file="gun"),
+                CharacterInformation(1, "gun", "You took an empty handgun found in the gun room", image_file="gun"),
                 CharacterInformation(2, "burned_letter", "A burned letter found in Samuel Manning's room", image_file="burned_letter"),
                 # TODO: Add GAS ? Bullets ? Here or for someone else?
             ],
         )
+
 
         lad_description_hidden = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "age", "22 years old - which means he was merely 15"),
