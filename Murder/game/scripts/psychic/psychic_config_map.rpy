@@ -197,7 +197,7 @@ label psychic_config_map:
                 0, 
                 early_exit = True, 
                 room = 'bedroom_psychic',
-                condition = "psychic_details.saved_variables['day2_afternoon_has_visited_lad']"
+                condition = "psychic_details.important_choices.is_unlocked('visit_lad')"
             ),
             TimedMenuChoice(
                 'Wait in your room', 
@@ -205,7 +205,7 @@ label psychic_config_map:
                 0, 
                 early_exit = True, 
                 room = 'bedroom_psychic',
-                condition = "psychic_details.saved_variables['day2_afternoon_has_visited_lad']==False"
+                condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 

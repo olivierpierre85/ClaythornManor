@@ -52,7 +52,7 @@ label psychic_day2_evening:
     So I could also take advantage of the fact that the Manor is almost empty.
     """
 
-    if psychic_details.saved_variables['day2_afternoon_has_visited_lad']:
+    if psychic_details.important_choices.is_unlocked('visit_lad'):
         
         """
         Or I could wait in my room for Ted Harring. 
@@ -81,7 +81,15 @@ label psychic_day2_evening:
         I should return to my room.
         """
 
-    call psychic_day2_evening_lad_discussion
+    if psychic_details.important_choices.is_unlocked('visit_lad'):
+        
+        call psychic_day2_evening_lad_discussion
+
+    else:
+        
+        """
+        With nothing more to do, I quickly fall asleep.
+        """
 
     jump psychic_day3_morning
 

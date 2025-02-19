@@ -68,12 +68,16 @@ label psychic_config_progress:
             ),
             (
                 'psychic_day2_evening',
-                [],
+                [
+                    ('important_choice', 'visit_lad')
+                ],
                 []
             ),
             (
                 'psychic_day3_morning',
-                [],
+                [
+                    ('important_choice', 'visit_lad')
+                ],
                 []
             ),
             (
@@ -81,7 +85,7 @@ label psychic_config_progress:
                 [
                     ('observation', 'visited_attic'),
                     ('observation', 'lord_name'),
-                    ('observation', 'lord_age')
+                    ('observation', 'lord_age'),
                 ],
                 [
                     {

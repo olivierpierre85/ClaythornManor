@@ -38,7 +38,7 @@ label psychic_day2_afternoon_lad_discussion:
 
     call common_day2_afternoon_lad_psychic_discussion
 
-    $ psychic_details.saved_variables['day2_afternoon_has_visited_lad'] = True
+    $ psychic_details.important_choices.unlock('visit_lad')
 
     return
 

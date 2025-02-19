@@ -38,7 +38,6 @@ label init_psychic:
             "book_read": False,
             "day2_nohunt_bedroom_tries": 0,
             "day2_nohunt_has_visited_tea_room": False,
-            "day2_afternoon_has_visited_lad": False,
             "day2_has_seen_bedroom_broken": False,
             "knows_nurse_background": False,
             "day2_evening_billiard_room_visited": False,
@@ -49,6 +48,7 @@ label init_psychic:
         }
 
         psychic_important_choices = CharacterImportantChoiceList([
+            CharacterInformation(0, "visit_lad", "You approached Ted Harring", image_file="trust_psychic"), 
             CharacterInformation(0, "steal_gun", "You tried to take Rosalind's gun by force", image_file="gun"), 
             CharacterInformation(0, "leave_manor", "You leave the manor while you still can", image_file="leave_manor"), 
         ])
