@@ -400,13 +400,14 @@ screen main_menu():
             # textbutton _("Continue") action FileLoad(name, page)
             textbutton _("Continue") action FileLoad (1, confirm = False, page = "auto", newest = True)
         # textbutton _("Continue") action Start() at button0
-        textbutton _("New Game") action Start() at button1
-        textbutton _("Load") action ShowMenu("load") at button2
+        # textbutton _("New Game") action Start() at button1
+        # textbutton _("Load") action ShowMenu("load") at button2
+        textbutton _("Debug") action Start("start_debug") at button2
         textbutton _("Options") action ShowMenu("preferences")at button3
         textbutton _("Help") action ShowMenu("help") at button4
         # textbutton _("About") action ShowMenu("about") at button5
         textbutton _("Quit") action Quit(confirm=not main_menu) at button5
-        textbutton _("Debug") action Start("start_debug") at button6
+        
 
     # add "gui/overlay/main_menu_logo.png"
 

@@ -165,7 +165,7 @@ label lad_day1_evening:
 
         I'm exhausted from the trip.
 
-        Going to bed now is probably the best thing to do.
+        Going back to my room is probably the best thing to do.
         """
 
     $ stop_music()

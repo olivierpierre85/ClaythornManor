@@ -279,7 +279,7 @@ label lad_config_map:
             TimedMenuChoice(
                 default_room_text('gun_room'), 
                 'lad_day3_morning_gun_room', 
-                10, 
+                0, 
                 room = 'gun_room'
             ),
             TimedMenuChoice(

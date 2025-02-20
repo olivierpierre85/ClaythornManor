@@ -18,6 +18,12 @@ init -1000 python:
 # Var needed BEFORE start
 default debug_activated = False
 
+# My config variables
+define config.rollback_enabled = True #TODO Put back to false when game finished (OR env VAR?)
+define config.has_autosave = True
+define config.autosave_on_choice = True
+define config.autosave_on_quit = True
+
 # TODO move to init var? Sort it out
 default  time_left = 0
 default  hours_angle = 0

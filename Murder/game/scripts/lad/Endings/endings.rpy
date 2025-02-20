@@ -120,6 +120,7 @@ label lad_gunned_down_ending:
     call death_screen_transition
 
     # TODO ONE declaration of ENDINGs (not in characterINformation)
+    $ lad_details.endings.unlock('gunned_down')
     $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('gunned_down'))
     
     """
@@ -144,7 +145,8 @@ label lad_ending_day3_poisoned:
 
     call death_screen_transition
     
-    $ lad_details.add_ending_checkpoint(ending = CharacterInformation(2, "poisoned", "You were poisoned", image_file="poisoned"))
+    $ lad_details.endings.unlock('poisoned')
+    $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('poisoned'))
 
     """
     You lay on the floor, saliva dripping from your mouth.
@@ -164,6 +166,9 @@ label lad_ending_day3_fell:
 
     call death_screen_transition
 
+    $ lad_details.endings.unlock('fell')
+    $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('fell'))
+
     """
     You fell.
 
@@ -179,6 +184,8 @@ label lad_ending_day3_fell:
 
     You'll need to be more cautious next time.
     """
+
+
 
     jump ending_generic
 
@@ -225,6 +232,9 @@ label lad_ending_day3_escape:
     """
 
     call survive_screen_transition
+
+    $ lad_details.endings.unlock('escape')
+    $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('escape'))
 
     $ is_death = False
     jump ending_generic

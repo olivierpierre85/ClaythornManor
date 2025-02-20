@@ -26,11 +26,11 @@ label init_debug:
     $ psychic_details.intuitions.unlock('leave_manor')
 
     
-    # $ current_character = lad_details
-    # $ current_storyline = lad_details # TODO move
-    # call unlock_lad
-    # $ lad_details.load_test_checkpoints()
-    # $ lad_details.intuitions.unlock('psychic_poisons')
+    $ current_character = lad_details
+    $ current_storyline = lad_details # TODO move
+    call unlock_lad
+    $ lad_details.load_test_checkpoints()
+    $ lad_details.intuitions.unlock('psychic_poisons')
     
     # call unlock_doctor
 
