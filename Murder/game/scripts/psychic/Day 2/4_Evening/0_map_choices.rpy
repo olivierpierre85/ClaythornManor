@@ -102,7 +102,7 @@ label psychic_day2_evening_default_room_locked:
     return
 
 
-# Lad
+# Lad - ???
 label psychic_day2_evening_bedroom_lad:
 
     call psychic_bedroom_default
@@ -112,27 +112,77 @@ label psychic_day2_evening_bedroom_lad:
     return
 
 
-# Doctor
+# Doctor - Dead
 label psychic_day2_evening_bedroom_doctor:
 
-    call psychic_bedroom_default
+    """
+    The door stands slightly ajar.
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    I notice faint traces of blood on the floor.
+
+    Cautiously, I step inside and see Doctor Baldwin's body.
+    """
+
+    $ change_room('bedroom_doctor')
+
+    """
+    He is lying peacefully in his bed.
+
+    Unsure of what I could do here, I decide to leave.
+    """
+
+    $ unlock_map('bedroom_doctor')
+    # TODO: Add possibility to snoop?
 
     return
 
 
-# Nurse
+
+# Nurse - There. Coughing 2?
 label psychic_day2_evening_bedroom_nurse:
 
-    call psychic_bedroom_default
+    $ change_room("bedrooms_hallway")
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    play sound door_knock
+    
+    """
+    I knock gently on the door.
+
+    A weak voice responds.
+    """
+
+    nurse """
+    Yes? What is it?
+    """
+    
+    $ unlock_map('bedroom_nurse')
+
+    psychic """
+    It's Amelia Baxter.
+
+    Are you alright?
+
+    Perhaps we could have a chat?
+    """
+
+    nurse """
+    I am sorry, Miss Baxter, but I am very tired tonight.
+
+    Unless it's very important, I would prefer to wait until tomorrow.
+    """
+
+    psychic """
+    No, it can wait, of course. Good night, Miss Marsh.
+    """
+
+    nurse """
+    Good night, Miss Baxter.
+    """
 
     return
 
 
-# Captain
+# Captain - In the billiard room
 label psychic_day2_evening_bedroom_captain:
 
     call psychic_bedroom_default
@@ -141,7 +191,7 @@ label psychic_day2_evening_bedroom_captain:
 
     return
 
-# Host
+# Host - Preparing to leave
 label psychic_day2_evening_bedroom_host:
 
     call psychic_bedroom_default

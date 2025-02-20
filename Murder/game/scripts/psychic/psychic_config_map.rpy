@@ -160,7 +160,7 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
-            TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_evening_bedroom_doctor', 10, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_evening_bedroom_doctor', 20, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day2_evening_bedroom_host', 10, room='bedroom_host'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day2_evening_bedroom_drunk', 10, room='bedroom_drunk'),
@@ -186,7 +186,7 @@ label psychic_config_map:
             # TimedMenuChoice(
             #     default_room_text('bedroom_nurse'),
             #     'psychic_day2_no_hunt_bedroom_nurse',
-            #     15, 
+            #     20, 
             #     room='bedroom_nurse',
             #     condition = "not psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             # ),
