@@ -109,7 +109,8 @@ label init_technical_variables:
 
         has_been_restarted = False
 
-        first_death = True
+        is_death = True # Assume the ending is a death, unless written otherwise
+        first_ending = True
         first_survive = True
 
         current_checkpoint = None

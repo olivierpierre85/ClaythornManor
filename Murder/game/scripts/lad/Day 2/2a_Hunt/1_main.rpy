@@ -146,7 +146,7 @@ label lad_day2_hunt:
     """
     People agree, and Sushil Sinha asks to partner with our host.
 
-    The drunk man insists on going with the doctor, who accepts.
+    The drunk man insists on going with the doctor, who reluctantly accepts.
 
     I am the odd one out.
 

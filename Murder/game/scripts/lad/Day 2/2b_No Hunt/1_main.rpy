@@ -68,12 +68,18 @@ label lad_day2_bedroom_broken:
     else:
 
         """
-        I don't know what morbid curiosity led me here.
+        I slowly enter the unlocked door.
 
-        But, if I had any doubts, Thomas Moody is there, lifeless.
+        It's Thomas Moody's.
+
+        His lifeless body lies on the bed.
+
+        I don't know what morbid curiosity led me here.
 
         Gosh.
         """
+
+        $ unlock_map('bedroom_broken')
 
     """
     Now that I'm here, perhaps I should take a quick look.

@@ -137,7 +137,7 @@ label debug_choices:
 
             $ lad_day2_believe_psychic = True #TODO put in a information (CHOICE)
             $ lad_details.objects.unlock('gun')
-            $ first_death = False
+            $ first_ending = False
             $ lad_details.intuitions.unlock('psychic_poisons')
             $ lad_details.endings.unlock('gunned_down')
 
@@ -363,7 +363,7 @@ label debug_routes:
             3, # Go to sleep
         ]
 
-        debug_lad_first_death = [
+        debug_lad_first_ending = [
         ]
 
     return

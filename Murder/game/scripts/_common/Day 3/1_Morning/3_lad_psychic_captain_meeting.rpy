@@ -127,7 +127,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
         Samuel Manning lies in his bed, drenched in blood, his throat slashed multiple times.
 
-        Pale as a sheet, his eyes frozen in a ghastly stare.
+        Pale as a sheet, his eyes frozen in a blank stare.
 
         Miss Baxter almost screams.
         """
@@ -146,7 +146,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
     if current_character.text_id == "lad":
         """
-        She's speechless, her gaze fixed on the macabre scene.
+        She's speechless, her gaze fixed on the horrifying scene.
 
         Sushil Sinha gently pulls her arm, leading her out. I quickly follow.
         """

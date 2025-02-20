@@ -80,5 +80,6 @@ label psychic_ending_escape:
 
     $ psychic_details.endings.unlock('escape')
 
-    jump survived_generic
+    $ is_death = False
+    jump ending_generic
 

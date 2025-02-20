@@ -9,7 +9,7 @@ label tutorial_clock:
         
         There, you can see the current time, as well as the day.
 
-        This helpful tool will move as the story progresses, for example, when you start a new chapter of this story.
+        This helpful tool will move as the story progresses, for example, when you start a new chapter of this adventure.
 
         Also, when you are faced with multiple choices, each action will take a different amount of time.
 

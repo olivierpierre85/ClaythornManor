@@ -4,7 +4,23 @@ label ending_generic:
 
     $ stop_music(2)
 
-    if first_death:
+    if not is_death and first_survive:
+
+        """
+        You made it out alive.
+
+        But it's not the perfect ending either.
+
+        Don't get me wrong, it's still an impressive feat.
+
+        But surviving Claythorn Manor is merely the first step.
+
+        Your goal is to save everyone.
+        """
+
+        $ first_survive = False
+
+    if first_ending:
 
         """
         Don't worry, you'll have more chances to change the fate of this character.
@@ -24,7 +40,9 @@ label ending_generic:
         Because otherwise, you'll never uncover the whole truth about what happened that weekend at Claythorn Manor.
         """
 
-        $ first_death = False
+        $ first_ending = False
+
+    $ is_death = True
 
     python:
         if not seen_tutorial_progress:
@@ -43,33 +61,33 @@ label ending_generic:
     return
 
 
-label survived_generic:
+# label survived_generic:
 
-    $ stop_music(2)
+#     $ stop_music(2)
 
-    if first_survive:
+#     if first_survive:
 
-        """
-        You made it out alive.
+#         """
+#         You made it out alive.
 
-        But it's not the perfect ending either.
+#         But it's not the perfect ending either.
 
-        Don't get me wrong, it's still an impressive feat.
+#         Don't get me wrong, it's still an impressive feat.
 
-        But surviving Claythorn Manor is merely the first step.
+#         But surviving Claythorn Manor is merely the first step.
 
-        Your goal is to save everyone.
+#         Your goal is to save everyone.
 
-        To do that, you might need to start the story over.
-        """
+#         To do that, you might need to start the story over.
+#         """
 
-        $ first_survive = False
+#         $ first_survive = False
 
-    hide screen centered_text
+#     hide screen centered_text
 
-    jump character_selection
+#     jump character_selection
 
-    return
+#     return
 
 label lad_ending_day1_deathbed:
 
@@ -103,6 +121,7 @@ label lad_gunned_down_ending:
 
     # TODO ONE declaration of ENDINGs (not in characterINformation)
     $ lad_details.add_ending_checkpoint(ending = lad_details.endings.get_item('gunned_down'))
+    
     """
     Well, you're dead.
 
@@ -207,4 +226,5 @@ label lad_ending_day3_escape:
 
     call survive_screen_transition
 
-    jump survived_generic
+    $ is_death = False
+    jump ending_generic

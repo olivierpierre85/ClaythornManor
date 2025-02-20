@@ -483,7 +483,7 @@ label lad_day3_morning_billiard_room:
         """
 
         """
-        That's probably the wiser choice.
+        That's probably wiser.
 
         Let's explore further.
         """
@@ -633,7 +633,7 @@ label lad_day3_morning_bedroom_host:
     """
 
     psychic """
-    She's either left the manor or is still concealed somewhere within. 
+    She's either left the manor or is still hidden somewhere within. 
     
     We shouldn't linger here any longer.
     """
