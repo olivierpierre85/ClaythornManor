@@ -406,6 +406,7 @@ screen main_menu():
         textbutton _("Help") action ShowMenu("help") at button4
         # textbutton _("About") action ShowMenu("about") at button5
         textbutton _("Quit") action Quit(confirm=not main_menu) at button5
+        textbutton _("Debug") action Start("start_debug") at button6
 
     # add "gui/overlay/main_menu_logo.png"
 

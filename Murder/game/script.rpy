@@ -15,6 +15,9 @@ init -1000 python:
     current_music = 'NONE'
     current_start_song = 1
 
+# Var needed BEFORE start
+default debug_activated = False
+
 # TODO move to init var? Sort it out
 default  time_left = 0
 default  hours_angle = 0
@@ -26,11 +29,14 @@ default  menu_level = -1
 default  selected_choice = [None, None, None, None]
 default  time_diff = [None, None, None, None]
 
+label start_debug:
+
+    $ debug_activated = True
+
+    jump start
+
 # The game starts here.
 label start():
-
-    # Default Menu screen when press ESC in-game
-    $ _game_menu_screen = "manor_map"
 
     call init_technical_variables
 
@@ -44,19 +50,30 @@ label start():
     $ current_character = lad_details
     $ current_storyline = lad_details # TODO move
 
+    # TODO: Implement full_testing_mode 
     $ full_testing_mode = False
     $ full_testing_mode_char = "lad"
     $ decision_tree = []
 
-    call init_debug
+    if debug_activated:
+        call init_debug
 
-    # These display lines of dialogue.
-    jump character_selection
+        # These display lines of dialogue.
+        jump character_selection
+    else:
+        # Could be useful but NEEDS a warning, because it will delete all the saves as well?
+        # Delete all persistent data (choices alreay made,....)
+        $ persistent._clear(progress=True)
+
+        jump lad_introduction
 
     return
 
 label init_technical_variables:
     
+    # Default Menu screen when press ESC in-game
+    $ _game_menu_screen = "manor_map"
+
     define config.mouse = { }
     define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
     define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]
