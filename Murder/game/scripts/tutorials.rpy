@@ -88,22 +88,57 @@ label tutorial_unlock_character:
 label tutorial_progress:
     
     tutorial """
+    Wait, it looks like you've unlocked something.
+
+    It could be that you made a choice, an observation, or found an object.
+    
+    Basically, something that can influence the rest of the story.
+
+    To help you keep track of them, you can now consult the "Progress" page.
+
+    Here, you'll see all the possible paths for each character you've unlocked. 
+
+    And if you click on them, you'll see a list of all the times you've reached them.
+
+    Selecting any of these will show you the options you've unlocked at those specific times.
+
+    If they are in colour, it means they have been activated.
+
+    A question mark means you've never encountered them before.
+
+    To check what options have been unlocked at the moment, just pick the chapter that is blinking.
+
+    Inside, you can select the "Current Status" item on the list.
+
+    I strongly recommend that you explore these screens; they will be very useful for the rest of the game.
+    """
+
+    $ _game_menu_screen = "progress"
+    $ renpy.call_in_new_context("_game_menu", "navigation")
+
+    return
+
+label tutorial_restart:
+    
+    tutorial """
     You now have to restart the story. 
     
-    However, there is no need to worry as you can use the skip button located at the bottom right of the screen to skip over any previously encountered dialogues. 
+    However, there's no need to worry as you can use the skip button located at the bottom right of the screen to skip over any previously encountered dialogues.
     """
     
     # TODO check if not mobile version =>
     tutorial """
-    You can also use the "CTRL" key on you keyboard.
+    You can also use the "CTRL" key on your keyboard.
     """
     
     tutorial """
-    Furthermore, you now have access to the "Progress" menu, which provides you with an overview of each character's past progress. 
+    Furthermore, you now have access to the "Restart" button in the "Progress" menu. 
+
+    Just choose a chapter on that screen, then any checkpoint from the list.
     
-    It is possible to restart the story from various checkpoints that occurred during the weekend's events. 
+    It's now possible to restart the story from the selected checkpoint. 
     
-    Please be cautious as these checkpoints save the previous choices you have made. 
+    Please be cautious, as these checkpoints save the previous choices you've made. 
     
     Therefore, it may be necessary to start from an earlier point to unlock new story paths.
     """

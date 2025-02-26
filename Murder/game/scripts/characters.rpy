@@ -140,6 +140,10 @@ init -100 python:
                         if self.notification_sound:
                             renpy.play(self.notification_sound, "sound")
 
+            if not seen_tutorial_progress:
+                seen_tutorial_progress = True
+                renpy.call('tutorial_progress')
+
         def is_unlocked(self, text_id):
             for info in self.information_list:
                 if text_id == info.text_id:

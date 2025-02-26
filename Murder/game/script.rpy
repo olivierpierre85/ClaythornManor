@@ -69,7 +69,7 @@ label start():
     else:
         # Could be useful but NEEDS a warning, because it will delete all the saves as well?
         # Delete all persistent data (choices alreay made,....)
-        $ persistent._clear(progress=True)
+        # $ persistent._clear(progress=True)
 
         jump lad_introduction
 
@@ -109,6 +109,7 @@ label init_technical_variables:
         seen_tutorial_map = False
         seen_tutorial_unlock_character = False
         seen_tutorial_progress = False
+        seen_tutorial_restart = False
 
         current_run = 1 # TODO move
         current_position = 0 # TODO move

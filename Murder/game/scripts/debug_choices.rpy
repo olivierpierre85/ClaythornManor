@@ -10,6 +10,7 @@ label init_debug:
     $ seen_tutorial_map = True
     $ seen_tutorial_unlock_character = True
     $ seen_tutorial_progress = True
+    $ seen_tutorial_restart = True
 
     # show screen current_time
     show screen in_game_menu_btn

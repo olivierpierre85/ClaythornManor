@@ -45,9 +45,9 @@ label ending_generic:
     $ is_death = True
 
     python:
-        if not seen_tutorial_progress:
-            seen_tutorial_progress = True
-            renpy.call('tutorial_progress')
+        if not seen_tutorial_restart:
+            seen_tutorial_restart = True
+            renpy.call('tutorial_restart')
 
         if full_testing_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")
