@@ -369,10 +369,8 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                         action SetVariable("current_checkpoint", checkpoint)
                                         if current_checkpoint == checkpoint:
                                             text_color gui.accent_color
-                                
-
                     
-                    if current_checkpoint and not ending and not current_checkpoint.label_id == "current":
+                    if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
                         
                         button:
                             action Show("confirm_restart")

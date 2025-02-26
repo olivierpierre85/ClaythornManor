@@ -129,6 +129,7 @@ init -100 python:
                     return info
         
         def unlock(self, text_id):
+            global seen_tutorial_progress
             for info in self.information_list:
                 if text_id == info.text_id and info.locked:
                     info.locked = False
@@ -165,6 +166,8 @@ init -100 python:
         def __init__(self, important_choice_list):
             super().__init__(
                 important_choice_list,
+                notification_text = "This decision may have consequences",
+                notification_sound = "audio/sound_effects/writing_short.ogg"
             )
 
 
