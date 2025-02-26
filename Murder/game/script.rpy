@@ -52,6 +52,8 @@ label start():
 
     call init_characters
 
+    show screen in_game_menu_btn
+
     # INIT first character
     $ current_character = lad_details
     $ current_storyline = lad_details # TODO move

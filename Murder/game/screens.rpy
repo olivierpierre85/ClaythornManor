@@ -1189,7 +1189,7 @@ screen confirmbutton():
             yalign .5
             spacing 45
 
-            label _("Are you sure you want to quit?"):
+            label _("Are you sure you want to quit?\n{color=#AAAAAA}{i}Your progress has been saved automatically{/i}{/color}"):
                 style "confirm_prompt"
                 xalign 0.5
 
