@@ -82,7 +82,61 @@ label psychic_generic_age:
 
     return
 
-    
+
+label psychic_generic_background:
+
+    psychic """
+    Oh, where to begin? I suppose I'm just an old woman who keeps herself busy.
+
+    I tend to my garden and brew herbal remedies,
+
+    and I usually keep to myself, except for the séances that I frequently organise.
+    """
+
+    lad """
+    Séances? You mean like talking to the dead?
+    """
+
+    psychic """
+    Well, simply put, yes. But there's more to it than that, of course.
+    """
+
+    lad """
+    I've never been to one of those... séances. How does that work?
+    """
+
+    psychic """
+    There isn't just one way of doing it.
+
+    Personally, I usually ask people to bring items that belonged to their loved ones who have passed.
+
+    Through these objects, I am able to form a bond with the soul of the deceased.
+
+    Then, they communicate with me. Sometimes it's just a whisper, barely audible.
+
+    Other times, I can see them clearly, just as I see you now.
+
+    And on rare occasions, they can take over my body and speak directly to their loved ones through me.
+    """
+
+    lad """
+    You mean... like being possessed?
+    """
+
+    psychic """
+    Yes, but don't worry, there's nothing unholy about it.
+
+    It only lasts for a few moments, and I always regain full control immediately after.
+    """
+
+    """
+    Still... that doesn't make me feel at ease.
+    """
+
+    $ psychic_details.description_hidden.unlock('background')
+    $ lad_details.saved_variables['knows_psychic_background'] = True
+
+    return
 
 label psychic_generic_heroic_act:
 
@@ -188,59 +242,6 @@ label psychic_generic_heroic_act:
 
     $ play_music('PREVIOUS')
     
-    return
-
-label psychic_generic_background:
-    
-    psychic """
-    Oh dear, I do a lot of things.
-
-    But since my husband's death, what takes up the most of my time is the seances I frequently organized.
-    """
-
-    lad """
-    Seances? You mean like talking to the dead?
-    """
-
-    psychic """
-    Well simply put yes. But there is more to it than that of course.
-    """
-
-    lad """
-    I have never been to one of those 'seance'. How does that work?
-    """
-
-    psychic """
-    There is not a single way of doing it.
-
-    Myself, I usually ask people to bring items of loved one who have passed.
-
-    Thanks to those, I am able to form a bond with the soul of the deceased.
-
-    Then, they talk to me. Sometimes it's only a whisper. Sometimes I can see them clearly, just like I see you now.
-
-    And in rare occasions, they can take over my body and talk directly to their relatives through me.
-    """
-
-    lad """
-    You mean like being possessed?
-    """
-
-    psychic """
-    Yes, but don't worry, there is nothing unholy about it.
-
-    It just mean the dead has something so important to communicate that they use the more efficient way to do so.
-
-    I only last for a few moment. I always regained full power right after.
-    """
-
-    """
-    Well, that doesn't make me feel good.
-    """
-
-    $ psychic_details.description_hidden.unlock('background')
-    $ lad_details.saved_variables['knows_psychic_background'] = True
-
     return
 
 label psychic_generic_manor:
