@@ -31,7 +31,7 @@ label psychic_introduction:
 
     Little information about who has been invited.
 
-    I guess it wouldn't be surprising if most of the participants didn't come.
+    I guess it wouldn't be surprising if some of the participants didn't show up.
 
     I can't help feeling nervous about the whole thing.
 
