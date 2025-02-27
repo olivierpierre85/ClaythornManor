@@ -387,9 +387,10 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                     spacing 10
                     yalign 0.0
                     xoffset 100
+                    yoffset -40
                     xminimum 500
 
-                    if current_checkpoint :
+                    if current_checkpoint:
                         if current_checkpoint.label_id == "current":
                             text "Unlocked at the moment":
                                 font gui.name_text_font
@@ -398,31 +399,39 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                             text "Unlocked at Selected Checkpoint":
                                 font gui.name_text_font
                                 color gui.accent_color
-                        # IN GRID
-                        grid 5 4:
-                            yoffset 30
-                            spacing 13
-                            # $ grid_fill = 20
-                            for item in current_storyline.important_choices.get_list():
-                                # $ grid_fill -= 1
-                                use info_card(item, "choice")
-                            
-                            for item in current_storyline.objects.get_list():
-                                # $ grid_fill -= 1
-                                use info_card(item, "object")
 
-                            for item in (current_storyline.observations.get_list()):
-                                # $ grid_fill -= 1
-                                use info_card(item, "observation")
-                            
-                            # if grid_fill > 0 :
-                            #     for i_fill in range(grid_fill):
-                            #         use info_card()#TODO empty image (empty Checkpoint emptu...)
+                        # SUB-LIST: CHOICES
+                        vbox:
+                            spacing 5
+                            text "Choices" size 24 font gui.name_text_font color gui.accent_color
+                            $ number_of_rows = ((len(current_storyline.important_choices.get_list()) + 4) // 5)
+                            grid 5 number_of_rows:
+                                spacing 13
+                                for item in current_storyline.important_choices.get_list():
+                                    use info_card(item, "choice")
 
+                        # SUB-LIST: OBJECTS
+                        vbox:
+                            spacing 5
+                            text "Objects" size 24 font gui.name_text_font color gui.accent_color
+                            grid 5 1:
+                                spacing 13
+                                for item in current_storyline.objects.get_list():
+                                    use info_card(item, "object")
+
+                        # SUB-LIST: OBSERVATIONS
+                        vbox:
+                            spacing 5
+                            text "Observations" size 24 font gui.name_text_font color gui.accent_color
+                            grid 5 1:
+                                spacing 13
+                                for item in current_storyline.observations.get_list():
+                                    use info_card(item, "observation")
                     else:
                         text "Select a checkpoint to see details.":
                             size 32
                             font gui.name_text_font
+
 
         fixed:
             textbutton _("Return"):

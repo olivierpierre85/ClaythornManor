@@ -19,12 +19,12 @@ init -1000 python:
 default debug_activated = False
 
 # My config variables
-define config.rollback_enabled = True #TODO Put back to false when game finished (OR env VAR?)
 define config.has_autosave = True
 define config.autosave_on_choice = True
 define config.autosave_on_quit = True
 
 # define config.default_fullscreen = True # TODO activate for DEMO
+# define config.rollback_enabled = False # TODO activate for DEMO
 
 # TODO move to init var? Sort it out
 default  time_left = 0
