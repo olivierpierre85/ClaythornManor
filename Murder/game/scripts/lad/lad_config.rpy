@@ -53,7 +53,7 @@ label init_lad:
         }
 
         lad_important_choices = CharacterImportantChoiceList ([
-            CharacterInformation(0, "whisky", "You drank whisky from Thomas Moody's flask", image_file="whisky"),
+            CharacterInformation(0, "whisky", "You went to the bar for a drink on the first night", image_file="whisky"),
             CharacterInformation(0, "day1_drunk", "You got drunk the first night", image_file="drunk"),
             CharacterInformation(0, "downstairs_1", "You attempted to go downstairs", image_file="downstairs"),
             CharacterInformation(0, "hunt", "You decided to go hunting", image_file="hunt"),

@@ -43,6 +43,8 @@ label lad_day1_evening_billiard_room:
 
 label lad_day1_evening_billiard_room_bar_1:
 
+    $ lad_details.important_choices.unlock('whisky')
+
     """
     I approach the bar.
 
@@ -118,7 +120,6 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     #TODO if needed for the story about drunk and puking ADD here that the drunk asks for a drink
-    $ lad_details.important_choices.unlock('whisky')
     $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
 
     broken """
