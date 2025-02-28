@@ -19,9 +19,12 @@ init -1000 python:
 default debug_activated = False
 
 # My config variables
+
+# Autosave not Working (probably because of complicated transitions)
+# so I deactivated it an replaced with quicksave button (and after change time)
 define config.has_autosave = True
 define config.autosave_on_choice = True
-define config.autosave_on_quit = True
+define config.autosave_on_quit = False
 
 # define config.default_fullscreen = True # TODO activate for DEMO
 # define config.rollback_enabled = False # TODO activate for DEMO

@@ -25,6 +25,8 @@ label lad_day1_evening:
 
     $ change_room('dining_room', irisout)
 
+    $ renpy.force_autosave(take_screenshot=False, block=False)
+
     """
     Everyone takes a seat at the spot labelled with their names.
 

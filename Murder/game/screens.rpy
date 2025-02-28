@@ -351,9 +351,10 @@ screen navigation(tag="menu"):
             # textbutton _("About") action ShowMenu("about")
             textbutton _("Help") action ShowMenu("help")
             textbutton _("Options") action ShowMenu("preferences")
-            # textbutton _("Save") action ShowMenu("save")
-
-            textbutton _("Quit") action Show("confirmbutton")
+            # textbutton _("Save") action ShowMenu("save") 
+            # textbutton _("Save") action FileSave(None)
+            textbutton _("Save") action QuickSave()
+            textbutton _("Quit") action [QuickSave(),Show("confirmbutton")]
 
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
@@ -391,14 +392,17 @@ screen main_menu():
     vbox:
         xpos 280
         ypos 330
-        $ last_save = renpy.newest_slot(r"auto+")
+        # $ last_save = renpy.newest_slot(r"auto+")
         # $ last_save = renpy.newest_slot()
-        #$ print(str(len(last_save)))
+        $ last_save = renpy.newest_slot(r"quick+")
+        # $ print(str(last_save))
         if last_save is not None:
-            # $ name, page = last_save.split("-")
+        #     $ name, page = last_save.split("-")
             # $ print(name, page)
             # textbutton _("Continue") action FileLoad(name, page)
-            textbutton _("Continue") action FileLoad (1, confirm = False, page = "auto", newest = True)
+            # textbutton _("Continue") action FileLoad (1, confirm = False, page = "auto", newest = True)
+            textbutton _("Continue") action QuickLoad()
+
         # textbutton _("Continue") action Start() at button0
         textbutton _("New Game") action Start() at button1
         # textbutton _("Load") action ShowMenu("load") at button2
