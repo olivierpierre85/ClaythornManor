@@ -36,9 +36,9 @@ default  hours_angle = 0
 define current_year = "1924"
 
 # var needed for imbricated menus choices
-default  menu_level = -1
-default  selected_choice = [None, None, None, None]
-default  time_diff = [None, None, None, None]
+# default  menu_level = -1
+# default  selected_choice = [None, None, None, None, None]
+# default  time_diff = [None, None, None, None, None]
 
 label start_debug:
 
@@ -48,6 +48,10 @@ label start_debug:
 
 # The game starts here.
 label start():
+
+    default  menu_level = -1
+    default  selected_choice = [None, None, None, None, None]
+    default  time_diff = [None, None, None, None, None]
 
     call init_technical_variables
 

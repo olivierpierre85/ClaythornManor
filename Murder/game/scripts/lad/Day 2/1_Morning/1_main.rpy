@@ -128,13 +128,24 @@ label lad_day2_morning:
     
     call run_menu(
         TimedMenu("lad_day2_morning_hunt", [
-            TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_hunt', early_exit = True),
-            TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_no_hunt', early_exit = True)
+            TimedMenuChoice('Go on the hunt and risk to embarrass yourself, or worse', 'lad_day2_hunt_choice', early_exit = True),
+            TimedMenuChoice('Stay here where it\'s cosy', 'lad_day2_no_hunt_choice', early_exit = True)
         ])
     )
 
-    jump lad_day2_afternoon
+    return
 
+# tWO jumps instead of calling the label from the menu so the menu IS resetted to 0
+# If not doing that, the rest of the game will happen Inside the menu above
+label lad_day2_hunt_choice:
+
+    $ lad_details.important_choices.unlock('hunt')
+
+    jump lad_day2_hunt
+
+label lad_day2_no_hunt_choice:
+
+    jump lad_day2_no_hunt
 
 label lad_day2_breakfast_eat:
 

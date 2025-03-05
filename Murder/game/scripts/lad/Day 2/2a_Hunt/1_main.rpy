@@ -17,8 +17,6 @@
 # --------------------------------------------
 label lad_day2_hunt:
 
-    $ lad_details.important_choices.unlock('hunt')
-
     $ current_character.add_checkpoint("lad_day2_hunt") 
 
     call change_time(11,00, 'The Hunt', 'Saturday')

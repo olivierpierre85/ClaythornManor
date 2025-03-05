@@ -143,6 +143,11 @@ label start_again():
 
     hide screen centered_text
 
+    # Reset menu options and level
+    $ menu_level = -1
+    $ selected_choice = [None, None, None, None, None]
+    $ time_diff = [None, None, None, None, None]
+
     python:
         global has_been_restarted, current_character, current_storyline, current_checkpoint
 
@@ -188,7 +193,7 @@ label start_again():
 
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 
-        skip_clock_movement = True # Don't show move clock at first change time
+        skip_clock_movement = True # Don't show move clock at first change time TODO NOT WORKING??
 
         stop_music(1)
 
