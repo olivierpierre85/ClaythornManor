@@ -111,7 +111,9 @@ label lad_day3_afternoon_toilet:
     $ change_room('bedroom_lad')
 
     """
-    Once I reached my room, I try not to waste anytime.
+    Once I reached my room, I try not to waste any time. 
+    
+    First things first, I spend a penny.
     """       
 
     pause 2.0

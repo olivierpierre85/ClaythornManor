@@ -60,15 +60,17 @@ label lad_day2_hunt_noaccident:
     Yes, it's a perfect spot.
     """
 
-    """
-    We began setting up the picnic.
-
-    However, before we could start eating, we heard a gunshot nearby.
-    """
-
     $ stop_music(3)
 
+    """
+    We began setting up the picnic.
+    """
+
     play sound gun
+
+    """
+    However, before we could start eating, we heard a gunshot nearby.
+    """
 
     captain """
     Ah, it sounds like the others have caught something. And they're not far from here.
@@ -147,7 +149,5 @@ label lad_day2_hunt_noaccident:
     $ stop_music()
 
     pause 2.0
-
-    $ lad_details.saved_variables["day2_saw_accident"] = True
 
     return

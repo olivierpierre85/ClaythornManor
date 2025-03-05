@@ -71,9 +71,9 @@ label lad_day1_evening:
     I found myself sitting between Amelia Baxter and Daniel Baldwin.
     """
 
-    call change_time(19,00)
+    call change_time(19, 30)
 
-    $ time_left = 120
+    $ time_left = 90
 
     $ current_menu = TimedMenu("lad_day1_evening", [
         TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor', keep_alive = False,),
@@ -172,7 +172,7 @@ label lad_day1_evening:
 
     $ stop_music()
 
-    $ change_room('bedroom_lad')
+    $ change_room('bedroom_lad', dissolve)
 
     if lad_details.important_choices.is_unlocked('day1_drunk'):
 

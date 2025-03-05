@@ -88,7 +88,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
     And I assume he had more drinks during the hunt.
     """
 
-    if lad_details.saved_variables["day2_saw_accident"]:
+    if lad_details.important_choices.is_unlocked('hunt_doctor_drunk'):
 
         captain """
         You were with him, weren't you?
@@ -442,6 +442,8 @@ label lad_day2_evening_billiard_room_bar_3:
     return
 
 label lad_day2_evening_billiard_room_bar_4:
+
+    $ lad_details.important_choices.unlock('day2_drunk')
     
     """
     I ignore the captain's judgmental look and head back to the bar.
@@ -452,7 +454,5 @@ label lad_day2_evening_billiard_room_bar_4:
 
     Besides, one more can't hurt.
     """
-
-    $ lad_details.saved_variables["day2_drunk"] = True
 
     return

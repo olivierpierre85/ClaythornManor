@@ -129,7 +129,10 @@ init -1 python:
             visible_choices = []
             for i, choice in enumerate(self.choices):
                 if not choice.hidden and choice.get_condition():
-                    visible_choices.append((choice.text + " {{" + self.id + "}}", i))
+                    # visible_choices.append((choice.text + " {{" + self.id + "}}", i))
+                    # Add the direction of the choice in invisible redirect to avoid greying choices with same text ({{}}} hidden in menu screen)
+                    visible_choices.append((choice.text + " {{" + choice.redirect + "}}", i))
+                    
             return visible_choices
         
         def hide_specific_choice(self, choice_to_hide):

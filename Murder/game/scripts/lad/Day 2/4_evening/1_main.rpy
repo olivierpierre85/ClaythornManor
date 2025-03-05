@@ -58,7 +58,6 @@ label lad_day2_evening:
     call change_time(21,00)
 
     $ time_left = 120
-    $ time_left = 10
 
     call run_menu(lad_details.saved_variables["day2_evening_map_menu"])
 
@@ -66,7 +65,7 @@ label lad_day2_evening:
 
     $ stop_music()
 
-    if lad_details.saved_variables["day2_drunk"]:
+    if lad_details.important_choices.is_unlocked('day2_drunk'):
 
         """
         My head feels foggy.

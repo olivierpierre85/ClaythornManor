@@ -1,5 +1,7 @@
 label tutorial_clock:
 
+    $ stop_music(2)
+
     if not seen_tutorial_clock:
 
         tutorial """
@@ -21,11 +23,15 @@ label tutorial_clock:
         """
 
         $ seen_tutorial_clock = True
+    
+    $ play_music('PREVIOUS')
 
     return
 
 
 label tutorial_description_hidden:
+
+    $ stop_music(2)
 
     tutorial """
     Congratulations on discovering your first piece of information about a character! 
@@ -50,11 +56,15 @@ label tutorial_description_hidden:
     $ _game_menu_screen = "characters"
     $ renpy.call_in_new_context("_game_menu", "navigation")
 
+    $ play_music('PREVIOUS')
+
     return
 
 
 
 label tutorial_map:
+
+    $ stop_music(2)
 
     tutorial """
     Well done, you just found new information about the Manor. 
@@ -67,9 +77,13 @@ label tutorial_map:
     $ _game_menu_screen = "manor_map"
     $ renpy.call_in_new_context("_game_menu", "navigation")
 
+    $ play_music('PREVIOUS')
+
     return
 
 label tutorial_unlock_character:
+
+    $ stop_music(2)
     
     tutorial """
     You've unlocked a new character!
@@ -83,9 +97,13 @@ label tutorial_unlock_character:
     Use the characters' full potential to unravel the mystery of this weekend.
     """
 
+    $ play_music('PREVIOUS')
+
     return
 
 label tutorial_progress:
+
+    $ stop_music(2)
     
     tutorial """
     Wait, it looks like you've unlocked something.
@@ -115,6 +133,8 @@ label tutorial_progress:
 
     $ _game_menu_screen = "progress"
     $ renpy.call_in_new_context("_game_menu", "navigation")
+    
+    $ play_music('PREVIOUS')
 
     return
 

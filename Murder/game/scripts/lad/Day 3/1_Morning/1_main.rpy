@@ -39,7 +39,7 @@ label lad_day3_morning:
 
     play sound door_knock
 
-    if lad_details.saved_variables["day2_drunk"]:
+    if lad_details.important_choices.is_unlocked('day2_drunk') :
         """
         My head is throbbing.
 

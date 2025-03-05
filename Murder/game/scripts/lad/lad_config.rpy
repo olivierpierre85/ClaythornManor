@@ -37,13 +37,11 @@ label init_lad:
             
             "day2_breakfast_follow" : False,
             "day2_hunt" : False,
-            "day2_saw_accident" : False,
             "day2_evening_billiard_room_visited" : False,
             "day2_nohunt_has_visited_tea_room" : False,
             "day2_nohunt_bedroom_tries" : 0,
 
             "day2_drinks" : 0,
-            "day2_drunk" : False,
             "day2_evening_billiard_room_captain_talked" : False,
             "day2_evening_taste_from_flask" : False,
 
