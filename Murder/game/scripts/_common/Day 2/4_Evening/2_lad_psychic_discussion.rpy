@@ -59,7 +59,7 @@ label common_day2_evening_lad_psychic_discussion_2:
     """
 
     psychic """
-    I wouldn't rule anything out, but it seems less likely that the staff or Lady Claythorn would be involved.
+    I wouldn't rule anything out, but it seems less likely that the staff or Lady Claythorn would be implicated.
 
     Such an act would require a massive operation.
 

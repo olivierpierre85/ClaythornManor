@@ -58,7 +58,6 @@ label lad_day2_evening:
     call change_time(21,00)
 
     $ time_left = 120
-    $ time_left = 1
 
     call run_menu(lad_details.saved_variables["day2_evening_map_menu"])
 

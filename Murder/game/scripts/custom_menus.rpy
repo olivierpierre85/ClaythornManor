@@ -29,7 +29,6 @@ label run_menu(current_menu, change_level=True):
             $ renpy.show(current_menu.image_right, at_list=[character_choice_right])
         if current_menu.image_right_2:
             $ renpy.show(current_menu.image_right_2, at_list=[character_choice_right_2])
-
         
         $  selected_choice[menu_level] = current_menu.display_choices()
         # $ print(menu_level, selected_choice, selected_choice[menu_level])
