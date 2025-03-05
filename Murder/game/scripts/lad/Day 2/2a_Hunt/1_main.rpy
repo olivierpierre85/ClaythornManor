@@ -21,7 +21,7 @@ label lad_day2_hunt:
 
     $ current_character.add_checkpoint("lad_day2_hunt") 
 
-    call change_time(11,00, 'Hunt', 'Saturday')
+    call change_time(11,00, 'The Hunt', 'Saturday')
 
     call black_screen_transition("Ted Harring", "The Hunt") # Good? TODO check consistency with no hunt
     

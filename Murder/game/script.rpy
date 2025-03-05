@@ -134,8 +134,8 @@ label init_technical_variables:
 
         # Conditions for menu shortcuts
         condition_saturday_morning = "(current_day == 'Saturday' and current_phase == 'Morning')"
-        condition_saturday_morning_or_hunt = "(current_day == 'Saturday' and (current_phase == 'Morning' or current_phase == 'Hunt'))"
-        condition_saturday_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
+        condition_saturday_morning_or_hunt = "(current_day == 'Saturday' and (current_phase == 'Morning' or current_phase == 'The Hunt' or current_phase == 'No Hunt'))"
+        condition_saturday_hunt = "(current_day == 'Saturday' and (current_phase == 'The Hunt' or current_phase == 'No Hunt'))"
         condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
         condition_saturday = "current_day == 'Saturday'"
         condition_friday = "current_day == 'Friday'"

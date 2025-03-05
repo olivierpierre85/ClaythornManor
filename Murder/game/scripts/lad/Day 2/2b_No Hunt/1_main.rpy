@@ -18,7 +18,7 @@
 # --------------------------------------------
 label lad_day2_no_hunt:
 
-    call change_time(11,00, 'Hunt', 'Saturday')
+    call change_time(11,00, 'No Hunt', 'Saturday')
 
     $ current_character.add_checkpoint("lad_day2_no_hunt") 
     

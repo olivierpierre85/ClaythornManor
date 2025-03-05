@@ -7,10 +7,10 @@ label lad_config_map:
         # https://lemmasoft.renai.us/forums/viewtopic.php?f=8&t=25453&p=313338&hilit=caption.replace#p313338
 
 
-        condition_friday = "current_day == 'Friday'"
-        condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
-        condition_saturday_hunt = "(current_day == 'Saturday' and current_phase == 'Hunt')"
-        condition_sunday = "(current_day == 'Sunday' and current_phase == 'Morning')"
+        # condition_friday = "current_day == 'Friday'"
+        # condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
+        # condition_saturday_hunt = "(current_day == 'Saturday' and (current_phase == 'The Hunt' or current_phase == 'No Hunt'))"
+        # condition_sunday = "(current_day == 'Sunday' and current_phase == 'Morning')"
 
         # -------------------------
         # Friday
@@ -162,7 +162,7 @@ label lad_config_map:
             TimedMenuChoice(
                 'Have a talk with Amelia Baxter', 
                 'lad_day2_evening_bedroom_psychic',
-                20,
+                0,
                 room = 'bedroom_psychic',
             ),
             TimedMenuChoice(

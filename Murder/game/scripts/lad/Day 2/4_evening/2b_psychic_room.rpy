@@ -5,8 +5,8 @@ label lad_day2_evening_bedroom_psychic:
     call common_day2_evening_lad_psychic_discussion_1
 
     call run_menu(TimedMenu("lad_day2_evening_bedroom_psychic", [
-        TimedMenuChoice('Admit she might be right', 'lad_day2_believe_psychic', 10, early_exit = True ),
-        TimedMenuChoice('No way, she is clearly imagining things', 'lad_day2_believe_dont_believe_psychic', early_exit = True)
+        TimedMenuChoice('Admit she might be right', 'lad_day2_believe_psychic', 30, early_exit = True ),
+        TimedMenuChoice('No way, she is clearly imagining things', 'lad_day2_believe_dont_believe_psychic', 20, early_exit = True)
     ]))
 
     return
