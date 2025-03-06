@@ -228,7 +228,7 @@ init -100 python:
             self.character_name = character_name
 
         def unlock(self, text_id):
-            global seen_tutorial_description_hidden, seen_tutorial_unlock_character
+            global seen_tutorial_description_hidden, seen_tutorial_unlock_character, show_tutorial_unlock_character
             for info in self.information_list:
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
@@ -246,7 +246,7 @@ init -100 python:
                             renpy.notify("You have unlock a new Character : " + self.character_name)
                             if not seen_tutorial_unlock_character:
                                 seen_tutorial_unlock_character = True
-                                renpy.call('tutorial_unlock_character')
+                                show_tutorial_unlock_character = True
             
             if not seen_tutorial_description_hidden:
                 seen_tutorial_description_hidden = True

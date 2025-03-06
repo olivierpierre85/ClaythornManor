@@ -281,7 +281,7 @@ label lad_day3_afternoon_no_toilet:
     Her expression subtly changes, from fright to resignation.
     """
 
-    """
+    psychic """
     I feel... I feel I made a huge mistake.
     """
 
@@ -289,12 +289,21 @@ label lad_day3_afternoon_no_toilet:
     What do you mean?
     """
 
+    # TOO obvious
+    # psychic """
+    # It doesn't matter now.
+
+    # It's too late it appears.
+    
+    # Oh, Ted, I shouldn't have lied to you.
+    # """
+
     psychic """
     It doesn't matter now.
 
-    It's too late it appears.
+    It's too late.
     
-    Oh, Ted, I shouldn't have lied to you.
+    I am sorry, I shouldn't have lied.
     """
 
     lad """
@@ -306,9 +315,7 @@ label lad_day3_afternoon_no_toilet:
 
     That... I've never been a psychic...
 
-    I can't believe people fell for that act.
-
-    I am... a fraud... 
+    That I am... a fraud... 
     
     A con artist...
 
@@ -340,6 +347,12 @@ label lad_day3_afternoon_no_toilet:
     $ play_music('scary')
 
     pause 2.0
+
+    """
+    As I watch Amelia Baxter's life slowing leaving her body, 
+    
+    I turn towards Rosalind Marsh.
+    """
 
     lad """
     Oh my God!

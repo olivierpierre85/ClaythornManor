@@ -119,6 +119,7 @@ label init_technical_variables:
         seen_tutorial_description_hidden = False
         seen_tutorial_map = False
         seen_tutorial_unlock_character = False
+        show_tutorial_unlock_character = False
         seen_tutorial_progress = False
         seen_tutorial_restart = False
         seen_tutorial_intuition = False
