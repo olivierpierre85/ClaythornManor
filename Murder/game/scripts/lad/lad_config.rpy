@@ -63,7 +63,7 @@ label init_lad:
             CharacterInformation(0, "trust_psychic", "You decided to trust Amelia Baxter", image_file="trust_psychic"),
             
             CharacterInformation(0, "abandoned_psychic", "You abandoned Amelia Baxter and left the manor", image_file="leave_manor"),
-            CharacterInformation(0, "protect_food", "You prevented your plate from being switched", image_file="poison_food"),
+            CharacterInformation(0, "protect_food", "You didn't leave your food unattended for too long", image_file="poison_food"),
             # DO we need the alternative? You left ? 
             CharacterInformation(0, "downstairs_3", "You pushed your luck a third time by going downstairs", image_file="downstairs_3"),
             CharacterInformation(0, "day3_drunk", "You got drunk the third night", image_file="drunk_3"),

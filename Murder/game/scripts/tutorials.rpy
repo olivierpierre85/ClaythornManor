@@ -85,17 +85,17 @@ label tutorial_intuition:
     $ stop_music(2)
 
     tutorial """
-    You just got your first "Intuition".
+    You just received your first "Intuition"
 
     An "Intuition" is a powerful tool.
 
-    Some say that when a death is so strong, that it will leave a mark that can be felt throughout planes of existence.
+    Some say that when a death is particularly strong, it leaves a mark that can be felt across different planes of existence.
 
-    Other say it's the ghost of a different timeline who came back to try to warn you.
+    Others believe it's the ghost of an alternate timeline returning to warn you.
 
-    In any case, it means that you will now receive a warning somewhere in this adventure. 
+    In any case, it means you will now receive a warning at some point during this adventure. 
     
-    This will let you change the course of the story in a way that you couldn't before.
+    This will allow you to change the course of the story in ways that were previously impossible.
 
     Make good use of it.
     """
@@ -112,7 +112,7 @@ label tutorial_unlock_character:
     tutorial """
     You've unlocked a new character!
 
-    Now, you can begin the narrative through their point a view.
+    Now, you can begin the narrative through their point of view.
 
     Each character possesses a distinct story, persona, and background.
 
