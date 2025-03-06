@@ -121,6 +121,7 @@ label init_technical_variables:
         seen_tutorial_unlock_character = False
         seen_tutorial_progress = False
         seen_tutorial_restart = False
+        seen_tutorial_intuition = False
 
         current_run = 1 # TODO move
         current_position = 0 # TODO move

@@ -18,6 +18,11 @@ label ending_generic:
         Your goal is to save everyone.
         """
 
+        if not first_ending:
+            """
+            And to do that, you need to start the story over.
+            """
+
         $ first_survive = False
 
     if first_ending:

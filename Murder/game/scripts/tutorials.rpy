@@ -61,7 +61,6 @@ label tutorial_description_hidden:
     return
 
 
-
 label tutorial_map:
 
     $ stop_music(2)
@@ -80,6 +79,31 @@ label tutorial_map:
     $ play_music('PREVIOUS')
 
     return
+
+label tutorial_intuition:
+
+    $ stop_music(2)
+
+    tutorial """
+    You just got your first "Intuition".
+
+    An "Intuition" is a powerful tool.
+
+    Some say that when a death is so strong, that it will leave a mark that can be felt throughout planes of existence.
+
+    Other say it's the ghost of a different timeline who came back to try to warn you.
+
+    In any case, it means that you will now receive a warning somewhere in this adventure. 
+    
+    This will let you change the course of the story in a way that you couldn't before.
+
+    Make good use of it.
+    """
+
+    $ play_music('PREVIOUS')
+
+    return
+
 
 label tutorial_unlock_character:
 

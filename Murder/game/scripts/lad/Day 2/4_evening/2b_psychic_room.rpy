@@ -13,6 +13,8 @@ label lad_day2_evening_bedroom_psychic:
 
 label lad_day2_believe_psychic:
 
+    $ lad_details.important_choices.unlock('trust_psychic')
+
     call common_day2_evening_lad_psychic_discussion_2
 
     call psychic_generic
@@ -30,8 +32,6 @@ label lad_day2_believe_psychic:
     lad """
     Thanks.
     """
-
-    $ lad_details.important_choices.unlock('trust_psychic')
 
     return
 

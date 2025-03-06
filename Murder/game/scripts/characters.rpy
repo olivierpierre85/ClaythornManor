@@ -185,6 +185,21 @@ init -100 python:
                 notification_text = "You have a new intuition",
                 notification_sound = "audio/sound_effects/writing_short.ogg"
             )
+        
+        def unlock(self, text_id):
+            global seen_tutorial_intuition
+            for info in self.information_list:
+                if text_id == info.text_id and info.locked:
+                    info.locked = False
+                    info.discovered = True
+
+                    if not hide_notifications:
+                        renpy.notify(self.notification_text)
+                        renpy.play(self.notification_sound, "sound")
+
+            if not seen_tutorial_intuition:
+                seen_tutorial_intuition = True
+                renpy.call('tutorial_intuition')
 
 
     class CharacterObservationList(CharacterInformationList):
