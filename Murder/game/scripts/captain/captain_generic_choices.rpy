@@ -118,7 +118,7 @@ label captain_generic_origin_psychic_2:
 
     # ChatGPT
     captain """
-    I was born there in 1868. 
+    I was born there. 
     
     Growing up, I was always fascinated by the stories of the Raj army and their brave officers. 
     
