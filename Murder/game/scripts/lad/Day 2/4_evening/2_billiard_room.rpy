@@ -316,7 +316,7 @@ label lad_day2_evening_billiard_room_captain:
     lad """
     What makes you so sure?
 
-    You must admit, two deaths in a single day is quite an uncommon occurrence.
+    You must admit, two deaths in a single day is quite a coincidence.
     """
 
     captain """
@@ -342,7 +342,7 @@ label lad_day2_evening_billiard_room_captain:
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu("lad_day2_evening_billiard_room_captain_hypothesis_menu", [
         TimedMenuChoice('Reveal Daniel Baldwin\'s opium addiction{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']"),
         TimedMenuChoice('Point out the strange liquid on Thomas Moody\'s room{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')"),
-        TimedMenuChoice('Accuse Samuel Manning of having a motive to harm Daniel Baldwin', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10, condition="lad_details.objects.is_unlocked('burned_letter')"),
+        TimedMenuChoice('Show the letter found in Samuel\'s Manning room{{object}}', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10, condition="lad_details.objects.is_unlocked('burned_letter')"),
         TimedMenuChoice('Question Samuel Manning\'s state of inebriation at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10),
         # TODO: If you have ALL the suspicions, you can convince the captain something strange is afoot. Need to decide next steps.
         TimedMenuChoice('Accept you don\'t have any real suspicions', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit=True),

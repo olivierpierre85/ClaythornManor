@@ -92,6 +92,8 @@ label init_lad:
         lad_objects = CharacterObjectList([  
                 CharacterInformation(1, "gun", "You took an empty handgun found in the gun room", image_file="gun"),
                 CharacterInformation(2, "burned_letter", "A burned letter found in Samuel Manning's room", image_file="burned_letter"),
+                CharacterInformation(3, "laudanum", "You stole a vial of laudanum", image_file="laudanum"),
+                # TODO: Do something with the laudanum? Or just to show he 
                 # TODO: Add GAS ? Bullets ? Here or for someone else?
             ],
         )

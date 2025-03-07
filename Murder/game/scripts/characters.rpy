@@ -128,14 +128,14 @@ init -100 python:
                 if text_id == info.text_id: 
                     return info
         
-        def unlock(self, text_id):
+        def unlock(self, text_id, is_restart = False):
             global seen_tutorial_progress
             for info in self.information_list:
                 if text_id == info.text_id and info.locked:
                     info.locked = False
                     info.discovered = True
 
-                    if not hide_notifications:
+                    if not hide_notifications and not is_restart:
                         if self.notification_text:
                             renpy.notify(self.notification_text)
                         if self.notification_sound:

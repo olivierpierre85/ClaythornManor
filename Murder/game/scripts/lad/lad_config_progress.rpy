@@ -98,7 +98,8 @@ label lad_config_progress:
             ),
             (
                 'lad_day2_evening',
-                [              
+                [
+                    ('object', 'burned_letter'),               
                 ],
                 []
             ),

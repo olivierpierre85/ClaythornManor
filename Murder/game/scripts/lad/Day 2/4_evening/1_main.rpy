@@ -192,11 +192,15 @@ label lad_day2_bedroom_doctor:
     """
 
     $ doctor_details.description_hidden.unlock('addict') 
-    $ current_character.saved_variables['knows_doctor_addict'] = True
+    $ current_character.saved_variables['knows_doctor_addict'] = True #TODO something with that? 
 
+    # TODO, should be a choice? Maybe every object should be a choice?
     """
     Just in case, I might as well take a few for myself.
     """
+
+    $ lad_details.objects.unlock('laudanum')
+
     # TODO add pocketing sound?
     # TODO is the lad a thief? likely ADD HERE
     # TODO add LAUDANUM IN THE OBJECTS LIST?

@@ -35,15 +35,15 @@ label lad_introduction:
 
     I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Bravery Award".
 
-    You'll be receiving the prize, along with six other courageous individuals, at a reception organized in your honor. 
+    You'll be receiving the prize, along with six other courageous individuals, at a reception organised in your honor. 
     
-    As a thank you, a weekend of leisure at Claythorn Manor as been planned for all of you to enjoy.
+    As a thank you, a weekend of leisure at Claythorn Manor has been planned for all of you to enjoy.
 
     After which, a prize money of one thousand pounds in bearers bond will be handed to you.
     
     Please note that your presence is mandatory in order to receive the prize.
 
-    All you have to do is be at the Aberdeen Station, on the 13th of October around 4PM, where someone will drive you to the manor.
+    All you have to do is be at Aberdeen Station, on the 13th of October around 4PM, where someone will drive you to the manor.
 
     Hoping ,.....
     """
