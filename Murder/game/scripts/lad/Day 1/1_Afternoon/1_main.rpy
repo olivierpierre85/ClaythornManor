@@ -73,7 +73,7 @@ label lad_introduction:
 
     $ change_room("train_station")
 
-    pause 5.0
+    pause 2.0
     
     """
     As I step off the train, a man approaches me.

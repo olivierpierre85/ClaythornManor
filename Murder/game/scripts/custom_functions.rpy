@@ -223,7 +223,7 @@ label work_in_progress:
     scene black_background with wipedown
     show screen centered_text("The story is over for now.")
     play sound gong
-    pause 5.0
+    pause 2.0
 
     """
     You've reached to end of the story written so far.

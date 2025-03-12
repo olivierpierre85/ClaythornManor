@@ -56,7 +56,7 @@ label captain_introduction:
 
     $ change_room("train_station")
 
-    pause 5.0
+    pause 2.0
     
     """
     As soon as the train stops, I am on the platform.
