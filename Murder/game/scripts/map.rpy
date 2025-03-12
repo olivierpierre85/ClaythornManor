@@ -2,17 +2,19 @@
 transform map_button_left():
     subpixel True
     yalign 0.5
-    xpos 15
-    linear 1.0 xpos 0
-    linear 1.0 xpos 15
+    xpos 20
+    zoom 1.2
+    linear 0.7 xpos 0
+    linear 0.7 xpos 20
     repeat
 
 transform map_button_right():
     subpixel True
     yalign 0.5
     xpos 0
-    linear 1.0 xpos 15
-    linear 1.0 xpos 0
+    zoom 1.2
+    linear 0.7 xpos 20
+    linear 0.7 xpos 0 
     repeat
 
 label init_map:
@@ -117,8 +119,6 @@ label change_floor(floor):
     return
 
 
-
-
 # Display of manor map in menu => Make it more like
 screen manor_map:
     tag menu
@@ -136,17 +136,18 @@ screen manor_map:
             if selected_floor > MIN_FLOOR:
                 imagebutton:
                     mouse "hover"
-                    idle "gui/button/page_button_left_idle.png" 
+                    idle "gui/button/page_button_left_idle_bright.png" 
                     hover "gui/button/page_button_left_hover.png" 
                     yalign 0.5 
                     xoffset 0                     
                     action SetVariable("selected_floor", left_floor) at map_button_left
             else:
-                imagebutton:
-                    mouse "hover"
-                    idle "gui/button/page_button_left_idle.png" 
-                    yalign 0.5 
-                    xoffset 0                     
+                add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
+                # imagebutton:
+                #     mouse "hover"
+                #     idle "gui/button/page_button_left_idle.png" 
+                #     yalign 0.5 
+                #     xoffset 0                     
             
             imagemap: 
                 xalign 0.5                       
@@ -157,17 +158,18 @@ screen manor_map:
             if selected_floor < MAX_FLOOR:
                 imagebutton:
                     mouse "hover"
-                    idle "gui/button/page_button_right_idle.png" 
+                    idle "gui/button/page_button_right_idle_bright.png" 
                     hover "gui/button/page_button_right_hover.png" 
                     yalign 0.5 
                     xoffset 0                     
                     action SetVariable("selected_floor", right_floor) at map_button_right
             else:
-                imagebutton:
-                    mouse "hover"
-                    idle "gui/button/page_button_right_idle.png" 
-                    yalign 0.5 
-                    xoffset 0       
+                add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
+                # imagebutton:
+                #     mouse "hover"
+                #     idle "gui/button/page_button_right_idle.png" 
+                #     yalign 0.5 
+                #     xoffset 0       
 
 screen map_information:
 
@@ -232,22 +234,23 @@ screen in_game_map_menu(timed_menu):
                 xalign 0.5
 
 
-            # use show_map # TODO problem with hot var in tooltip not working, so we need to duplicate code
+            # use show_map # TODO problem with hot var in tooltip not working, so instead we need to duplicate code
             hbox:
                 if selected_floor > MIN_FLOOR:
                     imagebutton:
                         mouse "hover"
-                        idle "gui/button/page_button_left_idle.png" 
+                        idle "gui/button/page_button_left_idle_bright.png" 
                         hover "gui/button/page_button_left_hover.png" 
                         yalign 0.5 
                         xoffset 0                     
                         action SetVariable("selected_floor", left_floor) at map_button_left
                 else:
-                    imagebutton:
-                        mouse "hover"
-                        idle "gui/button/page_button_left_idle.png" 
-                        yalign 0.5 
-                        xoffset 0                     
+                    add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
+                    # imagebutton:
+                    #     mouse "hover"
+                    #     idle "gui/button/page_button_left_idle.png" 
+                    #     yalign 0.5 
+                    #     xoffset 0                     
                 
                 imagemap: 
                     xalign 0.5                       
@@ -269,17 +272,18 @@ screen in_game_map_menu(timed_menu):
                 if selected_floor < MAX_FLOOR:
                     imagebutton:
                         mouse "hover"
-                        idle "gui/button/page_button_right_idle.png" 
+                        idle "gui/button/page_button_right_idle_bright.png" 
                         hover "gui/button/page_button_right_hover.png" 
                         yalign 0.5 
                         xoffset 0                     
                         action SetVariable("selected_floor", right_floor) at map_button_right
                 else:
-                    imagebutton:
-                        mouse "hover"
-                        idle "gui/button/page_button_right_idle.png" 
-                        yalign 0.5 
-                        xoffset 0       
+                    add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
+                    # imagebutton:
+                    #     mouse "hover"
+                    #     idle "gui/button/page_button_right_idle.png" 
+                    #     yalign 0.5 
+                    #     xoffset 0       
 
             $ tooltip = GetTooltip()
             if not tooltip:
