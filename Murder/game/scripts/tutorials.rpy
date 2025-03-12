@@ -15,11 +15,11 @@ label tutorial_clock:
 
         Also, when you are faced with multiple choices, each action will take a different amount of time.
 
-        And each scene has a limited duration.
-
-        This means you won't always have the opportunity to explore every option on a list.
+        Since each scene has a limited duration, this means you won't always have the opportunity to explore every option on a list.
 
         So make every choice count.
+
+        Also, there is no need to rush reading, the time spent on an choice is set and not dependent on the speed of your actions.
         """
 
         $ seen_tutorial_clock = True
