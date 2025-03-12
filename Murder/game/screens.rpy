@@ -336,16 +336,16 @@ screen navigation(tag="menu"):
         else:
             textbutton _("Resume") action Return() 
             if seen_tutorial_map: # TODO: Not working because map default first view
-                textbutton _("Map") action ShowMenu("manor_map")
+                textbutton _("Map") action [SetVariable("last_menu_screen", "manor_map"), ShowMenu("manor_map")]
             if seen_tutorial_description_hidden:
-                textbutton _("Characters") action ShowMenu("characters")
+                textbutton _("Characters") action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
             # textbutton _("Objects") action ShowMenu("objects")
             if seen_tutorial_progress:
-                textbutton _("Progress") action ShowMenu("progress")
-            textbutton _("Log") action ShowMenu("history")
+                textbutton _("Progress") action [SetVariable("last_menu_screen", "progress"), ShowMenu("progress")]
+            textbutton _("Log") action [SetVariable("last_menu_screen", "history"), ShowMenu("history")]
             # textbutton _("About") action ShowMenu("about")
-            textbutton _("Help") action ShowMenu("help")
-            textbutton _("Options") action ShowMenu("preferences")
+            textbutton _("Help") action [SetVariable("last_menu_screen", "help"), ShowMenu("help")]
+            textbutton _("Options") action [SetVariable("last_menu_screen", "preferences"), ShowMenu("preferences")]
             # textbutton _("Save") action ShowMenu("save") 
             # textbutton _("Save") action FileSave(None)
             textbutton _("Save") action QuickSave()
@@ -727,6 +727,9 @@ screen preferences():
 
     tag menu
     style_prefix "pref"
+
+    # $ _game_menu_screen = "preferences"
+
     if main_menu:
         add gui.main_menu_background
     add "gui/overlay/game_menu.png"

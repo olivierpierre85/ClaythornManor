@@ -107,7 +107,7 @@ screen in_game_menu_btn:
         yoffset 30
         ypadding 0
         xpadding 0
-        textbutton _("Menu") action ShowMenu("manor_map"):
+        textbutton _("Menu") action ShowMenu(last_menu_screen):
             xminimum 200  # Adjust these values as needed
             yminimum 80
 

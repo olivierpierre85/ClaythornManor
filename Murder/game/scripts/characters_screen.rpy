@@ -2,6 +2,10 @@
 screen characters:
     modal True
     tag menu
+
+    on "show" action SetVariable("last_menu_screen", "characters")
+    $ last_menu_screen = "characters"
+
     use game_menu(_("Characters")):
         fixed:
             xalign 0.5
