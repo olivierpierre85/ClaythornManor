@@ -114,3 +114,15 @@ screen in_game_menu_btn:
 # simple empty
 label generic_cancel:
     return
+
+screen custom_listener():
+    # Replace the standard call to menu with one with the latest screen as parameter
+    key "K_ESCAPE" action ShowMenu(last_menu_screen)
+    key "K_MENU" action ShowMenu(last_menu_screen)
+    key "K_PAUSE" action ShowMenu(last_menu_screen)
+    key "mouseup_3" action ShowMenu(last_menu_screen)
+    # Todo Explain the shortcuts in the tutorial?
+    key "K_m" action [SetVariable("last_menu_screen", "manor_map"), ShowMenu("manor_map")]
+    key "K_p" action [SetVariable("last_menu_screen", "progress"), ShowMenu("progress")]
+    key "K_c" action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
+    

@@ -62,6 +62,7 @@ label start():
     call init_characters
 
     show screen in_game_menu_btn
+    show screen custom_listener
 
     # INIT first character
     $ current_character = lad_details
