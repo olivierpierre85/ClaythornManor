@@ -44,9 +44,7 @@ label tutorial_description_hidden:
     
     While conversing with a character can unlock certain information, some facts can only be revealed at specific moments in the story. 
     
-    The "Characters" menu is now accessible.
-    
-    It gives you an estimation of how much essential information has been unlocked, as well as a complete description of a character.
+    The "Characters" menu gives you an estimation of how much essential information has been unlocked, as well as a complete description of a character.
 
     At the beginning, the descriptions are riddled with holes. It's up to you to fill those holes to reveal someone's true story.
 
