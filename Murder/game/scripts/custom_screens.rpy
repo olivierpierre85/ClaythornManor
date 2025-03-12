@@ -97,19 +97,19 @@ screen centered_text(display_text, display_text_2 = None):
                 size gui.transition_bottom_text_size
 
 screen in_game_menu_btn:
-
     modal False
-
     zorder 1000
-
-    style_prefix "confirm" # TODO use own style
+    style_prefix "confirm"  # TODO use own style
     frame:
         xalign 1.0
         yalign 0.0
         xoffset -30
         yoffset 30
-        ypadding 10
-        textbutton _("Menu") action ShowMenu("manor_map")
+        ypadding 0
+        xpadding 0
+        textbutton _("Menu") action ShowMenu("manor_map"):
+            xminimum 200  # Adjust these values as needed
+            yminimum 80
 
 # simple empty
 label generic_cancel:

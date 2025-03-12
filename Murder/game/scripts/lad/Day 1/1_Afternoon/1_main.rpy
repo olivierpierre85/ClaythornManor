@@ -12,6 +12,7 @@
 #   Notes : 
 #       - Generic Psychic, 15 minutes
 # --------------------------------------------
+
 label lad_introduction:
 
     call change_time(17,30, 'Afternoon', 'Friday', hide_minutes = True)
@@ -29,17 +30,17 @@ label lad_introduction:
     """
 
     letter """
-    September 5th, [current_year]
+    5th September, [current_year]
 
     Dear Mister Harring,
 
     I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Bravery Award".
 
-    You'll be receiving the prize, along with six other courageous individuals, at a reception organised in your honor. 
+    You'll be receiving the prize, along with six other courageous individuals, at a reception organised in your honour. 
     
     As a thank you, a weekend of leisure at Claythorn Manor has been planned for all of you to enjoy.
 
-    After which, a prize money of one thousand pounds in bearers bond will be handed to you.
+    After which, a prize money of one thousand pounds in bearer's bond will be handed to you.
     
     Please note that your presence is mandatory in order to receive the prize.
 
