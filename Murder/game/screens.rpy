@@ -319,11 +319,6 @@ screen navigation(tag="menu"):
     modal True
 
     style_prefix "navigation"
-    # TODO configure MENU 
-
-    # TODO keep last opened menu from (Story line, charact,...)
-    # Force characters to be default 
-    $ _game_menu_screen = "characters"
 
     hbox:
 

@@ -89,7 +89,7 @@ label start():
 label init_technical_variables:
     
     # Default Menu screen when press ESC in-game
-    $ _game_menu_screen = "manor_map"
+    $ _game_menu_screen = "preferences"
 
     define config.mouse = { }
     define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
