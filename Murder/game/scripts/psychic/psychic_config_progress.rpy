@@ -4,13 +4,13 @@ label psychic_config_progress:
                 # First Line
                 [
                     Chapter(image_checkpoint_start, "start"), 
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day1_evening", "Evening", "Friday Evening"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_morning", "Morning", "Saturday Morning"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_no_hunt", "The Hunt", "Saturday - The Hunt"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_afternoon", "Afternoon", "Saturday Afternoon"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_evening", "Evening", "Saturday Evening"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "Morning", "Sunday Morning"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "Afternoon", "Sunday Afternoon"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day1_evening", "The Arrival", "Friday Evening"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_morning", "A Surprising Breakfast", "Saturday Morning"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_no_hunt", "No Hunt", "Saturday - The Hunt"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_afternoon", "Things Gets Dark", "Saturday Afternoon"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_evening", "-", "Saturday Evening"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "An Empty Manor", "Sunday Morning"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "Decisions", "Sunday Afternoon"),
                     Chapter(image_ending_question, "ending", "burned"),
                 ],
                 # Second line, ...
