@@ -81,6 +81,7 @@ label character_selection:
         
 
     show screen in_game_menu_btn
+    show screen custom_key_listener
     
     jump start_again
 

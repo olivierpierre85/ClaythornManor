@@ -115,7 +115,7 @@ screen in_game_menu_btn:
 label generic_cancel:
     return
 
-screen custom_listener():
+screen custom_key_listener():
     # Replace the standard call to menu with one with the latest screen as parameter
     key "K_ESCAPE" action ShowMenu(last_menu_screen)
     key "K_MENU" action ShowMenu(last_menu_screen)
