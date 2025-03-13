@@ -46,7 +46,7 @@ label unlock_psychic:
     $ lad_details.saved_variables['knows_psychic_background'] = True
     $ psychic_details.description_hidden.unlock('status') 
     $ psychic_details.description_hidden.unlock('heroic_act') 
-    # $ psychic_details.description_hidden.unlock('lie') 
+    $ psychic_details.description_hidden.unlock('lie') 
     $ psychic_details.description_hidden.unlock('age') 
     $ psychic_details.description_hidden.unlock('drive') 
     $ psychic_details.description_hidden.unlock('racist') 
