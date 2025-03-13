@@ -70,6 +70,20 @@ label run_menu(current_menu, change_level=True):
     return
 
 init -1 python:
+
+    # SAVE in persistent data if the player has visited the map.µ
+    # It is supposed to work like the standard menu grey options
+    def record_visit(chapter, room_id):
+        # Make sure the dictionary for the chapter exists
+        if chapter not in persistent.visited_map:
+            persistent.visited_map[chapter] = set()
+
+        # Add the room to the chapter’s set
+        persistent.visited_map[chapter].add(room_id)
+
+        # Save the persistent data to disk
+        renpy.save_persistent()
+
     # Possible choices for a menu
     class TimedMenuChoice:
     
@@ -173,6 +187,8 @@ init -1 python:
                     global selected_floor
                     global current_floor
                     selected_floor = current_floor
+                    visited_rooms_for_this_chapter = persistent.visited_map.get(current_menu.id, set())
+
                     room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
 
                     selected_choice = None
@@ -180,9 +196,12 @@ init -1 python:
                         if c.room == room_id and c.get_condition():
                             selected_choice = c
                             selected_choice_i = idx
-                    # LEGACY, normally not needed?
+                
+                    # Record menu and choice for later run through
+                    record_visit(current_menu.id,room_id)
+                    
+                    # LEGACY, normally not needed? because all choices are filled? TODO CHECK
                     if not selected_choice:
-
                         selected_choice = TimedMenuChoice('FILLER CHOICE', current_character.text_id + "_" +room_id + '_defaultERROR', 5)
                         self.default_visited.append(room_id) # TODO: Double check the use if this
                         selected_choice_i = -1
@@ -224,16 +243,16 @@ init -1 python:
             self.floor = floor
             self.area_points = area_points
     
-    class Hotspot:
-        def __init__(
-            self, 
-            description, 
-            position,
-            area_points, 
-        ):
-            self.description = description
-            self.position = position
-            self.area_points = area_points
+    # class Hotspot:
+    #     def __init__(
+    #         self, 
+    #         description, 
+    #         position,
+    #         area_points, 
+    #     ):
+    #         self.description = description
+    #         self.position = position
+    #         self.area_points = area_points
 
 
 

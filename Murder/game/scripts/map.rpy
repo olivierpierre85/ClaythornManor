@@ -190,6 +190,9 @@ screen in_game_map_menu(timed_menu):
     # Copy of the confirm style (TODO change later properly to a map style)
     style_prefix "confirm"
 
+    default visited_rooms_for_this_chapter = persistent.visited_map.get(timed_menu.id, set())
+
+
     python:
         choices = timed_menu.choices
         # Logic change based on floor
@@ -198,7 +201,7 @@ screen in_game_map_menu(timed_menu):
 
         
         # TODO fix or remove.NOT VISIBLE at the moment, because inactive hotspot are invisible????
-        ALREADY_TRIED_CHOICE = "I already went there." 
+        ALREADY_TRIED_CHOICE = " (I already went there)" 
 
         hotspots = []
         for room in rooms:
@@ -218,6 +221,10 @@ screen in_game_map_menu(timed_menu):
                         new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
                     else:
                         new_hotspot = Hotspot(room.name, idx, room.area_points, room.id, active = True)
+
+                # Add info if room already visited in previous run through
+                if room.id in visited_rooms_for_this_chapter:
+                    new_hotspot.description = new_hotspot.description + "*"
 
                 hotspots.append(new_hotspot)
                         
@@ -288,9 +295,16 @@ screen in_game_map_menu(timed_menu):
             $ tooltip = GetTooltip()
             if not tooltip:
                 $ tooltip = "Click on a room to move there"
-            label [tooltip]:
-                text_color gui.highlight_color
-                xalign 0.5
+            
+            # Used the * to show the choices already made, then remove the * 
+            if "*" in tooltip:
+                label [tooltip.replace('*', '')]:
+                    text_color gui.accent_color
+                    xalign 0.5
+            else:
+                label [tooltip]:
+                    text_color gui.highlight_color
+                    xalign 0.5
 
 # Python classes
 init -1 python:

@@ -15,8 +15,12 @@ init -1000 python:
     current_music = 'NONE'
     current_start_song = 1
 
+    # if not hasattr(persistent, "visited_map"):
+    #     persistent.visited_map = {}
+
 # Var needed BEFORE start
 default debug_activated = False
+default persistent.visited_map = {}
 
 # My config variables
 
