@@ -209,27 +209,46 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
-        for i in items:
+        for idx, i in enumerate(items):
 
-            if "{{intuition}}" in i.caption:
-                $ btn_text = i.caption.replace("{{intuition}}", "" ) + " {image=images/ui/intuition_icon.png}" 
-            elif "{{observation}}" in i.caption:
-                $ btn_text = i.caption.replace("{{observation}}", "" ) + " {image=images/ui/observation_icon.png}"
-            elif "{{object}}" in i.caption:
-                $ btn_text = i.caption.replace("{{object}}", "" ) + " {image=images/ui/objects_icon.png}"
+            # Extract the menu ID separately (assume it's the first {{...}} entry not equal to the three reserved types)
+            $ menu_id_search = re.findall(r"\{\{(.*?)\}\}", i.caption)
+            $ menu_id = next((mid for mid in menu_id_search if mid not in ["intuition", "observation", "object"]), None)
+
+            # Clean caption, keeping intuition/observation/object markers, removing only the menu_id
+            $ choice_text = i.caption
+            if menu_id:
+                $ choice_text = re.sub(rf"\{{\{{{menu_id}\}}\}}", "", choice_text)
+
+            # Add the icons based on markers
+            if "{{intuition}}" in choice_text:
+                $ btn_text = choice_text.replace("{{intuition}}", "") + " {image=images/ui/intuition_icon.png}"
+            elif "{{observation}}" in choice_text:
+                $ btn_text = choice_text.replace("{{observation}}", "") + " {image=images/ui/observation_icon.png}"
+            elif "{{object}}" in choice_text:
+                $ btn_text = choice_text.replace("{{object}}", "") + " {image=images/ui/objects_icon.png}"
             else:
-                $ btn_text = i.caption
-                
-            # Remove menu id between "{{" and "}}"
-            $ btn_text = re.sub(r"\{\{.*?\}\}", "", btn_text)
+                $ btn_text = choice_text
 
-            if i.chosen:
+            # Check if this choice has already been selected
+            $ already_chosen_for_this_menu = persistent.already_chosen.get(menu_id, set())
+            # Normalize both sides fully:
+            $ normalized_choice_text = choice_text.strip().lower()
+            $ normalized_already_chosen = {text.strip().lower() for text in already_chosen_for_this_menu}
+
+            # TODO Add complex comparison where we check if the choice for the menu leads to another menu (store manually I think?)
+            # In that case do a tree search the check if all choices in the menu and submenus are also "Already chosen"
+            # Probably put all of this in a function of custom_menu ??? YES because it will be also used By menu MAP
+
+            if normalized_choice_text in normalized_already_chosen:
                 textbutton btn_text:
                     mouse "hover"
                     action i.action
                     text_color gui.insensitive_color
             else:
-                textbutton btn_text mouse "hover" action i.action
+                textbutton btn_text:
+                    mouse "hover" 
+                    action i.action
             
 
 

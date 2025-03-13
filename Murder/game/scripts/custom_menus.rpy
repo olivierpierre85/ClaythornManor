@@ -71,15 +71,15 @@ label run_menu(current_menu, change_level=True):
 
 init -1 python:
 
-    # SAVE in persistent data if the player has visited the map.µ
+    # SAVE in persistent data if the player has visited the map.
     # It is supposed to work like the standard menu grey options
     def record_visit(chapter, room_id):
         # Make sure the dictionary for the chapter exists
-        if chapter not in persistent.visited_map:
-            persistent.visited_map[chapter] = set()
+        if chapter not in persistent.already_chosen:
+            persistent.already_chosen[chapter] = set()
 
         # Add the room to the chapter’s set
-        persistent.visited_map[chapter].add(room_id)
+        persistent.already_chosen[chapter].add(room_id)
 
         # Save the persistent data to disk
         renpy.save_persistent()
@@ -142,9 +142,9 @@ init -1 python:
             visible_choices = []
             for i, choice in enumerate(self.choices):
                 if not choice.hidden and choice.get_condition():
-                    # visible_choices.append((choice.text + " {{" + self.id + "}}", i))
                     # Add the direction of the choice in invisible redirect to avoid greying choices with same text ({{}}} hidden in menu screen)
-                    visible_choices.append((choice.text + " {{" + choice.redirect + "}}", i))
+                    # visible_choices.append((choice.text + " {{" + choice.redirect + "}}", i))
+                    visible_choices.append((choice.text + " {{" + self.id + "}}", i)) # instead of redirect, get name of menu
                     
             return visible_choices
         
@@ -187,7 +187,7 @@ init -1 python:
                     global selected_floor
                     global current_floor
                     selected_floor = current_floor
-                    visited_rooms_for_this_chapter = persistent.visited_map.get(current_menu.id, set())
+                    visited_rooms_for_this_chapter = persistent.already_chosen.get(current_menu.id, set())
 
                     room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
 
@@ -206,8 +206,11 @@ init -1 python:
                         self.default_visited.append(room_id) # TODO: Double check the use if this
                         selected_choice_i = -1
                 else:
+                    # print(self.get_visible_choices())
                     selected_choice_i = menu(self.get_visible_choices())
                     selected_choice = self.choices[selected_choice_i]
+                    print(selected_choice.text)
+                    record_visit(current_menu.id,selected_choice.text)
 
             # RECORD history to build debug path (TODO should be done all the time?)
             if record_mode:

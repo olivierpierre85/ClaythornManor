@@ -190,8 +190,7 @@ screen in_game_map_menu(timed_menu):
     # Copy of the confirm style (TODO change later properly to a map style)
     style_prefix "confirm"
 
-    default visited_rooms_for_this_chapter = persistent.visited_map.get(timed_menu.id, set())
-
+    default visited_rooms_for_this_chapter = persistent.already_chosen.get(timed_menu.id, set())
 
     python:
         choices = timed_menu.choices
