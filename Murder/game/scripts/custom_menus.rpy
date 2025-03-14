@@ -73,13 +73,13 @@ init -1 python:
 
     # SAVE in persistent data if the player has visited the map.
     # It is supposed to work like the standard menu grey options
-    def record_visit(chapter, room_id):
-        # Make sure the dictionary for the chapter exists
-        if chapter not in persistent.already_chosen:
-            persistent.already_chosen[chapter] = set()
+    def record_visit(menu, redirect):
+        # Make sure the dictionary for the menu exists
+        if menu.id not in persistent.not_already_chosen:
+            persistent.not_already_chosen[menu.id] = menu.get_all_redirects()
 
-        # Add the room to the chapter’s set
-        persistent.already_chosen[chapter].add(room_id)
+        # remove the room from the menu set
+        persistent.not_already_chosen[menu.id].remove(redirect)
 
         # Save the persistent data to disk
         renpy.save_persistent()
@@ -98,6 +98,7 @@ init -1 python:
             early_exit = False,
             condition = None,
             room = None,
+            next_menu = None
         ):
             self.text = text
             self.redirect = redirect
@@ -108,6 +109,7 @@ init -1 python:
             self.early_exit = early_exit
             self.condition = condition
             self.room = room
+            self.next_menu = next_menu
         
         def get_condition(self):
             if self.condition:
@@ -116,11 +118,18 @@ init -1 python:
             return True
 
         def already_chosen(self, custom_menu):
-            already_chosen_for_this_menu = persistent.already_chosen.get(custom_menu, set())
-            all_chosen = self.redirect in already_chosen_for_this_menu 
-            # TODO add tree search to check if all subchecks have also been visited
-            if all_chosen:
-                return True
+            not_chosen_for_this_menu = persistent.not_already_chosen.get(custom_menu, set())
+
+            # If the menu has been saved yet, it obviously FALSE
+            if not_chosen_for_this_menu:
+                # if self.next_menu:
+                #     # Check all choices for the next menu of this choice
+
+                # if get(self.next_menu
+                all_chosen = self.redirect not in not_chosen_for_this_menu 
+                # TODO add tree search to check if all subchecks have also been visited
+                if all_chosen:
+                    return True
             return False
 
     # A Timed
@@ -137,6 +146,13 @@ init -1 python:
             self.early_exit = False
             # self.default_visited = []
     
+        def get_all_redirects(self):
+            all_redirects = set()
+            for choice in self.choices:
+                all_redirects.add(choice.redirect)
+            
+            return all_redirects
+
         def is_valid(self):
             if self.get_visible_choices_total() <= 0:
                 return False
@@ -193,7 +209,7 @@ init -1 python:
                     global selected_floor
                     global current_floor
                     selected_floor = current_floor
-                    visited_rooms_for_this_chapter = persistent.already_chosen.get(current_menu.id, set())
+                    visited_rooms_for_this_chapter = persistent.not_already_chosen.get(current_menu.id, set())
 
                     room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
 
@@ -204,7 +220,7 @@ init -1 python:
                             selected_choice_i = idx
                 
                     # Record menu and choice for later run through
-                    record_visit(current_menu.id, selected_choice.redirect)
+                    record_visit(current_menu, selected_choice.redirect)
                     
                     # LEGACY, normally not needed? because all choices are filled? TODO CHECK
                     # if not selected_choice:
@@ -214,7 +230,7 @@ init -1 python:
                 else:
                     selected_choice_i = renpy.call_screen('custom_choice', self) 
                     selected_choice = self.choices[selected_choice_i]
-                    record_visit(current_menu.id,selected_choice.redirect)
+                    record_visit(current_menu,selected_choice.redirect)
 
             # RECORD history to build debug path (TODO should be done all the time?)
             if record_mode:

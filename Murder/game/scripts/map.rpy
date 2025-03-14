@@ -190,8 +190,6 @@ screen in_game_map_menu(timed_menu):
     # Copy of the confirm style (TODO change later properly to a map style)
     style_prefix "confirm"
 
-    default visited_rooms_for_this_chapter = persistent.already_chosen.get(timed_menu.id, set())
-
     python:
         choices = timed_menu.choices
         # Logic change based on floor
@@ -215,7 +213,7 @@ screen in_game_map_menu(timed_menu):
                             new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
 
                         # Add info if room already visited in previous run through
-                        if choice.redirect in visited_rooms_for_this_chapter:
+                        if choice.already_chosen(timed_menu.id):
                             new_hotspot.description = new_hotspot.description + "*"
                 
                 # When the room is not in the menu, default values applies
@@ -234,7 +232,6 @@ screen in_game_map_menu(timed_menu):
             xalign .5
             yalign .5
             spacing 45
-
 
             label "Where do you want to go?":
                 style "confirm_prompt" # TODO specific styling

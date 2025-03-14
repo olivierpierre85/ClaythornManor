@@ -18,7 +18,7 @@ init -1000 python:
 
 # Var needed BEFORE start
 default debug_activated = False
-default persistent.already_chosen = {}
+default persistent.not_already_chosen = {}
 
 # My config variables
 
