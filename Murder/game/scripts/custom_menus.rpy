@@ -115,6 +115,14 @@ init -1 python:
 
             return True
 
+        def already_chosen(self, custom_menu):
+            already_chosen_for_this_menu = persistent.already_chosen.get(custom_menu, set())
+            all_chosen = self.redirect in already_chosen_for_this_menu 
+            # TODO add tree search to check if all subchecks have also been visited
+            if all_chosen:
+                return True
+            return False
+
     # A Timed
     class TimedMenu:
     
@@ -127,10 +135,10 @@ init -1 python:
             self.image_left_2 = image_left_2
             self.image_right_2 = image_right_2
             self.early_exit = False
-            self.default_visited = []
+            # self.default_visited = []
     
         def is_valid(self):
-            if len(self.get_visible_choices()) <= 0:
+            if self.get_visible_choices_total() <= 0:
                 return False
                 
             if time_left <= 0 or self.early_exit:
@@ -138,13 +146,11 @@ init -1 python:
 
             return True
 
-        def get_visible_choices(self):
-            visible_choices = []
+        def get_visible_choices_total(self):
+            visible_choices = 0
             for i, choice in enumerate(self.choices):
                 if not choice.hidden and choice.get_condition():
-                    # Add the direction of the choice in invisible redirect to avoid greying choices with same text ({{}}} hidden in menu screen)
-                    # visible_choices.append((choice.text + " {{" + choice.redirect + "}}", i))
-                    visible_choices.append((choice.text + " {{" + self.id + "}}", i)) # instead of redirect, get name of menu
+                    visible_choices += 1
                     
             return visible_choices
         
@@ -161,26 +167,26 @@ init -1 python:
                 selected_choice_i = test_choices.pop(0) 
                 selected_choice = self.choices[selected_choice_i]
                 # print("Selected Choice:" + str(selected_choice))
-            elif full_testing_mode:
+            # elif full_testing_mode:
                 # TODO Build a tree to take first option
                 # BUT IS MENU ID ENOUGH??? NO we can call this menu multiple time,
                 # We also need a Passage id, a real node identifier?
                 # NO We need => Correct ID, each choice must have a boolean, is this path full HOW DO THAT?
-                if (full_testing_mode_char, self.id) not in decision_tree:
-                    decision_tree[(full_testing_mode_char, self.id)] = self.get_visible_choices()
+                # if (full_testing_mode_char, self.id) not in decision_tree:
+                #     decision_tree[(full_testing_mode_char, self.id)] = self.get_visible_choices()
 
-                current_choice = decision_tree[("lad", self.id)].pop()
+                # current_choice = decision_tree[("lad", self.id)].pop()
 
-                print("Id Menu:", self.id)
-                print("current_choice:", current_choice)
-                current_choice = 0
-                (visible_choices_text, visible_choices_i) = self.get_visible_choices()[current_choice]
+                # print("Id Menu:", self.id)
+                # print("current_choice:", current_choice)
+                # current_choice = 0
+                # (visible_choices_text, visible_choices_i) = self.get_visible_choices()[current_choice]
                   
-                selected_choice = self.choices[visible_choices_i]
+                # selected_choice = self.choices[visible_choices_i]
 
-                f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")
-                f.write(str(current_choice) + ',' + ' # ' + selected_choice.text + ", " + selected_choice.redirect+ '\n')
-                f.close()
+                # f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")
+                # f.write(str(current_choice) + ',' + ' # ' + selected_choice.text + ", " + selected_choice.redirect+ '\n')
+                # f.close()
             # NORMAL MODE
             else:
                 if current_menu.is_map:
@@ -198,19 +204,17 @@ init -1 python:
                             selected_choice_i = idx
                 
                     # Record menu and choice for later run through
-                    record_visit(current_menu.id,room_id)
+                    record_visit(current_menu.id, selected_choice.redirect)
                     
                     # LEGACY, normally not needed? because all choices are filled? TODO CHECK
-                    if not selected_choice:
-                        selected_choice = TimedMenuChoice('FILLER CHOICE', current_character.text_id + "_" +room_id + '_defaultERROR', 5)
-                        self.default_visited.append(room_id) # TODO: Double check the use if this
-                        selected_choice_i = -1
+                    # if not selected_choice:
+                    #     selected_choice = TimedMenuChoice('FILLER CHOICE', current_character.text_id + "_" +room_id + '_defaultERROR', 5)
+                    #     self.default_visited.append(room_id) # TODO: Double check the use if this
+                    #     selected_choice_i = -1
                 else:
-                    # print(self.get_visible_choices())
-                    selected_choice_i = menu(self.get_visible_choices())
+                    selected_choice_i = renpy.call_screen('custom_choice', self) 
                     selected_choice = self.choices[selected_choice_i]
-                    print(selected_choice.text)
-                    record_visit(current_menu.id,selected_choice.text)
+                    record_visit(current_menu.id,selected_choice.redirect)
 
             # RECORD history to build debug path (TODO should be done all the time?)
             if record_mode:
@@ -259,3 +263,33 @@ init -1 python:
 
 
 
+screen custom_choice(custom_menu):
+    style_prefix "choice"
+
+    vbox:
+        for idx, choice in enumerate(custom_menu.choices):
+            $ print(choice)
+
+            if not choice.hidden and choice.get_condition():
+
+                # Add the icons based on markers
+                if "{{intuition}}" in choice.text:
+                    $ btn_text = choice.text.replace("{{intuition}}", "") + " {image=images/ui/intuition_icon.png}"
+                elif "{{observation}}" in choice.text:
+                    $ btn_text = choice.text.replace("{{observation}}", "") + " {image=images/ui/observation_icon.png}"
+                elif "{{object}}" in choice.text:
+                    $ btn_text = choice.text.replace("{{object}}", "") + " {image=images/ui/objects_icon.png}"
+                else:
+                    $ btn_text = choice.text
+
+                if choice.already_chosen(custom_menu.id):
+                    textbutton btn_text:
+                        mouse "hover"
+                        # action i.action
+                        action Return(idx)
+                        text_color gui.insensitive_color
+                else:
+                    textbutton btn_text:
+                        mouse "hover" 
+                        action Return(idx)
+                        # action i.action

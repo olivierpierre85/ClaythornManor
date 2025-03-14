@@ -213,19 +213,20 @@ screen in_game_map_menu(timed_menu):
                             new_hotspot = Hotspot(choice.text, idx, room.area_points, room.id)
                         else:
                             new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
+
+                        # Add info if room already visited in previous run through
+                        if choice.redirect in visited_rooms_for_this_chapter:
+                            new_hotspot.description = new_hotspot.description + "*"
                 
                 # When the room is not in the menu, default values applies
-                if not new_hotspot:
-                    if room.id in timed_menu.default_visited:
-                        new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
-                    else:
-                        new_hotspot = Hotspot(room.name, idx, room.area_points, room.id, active = True)
+                # if not new_hotspot:
+                #     if room.id in timed_menu.default_visited:
+                #         new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
+                #     else:
+                #         new_hotspot = Hotspot(room.name, idx, room.area_points, room.id, active = True)
 
-                # Add info if room already visited in previous run through
-                if room.id in visited_rooms_for_this_chapter:
-                    new_hotspot.description = new_hotspot.description + "*"
-
-                hotspots.append(new_hotspot)
+                if (new_hotspot):
+                    hotspots.append(new_hotspot)
                         
 
     frame:
