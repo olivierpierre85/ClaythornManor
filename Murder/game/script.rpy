@@ -94,6 +94,8 @@ label init_technical_variables:
     # Default Menu screen when press ESC in-game
     $ _game_menu_screen = "preferences"
     default last_menu_screen = "preferences"
+
+    default all_menus = {}
     
 
     define config.mouse = { }

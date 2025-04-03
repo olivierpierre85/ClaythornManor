@@ -147,6 +147,7 @@ label start_again():
     $ menu_level = -1
     $ selected_choice = [None, None, None, None, None]
     $ time_diff = [None, None, None, None, None]
+    
 
     python:
         global has_been_restarted, current_character, current_storyline, current_checkpoint

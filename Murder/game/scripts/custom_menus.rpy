@@ -18,10 +18,10 @@ label run_menu(current_menu, change_level=True):
 
     # TODO CUSTOM CHOICE??? Add menu to a structure with menu
 
-    # if current_menu.id in all_menus:
-    #     current_menu = all_menus[current_menu.id]
-    # else:
-    #     all_menus[current_menu.id] = current_menu
+    if current_menu.id in all_menus:
+        $ current_menu = all_menus[current_menu.id]
+    else:
+        $ all_menus[current_menu.id] = current_menu
 
     if change_level:
         $ menu_level += 1
