@@ -16,6 +16,13 @@ transform character_choice_right_2:
 
 label run_menu(current_menu, change_level=True):
 
+    # TODO CUSTOM CHOICE??? Add menu to a structure with menu
+
+    # if current_menu.id in all_menus:
+    #     current_menu = all_menus[current_menu.id]
+    # else:
+    #     all_menus[current_menu.id] = current_menu
+
     if change_level:
         $ menu_level += 1
 
@@ -63,7 +70,6 @@ label run_menu(current_menu, change_level=True):
 
     if change_level:
         $ menu_level -= 1
-    
 
     $ current_menu.early_exit = False
 
@@ -75,11 +81,15 @@ init -1 python:
     # It is supposed to work like the standard menu grey options
     def record_visit(menu, redirect):
         # Make sure the dictionary for the menu exists
+        # print("record_visit :")
+        # print(menu.id)
+        # print(redirect)
+        # print(persistent.not_already_chosen)
         if menu.id not in persistent.not_already_chosen:
             persistent.not_already_chosen[menu.id] = menu.get_all_redirects()
 
-        # remove the room from the menu set
-        persistent.not_already_chosen[menu.id].remove(redirect)
+        # remove the room from the menu set if not done already
+        persistent.not_already_chosen[menu.id].discard(redirect)
 
         # Save the persistent data to disk
         renpy.save_persistent()
@@ -119,11 +129,15 @@ init -1 python:
 
         def already_chosen(self, custom_menu):
             not_chosen_for_this_menu = persistent.not_already_chosen.get(custom_menu, set())
+            # print("def already_chosen")
+            # print(custom_menu)
+            # print(persistent.not_already_chosen)
+            # print(not_chosen_for_this_menu)
 
-            # If the menu has been saved yet, it obviously FALSE
-            if not_chosen_for_this_menu:
-                # if self.next_menu:
-                #     # Check all choices for the next menu of this choice
+            # If the menu has not been saved yet, its obviously FALSE
+            if custom_menu in persistent.not_already_chosen:
+                # TODO if self.next_menu:
+                    # Check all choices for the next menu of this choice
 
                 # if get(self.next_menu
                 all_chosen = self.redirect not in not_chosen_for_this_menu 
@@ -284,7 +298,7 @@ screen custom_choice(custom_menu):
 
     vbox:
         for idx, choice in enumerate(custom_menu.choices):
-            $ print(choice)
+            # $ print(choice)
 
             if not choice.hidden and choice.get_condition():
 
