@@ -150,7 +150,7 @@ label start_again():
     
 
     python:
-        global has_been_restarted, current_character, current_storyline, current_checkpoint
+        global has_been_restarted, current_character, current_storyline, current_checkpoint, all_menus
 
         # Change current character
         current_character = current_storyline
@@ -191,6 +191,11 @@ label start_again():
         for item in current_checkpoint.important_choices:
             current_character.important_choices.unlock(item, True)
             # current_character.important_choices.unlock(item)
+
+        # Reset all menu choices as visible
+        for menu in all_menus.values():
+            for choice in menu.choices:
+                choice.hidden = False
 
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 
