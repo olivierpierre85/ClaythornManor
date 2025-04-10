@@ -76,24 +76,6 @@ label run_menu(current_menu, change_level=True):
     return
 
 init -1 python:
-
-    # SAVE in persistent data if the player has visited the map.
-    # It is supposed to work like the standard menu grey options
-    def record_visit(menu, redirect):
-        # Make sure the dictionary for the menu exists
-        # print("record_visit :")
-        # print(menu.id)
-        # print(redirect)
-        # print(persistent.not_already_chosen)
-        if menu.id not in persistent.not_already_chosen:
-            persistent.not_already_chosen[menu.id] = menu.get_all_redirects()
-
-        # remove the room from the menu set if not done already
-        persistent.not_already_chosen[menu.id].discard(redirect)
-
-        # Save the persistent data to disk
-        renpy.save_persistent()
-
     # Possible choices for a menu
     class TimedMenuChoice:
     
@@ -108,6 +90,7 @@ init -1 python:
             early_exit = False,
             condition = None,
             room = None,
+            already_chosen = False, 
             next_menu = None
         ):
             self.text = text
@@ -119,6 +102,7 @@ init -1 python:
             self.early_exit = early_exit
             self.condition = condition
             self.room = room
+            self.already_chosen = already_chosen
             self.next_menu = next_menu
         
         def get_condition(self):
@@ -127,24 +111,26 @@ init -1 python:
 
             return True
 
-        def already_chosen(self, custom_menu):
-            not_chosen_for_this_menu = persistent.not_already_chosen.get(custom_menu, set())
-            # print("def already_chosen")
-            # print(custom_menu)
-            # print(persistent.not_already_chosen)
-            # print(not_chosen_for_this_menu)
+        def is_completed(self):
+            if not self.already_chosen:
+                return False
+            elif self.already_chosen and not self.next_menu:
+                return True
+            else:
+                # When already selected we need to check if the next menu is completed
+                if self.next_menu not in all_menus:
+                    return False 
 
-            # If the menu has not been saved yet, its obviously FALSE
-            if custom_menu in persistent.not_already_chosen:
-                # TODO if self.next_menu:
-                    # Check all choices for the next menu of this choice
+                for choice in all_menus[self.next_menu].choices:
+                    # if the condition is not met (invisible), skip the test
+                    if not choice.get_condition():
+                        continue
+                    # A choice is seen as completed if it is a keep alive without a menu,
+                    # or if it is itself completed 
+                    if not (choice.keep_alive and not choice.next_menu) and not choice.is_completed():
+                        return False
 
-                # if get(self.next_menu
-                all_chosen = self.redirect not in not_chosen_for_this_menu 
-                # TODO add tree search to check if all subchecks have also been visited
-                if all_chosen:
-                    return True
-            return False
+                return True
 
     # A Timed
     class TimedMenu:
@@ -196,34 +182,11 @@ init -1 python:
             if record_mode and len(test_choices) > 0:
                 selected_choice_i = test_choices.pop(0) 
                 selected_choice = self.choices[selected_choice_i]
-                # print("Selected Choice:" + str(selected_choice))
-            # elif full_testing_mode:
-                # TODO Build a tree to take first option
-                # BUT IS MENU ID ENOUGH??? NO we can call this menu multiple time,
-                # We also need a Passage id, a real node identifier?
-                # NO We need => Correct ID, each choice must have a boolean, is this path full HOW DO THAT?
-                # if (full_testing_mode_char, self.id) not in decision_tree:
-                #     decision_tree[(full_testing_mode_char, self.id)] = self.get_visible_choices()
-
-                # current_choice = decision_tree[("lad", self.id)].pop()
-
-                # print("Id Menu:", self.id)
-                # print("current_choice:", current_choice)
-                # current_choice = 0
-                # (visible_choices_text, visible_choices_i) = self.get_visible_choices()[current_choice]
-                  
-                # selected_choice = self.choices[visible_choices_i]
-
-                # f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")
-                # f.write(str(current_choice) + ',' + ' # ' + selected_choice.text + ", " + selected_choice.redirect+ '\n')
-                # f.close()
-            # NORMAL MODE
             else:
                 if current_menu.is_map:
                     global selected_floor
                     global current_floor
                     selected_floor = current_floor
-                    visited_rooms_for_this_chapter = persistent.not_already_chosen.get(current_menu.id, set())
 
                     room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
 
@@ -233,18 +196,9 @@ init -1 python:
                             selected_choice = c
                             selected_choice_i = idx
                 
-                    # Record menu and choice for later run through
-                    record_visit(current_menu, selected_choice.redirect)
-                    
-                    # LEGACY, normally not needed? because all choices are filled? TODO CHECK
-                    # if not selected_choice:
-                    #     selected_choice = TimedMenuChoice('FILLER CHOICE', current_character.text_id + "_" +room_id + '_defaultERROR', 5)
-                    #     self.default_visited.append(room_id) # TODO: Double check the use if this
-                    #     selected_choice_i = -1
                 else:
                     selected_choice_i = renpy.call_screen('custom_choice', self) 
                     selected_choice = self.choices[selected_choice_i]
-                    record_visit(current_menu,selected_choice.redirect)
 
             # RECORD history to build debug path (TODO should be done all the time?)
             if record_mode:
@@ -254,6 +208,7 @@ init -1 python:
 
             if not selected_choice.keep_alive:
                 selected_choice.hidden = True
+                selected_choice.already_chosen = True
                 
             global time_left
             time_left -= selected_choice.time_spent
@@ -279,47 +234,3 @@ init -1 python:
             self.name = name
             self.floor = floor
             self.area_points = area_points
-    
-    # class Hotspot:
-    #     def __init__(
-    #         self, 
-    #         description, 
-    #         position,
-    #         area_points, 
-    #     ):
-    #         self.description = description
-    #         self.position = position
-    #         self.area_points = area_points
-
-
-
-screen custom_choice(custom_menu):
-    style_prefix "choice"
-
-    vbox:
-        for idx, choice in enumerate(custom_menu.choices):
-            # $ print(choice)
-
-            if not choice.hidden and choice.get_condition():
-
-                # Add the icons based on markers
-                if "{{intuition}}" in choice.text:
-                    $ btn_text = choice.text.replace("{{intuition}}", "") + " {image=images/ui/intuition_icon.png}"
-                elif "{{observation}}" in choice.text:
-                    $ btn_text = choice.text.replace("{{observation}}", "") + " {image=images/ui/observation_icon.png}"
-                elif "{{object}}" in choice.text:
-                    $ btn_text = choice.text.replace("{{object}}", "") + " {image=images/ui/objects_icon.png}"
-                else:
-                    $ btn_text = choice.text
-
-                if choice.already_chosen(custom_menu.id):
-                    textbutton btn_text:
-                        mouse "hover"
-                        # action i.action
-                        action Return(idx)
-                        text_color gui.insensitive_color
-                else:
-                    textbutton btn_text:
-                        mouse "hover" 
-                        action Return(idx)
-                        # action i.action

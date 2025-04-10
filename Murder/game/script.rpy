@@ -18,7 +18,7 @@ init -1000 python:
 
 # Var needed BEFORE start
 default debug_activated = False
-default persistent.not_already_chosen = {}
+# default persistent.not_already_chosen = {}
 
 # My config variables
 
@@ -95,14 +95,14 @@ label init_technical_variables:
     $ _game_menu_screen = "preferences"
     default last_menu_screen = "preferences"
 
-    default all_menus = {}
-    
-
     define config.mouse = { }
     define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
     define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]
     python:
         # Technical Variables
+
+        all_menus = {}
+
         # TODO delete those in character select AND start again
         record_mode = False
 

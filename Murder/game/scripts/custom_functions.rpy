@@ -192,10 +192,18 @@ label start_again():
             current_character.important_choices.unlock(item, True)
             # current_character.important_choices.unlock(item)
 
-        # Reset all menu choices as visible
-        for menu in all_menus.values():
-            for choice in menu.choices:
-                choice.hidden = False
+        # Reset Menus hidden property
+        if current_checkpoint.all_menus:
+            for menu_id, checkpoint_menu in current_checkpoint.all_menus.items():
+                if menu_id in all_menus:
+                    for i, checkpoint_choice in enumerate(checkpoint_menu.choices):
+                        if i < len(all_menus[menu_id].choices):
+                            all_menus[menu_id].choices[i].hidden = checkpoint_choice.hidden
+        else:
+            for menu in all_menus.values():
+                for choice in menu.choices:
+                    choice.hidden = False
+
 
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 

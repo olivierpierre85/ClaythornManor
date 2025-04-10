@@ -126,3 +126,32 @@ screen custom_key_listener():
     key "K_p" action [SetVariable("last_menu_screen", "progress"), ShowMenu("progress")]
     key "K_c" action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
     
+
+# The standard choice menu is replaced with this one to be able to make easy changes to menu
+screen custom_choice(custom_menu):
+    style_prefix "choice"
+
+    vbox:
+        for idx, choice in enumerate(custom_menu.choices):
+
+            if not choice.hidden and choice.get_condition():
+
+                # Add the icons based on markers
+                if "{{intuition}}" in choice.text:
+                    $ btn_text = choice.text.replace("{{intuition}}", "") + " {image=images/ui/intuition_icon.png}"
+                elif "{{observation}}" in choice.text:
+                    $ btn_text = choice.text.replace("{{observation}}", "") + " {image=images/ui/observation_icon.png}"
+                elif "{{object}}" in choice.text:
+                    $ btn_text = choice.text.replace("{{object}}", "") + " {image=images/ui/objects_icon.png}"
+                else:
+                    $ btn_text = choice.text
+
+                if choice.is_completed():
+                    textbutton btn_text:
+                        mouse "hover"
+                        action Return(idx)
+                        text_color gui.insensitive_color
+                else:
+                    textbutton btn_text:
+                        mouse "hover" 
+                        action Return(idx)

@@ -51,7 +51,8 @@ label lad_config_map:
                 'lad_day1_evening_billiard_room', 
                 0, 
                 keep_alive = True, 
-                room = 'billiard_room'
+                room = 'billiard_room',
+                next_menu = 'lad_day1_evening_billiard_room_menu'
             ),
             TimedMenuChoice(
                 'Go to sleep', 

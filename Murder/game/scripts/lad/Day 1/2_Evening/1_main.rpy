@@ -77,7 +77,7 @@ label lad_day1_evening:
 
     $ current_menu = TimedMenu("lad_day1_evening", [
         TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor', keep_alive = False,),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic', keep_alive = False,)
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic', keep_alive = False)
     ], image_left = "doctor", image_right = "psychic")
 
     call run_menu(current_menu)

@@ -380,7 +380,7 @@ init -100 python:
         #                                Checkpoints
         # ---------------------------------------------------------------------------------------
         def add_checkpoint(self, label_id = ""):
-            global current_position, current_run, has_been_restarted
+            global current_position, current_run, has_been_restarted, all_menus
 
             current_position = current_position + 1
             if not has_been_restarted:
@@ -391,7 +391,8 @@ init -100 python:
                     observations = copy.deepcopy(self.observations.get_unlocked()),
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = label_id,
-                    saved_variables = copy.deepcopy(current_character.saved_variables)
+                    saved_variables = copy.deepcopy(current_character.saved_variables),
+                    all_menus = all_menus
                 )
                 self.checkpoints.append(new_checkpoint)
                 

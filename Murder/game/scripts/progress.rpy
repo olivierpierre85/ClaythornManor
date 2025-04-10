@@ -358,7 +358,8 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                             important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
                                             label_id = "current",
                                             saved_variables = copy.deepcopy(current_character.saved_variables),
-                                            ending = ending
+                                            ending = ending,
+                                            all_menus = all_menus
                                         )
                                     textbutton str("See current status"):
                                         if current_checkpoint and current_checkpoint.label_id == "current":
@@ -494,7 +495,8 @@ init -100 python:
             important_choices,
             label_id,
             saved_variables,
-            ending = None
+            ending = None,
+            all_menus = None,
         ):
             self.run = run
             self.position = position
@@ -505,6 +507,7 @@ init -100 python:
             self.label_id = label_id
             self.saved_variables = saved_variables
             self.ending = ending
+            self.all_menus = all_menus
 
         def get_format_created(self):
             return self.created.strftime("%a %b, %H:%M")

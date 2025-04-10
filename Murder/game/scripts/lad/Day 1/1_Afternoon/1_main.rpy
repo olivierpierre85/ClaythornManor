@@ -296,7 +296,7 @@ label lad_introduction:
     
     $ current_menu = TimedMenu("lad_introduction", [
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 0),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0, next_menu="psychic_generic_menu_lad"),
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 

@@ -213,7 +213,7 @@ screen in_game_map_menu(timed_menu):
                             new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
 
                         # Add info if room already visited in previous run through
-                        if choice.already_chosen(timed_menu.id):
+                        if choice.already_chosen:
                             new_hotspot.description = new_hotspot.description + "*"
                 
                 # When the room is not in the menu, default values applies
