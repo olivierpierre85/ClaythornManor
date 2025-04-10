@@ -93,7 +93,9 @@ init -1 python:
             condition = None,
             room = None,
             already_chosen = False, 
-            next_menu = None
+            next_menu = None,
+            linked_choice = None,
+            parent_menu_id = None
         ):
             self.text = text
             self.redirect = redirect
@@ -106,6 +108,8 @@ init -1 python:
             self.room = room
             self.already_chosen = already_chosen
             self.next_menu = next_menu
+            self.linked_choice = linked_choice
+            self.parent_menu_id = parent_menu_id
         
         def get_condition(self):
             if self.condition:
@@ -116,21 +120,36 @@ init -1 python:
         def is_completed(self):
             if not self.already_chosen:
                 return False
-            elif self.already_chosen and not self.next_menu:
+            elif self.already_chosen and not self.next_menu and not self.linked_choice:
                 return True
             else:
+                if self.next_menu:
                 # When already selected we need to check if the next menu is completed
-                if self.next_menu not in all_menus:
-                    return False 
+                    if self.next_menu not in all_menus:
+                        return False 
 
-                for choice in all_menus[self.next_menu].choices:
-                    # if the condition is not met (invisible), skip the test
-                    if not choice.get_condition():
-                        continue
-                    # A choice is seen as completed if it is a keep alive without a menu,
-                    # or if it is itself completed 
-                    if not (choice.keep_alive and not choice.next_menu) and not choice.is_completed():
-                        return False
+                    for choice in all_menus[self.next_menu].choices:
+                        # if the condition is not met (invisible), skip the test
+                        if not choice.get_condition():
+                            continue
+                        # A choice is seen as completed if it is a keep alive without a menu,
+                        # or if it is itself completed 
+                        if not (choice.keep_alive and not choice.next_menu) and not choice.is_completed():
+                            return False
+                elif self.linked_choice:
+
+                    parent_menu = all_menus[self.parent_menu_id]
+                    found_linked_choice = False
+
+                    for c in parent_menu.choices:
+                        if c.redirect == self.linked_choice:
+                            found_linked_choice = True
+                            if not c.is_completed():
+                                return False
+                            break
+                    # If we never found the linked choice in the parent menu, treat as complete (I assume wrong rewrite)
+                    if not found_linked_choice:
+                        return True
 
                 return True
 
@@ -146,7 +165,9 @@ init -1 python:
             self.image_left_2 = image_left_2
             self.image_right_2 = image_right_2
             self.early_exit = False
-            # self.default_visited = []
+            # Make each choice aware of its parent menu
+            for c in self.choices:
+                c.parent_menu_id = self.id
     
         def get_all_redirects(self):
             all_redirects = set()
@@ -176,6 +197,7 @@ init -1 python:
             for current_choice in self.choices:
                 if current_choice.text == choice_to_hide:
                     current_choice.hidden = True
+                    current_choice.already_chosen = True
 
 
         def display_choices(self):
