@@ -359,7 +359,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                             label_id = "current",
                                             saved_variables = copy.deepcopy(current_character.saved_variables),
                                             ending = ending,
-                                            all_menus = all_menus
+                                            all_menus = copy.deepcopy(all_menus),
                                         )
                                     textbutton str("See current status"):
                                         if current_checkpoint and current_checkpoint.label_id == "current":

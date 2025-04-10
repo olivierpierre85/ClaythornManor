@@ -192,18 +192,22 @@ label start_again():
             current_character.important_choices.unlock(item, True)
             # current_character.important_choices.unlock(item)
 
-        # Reset Menus hidden property
-        if current_checkpoint.all_menus:
-            for menu_id, checkpoint_menu in current_checkpoint.all_menus.items():
-                if menu_id in all_menus:
-                    for i, checkpoint_choice in enumerate(checkpoint_menu.choices):
-                        if i < len(all_menus[menu_id].choices):
-                            all_menus[menu_id].choices[i].hidden = checkpoint_choice.hidden
-        else:
-            for menu in all_menus.values():
-                for choice in menu.choices:
+        # Reset Menus hidden property with debugging output
+        for menu_id, menu in all_menus.items():
+            if current_checkpoint.all_menus and menu_id in current_checkpoint.all_menus:
+                print(f"Menu {menu_id} found in checkpoint; updating choices...")
+                checkpoint_menu = current_checkpoint.all_menus[menu_id]
+                for i, checkpoint_choice in enumerate(checkpoint_menu.choices):
+                    if i < len(menu.choices):
+                        menu.choices[i].hidden = checkpoint_choice.hidden
+                        if menu.id == "lad_day1_evening":
+                            print(f"  Choice {i} hidden set to {checkpoint_choice.hidden}")
+            else:
+                print(f"Menu {menu_id} not found in checkpoint; resetting all choices to visible.")
+                for i, choice in enumerate(menu.choices):
                     choice.hidden = False
-
+                    if menu.id == "lad_day1_evening":
+                        print(f"  Choice {i} hidden reset to False")
 
         current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
 

@@ -16,8 +16,7 @@ transform character_choice_right_2:
 
 label run_menu(current_menu, change_level=True):
 
-    # TODO CUSTOM CHOICE??? Add menu to a structure with menu
-
+    # For custom choice: Add menu to a structure with menu
     if current_menu.id in all_menus:
         $ current_menu = all_menus[current_menu.id]
     else:
@@ -25,6 +24,10 @@ label run_menu(current_menu, change_level=True):
 
     if change_level:
         $ menu_level += 1
+        # Check if there is a selected choice from the previous level.
+        # Since selected_choice is a list, we use indexing and check the length.
+        if menu_level > 0 and len(selected_choice) >= menu_level and selected_choice[menu_level - 1]:
+            $ selected_choice[menu_level - 1].next_menu = current_menu.id
 
     if current_menu.is_valid():
         # Show characters when activated
@@ -37,8 +40,7 @@ label run_menu(current_menu, change_level=True):
         if current_menu.image_right_2:
             $ renpy.show(current_menu.image_right_2, at_list=[character_choice_right_2])
         
-        $  selected_choice[menu_level] = current_menu.display_choices()
-        # $ print(menu_level, selected_choice, selected_choice[menu_level])
+        $ selected_choice[menu_level] = current_menu.display_choices()
         
         # Hide choices when activated
         if current_menu.image_left:
@@ -50,17 +52,16 @@ label run_menu(current_menu, change_level=True):
         if current_menu.image_right_2:
             $ renpy.hide(current_menu.image_right_2)
 
-        if  selected_choice[menu_level].early_exit:
+        if selected_choice[menu_level].early_exit:
             $ current_menu.early_exit = True        
 
         call expression selected_choice[menu_level].redirect
 
         # Change current time
         $ time_diff[menu_level] = None
-        if time_left > 0 and  selected_choice[menu_level].time_spent:
+        if time_left > 0 and selected_choice[menu_level].time_spent:
             $ time_diff[menu_level] = datetime.combine(date.today(), current_time) + timedelta(minutes=selected_choice[menu_level].time_spent)
 
-        # $ print("CHANGE TIME", menu_level, selected_choice[menu_level].time_spent, time_left)
         if time_diff[menu_level]:
             call change_time(time_diff[menu_level].time().hour, time_diff[menu_level].time().minute)
 
@@ -74,6 +75,7 @@ label run_menu(current_menu, change_level=True):
     $ current_menu.early_exit = False
 
     return
+
 
 init -1 python:
     # Possible choices for a menu
