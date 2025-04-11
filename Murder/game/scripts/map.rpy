@@ -215,13 +215,6 @@ screen in_game_map_menu(timed_menu):
                         # Add info if room already visited in previous run through
                         if choice.already_chosen:
                             new_hotspot.description = new_hotspot.description + "*"
-                
-                # When the room is not in the menu, default values applies
-                # if not new_hotspot:
-                #     if room.id in timed_menu.default_visited:
-                #         new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
-                #     else:
-                #         new_hotspot = Hotspot(room.name, idx, room.area_points, room.id, active = True)
 
                 if (new_hotspot):
                     hotspots.append(new_hotspot)
@@ -260,6 +253,7 @@ screen in_game_map_menu(timed_menu):
                     xalign 0.5                       
                     idle "images/ui/map/map_idle_[selected_floor].png"
                     hover "images/ui/map/map_hover_[selected_floor].png"
+                    insensitive "images/ui/map/map_insensitive_[selected_floor].png"
                     
                     for hot in hotspots:
                         if hot.area_points:
@@ -268,6 +262,7 @@ screen in_game_map_menu(timed_menu):
                                     action Return(hot.room)
                                 else:
                                     action None
+                                    # sensitive False
                                 tooltip hot.description
                                 mouse "hover"
 
