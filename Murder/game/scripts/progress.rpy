@@ -107,7 +107,7 @@ screen progress:
                     xsize 1700
                     yoffset 20
 
-                    $ checkpoint_x = 236
+                    $ checkpoint_x = 283
                     $ checkpoint_x_small = 100
 
                     hbox:
@@ -139,12 +139,12 @@ screen progress:
 
                         vbox:
                             xminimum checkpoint_x
-                            text "" font gui.name_text_font
+                            text "Sunday" font gui.name_text_font
                             text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:
                             xminimum checkpoint_x
-                            text "Sunday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
+                            text "" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
                             text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:

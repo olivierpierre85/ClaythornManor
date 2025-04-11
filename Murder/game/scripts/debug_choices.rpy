@@ -16,23 +16,23 @@ label init_debug:
     # show screen current_time
     show screen in_game_menu_btn
 
-    # call unlock_bedrooms
+    call unlock_bedrooms
 
-    # $ current_character = psychic_details
-    # $ current_storyline = psychic_details
-    # call unlock_psychic 
-    # # TODO: This should be linked to checkpoint?
-    # $ psychic_details.saved_variables["knows_captain_origin"] = True
-    # $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-    # $ psychic_details.load_test_checkpoints()
-    # $ psychic_details.intuitions.unlock('leave_manor')
+    $ current_character = psychic_details
+    $ current_storyline = psychic_details
+    call unlock_psychic 
+    # TODO: This should be linked to checkpoint?
+    $ psychic_details.saved_variables["knows_captain_origin"] = True
+    $ psychic_details.saved_variables["knows_captain_real_origin"] = True
+    $ psychic_details.load_test_checkpoints()
+    $ psychic_details.intuitions.unlock('leave_manor')
 
     
-    # $ current_character = lad_details
-    # $ current_storyline = lad_details # TODO move
-    # call unlock_lad
-    # $ lad_details.load_test_checkpoints()
-    # $ lad_details.intuitions.unlock('psychic_poisons')
+    $ current_character = lad_details
+    $ current_storyline = lad_details # TODO move
+    call unlock_lad
+    $ lad_details.load_test_checkpoints()
+    $ lad_details.intuitions.unlock('psychic_poisons')
     
     # call unlock_doctor
 

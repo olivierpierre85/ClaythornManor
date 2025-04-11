@@ -20,7 +20,7 @@ label psychic_day2_afternoon_bedroom:
     However, I don't believe I am taking too much of a risk by talking with Rosalind Marsh or Ted Harring.
     """
 
-    $ time_left = 99 # TODO, change with option in menu? 
+    $ time_left = 99 #TODO possibility to talk to both ???
     call run_menu(TimedMenu("psychic_day2_afternoon_bedroom", [
             TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_afternoon_bedroom_nurse_busy', 10, early_exit=True),
             TimedMenuChoice('Try to talk to Ted Harring', 'psychic_day2_afternoon_lad_discussion', 30, early_exit=True),
