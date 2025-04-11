@@ -36,3 +36,6 @@ play sound gun
 screen progress:
     
     on "show" action SetVariable("current_checkpoint", None)
+
+
+EXIT menu 'generic_cancel'

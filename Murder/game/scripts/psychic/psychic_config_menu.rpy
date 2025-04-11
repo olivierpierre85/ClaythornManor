@@ -4,7 +4,7 @@ label psychic_config_menu:
     $ nurse_generic_menu_psychic = TimedMenu("nurse_generic_menu_psychic", [
         # TimedMenuChoice('What do you think of this weather?', 'nurse_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
         TimedMenuChoice('What do you think of this weather?', 'nurse_generic_weather_saturday', 10, condition = "current_day == 'Saturday'"),
-        TimedMenuChoice('Tell me more about yourself.', 'nurse_generic_background', 20),
+        TimedMenuChoice('Tell me more about yourself.', 'nurse_generic_background', 20, linked_choice ="nurse_generic_heroic_act"),
         TimedMenuChoice('Why were you invited here?', 'nurse_generic_heroic_act', 20, condition = "current_character.saved_variables['knows_nurse_background']"),
         TimedMenuChoice('What do you think of this place?', 'nurse_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'nurse_generic_age', 10),
@@ -25,7 +25,7 @@ label psychic_config_menu:
     $ doctor_generic_menu_psychic = TimedMenu("doctor_generic_menu_psychic", [
         TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
         TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
-        TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20),
+        TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20, linked_choice ="doctor_generic_heroic_act"),
         TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 20, condition = "current_character.saved_variables['knows_doctor_background']"),
         TimedMenuChoice('What do you think of this place?', 'doctor_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'doctor_generic_age', 5),
@@ -77,7 +77,7 @@ label psychic_config_menu:
     # LAD
 
     $ lad_generic_menu_psychic = TimedMenu("lad_generic_menu_psychic", [
-        TimedMenuChoice('Tell me more about yourself.', 'lad_generic_background_psychic', 15),
+        TimedMenuChoice('Tell me more about yourself.', 'lad_generic_background_psychic', 15, linked_choice ="lad_generic_heroic_act_psychic"),
         TimedMenuChoice('Why were you invited here?', 'lad_generic_heroic_act_psychic', 20, condition = "psychic_details.saved_variables['knows_lad_background']"),
         TimedMenuChoice('What do you think of this place?', 'lad_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'lad_generic_age_psychic', 5),
