@@ -17,11 +17,11 @@
 # --------------------------------------------
 label lad_day1_evening:
     
-    call change_time(18, 30, "Evening", "Friday")
+    call change_time(18, 30, "Evening", "Friday", chapter='friday_evening')
 
     $ current_character.add_checkpoint("lad_day1_evening") 
 
-    call black_screen_transition("Ted Harring", "Friday Evening")
+    call black_screen_transition("Ted Harring", chapters_names[current_chapter])
 
     $ change_room('dining_room', irisout)
 

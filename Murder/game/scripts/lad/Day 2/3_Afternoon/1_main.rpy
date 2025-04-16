@@ -16,11 +16,11 @@
 # --------------------------------------------
 label lad_day2_afternoon:
 
-    call change_time(15,00, 'Afternoon', 'Saturday')
+    call change_time(15,00, 'Afternoon', 'Saturday', chapter='saturday_evening')
 
     $ lad_details.add_checkpoint("lad_day2_afternoon") 
     
-    call black_screen_transition("Ted Harring", "Saturday Afternoon")
+    call black_screen_transition("Ted Harring", chapters_names[current_chapter])
 
     $ change_room("great_hall", irisout)
     

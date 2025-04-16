@@ -95,6 +95,20 @@ label init_technical_variables:
     $ _game_menu_screen = "preferences"
     default last_menu_screen = "preferences"
 
+    # NAME OF CHAPTERS
+    define chapters_names = {
+        'friday_afternoon': "The Arrival",
+        'friday_evening': "The First Dinner",
+        'saturday_morning': "The Morning Surprise",
+        'saturday_afternoon': "The Hunt",
+        'saturday_afternoon_no_hunt': "No Hunt",
+        'saturday_evening': "Things get Darker",
+        'sunday_morning': "The Empty Manor",
+        'sunday_afternoon': "Final Decisions",
+    }
+
+    default current_chapter = "friday_afternoon"
+
     define config.mouse = { }
     define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
     define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]

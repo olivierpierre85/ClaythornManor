@@ -17,19 +17,21 @@
 # --------------------------------------------
 label lad_day3_morning:
 
-    $ lad_details.add_checkpoint("lad_day3_morning") 
-
-    call black_screen_transition("Ted Harring", "Sunday Morning")
-
-    $ change_room('bedroom_lad', irisout)
-
     if lad_details.important_choices.is_unlocked('trust_psychic'):
-        call change_time(7, 30, "Morning", "Sunday", hide_minutes=True)
+        call change_time(7, 30, "Morning", "Sunday", hide_minutes=True, chapter='sunday_morning')
         # You talked to and believed the psychic
         # So she came to wake you at dawn
     else:
         # Otherwise, you'll have less time to explore
-        call change_time(9, 30, "Morning", "Sunday", hide_minutes=True)
+        call change_time(9, 30, "Morning", "Sunday", hide_minutes=True, chapter='sunday_morning')
+
+    $ lad_details.add_checkpoint("lad_day3_morning") 
+
+    call black_screen_transition("Ted Harring", chapters_names[current_chapter])
+
+    $ change_room('bedroom_lad', irisout)
+
+
 
     play sound door_knock
 

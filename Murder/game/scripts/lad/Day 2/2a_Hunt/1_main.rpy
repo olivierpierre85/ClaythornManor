@@ -19,9 +19,9 @@ label lad_day2_hunt:
 
     $ current_character.add_checkpoint("lad_day2_hunt") 
 
-    call change_time(11,00, 'The Hunt', 'Saturday')
+    call change_time(11,00, 'The Hunt', 'Saturday', chapter='saturday_afternoon')
 
-    call black_screen_transition("Ted Harring", "The Hunt") # Good? TODO check consistency with no hunt
+    call black_screen_transition("Ted Harring", chapters_names[current_chapter])
     
     $ change_room("gun_room")
 

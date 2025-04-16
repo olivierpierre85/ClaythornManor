@@ -180,8 +180,9 @@ screen progress:
                                                 text_color gui.accent_color
                                                 text_hover_color "#FFFFFF" 
                                                 text_font gui.name_text_font 
-                                                text_size 28
-                                                padding (25, 25, 25, 25)
+                                                text_size 26
+                                                style "confirm_prompt" # TODO: Something here centers multiline text. What?
+                                                padding (60, 25, 60, 25)
                                                 if should_blink:
                                                     text_color gui.highlight_color
                                                     at blink
@@ -194,7 +195,7 @@ screen progress:
                                                 text_color gui.accent_color
                                                 text_font gui.name_text_font 
                                                 text_size 28
-                                                padding (25,25,25,25)
+                                                padding (70, 25, 70, 25) 
 
                                 elif chapter.chapter_type == "ending": 
                                     imagebutton:

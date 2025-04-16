@@ -8,7 +8,7 @@ transform character_talking_right:
     ypos 600
 
 # TODO put in python function for consistency
-label change_time(hours, minutes, phase = None, day = None, hide_minutes = False):
+label change_time(hours, minutes, phase = None, day = None, hide_minutes = False, chapter = None):
     python:
         if skip_clock_movement:
             show_minutes_movement = 0
@@ -27,6 +27,9 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
 
         if day:
             current_day =  day
+
+        if chapter:
+            current_chapter = chapter
 
         # Compute for clock rotation
         current_hour = current_time.hour

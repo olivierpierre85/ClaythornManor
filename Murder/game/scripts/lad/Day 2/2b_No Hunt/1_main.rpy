@@ -18,11 +18,11 @@
 # --------------------------------------------
 label lad_day2_no_hunt:
 
-    call change_time(11,00, 'No Hunt', 'Saturday')
+    call change_time(11,00, 'No Hunt', 'Saturday', chapter='saturday_afternoon_no_hunt')
 
     $ current_character.add_checkpoint("lad_day2_no_hunt") 
     
-    call black_screen_transition("Ted Harring", "The Hunt")
+    call black_screen_transition("Ted Harring", chapters_names[current_chapter])
 
     $ change_room('bedroom_lad')    
 

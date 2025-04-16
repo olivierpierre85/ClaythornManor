@@ -5,8 +5,8 @@ label lad_config_progress:
             # First Line
             [
                 Chapter(image_checkpoint_start, "start"), 
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "Arrival", "Friday Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "Morning Surprise", "Saturday Morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", chapters_names['friday_evening']),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "The Morning Surprise", "Saturday Morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "The Hunt", "Saturday - The Hunt"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "Things get Darker", "Saturday Afternoon"),
                 # Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "Evening", "Saturday Evening"),
