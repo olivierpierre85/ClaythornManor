@@ -1,4 +1,4 @@
-label psychic_day2_afternoon_bedroom:
+label psychic_day2_evening_bedroom:
     
     $ change_room('bedroom_psychic', dissolve)
 
@@ -21,10 +21,10 @@ label psychic_day2_afternoon_bedroom:
     """
 
     $ time_left = 99 #TODO possibility to talk to both ???
-    call run_menu(TimedMenu("psychic_day2_afternoon_bedroom", [
-            TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_afternoon_bedroom_nurse_busy', 10, early_exit=True),
-            TimedMenuChoice('Try to talk to Ted Harring', 'psychic_day2_afternoon_lad_discussion', 30, early_exit=True),
-            TimedMenuChoice('Just have a quick nap instead', 'psychic_day2_afternoon_cancel', 30, early_exit=True),
+    call run_menu(TimedMenu("psychic_day2_evening_bedroom", [
+            TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_evening_bedroom_nurse_busy', 10, early_exit=True),
+            TimedMenuChoice('Try to talk to Ted Harring', 'psychic_day2_evening_lad_discussion', 30, early_exit=True),
+            TimedMenuChoice('Just have a quick nap instead', 'psychic_day2_evening_cancel_2', 30, early_exit=True),
             # Talk with host anyway??? Intuition things are not going according to plan.
         ])
     )
@@ -32,18 +32,18 @@ label psychic_day2_afternoon_bedroom:
     return
 
 
-label psychic_day2_afternoon_lad_discussion:
+label psychic_day2_evening_lad_discussion:
 
     $ change_room("bedrooms_hallway")
 
-    call common_day2_afternoon_lad_psychic_discussion
+    call common_day2_evening_lad_psychic_discussion_0
 
     $ psychic_details.important_choices.unlock('visit_lad')
 
     return
 
 
-label psychic_day2_afternoon_bedroom_nurse_busy:
+label psychic_day2_evening_bedroom_nurse_busy:
     
     $ change_room("bedrooms_hallway")
 
@@ -140,9 +140,7 @@ label psychic_day2_afternoon_bedroom_nurse_busy:
     return
 
 
-label psychic_day2_afternoon_cancel:
-
-    # $ change_room('bedroom_psychic')
+label psychic_day2_evening_cancel_2:
 
     """
     That's about all I can manage right now.

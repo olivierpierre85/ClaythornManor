@@ -18,11 +18,11 @@
 # --------------------------------------------
 label psychic_day2_no_hunt:
 
-    call change_time(11, 00, 'Hunt', 'Saturday')
+    call change_time(11, 00, 'Hunt', 'Saturday', hide_minutes=True, chapter='saturday_afternoon')
 
     $ current_character.add_checkpoint("psychic_day2_no_hunt") 
     
-    call black_screen_transition("Amelia Baxter", "The Hunt")
+    call black_screen_transition("Amelia Baxter", chapters_names[current_chapter])
 
     $ change_room('bedroom_psychic')    
 
@@ -54,7 +54,7 @@ label psychic_day2_no_hunt:
 
     $ stop_music()
 
-    jump psychic_day2_afternoon
+    jump psychic_day2_evening
     
 
 label psychic_day2_bedroom_broken:

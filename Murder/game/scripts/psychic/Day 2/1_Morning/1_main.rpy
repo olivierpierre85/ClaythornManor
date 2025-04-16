@@ -14,15 +14,13 @@
 # --------------------------------------------
 label psychic_day2_morning:
 
+    call change_time(8, 30, 'Morning', 'Saturday', hide_minutes=True, chapter='saturday_morning')
+
     $ current_character.add_checkpoint("psychic_day2_morning")
 
-    call black_screen_transition("Amelia Baxter", "Saturday")
+    call black_screen_transition("Amelia Baxter", chapters_names[current_chapter])
 
     $ change_room("bedroom_psychic", irisout)
-
-    $ change_room('bedroom_psychic')
-
-    call change_time(8, 30, 'Morning', 'Saturday', hide_minutes=True)
 
     """
     Despite the storm that raged all night, I managed to sleep relatively well.

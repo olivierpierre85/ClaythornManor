@@ -3,7 +3,7 @@
 #           
 #   Saturday - Evening
 # 
-#   18:30 -> 23h
+#   15:00 -> 23h
 #
 #   Music: sad
 #
@@ -16,11 +16,89 @@
 # --------------------------------------------
 label psychic_day2_evening:
 
-    call change_time(18, 30, "Evening", "Saturday")
+    call change_time(15, 00, "Evening", "Saturday", hide_minutes=True, chapter='saturday_evening')
 
     $ psychic_details.add_checkpoint("psychic_day2_evening") 
+    
+    call black_screen_transition("Amelia Baxter", chapters_names[current_chapter])
 
-    call black_screen_transition("Amelia Baxter", "Saturday Evening")
+    $ change_room("great_hall", irisout)
+    
+    """
+    I observe the hunting party as they make their way into the house.
+
+    Rosalind was already by the entrance.
+
+    Lady Claythorn steps through the doorway first, her expression one of sheer disbelief.
+
+    Following close behind are the butler and footman.
+
+    They carefully carry someone on an improvised stretcher.
+    """
+
+    $ play_music('sad')
+
+    call common_day2_evening_entrance_dialog
+
+    """
+    I watch Captain Sinha and Ted Harring carry Doctor Baldwin to his room.
+
+    Now, the attention of everyone turns to Samuel Manning.
+
+    I realize no one has thought about restraining him in any way.
+
+    But it seems unnecessary as he is sitting on the stairs,
+
+    his gaze empty, apparently unaware of what is happening around him.
+    """
+
+    call common_day2_evening_samuel_manning_discussion_part_1
+
+    call common_day2_evening_samuel_manning_discussion_part_2
+
+    """
+    We all watch the two men leave down the stairs.
+
+    Then an awkward silence fills the room.
+    """
+
+    call common_day2_evening_samuel_manning_discussion_part_3
+
+    """
+    Before heading to my room, there is something I would like to understand.
+
+    I approach the butler.
+    """
+
+    butler """
+    Yes, Miss Baxter?
+    """
+
+    psychic """
+    I don't understand; how could you give a gun to someone so drunk?
+    """
+
+    butler """
+    I am so sorry, but he wasn't drunk when we talked this morning.
+
+    He was acting totally normally.
+
+    He probably got drunk during the day.
+
+    There was nothing I could have done.
+    """
+
+    psychic """
+    Right.
+    """
+
+    """
+    He did seem very drunk to me during breakfast though.
+    """
+
+    call psychic_day2_afternoon_bedroom
+
+    call change_time(18,30)
 
     $ change_room("dining_room", irisout)
     
@@ -83,7 +161,7 @@ label psychic_day2_evening:
 
     if psychic_details.important_choices.is_unlocked('visit_lad'):
         
-        call psychic_day2_evening_lad_discussion
+        call psychic_day2_evening_lad_discussion_2
 
     else:
         

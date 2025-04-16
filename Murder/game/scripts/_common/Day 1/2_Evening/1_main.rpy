@@ -153,3 +153,18 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
     $ captain_details.description_hidden.unlock('talker') 
 
     return
+
+# ------------------------------------
+#               LAD - PSYCHIC
+# ------------------------------------
+label common_day1_drinks_lad_psychic_encounter:
+
+    lad """
+    Nice to meet you, Miss Baxter. I am Ted Harring.
+    """
+
+    psychic """
+    Nice to meet you, Mr. Harring.
+    """
+
+    return

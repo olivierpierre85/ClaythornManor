@@ -53,7 +53,7 @@ label lad_day2_evening:
 
     $ play_music('sad')
 
-    call common_day2_afternoon_entrance_dialog
+    call common_day2_evening_entrance_dialog
 
     $ change_room("bedroom_doctor")
 

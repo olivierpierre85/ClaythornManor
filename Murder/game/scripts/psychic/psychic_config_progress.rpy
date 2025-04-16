@@ -61,11 +61,6 @@ label psychic_config_progress:
                 []
             ),
             (
-                'psychic_day2_afternoon',
-                [],
-                []
-            ),
-            (
                 'psychic_day2_evening',
                 [
                     ('important_choice', 'visit_lad')

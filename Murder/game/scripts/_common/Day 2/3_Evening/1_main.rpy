@@ -1,4 +1,4 @@
-label common_day2_afternoon_entrance_dialog:
+label common_day2_evening_entrance_dialog:
 
     psychic surprised """
     Oh my God! What happened!?
@@ -104,7 +104,7 @@ label common_day2_afternoon_entrance_dialog:
 
     return
 
-label common_day2_afternoon_samuel_manning_discussion_part_1:
+label common_day2_evening_samuel_manning_discussion_part_1:
 
     # Present: psychic, host, drunk, nurse, butler
     # Later Captain
@@ -171,7 +171,7 @@ label common_day2_afternoon_samuel_manning_discussion_part_1:
     return
 
 
-label common_day2_afternoon_samuel_manning_discussion_part_2:
+label common_day2_evening_samuel_manning_discussion_part_2:
     
     captain """
     Mister Harring needed to change, he'll join us shortly.
@@ -260,7 +260,7 @@ label common_day2_afternoon_samuel_manning_discussion_part_2:
     return
 
 
-label common_day2_afternoon_samuel_manning_discussion_part_3:
+label common_day2_evening_samuel_manning_discussion_part_3:
 
     host """
     What a sad business.
@@ -272,4 +272,54 @@ label common_day2_afternoon_samuel_manning_discussion_part_3:
     You'll hear the gong when dinner is ready.
     """
     
+    return
+
+label common_day2_evening_dinner:
+
+    host """
+    Now that everyone is here, I want to express my deepest regret for what happened today.
+
+    This isn't how I imagined our weekend.
+
+    I don't believe any of us are in the mood for more entertainment.
+
+    So, tomorrow morning, you'll receive your rewards.
+    
+    Afterward, we'll wait for the police to arrive.
+
+    You're free to head home as soon as the officers give the all-clear.
+
+    For now, enjoy your dinner.
+
+    Drinks will be available in the billiard room afterwards, as they were yesterday.
+    """
+
+    # TODO different reaction for each guest?
+    """
+    The food is served shortly after the speech.
+
+    Yet, most of us have little appetite.
+    """
+
+    # TODO only for lad and psychic
+    lad """
+    Miss Baxter, I don't see Samuel Manning. 
+
+    Do you know where he might be?
+    """
+
+    psychic """
+    He's locked in his room.
+
+    After you left, there was a debate about how to handle him.
+    
+    Ultimately, we decided it best to confine him to his room.
+
+    He didn't resist.
+
+    That's where he is now. 
+
+    It was agreed that his dinner would be served there.
+    """
+
     return

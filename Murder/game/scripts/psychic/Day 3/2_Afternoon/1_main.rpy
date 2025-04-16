@@ -17,11 +17,11 @@
 # --------------------------------------------
 label psychic_day3_afternoon:
 
-    call change_time(12,00, "Afternoon", "Sunday")
+    call change_time(12,00, "Afternoon", "Sunday", hide_minutes=True, chapter='sunday_afternoon')
     
     $ psychic_details.add_checkpoint("psychic_day3_afternoon") 
 
-    call black_screen_transition("Amelia Baxter", "Sunday Afternoon")
+    call black_screen_transition("Amelia Baxter", chapters_names[current_chapter])
 
     $ change_room("tea_room", irisout)
 

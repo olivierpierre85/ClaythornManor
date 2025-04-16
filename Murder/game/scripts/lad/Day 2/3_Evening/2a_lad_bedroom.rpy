@@ -12,7 +12,7 @@ label lad_day2_evening_bedroom:
     As I was preparing to go downstairs again, someone knocked on my door.
     """
 
-    call common_day2_afternoon_lad_psychic_discussion
+    call common_day2_evening_lad_psychic_discussion_0
 
     if not lad_details.saved_variables['knows_bedroom_psychic']:
 
