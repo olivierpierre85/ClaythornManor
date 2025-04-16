@@ -1,4 +1,4 @@
-label lad_day2_afternoon_bedroom:
+label lad_day2_evening_bedroom:
     
     $ change_room('bedroom_lad')
 

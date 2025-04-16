@@ -8,7 +8,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "friday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "saturday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "saturday_afternoon"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "saturday_evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "saturday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "sunday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "sunday_afternoon"),
                 Chapter(image_ending_question, "ending", "poisoned"),
@@ -87,18 +87,12 @@ label lad_config_progress:
                 []
             ),
             (
-                'lad_day2_afternoon',
+                'lad_day2_evening',
                 [   
                     ('important_choice', 'hunt'),               
                     ('important_choice', 'hunt_captain_host'),
+                    ('object', 'burned_letter'),   
                     # ('important_choice', 'hunt_doctor_drunk'), # hide one because they are exclusive
-                ],
-                []
-            ),
-            (
-                'lad_day2_evening',
-                [
-                    ('object', 'burned_letter'),               
                 ],
                 []
             ),

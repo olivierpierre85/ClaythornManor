@@ -50,7 +50,7 @@ label lad_day2_no_hunt:
 
     $ stop_music()
 
-    jump lad_day2_afternoon
+    jump lad_day2_evening
     
 
 label lad_day2_bedroom_broken:

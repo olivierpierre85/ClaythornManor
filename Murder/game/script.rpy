@@ -103,7 +103,7 @@ label init_technical_variables:
         'saturday_afternoon': "The Hunt",
         'saturday_afternoon_no_hunt': "No Hunt",
         'saturday_evening': "Things get Darker",
-        'sunday_morning': "The Empty Manor",
+        'sunday_morning': "The Exploration",
         'sunday_afternoon': "Final Decisions",
     }
 

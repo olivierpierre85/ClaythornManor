@@ -3,14 +3,14 @@
 #           
 #   Friday - Afternoon
 #   
-#   17:30 -> 18:30
+#   17:30 -> 18:10
 #
 #   Music: Chill
 #
 #   Alive: Everyone
 #
 #   Notes : 
-#       - Generic Psychic, 15 minutes
+#       
 # --------------------------------------------
 
 label lad_introduction:
@@ -185,179 +185,4 @@ label lad_introduction:
 
     pause 2.0
 
-    call change_time(18,10)
-
-    $ change_room('great_hall', dissolve)
-
-    $ play_music('upbeat')
-
-    butler """
-    Welcome Sir.
-    """
-
-    lad """
-    Hello, I am Ted Harring, I was invited by Lady Claythorn.
-    """
-
-    butler """
-    Yes, of course Mr Harring.
-
-    Welcome to Claythorn Manor.
-
-    I am afraid you won't have time to change right now. 
-
-    Everyone is already there, and dinner will be ready very soon.
-
-    So if you follow me into the tea room, you can join the rest of the party for some drinks.
-    """
-
-    """
-    Well, it's not like I have multiple changes of clothes anyway. So, I follow him.
-    """
-
-    $ change_room('tea_room')
-
-    """
-    As I step into the room, the butler loudly introduces me.
-    """
-
-    butler """
-    Mister Ted Harring!
-    """
-
-    """
-    Everyone turns their head towards me.
-    
-    Some people nod in my direction, while others barely acknowledge my presence.
-
-    From afar, the butler provides me with a brief introduction to each guest.
-    """
-
-    show captain at truecenter
-    butler """ 
-    The older man talking is from India, and his name is Sushil Sinha.
-    """
-
-    hide captain
-
-    show nurse at truecenter
-    butler """
-    He is in conversation with Rosalind Marsh...
-    """
-    hide nurse
-
-    show doctor at truecenter
-    butler """
-    .. and with Daniel Baldwin. The man with the glasses.
-    """
-    hide doctor
-
-    show broken at truecenter
-    butler """
-    Don't be alarmed by the man in the mask. 
-
-    He is a war veteran named Thomas Moody.
-    """
-    hide broken
-
-    show drunk at truecenter
-    butler """
-    The man sitting on the couch, looking rather exhausted is Samuel Manning.
-    """
-    hide drunk
-
-    show psychic at truecenter
-    butler """
-    The older lady in the corner of the room is Amelia Baxter.
-    """
-    hide psychic
-
-    lad """
-    I don't see our host in the room.
-    """
-
-    butler """
-    Lady Claythorn is still busy at the moment.
-
-    You'll meet her at dinner.
-    """
-
-    """
-    After this introduction, he leaves me and goes to stand in the corner of the room.
-
-    Most of the guests are already engaged in conversation.
-
-    However, Amelia Baxter and Samuel Manning are alone.
-
-    They seem more approachable than the rest.
-    """
-    
-    $ time_left = 20
-    
-    $ current_menu = TimedMenu("lad_introduction", [
-        TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 0),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0),
-        TimedMenuChoice('Stand awkwardly in the corner', 'generic_cancel', early_exit=True),
-        ], image_left = "drunk", image_right = "psychic")
-    call run_menu(current_menu)
-
-    call change_time(18,30)
-
-    play sound dinner_gong
-
-    pause 1.0
-
-    """
-    What was that? A gong?
-    """
-
-    butler """
-    Dinner is served. Please, follow me to the dining room.
-    """
-
-    $ stop_music()
-
     jump lad_day1_evening
-
-
-label lad_day1_drinks_psychic:
-
-    """
-    I am approaching the middle-aged woman.
-    """
-
-    call common_day1_drinks_lad_psychic_encounter
-
-    # Force tutorial clock before first menu
-    if not seen_tutorial_clock:
-        call change_time(18,15)
-        call tutorial_clock
-
-    call psychic_generic
-
-    return
-
-
-label lad_day1_drinks_drunk:
-
-    """
-    I am heading towards the older man.
-
-    He holds a glass of whiskey in his hand. His gaze is empty.
-    """
-    
-    lad """
-    Hello sir, how are you?
-    """
-
-    drunk """
-    (Snore...)
-    """
-
-    """
-    He reeks of booze, and he is deeply asleep. Talking to him is useless.
-    """
-    call change_time(18,15)
-    call tutorial_clock
-
-    return

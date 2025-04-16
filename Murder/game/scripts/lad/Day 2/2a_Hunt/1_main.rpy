@@ -158,6 +158,6 @@ label lad_day2_hunt:
     $ time_left = 1
     call run_menu(lad_day2_hunt_menu)
 
-    jump lad_day2_afternoon
+    jump lad_day2_evening
 
     return

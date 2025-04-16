@@ -251,12 +251,12 @@ label unlock_drunk:
             
 #         #     jump lad_day2_no_hunt
 
-#         # "lad_day2_afternoon":
+#         # "lad_day2_evening":
 #         #     $ lad_details.objects.unlock('burned_letter')
-#         #     jump lad_day2_afternoon
+#         #     jump lad_day2_evening
             
-#         # # # "lad_day2_afternoon_bedroom":
-#         # # #     jump lad_day2_afternoon_bedroom
+#         # # # "lad_day2_evening_bedroom":
+#         # # #     jump lad_day2_evening_bedroom
             
 #         # "lad_day2_evening MAP":
 #         #     #$ lad_details.objects.unlock('gun')
