@@ -5,13 +5,12 @@ label lad_config_progress:
             # First Line
             [
                 Chapter(image_checkpoint_start, "start"), 
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", chapters_names['friday_evening']),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "The Morning Surprise", "Saturday Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "The Hunt", "Saturday - The Hunt"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "Things get Darker", "Saturday Afternoon"),
-                # Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "Evening", "Saturday Evening"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "An Empty Manor", "Sunday Morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "Final Choices", "Sunday Afternoon"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "friday_evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "saturday_morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "saturday_afternoon"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_afternoon", "saturday_evening"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "sunday_morning"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "sunday_afternoon"),
                 Chapter(image_ending_question, "ending", "poisoned"),
             ],
             # Second line, ...
@@ -19,7 +18,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_no_hunt", "No Hunt", "Saturday - No Hunt"),
+                Chapter(image_checkpoint_right, "checkpoint", "lad_day2_no_hunt", "saturday_afternoon_no_hunt"),
                 Chapter(image_checkpoint_corner_merge),
                 # Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),

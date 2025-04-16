@@ -168,9 +168,8 @@ screen progress:
                                         idle chapter.image_file
                                         # Don't show if the character hasn't reached the chapter yet
                                         if len(current_storyline.get_checkpoints_by_chapter(chapter.label))>0:
-                                            $ should_blink = current_day.lower() in chapter.text_full.lower() and current_phase.lower() in chapter.text_full.lower()
-
-                                            textbutton chapter.text:
+                                            $ should_blink = current_chapter == chapter.name
+                                            textbutton chapters_names[chapter.name]:
                                                 mouse "hover" 
                                                 action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
                                                 xoffset -20 
@@ -319,7 +318,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                             size 48
                             font gui.name_text_font
                     else:
-                        text "Checkpoints for " + selected_chapter.text_full:
+                        text "Checkpoints for " + chapters_names[selected_chapter.name]:
                             size 48
                             font gui.name_text_font
 
@@ -478,12 +477,11 @@ screen confirm_restart():
 init -100 python:
 
     class Chapter:
-        def __init__(self, image_file, chapter_type="image", label=None, text=None, text_full=None):
+        def __init__(self, image_file, chapter_type="image", label=None, name=None):
             self.image_file = image_file  # Mandatory
             self.chapter_type = chapter_type  
-            self.label = label  # Optional, default is None
-            self.text = text  # Optional, default is None
-            self.text_full = text_full  # Optional, default is None
+            self.label = label
+            self.name = name
 
 
     class Checkpoint():

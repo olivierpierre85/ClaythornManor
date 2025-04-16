@@ -97,8 +97,8 @@ label init_technical_variables:
 
     # NAME OF CHAPTERS
     define chapters_names = {
-        'friday_afternoon': "The Arrival",
-        'friday_evening': "The First Dinner",
+        'friday_afternoon': "Introduction",
+        'friday_evening': "The Arrival",
         'saturday_morning': "The Morning Surprise",
         'saturday_afternoon': "The Hunt",
         'saturday_afternoon_no_hunt': "No Hunt",

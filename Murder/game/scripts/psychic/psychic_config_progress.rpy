@@ -4,13 +4,12 @@ label psychic_config_progress:
                 # First Line
                 [
                     Chapter(image_checkpoint_start, "start"), 
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day1_evening", "Evening", "Friday Evening"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_morning", "Morning", "Saturday Morning"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_no_hunt", "The Hunt", "Saturday - The Hunt"),
-                    # Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_afternoon", "Afternoon", "Saturday Afternoon"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_evening", "Evening", "Saturday Evening"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "Morning", "Sunday Morning"),
-                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "Afternoon", "Sunday Afternoon"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day1_evening", "friday_evening"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_morning", "saturday_morning"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_no_hunt", "saturday_afternoon"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_evening",  "saturday_evening"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_morning", "sunday_morning"),
+                    Chapter(image_checkpoint_right, "checkpoint", "psychic_day3_afternoon", "sunday_afternoon"),
                     Chapter(image_ending_question, "ending", "burned"),
                 ],
                 # Second line, ...
