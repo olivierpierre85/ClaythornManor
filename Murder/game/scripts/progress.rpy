@@ -84,7 +84,11 @@ screen progress:
                             hbox:
                                 yoffset 10
                                 spacing 15
+                                $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy.deepcopy(current_character.saved_variables), ending=False)
+
                                 imagebutton:
+                                    mouse "hover"
+                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", "current_status", current_storyline)]
                                     if current_storyline.is_everything_completed():
                                         idle "images/info_cards/everything_completed.png"
                                     else:
@@ -97,13 +101,13 @@ screen progress:
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.highlight_color
-                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
+                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", "current_status", current_storyline)]
                                 else:
                                     textbutton "{color=#fff}[unlocked]{/color}/[total]":
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.accent_color
-                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
+                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", "current_status", current_storyline)]
                             # # Current Status button : discountinued
                             # yoffset 30
                             # xoffset 135
@@ -284,7 +288,7 @@ screen info_card(item=None, item_type=None):
 
 screen storyline_details(selected_chapter, selected_char, ending = False, is_current = False):
 
-    on "show" action SetVariable("current_checkpoint", None)
+    #     on "show" action SetVariable("current_checkpoint", None)
 
     tag menu
 
@@ -323,7 +327,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                             size 48
                             font gui.name_text_font
                     elif selected_chapter == "current_status":
-                        text "Current Status":
+                        text "What has been discovered and what is unlocked now":
                             size 48
                             font gui.name_text_font
                     elif ending:
@@ -349,17 +353,17 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                 textbutton str("Start"):
                                     action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
                             elif selected_chapter == "current_status":
-                                textbutton str("See what's currently discovered unlocked"):
-                                    action SetVariable("current_checkpoint", Checkpoint(
-                                            run = current_run,
-                                            position = current_position,
-                                            objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
-                                            observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
-                                            important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
-                                            label_id = "current",
-                                            saved_variables = copy.deepcopy(current_character.saved_variables),
-                                            ending = ending
-                                        ))
+                                # textbutton str("See what's currently discovered unlocked"):
+                                #     action SetVariable("current_checkpoint", Checkpoint(
+                                #             run = current_run,
+                                #             position = current_position,
+                                #             objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
+                                #             observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
+                                #             important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
+                                #             label_id = "current",
+                                #             saved_variables = copy.deepcopy(current_character.saved_variables),
+                                #             ending = ending
+                                #         ))
                             else:
                                 if is_current:
                                     # TODO: maybe but in function for clarity
