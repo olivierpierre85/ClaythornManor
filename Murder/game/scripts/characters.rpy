@@ -376,6 +376,30 @@ init -100 python:
                     return False
             return True
 
+        def is_everything_completed(self):
+            if self.get_total_unlocked_discoveries() == self.get_total_discoveries():
+                return True
+            return False
+
+        def get_total_unlocked_discoveries(self):
+            total = 0
+            for item in self.important_choices:
+                if item.discovered:
+                    total += 1
+            
+            for item in self.observations:
+                if item.discovered:
+                    total += 1
+
+            for item in self.objects:
+                if item.discovered:
+                    total += 1
+            
+            return total
+
+        def get_total_discoveries(self):
+            return len(self.important_choices.information_list) + len(self.observations.information_list) + len(self.objects.information_list)
+
         # ---------------------------------------------------------------------------------------
         #                                Checkpoints
         # ---------------------------------------------------------------------------------------

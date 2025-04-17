@@ -54,6 +54,7 @@ screen progress:
                         xpos 50
                         vbox:
                             yminimum 120
+                            xminimum 450
                             yoffset -20
                             xoffset 30
                             text current_storyline.real_name + "'s Endings":
@@ -76,20 +77,36 @@ screen progress:
                             # Params for intuition
                             yoffset -20
                             xoffset 100
-                            text current_storyline.real_name + "'s Intuitions":
+                            text "Choices & Findings":
                                 font gui.name_text_font
                                 color gui.accent_color
+                            
                             hbox:
                                 yoffset 10
                                 spacing 15
-                                for item in current_storyline.intuitions.get_list():
-                                    imagebutton:
-                                        if item.locked:
-                                            idle "images/info_cards/question_mark_bw.png"
-                                        else: 
-                                            idle item.image_file
-                                            tooltip str(item.content)  
-                                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
+                                imagebutton:
+                                    if current_storyline.is_everything_completed():
+                                        idle "images/info_cards/everything_completed.png"
+                                    else:
+                                        idle "images/info_cards/everything_completed_bw.png"
+                                
+                                $ unlocked = current_storyline.get_total_unlocked_discoveries()
+                                $ total    = current_storyline.get_total_discoveries()
+                                textbutton "[[[unlocked]/[total]]":
+                                    text_size 56
+                                    text_font gui.name_text_font
+                                    if current_storyline.is_everything_completed():
+                                        text_color gui.highlight_color
+                                    else:
+                                        text_color gui.accent_color
+                                # for item in current_storyline.intuitions.get_list():
+                                #     imagebutton:
+                                #         if item.locked:
+                                #             idle "images/info_cards/question_mark_bw.png"
+                                #         else: 
+                                #             idle item.image_file
+                                #             tooltip str(item.content)  
+                                #             action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
                             # # Current Status button : discountinued
                             # yoffset 30
                             # xoffset 135
@@ -139,7 +156,7 @@ screen progress:
 
                         vbox:
                             xminimum checkpoint_x
-                            text "Sunday" font gui.name_text_font
+                            text "Sunday" xalign 0 yalign 0 font gui.name_text_font color gui.accent_color
                             text "" xalign 0 yalign 0 font gui.name_text_font color "#FFFFFF"
 
                         vbox:
