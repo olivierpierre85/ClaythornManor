@@ -92,27 +92,23 @@ screen progress:
                                 
                                 $ unlocked = current_storyline.get_total_unlocked_discoveries()
                                 $ total    = current_storyline.get_total_discoveries()
-                                textbutton "[[[unlocked]/[total]]":
-                                    text_size 56
-                                    text_font gui.name_text_font
-                                    if current_storyline.is_everything_completed():
+                                if current_storyline.is_everything_completed():
+                                    textbutton "[unlocked]/[total]":
+                                        text_size 56
+                                        text_font gui.name_text_font
                                         text_color gui.highlight_color
-                                    else:
+                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
+                                else:
+                                    textbutton "{color=#fff}[unlocked]{/color}/[total]":
+                                        text_size 56
+                                        text_font gui.name_text_font
                                         text_color gui.accent_color
-                                # for item in current_storyline.intuitions.get_list():
-                                #     imagebutton:
-                                #         if item.locked:
-                                #             idle "images/info_cards/question_mark_bw.png"
-                                #         else: 
-                                #             idle item.image_file
-                                #             tooltip str(item.content)  
-                                #             action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip 
+                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
                             # # Current Status button : discountinued
                             # yoffset 30
                             # xoffset 135
                             # button:
                             #     action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
-                                
                             #     background "images/ui/button_idle_very_small.png"
                             #     hover_background "images/ui/button_hover_very_small.png"
                             #     xysize (300, 65)
@@ -326,10 +322,10 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                         text "Checkpoints for Friday Afternoon":
                             size 48
                             font gui.name_text_font
-                    # elif selected_chapter == "current_status":
-                    #     text "Current Status":
-                    #         size 48
-                    #         font gui.name_text_font
+                    elif selected_chapter == "current_status":
+                        text "Current Status":
+                            size 48
+                            font gui.name_text_font
                     elif ending:
                         text current_storyline.endings.get_item(selected_chapter.label).content:
                             size 48
@@ -352,18 +348,18 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                             if selected_chapter == "start":
                                 textbutton str("Start"):
                                     action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
-                            # elif selected_chapter == "current_status":
-                            #     textbutton str("See what's currently unlocked"):
-                            #         action SetVariable("current_checkpoint", Checkpoint(
-                            #                 run = current_run,
-                            #                 position = current_position,
-                            #                 objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
-                            #                 observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
-                            #                 important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
-                            #                 label_id = "current",
-                            #                 saved_variables = copy.deepcopy(current_character.saved_variables),
-                            #                 ending = ending
-                            #             ))
+                            elif selected_chapter == "current_status":
+                                textbutton str("See what's currently discovered unlocked"):
+                                    action SetVariable("current_checkpoint", Checkpoint(
+                                            run = current_run,
+                                            position = current_position,
+                                            objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
+                                            observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
+                                            important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
+                                            label_id = "current",
+                                            saved_variables = copy.deepcopy(current_character.saved_variables),
+                                            ending = ending
+                                        ))
                             else:
                                 if is_current:
                                     # TODO: maybe but in function for clarity
