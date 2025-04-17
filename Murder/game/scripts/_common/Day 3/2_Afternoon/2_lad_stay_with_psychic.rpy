@@ -26,6 +26,7 @@ label common_day3_afternoon_lad_psychic_stay:
         """   
 
     $ play_music('mysterious', 2)
+    
     nurse """
     Hello!
     """
