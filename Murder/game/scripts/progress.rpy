@@ -77,7 +77,7 @@ screen progress:
                             # Params for intuition
                             yoffset -20
                             xoffset 50
-                            text "Choices & Findings":
+                            text "Choices & Discoveries":
                                 font gui.name_text_font
                                 color gui.accent_color
                             
@@ -307,89 +307,90 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                     add "images/characters/side/side " + selected_char.text_id + ".png"
 
                 # Center column: Title and list of save checkpoints in a viewport
-                vbox:
-                    spacing 10
-                    yalign 0.0
-                    xoffset 100
+                if not selected_chapter == "current_status":
+                    vbox:
+                        spacing 10
+                        yalign 0.0
+                        xoffset 100
 
-                    if selected_chapter == "start":
-                        text "Checkpoints for Friday Afternoon":
-                            size 48
-                            font gui.name_text_font
-                    elif selected_chapter == "current_status":
-                        text "What has been discovered and what is unlocked now":
-                            size 48
-                            font gui.name_text_font
-                    elif ending:
-                        text current_storyline.endings.get_item(selected_chapter.label).content:
-                            size 48
-                            font gui.name_text_font
-                    else:
-                        text "Checkpoints for " + chapters_names[selected_chapter.name]:
-                            size 48
-                            font gui.name_text_font
+                        if selected_chapter == "start":
+                            text "Checkpoints for Friday Afternoon":
+                                size 48
+                                font gui.name_text_font
+                        # elif selected_chapter == "current_status":
+                        #     text "What has been discovered and what is unlocked now":
+                        #         size 48
+                        #         font gui.name_text_font
+                        elif ending:
+                            text current_storyline.endings.get_item(selected_chapter.label).content:
+                                size 48
+                                font gui.name_text_font
+                        else:
+                            text "Checkpoints for " + chapters_names[selected_chapter.name]:
+                                size 48
+                                font gui.name_text_font
 
-                    frame:
-                        xmaximum 900 
-                        ymaximum 375  
-                        has viewport:
-                            draggable True 
-                            mousewheel True
-                            scrollbars "vertical"
+                        frame:
+                            xmaximum 900 
+                            ymaximum 375  
+                            has viewport:
+                                draggable True 
+                                mousewheel True
+                                scrollbars "vertical"
 
-                        vbox:
-                            spacing 5
-                            if selected_chapter == "start":
-                                textbutton str("Start"):
-                                    action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
-                            elif selected_chapter == "current_status":
-                                pass
-                                # textbutton str("See what's currently discovered unlocked"):
-                                #     action SetVariable("current_checkpoint", Checkpoint(
-                                #             run = current_run,
-                                #             position = current_position,
-                                #             objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
-                                #             observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
-                                #             important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
-                                #             label_id = "current",
-                                #             saved_variables = copy.deepcopy(current_character.saved_variables),
-                                #             ending = ending
-                                #         ))
-                            else:
-                                if is_current:
-                                    # TODO: maybe but in function for clarity
-                                    $ active_checkpoint = Checkpoint(
-                                            run = current_run,
-                                            position = current_position,
-                                            objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
-                                            observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
-                                            important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
-                                            label_id = "current",
-                                            saved_variables = copy.deepcopy(current_character.saved_variables),
-                                            ending = ending,
-                                            all_menus = copy.deepcopy(all_menus),
-                                        )
-                                    textbutton str("See current status"):
-                                        if current_checkpoint and current_checkpoint.label_id == "current":
-                                            text_color gui.accent_color
-                                        action SetVariable("current_checkpoint", active_checkpoint)
-                                for i, checkpoint in enumerate(selected_char.get_checkpoints_by_chapter(selected_chapter.label)):
-                                    textbutton "{}: {}".format(i, checkpoint.get_format_created()):
-                                        action SetVariable("current_checkpoint", checkpoint)
-                                        if current_checkpoint == checkpoint:
-                                            text_color gui.accent_color
-                    
-                    if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
+                            vbox:
+                                spacing 5
+                                if selected_chapter == "start":
+                                    textbutton str("Start"):
+                                        action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                                elif selected_chapter == "current_status":
+                                    pass
+                                    # textbutton str("See what's currently discovered unlocked"):
+                                    #     action SetVariable("current_checkpoint", Checkpoint(
+                                    #             run = current_run,
+                                    #             position = current_position,
+                                    #             objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
+                                    #             observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
+                                    #             important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
+                                    #             label_id = "current",
+                                    #             saved_variables = copy.deepcopy(current_character.saved_variables),
+                                    #             ending = ending
+                                    #         ))
+                                else:
+                                    if is_current:
+                                        # TODO: maybe but in function for clarity
+                                        $ active_checkpoint = Checkpoint(
+                                                run = current_run,
+                                                position = current_position,
+                                                objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
+                                                observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
+                                                important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
+                                                label_id = "current",
+                                                saved_variables = copy.deepcopy(current_character.saved_variables),
+                                                ending = ending,
+                                                all_menus = copy.deepcopy(all_menus),
+                                            )
+                                        textbutton str("See current status"):
+                                            if current_checkpoint and current_checkpoint.label_id == "current":
+                                                text_color gui.accent_color
+                                            action SetVariable("current_checkpoint", active_checkpoint)
+                                    for i, checkpoint in enumerate(selected_char.get_checkpoints_by_chapter(selected_chapter.label)):
+                                        textbutton "{}: {}".format(i, checkpoint.get_format_created()):
+                                            action SetVariable("current_checkpoint", checkpoint)
+                                            if current_checkpoint == checkpoint:
+                                                text_color gui.accent_color
                         
-                        button:
-                            action Show("confirm_restart")
-                            background "images/ui/button_idle_small.png"
-                            hover_background "images/ui/button_hover_small.png"
-                            xysize (430, 65)
+                        if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
+                            
+                            button:
+                                action Show("confirm_restart")
+                                background "images/ui/button_idle_small.png"
+                                hover_background "images/ui/button_hover_small.png"
+                                xysize (430, 65)
 
-                            text "Restart from there":
-                                color "#FFFFFF"
-                                align (0.5, 0.5)
+                                text "Restart from there":
+                                    color "#FFFFFF"
+                                    align (0.5, 0.5)
 
                 # Right column: Details of the selected checkpoint
                 vbox:
