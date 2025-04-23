@@ -66,7 +66,6 @@ label init_nurse:
             description_hidden = nurse_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
-            intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
             progress = [],

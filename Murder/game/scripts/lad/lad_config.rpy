@@ -72,16 +72,16 @@ label init_lad:
         lad_endings = CharacterEndingList ([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed"), 
             CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing"), 
-            CharacterInformation(3, "poisoned", "{image=images/ui/intuition_icon.png}Your food was poisoned{image=images/ui/intuition_icon.png}", image_file="poison_food"), 
+            CharacterInformation(3, "poisoned", "Your food was poisoned", image_file="poison_food", is_intuition=True), 
             CharacterInformation(4, "fell", "You got impaled on a picket fence", image_file="fence"), 
             CharacterInformation(5, "escape", "You escaped, alone", image_file="escape"), 
             CharacterInformation(6, "final_ending", "You finally got the truth", image_file="question_mark"), 
         ])
 
-        lad_intuitions = CharacterIntuitionList ([            
-                CharacterInformation(1, "psychic_poisons", "On Sunday, your lunch was poisoned.", image_file="poison_food")
-            ]
-        )
+        # lad_intuitions = CharacterIntuitionList ([            
+        #         CharacterInformation(1, "psychic_poisons", "On Sunday, your lunch was poisoned.", image_file="poison_food")
+        #     ]
+        # )
 
         lad_observations = CharacterObservationList ([    
                 CharacterInformation(1, "green_liquid", "There was a green liquid on Thomas Moody's nightstand.", image_file="poison_bedstand"), 
@@ -144,7 +144,6 @@ label init_lad:
             description_hidden = lad_description_hidden,
             important_choices = lad_important_choices,
             endings = lad_endings,
-            intuitions = lad_intuitions,
             observations = lad_observations,
             objects = lad_objects,
             progress = lad_progress,

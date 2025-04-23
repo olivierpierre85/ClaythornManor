@@ -176,31 +176,32 @@ init -100 python:
         def __init__(self, ending_list):
             super().__init__(
                 ending_list,
+                is_intuition
             )
 
 
-    class CharacterIntuitionList(CharacterInformationList):
-        def __init__(self, intuition_list):
-            super().__init__(
-                intuition_list,
-                notification_text = "You have a new intuition",
-                notification_sound = "audio/sound_effects/writing_short.ogg"
-            )
+    # class CharacterIntuitionList(CharacterInformationList):
+    #     def __init__(self, intuition_list):
+    #         super().__init__(
+    #             intuition_list,
+    #             notification_text = "You have a new intuition",
+    #             notification_sound = "audio/sound_effects/writing_short.ogg"
+    #         )
         
-        def unlock(self, text_id):
-            global seen_tutorial_intuition
-            for info in self.information_list:
-                if text_id == info.text_id and info.locked:
-                    info.locked = False
-                    info.discovered = True
+    #     def unlock(self, text_id):
+    #         global seen_tutorial_intuition
+    #         for info in self.information_list:
+    #             if text_id == info.text_id and info.locked:
+    #                 info.locked = False
+    #                 info.discovered = True
 
-                    if not hide_notifications:
-                        renpy.notify(self.notification_text)
-                        renpy.play(self.notification_sound, "sound")
+    #                 if not hide_notifications:
+    #                     renpy.notify(self.notification_text)
+    #                     renpy.play(self.notification_sound, "sound")
 
-            if not seen_tutorial_intuition:
-                seen_tutorial_intuition = True
-                renpy.call('tutorial_intuition')
+    #         if not seen_tutorial_intuition:
+    #             seen_tutorial_intuition = True
+    #             renpy.call('tutorial_intuition')
 
 
     class CharacterObservationList(CharacterInformationList):
@@ -268,7 +269,8 @@ init -100 python:
             content, 
             locked = True,
             is_important = False,
-            image_file = None
+            image_file = None,
+            is_intuition = False,
         ):
             self.order = order
             self.text_id = text_id
@@ -276,6 +278,7 @@ init -100 python:
             self.locked = locked
             self.is_important = is_important
             self.image_file = image_file
+            self.is_intuition = is_intuition
             self.discovered = False
 
 
@@ -286,7 +289,6 @@ init -100 python:
             description_hidden,
             important_choices,
             endings,      
-            intuitions,
             objects,
             observations, 
             progress,
@@ -309,7 +311,6 @@ init -100 python:
             self.description_hidden = description_hidden or []
             self.important_choices = important_choices or []
             self.endings = endings or []
-            self.intuitions = intuitions or []
             self.objects = objects or []
             self.observations = observations or [] 
             self.progress = progress or [] 

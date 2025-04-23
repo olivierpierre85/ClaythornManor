@@ -63,13 +63,16 @@ screen progress:
                             hbox:
                                 yoffset 10
                                 spacing 15
-                                for item in current_storyline.endings.get_list():
+                                for ending in current_storyline.endings.get_list():
                                     imagebutton:
-                                        if item.locked:
+                                        if ending.locked:
                                             idle "images/info_cards/question_mark_bw.png"
                                         else: 
-                                            idle item.image_file
-                                            tooltip str(item.content)  
+                                            idle ending.image_file
+                                            if ending.is_intuition:
+                                                tooltip str(ending.content + " {image=images/ui/intuition_icon.png}")  
+                                            else:
+                                                tooltip str(ending.content)  
                                             action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip    
                         
                         vbox:

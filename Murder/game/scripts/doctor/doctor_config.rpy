@@ -48,7 +48,6 @@ label init_doctor:
             description_hidden = doctor_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
-            intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
             progress = [],

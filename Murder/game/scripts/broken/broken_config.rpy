@@ -49,7 +49,6 @@ label init_broken:
             description_hidden = broken_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
-            intuitions = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
             progress = [],

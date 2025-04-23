@@ -154,6 +154,8 @@ label init_technical_variables:
         first_ending = True
         first_survive = True
 
+        is_intuition = False # Assume  a death doesn't provide an intuition, unless written otherwise
+
         current_checkpoint = None
         current_day = None
 

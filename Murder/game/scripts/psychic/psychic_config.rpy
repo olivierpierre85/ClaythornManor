@@ -55,7 +55,7 @@ label init_psychic:
         
         psychic_endings = CharacterEndingList ([
             CharacterInformation(0, "fell", "You fell down the stairs", image_file="psychic_fell"),
-            CharacterInformation(1, "burned", "You were burned along with the manor", image_file="manor_burns"), 
+            CharacterInformation(1, "burned", "You were burned along with the manor", image_file="manor_burns", is_intuition=True), 
             CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing"),
             CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape"),
         ])
@@ -67,10 +67,10 @@ label init_psychic:
             ]
         )  
 
-        psychic_intuitions = CharacterIntuitionList ([            
-                CharacterInformation(1, "leave_manor", "Don't stay in the manor longer than you have to.", image_file="manor_burns")
-            ]
-        )
+        # psychic_intuitions = CharacterIntuitionList ([            
+        #         CharacterInformation(1, "leave_manor", "Don't stay in the manor longer than you have to.", image_file="manor_burns")
+        #     ]
+        # )
 
         psychic_extra_information = CharacterDescriptionHiddenList([
             CharacterInformation(0, "background","psychic who claims to be able to converse with the dead" , is_important = True), 
@@ -113,7 +113,6 @@ label init_psychic:
             description_hidden = psychic_extra_information,
             important_choices = psychic_important_choices,
             endings = psychic_endings,
-            intuitions = psychic_intuitions,
             observations = psychic_observations,
             objects = CharacterObjectList([]),
             progress = psychic_progress,

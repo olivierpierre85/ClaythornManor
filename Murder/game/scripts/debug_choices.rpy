@@ -25,14 +25,14 @@ label init_debug:
     $ psychic_details.saved_variables["knows_captain_origin"] = True
     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
     $ psychic_details.load_test_checkpoints()
-    $ psychic_details.intuitions.unlock('leave_manor')
+    # $ psychic_details.intuitions.unlock('leave_manor')
 
     
     $ current_character = lad_details
     $ current_storyline = lad_details # TODO move
     call unlock_lad
     $ lad_details.load_test_checkpoints()
-    $ lad_details.intuitions.unlock('psychic_poisons')
+    # $ lad_details.intuitions.unlock('psychic_poisons')
     
     # call unlock_doctor
 

@@ -81,7 +81,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion_1:
 label common_day3_afternoon_lad_psychic_captain_discussion_2:
     
     # Having intuition, decides to die anyway
-    if current_character.text_id == "psychic" and psychic_details.intuitions.is_unlocked('leave_manor'):
+    if current_character.text_id == "psychic" and psychic_details.endings.is_unlocked('burned'):
         """
         I disregard the uneasy feeling I've just experienced.
 

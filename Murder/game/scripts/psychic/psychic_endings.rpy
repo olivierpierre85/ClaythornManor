@@ -20,7 +20,7 @@ label psychic_ending_lord:
 
 label psychic_ending_burns:
         
-    $ psychic_details.intuitions.unlock('leave_manor')    
+    $ psychic_details.endings.unlock('burned')
     
     call death_screen_transition
 
@@ -34,7 +34,7 @@ label psychic_ending_burns:
     A tragic ending for Claythorn Manor and everyone still within.
     """
 
-    $ psychic_details.endings.unlock('burned')
+    $ is_intuition = True
 
     jump ending_generic
 
