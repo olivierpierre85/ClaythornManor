@@ -75,6 +75,7 @@ label init_lad:
             CharacterInformation(3, "poisoned", "{image=images/ui/intuition_icon.png}Your food was poisoned{image=images/ui/intuition_icon.png}", image_file="poison_food"), 
             CharacterInformation(4, "fell", "You got impaled on a picket fence", image_file="fence"), 
             CharacterInformation(5, "escape", "You escaped, alone", image_file="escape"), 
+            CharacterInformation(6, "final_ending", "You finally got the truth", image_file="question_mark"), 
         ])
 
         lad_intuitions = CharacterIntuitionList ([            

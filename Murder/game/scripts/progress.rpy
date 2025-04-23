@@ -54,9 +54,9 @@ screen progress:
                         xpos 50
                         vbox:
                             yminimum 120
-                            xminimum 450
+                            xminimum 530
                             yoffset -20
-                            xoffset 30
+                            xoffset 0
                             text current_storyline.real_name + "'s Endings":
                                 font gui.name_text_font
                                 color gui.accent_color
@@ -76,7 +76,7 @@ screen progress:
                             yminimum 120
                             # Params for intuition
                             yoffset -20
-                            xoffset 100
+                            xoffset 50
                             text "Choices & Findings":
                                 font gui.name_text_font
                                 color gui.accent_color
@@ -87,6 +87,7 @@ screen progress:
                                 $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy.deepcopy(current_character.saved_variables), ending=False)
 
                                 imagebutton:
+                                    yoffset 2
                                     mouse "hover"
                                     action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", "current_status", current_storyline)]
                                     if current_storyline.is_everything_completed():
@@ -108,17 +109,6 @@ screen progress:
                                         text_font gui.name_text_font
                                         text_color gui.accent_color
                                         action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", "current_status", current_storyline)]
-                            # # Current Status button : discountinued
-                            # yoffset 30
-                            # xoffset 135
-                            # button:
-                            #     action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "current_status", current_storyline)]
-                            #     background "images/ui/button_idle_very_small.png"
-                            #     hover_background "images/ui/button_hover_very_small.png"
-                            #     xysize (300, 65)
-                            #     text "Current Status":
-                            #         color "#FFFFFF"
-                            #         align (0.5, 0.5)
                 vbox:
 
                     xsize 1700
@@ -353,6 +343,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                 textbutton str("Start"):
                                     action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
                             elif selected_chapter == "current_status":
+                                pass
                                 # textbutton str("See what's currently discovered unlocked"):
                                 #     action SetVariable("current_checkpoint", Checkpoint(
                                 #             run = current_run,
