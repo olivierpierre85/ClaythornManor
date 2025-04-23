@@ -34,7 +34,10 @@ label init_debug:
     $ lad_details.load_test_checkpoints()
     # $ lad_details.intuitions.unlock('psychic_poisons')
     
-    # call unlock_doctor
+    $ current_character = doctor_details
+    $ current_storyline = doctor_details
+    call unlock_doctor
+    # $ doctor_details.load_test_checkpoints()
 
     $ hide_notifications = False
 

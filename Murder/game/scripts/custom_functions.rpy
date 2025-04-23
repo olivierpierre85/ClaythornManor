@@ -249,7 +249,7 @@ label work_in_progress:
     """
     You've reached to end of the story written so far.
 
-    But don't worry, the rest of this game will be done soon!
+    But don't worry, the rest of this game will be ready soon ! (or at some point in the future).
     """
 
     hide screen centered_text

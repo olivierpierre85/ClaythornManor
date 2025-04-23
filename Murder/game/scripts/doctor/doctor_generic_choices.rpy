@@ -1,4 +1,11 @@
-label doctor_generic():
+
+# Generic Doctor Dialogs.
+# Accessible from :
+#                   - Psychic
+#                   - Lad
+
+
+label doctor_generic:
 
     # Reset if previous early exit
     $ current_character.saved_variables["doctor_generic_menu"].early_exit = False

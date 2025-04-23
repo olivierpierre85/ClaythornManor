@@ -2,13 +2,15 @@ label init_doctor:
 
     # call doctor_config_map
     
-    # call doctor_config_menu
+    call doctor_config_menu
     
     python:
 
         doctor_name = "Daniel Baldwin"
         # Story Variables
         doctor_init_variables = {
+            "broken_generic_menu": broken_generic_menu_doctor,
+            "knows_broken_background": False,
         }
 
         doctor_extra_information = CharacterDescriptionHiddenList ([
