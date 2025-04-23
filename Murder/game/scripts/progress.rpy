@@ -186,8 +186,8 @@ screen progress:
                                                 text_color gui.accent_color
                                                 text_hover_color "#FFFFFF" 
                                                 text_font gui.name_text_font 
-                                                text_size 26
-                                                style "confirm_prompt" # TODO: Something here centers multiline text. What?
+                                                text_size 28
+                                                style "confirm_prompt" # TODO: Something here that centers multiline text. What?
                                                 padding (60, 25, 60, 25)
                                                 if should_blink:
                                                     text_color gui.highlight_color

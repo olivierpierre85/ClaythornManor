@@ -99,7 +99,7 @@ label init_technical_variables:
     define chapters_names = {
         'friday_afternoon': "Introduction",
         'friday_evening': "The Arrival",
-        'saturday_morning': "The Morning Surprise",
+        'saturday_morning': "A Shocking Morning",
         'saturday_afternoon': "The Hunt",
         'saturday_afternoon_no_hunt': "No Hunt",
         'saturday_evening': "Things get Darker",
