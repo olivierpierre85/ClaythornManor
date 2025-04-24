@@ -50,24 +50,141 @@ label init_lad:
             "day3_downstairs_visited" : False
         }
 
-        lad_important_choices = CharacterImportantChoiceList ([
-            CharacterInformation(0, "whisky", "You went to the bar for a drink on the first night", image_file="whisky"),
-            CharacterInformation(0, "day1_drunk", "You got drunk the first night", image_file="drunk"),
-            CharacterInformation(0, "downstairs_1", "You attempted to go downstairs", image_file="downstairs"),
-            CharacterInformation(0, "hunt", "You decided to go hunting", image_file="hunt"),
-            CharacterInformation(0, "hunt_captain_host", "You hunted with a Captain and a Lady", image_file="hunt_captain_host"),
-            CharacterInformation(0, "hunt_doctor_drunk", "You hunted with a Doctor and a Drunk", image_file="hunt_doctor_drunk"),
-
-            CharacterInformation(0, "downstairs_2", "You tried again to go downstairs", image_file="downstairs_2"),
-            CharacterInformation(0, "day2_drunk", "You got drunk the second night", image_file="drunk_2"),
-            CharacterInformation(0, "trust_psychic", "You decided to trust Amelia Baxter", image_file="trust_psychic"),
-            
-            CharacterInformation(0, "abandoned_psychic", "You abandoned Amelia Baxter and left the manor", image_file="leave_manor"),
-            CharacterInformation(0, "protect_food", "You didn't leave your food unattended for too long", image_file="poison_food"),
-            # DO we need the alternative? You left ? 
-            CharacterInformation(0, "downstairs_3", "You pushed your luck a third time by going downstairs", image_file="downstairs_3"),
-            CharacterInformation(0, "day3_drunk", "You got drunk the third night", image_file="drunk_3"),
+        lad_important_choices = CharacterImportantChoiceList([
+            CharacterInformation(
+                0, "whisky",
+                "You went to the bar for a drink on the first night",
+                content_negative="You didn't go to the bar for a drink on the first night",
+                image_file="whisky",
+                chapters=['friday_evening']
+            ),
+            CharacterInformation(
+                0, "day1_drunk",
+                "You got drunk the first night",
+                content_negative="You stayed sober the first night",
+                image_file="drunk",
+                chapters=['friday_evening']
+            ),
+            CharacterInformation(
+                0, "downstairs_1",
+                "You attempted to go downstairs",
+                content_negative="You stayed upstairs and didn't try to go downstairs",
+                image_file="downstairs",
+                chapters=['friday_evening', 'saturday_afternoon_no_hunt', 'saturday_evening']
+            ),
+            CharacterInformation(
+                0, "hunt",
+                "You decided to go hunting",
+                content_negative="You decided not to go hunting",
+                image_file="hunt",
+                chapters=['saturday_morning']
+            ),
+            CharacterInformation(
+                0, "hunt_captain_host",
+                "You hunted with a Captain and a Lady",
+                content_negative="You did not hunt with a Captain and a Lady",
+                image_file="hunt_captain_host",
+                chapters=['saturday_afternoon']
+            ),
+            CharacterInformation(
+                0, "hunt_doctor_drunk",
+                "You hunted with a Doctor and a Drunk",
+                content_negative="You did not hunt with a Doctor and a Drunk",
+                image_file="hunt_doctor_drunk",
+                chapters=['saturday_afternoon']
+            ),
+            CharacterInformation(
+                0, "downstairs_2",
+                "You tried again to go downstairs",
+                content_negative="You didn't try again to go downstairs",
+                image_file="downstairs_2",
+                chapters=['saturday_afternoon_no_hunt', 'saturday_evening']
+            ),
+            CharacterInformation(
+                0, "day2_drunk",
+                "You got drunk the second night",
+                content_negative="You stayed sober the second night",
+                image_file="drunk_2",
+                chapters=['saturday_evening']
+            ),
+            CharacterInformation(
+                0, "trust_psychic",
+                "You decided to trust Amelia Baxter",
+                content_negative="You chose not to trust Amelia Baxter",
+                image_file="trust_psychic",
+                chapters=['saturday_evening']
+            ),
+            CharacterInformation(
+                0, "abandoned_psychic",
+                "You abandoned Amelia Baxter and left the manor",
+                content_negative="You stayed with Amelia Baxter and didn't leave the manor",
+                image_file="leave_manor",
+                chapters=['sunday_afternoon']
+            ),
+            CharacterInformation(
+                0, "protect_food",
+                "You didn't leave your food unattended for too long",
+                content_negative="You left your food unattended for too long",
+                image_file="poison_food",
+                chapters=['sunday_afternoon']
+            ),
+            CharacterInformation(
+                0, "downstairs_3",
+                "You pushed your luck a third time by going downstairs",
+                content_negative="You decided not to go downstairs a third time",
+                image_file="downstairs_3",
+                chapters=['sunday_afternoon']
+            ),
+            CharacterInformation(
+                0, "day3_drunk",
+                "You got drunk the last day",
+                content_negative="You stayed sober the last day",
+                image_file="drunk_3",
+                chapters=['sunday_morning']
+            ),
         ])
+
+        lad_observations = CharacterObservationList([
+            CharacterInformation(
+                1, "green_liquid",
+                "There was a green liquid on Thomas Moody's nightstand.",
+                content_negative="You didn't see the green liquid on Thomas Moody's nightstand.",
+                image_file="poison_bedstand",
+                chapters=['saturday_afternoon_no_hunt', 'saturday_evening']
+            ),
+            CharacterInformation(
+                1, "seen_car",
+                "There is a car in the basement, but it has no gas",
+                content_negative="You didn't see the car in the basement",
+                image_file="seen_car",
+                chapters=['sunday_morning']
+            ),
+        ])
+
+        lad_objects = CharacterObjectList([
+            CharacterInformation(
+                1, "gun",
+                "You took an empty handgun found in the gun room",
+                content_negative="You didn't take the handgun from the gun room",
+                image_file="gun",
+                chapters=['sunday_morning']
+            ),
+            CharacterInformation(
+                2, "burned_letter",
+                "A burned letter found in Samuel Manning's room",
+                content_negative="You didn't find the burned letter in Samuel Manning's room",
+                image_file="burned_letter",
+                chapters=['saturday_afternoon_no_hunt']
+            ),
+            CharacterInformation(
+                3, "laudanum",
+                "You stole a vial of laudanum",
+                content_negative="You didn't steal the vial of laudanum",
+                image_file="laudanum",
+                chapters=['saturday_evening']
+            ),
+        ])
+
 
         lad_endings = CharacterEndingList ([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed"), 
@@ -77,28 +194,6 @@ label init_lad:
             CharacterInformation(5, "escape", "You escaped, alone", image_file="escape"), 
             CharacterInformation(6, "final_ending", "You finally got the truth", image_file="question_mark"), 
         ])
-
-        # lad_intuitions = CharacterIntuitionList ([            
-        #         CharacterInformation(1, "psychic_poisons", "On Sunday, your lunch was poisoned.", image_file="poison_food")
-        #     ]
-        # )
-
-        lad_observations = CharacterObservationList ([    
-                CharacterInformation(1, "green_liquid", "There was a green liquid on Thomas Moody's nightstand.", image_file="poison_bedstand"), 
-                CharacterInformation(1, "seen_car", "There is a car in the basement, but it has no gas", image_file="seen_car"),
-                # TODO add seen car in observation =>
-            ]
-        )  
-
-        lad_objects = CharacterObjectList([  
-                CharacterInformation(1, "gun", "You took an empty handgun found in the gun room", image_file="gun"),
-                CharacterInformation(2, "burned_letter", "A burned letter found in Samuel Manning's room", image_file="burned_letter"),
-                CharacterInformation(3, "laudanum", "You stole a vial of laudanum", image_file="laudanum"),
-                # TODO: Do something with the laudanum? Or just to show he 
-                # TODO: Add GAS ? Bullets ? Here or for someone else?
-            ],
-        )
-
 
         lad_description_hidden = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "age", "22 years old - which means he was merely 15"),

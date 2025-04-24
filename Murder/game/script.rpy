@@ -81,9 +81,6 @@ label start():
         # These display lines of dialogue.
         jump character_selection
     else:
-        # Could be useful but NEEDS a warning, because it will delete all the saves as well?
-        # Delete all persistent data (choices alreay made,....)
-        # $ persistent._clear(progress=True)
 
         jump lad_introduction
 

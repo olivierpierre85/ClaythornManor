@@ -267,18 +267,22 @@ init -100 python:
             order,
             text_id,             
             content, 
+            content_negative = None,
             locked = True,
             is_important = False,
             image_file = None,
             is_intuition = False,
+            chapters = [],
         ):
             self.order = order
             self.text_id = text_id
             self.content = content
+            self.content_negative = content_negative
             self.locked = locked
             self.is_important = is_important
             self.image_file = image_file
             self.is_intuition = is_intuition
+            self.chapters = chapters,
             self.discovered = False
 
 

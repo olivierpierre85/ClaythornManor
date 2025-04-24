@@ -276,7 +276,7 @@ screen info_card(item=None, item_type=None):
             tooltip icon_file + item.content
         else:
             idle "images/info_cards/" + item.image_file + "_bw.png"                                
-            tooltip icon_file + item.content
+            tooltip icon_file + item.content_negative
 
 
 screen storyline_details(selected_chapter, selected_char, ending = False, is_current = False):
