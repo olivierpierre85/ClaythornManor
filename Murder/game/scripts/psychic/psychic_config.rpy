@@ -48,29 +48,59 @@ label init_psychic:
         }
 
         psychic_important_choices = CharacterImportantChoiceList([
-            CharacterInformation(0, "visit_lad", "You approached Ted Harring", image_file="trust_psychic"), 
-            CharacterInformation(0, "steal_gun", "You tried to take Rosalind's gun by force", image_file="gun"), 
-            CharacterInformation(0, "leave_manor", "You leave the manor while you still can", image_file="leave_manor"), 
+            CharacterInformation(
+                0, "visit_lad",
+                "You approached Ted Harring",
+                content_negative="You didn't approach Ted Harring",
+                image_file="trust_psychic",
+                chapters=['saturday_evening']
+            ),
+            CharacterInformation(
+                0, "steal_gun",
+                "You tried to take Rosalind's gun by force",
+                content_negative="You didn't try to take Rosalind's gun by force",
+                image_file="gun",
+                chapters=['sunday_afternoon']
+            ),
+            CharacterInformation(
+                0, "leave_manor",
+                "You left the manor while you still could",
+                content_negative="You stayed in the manor despite the risks",
+                image_file="leave_manor",
+                chapters=['sunday_afternoon']
+            ),
         ])
-        
+
+        psychic_observations = CharacterObservationList([
+            CharacterInformation(
+                0, "visited_attic",
+                "You visited the attic and met the Lord of this place",
+                content_negative="You didn't go to the attic",
+                image_file="lord",
+                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening']
+            ),
+            CharacterInformation(
+                1, "lord_name",
+                "Lord Claythorn's name is Nicholas",
+                content_negative="You haven't discovered Lord Claythorn's name",
+                image_file="lord_2",
+                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening']
+            ),
+            CharacterInformation(
+                1, "lord_age",
+                "Lord Claythorn is 111 years old",
+                content_negative="You haven't learned Lord Claythorn's age",
+                image_file="lord_3",
+                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening']
+            ),
+        ])
+
         psychic_endings = CharacterEndingList ([
             CharacterInformation(0, "fell", "You fell down the stairs", image_file="psychic_fell"),
             CharacterInformation(1, "burned", "You were burned along with the manor", image_file="manor_burns", is_intuition=True), 
             CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing"),
             CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape"),
         ])
-
-        psychic_observations = CharacterObservationList ([ 
-                CharacterInformation(0, "visited_attic", "You visited the attic and met the Lord of this place", image_file="lord"),   
-                CharacterInformation(1, "lord_name", "Lord Claythorn's name is Nicholas", image_file="lord_2"), 
-                CharacterInformation(1, "lord_age", "Lord Claythorn is 111 years old", image_file="lord_3"), 
-            ]
-        )  
-
-        # psychic_intuitions = CharacterIntuitionList ([            
-        #         CharacterInformation(1, "leave_manor", "Don't stay in the manor longer than you have to.", image_file="manor_burns")
-        #     ]
-        # )
 
         psychic_extra_information = CharacterDescriptionHiddenList([
             CharacterInformation(0, "background","psychic who claims to be able to converse with the dead" , is_important = True), 
