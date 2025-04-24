@@ -170,6 +170,8 @@ init -100 python:
                 notification_text = "This decision may have consequences",
                 notification_sound = "audio/sound_effects/writing_short.ogg"
             )
+            for item in important_choice_list:
+                item.type = "choice"
 
 
     class CharacterEndingList(CharacterInformationList):
@@ -180,30 +182,6 @@ init -100 python:
             )
 
 
-    # class CharacterIntuitionList(CharacterInformationList):
-    #     def __init__(self, intuition_list):
-    #         super().__init__(
-    #             intuition_list,
-    #             notification_text = "You have a new intuition",
-    #             notification_sound = "audio/sound_effects/writing_short.ogg"
-    #         )
-        
-    #     def unlock(self, text_id):
-    #         global seen_tutorial_intuition
-    #         for info in self.information_list:
-    #             if text_id == info.text_id and info.locked:
-    #                 info.locked = False
-    #                 info.discovered = True
-
-    #                 if not hide_notifications:
-    #                     renpy.notify(self.notification_text)
-    #                     renpy.play(self.notification_sound, "sound")
-
-    #         if not seen_tutorial_intuition:
-    #             seen_tutorial_intuition = True
-    #             renpy.call('tutorial_intuition')
-
-
     class CharacterObservationList(CharacterInformationList):
         def __init__(self, observation_list):
             super().__init__(
@@ -211,6 +189,8 @@ init -100 python:
                 notification_text = "You have made a new observation",
                 notification_sound = "audio/sound_effects/writing_short.ogg"
             )
+            for item in observation_list:
+                item.type = "observation"
 
 
     class CharacterObjectList(CharacterInformationList):
@@ -220,6 +200,8 @@ init -100 python:
                 notification_text="You have found a new object",
                 notification_sound="audio/sound_effects/writing_short.ogg",
             )
+            for item in object_list:
+                item.type = "object"
 
 
     class CharacterDescriptionHiddenList(CharacterInformationList):
@@ -283,7 +265,8 @@ init -100 python:
             self.image_file = image_file
             self.is_intuition = is_intuition
             self.chapters = chapters,
-            self.discovered = False
+            self.discovered = False,
+            self.type = None
 
 
     class CharacterDetails():
@@ -404,6 +387,9 @@ init -100 python:
 
         def get_total_discoveries(self):
             return len(self.important_choices.information_list) + len(self.observations.information_list) + len(self.objects.information_list)
+
+        def get_choices_and_discoveries(self):
+            return self.important_choices.information_list + self.observations.information_list + self.objects.information_list
 
         # ---------------------------------------------------------------------------------------
         #                                Checkpoints

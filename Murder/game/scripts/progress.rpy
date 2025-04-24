@@ -413,33 +413,41 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                 font gui.name_text_font
                                 color gui.accent_color
 
-                        # SUB-LIST: CHOICES
                         vbox:
                             spacing 5
-                            text "Choices" size 24 font gui.name_text_font color gui.accent_color
-                            $ number_of_rows = ((len(current_storyline.important_choices.get_list()) + 4) // 5)
+                            text "Choices & Discoveries" size 24 font gui.name_text_font color gui.accent_color
+                            $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries()) + 4) // 5)
                             grid 5 number_of_rows:
                                 spacing 13
-                                for item in current_storyline.important_choices.get_list():
-                                    use info_card(item, "choice")
+                                for item in current_storyline.get_choices_and_discoveries():
+                                    use info_card(item, item.type)
+                        # # SUB-LIST: CHOICES
+                        # vbox:
+                        #     spacing 5
+                        #     text "Choices" size 24 font gui.name_text_font color gui.accent_color
+                        #     $ number_of_rows = ((len(current_storyline.important_choices.get_list()) + 4) // 5)
+                        #     grid 5 number_of_rows:
+                        #         spacing 13
+                        #         for item in current_storyline.important_choices.get_list():
+                        #             use info_card(item, "choice")
 
-                        # SUB-LIST: OBJECTS
-                        vbox:
-                            spacing 5
-                            text "Objects" size 24 font gui.name_text_font color gui.accent_color
-                            grid 5 1:
-                                spacing 13
-                                for item in current_storyline.objects.get_list():
-                                    use info_card(item, "object")
+                        # # SUB-LIST: OBJECTS
+                        # vbox:
+                        #     spacing 5
+                        #     text "Objects" size 24 font gui.name_text_font color gui.accent_color
+                        #     grid 5 1:
+                        #         spacing 13
+                        #         for item in current_storyline.objects.get_list():
+                        #             use info_card(item, "object")
 
-                        # SUB-LIST: OBSERVATIONS
-                        vbox:
-                            spacing 5
-                            text "Observations" size 24 font gui.name_text_font color gui.accent_color
-                            grid 5 1:
-                                spacing 13
-                                for item in current_storyline.observations.get_list():
-                                    use info_card(item, "observation")
+                        # # SUB-LIST: OBSERVATIONS
+                        # vbox:
+                        #     spacing 5
+                        #     text "Observations" size 24 font gui.name_text_font color gui.accent_color
+                        #     grid 5 1:
+                        #         spacing 13
+                        #         for item in current_storyline.observations.get_list():
+                        #             use info_card(item, "observation")
                     else:
                         text "Select a checkpoint to see details.":
                             size 32
