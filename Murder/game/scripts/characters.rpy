@@ -264,8 +264,8 @@ init -100 python:
             self.is_important = is_important
             self.image_file = image_file
             self.is_intuition = is_intuition
-            self.chapters = chapters,
-            self.discovered = False,
+            self.chapters = chapters
+            self.discovered = False
             self.type = None
 
 

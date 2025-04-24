@@ -119,7 +119,7 @@ label lad_config_progress:
             (
                 'lad_day3_afternoon',
                 [   
-                    ('object', 'gun'),         
+                    # ('object', 'gun'),         
                     ('observation', 'seen_car'),      
                 ],
                 [
@@ -128,7 +128,7 @@ label lad_config_progress:
             (
                 'lad_day3_endings_fake_chapter',
                 [   
-                    ('object', 'gun'),         
+                    # ('object', 'gun'),         
                     ('important_choice', 'abandoned_psychic'),      
                     ('important_choice', 'protect_food'),   
                 ],
