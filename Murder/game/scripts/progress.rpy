@@ -5,6 +5,9 @@ transform character_progress:
 transform selected_character:
     zoom 0.45
 
+# transform is_small:
+#     zoom 0.3
+
 transform blink:
     # alpha 1.0  # Change in color
     # linear 0.5 alpha 0.3
@@ -241,7 +244,7 @@ screen tooltip_display():
                 yalign 0.5
                 text tooltip
 
-screen info_card(item=None, item_type=None):  
+screen info_card(item=None, item_type=None, is_small=False):  
     python:
         if item:
             if item_type == 'object':
@@ -266,17 +269,33 @@ screen info_card(item=None, item_type=None):
     imagebutton:                        
         mouse "hover"
         action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
-        if not item:
-            idle "images/info_cards/empty.png"   
-        elif not item.discovered:
-            idle "images/info_cards/question_mark_bw.png"   
-            tooltip "Hidden"
-        elif not locked: 
-            idle "images/info_cards/" + item.image_file + ".png"     
-            tooltip icon_file + item.content
+
+        if is_small:
+            # For the moment, only display the activated choices of this checkpoint
+
+            # if not item:
+            #     idle Transform("images/info_cards/empty.png", zoom=0.5)
+            # elif not item.discovered:
+            #     idle Transform("images/info_cards/question_mark_bw.png", zoom=0.5) 
+            #     tooltip "Hidden"
+            # elif not locked: 
+                idle Transform("images/info_cards/" + item.image_file + ".png", zoom=0.5)   
+                tooltip icon_file + item.content
+            # else:
+            #     idle Transform("images/info_cards/" + item.image_file + "_bw.png", zoom=0.5)                           
+            #     tooltip icon_file + item.content_negative
         else:
-            idle "images/info_cards/" + item.image_file + "_bw.png"                                
-            tooltip icon_file + item.content_negative
+            if not item:
+                idle "images/info_cards/empty.png"   
+            elif not item.discovered:
+                idle "images/info_cards/question_mark_bw.png"   
+                tooltip "Hidden"
+            elif not locked: 
+                idle "images/info_cards/" + item.image_file + ".png"     
+                tooltip icon_file + item.content
+            else:
+                idle "images/info_cards/" + item.image_file + "_bw.png"                                
+                tooltip icon_file + item.content_negative
 
 
 screen storyline_details(selected_chapter, selected_char, ending = False, is_current = False):
@@ -317,7 +336,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                         xoffset 100
 
                         if selected_chapter == "start":
-                            text "Checkpoints for Friday Afternoon":
+                            text "Introduction":
                                 size 48
                                 font gui.name_text_font
                         # elif selected_chapter == "current_status":
@@ -329,13 +348,13 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                 size 48
                                 font gui.name_text_font
                         else:
-                            text "Checkpoints for " + chapters_names[selected_chapter.name]:
+                            text chapters_names[selected_chapter.name]:
                                 size 48
                                 font gui.name_text_font
 
                         frame:
-                            xmaximum 900 
-                            ymaximum 375  
+                            xmaximum 750 
+                            ymaximum 360  
                             has viewport:
                                 draggable True 
                                 mousewheel True
@@ -377,11 +396,24 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                             if current_checkpoint and current_checkpoint.label_id == "current":
                                                 text_color gui.accent_color
                                             action SetVariable("current_checkpoint", active_checkpoint)
+
                                     for i, checkpoint in enumerate(selected_char.get_checkpoints_by_chapter(selected_chapter.label)):
-                                        textbutton "{}: {}".format(i, checkpoint.get_format_created()):
-                                            action SetVariable("current_checkpoint", checkpoint)
-                                            if current_checkpoint == checkpoint:
-                                                text_color gui.accent_color
+                                        vbox:
+                                            yminimum 70
+                                            textbutton "{}".format(checkpoint.get_format_created()):
+                                                xpadding 0
+                                                ypadding 0
+                                                xmargin 0
+                                                ymargin 0
+                                                action SetVariable("current_checkpoint", checkpoint)
+                                                if current_checkpoint == checkpoint:
+                                                    text_color gui.accent_color
+                                            hbox:
+                                            # TODO not working, because checkpoint only stores id of choices.
+                                            # When need to select the full object from current_storyline
+                                                for item in current_storyline.get_choices_and_discoveries():
+                                                    if item.text_id in checkpoint.get_activated_choices_and_discoveries():
+                                                        use info_card(item, item.type, True)
                         
                         if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
                             
@@ -400,24 +432,27 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                     spacing 10
                     yalign 0.0
                     xoffset 100
-                    yoffset -40
-                    xminimum 500
+                    # yoffset -40
+                    xminimum 650
 
                     if current_checkpoint:
                         if current_checkpoint.label_id == "current":
-                            text "Unlocked at the moment":
+                            text "Choices & Discoveries Activated":
                                 font gui.name_text_font
+                                size 48
                                 color gui.accent_color
                         else:
-                            text "Unlocked at Selected Checkpoint":
+                            text "Choices & Discoveries Activated":
                                 font gui.name_text_font
+                                size 48
                                 color gui.accent_color
 
                         vbox:
-                            spacing 5
-                            text "Choices & Discoveries" size 24 font gui.name_text_font color gui.accent_color
-                            $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries()) + 4) // 5)
-                            grid 5 number_of_rows:
+                            # spacing 5
+                            yoffset 20
+                            # text "Choices & Discoveries" size 24 font gui.name_text_font color gui.accent_color
+                            $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries()) + 5) // 6)
+                            grid 6 number_of_rows:
                                 spacing 13
                                 for item in current_storyline.get_choices_and_discoveries():
                                     use info_card(item, item.type)
@@ -529,13 +564,31 @@ init -100 python:
             self.all_menus = all_menus
 
         def get_format_created(self):
-            return self.created.strftime("%a %b, %H:%M")
+            return self.created.strftime("%A") + f" {self.created.day} " + self.created.strftime("%B, %H:%M")
 
-        def get_format_created_up(self):
-            return self.created.strftime("%a %b")
+        # def get_format_created_up(self):
+        #     return self.created.strftime("%a %b")
 
-        def get_format_created_down(self):
-            return self.created.strftime("%H:%M")
+        # def get_format_created_down(self):
+        #     return self.created.strftime("%H:%M")
+
+        def get_activated_choices_and_discoveries(self):
+            activated_list = []
+
+            # Collect from important_choices
+            for item in self.important_choices:
+                activated_list.append(item)
+
+            # Collect from observations
+            for item in self.observations:
+                activated_list.append(item)
+
+            # Collect from objects
+            for item in self.objects:
+                activated_list.append(item)
+
+            return activated_list
+
         
         def debug_string(self):
             return 'Run:' + str(self.run) + '; position:' + str(self.position) + '; gun:' + str(len(self.objects))

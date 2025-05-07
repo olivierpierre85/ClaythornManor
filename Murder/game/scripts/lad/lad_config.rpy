@@ -171,7 +171,7 @@ label init_lad:
             ),
             CharacterInformation(
                 2, "burned_letter",
-                "A burned letter found in Samuel Manning's room",
+                "You found a burned letter in Samuel Manning's room",
                 content_negative="You didn't find the burned letter in Samuel Manning's room",
                 image_file="burned_letter",
                 chapters=['saturday_afternoon_no_hunt']
