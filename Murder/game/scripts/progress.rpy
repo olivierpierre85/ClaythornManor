@@ -361,9 +361,10 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                 scrollbars "vertical"
 
                             vbox:
-                                spacing 5
+                                spacing 0
                                 if selected_chapter == "start":
-                                    textbutton str("Start"):
+                                    textbutton str("Start"):                                    
+                                        xoffset 20
                                         action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
                                 elif selected_chapter == "current_status":
                                     pass
@@ -393,12 +394,14 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                                 all_menus = copy.deepcopy(all_menus),
                                             )
                                         textbutton str("See current status"):
+                                            xoffset 20
                                             if current_checkpoint and current_checkpoint.label_id == "current":
                                                 text_color gui.accent_color
                                             action SetVariable("current_checkpoint", active_checkpoint)
 
                                     for i, checkpoint in enumerate(selected_char.get_checkpoints_by_chapter(selected_chapter.label)):
                                         vbox:
+                                            xoffset 20
                                             yminimum 70
                                             textbutton "{}".format(checkpoint.get_format_created()):
                                                 xpadding 0
@@ -564,7 +567,7 @@ init -100 python:
             self.all_menus = all_menus
 
         def get_format_created(self):
-            return self.created.strftime("%A") + f" {self.created.day} " + self.created.strftime("%B, %H:%M")
+            return self.created.strftime("%A") + f" {self.created.day} " + self.created.strftime("%B %Y, %H:%M")
 
         # def get_format_created_up(self):
         #     return self.created.strftime("%a %b")
