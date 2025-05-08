@@ -391,9 +391,7 @@ init -100 python:
         def get_choices_and_discoveries(self):
             return self.important_choices.information_list + self.observations.information_list + self.objects.information_list
 
-        def get_choices_and_discoveries_by_chapter(self, chapter):
-            print("chapter")
-            print(chapter)
+        def get_choices_and_discoveries_by_chapter(self, chapter, also_current=False):
 
             CHAPTER_INDEX = {name: idx for idx, name in enumerate(chapters_names)}
 
@@ -412,16 +410,22 @@ init -100 python:
                     # skip any unknown chap names in the item
                     if chap_idx is None:
                         continue
-                    # print("chap_idx")
-                    # print(chap_idx)
-                    # print("current_idx")
-                    # print(current_idx)
-                    if chap_idx <= current_idx:
+
+                    if (not also_current and chap_idx < current_idx) or (also_current and chap_idx <= current_idx):
+                        also_current
                         choices_and_discoveries.append(item)
                         break  # no need to check the rest of this item's chapters
 
             return choices_and_discoveries
         
+        def get_chapter_by_name(self, name):
+            print("name")
+            print(name)
+            all_chapters = [chapter for line in self.progress for chapter in line]
+            for chapter in all_chapters:
+                if chapter.name == name:
+                    return chapter
+            return None
 
         # ---------------------------------------------------------------------------------------
         #                                Checkpoints

@@ -4,7 +4,7 @@ label lad_config_progress:
         lad_progress = [
             # First Line
             [
-                Chapter(image_checkpoint_start, "start"), 
+                Chapter(image_checkpoint_start, "start", "lad_introduction", "friday_afternoon"), 
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day1_evening", "friday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day2_morning", "saturday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day2_hunt", "saturday_afternoon"),

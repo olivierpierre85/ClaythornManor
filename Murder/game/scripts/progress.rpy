@@ -95,7 +95,7 @@ screen progress:
                                 imagebutton:
                                     yoffset 2
                                     mouse "hover"
-                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", "current_status", current_storyline)]
+                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline)]
                                     if current_storyline.is_everything_completed():
                                         idle "images/info_cards/everything_completed.png"
                                     else:
@@ -108,13 +108,13 @@ screen progress:
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.highlight_color
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", "current_status", current_storyline)]
+                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline)]
                                 else:
                                     textbutton "{color=#fff}[unlocked]{/color}/[total]":
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.accent_color
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", "current_status", current_storyline)]
+                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline)]
                 vbox:
 
                     xsize 1700
@@ -216,7 +216,7 @@ screen progress:
                                             tooltip str(current_storyline.endings.get_item(chapter.label).content)  
                                             # action SetVariable("action_needed_fix", True)
                                             mouse "hover"
-                                            action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, True)]
+                                            action [SetVariable("current_checkpoint", None), ShowMenu("", chapter, current_storyline, True)]
                                         else:
                                             idle chapter.image_file 
                                 elif chapter.chapter_type == "start": 
