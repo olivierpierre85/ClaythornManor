@@ -77,21 +77,21 @@ label init_lad:
                 "You decided to go hunting",
                 content_negative="You decided not to go hunting",
                 image_file="hunt",
-                chapters=['saturday_morning']
+                chapters=['saturday_afternoon','saturday_afternoon_no_hunt']
             ),
             CharacterInformation(
                 0, "hunt_captain_host",
                 "You hunted with a Captain and a Lady",
                 content_negative="You did not hunt with a Captain and a Lady",
                 image_file="hunt_captain_host",
-                chapters=['saturday_afternoon']
+                chapters=['saturday_afternoon','saturday_afternoon_no_hunt']
             ),
             CharacterInformation(
                 0, "hunt_doctor_drunk",
                 "You hunted with a Doctor and a Drunk",
                 content_negative="You did not hunt with a Doctor and a Drunk",
                 image_file="hunt_doctor_drunk",
-                chapters=['saturday_afternoon']
+                chapters=['saturday_afternoon','saturday_afternoon_no_hunt']
             ),
             CharacterInformation(
                 0, "downstairs_2",

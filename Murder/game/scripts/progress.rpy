@@ -412,9 +412,8 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                                 if current_checkpoint == checkpoint:
                                                     text_color gui.accent_color
                                             hbox:
-                                            # TODO not working, because checkpoint only stores id of choices.
-                                            # When need to select the full object from current_storyline
-                                                for item in current_storyline.get_choices_and_discoveries():
+                                            # NOw gets all the choices
+                                                for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name):
                                                     if item.text_id in checkpoint.get_activated_choices_and_discoveries():
                                                         use info_card(item, item.type, True)
                         
@@ -454,10 +453,10 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                             # spacing 5
                             yoffset 20
                             # text "Choices & Discoveries" size 24 font gui.name_text_font color gui.accent_color
-                            $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries()) + 5) // 6)
+                            $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name)) + 5) // 6)
                             grid 6 number_of_rows:
                                 spacing 13
-                                for item in current_storyline.get_choices_and_discoveries():
+                                for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name):
                                     use info_card(item, item.type)
                         # # SUB-LIST: CHOICES
                         # vbox:

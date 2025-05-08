@@ -391,6 +391,38 @@ init -100 python:
         def get_choices_and_discoveries(self):
             return self.important_choices.information_list + self.observations.information_list + self.objects.information_list
 
+        def get_choices_and_discoveries_by_chapter(self, chapter):
+            print("chapter")
+            print(chapter)
+
+            CHAPTER_INDEX = {name: idx for idx, name in enumerate(chapters_names)}
+
+            # guard against unknown chapter names
+            if chapter not in CHAPTER_INDEX:
+                # return []
+                raise ValueError(f"Unknown chapter `{chapter}`")
+
+            current_idx = CHAPTER_INDEX[chapter]
+            choices_and_discoveries = []
+            for item in self.get_choices_and_discoveries():
+                # item.chapters is a list of chapter‐keys like ['friday_afternoon', 'saturday_evening', …]
+                # we keep the item if *any* of those keys is at or before current_idx
+                for chap in item.chapters:
+                    chap_idx = CHAPTER_INDEX.get(chap)
+                    # skip any unknown chap names in the item
+                    if chap_idx is None:
+                        continue
+                    # print("chap_idx")
+                    # print(chap_idx)
+                    # print("current_idx")
+                    # print(current_idx)
+                    if chap_idx <= current_idx:
+                        choices_and_discoveries.append(item)
+                        break  # no need to check the rest of this item's chapters
+
+            return choices_and_discoveries
+        
+
         # ---------------------------------------------------------------------------------------
         #                                Checkpoints
         # ---------------------------------------------------------------------------------------
