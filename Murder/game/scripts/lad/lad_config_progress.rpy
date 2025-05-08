@@ -11,7 +11,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day2_evening", "saturday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day3_morning", "sunday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "lad_day3_afternoon", "sunday_afternoon"),
-                Chapter(image_ending_question, "ending", "poisoned"),
+                Chapter(image_ending_question, "ending", "poisoned", "end"),
             ],
             # Second line, ...
             [
@@ -23,19 +23,19 @@ label lad_config_progress:
                 # Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "gunned_down"),
+                Chapter(image_ending_question, "ending", "gunned_down", "end"),
             ],
             [
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "deathbed"),
+                Chapter(image_ending_question, "ending", "deathbed", "saturday_morning"),
                 Chapter(image_checkpoint_empty_after_ending),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 # Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "fell"),
+                Chapter(image_ending_question, "ending", "fell", "end"),
             ],
             [
                 Chapter(image_checkpoint_empty_small),    
@@ -46,7 +46,7 @@ label lad_config_progress:
                 # Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "escape"),
+                Chapter(image_ending_question, "ending", "escape", "end"),
             ],
             [
                 Chapter(image_checkpoint_empty_small),    
@@ -57,7 +57,7 @@ label lad_config_progress:
                 # Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "real_ending"),
+                Chapter(image_ending_question, "ending", "real_ending", "end"),
             ],
         ]
 

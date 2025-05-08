@@ -411,7 +411,7 @@ init -100 python:
                     if chap_idx is None:
                         continue
 
-                    if (not also_current and chap_idx < current_idx) or (also_current and chap_idx <= current_idx):
+                    if (not also_current and chap_idx < current_idx) or (also_current and chap_idx == current_idx):
                         also_current
                         choices_and_discoveries.append(item)
                         break  # no need to check the rest of this item's chapters
@@ -419,8 +419,6 @@ init -100 python:
             return choices_and_discoveries
         
         def get_chapter_by_name(self, name):
-            print("name")
-            print(name)
             all_chapters = [chapter for line in self.progress for chapter in line]
             for chapter in all_chapters:
                 if chapter.name == name:

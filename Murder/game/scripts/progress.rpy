@@ -95,7 +95,7 @@ screen progress:
                                 imagebutton:
                                     yoffset 2
                                     mouse "hover"
-                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline)]
+                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                     if current_storyline.is_everything_completed():
                                         idle "images/info_cards/everything_completed.png"
                                     else:
@@ -108,13 +108,13 @@ screen progress:
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.highlight_color
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline)]
+                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                 else:
                                     textbutton "{color=#fff}[unlocked]{/color}/[total]":
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.accent_color
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline)]
+                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                 vbox:
 
                     xsize 1700
@@ -198,6 +198,10 @@ screen progress:
                                                 if should_blink:
                                                     text_color gui.highlight_color
                                                     at blink
+                                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
+                                                else:
+                                                    action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
+                                                    
                                         else:
                                             textbutton "?":
                                                 xoffset -20 
@@ -216,7 +220,7 @@ screen progress:
                                             tooltip str(current_storyline.endings.get_item(chapter.label).content)  
                                             # action SetVariable("action_needed_fix", True)
                                             mouse "hover"
-                                            action [SetVariable("current_checkpoint", None), ShowMenu("", chapter, current_storyline, True)]
+                                            action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, ending = True)]
                                         else:
                                             idle chapter.image_file 
                                 elif chapter.chapter_type == "start": 
@@ -224,7 +228,7 @@ screen progress:
                                         mouse 'hover'
                                         idle image_checkpoint_start
                                         hover image_checkpoint_start_selected
-                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", "start", current_storyline)]
+                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline)]
 
     use tooltip_display
 
@@ -327,59 +331,40 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                         outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
 
                     add "images/characters/side/side " + selected_char.text_id + ".png"
+                
+                vbox:
+                    spacing 10
+                    yalign 0.0
+                    xoffset 100
 
-                # Center column: Title and list of save checkpoints in a viewport
-                if not selected_chapter == "current_status":
-                    vbox:
-                        spacing 10
-                        yalign 0.0
-                        xoffset 100
+                    if ending:
+                        text current_storyline.endings.get_item(selected_chapter.label).content:
+                            size 48
+                            font gui.name_text_font
+                    else:
+                        text chapters_names[selected_chapter.name]:
+                            size 48
+                            font gui.name_text_font
 
-                        if selected_chapter == "start":
-                            text "Introduction":
-                                size 48
-                                font gui.name_text_font
-                        # elif selected_chapter == "current_status":
-                        #     text "What has been discovered and what is unlocked now":
-                        #         size 48
-                        #         font gui.name_text_font
-                        elif ending:
-                            text current_storyline.endings.get_item(selected_chapter.label).content:
-                                size 48
-                                font gui.name_text_font
-                        else:
-                            text chapters_names[selected_chapter.name]:
-                                size 48
-                                font gui.name_text_font
+                    frame:
+                        xmaximum 750 
+                        ymaximum 360  
+                        has viewport:
+                            draggable True 
+                            mousewheel True
+                            scrollbars "vertical"
 
-                        frame:
-                            xmaximum 750 
-                            ymaximum 360  
-                            has viewport:
-                                draggable True 
-                                mousewheel True
-                                scrollbars "vertical"
-
-                            vbox:
-                                spacing 0
-                                if selected_chapter == "start":
-                                    textbutton str("Start"):                                    
-                                        xoffset 20
-                                        action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
-                                elif selected_chapter == "current_status":
-                                    pass
-                                    # textbutton str("See what's currently discovered unlocked"):
-                                    #     action SetVariable("current_checkpoint", Checkpoint(
-                                    #             run = current_run,
-                                    #             position = current_position,
-                                    #             objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
-                                    #             observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
-                                    #             important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
-                                    #             label_id = "current",
-                                    #             saved_variables = copy.deepcopy(current_character.saved_variables),
-                                    #             ending = ending
-                                    #         ))
-                                else:
+                        vbox:
+                            spacing 0
+                            # TODO CHECK it's working without start
+                            if selected_chapter.chapter_type == "start":
+                                textbutton str("Start"):                                    
+                                    xoffset 20
+                                    action SetVariable("current_checkpoint", current_storyline.get_init_checkpoint())
+                            else:
+                                vbox:
+                                    xoffset 20
+                                    yminimum 70
                                     if is_current:
                                         # TODO: maybe but in function for clarity
                                         $ active_checkpoint = Checkpoint(
@@ -393,16 +378,21 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                                 ending = ending,
                                                 all_menus = copy.deepcopy(all_menus),
                                             )
-                                        textbutton str("See current status"):
-                                            xoffset 20
+
+                                        textbutton str("Current Status"):
+                                            xpadding 0
+                                            ypadding 0
+                                            xmargin 0
+                                            ymargin 0
+                                            text_size 42
                                             if current_checkpoint and current_checkpoint.label_id == "current":
                                                 text_color gui.accent_color
+                                            # else:                                            
+                                            #     text_color gui.highlight_color at blink
                                             action SetVariable("current_checkpoint", active_checkpoint)
 
                                     for i, checkpoint in enumerate(selected_char.get_checkpoints_by_chapter(selected_chapter.label)):
-                                        vbox:
-                                            xoffset 20
-                                            yminimum 70
+
                                             textbutton "{}".format(checkpoint.get_format_created()):
                                                 xpadding 0
                                                 ypadding 0
@@ -416,75 +406,55 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                                 for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name):
                                                     if item.text_id in checkpoint.get_activated_choices_and_discoveries():
                                                         use info_card(item, item.type, True)
+                    
+                    if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
                         
-                        if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
-                            
-                            button:
-                                action Show("confirm_restart")
-                                background "images/ui/button_idle_small.png"
-                                hover_background "images/ui/button_hover_small.png"
-                                xysize (430, 65)
+                        button:
+                            action Show("confirm_restart")
+                            background "images/ui/button_idle_small.png"
+                            hover_background "images/ui/button_hover_small.png"
+                            xysize (430, 65)
 
-                                text "Restart from there":
-                                    color "#FFFFFF"
-                                    align (0.5, 0.5)
+                            text "Restart from there":
+                                color "#FFFFFF"
+                                align (0.5, 0.5)
 
                 # Right column: Details of the selected checkpoint
                 vbox:
                     spacing 10
                     yalign 0.0
                     xoffset 100
-                    # yoffset -40
                     xminimum 650
 
-                    if current_checkpoint:
-                        if current_checkpoint.label_id == "current":
-                            text "Choices & Discoveries Activated":
-                                font gui.name_text_font
-                                size 48
-                                color gui.accent_color
-                        else:
-                            text "Choices & Discoveries Activated":
-                                font gui.name_text_font
-                                size 48
-                                color gui.accent_color
+                    if current_checkpoint and selected_chapter.chapter_type != "start":
+
+                        text "Choices & Discoveries activated before":
+                            font gui.name_text_font
+                            size 42
+                            color gui.accent_color
 
                         vbox:
-                            # spacing 5
                             yoffset 20
-                            # text "Choices & Discoveries" size 24 font gui.name_text_font color gui.accent_color
                             $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name)) + 5) // 6)
                             grid 6 number_of_rows:
                                 spacing 13
                                 for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name):
                                     use info_card(item, item.type)
-                        # # SUB-LIST: CHOICES
-                        # vbox:
-                        #     spacing 5
-                        #     text "Choices" size 24 font gui.name_text_font color gui.accent_color
-                        #     $ number_of_rows = ((len(current_storyline.important_choices.get_list()) + 4) // 5)
-                        #     grid 5 number_of_rows:
-                        #         spacing 13
-                        #         for item in current_storyline.important_choices.get_list():
-                        #             use info_card(item, "choice")
 
-                        # # SUB-LIST: OBJECTS
-                        # vbox:
-                        #     spacing 5
-                        #     text "Objects" size 24 font gui.name_text_font color gui.accent_color
-                        #     grid 5 1:
-                        #         spacing 13
-                        #         for item in current_storyline.objects.get_list():
-                        #             use info_card(item, "object")
-
-                        # # SUB-LIST: OBSERVATIONS
-                        # vbox:
-                        #     spacing 5
-                        #     text "Observations" size 24 font gui.name_text_font color gui.accent_color
-                        #     grid 5 1:
-                        #         spacing 13
-                        #         for item in current_storyline.observations.get_list():
-                        #             use info_card(item, "observation")
+                        if current_checkpoint.label_id == "current":
+                            text "Choices & Discoveries for this chapter":
+                                yoffset 20
+                                font gui.name_text_font
+                                size 42
+                                color gui.accent_color
+                            
+                            vbox:
+                                yoffset 20
+                                $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, also_current=True)) + 5) // 6)
+                                grid 6 number_of_rows:
+                                    spacing 13
+                                    for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, also_current=True):
+                                        use info_card(item, item.type)
                     else:
                         text "Select a checkpoint to see details.":
                             size 32

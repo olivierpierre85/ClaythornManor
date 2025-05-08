@@ -102,6 +102,7 @@ label init_technical_variables:
         'saturday_evening': "Things get Darker",
         'sunday_morning': "The Exploration",
         'sunday_afternoon': "Final Decisions",
+        'end': "Ending"
     }
 
     default current_chapter = "friday_afternoon"
