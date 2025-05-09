@@ -391,6 +391,18 @@ init -100 python:
         def get_choices_and_discoveries(self):
             return self.important_choices.information_list + self.observations.information_list + self.objects.information_list
 
+        # Put the not discovered at the end for clarity
+        def get_choices_and_discoveries_ordered(self):
+            discovered = []
+            not_discovered = []
+            for item in self.get_choices_and_discoveries():
+                if item.discovered:
+                    discovered.append(item)
+                else:
+                    not_discovered.append(item)
+
+            return discovered + not_discovered
+
         def get_choices_and_discoveries_by_chapter(self, chapter, also_current=False):
 
             CHAPTER_INDEX = {name: idx for idx, name in enumerate(chapters_names)}
@@ -402,7 +414,7 @@ init -100 python:
 
             current_idx = CHAPTER_INDEX[chapter]
             choices_and_discoveries = []
-            for item in self.get_choices_and_discoveries():
+            for item in self.get_choices_and_discoveries_ordered():
                 # item.chapters is a list of chapter‐keys like ['friday_afternoon', 'saturday_evening', …]
                 # we keep the item if *any* of those keys is at or before current_idx
                 for chap in item.chapters:
@@ -412,7 +424,6 @@ init -100 python:
                         continue
 
                     if (not also_current and chap_idx < current_idx) or (also_current and chap_idx == current_idx):
-                        also_current
                         choices_and_discoveries.append(item)
                         break  # no need to check the rest of this item's chapters
 
@@ -424,6 +435,12 @@ init -100 python:
                 if chapter.name == name:
                     return chapter
             return None
+
+        def is_chapter_completed(self, chapter):
+            for item in self.get_choices_and_discoveries_by_chapter(chapter):
+                if item.discovered == False:
+                    return False
+            return True
 
         # ---------------------------------------------------------------------------------------
         #                                Checkpoints

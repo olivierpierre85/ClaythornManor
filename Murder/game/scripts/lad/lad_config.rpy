@@ -68,7 +68,7 @@ label init_lad:
             CharacterInformation(
                 0, "downstairs_1",
                 "You attempted to go downstairs",
-                content_negative="You stayed upstairs and didn't try to go downstairs",
+                content_negative="You didn't try to go downstairs",
                 image_file="downstairs",
                 chapters=['friday_evening', 'saturday_afternoon_no_hunt', 'saturday_evening']
             ),
@@ -110,7 +110,7 @@ label init_lad:
             CharacterInformation(
                 0, "trust_psychic",
                 "You decided to trust Amelia Baxter",
-                content_negative="You chose not to trust Amelia Baxter",
+                content_negative="You didn't choose to trust Amelia Baxter",
                 image_file="trust_psychic",
                 chapters=['saturday_evening']
             ),

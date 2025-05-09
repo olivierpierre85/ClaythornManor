@@ -189,14 +189,17 @@ screen progress:
                                                 yoffset -5
                                                 yalign 0.5
                                                 xalign 0.5
-                                                text_color gui.accent_color
+                                                if current_storyline.is_chapter_completed(chapter.name):
+                                                    text_color gui.highlight_color
+                                                else:
+                                                    text_color gui.accent_color
                                                 text_hover_color "#FFFFFF" 
                                                 text_font gui.name_text_font 
                                                 text_size 28
                                                 style "confirm_prompt" # TODO: Something here that centers multiline text. What?
                                                 padding (60, 25, 60, 25)
                                                 if should_blink:
-                                                    text_color gui.highlight_color
+                                                    # text_color gui.highlight_color
                                                     at blink
                                                     action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
                                                 else:
@@ -428,7 +431,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
 
                     if current_checkpoint and selected_chapter.chapter_type != "start":
 
-                        text "Choices & Discoveries activated before":
+                        text "Choices & Discoveries Activated":
                             font gui.name_text_font
                             size 42
                             color gui.accent_color
@@ -442,7 +445,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                     use info_card(item, item.type)
 
                         if current_checkpoint.label_id == "current":
-                            text "Choices & Discoveries for this chapter":
+                            text "Choices & Discoveries for this Chapter":
                                 yoffset 20
                                 font gui.name_text_font
                                 size 42
