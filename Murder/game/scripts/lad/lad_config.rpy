@@ -228,7 +228,7 @@ label init_lad:
         Not a great <info:poor_drinker>, he is also not able to <info:drive> or <info:cook>.
         """
 
-        lad_details  = CharacterDetails(
+        lad_details = CharacterDetails(
             text_id = "lad", 
             locked = False,
             know_real_name = True,

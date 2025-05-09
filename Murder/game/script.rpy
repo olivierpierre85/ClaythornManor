@@ -9,6 +9,8 @@ init -1000 python:
     import re
     import itertools
 
+    from typing import List, Tuple
+
     import endings_conditions
 
     renpy.music.register_channel("clock", "sfx", loop=False)

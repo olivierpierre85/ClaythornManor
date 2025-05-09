@@ -280,7 +280,7 @@ init -100 python:
             observations, 
             progress,
             saved_variables = dict(),
-            test_checkpoints = [],
+            test_checkpoints = dict(),
             locked = True,
             know_real_name = True,
             real_name = "",
@@ -303,7 +303,7 @@ init -100 python:
             self.progress = progress or [] 
             self.saved_variables = saved_variables or dict()
             self.checkpoints = []
-            self.test_checkpoints = test_checkpoints or []
+            self.test_checkpoints = test_checkpoints or dict()
             
 
         def get_name(self):
@@ -519,55 +519,90 @@ init -100 python:
 
         def __str__(self):
             return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
+        
+        
+        def load_test_checkpoints(self) -> None:
+            """
+            Build every test-checkpoint and tag it with the character-specific label
+            found in `self.test_checkpoints[chapter_key]`.
 
-        def load_test_checkpoints(self):
+            Example mapping for Lad (attach this dict when you build the character):
+                lad_test_checkpoints = {
+                    'friday_afternoon':        "lad_introduction",
+                    'friday_evening':          "lad_day1_evening",
+                    'saturday_morning':        "lad_day2_morning",
+                    'saturday_afternoon':      "lad_day2_hunt",
+                    'saturday_afternoon_no_hunt': "lad_day2_no_hunt",
+                    'saturday_evening':        "lad_day2_evening",
+                    'sunday_morning':          "lad_day3_morning",
+                    'sunday_afternoon':        "lad_day3_afternoon",
+                }
+            """
             global current_run
+            current_run = 0
+            test_run    = 0
 
-            test_run = 0
+            # ------------- helper to gather unlockables for one chapter -------------
+            def _collect_unlockables(chap: str) -> List[Tuple[str, str]]:
+                u: List[Tuple[str, str]] = []
+                for choice in self.important_choices.information_list:
+                    if chap in choice.chapters:
+                        u.append(("important_choice", choice.text_id))
+                for obj in self.objects.information_list:
+                    if chap in obj.chapters:
+                        u.append(("object", obj.text_id))
+                for obs in self.observations.information_list:
+                    if chap in obs.chapters:
+                        u.append(("observation", obs.text_id))
+                return u
 
-            for (chapter_label, toggle_list, possible_endings) in self.test_checkpoints:
+            # --------- narrative traversal (keeps declaration order ties) ----------
+            chapter_order = sorted(
+                chapter_index.items(),
+                key=lambda kv: (kv[1], list(chapter_index).index(kv[0]))
+            )
 
-                # Generate all boolean combinations
-                for combination in itertools.product([False, True], repeat=len(toggle_list)):
-                    test_run += 1
+            for chap_key, _ in chapter_order:
+                toggle_list = _collect_unlockables(chap_key)
+
+                # character-specific Ren’Py label for this chapter
+                label_id = self.test_checkpoints.get(chap_key, chap_key)
+
+                # If chapter has no unlockables we still add one checkpoint
+                if not toggle_list:
+                    self.add_checkpoint(label_id)
+                    continue
+
+                # Every Boolean combination of unlockables
+                for combo in itertools.product([False, True], repeat=len(toggle_list)):
+                    test_run   += 1
                     current_run = test_run
-
-                    # Reset or start fresh for each new "run"
                     self.reset_information()
 
-                    # Build a dictionary of toggles => bool
-                    toggles_dict = {}
-                    for i, is_unlocked in enumerate(combination):
-                        unlock_type, unlock_id = toggle_list[i]
-                        toggles_dict[unlock_id] = is_unlocked
+                    toggles = {}
+                    for is_on, (kind, uid) in zip(combo, toggle_list):
+                        toggles[uid] = is_on
+                        if not is_on:
+                            continue
+                        if kind == "important_choice":
+                            self.important_choices.unlock(uid)
+                        elif kind == "object":
+                            self.objects.unlock(uid)
+                        elif kind == "observation":
+                            self.observations.unlock(uid)
 
-                        # Actually unlock them in your data structures if True
-                        if is_unlocked:
-                            if unlock_type == "object":
-                                self.objects.unlock(unlock_id)
-                            elif unlock_type == "important_choice":
-                                self.important_choices.unlock(unlock_id)
-                            elif unlock_type == "observation":
-                                self.observations.unlock(unlock_id)
-                            # etc.
+                    # evaluate endings
+                    triggered = []
+                    for ending in self.endings.information_list:
+                        cond_fn = endings_conditions.CONDITIONS_DICT.get(
+                            getattr(ending, "condition_id", ending.text_id)
+                        )
+                        if cond_fn and cond_fn(toggles):
+                            triggered.append(ending.text_id)
 
-                    # Now check if any ending condition(s) apply
-                    triggered_endings = []
-                    for ending_info in possible_endings:
-                        condition_func = endings_conditions.CONDITIONS_DICT[ending_info['condition_id']]
-                        if condition_func(toggles_dict):
-                            triggered_endings.append(ending_info['label'])
-
-                    # If one or more endings are triggered, skip normal checkpoint
-                    # and add an ending checkpoint for each triggered ending.
-                    if triggered_endings:
-                        for ending_label in triggered_endings:
-                            self.endings.unlock(ending_label)
-                            ending_data = self.endings.get_item(ending_label)
-                            self.add_ending_checkpoint(ending_data)
-                    else:
-                        # No ending triggered => add a normal checkpoint
-                        self.add_checkpoint(chapter_label)
-
-
-            return
+                    if triggered:      # add ending checkpoints
+                        for eid in triggered:
+                            self.endings.unlock(eid)
+                            self.add_ending_checkpoint(self.endings.get_item(eid))
+                    else:              # add normal chapter checkpoint
+                        self.add_checkpoint(label_id)

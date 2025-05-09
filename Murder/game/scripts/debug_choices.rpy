@@ -24,7 +24,7 @@ label init_debug:
     # TODO: This should be linked to checkpoint?
     $ psychic_details.saved_variables["knows_captain_origin"] = True
     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-    $ psychic_details.load_test_checkpoints()
+    # $ psychic_details.load_test_checkpoints() # TODO change test_checkpoints
     # $ psychic_details.intuitions.unlock('leave_manor')
 
     
