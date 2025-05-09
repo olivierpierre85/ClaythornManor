@@ -403,30 +403,34 @@ init -100 python:
 
             return discovered + not_discovered
 
-        def get_choices_and_discoveries_by_chapter(self, chapter, also_current=False):
-
-            CHAPTER_INDEX = {name: idx for idx, name in enumerate(chapters_names)}
-
+        def get_choices_and_discoveries_by_chapter(self, chapter, is_current=False):
             # guard against unknown chapter names
-            if chapter not in CHAPTER_INDEX:
+            if chapter not in chapter_index:
                 # return []
                 raise ValueError(f"Unknown chapter `{chapter}`")
 
-            current_idx = CHAPTER_INDEX[chapter]
+            current_idx = chapter_index[chapter]
             choices_and_discoveries = []
             for item in self.get_choices_and_discoveries_ordered():
                 # item.chapters is a list of chapter‐keys like ['friday_afternoon', 'saturday_evening', …]
                 # we keep the item if *any* of those keys is at or before current_idx
                 for chap in item.chapters:
-                    chap_idx = CHAPTER_INDEX.get(chap)
+                    chap_idx = chapter_index.get(chap)
                     # skip any unknown chap names in the item
                     if chap_idx is None:
                         continue
 
-                    if (not also_current and chap_idx < current_idx) or (also_current and chap_idx == current_idx):
+                    if chap_idx < current_idx and not (is_current and chapter in item.chapters):
                         choices_and_discoveries.append(item)
                         break  # no need to check the rest of this item's chapters
 
+            return choices_and_discoveries
+
+        def get_choices_and_discoveries_by_chapter_only_current(self, chapter):
+            choices_and_discoveries = []
+            for item in self.get_choices_and_discoveries_ordered():
+                if chapter in item.chapters:
+                    choices_and_discoveries.append(item)
             return choices_and_discoveries
         
         def get_chapter_by_name(self, name):
@@ -437,7 +441,7 @@ init -100 python:
             return None
 
         def is_chapter_completed(self, chapter):
-            for item in self.get_choices_and_discoveries_by_chapter(chapter):
+            for item in self.get_choices_and_discoveries_by_chapter_only_current(chapter):
                 if item.discovered == False:
                     return False
             return True

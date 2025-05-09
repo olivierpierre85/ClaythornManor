@@ -181,7 +181,7 @@ screen progress:
                                         idle chapter.image_file
                                         # Don't show if the character hasn't reached the chapter yet
                                         if len(current_storyline.get_checkpoints_by_chapter(chapter.label))>0:
-                                            $ should_blink = current_chapter == chapter.name
+                                            $ should_blink = current_chapter == chapter.name and current_storyline == current_character
                                             textbutton chapters_names[chapter.name]:
                                                 mouse "hover" 
                                                 action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
@@ -296,7 +296,8 @@ screen info_card(item=None, item_type=None, is_small=False):
                 idle "images/info_cards/empty.png"   
             elif not item.discovered:
                 idle "images/info_cards/question_mark_bw.png"   
-                tooltip "Hidden"
+                # tooltip "Hidden"
+                tooltip item.content
             elif not locked: 
                 idle "images/info_cards/" + item.image_file + ".png"     
                 tooltip icon_file + item.content
@@ -406,7 +407,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                                     text_color gui.accent_color
                                             hbox:
                                             # NOw gets all the choices
-                                                for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name):
+                                                for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, current_checkpoint.label_id == "current"):
                                                     if item.text_id in checkpoint.get_activated_choices_and_discoveries():
                                                         use info_card(item, item.type, True)
                     
@@ -431,17 +432,23 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
 
                     if current_checkpoint and selected_chapter.chapter_type != "start":
 
-                        text "Choices & Discoveries Activated":
-                            font gui.name_text_font
-                            size 42
-                            color gui.accent_color
+                        if current_checkpoint.label_id == "current":
+                            text "Previous Choices & Discoveries":
+                                font gui.name_text_font
+                                size 42
+                                color gui.accent_color
+                        else:
+                            text "Choices & Discoveries Activated":
+                                font gui.name_text_font
+                                size 42
+                                color gui.accent_color
 
                         vbox:
                             yoffset 20
-                            $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name)) + 5) // 6)
+                            $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, current_checkpoint.label_id == "current")) + 5) // 6)
                             grid 6 number_of_rows:
                                 spacing 13
-                                for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name):
+                                for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, current_checkpoint.label_id == "current"):
                                     use info_card(item, item.type)
 
                         if current_checkpoint.label_id == "current":
@@ -453,10 +460,10 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                             
                             vbox:
                                 yoffset 20
-                                $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, also_current=True)) + 5) // 6)
+                                $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter_only_current(selected_chapter.name)) + 5) // 6)
                                 grid 6 number_of_rows:
                                     spacing 13
-                                    for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, also_current=True):
+                                    for item in current_storyline.get_choices_and_discoveries_by_chapter_only_current(selected_chapter.name):
                                         use info_card(item, item.type)
                     else:
                         text "Select a checkpoint to see details.":

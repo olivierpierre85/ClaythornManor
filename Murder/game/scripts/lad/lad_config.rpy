@@ -84,19 +84,19 @@ label init_lad:
                 "You hunted with a Captain and a Lady",
                 content_negative="You did not hunt with a Captain and a Lady",
                 image_file="hunt_captain_host",
-                chapters=['saturday_afternoon','saturday_afternoon_no_hunt']
+                chapters=['saturday_afternoon']
             ),
             CharacterInformation(
                 0, "hunt_doctor_drunk",
                 "You hunted with a Doctor and a Drunk",
                 content_negative="You did not hunt with a Doctor and a Drunk",
                 image_file="hunt_doctor_drunk",
-                chapters=['saturday_afternoon','saturday_afternoon_no_hunt']
+                chapters=['saturday_afternoon']
             ),
             CharacterInformation(
                 0, "downstairs_2",
                 "You tried again to go downstairs",
-                content_negative="You didn't try again to go downstairs",
+                content_negative="You didn't try to go downstairs a second time",
                 image_file="downstairs_2",
                 chapters=['saturday_afternoon_no_hunt', 'saturday_evening']
             ),

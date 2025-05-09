@@ -9,7 +9,7 @@ label doctor_config_menu:
         TimedMenuChoice('How old are you?', 'broken_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'broken_generic_room', 10, condition = "not is_unlock_map('bedroom_psychic')"),
         TimedMenuChoice('What do you think of the other guests?', 'broken_generic_other_guests_friday', 10, condition = condition_friday),
-        TimedMenuChoice('You don\'t have anymore questions for her', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+        TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "broken")
 
     return

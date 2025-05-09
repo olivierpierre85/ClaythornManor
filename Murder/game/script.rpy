@@ -105,6 +105,18 @@ label init_technical_variables:
         'end': "Ending"
     }
 
+    define chapter_index = {
+        'friday_afternoon': 0,
+        'friday_evening': 1,
+        'saturday_morning': 2,
+        'saturday_afternoon': 3,
+        'saturday_afternoon_no_hunt': 3,
+        'saturday_evening': 4,
+        'sunday_morning': 5,
+        'sunday_afternoon': 6,
+        'end': 7
+    }
+
     default current_chapter = "friday_afternoon"
 
     define config.mouse = { }
