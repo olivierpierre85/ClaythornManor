@@ -97,7 +97,7 @@ label init_lad:
                 content_negative="You did not hunt with a Doctor and a Drunk",
                 image_file="hunt_doctor_drunk",
                 chapters=['saturday_afternoon'],
-                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['saturday_afternoon'] # could be  'saturday_evening' too but redundant with above
             ),
             CharacterInformation(
                 0, "downstairs_2",
@@ -129,7 +129,7 @@ label init_lad:
                 content_negative="You stayed with Amelia Baxter and didn't leave the manor",
                 image_file="leave_manor",
                 chapters=['sunday_afternoon'],
-                relevant_chapters=['sunday_afternoon'],
+                relevant_chapters=['sunday_afternoon', 'end'],
             ),
             CharacterInformation(
                 0, "protect_food",
@@ -137,7 +137,7 @@ label init_lad:
                 content_negative="You left your food unattended for too long",
                 image_file="poison_food",
                 chapters=['sunday_afternoon'],
-                relevant_chapters=['sunday_afternoon'],
+                relevant_chapters=['sunday_afternoon', 'end'],
             ),
             CharacterInformation(
                 0, "downstairs_3",
@@ -183,7 +183,7 @@ label init_lad:
                 content_negative="You didn't take the handgun from the gun room",
                 image_file="gun",
                 chapters=['sunday_morning'],
-                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
+                relevant_chapters=['sunday_morning', 'sunday_afternoon', 'end'],
             ),
             CharacterInformation(
                 2, "burned_letter",
@@ -205,12 +205,12 @@ label init_lad:
 
 
         lad_endings = CharacterEndingList ([
-            CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed"), 
-            CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing"), 
-            CharacterInformation(3, "poisoned", "Your food was poisoned", image_file="poison_food", is_intuition=True), 
-            CharacterInformation(4, "fell", "You got impaled on a picket fence", image_file="fence"), 
-            CharacterInformation(5, "escape", "You escaped, alone", image_file="escape"), 
-            CharacterInformation(6, "final_ending", "You finally got the truth", image_file="question_mark"), 
+            CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed", chapters=['saturday_morning']), 
+            CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing", chapters=['end']), 
+            CharacterInformation(3, "poisoned", "Your food was poisoned", image_file="poison_food", is_intuition=True, chapters=['end']), 
+            CharacterInformation(4, "fell", "You got impaled on a picket fence", image_file="fence", chapters=['end']), 
+            CharacterInformation(5, "escape", "You escaped, alone", image_file="escape", chapters=['end']), 
+            CharacterInformation(6, "final_ending", "You finally got the truth", image_file="question_mark", chapters=['end']), 
         ])
 
         lad_description_hidden = CharacterDescriptionHiddenList ([

@@ -522,7 +522,9 @@ init -100 python:
         def __str__(self):
             return 'Name:' + str(self.get_name()) + '; Nb checkpoints:' + str(len(self.checkpoints))
         
+
         
+        # Function used ONLY for debug purposes
         def load_test_checkpoints(self) -> None:
             """
             Build every test‐checkpoint (tagged with the character‐specific label),
@@ -609,9 +611,13 @@ init -100 python:
                     # 6) Check for any endings that fire under this toggles‐map
                     triggered = []
                     for ending in self.endings.information_list:
-                        cond_fn = endings_conditions.CONDITIONS_DICT.get(
-                            getattr(ending, "condition_id", ending.text_id)
-                        )
+                        # Skip if this ending isn’t supposed to be tested in chap_key
+                        if chap_key not in getattr(ending, "chapters", []):
+                            continue
+
+                        # Build the lookup key "<character>_<ending>"
+                        key     = f"{self.text_id}_{ending.text_id}"
+                        cond_fn = endings_conditions.CONDITIONS_DICT.get(key)
                         if cond_fn and cond_fn(toggles):
                             triggered.append(ending.text_id)
 
@@ -623,3 +629,7 @@ init -100 python:
                     else:
                         # Otherwise, add the normal chapter checkpoint
                         self.add_checkpoint(label_id)
+                    
+                    # 7) Afert Work, make sure everything is discovered (for those used only in one chapter)
+                    for choice in self.get_choices_and_discoveries():
+                        choice.discovered=True

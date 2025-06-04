@@ -397,7 +397,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
 
                                     for i, checkpoint in enumerate(selected_char.get_checkpoints_by_chapter(selected_chapter.label)):
 
-                                            textbutton "{}".format(checkpoint.get_format_created()):
+                                            textbutton "{} - {}".format(i, checkpoint.get_format_created()):
                                                 xpadding 0
                                                 ypadding 0
                                                 xmargin 0
