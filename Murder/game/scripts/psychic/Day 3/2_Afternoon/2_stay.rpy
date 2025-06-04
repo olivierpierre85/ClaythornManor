@@ -217,7 +217,7 @@ label psychic_day3_afternoon_stay:
 
     $ time_left = 1
     call run_menu( TimedMenu("psychic_day3_stay", [        
-        TimedMenuChoice("Try to talk her", 'psychic_day3_afternoon_convince_psychic', early_exit=True),
+        TimedMenuChoice("Try to talk her", 'psychic_day3_afternoon_convince_nurse', early_exit=True),
         TimedMenuChoice("Try to take the gun by force. It's probably not loaded anyway", 'psychic_day3_afternoon_gun_death', early_exit=True )
         ])
     )
@@ -341,7 +341,7 @@ label psychic_day3_afternoon_gun_death:
     jump psychic_ending_burns
 
 
-label psychic_day3_afternoon_convince_psychic:
+label psychic_day3_afternoon_convince_nurse:
 
     psychic """
     Don't do this. There's been a terrible misunderstanding.

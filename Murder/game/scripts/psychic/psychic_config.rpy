@@ -53,21 +53,24 @@ label init_psychic:
                 "You approached Ted Harring",
                 content_negative="You didn't approach Ted Harring",
                 image_file="trust_psychic",
-                chapters=['saturday_evening']
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(
                 0, "steal_gun",
                 "You tried to take Rosalind's gun by force",
                 content_negative="You didn't try to take Rosalind's gun by force",
                 image_file="gun",
-                chapters=['sunday_afternoon']
+                chapters=['sunday_afternoon'],
+                relevant_chapters=['sunday_afternoon', 'end'],
             ),
             CharacterInformation(
                 0, "leave_manor",
                 "You left the manor while you still could",
                 content_negative="You stayed in the manor despite the risks",
                 image_file="leave_manor",
-                chapters=['sunday_afternoon']
+                chapters=['sunday_afternoon'],
+                relevant_chapters=['sunday_afternoon', 'end'],
             ),
         ])
 
@@ -77,29 +80,32 @@ label init_psychic:
                 "You visited the attic and met the Lord of this place",
                 content_negative="You didn't go to the attic",
                 image_file="lord",
-                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening']
+                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(
                 1, "lord_name",
                 "Lord Claythorn's name is Nicholas",
                 content_negative="You haven't discovered Lord Claythorn's name",
                 image_file="lord_2",
-                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening']
+                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(
                 1, "lord_age",
                 "Lord Claythorn is 111 years old",
                 content_negative="You haven't learned Lord Claythorn's age",
                 image_file="lord_3",
-                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening']
+                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_morning'],
             ),
         ])
 
         psychic_endings = CharacterEndingList ([
-            CharacterInformation(0, "fell", "You fell down the stairs", image_file="psychic_fell"),
-            CharacterInformation(1, "burned", "You were burned along with the manor", image_file="manor_burns", is_intuition=True), 
-            CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing"),
-            CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape"),
+            CharacterInformation(0, "fell", "You fell down the stairs", image_file="psychic_fell", chapters=['sunday_morning']),
+            CharacterInformation(1, "burned", "You were burned along with the manor", image_file="manor_burns", is_intuition=True, chapters=['end']), 
+            CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing", chapters=['end']),
+            CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape", chapters=['end']),
         ])
 
         psychic_extra_information = CharacterDescriptionHiddenList([

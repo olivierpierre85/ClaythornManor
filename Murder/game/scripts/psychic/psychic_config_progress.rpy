@@ -3,7 +3,7 @@ label psychic_config_progress:
         psychic_progress = [
                 # First Line
                 [
-                    Chapter(image_checkpoint_start, "start"), 
+                    Chapter(image_checkpoint_start, "start", "psychic_introduction", "friday_afternoon"),  
                     Chapter(image_checkpoint_right, "checkpoint", "psychic_day1_evening", "friday_evening"),
                     Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_morning", "saturday_morning"),
                     Chapter(image_checkpoint_right, "checkpoint", "psychic_day2_no_hunt", "saturday_afternoon"),
@@ -38,76 +38,12 @@ label psychic_config_progress:
                 ],
             ]
 
-        psychic_test_checkpoints = [
-            (
-                'psychic_day1_evening',
-                [],
-                []
-            ),
-            (
-                'psychic_day2_morning',
-                [
-                    # ('important_choice', 'whisky'),
-                    # ('important_choice', 'day1_drunk'),
-                    # ('important_choice', 'downstairs_1')
-                ],
-                [
-
-                ]
-            ),
-            (
-                'psychic_day2_no_hunt',
-                [],
-                []
-            ),
-            (
-                'psychic_day2_evening',
-                [
-                    ('important_choice', 'visit_lad')
-                ],
-                []
-            ),
-            (
-                'psychic_day3_morning',
-                [
-                    ('important_choice', 'visit_lad')
-                ],
-                []
-            ),
-            (
-                'psychic_day3_afternoon',
-                [
-                    ('observation', 'visited_attic'),
-                    ('observation', 'lord_name'),
-                    ('observation', 'lord_age'),
-                ],
-                [
-                    {
-                        'label': 'fell',
-                        'condition_id': 'psychic_fell'
-                    },
-                ]
-            ),
-            (
-                'psychic_day3_endings_fake_chapter',
-                [
-                    ('important_choice', 'steal_gun'),
-                    ('important_choice', 'leave_manor'),
-                    
-                ],
-                [
-                    {
-                        'label': 'shot',
-                        'condition_id': 'psychic_shot'
-                    },
-                    {
-                        'label': 'burned',
-                        'condition_id': 'psychic_burned'
-                    },
-                    {
-                        'label': 'escape',
-                        'condition_id': 'psychic_escape'
-                    },
-                ]
-            ),
-        ]
+        psychic_test_checkpoints ={
+            'friday_afternoon': "psychic_introduction",
+            'friday_evening': "psychic_day1_evening",
+            'saturday_morning': "psychic_day2_morning",
+            'saturday_afternoon': "psychic_day2_no_hunt",
+            'saturday_evening': "psychic_day2_evening",
+            'sunday_morning': "psychic_day3_morning",
+            'sunday_afternoon': "psychic_day3_afternoon",
+        }
