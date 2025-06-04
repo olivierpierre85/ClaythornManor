@@ -452,7 +452,8 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                                 for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, current_checkpoint.label_id == "current"):
                                     use info_card(item, item.type)
 
-                        if current_checkpoint.label_id == "current":
+                        # TODO: Decide if we want to see all the time or just current status?
+                        if current_checkpoint.label_id == "current" or True:
                             text "Choices & Discoveries for this Chapter":
                                 yoffset 20
                                 font gui.name_text_font
