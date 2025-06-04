@@ -255,6 +255,7 @@ init -100 python:
             image_file = None,
             is_intuition = False,
             chapters = [],
+            relevant_chapters = [],
         ):
             self.order = order
             self.text_id = text_id
@@ -265,6 +266,7 @@ init -100 python:
             self.image_file = image_file
             self.is_intuition = is_intuition
             self.chapters = chapters
+            self.relevant_chapters = relevant_chapters
             self.discovered = False
             self.type = None
 
@@ -523,62 +525,75 @@ init -100 python:
         
         def load_test_checkpoints(self) -> None:
             """
-            Build every test-checkpoint and tag it with the character-specific label
-            found in `self.test_checkpoints[chapter_key]`.
-
-            Example mapping for Lad (attach this dict when you build the character):
-                lad_test_checkpoints = {
-                    'friday_afternoon':        "lad_introduction",
-                    'friday_evening':          "lad_day1_evening",
-                    'saturday_morning':        "lad_day2_morning",
-                    'saturday_afternoon':      "lad_day2_hunt",
-                    'saturday_afternoon_no_hunt': "lad_day2_no_hunt",
-                    'saturday_evening':        "lad_day2_evening",
-                    'sunday_morning':          "lad_day3_morning",
-                    'sunday_afternoon':        "lad_day3_afternoon",
-                }
+            Build every test‐checkpoint (tagged with the character‐specific label),
+            but only for those unlockables that (a) could have been unlocked in any
+            earlier chapter, and (b) are actually used (relevant) in the current chapter.
             """
             global current_run
             current_run = 0
             test_run    = 0
 
-            # ------------- helper to gather unlockables for one chapter -------------
-            def _collect_unlockables(chap: str) -> List[Tuple[str, str]]:
+            # ------------- helper to gather unlockables from previous chapters -------------
+            def _collect_unlockables(prev_chapters: List[str], current_chap: str) -> List[Tuple[str, str]]:
                 u: List[Tuple[str, str]] = []
+
+                # IMPORTANT CHOICES
                 for choice in self.important_choices.information_list:
-                    if chap in choice.chapters:
-                        u.append(("important_choice", choice.text_id))
+                    # (a) was it possible to unlock in any prev_chapter?
+                    if any(pc in choice.chapters for pc in prev_chapters):
+                        # (b) is it actually relevant in this current_chap?
+                        if current_chap in getattr(choice, "relevant_chapters", []):
+                            u.append(("important_choice", choice.text_id))
+
+                # OBJECTS
                 for obj in self.objects.information_list:
-                    if chap in obj.chapters:
-                        u.append(("object", obj.text_id))
+                    if any(pc in obj.chapters for pc in prev_chapters):
+                        if current_chap in getattr(obj, "relevant_chapters", []):
+                            u.append(("object", obj.text_id))
+
+                # OBSERVATIONS
                 for obs in self.observations.information_list:
-                    if chap in obs.chapters:
-                        u.append(("observation", obs.text_id))
+                    if any(pc in obs.chapters for pc in prev_chapters):
+                        if current_chap in getattr(obs, "relevant_chapters", []):
+                            u.append(("observation", obs.text_id))
+
                 return u
 
-            # --------- narrative traversal (keeps declaration order ties) ----------
+            # --------- narrative traversal (keeps declaration‐order ties) ----------
             chapter_order = sorted(
                 chapter_index.items(),
                 key=lambda kv: (kv[1], list(chapter_index).index(kv[0]))
             )
+            # e.g. [("friday_afternoon", idx1), ("friday_evening", idx2), …]
 
-            for chap_key, _ in chapter_order:
-                toggle_list = _collect_unlockables(chap_key)
+            for idx, (chap_key, _) in enumerate(chapter_order):
+                # 1) Build a list of all chapters that came *before* this one:
+                prev_chapters = [chapter_order[i][0] for i in range(idx)]
 
-                # character-specific Ren’Py label for this chapter
+                # 2) Collect exactly those unlockables that:
+                #    • could have been unlocked in any of prev_chapters AND
+                #    • are actually used (relevant) in the current chap_key
+                toggle_list = _collect_unlockables(prev_chapters, chap_key)
+
+                # 3) Determine character‐specific Ren’Py label for this chapter
                 label_id = self.test_checkpoints.get(chap_key, chap_key)
 
-                # If chapter has no unlockables we still add one checkpoint
+                # 4) If no relevant unlockables from earlier chapters, still make one checkpoint
                 if not toggle_list:
+                    test_run   += 1
+                    current_run = test_run
+                    self.reset_information()
                     self.add_checkpoint(label_id)
                     continue
 
-                # Every Boolean combination of unlockables
-                for combo in itertools.product([False, True], repeat=len(toggle_list)):
+                # 5) Otherwise, branch on every Boolean combination of toggle_list
+                n = len(toggle_list)
+                for combo in itertools.product([False, True], repeat=n):
                     test_run   += 1
                     current_run = test_run
                     self.reset_information()
 
+                    # Turn each toggle ON/OFF as specified by this combo
                     toggles = {}
                     for is_on, (kind, uid) in zip(combo, toggle_list):
                         toggles[uid] = is_on
@@ -591,7 +606,7 @@ init -100 python:
                         elif kind == "observation":
                             self.observations.unlock(uid)
 
-                    # evaluate endings
+                    # 6) Check for any endings that fire under this toggles‐map
                     triggered = []
                     for ending in self.endings.information_list:
                         cond_fn = endings_conditions.CONDITIONS_DICT.get(
@@ -600,9 +615,11 @@ init -100 python:
                         if cond_fn and cond_fn(toggles):
                             triggered.append(ending.text_id)
 
-                    if triggered:      # add ending checkpoints
+                    if triggered:
+                        # If one or more endings fire, add an ending checkpoint for each
                         for eid in triggered:
                             self.endings.unlock(eid)
                             self.add_ending_checkpoint(self.endings.get_item(eid))
-                    else:              # add normal chapter checkpoint
+                    else:
+                        # Otherwise, add the normal chapter checkpoint
                         self.add_checkpoint(label_id)

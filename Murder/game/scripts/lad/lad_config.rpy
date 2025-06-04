@@ -56,21 +56,24 @@ label init_lad:
                 "You went to the bar for a drink on the first night",
                 content_negative="You didn't go to the bar for a drink on the first night",
                 image_file="whisky",
-                chapters=['friday_evening']
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
             ),
             CharacterInformation(
                 0, "day1_drunk",
                 "You got drunk the first night",
                 content_negative="You stayed sober the first night",
                 image_file="drunk",
-                chapters=['friday_evening']
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening' ],
             ),
             CharacterInformation(
                 0, "downstairs_1",
                 "You attempted to go downstairs",
                 content_negative="You didn't try to go downstairs",
                 image_file="downstairs",
-                chapters=['friday_evening', 'saturday_afternoon_no_hunt', 'saturday_evening']
+                chapters=['friday_evening', 'saturday_afternoon_no_hunt', 'saturday_evening'],
+                relevant_chapters = ['friday_evening', 'saturday_afternoon_no_hunt', 'saturday_evening']
             ),
             CharacterInformation(
                 0, "hunt",
