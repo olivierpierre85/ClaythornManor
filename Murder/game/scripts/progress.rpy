@@ -414,6 +414,7 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                     if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
                         
                         button:
+                            xoffset 5
                             action Show("confirm_restart")
                             background "images/ui/button_idle_small.png"
                             hover_background "images/ui/button_hover_small.png"
