@@ -57,7 +57,7 @@ label init_lad:
                 content_negative="You didn't go to the bar for a drink on the first night",
                 image_file="whisky",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning'],
             ),
             CharacterInformation(
                 0, "day1_drunk",
@@ -65,7 +65,7 @@ label init_lad:
                 content_negative="You stayed sober the first night",
                 image_file="drunk",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_evening' ],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening' ],
             ),
             CharacterInformation(
                 0, "downstairs_1",
@@ -80,70 +80,80 @@ label init_lad:
                 "You decided to go hunting",
                 content_negative="You decided not to go hunting",
                 image_file="hunt",
-                chapters=['saturday_afternoon','saturday_afternoon_no_hunt']
+                chapters=['saturday_afternoon', 'saturday_afternoon_no_hunt'],
+                relevant_chapters=['saturday_afternoon', 'saturday_afternoon_no_hunt', 'saturday_evening']
             ),
             CharacterInformation(
                 0, "hunt_captain_host",
                 "You hunted with a Captain and a Lady",
                 content_negative="You did not hunt with a Captain and a Lady",
                 image_file="hunt_captain_host",
-                chapters=['saturday_afternoon']
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
             CharacterInformation(
                 0, "hunt_doctor_drunk",
                 "You hunted with a Doctor and a Drunk",
                 content_negative="You did not hunt with a Doctor and a Drunk",
                 image_file="hunt_doctor_drunk",
-                chapters=['saturday_afternoon']
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
             CharacterInformation(
                 0, "downstairs_2",
                 "You tried again to go downstairs",
                 content_negative="You didn't try to go downstairs a second time",
                 image_file="downstairs_2",
-                chapters=['saturday_afternoon_no_hunt', 'saturday_evening']
+                chapters=['saturday_afternoon_no_hunt', 'saturday_evening'],
+                relevant_chapters=['saturday_afternoon_no_hunt', 'saturday_evening'],
             ),
             CharacterInformation(
                 0, "day2_drunk",
                 "You got drunk the second night",
                 content_negative="You stayed sober the second night",
                 image_file="drunk_2",
-                chapters=['saturday_evening']
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(
                 0, "trust_psychic",
                 "You decided to trust Amelia Baxter",
                 content_negative="You didn't choose to trust Amelia Baxter",
                 image_file="trust_psychic",
-                chapters=['saturday_evening']
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(
                 0, "abandoned_psychic",
                 "You abandoned Amelia Baxter and left the manor",
                 content_negative="You stayed with Amelia Baxter and didn't leave the manor",
                 image_file="leave_manor",
-                chapters=['sunday_afternoon']
+                chapters=['sunday_afternoon'],
+                relevant_chapters=['sunday_afternoon'],
             ),
             CharacterInformation(
                 0, "protect_food",
                 "You didn't leave your food unattended for too long",
                 content_negative="You left your food unattended for too long",
                 image_file="poison_food",
-                chapters=['sunday_afternoon']
+                chapters=['sunday_afternoon'],
+                relevant_chapters=['sunday_afternoon'],
             ),
             CharacterInformation(
                 0, "downstairs_3",
                 "You pushed your luck a third time by going downstairs",
                 content_negative="You decided not to go downstairs a third time",
                 image_file="downstairs_3",
-                chapters=['sunday_afternoon']
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening'],
             ),
             CharacterInformation(
                 0, "day3_drunk",
                 "You got drunk the last day",
                 content_negative="You stayed sober the last day",
                 image_file="drunk_3",
-                chapters=['sunday_morning']
+                chapters=['sunday_morning'],
+                relevant_chapters=['sunday_morning'],
             ),
         ])
 
@@ -153,14 +163,16 @@ label init_lad:
                 "You saw a green liquid on Thomas Moody's nightstand.",
                 content_negative="You didn't see the green liquid on Thomas Moody's nightstand.",
                 image_file="poison_bedstand",
-                chapters=['saturday_afternoon_no_hunt', 'saturday_evening']
+                chapters=['saturday_afternoon_no_hunt', 'saturday_evening'],
+                relevant_chapters=['saturday_afternoon_no_hunt', 'saturday_evening'],
             ),
             CharacterInformation(
                 1, "seen_car",
                 "You saw a car in the basement, but it has no gas",
                 content_negative="You didn't see the car in the basement",
                 image_file="seen_car",
-                chapters=['sunday_morning']
+                chapters=['sunday_morning'],
+                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
             ),
         ])
 
@@ -170,21 +182,24 @@ label init_lad:
                 "You took an empty handgun found in the gun room",
                 content_negative="You didn't take the handgun from the gun room",
                 image_file="gun",
-                chapters=['sunday_morning']
+                chapters=['sunday_morning'],
+                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
             ),
             CharacterInformation(
                 2, "burned_letter",
                 "You found a burned letter in Samuel Manning's room",
                 content_negative="You didn't find the burned letter in Samuel Manning's room",
                 image_file="burned_letter",
-                chapters=['saturday_afternoon_no_hunt']
+                chapters=['saturday_afternoon_no_hunt'],
+                relevant_chapters=['saturday_afternoon_no_hunt', 'saturday_evening'],
             ),
             CharacterInformation(
                 3, "laudanum",
                 "You stole a vial of laudanum",
                 content_negative="You didn't steal the vial of laudanum",
                 image_file="laudanum",
-                chapters=['saturday_evening']
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening'],
             ),
         ])
 
