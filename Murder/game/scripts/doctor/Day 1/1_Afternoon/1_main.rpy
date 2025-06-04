@@ -16,7 +16,7 @@ label doctor_introduction:
 
     call change_time(14, 00, 'Arrival', 'Friday', hide_minutes=True)
 
-    call black_screen_transition("Daniel Baldwin", "Friday Afternoon")
+    call black_screen_transition("", "Daniel Baldwin")
 
     $ change_room("train_inside")
 
