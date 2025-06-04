@@ -147,14 +147,14 @@ label init_lad:
         lad_observations = CharacterObservationList([
             CharacterInformation(
                 1, "green_liquid",
-                "There was a green liquid on Thomas Moody's nightstand.",
+                "You saw a green liquid on Thomas Moody's nightstand.",
                 content_negative="You didn't see the green liquid on Thomas Moody's nightstand.",
                 image_file="poison_bedstand",
                 chapters=['saturday_afternoon_no_hunt', 'saturday_evening']
             ),
             CharacterInformation(
                 1, "seen_car",
-                "There is a car in the basement, but it has no gas",
+                "You saw a car in the basement, but it has no gas",
                 content_negative="You didn't see the car in the basement",
                 image_file="seen_car",
                 chapters=['sunday_morning']
