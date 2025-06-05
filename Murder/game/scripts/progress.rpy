@@ -235,6 +235,55 @@ screen progress:
 
     use tooltip_display
 
+    fixed:
+        xpos 0.02                           # 2 % from the left edge
+        yalign 1.0                          # stick to bottom
+        yanchor 1.0
+        # zorder 50
+
+        textbutton ("Hide&nbsp;Hints" if tutorial_on else "Show&nbsp;Hints"):
+            action [
+                # turn overlay on/off
+                ToggleVariable("tutorial_on"),
+                # if we just turned it on, restart at first hint
+                If(tutorial_on == False,
+                SetVariable("tutorial_step", 0),
+                NullAction())
+            ]
+            # a quick style so the button is small & translucent
+            background "#0008"
+            padding (8, 4)
+            # size 18
+
+        # ── C. Tutorial overlay INSIDE the same screen ───────────────────
+        if tutorial_on:
+            $ ax, ay, tx, ty, msg = tutorial_steps[tutorial_step]
+
+            fixed:
+                # zorder 100                    # always on top
+                # modal True                    # clicks go to the overlay, not to UI
+
+                # (Optional) dim the rest of the screen
+                add Solid("#0008") at truecenter
+
+                # Arrow
+                # add "gui/arrow.png" xpos ax ypos ay anchor (0.5, 0.5)
+
+                # Text bubble
+                frame:
+                    xpos tx ypos ty
+                    background "#fff8"
+                    padding (14, 10)
+                    text msg size 24
+
+                # Click or press SPACE to advance / finish the tour
+                key "mouseup_1" action If(
+                        tutorial_step < len(tutorial_steps) - 1,
+                        SetVariable("tutorial_step", tutorial_step + 1),
+                        [ SetVariable("tutorial_on", False),SetVariable("tutorial_step", 0) ]
+                    )
+                # key "K_SPACE" action Repeat()     # same as a mouse-click
+
 # Define a separate screen for tooltips
 screen tooltip_display():
     $ tooltip = GetTooltip()
