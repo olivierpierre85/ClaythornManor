@@ -157,14 +157,15 @@ label init_technical_variables:
         seen_tutorial_restart = False
         seen_tutorial_intuition = False
 
-        tutorial_on = True
+        # ─────── tutorial data (fractions of the screen) ───────
+        #         keep_x  keep_y  keep_w  keep_h   txt_x  txt_y   message
         tutorial_steps = [
-            #  arrow_x  arrow_y   txt_x   txt_y   message
-            (0.15, 0.42, 0.50, 0.10, "Opens the inventory."),
-            (0.78, 0.25, 0.50, 0.85, "This is your HP bar."),
-            (0.50, 0.60, 0.05, 0.50, "Character portrait & stats."),
+            (17, 294, 1020, 140, 550, 525, "Here you can select the character whose progress you want to see.\nOnly characters that have been unlocked are selectable."),
+            (0.73, 0.18, 0.12, 0.07, 0.50, 0.85, "This is your HP bar."),
+            (0.45, 0.55, 0.15, 0.20, 0.05, 0.50, "Character portrait & stats."),
         ]
-        tutorial_step=0
+        tutorial_on   = True
+        tutorial_step = 0
 
         current_run = 1 # TODO move
         current_position = 0 # TODO move

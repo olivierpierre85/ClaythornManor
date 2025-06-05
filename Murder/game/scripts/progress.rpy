@@ -236,12 +236,13 @@ screen progress:
     use tooltip_display
 
     fixed:
-        xpos 0.02                           # 2 % from the left edge
-        yalign 1.0                          # stick to bottom
+        yalign 1.0                          
         yanchor 1.0
-        # zorder 50
 
-        textbutton ("Hide&nbsp;Hints" if tutorial_on else "Show&nbsp;Hints"):
+        textbutton ("Hide Tutorial" if tutorial_on else "Show Tutorial"):
+            xpos 0.05
+            ypos 0.9
+            style_prefix "confirm"
             action [
                 # turn overlay on/off
                 ToggleVariable("tutorial_on"),
@@ -251,38 +252,50 @@ screen progress:
                 NullAction())
             ]
             # a quick style so the button is small & translucent
-            background "#0008"
             padding (8, 4)
             # size 18
 
-        # ── C. Tutorial overlay INSIDE the same screen ───────────────────
         if tutorial_on:
-            $ ax, ay, tx, ty, msg = tutorial_steps[tutorial_step]
+
+            # unpack current step (pixels now!)
+            $ keep_x, keep_y, keep_w, keep_h, tx, ty, msg = tutorial_steps[tutorial_step]
+            $ sw, sh  = config.screen_width, config.screen_height
+            $ keep_r  = keep_x + keep_w
+            $ keep_b  = keep_y + keep_h
 
             fixed:
-                # zorder 100                    # always on top
-                # modal True                    # clicks go to the overlay, not to UI
 
-                # (Optional) dim the rest of the screen
-                add Solid("#0008") at truecenter
+                # four masks
+                add Solid("#000B") xpos 0      ypos 0        xsize sw         ysize keep_y
+                add Solid("#000B") xpos 0      ypos keep_b   xsize sw         ysize sh - keep_b
+                add Solid("#000B") xpos 0      ypos keep_y   xsize keep_x     ysize keep_h
+                add Solid("#000B") xpos keep_r ypos keep_y   xsize sw-keep_r  ysize keep_h
 
-                # Arrow
-                # add "gui/arrow.png" xpos ax ypos ay anchor (0.5, 0.5)
-
-                # Text bubble
                 frame:
+                    style_prefix "confirm"
                     xpos tx ypos ty
-                    background "#fff8"
                     padding (14, 10)
-                    text msg size 24
 
-                # Click or press SPACE to advance / finish the tour
-                key "mouseup_1" action If(
-                        tutorial_step < len(tutorial_steps) - 1,
-                        SetVariable("tutorial_step", tutorial_step + 1),
-                        [ SetVariable("tutorial_on", False),SetVariable("tutorial_step", 0) ]
-                    )
-                # key "K_SPACE" action Repeat()     # same as a mouse-click
+                    vbox:
+                        xalign .5
+                        yalign .5
+
+                        label msg:
+                            style "confirm_prompt"
+                            text_size 24
+                            xalign 0.5
+
+                        hbox:
+                            xalign .5
+                            spacing 12
+                            if tutorial_step > 0:
+                                textbutton "« Prev" action SetVariable("tutorial_step", tutorial_step - 1)
+                            if tutorial_step < len(tutorial_steps) - 1:
+                                textbutton "Next »" action SetVariable("tutorial_step", tutorial_step + 1)
+                            textbutton "✕ Close" action [
+                                SetVariable("tutorial_on", False),
+                                SetVariable("tutorial_step", 0)
+                            ]
 
 # Define a separate screen for tooltips
 screen tooltip_display():
