@@ -208,14 +208,16 @@ screen progress:
                                         ]
 
                                     # Core actions for base and blink (without tutorial vars):
-                                    $ base_core = [ SetVariable("current_checkpoint", checkpoints[0]),
-                                                    ShowMenu("progress_details", chapter, current_storyline, is_current=is_current) ]
-                                    $ blink_core = [ SetVariable("current_checkpoint", current_status_checkpoint),
-                                                    ShowMenu("progress_details", chapter, current_storyline, is_current=is_current) ]
+                                    if has_checkpoints:
+                                        $ base_core = [ SetVariable("current_checkpoint", checkpoints[0]),
+                                                        ShowMenu("progress_details", chapter, current_storyline, is_current=is_current) ]
 
-                                    # Prefix tutorial actions when building final action lists:
-                                    $ base_action = tutorial_actions + base_core
-                                    $ blink_action = tutorial_actions + blink_core
+                                        $ blink_core = [ SetVariable("current_checkpoint", current_status_checkpoint),
+                                                        ShowMenu("progress_details", chapter, current_storyline, is_current=is_current) ]
+
+                                        # Prefix tutorial actions when building final action lists:
+                                        $ base_action = tutorial_actions + base_core
+                                        $ blink_action = tutorial_actions + blink_core
 
                                     imagemap:
                                         idle chapter.image_file
@@ -574,7 +576,7 @@ screen progress_details(selected_chapter, selected_char, ending = False, is_curr
                                 size 42
                                 color gui.accent_color
                         else:
-                            text "Choices & Discoveries Activated":
+                            text "Previous Choices & Discoveries":
                                 font gui.name_text_font
                                 size 42
                                 color gui.accent_color
