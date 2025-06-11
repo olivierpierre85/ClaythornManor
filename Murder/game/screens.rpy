@@ -330,29 +330,24 @@ screen navigation(tag="menu"):
                 textbutton _("Progress"):
                     if not tutorial_on:
                         action [SetVariable("last_menu_screen", "progress"), ShowMenu("progress")]
-            if seen_tutorial_progress:
-                textbutton _("Log"):
-                    if not tutorial_on:
-                        action [SetVariable("last_menu_screen", "history"), ShowMenu("history")]
+            textbutton _("Log"):
+                if not tutorial_on:
+                    action [SetVariable("last_menu_screen", "history"), ShowMenu("history")]
             # textbutton _("About") action ShowMenu("about")
-            if seen_tutorial_progress:
-                textbutton _("Help"):
-                    if not tutorial_on:
-                        action [SetVariable("last_menu_screen", "help"), ShowMenu("help")]
-            if seen_tutorial_progress:
-                textbutton _("Options"):
-                    if not tutorial_on:
-                        action [SetVariable("last_menu_screen", "preferences"), ShowMenu("preferences")]
+            textbutton _("Help"):
+                if not tutorial_on:
+                    action [SetVariable("last_menu_screen", "help"), ShowMenu("help")]
+            textbutton _("Options"):
+                if not tutorial_on:
+                    action [SetVariable("last_menu_screen", "preferences"), ShowMenu("preferences")]
             # textbutton _("Save") action ShowMenu("save") 
             # textbutton _("Save") action FileSave(None)
-            if seen_tutorial_progress:
-                textbutton _("Save"):
-                    if not tutorial_on:
-                        action QuickSave()
-            if seen_tutorial_progress:
-                textbutton _("Quit"):
-                    if not tutorial_on:
-                        action [QuickSave(),Show("confirmbutton")]
+            textbutton _("Save"):
+                if not tutorial_on:
+                    action QuickSave()
+            textbutton _("Quit"):
+                if not tutorial_on:
+                    action [QuickSave(),Show("confirmbutton")]
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 

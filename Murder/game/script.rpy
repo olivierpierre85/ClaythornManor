@@ -164,7 +164,13 @@ label init_technical_variables:
             (17, 294, 1020, 140, 550, 525, "Here you can select the character whose progress you want to see.\nOnly characters that have been unlocked are selectable."),
             (1050, 290, 566, 140, 1300, 525, "Here are the endings you've already reached for this character."),
             (1630, 290, 280, 140, 1300, 400, "You can see the total of Choices & Discoveries\nyou've already encountered here."),
-            (17, 445, 1890, 500, 1000, 300, "Below is the timeline of the progress you've made for this character\nYou can see the details of a particular chapter by clicking on it."),
+            (17, 445, 1890, 500, 1000, 300, 
+            "Below is the timeline of the progress you've made so far.\n" +
+            "The story is split into chapters.\n" +
+            "A question mark means you haven't reached this chapter before.\n" +            
+            "You can see the details of a particular chapter by clicking on it.\n" +
+            "To check what options have been unlocked at the moment, just pick the chapter that is blinking.\n"
+            ),
         ]
         tutorial_on   = False
         tutorial_step = 0

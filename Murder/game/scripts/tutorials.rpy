@@ -134,26 +134,24 @@ label tutorial_progress:
     
     Basically, something that can influence the rest of the story.
 
-    To help you keep track of them, you can now consult the "Progress" page.
+    To help you, you can now consult the "Progress" page.
 
-    Here, you'll see all the possible paths for each character you've unlocked. 
-
-    And if you click on them, you'll see a list of all the times you've reached them.
-
-    Selecting any of these will show you the options you've unlocked at those specific times.
-
-    If they are in colour, it means they have been activated.
-
-    A question mark means you've never encountered them before.
-
-    To check what options have been unlocked at the moment, just pick the chapter that is blinking.
-
-    Inside, you can select the "Current Status" item on the list.
-
-    I strongly recommend that you explore these screens; they will be very useful for the rest of the game.
+    Let's have a look at it.
     """
 
+    # Here, you'll see all the possible paths for each character you've unlocked. 
+
+    # And if you click on them, you'll see a list of all the times you've reached them.
+
+    # Selecting any of these will show you the options you've unlocked at those specific times.
+
+    # Inside, you can select the "Current Status" item on the list.
+
+    # I strongly recommend that you explore these screens; they will be very useful for the rest of the game.
+    # """
+
     $ _game_menu_screen = "progress"
+    $ tutorial_on = True
     $ renpy.call_in_new_context("_game_menu", "navigation")
     
     $ play_music('PREVIOUS')
