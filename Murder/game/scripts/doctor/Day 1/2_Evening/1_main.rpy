@@ -12,7 +12,7 @@
 #
 #   Notes : 
 #       - Map visit, 90 minutes
-#       - Generic ...
+#       - Generic Broken
 # --------------------------------------------
 label doctor_day1_evening:
     
@@ -35,7 +35,7 @@ label doctor_day1_evening:
 
     You are the first guest to arrive for this week-end event.
 
-    It's a bit early, so it may take a while before the rest arrives, in the meantime. Let me show you your rooms.
+    It's a bit early, so it may take a while before others arrive, in the meantime. Let me show you your rooms.
 
     You can rest there a bit, there will be drinks later in the tea room.
     """

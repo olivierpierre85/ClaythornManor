@@ -43,9 +43,7 @@ label broken_generic_other_guests_friday:
 label broken_generic_weather_friday:
 
     broken """
-    A dreadful storm, if you ask me.
-
-    I don't know what's planned for tomorrow, but I hope it doesn't involve leaving this house.
+    It's not the ideal weather, but there's no reason to lose sleep over it.
     """
 
     return

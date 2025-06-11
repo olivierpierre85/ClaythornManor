@@ -3,6 +3,8 @@ label init_doctor:
     # call doctor_config_map
     
     call doctor_config_menu
+
+    call doctor_config_progress
     
     python:
 
@@ -52,7 +54,7 @@ label init_doctor:
             endings = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
-            progress = [],
+            progress = doctor_progress,
         )
         doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
 
