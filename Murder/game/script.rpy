@@ -154,26 +154,41 @@ label init_technical_variables:
         seen_tutorial_unlock_character = False
         show_tutorial_unlock_character = False
         seen_tutorial_progress = False
+        seen_tutorial_progress_details = False
         seen_tutorial_restart = False
         seen_tutorial_intuition = False
 
         # ─────── tutorial data (fractions of the screen) ───────
         #         keep_x  keep_y  keep_w  keep_h   txt_x  txt_y   message
         # PROGRESS TUTORIAL
-        tutorial_steps = [
-            (17, 294, 1020, 140, 550, 525, "Here you can select the character whose progress you want to see.\nOnly characters that have been unlocked are selectable."),
-            (1050, 290, 566, 140, 1300, 525, "Here are the endings you've already reached for this character."),
-            (1630, 290, 280, 140, 1300, 400, "You can see the total of Choices & Discoveries\nyou've already encountered here."),
+        tutorial_steps_progress = [
+            (17, 294, 1020, 140, 550, 525, "Here you can select the character whose progress you wish to see.\nOnly characters that have been unlocked are selectable."),
+            (1050, 290, 566, 140, 1300, 525, "Here are the endings you have already reached for this character."),
+            (1630, 290, 280, 140, 1300, 400, "You can see the total number of Choices & Discoveries\nyou have already encountered here."),
             (17, 445, 1890, 500, 1000, 300, 
-            "Below is the timeline of the progress you've made so far.\n" +
+            "Below is the timeline of the progress you have made so far.\n" +
             "The story is split into chapters.\n" +
-            "A question mark means you haven't reached this chapter before.\n" +            
+            "A question mark means you have not reached this chapter before.\n" + 
+            "If there is nothing more to discover in a chapter, it will be written in yellow.\n" +           
             "You can see the details of a particular chapter by clicking on it.\n" +
-            "To check what options have been unlocked at the moment, just pick the chapter that is blinking.\n"
+            "To check which options have been unlocked at the moment, \n" + 
+            "you can pick the chapter that is blinking (after closing this tutorial)."
             ),
         ]
-        tutorial_on   = False
-        tutorial_step = 0
+        tutorial_step_progress = 0
+        tutorial_steps_progress_details = [
+            (486, 308, 797, 550, 960, 150, 
+                "This is the list of all the times you have started these chapters.\n" + 
+                "You can select one of those \"checkpoints\" to see which choices you have made before reaching them.\n"  
+            ),
+            (1280, 312, 616, 626, 960, 150, 
+                "Once a checkpoint is selected, you can see here the choices that could have been made before reaching this point.\n" + 
+                "And below are the ones you can make in this chapter.\n" +  
+                "There is a question mark for the ones that have not been discovered yet."  
+            ),
+        ]
+        tutorial_step_progress_details = 0
+        tutorial_on = False
 
         current_run = 1 # TODO move
         current_position = 0 # TODO move

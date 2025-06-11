@@ -10,6 +10,7 @@ label init_debug:
     $ seen_tutorial_map = True
     $ seen_tutorial_unlock_character = True
     $ seen_tutorial_progress = True
+    $ seen_tutorial_progress_details = True
     $ seen_tutorial_restart = True
     $ seen_tutorial_intuition = True
 
@@ -24,7 +25,7 @@ label init_debug:
     # TODO: This should be linked to checkpoint?
     $ psychic_details.saved_variables["knows_captain_origin"] = True
     $ psychic_details.saved_variables["knows_captain_real_origin"] = True
-    $ psychic_details.load_test_checkpoints()
+    # $ psychic_details.load_test_checkpoints()
     # $ psychic_details.intuitions.unlock('leave_manor')
 
     

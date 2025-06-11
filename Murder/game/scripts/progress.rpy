@@ -18,6 +18,17 @@ transform blink:
     linear 0.7 zoom 1.0
     repeat
 
+style chapter_button:
+    xalign 0.5
+    yalign 0.5
+    xoffset -20
+    yoffset -5
+    # text_font gui.name_text_font
+    # text_size 28
+    padding (60, 25)
+    text_align 0.5   # centers multiline text
+    # Optionally set an xminimum or xmaximum to control wrapping
+
 # Display of Progress tree
 screen progress:
 
@@ -98,7 +109,7 @@ screen progress:
                                     yoffset 2
                                     mouse "hover"
                                     if not tutorial_on:
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                     if current_storyline.is_everything_completed():
                                         idle "images/info_cards/everything_completed.png"
                                     else:
@@ -112,14 +123,14 @@ screen progress:
                                         text_font gui.name_text_font
                                         text_color gui.highlight_color
                                         if not tutorial_on:
-                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                 else:
                                     textbutton "{color=#fff}[unlocked]{/color}/[total]":
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.accent_color
                                         if not tutorial_on:
-                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                 vbox:
 
                     xsize 1700
@@ -182,47 +193,64 @@ screen progress:
                                     imagemap:
                                         idle chapter.image_file
                                 elif chapter.chapter_type == "checkpoint":                       
+                                    # Precompute once at start of loop over chapters:
+                                    $ checkpoints = current_storyline.get_checkpoints_by_chapter(chapter.label)
+                                    $ has_checkpoints = bool(checkpoints)
+                                    $ is_current = (current_chapter == chapter.name and current_storyline == current_character)
+                                    $ is_completed = current_storyline.is_chapter_completed(chapter.name)
+
+                                    # Build a list of tutorial actions if needed:
+                                    $ tutorial_actions = []
+                                    if not seen_tutorial_progress_details:
+                                        $ tutorial_actions = [
+                                            SetVariable("tutorial_on", True),
+                                            SetVariable("seen_tutorial_progress_details", True),
+                                        ]
+
+                                    # Core actions for base and blink (without tutorial vars):
+                                    $ base_core = [ SetVariable("current_checkpoint", checkpoints[0]),
+                                                    ShowMenu("progress_details", chapter, current_storyline, is_current=is_current) ]
+                                    $ blink_core = [ SetVariable("current_checkpoint", current_status_checkpoint),
+                                                    ShowMenu("progress_details", chapter, current_storyline, is_current=is_current) ]
+
+                                    # Prefix tutorial actions when building final action lists:
+                                    $ base_action = tutorial_actions + base_core
+                                    $ blink_action = tutorial_actions + blink_core
+
                                     imagemap:
                                         idle chapter.image_file
-                                        # Don't show if the character hasn't reached the chapter yet
-                                        if len(current_storyline.get_checkpoints_by_chapter(chapter.label))>0:
-                                            $ should_blink = current_chapter == chapter.name and current_storyline == current_character
-                                            textbutton chapters_names[chapter.name]:
-                                                mouse "hover" 
-                                                if not tutorial_on:
-                                                    action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
-                                                xoffset -20 
-                                                yoffset -5
-                                                yalign 0.5
-                                                xalign 0.5
-                                                if current_storyline.is_chapter_completed(chapter.name):
+                                        
+                                        if has_checkpoints:
+                                            # Determine action_list only once
+                                            $ action_list = None
+                                            if not tutorial_on:
+                                                if is_current:
+                                                    $ action_list = blink_action
+                                                else:
+                                                    $ action_list = base_action
+                                            
+                                            textbutton chapters_names[chapter.name] style "chapter_button":
+                                                text_font gui.name_text_font
+                                                text_size 28
+                                                if action_list:
+                                                    action action_list
+                                                # colors
+                                                if is_completed:
                                                     text_color gui.highlight_color
                                                 else:
                                                     text_color gui.accent_color
-                                                text_hover_color "#FFFFFF" 
-                                                text_font gui.name_text_font 
-                                                text_size 28
-                                                style "confirm_prompt" # TODO: Something here that centers multiline text. What?
-                                                padding (60, 25, 60, 25)
-                                                if should_blink:
-                                                    # text_color gui.highlight_color
+                                                text_hover_color "#FFFFFF"
+                                                # blinking transform
+                                                if is_current:
                                                     at blink
-                                                    if not tutorial_on:
-                                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
-                                                else:
-                                                    if not tutorial_on:
-                                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
-                                                    
+                                                
                                         else:
-                                            textbutton "?":
-                                                xoffset -20 
-                                                yoffset -5
-                                                yalign 0.5
-                                                xalign 0.5
-                                                text_color gui.accent_color
-                                                text_font gui.name_text_font 
+                                            textbutton "?" style "chapter_button":
+                                                text_font gui.name_text_font
                                                 text_size 28
-                                                padding (70, 25, 70, 25) 
+                                                padding (70, 25)
+                                                text_color gui.accent_color
+
 
                                 elif chapter.chapter_type == "ending": 
                                     imagebutton:
@@ -233,7 +261,7 @@ screen progress:
                                             # action SetVariable("action_needed_fix", True)
                                             mouse "hover"
                                             if not tutorial_on:
-                                                action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, ending = True)]
+                                                action [SetVariable("current_checkpoint", None), ShowMenu("progress_details", chapter, current_storyline, ending = True)]
                                         else:
                                             idle chapter.image_file 
                                 elif chapter.chapter_type == "start": 
@@ -242,46 +270,67 @@ screen progress:
                                         idle image_checkpoint_start
                                         hover image_checkpoint_start_selected
                                         if not tutorial_on:
-                                            action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline)]
+                                            action [SetVariable("current_checkpoint", None), ShowMenu("progress_details", chapter, current_storyline)]
 
     use tooltip_display
 
-    # ------------------------ TUTORIAL --------------------------------
+    use tutorial_with_steps(tutorial_steps_progress, tutorial_step_progress, "tutorial_step_progress")
 
+# ------------------------ TUTORIAL --------------------------------
+# -----------------------------------------------
+#  Generic tutorial-overlay screen
+# -----------------------------------------------
+screen tutorial_with_steps(
+        tutorial_steps,
+        tutorial_step_value,
+        tutorial_step_var,
+        seen_flag_var=None       # ← optional
+    ):
+
+    # -------------------------------------------------
+    #  Auto-open only the very first time this screen
+    #  is shown during the current play-through
+    # -------------------------------------------------
+    # if seen_flag_var:
+    #     on "show" action If(
+    #         "not " + seen_flag_var,            # ← string expression
+    #         [                                   # ← actions if it’s still False
+    #             SetVariable(seen_flag_var, True),
+    #             SetVariable("tutorial_on", True),
+    #             SetVariable(tutorial_step_var, 0),
+    #         ]
+    #     )
+
+    # --------------------------------------------------------------
+    #  The normal UI that follows …
+    # --------------------------------------------------------------
     fixed:
-        yalign 1.0                          
+        yalign 1.0
         yanchor 1.0
 
-        textbutton ("Tutorial" if tutorial_on else "Tutorial"):
+        textbutton "Tutorial":
             xpos 20
             ypos 940
             style_prefix "confirm"
-            text_size 48    
-            action [
-                # turn overlay on/off
-                ToggleVariable("tutorial_on"),
-                # if we just turned it on, restart at first hint
-                If(tutorial_on == False,
-                SetVariable("tutorial_step", 0),
-                NullAction())
-            ]
+            text_size 48
             padding (8, 4)
+            action [
+                ToggleVariable("tutorial_on"),
+                If(tutorial_on, SetVariable(tutorial_step_var, 0), NullAction())
+            ]
 
         if tutorial_on:
 
-            # unpack current step (pixels now!)
-            $ keep_x, keep_y, keep_w, keep_h, tx, ty, msg = tutorial_steps[tutorial_step]
-            $ sw, sh  = config.screen_width, config.screen_height
-            $ keep_r  = keep_x + keep_w
-            $ keep_b  = keep_y + keep_h
+            $ keep_x, keep_y, keep_w, keep_h, tx, ty, msg = tutorial_steps[tutorial_step_value]
+            $ sw, sh = config.screen_width, config.screen_height
+            $ keep_r = keep_x + keep_w
+            $ keep_b = keep_y + keep_h
 
             fixed:
-
-                # four masks
-                add Solid("#000B") xpos 0      ypos 0        xsize sw         ysize keep_y
-                add Solid("#000B") xpos 0      ypos keep_b   xsize sw         ysize sh - keep_b
-                add Solid("#000B") xpos 0      ypos keep_y   xsize keep_x     ysize keep_h
-                add Solid("#000B") xpos keep_r ypos keep_y   xsize sw-keep_r  ysize keep_h
+                add Solid("#000B") xpos 0      ypos 0      xsize sw         ysize keep_y
+                add Solid("#000B") xpos 0      ypos keep_b xsize sw         ysize sh - keep_b
+                add Solid("#000B") xpos 0      ypos keep_y xsize keep_x     ysize keep_h
+                add Solid("#000B") xpos keep_r ypos keep_y xsize sw-keep_r  ysize keep_h
 
                 frame:
                     style_prefix "confirm"
@@ -300,14 +349,16 @@ screen progress:
                         hbox:
                             xalign .5
                             spacing 12
-                            if tutorial_step > 0:
-                                textbutton "« Prev" action SetVariable("tutorial_step", tutorial_step - 1)
-                            if tutorial_step < len(tutorial_steps) - 1:
-                                textbutton "Next »" action SetVariable("tutorial_step", tutorial_step + 1)
+                            if tutorial_step_value > 0:
+                                textbutton "« Prev" action SetVariable(tutorial_step_var,
+                                                                        tutorial_step_value - 1)
+                            if tutorial_step_value < len(tutorial_steps) - 1:
+                                textbutton "Next »" action SetVariable(tutorial_step_var, tutorial_step_value + 1)
                             textbutton "✕ Close" action [
                                 SetVariable("tutorial_on", False),
-                                SetVariable("tutorial_step", 0)
+                                SetVariable(tutorial_step_var, 0)
                             ]
+
 
 # Define a separate screen for tooltips
 screen tooltip_display():
@@ -380,9 +431,19 @@ screen info_card(item=None, item_type=None, is_small=False):
                 tooltip icon_file + item.content_negative
 
 
-screen storyline_details(selected_chapter, selected_char, ending = False, is_current = False):
+screen progress_details(selected_chapter, selected_char, ending = False, is_current = False):
 
     #     on "show" action SetVariable("current_checkpoint", None)
+    # on "show" action If(
+    #         "not " + seen_flag_var,            # ← string expression
+    #         [                                   # ← actions if it’s still False
+    #             SetVariable(seen_flag_var, True),
+    #             SetVariable("tutorial_on", True),
+    #             SetVariable(tutorial_step_var, 0),
+    #         ]
+    #     )
+
+    on "show" action SetVariable("tutorial_on", True),
 
     tag menu
 
@@ -555,6 +616,8 @@ screen storyline_details(selected_chapter, selected_char, ending = False, is_cur
                 action ShowMenu("progress")
 
     use tooltip_display
+
+    use tutorial_with_steps(tutorial_steps_progress_details, tutorial_step_progress_details, "tutorial_step_progress_details", "seen_tutorial_progress_details")
 
 
 screen confirm_restart():
