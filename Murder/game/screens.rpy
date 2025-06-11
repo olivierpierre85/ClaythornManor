@@ -314,23 +314,45 @@ screen navigation(tag="menu"):
             textbutton _("Return") action Return() 
         # In game menu
         else:
-            textbutton _("Resume") action Return() 
+            textbutton _("Resume"):
+                if not tutorial_on:
+                    action Return() 
             if seen_tutorial_map: # TODO: Not working because map default first view
-                textbutton _("Map") action [SetVariable("last_menu_screen", "manor_map"), ShowMenu("manor_map")]
+                textbutton _("Map"):
+                    if not tutorial_on:
+                        action [SetVariable("last_menu_screen", "manor_map"), ShowMenu("manor_map")]
             if seen_tutorial_description_hidden:
-                textbutton _("Characters") action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
+                textbutton _("Characters"):
+                    if not tutorial_on:
+                        action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
             # textbutton _("Objects") action ShowMenu("objects")
             if seen_tutorial_progress:
-                textbutton _("Progress") action [SetVariable("last_menu_screen", "progress"), ShowMenu("progress")]
-            textbutton _("Log") action [SetVariable("last_menu_screen", "history"), ShowMenu("history")]
+                textbutton _("Progress"):
+                    if not tutorial_on:
+                        action [SetVariable("last_menu_screen", "progress"), ShowMenu("progress")]
+            if seen_tutorial_progress:
+                textbutton _("Log"):
+                    if not tutorial_on:
+                        action [SetVariable("last_menu_screen", "history"), ShowMenu("history")]
             # textbutton _("About") action ShowMenu("about")
-            textbutton _("Help") action [SetVariable("last_menu_screen", "help"), ShowMenu("help")]
-            textbutton _("Options") action [SetVariable("last_menu_screen", "preferences"), ShowMenu("preferences")]
+            if seen_tutorial_progress:
+                textbutton _("Help"):
+                    if not tutorial_on:
+                        action [SetVariable("last_menu_screen", "help"), ShowMenu("help")]
+            if seen_tutorial_progress:
+                textbutton _("Options"):
+                    if not tutorial_on:
+                        action [SetVariable("last_menu_screen", "preferences"), ShowMenu("preferences")]
             # textbutton _("Save") action ShowMenu("save") 
             # textbutton _("Save") action FileSave(None)
-            textbutton _("Save") action QuickSave()
-            textbutton _("Quit") action [QuickSave(),Show("confirmbutton")]
-
+            if seen_tutorial_progress:
+                textbutton _("Save"):
+                    if not tutorial_on:
+                        action QuickSave()
+            if seen_tutorial_progress:
+                textbutton _("Quit"):
+                    if not tutorial_on:
+                        action [QuickSave(),Show("confirmbutton")]
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 

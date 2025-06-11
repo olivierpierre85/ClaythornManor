@@ -159,12 +159,14 @@ label init_technical_variables:
 
         # ─────── tutorial data (fractions of the screen) ───────
         #         keep_x  keep_y  keep_w  keep_h   txt_x  txt_y   message
+        # PROGRESS TUTORIAL
         tutorial_steps = [
             (17, 294, 1020, 140, 550, 525, "Here you can select the character whose progress you want to see.\nOnly characters that have been unlocked are selectable."),
-            (0.73, 0.18, 0.12, 0.07, 0.50, 0.85, "This is your HP bar."),
-            (0.45, 0.55, 0.15, 0.20, 0.05, 0.50, "Character portrait & stats."),
+            (1050, 290, 566, 140, 1300, 525, "Here are the endings you've already reached for this character."),
+            (1630, 290, 280, 140, 1300, 400, "You can see the total of Choices & Discoveries\nyou've already encountered here."),
+            (17, 445, 1890, 500, 1000, 300, "Below is the timeline of the progress you've made for this character\nYou can see the details of a particular chapter by clicking on it."),
         ]
-        tutorial_on   = True
+        tutorial_on   = False
         tutorial_step = 0
 
         current_run = 1 # TODO move

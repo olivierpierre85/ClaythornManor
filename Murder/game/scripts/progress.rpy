@@ -49,7 +49,8 @@ screen progress:
                                     if char.is_character_unlocked():
                                         idle "images/characters/side/side " + char.text_id + ".png" at character_progress
                                         hover "images/characters/side_hover/side " + char.text_id + " hover.png"
-                                        action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
+                                        if not tutorial_on:
+                                            action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
                                     else:
                                         idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_progress
 
@@ -72,11 +73,12 @@ screen progress:
                                             idle "images/info_cards/question_mark_bw.png"
                                         else: 
                                             idle ending.image_file
-                                            if ending.is_intuition:
-                                                tooltip str(ending.content + " {image=images/ui/intuition_icon.png}")  
-                                            else:
-                                                tooltip str(ending.content)  
-                                            action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip    
+                                            if not tutorial_on:
+                                                if ending.is_intuition:
+                                                    tooltip str(ending.content + " {image=images/ui/intuition_icon.png}")  
+                                                else:
+                                                    tooltip str(ending.content)  
+                                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip    
                         
                         vbox:
                             yminimum 120
@@ -95,7 +97,8 @@ screen progress:
                                 imagebutton:
                                     yoffset 2
                                     mouse "hover"
-                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                    if not tutorial_on:
+                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                     if current_storyline.is_everything_completed():
                                         idle "images/info_cards/everything_completed.png"
                                     else:
@@ -108,13 +111,15 @@ screen progress:
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.highlight_color
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                        if not tutorial_on:
+                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                 else:
                                     textbutton "{color=#fff}[unlocked]{/color}/[total]":
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.accent_color
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                        if not tutorial_on:
+                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                 vbox:
 
                     xsize 1700
@@ -184,7 +189,8 @@ screen progress:
                                             $ should_blink = current_chapter == chapter.name and current_storyline == current_character
                                             textbutton chapters_names[chapter.name]:
                                                 mouse "hover" 
-                                                action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
+                                                if not tutorial_on:
+                                                    action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
                                                 xoffset -20 
                                                 yoffset -5
                                                 yalign 0.5
@@ -201,9 +207,11 @@ screen progress:
                                                 if should_blink:
                                                     # text_color gui.highlight_color
                                                     at blink
-                                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
+                                                    if not tutorial_on:
+                                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
                                                 else:
-                                                    action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
+                                                    if not tutorial_on:
+                                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, is_current=should_blink)]
                                                     
                                         else:
                                             textbutton "?":
@@ -220,10 +228,12 @@ screen progress:
                                     imagebutton:
                                         if current_storyline.endings.is_unlocked(chapter.label):
                                             idle current_storyline.endings.get_item(chapter.label).image_file
-                                            tooltip str(current_storyline.endings.get_item(chapter.label).content)  
+                                            if not tutorial_on:
+                                                tooltip str(current_storyline.endings.get_item(chapter.label).content)  
                                             # action SetVariable("action_needed_fix", True)
                                             mouse "hover"
-                                            action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, ending = True)]
+                                            if not tutorial_on:
+                                                action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline, ending = True)]
                                         else:
                                             idle chapter.image_file 
                                 elif chapter.chapter_type == "start": 
@@ -231,18 +241,22 @@ screen progress:
                                         mouse 'hover'
                                         idle image_checkpoint_start
                                         hover image_checkpoint_start_selected
-                                        action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline)]
+                                        if not tutorial_on:
+                                            action [SetVariable("current_checkpoint", None), ShowMenu("storyline_details", chapter, current_storyline)]
 
     use tooltip_display
+
+    # ------------------------ TUTORIAL --------------------------------
 
     fixed:
         yalign 1.0                          
         yanchor 1.0
 
-        textbutton ("Hide Tutorial" if tutorial_on else "Show Tutorial"):
-            xpos 0.05
-            ypos 0.9
+        textbutton ("Tutorial" if tutorial_on else "Tutorial"):
+            xpos 20
+            ypos 940
             style_prefix "confirm"
+            text_size 48    
             action [
                 # turn overlay on/off
                 ToggleVariable("tutorial_on"),
@@ -251,9 +265,7 @@ screen progress:
                 SetVariable("tutorial_step", 0),
                 NullAction())
             ]
-            # a quick style so the button is small & translucent
             padding (8, 4)
-            # size 18
 
         if tutorial_on:
 
@@ -274,7 +286,7 @@ screen progress:
                 frame:
                     style_prefix "confirm"
                     xpos tx ypos ty
-                    padding (14, 10)
+                    padding (30, 30)
 
                     vbox:
                         xalign .5
