@@ -17,7 +17,7 @@ label broken_generic_doctor_improprieties:
 
     # The possibilities that the doctor can be a bit rude
 
-    if psychic_details.saved_variables['broken_offended'] == 0:
+    if doctor_details.saved_variables['broken_offended'] == 0:
 
         """
         Well, I was not very polite here. 
@@ -25,13 +25,13 @@ label broken_generic_doctor_improprieties:
         I should watch what I am saying.
         """
 
-    elif psychic_details.saved_variables['broken_offended'] == 1:
+    elif doctor_details.saved_variables['broken_offended'] == 1:
 
         """
-        Damned, I did it again. I really should be careful.
+        Damn it, I did it again. I really should be careful.
         """
 
-    elif psychic_details.saved_variables['broken_offended'] == 2:
+    elif doctor_details.saved_variables['broken_offended'] == 2:
 
         """
         I can't believe I was rude again.
@@ -41,7 +41,7 @@ label broken_generic_doctor_improprieties:
 
         $ doctor_details.important_choices.unlock('broken_offended')
 
-    $ psychic_details.saved_variables['broken_offended'] += 1
+    $ doctor_details.saved_variables['broken_offended'] += 1
     
     return
 
@@ -53,7 +53,7 @@ label broken_generic_other_guests_friday:
     """
 
     doctor """
-    Well, yes, of course. We have not met anyone else yet, have we?
+    Well, yes, of course. She is the only one we have met so far.
     """
 
     broken """
@@ -170,19 +170,25 @@ label broken_generic_manor:
     $ broken_details.description_hidden.unlock('background') 
 
     call run_menu( TimedMenu("broken_generic_manor_offense", [
-        TimedMenuChoice("Of course, the war ", '', 0, early_exit=True),
-        TimedMenuChoice("The war didn't change much for me.", '', 0, early_exit=True),
+        TimedMenuChoice("Of course, the war changed everyone perspective", 'broken_generic_manor_offended', 0, early_exit=True),
+        TimedMenuChoice("The war didn't change much for me.", 'broken_generic_manor_not_offended', 0, early_exit=True),
         ])
     )
 
-    doctor """
-    You did not want to keep doing this after the war?
+    return
 
-    Maybe it seemed too trivial for you? Still being a servant after such a horrific experience?
+label broken_generic_manor_offended:
+
+    doctor """
+    I understand that you did not want to keep doing this after the war.
+
+    It must have seemed too trivial to keep being a servant after such a horrific experience.
     """
 
     broken """
-    Not really, I do not think there is anything wrong with being a servant.
+    Not really.
+    
+    I do not think there is anything wrong with being a servant.
     
     I would have loved to keep doing this job. 
     
@@ -211,11 +217,21 @@ label broken_generic_manor:
     It is all right.
     """
 
-
     call broken_generic_doctor_improprieties
 
     return
 
+label broken_generic_manor_not_offended:
+
+    broken """
+    Really? 
+    
+    That's a rather unique perspective.
+
+    How refreshing.
+    """
+
+    return 
 
 label broken_generic_age:
 
@@ -238,6 +254,7 @@ label broken_generic_age:
     call broken_generic_doctor_improprieties
     
     return
+
 
 label broken_generic_room:
 

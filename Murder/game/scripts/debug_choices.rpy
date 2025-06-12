@@ -38,7 +38,7 @@ label init_debug:
     $ current_character = doctor_details
     $ current_storyline = doctor_details
     call unlock_doctor
-    # $ doctor_details.load_test_checkpoints()
+    $ doctor_details.load_test_checkpoints()
 
     $ hide_notifications = False
 

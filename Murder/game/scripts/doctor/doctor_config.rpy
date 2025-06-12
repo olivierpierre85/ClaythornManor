@@ -15,6 +15,17 @@ label init_doctor:
             "broken_offended": 0,
         }
 
+        doctor_important_choices = CharacterImportantChoiceList([
+            CharacterInformation(
+                0, "broken_offended",
+                "You offended Thomas Moody by asking him the wrong questions",
+                content_negative="You didn't offend Thomas Moody",
+                image_file="broken_offended",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
+        ])
+
         doctor_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "background", "in the military. He later assumed the role of chief physician at a charity hospital", is_important = True), 
             CharacterInformation(0, "heroic_act", "he maintained for over a decade", is_important = True), 
@@ -50,11 +61,13 @@ label init_doctor:
             description_short = "Middle-age man",
             description_long = doctor_description_full,
             description_hidden = doctor_extra_information,
-            important_choices = CharacterInformationList([]),
+            important_choices = doctor_important_choices,
             endings = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
             progress = doctor_progress,
+            saved_variables = copy.deepcopy(doctor_init_variables),
+            test_checkpoints = doctor_test_checkpoints,
         )
         doctor = Character("doctor_details.get_name()", image="doctor", dynamic=True)
 
