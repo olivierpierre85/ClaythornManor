@@ -17,7 +17,7 @@ label broken_generic:
 label broken_generic_other_guests_friday:
 
     broken """
-    Another guest? You mean Miss Marsh, I assume?
+    The other guests? You mean Miss Marsh, I assume?
     """
 
     doctor """
@@ -51,24 +51,13 @@ label broken_generic_weather_friday:
 
 label broken_generic_background:
 
-    "todo"
+    broken """
+    There is not much to say I am afraid.
 
-    # # TODO add city for the hospital (when i decide where he is from)
-    # broken """
-    # I am the chief physician at St. Margaret's Hospital.
+    I am working as mechani
 
-    # It's a charity hospital for those in need.
+    """
 
-    # Before that, I worked a bit all over the place.
-
-    # I also served in the army several times, including the last one. 
-
-    # That one was the worst, of course.
-    # """
-
-    # $ broken_details.description_hidden.unlock('background')
-     
-    # $ current_character.saved_variables["knows_broken_background"] = True
 
     return
 
@@ -76,77 +65,106 @@ label broken_generic_heroic_act:
 
     "todo"
 
-    # broken """
-    # Well, I recently celebrated my ten years at St. Margaret's.
-
-    # Not many people stay that long at this type of institution.
-
-    # Usually, brokens stay for a few years to build a reputation, then move on to a more luxurious practice.
-
-    # Lady Claythorn must have understood the sacrifice I've made, hence the reward.
-
-    # Not that I consider it a sacrifice, of course.
-
-    # I love my job and wouldn't change it for the world.
-
-    # Still, it's always nice to receive some recognition.
-    # """
-    
     # $ broken_details.description_hidden.unlock('heroic_act')
     
     return
 
 label broken_generic_manor:
 
-    "todo"
+    broken """
+    It's a decent size house.
 
-    # broken """
-    # It's a nice house.
+    Probably originally for a rich local landowner. 
 
-    # But I can't say much more about it. 
+    Though it's not big enough for a important aristocrat like a Duke or an Earl. 
 
-    # I'm not used to visiting such places.
+    I don't know much about this Lady Claythorn but her family are probably squires or baronets.
 
-    # This is the first time I've been invited to a grand mansion as a guest and not as a broken.
+    Unless there are just rich industrialists and they added the "Lady" to add some prestige to their name.
 
-    # The truth is, my job doesn't pay that much.
+    That would be quite outrageous if this was the case.
+    """
 
-    # Nevertheless, I'm content with my small apartment.
+    doctor """
+    Really? I wouldn't have thought of that.
 
-    # I wouldn't want anything this big; it must be such a hassle to manage.
-    # """
+    Where do you learn all of this?
+    """
 
-    # if current_character.text_id == "lad":
-    #     lad """
-    #     So you're not accustomed to having a butler and footmen around?
-    #     """
+    broken """
+    Because I was raised in house a bit like this one.
 
-    #     broken """
-    #     No, I can't say that I am.
-    #     """
+    Then the war happened and everything changed.
+    """
 
-    #     """
-    #     Well, that's somewhat comforting.
-    #     """
+    doctor """
+    You didn't want to keep doing this after the war?
 
-    #     $ broken_details.description_hidden.unlock('status') 
+    Maybe it seemed too trivial for you? Still being a servant after such an horrific experience?
+    """
+
+    broken """
+    Not really, I don't think there is anything wrong with being a servant.
+    
+    I would have loved to keep doing this job. 
+    
+    I even hoped to be a butler someday.
+
+    But it turns out a footman as to fit certain characteristics. 
+
+    For instance, they have to be tall. 
+    
+    I am not sure why but it's a matter of pride for them to have the tallest servants possible.
+
+    It's all part of us being seen as part of the "image" of their property.
+
+    As can guess, when I returned from the war, I was not considered "footman" material and was relegated to grunt work.
+
+    I decided it was better to leave.
+
+    But it's not easy talking about it.
+    """
+
+    doctor """
+    I am sorry, I didn't mean to offend you.
+    """
+
+    broken """
+    Don't worry about it.
+    """
+
+    """
+    He looks really upset though, I might shouldn't have pushed him like that.
+    """
+
+    $ broken_details.description_hidden.unlock('background') 
 
     return
 
+
 label broken_generic_age:
 
-    "todo"
+    broken """
+    27 years old.
 
-    # broken """
-    # I'm 39 years old. Why do you ask?
-    # """
+    I know it's hard to guess considering.
+    """
 
-    # if current_character.text_id == "lad":
-    #     lad """
-    #     Actually, I'm not sure.
-    #     """
+    doctor """
+    I am sorry, I didn't want to imply anything.
+    """
 
-    # $ broken_details.description_hidden.unlock('age') 
+    broken """
+    Don't worry about it.
+    """
+
+    """
+    Well I wasn't very polite here. 
+    
+    I should watch what I am saying.
+    """
+
+    $ broken_details.description_hidden.unlock('age') 
     
     return
 
