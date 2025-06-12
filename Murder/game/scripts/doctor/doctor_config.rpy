@@ -12,7 +12,7 @@ label init_doctor:
         # Story Variables
         doctor_init_variables = {
             "broken_generic_menu": broken_generic_menu_doctor,
-            "knows_broken_background": False,
+            "broken_offended": 0,
         }
 
         doctor_extra_information = CharacterDescriptionHiddenList ([

@@ -3,8 +3,6 @@
 # Accessible from :
 #                   - Doctor
 #                   - ?
-
-
 label broken_generic:
 
     # Reset if previous early exit
@@ -14,36 +12,78 @@ label broken_generic:
     
     return
 
+
+label broken_generic_doctor_improprieties:
+
+    # The possibilities that the doctor can be a bit rude
+
+    if psychic_details.saved_variables['broken_offended'] == 0:
+
+        """
+        Well, I was not very polite here. 
+        
+        I should watch what I am saying.
+        """
+
+    elif psychic_details.saved_variables['broken_offended'] == 1:
+
+        """
+        Damned, I did it again. I really should be careful.
+        """
+
+    elif psychic_details.saved_variables['broken_offended'] == 2:
+
+        """
+        I can't believe I was rude again.
+
+        I must sound like an absolute jerk to him now.
+        """
+
+        $ doctor_details.important_choices.unlock('broken_offended')
+
+    $ psychic_details.saved_variables['broken_offended'] += 1
+    
+    return
+
+
 label broken_generic_other_guests_friday:
 
     broken """
-    The other guests? You mean Miss Marsh, I assume?
+    The other guests? You mean Miss Marsh, I presume?
     """
 
     doctor """
-    Well, yes, of course. We haven't met anyone else yet, have we?
+    Well, yes, of course. We have not met anyone else yet, have we?
     """
 
     broken """
     Right.
 
-    I am not sure. She was very quiet during our trip.
+    I am not sure. She was very quiet during our journey.
 
     But being alone with men around her must have made her uneasy.
     """
 
+    doctor """
+    Well, or it might be your... your...
     """
-    Yes, that or something else must have scared her.
 
-    But there is no reason to point it out.
+    broken """
+    My what?
     """
+
+    doctor """
+    No, nothing.
+    """
+
+    call broken_generic_doctor_improprieties
 
     return
 
 label broken_generic_weather_friday:
 
     broken """
-    It's not the ideal weather, but there's no reason to lose sleep over it.
+    It is not the ideal weather, but there is no reason to lose sleep over it.
     """
 
     return
@@ -52,92 +92,127 @@ label broken_generic_weather_friday:
 label broken_generic_background:
 
     broken """
-    There is not much to say I am afraid.
+    There is not much to say, I am afraid.
 
-    I am working as mechani
-
+    I am a mechanic. I have been doing this since the end of the war.
     """
-
 
     return
 
 label broken_generic_heroic_act:
 
-    "todo"
+    broken """
+    Well, I suppose it is related to what I did in the war.
 
-    # $ broken_details.description_hidden.unlock('heroic_act')
+    But there were a lot of heroic acts that happened at that time. 
+    
+    I am not sure mine was particularly exceptional. 
+
+    I suppose I am here for a different reason.
+    """
+
+    doctor """
+    What do you mean?
+    """
+
+    """
+    He looks at me with a blank stare.
+    """
+
+    broken """
+    Is it not obvious?
+
+    My ... "condition" makes my actions more memorable than others'.
+
+    But I really do not want to talk about it.
+    """
+
+    doctor """
+    No, of course.
+    """
+
+    $ broken_details.description_hidden.unlock('heroic_act')
+
+    call broken_generic_doctor_improprieties
     
     return
 
 label broken_generic_manor:
 
     broken """
-    It's a decent size house.
+    It is a decent-sized house.
 
-    Probably originally for a rich local landowner. 
+    Probably originally for a wealthy local landowner. 
 
-    Though it's not big enough for a important aristocrat like a Duke or an Earl. 
+    Though it is not large enough for an important aristocrat like a Duke or an Earl. 
 
-    I don't know much about this Lady Claythorn but her family are probably squires or baronets.
+    I do not know much about this Lady Claythorn, but her family are probably squires or baronets.
 
-    Unless there are just rich industrialists and they added the "Lady" to add some prestige to their name.
+    Unless they are just wealthy industrialists and they added the "Lady" to lend some prestige to their name.
 
-    That would be quite outrageous if this was the case.
+    That would be quite outrageous if that were the case.
     """
 
     doctor """
-    Really? I wouldn't have thought of that.
+    Really? I would not have thought of that.
 
-    Where do you learn all of this?
+    Where did you learn all of this?
     """
 
     broken """
-    Because I was raised in house a bit like this one.
+    Because I was raised in a house a bit like this one.
+
+    I started as a bootboy when I was a wee lad, but quickly rose in rank to become a footman.
 
     Then the war happened and everything changed.
     """
 
-    doctor """
-    You didn't want to keep doing this after the war?
+    $ broken_details.description_hidden.unlock('background') 
 
-    Maybe it seemed too trivial for you? Still being a servant after such an horrific experience?
+    call run_menu( TimedMenu("broken_generic_manor_offense", [
+        TimedMenuChoice("Of course, the war ", '', 0, early_exit=True),
+        TimedMenuChoice("The war didn't change much for me.", '', 0, early_exit=True),
+        ])
+    )
+
+    doctor """
+    You did not want to keep doing this after the war?
+
+    Maybe it seemed too trivial for you? Still being a servant after such a horrific experience?
     """
 
     broken """
-    Not really, I don't think there is anything wrong with being a servant.
+    Not really, I do not think there is anything wrong with being a servant.
     
     I would have loved to keep doing this job. 
     
     I even hoped to be a butler someday.
 
-    But it turns out a footman as to fit certain characteristics. 
+    But it turns out a footman has to fit certain characteristics. 
 
     For instance, they have to be tall. 
     
-    I am not sure why but it's a matter of pride for them to have the tallest servants possible.
+    I am not sure why, but it is a matter of pride for them to have the tallest servants possible.
 
-    It's all part of us being seen as part of the "image" of their property.
+    It is all part of us being seen as part of the "image" of their property.
 
-    As can guess, when I returned from the war, I was not considered "footman" material and was relegated to grunt work.
+    As you can guess, when I returned from the war, I was not considered "footman" material and was relegated to grunt work.
 
     I decided it was better to leave.
 
-    But it's not easy talking about it.
+    But it is not easy talking about it.
     """
 
     doctor """
-    I am sorry, I didn't mean to offend you.
+    I am sorry, I did not mean to offend you.
     """
 
     broken """
-    Don't worry about it.
+    It is all right.
     """
 
-    """
-    He looks really upset though, I might shouldn't have pushed him like that.
-    """
 
-    $ broken_details.description_hidden.unlock('background') 
+    call broken_generic_doctor_improprieties
 
     return
 
@@ -147,36 +222,43 @@ label broken_generic_age:
     broken """
     27 years old.
 
-    I know it's hard to guess considering.
+    I know it is hard to guess, considering.
     """
 
     doctor """
-    I am sorry, I didn't want to imply anything.
+    I am sorry, I did not want to imply anything.
     """
 
     broken """
-    Don't worry about it.
+    Do not worry about it.
     """
-
-    """
-    Well I wasn't very polite here. 
     
-    I should watch what I am saying.
-    """
-
     $ broken_details.description_hidden.unlock('age') 
+
+    call broken_generic_doctor_improprieties
     
     return
 
 label broken_generic_room:
 
-    "todo"
+    broken """
+    My room is named "Richard the Third".
 
-    # broken """
-    # I'm staying in the Edward II room.
-    # """
+    I must admit I do not know much about him.
+    """
 
-    # # TODO: Add more dialogue if lad, or broken (invite to room?)
-    # $ unlock_map('bedroom_broken')
+    doctor """
+    I saw a play about him. From what I remember, he was severely deformed, and something of a villain, and ...
+    """
+
+    """
+    I see Thomas Moody's gaze harden.
+
+    I quickly stop talking about that.
+    """
+
+    $ unlock_map('bedroom_broken')
+
+    call broken_generic_doctor_improprieties
     
     return

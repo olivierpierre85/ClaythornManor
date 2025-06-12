@@ -72,7 +72,7 @@ label doctor_day1_evening:
 
     call wait_screen_transition()
 
-    call change_time(16,00)
+    call change_time(15,30)
 
     play sound door_knock
 
@@ -126,11 +126,26 @@ label doctor_day1_evening:
     It seems like it.
     """
 
-    $ time_left = 20
+    $ time_left = 50
 
     call broken_generic
 
+    if doctor_details.important_choices.is_unlocked('broken_offended'):
+        # The Broken is offended, he won't talk to you anymore
+        broken """
+        Excuse me, I have something to do.
+        """
+
+        """
+        He goes back to the bar and starts to talk to the butler, leaving me alone in a corner.
+
+        Well that will teach me.
+        """
+
     call change_time(16,30)
 
+    """
+    Miss Marsh enters the room.
+    """
 
     jump work_in_progress
