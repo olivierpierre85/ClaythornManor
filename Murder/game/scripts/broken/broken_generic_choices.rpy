@@ -64,6 +64,16 @@ label broken_generic_other_guests_friday:
     But being alone with men around her must have made her uneasy.
     """
 
+    call run_menu( TimedMenu("broken_generic_other_guests_friday_offense", [
+        TimedMenuChoice("Yes, it must be that", 'broken_generic_other_guests_friday_not_offended', 10, early_exit=True),
+        TimedMenuChoice("I can think of another reason she was uneasy", 'broken_generic_other_guests_friday_offended', 10, early_exit=True),
+        ])
+    )
+
+    return
+
+label broken_generic_other_guests_friday_offended:
+
     doctor """
     Well, or it might be your... your...
     """
@@ -76,9 +86,23 @@ label broken_generic_other_guests_friday:
     No, nothing.
     """
 
+    """
+    He may not say anything, he understands very well what I meant.
+    """
+
     call broken_generic_doctor_improprieties
 
     return
+
+
+label broken_generic_other_guests_friday_not_offended:
+
+    broken """
+    Of course, what else could that be.
+    """
+
+    return
+
 
 label broken_generic_weather_friday:
 
@@ -96,8 +120,59 @@ label broken_generic_background:
 
     I am a mechanic. I have been doing this since the end of the war.
     """
+        
+    call run_menu( TimedMenu("broken_generic_background_offense", [
+        TimedMenuChoice("That's a very noble profession", 'broken_generic_background_not_offended', 10, early_exit=True),
+        TimedMenuChoice("Did you have to change profession because of the war?", 'broken_generic_background_offended_1', 0, early_exit=True),
+        ])
+    )
 
     return
+
+label broken_generic_background_not_offended:
+
+    broken """
+    Thank you. 
+    
+    It's not saving lives but I like it well enough.
+    """
+
+    return
+
+
+label broken_generic_background_offended_1:
+
+    broken """
+    Well yes, I was a famous actor before.
+
+    Sadly I can't do that anymore.
+    """
+
+    call run_menu( TimedMenu("broken_generic_background_offended_1", [
+        TimedMenuChoice("Wait? Really?", 'broken_generic_background_offended_2', 10, early_exit=True),
+        TimedMenuChoice("Just laugh and say nothing", 'generic_cancel', 10, early_exit=True),
+        ])
+    )
+
+    return
+
+
+label broken_generic_background_offended_2:
+
+    broken """
+    No, of course not.
+
+    I was obviously joking.
+    """
+
+    """
+    Then he gives me a weird look.
+    """
+
+    call broken_generic_doctor_improprieties
+
+    return
+    
 
 label broken_generic_heroic_act:
 
@@ -111,10 +186,17 @@ label broken_generic_heroic_act:
     I suppose I am here for a different reason.
     """
 
-    doctor """
-    What do you mean?
-    """
+    call run_menu( TimedMenu("broken_generic_heroic_act_offended", [
+        TimedMenuChoice("What do you mean?", '', 20, early_exit=True),
+        TimedMenuChoice("Nod but don't engage", 'generic_cancel', 20, early_exit=True),
+        ])
+    )
 
+    return
+
+
+label broken_generic_heroic_act_offended:
+    
     """
     He looks at me with a blank stare.
     """
@@ -136,6 +218,7 @@ label broken_generic_heroic_act:
     call broken_generic_doctor_improprieties
     
     return
+
 
 label broken_generic_manor:
 
@@ -170,12 +253,13 @@ label broken_generic_manor:
     $ broken_details.description_hidden.unlock('background') 
 
     call run_menu( TimedMenu("broken_generic_manor_offense", [
-        TimedMenuChoice("Of course, the war changed everyone perspective", 'broken_generic_manor_offended', 0, early_exit=True),
-        TimedMenuChoice("The war didn't change much for me.", 'broken_generic_manor_not_offended', 0, early_exit=True),
+        TimedMenuChoice("Of course, the war changed everyone perspective", 'broken_generic_manor_offended', 20, early_exit=True),
+        TimedMenuChoice("The war didn't change much for me.", 'broken_generic_manor_not_offended', 20, early_exit=True),
         ])
     )
 
     return
+
 
 label broken_generic_manor_offended:
 
@@ -221,6 +305,7 @@ label broken_generic_manor_offended:
 
     return
 
+
 label broken_generic_manor_not_offended:
 
     broken """
@@ -232,6 +317,7 @@ label broken_generic_manor_not_offended:
     """
 
     return 
+
 
 label broken_generic_age:
 
@@ -264,18 +350,34 @@ label broken_generic_room:
     I must admit I do not know much about him.
     """
 
+    $ unlock_map('bedroom_broken')
+
+    call run_menu( TimedMenu("broken_generic_room_offense", [
+        TimedMenuChoice("Me neither", 'generic_cancel', 10, early_exit=True),
+        TimedMenuChoice("I saw a Shakespeare's play about him", 'broken_generic_room_offended', 10, early_exit=True),
+        ])
+    )
+    
+    return
+
+
+label broken_generic_room_offended:
+
+    broken """
+    Really? What was he like?
+    """
+
     doctor """
-    I saw a play about him. From what I remember, he was severely deformed, and something of a villain, and ...
+    From what I remember, he was severely deformed, and something of a villain, and ...
     """
 
     """
     I see Thomas Moody's gaze harden.
 
-    I quickly stop talking about that.
+    I quickly stop talking.
     """
 
-    $ unlock_map('bedroom_broken')
-
     call broken_generic_doctor_improprieties
-    
+
     return
+
