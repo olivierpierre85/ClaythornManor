@@ -44,18 +44,6 @@ label init_debug:
 
     return
 
-label unlock_psychic:
-
-    $ psychic_details.description_hidden.unlock('background') 
-    $ lad_details.saved_variables['knows_psychic_background'] = True
-    $ psychic_details.description_hidden.unlock('status') 
-    $ psychic_details.description_hidden.unlock('heroic_act') 
-    $ psychic_details.description_hidden.unlock('lie') 
-    $ psychic_details.description_hidden.unlock('age') 
-    $ psychic_details.description_hidden.unlock('drive') 
-    $ psychic_details.description_hidden.unlock('racist') 
-    
-    return
 
 label unlock_bedrooms:
 
@@ -70,16 +58,31 @@ label unlock_bedrooms:
 
     return
 
+
+label unlock_psychic:
+
+    $ psychic_details.description_hidden.unlock('background') 
+    $ psychic_details.description_hidden.unlock('status') 
+    $ psychic_details.description_hidden.unlock('heroic_act') 
+    $ psychic_details.description_hidden.unlock('lie') 
+    $ psychic_details.description_hidden.unlock('age') 
+    $ psychic_details.description_hidden.unlock('drive') 
+    $ psychic_details.description_hidden.unlock('racist') 
+    
+    return
+
+
 label unlock_lad:
 
     $ lad_details.description_hidden.unlock('age')  # "22 years old - which means he was merely 15"
     $ lad_details.description_hidden.unlock('origin')  # "Birmingham"
     $ lad_details.description_hidden.unlock('poor')  # "a wealthy family, nor even a decent one"
-    $ lad_details.description_hidden.unlock('childhood')  # "he doesn't have a family at all; he was raised in an orphanage"
-    $ lad_details.description_hidden.unlock('education')  # "the best education, and, like a large number of individuals from similar backgrounds, he can barely read"
+    # $ lad_details.description_hidden.unlock('childhood')  # "he doesn't have a family at all; he was raised in an orphanage"
+    # $ lad_details.description_hidden.unlock('education')  # "the best education, and, like a large number of individuals from similar backgrounds, he can barely read"
     $ lad_details.description_hidden.unlock('job')  # "on the 'informal sector' for employment"
     $ lad_details.description_hidden.unlock('thief')  # "sometimes means being on the wrong side of the law"
     $ lad_details.description_hidden.unlock('heroic_act')  # "saving a young infant from a burning building. This act of heroism made him the subject of a newspaper article"
+    # $ lad_details.description_hidden.unlock('lie')
     $ lad_details.description_hidden.unlock('poor_drinker')  # "drinker"
     $ lad_details.description_hidden.unlock('drive')  # "drive a car"
     $ lad_details.description_hidden.unlock('cook')  # "cook a meal"
@@ -94,7 +97,7 @@ label unlock_doctor:
     $ doctor_details.description_hidden.unlock('age') 
     $ doctor_details.description_hidden.unlock('addict')
     $ doctor_details.description_hidden.unlock('fraud')
-    $ doctor_details.description_hidden.unlock('gay')
+    # $ doctor_details.description_hidden.unlock('gay')
 
     return
 

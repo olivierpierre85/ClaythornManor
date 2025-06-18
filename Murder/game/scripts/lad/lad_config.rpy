@@ -17,7 +17,6 @@ label init_lad:
 
             "psychic_generic_menu" : psychic_generic_menu_lad,
             "psychic_generic_other_guests_menu": psychic_generic_other_guests_menu_lad,
-            "knows_psychic_background": False,
             "knows_bedroom_psychic": False,
             
             "doctor_generic_menu" : doctor_generic_menu_lad,
@@ -222,6 +221,7 @@ label init_lad:
             CharacterInformation(0, "job", "on the 'informal sector' for employment"), 
             CharacterInformation(0, "thief", "sometimes means being on the wrong side of the law"), 
             CharacterInformation(0, "heroic_act", "saving a infant from a burning building. This act of heroism made him the subject of a newspaper article"), 
+            CharacterInformation(0, "lie", "he actually wasn't there by chance. He was instead robbing the place and even set it on fire by accident"), 
             CharacterInformation(0, "poor_drinker", "drinker"),
             CharacterInformation(0, "drive", "drive a car"),
             CharacterInformation(0, "cook", "cook a meal"),
@@ -232,9 +232,9 @@ label init_lad:
         # A good-looking young lad, he is only "22 years old - which means he was merely 15" at the end of the war.
         # Born and raised in "Birmingham", we can't say he comes from "a wealthy family, nor even a decent one". In fact, "he doesn't have a family at all; he was raised in an orphanage".
         # His childhood didn't offer him "the best education, and, like a large number of individuals from similar backgrounds, he can barely read".
-        # That is also why he had to rely "on the 'informal sector' for employment", and as everyone knows, this "sometimes means ending up on the wrong side of the law".
-        # One day, he found himself in the right place at the right moment and, against all odds, did the right thing by "saving a infant from a burning building. This act of heroism made him the subject of a newspaper article", which was enough for Lady Claythorn to invite him to her manor.
-        # Not a great "drinker", he is also not able to "drive a car" or "cook a meal".
+        # That is also why he had to rely "on the 'informal sector' for employment," and as everyone knows, this "sometimes means ending up on the wrong side of the law."
+        # One day, he found himself in the right place at the right moment and, against all odds, did the right thing by "saving an infant from a burning building. This act of heroism made him the subject of a newspaper article," which was enough for Lady Claythorn to invite him to her manor. What was omitted from the article is that he actually wasn't there by chance; he was instead robbing the place and even set it on fire by accident.
+        # Not a great "drinker," he is also not able to "drive a car" or "cook a meal."
         # """
 
         lad_description_full = """
@@ -243,6 +243,7 @@ label init_lad:
         His childhood didn't offer him <info:education>.
         That is also why he had to rely <info:job>, and as everyone knows, this <info:thief>.
         One day, he found himself in the right place at the right moment and, against all odds, did the right thing by <info:heroic_act>, which was enough for Lady Claythorn to invite him to her manor.
+        What was omitted from the article is that <info:lie>.
         Not a great <info:poor_drinker>, he is also not able to <info:drive> or <info:cook>.
         """
 

@@ -231,25 +231,7 @@ label lad_generic_background_doctor_thief:
     return
 
 
-label lad_generic_heroic_act_psychic:
-    
-    lad """
-    I was in the papers for rescuing a baby from a building on fire.
-
-    It happened last year.
-    """
-
-    psychic """
-    How impressive! What I've done is nothing compared to that.
-    
-    Please tell me more about it.    
-    """
-
-    lad """
-    I don't know how impressive it really was.
-    
-    It was more a matter of being in the right place at the right moment.
-    """
+label lad_generic_heroic_act_1:
 
     pause 1
 
@@ -313,6 +295,27 @@ label lad_generic_heroic_act_psychic:
 
     $ change_room('PREVIOUS')
 
+    return
+
+
+label lad_generic_heroic_act_doctor:
+    
+    lad """
+    Last year, I rescued a baby from a building on fire.
+    """
+
+    doctor """
+    Really? Good for you.
+
+    You must have nerves of steel to do such a thing.
+    """
+
+    lad """
+    I guess. But I think everyone would have done the same.
+    """
+
+    call lad_generic_heroic_act_1
+
     psychic """
     Don't say that. I am certain it was too late for her.
 
@@ -342,6 +345,60 @@ label lad_generic_heroic_act_psychic:
     $ play_music('PREVIOUS')
 
     return
+
+
+label lad_generic_heroic_act_psychic:
+    
+    lad """
+    I was in the papers for rescuing a baby from a building on fire.
+
+    It happened last year.
+    """
+
+    psychic """
+    How impressive! What I've done is nothing compared to that.
+    
+    Please tell me more about it.    
+    """
+
+    lad """
+    I don't know how impressive it really was.
+    
+    It was more a matter of being in the right place at the right moment.
+    """
+
+    call lad_generic_heroic_act_1
+
+    psychic """
+    Don't say that. I am certain it was too late for her.
+
+    You did the only thing you could have done.
+
+    You shouldn't blame yourself.
+    """
+
+    lad """
+    I guess.
+
+    But it's hard.
+
+    I still have nightmares about it.
+    """
+
+    psychic """
+    ...
+    """
+
+    """
+    I don't know what to say here.
+    """
+
+    $ lad_details.description_hidden.unlock('heroic_act') 
+
+    $ play_music('PREVIOUS')
+
+    return
+
 
 label lad_generic_manor:
     

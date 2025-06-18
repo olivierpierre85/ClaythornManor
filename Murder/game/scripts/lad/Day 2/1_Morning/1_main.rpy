@@ -149,7 +149,7 @@ label lad_day2_no_hunt_choice:
 
 label lad_day2_breakfast_eat:
 
-    psychic """
+    psychic -angry """
     I wonder what this is about.
     """
 

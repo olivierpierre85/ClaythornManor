@@ -134,7 +134,6 @@ label psychic_generic_background:
     """
 
     $ psychic_details.description_hidden.unlock('background')
-    $ lad_details.saved_variables['knows_psychic_background'] = True
 
     return
 

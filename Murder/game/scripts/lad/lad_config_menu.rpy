@@ -6,7 +6,6 @@ label lad_config_menu:
         TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday', 10, condition = condition_saturday),
         TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_sunday', 10, condition = condition_sunday),
         TimedMenuChoice('Tell me more about yourself.', 'psychic_generic_background', 30, linked_choice ="psychic_generic_heroic_act"),
-        # TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 30, condition = "current_character.saved_variables['knows_psychic_background']"),
         TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 30, condition = "all_menus[current_menu.id].choices[3].hidden"), # Can Only show this choice when the one before has be selected because the answers are linked
         TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 20),
         TimedMenuChoice('How old are you?', 'psychic_generic_age', 10),
