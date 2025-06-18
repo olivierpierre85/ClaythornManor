@@ -190,7 +190,6 @@ label psychic_day1_evening:
 
     $ stop_music()
 
-
     call change_time(18,30, 'Dinner', 'Friday')
 
     $ change_room('dining_room', irisout)

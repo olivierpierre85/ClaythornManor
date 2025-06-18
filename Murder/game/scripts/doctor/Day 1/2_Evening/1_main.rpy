@@ -100,6 +100,8 @@ label doctor_day1_evening:
 
     $ change_room('tea_room', dissolve)
 
+    call change_time(15,40)
+
     """
     Well, it looks like I am the first one. 
 
@@ -146,6 +148,125 @@ label doctor_day1_evening:
 
     """
     After a while, Miss Marsh enters the room.
+
+    She is followed by a Indian man in an army uniform and an older gentleman.
+
+    They must have just arrived from the station.
+
+    The older man goes straight to the tray with drinks. 
+    
+    He walks in an unsure fashion, almost bumping into the butler who swiftly avoids him.
+
+    The military man walks towards me.
+    """
+
+    captain """
+    Hello there, I am Captain Sushil Sinha.
+    """
+
+    if doctor_details.important_choices.is_unlocked('broken_offended'):
+
+        """
+        As he sees the new guests coming in, Thomas Moody joins me back to greet them.
+        """
+
+    broken """
+    Nice to meet you captain, I am Thomas Moody.
+    """
+
+    doctor """
+    Doctor Daniel Baldwin.
+
+    How do you do.
+    """
+
+    captain """
+    Nice to meet you both.
+    """
+
+    broken """
+    And who is the gentleman over there?
+    """
+
+    captain """
+    That would be Samuel Manning.
+
+    I am afraid he had a bit too much to drink.
+
+    But don't worry about him.
+    """
+
+    """
+    We all glance at him from afar as he fills a water glass to the brim with sherry.
+
+    He then proceeds to chug it in one sip.
+
+    After that, he sits down on the sofa next to him and immediately falls asleep.
+    """
+
+    captain """
+    Well, that should keep him still for a while.
+    """
+
+    doctor """
+    Indeed, it's impressive that  ...
+    """
+
+    captain """
+    It reminds me of a guy I knew back in the Army.
+
+    He was my superior but I swear I never saw him sober.
+
+    Even in the morning he always was still drunk from the day before.
+
+    And...
+    """
+
+    """
+    He proceeds to tell a tedious story about its time in the military.
+
+    I try to concentrate on what he is saying but I can't focus. 
+
+    So I just nod in agreement and wonder when I will be able to go quietly back to my room.    
+    """
+
+    play sound dinner_gong
+
+    """
+    I am brutally awoken from my daydreaming by the dinner gong.
+
+    I barely even notice what has happened over the past few hours.
+
+    Everyone is heading towards the dining area, so I go with them.
+    """
+
+    $ stop_music()
+
+    call change_time(18,30, 'Dinner', 'Friday')
+
+    $ change_room('dining_room', irisout)
+
+    $ play_music('chill')
+
+
+    """
+    My place is at the end of the table.
+
+    That is better because I don't feel like talking too much.
+
+    Then, the host finally joins us.
+    """
+
+    call common_day1_evening_host_welcome_speech
+
+    """
+    This speech is quickly followed by the first course.
+    """
+
+    pause 1
+
+    """
+    I look who I have on my side, it's a young man I didn't even notice before.
     """
 
     jump work_in_progress
