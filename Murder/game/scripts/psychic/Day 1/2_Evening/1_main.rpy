@@ -232,7 +232,7 @@ label psychic_day1_evening:
     And Ted Harring is on my right.
     """
 
-    $ time_left = 90 # TODO, change with option in menu? 
+    $ time_left = 90 
     call run_menu(TimedMenu("psychic_day1_evening", [
         TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain'),
         TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad'),

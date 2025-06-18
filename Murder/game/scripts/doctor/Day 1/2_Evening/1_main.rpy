@@ -269,4 +269,27 @@ label doctor_day1_evening:
     I look who I have on my side, it's a young man I didn't even notice before.
     """
 
+    $ time_left = 90 
+    call run_menu(TimedMenu("doctor_day1_evening", [
+        TimedMenuChoice('Talk to Ted Harring', 'doctor_day1_dinner_lad'),
+        TimedMenuChoice("Just keep to yourself", 'generic_cancel', early_exit=True),
+    ], image_left = "captain", image_right = "lad"))
+
+    $ stop_music()
+
     jump work_in_progress
+
+
+label doctor_day1_dinner_lad:
+    
+    doctor """
+    Hello. I am doctor Daniel Baldwin.
+    """
+
+    lad """
+    Nice to meet you doctor, I am Ted Harring.
+    """
+
+    call lad_generic
+    
+    return

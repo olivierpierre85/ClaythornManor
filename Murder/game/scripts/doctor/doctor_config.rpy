@@ -12,6 +12,7 @@ label init_doctor:
         # Story Variables
         doctor_init_variables = {
             "broken_generic_menu": broken_generic_menu_doctor,
+            "lad_generic_menu" : lad_generic_menu_doctor,
             "broken_offended": 0,
         }
 

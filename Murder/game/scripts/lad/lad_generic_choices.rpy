@@ -86,8 +86,8 @@ label lad_generic_age_psychic:
     return
 
 
-label lad_generic_background_psychic:
-    
+label lad_generic_background_1:
+
     lad """
     There isn't much to say about me.
 
@@ -97,6 +97,13 @@ label lad_generic_background_psychic:
     """
 
     $ lad_details.description_hidden.unlock('origin') 
+
+    return
+
+
+label lad_generic_background_psychic:
+    
+    call lad_generic_background_1
 
     psychic """
     Interesting, in what type of business?
@@ -135,6 +142,94 @@ label lad_generic_background_psychic:
     $ psychic_details.saved_variables['knows_lad_background'] = True
 
     return
+
+
+label lad_generic_background_doctor:
+    
+    call lad_generic_background_1
+
+    doctor """
+    In what line of business?
+    """
+
+    lad """
+    Oh, you know, regular sales.
+    """
+
+    doctor """
+    Of course. What do you sell the most?
+    """
+
+    lad """
+    I cannot say that I work with a specific product; it depends on the opportunities.
+    """
+
+    doctor """
+    I see.
+    """
+
+    $ lad_details.description_hidden.unlock('job') 
+
+    """
+    There is something off about his answers.
+
+    I do not think he is telling me the whole story.
+    
+    Perhaps I could probe him a little further.
+    """
+
+    call run_menu( TimedMenu("lad_generic_background_doctor", [
+        TimedMenuChoice("I might have something to sell you", 'lad_generic_background_doctor_thief', 30, early_exit=True),
+        TimedMenuChoice("No, let us just leave it at that", 'generic_cancel', 15, early_exit=True),
+        ])
+    )
+
+    return
+
+
+label lad_generic_background_doctor_thief:
+
+    lad """
+    Really?
+
+    I thought you were a doctor.
+    """
+
+    doctor """
+    I am, and because of that I sometimes have access to certain products in large quantities.
+
+    Perhaps you can help me with it.
+    """
+
+    lad """
+    That depends; could you tell me more?
+    """
+
+    doctor """
+    Not here. It is rather sensitive.
+
+    It is not for everyone to hear, if you see what I mean?
+    """
+
+    lad """
+    Understood. I can be discreet when necessary.
+    """
+
+    doctor """
+    Perfect, we will talk later.
+    """
+
+    """
+    I knew it.
+    """
+    
+    $ lad_details.description_hidden.unlock('thief') 
+
+    #TODO: ADD for doctor choice to sell stuff to lad????? what 
+    # If you go to his room
+
+    return
+
 
 label lad_generic_heroic_act_psychic:
     
