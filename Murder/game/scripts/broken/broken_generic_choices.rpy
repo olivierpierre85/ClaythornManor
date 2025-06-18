@@ -120,6 +120,8 @@ label broken_generic_background:
 
     I am a mechanic. I have been doing this since the end of the war.
     """
+
+    $ broken_details.description_hidden.unlock('job') 
         
     call run_menu( TimedMenu("broken_generic_background_offense", [
         TimedMenuChoice("That's a very noble profession", 'broken_generic_background_not_offended', 10, early_exit=True),

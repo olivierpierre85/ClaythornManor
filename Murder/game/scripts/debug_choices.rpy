@@ -110,7 +110,7 @@ label unlock_captain:
     $ captain_details.description_hidden.unlock('age')
     $ captain_details.description_hidden.unlock('mansion')
     $ captain_details.description_hidden.unlock('table') 
-    $ captain_details.description_hidden.unlock('family')
+    # $ captain_details.description_hidden.unlock('family')
     $ captain_details.description_hidden.unlock('lie')
 
     return
@@ -123,20 +123,10 @@ label unlock_nurse:
     $ nurse_details.description_hidden.unlock('manor') 
     $ nurse_details.description_hidden.unlock('sick')
     $ nurse_details.description_hidden.unlock('heroic_act')
-    $ nurse_details.description_hidden.unlock('lie') 
+    # $ nurse_details.description_hidden.unlock('lie') 
 
     return
 
-label unlock_host:
-
-    $ host_details.description_hidden.unlock('name')
-    $ host_details.description_hidden.unlock('down_to_earth')
-    $ host_details.description_hidden.unlock('independent') 
-    $ host_details.description_hidden.unlock('guns') 
-    $ host_details.description_hidden.unlock('car')
-    $ host_details.description_hidden.unlock('lie') 
-
-    return
 
 label unlock_broken:
 
@@ -145,20 +135,34 @@ label unlock_broken:
     $ broken_details.description_hidden.unlock('background') 
     $ broken_details.description_hidden.unlock('job') 
     $ broken_details.description_hidden.unlock('heroic_act')
-    $ broken_details.description_hidden.unlock('city')
-    $ broken_details.description_hidden.unlock('shy')
-    $ broken_details.description_hidden.unlock('lie') 
+    # $ broken_details.description_hidden.unlock('city')
+    # $ broken_details.description_hidden.unlock('shy')
+    # $ broken_details.description_hidden.unlock('lie') 
 
     return
 
+
+label unlock_host:
+
+    $ host_details.description_hidden.unlock('name_age')
+    $ host_details.description_hidden.unlock('down_to_earth')
+    # $ host_details.description_hidden.unlock('independent') 
+    # $ host_details.description_hidden.unlock('guns') 
+    # $ host_details.description_hidden.unlock('car')
+    # $ host_details.description_hidden.unlock('lie') 
+
+    return
+
+
 label unlock_drunk:
-    $ drunk_details.description_hidden.unlock('background')
-    $ drunk_details.description_hidden.unlock('status')
-    $ drunk_details.description_hidden.unlock('age')
-    $ drunk_details.description_hidden.unlock('wife') 
+    
+    # $ drunk_details.description_hidden.unlock('background')
+    # $ drunk_details.description_hidden.unlock('status')
+    # $ drunk_details.description_hidden.unlock('age')
+    # $ drunk_details.description_hidden.unlock('wife') 
     $ drunk_details.description_hidden.unlock('addict') 
-    $ drunk_details.description_hidden.unlock('job')
-    $ drunk_details.description_hidden.unlock('heroic_act')
-    $ drunk_details.description_hidden.unlock('lie') 
+    # $ drunk_details.description_hidden.unlock('job')
+    # $ drunk_details.description_hidden.unlock('heroic_act')
+    # $ drunk_details.description_hidden.unlock('lie') 
 
     return
