@@ -27,7 +27,7 @@ label doctor_day1_evening:
     $ play_music('upbeat')
 
     """
-    We all reach the hall together, leaving the driver to take care of our luggage.
+    We all reach the hall together, leaving the driver to look after our luggage.
     """
 
     butler """
@@ -35,7 +35,7 @@ label doctor_day1_evening:
 
     You are the first guest to arrive for this week-end event.
 
-    It's a bit early, so it may take a while before others arrive, in the meantime. Let me show you your rooms.
+    It's a bit early, so it may take a while before others arrive. In the meantime, let me show you to your rooms.
 
     You can rest there a bit, there will be drinks later in the tea room.
     """
@@ -51,7 +51,7 @@ label doctor_day1_evening:
     """
     I quickly check my pocket watch.
 
-    That would leave me at least one hour of alone time in my room.
+    That would leave me at least one hour of solitude in my room.
     
     That's perfect.
     """
@@ -63,9 +63,9 @@ label doctor_day1_evening:
     $ change_room('bedroom_doctor', dissolve)
 
     """
-    The butler show me my room first.
+    The butler shows me to my room first.
 
-    I quickly settle in. Wait for five minute for the driver to bring my bag back.
+    I quickly settle in and wait for five minutes for the driver to bring my bag back.
 
     Now I can finally relax.
     """
@@ -93,7 +93,7 @@ label doctor_day1_evening:
     """
     I am not sure how long I've been out.
 
-    It's better if I hurry downstairs so I don't look suspicious.
+    It's better if I hurry downstairs so I do not appear suspicious.
     """
 
     pause 1.0
@@ -101,7 +101,7 @@ label doctor_day1_evening:
     $ change_room('tea_room', dissolve)
 
     """
-    Well, looks like I am the first one. 
+    Well, it looks like I am the first one. 
 
     There was no reason to rush.
     """
@@ -119,7 +119,7 @@ label doctor_day1_evening:
     """
 
     broken """
-    Doctor Baldwin, we are the first ones I guess.
+    Doctor Baldwin, I suppose we are the first ones.
     """
     
     doctor """
@@ -145,7 +145,7 @@ label doctor_day1_evening:
     call change_time(16,30)
 
     """
-    Miss Marsh enters the room.
+    After a while, Miss Marsh enters the room.
     """
 
     jump work_in_progress

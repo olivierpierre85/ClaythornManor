@@ -22,21 +22,21 @@ label broken_generic_doctor_improprieties:
         """
         Well, I was not very polite here. 
         
-        I should watch what I am saying.
+        I should watch what I am saying, shouldn't I?
         """
 
     elif doctor_details.saved_variables['broken_offended'] == 1:
 
         """
-        Damn it, I did it again. I really should be careful.
+        Blast it, I did it again. I really ought to be more careful.
         """
 
     elif doctor_details.saved_variables['broken_offended'] == 2:
 
         """
-        I can't believe I was rude again.
+        I cannot believe I was rude again.
 
-        I must sound like an absolute jerk to him now.
+        I must sound like an absolute tosser to him now.
         """
 
         $ doctor_details.important_choices.unlock('broken_offended')
@@ -107,7 +107,7 @@ label broken_generic_other_guests_friday_not_offended:
 label broken_generic_weather_friday:
 
     broken """
-    It is not the ideal weather, but there is no reason to lose sleep over it.
+    It is not the ideal weather, but there is no reason to lose sleep over it, is there?
     """
 
     return
@@ -134,7 +134,7 @@ label broken_generic_background_not_offended:
     broken """
     Thank you. 
     
-    It's not saving lives but I like it well enough.
+    It is not saving lives, but I like it well enough.
     """
 
     return
@@ -188,7 +188,7 @@ label broken_generic_heroic_act:
 
     call run_menu( TimedMenu("broken_generic_heroic_act_offended", [
         TimedMenuChoice("What do you mean?", '', 20, early_exit=True),
-        TimedMenuChoice("Nod but don't engage", 'generic_cancel', 20, early_exit=True),
+        TimedMenuChoice("Nod, but don't engage", 'generic_cancel', 20, early_exit=True),
         ])
     )
 
@@ -254,7 +254,7 @@ label broken_generic_manor:
 
     call run_menu( TimedMenu("broken_generic_manor_offense", [
         TimedMenuChoice("Of course, the war changed everyone perspective", 'broken_generic_manor_offended', 20, early_exit=True),
-        TimedMenuChoice("The war didn't change much for me.", 'broken_generic_manor_not_offended', 20, early_exit=True),
+        TimedMenuChoice("The war didn't change much for me", 'broken_generic_manor_not_offended', 20, early_exit=True),
         ])
     )
 
@@ -311,7 +311,7 @@ label broken_generic_manor_not_offended:
     broken """
     Really? 
     
-    That's a rather unique perspective.
+    That is quite a unique perspective.
 
     How refreshing.
     """
