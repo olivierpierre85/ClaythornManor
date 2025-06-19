@@ -78,12 +78,12 @@ label psychic_config_menu:
 
     $ lad_generic_menu_psychic = TimedMenu("lad_generic_menu_psychic", [
         TimedMenuChoice('Tell me more about yourself.', 'lad_generic_background_psychic', 15, linked_choice ="lad_generic_heroic_act_psychic"),
-        TimedMenuChoice('Why were you invited here?', 'lad_generic_heroic_act_psychic', 20, condition = "psychic_details.saved_variables['knows_lad_background']"),
+        TimedMenuChoice('Why were you invited here?', 'lad_generic_heroic_act_psychic', 30, condition = "psychic_details.saved_variables['knows_lad_background']"),
         TimedMenuChoice('What do you think of this place?', 'lad_generic_manor', 10),
-        TimedMenuChoice('How old are you?', 'lad_generic_age_psychic', 5),
-        TimedMenuChoice('What room are you in?', 'lad_generic_room_friday', 5, condition = condition_friday),
-        TimedMenuChoice('What room are you in?', 'lad_generic_room_psychic', 5, condition = "not " + condition_friday),
-        TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_friday', 0, condition = condition_friday),
+        TimedMenuChoice('How old are you?', 'lad_generic_age_psychic', 10),
+        TimedMenuChoice('What room are you in?', 'lad_generic_room_friday', 10, condition = condition_friday),
+        TimedMenuChoice('What room are you in?', 'lad_generic_room_psychic', 10, condition = "not " + condition_friday),
+        TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_friday', 10, condition = condition_friday),
         # TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
         # TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Hunt')"),
         TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)

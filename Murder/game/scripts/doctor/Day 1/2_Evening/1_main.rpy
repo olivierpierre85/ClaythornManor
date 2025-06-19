@@ -269,13 +269,37 @@ label doctor_day1_evening:
     I look who I have on my side, it's a young man I didn't even notice before.
     """
 
+    call change_time(19, 30)
+
     $ time_left = 90 
     call run_menu(TimedMenu("doctor_day1_evening", [
-        TimedMenuChoice('Talk to Ted Harring', 'doctor_day1_dinner_lad'),
+        TimedMenuChoice("Talk to Ted Harring", 'doctor_day1_dinner_lad', early_exit=True),
         TimedMenuChoice("Just keep to yourself", 'generic_cancel', early_exit=True),
-    ], image_left = "captain", image_right = "lad"))
+    ], image_right = "lad"))
 
     $ stop_music()
+
+    call change_time(21,00, 'Dinner', 'Friday')
+
+    """
+    Finally, the dinner is over.
+
+    I barely listen to Lady Claythorn talking about meeting afterwards in the tea room, and I rush to my room.
+    """
+
+    $ change_room('bedroom_doctor')
+
+
+    """
+    After I have performed the well-rehearsed ritual, I ponder whether I should go down or stay in my room.
+    """
+
+    call run_menu(TimedMenu("doctor_day1_evening_2", [
+        TimedMenuChoice("Let's go down meet the others", 'doctor_day1_dinner_lad', early_exit=True),
+        TimedMenuChoice("Stay here, it will be more fun", 'TODO DEATH 1 OD', early_exit=True),
+    ]))
+
+
 
     jump work_in_progress
 

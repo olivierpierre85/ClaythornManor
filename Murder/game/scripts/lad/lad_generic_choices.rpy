@@ -85,6 +85,16 @@ label lad_generic_age_psychic:
 
     return
 
+label lad_generic_age:
+
+    lad """
+    I am 22 years old.
+    """
+
+    $ lad_details.description_hidden.unlock('age')
+
+    return
+
 
 label lad_generic_background_1:
 
@@ -312,32 +322,18 @@ label lad_generic_heroic_act_doctor:
 
     lad """
     I guess. But I think everyone would have done the same.
+
+    I was just in the right place at the right moment.
     """
 
     call lad_generic_heroic_act_1
 
-    psychic """
-    Don't say that. I am certain it was too late for her.
-
-    You did the only thing you could have done.
-
-    You shouldn't blame yourself.
+    doctor """
+    Gosh, that's terrible.
     """
 
     lad """
-    I guess.
-
-    But it's hard.
-
-    I still have nightmares about it.
-    """
-
-    psychic """
-    ...
-    """
-
-    """
-    I don't know what to say here.
+    Yeah.
     """
 
     $ lad_details.description_hidden.unlock('heroic_act') 
