@@ -423,8 +423,8 @@ screen info_card(item=None, item_type=None, is_small=False):
                 idle "images/info_cards/empty.png"   
             elif not item.discovered:
                 idle "images/info_cards/question_mark_bw.png"   
-                # tooltip "Hidden"
-                tooltip item.content
+                tooltip "Hidden"
+                # tooltip item.content # Use this line to debug infocards
             elif not locked: 
                 idle "images/info_cards/" + item.image_file + ".png"     
                 tooltip icon_file + item.content

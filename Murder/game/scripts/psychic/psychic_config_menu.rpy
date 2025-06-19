@@ -43,21 +43,21 @@ label psychic_config_menu:
 
     #---------------------------------------------------------------------
     # CAPTAIN
-    $ condition_captain_origin = "current_character.saved_variables['knows_captain_real_origin']"
+    $ condition_captain_origin = "all_menus[current_menu.id].choices[1].hidden"
+    $ condition_captain_origin_1 = "all_menus[current_menu.id].choices[0].hidden"
     $ captain_generic_menu_psychic = TimedMenu("captain_generic_menu_psychic", [
         # In the car ((not really a choice))
-        TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', 5, condition = "not current_character.saved_variables['knows_captain_origin']"),
-        TimedMenuChoice('I mean, where are you \"Really\" from?', 'captain_generic_origin_psychic_2', 5 , condition = "current_character.saved_variables['knows_captain_origin'] and not current_character.saved_variables['knows_captain_real_origin']" ),
+        TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', 5, condition = "not " + condition_captain_origin_1),
+        TimedMenuChoice('I mean, where are you \"Really\" from?', 'captain_generic_origin_psychic_2', 5 , condition = condition_captain_origin_1 + " and not " + condition_captain_origin ),
         # Real Generics
         TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act_psychic', 20, condition = condition_captain_origin),
         TimedMenuChoice('What do you think of this place?', 'captain_generic_manor_psychic', 10, condition = condition_captain_origin),
         TimedMenuChoice('How old are you?', 'captain_generic_age_psychic', 5, condition = condition_captain_origin),
-        TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 5, condition = condition_captain_origin + "and " + condition_friday),
-        TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = condition_captain_origin + "and " + " not " + condition_friday),
-        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_captain_origin + "and " + condition_friday_or_saturday),
+        TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 5, condition = condition_captain_origin + " and " + condition_friday),
+        TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = condition_captain_origin + " and " + " not " + condition_friday),
+        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_captain_origin + " and " + condition_friday_or_saturday),
         # exit
         TimedMenuChoice('On second thought, I\'d better not talk to him', 'generic_cancel', 0, keep_alive = True, early_exit = True, condition = condition_captain_origin )
-    
     ], image_right = "captain")
 
 
@@ -78,7 +78,7 @@ label psychic_config_menu:
 
     $ lad_generic_menu_psychic = TimedMenu("lad_generic_menu_psychic", [
         TimedMenuChoice('Tell me more about yourself.', 'lad_generic_background_psychic', 15, linked_choice ="lad_generic_heroic_act_psychic"),
-        TimedMenuChoice('Why were you invited here?', 'lad_generic_heroic_act_psychic', 30, condition = "all_menus[current_menu.id].choices[1].hidden"),
+        TimedMenuChoice('Why were you invited here?', 'lad_generic_heroic_act_psychic', 30, condition = "all_menus[current_menu.id].choices[0].hidden"),
         TimedMenuChoice('What do you think of this place?', 'lad_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'lad_generic_age_psychic', 10),
         TimedMenuChoice('What room are you in?', 'lad_generic_room_friday', 10, condition = condition_friday),

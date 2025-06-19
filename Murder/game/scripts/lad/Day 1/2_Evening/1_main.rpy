@@ -132,13 +132,16 @@ label lad_day1_evening:
     $ time_left = 20
     
     $ current_menu = TimedMenu("lad_introduction", [
-        TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 0),
+        TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 10),
         TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0),
         TimedMenuChoice('Stand awkwardly in the corner', 'generic_cancel', early_exit=True),
         ], image_left = "drunk", image_right = "psychic")
     call run_menu(current_menu)
 
     call change_time(18,30)
+
+    if not seen_tutorial_clock:
+        call tutorial_clock
 
     play sound dinner_gong
 
@@ -354,11 +357,6 @@ label lad_day1_drinks_psychic:
 
     call common_day1_drinks_lad_psychic_encounter
 
-    # Force tutorial clock before first menu
-    if not seen_tutorial_clock:
-        call change_time(18,15)
-        call tutorial_clock
-
     call psychic_generic
 
     return
@@ -383,8 +381,6 @@ label lad_day1_drinks_drunk:
     """
     He reeks of booze, and he is deeply asleep. Talking to him is useless.
     """
-    call change_time(18,15)
-    call tutorial_clock
 
     return
 
