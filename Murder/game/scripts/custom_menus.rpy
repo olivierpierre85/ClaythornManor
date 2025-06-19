@@ -57,6 +57,9 @@ label run_menu(current_menu, change_level=True):
 
         call expression selected_choice[menu_level].redirect
 
+        $ global time_left
+        $ time_left -= selected_choice[menu_level].time_spent
+
         # Change current time
         $ time_diff[menu_level] = None
         if time_left > 0 and selected_choice[menu_level].time_spent:
@@ -234,8 +237,8 @@ init -1 python:
                 selected_choice.hidden = True
                 selected_choice.already_chosen = True
                 
-            global time_left
-            time_left -= selected_choice.time_spent
+            # global time_left
+            # time_left -= selected_choice.time_spent
 
             return selected_choice
 
