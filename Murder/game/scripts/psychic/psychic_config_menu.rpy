@@ -63,6 +63,7 @@ label psychic_config_menu:
     ], image_right = "captain")
 
 
+    # TODO, make other choices for SATURDAY
     $ captain_generic_other_guests_menu_psychic = TimedMenu("captain_generic_other_guests_menu_psychic", [
         # Friday OR saturday
         TimedMenuChoice('What do you think of Samuel Manning?', 'captain_generic_drunk_friday_psychic', 5, condition = condition_friday_or_saturday ),
