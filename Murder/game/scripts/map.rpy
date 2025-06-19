@@ -199,25 +199,46 @@ screen in_game_map_menu(timed_menu):
         
         # TODO fix or remove.NOT VISIBLE at the moment, because inactive hotspot are invisible????
         ALREADY_TRIED_CHOICE = " (I already went there)" 
-
+        
         hotspots = []
+
         for room in rooms:
-            if room.floor == selected_floor:
-                new_hotspot = None
-                # TODO check if idx still needed?
-                for idx, choice in enumerate(choices): 
-                    if room.id == choice.room and choice.get_condition():
-                        if not choice.hidden:
-                            new_hotspot = Hotspot(choice.text, idx, room.area_points, room.id)
-                        else:
-                            new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, idx, room.area_points, room.id, active = False)
+            if room.floor != selected_floor:
+                continue
 
-                        # Add info if room already visited in previous run through
-                        if choice.already_chosen:
-                            new_hotspot.description = new_hotspot.description + "*"
+            new_hotspot     = None        # what we will eventually append
+            first_choice_ix = None        # remembered for the fallback case
 
-                if (new_hotspot):
-                    hotspots.append(new_hotspot)
+            for ix, choice in enumerate(choices):
+                if choice.room != room.id:
+                    continue               # not a choice for this room
+
+                # keep the index of *any* choice for the fallback
+                if first_choice_ix is None:
+                    first_choice_ix = ix
+
+                # ---------- normal, “active” branch ----------
+                if choice.get_condition():
+                    label      = choice.text if not choice.hidden else ALREADY_TRIED_CHOICE
+                    is_active  = not choice.hidden
+
+                    new_hotspot = Hotspot(label, ix, room.area_points, room.id,active=is_active)
+
+                    if choice.already_chosen:
+                        new_hotspot.description += "*"
+
+                    break                  # we found a usable choice → stop scanning
+
+            # ---------- no usable choice found ----------
+            if new_hotspot is None:
+                # treat the whole thing as “already tried”
+                # (first_choice_ix is guaranteed to exist because every room has ≥1 choice)
+                new_hotspot = Hotspot(ALREADY_TRIED_CHOICE,first_choice_ix,room.area_points, room.id,active=False)     # greyed-out / inactive
+                # if you also want to flag the underlying Choice object as “used”
+                # you can do it here:
+                # choices[first_choice_ix].hidden = True
+
+            hotspots.append(new_hotspot)
                         
 
     frame:
@@ -262,7 +283,7 @@ screen in_game_map_menu(timed_menu):
                                     action Return(hot.room)
                                 else:
                                     action None
-                                    # sensitive False
+                                    # sensitive False # Does nothing
                                 tooltip hot.description
                                 mouse "hover"
 

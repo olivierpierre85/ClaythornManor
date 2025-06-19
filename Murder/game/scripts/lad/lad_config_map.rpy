@@ -180,12 +180,13 @@ label lad_config_map:
                 room = 'bedroom_broken',
                 condition="not lad_details.observations.is_unlocked('green_liquid')"
             ),
+            # If you've already seen the liquid, you can still visit but for nothing
             TimedMenuChoice(
                 'Richard III Bedroom', 
                 'lad_day2_bedroom_broken_back', 
                 10, 
                 room = 'bedroom_broken',
-                condition="lad_details.observations.is_unlocked('green_liquid')"
+                condition="lad_details.observations.is_unlocked('green_liquid') and not all_menus[current_menu.id].choices[22].hidden"
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 

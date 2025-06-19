@@ -26,7 +26,7 @@ label lad_introduction:
     $ play_music('chill')
 
     """
-    As I approach my destination, I am reading yet another time the letter that made me come on this trip.
+    As I approach my destination, I read the letter that made me come on this trip for the 10th time.
     """
 
     letter """
