@@ -96,7 +96,7 @@ label psychic_day2_evening:
     He did seem very drunk to me during breakfast though.
     """
 
-    call psychic_day2_afternoon_bedroom
+    call psychic_day2_evening_bedroom
 
     call change_time(18,30)
 

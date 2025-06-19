@@ -31,7 +31,7 @@ label psychic_day2_evening_garden:
 # First Floor
 
 # Bedroom
-label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=5):
+label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=10):
 
     python:
         enter_text_list = [
@@ -233,7 +233,8 @@ label psychic_day2_evening_bedroom_drunk:
     Grrr, Mrrrr, Errrr
     """
 
-    """ I recognize Samuel Manning's voice, and it's clear he's too drunk to be coherent. 
+    """
+    I recognize Samuel Manning's voice, and it's clear he's too drunk to be coherent. 
     
     Since the door is locked, I decide not to interfere.
     """
