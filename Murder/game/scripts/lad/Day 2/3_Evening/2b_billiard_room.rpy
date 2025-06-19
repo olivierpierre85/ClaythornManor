@@ -17,7 +17,7 @@ label lad_day2_evening_billiard_room:
         # TODO add interaction with the butler
         $ lad_day2_evening_billiard_room_menu = TimedMenu("lad_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain'),
-            TimedMenuChoice('Talk to Sushil Sinha again', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] == True'),
+            TimedMenuChoice('Talk to Sushil Sinha again', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] == True', keep_alive = True),
             TimedMenuChoice('Go to the bar for a drink', 'lad_day2_evening_billiard_room_bar', 10, linked_choice ="lad_day2_evening_billiard_room_bar_2"),
             TimedMenuChoice('Have another drink to calm the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_details.saved_variables["day2_drinks"] == 1', linked_choice ="lad_day2_evening_billiard_room_bar_3"),
             TimedMenuChoice('Maybe a few more drinks would help', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_details.saved_variables["day2_drinks"] == 2', linked_choice ="lad_day2_evening_billiard_room_bar_4"),
@@ -37,11 +37,13 @@ label lad_day2_evening_billiard_room:
 
     return
 
+
 label lad_day2_evening_billiard_room_captain_hypothesis_cancel:
     
 
     return
     
+
 label lad_day2_evening_billiard_room_captain_hypothesis_doctor:
 
     lad """
@@ -63,6 +65,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_doctor:
     """
 
     return
+
 
 label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
 
@@ -111,6 +114,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
     """
 
     return
+
 
 label lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter:
 
@@ -189,6 +193,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter:
     #TODO: Way with words for Sushil sinha?
     return
 
+
 label lad_day2_evening_billiard_room_captain_hypothesis_broken:
 
     lad """
@@ -257,6 +262,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
 
     return
 
+
 label lad_day2_evening_billiard_room_captain_2:
 
     captain """
@@ -268,6 +274,7 @@ label lad_day2_evening_billiard_room_captain_2:
     call run_menu(lad_day2_evening_billiard_room_captain_hypothesis_menu)
 
     return
+
 
 label lad_day2_evening_billiard_room_captain:
 
@@ -371,6 +378,7 @@ label lad_day2_evening_billiard_room_captain:
 
     return
 
+
 label lad_day2_evening_billiard_room_bar:
 
     """
@@ -380,6 +388,7 @@ label lad_day2_evening_billiard_room_bar:
     $ lad_details.saved_variables["day2_drinks"] += 1
 
     return
+
 
 label lad_day2_evening_billiard_room_bar_2:
     
@@ -394,6 +403,7 @@ label lad_day2_evening_billiard_room_bar_2:
     $ lad_details.saved_variables["day2_drinks"] += 1
 
     return
+
 
 label lad_day2_evening_billiard_room_bar_3:
     
@@ -431,6 +441,7 @@ label lad_day2_evening_billiard_room_bar_3:
     $ lad_details.saved_variables["day2_drinks"] += 1
 
     return
+
 
 label lad_day2_evening_billiard_room_bar_4:
 
