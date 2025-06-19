@@ -96,8 +96,7 @@ label captain_generic_origin_psychic_1:
     """
 
     $ psychic_details.description_hidden.unlock('racist')
-    $ captain_details.description_hidden.unlock('city') 
-    $ current_character.saved_variables["knows_captain_origin"] = True
+    $ captain_details.description_hidden.unlock('city')
 
     return 
 

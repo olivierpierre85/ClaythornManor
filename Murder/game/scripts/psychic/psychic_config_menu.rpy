@@ -43,8 +43,10 @@ label psychic_config_menu:
 
     #---------------------------------------------------------------------
     # CAPTAIN
-    $ condition_captain_origin = "all_menus[current_menu.id].choices[1].hidden"
-    $ condition_captain_origin_1 = "all_menus[current_menu.id].choices[0].hidden"
+    # $ condition_captain_origin = "( all_menus[current_menu.id].choices[1].hidden or debug_activated)" # Exception for debug
+    # $ condition_captain_origin_1 = "( all_menus[current_menu.id].choices[0].hidden or debug_activated)" # Exception for debug
+    $ condition_captain_origin = "( all_menus[current_menu.id].choices[1].hidden)" 
+    $ condition_captain_origin_1 = "( all_menus[current_menu.id].choices[0].hidden)"
     $ captain_generic_menu_psychic = TimedMenu("captain_generic_menu_psychic", [
         # In the car ((not really a choice))
         TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', 5, condition = "not " + condition_captain_origin_1),

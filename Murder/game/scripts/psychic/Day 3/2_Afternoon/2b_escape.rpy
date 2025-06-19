@@ -243,7 +243,7 @@ label psychic_day3_afternoon_escape:
     """
     But I was glad he had made it anyway.
 
-    I hugged him and told him about Sushil Sinha.
+    I hugged him and told him about Captain Sinha.
 
     He replied that officers were on their way to Claythorn Manor.
 

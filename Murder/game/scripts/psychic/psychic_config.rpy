@@ -29,8 +29,6 @@ label init_psychic:
 
 
             # story var
-            "knows_captain_origin" : False,
-            "knows_captain_real_origin" : False,
             "day1_evening_billiard_room_visited" : False,
             "portrait_gallery_visited": False,
             "book_read": False,
