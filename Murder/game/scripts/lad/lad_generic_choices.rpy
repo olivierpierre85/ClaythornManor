@@ -149,8 +149,6 @@ label lad_generic_background_psychic:
 
     $ lad_details.description_hidden.unlock('job') 
 
-    $ psychic_details.saved_variables['knows_lad_background'] = True
-
     return
 
 

@@ -96,8 +96,6 @@ label nurse_generic_background:
 
     $ nurse_details.description_hidden.unlock('job') 
 
-    $ current_character.saved_variables['knows_nurse_background'] = True
-
     return
 
 label nurse_generic_heroic_act:

@@ -53,7 +53,6 @@ label doctor_generic_background:
 
     $ doctor_details.description_hidden.unlock('background')
      
-    $ current_character.saved_variables["knows_doctor_background"] = True
 
     return
 

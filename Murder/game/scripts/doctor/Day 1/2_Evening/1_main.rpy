@@ -289,7 +289,6 @@ label doctor_day1_evening:
 
     $ change_room('bedroom_doctor')
 
-
     """
     After I have performed the well-rehearsed ritual, I ponder whether I should go down or stay in my room.
     """

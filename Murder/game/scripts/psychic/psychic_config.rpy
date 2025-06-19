@@ -27,10 +27,8 @@ label init_psychic:
             "nurse_generic_menu" : nurse_generic_menu_psychic,
             "nurse_generic_other_guests_menu" : nurse_generic_other_guests_menu_psychic,
 
-            "knows_doctor_background": False,
-            
+
             # story var
-            "knows_lad_background" : False,
             "knows_captain_origin" : False,
             "knows_captain_real_origin" : False,
             "day1_evening_billiard_room_visited" : False,
@@ -39,7 +37,6 @@ label init_psychic:
             "day2_nohunt_bedroom_tries": 0,
             "day2_nohunt_has_visited_tea_room": False,
             "day2_has_seen_bedroom_broken": False,
-            "knows_nurse_background": False,
             "day2_evening_billiard_room_visited": False,
             "day2_evening_billiard_room_talk_to_captain": False,
             "day1_evening_talk_to_lad": False,

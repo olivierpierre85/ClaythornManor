@@ -38,7 +38,7 @@ label lad_config_menu:
         TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 10, condition = "current_day == 'Friday'"),
         TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 10, condition = "current_day == 'Saturday'"),
         TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20, linked_choice ="doctor_generic_heroic_act"),
-        TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 30, condition = "current_character.saved_variables['knows_doctor_background']"),
+        TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 30, condition = "all_menus[current_menu.id].choices[2].hidden"),
         TimedMenuChoice('What do you think of this place?', 'doctor_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'doctor_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'doctor_generic_room', 10),
