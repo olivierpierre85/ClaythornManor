@@ -23,7 +23,6 @@ label init_lad:
             "doctor_generic_other_guests_menu": doctor_generic_other_guests_menu_lad,
 
             "knows_doctor_background": False,
-            "knows_doctor_addict": False,
 
             "library_visited" : False,
             "portrait_gallery_visited": False,

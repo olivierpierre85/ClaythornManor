@@ -17,7 +17,7 @@ label lad_day2_evening_billiard_room:
         # TODO add interaction with the butler
         $ lad_day2_evening_billiard_room_menu = TimedMenu("lad_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain'),
-            TimedMenuChoice('Talk to Sushil Sinha again', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] == True', keep_alive = True),
+            TimedMenuChoice('Talk to Sushil Sinha again', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"]', keep_alive = True),
             TimedMenuChoice('Go to the bar for a drink', 'lad_day2_evening_billiard_room_bar', 10, linked_choice ="lad_day2_evening_billiard_room_bar_2"),
             TimedMenuChoice('Have another drink to calm the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_details.saved_variables["day2_drinks"] == 1', linked_choice ="lad_day2_evening_billiard_room_bar_3"),
             TimedMenuChoice('Maybe a few more drinks would help', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_details.saved_variables["day2_drinks"] == 2', linked_choice ="lad_day2_evening_billiard_room_bar_4"),
@@ -47,21 +47,41 @@ label lad_day2_evening_billiard_room_captain_hypothesis_cancel:
 label lad_day2_evening_billiard_room_captain_hypothesis_doctor:
 
     lad """
-    I believe Daniel Baldwin had an opium addiction.
+    I found this in Daniel Baldwin's room.
+    """
+
+    """
+    You show him the vial.
     """
 
     captain """
-    And what if he was?
+    Is that a bottle of laudanum?
+    """
 
-    Many people are, especially doctors.
-
-    Regardless, opium addicts often die of an overdose.
+    lad """
+    Yes, there were nearly a dozen like this in Daniel Baldwin's room.
     
-    Not from a gunshot to the chest.
+    Far more than he would have needed for medical purposes.
+    """
+
+    captain """
+    All right, but what do you make of that?
+    """
+
+    lad """
+    I think it's obvious he had an opium addiction.
+    """
+
+    captain """
+    Possibly, but what if he did?
+
+    Many people are addicted — especially doctors.
+
+    Regardless, opium addicts often die of an overdose, not from a gunshot to the chest.
     """
 
     """
-    Well, I don't have a response to that.
+    Well, I've no response to that.
     """
 
     return
@@ -347,7 +367,7 @@ label lad_day2_evening_billiard_room_captain:
     """
 
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu("lad_day2_evening_billiard_room_captain_hypothesis_menu", [
-        TimedMenuChoice('Reveal Daniel Baldwin\'s opium addiction{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="current_character.saved_variables['knows_doctor_addict']"),
+        TimedMenuChoice('Reveal Daniel Baldwin\'s opium addiction{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="lad_details.objects.is_unlocked('laudanum')"),
         TimedMenuChoice('Point out the strange liquid on Thomas Moody\'s room{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')"),
         TimedMenuChoice('Show the letter found in Samuel\'s Manning room{{object}}', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10, condition="lad_details.objects.is_unlocked('burned_letter')"),
         TimedMenuChoice('Question Samuel Manning\'s state of inebriation at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10),
