@@ -34,12 +34,12 @@ label init_doctor:
                 content_negative="You didn't take an extra dose of laudanum",
                 image_file="laudanum",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning'],
             ),
         ])
 
         doctor_endings = CharacterEndingList ([
-            CharacterInformation(1, "overdose", "You overdose on opioids", image_file="laudanum", chapters=['friday_evening']), 
+            CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([

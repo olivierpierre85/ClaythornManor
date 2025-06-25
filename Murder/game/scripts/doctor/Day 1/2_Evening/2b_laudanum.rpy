@@ -44,7 +44,7 @@ label doctor_laudanum_death:
     
     My eyelids grow heavy. 
 
-    The voices, the ones that have haunted me for as long, are finally quiet.
+    The voices, the ones that have oppressed me all my life, are finally quiet.
 
     All is silent now.
     """
