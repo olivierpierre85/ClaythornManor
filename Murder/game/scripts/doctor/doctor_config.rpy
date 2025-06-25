@@ -36,6 +36,14 @@ label init_doctor:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_morning'],
             ),
+            CharacterInformation(
+                0, "flirt",
+                "You flirted with the footman",
+                content_negative="You didn't flirt with the footman",
+                image_file="flirt",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
         ])
 
         doctor_endings = CharacterEndingList ([

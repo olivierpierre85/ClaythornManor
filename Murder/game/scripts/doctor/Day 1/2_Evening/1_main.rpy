@@ -306,7 +306,7 @@ label doctor_day1_evening:
 
 
     """
-    All right, where should I go first now?
+    All right, where should I go first?
     """
 
     # TODO remove after debug

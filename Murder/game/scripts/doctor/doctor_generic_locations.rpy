@@ -50,92 +50,7 @@ label doctor_attic_default:
 
     return
 
-label doctor_downstairs_default:
-
-    $ change_room("basement_stairs")
-
-    # if not doctor_details.important_choices.is_unlocked('downstairs_1'):
-
-    #     """
-    #     I was on my way to the basement when a young maid stopped me.
-    #     """
-
-    #     maid """
-    #     Hello Sir, may I help you?
-    #     """
-
-    #     lad """
-    #     Oh, don't mind me. I'm just taking a look around.
-    #     """
-
-    #     maid """
-    #     I'm sorry, but the basement is off-limits to guests.
-
-    #     However, there are plenty of rooms upstairs that you can explore.
-    #     """
-
-    #     lad """
-    #     Of course, thank you.
-    #     """
-
-    #     $ doctor_details.saved_variables["has_met_maid"] = True
-
-    #     $ doctor_details.important_choices.unlock('downstairs_1')
-
-    # elif doctor_details.important_choices.is_unlocked('downstairs_1'):
-
-    #     """
-    #     Let's see if I can check downstairs now.
-
-    #     I walk down the stairs slowly, being very careful not to attract attention.
-
-    #     But as I'm stepping down to the basement, the same woman stops me.
-    #     """
-
-    #     maid """
-    #     You again, Sir? As I already told you, I'm afraid you're not allowed to be here.
-    #     """
-
-    #     lad """
-    #     Of course, I was just lost. I'm terribly sorry.
-    #     """
-
-    #     maid """
-    #     It's alright, don't worry about it, sir.
-    #     """
-
-    #     """
-    #     I'd better be careful. If I'm caught here a third time, it will really start to look suspicious.
-    #     """
-
-    #     $ doctor_details.important_choices.unlock('downstairs_2')
-
-    # elif doctor_details.important_choices.is_unlocked('downstairs_2'):
-
-    #     """
-    #     Maybe I'm pushing my luck, trying to go downstairs, but I feel like I have to go there.
-    #     """
-
-    #     maid """
-    #     Mister Harring? I thought I made myself clear earlier.
-
-    #     What are you trying to do here?
-
-    #     You can't possibly make me believe that you got lost again?
-    #     """
-
-    #     call run_menu(
-    #         TimedMenu("doctor_has_try_sneaking_downstairs", [
-    #             # TimedMenuChoice("I know it sounds ridiculous, but I DID get lost again", 'doctor_downstairs_lost', 5, early_exit=True),
-    #             TimedMenuChoice("Zzzzzz (Pretend you're sleepwalking)", 'doctor_downstairs_sleepwalk', 10, early_exit=True),
-    #             TimedMenuChoice("Actually, I just wanted to talk to you (flirt your way out)", 'doctor_downstairs_flirt', 10, early_exit=True),
-    #         ])
-    #     )
-
-    #     $ doctor_details.important_choices.unlock('downstairs_3')
-
-    return
-
+# label doctor_downstairs_default:
 
 
 label doctor_garden_default:
@@ -153,11 +68,7 @@ label doctor_garden_default:
     return
 
 
-label doctor_garage_default:
 
-    call doctor_downstairs_default
-
-    return
 
 
 label doctor_tea_room_default:
@@ -249,6 +160,10 @@ label doctor_scullery_default:
     return
 
 label doctor_gun_room_default:
+    call doctor_downstairs_default
+    return
+
+label doctor_garage_default:
     call doctor_downstairs_default
     return
 

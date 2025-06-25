@@ -21,10 +21,10 @@ label doctor_config_map:
             TimedMenuChoice(default_room_text('manor_garden'), 'doctor_day1_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'doctor_day1_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'doctor_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day1_evening_kitchen', 10, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'doctor_day1_evening_scullery', 10, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_garage', 10, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_gun_room', 10, room='gun_room'),
+            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day1_evening_kitchen', 0, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'doctor_day1_evening_scullery', 0, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_garage', 0, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_gun_room', 0, room='gun_room'),
             # Specific actions
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
