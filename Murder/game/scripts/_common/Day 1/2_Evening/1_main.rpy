@@ -20,7 +20,7 @@ label common_day1_evening_host_welcome_speech:
 
     During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
 
-    My second gift is a sum of eight thousand pounds, to be shared among you. 
+    My second gift is a sum of one thousand pounds, to be shared among you. 
     
     This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
     """

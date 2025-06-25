@@ -152,6 +152,8 @@ label psychic_attic_return_too_soon:
 
 label psychic_attic_return:
 
+    # TODO: Back down of the attic (psychic_attic_return)=> should hide all other rooms. BUT only for current menu (possible 3 days, so we need on if)
+
     $ change_room("attic_hallway")
 
     """
@@ -198,9 +200,10 @@ label psychic_library_look_for_lord:
     I find multiple entries for families with the name Claythorn.
     """
 
-    $ psychic_details.saved_variables['book_read'] == True
+    $ psychic_details.saved_variables['book_read'] = True
 
     return
+
 
 label psychic_library_look_for_lord_succeed:
 

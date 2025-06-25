@@ -227,7 +227,11 @@ screen in_game_map_menu(timed_menu):
                     if choice.already_chosen:
                         new_hotspot.description += "*"
 
-                    break                  # we found a usable choice → stop scanning
+                    # break                  # we found a usable choice → stop scanning
+                    # WE DON't brake, which means we take the last one with good condition PROBLEM when the order
+                    # is not correct
+                    # 
+
 
             # ---------- no usable choice found ----------
             if new_hotspot is None:

@@ -129,7 +129,7 @@ label psychic_introduction:
     """
 
     footman """
-    Hello, sir. Are you Mr. Manning?
+    Hello, sir. Are you going to Claythorn Manor?
     """
 
     drunk """ 
@@ -137,11 +137,11 @@ label psychic_introduction:
     """
 
     footman """
-    Perfect, that's everyone who was supposed to be on this train.
+    Perfect, that should be everyone.
     
     You can follow me to the car, and we'll be on our way.
 
-    It should take about an hour to reach the manor.
+    It will take about an hour to reach the manor.
     """
 
     $ change_room("inside_car")
