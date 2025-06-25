@@ -124,8 +124,8 @@ label broken_generic_background:
     $ broken_details.description_hidden.unlock('job') 
         
     call run_menu( TimedMenu("broken_generic_background_offense", [
-        TimedMenuChoice("That's a very noble profession", 'broken_generic_background_not_offended', 10, early_exit=True),
         TimedMenuChoice("Did you have to change profession because of the war?", 'broken_generic_background_offended_1', 0, early_exit=True),
+        TimedMenuChoice("That's a very noble profession", 'broken_generic_background_not_offended', 10, early_exit=True),
         ])
     )
 

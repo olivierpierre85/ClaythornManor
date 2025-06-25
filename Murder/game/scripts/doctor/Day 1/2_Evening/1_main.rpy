@@ -209,7 +209,7 @@ label doctor_day1_evening:
     """
 
     doctor """
-    Indeed, it's impressive that  ...
+    Indeed, it's impressive that...
     """
 
     captain """
@@ -217,7 +217,7 @@ label doctor_day1_evening:
 
     He was my superior but I swear I never saw him sober.
 
-    Even in the morning he always was still drunk from the day before.
+    Even in the morning he was always still drunk from the day before.
 
     And...
     """
@@ -279,7 +279,7 @@ label doctor_day1_evening:
 
     $ stop_music()
 
-    call change_time(21,00, 'Dinner', 'Friday')
+    call change_time(21,00)
 
     """
     Finally, the dinner is over.
@@ -293,14 +293,40 @@ label doctor_day1_evening:
     After I have performed the well-rehearsed ritual, I ponder whether I should go down or stay in my room.
     """
 
-    call run_menu(TimedMenu("doctor_day1_evening_2", [
-        TimedMenuChoice("Let's go down meet the others", 'doctor_day1_dinner_lad', early_exit=True),
-        TimedMenuChoice("Stay here, it will be more fun", 'TODO DEATH 1 OD', early_exit=True),
+    call change_time(21,30)
+
+    $ time_left = 90
+
+    $ play_music('upbeat', 2)
+
+    call run_menu(TimedMenu("doctor_day1_evening_3", [
+        TimedMenuChoice("Let's go down and meet the others", 'generic_cancel', early_exit=True),
+        TimedMenuChoice("Stay here—this might be more... enjoyable", 'doctor_day1_laudanum_1', 60, early_exit=True),
     ]))
 
 
+    """
+    All right, where should I go first now?
+    """
 
-    jump work_in_progress
+    # TODO remove after debug
+    $ time_left = 666
+
+    call run_menu(doctor_details.saved_variables["day1_evening_map_menu"])
+
+    call change_time(23,00)
+
+    $ stop_music()
+
+    """
+    That is quite enough for one day.
+
+    I am exhausted. It is time to go and relax.
+    """
+
+    $ change_room('bedroom_doctor')
+
+    jump doctor_day2_morning
 
 
 label doctor_day1_dinner_lad:

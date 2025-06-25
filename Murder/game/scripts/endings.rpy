@@ -66,8 +66,6 @@ label ending_generic:
             show_tutorial_unlock_character = False
             renpy.call('tutorial_unlock_character')
 
-
-
     hide screen centered_text
 
     jump character_selection

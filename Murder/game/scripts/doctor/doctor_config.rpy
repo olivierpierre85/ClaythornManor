@@ -1,6 +1,6 @@
 label init_doctor:
 
-    # call doctor_config_map
+    call doctor_config_map
     
     call doctor_config_menu
 
@@ -11,6 +11,9 @@ label init_doctor:
         doctor_name = "Daniel Baldwin"
         # Story Variables
         doctor_init_variables = {
+            # MAP Menus
+            "day1_evening_map_menu" : doctor_day1_evening_map_menu,
+
             "broken_generic_menu": broken_generic_menu_doctor,
             "lad_generic_menu" : lad_generic_menu_doctor,
             "broken_offended": 0,
@@ -25,6 +28,18 @@ label init_doctor:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
+            CharacterInformation(
+                0, "laudanum_extra_1",
+                "You took an extra dose of laudanum",
+                content_negative="You didn't take an extra dose of laudanum",
+                image_file="laudanum",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
+        ])
+
+        doctor_endings = CharacterEndingList ([
+            CharacterInformation(1, "overdose", "You overdose on opioids", image_file="laudanum", chapters=['friday_evening']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([
@@ -63,7 +78,7 @@ label init_doctor:
             description_long = doctor_description_full,
             description_hidden = doctor_extra_information,
             important_choices = doctor_important_choices,
-            endings = CharacterInformationList([]),
+            endings = doctor_endings,
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
             progress = doctor_progress,
