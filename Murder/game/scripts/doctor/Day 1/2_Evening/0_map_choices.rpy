@@ -17,13 +17,15 @@ label doctor_day1_evening_gun_room:
     return
 
 label doctor_day1_evening_downstairs_default:
-        
-    call doctor_downstairs_day1
+
     # Hide all downstairs choices for the current menu
     $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
     $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
     $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
     $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
+        
+    call doctor_downstairs_day1
+
     return
 
 

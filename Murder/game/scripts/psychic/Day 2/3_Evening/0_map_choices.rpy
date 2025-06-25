@@ -1,13 +1,13 @@
 # Downstairs
 label psychic_day2_evening_downstairs_default:
 
-    call psychic_downstairs_default
-
     # Hide all downstairs choices for the current menu
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
+
+    call psychic_downstairs_default
 
     return
 
@@ -245,22 +245,27 @@ label psychic_day2_evening_bedroom_drunk:
 
 # Attic
 label psychic_day2_evening_attic_default:
-        
-    call psychic_attic_default
+
     # Hide all downstairs choices for the current menu
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
+        
+    call psychic_attic_default
+
     return
+
 
 label psychic_day2_evening_attic_return_too_soon:
 
-    call psychic_attic_return_too_soon
     # Hide all upstairs choices for the current menu
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
     $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
+
+    call psychic_attic_return_too_soon
+
 
     return

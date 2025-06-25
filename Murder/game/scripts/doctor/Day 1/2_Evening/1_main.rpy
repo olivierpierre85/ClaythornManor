@@ -326,6 +326,21 @@ label doctor_day1_evening:
 
     $ change_room('bedroom_doctor')
 
+
+    if doctor_details.important_choices.is_unlocked('flirt'):
+
+        """
+        I barely have time to settle in my room that I hear someone knocking.
+        """
+
+        play sound door_knock
+
+        footman """
+        Doctor Baldwin?
+        """
+
+        # TODO write rest of scene
+
     jump doctor_day2_morning
 
 
