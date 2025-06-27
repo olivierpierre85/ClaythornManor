@@ -543,8 +543,8 @@ screen progress_details(selected_chapter, selected_char, ending = False, is_curr
                                                 if current_checkpoint == checkpoint:
                                                     text_color gui.accent_color
                                             hbox:
-                                            # NOw gets all the choices
-                                                for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, current_checkpoint and current_checkpoint.label_id == "current"):
+                                            # NOw gets all the choices activated for this checkpoint
+                                                for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name):
                                                     if item.text_id in checkpoint.get_activated_choices_and_discoveries():
                                                         use info_card(item, item.type, True)
                     
