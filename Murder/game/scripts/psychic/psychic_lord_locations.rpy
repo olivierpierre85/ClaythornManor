@@ -207,6 +207,8 @@ label psychic_library_look_for_lord:
 
 label psychic_library_look_for_lord_succeed:
 
+    $ change_room('library') 
+
     if psychic_details.saved_variables['book_read'] == False:
         
         call psychic_library_look_for_lord
@@ -271,6 +273,8 @@ label psychic_library_look_for_lord_succeed:
 
 
 label psychic_library_look_for_lord_failed:
+
+    $ change_room('library') 
 
     call psychic_library_look_for_lord
 

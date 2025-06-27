@@ -11,7 +11,7 @@ label psychic_config_map:
         attic_default = "not psychic_details.observations.is_unlocked('lord_age')"
         attic_return = "psychic_details.observations.is_unlocked('lord_age')"
 
-        attic_return_too_soon = "psychic_details.observations.is_unlocked('visited_attic') and not psychic_details.observations.is_unlocked('lord')"
+        attic_return_too_soon = "psychic_details.observations.is_unlocked('visited_attic') and not psychic_details.observations.is_unlocked('lord_age')"
 
         lord_choices = [
             TimedMenuChoice(default_room_text('library'), 'psychic_library_default', 10, room='library', condition=attic_not_visited),
@@ -23,7 +23,7 @@ label psychic_config_map:
             TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='storage', condition=attic_return),
             TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='males_room', condition=attic_return),
             TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='females_room', condition=attic_return),
-            TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='butler_room', condition=attic_return),     
+            TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='butler_room',condition=attic_return),     
         ]
 
         # -------------------------
