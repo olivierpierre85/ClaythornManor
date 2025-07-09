@@ -4,6 +4,7 @@ label captain_generic_other_guests:
 
     return
 
+
 label captain_generic_other_guests_friday:
 
     captain """
@@ -17,6 +18,20 @@ label captain_generic_other_guests_friday:
     call captain_generic_other_guests
 
     return
+
+
+label captain_generic_other_guests_saturday:
+
+    captain """
+    I guess we can talk a bit about the other guests.
+
+    Who in particular?
+    """
+
+    call captain_generic_other_guests
+
+    return
+
 
 label captain_generic_drunk_friday_psychic:
 
@@ -33,6 +48,7 @@ label captain_generic_drunk_friday_psychic:
         """
 
     return
+
 
 label captain_generic_host_friday_psychic:
 
@@ -72,6 +88,7 @@ label captain_generic_host_friday_psychic:
 
     return
 
+
 label captain_generic_nurse_friday:
 
     captain """
@@ -85,6 +102,7 @@ label captain_generic_nurse_friday:
     $ nurse_details.description_hidden.unlock('clothes')
 
     return
+
 
 label captain_generic_broken_friday:
 
@@ -130,6 +148,7 @@ label captain_generic_broken_friday:
 
     return
 
+
 label captain_generic_lad_friday_psychic:
 
     captain """
@@ -155,6 +174,7 @@ label captain_generic_lad_friday_psychic:
     $ lad_details.description_hidden.unlock('poor')
 
     return
+
 
 label captain_generic_doctor_friday:
 

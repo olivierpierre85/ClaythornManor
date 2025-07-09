@@ -120,7 +120,7 @@ label psychic_config_map:
             TimedMenuChoice(
                 'Meet Rosalind Marsh in the Tea Room', 
                 'psychic_day2_hunt_tea_room', 
-                120, 
+                150, 
                 room = 'tea_room'
             ),
             # Not needed right now

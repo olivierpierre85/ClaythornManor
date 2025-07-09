@@ -38,6 +38,7 @@ label psychic_day1_evening_billiard_room:
     
     return
 
+
 label psychic_day1_evening_billiard_room_doctor:
     
     psychic """
@@ -53,6 +54,7 @@ label psychic_day1_evening_billiard_room_doctor:
     call doctor_generic
 
     return
+
 
 label psychic_day1_evening_billiard_room_group:
 
@@ -71,6 +73,7 @@ label psychic_day1_evening_billiard_room_group:
     """
 
     return
+
 
 label psychic_day1_evening_billiard_room_bar:
 

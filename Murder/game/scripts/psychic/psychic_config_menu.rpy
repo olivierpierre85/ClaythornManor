@@ -43,10 +43,9 @@ label psychic_config_menu:
 
     #---------------------------------------------------------------------
     # CAPTAIN
-    # $ condition_captain_origin = "( all_menus[current_menu.id].choices[1].hidden or debug_activated)" # Exception for debug
-    # $ condition_captain_origin_1 = "( all_menus[current_menu.id].choices[0].hidden or debug_activated)" # Exception for debug
-    $ condition_captain_origin = "( all_menus[current_menu.id].choices[1].hidden)" 
-    $ condition_captain_origin_1 = "( all_menus[current_menu.id].choices[0].hidden)"
+
+    $ condition_captain_origin = "( all_menus[current_menu.id].choices[1].hidden or current_chapter != 'friday_afternoon')" #add chapter filter for debugs
+    $ condition_captain_origin_1 = "( all_menus[current_menu.id].choices[0].hidden or current_chapter != 'friday_afternoon')" #add chapter filter for debugs
     $ captain_generic_menu_psychic = TimedMenu("captain_generic_menu_psychic", [
         # In the car ((not really a choice))
         TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', 5, condition = "not " + condition_captain_origin_1),
@@ -57,21 +56,28 @@ label psychic_config_menu:
         TimedMenuChoice('How old are you?', 'captain_generic_age_psychic', 5, condition = condition_captain_origin),
         TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 5, condition = condition_captain_origin + " and " + condition_friday),
         TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = condition_captain_origin + " and " + " not " + condition_friday),
-        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_captain_origin + " and " + condition_friday_or_saturday),
+        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_captain_origin + " and " + condition_friday),
+        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday', 0, condition = condition_captain_origin + " and " + condition_saturday),
         # exit
         TimedMenuChoice('On second thought, I\'d better not talk to him', 'generic_cancel', 0, keep_alive = True, early_exit = True, condition = condition_captain_origin )
     ], image_right = "captain")
 
 
-    # TODO, make other choices for SATURDAY
     $ captain_generic_other_guests_menu_psychic = TimedMenu("captain_generic_other_guests_menu_psychic", [
-        # Friday OR saturday
-        TimedMenuChoice('What do you think of Samuel Manning?', 'captain_generic_drunk_friday_psychic', 5, condition = condition_friday_or_saturday ),
-        TimedMenuChoice('What do you think of Lady Claythorn?', 'captain_generic_host_friday_psychic', 5, condition = condition_friday_or_saturday),
-        TimedMenuChoice('What do you think of Rosalind Marsh?', 'captain_generic_nurse_friday', 5, condition = condition_friday_or_saturday),        
-        TimedMenuChoice('What do you think of Thomas Moody?', 'captain_generic_broken_friday', 20, condition = condition_friday_or_saturday),
-        TimedMenuChoice('What do you think of Ted Harring?', 'captain_generic_lad_friday_psychic', 10, condition = condition_friday_or_saturday),
-        TimedMenuChoice('What do you think of Daniel Baldwin?', 'captain_generic_doctor_friday', 5, condition = condition_friday_or_saturday),
+        # Friday 
+        TimedMenuChoice('What do you think of Samuel Manning?', 'captain_generic_drunk_friday_psychic', 10, condition = condition_friday ),
+        TimedMenuChoice('What do you think of Lady Claythorn?', 'captain_generic_host_friday_psychic', 10, condition = condition_friday),
+        TimedMenuChoice('What do you think of Rosalind Marsh?', 'captain_generic_nurse_friday', 10, condition = condition_friday),        
+        TimedMenuChoice('What do you think of Thomas Moody?', 'captain_generic_broken_friday', 20, condition = condition_friday),
+        TimedMenuChoice('What do you think of Ted Harring?', 'captain_generic_lad_friday_psychic', 10, condition = condition_friday),
+        TimedMenuChoice('What do you think of Daniel Baldwin?', 'captain_generic_doctor_friday', 10, condition = condition_friday),
+        # Saturday
+        TimedMenuChoice('What do you think of Samuel Manning?', 'captain_generic_drunk_saturday_psychic', 10, condition = condition_saturday ),
+        TimedMenuChoice('What do you think of Lady Claythorn?', 'captain_generic_host_saturday_psychic', 10, condition = condition_saturday),
+        TimedMenuChoice('What do you think of Rosalind Marsh?', 'captain_generic_nurse_saturday', 10, condition = condition_saturday),        
+        TimedMenuChoice('What do you think of Thomas Moody?', 'captain_generic_broken_saturday', 20, condition = condition_saturday),
+        TimedMenuChoice('What do you think of Ted Harring?', 'captain_generic_lad_saturday_psychic', 10, condition = condition_saturday),
+        TimedMenuChoice('What do you think of Daniel Baldwin?', 'captain_generic_doctor_saturday', 10, condition = condition_saturday),
         # Always Generic 
         TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "captain")
