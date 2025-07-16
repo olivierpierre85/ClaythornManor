@@ -171,9 +171,9 @@ label doctor_day1_evening_library:
     """
 
     call run_menu(TimedMenu("doctor_library_default", [
-        TimedMenuChoice('Take "The Mysterious Affair at Styles" by Agatha Christie', 'doctor_library_book_mystery', early_exit=True),
+        TimedMenuChoice('Take "The Mysterious Affair at Styles" by Agatha Christie', 'doctor_day1_evening_book_mystery', early_exit=True),
         TimedMenuChoice('Take "Confessions of an English Opium-Eater" by Thomas De Quincey', 'doctor_day1_evening_library_book_opium', early_exit=True),
-        TimedMenuChoice("No, on second thought, I'd better not take anything", 'generic_cancel', early_exit=True),
+        TimedMenuChoice("On second thought, I'd better not take anything", 'generic_cancel', early_exit=True),
     ]))
 
     #TODO: Other possibilities OR for someone else (nurse?)

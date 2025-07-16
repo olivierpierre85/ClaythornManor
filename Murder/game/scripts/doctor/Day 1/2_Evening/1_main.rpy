@@ -358,13 +358,17 @@ label doctor_day1_evening:
         It's not too late yet, so I can read the book I took from the library before sleeping.
         """
 
-        call wait_screen_transition()
-
         if doctor_details.objects.is_unlocked('book_mystery'):
 
             """
             "The Mysterious Affair at Styles"
 
+            Let's see.
+            """
+
+            call wait_screen_transition()
+
+            """
             It's an interesting mystery book.
             
             I especially like how accurately the effect of the poison, the murder weapon, is described.
@@ -372,13 +376,13 @@ label doctor_day1_evening:
             You can really tell that the writer has medical training.
             """
 
-            call wait_screen_transition()
-
             """
-            When I am tired of reading, I set the book aside and doze off.
+            But I am tired of reading.
+            
+            I set the book aside and doze off.
             """
 
-            call change_time(0,30)
+            call change_time(0,30, 'Morning', 'Saturday', hide_minutes=True)
 
         else:
 
@@ -392,7 +396,7 @@ label doctor_day1_evening:
 
             call wait_screen_transition()
 
-            call change_time(3,30)
+            call change_time(3,30, 'Morning', 'Saturday', hide_minutes=True)
 
             """
             It must be very late now, but I think it was worth it.

@@ -107,7 +107,7 @@ label init_doctor:
             important_choices = doctor_important_choices,
             endings = doctor_endings,
             observations = CharacterInformationList([]),
-            objects = CharacterInformationList([]),
+            objects = doctor_objects,
             progress = doctor_progress,
             saved_variables = copy.deepcopy(doctor_init_variables),
             test_checkpoints = doctor_test_checkpoints,
