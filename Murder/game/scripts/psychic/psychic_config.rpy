@@ -93,6 +93,14 @@ label init_psychic:
                 chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_morning'],
             ),
+            CharacterInformation(
+                1, "nurse_sick",
+                "You noticed blood on Rosalind Marsh's handkerchief",
+                content_negative="You didn't notice blood on Rosalind Marsh's handkerchief",
+                image_file="blood_handkerchief",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
         ])
 
         psychic_endings = CharacterEndingList ([

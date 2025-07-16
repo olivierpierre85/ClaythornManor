@@ -146,6 +146,10 @@ label psychic_config_map:
         ] + copy.deepcopy(lord_choices), 
         is_map = True)
 
+
+        # -------------------------
+        # Saturday Evening
+        # ------------------------- 
         psychic_day2_evening_map_menu = TimedMenu("psychic_day2_evening_map_menu", [
             # Downstairs
             TimedMenuChoice(default_room_text('kitchen'), 'psychic_day2_evening_downstairs_default', 10, room='kitchen'),
@@ -182,13 +186,12 @@ label psychic_config_map:
                 keep_alive = True, 
             ),
 
-            # TimedMenuChoice(
-            #     default_room_text('bedroom_nurse'),
-            #     'psychic_day2_no_hunt_bedroom_nurse',
-            #     20, 
-            #     room='bedroom_nurse',
-            #     condition = "not psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
-            # ),
+            TimedMenuChoice(
+                default_room_text('bedroom_nurse'),
+                'psychic_day2_evening_bedroom_nurse',
+                20, 
+                room='bedroom_nurse',
+            ),
 
             TimedMenuChoice(
                 'Wait in your room for Ted Harring', 

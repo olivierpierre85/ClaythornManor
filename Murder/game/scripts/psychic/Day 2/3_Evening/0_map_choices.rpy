@@ -137,8 +137,6 @@ label psychic_day2_evening_bedroom_doctor:
     return
 
 
-
-# Nurse - There. Coughing 2?
 label psychic_day2_evening_bedroom_nurse:
 
     $ change_room("bedrooms_hallway")
@@ -160,7 +158,7 @@ label psychic_day2_evening_bedroom_nurse:
     psychic """
     It's Amelia Baxter.
 
-    Are you alright?
+    Are you all right?
 
     Perhaps we could have a chat?
     """
@@ -168,19 +166,117 @@ label psychic_day2_evening_bedroom_nurse:
     nurse """
     I am sorry, Miss Baxter, but I am very tired tonight.
 
-    Unless it's very important, I would prefer to wait until tomorrow.
+    Unless it is very important, I would prefer to wait until tomorrow.
     """
 
-    psychic """
-    No, it can wait, of course. Good night, Miss Marsh.
-    """
+    if psychic_details.observations.is_unlocked('nurse_sick'):
 
-    nurse """
-    Good night, Miss Baxter.
-    """
+        call run_menu(TimedMenu("psychic_day2_evening_bedroom_nurse", [
+            TimedMenuChoice("Insist, there is clearly something wrong with her", 'psychic_day2_evening_bedroom_nurse_insist', 30, early_exit=True),
+            TimedMenuChoice("Do not push any further", 'psychic_day2_evening_bedroom_nurse_ignore', 10, early_exit=True), 
+        ]))
+
+    else:
+
+        call psychic_day2_evening_bedroom_nurse_ignore
 
     return
 
+
+label psychic_day2_evening_bedroom_nurse_insist:
+
+    psychic """
+    I am afraid it is urgent.
+
+    Could you let me in? It shan't take long.
+    """
+
+    nurse """
+    All right then, come on in.
+    """
+
+    $ change_room("bedroom_nurse")
+
+    nurse """
+    What can I do for you?
+    """
+
+    psychic """
+    Nothing, it's more the other way round.
+
+    I am sorry, I do not mean to intrude, but I noticed a trace of blood.
+
+    I was wondering if there was anything I could do to help you.
+    """
+
+    nurse """
+    Well, I suppose I could not have hidden it forever.
+
+    I have been told I am suffering from consumption.
+    """
+
+    play sound woman_cough
+
+    """
+    She let out another strong cough.
+    """
+
+    psychic """
+    I am so sorry.
+
+    When did you find out?
+    """
+
+    nurse """
+    A couple of years ago.
+
+    And if I trust my doctor, I probably don't have more than another year left in me.
+    """
+
+    psychic """
+    My goodness, how horrible.
+
+    Could I help you with anything?
+    """
+
+    nurse """
+    There is nothing to be done.
+
+    I have just taken my medicine for the night. 
+    
+    That usually helps me sleep.
+
+    I can feel it has started working, so I shall retire to bed.
+
+    You should go now, I do not want to contaminate you.
+
+    But thank you for your concern anyway.
+    """
+    
+    psychic """
+    Of course, have a good night.
+    """
+
+    nurse """
+    Thanks, good night.
+    """  
+
+    $ nurse_details.description_hidden.unlock('sick')
+
+    return
+
+
+label psychic_day2_evening_bedroom_nurse_ignore:
+
+    psychic """
+    No, it can wait for now, of course. Goodnight, Miss Marsh.
+    """
+
+    nurse """
+    Goodnight, Miss Baxter.
+    """
+
+    return
 
 # Captain - In the billiard room
 label psychic_day2_evening_bedroom_captain:

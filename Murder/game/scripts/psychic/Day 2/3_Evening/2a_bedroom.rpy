@@ -105,8 +105,6 @@ label psychic_day2_evening_bedroom_nurse_busy:
     She's worse than she wants to show.
     """
 
-    $ nurse_details.description_hidden.unlock('sick')
-
     nurse """
     Well, I should go now.
     """
@@ -114,8 +112,12 @@ label psychic_day2_evening_bedroom_nurse_busy:
     """
     She is obviously not comfortable with the situation.
 
-    I shouldn't press her.
+    I shouldn't press her right now.
+
+    But maybe we could talk about it later.
     """
+
+    $ psychic_details.observations.unlock('nurse_sick')
 
     psychic """
     Of course, sorry for bothering you.
@@ -126,7 +128,7 @@ label psychic_day2_evening_bedroom_nurse_busy:
     """
     I return to my room to rest.
 
-    Not much later, the gong rings.
+    But very quickly, the gong rings.
     """
 
     call change_time(18,30)
@@ -134,7 +136,7 @@ label psychic_day2_evening_bedroom_nurse_busy:
     play sound dinner_gong
 
     """
-    Well, I'd better join the others downstairs.
+    I guess I'd better join the others downstairs.
     """    
     
     return
