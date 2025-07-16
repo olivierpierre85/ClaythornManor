@@ -134,6 +134,7 @@ screen custom_choice(custom_menu):
     vbox:
         for idx, choice in enumerate(custom_menu.choices):
 
+            # Only show if not hidden and condition is met
             if not choice.hidden and choice.get_condition():
 
                 # Add the icons based on markers
@@ -146,11 +147,19 @@ screen custom_choice(custom_menu):
                 else:
                     $ btn_text = choice.text
 
+                # Visual feedback for completed choices
                 if choice.is_completed():
-                    textbutton btn_text:
+                    textbutton btn_text + " {image=images/ui/checkmark.png}":
                         mouse "hover"
-                        action Return(idx)
+                        action None
                         text_color gui.insensitive_color
+                # Visual feedback for locked choices (if you have a lock condition, e.g. choice.locked)
+                # elif getattr(choice, 'locked', False):
+                #     textbutton btn_text + " {image=images/ui/lock_icon.png}":
+                #         mouse "hover"
+                #         action None
+                #         text_color gui.insensitive_color
+                #         insensitive True
                 else:
                     textbutton btn_text:
                         mouse "hover" 
