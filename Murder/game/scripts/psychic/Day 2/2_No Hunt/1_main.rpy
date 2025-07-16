@@ -35,7 +35,7 @@ label psychic_day2_no_hunt:
 
     We've agreed to meet shortly for luncheon in the tea room.
 
-    Before that, I went to my quarters to change.
+    Before that, I am going to my quarters to change.
 
     Now, what should I do next?
     """
