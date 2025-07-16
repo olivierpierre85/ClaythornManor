@@ -41,11 +41,48 @@ label captain_generic_drunk_friday_psychic:
     There's not much to say that you haven't already noticed yourself.
     """
 
-    if current_character.text_id == "psychic":
+    """
+    I guess he's right about that.
+    """
 
-        """
-        I guess he's right about that.
-        """
+    return
+
+
+label captain_generic_drunk_saturday_psychic:
+
+    captain """
+    I can't believe we gave him a gun.
+
+    Anyone could have seen he was drunk more often than not.
+
+    In hindsight, this tragedy ought to have been avoided.
+    """
+
+    psychic """
+    What do you think will happen to him?
+    """
+
+    captain """
+    I can't say for certain.
+
+    He could be charged with manslaughter by negligence and face prison time.
+
+    Or he might be acquitted, if the death is ruled an accident.
+    """
+
+    psychic """
+    Really? He could just walk free after all this?
+    """
+
+    captain """
+    That depends on how the situation is presented to the police—
+
+    and more importantly, on his connections.
+
+    If he were a prominent aristocrat, I've no doubt he could sweep it all under the rug.
+
+    But I don't believe that'll be the case for our friend.
+    """
 
     return
 
@@ -144,6 +181,37 @@ label captain_generic_broken_friday:
         Well, that was another tedious speech.
 
         That's my fault for asking I suppose.
+        """
+
+    return
+
+
+label captain_generic_broken_saturday:
+
+    captain """
+    What can I say, other than the obvious?
+
+    It's a shame he died like that.
+
+    Then again, perhaps he was in a great deal of pain from his injuries.
+
+    If so, he might have welcomed death as a release.
+    """
+
+    if current_character.text_id == "psychic":
+
+        psychic """
+        You don't think there was anything odd about his death?
+        """
+
+        captain """
+        Not really, no. If there had been, Doctor Baldwin would've said something.
+
+        I believe Thomas Moody died a natural death.
+        """
+
+        psychic """
+        I suppose you're right.
         """
 
     return
