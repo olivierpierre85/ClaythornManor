@@ -46,6 +46,25 @@ label init_doctor:
             ),
         ])
 
+        doctor_objects = CharacterObjectList([
+            CharacterInformation(
+                1, "book_mystery",
+                'You took "The Mysterious Affair at Styles" from the library',
+                content_negative='You didn\'t take "The Mysterious Affair at Styles" from the library',
+                image_file="book_mystery",
+                chapters=['friday_evening'],
+                relevant_chapters=['saturday_morning'],
+            ),
+            CharacterInformation(
+                2, "book_opium",
+                'You took "Confessions of an English Opium-Eater" from the library',
+                content_negative='You didn\'t take "Confessions of an English Opium-Eater" from the library',
+                image_file="book_opium",
+                chapters=['friday_evening'],
+                relevant_chapters=['saturday_morning'],
+            ),
+        ])
+
         doctor_endings = CharacterEndingList ([
             CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
         ])

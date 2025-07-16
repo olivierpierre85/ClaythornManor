@@ -87,7 +87,7 @@ label broken_generic_other_guests_friday_offended:
     """
 
     """
-    He may not say anything, he understands very well what I meant.
+    He may not say anything, but he understands very well what I meant.
     """
 
     call broken_generic_doctor_improprieties

@@ -145,7 +145,78 @@ label doctor_downstairs_apologize:
 
 # First Floor
 label doctor_day1_evening_library:
-    call doctor_library_default
+
+    $ change_room('library')
+
+    """
+    That is a well-furnished library.
+
+    It's been a while since I've seen that many books.
+
+    There is one already opened on a desk.
+
+    "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
+
+    That sounds tedious.
+
+    But maybe I can borough something else to read later in my room?
+
+    I'm sure our host won't mind.
+    """
+
+    call wait_screen_transition()
+
+    """
+    I looked around for a book that might be of interest, and found a couple of options.
+    """
+
+    call run_menu(TimedMenu("doctor_library_default", [
+        TimedMenuChoice('Take "The Mysterious Affair at Styles" by Agatha Christie', 'doctor_library_book_mystery', early_exit=True),
+        TimedMenuChoice('Take "Confessions of an English Opium-Eater" by Thomas De Quincey', 'doctor_day1_evening_library_book_opium', early_exit=True),
+        TimedMenuChoice("No, on second thought, I'd better not take anything", 'generic_cancel', early_exit=True),
+    ]))
+
+    #TODO: Other possibilities OR for someone else (nurse?)
+
+        # 2. "The Tenant of Wildfell Hall" by Anne Brontë (1848)
+        # Type: Novel
+
+        # Addiction: Alcoholism
+
+        # Summary: Features a strong female protagonist who flees an abusive, alcoholic husband. The novel critiques the destructive impact of addiction on family life.
+
+        # Significance: Ahead of its time in addressing addiction, women's autonomy, and moral responsibility.
+
+    return
+
+
+label doctor_day1_evening_book_mystery:
+
+    """
+    That appears to be the most recent book they have.
+    
+    A mystery novel.
+
+    I don't know the author, but a quick look at her biography tells me she was a nurse during the war.
+    
+    So I feel like I could relate to the her.
+    """
+
+    $ doctor_details.objects.unlock('book_mystery')
+
+    return
+
+
+label doctor_day1_evening_library_book_opium:
+
+    """
+    I have been meaning to read this for a long time.
+
+    Maybe now is the time.
+    """
+
+    $ doctor_details.objects.unlock('book_opium')
+
     return
 
 label doctor_day1_evening_tea_room:

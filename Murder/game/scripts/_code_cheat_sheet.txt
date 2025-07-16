@@ -12,6 +12,7 @@ $ lad_details.observations.unlock('green_liquid')
 
 $ lad_details.description_hidden.unlock('background') 
 $ lad_details.important_choices.unlock('day2_drunk')
+$ lad_details.objects.unlock('gun')
 $ lad_details.important_choices.is_unlocked('day2_drunk')
 
 TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)

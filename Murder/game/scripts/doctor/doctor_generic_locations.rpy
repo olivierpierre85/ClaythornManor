@@ -1,38 +1,15 @@
 label doctor_library_default:
-
+    # TODO change to day2? or adapt if needed
     $ change_room('library')
 
-    # if not doctor_details.saved_variables["library_visited"]:
+    """
+    That is a well-furnished library.
 
-    #     """
-    #     It's a very nice library. But what am I doing here? 
-        
-    #     I can barely read.
-    #     """
-
-    #     $ doctor_details.description_hidden.unlock('education')
-
-    #     """
-    #     There is an open book on a small table.
-
-    #     "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
-
-    #     Yeah, I'm not reading that.
-
-    #     I should probably look elsewhere.
-    #     """
-    #     # TODO add info on BOOK???
-    #     $ doctor_details.saved_variables["library_visited"] = True
-
-    # else:
-
-    #     """
-    #     There is nothing different from the last time I was in here.
-
-    #     No reason to look further.
-    #     """
+    But with everything that has happened, I do not feel like reading today.
+    """
 
     return
+
 
 label doctor_attic_default:
 
@@ -68,20 +45,18 @@ label doctor_garden_default:
     return
 
 
-
-
-
 label doctor_tea_room_default:
     
     $ change_room('tea_room')
     
-    # """
-    # There is nobody here.
+    """
+    There is not a soul in here and nothing to do at the moment.
 
-    # No need to stay any longer.
-    # """
+    No need to stay any longer.
+    """
 
     return
+
 
 label doctor_dining_room_default:
     

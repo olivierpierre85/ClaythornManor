@@ -153,7 +153,7 @@ label doctor_day1_evening:
 
     They must have just arrived from the station.
 
-    The older man goes straight to the tray with drinks. 
+    The older man goes directly to the tray with drinks. 
     
     He walks in an unsure fashion, almost bumping into the butler who swiftly avoids him.
 
@@ -339,7 +339,66 @@ label doctor_day1_evening:
         Doctor Baldwin?
         """
 
-        # TODO write rest of scene
+        """
+        I let him in without a word.
+        """
+
+        call wait_screen_transition()
+
+        call change_time(23,30)
+
+        """
+        Afterwards, he leaves as discretely as possible.
+        """
+
+
+    if doctor_details.objects.is_unlocked('book_mystery') or doctor_details.objects.is_unlocked('book_opium'):
+
+        """
+        It's not too late yet, so I can read the book I took from the library before sleeping.
+        """
+
+        call wait_screen_transition()
+
+        if doctor_details.objects.is_unlocked('book_mystery'):
+
+            """
+            "The Mysterious Affair at Styles"
+
+            It's an interesting mystery book.
+            
+            I especially like how accurately the effect of the poison, the murder weapon, is described.
+
+            You can really tell that the writer has medical training.
+            """
+
+            call wait_screen_transition()
+
+            """
+            When I am tired of reading, I set the book aside and doze off.
+            """
+
+            call change_time(0,30)
+
+        else:
+
+            """
+            "Confessions of an English Opium-Eater"
+
+            I dreaded reading this for a long time.
+
+            I am uneasy at first but very quickly I realize I won't be able to stop until the end.
+            """
+
+            call wait_screen_transition()
+
+            call change_time(3,30)
+
+            """
+            It must be very late now, but I think it was worth it.
+
+            I feel that something in me has changed for ever.
+            """
 
     jump doctor_day2_morning
 
