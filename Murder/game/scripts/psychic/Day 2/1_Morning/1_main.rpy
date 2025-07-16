@@ -3,7 +3,7 @@
 #           
 #   Saturday - Morning
 #   
-#   08:30 -> 11:00
+#   08:30 -> 11:30
 #
 #   Music: chill
 #

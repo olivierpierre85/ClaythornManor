@@ -3,7 +3,7 @@
 #           
 #   Saturday - The Hunt
 # 
-#   11:00 -> 15:00
+#   11:30 -> 15:00
 #
 #   Music: chill
 #
@@ -18,7 +18,7 @@
 # --------------------------------------------
 label psychic_day2_no_hunt:
 
-    call change_time(11, 00, 'Hunt', 'Saturday', hide_minutes=True, chapter='saturday_afternoon')
+    call change_time(11, 30, 'Hunt', 'Saturday', hide_minutes=True, chapter='saturday_afternoon')
 
     $ current_character.add_checkpoint("psychic_day2_no_hunt") 
     
@@ -35,13 +35,23 @@ label psychic_day2_no_hunt:
 
     We've agreed to meet shortly for luncheon in the tea room.
 
-    Before that, I am going to my quarters to change.
+    Before that, I went to my quarters to change.
 
-    Now, what should I do next?
+    Now, I can head to the tea room.
     """
 
-    $ time_left = 240 # TODO: Possibly too long; consider revising.
+    call change_time(12, 00)
+    
+    $ time_left = 30
+    call psychic_day2_hunt_tea_room
 
+    call change_time(13, 30)
+
+    """
+    What should I do know?
+    """
+
+    $ time_left += 90
     call run_menu(psychic_details.saved_variables["day2_no_hunt_map_menu"])
 
     """

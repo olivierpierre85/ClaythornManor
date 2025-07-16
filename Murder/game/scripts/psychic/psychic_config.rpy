@@ -33,7 +33,6 @@ label init_psychic:
             "portrait_gallery_visited": False,
             "book_read": False,
             "day2_nohunt_bedroom_tries": 0,
-            "day2_nohunt_has_visited_tea_room": False,
             "day2_has_seen_bedroom_broken": False,
             "day2_evening_billiard_room_visited": False,
             "day2_evening_billiard_room_talk_to_captain": False,

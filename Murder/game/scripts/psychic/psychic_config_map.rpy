@@ -107,30 +107,29 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('bedroom_nurse'), 
                 'psychic_day2_no_hunt_bedroom_nurse_busy', 
                 10, 
-                room='bedroom_nurse',
-                condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
+                room='bedroom_nurse'
             ),
-            TimedMenuChoice(
-                default_room_text('bedroom_nurse'),
-                'psychic_day2_no_hunt_bedroom_nurse',
-                15, 
-                room='bedroom_nurse',
-                condition = "not psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
-            ),
-            TimedMenuChoice(
-                'Meet Rosalind Marsh in the Tea Room', 
-                'psychic_day2_hunt_tea_room', 
-                150, 
-                room = 'tea_room'
-            ),
-            # Not needed right now
             # TimedMenuChoice(
-            #     'Go back to the Tea Room', 
-            #     'psychic_tea_room_default',  
-            #     room = 'tea_room',
-            #     condition = "psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']",
-            #     keep_alive = True, 
+            #     default_room_text('bedroom_nurse'),
+            #     'psychic_day2_no_hunt_bedroom_nurse',
+            #     15, 
+            #     room='bedroom_nurse',
+            #     condition = "not psychic_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             # ),
+            # When it was up to you to chose when eating, not anymore
+            # TimedMenuChoice(
+            #     'Meet Rosalind Marsh in the Tea Room', 
+            #     'psychic_day2_hunt_tea_room', 
+            #     150, 
+            #     room = 'tea_room'
+            # ),
+            TimedMenuChoice(
+                'Go back to the Tea Room', 
+                'psychic_tea_room_default',  
+                10,
+                room = 'tea_room',
+                keep_alive = True, 
+            ),
             TimedMenuChoice(
                 'Wait in your room the others return', 
                 'psychic_day2_no_hunt_cancel', 

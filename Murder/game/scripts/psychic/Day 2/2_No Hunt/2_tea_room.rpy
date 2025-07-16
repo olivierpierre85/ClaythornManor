@@ -3,7 +3,7 @@ label psychic_day2_hunt_tea_room:
     $ change_room("tea_room")
 
     """
-    When I walk into the tea room, Rosalind Marsh is already there, sitting at a table.
+    When I walk into the room, Rosalind Marsh is already there, sitting at a table.
     
     I head over to her.
     """
@@ -20,16 +20,10 @@ label psychic_day2_hunt_tea_room:
     It seems we haven't really had a chance to talk yet, right?
     """
 
-    # We have 45 minutes until we're interrupted NOT NEEDED NOW but could be working
-    # $ remaining_time = time_left - 45
-    # $ time_left = 45
-
     call nurse_generic
 
-    # $ time_left += remaining_time
-
     """
-    While we're talking, a staff member walks in.
+    Suddenly, a staff member walks in.
     """
 
     maid """
@@ -66,7 +60,7 @@ label psychic_day2_hunt_tea_room:
     There's plenty for me to do.
     """
 
-    $ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
+    # $ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
 
     return
 
