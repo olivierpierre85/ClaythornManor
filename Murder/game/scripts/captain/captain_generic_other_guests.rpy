@@ -260,7 +260,7 @@ label captain_generic_doctor_friday:
 label captain_generic_doctor_saturday:
 
     captain """
-    I didn't know him very well but he seemed like a fine fellow.
+    I didn't know him very well but he seemed like a decent person.
 
     Such a pity he died like that.
     """
