@@ -247,11 +247,22 @@ label captain_generic_lad_friday_psychic:
 label captain_generic_doctor_friday:
 
     captain """
-    At first glance, he seems like an upper-class gentleman.
+    At first glance, he seems like a decent gentleman.
 
-    However, he appeared a bit nervous.
+    However, he looked a bit nervous to me.
 
     I noticed him fidgeting earlier, as if he were anxious about something.
+    """
+
+    return
+
+
+label captain_generic_doctor_saturday:
+
+    captain """
+    I didn't know him very well but he seemed like a fine fellow.
+
+    Such a pity he died like that.
     """
 
     return
