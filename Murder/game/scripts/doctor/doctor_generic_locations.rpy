@@ -1,3 +1,34 @@
+# Downstairs
+label doctor_kitchen_default:
+    call doctor_downstairs_default
+    return
+
+label doctor_scullery_default:
+    call doctor_downstairs_default
+    return
+
+label doctor_gun_room_default:
+    call doctor_downstairs_default
+    return
+
+label doctor_garage_default:
+    call doctor_downstairs_default
+    return
+
+#First floor
+label doctor_tea_room_default:
+    
+    $ change_room('tea_room')
+    
+    """
+    There is not a soul in here and nothing to do at the moment.
+
+    No need to stay any longer.
+    """
+
+    return
+
+
 label doctor_library_default:
     # TODO change to day2? or adapt if needed
     $ change_room('library')
@@ -11,23 +42,21 @@ label doctor_library_default:
     return
 
 
-label doctor_attic_default:
+label doctor_portrait_gallery_default:
 
-    $ change_room("attic_hallway")
+    $ change_room("portrait_gallery")
 
-    # if not doctor_details.saved_variables['attic_visited']:
+    """
+    This is clearly where the Claythorn family display their portraits.
 
-    #     """
-    #     I took the stairs to the attic.
+    It's rather odd to have so many crammed into such a small room.
 
-    #     I'm not sure if I should be here.
-    #     """
+    It gives the place quite an eerie atmosphere.
 
-    #     $ doctor_details.saved_variables["attic_visited"] = True
+    I don't feel comfortable lingering here too long.
+    """
 
     return
-
-# label doctor_downstairs_default:
 
 
 label doctor_garden_default:
@@ -45,17 +74,7 @@ label doctor_garden_default:
     return
 
 
-label doctor_tea_room_default:
-    
-    $ change_room('tea_room')
-    
-    """
-    There is not a soul in here and nothing to do at the moment.
 
-    No need to stay any longer.
-    """
-
-    return
 
 
 label doctor_dining_room_default:
@@ -125,22 +144,6 @@ label doctor_portrait_gallery_default:
 
     return
 
-# Downstairs
-label doctor_kitchen_default:
-    call doctor_downstairs_default
-    return
-
-label doctor_scullery_default:
-    call doctor_downstairs_default
-    return
-
-label doctor_gun_room_default:
-    call doctor_downstairs_default
-    return
-
-label doctor_garage_default:
-    call doctor_downstairs_default
-    return
 
 # Attic
 label doctor_storage_default:
@@ -182,3 +185,22 @@ label doctor_butler_room_default:
     # """
 
     return
+
+
+
+label doctor_attic_default:
+
+    $ change_room("attic_hallway")
+
+    # if not doctor_details.saved_variables['attic_visited']:
+
+    #     """
+    #     I took the stairs to the attic.
+
+    #     I'm not sure if I should be here.
+    #     """
+
+    #     $ doctor_details.saved_variables["attic_visited"] = True
+
+    return
+
