@@ -65,6 +65,25 @@ label init_doctor:
             ),
         ])
 
+        doctor_observations = CharacterObservationList([
+            CharacterInformation(
+                1, "footman_french_1",
+                "You noticed an odd expression coming from the footman",
+                content_negative="You did not notice an odd expression coming from the footman",
+                image_file="footman_french_1",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
+            ),
+            CharacterInformation(
+                1, "footman_french_2",
+                "You noticed an other odd expression coming from the footman",
+                content_negative="You did not notice an other odd expression coming from the footman",
+                image_file="footman_french_2",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening'],
+            ),
+        ])
+
         doctor_endings = CharacterEndingList ([
             CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
         ])
@@ -106,7 +125,7 @@ label init_doctor:
             description_hidden = doctor_extra_information,
             important_choices = doctor_important_choices,
             endings = doctor_endings,
-            observations = CharacterInformationList([]),
+            observations = doctor_observations,
             objects = doctor_objects,
             progress = doctor_progress,
             saved_variables = copy.deepcopy(doctor_init_variables),

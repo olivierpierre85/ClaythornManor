@@ -351,6 +351,20 @@ label doctor_day1_evening:
         Afterwards, he leaves as discretely as possible.
         """
 
+        #TODO: Add We are not made of sugar when talking about the weather? Or somewhere else?
+        # doctor """
+        # Won't you stay the night?
+        # """
+
+        # footman """
+        # I am afraid that would be too suspicious.
+
+        # I can't take that chance.
+
+        # Besides, I need to wake up at five
+        # """
+
+
 
     if doctor_details.objects.is_unlocked('book_mystery') or doctor_details.objects.is_unlocked('book_opium'):
 

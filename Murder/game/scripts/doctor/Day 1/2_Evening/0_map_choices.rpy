@@ -80,6 +80,8 @@ label doctor_downstairs_day1:
 
 
 label doctor_downstairs_flirt:
+    
+    $ doctor_details.important_choices.unlock('flirt')
 
     doctor """
     That's a shame, but I do understand. Orders are orders.
@@ -108,20 +110,50 @@ label doctor_downstairs_flirt:
     """
 
     """
-    Well, that was rather forward.
+    Well, that is rather forward.
 
     I glance around to check we're alone.
     
     We are.
+
+    I give him a meaningful look.
     """
 
     doctor """
-    That sounds perfect.
+    Are you sure you can't come right now?
+    """
 
+    footman """
+    No, I really can't.
+
+    Sadly, I have other cats to whip.
+
+    But I'll be done soon.
+    """
+
+    """
+    Wait, what?
+    """
+
+    footman """
     I'll see you later, then.
     """
 
-    $ doctor_details.important_choices.unlock('flirt')
+    doctor """
+    Yes... Of course.
+
+    See you later.
+    """
+
+    """
+    What did he say about cats?
+
+    That's odd.
+
+    I must have misunderstood.
+    """
+
+    $ doctor_details.observations.unlock('footman_french_1')
 
     return
 
