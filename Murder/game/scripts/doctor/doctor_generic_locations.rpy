@@ -74,20 +74,18 @@ label doctor_garden_default:
     return
 
 
-
-
-
 label doctor_dining_room_default:
     
     $ change_room('dining_room')
     
-    # """
-    # The dining room is empty at the moment.
-    
-    # I shouldn't stay here.
-    # """
+    """
+    The dining room.
+
+    No need to linger, nobody will come back here until tomorrow.
+    """
 
     return
+
 
 label doctor_billiard_room_default:
     
@@ -101,20 +99,20 @@ label doctor_billiard_room_default:
 
     return
 
-label doctor_bedroom_default:
-
-
-    return
 
 label doctor_entrance_hall_default:
     
     $ change_room("great_hall")
     
-    # """
-    # It's certainly an impressive entrance hall.
+    """
+    I feel compelled to take another look at this entrance hall.
+
+    It is quite magnificent.
     
-    # Nobody is here.
-    # """
+    I take in the view for a few minutes.
+
+    Nobody comes.
+    """
 
     return
 
