@@ -19,10 +19,15 @@ label lad_day1_evening_gun_room:
 label lad_day1_evening_downstairs_default:
 
     # Hide all downstairs choices for the current menu
-    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
-    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
-    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
-    $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
+    # $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
+    # $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
+    # $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
+    # $ lad_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
+
+    $ all_menus[lad_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('gun_room'))
+    $ all_menus[lad_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('garage'))
+    $ all_menus[lad_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
+    $ all_menus[lad_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('kitchen'))
         
     call lad_downstairs_default
 
