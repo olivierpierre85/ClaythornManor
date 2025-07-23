@@ -40,7 +40,7 @@ label psychic_day3_morning:
     else:
 
         """
-        Even though I didn't had a talk with Ted Harring last night, I still feel seeing him now is.
+        Even though I didn't have a talk with Ted Harring last night, I should still see him.
         """
 
 
@@ -48,6 +48,12 @@ label psychic_day3_morning:
 
     """
     On my way to Ted's, the emptiness of the Manor hits me.
+
+    There is not a sound that can be heard.
+
+    It gives me a chill.
+
+    I stop in front of his door.
     """
 
     play sound door_knock
@@ -71,6 +77,7 @@ label psychic_day3_morning:
     else:
         
         call psychic_day3_morning_has_not_visited_lad
+
 
 
     """
@@ -103,7 +110,7 @@ label psychic_day3_morning:
     I sat there quietly, pondering what had happened, what I should do next.
     """
 
-    pause 1.0
+    call wait_screen_transition()
 
     """
     After some time, they came back.

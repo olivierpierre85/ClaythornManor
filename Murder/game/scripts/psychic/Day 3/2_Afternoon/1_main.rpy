@@ -61,6 +61,7 @@ label psychic_day3_afternoon:
         )        
 
     else:
+        
         call common_day3_afternoon_lad_psychic_captain_discussion_2
 
     lad """

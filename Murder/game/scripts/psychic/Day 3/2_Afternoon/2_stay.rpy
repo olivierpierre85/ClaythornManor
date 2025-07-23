@@ -216,13 +216,11 @@ label psychic_day3_afternoon_stay:
     """
 
     $ time_left = 1
-    call run_menu( TimedMenu("psychic_day3_stay", [        
+    call run_menu( TimedMenu("psychic_day3_gun", [        
         TimedMenuChoice("Try to talk her", 'psychic_day3_afternoon_convince_nurse', early_exit=True),
         TimedMenuChoice("Try to take the gun by force. It's probably not loaded anyway", 'psychic_day3_afternoon_gun_death', early_exit=True )
         ])
     )
-
-    jump work_in_progress
 
 
 label psychic_day3_afternoon_gun_death:
