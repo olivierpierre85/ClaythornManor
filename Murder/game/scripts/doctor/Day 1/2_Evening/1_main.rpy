@@ -321,102 +321,121 @@ label doctor_day1_evening:
     """
     That is quite enough for one day.
 
-    I am exhausted. It is time to go and relax.
+    It is late, time to go and relax.
+
+    So I walk back to my room.
     """
 
     $ change_room('bedroom_doctor')
 
+    if doctor_details.important_choices.is_unlocked('flirt') or doctor_details.objects.is_unlocked('book_mystery') or doctor_details.objects.is_unlocked('book_opium'):
 
-    if doctor_details.important_choices.is_unlocked('flirt'):
-
-        """
-        I barely have time to settle in my room that I hear someone knocking.
-        """
-
-        play sound door_knock
-
-        footman """
-        Doctor Baldwin?
-        """
-
-        """
-        I let him in without a word.
-        """
-
-        call wait_screen_transition()
-
-        call change_time(23,30)
-
-        """
-        Afterwards, he leaves as discretely as possible.
-        """
-
-        #TODO: Add We are not made of sugar when talking about the weather? Or somewhere else?
-        # doctor """
-        # Won't you stay the night?
-        # """
-
-        # footman """
-        # I am afraid that would be too suspicious.
-
-        # I can't take that chance.
-
-        # Besides, I need to wake up at five
-        # """
-
-
-
-    if doctor_details.objects.is_unlocked('book_mystery') or doctor_details.objects.is_unlocked('book_opium'):
-
-        """
-        It's not too late yet, so I can read the book I took from the library before sleeping.
-        """
-
-        if doctor_details.objects.is_unlocked('book_mystery'):
+        if doctor_details.important_choices.is_unlocked('flirt'):
 
             """
-            "The Mysterious Affair at Styles"
+            I barely have time to settle in my room that I hear someone knocking.
+            """
 
-            Let's see.
+            play sound door_knock
+
+            footman """
+            Doctor Baldwin?
+            """
+
+            """
+            I let him in without a word.
             """
 
             call wait_screen_transition()
 
-            """
-            It's an interesting mystery book.
-            
-            I especially like how accurately the effect of the poison, the murder weapon, is described.
-
-            You can really tell that the writer has medical training.
-            """
+            call change_time(23,30)
 
             """
-            But I am tired of reading.
-            
-            I set the book aside and doze off.
+            Afterwards, he leaves as discreetly as possible.
             """
 
-            call change_time(0,30, 'Morning', 'Saturday', hide_minutes=True)
+            #TODO: Add We are not made of sugar when talking about the weather? Or somewhere else?
+            # doctor """
+            # Won't you stay the night?
+            # """
 
-        else:
+            # footman """
+            # I am afraid that would be too suspicious.
+
+            # I can't take that chance.
+
+            # Besides, I need to wake up at five
+            # """
+
+
+        if doctor_details.objects.is_unlocked('book_mystery') or doctor_details.objects.is_unlocked('book_opium'):
 
             """
-            "Confessions of an English Opium-Eater"
-
-            I dreaded reading this for a long time.
-
-            I am uneasy at first but very quickly I realize I won't be able to stop until the end.
+            It is not too late yet, so I can read the book I took from the library before sleeping.
             """
 
-            call wait_screen_transition()
+            if doctor_details.objects.is_unlocked('book_mystery'):
 
-            call change_time(3,30, 'Morning', 'Saturday', hide_minutes=True)
+                """
+                "The Mysterious Affair at Styles"
 
-            """
-            It must be very late now, but I think it was worth it.
+                Let's see.
+                """
 
-            I feel that something in me has changed for ever.
-            """
+                call wait_screen_transition()
+
+                """
+                It is an interesting mystery book.
+                
+                I especially like how accurately the effect of the poison, the murder weapon, is described.
+
+                You can really tell that the writer has medical training.
+                """
+
+                """
+                But I am tired of reading.
+                
+                I set the book aside and doze off.
+                """
+
+                call change_time(0,30, 'Morning', 'Saturday', hide_minutes=True)
+
+            else:
+
+                """
+                "Confessions of an English Opium-Eater"
+
+                I dreaded reading this for a long time.
+
+                I am uneasy at first but very quickly I realize I won't be able to stop until the end.
+                """
+
+                call wait_screen_transition()
+
+                call change_time(3,30, 'Morning', 'Saturday', hide_minutes=True)
+
+                """
+                It must be very late now, but I think it was worth it.
+
+                I feel that something in me has changed forever.
+                """
+
+    else:
+        # If you didn't plan any distraction, all you have to do is getting high?
+        """
+        Well, I do not have anything to do right now.
+
+        Even though I am tired, I have too much on my mind.
+
+        I will not be able to close my eyes.
+
+        Luckily, I have something to help me relax.
+        """
+
+        #TODO: Better IF you took a dose early it kills you? or not?
+        # Or other end? And redraw progress when decided
+        jump doctor_ending_overdose
+
 
     jump doctor_day2_morning
 

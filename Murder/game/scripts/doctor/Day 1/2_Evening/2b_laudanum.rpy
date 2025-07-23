@@ -21,7 +21,7 @@ label doctor_day1_laudanum_1:
 
     call run_menu(TimedMenu("doctor_day1_evening_2", [
         TimedMenuChoice("Let's go down to meet the others", 'generic_cancel', early_exit=True),
-        TimedMenuChoice("Maybe one last time", 'doctor_laudanum_death', 60, early_exit=True),
+        TimedMenuChoice("Maybe one last time", 'doctor_laudanum_death', early_exit=True),
     ]))
 
     return

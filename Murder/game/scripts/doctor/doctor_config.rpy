@@ -69,7 +69,7 @@ label init_doctor:
             CharacterInformation(
                 1, "footman_french_1",
                 "You noticed an odd expression coming from the footman",
-                content_negative="You did not notice an odd expression coming from the footman",
+                content_negative="You didn't notice an odd expression coming from the footman",
                 image_file="footman_french_1",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],
@@ -77,7 +77,7 @@ label init_doctor:
             CharacterInformation(
                 1, "footman_french_2",
                 "You noticed an other odd expression coming from the footman",
-                content_negative="You did not notice an other odd expression coming from the footman",
+                content_negative="You didn't an other odd expression coming from the footman",
                 image_file="footman_french_2",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening'],
@@ -95,7 +95,8 @@ label init_doctor:
             CharacterInformation(2, "age", "39-year-old"),
             CharacterInformation(3, "addict", "sometimes fidgets for no apparent reason. This is common among opioid addicts", is_important = True),
             CharacterInformation(3, "fraud", "an affliction that led him to stealing drugs from his patients", is_important = True),
-            CharacterInformation(3, "gay", "A confirmed bachelor, he never married. This led to some rumours among his staff about his possible \"inversion\"")
+            # Hide as long as it is not relevant to the story
+            # CharacterInformation(3, "gay", "A confirmed bachelor, he never married. This led to some rumours among his staff about his possible \"inversion\"")         <info:gay>.
             ], doctor_name
         )
         # Keep for easy Reading 
@@ -110,7 +111,6 @@ label init_doctor:
         Glasses on his nose, this <info:age> doctor began his career <info:background>, a position <info:heroic_act>.
         This was impressive enough to give Lady Claythorn reason to include him among the recipients of her special award.
         Even though his position is <info:status>.
-        <info:gay>.
         Observe the doctor long enough, and you will see that he <info:addict>, <info:fraud>.
         """
 

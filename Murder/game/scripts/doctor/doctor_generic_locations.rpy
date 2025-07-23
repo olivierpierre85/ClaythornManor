@@ -1,19 +1,19 @@
 # Downstairs
-label doctor_kitchen_default:
-    call doctor_downstairs_default
-    return
+# label doctor_kitchen_default:
+#     call doctor_downstairs_default
+#     return
 
-label doctor_scullery_default:
-    call doctor_downstairs_default
-    return
+# label doctor_scullery_default:
+#     call doctor_downstairs_default
+#     return
 
-label doctor_gun_room_default:
-    call doctor_downstairs_default
-    return
+# label doctor_gun_room_default:
+#     call doctor_downstairs_default
+#     return
 
-label doctor_garage_default:
-    call doctor_downstairs_default
-    return
+# label doctor_garage_default:
+#     call doctor_downstairs_default
+#     return
 
 #First floor
 label doctor_tea_room_default:
@@ -118,33 +118,6 @@ label doctor_entrance_hall_default:
 
     return
 
-label doctor_portrait_gallery_default:
-    
-    $ change_room("portrait_gallery")
-
-    # if not doctor_details.saved_variables["portrait_gallery_visited"]:
-    
-    #     """
-    #     That's a creepy portrait gallery.
-
-    #     I don't recognize anyone, so I guess these are people from the Claythorn family.
-    #     """
-
-    #     # TODO: Possibility to zoom in on specific members?
-
-    #     $ doctor_details.saved_variables["portrait_gallery_visited"] = True
-    
-    # else:
-
-    #     """
-    #     Nothing new here.
-
-    #     It still gives me a weird, creepy feeling.
-    #     """
-
-    return
-
-
 # Attic
 label doctor_storage_default:
 
@@ -155,6 +128,7 @@ label doctor_storage_default:
     # """
     
     return
+
 
 label doctor_females_room_default:
 

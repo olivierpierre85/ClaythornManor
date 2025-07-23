@@ -1,29 +1,34 @@
 # Map choices for Doctor, Friday evening
 # Downstairs
-label doctor_day1_evening_kitchen:
-    call doctor_day1_evening_downstairs_default
-    return
+# label doctor_day1_evening_kitchen:
+#     call doctor_day1_evening_downstairs_default
+#     return
 
-label doctor_day1_evening_scullery:
-    call doctor_day1_evening_downstairs_default
-    return
+# label doctor_day1_evening_scullery:
+#     call doctor_day1_evening_downstairs_default
+#     return
 
-label doctor_day1_evening_garage:
-    call doctor_day1_evening_downstairs_default
-    return
+# label doctor_day1_evening_garage:
+#     call doctor_day1_evening_downstairs_default
+#     return
 
-label doctor_day1_evening_gun_room:
-    call doctor_day1_evening_downstairs_default
-    return
+# label doctor_day1_evening_gun_room:
+#     call doctor_day1_evening_downstairs_default
+#     return
 
 label doctor_day1_evening_downstairs_default:
 
     # Hide all downstairs choices for the current menu
-    $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
-    $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
-    $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
-    $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
+    # $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
+    # $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
+    # $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
+    # $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
         
+    $ all_menus[doctor_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('gun_room'))
+    $ all_menus[doctor_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('garage'))
+    $ all_menus[doctor_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
+    $ all_menus[doctor_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('kitchen'))
+
     call doctor_downstairs_day1
 
     return
@@ -208,7 +213,7 @@ label doctor_day1_evening_library:
         TimedMenuChoice("On second thought, I'd better not take anything", 'generic_cancel', early_exit=True),
     ]))
 
-    #TODO: Other possibilities OR for someone else (nurse?)
+    #TODO: Other possibilities OR for someone else (nurse?) => GIVE it to drunk
 
         # 2. "The Tenant of Wildfell Hall" by Anne Brontë (1848)
         # Type: Novel
@@ -251,25 +256,26 @@ label doctor_day1_evening_library_book_opium:
 
     return
 
+
 label doctor_day1_evening_tea_room:
     call doctor_tea_room_default
     return
+
 
 label doctor_day1_evening_dining_room:
     call doctor_dining_room_default
     return
 
+
 label doctor_day1_evening_garden:
 
     $ change_room('great_hall')
-    
-    # """
-    # I reach the great hall and prepare to open the door. 
 
-    # However, the weather is so bad that only a madman would venture out now. 
+    """
+    From the great hall, I am ready to go and have a look outside.
 
-    # I'd be better off doing something else at the moment.
-    # """
+    But the weather has worsened, I do not think it is safe to go out tonight.
+    """
 
     return
 
