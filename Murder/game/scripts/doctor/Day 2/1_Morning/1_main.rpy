@@ -27,8 +27,7 @@ label doctor_day2_morning:
 
     Why am I thinking that?
     
-    Tha's a weird way to start the day.
+    That's a weird way to start the day.
     """
-
 
     jump work_in_progress
