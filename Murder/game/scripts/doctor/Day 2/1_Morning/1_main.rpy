@@ -23,11 +23,18 @@ label doctor_day2_morning:
     $ change_room("bedroom_doctor", irisout)
 
     """
-    "Awake and alive."
-
+    Awake and alive.
     Why am I thinking that?
-    
-    That's a weird way to start the day.
+    That is a peculiar way to commence the day.
+    """
+
+    lad """
+    Hello Doctor Baldwin.
+    Did you sleep well?
+    """
+
+    doctor """
+    I did, thank you. I find the morning agreeable.
     """
 
     jump work_in_progress
