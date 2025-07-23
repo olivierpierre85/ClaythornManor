@@ -50,8 +50,11 @@ label start_debug:
 
     jump start
 
+
 # The game starts here.
 label start():
+
+    stop music # Stops menu music
 
     default  menu_level = -1
     default  selected_choice = [None, None, None, None, None]
