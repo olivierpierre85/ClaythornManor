@@ -197,8 +197,10 @@ label start_again():
 
         # Reset Menus hidden property with debugging output
         for menu_id, menu in all_menus.items():
+            menu.early_exit = False # Reset early_exit
             if current_checkpoint.all_menus and menu_id in current_checkpoint.all_menus:
                 checkpoint_menu = current_checkpoint.all_menus[menu_id]
+
                 for i, checkpoint_choice in enumerate(checkpoint_menu.choices):
                     if i < len(menu.choices):
                         menu.choices[i].hidden = checkpoint_choice.hidden
