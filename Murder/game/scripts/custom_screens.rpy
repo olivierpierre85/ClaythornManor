@@ -118,13 +118,14 @@ screen debug_screen:
     frame:
         xalign 0.0
         yalign 1.0
-        xoffset 30
-        yoffset -30
+        xoffset 0
+        yoffset 0
         ypadding 0
         xpadding 0
-        textbutton "Time left:" + str(time_left):
+        textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter:
             xminimum 200  # Adjust these values as needed
             yminimum 80
+            text_size 18
 
 # simple empty
 label generic_cancel:
