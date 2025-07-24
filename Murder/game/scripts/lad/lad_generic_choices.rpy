@@ -18,9 +18,11 @@ label lad_generic_weather_saturday:
 
     return
 
+
 label lad_generic_weather_sunday:
 
     return
+
 
 label lad_generic_room_friday:
 
@@ -31,6 +33,32 @@ label lad_generic_room_friday:
     """
 
     return
+
+
+label lad_generic_room_doctor:
+
+    lad """
+    I am in the 'William the Conqueror' Bedroom.
+    """
+
+    doctor """
+    A glorious name.
+    """
+
+    lad """
+    I suppose.
+    """
+
+    """
+    He looks like he doesn't know who that was.
+
+    I should leave it at that.
+    """
+
+    $ unlock_map('bedroom_lad')
+
+    return
+
 
 label lad_generic_room_psychic:
 

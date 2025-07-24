@@ -7,17 +7,21 @@ label doctor_day1_evening_billiard_room:
 
     To talk to other people?
 
-    Suddenly, this feels too much for me.
+    Right now, this feels too much for me.
 
     I check around the room and notice a chair that looks comfortable enough.
 
     So I sit there and look at what's happening in the room.
 
-    TODO describe the people
-    """
+    Samuel Manning is moving around in an unsure manner.
 
-    """
-    Suddenly, Ted Haring comes towards me.
+    Most people are gathered around Captain Sinha, who is probably telling a war story.
+
+    I see Ted Harring talking with the butler. 
+
+    Then he looks over the room and catch me looking at him.
+
+    He smiles and comes towards me.
 
     Oh gosh, now I'll have to talk to him.
     """
@@ -33,10 +37,9 @@ label doctor_day1_evening_billiard_room:
     call lad_generic
 
     """
-    We don't have anything else to see to each other.
+    We don't have anything else to say to each other.
 
-
-    And I don't want to talk to anyone else tonight, so I stand up a leave the room.
+    And I don't want to talk to anyone else tonight, so I stand up and leave the room.
     """
 
     return

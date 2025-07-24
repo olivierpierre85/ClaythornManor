@@ -220,7 +220,10 @@ label init_technical_variables:
         condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
         condition_saturday = "current_day == 'Saturday'"
         condition_friday = "current_day == 'Friday'"
-        condition_friday_or_saturday = "current_day == 'Friday' or current_day == 'Saturday'"
+        condition_friday_dinner = "(current_day == 'Friday' and (current_hour<21))" # For doctor talks to Lad during and after dinner
+        condition_friday_afternoon = "(current_day == 'Friday' and current_phase == 'Evening')"
+        condition_friday_evening = "(current_day == 'Friday' and current_phase == 'Evening')"
+        condition_friday_or_saturday = "(current_day == 'Friday' or current_day == 'Saturday')"
         condition_sunday = "current_day == 'Sunday'"
 
         # Image for progress view

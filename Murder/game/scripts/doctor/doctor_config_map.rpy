@@ -36,7 +36,7 @@ label doctor_config_map:
             TimedMenuChoice(
                 'Meet the others in the billiard room', 
                 'doctor_day1_evening_billiard_room', 
-                60,
+                10,
                 room = 'billiard_room',
                 next_menu = 'doctor_day1_evening_billiard_room_menu'
             ),
