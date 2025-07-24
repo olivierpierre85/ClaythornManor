@@ -111,6 +111,21 @@ screen in_game_menu_btn:
             xminimum 200  # Adjust these values as needed
             yminimum 80
 
+screen debug_screen:
+    modal False
+    zorder 1000
+    style_prefix "confirm"  # TODO use own style
+    frame:
+        xalign 0.0
+        yalign 1.0
+        xoffset 30
+        yoffset -30
+        ypadding 0
+        xpadding 0
+        textbutton "Time left:" + str(time_left):
+            xminimum 200  # Adjust these values as needed
+            yminimum 80
+
 # simple empty
 label generic_cancel:
     return

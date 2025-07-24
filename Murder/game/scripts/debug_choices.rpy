@@ -16,6 +16,7 @@ label init_debug:
 
     # show screen current_time
     show screen in_game_menu_btn
+    show screen debug_screen # Screen to show vara
 
     call unlock_bedrooms
 
