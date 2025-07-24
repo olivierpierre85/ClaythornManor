@@ -55,10 +55,13 @@ label run_menu(current_menu, change_level=True):
         if selected_choice[menu_level].early_exit:
             $ current_menu.early_exit = True        
 
-        call expression selected_choice[menu_level].redirect
-
         $ global time_left
         $ time_left -= selected_choice[menu_level].time_spent
+        
+        call expression selected_choice[menu_level].redirect
+
+        # $ global time_left
+        # $ time_left -= selected_choice[menu_level].time_spent
 
         # Change current time
         $ time_diff[menu_level] = None
