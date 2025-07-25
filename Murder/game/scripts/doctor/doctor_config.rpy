@@ -31,14 +31,15 @@ label init_doctor:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
-            CharacterInformation(
-                0, "laudanum_extra_1",
-                "You took an extra dose of laudanum",
-                content_negative="You didn't take an extra dose of laudanum",
-                image_file="laudanum",
-                chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_morning'],
-            ),
+            # WAS used on the first day BUT should be used later TODO: During the hunt?
+            # CharacterInformation(
+            #     0, "laudanum_extra_1",
+            #     "You took an extra dose of laudanum",
+            #     content_negative="You didn't take an extra dose of laudanum",
+            #     image_file="laudanum",
+            #     chapters=['friday_evening'],
+            #     relevant_chapters=['friday_evening', 'saturday_morning'],
+            # ),
             CharacterInformation(
                 0, "flirt",
                 "You flirted with the footman",

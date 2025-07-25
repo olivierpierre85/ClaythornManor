@@ -301,7 +301,7 @@ label doctor_day1_evening:
 
     call run_menu(TimedMenu("doctor_day1_evening_3", [
         TimedMenuChoice("Let's go down and meet the others", 'generic_cancel', early_exit=True),
-        TimedMenuChoice("Stay here—this might be more... enjoyable", 'doctor_day1_laudanum_1', 60, early_exit=True),
+        TimedMenuChoice("Stay here—this might be more... enjoyable", 'doctor_laudanum_death', 0, early_exit=True),
     ]))
 
 
@@ -314,7 +314,7 @@ label doctor_day1_evening:
 
     call run_menu(doctor_details.saved_variables["day1_evening_map_menu"])
 
-    call change_time(23,00)
+    # call change_time(23,00) DONT change time
 
     $ stop_music()
 
@@ -432,9 +432,7 @@ label doctor_day1_evening:
         Luckily, I have something to help me relax.
         """
 
-        #TODO: Better IF you took a dose early it kills you? or not?
-        # Or other end? And redraw progress when decided
-        jump doctor_ending_overdose
+        call doctor_laudanum_death
 
 
     jump doctor_day2_morning

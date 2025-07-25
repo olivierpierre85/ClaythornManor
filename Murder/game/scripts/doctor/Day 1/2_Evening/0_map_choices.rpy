@@ -288,23 +288,61 @@ label doctor_day1_evening_portrait_gallery:
     call doctor_portrait_gallery_default
     return
 
+# First Floor
+label doctor_day1_evening_bedroom_drunk:
+    
+    call doctor_bedroom_default
+
+    # TODO:WHEN knocking, the doors slightly opens and you can see inside
+    
+
+    return
+
+label doctor_day1_evening_bedroom_psychic:
+  
+    call doctor_bedroom_default
+
+    psychic """
+    Yes? Who is it?
+    """ 
+
+    doctor """
+    It's Doctor Baldwin.
+    """
+
+    psychic """
+    Yes, Doctor, what can I do for you?
+    """
+    
+    doctor """
+    I just wanted to have chat. Do you have time?
+    """
+
+    psychic """
+    I'm afraid It's a bit too late for me.
+
+    But we can speak again tomorrow.
+    """
+
+    doctor """
+    Of course, I am sorry.
+    """
+
+    $ unlock_map('bedroom_psychic')
+
+    return
+
 # Closed bedrooms
 label doctor_bedroom_stay_away:
 
     """
-    Should I try to enter anyway?
+    Should I try to see what's inside?
 
-    No, that's probably a bad idea.
+    No, of course not. That's wildly inappropriate.
     """
     
     return
 
-label doctor_day1_evening_bedroom_doctor:
-
-        # TODO do drugs if you chose to go to your room early
-    # => Death
-
-    return
 
 label doctor_day1_evening_bedroom_captain:
     call doctor_bedroom_default
@@ -316,7 +354,7 @@ label doctor_day1_evening_bedroom_host:
     call doctor_bedroom_stay_away
     return
 
-label doctor_day1_evening_bedroom_drunk:
+label doctor_day1_evening_bedroom_lad:
     call doctor_bedroom_default
     call doctor_bedroom_stay_away
     return

@@ -116,6 +116,24 @@ label doctor_entrance_hall_default:
 
     return
 
+
+# First Floor 
+label doctor_bedroom_default:
+    
+    $ change_room("bedrooms_hallway")
+
+    play sound door_knock
+    
+    doctor """
+    Hello, is anyone there?
+    """
+
+    """
+    There is no answer.
+    """
+
+    return
+
 # Attic
 label doctor_storage_default:
 
