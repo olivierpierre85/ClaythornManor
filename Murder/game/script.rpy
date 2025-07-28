@@ -54,7 +54,7 @@ label start_debug:
 # The game starts here.
 label start():
 
-    stop music # Stops menu music
+    stop music fadeout 2.0 # Stops menu music
 
     default  menu_level = -1
     default  selected_choice = [None, None, None, None, None]
