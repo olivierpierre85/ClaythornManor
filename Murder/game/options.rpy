@@ -63,7 +63,7 @@ define config.has_voice = True
 ## game, until it is stopped or another file is played.
 
 # TODO: Validate menu music
-define config.main_menu_music = "audio/music/end_credits.mp3"
+define config.main_menu_music = "audio/music/intro_01.mp3"
 
 
 ## Transitions #################################################################

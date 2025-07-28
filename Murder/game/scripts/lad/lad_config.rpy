@@ -215,7 +215,7 @@ label init_lad:
             CharacterInformation(0, "origin", "Birmingham"), 
             CharacterInformation(0, "poor", "a wealthy family, nor even a decent one"),
             CharacterInformation(0, "childhood", "he doesn't have a family at all; he was raised in an orphanage"),# LAST ONE!!!!!
-            CharacterInformation(0, "education", "the best education, and, like a large number of individuals from similar backgrounds, he can barely read"),
+            CharacterInformation(0, "education", "the best education, and, like a large number of individuals from similar backgrounds, his reading skills are minimal"),
             CharacterInformation(0, "job", "on the 'informal sector' for employment"), 
             CharacterInformation(0, "thief", "sometimes means being on the wrong side of the law"), 
             CharacterInformation(0, "heroic_act", "saving a infant from a burning building. This act of heroism made him the subject of a newspaper article"), 
@@ -229,7 +229,7 @@ label init_lad:
         # lad_description_full_complete = """
         # A good-looking young lad, he is only "22 years old - which means he was merely 15" at the end of the war.
         # Born and raised in "Birmingham", we can't say he comes from "a wealthy family, nor even a decent one". In fact, "he doesn't have a family at all; he was raised in an orphanage".
-        # His childhood didn't offer him "the best education, and, like a large number of individuals from similar backgrounds, he can barely read".
+        # His childhood didn't offer him "the best education, and, like a large number of individuals from similar backgrounds, his reading skills are minimal".
         # That is also why he had to rely "on the 'informal sector' for employment," and as everyone knows, this "sometimes means ending up on the wrong side of the law."
         # One day, he found himself in the right place at the right moment and, against all odds, did the right thing by "saving an infant from a burning building. This act of heroism made him the subject of a newspaper article," which was enough for Lady Claythorn to invite him to her manor. What was omitted from the article is that he actually wasn't there by chance; he was instead robbing the place and even set it on fire by accident.
         # Not a great "drinker," he is also not able to "drive a car" or "cook a meal."
