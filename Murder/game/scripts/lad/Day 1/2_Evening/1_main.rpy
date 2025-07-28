@@ -367,7 +367,7 @@ label lad_day1_drinks_drunk:
     """
     I am heading towards the older man.
 
-    He holds a glass of whiskey in his hand. His gaze is empty.
+    He holds an empty glass in his hand. His gaze is empty.
     """
     
     lad """
