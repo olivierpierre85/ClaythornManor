@@ -122,18 +122,27 @@ label lad_day3_take_gun:
     psychic """
     I have no idea.
 
-    But even an empty gun can still scare someone away.
+    Will you still take it?
     """
 
+    lad """
+    I think so, even an empty gun can still scare someone away.
     """
+
+    psychic """
     I suppose.
+    """
 
-    But it's not very reassuring.
+    """
+    She doesn't look very convinced. 
+
+    I pocket the gun anyway.
     """
 
     $ lad_details.objects.unlock('gun')
 
     return
+
 
 label lad_day3_no_gun:
 
@@ -148,6 +157,7 @@ label lad_day3_no_gun:
     """
 
     return
+
 
 label lad_day3_morning_scullery:
 
@@ -184,7 +194,6 @@ label lad_day3_morning_scullery:
     """
 
     return
-
 
 
 label lad_day3_morning_garage:
@@ -261,6 +270,7 @@ label lad_day3_morning_library:
     
     return
 
+
 label lad_day3_morning_dining_room:
 
     $ change_room("dining_room")
@@ -276,6 +286,7 @@ label lad_day3_morning_dining_room:
     """
 
     return
+
 
 label lad_day3_morning_garden:
 
@@ -394,6 +405,7 @@ label lad_day3_morning_entrance_hall:
 
     return
 
+
 label lad_day3_morning_portrait_gallery:
     
     $ change_room("portrait_gallery")
@@ -407,6 +419,7 @@ label lad_day3_morning_portrait_gallery:
     """
 
     return
+
 
 label lad_day3_morning_tea_room:
 

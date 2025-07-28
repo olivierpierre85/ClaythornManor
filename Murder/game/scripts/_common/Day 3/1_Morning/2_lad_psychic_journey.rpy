@@ -89,6 +89,7 @@ label common_day3_morning_lad_psychic_journey:
 
     return
 
+
 label common_day3_morning_lad_psychic_tea_room_1:
 
     captain """
