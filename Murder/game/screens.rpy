@@ -768,25 +768,25 @@ screen preferences():
         else:
             label _("Fullscreen") xpos 1280 ypos 410
 
-        ##Rollback button
-        hotspot (1087, 548, 584, 65):
-            if preferences.desktop_rollback_side == "disable":
-                action Preference("rollback side", "left")
-            elif preferences.desktop_rollback_side == "left":
-                action Preference("rollback side", "right")
-            else:
-                action Preference("rollback side", "disable")
+        # ##Rollback button
+        # hotspot (1087, 548, 584, 65):
+        #     if preferences.desktop_rollback_side == "disable":
+        #         action Preference("rollback side", "left")
+        #     elif preferences.desktop_rollback_side == "left":
+        #         action Preference("rollback side", "right")
+        #     else:
+        #         action Preference("rollback side", "disable")
 
-        ##Rollback labels
-        if preferences.desktop_rollback_side == "disable":
-            label _("Disabled") xpos 1290 ypos 542
-        elif preferences.desktop_rollback_side == "left":
-            label _("Left") xpos 1345 ypos 542
-        else:
-            label _("Right") xpos 1330 ypos 542
+        # ##Rollback labels
+        # if preferences.desktop_rollback_side == "disable":
+        #     label _("Disabled") xpos 1290 ypos 542
+        # elif preferences.desktop_rollback_side == "left":
+        #     label _("Left") xpos 1345 ypos 542
+        # else:
+        #     label _("Right") xpos 1330 ypos 542
 
-        text _("Display") xpos 1087 ypos 375
-        text _("Rollback") xpos 1087 ypos 508
+        # text _("Display") xpos 1087 ypos 375
+        # text _("Rollback") xpos 1087 ypos 508
 
     vbox:
         xsize 500
