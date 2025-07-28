@@ -384,6 +384,7 @@ label lad_day1_drinks_drunk:
 
     return
 
+
 label lad_day1_evening_bedroom_psychic:
   
     $ change_room("bedrooms_hallway")
@@ -423,6 +424,7 @@ label lad_day1_evening_bedroom_psychic:
     $ lad_details.saved_variables['knows_bedroom_psychic'] = True
 
     return
+
 
 label lad_day1_evening_dinner_psychic:
     

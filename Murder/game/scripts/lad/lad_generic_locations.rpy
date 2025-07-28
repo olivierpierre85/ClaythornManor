@@ -335,6 +335,7 @@ label lad_billiard_room_default:
 
     return
 
+
 label lad_bedroom_default:
     
     $ change_room("bedrooms_hallway")
@@ -348,6 +349,7 @@ label lad_bedroom_default:
     """
 
     return
+
 
 label lad_entrance_hall_default:
     

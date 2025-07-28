@@ -18,7 +18,8 @@ label init_doctor:
             "lad_generic_menu" : lad_generic_menu_doctor,
             "broken_offended": 0,
             # Evening day 1
-            "day1_evening_billiard_room_visited" : False
+            "day1_evening_billiard_room_visited" : False,
+            "attic_visited": False
 
         }
 
@@ -31,14 +32,15 @@ label init_doctor:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
-            CharacterInformation(
-                0, "laudanum_extra_1",
-                "You took an extra dose of laudanum",
-                content_negative="You didn't take an extra dose of laudanum",
-                image_file="laudanum",
-                chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_morning'],
-            ),
+            # WAS used on the first day BUT should be used later TODO: During the hunt?
+            # CharacterInformation(
+            #     0, "laudanum_extra_1",
+            #     "You took an extra dose of laudanum",
+            #     content_negative="You didn't take an extra dose of laudanum",
+            #     image_file="laudanum",
+            #     chapters=['friday_evening'],
+            #     relevant_chapters=['friday_evening', 'saturday_morning'],
+            # ),
             CharacterInformation(
                 0, "flirt",
                 "You flirted with the footman",
@@ -89,6 +91,7 @@ label init_doctor:
 
         doctor_endings = CharacterEndingList ([
             CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
+            CharacterInformation(3, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle", is_intuition=True, chapters=['saturday_evening']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([

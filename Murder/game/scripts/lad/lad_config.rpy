@@ -15,6 +15,7 @@ label init_lad:
             "day2_evening_map_menu": lad_day2_evening_map_menu,
             "day3_morning_map_menu" : lad_day3_morning_map_menu,
 
+            # GENERIC Menus
             "psychic_generic_menu" : psychic_generic_menu_lad,
             "psychic_generic_other_guests_menu": psychic_generic_other_guests_menu_lad,
             "knows_bedroom_psychic": False,

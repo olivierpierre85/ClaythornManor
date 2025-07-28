@@ -116,14 +116,30 @@ label doctor_entrance_hall_default:
 
     return
 
+
+# First Floor 
+label doctor_bedroom_default:
+    
+    $ change_room("bedrooms_hallway")
+
+    play sound door_knock
+    
+    doctor """
+    Hello, is anyone there?
+    """
+
+    """
+    There is no answer.
+    """
+
+    return
+
 # Attic
 label doctor_storage_default:
 
     call doctor_attic_default
 
-    # """
-    # I try to open the attic storage room, but it's closed.
-    # """
+    call doctor_attic_closed
     
     return
 
@@ -132,9 +148,7 @@ label doctor_females_room_default:
 
     call doctor_attic_default
 
-    # """
-    # I try to open the room, but it's closed.
-    # """
+    call doctor_attic_closed
 
     return
 
@@ -142,9 +156,7 @@ label doctor_males_room_default:
 
     call doctor_attic_default
 
-    # """
-    # I try to open the room, but it's closed.
-    # """
+    call doctor_attic_closed
 
     return
 
@@ -152,27 +164,36 @@ label doctor_butler_room_default:
     
     call doctor_attic_default
 
-    # """
-    # I try to open the room, but it's closed.
-    # """
+    call doctor_attic_closed
 
     return
-
 
 
 label doctor_attic_default:
 
     $ change_room("attic_hallway")
 
-    # if not doctor_details.saved_variables['attic_visited']:
+    if not doctor_details.saved_variables['attic_visited']:
+        """
+        Out of curiosity, I decide to take the stairs to the attic.
 
-    #     """
-    #     I took the stairs to the attic.
-
-    #     I'm not sure if I should be here.
-    #     """
-
-    #     $ doctor_details.saved_variables["attic_visited"] = True
+        I probably shouldn't be here but I could still feign ignorance if I am spotted.
+        """
+        $ doctor_details.saved_variables["attic_visited"] = True
 
     return
 
+
+label doctor_attic_closed:
+    
+    play sound door_locked
+    
+    """
+    The door is locked.
+
+    That's no surprise.
+
+    Whoever is sleeping here must keep the key close to themselves.
+    """
+
+    return
