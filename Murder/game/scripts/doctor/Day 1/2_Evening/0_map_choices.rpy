@@ -1,29 +1,61 @@
 # Map choices for Doctor, Friday evening
-# Downstairs
-# label doctor_day1_evening_kitchen:
-#     call doctor_day1_evening_downstairs_default
-#     return
+label doctor_day1_evening_map_menu:
+    python:        
+        # Map choices
+        doctor_day1_evening_map_menu = TimedMenu(
+            "doctor_day1_evening_map_menu", 
+            [
+            # Default values
+            TimedMenuChoice(default_room_text('storage'), 'doctor_day1_evening_storage', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'doctor_day1_evening_males_room', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'doctor_day1_evening_females_room', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'doctor_day1_evening_butler_room', 10, room='butler_room'),
+            #bedroom
+            TimedMenuChoice(default_room_text('bedroom_lad'), 'doctor_day1_evening_bedroom_lad', 10, room='bedroom_lad'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'doctor_day1_evening_bedroom_captain', 10, room='bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'doctor_day1_evening_bedroom_host', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_broken'), 'doctor_day1_evening_bedroom_broken', 10, room='bedroom_broken'),
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day1_evening_bedroom_nurse', 10, room='bedroom_nurse'),
+            TimedMenuChoice(default_room_text('tea_room'), 'doctor_day1_evening_tea_room', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'doctor_day1_evening_dining_room', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('manor_garden'), 'doctor_day1_evening_garden', 10, room='manor_garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'doctor_day1_evening_entrance_hall', 20, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'doctor_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
+            # Downstairs
+            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day1_evening_downstairs_default', 30, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'doctor_day1_evening_downstairs_default', 30, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_downstairs_default', 30, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_downstairs_default', 30, room='gun_room'),
+            # Specific actions
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
+            TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 10, room='library'),
+            TimedMenuChoice(
+                default_room_text('bedroom_psychic'), 
+                'doctor_day1_evening_bedroom_psychic', 
+                10, 
+                room = 'bedroom_psychic'
+            ),
+            TimedMenuChoice(
+                'Meet the others in the billiard room', 
+                'doctor_day1_evening_billiard_room', 
+                10,
+                room = 'billiard_room',
+                next_menu = 'doctor_day1_evening_billiard_room_menu'
+            ), 
+            TimedMenuChoice(
+                'Go to sleep', 
+                'generic_cancel', 
+                early_exit = True, 
+                room = 'bedroom_doctor'
+            )
+        ], is_map = True)
+    
+    return
 
-# label doctor_day1_evening_scullery:
-#     call doctor_day1_evening_downstairs_default
-#     return
-
-# label doctor_day1_evening_garage:
-#     call doctor_day1_evening_downstairs_default
-#     return
-
-# label doctor_day1_evening_gun_room:
-#     call doctor_day1_evening_downstairs_default
-#     return
 
 label doctor_day1_evening_downstairs_default:
 
     # Hide all downstairs choices for the current menu
-    # $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('gun_room'))
-    # $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('garage'))
-    # $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('scullery'))
-    # $ doctor_details.saved_variables["day1_evening_map_menu"].hide_specific_choice(default_room_text('kitchen'))
-        
     $ all_menus[doctor_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('gun_room'))
     $ all_menus[doctor_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('garage'))
     $ all_menus[doctor_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
@@ -293,10 +325,60 @@ label doctor_day1_evening_bedroom_drunk:
     
     call doctor_bedroom_default
 
-    # TODO:WHEN knocking, the doors slightly opens and you can see inside
-    
+    play sound door_open
+
+    """
+    My knocking slightly opens the door.
+
+    Samuel Manning didn't bother closing it.
+
+    From the hallway, I can see part of the room.
+
+    It is in a dreadful state.
+
+    Should I take a peek?
+    """
+
+    if doctor_details.endings.is_unlocked('drunk_dangerous'):
+        
+        """
+        I know I should close this door.
+
+        But I've got an intrusive feeling that if don't enter, something bad will happen.
+
+        That is obviously silly, but...
+        """
+        
+        call run_menu(TimedMenu("doctor_day1_evening_bedroom_drunk", [
+            TimedMenuChoice('Enter the room', 'doctor_day1_evening_bedroom_drunk_enter', 20, early_exit=True),
+            TimedMenuChoice('Close the door', 'doctor_day1_evening_bedroom_drunk_not_enter', early_exit=True),
+        ]))
+
+    else:
+
+        pause 1.0
+
+        call doctor_day1_evening_bedroom_drunk_not_enter
 
     return
+
+
+label doctor_day1_evening_bedroom_drunk_enter:
+    # TODO: the doctor looks inside and find the LETTER, not burned yet. Allows him to confront the doctor
+
+    return
+
+
+label doctor_day1_evening_bedroom_drunk_not_enter:
+
+    """
+    Why am I thinking, there is no reason for me to intrude.
+
+    I close the door and leave.
+    """
+
+    return
+
 
 label doctor_day1_evening_bedroom_psychic:
   
@@ -338,7 +420,11 @@ label doctor_bedroom_stay_away:
     """
     Should I try to see what's inside?
 
-    No, of course not. That's wildly inappropriate.
+    No, of course not. 
+
+    Most people are downstairs now, but they could come back anytime.
+
+    Also, that's wildly inappropriate.
     """
     
     return

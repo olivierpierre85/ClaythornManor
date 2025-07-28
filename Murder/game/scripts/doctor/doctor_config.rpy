@@ -18,7 +18,8 @@ label init_doctor:
             "lad_generic_menu" : lad_generic_menu_doctor,
             "broken_offended": 0,
             # Evening day 1
-            "day1_evening_billiard_room_visited" : False
+            "day1_evening_billiard_room_visited" : False,
+            "attic_visited": False
 
         }
 
@@ -90,6 +91,7 @@ label init_doctor:
 
         doctor_endings = CharacterEndingList ([
             CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
+            CharacterInformation(3, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle", is_intuition=True, chapters=['saturday_evening']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([
