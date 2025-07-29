@@ -194,9 +194,19 @@ label psychic_introduction:
     Not at all.
     """
 
-    $ time_left = 6
+    $ time_left = 1 
+    call run_menu( TimedMenu("psychic_captain_origin_1", [
+        TimedMenuChoice('Where are you from?', 'captain_generic_origin_psychic_1', early_exit=True),
+        ], image_right = "captain")
+    )
 
-    call captain_generic
+    call change_time(16,00)
+
+    $ time_left = 1 
+    call run_menu( TimedMenu("psychic_captain_origin_2", [
+        TimedMenuChoice('I mean, where are you "Really" from?', 'captain_generic_origin_psychic_2', early_exit=True),
+        ], image_right = "captain")
+    )
 
     call change_time(16,15, 'Evening', 'Friday')
 

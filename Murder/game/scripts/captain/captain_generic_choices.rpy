@@ -167,12 +167,50 @@ label captain_generic_origin_psychic_2:
     So I nod in assent and barely listens to what he is saying.
     """
 
-    $ captain_details.description_hidden.unlock('talker') 
-
-    $ current_character.saved_variables["knows_captain_real_origin"] = True
-    
+    $ captain_details.description_hidden.unlock('talker')     
 
     return
+
+# TODO: 3 questions that will lead to the psychic to notice inconsistency in his speech
+# The latest question can only be asked on the latest dicscussion DAY 2 evening
+label captain_generic_background_psychic_1:
+
+    # The second part should contradict A little something.
+    # Make psychic say something like : There is something that doesn't make sense here 
+    # About the BOxers rebellion of course => Check what he said
+    captain """
+    Oh, I thought I already said plenty during the car.
+
+    But, if you insist of course.
+
+    I think I mostly mentioned a lot about my military career.
+    ...
+
+    """
+
+    return
+
+
+label captain_generic_background_psychic_2:
+
+    # Again, there is something wrong with his story. I can feel he doesn't say the truth
+    """
+    2
+    """
+
+    return
+
+
+label captain_generic_background_psychic_3:
+
+    # You noticed some inconsistency before, so now is you chance to ask which one is a problem
+
+    """
+    Really, is there a
+    """
+
+    return
+
 
 label captain_generic_heroic_act_psychic:
     
