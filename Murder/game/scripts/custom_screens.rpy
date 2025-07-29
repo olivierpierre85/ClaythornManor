@@ -145,6 +145,7 @@ screen custom_key_listener():
 
 # The standard choice menu is replaced with this one to be able to make easy changes to menu
 screen custom_choice(custom_menu):
+
     style_prefix "choice"
 
     vbox:

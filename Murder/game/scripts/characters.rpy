@@ -63,6 +63,8 @@ label init_characters:
 # LABELS
 label character_selection:
     scene black_background
+
+    window hide # Manually hide the say window 
     narrator "Select a Character"
 
     python:

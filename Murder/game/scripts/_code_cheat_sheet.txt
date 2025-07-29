@@ -40,3 +40,5 @@ screen progress:
 
 
 EXIT menu 'generic_cancel'
+
+window hide # Manually hide the say window 

@@ -16,6 +16,8 @@ transform character_choice_right_2:
 
 label run_menu(current_menu, change_level=True):
 
+    window hide
+
     # For custom choice: Add menu to a structure with menu
     if current_menu.id in all_menus:
         $ current_menu = all_menus[current_menu.id]
