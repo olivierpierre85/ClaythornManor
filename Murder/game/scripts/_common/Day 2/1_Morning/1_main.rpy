@@ -197,18 +197,33 @@ label common_day2_morning_lad_psychic:
         Rising, she approaches, pausing only when she reaches the doctor.
         """
     
+    call common_day2_morning_host_to_doctor
+
+    return
+
+
+label common_day2_morning_host_to_doctor:
+    
     host """
     Doctor Baldwin, I'm sorry to interrupt your breakfast, but would you mind coming with me?
 
     We need your assistance.
     """
 
-    """
-    Without hesitation, Daniel Baldwin stands up.
-    """
+    if current_character.text_id == "doctor":
+
+        """
+        I quickly stands up.
+        """
+
+    else:
+        
+        """
+        Without hesitation, Daniel Baldwin stands up.
+        """
 
     doctor """
     Of course, I'll follow you.
     """
-
+    
     return

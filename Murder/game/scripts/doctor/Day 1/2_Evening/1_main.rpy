@@ -12,7 +12,7 @@
 #
 #   Notes : 
 #       - Map visit, 90 minutes
-#       - Generic Broken
+#       - Generic Broken, lad
 # --------------------------------------------
 label doctor_day1_evening:
     

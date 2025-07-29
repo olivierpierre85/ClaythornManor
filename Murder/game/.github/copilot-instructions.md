@@ -17,7 +17,7 @@
 - Do not use semicolons in dialogue or narration.
 - Using simple quote (') instead of ’
 - Maintain the tone and level of English in existing text; do not simplify or overcomplicate.
-- Change style when really necessary; otherwise, keep the original style.
+- Change style when necessary.
 - File and variable names use snake_case.
 - In renpy dialogue, there is a blank line after each sentence.
 

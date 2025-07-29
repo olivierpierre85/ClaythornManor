@@ -34,7 +34,6 @@ label lad_day2_morning:
     The storm from yesterday has passed and the weather is clearer now.
     """
 
-
     if lad_details.important_choices.is_unlocked('day1_drunk'):
         
         """

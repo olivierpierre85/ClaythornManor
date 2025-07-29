@@ -13,11 +13,14 @@ label init_doctor:
         doctor_init_variables = {
             # MAP Menus
             "day1_evening_map_menu" : doctor_day1_evening_map_menu,
+
             # Generic Menus
             "broken_generic_menu": broken_generic_menu_doctor,
             "lad_generic_menu" : lad_generic_menu_doctor,
-            "broken_offended": 0,
+            "nurse_generic_menu" : nurse_generic_menu_doctor,
+
             # Evening day 1
+            "broken_offended": 0,
             "day1_evening_billiard_room_visited" : False,
             "attic_visited": False
 
