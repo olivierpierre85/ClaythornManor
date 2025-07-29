@@ -102,6 +102,8 @@ screen say(who, what):
     window:
         id "window"
 
+        use skip_hint
+
         if who is not None:
 
             window:

@@ -171,3 +171,16 @@ screen custom_choice(custom_menu):
                     textbutton btn_text:
                         mouse "hover" 
                         action Return(idx)
+
+
+transform blink_skip:
+    alpha 1.0
+    linear 0.5 alpha 0.25
+    linear 0.5 alpha 1.0
+    repeat
+
+screen skip_hint():
+    # Show only if:
+    #   – this line has been seen before
+    if renpy.is_seen():
+        add "images/ui/skip_button.png" at blink_skip align (0.15, 0.4)   # top‑right
