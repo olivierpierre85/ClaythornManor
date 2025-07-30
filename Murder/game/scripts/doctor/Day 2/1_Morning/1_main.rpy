@@ -98,6 +98,7 @@ label doctor_day2_morning:
 
     call common_day2_morning_host_to_doctor
 
+    call common_day2_breakfast_follow_doctor_lad_host
 
     jump work_in_progress
 

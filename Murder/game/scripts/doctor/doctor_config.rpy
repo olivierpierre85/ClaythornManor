@@ -52,6 +52,14 @@ label init_doctor:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
+            CharacterInformation(
+                0, "remove_mask",
+                "You removed Thomas Moody's mask",
+                content_negative="You didn't remove Thomas Moody's mask",
+                image_file="remove_mask",
+                chapters=['saturday_morning'],
+                relevant_chapters=['saturday_morning', 'saturday_evening'],
+            ),
         ])
 
         doctor_objects = CharacterObjectList([
