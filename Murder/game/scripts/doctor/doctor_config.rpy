@@ -53,10 +53,10 @@ label init_doctor:
                 relevant_chapters=['friday_evening'],
             ),
             CharacterInformation(
-                0, "remove_mask",
+                0, "broken_unmasked",
                 "You removed Thomas Moody's mask",
                 content_negative="You didn't remove Thomas Moody's mask",
-                image_file="remove_mask",
+                image_file="broken_unmasked",
                 chapters=['saturday_morning'],
                 relevant_chapters=['saturday_morning', 'saturday_evening'],
             ),

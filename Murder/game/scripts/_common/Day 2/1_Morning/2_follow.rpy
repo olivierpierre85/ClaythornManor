@@ -157,7 +157,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
 
         Normally I would remove the mask for more observations.
 
-        But it feels disrespectful, I think I am going to let the coroner do that.
+        But it feels disrespectful, I think I should let the coroner do that.
         """
 
         if doctor_details.objects.is_unlocked('book_mystery'):
@@ -182,17 +182,34 @@ label common_day2_breakfast_follow_doctor_lad_host:
             call run_menu(
                 TimedMenu("doctor_day2_morning_remove_mask", [
                     TimedMenuChoice("Remove the mask", 'common_day2_breakfast_follow_doctor_lad_remove_mask', early_exit = True),
-                    TimedMenuChoice("Don't remove the mask, let him rest in peace", 'common_day2_breakfast_follow_doctor_lad_normal', early_exit = True)
+                    TimedMenuChoice("Don't remove the mask, let him rest in peace", 'common_day2_breakfast_follow_doctor_lad_keep_mask', early_exit = True)
                 ])
             )
 
+        else:
+            call common_day2_breakfast_follow_doctor_lad_normal
+
+    return
+
+
+label common_day2_breakfast_follow_doctor_lad_keep_mask:
+    
+    """
+    I don't remove the mask.
+
+    No need to complicate things further.
+
+    I have enough information as it is.
+    """
+
+    call common_day2_breakfast_follow_doctor_lad_normal
 
     return
 
 
 label common_day2_breakfast_follow_doctor_lad_remove_mask:
 
-    # TODO add : remove MASK
+    $ doctor_details.important_choices.unlock('broken_unmasked')
 
     """
     There is enough doubts, I can't ignore the clues.
@@ -211,19 +228,21 @@ label common_day2_breakfast_follow_doctor_lad_remove_mask:
     """
 
     lad """
-    No of course not.
+    No, of course not.
     """
 
     """
     When I am sure he has left the room, I remove Thomas Moody' mask.
 
-    All the symptoms are there: blue lips, foam, face distorted in a scary grimace.
+    All the symptoms are there. His face now makes a scary grimace.
     
     There can be any doubts, he has been poisoned.
 
-    But I only see now what I should have noticed first.
+    While I am processing this information, something else strucks me.
 
-    He bears no signs of disfigurment, no scars.
+    It should have been the first thing I've noticed.
+
+    I don't see any signs of disfigurment, nor scars.
 
     His face is intact.
 
@@ -233,7 +252,6 @@ label common_day2_breakfast_follow_doctor_lad_remove_mask:
     """
 
     # TODO find good music
-
 
     """
     I take a few moments to pounder what's happening.
@@ -308,5 +326,4 @@ label common_day2_breakfast_follow_doctor_lad_normal:
         I follow him back to the dining room.
         """
 
-
-    $ change_room('dining_room')
+    return
