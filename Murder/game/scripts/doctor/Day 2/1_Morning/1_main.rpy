@@ -102,7 +102,6 @@ label doctor_day2_morning:
 
     $ change_room('dining_room')
 
-
     jump work_in_progress
 
 

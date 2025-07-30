@@ -238,11 +238,11 @@ label common_day2_breakfast_follow_doctor_lad_remove_mask:
     
     There can be any doubts, he has been poisoned.
 
-    While I am processing this information, something else strucks me.
+    While I am processing this information, something else struck me.
 
     It should have been the first thing I've noticed.
 
-    I don't see any signs of disfigurment, nor scars.
+    I don't see any signs of disfigurement, nor scars.
 
     His face is intact.
 
