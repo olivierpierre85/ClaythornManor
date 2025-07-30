@@ -23,39 +23,39 @@ label doctor_day2_morning:
     $ change_room("bedroom_doctor", irisout)
 
     """
-    Awake and alive.
+    Awake, and alive.
 
-    Why am I thinking that?
+    Strange how those two words came to mind first.
 
-    That is a peculiar way to start the day.
+    An odd way to begin the day.
 
-    Never mind, I should get ready.
+    No matter. I ought to prepare myself.
     """
 
     if doctor_details.objects.is_unlocked('book_opium'):
 
         """
-        Normally, I would start my day by relaxing the best way I can.
+        On most mornings, I would begin in the usual manner.
 
-        But today is different.
+        But today is not most mornings.
 
-        I will be different.
+        Today, I must be different.
 
-        To suppress the urge, I thoroughly wash myself with cold water.
+        I resist the urge and wash thoroughly with cold water.
 
-        Then I get ready to join the others for breakfast.
+        Then I dress, ready to face the others over breakfast.
         """
     
     else: 
 
         """
-        Before doing anything else, I prepare for my usual "routine".
+        As always, I begin with my usual "routine".
         """
 
         call wait_screen_transition
 
         """
-        That feels better. Now I can face the other guests more relaxed.
+        Much better. I feel calmer now—prepared to greet the day and those within it.
         """
 
     call change_time(9, 00)
@@ -63,25 +63,25 @@ label doctor_day2_morning:
     $ change_room('dining_room')
 
     """
-    I take my place at the table. There isn't a lot of people yet.
+    I take my seat at the breakfast table. Few have arrived so far.
 
-    Besides the staff, the only person with me is Captain Sinha.
-     
-    But he is sitting on the other side of the table. So he just nods at me in silence.
+    Aside from the staff, only Captain Sinha is present.
 
-    There is nothing to do but fixing myself a plate and eating in silence.
+    He sits across the room and merely offers a silent nod in greeting.
 
-    I observe the other guests as they are slowly coming in.
-   
-    The next ones to arrive are Rosalind Marsh and Lady Claythorn, entering the room together.
+    With nothing to do but eat, I quietly serve myself a plate.
 
-    Lady Claythorn starts talking with Sushil Sinha.
+    Gradually, the other guests begin to appear.
 
-    Rosalind Marsh is sitting next to me.
+    Lady Claythorn and Rosalind Marsh enter together, deep in conversation.
 
-    I know talking directly across the table is not very polite.
+    Lady Claythorn joins Captain Sinha.
 
-    But there is no one else.
+    Rosalind Marsh sits beside me.
+
+    I know it is not entirely proper to address someone across the table.
+
+    But at present, she is the only one near enough to speak to.
     """
 
     $ time_left = 30 
@@ -93,7 +93,7 @@ label doctor_day2_morning:
     call change_time(9, 30)
     
     """
-    Suddenly I am interrupted by our host.
+    Suddenly, our host approaches and interrupts the quiet.
     """
 
     call common_day2_morning_host_to_doctor
