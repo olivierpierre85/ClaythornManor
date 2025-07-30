@@ -4,22 +4,22 @@ label common_day2_breakfast_follow_doctor_lad_host:
 
     if current_character.text_id == "lad":
 
-        $ lad_details.saved_variables["day2_breakfast_follow"]  = True
+        $ lad_details.saved_variables["day2_breakfast_follow"] = True
 
         """
-        I jump from my seat and walk behind the doctor.
+        I leap from my seat and follow the doctor.
 
-        Soon, we stop in front of the Richard III Bedroom.
+        We soon stop outside the Richard III Bedroom.
 
-        They're so concerned that they don't say anything about my presence.
+        They're so preoccupied, no one comments on my presence.
         """
 
     elif current_character.text_id == "doctor":
 
         """
-        I followed Lady Claythorn and her Butler upstairs.
+        I followed Lady Claythorn and her butler upstairs.
 
-        For some reason, Ted Harring followed us.
+        For some reason, Ted Harring came along.
         """
 
     elif current_character.text_id == "host":
@@ -35,7 +35,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
     $ unlock_map('bedroom_broken')
 
     """
-    We all enter the room.
+    We all step into the room.
     """
 
     $ change_room('bedroom_broken')
@@ -47,19 +47,18 @@ label common_day2_breakfast_follow_doctor_lad_host:
     if current_character.text_id == "lad":
 
         """
-        The doctor approaches the bed and takes the man's wrist.
+        The doctor walks over and takes the man's wrist.
         """
 
     elif current_character.text_id == "doctor":
 
         """
-        I get close to the man on the bed.
-        
-        His body is stiff.
-        
-        I put my hand on his wrist.
-        """
+        I approach the bed.
 
+        The body is stiff.
+
+        I place my hand on his wrist.
+        """
 
     elif current_character.text_id == "host":
     
@@ -86,13 +85,13 @@ label common_day2_breakfast_follow_doctor_lad_host:
     doctor """
     I'm not sure yet. I'll need to examine him further.
 
-    You may want to leave for this part.
+    Best if you stepped out for this.
 
-    I'll come back downstairs when I have more information.
+    I'll return downstairs once I know more.
     """
 
     butler """
-    Please come with me, My Lady.
+    Please, My Lady—this way.
     """
 
     host """
@@ -100,13 +99,12 @@ label common_day2_breakfast_follow_doctor_lad_host:
     """
 
     if current_character.text_id == "host":
-
         return
 
     if current_character.text_id == "lad":
 
         """
-        The butler escorts the Lady out of the room.
+        The butler escorts Lady Claythorn out.
 
         The doctor turns to face me.
         """
@@ -114,32 +112,31 @@ label common_day2_breakfast_follow_doctor_lad_host:
     elif current_character.text_id == "doctor":
 
         """
-        Lady Claythorn and the butler leave the room.
+        Lady Claythorn and the butler leave, 
 
-        Leaving me alone with Ted Harring.
+        leaving me alone with Ted Harring.
 
-        Why did he come with us?
+        Why did he come up here?
         """
 
-
     doctor """
-    Mister Harring, can I ask why are you here?
+    Mister Harring, may I ask—why are you here?
     """
 
     lad """
-    I was just... I thought I could...
+    I was just... I thought I might...
     """
 
     doctor """
-    Never mind. Since you're here, make yourself useful.
+    Never mind. Since you're here, you can help.
 
-    Help me turn him over to check for injuries.
+    Let's turn him over and check for injuries.
     """
 
     if current_character.text_id == "lad":
 
         """
-        He then examines the body thoroughly for a while.
+        He examines the body thoroughly for some time.
         """
 
         call common_day2_breakfast_follow_doctor_lad_normal
@@ -147,35 +144,33 @@ label common_day2_breakfast_follow_doctor_lad_host:
     elif current_character.text_id == "doctor":
 
         """
-        I proceed to examine his body for sign of foul play. I don't see anything.
+        I examine the body carefully for signs of foul play. Nothing obvious.
 
-        The body is very stiff, rigor Mortis has set early. 
-        
-        Which mean he must have died right after going to bed.
+        Rigor mortis has set in—quite early.
 
-        In itself that's not unusual.
+        Which suggests he died shortly after going to bed.
 
-        Normally I would remove the mask for more observations.
+        Not unusual, in itself.
 
-        But it feels disrespectful, I think I should let the coroner do that.
+        Normally, I'd remove the mask for closer observation...
+
+        But it feels wrong. Perhaps best left to the coroner.
         """
 
         if doctor_details.objects.is_unlocked('book_mystery'):
 
             """
-            Yet, there is something bothering me.
-            
-            I remember the book I read yesterday.
+            Yet something's nagging at me.
 
-            How did the victim die again? 
+            That book I read yesterday—how did the victim die?
 
             Strychnine poisoning.
 
-            That is probably a coincidence, but one of the main symptom is early rigor mortis.
+            Probably coincidence, but one of the telltale signs is early rigor mortis.
 
-            The others are : blue lips, foaming at the mouth and distorted facial expression.
+            Others include: blue lips, frothing at the mouth, and a twisted expression.
 
-            All of them I could easily check if I removed his mask.
+            All visible—if I remove the mask.
             """
 
             $ time_left = 1
@@ -193,13 +188,13 @@ label common_day2_breakfast_follow_doctor_lad_host:
 
 
 label common_day2_breakfast_follow_doctor_lad_keep_mask:
-    
+
     """
-    I don't remove the mask.
+    I leave the mask in place.
 
-    No need to complicate things further.
+    No sense in stirring up more trouble.
 
-    I have enough information as it is.
+    I've got enough to go on for now.
     """
 
     call common_day2_breakfast_follow_doctor_lad_normal
@@ -212,73 +207,69 @@ label common_day2_breakfast_follow_doctor_lad_remove_mask:
     $ doctor_details.important_choices.unlock('broken_unmasked')
 
     """
-    There is enough doubts, I can't ignore the clues.
+    I can't ignore the signs. I need to see for myself.
 
-    I have to see what's behind the mask.
-
-    But I should be alone for that.
+    But I should be alone for this.
     """
 
     doctor """
-    Thanks for your help Mister Harring.
+    Thank you for your help, Mister Harring.
 
-    I will now examine Thomas Moody's face.
+    I need to examine Thomas Moody's face now.
 
-    Would you mind stepping out while I do it?
+    Would you step outside?
     """
 
     lad """
-    No, of course not.
+    Of course.
     """
 
     """
-    When I am sure he has left the room, I remove Thomas Moody' mask.
+    Once I'm sure the room is empty, I remove the mask.
 
-    All the symptoms are there. His face now makes a scary grimace.
-    
-    There can be any doubts, he has been poisoned.
+    All the symptoms are present. His face twisted in a grimace.
 
-    While I am processing this information, something else struck me.
+    There's no doubt—he was poisoned.
 
-    It should have been the first thing I've noticed.
+    And then, something strikes me.
 
-    I don't see any signs of disfigurement, nor scars.
+    I should've noticed it at once.
 
-    His face is intact.
+    No disfigurement. No scars.
+
+    His face is untouched.
 
     He never needed a mask.
 
     What does that mean?
     """
 
-    # TODO find good music
+    # TODO: find appropriate music
 
     """
-    I take a few moments to pounder what's happening.
+    I pause, trying to make sense of it.
 
-    That's too much too fast.
+    Too many questions at once.
 
-    Thomas Moody's was murdered, there is no doubt about it.
+    Thomas Moody was murdered—that much is clear.
 
-    But he was also hiding behind a mask.
+    But he also hid behind a mask.
 
-    Why? Was he hiding who he was?
+    Was he hiding his identity?
 
-    I don't understand.
+    I don't understand it. Not yet.
 
-    There is something really weird happening here today.
+    Best to keep this to myself for now.
 
-    I don't know what to do, but I think it's better to keep this information to my self for the moment.
+    Until I know who I can trust.
 
-    God only knows who I can trust here, I need more time to think.
-
-    So I quickly put the mask back on and leave the room.
+    I replace the mask and leave the room.
     """
 
     $ change_room("bedrooms_hallway")
 
     """
-    Ted Harring is waiting for me in the hallway.
+    Ted Harring is waiting in the hallway.
     """
 
     call common_day2_breakfast_follow_doctor_lad_normal
@@ -289,41 +280,41 @@ label common_day2_breakfast_follow_doctor_lad_remove_mask:
 label common_day2_breakfast_follow_doctor_lad_normal:
 
     lad """
-    What could have caused this, Doctor?
+    What do you think happened, Doctor?
     """
 
     doctor """
-    I'm not sure. 
+    I'm not certain.
 
-    He seemed in good health.
+    He seemed in reasonable health.
 
-    But with injuries like the ones he sustained during the war, one can never be too sure.  
+    But war injuries can be unpredictable.
 
-    A patient can be stable for years, and then suddenly, his body can fail him.  
+    Some patients are stable for years, then... sudden failure.
     """
 
     lad """
-    So it's a natural death?
+    So it was natural?
     """
 
     doctor """
-    It's possible, but I can't confirm.
+    Possibly. But I can't be sure.
 
-    I can't rule out anything right now.
+    Nothing can be ruled out.
 
-    We'd need an autopsy for a definitive answer.
+    We'll need a post-mortem to know for certain.
 
-    The next step is to notify the authorities.
+    First, I'll need to contact the authorities.
 
-    I need a phone.
+    I'll require a telephone.
     """
 
     if current_character.text_id == "lad":
 
         """
-        He then exits the room.
+        He leaves the room.
 
-        I follow him back to the dining room.
+        I trail behind, back to the dining room.
         """
 
     return
