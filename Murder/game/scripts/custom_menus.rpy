@@ -55,13 +55,32 @@ label run_menu(current_menu, change_level=True):
             $ renpy.hide(current_menu.image_right_2)
 
         if selected_choice[menu_level].early_exit:
-            $ current_menu.early_exit = True        
+            $ current_menu.early_exit = True     
 
-        $ global time_left
-        $ time_left -= selected_choice[menu_level].time_spent
+        # Save choices for debug
+        # First get all possible choices and put them in list:
+        python:
+            global time_left
         
+            current_choices = []
+            for choice in current_menu.choices:
+                if (not choice.hidden and choice.get_condition()) or choice.text==selected_choice[menu_level].text :
+                    current_choices.append(choice.text)
+
+            all_choices.append({
+                "menu": current_menu.id,
+                "other_choices": current_choices,
+                "selected": selected_choice[menu_level].text,
+                "redirect": selected_choice[menu_level].redirect, 
+                "time_left": time_left,
+                "timestamp": datetime.now().isoformat(),
+            })   
+
+            time_left -= selected_choice[menu_level].time_spent
+
         call expression selected_choice[menu_level].redirect
 
+        # We used to deduct time after choice, but it was a problem with submenu
         # $ global time_left
         # $ time_left -= selected_choice[menu_level].time_spent
 

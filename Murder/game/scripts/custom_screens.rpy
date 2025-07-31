@@ -123,6 +123,7 @@ screen debug_screen:
         ypadding 0
         xpadding 0
         textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter:
+            action Function(export_choices_to_file, all_choices)
             xminimum 200  # Adjust these values as needed
             yminimum 80
             text_size 18

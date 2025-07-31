@@ -8,6 +8,8 @@ init -1000 python:
     import textwrap
     import re
     import itertools
+    import json
+    import uuid
 
     from typing import List, Tuple
 
@@ -131,6 +133,7 @@ label init_technical_variables:
     python:
         # Technical Variables
         all_menus = {}
+        all_choices = []
 
         # TODO delete those in character select AND start again
         record_mode = False

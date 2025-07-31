@@ -142,6 +142,17 @@ init python:
 
         return
 
+    def export_choices_to_file(data):
+        import uuid
+        unique_id = str(uuid.uuid4())[:8]  # shorten if needed
+        filename = f"choices_{unique_id}.txt"
+        try:
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            renpy.notify("Choices exported to file.")
+        except Exception as e:
+            renpy.notify(f"Failed to export: {e}")
+
 label start_again():
 
     hide screen centered_text
