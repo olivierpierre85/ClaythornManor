@@ -320,7 +320,7 @@ label captain_generic_age_psychic:
     """
 
     psychic """
-    Gosh No, I'm merely asking out of curiosity.
+    Gosh no, I'm merely asking out of curiosity.
     
     I didn't intend any offense.
     """
