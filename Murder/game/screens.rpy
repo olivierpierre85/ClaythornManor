@@ -349,7 +349,7 @@ screen navigation(tag="menu"):
                     action QuickSave()
             textbutton _("Quit"):
                 if not tutorial_on:
-                    action [QuickSave(),Show("confirmbutton")]
+                    action [QuickSave(), Function(export_choices_to_file, all_choices), Show("confirmbutton")]
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 
