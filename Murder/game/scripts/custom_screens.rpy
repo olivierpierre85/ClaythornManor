@@ -184,5 +184,5 @@ transform blink_skip:
 screen skip_hint():
     # Show only if:
     #   – this line has been seen before
-    if renpy.is_seen():
+    if renpy.is_seen() or show_skip_hint_for_tutorial:
         add "images/ui/skip_button.png" at blink_skip align (0.15, 0.4)   # top‑right

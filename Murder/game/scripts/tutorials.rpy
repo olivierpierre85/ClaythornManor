@@ -170,6 +170,14 @@ label tutorial_restart:
     tutorial """
     You can also use the "CTRL" key on your keyboard.
     """
+
+    $ show_skip_hint_for_tutorial = True
+
+    """
+    This blinking icon will be visible when it is TESTpossible to fast forward.
+    """
+
+    $ show_skip_hint_for_tutorial = False
     
     tutorial """
     Furthermore, you now have access to the "Restart" button in the "Progress" menu. 
