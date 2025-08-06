@@ -178,8 +178,12 @@ label captain_generic_background_psychic_1:
     # The second part should contradict A little something.
     # Make psychic say something like : There is something that doesn't make sense here 
     # About the BOxers rebellion of course => Check what he said
+    """
+    Why am I encouraging him?
+    """
+
     captain """
-    Oh, I thought I already said plenty during the car.
+    Oh, I thought I already said plenty in the car.
 
     But, if you insist of course.
 
@@ -251,7 +255,7 @@ label captain_generic_heroic_act_psychic:
 label captain_generic_manor_psychic:
 
     captain """
-    It's a splendid place.
+    It's a splendid house.
 
     A bit old, and it could used some renovations.
 
@@ -260,7 +264,7 @@ label captain_generic_manor_psychic:
 
     #chatGPT
     captain """
-    As someone who has seen my fair share of grand buildings and stately homes, I can confidently say that renovating an old Victorian mansion is no easy feat. 
+    I have seen my fair share of grand buildings and stately homes, and I can confidently say that renovating an old Victorian mansion is no easy feat. 
     
     The challenge lies in balancing the preservation of the building's historical integrity with the necessary updates and modernizations for contemporary living.
 

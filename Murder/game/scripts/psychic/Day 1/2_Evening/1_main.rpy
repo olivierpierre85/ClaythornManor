@@ -44,9 +44,11 @@ label psychic_day1_evening:
     Which way is the tea room?
     """
 
+    """
     Astonishing. He looked passed out drunk in the car.
     
     How could he possibly want another drink now?
+    """
 
     butler """
     Very well, sir. You'll find the tea room through the door on your left.
