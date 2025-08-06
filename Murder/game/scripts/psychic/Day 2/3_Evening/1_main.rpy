@@ -29,7 +29,7 @@ label psychic_day2_evening:
 
     Rosalind was already by the entrance.
 
-    Lady Claythorn steps through the doorway first, her expression one of sheer disbelief.
+    Lady Claythorn steps through the doorway first, her expression one of utter disbelief.
 
     Following close behind are the butler and footman.
 
@@ -45,11 +45,11 @@ label psychic_day2_evening:
 
     Now, the attention of everyone turns to Samuel Manning.
 
-    I realize no one has thought about restraining him in any way.
+    I realise no one has thought about restraining him in any way.
 
     But it seems unnecessary as he is sitting on the stairs,
 
-    his gaze empty, apparently unaware of what is happening around him.
+    his gaze empty, apparently unaware of what is happening about him.
     """
 
     call common_day2_evening_samuel_manning_discussion_part_1
@@ -93,7 +93,7 @@ label psychic_day2_evening:
     """
 
     """
-    He did seem very drunk to me during breakfast though.
+    He did seem very drunk to me at breakfast, though.
     """
 
     call psychic_day2_evening_bedroom
@@ -107,11 +107,11 @@ label psychic_day2_evening:
     """
     As I step into the dining room, a sombre ambience surrounds me.
 
-    The chairs where Daniel Baldwin and Thomas Moody usually sit are empty.
+    The chairs where Daniel Baldwin and Thomas Moody usually sat are empty.
 
-    Samuel Manning is not here either, obviously.
+    Samuel Manning is not here either, of course.
 
-    I settle into my familiar spot, with Ted Harring to my right.
+    I settle into my familiar place, with Ted Harring to my right.
 
     Lady Claythorn stands up to speak.
     """
@@ -125,7 +125,7 @@ label psychic_day2_evening:
 
     After dinner, most people retired to their rooms.
 
-    I don't think many will join for a drink afterwards.
+    I do not think many will join for a drink afterwards.
 
     So I could also take advantage of the fact that the Manor is almost empty.
     """
@@ -139,7 +139,7 @@ label psychic_day2_evening:
     else:
         
         """
-        Or maybe it's safer to just wait in my room.
+        Or perhaps it is safer to simply wait in my room.
         """
 
     """

@@ -9,15 +9,15 @@ label psychic_day2_evening_billiard_room:
         """
         Just as I expected, the place is almost empty.
 
-        Besides the butler, I can only see one other person in the room:
+        Besides the butler, I can see only one other person in the room:
 
         Captain Sinha.
 
-        Bloody hell.
+        Good heavens.
 
         He has spotted me.
 
-        Now, I can't avoid talking to him without looking impolite.
+        Now, I cannot avoid talking to him without appearing impolite.
 
         At least the bar is still there.
         """
@@ -69,7 +69,7 @@ label psychic_day2_evening_billiard_room_captain:
 
     Approaching him, I notice his expression is quite grave. 
 
-    He looks at me with piercing look, as if to assess wether I am a threat.
+    He looks at me with a piercing gaze, as if to assess whether I am a threat.
     
     I sit down beside him, acutely aware of the tension between us.
     """
@@ -97,7 +97,7 @@ label psychic_day2_evening_billiard_room_captain:
     psychic """
     Oh that's quite alright.
 
-    But I am afraid I am not be staying long anyway.
+    But I am afraid I shall not be staying long in any case.
     """
 
     # captain """

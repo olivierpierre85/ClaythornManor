@@ -15,13 +15,13 @@ label psychic_day1_evening_billiard_room:
 
         A crowd has formed around Sushil Sinha.
 
-        He is likely monopolizing the conversation.
+        He is likely monopolising the conversation.
         """
 
 
         $ psychic_day1_evening_billiard_room_menu = TimedMenu("psychic_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Daniel Baldwin', 'psychic_day1_evening_billiard_room_doctor', 10),
-            TimedMenuChoice('Suffer an other story by Mister Sinha', 'psychic_day1_evening_billiard_room_group', 120),
+            TimedMenuChoice('Endure another story by Mister Sinha', 'psychic_day1_evening_billiard_room_group', 120),
             TimedMenuChoice('Go to the bar', 'psychic_day1_evening_billiard_room_bar', 20),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
@@ -42,13 +42,13 @@ label psychic_day1_evening_billiard_room:
 label psychic_day1_evening_billiard_room_doctor:
     
     psychic """
-    Mister Baldwin, we haven't been introduced yet.
+    Mister Baldwin, we have not been introduced yet.
 
     I am Amelia Baxter.
     """
 
     doctor """
-    Nice to meet you miss Baxter.
+    Pleased to meet you, Miss Baxter.
     """
 
     call doctor_generic
@@ -59,7 +59,7 @@ label psychic_day1_evening_billiard_room_doctor:
 label psychic_day1_evening_billiard_room_group:
 
     """
-    I discretely approach the group.
+    I discreetly approach the group.
 
     The story has just begun.
     """
@@ -69,7 +69,7 @@ label psychic_day1_evening_billiard_room_group:
     call common_day1_evening_captain_billiard_room_speech_part_2
 
     """
-    Well that was a long detour for such a simple question.
+    Well, that was a long detour for such a simple question.
     """
 
     return
@@ -78,7 +78,7 @@ label psychic_day1_evening_billiard_room_group:
 label psychic_day1_evening_billiard_room_bar:
 
     psychic """
-    Hello again, Mister Harring.
+    Good evening, Mister Harring.
 
     Mister Manning.
     """
@@ -92,7 +92,7 @@ label psychic_day1_evening_billiard_room_bar:
     """
 
     """
-    Yes, or maybe ten too many.
+    Yes, or perhaps ten too many.
     """
 
     lad """
@@ -102,9 +102,9 @@ label psychic_day1_evening_billiard_room_bar:
     """
 
     psychic """
-    That's not a wide selection.
+    That is not a wide selection.
 
-    But I'll take a sherry, thank you.
+    But I shall have a sherry, thank you.
     """
 
     lad """
@@ -112,9 +112,9 @@ label psychic_day1_evening_billiard_room_bar:
     """
 
     """
-    He is shaking slightly while pouring the drinks.
+    He is trembling slightly while pouring the drinks.
 
-    Could he be a bit drunk as well?
+    Could he be a little drunk as well?
     """
 
     # TODO: ADD fun question for a drunk lad.

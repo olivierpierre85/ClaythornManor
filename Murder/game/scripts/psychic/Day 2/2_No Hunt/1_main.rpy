@@ -29,11 +29,11 @@ label psychic_day2_no_hunt:
     $ play_music('upbeat')
 
     """
-    I let everyone know that I'm opting out of the hunt.
+    I let everyone know that I am opting out of the hunt.
     
-    It turns out Rosalind Marsh is the only one who made the same choice.
+    It turns out Rosalind Marsh is the only other one who made the same choice.
 
-    We've agreed to meet shortly for luncheon in the tea room.
+    We agreed to meet shortly for luncheon in the tea room.
 
     Before that, I went to my quarters to change.
 
@@ -55,7 +55,7 @@ label psychic_day2_no_hunt:
     call run_menu(psychic_details.saved_variables["day2_no_hunt_map_menu"])
 
     """
-    Suddenly, sounds from the main entrance catch my attention.
+    Suddenly, noises from the main entrance catch my attention.
 
     I should investigate.
     """
@@ -125,7 +125,7 @@ label psychic_day2_no_hunt_bedroom_drunk_enter:
     """
     I scan the room quickly but only see empty whiskey bottles.
 
-    Honestly, this is just what I expected.
+    Honestly, this is just as I expected.
 
     There's nothing else to do here.
     """

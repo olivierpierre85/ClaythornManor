@@ -7,17 +7,17 @@ label psychic_day2_evening_bedroom:
     """
     I returned to my room to change and clear my head.
     
-    It seems like I still have a little bit of time before dinner.
+    It seems I still have a little time before dinner.
 
-    I guess I could just rest for a bit,
+    I suppose I could just rest for a bit,
 
-    or take the opportunity to have a private chat with someone.
+    or take the opportunity to have a private word with someone.
 
-    I don't think it would be wise to approach Captain Sinha,
+    I do not think it would be wise to approach Captain Sinha,
 
     nor Lady Claythorn.
 
-    However, I don't believe I am taking too much of a risk by talking with Rosalind Marsh or Ted Harring.
+    However, I do not believe I am taking too much of a risk by talking with Rosalind Marsh or Ted Harring.
     """
 
     $ time_left = 99 #TODO possibility to talk to both ???
@@ -76,7 +76,7 @@ label psychic_day2_evening_bedroom_nurse_busy:
     play sound woman_cough
 
     """
-    She coughs abruptly, a sound that seems to carry a painful echo.
+    She coughs abruptly, a sound that seems to echo painfully.
     """
 
     pause 1.0
@@ -102,7 +102,7 @@ label psychic_day2_evening_bedroom_nurse_busy:
 
     But I still caught a glimpse of a trace of blood on it.
 
-    She's worse than she wants to show.
+    She is worse than she wishes to show.
     """
 
     nurse """
@@ -114,7 +114,7 @@ label psychic_day2_evening_bedroom_nurse_busy:
 
     I shouldn't press her right now.
 
-    But maybe we could talk about it later.
+    But perhaps we could talk about it later.
     """
 
     $ psychic_details.observations.unlock('nurse_sick')

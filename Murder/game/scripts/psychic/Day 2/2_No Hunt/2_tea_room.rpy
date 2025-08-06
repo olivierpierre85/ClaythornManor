@@ -31,7 +31,7 @@ label psychic_day2_hunt_tea_room:
     """
 
     nurse """
-    That would be lovely, thank you
+    That would be lovely, thank you.
     """
 
     pause 1.0
@@ -57,7 +57,7 @@ label psychic_day2_hunt_tea_room:
     psychic """
     Oh no, don't worry.
 
-    There's plenty for me to do.
+    There is plenty for me to do.
     """
 
     # $ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True

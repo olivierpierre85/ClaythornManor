@@ -24,11 +24,11 @@ label psychic_day2_evening_garden:
     $ change_room('great_hall')
     
     """
-    I get to the large hall and prepare to open the door.
+    I reach the large hall and prepare to open the door.
 
-    The weather has improved, but it is pitch black outside.
+    The weather has improved, but it is pitch dark outside.
     
-    What came over me? There is no reason to go out now.
+    What possessed me? There is no reason to go out now.
     """
 
     return
@@ -133,7 +133,7 @@ label psychic_day2_evening_bedroom_doctor:
     """
     He is lying peacefully in his bed.
 
-    Unsure of what I could do here, I decide to leave.
+    Unsure what I could do here, I decide to leave.
     """
 
     $ unlock_map('bedroom_doctor')
@@ -151,7 +151,7 @@ label psychic_day2_evening_bedroom_nurse:
     """
     I knock gently on the door.
 
-    A weak voice responds.
+    A faint voice responds.
     """
 
     nurse """
@@ -165,7 +165,7 @@ label psychic_day2_evening_bedroom_nurse:
 
     Are you all right?
 
-    Perhaps we could have a chat?
+    Perhaps we might have a chat?
     """
 
     nurse """
@@ -309,7 +309,7 @@ label psychic_day2_bedroom_broken_already_see:
     """
     I stand once again in front of Thomas Moody's room.
 
-    I don't know what compelled me to come here again.
+    I do not know what compelled me to come here again.
 
     I try to open the door, but I can't. The memory of his dead body is still too fresh in my mind.
 
@@ -335,7 +335,7 @@ label psychic_day2_evening_bedroom_drunk:
     """
 
     """
-    I recognize Samuel Manning's voice, and it's clear he's too drunk to be coherent. 
+    I recognise Samuel Manning's voice, and it's clear he is too drunk to be coherent. 
     
     Since the door is locked, I decide not to interfere.
     """

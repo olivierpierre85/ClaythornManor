@@ -47,9 +47,9 @@ label psychic_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
     if psychic_details.saved_variables['day2_nohunt_bedroom_tries'] == 0:
 
         """
-        Most people are out for the hunt, so I guess I could try to enter the room anyway.
+        Most people are out for the hunt, so I suppose I could try to enter the room anyway.
 
-        But it won't look good if I get caught.
+        But it would not look good if I were caught.
 
         What should I do?
         """
@@ -79,7 +79,7 @@ label psychic_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
 label psychic_day2_no_hunt_default_room_no_enter:
     
     """
-    It's better not to enter this room for now.
+    It is better not to enter this room for now.
     """
 
     return
@@ -89,7 +89,7 @@ label psychic_day2_no_hunt_default_room_locked:
     """
     I try to push the door open.
 
-    It's locked.
+    The door is locked.
     """
 
     return
@@ -153,7 +153,7 @@ label psychic_day2_no_hunt_bedroom_drunk:
 
     I catch a glimpse inside his room from here.
 
-    It's quite messy.
+    It is quite untidy.
     """
 
     call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
