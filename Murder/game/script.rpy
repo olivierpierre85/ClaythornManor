@@ -8,7 +8,7 @@ init -1000 python:
     import textwrap
     import re
     import itertools
-    import json
+    import sys, json, base64
     import uuid
 
     from typing import List, Tuple
@@ -143,6 +143,8 @@ label init_technical_variables:
         show_minutes_movement = 0
         show_hours_movement = 0
         skip_clock_movement = True
+
+        show_skip_hint_for_tutorial = False
 
         if record_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")

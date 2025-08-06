@@ -142,16 +142,47 @@ init python:
 
         return
 
-    def export_choices_to_file(data):
-        import uuid
-        unique_id = str(uuid.uuid4())[:8]  # shorten if needed
-        filename = f"choices_{unique_id}.txt"
-        try:
-            with open(filename, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
-            renpy.notify("Choices exported to file.")
-        except Exception as e:
-            renpy.notify(f"Failed to export: {e}")
+    def export_choices_to_file(choices, tester_id=None):
+        # ---- Build JSON payload ----
+        data = {
+            "tester_id": tester_id or "anon",
+            "timestamp": datetime.now().isoformat(),
+            "choices": choices,
+        }
+        json_text = json.dumps(data, indent=2, ensure_ascii=False)
+        fname = f"choices_{data['tester_id']}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
+
+        # ---- Desktop / mobile: write to disk ----
+        if sys.platform != "emscripten":
+            try:
+                with open(fname, "w", encoding="utf-8") as f:
+                    f.write(json_text)
+                renpy.notify(f"Exported to {fname}")
+            except Exception as e:
+                renpy.notify(f"Export failed: {e}")
+            return
+
+        # ---- Web build: run JS that triggers a download ----
+        if renpy.emscripten:
+            # Base-64 the JSON so we don’t worry about quoting/line-breaks.
+            b64 = base64.b64encode(json_text.encode("utf-8")).decode("ascii")
+
+            js = f"""
+                (function () {{
+                    var data = atob("{b64}");
+                    var blob = new Blob([data], {{ type: 'application/json' }});
+                    var a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = "{fname}";
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                }})();
+            """
+
+            renpy.emscripten.run_script(js)
+            renpy.notify("Download started")
+
 
 label start_again():
 
