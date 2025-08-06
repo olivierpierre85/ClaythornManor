@@ -44,11 +44,9 @@ label psychic_day1_evening:
     Which way is the tea room?
     """
 
-    """
-    Amazing. He looked passed-out drunk in the car.
+    Astonishing. He looked passed out drunk in the car.
     
     How could he possibly want another drink now?
-    """
 
     butler """
     Very well, sir. You'll find the tea room through the door on your left.
@@ -69,9 +67,9 @@ label psychic_day1_evening:
     psychic """
     Miss Baxter.
 
-    I think I'll freshen up in my room first.
+    I believe I shall freshen up in my room first.
 
-    It's been a very long trip.
+    It has been a very long journey.
     """
 
     butler """
@@ -109,15 +107,15 @@ label psychic_day1_evening:
     """
     I nod and take a look at my room.
 
-    It's a bit worn out but it still looks decent.
+    It is a bit worn, but it still looks decent.
 
-    I should be comfortable here.
+    I should be quite comfortable here.
     """
     
     pause 1.0
 
     """
-    When I'm ready, I head downstairs to the tea room.
+    When I am ready, I head downstairs to the tea room.
     """
 
     $ change_room("tea_room")
@@ -131,7 +129,7 @@ label psychic_day1_evening:
     """
 
     """
-    He quickly introduces me to the people I haven't met yet.
+    He quickly introduces me to those I have not yet met.
     """
 
     butler """
@@ -143,23 +141,23 @@ label psychic_day1_evening:
     """
     He leaves me on my own.
 
-    I glance around the room.
+    I glance about the room.
 
-    Almost everyone is gathered around Sushil Sinha.
+    Nearly everyone is gathered around Sushil Sinha.
 
-    He's in the midst of what sounds like another tedious story.
+    He is in the midst of what sounds like yet another tedious story.
 
-    I'm not eager to listen to that again.
+    I am not eager to listen to that again.
 
-    On a chair, Samuel Manning is sitting alone with a glass in his hand.
+    On a chair, Samuel Manning sits alone with a glass in his hand.
 
     I can't believe it.
 
-    He's asleep again.
+    He fell asleep again.
 
-    Well, I guess I have no choice but to join the larger group.
+    Well, I suppose I have no choice but to join the larger group.
 
-    But before I could move, the butler returns.
+    But before I can move, the butler returns.
     """
 
     butler """
@@ -169,11 +167,11 @@ label psychic_day1_evening:
     """
     The butler nearly shouts the name of the new guest.
 
-    He's a good-looking young man, but he looks unsure.
+    He is a good-looking young man, but he appears unsure.
 
-    You can tell that he's not in his natural element here.
+    It is clear he is not in his natural element here.
 
-    I smile at him and, after some hesitation, comes towards me.
+    I smile at him and, after some hesitation, he comes towards me.
     """
 
     call common_day1_drinks_lad_psychic_encounter
@@ -209,7 +207,7 @@ label psychic_day1_evening:
     """
     Well said.
 
-    I join in clapping with the rest of the guests.
+    I join in the applause with the rest of the guests.
     """
 
     host """
@@ -217,15 +215,12 @@ label psychic_day1_evening:
     """
 
     """
+
     The food arrives right after the speech.
 
-    Perfect timing here.
-    """
+    The timing is perfect.
 
-    pause 1
-
-    """
-    It looks like I already know the persons next to me.
+    It seems I already know the persons next to me.
     
     On my left is Mister Sinha.
     
@@ -246,11 +241,11 @@ label psychic_day1_evening:
 
     The host gave us the opportunity to meet again for drinks. 
     
-    But I don't know, this was quite a long day.
+    But I do not know, this has been quite a long day.
     
-    Maybe I should just go to bed.
+    Perhaps I should simply go to bed.
 
-    In any case, I should retire to my room first.
+    In any case, I ought to retire to my room first.
     """
 
     $ stop_music(3)
@@ -278,11 +273,11 @@ label psychic_day1_evening:
     $ stop_music()
 
     """
-    It's been a long day.
+    It has been a long day.
 
-    I can't stay up any longer.
+    I cannot stay up any longer.
 
-    It's time to go to bed.
+    It is time to go to bed.
     """
 
     $ change_room('bedroom_psychic')

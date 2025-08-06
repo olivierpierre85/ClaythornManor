@@ -23,19 +23,19 @@ label psychic_introduction:
     $ play_music('chill')
 
     """
-    This invitation really isn't well-written.
+    This invitation really isn't well written.
 
     Vague instructions on how to reach the manor.
 
-    Little information about who has been invited.
+    There's little information about who has been invited.
 
-    I guess it wouldn't be surprising if some of the participants didn't show up.
+    I suppose it wouldn't be surprising if some of the participants did not show up.
 
-    I can't help feeling nervous about the whole thing.
+    I cannot help feeling nervous about the whole thing.
 
-    Well, it's too late to back down now.
+    Well, it's too late to turn back now.
 
-    We'll see what happens.
+    We shall see what happens.
     """
 
     play sound train_stopping
@@ -51,9 +51,9 @@ label psychic_introduction:
     pause 1.0
 
     """
-    On the platform, I spot a young man in footman's livery.
+    On the platform, I spot a young man in a footman's livery.
 
-    He is talking to a tanned man with a serious look.
+    He is talking to a tanned man with a serious expression.
 
     I walk towards them.
     """
@@ -83,7 +83,7 @@ label psychic_introduction:
     """
     He takes my hand and kisses it lightly.
 
-    Here's someone with manners, at least.
+    At least here's someone with manners.
     """
 
     psychic """
@@ -119,7 +119,7 @@ label psychic_introduction:
     footman """
     Alright, maybe he missed it. 
     
-    Let's wait a few minutes to be sure everyone has left this train, then we can move on.
+    Let us wait a few minutes to be sure everyone has left this train, then we can move on.
     """
 
     """
@@ -165,15 +165,15 @@ label psychic_introduction:
     """
     I understand all too well what he means.
 
-    Samuel Manning seems out of it.
+    Samuel Manning seems quite out of sorts.
 
-    He tries to make small talk with the driver, but his speech is incoherent.
+    He attempts to make small talk with the driver, but his speech is incoherent.
 
-    The poor lad does his best to ignore him and focus on the road.
+    The poor fellow does his best to ignore him and focus on the road.
 
-    When he realizes no one wants to talk to him, Samuel Manning takes a sip from a flask and immediately falls asleep in his seat.
+    When he realises no one wishes to talk to him, Samuel Manning takes a sip from a flask and immediately falls asleep in his seat.
 
-    The driver sighs in relief.
+    The driver sighs with relief.
     """
 
     captain """
@@ -185,9 +185,9 @@ label psychic_introduction:
     """
 
     psychic """
-    You're certainly right.
+    You are certainly right.
 
-    I'd rather discuss something else, if you don't mind.
+    I would rather discuss something else, if you do not mind.
     """
 
     captain """
@@ -218,9 +218,9 @@ label psychic_introduction:
     $ change_room("manor_exterior")
 
     """
-    After what seems like an eternity, the manor appears on the horizon.
+    After what seems an eternity, the manor appears on the horizon.
 
-    That finally puts an end to Captain Sinha's speech.
+    That finally puts an end to Captain Sinha's monologue.
     """
 
     captain """
@@ -232,21 +232,21 @@ label psychic_introduction:
     """
     He's right, it is beautiful.
 
-    However, the storm gives it a somewhat sinister look.
+    However, the storm lends it a somewhat sinister aspect.
 
-    Nevertheless, its appearance reassures me.
+    Nevertheless, its appearance reassures me somewhat.
 
-    Such a house shows that its owner must be incredibly wealthy.
+    Such a house suggests its owner must be incredibly wealthy.
 
-    Everything should be fine from now on.
+    Everything ought to be fine from now on.
     """
 
     pause 1.0
 
     """
-    The three of us walk towards the entrance while the driver takes care of our luggage.
+    The three of us walk towards the entrance while the driver attends to our luggage.
 
-    Samuel Manning woke up when the car stopped. He looks somewhat better than earlier.
+    Samuel Manning wakes up when the car stops. He looks somewhat better than before.
 
     When we reach the main door, a butler greets us.
     """
