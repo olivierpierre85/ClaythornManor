@@ -30,7 +30,7 @@ label init_nurse:
 
         nurse_extra_information = CharacterDescriptionHiddenList([
             CharacterInformation(1, "job", "nurse most of her life, mostly in the army or at an hospital. Lately, she started to perform at home service for rich individuals", is_important = True), 
-            CharacterInformation(2, "clothes", "well-dressed in a discreet style", is_important = True),
+            CharacterInformation(2, "clothes", "well-dressed in an understated style", is_important = True),
             CharacterInformation(3, "age", "42 years old", is_important = True),
             CharacterInformation(4, "manor", "got accustomed with grand mansions and how they are run", is_important = True),
             CharacterInformation(5, "sick", "suffers from an incurable disease that leaves her weak and tired", is_important = True),
@@ -39,7 +39,7 @@ label init_nurse:
             ], nurse_name
         )
         # nurse_description_full = """
-        # An strict and austere 42 years old woman, she is well-dressed in a discreet style. 
+        # A discreet 42 years old woman, she is well-dressed in an understated style. 
         # She worked as nurse most of her life, mostly in the army or at an hospital.
         # Lately, she started to perform at home service for rich individuals. That's where she got accustomed with grand mansions and how they are run.
         # She fought in almost all british wars since the cretan revolt. This also includes the Boxers Rebellion and, of course, the Great War.
@@ -48,7 +48,7 @@ label init_nurse:
         # """
 
         nurse_description = """
-        An strict and austere <info:age> woman, she is <info:clothes>. 
+        A discreet <info:age> woman, she is <info:clothes>. 
         She worked as <info:job>. That's where she <info:manor>.
         <info:heroic_act>.
         She mostly keeps to herself, preferring to go to bed early, and avoiding getting out. Not because she is either shy or lazy, but because she <info:sick>. 

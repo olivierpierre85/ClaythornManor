@@ -284,6 +284,15 @@ label psychic_day1_evening:
 
     $ change_room('bedroom_psychic')
 
+    # TODO: Clue that she's done a lot of things before sleeping TOO Obvious?????
+    call change_time(0, 30, 'Morning', 'Saturday', hide_minutes=True)
+
+    """
+    After taking a bit of time to get ready, I can get into bed.
+
+    I have no problem falling asleep.
+    """
+
     jump psychic_day2_morning
         
 
