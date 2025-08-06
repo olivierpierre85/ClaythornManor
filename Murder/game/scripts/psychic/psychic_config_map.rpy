@@ -221,7 +221,7 @@ label psychic_config_map:
                 'psychic_day2_bedroom_broken_already_see', 
                 20, 
                 room = 'bedroom_broken',
-                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == True"
+                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == True and not all_menus[current_menu.id].choices[25].hidden" #Check that previous choice hasn't been made, allow to avoid going twice to the same room
             )
         ] + copy.deepcopy(lord_choices), 
         is_map = True)
