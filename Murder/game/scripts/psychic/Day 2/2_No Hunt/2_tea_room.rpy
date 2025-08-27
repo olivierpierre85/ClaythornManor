@@ -3,20 +3,22 @@ label psychic_day2_hunt_tea_room:
     $ change_room("tea_room")
 
     """
-    When I walk into the room, Rosalind Marsh is already there, sitting at a table.
-    
-    I head over to her.
+    I am the first to arrive, so I pick a table and wait for Rosalind Marsh.
+
+    I am seated comfortably, lost in my thoughts when she enters the room.
+    """
+
+    call change_time(12, 0)
+
+    psychic """
+    Miss Marsh, would you like to join me?
     """
 
     nurse """
-    Miss Baxter, would you like to join me?
-    """
-
-    psychic """
     Yes, thank you.
     """
 
-    nurse """
+    psychic """
     It seems we haven't really had a chance to talk yet, right?
     """
 
@@ -39,7 +41,7 @@ label psychic_day2_hunt_tea_room:
     """
     After a few minutes, she returns with some plates.
 
-    As we eat, we chat about trivial matters related to our host.
+    As we eat, we chat about trivial matters.
     """
 
     pause 1.0

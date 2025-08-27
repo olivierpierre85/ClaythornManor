@@ -90,7 +90,6 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_no_hunt_bedroom_doctor', 10, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day2_no_hunt_bedroom_captain', 10, room='bedroom_captain'),
-            TimedMenuChoice(default_room_text('bedroom_psychic'), 'psychic_day2_no_hunt_bedroom_psychic', 10, room='bedroom_psychic'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day2_no_hunt_bedroom_host', 10, room='bedroom_host'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day2_no_hunt_bedroom_drunk', 10, room='bedroom_drunk'),
             # attic
@@ -107,7 +106,8 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('bedroom_nurse'), 
                 'psychic_day2_no_hunt_bedroom_nurse_busy', 
                 10, 
-                room='bedroom_nurse'
+                room='bedroom_nurse',
+                condition = condition_saturday_hunt_morning,
             ),
             # TimedMenuChoice(
             #     default_room_text('bedroom_nurse'),
@@ -124,18 +124,35 @@ label psychic_config_map:
             #     room = 'tea_room'
             # ),
             TimedMenuChoice(
+                'Wait for Rosalind Marsh in the Tea Room', 
+                'generic_cancel', 
+                0,
+                early_exit = True, 
+                room = 'tea_room',
+                condition = condition_saturday_hunt_morning
+            ),
+            TimedMenuChoice(
                 'Go back to the Tea Room', 
                 'psychic_tea_room_default',  
                 10,
                 room = 'tea_room',
-                keep_alive = True, 
+                condition = "not " + condition_saturday_hunt_morning
             ),
             TimedMenuChoice(
-                'Wait in your room the others return', 
+                'Take a nap', 
                 'psychic_day2_no_hunt_cancel', 
-                240, 
+                60, 
                 early_exit = True, 
-                room = 'bedroom_psychic'
+                room = 'bedroom_psychic',
+                condition = condition_saturday_hunt_morning
+            ),
+            TimedMenuChoice(
+                'Wait until the others come back', 
+                'psychic_day2_no_hunt_cancel', 
+                90, 
+                early_exit = True, 
+                room = 'bedroom_psychic',
+                condition = "not " + condition_saturday_hunt_morning
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 

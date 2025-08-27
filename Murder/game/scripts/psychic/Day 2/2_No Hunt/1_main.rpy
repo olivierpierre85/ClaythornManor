@@ -3,7 +3,7 @@
 #           
 #   Saturday - The Hunt
 # 
-#   11:30 -> 15:00
+#   11:00 -> 15:00
 #
 #   Music: chill
 #
@@ -18,7 +18,7 @@
 # --------------------------------------------
 label psychic_day2_no_hunt:
 
-    call change_time(11, 30, 'Hunt', 'Saturday', hide_minutes=True, chapter='saturday_afternoon')
+    call change_time(11, 00, 'Hunt', 'Saturday', hide_minutes=True, chapter='saturday_afternoon')
 
     $ current_character.add_checkpoint("psychic_day2_no_hunt") 
     
@@ -35,14 +35,33 @@ label psychic_day2_no_hunt:
 
     We agreed to meet shortly for luncheon in the tea room.
 
-    Before that, I went to my quarters to change.
-
-    Now, I can head to the tea room.
+    I should find her there a bit before noon.
     """
-
-    call change_time(12, 00)
     
-    $ time_left = 30
+    $ time_left = 60
+    # TODO add (nobody is here yet) WAIT for NURSE !!
+    call run_menu(psychic_details.saved_variables["day2_no_hunt_map_menu"])
+
+    if time_left > 55:
+
+        """
+        I don't really feel like exploring the Manor, so I decide to wait in the Tea Room.
+        """
+
+    elif time_left >= 10:
+
+        """
+        I don't really feel like exploring the Manor any further, so I decide to go wait in the Tea Room.
+        """
+
+    else:
+
+        """
+        It's almost time for lunch, I should go wait in the Tea Room.
+        """
+
+    $ time_left = 60
+
     call psychic_day2_hunt_tea_room
 
     call change_time(13, 30)
@@ -171,9 +190,9 @@ label psychic_day2_no_hunt_cancel:
     $ change_room('bedroom_psychic')
 
     """
-    There's nothing more I can do right now.
+    There's nothing else I want to do right now.
 
-    I'll just go lie on my bed for a bit.
+    I should just lie down on my bed for a bit.
     """
 
     call wait_screen_transition()
