@@ -10,7 +10,7 @@ label psychic_config_menu:
         TimedMenuChoice('How old are you?', 'nurse_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'nurse_generic_room', 10),
         # TimedMenuChoice('What do you think of the other guests?', 'nurse_generic_other_guests_friday', 5, condition = "current_day == 'Friday'"),
-        TimedMenuChoice('What do you think of the other guests?', 'nurse_generic_other_guests_saturday', 0, keep_alive = True, condition = "current_day == 'Saturday'"),
+        TimedMenuChoice('What do you think of the other guests?', 'nurse_generic_other_guests_saturday', 0, keep_alive = True, condition = condition_saturday + " and " + "is_sub_menu_active('nurse_generic_other_guests_menu_psychic')" ),
         TimedMenuChoice('You don\'t have anymore questions for her', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "nurse")
 

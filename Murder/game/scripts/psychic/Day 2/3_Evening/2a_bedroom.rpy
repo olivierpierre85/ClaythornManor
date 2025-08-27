@@ -270,7 +270,7 @@ label psychic_day2_evening_bedroom_nurse_gone:
 
         But I don't know.
 
-        She seemed in a really bad shape when I last talked to her.
+        She seemed in really bad shape when I last talked to her.
 
         Maybe she is in danger.
 

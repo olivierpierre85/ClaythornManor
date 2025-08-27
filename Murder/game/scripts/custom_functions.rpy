@@ -142,6 +142,19 @@ init python:
 
         return
 
+    def is_sub_menu_active(sub_menu_id):
+
+        if all_menus.get(sub_menu_id):
+            sub_menu = all_menus[sub_menu_id]
+        else:
+            return True
+
+        # The menu has only 1 or less visible choice, so no reason to display it
+        if sub_menu.get_visible_choices_total() > 1:
+            return True
+
+        return False
+
     def export_choices_to_file(choices, tester_id=None):
         # ---- Build JSON payload ----
         data = {
