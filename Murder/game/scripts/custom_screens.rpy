@@ -122,7 +122,7 @@ screen debug_screen:
         yoffset 0
         ypadding 0
         xpadding 0
-        textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "Submenu:" + str(is_sub_menu_active('nurse_generic_other_guests_menu_psychic')) :
+        textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "\nSubmenu(nurse_generic_other_guests_menu_psychic):" + str(is_sub_menu_active('nurse_generic_other_guests_menu_psychic')) :
             action Function(export_choices_to_file, all_choices)
             xminimum 200  # Adjust these values as needed
             yminimum 80
