@@ -102,12 +102,18 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
             TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
-
             TimedMenuChoice(default_room_text('bedroom_nurse'), 
                 'psychic_day2_no_hunt_bedroom_nurse_busy', 
                 10, 
                 room='bedroom_nurse',
                 condition = condition_saturday_hunt_morning,
+            ),
+            TimedMenuChoice(
+                "Go check on Rosalind Marsh", 
+                'psychic_day2_no_hunt_bedroom_nurse_blood', 
+                10, 
+                room='bedroom_nurse',
+                condition = "not " + condition_saturday_hunt_morning,
             ),
             # TimedMenuChoice(
             #     default_room_text('bedroom_nurse'),
@@ -205,11 +211,10 @@ label psychic_config_map:
 
             TimedMenuChoice(
                 default_room_text('bedroom_nurse'),
-                'psychic_day2_evening_bedroom_nurse',
-                20, 
+                'psychic_day2_evening_bedroom_nurse_gone',
+                0, 
                 room='bedroom_nurse',
             ),
-
             TimedMenuChoice(
                 'Wait in your room for Ted Harring', 
                 'psychic_day2_evening_cancel', 

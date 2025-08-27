@@ -173,7 +173,7 @@ label psychic_day2_no_hunt_bedroom_nurse_busy:
     nurse """
     Oh, Mrs. Baxter, I'm really tired right now. 
 
-    Can you please come back a bit later?
+    Can this wait until luncheon?
     """
 
     psychic """

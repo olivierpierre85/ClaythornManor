@@ -161,6 +161,7 @@ label common_day2_evening_lad_psychic_discussion_0:
 
     return
 
+
 label common_day2_evening_lad_psychic_discussion_1:
 
     lad """

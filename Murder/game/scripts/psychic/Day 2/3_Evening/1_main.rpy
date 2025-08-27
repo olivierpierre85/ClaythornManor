@@ -153,6 +153,7 @@ label psychic_day2_evening:
     call change_time(22, 00)
 
     if time_left <= 0:
+        
         """
         There's no need to wander the house further.
 

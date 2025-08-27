@@ -50,19 +50,31 @@ label psychic_day2_hunt_tea_room:
     When our lunch is over, Rosalind rises from her seat.
     """
 
-    nurse """
-    I'm quite exhausted with all that has happened.
+    play sound woman_cough
 
-    I think I'll retire to my room. Would you mind being alone?
+    """
+    She lets out a painful cough.
+    """
+
+    nurse """
+    I'm feeling rather poorly.  
+
+    I think I will retire to my room.  
+
+    Would you mind being left on your own?
     """
 
     psychic """
-    Oh no, don't worry.
+    Not at all, please don't concern yourself.  
 
-    There is plenty for me to do.
+    There is more than enough here to occupy me.
     """
 
-    # $ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
+    """
+    With the manor so quiet, I might seize the chance to explore unnoticed.  
+
+    And perhaps I should call upon Rosalind Marsh later, to see how she is doing.
+    """
 
     return
 
