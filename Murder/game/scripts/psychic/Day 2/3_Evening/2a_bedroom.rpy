@@ -270,18 +270,17 @@ label psychic_day2_evening_bedroom_nurse_gone:
 
         But I don't know.
 
-        She seemed in really bad shape when I last talked to her.
+        She looked in dreadful shape when I last spoke with her.
 
-        Maybe she is in danger.
+        Perhaps her condition has worsened.
 
-        Should I try to check on her to be safe?
+        Should I make certain she is all right?
         """
- 
+
         call run_menu(TimedMenu("psychic_day2_evening_bedroom_nurse_gone", [
-                TimedMenuChoice('Try to enter', 'psychic_day2_evening_bedroom_nurse_gone_enter', 20, early_exit=True),
-                TimedMenuChoice("Don't try to enter", 'psychic_day2_evening_bedroom_nurse_gone_do_not_enter', 10, early_exit=True),
-            ])
-        )
+                TimedMenuChoice("Make sure she is still alive", 'psychic_day2_evening_bedroom_nurse_gone_enter', 20, early_exit=True),
+                TimedMenuChoice("Don't be so nosy", 'psychic_day2_evening_bedroom_nurse_gone_do_not_enter', 10, early_exit=True),
+            ]))
 
     else: 
 
@@ -307,19 +306,21 @@ label psychic_day2_evening_bedroom_nurse_gone_enter:
 
     She seemed so sick earlier.
 
-    I look around the room, 
+    I look around the room.
 
-    and find something weird next to her bedstand.
+    It is tidy, clean and well-organized.
+
+    At first I don't notice anything out of the ordinary, but as I pry deeper I see something weird next to her bedstand.
 
     Is that silverware?
 
     What is it doing here?
 
-    It could be she was planning to eat in her room and changed her mind at the last minute.
+    Perhaps she was planning to eat in her room and changed her mind at the last minute.
 
-    But there is more then on set.
+    But there is more then one set.
 
-    Unless she was wanted to entertain a few guests, there is no reason for her to have that many utensils in her room.
+    Unless she wanted to entertain a few guests, there is no reason for her to have that many utensils in her room.
 
     I am not sure what to make of that.
     """

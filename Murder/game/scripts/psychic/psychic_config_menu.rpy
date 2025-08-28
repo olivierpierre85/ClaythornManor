@@ -56,6 +56,7 @@ label psychic_config_menu:
         TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = "not " + condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday', 0, condition = condition_saturday),
+        TimedMenuChoice('There is something weird about Rosalind Marsh{{observation}}', 'psychic_day2_evening_nurse_captain', 0, condition = condition_saturday + " and psychic_details.observations.is_unlocked('silverware')"),
         # exit
         TimedMenuChoice('On second thought, I\'d better not talk to him', 'generic_cancel', 0, keep_alive = True, early_exit = True )
     ], image_right = "captain")

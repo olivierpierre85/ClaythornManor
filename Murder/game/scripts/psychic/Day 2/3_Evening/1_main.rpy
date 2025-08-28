@@ -187,3 +187,104 @@ label psychic_day2_evening_cancel:
 
     return
 
+label psychic_day2_evening_nurse_captain:
+
+    captain """
+    What do you mean something weird?
+    """
+
+    psychic """
+    Well, I am not sure I should tell you that, but Miss Marsh is very ill.
+    """
+
+    captain """
+    Yes, now that you mention it, I noticed she spent a lot of time in her room.
+
+    I just assumed she was shy.
+    """
+
+    psychic """
+    Yes but that is the thing.
+
+    She should be in her room, but she isn't.
+
+    I just went in to check and her room is empty?
+    """
+
+    captain """
+    Really? Do you often visit other people rooms when they are not there?
+    """
+
+    psychic """
+    Don't be absurd, of course not.
+
+    It was purely for medical reasons, I feared for a well-being you see.
+    """
+
+    captain """
+    If you say so.
+
+    But she could be anywhere, it's not like she couldn't get out at all.
+    """
+
+    psychic """
+    Right, but there is something else. 
+
+    In her room, there was a stash of silverware. The same we used at dinner.
+
+    And there was too many to assume it was just for her benefit.
+    """
+
+    captain """
+    What are you saying? That she stole them?
+    """
+
+    psychic """
+    I don't know, maybe.
+
+    Don't you think it's odd?
+    """
+
+    captain """
+    I must conceded it is a bit.
+
+    I've read in the paper about people who are compelled to take things that aren't theirs.
+
+    It's a disease apparently, called kleptomania.
+
+    I guess it's a possibility Miss Marsh is afflicted by it.
+
+    Because it wouldn't make sense to risk losing the reward money by angering our host.
+
+    But I don't know, there is no way of knowing really without talking to her first.
+    """
+
+    psychic """
+    Of course, but I don't know where she is now.
+
+    She could be anywhere.
+    """
+
+    captain """
+    That is correct, but if she is roaming the Manor looking for something to steal, there are obvious places she could look.
+    """
+
+    psychic """
+    Really? Like where?
+    """
+
+    captain """
+    As you certainly know, the silverware is probably stored in the butler's pantry.
+
+    It could be either on his room, or more likely somewhere downstairs, like in the kitchen or the scullery.
+    """
+
+    psychic """
+    I don't think I am allowed downstairs, so maybe I should go check the butler's room.
+    """
+
+    captain """
+    TODO Give the key to the butler's room?
+    """
+
+    return
