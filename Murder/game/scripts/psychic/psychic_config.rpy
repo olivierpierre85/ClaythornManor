@@ -104,7 +104,7 @@ label init_psychic:
             CharacterInformation(
                 1, "nurse_sick",
                 "Rosalind Marsh told you about her disease",
-                content_negative="Rosalind Marsh told you about her disease",
+                content_negative="Rosalind Marsh didn't tell you about her disease",
                 image_file="nurse_sick",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
@@ -116,6 +116,17 @@ label init_psychic:
                 image_file="silverware",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+        ])
+
+        psychic_objects = CharacterObjectList([
+            CharacterInformation(
+                1, "butler_key",
+                "You have the butler's master key",
+                content_negative="You don't have the butler's master key",
+                image_file="butler_key",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon', 'end'],
             ),
         ])
 
@@ -168,7 +179,7 @@ label init_psychic:
             important_choices = psychic_important_choices,
             endings = psychic_endings,
             observations = psychic_observations,
-            objects = CharacterObjectList([]),
+            objects = psychic_objects,
             progress = psychic_progress,
             saved_variables = copy.deepcopy(psychic_init_variables),
             test_checkpoints = psychic_test_checkpoints,
