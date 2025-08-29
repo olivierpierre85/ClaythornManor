@@ -437,7 +437,7 @@ label psychic_day2_evening_butler_room:
     play sound gun_empty
 
     """
-
+    TODO
     """
 
 
