@@ -119,22 +119,25 @@ label init_psychic:
             ),
         ])
 
+        # She can't have the key, the captain has it
         psychic_objects = CharacterObjectList([
-            CharacterInformation(
-                1, "butler_key",
-                "You have the butler's master key",
-                content_negative="You don't have the butler's master key",
-                image_file="butler_key",
-                chapters=['saturday_evening'],
-                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon', 'end'],
-            ),
+            # CharacterInformation(
+            #     1, "butler_key",
+            #     "You have the butler's master key",
+            #     content_negative="You don't have the butler's master key",
+            #     image_file="butler_key",
+            #     chapters=['saturday_evening'],
+            #     relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon', 'end'],
+            # ),
         ])
 
         psychic_endings = CharacterEndingList ([
             CharacterInformation(0, "fell", "You fell down the stairs", image_file="psychic_fell", chapters=['sunday_morning']),
             CharacterInformation(1, "burned", "You were burned along with the manor", image_file="manor_burns", is_intuition=True, chapters=['end']), 
             CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing", chapters=['end']),
-            CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape", chapters=['end']),
+            CharacterInformation(3, "bludgeoned", "You were bludgeoned to death", image_file="blood_candelabra", chapters=['sunday_morning']),
+            CharacterInformation(4, "escape", "You escaped with Ted Harring", image_file="escape", chapters=['end']),
+
         ])
 
         psychic_extra_information = CharacterDescriptionHiddenList([

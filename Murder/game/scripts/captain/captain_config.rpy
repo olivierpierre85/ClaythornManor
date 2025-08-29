@@ -11,6 +11,17 @@ label init_captain:
             # "map_menu" : captain_map_menu,
         }
 
+        captain_objects = CharacterObjectList([
+            CharacterInformation(
+                1, "butler_key",
+                "You have the butler's master key",
+                content_negative="You don't have the butler's master key",
+                image_file="butler_key",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon', 'end'],
+            ),
+        ])
+
         # Character Class
         captain_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, China, or during the Great War"), 
@@ -53,7 +64,7 @@ label init_captain:
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
             observations = CharacterInformationList([]),
-            objects = CharacterInformationList([]),
+            objects = captain_objects,
             progress = [],
             saved_variables = copy.deepcopy(captain_init_variables),
         )
