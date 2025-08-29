@@ -26,7 +26,7 @@ label psychic_day2_evening_billiard_room:
         # TODO: add interaction with the butler
         $ psychic_day2_evening_billiard_room_menu = TimedMenu("psychic_day2_evening_billiard_room_menu", [
             TimedMenuChoice("First things first, go to the bar for a drink", 'psychic_day2_evening_billiard_room_bar', 10),
-            TimedMenuChoice("Reluctantly talk to Sushil Sinha", 'psychic_day2_evening_billiard_room_captain', 10),
+            TimedMenuChoice("Reluctantly talk to Sushil Sinha", 'psychic_day2_evening_billiard_room_captain', keep_alive=True),
             TimedMenuChoice("Politeness be damned, just get out of here", 'generic_cancel', 0, condition="not psychic_details.saved_variables['day2_evening_billiard_room_talk_to_captain']", keep_alive=True, early_exit=True),
             TimedMenuChoice("Leave the room", 'generic_cancel', 0, condition="psychic_details.saved_variables['day2_evening_billiard_room_talk_to_captain']", keep_alive=True, early_exit=True),
         ])
@@ -130,7 +130,7 @@ label psychic_day2_evening_nurse_captain:
 
     She should be in her room, but she isn't.
 
-    I just went in to check and her room is empty?
+    I just went in to check and her room is empty.
     """
 
     captain """
@@ -140,7 +140,7 @@ label psychic_day2_evening_nurse_captain:
     psychic """
     Don't be absurd, of course not.
 
-    It was purely for medical reasons, I feared for a well-being you see.
+    It was purely for medical reasons, I feared for her well-being you see.
     """
 
     captain """
@@ -168,7 +168,7 @@ label psychic_day2_evening_nurse_captain:
     """
 
     captain """
-    I must conceded it is a bit.
+    I must concede, it is a bit.
 
     I've read in the paper about people who are compelled to take things that aren't theirs.
 
@@ -198,7 +198,7 @@ label psychic_day2_evening_nurse_captain:
     captain """
     As you certainly know, the silverware is probably stored in the butler's pantry.
 
-    It could be either on his room, or more likely somewhere downstairs, like in the kitchen or the scullery.
+    It could be either, in his room, or somewhere downstairs, like in the kitchen or the scullery.
     """
 
     psychic """
@@ -209,8 +209,8 @@ label psychic_day2_evening_nurse_captain:
     You could try, but it seems dangerous, I should come with you.
     """
     call run_menu(TimedMenu("psychic_day2_evening_nurse_captain", [
-            TimedMenuChoice("Make sure she is still alive", 'psychic_day2_evening_nurse_ending', 0, early_exit=True),
-            TimedMenuChoice("Don't be so nosy", 'psychic_day2_evening_nurse_captain_cancel', 10, early_exit=True),
+            TimedMenuChoice("I guess there is no other choice", 'psychic_day2_evening_butler_room', 0, early_exit=True),
+            TimedMenuChoice("Don't go alone with him", 'psychic_day2_evening_nurse_captain_cancel', 10, early_exit=True),
         ]))
 
     return
@@ -262,12 +262,12 @@ label psychic_day2_evening_butler_room:
     """
     He has a master key?
 
-    Which means he has access to almost every room there is in this place.
+    Which means he has access to almost every room in this place.
 
     How come the butler just gave it to him?
     """
 
-    play sound door
+    play sound door_open
 
     captain """
     The key won't be necessary, the door is not locked.
@@ -301,7 +301,7 @@ label psychic_day2_evening_butler_room:
 
 
     captain """
-    We should ask you the same question.
+    We could ask you the same question.
 
     But I don't think we need to, it's pretty obvious why you are here.
     """
@@ -329,7 +329,7 @@ label psychic_day2_evening_butler_room:
     """
 
     nurse """
-    But he did.
+    But he couldn't.
 
     He was too busy to come with me and...
     """
@@ -388,7 +388,7 @@ label psychic_day2_evening_butler_room:
     But he is too late.
     """
 
-    play sound gun_firing
+    play sound gun
 
     """
     Rosalind Marsh shot him right in the face.
@@ -399,7 +399,7 @@ label psychic_day2_evening_butler_room:
     """
     He immediately falls down next to me.
 
-    Rosalind Marsh turns her gun towards me.
+    She then turns her gun towards me.
     """
 
     nurse """
@@ -415,7 +415,7 @@ label psychic_day2_evening_butler_room:
     nurse """
     Ah!
 
-    You really believe that Miss Baxter?
+    You really believe that?
 
     That you were about to get rich?
 
