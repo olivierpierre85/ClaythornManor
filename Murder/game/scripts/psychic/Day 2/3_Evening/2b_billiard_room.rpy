@@ -477,7 +477,8 @@ label psychic_day2_evening_butler_room:
 
     Her gaze is vacant. 
 
-    She holds the candelabra,
+    She holds the candelabra again,
+
     raises it high above her head...
     """
 

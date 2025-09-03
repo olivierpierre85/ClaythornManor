@@ -3,7 +3,7 @@
 # ------------------------------------
 
 label common_day3_morning_lad_psychic_captain_marsh_empty:
-    
+
     """
     He walks back up the stairs and stands in front of another room.
     """
@@ -13,33 +13,51 @@ label common_day3_morning_lad_psychic_captain_marsh_empty:
     captain """
     It's Miss Marsh's room.
 
-    It was locked when I tried to open the door earlier.
+    When I tried the handle earlier it was locked.
 
     At the time, I didn't dare to go further.
 
-    But now, I'm afraid I have to open it by force.
+    But now, I fear we may have no choice.
     """
 
     lad """
-    Do you believe she could still be in there?
+    Do you believe she might still be inside?
 
     Then she would be...
     """
 
     captain """
-    Dead, I'm afraid.
+    Dead, I am afraid.
 
-    After what we saw, I think it's a very strong possibility.
+    After what we witnessed, I think it a very strong possibility.
     """
 
     lad """
     Oh my God.
     """
 
+    captain """
+    There is no need to break the door.
+
+    The butler entrusted me with a master key when we confined Mr Manning.
+
+    It should open every room in the house.
     """
-    Captain Sinha draws a deep breath, clenches his fists, and then forcefully kicks the door. 
-    
-    It bursts open with a deafening crack.
+
+    if current_character.text_id == "lad":
+
+        """
+        He has a master key?
+
+        That mean he is able to visit every room of this place.
+        """
+
+    """
+    Captain Sinha then slips a small key from his pocket. 
+
+    With a steady hand he turns the lock. 
+
+    The mechanism clicks, and the door swings open into the silence beyond.
     """
 
     $ change_room("bedroom_nurse")
