@@ -36,7 +36,7 @@ label psychic_day2_evening_garden:
 # First Floor
 
 # Bedroom
-label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=10):
+label psychic_day2_evening_bedroom_try_enter(menu_id, enter_result, enter_duration=10):
 
     python:
         enter_text_list = [
@@ -78,7 +78,7 @@ label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=10):
 
     call run_menu(
         TimedMenu(
-            id="psychic_day2_evening_bedroom_try_enter" + enter_result, 
+            id=menu_id,
             choices=[
                 TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
                 TimedMenuChoice(no_enter_text, 'psychic_day2_evening_default_room_no_enter', enter_duration, early_exit=True),
@@ -106,13 +106,12 @@ label psychic_day2_evening_default_room_locked:
 
     return
 
-
-# Lad - ???
+# Lad - ???  (uses the calling label as the menu id)
 label psychic_day2_evening_bedroom_lad:
 
     call psychic_bedroom_default_no_answer
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_lad', 'psychic_day2_evening_default_room_locked')
 
     return
 
@@ -142,25 +141,25 @@ label psychic_day2_evening_bedroom_doctor:
     return
 
 
-
-
 # Captain - In the billiard room
 label psychic_day2_evening_bedroom_captain:
 
     call psychic_bedroom_default_no_answer
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_captain', 'psychic_day2_evening_default_room_locked')
 
     return
+
 
 # Host - Preparing to leave
 label psychic_day2_evening_bedroom_host:
 
     call psychic_bedroom_default_no_answer
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_host', 'psychic_day2_evening_default_room_locked')
 
     return
+
 
 # Broken (if already seen in the afternoon)
 label psychic_day2_bedroom_broken_already_see:

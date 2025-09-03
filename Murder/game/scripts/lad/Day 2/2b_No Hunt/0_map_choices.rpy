@@ -58,7 +58,7 @@ label lad_day2_no_hunt_portrait_gallery:
     return
 
 # Bedroom
-label lad_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
+label lad_day2_no_hunt_bedroom_try_enter(menu_id, enter_result, enter_duration=5):
 
     python:
         enter_text_list = [
@@ -104,7 +104,7 @@ label lad_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
 
     call run_menu(
         TimedMenu(
-            id="lad_day2_no_hunt_bedroom_try_enter" + enter_result, 
+            id=menu_id,
             choices=[
                 TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
                 TimedMenuChoice(no_enter_text, 'lad_day2_no_hunt_default_room_no_enter', enter_duration, early_exit=True),
@@ -132,75 +132,55 @@ label lad_day2_no_hunt_default_room_locked:
 
     return
 
-
 # Psychic
 label lad_day2_no_hunt_bedroom_psychic:
     
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_psychic_enter')
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_psychic', 'lad_day2_no_hunt_default_room_locked')
 
     return
 
-label lad_day2_no_hunt_bedroom_psychic_enter:
-    # May knows whose room it is so lock it to avoid weird dialog for now
-    call lad_day2_no_hunt_default_room_locked
-
-    return
 
 # Doctor
 label lad_day2_no_hunt_bedroom_doctor:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_doctor_enter')
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_doctor', 'lad_day2_no_hunt_default_room_locked')
 
     return
 
-label lad_day2_no_hunt_bedroom_doctor_enter:
-    # May knows whose room it is so lock it to avoid weird dialog for now
-    call lad_day2_no_hunt_default_room_locked
-
-    return
 
 # Nurse
 label lad_day2_no_hunt_bedroom_nurse:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_nurse_enter')
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_nurse', 'lad_day2_no_hunt_default_room_locked')
 
     return
 
-label lad_day2_no_hunt_bedroom_nurse_enter:
-
-    call lad_day2_no_hunt_default_room_locked
-
-    return
 
 # Captain
 label lad_day2_no_hunt_bedroom_captain:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_captain_enter', enter_duration=20)
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_captain', 'lad_day2_no_hunt_default_room_locked', enter_duration=20)
 
     return
+
 
 # Host
 label lad_day2_no_hunt_bedroom_host:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_host_enter')
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_host', 'lad_day2_no_hunt_default_room_locked')
 
     return
 
-label lad_day2_no_hunt_bedroom_host_enter:
-    
-    call lad_day2_no_hunt_default_room_locked
-
-    return
 
 # Drunk
 label lad_day2_no_hunt_bedroom_drunk:
@@ -213,7 +193,7 @@ label lad_day2_no_hunt_bedroom_drunk:
     It was not even closed.
     """
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_drunk', 'lad_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
 
     return
 

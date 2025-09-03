@@ -84,6 +84,7 @@ label psychic_day2_no_hunt_default_room_no_enter:
 
     return
 
+
 label psychic_day2_no_hunt_default_room_locked:
     
     """
