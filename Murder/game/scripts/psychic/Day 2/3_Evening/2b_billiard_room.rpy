@@ -206,8 +206,9 @@ label psychic_day2_evening_nurse_captain:
     """
 
     captain """
-    You could try, but it seems dangerous, I should come with you.
+    You could try, but it could be dangerous, I should come with you.
     """
+
     call run_menu(TimedMenu("psychic_day2_evening_nurse_captain", [
             TimedMenuChoice("I guess there is no other choice", 'psychic_day2_evening_butler_room', 0, early_exit=True),
             TimedMenuChoice("Don't go alone with him", 'psychic_day2_evening_nurse_captain_cancel', 10, early_exit=True),
@@ -356,24 +357,41 @@ label psychic_day2_evening_butler_room:
     We know very well what you were doing miss Marsh.
 
     We know about the cutlery in your room as well.
+
+    And I am sure it's not the first time you've been doing this.
     """
 
-    nurse """
-    I see.
-    """
 
     $ play_music('scary', 2)
 
     """
     Her expression changes.
 
-    She no longer looks embarrassed, instead a quiet resignation forms on her face.
+    She no longer looks embarrassed. Instead, a quiet resignation forms on her face.
 
     She puts down the candelabra.
     """
+    
+    nurse """
+    I see.
+
+    There is no point in pretending anymore.
+
+    I was trying to make the most of this place.
+
+    I found many valuable things roaming this house.
+
+    I am getting good at it, because as you said, I have been doing this for a long time.
+
+    In hospitals, from the elderly I cared for, and in many other places I can't even remember.
+
+    Surprisingly, it's the first time I've been found out. 
+    """
+
+    $ nurse_details.description_hidden.unlock('lie') 
 
     nurse """
-    I guess you leave me no choice.
+    That means you're leaving me no choice.
     """
 
     """
@@ -403,7 +421,7 @@ label psychic_day2_evening_butler_room:
     """
 
     nurse """
-    I am sorry Miss Baxter, but you leave me no choice.
+    I am sorry Miss Baxter, but I can't have you talk to the police.
     """
 
     psychic scared """

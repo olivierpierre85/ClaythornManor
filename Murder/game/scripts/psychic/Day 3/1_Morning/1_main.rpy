@@ -26,7 +26,7 @@ label psychic_day3_morning:
     $ change_room('bedroom_psychic', irisout)
 
     """
-    Unsurprisingly, I slept terribly last night.
+    Unsurprisingly, I slept terribly.
 
     At least it's the last day. All of this will be over soon.
     """

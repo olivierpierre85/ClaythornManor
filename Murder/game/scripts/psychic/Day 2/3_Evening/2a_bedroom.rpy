@@ -278,7 +278,7 @@ label psychic_day2_evening_bedroom_nurse_gone:
         """
 
         call run_menu(TimedMenu("psychic_day2_evening_bedroom_nurse_gone", [
-                TimedMenuChoice("Make sure she is still alive", 'psychic_day2_evening_bedroom_nurse_gone_enter', 20, early_exit=True),
+                TimedMenuChoice("Make sure she is still alive{{observation}}", 'psychic_day2_evening_bedroom_nurse_gone_enter', 20, early_exit=True),
                 TimedMenuChoice("Don't be so nosy", 'psychic_day2_evening_bedroom_nurse_gone_do_not_enter', 10, early_exit=True),
             ]))
 
@@ -292,6 +292,8 @@ label psychic_day2_evening_bedroom_nurse_gone:
 label psychic_day2_evening_bedroom_nurse_gone_enter:
 
     """
+    I know it's very impolite, but this is for her own good.
+
     I try to open the door.
 
     It is unlocked.
