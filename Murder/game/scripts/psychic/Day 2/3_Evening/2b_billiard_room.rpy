@@ -381,7 +381,7 @@ label psychic_day2_evening_butler_room:
 
     I found many valuable things roaming this house.
 
-    I am getting good at it, because as you said, I have been doing this for a long time.
+    I am quite good at it, because, as you said, I have been doing this for a long time.
 
     In hospitals, from the elderly I cared for, and in many other places I can't even remember.
 
@@ -417,14 +417,14 @@ label psychic_day2_evening_butler_room:
     """
     He immediately falls down next to me.
 
-    She then turns her gun towards me.
+    She then turns the gun towards me.
     """
 
     nurse """
     I am sorry Miss Baxter, but I can't have you talk to the police.
     """
 
-    psychic scared """
+    psychic surprised """
     I don't understand, why would you do such a thing?
 
     We were about to receive way more money that those objects are worth.
@@ -465,7 +465,7 @@ label psychic_day2_evening_butler_room:
     """
     I am badly wounded.
 
-    But I am still alive.
+    But still alive.
 
     Rosalind Marsh approaches me, gun in hand.
     """
@@ -505,5 +505,7 @@ label psychic_day2_evening_butler_room:
 
     Then, she raises it above her head.
     """
+
+    play sound bludgeon
 
     jump psychic_ending_nurse_thief
