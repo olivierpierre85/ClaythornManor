@@ -38,7 +38,7 @@ label psychic_bedroom_stay_away:
     return
 
 label psychic_day1_evening_default_bedroom:
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
     call psychic_bedroom_stay_away
     return
 

@@ -20,7 +20,7 @@ label psychic_day2_no_hunt_downstairs_default:
 # First Floor
 
 # Bedroom
-label psychic_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
+label psychic_day2_no_hunt_bedroom_try_enter(menu_id, enter_result, enter_duration=5):
 
     python:
         enter_text_list = [
@@ -66,7 +66,7 @@ label psychic_day2_no_hunt_bedroom_try_enter(enter_result, enter_duration=5):
 
     call run_menu(
         TimedMenu(
-            id="psychic_day2_no_hunt_bedroom_try_enter" + enter_result, 
+            id=menu_id, 
             choices=[
                 TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
                 TimedMenuChoice(no_enter_text, 'psychic_day2_no_hunt_default_room_no_enter', enter_duration, early_exit=True),
@@ -98,9 +98,9 @@ label psychic_day2_no_hunt_default_room_locked:
 # Lad
 label psychic_day2_no_hunt_bedroom_lad:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_lad', 'psychic_day2_no_hunt_default_room_locked')
 
     return
 
@@ -108,9 +108,9 @@ label psychic_day2_no_hunt_bedroom_lad:
 # Doctor
 label psychic_day2_no_hunt_bedroom_doctor:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_doctor', 'psychic_day2_no_hunt_default_room_locked')
 
     return
 
@@ -118,9 +118,9 @@ label psychic_day2_no_hunt_bedroom_doctor:
 # Nurse
 label psychic_day2_no_hunt_bedroom_nurse:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_nurse', 'psychic_day2_no_hunt_default_room_locked')
 
     return
 
@@ -128,25 +128,27 @@ label psychic_day2_no_hunt_bedroom_nurse:
 # Captain
 label psychic_day2_no_hunt_bedroom_captain:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_captain', 'psychic_day2_no_hunt_default_room_locked')
 
     return
+
 
 # Host
 label psychic_day2_no_hunt_bedroom_host:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_default_room_locked')
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_host', 'psychic_day2_no_hunt_default_room_locked')
 
     return
+
 
 # Drunk
 label psychic_day2_no_hunt_bedroom_drunk:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
     """
     The simple push I give to the door opens it.
@@ -156,9 +158,10 @@ label psychic_day2_no_hunt_bedroom_drunk:
     It is quite untidy.
     """
 
-    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
+    call psychic_day2_no_hunt_bedroom_try_enter('psychic_day2_no_hunt_bedroom_drunk', 'psychic_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
 
     return
+
 
 # Attic
 label psychic_day2_no_hunt_attic_default:

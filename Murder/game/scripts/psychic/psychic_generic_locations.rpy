@@ -124,7 +124,7 @@ label psychic_portrait_gallery_default:
     return
 
 
-label psychic_bedroom_default:
+label psychic_bedroom_default_no_answer:
     
     $ change_room("bedrooms_hallway")
 

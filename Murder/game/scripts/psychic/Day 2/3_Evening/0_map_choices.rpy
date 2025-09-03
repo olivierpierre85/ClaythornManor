@@ -110,7 +110,7 @@ label psychic_day2_evening_default_room_locked:
 # Lad - ???
 label psychic_day2_evening_bedroom_lad:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
 
@@ -147,7 +147,7 @@ label psychic_day2_evening_bedroom_doctor:
 # Captain - In the billiard room
 label psychic_day2_evening_bedroom_captain:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
 
@@ -156,7 +156,7 @@ label psychic_day2_evening_bedroom_captain:
 # Host - Preparing to leave
 label psychic_day2_evening_bedroom_host:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
 
