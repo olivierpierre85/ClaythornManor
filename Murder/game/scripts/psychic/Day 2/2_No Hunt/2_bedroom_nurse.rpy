@@ -67,32 +67,113 @@ label psychic_day2_no_hunt_bedroom_nurse_blood:
     """
     She is obviously not comfortable with the situation.
 
-    I shouldn't press her right now.
-
-    But perhaps we could talk about it later.
+    But maybe I should press her to tell me more.
     """
 
-    $ psychic_details.observations.unlock('nurse_blood')
+    call run_menu(TimedMenu("psychic_day2_no_hunt_bedroom_nurse", [
+        TimedMenuChoice("Insist, there is clearly something wrong with her", 'psychic_day2_no_hunt_bedroom_nurse_insist', 10, early_exit=True),
+        TimedMenuChoice("Do not push any further", 'psychic_day2_no_hunt_bedroom_nurse_ignore', 10, early_exit=True), 
+    ]))
+    
+    return
+
+
+label psychic_day2_no_hunt_bedroom_nurse_insist:
+
 
     psychic """
-    Of course, sorry for bothering you.
+    I am afraid it is important.
+
+    Could you let me in? It won't take long.
     """
 
-    # OLDER dialogs when this discussion happened in the late afternoon
-    # $ change_room('bedroom_psychic')
+    nurse """
+    All right then, come on in.
+    """
 
-    # """
-    # I return to my room to rest.
+    $ change_room("bedroom_nurse")
 
-    # But very quickly, the gong rings.
-    # """
+    nurse """
+    What can I do for you?
+    """
 
-    # call change_time(18,30)
+    psychic """
+    Nothing, it's more the other way round.
 
-    # play sound dinner_gong
+    I am sorry, I do not mean to intrude, but I noticed the blood on your handkerchief.
 
-    # """
-    # I guess I'd better join the others downstairs.
-    # """    
+    I was wondering if there was anything I could do to help you.
+    """
+
+    nurse """
+    Well, I suppose I could not have hidden it forever.
+
+    You see, I am suffering from a very serious disease.
     
+    One that has no known cure: consumption.
+    """
+
+    play sound woman_cough
+
+    """
+    She lets out another strong cough.
+    """
+
+    $ psychic_details.observations.unlock('nurse_sick')
+
+    psychic """
+    I am so sorry.
+
+    When did you find out?
+    """
+
+    nurse """
+    A couple of years ago.
+
+    And if I trust my doctor, I probably don't have more than another year left in me.
+    """
+
+    psychic """
+    My goodness, how horrible.
+
+    Could I help you with anything?
+    """
+
+    nurse """
+    There is nothing to be done.
+
+    My doctor prescribed me a strong medicine that I have to take before going to bed.
+    
+    That usually helps me sleep.
+
+    Sometimes I have to take it during the day, that's why I am often in my room, resting.
+
+    But you should go now, I will try to rest a little before dinner.
+
+    Thank you for your concern anyway.
+    """
+    
+    psychic """
+    Of course, I'll go.
+    """
+
+    nurse """
+    Thanks.
+    """  
+
+    $ nurse_details.description_hidden.unlock('sick')    
+
+    return
+
+
+label psychic_day2_no_hunt_bedroom_nurse_ignore:
+
+    psychic """
+    No, it can wait for now, of course. Goodbye, Miss Marsh.
+    """
+
+    nurse """
+    Goodbye, Miss Baxter.
+    """
+
     return

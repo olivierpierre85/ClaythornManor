@@ -5,35 +5,67 @@ label psychic_day2_evening_bedroom:
     call change_time(18, 00)
 
     """
-    I returned to my room to change and clear my head.
-    
-    It seems I still have a little time before dinner.
+    I return to my room to change and collect my thoughts.
 
-    I suppose I could just rest for a bit,
+    So much has happened today, it is overwhelming.
+
+    I use this brief respite to compose myself.
+
+    There is little time before dinner, so I could wait here,
 
     or take the opportunity to have a private word with someone.
 
     I do not think it would be wise to approach Captain Sinha,
 
     nor Lady Claythorn.
-
-    However, I do not believe I am taking too much of a risk by talking with Rosalind Marsh or Ted Harring.
     """
 
-    if psychic_details.observations.is_unlocked('nurse_blood'):
+    if psychic_details.observations.is_unlocked('nurse_sick'):
 
         """
-        Maybe I could see if Rosalind Marsh is feeling better now.
+        And I should let Rosalind Marsh rest.
+
+        However, I do not believe I am taking too much of a risk by talking with Ted Harring.
         """
 
-    $ time_left = 99 #TODO possibility to talk to both ???
+    else:
+
+        """
+        However, I do not believe I am taking too much of a risk by talking with Rosalind Marsh or Ted Harring.
+        """
+
+    $ time_left = 1
     call run_menu(TimedMenu("psychic_day2_evening_bedroom", [
-            TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_evening_bedroom_nurse', 0, early_exit=True),
-            TimedMenuChoice('Try to talk to Ted Harring', 'psychic_day2_evening_lad_discussion', 20, early_exit=True),
-            TimedMenuChoice('Just have a quick nap instead', 'psychic_day2_evening_cancel_2', 30, early_exit=True),
+            TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_evening_bedroom_nurse_blood', 0, early_exit=True, condition = "not psychic_details.observations.is_unlocked('nurse_sick')"),
+            TimedMenuChoice('Try to talk to Ted Harring', 'psychic_day2_evening_lad_discussion', 0, early_exit=True),
+            TimedMenuChoice('Just have a quick nap instead', 'psychic_day2_evening_cancel_2', 0, early_exit=True),
             # Talk with host anyway??? Intuition things are not going according to plan.
         ])
     )
+
+    return
+
+
+label psychic_day2_evening_bedroom_nurse_blood:
+
+    # Second chance to check Rosalind Marsh illness
+    call psychic_day2_no_hunt_bedroom_nurse_blood
+
+    $ change_room('bedroom_psychic')
+
+    """
+    I return to my room to rest.
+
+    But very quickly, the gong rings.
+    """
+
+    call change_time(18,30)
+
+    play sound dinner_gong
+
+    """
+    I guess I'd better join the others downstairs.
+    """    
 
     return
 
@@ -67,183 +99,6 @@ label psychic_day2_evening_cancel_2:
     Right on time, the dinner gong rings.
     
     I guess I should join the others downstairs.
-    """
-
-    return
-
-
-label psychic_day2_evening_bedroom_nurse:
-
-    $ change_room("bedrooms_hallway")
-
-    play sound door_knock
-    
-    """
-    I knock gently on the door.
-
-    A faint voice responds.
-    """
-
-    nurse """
-    Yes? What is it?
-    """
-    
-    $ unlock_map('bedroom_nurse')
-
-    psychic """
-    It's Amelia Baxter.
-
-    Are you all right?
-
-    Perhaps we might have a chat?
-    """
-
-    nurse """
-    I am sorry, Miss Baxter, but I am very tired.
-
-    Unless it is very important, I would prefer to wait.
-    """
-
-    if psychic_details.observations.is_unlocked('nurse_blood'):
-
-        call run_menu(TimedMenu("psychic_day2_evening_bedroom_nurse", [
-            TimedMenuChoice("Insist, there is clearly something wrong with her{{observation}}", 'psychic_day2_evening_bedroom_nurse_insist', 10, early_exit=True),
-            TimedMenuChoice("Do not push any further", 'psychic_day2_evening_bedroom_nurse_ignore', 10, early_exit=True), 
-        ]))
-
-        $ change_room('bedroom_psychic')
-
-        """
-        I return to my room to rest.
-
-        Digesting the information.
-
-        Rosalind Marsh is dying.
-
-        I don't know what to make of it.
-        """
-
-    else:
-
-        call psychic_day2_evening_bedroom_nurse_ignore
-
-        $ change_room('bedroom_psychic')
-
-        """
-        I return to my room to rest.
-        """
-
-    call change_time(18,30) 
-
-    """
-    I am deep in my thoughts when I hear the gong ringing.
-    """
-
-    play sound dinner_gong
-
-    """
-    I guess I should join the others downstairs.
-    """
-
-    return
-
-
-label psychic_day2_evening_bedroom_nurse_insist:
-
-
-    psychic """
-    I am afraid it is important.
-
-    Could you let me in? It won't take long.
-    """
-
-    nurse """
-    All right then, come on in.
-    """
-
-    $ change_room("bedroom_nurse")
-
-    nurse """
-    What can I do for you?
-    """
-
-    psychic """
-    Nothing, it's more the other way round.
-
-    I am sorry, I do not mean to intrude, but I noticed a trace of blood on your handkerchief.
-
-    I was wondering if there was anything I could do to help you.
-    """
-
-    nurse """
-    Well, I suppose I could not have hidden it forever.
-
-    You see, I am suffering from a very serious disease.
-    
-    One that has no known cure: consumption.
-    """
-
-    play sound woman_cough
-
-    """
-    She lets out another strong cough.
-    """
-
-    $ psychic_details.observations.unlock('nurse_sick')
-
-    psychic """
-    I am so sorry.
-
-    When did you find out?
-    """
-
-    nurse """
-    A couple of years ago.
-
-    And if I trust my doctor, I probably don't have more than another year left in me.
-    """
-
-    psychic """
-    My goodness, how horrible.
-
-    Could I help you with anything?
-    """
-
-    nurse """
-    There is nothing to be done.
-
-    My doctor prescribed me a strong medicine that I have to take before going to bed.
-    
-    That usually helps me sleep.
-
-    Sometimes I have to take it during the day, that's why I am often in my room, resting.
-
-    But you should go now, I will try to rest a little before dinner.
-
-    Thank you for your concern anyway.
-    """
-    
-    psychic """
-    Of course, I'll go.
-    """
-
-    nurse """
-    Thanks.
-    """  
-
-    $ nurse_details.description_hidden.unlock('sick')    
-
-    return
-
-
-label psychic_day2_evening_bedroom_nurse_ignore:
-
-    psychic """
-    No, it can wait for now, of course. Goodnight, Miss Marsh.
-    """
-
-    nurse """
-    Goodnight, Miss Baxter.
     """
 
     return

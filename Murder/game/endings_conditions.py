@@ -20,7 +20,7 @@ def cond_psychic_fell(toggles):
     return toggles.get('visited_attic', False) and toggles.get('lord_name', False) and toggles.get('lord_age', False)
 
 def cond_psychic_bludgeoned(toggles):
-    return toggles.get('silverware', False) and toggles.get('nurse_sick', False) and toggles.get('nurse_blood', False)
+    return toggles.get('silverware', False) and toggles.get('nurse_sick', False)
 
 def cond_psychic_burned(toggles):
     return toggles.get('steal_gun', False) and not toggles.get('leave_manor', False)

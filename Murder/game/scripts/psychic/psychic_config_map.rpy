@@ -40,7 +40,7 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('dining_room'), 'psychic_dining_room_default', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day1_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
-            TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
+            # TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             #Bedrooms
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_captain'),
@@ -185,7 +185,6 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day2_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
             # Bedrooms 
-            TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_evening_bedroom_doctor', 20, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day2_evening_bedroom_host', 10, room='bedroom_host'),
@@ -202,13 +201,18 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
 
             TimedMenuChoice(
+                default_room_text('bedroom_lad'), 
+                'psychic_day2_evening_lad_discussion', 
+                20, 
+                room='bedroom_lad'
+            ),
+            TimedMenuChoice(
                 'Check if there is someone in the Billiard Room', 
                 'psychic_day2_evening_billiard_room', 
                 10, 
                 room = 'billiard_room',
                 keep_alive = True, 
             ),
-
             TimedMenuChoice(
                 default_room_text('bedroom_nurse'),
                 'psychic_day2_evening_bedroom_nurse_gone',
