@@ -362,7 +362,7 @@ label psychic_day2_evening_butler_room:
     I see.
     """
 
-    # TODO very scary music NOW
+    $ play_music('scary', 2)
 
     """
     Her expression changes.
@@ -383,7 +383,7 @@ label psychic_day2_evening_butler_room:
 
     I don't have time to realize what's happening.
 
-    Sushil Sinha plunges a hand in his own pocket.
+    Sushil Sinha plunges his own hand in his pocket.
 
     But he is too late.
     """
@@ -432,14 +432,60 @@ label psychic_day2_evening_butler_room:
     Goodbye Miss Baxter.
     """
 
-    #TODO first shot miss vital parts, then second is empty
-    # So she picks the candelabra and beat me with it
+    play sound gun
+
+    """
+    She shot at me.
+
+    I feel a sharp pain in my shoulder, 
+    
+    and fall to the ground.
+    """
+
+    play sound body_fall
+
+    """
+    I am badly wounded.
+
+    But I am still alive.
+
+    Rosalind Marsh approaches me, gun in hand.
+    """
+
+    nurse """
+    Sorry I missed your head.
+
+    Let me correct that.
+    """
+
     play sound gun_empty
 
     """
-    TODO
+    She tries to shoot me again.
+
+    But nothing came out. She must be out of bullets.
     """
 
+    nurse """
+    Well that's my luck.
 
+    Don't move.
+    """
+
+    """
+    She turns around.
+
+    I gather my remaining strength to crawl away from her.
+
+    But I haven't time to move far enough.
+    
+    I see her coming back at me.
+
+    Her gaze is empty.
+
+    She is holding the candelabra in her hands.
+
+    Then, she raises it above her head.
+    """
 
     jump psychic_ending_nurse_thief

@@ -107,7 +107,7 @@ label psychic_day2_evening_bedroom_nurse:
     if psychic_details.observations.is_unlocked('nurse_blood'):
 
         call run_menu(TimedMenu("psychic_day2_evening_bedroom_nurse", [
-            TimedMenuChoice("Insist, there is clearly something wrong with her", 'psychic_day2_evening_bedroom_nurse_insist', 10, early_exit=True),
+            TimedMenuChoice("Insist, there is clearly something wrong with her{{observation}}", 'psychic_day2_evening_bedroom_nurse_insist', 10, early_exit=True),
             TimedMenuChoice("Do not push any further", 'psychic_day2_evening_bedroom_nurse_ignore', 10, early_exit=True), 
         ]))
 

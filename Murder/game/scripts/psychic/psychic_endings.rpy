@@ -92,6 +92,10 @@ label psychic_ending_nurse_thief:
     You were bludgeoned to death with a candelabra.
 
     A horrific end.
+
+    And not something you could have expected from a middle-aged nurse.
+
+    Be careful, some people are not who they appear to be.
     """
 
     $ psychic_details.endings.unlock('bludgeoned')
