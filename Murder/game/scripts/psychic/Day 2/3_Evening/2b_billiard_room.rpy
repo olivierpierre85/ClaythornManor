@@ -112,106 +112,104 @@ label psychic_day2_evening_billiard_room_captain:
 label psychic_day2_evening_nurse_captain:
 
     captain """
-    What do you mean something weird?
+    What do you mean, something weird?
     """
 
     psychic """
-    Well, I am not sure I should tell you that, but Miss Marsh is very ill.
+    Well, I am not certain I should tell you, but Miss Marsh is very ill.
     """
 
     captain """
-    Yes, now that you mention it, I noticed she spent a lot of time in her room.
+    Yes, now that you mention it, I noticed she has spent a good deal of time in her room. 
 
-    I just assumed she was shy.
+    I simply assumed she was shy.
     """
 
     psychic """
-    Yes but that is the thing.
+    Yes, but that is the point. 
 
-    She should be in her room, but she isn't.
+    She should be in her room, and she is not. 
 
-    I just went in to check and her room is empty.
+    I went in to check, and it was empty.
     """
 
     captain """
-    Really? Do you often visit other people rooms when they are not there?
+    Really? Do you often wander into other people's rooms when they are absent?
     """
 
     psychic """
-    Don't be absurd, of course not.
+    Don't be absurd, of course not. 
 
-    It was purely for medical reasons, I feared for her well-being you see.
+    It was entirely for medical reasons. I feared for her well-being, you see.
     """
 
     captain """
-    If you say so.
+    If you say so. 
 
-    But she could be anywhere, it's not like she couldn't get out at all.
+    Still, she could be anywhere. It is not as though she were confined.
     """
 
     psychic """
-    Right, but there is something else. 
+    Quite, but there was something else. 
 
-    In her room, there was a stash of silverware. The same we used at dinner.
+    In her room I found a quantity of silverware — the very same we used at dinner. 
 
-    And there was too many to assume it was just for her benefit.
+    And far too much to suppose it was simply for her own use.
     """
 
     captain """
-    What are you saying? That she stole them?
+    What are you implying? That she stole it?
     """
 
     psychic """
-    I don't know, maybe.
+    I do not know, perhaps. 
 
-    Don't you think it's odd?
+    Do you not think it rather odd?
     """
 
     captain """
-    I must concede, it is a bit.
+    I must concede, it is. 
 
-    I've read in the paper about people who are compelled to take things that aren't theirs.
+    I have read in the papers about people driven to take what is not theirs. 
 
-    It's a disease apparently, called kleptomania.
+    An illness, apparently — kleptomania, they call it. 
 
-    I guess it's a possibility Miss Marsh is afflicted by it.
+    I suppose it is possible Miss Marsh is afflicted with it. For it would be folly indeed to risk the reward money by provoking our host. 
 
-    Because it wouldn't make sense to risk losing the reward money by angering our host.
-
-    But I don't know, there is no way of knowing really without talking to her first.
+    But who can say, without speaking to her first?
     """
 
     psychic """
-    Of course, but I don't know where she is now.
+    Of course, yet I have no idea where she has gone. 
 
     She could be anywhere.
     """
 
     captain """
-    That is correct, but if she is roaming the Manor looking for something to steal, there are obvious places she could look.
+    True. But if she is prowling about in search of something to steal, there are only so many places she might try.
     """
 
     psychic """
-    Really? Like where?
+    Really? Such as where?
     """
 
     captain """
-    As you certainly know, the silverware is probably stored in the butler's pantry.
+    As you know, the silver is most likely kept in the butler's pantry. 
 
-    It could be either, in his room, or somewhere downstairs, like in the kitchen or the scullery.
+    That may be in his own quarters, or perhaps downstairs, in the kitchen or scullery.
     """
 
     psychic """
-    I don't think I am allowed downstairs, so maybe I should go check the butler's room.
+    I am not permitted below stairs. Perhaps I should try the butler's room.
     """
 
     captain """
-    You could try, but it could be dangerous, I should come with you.
+    You might — but it could be dangerous. I ought to come with you.
     """
 
     call run_menu(TimedMenu("psychic_day2_evening_nurse_captain", [
-            TimedMenuChoice("I guess there is no other choice", 'psychic_day2_evening_butler_room', 0, early_exit=True),
-            TimedMenuChoice("Don't go alone with him", 'psychic_day2_evening_nurse_captain_cancel', 10, early_exit=True),
+            TimedMenuChoice("I suppose there is no other choice", 'psychic_day2_evening_butler_room', 0, early_exit=True),
+            TimedMenuChoice("Do not go alone with him", 'psychic_day2_evening_nurse_captain_cancel', 10, early_exit=True),
         ]))
 
     return
@@ -220,15 +218,15 @@ label psychic_day2_evening_nurse_captain:
 label psychic_day2_evening_nurse_captain_cancel:
 
     """
-    It's an interesting offer, but I don't feel comfortable being alone with him in the attic.
+    It is a tempting offer, yet I do not feel at ease being alone with him in the attic.
     """
 
     psychic """
-    Thank you but I don't think I need to do that.
+    Thank you, but I do not believe it is necessary. 
 
-    I probably have the wrong idea.
+    I must have the wrong idea. 
 
-    I am sure Rosalind Marsh just went for a walk to help her sleep.
+    I am sure Miss Marsh has only gone for a walk to help her sleep. 
 
     Nothing more.
     """
@@ -245,35 +243,33 @@ label psychic_day2_evening_butler_room:
     $ change_room('attic_hallway')
 
     psychic """
-    Here we are, how will we enter?
+    Here we are. How shall we get in? 
 
-    The room is probably locked.
+    The door is likely locked.
     """
 
     captain """
-    No worries, the butler gave me a master key to lock Samuel Manning earlier.
+    No matter. The butler gave me a master key earlier, when I had to secure Samuel Manning. 
 
-    I still have it with me.
+    I still have it.
     """
 
     psychic """
-    Oh, how convenient.
+    How convenient.
     """
 
     """
-    He has a master key?
+    A master key? Then he can open nearly every door in the house. 
 
-    Which means he has access to almost every room in this place.
-
-    How come the butler just gave it to him?
+    And yet he entrusted it to the captain without hesitation? Curious.
     """
 
     play sound door_open
 
     captain """
-    The key won't be necessary, the door is not locked.
+    As it happens, we shall not need it. The door is already unlocked. 
 
-    So someone is probably inside.
+    Someone must be inside.
     """
 
     psychic """
@@ -281,109 +277,101 @@ label psychic_day2_evening_butler_room:
     """
 
     captain """
-    Hello, is there someone here?
+    Hello? Is someone here?
     """
     
     $ change_room('bedroom_butler')
 
     """
-    Without waiting for an answer, we quickly enter the room.
+    Without waiting for an answer, we step into the room. 
 
-    And as I predicted, Rosalind Marsh is there.
-
-    Holding a silver candelabra.
+    As I feared, Rosalind Marsh is there — holding a silver candelabra.
     """
 
     nurse """
-    God.
+    God. 
 
     What are you doing here?
     """
 
-
     captain """
-    We could ask you the same question.
+    We might put the same question to you. 
 
-    But I don't think we need to, it's pretty obvious why you are here.
+    Though I daresay the answer is plain enough.
     """
 
     """
-    The captain points at the candlestick in the nurse's hands.
+    The captain points to the candlestick in her hand.
     """
 
     nurse """
-    That?
+    This? I only wished for more light in my room. 
 
-    I just needed more light in my room.
-
-    The butler was kind enough to gave me key to take this with me.
+    The butler kindly gave me the key so I could take it.
     """
 
     captain """
-    Really? 
+    Did he indeed? 
 
-    That is strange since I already have the only spare key he had.
+    Strange, for I already hold the only spare key in his possession. 
 
-    I don't think likely that he would give you his only key.
-
-    He would have come with you at least.
+    It seems unlikely he would part with his own. He would at least have accompanied you.
     """
 
     nurse """
-    But he couldn't.
-
-    He was too busy to come with me and...
+    But he could not. He was too occupied and—
     """
 
     play sound broken_glass
 
     """
-    Something fell from her pocket.
+    Something tumbles from her pocket and smashes on the floor. 
 
     A champagne glass.
     """
 
     captain """
-    You also needed a crystal glass I see.
+    Ah, and you required a crystal glass as well? 
 
-    Were you planning a party?
+    Planning a little party?
     """
 
     nurse """
-    Well I was, I was ...
+    I was… I was…
     """
 
     captain """
-    We know very well what you were doing miss Marsh.
+    We know very well what you were about, Miss Marsh. 
 
-    We know about the cutlery in your room as well.
+    We have seen the cutlery in your room. 
 
-    And I am sure it's not the first time you've been doing this.
+    And I am sure it's not the first time you've been doing something of the sort.
     """
-
 
     $ play_music('scary', 2)
 
     """
-    Her expression changes.
+    Her face alters. 
+    
+    The flustered look vanishes, replaced by a cold resignation. 
 
-    She no longer looks embarrassed. Instead, a quiet resignation forms on her face.
-
-    She puts down the candelabra.
+    She sets the candelabra down.
     """
     
     nurse """
-    I see.
+    I see. 
 
-    There is no point in pretending anymore.
+    There is no point in pretence any longer. 
 
-    I was trying to make the most of this place.
+    I was helping myself to whatever I could find. 
 
-    I found many valuable things roaming this house.
+    Trinkets, keepsakes, silver, jewels — I have taken them all before. 
 
-    I am quite good at it, because, as you said, I have been doing this for a long time.
+    From houses, hospitals, from the old and feeble who never noticed until it was too late. 
 
-    In hospitals, from the elderly I cared for, and in many other places I can't even remember.
+    And now from here. 
+
+    It is simply what I do.
 
     Surprisingly, it's the first time I've been found out. 
     """
@@ -391,17 +379,13 @@ label psychic_day2_evening_butler_room:
     $ nurse_details.description_hidden.unlock('lie') 
 
     nurse """
-    That means you're leaving me no choice.
+    Which means you leave me no choice.
     """
 
     """
-    She then picks up something quickly from her pocket.
+    She draws something swiftly from her pocket — a revolver. 
 
-    A gun.
-
-    I don't have time to realize what's happening.
-
-    Sushil Sinha plunges his own hand in his pocket.
+    I scarcely comprehend before Sushil thrusts his hand into his coat. 
 
     But he is too late.
     """
@@ -409,69 +393,65 @@ label psychic_day2_evening_butler_room:
     play sound gun
 
     """
-    Rosalind Marsh shot him right in the face.
+    The shot cracks through the room. 
+
+    The bullet strikes him full in the face. 
+
+    He drops at once beside me.
     """
 
     play sound body_fall
 
     """
-    He immediately falls down next to me.
-
-    She then turns the gun towards me.
+    She turns the revolver upon me.
     """
 
     nurse """
-    I am sorry Miss Baxter, but I can't have you talk to the police.
+    I am sorry, Miss Baxter, but I cannot have you telling the police.
     """
 
     psychic surprised """
-    I don't understand, why would you do such a thing?
+    I do not understand — why do such a thing? 
 
-    We were about to receive way more money that those objects are worth.
+    We were about to receive far more money than these trifles are worth.
     """
 
     nurse """
-    Ah!
+    Ha! 
 
-    You really believe that?
+    You truly believed that? That we were about to get rich? 
 
-    That you were about to get rich?
-
-    How naive of you.
+    How very naive.
     """
 
     psychic """
-    What do you mean? What makes you say such a thing? I ...
+    What do you mean? What makes you say so? I—
     """
 
     nurse """
-    I am sorry, but I don't need to explain myself to you.
+    I am sorry. I have no need to explain myself. 
 
-    Goodbye Miss Baxter.
+    Goodbye, Miss Baxter.
     """
 
     play sound gun
 
     """
-    She shot at me.
+    She fires. 
 
-    I feel a sharp pain in my shoulder, 
-    
-    and fall to the ground.
+    A searing pain tears through my shoulder and I fall.
     """
 
     play sound body_fall
 
     """
-    I am badly wounded.
+    I am grievously wounded — but alive. 
 
-    But still alive.
-
-    Rosalind Marsh approaches me, gun in hand.
+    Rosalind Marsh advances, revolver still in hand.
     """
 
     nurse """
-    Sorry I missed your head.
+    A pity I missed your head. 
 
     Let me correct that.
     """
@@ -479,31 +459,26 @@ label psychic_day2_evening_butler_room:
     play sound gun_empty
 
     """
-    She tries to shoot me again.
+    She pulls the trigger. 
 
-    But nothing came out. She must be out of bullets.
+    A dull click. Empty. 
     """
 
     nurse """
-    Well that's my luck.
+    Well, that is my luck. 
 
-    Don't move.
+    Do not move.
     """
 
     """
-    She turns around.
+    She turns away. I summon what strength I can to crawl across the floor. 
 
-    I gather my remaining strength to crawl away from her.
+    But I cannot reach far before she returns. 
 
-    But I haven't time to move far enough.
-    
-    I see her coming back at me.
+    Her gaze is vacant. 
 
-    Her gaze is empty.
-
-    She is holding the candelabra in her hands.
-
-    Then, she raises it above her head.
+    She holds the candelabra,
+    raises it high above her head...
     """
 
     play sound bludgeon
