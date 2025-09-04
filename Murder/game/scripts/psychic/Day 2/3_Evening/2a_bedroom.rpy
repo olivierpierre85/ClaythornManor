@@ -38,7 +38,7 @@ label psychic_day2_evening_bedroom:
     call run_menu(TimedMenu("psychic_day2_evening_bedroom", [
             TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_evening_bedroom_nurse_blood', 0, early_exit=True, condition = "not psychic_details.observations.is_unlocked('nurse_sick')"),
             TimedMenuChoice('Try to talk to Ted Harring', 'psychic_day2_evening_lad_discussion', 0, early_exit=True),
-            TimedMenuChoice('Just have a quick nap instead', 'psychic_day2_evening_cancel_2', 0, early_exit=True),
+            TimedMenuChoice('Just have a quick nap instead', 'psychic_day2_evening_cancel_nap', 0, early_exit=True),
             # Talk with host anyway??? Intuition things are not going according to plan.
         ])
     )
@@ -88,7 +88,7 @@ label psychic_day2_evening_lad_discussion_again:
     play sound door_knock
 
     psychic """
-    Mr Harring, are you there?
+    Mister Harring, are you there?
     """
 
     lad """
@@ -125,7 +125,7 @@ label psychic_day2_evening_lad_discussion_again:
 
 
 
-label psychic_day2_evening_lad_discussion_follow_up:
+label psychic_day2_evening_cancel_nap:
 
     """
     That's about all I can manage right now.

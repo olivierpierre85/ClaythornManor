@@ -196,9 +196,11 @@ label lad_day2_evening:
 
     jump lad_day3_morning
 
+
 label lad_day2_evening_sleep:
 
     return
+
 
 label lad_day2_bedroom_broken_back:
 
