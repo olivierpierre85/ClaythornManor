@@ -204,39 +204,37 @@ label psychic_day2_evening_bedroom_drunk:
 
     return
 
-# Attic
+# Attic - Too late for lord Now => 
 label psychic_day2_evening_attic_default:
 
-    # Hide all downstairs choices for the current menu
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
-        
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+    $ change_room("attic_hallway")
 
-    call psychic_attic_default
+    if psychic_details.observations.is_unlocked('visited_attic'):
 
-    return
+        """
+        I am back in the attic.
 
+        But it seems there is nobody now.
 
-label psychic_day2_evening_attic_return_too_soon:
+        Maybe it's too late.
+        """
 
-    # Hide all upstairs choices for the current menu
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
+    else:
 
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+        """
+        I climb the stairs to the attic and arrive in a dimly lit hallway.
 
-    call psychic_attic_return_too_soon
+        There are multiple doors, most of them lie in darkness.
 
+        When I find the right room, I try to open it.
+        """
+
+        play sound door_locked
+
+        """
+        It's locked.
+
+        And I couldn't force it open myself, obviously.
+        """
 
     return

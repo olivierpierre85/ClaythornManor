@@ -184,6 +184,8 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('dining_room'), 'psychic_dining_room_default', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day2_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('library'), 'psychic_library_default', 10, room='library'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_portrait_gallery_default', 10, room='portrait_gallery'),   
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_evening_bedroom_doctor', 20, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
@@ -204,7 +206,15 @@ label psychic_config_map:
                 default_room_text('bedroom_lad'), 
                 'psychic_day2_evening_lad_discussion', 
                 20, 
-                room='bedroom_lad'
+                room='bedroom_lad',
+                condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_lad'), 
+                'psychic_day2_evening_lad_discussion_again', 
+                20, 
+                room='bedroom_lad',
+                condition = "psychic_details.important_choices.is_unlocked('visit_lad')"
             ),
             TimedMenuChoice(
                 'Check if there is someone in the Billiard Room', 
@@ -249,6 +259,7 @@ label psychic_config_map:
                 room = 'bedroom_broken',
                 condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == True and not all_menus[current_menu.id].choices[25].hidden" #Check that previous choice hasn't been made, allow to avoid going twice to the same room
             )
-        ] + copy.deepcopy(lord_choices), 
+        ],
+        # ] + copy.deepcopy(lord_choices), # It's too late for the lord now, because I need to let psychic try the butler room
         is_map = True)
     return

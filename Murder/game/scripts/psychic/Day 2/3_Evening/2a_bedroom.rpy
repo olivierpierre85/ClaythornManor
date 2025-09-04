@@ -81,7 +81,51 @@ label psychic_day2_evening_lad_discussion:
     return
 
 
-label psychic_day2_evening_cancel_2:
+label psychic_day2_evening_lad_discussion_again:
+
+    $ change_room("bedrooms_hallway")
+
+    play sound door_knock
+
+    psychic """
+    Mr Harring, are you there?
+    """
+
+    lad """
+    Yes, what is it, Miss Baxter?
+    """
+
+    psychic """
+    Nothing in particular.
+
+    I only wished to make sure you were safe.
+    """
+
+    lad """
+    I am.
+
+    I've even just pushed some furniture up against the door, which means I can't let you in just now.
+    """
+
+    psychic """
+    No matter.
+
+    You did the right thing.
+    """
+
+    psychic """
+    I'll say good night then.
+    """
+
+    lad """
+    Good night, Miss Baxter.
+    """
+
+    return
+
+
+
+label psychic_day2_evening_lad_discussion_follow_up:
 
     """
     That's about all I can manage right now.

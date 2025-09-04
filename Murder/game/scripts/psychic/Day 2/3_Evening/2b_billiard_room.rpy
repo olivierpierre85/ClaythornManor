@@ -23,7 +23,7 @@ label psychic_day2_evening_billiard_room:
         """
 
         # day2_evening_billiard_room_talk_to_captain
-        # TODO: add interaction with the butler
+        # TODO: add interaction with the butler?
         $ psychic_day2_evening_billiard_room_menu = TimedMenu("psychic_day2_evening_billiard_room_menu", [
             TimedMenuChoice("First things first, go to the bar for a drink", 'psychic_day2_evening_billiard_room_bar', 10),
             TimedMenuChoice("Reluctantly talk to Sushil Sinha", 'psychic_day2_evening_billiard_room_captain', keep_alive=True),
@@ -33,7 +33,7 @@ label psychic_day2_evening_billiard_room:
 
     else:
         # Reset menu
-        $ psychic_day2_evening_billiard_room_menu.early_exit = False
+        # $ psychic_day2_evening_billiard_room_menu.early_exit = False
 
         """
         I am back in the Billiard Room.
@@ -62,47 +62,51 @@ label psychic_day2_evening_billiard_room_bar:
 
 label psychic_day2_evening_billiard_room_captain:
 
-    $ psychic_details.saved_variables["day2_evening_billiard_room_talk_to_captain"] = True
+    if not psychic_details.saved_variables["day2_evening_billiard_room_talk_to_captain"]:
 
-    """
-    I suppose I have no choice but to speak with him, at least for a little while.
+        $ psychic_details.saved_variables["day2_evening_billiard_room_talk_to_captain"] = True
 
-    Approaching him, I notice his expression is quite grave. 
+        """
+        I suppose I have no choice but to speak with him, at least for a little while.
 
-    He looks at me with a piercing gaze, as if to assess whether I am a threat.
-    
-    I sit down beside him, acutely aware of the tension between us.
-    """
+        Approaching him, I notice his expression is quite grave. 
 
-    captain """
-    Miss Baxter.
+        He looks at me with a piercing gaze, as if to assess whether I am a threat.
+        
+        I sit down beside him, acutely aware of the tension between us.
+        """
 
-    I wouldn't have thought you'd come here.
-    """
+        captain """
+        Miss Baxter.
 
-    psychic """
-    I wasn't sure I would to be honest.
+        I wouldn't have thought you'd come here.
+        """
 
-    The atmosphere of this house has become quite sinister.
+        psychic """
+        I wasn't sure I would to be honest.
 
-    But the idea of waiting alone in my room is not very reassuring either, so here I am.
-    """
+        The atmosphere of this house has become quite sinister.
 
-    captain """
-    Yes, sorry that there isn't a larger company here.
+        But the idea of waiting alone in my room is not very reassuring either, so here I am.
+        """
 
-    Everyone else seems to have been too scared to come.
-    """
+        captain """
+        Yes, sorry that there isn't a larger company here.
 
-    psychic """
-    Oh that's quite alright.
+        Everyone else seems to have been too scared to come.
+        """
 
-    But I am afraid I shall not be staying long in any case.
-    """
+        psychic """
+        Oh that's quite alright.
 
-    # captain """
-    # I hope you are not afraid of me?
-    # """
+        But I am afraid I shall not be staying long in any case.
+        """
+
+    else:
+
+        captain """
+        Miss Baxter, is there anything else?
+        """
 
     call captain_generic
 

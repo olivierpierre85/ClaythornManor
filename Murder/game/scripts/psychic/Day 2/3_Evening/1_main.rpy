@@ -162,7 +162,7 @@ label psychic_day2_evening:
 
     if psychic_details.important_choices.is_unlocked('visit_lad'):
         
-        call psychic_day2_evening_lad_discussion_2
+        call psychic_day2_evening_lad_discussion_follow_up
 
     else:
         
