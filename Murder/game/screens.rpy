@@ -402,7 +402,7 @@ screen main_menu():
         # textbutton _("Continue") action Start() at button0
         textbutton _("New Game") action Start() at button1
         # textbutton _("Load") action ShowMenu("load") at button2
-        textbutton _("Debug") action Start("start_debug") at button2
+        # textbutton _("Debug") action Start("start_debug") at button2
         textbutton _("Options") action ShowMenu("preferences")at button3
         textbutton _("Help") action ShowMenu("help") at button4
         # textbutton _("About") action ShowMenu("about") at button5
@@ -772,25 +772,25 @@ screen preferences():
         else:
             label _("Fullscreen") xpos 1280 ypos 410
 
-        ##Rollback button
-        hotspot (1087, 548, 584, 65):
-            if preferences.desktop_rollback_side == "disable":
-                action Preference("rollback side", "left")
-            elif preferences.desktop_rollback_side == "left":
-                action Preference("rollback side", "right")
-            else:
-                action Preference("rollback side", "disable")
+        # ##Rollback button
+        # hotspot (1087, 548, 584, 65):
+        #     if preferences.desktop_rollback_side == "disable":
+        #         action Preference("rollback side", "left")
+        #     elif preferences.desktop_rollback_side == "left":
+        #         action Preference("rollback side", "right")
+        #     else:
+        #         action Preference("rollback side", "disable")
 
-        ##Rollback labels
-        if preferences.desktop_rollback_side == "disable":
-            label _("Disabled") xpos 1290 ypos 542
-        elif preferences.desktop_rollback_side == "left":
-            label _("Left") xpos 1345 ypos 542
-        else:
-            label _("Right") xpos 1330 ypos 542
+        # ##Rollback labels
+        # if preferences.desktop_rollback_side == "disable":
+        #     label _("Disabled") xpos 1290 ypos 542
+        # elif preferences.desktop_rollback_side == "left":
+        #     label _("Left") xpos 1345 ypos 542
+        # else:
+        #     label _("Right") xpos 1330 ypos 542
 
-        text _("Display") xpos 1087 ypos 375
-        text _("Rollback") xpos 1087 ypos 508
+        # text _("Display") xpos 1087 ypos 375
+        # text _("Rollback") xpos 1087 ypos 508
 
     vbox:
         xsize 500
