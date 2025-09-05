@@ -108,7 +108,7 @@ screen progress:
                                 imagebutton:
                                     yoffset 2
                                     mouse "hover"
-                                    if not tutorial_on:
+                                    if not tutorial_on and current_character == current_storyline:
                                         action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                     if current_storyline.is_everything_completed():
                                         idle "images/info_cards/everything_completed.png"
@@ -122,14 +122,14 @@ screen progress:
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.highlight_color
-                                        if not tutorial_on:
+                                        if not tutorial_on and current_character == current_storyline:
                                             action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                 else:
                                     textbutton "{color=#fff}[unlocked]{/color}/[total]":
                                         text_size 56
                                         text_font gui.name_text_font
                                         text_color gui.accent_color
-                                        if not tutorial_on:
+                                        if not tutorial_on and current_character == current_storyline:
                                             action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                 vbox:
 
