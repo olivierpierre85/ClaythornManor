@@ -32,6 +32,11 @@ label run_menu(current_menu, change_level=True):
             $ selected_choice[menu_level - 1].next_menu = current_menu.id
 
     if current_menu.is_valid():
+
+        # Record the time at opening of the menu
+        python:
+            now = datetime.now()
+
         # Show characters when activated
         if current_menu.image_left:
             $ renpy.show(current_menu.image_left, at_list=[character_choice_left])
@@ -61,20 +66,31 @@ label run_menu(current_menu, change_level=True):
         # First get all possible choices and put them in list:
         python:
             global time_left
-        
+
             current_choices = []
             for choice in current_menu.choices:
                 if (not choice.hidden and choice.get_condition()) or choice.text==selected_choice[menu_level].text :
                     current_choices.append(choice.text)
 
+            time_to_decide = None
+            time_since_last = None
+
+            if all_choices:
+                last_timestamp = datetime.fromisoformat(all_choices[-1]["timestamp"])
+                time_since_last = (now - last_timestamp).total_seconds()
+
+            time_to_decide = (datetime.now() - now).total_seconds()
+
             all_choices.append({
                 "menu": current_menu.id,
                 "other_choices": current_choices,
                 "selected": selected_choice[menu_level].text,
-                "redirect": selected_choice[menu_level].redirect, 
+                "redirect": selected_choice[menu_level].redirect,
                 "time_left": time_left,
-                "timestamp": datetime.now().isoformat(),
-            })   
+                "timestamp": now.isoformat(),
+                "time_to_decide": time_to_decide,
+                "time_since_last": time_since_last,
+            })
 
             time_left -= selected_choice[menu_level].time_spent
 
@@ -145,6 +161,7 @@ init -1 python:
             return True
 
         def is_completed(self):
+            # if not self.already_chosen and not self.keep_alive: NEW version ok for REAL completed but not working with has been selected already!! (because keep_alive are always grey/. TODO split)
             if not self.already_chosen:
                 return False
             elif self.already_chosen and not self.next_menu and not self.linked_choice:
@@ -161,6 +178,7 @@ init -1 python:
                             continue
                         # A choice is seen as completed if it is a keep alive without a menu,
                         # or if it is itself completed 
+                        print(choice.text)
                         if not (choice.keep_alive and not choice.next_menu) and not choice.is_completed():
                             return False
                 elif self.linked_choice:
