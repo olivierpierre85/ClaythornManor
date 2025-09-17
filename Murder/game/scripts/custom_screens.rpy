@@ -164,7 +164,7 @@ screen custom_choice(custom_menu):
                 else:
                     $ btn_text = choice.text
 
-                if choice.is_completed():
+                if choice.is_already_chosen():
                     textbutton btn_text:
                         mouse "hover"
                         action Return(idx)

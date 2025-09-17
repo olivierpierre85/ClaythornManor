@@ -160,7 +160,7 @@ init -1 python:
 
             return True
 
-        def is_completed(self):
+        def is_already_chosen(self):
             # if not self.already_chosen and not self.keep_alive: NEW version ok for REAL completed but not working with has been selected already!! (because keep_alive are always grey/. TODO split)
             if not self.already_chosen:
                 return False
@@ -179,7 +179,7 @@ init -1 python:
                         # A choice is seen as completed if it is a keep alive without a menu,
                         # or if it is itself completed 
                         print(choice.text)
-                        if not (choice.keep_alive and not choice.next_menu) and not choice.is_completed():
+                        if not (choice.keep_alive and not choice.next_menu) and not choice.is_already_chosen():
                             return False
                 elif self.linked_choice:
 
@@ -189,10 +189,10 @@ init -1 python:
                     for c in parent_menu.choices:
                         if c.redirect == self.linked_choice:
                             found_linked_choice = True
-                            if not c.is_completed():
+                            if not c.is_already_chosen():
                                 return False
                             break
-                    # If we never found the linked choice in the parent menu, treat as complete (I assume wrong rewrite)
+                    # If we never found the linked choice in the parent menu, treat as is_already_chosen (I assume wrong rewrite)
                     if not found_linked_choice:
                         return True
 
