@@ -157,11 +157,24 @@ init -1 python:
         def get_condition(self):
             if self.condition:
                 return eval(self.condition)
-
             return True
 
+        def is_valid(self):
+            # IF choice has next_menu, make sure the menu is valid? Or is doesn't exist in all_menu
+            if not self.hidden and self.get_condition():
+                if not self.next_menu:
+                    return True
+                else:
+                    if self.next_menu not in all_menus:
+                        # menu not loaded yet so it should be valid if build logically
+                        return True 
+                    else:
+                        # Check is next menu is valid
+                        return all_menus[self.next_menu].is_valid()
+
+            return False
+
         def is_already_chosen(self):
-            # if not self.already_chosen and not self.keep_alive: NEW version ok for REAL completed but not working with has been selected already!! (because keep_alive are always grey/. TODO split)
             if not self.already_chosen:
                 return False
             elif self.already_chosen and not self.next_menu and not self.linked_choice:
@@ -178,7 +191,6 @@ init -1 python:
                             continue
                         # A choice is seen as completed if it is a keep alive without a menu,
                         # or if it is itself completed 
-                        print(choice.text)
                         if not (choice.keep_alive and not choice.next_menu) and not choice.is_already_chosen():
                             return False
                 elif self.linked_choice:
@@ -232,8 +244,9 @@ init -1 python:
 
         def get_visible_choices_total(self):
             visible_choices = 0
-            for i, choice in enumerate(self.choices):
-                if not choice.hidden and choice.get_condition():
+            for i, choice in enumerate(self.choices):                
+                # When a choice is keep_alive and early_exit, it's a generic choice to leave and shouldn't count on it's own
+                if choice.is_valid() and not (choice.keep_alive and choice.early_exit):
                     visible_choices += 1
                     
             return visible_choices

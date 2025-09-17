@@ -122,7 +122,8 @@ screen debug_screen:
         yoffset 0
         ypadding 0
         xpadding 0
-        textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "\nSubmenu(nurse_generic_other_guests_menu_psychic):" + str(is_sub_menu_active('nurse_generic_other_guests_menu_psychic')) :
+        textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter:
+        # textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "\nSubmenu(nurse_generic_menu_psychic):" + str(all_menus['nurse_generic_menu_psychic'].choices[6].is_valid()) :
             action Function(export_choices_to_file, all_choices)
             xminimum 200  # Adjust these values as needed
             yminimum 80
@@ -152,7 +153,7 @@ screen custom_choice(custom_menu):
     vbox:
         for idx, choice in enumerate(custom_menu.choices):
 
-            if not choice.hidden and choice.get_condition():
+            if choice.is_valid():
 
                 # Add the icons based on markers
                 if "{{intuition}}" in choice.text:
