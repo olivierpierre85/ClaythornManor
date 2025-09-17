@@ -247,7 +247,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
 
     Absinthe, Chartreuse, Creme de menthe,... and there are likely more.
 
-    So I wouldn't shout "poison" the next time you see a green drink.
+    So I wouldn't shout "poison" every time you see a green drink.
     """
 
     if not lad_details.important_choices.is_unlocked('whisky'):

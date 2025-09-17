@@ -128,7 +128,7 @@ label lad_day2_hunt:
     """
 
     lad """
-    Ok, if you're sure.
+    All right, if you're sure.
     """
 
     """

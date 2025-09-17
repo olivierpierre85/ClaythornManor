@@ -142,7 +142,7 @@ label psychic_day2_no_hunt_bedroom_drunk_enter:
     $ unlock_map('bedroom_drunk')
 
     """
-    I scan the room quickly but only see empty whiskey bottles.
+    I scan the room quickly but only see empty whisky bottles.
 
     Honestly, this is just as I expected.
 

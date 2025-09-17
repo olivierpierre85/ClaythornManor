@@ -82,6 +82,8 @@ label lad_day2_morning:
 
     if lad_details.saved_variables["day2_breakfast_follow"]:
 
+        $ change_room('dining_room')
+
         """
         As we returned to the dining room, the host had just finished explaining the situation.
 

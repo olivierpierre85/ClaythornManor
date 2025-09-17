@@ -182,6 +182,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
             )
 
         else:
+
             call common_day2_breakfast_follow_doctor_lad_normal
 
     return
@@ -305,8 +306,6 @@ label common_day2_breakfast_follow_doctor_lad_normal:
     We'll need a post-mortem to know for certain.
 
     First, I'll need to contact the authorities.
-
-    I'll require a telephone.
     """
 
     if current_character.text_id == "lad":

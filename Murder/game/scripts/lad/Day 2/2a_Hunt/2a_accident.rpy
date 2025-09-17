@@ -50,7 +50,7 @@ label lad_day2_hunt_accident:
     Birmingham. I was born and raised there.
     """
 
-    $ lad_details.description_hidden.unlock('background') 
+    $ lad_details.description_hidden.unlock('origin') 
 
     """
     But I don't really want to talk about that.

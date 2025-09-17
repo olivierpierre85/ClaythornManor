@@ -207,7 +207,7 @@ label init_technical_variables:
                 "You can select one of those \"checkpoints\" to see which choices you have made before reaching them.\n"  
             ),
             (1280, 312, 616, 626, 960, 150, 
-                "Once a checkpoint is selected, you can see here the choices that could have been made before reaching this point.\n" + 
+                "Once a checkpoint is selected, you can see here the possible choices that you faced before reaching this point.\n" + 
                 "And below are the ones you can make in this chapter.\n" +  
                 "There is a question mark for the ones that have not yet been discovered."  
             ),
