@@ -200,7 +200,6 @@ label init_lad:
             ),
         ])
 
-
         lad_endings = CharacterEndingList ([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed", chapters=['saturday_morning']), 
             CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing", chapters=['end']), 

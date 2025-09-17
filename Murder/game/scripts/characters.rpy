@@ -217,12 +217,15 @@ init -100 python:
             global seen_tutorial_description_hidden, seen_tutorial_unlock_character, show_tutorial_unlock_character
             for info in self.information_list:
                 if text_id == info.text_id and info.locked:
+                    # Unlock the info
+                    info.locked = False
+                    info.discovered = True
+
                     if not hide_notifications:
                         renpy.notify("You have found information about " + self.character_name)
                         renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
-                    # if not self.is_character_unlocked():
-                    if self.all_description_hidden_unlocked():
+                    if info.is_important and self.all_description_hidden_unlocked():
                         if not hide_notifications:
                             # Unlock a character
                             renpy.pause(2)
@@ -231,10 +234,7 @@ init -100 python:
                             if not seen_tutorial_unlock_character:
                                 seen_tutorial_unlock_character = True
                                 show_tutorial_unlock_character = True
-                    
-                    # Unlock the info
-                    info.locked = False
-                    info.discovered = True
+
             
             if not seen_tutorial_description_hidden:
                 seen_tutorial_description_hidden = True

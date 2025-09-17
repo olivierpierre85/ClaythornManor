@@ -141,7 +141,7 @@ label init_psychic:
         ])
 
         psychic_extra_information = CharacterDescriptionHiddenList([
-            CharacterInformation(0, "background","psychic who claims to be able to converse with the dead" , is_important = True), 
+            CharacterInformation(0, "background","psychic who claims to be able to converse with the dead", is_important = True), 
             CharacterInformation(1, "status", "London, she obviously knows her way around a grand house", is_important = True), 
             CharacterInformation(2, "age", "disclose her age to anyone"),
             CharacterInformation(3, "heroic_act", "abilities, she was able to help the police find the kidnapper of a Duke's young heir", is_important = True),
