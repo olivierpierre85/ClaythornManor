@@ -240,7 +240,7 @@ init -100 python:
 
         def all_description_hidden_unlocked(self):
             for info in self.information_list:
-                if info.locked:
+                if info.locked and info.is_important:
                     return False
             return True
 
