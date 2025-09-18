@@ -71,7 +71,7 @@ label init_psychic:
         psychic_observations = CharacterObservationList([
             CharacterInformation(
                 0, "visited_attic",
-                "You visited the attic and met the Lord of this place",
+                "You visited the attic and met the Lord of the Manor",
                 content_negative="You didn't go to the attic",
                 image_file="lord",
                 chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening'],
