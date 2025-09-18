@@ -170,7 +170,7 @@ init -1 python:
                         return True 
                     else:
                         # Check is next menu is valid
-                        return all_menus[self.next_menu].is_valid()
+                        return all_menus[self.next_menu].is_valid(next_menu=True)
 
             return False
 
@@ -233,8 +233,8 @@ init -1 python:
             
             return all_redirects
 
-        def is_valid(self):
-            if self.get_visible_choices_total() <= 0:
+        def is_valid(self, next_menu=False):
+            if self.get_visible_choices_total(next_menu) <= 0:
                 return False
                 
             if time_left <= 0 or self.early_exit:
@@ -242,12 +242,15 @@ init -1 python:
 
             return True
 
-        def get_visible_choices_total(self):
+        # The next_menu bool is needed because we don't want to reach a next_menu with only the exit
+        # But if we already are  in the menu, we should see it
+        def get_visible_choices_total(self, next_menu):
             visible_choices = 0
             for i, choice in enumerate(self.choices):                
                 # When a choice is keep_alive and early_exit, it's a generic choice to leave and shouldn't count on it's own
-                if choice.is_valid() and not (choice.keep_alive and choice.early_exit):
-                    visible_choices += 1
+                if choice.is_valid(): 
+                    if not (next_menu and choice.keep_alive and choice.early_exit):
+                        visible_choices += 1
                     
             return visible_choices
         
