@@ -196,6 +196,33 @@ init python:
             renpy.emscripten.run_script(js)
             renpy.notify("Download started")
 
+    # Functions to save History/logs to a file after an ending
+    def _transcript_text():
+        lines = []
+        for h in renpy.store._history_list:
+            # Strip text tags for clean output
+            what = renpy.filter_text_tags(h.what, allow=set()) if h.what else ""
+            who  = h.who or ""
+            if who:
+                lines.append(u"{0}: {1}".format(who, what))
+            else:
+                lines.append(what)
+        return u"\n".join(lines)
+
+
+    def save_transcript_to_file(filename="transcript.txt"):
+        # Write into the game's saves directory so it's always writable
+        savedir = renpy.config.savedir
+        if not os.path.isdir(savedir):
+            os.makedirs(savedir, exist_ok=True)
+        fullpath = os.path.join(savedir, filename)
+
+        with io.open(fullpath, "w", encoding="utf-8") as f:
+            f.write(_transcript_text())
+
+        renpy.notify("Transcript saved:\n" + fullpath)
+        return fullpath
+
 
 label start_again():
 

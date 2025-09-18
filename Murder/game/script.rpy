@@ -10,6 +10,7 @@ init -1000 python:
     import itertools
     import sys, json, base64
     import uuid
+    import os, io
 
     from typing import List, Tuple
 
