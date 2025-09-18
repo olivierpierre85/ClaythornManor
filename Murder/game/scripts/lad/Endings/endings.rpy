@@ -15,9 +15,9 @@ label lad_ending_day1_deathbed:
 
     It's unfair, I know. 
     
-    You don't think that you did anything wrong. 
+    You don't think that you have done anything wrong.
 
-    And you probably didn't.
+    And you probably haven't.
 
     But sometimes, people die without knowing why.
     """

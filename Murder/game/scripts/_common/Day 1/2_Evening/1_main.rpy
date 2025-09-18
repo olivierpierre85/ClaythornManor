@@ -26,7 +26,7 @@ label common_day1_evening_host_welcome_speech:
     """
     
     """
-    Following her speech, our host settled back down in her chair.
+    Following her speech, our host settles back down in her chair.
     """
 
     return
