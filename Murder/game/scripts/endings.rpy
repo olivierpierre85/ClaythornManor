@@ -67,7 +67,7 @@ label ending_generic:
             renpy.call('tutorial_unlock_character')
 
         # TODO Test in web mode AND deactivate for package?
-        save_transcript_to_file(current_character.text_id + "_playthrough.txt")
+        save_transcript_to_file()
 
     hide screen centered_text
 

@@ -210,7 +210,18 @@ init python:
         return u"\n".join(lines)
 
 
-    def save_transcript_to_file(filename="transcript.txt"):
+    def save_transcript_to_file():
+        # Grab current character if available
+        char_name = globals().get("current_character", None)
+        if char_name and hasattr(char_name, "text_id"):
+            base = char_name.text_id
+        else:
+            base = "transcript"
+
+        # Add timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{base}_{timestamp}_playthrough.txt"
+
         # Write into the game's saves directory so it's always writable
         savedir = renpy.config.savedir
         if not os.path.isdir(savedir):

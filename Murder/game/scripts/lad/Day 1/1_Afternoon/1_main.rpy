@@ -168,7 +168,7 @@ label lad_introduction:
 
     A big country house. 
 
-    Everyone who was anyone in England used to have one.”
+    Everyone who was anyone in England used to have one.
 
     Now I've heard a lot of people can't afford them anymore.
 

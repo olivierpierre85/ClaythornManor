@@ -94,6 +94,9 @@ label run_menu(current_menu, change_level=True):
 
             time_left -= selected_choice[menu_level].time_spent
 
+        # Add selected choice in log
+        $ renpy.say(current_character.real_name, selected_choice[menu_level].text, interact=False)
+
         call expression selected_choice[menu_level].redirect
 
         # We used to deduct time after choice, but it was a problem with submenu
