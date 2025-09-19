@@ -122,7 +122,7 @@ label psychic_day1_evening:
 
     $ change_room("tea_room")
 
-    call change_time(18,15, 'Arrival', 'Friday')
+    call change_time(18,10, 'Arrival', 'Friday')
 
     butler """
     Miss Baxter.
@@ -178,7 +178,7 @@ label psychic_day1_evening:
 
     call common_day1_drinks_lad_psychic_encounter
 
-    $ time_left = 15
+    $ time_left = 20
 
     call lad_generic
 
@@ -238,6 +238,8 @@ label psychic_day1_evening:
 
     $ stop_music()
 
+    call change_time(21,00, 'Evening', 'Friday')
+
     """
     The dinner is over.
 
@@ -250,11 +252,7 @@ label psychic_day1_evening:
     In any case, I ought to retire to my room first.
     """
 
-    $ stop_music(3)
-
     pause 2.0
-
-    call change_time(21,00, 'Evening', 'Friday')
 
     $ change_room('bedroom_psychic', dissolve)
 

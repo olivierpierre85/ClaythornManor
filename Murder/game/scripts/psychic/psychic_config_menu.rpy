@@ -23,13 +23,13 @@ label psychic_config_menu:
     #---------------------------------------------------------------------
     # DOCTOR
     $ doctor_generic_menu_psychic = TimedMenu("doctor_generic_menu_psychic", [
-        TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
-        TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 5, condition = "current_day == 'Saturday'"),
+        TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_friday', 10, condition = "current_day == 'Friday'"),
+        TimedMenuChoice('What do you think of this weather?', 'doctor_generic_weather_saturday', 10, condition = "current_day == 'Saturday'"),
         TimedMenuChoice('Tell me more about yourself.', 'doctor_generic_background', 20, linked_choice ="doctor_generic_heroic_act"),
         TimedMenuChoice('Why were you invited here?', 'doctor_generic_heroic_act', 20, condition = "all_menus[current_menu.id].choices[2].hidden"),
         TimedMenuChoice('What do you think of this place?', 'doctor_generic_manor', 10),
-        TimedMenuChoice('How old are you?', 'doctor_generic_age', 5),
-        TimedMenuChoice('What room are you in?', 'doctor_generic_room', 5),
+        TimedMenuChoice('How old are you?', 'doctor_generic_age', 10),
+        TimedMenuChoice('What room are you in?', 'doctor_generic_room', 10),
         TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_friday', 5, condition = "current_day == 'Friday'", next_menu="doctor_generic_other_guests_menu_psychic"),
         TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_saturday', 5, condition = "current_day == 'Saturday'", next_menu="doctor_generic_other_guests_menu_psychic"),
         TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
@@ -50,10 +50,9 @@ label psychic_config_menu:
         TimedMenuChoice('Isn\'t there anything else you can tell me about yourself?', 'captain_generic_background_psychic_3', 30, condition = "all_menus[current_menu.id].choices[1].hidden"),
         TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act_psychic', 20, condition =  "all_menus[current_menu.id].choices[0].hidden"),
         TimedMenuChoice('What do you think of this place?', 'captain_generic_manor_psychic', 10),
-        TimedMenuChoice('How old are you?', 'captain_generic_age_psychic', 5),
-        TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 5, condition = condition_friday),
-        # TimedMenuChoice('What room are you in?', 'captain_generic_room', 5),
-        TimedMenuChoice('What room are you in?', 'captain_generic_room', 5, condition = "not " + condition_friday),
+        TimedMenuChoice('How old are you?', 'captain_generic_age_psychic', 10),
+        TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 10, condition = condition_friday),
+        TimedMenuChoice('What room are you in?', 'captain_generic_room', 10, condition = "not " + condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_friday, next_menu="captain_generic_other_guests_menu_psychic"),
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday', 0, condition = condition_saturday, next_menu="captain_generic_other_guests_menu_psychic"),
         TimedMenuChoice('There is something weird about Rosalind Marsh{{observation}}', 'psychic_day2_evening_nurse_captain', 0, condition = condition_saturday + " and psychic_details.observations.is_unlocked('silverware')"),
@@ -83,7 +82,7 @@ label psychic_config_menu:
 
     $ lad_generic_menu_psychic = TimedMenu("lad_generic_menu_psychic", [
         TimedMenuChoice('Tell me more about yourself.', 'lad_generic_background_psychic', 15, linked_choice ="lad_generic_heroic_act_psychic"),
-        TimedMenuChoice('Why were you invited here?', 'lad_generic_heroic_act_psychic', 30, condition = "all_menus[current_menu.id].choices[0].hidden"),
+        TimedMenuChoice('Why were you invited here?', 'lad_generic_heroic_act_psychic', 40, condition = "all_menus[current_menu.id].choices[0].hidden"),
         TimedMenuChoice('What do you think of this place?', 'lad_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'lad_generic_age_psychic', 10),
         TimedMenuChoice('What room are you in?', 'lad_generic_room_friday', 10, condition = condition_friday),
