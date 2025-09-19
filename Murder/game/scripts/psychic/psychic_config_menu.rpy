@@ -45,11 +45,11 @@ label psychic_config_menu:
     # CAPTAIN
 
     $ captain_generic_menu_psychic = TimedMenu("captain_generic_menu_psychic", [
-        TimedMenuChoice('Tell me more about yourself', 'captain_generic_background_psychic_1', 30),
-        TimedMenuChoice('I would like to know a bit more about you', 'captain_generic_background_psychic_2', 30, condition = "all_menus[current_menu.id].choices[0].hidden"),
-        TimedMenuChoice('Isn\'t there anything else you can tell me about yourself?', 'captain_generic_background_psychic_3', 30, condition = "all_menus[current_menu.id].choices[1].hidden"),
+        TimedMenuChoice('Tell me more about yourself', 'captain_generic_background_psychic', 30),
+        # TimedMenuChoice('I would like to know a bit more about you', 'captain_generic_background_psychic_2', 30, condition = "all_menus[current_menu.id].choices[0].hidden"),
+        # TimedMenuChoice('Isn\'t there anything else you can tell me about yourself?', 'captain_generic_background_psychic_3', 30, condition = "all_menus[current_menu.id].choices[1].hidden"),
         TimedMenuChoice('Why were you invited here?', 'captain_generic_heroic_act_psychic', 20, condition =  "all_menus[current_menu.id].choices[0].hidden"),
-        TimedMenuChoice('What do you think of this place?', 'captain_generic_manor_psychic', 10),
+        TimedMenuChoice('What do you think of this place?', 'captain_generic_manor_psychic', 20),
         TimedMenuChoice('How old are you?', 'captain_generic_age_psychic', 10),
         TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 10, condition = condition_friday),
         TimedMenuChoice('What room are you in?', 'captain_generic_room', 10, condition = "not " + condition_friday),
