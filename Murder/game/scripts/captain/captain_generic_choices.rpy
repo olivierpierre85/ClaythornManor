@@ -171,13 +171,10 @@ label captain_generic_origin_psychic_2:
 
     return
 
-# TODO: 3 questions that will lead to the psychic to notice inconsistency in his speech
-# The latest question can only be asked on the latest dicscussion DAY 2 evening
+
 label captain_generic_background_psychic_1:
 
-    # The second part should contradict A little something.
-    # Make psychic say something like : There is something that doesn't make sense here 
-    # About the BOxers rebellion of course => Check what he said
+
     """
     Why am I encouraging him?
     """

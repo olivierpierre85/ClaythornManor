@@ -94,8 +94,13 @@ label run_menu(current_menu, change_level=True):
 
             time_left -= selected_choice[menu_level].time_spent
 
+        python:
         # Add selected choice in log
-        $ renpy.say(current_character.real_name, selected_choice[menu_level].text, interact=False)
+            if current_menu.is_map:
+                _history_list.append(ChoiceHistory("Map Choice", selected_choice[menu_level].text))
+            else:
+                _history_list.append(ChoiceHistory("Menu Choice", selected_choice[menu_level].text))
+                # renpy.say(current_character.real_name, selected_choice[menu_level].text, interact=False)
 
         call expression selected_choice[menu_level].redirect
 
@@ -124,6 +129,14 @@ label run_menu(current_menu, change_level=True):
 
 
 init -1 python:
+    # Used for Logs
+    class ChoiceHistory(object):
+        def __init__(self, who, what, who_id=None, what_id=None):
+            self.who = who
+            self.what = what
+            self.who_id = who_id
+            self.what_id = what_id
+
     # Possible choices for a menu
     class TimedMenuChoice:
     
