@@ -22,6 +22,8 @@ label psychic_day2_morning:
 
     $ change_room("bedroom_psychic", irisout)
 
+    $ play_music('upbeat', 3)
+
     """
     Despite the storm that raged all night, I managed to sleep rather well.
 

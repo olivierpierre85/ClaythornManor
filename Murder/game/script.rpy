@@ -244,6 +244,7 @@ label init_technical_variables:
         condition_friday_afternoon = "(current_day == 'Friday' and current_phase == 'Evening')"
         condition_friday_evening = "(current_day == 'Friday' and current_phase == 'Evening')"
         condition_friday_or_saturday = "(current_day == 'Friday' or current_day == 'Saturday')"
+        condition_friday_or_saturday_morning = "(current_day == 'Friday' or (current_day == 'Saturday' and current_phase == 'Morning'))"
         condition_sunday = "current_day == 'Sunday'"
 
         # Image for progress view

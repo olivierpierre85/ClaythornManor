@@ -17,7 +17,7 @@ label psychic_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_host'),
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_drunk'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('bedroom_broken'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_broken'),
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_nurse'),
             TimedMenuChoice(default_room_text('bedroom_lad'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_lad'),
@@ -46,12 +46,6 @@ label psychic_day1_evening_map_menu:
 
 
     return
-
-
-
-
-
-
 
 # Downstairs
 label psychic_day1_evening_downstairs_default:
@@ -92,6 +86,15 @@ label psychic_bedroom_stay_away:
     return
 
 label psychic_day1_evening_default_bedroom:
+
+    call psychic_bedroom_default_no_answer
+
+    call psychic_bedroom_stay_away
+
+    return
+
+label psychic_day1_evening_bedroom_drunk:
+
     call psychic_bedroom_default_no_answer
 
     call psychic_bedroom_stay_away

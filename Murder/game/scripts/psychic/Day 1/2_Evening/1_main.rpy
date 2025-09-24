@@ -231,8 +231,8 @@ label psychic_day1_evening:
 
     $ time_left = 90 
     call run_menu(TimedMenu("psychic_day1_evening", [
-        TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain'),
-        TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad'),
+        TimedMenuChoice('Talk to Sushil Sinha', 'psychic_day1_dinner_captain', keep_alive = True),
+        TimedMenuChoice('Talk to Ted Harring', 'psychic_day1_dinner_lad', keep_alive = True),
         TimedMenuChoice("Don't engage with anyone, it's unladylike", 'generic_cancel', early_exit=True),
     ], image_left = "captain", image_right = "lad"))
 

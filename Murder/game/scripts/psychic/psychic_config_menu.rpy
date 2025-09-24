@@ -54,7 +54,8 @@ label psychic_config_menu:
         TimedMenuChoice('What room are you in?', 'captain_generic_room_friday', 10, condition = condition_friday),
         TimedMenuChoice('What room are you in?', 'captain_generic_room', 10, condition = "not " + condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_friday, next_menu="captain_generic_other_guests_menu_psychic"),
-        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday', 0, condition = condition_saturday, next_menu="captain_generic_other_guests_menu_psychic"),
+        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_morning', 0, condition = condition_saturday_morning, keep_alive = True, next_menu="captain_generic_other_guests_menu_psychic"),
+        TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_evening', 0, condition = condition_saturday_evening, keep_alive = True, next_menu="captain_generic_other_guests_menu_psychic"),
         TimedMenuChoice('There is something weird about Rosalind Marsh{{observation}}', 'psychic_day2_evening_nurse_captain', 0, condition = condition_saturday + " and psychic_details.observations.is_unlocked('silverware')"),
         # exit
         TimedMenuChoice('On second thought, I\'d better not talk to him', 'generic_cancel', 0, keep_alive = True, early_exit = True )
@@ -62,17 +63,18 @@ label psychic_config_menu:
 
 
     $ captain_generic_other_guests_menu_psychic = TimedMenu("captain_generic_other_guests_menu_psychic", [
-        # Friday 
-        TimedMenuChoice('What do you think of Samuel Manning?', 'captain_generic_drunk_friday_psychic', 10, condition = condition_friday ),
+        # Same on friday an saturday
         TimedMenuChoice('What do you think of Lady Claythorn?', 'captain_generic_host_friday_psychic', 10, condition = condition_friday_or_saturday),
         TimedMenuChoice('What do you think of Rosalind Marsh?', 'captain_generic_nurse_friday', 10, condition = condition_friday_or_saturday),        
-        TimedMenuChoice('What do you think of Thomas Moody?', 'captain_generic_broken_friday', 20, condition = condition_friday),
         TimedMenuChoice('What do you think of Ted Harring?', 'captain_generic_lad_friday_psychic', 10, condition = condition_friday_or_saturday),
-        TimedMenuChoice('What do you think of Daniel Baldwin?', 'captain_generic_doctor_friday', 10, condition = condition_friday),
+        # Others
+        TimedMenuChoice('What do you think of Samuel Manning?', 'captain_generic_drunk_friday_psychic', 10, condition = condition_friday_or_saturday_morning ),
+        TimedMenuChoice('What do you think of Thomas Moody?', 'captain_generic_broken_friday', 20, condition = condition_friday_or_saturday_morning),
+        TimedMenuChoice('What do you think of Daniel Baldwin?', 'captain_generic_doctor_friday', 10, condition = condition_friday_or_saturday_morning),
         # Saturday different for the dead and the killer
-        TimedMenuChoice('What do you think of Samuel Manning?', 'captain_generic_drunk_saturday_psychic', 10, condition = condition_saturday ),      
-        TimedMenuChoice('What do you think of Thomas Moody?', 'captain_generic_broken_saturday', 10, condition = condition_saturday),
-        TimedMenuChoice('What do you think of Daniel Baldwin?', 'captain_generic_doctor_saturday', 10, condition = condition_saturday),
+        TimedMenuChoice('What do you think of Samuel Manning?', 'captain_generic_drunk_saturday_psychic', 10, condition = condition_saturday_evening ),      
+        TimedMenuChoice('What do you think of Thomas Moody?', 'captain_generic_broken_saturday', 10, condition = condition_saturday_evening),
+        TimedMenuChoice('What do you think of Daniel Baldwin?', 'captain_generic_doctor_saturday', 10, condition = condition_saturday_evening),
         # Always Generic 
         TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "captain")
