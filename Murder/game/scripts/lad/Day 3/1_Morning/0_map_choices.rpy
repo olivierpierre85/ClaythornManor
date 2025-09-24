@@ -1,3 +1,107 @@
+# -------------------------
+# Sunday Search MAX 250 !
+# -------------------------
+
+label lad_day3_morning_map_menu:
+    python:    
+        lad_day3_morning_map_menu = TimedMenu("lad_day3_morning_map_menu", [
+            TimedMenuChoice(default_room_text('library'), 'lad_day3_morning_library', 10, room='library'),
+            TimedMenuChoice(default_room_text('tea_room'), 'lad_day3_morning_tea_room', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'lad_day3_morning_dining_room', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('manor_garden'), 'lad_day3_morning_garden', 10, room='manor_garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day3_morning_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('billiard_room'), 'lad_day3_morning_billiard_room', 10, room='billiard_room'),
+            TimedMenuChoice(default_room_text('storage'), 'lad_day3_morning_storage', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'lad_day3_morning_males_room', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'lad_day3_morning_females_room', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'lad_day3_morning_butler_room', 10, room='butler_room'),
+            TimedMenuChoice(
+                default_room_text('bedroom_lad'), 
+                'lad_day3_morning_bedroom_lad',
+                10,
+                room = 'bedroom_lad'
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_psychic'), 
+                'lad_day3_morning_bedroom_psychic',
+                10,
+                room = 'bedroom_psychic'
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_drunk'), 
+                'lad_day3_morning_bedroom_drunk',
+                10,
+                room = 'bedroom_drunk'
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_doctor'), 
+                'lad_day3_morning_bedroom_doctor',
+                10,
+                room = 'bedroom_doctor'
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_broken'), 
+                'lad_day3_morning_bedroom_broken',
+                10,
+                room = 'bedroom_broken'
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_captain'), 
+                'lad_day3_morning_bedroom_captain',
+                10,
+                room = 'bedroom_captain'
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_host'), 
+                'lad_day3_morning_bedroom_host', 
+                20, 
+                room = 'bedroom_host'
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_nurse'), 
+                'lad_day3_morning_bedroom_nurse', 
+                20, 
+                room = 'bedroom_nurse'
+            ),                  
+            TimedMenuChoice(
+                default_room_text('kitchen'), 
+                'lad_day3_morning_kitchen', 
+                10, 
+                room = 'kitchen'
+            ),
+            TimedMenuChoice(
+                default_room_text('scullery'), 
+                'lad_day3_morning_scullery', 
+                10, 
+                room = 'scullery'
+            ),
+            TimedMenuChoice(
+                default_room_text('garage'), 
+                'lad_day3_morning_garage', 
+                10, 
+                room = 'garage'
+            ),
+            TimedMenuChoice(
+                default_room_text('gun_room'), 
+                'lad_day3_morning_gun_room', 
+                0, 
+                room = 'gun_room'
+            ),
+            TimedMenuChoice(
+                'Go wait for Sushil', 
+                'generic_cancel', 
+                early_exit = True, 
+                room = 'tea_room', 
+                condition = 'lad_details.saved_variables["day3_morning_captain_found"]'
+            ),
+
+        ], is_map = True)
+
+    return
+
+
+
 # Downstairs
 label lad_day3_first_downstairs:
 
