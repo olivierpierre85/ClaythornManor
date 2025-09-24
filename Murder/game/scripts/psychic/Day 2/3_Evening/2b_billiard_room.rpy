@@ -265,13 +265,14 @@ label psychic_day2_evening_butler_room:
     """
     A master key? Then he can open nearly every door in the house. 
 
-    And yet he entrusted it to the captain without hesitation? Curious.
+    And yet the butler entrusted it to the captain without hesitation? Curious.
     """
 
     play sound door_open
 
     captain """
-    As it happens, we shall not need it. The door is already unlocked. 
+    As it happens, we won't
+     need it. The door is already unlocked. 
 
     Someone must be inside.
     """
@@ -335,7 +336,7 @@ label psychic_day2_evening_butler_room:
     """
 
     captain """
-    Ah, and you required a crystal glass as well? 
+    Ah, and you needed a crystal glass as well? 
 
     Planning a little party?
     """

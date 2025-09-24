@@ -123,7 +123,7 @@ label psychic_day3_afternoon_escape:
     play sound gun
 
     """
-    The gunshot stops him in his tracks.
+    A gunshot stops him in his tracks.
 
     For a brief moment he manages to keep standing up.
 

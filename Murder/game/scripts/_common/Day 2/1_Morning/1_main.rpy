@@ -43,7 +43,7 @@ label common_day2_morning_host_death:
     Everyone looks shaken up.
     """
 
-    lad """
+    captain """
     How terrible.
     """
 
@@ -69,7 +69,7 @@ label common_day2_morning_host_death_doctor:
 
     But it's very likely a natural death, possibly triggered by an old wound from the war.
     
-    In any case, we need to call the town to ask for an ambulance.
+    In any case, we need to call the authorities.
     """
 
     # TODO: Add lines? Are they broken? Or does the host pretend everything is fine so everyone stays here?

@@ -143,6 +143,4 @@ label common_day3_afternoon_lad_psychic_captain_discussion_2:
     What do you think, Mister Harring?
     """
 
-    pause 1.0
-
     return

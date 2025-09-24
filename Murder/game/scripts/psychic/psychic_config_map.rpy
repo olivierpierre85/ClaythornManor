@@ -162,25 +162,24 @@ label psychic_config_map:
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
             TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
-
+            # TOO late to approach Ted Harring, only chance during the simple menu before dinner
+            # TimedMenuChoice(
+            #     default_room_text('bedroom_lad'), 
+            #     'psychic_day2_evening_lad_discussion', 
+            #     20, 
+            #     room='bedroom_lad',
+            #     condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
+            # ),
             TimedMenuChoice(
                 default_room_text('bedroom_lad'), 
-                'psychic_day2_evening_lad_discussion', 
+                'psychic_day2_evening_bedroom_lad', 
                 20, 
                 room='bedroom_lad',
-                condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
-            ),
-            TimedMenuChoice(
-                default_room_text('bedroom_lad'), 
-                'psychic_day2_evening_lad_discussion_again', 
-                20, 
-                room='bedroom_lad',
-                condition = "psychic_details.important_choices.is_unlocked('visit_lad')"
             ),
             TimedMenuChoice(
                 'Check if there is someone in the Billiard Room', 
                 'psychic_day2_evening_billiard_room', 
-                10, 
+                0, 
                 room = 'billiard_room',
                 keep_alive = True, 
             ),

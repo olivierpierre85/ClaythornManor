@@ -80,48 +80,48 @@ label psychic_day2_evening_lad_discussion:
 
     return
 
+# NOt used because => If barricaded he can't visit her afterwards, so he is absent
+# label psychic_day2_evening_lad_bedroom:
 
-label psychic_day2_evening_lad_discussion_again:
+#     $ change_room("bedrooms_hallway")
 
-    $ change_room("bedrooms_hallway")
+#     play sound door_knock
 
-    play sound door_knock
+#     psychic """
+#     Mister Harring, are you there?
+#     """
 
-    psychic """
-    Mister Harring, are you there?
-    """
+#     lad """
+#     Yes, what is it, Miss Baxter?
+#     """
 
-    lad """
-    Yes, what is it, Miss Baxter?
-    """
+#     psychic """
+#     Nothing in particular.
 
-    psychic """
-    Nothing in particular.
+#     I only wished to make sure you were safe.
+#     """
 
-    I only wished to make sure you were safe.
-    """
+#     lad """
+#     I am.
 
-    lad """
-    I am.
+#     I've even just pushed some furniture up against the door, which means I can't let you in just now.
+#     """
 
-    I've even just pushed some furniture up against the door, which means I can't let you in just now.
-    """
+#     psychic """
+#     No matter.
 
-    psychic """
-    No matter.
+#     You did the right thing.
+#     """
 
-    You did the right thing.
-    """
+#     psychic """
+#     I'll say good night then.
+#     """
 
-    psychic """
-    I'll say good night then.
-    """
+#     lad """
+#     Good night, Miss Baxter.
+#     """
 
-    lad """
-    Good night, Miss Baxter.
-    """
-
-    return
+#     return
 
 
 

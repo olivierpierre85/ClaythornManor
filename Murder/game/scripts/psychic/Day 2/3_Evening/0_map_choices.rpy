@@ -113,6 +113,10 @@ label psychic_day2_evening_bedroom_lad:
 
     call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_lad', 'psychic_day2_evening_default_room_locked')
 
+    """
+    Where could Ted Harring be anyway?
+    """
+
     return
 
 

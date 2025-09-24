@@ -80,7 +80,7 @@ label psychic_garden_default:
 
     I took a peaceful stroll through it.
 
-    Still, I noticed nothing out of the ordinary.
+    Still, I notice nothing out of the ordinary.
     """
 
     return

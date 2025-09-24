@@ -27,8 +27,6 @@ label psychic_day2_evening:
     """
     I observe the hunting party as they make their way into the house.
 
-    Rosalind was already by the entrance.
-
     Lady Claythorn steps through the doorway first, her expression one of utter disbelief.
 
     Following close behind are the butler and footman.

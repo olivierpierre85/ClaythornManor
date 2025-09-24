@@ -44,7 +44,7 @@ label common_day2_evening_entrance_dialog:
     Speaking of which, has anyone from the city arrived yet?
     """
 
-    nurse """
+    psychic """
     No, not yet.
 
     We're still waiting for them.
@@ -196,11 +196,11 @@ label common_day2_evening_samuel_manning_discussion_part_2:
     """
 
     captain """
-    That does seem like the wisest approach under the circumstances.
+    That does seem like the wisest approach.
     """
 
     """
-    He shifts his attention towards Mister Manning.
+    He shifts his attention towards Samuel Manning.
     """
 
     captain """
@@ -242,7 +242,7 @@ label common_day2_evening_samuel_manning_discussion_part_2:
     """
 
     butler """
-    Here is the key to his room.
+    Use this key to lock his room.
     """
 
     captain """
