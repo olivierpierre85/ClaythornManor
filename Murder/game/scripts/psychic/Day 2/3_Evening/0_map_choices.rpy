@@ -1,3 +1,99 @@
+label psychic_day2_evening_map_menu:
+    python:
+        # -------------------------
+        # Saturday Evening
+        # ------------------------- 
+        psychic_day2_evening_map_menu = TimedMenu("psychic_day2_evening_map_menu", [
+            # Downstairs
+            TimedMenuChoice(default_room_text('kitchen'), 'psychic_day2_evening_downstairs_default', 10, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'psychic_day2_evening_downstairs_default', 10, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'psychic_day2_evening_downstairs_default', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'psychic_day2_evening_downstairs_default', 10, room='gun_room'),
+            # first floor
+            TimedMenuChoice(default_room_text('tea_room'), 'psychic_tea_room_default', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'psychic_dining_room_default', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day2_evening_garden', 10, room='manor_garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('library'), 'psychic_library_default', 10, room='library'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_portrait_gallery_default', 10, room='portrait_gallery'),   
+            # Bedrooms 
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_evening_bedroom_doctor', 20, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day2_evening_bedroom_host', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day2_evening_bedroom_drunk', 10, room='bedroom_drunk'),
+            # attic
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_default', 10, room='storage', condition=attic_default),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_default', 10, room='males_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_default', 10, room='females_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_default', 10, room='butler_room', condition=attic_default),
+
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_return_too_soon', 10, room='storage', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
+            # TOO late to approach Ted Harring, only chance during the simple menu before dinner
+            # TimedMenuChoice(
+            #     default_room_text('bedroom_lad'), 
+            #     'psychic_day2_evening_lad_discussion', 
+            #     20, 
+            #     room='bedroom_lad',
+            #     condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
+            # ),
+            TimedMenuChoice(
+                default_room_text('bedroom_lad'), 
+                'psychic_day2_evening_bedroom_lad', 
+                20, 
+                room='bedroom_lad',
+            ),
+            TimedMenuChoice(
+                'Check if there is someone in the Billiard Room', 
+                'psychic_day2_evening_billiard_room', 
+                0, 
+                room = 'billiard_room',
+                keep_alive = True, 
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_nurse'),
+                'psychic_day2_evening_bedroom_nurse_gone',
+                0, 
+                room='bedroom_nurse',
+            ),
+            TimedMenuChoice(
+                'Wait in your room for Ted Harring', 
+                'psychic_day2_evening_cancel', 
+                0, 
+                early_exit = True, 
+                room = 'bedroom_psychic',
+                condition = "psychic_details.important_choices.is_unlocked('visit_lad')"
+            ),
+            TimedMenuChoice(
+                'Wait in your room', 
+                'psychic_day2_evening_cancel', 
+                0, 
+                early_exit = True, 
+                room = 'bedroom_psychic',
+                condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'psychic_day2_bedroom_broken', 
+                20, 
+                room = 'bedroom_broken',
+                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == False"
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'psychic_day2_bedroom_broken_already_see', 
+                20, 
+                room = 'bedroom_broken',
+                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == True and not all_menus[current_menu.id].choices[25].hidden" #Check that previous choice hasn't been made, allow to avoid going twice to the same room
+            )
+        ],
+        # ] + copy.deepcopy(lord_choices), # It's too late for the lord now, because I need to let psychic try the butler room
+        is_map = True)
+
+    return
+
 # Downstairs
 label psychic_day2_evening_downstairs_default:
 
