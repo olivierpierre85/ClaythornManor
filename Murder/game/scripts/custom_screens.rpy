@@ -123,7 +123,7 @@ screen debug_screen:
         ypadding 0
         xpadding 0
         textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter:
-        # textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "\nSubmenu(nurse_generic_menu_psychic):" + str(all_menus['nurse_generic_menu_psychic'].choices[6].is_valid()) :
+        # textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "\nSubmenu(lad_introduction):" + str(all_menus['lad_introduction'].is_valid()) :
             # action Function(export_choices_to_file, all_choices)
             action Function(save_transcript_to_file)
             xminimum 200  # Adjust these values as needed

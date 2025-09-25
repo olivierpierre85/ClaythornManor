@@ -86,7 +86,7 @@ label psychic_day2_evening_map_menu:
                 'psychic_day2_bedroom_broken_already_see', 
                 20, 
                 room = 'bedroom_broken',
-                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == True and not all_menus[current_menu.id].choices[25].hidden" #Check that previous choice hasn't been made, allow to avoid going twice to the same room
+                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == True and not all_menus['psychic_day2_evening_map_menu'].choices[25].hidden" #Check that previous choice hasn't been made, allow to avoid going twice to the same room
             )
         ],
         # ] + copy.deepcopy(lord_choices), # It's too late for the lord now, because I need to let psychic try the butler room

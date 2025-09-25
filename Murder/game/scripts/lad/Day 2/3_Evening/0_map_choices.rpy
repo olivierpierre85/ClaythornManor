@@ -60,7 +60,7 @@ label lad_day2_evening_map_menu:
                 'lad_day2_bedroom_broken_back', 
                 10, 
                 room = 'bedroom_broken',
-                condition="lad_details.observations.is_unlocked('green_liquid') and not all_menus[current_menu.id].choices[22].hidden"
+                condition="lad_details.observations.is_unlocked('green_liquid') and not all_menus['lad_day2_evening_map_menu'].choices[22].hidden"
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 

@@ -174,7 +174,7 @@ label tutorial_restart:
     $ show_skip_hint_for_tutorial = True
 
     """
-    This blinking icon will be visible when it is TESTpossible to fast forward.
+    This blinking icon will be visible when it is possible to fast forward.
     """
 
     $ show_skip_hint_for_tutorial = False
