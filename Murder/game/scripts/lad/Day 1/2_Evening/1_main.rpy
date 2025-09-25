@@ -131,12 +131,12 @@ label lad_day1_evening:
     
     $ time_left = 20
     
-    $ current_menu = TimedMenu("lad_introduction", [
+    call run_menu( TimedMenu("lad_introduction", [
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 10),
         TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0),
         TimedMenuChoice('Stand awkwardly in the corner', 'generic_cancel', early_exit=True),
         ], image_left = "drunk", image_right = "psychic")
-    call run_menu(current_menu)
+    )
 
     call change_time(18,30)
 
@@ -213,13 +213,12 @@ label lad_day1_evening:
 
     $ time_left = 90
 
-    $ current_menu = TimedMenu("lad_day1_evening", [
-        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic'),
-        TimedMenuChoice('Eat in silence, like a sociopath', 'generic_cancel', early_exit=True),
-    ], image_left = "doctor", image_right = "psychic")
-
-    call run_menu(current_menu)
+    call run_menu( TimedMenu("lad_day1_evening", [
+            TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'),
+            TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic'),
+            TimedMenuChoice('Eat in silence, like a sociopath', 'generic_cancel', early_exit=True),
+        ], image_left = "doctor", image_right = "psychic")
+    )
 
     call change_time(21,00)
 
