@@ -244,7 +244,21 @@ label psychic_day2_evening_nurse_captain_cancel:
 
 label psychic_day2_evening_butler_room:
 
-    $ change_room('attic_hallway')
+    psychic """
+    Yes, I would like for you to come check with me.
+
+    Would you mind?
+    """
+
+    captain """
+    Not at all, I don't have much else to do anyway.
+    """
+
+    $ change_room('attic_hallway', dissolve)
+
+    """
+    We don't waste any time and go straight to the attic.
+    """
 
     psychic """
     Here we are. How shall we get in? 
@@ -265,32 +279,21 @@ label psychic_day2_evening_butler_room:
     """
     A master key? Then he can open nearly every door in the house. 
 
-    And yet the butler entrusted it to the captain without hesitation? Curious.
+    And yet the butler entrusted it to the captain without hesitation? 
+    
+    That is not very sensible.
     """
 
     play sound door_open
 
-    captain """
-    As it happens, we won't
-     need it. The door is already unlocked. 
-
-    Someone must be inside.
     """
-
-    psychic """
-    Heavens.
-    """
-
-    captain """
-    Hello? Is someone here?
+    Captain's sinha unlocks the door and we both step in.
     """
     
     $ change_room('bedroom_butler')
 
     """
-    Without waiting for an answer, we step into the room. 
-
-    As I feared, Rosalind Marsh is there — holding a silver candelabra.
+    As we suspected, Rosalind Marsh is there — holding a silver candelabra.
     """
 
     nurse """
@@ -320,11 +323,11 @@ label psychic_day2_evening_butler_room:
 
     Strange, for I already hold the only spare key in his possession. 
 
-    It seems unlikely he would part with his own. He would at least have accompanied you.
+    Also, why would you lock the door behind you if you have nothing to hide?
     """
 
     nurse """
-    But he could not. He was too occupied and—
+    Did I? It must have be by habit and—
     """
 
     play sound broken_glass
@@ -345,12 +348,12 @@ label psychic_day2_evening_butler_room:
     I was… I was…
     """
 
-    captain """
+    psychic """
     We know very well what you were about, Miss Marsh. 
 
-    We have seen the cutlery in your room. 
+    I have seen the cutlery in your room. 
 
-    And I am sure it's not the first time you've been doing something of the sort.
+    Are even really sick or was it just for show?
     """
 
     $ play_music('scary', 2)
@@ -368,7 +371,7 @@ label psychic_day2_evening_butler_room:
 
     There is no point in pretence any longer. 
 
-    I was helping myself to whatever I could find. 
+    You are right. I was helping myself to whatever I could find. 
 
     Trinkets, keepsakes, silver, jewels — I have taken them all before. 
 
@@ -379,12 +382,16 @@ label psychic_day2_evening_butler_room:
     It is simply what I do.
 
     Surprisingly, it's the first time I've been found out. 
+
+    And sadly yes, I am really sick, but not quite as severely as I let you believed.
+
+    It just provides a great cover for my little excursions.
     """
 
     $ nurse_details.description_hidden.unlock('lie') 
 
     nurse """
-    Which means you leave me no choice.
+    And now you leave me no choice.
     """
 
     """
