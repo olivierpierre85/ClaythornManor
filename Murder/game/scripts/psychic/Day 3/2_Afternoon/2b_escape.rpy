@@ -153,38 +153,39 @@ label psychic_day3_afternoon_escape:
     $ play_music('end_credits')
 
     """
-    I went as fast as I could but I didn't see Ted Harring until I reached the town.
+    I go as fast as I can but I don't see Ted Harring until I reach the town.
 
-    I went straight to the police station and there he was.
+    I head straight to the police station and there he is.
 
-    When I entered, he looked embarrassed to see me.
+    When I enter, he looks embarrassed to see me.
 
     Probably feeling the weight of the guilt of leaving me to an uncertain fate.
     """
 
     pause 1.0 
-    
+
     """
-    But I was glad he had made it anyway.
+    But I am glad he made it anyway.
 
-    I hugged him and told him about Captain Sinha.
+    I hug him and tell him about Captain Sinha.
 
-    He replied that officers were on their way to Claythorn Manor.
+    He replies that officers are on their way to Claythorn Manor.
 
-    We waited for them for a long time.
+    We wait for them for a long time.
 
-    They came back only to confirm what we already knew.
+    They come back only to confirm what we already knew.
 
-    Sushil Sinha had succumbed to his injuries.
-    
-    There was no one alive at the manor.
+    Sushil Sinha has succumbed to his injuries.
 
-    In addition to Samuel Manning, Thomas Moody, and Daniel Baldwin, they also found Rosalind Marsh's body.
+    There is no one alive at the manor.
 
-    She had been stabbed to death and was lying somewhere in the attic.
+    In addition to Samuel Manning, Thomas Moody, and Daniel Baldwin, they've also found Rosalind Marsh's body.
 
-    However, they found no trace of Lady Claythorn and her staff.
+    She has been stabbed to death and is lying somewhere in the attic.
+
+    However, they have found no trace of Lady Claythorn and her staff.
     """
+
 
     jump psychic_ending_escape
 
