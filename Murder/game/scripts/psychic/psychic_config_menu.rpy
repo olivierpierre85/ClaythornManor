@@ -30,8 +30,8 @@ label psychic_config_menu:
         TimedMenuChoice('What do you think of this place?', 'doctor_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'doctor_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'doctor_generic_room', 10),
-        TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_friday', 5, condition = "current_day == 'Friday'", next_menu="doctor_generic_other_guests_menu_psychic"),
-        TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_saturday', 5, condition = "current_day == 'Saturday'", next_menu="doctor_generic_other_guests_menu_psychic"),
+        TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_friday', 10, condition = "current_day == 'Friday'", next_menu="doctor_generic_other_guests_menu_psychic"),
+        TimedMenuChoice('What do you think of the other guests?', 'doctor_generic_other_guests_saturday', 0, keep_alive = True, condition = "current_day == 'Saturday'", next_menu="doctor_generic_other_guests_menu_psychic"),
         TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "doctor")
 
@@ -108,7 +108,6 @@ label psychic_config_menu:
     #     # Always Generic 
         TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "lad")
-
 
 
     return

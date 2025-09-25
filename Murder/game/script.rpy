@@ -120,7 +120,7 @@ label init_technical_variables:
         'saturday_morning': "A Shocking Morning",
         'saturday_afternoon': "The Hunt",
         'saturday_afternoon_no_hunt': "No Hunt",
-        'saturday_evening': "Things get Darker",
+        'saturday_evening': "Things Get Darker",
         'sunday_morning': "Exploration",
         'sunday_afternoon': "Final Decisions",
         'end': "Ending"

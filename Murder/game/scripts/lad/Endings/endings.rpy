@@ -11,7 +11,7 @@ label lad_ending_day1_deathbed:
     """
     You don't wake up. 
 
-    You died during the night.
+    You have died during the night.
 
     It's unfair, I know. 
     
