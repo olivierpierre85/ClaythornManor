@@ -31,7 +31,7 @@ label doctor_day1_evening_billiard_room:
     """
 
     doctor """
-    Mister Haring.
+    Mr Haring.
     """
 
     call lad_generic

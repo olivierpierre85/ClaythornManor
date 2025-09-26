@@ -120,7 +120,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
         """
 
     doctor """
-    Mister Harring, may I ask—why are you here?
+    Mr Harring, may I ask—why are you here?
     """
 
     lad """
@@ -214,7 +214,7 @@ label common_day2_breakfast_follow_doctor_lad_remove_mask:
     """
 
     doctor """
-    Thank you for your help, Mister Harring.
+    Thank you for your help, Mr Harring.
 
     I need to examine Thomas Moody's face now.
 

@@ -174,7 +174,7 @@ label common_day2_evening_samuel_manning_discussion_part_1:
 label common_day2_evening_samuel_manning_discussion_part_2:
     
     captain """
-    Mister Harring needed to change, he'll join us shortly.
+    Mr Harring needed to change, he'll join us shortly.
     """
 
     host """
@@ -238,7 +238,7 @@ label common_day2_evening_samuel_manning_discussion_part_2:
     """
     The butler retrieves a set of keys from his pocket.
 
-    After sifting through them, he presents one to Mister Sinha.
+    After sifting through them, he presents one to Mr Sinha.
     """
 
     butler """
@@ -248,7 +248,7 @@ label common_day2_evening_samuel_manning_discussion_part_2:
     captain """
     Excellent, thank you.
 
-    Now, Mister Manning, let's go shall we?
+    Now, Mr Manning, let's go shall we?
     """
 
     """

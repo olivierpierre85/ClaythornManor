@@ -18,7 +18,7 @@ label common_day2_morning_host_death:
     host """
     I'm sorry to announce such horrible news, everyone.
 
-    It appears that Mister Moody passed away in his sleep last night.
+    It appears that Mr Moody passed away in his sleep last night.
     """
 
     $ play_music('scary')
@@ -132,7 +132,7 @@ label common_day2_morning_host_hunt:
 label common_day2_morning_lad_psychic:
 
     psychic """
-    Hello, Mister Harring. How are you?
+    Hello, Mr Harring. How are you?
     """
 
     lad """
@@ -144,7 +144,7 @@ label common_day2_morning_lad_psychic:
         
     There are still a few people missing.
 
-    For instance, I don't think we'll see Mister Manning anytime soon.
+    For instance, I don't think we'll see Mr Manning anytime soon.
 
     He was so drunk yesterday that I wouldn't be surprised if he doesn't show up before noon.
     """

@@ -57,7 +57,7 @@ label psychic_day2_morning:
     """
 
     psychic -angry """
-    Good morning, Mister Sinha.
+    Good morning, Mr Sinha.
     """
 
     captain """

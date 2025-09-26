@@ -158,7 +158,7 @@ label lad_day2_no_hunt_bedroom_nurse_busy:
     """
 
     nurse """
-    Ah, Mr. Harring, I'm quite exhausted at the moment. 
+    Ah, Mr Harring, I'm quite exhausted at the moment. 
     
     Would you mind coming back later?
     """

@@ -39,7 +39,7 @@ label psychic_day3_afternoon_stay:
     $ play_music('danger', fadeout_val=2)
 
     psychic """
-    Mister Harring?!
+    Mr Harring?!
     """
 
     """
@@ -49,7 +49,7 @@ label psychic_day3_afternoon_stay:
     """
 
     nurse """
-    Mister Harring, can you hear me?
+    Mr Harring, can you hear me?
     """
 
     psychic """
@@ -87,7 +87,7 @@ label psychic_day3_afternoon_stay:
     psychic """
     No, no, no ...
 
-    Mister Harring, why?
+    Mr Harring, why?
     """
 
     """

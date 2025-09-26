@@ -21,7 +21,7 @@ label psychic_day1_evening_billiard_room:
 
         $ psychic_day1_evening_billiard_room_menu = TimedMenu("psychic_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Talk to Daniel Baldwin', 'psychic_day1_evening_billiard_room_doctor', 10),
-            TimedMenuChoice('Endure another story by Mister Sinha', 'psychic_day1_evening_billiard_room_group', 120),
+            TimedMenuChoice('Endure another story by Mr Sinha', 'psychic_day1_evening_billiard_room_group', 120),
             TimedMenuChoice('Go to the bar', 'psychic_day1_evening_billiard_room_bar', 20),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
@@ -42,7 +42,7 @@ label psychic_day1_evening_billiard_room:
 label psychic_day1_evening_billiard_room_doctor:
     
     psychic """
-    Mister Baldwin, we have not been introduced yet.
+    Mr Baldwin, we have not been introduced yet.
 
     I am Amelia Baxter.
     """
@@ -78,15 +78,15 @@ label psychic_day1_evening_billiard_room_group:
 label psychic_day1_evening_billiard_room_bar:
 
     psychic """
-    Good evening, Mister Harring.
+    Good evening, Mr Harring.
 
-    Mister Manning.
+    Mr Manning.
     """
 
     lad """
     Oh, hi Miss Baxter.
 
-    Don't mind Mister Manning.
+    Don't mind Mr Manning.
 
     I think he might have had one too many.
     """

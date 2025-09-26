@@ -143,7 +143,7 @@ label doctor_introduction:
     """
 
     doctor """
-    Hello, Mr. Moody. You're with the right people.
+    Hello, Mr Moody. You're with the right people.
 
     This young man was about to drive us to Claythorn Manor.
 

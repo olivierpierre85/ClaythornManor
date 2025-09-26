@@ -562,7 +562,7 @@ label lad_day3_morning_billiard_room:
     """
 
     psychic """
-    Mister Harring, you aren't considering drinking at this hour, are you?
+    Mr Harring, you aren't considering drinking at this hour, are you?
     """
 
     if lad_details.important_choices.is_unlocked('day1_drunk') and lad_details.important_choices.is_unlocked('day2_drunk') :
@@ -769,7 +769,7 @@ label lad_day3_morning_bedroom_drunk:
     $ unlock_map('bedroom_drunk')
 
     lad """
-    Mister Manning?
+    Mr Manning?
 
     Are you in there?
     """
@@ -781,7 +781,7 @@ label lad_day3_morning_bedroom_drunk:
     lad """
     The door's locked anyway.
 
-    Mister Sinha has the key.
+    Mr Sinha has the key.
     """
 
     return

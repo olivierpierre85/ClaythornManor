@@ -88,7 +88,7 @@ label psychic_day2_evening_lad_discussion:
 #     play sound door_knock
 
 #     psychic """
-#     Mister Harring, are you there?
+#     Mr Harring, are you there?
 #     """
 
 #     lad """

@@ -233,7 +233,7 @@ label captain_generic_broken_saturday:
 label captain_generic_lad_friday_psychic:
 
     captain """
-    Mister Harring seems like a fine young fellow.
+    Mr Harring seems like a fine young fellow.
 
     But you've talked to him more than I have.
 

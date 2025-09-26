@@ -74,7 +74,7 @@ label common_day3_afternoon_lad_psychic_stay:
         """
 
     nurse """
-    Poor Mr. Manning, what a terrible fate.
+    Poor Mr Manning, what a terrible fate.
 
     And what horror that must have been for you, my dear.
 
@@ -135,7 +135,7 @@ label common_day3_afternoon_lad_psychic_stay:
 
     elif current_character.text_id == "psychic":
         """
-        Mister Harring is nice enough to offer his help.
+        Mr Harring is nice enough to offer his help.
 
         But I don't think he has much experience in this department.
 
@@ -163,7 +163,7 @@ label common_day3_afternoon_lad_psychic_stay:
 
 
     psychic """
-    Where are you going, Mr. Harring?
+    Where are you going, Mr Harring?
 
     It's better if we stick together at all times.
     """

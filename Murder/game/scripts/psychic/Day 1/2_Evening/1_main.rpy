@@ -163,7 +163,7 @@ label psychic_day1_evening:
     """
 
     butler """
-    Mister Ted Harring!
+    Mr Ted Harring!
     """
 
     """
@@ -224,7 +224,7 @@ label psychic_day1_evening:
 
     It seems I already know the persons next to me.
     
-    On my left is Mister Sinha.
+    On my left is Mr Sinha.
     
     And Ted Harring is on my right.
     """
@@ -301,7 +301,7 @@ label psychic_day1_dinner_lad:
     """
 
     psychic """
-    Oh Mister Harring. I am glad we can continue our conversation.
+    Oh Mr Harring. I am glad we can continue our conversation.
     """
 
     $ psychic_details.saved_variables["day1_evening_talk_to_lad"] = True
@@ -320,7 +320,7 @@ label psychic_day1_dinner_captain:
     """
 
     psychic """
-    Mister Sinha.
+    Mr Sinha.
     """
 
     captain """

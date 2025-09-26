@@ -31,7 +31,7 @@ label lad_day3_escape:
     """
 
     psychic """
-    Really? Like Mister Manning was safe?
+    Really? Like Mr Manning was safe?
     """
 
     captain """
@@ -107,7 +107,7 @@ label lad_day3_escape:
     """
 
     captain """
-    Let's go, Mister Harring. The sooner, the better.
+    Let's go, Mr Harring. The sooner, the better.
     """
     
     """

@@ -32,7 +32,7 @@ label lad_introduction:
     letter """
     5th September, [current_year]
 
-    Dear Mister Harring,
+    Dear Mr Harring,
 
     I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Bravery Award".
 

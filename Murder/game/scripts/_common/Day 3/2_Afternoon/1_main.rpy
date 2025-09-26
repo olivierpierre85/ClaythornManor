@@ -132,7 +132,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion_2:
     psychic """
     Yes!
 
-    Mister Harring can stay with me, right?
+    Mr Harring can stay with me, right?
 
     The two of us should be safe until you return with help.
     """
@@ -140,7 +140,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion_2:
     captain """
     That seems to be the wisest choice.
 
-    What do you think, Mister Harring?
+    What do you think, Mr Harring?
     """
 
     return

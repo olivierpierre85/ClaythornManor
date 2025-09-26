@@ -59,7 +59,7 @@ label lad_day1_evening:
     """
 
     butler """
-    Mister Ted Harring!
+    Mr Ted Harring!
     """
 
     """
@@ -403,7 +403,7 @@ label lad_day1_evening_bedroom_psychic:
     """
 
     psychic """
-    Hello again. What do you want mister Harring?
+    Hello again. What do you want Mr Harring?
     """
     
     lad """
@@ -411,7 +411,7 @@ label lad_day1_evening_bedroom_psychic:
     """
 
     psychic """
-    Oh, Mr. Harring. I'm afraid I was preparing for bed. We can speak again tomorrow.
+    Oh, Mr Harring. I'm afraid I was preparing for bed. We can speak again tomorrow.
     """
 
     lad """
@@ -432,7 +432,7 @@ label lad_day1_evening_dinner_psychic:
     """
 
     psychic """
-    Hello Mister Harring.
+    Hello Mr Harring.
     """
 
     call psychic_generic
@@ -447,7 +447,7 @@ label lad_day1_evening_dinner_doctor:
     """
 
     doctor """
-    Hi mister Harring, I am doctor Daniel Baldwin.
+    Hi Mr Harring, I am doctor Daniel Baldwin.
     """
 
     lad """

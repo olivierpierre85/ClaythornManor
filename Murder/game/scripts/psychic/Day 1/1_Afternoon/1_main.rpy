@@ -87,7 +87,7 @@ label psychic_introduction:
     """
 
     psychic """
-    How do you do, Mister ...
+    How do you do, Mr ...
     """
 
     captain """
@@ -97,13 +97,13 @@ label psychic_introduction:
     psychic """
     Ah.
     
-    Nice to meet you too, Mr. Sinha.
+    Nice to meet you too, Mr Sinha.
     """
 
     footman """
     I believe there's still someone on this train who is supposed to accompany us.
 
-    A Mr. Manning.
+    A Mr Manning.
 
     Have either of you met him by any chance?
     """
@@ -155,7 +155,7 @@ label psychic_introduction:
     captain """
     I hope you don't mind my sitting with you.
 
-    I think it's better to let Mr. Manning sit in front.
+    I think it's better to let Mr Manning sit in front.
     """
 
     psychic """

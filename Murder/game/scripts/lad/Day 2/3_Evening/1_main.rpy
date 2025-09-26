@@ -76,7 +76,7 @@ label lad_day2_evening:
     """
 
     captain """
-    Also Mister Harring, you might want to change before rejoining us.
+    Also Mr Harring, you might want to change before rejoining us.
     """
 
     """

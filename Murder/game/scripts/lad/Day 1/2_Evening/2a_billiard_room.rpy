@@ -96,7 +96,7 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     broken """
-    Nice to meet you, Mister Harring. I suppose you are here for a drink.
+    Nice to meet you, Mr Harring. I suppose you are here for a drink.
 
     The choice is rather restricted I am afraid. There's only Sherry or Port.
 
@@ -123,7 +123,7 @@ label lad_day1_evening_billiard_room_bar_1:
     $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
 
     broken """
-    Cheers, Mister Harring. Now if you don't mind, I'll see what this group is talking about.
+    Cheers, Mr Harring. Now if you don't mind, I'll see what this group is talking about.
     """
 
     """
@@ -145,7 +145,7 @@ label lad_day1_evening_billiard_room_group:
     """
 
     captain """
-    Mister Harring.
+    Mr Harring.
 
     I was just telling everyone here a story.
 
@@ -239,7 +239,7 @@ label lad_day1_evening_billiard_room_doctor:
     """
 
     doctor """
-    Mister Harring.
+    Mr Harring.
     """
 
     call doctor_generic
@@ -265,7 +265,7 @@ label lad_day1_evening_billiard_room_butler:
     """
 
     butler """
-    Of course, Mr. Harring.
+    Of course, Mr Harring.
 
     What is it?
     """
