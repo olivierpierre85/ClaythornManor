@@ -10,7 +10,7 @@ label lad_config_menu:
         TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 20),
         TimedMenuChoice('How old are you?', 'psychic_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'psychic_generic_room', 10, condition = "not is_unlock_map('bedroom_psychic')"),
-        TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 10, condition = condition_friday, next_menu="psychic_generic_other_guests_menu_lad"),
+        TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 10, condition = condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = condition_saturday_morning, next_menu="psychic_generic_other_guests_menu_lad"),
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = condition_saturday_hunt, next_menu="psychic_generic_other_guests_menu_lad"),
         TimedMenuChoice('Which guests do you think could be dangerous?', 'psychic_generic_other_guests_saturday_evening', 0, keep_alive = True, condition = condition_saturday_evening),
