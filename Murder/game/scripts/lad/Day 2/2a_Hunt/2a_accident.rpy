@@ -19,7 +19,7 @@ label lad_day2_hunt_accident:
 
     The four of us sat down in a clearing, sharing a small picnic.
 
-    Mister Manning is silent, busy drinking from a pocket flask.
+    Mr Manning is silent, busy drinking from a pocket flask.
 
     He looks serious, even nervous.
 
@@ -29,7 +29,7 @@ label lad_day2_hunt_accident:
     """
     
     doctor """
-    So, Mister Harring, how are you finding it here?
+    So, Mr Harring, how are you finding it here?
 
     It's a lovely place they have, isn't it?
     """
@@ -50,7 +50,7 @@ label lad_day2_hunt_accident:
     Birmingham. I was born and raised there.
     """
 
-    $ lad_details.description_hidden.unlock('background') 
+    $ lad_details.description_hidden.unlock('origin') 
 
     """
     But I don't really want to talk about that.

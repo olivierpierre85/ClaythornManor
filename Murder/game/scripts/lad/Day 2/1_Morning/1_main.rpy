@@ -34,7 +34,6 @@ label lad_day2_morning:
     The storm from yesterday has passed and the weather is clearer now.
     """
 
-
     if lad_details.important_choices.is_unlocked('day1_drunk'):
         
         """
@@ -72,10 +71,9 @@ label lad_day2_morning:
     """
 
     $ time_left = 30
-    
     call run_menu(
         TimedMenu("lad_day2_morning_follow", [
-            TimedMenuChoice('Follow them', 'lad_day2_breakfast_follow', 30, early_exit = True ),
+            TimedMenuChoice('Follow them', 'common_day2_breakfast_follow_doctor_lad_host', 30, early_exit = True ),
             TimedMenuChoice('Stay there and finish the most important meal of the day', 'lad_day2_breakfast_eat', 5, early_exit = True)
         ])
     )
@@ -84,8 +82,10 @@ label lad_day2_morning:
 
     if lad_details.saved_variables["day2_breakfast_follow"]:
 
+        $ change_room('dining_room')
+
         """
-        As we reentered the dining room, the host had just finished explaining the situation.
+        As we returned to the dining room, the host had just finished explaining the situation.
 
         She regained her composure when she saw the doctor.
         """

@@ -21,7 +21,7 @@ label lad_day2_hunt_noaccident:
     """
 
     captain """
-    Tough luck, Mr. Harring. I'm sure you'll get the next one.
+    Tough luck, Mr Harring. I'm sure you'll get the next one.
     """
 
     lad """

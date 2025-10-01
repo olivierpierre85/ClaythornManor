@@ -102,6 +102,8 @@ screen say(who, what):
     window:
         id "window"
 
+        use skip_hint
+
         if who is not None:
 
             window:
@@ -347,7 +349,9 @@ screen navigation(tag="menu"):
                     action QuickSave()
             textbutton _("Quit"):
                 if not tutorial_on:
-                    action [QuickSave(),Show("confirmbutton")]
+                    # TODO: put back the save when testing demo !!
+                    # action [QuickSave(), Function(export_choices_to_file, all_choices), Show("confirmbutton")]
+                    action [QuickSave(), Show("confirmbutton")]
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 

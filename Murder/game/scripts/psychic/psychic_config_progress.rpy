@@ -15,8 +15,8 @@ label psychic_config_progress:
                 # Second line, ...
                 [
                     Chapter(image_checkpoint_empty_small),    
-                    Chapter(image_checkpoint_line),
-                    Chapter(image_checkpoint_line),
+                    Chapter(image_checkpoint_empty),
+                    Chapter(image_checkpoint_empty),
                     Chapter(image_checkpoint_line),
                     # Chapter(image_checkpoint_empty),
                     Chapter(image_checkpoint_line),
@@ -24,17 +24,29 @@ label psychic_config_progress:
                     Chapter(image_checkpoint_double_corner),
                     Chapter(image_ending_question, "ending", "shot", "end"),
                 ],
+                # THird line, ...
                 [
                     Chapter(image_checkpoint_empty_small),    
-                    Chapter(image_checkpoint_corner),
-                    Chapter(image_checkpoint_three_sides),
-                    Chapter(image_checkpoint_three_sides),
+                    Chapter(image_checkpoint_empty),
+                    Chapter(image_checkpoint_empty),
+                    Chapter(image_checkpoint_line),
                     # Chapter(image_checkpoint_straight_line),
-                    Chapter(image_checkpoint_three_sides),
-                    Chapter(image_ending_question, "ending", "fell", "sunday_morning"),
+                    Chapter(image_checkpoint_corner),
+                    Chapter(image_ending_question, "ending", "bludgeoned", "sunday_morning"),
                     Chapter(image_checkpoint_empty_after_ending),
                     Chapter(image_checkpoint_corner),
                     Chapter(image_ending_question, "ending", "escape", "end"),
+                ],
+                # Fourth line, ...
+                [
+                    Chapter(image_checkpoint_empty_small),  
+                    Chapter(image_checkpoint_empty),  
+                    Chapter(image_checkpoint_empty),                    
+                    Chapter(image_checkpoint_corner),
+                    # Chapter(image_checkpoint_straight_line),
+                    # Chapter(image_checkpoint_three_sides),
+                    Chapter(image_ending_question, "ending", "fell", "sunday_morning"),
+                    Chapter(image_checkpoint_empty_after_ending),
                 ],
             ]
 

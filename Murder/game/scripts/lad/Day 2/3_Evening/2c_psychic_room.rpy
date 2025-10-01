@@ -58,7 +58,7 @@ label lad_day2_believe_dont_believe_psychic:
     """
 
     psychic """
-    It's too late for apologies, Mister Harring.
+    It's too late for apologies, Mr Harring.
 
     Please leave my room.
 

@@ -1,3 +1,99 @@
+label psychic_day2_evening_map_menu:
+    python:
+        # -------------------------
+        # Saturday Evening
+        # ------------------------- 
+        psychic_day2_evening_map_menu = TimedMenu("psychic_day2_evening_map_menu", [
+            # Downstairs
+            TimedMenuChoice(default_room_text('kitchen'), 'psychic_day2_evening_downstairs_default', 10, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'psychic_day2_evening_downstairs_default', 10, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'psychic_day2_evening_downstairs_default', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'psychic_day2_evening_downstairs_default', 10, room='gun_room'),
+            # first floor
+            TimedMenuChoice(default_room_text('tea_room'), 'psychic_tea_room_default', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'psychic_dining_room_default', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day2_evening_garden', 10, room='manor_garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('library'), 'psychic_library_default', 10, room='library'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_portrait_gallery_default', 10, room='portrait_gallery'),   
+            # Bedrooms 
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day2_evening_bedroom_doctor', 20, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'psychic_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'psychic_day2_evening_bedroom_host', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'psychic_day2_evening_bedroom_drunk', 10, room='bedroom_drunk'),
+            # attic
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_default', 10, room='storage', condition=attic_default),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_default', 10, room='males_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_default', 10, room='females_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_default', 10, room='butler_room', condition=attic_default),
+
+            TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_return_too_soon', 10, room='storage', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
+            # TOO late to approach Ted Harring, only chance during the simple menu before dinner
+            # TimedMenuChoice(
+            #     default_room_text('bedroom_lad'), 
+            #     'psychic_day2_evening_lad_discussion', 
+            #     20, 
+            #     room='bedroom_lad',
+            #     condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
+            # ),
+            TimedMenuChoice(
+                default_room_text('bedroom_lad'), 
+                'psychic_day2_evening_bedroom_lad', 
+                20, 
+                room='bedroom_lad',
+            ),
+            TimedMenuChoice(
+                'Check if there is someone in the Billiard Room', 
+                'psychic_day2_evening_billiard_room', 
+                0, 
+                room = 'billiard_room',
+                keep_alive = True, 
+            ),
+            TimedMenuChoice(
+                default_room_text('bedroom_nurse'),
+                'psychic_day2_evening_bedroom_nurse_gone',
+                0, 
+                room='bedroom_nurse',
+            ),
+            TimedMenuChoice(
+                'Wait in your room for Ted Harring', 
+                'psychic_day2_evening_cancel', 
+                0, 
+                early_exit = True, 
+                room = 'bedroom_psychic',
+                condition = "psychic_details.important_choices.is_unlocked('visit_lad')"
+            ),
+            TimedMenuChoice(
+                'Wait in your room', 
+                'psychic_day2_evening_cancel', 
+                0, 
+                early_exit = True, 
+                room = 'bedroom_psychic',
+                condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'psychic_day2_bedroom_broken', 
+                20, 
+                room = 'bedroom_broken',
+                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == False"
+            ),
+            TimedMenuChoice(
+                'Richard III Bedroom', 
+                'psychic_day2_bedroom_broken_already_see', 
+                20, 
+                room = 'bedroom_broken',
+                condition = "psychic_details.saved_variables['day2_has_seen_bedroom_broken'] == True and not all_menus['psychic_day2_evening_map_menu'].choices[25].hidden" #Check that previous choice hasn't been made, allow to avoid going twice to the same room
+            )
+        ],
+        # ] + copy.deepcopy(lord_choices), # It's too late for the lord now, because I need to let psychic try the butler room
+        is_map = True)
+
+    return
+
 # Downstairs
 label psychic_day2_evening_downstairs_default:
 
@@ -24,11 +120,11 @@ label psychic_day2_evening_garden:
     $ change_room('great_hall')
     
     """
-    I get to the large hall and prepare to open the door.
+    I reach the large hall and prepare to open the door.
 
-    The weather has improved, but it is pitch black outside.
+    The weather has improved, but it is pitch dark outside.
     
-    What came over me? There is no reason to go out now.
+    What possessed me? There is no reason to go out now.
     """
 
     return
@@ -36,7 +132,7 @@ label psychic_day2_evening_garden:
 # First Floor
 
 # Bedroom
-label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=10):
+label psychic_day2_evening_bedroom_try_enter(menu_id, enter_result, enter_duration=10):
 
     python:
         enter_text_list = [
@@ -78,7 +174,7 @@ label psychic_day2_evening_bedroom_try_enter(enter_result, enter_duration=10):
 
     call run_menu(
         TimedMenu(
-            id="psychic_day2_evening_bedroom_try_enter" + enter_result, 
+            id=menu_id,
             choices=[
                 TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
                 TimedMenuChoice(no_enter_text, 'psychic_day2_evening_default_room_no_enter', enter_duration, early_exit=True),
@@ -106,13 +202,16 @@ label psychic_day2_evening_default_room_locked:
 
     return
 
-
-# Lad - ???
+# Lad - ???  (uses the calling label as the menu id)
 label psychic_day2_evening_bedroom_lad:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_lad', 'psychic_day2_evening_default_room_locked')
+
+    """
+    Where could Ted Harring be anyway?
+    """
 
     return
 
@@ -133,7 +232,7 @@ label psychic_day2_evening_bedroom_doctor:
     """
     He is lying peacefully in his bed.
 
-    Unsure of what I could do here, I decide to leave.
+    Unsure what I could do here, I decide to leave.
     """
 
     $ unlock_map('bedroom_doctor')
@@ -142,164 +241,25 @@ label psychic_day2_evening_bedroom_doctor:
     return
 
 
-label psychic_day2_evening_bedroom_nurse:
-
-    $ change_room("bedrooms_hallway")
-
-    play sound door_knock
-    
-    """
-    I knock gently on the door.
-
-    A weak voice responds.
-    """
-
-    nurse """
-    Yes? What is it?
-    """
-    
-    $ unlock_map('bedroom_nurse')
-
-    psychic """
-    It's Amelia Baxter.
-
-    Are you all right?
-
-    Perhaps we could have a chat?
-    """
-
-    nurse """
-    I am sorry, Miss Baxter, but I am very tired tonight.
-
-    Unless it is very important, I would prefer to wait until tomorrow.
-    """
-
-    if psychic_details.observations.is_unlocked('nurse_sick'):
-
-        call run_menu(TimedMenu("psychic_day2_evening_bedroom_nurse", [
-            TimedMenuChoice("Insist, there is clearly something wrong with her", 'psychic_day2_evening_bedroom_nurse_insist', 30, early_exit=True),
-            TimedMenuChoice("Do not push any further", 'psychic_day2_evening_bedroom_nurse_ignore', 10, early_exit=True), 
-        ]))
-
-    else:
-
-        call psychic_day2_evening_bedroom_nurse_ignore
-
-    return
-
-
-label psychic_day2_evening_bedroom_nurse_insist:
-
-    psychic """
-    I am afraid it is urgent.
-
-    Could you let me in? It shan't take long.
-    """
-
-    nurse """
-    All right then, come on in.
-    """
-
-    $ change_room("bedroom_nurse")
-
-    nurse """
-    What can I do for you?
-    """
-
-    psychic """
-    Nothing, it's more the other way round.
-
-    I am sorry, I do not mean to intrude, but I noticed a trace of blood.
-
-    I was wondering if there was anything I could do to help you.
-    """
-
-    nurse """
-    Well, I suppose I could not have hidden it forever.
-
-    I have been told I am suffering from consumption.
-    """
-
-    play sound woman_cough
-
-    """
-    She let out another strong cough.
-    """
-
-    psychic """
-    I am so sorry.
-
-    When did you find out?
-    """
-
-    nurse """
-    A couple of years ago.
-
-    And if I trust my doctor, I probably don't have more than another year left in me.
-    """
-
-    psychic """
-    My goodness, how horrible.
-
-    Could I help you with anything?
-    """
-
-    nurse """
-    There is nothing to be done.
-
-    I have just taken my medicine for the night. 
-    
-    That usually helps me sleep.
-
-    I can feel it has started working, so I shall retire to bed.
-
-    You should go now, I do not want to contaminate you.
-
-    But thank you for your concern anyway.
-    """
-    
-    psychic """
-    Of course, have a good night.
-    """
-
-    nurse """
-    Thanks, good night.
-    """  
-
-    $ nurse_details.description_hidden.unlock('sick')
-
-    return
-
-
-label psychic_day2_evening_bedroom_nurse_ignore:
-
-    psychic """
-    No, it can wait for now, of course. Goodnight, Miss Marsh.
-    """
-
-    nurse """
-    Goodnight, Miss Baxter.
-    """
-
-    return
-
 # Captain - In the billiard room
 label psychic_day2_evening_bedroom_captain:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_captain', 'psychic_day2_evening_default_room_locked')
 
     return
+
 
 # Host - Preparing to leave
 label psychic_day2_evening_bedroom_host:
 
-    call psychic_bedroom_default
+    call psychic_bedroom_default_no_answer
 
-    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_default_room_locked')
+    call psychic_day2_evening_bedroom_try_enter('psychic_day2_evening_bedroom_host', 'psychic_day2_evening_default_room_locked')
 
     return
+
 
 # Broken (if already seen in the afternoon)
 label psychic_day2_bedroom_broken_already_see:
@@ -309,7 +269,7 @@ label psychic_day2_bedroom_broken_already_see:
     """
     I stand once again in front of Thomas Moody's room.
 
-    I don't know what compelled me to come here again.
+    I do not know what compelled me to come here again.
 
     I try to open the door, but I can't. The memory of his dead body is still too fresh in my mind.
 
@@ -335,7 +295,7 @@ label psychic_day2_evening_bedroom_drunk:
     """
 
     """
-    I recognize Samuel Manning's voice, and it's clear he's too drunk to be coherent. 
+    I recognise Samuel Manning's voice, and it's clear he is too drunk to be coherent. 
     
     Since the door is locked, I decide not to interfere.
     """
@@ -344,39 +304,37 @@ label psychic_day2_evening_bedroom_drunk:
 
     return
 
-# Attic
+# Attic - Too late for lord Now => 
 label psychic_day2_evening_attic_default:
 
-    # Hide all downstairs choices for the current menu
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
-        
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+    $ change_room("attic_hallway")
 
-    call psychic_attic_default
+    if psychic_details.observations.is_unlocked('visited_attic'):
 
-    return
+        """
+        I am back in the attic.
 
+        But it seems there is nobody now.
 
-label psychic_day2_evening_attic_return_too_soon:
+        Maybe it's too late.
+        """
 
-    # Hide all upstairs choices for the current menu
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('storage'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('males_room'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('females_room'))
-    # $ psychic_details.saved_variables["day2_evening_map_menu"].hide_specific_choice(default_room_text('butler_room'))
+    else:
 
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+        """
+        I climb the stairs to the attic and arrive in a dimly lit hallway.
 
-    call psychic_attic_return_too_soon
+        There are multiple doors, most of them lie in darkness.
 
+        When I find the right room, I try to open it.
+        """
+
+        play sound door_locked
+
+        """
+        It's locked.
+
+        And I couldn't force it open myself, obviously.
+        """
 
     return

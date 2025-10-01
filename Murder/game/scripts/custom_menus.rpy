@@ -16,6 +16,8 @@ transform character_choice_right_2:
 
 label run_menu(current_menu, change_level=True):
 
+    window hide
+
     # For custom choice: Add menu to a structure with menu
     if current_menu.id in all_menus:
         $ current_menu = all_menus[current_menu.id]
@@ -30,6 +32,11 @@ label run_menu(current_menu, change_level=True):
             $ selected_choice[menu_level - 1].next_menu = current_menu.id
 
     if current_menu.is_valid():
+
+        # Record the time at opening of the menu
+        python:
+            now = datetime.now()
+
         # Show characters when activated
         if current_menu.image_left:
             $ renpy.show(current_menu.image_left, at_list=[character_choice_left])
@@ -53,13 +60,52 @@ label run_menu(current_menu, change_level=True):
             $ renpy.hide(current_menu.image_right_2)
 
         if selected_choice[menu_level].early_exit:
-            $ current_menu.early_exit = True        
+            $ current_menu.early_exit = True     
 
-        $ global time_left
-        $ time_left -= selected_choice[menu_level].time_spent
-        
+        # Save choices for debug
+        # First get all possible choices and put them in list:
+        python:
+            global time_left
+
+            current_choices = []
+            for choice in current_menu.choices:
+                if (not choice.hidden and choice.get_condition()) or choice.text==selected_choice[menu_level].text :
+                    current_choices.append(choice.text)
+
+            time_to_decide = None
+            time_since_last = None
+
+            if all_choices:
+                last_timestamp = datetime.fromisoformat(all_choices[-1]["timestamp"])
+                time_since_last = (now - last_timestamp).total_seconds()
+
+            time_to_decide = (datetime.now() - now).total_seconds()
+
+            all_choices.append({
+                "menu": current_menu.id,
+                "other_choices": current_choices,
+                "selected": selected_choice[menu_level].text,
+                "redirect": selected_choice[menu_level].redirect,
+                "time_left": time_left,
+                "timestamp": now.isoformat(),
+                "time_to_decide": time_to_decide,
+                "time_since_last": time_since_last,
+            })
+
+            # TODO: Activate back for prod
+            # time_left -= selected_choice[menu_level].time_spent
+
+        python:
+        # Add selected choice in log
+            if current_menu.is_map:
+                _history_list.append(ChoiceHistory("Map Choice", selected_choice[menu_level].text))
+            else:
+                _history_list.append(ChoiceHistory("Menu Choice", selected_choice[menu_level].text))
+                # renpy.say(current_character.real_name, selected_choice[menu_level].text, interact=False)
+
         call expression selected_choice[menu_level].redirect
 
+        # We used to deduct time after choice, but it was a problem with submenu
         # $ global time_left
         # $ time_left -= selected_choice[menu_level].time_spent
 
@@ -84,6 +130,14 @@ label run_menu(current_menu, change_level=True):
 
 
 init -1 python:
+    # Used for Logs
+    class ChoiceHistory(object):
+        def __init__(self, who, what, who_id=None, what_id=None):
+            self.who = who
+            self.what = what
+            self.who_id = who_id
+            self.what_id = what_id
+
     # Possible choices for a menu
     class TimedMenuChoice:
     
@@ -120,10 +174,24 @@ init -1 python:
         def get_condition(self):
             if self.condition:
                 return eval(self.condition)
-
             return True
 
-        def is_completed(self):
+        def is_valid(self):
+            # IF choice has next_menu, make sure the menu is valid? Or is doesn't exist in all_menu
+            if not self.hidden and self.get_condition():
+                if not self.next_menu:
+                    return True
+                else:
+                    if self.next_menu not in all_menus:
+                        # menu not loaded yet so it should be valid if build logically
+                        return True 
+                    else:
+                        # Check is next menu is valid
+                        return all_menus[self.next_menu].is_valid(next_menu=True)
+
+            return False
+
+        def is_already_chosen(self):
             if not self.already_chosen:
                 return False
             elif self.already_chosen and not self.next_menu and not self.linked_choice:
@@ -140,7 +208,7 @@ init -1 python:
                             continue
                         # A choice is seen as completed if it is a keep alive without a menu,
                         # or if it is itself completed 
-                        if not (choice.keep_alive and not choice.next_menu) and not choice.is_completed():
+                        if not (choice.keep_alive and not choice.next_menu) and not choice.is_already_chosen():
                             return False
                 elif self.linked_choice:
 
@@ -150,10 +218,10 @@ init -1 python:
                     for c in parent_menu.choices:
                         if c.redirect == self.linked_choice:
                             found_linked_choice = True
-                            if not c.is_completed():
+                            if not c.is_already_chosen():
                                 return False
                             break
-                    # If we never found the linked choice in the parent menu, treat as complete (I assume wrong rewrite)
+                    # If we never found the linked choice in the parent menu, treat as is_already_chosen (I assume wrong rewrite)
                     if not found_linked_choice:
                         return True
 
@@ -182,8 +250,8 @@ init -1 python:
             
             return all_redirects
 
-        def is_valid(self):
-            if self.get_visible_choices_total() <= 0:
+        def is_valid(self, next_menu=False):
+            if self.get_visible_choices_total(next_menu) <= 0:
                 return False
                 
             if time_left <= 0 or self.early_exit:
@@ -191,11 +259,15 @@ init -1 python:
 
             return True
 
-        def get_visible_choices_total(self):
+        # The next_menu bool is needed because we don't want to reach a next_menu with only the exit
+        # But if we already are  in the menu, we should see it
+        def get_visible_choices_total(self, next_menu):
             visible_choices = 0
-            for i, choice in enumerate(self.choices):
-                if not choice.hidden and choice.get_condition():
-                    visible_choices += 1
+            for i, choice in enumerate(self.choices):                
+                # When a choice is keep_alive and early_exit, it's a generic choice to leave and shouldn't count on it's own
+                if choice.is_valid(): 
+                    if not (next_menu and choice.keep_alive and choice.early_exit):
+                        visible_choices += 1
                     
             return visible_choices
         

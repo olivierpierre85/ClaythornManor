@@ -26,7 +26,7 @@ label psychic_day3_morning:
     $ change_room('bedroom_psychic', irisout)
 
     """
-    Unsurprisingly, I slept terribly last night.
+    Unsurprisingly, I slept terribly.
 
     At least it's the last day. All of this will be over soon.
     """
@@ -79,7 +79,6 @@ label psychic_day3_morning:
         call psychic_day3_morning_has_not_visited_lad
 
 
-
     """
     And we started to look for others in the manor,
 
@@ -90,12 +89,18 @@ label psychic_day3_morning:
     even though his choices didn't always make much sense.
     """
 
-    $ change_room('tea_room', irisout)
-
     call change_time(11,00)
 
+    $ change_room('tea_room', irisout)
+
     """
-    After a long search, we took a break in the tea room.
+    We searched the Manor extensively, but we didn't find much anything interesting.
+
+    Ted Harring insisted on taking an empty gun from the gun room.
+
+    I am not sure what he intends to do with it.
+
+    Tired and demoralised, we decided to take a break in the tea room.
 
     We rested there until we heard a familiar voice.
     """
@@ -142,7 +147,7 @@ label psychic_day3_morning_has_not_visited_lad:
     $ play_music('mysterious', 2)
 
     psychic """
-    Mister Haring, I am sorry to disturb you but something strange is happening.
+    Mr Haring, I am sorry to disturb you but something strange is happening.
     """
 
     lad """

@@ -9,7 +9,7 @@ label doctor_generic_other_guests_friday:
     doctor """
     Oh, I haven't talked to many people so far.
 
-    I think the only person I've heard speak is Mister Sinha.
+    I think the only person I've heard speak is Mr Sinha.
 
     And by "heard," I really just mean heard.
     

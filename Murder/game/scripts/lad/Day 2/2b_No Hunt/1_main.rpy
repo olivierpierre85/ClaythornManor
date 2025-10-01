@@ -100,13 +100,13 @@ label lad_day2_bedroom_broken:
 
     On a chair next to the bed, his clothes are meticulously folded.
 
-    There's a whiskey flask on the nightstand.
+    There's a whisky flask on the nightstand.
 
     It's on its side, empty.
 
     Next to it is a stain. 
     
-    I suppose it's whiskey, but it's an odd shade of green.
+    I suppose it's whisky, but it's an odd shade of green.
 
     That's peculiar.
 
@@ -115,7 +115,7 @@ label lad_day2_bedroom_broken:
     That's all I notice in the room.
     """
 
-    $ lad_details.observations.unlock('green_liquid') # TODO: Link to billiard room option not to drink the whiskey?
+    $ lad_details.observations.unlock('green_liquid') # TODO: Link to billiard room option not to drink the whisky?
 
     pause 1.0
     # TODO: Add sound effect for discovering a clue?
@@ -158,7 +158,7 @@ label lad_day2_no_hunt_bedroom_nurse_busy:
     """
 
     nurse """
-    Ah, Mr. Harring, I'm quite exhausted at the moment. 
+    Ah, Mr Harring, I'm quite exhausted at the moment. 
     
     Would you mind coming back later?
     """
@@ -240,7 +240,7 @@ label lad_day2_no_hunt_bedroom_drunk_enter:
     $ unlock_map('bedroom_drunk')
 
     """
-    I quickly scan the room but only find empty whiskey bottles.
+    I quickly scan the room but only find empty whisky bottles.
 
     As I'm about to leave, a piece of white paper in the fireplace catches my eye.
 

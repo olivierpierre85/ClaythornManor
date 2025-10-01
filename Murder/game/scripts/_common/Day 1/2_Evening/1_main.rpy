@@ -26,7 +26,7 @@ label common_day1_evening_host_welcome_speech:
     """
     
     """
-    Following her speech, our host settled back down in her chair.
+    Following her speech, our host settles back down in her chair.
     """
 
     return
@@ -164,7 +164,7 @@ label common_day1_drinks_lad_psychic_encounter:
     """
 
     psychic """
-    Nice to meet you, Mr. Harring.
+    Nice to meet you, Mr Harring.
     """
 
     return

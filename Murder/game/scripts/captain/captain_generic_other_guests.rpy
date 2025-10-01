@@ -20,12 +20,25 @@ label captain_generic_other_guests_friday:
     return
 
 
-label captain_generic_other_guests_saturday:
+label captain_generic_other_guests_saturday_morning:
 
     captain """
     I guess we can talk a bit about the other guests.
 
     Who in particular?
+    """
+
+    call captain_generic_other_guests
+
+    return
+
+
+label captain_generic_other_guests_saturday_evening:
+
+    captain """
+    You are right, after all that happened we should discuss the others.
+
+    Who do you have in mind?
     """
 
     call captain_generic_other_guests
@@ -220,7 +233,7 @@ label captain_generic_broken_saturday:
 label captain_generic_lad_friday_psychic:
 
     captain """
-    Mister Harring seems like a fine young fellow.
+    Mr Harring seems like a fine young fellow.
 
     But you've talked to him more than I have.
 

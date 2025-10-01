@@ -16,12 +16,12 @@
 - When fixing or generating dialogue, use triple quotes (`"""`) to separate lines, as per project settings.
 - Do not use semicolons in dialogue or narration.
 - Using simple quote (') instead of ’
-- Maintain the tone and level of English in existing text; do not simplify or overcomplicate.
-- Change style when really necessary; otherwise, keep the original style.
 - File and variable names use snake_case.
 - In renpy dialogue, there is a blank line after each sentence.
 
 ## Character style and tone
+- Maintain the tone and level of English in existing text; do not simplify or overcomplicate.
+- Always change style when necessary.
 - Characters have distinct styles and tones; maintain these when writing or editing dialogue.
 - When rewriting dialogue, ensure it fits the character's established voice.
 - each text block starts with the code name of the character, except when it is the inner voice speaking. In the case, the character used must be guessed based on the file or function name. (example: label doctor_day1_evening, the inner character is the doctor)

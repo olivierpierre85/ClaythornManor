@@ -247,7 +247,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
 
     Absinthe, Chartreuse, Creme de menthe,... and there are likely more.
 
-    So I wouldn't shout "poison" the next time you see a green drink.
+    So I wouldn't shout "poison" every time you see a green drink.
     """
 
     if not lad_details.important_choices.is_unlocked('whisky'):
@@ -286,7 +286,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
 label lad_day2_evening_billiard_room_captain_2:
 
     captain """
-    Yes, Mister Harring?
+    Yes, Mr Harring?
 
     Do you have anything to add to our last conversation?
     """
@@ -305,7 +305,7 @@ label lad_day2_evening_billiard_room_captain:
     """
 
     captain """
-    Good evening, Mister Harring.
+    Good evening, Mr Harring.
 
     It's nice to see someone else who isn't scared out of their wits tonight.
 

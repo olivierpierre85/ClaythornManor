@@ -83,3 +83,21 @@ label psychic_ending_escape:
     $ is_death = False
     jump ending_generic
 
+
+label psychic_ending_nurse_thief:
+
+    call death_screen_transition
+
+    """
+    You were bludgeoned to death with a candelabra.
+
+    A horrific end.
+
+    And not something you could have expected from a middle-aged nurse.
+
+    Be careful, some people are not who they appear to be.
+    """
+
+    $ psychic_details.endings.unlock('bludgeoned')
+
+    jump ending_generic

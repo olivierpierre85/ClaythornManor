@@ -71,7 +71,7 @@ label init_psychic:
         psychic_observations = CharacterObservationList([
             CharacterInformation(
                 0, "visited_attic",
-                "You visited the attic and met the Lord of this place",
+                "You visited the attic and met the Lord of the Manor",
                 content_negative="You didn't go to the attic",
                 image_file="lord",
                 chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening'],
@@ -93,25 +93,55 @@ label init_psychic:
                 chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_morning'],
             ),
+            # CharacterInformation(
+            #     1, "nurse_blood",
+            #     "You noticed blood on Rosalind Marsh's handkerchief",
+            #     content_negative="You didn't notice blood on Rosalind Marsh's handkerchief",
+            #     image_file="blood_handkerchief",
+            #     chapters=['saturday_afternoon'],
+            #     relevant_chapters=['saturday_afternoon', 'saturday_evening', 'sunday_morning'],
+            # ),
             CharacterInformation(
                 1, "nurse_sick",
-                "You noticed blood on Rosalind Marsh's handkerchief",
-                content_negative="You didn't notice blood on Rosalind Marsh's handkerchief",
+                "Rosalind Marsh told you about her disease",
+                content_negative="Rosalind Marsh didn't tell you about her disease",
                 image_file="blood_handkerchief",
+                chapters=['saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['saturday_afternoon','saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
+                1, "silverware",
+                "You found silverware in  Rosalind Marsh's room",
+                content_negative="You didn't find silverware in  Rosalind Marsh's room",
+                image_file="silverware",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
+        ])
+
+        # She can't have the key, the captain has it
+        psychic_objects = CharacterObjectList([
+            # CharacterInformation(
+            #     1, "butler_key",
+            #     "You have the butler's master key",
+            #     content_negative="You don't have the butler's master key",
+            #     image_file="butler_key",
+            #     chapters=['saturday_evening'],
+            #     relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon', 'end'],
+            # ),
         ])
 
         psychic_endings = CharacterEndingList ([
             CharacterInformation(0, "fell", "You fell down the stairs", image_file="psychic_fell", chapters=['sunday_morning']),
             CharacterInformation(1, "burned", "You were burned along with the manor", image_file="manor_burns", is_intuition=True, chapters=['end']), 
             CharacterInformation(2, "shot", "You were shot by Rosalind Marsh", image_file="gun_firing", chapters=['end']),
-            CharacterInformation(3, "escape", "You escaped with Ted Harring", image_file="escape", chapters=['end']),
+            CharacterInformation(3, "bludgeoned", "You were bludgeoned to death", image_file="blood_candelabra", chapters=['sunday_morning']),
+            CharacterInformation(4, "escape", "You escaped with Ted Harring", image_file="escape", chapters=['end']),
+
         ])
 
         psychic_extra_information = CharacterDescriptionHiddenList([
-            CharacterInformation(0, "background","psychic who claims to be able to converse with the dead" , is_important = True), 
+            CharacterInformation(0, "background","psychic who claims to be able to converse with the dead", is_important = True), 
             CharacterInformation(1, "status", "London, she obviously knows her way around a grand house", is_important = True), 
             CharacterInformation(2, "age", "disclose her age to anyone"),
             CharacterInformation(3, "heroic_act", "abilities, she was able to help the police find the kidnapper of a Duke's young heir", is_important = True),
@@ -152,7 +182,7 @@ label init_psychic:
             important_choices = psychic_important_choices,
             endings = psychic_endings,
             observations = psychic_observations,
-            objects = CharacterObjectList([]),
+            objects = psychic_objects,
             progress = psychic_progress,
             saved_variables = copy.deepcopy(psychic_init_variables),
             test_checkpoints = psychic_test_checkpoints,

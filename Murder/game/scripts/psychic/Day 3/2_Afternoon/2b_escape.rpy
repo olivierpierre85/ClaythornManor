@@ -120,102 +120,28 @@ label psychic_day3_afternoon_escape:
     Without hesitation, he rushes towards the large tree ahead.
     """
 
-    play sound gun 
-
-    psychic """
-    Captain!!
-    """
+    play sound gun
 
     """
-    The gunshot stops him in his tracks.
+    A gunshot stops him in his tracks.
 
-    It looks like he's going to collapse, but then he steadies himself and comes back towards me.
-    """
+    For a brief moment he manages to keep standing up.
 
-    # I barely have time to hide the smoking gun in my right hand.
+    He turns back towards me.
 
-    captain """
-    Bloody hell, I didn't see that one coming.
+    There is blood on his hands.
 
-    Somebody shot at us.
+    His face usually emotion less now shows panic, and pain.
 
-    Run!
-    """
+    He tries to take a step in my direction, but collapses on the ground.
 
-    """
-    He then began to limp as fast as he could.
+    When I realise what is happening, I quickly decide I can't stay here for long.
 
-    I try to help him by carrying him.
-    """
+    So I leave the Captain behind and start to run as fast as I can.
 
-    captain """
-    Stop this nonsense,
+    I try to catch up with Ted Harring, but he is already so far away that I can't even see him.
 
-    Run to safety.
-    """
-
-    psychic """
-    I can't leave you; you are injured, you need help.
-    """
-
-    captain """
-    It's probably too late for that anyway.
-
-    I think the bullet hit an artery.
-    """
-
-    """
-    I looked down and saw that his shirt is bright red.
-
-    He is right, the wound looks fatal.
-
-    But I try not to alarm him.
-    """
-
-    psychic """
-    It's not so bad.
-
-    I am sure you've had worse than this.
-    """
-
-    captain """
-    Yeah, right.
-
-    If only that were true.
-    """
-
-    psychic """
-    What do you mean?
-    """
-
-    captain """
-    I've never fought a battle in my life,
-
-    I am an...
-
-    ...administrative officer.
-
-    This weekend was definitely the most dangerous...
-
-    ...situation I've ever been in.
-
-    I shouldn't...
-
-    ...have come here.
-    """
-
-    $ captain_details.description_hidden.unlock('lie') 
-
-    """
-    He collapses after saying that.
-
-    There's no need to carry him any more.
-
-    So I leave him and try to run to Ted Harring.
-
-    But he is already so far away, I can't see him.
-
-    I realise that he didn't even try to help us.
+    He didn't even pretend to wait for us.
     """
 
     $ stop_music()
@@ -227,39 +153,124 @@ label psychic_day3_afternoon_escape:
     $ play_music('end_credits')
 
     """
-    I went as fast as I could but was never able to catch up with Ted Harring.
+    I go as fast as I can but I don't see Ted Harring until I reach the town.
 
-    At least until I reached the town.
+    I head straight to the police station and there he is.
 
-    I went straight to the police station and there he was.
-
-    When I entered, he looked embarrassed to see me.
+    When I enter, he looks embarrassed to see me.
 
     Probably feeling the weight of the guilt of leaving me to an uncertain fate.
     """
 
     pause 1.0 
-    
+
     """
-    But I was glad he had made it anyway.
+    But I am glad he made it anyway.
 
-    I hugged him and told him about Captain Sinha.
+    I hug him and tell him about Captain Sinha.
 
-    He replied that officers were on their way to Claythorn Manor.
+    He replies that officers are on their way to Claythorn Manor.
 
-    We waited for them for a long time.
+    We wait for them for a long time.
 
-    They came back only to confirm what we already knew.
+    They come back only to confirm what we already knew.
 
-    Sushil Sinha had succumbed to his injuries.
-    
-    There was no one alive at the manor.
+    Sushil Sinha has succumbed to his injuries.
 
-    In addition to Samuel Manning, Thomas Moody, and Daniel Baldwin, they also found Rosalind Marsh's body.
+    There is no one alive at the manor.
 
-    She had been stabbed to death and was lying somewhere in the attic.
+    In addition to Samuel Manning, Thomas Moody, and Daniel Baldwin, they've also found Rosalind Marsh's body.
 
-    However, they found no trace of Lady Claythorn and her staff.
+    She has been stabbed to death and is lying somewhere in the attic.
+
+    However, they have found no trace of Lady Claythorn and her staff.
     """
+
 
     jump psychic_ending_escape
+
+
+    # OLD VERSION - Maybe reuse it somewhere else?
+    # """
+    # It looks like he's going to collapse, but then he steadies himself and comes back towards me.
+    # """
+
+    # # I barely have time to hide the smoking gun in my right hand.
+
+    # captain """
+    # Bloody hell, I didn't see that one coming.
+
+    # Somebody shot at us.
+
+    # Run!
+    # """
+
+    # """
+    # He then began to limp as fast as he could.
+
+    # I try to help him by carrying him.
+    # """
+
+    # captain """
+    # Stop this nonsense,
+
+    # Run to safety.
+    # """
+
+    # psychic """
+    # I can't leave you; you are injured, you need help.
+    # """
+
+    # captain """
+    # It's probably too late for that anyway.
+
+    # I think the bullet hit an artery.
+    # """
+
+    # """
+    # I looked down and saw that his shirt is bright red.
+
+    # He is right, the wound looks fatal.
+
+    # But I try not to alarm him.
+    # """
+
+    # psychic """
+    # It's not so bad.
+
+    # I am sure you've had worse than this.
+    # """
+
+    # captain """
+    # Yeah, right.
+
+    # If only that were true.
+    # """
+
+    # psychic """
+    # What do you mean?
+    # """
+
+    # captain """
+    # I've never fought a battle in my life,
+
+    # I am an...
+
+    # ...administrative officer.
+
+    # This weekend was definitely the most dangerous...
+
+    # ...situation I've ever been in.
+
+    # I shouldn't...
+
+    # ...have come here.
+    # """
+
+    # $ captain_details.description_hidden.unlock('lie') 
+
+    # """
+    # He collapses after saying that.
+
+    # There's no need to carry him any more.
+    # """

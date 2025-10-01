@@ -6,7 +6,7 @@ label common_day2_evening_lad_psychic_discussion_0:
     play sound door_knock
 
     psychic """
-    Mister Harring, may I come in?
+    Mr Harring, may I come in?
     """
 
     if current_character.text_id == "lad":
@@ -77,7 +77,7 @@ label common_day2_evening_lad_psychic_discussion_0:
     """
 
     psychic """
-    Don't dismiss what you don't understand, Mister Harring.
+    Don't dismiss what you don't understand, Mr Harring.
 
     But it's okay. I don't need you to believe me.
 
@@ -161,6 +161,7 @@ label common_day2_evening_lad_psychic_discussion_0:
 
     return
 
+
 label common_day2_evening_lad_psychic_discussion_1:
 
     lad """
@@ -177,7 +178,7 @@ label common_day2_evening_lad_psychic_discussion_1:
         """
 
     psychic """
-    Mister Harring, are you alone?
+    Mr Harring, are you alone?
     """
 
     lad """

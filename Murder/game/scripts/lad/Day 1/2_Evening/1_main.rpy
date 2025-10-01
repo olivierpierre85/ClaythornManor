@@ -33,7 +33,7 @@ label lad_day1_evening:
     """
 
     lad """
-    Hello, I am Ted Harring, I was invited by Lady Claythorn.
+    Hello, I am Ted Harring, I have been invited by Lady Claythorn..
     """
 
     butler """
@@ -59,7 +59,7 @@ label lad_day1_evening:
     """
 
     butler """
-    Mister Ted Harring!
+    Mr Ted Harring!
     """
 
     """
@@ -131,12 +131,12 @@ label lad_day1_evening:
     
     $ time_left = 20
     
-    $ current_menu = TimedMenu("lad_introduction", [
+    call run_menu( TimedMenu("lad_introduction", [
         TimedMenuChoice('Talk to Samuel Manning', 'lad_day1_drinks_drunk', 10),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', 0),
+        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_drinks_psychic', next_menu="psychic_generic_menu_lad"),
         TimedMenuChoice('Stand awkwardly in the corner', 'generic_cancel', early_exit=True),
         ], image_left = "drunk", image_right = "psychic")
-    call run_menu(current_menu)
+    )
 
     call change_time(18,30)
 
@@ -148,7 +148,7 @@ label lad_day1_evening:
     pause 1.0
 
     """
-    What was that? A gong?
+    What is that? A gong?
     """
 
     butler """
@@ -170,9 +170,9 @@ label lad_day1_evening:
 
     As I observe each person, Lady Claythorn makes her entrance into the room.
 
-    She looks younger than I had imagined.
+    She looks younger than I imagined.
 
-    I don't know why, but I pictured an elderly bored lady. Yet, she looks nothing like that.
+    I don't know why, but I pictured an elderly, bored lady. Yet she looks nothing like that.’
     
     Her clothes, which are the most impressive of anyone's in the room, make her status clear.
 
@@ -184,9 +184,9 @@ label lad_day1_evening:
     call common_day1_evening_host_welcome_speech
 
     """
-    After the speech, everyone appeared pleased. 
+    After the speech, everyone appears pleased. 
     
-    A few of the guests began to express their appreciation to the host.
+    A few of the guests begin to express their appreciation to the host.
     """
 
     host """
@@ -198,35 +198,34 @@ label lad_day1_evening:
     """
 
     """
-    At that moment, the butler entered the room, accompanied by the footman. 
+    At that moment, the butler enters the room, accompanied by the footman. 
 
-    They began to serve the first dish and pour drinks for everyone.
+    They begin to serve the first dish and pour drinks for everyone.
 
-    The mood in the room gradually relaxed, and the sound of various conversations filled the space.
+    The mood in the room gradually relaxes, and the sound of various conversations fills the space.
 
     I turn my attention to the guests seated next to me.
 
-    I found myself sitting between Amelia Baxter and Daniel Baldwin.
+    I find myself sitting between Amelia Baxter and Daniel Baldwin.
     """
 
     call change_time(19, 30)
 
     $ time_left = 90
 
-    $ current_menu = TimedMenu("lad_day1_evening", [
-        TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor'),
-        TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic'),
-        TimedMenuChoice('Eat in silence, like a sociopath', 'generic_cancel', early_exit=True),
-    ], image_left = "doctor", image_right = "psychic")
-
-    call run_menu(current_menu)
+    call run_menu( TimedMenu("lad_day1_evening", [
+            TimedMenuChoice('Talk to Daniel Baldwin', 'lad_day1_evening_dinner_doctor', next_menu="doctor_generic_menu_lad"),
+            TimedMenuChoice('Talk to Amelia Baxter', 'lad_day1_evening_dinner_psychic', next_menu="psychic_generic_menu_lad"),
+            TimedMenuChoice('Eat in silence, like a sociopath', 'generic_cancel', early_exit=True),
+        ], image_left = "doctor", image_right = "psychic")
+    )
 
     call change_time(21,00)
 
     $ stop_music
 
     """
-    The dinner is coming to an end.
+    The dinner comes to an end.
 
     The host explains that we can continue our discussion and enjoy drinks in the billiard room, or, for those tired from the journey, we can simply retire for the night.
 
@@ -264,17 +263,17 @@ label lad_day1_evening:
     """
 
     lad """
-    This is ..., this is good  yes, thank you.
+    This is ..., this is good, yes. Thank you.
     """
 
     """
-    The footman exists the room.
+    The footman exits the room.
 
     I look around in disbelief.
 
     After a while, I unpack my modest luggage.
 
-    It didn't take up much time. So, what should I do now?
+    It does not take long. So, what should I do now?
     """
 
     $ play_music('upbeat')
@@ -332,7 +331,7 @@ label lad_day1_evening:
         """
         It's been a long day.
 
-        So I change a get directly into my bed.
+        So I change and get directly into bed.
 
         Almost instantly, I fall asleep.
         """
@@ -404,7 +403,7 @@ label lad_day1_evening_bedroom_psychic:
     """
 
     psychic """
-    Hello again. What do you want mister Harring?
+    Hello again. What do you want Mr Harring?
     """
     
     lad """
@@ -412,7 +411,7 @@ label lad_day1_evening_bedroom_psychic:
     """
 
     psychic """
-    Oh, Mr. Harring. I'm afraid I was preparing for bed. We can speak again tomorrow.
+    Oh, Mr Harring. I'm afraid I was preparing for bed. We can speak again tomorrow.
     """
 
     lad """
@@ -433,7 +432,7 @@ label lad_day1_evening_dinner_psychic:
     """
 
     psychic """
-    Hello Mister Harring.
+    Hello Mr Harring.
     """
 
     call psychic_generic
@@ -448,7 +447,7 @@ label lad_day1_evening_dinner_doctor:
     """
 
     doctor """
-    Hi mister Harring, I am doctor Daniel Baldwin.
+    Hi Mr Harring, I am doctor Daniel Baldwin.
     """
 
     lad """

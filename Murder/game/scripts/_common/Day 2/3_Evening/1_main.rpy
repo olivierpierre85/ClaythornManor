@@ -44,7 +44,7 @@ label common_day2_evening_entrance_dialog:
     Speaking of which, has anyone from the city arrived yet?
     """
 
-    nurse """
+    psychic """
     No, not yet.
 
     We're still waiting for them.
@@ -174,7 +174,7 @@ label common_day2_evening_samuel_manning_discussion_part_1:
 label common_day2_evening_samuel_manning_discussion_part_2:
     
     captain """
-    Mister Harring needed to change, he'll join us shortly.
+    Mr Harring needed to change, he'll join us shortly.
     """
 
     host """
@@ -196,11 +196,11 @@ label common_day2_evening_samuel_manning_discussion_part_2:
     """
 
     captain """
-    That does seem like the wisest approach under the circumstances.
+    That does seem like the wisest approach.
     """
 
     """
-    He shifts his attention towards Mister Manning.
+    He shifts his attention towards Samuel Manning.
     """
 
     captain """
@@ -238,17 +238,17 @@ label common_day2_evening_samuel_manning_discussion_part_2:
     """
     The butler retrieves a set of keys from his pocket.
 
-    After sifting through them, he presents one to Mister Sinha.
+    After sifting through them, he presents one to Mr Sinha.
     """
 
     butler """
-    Here is the key to his room.
+    Use this key to lock his room.
     """
 
     captain """
     Excellent, thank you.
 
-    Now, Mister Manning, let's go shall we?
+    Now, Mr Manning, let's go shall we?
     """
 
     """

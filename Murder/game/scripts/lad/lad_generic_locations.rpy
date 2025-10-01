@@ -117,7 +117,7 @@ label lad_downstairs_default:
         """
 
         maid """
-        Mister Harring? I thought I made myself clear earlier.
+        Mr Harring? I thought I made myself clear earlier.
 
         What are you trying to do here?
 

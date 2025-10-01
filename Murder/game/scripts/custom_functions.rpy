@@ -142,6 +142,99 @@ init python:
 
         return
 
+    # def is_sub_menu_active(sub_menu_id):
+
+    #     if all_menus.get(sub_menu_id):
+    #         sub_menu = all_menus[sub_menu_id]
+    #     else:
+    #         return True
+
+    #     # The menu has only 1 or less visible choice, so no reason to display it
+    #     if sub_menu.get_visible_choices_total() > 1:
+    #         return True
+
+    #     return False
+
+    def export_choices_to_file(choices, tester_id=None):
+        # ---- Build JSON payload ----
+        data = {
+            "tester_id": tester_id or "anon",
+            "timestamp": datetime.now().isoformat(),
+            "choices": choices,
+        }
+        json_text = json.dumps(data, indent=2, ensure_ascii=False)
+        fname = f"choices_{data['tester_id']}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
+
+        # ---- Desktop / mobile: write to disk ----
+        if sys.platform != "emscripten":
+            try:
+                with open(fname, "w", encoding="utf-8") as f:
+                    f.write(json_text)
+                renpy.notify(f"Exported to {fname}")
+            except Exception as e:
+                renpy.notify(f"Export failed: {e}")
+            return
+
+        # ---- Web build: run JS that triggers a download ----
+        if renpy.emscripten:
+            # Base-64 the JSON so we don’t worry about quoting/line-breaks.
+            b64 = base64.b64encode(json_text.encode("utf-8")).decode("ascii")
+
+            js = f"""
+                (function () {{
+                    var data = atob("{b64}");
+                    var blob = new Blob([data], {{ type: 'application/json' }});
+                    var a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = "{fname}";
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                }})();
+            """
+
+            renpy.emscripten.run_script(js)
+            renpy.notify("Download started")
+
+    # Functions to save History/logs to a file after an ending
+    def _transcript_text():
+        lines = []
+        for h in renpy.store._history_list:
+            # Strip text tags for clean output
+            what = renpy.filter_text_tags(h.what, allow=set()) if h.what else ""
+            who  = h.who or ""
+            if who:
+                lines.append(u"{0}: {1}".format(who, what))
+            else:
+                lines.append(what)
+        return u"\n".join(lines)
+
+
+    def save_transcript_to_file():
+        # Grab current character if available
+        char_name = globals().get("current_character", None)
+        if char_name and hasattr(char_name, "text_id"):
+            base = char_name.text_id
+        else:
+            base = "transcript"
+
+        # Add timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{base}_{timestamp}_playthrough.txt"
+
+        # Write into the game's saves directory so it's always writable
+        savedir = renpy.config.savedir
+        if not os.path.isdir(savedir):
+            os.makedirs(savedir, exist_ok=True)
+        fullpath = os.path.join(savedir, filename)
+
+        with io.open(fullpath, "w", encoding="utf-8") as f:
+            f.write(_transcript_text())
+
+        renpy.notify("Transcript saved:\n" + fullpath)
+        return fullpath
+
+
 label start_again():
 
     hide screen centered_text

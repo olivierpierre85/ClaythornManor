@@ -12,7 +12,7 @@
 #
 #   Notes : 
 #       - Map visit, 90 minutes
-#       - Generic Broken
+#       - Generic Broken, lad
 # --------------------------------------------
 label doctor_day1_evening:
     
@@ -147,9 +147,9 @@ label doctor_day1_evening:
     call change_time(16,30)
 
     """
-    After a while, Miss Marsh enters the room.
+    After a while, an Indian man in an army uniform enters the room.
 
-    She is followed by a Indian man in an army uniform and an older gentleman.
+    He is followed by an older gentleman.
 
     They must have just arrived from the station.
 

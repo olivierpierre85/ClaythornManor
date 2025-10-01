@@ -56,7 +56,7 @@ label nurse_generic_age:
 
     return
 
-label nurse_generic_background:
+label nurse_generic_background_psychic:
     
     nurse """
     Oh well, the most obvious thing about me is that I am a nurse.
@@ -97,6 +97,52 @@ label nurse_generic_background:
     $ nurse_details.description_hidden.unlock('job') 
 
     return
+
+
+label nurse_generic_background_doctor:
+    
+    nurse """
+    Oh well, the most obvious thing about me is that I am a nurse.
+
+    I started young and served in various wars. 
+
+    In peacetime, ....
+    """
+
+    doctor """
+    Wait a minute, in which wars did you actually serve?
+    """
+
+    nurse """
+    Well, the Great War, and before that I was...
+    """
+
+    doctor """
+    Sorry, to interrupt, but I think I remember you now.
+    
+    Were you in China during the Boxer's Rebellion by chance?
+    """
+
+    nurse """
+    I was indeed, I wouldn't think you would remember me.
+    """
+
+    doctor """
+    Right, so we did work together.
+
+    Why didn't you say something?
+    """
+
+    nurse """
+    I didn't want to presume.
+
+    I was a young nurse among many.
+
+    And it was a very long time ago.
+    """
+
+    return
+
 
 label nurse_generic_heroic_act:
     

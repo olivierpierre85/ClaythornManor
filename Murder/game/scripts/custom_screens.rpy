@@ -123,6 +123,9 @@ screen debug_screen:
         ypadding 0
         xpadding 0
         textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter:
+        # textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "\nSubmenu(lad_introduction):" + str(all_menus['lad_introduction'].is_valid()) :
+            # action Function(export_choices_to_file, all_choices)
+            action Function(save_transcript_to_file)
             xminimum 200  # Adjust these values as needed
             yminimum 80
             text_size 18
@@ -145,12 +148,13 @@ screen custom_key_listener():
 
 # The standard choice menu is replaced with this one to be able to make easy changes to menu
 screen custom_choice(custom_menu):
+
     style_prefix "choice"
 
     vbox:
         for idx, choice in enumerate(custom_menu.choices):
 
-            if not choice.hidden and choice.get_condition():
+            if choice.is_valid():
 
                 # Add the icons based on markers
                 if "{{intuition}}" in choice.text:
@@ -162,7 +166,7 @@ screen custom_choice(custom_menu):
                 else:
                     $ btn_text = choice.text
 
-                if choice.is_completed():
+                if choice.is_already_chosen():
                     textbutton btn_text:
                         mouse "hover"
                         action Return(idx)
@@ -171,3 +175,16 @@ screen custom_choice(custom_menu):
                     textbutton btn_text:
                         mouse "hover" 
                         action Return(idx)
+
+
+transform blink_skip:
+    alpha 1.0
+    linear 0.5 alpha 0.25
+    linear 0.5 alpha 1.0
+    repeat
+
+screen skip_hint():
+    # Show only if:
+    #   – this line has been seen before
+    if renpy.is_seen() or show_skip_hint_for_tutorial:
+        add "images/ui/skip_button.png" at blink_skip align (0.15, 0.4)   # top‑right

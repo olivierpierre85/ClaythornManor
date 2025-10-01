@@ -8,6 +8,9 @@ init -1000 python:
     import textwrap
     import re
     import itertools
+    import sys, json, base64
+    import uuid
+    import os, io
 
     from typing import List, Tuple
 
@@ -17,6 +20,19 @@ init -1000 python:
     current_music = 'NONE'
     current_start_song = 1
 
+    # ADD function to renpy error handling
+    def dump_state(short_tb, full_tb, tb_file):
+        """
+        • short_tb  → traceback trimmed to your script files
+        • full_tb   → full traceback (engine + your code)
+        • tb_file   → path to a .txt file Ren'Py already wrote
+        """
+
+        export_choices_to_file(all_choices)
+
+        return False
+
+define config.exception_handler = dump_state
 
 # Var needed BEFORE start
 default debug_activated = False
@@ -104,7 +120,7 @@ label init_technical_variables:
         'saturday_morning': "A Shocking Morning",
         'saturday_afternoon': "The Hunt",
         'saturday_afternoon_no_hunt': "No Hunt",
-        'saturday_evening': "Things get Darker",
+        'saturday_evening': "Things Get Darker",
         'sunday_morning': "Exploration",
         'sunday_afternoon': "Final Decisions",
         'end': "Ending"
@@ -127,10 +143,11 @@ label init_technical_variables:
     define config.mouse = { }
     define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
     define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]
+
     python:
         # Technical Variables
-
         all_menus = {}
+        all_choices = []
 
         # TODO delete those in character select AND start again
         record_mode = False
@@ -140,6 +157,8 @@ label init_technical_variables:
         show_minutes_movement = 0
         show_hours_movement = 0
         skip_clock_movement = True
+
+        show_skip_hint_for_tutorial = False
 
         if record_mode:
             f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")
@@ -189,7 +208,7 @@ label init_technical_variables:
                 "You can select one of those \"checkpoints\" to see which choices you have made before reaching them.\n"  
             ),
             (1280, 312, 616, 626, 960, 150, 
-                "Once a checkpoint is selected, you can see here the choices that could have been made before reaching this point.\n" + 
+                "Once a checkpoint is selected, you can see here the possible choices that you faced before reaching this point.\n" + 
                 "And below are the ones you can make in this chapter.\n" +  
                 "There is a question mark for the ones that have not yet been discovered."  
             ),
@@ -217,6 +236,7 @@ label init_technical_variables:
         condition_saturday_morning = "(current_day == 'Saturday' and current_phase == 'Morning')"
         condition_saturday_morning_or_hunt = "(current_day == 'Saturday' and (current_phase == 'Morning' or current_phase == 'The Hunt' or current_phase == 'No Hunt'))"
         condition_saturday_hunt = "(current_day == 'Saturday' and (current_phase == 'The Hunt' or current_phase == 'No Hunt'))"
+        condition_saturday_hunt_morning = "(current_day == 'Saturday' and (current_hour<12))"
         condition_saturday_evening = "(current_day == 'Saturday' and current_phase == 'Evening')"
         condition_saturday = "current_day == 'Saturday'"
         condition_friday = "current_day == 'Friday'"
@@ -224,6 +244,7 @@ label init_technical_variables:
         condition_friday_afternoon = "(current_day == 'Friday' and current_phase == 'Evening')"
         condition_friday_evening = "(current_day == 'Friday' and current_phase == 'Evening')"
         condition_friday_or_saturday = "(current_day == 'Friday' or current_day == 'Saturday')"
+        condition_friday_or_saturday_morning = "(current_day == 'Friday' or (current_day == 'Saturday' and current_phase == 'Morning'))"
         condition_sunday = "current_day == 'Sunday'"
 
         # Image for progress view

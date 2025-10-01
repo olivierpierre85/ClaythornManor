@@ -26,13 +26,13 @@ label lad_introduction:
     $ play_music('chill')
 
     """
-    As I approach my destination, I read the letter that made me come on this trip for the 10th time.
+    As I approach my destination, I read the letter that has brought me on this trip for the tenth time.
     """
 
     letter """
     5th September, [current_year]
 
-    Dear Mister Harring,
+    Dear Mr Harring,
 
     I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Bravery Award".
 
@@ -62,7 +62,7 @@ label lad_introduction:
 
     But no matter the reason, I can't possibly say no to this amount of money.
     
-    So I feel like I didn't have much choice.
+    So I feel as if I do not have much choice.
 
     But still, there is part of me thinking,
 
@@ -88,7 +88,7 @@ label lad_introduction:
     """
 
     """
-    As proof, I hand him the letter that I still had in my hands.
+    As proof, I hand him the letter that I still have in my hand.
     """
     
     footman """
@@ -96,7 +96,7 @@ label lad_introduction:
     """
 
     """
-    And like that we were on our way.
+    And just like that, we are on our way.
     """
 
     $ change_room("inside_car")
@@ -114,7 +114,7 @@ label lad_introduction:
     lad """
     Oh. The driver must be busy because of all the people coming I guess.
 
-    Do you know how many people were invited this weekend?
+    Do you know how many people have been invited this weekend?
     """
 
     footman """
@@ -144,7 +144,7 @@ label lad_introduction:
 
     We'll see.
 
-    After leaving Aberdeen, we move into the countryside, then into what seems like a vast forest.
+    After we leave Aberdeen, we move into the countryside, then into what seems like a vast forest.
 
     About twenty minutes later, all signs of human life disappear.
 
@@ -168,7 +168,7 @@ label lad_introduction:
 
     A big country house. 
 
-    Everyone who is someone in England used to have one.
+    Everyone who was anyone in England used to have one.
 
     Now I've heard a lot of people can't afford them anymore.
 

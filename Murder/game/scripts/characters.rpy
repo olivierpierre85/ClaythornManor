@@ -63,6 +63,8 @@ label init_characters:
 # LABELS
 label character_selection:
     scene black_background
+
+    window hide # Manually hide the say window 
     narrator "Select a Character"
 
     python:
@@ -218,11 +220,12 @@ init -100 python:
                     # Unlock the info
                     info.locked = False
                     info.discovered = True
+
                     if not hide_notifications:
                         renpy.notify("You have found information about " + self.character_name)
                         renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
-                    if self.all_description_hidden_unlocked():
+                    if info.is_important and self.all_description_hidden_unlocked():
                         if not hide_notifications:
                             # Unlock a character
                             renpy.pause(2)
@@ -231,6 +234,7 @@ init -100 python:
                             if not seen_tutorial_unlock_character:
                                 seen_tutorial_unlock_character = True
                                 show_tutorial_unlock_character = True
+
             
             if not seen_tutorial_description_hidden:
                 seen_tutorial_description_hidden = True
@@ -238,7 +242,7 @@ init -100 python:
 
         def all_description_hidden_unlocked(self):
             for info in self.information_list:
-                if info.locked:
+                if info.locked and info.is_important:
                     return False
             return True
 

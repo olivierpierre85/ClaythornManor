@@ -11,7 +11,7 @@ label lad_day2_hunt_tea_room:
     """
 
     nurse """
-    Oh Mister Harring, I'm glad you're here.
+    Oh Mr Harring, I'm glad you're here.
 
     Miss Baxter and I were just discussing something fascinating.
 
@@ -90,7 +90,7 @@ label lad_day2_hunt_tea_room:
         psychic """
         What were you attempting to do downstairs?
 
-        That area isn't somewhere we should wander into, Mister Harring.
+        That area isn't somewhere we should wander into, Mr Harring.
 
         Regardless, there are probably many staff members you haven't met yet.
 
@@ -201,7 +201,7 @@ label lad_day2_hunt_tea_room:
     """
 
     psychic """
-    It seems it's just you and me, Mister Harring.
+    It seems it's just you and me, Mr Harring.
     """
 
     $ lad_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
@@ -223,7 +223,7 @@ label lad_day2_hunt_tea_room_return:
     """
 
     psychic """
-    Mister Harring? 
+    Mr Harring? 
 
     How may I assist you?
     """

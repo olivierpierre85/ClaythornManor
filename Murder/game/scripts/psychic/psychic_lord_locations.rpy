@@ -295,7 +295,7 @@ label psychic_portrait_gallery_look_for_lord:
     Now, I realize that there are probably paintings of the Claythorn family here.
     """
 
-    pause 2.0
+    pause 1.0
 
     """
     I can't find Lady Claythorn here, but after a while I spot Lord Claythorn.

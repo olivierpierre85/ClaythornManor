@@ -18,7 +18,7 @@ label common_day2_morning_host_death:
     host """
     I'm sorry to announce such horrible news, everyone.
 
-    It appears that Mister Moody passed away in his sleep last night.
+    It appears that Mr Moody passed away in his sleep last night.
     """
 
     $ play_music('scary')
@@ -43,7 +43,7 @@ label common_day2_morning_host_death:
     Everyone looks shaken up.
     """
 
-    lad """
+    captain """
     How terrible.
     """
 
@@ -69,7 +69,7 @@ label common_day2_morning_host_death_doctor:
 
     But it's very likely a natural death, possibly triggered by an old wound from the war.
     
-    In any case, we need to call the town to ask for an ambulance.
+    In any case, we need to call the authorities.
     """
 
     # TODO: Add lines? Are they broken? Or does the host pretend everything is fine so everyone stays here?
@@ -89,7 +89,7 @@ label common_day2_morning_host_death_doctor:
     Nobody speaks much.
     """
 
-    pause 2.0
+    call wait_screen_transition()
 
     return
 
@@ -132,7 +132,7 @@ label common_day2_morning_host_hunt:
 label common_day2_morning_lad_psychic:
 
     psychic """
-    Hello, Mister Harring. How are you?
+    Hello, Mr Harring. How are you?
     """
 
     lad """
@@ -144,7 +144,7 @@ label common_day2_morning_lad_psychic:
         
     There are still a few people missing.
 
-    For instance, I don't think we'll see Mister Manning anytime soon.
+    For instance, I don't think we'll see Mr Manning anytime soon.
 
     He was so drunk yesterday that I wouldn't be surprised if he doesn't show up before noon.
     """
@@ -197,18 +197,33 @@ label common_day2_morning_lad_psychic:
         Rising, she approaches, pausing only when she reaches the doctor.
         """
     
+    call common_day2_morning_host_to_doctor
+
+    return
+
+
+label common_day2_morning_host_to_doctor:
+    
     host """
     Doctor Baldwin, I'm sorry to interrupt your breakfast, but would you mind coming with me?
 
     We need your assistance.
     """
 
-    """
-    Without hesitation, Daniel Baldwin stands up.
-    """
+    if current_character.text_id == "doctor":
+
+        """
+        I quickly stands up.
+        """
+
+    else:
+        
+        """
+        Without hesitation, Daniel Baldwin stands up.
+        """
 
     doctor """
     Of course, I'll follow you.
     """
-
+    
     return

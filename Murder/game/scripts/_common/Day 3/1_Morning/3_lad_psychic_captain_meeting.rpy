@@ -80,7 +80,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
     play sound door_knock
 
     captain """
-    Mister Manning, are you there?
+    Mr Manning, are you there?
     """
 
     """
@@ -216,7 +216,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
     I have something to check out, and I'll be back soon.
 
-    Mister Harring, would you mind coming with me?
+    Mr Harring, would you mind coming with me?
     """
 
     if current_character.text_id == "lad":

@@ -3,20 +3,22 @@ label psychic_day2_hunt_tea_room:
     $ change_room("tea_room")
 
     """
-    When I walk into the room, Rosalind Marsh is already there, sitting at a table.
-    
-    I head over to her.
+    I am the first to arrive, so I pick a table and wait for Rosalind Marsh.
+
+    I am seated comfortably, lost in my thoughts when she enters the room.
+    """
+
+    call change_time(12, 0)
+
+    psychic """
+    Miss Marsh, would you like to join me?
     """
 
     nurse """
-    Miss Baxter, would you like to join me?
-    """
-
-    psychic """
     Yes, thank you.
     """
 
-    nurse """
+    psychic """
     It seems we haven't really had a chance to talk yet, right?
     """
 
@@ -31,7 +33,7 @@ label psychic_day2_hunt_tea_room:
     """
 
     nurse """
-    That would be lovely, thank you
+    That would be lovely, thank you.
     """
 
     pause 1.0
@@ -39,7 +41,7 @@ label psychic_day2_hunt_tea_room:
     """
     After a few minutes, she returns with some plates.
 
-    As we eat, we chat about trivial matters related to our host.
+    As we eat, we chat about trivial matters.
     """
 
     pause 1.0
@@ -48,19 +50,31 @@ label psychic_day2_hunt_tea_room:
     When our lunch is over, Rosalind rises from her seat.
     """
 
-    nurse """
-    I'm quite exhausted with all that has happened.
+    play sound woman_cough
 
-    I think I'll retire to my room. Would you mind being alone?
+    """
+    She lets out a painful cough.
+    """
+
+    nurse """
+    I'm feeling rather poorly.  
+
+    I think I will retire to my room.  
+
+    Would you mind being left on your own?
     """
 
     psychic """
-    Oh no, don't worry.
+    Not at all, please don't concern yourself.  
 
-    There's plenty for me to do.
+    There is more than enough here to occupy me.
     """
 
-    # $ psychic_details.saved_variables["day2_nohunt_has_visited_tea_room"] = True
+    """
+    With the manor so quiet, I might seize the chance to explore unnoticed.  
+
+    And perhaps I should call upon Rosalind Marsh later, to see how she is doing.
+    """
 
     return
 

@@ -22,10 +22,12 @@ label psychic_day2_morning:
 
     $ change_room("bedroom_psychic", irisout)
 
-    """
-    Despite the storm that raged all night, I managed to sleep relatively well.
+    $ play_music('upbeat', 3)
 
-    So, I take my time getting ready and then head downstairs to the dining room.
+    """
+    Despite the storm that raged all night, I managed to sleep rather well.
+
+    So, I take my time getting ready and then go downstairs to the dining room.
     """
 
     $ change_room('dining_room')
@@ -35,11 +37,11 @@ label psychic_day2_morning:
     """
     Some of the guests are already eating.
 
-    I grab a plate at the breakfast buffet and then sit down at the same spot on the table as yesterday.
+    I take a plate at the breakfast buffet and then sit down in the same place at the table as yesterday.
 
-    Captain Sinha is there, but I don't feel like engaging in conversation with him.
+    Captain Sinha is there, but I do not feel like engaging in conversation with him.
 
-    It's too soon for that.
+    It is too early for that.
 
     After a while, Ted Harring joins me at the table.
     """
@@ -51,11 +53,11 @@ label psychic_day2_morning:
     """
     For some reason, Ted Harring also stands up and follows them.
 
-    It seems I am stuck with Sushil Sinha.
+    It seems I am left with Sushil Sinha.
     """
 
     psychic -angry """
-    Good morning, Mister Sinha.
+    Good morning, Mr Sinha.
     """
 
     captain """
@@ -83,7 +85,7 @@ label psychic_day2_morning:
 
     Well, let them enjoy their game.
 
-    Obviously, I'll stay here this afternoon.
+    Obviously, I will stay here this afternoon.
     """
     
     jump psychic_day2_no_hunt

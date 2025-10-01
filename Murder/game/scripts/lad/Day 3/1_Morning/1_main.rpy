@@ -49,7 +49,7 @@ label lad_day3_morning:
         """    
 
     psychic """
-    Mister Harring, are you there?
+    Mr Harring, are you there?
     """
 
     if lad_details.important_choices.is_unlocked('trust_psychic'):
@@ -112,7 +112,7 @@ label lad_day3_morning:
         """
 
         psychic """
-        Oh, Mister Harring, that's highly unlikely.
+        Oh, Mr Harring, that's highly unlikely.
 
         They're usually up at dawn, preparing the house for the day.
 

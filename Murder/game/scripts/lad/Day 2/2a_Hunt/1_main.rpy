@@ -36,7 +36,7 @@ label lad_day2_hunt:
     # TODO achievement,  Hunt like a man
 
     butler """
-    So, this is your first hunt, Mister Harring?
+    So, this is your first hunt, Mr Harring?
     """
 
     lad """
@@ -118,7 +118,7 @@ label lad_day2_hunt:
     """
 
     lad """
-    Is it okay for Mister Manning to have a gun? He seemed a bit drunk this morning.
+    Is it okay for Mr Manning to have a gun? He seemed a bit drunk this morning.
     """
 
     butler """
@@ -128,7 +128,7 @@ label lad_day2_hunt:
     """
 
     lad """
-    Ok, if you're sure.
+    All right, if you're sure.
     """
 
     """

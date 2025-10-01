@@ -167,12 +167,73 @@ label captain_generic_origin_psychic_2:
     So I nod in assent and barely listens to what he is saying.
     """
 
-    $ captain_details.description_hidden.unlock('talker') 
-
-    $ current_character.saved_variables["knows_captain_real_origin"] = True
-    
+    $ captain_details.description_hidden.unlock('talker')     
 
     return
+
+
+label captain_generic_background_psychic:
+
+    """
+    Wait, why am I encouraging him?
+    """
+
+    captain """
+    Oh, I thought I already said plenty in the car.
+
+    But, if you insist of course.
+
+    Where did we stop last time?
+
+    Ah yes, I was telling you about the time I was sent to London.
+
+    My mission there was to train new officers, a duty I regarded as both an honour and a burden. 
+
+    The young men were eager, full of fire, but they had little understanding of what it truly meant to lead others into danger. 
+
+    It was my task to temper their enthusiasm with discipline, to teach them not merely how to fight, but how to think, how to endure, and how to carry the weight of command. 
+
+    In those years I saw the very best and the very worst of human nature. 
+    
+    Some rose splendidly to the challenge, others faltered and fell away. 
+
+    But I gave them all that I could, for I knew that the fate of many would one day rest upon their shoulders, just as it had once rested upon mine. 
+
+    When at last my service came to its end, I retired with a measure of pride, though also with a heavy heart. 
+    
+    For the army had been my life, my purpose, and leaving it behind was no easy thing. 
+
+    Still, I hold no regrets. I served faithfully, and I did my duty, as any officer ought. 
+    """
+
+    """
+    All right, I think I have heard his whole life story now.
+    """
+
+
+    return
+
+# NOT here anymore, maybe used this for the nurse.
+# label captain_generic_background_psychic_2:
+
+#     # Again, there is something wrong with his story. I can feel he doesn't say the truth
+#     """
+#     2
+#     """
+
+#     return
+
+
+# label captain_generic_background_psychic_3:
+
+#     # You noticed some inconsistency before, so now is you chance to ask which one is a problem
+
+#     """
+#     Really, is there a
+#     """
+
+#     return
+
 
 label captain_generic_heroic_act_psychic:
     
@@ -213,16 +274,16 @@ label captain_generic_heroic_act_psychic:
 label captain_generic_manor_psychic:
 
     captain """
-    It's a splendid place.
+    It's a splendid house.
 
-    A bit old, and it could used some renovations.
+    A bit old, and it could use some renovations.
 
     But I know it is no easy task.
     """
 
     #chatGPT
     captain """
-    As someone who has seen my fair share of grand buildings and stately homes, I can confidently say that renovating an old Victorian mansion is no easy feat. 
+    I have seen my fair share of grand buildings and stately homes, and I can confidently say that renovating an old Victorian mansion is no easy feat. 
     
     The challenge lies in balancing the preservation of the building's historical integrity with the necessary updates and modernizations for contemporary living.
 
@@ -282,7 +343,7 @@ label captain_generic_age_psychic:
     """
 
     psychic """
-    Gosh No, I'm merely asking out of curiosity.
+    Gosh no, I'm merely asking out of curiosity.
     
     I didn't intend any offense.
     """

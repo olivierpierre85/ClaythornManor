@@ -25,7 +25,7 @@ label lad_day3_stay:
     """
 
     psychic """
-    Yes! Thank you, Mister Harring.
+    Yes! Thank you, Mr Harring.
     """
 
     captain """
@@ -404,7 +404,7 @@ label lad_day3_afternoon_no_toilet:
     """
 
     nurse scared """
-    Mister Harring, are you all right?
+    Mr Harring, are you all right?
 
     You look unwell.
     """

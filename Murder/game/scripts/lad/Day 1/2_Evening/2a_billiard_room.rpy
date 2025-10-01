@@ -7,7 +7,7 @@ label lad_day1_evening_billiard_room:
         $ lad_details.saved_variables["day1_evening_billiard_room_visited"] = True
 
         """
-        Except for Amelia Baxter, everyone I saw at dinner is in this room.
+        Except for Amelia Baxter, everyone from dinner is in this room.
 
         I recognize Doctor Baldwin, sitting alone on a chair.
 
@@ -72,7 +72,7 @@ label lad_day1_evening_billiard_room_bar_1:
 
     He wears one of those masks I've seen on wounded soldiers from the war.
 
-    There were so badly injured that they have to hide their faces.
+    They were so badly injured that they have to hide their faces.
 
     He pretends not to notice my surprise and keeps on talking.
     """
@@ -80,11 +80,11 @@ label lad_day1_evening_billiard_room_bar_1:
     $ broken_details.description_hidden.unlock('mask') 
 
     broken """
-    He was already asleep when I arrived. It's impressive that he managed to still be here.
+    He was already asleep when I arrived. It is impressive he still manages to be here.
 
-    I was seating next to him at dinner and it was impossible to have him say anything coherent.
+    I was sitting next to him at dinner and it was impossible to get him to say anything coherent.
 
-    He could eat his food though. You could tell he is used to function like this. Poor fellow.
+    He could eat, though. You can tell he is used to functioning like this. Poor fellow.
 
     Anyway, I am Thomas Moody.
     """
@@ -96,7 +96,7 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     broken """
-    Nice to meet you mister Harring. I guess you came here for a drink.
+    Nice to meet you, Mr Harring. I suppose you are here for a drink.
 
     The choice is rather restricted I am afraid. There's only Sherry or Port.
 
@@ -104,7 +104,7 @@ label lad_day1_evening_billiard_room_bar_1:
     """
 
     """
-    Before I could say anything, he reaches into his coat pocket and pulls out a flask.
+    Before I can say anything, he reaches into his coat pocket and pulls out a flask.
     
     Then he starts pouring me a glass of what looks like whisky.
     """
@@ -123,7 +123,7 @@ label lad_day1_evening_billiard_room_bar_1:
     $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
 
     broken """
-    Cheers, Mister Harring. Now if you don't mind, I'll see what this group is talking about.
+    Cheers, Mr Harring. Now if you don't mind, I'll see what this group is talking about.
     """
 
     """
@@ -145,7 +145,7 @@ label lad_day1_evening_billiard_room_group:
     """
 
     captain """
-    Mister Harring.
+    Mr Harring.
 
     I was just telling everyone here a story.
 
@@ -239,7 +239,7 @@ label lad_day1_evening_billiard_room_doctor:
     """
 
     doctor """
-    Mister Harring.
+    Mr Harring.
     """
 
     call doctor_generic
@@ -265,7 +265,7 @@ label lad_day1_evening_billiard_room_butler:
     """
 
     butler """
-    Of course, Mr. Harring.
+    Of course, Mr Harring.
 
     What is it?
     """

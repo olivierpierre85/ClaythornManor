@@ -76,7 +76,7 @@ label lad_day2_evening:
     """
 
     captain """
-    Also Mister Harring, you might want to change before rejoining us.
+    Also Mr Harring, you might want to change before rejoining us.
     """
 
     """
@@ -196,9 +196,11 @@ label lad_day2_evening:
 
     jump lad_day3_morning
 
+
 label lad_day2_evening_sleep:
 
     return
+
 
 label lad_day2_bedroom_broken_back:
 

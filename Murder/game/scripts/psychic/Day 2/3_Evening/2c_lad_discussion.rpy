@@ -1,4 +1,4 @@
-label psychic_day2_evening_lad_discussion_2:
+label psychic_day2_evening_lad_discussion_follow_up:
 
     $ change_room('bedroom_psychic', dissolve)
 

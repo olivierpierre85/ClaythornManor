@@ -19,6 +19,9 @@ def cond_lad_escape(toggles):
 def cond_psychic_fell(toggles):
     return toggles.get('visited_attic', False) and toggles.get('lord_name', False) and toggles.get('lord_age', False)
 
+def cond_psychic_bludgeoned(toggles):
+    return toggles.get('silverware', False) and toggles.get('nurse_sick', False)
+
 def cond_psychic_burned(toggles):
     return toggles.get('steal_gun', False) and not toggles.get('leave_manor', False)
 
@@ -27,6 +30,7 @@ def cond_psychic_shot(toggles):
 
 def cond_psychic_escape(toggles):
     return toggles.get('leave_manor', False) and not toggles.get('steal_gun', False)
+
 
 def cond_doctor_overdose(toggles):
     return toggles.get('laudanum_extra_1', False)
@@ -40,8 +44,10 @@ CONDITIONS_DICT = {
     "lad_fell": cond_lad_killed_by_fall,
     "lad_escape": cond_lad_escape,
     "psychic_fell": cond_psychic_fell,
+    "psychic_bludgeoned": cond_psychic_bludgeoned,
     "psychic_burned": cond_psychic_burned,
     "psychic_shot": cond_psychic_shot,
     "psychic_escape": cond_psychic_escape,
+    
     "doctor_overdose": cond_doctor_overdose,
 }
