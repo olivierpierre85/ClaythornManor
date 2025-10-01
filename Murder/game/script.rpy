@@ -11,6 +11,7 @@ init -1000 python:
     import sys, json, base64
     import uuid
     import os, io, glob
+    import logging
 
     from typing import List, Tuple
 
@@ -31,6 +32,42 @@ init -1000 python:
         export_choices_to_file(all_choices)
 
         return False
+
+    # Useful to track error when pickling (on save)
+    def scan_pickle():
+        bad = []
+        for name, val in renpy.store.__dict__.items():
+            # direct file objects
+            if isinstance(val, io.TextIOWrapper):
+                bad.append((name, type(val).__name__, "DIRECT FILE"))
+            # logging.FileHandler or anything with .stream
+            try:
+                if hasattr(val, "stream") and isinstance(val.stream, io.TextIOWrapper):
+                    bad.append((name, type(val).__name__, "HAS .stream FILE"))
+            except Exception:
+                pass
+            # logger objects holding file handlers
+            if isinstance(val, logging.Logger):
+                for h in val.handlers:
+                    if getattr(h, "stream", None) and isinstance(h.stream, io.TextIOWrapper):
+                        bad.append((name, "logging.Logger", "LOGGER FILEHANDLER"))
+        for item in bad:
+            renpy.log("UNPICKLEABLE: {}".format(item))
+        return bad
+
+    def load_latest_choices_from_testing():
+        base = renpy.config.basedir
+        folder = os.path.join(base, "testing_paths")
+        files = glob.glob(os.path.join(folder, "*.json"))
+        if not files:
+            return None, []
+
+        latest_file = max(files, key=os.path.getmtime)
+        with open(latest_file, "r", encoding="utf-8") as fh:  # use fh, not f
+            data = json.load(fh)
+
+        choices = data.get("choices", [])
+        return choices
 
 define config.exception_handler = dump_state
 
@@ -93,32 +130,17 @@ label start():
 
     # TODO: Implement full_testing_mode 
     python: 
+   
+
         full_testing_mode = True
         full_testing_mode_char = "lad"
         full_testing_mode_choices = None
 
         # Load latest path file for test
         if full_testing_mode:
+            full_testing_mode_choices = load_latest_choices_from_testing()
+            print(full_testing_mode_choices)
 
-            base = renpy.config.basedir                 # .../CLAYTHORNMANOR/Murder
-            folder = os.path.join(base, "testing_paths")
-            pattern = os.path.join(folder, "*.json")
-
-            files = glob.glob(pattern)
-
-            if files:
-                latest_file = max(files, key=os.path.getmtime)
-                with open(latest_file, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-
-                # This is the list of choices objects
-                full_testing_mode_choices = json.loads(json.dumps(data.get("choices", [])))
-
-                print("Loaded:", latest_file)
-                print(full_testing_mode_choices)
-            else:
-                print("No JSON files found.")
-        
 
     if debug_activated:
         call init_debug
