@@ -280,22 +280,39 @@ init -1 python:
 
         def display_choices(self):
 
-            if current_menu.is_map:
-                global selected_floor
-                global current_floor
-                selected_floor = current_floor
+            selected_choice = None
 
-                room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
+            if full_testing_mode and full_testing_mode_choices:
 
-                selected_choice = None
-                for idx, c in enumerate(self.choices):
-                    if c.room == room_id and c.get_condition():
-                        selected_choice = c
-                        selected_choice_i = idx
-            
-            else:
-                selected_choice_i = renpy.call_screen('custom_choice', self) 
-                selected_choice = self.choices[selected_choice_i]
+                full_testing_mode_choice = full_testing_mode_choices.pop(0)
+
+                for i, choice in enumerate(self.choices): 
+                    if choice.is_valid() and full_testing_mode_choice["redirect"] == choice.redirect: 
+                        selected_choice = choice
+                        selected_choice_i = i
+
+                if not selected_choice:
+                    print("Error: Choice not Valid")
+                
+
+            if not selected_choice:
+
+                if current_menu.is_map:
+                    global selected_floor
+                    global current_floor
+                    selected_floor = current_floor
+
+                    room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
+
+                    selected_choice = None
+                    for idx, c in enumerate(self.choices):
+                        if c.room == room_id and c.get_condition():
+                            selected_choice = c
+                            selected_choice_i = idx
+                
+                else:
+                    selected_choice_i = renpy.call_screen('custom_choice', self) 
+                    selected_choice = self.choices[selected_choice_i]
 
             if not selected_choice.keep_alive:
                 selected_choice.hidden = True

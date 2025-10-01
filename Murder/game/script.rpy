@@ -10,7 +10,7 @@ init -1000 python:
     import itertools
     import sys, json, base64
     import uuid
-    import os, io
+    import os, io, glob
 
     from typing import List, Tuple
 
@@ -92,9 +92,33 @@ label start():
     $ current_storyline = lad_details # TODO move
 
     # TODO: Implement full_testing_mode 
-    $ full_testing_mode = False
-    $ full_testing_mode_char = "lad"
-    $ decision_tree = []
+    python: 
+        full_testing_mode = True
+        full_testing_mode_char = "lad"
+        full_testing_mode_choices = None
+
+        # Load latest path file for test
+        if full_testing_mode:
+
+            base = renpy.config.basedir                 # .../CLAYTHORNMANOR/Murder
+            folder = os.path.join(base, "testing_paths")
+            pattern = os.path.join(folder, "*.json")
+
+            files = glob.glob(pattern)
+
+            if files:
+                latest_file = max(files, key=os.path.getmtime)
+                with open(latest_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+
+                # This is the list of choices objects
+                full_testing_mode_choices = json.loads(json.dumps(data.get("choices", [])))
+
+                print("Loaded:", latest_file)
+                print(full_testing_mode_choices)
+            else:
+                print("No JSON files found.")
+        
 
     if debug_activated:
         call init_debug
