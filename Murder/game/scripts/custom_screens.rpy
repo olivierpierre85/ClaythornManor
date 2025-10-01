@@ -1,38 +1,46 @@
 screen current_time:
     modal False
 
-    image "images/ui/clock_small.png":
+    # Clock Background
+    image "images/ui/clock/clock_2_small.png":
         xoffset 30
-        yoffset 20
+        yoffset -40
 
-    # DAYS
-    style_prefix "clock"
-    frame:
-        xalign 0.0
-        yalign 0.0
-        xoffset 94
-        yoffset 155
-        ypadding 2
-        xpadding 4
-        # Todo get PHASE?
-        text current_day[:3].upper() + ", " + current_period:
-            size 16
-            color gui.choice_button_text_insensitive_color
-            font gui.clock_text_font
-            bold True
-
+    # Clock Needles
     add "images/ui/clock_hours.png" at rotate_hours(hours_angle)
     add "images/ui/clock_minutes.png" at rotate_minutes(minutes_angle)
 
+    # Plaque with texts
+    frame:
+        background "images/ui/clock/clock_plaque.png"
+        xoffset 55
+        yoffset 180
+        xsize 150
+
+        text current_day.upper() + ", " + current_period:
+            xalign 0.5
+            yoffset 10
+            size 16
+            color gui.clock_plaque_text_color
+            font gui.clock_text_font
+            bold True
+
+        text current_character.real_name:
+            xalign 0.5
+            yoffset 45
+            size 16
+            color gui.clock_plaque_text_color
+            font gui.clock_text_font
+            bold True
 
 transform rotate_hours( angle = 0 ):
     xoffset -16
-    yoffset 1
+    yoffset -55
     linear show_hours_movement rotate angle 
 
 transform rotate_minutes( angle = 0 ):
     xoffset -16
-    yoffset 1 
+    yoffset -55
     linear show_minutes_movement rotate angle 
 
 # WAIT in the same room

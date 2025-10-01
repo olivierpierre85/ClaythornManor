@@ -54,8 +54,11 @@ define gui.interface_text_color = u'#ffffff'
 ## A golden color used as an accent for tutorials or highlighted sections
 define gui.highlight_color = u'#DBB100'
 
-## A golden color used as an accent for tutorials or highlighted sections
+## Color for map
 define gui.map_writing_color = u'#000000'
+
+## Color Clock plaque
+define gui.clock_plaque_text_color = u'#232323'
 
 
 ## Fonts and Font Sizes ########################################################
