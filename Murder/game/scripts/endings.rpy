@@ -57,11 +57,6 @@ label ending_generic:
             seen_tutorial_restart = True
             renpy.call('tutorial_restart')
 
-        # if full_testing_mode:
-        #     f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/full_testing.txt", "a")
-        #     f.write('You are DEAD - TODO save last death info\n')
-        #     f.close()
-
         if show_tutorial_unlock_character:
             show_tutorial_unlock_character = False
             renpy.call('tutorial_unlock_character')
