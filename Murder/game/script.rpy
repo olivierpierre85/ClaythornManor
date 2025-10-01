@@ -149,9 +149,6 @@ label init_technical_variables:
         all_menus = {}
         all_choices = []
 
-        # TODO delete those in character select AND start again
-        record_mode = False
-
         hide_notifications = False
 
         show_minutes_movement = 0
@@ -159,11 +156,6 @@ label init_technical_variables:
         skip_clock_movement = True
 
         show_skip_hint_for_tutorial = False
-
-        if record_mode:
-            f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")
-            f.write("NEW GAME\n-----------\n")
-            f.close()
 
         TIME_MAX = 999999
         TIME_LOW = 5

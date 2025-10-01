@@ -280,33 +280,22 @@ init -1 python:
 
         def display_choices(self):
 
-            # DEBUG MODE
-            if record_mode and len(test_choices) > 0:
-                selected_choice_i = test_choices.pop(0) 
-                selected_choice = self.choices[selected_choice_i]
+            if current_menu.is_map:
+                global selected_floor
+                global current_floor
+                selected_floor = current_floor
+
+                room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
+
+                selected_choice = None
+                for idx, c in enumerate(self.choices):
+                    if c.room == room_id and c.get_condition():
+                        selected_choice = c
+                        selected_choice_i = idx
+            
             else:
-                if current_menu.is_map:
-                    global selected_floor
-                    global current_floor
-                    selected_floor = current_floor
-
-                    room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
-
-                    selected_choice = None
-                    for idx, c in enumerate(self.choices):
-                        if c.room == room_id and c.get_condition():
-                            selected_choice = c
-                            selected_choice_i = idx
-                
-                else:
-                    selected_choice_i = renpy.call_screen('custom_choice', self) 
-                    selected_choice = self.choices[selected_choice_i]
-
-            # RECORD history to build debug path (TODO should be done all the time?)
-            if record_mode:
-                f = open("C:/Users/arthu/Documents/VisualNovelProject/Murder/choices_history.txt", "a")
-                f.write(str(selected_choice_i) + ',' + ' # ' + selected_choice.text + '\n')
-                f.close()
+                selected_choice_i = renpy.call_screen('custom_choice', self) 
+                selected_choice = self.choices[selected_choice_i]
 
             if not selected_choice.keep_alive:
                 selected_choice.hidden = True
