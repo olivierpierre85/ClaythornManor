@@ -93,7 +93,7 @@ label run_menu(current_menu, change_level=True):
             })
 
             # TODO: Activate back for prod
-            # time_left -= selected_choice[menu_level].time_spent
+            time_left -= selected_choice[menu_level].time_spent
 
         python:
         # Add selected choice in log

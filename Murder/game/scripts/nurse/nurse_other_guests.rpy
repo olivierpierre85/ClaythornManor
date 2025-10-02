@@ -17,7 +17,6 @@ label nurse_generic_other_guests_saturday:
     return
 
 
-
 label nurse_generic_drunk_saturday_morning:
 
     nurse """

@@ -16,8 +16,9 @@ label init_doctor:
 
             # Generic Menus
             "broken_generic_menu": broken_generic_menu_doctor,
-            "lad_generic_menu" : lad_generic_menu_doctor,
-            "nurse_generic_menu" : nurse_generic_menu_doctor,
+            "lad_generic_menu": lad_generic_menu_doctor,
+            "nurse_generic_menu": nurse_generic_menu_doctor,
+            "nurse_generic_other_guests_menu": nurse_generic_other_guests_menu_doctor,
 
             # Evening day 1
             "broken_offended": 0,
@@ -96,6 +97,14 @@ label init_doctor:
                 content_negative="You didn't an other odd expression coming from the footman",
                 image_file="footman_french_2",
                 chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening'],
+            ),
+            CharacterInformation(
+                1, "remember_nurse",
+                "You remembered working with Rosalind Marsh during the Boxer's rebellion",
+                content_negative="You didn't remember Rosalind Marsh",
+                image_file="remember_nurse",
+                chapters=['saturday_morning'],
                 relevant_chapters=['saturday_evening'],
             ),
         ])

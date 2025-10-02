@@ -141,13 +141,27 @@ label nurse_generic_background_doctor:
     And it was a very long time ago.
     """
 
+    $ doctor_details.observations.unlock('remember_nurse')
+
+
+    doctor """
+    It was indeed.
+
+    But it is nice to see again.
+    """
+
+    nurse """
+    Likewise.
+    """
+
+
     return
 
 
 label nurse_generic_heroic_act:
     
     nurse """
-    It is nothing that I did, really.
+    It is nothing special, really.
 
     But it turns out I am the nurse who served in the most wars in the whole country, apparently.
     """

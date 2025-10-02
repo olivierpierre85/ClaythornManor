@@ -124,7 +124,7 @@ label broken_generic_background:
     $ broken_details.description_hidden.unlock('job') 
         
     call run_menu( TimedMenu("broken_generic_background_offense", [
-        TimedMenuChoice("Did you have to change profession because of the war?", 'broken_generic_background_offended_1', 0, early_exit=True),
+        TimedMenuChoice("Did you have to change profession because of the war?", 'broken_generic_background_offended_1', 0, early_exit=True, next_menu="broken_generic_background_offended_1" ),
         TimedMenuChoice("That's a very noble profession", 'broken_generic_background_not_offended', 10, early_exit=True),
         ])
     )
@@ -189,7 +189,7 @@ label broken_generic_heroic_act:
     """
 
     call run_menu( TimedMenu("broken_generic_heroic_act_offended", [
-        TimedMenuChoice("What do you mean?", '', 20, early_exit=True),
+        TimedMenuChoice("What do you mean?", 'broken_generic_heroic_act_offended', 20, early_exit=True),
         TimedMenuChoice("Nod, but don't engage", 'generic_cancel', 20, early_exit=True),
         ])
     )
@@ -304,6 +304,14 @@ label broken_generic_manor_offended:
     """
 
     call broken_generic_doctor_improprieties
+
+    """
+    In any case, I realize now he is the tallest man in the room.
+
+    Only the footman seems to be about the same height as he is.
+    """
+
+    $ broken_details.description_hidden.unlock('tall') 
 
     return
 

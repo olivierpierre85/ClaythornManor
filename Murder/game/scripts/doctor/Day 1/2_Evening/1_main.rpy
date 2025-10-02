@@ -33,7 +33,7 @@ label doctor_day1_evening:
     butler """
     Welcome everyone.
 
-    You are the first guest to arrive for this week-end event.
+    You are the first guests to arrive for this week-end event.
 
     It's a bit early, so it may take a while before others arrive. In the meantime, let me show you to your rooms.
 
@@ -147,9 +147,9 @@ label doctor_day1_evening:
     call change_time(16,30)
 
     """
-    After a while, an Indian man in an army uniform enters the room.
+    After a while, Miss Marsh enters the room.
 
-    He is followed by an older gentleman.
+    She is followed by a Indian man in an army uniform and an older gentleman.
 
     They must have just arrived from the station.
 

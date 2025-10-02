@@ -132,7 +132,7 @@ label start():
     python: 
    
 
-        full_testing_mode = True
+        full_testing_mode = False
         full_testing_mode_char = "lad"
         full_testing_mode_choices = None
 
