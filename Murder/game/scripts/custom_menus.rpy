@@ -321,7 +321,7 @@ init -1 python:
             # if not selected_choice.keep_alive and not selected_choice.early_exit:
             selected_choice.already_chosen = True
                 
-            # global time_left
+            global time_left
             time_left -= selected_choice.time_spent
 
             return selected_choice
