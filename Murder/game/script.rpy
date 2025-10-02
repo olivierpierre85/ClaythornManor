@@ -131,7 +131,7 @@ label start():
     # TODO: Implement full_testing_mode 
     python: 
    
-
+        #When TRUE, will load the latest modified path file
         full_testing_mode = False
         full_testing_mode_char = "lad"
         full_testing_mode_choices = None

@@ -2,13 +2,13 @@ screen current_time:
     modal False
 
     # Clock Background
-    image "images/ui/clock/clock_2_small.png":
+    image "images/ui/clock/clock_2_small_new.png":
         xoffset 30
         yoffset -40
 
     # Clock Needles
-    add "images/ui/clock_hours.png" at rotate_hours(hours_angle)
-    add "images/ui/clock_minutes.png" at rotate_minutes(minutes_angle)
+    add "images/ui/clock/clock_hours.png" at rotate_hours(hours_angle)
+    add "images/ui/clock/clock_minutes.png" at rotate_minutes(minutes_angle)
 
     # Plaque with texts
     frame:
