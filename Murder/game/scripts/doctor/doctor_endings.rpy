@@ -5,8 +5,6 @@ label doctor_ending_overdose:
     
     call death_screen_transition
 
-    $ play_music('mysterious')
-
     """
     You thought you could manage it, but you were mistaken.
 

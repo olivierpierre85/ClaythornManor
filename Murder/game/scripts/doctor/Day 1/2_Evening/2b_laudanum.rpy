@@ -29,7 +29,7 @@
 
 label doctor_laudanum_death:
 
-    $ play_music('sad', 2)
+    $ play_music('sad', 2, fadein_val = 2)
 
     """
     A flicker of doubt appears at the edge of my mind, maybe I have already had too many today.

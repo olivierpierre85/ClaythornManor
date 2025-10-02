@@ -246,7 +246,7 @@ label doctor_day1_evening:
 
     $ change_room('dining_room', irisout)
 
-    $ play_music('chill')
+    $ play_music('chill', 2)
 
 
     """
@@ -277,8 +277,6 @@ label doctor_day1_evening:
         TimedMenuChoice("Just keep to yourself", 'generic_cancel', early_exit=True),
     ], image_right = "lad"))
 
-    $ stop_music()
-
     call change_time(21,00)
 
     """
@@ -296,8 +294,6 @@ label doctor_day1_evening:
     call change_time(21,30)
 
     $ time_left = 90
-
-    $ play_music('upbeat', 2)
 
     call run_menu(TimedMenu("doctor_day1_evening_3", [
         TimedMenuChoice("Let's go down and meet the others", 'generic_cancel', early_exit=True),
