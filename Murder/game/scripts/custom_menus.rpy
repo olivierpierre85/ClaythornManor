@@ -316,10 +316,13 @@ init -1 python:
 
             if not selected_choice.keep_alive:
                 selected_choice.hidden = True
-                selected_choice.already_chosen = True
+            
+            # don't grey out exit choices (BUT implies more changes in is_already_chosen
+            # if not selected_choice.keep_alive and not selected_choice.early_exit:
+            selected_choice.already_chosen = True
                 
             # global time_left
-            # time_left -= selected_choice.time_spent
+            time_left -= selected_choice.time_spent
 
             return selected_choice
 
