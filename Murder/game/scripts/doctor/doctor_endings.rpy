@@ -13,4 +13,11 @@ label doctor_ending_overdose:
     You will have to be more careful next time.
     """
 
+    # IF too difficult to understand (the stillness of my room is unbearable), add this ONLY if late
+    # if (all_choices IS NOT LAUDANUM DEATH choice)
+
+    #     """
+    #     Maybe if you have been occupied, you could have avoided it.
+    #     """
+
     jump ending_generic
