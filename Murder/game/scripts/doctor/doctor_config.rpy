@@ -87,7 +87,7 @@ label init_doctor:
                 1, "footman_french_1",
                 "You noticed an odd expression coming from the footman",
                 content_negative="You didn't notice an odd expression coming from the footman",
-                image_file="footman_french_1",
+                image_file="cat_whip",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
