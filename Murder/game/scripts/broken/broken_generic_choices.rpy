@@ -374,11 +374,13 @@ label broken_generic_room:
 label broken_generic_room_offended:
 
     broken """
-    Really? What was he like?
+    Really? What did you learn about him?
     """
 
     doctor """
-    From what I remember, he was severely deformed, and something of a villain, and ...
+    From what I remember, Shakespeare paints him as a man twisted both in body and in soul. 
+
+    Severely deformed, he is the villain of the story,...
     """
 
     """
