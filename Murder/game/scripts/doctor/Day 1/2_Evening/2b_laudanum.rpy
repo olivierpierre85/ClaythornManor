@@ -34,9 +34,11 @@ label doctor_laudanum_death:
     """
     A flicker of doubt appears at the edge of my mind, maybe I have already had too many today.
 
-    But I quickly dismiss it.
+    I could resist, yet the stillness of this room is unbearable.
 
-    Just one more can't hurt.
+    Being alone with my thoughts always is.
+
+    It feels as though I have no choice at all.
 
     My hand trembles as I lift the spoon to my lips.
 
@@ -46,7 +48,7 @@ label doctor_laudanum_death:
 
     My eyelids grow heavy.
 
-    The voices, the ones that have oppressed me all my life, are finally quiet.
+    The voices that have tormented me all my life at last fall quiet.
 
     All is silent now.
     """
