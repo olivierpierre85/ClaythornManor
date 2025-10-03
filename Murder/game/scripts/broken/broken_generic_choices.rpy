@@ -380,13 +380,17 @@ label broken_generic_room_offended:
     doctor """
     From what I remember, Shakespeare paints him as a man twisted both in body and in soul. 
 
-    Severely deformed, he is the villain of the story,...
+    The most impressive thing about the play was how the actor managed to convey Richard's deformity. 
+
+    His crooked posture, the twisted arm, the limp — all brought vividly to life upon the stage. 
+
+    It left no doubt in one's mind that he was meant to be both pitied and feared.
     """
 
     """
-    I see Thomas Moody's gaze harden.
+    I see Thomas Moody's gaze harden and quickly stop talking.
 
-    I quickly stop talking.
+    I didn't realise who I was talking to.
     """
 
     call broken_generic_doctor_improprieties

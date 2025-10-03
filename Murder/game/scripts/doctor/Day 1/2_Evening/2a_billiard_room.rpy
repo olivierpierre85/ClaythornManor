@@ -23,7 +23,7 @@ label doctor_day1_evening_billiard_room:
 
     He smiles and comes towards me.
 
-    Oh gosh, now I'll have to talk to him.
+    Oh no, now I'll have to talk to him.
     """
 
     lad """

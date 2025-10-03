@@ -113,10 +113,17 @@ label lad_generic_age_psychic:
 
     return
 
+
 label lad_generic_age:
 
     lad """
     I am 22 years old.
+    """
+
+    """
+    He appears a touch older than that. 
+
+    But then, growing up through a war is enough to age anyone before their time.
     """
 
     $ lad_details.description_hidden.unlock('age')

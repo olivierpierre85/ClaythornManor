@@ -8,7 +8,7 @@ label doctor_ending_overdose:
     """
     You thought you could manage it, but you were mistaken.
 
-    That last spoonful was one dose too many.
+    That last spoonful was one too many.
 
     You will have to be more careful next time.
     """

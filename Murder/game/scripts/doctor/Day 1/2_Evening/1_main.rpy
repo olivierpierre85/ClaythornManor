@@ -305,12 +305,7 @@ label doctor_day1_evening:
     All right, where should I go first?
     """
 
-    # TODO remove after debug
-    $ time_left = 666
-
     call run_menu(doctor_details.saved_variables["day1_evening_map_menu"])
-
-    # call change_time(23,00) DONT change time
 
     $ stop_music()
 
@@ -347,21 +342,42 @@ label doctor_day1_evening:
             call change_time(23,30)
 
             """
-            Afterwards, he leaves as discreetly as possible.
+            Afterwards, he prepares to leave.
             """
 
-            #TODO: Add We are not made of sugar when talking about the weather? Or somewhere else?
-            # doctor """
-            # Won't you stay the night?
-            # """
+            doctor """
+            Are you certain you can't stay a bit longer?
+            """
 
-            # footman """
-            # I am afraid that would be too suspicious.
+            footman """
+            No, I really can't.
 
-            # I can't take that chance.
+            Sadly, I have other cats to whip.
+            """
 
-            # Besides, I need to wake up at five
-            # """
+            """
+            Wait, what?
+            """
+
+            footman """
+            I'll see you tomorrow then.
+            """
+
+            doctor """
+            Yes... Of course.
+
+            Good night.
+            """
+
+            """
+            What did he say about cats?
+
+            That's odd.
+
+            I must have misunderstood.
+            """
+
+            $ doctor_details.observations.unlock('footman_french_1')
 
 
         if doctor_details.objects.is_unlocked('book_mystery') or doctor_details.objects.is_unlocked('book_opium'):
@@ -414,7 +430,17 @@ label doctor_day1_evening:
                 It must be very late now, but I think it was worth it.
 
                 I feel that something in me has changed forever.
+
+                Filled with a brand new resolution, I fall asleep easily.
                 """
+
+        else:
+            # You slept with the footman but didn't bring a book.
+            """
+            It is quiet now, but my mind is at ease.
+
+            I fall asleep easily.
+            """
 
     else:
         # If you didn't plan any distraction, all you have to do is getting high?
@@ -429,7 +455,6 @@ label doctor_day1_evening:
         """
 
         call doctor_laudanum_death
-
 
     jump doctor_day2_morning
 

@@ -19,16 +19,16 @@ label doctor_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('tea_room'), 'doctor_day1_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'doctor_day1_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'doctor_day1_evening_garden', 10, room='manor_garden'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'doctor_day1_evening_entrance_hall', 20, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'doctor_day1_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'doctor_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             # Downstairs
-            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day1_evening_downstairs_default', 30, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'doctor_day1_evening_downstairs_default', 30, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_downstairs_default', 30, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_downstairs_default', 30, room='gun_room'),
+            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day1_evening_downstairs_default', 0, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'doctor_day1_evening_downstairs_default', 0, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_downstairs_default', 0, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_downstairs_default', 0, room='gun_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
-            TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 10, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 30, room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
                 'doctor_day1_evening_bedroom_psychic', 
@@ -108,8 +108,8 @@ label doctor_downstairs_day1:
 
     call run_menu(
         TimedMenu("doctor_has_try_sneaking_downstairs", [
-            TimedMenuChoice("Try flirting with him", 'doctor_downstairs_flirt', 15, early_exit=True),
-            TimedMenuChoice("No, he clearly won't change his mind", 'doctor_downstairs_apologize', 15, early_exit=True),
+            TimedMenuChoice("Try flirting with him", 'doctor_downstairs_flirt', 30, early_exit=True),
+            TimedMenuChoice("No, he clearly won't change his mind", 'doctor_downstairs_apologize', 20, early_exit=True),
         ])
     )
 
@@ -163,34 +163,16 @@ label doctor_downstairs_flirt:
     footman """
     No, I really can't.
 
-    Sadly, I have other cats to whip.
-
     But I'll be done soon.
-    """
 
-    """
-    Wait, what?
-    """
-
-    footman """
     I'll see you later, then.
     """
 
     doctor """
-    Yes... Of course.
+    Of course.
 
     See you later.
     """
-
-    """
-    What did he say about cats?
-
-    That's odd.
-
-    I must have misunderstood.
-    """
-
-    $ doctor_details.observations.unlock('footman_french_1')
 
     return
 

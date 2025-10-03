@@ -34,13 +34,17 @@ label doctor_laudanum_death:
     """
     A flicker of doubt appears at the edge of my mind, maybe I have already had too many today.
 
-    I could resist, yet the stillness of this room is unbearable.
+    I could try to resist, yet the stillness of this room is unbearable.
 
     Being alone with my thoughts always is.
 
     It feels as though I have no choice at all.
 
-    My hand trembles as I lift the spoon to my lips.
+    So I prepare myself for the familiar ritual.
+
+    It takes only a moment before everything is in place.
+
+    My hand trembles slightly as I raise the spoon to my lips.
 
     The bitter draught slides down my throat, and I wait for its sweet relaxing effect.
 
