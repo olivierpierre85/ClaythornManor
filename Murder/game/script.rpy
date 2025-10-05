@@ -21,16 +21,16 @@ init -1000 python:
     current_start_song = 1
 
     # ADD function to renpy error handling
-    def dump_state(short_tb, full_tb, tb_file):
-        """
-        • short_tb  → traceback trimmed to your script files
-        • full_tb   → full traceback (engine + your code)
-        • tb_file   → path to a .txt file Ren'Py already wrote
-        """
+    # def dump_state(short_tb, full_tb, tb_file):
+    #     """
+    #     • short_tb  → traceback trimmed to your script files
+    #     • full_tb   → full traceback (engine + your code)
+    #     • tb_file   → path to a .txt file Ren'Py already wrote
+    #     """
 
-        export_choices_to_file(all_choices)
+    #     export_choices_to_file(all_choices)
 
-        return False
+    #     return False
 
 define config.exception_handler = dump_state
 
