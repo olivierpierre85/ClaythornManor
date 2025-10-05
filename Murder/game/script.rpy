@@ -32,7 +32,7 @@ init -1000 python:
 
     #     return False
 
-define config.exception_handler = dump_state
+# define config.exception_handler = dump_state
 
 # Var needed BEFORE start
 default debug_activated = False
