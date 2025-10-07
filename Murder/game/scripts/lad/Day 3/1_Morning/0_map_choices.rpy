@@ -594,6 +594,10 @@ label lad_day3_morning_billiard_room:
         # TODO achievement "Drink every chance you got."
         # TODO? "Object drink on hand?"
         $ lad_details.important_choices.unlock('day3_drunk')
+
+        show layer master at drunk_wobble_layer
+        $ drunk_mode = True
+
     
     else:
         lad """

@@ -23,6 +23,8 @@ label lad_day3_afternoon:
 
     call black_screen_transition("Ted Harring", chapters_names[current_chapter])
 
+    $ drunk_mode = False
+
     $ change_room("tea_room", irisout)
 
     """

@@ -160,15 +160,6 @@ init python:
 
     #     return False
 
-    # def set_drunk(on=True):
-    #     store.drunk_mode = bool(on)
-    #     # Apply/remove the wobble on the main scene layer.
-    #     if on:
-    #         renpy.show_layer_at(drunk_wobble, layer="master")
-    #     else:
-    #         renpy.show_layer_at(None, layer="master")
-
-
     def export_choices_to_file(choices, tester_id=None):
         # ---- Build JSON payload ----
         data = {

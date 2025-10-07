@@ -464,8 +464,6 @@ label lad_day2_evening_billiard_room_bar_3:
 
 
 label lad_day2_evening_billiard_room_bar_4:
-
-    $ lad_details.important_choices.unlock('day2_drunk')
     
     """
     I ignore the captain's judgmental look and head back to the bar.
@@ -476,5 +474,10 @@ label lad_day2_evening_billiard_room_bar_4:
 
     Besides, one more can't hurt.
     """
+
+    $ lad_details.important_choices.unlock('day2_drunk')
+
+    show layer master at drunk_wobble_layer
+    $ drunk_mode = True
 
     return

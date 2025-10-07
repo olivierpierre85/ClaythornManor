@@ -165,6 +165,8 @@ label lad_day2_evening:
 
         I fell asleep as soon as I lie down.
         """
+
+        $ drunk_mode = False
     
     else:
 
