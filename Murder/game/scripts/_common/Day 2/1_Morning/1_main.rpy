@@ -95,6 +95,8 @@ label common_day2_morning_host_death_doctor:
 
 
 label common_day2_morning_host_hunt:
+
+    $ play_music('upbeat')
     
     host """
     Well, as I mentioned earlier, activities were planned for today.
