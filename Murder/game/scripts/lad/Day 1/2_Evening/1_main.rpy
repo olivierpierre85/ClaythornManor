@@ -326,6 +326,8 @@ label lad_day1_evening:
         Almost instantly, I fall asleep.
         """
 
+        $ drunk_mode = False
+
     else:
 
         """

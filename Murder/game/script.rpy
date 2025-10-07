@@ -75,6 +75,8 @@ define config.exception_handler = dump_state
 default debug_activated = False
 # default persistent.not_already_chosen = {}
 
+default drunk_mode = False
+
 # My config variables
 
 # Autosave not Working (probably because of complicated transitions)

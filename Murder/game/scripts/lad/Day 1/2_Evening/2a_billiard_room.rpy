@@ -218,13 +218,19 @@ label lad_day1_evening_billiard_room_bar_3:
     It's exquisite.
 
     So good that it would be foolish not to have another one.
+    """
 
+    """
     So I do.
 
     And another...
 
     And another...
     """
+
+    
+    show layer master at drunk_wobble_layer
+    $ drunk_mode = True
 
     $ lad_details.important_choices.unlock('day1_drunk')
     # TODO add blur effect if drunk, puke noise... Or just black out 

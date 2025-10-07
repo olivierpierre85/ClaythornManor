@@ -111,7 +111,10 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        if drunk_mode:
+            text what id "what" at drunk_text_wobble style "drunk_dialogue"
+        else:
+            text what id "what"
 
 
     ## If there's a side image, display it above the text. Do not display on the

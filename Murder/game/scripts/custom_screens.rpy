@@ -196,3 +196,53 @@ screen skip_hint():
     #   – this line has been seen before
     if renpy.is_seen() or show_skip_hint_for_tutorial:
         add "images/ui/skip_button.png" at blink_skip align (0.15, 0.4)   # top‑right
+
+
+# Drunk Mode
+init python:
+    # Base drunk text style derived from say dialogue.
+    style.drunk_dialogue = Style(style.say_dialogue)
+    # Slightly larger for readability when wobbling.
+    style.drunk_dialogue.size = style.say_dialogue.size + 1
+
+    # Faux-blur: multiple soft outlines in the same color with low alpha.
+    # (Adjust for your theme; these assume light text on dark window.)
+    style.drunk_dialogue.outlines = [
+        (1, "#FFFFFF40", 0, 0),
+        (2, "#FFFFFF30", 0, 0),
+        (3, "#FFFFFF20", 0, 0),
+    ]
+
+# Replace your wobble with this one.
+transform drunk_wobble_layer:
+    subpixel True
+
+    # Place the layer’s CENTER on the screen’s CENTER
+    xpos 0.5
+    ypos 0.5
+    xanchor 0.5
+    yanchor 0.5  # (typo-proofing below; keep yanchor)
+    yanchor 0.5
+
+    # Rotate/offset around that center and overscan to hide edges
+    zoom 1.10
+    parallel:
+        linear 1.2 xoffset 6 yoffset -3
+        linear 1.2 xoffset -6 yoffset 3
+        repeat
+    parallel:
+        linear 1.3 rotate 1.2
+        linear 1.3 rotate -1.2
+        repeat
+
+transform drunk_text_wobble:
+    subpixel True
+    # Much gentler than the scene wobble
+    parallel:
+        linear 0.7 xoffset 2
+        linear 0.7 xoffset -2
+        repeat
+    parallel:
+        linear 1.0 yoffset -1
+        linear 1.0 yoffset 1
+        repeat
