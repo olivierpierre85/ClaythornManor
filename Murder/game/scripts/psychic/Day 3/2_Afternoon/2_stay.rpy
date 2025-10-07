@@ -7,7 +7,7 @@ label psychic_day3_afternoon_stay:
     call common_day3_afternoon_lad_psychic_stay
 
     """
-    We both go on to our room, leaving Amelia Baxter alone in the dining room.
+    We both go on to our room, leaving Rosalind Marsh alone in the dining room.
     """
 
     call wait_screen_transition()

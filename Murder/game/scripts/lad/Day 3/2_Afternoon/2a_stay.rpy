@@ -465,7 +465,7 @@ label lad_day3_afternoon_no_toilet:
     I sprint to the entrance hall and make a break for the door.
     """
 
-    play sound door_locked
+    play sound door_rattling
 
     """
     It's locked.

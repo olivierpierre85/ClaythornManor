@@ -86,7 +86,7 @@ label lad_ending_day3_fell:
 
     Right onto the picket fence.
 
-    An iron pole pierced through your belly.
+    An iron pole pierced through your stomach.
 
     You didn't stand a chance.
 

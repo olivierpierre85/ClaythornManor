@@ -39,7 +39,7 @@ label lad_day3_afternoon:
     
     $ lad_day3_escape_menu = TimedMenu("lad_day3_escape_menu", [
         TimedMenuChoice('Propose to use the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition="lad_details.important_choices.is_unlocked('seen_car')"),
-        TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', early_exit=True),
+        TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', next_menu='lad_day3_stay', early_exit=True),
         TimedMenuChoice('Follow Sushil Sinha. Amelia Baxter will {i}probably{/i} be fine on her own', 'lad_day3_escape', early_exit=True)
     ], image_left="psychic",  image_right="captain")
 

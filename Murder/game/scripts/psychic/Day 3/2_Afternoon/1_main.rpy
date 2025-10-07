@@ -56,7 +56,7 @@ label psychic_day3_afternoon:
         $ time_left = 1
         call run_menu( TimedMenu("psychic_day3_stay", [
             TimedMenuChoice("Let's not take any chance and leave this place{{intuition}}", 'psychic_day3_afternoon_escape', early_exit=True),        
-            TimedMenuChoice("I am not going out in these clothes", 'common_day3_afternoon_lad_psychic_captain_discussion_2', early_exit=True),
+            TimedMenuChoice("I am not going out in these clothes", 'common_day3_afternoon_lad_psychic_captain_discussion_2', next_menu='psychic_day3_gun', early_exit=True),
             ])
         )        
 

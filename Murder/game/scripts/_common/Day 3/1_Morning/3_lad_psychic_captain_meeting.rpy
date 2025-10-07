@@ -264,9 +264,7 @@ label common_day3_morning_lad_psychic_captain_deaths_end:
     captain """
     I'm afraid we haven't been able to find Miss Marsh.
 
-    Her room was locked, so we forced it open.
-
-    But it was all for naught, as it was empty.
+    We searched her room but it was empty.
     """
 
     psychic """
