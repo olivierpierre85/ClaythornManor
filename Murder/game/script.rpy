@@ -257,8 +257,9 @@ label init_technical_variables:
                 "It's useful to see what you've already accomplished at the moment.\n"
             ),
             (1280, 312, 616, 626, 960, 150, 
-                "Once a checkpoint is selected, you can see here the possible choices that you faced before reaching this point.\n" + 
-                "And below are the ones you can make in this chapter.\n" +  
+                "Once a checkpoint is selected, you can see the possible choices that you faced before reaching this point.\n" + 
+                "There are below :\"Previous Choices & discoveries\"\n" + 
+                "And below: \"Choices & discoveries for this chapter\" are the ones you can make in this chapter.\n" +  
                 "There is a question mark for the ones that have not yet been discovered."  
             ),
             (486, 750, 797, 108, 960, 150, 
