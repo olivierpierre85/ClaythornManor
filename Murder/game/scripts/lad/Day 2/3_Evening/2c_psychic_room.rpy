@@ -19,19 +19,21 @@ label lad_day2_believe_psychic:
 
     call psychic_generic
 
-    lad """
-    I think I should keep looking around the manor. I might learn something useful.
-    """
+    if time_left > 0:
 
-    psychic """
-    It's not a bad idea. I will stay here tonight if you don't mind.
+        lad """
+        I think I should keep looking around the manor. I might learn something useful.
+        """
 
-    Good luck.
-    """
+        psychic """
+        It's not a bad idea. I will stay here tonight if you don't mind.
 
-    lad """
-    Thanks.
-    """
+        Good luck.
+        """
+
+        lad """
+        Thanks.
+        """
 
     return
 
