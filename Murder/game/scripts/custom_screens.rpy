@@ -180,7 +180,10 @@ screen custom_choice(custom_menu):
                 if choice.is_already_chosen():
                     textbutton btn_text:
                         mouse "hover"
-                        action Return(idx)
+                        if not seen_tutorial_already_chosen:
+                            action [ SetVariable("show_tutorial_already_chosen", True), Return(idx) ]
+                        else:
+                            action Return(idx)
                         text_color gui.insensitive_color
                 else:
                     if not seen_tutorial_icon and "image=images" in btn_text:

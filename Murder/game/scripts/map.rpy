@@ -281,10 +281,12 @@ screen in_game_map_menu(timed_menu):
                         if hot.area_points:
                             hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
                                 if hot.active:
-                                    action Return(hot.room)
+                                    if '*' in hot.description and not seen_tutorial_already_chosen_map: 
+                                        action [ SetVariable("show_tutorial_already_chosen_map", True), Return(hot.room) ]
+                                    else:
+                                        action Return(hot.room)
                                 else:
                                     action None
-                                    # sensitive False # Does nothing
                                 tooltip hot.description
                                 mouse "hover"
 

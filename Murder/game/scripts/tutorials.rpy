@@ -192,3 +192,60 @@ label tutorial_restart:
     """
 
     return
+
+
+label tutorial_already_chosen:
+
+    tutorial """
+    You've selected a choice that was in dark.
+
+    That means you've already made that choice before.
+
+    No need to worry — there's nothing wrong with wanting to retrace your steps.
+
+    However, you should know that if there were other choices to be made afterwards, you've already explored them all as well.
+
+    To explain, let's take a simple example: imagine a question such as "Do you like apples?"
+
+    If you answer "no", then the conversation ends there.
+
+    But if you choose "yes", a new question appears: "Do you prefer red or green apples?"
+
+    In that case, the "no" will turn dark once you've chosen it once.
+
+    But the "yes" option from the first question won't turn dark until you've also selected both "red apples" and "green apples".
+
+    I hope that makes things clearer.
+    """
+
+    # TODO: if impossible to grey all the possibilities, put this on
+    # """
+    # Of course, this can be a bit tricky, since some paths require that several choices be made at the right moment.
+
+    # In that case, you may need to try a different combination of choices to unlock something new —
+
+    # some you've already taken, and others you haven't.
+
+    # But I promise it’s less complicated than it sounds.
+
+    # Good luck!
+    # """
+
+    return
+
+
+label tutorial_already_chosen_map:
+
+    tutorial """
+    You've selected a place you've already visited — at least during the same period.
+
+    If you didn't notice, the text appeared in a darker tone.
+
+    No need to worry — there's nothing wrong with revisiting the same location.
+
+    But on a map, if a place name appears in dark, you're unlikely to find anything new there.
+
+    I hope that helps you save some time.
+    """
+
+    return

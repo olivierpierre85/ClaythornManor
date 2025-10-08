@@ -103,7 +103,21 @@ label run_menu(current_menu, change_level=True):
                 _history_list.append(ChoiceHistory("Menu Choice", selected_choice[menu_level].text))
                 # renpy.say(current_character.real_name, selected_choice[menu_level].text, interact=False)
 
+
+        if show_tutorial_already_chosen:
+            $ show_tutorial_already_chosen = False
+            call expression "tutorial_already_chosen"
+            $ seen_tutorial_already_chosen = True
+
+
+        if show_tutorial_already_chosen_map:
+            $ show_tutorial_already_chosen_map = False
+            call expression "tutorial_already_chosen_map"
+            $ seen_tutorial_already_chosen_map = True
+
+        # ---- Now the actual call to the selected option
         call expression selected_choice[menu_level].redirect
+        # --------------------------------------------------- 
 
         # We used to deduct time after choice, but it was a problem with submenu
         # $ global time_left

@@ -555,18 +555,25 @@ screen progress_details(selected_chapter, selected_char, ending = False, is_curr
                                                 for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name):
                                                     if item.text_id in checkpoint.get_activated_choices_and_discoveries():
                                                         use info_card(item, item.type, True)
-                    
-                    button:
-                        xoffset 5
-                        if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
+                    if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
+                        button:
+                            xoffset 5
                             action Show("confirm_restart")
-                        background "images/ui/button_idle_small.png"
-                        hover_background "images/ui/button_hover_small.png"
-                        xysize (430, 65)
-
-                        text "Restart from there":
-                            color "#FFFFFF"
-                            align (0.5, 0.5)
+                            background "images/ui/button_idle_small.png"
+                            hover_background "images/ui/button_hover_small.png"
+                            xysize (430, 65)
+                            text "Restart from there":
+                                color "#FFFFFF"
+                                align (0.5, 0.5)
+                    else:
+                        button:
+                            xoffset 5
+                            background "images/ui/button_idle_small.png"
+                            hover_background "images/ui/button_hover_small.png"
+                            xysize (430, 65)
+                            text "Restart from there":
+                                color "#585353"
+                                align (0.5, 0.5)
 
                 # Right column: Details of the selected checkpoint
                 vbox:

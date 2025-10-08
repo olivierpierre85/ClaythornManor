@@ -220,6 +220,10 @@ label init_technical_variables:
         seen_tutorial_restart = False
         seen_tutorial_intuition = False
         seen_tutorial_icon = False
+        seen_tutorial_already_chosen = False
+        show_tutorial_already_chosen = False
+        seen_tutorial_already_chosen_map = False
+        show_tutorial_already_chosen_map = False
 
         # ─────── tutorial data (fractions of the screen) ───────
         #         keep_x  keep_y  keep_w  keep_h   txt_x  txt_y   message
