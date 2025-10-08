@@ -915,8 +915,8 @@ screen history():
             yfill True
             vbox:
                 xsize 960
-
-                for h in _history_list:
+                # Limit to the last 100 lines for clarity
+                for h in _history_list[-100:]:
 
                     $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                     text what:
