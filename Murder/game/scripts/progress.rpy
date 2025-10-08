@@ -363,8 +363,6 @@ screen tutorial_with_steps(
                                 ]
                         
 
-
-
 # Define a separate screen for tooltips
 screen tooltip_display():
     $ tooltip = GetTooltip()
@@ -380,6 +378,7 @@ screen tooltip_display():
                 xalign 0.5
                 yalign 0.5
                 text tooltip
+
 
 screen info_card(item=None, item_type=None, is_small=False):  
     python:
