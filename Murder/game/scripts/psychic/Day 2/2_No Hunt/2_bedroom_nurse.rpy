@@ -92,6 +92,8 @@ label psychic_day2_no_hunt_bedroom_nurse_insist:
 
     $ change_room("bedroom_nurse")
 
+    $ play_music('sad', 2)
+
     nurse """
     What can I do for you?
     """
@@ -103,6 +105,8 @@ label psychic_day2_no_hunt_bedroom_nurse_insist:
 
     I wondered whether there is anything I can do to help.
     """
+
+
 
     nurse """
     I suppose I could not have hidden it forever.
@@ -161,6 +165,8 @@ label psychic_day2_no_hunt_bedroom_nurse_insist:
     """  
 
     $ nurse_details.description_hidden.unlock('sick')    
+
+    $ play_music('PREVIOUS')
 
     return
 

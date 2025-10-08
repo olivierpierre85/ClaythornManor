@@ -97,8 +97,6 @@ label lad_ending_day3_fell:
     You'll need to be more cautious next time.
     """
 
-
-
     jump ending_generic
 
 
@@ -107,6 +105,8 @@ label lad_ending_day3_escape:
     $ change_room("police_station", irisin)
 
     """
+    After what felt like an eternity, I finally reached the town.
+
     I rushed into the police station and told them everything.
 
     I was exhausted, panicked, and probably came off as unhinged.
@@ -140,7 +140,7 @@ label lad_ending_day3_escape:
     
     Her body was found in the attic. 
 
-    We still have no idea where Lady Claythorn and her staff are.
+    They have no idea where Lady Claythorn and her staff went.
     """
 
     call survive_screen_transition

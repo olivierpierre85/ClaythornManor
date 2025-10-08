@@ -317,12 +317,6 @@ label lad_day3_escape:
         Thankfully, no one is in sight.
         """
 
-        pause 1
-
-        """
-        After what felt like an eternity, I finally reached the town.
-        """
-
         $ lad_details.saved_variables["day3_ending"] = "escape"
 
     return
