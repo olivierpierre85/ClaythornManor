@@ -29,6 +29,10 @@ style chapter_button:
     text_align 0.5   # centers multiline text
     # Optionally set an xminimum or xmaximum to control wrapping
 
+style chapter_button_text:
+    xalign 0.5     # center the Text displayable within the button
+    text_align 0.5 # center each line within its own box
+
 # Display of Progress tree
 screen progress:
 
@@ -232,8 +236,10 @@ screen progress:
                                                     $ action_list = base_action
                                             
                                             textbutton chapters_names[chapter.name] style "chapter_button":
+                                            # textbutton "An Empty\nManor\nIs for you" style "confirm_prompt":
                                                 text_font gui.name_text_font
                                                 text_size 28
+                                                # xsize 300
                                                 if action_list:
                                                     action action_list
                                                 # colors
