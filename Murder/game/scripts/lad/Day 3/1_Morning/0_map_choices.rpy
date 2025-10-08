@@ -6,7 +6,6 @@ label lad_day3_morning_map_menu:
     python:    
         lad_day3_morning_map_menu = TimedMenu("lad_day3_morning_map_menu", [
             TimedMenuChoice(default_room_text('library'), 'lad_day3_morning_library', 10, room='library'),
-            TimedMenuChoice(default_room_text('tea_room'), 'lad_day3_morning_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day3_morning_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'lad_day3_morning_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day3_morning_entrance_hall', 10, room='entrance_hall'),
@@ -87,6 +86,14 @@ label lad_day3_morning_map_menu:
                 'lad_day3_morning_gun_room', 
                 0, 
                 room = 'gun_room'
+            ),
+            
+            TimedMenuChoice(
+                default_room_text('tea_room'), 
+                'lad_day3_morning_tea_room', 
+                10, 
+                room='tea_room',
+                condition = 'not lad_details.saved_variables["day3_morning_captain_found"]'
             ),
             TimedMenuChoice(
                 'Go wait for Sushil', 
