@@ -147,6 +147,12 @@
                 "settings": {
                     "foreground": "#aaaaaa"
                 }
+            },
+            {
+                "scope": "renpy.meta.color.#dbb100",
+                "settings": {
+                    "foreground": "#dbb100"
+                }
             }
         ]
     }

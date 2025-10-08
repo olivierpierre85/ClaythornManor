@@ -244,7 +244,7 @@ screen progress:
                                                     action action_list
                                                 # colors
                                                 if is_completed:
-                                                    text_color gui.highlight_color
+                                                    text_color gui.insensitive_color
                                                 else:
                                                     text_color gui.accent_color
                                                 text_hover_color "#FFFFFF"
@@ -556,18 +556,17 @@ screen progress_details(selected_chapter, selected_char, ending = False, is_curr
                                                     if item.text_id in checkpoint.get_activated_choices_and_discoveries():
                                                         use info_card(item, item.type, True)
                     
-                    if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
-                        
-                        button:
-                            xoffset 5
+                    button:
+                        xoffset 5
+                        if current_checkpoint and not ending and not current_checkpoint.label_id == "current" and seen_tutorial_restart:
                             action Show("confirm_restart")
-                            background "images/ui/button_idle_small.png"
-                            hover_background "images/ui/button_hover_small.png"
-                            xysize (430, 65)
+                        background "images/ui/button_idle_small.png"
+                        hover_background "images/ui/button_hover_small.png"
+                        xysize (430, 65)
 
-                            text "Restart from there":
-                                color "#FFFFFF"
-                                align (0.5, 0.5)
+                        text "Restart from there":
+                            color "#FFFFFF"
+                            align (0.5, 0.5)
 
                 # Right column: Details of the selected checkpoint
                 vbox:

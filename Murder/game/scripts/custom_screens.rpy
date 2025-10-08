@@ -173,6 +173,9 @@ screen custom_choice(custom_menu):
                     $ btn_text = choice.text.replace("{{object}}", "") + " {image=images/ui/objects_icon.png}"
                 else:
                     $ btn_text = choice.text
+                
+                if not seen_tutorial_icon and "image=images" in btn_text:
+                    $ btn_text = btn_text + "\n{color=#DBB100}{font=gui/font/Redressed.ttf}{i} (Tutorial) An icon means this choice is dependant on previous choices{/i}{/font}{/color}"
 
                 if choice.is_already_chosen():
                     textbutton btn_text:
@@ -180,9 +183,14 @@ screen custom_choice(custom_menu):
                         action Return(idx)
                         text_color gui.insensitive_color
                 else:
-                    textbutton btn_text:
-                        mouse "hover" 
-                        action Return(idx)
+                    if not seen_tutorial_icon and "image=images" in btn_text:
+                        textbutton btn_text:
+                            mouse "hover" 
+                            action [ SetVariable("seen_tutorial_icon", True), Return(idx) ]
+                    else:
+                        textbutton btn_text:
+                            mouse "hover" 
+                            action Return(idx)
 
 
 transform blink_skip:

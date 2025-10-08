@@ -219,6 +219,7 @@ label init_technical_variables:
         seen_tutorial_progress_details = False
         seen_tutorial_restart = False
         seen_tutorial_intuition = False
+        seen_tutorial_icon = False
 
         # ─────── tutorial data (fractions of the screen) ───────
         #         keep_x  keep_y  keep_w  keep_h   txt_x  txt_y   message
@@ -233,24 +234,32 @@ label init_technical_variables:
             ),
             (17, 445, 1890, 500, 1000, 300, 
             "A question mark means you have not reached this chapter before.\n" + 
-            "If there is nothing more to discover in a chapter, it will be written in yellow."
+            "If there is nothing more to discover in a chapter, it will be written in grey."
             ),
             (17, 445, 1890, 500, 1000, 300,           
             "You can view the details of a particular chapter by clicking on it.\n" +
-            "To check which options have been unlocked at the moment, \n" + 
-            "try selecting the chapter that is blinking (after closing this tutorial)."
+            "The current chapter is blinking, try selecting it (after closing this tutorial)."
             ),
         ]
         tutorial_step_progress = 0
         tutorial_steps_progress_details = [
             (486, 308, 797, 550, 960, 150, 
-                "This is the list of all the times you have started this chapter.\n" + 
+                "You are now in the Detail Chapter view.\n" + 
+                "Here is the list of all the times you have started this chapter.\n" + 
                 "You can select one of those \"checkpoints\" to see which choices you have made before reaching them.\n"  
+            ),
+            (486, 308, 797, 550, 960, 150, 
+                "If you have selected the current chapter, there will be on top a Checkpoint named \"Current Status\".\n" + 
+                "It's useful to see what you've already accomplished at the moment.\n"
             ),
             (1280, 312, 616, 626, 960, 150, 
                 "Once a checkpoint is selected, you can see here the possible choices that you faced before reaching this point.\n" + 
                 "And below are the ones you can make in this chapter.\n" +  
                 "There is a question mark for the ones that have not yet been discovered."  
+            ),
+            (486, 750, 797, 108, 960, 150, 
+                "Once you'll have finished your first playthrough, the button \"Restart from there\" will be activated.\n" +
+                "You will then be able to click this button to the restart the chapter, using the choices made in the selected checkpoint.\n" 
             ),
         ]
         tutorial_step_progress_details = 0
