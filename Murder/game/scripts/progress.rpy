@@ -356,10 +356,13 @@ screen tutorial_with_steps(
                                                                         tutorial_step_value - 1)
                             if tutorial_step_value < len(tutorial_steps) - 1:
                                 textbutton "Next »" action SetVariable(tutorial_step_var, tutorial_step_value + 1)
-                            textbutton "✕ Close" action [
-                                SetVariable("tutorial_on", False),
-                                SetVariable(tutorial_step_var, 0)
-                            ]
+                            else:
+                                textbutton "Close" action [
+                                    SetVariable("tutorial_on", False),
+                                    SetVariable(tutorial_step_var, 0)
+                                ]
+                        
+
 
 
 # Define a separate screen for tooltips
