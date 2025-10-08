@@ -65,6 +65,7 @@ label psychic_day2_no_hunt_map_menu:
                 room = 'tea_room',
                 condition = condition_saturday_hunt_morning
             ),
+            # TODO OR KEEP it and make a stupid remark? Why am I going back here, I was just there. What's wrong with me?
             # TimedMenuChoice(
             #     'Go back to the Tea Room', 
             #     'psychic_tea_room_default',  
