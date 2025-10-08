@@ -65,13 +65,13 @@ label psychic_day2_no_hunt_map_menu:
                 room = 'tea_room',
                 condition = condition_saturday_hunt_morning
             ),
-            TimedMenuChoice(
-                'Go back to the Tea Room', 
-                'psychic_tea_room_default',  
-                10,
-                room = 'tea_room',
-                condition = "not " + condition_saturday_hunt_morning
-            ),
+            # TimedMenuChoice(
+            #     'Go back to the Tea Room', 
+            #     'psychic_tea_room_default',  
+            #     10,
+            #     room = 'tea_room',
+            #     condition = "not " + condition_saturday_hunt_morning
+            # ),
             TimedMenuChoice(
                 'Take a nap', 
                 'psychic_day2_no_hunt_cancel', 
