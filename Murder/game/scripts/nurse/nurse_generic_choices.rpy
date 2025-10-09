@@ -143,7 +143,6 @@ label nurse_generic_background_doctor:
 
     $ doctor_details.observations.unlock('remember_nurse')
 
-
     doctor """
     It was indeed.
 
@@ -154,11 +153,62 @@ label nurse_generic_background_doctor:
     Likewise.
     """
 
+    return
+
+label nurse_generic_heroic_act_doctor:
+
+    nurse """
+    Well, I don’t wish to sound boastful.
+
+    But I’ve been told I’m the nurse who’s served in the most wars in the whole country, apparently.
+    """
+
+    doctor """
+    Truly? You kept going, even after everything that happened in China?
+    """
+
+    nurse """
+    Indeed. I daresay some would have lost heart after what happened there.
+
+    But not me. It only strengthened my belief that nursing was my true calling.
+
+    When I returned to England, I kept volunteering wherever I was needed.
+    """
+
+    doctor """
+    Then you must have witnessed a great many conflicts.
+    """
+
+    nurse """
+    Yes. Before the Boxer Rebellion, there was the Cretan Revolt.
+
+    And afterwards, several others — until, of course, the last one.
+
+    Which I rather think will be the last for me.
+    """
+
+    doctor """
+    We all hoped it would be the last for everyone.
+
+    But I fear war is not likely to vanish from the world just yet.
+    """
+
+    nurse """
+    No, I’m not so naïve as to think so.
+
+    But one can at least hope that nothing as dreadful as the Great War will ever come again.
+    """
+
+    doctor """
+    I sincerely hope you’re right, Miss Marsh.
+    """
+
+    $ nurse_details.description_hidden.unlock('heroic_act')
 
     return
 
 
-label nurse_generic_heroic_act:
+label nurse_generic_heroic_act_psychic:
     
     nurse """
     It is nothing special, really.
@@ -201,6 +251,7 @@ label nurse_generic_heroic_act:
     $ nurse_details.description_hidden.unlock('heroic_act') 
 
     return
+
 
 label nurse_generic_manor:
     

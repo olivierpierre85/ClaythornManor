@@ -36,8 +36,8 @@ label doctor_config_menu:
     # NURSE
     $ nurse_generic_menu_doctor = TimedMenu("nurse_generic_menu_doctor", [
         TimedMenuChoice('What do you think of this weather?', 'nurse_generic_weather_saturday', 10, condition = condition_saturday),
-        TimedMenuChoice('Tell me more about yourself.', 'nurse_generic_background_doctor', 30, linked_choice = "nurse_generic_heroic_act"),
-        TimedMenuChoice('Why were you invited here?', 'nurse_generic_heroic_act', 20, condition = "all_menus['nurse_generic_menu_doctor'].choices[1].hidden"),
+        TimedMenuChoice('Tell me more about yourself.', 'nurse_generic_background_doctor', 30, linked_choice = "nurse_generic_heroic_act_psychic"),
+        TimedMenuChoice('Why were you invited here?', 'nurse_generic_heroic_act_psychic', 20, condition = "all_menus['nurse_generic_menu_doctor'].choices[1].hidden"),
         TimedMenuChoice('What do you think of this place?', 'nurse_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'nurse_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'nurse_generic_room', 10),

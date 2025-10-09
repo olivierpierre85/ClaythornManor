@@ -4,8 +4,8 @@ label psychic_config_menu:
     $ nurse_generic_menu_psychic = TimedMenu("nurse_generic_menu_psychic", [
         # TimedMenuChoice('What do you think of this weather?', 'nurse_generic_weather_friday', 5, condition = "current_day == 'Friday'"),
         TimedMenuChoice('What do you think of this weather?', 'nurse_generic_weather_saturday', 10, condition = "current_day == 'Saturday'"),
-        TimedMenuChoice('Tell me more about yourself.', 'nurse_generic_background_psychic', 20, linked_choice ="nurse_generic_heroic_act"),
-        TimedMenuChoice('Why were you invited here?', 'nurse_generic_heroic_act', 20, condition = "all_menus['nurse_generic_menu_psychic'].choices[1].hidden"),
+        TimedMenuChoice('Tell me more about yourself.', 'nurse_generic_background_psychic', 20, linked_choice ="nurse_generic_heroic_act_psychic"),
+        TimedMenuChoice('Why were you invited here?', 'nurse_generic_heroic_act_psychic', 20, condition = "all_menus['nurse_generic_menu_psychic'].choices[1].hidden"),
         TimedMenuChoice('What do you think of this place?', 'nurse_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'nurse_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'nurse_generic_room', 10),

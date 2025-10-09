@@ -3826,7 +3826,7 @@
         "You don't have anymore questions for her"
       ],
       "selected": "Why were you invited here?",
-      "redirect": "nurse_generic_heroic_act",
+      "redirect": "nurse_generic_heroic_act_psychic",
       "time_left": 40,
       "timestamp": "2025-10-05T19:33:44.156425",
       "time_to_decide": 1.799314,
