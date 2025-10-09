@@ -158,9 +158,9 @@ label nurse_generic_background_doctor:
 label nurse_generic_heroic_act_doctor:
 
     nurse """
-    Well, I don’t wish to sound boastful.
+    Well, I don't wish to sound boastful.
 
-    But I’ve been told I’m the nurse who’s served in the most wars in the whole country, apparently.
+    But I've been told I'm the nurse who's served in the most wars in the whole country, apparently.
     """
 
     doctor """
@@ -194,13 +194,13 @@ label nurse_generic_heroic_act_doctor:
     """
 
     nurse """
-    No, I’m not so naïve as to think so.
+    No, I'm not so naïve as to think so.
 
     But one can at least hope that nothing as dreadful as the Great War will ever come again.
     """
 
     doctor """
-    I sincerely hope you’re right, Miss Marsh.
+    I sincerely hope you're right, Miss Marsh.
     """
 
     $ nurse_details.description_hidden.unlock('heroic_act')
