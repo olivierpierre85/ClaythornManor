@@ -59,7 +59,7 @@ label init_map:
             Room(1, (691, 295, 205, 319),   'dining_room',      'Dining Room'),
             Room(1, (360, 552, 203, 60),     'manor_garden',           'Garden'),
             Room(1, (256, 293, 435, 260),     'entrance_hall',           'Entrance Hall'),
-            # Room(1, (256 , 90, 435, 105),     'servant_stairs_1',          'Servant Stairs'),
+            Room(1, (256 , 90, 435, 105),     'servant_stairs',          'Servant Stairs'),
             Room(1, (256 , 195, 435, 100),     'portrait_gallery',          'Portrait Gallery'),
             # Basement
             Room(0, (25, 205, 360, 407),     'kitchen',          'Kitchen'),

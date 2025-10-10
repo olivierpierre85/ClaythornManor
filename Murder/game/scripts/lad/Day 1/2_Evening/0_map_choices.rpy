@@ -20,6 +20,7 @@ label lad_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day1_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'lad_day1_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day1_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'lad_day1_evening_servant_stairs', 10, room='servant_stairs'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('kitchen'), 'lad_day1_evening_kitchen', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'lad_day1_evening_scullery', 10, room='scullery'),
@@ -113,6 +114,11 @@ label lad_day1_evening_garden:
 
 label lad_day1_evening_entrance_hall:
     call lad_entrance_hall_default
+    return
+
+label lad_day1_evening_servant_stairs:
+
+    call lad_servant_stairs_default
     return
 
 label lad_day1_evening_portrait_gallery:

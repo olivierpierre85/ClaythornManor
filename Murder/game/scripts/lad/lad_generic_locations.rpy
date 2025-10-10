@@ -363,6 +363,20 @@ label lad_entrance_hall_default:
 
     return
 
+label lad_servant_stairs_default:
+    
+    $ change_room('servant_stairs')
+
+    """
+    I entered a hidden space that is clearly meant for servants.
+
+    It's narrow TODO
+    """
+
+    return
+
+
+
 label lad_portrait_gallery_default:
     
     $ change_room("portrait_gallery")
