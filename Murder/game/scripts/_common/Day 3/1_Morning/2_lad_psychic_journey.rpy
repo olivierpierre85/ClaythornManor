@@ -25,7 +25,7 @@ label common_day3_morning_lad_psychic_journey:
     $ play_music('mysterious', 2)
 
     psychic """
-    Mr Haring, I believe my hunch was right yesterday.
+    Mr Harring, I believe my hunch was right yesterday.
 
     Something strange is afoot.
     """

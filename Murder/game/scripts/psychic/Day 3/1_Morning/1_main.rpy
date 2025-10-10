@@ -147,7 +147,7 @@ label psychic_day3_morning_has_not_visited_lad:
     $ play_music('mysterious', 2)
 
     psychic """
-    Mr Haring, I am sorry to disturb you but something strange is happening.
+    Mr Harring, I am sorry to disturb you but something strange is happening.
     """
 
     lad """

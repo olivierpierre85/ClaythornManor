@@ -71,7 +71,7 @@ label psychic_day3_afternoon:
     """
 
     psychic normal """
-    Thank you Mr Haring! 
+    Thank you Mr Harring! 
 
     That means the world to me.
     """
