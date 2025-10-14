@@ -68,10 +68,22 @@ label character_selection:
     # narrator "Select a Character"
 
     python:
-        if not full_testing_mode:
+        character_choice = None
+
+        if full_testing_mode and full_testing_mode_choices:
+
+            character_choice = full_testing_mode_choices.pop(0)["character_choice"]
+        
+
+        if not character_choice:
             character_choice = renpy.call_screen('character_selection') 
-        else:
-            character_choice = full_testing_mode_char
+
+        # Save choice as well
+        all_choices.append({
+            "menu": "character_selection",
+            "character_choice": character_choice,
+            "timestamp": datetime.now().isoformat(),
+        })
 
         current_position = 0
 

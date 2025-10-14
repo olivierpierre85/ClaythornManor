@@ -14,6 +14,7 @@ screen characters:
 
             use character_list
 
+
 screen character_selection:
     modal True
     zorder 200
@@ -30,6 +31,7 @@ screen character_selection:
             style "confirm_prompt" # TODO specific styling TODO space after label .... why so complicated.....
             xalign 0.5
         use character_list(True)
+
 
 screen character_list(is_selection = False):
     #Two hbox of 4 characters
@@ -72,6 +74,7 @@ screen character_list(is_selection = False):
             $ char_y_offset += 340
         else:
             $ char_y_offset += 340
+
 
 screen character_details(selected_char):
     # $ selected_char = get_char(char_id)

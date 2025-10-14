@@ -36,6 +36,7 @@ label init_psychic:
             "day2_has_seen_bedroom_broken": False,
             "day2_evening_billiard_room_visited": False,
             "day2_evening_billiard_room_talk_to_captain": False,
+            "day2_evening_attic_visited": False,
             "day1_evening_talk_to_lad": False,
             "day1_evening_talk_to_captain": False,
             "day2_evening_bedroom_tries": 0,

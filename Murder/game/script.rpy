@@ -73,9 +73,12 @@ define config.exception_handler = dump_state
 
 # Var needed BEFORE start
 default debug_activated = False
+
+default full_testing_mode = False
 # default persistent.not_already_chosen = {}
 
 default drunk_mode = False
+
 
 # My config variables
 
@@ -102,6 +105,15 @@ define current_year = "1924"
 label start_debug:
 
     $ debug_activated = True
+
+    jump start
+
+# Debug mode that will get the latest testing_path
+label start_testing_mode:
+
+    $ debug_activated = True
+
+    $ full_testing_mode = True
 
     jump start
 
@@ -133,9 +145,6 @@ label start():
     # TODO: Implement full_testing_mode 
     python: 
    
-        #When TRUE, will load the latest modified path file
-        full_testing_mode = False
-        full_testing_mode_char = "lad"
         full_testing_mode_choices = None
 
         # Load latest path file for test
@@ -154,6 +163,7 @@ label start():
         jump lad_introduction
 
     return
+
 
 label init_technical_variables:
     

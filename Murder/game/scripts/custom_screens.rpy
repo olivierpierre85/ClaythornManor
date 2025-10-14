@@ -15,6 +15,9 @@ screen current_time:
         background "images/ui/clock/clock_plaque.png"
         xoffset 55
         yoffset 180
+        # Picture Above plaque
+        # xoffset 215
+        # yoffset 130
         xsize 150
 
         text current_day.upper() + ", " + current_period:
@@ -32,6 +35,24 @@ screen current_time:
             color gui.clock_plaque_text_color
             font gui.clock_text_font
             bold True
+
+    # Add current player face
+    # image "images/characters/side/side " + current_character.text_id + ".png" at character_progress:
+        # Right below Looks weird
+        # xoffset 77
+        # yoffset 280
+        # Right to clock, looks weird
+        # xoffset 220
+        # yoffset 30
+        # below left, looks weird
+        # yalign 1.0
+        # yoffset -100
+        # xoffset 70
+        # Picture Above plaque
+        # xoffset 237
+        # yoffset 20
+
+
 
 transform rotate_hours( angle = 0 ):
     xoffset -16
