@@ -204,7 +204,7 @@ label doctor_day2_morning:
         Something is not right, and a hunt is hardly the safest place to be.
         """
         
-    elif doctor_details.important_choices.is_unlocked('book_opium'):
+    elif doctor_details.objects.is_unlocked('book_opium'):
 
         """
         Yet I have not taken my 'medicine' today.
@@ -284,15 +284,23 @@ label doctor_day2_no_hunt_choice:
     Not without a very sound reason.
     """
 
-    # TODO if intuition is unlocked
-    # call run_menu(
-    #     TimedMenu("doctor_day2_morning_no_hunt", [
-    #         TimedMenuChoice('', '', early_exit = True),
-    #         TimedMenuChoice('', '', early_exit = True)
-    #     ])
-    # )
+    if psychic_details.endings.is_unlocked('shot_by_drunk'):
 
-    call doctor_day2_hunt_choice_2
+        """
+        Yet an ominous feeling creeps over me.
+
+        Something bad will happen if I go out today.
+
+        I do not know how, but I am certain of it.
+        """
+
+    # TODO if intuition is unlocked
+    call run_menu(
+        TimedMenu("doctor_day2_morning_no_hunt", [
+            TimedMenuChoice("Feign that you are in no condition for a shoot {{intuition}}", 'doctor_day2_no_hunt_choice_2', early_exit = True),
+            TimedMenuChoice("You cannot resist the social pressure", 'doctor_day2_hunt_choice_2', early_exit = True)
+        ])
+    )
 
     return
 
@@ -301,6 +309,8 @@ label doctor_day2_no_hunt_choice_2:
 
     doctor """
     I am truly sorry, but I do not think I should.
+
+    My condition requires a good deal of rest, I am afraid.
     """
 
     host """
