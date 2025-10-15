@@ -29,6 +29,14 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
             current_day =  day
 
         if chapter:
+            if export_transcript_activated:
+                export_transcript(False)
+                
+            # --- Add a visible "Chapter:" line to the Ren'Py log/history ---
+            chapter_text = chapters_names[chapter]
+            _history_list.append(ChoiceHistory("Chapter", chapter_text))
+            _history_list.append(ChoiceHistory("Character", current_character.real_name))
+
             current_chapter = chapter
 
         # Compute for clock rotation
@@ -201,43 +209,72 @@ init python:
             renpy.emscripten.run_script(js)
             renpy.notify("Download started")
 
+    # --------------------------------------------------------
     # Functions to save History/logs to a file after an ending
-    def _transcript_text():
+    # --------------------------------------------------------
+    def _sanitize(fs_name):
+        return re.sub(r'[<>:"/\\|?*\x00-\x1f]+', '_', str(fs_name)).strip() or "unnamed"
+
+    def _transcript_lines():
         lines = []
         for h in renpy.store._history_list:
-            # Strip text tags for clean output
             what = renpy.filter_text_tags(h.what, allow=set()) if h.what else ""
             who  = h.who or ""
             if who:
                 lines.append(u"{0}: {1}".format(who, what))
             else:
                 lines.append(what)
-        return u"\n".join(lines)
+        return lines
 
+    def export_transcript(full=True, chapter_marker="Chapter:"):
+        # """
+        # Saves transcript to:
+        #   <project>/testing_paths/<current_character.text_id>/<current_chapter>/<text_id>__<chapter>__YYYYMMDD_HHMMSS.txt
 
-    def save_transcript_to_file():
-        # Grab current character if available
-        char_name = globals().get("current_character", None)
-        if char_name and hasattr(char_name, "text_id"):
-            base = char_name.text_id
-        else:
-            base = "transcript"
+        # Uses global vars:
+        #   - current_character (must have .text_id)
+        #   - current_chapter   (string)
+        # """
+        try:
+            text_id = current_character.text_id
+            chapter = current_chapter
 
-        # Add timestamp
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{base}_{timestamp}_playthrough.txt"
+            # Get numeric order from chapters_names
+            chapters_order = list(renpy.store.chapters_names.keys())
+            chapter_index = chapters_order.index(renpy.store.current_chapter) if renpy.store.current_chapter in chapters_order else -1
+            numbered_chapter = f"{chapter_index}_{_sanitize(renpy.store.current_chapter)}" if chapter_index >= 0 else _sanitize(renpy.store.current_chapter)
 
-        # Write into the game's saves directory so it's always writable
-        savedir = renpy.config.savedir
-        if not os.path.isdir(savedir):
-            os.makedirs(savedir, exist_ok=True)
-        fullpath = os.path.join(savedir, filename)
+            base_dir = renpy.config.basedir  # project root (same level as /game)
+            out_dir  = os.path.join(base_dir, "testing_paths", text_id, numbered_chapter)
+            os.makedirs(out_dir, exist_ok=True)
 
-        with io.open(fullpath, "w", encoding="utf-8") as f:
-            f.write(_transcript_text())
+            lines = _transcript_lines()
+            if not full:
+                # Trim from the last occurrence of the chapter marker
+                last_idx = -1
+                for i, ln in enumerate(lines):
+                    if chapter_marker in ln:
+                        last_idx = i
+                if last_idx != -1:
+                    lines = lines[last_idx:]
 
-        renpy.notify("Transcript saved:\n" + fullpath)
-        return fullpath
+            if lines:
+                body = u"\n".join(lines)
+
+                ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+                fname = f"{text_id}__{chapter}__{ts}.txt"
+                fpath = os.path.join(out_dir, fname)
+
+                with open(fpath, "w", encoding="utf-8", newline="\n") as f:
+                    f.write(body)
+
+                renpy.notify(f"Transcript saved:\n{fname}")
+
+            return
+
+        except Exception as e:
+            renpy.notify(f"Transcript export failed: {e}")
+            return None
 
 
 label start_again():

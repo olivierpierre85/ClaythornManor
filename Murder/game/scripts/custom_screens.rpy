@@ -154,7 +154,7 @@ screen debug_screen:
         textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter:
         # textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "\nSubmenu(nurse_generic_other_guests_menu):" + str(all_menus['nurse_generic_menu_doctor'].choices[6].already_chosen) :
             # action Function(export_choices_to_file, all_choices)
-            action Function(save_transcript_to_file)
+            action Function(export_transcript)
             xminimum 200  # Adjust these values as needed
             yminimum 80
             text_size 18

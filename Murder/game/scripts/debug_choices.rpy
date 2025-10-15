@@ -1,5 +1,8 @@
 # Init variables for debug
 label init_debug:
+
+    $ export_transcript_activated = True
+    
     $ hide_notifications = True
 
     $ skip_clock_movement = True

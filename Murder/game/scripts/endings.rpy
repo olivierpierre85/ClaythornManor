@@ -61,8 +61,8 @@ label ending_generic:
             show_tutorial_unlock_character = False
             renpy.call('tutorial_unlock_character')
 
-        # TODO Test in web mode AND deactivate for package?
-        save_transcript_to_file()
+        if export_transcript_activated:
+            export_transcript(False)
 
     hide screen centered_text
 

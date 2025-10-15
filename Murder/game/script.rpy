@@ -340,6 +340,7 @@ label init_technical_variables:
 
     return
 
+
 label init_story_variables:
 
     call init_lad
