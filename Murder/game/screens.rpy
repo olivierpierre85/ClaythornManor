@@ -989,97 +989,158 @@ screen help():
 
     tag menu
     style_prefix "help"
+
     if main_menu:
         add gui.main_menu_background
     add "gui/overlay/game_menu.png"
     use navigation
 
-    add "gui/overlay/help_overlay.png"
+    add "gui/overlay/help_overlay_unequal.png"
 
-    viewport:
+    # Which topic is active (default to Controls).
+    default help_tab = "Controls"
+
+    ##############
+    # LEFT: MENU #
+    ##############
+    vbox:
         xpos 228
         ypos 415
         xsize 579
         ysize 448
+        label _("Help Topics")
 
-        scrollbars "vertical"
-        draggable True
-        mousewheel True
-        vbox:
-            vbox:
-                label _("Enter")
-                text _("Advances dialogue and activates the interface.")
+        textbutton _("Controls") style "help_button":
+            action SetScreenVariable("help_tab", "Controls")
+            selected (help_tab == "Controls")
 
-            vbox:
-                label _("Space")
-                text _("Advances dialogue without selecting choices.")
+        textbutton _("Clock & Time") style "help_button":
+            action SetScreenVariable("help_tab", "Clock & Time")
+            selected (help_tab == "Clock & Time")
 
-            vbox:
-                label _("Arrow Keys")
-                text _("Navigate the interface.")
+        textbutton _("Progress & Characters") style "help_button":
+            action SetScreenVariable("help_tab", "Progress")
+            selected (help_tab == "Progress")
 
-            vbox:
-                label _("Escape")
-                text _("Accesses the game menu.")
+        textbutton _("Characters") style "help_button":
+            action SetScreenVariable("help_tab", "Progress")
+            selected (help_tab == "Progress")
 
-            vbox:
-                label _("Ctrl")
-                text _("Skips dialogue while held down.")
+        textbutton _("About") style "help_button":
+            action SetScreenVariable("help_tab", "Progress")
+            selected (help_tab == "Progress")
+        
+        textbutton _("Max") style "help_button":
+            action SetScreenVariable("help_tab", "Progress")
+            selected (help_tab == "Progress")
 
-            vbox:
-                label _("Tab")
-                text _("Toggles dialogue skipping.")
 
-            vbox:
-                label _("Page Up")
-                text _("Rolls back to earlier dialogue.")
-
-            vbox:
-                label _("Page Down")
-                text _("Rolls forward to later dialogue.")
-
-            vbox:
-                label "H"
-                text _("Hides the user interface.")
-
-            vbox:
-                label "S"
-                text _("Takes a screenshot.")
-
-            vbox:
-                label "V"
-                text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
-
+    #################
+    # RIGHT: CONTENT#
+    #################
     viewport:
-        xpos 1121
+        xpos 900
         ypos 415
-        xsize 579
+        xsize 800
         ysize 448
 
         scrollbars "vertical"
         draggable True
         mousewheel True
+
         vbox:
-            vbox:
-                label _("Left Click")
-                text _("Advances dialogue and activates the interface.")
+            spacing 10
 
-            vbox:
-                label _("Middle Click")
-                text _("Hides the user interface.")
+            if help_tab == "Controls":
 
-            vbox:
-                label _("Right Click")
-                text _("Accesses the game menu.")
+                label _("Keyboard")
 
-            vbox:
-                label _("Mouse Wheel Up/Click Rollback Side")
-                text _("Rolls back to earlier dialogue.")
+                vbox:
+                    label _("Enter")
+                    text _("Advances dialogue and activates the interface.")
 
-            vbox:
-                label _("Mouse Wheel Down")
-                text _("Rolls forward to later dialogue.")
+                vbox:
+                    label _("Space")
+                    text _("Advances dialogue without selecting choices.")
 
+                vbox:
+                    label _("Arrow Keys")
+                    text _("Navigate the interface.")
+
+                vbox:
+                    label _("Escape")
+                    text _("Accesses the game menu.")
+
+                vbox:
+                    label _("Ctrl")
+                    text _("Skips dialogue while held down.")
+
+                vbox:
+                    label _("Tab")
+                    text _("Toggles dialogue skipping.")
+
+                vbox:
+                    label _("Page Up")
+                    text _("Rolls back to earlier dialogue.")
+
+                vbox:
+                    label _("Page Down")
+                    text _("Rolls forward to later dialogue.")
+
+                vbox:
+                    label _("H")
+                    text _("Hides the user interface.")
+
+                vbox:
+                    label _("S")
+                    text _("Takes a screenshot.")
+
+                vbox:
+                    label _("V")
+                    text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
+
+                null height 12
+                label _("Mouse")
+
+                vbox:
+                    label _("Left Click")
+                    text _("Advances dialogue and activates the interface.")
+
+                vbox:
+                    label _("Middle Click")
+                    text _("Hides the user interface.")
+
+                vbox:
+                    label _("Right Click")
+                    text _("Accesses the game menu.")
+
+                vbox:
+                    label _("Mouse Wheel Up/Click Rollback Side")
+                    text _("Rolls back to earlier dialogue.")
+
+                vbox:
+                    label _("Mouse Wheel Down")
+                    text _("Rolls forward to later dialogue.")
+
+            elif help_tab == "Clock & Time":
+                label _("Clock & Time")
+                text _(
+                    "Placeholder: This section will explain how in-game time works, "
+                    "how the clock UI updates, AM/PM display, and how time jumps occur during the story."
+                )
+                text _(
+                    "You’ll also find tips for enabling/disabling the clock overlay and what each indicator means."
+                )
+
+            elif help_tab == "Progress":
+                label _("Progress")
+                text _(
+                    "Placeholder: This section will describe the Progress screen—what each icon means, "
+                    "how to unlock nodes, and how retries affect completion."
+                )
+                text _(
+                    "It will also include notes about greyed choices, requirements, and any missable items."
+                )
 
 
 style help_button is gui_button
@@ -1102,7 +1163,25 @@ style help_label
 style help_label_text:
     size gui.text_size
 
+# Compact left-menu buttons
+# style help_menu_button is help_button
+# style help_menu_button_text is help_button_text
 
+# style help_menu_button:
+#     # inherit your GUI defaults, then tighten
+#     properties gui.button_properties("help_button")
+#     xmargin 8
+#     ymargin 1
+#     xpadding 10
+#     ypadding 1
+#     yminimum 0          # don’t enforce a tall min height
+#     minimum (0, 0)
+
+# style help_menu_button_text:
+#     properties gui.button_text_properties("help_button")
+#     size gui.text_size  # keep your font size
+#     # Optional: lighter weight or tighter line spacing
+#     # line_spacing -2
 
 ################################################################################
 ## Additional screens
