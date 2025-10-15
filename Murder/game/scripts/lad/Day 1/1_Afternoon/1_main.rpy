@@ -40,13 +40,13 @@ label lad_introduction:
     
     As a thank you, a weekend of leisure at Claythorn Manor has been planned for all of you to enjoy.
 
-    After which, a prize money of one thousand pounds in bearer's bond will be handed to you.
+    Afterwards, a prize of one thousand pounds in bearer bonds will be handed to you.
     
     Please note that your presence is mandatory in order to receive the prize.
 
     All you have to do is be at Aberdeen Station, on the 13th of October around 4PM, where someone will drive you to the manor.
 
-    Hoping ,.....
+    Hoping to see you soon, ...
     """
 
     """
@@ -64,9 +64,9 @@ label lad_introduction:
     
     So I feel as if I do not have much choice.
 
-    But still, there is part of me thinking,
+    But still, there's a part of me thinking,
 
-    Maybe I never should have come.
+    maybe I should never have come.
     """
 
     play sound train_stopping
@@ -80,7 +80,7 @@ label lad_introduction:
     """
 
     footman """
-    Welcome sir. Are you by any chance, heading to Claythorn Manor?
+    Welcome, sir. Are you by any chance heading to Claythorn Manor?
     """
 
     lad """
@@ -92,7 +92,7 @@ label lad_introduction:
     """
     
     footman """
-    Very well Sir. Let me assist you with your luggage and you can follow me into the car.
+    Very well, sir. Allow me to assist you with your luggage. You can follow me to the car.
     """
 
     """
@@ -102,25 +102,25 @@ label lad_introduction:
     $ change_room("inside_car")
 
     lad """ 
-    So you are lady Claythorn's driver?
+    So, you're Lady Claythorn's driver?
     """
 
     footman """
-    Yes, I mean,.. no.
+    Yes— I mean, no.
 
     I am actually her footman. I also drive people when necessary.
     """
 
     lad """
-    Oh. The driver must be busy because of all the people coming I guess.
+    Oh. The driver must be busy with all the guests coming, I suppose.
 
     Do you know how many people have been invited this weekend?
     """
 
     footman """
-    Well, ... I am not sure sir. Half a dozen at least I believe.
+    Well... I am not sure, sir. Half a dozen at least, I believe.
 
-    But I am sorry, I must concentrate on the road ahead. Lady Claythorn doesn't like it when I am distracted.
+    I'm sorry, sir, but I must concentrate on the road. Lady Claythorn doesn't like it when I'm distracted.
     """
 
     lad """
@@ -132,7 +132,7 @@ label lad_introduction:
     """
 
     """
-    I seem to have made him uneasy. Maybe he's not used to small talk with guests.
+    I seem to have made him uneasy. Perhaps he's not used to small talk with guests.
 
     This feels odd, as I'm usually on the other end of this treatment.
 
@@ -140,11 +140,11 @@ label lad_introduction:
 
     They might be used to this kind of service.
 
-    But then again, maybe not. Maybe Lady Claythorn likes helping people like me.
+    But then again, perhaps not. Maybe Lady Claythorn likes to help people like me.
 
     We'll see.
 
-    After we leave Aberdeen, we move into the countryside, then into what seems like a vast forest.
+    After we leave Aberdeen, we drive into the countryside, then into what seems to be a vast forest.
 
     About twenty minutes later, all signs of human life disappear.
 
@@ -152,7 +152,7 @@ label lad_introduction:
 
     The isolation makes me feel a bit uneasy, being so far from everywhere else.
 
-    And the look of an approaching storm in the sky only adds to my discomfort.
+    And the sight of an approaching storm in the sky only adds to my unease.
     """
 
     $ stop_music()
@@ -172,11 +172,11 @@ label lad_introduction:
 
     Now I've heard a lot of people can't afford them anymore.
 
-    They are sold, turned into hotels, or even abandoned. Left there to rot.
+    They're sold, turned into hotels, or simply abandoned—left there to rot.
     
     What a shame.
 
-    As the driver unloads my luggage from the car, I approach the entrance, where a butler opens the door to welcome me.
+    As the footman unloads my luggage from the car, I approach the entrance, where a butler opens the door to welcome me.
 
     I step into the most remarkable hall I've ever set foot in.
     """

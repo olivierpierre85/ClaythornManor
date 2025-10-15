@@ -19,7 +19,7 @@ label psychic_generic_weather_friday:
     psychic """
     Well, it is not very original to ask about such things when meeting someone new.
 
-    But it is true that is not your average rain. It looks more like a dangerous storm to me.
+    But it is true that this is not your average rain. It looks more like a dangerous storm to me.
 
     And since we are basically in the middle of nowhere, that's reason enough to be a little nervous I suppose.
     """
@@ -69,7 +69,7 @@ label psychic_generic_age:
     psychic angry """
     I beg your pardon?
 
-    Are you really asking me that? Were you raised in a barn?
+    Are you truly asking me that? Were you raised in a barn?
 
     Only a person without any social skills would ask such a question of a respectable lady.
     """
@@ -186,9 +186,9 @@ label psychic_generic_heroic_act:
     psychic """
     In a sense yes.
 
-    Like I said, there is more to my gift that just talking with the dead.
+    Like I said, there is more to my gift than simply speaking with the dead.
 
-    I can also sense if someone life is at risk. 
+    I can also sense if someone's life is at risk.
 
     Some say it is because when someone is close to the other world, we can sense them almost like they are already there.
 
@@ -208,7 +208,7 @@ label psychic_generic_heroic_act:
     """
 
     psychic """
-    Yes. I believe some version of the person died in an other realm of existence. 
+    Yes. I believe some version of the person died in another realm of existence.
     
     Then they came back to help a version of them who is still alive.
 
@@ -248,7 +248,7 @@ label psychic_generic_manor:
     psychic """
     Such a magnificent house right?
 
-    Even if the style is not very recent, it still has a lot of cachet. 
+    Even if the style is not very recent, it still possesses a great deal of charm.
     
     You don't see a lot of that type of place anymore. 
 
@@ -256,7 +256,7 @@ label psychic_generic_manor:
 
     And I don't think money is a problem.
 
-    Lady Claythorn couldn't possibly give away so much money if she had enough resources.
+    Lady Claythorn couldn't possibly give away so much money if she lacked the means.
 
     More likely, she couldn't find enough people to come live here.
     
@@ -266,7 +266,7 @@ label psychic_generic_manor:
     
     Even in London, some of my neighbors are struggling finding employees.
 
-    In any case, she should have a made more of an effort for this weekend.
+    In any case, she should have made more of an effort for this weekend.
 
     I hope we won't suffer any inconvenience because of this.
     """

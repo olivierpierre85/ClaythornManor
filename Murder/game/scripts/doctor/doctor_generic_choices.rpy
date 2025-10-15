@@ -106,7 +106,7 @@ label doctor_generic_manor:
         """
 
         """
-        Well, that's somewhat comforting.
+        Well, that's rather comforting.
         """
 
         $ doctor_details.description_hidden.unlock('status') 

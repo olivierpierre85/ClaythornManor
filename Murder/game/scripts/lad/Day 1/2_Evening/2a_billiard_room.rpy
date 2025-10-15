@@ -9,7 +9,7 @@ label lad_day1_evening_billiard_room:
         """
         Except for Amelia Baxter, everyone from dinner is in this room.
 
-        I recognize Doctor Baldwin, sitting alone on a chair.
+        I recognise Doctor Baldwin sitting alone in a chair.
 
         There's also an array of alcohol near the bar.
 

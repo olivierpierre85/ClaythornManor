@@ -33,7 +33,7 @@ label lad_day1_evening:
     """
 
     lad """
-    Hello, I am Ted Harring, I have been invited by Lady Claythorn..
+    Hello, I'm Ted Harring. I've been invited by Lady Claythorn.
     """
 
     butler """
@@ -45,11 +45,11 @@ label lad_day1_evening:
 
     Everyone is already there, and dinner will be ready very soon.
 
-    So if you follow me into the tea room, you can join the rest of the party for some drinks.
+    If you'll follow me into the tea room, you can join the rest of the party for some drinks.
     """
 
     """
-    Well, it's not like I have multiple changes of clothes anyway. So, I follow him.
+    Well, it's not as if I have multiple changes of clothes anyway. So, I follow him.
     """
 
     $ change_room('tea_room')
@@ -170,9 +170,9 @@ label lad_day1_evening:
 
     As I observe each person, Lady Claythorn makes her entrance into the room.
 
-    She looks younger than I imagined.
+    She looks younger than I had imagined.
 
-    I don't know why, but I pictured an elderly, bored lady. Yet she looks nothing like that.’
+    I don't know why, but I pictured an elderly, bored lady. Yet she looks nothing like that.
     
     Her clothes, which are the most impressive of anyone's in the room, make her status clear.
 
@@ -184,7 +184,7 @@ label lad_day1_evening:
     call common_day1_evening_host_welcome_speech
 
     """
-    After the speech, everyone appears pleased. 
+    After her speech, everyone appears pleased.
     
     A few of the guests begin to express their appreciation to the host.
     """
@@ -263,7 +263,7 @@ label lad_day1_evening:
     """
 
     lad """
-    This is ..., this is good, yes. Thank you.
+    This is... this is good, yes. Thank you.
     """
 
     """
@@ -303,8 +303,6 @@ label lad_day1_evening:
         """
         It's getting quite late now.
 
-        I'm exhausted from the trip.
-
         Going back to my room is probably the best thing to do.
         """
 
@@ -331,7 +329,7 @@ label lad_day1_evening:
     else:
 
         """
-        It's been a long day.
+        It's been a long day and I'm exhausted from the trip.
 
         So I change and get directly into bed.
 
