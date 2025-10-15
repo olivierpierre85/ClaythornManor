@@ -102,7 +102,228 @@ label doctor_day2_morning:
 
     $ change_room('dining_room')
 
-    jump work_in_progress
+    call change_time(10, 0)
+
+    """
+    When I reach the dining room, our host directly turns towards me.
+    """
+
+    call common_day2_morning_host_death_doctor    
+
+    """
+    After a while, everyone is done eating.
+    """
+
+    $ stop_music()
+
+    call common_day2_morning_host_hunt
+
+    """
+    Going on a hunt now.
+
+    I am not sure I feel up for it, and I don't think I am the only one.
+    
+    Everyone looks a bit uncomfortable.
+
+    Captain Sinha is the first to break the silence.
+    """
+    
+    captain """
+    I will come.
+
+    What happened today is tragic, but there is no point in waiting here.
+    """
+
+    drunk """
+    I will... come too. 
+
+    Fresh air will do me well.
+    """
+
+
+    """
+    I can see looks of dissaproval at this.
+
+    But nobody dares say something.
+
+    Looking at Samuel Manning's obvious state of inebriety, I think everyone assumes he will fall asleep before the hunt begins.
+    """
+
+    
+    psychic """
+    I am sorry but I would rather not come, I would rather stay inside if you don't mind.
+
+    But don't hold back on my account.
+    """
+
+    nurse """
+    I feel the same. 
+
+    I wouldn't know what to do with a gun.
+    """
+
+    host """
+    Of course, I understand.
+    
+    Even though I enjoy it myself, I know that hunting is not something for any ladies.
+
+    But I'll make sure you'll be comfortable staying inside.
+
+    And how do you feel Mister Harring?
+    """
+
+    lad """
+    I'll... I'll come too of course.
+    """
+
+    """
+    He said that with a clear lack of confidence.
+
+    You can tell he is on the fence about the whole thing.
+    """
+
+    host """
+    All right, what about you Doctor Baldwin?
+    """
+
+    """
+    Everyone is looking towards me now.
+
+    They clearly assume I will go as well.
+    """
+
+    if doctor_details.important_choices.is_unlocked('remove_mask'):
+
+        """
+        But there is something bothering me.
+
+        I can't make sense of the fact that Thomas Moody wasn't really injured.
+
+        I don't understand it and it makes me question everything.
+
+        There is something not right, and a hunt is not the best place to stay safe.
+        """
+    
+    elif doctor_details.important_choices.is_unlocked('book_opium'):
+
+        """
+        Yet,  I haven't had my "medicine" today.
+
+        So the withdrawal could start anytime soon.
+
+        In that case, it would better to stay inside and manage the symptoms
+        """
+
+
+    if doctor_details.important_choices.is_unlocked('flirt'):
+
+        """
+        Also, if I stayed, I could spend more time with my new friend.
+        """
+
+    """
+    So, which one will it be?
+    """    
+
+
+    $ time_left = TIME_MAX    
+    call run_menu(
+        TimedMenu("doctor_day2_morning_hunt", [
+            TimedMenuChoice('Go on the hunt', 'doctor_day2_hunt_choice', early_exit = True),
+            TimedMenuChoice('Stay here', 'doctor_day2_no_hunt_choice', early_exit = True)
+        ])
+    )
+
+    host """
+    Now, those of you going can change and then fetch a weapon downstairs.
+
+    We'll meet outside in a little while.
+    """
+
+    return
+
+
+label doctor_day2_hunt_choice:
+
+    doctor """
+    I'll come too.
+
+    You are right, we could use the distraction.
+    """
+
+    host """
+    Great that settles it then. 
+    """
+
+    return
+
+
+label doctor_day2_no_hunt_choice:
+
+    doctor """
+    I don't feel that well actually.
+
+    I think it would be better if I stayed actually.
+    """
+
+    host """
+    I am sorry to hear that Doctor, are you sure?
+
+    The weather has really improve today, it might do you good.
+    """
+
+    captain """
+    Yes, there is nothing like fresh air to make you feel better.
+
+    And I don't want to sound dramatic, but it's always good to have a doctor with us, in case anything happens.
+    """
+
+    """
+    They all ganged up on me.
+
+    I don't know that I can avoid going now.
+
+    Not without a very good reason at least.
+    """
+
+    # TODO if intuition is unlocked
+    # call run_menu(
+    #     TimedMenu("doctor_day2_morning_no_hunt", [
+    #         TimedMenuChoice('', '', early_exit = True),
+    #         TimedMenuChoice('', '', early_exit = True)
+    #     ])
+    # )
+
+    call doctor_day2_hunt_choice_2
+
+    return
+
+
+label doctor_day2_no_hunt_choice_2:
+
+    doctor """
+    I am truly sorry but I don't think I should.
+    """
+
+    host """
+    Well if you say so. You are the doctor after all.
+    """
+
+    return
+
+label doctor_day2_hunt_choice_2:
+
+    doctor """
+    You might be right, the good weather should do me good.
+
+    I'll join too.
+    """
+
+    host """
+    That's great news.
+    """
+
+    return
 
 
 label doctor_day2_morning_nurse:

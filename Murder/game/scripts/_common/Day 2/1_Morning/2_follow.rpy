@@ -305,7 +305,7 @@ label common_day2_breakfast_follow_doctor_lad_normal:
 
     We'll need a post-mortem to know for certain.
 
-    First, I'll need to contact the authorities.
+    First, we should contact the authorities.
     """
 
     if current_character.text_id == "lad":
@@ -315,5 +315,12 @@ label common_day2_breakfast_follow_doctor_lad_normal:
 
         I trail behind, back to the dining room.
         """
+    
+    elif current_character.text_id == "doctor":
+
+        """
+        We both head back downstairs.
+        """
+
 
     return
