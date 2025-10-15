@@ -51,7 +51,7 @@ label init_doctor:
                 content_negative="You didn't flirt with the footman",
                 image_file="flirt",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning'],
             ),
             CharacterInformation(
                 0, "broken_unmasked",
