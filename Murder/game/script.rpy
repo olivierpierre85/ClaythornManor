@@ -235,6 +235,9 @@ label init_technical_variables:
         seen_tutorial_already_chosen_map = False
         show_tutorial_already_chosen_map = False
 
+        export_transcript_activated = False
+        infinite_time_activated = False
+
         # ─────── tutorial data (fractions of the screen) ───────
         #         keep_x  keep_y  keep_w  keep_h   txt_x  txt_y   message
         # PROGRESS TUTORIAL
