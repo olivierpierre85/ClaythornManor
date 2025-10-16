@@ -51,7 +51,7 @@ label init_doctor:
                 content_negative="You didn't flirt with the footman",
                 image_file="flirt",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_morning'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_morning'],
             ),
             CharacterInformation(
                 0, "broken_unmasked",
@@ -59,7 +59,7 @@ label init_doctor:
                 content_negative="You didn't remove Thomas Moody's mask",
                 image_file="broken_unmasked",
                 chapters=['saturday_morning'],
-                relevant_chapters=['saturday_morning', 'saturday_evening'],
+                relevant_chapters=['saturday_morning', 'saturday_afternoon', 'saturday_evening'],
             ),
         ])
 
@@ -78,7 +78,7 @@ label init_doctor:
                 content_negative='You didn\'t take "Confessions of an English Opium-Eater" from the library',
                 image_file="book_opium",
                 chapters=['friday_evening'],
-                relevant_chapters=['saturday_morning'],
+                relevant_chapters=['saturday_morning', 'saturday_afternoon'],
             ),
         ])
 

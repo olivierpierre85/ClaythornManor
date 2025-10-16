@@ -1,7 +1,7 @@
 # Init variables for debug
 label init_debug:
 
-    $ export_transcript_activated = True
+    $ export_transcript_activated = False
     
     $ hide_notifications = True
 

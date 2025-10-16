@@ -317,7 +317,7 @@ label doctor_day2_no_hunt_choice_2:
     If you say so. You are the doctor, after all.
     """
 
-    return
+    jump work_in_progress
 
 
 label doctor_day2_hunt_choice_2:
@@ -332,7 +332,8 @@ label doctor_day2_hunt_choice_2:
     That is very good news.
     """
 
-    return
+    jump doctor_day2_hunt
+
 
 
 label doctor_day2_morning_nurse:

@@ -41,7 +41,7 @@ label init_characters:
     define letter       = Character("Letter", what_style="letter_style")
     define book         = Character("Book", what_style="letter_style")
     define butler       = Character("Butler", image="butler")
-    define footman      = Character("Footman", image="footman")
+    define footman      = Character("[get_footman_name()]", image="footman")
     define maid_name    = "Young woman"
     define maid         = Character(maid_name, image="maid")
     define lord_name    = "Older Man"
@@ -119,6 +119,12 @@ init -100 python:
             return nurse_details
         else:
             return False
+
+    def get_footman_name():
+        if current_character.text_id == 'doctor' and current_character.important_choices.is_unlocked('flirt'):
+            return "Andrew"
+        else:
+            return "Footman"
 
     # Python Classes
     class CharacterInformationList:

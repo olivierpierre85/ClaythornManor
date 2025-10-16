@@ -117,21 +117,19 @@ label doctor_downstairs_day1:
 
 
 label doctor_downstairs_flirt:
-    
-    $ doctor_details.important_choices.unlock('flirt')
 
     doctor """
-    That's a shame, but I do understand. Orders are orders.
+    That's a shame, but I quite understand. Orders are orders.
 
-    Still, I was rather hoping you'd show me around.
+    Still, I had rather hoped you might show me around.
 
-    There are a few things I wouldn't mind chatting to you about.
+    There are a few things I'd not mind discussing with you.
     """
 
     footman """
-    I'm a bit tied up at the moment.
+    I'm a bit tied up at the moment, sir.
 
-    But I could make time later, if you'd still like to talk.
+    But I could make time later, if you'd still care to talk.
     """
 
     doctor """
@@ -143,36 +141,44 @@ label doctor_downstairs_flirt:
     footman """
     Hard to say when I'll be free.
 
-    But I could pop by your room once I've a moment—if you don't mind.
+    But I could stop by your room once I've a moment—if you don't mind, that is.
     """
 
     """
     Well, that is rather forward.
 
-    I glance around to check we're alone.
-    
+    I glance about to be sure we're alone.
+
     We are.
 
-    I give him a meaningful look.
+    I let my gaze linger a moment longer than necessary.
     """
 
     doctor """
-    Are you sure you can't come right now?
+    Are you certain you can't come now?
     """
 
     footman """
-    No, I really can't.
+    No, truly I can't.
 
-    But I'll be done soon.
+    But I'll be done soon enough.
 
-    I'll see you later, then.
+    I'll see you later then, Doctor Baldwin.
     """
 
     doctor """
-    Of course.
-
-    See you later.
+    Please—call me Daniel.
     """
+
+    footman """
+    Very well, Daniel. I'm Andrew.
+    """
+
+    doctor """
+    I'll see you later, Andrew.
+    """
+
+    $ doctor_details.important_choices.unlock('flirt')
 
     return
 
