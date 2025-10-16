@@ -23,36 +23,100 @@ label doctor_day2_hunt:
 
     call black_screen_transition("Daniel Baldwin", chapters_names[current_chapter])
     
-    $ change_room("gun_room")
+    $ change_room('manor_garden')
 
     $ play_music('upbeat', 1, fadein_val=10.0)
 
-    $ change_room('manor_garden')
-
     """
-    Since I could not muster a reason to stay behind, I changed for the hunt.
+    Since I could not find a reason to remain behind, I changed for the hunt.
 
-    Luckily I had thought of taking outdoor close for this week-end.
+    Fortunately I had thought to bring outdoor clothes for the weekend.
 
-    It was not hard to imagine a shoot was to be on the agenda.
+    It was not hard to imagine a shoot would be on the agenda.
 
-    It's funny how Lady Claythorn pretends it's for our benefit, when mostly she will enjoy it the most.
+    It amuses me that Lady Claythorn pretends it is for our benefit, when she will enjoy it most.
 
-    I don't think she can easily find hunting partners here in this isolated place.
+    I doubt she can readily find willing partners in so isolated a place.
     
-    Anyway, I have a gun, and even though it's been a while, I think I can still manage how to use it.
+    In any case, they pressed a hunting rifle upon me, and though it has been a while, I dare say I will remember how to use it.
 
-    I go outside to join everybody else.
+    I step out to join the others.
 
-    In addition to our little group, I can spot the butler and the footman.
+    To my surprise, Samuel Manning is there as well. 
+    
+    He must have sobered up. At least, I hope so.
 
-    They will likely come to help us.
+    I notice the butler following Lady Claythorn.
     """
 
     if doctor_details.important_choices.is_unlocked('flirt'):
 
         """
-        d
+        Andrew is there as well.
         """
+
+    else:
+
+        """
+        The footman is there as well.
+        """
+    
+    """
+    He is tending to Ted Harring, who looks a little out of place.
+
+    The butler clears his throat and addresses us.
+    """
+
+    call common_day2_hunt_butler_groups
+
+    """
+    I have barely a moment to gather my thoughts before Samuel Manning is upon me.
+    """
+
+    drunk """
+    Doctor, I would be honoured to partner with you.
+
+    You don't mind, do you?
+    """
+
+    """
+    I cannot find the words to extricate myself.
+    """
+
+    doctor """
+    Well... no, of course not.
+    """
+
+    drunk """
+    Splendid!
+
+    We shall have a jolly time.
+    """
+
+    lad """
+    You don't mind if I join as well?
+    """
+
+    if doctor_details.important_choices.is_unlocked('flirt'):
+
+        """
+        Andrew is with him and gives me a meaningful look.
+        """
+    
+    doctor """
+    Of course not.
+
+    Do come with us, Mr Harring.
+    """
+
+    butler """
+    Excellent.
+
+    The parties are settled.
+
+    Let us have a pleasant afternoon.
+    """
+
+    call doctor_day2_hunt_accident
 
     jump work_in_progress

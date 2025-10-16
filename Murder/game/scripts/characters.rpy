@@ -122,6 +122,7 @@ init -100 python:
 
     def get_footman_name():
         if current_character.text_id == 'doctor' and current_character.important_choices.is_unlocked('flirt'):
+            # ADD if real name found return André
             return "Andrew"
         else:
             return "Footman"

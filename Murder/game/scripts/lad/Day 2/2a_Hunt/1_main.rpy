@@ -135,11 +135,7 @@ label lad_day2_hunt:
     Still, I'd better stay away from him.
     """
 
-    butler """
-    Good, now that everyone is ready, I propose we split into two groups.
-
-    It will be easier to spot game that way.
-    """
+    call common_day2_hunt_butler_groups
 
     """
     People agree, and Sushil Sinha asks to partner with our host.
