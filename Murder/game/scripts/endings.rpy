@@ -40,7 +40,7 @@ label ending_generic:
 
         And you must.
 
-        Because otherwise, you'll never uncover the whole truth about what happened that weekend at Claythorn Manor.
+        Otherwise you will never uncover the whole truth of what happened that weekend at Claythorn Manor.
         """
 
         $ first_ending = False

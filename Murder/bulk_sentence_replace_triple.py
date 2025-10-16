@@ -14,7 +14,7 @@ def load_pairs(tsv_path):
             if len(parts) < 2:
                 print(f"[warn] line {i} has fewer than 2 columns; skipping", file=sys.stderr)
                 continue
-            old, new = parts[0], parts[1]
+            old, new = parts[0].strip(), parts[1].strip()
             if old and old != new:
                 pairs.append((old, new))
     return pairs
@@ -22,38 +22,56 @@ def load_pairs(tsv_path):
 def replace_in_block(block_text, pairs):
     """
     Replace exact full-line matches inside a triple-quoted block.
-    - Match is done on the line *content* stripped of leading/trailing whitespace.
-    - Indentation and original EOLs are preserved.
+    - Match by trimmed content (ignoring leading/trailing spaces on that line).
+    - Preserve: original indentation, original trailing spaces (if any), and the single original EOL.
+    - Never adds extra blank lines or spaces.
     """
     if not pairs:
         return block_text, 0
 
-    # Build a dict for O(1) lookups
     repl = dict(pairs)
     hits = 0
-    out_lines = []
+    out = []
 
-    # Preserve exact line endings
-    lines = block_text.splitlines(keepends=True)
-    for raw in lines:
-        # Keep indentation
-        m = re.match(r"^(\s*)(.*?)(\s*)$", raw[:-1] if raw.endswith(("\n", "\r")) else raw)
-        if m:
-            indent, core, trail_ws = m.groups()
-            key = core.strip()
-            if key in repl:
-                hits += 1
-                new_core = repl[key]
-                # Rebuild with original indent/trailing whitespace and EOL
-                rebuilt = f"{indent}{new_core}{trail_ws}"
-                if raw.endswith(("\r\n", "\n", "\r")):
-                    # Keep the same EOL sequence
-                    eol = "\r\n" if raw.endswith("\r\n") else ("\n" if raw.endswith("\n") else "\r")
-                    rebuilt += eol
-                out_lines.append(rebuilt)
-                continue
-        out_lines.append(raw)
-    return ("".join(out_lines), hits)
+    # iterate physical lines with their exact EOLs
+    for raw in block_text.splitlines(keepends=True):
+        # split EOL from the rest
+        if raw.endswith(("\r\n", "\n", "\r")):
+            if raw.endswith("\r\n"):
+                eol = "\r\n"
+                line_core = raw[:-2]
+            else:
+                eol = raw[-1]
+                line_core = raw[:-1]
+        else:
+            eol = ""
+            line_core = raw
+
+        # split indent and trailing spaces (but keep both to rebuild byte-identical layout)
+        i = 0
+        while i < len(line_core) and line_core[i] in (" ", "\t"):
+            i += 1
+        indent = line_core[:i]
+        rest = line_core[i:]
+
+        # trailing spaces (before EOL)
+        j = len(rest)
+        while j > 0 and rest[j-1] in (" ", "\t"):
+            j -= 1
+        content = rest[:j]        # the actual text without indent or trailing spaces
+        trail_ws = rest[j:]       # the original trailing spaces (if any)
+
+        key = content.strip()
+        if key in repl and key != "":
+            hits += 1
+            new_line = f"{indent}{repl[key]}{trail_ws}{eol}"
+            out.append(new_line)
+        else:
+            out.append(raw)
+
+    return "".join(out), hits
+
+
 
 def process_file(path, pairs, dry_run=False, create_backup=True):
     text = path.read_text(encoding="utf-8")

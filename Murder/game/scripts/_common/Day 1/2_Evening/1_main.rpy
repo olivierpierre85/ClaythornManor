@@ -69,7 +69,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     As an Indian officer, I was obviously part of the British army.
 
-    We first landed in the old Chinese capital of Tianjin.
+    We first landed at Tientsin, the old Chinese capital.
 
     Then we marched from there to reach Beijing, and rescue the civilians besieged there, as well as people from previous expeditions.
 
@@ -83,7 +83,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     Even my fellow Indian soldiers were not immune to it, and many died of sunstroke.
 
-    By the time we reached Beijing, our expedition of 20,000 soldiers was reduced to 10,000.
+    By the time we reached Peking, our expedition of 20 000 had been reduced to 10 000.
 
     By that time, the soldiers were angry, tired, and restless.
 

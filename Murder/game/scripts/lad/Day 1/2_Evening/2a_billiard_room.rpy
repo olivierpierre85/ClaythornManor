@@ -9,11 +9,11 @@ label lad_day1_evening_billiard_room:
         """
         Except for Amelia Baxter, everyone from dinner is in this room.
 
-        I recognise Doctor Baldwin sitting alone in a chair.
+        I recognise Dr Baldwin sitting alone in a chair.
 
         There's also an array of alcohol near the bar.
 
-        The remainder of the guests are clustered together, with Sushil Sinha leading the conversation.
+        The rest of the guests are clustered together, with Sushil Sinha leading the conversation.
 
         The butler stands silently in a corner near them.
         """
@@ -98,7 +98,7 @@ label lad_day1_evening_billiard_room_bar_1:
     broken """
     Nice to meet you, Mr Harring. I suppose you are here for a drink.
 
-    The choice is rather restricted I am afraid. There's only Sherry or Port.
+    The choice is rather restricted, I'm afraid. There is only sherry or port.
 
     But luckily, I've come prepared.
     """

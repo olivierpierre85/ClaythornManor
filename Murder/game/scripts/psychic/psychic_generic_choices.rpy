@@ -21,7 +21,7 @@ label psychic_generic_weather_friday:
 
     But it is true that this is not your average rain. It looks more like a dangerous storm to me.
 
-    And since we are basically in the middle of nowhere, that's reason enough to be a little nervous I suppose.
+    And since we are, essentially, in the middle of nowhere, that is reason enough to be a little nervous, I suppose.
     """
 
     return
@@ -90,7 +90,7 @@ label psychic_generic_background:
 
     I tend to my garden and brew herbal remedies,
 
-    and I usually keep to myself, except for the séances that I frequently organise.
+    and I usually keep to myself, save for the séances I frequently organise.
     """
 
     lad """
@@ -112,7 +112,7 @@ label psychic_generic_background:
 
     Through these objects, I am able to form a bond with the soul of the deceased.
 
-    Then, they communicate with me. Sometimes it's just a whisper, barely audible.
+    Then they communicate with me. Sometimes it is but a whisper, scarcely audible.
 
     Other times, I can see them clearly, just as I see you now.
 
@@ -124,7 +124,7 @@ label psychic_generic_background:
     """
 
     psychic """
-    Yes, but don't worry, there's nothing unholy about it.
+    Yes, but do not worry, there is nothing unholy in it.
 
     It only lasts for a few moments, and I always regain full control immediately after.
     """
@@ -196,7 +196,7 @@ label psychic_generic_heroic_act:
 
     I believe I can only talk to the dead.
 
-    So when I can sense someone who is still alive. It means to me that there is a version of them that is not.
+    So when I sense someone who yet lives, it means to me there is a version of them that does not.
 
     I am not sure if you understand what I mean.
     """
@@ -246,7 +246,7 @@ label psychic_generic_heroic_act:
 label psychic_generic_manor:
 
     psychic """
-    Such a magnificent house right?
+    Such a magnificent house, is it not?
 
     Even if the style is not very recent, it still possesses a great deal of charm.
     
@@ -264,7 +264,7 @@ label psychic_generic_manor:
 
     And it must be especially difficult when you are so far away from a city.
     
-    Even in London, some of my neighbors are struggling finding employees.
+    Even in London, some of my neighbours struggle to find staff.
 
     In any case, she should have made more of an effort for this weekend.
 
@@ -273,7 +273,7 @@ label psychic_generic_manor:
 
     if current_character.text_id == "lad":
         """
-        Okay. I would not have thought of that.
+        All right. I would not have thought of that.
 
         She seems in her element here.
 

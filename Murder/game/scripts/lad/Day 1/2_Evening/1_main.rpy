@@ -29,7 +29,7 @@ label lad_day1_evening:
     $ play_music('upbeat')
 
     butler """
-    Welcome Sir.
+    Welcome, sir.
     """
 
     lad """
@@ -37,7 +37,7 @@ label lad_day1_evening:
     """
 
     butler """
-    Yes, of course Mr Harring.
+    Yes, of course, Mr Harring.
 
     Welcome to Claythorn Manor.
 
@@ -45,7 +45,7 @@ label lad_day1_evening:
 
     Everyone is already there, and dinner will be ready very soon.
 
-    If you'll follow me into the tea room, you can join the rest of the party for some drinks.
+    If you'll follow me to the tea room, you may join the rest of the party for some drinks.
     """
 
     """
@@ -55,7 +55,7 @@ label lad_day1_evening:
     $ change_room('tea_room')
 
     """
-    As I step into the room, the butler loudly introduces me.
+    As I step into the room, the butler loudly announces me.
     """
 
     butler """
@@ -63,7 +63,7 @@ label lad_day1_evening:
     """
 
     """
-    Everyone turns their head towards me.
+    Everyone turns their heads towards me.
     
     Some people nod in my direction, while others barely acknowledge my presence.
 
@@ -72,7 +72,7 @@ label lad_day1_evening:
 
     show captain at truecenter
     butler """ 
-    The older man talking is from India, and his name is Sushil Sinha.
+    The older gentleman speaking is from India, and his name is Sushil Sinha.
     """
 
     hide captain
@@ -85,27 +85,27 @@ label lad_day1_evening:
 
     show doctor at truecenter
     butler """
-    .. and with Daniel Baldwin. The man with the glasses.
+    ... and with Daniel Baldwin, the gentleman with spectacles.
     """
     hide doctor
 
     show broken at truecenter
     butler """
-    Don't be alarmed by the man in the mask. 
+    Do not be alarmed by the man in the mask. 
 
-    He is a war veteran named Thomas Moody.
+    He is a war veteran, Mr Thomas Moody.
     """
     hide broken
 
     show drunk at truecenter
     butler """
-    The man sitting on the couch, looking rather exhausted is Samuel Manning.
+    The person on the sofa, who looks rather exhausted, is Mr Samuel Manning.
     """
     hide drunk
 
     show psychic at truecenter
     butler """
-    The older lady in the corner of the room is Amelia Baxter.
+    The lady in the corner is Mrs Amelia Baxter.
     """
     hide psychic
 
@@ -245,7 +245,7 @@ label lad_day1_evening:
     footman """
     Here you are, sir.
 
-    You've been assigned the "William The Conqueror" room.
+    You've been assigned the 'William the Conqueror' room.
     """
 
     $ unlock_map('bedroom_lad')
@@ -255,7 +255,7 @@ label lad_day1_evening:
     """
     I step into the bedroom.
 
-    It's more spacious than my apartment, and more luxurious than I could have ever imagined.
+    It is more spacious than my flat, and more luxurious than I could have imagined.
     """
 
     footman """
@@ -370,11 +370,11 @@ label lad_day1_drinks_drunk:
     """
     
     lad """
-    Hello sir, how are you?
+    Hello, sir. How are you?
     """
 
     drunk """
-    (Snore...)
+    (Snores...)
     """
 
     """

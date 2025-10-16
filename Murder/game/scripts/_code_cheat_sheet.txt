@@ -46,3 +46,7 @@ window hide # Manually hide the say window
 
 ICON choices
         TimedMenuChoice('Reveal Daniel Baldwin\'s opium addiction{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="lad_details.objects.is_unlocked('laudanum')"),
+
+
+# REPLACEMENT SCRIPT
+python .\bulk_sentence_replace_triple.py game/scripts .\replacements.tsv --no-backup
