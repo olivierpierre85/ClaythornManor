@@ -1,8 +1,8 @@
 # Init variables for debug
 label init_debug:
 
-    $ export_transcript_activated = True
-    $ infinite_time_activated = True
+    $ export_transcript_activated = False
+    $ infinite_time_activated = False
     
     $ hide_notifications = True
 
@@ -17,6 +17,9 @@ label init_debug:
     $ seen_tutorial_progress_details = True
     $ seen_tutorial_restart = True
     $ seen_tutorial_intuition = True
+    $ seen_tutorial_icon = True
+    $ seen_tutorial_already_chosen = True
+    $ seen_tutorial_already_chosen_map = True
 
     # show screen current_time
     show screen in_game_menu_btn
