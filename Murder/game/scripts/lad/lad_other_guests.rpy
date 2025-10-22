@@ -38,7 +38,7 @@ label lad_generic_psychic_opinion:
     lad """
     I am not sure. 
     
-    She seems very nice, but there is something weird about her.
+    She seems very nice, but there is something odd about her.
     """
 
     doctor """
@@ -46,9 +46,9 @@ label lad_generic_psychic_opinion:
     """
 
     lad """    
-    Sorry, I don't know how to explain it.
+    Sorry, I do not know how to explain it.
 
-    It's just a feeling.
+    It is just a feeling.
     """
 
     doctor """
@@ -61,19 +61,19 @@ label lad_generic_psychic_opinion:
 label lad_generic_other_guests_saturday_hunt_doctor:
 
     lad """
-    I don't know, I haven't had a chance to talk to everyone yet.
+    I do not know, I have not had a chance to talk to everyone yet.
 
     So far everyone seems normal to me.
     """
 
     doctor """
-    Well, I wasn't expecting a deep character analysis.
+    I was not expecting a deep character analysis.
 
-    Just wanted to know your general opinion.
+    Merely your general impression.
     """
 
     lad """
-    Of course then.
+    Right then.
     """
     
     call lad_generic_other_guests
@@ -83,20 +83,20 @@ label lad_generic_other_guests_saturday_hunt_doctor:
 
 label lad_generic_psychic_hunt_doctor:
 
-    if doctor_details.saved_variables["asked_about_psychic"] = True:
+    if doctor_details.saved_variables.get("asked_about_psychic", False):
 
         lad """
-        Well, we already talked about her haven't we?
+        Well, we have already spoken about her, have we not?
         """
 
         doctor """
-        Have we? Well, I guess you are right.    
+        Have we? I suppose you are right.    
 
-        And you didn't noticed anything new?
+        And you have not noticed anything new?
         """
 
         lad """
-        Sorry, I can't say that I have.
+        Afraid not.
         """
 
     else:
@@ -107,24 +107,25 @@ label lad_generic_psychic_hunt_doctor:
 
     return
 
+
 label lad_generic_drunk_hunt_doctor:
 
     lad """
     Samuel Manning?
 
-    You really want to talk about him when he is so close to us?
+    You really want to talk about him when he is right there?
     """
 
     doctor """
-    Never mind that, he won't notice. 
+    Never mind that, he will not notice. 
     
-    He looks out of his wits again.
+    He looks quite out of his wits again.
     """
 
     lad """
     Yes, I noticed he is drunk most of the time.
 
-    But that's about all I've witness about him so far.
+    But that is about all I have witnessed so far.
     """
 
     doctor """
@@ -139,11 +140,11 @@ label lad_generic_drunk_hunt_doctor:
 label lad_generic_captain_hunt_doctor:
 
     lad """
-    Captain Sinha is serious and likes to talk about himself it seems.
+    Captain Sinha is serious, and he does go on about himself.
     """
 
     doctor """
-    Yes, I have noticed that myself.
+    I have observed the same.
     """
 
     $ doctor_details.saved_variables['bored_by_lad'] += 1
@@ -153,11 +154,10 @@ label lad_generic_captain_hunt_doctor:
 
 label lad_generic_host_hunt_doctor:
 
-
     lad """
     She is very distinguished.
 
-    I haven't dare talk to her yet.
+    I have not dared to speak to her yet.
     """
 
     $ doctor_details.saved_variables['bored_by_lad'] += 1
@@ -168,9 +168,9 @@ label lad_generic_host_hunt_doctor:
 label lad_generic_nurse_hunt_doctor:
 
     lad """
-    I don't have much to say about her.
+    I do not have much to say about her.
 
-    She is as rather discreet woman, because of that I haven't learned much about her.
+    She is a rather discreet woman, so I have not learnt much about her.
     """
 
     $ doctor_details.saved_variables['bored_by_lad'] += 1
@@ -181,15 +181,15 @@ label lad_generic_nurse_hunt_doctor:
 label lad_generic_broken_hunt_doctor:
 
     lad """
-    Poor Mister Manning, that is very creepy to imagine that he is still in his room, you know, dead.
+    Poor Mr Manning, it is creepy to imagine he is still in his room.
+
+    You know, dead.
     """
 
     doctor """
-    That's how we left him, so I guess his condition hasn't changed indeed.
+    That is how we left him, so I daresay his condition has not changed.
     """
 
     $ doctor_details.saved_variables['bored_by_lad'] += 1
 
     return
-
-
