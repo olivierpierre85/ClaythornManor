@@ -98,6 +98,24 @@ label doctor_day2_hunt_accident:
 
     call common_day2_hunt_accident_death
 
-    # jump to death
 
-    return
+    """
+    Very quickly I start to enjoy the familiar feeling of calm.
+
+    It won't be long now.
+    """
+
+    if doctor_details.objects.is_unlocked('book_opium'):
+
+        """
+        Ironically, I truly believe I would have managed to quit this time.
+        """
+
+    else:
+
+        """
+        Ironically, this is likely how I was meant to go anyway.
+        """
+
+    jump doctor_ending_shot_by_drunk
+

@@ -21,3 +21,19 @@ label doctor_ending_overdose:
     #     """
 
     jump ending_generic
+
+
+label doctor_ending_shot_by_drunk:
+
+    $ doctor_details.endings.unlock('shot_by_drunk')
+    $ doctor_details.add_ending_checkpoint(ending=doctor_details.endings.get_item('shot_by_drunk'))
+    
+    call death_screen_transition
+
+    """
+    Despite knowing better, you still joined a hunt with a half-drunk man and a loaded gun.
+
+    At least this dreadful end might teach you to make wiser choices next time.
+    """
+
+    jump ending_generic

@@ -8,6 +8,7 @@ label common_day2_hunt_accident_footman_1:
 
     return
 
+
 label common_day2_hunt_accident_death:
 
     $ stop_music(1)
@@ -49,7 +50,6 @@ label common_day2_hunt_accident_death:
 
         Bloody hell, the fool shot me.
         """
-
 
     # play sound dying_in_pain TODO better sound
 
@@ -111,6 +111,17 @@ label common_day2_hunt_accident_death:
         But Doctor Baldwin does.
         """
 
+    elif current_character.text_id == "doctor":
+
+        """
+        No time to answer Samuel Manning.
+
+        My instincts take over at once.
+
+        I shout at Ted Harring.
+        """
+    
+
     doctor """
     Quickly, remove my shirt.
 
@@ -127,6 +138,12 @@ label common_day2_hunt_accident_death:
         It doesn't look too bad.
         """
 
+    elif current_character.text_id == "doctor":
+
+        """
+        Shaking, Ted Harring helps me get rid of my shirt.
+        """
+
     lad """
     I've found the wound.
 
@@ -139,6 +156,18 @@ label common_day2_hunt_accident_death:
         The doctor inspects it himself.
 
         A look of dread washes over his face.
+        """
+
+    elif current_character.text_id == "doctor":
+
+        """
+        I glance down at the small hole in my stomach.
+
+        Thick, dark blood seeps out, heavy and slow.
+
+        The liver... it must be the liver.
+
+        Bloody hell.
         """
 
 
@@ -163,6 +192,20 @@ label common_day2_hunt_accident_death:
         """
         He casts a venomous glare at Samuel Manning but says nothing.
         """
+    
+    elif current_character.text_id == "doctor":
+
+        """
+        I look angrily at the man who shot me.
+
+        He avoids my gaze, shame written across his face.
+
+        Yet there is something else in his eyes — something I cannot place.
+
+        But it no longer matters.
+
+        Ted Harring interrupts my thoughts.
+        """
 
     lad """
     Is there anything I can do?
@@ -180,6 +223,13 @@ label common_day2_hunt_accident_death:
         I pass it to him.
         """
 
+    elif current_character.text_id == "doctor":
+
+        """
+        He clumsly pass me my bag.
+        """
+
+
     doctor """
     Well, there's nothing more to do now.
     """
@@ -187,13 +237,21 @@ label common_day2_hunt_accident_death:
     if current_character.text_id == "lad":
         
         """
-        He takes out a small vial and a syringe.
+        He takes out a small vial from his bag.
 
-        He fills the syringe in. Then, without hesitation, he injects himself.
+        Without a word, he pulls the cork and drinks it down.
 
-        Then he does it a second time.
+        Then another.
 
-        And a third.
+        And another.
+        """
+
+    elif current_character.text_id == "doctor":
+
+        """
+        Time for one last hurrah.
+
+        I take a few vials from my bag and drink them down as quickly as I can.
         """
 
     doctor """
@@ -247,7 +305,6 @@ label common_day2_hunt_accident_death:
 
     Yet, in a way, this feels like justice.
     """
-
 
 
 
