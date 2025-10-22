@@ -143,6 +143,18 @@ label common_day2_breakfast_follow_doctor_lad_host:
 
     elif current_character.text_id == "doctor":
 
+        if doctor_details.important_choices.is_unlocked('broken_offended'):
+
+            """
+            I feel somewhat uneasy. Before me lies the body of a man who was rather cross with me the last time we spoke.
+            
+            And now he is dead.
+            
+            Well, it is not the first time that has happened to me, and I daresay it will not be the last.
+            
+            Still, I cannot help feeling bad about it.
+            """
+
         """
         I examine the body carefully for signs of foul play. Nothing obvious.
 
