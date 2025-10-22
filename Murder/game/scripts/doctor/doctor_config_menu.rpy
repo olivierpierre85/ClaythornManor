@@ -26,11 +26,22 @@ label doctor_config_menu:
         TimedMenuChoice('What room are you in?', 'lad_generic_room_friday', 10, condition = condition_friday_dinner),
         TimedMenuChoice('What room are you in?', 'lad_generic_room_doctor', 10, condition = "not " + condition_friday_dinner),
         TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_friday_dinner', 10, condition = condition_friday_dinner),
-        TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_friday', 10, condition = "not " + condition_friday_dinner),
-        # TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
-        # TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Hunt')"),
+        TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_friday_doctor', 10, condition = "not " + condition_friday_dinner + " and not " + condition_saturday_hunt),
+        TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_saturday_hunt_doctor', 0, keep_alive = True, next_menu='lad_generic_other_guests_menu_doctor', condition = condition_saturday_hunt),
         TimedMenuChoice("You don't have anymore questions for him", 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "lad")
+
+    $ lad_generic_other_guests_menu_doctor = TimedMenu("lad_generic_other_guests_menu_doctor", [
+        # During the hunt
+        TimedMenuChoice('What do you think of Samuel Manning?', 'lad_generic_drunk_hunt_doctor', 10, condition = condition_saturday_hunt),
+        TimedMenuChoice('What do you think of Sushil Sinha?', 'lad_generic_captain_hunt_doctor', 10, condition = condition_saturday_hunt),
+        TimedMenuChoice('What do you think of Lady Claythorn?', 'lad_generic_host_hunt_doctor', 10, condition = condition_saturday_hunt),
+        TimedMenuChoice('What do you think of Rosalind Marsh,', 'lad_generic_nurse_hunt_doctor', 10, condition = condition_saturday_hunt),
+        TimedMenuChoice('What do you think of Thomas Moody?', 'lad_generic_broken_hunt_doctor', 10, condition = condition_saturday_hunt),
+        TimedMenuChoice('What do you think of Amelia Baxter?', 'lad_generic_psychic_hunt_doctor', 10, condition = condition_saturday_hunt),
+        # Always Generic 
+        TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "lad")s
 
     #---------------------------------------------------------------------
     # NURSE

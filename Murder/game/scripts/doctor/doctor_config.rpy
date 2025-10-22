@@ -23,7 +23,12 @@ label init_doctor:
             # Evening day 1
             "broken_offended": 0,
             "day1_evening_billiard_room_visited" : False,
-            "attic_visited": False
+            "attic_visited": False,
+            "asked_about_psychic": False,
+
+            # HUNt
+            "bored_by_lad": 0,
+
 
         }
 

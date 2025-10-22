@@ -52,9 +52,19 @@ label doctor_day2_hunt_accident:
 
     call change_time(12,30)
 
-    """
-    After a while, we are ready to resume.
-    """
+    if doctor_details.saved_variables['bored_by_lad'] > 1:
+
+        """
+        Well, that was hardly the most stimulating conversation.
+
+        Still, I suppose we're ready to keep going with the hunt.
+        """
+
+    else:
+
+        """
+        After a short while, we're ready to keep going with the hunt.
+        """
 
     call common_day2_hunt_accident_footman_1
 
@@ -118,4 +128,3 @@ label doctor_day2_hunt_accident:
         """
 
     jump doctor_ending_shot_by_drunk
-
