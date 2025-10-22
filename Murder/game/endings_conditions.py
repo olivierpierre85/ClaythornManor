@@ -31,9 +31,11 @@ def cond_psychic_shot(toggles):
 def cond_psychic_escape(toggles):
     return toggles.get('leave_manor', False) and not toggles.get('steal_gun', False)
 
-
 def cond_doctor_overdose(toggles):
-    return toggles.get('laudanum_extra_1', False)
+    return not toggles.get('flirt', False) and not toggles.get('book_opium', False) and not toggles.get('book_mystery', False)
+
+def cond_doctor_shot_by_drunk(toggles):
+    return not toggles.get('hunt', False)
 
 
 # Create the conditions dictionary.
@@ -50,4 +52,5 @@ CONDITIONS_DICT = {
     "psychic_escape": cond_psychic_escape,
     
     "doctor_overdose": cond_doctor_overdose,
+    "doctor_shot_by_drunk": cond_doctor_shot_by_drunk,
 }

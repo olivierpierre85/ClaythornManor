@@ -61,6 +61,14 @@ label init_doctor:
                 chapters=['saturday_morning'],
                 relevant_chapters=['saturday_morning', 'saturday_afternoon', 'saturday_evening'],
             ),
+            CharacterInformation(
+                0, "hunt",
+                "You joined the hunt",
+                content_negative="You avoided the hunt",
+                image_file="hunt",
+                chapters=['saturday_morning'],
+                relevant_chapters=['saturday_morning', 'saturday_afternoon_no_hunt'],
+            ),
         ])
 
         doctor_objects = CharacterObjectList([

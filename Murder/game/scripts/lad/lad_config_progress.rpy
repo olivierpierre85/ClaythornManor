@@ -25,6 +25,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "gunned_down", "end"),
             ],
+            # 3
             [
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_corner),
@@ -37,6 +38,7 @@ label lad_config_progress:
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "fell", "end"),
             ],
+            #4
             [
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_empty),
