@@ -51,6 +51,7 @@ screen progress:
                 hbox:
                     yalign 0
                     hbox:
+                        yoffset 25
                         spacing 20
                         xalign 0.0
                         # Character choice list
@@ -74,103 +75,141 @@ screen progress:
                                         if not tutorial_on:
                                             action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
 
-                    hbox:
+                    vbox:
                         xpos 50
                         vbox:
-                            yminimum 120
-                            xminimum 260
-                            yoffset -20
+                            # yminimum 120
+                            # xminimum 260
+                            yoffset -30
                             xoffset 0
-                            text current_storyline.real_name + "'s :":
+                            xalign 0.5
+                            # text current_storyline.real_name + "'s :":
+                            text current_storyline.real_name:
                                 font gui.name_text_font
                                 color gui.accent_color
-                        vbox:
-                            yminimum 120
-                            xminimum 200
-                            yoffset -20
-                            xoffset 0
-                            text "Description":
-                            # text current_storyline.real_name + "'s Description":
-                                font gui.name_text_font
-                                color gui.accent_color
+                        hbox:
+                            # TODO REDO ENTIRELY
+                            vbox:
+                                yminimum 120
+                                xminimum 260
+                                yoffset -20
+                                xoffset 0
+                                text "Endings":
+                                    font gui.name_text_font
+                                    color gui.accent_color
+                                    size 28
 
-                            hbox:
-                                yoffset 10
-                                spacing 15
+                                hbox:
+                                    yoffset 10
+                                    spacing 15
 
-                                imagebutton:
-                                    yoffset 2
-                                    mouse "hover"
-                                    idle "images/info_cards/everything_completed.png"
-                                    action ShowMenu("character_details", current_storyline)
-
-                                vbox:
-                                    textbutton "6/12":
-                                        text_size 24
-                                        text_font gui.name_text_font
-                                        text_color gui.highlight_color
-                                    bar:
-                                        yalign 0.5
-                                        value current_storyline.get_character_progress() 
-                                        range 100
-                                        xmaximum 150
-                                        style 'progress_bar'
-
-                            # hbox:
-                            #     yoffset 10
-                            #     spacing 15
-                            #     for ending in current_storyline.endings.get_list():
-                            #         imagebutton:
-                            #             if ending.locked:
-                            #                 idle "images/info_cards/question_mark_bw.png"
-                            #             else: 
-                            #                 idle ending.image_file
-                            #                 if not tutorial_on:
-                            #                     if ending.is_intuition:
-                            #                         tooltip str(ending.content + " {image=images/ui/intuition_icon.png}")  
-                            #                     else:
-                            #                         tooltip str(ending.content)  
-                            #                     action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip    
-                        
-                        vbox:
-                            yminimum 120
-                            yoffset -20
-                            xoffset 50
-                            text "Choices & Discoveries":
-                                font gui.name_text_font
-                                color gui.accent_color
-                            
-                            hbox:
-                                yoffset 10
-                                spacing 15
-                                $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy.deepcopy(current_character.saved_variables), ending=False)
-
-                                imagebutton:
-                                    yoffset 2
-                                    mouse "hover"
-                                    if not tutorial_on and current_character == current_storyline:
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
-                                    if current_storyline.is_everything_completed():
+                                    imagebutton:
+                                        yoffset 2
+                                        mouse "hover"
                                         idle "images/info_cards/everything_completed.png"
-                                    else:
-                                        idle "images/info_cards/everything_completed_bw.png"
+                                        action ShowMenu("character_details", current_storyline)
+
+                                    vbox:
+                                        textbutton "6/13":
+                                            text_size 22
+                                            text_font gui.name_text_font
+                                            text_color gui.highlight_color
+                                        bar:
+                                            yalign 0.5
+                                            value current_storyline.get_character_progress() 
+                                            range 100
+                                            xmaximum 150
+                                            style 'progress_bar'
+
+                            vbox:
+                                yminimum 120
+                                xminimum 200
+                                yoffset -20
+                                xoffset 0
+                                text "Description":
+                                # text current_storyline.real_name + "'s Description":
+                                    font gui.name_text_font
+                                    color gui.accent_color
+                                    size 28
+
+                                hbox:
+                                    yoffset 10
+                                    spacing 15
+
+                                    imagebutton:
+                                        yoffset 2
+                                        mouse "hover"
+                                        idle "images/info_cards/everything_completed.png"
+                                        action ShowMenu("character_details", current_storyline)
+
+                                    vbox:
+                                        textbutton "6/12":
+                                            text_size 22
+                                            text_font gui.name_text_font
+                                            text_color gui.highlight_color
+                                        bar:
+                                            yalign 0.5
+                                            value current_storyline.get_character_progress() 
+                                            range 100
+                                            xmaximum 150
+                                            style 'progress_bar'
+
+                                # hbox:
+                                #     yoffset 10
+                                #     spacing 15
+                                #     for ending in current_storyline.endings.get_list():
+                                #         imagebutton:
+                                #             if ending.locked:
+                                #                 idle "images/info_cards/question_mark_bw.png"
+                                #             else: 
+                                #                 idle ending.image_file
+                                #                 if not tutorial_on:
+                                #                     if ending.is_intuition:
+                                #                         tooltip str(ending.content + " {image=images/ui/intuition_icon.png}")  
+                                #                     else:
+                                #                         tooltip str(ending.content)  
+                                #                     action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip    
+                            
+                            vbox:
+                                yminimum 120
+                                yoffset -20
+                                xoffset 50
+                                text "Choices & Discoveries":
+                                    font gui.name_text_font
+                                    color gui.accent_color
+                                    size 28
                                 
-                                $ unlocked = current_storyline.get_total_unlocked_discoveries()
-                                $ total    = current_storyline.get_total_discoveries()
-                                if current_storyline.is_everything_completed():
-                                    textbutton "[unlocked]/[total]":
-                                        text_size 56
-                                        text_font gui.name_text_font
-                                        text_color gui.highlight_color
+                                hbox:
+                                    yoffset 10
+                                    spacing 15
+                                    $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy.deepcopy(current_character.saved_variables), ending=False)
+
+                                    imagebutton:
+                                        yoffset 2
+                                        mouse "hover"
                                         if not tutorial_on and current_character == current_storyline:
                                             action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
-                                else:
-                                    textbutton "{color=#fff}[unlocked]{/color}/[total]":
-                                        text_size 56
-                                        text_font gui.name_text_font
-                                        text_color gui.accent_color
-                                        if not tutorial_on and current_character == current_storyline:
-                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                        if current_storyline.is_everything_completed():
+                                            idle "images/info_cards/everything_completed.png"
+                                        else:
+                                            idle "images/info_cards/everything_completed_bw.png"
+                                    
+                                    $ unlocked = current_storyline.get_total_unlocked_discoveries()
+                                    $ total    = current_storyline.get_total_discoveries()
+                                    if current_storyline.is_everything_completed():
+                                        textbutton "[unlocked]/[total]":
+                                            text_size 56
+                                            text_font gui.name_text_font
+                                            text_color gui.highlight_color
+                                            if not tutorial_on and current_character == current_storyline:
+                                                action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                    else:
+                                        textbutton "{color=#fff}[unlocked]{/color}/[total]":
+                                            text_size 56
+                                            text_font gui.name_text_font
+                                            text_color gui.accent_color
+                                            if not tutorial_on and current_character == current_storyline:
+                                                action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                 vbox:
 
                     xsize 1700
@@ -227,6 +266,7 @@ screen progress:
                     
                     for line_index, line in enumerate(current_storyline.progress):
                         hbox:
+                            yoffset -20
                             xalign 0
                             for chapter_index, chapter in enumerate(line):
                                 if chapter.chapter_type == "image":
