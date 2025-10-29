@@ -96,45 +96,61 @@ screen progress:
                                                 action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip    
                         
                         vbox:
+                            # For TEST Description here
                             yminimum 120
                             # Params for intuition
                             yoffset -20
                             xoffset 50
-                            text "Choices & Discoveries":
+                            text "Description":
                                 font gui.name_text_font
                                 color gui.accent_color
-                            
-                            hbox:
-                                yoffset 10
-                                spacing 15
-                                $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy.deepcopy(current_character.saved_variables), ending=False)
 
-                                imagebutton:
-                                    yoffset 2
-                                    mouse "hover"
-                                    if not tutorial_on and current_character == current_storyline:
-                                        action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
-                                    if current_storyline.is_everything_completed():
-                                        idle "images/info_cards/everything_completed.png"
-                                    else:
-                                        idle "images/info_cards/everything_completed_bw.png"
+                            imagebutton:
+                                yoffset 2
+                                mouse "hover"
+                                action ShowMenu("character_details", current_storyline)
+                                idle "images/info_cards/everything_completed.png"
+
+
+                            # yminimum 120
+                            # # Params for intuition
+                            # yoffset -20
+                            # xoffset 50
+                            # text "Choices & Discoveries":
+                            #     font gui.name_text_font
+                            #     color gui.accent_color
+                            
+                            # hbox:
+                            #     yoffset 10
+                            #     spacing 15
+                            $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy.deepcopy(current_character.saved_variables), ending=False)
+
+                            #     imagebutton:
+                            #         yoffset 2
+                            #         mouse "hover"
+                            #         if not tutorial_on and current_character == current_storyline:
+                            #             action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                            #         if current_storyline.is_everything_completed():
+                            #             idle "images/info_cards/everything_completed.png"
+                            #         else:
+                            #             idle "images/info_cards/everything_completed_bw.png"
                                 
-                                $ unlocked = current_storyline.get_total_unlocked_discoveries()
-                                $ total    = current_storyline.get_total_discoveries()
-                                if current_storyline.is_everything_completed():
-                                    textbutton "[unlocked]/[total]":
-                                        text_size 56
-                                        text_font gui.name_text_font
-                                        text_color gui.highlight_color
-                                        if not tutorial_on and current_character == current_storyline:
-                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
-                                else:
-                                    textbutton "{color=#fff}[unlocked]{/color}/[total]":
-                                        text_size 56
-                                        text_font gui.name_text_font
-                                        text_color gui.accent_color
-                                        if not tutorial_on and current_character == current_storyline:
-                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                            #     $ unlocked = current_storyline.get_total_unlocked_discoveries()
+                            #     $ total    = current_storyline.get_total_discoveries()
+                            #     if current_storyline.is_everything_completed():
+                            #         textbutton "[unlocked]/[total]":
+                            #             text_size 56
+                            #             text_font gui.name_text_font
+                            #             text_color gui.highlight_color
+                            #             if not tutorial_on and current_character == current_storyline:
+                            #                 action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                            #     else:
+                            #         textbutton "{color=#fff}[unlocked]{/color}/[total]":
+                            #             text_size 56
+                            #             text_font gui.name_text_font
+                            #             text_color gui.accent_color
+                            #             if not tutorial_on and current_character == current_storyline:
+                            #                 action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                 vbox:
 
                     xsize 1700
