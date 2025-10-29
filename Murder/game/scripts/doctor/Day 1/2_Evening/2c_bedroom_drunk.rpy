@@ -68,7 +68,7 @@ label doctor_day1_evening_bedroom_drunk_enter:
 
     call run_menu( 
         TimedMenu("doctor_day1_evening_bedroom_drunk_enter", [
-            TimedMenuChoice("Do not risk your life — leave this place", "doctor_day1_evening_bedroom_drunk_leave_manor", 20, early_exit=True),
+            TimedMenuChoice("Do not risk your life — leave this place", "doctor_day1_evening_bedroom_drunk_leave_manor", 20, early_exit=True, next_menu="doctor_day1_evening_bedroom_drunk_leave_manor"),
             TimedMenuChoice("Do not risk losing the money — stay", "doctor_day1_evening_bedroom_drunk_stay", early_exit=True),
         ])
     )
@@ -79,209 +79,209 @@ label doctor_day1_evening_bedroom_drunk_enter:
 label doctor_day1_evening_bedroom_drunk_leave_manor:
 
     """
-    Why am I even considering staying here.
+    Why am I even considering staying here?
 
-    I should leave now, and warn everyone about this.
+    I should leave at once and warn the others.
 
-    I believe that they should all be gathered in the billiard room.
+    I believe they are all gathered in the billiard room.
     """
 
     $ change_room("billiard_room") 
     
     """
-    Indeed I find most people here gathered around Captain Sinha.
+    Indeed, I find most of them assembled around Captain Sinha.
 
     I interrupt him.
     """
 
     doctor """
-    Sorry Captain, but I have something that I think you should see.
+    Pardon me, Captain, but I have something you should see.
     """
 
     """
-    I hand the letter to him.
+    I hand him the letter.
 
-    And he reads it aloud for the assembly.
-    """
-
-    captain """
-    What's the meaning of this? 
-
-    Where did you find this?
-    """
-
-    doctor """
-    In Samuel's Manning room.
+    He reads it aloud to the assembled company.
     """
 
     captain """
-    Really, what were you doing there?
+    What is the meaning of this?
+
+    Where did you find it?
     """
 
     doctor """
-    Well, the door was open, and I was...
-    """
-
-    drunk """
-    Wait? You went into my room?
-
-    What made you think you do such a thing?
-    """
-
-    doctor """
-    It doesn't matter now, how can you explain that letter?
-    """
-
-    drunk """
-    I've never seen this letter before.
-
-    It's not mine.
-    """
-
-    doctor """
-    Really? And we are supposed to believe you?
-    """
-
-    drunk """
-    I don't think anyone should be believing you.
-
-    Someone who thinks it appropriate to enter people's room.
-
-    Unless you didn't enter my room, you may have written this yourself.
-    """
-
-    doctor """
-    Why would I have done that, this makes no sense at all.
-    """
-
-    drunk """
-    No less sense that what you're implying doctor.
-
-    Do you really expect someone here to believe you?
-    """
-
-    """
-    I look around the room and see that everyone is looking at us.
-
-    They have an air of perplexity, nobody seems to know what to do about this exchange.
-
-    We remain silent a moment then Captain sinha starts speaking.
+    In Samuel Manning's room.
     """
 
     captain """
-    There is something wrong here, but I can't say whose at fault.
+    Really? And what were you doing there?
     """
 
     doctor """
-    Clearly it can't be me, look at Samuel Manning.
-
-    Is he even drunk anymore?
+    The door was open, and I was—
     """
 
     drunk """
-    What makes you say I was drunk?
+    Wait— you went into my room?
 
-    Beside, I can gather my wits when needs be.
+    What gave you the right to do such a thing?
+    """
+
+    doctor """
+    That is not the issue. How do you explain this letter?
+    """
+
+    drunk """
+    I have never seen it before.
+
+    It isn't mine.
+    """
+
+    doctor """
+    Truly? And we are supposed to take you at your word?
+    """
+
+    drunk """
+    I don't see why anyone should believe you either.
+
+    A man who thinks it proper to barge into another's room.
+
+    Unless, of course, you did not enter it at all— and wrote this yourself.
+    """
+
+    doctor """
+    Why on earth would I do that? It makes no sense.
+    """
+
+    drunk """
+    No less sense than what you're implying, Doctor.
+
+    Do you truly expect anyone here to believe you?
+    """
+
+    """
+    I glance around the room. All eyes are upon us.
+
+    The others look perplexed— unsure what to make of the exchange.
+
+    Silence lingers until Captain Sinha finally speaks.
     """
 
     captain """
-    Stop now!
+    There is something amiss here, though I cannot tell who is at fault.
+    """
 
-    I don't understand any of this. We should think about this with a rested head.
-    
-    Lady Claythorn, what do you think?
+    doctor """
+    Surely it cannot be me. Just look at Samuel Manning.
+
+    Is he even sober enough to make sense?
+    """
+
+    drunk """
+    What makes you say I am drunk?
+
+    I can gather my wits when the occasion calls for it.
+    """
+
+    captain """
+    Enough, both of you!
+
+    I do not understand any of this. We should think it over with cooler heads.
+
+    Lady Claythorn, what do you make of it?
     """
 
     """
-    Our is visibly shook, yet she manages to answer.
+    Our hostess is visibly shaken, yet manages to reply.
     """
 
     host """
-    I .. I don't know.
+    I… I don't know.
 
-    I am not sure who to believe.
+    I'm not certain whom to believe.
 
-    What do you think we should do Captain?
+    What do you suggest, Captain?
     """
 
     captain """
-    Well, we won't solve this in a few seconds, this requires thoughts.
+    We shan't settle this now. It requires thought.
 
-    I think we should lock those two in their room until we reach a conclusion.
+    I propose we confine the two of you to your rooms until we reach a conclusion.
     """
 
     doctor """
     What? No!
 
-    I must leave, and right now. I am not safe here.
+    I must leave this place at once. I am not safe here.
     """
 
     captain """
-    It is very late to leave now, besides, the storm will make the journey dangerous.
+    It's far too late to leave now. The storm makes travel dangerous.
 
     You'll be safer in your room.
     """
 
     """
-    I pounder that for a second. It is true that leaving now would be risky.
+    I ponder that for a moment. It is true that leaving now would be perilous.
 
-    Yet, staying in my room doesn't feel particulalrly safe ether.
+    Yet staying in my room hardly feels safer.
 
-    Everyone is looking at me with unease, I can tell they don't really believe me.
+    The others watch me uneasily; I can tell they do not quite believe me.
     """
 
     doctor """
-    Fine, I'll go to my room.
+    Very well, I'll go to my room.
 
-    But I want your word you'll let me leave tomorrow at the earliest.
+    But I want your word that I may leave at first light.
 
-    I don't want to remain one second more that it is necessary.
+    I do not wish to remain here a moment longer than necessary.
     """
 
     captain """
-    You have my word doctor.
-    
-    And what about you Mister Manning?
+    You have my word, Doctor.
+
+    And you, Mr Manning?
     """
 
     drunk """
-    All right, I'll go to my room too.
+    All right, I'll go to my room as well.
 
-    It's late anyway.
+    It's late enough.
     """
 
     captain """
-    Well it's decided, please follow me Doctor Baldwin.
+    Then it's settled. Please, follow me, Doctor Baldwin.
     """
 
     """
-    Captain Sinha and the footman come with me to my room.
+    Captain Sinha and the footman escort me to my room.
 
-    The butler and Lady Claythorn follow Samuel Manning to his.
+    The butler and Lady Claythorn accompany Samuel Manning to his.
 
-    I am not reassured, but I feel like I have no other choice.
+    I am far from reassured, yet see no alternative.
 
-    I enter my room while the butler and Captain Sinha stay behind.
+    I enter my room as the Captain and butler remain outside.
     """
 
     $ change_room("bedroom_doctor")
 
     captain """
-    Sorry about this doctor Baldwin. I am sure we will reach an understanding soon enough.
+    My apologies, Doctor Baldwin. I'm sure we shall sort this out soon enough.
 
-    In the meantime we will lock you in here.
+    In the meantime, we'll have to lock you in.
     """
 
     play sound door_locked
 
     """
-    Well, I don't want to wait doing nothing, so I barricade myself in case someone I don't trust comes.
+    I have no intention of sitting idly by, so I barricade the door in case someone I mistrust decides to pay a visit.
     """
 
     play sound moving_furniture
 
     """
-    NOw all I have to do is wait.
+    Now all I can do is wait.
     """
     
     call wait_screen_transition()
@@ -289,48 +289,115 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     call change_time(23,30)
 
     """
-    After a very long time.
-
-    Someone knocks at my door.
+    After what feels like hours, someone knocks at my door.
     """
 
     play sound door_knock
 
     captain """
-    Doctor Baldwin, after some discussion, we've decided that you may be right.
+    Doctor Baldwin, after some discussion, we've decided you may be right.
 
-    So we will all leave tomorrow morning.
+    We shall all leave in the morning.
 
-    Lady Claythorn has agreed to give our present right before.
+    Lady Claythorn has agreed to hold our planned presentation beforehand.
 
-    In the meantime, we will all feel safer if you and Samuel Manning stayed there for the night.
+    For the time being, we'll all rest easier if you and Mr Manning stay in your rooms for the night.
     """
 
     doctor """
-    Al right, I already barricaded myself anyway.
+    Very well. I've barricaded myself anyway.
     """
 
     captain """
-    Good choice doctor, again I am sorry for the inconvenience.
+    A wise precaution, Doctor. Again, my apologies.
     """
 
     doctor """
-    That is all right, have a good night captain.
+    Of course, I understand, Captain. Good night.
     """
 
     captain """
-    Good night Doctor.
+    Good night, Doctor.
     """
 
     """
-    Well, at least this nightmare will be over soon.
+    At least this dreadful business will soon be over.
+
+    What am I to do now? 
+    
+    I don't think I could sleep in this state.
+
+    And maybe it is better to stay alert.
+
+    But on the other hand, I think I am protected enough here.
     """
 
-    # TODO: Also death by OD????? Easier choice.
-    # Or do something else?
+    call run_menu( 
+        TimedMenu("doctor_day1_evening_bedroom_drunk_leave_manor", [
+            TimedMenuChoice("I know something that will help me sleep", "doctor_day1_evening_bedroom_drunk_leave_manor_sleep", early_exit=True),
+            TimedMenuChoice("I should stay awake to be safe", "doctor_day1_evening_bedroom_drunk_leave_manor_awake", early_exit=True),
+        ])
+    )
 
-    # TODO jump to ending
     return
+
+label doctor_day1_evening_bedroom_drunk_leave_manor_sleep:
+
+    """
+    I am too stressed out, I can't resist the urge to calm my nerves.
+
+    Despite the risk, I decide that it is better that I relax myself.
+    """
+
+    jump doctor_laudanum_death
+
+
+label doctor_day1_evening_bedroom_drunk_leave_manor_awake:
+
+    """
+    I lie on my bed, not expecting to close my eyes before morning.
+
+    Nevertheless, after a few hours, I doze off, utterly exhausted.
+    """
+
+    call wait_screen_transition()
+
+    play sound fire loop
+
+    """
+    I am awakened by a strange noise.
+
+    What is that?
+
+    I realise I cannot breathe.
+    """
+
+    play sound woman_cough
+
+    """
+    Smoke.
+
+    Something is burning.
+
+    I spring to my feet.
+
+    The walls of the room are ablaze.
+
+    Smoke fills the air, I can scarcely see a thing.
+
+    I rush towards the door, but the furniture I placed against it blocks my way.
+
+    I summon all my strength to move it, yet I have no energy left.
+
+    My head spins.
+
+    I...
+    """
+
+    play sound body_fall
+
+    jump doctor_ending_burn
+
 
 
 label doctor_day1_evening_bedroom_drunk_stay:

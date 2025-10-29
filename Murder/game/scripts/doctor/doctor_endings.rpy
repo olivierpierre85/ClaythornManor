@@ -1,3 +1,21 @@
+label doctor_ending_burn:
+
+    $ doctor_details.endings.unlock('burned')
+    $ doctor_details.add_ending_checkpoint(ending=doctor_details.endings.get_item('burned'))
+    
+    call death_screen_transition
+
+    """
+    A dreadful fire consumed the manor.
+
+    Trapped in your room, there was no possible way to escape.
+
+    What a ghastly end.
+    """
+
+    jump ending_generic
+
+
 label doctor_ending_overdose:
 
     $ doctor_details.endings.unlock('overdose')
