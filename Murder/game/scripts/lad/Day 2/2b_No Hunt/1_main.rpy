@@ -219,6 +219,7 @@ label lad_day2_no_hunt_bedroom_captain_enter:
 
     return
 
+
 label lad_day2_no_hunt_bedroom_drunk_enter:
 
     """

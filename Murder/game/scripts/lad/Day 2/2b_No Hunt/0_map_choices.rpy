@@ -252,15 +252,11 @@ label lad_day2_no_hunt_bedroom_host:
 
 
 # Drunk
+
+
 label lad_day2_no_hunt_bedroom_drunk:
 
-    call lad_bedroom_default
-
-    """
-    After knocking, the door slightly opens.
-
-    It was not even closed.
-    """
+    call lad_bedroom_drunk_default
 
     call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_drunk', 'lad_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
 

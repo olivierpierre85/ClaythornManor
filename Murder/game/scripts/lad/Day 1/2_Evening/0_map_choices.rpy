@@ -151,9 +151,26 @@ label lad_day1_evening_bedroom_host:
     call lad_bedroom_stay_away
     return
 
-label lad_day1_evening_bedroom_drunk:
+label lad_bedroom_drunk_default:
+    
     call lad_bedroom_default
+
+    """
+    After knocking, the door slightly opens.
+
+    It was not even closed.
+
+    It would be easy to go in if I wanted to.
+    """
+
+    return
+
+label lad_day1_evening_bedroom_drunk:
+    
+    call lad_bedroom_drunk_default
+
     call lad_bedroom_stay_away
+
     return
 
 label lad_day1_evening_bedroom_broken:

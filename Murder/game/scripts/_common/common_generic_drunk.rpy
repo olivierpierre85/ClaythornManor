@@ -6,7 +6,7 @@ label drunk_letter_first_part:
     letter """
     In case you haven't recognized him yet, the doctor invited this weekend is the same one who treated your wife years ago.
 
-    She never recovered, due to his inadequate treatment and withholding of medication for his own benefit.
+    He is the reason she never recovered, due to his inadequate treatment and withholding of medication for his own benefit.
 
     Do what you will with this information.
     """

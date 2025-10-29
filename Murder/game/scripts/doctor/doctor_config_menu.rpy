@@ -41,7 +41,7 @@ label doctor_config_menu:
         TimedMenuChoice('What do you think of Amelia Baxter?', 'lad_generic_psychic_hunt_doctor', 10, condition = condition_saturday_hunt),
         # Always Generic 
         TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
-    ], image_right = "lad")s
+    ], image_right = "lad")
 
     #---------------------------------------------------------------------
     # NURSE

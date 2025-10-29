@@ -27,7 +27,7 @@ label doctor_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_downstairs_default', 0, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_downstairs_default', 0, room='gun_room'),
             # Specific actions
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="doctor_day1_evening_bedroom_drunk"),
             TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 0, room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
@@ -318,8 +318,6 @@ label doctor_day1_evening_bedroom_drunk:
     """
     My knocking slightly opens the door.
 
-    Samuel Manning didn't bother closing it.
-
     From the hallway, I can see part of the room.
 
     It is in a dreadful state.
@@ -327,20 +325,22 @@ label doctor_day1_evening_bedroom_drunk:
     Should I take a peek?
     """
 
-    if doctor_details.endings.is_unlocked('drunk_dangerous'):
+    if doctor_details.endings.is_unlocked('shot_by_drunk'):
         
         """
-        I know I should close this door.
+        I know and it's probably a bad idea and that I should close this door.
 
         But I've got an intrusive feeling that if don't enter, something bad will happen.
 
         That is obviously silly, but...
         """
         
-        call run_menu(TimedMenu("doctor_day1_evening_bedroom_drunk", [
-            TimedMenuChoice('Enter the room', 'doctor_day1_evening_bedroom_drunk_enter', 20, early_exit=True),
-            TimedMenuChoice('Close the door', 'doctor_day1_evening_bedroom_drunk_not_enter', early_exit=True),
-        ]))
+        call run_menu( 
+            TimedMenu("doctor_day1_evening_bedroom_drunk", [
+                TimedMenuChoice("Follow your intuition, they exist for a reason{{intuition}}", "doctor_day1_evening_bedroom_drunk_enter", 20, early_exit=True),
+                TimedMenuChoice("Don't be ridiculous, there is no such thing as premonition", "doctor_day1_evening_bedroom_drunk_not_enter", early_exit=True),
+            ])
+        )
 
     else:
 
@@ -352,7 +352,118 @@ label doctor_day1_evening_bedroom_drunk:
 
 
 label doctor_day1_evening_bedroom_drunk_enter:
-    # TODO: the doctor looks inside and find the LETTER, not burned yet. Allows him to confront the doctor
+
+    $ change_room("bedroom_drunk")
+
+    """
+    I step into the room.
+
+    It is a dreadful mess.
+
+    The bottles of whisky, some already emptied, give me a fair idea whose room this is.
+
+    There is no doubt that Samuel Manning sleeps here.
+    """
+    
+    $ unlock_map("bedroom_drunk")
+
+    $ play_music("mysterious")
+
+    """
+    I glance around, uncertain what I am hoping to find, when I notice a letter upon the desk.
+
+    I take it up.
+
+    The first part is written in a fine, elegant hand.
+    """
+
+    call drunk_letter_first_part
+
+    """
+    What on earth does this mean?
+
+    Who could have written such a thing?
+
+    Still, what troubles me most is the second part — barely legible, clearly added later by Samuel Manning himself.
+    """
+
+    call drunk_letter_second_part
+
+    """
+    My legs feel weak.
+
+    I sit on the edge of the bed, struggling to make sense of it all.
+
+    Someone in this house means me harm.
+
+    And they are trying to use Samuel Manning to hurt me.
+
+    I try to remember him, but I cannot say for certain that I ever treated his wife.
+
+    That does not mean the accusation is false. It is entirely possible I did, and have simply forgotten.
+
+    It must be someone who knows me well, yet I do not recall recognising anyone so far.
+
+    Then again, I have not been paying much attention.
+
+    But what should I do now?
+
+    The safe choice would be to leave this place at once.
+
+    But to make explain my choice, I might have to reveal what I found here, it could get messy.
+
+    And I can't risk losing the prize money, god knows I need it.
+
+    Also, it could be just a prank, or a mistake.
+
+    What should I do know?
+    """
+
+    $ doctor_details.objects.unlock("drunk_letter")
+
+    $ play_music("PREVIOUS")
+
+    return
+
+
+label doctor_day1_evening_bedroom_drunk_leave_manor:
+
+    """
+    Why am I even considering staying here.
+
+    I should leave now, and warn everyone about this.
+
+    I believe that they should all be gathered in the billiard room.
+    """
+
+    $ change_room("billiard_room") 
+    
+    """
+    Indeed I find most people here gathered around Captain Sinha.
+
+    I interrupt him.
+    """
+
+    doctor """
+    Sorry Captain, but I have something that I think you should see.
+    """
+
+    """
+    I hand the letter to him.
+    """
+
+    return
+
+
+label doctor_day1_evening_bedroom_drunk_stay:
+
+    """
+    I don't think that I am at a real great risk here.
+
+    So I'll stay, but I must be cautious from now on.
+
+    Especially around Samuel Manning.
+    """
 
     return
 
