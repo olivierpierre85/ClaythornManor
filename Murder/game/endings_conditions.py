@@ -37,6 +37,9 @@ def cond_doctor_overdose(toggles):
 def cond_doctor_shot_by_drunk(toggles):
     return not toggles.get('hunt', False)
 
+def cond_doctor_burned(toggles):
+    return not toggles.get('drunk_letter', False)
+
 
 # Create the conditions dictionary.
 CONDITIONS_DICT = {
@@ -53,4 +56,5 @@ CONDITIONS_DICT = {
     
     "doctor_overdose": cond_doctor_overdose,
     "doctor_shot_by_drunk": cond_doctor_shot_by_drunk,
+    "doctor_burned": cond_doctor_burned,
 }

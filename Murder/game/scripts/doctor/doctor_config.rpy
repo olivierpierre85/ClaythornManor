@@ -76,8 +76,8 @@ label init_doctor:
             ),
             CharacterInformation(
                 0, "drunk_letter",
-                "You broke into Samuel's Manning bedroom",
-                content_negative="You didn't break into Samuel's Manning bedroom",
+                "You saw the letter in Samuel's Manning bedroom",
+                content_negative="You didn't see the letter in Samuel's Manning bedroom",
                 image_file="drunk_letter",
                 chapters=['friday_evening'],
                 relevant_chapters=['saturday_morning'],
@@ -132,7 +132,8 @@ label init_doctor:
 
         doctor_endings = CharacterEndingList ([
             CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
-            CharacterInformation(3, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle", is_intuition=True, chapters=['saturday_evening']), 
+            CharacterInformation(2, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle", is_intuition=True, chapters=['saturday_evening']), 
+            CharacterInformation(3, "burned", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([

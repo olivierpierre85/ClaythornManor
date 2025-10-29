@@ -36,6 +36,8 @@ label doctor_day1_evening_bedroom_drunk_enter:
 
     call drunk_letter_second_part
 
+    $ doctor_details.objects.unlock("drunk_letter")
+
     """
     My legs feel weak.
 
@@ -344,12 +346,13 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
 label doctor_day1_evening_bedroom_drunk_leave_manor_sleep:
 
     """
-    I am too stressed out, I can't resist the urge to calm my nerves.
+    I am far too tense.
 
-    Despite the risk, I decide that it is better that I relax myself.
+    Despite the risk, I cannot resist the urge to calm my nerves.
     """
 
     jump doctor_laudanum_death
+
 
 
 label doctor_day1_evening_bedroom_drunk_leave_manor_awake:
