@@ -316,6 +316,7 @@ screen in_game_map_menu(timed_menu):
             # Used the * to show the choices already made, then remove the * 
             
             label [tooltip.replace('*', '')]:
+                yoffset -10
                 if "*" in tooltip:
                     text_color gui.accent_color
                 else:
