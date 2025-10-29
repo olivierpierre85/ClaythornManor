@@ -100,7 +100,234 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
 
     """
     I hand the letter to him.
+
+    And he reads it aloud for the assembly.
     """
+
+    captain """
+    What's the meaning of this? 
+
+    Where did you find this?
+    """
+
+    doctor """
+    In Samuel's Manning room.
+    """
+
+    captain """
+    Really, what were you doing there?
+    """
+
+    doctor """
+    Well, the door was open, and I was...
+    """
+
+    drunk """
+    Wait? You went into my room?
+
+    What made you think you do such a thing?
+    """
+
+    doctor """
+    It doesn't matter now, how can you explain that letter?
+    """
+
+    drunk """
+    I've never seen this letter before.
+
+    It's not mine.
+    """
+
+    doctor """
+    Really? And we are supposed to believe you?
+    """
+
+    drunk """
+    I don't think anyone should be believing you.
+
+    Someone who thinks it appropriate to enter people's room.
+
+    Unless you didn't enter my room, you may have written this yourself.
+    """
+
+    doctor """
+    Why would I have done that, this makes no sense at all.
+    """
+
+    drunk """
+    No less sense that what you're implying doctor.
+
+    Do you really expect someone here to believe you?
+    """
+
+    """
+    I look around the room and see that everyone is looking at us.
+
+    They have an air of perplexity, nobody seems to know what to do about this exchange.
+
+    We remain silent a moment then Captain sinha starts speaking.
+    """
+
+    captain """
+    There is something wrong here, but I can't say whose at fault.
+    """
+
+    doctor """
+    Clearly it can't be me, look at Samuel Manning.
+
+    Is he even drunk anymore?
+    """
+
+    drunk """
+    What makes you say I was drunk?
+
+    Beside, I can gather my wits when needs be.
+    """
+
+    captain """
+    Stop now!
+
+    I don't understand any of this. We should think about this with a rested head.
+    
+    Lady Claythorn, what do you think?
+    """
+
+    """
+    Our is visibly shook, yet she manages to answer.
+    """
+
+    host """
+    I .. I don't know.
+
+    I am not sure who to believe.
+
+    What do you think we should do Captain?
+    """
+
+    captain """
+    Well, we won't solve this in a few seconds, this requires thoughts.
+
+    I think we should lock those two in their room until we reach a conclusion.
+    """
+
+    doctor """
+    What? No!
+
+    I must leave, and right now. I am not safe here.
+    """
+
+    captain """
+    It is very late to leave now, besides, the storm will make the journey dangerous.
+
+    You'll be safer in your room.
+    """
+
+    """
+    I pounder that for a second. It is true that leaving now would be risky.
+
+    Yet, staying in my room doesn't feel particulalrly safe ether.
+
+    Everyone is looking at me with unease, I can tell they don't really believe me.
+    """
+
+    doctor """
+    Fine, I'll go to my room.
+
+    But I want your word you'll let me leave tomorrow at the earliest.
+
+    I don't want to remain one second more that it is necessary.
+    """
+
+    captain """
+    You have my word doctor.
+    
+    And what about you Mister Manning?
+    """
+
+    drunk """
+    All right, I'll go to my room too.
+
+    It's late anyway.
+    """
+
+    captain """
+    Well it's decided, please follow me Doctor Baldwin.
+    """
+
+    """
+    Captain Sinha and the footman come with me to my room.
+
+    The butler and Lady Claythorn follow Samuel Manning to his.
+
+    I am not reassured, but I feel like I have no other choice.
+
+    I enter my room while the butler and Captain Sinha stay behind.
+    """
+
+    $ change_room("bedroom_doctor")
+
+    captain """
+    Sorry about this doctor Baldwin. I am sure we will reach an understanding soon enough.
+
+    In the meantime we will lock you in here.
+    """
+
+    play sound door_locked
+
+    """
+    Well, I don't want to wait doing nothing, so I barricade myself in case someone I don't trust comes.
+    """
+
+    play sound moving_furniture
+
+    """
+    NOw all I have to do is wait.
+    """
+    
+    call wait_screen_transition()
+
+    call change_time(23,30)
+
+    """
+    After a very long time.
+
+    Someone knocks at my door.
+    """
+
+    play sound door_knock
+
+    captain """
+    Doctor Baldwin, after some discussion, we've decided that you may be right.
+
+    So we will all leave tomorrow morning.
+
+    Lady Claythorn has agreed to give our present right before.
+
+    In the meantime, we will all feel safer if you and Samuel Manning stayed there for the night.
+    """
+
+    doctor """
+    Al right, I already barricaded myself anyway.
+    """
+
+    captain """
+    Good choice doctor, again I am sorry for the inconvenience.
+    """
+
+    doctor """
+    That is all right, have a good night captain.
+    """
+
+    captain """
+    Good night Doctor.
+    """
+
+    """
+    Well, at least this nightmare will be over soon.
+    """
+
+    # TODO: Also death by OD????? Easier choice.
+    # Or do something else?
 
     # TODO jump to ending
     return
