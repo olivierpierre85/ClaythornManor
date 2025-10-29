@@ -224,7 +224,7 @@ screen in_game_map_menu(timed_menu):
 
                     new_hotspot = Hotspot(label, ix, room.area_points, room.id,active=is_active)
 
-                    if choice.already_chosen:
+                    if choice.is_already_chosen():
                         new_hotspot.description += "*"
 
                     break                  # we found a usable choice → stop scanning MAKE sure there is only 1 choice possible at a time
@@ -250,6 +250,7 @@ screen in_game_map_menu(timed_menu):
 
             label "Where do you want to go?":
                 style "confirm_prompt" # TODO specific styling
+                text_size 46
                 xalign 0.5
 
 
@@ -313,14 +314,14 @@ screen in_game_map_menu(timed_menu):
                 $ tooltip = "Click on a room to move there"
             
             # Used the * to show the choices already made, then remove the * 
-            if "*" in tooltip:
-                label [tooltip.replace('*', '')]:
+            
+            label [tooltip.replace('*', '')]:
+                if "*" in tooltip:
                     text_color gui.accent_color
-                    xalign 0.5
-            else:
-                label [tooltip]:
+                else:
                     text_color gui.highlight_color
-                    xalign 0.5
+                text_size 46
+                xalign 0.5
 
 # Python classes
 init -1 python:

@@ -28,7 +28,7 @@ label doctor_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_downstairs_default', 0, room='gun_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="doctor_day1_evening_bedroom_drunk"),
-            TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 0, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 0, next_menu="doctor_library_default", room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
                 'doctor_day1_evening_bedroom_psychic', 
