@@ -326,10 +326,10 @@ screen navigation(tag="menu"):
                 textbutton _("Map"):
                     if not tutorial_on:
                         action [SetVariable("last_menu_screen", "manor_map"), ShowMenu("manor_map")]
-            if seen_tutorial_description_hidden:
-                textbutton _("Characters"):
-                    if not tutorial_on:
-                        action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
+            # if seen_tutorial_description_hidden:
+            #     textbutton _("Characters"):
+            #         if not tutorial_on:
+            #             action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
             # textbutton _("Objects") action ShowMenu("objects")
             if seen_tutorial_progress:
                 textbutton _("Progress"):

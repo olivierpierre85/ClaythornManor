@@ -59,7 +59,10 @@ screen progress:
                                 mouse "hover" 
                                 if char.text_id == current_storyline.text_id:
                                     # idle "images/characters/side/side " + char.text_id +".png" at character_progress
-                                    idle "images/characters/side/side " + char.text_id + ".png" at selected_character
+                                    if char.is_character_unlocked():
+                                        idle "images/characters/side/side " + char.text_id + ".png" at selected_character
+                                    else:
+                                        idle "images/characters/side_bw/side " + char.text_id + " bw.png" at selected_character
                                 else:                             
                                     if char.is_character_unlocked():
                                         idle "images/characters/side/side " + char.text_id + ".png" at character_progress
@@ -68,36 +71,69 @@ screen progress:
                                             action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
                                     else:
                                         idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_progress
+                                        if not tutorial_on:
+                                            action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
 
                     hbox:
                         xpos 50
                         vbox:
                             yminimum 120
-                            xminimum 530
+                            xminimum 260
                             yoffset -20
                             xoffset 0
-                            text current_storyline.real_name + "'s Endings":
+                            text current_storyline.real_name + "'s :":
                                 font gui.name_text_font
                                 color gui.accent_color
+                        vbox:
+                            yminimum 120
+                            xminimum 200
+                            yoffset -20
+                            xoffset 0
+                            text "Description":
+                            # text current_storyline.real_name + "'s Description":
+                                font gui.name_text_font
+                                color gui.accent_color
+
                             hbox:
                                 yoffset 10
                                 spacing 15
-                                for ending in current_storyline.endings.get_list():
-                                    imagebutton:
-                                        if ending.locked:
-                                            idle "images/info_cards/question_mark_bw.png"
-                                        else: 
-                                            idle ending.image_file
-                                            if not tutorial_on:
-                                                if ending.is_intuition:
-                                                    tooltip str(ending.content + " {image=images/ui/intuition_icon.png}")  
-                                                else:
-                                                    tooltip str(ending.content)  
-                                                action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip    
+
+                                imagebutton:
+                                    yoffset 2
+                                    mouse "hover"
+                                    idle "images/info_cards/everything_completed.png"
+                                    action ShowMenu("character_details", current_storyline)
+
+                                vbox:
+                                    textbutton "6/12":
+                                        text_size 24
+                                        text_font gui.name_text_font
+                                        text_color gui.highlight_color
+                                    bar:
+                                        yalign 0.5
+                                        value current_storyline.get_character_progress() 
+                                        range 100
+                                        xmaximum 150
+                                        style 'progress_bar'
+
+                            # hbox:
+                            #     yoffset 10
+                            #     spacing 15
+                            #     for ending in current_storyline.endings.get_list():
+                            #         imagebutton:
+                            #             if ending.locked:
+                            #                 idle "images/info_cards/question_mark_bw.png"
+                            #             else: 
+                            #                 idle ending.image_file
+                            #                 if not tutorial_on:
+                            #                     if ending.is_intuition:
+                            #                         tooltip str(ending.content + " {image=images/ui/intuition_icon.png}")  
+                            #                     else:
+                            #                         tooltip str(ending.content)  
+                            #                     action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip    
                         
                         vbox:
                             yminimum 120
-                            # Params for intuition
                             yoffset -20
                             xoffset 50
                             text "Choices & Discoveries":
@@ -265,7 +301,10 @@ screen progress:
                                         if current_storyline.endings.is_unlocked(chapter.label):
                                             idle current_storyline.endings.get_item(chapter.label).image_file
                                             if not tutorial_on:
-                                                tooltip str(current_storyline.endings.get_item(chapter.label).content)  
+                                                if current_storyline.endings.get_item(chapter.label).is_intuition:
+                                                    tooltip str(current_storyline.endings.get_item(chapter.label).content + " {image=images/ui/intuition_icon.png}") 
+                                                else:
+                                                    tooltip str(current_storyline.endings.get_item(chapter.label).content)  
                                             # action SetVariable("action_needed_fix", True)
                                             mouse "hover"
                                             if not tutorial_on:

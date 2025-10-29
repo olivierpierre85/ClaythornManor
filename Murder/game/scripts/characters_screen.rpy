@@ -138,4 +138,4 @@ screen character_details(selected_char):
                     xalign 1.0 
                     yalign 0.0
                     xpos 1350
-                    action ShowMenu("characters")            
+                    action ShowMenu("progress")            
