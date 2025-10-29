@@ -47,6 +47,17 @@ screen progress:
             vbox:
                 xminimum 1920
                 xalign 0.5
+                vbox:
+                    # yminimum 120
+                    # xminimum 260
+                    yoffset -30
+                    # xoffset -100 
+                    xalign 0
+                    # text current_storyline.real_name + "'s :":
+                    text current_storyline.real_name:
+                        font gui.name_text_font
+                        color gui.accent_color
+                        size 46
                 # Character choice
                 hbox:
                     yalign 0
@@ -77,16 +88,16 @@ screen progress:
 
                     vbox:
                         xpos 50
-                        vbox:
-                            # yminimum 120
-                            # xminimum 260
-                            yoffset -30
-                            xoffset 0
-                            xalign 0.5
-                            # text current_storyline.real_name + "'s :":
-                            text current_storyline.real_name:
-                                font gui.name_text_font
-                                color gui.accent_color
+                        # vbox:
+                        #     # yminimum 120
+                        #     # xminimum 260
+                        #     yoffset -30
+                        #     xoffset 0
+                        #     xalign 0.5
+                        #     # text current_storyline.real_name + "'s :":
+                        #     text current_storyline.real_name:
+                        #         font gui.name_text_font
+                        #         color gui.accent_color
                         hbox:
                             # TODO REDO ENTIRELY
                             vbox:
