@@ -4,7 +4,7 @@ screen current_time:
     # Clock Background
     image "images/ui/clock/clock_2_small_new.png":
         xoffset 30
-        yoffset -40
+        yoffset -30
 
     # Clock Needles
     add "images/ui/clock/clock_hours.png" at rotate_hours(hours_angle)
@@ -14,7 +14,7 @@ screen current_time:
     frame:
         background "images/ui/clock/clock_plaque.png"
         xoffset 55
-        yoffset 180
+        yoffset 190
         # Picture Above plaque
         # xoffset 215
         # yoffset 130
@@ -56,12 +56,12 @@ screen current_time:
 
 transform rotate_hours( angle = 0 ):
     xoffset -16
-    yoffset -55
+    yoffset -45
     linear show_hours_movement rotate angle 
 
 transform rotate_minutes( angle = 0 ):
     xoffset -16
-    yoffset -55
+    yoffset -45
     linear show_minutes_movement rotate angle 
 
 # WAIT in the same room
