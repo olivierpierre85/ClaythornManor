@@ -142,7 +142,7 @@ screen progress:
                                                 text_color gui.accent_color
                                         bar:
                                             yalign 0.5
-                                            value current_storyline.get_character_progress() 
+                                            value current_storyline.get_character_progress_endings()
                                             range 100
                                             xmaximum 150
                                             style 'progress_bar'

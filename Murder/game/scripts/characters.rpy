@@ -410,6 +410,18 @@ init -100 python:
                     total += 1
             return total
 
+        def get_character_progress_endings(self):
+            total_info = self.get_total_endings()
+            total_unlocked = self.get_total_unlocked_endings()
+
+            if total_info == 0:
+                return 100
+            elif total_unlocked == 0:
+                return 0
+            else:
+                return int(total_unlocked / total_info * 100)
+
+
         def get_total_unlocked_discoveries(self):
             total = 0
             for item in self.important_choices:
