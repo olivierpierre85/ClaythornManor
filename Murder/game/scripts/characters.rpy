@@ -393,6 +393,22 @@ init -100 python:
             if self.get_total_unlocked_discoveries() == self.get_total_discoveries():
                 return True
             return False
+        
+        def is_all_endings_reached(self):
+            for ending in self.endings.information_list:
+                if ending.locked:
+                    return False
+            return True
+
+        def get_total_endings(self):
+            return len(self.endings.information_list)
+
+        def get_total_unlocked_endings(self):
+            total = 0
+            for ending in self.endings.information_list:
+                if not ending.locked:
+                    total += 1
+            return total
 
         def get_total_unlocked_discoveries(self):
             total = 0

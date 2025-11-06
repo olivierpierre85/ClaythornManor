@@ -121,13 +121,25 @@ screen progress:
                                     imagebutton:
                                         yoffset 2
                                         mouse "hover"
-                                        idle "images/info_cards/endings_curtains.png"
+                                        if current_storyline.is_all_endings_reached():
+                                            idle "images/info_cards/endings_curtains.png"
+                                        else:
+                                            idle "images/info_cards/endings_curtains_bw.png"
 
                                     vbox:
-                                        textbutton "6/13":
-                                            text_size 22
-                                            text_font gui.name_text_font
-                                            text_color gui.highlight_color
+                                        $ unlocked_endings = current_storyline.get_total_unlocked_endings()
+                                        $ total_endings    = current_storyline.get_total_endings()
+
+                                        if current_storyline.is_all_endings_reached():
+                                            textbutton "[unlocked_endings]/[total_endings]":
+                                                text_size 22
+                                                text_font gui.name_text_font
+                                                text_color gui.highlight_color
+                                        else:
+                                            textbutton "{color=#fff}[unlocked_endings]{/color}/[total_endings]":
+                                                text_size 22
+                                                text_font gui.name_text_font
+                                                text_color gui.accent_color
                                         bar:
                                             yalign 0.5
                                             value current_storyline.get_character_progress() 
@@ -204,9 +216,9 @@ screen progress:
                                         if not tutorial_on and current_character == current_storyline:
                                             action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                         if current_storyline.is_everything_completed():
-                                            idle "images/info_cards/everything_completed.png"
+                                            idle "images/info_cards/murder_board.png"
                                         else:
-                                            idle "images/info_cards/everything_completed_bw.png"
+                                            idle "images/info_cards/murder_board_bw.png"
                                     
                                     $ unlocked = current_storyline.get_total_unlocked_discoveries()
                                     $ total    = current_storyline.get_total_discoveries()
