@@ -43,24 +43,27 @@ screen progress:
     use game_menu(_("Storyline"), scroll="fixed"):
 
         hbox:
-            spacing 10
+            # spacing 10
             vbox:
                 xminimum 1920
                 xalign 0.5
-                vbox:
-                    # yminimum 120
-                    # xminimum 260
-                    yoffset -30
-                    # xoffset -100 
-                    xalign 0
+                # vbox:
+                #     # yminimum 120
+                #     # xminimum 260
+                #     yoffset -30
+                #     # xoffset -100 
+                #     xalign 0
                     # text current_storyline.real_name + "'s :":
-                    text current_storyline.real_name:
-                        font gui.name_text_font
-                        color gui.accent_color
-                        size 46
-                # Character choice
+                text current_storyline.real_name:
+                    font gui.name_text_font
+                    color gui.accent_color
+                    size 46
+                    yoffset -30
+                
                 hbox:
+                    yoffset -30
                     yalign 0
+                    # Character choice
                     hbox:
                         yoffset 25
                         spacing 20
@@ -88,6 +91,7 @@ screen progress:
 
                     vbox:
                         xpos 50
+                        yoffset 0
                         # vbox:
                         #     # yminimum 120
                         #     # xminimum 260
@@ -108,7 +112,7 @@ screen progress:
                                 text "Endings":
                                     font gui.name_text_font
                                     color gui.accent_color
-                                    size 28
+                                    size 36
 
                                 hbox:
                                     yoffset 10
@@ -117,8 +121,7 @@ screen progress:
                                     imagebutton:
                                         yoffset 2
                                         mouse "hover"
-                                        idle "images/info_cards/everything_completed.png"
-                                        action ShowMenu("character_details", current_storyline)
+                                        idle "images/info_cards/endings_curtains.png"
 
                                     vbox:
                                         textbutton "6/13":
@@ -141,7 +144,7 @@ screen progress:
                                 # text current_storyline.real_name + "'s Description":
                                     font gui.name_text_font
                                     color gui.accent_color
-                                    size 28
+                                    size 36
 
                                 hbox:
                                     yoffset 10
@@ -188,7 +191,7 @@ screen progress:
                                 text "Choices & Discoveries":
                                     font gui.name_text_font
                                     color gui.accent_color
-                                    size 28
+                                    size 36
                                 
                                 hbox:
                                     yoffset 10
