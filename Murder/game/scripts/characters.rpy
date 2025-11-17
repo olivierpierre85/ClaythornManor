@@ -31,6 +31,10 @@ style progress_bar:
     left_bar Frame("gui/bar/progress_bar_left.png", gui.bar_borders)
     right_bar Frame("gui/bar/progress_bar_right.png", gui.bar_borders)
 
+style progress_bar_small:
+    left_bar Frame("gui/bar/progress_bar_left_small.png", gui.bar_borders)
+    right_bar Frame("gui/bar/progress_bar_right_small.png", gui.bar_borders)
+
 label init_characters:
     # Inside voice style
     define narrator = Character(None, what_style="narrator_style")

@@ -33,6 +33,8 @@ style chapter_button_text:
     xalign 0.5     # center the Text displayable within the button
     text_align 0.5 # center each line within its own box
 
+define character_subtitles.text_size = 36
+
 # Display of Progress tree
 screen progress:
 
@@ -132,12 +134,12 @@ screen progress:
 
                                         if current_storyline.is_all_endings_reached():
                                             textbutton "[unlocked_endings]/[total_endings]":
-                                                text_size 22
+                                                text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.highlight_color
                                         else:
                                             textbutton "{color=#fff}[unlocked_endings]{/color}/[total_endings]":
-                                                text_size 22
+                                                text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.accent_color
                                         bar:
@@ -145,15 +147,16 @@ screen progress:
                                             value current_storyline.get_character_progress_endings()
                                             range 100
                                             xmaximum 150
-                                            style 'progress_bar'
+                                            ysize 20
+                                            style 'progress_bar_small'
 
                             vbox:
                                 yminimum 120
                                 xminimum 200
                                 yoffset -20
                                 xoffset 0
-                                text "Description":
-                                # text current_storyline.real_name + "'s Description":
+                                # text "Description":
+                                text "Backstory":
                                     font gui.name_text_font
                                     color gui.accent_color
                                     size 36
@@ -170,7 +173,7 @@ screen progress:
 
                                     vbox:
                                         textbutton "6/12":
-                                            text_size 22
+                                            text_size character_subtitles.text_size
                                             text_font gui.name_text_font
                                             text_color gui.highlight_color
                                         bar:
@@ -178,7 +181,8 @@ screen progress:
                                             value current_storyline.get_character_progress() 
                                             range 100
                                             xmaximum 150
-                                            style 'progress_bar'
+                                            ysize 20
+                                            style 'progress_bar_small'
 
                                 # hbox:
                                 #     yoffset 10
