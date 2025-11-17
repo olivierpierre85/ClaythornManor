@@ -134,6 +134,8 @@ label init_doctor:
             CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
             CharacterInformation(2, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle", is_intuition=True, chapters=['saturday_evening']), 
             CharacterInformation(3, "burned", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
+            CharacterInformation(4, "todo1", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
+            CharacterInformation(5, "todo2", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([

@@ -22,6 +22,10 @@ label init_captain:
             ),
         ])
 
+        captain_endings = CharacterEndingList ([
+            CharacterInformation(1, "todo", "You died in your sleep", image_file="deathbed", chapters=['saturday_morning']),
+        ])
+
         # Character Class
         captain_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, China, or during the Great War"), 
@@ -29,9 +33,9 @@ label init_captain:
             CharacterInformation(40, "heroic_act", "was so heroic during the war", is_important = True),
             CharacterInformation(40, "city", "London"), # TODO unlock somewhere, ? In captain walkthroug?
             CharacterInformation(20, "age", "54 years ago"),
-            CharacterInformation(30, "mansion", "running of a large mansion"),
-            CharacterInformation(30, "table", "proper table manners"),
-            CharacterInformation(30, "family", "noble lineage ensured he received an education far superior to most"), # TODO unlock somewhere, ? In captain walkthroug?            
+            CharacterInformation(30, "mansion", "running of a large mansion", is_important = True),
+            CharacterInformation(30, "table", "proper table manners", is_important = True),
+            CharacterInformation(30, "family", "noble lineage ensured he received an education far superior to most", is_important = True), # TODO unlock somewhere, ? In captain walkthroug?            
             CharacterInformation(60, "lie", "they do not really include the fighting he claims to have participated in. As an administrative officer, he most likely spent most of his time behind desks", is_important = True),
             ], captain_name
         )
@@ -62,7 +66,7 @@ label init_captain:
             description_long = captain_description,
             description_hidden = captain_extra_information,
             important_choices = CharacterInformationList([]),
-            endings = CharacterInformationList([]),
+            endings = captain_endings,
             observations = CharacterInformationList([]),
             objects = captain_objects,
             progress = [],

@@ -387,7 +387,26 @@ init -100 python:
             else:
                 return int(total_unlocked / total_info * 100)
 
+        def get_character_total_description(self):
+            total = 0 
+            for info in self.description_hidden:
+                if info.is_important:
+                    total += 1
+            return total
+
+        def get_character_unlocked_description(self):
+            total_unlocked = 0
+            progress = 0
+            for info in self.description_hidden:
+                if info.is_important:
+                    if not info.locked:
+                        total_unlocked += 1
+            return total_unlocked
+
         def is_character_unlocked(self):
+            if self.text_id == 'lad':
+                return True
+            
             for info in self.description_hidden:
                 if info.is_important and info.locked:
                     return False
@@ -447,6 +466,17 @@ init -100 python:
 
         def get_choices_and_discoveries(self):
             return self.important_choices.information_list + self.observations.information_list + self.objects.information_list
+
+        def get_character_progress_choices_and_discoveries(self):
+            total_info = self.get_total_discoveries()
+            total_unlocked = self.get_total_unlocked_discoveries()
+
+            if total_info == 0:
+                return 100
+            elif total_unlocked == 0:
+                return 0
+            else:
+                return int(total_unlocked / total_info * 100)
 
         # Put the not discovered at the end for clarity
         def get_choices_and_discoveries_ordered(self):

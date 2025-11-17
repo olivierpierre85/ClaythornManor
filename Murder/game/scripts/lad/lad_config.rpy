@@ -212,13 +212,13 @@ label init_lad:
         lad_description_hidden = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "age", "22 years old - which means he was merely 15"),
             CharacterInformation(0, "origin", "Birmingham"), 
-            CharacterInformation(0, "poor", "a wealthy family, nor even a decent one"),
-            CharacterInformation(0, "childhood", "he doesn't have a family at all; he was raised in an orphanage"),# LAST ONE!!!!!
-            CharacterInformation(0, "education", "the best education, and, like a large number of individuals from similar backgrounds, his reading skills are minimal"),
-            CharacterInformation(0, "job", "on the 'informal sector' for employment"), 
-            CharacterInformation(0, "thief", "sometimes means being on the wrong side of the law"), 
-            CharacterInformation(0, "heroic_act", "saving a infant from a burning building. This act of heroism made him the subject of a newspaper article"), 
-            CharacterInformation(0, "lie", "he actually wasn't there by chance. He was instead robbing the place and even set it on fire by accident"), 
+            CharacterInformation(0, "poor", "a wealthy family, nor even a decent one", is_important = True),
+            CharacterInformation(0, "childhood", "he doesn't have a family at all; he was raised in an orphanage", is_important = True),# LAST ONE!!!!!
+            CharacterInformation(0, "education", "the best education, and, like a large number of individuals from similar backgrounds, his reading skills are minimal", is_important = True),
+            CharacterInformation(0, "job", "on the 'informal sector' for employment", is_important = True), 
+            CharacterInformation(0, "thief", "sometimes means being on the wrong side of the law", is_important = True), 
+            CharacterInformation(0, "heroic_act", "saving a infant from a burning building. This act of heroism made him the subject of a newspaper article", is_important = True), 
+            CharacterInformation(0, "lie", "he actually wasn't there by chance. He was instead robbing the place and even set it on fire by accident", is_important = True), 
             CharacterInformation(0, "poor_drinker", "drinker"),
             CharacterInformation(0, "drive", "drive a car"),
             CharacterInformation(0, "cook", "cook a meal"),
