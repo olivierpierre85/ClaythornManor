@@ -84,7 +84,7 @@ label common_day2_morning_host_death_doctor:
     """
 
     """
-    We then continue eating in sad silence.
+    We continue eating in a heavy silence.
 
     Nobody speaks much.
     """
@@ -109,7 +109,7 @@ label common_day2_morning_host_hunt:
     """
 
     """
-    A murmur of assent runs through the assembly.
+    A faint murmur of assent passes through the room.
     """
 
     host """
@@ -156,7 +156,7 @@ label common_day2_morning_lad_psychic:
         """
         Suddenly, Samuel Manning enters the room.
 
-        He stumbles to the buffet table and picks up a plate, visibly shaking.
+        He stumbles to the buffet table and takes up a plate, visibly shaking.
         """
 
     else:
@@ -170,7 +170,7 @@ label common_day2_morning_lad_psychic:
         """
 
     psychic angry """
-    Well, I spoke too soon. Here he is. And in such a state.
+    Well, I spoke too soon. Here he is, and in such a state.
 
     How dreadful.
     """
@@ -180,13 +180,13 @@ label common_day2_morning_lad_psychic:
         """
         At the same moment, the butler rushes into the room.
             
-        He goes to Lady Claythorn and whispers something in her ear.
+        He goes to Lady Claythorn and murmurs something in her ear.
 
         I can tell it's not good news.
 
         She looks shocked and worried.
 
-        She stands up and walks in my direction, then stops in front of the doctor.
+        She rises and walks in my direction, then stops before the doctor.
         """
 
     else:

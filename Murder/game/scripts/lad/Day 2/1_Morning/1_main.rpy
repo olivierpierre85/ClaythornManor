@@ -37,9 +37,9 @@ label lad_day2_morning:
     if lad_details.important_choices.is_unlocked('day1_drunk'):
         
         """
-        Oh my God, my head hurts.
+        Oh my God, my head is pounding.
 
-        Why did I drink so much yesterday?
+        Why on earth did I drink so much yesterday?
         """
     
     """
@@ -53,13 +53,13 @@ label lad_day2_morning:
     """
     Most of the guests are already seated in the dining room.
 
-    There's a breakfast buffet set up. 
+    There is a breakfast buffet set out. 
     
-    I serve myself a plate with eggs, bacon, bread, and a few other items, not really following any specific order.
+    I help myself to eggs, bacon, bread and a few other things, not really following any particular order.
 
     I have no idea if this is what I'm supposed to do.
 
-    I quietly take the same seat I had yesterday, hoping to go unnoticed.
+    I quietly take the same seat I occupied yesterday, hoping to go unnoticed.
 
     Daniel Baldwin and Amelia Baxter are already present.
     """
@@ -85,9 +85,9 @@ label lad_day2_morning:
         $ change_room('dining_room')
 
         """
-        As we returned to the dining room, the host had just finished explaining the situation.
+        As we returned to the dining room, our hostess had just finished explaining the situation.
 
-        She regained her composure when she saw the doctor.
+        She seemed to regain her composure upon seeing the doctor.
         """
 
     else:
@@ -107,17 +107,17 @@ label lad_day2_morning:
     call common_day2_morning_host_hunt
 
     """
-    A hunt... A true aristocratic hunt.
+    A hunt... A proper aristocratic hunt.
 
     Now that's something to witness.
 
     It's not as if I'll get this opportunity often.
 
-    And I might not be the only one feeling out of place, especially if Lady Claythorn is right.
+    And I might not be the only one feeling out of place, especially if Lady Claythorn is correct.
 
     So there's no need for embarrassment.
 
-    However, I've never even held a gun in my life.
+    However, I have never so much as held a gun in my life.
 
     Those older men might not be of the gentry, but they likely learned to shoot during the war.
 

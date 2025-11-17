@@ -7,11 +7,11 @@ label common_day2_breakfast_follow_doctor_lad_host:
         $ lad_details.saved_variables["day2_breakfast_follow"] = True
 
         """
-        I leap from my seat and follow the doctor.
+        I spring from my seat and follow the doctor.
 
         We soon stop outside the Richard III Bedroom.
 
-        They're so preoccupied, no one comments on my presence.
+        They are so preoccupied that no one remarks upon my presence.
         """
 
     elif current_character.text_id == "doctor":
@@ -136,7 +136,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
     if current_character.text_id == "lad":
 
         """
-        He examines the body thoroughly for some time.
+        He examines the body carefully for some time.
         """
 
         call common_day2_breakfast_follow_doctor_lad_normal
@@ -325,7 +325,7 @@ label common_day2_breakfast_follow_doctor_lad_normal:
         """
         He leaves the room.
 
-        I trail behind, back to the dining room.
+        I follow him back to the dining room.
         """
     
     elif current_character.text_id == "doctor":
