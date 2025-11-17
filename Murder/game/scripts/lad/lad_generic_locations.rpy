@@ -57,7 +57,7 @@ label lad_downstairs_default:
     if not lad_details.important_choices.is_unlocked('downstairs_1'):
 
         """
-        I was on my way to the basement when a young maid stopped me.
+        I am on my way to the basement when a young maid stops me.
         """
 
         maid """

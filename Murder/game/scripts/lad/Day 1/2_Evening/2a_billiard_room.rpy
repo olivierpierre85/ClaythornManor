@@ -33,7 +33,7 @@ label lad_day1_evening_billiard_room:
         $ lad_day1_evening_billiard_room_menu.early_exit = False
 
         """
-        I am back in the Billiard Room.
+        I am back in the billiard room.
         """
 
     call run_menu(lad_day1_evening_billiard_room_menu)

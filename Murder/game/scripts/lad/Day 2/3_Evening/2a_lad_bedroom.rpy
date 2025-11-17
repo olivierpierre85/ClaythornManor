@@ -5,11 +5,11 @@ label lad_day2_evening_bedroom:
     call change_time(18,00)
 
     """
-    So, I retreated to my room to fetch clean clothes.
+    So I retreat to my room to fetch clean clothes.
 
-    I also took the opportunity to have a bath.
+    I also take the opportunity to have a bath.
 
-    As I was preparing to go downstairs again, someone knocked on my door.
+    As I am preparing to go downstairs again, someone knocks on my door.
     """
 
     call common_day2_evening_lad_psychic_discussion_0

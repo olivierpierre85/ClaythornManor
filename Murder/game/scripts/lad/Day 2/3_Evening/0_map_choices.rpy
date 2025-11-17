@@ -230,7 +230,7 @@ label lad_day2_evening_bedroom_drunk:
 
     It's pretty clear that he's blind drunk.
 
-    I know that the door is closed, so there's no point in trying to enter.
+    I know the door is locked, so there' i's no point trying to enter.
     """
 
     $ unlock_map('bedroom_drunk')

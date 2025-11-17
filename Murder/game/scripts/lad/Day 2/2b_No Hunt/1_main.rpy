@@ -92,23 +92,23 @@ label lad_day2_bedroom_broken:
 
     He looks peaceful.
 
-    His mask is still on. 
+    His mask is still in place. 
     
     The doctor didn't even remove it for the examination.
 
     Well, if the doctor didn't, I certainly won't either.
 
-    On a chair next to the bed, his clothes are meticulously folded.
+    On a chair beside the bed, his clothes are meticulously folded.
 
-    There's a whisky flask on the nightstand.
+    There is a flask on the nightstand.
 
-    It's on its side, empty.
+    It lies on its side, empty.
 
     Next to it is a stain. 
     
-    I suppose it's whisky, but it's an odd shade of green.
+    I suppose it is whisky, but it has an odd shade of green.
 
-    That's peculiar.
+    That is peculiar.
 
     What could it be?
 
@@ -146,7 +146,7 @@ label lad_day2_no_hunt_bedroom_nurse_busy:
     play sound door_knock
     
     """
-    I knock on the door.
+    I knock upon the door.
     """
 
     nurse """

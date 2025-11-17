@@ -9,7 +9,7 @@ label lad_day2_evening_billiard_room:
         """
         Just as I expected, there aren't many people here.
 
-        I can only spot Captain Sinha sitting on a couch and the butler in the corner.
+        I can only see Captain Sinha sitting on a sofa and the butler in the corner.
 
         At least the bar is still there.
         """
@@ -30,7 +30,7 @@ label lad_day2_evening_billiard_room:
         $ lad_day2_evening_billiard_room_menu.early_exit = False
 
         """
-        I am back in the Billiard Room.
+        I am back in the billiard room.
         """
 
     call run_menu(lad_day2_evening_billiard_room_menu)
@@ -402,7 +402,7 @@ label lad_day2_evening_billiard_room_captain:
 label lad_day2_evening_billiard_room_bar:
 
     """
-    There isn't a wide variety of drinks. So, I have a glass of sherry.
+    There isn't a wide variety of drinks, so I take a glass of sherry.
     """
 
     $ lad_details.saved_variables["day2_drinks"] += 1
@@ -466,7 +466,7 @@ label lad_day2_evening_billiard_room_bar_3:
 label lad_day2_evening_billiard_room_bar_4:
     
     """
-    I ignore the captain's judgmental look and head back to the bar.
+    I ignore the captain's disapproving look and head back to the bar.
 
     Cut me some slack.
 

@@ -28,13 +28,13 @@ label lad_day2_evening:
     if lad_details.important_choices.is_unlocked('hunt'):
 
         """
-        Everything happened so quickly; it's all a blur.
+        Everything happened so quickly it is all a blur.
 
-        After the screaming and crying in the woods, Captain Sinha took charge.
+        After the shouting and crying in the woods, Captain Sinha took charge.
 
-        He had us carry the doctor on a makeshift stretcher.
+        He had us carry the doctor on a makeshift stretcher back to the house.
  
-        It took a while, but we eventually reached the mansion.
+        It took some time, but we eventually reached the mansion.
         """        
 
     else:
@@ -101,7 +101,7 @@ label lad_day2_evening:
 
     The seats of Daniel Baldwin and Thomas Moody are empty.
 
-    Samuel Manning is also absent.
+    Samuel Manning is absent as well.
 
     I take my usual seat, with only Amelia Baxter beside me now.
 
@@ -119,7 +119,7 @@ label lad_day2_evening:
 
     Most guests retire to their rooms after eating.
 
-    Given the day's events, I doubt many are in the mood for drinks.
+    Given the day's events, I doubt anyone is in the mood for drinks.
 
     What should I do next?
     """
@@ -137,7 +137,7 @@ label lad_day2_evening:
     if lad_details.important_choices.is_unlocked('day2_drunk'):
 
         """
-        My head feels foggy.
+        My head feels thick and foggy.
 
         I rush to my room.
         """
@@ -145,7 +145,7 @@ label lad_day2_evening:
         $ change_room('bedroom_lad')
 
         """
-        I make it to the toilet just in time, emptying the contents of my stomach.
+        I reach the toilet just in time and empty the contents of my stomach.
         """
 
         if lad_details.important_choices.is_unlocked('day1_drunk'):
@@ -163,7 +163,7 @@ label lad_day2_evening:
         """
         It's best I get some rest now.
 
-        I fell asleep as soon as I lie down.
+        I fall asleep as soon as I lie down.
         """
 
         $ drunk_mode = False

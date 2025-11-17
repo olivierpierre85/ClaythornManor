@@ -36,7 +36,7 @@ label psychic_day2_evening_billiard_room:
         # $ psychic_day2_evening_billiard_room_menu.early_exit = False
 
         """
-        I am back in the Billiard Room.
+        I am back in the billiard room.
         """
 
     call run_menu(psychic_day2_evening_billiard_room_menu)
