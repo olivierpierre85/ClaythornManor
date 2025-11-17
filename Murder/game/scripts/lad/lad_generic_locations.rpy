@@ -7,7 +7,7 @@ label lad_library_default:
         """
         It's a very nice library. But what am I doing here? 
         
-        I can barely read.
+        I can hardly read.
         """
 
         $ lad_details.description_hidden.unlock('education')

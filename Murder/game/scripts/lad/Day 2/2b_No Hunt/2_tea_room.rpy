@@ -13,7 +13,7 @@ label lad_day2_hunt_tea_room:
     nurse """
     Oh Mr Harring, I'm glad you're here.
 
-    Miss Baxter and I were just discussing something fascinating.
+    Miss Baxter and I were discussing something quite fascinating.
 
     You should join us.
     """
@@ -25,7 +25,7 @@ label lad_day2_hunt_tea_room:
     """
 
     nurse """
-    Miss Baxter was talking about how she can communicate with the dead.
+    Miss Baxter was explaining that she can communicate with the dead.
     """
 
     # TODO if the psychic knowledge is not known, summarize it here? or just display the text?
@@ -42,9 +42,9 @@ label lad_day2_hunt_tea_room:
         """
 
         psychic """
-        Yes, but to not bore Miss Marsh, I won't go into the details again.
+        Yes, but so as not to bore Miss Marsh, I shall not go into the details again.
         
-        But if you're interested, we can discuss it another time.
+        If you're interested, we can discuss it another time.
         """
 
     nurse """
@@ -52,7 +52,7 @@ label lad_day2_hunt_tea_room:
     """
 
     psychic """
-    That's correct. I have a feeling that something is off about his death.
+    That is correct. I have a feeling there is something amiss about his death.
     """
 
     nurse """
@@ -62,9 +62,9 @@ label lad_day2_hunt_tea_room:
     psychic """
     I sense his spirit, and it's restless. It's a sign of an unnatural death.
 
-    There's something amiss, I just can't figure what.
+    There is something amiss, I simply cannot tell what.
 
-    But I don't mean to alarm you.
+    But I do not wish to alarm you.
 
     It might be nothing.
 
@@ -171,7 +171,7 @@ label lad_day2_hunt_tea_room:
     """
     Miss Marsh and I stay silent. 
 
-    Perhaps she's as clueless as I am about the workings of this household.
+    Perhaps she knows as little as I do about the workings of this household.
 
     Or she might be refraining from criticising our host.
 

@@ -68,7 +68,7 @@ label lad_day2_bedroom_broken:
     else:
 
         """
-        I slowly enter the unlocked door.
+        I slowly enter through the unlocked door.
 
         It's Thomas Moody's.
 
@@ -76,13 +76,13 @@ label lad_day2_bedroom_broken:
 
         I don't know what morbid curiosity led me here.
 
-        Gosh.
+        Good grief.
         """
 
         $ unlock_map('bedroom_broken')
 
     """
-    Now that I'm here, perhaps I should take a quick look.
+    Now that I am here, perhaps I should take a quick look.
 
     There might be something that helps me understand what happened.
 
@@ -231,7 +231,7 @@ label lad_day2_no_hunt_bedroom_drunk_enter:
     $ change_room('bedroom_drunk')
 
     """
-    The bedroom is messy and dimly lit and the smell of alcohol fills the air.
+    The bedroom is messy and dimly lit, and the smell of alcohol fills the air.
 
     There are clothes all over the floor.
 
@@ -241,13 +241,13 @@ label lad_day2_no_hunt_bedroom_drunk_enter:
     $ unlock_map('bedroom_drunk')
 
     """
-    I quickly scan the room but only find empty whisky bottles.
+    I scan the room quickly but find only empty whisky bottles.
 
     As I'm about to leave, a piece of white paper in the fireplace catches my eye.
 
     Driven by curiosity, I pick it up.
 
-    The writing on the paper is almost entirely burned. 
+    The writing on the paper is nearly entirely burned. 
     
     I can only read some of it.
 
@@ -263,7 +263,7 @@ label lad_day2_no_hunt_bedroom_drunk_enter:
     call drunk_letter_second_part_burned
 
     """
-    Even though its meaning eludes me, this letter seems significant.
+    Even though its meaning escapes me, the letter seems significant.
     
     I decide to keep it, just in case.
     """

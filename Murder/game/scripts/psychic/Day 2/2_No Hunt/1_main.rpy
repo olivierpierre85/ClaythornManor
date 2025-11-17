@@ -177,7 +177,7 @@ label psychic_day2_no_hunt_bedroom_nurse_busy:
     """
 
     psychic """
-    Of course, sorry for bothering you.
+    Of course, sorry to trouble you.
     """
     
     $ unlock_map('bedroom_nurse')
