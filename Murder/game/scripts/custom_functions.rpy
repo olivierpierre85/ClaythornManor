@@ -294,25 +294,27 @@ label start_again():
         current_character = current_storyline
         
         # Restart from zero TODO: This is not necessary anymore
-        if  current_checkpoint.run == 1 and  current_checkpoint.position == 0:
-            current_position = 0
-            if len(current_character.checkpoints) > 0:
-                current_run = current_character.get_max_run() + 1
-            else:
-                # First run
-                current_run = 1 
-        else:
-            has_been_restarted = True
+        # if  current_checkpoint.run == 1 and  current_checkpoint.position == 0:
+        #     current_position = 0
+        #     if len(current_character.checkpoints) > 0:
+        #         current_run = current_character.get_max_run() + 1
+        #     else:
+        #         # First run
+        #         current_run = 1 
+        # else:
+        #     has_been_restarted = True
             
-            # For this character, update run +1  in all checkpoint above this
-            for checkpoint in current_character.checkpoints:
-                if checkpoint.run > current_checkpoint.run:
-                    checkpoint.run += 1
+        #     # For this character, update run +1  in all checkpoint above this
+        #     for checkpoint in current_character.checkpoints:
+        #         if checkpoint.run > current_checkpoint.run:
+        #             checkpoint.run += 1
 
-            # change current run to += 1
-            current_run = current_checkpoint.run + 1
-            # Deduct one position because a new checkpoint will immediately be created with pos + 1
-            current_position = current_checkpoint.position - 1 
+        #     # change current run to += 1
+        #     # current_run = current_checkpoint.run + 1
+        #     # Deduct one position because a new checkpoint will immediately be created with pos + 1
+        #     current_position = current_checkpoint.position - 1 
+
+        has_been_restarted = True
 
         # Reset object, observation, choices...
         current_character.reset_information()
