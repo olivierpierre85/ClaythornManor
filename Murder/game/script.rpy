@@ -242,9 +242,18 @@ label init_technical_variables:
         #         keep_x  keep_y  keep_w  keep_h   txt_x  txt_y   message
         # PROGRESS TUTORIAL
         tutorial_steps_progress = [
-            (17, 294, 1020, 140, 550, 525, "Here you can select the character whose progress you wish to view.\nOnly characters that have been unlocked are selectable."),
-            (1050, 290, 566, 140, 1300, 525, "Here are the endings you have already reached for this character."),
-            (1630, 290, 280, 140, 1300, 400, "You can see the total number of Choices and Discoveries\nyou have already encountered here."),
+            (17, 280, 1020, 200, 550, 600, 
+                "Here you can select the character whose progress you wish to view."
+            ),
+            (1050, 310, 270, 140, 1200, 600, 
+                "From here you can reach the Backstory of the selected character.\n" + 
+                "You can also see the number of important information found for this character.\n" + 
+                "Once you've unlocked them all, you'll be able to play this character (except Ted Harring)"
+            ),
+            (1300, 310, 290, 170, 1400, 600, "You can see the total number of Choices and Discoveries\n" + 
+                "you have already encountered here."
+            ),
+            (1630, 290, 280, 140, 1300, 400, "And here is the number of endings you have already reached for this character."),
             (17, 445, 1890, 500, 1000, 300, 
             "Below is the timeline of the progress you have made so far.\n" +
             "The story is split into chapters occurring over three days."
