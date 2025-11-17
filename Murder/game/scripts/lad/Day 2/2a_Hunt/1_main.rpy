@@ -28,9 +28,9 @@ label lad_day2_hunt:
     $ play_music('upbeat', 1, fadein_val=10.0)
 
     """
-    Well, I don't know if this is my best idea.
+    Well, I do not know if this is my best idea.
 
-    But I guess it didn't feel right to stay behind with the ladies.
+    But I suppose it did not feel right to stay behind with the ladies.
     """
 
     # TODO achievement,  Hunt like a man
@@ -58,7 +58,7 @@ label lad_day2_hunt:
     """
 
     """
-    Of course. So, I'll be the weak link today. Great.
+    Of course. So I shall be the weak link today. Brilliant.
     """
 
     lad """
@@ -94,9 +94,9 @@ label lad_day2_hunt:
     """
 
     """
-    I try on the clothes before me. They fit perfectly.
+    I try on the clothes laid out for me. They fit perfectly.
 
-    If something happens to me, at least I'll look good.
+    If something happens to me, at least I will look good.
     """
 
     $ change_room('manor_garden')
@@ -104,15 +104,15 @@ label lad_day2_hunt:
     """
     I join the others in the garden.
 
-    They all look quite comfortable in their hunting clothes.
+    They all look perfectly at ease in their hunting clothes.
 
-    There's Doctor Baldwin, Sushil Sinha, Lady Claythorn and her staff.
+    There is Doctor Baldwin, Sushil Sinha, Lady Claythorn and her staff.
 
-    And even Samuel Manning is here.
+    And even Samuel Manning is present.
 
-    Wait, what?!
+    Wait, what?
 
-    How on earth was he allowed to come with us?
+    How on earth was he allowed to join us?
 
     I approach the butler.
     """
@@ -140,7 +140,7 @@ label lad_day2_hunt:
     """
     People agree, and Sushil Sinha asks to partner with our host.
 
-    The drunk man insists on going with the doctor, who reluctantly accepts.
+    The drunk man insists on going with the doctor, who reluctantly agrees.
 
     I am the odd one out.
 

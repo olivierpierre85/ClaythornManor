@@ -23,7 +23,7 @@ label lad_day2_hunt_accident:
 
     He looks serious, even nervous.
 
-    As per usual, the footman doesn't say a word.
+    As usual, the footman says nothing.
 
     That means the doctor and I are the only ones talking.
     """
@@ -79,7 +79,7 @@ label lad_day2_hunt_accident:
     """
     For a while, we didn't. 
     
-    But then, I spotted something that looked like a rabbit in the distance.
+    But then I spotted something that looked like a rabbit in the distance.
 
     Doctor Baldwin was ahead of me and didn't notice.
 
@@ -107,7 +107,7 @@ label lad_day2_hunt_accident:
 
     By the time they get here, it's too late.
 
-    Doctor Baldwin has bled out, and he is lying lifeless in the forest.
+    Doctor Baldwin has bled out, and he lies lifeless in the forest.
     """
 
     pause 2.0

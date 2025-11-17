@@ -34,9 +34,9 @@ label common_day2_hunt_accident_death:
     if current_character.text_id == "lad":
         
         """
-        He missed by a mile. 
+        He missed by a long way. 
         
-        By the time I could try again, the rabbit had run off.
+        By the time I could try again, the rabbit had bolted.
 
         I'm frustrated, but then I hear a cry.
         """
@@ -56,7 +56,7 @@ label common_day2_hunt_accident_death:
     if current_character.text_id == "lad":
 
         """
-        I turn around and see Doctor Baldwin crying in pain on the ground.
+        I turn and see Doctor Baldwin crying out in pain on the ground.
         """
 
     doctor """
@@ -131,11 +131,11 @@ label common_day2_hunt_accident_death:
     if current_character.text_id == "lad":
         
         """
-        In my panic, I tear off his shirt, revealing his blood-soaked abdomen.
+        In my panic, I tear open his shirt, revealing his blood-soaked abdomen.
 
         I notice a small entry wound on his right side.
 
-        It doesn't look too bad.
+        It does not look too bad.
         """
 
     elif current_character.text_id == "doctor":
@@ -237,9 +237,9 @@ label common_day2_hunt_accident_death:
     if current_character.text_id == "lad":
         
         """
-        He takes out a small vial from his bag.
+        He takes a small vial from his bag.
 
-        Without a word, he pulls the cork and drinks it down.
+        Without a word, he pulls the cork and drinks it.
 
         Then another.
 
