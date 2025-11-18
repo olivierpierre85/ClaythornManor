@@ -224,8 +224,11 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     You'll be safer in your room.
     """
 
+    #TODO: Add thunder sound, and notice on it?
+    # Just after saying that, a lound thunder erupts in the night. (replace I pounder that for a moment)
+
     """
-    I ponder that for a moment. It is true that leaving now would be perilous.
+    I ponder that for a moment. The storm is raging outside, leaving now would be perilous.
 
     Yet staying in my room hardly feels safer.
 
@@ -235,7 +238,7 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     doctor """
     Very well, I'll go to my room.
 
-    But I want your word that I may leave at first light.
+    But I want your word that I will be allowed to leave at first light.
 
     I do not wish to remain here a moment longer than necessary.
     """

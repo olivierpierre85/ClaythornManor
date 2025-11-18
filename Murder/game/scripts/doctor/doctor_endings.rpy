@@ -6,7 +6,7 @@ label doctor_ending_burn:
     call death_screen_transition
 
     """
-    A dreadful fire consumed the manor.
+    A dreadful fire burned the manor down.
 
     Trapped in your room, there was no possible way to escape.
 

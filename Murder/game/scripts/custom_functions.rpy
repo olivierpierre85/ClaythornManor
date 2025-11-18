@@ -314,7 +314,9 @@ label start_again():
         #     # Deduct one position because a new checkpoint will immediately be created with pos + 1
         #     current_position = current_checkpoint.position - 1 
 
+        # Replacing the above by this creates selected chapter problem???
         has_been_restarted = True
+        # current_position = 0
 
         # Reset object, observation, choices...
         current_character.reset_information()

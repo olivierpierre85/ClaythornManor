@@ -14,7 +14,7 @@
 # --------------------------------------------
 label doctor_introduction:
 
-    call change_time(14, 00, 'Arrival', 'Friday', hide_minutes=True)
+    call change_time(14, 00, 'Arrival', 'Friday', hide_minutes=True, chapter='friday_afternoon')
 
     call black_screen_transition("", "Daniel Baldwin")
 
