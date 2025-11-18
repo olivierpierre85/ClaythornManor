@@ -73,15 +73,7 @@ label init_doctor:
                 image_file="hunt",
                 chapters=['saturday_morning'],
                 relevant_chapters=['saturday_morning', 'saturday_afternoon_no_hunt'],
-            ),
-            CharacterInformation(
-                0, "drunk_letter",
-                "You saw the letter in Samuel's Manning bedroom",
-                content_negative="You didn't see the letter in Samuel's Manning bedroom",
-                image_file="drunk_letter",
-                chapters=['friday_evening'],
-                relevant_chapters=['saturday_morning'],
-            ),
+            )
         ])
 
         doctor_objects = CharacterObjectList([
@@ -100,6 +92,14 @@ label init_doctor:
                 image_file="book_opium",
                 chapters=['friday_evening'],
                 relevant_chapters=['saturday_morning', 'saturday_afternoon'],
+            ),
+            CharacterInformation(
+                0, "drunk_letter",
+                "You took the letter in Samuel's Manning bedroom",
+                content_negative="You didn't take the letter in Samuel's Manning bedroom",
+                image_file="drunk_letter",
+                chapters=['friday_evening'],
+                relevant_chapters=['saturday_morning'],
             ),
         ])
 

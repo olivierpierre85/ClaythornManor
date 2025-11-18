@@ -49,7 +49,7 @@ label doctor_day2_morning:
     else: 
 
         """
-        As always, I begin with my usual "routine".
+        As always, I begin with my usual routine.
         """
 
         call wait_screen_transition
@@ -284,20 +284,22 @@ label doctor_day2_no_hunt_choice:
     Not without a very sound reason.
     """
 
-    if psychic_details.endings.is_unlocked('shot_by_drunk'):
+    if doctor_details.objects.is_unlocked('drunk_letter'):
 
         """
-        Yet an ominous feeling creeps over me.
+        And I have one: Samuel Manning might take advantage of this hunt to hurt me.
 
-        Something bad will happen if I go out today.
+        Being alone with him, armed and in a remote place, the risk is too great.
 
-        I do not know how, but I am certain of it.
+        I am not sure of the meaning of his letter, but I shouldn't take any unnecessary risk.
+
+        Avoiding the hunt might reflect bad on me...TODO NEXT
         """
 
     # TODO if intuition is unlocked
     call run_menu(
         TimedMenu("doctor_day2_morning_no_hunt", [
-            TimedMenuChoice("Feign that you are in no condition for a shoot {{intuition}}", 'doctor_day2_no_hunt_choice_2', early_exit = True),
+            TimedMenuChoice("Pretend that you are in no condition for a hunt {{object}}", 'doctor_day2_no_hunt_choice_2', early_exit = True),
             TimedMenuChoice("You cannot resist the social pressure", 'doctor_day2_hunt_choice_2', early_exit = True)
         ])
     )

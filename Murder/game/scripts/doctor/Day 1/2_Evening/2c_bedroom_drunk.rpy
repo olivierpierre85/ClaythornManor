@@ -418,7 +418,7 @@ label doctor_day1_evening_bedroom_drunk_stay:
     And I should try to discover who could have written this wretched letter.
     """
 
-    $ doctor_details.objects.unlock("drunk_letter")
+    # $ doctor_details.objects.unlock("drunk_letter")
 
     $ play_music("PREVIOUS")
 
