@@ -287,42 +287,27 @@ label doctor_day2_no_hunt_choice:
     if doctor_details.objects.is_unlocked('drunk_letter'):
 
         """
-        And I have one: Samuel Manning might take advantage of this hunt to hurt me.
+        I do have one.
 
-        Being alone with him, armed and in a remote place, the risk is too great.
+        Samuel Manning may very well use this hunt as an opportunity to harm me.
 
-        I am not sure of the meaning of his letter, but I shouldn't take any unnecessary risk.
+        To be alone with him, armed and far from the house, would be an unreasonable risk.
 
-        Avoiding the hunt might reflect bad on me...TODO NEXT
+        Yet it would be difficult to refuse without exposing the contents of the letter.
+
+        And there is a chance I could use the hunt to get an explanation out of Samuel Manning.
+
+        I must simply remain alert at every moment.
         """
 
-    # TODO if intuition is unlocked
-    call run_menu(
-        TimedMenu("doctor_day2_morning_no_hunt", [
-            TimedMenuChoice("Pretend that you are in no condition for a hunt {{object}}", 'doctor_day2_no_hunt_choice_2', early_exit = True),
-            TimedMenuChoice("You cannot resist the social pressure", 'doctor_day2_hunt_choice_2', early_exit = True)
-        ])
-    )
 
-    return
-
-
-label doctor_day2_no_hunt_choice_2:
-
-    doctor """
-    I am truly sorry, but I do not think I should.
-
-    My condition requires a good deal of rest, I am afraid.
-    """
-
-    host """
-    If you say so. You are the doctor, after all.
-    """
-
-    jump work_in_progress
-
-
-label doctor_day2_hunt_choice_2:
+        # # TODO if intuition is unlocked
+        # call run_menu(
+        #     TimedMenu("doctor_day2_morning_no_hunt", [
+        #         TimedMenuChoice("Pretend that you are in no condition for a hunt {{object}}", 'doctor_day2_no_hunt_choice_2', early_exit = True),
+        #         TimedMenuChoice("You cannot resist the social pressure", 'doctor_day2_hunt_choice_2', early_exit = True)
+        #     ])
+        # )
 
     doctor """
     Perhaps you are right. The fine weather may do me good.
@@ -335,6 +320,21 @@ label doctor_day2_hunt_choice_2:
     """
 
     jump doctor_day2_hunt
+
+
+# label doctor_day2_no_hunt_choice_2:
+
+#     doctor """
+#     I am truly sorry, but I do not think I should.
+
+#     My condition requires a good deal of rest, I am afraid.
+#     """
+
+#     host """
+#     If you say so. You are the doctor, after all.
+#     """
+
+#     jump work_in_progress
 
 
 
