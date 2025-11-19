@@ -136,7 +136,7 @@ screen progress:
                                         $ unlocked_description = current_storyline.get_character_unlocked_description()
                                         $ total_description   = current_storyline.get_character_total_description()
 
-                                        if current_storyline.is_all_endings_reached():
+                                        if current_storyline.get_character_progress() == 100:
                                             textbutton "[unlocked_description]/[total_description]":
                                                 text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
