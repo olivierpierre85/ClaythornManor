@@ -5,6 +5,9 @@ transform character_progress:
 transform selected_character:
     zoom 0.45
 
+transform menu_image:
+    zoom 0.90
+
 # transform is_small:
 #     zoom 0.3
 
@@ -34,9 +37,9 @@ style chapter_button_text:
     text_align 0.5 # center each line within its own box
 
 define character_subtitles.title_size = 36
-define character_subtitles.text_size = 38
+define character_subtitles.text_size = 52 #38
 
-define character_subtitles.bar_x = 120
+define character_subtitles.bar_x = 140
 define character_subtitles.bar_y = 20
 
 # Display of Progress tree
@@ -97,12 +100,13 @@ screen progress:
 
                     vbox:
                         xpos 50
-                        yoffset 0
 
                         hbox:
+                            yoffset -10
                             vbox:
                                 yminimum 120
-                                xminimum 260
+                                # xminimum 260
+                                xminimum 290
                                 yoffset -20
                                 xoffset 0
                                 # text "Description":
@@ -118,10 +122,17 @@ screen progress:
                                     imagebutton:
                                         yoffset 2
                                         mouse "hover"
-                                        idle "images/info_cards/everything_completed.png"
+                                        if current_storyline.get_character_progress() == 100:
+                                            idle "images/info_cards/everything_completed_big.png" at menu_image
+                                        else:
+                                            idle "images/info_cards/everything_completed_big_bw.png" at menu_image
+
                                         action ShowMenu("character_details", current_storyline)
 
                                     vbox:
+
+                                        yoffset 15
+
                                         $ unlocked_description = current_storyline.get_character_unlocked_description()
                                         $ total_description   = current_storyline.get_character_total_description()
 
@@ -138,7 +149,7 @@ screen progress:
 
                                         bar:
                                             yalign 0.5
-                                            # yoffset 20
+                                            # yoffset 15
                                             value current_storyline.get_character_progress() 
                                             range 100
                                             xmaximum character_subtitles.bar_x
@@ -147,9 +158,11 @@ screen progress:
                             
                             vbox:
                                 yminimum 120
-                                xminimum 340
+                                # xminimum 340
+                                xminimum 290
                                 yoffset -20
-                                text "Choices & Discoveries":
+                                # text "Choices & Discoveries":
+                                text "Threads":
                                     font gui.name_text_font
                                     color gui.accent_color
                                     size character_subtitles.title_size
@@ -165,11 +178,13 @@ screen progress:
                                         if not tutorial_on and current_character == current_storyline:
                                             action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                         if current_storyline.is_everything_completed():
-                                            idle "images/info_cards/murder_board.png"
+                                            idle "images/info_cards/murder_board_big.png" at menu_image
                                         else:
-                                            idle "images/info_cards/murder_board_bw.png"
+                                            idle "images/info_cards/murder_board_big_bw.png" at menu_image
                                     
                                     vbox:
+
+                                        yoffset 15
 
                                         $ unlocked = current_storyline.get_total_unlocked_discoveries()
                                         $ total    = current_storyline.get_total_discoveries()
@@ -198,7 +213,8 @@ screen progress:
 
                             vbox:
                                 yminimum 120
-                                xminimum 260
+                                # xminimum 260
+                                xminimum 300
                                 yoffset -20
                                 text "Endings":
                                     font gui.name_text_font
@@ -213,11 +229,14 @@ screen progress:
                                         yoffset 2
                                         mouse "hover"
                                         if current_storyline.is_all_endings_reached():
-                                            idle "images/info_cards/endings_curtains.png"
+                                            idle "images/info_cards/endings_curtains_big.png" at menu_image
                                         else:
-                                            idle "images/info_cards/endings_curtains_bw.png"
+                                            idle "images/info_cards/endings_curtains_big_bw.png" at menu_image
 
                                     vbox:
+
+                                        yoffset 15
+
                                         $ unlocked_endings = current_storyline.get_total_unlocked_endings()
                                         $ total_endings    = current_storyline.get_total_endings()
 
