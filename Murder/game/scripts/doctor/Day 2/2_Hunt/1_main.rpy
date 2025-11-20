@@ -102,9 +102,9 @@ label doctor_day2_hunt:
 
         It may mean he is ready to make good on his threat.
 
-        I am anxious, yet also a little curious.
+        I am anxious, yet also curious.
 
-        I will not back out now.
+        I cannot back out now.
         """
 
         doctor """

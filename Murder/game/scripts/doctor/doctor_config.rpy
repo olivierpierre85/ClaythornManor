@@ -99,7 +99,7 @@ label init_doctor:
                 content_negative="You didn't take the letter in Samuel's Manning bedroom",
                 image_file="drunk_letter",
                 chapters=['friday_evening'],
-                relevant_chapters=['saturday_morning'],
+                relevant_chapters=['saturday_morning', 'saturday_afternoon'],
             ),
         ])
 

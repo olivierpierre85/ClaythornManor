@@ -13,14 +13,6 @@ label doctor_day2_hunt_accident:
     We walked for a while yet encountered nothing.
 
     So we stopped for luncheon.
-
-    If Samuel Manning seemed somewhat sobered at first, he now appears intent on making up for lost drinking.
-
-    He has a flask which I assume is whisky, and he has been drinking from it non-stop since the start of the hunt.
-
-    I am concerned he is in no condition to handle a gun.
-
-    He mutters to himself and I have no wish to engage him.
     """
 
     if doctor_details.important_choices.is_unlocked('flirt'):
@@ -41,30 +33,43 @@ label doctor_day2_hunt_accident:
         The footman is exceedingly professional and remains silent whilst preparing our food.
         """
 
-
     """
-    Only Ted Harring is willing to make conversation, so we exchange a few pleasantries.
+    If Samuel Manning seemed somewhat sobered at first, he now appears intent on making up for lost drinking.
+
+    He has a flask which I assume is whisky, and he has been drinking from it non-stop since the start of the hunt.
     """
 
-    $ time_left = 30
-
-    call lad_generic
-
-    call change_time(12,30)
-
-    if doctor_details.saved_variables['bored_by_lad'] > 1:
+    if doctor_details.objects.is_unlocked('drunk_letter'):
 
         """
-        Well, that was hardly the most stimulating conversation.
+        If I trust the content of the letter, he looks like he is summoning the courage to do something terrible.
 
-        Still, I suppose we're ready to keep going with the hunt.
+        I feel like I should talk to him before he is too drunk.
+        
+        On the other hand, it could be prudent to wait for a better time.
+        
+        If I am on my guard, I could probably avoid him until the hunt is over.
         """
+
+        call run_menu(
+            TimedMenu("doctor_day2_hunt_accident", [
+                TimedMenuChoice("Confront the drunk man with a gun {{object}}", 'doctor_day2_hunt_accident_confront_drunk', early_exit = True),
+                TimedMenuChoice("Ignore him and talk with Ted Harring", 'doctor_day2_hunt_accident_lad_conversation', early_exit = True)
+            ])
+        )
 
     else:
 
         """
-        After a short while, we're ready to keep going with the hunt.
+        I am concerned he is in no condition to handle a gun.
+
+        He mutters to himself and I have no wish to engage him.
+
+        Only Ted Harring is willing to make conversation, so I address him.
         """
+
+        call doctor_day2_hunt_accident_lad_conversation
+
 
     call common_day2_hunt_accident_footman_1
 
@@ -128,3 +133,48 @@ label doctor_day2_hunt_accident:
         """
 
     jump doctor_ending_shot_by_drunk
+
+
+label doctor_day2_hunt_accident_lad_conversation:
+
+    doctor """
+    How are you getting on Mister Harring?
+    """
+
+    lad """
+    Very well Doctor.
+    """
+
+    $ time_left = 30
+
+    call lad_generic
+
+    call change_time(12,30)
+
+    if doctor_details.saved_variables['bored_by_lad'] > 1:
+
+        """
+        Well, that was hardly the most stimulating conversation.
+
+        Still, I suppose we're ready to keep going with the hunt.
+        """
+
+    else:
+
+        """
+        After a short while, we're ready to keep going with the hunt.
+        """
+
+    return
+
+
+label doctor_day2_hunt_accident_confront_drunk:
+
+    # TODO: The Doctor confront Samuel Manning with the letter he found
+    # The doctor found out that Sam manning was pretending to be drunk
+    # Things got heated and they fought
+    # Samuel Manning shot himself in the fight and dies there
+
+
+
+    jump doctor_day2_evening

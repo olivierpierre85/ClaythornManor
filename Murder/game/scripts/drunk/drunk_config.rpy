@@ -14,16 +14,17 @@ label init_drunk:
             CharacterInformation(0, "background", "???"), 
             CharacterInformation(1, "status", "prominent family"),
             CharacterInformation(2, "age", "55-year-old "),
-            CharacterInformation(2, "wife", "the untimely death of his wife. Still young and healthy, she would never have died if the doctor responsible for her operation hadn't been so high on opioids"),
-            CharacterInformation(3, "addict", "an addiction of his own. He started drinking regularly to numb the pain. It got worse and worse until he was no longer able to perform his duties as", is_important = True),
-            CharacterInformation(60, "job", "lawyer, losing cases he should have won and disparaging his clients", is_important = True),
-            CharacterInformation(60, "heroic_act", "have left him; only the poorest and the most desperate would ever hire him. He assumes that this choice of clients has made him look like a fervent defender of the poor in the eyes of Lady Claythorn, hence his invitation", is_important = True),
-            CharacterInformation(60, "lie", "he can sober up, or at least act sober enough when the situation demands it. He has also become quite good at feigning drunkenness to avoid unpleasant situations", is_important = True),
+
+            CharacterInformation(2, "wife", "the untimely death of his wife. Still young and healthy, she would never have died if the doctor responsible for her operation hadn't been so high on opioids"), # Confess to Doctor
+            CharacterInformation(3, "addict", "an addiction of his own. He started drinking regularly", is_important = True), # Everyone
+            CharacterInformation(60, "job", "lawyer, losing cases he should have won and disparaging his clients", is_important = True), # Confess to Broken
+            CharacterInformation(60, "heroic_act", "have left him; only the poorest and the most desperate would ever hire him. He assumes that this choice of clients has made him look like a fervent defender of the poor in the eyes of Lady Claythorn, hence his invitation", is_important = True), # Confess to Broken 
+            CharacterInformation(60, "lie", "he can sober up, or at least act sober enough when the situation demands it. He has also become quite good at feigning drunkenness to avoid unpleasant situations", is_important = True), # Confess to Doctor
             ], drunk_name
         )
         drunk_description = """
         A <info:age> gentleman, raised in a <info:status>, he hasn't been the same since <info:wife>.
-        Ironically, the ordeal drove Samuel Manning to <info:addict> a <info:job>.
+        Ironically, the ordeal drove Samuel Manning to <info:addict> to numb the pain. It got worse and worse until he was no longer able to perform his duties as a <info:job>.
         Now, almost all of them <info:heroic_act>.
         His particular situation has given him certain skills: for one, <info:lie>.
         """
