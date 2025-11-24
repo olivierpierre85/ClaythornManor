@@ -36,7 +36,9 @@ label doctor_day2_hunt:
 
     Lady Claythorn may pretend it is arranged for our benefit, yet I suspect she will enjoy it most of all.
 
-    I doubt she can readily find willing hunting partners in so isolated a place.
+    She might even have planned the entire weekend simply for the pleasure of today's event.
+
+    After all, I doubt she can readily find hunting partners in so isolated a place.
     
     In any case, the butler has provided me with a hunting rifle.
 

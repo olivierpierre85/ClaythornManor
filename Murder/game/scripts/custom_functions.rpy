@@ -129,7 +129,7 @@ init python:
                 track_lists['mysterious'] = ['audio/music/mysterious_01.mp3', 'audio/music/mysterious_02.mp3', 'audio/music/mysterious_03.mp3']
                 track_lists['scary'] = ['audio/music/scary_01.mp3','audio/music/scary_02.mp3', 'audio/music/scary_03.mp3']
                 track_lists['boxer'] = ['audio/music/boxer_01.mp3']
-                track_lists['danger'] = ['audio/music/danger_01.mp3']
+                track_lists['danger'] = ['audio/music/danger_01.mp3', 'audio/music/danger_02.mp3']
                 track_lists['end_credits'] = ['audio/music/end_credits.mp3']
                     
                 if current_start_song == 1:
