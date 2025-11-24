@@ -171,7 +171,7 @@ label doctor_day2_hunt_accident_lad_conversation:
 
 label doctor_day2_hunt_accident_confront_drunk:
 
-    $ play_music('danger', 2, fadeout=8)
+    $ play_music('danger', 2, fadeout_val=4)
 
     """
     I summon the courage to go and speak to Samuel Manning.
@@ -243,7 +243,7 @@ label doctor_day2_hunt_accident_confront_drunk:
     I should have guessed.
     """
 
-    $ doctor_details.description_hidden.unlock('lie') 
+    $ drunk_details.description_hidden.unlock('lie') 
 
     drunk """
     What were you doing in my room?

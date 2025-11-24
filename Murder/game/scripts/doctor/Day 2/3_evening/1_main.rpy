@@ -25,16 +25,31 @@ label doctor_day2_evening:
 
     $ change_room("great_hall", irisout)
 
-    """
-    Everything happened so quickly it is all a blur.
-
-    After the shouting and crying in the woods, Captain Sinha took charge.
-
-    He had us carry the doctor on a makeshift stretcher back to the house.
-
-    It took some time, but we eventually reached the mansion.
-    """        
-
     $ play_music('sad')
 
+    """
+    I am still in shock when we reach the mansion.
+
+    I can scarcely recall what happened in the woods.
+
+    Samuel Manning, bleeding to death whilst I tried to save him.
+
+    The other group, drawn by the noise, rejoining us to witness the horrific scene.
+
+    Once it was clear the poor man was dead, Captain Sinha took charge and had us carry Samuel Manning back to the house.
+
+    I still can hardly believe it.
+
+    I have killed a man.
+
+    I cannot seem to convince myself that it was him or me.
+
+    Yet I must not waste time dwelling on it.
+
+    The others will have questions.
+
+    I must think very carefully about what I am going to say to them.
+    """           
+
     jump work_in_progress
+
