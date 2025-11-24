@@ -14,7 +14,7 @@ label init_drunk:
             # CharacterInformation(0, "background", "???"), 
             CharacterInformation(1, "status", "prominent family"),
             CharacterInformation(2, "age", "55-year-old "),
-            CharacterInformation(2, "wife", "the untimely death of his wife. Still young and healthy, she would never have died if the doctor responsible for her operation hadn't been so high on opioids"), # Confess to Doctor
+            CharacterInformation(2, "wife", "the untimely death of his wife. Still young and healthy, she would never have died if the doctor responsible for her operation hadn't been so high on opioids", is_important = True), # Confess to Doctor
             CharacterInformation(3, "addict", "an addiction of his own. He started drinking regularly", is_important = True), # Everyone
             CharacterInformation(60, "job", "lawyer, losing cases he should have won and disparaging his clients", is_important = True), # Confess to Broken
             CharacterInformation(60, "heroic_act", "have left him; only the poorest and the most desperate would ever hire him. He assumes that this choice of clients has made him look like a fervent defender of the poor in the eyes of Lady Claythorn, hence his invitation", is_important = True), # Confess to Broken 

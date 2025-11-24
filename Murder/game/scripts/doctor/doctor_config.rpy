@@ -64,7 +64,7 @@ label init_doctor:
                 content_negative="You didn't remove Thomas Moody's mask",
                 image_file="broken_unmasked",
                 chapters=['saturday_morning'],
-                relevant_chapters=['saturday_morning', 'saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['saturday_morning', 'saturday_evening'],
             ),
             CharacterInformation(
                 0, "hunt",

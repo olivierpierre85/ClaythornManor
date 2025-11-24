@@ -44,16 +44,24 @@ label common_day2_hunt_accident_death:
     elif current_character.text_id == "doctor":
         
         """
-        A sharp pain irridiates in my stomach.
+        A sharp pain irradiates through my stomach.
 
-        I fall on the ground.
-
-        Bloody hell, the fool shot me.
+        My legs give way and I fall to the ground.
         """
 
-        # TODO:careful
+        if doctor_details.objects.is_unlocked('drunk_letter'):
 
-    # play sound dying_in_pain TODO better sound
+            """
+            I allowed myself a moment of distraction and he seized it.
+
+            Bloody hell.
+            """
+        
+        else:
+            
+            """
+            Bloody hell, the fool has shot me.
+            """
 
     if current_character.text_id == "lad":
 
@@ -66,7 +74,7 @@ label common_day2_hunt_accident_death:
     """
 
     footman """
-    Sir, are you alright?
+    Sir, are you all right?
     """
 
     if current_character.text_id == "lad":
@@ -76,7 +84,7 @@ label common_day2_hunt_accident_death:
         """
 
     lad """
-    Help! Help!!!
+    Help! Help!
 
     Someone's been shot!
     """
@@ -106,52 +114,71 @@ label common_day2_hunt_accident_death:
     if current_character.text_id == "lad":
     
         """
-        I ignore Samuel Manning's pleas and sit beside the injured man.
+        I ignore Samuel Manning entirely and crouch beside the doctor.
 
-        I don't know how to help.
+        I have no idea how to help him.
 
-        But Doctor Baldwin does.
+        But he will know what to do.
         """
 
     elif current_character.text_id == "doctor":
 
+        if doctor_details.objects.is_unlocked('drunk_letter'):
+
+            """
+            He avoids my gaze, feigning remorse.
+
+            Yet I can see the truth in his eyes.
+
+            He is delighted.
+
+            I was a fool to let him anywhere near me.
+            """
+
+        else:
+
+            """
+            He stands there trembling, shame washing over his face.
+
+            There is something else in his expression, yet I cannot place it.
+            """
+
         """
-        No time to answer Samuel Manning.
+        But there is no time for that now.
 
-        My instincts take over at once.
+        I must act quickly.
 
-        I shout at Ted Harring.
+        I call out to Ted Harring.
         """
-
-        # TODO:careful
-    
 
     doctor """
     Quickly, remove my shirt.
 
-    I need to see where the bullet entered.
+    I need to see where the bullet went in.
     """
 
     if current_character.text_id == "lad":
         
         """
-        In my panic, I tear open his shirt, revealing his blood-soaked abdomen.
+        My hands shake as I tear open his shirt.
 
-        I notice a small entry wound on his right side.
+        Blood has soaked through the fabric.
 
-        It does not look too bad.
+        I see a small hole on his right side.
+
+        At first glance, it does not appear too dreadful.
         """
 
     elif current_character.text_id == "doctor":
 
         """
-        Shaking, Ted Harring helps me get rid of my shirt.
+        The lad helps me remove my shirt as best he can, though he is shaking like a leaf.
         """
 
     lad """
-    I've found the wound.
+    I found the wound.
 
-    Should I apply pressure?
+    Do you want me to press on it?
     """
 
     if current_character.text_id == "lad":
@@ -165,79 +192,79 @@ label common_day2_hunt_accident_death:
     elif current_character.text_id == "doctor":
 
         """
-        I glance down at the small hole in my stomach.
+        I look down at the small, neat hole in my abdomen.
 
-        Thick, dark blood seeps out, heavy and slow.
+        Dark blood oozes slowly, thick and heavy.
 
-        The liver... it must be the liver.
+        The liver.
 
-        Bloody hell.
+        Of all the places it could strike, it had to be the liver.
+
+        Damn it.
         """
 
-
     doctor """
-    There's no need.
+    There is no need.
 
-    The bullet has hit my liver.
+    The bullet has struck my liver.
     """
 
     lad """
-    But it's just a tiny hole. Maybe we can...
+    But it's such a tiny hole.
+
+    Surely there must be something we can do?
     """
 
     doctor """
-    No, we can't. Liver wounds are fatal.
+    No.
 
-    It's already too late.
+    Liver wounds are fatal.
+
+    It is already far too late.
     """
 
     if current_character.text_id == "lad":
         
         """
-        He casts a venomous glare at Samuel Manning but says nothing.
+        He looks towards Samuel Manning with pure hatred, yet says nothing aloud.
         """
     
     elif current_character.text_id == "doctor":
-
+            
         """
-        I look angrily at the man who shot me.
-
-        He avoids my gaze, shame written across his face.
-
-        Yet there is something else in his eyes — something I cannot place.
-
-        But it no longer matters.
-
-        Ted Harring interrupts my thoughts.
+        Filled with anger, I turn my eyes upon the man who has shot me.
         """
 
-        # TODO:careful
+        """
+        But it doesn't matter now.
+
+        Ted Harring speaks again.
+        """
 
     lad """
-    Is there anything I can do?
+    Tell me what I can do.
     """
 
     doctor """
-    Yes, hand me my bag.
+    Hand me my bag.
     """
 
     if current_character.text_id == "lad":
         
         """
-        I search around and locate his medical bag.
+        I look round until I spot the leather bag.
 
-        I pass it to him.
+        I grab it and pass it to him.
         """
 
     elif current_character.text_id == "doctor":
 
         """
-        He clumsly pass me my bag.
+        He fumbles about, then places my bag into my hands.
         """
 
-
     doctor """
-    Well, there's nothing more to do now.
+    Well, there is very little to be done now.
     """
 
     if current_character.text_id == "lad":
@@ -249,47 +276,51 @@ label common_day2_hunt_accident_death:
 
         Then another.
 
-        And another.
+        And a third.
         """
 
     elif current_character.text_id == "doctor":
 
         """
-        Time for one last hurrah.
+        Time for one final indulgence.
 
-        I take a few vials from my bag and drink them down as quickly as I can.
+        I take a few vials from my bag and drink them down as swiftly as I can manage.
         """
 
     doctor """
-    Ahhhh, that's better.
+    Ahh, that is better.
     """
 
     if current_character.text_id == "lad":
         
         """
-        This is all happening too quickly.
+        This is all happening far too fast.
+
+        I can scarcely keep up.
         """
 
     lad """
-    What can I do?
+    What should I do?
     """
 
     doctor """
-    There is nothing to be done.
+    Nothing.
 
-    I'll lose consciousness soon.
+    I shall lose consciousness before long.
 
-    And likely, I won't awaken again.
+    I doubt I shall wake again.
     """
 
     if current_character.text_id == "lad":
 
         """
-        I am speechless.
+        I cannot speak.
+
+        My throat is tight.
         """
 
     doctor """
-    Perhaps I deserve this.
+    Perhaps it is no more than I deserve.
     """
 
     lad """
@@ -299,17 +330,19 @@ label common_day2_hunt_accident_death:
     """
 
     doctor """
-    My patients won't care if I live or die.
+    My patients will not care whether I live or die.
 
-    I was cruel to them.
+    I was harsh with them.
 
-    I took advantage of them, took the drugs they needed for myself.
+    I took advantage of them.
 
-    I certainly don't merit sympathy.
+    I stole the medicines they needed for myself.
 
-    I shouldn't have come here.
+    I do not disserve sympathy.
 
-    Yet, in a way, this feels like justice.
+    I should never have come here.
+
+    Yet, in a strange way, this feels like justice.
     """
 
     return

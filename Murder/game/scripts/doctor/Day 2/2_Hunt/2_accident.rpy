@@ -207,7 +207,7 @@ label doctor_day2_hunt_accident_confront_drunk:
     """
     I summon the courage to go and speak to Samuel Manning.
 
-    Ted Harring does not follow me, he probably wants nothing to do with the man.
+    Ted Harring does not follow me, he probably wants nothing to do with him.
     """
 
     doctor """
@@ -319,7 +319,7 @@ label doctor_day2_hunt_accident_confront_drunk:
     doctor """
     Lower the weapon, Mr Manning.
 
-    You do not understand, someone is manipulating you.
+    It's a misunderstanding, someone is manipulating you.
 
     They want you to do this.
     """
@@ -361,10 +361,10 @@ label doctor_day2_hunt_accident_confront_drunk:
     doctor """
     Dear God.
 
-    What have you done.
+    What have I done.
     """
 
-    $ doctor_details.description_hidden.unlock('wife') 
+    $ drunk_details.description_hidden.unlock('wife') 
 
     jump doctor_day2_evening
 
