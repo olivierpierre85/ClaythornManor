@@ -139,7 +139,7 @@ label doctor_day2_hunt_accident:
 label doctor_day2_hunt_accident_lad_conversation:
 
     doctor """
-    How are you getting on Mister Harring?
+    How are you getting on Mr Harring?
     """
 
     lad """
@@ -174,35 +174,35 @@ label doctor_day2_hunt_accident_confront_drunk:
     $ play_music('danger', 2, fadeout=8)
 
     """
-    I summon the courage to go talk to Samuel Manning.
+    I summon the courage to go and speak to Samuel Manning.
 
-    Ted Harring doesn't follow me, he probably wants nothing to do with the man.
+    Ted Harring does not follow me, he probably wants nothing to do with the man.
     """
 
     doctor """
-    Mister Manning?
+    Mr Manning?
     """
     
     """
-    He looks bewildered that I am speaking to him.
+    He looks bewildered that I am addressing him.
     """
 
     drunk """
-    Hum,... yes?
+    Hum... yes?
     """
 
     doctor """
-    I was wandering if we could talk alone for a bit.
+    I was wondering if we could talk alone for a moment.
 
-    I have somewhat a sensitive subject to broach with you.
+    I have rather a sensitive subject to broach with you.
     """
 
     drunk """
-    Well, hum, yes I guess we could, of course.
+    Well, hum... yes, I suppose we could, of course.
     """
 
     doctor """
-    Very well, can you come this way?
+    Very well, if you would come this way.
     """
 
     drunk """
@@ -210,35 +210,37 @@ label doctor_day2_hunt_accident_confront_drunk:
     """
 
     """
-    I move a few paces from our luncheon place, enough to be out of earshot.
+    I move a few paces from our luncheon place, far enough to be out of earshot.
 
-    But close enough that if something happens, they can join us quickly.
+    But close enough that, if something happens, they can join us quickly.
     """
 
     doctor """
-    Here is perfect mister Manning.
+    Here is perfect, Mr Manning.
     """
 
     drunk """
-    Alright, what is it doctor?
+    All right, what is it, doctor?
     """
 
     """
-    I don't see a reason to beat about the bust.
+    I see no reason to beat about the bush.
     """
 
     doctor """
-    It's about the letter I found in your room, the one where you wrote that "I must pay".
+    It is about the letter I found in your room, the one where you wrote that "I must pay".
     """
 
     """
     This confession seems to take him by surprise.
 
-    But he quickly regain his composure, and talks in a more assertive tone.
+    But he quickly regains his composure, and speaks in a more assertive tone.
 
     Any trace of intoxication is gone from his face.
 
-    He was likely faking it, I should have guessed.
+    He was likely faking it.
+    
+    I should have guessed.
     """
 
     $ doctor_details.description_hidden.unlock('lie') 
@@ -248,21 +250,21 @@ label doctor_day2_hunt_accident_confront_drunk:
 
     Who gave you permission?
 
-    But I shouldn't be surprised, doctors do as they please.
+    But I should not be surprised, doctors do as they please.
 
     They always do.
     """
 
     doctor """
-    That's not the point, you wrote you wanted to hurt me, and I am not even sure to know why.
+    That is not the point, you wrote that you wanted to hurt me, and I am not even certain I know why.
     """
 
     """
-    My words struck him strongly, and that's with anger that he answers.
+    My words strike him strongly, and he answers in anger.
     """
 
     drunk """
-    You don't know why?!!!
+    You do not know why?!!!
 
     I thought it was clear enough!
 
@@ -272,55 +274,57 @@ label doctor_day2_hunt_accident_confront_drunk:
 
     My God, you stood by her bedside and watched her slip away.
     
-    And now you come here as though nothing happened, you probably don't even remember do you?
+    And now you come here as though nothing happened, you probably do not even remember, do you?
 
     Is it because you killed so many of them?
     """
 
     """
-    I am dumbstruck, I can't find the right words to say.
+    I am dumbstruck, I cannot find the right words to say.
 
-    Samuel Manning takes his gun and points it at me.
+    Samuel Manning raises his gun and points it at me.
     """
 
-    """
+    doctor """
     Lower the weapon, Mr Manning.
 
-    You don't understand, someone is manipulating you.
+    You do not understand, someone is manipulating you.
 
-    They want you to do this!
-    """
-
-    """
-    Well, that's all right because I want to do it too.
+    They want you to do this.
     """
 
+    drunk """
+    Well, that is all right, because I want to do it too.
     """
-    He is about about to shoot, so I jump towards him.
+
+    """
+    He is about to shoot, so I jump towards him.
     """
 
     play sound gun
     
     """
-    He missed me and I am on him.
+    He misses me and I am on him.
 
     We struggle.
 
-    I grap his rifle and try to wrestle it out of his arms.
+    I grab his rifle and try to wrestle it out of his arms.
     """
 
     play sound gun
 
+    pause 1.0
+
     """
-    For a moment everything is silent, until I felt the weight of Samuel Manning against me.
+    For a moment everything is silent, until I feel the weight of Samuel Manning against me.
 
-    I push him and he collapsed at my feet.
+    I push him and he collapses at my feet.
 
-    The rifle lay beside him.
+    The rifle lies beside him.
 
-    I knelt at once, though a single glance told me the truth.
+    I kneel at once, though a single glance tells me the truth.
 
-    He had shot himself in the chest during the fight.
+    He has shot himself in the chest during the fight.
     """
 
     doctor """
