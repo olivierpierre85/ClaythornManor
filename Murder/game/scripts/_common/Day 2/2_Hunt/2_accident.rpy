@@ -51,6 +51,8 @@ label common_day2_hunt_accident_death:
         Bloody hell, the fool shot me.
         """
 
+        # TODO:careful
+
     # play sound dying_in_pain TODO better sound
 
     if current_character.text_id == "lad":
@@ -120,6 +122,8 @@ label common_day2_hunt_accident_death:
 
         I shout at Ted Harring.
         """
+
+        # TODO:careful
     
 
     doctor """
@@ -206,6 +210,8 @@ label common_day2_hunt_accident_death:
 
         Ted Harring interrupts my thoughts.
         """
+
+        # TODO:careful
 
     lad """
     Is there anything I can do?
@@ -305,7 +311,5 @@ label common_day2_hunt_accident_death:
 
     Yet, in a way, this feels like justice.
     """
-
-
 
     return

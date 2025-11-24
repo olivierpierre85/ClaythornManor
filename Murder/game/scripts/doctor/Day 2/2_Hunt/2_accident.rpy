@@ -76,18 +76,26 @@ label doctor_day2_hunt_accident:
 
     call wait_screen_transition()
 
+    if doctor_details.objects.is_unlocked('drunk_letter'):
+
+        """
+        As I did this morning, I take care to keep Samuel Manning within my line of sight.
+
+        """
+
     """
     At first, it seems the afternoon will be as uneventful as the morning.
 
     I walk on mechanically, without thinking.
 
     Finding an animal to shoot is far from my mind.
+
     """
 
     if doctor_details.objects.is_unlocked('book_opium'):
 
         """
-        The fact is that I have noticed the first symptoms of withdrawal.
+        The fact is that I have begun to notice the first symptoms of withdrawal.
 
         I am sweating profusely, I have cramps, and my hands have begun to tremble.
 
@@ -100,20 +108,43 @@ label doctor_day2_hunt_accident:
         I hope I can govern it well enough that no one notices.
         """
 
+    elif doctor_details.important_choices.is_unlocked('flirt'):
+
+        """
+        Despite my caution, my gaze is drawn again and again to Andrew, looking rather dashing in his footman's livery.
+
+        I wonder if we shall see one another tonight.
+
+        """
+
     else:
 
         """
+        I regret not taking my "medicine" with me.
+
         All I can think about is when I shall be alone in my room again.
 
         I hope we shall not hunt for much longer.
         """
 
-    """
-    I am roused from my stupor by Samuel Manning.
-    """
+    if doctor_details.objects.is_unlocked('drunk_letter'):
+
+        """
+        I am lost in my thoughts when I hear Samuel Manning shout.
+
+        Damn it, for a moment I have let him out of my sight.
+
+        """
+
+    else:
+        # He is not suspicious of Samuel Manning
+        """
+        I am roused from my stupor by Samuel Manning.
+
+        """
+
 
     call common_day2_hunt_accident_death
-
 
     """
     Very quickly I start to enjoy the familiar feeling of calm.
@@ -336,3 +367,15 @@ label doctor_day2_hunt_accident_confront_drunk:
     $ doctor_details.description_hidden.unlock('wife') 
 
     jump doctor_day2_evening
+
+
+label doctor_day2_hunt_accident_death_not_careful:
+
+
+    """
+    I am lost in my thoughts when I a hear the voice of Samuel Manning shouting.
+
+    For a second I have forgotten to watch him.
+    """
+
+    return
