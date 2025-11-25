@@ -54,15 +54,15 @@ label doctor_day2_evening:
     """
 
     psychic surprised """
-    Oh my God! What happened!?
+    Oh my God! What happened?
 
     Is that Samuel Manning? Is he injured?
 
-    Oh no! Is he... dead?
+    Oh no. Is he... dead?
     """
 
     captain """
-    I'm sorry, dear, but he is.
+    I am sorry, my dear, but he is.
     """
 
     psychic """
@@ -70,7 +70,7 @@ label doctor_day2_evening:
     """
 
     captain """
-    It was an accident. 
+    It was an accident.
 
     He got into a fight with Doctor Baldwin.
 
@@ -78,7 +78,11 @@ label doctor_day2_evening:
     """
 
     psychic """
-    Oh my god, what was the fight about Doctor?
+    How terrible. What was the quarrel about, Doctor?
+    """
+
+    """
+    All eyes turn to me.
     """
 
     $time_left = 1
