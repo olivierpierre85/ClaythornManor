@@ -99,7 +99,7 @@ label init_doctor:
                 content_negative='You didn\'t take "Confessions of an English Opium-Eater" from the library',
                 image_file="book_opium",
                 chapters=['friday_evening'],
-                relevant_chapters=['saturday_morning', 'saturday_afternoon'],
+                relevant_chapters=['saturday_morning', 'saturday_afternoon', 'saturday_evening'],
             ),
             CharacterInformation(
                 0, "drunk_letter",

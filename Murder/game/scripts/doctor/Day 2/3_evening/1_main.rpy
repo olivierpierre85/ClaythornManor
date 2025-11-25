@@ -99,35 +99,88 @@ label doctor_day2_evening:
     call change_time(16,00)
 
     """
-    I am back to my room, shaken with a mix of nervousness and remorse.
+    I am back in my room, shaken by a wretched mix of nervousness and remorse.
     """
 
     if doctor_details.objects.is_unlocked('book_opium'):
         
-        # Don't die cause resolve to stop doing drugs
+        """
+        I pace the room, my hands still trembling.
 
+        The urge to reach for my laudanum is almost overwhelming.
+
+        Yet the words from that book I read yesterday return to me with cruel clarity.
+
+        I have been poisoning myself for years.
+
+        If I go on like this, I shall end as helpless as any of my poorest patients.
+
+        With a sudden surge of resolve, I open my bag and look down at the familiar little vials.
+
+        For a long moment I merely stare at them.
+
+        Then I close the bag again, leaving them untouched.
+
+        I will endure the shaking and the sleeplessness if I must.
+
+        Better a clear mind and a fighting chance than a drugged stupor in this house.
         """
-        TODO
-        """
-        
+
     elif doctor_details.important_choices.is_unlocked('broken_unmasked'):
         
-        # Don't die because you are too curious and too worry and want your wits about you.
-        """
-        TODO
-        """
 
+        """
+        My first impulse is to seek relief in the usual way.
+
+        I even reach for my bag before I stop myself.
+
+        The image of Thomas Moody without his mask appears at once in my mind.
+
+        Then I think of the letter I found in Samuel Manning's room.
+
+        All of this is too strange, as though I had stepped into the pages of a mystery novel.
+
+        It is plain that someone in this house is hiding something.
+
+        If I dull my senses now, I might miss some vital clue, or fail to react when danger comes.
+
+        I draw my hand back from the bag and clench it into a fist.
+
+        No, I must keep my wits about me.
+
+        Until I know whom I may trust, I shall remain sober.
+        """
 
     else:
 
         """
-        I don't know what to do, I feel like I don't have a choice but to get the only thing I know will calm me down.
+        I do not know what to do.
 
-        So I reach to my bag and grab a couple a vial of laudanum.
+        I feel as though I have no choice but to turn to the only thing I know will calm me.
         """
 
-        # TODO dead because no distractions
+        jump doctor_laudanum_death
 
+    call wait_screen_transition()
+
+    call change_time(18,30)
+
+    """
+    I rest for a while, until the familiar sound of the gong draws me out of my thoughts.
+    """
+    
+    play sound dinner_gong
+
+    """
+    I suppose I am steady enough to join the others for dinner.
+    """
+
+    $ change_room("dining_room", irisout)
+
+    """
+    Every one turns to me with...
+    """
+    
     jump work_in_progress
 
 
@@ -193,8 +246,6 @@ label doctor_day2_evening_reason_drunk_silent:
     They will not suspect a thing.
 
     It is true that most people will believe a doctor without a second thought.
-
-    I should be safe from now on.
     """
 
     doctor """
