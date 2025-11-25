@@ -64,16 +64,24 @@ label init_doctor:
                 content_negative="You didn't remove Thomas Moody's mask",
                 image_file="broken_unmasked",
                 chapters=['saturday_morning'],
-                relevant_chapters=['saturday_morning', 'saturday_evening'],
+                relevant_chapters=['saturday_morning', 'saturday_evening', 'sunday_morning', 'sunday_afternoon'],
             ),
             CharacterInformation(
-                0, "hunt",
-                "You joined the hunt",
-                content_negative="You avoided the hunt",
-                image_file="hunt",
-                chapters=['saturday_morning'],
-                relevant_chapters=['saturday_morning', 'saturday_afternoon_no_hunt'],
-            )
+                0, "trust_nurse",
+                "You teamed up with Rosalind Marsh",
+                content_negative="You didn't team up with Rosalind Marsh",
+                image_file="broken_unmasked",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon'],
+            ),
+            # CharacterInformation(
+            #     0, "hunt",
+            #     "You joined the hunt",
+            #     content_negative="You avoided the hunt",
+            #     image_file="hunt",
+            #     chapters=['saturday_morning'],
+            #     relevant_chapters=['saturday_morning', 'saturday_afternoon_no_hunt'],
+            # )
         ])
 
         doctor_objects = CharacterObjectList([

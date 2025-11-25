@@ -675,6 +675,8 @@ init -100 python:
 
                 # 5) Otherwise, branch on every Boolean combination of toggle_list
                 n = len(toggle_list)
+                normal_added = False  # track if at least one plain chapter checkpoint was created
+
                 for combo in itertools.product([False, True], repeat=n):
                     test_run   += 1
                     current_run = test_run
@@ -706,15 +708,25 @@ init -100 python:
                         if cond_fn and cond_fn(toggles):
                             triggered.append(ending.text_id)
 
-                    if triggered:
-                        # If one or more endings fire, add an ending checkpoint for each
-                        for eid in triggered:
-                            self.endings.unlock(eid)
-                            self.add_ending_checkpoint(self.endings.get_item(eid))
-                    else:
-                        # Otherwise, add the normal chapter checkpoint
-                        self.add_checkpoint(label_id)
-                    
-                    # 7) Afert Work, make sure everything is discovered (for those used only in one chapter)
+                    # --- Always add the normal chapter checkpoint for this combo ---
+                    self.add_checkpoint(label_id)
+
+                    # --- And, in addition, add ending checkpoints if any fired ---
+                    for eid in triggered:
+                        self.endings.unlock(eid)
+                        self.add_ending_checkpoint(self.endings.get_item(eid))
+                            
+                    # 7) After work, make sure everything is discovered (for those used only in one chapter)
                     for choice in self.get_choices_and_discoveries():
-                        choice.discovered=True
+                        choice.discovered = True
+
+                # --- Fallback: if *all* combos led to endings, still create one normal chapter checkpoint ---
+                if not normal_added:
+                    test_run   += 1
+                    current_run = test_run
+                    self.reset_information()
+                    self.add_checkpoint(label_id)
+                    # Optional: mark everything discovered here too, for consistency
+                    for choice in self.get_choices_and_discoveries():
+                        choice.discovered = True
+

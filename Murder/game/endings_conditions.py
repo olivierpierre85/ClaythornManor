@@ -35,7 +35,7 @@ def cond_doctor_overdose(toggles):
     return not toggles.get('flirt', False) and not toggles.get('book_opium', False) and not toggles.get('book_mystery', False)
 
 def cond_doctor_shot_by_drunk(toggles):
-    return not toggles.get('hunt', False)
+    return not toggles.get('drunk_letter', False)
 
 def cond_doctor_burned(toggles):
     return not toggles.get('drunk_letter', False)
