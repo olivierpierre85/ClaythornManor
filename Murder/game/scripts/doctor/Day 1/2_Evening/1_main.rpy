@@ -307,8 +307,6 @@ label doctor_day1_evening:
 
     call run_menu(doctor_details.saved_variables["day1_evening_map_menu"])
 
-    $ stop_music()
-
     """
     That is quite enough for one day.
 
@@ -412,6 +410,8 @@ label doctor_day1_evening:
 
                 call change_time(0,30, 'Morning', 'Saturday', hide_minutes=True)
 
+                $ stop_music()
+
             else:
 
                 """
@@ -426,6 +426,8 @@ label doctor_day1_evening:
 
                 call change_time(3,30, 'Morning', 'Saturday', hide_minutes=True)
 
+                $ stop_music()
+
                 """
                 It must be very late now, but I think it was worth it.
 
@@ -436,6 +438,8 @@ label doctor_day1_evening:
 
         else:
             # You slept with the footman but didn't bring a book.
+            $ stop_music()
+            
             """
             It is quiet now, but my mind is at ease.
 
@@ -455,6 +459,8 @@ label doctor_day1_evening:
         """
 
         call doctor_laudanum_death
+    
+    $ stop_music()
 
     jump doctor_day2_morning
 

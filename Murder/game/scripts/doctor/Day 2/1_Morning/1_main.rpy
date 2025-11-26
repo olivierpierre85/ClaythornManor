@@ -22,9 +22,10 @@ label doctor_day2_morning:
 
     $ change_room("bedroom_doctor", irisout)
 
+    $ play_music('upbeat', 3)
+
     """
     Awake, and alive.
-
     Strange how those two words came to mind first.
 
     An odd way to begin the day.
@@ -93,7 +94,7 @@ label doctor_day2_morning:
     call change_time(9, 30)
     
     """
-    Suddenly, our host approaches and interrupts the quiet.
+    Suddenly, our host approaches me.
     """
 
     call common_day2_morning_host_to_doctor
