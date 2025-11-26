@@ -2,7 +2,7 @@ label lad_day2_hunt_accident:
 
     $ change_room("forest")
     
-    call change_time(12,00, 'Hunt', 'Saturday')
+    call change_time(12,00, 'The Hunt', 'Saturday')
 
     $ play_music('chill')
 

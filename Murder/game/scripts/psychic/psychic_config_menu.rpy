@@ -91,7 +91,7 @@ label psychic_config_menu:
         TimedMenuChoice('What room are you in?', 'lad_generic_room_psychic', 10, condition = "not " + condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_friday_dinner', 10, condition = condition_friday),
         # TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Morning')"),
-        # TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'Hunt')"),
+        # TimedMenuChoice('What do you think of the other guests?', 'lad_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = "(current_day == 'Saturday' and current_phase == 'The Hunt')"),
         TimedMenuChoice('You don\'t have anymore questions for him', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "lad")
 

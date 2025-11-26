@@ -315,10 +315,22 @@ label doctor_day2_evening_reason_drunk_silent:
 label doctor_day2_dinner_lad:
     
     doctor """
-    Mister Harring,
+    Mister Harring.
+    """
+
+    lad """
+    Yes, doctor?
     """
 
     call lad_generic
+
+    if doctor_details.saved_variables['bored_by_lad'] > 1:
+
+        """
+        Well, that was hardly the most stimulating conversation.
+        """
+
+        $ doctor_details.saved_variables['bored_by_lad'] = 0
     
     return
 

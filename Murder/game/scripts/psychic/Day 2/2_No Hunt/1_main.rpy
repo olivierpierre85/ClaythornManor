@@ -18,7 +18,7 @@
 # --------------------------------------------
 label psychic_day2_no_hunt:
 
-    call change_time(11, 00, 'Hunt', 'Saturday', hide_minutes=True, chapter='saturday_afternoon')
+    call change_time(11, 00, 'The Hunt', 'Saturday', hide_minutes=True, chapter='saturday_afternoon')
 
     $ current_character.add_checkpoint("psychic_day2_no_hunt") 
     

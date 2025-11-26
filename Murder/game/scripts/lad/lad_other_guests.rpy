@@ -58,7 +58,7 @@ label lad_generic_psychic_opinion:
     return
 
 
-label lad_generic_other_guests_saturday_hunt_doctor:
+label lad_generic_other_guests_saturday_doctor:
 
     lad """
     I do not know, I have not had a chance to talk to everyone yet.
@@ -130,6 +130,27 @@ label lad_generic_drunk_hunt_doctor:
 
     doctor """
     Yes, I suppose that was obvious to everyone.
+    """
+
+    $ doctor_details.saved_variables['bored_by_lad'] += 1
+
+    return
+
+
+label lad_generic_drunk_hunt_doctor_dead:
+
+    lad """
+    Samuel Manning?
+
+    Well does it really matter what I think of him now?
+    """
+
+    doctor """
+    No, of course not.
+
+    I don't know why I asked you that.
+
+    I am sorry.
     """
 
     $ doctor_details.saved_variables['bored_by_lad'] += 1

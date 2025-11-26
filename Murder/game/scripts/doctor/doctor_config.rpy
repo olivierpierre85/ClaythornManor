@@ -19,6 +19,7 @@ label init_doctor:
             # Generic Menus
             "broken_generic_menu": broken_generic_menu_doctor,
             "lad_generic_menu": lad_generic_menu_doctor,
+            "lad_generic_other_guests_menu": lad_generic_other_guests_menu_doctor,
             "nurse_generic_menu": nurse_generic_menu_doctor,
             "nurse_generic_other_guests_menu": nurse_generic_other_guests_menu_doctor,
 

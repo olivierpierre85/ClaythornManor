@@ -2,7 +2,7 @@ label lad_day2_hunt_noaccident:
 
     $ change_room("forest")
     
-    call change_time(12,30, 'Hunt', 'Saturday')
+    call change_time(12,30, 'The Hunt', 'Saturday')
 
     $ lad_details.important_choices.unlock('hunt_captain_host')
 
