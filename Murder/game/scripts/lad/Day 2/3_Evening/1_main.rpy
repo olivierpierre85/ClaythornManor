@@ -108,14 +108,22 @@ label lad_day2_evening:
     Lady Claythorn starts a speech.
     """
 
-    call common_day2_evening_dinner
+    call common_day2_evening_dinner_host
+
+    """
+    The food is served shortly after the speech.
+
+    Yet, most of us have little appetite.
+    """
+
+    call common_day2_evening_dinner_lad_psychic_talk
 
     """
     Well, that's one less thing to worry about.
 
     No one seems up for small talk.
 
-    Dinner passes in silence.
+    Dinner passes in almost silence.
 
     Most guests retire to their rooms after eating.
 

@@ -114,14 +114,20 @@ label psychic_day2_evening:
     Lady Claythorn stands up to speak.
     """
 
-    call common_day2_evening_dinner
+    call common_day2_evening_dinner_host
+
+    """
+    As the food is served, Ted Harring turns to me.
+    """
+
+    call common_day2_evening_dinner_lad_psychic_talk
 
     call change_time(21, 00)
 
     """
-    We ate in silence.
+    We eat in almost silence.
 
-    After dinner, most people retired to their rooms.
+    After dinner, most people retire to their rooms.
 
     I do not think many will join for a drink afterwards.
 

@@ -274,7 +274,7 @@ label common_day2_evening_samuel_manning_discussion_part_3:
     
     return
 
-label common_day2_evening_dinner:
+label common_day2_evening_dinner_host:
 
     host """
     Now that everyone is here, I want to express my deepest regret for what happened today.
@@ -294,14 +294,11 @@ label common_day2_evening_dinner:
     Drinks will be available in the billiard room afterwards, as they were yesterday.
     """
 
-    # TODO different reaction for each guest?
-    """
-    The food is served shortly after the speech.
+    return
 
-    Yet, most of us have little appetite.
-    """
 
-    # TODO only for lad and psychic
+label common_day2_evening_dinner_lad_psychic_talk:
+
     lad """
     Miss Baxter, I don't see Samuel Manning. 
 
