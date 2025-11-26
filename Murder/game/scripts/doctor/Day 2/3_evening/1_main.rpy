@@ -190,7 +190,7 @@ label doctor_day2_evening:
     """
     That is a considerable relief.
 
-    I need only endure one more night and a single morning, then I shall be able to leave this place.
+    I just need to make it through one more night and a single morning, then I shall be able to leave this place.
 
     No doubt I shall have to give an account of myself to the police before I go, yet from what I understand it should be little more than a formality.
 
@@ -205,8 +205,8 @@ label doctor_day2_evening:
 
     $ time_left = 90 
     call run_menu(TimedMenu("doctor_day1_evening", [
-        TimedMenuChoice("Talk to Ted Harring", 'doctor_day2_dinner_lad', early_exit=True),
-        TimedMenuChoice("Talk to Rosalind Marsh", 'doctor_day2_dinner_nurse', early_exit=True),
+        TimedMenuChoice("Talk to Ted Harring", 'doctor_day2_dinner_lad'),
+        TimedMenuChoice("Talk to Rosalind Marsh", 'doctor_day2_dinner_nurse'),
         TimedMenuChoice("Don't disturb the creepy silence", 'generic_cancel', early_exit=True),
     ], image_left = "lad", image_right = "nurse"))
 
