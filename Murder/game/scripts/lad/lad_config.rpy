@@ -1,6 +1,10 @@
 label init_lad:
     
-    call lad_config_map
+    # Load All Map menu
+    call lad_day1_evening_map_menu
+    call lad_day2_no_hunt_map_menu
+    call lad_day2_evening_map_menu
+    call lad_day3_morning_map_menu
     
     call lad_config_menu
 

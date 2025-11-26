@@ -61,395 +61,402 @@ label doctor_day2_evening_downstairs_default:
     $ all_menus[doctor_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
     $ all_menus[doctor_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('kitchen'))
 
-    call doctor_downstairs_day2
+    call doctor_downstairs_day2_evening 
 
     return
 
 
-label doctor_downstairs_day2:
-
-    $ change_room("basement_stairs")
+label doctor_downstairs_day2_evening:
 
     """
-    I ought to have a look downstairs. Might be something of interest there.
-    """
-
-    footman """
-    Good evening, sir. I'm afraid guests aren't permitted beyond this point.
-    """
-
-    """
-    I offer him my warmest smile.
-    """
-
-    doctor """
-    I do apologise. I'm only having a quick look. Could you make an exception?
-
-    I promise I won't be long.
-    """
-
-    footman """
-    If it were up to me, I'd gladly say yes.
-
-    But Lady Claythorn was quite clear with her instructions.
-
-    I'm sure you understand.
-
-    Please don't take it personally.
-    """
-
-    """
-    He says it with a warm smile of his own.
-
-    His eyes say sorry, but there's something else there, too.
-
-    I wonder if...
-    """
-
-    call run_menu(
-        TimedMenu("doctor_has_try_sneaking_downstairs", [
-            TimedMenuChoice("Try flirting with him", 'doctor_downstairs_flirt', 30, early_exit=True),
-            TimedMenuChoice("No, he clearly won't change his mind", 'doctor_downstairs_apologize', 20, early_exit=True),
-        ])
-    )
-
-    return
-
-
-label doctor_downstairs_flirt:
-
-    doctor """
-    That's a shame, but I quite understand. Orders are orders.
-
-    Still, I had rather hoped you might show me around.
-
-    There are a few things I'd not mind discussing with you.
-    """
-
-    footman """
-    I'm a bit tied up at the moment, sir.
-
-    But I could make time later, if you'd still care to talk.
-    """
-
-    doctor """
-    I'd like that very much.
-
-    Where shall we meet?
-    """
-
-    footman """
-    Hard to say when I'll be free.
-
-    But I could stop by your room once I've a moment—if you don't mind, that is.
-    """
-
-    """
-    Well, that is rather forward.
-
-    I glance about to be sure we're alone.
-
-    We are.
-
-    I let my gaze linger a moment longer than necessary.
-    """
-
-    doctor """
-    Are you certain you can't come now?
-    """
-
-    footman """
-    No, truly I can't.
-
-    But I'll be done soon enough.
-
-    I'll see you later then, Doctor Baldwin.
-    """
-
-    doctor """
-    Please—call me Daniel.
-    """
-
-    footman """
-    Very well, Daniel. I'm Andrew.
-    """
-
-    doctor """
-    I'll see you later, Andrew.
-    """
-
-    $ doctor_details.important_choices.unlock('flirt')
-
-    return
-
-
-label doctor_downstairs_apologize:
-
-    doctor """ 
-    Quite right.
-
-    I'll be off, then.
-
-    Good evening.
-    """
-
-    footman """
-    Good evening, sir.
+    TODO? MAid and not footman, maid says, "I don't know he might be in your butt
     """
 
     return
+# label doctor_downstairs_day2:
+
+#     $ change_room("basement_stairs")
+
+#     """
+#     I ought to have a look downstairs. Might be something of interest there.
+#     """
+
+#     footman """
+#     Good evening, sir. I'm afraid guests aren't permitted beyond this point.
+#     """
+
+#     """
+#     I offer him my warmest smile.
+#     """
+
+#     doctor """
+#     I do apologise. I'm only having a quick look. Could you make an exception?
+
+#     I promise I won't be long.
+#     """
+
+#     footman """
+#     If it were up to me, I'd gladly say yes.
+
+#     But Lady Claythorn was quite clear with her instructions.
+
+#     I'm sure you understand.
+
+#     Please don't take it personally.
+#     """
+
+#     """
+#     He says it with a warm smile of his own.
+
+#     His eyes say sorry, but there's something else there, too.
+
+#     I wonder if...
+#     """
+
+#     call run_menu(
+#         TimedMenu("doctor_has_try_sneaking_downstairs", [
+#             TimedMenuChoice("Try flirting with him", 'doctor_downstairs_flirt', 30, early_exit=True),
+#             TimedMenuChoice("No, he clearly won't change his mind", 'doctor_downstairs_apologize', 20, early_exit=True),
+#         ])
+#     )
+
+#     return
 
 
-# First Floor
-label doctor_day2_evening_library:
+# label doctor_downstairs_flirt:
 
-    $ change_room('library')
+#     doctor """
+#     That's a shame, but I quite understand. Orders are orders.
 
-    """
-    That is a well-furnished library.
+#     Still, I had rather hoped you might show me around.
 
-    It's been a while since I've seen that many books.
+#     There are a few things I'd not mind discussing with you.
+#     """
 
-    There is one already opened on a desk.
+#     footman """
+#     I'm a bit tied up at the moment, sir.
 
-    "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
+#     But I could make time later, if you'd still care to talk.
+#     """
 
-    That sounds tedious.
+#     doctor """
+#     I'd like that very much.
 
-    But maybe I can borrow something else to read later in my room?
+#     Where shall we meet?
+#     """
 
-    I'm sure our host won't mind.
-    """
+#     footman """
+#     Hard to say when I'll be free.
 
-    call wait_screen_transition()
+#     But I could stop by your room once I've a moment—if you don't mind, that is.
+#     """
 
-    """
-    I looked around for a book that might be of interest, and found a couple of options.
-    """
+#     """
+#     Well, that is rather forward.
 
-    call run_menu(TimedMenu("doctor_library_default", [
-        TimedMenuChoice('Take "The Mysterious Affair at Styles" by Agatha Christie', 'doctor_day2_evening_book_mystery', early_exit=True),
-        TimedMenuChoice('Take "Confessions of an English Opium-Eater" by Thomas De Quincey', 'doctor_day2_evening_library_book_opium', early_exit=True),
-        TimedMenuChoice("On second thought, I'd better not take anything", 'generic_cancel', early_exit=True),
-    ]))
+#     I glance about to be sure we're alone.
 
-    #TODO: Other possibilities OR for someone else (nurse?) => GIVE it to drunk
+#     We are.
 
-        # 2. "The Tenant of Wildfell Hall" by Anne Brontë (1848)
-        # Type: Novel
+#     I let my gaze linger a moment longer than necessary.
+#     """
 
-        # Addiction: Alcoholism
+#     doctor """
+#     Are you certain you can't come now?
+#     """
 
-        # Summary: Features a strong female protagonist who flees an abusive, alcoholic husband. The novel critiques the destructive impact of addiction on family life.
+#     footman """
+#     No, truly I can't.
 
-        # Significance: Ahead of its time in addressing addiction, women's autonomy, and moral responsibility.
+#     But I'll be done soon enough.
 
-    return
+#     I'll see you later then, Doctor Baldwin.
+#     """
+
+#     doctor """
+#     Please—call me Daniel.
+#     """
+
+#     footman """
+#     Very well, Daniel. I'm Andrew.
+#     """
+
+#     doctor """
+#     I'll see you later, Andrew.
+#     """
+
+#     $ doctor_details.important_choices.unlock('flirt')
+
+#     return
 
 
-label doctor_day2_evening_book_mystery:
+# label doctor_downstairs_apologize:
 
-    """
-    That appears to be the most recent book they have.
+#     doctor """ 
+#     Quite right.
+
+#     I'll be off, then.
+
+#     Good evening.
+#     """
+
+#     footman """
+#     Good evening, sir.
+#     """
+
+#     return
+
+
+# # First Floor
+# label doctor_day2_evening_library:
+
+#     $ change_room('library')
+
+#     """
+#     That is a well-furnished library.
+
+#     It's been a while since I've seen that many books.
+
+#     There is one already opened on a desk.
+
+#     "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
+
+#     That sounds tedious.
+
+#     But maybe I can borrow something else to read later in my room?
+
+#     I'm sure our host won't mind.
+#     """
+
+#     call wait_screen_transition()
+
+#     """
+#     I looked around for a book that might be of interest, and found a couple of options.
+#     """
+
+#     call run_menu(TimedMenu("doctor_library_default", [
+#         TimedMenuChoice('Take "The Mysterious Affair at Styles" by Agatha Christie', 'doctor_day2_evening_book_mystery', early_exit=True),
+#         TimedMenuChoice('Take "Confessions of an English Opium-Eater" by Thomas De Quincey', 'doctor_day2_evening_library_book_opium', early_exit=True),
+#         TimedMenuChoice("On second thought, I'd better not take anything", 'generic_cancel', early_exit=True),
+#     ]))
+
+#     #TODO: Other possibilities OR for someone else (nurse?) => GIVE it to drunk
+
+#         # 2. "The Tenant of Wildfell Hall" by Anne Brontë (1848)
+#         # Type: Novel
+
+#         # Addiction: Alcoholism
+
+#         # Summary: Features a strong female protagonist who flees an abusive, alcoholic husband. The novel critiques the destructive impact of addiction on family life.
+
+#         # Significance: Ahead of its time in addressing addiction, women's autonomy, and moral responsibility.
+
+#     return
+
+
+# label doctor_day2_evening_book_mystery:
+
+#     """
+#     That appears to be the most recent book they have.
     
-    A mystery novel.
+#     A mystery novel.
 
-    I don't know the author, but a quick look at her biography tells me she was a nurse during the war.
+#     I don't know the author, but a quick look at her biography tells me she was a nurse during the war.
     
-    So I feel like I could relate to the her.
-    """
+#     So I feel like I could relate to the her.
+#     """
 
-    $ doctor_details.objects.unlock('book_mystery')
+#     $ doctor_details.objects.unlock('book_mystery')
 
-    return
-
-
-label doctor_day2_evening_library_book_opium:
-
-    """
-    I have been meaning to read this for a long time.
-
-    Maybe now is the time.
-    """
-
-    $ doctor_details.objects.unlock('book_opium')
-
-    return
+#     return
 
 
-label doctor_day2_evening_tea_room:
-    call doctor_tea_room_default
-    return
+# label doctor_day2_evening_library_book_opium:
+
+#     """
+#     I have been meaning to read this for a long time.
+
+#     Maybe now is the time.
+#     """
+
+#     $ doctor_details.objects.unlock('book_opium')
+
+#     return
 
 
-label doctor_day2_evening_dining_room:
-    call doctor_dining_room_default
-    return
+# label doctor_day2_evening_tea_room:
+#     call doctor_tea_room_default
+#     return
 
 
-label doctor_day2_evening_garden:
-
-    $ change_room('great_hall')
-
-    """
-    From the great hall, I am ready to go and have a look outside.
-
-    But the weather has worsened, I do not think it is safe to go out tonight.
-    """
-
-    return
+# label doctor_day2_evening_dining_room:
+#     call doctor_dining_room_default
+#     return
 
 
-label doctor_day2_evening_entrance_hall:
-    call doctor_entrance_hall_default
-    return
+# label doctor_day2_evening_garden:
 
-label doctor_day2_evening_portrait_gallery:
-    call doctor_portrait_gallery_default
-    return
+#     $ change_room('great_hall')
 
-# First Floor
-label doctor_day2_evening_bedroom_drunk:
+#     """
+#     From the great hall, I am ready to go and have a look outside.
+
+#     But the weather has worsened, I do not think it is safe to go out tonight.
+#     """
+
+#     return
+
+
+# label doctor_day2_evening_entrance_hall:
+#     call doctor_entrance_hall_default
+#     return
+
+# label doctor_day2_evening_portrait_gallery:
+#     call doctor_portrait_gallery_default
+#     return
+
+# # First Floor
+# label doctor_day2_evening_bedroom_drunk:
     
-    call doctor_bedroom_default
+#     call doctor_bedroom_default
 
-    play sound door_open
+#     play sound door_open
 
-    """
-    My knocking slightly opens the door.
+#     """
+#     My knocking slightly opens the door.
 
-    From the hallway, I can see part of the room.
+#     From the hallway, I can see part of the room.
 
-    It is in a dreadful state.
+#     It is in a dreadful state.
 
-    Should I take a peek?
-    """
+#     Should I take a peek?
+#     """
 
-    if doctor_details.endings.is_unlocked('shot_by_drunk'):
+#     if doctor_details.endings.is_unlocked('shot_by_drunk'):
         
-        """
-        I know and it's probably a bad idea and that I should close this door.
+#         """
+#         I know and it's probably a bad idea and that I should close this door.
 
-        But I've got an intrusive feeling that if don't enter, something bad will happen.
+#         But I've got an intrusive feeling that if don't enter, something bad will happen.
 
-        That is obviously silly, but...
-        """
+#         That is obviously silly, but...
+#         """
         
-        call run_menu( 
-            TimedMenu("doctor_day2_evening_bedroom_drunk", [
-                TimedMenuChoice("Follow your intuition, they exist for a reason{{intuition}}", "doctor_day2_evening_bedroom_drunk_enter", 20, next_menu="doctor_day2_evening_bedroom_drunk_enter", early_exit=True),
-                TimedMenuChoice("Don't be ridiculous, there is no such thing as premonition", "doctor_day2_evening_bedroom_drunk_not_enter", early_exit=True),
-            ])
-        )
+#         call run_menu( 
+#             TimedMenu("doctor_day2_evening_bedroom_drunk", [
+#                 TimedMenuChoice("Follow your intuition, they exist for a reason{{intuition}}", "doctor_day2_evening_bedroom_drunk_enter", 20, next_menu="doctor_day2_evening_bedroom_drunk_enter", early_exit=True),
+#                 TimedMenuChoice("Don't be ridiculous, there is no such thing as premonition", "doctor_day2_evening_bedroom_drunk_not_enter", early_exit=True),
+#             ])
+#         )
 
-    else:
+#     else:
 
-        pause 1.0
+#         pause 1.0
 
-        call doctor_day2_evening_bedroom_drunk_not_enter
+#         call doctor_day2_evening_bedroom_drunk_not_enter
 
-    return
-
-
-label doctor_day2_evening_bedroom_drunk_not_enter:
-
-    """
-    Why am I thinking, there is no reason for me to intrude.
-
-    I close the door and leave.
-    """
-
-    return
+#     return
 
 
-label doctor_day2_evening_bedroom_psychic:
+# label doctor_day2_evening_bedroom_drunk_not_enter:
+
+#     """
+#     Why am I thinking, there is no reason for me to intrude.
+
+#     I close the door and leave.
+#     """
+
+#     return
+
+
+# label doctor_day2_evening_bedroom_psychic:
   
-    call doctor_bedroom_default
+#     call doctor_bedroom_default
 
-    psychic """
-    Yes? Who is it?
-    """ 
+#     psychic """
+#     Yes? Who is it?
+#     """ 
 
-    doctor """
-    It's Doctor Baldwin.
-    """
+#     doctor """
+#     It's Doctor Baldwin.
+#     """
 
-    psychic """
-    Yes, Doctor, what can I do for you?
-    """
+#     psychic """
+#     Yes, Doctor, what can I do for you?
+#     """
     
-    doctor """
-    I just wanted to have chat. Do you have time?
-    """
+#     doctor """
+#     I just wanted to have chat. Do you have time?
+#     """
 
-    psychic """
-    I'm afraid It's a bit too late for me.
+#     psychic """
+#     I'm afraid It's a bit too late for me.
 
-    But we can speak again tomorrow.
-    """
+#     But we can speak again tomorrow.
+#     """
 
-    doctor """
-    Of course, I am sorry.
-    """
+#     doctor """
+#     Of course, I am sorry.
+#     """
 
-    $ unlock_map('bedroom_psychic')
+#     $ unlock_map('bedroom_psychic')
 
-    return
+#     return
 
-# Closed bedrooms
-label doctor_bedroom_stay_away:
+# # Closed bedrooms
+# label doctor_bedroom_stay_away:
 
-    """
-    Should I try to see what's inside?
+#     """
+#     Should I try to see what's inside?
 
-    No, of course not. 
+#     No, of course not. 
 
-    Most people are downstairs now, but they could come back anytime.
+#     Most people are downstairs now, but they could come back anytime.
 
-    Also, that's wildly inappropriate.
-    """
+#     Also, that's wildly inappropriate.
+#     """
     
-    return
+#     return
 
 
-label doctor_day2_evening_bedroom_captain:
-    call doctor_bedroom_default
-    call doctor_bedroom_stay_away
-    return
+# label doctor_day2_evening_bedroom_captain:
+#     call doctor_bedroom_default
+#     call doctor_bedroom_stay_away
+#     return
 
-label doctor_day2_evening_bedroom_host:
-    call doctor_bedroom_default
-    call doctor_bedroom_stay_away
-    return
+# label doctor_day2_evening_bedroom_host:
+#     call doctor_bedroom_default
+#     call doctor_bedroom_stay_away
+#     return
 
-label doctor_day2_evening_bedroom_lad:
-    call doctor_bedroom_default
-    call doctor_bedroom_stay_away
-    return
+# label doctor_day2_evening_bedroom_lad:
+#     call doctor_bedroom_default
+#     call doctor_bedroom_stay_away
+#     return
 
-label doctor_day2_evening_bedroom_broken:
-    call doctor_bedroom_default
-    call doctor_bedroom_stay_away
-    return
+# label doctor_day2_evening_bedroom_broken:
+#     call doctor_bedroom_default
+#     call doctor_bedroom_stay_away
+#     return
 
-label doctor_day2_evening_bedroom_nurse:
-    call doctor_bedroom_default
-    call doctor_bedroom_stay_away
-    return
+# label doctor_day2_evening_bedroom_nurse:
+#     call doctor_bedroom_default
+#     call doctor_bedroom_stay_away
+#     return
 
-# Attic
-label doctor_day2_evening_storage:
-    call doctor_storage_default
-    return
+# # Attic
+# label doctor_day2_evening_storage:
+#     call doctor_storage_default
+#     return
 
-label doctor_day2_evening_males_room:
-    call doctor_males_room_default
-    return
+# label doctor_day2_evening_males_room:
+#     call doctor_males_room_default
+#     return
 
-label doctor_day2_evening_females_room:
-    call doctor_females_room_default
-    return
+# label doctor_day2_evening_females_room:
+#     call doctor_females_room_default
+#     return
 
-label doctor_day2_evening_butler_room:
-    call doctor_butler_room_default
-    return
+# label doctor_day2_evening_butler_room:
+#     call doctor_butler_room_default
+#     return
