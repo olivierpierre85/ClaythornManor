@@ -178,8 +178,49 @@ label doctor_day2_evening:
     $ change_room("dining_room", irisout)
 
     """
-    Every one turns to me with...
+    It seems as though everyone turns to look at me as I enter the room.
+
+    Glances and stares follow me to my seat.
+
+    When all are present, Lady Claythorn begins to speak.
     """
+
+    call common_day2_evening_dinner_host
+
+    """
+    That is a considerable relief.
+
+    I need only endure one more night and a single morning, then I shall be able to leave this place.
+
+    No doubt I shall have to give an account of myself to the police before I go, yet from what I understand it should be little more than a formality.
+
+    I turn to my left. Ted Harring is looking rather downcast.
+
+    Opposite me, Rosalind Marsh now sits alone.
+
+    She has kept to her usual seat, though there is no one beside her any longer.
+
+    Should I speak to either of them, or remain silent as most of the table seems determined to do?
+    """
+
+    $ time_left = 90 
+    call run_menu(TimedMenu("doctor_day1_evening", [
+        TimedMenuChoice("Talk to Ted Harring", 'doctor_day2_dinner_lad', early_exit=True),
+        TimedMenuChoice("Talk to Rosalind Marsh", 'doctor_day2_dinner_nurse', early_exit=True),
+        TimedMenuChoice("Don't disturb the creepy silence", 'generic_cancel', early_exit=True),
+    ], image_left = "lad", image_right = "nurse"))
+
+    call change_time(21, 00)
+
+    """
+    The dinner is over.
+
+    It seemed longer than usual, for there was scarcely any conversation at all.
+
+    Like most of the other guests, I retire to my room.
+    """
+
+    call doctor_day2_evening_exploration
     
     jump work_in_progress
 
@@ -267,5 +308,31 @@ label doctor_day2_evening_reason_drunk_silent:
     lad """
     Of course.
     """
+
+    return
+
+
+label doctor_day2_dinner_lad:
+    
+    doctor """
+    Mister Harring,
+    """
+
+    call lad_generic
+    
+    return
+
+
+label doctor_day2_dinner_nurse:
+
+    doctor """
+    Miss Marsh.
+    """
+
+    nurse """
+    Doctor.
+    """
+
+    call nurse_generic
 
     return
