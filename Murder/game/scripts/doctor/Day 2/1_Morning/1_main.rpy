@@ -367,3 +367,84 @@ label doctor_day2_morning_nurse:
     call nurse_generic
 
     return
+
+# The rest in the common folder
+label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
+
+    $ doctor_details.important_choices.unlock('broken_unmasked')
+
+    """
+    I can't ignore the signs. I need to see for myself.
+
+    But I should be alone for this.
+    """
+
+    doctor """
+    Thank you for your help, Mr Harring.
+
+    I need to examine Thomas Moody's face now.
+
+    Would you step outside?
+    """
+
+    lad """
+    Of course.
+    """
+
+    """
+    Once I'm sure the room is empty, I remove the mask.
+
+    His face twisted in a horrible grimace.
+
+    
+
+    This is not the face of someone dying peacefully in his sleep.
+
+    It is very likely he was poisoned.
+
+    And then, something strikes me.
+
+    I should've noticed it at once.
+
+    No disfigurement. No scars.
+
+    His face is untouched.
+
+    He never needed a mask.
+
+    What does that mean?
+    """
+
+    # TODO: find appropriate music
+
+    """
+    I pause, trying to make sense of it.
+
+    Too many questions at once.
+
+    Thomas Moody was murdered—that much is clear.
+
+    But he also hid behind a mask.
+
+    Was he hiding his identity?
+
+    I don't understand it. Not yet.
+
+    Best to keep this to myself for now.
+
+    Until I know who I can trust.
+
+    I replace the mask and leave the room.
+    """
+
+    $ broken_details.description_hidden.unlock('lie_mask')
+
+    $ change_room("bedrooms_hallway")
+
+    """
+    Ted Harring is waiting in the hallway.
+    """
+
+    call common_day2_breakfast_follow_doctor_lad_normal
+
+    return

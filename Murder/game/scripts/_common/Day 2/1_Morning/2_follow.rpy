@@ -205,7 +205,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
             $ time_left = 1
             call run_menu(
                 TimedMenu("doctor_day2_morning_remove_mask", [
-                    TimedMenuChoice("Remove the mask", 'common_day2_breakfast_follow_doctor_lad_remove_mask', early_exit = True),
+                    TimedMenuChoice("Remove the mask", 'doctor_day2_breakfast_follow_doctor_lad_remove_mask', early_exit = True),
                     TimedMenuChoice("Don't remove the mask, let him rest in peace", 'common_day2_breakfast_follow_doctor_lad_keep_mask', early_exit = True)
                 ])
             )
@@ -225,81 +225,6 @@ label common_day2_breakfast_follow_doctor_lad_keep_mask:
     No sense in stirring up more trouble.
 
     I've got enough to go on for now.
-    """
-
-    call common_day2_breakfast_follow_doctor_lad_normal
-
-    return
-
-
-label common_day2_breakfast_follow_doctor_lad_remove_mask:
-
-    $ doctor_details.important_choices.unlock('broken_unmasked')
-
-    """
-    I can't ignore the signs. I need to see for myself.
-
-    But I should be alone for this.
-    """
-
-    doctor """
-    Thank you for your help, Mr Harring.
-
-    I need to examine Thomas Moody's face now.
-
-    Would you step outside?
-    """
-
-    lad """
-    Of course.
-    """
-
-    """
-    Once I'm sure the room is empty, I remove the mask.
-
-    All the symptoms are present. His face twisted in a grimace.
-
-    There's no doubt—he was poisoned.
-
-    And then, something strikes me.
-
-    I should've noticed it at once.
-
-    No disfigurement. No scars.
-
-    His face is untouched.
-
-    He never needed a mask.
-
-    What does that mean?
-    """
-
-    # TODO: find appropriate music
-
-    """
-    I pause, trying to make sense of it.
-
-    Too many questions at once.
-
-    Thomas Moody was murdered—that much is clear.
-
-    But he also hid behind a mask.
-
-    Was he hiding his identity?
-
-    I don't understand it. Not yet.
-
-    Best to keep this to myself for now.
-
-    Until I know who I can trust.
-
-    I replace the mask and leave the room.
-    """
-
-    $ change_room("bedrooms_hallway")
-
-    """
-    Ted Harring is waiting in the hallway.
     """
 
     call common_day2_breakfast_follow_doctor_lad_normal

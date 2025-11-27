@@ -7817,7 +7817,7 @@
         "Don't remove the mask, let him rest in peace"
       ],
       "selected": "Remove the mask",
-      "redirect": "common_day2_breakfast_follow_doctor_lad_remove_mask",
+      "redirect": "doctor_day2_breakfast_follow_doctor_lad_remove_mask",
       "time_left": 1,
       "timestamp": "2025-10-10T19:26:04.821754",
       "time_to_decide": 2.410722,

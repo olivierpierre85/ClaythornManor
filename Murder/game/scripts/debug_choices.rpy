@@ -43,6 +43,10 @@ label init_debug:
     call unlock_doctor
     $ doctor_details.load_test_checkpoints()
 
+    # $ current_character = broken_details
+    # $ current_storyline = broken_details
+    # call unlock_broken
+
     $ hide_notifications = False
 
     return
@@ -138,9 +142,10 @@ label unlock_broken:
     $ broken_details.description_hidden.unlock('background') 
     $ broken_details.description_hidden.unlock('job') 
     $ broken_details.description_hidden.unlock('heroic_act')
-    # $ broken_details.description_hidden.unlock('city')
-    # $ broken_details.description_hidden.unlock('shy')
-    # $ broken_details.description_hidden.unlock('lie') 
+    $ broken_details.description_hidden.unlock('city')
+    $ broken_details.description_hidden.unlock('shy')
+    $ broken_details.description_hidden.unlock('lie_mask')
+    $ broken_details.description_hidden.unlock('lie_name') 
 
     return
 
