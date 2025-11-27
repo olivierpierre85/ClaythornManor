@@ -110,12 +110,14 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     I should leave at once and warn the others.
 
     I believe they are all gathered in the billiard room.
+
+    If Lady Claythorn truly is behind this, I would rather face her with witnesses than wait alone for whatever she has planned.
     """
 
     $ change_room("billiard_room") 
     
     """
-    Indeed, I find most of them assembled around Captain Sinha.
+    I find most of them assembled around Captain Sinha.
 
     I interrupt him.
     """
@@ -149,7 +151,7 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     """
 
     drunk """
-    Wait— you went into my room?
+    Wait, you went into my room?
 
     What gave you the right to do such a thing?
     """
@@ -173,7 +175,7 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
 
     A man who thinks it proper to barge into another's room.
 
-    Unless, of course, you did not enter it at all— and wrote this yourself.
+    Unless, of course, you did not enter it at all, and wrote this yourself.
     """
 
     doctor """
@@ -189,7 +191,7 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     """
     I glance around the room. All eyes are upon us.
 
-    The others look perplexed— unsure what to make of the exchange.
+    The others look perplexed, unsure what to make of the exchange.
 
     Silence lingers until Captain Sinha finally speaks.
     """
@@ -211,7 +213,7 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     """
 
     captain """
-    Enough, both of you!
+    Enough, both of you.
 
     I do not understand any of this. We should think it over with cooler heads.
 
@@ -220,10 +222,16 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
 
     """
     Our hostess is visibly shaken, yet manages to reply.
+
+    I watch her closely.
+
+    If she wrote the first part of that letter, then this is her handiwork laid bare before everyone.
+
+    Yet I cannot tell whether her distress is genuine horror or a performance.
     """
 
     host """
-    I… I don't know.
+    I, I don't know.
 
     I'm not certain whom to believe.
 
@@ -237,7 +245,7 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     """
 
     doctor """
-    What? No!
+    What? No.
 
     I must leave this place at once. I am not safe here.
     """
@@ -249,14 +257,14 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     """
 
     #TODO: Add thunder sound, and notice on it?
-    # Just after saying that, a lound thunder erupts in the night. (replace I pounder that for a moment)
+    # Just after saying that, a loud thunder erupts in the night. (replace I ponder that for a moment)
 
     """
     I ponder that for a moment. The storm is raging outside, leaving now would be perilous.
 
-    Yet staying in my room hardly feels safer.
+    Yet staying in my room hardly feels safer, not with Samuel Manning and perhaps Lady Claythorn herself set against me.
 
-    The others watch me uneasily; I can tell they do not quite believe me.
+    The others watch me uneasily. I can tell they do not quite believe me.
     """
 
     doctor """
@@ -284,27 +292,65 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     """
 
     """
-    Captain Sinha and the footman escort me to my room.
+    Captain Sinha escorts me to my room.
 
     The butler and Lady Claythorn accompany Samuel Manning to his.
 
     I am far from reassured, yet see no alternative.
 
-    I enter my room as the Captain and butler remain outside.
+    I enter my room as the Captain remain outside.
     """
 
     $ change_room("bedroom_doctor")
 
     captain """
-    My apologies, Doctor Baldwin. I'm sure we shall sort this out soon enough.
+    My apologies, Doctor Baldwin. I am sure we shall sort this out soon enough.
 
-    In the meantime, we'll have to lock you in.
+    In the meantime, we shall have to lock you in.
+    """
+
+    """
+    Before he can close the door, I lower my voice.
+    """
+
+    doctor """
+    Captain, between ourselves, you must see what this implies.
+
+    Lady Claythorn invited us both here.
+
+    She is in all likelihood the one who wrote that letter to Samuel Manning.
+
+    Which means something dangerous may be at play here.
+    """
+
+    """
+    He hesitates, then answers just as quietly.
+    """
+
+    captain """
+    I cannot deny the thought has crossed my mind.
+
+    But from my point of view, I have only an anonymous letter that you say you found in rather singular circumstances.
+
+    I cannot possibly accuse our hostess openly on that alone.
+    """
+
+    doctor """
+    I understand your position, but please keep it in mind, and be careful.
+    """
+
+    captain """
+    You have my word.
+    """
+
+    """
+    He leaves me alone, so I lock my door and do what I can to secure it.
     """
 
     play sound door_locked
 
     """
-    I have no intention of sitting idly by, so I barricade the door in case someone I mistrust decides to pay a visit.
+    I have no intention of sitting idly by, so I barricade the door in case Manning, or even Lady Claythorn herself, decides to pay a visit.
     """
 
     play sound moving_furniture
@@ -324,17 +370,23 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     play sound door_knock
 
     captain """
-    Doctor Baldwin, after some discussion, we've decided you may be right.
+    Doctor Baldwin, after some discussion, we have decided you may be right in one respect.
+
+    There is too much here that does not add up.
 
     We shall all leave in the morning.
 
-    Lady Claythorn has agreed to hold our planned presentation beforehand.
+    For the time being, we shall all rest easier if you and Mister Manning stay in your rooms for the night.
 
-    For the time being, we'll all rest easier if you and Mr Manning stay in your rooms for the night.
+    I did not dare accused Lady Claythorn directly, but I will also keep an eye her.
+    """
+
+    """
+    Good, he has not dismissed my suspicions entirely.
     """
 
     doctor """
-    Very well. I've barricaded myself anyway.
+    Very well. I have barricaded myself anyway.
     """
 
     captain """
@@ -354,9 +406,9 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
 
     What am I to do now? 
     
-    I don't think I could sleep in this state.
+    I do not think I could sleep in this state.
 
-    And maybe it is better to stay alert.
+    And perhaps it is better to stay alert.
 
     But on the other hand, I think I am protected enough here.
     """
@@ -369,6 +421,7 @@ label doctor_day1_evening_bedroom_drunk_leave_manor:
     )
 
     return
+
 
 label doctor_day1_evening_bedroom_drunk_leave_manor_sleep:
 
