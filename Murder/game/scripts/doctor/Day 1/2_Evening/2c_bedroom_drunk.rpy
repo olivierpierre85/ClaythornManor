@@ -31,7 +31,7 @@ label doctor_day1_evening_bedroom_drunk_enter:
 
     Who could have written such a thing?
 
-    Still, what troubles me most is the second part — barely legible, clearly added later by Samuel Manning himself.
+    Still, what troubles me most is the second part, barely legible, most likely added later by Samuel Manning himself.
     """
 
     call drunk_letter_second_part
@@ -43,29 +43,53 @@ label doctor_day1_evening_bedroom_drunk_enter:
 
     I sit on the edge of the bed, struggling to make sense of it all.
 
-    Someone in this house means me harm.
+    I try to remember Samuel Manning, but I cannot say for certain that I ever treated his wife.
+
+    That does not mean the charge is false.
+
+    I know I have done similar things to a good many patients. Mrs Manning may well have been among them, and I have simply forgotten.
+
+    One thing is certain though. Someone in this house means me harm.
 
     And they are trying to use Samuel Manning to hurt me.
 
-    I try to remember him, but I cannot say for certain that I ever treated his wife.
+    I say they, but it is plain enough who must have written this note.
 
-    That does not mean the accusation is false. It is entirely possible I did, and have simply forgotten.
+    Lady Claythorn invited me here. She is the most obvious culprit.
 
-    It must be someone who knows me well, yet I do not recall recognising anyone so far.
+    In that case my invitation here was no kindly whim, but a deliberate act.
 
-    Then again, I have not been paying much attention.
+    Yet I cannot be sure, for I did not recognise her at all when we were introduced.
 
-    But what should I do now?
+    But that, again, may mean very little.
 
-    The prudent choice would be to leave this place at once.
+    It could, of course, be an extraordinary coincidence.
 
-    Yet to explain my departure, I might have to reveal what I found here — and that could prove troublesome.
+    Perhaps some enemy of mine is numbered among the guests, and Lady Claythorn has nothing at all to do with this.
 
-    I cannot afford to lose the prize money either; heaven knows I need it.
+    It is not very likely, yet not impossible.
 
-    Besides, it could simply be a cruel joke, or some wretched misunderstanding.
+    What am I to do now.
 
-    What should I do now?
+    The prudent course might be to warn everyone and abandon the whole business.
+
+    But I have no notion how any of them would react to such an announcement.
+
+    That could mean sacrificing the prize money.
+
+    And if this letter were to be spoken of outside these walls, it might cost me my practice as well.
+
+    I cannot afford that.
+
+    Besides, this could yet prove no more than a cruel jest, or some wretched misunderstanding.
+
+    If I remain, nothing more may come of it.
+
+    I need only be on my guard, and watch Samuel Manning closely.
+
+    I must decide.
+
+    Do I risk my life, or do I risk losing the kind of money that would set me up comfortably for years to come.
     """
 
     call run_menu( 
