@@ -26,12 +26,27 @@ label doctor_day2_morning:
 
     """
     Awake, and alive.
-    Strange how those two words came to mind first.
-
-    An odd way to begin the day.
-
-    No matter. I ought to prepare myself.
     """
+
+    if doctor_details.objects.is_unlocked('drunk_letter'):
+
+        """
+        Despite my suspicions, it seems no one tried to harm me in the night.
+
+        It is a relief, though the weekend is far from over.
+
+        I should prepare myself for breakfast.
+        """
+
+    else:
+
+        """
+        Strange how those two words came to mind first.
+
+        An odd way to begin the day.
+
+        No matter. I ought to prepare myself.
+        """
 
     if doctor_details.objects.is_unlocked('book_opium'):
 

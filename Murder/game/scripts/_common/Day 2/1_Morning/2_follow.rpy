@@ -169,21 +169,38 @@ label common_day2_breakfast_follow_doctor_lad_host:
         But it feels wrong. Perhaps best left to the coroner.
         """
 
-        if doctor_details.objects.is_unlocked('book_mystery'):
+        if doctor_details.objects.is_unlocked('drunk_letter') or doctor_details.objects.is_unlocked('book_mystery'):
 
             """
             Yet something's nagging at me.
-
-            That book I read yesterday—how did the victim die?
-
-            Strychnine poisoning.
-
-            Probably coincidence, but one of the telltale signs is early rigor mortis.
-
-            Others include: blue lips, frothing at the mouth, and a twisted expression.
-
-            All visible—if I remove the mask.
             """
+
+            if doctor_details.objects.is_unlocked('book_mystery'):
+
+                """
+                That book I read yesterday—how did the victim die?
+
+                Strychnine poisoning.
+
+                Probably coincidence, but one of the telltale signs is early rigor mortis.
+
+                Others include: blue lips, frothing at the mouth, and a twisted expression.
+
+                All visible—if I remove the mask.
+                """
+
+            elif doctor_details.objects.is_unlocked('drunk_letter'):
+
+                """
+                After discovering the letter in Samuel Manning's room yesterday, it is difficult to regard this as mere coincidence.
+
+                I had assumed I was the only person in danger, but that may not be the case.
+
+                The very thought sends a chill through me.
+
+                In such circumstances, I shall be forgiven for treating this death as something other than natural.
+                """
+
 
             $ time_left = 1
             call run_menu(
