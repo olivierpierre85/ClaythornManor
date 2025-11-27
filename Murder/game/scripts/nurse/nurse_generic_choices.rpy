@@ -13,7 +13,7 @@ label nurse_generic:
     return
 
 
-label nurse_generic_weather_saturday:
+label nurse_generic_weather_saturday_morning:
 
     nurse """
     This night was dreadful, wasn't it?
@@ -22,6 +22,18 @@ label nurse_generic_weather_saturday:
     """
 
     return
+
+
+label nurse_generic_weather_saturday_evening:
+
+    nurse """
+    The weather is much better today than it was last night.
+
+    Hopefully I shall sleep better tonight.
+    """
+
+    return
+
 
 
 label nurse_generic_weather_sunday:

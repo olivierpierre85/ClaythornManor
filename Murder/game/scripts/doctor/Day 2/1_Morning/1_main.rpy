@@ -239,7 +239,7 @@ label doctor_day2_morning:
     We shall meet outside in a little while.
     """
 
-    return
+    jump doctor_day2_hunt
 
 
 label doctor_day2_hunt_choice:
@@ -320,7 +320,7 @@ label doctor_day2_no_hunt_choice:
     That is very good news.
     """
 
-    jump doctor_day2_hunt
+    return
 
 
 # label doctor_day2_no_hunt_choice_2:

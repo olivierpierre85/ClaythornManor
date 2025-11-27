@@ -25,6 +25,9 @@ label doctor_day2_evening_exploration:
     """
 
     if doctor_details.important_choices.is_unlocked('flirt'):
+        """
+        TODO
+        """
     # If unlock Friend of Rosalind Marsh, I could hatch a plan of defence in case anything happens
     # Maybe sleep there
 
