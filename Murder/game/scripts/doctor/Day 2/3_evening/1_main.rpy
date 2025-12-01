@@ -204,7 +204,7 @@ label doctor_day2_evening:
     call run_menu(TimedMenu("doctor_day1_evening", [
         TimedMenuChoice("Talk to Ted Harring", 'doctor_day2_dinner_lad'),
         TimedMenuChoice("Talk to Rosalind Marsh", 'doctor_day2_dinner_nurse'),
-        TimedMenuChoice("Don't disturb the creepy silence", 'generic_cancel', early_exit=True),
+        TimedMenuChoice("Enjoy the creepy silence", 'generic_cancel', early_exit=True),
     ], image_left = "lad", image_right = "nurse"))
 
     call change_time(21, 00)

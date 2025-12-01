@@ -128,3 +128,128 @@ label doctor_day2_evening_billiard_room_bar:
 
     return
 
+
+label doctor_day2_evening_billiard_room_captain:
+
+
+    """
+    I go to Captain Sinha.
+
+    He notices me and puts his book on the table.
+    """
+
+    captain """
+    Doctor Baldwin, it's nice to see you. 
+    
+    I fear that most of the other guests are too afraid to get out of their room.
+    """
+
+    doctor """
+    Really? What should they be afraid of?
+    """
+
+    captain """
+    Well, nothing of course.
+
+    It's obvious to me that the two sad death of the weekend were both tragic, but unfortunate event.
+    """
+
+    doctor """
+    But you believe not everyone agrees with you.
+
+    So they are scared, but of what exactly?
+
+    Oh I understand now.
+
+    They are scared of me of course.
+
+    But they acted as if they understood that what happened during the hunt was just an accident.
+    """
+
+    captain """
+    Oh don't feel too bad Doctor. I am sure they still think that, but they're just being prudent.
+
+    They are not in the habit of being this close to death like you and I.
+    """
+
+    doctor """
+    Right.
+    """
+
+    captain """
+    But is there something you wanted to tell me doctor?
+    """
+
+    call run_menu(
+        TimedMenu("doctor_day2_evening_billiard_room_captain", [
+            TimedMenuChoice("Tell him about the letter", 'doctor_day2_evening_billiard_room_captain_letter'),
+            TimedMenuChoice("Tell him about Thomas Moody's face", 'doctor_day2_evening_billiard_room_captain_mask', 30 ,condition="doctor_details.observations.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
+            TimedMenuChoice("Find someone else to confide in", 'doctor_day2_evening_billiard_room_captain_avoid', keep_alive=True, early_exit = True),
+        ])
+    )
+
+    return
+
+
+label doctor_day2_evening_billiard_room_captain_letter:
+
+    doctor """
+    There is something I need to share with you.
+
+    I haven't been totally honest about what happened during the hunt.
+
+    ...
+    """
+
+    captain """
+    I admit this is weird, but you must forgive me, it's not enough.
+    """
+
+    """
+    He is not trusting me.
+
+    I understand, in the end, I am the one who killed Samuel Manning.
+
+    He is not there to defend himself.
+
+    If I really want to convince Sushil Sinha, I need more evidence that something not normal is happening here.
+    """
+
+    return
+
+label doctor_day2_evening_billiard_room_captain_mask:
+
+    # TODo: Tell about the mask
+
+    # Captain ask to see the body.
+    # You both go to tyhomas moody's room
+
+    # Captain even sees the poison on the nightstand. Doctor didn't see it.
+
+    # ADd choice, he asks if you want to sleep with him you HAVE to say yes. OR you DIE.
+
+
+    # ADD trust captain unlock, you'll follow the captain around in the morning IF you sleep with him you'll be fine.
+    return
+
+label doctor_day2_evening_billiard_room_captain_avoid:
+
+    doctor """
+    Not really, I just wanted to see who was there.
+    """
+
+    captain """
+    All right, then if you don't mind, I was in the middle of a captivating part in my book.
+    """
+
+    doctor """
+    I'll leave you to it then.
+    """
+
+    # """
+    # I don't why, but I don't feel like trusting him.
+
+    # If want help, I should seek it somewhere else.
+    # """
+
+    return
