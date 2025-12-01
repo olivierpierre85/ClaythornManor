@@ -42,7 +42,7 @@ label doctor_day2_evening_map_menu:
                 'generic_cancel', 
                 early_exit = True, 
                 room = 'bedroom_doctor'
-            )
+            ),
             # Attic
             TimedMenuChoice(default_room_text('storage'), 'doctor_day2_evening_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'doctor_day2_evening_males_room', 10, room='males_room'),
@@ -68,11 +68,82 @@ label doctor_day2_evening_downstairs_default:
 
 label doctor_downstairs_day2_evening:
 
+    $ change_room("basement_stairs")
+
     """
-    TODO? MAid and not footman, maid says, "I don't know he might be in your butt
+    I am about to go downstairs when someone stops me.
     """
 
+    maid """
+    Good evening, sir. 
+
+    May I help you?
+    """
+
+    if doctor_details.important_choices.is_unlocked('flirt'):
+
+        doctor """
+        Well, perhaps. 
+
+        I am looking for someone.
+        
+        I would like to have a word with your footman. 
+
+        I believe he is called Andrew.
+        """
+
+        maid """
+        I am sorry, sir, but Andrew is not here any longer. 
+
+        I believe you will find him in his room.
+        """
+
+        doctor """
+        Very good. 
+
+        And where is that, exactly?
+        """
+
+        maid """
+        In the attic, sir. 
+
+        The first room to your left after the stairs.
+        """
+
+        doctor """
+        Perfect, thank you.
+        """
+
+        $ unlock_map('bedroom_footman')
+
+    else:
+
+        doctor """
+        I was just hoping to have a look downstairs, if you do not mind.
+        """
+
+        maid """
+        I am sorry, sir, but Lady Claythorn left very strict instructions. 
+
+        No guest is to be allowed downstairs. 
+
+        You may freely visit the rest of the manor, of course.
+        """
+
+        doctor """
+        I understand.
+        """
+
+        """
+        Specific instructions forbidding guests to go downstairs do not sit well with me. 
+
+        Still, I do not wish to risk alienating our hostess by forcing my way there. 
+
+        I shall avoid the downstairs rooms, for the moment.
+        """
+
     return
+
 
 # label doctor_downstairs_day2:
 

@@ -15,6 +15,7 @@ label init_doctor:
         doctor_init_variables = {
             # MAP Menus
             "day1_evening_map_menu" : doctor_day1_evening_map_menu,
+            "day2_evening_map_menu" : doctor_day2_evening_map_menu,
 
             # Generic Menus
             "broken_generic_menu": broken_generic_menu_doctor,
@@ -59,7 +60,7 @@ label init_doctor:
                 content_negative="You didn't flirt with the footman",
                 image_file="flirt",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_morning'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(
                 0, "broken_unmasked",

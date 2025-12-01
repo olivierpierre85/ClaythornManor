@@ -62,6 +62,7 @@ label unlock_bedrooms:
     $ unlock_map('bedroom_nurse')
     $ unlock_map('bedroom_broken')
     $ unlock_map('bedroom_doctor')
+    $ unlock_map('bedroom_footman')
 
     return
 

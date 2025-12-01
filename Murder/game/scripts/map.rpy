@@ -79,6 +79,8 @@ label init_map:
             MapInfo('bedroom_doctor',  'Daniel Baldwin',   2, (25 + x_map_info_offset, 280 + y_map_info_offset, 205, 130)),
             MapInfo('bedroom_drunk',  'Samuel Manning',   2, (717 + x_map_info_offset, 280 + y_map_info_offset, 178, 130)),
             MapInfo('bedroom_nurse',  'Rosalind Marsh',   2, (717 + x_map_info_offset, 510 + y_map_info_offset, 178, 105)),
+            
+            MapInfo('bedroom_footman',  'Andrew',   3, (575 + x_map_info_offset, 200 + y_map_info_offset, 178, 105)),
         ]
 
     call change_floor(1) # ground floor
