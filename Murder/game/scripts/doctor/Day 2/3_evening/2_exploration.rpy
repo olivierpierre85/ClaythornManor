@@ -5,60 +5,59 @@ label doctor_day2_evening_exploration:
     $ change_room("bedroom_doctor")
 
     """
-    I now face several options.
+    I now find myself faced with several courses of action.
 
-    The obvious choice would be to stay in my room and wait for the morning.
+    The most obvious would be to remain here in my room and wait for the morning.
 
-    I could even move some furniture to prevent anyone from entering.
+    I could even move some furniture against the door to make certain no one can enter.
 
-    But that feels dangerous, there are other ways someone could get at me.
+    Yet that, too, feels dangerous. There are other ways for someone to reach me.
 
-    The other option is to try to uncover who wrote the note to Samuel Manning.
+    The alternative is to attempt to discover who wrote that note to Samuel Manning.
 
-    That's the person I should be worried about.
+    That is the person I ought to fear.
 
-    Everything points to Lady Claythorn, but I can't be sure.
+    Everything points towards Lady Claythorn, yet I cannot be sure.
 
-    If I could trust at least one person, I could approach them to ask for their help.
+    If only I could trust at least one other person, I might ask for their assistance.
 
-    It would be safer to investigate in pair, but whom should I put my trust in?
-    
-    It would ideal to have someone implicitly trustworthy, like a judge.
+    It would be safer to investigate in company, but in whom ought I place my trust?
 
-    But everyone here is suspicious too me.
+    It would be ideal to have someone implicitly trustworthy, like a judge.
+
+    But everyone here appears suspicious to me.
     """
 
     if doctor_details.important_choices.is_unlocked('flirt'):
 
         """
-        I could ask Andrew, the time we spent together makes him less likely to be a suspect.
+        I might turn to Andrew. After the time we have spent together, I find it hard to picture him as a likely culprit.
 
-        He is probably downstairs with the staff now. Or maybe he already went to bed.
+        He is probably downstairs with the staff at present, unless he has already retired for the night.
         """
 
     if doctor_details.observations.is_unlocked('remember_nurse'):
 
         """
-        By chance, it happens that I already knows Rosalind Marsh, that makes me more comfortable to approach her.
+        By good fortune, I already know Nurse Rosalind Marsh. That acquaintance makes me more comfortable about approaching her.
         """
-
     
     if doctor_details.objects.is_unlocked('book_opium'):
         
         """
-        To make things worst, I am going through growing symptoms of withdrawals.
+        To make matters worse, the symptoms of withdrawal are steadily increasing.
 
-        I am slightly shaking and sweating profusely.
+        My hands tremble, and I am sweating more than is reasonable.
 
-        And it will only increase throughout the night, which won't help.
+        They will only grow worse as the night wears on, which will not be in my favour.
         """
 
     """
-    I have the feeling to be at a crossroads.
-    
-    What I do now could be the difference between life and death.
+    I feel very much at a crossroads.
 
-    So what will it be?
+    What I decide to do now may mean the difference between life and death.
+
+    So what shall it be?
     """
 
     $ time_left = 90
