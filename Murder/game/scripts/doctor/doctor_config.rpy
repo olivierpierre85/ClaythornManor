@@ -30,6 +30,9 @@ label init_doctor:
             "attic_visited": False,
             "asked_about_psychic": False,
 
+            # Evening day 2
+            "day2_evening_billiard_room_visited" : False,
+
             # HUNt
             "bored_by_lad": 0,
 

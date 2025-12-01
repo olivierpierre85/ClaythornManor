@@ -64,3 +64,67 @@ label doctor_day2_evening_exploration:
     call run_menu(doctor_details.saved_variables["day2_evening_map_menu"])
 
     return
+
+
+label doctor_day2_evening_billiard_room:
+
+    $ change_room('billiard_room')
+
+    if not doctor_details.saved_variables["day2_evening_billiard_room_visited"]:
+
+        $ doctor_details.saved_variables["day2_evening_billiard_room_visited"] = True
+
+        """
+        Just as I imagined, the room is almost deserted.
+
+        I can see only Captain Sinha seated upon a sofa, and the butler standing discreetly in the corner.
+
+        The bar is still available, but I promised myself to keep a clear head, so I should avoid it.
+        """
+
+        # TODO add interaction with the butler
+        $ doctor_day2_evening_billiard_room_menu = TimedMenu("doctor_day2_evening_billiard_room_menu", [
+            TimedMenuChoice('Talk to Sushil Sinha', 'doctor_day2_evening_billiard_room_captain'),
+            TimedMenuChoice('Go to the bar for a drink', 'doctor_day2_evening_billiard_room_bar', 10),
+            TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+        ])
+
+    else:
+        # Reset menu
+        $ doctor_day2_evening_billiard_room_menu.early_exit = False
+
+        """
+        I find myself once more in the billiard room.
+        """
+
+    call run_menu(doctor_day2_evening_billiard_room_menu)
+
+    return
+
+
+label doctor_day2_evening_billiard_room_bar:
+
+    """
+    In spite of knowing full well it is a mistake, my steps carry me straight to the bar.
+
+    Before I have quite registered it, I am already pouring myself a glass of sherry.
+
+    The moment I realise what I have done, a wave of shame washes over me.
+
+    Yet now that the glass is in my hand, I cannot simply set it aside.
+
+    I might as well drink it.
+
+    But this will be the last one.
+    """
+
+    if doctor_details.objects.is_unlocked('book_opium'):
+
+        """
+        At last, I have a chance to free myself from opium entirely.
+
+        I shouldn't exchange one addiction for another.
+        """
+
+    return
+

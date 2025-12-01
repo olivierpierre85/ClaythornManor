@@ -16,8 +16,8 @@ label lad_day2_evening_billiard_room:
 
         # TODO add interaction with the butler
         $ lad_day2_evening_billiard_room_menu = TimedMenu("lad_day2_evening_billiard_room_menu", [
-            TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain'),
-            TimedMenuChoice('Talk to Sushil Sinha again', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"]', keep_alive = True),
+            TimedMenuChoice('Talk to Sushil Sinha', 'lad_day2_evening_billiard_room_captain', next_menu="lad_day2_evening_billiard_room_captain_hypothesis_menu"),
+            TimedMenuChoice('Talk to Sushil Sinha again', 'lad_day2_evening_billiard_room_captain_2', condition='lad_details.saved_variables["day2_evening_billiard_room_captain_talked"]', next_menu="lad_day2_evening_billiard_room_captain_hypothesis_menu", keep_alive = True),
             TimedMenuChoice('Go to the bar for a drink', 'lad_day2_evening_billiard_room_bar', 10, linked_choice ="lad_day2_evening_billiard_room_bar_2"),
             TimedMenuChoice('Have another drink to calm the nerves', 'lad_day2_evening_billiard_room_bar_2', 10, condition = 'lad_details.saved_variables["day2_drinks"] == 1', linked_choice ="lad_day2_evening_billiard_room_bar_3"),
             TimedMenuChoice('Maybe a few more drinks would help', 'lad_day2_evening_billiard_room_bar_3', 30, condition = 'lad_details.saved_variables["day2_drinks"] == 2', linked_choice ="lad_day2_evening_billiard_room_bar_4"),

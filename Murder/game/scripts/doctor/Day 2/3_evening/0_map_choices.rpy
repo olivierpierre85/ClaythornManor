@@ -21,7 +21,8 @@ label doctor_day2_evening_map_menu:
                 'doctor_day2_evening_billiard_room', 
                 0,
                 room = 'billiard_room',
-                next_menu = 'doctor_day2_evening_billiard_room_menu'
+                next_menu = 'doctor_day2_evening_billiard_room_menu',
+                keep_alive = True, 
             ), 
             #bedroom
             TimedMenuChoice(default_room_text('bedroom_lad'), 'doctor_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
