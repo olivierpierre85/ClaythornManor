@@ -147,6 +147,16 @@ label doctor_day2_evening_billiard_room_captain:
     doctor """
     Really?
 
+    Why do you say that?
+    """
+
+    captain """
+    I cannot be certain.
+
+    But after what has happened today, I should not be surprised if some of our fellow guests are afraid to leave their rooms.
+    """
+
+    doctor """
     What should they be afraid of?
     """
 
@@ -169,8 +179,6 @@ label doctor_day2_evening_billiard_room_captain:
     """
 
     captain """
-    Do not reproach yourself too much, Doctor.
-
     I am sure they still think so, but they prefer to be cautious.
 
     Most of them are not accustomed to being so close to death as you and I.
@@ -189,8 +197,8 @@ label doctor_day2_evening_billiard_room_captain:
     call run_menu(
         TimedMenu("doctor_day2_evening_billiard_room_captain", [
             TimedMenuChoice("Tell him about the letter", 'doctor_day2_evening_billiard_room_captain_letter'),
-            TimedMenuChoice("Tell him about Thomas Moody's face", 'doctor_day2_evening_billiard_room_captain_mask', 30 ,condition="doctor_details.observations.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
-            TimedMenuChoice("Find someone else to confide in", 'doctor_day2_evening_billiard_room_captain_avoid', keep_alive=True, early_exit = True),
+            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 30 ,condition="doctor_details.important_choices.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
+            TimedMenuChoice("Leave him alone", 'doctor_day2_evening_billiard_room_captain_avoid', keep_alive=True, early_exit = True),
         ])
     )
 
@@ -271,20 +279,6 @@ label doctor_day2_evening_billiard_room_captain_letter:
     In the end, I am the one who killed Samuel Manning, so to him I must be the most suspicious person in this house.
 
     If I truly wish to convince him, I will need stronger evidence.
-    """
-
-    doctor """
-    I understand.
-
-    I will not trouble you further for now.
-
-    I will leave you to your book.
-    """
-
-    captain """
-    I am sorry, Doctor.
-
-    But if you have upon more convincing evidence, I may yet change my mind about this whole affair.
     """
 
     return
@@ -559,27 +553,9 @@ label doctor_day2_evening_captain_sleep_no:
 label doctor_day2_evening_billiard_room_captain_avoid:
 
     doctor """
-    Not especially.
+    I am sorry for disturbing you but I don't really have anything else to say.
 
-    I merely wished to see who was about.
-    """
-
-    captain """
-    Very well.
-
-    If you do not mind, I was in the middle of a most captivating chapter.
-    """
-
-    doctor """
-    Of course.
-
-    I shall leave you to it.
-    """
-
-    """
-    For all his courtesy, I do not feel ready to place my fate entirely in his hands.
-
-    If I seek help, I may need to look elsewhere.
+    I will leave you to your book.
     """
 
     return
