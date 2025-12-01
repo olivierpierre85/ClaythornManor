@@ -28,7 +28,7 @@ label doctor_day2_morning:
     Awake, and alive.
     """
 
-    if doctor_details.objects.is_unlocked('drunk_letter'):
+    if doctor_details.observations.is_unlocked('drunk_letter'):
 
         """
         Despite my suspicions, it seems no one tried to harm me in the night.
@@ -300,7 +300,7 @@ label doctor_day2_no_hunt_choice:
     Not without a very sound reason.
     """
 
-    if doctor_details.objects.is_unlocked('drunk_letter'):
+    if doctor_details.observations.is_unlocked('drunk_letter'):
 
         """
         I do have one.

@@ -169,7 +169,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
         But it feels wrong. Perhaps best left to the coroner.
         """
 
-        if doctor_details.objects.is_unlocked('drunk_letter') or doctor_details.objects.is_unlocked('book_mystery'):
+        if doctor_details.observations.is_unlocked('drunk_letter') or doctor_details.objects.is_unlocked('book_mystery'):
 
             """
             Yet something's nagging at me.
@@ -189,7 +189,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
                 All visible—if I remove the mask.
                 """
 
-            elif doctor_details.objects.is_unlocked('drunk_letter'):
+            elif doctor_details.observations.is_unlocked('drunk_letter'):
 
                 """
                 After discovering the letter in Samuel Manning's room yesterday, it is difficult to regard this as mere coincidence.

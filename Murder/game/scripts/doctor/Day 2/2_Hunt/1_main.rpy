@@ -49,7 +49,7 @@ label doctor_day2_hunt:
     To my surprise, Samuel Manning is there as well.
     """
 
-    if doctor_details.objects.is_unlocked('drunk_letter'):
+    if doctor_details.observations.is_unlocked('drunk_letter'):
 
         """
         I must watch him carefully.
@@ -97,7 +97,7 @@ label doctor_day2_hunt:
     You don't mind, do you?
     """
 
-    if doctor_details.objects.is_unlocked('drunk_letter'):
+    if doctor_details.observations.is_unlocked('drunk_letter'):
 
         """
         He is too eager to join me.

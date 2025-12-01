@@ -39,7 +39,7 @@ label doctor_day2_hunt_accident:
     He has a flask which I assume is whisky, and he has been drinking from it non-stop since the start of the hunt.
     """
 
-    if doctor_details.objects.is_unlocked('drunk_letter'):
+    if doctor_details.observations.is_unlocked('drunk_letter'):
 
         """
         If I trust the content of the letter, he looks like he is summoning the courage to do something terrible.
@@ -76,7 +76,7 @@ label doctor_day2_hunt_accident:
 
     call wait_screen_transition()
 
-    if doctor_details.objects.is_unlocked('drunk_letter'):
+    if doctor_details.observations.is_unlocked('drunk_letter'):
 
         """
         As I did this morning, I take care to keep Samuel Manning within my line of sight.
@@ -127,7 +127,7 @@ label doctor_day2_hunt_accident:
         I hope we shall not hunt for much longer.
         """
 
-    if doctor_details.objects.is_unlocked('drunk_letter'):
+    if doctor_details.observations.is_unlocked('drunk_letter'):
 
         """
         I am lost in my thoughts when I hear Samuel Manning shout.
