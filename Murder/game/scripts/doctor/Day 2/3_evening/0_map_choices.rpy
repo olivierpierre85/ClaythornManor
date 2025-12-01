@@ -279,115 +279,60 @@ label doctor_downstairs_day2_evening:
 #     return
 
 
-# # First Floor
-# label doctor_day2_evening_library:
+# First Floor
+label doctor_day2_evening_library:
 
-#     $ change_room('library')
+    $ change_room("library")
 
-#     """
-#     That is a well-furnished library.
+    """
+    The library.
 
-#     It's been a while since I've seen that many books.
+    At another time I would gladly have taken a book and settled in to read.
 
-#     There is one already opened on a desk.
+    Tonight however, I feel it is too dangerous to waste time reading.
 
-#     "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
+    I should look elsewhere.
+    """
 
-#     That sounds tedious.
-
-#     But maybe I can borrow something else to read later in my room?
-
-#     I'm sure our host won't mind.
-#     """
-
-#     call wait_screen_transition()
-
-#     """
-#     I looked around for a book that might be of interest, and found a couple of options.
-#     """
-
-#     call run_menu(TimedMenu("doctor_library_default", [
-#         TimedMenuChoice('Take "The Mysterious Affair at Styles" by Agatha Christie', 'doctor_day2_evening_book_mystery', early_exit=True),
-#         TimedMenuChoice('Take "Confessions of an English Opium-Eater" by Thomas De Quincey', 'doctor_day2_evening_library_book_opium', early_exit=True),
-#         TimedMenuChoice("On second thought, I'd better not take anything", 'generic_cancel', early_exit=True),
-#     ]))
-
-#     #TODO: Other possibilities OR for someone else (nurse?) => GIVE it to drunk
-
-#         # 2. "The Tenant of Wildfell Hall" by Anne Brontë (1848)
-#         # Type: Novel
-
-#         # Addiction: Alcoholism
-
-#         # Summary: Features a strong female protagonist who flees an abusive, alcoholic husband. The novel critiques the destructive impact of addiction on family life.
-
-#         # Significance: Ahead of its time in addressing addiction, women's autonomy, and moral responsibility.
-
-#     return
+    return
 
 
-# label doctor_day2_evening_book_mystery:
+label doctor_day2_evening_tea_room:
+    call doctor_tea_room_default
+    return
 
-#     """
-#     That appears to be the most recent book they have.
+
+label doctor_day2_evening_dining_room:
+    call doctor_dining_room_default
+    return
+
+
+label doctor_day2_evening_garden:
+
+    $ change_room('great_hall')
+
+    """
+    I walk to the door that opens on to the garden.
+
+    When I pull it ajar, I find nothing but a wall of darkness beyond.
+
+    It would be far too dangerous to waste time out there at this hour.
+
+    I should turn my attention somewhere else.
+    """
     
-#     A mystery novel.
-
-#     I don't know the author, but a quick look at her biography tells me she was a nurse during the war.
-    
-#     So I feel like I could relate to the her.
-#     """
-
-#     $ doctor_details.objects.unlock('book_mystery')
-
-#     return
+    return
 
 
-# label doctor_day2_evening_library_book_opium:
+label doctor_day2_evening_entrance_hall:
+    call doctor_entrance_hall_default
+    return
 
-#     """
-#     I have been meaning to read this for a long time.
+label doctor_day2_evening_portrait_gallery:
+    call doctor_portrait_gallery_default
+    return
 
-#     Maybe now is the time.
-#     """
-
-#     $ doctor_details.objects.unlock('book_opium')
-
-#     return
-
-
-# label doctor_day2_evening_tea_room:
-#     call doctor_tea_room_default
-#     return
-
-
-# label doctor_day2_evening_dining_room:
-#     call doctor_dining_room_default
-#     return
-
-
-# label doctor_day2_evening_garden:
-
-#     $ change_room('great_hall')
-
-#     """
-#     From the great hall, I am ready to go and have a look outside.
-
-#     But the weather has worsened, I do not think it is safe to go out tonight.
-#     """
-
-#     return
-
-
-# label doctor_day2_evening_entrance_hall:
-#     call doctor_entrance_hall_default
-#     return
-
-# label doctor_day2_evening_portrait_gallery:
-#     call doctor_portrait_gallery_default
-#     return
-
-# # First Floor
+# # Second Floor
 # label doctor_day2_evening_bedroom_drunk:
     
 #     call doctor_bedroom_default

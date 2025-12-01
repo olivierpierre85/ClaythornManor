@@ -128,6 +128,7 @@ label lad_day2_evening_garden:
 
     I don't think I'll be able to do anything there at this hour.
     """
+    
     return
 
 label lad_day2_evening_entrance_hall:

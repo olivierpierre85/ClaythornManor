@@ -126,18 +126,25 @@ label doctor_day2_evening:
         Better a clear mind and a fighting chance than a drugged stupor in this house.
         """
 
-    elif doctor_details.important_choices.is_unlocked('broken_unmasked'):
+    else:
         
-
         """
         My first impulse is to seek relief in the usual way.
 
         I even reach for my bag before I stop myself.
 
-        The image of Thomas Moody without his mask appears at once in my mind.
+        I think of the letter I found in Samuel Manning's room.
+        """
 
-        Then I think of the letter I found in Samuel Manning's room.
+        if doctor_details.important_choices.is_unlocked('broken_unmasked'):
 
+            """
+            The image of Thomas Moody without his mask also appears in my mind.
+
+            That's another thing I can't make sense of. 
+            """
+
+        """
         All of this is too strange, as though I had stepped into the pages of a mystery novel.
 
         It is plain that someone in this house is hiding something.
@@ -150,16 +157,6 @@ label doctor_day2_evening:
 
         Until I know whom I may trust, I shall remain sober.
         """
-
-    else:
-
-        """
-        I do not know what to do.
-
-        I feel as though I have no choice but to turn to the only thing I know will calm me.
-        """
-
-        jump doctor_laudanum_death
 
     call wait_screen_transition()
 
