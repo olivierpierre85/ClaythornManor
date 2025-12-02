@@ -17,7 +17,9 @@
 # --------------------------------------------
 label doctor_day3_morning_captain:
 
-    return
+    $ play_music('mysterious')
+
+    jump work_in_progress
 
 
 # TODO, multiple starts possible

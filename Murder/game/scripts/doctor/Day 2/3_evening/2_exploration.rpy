@@ -4,6 +4,8 @@ label doctor_day2_evening_exploration:
 
     $ change_room("bedroom_doctor")
 
+    $ play_music('mysterious', 2)
+
     """
     I now find myself faced with several courses of action.
 
@@ -41,11 +43,11 @@ label doctor_day2_evening_exploration:
         """
         By good fortune, I already know Nurse Rosalind Marsh. That acquaintance makes me more comfortable about approaching her.
         """
-    
+
     if doctor_details.objects.is_unlocked('book_opium'):
         
         """
-        To make matters worse, the symptoms of withdrawal are steadily increasing.
+        I also have to manage symptoms of withdrawal.
 
         My hands tremble, and I am sweating more than is reasonable.
 

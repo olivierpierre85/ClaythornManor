@@ -274,7 +274,7 @@ label doctor_day2_evening_reason_drunk_silent:
     There is no reason to blame yourself, Doctor.
     """
 
-    psychic """
+    psychic -surprised """
     Of course, we are all quite certain you only wished to help that poor soul.
     """
 
