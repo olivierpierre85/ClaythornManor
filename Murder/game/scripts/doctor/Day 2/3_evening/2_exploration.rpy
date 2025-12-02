@@ -497,33 +497,76 @@ label doctor_day2_evening_captain_sleep_yes:
 
     It would be foolish to ignore the danger.
 
-    I shall accept your offer.
+    I think it is better if we stay together.
     """
 
     captain """
     Good.
 
-    We shall collect what you need from your room, then you can settle on my sofa.
+    You can collect whatever you need from your room, then you may settle on my sofa.
 
     Between us, I doubt anyone will find us easy prey.
     """
 
     """
-    It is not an arrangement I would ever have imagined myself making.
+    It is not an arrangement with which I feel entirely at ease.
 
-    Yet as we leave the room together, I feel a little less exposed than before.
+    Yet I feel a little less exposed than before at least.
+
+    I return briefly to my own room to gather my things, then I join Sushil Sinha in his.
     """
 
-    # TODO: set a flag here so that the night sequence knows you are with the captain
-    # $ doctor_details.saved_variables["slept_with_captain"] = True
+    $ change_room("bedroom_captain", dissolve)
+    
+    captain """
+    Well, it is rather late, so I suppose we had best settle for sleep.
 
-    return
+    You can take the sofa, or if you find it too uncomfortable, there is space enough in the bed.
+
+    I have slept in worse conditions, so I do not mind.
+    """
+
+    doctor """
+    The sofa will do very well, thank you.
+
+    I doubt I shall sleep much in any case.
+    """
+
+    """
+    There is no point in attempting anything further tonight.
+
+    So we bid each other good night and resign ourselves to hope for the best.
+
+    Before closing my eyes, I see Sushil Sinha place a revolver upon his bedside table.
+
+    The sight troubles me as much as it makes me feel safer.
+    """
+
+    if doctor_details.objects.is_unlocked('book_opium'):
+
+        """
+        Now that I have settled, the cravings grow stronger than ever.
+
+        I toss and turn upon the sofa, praying for the light of day.
+
+        After what feels like an eternity, I finally fall asleep.
+        """
+
+    else:
+
+        """
+        Now that I am alone with my thoughts, every possible scenario runs through my mind.
+
+        I feel certain I shall never fall asleep, yet at some point I do.
+        """
+
+    jump doctor_day3_morning_captain
 
 
 label doctor_day2_evening_captain_sleep_no:
 
     doctor """
-    I am grateful for your concern, Captain, but I do not wish to impose upon you.
+    I am grateful for your concern, Captain, but I would rather not impose upon you.
 
     I shall manage well enough in my own room.
     """
@@ -533,16 +576,15 @@ label doctor_day2_evening_captain_sleep_no:
 
     I cannot compel you.
 
-    But do at least lock your door, and keep something to hand that might serve as a weapon.
-
-    I would rather not find we have misjudged the danger come morning.
+    But at least lock your door, I would rather not discover we have misjudged the danger come morning.
     """
 
     """
-    I nod, though my resolve feels less steady than I would like.
+    I nod, though my resolve feels far less steady than I should like.
 
-    If I choose to face the night alone, I must be prepared for whatever it brings.
+    If I insist upon facing the night alone, I must be ready for whatever it may bring.
     """
 
     return
+
 

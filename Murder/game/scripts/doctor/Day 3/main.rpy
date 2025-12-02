@@ -15,7 +15,9 @@
 #   Notes : 
 #       - Map 90, 150 minutes
 # --------------------------------------------
+label doctor_day3_morning_captain:
 
+    return
 
 
 # TODO, multiple starts possible
