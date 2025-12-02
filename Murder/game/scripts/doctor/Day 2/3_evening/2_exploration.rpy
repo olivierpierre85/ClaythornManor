@@ -197,13 +197,23 @@ label doctor_day2_evening_billiard_room_captain:
     call run_menu(
         TimedMenu("doctor_day2_evening_billiard_room_captain", [
             TimedMenuChoice("Tell him about the letter", 'doctor_day2_evening_billiard_room_captain_letter'),
-            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 30 ,condition="doctor_details.important_choices.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
+            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 0 ,condition="doctor_details.important_choices.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
             TimedMenuChoice("Leave him alone", 'doctor_day2_evening_billiard_room_captain_avoid', keep_alive=True, early_exit = True),
         ])
     )
 
     return
 
+
+label doctor_day2_evening_billiard_room_captain_avoid:
+
+    doctor """
+    I am sorry for disturbing you but I don't really have anything else to say.
+
+    I will leave you to your book.
+    """
+
+    return
 
 label doctor_day2_evening_billiard_room_captain_letter:
 
@@ -283,14 +293,8 @@ label doctor_day2_evening_billiard_room_captain_letter:
 
     return
 
-
+# TODO READ EVERY AND CHANGE EVERYTHING FROM HERE!
 label doctor_day2_evening_billiard_room_captain_mask:
-
-    """
-    I hesitate for a moment, then decide to speak plainly.
-
-    If I want an ally, I must be prepared to share the whole truth.
-    """
 
     doctor """
     There is indeed something else.
@@ -301,76 +305,41 @@ label doctor_day2_evening_billiard_room_captain_mask:
     captain """
     Moody?
 
-    The chap from the City?
+    Did you discover something about his death?
     """
 
     doctor """
     Yes.
 
-    When we first met, he wore a mask and would not remove it.
-
-    I thought it an odd affectation, but I did not press him.
-
-    After his death, when I examined the body, I saw why he wore it.
-
-    His face was terribly disfigured, as though by burns or some old injury.
-
-    It was not a recent wound.
-    """
-
-    """
-    I can still picture the ravaged features in my mind.
-
-    They were not the marks of a man in perfect health who simply fell and broke his neck.
-    """
-
-    doctor """
-    You were not present during the examination.
-
-    You saw only the body later, when it had been made as presentable as possible.
-
-    But there is something else.
-
-    When I was in his room, I was distracted.
-
-    I fear I may have overlooked certain details.
-    """
-
-    captain """
-    Overlooked what sort of details?
-    """
-
-    doctor """
-    Bottles on the nightstand.
-
-    Medicines perhaps.
-
-    I was more concerned with the obvious signs of death than with what he might have taken before it.
+    But I think it is best if you see for yourself, so that you don't need to take my word for it.
     """
 
     captain """
     Hm.
 
-    That is the sort of thing which can make all the difference.
+    Very well, I suppose we could go to his room.
 
-    Show me the room, Doctor.
-
-    If there is anything of that nature, I should like to see it with my own eyes.
+    Please, lead the way, Doctor.
     """
 
     """
+    I see that he has no intention of turning his back on me.
+
     We leave the billiard room together, moving as quietly as we can along the corridor.
 
-    The house feels oddly hollow, as if all life had retreated behind closed doors.
+    The house feels oddly hollow, as though all life has retreated behind closed doors.
     """
 
-    # TODO: change_room to Thomas Moody's bedroom, if needed
-    # $ change_room("bedroom_moody")
+    $ change_room("bedroom_broken")
 
     """
-    When we reach Thomas Moody's room, I unlock the door and step aside to let the captain enter first.
+    When we reach Thomas Moody's room, I open the door and step inside first.
+    """
 
-    The air is faintly stale, with a lingering scent of tobacco and something medicinal.
+    doctor """
+    Here he is, Captain.
+
+    I must warn you, it may not be a pleasant sight.
     """
 
     captain """
@@ -381,90 +350,118 @@ label doctor_day2_evening_billiard_room_captain_mask:
 
     """
     He crosses to the bed and looks down at the still form, his expression grave but composed.
-
-    Then his gaze shifts to the small table by the bedside.
     """
 
     captain """
-    Ah.
-
-    There we are.
+    So, what is this about?
     """
 
     """
-    He picks up a small bottle I scarcely recall noticing.
-
-    He turns it between his fingers, reading the label in silence.
+    I lay my hands upon Thomas Moody's mask and lift it away, revealing a contorted and intact face.
     """
 
     captain """
-    This is not any ordinary sleeping draught.
+    Good Lord, what a face he is making.
 
-    I know this maker.
-
-    They supply vermin poison to estates in my part of the country.
-
-    A few drops would be quite sufficient to stop a man's heart.
+    What could have caused that, Doctor?
     """
 
     doctor """
-    Are you certain?
+    I am not certain, but it was no peaceful death, that much is clear.
+
+    Yet you are not seeing the most peculiar part.
     """
 
     captain """
-    Quite certain.
+    What do you mean?
 
-    If this was in his glass, then Thomas Moody did not die by mischance.
+    Oh.
 
-    Someone wished him out of the way.
+    His face, it is... normal.
+
+    He made everyone believe that he had been disfigured during the war.
+
+    Yet it was all an act.
+
+    But why would he do such a thing?
+
+    What are we to make of this?
     """
 
-    """
-    A chill runs down my spine.
+    doctor """
+    I have no idea.
 
-    I thought the events of the hunt might be linked to Samuel Manning alone.
-
-    Now it seems that death is stalking more than one of us.
+    It is suspicious enough that I did not wish to alert anyone else.
     """
 
     captain """
-    You understand what this means, Doctor.
+    I understand what you mean, Doctor.
 
-    You were right to suspect that something is amiss.
+    Of course you were right, something is amiss.
 
-    I cannot in conscience pretend any longer that these are merely unfortunate accidents.
+    I cannot pretend any longer that these are merely unfortunate accidents.
     """
 
     """
-    For the first time since we arrived, I feel that I am no longer quite alone in my suspicions.
+    He pauses for a moment, pondering the implications of what he has just learnt.
     """
 
     captain """
     Very well.
 
-    From this moment, we watch and we share what we learn.
+    That is now two deaths that are highly suspicious.
 
-    But there is another matter.
+    And if someone in this house is prepared to kill once, perhaps even twice, there is no reason to think they will stop there.
 
-    If someone in this house is prepared to kill once, or twice, they may not stop there.
+    I believe we may both be in danger.
+
+    I simply do not understand why.
+
+    Who could wish me dead?
+
+    It is not as though I have no enemies, but nothing so severe that it ought to come to this.
+
+    At least, I do not think so.
+
+    What about you?
     """
 
     doctor """
-    You believe I might be in danger as well.
+    Well, as a doctor, I may have left a few unpleasant patients here and there.
+
+    But, like you, I do not believe there is anything so serious that it should lead to murder.
+    """
+
+    """
+    I am not entirely sure that I believe my own words.
+
+    Yet I see no point in sharing those doubts.
     """
 
     captain """
-    I think we both might be.
+    So, we have no notion of what may be happening.
 
-    I have a favour to ask, and I hope you will not refuse me.
+    We know only that we are in danger here, presumably from Lady Claythorn herself, even if we have no proof we could present.
     """
 
     doctor """
-    What is it?
+    That is what I believe as well.
+
+    I am simply not sure what we ought to do about it.
     """
 
     captain """
-    I would rather you did not sleep alone tonight.
+    Well, it would be difficult to leave now, in the middle of the night.
+
+    So we should at least be prepared to spend one more night here.
+
+    And attempting to confide in more people could be dangerous.
+
+    Lady Claythorn may not be acting alone in this enterprise.
+
+    We must take every precaution we can.
+
+    I believe we should not sleep alone tonight.
 
     Come and share my room.
 
@@ -476,18 +473,19 @@ label doctor_day2_evening_billiard_room_captain_mask:
     """
     The idea of surrendering my solitude is not an attractive one.
 
-    Yet the memory of the letter, and now this bottle, makes the prospect of a solitary night far more alarming.
+    Yet it may be the best chance I have of surviving this weekend.
+
+    On the other hand, it forces me to trust Sushil Sinha with my life.
+
+    I do not know that I can do that.
     """
 
     call run_menu(
         TimedMenu("doctor_day2_evening_billiard_room_captain_sleep", [
             TimedMenuChoice("Accept his offer and sleep in his room", "doctor_day2_evening_captain_sleep_yes", early_exit = True),
-            TimedMenuChoice("Refuse and sleep alone", "doctor_day2_evening_captain_sleep_no", early_exit = True),
+            TimedMenuChoice("Refuse and sleep alone", "doctor_day2_evening_captain_sleep_no", 30, early_exit = True),
         ])
     )
-
-    # TODO: unlock a "trust_captain" flag here if desired
-    # $ doctor_details.relationships.unlock('trust_captain')
 
     return
 
@@ -546,16 +544,5 @@ label doctor_day2_evening_captain_sleep_no:
     If I choose to face the night alone, I must be prepared for whatever it brings.
     """
 
-
     return
 
-
-label doctor_day2_evening_billiard_room_captain_avoid:
-
-    doctor """
-    I am sorry for disturbing you but I don't really have anything else to say.
-
-    I will leave you to your book.
-    """
-
-    return
