@@ -30,7 +30,7 @@ label doctor_day2_evening_exploration:
     But everyone here appears suspicious to me.
     """
 
-    if doctor_details.important_choices.is_unlocked('flirt'):
+    if doctor_details.threads.is_unlocked('flirt'):
 
         """
         I might turn to Andrew. After the time we have spent together, I find it hard to picture him as a likely culprit.
@@ -38,13 +38,13 @@ label doctor_day2_evening_exploration:
         He is probably downstairs with the staff at present, unless he has already retired for the night.
         """
 
-    if doctor_details.observations.is_unlocked('remember_nurse'):
+    if doctor_details.threads.is_unlocked('remember_nurse'):
 
         """
         By good fortune, I already know Nurse Rosalind Marsh. That acquaintance makes me more comfortable about approaching her.
         """
 
-    if doctor_details.objects.is_unlocked('book_opium'):
+    if doctor_details.threads.is_unlocked('book_opium'):
         
         """
         I also have to manage symptoms of withdrawal.
@@ -65,7 +65,7 @@ label doctor_day2_evening_exploration:
     $ time_left = 90
     call run_menu(doctor_details.saved_variables["day2_evening_map_menu"])
 
-    if doctor_details.important_choices.is_unlocked('trust_captain'):
+    if doctor_details.threads.is_unlocked('trust_captain'):
 
         jump doctor_day3_morning_captain
 

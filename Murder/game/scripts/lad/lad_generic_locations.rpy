@@ -54,7 +54,7 @@ label lad_downstairs_default:
 
     $ change_room("basement_stairs")
 
-    if not lad_details.important_choices.is_unlocked('downstairs_1'):
+    if not lad_details.threads.is_unlocked('downstairs_1'):
 
         """
         I am on my way to the basement when a young maid stops me.
@@ -80,9 +80,9 @@ label lad_downstairs_default:
 
         $ lad_details.saved_variables["has_met_maid"] = True
 
-        $ lad_details.important_choices.unlock('downstairs_1')
+        $ lad_details.threads.unlock('downstairs_1')
 
-    elif lad_details.important_choices.is_unlocked('downstairs_1'):
+    elif lad_details.threads.is_unlocked('downstairs_1'):
 
         """
         Let's see if I can check downstairs now.
@@ -108,9 +108,9 @@ label lad_downstairs_default:
         I'd better be careful. If I'm caught here a third time, it will really start to look suspicious.
         """
 
-        $ lad_details.important_choices.unlock('downstairs_2')
+        $ lad_details.threads.unlock('downstairs_2')
 
-    elif lad_details.important_choices.is_unlocked('downstairs_2'):
+    elif lad_details.threads.is_unlocked('downstairs_2'):
 
         """
         Maybe I'm pushing my luck, trying to go downstairs, but I feel like I have to go there.
@@ -132,7 +132,7 @@ label lad_downstairs_default:
             ])
         )
 
-        $ lad_details.important_choices.unlock('downstairs_3')
+        $ lad_details.threads.unlock('downstairs_3')
 
     return
 

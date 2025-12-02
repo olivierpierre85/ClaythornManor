@@ -43,7 +43,7 @@ label lad_day1_evening_billiard_room:
 
 label lad_day1_evening_billiard_room_bar_1:
 
-    $ lad_details.important_choices.unlock('whisky')
+    $ lad_details.threads.unlock('whisky')
 
     """
     I approach the bar.
@@ -232,7 +232,7 @@ label lad_day1_evening_billiard_room_bar_3:
     show layer master at drunk_wobble_layer
     $ drunk_mode = True
 
-    $ lad_details.important_choices.unlock('day1_drunk')
+    $ lad_details.threads.unlock('day1_drunk')
     # TODO add blur effect if drunk, puke noise... Or just black out 
 
     return

@@ -15,7 +15,7 @@ label doctor_day2_hunt_accident:
     So we stopped for luncheon.
     """
 
-    if doctor_details.important_choices.is_unlocked('flirt'):
+    if doctor_details.threads.is_unlocked('flirt'):
 
         """
         I should like to speak further with Andrew, but he is exceedingly cautious and professional.
@@ -39,7 +39,7 @@ label doctor_day2_hunt_accident:
     He has a flask which I assume is whisky, and he has been drinking from it non-stop since the start of the hunt.
     """
 
-    if doctor_details.observations.is_unlocked('drunk_letter'):
+    if doctor_details.threads.is_unlocked('drunk_letter'):
 
         """
         If I trust the content of the letter, he looks like he is summoning the courage to do something terrible.
@@ -76,7 +76,7 @@ label doctor_day2_hunt_accident:
 
     call wait_screen_transition()
 
-    if doctor_details.observations.is_unlocked('drunk_letter'):
+    if doctor_details.threads.is_unlocked('drunk_letter'):
 
         """
         As I did this morning, I take care to keep Samuel Manning within my line of sight.
@@ -92,7 +92,7 @@ label doctor_day2_hunt_accident:
 
     """
 
-    if doctor_details.objects.is_unlocked('book_opium'):
+    if doctor_details.threads.is_unlocked('book_opium'):
 
         """
         The fact is that I have begun to notice the first symptoms of withdrawal.
@@ -108,7 +108,7 @@ label doctor_day2_hunt_accident:
         I hope I can govern it well enough that no one notices.
         """
 
-    elif doctor_details.important_choices.is_unlocked('flirt'):
+    elif doctor_details.threads.is_unlocked('flirt'):
 
         """
         Despite my caution, my gaze is drawn again and again to Andrew, looking rather dashing in his footman's livery.
@@ -127,7 +127,7 @@ label doctor_day2_hunt_accident:
         I hope we shall not hunt for much longer.
         """
 
-    if doctor_details.observations.is_unlocked('drunk_letter'):
+    if doctor_details.threads.is_unlocked('drunk_letter'):
 
         """
         I am lost in my thoughts when I hear Samuel Manning shout.
@@ -152,7 +152,7 @@ label doctor_day2_hunt_accident:
     It won't be long now.
     """
 
-    if doctor_details.objects.is_unlocked('book_opium'):
+    if doctor_details.threads.is_unlocked('book_opium'):
 
         """
         Ironically, I truly believe I would have managed to quit this time.

@@ -288,7 +288,7 @@ label lad_day1_evening:
 
     $ stop_music()
 
-    if lad_details.important_choices.is_unlocked('day1_drunk'):
+    if lad_details.threads.is_unlocked('day1_drunk'):
 
         """
         Wow, I'm not feeling well.
@@ -310,7 +310,7 @@ label lad_day1_evening:
 
     $ change_room('bedroom_lad', dissolve)
 
-    if lad_details.important_choices.is_unlocked('day1_drunk'):
+    if lad_details.threads.is_unlocked('day1_drunk'):
 
         """
         I hurry to my room.
@@ -337,7 +337,7 @@ label lad_day1_evening:
         """
 
     # If you drank whisky and didn't puke it, you done
-    if lad_details.important_choices.is_unlocked('whisky') and not lad_details.important_choices.is_unlocked('day1_drunk'):
+    if lad_details.threads.is_unlocked('whisky') and not lad_details.threads.is_unlocked('day1_drunk'):
 
         jump lad_ending_day1_deathbed
 

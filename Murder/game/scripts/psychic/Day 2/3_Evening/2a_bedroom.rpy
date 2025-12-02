@@ -20,7 +20,7 @@ label psychic_day2_evening_bedroom:
     nor Lady Claythorn.
     """
 
-    if psychic_details.observations.is_unlocked('nurse_sick'):
+    if psychic_details.threads.is_unlocked('nurse_sick'):
 
         """
         And I should let Rosalind Marsh rest.
@@ -36,7 +36,7 @@ label psychic_day2_evening_bedroom:
 
     $ time_left = 1
     call run_menu(TimedMenu("psychic_day2_evening_bedroom", [
-            TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_evening_bedroom_nurse_blood', 0, early_exit=True, condition = "not psychic_details.observations.is_unlocked('nurse_sick')"),
+            TimedMenuChoice('Try to talk to Rosalind Marsh', 'psychic_day2_evening_bedroom_nurse_blood', 0, early_exit=True, condition = "not psychic_details.threads.is_unlocked('nurse_sick')"),
             TimedMenuChoice('Try to talk to Ted Harring', 'psychic_day2_evening_lad_discussion', 0, early_exit=True),
             TimedMenuChoice('Just have a quick nap instead', 'psychic_day2_evening_cancel_nap', 0, early_exit=True),
             # Talk with host anyway??? Intuition things are not going according to plan.
@@ -76,7 +76,7 @@ label psychic_day2_evening_lad_discussion:
 
     call common_day2_evening_lad_psychic_discussion_0
 
-    $ psychic_details.important_choices.unlock('visit_lad')
+    $ psychic_details.threads.unlock('visit_lad')
 
     return
 
@@ -160,7 +160,7 @@ label psychic_day2_evening_bedroom_nurse_gone:
     but there is no answer.
     """
 
-    if psychic_details.observations.is_unlocked('nurse_sick'):
+    if psychic_details.threads.is_unlocked('nurse_sick'):
 
         """
         She is probably resting.
@@ -226,7 +226,7 @@ label psychic_day2_evening_bedroom_nurse_gone_enter:
     I am not sure what to make of that.
     """
     
-    $ psychic_details.observations.unlock('silverware')
+    $ psychic_details.threads.unlock('silverware')
 
     return
 

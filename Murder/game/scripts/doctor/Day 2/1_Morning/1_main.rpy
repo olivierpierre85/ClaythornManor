@@ -28,7 +28,7 @@ label doctor_day2_morning:
     Awake, and alive.
     """
 
-    if doctor_details.observations.is_unlocked('drunk_letter'):
+    if doctor_details.threads.is_unlocked('drunk_letter'):
 
         """
         Despite my suspicions, it seems no one tried to harm me in the night.
@@ -48,7 +48,7 @@ label doctor_day2_morning:
         No matter. I ought to prepare myself.
         """
 
-    if doctor_details.objects.is_unlocked('book_opium'):
+    if doctor_details.threads.is_unlocked('book_opium'):
 
         """
         On most mornings, I would begin in the usual manner.
@@ -208,7 +208,7 @@ label doctor_day2_morning:
     They clearly assume I shall go as well.
     """
 
-    if doctor_details.important_choices.is_unlocked('remove_mask'):
+    if doctor_details.threads.is_unlocked('remove_mask'):
 
         """
         Yet something troubles me.
@@ -220,7 +220,7 @@ label doctor_day2_morning:
         Something is not right, and a hunt is hardly the safest place to be.
         """
         
-    elif doctor_details.objects.is_unlocked('book_opium'):
+    elif doctor_details.threads.is_unlocked('book_opium'):
 
         """
         Yet I have not taken my 'medicine' today.
@@ -230,7 +230,7 @@ label doctor_day2_morning:
         In that case, it would be better to remain indoors and manage the symptoms.
         """
 
-    if doctor_details.important_choices.is_unlocked('flirt'):
+    if doctor_details.threads.is_unlocked('flirt'):
 
         """
         Besides, if I were to stay, I might spend a little more time with my new friend.
@@ -300,7 +300,7 @@ label doctor_day2_no_hunt_choice:
     Not without a very sound reason.
     """
 
-    if doctor_details.observations.is_unlocked('drunk_letter'):
+    if doctor_details.threads.is_unlocked('drunk_letter'):
 
         """
         I do have one.
@@ -371,7 +371,7 @@ label doctor_day2_morning_nurse:
 # The rest in the common folder
 label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
 
-    $ doctor_details.important_choices.unlock('broken_unmasked')
+    $ doctor_details.threads.unlock('broken_unmasked')
 
     """
     I can't ignore the signs. I need to see for myself.

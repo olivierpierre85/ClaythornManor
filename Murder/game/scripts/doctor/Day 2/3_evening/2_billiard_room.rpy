@@ -49,7 +49,7 @@ label doctor_day2_evening_billiard_room_bar:
     But this will be the last one.
     """
 
-    if doctor_details.objects.is_unlocked('book_opium'):
+    if doctor_details.threads.is_unlocked('book_opium'):
 
         """
         At last, I have a chance to free myself from opium entirely.
@@ -127,7 +127,7 @@ label doctor_day2_evening_billiard_room_captain:
     call run_menu(
         TimedMenu("doctor_day2_evening_billiard_room_captain", [
             TimedMenuChoice("Tell him about the letter", 'doctor_day2_evening_billiard_room_captain_letter'),
-            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 0 ,condition="doctor_details.important_choices.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
+            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 0 ,condition="doctor_details.threads.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
             TimedMenuChoice("Leave him alone", 'doctor_day2_evening_billiard_room_captain_avoid', keep_alive=True, early_exit = True),
         ])
     )
@@ -194,7 +194,7 @@ label doctor_day2_evening_billiard_room_captain_letter:
     I did not take the letter with me, that would have appeared far too suspicious.
     """
 
-    if doctor_details.observations.is_unlocked('burned_letter'):
+    if doctor_details.threads.is_unlocked('burned_letter'):
 
         doctor """
         And I have been in Samuel Manning's room since.
@@ -475,14 +475,14 @@ label doctor_day2_evening_captain_sleep_yes:
 
     call doctor_day2_evening_captain_sleep_options
 
-    $ doctor_details.important_choices.unlock("trust_captain")
+    $ doctor_details.threads.unlock("trust_captain")
 
     return
 
 
 label doctor_day2_evening_captain_sleep_options:
 
-    if doctor_details.objects.is_unlocked('book_opium'):
+    if doctor_details.threads.is_unlocked('book_opium'):
 
         """
         Now that I have settled, the cravings grow stronger than ever.

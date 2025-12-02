@@ -4,7 +4,7 @@ label lad_day2_hunt_noaccident:
     
     call change_time(12,30, 'The Hunt', 'Saturday')
 
-    $ lad_details.important_choices.unlock('hunt_captain_host')
+    $ lad_details.threads.unlock('hunt_captain_host')
 
     """
     Following our hostess seemed to be the safest course of action.

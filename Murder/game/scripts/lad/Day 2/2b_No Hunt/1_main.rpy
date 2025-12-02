@@ -115,7 +115,7 @@ label lad_day2_bedroom_broken:
     That's all I notice in the room.
     """
 
-    $ lad_details.observations.unlock('green_liquid') # TODO: Link to billiard room option not to drink the whisky?
+    $ lad_details.threads.unlock('green_liquid') # TODO: Link to billiard room option not to drink the whisky?
 
     pause 1.0
     # TODO: Add sound effect for discovering a clue?
@@ -268,6 +268,6 @@ label lad_day2_no_hunt_bedroom_drunk_enter:
     I decide to keep it, just in case.
     """
 
-    $ lad_details.objects.unlock('burned_letter')
+    $ lad_details.threads.unlock('burned_letter')
 
     return

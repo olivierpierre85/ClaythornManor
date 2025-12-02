@@ -125,7 +125,7 @@ label psychic_attic_default:
 
     $ play_music('PREVIOUS')
 
-    $ psychic_details.observations.unlock('visited_attic')
+    $ psychic_details.threads.unlock('visited_attic')
 
     return
 
@@ -267,7 +267,7 @@ label psychic_library_look_for_lord_succeed:
     If they tried to list all the gentry of this country, they were bound to make some errors.
     """
 
-    $ psychic_details.observations.unlock('lord_age')
+    $ psychic_details.threads.unlock('lord_age')
 
     return
 
@@ -309,7 +309,7 @@ label psychic_portrait_gallery_look_for_lord:
     So, Nicholas is his first name.
     """
 
-    $ psychic_details.observations.unlock('lord_name')
+    $ psychic_details.threads.unlock('lord_name')
     $ lord_name = "Sir Nicholas"
 
     return

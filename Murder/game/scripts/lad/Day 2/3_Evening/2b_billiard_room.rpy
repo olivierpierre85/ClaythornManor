@@ -111,7 +111,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
     And I assume he had more drinks during the hunt.
     """
 
-    if lad_details.important_choices.is_unlocked('hunt_doctor_drunk'):
+    if lad_details.threads.is_unlocked('hunt_doctor_drunk'):
 
         captain """
         You were with him, weren't you?
@@ -250,7 +250,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_broken:
     So I wouldn't shout "poison" every time you see a green drink.
     """
 
-    if not lad_details.important_choices.is_unlocked('whisky'):
+    if not lad_details.threads.is_unlocked('whisky'):
 
         captain """
         Of course, if you had tasted the drink, it would be a different story.
@@ -367,9 +367,9 @@ label lad_day2_evening_billiard_room_captain:
     """
 
     $ lad_day2_evening_billiard_room_captain_hypothesis_menu = TimedMenu("lad_day2_evening_billiard_room_captain_hypothesis_menu", [
-        TimedMenuChoice('Reveal Daniel Baldwin\'s opium addiction{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="lad_details.objects.is_unlocked('laudanum')"),
-        TimedMenuChoice('Point out the strange liquid on Thomas Moody\'s room{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.observations.is_unlocked('green_liquid')"),
-        TimedMenuChoice('Show the letter found in Samuel\'s Manning room{{object}}', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10, condition="lad_details.objects.is_unlocked('burned_letter')"),
+        TimedMenuChoice('Reveal Daniel Baldwin\'s opium addiction{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="lad_details.threads.is_unlocked('laudanum')"),
+        TimedMenuChoice('Point out the strange liquid on Thomas Moody\'s room{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.threads.is_unlocked('green_liquid')"),
+        TimedMenuChoice('Show the letter found in Samuel\'s Manning room{{object}}', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10, condition="lad_details.threads.is_unlocked('burned_letter')"),
         TimedMenuChoice('Question Samuel Manning\'s state of inebriation at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10),
         # TODO: If you have ALL the suspicions, you can convince the captain something strange is afoot. Need to decide next steps.
         TimedMenuChoice('Accept you don\'t have any real suspicions', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit=True),
@@ -475,7 +475,7 @@ label lad_day2_evening_billiard_room_bar_4:
     Besides, one more can't hurt.
     """
 
-    $ lad_details.important_choices.unlock('day2_drunk')
+    $ lad_details.threads.unlock('day2_drunk')
 
     show layer master at drunk_wobble_layer
     $ drunk_mode = True

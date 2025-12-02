@@ -31,7 +31,7 @@ label psychic_day3_morning:
     At least it's the last day. All of this will be over soon.
     """
 
-    if psychic_details.important_choices.is_unlocked('visit_lad'):
+    if psychic_details.threads.is_unlocked('visit_lad'):
         
         """
         Now I need to get my things ready and head to Ted Harring.
@@ -70,7 +70,7 @@ label psychic_day3_morning:
     Mr Harring, are you there?
     """
 
-    if psychic_details.important_choices.is_unlocked('visit_lad'):
+    if psychic_details.threads.is_unlocked('visit_lad'):
 
         call common_day3_morning_lad_psychic_journey
     

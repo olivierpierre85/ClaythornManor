@@ -36,7 +36,7 @@ label doctor_day1_evening_bedroom_drunk_enter:
 
     call drunk_letter_second_part
 
-    $ doctor_details.objects.unlock('drunk_letter')
+    $ doctor_details.threads.unlock('drunk_letter')
 
     """
     My legs feel weak.

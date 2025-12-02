@@ -228,6 +228,24 @@ init -100 python:
             for item in object_list:
                 item.type = "object"
 
+    class CharacterThreadList(CharacterInformationList):
+        def __init__(self, *lists):
+            # Flatten the underlying CharacterInformation objects
+            combined = []
+
+            for lst in lists:
+                if not lst:
+                    continue
+
+                # Your Character*List classes all have .information_list
+                if hasattr(lst, "information_list"):
+                    combined.extend(lst.information_list)
+                else:
+                    # In case you ever pass a plain list of CharacterInformation
+                    combined.extend(lst)
+
+            # No notification text/sound here – threads is just a utility view
+            super().__init__(combined)
 
     class CharacterDescriptionHiddenList(CharacterInformationList):
         def __init__(self, information_list, character_name):
@@ -315,7 +333,8 @@ init -100 python:
             real_name = "",
             nickname = "",
             description_short = "",
-            description_long = ""            
+            description_long = "",
+            threads=None,            
         ):
             self.text_id = text_id
             self.locked = locked
@@ -333,7 +352,17 @@ init -100 python:
             self.saved_variables = saved_variables or dict()
             self.checkpoints = []
             self.test_checkpoints = test_checkpoints or dict()
-            
+
+            if threads is not None:
+                # if you explicitly pass a threads object, keep it
+                self.threads = threads
+            else:
+                # default: aggregated view over choices + objects + observations
+                self.threads = CharacterThreadList(
+                    self.important_choices,
+                    self.objects,
+                    self.observations,
+                )
 
         def get_name(self):
             # if self.know_real_name:

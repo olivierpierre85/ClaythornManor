@@ -143,7 +143,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
 
     elif current_character.text_id == "doctor":
 
-        if doctor_details.important_choices.is_unlocked('broken_offended'):
+        if doctor_details.threads.is_unlocked('broken_offended'):
 
             """
             I feel somewhat uneasy. Before me lies the body of a man who was rather cross with me the last time we spoke.
@@ -169,13 +169,13 @@ label common_day2_breakfast_follow_doctor_lad_host:
         But it feels wrong. Perhaps best left to the coroner.
         """
 
-        if doctor_details.observations.is_unlocked('drunk_letter') or doctor_details.objects.is_unlocked('book_mystery'):
+        if doctor_details.threads.is_unlocked('drunk_letter') or doctor_details.threads.is_unlocked('book_mystery'):
 
             """
             Yet something's nagging at me.
             """
 
-            if doctor_details.objects.is_unlocked('book_mystery'):
+            if doctor_details.threads.is_unlocked('book_mystery'):
 
                 """
                 That book I read yesterday—how did the victim die?
@@ -189,7 +189,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
                 All visible—if I remove the mask.
                 """
 
-            elif doctor_details.observations.is_unlocked('drunk_letter'):
+            elif doctor_details.threads.is_unlocked('drunk_letter'):
 
                 """
                 After discovering the letter in Samuel Manning's room yesterday, it is difficult to regard this as mere coincidence.

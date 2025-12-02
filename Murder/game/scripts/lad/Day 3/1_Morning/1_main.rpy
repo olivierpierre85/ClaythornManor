@@ -17,7 +17,7 @@
 # --------------------------------------------
 label lad_day3_morning:
 
-    if lad_details.important_choices.is_unlocked('trust_psychic'):
+    if lad_details.threads.is_unlocked('trust_psychic'):
         call change_time(7, 30, "Morning", "Sunday", hide_minutes=True, chapter='sunday_morning')
         # You talked to and believed the psychic
         # So she came to wake you at dawn
@@ -41,7 +41,7 @@ label lad_day3_morning:
 
     play sound door_knock
 
-    if lad_details.important_choices.is_unlocked('day2_drunk') :
+    if lad_details.threads.is_unlocked('day2_drunk') :
         """
         My head is throbbing.
 
@@ -52,7 +52,7 @@ label lad_day3_morning:
     Mr Harring, are you there?
     """
 
-    if lad_details.important_choices.is_unlocked('trust_psychic'):
+    if lad_details.threads.is_unlocked('trust_psychic'):
 
         """
         Miss Baxter?
@@ -145,7 +145,7 @@ label lad_day3_morning:
         So, we start with...
         """
 
-    if lad_details.important_choices.is_unlocked('trust_psychic'):
+    if lad_details.threads.is_unlocked('trust_psychic'):
         $ time_left = 135
         call change_time(8, 45)
     else:
