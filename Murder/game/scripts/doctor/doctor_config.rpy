@@ -74,6 +74,14 @@ label init_doctor:
                 relevant_chapters=['saturday_morning', 'saturday_evening', 'sunday_morning', 'sunday_afternoon'],
             ),
             CharacterInformation(
+                0, "trust_captain",
+                "You slept in Captain Sinha' room",
+                content_negative="You didn't sleep in Captain Sinha' room",
+                image_file="trust_captain",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon'],
+            ),
+            CharacterInformation(
                 0, "trust_nurse",
                 "You teamed up with Rosalind Marsh",
                 content_negative="You didn't team up with Rosalind Marsh",
@@ -157,8 +165,9 @@ label init_doctor:
             CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
             CharacterInformation(2, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle", is_intuition=True, chapters=['saturday_evening']), 
             CharacterInformation(3, "burned", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
-            CharacterInformation(4, "todo1", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
-            CharacterInformation(5, "todo2", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
+            CharacterInformation(4, "throat_cut", "Someone slashed your throat in your sleep", image_file="throat_cut", chapters=['sunday_morning']), 
+            CharacterInformation(5, "todo1", "todo1", image_file="manor_burns", chapters=['saturday_morning']), 
+            CharacterInformation(6, "todo2", "todo1", image_file="manor_burns", chapters=['saturday_morning']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([

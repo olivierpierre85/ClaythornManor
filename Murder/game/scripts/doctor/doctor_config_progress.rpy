@@ -19,8 +19,7 @@ label doctor_config_progress:
                 Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),
-                Chapter(image_checkpoint_empty),
-
+                Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "", "end"),
@@ -31,14 +30,18 @@ label doctor_config_progress:
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "overdose", "saturday_morning"),
                 Chapter(image_checkpoint_empty_after_ending),
+                Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "shot_by_drunk", "saturday_evening"),
+                Chapter(image_ending_question, "ending", "throat_cut", "sunday_morning"),
 
             ],
             [
                 Chapter(image_checkpoint_empty_small),    
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "burned", "saturday_morning"),
+                Chapter(image_checkpoint_empty_after_ending),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "shot_by_drunk", "saturday_evening"),
             ],
         ]
 

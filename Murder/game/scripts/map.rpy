@@ -66,6 +66,7 @@ label init_map:
             Room(0, (25, 90, 360, 118),   'scullery',         'Scullery'),
             Room(0, (691, 90, 206, 525),   'garage',           'Garage'),
             Room(0, (385, 333, 306, 280),     'gun_room',         'Gun room'), #TODO check in basement geniric?
+            Room(0, (0, 0, 0, 0),     'black_background',         'Darkness'), # used or effect
         ]
         # TODO put in the ROOM class????? NOT if multiple info by room? Check at the end
         y_map_info_offset = 60

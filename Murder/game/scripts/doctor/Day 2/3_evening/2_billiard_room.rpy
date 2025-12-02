@@ -475,6 +475,8 @@ label doctor_day2_evening_captain_sleep_yes:
 
     call doctor_day2_evening_captain_sleep_options
 
+    $ doctor_details.important_choices.unlock("trust_captain")
+
     jump doctor_day3_morning_captain
 
 
@@ -541,21 +543,19 @@ label doctor_day2_evening_captain_sleep_no:
 
     play sound moving_furniture
 
+
     """
     Now that everything is in place, I lie down upon the bed, fully dressed in case I need to move quickly.
     """
 
     call doctor_day2_evening_captain_sleep_options
 
-    call wait_screen_transition()
+    $ stop_music()
 
-    """
-    Sleep comes grudgingly.
+    # call wait_screen_transition()
+    $ change_room("black_background", dissolve)
 
-    Every creak of the old house keeps me poised on the edge of waking.
-
-    At last I drift into a shallow, uneasy slumber.
-    """
+    $ play_music('danger', 2)
 
     """
     I do not know how long I have slept when a faint sound rouses me.

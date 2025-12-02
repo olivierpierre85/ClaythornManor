@@ -65,11 +65,13 @@ label doctor_ending_throat_cut:
     call death_screen_transition
 
     """
-    Even though you felt secure, there was something you missed.
+    You believed yourself safe.
 
-    Alone in your room you were an easy target for whoever wanted you harm.
+    Yet there was something you failed to see.
+
+    Alone in your room, you were an easy  target for whoever wished you harm.
     
-    Sometimes it's better to take chances and trust someone, anyone.
+    Sometimes the safest path lies in choosing whom to trust, rather than trusting no one at all.
 
     It's dangerous to go alone.
     """

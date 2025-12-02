@@ -40,6 +40,9 @@ def cond_doctor_shot_by_drunk(toggles):
 def cond_doctor_burned(toggles):
     return not toggles.get('drunk_letter', False)
 
+def cond_doctor_throat_cut(toggles):
+    return not toggles.get('trust_captain', False) and not toggles.get('trust_nurse', False)
+
 
 # Create the conditions dictionary.
 CONDITIONS_DICT = {
@@ -48,6 +51,7 @@ CONDITIONS_DICT = {
     "lad_poisoned": cond_lad_killed_poisoned,
     "lad_fell": cond_lad_killed_by_fall,
     "lad_escape": cond_lad_escape,
+
     "psychic_fell": cond_psychic_fell,
     "psychic_bludgeoned": cond_psychic_bludgeoned,
     "psychic_burned": cond_psychic_burned,
@@ -57,4 +61,5 @@ CONDITIONS_DICT = {
     "doctor_overdose": cond_doctor_overdose,
     "doctor_shot_by_drunk": cond_doctor_shot_by_drunk,
     "doctor_burned": cond_doctor_burned,
+    "doctor_throat_cut": cond_doctor_throat_cut
 }
