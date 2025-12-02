@@ -1,7 +1,6 @@
 ﻿# The script of the game goes in this file.
 # Global Variable
 
-# CLOCK
 init -1000 python:
     from datetime import datetime, time, timedelta, date
     import copy
@@ -34,26 +33,26 @@ init -1000 python:
         return False
 
     # Useful to track error when pickling (on save)
-    def scan_pickle():
-        bad = []
-        for name, val in renpy.store.__dict__.items():
-            # direct file objects
-            if isinstance(val, io.TextIOWrapper):
-                bad.append((name, type(val).__name__, "DIRECT FILE"))
-            # logging.FileHandler or anything with .stream
-            try:
-                if hasattr(val, "stream") and isinstance(val.stream, io.TextIOWrapper):
-                    bad.append((name, type(val).__name__, "HAS .stream FILE"))
-            except Exception:
-                pass
-            # logger objects holding file handlers
-            if isinstance(val, logging.Logger):
-                for h in val.handlers:
-                    if getattr(h, "stream", None) and isinstance(h.stream, io.TextIOWrapper):
-                        bad.append((name, "logging.Logger", "LOGGER FILEHANDLER"))
-        for item in bad:
-            renpy.log("UNPICKLEABLE: {}".format(item))
-        return bad
+    # def scan_pickle():
+    #     bad = []
+    #     for name, val in renpy.store.__dict__.items():
+    #         # direct file objects
+    #         if isinstance(val, io.TextIOWrapper):
+    #             bad.append((name, type(val).__name__, "DIRECT FILE"))
+    #         # logging.FileHandler or anything with .stream
+    #         try:
+    #             if hasattr(val, "stream") and isinstance(val.stream, io.TextIOWrapper):
+    #                 bad.append((name, type(val).__name__, "HAS .stream FILE"))
+    #         except Exception:
+    #             pass
+    #         # logger objects holding file handlers
+    #         if isinstance(val, logging.Logger):
+    #             for h in val.handlers:
+    #                 if getattr(h, "stream", None) and isinstance(h.stream, io.TextIOWrapper):
+    #                     bad.append((name, "logging.Logger", "LOGGER FILEHANDLER"))
+    #     for item in bad:
+    #         renpy.log("UNPICKLEABLE: {}".format(item))
+    #     return bad
 
     def load_latest_choices_from_testing():
         base = renpy.config.basedir
