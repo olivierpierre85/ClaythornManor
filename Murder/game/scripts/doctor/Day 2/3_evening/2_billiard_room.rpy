@@ -15,7 +15,7 @@ label doctor_day2_evening_billiard_room:
         """
 
         $ doctor_day2_evening_billiard_room_menu = TimedMenu("doctor_day2_evening_billiard_room_menu", [
-            TimedMenuChoice('Talk to Sushil Sinha', 'doctor_day2_evening_billiard_room_captain'),
+            TimedMenuChoice('Talk to Sushil Sinha', 'doctor_day2_evening_billiard_room_captain', keep_alive = True),
             TimedMenuChoice('Go to the bar for a drink', 'doctor_day2_evening_billiard_room_bar', 10),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
@@ -26,8 +26,6 @@ label doctor_day2_evening_billiard_room:
 
         """
         I find myself once more in the billiard room.
-
-        Little appears to have changed since my last visit.
         """
 
     call run_menu(doctor_day2_evening_billiard_room_menu)
@@ -184,7 +182,8 @@ label doctor_day2_evening_billiard_room_captain_letter:
     captain """
     I see.
 
-    Do not take this amiss, Doctor, but I cannot simply accept your word on what you have just told me.
+    Do not take this the wrong way
+    , Doctor, but I cannot simply accept your word on what you have just told me.
 
     Do you have any proof of it?
     """
@@ -403,19 +402,19 @@ label doctor_day2_evening_billiard_room_captain_mask:
     """
 
     """
-    The idea of surrendering my solitude is not an attractive one.
+    I am not sure I like this idea.
 
-    Yet it may be the best chance I have of surviving this weekend.
+    Yet, it may be the best chance I have of surviving this weekend.
 
     On the other hand, it forces me to trust Sushil Sinha with my life.
 
-    I do not know that I can do that.
+    I am not sure that I can do that.
     """
 
     call run_menu(
         TimedMenu("doctor_day2_evening_billiard_room_captain_sleep", [
             TimedMenuChoice("Accept his offer and sleep in his room", "doctor_day2_evening_captain_sleep_yes", early_exit = True),
-            TimedMenuChoice("Refuse and sleep alone", "doctor_day2_evening_captain_sleep_no", 30, early_exit = True),
+            TimedMenuChoice("Refuse", "doctor_day2_evening_captain_sleep_no", 30, early_exit = True),
         ])
     )
 
@@ -474,6 +473,13 @@ label doctor_day2_evening_captain_sleep_yes:
     The sight troubles me as much as it makes me feel safer.
     """
 
+    call doctor_day2_evening_captain_sleep_options
+
+    jump doctor_day3_morning_captain
+
+
+label doctor_day2_evening_captain_sleep_options:
+
     if doctor_details.objects.is_unlocked('book_opium'):
 
         """
@@ -492,7 +498,7 @@ label doctor_day2_evening_captain_sleep_yes:
         I feel certain I shall never fall asleep, yet at some point I do.
         """
 
-    jump doctor_day3_morning_captain
+    return
 
 
 label doctor_day2_evening_captain_sleep_no:
@@ -508,7 +514,9 @@ label doctor_day2_evening_captain_sleep_no:
 
     I cannot compel you.
 
-    But at least lock your door, I would rather not discover we have misjudged the danger come morning.
+    But at least lock your door.
+
+    I would rather not discover we have misjudged the danger come morning.
     """
 
     """
@@ -517,4 +525,72 @@ label doctor_day2_evening_captain_sleep_no:
     If I insist upon facing the night alone, I must be ready for whatever it may bring.
     """
 
-    return
+    $ change_room("bedroom_doctor", dissolve)
+
+    """
+    I reach my room alone.
+
+    I lock my door and do what I can to secure it.
+    """
+
+    play sound door_locked
+
+    """
+    Then I drag a chair and the small chest of drawers against the door, in case Lady Claythorn or one of her accomplices decides to pay me a visit.
+    """
+
+    play sound moving_furniture
+
+    """
+    Now that everything is in place, I lie down upon the bed, fully dressed in case I need to move quickly.
+    """
+
+    call doctor_day2_evening_captain_sleep_options
+
+    call wait_screen_transition()
+
+    """
+    Sleep comes grudgingly.
+
+    Every creak of the old house keeps me poised on the edge of waking.
+
+    At last I drift into a shallow, uneasy slumber.
+    """
+
+    """
+    I do not know how long I have slept when a faint sound rouses me.
+
+    It is a soft scrape, close by my ear, out of place in the stillness of the room.
+    """
+
+    """
+    Before I can stir, a hand clamps hard across my mouth, stifling any cry.
+
+    The weight of a body leans over me, pinning me to the mattress.
+    """
+
+    """
+    I clutch at the arm that holds me, but my limbs feel heavy and slow, still dulled by sleep.
+
+    My heart hammers so loudly that I can scarcely hear my own thoughts.
+    """
+
+    """
+    Something cold touches the bare skin of my throat.
+
+    For one dreadful instant I understand exactly what is about to happen.
+    """
+
+    """
+    Pain sears across my neck in a sudden, burning line.
+
+    Hot wetness spills down my collar, soaking the front of my shirt.
+    """
+
+    """
+    I struggle blindly, fingers clawing at the air and at the implacable hand that silences me.
+
+    My strength ebbs almost at once, as if it were pouring away with my blood.
+    """
+
+    jump doctor_ending_throat_cut

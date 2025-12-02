@@ -55,3 +55,23 @@ label doctor_ending_shot_by_drunk:
     """
 
     jump ending_generic
+
+
+label doctor_ending_throat_cut:
+
+    $ doctor_details.endings.unlock('throat_cut')
+    $ doctor_details.add_ending_checkpoint(ending=doctor_details.endings.get_item('throat_cut'))
+    
+    call death_screen_transition
+
+    """
+    Even though you felt secure, there was something you missed.
+
+    Alone in your room you were an easy target for whoever wanted you harm.
+    
+    Sometimes it's better to take chances and trust someone, anyone.
+
+    It's dangerous to go alone.
+    """
+
+    jump ending_generic
