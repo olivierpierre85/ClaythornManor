@@ -413,8 +413,8 @@ label doctor_day2_evening_billiard_room_captain_mask:
 
     call run_menu(
         TimedMenu("doctor_day2_evening_billiard_room_captain_sleep", [
-            TimedMenuChoice("Accept his offer and sleep in his room", "doctor_day2_evening_captain_sleep_yes", early_exit = True),
-            TimedMenuChoice("Refuse", "doctor_day2_evening_captain_sleep_no", 30, early_exit = True),
+            TimedMenuChoice("Accept his offer and sleep in his room", "doctor_day2_evening_captain_sleep_yes", TIME_MAX, early_exit = True),
+            TimedMenuChoice("Refuse", "doctor_day2_evening_captain_sleep_no", early_exit = True),
         ])
     )
 
@@ -477,7 +477,7 @@ label doctor_day2_evening_captain_sleep_yes:
 
     $ doctor_details.important_choices.unlock("trust_captain")
 
-    jump doctor_day3_morning_captain
+    return
 
 
 label doctor_day2_evening_captain_sleep_options:

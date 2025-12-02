@@ -65,5 +65,11 @@ label doctor_day2_evening_exploration:
     $ time_left = 90
     call run_menu(doctor_details.saved_variables["day2_evening_map_menu"])
 
-    return
+    if doctor_details.important_choices.is_unlocked('trust_captain'):
+
+        jump doctor_day3_morning_captain
+
+    else:
+
+        jump work_in_progress
 
