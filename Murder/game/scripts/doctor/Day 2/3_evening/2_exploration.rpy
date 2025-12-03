@@ -71,5 +71,5 @@ label doctor_day2_evening_exploration:
 
     else:
 
-        jump work_in_progress
+        jump doctor_day3_morning_nurse
 

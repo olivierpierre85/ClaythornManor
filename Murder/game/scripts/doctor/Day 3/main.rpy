@@ -21,8 +21,10 @@ label doctor_day3_morning_captain:
 
     jump work_in_progress
 
+label doctor_day3_morning_nurse:
 
+    jump work_in_progress
+    
 # TODO, multiple starts possible
-# Wake up in FOOTMAN's room, but he is not there, you found a note? OR DEATH by footman?
 # Wake up in NURSE's ROOM. You hide with here while observing the rest of the gang, you notice she is stealy (helps to unlock her later?) ???
 # Wake up in Captain's room. You follow him exploring but find NOTHING, until you find LAD and psychic => YOU leave with captain !!!!!!

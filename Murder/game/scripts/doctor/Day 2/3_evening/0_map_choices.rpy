@@ -25,6 +25,7 @@ label doctor_day2_evening_map_menu:
                 keep_alive = True, 
             ), 
             #bedroom
+            # Weird talk with lad who is scared, mention 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'doctor_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'doctor_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'doctor_day2_evening_bedroom_host', 10, room='bedroom_host'),
@@ -146,140 +147,6 @@ label doctor_downstairs_day2_evening:
     return
 
 
-# label doctor_downstairs_day2:
-
-#     $ change_room("basement_stairs")
-
-#     """
-#     I ought to have a look downstairs. Might be something of interest there.
-#     """
-
-#     footman """
-#     Good evening, sir. I'm afraid guests aren't permitted beyond this point.
-#     """
-
-#     """
-#     I offer him my warmest smile.
-#     """
-
-#     doctor """
-#     I do apologise. I'm only having a quick look. Could you make an exception?
-
-#     I promise I won't be long.
-#     """
-
-#     footman """
-#     If it were up to me, I'd gladly say yes.
-
-#     But Lady Claythorn was quite clear with her instructions.
-
-#     I'm sure you understand.
-
-#     Please don't take it personally.
-#     """
-
-#     """
-#     He says it with a warm smile of his own.
-
-#     His eyes say sorry, but there's something else there, too.
-
-#     I wonder if...
-#     """
-
-#     call run_menu(
-#         TimedMenu("doctor_has_try_sneaking_downstairs", [
-#             TimedMenuChoice("Try flirting with him", 'doctor_downstairs_flirt', 30, early_exit=True),
-#             TimedMenuChoice("No, he clearly won't change his mind", 'doctor_downstairs_apologize', 20, early_exit=True),
-#         ])
-#     )
-
-#     return
-
-
-# label doctor_downstairs_flirt:
-
-#     doctor """
-#     That's a shame, but I quite understand. Orders are orders.
-
-#     Still, I had rather hoped you might show me around.
-
-#     There are a few things I'd not mind discussing with you.
-#     """
-
-#     footman """
-#     I'm a bit tied up at the moment, sir.
-
-#     But I could make time later, if you'd still care to talk.
-#     """
-
-#     doctor """
-#     I'd like that very much.
-
-#     Where shall we meet?
-#     """
-
-#     footman """
-#     Hard to say when I'll be free.
-
-#     But I could stop by your room once I've a moment—if you don't mind, that is.
-#     """
-
-#     """
-#     Well, that is rather forward.
-
-#     I glance about to be sure we're alone.
-
-#     We are.
-
-#     I let my gaze linger a moment longer than necessary.
-#     """
-
-#     doctor """
-#     Are you certain you can't come now?
-#     """
-
-#     footman """
-#     No, truly I can't.
-
-#     But I'll be done soon enough.
-
-#     I'll see you later then, Doctor Baldwin.
-#     """
-
-#     doctor """
-#     Please—call me Daniel.
-#     """
-
-#     footman """
-#     Very well, Daniel. I'm Andrew.
-#     """
-
-#     doctor """
-#     I'll see you later, Andrew.
-#     """
-
-#     $ doctor_details.threads.unlock('flirt')
-
-#     return
-
-
-# label doctor_downstairs_apologize:
-
-#     doctor """ 
-#     Quite right.
-
-#     I'll be off, then.
-
-#     Good evening.
-#     """
-
-#     footman """
-#     Good evening, sir.
-#     """
-
-#     return
-
-
 # First Floor
 label doctor_day2_evening_library:
 
@@ -333,7 +200,76 @@ label doctor_day2_evening_portrait_gallery:
     call doctor_portrait_gallery_default
     return
 
-# # Second Floor
+# Second Floor
+
+label doctor_day2_evening_bedroom_lad:
+
+    $ change_room('bedroom_lad')
+
+    play sound door_knock
+
+    doctor """
+    Mr Harring, are you there?
+    """
+
+    """
+    For a moment there is no answer.
+
+    Then I hear a faint voice from behind the door.
+    """
+
+    lad """
+    Doctor Baldwin, is that you?
+    """
+
+    doctor """
+    Yes.
+
+    I should like a word with you, it is rather important.
+
+    May I come in?
+    """
+
+    lad """
+    Well, I don't know, doctor.
+
+    I've already dragged a desk in front of the door.
+
+    Might be better if we did the talking through it.
+    """
+
+    doctor """
+    I am afraid it is a very sensitive matter.
+
+    I would not care for anyone overhearing us.
+    """
+
+    lad """
+    Oh.
+
+    In that case, it is probably best if we wait until the morning.
+
+    It will be easier to talk then.
+
+    Good night, doctor.
+    """
+
+    doctor """
+    No, it might be too late by then, I need to...
+    """
+
+    """
+    I hear his footsteps recede and the faint creak of floorboards further inside the room.
+
+    It seems Mr Harring has no intention of opening his door tonight.
+
+
+    I had better try somewhere else.
+    """
+    
+    return
+
+
 # label doctor_day2_evening_bedroom_drunk:
     
 #     call doctor_bedroom_default
@@ -447,10 +383,6 @@ label doctor_day2_evening_portrait_gallery:
 #     call doctor_bedroom_stay_away
 #     return
 
-# label doctor_day2_evening_bedroom_lad:
-#     call doctor_bedroom_default
-#     call doctor_bedroom_stay_away
-#     return
 
 # label doctor_day2_evening_bedroom_broken:
 #     call doctor_bedroom_default
