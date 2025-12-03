@@ -146,7 +146,7 @@ label lad_day3_escape:
 
     $ change_room("forest_road")
 
-    if lad_details.objects.is_unlocked('gun'):
+    if lad_details.threads.is_unlocked('gun'):
 
         """
         We had been walking for about an hour when he stops.

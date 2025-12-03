@@ -225,7 +225,7 @@ label psychic_day3_afternoon_stay:
 
 label psychic_day3_afternoon_gun_death:
 
-    $ psychic_details.important_choices.unlock('steal_gun')
+    $ psychic_details.threads.unlock('steal_gun')
 
     """
     Without hesitation, I jump at her.

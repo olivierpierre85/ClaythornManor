@@ -56,7 +56,7 @@ label psychic_config_menu:
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_friday', 0, condition = condition_friday, next_menu="captain_generic_other_guests_menu_psychic"),
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_morning', 0, condition = condition_saturday_morning, keep_alive = True, next_menu="captain_generic_other_guests_menu_psychic"),
         TimedMenuChoice('What do you think of the other guests?', 'captain_generic_other_guests_saturday_evening', 0, condition = condition_saturday_evening, keep_alive = True, next_menu="captain_generic_other_guests_menu_psychic"),
-        TimedMenuChoice('There is something weird about Rosalind Marsh{{observation}}', 'psychic_day2_evening_nurse_captain', 0, condition = condition_saturday + " and psychic_details.observations.is_unlocked('silverware')"),
+        TimedMenuChoice('There is something weird about Rosalind Marsh{{observation}}', 'psychic_day2_evening_nurse_captain', 0, condition = condition_saturday + " and psychic_details.threads.is_unlocked('silverware')"),
         # exit
         TimedMenuChoice('On second thought, I\'d better not talk to him', 'generic_cancel', 0, keep_alive = True, early_exit = True )
     ], image_right = "captain")

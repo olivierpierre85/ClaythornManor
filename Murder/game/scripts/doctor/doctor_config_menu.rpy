@@ -1,6 +1,6 @@
 label doctor_config_menu:
 
-    $ not_broken_offended = "not doctor_details.important_choices.is_unlocked('broken_offended') "
+    $ not_broken_offended = "not doctor_details.threads.is_unlocked('broken_offended') "
 
     #---------------------------------------------------------------------
     # BROKEN

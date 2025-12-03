@@ -17,7 +17,7 @@
 #     """
 
 #     # unlock extra dose of laudanum
-#     $ doctor_details.important_choices.unlock('laudanum_extra_1')
+#     $ doctor_details.threads.unlock('laudanum_extra_1')
 
 #     call run_menu(TimedMenu("doctor_day1_evening_2", [
 #         TimedMenuChoice("Let's go down to meet the others", 'generic_cancel', early_exit=True),

@@ -49,7 +49,7 @@ label doctor_day2_hunt:
     To my surprise, Samuel Manning is there as well.
     """
 
-    if doctor_details.observations.is_unlocked('drunk_letter'):
+    if doctor_details.threads.is_unlocked('drunk_letter'):
 
         """
         I must watch him carefully.
@@ -67,7 +67,7 @@ label doctor_day2_hunt:
     I notice the butler walking just behind Lady Claythorn.
     """
 
-    if doctor_details.important_choices.is_unlocked('flirt'):
+    if doctor_details.threads.is_unlocked('flirt'):
 
         """
         Andrew is there too.
@@ -97,7 +97,7 @@ label doctor_day2_hunt:
     You don't mind, do you?
     """
 
-    if doctor_details.observations.is_unlocked('drunk_letter'):
+    if doctor_details.threads.is_unlocked('drunk_letter'):
 
         """
         He is too eager to join me.
@@ -133,7 +133,7 @@ label doctor_day2_hunt:
     You don't mind if I tag along as well, do you?
     """
 
-    if doctor_details.important_choices.is_unlocked('flirt'):
+    if doctor_details.threads.is_unlocked('flirt'):
 
         """
         Andrew stands at his side and gives me a meaningful look.

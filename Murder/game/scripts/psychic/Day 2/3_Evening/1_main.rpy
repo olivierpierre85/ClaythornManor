@@ -134,7 +134,7 @@ label psychic_day2_evening:
     So I could also take advantage of the fact that the Manor is almost empty.
     """
 
-    if psychic_details.important_choices.is_unlocked('visit_lad'):
+    if psychic_details.threads.is_unlocked('visit_lad'):
         
         """
         Or I could wait in my room for Ted Harring. 
@@ -164,7 +164,7 @@ label psychic_day2_evening:
         I should return to my room.
         """
 
-    if psychic_details.important_choices.is_unlocked('visit_lad'):
+    if psychic_details.threads.is_unlocked('visit_lad'):
         
         call psychic_day2_evening_lad_discussion_follow_up
 

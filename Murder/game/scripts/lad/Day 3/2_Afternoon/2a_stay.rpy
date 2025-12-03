@@ -167,7 +167,7 @@ label lad_day3_afternoon_toilet:
 
 label lad_day3_afternoon_no_toilet:
 
-    $ lad_details.important_choices.unlock('protect_food')
+    $ lad_details.threads.unlock('protect_food')
 
     """
     Instead of going to my room, I go down the stairs and return to the dining room.
@@ -420,7 +420,7 @@ label lad_day3_afternoon_no_toilet:
     """
 
     # TODO: if gun => point the gun at her
-    if lad_details.objects.is_unlocked('gun'):
+    if lad_details.threads.is_unlocked('gun'):
         """
         I point the gun at her.
 

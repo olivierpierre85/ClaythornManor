@@ -40,7 +40,7 @@ label psychic_day2_evening_map_menu:
             #     'psychic_day2_evening_lad_discussion', 
             #     20, 
             #     room='bedroom_lad',
-            #     condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
+            #     condition = "not psychic_details.threads.is_unlocked('visit_lad')"
             # ),
             TimedMenuChoice(
                 default_room_text('bedroom_lad'), 
@@ -67,7 +67,7 @@ label psychic_day2_evening_map_menu:
                 0, 
                 early_exit = True, 
                 room = 'bedroom_psychic',
-                condition = "psychic_details.important_choices.is_unlocked('visit_lad')"
+                condition = "psychic_details.threads.is_unlocked('visit_lad')"
             ),
             TimedMenuChoice(
                 'Wait in your room', 
@@ -75,7 +75,7 @@ label psychic_day2_evening_map_menu:
                 0, 
                 early_exit = True, 
                 room = 'bedroom_psychic',
-                condition = "not psychic_details.important_choices.is_unlocked('visit_lad')"
+                condition = "not psychic_details.threads.is_unlocked('visit_lad')"
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
@@ -310,7 +310,7 @@ label psychic_day2_evening_attic_default:
 
         $ psychic_details.saved_variables["day2_evening_attic_visited"] = True
 
-        if psychic_details.observations.is_unlocked('visited_attic'):
+        if psychic_details.threads.is_unlocked('visited_attic'):
 
             """
             I am back in the attic.

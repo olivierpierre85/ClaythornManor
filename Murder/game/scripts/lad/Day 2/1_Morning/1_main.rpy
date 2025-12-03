@@ -34,7 +34,7 @@ label lad_day2_morning:
     The storm from yesterday has passed and the weather is clearer now.
     """
 
-    if lad_details.important_choices.is_unlocked('day1_drunk'):
+    if lad_details.threads.is_unlocked('day1_drunk'):
         
         """
         Oh my God, my head is pounding.
@@ -139,7 +139,7 @@ label lad_day2_morning:
 # If not doing that, the rest of the game will happen Inside the menu above
 label lad_day2_hunt_choice:
 
-    $ lad_details.important_choices.unlock('hunt')
+    $ lad_details.threads.unlock('hunt')
 
     jump lad_day2_hunt
 

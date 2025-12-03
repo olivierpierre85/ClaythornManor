@@ -250,7 +250,7 @@ label lad_day3_take_gun:
     I pocket the gun anyway.
     """
 
-    $ lad_details.objects.unlock('gun')
+    $ lad_details.threads.unlock('gun')
 
     return
 
@@ -361,7 +361,7 @@ label lad_day3_morning_garage:
 
     $ lad_details.description_hidden.unlock('drive')
 
-    $ lad_details.important_choices.unlock('seen_car')
+    $ lad_details.threads.unlock('seen_car')
 
     return
 
@@ -572,7 +572,7 @@ label lad_day3_morning_billiard_room:
     Mr Harring, you aren't considering drinking at this hour, are you?
     """
 
-    if lad_details.important_choices.is_unlocked('day1_drunk') and lad_details.important_choices.is_unlocked('day2_drunk') :
+    if lad_details.threads.is_unlocked('day1_drunk') and lad_details.threads.is_unlocked('day2_drunk') :
         
         lad """
         I think a bit of sherry might be beneficial.
@@ -600,7 +600,7 @@ label lad_day3_morning_billiard_room:
 
         # TODO achievement "Drink every chance you got."
         # TODO? "Object drink on hand?"
-        $ lad_details.important_choices.unlock('day3_drunk')
+        $ lad_details.threads.unlock('day3_drunk')
 
         show layer master at drunk_wobble_layer
         $ drunk_mode = True

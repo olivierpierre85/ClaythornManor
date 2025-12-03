@@ -178,7 +178,7 @@ label doctor_downstairs_flirt:
     I'll see you later, Andrew.
     """
 
-    $ doctor_details.important_choices.unlock('flirt')
+    $ doctor_details.threads.unlock('flirt')
 
     return
 
@@ -259,7 +259,7 @@ label doctor_day1_evening_book_mystery:
     So I feel like I could relate to the her.
     """
 
-    $ doctor_details.objects.unlock('book_mystery')
+    $ doctor_details.threads.unlock('book_mystery')
 
     return
 
@@ -272,7 +272,7 @@ label doctor_day1_evening_library_book_opium:
     Maybe now is the time.
     """
 
-    $ doctor_details.objects.unlock('book_opium')
+    $ doctor_details.threads.unlock('book_opium')
 
     return
 

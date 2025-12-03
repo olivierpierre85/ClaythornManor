@@ -39,7 +39,7 @@ label broken_generic_doctor_improprieties:
         I must sound like an absolute tosser to him now.
         """
 
-        $ doctor_details.important_choices.unlock('broken_offended')
+        $ doctor_details.threads.unlock('broken_offended')
 
     $ doctor_details.saved_variables['broken_offended'] += 1
     

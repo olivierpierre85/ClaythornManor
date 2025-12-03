@@ -81,7 +81,7 @@ label doctor_downstairs_day2_evening:
     May I help you?
     """
 
-    if doctor_details.important_choices.is_unlocked('flirt'):
+    if doctor_details.threads.is_unlocked('flirt'):
 
         doctor """
         Well, perhaps. 
@@ -258,7 +258,7 @@ label doctor_downstairs_day2_evening:
 #     I'll see you later, Andrew.
 #     """
 
-#     $ doctor_details.important_choices.unlock('flirt')
+#     $ doctor_details.threads.unlock('flirt')
 
 #     return
 

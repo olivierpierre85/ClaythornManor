@@ -132,7 +132,7 @@ label doctor_day1_evening:
 
     call broken_generic
 
-    if doctor_details.important_choices.is_unlocked('broken_offended'):
+    if doctor_details.threads.is_unlocked('broken_offended'):
         # The Broken is offended, he won't talk to you anymore
         broken """
         Excuse me, I have something to do.
@@ -164,7 +164,7 @@ label doctor_day1_evening:
     Hello there, I am Captain Sushil Sinha.
     """
 
-    if doctor_details.important_choices.is_unlocked('broken_offended'):
+    if doctor_details.threads.is_unlocked('broken_offended'):
 
         """
         As he sees the new guests coming in, Thomas Moody joins me back to greet them.
@@ -317,9 +317,9 @@ label doctor_day1_evening:
 
     $ change_room('bedroom_doctor')
 
-    if doctor_details.important_choices.is_unlocked('flirt') or doctor_details.objects.is_unlocked('book_mystery') or doctor_details.objects.is_unlocked('book_opium'):
+    if doctor_details.threads.is_unlocked('flirt') or doctor_details.threads.is_unlocked('book_mystery') or doctor_details.threads.is_unlocked('book_opium'):
 
-        if doctor_details.important_choices.is_unlocked('flirt'):
+        if doctor_details.threads.is_unlocked('flirt'):
 
             """
             I barely have time to settle in my room that I hear someone knocking.
@@ -375,16 +375,16 @@ label doctor_day1_evening:
             I must have misunderstood.
             """
 
-            $ doctor_details.observations.unlock('footman_french_1')
+            $ doctor_details.threads.unlock('footman_french_1')
 
 
-        if doctor_details.objects.is_unlocked('book_mystery') or doctor_details.objects.is_unlocked('book_opium'):
+        if doctor_details.threads.is_unlocked('book_mystery') or doctor_details.threads.is_unlocked('book_opium'):
 
             """
             It is not too late yet, so I can read the book I took from the library before sleeping.
             """
 
-            if doctor_details.objects.is_unlocked('book_mystery'):
+            if doctor_details.threads.is_unlocked('book_mystery'):
 
                 """
                 "The Mysterious Affair at Styles"

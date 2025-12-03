@@ -25,7 +25,7 @@ label lad_day2_evening:
 
     $ change_room("great_hall", irisout)
     
-    if lad_details.important_choices.is_unlocked('hunt'):
+    if lad_details.threads.is_unlocked('hunt'):
 
         """
         Everything happened so quickly it is all a blur.
@@ -142,7 +142,7 @@ label lad_day2_evening:
 
     $ stop_music()
 
-    if lad_details.important_choices.is_unlocked('day2_drunk'):
+    if lad_details.threads.is_unlocked('day2_drunk'):
 
         """
         My head feels thick and foggy.
@@ -156,7 +156,7 @@ label lad_day2_evening:
         I reach the toilet just in time and empty the contents of my stomach.
         """
 
-        if lad_details.important_choices.is_unlocked('day1_drunk'):
+        if lad_details.threads.is_unlocked('day1_drunk'):
             
             """
             Drunk two days in a row.
@@ -279,7 +279,7 @@ label lad_day2_bedroom_doctor:
     Just in case, I might as well take a few for myself.
     """
 
-    $ lad_details.objects.unlock('laudanum')
+    $ lad_details.threads.unlock('laudanum')
 
     # TODO add pocketing sound?
     # TODO is the lad a thief? likely ADD HERE

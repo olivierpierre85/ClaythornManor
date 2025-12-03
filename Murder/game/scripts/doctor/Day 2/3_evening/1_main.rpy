@@ -102,7 +102,7 @@ label doctor_day2_evening:
     I am back in my room, shaken by a wretched mix of nervousness and remorse.
     """
 
-    if doctor_details.objects.is_unlocked('book_opium'):
+    if doctor_details.threads.is_unlocked('book_opium'):
         
         """
         I pace the room, my hands still trembling.
@@ -136,7 +136,7 @@ label doctor_day2_evening:
         I think of the letter I found in Samuel Manning's room.
         """
 
-        if doctor_details.important_choices.is_unlocked('broken_unmasked'):
+        if doctor_details.threads.is_unlocked('broken_unmasked'):
 
             """
             The image of Thomas Moody without his mask also appears in my mind.

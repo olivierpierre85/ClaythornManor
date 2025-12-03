@@ -49,7 +49,7 @@ label common_day2_hunt_accident_death:
         My legs give way and I fall to the ground.
         """
 
-        if doctor_details.observations.is_unlocked('drunk_letter'):
+        if doctor_details.threads.is_unlocked('drunk_letter'):
 
             """
             I allowed myself a moment of distraction and he seized it.
@@ -123,7 +123,7 @@ label common_day2_hunt_accident_death:
 
     elif current_character.text_id == "doctor":
 
-        if doctor_details.observations.is_unlocked('drunk_letter'):
+        if doctor_details.threads.is_unlocked('drunk_letter'):
 
             """
             He avoids my gaze, feigning remorse.

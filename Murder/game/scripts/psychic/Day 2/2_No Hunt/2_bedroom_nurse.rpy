@@ -122,7 +122,7 @@ label psychic_day2_no_hunt_bedroom_nurse_insist:
     Another racking cough takes her.
     """
 
-    $ psychic_details.observations.unlock('nurse_sick')
+    $ psychic_details.threads.unlock('nurse_sick')
 
     psychic """
     I am so very sorry.

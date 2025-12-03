@@ -153,7 +153,7 @@ label nurse_generic_background_doctor:
     And it was a very long time ago.
     """
 
-    $ doctor_details.observations.unlock('remember_nurse')
+    $ doctor_details.threads.unlock('remember_nurse')
 
     doctor """
     It was indeed.

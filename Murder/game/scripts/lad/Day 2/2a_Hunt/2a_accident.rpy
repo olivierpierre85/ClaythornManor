@@ -6,7 +6,7 @@ label lad_day2_hunt_accident:
 
     $ play_music('chill')
 
-    $ lad_details.important_choices.unlock('hunt_doctor_drunk')
+    $ lad_details.threads.unlock('hunt_doctor_drunk')
 
     """
     Despite the risks, I decided to follow Doctor Baldwin and Samuel Manning.
