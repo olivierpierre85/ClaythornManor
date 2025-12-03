@@ -371,8 +371,6 @@ label doctor_day2_morning_nurse:
 # The rest in the common folder
 label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
 
-    $ doctor_details.threads.unlock('broken_unmasked')
-
     """
     I can't ignore the signs. I need to see for myself.
 
@@ -393,10 +391,25 @@ label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
 
     """
     Once I'm sure the room is empty, I remove the mask.
+    """
 
-    His face twisted in a horrible grimace.
+    call doctor_day2_behind_the_mask
 
+    $ change_room("bedrooms_hallway")
+
+    """
+    Ted Harring is waiting in the hallway.
+    """
+
+    call common_day2_breakfast_follow_doctor_lad_normal
+
+    return
+
+
+label doctor_day2_behind_the_mask:
     
+    """
+    His face twisted in a horrible grimace.    
 
     This is not the face of someone dying peacefully in his sleep.
 
@@ -414,6 +427,8 @@ label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
 
     What does that mean?
     """
+
+    $ doctor_details.threads.unlock('broken_unmasked')
 
     # TODO: find appropriate music
 
@@ -438,13 +453,5 @@ label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
     """
 
     $ broken_details.description_hidden.unlock('lie_mask')
-
-    $ change_room("bedrooms_hallway")
-
-    """
-    Ted Harring is waiting in the hallway.
-    """
-
-    call common_day2_breakfast_follow_doctor_lad_normal
-
+    
     return

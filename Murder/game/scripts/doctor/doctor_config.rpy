@@ -32,6 +32,7 @@ label init_doctor:
 
             # Evening day 2
             "day2_evening_billiard_room_visited" : False,
+            "day2_evening_bedroom_closed" : False,
 
             # HUNt
             "bored_by_lad": 0,
@@ -70,7 +71,7 @@ label init_doctor:
                 "You removed Thomas Moody's mask",
                 content_negative="You didn't remove Thomas Moody's mask",
                 image_file="broken_unmasked",
-                chapters=['saturday_morning'],
+                chapters=['saturday_morning', 'saturday_evening'],
                 relevant_chapters=['saturday_morning', 'saturday_evening', 'sunday_morning', 'sunday_afternoon'],
             ),
             CharacterInformation(

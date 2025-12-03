@@ -25,10 +25,11 @@ label doctor_day2_evening_map_menu:
                 keep_alive = True, 
             ), 
             #bedroom
-            # Weird talk with lad who is scared, mention 
+            # Weird talk with lad who is scared 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'doctor_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'doctor_day2_evening_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'doctor_day2_evening_bedroom_host', 10, room='bedroom_host'),
+            # Allow to see face a second time if not done on first day
             TimedMenuChoice(default_room_text('bedroom_broken'), 'doctor_day2_evening_bedroom_broken', 10, room='bedroom_broken'),
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse', 10, room='bedroom_nurse'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day2_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="doctor_day2_evening_bedroom_drunk"),
@@ -201,74 +202,44 @@ label doctor_day2_evening_portrait_gallery:
     return
 
 # Second Floor
+# Closed bedrooms
+label doctor_day2_evening_bedroom_closed:
 
-label doctor_day2_evening_bedroom_lad:
+    if not doctor_details.saved_variables["day2_evening_bedroom_closed"]:
 
-    $ change_room('bedroom_lad')
+        $ doctor_details.saved_variables["day2_evening_bedroom_closed"] = True
 
-    play sound door_knock
+        """
+        I could try to enter but they might be there and not want to answer.
 
-    doctor """
-    Mr Harring, are you there?
-    """
+        So I would look too suspicious now, I should just try somewhere else.
+        """
+    
+    else:
 
-    """
-    For a moment there is no answer.
+        """
+        Nobody is here either.
 
-    Then I hear a faint voice from behind the door.
-    """
-
-    lad """
-    Doctor Baldwin, is that you?
-    """
-
-    doctor """
-    Yes.
-
-    I should like a word with you, it is rather important.
-
-    May I come in?
-    """
-
-    lad """
-    Well, I don't know, doctor.
-
-    I've already dragged a desk in front of the door.
-
-    Might be better if we did the talking through it.
-    """
-
-    doctor """
-    I am afraid it is a very sensitive matter.
-
-    I would not care for anyone overhearing us.
-    """
-
-    lad """
-    Oh.
-
-    In that case, it is probably best if we wait until the morning.
-
-    It will be easier to talk then.
-
-    Good night, doctor.
-    """
-
-    doctor """
-    No, it might be too late by then, I need to...
-    """
-
-    """
-    I hear his footsteps recede and the faint creak of floorboards further inside the room.
-
-    It seems Mr Harring has no intention of opening his door tonight.
-
-
-    I had better try somewhere else.
-    """
+        I should move on.
+        """
     
     return
 
+
+label doctor_day2_evening_bedroom_captain:
+    
+    call doctor_bedroom_default
+    call doctor_day2_evening_bedroom_closed
+
+    return
+
+
+label doctor_day2_evening_bedroom_host:
+
+    call doctor_bedroom_default
+    call doctor_day2_evening_bedroom_closed
+
+    return
 
 # label doctor_day2_evening_bedroom_drunk:
     
@@ -357,37 +328,10 @@ label doctor_day2_evening_bedroom_lad:
 
 #     return
 
-# # Closed bedrooms
-# label doctor_bedroom_stay_away:
-
-#     """
-#     Should I try to see what's inside?
-
-#     No, of course not. 
-
-#     Most people are downstairs now, but they could come back anytime.
-
-#     Also, that's wildly inappropriate.
-#     """
-    
-#     return
 
 
-# label doctor_day2_evening_bedroom_captain:
-#     call doctor_bedroom_default
-#     call doctor_bedroom_stay_away
-#     return
-
-# label doctor_day2_evening_bedroom_host:
-#     call doctor_bedroom_default
-#     call doctor_bedroom_stay_away
-#     return
 
 
-# label doctor_day2_evening_bedroom_broken:
-#     call doctor_bedroom_default
-#     call doctor_bedroom_stay_away
-#     return
 
 # label doctor_day2_evening_bedroom_nurse:
 #     call doctor_bedroom_default
