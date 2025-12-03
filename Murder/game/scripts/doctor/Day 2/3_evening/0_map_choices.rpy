@@ -31,7 +31,8 @@ label doctor_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('bedroom_host'), 'doctor_day2_evening_bedroom_host', 10, room='bedroom_host'),
             # Allow to see face a second time if not done on first day
             TimedMenuChoice(default_room_text('bedroom_broken'), 'doctor_day2_evening_bedroom_broken', 10, room='bedroom_broken'),
-            TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse', 10, room='bedroom_nurse'),
+            # Nurse path
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse', 0, room='bedroom_nurse'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day2_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="doctor_day2_evening_bedroom_drunk"),
             TimedMenuChoice(default_room_text('library'), 'doctor_day2_evening_library', 0, next_menu="doctor_library_default", room='library'),
             TimedMenuChoice(
@@ -328,15 +329,6 @@ label doctor_day2_evening_bedroom_host:
 
 #     return
 
-
-
-
-
-
-# label doctor_day2_evening_bedroom_nurse:
-#     call doctor_bedroom_default
-#     call doctor_bedroom_stay_away
-#     return
 
 # # Attic
 # label doctor_day2_evening_storage:
