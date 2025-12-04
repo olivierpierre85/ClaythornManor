@@ -175,7 +175,7 @@ label doctor_attic_default:
 
     if not doctor_details.saved_variables['attic_visited']:
         """
-        Out of curiosity, I decide to take the stairs to the attic.
+        I decide to take the stairs to the attic.
 
         I probably shouldn't be here but I could still feign ignorance if I am spotted.
         """

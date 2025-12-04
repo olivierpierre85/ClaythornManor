@@ -44,8 +44,8 @@ label doctor_day2_evening_map_menu:
                 room = 'bedroom_psychic'
             ),
             TimedMenuChoice(
-                'Go to sleep', 
-                'generic_cancel', 
+                'Go to sleep, alone', 
+                'doctor_day2_evening_sleep_alone', 
                 early_exit = True, 
                 room = 'bedroom_doctor'
             ),
@@ -261,19 +261,15 @@ label doctor_day2_evening_bedroom_psychic:
 
 
 
-# # Attic
-# label doctor_day2_evening_storage:
-#     call doctor_storage_default
-#     return
+# Attic
+label doctor_day2_evening_storage:
+    call doctor_storage_default
+    return
 
-# label doctor_day2_evening_males_room:
-#     call doctor_males_room_default
-#     return
+label doctor_day2_evening_females_room:
+    call doctor_females_room_default
+    return
 
-# label doctor_day2_evening_females_room:
-#     call doctor_females_room_default
-#     return
-
-# label doctor_day2_evening_butler_room:
-#     call doctor_butler_room_default
-#     return
+label doctor_day2_evening_butler_room:
+    call doctor_butler_room_default
+    return

@@ -76,7 +76,7 @@ label doctor_day2_evening_exploration:
 # Notable explorations
 label doctor_day2_evening_bedroom_lad:
 
-    $ change_room('bedroom_lad')
+    $ change_room("bedrooms_hallway")
 
     play sound door_knock
 
@@ -301,3 +301,70 @@ label doctor_day2_evening_bedroom_drunk:
 
     return
 
+
+label doctor_day2_evening_males_room:
+
+    call doctor_attic_default
+
+    play sound door_knock
+
+    footman """
+    Who is it?
+    """
+
+    if doctor_details.threads.is_unlocked('flirt'):
+        
+        """
+        I answer in a whisper.
+        """
+
+        doctor """
+        Andrew, it's me, Daniel.
+        """
+
+        # TODO Andrew opens, they talk, Doctor hears another odd expression and confronts him.
+        # He learns something, but Andrew insists he should return to his own room to sleep.
+
+    else:
+
+        doctor """
+        It is Doctor Baldwin.
+        """
+
+        footman """
+        Oh.
+
+        What can I do for you, doctor?
+        """
+
+        doctor """
+        Well... I am not entirely sure.
+
+        I was merely exploring, and wondered what was in the attic.
+        """
+
+        footman """
+        I do not think you are supposed to be here, doctor.
+
+        This is the servants quarters.
+
+        I was about to go to bed myself, as I have to be up early tomorrow.
+        """
+
+        doctor """
+        Of course, my apologies for disturbing you.
+
+        Good night.
+        """
+
+        footman """
+        Goodnight, sir.
+        """
+
+        """
+        Well, that was rather embarrassing.
+
+        That is what happens when one wanders about a house without a clear purpose, I suppose.
+        """
+
+    return
