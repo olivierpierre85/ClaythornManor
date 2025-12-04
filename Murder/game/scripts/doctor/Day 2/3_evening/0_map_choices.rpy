@@ -33,7 +33,7 @@ label doctor_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('bedroom_broken'), 'doctor_day2_evening_bedroom_broken', 10, room='bedroom_broken'),
             # Nurse path
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse', 0, room='bedroom_nurse'),
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day2_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="doctor_day2_evening_bedroom_drunk"),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day2_evening_bedroom_drunk', 20, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('library'), 'doctor_day2_evening_library', 0, next_menu="doctor_library_default", room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
@@ -241,58 +241,6 @@ label doctor_day2_evening_bedroom_host:
     call doctor_day2_evening_bedroom_closed
 
     return
-
-# label doctor_day2_evening_bedroom_drunk:
-    
-#     call doctor_bedroom_default
-
-#     play sound door_open
-
-#     """
-#     My knocking slightly opens the door.
-
-#     From the hallway, I can see part of the room.
-
-#     It is in a dreadful state.
-
-#     Should I take a peek?
-#     """
-
-#     if doctor_details.endings.is_unlocked('shot_by_drunk'):
-        
-#         """
-#         I know and it's probably a bad idea and that I should close this door.
-
-#         But I've got an intrusive feeling that if don't enter, something bad will happen.
-
-#         That is obviously silly, but...
-#         """
-        
-#         call run_menu( 
-#             TimedMenu("doctor_day2_evening_bedroom_drunk", [
-#                 TimedMenuChoice("Follow your intuition, they exist for a reason{{intuition}}", "doctor_day2_evening_bedroom_drunk_enter", 20, next_menu="doctor_day2_evening_bedroom_drunk_enter", early_exit=True),
-#                 TimedMenuChoice("Don't be ridiculous, there is no such thing as premonition", "doctor_day2_evening_bedroom_drunk_not_enter", early_exit=True),
-#             ])
-#         )
-
-#     else:
-
-#         pause 1.0
-
-#         call doctor_day2_evening_bedroom_drunk_not_enter
-
-#     return
-
-
-# label doctor_day2_evening_bedroom_drunk_not_enter:
-
-#     """
-#     Why am I thinking, there is no reason for me to intrude.
-
-#     I close the door and leave.
-#     """
-
-#     return
 
 
 # label doctor_day2_evening_bedroom_psychic:
