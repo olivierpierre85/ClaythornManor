@@ -51,7 +51,8 @@ label doctor_day2_evening_map_menu:
             ),
             # Attic
             TimedMenuChoice(default_room_text('storage'), 'doctor_day2_evening_storage', 10, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'doctor_day2_evening_males_room', 10, room='males_room'),
+            # Meets Footman
+            TimedMenuChoice(default_room_text('males_room'), 'doctor_day2_evening_males_room', 20, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'doctor_day2_evening_females_room', 10, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'doctor_day2_evening_butler_room', 10, room='butler_room'),
         ], is_map = True)
@@ -258,7 +259,6 @@ label doctor_day2_evening_bedroom_psychic:
     """
 
     return
-
 
 
 # Attic
