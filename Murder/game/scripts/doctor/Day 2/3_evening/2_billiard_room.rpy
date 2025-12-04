@@ -335,14 +335,70 @@ label doctor_day2_evening_billiard_room_captain_mask:
 
     """
     He pauses for a moment, pondering the implications of what he has just learnt.
+
+    Then his gaze lingers on the nightstand.
+
+    Thomas Moody's hip flask lies on its side, a greenish liquid spilling from its mouth and pooling upon the wood.
     """
 
     captain """
-    Very well.
+    I assume our friend was drinking from this before he died.
 
-    That is now two deaths that are highly suspicious.
+    What kind of alcohol could that be?
 
-    And if someone in this house is prepared to kill once, perhaps even twice, there is no reason to think they will stop there.
+    Crème de menthe, perhaps?
+    """
+
+    """
+    He picks up the flask and brings it to his nose.
+    """
+
+    captain """
+    How odd.
+
+    That smells like whisky, heavily peated I might add.
+
+    But why is there a green puddle on the nightstand?
+    """
+
+    """
+    Of course.
+
+    I cannot believe I did not notice this before.
+    """
+
+    doctor """
+    Do not drink it, Captain.
+
+    I believe you have found the murder weapon.
+    """
+
+    captain """
+    Ah, so this is the poison that caused Thomas Moody's premature death, you think?
+    """
+
+    doctor """
+    Precisely.
+
+    Everything points to a form of strychnine poisoning.
+
+    It is a common active ingredient in certain rat poisons.
+
+    That is probably what has given his whisky this greenish hue.
+    """
+
+    captain """
+    I see.
+
+    So we now have two deaths that are highly suspicious.
+    """
+
+    """
+    He thinks for few seconds about what that implies.
+    """
+
+    """
+    If someone in this house is prepared to kill once, perhaps even twice, there is no reason to imagine they will stop there.
 
     I believe we may both be in danger.
 
@@ -357,6 +413,7 @@ label doctor_day2_evening_billiard_room_captain_mask:
     What about you?
     """
 
+
     doctor """
     Well, as a doctor, I may have left a few unpleasant patients here and there.
 
@@ -366,7 +423,7 @@ label doctor_day2_evening_billiard_room_captain_mask:
     """
     I am not entirely sure that I believe my own words.
 
-    Yet I see no point in sharing those doubts.
+    But I see no point in sharing those doubts.
     """
 
     captain """
@@ -390,8 +447,16 @@ label doctor_day2_evening_billiard_room_captain_mask:
 
     Lady Claythorn may not be acting alone in this enterprise.
 
-    We must take every precaution we can.
+    If we confront her, she will become suspicious and it will be even harder to escape this place.
 
+    We must take every precaution we can.
+    """
+
+    doctor """
+    I agree, but what do you suggest we do?
+    """
+
+    """
     I believe we should not sleep alone tonight.
 
     Come and share my room.
