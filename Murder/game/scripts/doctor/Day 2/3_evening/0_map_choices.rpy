@@ -33,12 +33,14 @@ label doctor_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('bedroom_broken'), 'doctor_day2_evening_bedroom_broken', 10, room='bedroom_broken'),
             # Nurse path
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse', 0, room='bedroom_nurse'),
+            # Find burned letter
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day2_evening_bedroom_drunk', 20, room='bedroom_drunk'),
-            TimedMenuChoice(default_room_text('library'), 'doctor_day2_evening_library', 0, next_menu="doctor_library_default", room='library'),
+            TimedMenuChoice(default_room_text('library'), 'doctor_day2_evening_library', 10, room='library'),
+            # Psychic scared
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
                 'doctor_day2_evening_bedroom_psychic', 
-                10, 
+                20, 
                 room = 'bedroom_psychic'
             ),
             TimedMenuChoice(
@@ -243,39 +245,20 @@ label doctor_day2_evening_bedroom_host:
     return
 
 
-# label doctor_day2_evening_bedroom_psychic:
+label doctor_day2_evening_bedroom_psychic:
   
-#     call doctor_bedroom_default
+    call doctor_bedroom_psychic_evening
 
-#     psychic """
-#     Yes? Who is it?
-#     """ 
+    """
+    She must be wary of speaking with me.
 
-#     doctor """
-#     It's Doctor Baldwin.
-#     """
+    I cannot blame her.
 
-#     psychic """
-#     Yes, Doctor, what can I do for you?
-#     """
-    
-#     doctor """
-#     I just wanted to have chat. Do you have time?
-#     """
+    After all that has happened, she has little reason to place her trust in me.
+    """
 
-#     psychic """
-#     I'm afraid It's a bit too late for me.
+    return
 
-#     But we can speak again tomorrow.
-#     """
-
-#     doctor """
-#     Of course, I am sorry.
-#     """
-
-#     $ unlock_map('bedroom_psychic')
-
-#     return
 
 
 # # Attic

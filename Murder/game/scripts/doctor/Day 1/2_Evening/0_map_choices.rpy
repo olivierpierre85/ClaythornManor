@@ -364,6 +364,13 @@ label doctor_day1_evening_bedroom_drunk_not_enter:
 
 label doctor_day1_evening_bedroom_psychic:
   
+    call doctor_bedroom_psychic_evening
+
+    return
+
+
+label doctor_bedroom_psychic_evening:
+
     call doctor_bedroom_default
 
     psychic """
@@ -391,7 +398,7 @@ label doctor_day1_evening_bedroom_psychic:
     doctor """
     Of course, I am sorry.
     """
-
+    
     $ unlock_map('bedroom_psychic')
 
     return
