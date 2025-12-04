@@ -262,39 +262,42 @@ label doctor_day2_evening_bedroom_drunk:
     """
     I am back in Samuel Manning's room.
 
-    It's still a mess.
+    It is still a mess.
 
-    But now Samuel's Manning is lying on his bed peacefully.
+    But now Samuel Manning is lying on his bed, seemingly at peace.
 
     I remember that Captain Sinha and Ted Harring carried him here.
 
-    I don't know why I am here now.
+    I do not know why I have come back.
 
-    Maybe to watch the man I killed on last time.
+    Perhaps I wished to look one last time upon the man I killed.
 
     I approach the bed.
 
     He looks peaceful.
 
-    I tried to convince myself that I had no choice, it was either him or me.
+    I try to convince myself that I had no choice, that it was either him or me.
 
-    But that doesn't make the guilt go away.
+    But that does not make the guilt go away.
 
-    My mind goes to the simple letter that started all this.
+    My thoughts return to the simple letter that set all of this in motion.
 
     I wonder if it is still here.
 
-    I look around and don't find it on the desk.
+    I look around and do not find it on the desk.
 
-    But I spot something in the fire, the letter is there.
+    Then I spot something in the fire. 
+    
+    The letter is there, burned so badly I cannot make out what was written.
 
-    Burned in way you can't make what was written.
+    If I had hoped to use it as proof of my innocence, I am too late.
 
-    If I wanted to use it as proof of my innocence, I am too late.
+    Samuel Manning has taken care to erase all trace of his plans.
 
-    Samuel Manning took care to erase traces of his plans.
-
-    Well, there is no point in lingering here then.
+    There is no point in lingering here any longer.
     """
 
+    $ doctor_details.threads.unlock('burned_letter')
+
     return
+
