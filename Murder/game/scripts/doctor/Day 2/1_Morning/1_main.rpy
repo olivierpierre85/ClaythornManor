@@ -371,6 +371,8 @@ label doctor_day2_morning_nurse:
 # The rest in the common folder
 label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
 
+    $ doctor_details.threads.unlock('broken_unmasked')
+
     """
     I can't ignore the signs. I need to see for myself.
 
