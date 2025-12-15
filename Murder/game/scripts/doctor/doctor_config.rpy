@@ -160,6 +160,14 @@ label init_doctor:
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening'],
             ),
+            CharacterInformation(
+                0, "footman_actor",
+                "You learned that the footman is actually an actor",
+                content_negative="You didn't learn that the footman is actually an actor",
+                image_file="burned_letter",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
         ])
 
         doctor_endings = CharacterEndingList ([
