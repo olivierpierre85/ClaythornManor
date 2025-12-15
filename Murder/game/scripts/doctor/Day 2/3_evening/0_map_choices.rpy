@@ -6,10 +6,10 @@ label doctor_day2_evening_map_menu:
             "doctor_day2_evening_map_menu", 
             [
             # Downstairs
-            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day2_evening_downstairs_default', 0, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'doctor_day2_evening_downstairs_default', 0, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'doctor_day2_evening_downstairs_default', 0, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day2_evening_downstairs_default', 0, room='gun_room'),
+            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day2_evening_downstairs_default', 20, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'doctor_day2_evening_downstairs_default', 20, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'doctor_day2_evening_downstairs_default', 20, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day2_evening_downstairs_default', 20, room='gun_room'),
             # First floor
             TimedMenuChoice(default_room_text('tea_room'), 'doctor_day2_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'doctor_day2_evening_dining_room', 10, room='dining_room'),
@@ -52,7 +52,8 @@ label doctor_day2_evening_map_menu:
             # Attic
             TimedMenuChoice(default_room_text('storage'), 'doctor_day2_evening_storage', 10, room='storage'),
             # Meets Footman
-            TimedMenuChoice(default_room_text('males_room'), 'doctor_day2_evening_males_room', 20, room='males_room'),
+            TimedMenuChoice(default_room_text('males_room'), 'doctor_day2_evening_males_room_do_no_enter', 20, room='males_room', condition="not doctor_details.threads.is_unlocked('flirt')"),
+            TimedMenuChoice(default_room_text('males_room'), 'doctor_day2_evening_males_room_enter', 60, room='males_room', condition="doctor_details.threads.is_unlocked('flirt')"),
             TimedMenuChoice(default_room_text('females_room'), 'doctor_day2_evening_females_room', 10, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'doctor_day2_evening_butler_room', 10, room='butler_room'),
         ], is_map = True)

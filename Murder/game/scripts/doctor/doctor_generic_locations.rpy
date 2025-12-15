@@ -174,11 +174,13 @@ label doctor_attic_default:
     $ change_room("attic_hallway")
 
     if not doctor_details.saved_variables['attic_visited']:
+
         """
         I decide to take the stairs to the attic.
 
         I probably shouldn't be here but I could still feign ignorance if I am spotted.
         """
+        
         $ doctor_details.saved_variables["attic_visited"] = True
 
     return
