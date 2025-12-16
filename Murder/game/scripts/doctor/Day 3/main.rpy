@@ -15,9 +15,30 @@
 #   Notes : 
 #       - Map 90, 150 minutes
 # --------------------------------------------
-label doctor_day3_morning_captain:
+label doctor_day3_morning:
+
+    call change_time(9, 30, "Morning", "Sunday", hide_minutes=True, chapter='sunday_morning')
+
+    $ lad_details.add_checkpoint("doctor_day3_morning") 
+
+    call black_screen_transition("Daniel Baldwin", chapters_names[current_chapter])
 
     $ play_music('mysterious')
+
+    if doctor_details.threads.is_unlocked('trust_captain'):
+
+        call doctor_day3_morning_captain
+
+    elif doctor_details.threads.is_unlocked('trust_nurse'):
+
+        call doctor_day3_morning_nurse
+
+    jump work_in_progress
+
+
+label doctor_day3_morning_captain:
+
+    $ change_room('bedroom_captain', irisout)
 
     """
     Captain path? Following him, discuss suspects, leave as soon as possible.
@@ -27,10 +48,13 @@ label doctor_day3_morning_captain:
     ALSO learn about the Boxer's rebellion !! Help for possible unlocking!!!!
     """
 
-    jump work_in_progress
+    return
+    
 
 
 label doctor_day3_morning_nurse:
+
+    $ change_room('bedroom_nurse', irisout)
 
     """
     TODO, nurse path?
@@ -42,7 +66,7 @@ label doctor_day3_morning_nurse:
     BUT what have we discover? LEARN MORE ABOUT NURSE => Maybe add something to unlock HER? => So the psychic ALONE IS NOT ENOUGH!!
     """
 
-    jump work_in_progress
+    return
     
 # TODO, multiple starts possible
 # Wake up in NURSE's ROOM. You hide with here while observing the rest of the gang, you notice she is stealy (helps to unlock her later?) ???

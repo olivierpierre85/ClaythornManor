@@ -54,6 +54,6 @@ label doctor_config_progress:
             'saturday_morning': "doctor_day2_morning",
             'saturday_afternoon': "doctor_day2_hunt",
             'saturday_evening': "doctor_day2_evening",
-            # 'sunday_morning': "doctor_day3_morning",
+            'sunday_morning': "doctor_day3_morning",
             # 'sunday_afternoon': "doctor_day3_afternoon",
         }

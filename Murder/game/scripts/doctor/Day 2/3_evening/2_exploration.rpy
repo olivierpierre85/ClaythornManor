@@ -65,13 +65,9 @@ label doctor_day2_evening_exploration:
     $ time_left = 90
     call run_menu(doctor_details.saved_variables["day2_evening_map_menu"])
 
-    if doctor_details.threads.is_unlocked('trust_captain'):
+    if doctor_details.threads.is_unlocked('trust_captain') or doctor_details.threads.is_unlocked('trust_nurse'):
 
-        jump doctor_day3_morning_captain
-
-    elif doctor_details.threads.is_unlocked('trust_nurse'):
-
-        jump doctor_day3_morning_nurse
+        jump doctor_day3_morning
 
     else:
 
