@@ -225,7 +225,7 @@ label doctor_day2_evening_bedroom_nurse_sleep_yes:
 
     I settle into the chair, listening to the ticking of the clock, and the slow deepening of Miss Marsh's breathing as she drifts into sleep.
 
-    Before long, my own eyelids grow heavy.
+    Pretty soon it's my turn to doze off.
     """
 
     call wait_screen_transition
