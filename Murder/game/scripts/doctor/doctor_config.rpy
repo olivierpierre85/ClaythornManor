@@ -164,7 +164,7 @@ label init_doctor:
                 0, "footman_actor",
                 "You learned that the footman is actually an actor",
                 content_negative="You didn't learn that the footman is actually an actor",
-                image_file="burned_letter",
+                image_file="footman_actor",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
