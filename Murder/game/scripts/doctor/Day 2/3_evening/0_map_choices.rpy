@@ -32,7 +32,8 @@ label doctor_day2_evening_map_menu:
             # Allow to see face a second time if not done on first day
             TimedMenuChoice(default_room_text('bedroom_broken'), 'doctor_day2_evening_bedroom_broken', 10, room='bedroom_broken'),
             # Nurse path
-            TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse', 0, room='bedroom_nurse'),
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse_do_not_remember', 20, room='bedroom_nurse', condition="not doctor_details.threads.is_unlocked('remember_nurse')"),
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse_remember', 0, room='bedroom_nurse', condition="doctor_details.threads.is_unlocked('remember_nurse')")),
             # Find burned letter
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day2_evening_bedroom_drunk', 20, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('library'), 'doctor_day2_evening_library', 10, room='library'),

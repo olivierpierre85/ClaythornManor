@@ -1,6 +1,5 @@
 
-
-label doctor_day2_evening_bedroom_nurse:
+label doctor_day2_evening_bedroom_nurse_default:
 
     $ change_room("bedrooms_hallway")
 
@@ -34,139 +33,149 @@ label doctor_day2_evening_bedroom_nurse:
     I hope you understand.
     """
 
-    if doctor_details.threads.is_unlocked('remember_nurse'):
+    return
 
-        doctor """
-        I do understand, believe me.
 
-        Yet, as you reminded me earlier, you and I have worked side by side in far less proper circumstances than this.
+label doctor_day2_evening_bedroom_nurse_do_not_remember:
 
-        I would not trouble you now without very good reason.
-        """
+    call doctor_day2_evening_bedroom_nurse_default
 
-        """
-        There is a brief pause.
+    """
+    She is right.
 
-        I hear the soft creak of a floorboard, as if she has stepped closer to the door.
-        """
+    I cannot simply insist upon entering the room of a woman I scarcely know at this hour.
 
-        nurse """
-        Very well, what is it then?
-        """
+    I should not press the matter.
+    """
 
-        doctor """
-        It is not something I care to discuss in the hallway.
+    doctor """
+    My apologies for disturbing you.
 
-        May I come in, just for a moment?
-        """
+    I shall leave you in peace, Miss Marsh.
 
-        """
-        For a few seconds there is only silence, and the faint crackle of a fire from within her room.
-        """
+    Good night.
+    """
 
-        nurse """
-        All right.
+    nurse """
+    Good night, Doctor.
+    """
 
-        Please come in, Doctor.
-        """
+    return
 
-        play sound door_open
 
-        $ change_room("bedroom_nurse")
+label doctor_day2_evening_bedroom_nurse_remember:
 
-        """
-        I step into Miss Marsh's room.
+    call doctor_day2_evening_bedroom_nurse_default
 
-        She has not yet undressed, but her shoulders sag with weariness, and there are dark shadows beneath her eyes.
-        """
+    doctor """
+    I do understand, believe me.
 
-        doctor """
-        Thank you.
+    Yet, as you reminded me earlier, you and I have worked side by side in far less proper circumstances than this.
 
-        I shall be as brief as I can.
-        """
+    I would not trouble you now without very good reason.
+    """
 
-        """
-        I give her a concise account of the letter I discovered in Samuel Manning's room.
-        
-        Then I explain how it urged him to provoke me before the hunt, and how it led, step by step, to his death.
+    """
+    There is a brief pause.
 
-        As I speak, the colour drains from her face.
-        """
+    I hear the soft creak of a floorboard, as if she has stepped closer to the door.
+    """
 
-        nurse """
-        Good heavens.
+    nurse """
+    Very well, what is it then?
+    """
 
-        Are you saying someone lured you both into that situation on purpose?
-        """
+    doctor """
+    It is not something I care to discuss in the hallway.
 
-        doctor """
-        That is precisely what I fear.
+    May I come in, just for a moment?
+    """
 
-        Whoever wrote that letter knew far too much, and I doubt they are finished.
+    """
+    For a few seconds there is only silence, and the faint crackle of a fire from within her room.
+    """
 
-        I believe they may try again, with me or with someone else in this house.
-        """
+    nurse """
+    All right.
 
-        nurse """
-        And you came to me because we worked together before?
+    Please come in, Doctor.
+    """
 
-        Because you think you can trust me?
-        """
+    play sound door_open
 
-        doctor """
-        Indeed, I would rather face this night with an ally than entirely alone.
-        """
+    $ change_room("bedroom_nurse")
 
-        nurse """
-        I cannot pretend I am not frightened.
+    """
+    I step into Miss Marsh's room.
 
-        Every sound in this place sets my nerves on edge.
+    She has not yet undressed, but her shoulders sag with weariness, and there are dark shadows beneath her eyes.
+    """
 
-        I am thinking, to be perfectly safe maybe you could ...
+    doctor """
+    Thank you.
 
-        No, never mind, it's probably not a good idea.
-        """
+    I shall be as brief as I can.
+    """
 
-        doctor """
-        What could be? In these circumstances, we shouldn't be afraid to share what we think.
-        """
+    """
+    I give her a concise account of the letter I discovered in Samuel Manning's room.
+    
+    Then I explain how it urged him to provoke me before the hunt, and how it led, step by step, to his death.
 
-        nurse """
-        All right then, I meant that , if we really are in danger, you should probably ... sleep here tonight.
+    As I speak, the colour drains from her face.
+    """
 
-        Not on the bed I mean, maybe on a chair.
+    nurse """
+    Good heavens.
 
-        I know it's very unconventional, but that would make me feel better.
-        """
+    Are you saying someone lured you both into that situation on purpose?
+    """
 
-        call run_menu( TimedMenu("broken_generic_other_guests_friday_offense", [
-                TimedMenuChoice("I guess it's the safest thing to do", 'doctor_day2_evening_bedroom_nurse_sleep_yes', TIME_MAX, early_exit = True),
-                TimedMenuChoice("I'd rather sleep alone", 'doctor_day2_evening_bedroom_nurse_sleep_no', 0, early_exit = True),
-            ])
-        )
+    doctor """
+    That is precisely what I fear.
 
-    else:
+    Whoever wrote that letter knew far too much, and I doubt they are finished.
 
-        """
-        She is right.
+    I believe they may try again, with me or with someone else in this house.
+    """
 
-        I cannot simply insist upon entering the room of a woman I scarcely know at this hour.
+    nurse """
+    And you came to me because we worked together before?
 
-        I should not press the matter.
-        """
+    Because you think you can trust me?
+    """
 
-        doctor """
-        My apologies for disturbing you.
+    doctor """
+    Indeed, I would rather face this night with an ally than entirely alone.
+    """
 
-        I shall leave you in peace, Miss Marsh.
+    nurse """
+    I cannot pretend I am not frightened.
 
-        Good night.
-        """
+    Every sound in this place sets my nerves on edge.
 
-        nurse """
-        Good night, Doctor.
-        """
+    I am thinking, to be perfectly safe maybe you could ...
+
+    No, never mind, it's probably not a good idea.
+    """
+
+    doctor """
+    What could be? In these circumstances, we shouldn't be afraid to share what we think.
+    """
+
+    nurse """
+    All right then, I meant that , if we really are in danger, you should probably ... sleep here tonight.
+
+    Not on the bed I mean, maybe on a chair.
+
+    I know it's very unconventional, but that would make me feel better.
+    """
+
+    call run_menu( TimedMenu("broken_generic_other_guests_friday_offense", [
+            TimedMenuChoice("I guess it's the safest thing to do", 'doctor_day2_evening_bedroom_nurse_sleep_yes', TIME_MAX, early_exit = True),
+            TimedMenuChoice("I'd rather sleep alone", 'doctor_day2_evening_bedroom_nurse_sleep_no', 0, early_exit = True),
+        ])
+    )
 
     return
 
@@ -214,21 +223,63 @@ label doctor_day2_evening_bedroom_nurse_sleep_yes:
     """
     The fire burns low in the grate, filling the room with a dull orange glow.
 
-    I settle into the chair, listening to the ticking of the clock and the slow deepening of Miss Marsh's breathing as she drifts into sleep.
+    I settle into the chair, listening to the ticking of the clock, and the slow deepening of Miss Marsh's breathing as she drifts into sleep.
 
-    Pretty soon it's my turn to doze off.
+    Before long, my own eyelids grow heavy.
     """
 
-    # call wait_transition
-    # TODO add that miss marsh makes door sound, said she wanted to be sure the door was secured?
-    # doctor """
-    # Were you going somewhere?
-    #"""
+    call wait_screen_transition
 
-    $ doctor_details.threads.unlock("trust_nurse")
+    play sound door_locked
+
+    """
+    I am deep asleep when the door suddenly rattles.
+
+    I blink myself awake and see Rosalind Marsh standing close to it, one hand still near the bolt.
+    """
+
+    doctor """
+    Miss Marsh?
+
+    What are you doing?
+
+    Are you going somewhere?
+    """
+
+    nurse """
+    Oh, of course not, Doctor.
+
+    I am afraid I am becoming rather paranoid.
+
+    I only wanted to be certain the door was properly fastened.
+
+    But it is, so I can return to bed now.
+
+    I am sorry to have woken you.
+    """
+
+    doctor """
+    Do not apologise.
+
+    Try to get some rest.
+
+    Good night, Miss Marsh.
+    """
+
+    nurse """
+    Good night, Doctor Baldwin.
+    """
+
+    """
+    Strange.
+
+    Still, I cannot blame her for being on edge.
+    """
+
+    $ doctor_details.threads.unlock('trust_nurse')
 
     return
-    
+
 
 label doctor_day2_evening_bedroom_nurse_sleep_no:
 
@@ -260,4 +311,5 @@ label doctor_day2_evening_bedroom_nurse_sleep_no:
     The hallway feels colder than before, and the silence of the sleeping house presses in on every side.
     """
 
+    # TODO ending or Possibility to look somewhere else? Ending to mirror captain, but maybe do something to allow start again with captain?
     jump doctor_day2_evening_sleep_alone
