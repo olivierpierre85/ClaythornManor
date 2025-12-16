@@ -297,7 +297,13 @@ init -1 python:
 
             selected_choice = None
 
-            if full_testing_mode and full_testing_mode_choices:
+            # --- Ren'Py automated tests: use recorded plan, never open UI ---
+            if renpy.is_in_test() and test.autorunner.active:
+                selected_choice = test.autorunner.pick_choice_for_menu(self)
+                selected_choice_i = self.choices.index(selected_choice)
+
+            # --- (Optional) keep your existing full_testing_mode for manual debug runs ---
+            elif full_testing_mode and full_testing_mode_choices:
 
                 full_testing_mode_choice = full_testing_mode_choices.pop(0)
 
@@ -307,7 +313,7 @@ init -1 python:
                         selected_choice_i = i
 
                 if not selected_choice:
-                    print("Error: Choice not Valid")
+                    raise Exception("full_testing_mode: planned choice not valid / not found")
                 
 
             if not selected_choice:

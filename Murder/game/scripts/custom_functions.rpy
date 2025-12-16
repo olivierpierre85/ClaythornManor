@@ -39,6 +39,14 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
 
             current_chapter = chapter
 
+            if renpy.is_in_test() and test.autorunner.active:
+                if test.autorunner.start_chapter is None:
+                    test.autorunner.start_chapter = chapter
+                elif chapter != test.autorunner.start_chapter:
+                    test.autorunner.reached_new_chapter = chapter
+                    test.autorunner.end_chapter = chapter     # <--- add this (optional but handy)
+                    renpy.jump("__test_chapter_end")
+
         # Compute for clock rotation
         current_hour = current_time.hour
         current_minutes = current_time.minute

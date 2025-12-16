@@ -1,0 +1,68 @@
+{
+  "tester_id": "anon",
+  "timestamp": "2025-10-01T11:00:29.742000",
+  "choices": [
+    {
+      "menu": "lad_introduction",
+      "other_choices": [
+        "Talk to Samuel Manning",
+        "Talk to Amelia Baxter",
+        "Stand awkwardly in the corner"
+      ],
+      "selected": "Talk to Amelia Baxter",
+      "redirect": "lad_day1_drinks_psychic",
+      "time_left": 20,
+      "timestamp": "2025-10-01T11:00:07.432000",
+      "time_to_decide": 2.034,
+      "time_since_last": null
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "What do you think of this weather?",
+        "Tell me more about yourself.",
+        "What do you think of this place?",
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "How old are you?",
+      "redirect": "psychic_generic_age",
+      "time_left": 20,
+      "timestamp": "2025-10-01T11:00:10.483000",
+      "time_to_decide": 1.535,
+      "time_since_last": 3.051
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "What do you think of this weather?",
+        "Tell me more about yourself.",
+        "What do you think of this place?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel",
+      "time_left": 10,
+      "timestamp": "2025-10-01T11:00:15.641000",
+      "time_to_decide": 1.927,
+      "time_since_last": 5.158
+    },
+    {
+      "menu": "lad_introduction",
+      "other_choices": [
+        "Talk to Samuel Manning",
+        "Stand awkwardly in the corner"
+      ],
+      "selected": "Stand awkwardly in the corner",
+      "redirect": "generic_cancel",
+      "time_left": 10,
+      "timestamp": "2025-10-01T11:00:19.003000",
+      "time_to_decide": 1.002,
+      "time_since_last": 3.362
+    }
+  ]
+}
