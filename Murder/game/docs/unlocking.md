@@ -9,9 +9,11 @@ graph TD;
     doctor -->|Boxers Rebellion| nurse;
     doctor -->|Letter and not drunk| drunk;
     doctor -->|Unmask| broken;
+    doctor -->|Is a thief| lad;
     nurse -->|Not a fighter| captain;
     nurse -->|Wife Story| drunk;
     captain -->|is not nobility| host;
     drunk -->|full confession| host;
     broken -->|TODO| drunk;
+    host -->|Final info| lad;
 ```

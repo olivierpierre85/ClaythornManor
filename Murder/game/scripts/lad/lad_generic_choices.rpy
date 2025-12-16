@@ -239,39 +239,51 @@ label lad_generic_background_doctor_thief:
     """
 
     doctor """
-    I am, and because of that I sometimes have access to certain products in large quantities.
+    I am.
 
-    Perhaps you can help me with it.
+    And because of that, I sometimes have access to certain products in large quantities.
+
+    Perhaps you could assist me with a small matter.
     """
 
     lad """
-    That depends; could you tell me more?
+    That depends.
+
+    Care to tell me a bit more?
     """
 
     doctor """
-    Not here. It is rather sensitive.
+    Not here.
 
-    It is not for everyone to hear, if you see what I mean?
+    It is rather sensitive.
+
+    Not something meant for every ear, if you take my meaning.
     """
 
     lad """
-    Understood. I can be discreet when necessary.
+    Fair enough.
+
+    I can keep my mouth shut when I need to.
     """
 
     doctor """
-    Perfect, we will talk later.
+    Excellent.
+
+    We shall speak again later.
     """
 
     """
-    I knew it.
+    Interesting.
+
+    He is clearly willing to take part in something rather unorthodox.
+
+    And it is equally clear he has done this sort of thing before.
     """
     
     $ lad_details.description_hidden.unlock('thief') 
 
-    #TODO: ADD for doctor choice to sell stuff to lad????? what 
-    # If you go to his room
-
     return
+
 
 
 label lad_generic_heroic_act_1:
