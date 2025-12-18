@@ -1,2 +1,2 @@
-label __test_chapter_end:
+label test_chapter_end:
     return

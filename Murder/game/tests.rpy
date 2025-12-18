@@ -11,7 +11,7 @@ testsuite global:
 
     testsuite lad_friday_evening:
 
-        testcase lad_day1_evening_pathA:
+        testcase lad_day1_afternoon_pathA:
 
             python:
                 test.autorunner.reset()
@@ -27,10 +27,10 @@ testsuite global:
                 # If your story uses these globals, set them as needed:
                 store.current_character = lad_details
 
-            run Jump("lad_day1_evening")
+            run Jump("lad_introduction")
 
             # Runs until your change_time detects the next chapter and jumps to __test_chapter_end
-            skip fast until label __test_chapter_end timeout 180.0
+            skip fast until label test_chapter_end timeout 180.0
 
             python:
                 test.autorunner.assert_consumed()
