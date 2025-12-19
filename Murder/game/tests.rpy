@@ -27,6 +27,8 @@ testsuite global:
                 # If your story uses these globals, set them as needed:
                 store.current_character = lad_details
 
+                t.autorunner.target_chapter = "friday_afternoon"
+
             run Jump("lad_introduction")
 
             # Runs until your change_time detects the next chapter and jumps to __test_chapter_end

@@ -42,12 +42,23 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
             if renpy.is_in_test():
                 t = getattr(renpy.store, "test", None)
                 if t and getattr(t, "autorunner", None) and t.autorunner.active:
-                    if t.autorunner.start_chapter is None:
-                        t.autorunner.start_chapter = chapter
-                    elif chapter != t.autorunner.start_chapter:
-                        t.autorunner.reached_new_chapter = chapter
-                        renpy.jump("test_chapter_end")
 
+                    ar = t.autorunner
+
+                    renpy.jump("test_chapter_end")
+                    # # Preferred: stop when leaving the chapter the testcase is targeting
+                    # if ar.target_chapter is not None:
+                    #     if chapter != ar.target_chapter:
+                    #         ar.reached_new_chapter = chapter
+                    #         renpy.jump("test_chapter_end")
+
+                    # # Fallback: old behavior (works only if first chapter sets chapter=)
+                    # else:
+                    #     if ar.start_chapter is None:
+                    #         ar.start_chapter = chapter
+                    #     elif chapter != ar.start_chapter:
+                    #         ar.reached_new_chapter = chapter
+                    #         renpy.jump("test_chapter_end")
 
 
 

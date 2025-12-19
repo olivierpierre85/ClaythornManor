@@ -18,6 +18,7 @@ init python in test:
             self.active = False
             self.steps = []
             self.i = 0
+            self.target_chapter = None
             self.start_chapter = None
             self.reached_new_chapter = None
 
