@@ -39,15 +39,12 @@ label lad_day3_afternoon:
 
     call common_day3_afternoon_lad_psychic_captain_discussion_2
     
-    $ lad_day3_escape_menu = TimedMenu("lad_day3_escape_menu", [
+    $ time_left = 1
+    call run_menu( TimedMenu("lad_day3_escape_menu", [
         TimedMenuChoice('Propose to use the old car from the garage {{observation}}', 'lad_day3_leave_with_car', condition="lad_details.threads.is_unlocked('seen_car')"),
         TimedMenuChoice('Stay here with Amelia Baxter', 'lad_day3_stay', next_menu='lad_day3_stay', early_exit=True),
         TimedMenuChoice('Follow Sushil Sinha. Amelia Baxter will {i}probably{/i} be fine on her own', 'lad_day3_escape', early_exit=True)
-    ], image_left="psychic",  image_right="captain")
-
-    $ time_left = 1
-
-    call run_menu(lad_day3_escape_menu)
+    ], image_left="psychic",  image_right="captain"))
 
     # TODO: Handle possible endings, add more logic for ending names
     if lad_details.saved_variables["day3_ending"] == "gunned_down":
