@@ -1,2 +1,2 @@
 label test_chapter_end:
-    return
+    $ renpy.pause(hard=True)
