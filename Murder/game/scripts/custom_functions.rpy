@@ -29,8 +29,28 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
             current_day =  day
 
         if chapter:
-            if export_transcript_activated:
+            if getattr(store, "export_transcript_activated", False):
                 export_transcript(False)
+
+            if renpy.is_in_test():
+                t = getattr(renpy.store, "test", None)
+                if t and getattr(t, "autorunner", None) and t.autorunner.active:
+
+                    ar = t.autorunner
+
+                    # Preferred: stop when leaving the chapter the testcase is targeting
+                    if ar.target_chapter is not None:
+                        if chapter != ar.target_chapter:
+                            ar.reached_new_chapter = chapter
+                            renpy.jump("test_chapter_end")
+
+                    # Fallback: old behavior (works only if first chapter sets chapter=)
+                    else:
+                        if ar.start_chapter is None:
+                            ar.start_chapter = chapter
+                        elif chapter != ar.start_chapter:
+                            ar.reached_new_chapter = chapter
+                            renpy.jump("test_chapter_end")
                 
             # --- Add a visible "Chapter:" line to the Ren'Py log/history ---
             chapter_text = chapters_names[chapter]
@@ -38,6 +58,8 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
             _history_list.append(ChoiceHistory("Character", current_character.real_name))
 
             current_chapter = chapter
+
+
 
         # Compute for clock rotation
         current_hour = current_time.hour
@@ -390,3 +412,24 @@ label work_in_progress:
     hide screen centered_text
 
     jump character_selection
+
+
+label setup_test_lad_friday:
+    python:
+        store.export_transcript_activated = True
+        store.current_character = lad_details
+        
+        # Access the 'test' store via the main store
+        t = getattr(store, "test", None)
+        if t:
+            t.autorunner.reset()
+            t.autorunner.load_plan_file("choices_anon_2025-10-01_11-00-29.json")
+            
+            # Manual previous-chapter threads
+            t.unlock_threads(lad_details, ["whisky"])
+            
+            t.autorunner.target_chapter = "friday_afternoon"
+        else:
+            print("ERROR: 'test' store not found in setup_test_lad_friday")
+
+    return
