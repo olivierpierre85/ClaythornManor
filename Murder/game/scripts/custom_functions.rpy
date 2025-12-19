@@ -41,24 +41,30 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
 
             if renpy.is_in_test():
                 t = getattr(renpy.store, "test", None)
+                print(f"DEBUG: change_time called. Chapter={chapter}, is_in_test={renpy.is_in_test()}, t={t}")
+                if t:
+                    print(f"DEBUG: autorunner active={getattr(t.autorunner, 'active', 'N/A')}, target={getattr(t.autorunner, 'target_chapter', '??')}")
+                
                 if t and getattr(t, "autorunner", None) and t.autorunner.active:
 
                     ar = t.autorunner
 
-                    renpy.jump("test_chapter_end")
-                    # # Preferred: stop when leaving the chapter the testcase is targeting
-                    # if ar.target_chapter is not None:
-                    #     if chapter != ar.target_chapter:
-                    #         ar.reached_new_chapter = chapter
-                    #         renpy.jump("test_chapter_end")
+                    # Preferred: stop when leaving the chapter the testcase is targeting
+                    if ar.target_chapter is not None:
+                        if chapter != ar.target_chapter:
+                            print(f"DEBUG: Stopping test! {chapter} != {ar.target_chapter}")
+                            ar.reached_new_chapter = chapter
+                            renpy.jump("test_chapter_end")
+                        else:
+                            print(f"DEBUG: Not stopping. {chapter} == {ar.target_chapter}")
 
-                    # # Fallback: old behavior (works only if first chapter sets chapter=)
-                    # else:
-                    #     if ar.start_chapter is None:
-                    #         ar.start_chapter = chapter
-                    #     elif chapter != ar.start_chapter:
-                    #         ar.reached_new_chapter = chapter
-                    #         renpy.jump("test_chapter_end")
+                    # Fallback: old behavior (works only if first chapter sets chapter=)
+                    else:
+                        if ar.start_chapter is None:
+                            ar.start_chapter = chapter
+                        elif chapter != ar.start_chapter:
+                            ar.reached_new_chapter = chapter
+                            renpy.jump("test_chapter_end")
 
 
 

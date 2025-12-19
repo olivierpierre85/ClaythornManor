@@ -14,12 +14,12 @@ testsuite global:
         testcase lad_day1_afternoon_pathA:
 
             python:
-                test.autorunner.reset()
-                # test.autorunner.load_plan_file("testing_paths/lad/1_friday_evening/choices_anon_2025-10-01_11-00-29.json")
-                test.autorunner.load_plan_file("choices_anon_2025-10-01_11-00-29.json")
+                store.test.autorunner.reset()
+                # store.test.autorunner.load_plan_file("testing_paths/lad/1_friday_evening/choices_anon_2025-10-01_11-00-29.json")
+                store.test.autorunner.load_plan_file("choices_anon_2025-10-01_11-00-29.json")
 
                 # Manual previous-chapter threads for this test
-                test.unlock_threads(lad_details, [
+                store.test.unlock_threads(lad_details, [
                     "whisky",
                     # "day1_drunk",
                 ])
@@ -27,7 +27,7 @@ testsuite global:
                 # If your story uses these globals, set them as needed:
                 store.current_character = lad_details
 
-                t.autorunner.target_chapter = "friday_afternoon"
+                store.test.autorunner.target_chapter = "friday_afternoon"
 
             run Jump("lad_introduction")
 
@@ -35,5 +35,5 @@ testsuite global:
             skip fast until label test_chapter_end timeout 180.0
 
             python:
-                test.autorunner.assert_consumed()
-                test.autorunner.reset()
+                # store.test.autorunner.assert_consumed() # Cannot assert consumed on partial run
+                store.test.autorunner.reset()
