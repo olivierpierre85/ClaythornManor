@@ -42,7 +42,7 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
                     if ar.target_chapter is not None:
                         if chapter != ar.target_chapter:
                             ar.reached_new_chapter = chapter
-                            renpy.jump("test_chapter_end")
+                            renpy.jump("test_chapter_end_2")
 
                     # Fallback: old behavior (works only if first chapter sets chapter=)
                     else:
@@ -50,7 +50,7 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
                             ar.start_chapter = chapter
                         elif chapter != ar.start_chapter:
                             ar.reached_new_chapter = chapter
-                            renpy.jump("test_chapter_end")
+                            renpy.jump("test_chapter_end_2")
                 
             # --- Add a visible "Chapter:" line to the Ren'Py log/history ---
             chapter_text = chapters_names[chapter]
