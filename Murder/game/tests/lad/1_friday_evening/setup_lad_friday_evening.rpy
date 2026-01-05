@@ -2,7 +2,7 @@ label setup_lad_friday_evening_1:
     python:
         store.current_character = lad_details
         store.current_chapter = "friday_evening"
-        # disable_all_tutorials()
+        disable_all_tutorials()
         
         # Access the 'test' store via the main store
         t = getattr(store, "test", None)
