@@ -31,8 +31,6 @@ label lad_day3_morning:
 
     $ change_room('bedroom_lad', irisout)
 
-
-
     play sound door_knock
 
     """

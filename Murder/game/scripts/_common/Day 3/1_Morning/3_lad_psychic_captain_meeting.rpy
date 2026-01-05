@@ -7,7 +7,7 @@ label common_day3_morning_meeting_captain:
     """
 
     psychic """
-    We feel the same. You're the first person we've encountered today as well.
+    We feel the same. You two are the first persons we've encountered today as well.
     """
 
     lad """
@@ -31,15 +31,19 @@ label common_day3_morning_meeting_captain:
     """
 
     if current_character.text_id == "lad":
+
         """
         The conversation lingers in the air, a heavy silence stretching between us.
         """
+
     else:
+        
         """
         There is an awkward silence.
         """
 
     return
+
 
 label common_day3_morning_lad_psychic_tea_room_2:
     

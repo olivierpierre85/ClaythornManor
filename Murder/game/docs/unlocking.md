@@ -7,6 +7,7 @@ graph TD;
     psychic -->|Thief| nurse;
     psychic -->|TODO| broken;
     doctor -->|Boxers Rebellion| nurse;
+    doctor -->|Boxers Rebellion| captain;
     doctor -->|Letter and not drunk| drunk;
     doctor -->|Unmask| broken;
     doctor -->|Is a thief| lad;
