@@ -8,12 +8,15 @@ label common_day3_morning_lad_psychic_journey:
     """
 
     if current_character.text_id == "lad":
+
         """
         I quickly get dressed and open the door.
 
         Amelia Baxter enters, looking visibly nervous.
         """
+
     else:
+        
         """
         Finally, I was getting worried.
 

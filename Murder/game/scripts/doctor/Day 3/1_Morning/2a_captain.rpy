@@ -141,12 +141,39 @@ label doctor_day3_morning_captain:
     """
     We search the manor methodically for some time.
 
-    Room after room yields nothing.
+    Room after room yields nothing and We were starting to lose hope.
 
-    Just as we begin to lose hope, a sound echoes through the entrance hall.
+    But as we were going down the stairs to the entrance hall, we heard a faint discussion coming.
     """
 
-    # TODO other version of copy of previous story ? Maybe a new one is better
-    # call common_day3_morning_lad_psychic_tea_room_1
+    captain """
+    Is anyone here?
+    """
+
+    lad """
+    Captain Sinha, is that you?
+    """
+
+    """
+    We look down and spot Ted Harring and Amelia Baxter.
+    """
+
+    captain """
+    At last, living, breathing souls.
+
+    We were starting to feel like we were in a ghost house.
+    """
+
+    psychic """
+    We feel the same. You're the first person we've encountered today as well.
+    """
+
+    #Discussion, about where to go next, conclusion that we have seen every room but Miss Marsh
+
+    # THey all go together, as there are no reason to suspect foul play. 
+    # BUT the captain doesn't have a key now so they 
+
+
+    # He leaves and is free? USE the car if you see the key in ANDREW's ROOM ?
 
     return

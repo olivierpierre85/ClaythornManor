@@ -6,17 +6,9 @@ label common_day3_morning_meeting_captain:
     I was starting to feel like I was in a ghost house.
     """
 
-    if current_character.text_id == "doctor":
-
-        psychic """
-        We feel the same. You're the first person we've encountered today as well.
-        """
-
-    else:
-
-        psychic """
-        We feel the same. You two are the first persons we've encountered today as well.
-        """
+    psychic """
+    We feel the same. You two are the first persons we've encountered today as well.
+    """
 
     lad """
     Do you have any idea what's going on?
@@ -39,10 +31,13 @@ label common_day3_morning_meeting_captain:
     """
 
     if current_character.text_id == "lad":
+
         """
         The conversation lingers in the air, a heavy silence stretching between us.
         """
+
     else:
+        
         """
         There is an awkward silence.
         """
