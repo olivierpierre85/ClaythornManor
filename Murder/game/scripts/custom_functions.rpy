@@ -29,8 +29,8 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
             current_day =  day
 
         if chapter:
-            if getattr(store, "export_transcript_activated", False):
-                export_transcript(False)
+            # if getattr(store, "export_transcript_activated", False):
+            #     export_transcript(False)
 
             if renpy.is_in_test():
                 t = getattr(renpy.store, "test", None)
@@ -58,8 +58,6 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
             _history_list.append(ChoiceHistory("Character", current_character.real_name))
 
             current_chapter = chapter
-
-
 
         # Compute for clock rotation
         current_hour = current_time.hour

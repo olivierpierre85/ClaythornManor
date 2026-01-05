@@ -5,8 +5,11 @@ testsuite lad_1_friday_evening_1:
         run Call("setup_lad_friday_evening_1")
         run Jump("lad_day1_evening")
         
-        skip fast until label test_chapter_end timeout 180.0
+        # skip fast until label test_chapter_end timeout 180.0
+        skip until label test_chapter_end timeout 180.0
+        # advance until menu choice
 
         python:
-            store.test.autorunner.reset()
+            # test_teardown()
+            export_transcript(False)
             pass
