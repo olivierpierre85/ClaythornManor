@@ -251,7 +251,7 @@ init python:
     def export_transcript(full=True, chapter_marker="Chapter:"):
         # """
         # Saves transcript to:
-        #   <project>/testing_paths/<current_character.text_id>/<current_chapter>/<text_id>__<chapter>__YYYYMMDD_HHMMSS.txt
+        #   <project>/testing_results/<current_character.text_id>/<current_chapter>/<text_id>__<chapter>__YYYYMMDD_HHMMSS.txt
 
         # Uses global vars:
         #   - current_character (must have .text_id)
@@ -267,7 +267,7 @@ init python:
             numbered_chapter = f"{chapter_index}_{_sanitize(renpy.store.current_chapter)}" if chapter_index >= 0 else _sanitize(renpy.store.current_chapter)
 
             base_dir = renpy.config.basedir  # project root (same level as /game)
-            out_dir  = os.path.join(base_dir, "testing_paths", text_id, numbered_chapter)
+            out_dir  = os.path.join(base_dir, "testing_results", text_id, numbered_chapter)
             os.makedirs(out_dir, exist_ok=True)
 
             lines = _transcript_lines()
