@@ -8,10 +8,10 @@ label setup_lad_friday_evening_1:
         t = getattr(store, "test", None)
         if t:
             t.autorunner.reset()
-            t.autorunner.load_plan_file("choices_anon_2025-10-01_11-00-29.json")
+            t.autorunner.load_plan_file("tests/lad/1_friday_evening/setup_lad_friday_evening_1.json")
             
             # Manual previous-chapter threads
-            t.unlock_threads(lad_details, ["whisky"])
+            # t.unlock_threads(lad_details, ["whisky"]) TO TEST DEATH by whisky
             
             t.autorunner.target_chapter = "friday_evening"
         else:
