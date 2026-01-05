@@ -412,24 +412,3 @@ label work_in_progress:
     hide screen centered_text
 
     jump character_selection
-
-
-label setup_test_lad_friday:
-    python:
-        store.export_transcript_activated = True
-        store.current_character = lad_details
-        
-        # Access the 'test' store via the main store
-        t = getattr(store, "test", None)
-        if t:
-            t.autorunner.reset()
-            t.autorunner.load_plan_file("choices_anon_2025-10-01_11-00-29.json")
-            
-            # Manual previous-chapter threads
-            t.unlock_threads(lad_details, ["whisky"])
-            
-            t.autorunner.target_chapter = "friday_afternoon"
-        else:
-            print("ERROR: 'test' store not found in setup_test_lad_friday")
-
-    return
