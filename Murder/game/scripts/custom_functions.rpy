@@ -9,6 +9,13 @@ transform character_talking_right:
 
 # TODO put in python function for consistency
 label change_time(hours, minutes, phase = None, day = None, hide_minutes = False, chapter = None):
+
+    $ print("chapter?")
+    $ print(chapter)
+    if renpy.is_in_test() and chapter != "friday_afternoon":
+        $ print("YEAHHHHHHHHHHHHHHH")
+        show screen test_end
+
     python:
         if skip_clock_movement:
             show_minutes_movement = 0
