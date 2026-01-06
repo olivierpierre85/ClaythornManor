@@ -10,12 +10,6 @@ transform character_talking_right:
 # TODO put in python function for consistency
 label change_time(hours, minutes, phase = None, day = None, hide_minutes = False, chapter = None):
 
-    $ print("chapter?")
-    $ print(chapter)
-    if renpy.is_in_test() and chapter != "friday_afternoon":
-        $ print("YEAHHHHHHHHHHHHHHH")
-        show screen test_end
-
     python:
         if skip_clock_movement:
             show_minutes_movement = 0
@@ -36,8 +30,6 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
             current_day =  day
 
         if chapter:
-            # if getattr(store, "export_transcript_activated", False):
-            #     export_transcript(False)
 
             if renpy.is_in_test():
                 t = getattr(renpy.store, "test", None)
@@ -49,7 +41,8 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
                     if ar.target_chapter is not None:
                         if chapter != ar.target_chapter:
                             ar.reached_new_chapter = chapter
-                            renpy.jump("test_chapter_end_2")
+                            export_transcript(False)
+                            renpy.show_screen("test_end")
 
                     # Fallback: old behavior (works only if first chapter sets chapter=)
                     else:
@@ -57,7 +50,8 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
                             ar.start_chapter = chapter
                         elif chapter != ar.start_chapter:
                             ar.reached_new_chapter = chapter
-                            renpy.jump("test_chapter_end_2")
+                            export_transcript(False)
+                            renpy.show_screen("test_end")
                 
             # --- Add a visible "Chapter:" line to the Ren'Py log/history ---
             chapter_text = chapters_names[chapter]

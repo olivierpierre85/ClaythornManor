@@ -18,5 +18,5 @@ testsuite lad_0_friday_afternoon:
         
 
         python:
-            export_transcript(False)
+            # export_transcript(False)
             store.test.autorunner.reset()
