@@ -1,17 +1,21 @@
-# testsuite lad_1_friday_evening_1:
+testsuite lad_friday_evening:
 
-#     testcase lad_friday_evening:
+    testcase lad_friday_evening_1:
         
-#         run Call("setup_lad_friday_evening_1")
-#         run Jump("lad_day1_evening")
+        run Call("setup_lad_friday_evening_1")
+        run Jump("lad_day1_evening")
+
+        advance until screen "test_end"  timeout 180.0
+
+        python:
+            store.test.autorunner.reset()
+
+    testcase lad_friday_evening_2:
         
-#         # skip fast until label test_chapter_end timeout 180.0
-#         # skip until label test_chapter_end 
+        run Call("setup_lad_friday_evening_1")
+        run Jump("lad_day1_evening")
 
-#         skip until label lad_day2_morning timeout 180.0
-#         # advance until menu choice
+        advance until screen "test_end"  timeout 180.0
 
-#         python:
-#             # test_teardown()
-#             export_transcript(False)
-#             pass
+        python:
+            store.test.autorunner.reset()

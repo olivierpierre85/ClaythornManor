@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ren'Py: Run game (task)",
+      "type": "python",
+      "request": "launch",
+      "program": "C:\\Windows\\System32\\cmd.exe",
+      "args": ["/c", "echo Ren'Py launched via task"],
+      "preLaunchTask": "Ren'Py: Run game",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Ren'Py: Test Lad Friday Evenig",
+      "type": "python",
+      "request": "launch",
+      "program": "C:\\Windows\\System32\\cmd.exe",
+      "args": ["/c", "echo Ren'Py launched via task"],
+      "preLaunchTask": "Ren'Py: Run testcase lad_friday_evening",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

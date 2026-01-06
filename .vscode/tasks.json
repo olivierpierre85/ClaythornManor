@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "renpyTestSpec",
+      "type": "pickString",
+      "description": "Pick a Ren'Py test (suite or suite :: testcase)",
+      "options": [
+        "lad_friday_afternoon",
+        "lad_friday_afternoon::lad_friday_afternoon_1",
+        "lad_friday_evening",
+        "lad_friday_evening::lad_friday_evening_1",
+        "lad_friday_evening::lad_friday_evening_2",
+      ],
+      "default": "lad_friday_evening::lad_friday_evening_1"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "Ren'Py: Test (pick from list)",
+      "type": "process",
+      "command": "C:\\Program Files\\renpy-8.4.1-sdk\\lib\\py3-windows-x86_64\\python.exe",
+      "args": [
+        "C:\\Program Files\\renpy-8.4.1-sdk\\renpy.py",
+        "C:\\Projects\\ClaythornManor\\Murder",
+        "test",
+        "${input:renpyTestSpec}",
+        "--report-detailed",
+        "--report-skipped"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    }
+  ]
+}
