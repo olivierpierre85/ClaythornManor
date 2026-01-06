@@ -12,12 +12,12 @@
       "console": "integratedTerminal"
     },
     {
-      "name": "Ren'Py: Test Lad Friday Evenig",
+      "name": "Ren'Py: Test (pick from list)",
       "type": "python",
       "request": "launch",
       "program": "C:\\Windows\\System32\\cmd.exe",
       "args": ["/c", "echo Ren'Py launched via task"],
-      "preLaunchTask": "Ren'Py: Run testcase lad_friday_evening",
+      "preLaunchTask": "Ren'Py: Test (pick from list)",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
     }
