@@ -2,22 +2,6 @@ label doctor_day3_morning_captain:
 
     $ change_room('bedroom_captain', irisout)
 
-    # Wake up in Captain's room. You follow him exploring but find NOTHING, until you find LAD and psychic => YOU leave with captain !!!!!!
-
-    # """
-    # Captain path? Following him, discuss suspects, leave as soon as possible.
-
-    # Meet the others PSYCHIC + LAD =>
-
-    # Copy paste other dialogs until choice to GET out or STAY?
-
-    #     IF STAY, the nurse doesn't show up, you die poisoned anyway?
-
-    #     IF leave you ESCAPE???????
-
-    # ALSO learn about the Boxer's rebellion !! Help for possible unlocking!!!! => Notice that the nurse was unstable back then? Maybe too suspicious
-    # """
-
     captain """
     Doctor Baldwin.
 
@@ -141,9 +125,9 @@ label doctor_day3_morning_captain:
     """
     We search the manor methodically for some time.
 
-    Room after room yields nothing and We were starting to lose hope.
+    Room after room yields nothing, and we begin to lose hope.
 
-    But as we were going down the stairs to the entrance hall, we heard a faint discussion coming.
+    Then, as we descend the stairs to the entrance hall, we hear the faint sound of voices below.
     """
 
     captain """
@@ -161,19 +145,138 @@ label doctor_day3_morning_captain:
     captain """
     At last, living, breathing souls.
 
-    We were starting to feel like we were in a ghost house.
+    We were beginning to feel as though we were wandering a ghost house.
     """
 
     psychic """
-    We feel the same. You're the first person we've encountered today as well.
+    We feel the same.
+
+    You are the first people we have encountered all morning.
+
+    I cannot understand where everyone else could have gone.
     """
 
-    #Discussion, about where to go next, conclusion that we have seen every room but Miss Marsh
+    captain """
+    Nor can we.
+    """
 
-    # THey all go together, as there are no reason to suspect foul play. 
-    # BUT the captain doesn't have a key now so they 
+    doctor """
+    There is one place we have not checked.
 
+    Miss Marsh's room.
+    """
 
-    # He leaves and is free? USE the car if you see the key in ANDREW's ROOM ?
+    psychic """
+    I knocked earlier.
 
-    return
+    There was no answer.
+
+    I tried to enter, but it was locked.
+    """
+
+    captain """
+    Yes, we received no answer as well.
+
+    I think it is time we check anyway.
+    """
+
+    call change_time(11, 40)
+
+    $ change_room('hallway', dissolve)
+
+    """
+    We all stand in front of Miss Marsh's room.
+
+    Captain Sinha tests the handle.
+    """
+
+    play sound door_locked
+
+    captain """
+    Locked.
+    """
+
+    captain """
+    Miss Marsh?
+
+    Are you inside?
+    """
+
+    """
+    There is no reply.
+    """
+
+    captain """
+    Doctor, Mister Harring,
+
+    I believe if the three of us shove together, the door will give way.
+    """
+
+    psychic """
+    Are you sure it is wise to do this?
+    """
+
+    captain """
+    I am afraid that under the circumstances, we have no other choice.
+    """
+
+    psychic """
+    Very well.
+    """
+
+    captain """
+    Lads, on my command.
+
+    One.
+
+    Two.
+
+    Three.
+    """
+
+    play sound door_shut
+
+    """
+    The lock gives way and the door swings open.
+
+    We all enter the room.
+    """
+
+    $ change_room('bedroom_nurse')
+
+    captain """
+    There is nobody here.
+    """
+
+    lad """
+    So she just vanished?
+
+    Along with half the house?
+    """
+
+    captain """
+    It would appear so.
+    """
+
+    """
+    A heavy silence settles over us.
+    """
+
+    captain """
+    I do not understand what is happening.
+
+    We need to discuss this.
+    """
+
+    psychic """
+    Of course.
+
+    Perhaps we should settle somewhere more comfortable, like the tea room?
+    """
+
+    captain """
+    A good idea.
+    """
+
+    jump doctor_day3_afternoon
+
