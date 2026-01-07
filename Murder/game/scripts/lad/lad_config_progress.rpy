@@ -64,15 +64,32 @@ label lad_config_progress:
         ]
 
     # Define Checkpoints for TEST
-    # For each checkpoint we need to identify all the meaningful choice possibilities, that means
-    # all the variables changes that will impact future actions... Each meaningful choice must have an image
-        lad_test_checkpoints ={
-            'friday_afternoon': "lad_introduction",
-            'friday_evening': "lad_day1_evening",
-            'saturday_morning': "lad_day2_morning",
-            'saturday_afternoon': "lad_day2_hunt",
-            'saturday_afternoon_no_hunt': "lad_day2_no_hunt",
-            'saturday_evening': "lad_day2_evening",
-            'sunday_morning': "lad_day3_morning",
-            'sunday_afternoon': "lad_day3_afternoon",
+    # Each chapter maps to a list of checkpoint configurations
+    # Each config has: label (Ren'Py label) and threads (dict of thread_id: True/False)
+        lad_test_checkpoints = {
+            'friday_afternoon': [
+                {"label": "lad_introduction", "threads": {}},
+            ],
+            'friday_evening': [
+                {"label": "lad_day1_evening", "threads": {'whisky': False, 'day1_drunk': False}},
+                {"label": "lad_day1_evening", "threads": {'whisky': True, 'day1_drunk': False}},
+            ],
+            'saturday_morning': [
+                {"label": "lad_day2_morning", "threads": {}},
+            ],
+            'saturday_afternoon': [
+                {"label": "lad_day2_hunt", "threads": {'hunt': True}},
+            ],
+            'saturday_afternoon_no_hunt': [
+                {"label": "lad_day2_no_hunt", "threads": {'hunt': False}},
+            ],
+            'saturday_evening': [
+                {"label": "lad_day2_evening", "threads": {}},
+            ],
+            'sunday_morning': [
+                {"label": "lad_day3_morning", "threads": {}},
+            ],
+            'sunday_afternoon': [
+                {"label": "lad_day3_afternoon", "threads": {}},
+            ],
         }

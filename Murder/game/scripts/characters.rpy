@@ -638,6 +638,40 @@ init -100 python:
         
 
         
+        # Function used to manually load checkpoints based on configuration
+        def load_manual_checkpoints(self) -> None:
+            """
+            Build checkpoints from the list-based test_checkpoints configuration.
+            Each chapter key maps to a list of checkpoint configs with 'label' and 'threads'.
+            """
+            global current_run
+            current_run = 0
+
+            # Iterate through each chapter in test_checkpoints
+            for chapter_name, checkpoint_configs in self.test_checkpoints.items():
+                # Each chapter can have multiple checkpoint configurations
+                for config in checkpoint_configs:
+                    current_run += 1
+                    self.reset_information()
+
+                    label_id = config.get("label", chapter_name)
+                    threads = config.get("threads", {})
+
+                    # Unlock items based on threads configuration
+                    for thread_id, is_active in threads.items():
+                        if is_active:
+                            # Try to unlock in all lists (choice, object, observation)
+                            self.important_choices.unlock(thread_id, is_restart=True)
+                            self.objects.unlock(thread_id, is_restart=True)
+                            self.observations.unlock(thread_id, is_restart=True)
+
+                    self.add_checkpoint(label_id)
+
+                    # Mark unlocked items as discovered
+                    for choice in self.get_choices_and_discoveries():
+                        if not choice.locked:
+                            choice.discovered = True
+
         # Function used ONLY for debug purposes
         def load_test_checkpoints(self) -> None:
             """

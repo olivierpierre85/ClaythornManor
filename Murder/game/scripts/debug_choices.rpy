@@ -36,7 +36,7 @@ label init_debug:
     $ current_character = lad_details
     $ current_storyline = lad_details # TODO move
     call unlock_lad
-    $ lad_details.load_test_checkpoints()
+    $ lad_details.load_manual_checkpoints()
     
     $ current_character = doctor_details
     $ current_storyline = doctor_details
