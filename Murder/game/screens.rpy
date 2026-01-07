@@ -353,8 +353,8 @@ screen navigation(tag="menu"):
             textbutton _("Quit"):
                 if not tutorial_on:
                     # TODO: put back the save when testing demo !!
-                    action [QuickSave(), Function(export_choices_to_file, all_choices), Show("confirmbutton")]
-                    # action [QuickSave(), Show("confirmbutton")]
+                    # action [QuickSave(), Function(export_choices_to_file, all_choices), Show("confirmbutton")]
+                    action [QuickSave(), Show("confirmbutton")]
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 

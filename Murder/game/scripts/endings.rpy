@@ -1,5 +1,9 @@
 label ending_generic:
 
+    # For tests
+    if renpy.is_in_test():
+        call test_chapter_end
+
     $ stop_music(2)
 
     if not is_death and first_survive:

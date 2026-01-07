@@ -9,6 +9,7 @@ transform character_talking_right:
 
 # TODO put in python function for consistency
 label change_time(hours, minutes, phase = None, day = None, hide_minutes = False, chapter = None):
+
     python:
         if skip_clock_movement:
             show_minutes_movement = 0
@@ -29,8 +30,28 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
             current_day =  day
 
         if chapter:
-            if export_transcript_activated:
-                export_transcript(False)
+
+            if renpy.is_in_test():
+                t = getattr(renpy.store, "test", None)
+                if t and getattr(t, "autorunner", None) and t.autorunner.active:
+
+                    ar = t.autorunner
+
+                    # Preferred: stop when leaving the chapter the testcase is targeting
+                    if ar.target_chapter is not None:
+                        if chapter != ar.target_chapter:
+                            ar.reached_new_chapter = chapter
+                            export_transcript(False)
+                            renpy.show_screen("test_end")
+
+                    # Fallback: old behavior (works only if first chapter sets chapter=)
+                    else:
+                        if ar.start_chapter is None:
+                            ar.start_chapter = chapter
+                        elif chapter != ar.start_chapter:
+                            ar.reached_new_chapter = chapter
+                            export_transcript(False)
+                            renpy.show_screen("test_end")
                 
             # --- Add a visible "Chapter:" line to the Ren'Py log/history ---
             chapter_text = chapters_names[chapter]
@@ -229,7 +250,7 @@ init python:
     def export_transcript(full=True, chapter_marker="Chapter:"):
         # """
         # Saves transcript to:
-        #   <project>/testing_paths/<current_character.text_id>/<current_chapter>/<text_id>__<chapter>__YYYYMMDD_HHMMSS.txt
+        #   <project>/testing_results/<current_character.text_id>/<current_chapter>/<text_id>__<chapter>__YYYYMMDD_HHMMSS.txt
 
         # Uses global vars:
         #   - current_character (must have .text_id)
@@ -245,7 +266,7 @@ init python:
             numbered_chapter = f"{chapter_index}_{_sanitize(renpy.store.current_chapter)}" if chapter_index >= 0 else _sanitize(renpy.store.current_chapter)
 
             base_dir = renpy.config.basedir  # project root (same level as /game)
-            out_dir  = os.path.join(base_dir, "testing_paths", text_id, numbered_chapter)
+            out_dir  = os.path.join(base_dir, "testing_results", text_id, numbered_chapter)
             os.makedirs(out_dir, exist_ok=True)
 
             lines = _transcript_lines()

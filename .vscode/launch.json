@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ren'Py: Run game (task)",
+      "type": "python",
+      "request": "launch",
+      "program": "C:\\Windows\\System32\\cmd.exe",
+      "args": ["/c", "echo Ren'Py launched via task"],
+      "preLaunchTask": "Ren'Py: Run game",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Ren'Py: Test (pick from list)",
+      "type": "python",
+      "request": "launch",
+      "program": "C:\\Windows\\System32\\cmd.exe",
+      "args": ["/c", "echo Ren'Py launched via task"],
+      "preLaunchTask": "Ren'Py: Test (pick from list)",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
