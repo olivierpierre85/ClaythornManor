@@ -71,11 +71,15 @@ label lad_config_progress:
                 {"label": "lad_introduction", "threads": {}},
             ],
             'friday_evening': [
-                {"label": "lad_day1_evening", "threads": {'whisky': False, 'day1_drunk': False}},
-                {"label": "lad_day1_evening", "threads": {'whisky': True, 'day1_drunk': False}},
+                {"label": "lad_day1_evening", "threads": {}},
             ],
             'saturday_morning': [
-                {"label": "lad_day2_morning", "threads": {}},
+                {"label": "lad_day2_morning", "threads": {'whisky': False, 'day1_drunk': False, 'downstairs_1': True}},
+                {"label": "lad_day2_morning", "threads": {'whisky': True, 'day1_drunk': True, 'downstairs_1': True}},
+                {"label": "lad_day2_morning", "threads": {'whisky': False, 'day1_drunk': True, 'downstairs_1': True}},
+                {"label": "lad_day2_morning", "threads": {'whisky': False, 'day1_drunk': False, 'downstairs_1': False}},
+                {"label": "lad_day2_morning", "threads": {'whisky': True, 'day1_drunk': True, 'downstairs_1': False}},
+                {"label": "lad_day2_morning", "threads": {'whisky': False, 'day1_drunk': True, 'downstairs_1': False}},
             ],
             'saturday_afternoon': [
                 {"label": "lad_day2_hunt", "threads": {'hunt': True}},
