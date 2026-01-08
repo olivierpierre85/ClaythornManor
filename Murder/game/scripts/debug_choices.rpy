@@ -30,7 +30,7 @@ label init_debug:
     $ current_character = psychic_details
     $ current_storyline = psychic_details
     call unlock_psychic 
-    $ psychic_details.load_test_checkpoints()
+    $ psychic_details.load_manual_checkpoints()
 
     
     $ current_character = lad_details
@@ -41,7 +41,7 @@ label init_debug:
     $ current_character = doctor_details
     $ current_storyline = doctor_details
     call unlock_doctor
-    $ doctor_details.load_test_checkpoints()
+    $ doctor_details.load_manual_checkpoints()
 
     # $ current_character = broken_details
     # $ current_storyline = broken_details
