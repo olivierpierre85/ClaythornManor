@@ -1,10 +1,5 @@
 label doctor_day3_afternoon_captain:
 
-    # TODO say that the only place not visited is Miss Marsh room.
-    # GO there break in, notice there is no one.
-    # So settle to the tea room to discuss the next step.
-
-
     # In the discussion, if uunlocked:
     # TODO  include => Footman is an actor
     # TODO include => nurse is not unknown, => THen captain not either.
@@ -18,6 +13,8 @@ label doctor_day3_afternoon_captain:
     We all seat, each of us deep in thought.
 
     The manor feels hollow now, stripped of its usual life.
+
+    Captain Sinha breaks the silence.
     """
 
     captain """
@@ -30,17 +27,38 @@ label doctor_day3_afternoon_captain:
     But why? 
     """
 
-    captain """
-    Well, we don't have a full explanation, but Doctor Baldwin discovered something two days ago that could help understand.
-
-    Doctor, I believe it's time we share our knowledge. 
-
-    I don't know that we can trust them, but since we the four of us in it together, maybe we should try.
-
-    What do you think?
+    """
+    Captain Sinha leans over me and whisper in my ear
     """
 
-    # TODO Maybe possibility to refuse, because too dangerous. Then what happens?
+    captain """
+    Maybe it's better to tell them everything.
+
+    We might need their help if we want to get out of here intact.
+
+    What do you think doctor?
+    """
+
+    psychic """
+    Excuse me, what are you two whispering about?
+    """
+
+    call run_menu( TimedMenu("doctor_day3_afternoon_captain_choice", [
+        TimedMenuChoice("Share what you know with others", 'doctor_day3_afternoon_captain_share', 0, early_exit=True),
+        TimedMenuChoice("No don't, trust them.", 'doctor_day3_afternoon_captain_do_not_share', 0, early_exit=True),
+        ])
+    )
+
+
+    # call run_menu(TimedMenu("TOD", [
+    #     TimedMenuChoice('Reveal Daniel Baldwin\'s opium addiction{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_doctor', 10, condition="lad_details.threads.is_unlocked('laudanum')"),
+    #     TimedMenuChoice('Point out the strange liquid on Thomas Moody\'s room{{observation}}', 'lad_day2_evening_billiard_room_captain_hypothesis_broken', 10, condition="lad_details.threads.is_unlocked('green_liquid')"),
+    #     TimedMenuChoice('Show the letter found in Samuel\'s Manning room{{object}}', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10, condition="lad_details.threads.is_unlocked('burned_letter')"),
+    #     TimedMenuChoice('Question Samuel Manning\'s state of inebriation at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10),
+    #     # TODO: If you have ALL the suspicions, you can convince the captain something strange is afoot. Need to decide next steps.
+    #     TimedMenuChoice('Accept you don\'t have any real suspicions', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit=True),
+    #     ])
+    # )
 
 
     doctor """

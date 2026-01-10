@@ -129,11 +129,32 @@ label doctor_config_progress:
             #   - trust_captain: chapters=['saturday_evening'], relevant=['saturday_evening', 'sunday_morning', 'sunday_afternoon']
             #   - trust_nurse: chapters=['saturday_evening'], relevant=['saturday_evening', 'sunday_morning', 'sunday_afternoon']
             'sunday_afternoon': [
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': False, 'trust_nurse': False}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True, 'trust_captain': False, 'trust_nurse': False}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True, 'trust_nurse': False}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': False, 'trust_nurse': True}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True, 'trust_captain': True, 'trust_nurse': False}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True, 'trust_captain': False, 'trust_nurse': True}},
+                # =========================================================
+                # Case A: trust_captain = True, trust_nurse = False
+                # remember_nurse can be False/True
+                # =========================================================
+                # broken_unmasked = False
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': True}},
+
+                # broken_unmasked = True
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': True}},
+
+                # =========================================================
+                # Case B: trust_captain = False, trust_nurse = True
+                # remember_nurse forced to True
+                # =========================================================
+                # broken_unmasked = False
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': False, 'trust_nurse': True,  'footman_actor': False, 'remember_nurse': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': False, 'trust_nurse': True,  'footman_actor': True,  'remember_nurse': True}},
+
+                # broken_unmasked = True
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': False, 'trust_nurse': True,  'footman_actor': False, 'remember_nurse': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': False, 'trust_nurse': True,  'footman_actor': True,  'remember_nurse': True}},
             ],
         }

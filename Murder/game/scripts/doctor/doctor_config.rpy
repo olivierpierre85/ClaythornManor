@@ -142,7 +142,7 @@ label init_doctor:
                 content_negative="You didn't remember Rosalind Marsh",
                 image_file="remember_nurse",
                 chapters=['saturday_morning'],
-                relevant_chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'saturday_afternoon'],
             ),
             CharacterInformation(
                 0, "drunk_letter",
@@ -166,7 +166,7 @@ label init_doctor:
                 content_negative="You didn't learn that the footman is actually an actor",
                 image_file="footman_actor",
                 chapters=['saturday_evening'],
-                relevant_chapters=['saturday_evening', 'sunday_morning'],
+                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon'],
             ),
         ])
 
