@@ -125,7 +125,8 @@ label doctor_day3_afternoon_captain_share:
             TimedMenuChoice("Do not tell them anything more", 'generic_cancel', early_exit=True),
         ])
     )
-    # TODO: If you have said all options: Psychic don't let you leave?
+    # TODO: If you have said all options: Psychic don't let you leave? Or she comes with everyone? Or she just kills everyone here?
+    # 
 
     call change_time(13, 00)
 
