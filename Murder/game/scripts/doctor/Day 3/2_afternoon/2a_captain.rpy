@@ -47,8 +47,10 @@ label doctor_day3_afternoon_captain:
         ])
     )
 
+    call change_time(13, 00)
+
     lad """
-    So what now?
+    Right, but what now?
 
     We can't just sit around waiting for answers.
     """
@@ -105,36 +107,54 @@ label doctor_day3_afternoon_captain_share:
     """
 
     """
-    So I tell them about the letter we found in Samuel Manning's room.
+    So I tell them about the letter we found in Samuel Manning's room, and how it lead to our fight, and his death.
+
+    They look at me puzzled at first, taking it in.
+
+    When the implications are clear to them, they look frightened.
     """
 
     psychic """
-    How peculiar.
+    How terrible.
 
-    Who could have done such a thing, and why?
+    But who could be behind this?
+    """
 
-    It is very strange, but it does not explain much.
+    captain """
+    That's what we've been trying to figure out, without success.
+    """
 
-    Is there anything else we should know, Doctor?
+    """
+    Of course, we are not saying what everyone is thinking.
+
+    We are all suspects to the others. 
+    
+    We may have made a choice to trust them, but deep down we'll stay watchful.
+    """
+
+    psychic """
+    Right, so right now you don't have more idea than we do.
+    """
+
+    captain """
+    That is correct. 
+    
+    We only believe that the obvious suspect is Lady Claythorn.
+    """
+
+    psychic """
+    Of course, but we don't know enough to be sure are we?
+
+    We need more information to really know what's happening.
     """
 
     call run_menu( TimedMenu("doctor_day3_afternoon_captain_share", [
-            TimedMenuChoice("Tell them about the footman", 'doctor_day3_afternoon_captain_share_footman', condition="doctor_details.threads.is_unlocked('footman_actor')"),
-            TimedMenuChoice("Tell them about Rosalind Marsh", 'doctor_day3_afternoon_captain_share_nurse', condition="doctor_details.threads.is_unlocked('remember_nurse')"),
-            TimedMenuChoice("Tell them about Thomas Moody", 'doctor_day3_afternoon_captain_share_broken', condition="doctor_details.threads.is_unlocked('broken_unmasked')"),
+            TimedMenuChoice("Tell them about the footman{{observation}}", 'doctor_day3_afternoon_captain_share_footman', condition="doctor_details.threads.is_unlocked('footman_actor')"),
+            TimedMenuChoice("Tell them about Rosalind Marsh{{observation}}", 'doctor_day3_afternoon_captain_share_nurse', condition="doctor_details.threads.is_unlocked('remember_nurse')"),
+            TimedMenuChoice("Tell them about Thomas Moody{{observation}}", 'doctor_day3_afternoon_captain_share_broken', condition="doctor_details.threads.is_unlocked('broken_unmasked')"),
             TimedMenuChoice("Do not tell them anything more", 'generic_cancel', early_exit=True),
         ])
     )
-    # TODO: If you have said all options: Psychic don't let you leave? Or she comes with everyone? Or she just kills everyone here?
-    # 
-
-    call change_time(13, 00)
-
-    doctor """
-    There you have it.
-
-    It is everything I know.
-    """
 
     return
 
@@ -146,15 +166,13 @@ label doctor_day3_afternoon_captain_share_footman:
 
     The footman was not who he claimed to be.
 
-    He was an actor.
+    He told me he was an actor.
     """
 
     captain """
     An actor?
 
-    That would explain a great deal.
-
-    He made a few mistakes during dinner.
+    Now that you mention it, I remember he made a few mistakes during dinner.
 
     I assumed he was new to the job.
     """
@@ -194,11 +212,29 @@ label doctor_day3_afternoon_captain_share_footman:
     captain """
     Not at all, in my opinion.
 
-    We could assume they were part of it, then.
+    But that doesn't say much.
 
-    I do not know what 'it' is meant to be.
+    I assume a lot of struggling artist end up doing this kind of work.
 
-    But it would explain why we cannot see any of them here today.
+    The times have changed, it is no longer the case that you were born in service and stay in it your whole life.
+    """
+
+    psychic """
+    Sadly.
+    """
+
+    captain """
+    On the other hand, it could also mean they were part of whatever is happening here.
+
+    It would explain why we cannot see any of them here today.
+    """
+
+    psychic """
+    Maybe, but again, there is no way to know for sure.
+    """
+
+    captain """
+    Of course.
     """
 
     """
@@ -215,7 +251,7 @@ label doctor_day3_afternoon_captain_share_footman:
 label doctor_day3_afternoon_captain_share_nurse:
 
     doctor """
-    I am not sure if it is relevant, but I realized earlier that Miss Marsh and I were already acquainted.
+    I am not sure if it is relevant, but I realised earlier that Miss Marsh and I were already acquainted.
 
     I don't know if it is relevant or if it just a coincidence.
     """
@@ -227,7 +263,7 @@ label doctor_day3_afternoon_captain_share_nurse:
 
     You could be onto something doctor.
 
-    How well did you know her.
+    How well did you know her?
     """
 
     doctor """
@@ -249,6 +285,8 @@ label doctor_day3_afternoon_captain_share_nurse:
 
     You see, I was there myself.
     """
+
+    $ captain_details.description_hidden.unlock('wars')
 
     doctor """
     You were?
@@ -274,11 +312,12 @@ label doctor_day3_afternoon_captain_share_nurse:
 
     lad """
     How queer.
+
     What are the chances of that?
     """
 
     captain """
-    THat it happened by chance that at least three people present here tonight met before?
+    That it happened by chance that at least three people present here tonight met before?
 
     I would say close to to zero Mr Harring.
 
@@ -290,16 +329,18 @@ label doctor_day3_afternoon_captain_share_nurse:
     """
 
     lad """
-    But I never been to China.
+    But I'be never been to China.
     """
 
     psychic """
-    And neither have I.
+    Neither have I.
 
     And I am confident I never met anyone here before as well.
     """
 
-    # TODO more talk? or 
+    captain """
+    Right, still this a very weird coincidence, we shouldn't overlook it.
+    """
 
     return
 
@@ -331,18 +372,9 @@ label doctor_day3_afternoon_captain_share_broken:
     doctor """
     Right, well, I had to remove his mask to determine the cause of death.
 
-    Turns out there wasn't any.
+    It helped me realise that he was probably poisoned.
     """
 
-    lad """
-    What do you mean? Why wear a mask then?
-    """
-
-    doctor """
-    That's the question Mr Harring, I have no idea.
-
-    But what I saw behind his mask, is that he was probably poisoned.
-    """
 
     lad """
     Poisoned?
@@ -350,6 +382,10 @@ label doctor_day3_afternoon_captain_share_broken:
     But you didn't say anything?
 
     Why?
+    """
+
+    doctor """
+    Well, there are several reasons. The main one was that I would need to reveal the blackmail
     """
 
     # FAir question, why?

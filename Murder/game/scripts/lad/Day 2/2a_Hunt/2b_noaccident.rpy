@@ -43,7 +43,7 @@ label lad_day2_hunt_noaccident:
     captain """
     Indeed, I began my career in India and encountered my first battle during the war with Burma.
 
-    I was also involved in the Chinese rebellion. Then ...
+    I was also involved in the Chinese rebellion of the Boxer's. Then ...
     """
     
     $ captain_details.description_hidden.unlock('wars')

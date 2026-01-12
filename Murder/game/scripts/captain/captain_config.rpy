@@ -28,7 +28,7 @@ label init_captain:
 
         # Character Class
         captain_extra_information = CharacterDescriptionHiddenList ([
-            CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, China, or during the Great War"), 
+            CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, during the Great War or the Boxer's Rebellion in China."), 
             CharacterInformation(10, "talker",  "being at the centre of attention, so he tend to monopolize the conversation", is_important = True),
             CharacterInformation(40, "heroic_act", "was so heroic during the war", is_important = True),
             CharacterInformation(40, "city", "London"), # TODO unlock somewhere, ? In captain walkthroug?

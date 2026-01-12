@@ -46,6 +46,8 @@ label common_day1_evening_captain_billiard_room_speech_part_1:
     We called them "Boxers" because of their use of martial arts in their fights.
     """
 
+    $ captain_details.description_hidden.unlock('wars')
+
     return
 
 label common_day1_evening_captain_billiard_room_speech_part_2:
