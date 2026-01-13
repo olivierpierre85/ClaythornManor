@@ -3,7 +3,7 @@ label doctor_day3_afternoon_captain:
     $ change_room("tea_room", irisout)
 
     """
-    We are all seated in the tea room, Captain Sinha, Ted Harring, Amelia Baxter and me.
+    We are all seated in the tea room, Captain Sinha, Ted Harring, Amelia Baxter, and I.
 
     Each of us is deep in thought.
 
@@ -56,11 +56,11 @@ label doctor_day3_afternoon_captain:
     """
 
     lad """
-    Right, as I see it, we don't know much more that this morning.
-    
+    Right, as I see it, we don't know much more than we did this morning.
+
     So what now?
 
-    I feel like we've explore the whole place already.
+    I feel like we've explored the whole place already.
 
     And we can't just sit around waiting for answers.
     """
@@ -70,7 +70,7 @@ label doctor_day3_afternoon_captain:
 
     We must act sensibly.
 
-    It's obvious now that we have to leave.
+    It is obvious now that we have to leave.
     """
 
     psychic """
@@ -78,7 +78,7 @@ label doctor_day3_afternoon_captain:
 
     The nearest town is miles away.
 
-    I can't walk that far. 
+    I can't walk that far.
 
     And even if I could, I'm not prepared for such a journey.
     """
@@ -88,9 +88,9 @@ label doctor_day3_afternoon_captain:
 
     It would be a long walk, and the weather might turn at any moment.
 
-    We could get caught in another storm.
+    We could be caught in another storm.
 
-    It's probably unsafe for you to join us.
+    It is probably unsafe for you to join us.
     """
 
     psychic surprised """
@@ -102,7 +102,7 @@ label doctor_day3_afternoon_captain:
     captain """
     We could lock you in a room.
 
-    Though, that's far from ideal.
+    Though that is far from ideal.
 
     Perhaps one of us should stay with you.
     """
@@ -123,78 +123,14 @@ label doctor_day3_afternoon_captain:
 
     if doctor_details.saved_variables['doctor_day3_afternoon_captain_share'] > 2:
 
-        lad """
-        I don't know, with everything they just told us, I don't believe we are safe, even the two of us staying here.
-        """
-
-        psychic """
-        But I can't really travel.
-        """
-
-        """
-        Ted Harring is looking to the floor, ashamed.
-        """
-
-        lad """
-        I am sorry, I can't stay here any longer I can't.
-        """
-
-        psychic """
-        What? Are you really gonna abandonned me?
-
-        And you doctor? Or you Captain? Can't one of you stay with me?
-        """
-
-        """
-        There is an akward silence.
-
-        None of use reply.
-        """
-
-        psychic """
-        Oh I see, so there is no chance to convince you is there?
-        """
-
-        captain """
-        I would stay of course, but I am afraid they will need my military skills to make the trip.
-
-        ....
-        """
+        call doctor_day3_afternoon_captain_escape_with_psychic
 
     else:
 
-        lad """
-        Of course, I'll stay.
+        call doctor_day3_afternoon_captain_escape_without_psychic
 
-        Only a monster would leave you alone here in this condition.
-        """
-
-        psychic normal """
-        Thank you Mr Harring! 
-
-        That means the world to me.
-        """
-
-        captain """
-        Very well.
-
-        Doctor Baldwin and I will go right now then. I don't want to lose time.
-
-        Hopefully, I'll be back with help before nightfall.
-        """
-
-    # TODO what are the options
-
-    # Doctor leaves with captain, ted harring stays there
-    # Doctor stays??? No way too stressfull
-
-    # Everyone leaves => If you have Told all the information, TED harring DOESN't want to stay with Amelia
-    # She is reluctant but end up accepting, realising that everyone is against us, ending at 4 Lives saved BETTER
-
-    # OR Ted Harring stays, the doctor exit with the captain, noone shots at them. TWO saved
 
     jump work_in_progress
-
 
 
 label doctor_day3_afternoon_captain_do_not_share:
