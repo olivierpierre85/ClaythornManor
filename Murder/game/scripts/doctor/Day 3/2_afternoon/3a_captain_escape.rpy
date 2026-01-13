@@ -24,25 +24,38 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
     captain """
     Very well.
 
-    Doctor Baldwin and I will go right now then. I don't want to lose time.
+    Doctor Baldwin and I will go right now then. 
+    
+    I don't want to lose time, darkness will be upon us soon.
 
-    Hopefully, We'll be back with help before nightfall.
+    Hopefully, we'll be back with help tonight.
+    """
+
+    psychic """
+    Very well, we'll wait here. 
+    
+    Hopefully nothing will happen until then.
     """
 
     captain """
-    Let's go, Doctor. The sooner, the better.
+    That's decided then.
+
+    Doctors, let's grab the bare necessities from our room and be on our way.
+    
+    The sooner, the better.
     """
 
-    lad """
-    Good luck!
-    """
     
+    $ change_room("forest_road", dissolve)
+
+    call change_time(15, 00)
+
     """
-    And without further talk we leave the Manor and headed to the road.
+    We picked just a few things to help us for our trip.
+
+    Most of our luggage remain at the manor, we'll get them back soon enough hopefully.
     """
 
-    $ change_room("forest_road")
-    
     doctor """
     That was a rather fast exit there.
     """
@@ -64,15 +77,23 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
     """
     So we walked at a very fast pace, hoping to reach the town before.
 
-    I was started to lose hope when we finally reached our destination.
+    I was started to lose hope when we finally reached Aberdeen.
+
+    After a quick search we were able to locate the police station.
     """
 
     call change_time(17, 00)
 
-    """
-    We rushed to the police station and explained everything.
+    $ change_room("police_station", irisin)
 
-    We must have looked like madmen, and it took a while before they took us seriously
+    """
+
+
+    We must have looked like madmen, and it took a while before they took us seriously.
+
+    They agreed to go and check on the others, while we rested there.
+
+    I agreed...
     """
 
         
