@@ -189,7 +189,9 @@ label doctor_day3_afternoon_captain:
     # Doctor stays??? No way too stressfull
 
     # Everyone leaves => If you have Told all the information, TED harring DOESN't want to stay with Amelia
-    # She is reluctant but end up accepting, realising that everyone is against us
+    # She is reluctant but end up accepting, realising that everyone is against us, ending at 4 Lives saved BETTER
+
+    # OR Ted Harring stays, the doctor exit with the captain, noone shots at them. TWO saved
 
     jump work_in_progress
 
