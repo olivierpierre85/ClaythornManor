@@ -348,9 +348,9 @@ label doctor_day3_afternoon_captain_share_nurse:
 label doctor_day3_afternoon_captain_share_broken:
 
     doctor """
-    There was something else that was strange, but I don't how it could help us understand our situation.  
+    There was something else that struck me as strange, though I do not yet see how it helps us make sense of our situation.
 
-    It's about Thomas Moody.      
+    It concerns Thomas Moody.
     """
 
     psychic """
@@ -358,7 +358,7 @@ label doctor_day3_afternoon_captain_share_broken:
     """
 
     doctor """
-    Well, you've all noticed the mask he used to hide his war injuries I presume.
+    You all noticed the mask he wore to hide his war injuries, I presume.
     """
 
     psychic """
@@ -366,31 +366,59 @@ label doctor_day3_afternoon_captain_share_broken:
     """
 
     lad """
-    How could we have missed it?
+    How could we miss it?
     """
 
     doctor """
-    Right, well, I had to remove his mask to determine the cause of death.
+    When I examined him, I had to remove the mask to determine the cause of death.
 
-    It helped me realise that he was probably poisoned.
+    I confess I was apprehensive about what I might find.
+
+    But behind it, there were no injuries at all.
     """
-
 
     lad """
-    Poisoned?
+    No injuries?
 
-    But you didn't say anything?
-
-    Why?
+    Then why wear the bloody thing?
     """
 
     doctor """
-    Well, there are several reasons. The main one was that I would need to reveal the blackmail
+    Honestly, I cannot offer a logical explanation.
+
+    It was so unsettling that I kept it to myself, as I wished to understand more before speaking of it.
+
+    When I shared what I knew with Captain Sinha, he helped me realise something else.
+
+    That Thomas Moody may have been poisoned.
     """
 
-    # FAir question, why?
-    # Then, nobody can trust him after saying that I assume => What impact?
+    psychic surprised """
+    Poisoned?!
 
+    And you did not think you ought to have told us?
+    """
 
+    captain """
+    At the time, we realised something was terribly wrong in the manor.
+
+    But we did not know whom we could trust.
+
+    So we kept it to ourselves.
+    """
+
+    psychic -surprised """
+    Right.
+
+    I am not sure how that helps us just now.
+
+    It is one more reason to worry, and nothing that truly helps us.
+
+    Still, at least you have told us.
+    """
+
+    doctor """
+    I am sorry.
+    """
 
     return

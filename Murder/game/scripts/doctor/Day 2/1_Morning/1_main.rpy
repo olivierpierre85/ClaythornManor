@@ -371,8 +371,6 @@ label doctor_day2_morning_nurse:
 # The rest in the common folder
 label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
 
-    $ doctor_details.threads.unlock('broken_unmasked')
-
     """
     I can't ignore the signs. I need to see for myself.
 
@@ -411,15 +409,19 @@ label doctor_day2_breakfast_follow_doctor_lad_remove_mask:
 label doctor_day2_behind_the_mask:
     
     """
-    His face twisted in a horrible grimace.    
+    His face is twisted in a horrible grimace.
 
     This is not the face of someone dying peacefully in his sleep.
 
-    It is very likely he was poisoned.
+    It suggests distress in his final moments.
 
-    And then, something strikes me.
+    Yet that does not prove it was not a natural death.
 
-    I should've noticed it at once.
+    It could have been a violent heart attack.
+
+    But then, something strikes me.
+
+    I should have noticed it at once.
 
     No disfigurement. No scars.
 
@@ -437,19 +439,23 @@ label doctor_day2_behind_the_mask:
     """
     I pause, trying to make sense of it.
 
-    Too many questions at once.
+    There are too many questions at once.
 
-    Thomas Moody was murdered—that much is clear.
+    Thomas Moody is dead, and I cannot yet say how it happened.
 
-    But he also hid behind a mask.
+    It may have been deliberate.
 
-    Was he hiding his identity?
+    It may have been an accident.
 
-    I don't understand it. Not yet.
+    But what troubles me most is that he chose to hide behind a mask.
 
-    Best to keep this to myself for now.
+    I cannot think of a logical explanation for it.
 
-    Until I know who I can trust.
+    I should keep this to myself for now.
+
+    I do not feel comfortable sharing it with everyone just yet.
+
+    Not until I know who I can trust.
 
     I replace the mask and leave the room.
     """

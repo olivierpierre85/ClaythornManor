@@ -370,7 +370,7 @@ label doctor_day2_evening_billiard_room_captain_mask:
     doctor """
     Do not drink it, Captain.
 
-    I believe you have found the murder weapon.
+    I believe you may have found the murder weapon.
     """
 
     captain """
