@@ -47,19 +47,149 @@ label doctor_day3_afternoon_captain:
         ])
     )
 
-    call change_time(13, 00)
+    call change_time(14, 00)
+
+    """
+    Once again, we all fall silent.
+
+    Trying to make sense of what is happening to us.
+    """
 
     lad """
-    Right, but what now?
+    Right, as I see it, we don't know much more that this morning.
+    
+    So what now?
 
-    We can't just sit around waiting for answers.
+    I feel like we've explore the whole place already.
+
+    And we can't just sit around waiting for answers.
     """
 
     captain """
     No.
 
     We must act sensibly.
+
+    It's obvious now that we have to leave.
     """
+
+    psychic """
+    Of course, but how?
+
+    The nearest town is miles away.
+
+    I can't walk that far. 
+
+    And even if I could, I'm not prepared for such a journey.
+    """
+
+    captain """
+    You might be right.
+
+    It would be a long walk, and the weather might turn at any moment.
+
+    We could get caught in another storm.
+
+    It's probably unsafe for you to join us.
+    """
+
+    psychic surprised """
+    But you're not going to leave me here alone, are you?
+
+    What would become of me?
+    """
+
+    captain """
+    We could lock you in a room.
+
+    Though, that's far from ideal.
+
+    Perhaps one of us should stay with you.
+    """
+
+    psychic """
+    Yes!
+
+    Mr Harring can stay with me, right?
+
+    The two of us should be safe until you return with help.
+    """
+
+    captain """
+    That seems to be the wisest choice.
+
+    What do you think, Mr Harring?
+    """
+
+    if doctor_details.saved_variables['doctor_day3_afternoon_captain_share'] > 2:
+
+        lad """
+        I don't know, with everything they just told us, I don't believe we are safe, even the two of us staying here.
+        """
+
+        psychic """
+        But I can't really travel.
+        """
+
+        """
+        Ted Harring is looking to the floor, ashamed.
+        """
+
+        lad """
+        I am sorry, I can't stay here any longer I can't.
+        """
+
+        psychic """
+        What? Are you really gonna abandonned me?
+
+        And you doctor? Or you Captain? Can't one of you stay with me?
+        """
+
+        """
+        There is an akward silence.
+
+        None of use reply.
+        """
+
+        psychic """
+        Oh I see, so there is no chance to convince you is there?
+        """
+
+        captain """
+        I would stay of course, but I am afraid they will need my military skills to make the trip.
+
+        ....
+        """
+
+    else:
+
+        lad """
+        Of course, I'll stay.
+
+        Only a monster would leave you alone here in this condition.
+        """
+
+        psychic normal """
+        Thank you Mr Harring! 
+
+        That means the world to me.
+        """
+
+        captain """
+        Very well.
+
+        Doctor Baldwin and I will go right now then. I don't want to lose time.
+
+        Hopefully, I'll be back with help before nightfall.
+        """
+
+    # TODO what are the options
+
+    # Doctor leaves with captain, ted harring stays there
+    # Doctor stays??? No way too stressfull
+
+    # Everyone leaves => If you have Told all the information, TED harring DOESN't want to stay with Amelia
+    # She is reluctant but end up accepting, realising that everyone is against us
 
     jump work_in_progress
 
@@ -245,6 +375,8 @@ label doctor_day3_afternoon_captain_share_footman:
     Besides, I did not know him all that well.
     """
 
+    $ doctor_details.saved_variables['doctor_day3_afternoon_captain_share'] += 1
+
     return
 
 # TODO last TWO should be longer have more impact on the story
@@ -342,6 +474,8 @@ label doctor_day3_afternoon_captain_share_nurse:
     Right, still this a very weird coincidence, we shouldn't overlook it.
     """
 
+    $ doctor_details.saved_variables['doctor_day3_afternoon_captain_share'] += 1
+
     return
 
 
@@ -420,5 +554,7 @@ label doctor_day3_afternoon_captain_share_broken:
     doctor """
     I am sorry.
     """
+
+    $ doctor_details.saved_variables['doctor_day3_afternoon_captain_share'] += 1
 
     return

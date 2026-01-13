@@ -34,6 +34,9 @@ label init_doctor:
             "day2_evening_billiard_room_visited" : False,
             "day2_evening_bedroom_closed" : False,
 
+            # Afternoon day 3
+            "doctor_day3_afternoon_captain_share": 0,
+
             # HUNt
             "bored_by_lad": 0,
 
