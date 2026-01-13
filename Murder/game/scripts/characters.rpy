@@ -672,6 +672,22 @@ init -100 python:
                         if not choice.locked:
                             choice.discovered = True
 
+                # Check for endings associated with this chapter
+                for ending in self.endings.information_list:
+                    if chapter_name in ending.chapters:
+                        current_run += 1
+                        self.reset_information()
+                        self.endings.unlock(ending.text_id)
+                        self.add_ending_checkpoint(ending)
+
+            # Check for endings associated with 'end'
+            for ending in self.endings.information_list:
+                if 'end' in ending.chapters:
+                    current_run += 1
+                    self.reset_information()
+                    self.endings.unlock(ending.text_id)
+                    self.add_ending_checkpoint(ending)
+
         # Function used ONLY for debug purposes
         def load_test_checkpoints(self) -> None:
             """
@@ -726,7 +742,13 @@ init -100 python:
                 toggle_list = _collect_unlockables(prev_chapters, chap_key)
 
                 # 3) Determine character‐specific Ren’Py label for this chapter
-                label_id = self.test_checkpoints.get(chap_key, chap_key)
+                # New structure support: test_checkpoints is now a list of dicts
+                checkpoints_data = self.test_checkpoints.get(chap_key)
+                if isinstance(checkpoints_data, list) and len(checkpoints_data) > 0:
+                    label_id = checkpoints_data[0].get("label", chap_key)
+                else:
+                    # Fallback for old structure or missing key
+                    label_id = self.test_checkpoints.get(chap_key, chap_key)
 
                 # 4) If no relevant unlockables from earlier chapters, still make one checkpoint
                 if not toggle_list:
