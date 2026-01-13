@@ -44,7 +44,6 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
     
     The sooner, the better.
     """
-
     
     $ change_room("forest_road", dissolve)
 
@@ -87,14 +86,27 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
     $ change_room("police_station", irisin)
 
     """
-
+    We entered dramatically, shouting for help.
 
     We must have looked like madmen, and it took a while before they took us seriously.
 
-    They agreed to go and check on the others, while we rested there.
+    They offered to go and check on the others, while we rested there.
 
     I agreed...
     """
+
+    # TODO ending, add that you told them about the body.
+
+    # They say that they inquire about the dead people.
+    # We stayed in Aberdeen with the captain, 
+    # they told us they reach to the family of the victims.
+
+    # The only problem they found was with thomas Moody.
+    # Turns out he was already dead.
+    # He died a few weeks ago.
+    # So whoever was killed this weekend it wasn't him.
+
+    # ADD unlocks last THOMAS moody CLUE => unlocks him
 
         
     return
@@ -139,6 +151,9 @@ label doctor_day3_afternoon_captain_escape_with_psychic:
 
     ....
     """
+
+    # WHat offer to take the car, to carry her, NO clothes in Lady Claythorn room.
+    # Long march, the four of them.
 
     return
 
