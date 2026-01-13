@@ -26,8 +26,55 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
 
     Doctor Baldwin and I will go right now then. I don't want to lose time.
 
-    Hopefully, I'll be back with help before nightfall.
+    Hopefully, We'll be back with help before nightfall.
     """
+
+    captain """
+    Let's go, Doctor. The sooner, the better.
+    """
+
+    lad """
+    Good luck!
+    """
+    
+    """
+    And without further talk we leave the Manor and headed to the road.
+    """
+
+    $ change_room("forest_road")
+    
+    doctor """
+    That was a rather fast exit there.
+    """
+
+    captain """
+    Perhaps, but we were at an impasse.
+
+    I don't think we could have learn more by staying.
+
+    There was no point at delaying the inevitable.
+
+    Plus, the night will be upon us in a short time, we shouldn't waste anytime.
+    """
+
+    doctor """
+    Right.
+    """
+
+    """
+    So we walked at a very fast pace, hoping to reach the town before.
+
+    I was started to lose hope when we finally reached our destination.
+    """
+
+    call change_time(17, 00)
+
+    """
+    We rushed to the police station and explained everything.
+
+    We must have looked like madmen, and it took a while before they took us seriously
+    """
+
         
     return
 

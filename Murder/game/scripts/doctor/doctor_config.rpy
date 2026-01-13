@@ -178,8 +178,9 @@ label init_doctor:
             CharacterInformation(2, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle", is_intuition=True, chapters=['saturday_evening']), 
             CharacterInformation(3, "burned", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
             CharacterInformation(4, "throat_cut", "Someone slashed your throat in your sleep", image_file="throat_cut", chapters=['sunday_morning']), 
-            CharacterInformation(5, "todo1", "todo1", image_file="manor_burns", chapters=['saturday_morning']), 
-            CharacterInformation(6, "todo2", "todo1", image_file="manor_burns", chapters=['saturday_morning']), 
+            CharacterInformation(5, "poisoned", "You were poisoned", image_file="poison", chapters=['sunday_afternoon']), 
+            CharacterInformation(5, "escape", "You escape with Captain Sinha", image_file="escape", chapters=['saturday_morning']), 
+            CharacterInformation(6, "escape_group", "You escape with Three other guests", image_file="escape", chapters=['saturday_morning']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([
