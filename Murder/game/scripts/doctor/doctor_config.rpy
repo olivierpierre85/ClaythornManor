@@ -179,7 +179,7 @@ label init_doctor:
             CharacterInformation(3, "burned", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
             CharacterInformation(4, "throat_cut", "Someone slashed your throat in your sleep", image_file="throat_cut", chapters=['sunday_morning']), 
             CharacterInformation(5, "poisoned", "You were poisoned", image_file="poison", chapters=['end']), 
-            CharacterInformation(5, "run_over", "You were run over by a car", image_file="poison", chapters=['end']), 
+            CharacterInformation(5, "run_over", "You were run over by a car", image_file="run_over", chapters=['end']), 
             CharacterInformation(5, "shot", "You were shot in the face", image_file="hunting_rifle", chapters=['end']), 
             CharacterInformation(6, "escape", "You escape with Three other guests", image_file="escape", chapters=['end']), 
         ])
