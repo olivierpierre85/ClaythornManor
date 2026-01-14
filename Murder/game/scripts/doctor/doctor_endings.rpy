@@ -1,3 +1,26 @@
+label doctor_ending_escape:
+
+    $ doctor_details.endings.unlock('escape')
+    $ doctor_details.add_ending_checkpoint(ending=doctor_details.endings.get_item('escape'))
+
+    call survive_screen_transition
+
+    """
+    You escaped.
+
+    Three other guests were fortunate enough to leave the manor alive with you.
+
+    By now, you may have a clearer understanding of what has been happening.
+
+    But do not blame yourself too harshly if you don't.
+
+    There are still plenty of secrets to uncover at Claythorn Manor.
+    """
+
+    jump ending_generic
+
+
+
 label doctor_ending_run_over:
 
     $ doctor_details.endings.unlock('run_over')

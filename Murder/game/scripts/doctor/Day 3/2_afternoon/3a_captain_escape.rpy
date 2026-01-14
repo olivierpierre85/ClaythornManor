@@ -190,83 +190,111 @@ label doctor_day3_afternoon_captain_escape_hear_car:
 label doctor_day3_afternoon_captain_escape_with_psychic:
 
     lad """
-    I don't know, with everything they just told us, I don't believe we are safe, even the two of us staying here.
+    I don't know.
+
+    After everything they've just told us, I don't think we're safe.
+
+    Not even if the two of us stay behind.
     """
 
     psychic """
-    But I can't really travel this far
+    But I cannot travel that far.
     """
 
     """
-    Ted Harring is looking to the floor, ashamed.
+    Ted Harring stares at the floor, ashamed.
+
+    He looks as though he wishes he could vanish into the carpet.
     """
 
     lad """
-    I am sorry, I can't stay here any longer I can't.
+    I'm sorry.
+
+    I can't stay here any longer.
+
+    I can't.
     """
 
     psychic """
-    What? Are you really gonna abandon me?
+    What?
 
-    And you doctor? Or you Captain? Can't one of you stay with me?
+    Are you truly going to abandon me?
+
+    And you, Doctor?
+
+    Or you, Captain?
+
+    Can't one of you stay with me?
     """
 
     """
-    There is an akward silence.
+    An awkward silence follows.
 
-    None of use reply.
+    None of us replies.
     """
 
     psychic """
-    Oh I see, so there is no chance to convince you is there?
+    Oh, I see.
+
+    So there is no chance of convincing you, is there?
     """
 
     captain """
-    I would stay of course, but I am afraid they will need my military skills to make the trip.
+    I would stay, of course.
+
+    But I am afraid you will need my experience to make the journey.
     """
 
     """
-    Military skills to walk alongside a road? That's a weird reaction from a war hero.
+    Experience to walk along a road.
 
-    Is he actually scared?
+    It is an odd remark from a decorated soldier.
+
+    Could it be that, behind his impassive face, he is frightened after all?
     """
 
     psychic """
-    All right, then I believe that I don't have other options than to come with you.
+    Very well.
+
+    Then I have no choice but to come with you.
     """
 
     captain """
-    Are you quite sure?
+    Are you quite certain?
 
-    It won't be an easy walk.
+    It will not be an easy walk.
     """
 
     psychic """
     I am certain.
+
+    I will likely be slower than you.
+
+    I trust you will not leave me behind.
     """
 
     captain """
-    Very well, let's get ready before we leave then.
+    Very well.
+
+    Let us prepare ourselves before we set off.
     """
 
     """
-    Captain Sinha instruct us to tak
+    Captain Sinha instructs us to take the bare minimum from our rooms.
+
+    He tells us to meet outside without delay.
     """
 
-    # WHat offer to take the car, to carry her, NO clothes in Lady Claythorn room.
-    # Long march, the four of them.
-
-    return
-
-
-
-# AI SLOP for ending
-label to_use_or_not:
+    $ change_room("forest_road", irisin)
 
     """
-    I was started to lose hope when we finally reached Aberdeen.
+    Once the four of us were ready, we wasted no time and took to the road.
 
-    After a quick search we were able to locate the police station.
+    Our progress was slow, but we stayed together for two long hours.
+
+    I had begun to lose hope when we finally reached Aberdeen.
+
+    After a quick search, we located the police station.
     """
 
     call change_time(17, 00)
@@ -274,313 +302,60 @@ label to_use_or_not:
     $ change_room("police_station", irisin)
 
     """
-    We entered dramatically, shouting for help.
+    We entered in a rush, calling for help.
 
-    We must have looked like madmen, and it took a while before they took us seriously.
+    We must have looked half-mad.
 
-    They offered to go and check on the others, while we rested there.
+    It took some time before anyone took us seriously.
+
+    They sent men to check on the manor, while we remained to give our statements.
+
+    I explained everything, insisting on the peculiar situation of Samuel Manning.
     """
 
     call wait_screen_transition
 
     """
-    A couple of hours later, they called for reinforcements.
+    A couple of hours later, they returned.
 
     By then, we had given our statements twice over.
 
-    Captain Sinha was calm, but I could see the tension in his jaw.
+    With sombre faces, they told us they had found another body.
 
-    He wanted action, not forms and questions.
-    """
+    Rosalind Marsh.
 
-    doctor """
-    You must understand, there is a dead man at that house.
+    She was in the attic, stabbed to death.
 
-    Samuel Manning.
+    Even if we half expected it, the news struck us hard.
 
-    We left his body where we found it, in his room.
-    """
+    My mind went at once to Andrew.
 
-    """
-    That, at least, seemed to cut through the doubt.
-
-    An inspector was fetched, and the mood in the station changed at once.
-
-    Orders were given.
-
-    Boots moved with purpose.
-    """
-
-    captain """
-    How long before you reach the manor?
-
-    Two hours at most, if you travel light.
+    What could have become of him?
     """
 
     """
-    The inspector promised they would go at once.
-
-    A small party would ride ahead.
-
-    The rest would follow with lanterns, ropes, and whatever else they could carry.
-    """
-
-    doctor """
-    And Mr Harring?
-
-    And Miss Baxter?
-
-    They are still there.
-    """
-
-    inspector """
-    We will see to them, Doctor.
-
-    If they are where you say they are, they will not be left behind.
+    They had found nothing to explain where Lady Claythorn and the staff had gone.
     """
 
     call wait_screen_transition
 
     """
-    Night had fallen by the time the first party returned.
+    In the days that followed, the police contacted the families of the missing guests.
 
-    The inspector came straight to us.
+    We were asked to remain nearby for a short while.
 
-    His coat was damp, and his cheeks were red from the cold.
+    They soon dismissed us as suspects.
 
-    He looked tired, but not surprised.
-    """
+    They accepted the most obvious conclusion.
 
-    inspector """
-    Your friends are alive.
+    The culprits were among the missing.
 
-    Shaken, but alive.
-
-    The young man was doing his best to keep her steady.
+    Their motives remained unclear.
     """
 
     """
-   I felt my shoulders loosen for the first time in hours.
+    Captain Sinha, Ted Harring, and Amelia Baxter eventually returned home.
 
-    Captain Sinha gave a curt nod.
-
-    It was not relief, not quite.
-
-    More like permission to breathe.
-    """
-
-    inspector """
-    We found the body you described.
-
-    Samuel Manning.
-
-    Just as you said.
-
-    The house, however, was all wrong.
-
-    Too quiet.
-
-    Too empty.
-    """
-
-    captain """
-    The staff?
-
-    The other guests?
-    """
-
-    inspector """
-    Gone.
-
-    No sign of struggle downstairs.
-
-    No lamps lit, no fires, no supper laid out.
-
-    As if they walked out and never came back.
-    """
-
-    """
-    Reinforcements were sent anyway.
-
-    More men, more horses, more questions.
-
-    They swept the grounds, the woods, the road, and every outbuilding they could find.
-
-    Nothing.
-
-    Not a single soul, beyond the two you left behind.
-    """
-
-    doctor """
-   Then we were right.
-
-    It was coordinated.
-    """
-
-    inspector """
-    It looks that way.
-
-    We will keep searching.
-
-    But there is something else.
-    """
-
-    """
-    He hesitated before speaking.
-
-    It was the sort of pause that makes you dread the next sentence.
-    """
-
-    inspector """
-    The second body you mentioned.
-
-    Thomas Moody.
-    """
-
-    doctor """
-    Yes.
-
-    He wore a mask.
-
-    He was dead in his bed.
-    """
-
-    inspector """
-    That is the trouble.
-
-    Thomas Moody is already dead.
-    """
-
-    """
-    The words did not make sense at first.
-
-    I stared at him, waiting for the correction.
-
-    None came.
-    """
-
-    captain """
-    Explain yourself.
-
-    Now.
-    """
-
-    inspector """
-    We telegraphed ahead.
-
-    We contacted the address on record.
-
-    We checked the registry.
-
-    Thomas Moody died weeks ago.
-
-    There was a funeral.
-
-    A certificate.
-
-    A grave.
-    """
-
-    """
-    My mouth went dry.
-
-    I remembered the face under the mask.
-
-    Untouched.
-
-    Unscarred.
-
-   Never his.
-    """
-
-    doctor """
-    Then whoever was in that bed was not Thomas Moody.
-
-    But someone wanted us to believe he was.
-    """
-
-    captain """
-    And you are certain?
-
-    This is not a clerical error?
-    """
-
-    inspector """
-    I am certain.
-
-    We have already sent men to confirm it in person.
-
-    But the paperwork is solid.
-
-    This is not a mistake.
-    """
-
-    # TODO: adjust thread key if needed
-    $ doctor_details.threads.unlock('broken_already_dead')
-
-    """
-    It was like a door opening in my mind.
-
-    The mask was not to hide wounds.
-
-    It was to hide a lie.
-    """
-
-    doctor """
-    Samuel Manning was real.
-
-    But Thomas Moody was a name borrowed for the occasion.
-
-    Or a story.
-
-    Or a warning.
-    """
-
-    inspector """
-    That is what we intend to find out.
-
-    You will both remain in Aberdeen for now.
-
-    We may need you again.
-
-    There will be more questions.
-    """
-
-    """
-    Captain Sinha did not protest.
-
-    Not aloud.
-
-    But I could see he hated it.
-
-    Being trapped in a different sort of room, with a different sort of door.
-    """
-
-    call wait_screen_transition
-
-    """
-    In the days that followed, the police reached out to the families of the missing guests.
-
-    Names were confirmed.
-
-    Letters were sent.
-
-    Telegraphs went unanswered.
-
-    Every answer brought two more questions.
-    """
-
-    """
-    Ted Harring and Amelia Baxter were kept under watch for a night, then released.
-
-    They were not accused, but they were not trusted either.
-
-    Not yet.
-
-    Not in a case as strange as this.
-    """
-
-    """
     As for me, I tried to find Andrew again.
 
     I asked after him.
@@ -590,28 +365,30 @@ label to_use_or_not:
     I waited near the station, hoping he would appear as if nothing had happened.
 
     He never did.
-    """
 
-    doctor """
     I can only hope he is all right.
 
     And that he had the sense to keep moving.
     """
 
     """
-    Claythorn Manor was sealed.
+    A week later, I returned to the police station one last time.
 
-    Guards were posted.
+    They were ready to move on.
 
-    The forest was searched until boots wore thin and tempers grew sharp.
+    Yet they had just received unsettling news.
 
-    Yet the truth remained out of reach.
+    They had found Thomas Moody's mother, and informed her of her son's death.
 
-    A house full of people.
+    But when they told her Thomas was dead, she said they were mistaken.
 
-    A house full of lies.
+    Thomas Moody had died months ago, apparently from war injuries.
 
-    And the most unsettling fact of all.
+    Then she added something else.
 
-    One of the dead men had been dead already.
+    Her other son, Archibald, had been missing for a week or more.
     """
+
+    $ broken_details.description_hidden.unlock('lie_name')
+
+    jump doctor_ending_escape

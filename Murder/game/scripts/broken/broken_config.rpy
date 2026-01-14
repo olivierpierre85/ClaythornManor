@@ -20,7 +20,7 @@ label init_broken:
             CharacterInformation(0, "city", "Liverpool", is_important = True),         
             CharacterInformation(0, "shy", "married, perhaps because his condition has rendered him rather shy towards the opposite sex", is_important = True),   
             CharacterInformation(0, "lie_mask", "entirely true, except for two small details: his injuries, which are faked,", is_important = True),   
-            CharacterInformation(0, "lie_name", "name, which he stole from his deceased friend and real war hero", is_important = True), 
+            CharacterInformation(0, "lie_name", "name, which he stole from his deceased brother and real war hero", is_important = True), 
             ], broken_name
         )
 
@@ -30,7 +30,7 @@ label init_broken:
         # His life took a dramatic turn when he was called to serve during the Great War. Badly injured at the Somme at the start of the war, he is now what people call a 'Gueule Cassée' or broken face. However, the silver lining is that the act of bravery that led to his injuries is what made Lady Claythorn invite him to the Manor.
         # He is not married, perhaps because his condition has rendered him rather shy towards the opposite sex. 
         # After the war, he managed to find a job as a car mechanic.
-        # Well, that story is almost entirely true, entirely true, except for two small details: his injuries, which are faked, and his name, which he stole from his deceased friend and real war hero.
+        # Well, that story is almost entirely true, entirely true, except for two small details: his injuries, which are faked, and his name, which he stole from his deceased brother and real war hero.
         # """
         broken_description = """
         Thomas Moody is a <info:age> working-class fellow. Born in <info:city>, he started working in <info:background>, securing the job in part thanks to his <info:tall>.
