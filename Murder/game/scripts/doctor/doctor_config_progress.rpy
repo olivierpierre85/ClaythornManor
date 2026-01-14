@@ -97,7 +97,7 @@ label doctor_config_progress:
             # Threads SET before & RELEVANT here:
             #   - flirt: chapters=['friday_evening'], relevant=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_morning']
             #   - broken_unmasked: chapters=['saturday_morning', 'saturday_evening'], relevant=['saturday_morning', 'saturday_evening', 'sunday_morning', 'sunday_afternoon']
-            #   - book_opium: chapters=['friday_evening'], relevant=['saturday_morning', 'saturday_afternoon', 'saturday_evening']
+            #   - book_opium: chapters=['friday_evening'], relevant=['saturday_morning', 'saturday_afternoon', 'saturday_evening', 'sunday_afternoon']
             #   - footman_french_1: chapters=['friday_evening', 'saturday_evening'], relevant=['friday_evening', 'saturday_evening']
             #   - remember_nurse: chapters=['saturday_morning'], relevant=['saturday_evening']
             'saturday_evening': [
@@ -137,16 +137,26 @@ label doctor_config_progress:
                 # remember_nurse can be False/True
                 # =========================================================
                 # broken_unmasked = False
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': False}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': True}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': False}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': False, 'book_opium': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': True, 'book_opium': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': False, 'book_opium': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': True, 'book_opium': False}},
+
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': False, 'book_opium': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': True, 'book_opium': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': False, 'book_opium': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': False, 'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': True, 'book_opium': True}},
 
                 # broken_unmasked = True
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': False}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': True}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': False}},
-                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': False, 'book_opium': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': True, 'book_opium': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': False, 'book_opium': False}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': True, 'book_opium': False}},
+
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': False, 'book_opium': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': False, 'remember_nurse': True, 'book_opium': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': False, 'book_opium': True}},
+                {"label": "doctor_day3_afternoon", "threads": {'broken_unmasked': True,  'trust_captain': True,  'trust_nurse': False, 'footman_actor': True,  'remember_nurse': True, 'book_opium': True}},
 
                 # =========================================================
                 # Case B: trust_captain = False, trust_nurse = True

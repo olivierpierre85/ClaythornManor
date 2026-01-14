@@ -1,3 +1,47 @@
+label doctor_ending_run_over:
+
+    $ doctor_details.endings.unlock('run_over')
+    $ doctor_details.add_ending_checkpoint(ending=doctor_details.endings.get_item('run_over'))
+
+    call death_screen_transition
+
+    """
+    You were hit by a car while crouching on the floor.
+
+    If you had more strength, you probably could have outrun it, or at least avoided it.
+
+    Perhaps it was the wrong moment to stop taking drugs.
+    """
+
+    jump ending_generic
+
+
+label doctor_ending_shot:
+
+    $ doctor_details.endings.unlock('shot')
+    $ doctor_details.add_ending_checkpoint(ending=doctor_details.endings.get_item('shot'))
+
+    call death_screen_transition
+
+    """
+    You were shot in the face.
+
+    It happened so quickly that you did not even see who pulled the trigger.
+
+    There was no warning.
+
+    No time to think.
+
+    Only the sharp crack of a pistol, and a brief, dreadful heat.
+
+    You were so close to getting out alive.
+
+    What a pity.
+    """
+
+    jump ending_generic
+
+
 label doctor_ending_burn:
 
     $ doctor_details.endings.unlock('burned')

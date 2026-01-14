@@ -118,7 +118,7 @@ label init_doctor:
                 content_negative='You didn\'t take "Confessions of an English Opium-Eater" from the library',
                 image_file="book_opium",
                 chapters=['friday_evening'],
-                relevant_chapters=['saturday_morning', 'saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['saturday_morning', 'saturday_afternoon', 'saturday_evening','sunday_morning', 'sunday_afternoon'],
             ),
         ])
 
@@ -179,8 +179,9 @@ label init_doctor:
             CharacterInformation(3, "burned", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
             CharacterInformation(4, "throat_cut", "Someone slashed your throat in your sleep", image_file="throat_cut", chapters=['sunday_morning']), 
             CharacterInformation(5, "poisoned", "You were poisoned", image_file="poison", chapters=['end']), 
-            CharacterInformation(5, "escape", "You escape with Captain Sinha", image_file="escape", chapters=['end']), 
-            CharacterInformation(6, "escape_group", "You escape with Three other guests", image_file="escape", chapters=['end']), 
+            CharacterInformation(5, "run_over", "You were run over by a car", image_file="poison", chapters=['end']), 
+            CharacterInformation(5, "shot", "You were shot in the face", image_file="hunting_rifle", chapters=['end']), 
+            CharacterInformation(6, "escape", "You escape with Three other guests", image_file="escape", chapters=['end']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([
