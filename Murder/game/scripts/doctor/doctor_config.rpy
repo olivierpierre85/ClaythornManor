@@ -181,7 +181,7 @@ label init_doctor:
             CharacterInformation(5, "poisoned", "You were poisoned", image_file="poison", chapters=['end']), 
             CharacterInformation(5, "run_over", "You were run over by a car", image_file="run_over", chapters=['end']), 
             CharacterInformation(5, "shot", "You were shot in the face", image_file="hunting_rifle", chapters=['end']), 
-            CharacterInformation(6, "escape", "You escape with Three other guests", image_file="escape", chapters=['end']), 
+            CharacterInformation(6, "escape", "You escaped with Ted Harring, Amelia Baxter and Sushil Sinha", image_file="escape", chapters=['end']), 
         ])
 
         doctor_extra_information = CharacterDescriptionHiddenList ([

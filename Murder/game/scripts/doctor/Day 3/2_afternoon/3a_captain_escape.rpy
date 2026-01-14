@@ -1,5 +1,20 @@
 label doctor_day3_afternoon_captain_escape_without_psychic:
 
+
+    if doctor_details.saved_variables['doctor_day3_afternoon_captain_share'] > 1:
+
+        """
+        Ted Harring pauses for a second.
+
+        I can see my revelations have troubled him and that he is not sure what to do.
+        """
+
+    else:
+
+        """
+        Ted Harring answers without hesitation.
+        """
+
     lad """
     Of course, I'll stay.
 
