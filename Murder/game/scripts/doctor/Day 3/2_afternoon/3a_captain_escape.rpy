@@ -6,7 +6,9 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
         """
         Ted Harring pauses for a second.
 
-        I can see my revelations have troubled him and that he is not sure what to do.
+        I can see my revelations have troubled him.
+
+        He does not seem certain what he ought to do.
         """
 
     else:
@@ -18,11 +20,11 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
     lad """
     Of course, I'll stay.
 
-    Only a monster would leave you alone here in this condition.
+    Only a monster would leave you alone like this.
     """
 
     psychic normal """
-    Thank you Mr Harring! 
+    Thank you, Mr Harring.
 
     That means the world to me.
     """
@@ -30,57 +32,61 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
     captain """
     Very well.
 
-    Doctor Baldwin and I will go right now then. 
-    
-    I don't want to lose time, darkness will be upon us soon.
+    Doctor Baldwin and I will go at once.
 
-    Hopefully, we'll be back with help tonight.
+    I do not wish to lose time, darkness will be upon us soon.
+
+    With luck, we shall be back with help tonight.
     """
 
     psychic """
-    Very well, we'll wait here. 
-    
+    Very well, we will wait here.
+
     Hopefully nothing will happen until then.
     """
 
     captain """
-    That's decided then.
+    Then it is decided.
 
-    Doctors, let's grab the bare necessities from our room and be on our way.
-    
+    Doctor, let us take the bare necessities from our rooms and be on our way.
+
     The sooner, the better.
     """
-    
+
     $ change_room("forest_road", dissolve)
 
     call change_time(15, 00)
 
     """
-    We picked just a few things to help us for our trip.
+    We took only a few things to help us on the road.
 
-    Most of our luggage remain at the manor, we'll get them back soon enough hopefully.
+    Most of our luggage remains at the manor.
+
+    We shall have it back soon enough, I hope.
     """
 
     doctor """
-    That was a rather fast exit there.
+    That was a rather swift departure.
     """
 
     captain """
-    Perhaps, but we were at an impasse.
+    Perhaps.
 
-    I don't think we could have learn more by staying.
+    But we were at an impasse.
 
-    There was no point at delaying the inevitable.
+    I do not believe we would have learned more by staying.
 
-    Plus, the night will be upon us in a short time, we shouldn't waste anytime.
+    There was no point in delaying the inevitable.
+
+    Night will be upon us before long, and we must not waste a moment.
     """
 
     doctor """
-    Right.
+    Indeed.
     """
 
     """
-    So we walked at a very fast pace, hoping to reach the town before dark.
+    We set off at a brisk pace, hoping to reach the town before dark.
     """
 
     call wait_screen_transition
@@ -94,45 +100,51 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
     if doctor_details.threads.is_unlocked('book_opium'):
 
         """
-        If I had been at my best, I might have been able to follow Captain Sinha.
+        If I had been at my best, I might have kept up with Captain Sinha.
 
-        But my withdrawal symptoms are at their peak, so I am walking at a dreadfully slow pace.
+        But my withdrawal is at its peak, and my pace is wretchedly slow.
 
-        If Sushil tried to motivate me at first, he grew tired of waiting for me.
+        He tried to encourage me at first.
 
-        He is now way ahead of me, and with darkness upon me, I can barely see him in the distance.
+        Soon enough, he grew tired of waiting.
+
+        He is now well ahead, and with darkness drawing in, I can barely make him out in the distance.
         """
-        
+
         call doctor_day3_afternoon_captain_escape_hear_car
 
         """
-        It doesn't stop.
+        It does not slow.
 
-        It's coming full speed towards me.
+        It is coming at full speed towards me.
 
-        Haven't they see me?
+        Have they not seen me?
 
-        I turn back and try to run.
+        I turn and try to run.
 
         But I am too weak.
 
-        I fall on the ground.
+        My legs give way, and I fall hard to the ground.
 
-        I look at the the car and it's speed as online increased.
+        I look back at the car.
+
+        It only seems to be gaining speed.
 
         I brace for impact.
         """
 
         jump doctor_ending_run_over
-    
+
     else:
 
         """
-        If Sushil Sinha is tired as well he is not showing it, so I don't dare asking him to slow down.
+        If Captain Sinha is tired as well, he does not show it.
 
-        I will have to suffer until we reach the town.
+        I do not dare ask him to slow down.
 
-        Hopefully in won't be too long now.
+        I will have to endure until we reach the town.
+
+        Hopefully it will not be much longer now.
         """
 
         call doctor_day3_afternoon_captain_escape_hear_car
@@ -140,9 +152,9 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
         stop sound
 
         """
-        It stops right next to us.
+        It stops right beside us.
 
-        I can see who is driving so I approach the drive seat, hoping to see a familiar face.
+        I can't see the driver, so I step closer, hoping to find a familiar face.
         """
 
         play sound gun
@@ -151,23 +163,27 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
 
 
 label doctor_day3_afternoon_captain_escape_hear_car:
-            
+
     """
-    I think I am hearing something in the distance.
+    I think I can hear something in the distance.
     """
 
     play sound car_driving fadein 4 loop
 
     """
-    It sounds like a car, and it's coming from behind.
+    It sounds like a motor car.
 
-    Could it be that the others found a way out finally?
-    
-    I turn around and I think I recognize Lady Claythorn's car.
+    It is coming from behind.
+
+    Could it be that the others finally found a way out?
+
+    I turn around.
+
+    I think I recognise Lady Claythorn's car.
 
     I wave at it.
     """
-        
+
     return
 
 
