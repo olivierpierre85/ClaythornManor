@@ -43,9 +43,11 @@ label init_debug:
     call unlock_doctor
     $ doctor_details.load_manual_checkpoints()
 
-    # $ current_character = broken_details
-    # $ current_storyline = broken_details
-    # call unlock_broken
+    $ current_character = broken_details
+    $ current_storyline = broken_details
+    call unlock_broken
+    # TODO check where to put this
+    $ broken_name = "Archibald Moody"
 
     $ hide_notifications = False
 
@@ -84,9 +86,10 @@ label unlock_lad:
 
     $ lad_details.description_hidden.unlock('age')  # "22 years old - which means he was merely 15"
     $ lad_details.description_hidden.unlock('origin')  # "Birmingham"
-    $ lad_details.description_hidden.unlock('poor')  # "a wealthy family, nor even a decent one"
-    # $ lad_details.description_hidden.unlock('childhood')  # "he doesn't have a family at all; he was raised in an orphanage"
-    # $ lad_details.description_hidden.unlock('education')  # "the best education, and, like a large number of individuals from similar backgrounds, he can barely read"
+    $ lad_details.description_hidden.unlock('poor')  
+    $ lad_details.description_hidden.unlock('childhood')  
+    $ lad_details.description_hidden.unlock('adopted')  
+    $ lad_details.description_hidden.unlock('education')  
     $ lad_details.description_hidden.unlock('job')  # "on the 'informal sector' for employment"
     $ lad_details.description_hidden.unlock('thief')  # "sometimes means being on the wrong side of the law"
     $ lad_details.description_hidden.unlock('heroic_act')  # "saving a young infant from a burning building. This act of heroism made him the subject of a newspaper article"
@@ -141,6 +144,7 @@ label unlock_broken:
     $ broken_details.description_hidden.unlock('mask')
     $ broken_details.description_hidden.unlock('age')
     $ broken_details.description_hidden.unlock('background') 
+    $ broken_details.description_hidden.unlock('tall')     
     $ broken_details.description_hidden.unlock('job') 
     $ broken_details.description_hidden.unlock('heroic_act')
     $ broken_details.description_hidden.unlock('city')

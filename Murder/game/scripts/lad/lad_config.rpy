@@ -217,7 +217,8 @@ label init_lad:
             CharacterInformation(0, "age", "22 years old - which means he was merely 15"),
             CharacterInformation(0, "origin", "Birmingham"), 
             CharacterInformation(0, "poor", "a wealthy family, nor even a decent one", is_important = True),
-            CharacterInformation(0, "childhood", "he doesn't have a family at all; he was raised in an orphanage", is_important = True),# LAST ONE!!!!!
+            CharacterInformation(0, "childhood", "he was raised in an orphanage until he was 12 years old", is_important = True),
+            CharacterInformation(0, "adopted", "he was adopted by a wealthy family.", is_important = True), # LAST ONE!!!!!
             CharacterInformation(0, "education", "the best education, and, like a large number of individuals from similar backgrounds, his reading skills are minimal", is_important = True),
             CharacterInformation(0, "job", "on the 'informal sector' for employment", is_important = True), 
             CharacterInformation(0, "thief", "sometimes means being on the wrong side of the law", is_important = True), 
@@ -231,7 +232,8 @@ label init_lad:
         # Keep for easy Reading
         # lad_description_full_complete = """
         # A good-looking young lad, he is only "22 years old - which means he was merely 15" at the end of the war.
-        # Born and raised in "Birmingham", we can't say he comes from "a wealthy family, nor even a decent one". In fact, "he doesn't have a family at all; he was raised in an orphanage".
+        # Born and raised in "Birmingham", we can't say he comes from "a wealthy family, nor even a decent one". In fact, "he was raised in an orphanage until he was 12 years old".
+        # 
         # His childhood didn't offer him "the best education, and, like a large number of individuals from similar backgrounds, his reading skills are minimal".
         # That is also why he had to rely "on the 'informal sector' for employment," and as everyone knows, this "sometimes means ending up on the wrong side of the law."
         # One day, he found himself in the right place at the right moment and, against all odds, did the right thing by "saving an infant from a burning building. This act of heroism made him the subject of a newspaper article," which was enough for Lady Claythorn to invite him to her manor. What was omitted from the article is that he actually wasn't there by chance; he was instead robbing the place and even set it on fire by accident.
@@ -241,7 +243,7 @@ label init_lad:
         lad_description_full = """
         A good-looking young lad, he is only <info:age> at the end of the war.
         Born and raised in <info:origin>, we can't say he comes from <info:poor>. In fact, <info:childhood>.
-        His childhood didn't offer him <info:education>.
+        Luckily, <info:adopted>, but it was too late to give him <info:education>.
         That is also why he had to rely <info:job>, and as everyone knows, this <info:thief>.
         One day, he found himself in the right place at the right moment and, against all odds, did the right thing by <info:heroic_act>, which was enough for Lady Claythorn to invite him to her manor.
         What was omitted from the article is that <info:lie>.

@@ -36,9 +36,11 @@ label broken_introduction:
 
     I search about his place and found nothing that was not a necessity.
 
-    There is a picture of us when we were kids, the caption reads: Thomas and Archibald spring 1870??)
+    On his desk is a picture of us when we were teens, the caption reads: Thomas and Archie spring 1892).
 
-    And a letter sits on his desk.
+    We were inseparable back then, two brothers who were also best friends.
+
+    Next to the picture sits a letter.
 
     Well he won't might me reading it now.
 
@@ -53,17 +55,27 @@ label broken_introduction:
     I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Bravery Award".
     """
 
-    # call change_time(14, 00, 'Arrival', 'Friday', hide_minutes=True, chapter='friday_afternoon')
+    call change_time(14, 00, 'Arrival', 'Friday', hide_minutes=True, chapter='friday_afternoon')
 
-    # call black_screen_transition("", "Archibald Moody")
+    call black_screen_transition("{s}Thomas Moody{/s}", "Archibald Moody")
 
-    # $ change_room("train_inside")
+    $ change_room("train_inside")
 
-    # play sound train_moving loop
+    play sound train_moving loop
 
-    # $ play_music('chill')
+    $ play_music('chill')
 
+    """
+    I am still not sure what I am doing here.
 
+    In my hand rest my brother's mask.
+    
+    ...
+    """
+
+    broken """
+    test
+    """
 
 
 
