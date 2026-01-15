@@ -345,15 +345,9 @@ label doctor_day3_afternoon_captain_escape_with_psychic:
     My mind went at once to Andrew.
 
     What could have become of him?
-    """
 
-    """
     They had found nothing to explain where Lady Claythorn and the staff had gone.
-    """
 
-    call wait_screen_transition
-
-    """
     In the days that followed, the police contacted the families of the missing guests.
 
     We were asked to remain nearby for a short while.
