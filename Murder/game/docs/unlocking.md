@@ -17,5 +17,6 @@ graph TD;
     captain -->|is not nobility| host;
     drunk -->|full confession| host;
     broken -->|TODO| drunk;
+    broken -->|Secret Basement| host;
     host -->|Final info| lad;
 ```
