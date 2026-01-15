@@ -311,6 +311,8 @@ label doctor_day3_afternoon_captain_escape_with_psychic:
 
     $ change_room("police_station", irisin)
 
+    $ stop_music()
+
     """
     We entered in a rush, calling for help.
 
@@ -324,6 +326,8 @@ label doctor_day3_afternoon_captain_escape_with_psychic:
     """
 
     call wait_screen_transition
+
+    $ play_music('end_credits')
 
     """
     A couple of hours later, they returned.
