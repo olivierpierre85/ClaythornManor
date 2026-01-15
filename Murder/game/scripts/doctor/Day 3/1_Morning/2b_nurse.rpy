@@ -4,33 +4,123 @@ label doctor_day3_morning_nurse:
     $ change_room('bedroom_nurse', irisout)
 
     """
-    I wake up to the soft sound of someone moving around the room.
+    I wake up to the soft sound of someone entering the room.
     
-    Miss Marsh is already up, peeking through the slightly ajar door.
+    Miss Marsh is coming in.
     """
 
     nurse """
-    Shh. They are moving.
+    I just come from the dinner room, it's empty.
+
+    In fact I didn't see anyone anywhere.
+
+    No staff at all.
+    """
+
+    doctor """
+    How is it possible?
+
+    Where could everyone has gone?
+
+    That doesn't make sense.
+    """
+
+    nurse """
+    I don't know but it is indeed very suspicious.
+
+    We were right to be cautious, something weird is definitely happening here.
+    """
+
+    doctor """
+    But what should we do then?
+
+    Should we ....
+    """
+
+    nurse """
+    Shh. I hear someone coming.
     """
 
     """
+    She puts her ear to the door.
+
     I get up quietly and join her.
-    
-    From our vantage point, we can see the hallway.
     """
 
-    # You hide with her while observing the rest of the gang. Ted Harring and Amelia Baxter the two of them. Captain Sinha alone
-    
     """
-    Ted Harring and Amelia Baxter are walking together, talking in low voices.
-    
-    They seem inseparable now.
-    
-    Captain Sinha follows some time later, alone. He looks tense.
+    We hear two people walking together, talking in low voices.
+
+    I recognise Ted Harring and Amelia Baxter.
+
+    After they have passed, Rosalind Marsh confirms it.
     """
 
-    # you notice she is good at it. It might not be the first time she is doing it.
+    nurse """
+    Ted Harring and Amelia Baxter.
+
+    What are they doing here? There is no reason for them pass by my door.
+
+    I don't like this.
+    """
+
+    doctor """
+    Maybe they're just looking for the staff.
+
+    They must be as surprised as we are.
+    """
+
+    nurse """
+    Maybe, but I don't know.
+
+    It could be something else entirely.
+
+    I don't really trust those two.
     
+    I prefer if we avoided them at the moment.
+    """
+
+    doctor """
+    If it helps keeping your mind at ease why not.
+
+    But what should we do instead?
+    """
+
+    nurse """
+    Well, we can't stay in this room.
+
+    They might come looking here eventuelly.
+    """
+
+    doctor """
+    So what do you propose?
+    """
+
+    nurse """
+    I know a place where we can hide for a while until we know more.
+    """
+
+    doctor """
+    Very well. Were are we heading?
+    """
+
+    nurse """
+    Come with me, I'll show you.
+    """
+
+    """
+    Without waiting for an answer she slightly opens the door and take a peek outside.
+    """
+
+    nurse """
+    The hallway is clear, come with me.
+    """
+
+    doctor """
+    Fine.
+    """
+
+
+    # TODO run into cap sinha and hide
     """
     I glance at Miss Marsh. 
     
