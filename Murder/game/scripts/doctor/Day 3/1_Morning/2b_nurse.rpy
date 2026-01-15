@@ -10,7 +10,7 @@ label doctor_day3_morning_nurse:
     """
 
     nurse """
-    I just come from the dinner room, it's empty.
+    I've just come from the dinner room, it's empty.
 
     In fact I didn't see anyone anywhere.
 
@@ -20,13 +20,13 @@ label doctor_day3_morning_nurse:
     doctor """
     How is it possible?
 
-    Where could everyone has gone?
+    Where could everyone have gone?
 
     That doesn't make sense.
     """
 
     nurse """
-    I don't know but it is indeed very suspicious.
+    I don't know, but it is indeed very suspicious.
 
     We were right to be cautious, something weird is definitely happening here.
     """
@@ -34,7 +34,7 @@ label doctor_day3_morning_nurse:
     doctor """
     But what should we do then?
 
-    Should we ....
+    Should we...
     """
 
     nurse """
@@ -58,7 +58,7 @@ label doctor_day3_morning_nurse:
     nurse """
     Ted Harring and Amelia Baxter.
 
-    What are they doing here? There is no reason for them pass by my door.
+    What are they doing here? There is no reason for them to pass by my door.
 
     I don't like this.
     """
@@ -80,7 +80,7 @@ label doctor_day3_morning_nurse:
     """
 
     doctor """
-    If it helps keeping your mind at ease why not.
+    If it helps keep your mind at ease, why not.
 
     But what should we do instead?
     """
@@ -88,7 +88,7 @@ label doctor_day3_morning_nurse:
     nurse """
     Well, we can't stay in this room.
 
-    They might come looking here eventuelly.
+    They might come looking here eventually.
     """
 
     doctor """
@@ -100,7 +100,7 @@ label doctor_day3_morning_nurse:
     """
 
     doctor """
-    Very well. Were are we heading?
+    Very well. Where are we heading?
     """
 
     nurse """
@@ -108,53 +108,119 @@ label doctor_day3_morning_nurse:
     """
 
     """
-    Without waiting for an answer she slightly opens the door and take a peek outside.
+    Without waiting for an answer she slightly opens the door and takes a peek outside.
     """
 
     nurse """
-    The hallway is clear, come with me.
+    The hallway is clear. Come with me.
     """
 
     doctor """
     Fine.
     """
 
-
-    # TODO run into cap sinha and hide
     """
-    I glance at Miss Marsh. 
-    
-    She is perfectly still, her breathing shallow and controlled. 
-    
+    We make it only a few steps before we hear another set of footsteps.
+
+    Miss Marsh pulls me into a narrow recess beside a service door.
+
+    I press my back against the cold wood, holding my breath.
+
+    Captain Sinha appears in the corridor, moving with quiet purpose.
+
+    He pauses for a moment, as if listening, then continues on his way downstairs.
+
+    I glance at Miss Marsh.
+
+    She is perfectly still, her breathing shallow and controlled.
+
     She knows exactly how to make herself invisible.
-    
+
     It is impressive, and slightly unsettling.
-    
+
     It feels like this is not the first time she has had to hide like this.
+
+    When the danger is over, she signals for me to follow her.
+
+    We take a flight of stairs up to the attic.
     """
 
-    # You observe them when they finally meet and settle in the tea room. The nurse convinces you to wait to see what will happen.
+    $ change_room('attic_hallway')
 
     nurse """
-    They are heading downstairs. To the tea room, I assume.
+    Perfect. There is a room here I can lock.
+
+    I don't think they would look here.
     """
 
     doctor """
-    Should we join them?
+    Interesting, how did you get the key to this room?
+    """
+
+    """
+    She doesn't answer and just turns the key.
+    """
+
+    play sound door_open
+
+    nurse """
+    Come on in, Doctor, it's empty.
+    """
+
+    $ change_room('butler_room')
+
+    """
+    I follow her, and she immediately closes the door behind me.
+    """
+
+    play sound door_locked
+
+    nurse """
+    We should sit tight here for a bit.
+
+    My guess is that they will try to look everywhere but here.
+
+    In a while, either they'll have found someone or realise we are the only ones left in the Manor.
+
+    We can go check again then.
+    """
+
+    """
+    She thought of everything. I don't think I would have acted that way on my own.
+
+    It's unsettling.
+    """
+
+    doctor """
+    Excuse me, but you didn't answer. How did you get the key to this room?
     """
 
     nurse """
-    Not yet.
-    
-    Let's wait and see what they do. 
-    
-    I want to know if the Captain stays with them or if he goes off on his own.
+    Oh, I found it in the main hall earlier this morning, on a table.
+
+    It's a pass that opens all the doors in the mansion apparently.
+
+    Wherever he went, the butler didn't think he would need his key anymore.
     """
 
+    doctor """
+    Right, so he's probably gone for good then.
     """
-    So we wait.
-    
-    The hours tick by slowly.
+
+    nurse """
+    That's what I think, and the rest of the staff probably went with him.
     """
-    
-    jump doctor_day3_afternoon
+
+    doctor """
+    As well as Lady Claythorn.
+    """
+
+    nurse """
+    Yes, it's very likely.
+    """
+
+    call wait_screen_transition
+
+    call doctor_day3_afternoon
+
+
