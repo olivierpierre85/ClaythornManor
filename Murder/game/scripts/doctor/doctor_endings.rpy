@@ -33,7 +33,7 @@ label doctor_ending_run_over:
 
     If you had more strength, you probably could have outrun it, or at least avoided it.
 
-    Perhaps it was the wrong moment to stop taking drugs.
+    Perhaps you didn't pick the best of times to stop taking drugs.
     """
 
     jump ending_generic

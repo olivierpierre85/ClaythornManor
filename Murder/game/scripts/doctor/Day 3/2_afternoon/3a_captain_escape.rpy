@@ -97,7 +97,11 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
     A couple of hours in, I am exhausted.
     """
 
+
+
     if doctor_details.threads.is_unlocked('book_opium'):
+
+        $ stop_music()
 
         """
         If I had been at my best, I might have kept up with Captain Sinha.
@@ -110,6 +114,8 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
 
         He is now well ahead, and with darkness drawing in, I can barely make him out in the distance.
         """
+
+        $ play_music('danger_short')
 
         call doctor_day3_afternoon_captain_escape_hear_car
 
@@ -125,7 +131,11 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
         But I am too weak.
 
         My legs give way, and I fall hard to the ground.
+        """
 
+        play sound body_fall
+
+        """
         I look back at the car.
 
         It only seems to be gaining speed.
@@ -165,7 +175,7 @@ label doctor_day3_afternoon_captain_escape_without_psychic:
 label doctor_day3_afternoon_captain_escape_hear_car:
 
     """
-    I think I can hear something in the distance.
+    I think I can hear something coming.
     """
 
     play sound car_driving fadein 4 loop
