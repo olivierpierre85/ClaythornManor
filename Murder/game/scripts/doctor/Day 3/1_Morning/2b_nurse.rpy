@@ -221,6 +221,6 @@ label doctor_day3_morning_nurse:
 
     call wait_screen_transition
 
-    call doctor_day3_afternoon
+    jump doctor_day3_afternoon
 
 

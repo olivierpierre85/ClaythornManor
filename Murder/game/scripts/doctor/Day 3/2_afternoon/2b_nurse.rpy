@@ -1,137 +1,87 @@
 label doctor_day3_afternoon_nurse:
 
-    call change_time(12, 00, "Afternoon", "Sunday")
+    $ change_room("butler_room")
 
     nurse """
-    It's been enough time I believe.
+    I believe it has been long enough.
 
-    We should head back downstairs where they settled.
+    We should head back downstairs, and see where the others have settled.
     """
 
-    # doctor """
-    # Should we join them?
-    # """
+    """
+    We climb down from the attic and reach the top of the main staircase.
+    """
 
-    # nurse """
-    # Not yet.
-    
-    # Let's wait and see what they do.
-    # """
+    $ change_room("entrance_hall")
 
+    """
+    From there, we can hear voices coming from the tea room.
 
-    # # Captain Sinha leaves the manor alone
-    
-    # """
-    # Eventually, we see movement again.
-    
-    # Captain Sinha emerges from the tea room.
-    
-    # He is alone.
-    
-    # He heads towards the entrance hall and then out the front door.
-    # """
+    We go down and linger by the doorway, careful not to be seen.
 
-    # nurse """
-    # He is leaving.
-    
-    # Now is our chance.
-    # """
+    We try to make out what they are saying.
+    """
 
-    # # So you and the nurse approach Ted Harring and Amelia Baxter.
+    """
+    We cannot catch every word, but the gist is clear.
 
-    # """
-    # We make our way down to the tea room.
-    # """
+    Captain Sinha intends to leave on his own.
 
-    # $ change_room("tea_room")
+    Ted Harring and Amelia Baxter will wait for him to return with help.
+    """
 
-    # """
-    # Ted Harring and Amelia Baxter are sitting there, looking anxious.
-    
-    # They jump when we enter.
-    # """
+    nurse """
+    I think they are coming.
 
-    # lad """
-    # Doctor! Miss Marsh!
-    
-    # Where have you been? We were worried.
-    # """
+    Quickly.
+    """
 
-    # doctor """
-    # We... were safe.
-    # """
+    """
+    She darts towards the library to hide.
 
-    # psychic """
-    # Safe?
-    
-    # Well, at least you are here now.
-    # """
+    I follow her at once.
+    """
 
-    # """
-    # We sit down with them.
-    
-    # The atmosphere is heavy.
-    # """
-    
-    # # Then the end is close to the ending lad_day3_afternoon_toilet, but with you (doctor balwin) collapsing
+    $ change_room("library", fade)
 
-    # """
-    # But as I sit, a wave of dizziness hits me.
-    
-    # The room seems to tilt.
-    # """
+    nurse """
+    Good.
 
-    # doctor """
-    # I...
-    # """
+    We should be safe in here, for the moment.
+    """
 
-    # """
-    # I try to stand up, but my legs refuse to support me.
-    # """
+    doctor """
+    Very well.
 
-    # lad """
-    # Doctor? Are you alright?
-    # """
+    But what do we do next?
 
-    # """
-    # I collapse back into the chair, then slide to the floor.
-    # """
+    From what we heard, they are no closer to understanding what is happening than we are.
 
-    # nurse """
-    # Doctor!
-    # """
+    It may be safe to speak with them, do you not agree?
+    """
 
-    # """
-    # My vision blurs. 
-    
-    # I can hear voices, but they sound like they are coming from underwater.
-    # """
+    nurse """
+    I am not sure.
 
-    # doctor """
-    # Poison...
-    # """
+    One of them could be lying to the others.
 
-    # """
-    # It is the only explanation.
-    
-    # But how? I haven't eaten anything...
-    
-    # Unless...
-    
-    # The water in the room? Or something earlier?
-    # """
-    
-    # $ doctor_details.endings.unlock('poisoned')
-    # $ doctor_details.add_ending_checkpoint(ending=doctor_details.endings.get_item('poisoned'))
+    Mostly, I am frightened of Captain Sinha.
 
-    # call death_screen_transition
+    I do not think the other two are as dangerous.
 
-    # """
-    # My breath catches in my throat.
-    
-    # Darkness closes in.
-    
-    # I will never know the truth.
-    # """
+    We should at least wait for him to leave.
+
+    After that, I do not know.
+
+    We could remain hidden, and see whether the police come.
+
+    Or we could try to speak to them.
+
+    What do you think?
+    """
+
+    # TODO Choice of hiding pr talk to them.
+    # But you get seen anyway => So only possible ending.
+
 
     jump ending_generic
