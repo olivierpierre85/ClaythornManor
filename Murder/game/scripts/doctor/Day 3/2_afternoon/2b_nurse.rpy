@@ -82,45 +82,55 @@ label doctor_day3_afternoon_nurse:
 
     $ time_left = 1
     call run_menu(TimedMenu("doctor_day3_afternoon_nurse", [
-        TimedMenuChoice("Speak to them in the tea room", "doctor_day3_afternoon_nurse_talk", 0, early_exit=True),
-        TimedMenuChoice("Stay hidden and move carefully", "doctor_day3_afternoon_nurse_hide", 0, early_exit=True),
+        TimedMenuChoice("Speak to them, they look harmless", "doctor_day3_afternoon_nurse_talk", 0, early_exit=True),
+        TimedMenuChoice("Stay hidden, they look dangerous", "doctor_day3_afternoon_nurse_hide", 0, early_exit=True),
     ]))
 
-    return
+    # Now in the kitchen, they prepare dinner like the lad
 
-# TODO rewrite
+    call doctor_day3_afternoon_nurse_kitchen
+
+    jump doctor_ending_poisoned
+
+
 label doctor_day3_afternoon_nurse_talk:
 
     doctor """
     I think we should speak to them.
 
-    We can wait for Captain Sinha to leave if you prefer.
+    We can wait for Captain Sinha to leave, if you would prefer.
     """
 
     nurse """
     All right.
 
-    Let's wait a bit.
+    Let us wait a little.
     """
 
     call wait_screen_transition
 
-    call change_time(12,30)
+    call change_time(12, 30)
 
     """
-    We don't have to wait for long, a few minutes later we hear captain say goodbye.
+    We do not have to wait long.
 
-    Then the main entrance closed.
+    A few minutes later, we hear the Captain say his goodbyes.
+
+    Then the front door closes.
     """
 
     play sound door_close
 
     nurse """
-    Right he left, we can safely approach the other now.
+    Right.
+
+    He has left.
+
+    We can safely approach the others now.
     """
-    
+
     """
-    So we slip out of the library and cross the hall.
+    We slip out of the library and cross the hall.
     """
 
     $ change_room("entrance_hall", dissolve)
@@ -128,7 +138,7 @@ label doctor_day3_afternoon_nurse_talk:
     """
     Ted Harring and Amelia Baxter are still there.
 
-    They look surprised to see us.
+    They look startled to see us.
     """
 
     psychic """
@@ -142,48 +152,60 @@ label doctor_day3_afternoon_nurse_talk:
     lad """
     You two gave us a fright.
 
-    We thought you'd vanished like the others.
+    Thought you'd done a runner like the others.
     """
-
-    doctor """
-    We have been searching.
-
-    Coudln't find anything thouh
-
-    We needed a moment to speak privately, and to consider our next steps.
-
-    I understand Captain Sinha has decided to leave the manor.
-    """
-
-    psychic """
-    He has.
-
-    He says he can make it alone, and that we should not all risk ourselves on the road.
-    """
-
-
 
     nurse """
-    There is another matter.
+    We have been searching the house.
 
-    We have not eaten properly in hours.
+    We did not find anything useful.
 
-    If we are to keep our wits, we should prepare something.
+    We heard the front door close, so we came at once.
+
+    Has someone just left?
     """
 
     psychic """
-    Yes, good idea.
-    
-    We could whip something up.
+    Yes, Captain Sinha.
 
-    That would at leas keep us occupied until the police arrives.
+    He has gone to fetch help.
+
+    He says he can make it alone, and that we should not all risk ourselves on the road.
+
+    So we shall wait for him here.
     """
 
-    """
-    We all head downstairs.
+    nurse """
+    That seems sensible.
+
+    Then we shall wait with you.
     """
 
-    jump doctor_day3_afternoon_nurse_kitchen
+    psychic """
+    All right.
+
+    In the meantime, none of us has eaten properly in hours.
+
+    Since we have little else to do, we ought to prepare something.
+
+    That would at least keep us occupied until the police arrive.
+    """
+
+    nurse """
+    I agree.
+
+    We should go and see what is in the kitchen.
+    """
+
+    psychic """
+    Good idea.
+
+    Let's go.
+    """
+
+
+    return
+
 
 # TODO rewrite
 label doctor_day3_afternoon_nurse_hide:

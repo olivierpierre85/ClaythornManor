@@ -20,6 +20,19 @@ label doctor_ending_escape:
     jump ending_generic
 
 
+label doctor_ending_poisoned:
+    $ doctor_details.endings.unlock('poisoned')
+    $ doctor_details.add_ending_checkpoint(ending=doctor_details.endings.get_item('poisoned'))
+
+    call death_screen_transition
+
+    """
+    You chose to trust, and you paid the price. 
+
+    You were close to the end but you let your guard down.
+    """
+
+    jump ending_generic
 
 label doctor_ending_run_over:
 
