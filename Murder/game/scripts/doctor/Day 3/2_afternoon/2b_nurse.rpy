@@ -86,61 +86,6 @@ label doctor_day3_afternoon_nurse:
         TimedMenuChoice("Stay hidden, they look dangerous", "doctor_day3_afternoon_nurse_hide", 0, early_exit=True),
     ]))
 
-    # Now in the kitchen, they prepare dinner like the lad
-
-    call doctor_day3_afternoon_nurse_kitchen
-
-    jump doctor_ending_poisoned
-
-
-label doctor_day3_afternoon_nurse_talk:
-
-    doctor """
-    I think we should speak to them.
-
-    We can wait for Captain Sinha to leave, if you would prefer.
-    """
-
-    nurse """
-    All right.
-
-    Let us wait a little.
-    """
-
-    call wait_screen_transition
-
-    call change_time(12, 30)
-
-    """
-    We do not have to wait long.
-
-    A few minutes later, we hear the Captain say his goodbyes.
-
-    Then the front door closes.
-    """
-
-    play sound door_close
-
-    nurse """
-    Right.
-
-    He has left.
-
-    We can safely approach the others now.
-    """
-
-    """
-    We slip out of the library and cross the hall.
-    """
-
-    $ change_room("entrance_hall", dissolve)
-
-    """
-    Ted Harring and Amelia Baxter are still there.
-
-    They look startled to see us.
-    """
-
     psychic """
     Doctor?
 
@@ -203,6 +148,65 @@ label doctor_day3_afternoon_nurse_talk:
     Let's go.
     """
 
+    call doctor_day3_afternoon_nurse_kitchen
+
+    jump doctor_ending_poisoned
+
+
+label doctor_day3_afternoon_nurse_wait_captain_leave:
+
+    nurse """
+    All right.
+
+    Let us wait a little.
+    """
+
+    call wait_screen_transition
+
+    call change_time(12, 30)
+
+    """
+    We do not have to wait long.
+
+    A few minutes later, we hear the Captain say his goodbyes.
+
+    Then the front door closes.
+    """
+
+    play sound door_close
+
+    return
+
+
+label doctor_day3_afternoon_nurse_talk:
+
+    doctor """
+    I think we should speak to them.
+
+    We can wait for Captain Sinha to leave, if you would prefer.
+    """
+
+    call doctor_day3_afternoon_nurse_wait_captain_leave
+
+    nurse """
+    Right.
+
+    He has left.
+
+    We can safely approach the others now.
+    """
+
+    """
+    We slip out of the library and cross the hall.
+    """
+
+    $ change_room("entrance_hall", dissolve)
+
+    """
+    Ted Harring and Amelia Baxter are still there.
+
+    They look startled to see us.
+    """
 
     return
 
@@ -217,18 +221,60 @@ label doctor_day3_afternoon_nurse_hide:
 
     There is no point in taking unnecessary risks.
 
-    From what I understand, Captain Sinha is gonna go find help.
+    From what I understand, Captain Sinha is going to find help.
 
-    We can wait hidden until he returns, that's probably the safest course.
+    We can stay concealed until he returns.
+
+    That is probably the safest course.
     """
 
     nurse """
-    Great, I was hoping you would say that.
+    Good.
 
-    We just have to find a safe spot and wait there. 
+    I was hoping you would say that.
+
+    We just have to find a safe spot and wait there.
+
+    But first, let us be certain Captain Sinha has gone.
     """
 
-    jump work_in_progress
+    doctor """
+    Very well.
+    """
+
+    call doctor_day3_afternoon_nurse_wait_captain_leave
+
+    nurse """
+    Right.
+
+    He has left.
+    """
+
+    doctor """
+    All right.
+
+    Let us go then.
+    """
+
+    nurse """
+    Doctor, no.
+
+    The others.
+    """
+
+    """
+    I step out of the library, thinking the entrance hall will be empty.
+
+    But of course Ted Harring and Amelia Baxter are still there, lingering by the front door.
+
+    Bloody hell, what a fool I am.
+
+    Too late to back out now.
+
+    I shall simply have to make the best of it.
+    """
+
+    return
 
 
 label doctor_day3_afternoon_nurse_kitchen:
@@ -401,5 +447,5 @@ label doctor_day3_afternoon_nurse_kitchen:
     Then the light folds in on itself.
     """
 
-    jump doctor_ending_poisoned
+    return
 
