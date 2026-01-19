@@ -30,8 +30,6 @@ label doctor_ending_poisoned:
     You chose to trust, and you paid the price. 
 
     You were close to the end but you let your guard down.
-
-    Carelessly eating something that you didn't prepare yourself, you
     """
 
     jump ending_generic

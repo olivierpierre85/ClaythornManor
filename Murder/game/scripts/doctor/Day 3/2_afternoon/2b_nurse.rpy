@@ -231,12 +231,11 @@ label doctor_day3_afternoon_nurse_hide:
     jump work_in_progress
 
 
-# TODO REWRITE
 label doctor_day3_afternoon_nurse_kitchen:
 
     $ change_room("kitchen", dissolve)
 
-    call change_time(12,30)
+    call change_time(12, 30)
 
     """
     The kitchen is cold, but not abandoned.
@@ -256,50 +255,151 @@ label doctor_day3_afternoon_nurse_kitchen:
     Just enough to keep our strength.
     """
 
-    lad """
-    If there's bread, I'm in.
+    doctor """
+    Very well.
 
-    If there's cheese, I'm in twice.
+    What can I do to help?
     """
 
     psychic """
-    Please do not make jokes.
+    I think Rosalind and I can manage, Doctor.
 
-    Not now.
-    """
-
-    lad """
-    I'm not joking.
-
-    I'm coping.
+    Perhaps you could set the table?
     """
 
     doctor """
-    That is understandable.
+    Certainly.
 
-    Let us be efficient.
+    I shall do that.
+    """
 
-    Rosalind, you know this place better than any of us.
+    psychic """
+    And maybe Mr Harring can go with you?
+    """
 
-    If you can direct us, we will make this quick.
+    lad """
+    Yeah, alright.
+
+    I'll tag along, Doctor.
+    """
+
+    $ change_room("dining_room", dissolve)
+
+    call change_time(14, 00)
+
+    """
+    Ted Harring and I set the table, then he excuses himself.
+
+    I linger a moment, looking at the place where we have eaten for three days.
+
+    It feels oddly grand for just the four of us.
+
+    I cannot help thinking of my own home, and my own table.
+
+    Soon enough, the two ladies join us with our makeshift lunch.
+
+    Ted Harring returns a moment later.
+    """
+
+    psychic """
+    There you are.
+
+    It is not much, but it will see us through the day.
+    """
+
+    doctor """
+    It looks excellent.
+
+    Thank you.
+    """
+
+    """
+    We sit and begin to eat at once.
+
+    I believe we are all famished.
+
+    For a time, we eat without speaking.
+    """
+
+    call wait_screen_transition
+
+    call change_time(15, 0)
+
+    """
+    Halfway through my bread, an odd taste blooms at the back of my tongue.
+
+    Bitter.
+
+    Metallic.
+
+    I pause, chewing more slowly.
+
+    My stomach tightens as if a fist has closed around it.
+
+    I set my knife down carefully, as though the smallest sound might split my skull.
+
+    The room seems to tilt, ever so slightly.
+
+    No.
+
+    Not the room.
+
+    It is me.
+    """
+
+    doctor """
+    Forgive me.
+
+    I feel quite unwell.
+    """
+
+    lad """
+    What?
+
+    Doctor, you alright?
     """
 
     nurse """
-    All right.
+    Doctor?
 
-    Ted, fetch plates and whatever cutlery you can find.
-
-    Amelia, fill the kettle if the tap still runs.
-
-    Doctor, help me check the larder.
+    Daniel, what is it?
     """
 
     """
-    We set to work.
+    Heat rushes through my chest, then drains away at once.
 
-    For a few minutes, the simple tasks dull the edge of fear.
+    My hands have gone cold.
 
-    Yet even here, with our hands busy, I cannot shake the thought that the manor is listening.
+    The edges of my vision darken, as if someone is drawing curtains.
+
+    I try to stand.
+
+    My legs do not answer properly.
+
+    The chair scrapes.
+
+    The sound is far too loud.
+
+    I reach for the table, but my fingers miss the edge.
     """
 
-    return
+    lad """
+    Careful!
+
+    Doctor!
+    """
+
+    """
+    The floor rises to meet me.
+
+    My shoulder strikes first, then my cheek.
+
+    Voices rush in, muffled and distant, as though I am submerged.
+
+    The ceiling swims.
+
+    Then the light folds in on itself.
+    """
+
+    jump doctor_ending_poisoned
+
