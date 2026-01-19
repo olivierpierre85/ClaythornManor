@@ -17,10 +17,13 @@ label common_day3_afternoon_lad_psychic_stay:
     $ change_room('basement_stairs', dissolve)
 
     if current_character.text_id == "lad":
+
         """
-        We were heading to the lower floor when we heard a shout.
+        We are heading to the lower floor when we hear a shout.
         """
+
     else:
+
         """
         On our way to the basement, I hear a familiar voice.
         """   
@@ -58,11 +61,13 @@ label common_day3_afternoon_lad_psychic_stay:
     """
 
     if current_character.text_id == "lad":
+
         """
         We updated her on what happened since this morning.
 
         When we had finished telling her the story, she remained relatively calm, considering the situation.
         """
+
     else:
         # TODO: Add more details or elaborate, since the previous explanation was brief?
         """
@@ -95,11 +100,11 @@ label common_day3_afternoon_lad_psychic_stay:
 
     if current_character.text_id == "lad":
         """
-        And just like that, we headed downstairs to the kitchen.
+        And just like that, we go downstairs to the kitchen.
         """
     elif current_character.text_id == "psychic":
         """
-        So we went downstairs.
+        So we go downstairs.
         """
 
     $ change_room('kitchen', dissolve)

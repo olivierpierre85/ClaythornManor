@@ -207,7 +207,7 @@ label doctor_day3_afternoon_nurse_talk:
     return
 
 
-# TODO rewrite
+# TODO Other ending of fork to poisoned ending?
 label doctor_day3_afternoon_nurse_hide:
 
     doctor """
@@ -215,168 +215,20 @@ label doctor_day3_afternoon_nurse_hide:
 
     Not out of cowardice, but out of prudence.
 
-    If Captain Sinha is leaving, it is best we let him go.
+    There is no point in taking unnecessary risks.
 
-    Then we can decide how to deal with the others.
+    From what I understand, Captain Sinha is gonna go find help.
+
+    We can wait hidden until he returns, that's probably the safest course.
     """
 
     nurse """
-    I was hoping you would say that.
+    Great, I was hoping you would say that.
 
-    Come on.
-
-    I know a way to move without being noticed.
+    We just have to find a safe spot and wait there. 
     """
 
-    """
-    We wait in the library, listening.
-
-    Footsteps cross the hall.
-
-    A door opens, then shuts.
-
-    After a long minute, the house grows quieter.
-    """
-
-    nurse """
-    That will be him.
-
-    Now.
-
-    We go downstairs, softly.
-
-    If we are lucky, they will stay in the tea room.
-    """
-
-    """
-    We slip out of the library and move along the corridor.
-
-    The manor feels even larger when we walk in silence.
-
-    Every creak sounds like an accusation.
-    """
-
-    $ change_room("entrance_hall", dissolve)
-
-    """
-    As we pass the foot of the stairs, a voice calls out, sharp and sudden.
-    """
-
-    psychic """
-    Doctor?
-
-    Nurse?
-
-    Is that you?
-    """
-
-    """
-    I freeze.
-
-    Rosalind does too.
-
-    Amelia Baxter stands in the doorway of the tea room, staring straight at us.
-    """
-
-    lad """
-    You can't just sneak about like that.
-
-    You nearly gave us heart failure.
-    """
-
-    doctor """
-    Miss Baxter.
-
-    Mr Harring.
-
-    Forgive us.
-
-    We were attempting to move quietly, so as not to draw attention.
-
-    This house does not reward noise.
-    """
-
-    psychic """
-    Quietly.
-
-    Yes.
-
-    I imagine it does not.
-
-    Were you listening to us?
-    """
-
-    nurse """
-    We heard voices.
-
-    We did not know who it was.
-
-    We hid out of caution, not malice.
-    """
-
-    lad """
-    Fair enough.
-
-    I can't blame you for that.
-
-    This place is cursed.
-    """
-
-    doctor """
-    Captain Sinha has gone, has he not?
-    """
-
-    psychic """
-    He has.
-
-    He left only a moment ago.
-
-    He told us to wait here, and to be ready when he returns.
-
-    I do not know whether to believe he will.
-    """
-
-    nurse """
-    Then we should make ourselves useful while we wait.
-
-    We need food.
-
-    And we need water.
-
-    We cannot keep going on nerves alone.
-    """
-
-    lad """
-    Thank you.
-
-    Someone sensible at last.
-
-    I'm starving.
-    """
-
-    doctor """
-    The kitchen seems the obvious choice.
-
-    It is central enough, and it will give us something to do.
-
-    Idleness will only invite panic.
-    """
-
-    psychic """
-    All right.
-
-    But we stay together.
-
-    No more disappearing.
-    """
-
-    """
-    We fall into an uneasy group, still wary, but no longer scattered.
-
-    Then we make for the kitchen, with careful steps and watchful eyes.
-    """
-    
-    jump doctor_day3_afternoon_nurse_kitchen
+    jump work_in_progress
 
 
 # TODO REWRITE
