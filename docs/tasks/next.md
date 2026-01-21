@@ -1,19 +1,27 @@
-# 📅 Next Tasks (Daily Driver)
+# 🚀 Active Work & Next Steps
 
-> This file contains the active tasks to pick up for the current sprint/day.
+## IMPORTANT
+- REVIEW THIS DOC COMPARE TO GOOGLE DOC.
 
-## ✍️ Story
-- [ ] Doctor Day 3 Implementation
-- [ ] Test runs for Day 1 Afternoon
+## 📅 Immediate Tasks
+- [ ] **Export Choices**: Find best time to export choices and send for review.
+- [ ] **Testing**: Define paths that test all dialogs.
+- [ ] **Refactor**: Clean "todo.md" into proper docs (Done!).
+- [ ] **Map**: Add "You are here" on the map.
+- [ ] **UI**: Hide hamburger menu after upgrade.
 
-## 🎨 Assets
-- [ ] (Empty - Pull from assets.md)
+## 🔜 Next Phase: Day 3
+- [ ] Music Death.
+- [ ] Nurse Path: More info for poisoned ending (Strychnine).
+- [ ] Menus: Ensure "Next menu" is correct everywhere.
+- [ ] Gun room has a Menu choice Day 3.
 
-## 💻 Tech Changes
-- [ ] Use `renpy.notify` for debug messages
+## 🧪 Experiments
+- [ ] Try to make background using Nano Banane Pro.
+- [ ] Test runs: Melissa start 17h03 -> Survived 17h52.
+- [ ] Locations with characters inside (Experimental).
 
-## ⏳ Projected Timeline
-| Character | Current Day | Predicted End |
-| :--- | :--- | :--- |
-| Doctor | Day 3 | TBD |
-| Nurse | Day 1 | TBD |
+## 📋 General TODO
+- [ ] BETTER retry & TESTing management.
+- [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE).
+- [ ] Clean up `todo.md` (See index).
