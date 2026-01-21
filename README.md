@@ -1,13 +1,24 @@
 # Claythorn Manor (Murder)
 
-**Version:** 0.1
+**Version:** 0.1  
 **Engine:** Ren'Py
 
-## Overview
-This is a Ren'Py visual novel project titled "Claythorn Manor".
+## 📜 Overview
+"Claythorn Manor" is a branching visual novel focused on mystery and deduction. Players navigate a complex web of characters, each with their own agendas and secrets.
 
-## Documentation
-- [Project To-Do List](docs/todo.md)
 
-## Getting Started
-To play the game, run the executable or launch the project via the Ren'Py launcher.
+## 🔗 Quick Links
+
+### 📋 Task Management
+- [� **Next Tasks** (Daily Driver)](docs/next.md) - *Start Here!*
+- [🎨 Assets Backlog](docs/assets.md)
+- [✍️ Story Backlog](docs/story.md)
+- [💻 Tech Backlog](docs/tech.md)
+
+### 📖 Game Design & Lore
+- [🏰 Game Story & Wiki](docs/game_story.md)
+- [🔓 Character Unlock Chart](docs/unlock.md)
+## 🎮 Getting Started
+To play the game or contribute:
+1. Open the project in the **Ren'Py Launcher**.
+2. Run the executable or launch the script.
