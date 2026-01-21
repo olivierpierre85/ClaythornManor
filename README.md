@@ -10,14 +10,14 @@
 ## 🔗 Quick Links
 
 ### 📋 Task Management
-- [� **Next Tasks** (Daily Driver)](docs/next.md) - *Start Here!*
-- [🎨 Assets Backlog](docs/assets.md)
-- [✍️ Story Backlog](docs/story.md)
-- [💻 Tech Backlog](docs/tech.md)
+- [� **Next Tasks** (Daily Driver)](docs/tasks/next.md) - *Start Here!*
+- [🎨 Assets Backlog](docs/tasks/assets.md)
+- [✍️ Story Backlog](docs/tasks/story.md)
+- [💻 Tech Backlog](docs/tasks/tech.md)
 
 ### 📖 Game Design & Lore
-- [🏰 Game Story & Wiki](docs/game_story.md)
-- [🔓 Character Unlock Chart](docs/unlock.md)
+- [🏰 Game Story & Wiki](docs/lore/game_story.md)
+- [🔓 Character Unlock Chart](docs/lore/unlock.md)
 ## 🎮 Getting Started
 To play the game or contribute:
 1. Open the project in the **Ren'Py Launcher**.

@@ -3,13 +3,13 @@
 This file is now an index for the project's documentation.
 
 ## 🚀 Active Work
-- [**docs/next.md**](next.md) - Daily Tasks & Sprints
+- [**docs/tasks/next.md**](tasks/next.md) - Daily Tasks & Sprints
 
 ## 📚 Backlogs
-- [**docs/story.md**](story.md) - Narrative Ideas
-- [**docs/assets.md**](assets.md) - Art & Audio
-- [**docs/tech.md**](tech.md) - Code & Systems
+- [**docs/tasks/story.md**](tasks/story.md) - Narrative Ideas
+- [**docs/tasks/assets.md**](tasks/assets.md) - Art & Audio
+- [**docs/tasks/tech.md**](tasks/tech.md) - Code & Systems
 
 ## 📖 Lore
-- [**docs/game_story.md**](game_story.md) - Design Doc
-- [**docs/unlock.md**](unlock.md) - Unlock Chart
+- [**docs/lore/game_story.md**](lore/game_story.md) - Design Doc
+- [**docs/lore/unlock.md**](lore/unlock.md) - Unlock Chart
