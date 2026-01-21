@@ -16,6 +16,8 @@
 #       - Map visit, 90 minutes
 #       - Generic Doctor, 80 minutes (Tea Room)
 # --------------------------------------------
+
+
 label lad_day1_evening:
 
     call change_time(18, 10, "Evening", "Friday", hide_minutes = True, chapter='friday_evening')
@@ -51,6 +53,10 @@ label lad_day1_evening:
     """
     Well, it's not as if I have multiple changes of clothes anyway. So, I follow him.
     """
+
+
+
+
 
     $ change_room('tea_room')
 

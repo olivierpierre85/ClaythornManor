@@ -15,6 +15,16 @@
 
 label lad_introduction:
 
+    $ renpy.movie_cutscene("cutscenes/entrance_hall_movie_test.webm")
+
+    "I'm feeling quite animated today."
+
+    show entrance_hall_movie_test
+
+    "I'm feeling quite animated today."
+
+    hide entrance_hall_movie_test
+
     call change_time(17,30, 'Afternoon', 'Friday', hide_minutes = True, chapter='friday_afternoon')
 
     call black_screen_transition("", "Ted Harring")
