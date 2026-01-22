@@ -30,5 +30,7 @@ All dead=> Who found them => Unlocks plenty?
 
 - **Attic Knocking** : DOCTOR (and possibly everyone else) in ATTIC, they don’t knock ??? why? Check not weird => Or normal because we are exploring? NO add knocking => Maybe add no need to knock here, it’s for the servants
 
+- Explain that restarting from a chapter doesn't mean all branches are accessibles from there
+
 
 

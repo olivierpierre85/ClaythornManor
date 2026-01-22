@@ -15,7 +15,7 @@
 - [✍️ Story Backlog](docs/tasks/story.md)
 - [💻 Tech Backlog](docs/tasks/tech.md)
 
-# 🏰 Game Story & Lore Index
+### 🏰 Game Story & Lore Index
 
 - [🎭 Character Backgrounds & Relations](docs/game_story/characters.md)
 - [📍 Locations & Objects](docs/game_story/locations.md)
