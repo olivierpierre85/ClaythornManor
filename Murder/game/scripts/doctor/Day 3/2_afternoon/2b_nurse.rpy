@@ -256,15 +256,17 @@ label doctor_day3_afternoon_nurse_hide:
     Let us go then.
     """
 
-    nurse """
-    Doctor, no.
-
-    The others.
-    """
-
     """
     I step out of the library, thinking the entrance hall will be empty.
+    """
 
+    nurse """
+    Doctor, wait,...
+    """
+
+    $ change_room("entrance_hall")
+
+    """
     But of course Ted Harring and Amelia Baxter are still there, lingering by the front door.
 
     Bloody hell, what a fool I am.
