@@ -16,10 +16,10 @@
   - [ ] NEXT : STORY - Ideas to implement from Google drive !! IMPORTANT !! Maybe wait for pro version to ask to rewrite all the backlogs,...
 
 ## Write Story : Day 3 - Doctor
+- [ ] RETRY EVERYTHING - BUT FIRST ALL nurses path
 - [ ] add Music Death.
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).
 - [ ] Menus: Ensure "Next menu" is correct everywhere.
-- [ ] RETRY EVERYTHING
 - [ ] Gun room has a Menu choice Day 3.
 
 ## Proofreading

@@ -1,6 +1,6 @@
 label doctor_day3_afternoon_nurse:
 
-    $ change_room("butler_room")
+    $ change_room("bedroom_nurse")
 
     nurse """
     I believe it has been long enough.
@@ -12,7 +12,7 @@ label doctor_day3_afternoon_nurse:
     We climb down from the attic and reach the top of the main staircase.
     """
 
-    $ change_room("entrance_hall")
+    $ change_room('entrance_hall', dissolve)
 
     """
     From there, we can hear voices coming from the tea room.
@@ -173,7 +173,7 @@ label doctor_day3_afternoon_nurse_wait_captain_leave:
     Then the front door closes.
     """
 
-    play sound door_close
+    play sound door_shut
 
     return
 
