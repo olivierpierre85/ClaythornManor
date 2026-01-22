@@ -34,7 +34,28 @@
 
 ## Psychic
 ### Important
+- [ ] **Minor Day 2 Morning**: Specific other guest for everyone on day 2 evening with captain.
+- [ ] **Day 2 Evening**: Ted Alliance Logic wobbly. Rewrite to keep consistent with Ted Harring Path.
+- [ ] **Refactoring**: Better factorisation of `Common_day3_morning_lad_psychic_journey` and `Psychic_day3_morning_has_not_visited_lad`.
+- [ ] **Day 1 Evening**: Lord path, second visit to portrait gallery/library => Other text when already visited?
 ### Ideas to think over (optional)
+- [ ] **The Lord**:
+    - [ ] More story for the LORD? Add to list of playable characters? (Not easy but doable).
+    - [ ] Need LORD QUESTIONS POSSIBLE.
+- [ ] **Lad Interaction**: Visited LAD is not exploited enough.
+    - [ ] First no differences in the morning day 3?
+    - [ ] Mention the “talk” to your left first even when respected?
+- [ ] **Rooms**: Add the rooms with the obvious choice BUT only if you went there with the Lad first? (Like the choice about the gun).
+- [ ] **Unlockables**: "You left the manor while you could" (`leave_manor`) is used nowhere. Do we really need it?
+- [ ] **Broken Room**: If not enough choices => add important choice "Error enter broken Room" => add macabre scene? (Replace `day2_has_seen_bedroom_broken`?).
+- [ ] **Captain Sinha**: Be rude to him? Lead to an ending where he doesn’t want to go out with her?
+- [ ] **Ted Harring**:
+    - [ ] If you didn’t approach him, he’ll leave you alone? Then and only then you could escape?
+    - [ ] Rewrite dialogs with Ted Harring?
+    - [ ] When there is an alliance vs when there isn't => maybe another conclusion or option?
+- [ ] **Mrs Baxter**: Make sure she was married. If yes, replace every Miss to Mrs Baxter.
+- [ ] **Meta Logs**: For the Psychic, replace the logs with **“She talks to herself”** while talking to the lord? **YES VERY technical but also very cool**
+- [ ] **Burning Ending**: Problem with music transition => SLOW down text? Add pauses?
 
 ## Doctor
 - [ ] Add 1 or 2 times where doc takes drugs on day 3.

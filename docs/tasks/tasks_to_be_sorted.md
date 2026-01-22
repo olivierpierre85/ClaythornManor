@@ -35,3 +35,4 @@ All dead=> Who found them => Unlocks plenty?
 - Doctor Car crash  end. Add better sound when killed
 
 
+- [ ] **Choices**: Dinner and other multiple generic choices: Keep alive or not? If not player can be frustrated but maybe we lose immersion with it.
