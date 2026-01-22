@@ -2,31 +2,29 @@
 
 ## Asset generations AI Masterplan
 ### Locations
-Redraw all location, from current map.
-Add a Time for each location (day, night), should be automated when change room
- Find a style explanation that will work everytime
+- Redraw all location, from current map.
+- Add a Time for each location (day, night), should be automated when change room
+ - Find a style explanation that will work everytime
 ### Characters
-From their heads, create full size avatar in the style. Also redraw the head with new style and add all needed expressions: Scared, amused, sad,....
+- From their heads, create full size avatar in the style. Also redraw the head with new style and add all needed expressions: Scared, amused, sad,....
+- Maybe have their side head of people out of the frame (like in “see how they run movie”)
 
 ### Locations with characters inside (Experimental)
-Once we have locations and character, use whisk to put full size characters inside the locations.
+- Once we have locations and character, use whisk to put full size characters inside the locations.
 Do it for all possibilities ( dining room with less and less persons as the time goes by,...)
 
 ### Animations
 
-Make small movies with meaningful transitions : car arrival to manor with thunder in the background. Violent death/
-Note need to turn mp4 into webdm. A video is about 3 mb. (HOw many do I need before it begins too much? A think even 100 videos should be ok.
+- Make small movies with meaningful transitions : car arrival to manor with thunder in the background. Violent death/
+- Note need to turn mp4 into webdm. A video is about 3 mb. (HOw many do I need before it begins too much? A think even 100 videos should be ok.
 
 ### Maps 
-When ALL rooms in the game are defined, create sensical maps. May need to redraw door on certain locations, that should take too long start making maps in the exact same style (not that easy)
+- When ALL rooms in the game are defined, create sensical maps. May need to redraw door on certain locations, that should take too long start making maps in the exact same style (not that easy)
 
 ### (Optional) One Style by character
 If enough time and money, each character should have a different style of room. That means 8 times each location. That's quite a lot of work
 
-## 🖼️ Images
-- [ ] **AI Generation**: See Masterplan
-- [ ] Redraw Billiard Room.
-- [ ] "Day 1" Nurse sprite variations.
+## 🖼️ Images next
 - [ ] Servant Stairs: Make better image.
 
 ## 🔊 Music / Sound
@@ -37,18 +35,20 @@ If enough time and money, each character should have a different style of room. 
 - [ ] **Music**: Download AVIA copyright (50 for 1 month)
 
 ## 🗺️ Map Assets
+- [ ] TODO
+
+## 📽️ Video/Media
+- [ ] TODO
+
+
+## (obsolete) Current Map 
+
 - [ ] Dungeon Scrawl map generator (link).
 - [ ] Fix alignment for Elisabeth and others.
 - [ ] Drop wall shadows.
 - [ ] Add Manor name on the right.
 - [ ] Remove too many doors for the downstairs servants stairs.
-
-## 📽️ Video/Media
-- [ ] Turn MP4 into WebM (Video is about 3MB).
-- [ ] Make small movies with meaningful transitions.
-
-
-## Current (obsolete) Map
+- [ ] 
 Map
 
 
@@ -60,7 +60,7 @@ C:\Users\arthu\Documents\VisualNovelProject\Murder\game\images\ui\map\dungeon.ds
 INSENSITIVE = -80% Brightness (+- So maybe redo all of them when you have time?)
 
 
-## Current (obsolete) Faces expression for characters
+## (obsolete)  Current Faces expression for characters 
 
 
 | Character | Neutral | Angry | Scared / Surprised | Happy |  Sad  |
