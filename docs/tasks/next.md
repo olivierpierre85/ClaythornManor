@@ -4,8 +4,11 @@
 - REVIEW THIS DOC COMPARE TO GOOGLE DOC.
 
 ## 📅 Immediate Tasks
-- [ ] **Export Choices**: Find best time to export choices and send for review.
-- [ ] **Testing**: Define paths that test all dialogs.
+- [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
+-  **Testing**: Define paths that test all dialogs for the first 3 character
+    - [ ] Doctor
+    - [ ] Lad
+    - [ ] Psychic
 - [ ] **Refactor**: Clean "todo.md" into proper docs (Done!).
 - [ ] **Map**: Add "You are here" on the map.
 - [ ] **UI**: Hide hamburger menu after upgrade.

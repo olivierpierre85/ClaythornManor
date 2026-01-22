@@ -18,6 +18,7 @@
 ### 📖 Game Design & Lore
 - [🏰 Game Story & Wiki](docs/lore/game_story.md)
 - [🔓 Character Unlock Chart](docs/lore/unlock.md)
+- [ Test Runs](docs/lore/test_runs.md)
 ## 🎮 Getting Started
 To play the game or contribute:
 1. Open the project in the **Ren'Py Launcher**.
