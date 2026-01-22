@@ -228,7 +228,7 @@ images\locations\dining_room.png
 images\locations\forest.png
 images\locations\forest_road.png
 images\locations\garage.png
-images\locations\great_hall.png
+images\locations\entrance_hall.png
 images\locations\gun_room.png
 images\locations\hallway.png
 images\locations\inside_car.png

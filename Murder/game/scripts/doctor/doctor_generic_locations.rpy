@@ -102,7 +102,7 @@ label doctor_billiard_room_default:
 
 label doctor_entrance_hall_default:
     
-    $ change_room("great_hall")
+    $ change_room("entrance_hall")
     
     """
     I feel compelled to take another look at this entrance hall.

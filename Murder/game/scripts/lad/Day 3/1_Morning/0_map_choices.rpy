@@ -442,7 +442,7 @@ label lad_day3_morning_garden:
 
 label lad_day3_morning_entrance_hall:
 
-    $ change_room("great_hall")
+    $ change_room("entrance_hall")
     
     """
     The entrance hall is usually the heart of the house.

@@ -459,7 +459,7 @@ label lad_day3_afternoon_no_toilet:
 
     # TODO: Consider other ending? If the nurse has a gun and I don't, she shoots me
 
-    $ change_room("great_hall")
+    $ change_room("entrance_hall")
 
     """
     I sprint to the entrance hall and make a break for the door.

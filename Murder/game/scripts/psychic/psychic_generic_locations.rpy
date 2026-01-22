@@ -88,7 +88,7 @@ label psychic_garden_default:
 
 label psychic_entrance_hall_default:
     
-    $ change_room("great_hall")
+    $ change_room("entrance_hall")
     
     """
     A very nice great hall.

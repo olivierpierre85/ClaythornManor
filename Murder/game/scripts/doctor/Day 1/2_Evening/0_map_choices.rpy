@@ -289,7 +289,7 @@ label doctor_day1_evening_dining_room:
 
 label doctor_day1_evening_garden:
 
-    $ change_room('great_hall')
+    $ change_room('entrance_hall')
 
     """
     From the great hall, I am ready to go and have a look outside.

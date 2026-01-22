@@ -40,7 +40,7 @@ label psychic_day3_afternoon_escape:
 
     pause 1.0
 
-    $ change_room('great_hall', dissolve)
+    $ change_room('entrance_hall', dissolve)
 
     # TODO on her room there is Rosalind Marsh, she stabs her. NEW SCENE WHEN ENDING REACHED
     # TODO change grab what I need by something implying I killed Rosalind Marsh

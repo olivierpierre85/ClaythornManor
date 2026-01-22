@@ -62,7 +62,7 @@ label psychic_day1_evening_downstairs_default:
 
 label psychic_day1_evening_garden:
 
-    $ change_room('great_hall')
+    $ change_room('entrance_hall')
     
     """
     I reach the large hall and prepare to open the door.

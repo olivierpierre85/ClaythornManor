@@ -23,7 +23,7 @@ label doctor_day2_evening:
     
     call black_screen_transition("Daniel Baldwin", chapters_names[current_chapter])
 
-    $ change_room("great_hall", irisout)
+    $ change_room("entrance_hall", irisout)
 
     $ play_music('sad')
 

@@ -22,7 +22,7 @@ label psychic_day2_evening:
     
     call black_screen_transition("Amelia Baxter", chapters_names[current_chapter])
 
-    $ change_room("great_hall", irisout)
+    $ change_room("entrance_hall", irisout)
     
     """
     I observe the hunting party as they make their way into the house.

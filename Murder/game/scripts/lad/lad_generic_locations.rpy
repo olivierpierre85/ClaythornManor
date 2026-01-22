@@ -353,7 +353,7 @@ label lad_bedroom_default:
 
 label lad_entrance_hall_default:
     
-    $ change_room("great_hall")
+    $ change_room("entrance_hall")
     
     """
     It's certainly an impressive entrance hall.

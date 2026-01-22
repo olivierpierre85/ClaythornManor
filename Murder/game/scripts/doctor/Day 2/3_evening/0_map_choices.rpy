@@ -184,7 +184,7 @@ label doctor_day2_evening_dining_room:
 
 label doctor_day2_evening_garden:
 
-    $ change_room('great_hall')
+    $ change_room('entrance_hall')
 
     """
     I walk to the door that opens on to the garden.

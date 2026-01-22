@@ -22,7 +22,7 @@ label psychic_day1_evening:
 
     call black_screen_transition("Amelia Baxter", chapters_names[current_chapter])
 
-    $ change_room('great_hall', dissolve)
+    $ change_room('entrance_hall', dissolve)
     
     $ play_music('upbeat')
 

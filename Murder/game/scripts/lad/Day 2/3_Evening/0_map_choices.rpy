@@ -119,7 +119,7 @@ label lad_day2_evening_dining_room:
 
 label lad_day2_evening_garden:
 
-    $ change_room('great_hall')
+    $ change_room('entrance_hall')
 
     """
     I open the door to go to the garden.

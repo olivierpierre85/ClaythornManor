@@ -114,7 +114,7 @@ label psychic_day2_evening_garden:
 
     # TODO replace by garden at night and dark contemplation ?
 
-    $ change_room('great_hall')
+    $ change_room('entrance_hall')
     
     """
     I reach the large hall and prepare to open the door.
