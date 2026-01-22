@@ -20,22 +20,21 @@ Note need to turn mp4 into webdm. A video is about 3 mb. (HOw many do I need bef
 ### Maps 
 When ALL rooms in the game are defined, create sensical maps. May need to redraw door on certain locations, that should take too long start making maps in the exact same style (not that easy)
 
+### (Optional) One Style by character
+If enough time and money, each character should have a different style of room. That means 8 times each location. That's quite a lot of work
+
 ## 🖼️ Images
-- [ ] **AI Generation**: Masterplan (Redraw all locations from current map).
-- [ ] **Characters**: Create full size avatars from heads. Add expressions (Scared, Amused, Sad).
-- [ ] **Scenes**: Locations with characters inside (using Whisk/editing).
-- [ ] **Animation**: Small movies for transitions (Car arrival, violent death).
-- [ ] **Map**: Create sensical maps when all rooms defined.
+- [ ] **AI Generation**: See Masterplan
 - [ ] Redraw Billiard Room.
 - [ ] "Day 1" Nurse sprite variations.
 - [ ] Servant Stairs: Make better image.
 
 ## 🔊 Music / Sound
-- [ ] **Intro**: Add song for intro screen (Mysterious or end credits?).
 - [ ] **SFX**: Better gun sound.
-- [ ] **SFX**: Snore noise for Sam Manning.
+- [ ] **SFX**: Snore noise for Sam Manning and pretend snore for lad.
 - [ ] **SFX**: Better sound for CLOCK rotating.
 - [ ] **Music**: Check every music choice (Hunt, Ending, Speed run).
+- [ ] **Music**: Download AVIA copyright (50 for 1 month)
 
 ## 🗺️ Map Assets
 - [ ] Dungeon Scrawl map generator (link).
@@ -47,3 +46,36 @@ When ALL rooms in the game are defined, create sensical maps. May need to redraw
 ## 📽️ Video/Media
 - [ ] Turn MP4 into WebM (Video is about 3MB).
 - [ ] Make small movies with meaningful transitions.
+
+
+## Current (obsolete) Map
+Map
+
+
+Manor MAP generator
+https://probabletrain.itch.io/dungeon-scrawl
+
+C:\Users\arthu\Documents\VisualNovelProject\Murder\game\images\ui\map\dungeon.ds
+
+INSENSITIVE = -80% Brightness (+- So maybe redo all of them when you have time?)
+
+
+## Current (obsolete) Faces expression for characters
+
+
+| Character | Neutral | Angry | Scared / Surprised | Happy |  Sad  |
+| --------- | :-----: | :---: | :----------------: | :---: | :---: |
+| lad       |         |   x   |         x          |       |       |
+| psychic   |    x    |   x   |                    |       |       |
+| nurse     |    x    |   -   |         x          |       |       |
+| maid      |         |   -   |         x          |       |       |
+| host      |         |   -   |         x          |   x   |       |
+| footman   |    x    |   x   |         x          |       |       |
+| drunk     |    x    |       |         –          |   x   |       |
+| butler    |    x    |   x   |         x          |       |       |
+| captain   |         |       |                    |       |       |
+| doctor    |    x    |   x   |         x          |       |       |
+| broken    |         |       |                    |       |       |
+| Lord?     |    x    |       |         x          |       |       |
+
+
