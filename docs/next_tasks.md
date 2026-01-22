@@ -13,7 +13,7 @@
 ## IMPORTANT
 - [ ] REVIEW THIS DOC COMPARE TO GOOGLE DOC.
   - [x] Next page 
-  - [ ] NEXT : STORY - Ideas to implement from Google drive !! IMPORTANT !! Maybe wait for pro version to ask to rewrite all the backlogs,... 
+  - [ ] NEXT : STORY - Ideas to implement from Google drive !! IMPORTANT !! Maybe wait for pro version to ask to rewrite all the backlogs,...
 
 ## Write Story : Day 3 - Doctor
 - [ ] add Music Death.

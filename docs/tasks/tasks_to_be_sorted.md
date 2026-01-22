@@ -1,4 +1,4 @@
-## From NEXT
+## From NEXT TO STORY Ideas to implement
 
 - [ ] **Map**: Add "You are here" on the map.
 
@@ -32,5 +32,6 @@ All dead=> Who found them => Unlocks plenty?
 
 - Explain that restarting from a chapter doesn't mean all branches are accessibles from there
 
+- Doctor Car crash  end. Add better sound when killed
 
 
