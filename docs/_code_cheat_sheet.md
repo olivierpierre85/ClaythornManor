@@ -1,3 +1,4 @@
+```
 # Generic choice specific for one char
 if current_character.text_id == "lad":
 
@@ -50,3 +51,5 @@ ICON choices
 
 # REPLACEMENT SCRIPT
 python .\bulk_sentence_replace_triple.py game/scripts .\replacements.tsv --no-backup
+
+```

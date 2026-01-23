@@ -13,7 +13,8 @@
 ## IMPORTANT
 - [ ] REVIEW THIS DOC COMPARE TO GOOGLE DOC.
   - [x] Next page 
-  - [ ] NEXT : STORY - Ideas to implement from Google drive !! IMPORTANT !! Maybe wait for pro version to ask to rewrite all the backlogs,...
+  - [ ] NEXT : STORY - Ideas to implement from Google drive !! NEXT DOCTOR
+  - [ ] NEXT : TECH - HUGE FILE TO 
 
 ## Write Story : Day 3 - Doctor
 - [ ] RETRY EVERYTHING - BUT FIRST ALL nurses path

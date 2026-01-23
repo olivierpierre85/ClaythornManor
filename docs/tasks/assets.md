@@ -62,7 +62,33 @@ Do it for all possibilities ( dining room with less and less persons as the time
 - [ ] Check every music choice (Hunt, Ending, Speed run).
 - [ ] Download AVIA copyright (50 for 1 month)
 
-## Generic Ideas
+## Generic Ideas (TODO SORT)
+- **doctor** : Remove intuition from burning image, or make better image
+- Replace ALL icons, with the thread icon? Not loops, or .... (just do)
+- Redo The buttons at the bottom of the say dialog
+TRAIN : Different picture by 1st (Cpatain?), 2nd (Most people) and 3 class (Ted Harring)
+Add Icon for web distribution
+Thomas Moddy new face is greenish and too soft, Make it better AND the same everywhere (it’s the old version in the info_cards)
+CHARACTER SCREEN should represent the Dinner table positions
+IN PROGRESS, Make the chapter image 20% bigger so the text on two lines can be bigger (28 instead of 26, 
+Snore noize for sam manning
+Replace the —- for the missing description by a redacted marker? 
+Better sound for CLOCK rotating, not clear enough apparrently
+Son train trop fort, egaliser par rapport aux autres son? Gunshot too low
+Add better menu screen (no survive claythorn Manor)
+Add better splash screen menu
+Show in background Images evolution of days, nights,... FOr the end
+
+
+Check If theme elegance has changed since I downloaded it? Probably
+Last update Nov 07, 2023=> Try to see if mobile files have been updated
+Better agony cry (hunt
+
+Ask artflow for right to use images withou watermark ?
+CHECK Every music choice=>THE hunt, ending
+Special music you survived?
+Other music for speed running?
+More scary music when drunk dies
 
 
 

@@ -36,3 +36,8 @@ All dead=> Who found them => Unlocks plenty?
 
 
 - [ ] **Choices**: Dinner and other multiple generic choices: Keep alive or not? If not player can be frustrated but maybe we lose immersion with it.
+
+
+### Story broken
+When broken learns his whisky is poisoned, he doesn’t offer one to Ted harring
+
