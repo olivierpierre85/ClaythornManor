@@ -13,8 +13,9 @@
 ## IMPORTANT
 - [ ] REVIEW THIS DOC COMPARE TO GOOGLE DOC.
   - [x] Next page 
-  - [ ] NEXT : STORY - Ideas to implement from Google drive !! NEXT DOCTOR
-  - [ ] NEXT : TECH - HUGE FILE TO 
+  - [ ] NEXT : TECH - HUGE FILE TO read for SMALL ideas
+  - [ ] SORT ASSETS GENERIC IDEA
+  - [ ] CHECK every task is at the right place
 
 ## Write Story : Day 3 - Doctor
 - [ ] RETRY EVERYTHING - BUT FIRST ALL nurses path

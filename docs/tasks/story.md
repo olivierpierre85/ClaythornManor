@@ -80,6 +80,7 @@
 - [ ] MAKE THE NAME change by using a function for it => “Archibald”
 - [ ] Why is he angered by the doctor? His brother was a broken face, that’s his mask AND scared of being recognize
 - [ ] Servant uniform: Only one who can wear the footman livery in the servants stairs
+- [ ] When broken learns his whisky is poisoned, he doesn’t offer one to Ted harring
 
 ### Ideas to think over (optional)
 
@@ -143,4 +144,7 @@
 - [ ] Well, if we check everyone backstory, and we can figure out who is not an impostor, then we can reveal the murderer
 - [ ] Should add   mention of drinks in tea room for lad and psychic? DAY 1 evening?
 - [ ] In later characters,Discuss the “INTuitions” and how sometimes we are compelled to do something that goes against everything we are or believe in. 
+- [ ] **Attic Knocking** : DOCTOR (and possibly everyone else) in ATTIC, they don’t knock ??? why? Check not weird => Or normal because we are exploring? NO add knocking => Maybe add no need to knock here, it’s for the servants
+- [ ] **SECRET PASSAGE** ! Where are the staff, In a small room BEHIND servant stairs? Other?
+All dead=> Who found them => Unlocks plenty?
 
