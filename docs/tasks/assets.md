@@ -46,6 +46,10 @@ Do it for all possibilities ( dining room with less and less persons as the time
 ## Maps 
 - When ALL rooms in the game are defined, create sensical maps. May need to redraw door on certain locations, that should take too long start making maps in the exact same style (not that easy)
 
+## Progress view
+- Better progress for Final version: Visuals like a boardgame, with more images  
+  - Like first night there is a storm, second nigh hunt, third night empty ?
+
 ## (Optional) Rebuild Icons ?
 - [ ] ?
 

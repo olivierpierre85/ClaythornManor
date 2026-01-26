@@ -71,6 +71,7 @@
 ### Ideas to think over (optional)
 - [ ] ADD choice end of day1 when footman comes. Should I let him in ? This way the FRENCH thing is not mandatory
 - [ ] **Doctor** Day 2 Nurse sleep_no. ending Ending to mirror captain, but maybe do something to allow start again with captain? => **TECH** Check how easy it is to send back to menu that is a level above?
+- [ ] Add drunk filter when HIGH
 
 
 ## Broken
