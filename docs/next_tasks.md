@@ -7,7 +7,6 @@
   - [Technical Tasks](#technical-tasks)
   - [Assets \& artistic Tasks](#assets--artistic-tasks)
   - [Question for Testers](#question-for-testers)
-  - [🚀 Project Completion Timeline (Optimistic First Draft)](#-project-completion-timeline-optimistic-first-draft)
     - [Update ITCH.IO](#update-itchio)
 
 ## IMPORTANT
@@ -77,16 +76,6 @@ PATHS, “Actions”, Findings, discoveries ? Forks, Threads, Leads
 NEW paths PAGE wil ALL the unlockables, different from breakpoint page
 - DO I NEED the map menu ? Since there is almost 0 info on it, maybe not
 - Are important choices TOO confusing => Everything or NOT? But that means WAY harder to unlock?
-
-## 🚀 Project Completion Timeline (Optimistic First Draft)
-- **Lad**: OK
-- **Psychic**: OK
-- **Doctor**: 01/2025
-- **Nurse**: 04/2026
-- **Captain**: 06/2026
-- **Drunk**: 08/2026
-- **Broken**: 10/2026
-- **Host**: 12/2026
 
 ### Update ITCH.IO
 - Update itch.io

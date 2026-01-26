@@ -17,10 +17,9 @@
 
 ### 🏰 Game Story & Lore Index
 
-- [🎭 Character Backgrounds & Relations](docs/game_story/characters.md)
-- [📍 Locations & Objects](docs/game_story/locations.md)
-- [🤖 Meta Narrative & AI](docs/game_story/meta_ai.md)
-- [⏳ Timelines & Schedules](docs/game_story/timeline.md)
+- [🎭 Story Characters](docs/game_story/story_characters.md)
+- [📍 Locations & Objects](docs/game_story/locations_objects.md)
+- [⏳ Arrivals & Timeline](docs/game_story/arrivals_timeline.md)
 - [🧪 Test Runs](docs/game_story/test_runs.md)
 - [🔓 Unlock Chart](docs/game_story/unlock.md)
 
