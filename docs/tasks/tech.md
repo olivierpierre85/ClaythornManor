@@ -1,5 +1,24 @@
 # 💻 Tech Backlog
 
+## UI
+
+- [ ] Redo The buttons at the bottom of the say dialog (remove backtrack...)
+- IN PROGRESS, Make the chapter image 20% bigger so the text on two lines can be bigger (28 instead of 26, 
+- ?Replace the —- for the missing description by a redacted marker? 
+- [ ] **Map**: Add "You are here" on the map.
+- [ ] **MOBILE version**
+    Important that the web version is mobile friendly, or I would lose so many players.
+    MAKE IT Mobile First ! So the screen can be read in both format without changes?
+- [ ] Create **NEW OPTIONS Page**
+- [ ] Add Icon for web distribution
+- [ ] **doctor** : Remove intuition from burning image, or make better image
+- [ ] REvise NEW **Help Page + Tutorials** 
+    Fill with all the information needed
+    Add IF for the parts that need a tutorial seen
+    Move tutorial from script to tutorial page
+    REWRITE Tutorials Based on new screen (characters, progress, …)
+- **Tutorial** Explain that restarting from a chapter doesn't mean all branches are accessibles from there
+  
 
 ## Big Ideas (High impact)
 

@@ -14,8 +14,13 @@
 - [ ] REVIEW THIS DOC COMPARE TO GOOGLE DOC.
   - [x] Next page 
   - [ ] NEXT : TECH - HUGE FILE TO read for SMALL ideas
-  - [ ] SORT ASSETS GENERIC IDEA
+  - [x] SORT ASSETS GENERIC IDEA
   - [ ] CHECK every task is at the right place
+  - [ ] GAME STORY NEW MD - DOUBLE CHECK everything
+    - [ ] characters
+    - [ ] locations
+    - [ ] meta ai
+    - [ ] timeline
 
 ## Write Story : Day 3 - Doctor
 - [ ] RETRY EVERYTHING - BUT FIRST ALL nurses path
@@ -39,6 +44,8 @@
     - [ ] Lad
     - [ ] Psychic
 - [ ] **Refactor**: Clean "todo.md" into proper docs (Done!).
+- [ ] Rename gun room to armory
+- [ ] Replace ALL icons, with the thread icon? Not loops, or .... (just do)
 - [ ] **MENUS - Big Challenge**: 
     - [ ] Menus: Ensure "Next menu" is correct everywhere AND That every choice with a following menu DOESNT have a time value
         - [ ] Doctor
