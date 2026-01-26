@@ -1,4 +1,4 @@
-# 🏰 The Manor & Locations
+# 🏰 The Manor Locations & Objects
 
 ## 📍 Rooms & Unlocking Actions
 
@@ -11,7 +11,7 @@
 - **Note**: Not everyone has access (Lad needs unlock).
 
 ### The Garage
-- **Objects**: Old car from a distant past (no gas), Gasoline, Car keys (found by psychic in attic).
+- **Objects**: Old car from a distant past (no gas), Gasoline, Car keys (found by psychic? Nurse? in attic).
 
 ### The Billiard/Tea Room
 - **Action**: Talk with other people.
@@ -38,18 +38,18 @@
 
 ## 🛏️ Bedrooms (Historical/Royalty References)
 
-- **The Drunk**: *George IV* (Enter as Doctor to find letter about ruined life).
+- **The Drunk**: *George IV* (Drunk king) 
+  - (Enter as Doctor to find letter about ruined life).
 - **The Host**: *Henry IV* (Usurper king) or *Richard III* (Short reign?). Key to garage?
 - **The Psychic**: *George III* (Crazy king).
-- **The Lad**: *William the Conqueror* (Hero king). Room far away from Psychic.
+- **The Lad**: *William the Conqueror* (Hero king).
 - **The Broken**: *Richard III* (Injured king).
 - **The Doctor**: *Edward II* (Addict king).
 - **The Captain**: *George I* (Foreign king? Needs rethink).
 - **The Nurse**: *Alexandra* (Strong interest in nursing).
 
----
 
-## 🗝️ Objects & Clues
+# 🗝️ Objects & Clues
 
 - **Footman Livery**: Used by Broken face to reach downstairs before Sunday.
 - **Old Car Keys / Gas**: Found by Psychic (attic clue) / Garage.
@@ -57,8 +57,5 @@
 - **Gun**: Enfield Mk II. Needs bullets.
 - **Chains**: To move blocking trees.
 
----
 
-## 💡 Clue Concepts
-- **Kings and Queens**: Discussion of clues behind room names.
-- **Misunderstandings**: Situations seen from one POV but understood differently when playing another character.
+

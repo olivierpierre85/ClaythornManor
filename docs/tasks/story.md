@@ -149,6 +149,30 @@ TODO rename !!!!!
 - **Detective**: "So it’s up to us now. It means we are not totally obsolete yet."
 - **Mechanic**: The machine is at a deadlock. The player must manually introduce the "path" (guess the guilty party) to run extra analysis.
 
+
+## Last run (Maybe, check if still doable)
+Before last part, you must GUESS the killer for special achievement. Straight away or by answering questions.
+
+
+Once you’ve unlock the real ending, where the hero is alive and in front of the nurse. You can go with the flow and just call the police later. You escape alone and everyone else is dead.
+
+BUT you think of the ghosts stories, and since you have understood everything, you can do a new run, with everyone doing everything they weren’t supposed to do :
+
+The drunk spare the doc
+The broken face finds the poison
+The host CONFESS instead of being found out
+The captain finds The car to escape
+The doctor replace gun with fake cartridges
+The psychic really meets the old lord in the attic. He tells him where the key of his old car is.
+
+
+Once you remove the trees, everyone stacked in the car. The nurse loses it and shows a gun. BUT the barrel is empty. She is captured and arrested. She would have burned the whole thing if the doctor was stil alive…
+
+THe nurse intro is played? The end
+
+JUMP FROM ONE CHARACTER TO ANOTHER
+
+
 ---
 
 ### 🔮 Unlocking & Intuitions
@@ -156,6 +180,7 @@ TODO rename !!!!!
 - **Last Run**: Before the last part, you must GUESS the killer for special achievement.
 - **Real Ending**: Hero is alive in front of the nurse.
 - **Meta Run**: Once you understand everything, do a new run where everyone does what they *shouldn't* do (e.g., Drunk spares Doctor, Host confesses).
+
 
 ---
 
@@ -173,6 +198,9 @@ TODO rename !!!!!
 - [ ] Should add   mention of drinks in tea room for lad and psychic? DAY 1 evening?
 - [ ] In later characters,Discuss the “INTuitions” and how sometimes we are compelled to do something that goes against everything we are or believe in. 
 - [ ] **Attic Knocking** : DOCTOR (and possibly everyone else) in ATTIC, they don’t knock ??? why? Check not weird => Or normal because we are exploring? NO add knocking => Maybe add no need to knock here, it’s for the servants
+- [ ] **Misunderstandings**: Situations seen from one POV but understood differently when playing another character.
+- [ ] **Kings and Queens**: Discussion of clues behind room names.
 - [ ] **SECRET PASSAGE** ! Where are the staff, In a small room BEHIND servant stairs? Other?
 All dead=> Who found them => Unlocks plenty?
+
 

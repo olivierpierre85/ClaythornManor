@@ -18,7 +18,7 @@
   - [ ] CHECK every task is at the right place (tech backlog)
   - [ ] GAME STORY NEW MD - DOUBLE CHECK everything
     - [ ] characters
-    - [ ] locations
+    - [ ] locations object => Add all objects to all rooms like in game????
     - [ ] meta ai
     - [ ] timeline
 
@@ -28,6 +28,7 @@
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).
 - [ ] Menus: Ensure "Next menu" is correct everywhere.
 - [ ] Gun room has a Menu choice Day 3.
+- [ ] Rethink unlocking FULLY
 
 ## Proofreading
 - Build new protocol to work with antigravity
