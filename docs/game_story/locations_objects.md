@@ -1,61 +1,106 @@
 # 🏰 The Manor Locations & Objects
 
-## 📍 Rooms & Unlocking Actions
+## 📍 Interactive Rooms & Associated Threads
 
-### Library
-- Learn that the host is not aristocracy (Captain path).
-- Learn the name of the “LORD” of the castle (Psychic path).
+### Ground Floor (Floor 1)
+- **Library**
+    - **Psychic Path**: Find the name of the "LORD" (`lord_name`). Requires having visited the Attic.
+    - **Captain Path**: Learn that the host is not aristocracy.
+- **Tea Room**
+    - Central social hub. Used for talking with guests and group scenes.
+- **Billiard Room**
+    - Social hub. Locations for bar and games.
+- **Dining Room**
+    - Group meals and major plot events.
+- **Entrance Hall**
+    - Main entry point. First arrival location.
+- **Portrait Gallery**
+    - **Psychic Path**: Look for portraits of the old lords (`lord_name`, `lord_age`). Requires having visited the Attic.
 
-### Servants Changing Room (In Servant Stairs)
-- **Action**: Find footman livery.
-- **Note**: Not everyone has access (Lad needs unlock).
+### Basement (Floor 0)
+- **Kitchen**
+    - **Object**: Poison bottle.
+    - **Thread**: `green_liquid` (Lad path, Saturday Evening).
+- **Scullery**
+    - Potential hiding spot for the Nurse chase sequence.
+- **Garage**
+    - **Objects**: Old car, Gasoline, Car keys.
+    - **Threads**: `seen_car` (Lad path, Sunday Morning).
+- **Gun Room**
+    - **Object**: Enfield Mk II Revolver.
+    - **Threads**: `gun` (Lad path, Sunday), `steal_gun` (Psychic Path, Sunday).
+    - **Condition**: Weaponry use often requires military background (Captain).
 
-### The Garage
-- **Objects**: Old car from a distant past (no gas), Gasoline, Car keys (found by psychic? Nurse? in attic).
+### Attic (Floor 3)
+- **Attic Hallway & Storage Room**
+    - **Psychic Path**: Meet "the old man" (The Lord). Unlocks `visited_attic`.
+- **Servants' Rooms** (Male, Female, Butler)
+    - **Action**: Finding livery or staff-related clues.
+    - **Threads**: `footman_french_1`, `footman_actor`.
 
-### The Billiard/Tea Room
-- **Action**: Talk with other people.
-- **Extra Scenes**: Bar, Billiard...
-
-### The Gardens
-- (Nothing yet)
-
-### The Kitchen
-- **Objects**: Poison bottle (still open). Scullery is a good hiding spot (Nurse chase).
-
-### The Gun Room
-- **Objects**: Enfield Mk II Revolver (Boxer rebellion/WW1).
-- **Condition**: Soldiers can manipulate guns (Captain, Broken). Needs bullets (locked?).
-
-### The Attic
-- **Action**: Psychic meets the old man. Others find nothing.
-- **Note**: Need keys? Or open doors?
-
-### The Gallery
-- **Action**: Portraits of old lords (Check the book? Psychic path).
+### Outdoors
+- **Gardens**
+    - Scene for the hunt and outdoor confrontations.
+    - **Threads**: `hunt` (Saturday Afternoon).
 
 ---
 
-## 🛏️ Bedrooms (Historical/Royalty References)
+## 🛏️ Bedrooms (Floor 2)
+The bedrooms are themed after English Royalty, reflecting the character's archetypes or fates. Bedroom assignments are critical for sneaking sequences.
 
-- **The Drunk**: *George IV* (Drunk king) 
-  - (Enter as Doctor to find letter about ruined life).
-- **The Host**: *Henry IV* (Usurper king) or *Richard III* (Short reign?). Key to garage?
-- **The Psychic**: *George III* (Crazy king).
-- **The Lad**: *William the Conqueror* (Hero king).
-- **The Broken**: *Richard III* (Injured king).
-- **The Doctor**: *Edward II* (Addict king).
-- **The Captain**: *George I* (Foreign king? Needs rethink).
-- **The Nurse**: *Alexandra* (Strong interest in nursing).
+### The Lad - William the Conqueror Room
+- **Reference**: The "Hero" king / Self-made man.
+- **Context**: Reflects the Lad's background as someone who "conquered" his circumstances.
 
+### The Psychic - Elizabeth I Room
+- **Reference**: The "Virgin Queen".
+- **Context**: Powerful, mysterious, and influential.
 
-# 🗝️ Objects & Clues
+### The Doctor - Edward II Room
+- **Reference**: The failing/addict king.
+- **Context**: Enter as the Doctor to find narcotics-related clues.
 
-- **Footman Livery**: Used by Broken face to reach downstairs before Sunday.
-- **Old Car Keys / Gas**: Found by Psychic (attic clue) / Garage.
-- **Poison**: In kitchen (or whisky?).
-- **Gun**: Enfield Mk II. Needs bullets.
-- **Chains**: To move blocking trees.
+### The Captain - George I Room
+- **Reference**: The foreign/administrative king.
+- **Context**: Reflects the Captain's noble but "outsider" status.
+
+### The Host - Henry IV Room
+- **Reference**: The usurper king.
+- **Context**: Reflects the nature of the Host's position.
+
+### The Drunk - George IV Room
+- **Reference**: The drunk king.
+- **Context**: Find the `drunk_letter` here (accessible by the Doctor).
+
+### The Broken - Richard III Room
+- **Reference**: The injured/hunchback king.
+- **Context**: Reflects his "Broken Face" condition.
+
+### The Nurse - Queen Alexandra Room
+- **Reference**: Strong interest in nursing and military medicine.
+- **Context**: Dedicated to the Nurse's professional background.
+
+---
+
+---
+
+## 🗝️ Key Objects & Story Threads
+
+### Discovery Checklist
+- **Whisky** (`whisky`): Found/shared in the Evening (Lad/Drunk).
+- **Poison / Green Liquid** (`green_liquid`): Discovered in the kitchen scullery areas.
+- **Enfield Mk II Revolver** (`gun` / `steal_gun`): Found in the Gun Room. Bullets may be locked.
+- **Footman Livery**: Used for infiltration (Broken path).
+- **Burned Letter** (`burned_letter`): Found in the downstairs areas (Ladpath).
+- **Silverware** (`silverware`): Identified by the Psychic as a potential clue.
+- **Books**: `book_mystery` and `book_opium` (Doctor path).
+- **Chains**: To move blocking trees during the escape.
+
+### Major State Flags
+- `visited_attic`: Unlock Psychic-specific library interactions.
+- `broken_unmasked`: Evidence of the Impostor's identity.
+- `trust_captain` / `trust_nurse`: Defines Sunday Afternoon alliances.
+- `day1_drunk` / `day2_drunk`: Tracks the state of the Drunk guest.
 
 
 
