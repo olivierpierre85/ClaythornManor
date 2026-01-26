@@ -52,27 +52,11 @@
 - Add NARRATOR TEXT STYLE, for death AND help ?
 - (https://lemmasoft.renai.us/forums/viewtopic.php?f=8&t=25453&p=313338&hilit=caption.replace#p313338)
 
-## Big Ideas (High impact)
 
-
-### (Minor) (hard) Unlock intuition
-An INTUITION in a timeline can CHANGE multiple timelines
-Build a screen to unlock intuitions !!!! Yes, some will have a positive effect some not really => Similar bad end theater
-Or put it in the CHARACTER screen, add an intuition button on off
-
-
-### (Minor) (hard) Position of people on map
-For each chapters (part of chapter when complicated) there is only one possible position for each character. When you find out where they are, it should be written on the map. Otherwise, the map unlock is not very useful. Test if possible
-Very complicated => Maybe for version 2
-
-### (Minor) DEAD PEOPLE IN MENU
-For each chapter, at every moment, Show the people who are dead and the one alived in the progress view (add a cross if character dead), a question mark if you don't know where they are.
-BETTER, show there are dead with their faces changes (if chatgpt allows it), or just cross their faces
-
-### TIME subtraction: 
+## TIME subtraction: 
 - Still a problem when starting a path with a menu a time < 0 ? It stop suddenly when a menu should be available? Try again to make the subtraction only at the end, like the time move? NO because then it allows to read a full menu? Like during no hunt? THINK THINK THINK
 
-### Improve Time Menus
+## Improve Time Menus
 - Add int Id to `TimeMenuChoice` for easier used of all_choices…Hidden…
 - Add ID numerical to `TimedMenuChoice` (1, 2, 3,) so it’s easy to check if one is hidden like in:  
   - `all_menus[current_menu.id].choices[25].hidden`
@@ -167,7 +151,6 @@ if renpy.variant("pc"):
 ---
 
 ## Web build / itch.io
-
 - Use butler to upload files: it only uploads whats changed, generates patches for the itch.io app, and you can automate it.
 - Fix the web style for smartphone !!! (error in menu, bigger text?)
 - Try to download all images BEFORE in progressive Loading
@@ -176,14 +159,24 @@ if renpy.variant("pc"):
   **MOBILE version**
     Important that the web version is mobile friendly, or I would lose so many players.
     MAKE IT Mobile First ! So the screen can be read in both format without changes?
----
 
+## (Minor) (hard) Unlock intuition
+An INTUITION in a timeline can CHANGE multiple timelines
+Build a screen to unlock intuitions !!!! Yes, some will have a positive effect some not really => Similar bad end theater
+Or put it in the CHARACTER screen, add an intuition button on off
+
+
+## (Minor) (hard) Position of people on map
+For each chapters (part of chapter when complicated) there is only one possible position for each character. When you find out where they are, it should be written on the map. Otherwise, the map unlock is not very useful. Test if possible
+Very complicated => Maybe for version 2
+
+## (Minor) DEAD PEOPLE IN MENU
+For each chapter, at every moment, Show the people who are dead and the one alived in the progress view (add a cross if character dead), a question mark if you don't know where they are.
+BETTER, show there are dead with their faces changes (if chatgpt allows it), or just cross their faces
 
 ## Generic Changes - TO sort
 
-- In logs, if the answer of a choice is not said by character (but internal, GOdlike dialog), don’t make it say by the character in the log  
-  - But that will require an entire rewrite of the menu choice with a new parameter (`character_talked`)
-- BUG: Threads can be shown in actual and previous discoveries  
+- BUG: Threads can be shown in actual and previous discoveries  => REBUILD DETAIL SCREEN???
   - What logic should I keep? Only current? OR new logic with excluding choices ???  
   - => Not super important now, can keep both
 - ? If current player text not enough? Add picture of current player : BUT WHERE ? nothing looks good
