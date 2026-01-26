@@ -1,4 +1,4 @@
-# Lad - Day 1 Story Flow
+# Lad - Day 1 Story Flow (BETA Try)
 
 This chart represents the narrative flow, choices, and potential endings for the "Lad" character on Day 1.
 

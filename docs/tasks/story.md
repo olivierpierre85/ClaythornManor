@@ -135,6 +135,7 @@
 
 ## 💡Generic Ideas
 - [ ] Access to servants if you befriend one? (Doctor or Captain likely, NOT Lad).
+- [ ] - **End Note**: "For those who haven't realized it, you are not gonna leave this place alive."
 - [ ] **Phone**: Where to put the phone? Add phone room? Basement?
 - [ ] SOMETIMES, someone should be caught entering a room. 
 - [ ] Rewrite the generic ENTER/don’t enter bedroom text by Character

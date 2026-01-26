@@ -22,12 +22,5 @@
 - **Last Run**: Before the last part, you must GUESS the killer for special achievement.
 - **Real Ending**: Hero is alive in front of the nurse.
 - **Meta Run**: Once you understand everything, do a new run where everyone does what they *shouldn't* do (e.g., Drunk spares Doctor, Host confesses).
-- **End Note**: "For those who haven't realized it, you are not gonna leave this place alive."
 
 ---
-
-## 📝 Background Story (Boxer Rebellion)
-- **1901**: Young girl saved by officer during Boxer Rebellion. Nurse is jealous, rats her out.
-- **1902**: Girl gives birth to Lad. Doctor steals baby for money.
-- **1923**: Girl (now Host/Lady Claythorn?) realizes son is alive.
-- **1924 (Current)**: She gathers everyone who wronged her at Claythorn Manor to make them pay. Her plan involves her old love (who is actually dead/replaced by Broken Face).

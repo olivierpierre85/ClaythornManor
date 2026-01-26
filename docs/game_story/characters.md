@@ -2,13 +2,28 @@
 
 ## 📜 Character Bios
 
+# TODO READ drive and add stuff
+
 ### The LAD (Ted Harring)
-Born 1902 (22 in 1924), he was abandoned at birth and raised in an orphanage. At 16, he escape the place and start a life as a thief in Birmingham.
+Born 1902 (22 in 1924), he was abandoned at birth and raised in an orphanage. 
+At ?12-14?, he was adopted by a upper middle class family with one boy his age : aRchibald, they quickly became best friends.
+
+But when reaching 18, without a good education, he left the place and start a life as a thief in Birmingham.
+
 One days, as he was robbing a place, he started a fire. He realises the place wasn’t empty when he heard a baby screaming. He saved him but left the wetnurse passed out next to him to die. The papers reported only his heroic dead. And a few months later, he received an invitation to reward him for his bravery.
+
+That's the event that triggered everything.
+
 In the manor, he feels (rightfully) out of place but he tries to make the best of it.
 
+
 ### The Psychic (Amelia Baxter)
-**THE REAL VILLAIN** (see story background).
+## 📝 Background Story (Boxer Rebellion)
+- **1901**: Young girl saved by officer during Boxer Rebellion. Nurse is jealous, rats her out.
+- **1902**: Girl gives birth to Lad. Doctor steals baby for money.
+- **1923**: Girl (now Host/Lady Claythorn?) realizes son is alive.
+- **1924 (Current)**: She gathers everyone who wronged her at Claythorn Manor to make them pay. Her plan involves her old love (who is actually dead/replaced by Broken Face).
+
 
 ### The Doctor (Daniel Baldwin)
 Young promising student, he joins the army to learn on the field.
@@ -18,9 +33,11 @@ Back in England, he found employment at a charity hospital. He kept the place be
 He didn’t expect his long employment to ever be rewarded, but he accepted the invitation the Claythorn Manor nevertheless.
 
 ### The Captain (Sushil Sinha)
-Takes charge. Bossy. Also comes from nobility, so he is able to realize that the footmen are not very Good. turns out they are also victims (they also were in the military).
+Takes charge. Bossy. Also comes from nobility, so he is able to realize that the footmen are not very Good. 
 *Note: Indian soldier of noble ancestry. The killer has no idea a indian can be an aristocrat.*
 Administrative officer, never saw battle. He supposed he was mistaken for another Indian soldier, but accepted the invitation anyway.
+
+"For once, white people unabily to tell indian people appart was to my advantage"
 
 ### The Nurse (Rosalind Marsh)
 **The Pseudo-villain**

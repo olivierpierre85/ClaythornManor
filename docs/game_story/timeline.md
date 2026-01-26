@@ -1,4 +1,4 @@
-# 📅 Weekend Timeline
+# 📅 Weekend Timeline Arrivals
 
 | Activity          | Lad   | Psychic | Drunk | Captain | Doctor | Broken | Nurse | Host |
 | ----------------- | ----- | ------- | ----- | ------- | ------ | ------ | ----- | ---- |

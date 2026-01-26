@@ -13,9 +13,9 @@
 ## IMPORTANT
 - [ ] REVIEW THIS DOC COMPARE TO GOOGLE DOC.
   - [x] Next page 
-  - [ ] NEXT : TECH - HUGE FILE TO read for SMALL ideas
+  - [x] NEXT : TECH - HUGE FILE TO read for SMALL ideas
   - [x] SORT ASSETS GENERIC IDEA
-  - [ ] CHECK every task is at the right place
+  - [ ] CHECK every task is at the right place (tech backlog)
   - [ ] GAME STORY NEW MD - DOUBLE CHECK everything
     - [ ] characters
     - [ ] locations
