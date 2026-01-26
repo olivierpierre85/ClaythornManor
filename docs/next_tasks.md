@@ -36,7 +36,7 @@
 - Doctor: TODO Full
 
 ## Technical Tasks
-- **Build Claythorn manor extension for vs code**  
+- **SNIPETS** doubld check and extend the new snippet file! 
   - New menu with more current options (change room, sound, music, and their values)
 - [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
 - [ ] BUG: **save_transcript_to_file** button not working during menu????

@@ -1,0 +1,53 @@
+{
+    // VS Code Snippets for Claythorn Manor Ren'Py Project
+    "Change Room": {
+        "prefix": [
+            "$change_room",
+            "change_room"
+        ],
+        "body": [
+            "$ change_room(\"${1|train_inside,train_station,inside_car,manor_exterior,attic_hallway,storage,males_room,females_room,butler_room,bedrooms_hallway,bedroom_lad,bedroom_doctor,bedroom_captain,bedroom_psychic,bedroom_host,bedroom_drunk,bedroom_broken,bedroom_nurse,basement_stairs,library,tea_room,billiard_room,dining_room,manor_garden,entrance_hall,servant_stairs,portrait_gallery,kitchen,scullery,garage,gun_room,black_background|}\")"
+        ],
+        "description": "Change to a different room"
+    },
+    "Change Time": {
+        "prefix": [
+            "call change_time",
+            "change_time"
+        ],
+        "body": [
+            "call change_time(${1:HH}, ${2:MM}, phase='${3|Arrival,Morning,Afternoon,Evening,Dinner,The Hunt|}', day='${4|Friday,Saturday,Sunday|}', hide_minutes=${5|True,False|}, chapter='${6|friday_afternoon,friday_evening,saturday_morning,saturday_afternoon,saturday_afternoon_no_hunt,saturday_evening,sunday_morning,sunday_afternoon,end|}')"
+        ],
+        "description": "Change game time and chapter"
+    },
+    "Play Music": {
+        "prefix": [
+            "$play_music",
+            "play_music"
+        ],
+        "body": [
+            "$ play_music('${1|upbeat,chill,sad,mysterious,scary,boxer,danger,danger_short,end_credits|}')"
+        ],
+        "description": "Play background music"
+    },
+    "Stop Music": {
+        "prefix": [
+            "$stop_music",
+            "stop_music"
+        ],
+        "body": [
+            "$ stop_music(${1:5})"
+        ],
+        "description": "Stop background music with optional fadeout length"
+    },
+    "Black Screen Transition": {
+        "prefix": [
+            "call black_screen_transition",
+            "black_screen_transition"
+        ],
+        "body": [
+            "call black_screen_transition(\"${1:Title}\", \"${2:Subtitle}\")"
+        ],
+        "description": "Show a black screen transition with text"
+    }
+}
