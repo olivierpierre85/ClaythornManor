@@ -1,4 +1,6 @@
-# 🎭 Character Backgrounds & Relations
+# 🎭 Story & Characters
+
+## Backstory
 
 ## 📜 Character Bios
 
