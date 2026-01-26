@@ -18,7 +18,23 @@
     Move tutorial from script to tutorial page
     REWRITE Tutorials Based on new screen (characters, progress, …)
 - **Tutorial** Explain that restarting from a chapter doesn't mean all branches are accessibles from there
-  
+
+## UI - Menu usability / right click / skip / inputs
+
+- Right click for menu send to OPTIONs not latest screen ? But push button works?  
+  - Simple solution Disable right click in prod
+- Disable BACK roll
+- PREVENT Mouse ROLL TO MOVE STORY!!!
+- SHOW ON SCREEN WHEN TEXT IS SKIPPABLE
+- Add a skip option TO every MENU (stand alone, …)  
+  - But only visible when everything done??? OR All the time  
+  - Example first menu add => Don’t talk to anybody, let them come to you?
+- When all choices are Completed:  
+  - Add a possibility to skip ? (ex: don’t talk to anyone like a true loner)  
+  - Or just always add an option to skip to go faster
+- provide an option on mobile to skip. Or just Bigger button ?
+- Check all keyboard shortcuts are deactivated
+- Fix problem with menu navigation with arrows and gamepad
 
 ## Big Ideas (High impact)
 
@@ -39,56 +55,38 @@ For each chapter, at every moment, Show the people who are dead and the one aliv
 ### TIME subtraction: 
 - Still a problem when starting a path with a menu a time < 0 ? It stop suddenly when a menu should be available? Try again to make the subtraction only at the end, like the time move? NO because then it allows to read a full menu? Like during no hunt? THINK THINK THINK
 
-## Small Ideas 
-## TODO SORT ALL THIS SHIT !!!!!!
-
-## Improve Menu Logs and STYLE
-
-- Generic Menu, spoken by `current_char`
-- ALL OTHER menu: Map Choice, or Menu Choice
-- Check consistency everywhere, every Menu….
-
----
-
-## Unlock / threads / IDs
-
-- Only one function `is_unlocked`, that doesn’t take the type into account?  
-  - Because too complicated as is (take example to `cond_ ending`)
-- Check INTUITION is different enough  
+### Improve Time Menus
 - Add int Id to `TimeMenuChoice` for easier used of all_choices…Hidden…
 - Add ID numerical to `TimedMenuChoice` (1, 2, 3,) so it’s easy to check if one is hidden like in:  
   - `all_menus[current_menu.id].choices[25].hidden`
+  - Replace the background linked questions  
+    - NOT GREAT TO HAVE a NUMBER IN IT => TOO Many possibilities of error  
+    - => Make a function that will take the redirect (`all_menus[current_menu.id].choices`)
+- Make triple sure that a choice only has ONE possible condition activated!!  
+  - (add not condition for regular choices maybe?)
+- Check that no choice that is followed by another choice has a time value  
+  - Because it means it could stop the flow of talk.
+- Double CHECK that when a choice leads to another menu choice, that the time value for the first choice is 0, so the second choice is always displayed  
+  - Otherwise, we might exit the current dialog too soon  
+  - (ex : `lad_day3_morning_gun_room`)
+- FIX length time of choices to something logical
+- ALL Other guest should be keep_alive => Check everywhere
+- Find an easy way to show some dialog (like the introduction before the dialogs about other guests) only ONCE
+- When the submenu other guest is empty, we shouldn’t have the choice ask about guests in the first menu  
+  - ALSO SKIP INTRO if choices other guest selected multiple times
 
----
 
 ## Timing / pauses / time values / flow
 
 - Remove all `pause 1.0`? And replace with `call wait screen`?  
   - Because a pause is often confusing  
   - => Check which one is best
-- Make sure a choice with subchoices SPENDs no time, to avoid being stopped before asking something
-- Make triple sure that a choice only has ONE possible condition activated!!  
-  - (add not condition for regular choices maybe?)
-- Check that no choice that is followed by another choice has a time value  
-  - Because it means it could stop the flow of talk.
-- MAKE sure not ending menu have a 0 value in choice EVERYWHERE
-- Double CHECK that when a choice leads to another menu choice, that the time value for the first choice is 0, so the second choice is always displayed  
-  - Otherwise, we might exit the current dialog too soon  
-  - (ex : `lad_day3_morning_gun_room`)
-- BUGGGGG go to bed too early when imbricated choices (can’t run another menu, that may lead to misconception of remaining time)  
-  - => See Lad Day 2 talk with captain  
-  - => When call a menu, if it’s the first call, we should be able to make at leat ONE choice???
-- JUST put 0 for choices that are followed by a new menu!!!!!!  
-  - => Test everywhere (map menus, sub menus,....)
-- FIX length time of choices to something logical
+
 
 ---
 
 ## Map / readability / navigation
 
-- Bigger map text
-- The subtext in map choices is not visible enough, even in Golden  
-  - Find a way to make it pop
 - Should I make exit question Always Bright?  
   - If YES maybe make it the screen, not by changing “already_chosen” because it’s complicated
 - Map menu choice is annoying when you want to think where to go  
@@ -97,11 +95,6 @@ For each chapter, at every moment, Show the people who are dead and the one aliv
 - IF possible, still show Hotspot on map when locked to have tooltip
 - CHeck that if choice is `valid()` also applies to `map_choices` !!!  
   - NOT the case now I think (test with billiard room)
-- Replace the background linked questions  
-  - NOT GREAT TO HAVE a NUMBER IN IT => TOO Many possibilities of error  
-  - => Make a function that will take the redirect (`all_menus[current_menu.id].choices`)
-- Return different position in Main menu than in game menu
-- FIX hide maps when tutorial not yet seen!!!!!!
 - Recheck map content ESPEcially basement (exclude gun room)
 - Better map
 - QUID MAP menu, if specific choice is hidden  
@@ -110,51 +103,18 @@ For each chapter, at every moment, Show the people who are dead and the one aliv
 
 ---
 
-## Other guests submenu / “think of other guests” logic
-
-- ALL Other guest should be keep_alive => Check everywhere
-- HIDE Talk about other guest when there are no other guest dialog possible
-- BUG : think of other guests should be hidden when every option have been used AND the introductory text should display only once a day
-- Find an easy way to show some dialog (like the introduction before the dialogs about other guests) only ONCE
-- When the submenu other guest is empty, we shouldn’t have the choice ask about guests in the first menu  
-  - ALSO SKIP INTRO if choices other guest selected multiple times
-- BUG: choices can be shown in actual and previous discoveries  
-  - What logic should I keep? Only current? OR new logic with excluding choices ???  
-  - => Not super important now, can keep both
-
----
-
-## Logs / narrator voice / character voice
+## Generic Changes
 
 - In logs, if the answer of a choice is not said by character (but internal, GOdlike dialog), don’t make it say by the character in the log  
   - But that will require an entire rewrite of the menu choice with a new parameter (`character_talked`)
-
+- BUG: Threads can be shown in actual and previous discoveries  
+  - What logic should I keep? Only current? OR new logic with excluding choices ???  
+  - => Not super important now, can keep both
 ---
 
-## Menu usability / right click / skip / inputs
 
-- Right click for menu send to OPTIONs not latest screen ? But push button works?  
-  - Simple solution Disable right click in prod
-- Disable BACK roll
-- PREVENT Mouse ROLL TO MOVE STORY!!!
-- SHOW ON SCREEN WHEN TEXT IS SKIPPABLE
-- Add a skip option TO every MENU (stand alone, …)  
-  - But only visible when everything done??? OR All the time  
-  - Example first menu add => Don’t talk to anybody, let them come to you?
-- When all choices are Completed:  
-  - Add a possibility to skip ? (ex: don’t talk to anyone like a true loner)  
-  - Or just always add an option to skip to go faster
-- provide an option on mobile to skip. Or just Bigger button ?
-- Check all keyboard shortcuts are deactivated
-- Fix problem with menu navigation with arrows and gamepad
 
----
-
-## “next_menu” / menu wiring
-
-- ADD next_menu TO EVERY submenu where it is relevant
-- Also make next menu important ? Like for the billiard room?
-
+## TODO SORT ALL THIS SHIT !!!!!!
 ---
 
 ## Progress / character screens / “who is dead” display
