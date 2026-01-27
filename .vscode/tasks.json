@@ -38,30 +38,48 @@
       "problemMatcher": []
     },
     {
-        "label": "Ren'Py: Test ALL",
-        "type": "process",
-        "command": "C:\\Program Files\\renpy-8.4.1-sdk\\lib\\py3-windows-x86_64\\python.exe",
-        "args": [
-            "C:\\Program Files\\renpy-8.4.1-sdk\\renpy.py",
-            "C:\\Projects\\ClaythornManor\\Murder",
-            "test",
-            "--report-detailed",
-            "--report-skipped"
-        ],
-        "presentation": {
-            "reveal": "always",
-            "panel": "dedicated",
-            "focus": true,
-            "clear": true,
-            "showReuseMessage": false
-        },
-        "problemMatcher": []
+      "label": "Ren'Py: Test ALL",
+      "type": "process",
+      "command": "C:\\Program Files\\renpy-8.4.1-sdk\\lib\\py3-windows-x86_64\\python.exe",
+      "args": [
+        "C:\\Program Files\\renpy-8.4.1-sdk\\renpy.py",
+        "C:\\Projects\\ClaythornManor\\Murder",
+        "test",
+        "--report-detailed",
+        "--report-skipped"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
     },
     {
       "label": "Ren'Py: Run game",
       "type": "process",
       "command": "C:\\Program Files\\renpy-8.4.1-sdk\\renpy.exe",
-      "args": ["C:\\Projects\\ClaythornManor\\Murder"],
+      "args": [
+        "C:\\Projects\\ClaythornManor\\Murder"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Antigravity: Process Infocards",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\process_infocards.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
       "problemMatcher": []
     }
   ]

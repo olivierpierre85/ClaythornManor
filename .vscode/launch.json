@@ -6,7 +6,10 @@
       "type": "python",
       "request": "launch",
       "program": "C:\\Windows\\System32\\cmd.exe",
-      "args": ["/c", "echo Ren'Py launched via task"],
+      "args": [
+        "/c",
+        "echo Ren'Py launched via task"
+      ],
       "preLaunchTask": "Ren'Py: Run game",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
@@ -16,8 +19,24 @@
       "type": "python",
       "request": "launch",
       "program": "C:\\Windows\\System32\\cmd.exe",
-      "args": ["/c", "echo Ren'Py launched via task"],
+      "args": [
+        "/c",
+        "echo Ren'Py launched via task"
+      ],
       "preLaunchTask": "Ren'Py: Test (pick from list)",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Antigravity: Process Infocards",
+      "type": "python",
+      "request": "launch",
+      "program": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "echo Processing Infocards..."
+      ],
+      "preLaunchTask": "Antigravity: Process Infocards",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
     }

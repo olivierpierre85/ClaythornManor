@@ -5,7 +5,7 @@ from PIL import Image
 # Configuration
 SOURCE_DIR = Path(r"c:\Projects\ClaythornManor\Images\info_cards")
 DEST_DIR = Path(r"c:\Projects\ClaythornManor\Murder\game\images\info_cards")
-BORDER_IMAGE_PATH = SOURCE_DIR / "main_border.png"
+BORDER_IMAGE_PATH = SOURCE_DIR / "addons" / "main_border.png"
 TARGET_SIZE = (75, 75)
 
 def process_images():
@@ -26,6 +26,10 @@ def process_images():
 
     # Iterate through all files in source directory
     for file_path in SOURCE_DIR.iterdir():
+        if file_path.is_dir():
+            print(f"Skipping subfolder: {file_path.name}")
+            continue
+
         if file_path.is_file() and file_path.suffix.lower() in ['.png', '.jpg', '.jpeg', '.webp']:
             # Skip the border image itself
             if file_path.name == BORDER_IMAGE_PATH.name:
