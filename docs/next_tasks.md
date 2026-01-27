@@ -1,19 +1,7 @@
 # 🚀 Active Work & Next Steps
 
-- [🚀 Active Work \& Next Steps](#-active-work--next-steps)
-  - [IMPORTANT](#important)
-  - [Write Story : Day 3 - Doctor](#write-story--day-3---doctor)
-  - [Proofreading](#proofreading)
-  - [Technical Tasks](#technical-tasks)
-  - [Assets \& artistic Tasks](#assets--artistic-tasks)
-  - [Question for Testers](#question-for-testers)
-    - [Update ITCH.IO](#update-itchio)
-
 ## IMPORTANT
 - [ ] REVIEW THIS DOC COMPARE TO GOOGLE DOC.
-  - [x] Next page 
-  - [x] NEXT : TECH - HUGE FILE TO read for SMALL ideas
-  - [x] SORT ASSETS GENERIC IDEA
   - [ ] CHECK every task is at the right place (tech backlog)
   - [ ] GAME STORY NEW MD - DOUBLE CHECK everything
     - [ ] characters
@@ -36,7 +24,6 @@
 - Doctor: TODO Full
 
 ## Technical Tasks
-- **SNIPETS** doubld check and extend the new snippet file! 
   - New menu with more current options (change room, sound, music, and their values)
 - [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
 - [ ] BUG: **save_transcript_to_file** button not working during menu????
@@ -45,9 +32,6 @@
     - [ ] Doctor
     - [ ] Lad
     - [ ] Psychic
-- [ ] **Refactor**: Clean "todo.md" into proper docs (Done!).
-- [ ] Rename gun room to armory
-- [ ] Replace ALL icons, with the thread icon? Not loops, or .... (just do)
 - [ ] **MENUS - Big Challenge**: 
     - [ ] Menus: Ensure "Next menu" is correct everywhere AND That every choice with a following menu DOESNT have a time value
         - [ ] Doctor

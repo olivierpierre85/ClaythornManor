@@ -49,5 +49,245 @@
             "call black_screen_transition(\"${1:Title}\", \"${2:Subtitle}\")"
         ],
         "description": "Show a black screen transition with text"
+    },
+    "Unlock Thread": {
+        "prefix": [
+            "unlock",
+            "$threads.unlock"
+        ],
+        "body": [
+            "$ ${1|lad_details,doctor_details,psychic_details,nurse_details,captain_details,broken_details,drunk_details,host_details|}.threads.unlock('${2:thread_name}')"
+        ],
+        "description": "Unlock a thread (choice/observation/object) for a character"
+    },
+    "Is Unlocked Thread": {
+        "prefix": [
+            "is_unlocked",
+            "$threads.is_unlocked"
+        ],
+        "body": [
+            "${1|lad_details,doctor_details,psychic_details,nurse_details,captain_details,broken_details,drunk_details,host_details|}.threads.is_unlocked('${2:thread_name}')"
+        ],
+        "description": "Check if a thread is unlocked for a character"
+    },
+    "Unlock Lad Thread": {
+        "prefix": [
+            "lad_unlock",
+            "$lad_details.threads.unlock"
+        ],
+        "body": [
+            "$ lad_details.threads.unlock('${1|whisky,day1_drunk,downstairs_1,hunt,hunt_captain_host,hunt_doctor_drunk,downstairs_2,day2_drunk,trust_psychic,abandoned_psychic,protect_food,downstairs_3,day3_drunk,green_liquid,seen_car,gun,burned_letter,laudanum|}')"
+        ],
+        "description": "Unlock a thread for the Lad character"
+    },
+    "Is Unlocked Lad Thread": {
+        "prefix": [
+            "lad_is_unlocked",
+            "lad_details.threads.is_unlocked"
+        ],
+        "body": [
+            "lad_details.threads.is_unlocked('${1|whisky,day1_drunk,downstairs_1,hunt,hunt_captain_host,hunt_doctor_drunk,downstairs_2,day2_drunk,trust_psychic,abandoned_psychic,protect_food,downstairs_3,day3_drunk,green_liquid,seen_car,gun,burned_letter,laudanum|}')"
+        ],
+        "description": "Check if a thread is unlocked for the Lad character"
+    },
+    "Unlock Doctor Thread": {
+        "prefix": [
+            "doctor_unlock",
+            "$doctor_details.threads.unlock"
+        ],
+        "body": [
+            "$ doctor_details.threads.unlock('${1|broken_offended,flirt,broken_unmasked,trust_captain,trust_nurse,book_mystery,book_opium,footman_french_1,footman_french_2,remember_nurse,drunk_letter,burned_letter,footman_actor|}')"
+        ],
+        "description": "Unlock a thread for the Doctor character"
+    },
+    "Is Unlocked Doctor Thread": {
+        "prefix": [
+            "doctor_is_unlocked",
+            "doctor_details.threads.is_unlocked"
+        ],
+        "body": [
+            "doctor_details.threads.is_unlocked('${1|broken_offended,flirt,broken_unmasked,trust_captain,trust_nurse,book_mystery,book_opium,footman_french_1,footman_french_2,remember_nurse,drunk_letter,burned_letter,footman_actor|}')"
+        ],
+        "description": "Check if a thread is unlocked for the Doctor character"
+    },
+    "Unlock Psychic Thread": {
+        "prefix": [
+            "psychic_unlock",
+            "$psychic_details.threads.unlock"
+        ],
+        "body": [
+            "$ psychic_details.threads.unlock('${1|visit_lad,steal_gun,leave_manor,visited_attic,lord_name,lord_age,nurse_sick,silverware|}')"
+        ],
+        "description": "Unlock a thread for the Psychic character"
+    },
+    "Is Unlocked Psychic Thread": {
+        "prefix": [
+            "psychic_is_unlocked",
+            "psychic_details.threads.is_unlocked"
+        ],
+        "body": [
+            "psychic_details.threads.is_unlocked('${1|visit_lad,steal_gun,leave_manor,visited_attic,lord_name,lord_age,nurse_sick,silverware|}')"
+        ],
+        "description": "Check if a thread is unlocked for the Psychic character"
+    },
+    "Unlock Captain Thread": {
+        "prefix": [
+            "captain_unlock",
+            "$captain_details.threads.unlock"
+        ],
+        "body": [
+            "$ captain_details.threads.unlock('${1|butler_key|}')"
+        ],
+        "description": "Unlock a thread for the Captain character"
+    },
+    "Is Unlocked Captain Thread": {
+        "prefix": [
+            "captain_is_unlocked",
+            "captain_details.threads.is_unlocked"
+        ],
+        "body": [
+            "captain_details.threads.is_unlocked('${1|butler_key|}')"
+        ],
+        "description": "Check if a thread is unlocked for the Captain character"
+    },
+    "Unlock Description Hidden": {
+        "prefix": [
+            "unlock_hidden",
+            "$description_hidden.unlock"
+        ],
+        "body": [
+            "$ ${1|lad_details,doctor_details,psychic_details,nurse_details,captain_details,broken_details,drunk_details,host_details|}.description_hidden.unlock('${2:info_name}')"
+        ],
+        "description": "Unlock a hidden description info for a character"
+    },
+    "Unlock Lad Description Hidden": {
+        "prefix": [
+            "lad_unlock_hidden",
+            "$lad_details.description_hidden.unlock"
+        ],
+        "body": [
+            "$ lad_details.description_hidden.unlock('${1|age,origin,poor,childhood,adopted,education,job,thief,heroic_act,lie,poor_drinker,drive,cook|}')"
+        ],
+        "description": "Unlock a hidden description info for the Lad character"
+    },
+    "Unlock Doctor Description Hidden": {
+        "prefix": [
+            "doctor_unlock_hidden",
+            "$doctor_details.description_hidden.unlock"
+        ],
+        "body": [
+            "$ doctor_details.description_hidden.unlock('${1|background,heroic_act,status,age,addict,fraud|}')"
+        ],
+        "description": "Unlock a hidden description info for the Doctor character"
+    },
+    "Unlock Psychic Description Hidden": {
+        "prefix": [
+            "psychic_unlock_hidden",
+            "$psychic_details.description_hidden.unlock"
+        ],
+        "body": [
+            "$ psychic_details.description_hidden.unlock('${1|background,status,age,heroic_act,lie,drive,racist|}')"
+        ],
+        "description": "Unlock a hidden description info for the Psychic character"
+    },
+    "Unlock Nurse Description Hidden": {
+        "prefix": [
+            "nurse_unlock_hidden",
+            "$nurse_details.description_hidden.unlock"
+        ],
+        "body": [
+            "$ nurse_details.description_hidden.unlock('${1|job,clothes,age,manor,sick,heroic_act,lie|}')"
+        ],
+        "description": "Unlock a hidden description info for the Nurse character"
+    },
+    "Unlock Captain Description Hidden": {
+        "prefix": [
+            "captain_unlock_hidden",
+            "$captain_details.description_hidden.unlock"
+        ],
+        "body": [
+            "$ captain_details.description_hidden.unlock('${1|wars,talker,heroic_act,city,age,mansion,table,family,lie|}')"
+        ],
+        "description": "Unlock a hidden description info for the Captain character"
+    },
+    "Unlock Broken Description Hidden": {
+        "prefix": [
+            "broken_unlock_hidden",
+            "$broken_details.description_hidden.unlock"
+        ],
+        "body": [
+            "$ broken_details.description_hidden.unlock('${1|mask,age,background,tall,job,heroic_act,city,shy,lie_mask,lie_name|}')"
+        ],
+        "description": "Unlock a hidden description info for the Broken character"
+    },
+    "Unlock Drunk Description Hidden": {
+        "prefix": [
+            "drunk_unlock_hidden",
+            "$drunk_details.description_hidden.unlock"
+        ],
+        "body": [
+            "$ drunk_details.description_hidden.unlock('${1|status,age,wife,addict,job,heroic_act,lie|}')"
+        ],
+        "description": "Unlock a hidden description info for the Drunk character"
+    },
+    "Unlock Host Description Hidden": {
+        "prefix": [
+            "host_unlock_hidden",
+            "$host_details.description_hidden.unlock"
+        ],
+        "body": [
+            "$ host_details.description_hidden.unlock('${1|name_age,down_to_earth,independent,guns,car,lie|}')"
+        ],
+        "description": "Unlock a hidden description info for the Host character"
+    },
+    "Unlock Ending": {
+        "prefix": [
+            "unlock_ending",
+            "$endings.unlock"
+        ],
+        "body": [
+            "$ ${1|lad_details,doctor_details,psychic_details,captain_details|}.endings.unlock('${2:ending_name}')"
+        ],
+        "description": "Unlock an ending for a character"
+    },
+    "Unlock Lad Ending": {
+        "prefix": [
+            "lad_unlock_ending",
+            "$lad_details.endings.unlock"
+        ],
+        "body": [
+            "$ lad_details.endings.unlock('${1|deathbed,gunned_down,poisoned,fell,escape,final_ending|}')"
+        ],
+        "description": "Unlock an ending for the Lad character"
+    },
+    "Unlock Doctor Ending": {
+        "prefix": [
+            "doctor_unlock_ending",
+            "$doctor_details.endings.unlock"
+        ],
+        "body": [
+            "$ doctor_details.endings.unlock('${1|overdose,shot_by_drunk,burned,throat_cut,poisoned,run_over,shot,escape|}')"
+        ],
+        "description": "Unlock an ending for the Doctor character"
+    },
+    "Unlock Psychic Ending": {
+        "prefix": [
+            "psychic_unlock_ending",
+            "$psychic_details.endings.unlock"
+        ],
+        "body": [
+            "$ psychic_details.endings.unlock('${1|fell,burned,shot,bludgeoned,escape|}')"
+        ],
+        "description": "Unlock an ending for the Psychic character"
+    },
+    "Unlock Captain Ending": {
+        "prefix": [
+            "captain_unlock_ending",
+            "$captain_details.endings.unlock"
+        ],
+        "body": [
+            "$ captain_details.endings.unlock('${1|todo|}')"
+        ],
+        "description": "Unlock an ending for the Captain character"
     }
 }
