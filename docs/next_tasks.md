@@ -1,15 +1,12 @@
 # 🚀 Active Work & Next Steps
 
-## IMPORTANT
-- [ ] REVIEW THIS DOC COMPARE TO GOOGLE DOC.
-  - [ ] CHECK every task is at the right place (tech backlog)
-  - [ ] GAME STORY NEW MD - DOUBLE CHECK everything
-    - [ ] characters
-    - [ ] locations object => Add all objects to all rooms like in game????
-    - [ ] meta ai
-    - [ ] timeline
+- [ ] GAME STORY NEW MD - DOUBLE CHECK everything
+  - [ ] characters
+  - [ ] locations object => Add all objects to all rooms like in game????
+  - [ ] meta ai
+  - [ ] timeline
 
-## Write Story : Day 3 - Doctor
+## Write Story : Day 3 - Doctor FINIS DOCTOR
 - [ ] RETRY EVERYTHING - BUT FIRST ALL nurses path
 - [ ] add Music Death.
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).
@@ -24,7 +21,7 @@
 - Doctor: TODO Full
 
 ## Technical Tasks
-  - New menu with more current options (change room, sound, music, and their values)
+
 - [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
 - [ ] BUG: **save_transcript_to_file** button not working during menu????
 - [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
@@ -51,6 +48,8 @@
 
 ## Assets & artistic Tasks
 - [ ] Try to make background using Nano Banane Pro.
+- [ ] Try to make new Character side image
+- [ ] Try to make characteres FULL size 
 - [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
 - [ ] Try Locations with characters inside (Whisk/experimental).
 

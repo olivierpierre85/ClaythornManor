@@ -11,6 +11,7 @@
 | Inside Train  |   x   |   -   |       -       |
 | Train Station |       |       |               |
 | .....         |       |       |               |
+| .....         |       |       |               |
 
 ## Characters
 - From their heads, create full size avatar in the style. Also redraw the head with new style and add all needed expressions: Scared, amused, sad,....
@@ -36,6 +37,9 @@
 ## Locations with characters inside (Experimental)
 - Once we have locations and character, use whisk to put full size characters inside the locations.
 Do it for all possibilities ( dining room with less and less persons as the time goes by,...)
+- ! "Whisk" as a limit of adding max 2 characters at the same time to an image. (Maybe do it ) Then it's not very good at adding a third
+- ! Tried with chatgpt, it's about the same problem. Not ready with chatgpt 5.2 NOR nano banana pro 2 yet. See whisk projects to understand problems
+- !!! ? ==> wait for BETTER Nano banana version (3.0)
 
 
 ## Animations

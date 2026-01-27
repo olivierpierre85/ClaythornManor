@@ -14,6 +14,7 @@
 - [🎨 Assets Backlog](docs/tasks/assets.md)
 - [✍️ Story Backlog](docs/tasks/story.md)
 - [💻 Tech Backlog](docs/tasks/tech.md)
+- [Time Sheet](docs/tasks/timesheet.md)
 
 ### 🏰 Game Story & Lore Index
 
