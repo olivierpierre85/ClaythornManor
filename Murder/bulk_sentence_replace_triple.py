@@ -73,7 +73,7 @@ def replace_in_block(block_text, pairs):
 
 
 
-def process_file(path, pairs, dry_run=False, create_backup=True):
+def process_file(path, pairs, dry_run=False, create_backup=False):
     text = path.read_text(encoding="utf-8")
     original = text
     total_hits = 0
