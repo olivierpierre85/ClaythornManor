@@ -150,17 +150,13 @@ label doctor_day3_morning_nurse:
     $ change_room('attic_hallway')
 
     nurse """
-    Perfect. There is a room here I can lock.
+    Perfect. There is a room here where we will be comfortable.
 
     I don't think they would look here.
     """
 
-    doctor """
-    Interesting, how did you get the key to this room?
     """
-
-    """
-    She doesn't answer and just turns the key.
+    She unlocks the door next to us and goes in.
     """
 
     play sound door_open
@@ -194,7 +190,7 @@ label doctor_day3_morning_nurse:
     """
 
     doctor """
-    Excuse me, but you didn't answer. How did you get the key to this room?
+    Excuse me, but how did you get the key to this room?
     """
 
     nurse """
@@ -220,8 +216,6 @@ label doctor_day3_morning_nurse:
     nurse """
     Yes, it's very likely.
     """
-
-    call wait_screen_transition
 
     jump doctor_day3_afternoon
 
