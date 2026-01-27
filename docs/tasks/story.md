@@ -67,6 +67,8 @@
 ### Important
 
 - [ ] SEE NEXT
+- [ ] When other characters are done, rewrite part where the doctor gets out of the library and is immediately caught by lad and psychic. too lazy.
+  - [ ] Also, the end of the nurse paths teaches you almost nothing => CHANGE THAT
   
 ### Ideas to think over (optional)
 - [ ] ADD choice end of day1 when footman comes. Should I let him in ? This way the FRENCH thing is not mandatory
