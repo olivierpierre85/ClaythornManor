@@ -85,7 +85,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     Even my fellow Indian soldiers were not immune to it, and many died of sunstroke.
 
-    By the time we reached Peking, our expedition of 20 000 had been reduced to 10 000.
+    By the time we reached Peking, our expedition of 20,000 had been reduced to 10,000.
 
     By that time, the soldiers were angry, tired, and restless.
 
@@ -101,7 +101,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     But the Russians were not happy with their assigned choice of gate.
 
-    So they woke up early and assaulted the closest gate to the legation quarters, where the Americans were supposed to be.
+    So they woke up early and assaulted the closest gate to the Legation Quarters, where the Americans were supposed to be.
 
     They wanted to be the first army to reach the defenders, and so claim the glory of having liberated the city by themselves.
 
@@ -109,7 +109,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     Luckily, in the end, we managed to conquer Beijing without too much trouble.
 
-    We even entered the Imperial City and routed out the Empress.
+    We even entered the Imperial City and rooted out the Empress.
 
     It was an undeniable victory, but the price paid was high.
     """
@@ -119,7 +119,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
     captain """
     Afterwards, we stayed and occupied the city.
 
-    To compensate themselves, soldiers went on a looting frenzy.
+    To compensate themselves, the soldiers went on a looting frenzy.
 
     Sadly, people in the British army also took part in it.
 
@@ -141,7 +141,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     In the end, my commanders were really pleased with me.
 
-    So, I got to go to London to lead a training regiment near London.
+    So, I was sent to London to lead a training regiment nearby.
 
     That was very rare for someone of Indian descent.
 

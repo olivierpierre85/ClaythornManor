@@ -139,7 +139,7 @@ label lad_day1_evening_billiard_room_group:
 
     Thomas Moody, Rosalind Marsh and Lady Claythorn are listening to the older Indian man.
 
-    Even the butler, who is standing on the corner next to them looks very interested in what is being said.
+    Even the butler, who is standing in the corner next to them, looks very interested in what is being said.
 
     I join them.    
     """
@@ -151,7 +151,7 @@ label lad_day1_evening_billiard_room_group:
 
     Where was I?
 
-    Oh Right.
+    Oh, right.
     """
 
     call common_day1_evening_captain_billiard_room_speech_part_1
@@ -185,7 +185,7 @@ label lad_day1_evening_billiard_room_group_part_2:
     """
     Wait, that was the original question?
 
-    Why he is living in England?
+    Why is he living in England?
 
     That sure took long enough.
     """

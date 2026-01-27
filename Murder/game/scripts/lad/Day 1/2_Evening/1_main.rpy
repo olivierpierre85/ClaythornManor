@@ -447,11 +447,11 @@ label lad_day1_evening_dinner_doctor:
     """
 
     doctor """
-    Hi Mr Harring, I am doctor Daniel Baldwin.
+    Hi Mr Harring, I am Dr Daniel Baldwin.
     """
 
     lad """
-    Nice to meet you doctor.
+    Nice to meet you, doctor.
     """
 
     call doctor_generic
