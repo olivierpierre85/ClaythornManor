@@ -119,6 +119,8 @@ label doctor_day3_morning_nurse:
     Fine.
     """
 
+    $ change_room("bedrooms_hallway")
+
     """
     We make it only a few steps before we hear another set of footsteps.
 
@@ -167,7 +169,7 @@ label doctor_day3_morning_nurse:
     Come on in, Doctor, it's empty.
     """
 
-    $ change_room('butler_room')
+    $ change_room("butler_room")
 
     """
     I follow her, and she immediately closes the door behind me.

@@ -27,6 +27,7 @@
 ### Agent Customizations
 
 - [Grammar Style](.agent/rules/grammar-style.md)
+- [Grammar Corrections](.agent/workflows/grammar_correction.md)
 
 ## 🎮 Getting Started
 To play the game or contribute:

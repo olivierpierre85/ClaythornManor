@@ -51,6 +51,9 @@
 
 
 ## Assets & artistic Tasks
+- [ ] Try a extension or App to do easy repetitive things
+  - [ ] Add a border to an image
+  - [ ] Resize to 1920 ,With cropping when needed
 - [ ] Try to make background using Nano Banane Pro.
 - [ ] Try to make new Character side image
 - [ ] Try to make characteres FULL size 
