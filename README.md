@@ -24,6 +24,10 @@
 - [🧪 Test Runs](docs/game_story/test_runs.md)
 - [🔓 Unlock Chart](docs/game_story/unlock.md)
 
+### Agent Customizations
+
+- [Grammar Style](.agent/rules/grammar-style.md)
+
 ## 🎮 Getting Started
 To play the game or contribute:
 1. Open the project in the **Ren'Py Launcher**.
