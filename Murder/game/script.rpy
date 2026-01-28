@@ -55,8 +55,8 @@ init -1000 python:
     #     return bad
 
     def load_latest_choices_from_testing():
-        base = renpy.config.basedir
-        folder = os.path.join(base, "testing_results")
+        base = renpy.config.gamedir
+        folder = os.path.join(base, "tests", "result")
         files = glob.glob(os.path.join(folder, "*.json"))
         if not files:
             return None, []

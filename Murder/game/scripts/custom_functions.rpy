@@ -198,15 +198,20 @@ init python:
             "choices": choices,
         }
         json_text = json.dumps(data, indent=2, ensure_ascii=False)
-        fname = f"SAVES\choices_{data['tester_id']}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
+        ts = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+        fname = f"choices_{data['tester_id']}_{ts}.json"
+        game_dir = renpy.config.gamedir
+        out_dir = os.path.join(game_dir, "tests", "result")
+        fpath = os.path.join(out_dir, fname)
 
         # ---- Desktop / mobile: write to disk ----
         if sys.platform != "emscripten":
             try:
-                with open(fname, "w", encoding="utf-8") as f:
+                os.makedirs(out_dir, exist_ok=True)
+                with open(fpath, "w", encoding="utf-8") as f:
                     f.write(json_text)
                 renpy.notify(f"Exported to {fname}")
-                renpy.notify("Saving to: " + os.path.abspath(fname))
+                renpy.notify("Saving to: " + os.path.abspath(fpath))
             except Exception as e:
                 renpy.notify(f"Export failed: {e}")
             return
@@ -267,8 +272,8 @@ init python:
             chapter_index = chapters_order.index(renpy.store.current_chapter) if renpy.store.current_chapter in chapters_order else -1
             numbered_chapter = f"{chapter_index}_{_sanitize(renpy.store.current_chapter)}" if chapter_index >= 0 else _sanitize(renpy.store.current_chapter)
 
-            base_dir = renpy.config.basedir  # project root (same level as /game)
-            out_dir  = os.path.join(base_dir, "testing_results", text_id, numbered_chapter)
+            game_dir = renpy.config.gamedir
+            out_dir  = os.path.join(game_dir, "tests", "result", text_id, numbered_chapter)
             os.makedirs(out_dir, exist_ok=True)
 
             lines = _transcript_lines()
