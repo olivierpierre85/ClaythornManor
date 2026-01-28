@@ -193,12 +193,12 @@ init python:
     def export_choices_to_file(choices, tester_id=None):
         # ---- Build JSON payload ----
         data = {
-            "tester_id": tester_id or "anon",
+            "tester_id": tester_id or "admin",
             "timestamp": datetime.now().isoformat(),
             "choices": choices,
         }
         json_text = json.dumps(data, indent=2, ensure_ascii=False)
-        fname = f"choices_{data['tester_id']}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
+        fname = f"SAVES\choices_{data['tester_id']}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
 
         # ---- Desktop / mobile: write to disk ----
         if sys.platform != "emscripten":
@@ -206,6 +206,7 @@ init python:
                 with open(fname, "w", encoding="utf-8") as f:
                     f.write(json_text)
                 renpy.notify(f"Exported to {fname}")
+                renpy.notify("Saving to: " + os.path.abspath(fname))
             except Exception as e:
                 renpy.notify(f"Export failed: {e}")
             return

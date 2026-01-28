@@ -349,7 +349,7 @@ screen navigation(tag="menu"):
             # textbutton _("Save") action FileSave(None)
             textbutton _("Save"):
                 if not tutorial_on:
-                    action QuickSave()
+                    action [QuickSave(), Function(export_choices_to_file, all_choices)]
             textbutton _("Quit"):
                 if not tutorial_on:
                     # TODO: put back the save when testing demo !!

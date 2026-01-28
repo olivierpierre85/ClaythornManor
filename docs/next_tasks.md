@@ -71,7 +71,7 @@ NEW paths PAGE wil ALL the unlockables, different from breakpoint page
 
 ### Update ITCH.IO
 - Update itch.io
-- Switch branch
+- Switch branch (Check export_file IN SAVE action has been deleted)
 - Define config.version = "0.1"
 - Export selection choices
 
