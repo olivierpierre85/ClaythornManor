@@ -86,3 +86,21 @@ init python in test:
     def unlock_threads(details_obj, names):
         for n in (names or []):
             details_obj.threads.unlock(n)
+
+    def start(character, chapter, plan_file=None, threads=None):
+        """
+        Consolidated setup for a chapter test.
+        """
+        renpy.store.current_character = character
+        renpy.store.current_chapter = chapter
+        renpy.store.disable_all_tutorials()
+        
+        autorunner.reset()
+        if plan_file:
+            autorunner.load_plan_file(plan_file)
+        
+        autorunner.target_chapter = chapter
+        autorunner.active = True
+        
+        if threads:
+            unlock_threads(character, threads)
