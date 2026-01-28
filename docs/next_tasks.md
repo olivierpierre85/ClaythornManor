@@ -51,6 +51,7 @@
 
 
 ## Assets & artistic Tasks
+
 - [ ] Try a extension or App to do easy repetitive things
   - [ ] Add a border to an image
   - [ ] Resize to 1920 ,With cropping when needed

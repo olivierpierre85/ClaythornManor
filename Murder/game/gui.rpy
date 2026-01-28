@@ -105,7 +105,8 @@ define gui.transition_bottom_text_font = "gui/font/PlayfairDisplay-Italic-Variab
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu_cover.png" #TODO new background
+define gui.main_menu_background = Movie(play="gui/main_menu_cover.webm", keep_last_frame=True, size=(1920, 1080), loop=False)
+# define gui.main_menu_background = "gui/main_menu_cover.png" #TODO new background
 define gui.game_menu_background = "gui/game_menu.png"
 
 
