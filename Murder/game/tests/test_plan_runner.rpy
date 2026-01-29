@@ -20,6 +20,7 @@ init python in test:
             self.active = False
             self.steps = []
             self.i = 0
+            self.unlocked_threads = []
             self.target_chapter = None
             self.start_chapter = None
             self.reached_new_chapter = None
@@ -29,6 +30,7 @@ init python in test:
             # data = json.loads(raw)
             data = load_json_from_game(path_in_game_dir)
             self.steps = data.get("choices", data)  # accept {"choices":[...]} or directly a list
+            self.unlocked_threads = data.get("unlocked_threads", [])
             self.i = 0
             self.active = True
 
@@ -157,6 +159,10 @@ init python in test:
             
             start(character, chapter_id, plan)
             
+            # Apply threads if present in the plan
+            if autorunner.unlocked_threads:
+                unlock_threads(character, autorunner.unlocked_threads)
+
             # Use test execution to jump and wait
             import renpy.test.testexecution as testexecution
             testexecution.execute(f"run Jump('{start_label}')")

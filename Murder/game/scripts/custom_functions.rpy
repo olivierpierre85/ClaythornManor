@@ -195,6 +195,7 @@ init python:
         data = {
             "tester_id": tester_id or "admin",
             "timestamp": datetime.now().isoformat(),
+            "unlocked_threads": [],
             "choices": choices,
         }
         json_text = json.dumps(data, indent=2, ensure_ascii=False)

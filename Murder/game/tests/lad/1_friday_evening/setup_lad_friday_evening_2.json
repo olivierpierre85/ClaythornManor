@@ -1,6 +1,9 @@
 {
   "tester_id": "admin",
   "timestamp": "2026-01-29T11:04:02.927908",
+  "unlocked_threads": [
+    " downstairs_1"
+  ],
   "choices": [
     {
       "menu": "lad_introduction",
