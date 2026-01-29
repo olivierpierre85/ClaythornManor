@@ -1,0 +1,204 @@
+Chapter: The Arrival
+Character: Ted Harring
+Butler: Welcome, sir.
+Ted Harring: Hello, I'm Ted Harring. I've been invited by Lady Claythorn.
+Butler: Yes, of course, Mr Harring.
+Butler: Welcome to Claythorn Manor.
+Butler: I am afraid you won't have time to change right now.
+Butler: Everyone is already there, and dinner will be ready very soon.
+Butler: If you'll follow me to the tea room, you may join the rest of the party for some drinks.
+Well, it's not as if I have multiple changes of clothes anyway. So, I follow him.
+As I step into the room, the butler loudly announces me.
+Butler: Mr Ted Harring!
+Everyone turns their heads towards me.
+Some people nod in my direction, while others barely acknowledge my presence.
+From afar, the butler provides me with a brief introduction to each guest.
+Butler: The older gentleman speaking is from India, and his name is Sushil Sinha.
+Butler: He is in conversation with Rosalind Marsh...
+Butler: ... and with Daniel Baldwin, the gentleman with spectacles.
+Butler: Do not be alarmed by the man in the mask.
+Butler: He is a war veteran, Mr Thomas Moody.
+Butler: The person on the sofa, who looks rather exhausted, is Mr Samuel Manning.
+Butler: The lady in the corner is Mrs Amelia Baxter.
+Ted Harring: I don't see our host in the room.
+Butler: Lady Claythorn is still busy at the moment.
+Butler: You'll meet her at dinner.
+After this introduction, he leaves me and goes to stand in the corner of the room.
+Most of the guests are already engaged in conversation.
+However, Amelia Baxter and Samuel Manning are alone.
+They seem more approachable than the rest.
+Menu Choice: Talk to Samuel Manning
+I am heading towards the older man.
+He holds an empty glass in his hand. His gaze is empty.
+Ted Harring: Hello, sir. How are you?
+Samuel Manning: (Snores...)
+He reeks of booze, and he is deeply asleep. Talking to him is useless.
+Menu Choice: Stand awkwardly in the corner
+What is that? A gong?
+Butler: Dinner is served. Please, follow me to the dining room.
+Everyone takes a seat at the spot labelled with their names.
+As I observe each person, Lady Claythorn makes her entrance into the room.
+She looks younger than I had imagined.
+I don't know why, but I pictured an elderly, bored lady. Yet she looks nothing like that.
+Her clothes, which are the most impressive of anyone's in the room, make her status clear.
+She proceeds to take her seat at the table.
+Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
+Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
+Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
+Lady Claythorn: I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
+Lady Claythorn: I realize the invitation letter you received was somewhat vague, so let me clarify its contents now.
+Lady Claythorn: My first gift to you is a stay at my manor.
+Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
+Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
+Lady Claythorn: My second gift is a sum of one thousand pounds, to be shared among you.
+Lady Claythorn: This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
+Following her speech, our host settles back down in her chair.
+After her speech, everyone appears pleased.
+A few of the guests begin to express their appreciation to the host.
+Lady Claythorn: Please, there's no need to thank me.
+Lady Claythorn: The food will be served shortly.
+Lady Claythorn: Enjoy your meal.
+At that moment, the butler enters the room, accompanied by the footman.
+They begin to serve the first dish and pour drinks for everyone.
+The mood in the room gradually relaxes, and the sound of various conversations fills the space.
+I turn my attention to the guests seated next to me.
+I find myself sitting between Amelia Baxter and Daniel Baldwin.
+Menu Choice: Talk to Daniel Baldwin
+Ted Harring: Hello. I am Ted Harring.
+Daniel Baldwin: Hi Mr Harring, I am Dr Daniel Baldwin.
+Ted Harring: Nice to meet you, doctor.
+Menu Choice: Tell me more about yourself.
+Daniel Baldwin: I am the chief physician at St. Margaret's Hospital.
+Daniel Baldwin: It's a charity hospital for those in need.
+Daniel Baldwin: Before that, I worked a bit all over the place.
+Daniel Baldwin: I also served in the army several times, including the last one.
+Daniel Baldwin: That one was the worst, of course.
+Menu Choice: Why were you invited here?
+Daniel Baldwin: Well, I recently celebrated my ten years at St. Margaret's.
+Daniel Baldwin: Not many people stay that long at this type of institution.
+Daniel Baldwin: Usually, doctors stay for a few years to build a reputation, then move on to a more luxurious practice.
+Daniel Baldwin: Lady Claythorn must have understood the sacrifice I've made, hence the reward.
+Daniel Baldwin: Not that I consider it a sacrifice, of course.
+Daniel Baldwin: I love my job and wouldn't change it for the world.
+Daniel Baldwin: Still, it's always nice to receive some recognition.
+Menu Choice: What do you think of this place?
+Daniel Baldwin: It's a nice house.
+Daniel Baldwin: But I can't say much more about it.
+Daniel Baldwin: I'm not used to visiting such places.
+Daniel Baldwin: This is the first time I've been invited to a grand mansion as a guest and not as a doctor.
+Daniel Baldwin: The truth is, my job doesn't pay that much.
+Daniel Baldwin: Nevertheless, I'm content with my small apartment.
+Daniel Baldwin: I wouldn't want anything this big; it must be such a hassle to manage.
+Ted Harring: So you're not accustomed to having a butler and footmen around?
+Daniel Baldwin: No, I can't say that I am.
+Well, that's rather comforting.
+Menu Choice: What room are you in?
+Daniel Baldwin: I'm staying in the Edward II room.
+Menu Choice: What do you think of the other guests?
+Daniel Baldwin: Oh, I haven't talked to many people so far.
+Daniel Baldwin: I think the only person I've heard speak is Mr Sinha.
+Daniel Baldwin: And by "heard," I really just mean heard.
+Daniel Baldwin: Because I don't think I was able to contribute anything to the conversation.
+Menu Choice: How old are you?
+Daniel Baldwin: I'm 39 years old. Why do you ask?
+Ted Harring: Actually, I'm not sure.
+The dinner comes to an end.
+The host explains that we can continue our discussion and enjoy drinks in the billiard room, or, for those tired from the journey, we can simply retire for the night.
+Since I haven't seen my room yet, I should probably head there first.
+I ask the footman to show me the way.
+The footman escorts me up the grand staircase, leading me to the first floor.
+Footman: Here you are, sir.
+Footman: You've been assigned the 'William the Conqueror' room.
+I step into the bedroom.
+It is more spacious than my flat, and more luxurious than I could have imagined.
+Footman: I hope the room suits your taste.
+Ted Harring: This is... this is good, yes. Thank you.
+The footman exits the room.
+I look around in disbelief.
+After a while, I unpack my modest luggage.
+It does not take long. So, what should I do now?
+Map Choice: Tea room
+There is nobody here.
+No need to stay any longer.
+Map Choice: Library
+It's a very nice library. But what am I doing here?
+I can hardly read.
+There is an open book on a small table.
+"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
+Yeah, I'm not reading that.
+I should probably look elsewhere.
+Map Choice: Portrait Gallery
+That's a creepy portrait gallery.
+I don't recognize anyone, so I guess these are people from the Claythorn family.
+Map Choice: Meet the others in the billiard room
+Except for Amelia Baxter, everyone from dinner is in this room.
+I recognise Dr Baldwin sitting alone in a chair.
+There's also an array of alcohol near the bar.
+The rest of the guests are clustered together, with Sushil Sinha leading the conversation.
+The butler stands silently in a corner near them.
+Menu Choice: Approach the large group of people
+I walk towards the main group in the room.
+Thomas Moody, Rosalind Marsh and Lady Claythorn are listening to the older Indian man.
+Even the butler, who is standing in the corner next to them, looks very interested in what is being said.
+I join them.
+Sushil Sinha: Mr Harring.
+Sushil Sinha: I was just telling everyone here a story.
+Sushil Sinha: Where was I?
+Sushil Sinha: Oh, right.
+Sushil Sinha: It was in June of 1900, so some of you might remember.
+Sushil Sinha: In China, a group of rebels, called the "Boxers," had taken up arms against foreign presence in their country.
+Sushil Sinha: They were a group of mostly peasants, poorly armed.
+Sushil Sinha: We called them "Boxers" because of their use of martial arts in their fights.
+This appears to be a long story.
+If I stay, I might be stuck here for a while.
+Menu Choice: Continue to listen anyway
+Sushil Sinha: They managed to surround the Europeans and Japanese in the "International Legations" quarter, in China's capital, Beijing.
+Sushil Sinha: There, the besieged did their best to resist the Chinese assaults, but it was obvious to everyone that they wouldn't last very long.
+Sushil Sinha: In order to break the siege and rescue their compatriots, the largest foreign nations formed expeditions to help lift the siege of Beijing.
+Sushil Sinha: I was part of the most important one, and the only successful one: The "Gaselee Expedition," named after Alfred Gaselee, the British expedition leader.
+Sushil Sinha: It was a mish-mash of troops from eight different countries: Japan, The British Empire, The United States, France, Russia, German Empire, Italy, and Austria-Hungary.
+Sushil Sinha: As an Indian officer, I was obviously part of the British army.
+Sushil Sinha: We first landed at Tientsin, the old Chinese capital.
+Sushil Sinha: Then we marched from there to reach Beijing, and rescue the civilians besieged there, as well as people from previous expeditions.
+Sushil Sinha: The journey was a total nightmare.
+Sushil Sinha: We endured a march of almost a hundred miles, where we were under constant attacks from Chinese troops.
+Sushil Sinha: If that wasn't bad enough, some poorly led and confused soldiers, notably from the French army, often ended up shooting at their allies.
+Sushil Sinha: But the worst part was the scorching heat.
+Sushil Sinha: Even my fellow Indian soldiers were not immune to it, and many died of sunstroke.
+Sushil Sinha: By the time we reached Peking, our expedition of 20,000 had been reduced to 10,000.
+Sushil Sinha: By that time, the soldiers were angry, tired, and restless.
+Sushil Sinha: They had started to commit such acts that I can't even repeat here.
+Sushil Sinha: I was expecting the exactions of the Japanese and the Russians, who were known for their ruthlessness.
+Sushil Sinha: But in the end, our proud "civilized" European nations fared no better.
+Sushil Sinha: The final assault of the besieged was also an example of a lack of discipline among the soldiers and their commanders.
+Sushil Sinha: Each country was supposed to attack a different gate of the city.
+Sushil Sinha: But the Russians were not happy with their assigned choice of gate.
+Sushil Sinha: So they woke up early and assaulted the closest gate to the Legation Quarters, where the Americans were supposed to be.
+Sushil Sinha: They wanted to be the first army to reach the defenders, and so claim the glory of having liberated the city by themselves.
+Sushil Sinha: Bloody fools.
+Sushil Sinha: Luckily, in the end, we managed to conquer Beijing without too much trouble.
+Sushil Sinha: We even entered the Imperial City and rooted out the Empress.
+Sushil Sinha: It was an undeniable victory, but the price paid was high.
+Sushil Sinha: Afterwards, we stayed and occupied the city.
+Sushil Sinha: To compensate themselves, the soldiers went on a looting frenzy.
+Sushil Sinha: Sadly, people in the British army also took part in it.
+Sushil Sinha: But not in the same outrageous manner as other nations.
+Sushil Sinha: At least, looting on the part of British troops was carried out in the most orderly fashion.
+Sushil Sinha: We held loot auctions every day except Sunday in front of the main gate to the British Legation.
+Sushil Sinha: It was the best way to compensate for the loss of our compatriots who had suffered the siege for three months.
+Sushil Sinha: There was no way around it, I'm afraid.
+Sushil Sinha: Well, in any case, that was my first campaign as a captain.
+Sushil Sinha: And I do not regret it.
+Sushil Sinha: I stayed a few more months in China to ensure the peaceful transition.
+Sushil Sinha: In the end, my commanders were really pleased with me.
+Sushil Sinha: So, I was sent to London to lead a training regiment nearby.
+Sushil Sinha: That was very rare for someone of Indian descent.
+Sushil Sinha: In any case, that's why I live in England today.
+Wait, that was the original question?
+Why is he living in England?
+That sure took long enough.
+It's getting quite late now.
+Going back to my room is probably the best thing to do.
+It's been a long day and I'm exhausted from the trip.
+So I change and get directly into bed.
+Almost instantly, I fall asleep.
