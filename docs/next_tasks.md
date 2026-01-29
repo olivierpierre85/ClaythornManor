@@ -25,6 +25,8 @@
 - Doctor: TODO Full
 
 ## Technical Tasks
+-  [ ] **Testing**: Test the new framework with unlocked_threads
+-  [ ] **Testing**: Adapt Launch .json with tests
 -  [ ] **Testing**: Define paths that test all dialogs for the first 3 character
     - [ ] Doctor
     - [ ] Lad
