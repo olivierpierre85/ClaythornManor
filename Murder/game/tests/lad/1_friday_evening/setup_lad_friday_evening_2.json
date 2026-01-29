@@ -1,0 +1,463 @@
+{
+  "tester_id": "admin",
+  "timestamp": "2026-01-29T11:04:02.927908",
+  "choices": [
+    {
+      "menu": "lad_introduction",
+      "other_choices": [
+        "Talk to Samuel Manning",
+        "Talk to Amelia Baxter",
+        "Stand awkwardly in the corner"
+      ],
+      "selected": "Talk to Amelia Baxter",
+      "redirect": "lad_day1_drinks_psychic",
+      "time_left": 20,
+      "timestamp": "2026-01-29T11:03:14.125420",
+      "time_to_decide": 2.523689,
+      "time_since_last": 54.23536
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "What do you think of this weather?",
+        "What do you think of this weather?",
+        "What do you think of this weather?",
+        "Tell me more about yourself.",
+        "What do you think of this place?",
+        "How old are you?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "What do you think of this weather?",
+      "redirect": "psychic_generic_weather_friday",
+      "time_left": 20,
+      "timestamp": "2026-01-29T11:03:17.275327",
+      "time_to_decide": 0.813978,
+      "time_since_last": 3.149907
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "Tell me more about yourself.",
+        "Why were you invited here?",
+        "What do you think of this place?",
+        "How old are you?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "Tell me more about yourself.",
+      "redirect": "psychic_generic_background",
+      "time_left": 10,
+      "timestamp": "2026-01-29T11:03:18.490875",
+      "time_to_decide": 0.649277,
+      "time_since_last": 1.215548
+    },
+    {
+      "menu": "lad_day1_evening",
+      "other_choices": [
+        "Talk to Daniel Baldwin",
+        "Talk to Amelia Baxter",
+        "Eat in silence, like a sociopath"
+      ],
+      "selected": "Talk to Amelia Baxter",
+      "redirect": "lad_day1_evening_dinner_psychic",
+      "time_left": 90,
+      "timestamp": "2026-01-29T11:03:20.108401",
+      "time_to_decide": 1.164327,
+      "time_since_last": 1.617526
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "Why were you invited here?",
+        "What do you think of this place?",
+        "How old are you?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "Why were you invited here?",
+      "redirect": "psychic_generic_heroic_act",
+      "time_left": 90,
+      "timestamp": "2026-01-29T11:03:21.323635",
+      "time_to_decide": 1.016089,
+      "time_since_last": 1.215234
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "What do you think of this place?",
+        "How old are you?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "What do you think of this place?",
+      "redirect": "psychic_generic_manor",
+      "time_left": 60,
+      "timestamp": "2026-01-29T11:03:23.039280",
+      "time_to_decide": 0.633017,
+      "time_since_last": 1.715645
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "How old are you?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "How old are you?",
+      "redirect": "psychic_generic_age",
+      "time_left": 40,
+      "timestamp": "2026-01-29T11:03:23.988665",
+      "time_to_decide": 0.650396,
+      "time_since_last": 0.949385
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "What do you think of the other guests?",
+        "What do you think of the other guests?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "What do you think of the other guests?",
+      "redirect": "psychic_generic_other_guests_friday",
+      "time_left": 30,
+      "timestamp": "2026-01-29T11:03:24.739680",
+      "time_to_decide": 0.799278,
+      "time_since_last": 0.751015
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "You don't have anymore questions for her"
+      ],
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel",
+      "time_left": 20,
+      "timestamp": "2026-01-29T11:03:25.772415",
+      "time_to_decide": 0.766193,
+      "time_since_last": 1.032735
+    },
+    {
+      "menu": "lad_day1_evening",
+      "other_choices": [
+        "Talk to Daniel Baldwin",
+        "Eat in silence, like a sociopath"
+      ],
+      "selected": "Talk to Daniel Baldwin",
+      "redirect": "lad_day1_evening_dinner_doctor",
+      "time_left": 20,
+      "timestamp": "2026-01-29T11:03:26.621915",
+      "time_to_decide": 1.583617,
+      "time_since_last": 0.8495
+    },
+    {
+      "menu": "doctor_generic_menu_lad",
+      "other_choices": [
+        "What do you think of this weather?",
+        "What do you think of this weather?",
+        "Tell me more about yourself.",
+        "What do you think of this place?",
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "What do you think of this weather?",
+      "redirect": "doctor_generic_weather_friday",
+      "time_left": 20,
+      "timestamp": "2026-01-29T11:03:28.372141",
+      "time_to_decide": 0.846492,
+      "time_since_last": 1.750226
+    },
+    {
+      "menu": "doctor_generic_menu_lad",
+      "other_choices": [
+        "Tell me more about yourself.",
+        "Why were you invited here?",
+        "What do you think of this place?",
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "Tell me more about yourself.",
+      "redirect": "doctor_generic_background",
+      "time_left": 10,
+      "timestamp": "2026-01-29T11:03:29.304520",
+      "time_to_decide": 0.649243,
+      "time_since_last": 0.932379
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Library",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Servant Stairs",
+        "Portrait Gallery",
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Kitchen",
+      "redirect": "lad_day1_evening_kitchen",
+      "time_left": 90,
+      "timestamp": "2026-01-29T11:03:30.505818",
+      "time_to_decide": 7.215226,
+      "time_since_last": 1.201298
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Library",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Servant Stairs",
+        "Portrait Gallery",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Tea room",
+      "redirect": "lad_day1_evening_tea_room",
+      "time_left": 80,
+      "timestamp": "2026-01-29T11:03:38.919523",
+      "time_to_decide": 3.167134,
+      "time_since_last": 8.413705
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Library",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Servant Stairs",
+        "Portrait Gallery",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Library",
+      "redirect": "lad_day1_evening_library",
+      "time_left": 70,
+      "timestamp": "2026-01-29T11:03:42.301086",
+      "time_to_decide": 1.084367,
+      "time_since_last": 3.381563
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Servant Stairs",
+        "Portrait Gallery",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Garden",
+      "redirect": "lad_day1_evening_garden",
+      "time_left": 60,
+      "timestamp": "2026-01-29T11:03:43.585144",
+      "time_to_decide": 1.334467,
+      "time_since_last": 1.284058
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Dining Room",
+        "Entrance Hall",
+        "Servant Stairs",
+        "Portrait Gallery",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Entrance Hall",
+      "redirect": "lad_day1_evening_entrance_hall",
+      "time_left": 50,
+      "timestamp": "2026-01-29T11:03:45.134300",
+      "time_to_decide": 0.518005,
+      "time_since_last": 1.549156
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Dining Room",
+        "Servant Stairs",
+        "Portrait Gallery",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Dining Room",
+      "redirect": "lad_day1_evening_dining_room",
+      "time_left": 40,
+      "timestamp": "2026-01-29T11:03:45.767260",
+      "time_to_decide": 0.684771,
+      "time_since_last": 0.63296
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Servant Stairs",
+        "Portrait Gallery",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Portrait Gallery",
+      "redirect": "lad_day1_evening_portrait_gallery",
+      "time_left": 30,
+      "timestamp": "2026-01-29T11:03:46.532934",
+      "time_to_decide": 5.951218,
+      "time_since_last": 0.765674
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Servant Stairs",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Meet the others in the billiard room",
+      "redirect": "lad_day1_evening_billiard_room",
+      "time_left": 20,
+      "timestamp": "2026-01-29T11:03:52.648497",
+      "time_to_decide": 1.05201,
+      "time_since_last": 6.115563
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "other_choices": [
+        "Talk to Daniel Baldwin",
+        "Approach the large group of people",
+        "Go to the bar to have a drink",
+        "Leave the room"
+      ],
+      "selected": "Leave the room",
+      "redirect": "lad_day1_evening_billiard_room_cancel",
+      "time_left": 20,
+      "timestamp": "2026-01-29T11:03:54.532939",
+      "time_to_decide": 1.914861,
+      "time_since_last": 1.884442
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Servant Stairs",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go to sleep"
+      ],
+      "selected": "Go to sleep",
+      "redirect": "generic_cancel",
+      "time_left": 20,
+      "timestamp": "2026-01-29T11:03:56.850967",
+      "time_to_decide": 1.597801,
+      "time_since_last": 2.318028
+    }
+  ]
+}

@@ -2,6 +2,8 @@ init python in test:
     import json
     import renpy.exports as renpy
 
+    import os
+
     def load_json_from_game(path_in_game_dir):
         # renpy.file is an alias for renpy.open_file (works with archives too)
         with renpy.file(path_in_game_dir, encoding="utf-8") as f:
@@ -104,3 +106,62 @@ init python in test:
         
         if threads:
             unlock_threads(character, threads)
+
+    def discover_plans(character_id, chapter_id):
+        """
+        Automatically finds all .json plan files for a given character and chapter.
+        Expected path: tests/<character_id>/<index>_<chapter_id>/*.json
+        """
+        import os
+        base_dir = os.path.join(renpy.config.gamedir, "tests", character_id)
+        matching_plans = []
+        
+        if not os.path.exists(base_dir):
+            return []
+
+        for d in os.listdir(base_dir):
+            # Check if directory name matches the chapter_id (exactly or with index prefix)
+            if d == chapter_id or (len(d.split('_', 1)) > 1 and d.split('_', 1)[1] == chapter_id):
+                path = os.path.join(base_dir, d)
+                if os.path.isdir(path):
+                    for f in os.listdir(path):
+                        if f.endswith(".json"):
+                            # Relative path for loading
+                            rel_path = f"tests/{character_id}/{d}/{f}"
+                            matching_plans.append(rel_path)
+        
+        return sorted(matching_plans)
+
+    def run_chapter(character, chapter_id, start_label):
+        """
+        Discovers and executes all plans for a chapter.
+        This should be called from within a testcase.
+        """
+        plans = discover_plans(character.text_id, chapter_id)
+        
+        if not plans:
+            raise PlanError(f"No plans found for {character.text_id} in chapter {chapter_id}")
+
+        for i, plan in enumerate(plans):
+            if i > 0:
+                # Restart from main menu for subsequent plans
+                # renpy.test.execute("run Start()") is the DSL way, 
+                # but we can call the action directly if needed.
+                # However, renpy.test.execute is generally safe from python.
+                try:
+                    import renpy.test.testexecution as testexecution
+                    testexecution.execute("run Start()")
+                except ImportError:
+                    # Fallback to a simpler reset if needed
+                    renpy.full_restart()
+            
+            start(character, chapter_id, plan)
+            
+            # Use test execution to jump and wait
+            import renpy.test.testexecution as testexecution
+            testexecution.execute(f"run Jump('{start_label}')")
+            testexecution.execute("advance until screen 'test_end' timeout 180.0")
+            
+            # Cleanup for next iteration
+            autorunner.reset()
+            # We don't reset persistent or state here as Start() should handle it
