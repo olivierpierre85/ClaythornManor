@@ -106,8 +106,6 @@ label psychic_day2_no_hunt_bedroom_nurse_insist:
     I wondered whether there is anything I can do to help.
     """
 
-
-
     nurse """
     I suppose I could not have hidden it forever.
 

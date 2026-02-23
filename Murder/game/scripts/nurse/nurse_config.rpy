@@ -1,6 +1,6 @@
 label init_nurse:
 
-    # call nurse_config_map
+    call nurse_day1_evening_map_menu
     
     # call nurse_config_menu
 

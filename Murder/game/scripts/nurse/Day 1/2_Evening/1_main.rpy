@@ -27,7 +27,7 @@ label nurse_day1_evening:
     $ play_music('upbeat')
 
     """
-    As we enter the room, the butler is greeting us.
+    As we enter the room, the butler comes to greet us.
     """
 
     call common_day1_evening_doctor_nurse_broken_arrival
