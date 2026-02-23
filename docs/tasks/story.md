@@ -109,7 +109,8 @@
 
 ### Ideas to think over (optional)
 
-- [ ] ...
+- [ ] queen alexandra => Not clear it's a nurse Queen
+  - [ ] => Replace with a THIEF king or queen for forshadowing? Henry 8 or charles 1 ? (or Prince John of Robin hood)
 
 ## Drunk
 

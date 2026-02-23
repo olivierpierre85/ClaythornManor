@@ -18,9 +18,8 @@
 - 
 - [ ] Map evening
 - [ ] ARRIVAL at tea room WHEn????
-- [ ] queen alexandra => Not clear it's a nurse Queen
-  - [ ] => Replace with a THIEF king or queen for forshadowing? Henry 8 or charles 1 ? (or Prince John of Robin hood)
 - [ ] !!! Money counter !!! To be able to leave, you need to have enough money on day x??? Each room has objects that can be of value, take what's good. If you take the wrong ones, you might get caught. Ideas
+  - [ ] Each stolen item as a value, you need to show a info_card with a changing possible value
   - [ ] Books of value (too big?)
   - [ ] During dinner, you can steal cutlery, risky but usually ok
   - [ ] Portait? Way too big
@@ -30,7 +29,6 @@
   - [ ] Butler room is where the expensive stuff is OR downstairs.
   - [ ] The rest downstairs is not great
   - [ ] BEST moment to steal => The hunt !!
-
 
 
 ## Proofreading

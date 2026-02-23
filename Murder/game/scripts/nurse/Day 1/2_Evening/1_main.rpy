@@ -76,4 +76,33 @@ label nurse_day1_evening:
 
     call change_time(16,45)
 
+    """
+    When I enter the tea room, I nod at Doctor Baldwin, still talking with Thomas Moody.
+
+    I decide to get myself a drink before talking again with them.
+
+    I look at the tray and pour myself a tea.
+
+    Two other persons enters the room.
+
+    An Indian man in army fatigues and an older gentleman looking dishveled.
+
+    The Indian man introduces himself to Doctor Baldwin and Thomas Moody.
+
+    The other man comes toward me
+    """
+    # TODO, ignore, or introduces himself drunkely
+
+    # nurse escapes and joins the captain
+
+    # The captain tells a long story about???
+
+    # dr baldwin seems out of it.
+
+    # What kind of group of people is that?? thinks the nurse
+
+    # mentionned 2 other people have joind the room (lad and psychic), but note nothing about them.
+
+    # gong to dinner
+
     jump work_in_progress

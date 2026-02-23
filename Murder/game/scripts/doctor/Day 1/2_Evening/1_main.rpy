@@ -133,7 +133,9 @@ label doctor_day1_evening:
     """
     After a while, Miss Marsh enters the room.
 
-    She is followed by a Indian man in an army uniform and an older gentleman.
+    She nods at me and head to the bar.
+
+    She is soon followed by a Indian man in an army uniform and an older gentleman.
 
     They must have just arrived from the station.
 
