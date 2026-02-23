@@ -43,7 +43,7 @@ label nurse_introduction:
 
     I fold the letter and slip it back into my bag.
 
-    If there is no prize at the end of this, there will at least be a house full of wealthy guests.
+    If there is no prize at the end of this, I could at least "find" things of values there.
 
     A weekend is quite enough time to make a trip worth one's while.
     """
@@ -55,108 +55,14 @@ label nurse_introduction:
     pause 2.0
 
     """
-    I am one of the first off the train.
+    As I step off the train, I scan the platform out of habit.
 
-    Old habit. It pays to get a good look at things before other people do.
+    Near the exit, a young man in livery is already in conversation with a gentleman who must have been first off.
 
-    A young man in livery is waiting near the exit, scanning the passengers as they file past.
-
-    I approach him before he has the chance to approach anyone else.
+    I make my way towards them.
     """
 
-    nurse """
-    Good afternoon. I'm Rosalind Marsh. Are you going to Claythorn Manor?
-    """
-
-    footman """
-    Yes, ma'am. Lady Claythorn sent me to collect her guests.
-    """
-
-    """
-    He seems relieved to have found someone.
-
-    A moment later, a middle-aged gentleman steps onto the platform and makes his way towards us with the unhurried confidence of a man who expects things to fall into place.
-    """
-
-    doctor """
-    Hello. Could you help me? I'm supposed to go to Claythorn Manor.
-    """
-
-    footman """
-    Of course, sir. Lady Claythorn sent me to pick up her guests.
-    """
-
-    doctor """
-    Good. Do you know how many were on this train?
-    """
-
-    footman """
-    I can't say for certain. We'll wait a few minutes to see if anyone else shows up.
-    """
-
-    doctor """
-    Fine.
-    """
-
-    doctor """
-    Nice to meet you, Miss Marsh. I'm Doctor Daniel Baldwin.
-    """
-
-    nurse """
-    Nice to meet you, doctor. Was your trip pleasant?
-    """
-
-    doctor """
-    It was pleasant, thank you.
-
-    How about you?
-    """
-
-    nurse """
-    It was fine, thank you. And what...
-    """
-
-    """
-    I stop.
-
-    Something — someone — catches my eye over the doctor's shoulder.
-
-    A man has appeared farther along the platform.
-
-    He is tall and composed, and most of his face is concealed behind a tin mask.
-
-    I have seen worse, working on the wards. Much worse.
-
-    But I was not expecting it, and the surprise must have shown on my face.
-
-    I collect myself quickly and look away.
-    """
-
-    broken """
-    Hi, I'm Thomas Moody.
-
-    Lady Claythorn invited me. Maybe you can help?
-    """
-
-    """
-    Nobody speaks for a moment.
-
-    I am not here to make enemies. Or scenes.
-    """
-
-    doctor """
-    Hello, Mr Moody. You're with the right people.
-
-    This young man was about to drive us to Claythorn Manor.
-
-    I'm Daniel Baldwin, and this is Rosalind Marsh.
-
-    Nice to meet you.
-    """
-
-    """
-    We exchange a few brief words, then follow the footman to the car.
-    """
+    call common_day1_afternoon_station_doctor_nurse
 
     $ change_room("inside_car")
 
@@ -171,19 +77,13 @@ label nurse_introduction:
 
     A doctor. A man disfigured in the war. That is two accounted for.
 
-    I wonder what connects us all. The invitation spoke of bravery.
-
-    Bravery. What a word to use.
+    I wonder what connects us all.
 
     By the time we turn onto a wooded track, the men have both fallen quiet.
 
     The doctor is watching the road. The soldier stares out of the window.
 
     Neither of them seems especially at ease.
-
-    I find that interesting.
-
-    Whatever Lady Claythorn has planned, I am not the only one who came here against their better judgement.
     """
 
     $ stop_music()
@@ -203,7 +103,5 @@ label nurse_introduction:
 
     I straighten my coat and step out of the car.
     """
-
-    pause 2.0
 
     jump nurse_day1_evening

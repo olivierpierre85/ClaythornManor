@@ -90,71 +90,7 @@ label doctor_introduction:
     It isn't long before a woman approaches us.
     """
 
-    nurse """
-    Hi, I'm Rosalind Marsh. Are you going to Claythorn Manor?
-    """
-
-    footman """
-    Yes, ma'am. This gentleman will come with us.
-    """
-
-    doctor """
-    Nice to meet you, Miss Marsh. I'm Doctor Daniel Baldwin.
-    """
-
-    nurse """
-    Nice to meet you, doctor. Was your trip pleasant?
-    """
-
-    doctor """
-    It was pleasant, thank you.
-
-    How about you?
-    """
-
-    nurse """
-    It was fine, thank you. And what...
-    """
-
-    """ 
-    She stops suddenly, surprised, a bit scared.
-
-    Her gaze fixes on something behind me.
-
-    I turn quickly.
-    """
-
-    broken """
-    Hi, I'm Thomas Moody.
-
-    Lady Claythorn invited me. Maybe you can help?
-    """
-
-    """
-    It takes a moment before anyone can respond.
-
-    We are all shocked by the mask covering most of his face.
-
-    A "broken face" from the war.
-
-    It's not the first one I've seen, but I'm still not used to it.
-
-    Apparently, neither are the people next to me.
-    """
-
-    doctor """
-    Hello, Mr Moody. You're with the right people.
-
-    This young man was about to drive us to Claythorn Manor.
-
-    I'm Daniel Baldwin, and this is Rosalind Marsh.
-
-    Nice to meet you.
-    """
-
-    """
-    We exchange a few pleasantries, then go to the car and begin our journey to Claythorn Manor.
-    """
+    call common_day1_afternoon_station_doctor_nurse
 
     $ change_room("inside_car")
 
