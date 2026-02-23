@@ -70,7 +70,9 @@ label init_nurse:
             endings = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
-            progress = [],
+            progress = nurse_progress,
+            saved_variables = copy.deepcopy(nurse_init_variables),
+            test_checkpoints = nurse_test_checkpoints,
         )
         nurse = Character("nurse_details.get_name()", image="nurse", dynamic=True)
 

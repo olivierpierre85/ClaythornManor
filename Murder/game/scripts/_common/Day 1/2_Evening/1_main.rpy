@@ -1,6 +1,29 @@
 # ------------------------------------
 #               HOST
 # ------------------------------------
+label common_day1_evening_doctor_nurse_broken_arrival:
+
+    butler """
+    Welcome everyone.
+
+    You are the first guests to arrive for this week-end event.
+
+    It's a bit early, so it may take a while before others arrive. In the meantime, let me show you to your rooms.
+
+    You can rest there a bit, there will be drinks later in the tea room.
+    """
+
+    doctor """
+    Perfect, when should we meet later?
+    """
+
+    butler """
+    Around four I believe.
+    """
+
+    return
+
+
 label common_day1_evening_host_welcome_speech:
     
     host """ 
