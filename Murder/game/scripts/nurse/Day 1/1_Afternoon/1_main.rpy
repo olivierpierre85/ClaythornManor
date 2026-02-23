@@ -22,22 +22,34 @@ label nurse_introduction:
 
     $ play_music('chill')
 
+
+    # TODO: Write the introduction of nurse.
+
+    # She is coming after receiving the same invite as the others
+    # But, unlike the others, she knows there is something fishy about it
+    # She recognizes a scam because she is a scammer hersef.
+    # She will come anyway, trying to steal enough to make her trip worth it.
+    
     """
-    TODO
+    TODO: 
     """
 
     jump work_in_progress
 
-    # play sound train_stopping
+    play sound train_stopping
 
-    # $ change_room("train_station")
+    $ change_room("train_station")
 
-    # pause 2.0
+    pause 2.0
     
-    # """
-    # TODO 
-    # """
 
-    # $ change_room("inside_car")
+    # TODO: Write interaction with the others
+    # She arrives with the same train as doctor and broken.
+    # Check the doctor point of view to write the nurses
+    """
+    TODO 
+    """
 
-    # jump nurse_day1_evening
+    $ change_room("inside_car")
+
+    jump nurse_day1_evening

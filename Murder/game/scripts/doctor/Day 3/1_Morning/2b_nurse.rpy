@@ -1,4 +1,3 @@
-# TODO rewrite everything BAD AI JOB
 label doctor_day3_morning_nurse:
 
     $ change_room('bedroom_nurse', irisout)

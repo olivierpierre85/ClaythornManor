@@ -4,6 +4,8 @@ label init_nurse:
     
     # call nurse_config_menu
 
+    call nurse_config_progress
+
     python:
         nurse_name = "Rosalind Marsh"
 

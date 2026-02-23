@@ -14,6 +14,9 @@
 - [ ] Gun room has a Menu choice Day 3.
 - [ ] Rethink unlocking FULLY
 
+## Write Story : NURSE
+- [ ] Day 1
+
 ## Proofreading
 - Fix grammar workflow
   - Workflow and Agent guidelines ok
