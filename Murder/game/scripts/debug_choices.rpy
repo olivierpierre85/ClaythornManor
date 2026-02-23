@@ -43,6 +43,12 @@ label init_debug:
     call unlock_doctor
     $ doctor_details.load_manual_checkpoints()
 
+    $ current_character = nurse_details
+    $ current_storyline = nurse_details
+    call unlock_nurse
+    $ nurse_details.load_manual_checkpoints()
+    
+
     $ current_character = broken_details
     $ current_storyline = broken_details
     call unlock_broken
@@ -134,7 +140,7 @@ label unlock_nurse:
     $ nurse_details.description_hidden.unlock('manor') 
     $ nurse_details.description_hidden.unlock('sick')
     $ nurse_details.description_hidden.unlock('heroic_act')
-    # $ nurse_details.description_hidden.unlock('lie') 
+    $ nurse_details.description_hidden.unlock('lie') 
 
     return
 
