@@ -42,8 +42,36 @@ label nurse_introduction:
     And yet here I am, somewhere in the north of Scotland, watching the countryside blur past the window.
 
     I fold the letter and slip it back into my bag.
+    """
 
-    If there is no prize at the end of this, I could at least "find" things of values there.
+    play sound woman_cough
+
+    """
+    The cough comes without warning, as it always does.
+
+    I press my handkerchief to my mouth and wait for it to pass.
+
+    There is blood. Not much for now. That at least is bit reassuring, but I know that won't last.
+
+    I fold the handkerchief away before anyone can notice.
+
+    The doctor gave me his assessment three months ago, in that careful, measured tone they all use when they have nothing reassuring to say.
+
+    Consumption. The word sits in my chest like the cold does now.
+
+    He said rest. Fresh air. A sanatorium, if at all possible.
+
+    A sanatorium.
+
+    Do they imagine money simply appears?
+
+    I cannot afford to rest. Not yet. But I cannot afford to run myself into the ground either.
+
+    A fine line to walk, and I intend to walk it carefully.
+
+    So in the end, I had no choice to come this weekend, no matter the risks.
+
+    If there is no prize at the end of this, I could at least "find" things of value there.
 
     A weekend is quite enough time to make a trip worth one's while.
     """
@@ -84,6 +112,10 @@ label nurse_introduction:
     The doctor is watching the road. The soldier stares out of the window.
 
     Neither of them seems especially at ease.
+
+    I feel a tightness in my chest and breathe through it slowly.
+
+    A full weekend on my feet. I shall have to be disciplined about it.
     """
 
     $ stop_music()

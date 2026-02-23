@@ -17,7 +17,6 @@
 ## Write Story : NURSE - Day 1
 - 
 - [ ] Map evening
-- [ ] INTRO => Add that she coughs blood. She thinks it's not too bad, or it won't be for a while. But it could at least give her a good cover story. OR she HAS to watch it, she just ignores it. SO better not to exhaust myself. Thin line between making money and not collapsing.
 - [ ] ARRIVAL at tea room WHEn????
 - [ ] !!! Money counter !!! To be able to leave, you need to have enough money on day x??? Each room has objects that can be of value, take what's good. If you take the wrong ones, you might get caught. Ideas
   - [ ] Books of value (too big?)
