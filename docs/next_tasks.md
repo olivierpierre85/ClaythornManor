@@ -18,6 +18,7 @@
 - 
 - [ ] Map evening
 - [ ] ARRIVAL at tea room WHEn????
+  - [ ]     # TODO make choice => Listen to war story or avoid it? If you don't listen you don't learn about captain. Maybe not necessary now
 - [ ] !!! Money counter !!! To be able to leave, you need to have enough money on day x??? Each room has objects that can be of value, take what's good. If you take the wrong ones, you might get caught. Ideas
   - [ ] Each stolen item as a value, you need to show a info_card with a changing possible value
   - [ ] Books of value (too big?)

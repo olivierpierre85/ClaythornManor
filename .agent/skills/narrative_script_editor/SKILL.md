@@ -23,6 +23,7 @@
      - **Minimal edits:** When a change is needed, make the smallest possible edit — fix the specific problem without restructuring surrounding sentences.
      - **Brevity over Description:** When writing new text (for TODOs), prefer short, punchy lines. A narration block should rarely exceed two or three sentences.
      - **Inner Monologue First:** New narration reads as the character's internal voice — brief, direct, and revealing. Favour thoughts over scene-painting.
+     - **Present Tense (Hard Rule):** All narration and inner monologue must be written in the **present tense**. This applies to both new text and existing text — if existing narration is in the past tense, correct it to present tense.
      - **Pruning:** When writing new text, avoid filter words (e.g., "I saw," "He felt," "It seemed").
 
 5. **Final Polish:** Ensure all dialogue sequences reach a natural conclusion and that the narrative flow feels professional and cohesive.

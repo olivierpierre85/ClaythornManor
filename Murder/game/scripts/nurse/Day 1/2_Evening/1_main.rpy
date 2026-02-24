@@ -129,53 +129,59 @@ label nurse_day1_evening:
     captain """
     Nice to meet you, Miss Marsh. Captain Sushil Sinha.
 
-    I was telling those gentlemen a story about 
+    I was telling those gentlemen a story about .....
     """
 
     nurse """
-    Please, go on.
+    No, please, go on. I am familiar with wartime stories, as I worked myself through more than one.
     """
 
     captain """
-    Very well, so where was I?
+    Really? You were a wartime nurse. How interesting.
+
+    Well where was I?
     """
 
-
-
-    """
-    He spoke for some time after that — something about the regiment, a posting in Calcutta, a colonel whose name I didn't catch.
-
-    I listened as best I could.
-
-    It was perfectly pleasant if one didn't try to follow the thread.
+    broken """
+    I believe you were talking about the Suakin Expedition.
     """
 
-    """
-    At some point I noticed Doctor Baldwin had gone quiet.
+    captain """
+    That's where I got my first battle scar.
 
-    He was nodding along, but his eyes were elsewhere.
+    It's on my back so I won't show it to you, but it was rather dangerous fighting.
+
+    Not like the great war of course, and not that I can understand you pain.
+    
+    But still, a battle wound is a battle wound.
+    """
+
+    """
+    Is comparing a small scar on his back to the disifured face of Thomas Moody?
+
+    That's rather unsensitive.
+    
+    Also, there was something odd about the Suakin Expedition, but I can't quite remember it.
+    """
+
+    """
+    He keepsspoke for some time after that about that expedition.
+
+    I listen as best I can.
+
+    At some point I notice Doctor Baldwin is quiet.
+
+    He is nodding along, but his eyes are elsewhere.
 
     I know that look. Something on his mind, and not the conversation in front of him.
     """
 
     """
-    Two more had slipped into the room without my noticing — a young man with the restless energy of someone who'd rather be outside, and a woman in rather more elaborate dress than the occasion perhaps warranted.
+    Two more had slipped into the room without my noticing — a young man with the restless energy of someone who'd rather be outside, and a woman in rather more elaborate dress than the occasion perhaps warranted. 
 
-    I didn't introduce myself.
-
-    I wasn't ready for more of that just yet.
+    I don't have time to talk to them, I hear the gong sounds from the corridor.
     """
 
-    """
-    What a peculiar assortment of people.
-
-    Lady Claythorn has eclectic taste in guests, I'll give her that.
-    """
-
-    """
-    I finish my tea as the gong sounds from the corridor.
-
-    Good. Dinner, at least, requires no conversation I haven't already rehearsed.
-    """
+    play sound dinner_gong
 
     jump work_in_progress
