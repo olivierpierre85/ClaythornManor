@@ -11,6 +11,8 @@
         "lad_friday_evening",
         "lad_friday_evening::lad_friday_evening_1",
         "lad_friday_evening::lad_friday_evening_2",
+        "nurse",
+        "nurse::friday_afternoon"
       ],
       "default": "lad_friday_evening::lad_friday_evening_1"
     }
