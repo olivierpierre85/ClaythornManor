@@ -4,7 +4,7 @@ label nurse_config_menu:
     # Drunk
     $ drunk_generic_menu_nurse = TimedMenu("drunk_generic_menu_nurse", [
         TimedMenuChoice('Tell me more about yourself.', 'drunk_generic_background_nurse', 0, linked_choice ="drunk_generic_heroic_act_nurse", next_menu="drunk_generic_background_nurse"),
-        TimedMenuChoice('Why were you invited here?', 'drunk_generic_heroic_act_nurse', 30, condition = "all_menus['drunk_generic_menu_nurse'].choices[0].hidden"),
+        TimedMenuChoice('Why were you invited here?', 'drunk_generic_heroic_act_nurse', 30, condition = "is_linked_choice_hidden('drunk_generic_menu_nurse', 'drunk_generic_heroic_act_nurse')"),
         TimedMenuChoice('What do you think of this place?', 'drunk_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'drunk_generic_age', 10),
         TimedMenuChoice('What room are you in?', 'drunk_generic_room_friday', 10, condition = condition_friday_dinner),

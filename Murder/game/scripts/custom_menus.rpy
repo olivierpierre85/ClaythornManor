@@ -153,6 +153,16 @@ init -1 python:
             self.who_id = who_id
             self.what_id = what_id
 
+    def is_linked_choice_hidden(menu_id, linked_choice_name):
+        """
+        Returns True if the choice in menu_id that has linked_choice matching linked_choice_name is hidden.
+        """
+        if menu_id in all_menus:
+            for choice in all_menus[menu_id].choices:
+                if choice.linked_choice == linked_choice_name:
+                    return choice.hidden
+        return False
+
     # Possible choices for a menu
     class TimedMenuChoice:
     
