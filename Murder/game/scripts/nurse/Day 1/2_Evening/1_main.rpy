@@ -27,10 +27,12 @@ label nurse_day1_evening:
     $ play_music('upbeat')
 
     """
-    As we enter, the butler steps forward to greet us.
+    As I enter, the butler steps forward to greet us.
     """
 
     call common_day1_evening_doctor_nurse_broken_arrival
+
+    $ change_room('bedrooms_hallway', dissolve)
 
     """
     The butler shows Doctor Baldwin and Thomas Moody rooms, then we reach mine.
@@ -129,11 +131,13 @@ label nurse_day1_evening:
     captain """
     Nice to meet you, Miss Marsh. Captain Sushil Sinha.
 
-    I was telling those gentlemen a story about .....
+    I was telling those gentlemen a story about a certain conflict I was involved in.
+
+    But I can change the subject if you prefer.
     """
 
     nurse """
-    No, please, go on. I am familiar with wartime stories, as I worked myself through more than one.
+    No, please, go on. I am quite familiar with wartime stories, having served as a nurse through more than one.
     """
 
     captain """
@@ -151,7 +155,7 @@ label nurse_day1_evening:
 
     It's on my back so I won't show it to you, but it was rather dangerous fighting.
 
-    Not like the great war of course, and not that I can understand you pain.
+    Not like the great war of course, and not that I can understand your pain.
     
     But still, a battle wound is a battle wound.
     """
@@ -172,7 +176,7 @@ label nurse_day1_evening:
 
     Yet, I can't quite place it.
 
-    That story is too old in my mind.
+    It is too distant in my memory.
 
     At some point I notice Doctor Baldwin has gone quiet.
 
@@ -182,7 +186,9 @@ label nurse_day1_evening:
     """
 
     """
-    Two more have slipped into the room without my noticing — a young man with the restless energy of someone who'd rather be outside, and a woman in rather more elaborate dress than the occasion perhaps warrants.
+    Two more have slipped into the room without my noticing.
+    
+    A young man and a woman in rather more elaborate dress than the occasion perhaps warrants.
 
     I have no time to speak to them. The gong sounds from the corridor.
     """
