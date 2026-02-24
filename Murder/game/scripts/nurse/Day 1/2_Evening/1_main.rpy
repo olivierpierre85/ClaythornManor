@@ -168,9 +168,11 @@ label nurse_day1_evening:
 
     I listen as best I can.
 
-    I notice there is something odd about the way he talks about Suakin Expedition.
-    
-    Yet, I can't quite place it. That story is too old in my mind
+    Something about the way he talks about the Suakin Expedition is odd.
+
+    Yet, I can't quite place it.
+
+    That story is too old in my mind.
 
     At some point I notice Doctor Baldwin has gone quiet.
 
