@@ -27,7 +27,7 @@ label nurse_day1_evening:
     $ play_music('upbeat')
 
     """
-    As we enter the room, the butler comes to greet us.
+    As we enter, the butler steps forward to greet us.
     """
 
     call common_day1_evening_doctor_nurse_broken_arrival
@@ -109,7 +109,7 @@ label nurse_day1_evening:
     """
 
     """
-    I made my excuses before he could finish his next sentence.
+    I make my excuses before he can finish his next sentence.
 
     The soldier is still with Baldwin and Moody.
 
@@ -157,29 +157,32 @@ label nurse_day1_evening:
     """
 
     """
-    Is comparing a small scar on his back to the disifured face of Thomas Moody?
+    He's comparing a small scar on his back to the disfigured face of Thomas Moody.
 
-    That's rather unsensitive.
-    
-    Also, there was something odd about the Suakin Expedition, but I can't quite remember it.
-    """
+    That's rather insensitive.
 
     """
-    He keepsspoke for some time after that about that expedition.
+
+    """
+    He speaks on at some length about the expedition.
 
     I listen as best I can.
 
-    At some point I notice Doctor Baldwin is quiet.
+    I notice there is something odd about the way he talks about Suakin Expedition.
+    
+    Yet, I can't quite place it. That story is too old in my mind
 
-    He is nodding along, but his eyes are elsewhere.
+    At some point I notice Doctor Baldwin has gone quiet.
+
+    He nods along, but his eyes are elsewhere.
 
     I know that look. Something on his mind, and not the conversation in front of him.
     """
 
     """
-    Two more had slipped into the room without my noticing — a young man with the restless energy of someone who'd rather be outside, and a woman in rather more elaborate dress than the occasion perhaps warranted. 
+    Two more have slipped into the room without my noticing — a young man with the restless energy of someone who'd rather be outside, and a woman in rather more elaborate dress than the occasion perhaps warrants.
 
-    I don't have time to talk to them, I hear the gong sounds from the corridor.
+    I have no time to speak to them. The gong sounds from the corridor.
     """
 
     play sound dinner_gong
