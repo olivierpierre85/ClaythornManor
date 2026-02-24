@@ -57,12 +57,7 @@
 - Still a problem when starting a path with a menu a time < 0 ? It stop suddenly when a menu should be available? Try again to make the subtraction only at the end, like the time move? NO because then it allows to read a full menu? Like during no hunt? THINK THINK THINK
 
 ## Improve Time Menus
-- Add int Id to `TimeMenuChoice` for easier used of all_choices…Hidden…
-- Add ID numerical to `TimedMenuChoice` (1, 2, 3,) so it’s easy to check if one is hidden like in:  
-  - `all_menus[current_menu.id].choices[25].hidden`
-  - Replace the background linked questions  
-    - NOT GREAT TO HAVE a NUMBER IN IT => TOO Many possibilities of error  
-    - => Make a function that will take the redirect (`all_menus[current_menu.id].choices`)
+
 - Make triple sure that a choice only has ONE possible condition activated!!  
   - (add not condition for regular choices maybe?)
 - Check that no choice that is followed by another choice has a time value  

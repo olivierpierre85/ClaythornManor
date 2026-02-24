@@ -27,7 +27,7 @@ label doctor_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_downstairs_default', 0, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_downstairs_default', 0, room='gun_room'),
             # Specific actions
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="doctor_day1_evening_bedroom_drunk"),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 0, room='bedroom_drunk', next_menu="doctor_day1_evening_bedroom_drunk"),
             TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 0, next_menu="doctor_library_default", room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
@@ -337,7 +337,7 @@ label doctor_day1_evening_bedroom_drunk:
         
         call run_menu( 
             TimedMenu("doctor_day1_evening_bedroom_drunk", [
-                TimedMenuChoice("Follow your intuition, they exist for a reason{{intuition}}", "doctor_day1_evening_bedroom_drunk_enter", 20, next_menu="doctor_day1_evening_bedroom_drunk_enter", early_exit=True),
+                TimedMenuChoice("Follow your intuition, they exist for a reason{{intuition}}", "doctor_day1_evening_bedroom_drunk_enter", 0, next_menu="doctor_day1_evening_bedroom_drunk_enter", early_exit=True),
                 TimedMenuChoice("Don't be ridiculous, there is no such thing as premonition", "doctor_day1_evening_bedroom_drunk_not_enter", early_exit=True),
             ])
         )

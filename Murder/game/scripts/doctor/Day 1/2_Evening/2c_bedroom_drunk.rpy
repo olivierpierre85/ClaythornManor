@@ -94,7 +94,7 @@ label doctor_day1_evening_bedroom_drunk_enter:
 
     call run_menu( 
         TimedMenu("doctor_day1_evening_bedroom_drunk_enter", [
-            TimedMenuChoice("Do not risk your life — leave this place", "doctor_day1_evening_bedroom_drunk_leave_manor", 20, early_exit=True, next_menu="doctor_day1_evening_bedroom_drunk_leave_manor"),
+            TimedMenuChoice("Do not risk your life — leave this place", "doctor_day1_evening_bedroom_drunk_leave_manor", 0, early_exit=True, next_menu="doctor_day1_evening_bedroom_drunk_leave_manor"),
             TimedMenuChoice("Do not risk losing the money — stay", "doctor_day1_evening_bedroom_drunk_stay", early_exit=True),
         ])
     )

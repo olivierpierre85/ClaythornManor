@@ -52,19 +52,17 @@
 - [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
 
 - [ ] **MENUS - Big Challenge**: 
-    - [ ] Menus: Ensure "Next menu" is correct everywhere AND That every choice with a following menu DOESNT have a time value
-        - [ ] Doctor
-        - [ ] Lad
-        - [ ] Psychic
-    - [ ] ALSO when **Map choice has two possible choices**, it picks the first one. Either make sure there is only one by re-reading everything or put in place something to identity 2 choices conflict
+    - [x] Menus: Ensure "Next menu" is correct everywhere AND That every choice with a following menu DOESNT have a time value
+        - [x] Doctor
+        - [x] Lad
+        - [x] Psychic
+    - [ ]  when **Map choice has two possible choices**, it picks the first one. Either make sure there is only one by re-reading everything or put in place something to identity 2 choices conflict
     - [ ] DOUBLE Check that when a **choice is greyed out**, there is no point in selected them (tutorial_already_chosen). Check specifically :
-        - Problem in Angry Broken (doctor path) the option next menu should be the menu where you can actually do something with the “angered” broken. Or maybe
+        - [x] Problem in Angry Broken (doctor path) the option next menu should be the menu where you can actually do something with the “angered” broken. Or maybe removed (fixed by removing the next_menu param so choices don't lock)
         - Ending Gun downed with sushil ted harring: Add a second choice when you escape with the gun. To avoid greying when there is another possible ending. (“Go out, you have a gun it’s safe”)
 
 - [ ] New Progress view
     - Add new **ENDINGS page** for symmetry? Or a tooltip that says, endings can be seen below
-    - LOCKED not always centered in character_view ?
-    - Should the icons (endings,...) be Slightly bigger (same as characters)?
     - Add new page with **All threads** ?
 
 
