@@ -226,6 +226,85 @@ label nurse_day1_evening:
 
     """
     It appears the evening will be quite as taxing as I had feared.
+
+    I am conflicted, if I ignore him, I might have to eat in silence, that could appear weird.
+
+    But I don't know that I want to engage with him.
+
+    What to do?
     """
 
+    call change_time(19, 30)
+
+    $ time_left = 90 
+    call run_menu(TimedMenu("nurse_day1_evening", [
+        TimedMenuChoice("Talk to Samuel Manning", 'nurse_day1_dinner_drunk', early_exit=True),
+        TimedMenuChoice("Just keep to yourself", 'generic_cancel', early_exit=True),
+    ], image_right = "lad"))
+
+    call change_time(21,00)
+
+    """
+    Everyone is finished with dinner. 
+    
+    There is talk about possible drinks after, but first I have to go to my room.
+
+    Before I get up, I think about the silver.
+
+    It's not first rate, but I might get some money for it.
+
+    Should I pocket it before leaving to my room?
+    """
+
+    $ time_left = 1 
+    call run_menu(TimedMenu("doctor_day1_evening", [
+        TimedMenuChoice("Talk to Ted Harring", 'doctor_day1_dinner_lad', early_exit=True),
+        TimedMenuChoice("Just keep to yourself", 'generic_cancel', early_exit=True),
+    ], image_right = "lad"))
+
+    call change_time(21,00)
+
     jump work_in_progress
+
+
+label nurse_day1_dinner_drunk:
+
+    """
+    I can't believe I am doing this.
+
+    But It would feel too rude for me to just ignore him.
+
+    And he might also take it the wrong.
+
+    So I guess I don't have a choice.
+    """
+
+    nurse """
+    How are you doing Mister Manning?
+    """
+
+    drunk """
+    Me? Oh very well.
+
+    The wine is first rate, you should take a sip.
+    """
+
+    """
+    I wet my lips into it.
+
+    It's actually not that great.
+
+    Just passable
+    """
+
+    nurse """
+    Yes, it's rather good.
+    """
+
+    """
+    Well, what should we talk about?
+    """
+
+    call drunk_generic
+
+    return

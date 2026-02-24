@@ -68,135 +68,16 @@ label nurse_day1_evening_downstairs_default:
 
 label nurse_downstairs_day1:
 
+    # TODO hide to reach downstairs, but get's caught IF goes into the kitchen?
+    # present choice to back down OR continue?
+
     $ change_room("basement_stairs")
 
     """
-    I ought to have a look downstairs. Might be something of interest there.
+    TODO
     """
 
-    footman """
-    Good evening, sir. I'm afraid guests aren't permitted beyond this point.
-    """
-
-    """
-    I offer him my warmest smile.
-    """
-
-    doctor """
-    I do apologise. I'm only having a quick look. Could you make an exception?
-
-    I promise I won't be long.
-    """
-
-    footman """
-    If it were up to me, I'd gladly say yes.
-
-    But Lady Claythorn was quite clear with her instructions.
-
-    I'm sure you understand.
-
-    Please don't take it personally.
-    """
-
-    """
-    He says it with a warm smile of his own.
-
-    His eyes say sorry, but there's something else there, too.
-
-    I wonder if...
-    """
-
-    call run_menu(
-        TimedMenu("nurse_has_try_sneaking_downstairs", [
-            TimedMenuChoice("Try flirting with him", 'nurse_downstairs_flirt', 30, early_exit=True),
-            TimedMenuChoice("No, he clearly won't change his mind", 'nurse_downstairs_apologize', 20, early_exit=True),
-        ])
-    )
-
-    return
-
-
-label nurse_downstairs_flirt:
-
-    doctor """
-    That's a shame, but I quite understand. Orders are orders.
-
-    Still, I had rather hoped you might show me around.
-
-    There are a few things I'd not mind discussing with you.
-    """
-
-    footman """
-    I'm a bit tied up at the moment, sir.
-
-    But I could make time later, if you'd still care to talk.
-    """
-
-    doctor """
-    I'd like that very much.
-
-    Where shall we meet?
-    """
-
-    footman """
-    Hard to say when I'll be free.
-
-    But I could stop by your room once I've a moment—if you don't mind, that is.
-    """
-
-    """
-    Well, that is rather forward.
-
-    I glance about to be sure we're alone.
-
-    We are.
-
-    I let my gaze linger a moment longer than necessary.
-    """
-
-    doctor """
-    Are you certain you can't come now?
-    """
-
-    footman """
-    No, truly I can't.
-
-    But I'll be done soon enough.
-
-    I'll see you later then, Doctor Baldwin.
-    """
-
-    doctor """
-    Please—call me Daniel.
-    """
-
-    footman """
-    Very well, Daniel. I'm Andrew.
-    """
-
-    doctor """
-    I'll see you later, Andrew.
-    """
-
-    $ nurse_details.threads.unlock('flirt')
-
-    return
-
-
-label nurse_downstairs_apologize:
-
-    doctor """ 
-    Quite right.
-
-    I'll be off, then.
-
-    Good evening.
-    """
-
-    footman """
-    Good evening, sir.
-    """
-
+    
     return
 
 
@@ -205,76 +86,12 @@ label nurse_day1_evening_library:
 
     $ change_room('library')
 
-    """
-    That is a well-furnished library.
+    # First, realize that even if there are books of values, unless they are very tiny, it' not worth it.
 
-    It's been a while since I've seen that many books.
-
-    There is one already opened on a desk.
-
-    "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
-
-    That sounds tedious.
-
-    But maybe I can borrow something else to read later in my room?
-
-    I'm sure our host won't mind.
-    """
-
-    call wait_screen_transition()
-
-    """
-    I looked around for a book that might be of interest, and found a couple of options.
-    """
-
-    call run_menu(TimedMenu("nurse_library_default", [
-        TimedMenuChoice('Take "The Mysterious Affair at Styles" by Agatha Christie', 'nurse_day1_evening_book_mystery', early_exit=True),
-        TimedMenuChoice('Take "Confessions of an English Opium-Eater" by Thomas De Quincey', 'nurse_day1_evening_library_book_opium', early_exit=True),
-        TimedMenuChoice("On second thought, I'd better not take anything", 'generic_cancel', early_exit=True),
-    ]))
-
-    #TODO: Other possibilities OR for someone else (nurse?) => GIVE it to drunk
-
-        # 2. "The Tenant of Wildfell Hall" by Anne Brontë (1848)
-        # Type: Novel
-
-        # Addiction: Alcoholism
-
-        # Summary: Features a strong female protagonist who flees an abusive, alcoholic husband. The novel critiques the destructive impact of addiction on family life.
-
-        # Significance: Ahead of its time in addressing addiction, women's autonomy, and moral responsibility.
-
+    # But while searching, you notice a book "Conflicts of the united kingdoms in the 19th centry"
+    # it's a good opportunity to readd bout zzanzibar
     return
 
-
-label nurse_day1_evening_book_mystery:
-
-    """
-    That appears to be the most recent book they have.
-    
-    A mystery novel.
-
-    I don't know the author, but a quick look at her biography tells me she was a nurse during the war.
-    
-    So I feel like I could relate to the her.
-    """
-
-    $ nurse_details.threads.unlock('book_mystery')
-
-    return
-
-
-label nurse_day1_evening_library_book_opium:
-
-    """
-    I have been meaning to read this for a long time.
-
-    Maybe now is the time.
-    """
-
-    $ nurse_details.threads.unlock('book_opium')
-
-    return
 
 
 label nurse_day1_evening_tea_room:

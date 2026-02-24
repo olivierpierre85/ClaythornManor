@@ -2,7 +2,7 @@ label init_nurse:
 
     call nurse_day1_evening_map_menu
     
-    # call nurse_config_menu
+    call nurse_config_menu
 
     call nurse_config_progress
 
@@ -15,17 +15,9 @@ label init_nurse:
             # "day1_evening_map_menu" : nurse_day1_evening_map_menu,
             # "day2_no_hunt_map_menu" : nurse_day2_no_hunt_map_menu,
 
-            # "lad_generic_menu" : lad_generic_menu_psychic,
-            # "lad_generic_other_guests_menu" : lad_generic_other_guests_menu_psychic,
-
-            # "captain_generic_menu" : captain_generic_menu_psychic,
-            # "captain_generic_other_guests_menu" : captain_generic_other_guests_menu_psychic,
-
-            # "doctor_generic_menu" : doctor_generic_menu_psychic,
-            # "doctor_generic_other_guests_menu": doctor_generic_other_guests_menu_psychic,
-
-            # "nurse_generic_menu" : nurse_generic_menu_psychic,
-            # "nurse_generic_other_guests_menu" : nurse_generic_other_guests_menu_psychic,
+            # Generic Menus
+            "drunk_generic_menu" : drunk_generic_menu_nurse,
+            "drunk_generic_other_guests_menu" : drunk_generic_menu_nurse,
             
             # story var
         }
