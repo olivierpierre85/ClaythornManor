@@ -81,6 +81,15 @@ The bedrooms are themed after English Royalty, reflecting the character's archet
 - **Context**: Dedicated to the Nurse's professional background.
 
 ---
+## 🍽️ Dinner Table Map
+
+
+| Left side   | Right side      |
+| ----------- | --------------- |
+| The Captain | The Broken face |
+| The Psychic | **The host**    |
+| The lad     | The Drunk       |
+| The Doctor  | The Nurse       |
 
 ---
 

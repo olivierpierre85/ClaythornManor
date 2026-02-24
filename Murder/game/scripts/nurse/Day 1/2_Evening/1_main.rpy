@@ -194,4 +194,38 @@ label nurse_day1_evening:
 
     play sound dinner_gong
 
+    $ stop_music()
+
+    call change_time(18,30, 'Dinner', 'Friday')
+
+    $ change_room('dining_room', irisout)
+
+    $ play_music('chill', 2)
+
+    """
+    My place is set at the far end of the table.
+
+    To my distinct dismay, the only person situated next to me is Mr Manning.
+
+    Of all the guests to be seated beside, I must endure the one who can scarcely stand straight.
+    """
+
+    call common_day1_evening_host_welcome_speech
+
+    """
+    Once the speech concludes, the first course promptly follows.
+
+    Shortly after, the staff circle the table to pour the wine.
+    """
+
+    drunk """
+    Ah, capital! Fill it up to the very brim, if you please.
+
+    Much obliged.
+    """
+
+    """
+    It appears the evening will be quite as taxing as I had feared.
+    """
+
     jump work_in_progress

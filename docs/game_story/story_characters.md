@@ -97,19 +97,6 @@ She is hired for a very specific job, but a very lucrative one (in theory, but s
 - **The Maid/Cook**: (Undefined)
 
 ---
-
-## 🍽️ Dinner Table Map
-
-
-| Left side   | Right side      |
-| ----------- | --------------- |
-| The Captain | The Broken face |
-| The Psychic | **The host**    |
-| The lad     | The Drunk       |
-| The Doctor  | The Nurse       |
-
-
----
 # OLD STUFF TO SORT and take what could be interesting ?
 ## ☠️ Initial Death Plan & Relationships
 

@@ -2,11 +2,12 @@
 - **Lad**: OK
 - **Psychic**: OK
 - **Doctor**: 01/2025
-- **Nurse**: 04/2026
-- **Captain**: 06/2026
-- **Drunk**: 08/2026
-- **Broken**: 10/2026
-- **Host**: 12/2026
+- **Nurse**: 03/2026
+- **Captain**: 04/2026
+- **Drunk**: 05/2026
+- **Broken**: 06/2026
+- **Host**: 07/2026
+- Re read 08/2026 => Yeah draft for september
 
 
 # Total hours count
