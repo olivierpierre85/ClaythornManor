@@ -2,7 +2,7 @@
 
 **Name:** `narrative_script_editor`
 
-**Description:** Performs a high-level editorial rewrite of Ren'Py (.rpy) script files. This skill specialises in replacing "TODO" placeholders with context-aware prose, rewriting narration as short inner-monologue beats, and refining character dialogue while strictly preserving code integrity and indentation.
+**Description:** Performs a targeted editorial pass on Ren'Py (.rpy) script files. This skill specialises in replacing "TODO" placeholders with context-aware prose and making minimal, necessary corrections to existing dialogue and narration, while strictly preserving code integrity and indentation.
 
 **Instructions:**
 1. **Scope & Identification:** - Identify the target file (primarily `.rpy` scripts). 
@@ -16,12 +16,14 @@
    - Analyse the surrounding scene (preceding and following lines) to infer the intended mood and plot. 
    - Replace placeholders with fully-realised dialogue or inner-monologue beats that bridge the scene naturally.
 
-4. **Editorial Overhaul:** - **Style Guide:** Strictly adhere to the linguistic rules defined in `grammar-style.md`.
-   - **Editorial Mandate:** This is a full rewrite, not a grammar correction.
-     - **Brevity over Description:** Prefer short, punchy lines of inner dialogue over long descriptive passages. A narration block should rarely exceed two or three sentences. If it can be said in one line, say it in one line.
-     - **Inner Monologue First:** Narration reads as the character's internal voice — brief, direct, and revealing. Favour thoughts over scene-painting. The character reacts; they do not describe the room.
-     - **Voice & Subtext:** Refine dialogue to reflect unique character rhythms, slang, and implied emotion.
-     - **Pruning:** Remove redundant sentences and filter words (e.g., "I saw," "He felt," "It seemed") to increase player immersion.
+4. **Light-Touch Editing (Conservative by Default):** - **Style Guide:** Strictly adhere to the linguistic rules defined in `grammar-style.md`.
+   - **Editorial Mandate:** Preserve existing dialogue and narration unless there is a clear reason to change it. Do **not** rewrite text simply to vary the phrasing or add flavour.
+     - **When to leave text unchanged:** If a line is grammatically correct, fits the character's voice, and reads naturally — leave it as-is.
+     - **When to intervene:** Only modify existing text if it contains a grammar or spelling error, clearly breaks the character's established voice, is too modern/anachronistic for the 1924 setting, or is flagged as `TODO`.
+     - **Minimal edits:** When a change is needed, make the smallest possible edit — fix the specific problem without restructuring surrounding sentences.
+     - **Brevity over Description:** When writing new text (for TODOs), prefer short, punchy lines. A narration block should rarely exceed two or three sentences.
+     - **Inner Monologue First:** New narration reads as the character's internal voice — brief, direct, and revealing. Favour thoughts over scene-painting.
+     - **Pruning:** When writing new text, avoid filter words (e.g., "I saw," "He felt," "It seemed").
 
 5. **Final Polish:** Ensure all dialogue sequences reach a natural conclusion and that the narrative flow feels professional and cohesive.
 
