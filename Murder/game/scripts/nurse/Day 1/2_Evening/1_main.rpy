@@ -147,7 +147,7 @@ label nurse_day1_evening:
     """
 
     broken """
-    I believe you were talking about the Suakin Expedition.
+    I believe you were talking about the Anglo-Zanzibar War.
     """
 
     captain """
@@ -164,7 +164,6 @@ label nurse_day1_evening:
     He's comparing a small scar on his back to the disfigured face of Thomas Moody.
 
     That's rather insensitive.
-
     """
 
     """
@@ -172,9 +171,9 @@ label nurse_day1_evening:
 
     I listen as best I can.
 
-    Something about the way he talks about the Suakin Expedition is odd.
+    Something about the way he talks about the Anglo-Zanzibar War is odd.
 
-    Yet, I can't quite place it.
+    There was something specific about that conflict. Yet, I can't quite place it.
 
     It is too distant in my memory.
 
