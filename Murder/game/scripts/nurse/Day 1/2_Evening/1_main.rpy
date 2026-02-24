@@ -41,7 +41,7 @@ label nurse_day1_evening:
     """
 
     """
-    He opens the door to a very elegant room.
+    He opens the door to a spacious, well-appointed room.
     """
 
     $ change_room('bedroom_nurse', dissolve)
@@ -55,11 +55,9 @@ label nurse_day1_evening:
     """
 
     """
-    Well, the trip was exhausting.
+    The journey has taken rather more out of me than I'd care to admit.
 
-    If I don't want to exert myself, I'd better get some rest before going downstairs.
-
-    I set up my luggage and get into bed.
+    I'll rest before dinner.
     """
 
     call wait_screen_transition()
@@ -77,32 +75,107 @@ label nurse_day1_evening:
     call change_time(16,45)
 
     """
-    When I enter the tea room, I nod at Doctor Baldwin, still talking with Thomas Moody.
+    The tea room is quieter than I expected.
 
-    I decide to get myself a drink before talking again with them.
+    Doctor Baldwin and Thomas Moody are deep in some hushed exchange.
 
-    I look at the tray and pour myself a tea.
-
-    Two other persons enters the room.
-
-    An Indian man in army fatigues and an older gentleman looking dishveled.
-
-    The Indian man introduces himself to Doctor Baldwin and Thomas Moody.
-
-    The other man comes toward me
+    I pour myself a tea and keep my distance.
     """
-    # TODO, ignore, or introduces himself drunkely
 
-    # nurse escapes and joins the captain
+    """
+    Two men enter together, though they couldn't look less alike.
 
-    # The captain tells a long story about???
+    One is an Indian gentleman in military dress, upright and composed.
 
-    # dr baldwin seems out of it.
+    The other is older — rumpled jacket, unsteady on his feet.
+    """
 
-    # What kind of group of people is that?? thinks the nurse
+    """
+    The soldier crosses to Doctor Baldwin without hesitation.
 
-    # mentionned 2 other people have joind the room (lad and psychic), but note nothing about them.
+    The older man drifts toward me.
+    """
 
-    # gong to dinner
+    drunk """
+    Ah! Samuel Manning, at your... at your service.
+    """
+
+    """
+    He extends a hand, misses mine by several inches, and beams at me regardless.
+    """
+
+    nurse """
+    How do you do, Mr Manning.
+    """
+
+    """
+    I made my excuses before he could finish his next sentence.
+
+    The soldier is still with Baldwin and Moody.
+
+    He seems the sort who finishes what he starts.
+
+    I position myself nearby and wait.
+    """
+
+    captain """
+    Oh, hello Miss ... ?
+    """
+    
+    nurse """
+    Miss Marsh.
+    """
+
+    captain """
+    Nice to meet you, Miss Marsh. Captain Sushil Sinha.
+
+    I was telling those gentlemen a story about 
+    """
+
+    nurse """
+    Please, go on.
+    """
+
+    captain """
+    Very well, so where was I?
+    """
+
+
+
+    """
+    He spoke for some time after that — something about the regiment, a posting in Calcutta, a colonel whose name I didn't catch.
+
+    I listened as best I could.
+
+    It was perfectly pleasant if one didn't try to follow the thread.
+    """
+
+    """
+    At some point I noticed Doctor Baldwin had gone quiet.
+
+    He was nodding along, but his eyes were elsewhere.
+
+    I know that look. Something on his mind, and not the conversation in front of him.
+    """
+
+    """
+    Two more had slipped into the room without my noticing — a young man with the restless energy of someone who'd rather be outside, and a woman in rather more elaborate dress than the occasion perhaps warranted.
+
+    I didn't introduce myself.
+
+    I wasn't ready for more of that just yet.
+    """
+
+    """
+    What a peculiar assortment of people.
+
+    Lady Claythorn has eclectic taste in guests, I'll give her that.
+    """
+
+    """
+    I finish my tea as the gong sounds from the corridor.
+
+    Good. Dinner, at least, requires no conversation I haven't already rehearsed.
+    """
 
     jump work_in_progress

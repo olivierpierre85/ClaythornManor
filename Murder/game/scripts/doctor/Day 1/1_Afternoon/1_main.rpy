@@ -25,7 +25,7 @@ label doctor_introduction:
     $ play_music('chill')
 
     """
-    Anxiety hits me harder than usual.
+    Anxiety hits me harder than usualy.
 
     I haven't been away this long in years. It feels off, but there's no turning back.
 
