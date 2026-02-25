@@ -22,6 +22,17 @@ label init_nurse:
             # story var
         }
 
+        nurse_important_choices = CharacterImportantChoiceList([
+            CharacterInformation(
+                0, "steal_cutlery_1",
+                "You took some cutlery after Friday's dinner",
+                content_negative="You did not take some cutlery after Friday's dinner",
+                image_file="steal_cutlery_1",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening','sunday_afternoon'],
+            ),
+        ])
+
         nurse_extra_information = CharacterDescriptionHiddenList([
             CharacterInformation(1, "job", "nurse most of her life, mostly in the army or at an hospital. Lately, she started to perform at home service for rich individuals", is_important = True), 
             CharacterInformation(2, "clothes", "well-dressed in an understated style", is_important = True),
@@ -58,7 +69,7 @@ label init_nurse:
             description_short = "Middle-aged woman.",
             description_long = nurse_description,
             description_hidden = nurse_extra_information,
-            important_choices = CharacterInformationList([]),
+            important_choices = nurse_important_choices,
             endings = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),

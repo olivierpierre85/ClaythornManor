@@ -240,7 +240,7 @@ label nurse_day1_evening:
     call run_menu(TimedMenu("nurse_day1_evening", [
         TimedMenuChoice("Talk to Samuel Manning", 'nurse_day1_dinner_drunk', early_exit=True),
         TimedMenuChoice("Just keep to yourself", 'generic_cancel', early_exit=True),
-    ], image_right = "lad"))
+    ], image_right = "drunk"))
 
     call change_time(21,00)
 
@@ -257,12 +257,18 @@ label nurse_day1_evening:
     """
 
     $ time_left = 1 
-    call run_menu(TimedMenu("doctor_day1_evening", [
-        TimedMenuChoice("Talk to Ted Harring", 'doctor_day1_dinner_lad', early_exit=True),
-        TimedMenuChoice("Just keep to yourself", 'generic_cancel', early_exit=True),
-    ], image_right = "drunk"))
+    call run_menu(TimedMenu("nurse_day1_evening_steal", [
+        TimedMenuChoice("Pocket it discretely", 'nurse_day1_evening_steal', early_exit=True),
+        TimedMenuChoice("It's not worth it", 'nurse_day1_evening_do_not_steal', early_exit=True),
+    ]))
 
     call change_time(21,00)
+
+    """
+    I stand up and go back to my room.
+    """
+
+    $ change_room("bedroom_nurse")
 
     jump work_in_progress
 
@@ -306,5 +312,39 @@ label nurse_day1_dinner_drunk:
     """
 
     call drunk_generic
+
+    return
+
+
+label nurse_day1_evening_steal:
+
+    """
+    A quick glance to either side.
+
+    No one is paying the slightest attention.
+
+    My hand moves before I have quite made the decision.
+
+    The spoon disappears into my bag with the faintest clink.
+
+    I take my leave before the moment passes.
+    """
+
+    $ nurse_details.threads.unlock('steal_cutlery_1')
+
+    return
+
+
+label nurse_day1_evening_do_not_steal:
+
+    """
+    I look at the silverware for a moment longer than I ought.
+
+    Then I push the thought aside.
+
+    It is not worth the risk.
+
+    I rise from the table and excuse myself.
+    """
 
     return
