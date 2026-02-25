@@ -11,6 +11,7 @@
 - [ ] **Transitions**: Day 2 morning transitions between Sam Manning and Doctor are too fast.
 - [ ] **Discussion with Cpt Sinha (Day 2 Evening)**: Show generic choices, make the rest a submenu. Check if it works with Psychic.
 - [ ] Dialog: "Can you read mister Harring? 'I GET BY'".
+- [ ] $ lad_generic_menu NO MENTIONNED OF WEATHER? ADd ? or reason?
 
 ### Ideas to think over (optional)
 

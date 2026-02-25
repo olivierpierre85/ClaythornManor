@@ -260,7 +260,7 @@ label nurse_day1_evening:
     call run_menu(TimedMenu("doctor_day1_evening", [
         TimedMenuChoice("Talk to Ted Harring", 'doctor_day1_dinner_lad', early_exit=True),
         TimedMenuChoice("Just keep to yourself", 'generic_cancel', early_exit=True),
-    ], image_right = "lad"))
+    ], image_right = "drunk"))
 
     call change_time(21,00)
 
