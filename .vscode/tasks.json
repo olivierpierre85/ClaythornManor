@@ -15,6 +15,17 @@
         "nurse::friday_afternoon"
       ],
       "default": "lad_friday_evening::lad_friday_evening_1"
+    },
+    {
+      "id": "infoCardAddon",
+      "type": "pickString",
+      "description": "Select an addon to apply to all images",
+      "options": [
+        "letter_i_art_deco.png",
+        "number_2_art_deco.png",
+        "number_3_art_deco.png"
+      ],
+      "default": "letter_i_art_deco.png"
     }
   ],
   "tasks": [
@@ -74,6 +85,24 @@
       "command": "python",
       "args": [
         "c:\\Projects\\ClaythornManor\\tools\\process_infocards.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Antigravity: Process Infocards (with Addon)",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\process_infocards.py",
+        "--addon",
+        "${input:infoCardAddon}"
       ],
       "presentation": {
         "reveal": "always",

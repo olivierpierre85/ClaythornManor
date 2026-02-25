@@ -39,6 +39,19 @@
       "preLaunchTask": "Antigravity: Process Infocards",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
+    },
+    {
+      "name": "Antigravity: Process Infocards (with Addon)",
+      "type": "python",
+      "request": "launch",
+      "program": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "echo Processing Infocards with addon..."
+      ],
+      "preLaunchTask": "Antigravity: Process Infocards (with Addon)",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
     }
   ]
 }
