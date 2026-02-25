@@ -14,7 +14,7 @@ The woman is left pregnant. 1902 where she gives birth to the **young lad**. She
 
 She goes back home to try to get him back, so she is cast out by her family. She has to become a maid for a rich families, and an aspiring Actress on her free time. She will change often of employer, even working for a time in Claythorn Manor. Because she never lost hope to find her son. She inspects every orphanage in England, finding employment close to them. It takes YEARS and when she finally finds the right orphanage. 
 
-THere is the name of young boy with the right name at the right time in their archive, but she is arrested in the process, before being able to learn where he lived. The drunk lawyer that is supposed to defend her failed. So she was sent away, delaying the moment she could meet her son.
+THere is the name of young boy with the right name at the right time in their archive, but she is arrested in the process, before being able to learn where he lived. The **drunk** lawyer that is supposed to defend her failed. So she was sent away, delaying the moment she could meet her son.
 
 In 1923 she realizes that he is still alive, when she sees his name in the paper (she avidly read all the papers in the area) after he saved a child. Her first instinct is to try and find him, but she is afraid he will want nothing to do with her. She is also starting to show symptoms of mental issue, given her story, not abnormal.
 

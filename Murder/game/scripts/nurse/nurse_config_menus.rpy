@@ -16,4 +16,11 @@ label nurse_config_menu:
         TimedMenuChoice("You don't have anymore questions for him", 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "drunk")
 
+    $ drunk_generic_other_guests_menu_nurse = TimedMenu("drunk_generic_other_guests_menu_nurse", [
+        TimedMenuChoice('What do you think of Lady Claythorn?', 'drunk_generic_host_saturday_nurse', 10, condition = condition_saturday),
+        TimedMenuChoice('What do you think of Daniel Baldwin?', 'drunk_generic_doctor_saturday_nurse', 10, condition = condition_saturday),
+        TimedMenuChoice('What do you think of Sushil Sinha?', 'drunk_generic_captain_saturday_nurse', 10, condition = condition_saturday),
+        TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "drunk")
+
     return
