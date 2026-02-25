@@ -391,42 +391,31 @@ label nurse_day1_evening_bedroom_psychic:
     return
 
 
-label nurse_bedroom_stay_away:
-
-    """
-    I raise my hand to knock, then think better of it.
-
-    These are private rooms.
-
-    I have no business here.
-    """
-
-    return
 
 
 label nurse_day1_evening_bedroom_captain:
     call nurse_bedroom_default
-    call nurse_bedroom_stay_away
+    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_captain")
     return
 
 label nurse_day1_evening_bedroom_host:
     call nurse_bedroom_default
-    call nurse_bedroom_stay_away
+    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_host")
     return
 
 label nurse_day1_evening_bedroom_lad:
     call nurse_bedroom_default
-    call nurse_bedroom_stay_away
+    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_lad")
     return
 
 label nurse_day1_evening_bedroom_broken:
     call nurse_bedroom_default
-    call nurse_bedroom_stay_away
+    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_broken")
     return
 
 label nurse_day1_evening_bedroom_doctor:
     call nurse_bedroom_default
-    call nurse_bedroom_stay_away
+    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_doctor")
     return
 
 
@@ -447,7 +436,141 @@ label nurse_bedroom_default:
     return
 
 
-# Attic
+label nurse_bedroom_lockpick_choice(search_label):
+
+    if not nurse_details.saved_variables["lockpick_seen"]:
+
+        $ nurse_details.saved_variables["lockpick_seen"] = True
+
+        """
+        The door is locked.
+
+        It would take very little effort to open it.
+
+        In my years of nursing, one becomes acquainted with all manner of locks — on medicine cabinets, ward doors, supply rooms.
+
+        This is nothing remarkable.
+        """
+
+    call run_menu(TimedMenu("nurse_day1_evening_lockpick_" + search_label, [
+        TimedMenuChoice("Pick the lock and go in.", search_label, 10, early_exit=True, keep_alive=True),
+        TimedMenuChoice("No. Leave it.", 'generic_cancel', early_exit=True, keep_alive=True),
+    ]))
+
+    return
+
+
+label nurse_day1_evening_search_captain:
+
+    $ change_room("bedrooms_hallway")
+
+    play sound door_locked
+
+    """
+    The room is neat to the point of severity.
+
+    A coat hangs straight on its hook.
+
+    A leather travelling case sits unpacked on the stand, its straps buckled precisely.
+
+    Nothing is left in reach.
+
+    Whatever the Captain values, he keeps it close to his person.
+    """
+
+    return
+
+
+label nurse_day1_evening_search_host:
+
+    $ change_room("bedroom_host")
+
+    """
+    The room is larger than mine, dressed in pale silks and heavy curtains.
+
+    I look quickly through the dressing table.
+
+    A jet brooch, a few hairpins, a string of garnets in a velvet case.
+
+    They catch my eye for a moment.
+    """
+
+    call run_menu(TimedMenu("nurse_day1_evening_search_host_choice", [
+        TimedMenuChoice("Take the garnets.", 'nurse_day1_evening_take_garnets', 5, early_exit=True),
+        TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
+    ]))
+
+    return
+
+
+label nurse_day1_evening_take_garnets:
+
+    """
+    Not first rate, but they will fetch something.
+
+    I slip the case into my bag and close the drawer as I found it.
+    """
+
+    $ nurse_details.threads.unlock('steal_garnets')
+
+    return
+
+
+label nurse_day1_evening_search_lad:
+
+    $ change_room("bedrooms_hallway")
+
+    """
+    The room smells of cheap tobacco.
+
+    A jacket thrown over the chair, a battered holdall on the floor.
+
+    There is nothing here worth taking.
+
+    A young man travelling light and spending freely is unlikely to be carrying anything of value.
+    """
+
+    return
+
+
+label nurse_day1_evening_search_broken:
+
+    $ change_room("bedrooms_hallway")
+
+    """
+    I push the door open.
+
+    It is dark inside, and quieter than it ought to be.
+
+    The room has a stillness to it that gives me pause.
+
+    Nothing on the dressing table.
+
+    A small case under the bed, locked.
+
+    I close the door softly and leave.
+    """
+
+    return
+
+
+label nurse_day1_evening_search_doctor:
+
+    $ change_room("bedrooms_hallway")
+
+    """
+    A doctor's bag sits open on the small writing desk.
+
+    Instruments, a bottle of laudanum, a notebook with the clasp shut.
+
+    I know better than to disturb another's bag.
+
+    Partly professional courtesy.
+
+    Partly because there is nothing in there I could make use of.
+    """
+
+    return
 label nurse_day1_evening_storage:
     call nurse_attic_default
     call nurse_attic_closed

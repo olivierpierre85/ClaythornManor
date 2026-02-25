@@ -20,6 +20,7 @@ label init_nurse:
             "drunk_generic_other_guests_menu" : drunk_generic_other_guests_menu_nurse,
             
             # story var
+            "lockpick_seen" : False,
         }
 
         nurse_important_choices = CharacterImportantChoiceList([
