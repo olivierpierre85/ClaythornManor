@@ -475,8 +475,12 @@ label nurse_day1_evening_search_captain:
 
     Nothing is left in reach.
 
-    Whatever the Captain values, he keeps it close to his person.
+    Military discipline of this kind belongs to one man in this house.
+
+    And whatever the Captain values, he keeps it close to his person.
     """
+
+    $ unlock_map('bedroom_captain')
 
     return
 
@@ -488,12 +492,16 @@ label nurse_day1_evening_search_host:
     """
     The room is larger than mine, dressed in pale silks and heavy curtains.
 
+    This is unquestionably the lady of the house's own chamber.
+
     I look quickly through the dressing table.
 
     A jet brooch, a few hairpins, a string of garnets in a velvet case.
 
     They catch my eye for a moment.
     """
+
+    $ unlock_map('bedroom_host')
 
     call run_menu(TimedMenu("nurse_day1_evening_search_host_choice", [
         TimedMenuChoice("Take the garnets.", 'nurse_day1_evening_take_garnets', 5, early_exit=True),
@@ -521,7 +529,7 @@ label nurse_day1_evening_search_lad:
     $ change_room("bedrooms_hallway")
 
     """
-    The room smells of cheap tobacco.
+    There isn't much in here.
 
     A jacket thrown over the chair, a battered holdall on the floor.
 
@@ -563,12 +571,16 @@ label nurse_day1_evening_search_doctor:
 
     Instruments, a bottle of laudanum, a notebook with the clasp shut.
 
+    There is no mistaking whose room this is.
+
     I know better than to disturb another's bag.
 
     Partly professional courtesy.
 
     Partly because there is nothing in there I could make use of.
     """
+
+    $ unlock_map('bedroom_doctor')
 
     return
 label nurse_day1_evening_storage:
