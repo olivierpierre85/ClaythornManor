@@ -12,7 +12,7 @@ label init_nurse:
         # Story Variables
         nurse_init_variables = {
             # MAP Menus
-            # "day1_evening_map_menu" : nurse_day1_evening_map_menu,
+            "day1_evening_map_menu" : nurse_day1_evening_map_menu,
             # "day2_no_hunt_map_menu" : nurse_day2_no_hunt_map_menu,
 
             # Generic Menus

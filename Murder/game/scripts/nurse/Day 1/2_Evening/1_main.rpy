@@ -268,7 +268,37 @@ label nurse_day1_evening:
     I stand up and go back to my room.
     """
 
-    $ change_room("bedroom_nurse")
+    $ change_room("bedroom_nurse", dissolve)
+
+    """
+    The dinner was rather taxing, so I am not sure what to do.
+
+    Ideally, I could search the place to find something valuable.
+
+    The silver is probably in the butler's pantry. 
+
+    That could be in his bedroom, or the kitchen.
+
+    But there could be more valuables in other places.
+
+    I must keep in mind that I should exert myself too much.
+
+    That could end badly.
+
+    So where should I venture?
+    """
+
+    $ time_left = 90
+    call run_menu(nurse_details.saved_variables["day1_evening_map_menu"])
+
+
+    if time_left <= 0:
+
+        """
+        TODO cough and unlocking
+        """
+        # TODO if time left is <=0 then, add a cough_blood_1 => if does it again the next day => Death during the night
+
 
     jump work_in_progress
 
