@@ -162,10 +162,24 @@ init -100 python:
                     info.discovered = True
 
                     if not hide_notifications and not is_restart:
-                        if self.notification_text:
-                            renpy.notify(self.notification_text)
-                        if self.notification_sound:
-                            renpy.play(self.notification_sound, "sound")
+                        notify_text = self.notification_text
+                        notify_sound = self.notification_sound
+                        
+                        if not notify_text:
+                            if getattr(info, "type", None) == "choice":
+                                notify_text = "This decision may have consequences"
+                                notify_sound = "audio/sound_effects/writing_short.ogg"
+                            elif getattr(info, "type", None) == "observation":
+                                notify_text = "You have made a new observation"
+                                notify_sound = "audio/sound_effects/writing_short.ogg"
+                            elif getattr(info, "type", None) == "object":
+                                notify_text = "You have found a new object"
+                                notify_sound = "audio/sound_effects/writing_short.ogg"
+
+                        if notify_text:
+                            renpy.notify(notify_text)
+                        if notify_sound:
+                            renpy.play(notify_sound, "sound")
 
             if not seen_tutorial_progress:
                 seen_tutorial_progress = True
