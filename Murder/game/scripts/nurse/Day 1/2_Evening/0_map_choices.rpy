@@ -170,43 +170,49 @@ label nurse_day1_evening_library:
 
     I am about to leave when a title catches my attention.
 
-    "The Anglo-Zanzibar War — A Brief Account."
+    "A History of the British Army" — Fortescue.
+
+    Fourteen volumes.
+
+    I have seen this set before, in the officers' mess at Netley.
 
     The Captain mentioned Zanzibar this afternoon.
 
-    Something in the way he spoke of it nagged at me, though I could not place it at the time.
+    Something in the way he spoke of it nagged at me, though I could not quite place it at the time.
+
+    I could try to learn more about that conflict, though it may take some time.
     """
 
     call run_menu(TimedMenu("nurse_library_default", [
-        TimedMenuChoice("Read the account. It may be useful.", 'nurse_day1_evening_library_zanzibar', 30, early_exit=True),
+        TimedMenuChoice("Look it up. It may be useful.", 'nurse_day1_evening_library_war_book', 30, early_exit=True),
         TimedMenuChoice("Leave it. I am too tired for reading tonight.", 'generic_cancel', early_exit=True),
     ]))
 
     return
 
 
-label nurse_day1_evening_library_zanzibar:
-
-    call wait_screen_transition()
+label nurse_day1_evening_library_war_book:
 
     """
-    I sit down and read.
+    I take down the volume covering the latter campaigns in India and East Africa.
 
-    The war lasted thirty-eight minutes.
+    I find the index and look up Zanzibar.
 
-    The shortest war in recorded history.
+    A single page.
 
-    The British bombardment was swift and overwhelming.
+    The engagement lasted thirty-eight minutes.
 
-    There were British casualties.
+    The shortest war in recorded history, apparently.
 
-    Very few, but there were some.
+    The British bombardment was overwhelming.
 
-    Why would the Captain speak of it as though he had seen hard fighting?
+    Casualties on the British side were minimal — one man, lightly wounded.
 
-    Unless he wished to appear more battle-hardened than he truly was.
+    If what the Captain said is true, he would be the only injured soldier from the entire war.
 
-    Or perhaps, he was there for a different reason entirely.
+    That seems most unlikely.
+
+    He may well have invented the whole story — but to what end?
     """
 
     $ nurse_details.threads.unlock('captain_zanzibar')
