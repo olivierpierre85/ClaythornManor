@@ -52,6 +52,14 @@ label init_nurse:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening','sunday_afternoon'],
             ),
+            CharacterInformation(
+                0, "day1_exhaustion",
+                "You overexerted yourself on Friday evening and suffered a coughing fit",
+                content_negative="You didn't overexerted yourself on Friday evening",
+                image_file="blood_handkerchief_1",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
+            ),
         ])
 
         nurse_extra_information = CharacterDescriptionHiddenList([

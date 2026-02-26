@@ -292,15 +292,35 @@ label nurse_day1_evening:
     call run_menu(nurse_details.saved_variables["day1_evening_map_menu"])
 
 
+    $ stop_music()
+
+    $ change_room('bedroom_nurse', dissolve)
+
     if time_left <= 0:
 
-        """
-        TODO cough and unlocking
-        """
-        # TODO if time left is <=0 then, add a cough_blood_1 => if does it again the next day => Death during the night
+        $ nurse_details.threads.unlock('day1_exhaustion')
 
+        """
+        I have pushed myself rather too far this evening.
 
-    jump work_in_progress
+        As I reach my room, a fit of coughing takes hold — sharp and wretched.
+
+        I grip the bedpost until it passes.
+
+        I ought not to have done so much.
+        """
+
+    else:
+
+        """
+        It has been a long day, and the weariness has settled into my bones.
+
+        I change and get into bed without ceremony.
+
+        Sleep comes before I have quite decided to close my eyes.
+        """
+
+    jump nurse_day2_morning
 
 
 label nurse_day1_dinner_drunk:
