@@ -177,7 +177,7 @@ label nurse_day1_evening_library:
 
     call run_menu(TimedMenu("nurse_library_default", [
         TimedMenuChoice("Look it up. It may be useful.", 'nurse_day1_evening_library_war_book', 30, early_exit=True),
-        TimedMenuChoice("Leave it. I am too tired for reading tonight.", 'generic_cancel', early_exit=True),
+        TimedMenuChoice("Leave it. I am too tired for reading tonight.", 20, 'generic_cancel', early_exit=True),
     ]))
 
     return

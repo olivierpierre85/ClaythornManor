@@ -16,7 +16,7 @@ label nurse_day1_evening_billiard_room:
         """
 
         $ nurse_day1_evening_billiard_room_menu = TimedMenu("nurse_day1_evening_billiard_room_menu", [
-            TimedMenuChoice('Listen to Captain Sinha', 'nurse_day1_evening_billiard_room_captain', 120),
+            TimedMenuChoice('Listen to Captain Sinha', 'nurse_day1_evening_billiard_room_captain', 60),
             TimedMenuChoice('Go to the bar for a drink', 'nurse_day1_evening_billiard_room_bar', 10),
             TimedMenuChoice('Talk to Doctor Baldwin', 'nurse_day1_evening_billiard_room_doctor', 10),
             TimedMenuChoice('Leave the room', 'nurse_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
