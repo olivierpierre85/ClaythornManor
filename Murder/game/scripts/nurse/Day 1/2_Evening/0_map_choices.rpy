@@ -25,7 +25,7 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('kitchen'), 'nurse_day1_evening_downstairs_crowded', 0, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day1_evening_downstairs_crowded', 0, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'nurse_day1_evening_garage', 20, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day1_evening_gun_room', 20, room='gun_room'),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day1_evening_gun_room', 0, room='gun_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="nurse_day1_evening_bedroom_drunk"),
             TimedMenuChoice(default_room_text('library'), 'nurse_day1_evening_library', 0, next_menu="nurse_library_default", room='library'),
@@ -88,20 +88,14 @@ label nurse_day1_evening_downstairs_crowded:
 
 label nurse_day1_evening_garage:
 
-    $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('garage'))
-
-    $ change_room("basement_stairs")
-
-    """
-    I take the back passage, keeping close to the wall.
-    """
-
     $ change_room("garage")
 
     """
+    I reach the garage, making sure I wouldn't encounter anyone.
+
     It is a cold, oil-smelling place.
 
-    A motor car sits under a dust sheet.
+    There is an old car, it doesn't look like it's working anymore.
 
     Tools hang neatly along one wall, and a bicycle leans against another.
 
@@ -113,31 +107,23 @@ label nurse_day1_evening_garage:
 
 label nurse_day1_evening_gun_room:
 
-    $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('gun_room'))
-
-    $ change_room("basement_stairs")
-
-    """
-    I take the servants' corridor without stopping.
-    """
-
     $ change_room("gun_room")
 
     """
-    Glass cases line three walls, each holding shotguns and hunting rifles in neat rows.
+    The gun room.
+    
+    I am confident that I shouldn't be here, so I made sure no one notices me.
+
+    Shotguns and hunting rifles line three walls, arranged on open racks.
 
     The smell of gun oil is sharp.
 
-    A row of keys hangs on a hook beside the door — presumably for the cabinets.
-
-    I try one.
-
-    It turns.
+    Everything is laid out as though ready for use — nothing locked away.
     """
 
     call run_menu(TimedMenu("nurse_day1_evening_gun_room_choice", [
-        TimedMenuChoice("Take a pistol", 'nurse_day1_evening_take_gun', 10, early_exit=True),
-        TimedMenuChoice("Leave it. Too dangerous to carry.", 'generic_cancel', early_exit=True),
+        TimedMenuChoice("Take a pistol", 'nurse_day1_evening_take_gun', 20, early_exit=True),
+        TimedMenuChoice("Leave it. Too dangerous to carry.", 'generic_cancel', 20, early_exit=True),
     ]))
 
     return
@@ -150,12 +136,12 @@ label nurse_day1_evening_take_gun:
 
     It is loaded.
 
-    I slip it into my bag and close the cabinet again, hanging the key back on its hook.
+    I slip it into my bag.
 
     Nobody will notice — not tonight, at any rate.
     """
 
-    $ nurse_details.threads.unlock('has_gun')
+    $ nurse_details.threads.unlock('take_gun')
 
     return
 

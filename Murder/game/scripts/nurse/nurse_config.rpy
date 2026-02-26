@@ -41,6 +41,14 @@ label init_nurse:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening','sunday_afternoon'],
             ),
+            CharacterInformation(
+                0, "take_gun",
+                "You took a revolver from the gun room",
+                content_negative="You did not take a revolver from the gun room",
+                image_file="gun",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening','sunday_afternoon'],
+            ),
         ])
 
         nurse_extra_information = CharacterDescriptionHiddenList([
