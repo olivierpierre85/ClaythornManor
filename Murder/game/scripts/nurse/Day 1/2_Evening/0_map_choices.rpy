@@ -64,11 +64,17 @@ label nurse_day1_evening_downstairs_crowded:
     """
     I move quietly through the back passage.
 
-    Years of night shifts have taught me how to be unobtrusive in other people's houses.
+    Years of night moving in the dark in large house taught me how to stay hidden.
 
     I reach the kitchen door and ease it open an inch.
+    """
 
-    The room is full — staff moving back and forth, voices overlapping, the clatter of pots.
+    $ change_room("kitchen")
+
+    """
+    I almost go in until I notice some of the staff. 
+    
+    They are busy cleaning today's meal.
 
     No chance of doing anything useful in there tonight.
 
@@ -627,34 +633,6 @@ label nurse_attic_closed:
     The door is locked, in any case.
 
     I ought not to have come up here at all.
-    """
-
-    return
-
-
-# Billiard room
-label nurse_day1_evening_billiard_room:
-
-    $ change_room('billiard_room')
-
-    """
-    A haze of pipe smoke hangs over the room.
-
-    Captain Sinha is holding court near the fireplace.
-
-    A small audience has gathered — the Captain's voice carries, and his stories have the weight of a man who expects to be listened to.
-
-    I find a chair near the window, a little apart from the group.
-
-    I am content to observe.
-
-    Ted Harring is there too, hovering at the edge of the circle.
-
-    He catches my eye and nods.
-
-    I nod back, and look away.
-
-    I don't stay long.
     """
 
     return

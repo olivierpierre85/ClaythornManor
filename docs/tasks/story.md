@@ -41,7 +41,8 @@
 - [ ] **Day 2 Evening**: Ted Alliance Logic wobbly. Rewrite to keep consistent with Ted Harring Path.
 - [ ] **Refactoring**: Better factorisation of `Common_day3_morning_lad_psychic_journey` and `Psychic_day3_morning_has_not_visited_lad`.
 - [ ] **Day 1 Evening**: Lord path, second visit to portrait gallery/library => Other text when already visited?
-- [ ] 
+- [ ] **Nurse death**: The killing by nurse is too violent, or it lacks an explanation => **HATE** psychic. Because?
+  
 ### Ideas to think over (optional)
 
 - [ ] **The Lord**:

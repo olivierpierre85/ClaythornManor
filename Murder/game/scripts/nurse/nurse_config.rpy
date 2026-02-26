@@ -21,6 +21,7 @@ label init_nurse:
             
             # story var
             "lockpick_seen" : False,
+            "day1_evening_billiard_room_visited" : False,
         }
 
         nurse_important_choices = CharacterImportantChoiceList([
@@ -52,6 +53,17 @@ label init_nurse:
             CharacterInformation(60, "lie", "stealing from her patients, or from anyone whenever she has the opportunity.", is_important = True),
             ], nurse_name
         )
+
+        nurse_observations = CharacterObservationList([
+            CharacterInformation(
+                1, "captain_lie_rank",
+                "You noticed an inconsistency in Captain Sinha's story about his rank",
+                content_negative="You didn't notice the inconsistency in Captain Sinha's story",
+                image_file="captain",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
+        ])
         # nurse_description_full = """
         # A discreet 42 years old woman, she is well-dressed in an understated style. 
         # She worked as nurse most of her life, mostly in the army or at an hospital.
@@ -80,7 +92,7 @@ label init_nurse:
             description_hidden = nurse_extra_information,
             important_choices = nurse_important_choices,
             endings = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
+            observations = nurse_observations,
             objects = CharacterInformationList([]),
             progress = nurse_progress,
             saved_variables = copy.deepcopy(nurse_init_variables),

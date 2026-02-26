@@ -16,20 +16,9 @@
 
 ## Write Story : NURSE - Day 1
 - 
-- [ ] Map evening
-- [ ] ARRIVAL at tea room WHEn????
-- [ ]     https://en.wikipedia.org/wiki/Anglo-Zanzibar_War ONLY one casualty ANd shortest war in history!!!
-- [ ] !!! Money counter !!! To be able to leave, you need to have enough money on day x??? Each room has objects that can be of value, take what's good. If you take the wrong ones, you might get caught. Ideas
-  - [ ] Each stolen item as a value, you need to show a info_card with a changing possible value
-  - [ ] Books of value (too big?)
-  - [ ] During dinner, you can steal cutlery, risky but usually ok
-  - [ ] Portait? Way too big
-  - [ ] Grand price should be jewelery of Lady Claythorn
-  - [ ] Lad is probably too poor, same as same manning
-  - [ ] Captain is a maybe, so is psychic and doctor and broken
-  - [ ] Butler room is where the expensive stuff is OR downstairs.
-  - [ ] The rest downstairs is not great
-  - [ ] BEST moment to steal => The hunt !!
+- [ ] Map evening => TEST FROM start
+  - [ ] Downstaire Ongoing
+
 
 
 ## Proofreading
