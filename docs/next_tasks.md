@@ -1,10 +1,8 @@
-# 🚀 Active Work & Next Steps
+no reason to look further
 
-- [ ] GAME STORY NEW DOC? - DOUBLE CHECK everything
-  - [ ] characters
-  - [ ] locations object => Add all objects to all rooms like in game????
-  - [ ] meta ai
-  - [ ] timeline
+=> CHECK the way the lad is handling recurring map choices is Apllied to EVERY cHARACTER? (with already visite var)
+
+=> Move default map choices for nurse to default page?
 
 ## Write Story : Day 3 - Doctor FINIS DOCTOR
 - [ ] RETRY EVERYTHING

@@ -154,6 +154,8 @@ label nurse_day1_evening_library:
     """
     A well-appointed library.
 
+    "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." lies open on a table.
+
     I cast my eye along the shelves.
 
     Mostly heraldry, county histories, and bound journals.
@@ -168,7 +170,7 @@ label nurse_day1_evening_library:
 
     I have seen this set before, in the officers' mess at Netley.
 
-    The Captain mentioned Zanzibar this afternoon.
+    The Captain mentioned Zanzibar at some point I remember.
 
     Something in the way he spoke of it nagged at me, though I could not quite place it at the time.
 
@@ -177,7 +179,7 @@ label nurse_day1_evening_library:
 
     call run_menu(TimedMenu("nurse_library_default", [
         TimedMenuChoice("Look it up. It may be useful.", 'nurse_day1_evening_library_war_book', 30, early_exit=True),
-        TimedMenuChoice("Leave it. I am too tired for reading tonight.", 20, 'generic_cancel', early_exit=True),
+        TimedMenuChoice("Leave it. I am too tired for reading tonight.", 'generic_cancel', 20, early_exit=True),
     ]))
 
     return
