@@ -5,6 +5,12 @@ no reason to look further
 
 => Move default map choices for nurse to default page?
 
+## Write Story : NURSE - Day 1
+- 
+- [ ] Map evening => TEST FROM start
+  - [ ] **NEXT Bedrooms**
+  
+  
 ## Write Story : Day 3 - Doctor FINIS DOCTOR
 - [ ] RETRY EVERYTHING
 - [ ] add Music Death.
@@ -13,10 +19,7 @@ no reason to look further
 - [ ] Gun room has a Menu choice Day 3.
 - [ ] Rethink unlocking FULLY
 
-## Write Story : NURSE - Day 1
-- 
-- [ ] Map evening => TEST FROM start
-  - [ ] Downstairs Ongoing
+
 
 
 

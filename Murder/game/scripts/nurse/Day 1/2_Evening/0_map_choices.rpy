@@ -302,6 +302,17 @@ label nurse_day1_evening_portrait_gallery:
 
 
 # First Floor — Bedrooms
+label nurse_day1_evening_bedroom_too_dangerous:
+
+    """
+    No answer.
+
+    Far too dangerous to try anything now, with the house still so full of people.
+    """
+
+    return
+
+
 label nurse_day1_evening_bedroom_drunk:
 
     call nurse_bedroom_default
@@ -315,44 +326,9 @@ label nurse_day1_evening_bedroom_drunk:
 
     Spirits, and something stale beneath it.
 
-    I have attended enough patients in this condition to know better than to enter.
+    I know better than to enter.
     """
-
-    call run_menu(TimedMenu("nurse_day1_evening_bedroom_drunk", [
-        TimedMenuChoice("Go in. He may need medical attention.", 'nurse_day1_evening_bedroom_drunk_enter', 0, next_menu="nurse_day1_evening_bedroom_drunk", early_exit=True),
-        TimedMenuChoice("Close the door and leave.", 'nurse_day1_evening_bedroom_drunk_leave', early_exit=True),
-    ]))
-
-    return
-
-
-label nurse_day1_evening_bedroom_drunk_enter:
-
-    """
-    I push the door open.
-
-    Mr Manning is sprawled across the armchair, still dressed.
-
-    He is breathing — noisily, and with great conviction.
-
-    He is not in any danger.
-
-    I tuck a blanket around him out of habit, collect his glass from the floor before it is knocked over, and leave quietly.
-    """
-
-    $ nurse_details.threads.unlock('checked_drunk')
-
-    return
-
-
-label nurse_day1_evening_bedroom_drunk_leave:
-
-    """
-    I pull the door to and let him be.
-
-    It is not my responsibility.
-    """
-
+    
     return
 
 
@@ -385,216 +361,51 @@ label nurse_day1_evening_bedroom_psychic:
     return
 
 
-
-
 label nurse_day1_evening_bedroom_captain:
     call nurse_bedroom_default
-    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_captain")
+    call nurse_day1_evening_bedroom_too_dangerous
     return
 
 label nurse_day1_evening_bedroom_host:
     call nurse_bedroom_default
-    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_host")
+    call nurse_day1_evening_bedroom_too_dangerous
     return
 
 label nurse_day1_evening_bedroom_lad:
     call nurse_bedroom_default
-    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_lad")
+    call nurse_day1_evening_bedroom_too_dangerous
     return
 
 label nurse_day1_evening_bedroom_broken:
     call nurse_bedroom_default
-    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_broken")
+    call nurse_day1_evening_bedroom_too_dangerous
     return
 
 label nurse_day1_evening_bedroom_doctor:
     call nurse_bedroom_default
-    call nurse_bedroom_lockpick_choice("nurse_day1_evening_search_doctor")
+    call nurse_day1_evening_bedroom_too_dangerous
     return
 
 
-label nurse_bedroom_default:
-
-    $ change_room("bedrooms_hallway")
-
-    play sound door_knock
-
-    nurse """
-    Hello? Is anyone there?
-    """
-
-    """
-    No answer.
-    """
-
-    return
-
-
-label nurse_bedroom_lockpick_choice(search_label):
-
-    if not nurse_details.saved_variables["lockpick_seen"]:
-
-        $ nurse_details.saved_variables["lockpick_seen"] = True
-
-        """
-        The door is locked.
-
-        It would take very little effort to open it.
-
-        In my years of nursing, one becomes acquainted with all manner of locks — on medicine cabinets, ward doors, supply rooms.
-
-        This is nothing remarkable.
-        """
-
-    call run_menu(TimedMenu("nurse_day1_evening_lockpick_" + search_label, [
-        TimedMenuChoice("Pick the lock and go in.", search_label, 10, early_exit=True, keep_alive=True),
-        TimedMenuChoice("No. Leave it.", 'generic_cancel', early_exit=True, keep_alive=True),
-    ]))
-
-    return
-
-
-label nurse_day1_evening_search_captain:
-
-    $ change_room("bedrooms_hallway")
-
-    play sound door_locked
-
-    """
-    The room is neat to the point of severity.
-
-    A coat hangs straight on its hook.
-
-    A leather travelling case sits unpacked on the stand, its straps buckled precisely.
-
-    Nothing is left in reach.
-
-    Military discipline of this kind belongs to one man in this house.
-
-    And whatever the Captain values, he keeps it close to his person.
-    """
-
-    $ unlock_map('bedroom_captain')
-
-    return
-
-
-label nurse_day1_evening_search_host:
-
-    $ change_room("bedroom_host")
-
-    """
-    The room is larger than mine, dressed in pale silks and heavy curtains.
-
-    This is unquestionably the lady of the house's own chamber.
-
-    I look quickly through the dressing table.
-
-    A jet brooch, a few hairpins, a string of garnets in a velvet case.
-
-    They catch my eye for a moment.
-    """
-
-    $ unlock_map('bedroom_host')
-
-    call run_menu(TimedMenu("nurse_day1_evening_search_host_choice", [
-        TimedMenuChoice("Take the garnets.", 'nurse_day1_evening_take_garnets', 5, early_exit=True),
-        TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
-    ]))
-
-    return
-
-
-label nurse_day1_evening_take_garnets:
-
-    """
-    Not first rate, but they will fetch something.
-
-    I slip the case into my bag and close the drawer as I found it.
-    """
-
-    $ nurse_details.threads.unlock('steal_garnets')
-
-    return
-
-
-label nurse_day1_evening_search_lad:
-
-    $ change_room("bedrooms_hallway")
-
-    """
-    There isn't much in here.
-
-    A jacket thrown over the chair, a battered holdall on the floor.
-
-    There is nothing here worth taking.
-
-    A young man travelling light and spending freely is unlikely to be carrying anything of value.
-    """
-
-    return
-
-
-label nurse_day1_evening_search_broken:
-
-    $ change_room("bedrooms_hallway")
-
-    """
-    I push the door open.
-
-    It is dark inside, and quieter than it ought to be.
-
-    The room has a stillness to it that gives me pause.
-
-    Nothing on the dressing table.
-
-    A small case under the bed, locked.
-
-    I close the door softly and leave.
-    """
-
-    return
-
-
-label nurse_day1_evening_search_doctor:
-
-    $ change_room("bedrooms_hallway")
-
-    """
-    A doctor's bag sits open on the small writing desk.
-
-    Instruments, a bottle of laudanum, a notebook with the clasp shut.
-
-    There is no mistaking whose room this is.
-
-    I know better than to disturb another's bag.
-
-    Partly professional courtesy.
-
-    Partly because there is nothing in there I could make use of.
-    """
-
-    $ unlock_map('bedroom_doctor')
-
-    return
+# ATTIC
 label nurse_day1_evening_storage:
     call nurse_attic_default
-    call nurse_attic_closed
+    call nurse_attic_too_dangerous
     return
 
 label nurse_day1_evening_males_room:
     call nurse_attic_default
-    call nurse_attic_closed
+    call nurse_attic_too_dangerous
     return
 
 label nurse_day1_evening_females_room:
     call nurse_attic_default
-    call nurse_attic_closed
+    call nurse_attic_too_dangerous
     return
 
 label nurse_day1_evening_butler_room:
     call nurse_attic_default
-    call nurse_attic_closed
+    call nurse_attic_too_dangerous
     return
 
 
@@ -613,7 +424,7 @@ label nurse_attic_default:
     return
 
 
-label nurse_attic_closed:
+label nurse_attic_too_dangerous:
 
     play sound door_locked
 
@@ -621,6 +432,8 @@ label nurse_attic_closed:
     The door is locked, in any case.
 
     I ought not to have come up here at all.
+
+    This is not the right moment to venture here.
     """
 
     return

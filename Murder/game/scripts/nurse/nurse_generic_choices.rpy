@@ -68,6 +68,7 @@ label nurse_generic_age:
 
     return
 
+
 label nurse_generic_background_psychic:
     
     nurse """
