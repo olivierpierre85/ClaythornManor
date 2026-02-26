@@ -22,8 +22,8 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_day1_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             # Downstairs
-            TimedMenuChoice(default_room_text('kitchen'), 'nurse_day1_evening_downstairs_crowded', 0, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'nurse_day1_evening_downstairs_crowded', 0, room='scullery'),
+            TimedMenuChoice(default_room_text('kitchen'), 'nurse_day1_evening_downstairs_crowded', 20, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'nurse_day1_evening_downstairs_crowded', 20, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'nurse_day1_evening_garage', 20, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_day1_evening_gun_room', 0, room='gun_room'),
             # Specific actions
@@ -307,7 +307,11 @@ label nurse_day1_evening_bedroom_too_dangerous:
     """
     No answer.
 
-    Far too dangerous to try anything now, with the house still so full of people.
+    I could try my skills to enter anyway.
+
+    But that seems far too dangerous to try anything now, with the house still so full of people.
+
+    There must be better places to explore.
     """
 
     return
@@ -413,6 +417,11 @@ label nurse_attic_default:
 
     $ change_room("attic_hallway")
 
+    $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
+    $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
+    $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
+    $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+
     """
     The attic staircase is narrow and the floorboards announce every step.
 
@@ -433,7 +442,7 @@ label nurse_attic_too_dangerous:
 
     I ought not to have come up here at all.
 
-    This is not the right moment to venture here.
+    This is not the right moment to venture around here.
     """
 
     return
