@@ -1,6 +1,7 @@
+<!-- # cSpell:disable -->
 no reason to look further
 
-=> CHECK the way the lad is handling recurring map choices is Apllied to EVERY cHARACTER? (with already visite var)
+=> CHECK the way the lad is handling recurring map choices is Applied to EVERY cHARACTER? (with already visit var)
 
 => Move default map choices for nurse to default page?
 
@@ -15,7 +16,7 @@ no reason to look further
 ## Write Story : NURSE - Day 1
 - 
 - [ ] Map evening => TEST FROM start
-  - [ ] Downstaire Ongoing
+  - [ ] Downstairs Ongoing
 
 
 
@@ -23,7 +24,7 @@ no reason to look further
 - Fix grammar workflow
   - Workflow and Agent guidelines ok
   - Find a way to to this for more that one run in chapter, but for all the runs in the chapter that cover all the texts
-- TODO add internal logic worflow? /logic-test that will read the same file but not correct grammar?
+- TODO add internal logic workflow? /logic-test that will read the same file but not correct grammar?
 - NOW Must go hand in hand with TESTING by chapter
 - Lad : Next  DAY 3
 - Psychic: TODO Full
@@ -39,7 +40,7 @@ no reason to look further
 - [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
 
 - [ ] **MENUS - Big Challenge**: 
-    - [x] Menus: Ensure "Next menu" is correct everywhere AND That every choice with a following menu DOESNT have a time value
+    - [x] Menus: Ensure "Next menu" is correct everywhere AND That every choice with a following menu doesn't have a time value
         - [x] Doctor
         - [x] Lad
         - [x] Psychic
@@ -58,10 +59,10 @@ no reason to look further
 - [ ] Try a extension or App to do easy repetitive things
   - [ ] Add a border to an image
   - [ ] Resize to 1920 ,With cropping when needed
-- [ ] For infocards, RENAME so it's correct, then change everything to webp?
-- [ ] Try to make background using Nano Banane Pro.
+- [ ] For info_cards, RENAME so it's correct, then change everything to webp?
+- [ ] Try to make background using Nano Banana Pro.
 - [ ] Try to make new Character side image
-- [ ] Try to make characteres FULL size 
+- [ ] Try to make characters FULL size 
 - [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
 - [ ] Try Locations with characters inside (Whisk/experimental).
 
