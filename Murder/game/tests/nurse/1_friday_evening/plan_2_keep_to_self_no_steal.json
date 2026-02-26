@@ -1,0 +1,32 @@
+{
+    "choices": [
+        {
+            "menu": "nurse_day1_evening",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "nurse_day1_evening_steal",
+            "redirect": "nurse_day1_evening_do_not_steal"
+        },
+        {
+            "menu": "nurse_day1_evening_map_menu",
+            "redirect": "nurse_day1_evening_storage"
+        },
+        {
+            "menu": "nurse_day1_evening_map_menu",
+            "redirect": "nurse_day1_evening_bedroom_lad"
+        },
+        {
+            "menu": "nurse_day1_evening_map_menu",
+            "redirect": "nurse_day1_evening_gun_room"
+        },
+        {
+            "menu": "nurse_day1_evening_gun_room_choice",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "nurse_day1_evening_map_menu",
+            "redirect": "generic_cancel"
+        }
+    ]
+}
