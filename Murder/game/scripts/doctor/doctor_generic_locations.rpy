@@ -33,11 +33,21 @@ label doctor_library_default:
     # TODO change to day2? or adapt if needed
     $ change_room('library')
 
-    """
-    That is a well-furnished library.
+    if not doctor_details.saved_variables["library_visited"]:
 
-    But with everything that has happened, I do not feel like reading today.
-    """
+        """
+        That is a well-furnished library.
+
+        But with everything that has happened, I do not feel like reading today.
+        """
+        
+        $ doctor_details.saved_variables["library_visited"] = True
+
+    else:
+
+        """
+        I really don't feel like reading today.
+        """
 
     return
 
@@ -46,15 +56,27 @@ label doctor_portrait_gallery_default:
 
     $ change_room("portrait_gallery")
 
-    """
-    This is clearly where the Claythorn family display their portraits.
+    if not doctor_details.saved_variables["portrait_gallery_visited"]:
 
-    It's rather odd to have so many crammed into such a small room.
+        """
+        This is clearly where the Claythorn family display their portraits.
 
-    It gives the place quite an eerie atmosphere.
+        It's rather odd to have so many crammed into such a small room.
 
-    I don't feel comfortable lingering here too long.
-    """
+        It gives the place quite an eerie atmosphere.
+
+        I don't feel comfortable lingering here too long.
+        """
+        
+        $ doctor_details.saved_variables["portrait_gallery_visited"] = True
+
+    else:
+
+        """
+        It still gives me an eerie feeling. 
+
+        I'd rather not stay.
+        """
 
     return
 

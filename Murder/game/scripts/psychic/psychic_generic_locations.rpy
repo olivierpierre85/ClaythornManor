@@ -14,11 +14,21 @@ label psychic_library_intro:
 
     $ change_room('library') 
     
-    """
-    Here is an impressive library.
+    if not psychic_details.saved_variables["library_visited"]:
 
-    "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." is open on a table.
-    """
+        """
+        Here is an impressive library.
+
+        "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." is open on a table.
+        """
+        
+        $ psychic_details.saved_variables["library_visited"] = True
+
+    else:
+
+        """
+        The library is still as impressive. 
+        """
 
     return
 

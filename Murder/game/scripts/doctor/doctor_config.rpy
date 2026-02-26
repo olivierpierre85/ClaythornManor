@@ -28,6 +28,8 @@ label init_doctor:
             "broken_offended": 0,
             "day1_evening_billiard_room_visited" : False,
             "attic_visited": False,
+            "library_visited": False,
+            "portrait_gallery_visited": False,
             "asked_about_psychic": False,
 
             # Evening day 2

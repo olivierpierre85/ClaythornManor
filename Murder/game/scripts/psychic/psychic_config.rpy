@@ -31,6 +31,8 @@ label init_psychic:
             # story var
             "day1_evening_billiard_room_visited" : False,
             "portrait_gallery_visited": False,
+            "library_visited": False,
+            "attic_visited": False,
             "book_read": False,
             "day2_nohunt_bedroom_tries": 0,
             "day2_has_seen_bedroom_broken": False,

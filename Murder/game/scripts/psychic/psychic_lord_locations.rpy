@@ -3,129 +3,139 @@ label psychic_attic_default:
 
     $ change_room("attic_hallway")
 
-    """
-    I climb the stairs to the attic and arrive in a dimly lit hallway.
+    if not psychic_details.saved_variables["attic_visited"]:
 
-    There are multiple doors, most of them lie in darkness.
+        """
+        I climb the stairs to the attic and arrive in a dimly lit hallway.
 
-    As I move into the hallway, I hear something.
-    """
+        There are multiple doors, most of them lie in darkness.
 
-    $ play_music('mysterious')
+        As I move into the hallway, I hear something.
+        """
 
-    lord """
-    Hello, is someone there?
-    """
+        $ play_music('mysterious')
 
-    psychic """
-    Hello...
+        lord """
+        Hello, is someone there?
+        """
 
-    My name is Amelia Baxter.
-    """
+        psychic """
+        Hello...
 
-    lord """
-    Nice to meet you, Miss Baxter.
+        My name is Amelia Baxter.
+        """
 
-    It's rare to meet someone up here.
+        lord """
+        Nice to meet you, Miss Baxter.
 
-    I am usually by myself.
-    """
+        It's rare to meet someone up here.
 
-    psychic """
-    Nice to meet you too.
+        I am usually by myself.
+        """
 
-    I am sorry to ask,
+        psychic """
+        Nice to meet you too.
 
-    but who are you?
-    """
+        I am sorry to ask,
 
-    lord """
-    Oh, where are my manners?
+        but who are you?
+        """
 
-    I am the Lord of this Manor, of course.
-    """
+        lord """
+        Oh, where are my manners?
 
-    """
-    Wait, what?
-    """
+        I am the Lord of this Manor, of course.
+        """
 
-    psychic """
-    I am sorry, Lady Claythorn didn't mention you.
-    """
+        """
+        Wait, what?
+        """
 
-    lord """
-    Lady Claythorn? You probably mean my daughter then.
+        psychic """
+        I am sorry, Lady Claythorn didn't mention you.
+        """
 
-    I suppose she likes having all the attention to herself.
+        lord """
+        Lady Claythorn? You probably mean my daughter then.
 
-    She must be relieved that I spend most of my time alone in my room here.
-    """
+        I suppose she likes having all the attention to herself.
 
-    psychic """
-    You live here?
-    """
+        She must be relieved that I spend most of my time alone in my room here.
+        """
 
-    lord """
-    Yes, it's rather uncommon, but I enjoy how peaceful it is.
+        psychic """
+        You live here?
+        """
 
-    Plus, I believe I have the biggest room in the manor.
-    """
+        lord """
+        Yes, it's rather uncommon, but I enjoy how peaceful it is.
 
-    """
-    He points to the big door in front of the stairs.
-    """
+        Plus, I believe I have the biggest room in the manor.
+        """
 
-    psychic """
-    Right...
-    """
+        """
+        He points to the big door in front of the stairs.
+        """
 
-    """
-    I don't know what to say. There is something wrong with all this.
-    """
+        psychic """
+        Right...
+        """
 
-    lord """
-    So my dear, were you looking for something in particular by coming here?
-    """
+        """
+        I don't know what to say. There is something wrong with all this.
+        """
 
-    psychic """
-    Well, not really. I was mostly exploring your home.
-    """
+        lord """
+        So my dear, were you looking for something in particular by coming here?
+        """
 
-    lord """
-    In that case, I would advise you not to linger here.
+        psychic """
+        Well, not really. I was mostly exploring your home.
+        """
 
-    There's not much to see in this old attic.
+        lord """
+        In that case, I would advise you not to linger here.
 
-    You'll find more interesting rooms downstairs.
-    """
+        There's not much to see in this old attic.
 
-    """
-    Alright, he probably wants to stay alone.
-    """
+        You'll find more interesting rooms downstairs.
+        """
 
-    psychic """
-    Of course, I will continue visiting elsewhere.
-    """
+        """
+        Alright, he probably wants to stay alone.
+        """
 
-    lord """
-    Thank you, my dear.
+        psychic """
+        Of course, I will continue visiting elsewhere.
+        """
 
-    Enjoy your stay.
-    """
+        lord """
+        Thank you, my dear.
 
-    psychic """
-    Thank you.
-    """
+        Enjoy your stay.
+        """
 
-    """
-    This was rather peculiar.
+        psychic """
+        Thank you.
+        """
 
-    I don't think I should return here too soon.
-    """
+        """
+        This was rather peculiar.
 
-    $ play_music('PREVIOUS')
+        I don't think I should return here too soon.
+        """
 
-    $ psychic_details.threads.unlock('visited_attic')
+        $ play_music('PREVIOUS')
+
+        $ psychic_details.threads.unlock('visited_attic')
+
+        $ psychic_details.saved_variables["attic_visited"] = True
+
+    else:
+
+        """
+        I really shouldn't go back there right now.
+        """
 
     return
 
