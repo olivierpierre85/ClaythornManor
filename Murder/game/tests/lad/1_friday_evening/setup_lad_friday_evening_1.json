@@ -12,9 +12,9 @@
       "selected": "Talk to Samuel Manning",
       "redirect": "lad_day1_drinks_drunk",
       "time_left": 20,
-      "timestamp": "2025-10-04T18:52:09.223000",
-      "time_to_decide": 3.543,
-      "time_since_last": null
+      "timestamp": "2026-02-27T16:13:13.788915",
+      "time_to_decide": 1.412645,
+      "time_since_last": 20.282271
     },
     {
       "menu": "lad_introduction",
@@ -22,12 +22,41 @@
         "Talk to Amelia Baxter",
         "Stand awkwardly in the corner"
       ],
+      "selected": "Talk to Amelia Baxter",
+      "redirect": "lad_day1_drinks_psychic",
+      "time_left": 10,
+      "timestamp": "2026-02-27T16:13:15.322133",
+      "time_to_decide": 3.925728,
+      "time_since_last": 1.533218
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "other_choices": [
+        "What do you think of this weather?",
+        "Tell me more about yourself.",
+        "What do you think of this place?",
+        "How old are you?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for her"
+      ],
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel",
+      "time_left": 10,
+      "timestamp": "2026-02-27T16:13:19.394288",
+      "time_to_decide": 8.95332,
+      "time_since_last": 4.072155
+    },
+    {
+      "menu": "lad_introduction",
+      "other_choices": [
+        "Stand awkwardly in the corner"
+      ],
       "selected": "Stand awkwardly in the corner",
       "redirect": "generic_cancel",
       "time_left": 10,
-      "timestamp": "2025-10-04T18:52:27.604000",
-      "time_to_decide": 5.093,
-      "time_since_last": 18.381
+      "timestamp": "2026-02-27T16:13:28.576590",
+      "time_to_decide": 0.956308,
+      "time_since_last": 9.182302
     },
     {
       "menu": "lad_day1_evening",
@@ -39,9 +68,9 @@
       "selected": "Talk to Daniel Baldwin",
       "redirect": "lad_day1_evening_dinner_doctor",
       "time_left": 90,
-      "timestamp": "2025-10-04T18:53:37.277000",
-      "time_to_decide": 6.782,
-      "time_since_last": 69.673
+      "timestamp": "2026-02-27T16:13:30.193541",
+      "time_to_decide": 7.533234,
+      "time_since_last": 1.616951
     },
     {
       "menu": "doctor_generic_menu_lad",
@@ -58,9 +87,9 @@
       "selected": "Tell me more about yourself.",
       "redirect": "doctor_generic_background",
       "time_left": 90,
-      "timestamp": "2025-10-04T18:53:49.518000",
-      "time_to_decide": 3.819,
-      "time_since_last": 12.241
+      "timestamp": "2026-02-27T16:13:37.826381",
+      "time_to_decide": 4.803059,
+      "time_since_last": 7.63284
     },
     {
       "menu": "doctor_generic_menu_lad",
@@ -76,9 +105,9 @@
       "selected": "Why were you invited here?",
       "redirect": "doctor_generic_heroic_act",
       "time_left": 70,
-      "timestamp": "2025-10-04T18:54:39.880000",
-      "time_to_decide": 3.005,
-      "time_since_last": 50.362
+      "timestamp": "2026-02-27T16:13:43.077571",
+      "time_to_decide": 4.625972,
+      "time_since_last": 5.25119
     },
     {
       "menu": "doctor_generic_menu_lad",
@@ -93,9 +122,9 @@
       "selected": "What do you think of this place?",
       "redirect": "doctor_generic_manor",
       "time_left": 40,
-      "timestamp": "2025-10-04T18:54:58.339000",
-      "time_to_decide": 5.042,
-      "time_since_last": 18.459
+      "timestamp": "2026-02-27T16:13:47.877407",
+      "time_to_decide": 4.494252,
+      "time_since_last": 4.799836
     },
     {
       "menu": "doctor_generic_menu_lad",
@@ -109,9 +138,9 @@
       "selected": "What room are you in?",
       "redirect": "doctor_generic_room",
       "time_left": 30,
-      "timestamp": "2025-10-04T18:55:15.254000",
-      "time_to_decide": 3.154,
-      "time_since_last": 16.915
+      "timestamp": "2026-02-27T16:13:52.627380",
+      "time_to_decide": 4.584401,
+      "time_since_last": 4.749973
     },
     {
       "menu": "doctor_generic_menu_lad",
@@ -125,9 +154,9 @@
       "selected": "What do you think of the other guests?",
       "redirect": "doctor_generic_other_guests_friday",
       "time_left": 20,
-      "timestamp": "2025-10-04T18:55:45.346000",
-      "time_to_decide": 2.901,
-      "time_since_last": 30.092
+      "timestamp": "2026-02-27T16:13:57.307509",
+      "time_to_decide": 8.931315,
+      "time_since_last": 4.680129
     },
     {
       "menu": "doctor_generic_menu_lad",
@@ -138,10 +167,24 @@
       ],
       "selected": "How old are you?",
       "redirect": "doctor_generic_age",
+      "time_left": 20,
+      "timestamp": "2026-02-27T16:14:06.865918",
+      "time_to_decide": 9.70506,
+      "time_since_last": 9.558409
+    },
+    {
+      "menu": "doctor_generic_menu_lad",
+      "other_choices": [
+        "What do you think of this weather?",
+        "What do you think of this weather?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "What do you think of this weather?",
+      "redirect": "doctor_generic_weather_friday",
       "time_left": 10,
-      "timestamp": "2025-10-04T18:55:54.611000",
-      "time_to_decide": 3.071,
-      "time_since_last": 9.265
+      "timestamp": "2026-02-27T16:14:16.658865",
+      "time_to_decide": 20.118332,
+      "time_since_last": 9.792947
     },
     {
       "menu": "lad_day1_evening_map_menu",
@@ -161,6 +204,7 @@
         "Dining Room",
         "Garden",
         "Entrance Hall",
+        "Servant Stairs",
         "Portrait Gallery",
         "Kitchen",
         "Scullery",
@@ -173,9 +217,9 @@
       "selected": "Tea room",
       "redirect": "lad_day1_evening_tea_room",
       "time_left": 90,
-      "timestamp": "2025-10-04T18:56:24.179000",
-      "time_to_decide": 17.318,
-      "time_since_last": 29.568
+      "timestamp": "2026-02-27T16:14:38.070109",
+      "time_to_decide": 4.632689,
+      "time_since_last": 21.411244
     },
     {
       "menu": "lad_day1_evening_map_menu",
@@ -194,6 +238,7 @@
         "Dining Room",
         "Garden",
         "Entrance Hall",
+        "Servant Stairs",
         "Portrait Gallery",
         "Kitchen",
         "Scullery",
@@ -206,9 +251,9 @@
       "selected": "Library",
       "redirect": "lad_day1_evening_library",
       "time_left": 80,
-      "timestamp": "2025-10-04T18:56:45.451000",
-      "time_to_decide": 2.584,
-      "time_since_last": 21.272
+      "timestamp": "2026-02-27T16:14:43.067704",
+      "time_to_decide": 3.89994,
+      "time_since_last": 4.997595
     },
     {
       "menu": "lad_day1_evening_map_menu",
@@ -226,6 +271,7 @@
         "Dining Room",
         "Garden",
         "Entrance Hall",
+        "Servant Stairs",
         "Portrait Gallery",
         "Kitchen",
         "Scullery",
@@ -238,9 +284,9 @@
       "selected": "Portrait Gallery",
       "redirect": "lad_day1_evening_portrait_gallery",
       "time_left": 70,
-      "timestamp": "2025-10-04T18:56:59.530000",
-      "time_to_decide": 2.187,
-      "time_since_last": 14.079
+      "timestamp": "2026-02-27T16:14:47.183201",
+      "time_to_decide": 3.802241,
+      "time_since_last": 4.115497
     },
     {
       "menu": "lad_day1_evening_map_menu",
@@ -258,6 +304,7 @@
         "Dining Room",
         "Garden",
         "Entrance Hall",
+        "Servant Stairs",
         "Kitchen",
         "Scullery",
         "Garage",
@@ -269,25 +316,24 @@
       "selected": "Meet the others in the billiard room",
       "redirect": "lad_day1_evening_billiard_room",
       "time_left": 60,
-      "timestamp": "2025-10-04T18:57:07.402000",
-      "time_to_decide": 2.553,
-      "time_since_last": 7.872
+      "timestamp": "2026-02-27T16:14:51.152398",
+      "time_to_decide": 4.297052,
+      "time_since_last": 3.969197
     },
     {
       "menu": "lad_day1_evening_billiard_room_menu",
       "other_choices": [
         "Talk to Daniel Baldwin",
         "Approach the large group of people",
-        "Ask the butler about Amelia's room",
         "Go to the bar to have a drink",
         "Leave the room"
       ],
       "selected": "Approach the large group of people",
       "redirect": "lad_day1_evening_billiard_room_group",
       "time_left": 60,
-      "timestamp": "2025-10-04T18:57:16.809000",
-      "time_to_decide": 4.428,
-      "time_since_last": 9.407
+      "timestamp": "2026-02-27T16:14:55.649184",
+      "time_to_decide": 3.404435,
+      "time_since_last": 4.496786
     },
     {
       "menu": "lad_day1_evening_billiard_room_group",
@@ -297,23 +343,10 @@
       ],
       "selected": "Continue to listen anyway",
       "redirect": "lad_day1_evening_billiard_room_group_part_2",
-      "time_left": 50,
-      "timestamp": "2025-10-04T18:57:47.634000",
-      "time_to_decide": 3.854,
-      "time_since_last": 30.825
-    },
-    {
-      "menu": "lad_day2_morning_follow",
-      "other_choices": [
-        "Follow them",
-        "Stay there and finish the most important meal of the day"
-      ],
-      "selected": "Follow them",
-      "redirect": "common_day2_breakfast_follow_doctor_lad_host",
-      "time_left": 30,
-      "timestamp": "2025-10-04T19:00:26.964000",
-      "time_to_decide": 3.241,
-      "time_since_last": 159.33
+      "time_left": 60,
+      "timestamp": "2026-02-27T16:14:59.414180",
+      "time_to_decide": 4.471225,
+      "time_since_last": 3.764996
     }
-  ]  
+  ]
 }
