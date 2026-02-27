@@ -165,10 +165,15 @@ init python in test:
 
         for i, plan in enumerate(plans):
             if i > 0:
-                # Restart from main menu for subsequent plans
-                action_node = testast.Action(loc, "Start()")
-                current_node.chain(action_node)
-                current_node = action_node
+                # Clear state instead of Start() which causes JumpOutException crash
+                def soft_reset():
+                    if hasattr(character, 'reset_information'):
+                        character.reset_information()
+                    # optionally reset other essential game vars here
+                
+                reset_node = PyCallNode(loc, soft_reset)
+                current_node.chain(reset_node)
+                current_node = reset_node
             
             # Setup plan & character state
             setup_node = PyCallNode(loc, start, character, chapter_id, plan)

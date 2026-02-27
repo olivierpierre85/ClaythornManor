@@ -43,6 +43,7 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
                             ar.reached_new_chapter = chapter
                             export_transcript(False)
                             renpy.show_screen("test_end")
+                            renpy.jump("test_end_pause")
 
                     # Fallback: old behavior (works only if first chapter sets chapter=)
                     else:
@@ -52,6 +53,7 @@ label change_time(hours, minutes, phase = None, day = None, hide_minutes = False
                             ar.reached_new_chapter = chapter
                             export_transcript(False)
                             renpy.show_screen("test_end")
+                            renpy.jump("test_end_pause")
                 
             # --- Add a visible "Chapter:" line to the Ren'Py log/history ---
             chapter_text = chapters_names[chapter]
@@ -419,3 +421,9 @@ label work_in_progress:
     hide screen centered_text
 
     jump character_selection
+
+label test_end_pause:
+    # A dummy label to cleanly wait for the test framework and allow JumpOutException
+    # without being trapped inside a python block.
+    pause
+    return

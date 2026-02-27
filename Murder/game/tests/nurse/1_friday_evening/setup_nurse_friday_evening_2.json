@@ -1,0 +1,73 @@
+{
+  "tester_id": "admin",
+  "timestamp": "2026-02-27T16:42:00.000000",
+  "unlocked_threads": [],
+  "choices": [
+    {
+      "menu": "nurse_day1_evening",
+      "other_choices": [
+        "Talk to Samuel Manning",
+        "Just keep to yourself"
+      ],
+      "selected": "Talk to Samuel Manning",
+      "redirect": "nurse_day1_dinner_drunk",
+      "time_left": 90
+    },
+    {
+      "menu": "drunk_generic_menu_nurse",
+      "other_choices": [
+        "What do you think of this weather?",
+        "Tell me more about yourself.",
+        "What do you think of this place?",
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel",
+      "time_left": 90
+    },
+    {
+      "menu": "nurse_day1_evening_steal",
+      "other_choices": [
+        "Pocket it discretely",
+        "It's not worth it"
+      ],
+      "selected": "It's not worth it",
+      "redirect": "nurse_day1_evening_do_not_steal",
+      "time_left": 1
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Edward II Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Go rest for the night",
+      "redirect": "generic_cancel",
+      "time_left": 90
+    }
+  ]
+}
