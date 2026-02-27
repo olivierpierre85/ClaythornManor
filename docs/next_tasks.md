@@ -20,9 +20,6 @@ no reason to look further
 - [ ] Rethink unlocking FULLY
 
 
-
-
-
 ## Proofreading
 - Fix grammar workflow
   - Workflow and Agent guidelines ok
