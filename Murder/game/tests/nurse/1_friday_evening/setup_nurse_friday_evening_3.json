@@ -1,0 +1,209 @@
+{
+  "tester_id": "admin",
+  "timestamp": "2026-02-27T16:42:00.000000",
+  "unlocked_threads": [],
+  "choices": [
+    {
+      "menu": "nurse_day1_evening",
+      "other_choices": [
+        "Talk to Samuel Manning",
+        "Just keep to yourself"
+      ],
+      "selected": "Just keep to yourself",
+      "redirect": "generic_cancel",
+      "time_left": 90,
+      "timestamp": "2026-02-27T16:53:54.417570",
+      "time_to_decide": 1.549018,
+      "time_since_last": 9.856689
+    },
+    {
+      "menu": "nurse_day1_evening_steal",
+      "other_choices": [
+        "Pocket it discretely",
+        "It's not worth it"
+      ],
+      "selected": "Pocket it discretely",
+      "redirect": "nurse_day1_evening_steal",
+      "time_left": 1,
+      "timestamp": "2026-02-27T16:53:56.084226",
+      "time_to_decide": 1.899391,
+      "time_since_last": 1.666656
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Edward II Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Male Servants Room",
+      "redirect": "nurse_day1_evening_males_room",
+      "time_left": 90,
+      "timestamp": "2026-02-27T16:53:58.283922",
+      "time_to_decide": 3.299865,
+      "time_since_last": 2.199696
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Edward II Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Edward II Bedroom",
+      "redirect": "nurse_day1_evening_bedroom_doctor",
+      "time_left": 80,
+      "timestamp": "2026-02-27T16:54:01.798785",
+      "time_to_decide": 5.685328,
+      "time_since_last": 3.514863
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Library",
+      "redirect": "nurse_day1_evening_library",
+      "time_left": 70,
+      "timestamp": "2026-02-27T16:54:07.731116",
+      "time_to_decide": 2.667895,
+      "time_since_last": 5.932331
+    },
+    {
+      "menu": "nurse_library_default",
+      "other_choices": [
+        "Look it up. It may be useful.",
+        "Leave it. I am too tired for reading tonight."
+      ],
+      "selected": "Leave it. I am too tired for reading tonight.",
+      "redirect": "generic_cancel",
+      "time_left": 70,
+      "timestamp": "2026-02-27T16:54:10.696451",
+      "time_to_decide": 2.059414,
+      "time_since_last": 2.965335
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "George IV Bedroom",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Meet the others in the billiard room",
+      "redirect": "nurse_day1_evening_billiard_room",
+      "time_left": 50,
+      "timestamp": "2026-02-27T16:54:12.879705",
+      "time_to_decide": 1.935538,
+      "time_since_last": 2.183254
+    },
+    {
+      "menu": "nurse_day1_evening_billiard_room_menu",
+      "other_choices": [
+        "Listen to Captain Sinha",
+        "Go to the bar for a drink",
+        "Talk to Doctor Baldwin",
+        "Leave the room"
+      ],
+      "selected": "Go to the bar for a drink",
+      "redirect": "nurse_day1_evening_billiard_room_bar",
+      "time_left": 50,
+      "timestamp": "2026-02-27T16:54:14.961173",
+      "time_to_decide": 1.529428,
+      "time_since_last": 2.081468
+    },
+    {
+      "menu": "nurse_day1_evening_billiard_room_menu",
+      "other_choices": [
+        "Listen to Captain Sinha",
+        "Talk to Doctor Baldwin",
+        "Leave the room"
+      ],
+      "selected": "Talk to Doctor Baldwin",
+      "redirect": "nurse_day1_evening_billiard_room_doctor",
+      "time_left": 40,
+      "timestamp": "2026-02-27T16:54:16.644140",
+      "time_to_decide": 0.718878,
+      "time_since_last": 1.682967
+    },
+    {
+      "menu": "nurse_day1_evening_billiard_room_menu",
+      "other_choices": [
+        "Listen to Captain Sinha",
+        "Leave the room"
+      ],
+      "selected": "Listen to Captain Sinha",
+      "redirect": "nurse_day1_evening_billiard_room_captain",
+      "time_left": 30,
+      "timestamp": "2026-02-27T16:54:17.544388",
+      "time_to_decide": 0.917415,
+      "time_since_last": 0.900248
+    }
+  ]
+}

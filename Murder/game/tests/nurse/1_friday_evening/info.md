@@ -8,7 +8,7 @@
 
 - Scullery
 - Gun Room - Take Pistol
-- Do all small rooms without consequences
+- Do all small rooms without consequences until end (entrance hall, portrait gallery)
 
 
 ## File 2
