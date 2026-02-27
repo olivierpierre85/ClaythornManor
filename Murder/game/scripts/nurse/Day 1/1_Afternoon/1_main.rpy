@@ -37,7 +37,7 @@ label nurse_introduction:
 
     Someone is gathering people. The question is why.
 
-    The sensible thing would have been to stay home.
+    The sensible thing would have been to stay at home.
 
     And yet here I am, somewhere in the north of Scotland, watching the countryside blur past the window.
 
@@ -51,7 +51,7 @@ label nurse_introduction:
 
     I press my handkerchief to my mouth and wait for it to pass.
 
-    There is blood. Not much for now. That at least is bit reassuring, but I know that won't last.
+    There is blood. Not much for now. That at least is a bit reassuring, but I know that won't last.
 
     I fold the handkerchief away before anyone can notice.
 
@@ -69,7 +69,7 @@ label nurse_introduction:
 
     A fine line to walk, and I intend to walk it carefully.
 
-    So in the end, I had no choice to come this weekend, no matter the risks.
+    So in the end, I had no choice but to come this weekend, no matter the risks.
 
     If there is no prize at the end of this, I could at least "find" things of value there.
 
