@@ -87,6 +87,18 @@ init python in test:
 
     autorunner = ChapterAutoRunner()
 
+    class PyCallNode(renpy.test.testast.Node):
+        def __init__(self, loc, func, *args, **kwargs):
+            super().__init__(loc)
+            self.func = func
+            self.args = args
+            self.kwargs = kwargs
+
+        def execute(self, state, t):
+            self.func(*self.args, **self.kwargs)
+            renpy.test.testast.next_node(self.next)
+            return None
+
     def unlock_threads(details_obj, names):
         for n in (names or []):
             details_obj.threads.unlock(n)
@@ -144,30 +156,54 @@ init python in test:
         if not plans:
             raise PlanError(f"No plans found for {character.text_id} in chapter {chapter_id}")
 
+        import renpy.test.testast as testast
+        from renpy.test.testexecution import node_executor
+
+        loc = ("", 0)
+        current_node = PyCallNode(loc, lambda: None)
+        first_node = current_node
+
         for i, plan in enumerate(plans):
             if i > 0:
                 # Restart from main menu for subsequent plans
-                # renpy.test.execute("run Start()") is the DSL way, 
-                # but we can call the action directly if needed.
-                # However, renpy.test.execute is generally safe from python.
-                try:
-                    import renpy.test.testexecution as testexecution
-                    testexecution.execute("run Start()")
-                except ImportError:
-                    # Fallback to a simpler reset if needed
-                    renpy.full_restart()
+                action_node = testast.Action(loc, "Start()")
+                current_node.chain(action_node)
+                current_node = action_node
             
-            start(character, chapter_id, plan)
+            # Setup plan & character state
+            setup_node = PyCallNode(loc, start, character, chapter_id, plan)
+            current_node.chain(setup_node)
+            current_node = setup_node
             
             # Apply threads if present in the plan
-            if autorunner.unlocked_threads:
-                unlock_threads(character, autorunner.unlocked_threads)
+            def apply_threads():
+                if autorunner.unlocked_threads:
+                    unlock_threads(renpy.store.current_character, autorunner.unlocked_threads)
+            
+            threads_node = PyCallNode(loc, apply_threads)
+            current_node.chain(threads_node)
+            current_node = threads_node
 
             # Use test execution to jump and wait
-            import renpy.test.testexecution as testexecution
-            testexecution.execute(f"run Jump('{start_label}')")
-            testexecution.execute("advance until screen 'test_end' timeout 180.0")
+            jump_node = testast.Action(loc, f"Jump('{start_label}')")
+            current_node.chain(jump_node)
+            current_node = jump_node
+            
+            screen_selector = testast.DisplayableSelector(loc, screen="'test_end'")
+            until_node = testast.Until(loc, testast.Advance(loc), screen_selector, timeout="180.0")
+            current_node.chain(until_node)
+            current_node = until_node
             
             # Cleanup for next iteration
-            autorunner.reset()
-            # We don't reset persistent or state here as Start() should handle it
+            cleanup_node = PyCallNode(loc, autorunner.reset)
+            current_node.chain(cleanup_node)
+            current_node = cleanup_node
+            
+        if first_node.next:
+            # The currently executing node is node_executor.node (a testast.Python node)
+            # Its 'next' attribute will be used when it finishes.
+            # We chain our generated sequence so it continues to the original next node.
+            current_node.chain(node_executor.node.next)
+            
+            # We then overwrite its 'next' property to be our dynamic chain.
+            node_executor.node.next = first_node.next

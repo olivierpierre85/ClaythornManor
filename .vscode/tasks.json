@@ -6,15 +6,14 @@
       "type": "pickString",
       "description": "Pick a Ren'Py test (suite or suite :: testcase)",
       "options": [
-        "lad_friday_afternoon",
-        "lad_friday_afternoon::lad_friday_afternoon_1",
-        "lad_friday_evening",
-        "lad_friday_evening::lad_friday_evening_1",
-        "lad_friday_evening::lad_friday_evening_2",
+        "lad",
+        "lad::friday_afternoon",
+        "lad::friday_evening",
         "nurse",
-        "nurse::friday_afternoon"
+        "nurse::friday_afternoon",
+        "nurse::nurse_friday_evening",
       ],
-      "default": "lad_friday_evening::lad_friday_evening_1"
+      "default": "lad"
     },
     {
       "id": "infoCardAddon",

@@ -1,0 +1,314 @@
+{
+  "tester_id": "admin",
+  "timestamp": "2026-02-27T10:20:48.055895",
+  "unlocked_threads": [],
+  "choices": [
+    {
+      "menu": "nurse_day1_evening",
+      "other_choices": [
+        "Talk to Samuel Manning",
+        "Just keep to yourself"
+      ],
+      "selected": "Talk to Samuel Manning",
+      "redirect": "nurse_day1_dinner_drunk",
+      "time_left": 90,
+      "timestamp": "2026-02-27T10:20:13.583901",
+      "time_to_decide": 1.083081,
+      "time_since_last": 5.853333
+    },
+    {
+      "menu": "drunk_generic_menu_nurse",
+      "other_choices": [
+        "What do you think of this weather?",
+        "Tell me more about yourself.",
+        "What do you think of this place?",
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "What do you think of this weather?",
+      "redirect": "drunk_generic_weather_friday_dinner",
+      "time_left": 90,
+      "timestamp": "2026-02-27T10:20:15.119188",
+      "time_to_decide": 1.248149,
+      "time_since_last": 1.535287
+    },
+    {
+      "menu": "drunk_generic_menu_nurse",
+      "other_choices": [
+        "Tell me more about yourself.",
+        "Why were you invited here?",
+        "What do you think of this place?",
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "Tell me more about yourself.",
+      "redirect": "drunk_generic_background_nurse",
+      "time_left": 80,
+      "timestamp": "2026-02-27T10:20:16.566675",
+      "time_to_decide": 0.582528,
+      "time_since_last": 1.447487
+    },
+    {
+      "menu": "drunk_generic_menu_nurse",
+      "other_choices": [
+        "Why were you invited here?",
+        "What do you think of this place?",
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "Why were you invited here?",
+      "redirect": "drunk_generic_heroic_act_nurse",
+      "time_left": 60,
+      "timestamp": "2026-02-27T10:20:17.451897",
+      "time_to_decide": 0.384105,
+      "time_since_last": 0.885222
+    },
+    {
+      "menu": "drunk_generic_menu_nurse",
+      "other_choices": [
+        "What do you think of this place?",
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "What do you think of this place?",
+      "redirect": "drunk_generic_manor",
+      "time_left": 40,
+      "timestamp": "2026-02-27T10:20:18.150660",
+      "time_to_decide": 0.416003,
+      "time_since_last": 0.698763
+    },
+    {
+      "menu": "drunk_generic_menu_nurse",
+      "other_choices": [
+        "How old are you?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "How old are you?",
+      "redirect": "drunk_generic_age",
+      "time_left": 30,
+      "timestamp": "2026-02-27T10:20:18.701162",
+      "time_to_decide": 0.671726,
+      "time_since_last": 0.550502
+    },
+    {
+      "menu": "drunk_generic_menu_nurse",
+      "other_choices": [
+        "What room are you in?",
+        "What room are you in?",
+        "What do you think of the other guests?",
+        "You don't have anymore questions for him"
+      ],
+      "selected": "What room are you in?",
+      "redirect": "drunk_generic_room_friday",
+      "time_left": 10,
+      "timestamp": "2026-02-27T10:20:19.516923",
+      "time_to_decide": 0.833174,
+      "time_since_last": 0.815761
+    },
+    {
+      "menu": "nurse_day1_evening_steal",
+      "other_choices": [
+        "Pocket it discretely",
+        "It's not worth it"
+      ],
+      "selected": "Pocket it discretely",
+      "redirect": "nurse_day1_evening_steal",
+      "time_left": 1,
+      "timestamp": "2026-02-27T10:20:20.617612",
+      "time_to_decide": 1.749216,
+      "time_since_last": 1.100689
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Edward II Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Scullery",
+      "redirect": "nurse_day1_evening_downstairs_crowded",
+      "time_left": 90,
+      "timestamp": "2026-02-27T10:20:22.717583",
+      "time_to_decide": 4.484197,
+      "time_since_last": 2.099971
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Edward II Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "Garage",
+        "Gun room",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Gun room",
+      "redirect": "nurse_day1_evening_gun_room",
+      "time_left": 70,
+      "timestamp": "2026-02-27T10:20:28.317032",
+      "time_to_decide": 0.919872,
+      "time_since_last": 5.599449
+    },
+    {
+      "menu": "nurse_day1_evening_gun_room_choice",
+      "other_choices": [
+        "Take a pistol",
+        "Leave it. Too dangerous to carry."
+      ],
+      "selected": "Take a pistol",
+      "redirect": "nurse_day1_evening_take_gun",
+      "time_left": 70,
+      "timestamp": "2026-02-27T10:20:29.467654",
+      "time_to_decide": 1.149203,
+      "time_since_last": 1.150622
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Edward II Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "Garage",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Garage",
+      "redirect": "nurse_day1_evening_garage",
+      "time_left": 50,
+      "timestamp": "2026-02-27T10:20:30.816722",
+      "time_to_decide": 0.638114,
+      "time_since_last": 1.349068
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Edward II Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Tea room",
+      "redirect": "nurse_day1_evening_tea_room",
+      "time_left": 30,
+      "timestamp": "2026-02-27T10:20:33.535028",
+      "time_to_decide": 1.866637,
+      "time_since_last": 2.718306
+    },
+    {
+      "menu": "nurse_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "William the Conqueror Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Edward II Bedroom",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Portrait Gallery",
+        "George IV Bedroom",
+        "Library",
+        "Elizabeth I Bedroom",
+        "Meet the others in the billiard room",
+        "Go rest for the night"
+      ],
+      "selected": "Library",
+      "redirect": "nurse_day1_evening_library",
+      "time_left": 20,
+      "timestamp": "2026-02-27T10:20:35.666776",
+      "time_to_decide": 0.73448,
+      "time_since_last": 2.131748
+    },
+    {
+      "menu": "nurse_library_default",
+      "other_choices": [
+        "Look it up. It may be useful.",
+        "Leave it. I am too tired for reading tonight."
+      ],
+      "selected": "Look it up. It may be useful.",
+      "redirect": "nurse_day1_evening_library_war_book",
+      "time_left": 20,
+      "timestamp": "2026-02-27T10:20:36.733959",
+      "time_to_decide": 1.116172,
+      "time_since_last": 1.067183
+    }
+  ]
+}
