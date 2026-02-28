@@ -107,9 +107,18 @@ init python in test:
         """
         Consolidated setup for a chapter test.
         """
+        import copy
         renpy.store.current_character = character
         renpy.store.current_chapter = chapter
         renpy.store.disable_all_tutorials()
+        
+        # Save a clean snapshot if not already saved to restore fully between plans
+        if not hasattr(character, '_test_pristine_snapshot'):
+            character._test_pristine_snapshot = copy.deepcopy(character.saved_variables)
+            # We also snapshot threads, progress, and observations.
+            character._test_pristine_threads = copy.deepcopy(character.threads)
+            character._test_pristine_progress = copy.deepcopy(character.progress)
+            character._test_pristine_observations = copy.deepcopy(character.observations)
         
         autorunner.reset()
         if plan_file:
@@ -154,7 +163,8 @@ init python in test:
         plans = discover_plans(character.text_id, chapter_id)
         
         if not plans:
-            raise PlanError(f"No plans found for {character.text_id} in chapter {chapter_id}")
+            # Allow chapters with strictly linear reads and no choices
+            plans = [None]
 
         import renpy.test.testast as testast
         from renpy.test.testexecution import node_executor
@@ -167,9 +177,22 @@ init python in test:
             if i > 0:
                 # Clear state instead of Start() which causes JumpOutException crash
                 def soft_reset():
+                    renpy.exports.hide_screen('test_end')
+                    import copy
+                    if hasattr(character, '_test_pristine_snapshot'):
+                        character.saved_variables = copy.deepcopy(character._test_pristine_snapshot)
+                        character.threads = copy.deepcopy(character._test_pristine_threads)
+                        character.progress = copy.deepcopy(character._test_pristine_progress)
+                        character.observations = copy.deepcopy(character._test_pristine_observations)
+                        
                     if hasattr(character, 'reset_information'):
                         character.reset_information()
-                    # optionally reset other essential game vars here
+
+                    renpy.store.all_menus.clear()
+                    renpy.store.all_choices.clear()
+
+                    while renpy.exports.call_stack_depth() > 0:
+                        renpy.exports.pop_call()
                 
                 reset_node = PyCallNode(loc, soft_reset)
                 current_node.chain(reset_node)
