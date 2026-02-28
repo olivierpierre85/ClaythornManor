@@ -1,0 +1,115 @@
+{
+    "tester_id": "admin",
+    "timestamp": "2026-02-28T10:00:00.000000",
+    "unlocked_threads": [],
+    "choices": [
+        {
+            "menu": "nurse_day1_evening",
+            "other_choices": [
+                "Talk to Samuel Manning",
+                "Just keep to yourself"
+            ],
+            "selected": "Just keep to yourself",
+            "redirect": "generic_cancel",
+            "time_left": 90,
+            "timestamp": "2026-02-28T10:00:01.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        },
+        {
+            "menu": "nurse_day1_evening_steal",
+            "other_choices": [
+                "Pocket it discretely",
+                "It's not worth it"
+            ],
+            "selected": "It's not worth it",
+            "redirect": "nurse_day1_evening_do_not_steal",
+            "time_left": 1,
+            "timestamp": "2026-02-28T10:00:02.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        },
+        {
+            "menu": "nurse_day1_evening_map_menu",
+            "other_choices": [
+                "Gun room",
+                "George IV Bedroom",
+                "Meet the others in the billiard room",
+                "Go rest for the night"
+            ],
+            "selected": "Gun room",
+            "redirect": "nurse_day1_evening_gun_room",
+            "time_left": 90,
+            "timestamp": "2026-02-28T10:00:03.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        },
+        {
+            "menu": "nurse_day1_evening_gun_room_choice",
+            "other_choices": [
+                "Take a pistol",
+                "Leave it. Too dangerous to carry."
+            ],
+            "selected": "Leave it. Too dangerous to carry.",
+            "redirect": "generic_cancel",
+            "time_left": 70,
+            "timestamp": "2026-02-28T10:00:04.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        },
+        {
+            "menu": "nurse_day1_evening_map_menu",
+            "other_choices": [
+                "George IV Bedroom",
+                "Meet the others in the billiard room",
+                "Go rest for the night"
+            ],
+            "selected": "George IV Bedroom",
+            "redirect": "nurse_day1_evening_bedroom_drunk",
+            "time_left": 70,
+            "timestamp": "2026-02-28T10:00:05.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        },
+        {
+            "menu": "nurse_day1_evening_map_menu",
+            "other_choices": [
+                "Meet the others in the billiard room",
+                "Go rest for the night"
+            ],
+            "selected": "Meet the others in the billiard room",
+            "redirect": "nurse_day1_evening_billiard_room",
+            "time_left": 60,
+            "timestamp": "2026-02-28T10:00:06.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        },
+        {
+            "menu": "nurse_day1_evening_billiard_room_menu",
+            "other_choices": [
+                "Listen to Captain Sinha",
+                "Go to the bar for a drink",
+                "Talk to Doctor Baldwin",
+                "Leave the room"
+            ],
+            "selected": "Leave the room",
+            "redirect": "nurse_day1_evening_billiard_room_cancel",
+            "time_left": 60,
+            "timestamp": "2026-02-28T10:00:07.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        },
+        {
+            "menu": "nurse_day1_evening_map_menu",
+            "other_choices": [
+                "Go rest for the night"
+            ],
+            "selected": "Go rest for the night",
+            "redirect": "generic_cancel",
+            "time_left": 60,
+            "timestamp": "2026-02-28T10:00:08.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        }
+    ]
+}
