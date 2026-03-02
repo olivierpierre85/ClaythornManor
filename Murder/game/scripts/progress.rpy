@@ -123,9 +123,9 @@ screen progress:
                                         yoffset 2
                                         mouse "hover"
                                         if current_storyline.get_character_progress() == 100:
-                                            idle "images/info_cards/everything_completed_big.png" at menu_image
+                                            idle "images/info_cards/everything_completed_big.webp" at menu_image
                                         else:
-                                            idle "images/info_cards/everything_completed_big_bw.png" at menu_image
+                                            idle "images/info_cards/everything_completed_big_bw.webp" at menu_image
 
                                         action ShowMenu("character_details", current_storyline)
 
@@ -178,9 +178,9 @@ screen progress:
                                         if not tutorial_on and current_character == current_storyline:
                                             action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
                                         if current_storyline.is_everything_completed():
-                                            idle "images/info_cards/murder_board_big.png" at menu_image
+                                            idle "images/info_cards/murder_board_big.webp" at menu_image
                                         else:
-                                            idle "images/info_cards/murder_board_big_bw.png" at menu_image
+                                            idle "images/info_cards/murder_board_big_bw.webp" at menu_image
                                     
                                     vbox:
 
@@ -229,9 +229,9 @@ screen progress:
                                         yoffset 2
                                         mouse "hover"
                                         if current_storyline.is_all_endings_reached():
-                                            idle "images/info_cards/endings_curtains_big.png" at menu_image
+                                            idle "images/info_cards/endings_curtains_big.webp" at menu_image
                                         else:
-                                            idle "images/info_cards/endings_curtains_big_bw.png" at menu_image
+                                            idle "images/info_cards/endings_curtains_big_bw.webp" at menu_image
 
                                     vbox:
 
@@ -543,28 +543,28 @@ screen info_card(item=None, item_type=None, is_small=False):
             # For the moment, only display the activated choices of this checkpoint
 
             # if not item:
-            #     idle Transform("images/info_cards/empty.png", zoom=0.5)
+            #     idle Transform("images/info_cards/empty.webp", zoom=0.5)
             # elif not item.discovered:
-            #     idle Transform("images/info_cards/question_mark_bw.png", zoom=0.5) 
+            #     idle Transform("images/info_cards/question_mark_bw.webp", zoom=0.5) 
             #     tooltip "Hidden"
             # elif not locked: 
-                idle Transform("images/info_cards/" + item.image_file + ".png", zoom=0.5)   
+                idle Transform("images/info_cards/" + item.image_file + ".webp", zoom=0.5)   
                 tooltip icon_file + item.content
             # else:
-            #     idle Transform("images/info_cards/" + item.image_file + "_bw.png", zoom=0.5)                           
+            #     idle Transform("images/info_cards/" + item.image_file + "_bw.webp", zoom=0.5)                           
             #     tooltip icon_file + item.content_negative
         else:
             if not item:
-                idle "images/info_cards/empty.png"   
+                idle "images/info_cards/empty.webp"   
             elif not item.discovered:
-                idle "images/info_cards/question_mark_bw.png"   
+                idle "images/info_cards/question_mark_bw.webp"   
                 tooltip "Hidden"
                 # tooltip item.content # Use this line to debug infocards
             elif not locked: 
-                idle "images/info_cards/" + item.image_file + ".png"     
+                idle "images/info_cards/" + item.image_file + ".webp"     
                 tooltip icon_file + item.content
             else:
-                idle "images/info_cards/" + item.image_file + "_bw.png"                                
+                idle "images/info_cards/" + item.image_file + "_bw.webp"                                
                 tooltip icon_file + item.content_negative
 
 

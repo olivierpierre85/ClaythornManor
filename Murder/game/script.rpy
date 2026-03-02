@@ -347,7 +347,7 @@ label init_technical_variables:
         image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
 
         # Endings
-        image_ending_question = "images/info_cards/question_mark_bw.png"
+        image_ending_question = "images/info_cards/question_mark_bw.webp"
 
     return
 
