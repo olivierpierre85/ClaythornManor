@@ -289,5 +289,16 @@
             "$ captain_details.endings.unlock('${1|todo|}')"
         ],
         "description": "Unlock an ending for the Captain character"
+    },
+    "Wait Screen Transition": {
+        "prefix": [
+            "wait",
+            "call wait_screen_transition",
+            "wait_screen_transition"
+        ],
+        "body": [
+            "call wait_screen_transition()"
+        ],
+        "description": "Wait screen transition"
     }
 }
