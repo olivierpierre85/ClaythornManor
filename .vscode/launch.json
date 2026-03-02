@@ -3,52 +3,36 @@
   "configurations": [
     {
       "name": "Ren'Py: Run game (task)",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
-      "program": "C:\\Windows\\System32\\cmd.exe",
-      "args": [
-        "/c",
-        "echo Ren'Py launched via task"
-      ],
+      "program": "${workspaceFolder}/.vscode/dummy.py",
       "preLaunchTask": "Ren'Py: Run game",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
     },
     {
       "name": "Ren'Py: Test (pick from list)",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
-      "program": "C:\\Windows\\System32\\cmd.exe",
-      "args": [
-        "/c",
-        "echo Ren'Py launched via task"
-      ],
+      "program": "${workspaceFolder}/.vscode/dummy.py",
       "preLaunchTask": "Ren'Py: Test (pick from list)",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
     },
     {
       "name": "Antigravity: Process Infocards",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
-      "program": "C:\\Windows\\System32\\cmd.exe",
-      "args": [
-        "/c",
-        "echo Processing Infocards..."
-      ],
+      "program": "${workspaceFolder}/.vscode/dummy.py",
       "preLaunchTask": "Antigravity: Process Infocards",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
     },
     {
       "name": "Antigravity: Process Infocards (with Addon)",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
-      "program": "C:\\Windows\\System32\\cmd.exe",
-      "args": [
-        "/c",
-        "echo Processing Infocards with addon..."
-      ],
+      "program": "${workspaceFolder}/.vscode/dummy.py",
       "preLaunchTask": "Antigravity: Process Infocards (with Addon)",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
