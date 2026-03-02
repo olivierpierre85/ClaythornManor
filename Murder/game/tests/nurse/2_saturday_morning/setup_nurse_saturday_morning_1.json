@@ -1,0 +1,20 @@
+{
+    "tester_id": "admin",
+    "timestamp": "2026-03-02T11:20:00.000000",
+    "unlocked_threads": [],
+    "choices": [
+        {
+            "menu": "nurse_day2_morning_steal",
+            "other_choices": [
+                "Pocket a piece quietly",
+                "Leave it alone"
+            ],
+            "selected": "Pocket a piece quietly",
+            "redirect": "nurse_day2_morning_steal",
+            "time_left": 1,
+            "timestamp": "2026-03-02T11:20:01.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 1.0
+        }
+    ]
+}
