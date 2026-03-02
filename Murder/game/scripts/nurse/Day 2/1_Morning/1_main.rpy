@@ -187,7 +187,46 @@ label nurse_day2_morning:
 
     """
     Very well, I can return to my room now.
+    
+    But first, my eyes settle on the silverware.
+
+    The distraction of this morning's news has left everyone rather inattentive.
+
+    It would be easy enough.
     """
+
+    $ time_left = 1
+    call run_menu(TimedMenu("nurse_day2_morning_steal", [
+        TimedMenuChoice("Pocket a piece quietly", 'nurse_day2_morning_steal', early_exit=True),
+        TimedMenuChoice("Leave it alone", 'nurse_day2_morning_do_not_steal', early_exit=True),
+    ]))
 
     jump nurse_day2_hunt
 
+
+label nurse_day2_morning_steal:
+
+    """
+    No one is watching.
+
+    My hand moves quickly and without fuss.
+
+    A fork disappears into my bag with the faintest clink.
+
+    Nobody notices a thing.
+    """
+
+    $ nurse_details.threads.unlock('steal_cutlery_2')
+
+    return
+
+
+label nurse_day2_morning_do_not_steal:
+
+    """
+    I pull my eyes away.
+
+    There has been quite enough disruption this morning without adding theft to it.
+    """
+
+    return
