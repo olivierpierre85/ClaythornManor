@@ -33,5 +33,8 @@ label nurse_config_progress:
             'friday_evening': [
                 {"label": "nurse_day1_evening", "threads": {}},
             ],
-
+            'saturday_morning': [
+                {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': False}},
+                {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': True}},
+            ],
         }

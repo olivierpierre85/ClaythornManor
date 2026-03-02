@@ -5,15 +5,14 @@ no reason to look further
 
 => Move default map choices for nurse to default page?
 
-## Write Story : NURSE - Day 1
+## Write Story : NURSE - Day 2
 - 
-- [ ] Map evening => TEST FROM start
-  - [ ] **NEXT Bedrooms**
+- [ ] Part 1 - Hunt
+- [ ] Part 2 - Evening
   
   
 ## Write Story : Day 3 - Doctor FINIS DOCTOR
 - [ ] RETRY EVERYTHING
-- [ ] add Music Death.
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).
 - [ ] Menus: Ensure "Next menu" is correct everywhere.
 - [ ] Gun room has a Menu choice Day 3.
