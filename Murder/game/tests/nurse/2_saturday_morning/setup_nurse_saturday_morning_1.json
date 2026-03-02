@@ -1,7 +1,9 @@
 {
     "tester_id": "admin",
     "timestamp": "2026-03-02T11:20:00.000000",
-    "unlocked_threads": [],
+    "unlocked_threads": [
+        "day1_exhaustion"
+    ],
     "choices": [
         {
             "menu": "nurse_day2_morning_steal",

@@ -50,8 +50,8 @@ label init_nurse:
                 "You took some garnets from Lady Claythorn's room",
                 content_negative="You did not take some garnets from Lady Claythorn's room",
                 image_file="garnets",
-                chapters=['friday_evening'],
-                relevant_chapters=['friday_evening','sunday_afternoon'],
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon','sunday_afternoon'],
             ),
             CharacterInformation(
                 0, "take_gun",
@@ -67,7 +67,7 @@ label init_nurse:
                 content_negative="You didn't overexerted yourself on Friday evening",
                 image_file="blood_handkerchief_1",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning' ,'saturday_evening'],
             ),
         ])
 
