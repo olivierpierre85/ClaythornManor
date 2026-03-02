@@ -35,6 +35,9 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
     - [ ] Doctor
     - [ ] Lad
     - [ ] Psychic
+- [ ] WEB run for testing, so antigravity can take printscreen? 
+  - [ ] OR just a command to take printscreen when testing (at location change for isntance) and check if ok.
+  - [ ] Or add a condition to fail test is the image is missing (but how?)
 - [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
 - [ ] BUG: **save_transcript_to_file** button not working during menu????
 - [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
@@ -56,13 +59,7 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 
 ## Assets & artistic Tasks
 
-- [ ] Try a extension or App to do easy repetitive things
-  - [ ] Add a border to an image
-  - [ ] Resize to 1920 ,With cropping when needed
 - [ ] For info_cards, RENAME so it's correct, then change everything to webp?
-- [ ] Try to make background using Nano Banana Pro.
-- [ ] Try to make new Character side image
-- [ ] Try to make characters FULL size 
 - [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
 - [ ] Try Locations with characters inside (Whisk/experimental).
 

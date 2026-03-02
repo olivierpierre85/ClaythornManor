@@ -31,13 +31,75 @@ label nurse_day2_hunt:
     """
     I am quite content to remain behind.
 
-    A trudge across broken ground in the damp is precisely what I must avoid.
+    It will allow me to rest.
 
-    I should perhaps rest, or find a quiet corner of the house to sit.
+    Even though I should at least join Mrs Baxter for lunch.
+
+    And I could take the opportunity that most people are outside to "look" for treasure.
+
+    The priority would be to find the stash of money promised to everyone.
+
+    But, if as I suspect, there isn't any, I am sure I can find other valuables in here.
+
+    Once I feel I have found enough, I might be able to leave early and avoid any suspicion.
     """
+
+    if nurse_details.threads.is_unlocked('steal_cutlery_1') or nurse_details.threads.is_unlocked('steal_cutlery_2'):
+
+        """
+        I already secured some silverware.
+        
+        But that may not help me much, and it was a rather risky thing to do.
+
+        Perhaps I ought to curb such impulsive behaviour if I do not wish to be caught.
+        """
+
 
     $ time_left = 60
     call run_menu(nurse_details.saved_variables["day2_no_hunt_map_menu"])
+
+    if time_left > 55:
+
+        """
+        I have not really moved from the spot.
+
+        I should at least make my way to the tea room and join Mrs Baxter for luncheon.
+        """
+
+    elif time_left >= 10:
+
+        """
+        I have done enough wandering for now.
+
+        I should make my way to the tea room for luncheon with Mrs Baxter.
+        """
+
+    else:
+
+        """
+        It is almost noon. I should not keep Mrs Baxter waiting any longer.
+        """
+
+    $ time_left = 60
+
+    call nurse_day2_hunt_tea_room
+
+    call change_time(13, 30)
+
+    """
+    The manor is quiet once more.
+
+    Perhaps I can use the remaining time productively.
+    """
+
+    $ time_left += 90
+    call run_menu(nurse_details.saved_variables["day2_no_hunt_map_menu"])
+
+    """
+    A commotion from the entrance hall draws my attention.
+
+    It seems the hunting party has returned.
+    """
 
     pause 1.0
 
@@ -92,13 +154,13 @@ label nurse_day2_no_hunt_bedroom_psychic_busy:
     """
 
     psychic """
-    Oh, Miss Marsh, I am resting my eyes just now. 
+    Oh, Miss Marsh, I am resting my eyes at present.
 
-    Could we perhaps speak later?
+    Might we speak a little later?
     """
 
     nurse """
-    Certainly. I shall leave you to it.
+    Of course. Do not disturb yourself on my account.
     """
     
     $ unlock_map('bedroom_psychic')
