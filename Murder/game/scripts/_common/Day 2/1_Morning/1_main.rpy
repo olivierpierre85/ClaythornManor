@@ -129,6 +129,87 @@ label common_day2_morning_host_hunt:
     return
 
 # ------------------------------------
+#               HUNT
+# ------------------------------------
+label common_day2_morning_hunt_captain_drunk:
+
+    captain """
+    I will come.
+
+    What has happened today is tragic, but there is no point in lingering here.
+    """
+
+    drunk """
+    I'll... come too.
+
+    Fresh air will do me well.
+    """
+
+    return
+
+label common_day2_morning_hunt_psychic:
+
+    psychic """
+    I am sorry, but I would rather not.
+
+    If you do not mind, I should prefer to remain indoors.
+
+    Please do not let me stand in your way.
+    """
+
+    return
+
+label common_day2_morning_hunt_nurse:
+
+    nurse """
+    I feel the same as Miss Baxter, I'm afraid.
+
+    I should not know what to do with a gun.
+    """
+
+    host """
+    Of course, I understand.
+
+    I shall make sure you are comfortable staying inside.
+
+    And how do you feel, Mister Harring?
+    """
+
+    return
+
+label common_day2_morning_hunt_host_to_doctor:
+
+    host """
+    Very good. What about you, Doctor Baldwin?
+    """
+
+    return
+
+label common_day2_morning_hunt_lad:
+
+    lad """
+    I'll... I'll come too, of course.
+    """
+
+    """
+    He says it without much conviction.
+
+    One can tell he is on the fence about the whole thing.
+    """
+
+    return
+
+label common_day2_morning_hunt_end:
+
+    host """
+    Those of you who are going may change and then fetch a weapon downstairs.
+
+    We shall meet outside in a little while.
+    """
+
+    return
+
+# ------------------------------------
 #               LAD/PSYCHIC
 # ------------------------------------
 label common_day2_morning_lad_psychic:

@@ -144,17 +144,7 @@ label doctor_day2_morning:
     Captain Sinha is the first to break the silence.
     """
         
-    captain """
-    I will come.
-
-    What has happened today is tragic, but there is no point in lingering here.
-    """
-
-    drunk """
-    I'll... come too. 
-
-    Fresh air will do me well.
-    """
+    call common_day2_morning_hunt_captain_drunk
 
     """
     I can see looks of disapproval at this.
@@ -164,43 +154,13 @@ label doctor_day2_morning:
     Given Samuel Manning's obvious inebriety, most seem to assume he will fall asleep before the hunt even begins.
     """
 
-    psychic """
-    I am sorry, but I would rather not.
+    call common_day2_morning_hunt_psychic
 
-    If you do not mind, I should prefer to remain indoors.
+    call common_day2_morning_hunt_nurse
 
-    Please do not let me stand in your way.
-    """
+    call common_day2_morning_hunt_lad
 
-    nurse """
-    I feel the same. 
-
-    I should not know what to do with a gun.
-    """
-
-    host """
-    Of course, I understand.
-        
-    I enjoy it myself, but I know that hunting is not to every lady's taste.
-
-    I shall make sure you are comfortable staying inside.
-
-    And how do you feel, Mister Harring?
-    """
-
-    lad """
-    I'll... I'll come too, of course.
-    """
-
-    """
-    He says it without much conviction.
-
-    One can tell he is on the fence about the whole thing.
-    """
-
-    host """
-    Very good. What about you, Doctor Baldwin?
-    """
+    call common_day2_morning_hunt_host_to_doctor
 
     """
     Everyone is looking towards me now.
@@ -248,11 +208,7 @@ label doctor_day2_morning:
         ])
     )
 
-    host """
-    Those of you who are going may change and then fetch a weapon downstairs.
-
-    We shall meet outside in a little while.
-    """
+    call common_day2_morning_hunt_end
 
     jump doctor_day2_hunt
 
