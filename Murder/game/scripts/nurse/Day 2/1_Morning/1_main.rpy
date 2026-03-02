@@ -115,17 +115,15 @@ label nurse_day2_morning:
     Nobody seems to know quite what to do with themselves.
 
     The food sits barely touched on most plates.
-    """
-    
-    call change_time(10, 30)
 
-    """
     It is not long before Doctor Baldwin and Lady Claythorn return.
 
     When they do, everyone looks up at once.
     """
 
     call common_day2_morning_host_death_doctor
+
+    call change_time(10, 30)
 
     """
     After a while, everyone has finished eating.

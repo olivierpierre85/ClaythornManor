@@ -191,12 +191,6 @@ label common_day2_morning_hunt_lad:
     I'll... I'll come too, of course.
     """
 
-    """
-    He says it without much conviction.
-
-    One can tell he is on the fence about the whole thing.
-    """
-
     return
 
 label common_day2_morning_hunt_end:

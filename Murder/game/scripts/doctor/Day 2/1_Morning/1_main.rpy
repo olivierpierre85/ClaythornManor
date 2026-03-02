@@ -160,6 +160,12 @@ label doctor_day2_morning:
 
     call common_day2_morning_hunt_lad
 
+    """
+    He says it without much conviction.
+
+    One can tell he is on the fence about the whole thing.
+    """
+
     call common_day2_morning_hunt_host_to_doctor
 
     """

@@ -38,6 +38,14 @@ label init_nurse:
                 relevant_chapters=['friday_evening','sunday_afternoon'],
             ),
             CharacterInformation(
+                0, "steal_cutlery_2",
+                "You took some cutlery after Saturday's breakfast",
+                content_negative="You did not take some cutlery after Saturday's breakfast",
+                image_file="cutlery_2",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening','sunday_afternoon'],
+            ),
+            CharacterInformation(
                 0, "steal_garnets",
                 "You took some garnets from Lady Claythorn's room",
                 content_negative="You did not take some garnets from Lady Claythorn's room",
