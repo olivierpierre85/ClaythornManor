@@ -116,9 +116,7 @@ label nurse_day2_morning:
 
     The food sits barely touched on most plates.
     """
-
-    call wait_screen_transition()
-
+    
     call change_time(10, 30)
 
     """

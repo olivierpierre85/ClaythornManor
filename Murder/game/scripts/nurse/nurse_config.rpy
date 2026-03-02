@@ -1,6 +1,7 @@
 label init_nurse:
 
     call nurse_day1_evening_map_menu
+    call nurse_day2_no_hunt_map_menu
     
     call nurse_config_menu
 
@@ -13,7 +14,7 @@ label init_nurse:
         nurse_init_variables = {
             # MAP Menus
             "day1_evening_map_menu" : nurse_day1_evening_map_menu,
-            # "day2_no_hunt_map_menu" : nurse_day2_no_hunt_map_menu,
+            "day2_no_hunt_map_menu" : nurse_day2_no_hunt_map_menu,
 
             # Generic Menus
             "drunk_generic_menu" : drunk_generic_menu_nurse,
