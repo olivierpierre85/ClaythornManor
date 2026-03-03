@@ -8,7 +8,9 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('kitchen'), 'nurse_day2_no_hunt_downstairs_maid', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day2_no_hunt_downstairs_maid', 10, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 10, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 10, room='gun_room'),
+            # Two options, if the gun already taken, take just a bit of time
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 10, room='gun_room', condition="nurse_details.threads.is_unlocked('take_gun')"),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_billiard_room_default', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_dining_room_default', 10, room='dining_room'),
@@ -99,25 +101,15 @@ label nurse_day2_no_hunt_garden:
     $ change_room('manor_garden')
 
     """
-    The morning air is quite still, and there is a pale brightness to the sky that has been absent since our arrival.
+    The sky is a little brighter this morning. Not much, but enough.
 
-    Not warm, precisely, but a good deal better than yesterday.
+    The paths are damp underfoot, and there is a chill still in the air, but it is pleasant to be outside.
 
-    A short walk in the garden can only do one good.
+    I walk the length of the garden slowly, not pushing myself.
 
-    The paths are a little damp underfoot, but the ground is firm enough.
+    The house is quiet behind me. It is a relief, for a moment, to be away from it.
 
-    I follow the gravel along the low hedgerow, taking my time.
-
-    The house stands behind me, quiet and closed.
-
-    There is something restoring about being outside, away from the corridors and other people's doors.
-
-    I could walk further, but I know better than to encourage that impulse.
-
-    One must not confuse feeling a little better with being well.
-
-    I do a single turn of the garden and return to the entrance.
+    I do not stay long. One circuit, and then back inside.
     """
 
     return
