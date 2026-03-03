@@ -11,6 +11,7 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 - [ ] Part 1 - Hunt
   - [ ] Cough warning (call to every choice in map choice), if time < x """ I m exhausting my self"
   - [ ] MAKe on death (or escape) possible when NO exhaustion at all
+  - [ ] the test for no hunt chapter don't work, the result is just a ted harring intro? what is happening?
 - [ ] Part 2 - Evening
   - [ ] DRAFT ONLY made by AI -> Re read EVERYTHING
   - [ ] Discussion with captain SINHA => NEED the 2 unlock from before AND ask him in details about boxer's rebellion. If you can spot the lie => UNMASK him. => Then, make friend or die?

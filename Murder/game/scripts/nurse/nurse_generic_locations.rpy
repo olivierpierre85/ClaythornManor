@@ -93,7 +93,7 @@ label nurse_day1_evening_search_host:
 label nurse_day1_evening_take_garnets:
 
     """
-    Not first rate, but they will fetch something.
+    Not first-rate, but they will fetch something.
 
     I slip the case into my bag and close the drawer as I found it.
     """
@@ -170,7 +170,9 @@ label nurse_garage_default:
         $ change_room("garage")
 
         """
-        I have already seen everything there was to see here.
+        It looks exactly the same as before.
+
+        No need to search any further.
         """
 
     else:
@@ -180,11 +182,11 @@ label nurse_garage_default:
         $ change_room("garage")
 
         """
-        I reach the garage, making sure I wouldn't encounter anyone.
+        I reach the garage, making sure I should not encounter anyone.
 
         It is a cold, oil-smelling place.
 
-        There is an old car, it doesn't look like it's working anymore.
+        There is an old car; it does not look as though it is working any more.
 
         Tools hang neatly along one wall, and a bicycle leans against another.
 
@@ -203,7 +205,11 @@ label nurse_gun_room_default:
         if nurse_details.threads.is_unlocked('take_gun'):
 
             """
-            I have already seen everything there was to see here.
+            There is nothing new in here.
+
+            I search a bit more for bullets, but still cannot find any.
+
+            So there is no reason to stay here.
             """
 
             return
@@ -212,6 +218,8 @@ label nurse_gun_room_default:
 
             """
             The rows of weapons remain exactly as they were.
+
+            The small pistols are still available if I so desire.
             """
 
     else:
@@ -223,13 +231,17 @@ label nurse_gun_room_default:
         """
         The gun room.
         
-        I am confident that I shouldn't be here, so I made sure no one notices me.
+        I am confident that I should not be here, so I made sure no one noticed me.
 
         Shotguns and hunting rifles line three walls, arranged on open racks.
 
         The smell of gun oil is sharp.
 
         Everything is laid out as though ready for use — nothing locked away.
+
+        There are even a few small handguns lying on a table.
+
+        It looks like something I could use.
         """
 
     if not nurse_details.threads.is_unlocked('take_gun'):
@@ -246,7 +258,11 @@ label nurse_take_gun:
     """
     My hand closes around the grip of a small revolver.
 
-    It is loaded.
+    It is not loaded.
+
+    And I have not seen any bullets lying about.
+
+    Nevertheless, it could prove useful.
 
     I slip it into my bag.
 

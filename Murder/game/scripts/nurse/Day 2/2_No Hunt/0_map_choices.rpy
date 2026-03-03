@@ -78,15 +78,13 @@ label nurse_day2_no_hunt_downstairs_maid:
     $ change_room("kitchen")
 
     """
-    I almost go in until I notice one of the maids. 
+    I almost step inside until I notice one of the maids, alone.
     
-    She is busy, likely cleaning up after the morning meal.
+    She is busy, likely preparing our luncheon.
 
-    There is no chance of doing anything useful in there today.
+    It is better if she does not see me.
 
-    The scullery will be just the same, connected as it is to the kitchen.
-
-    I pull the door to and leave without anyone having noticed me.
+    I pull the door to and leave.
     """
 
     return
