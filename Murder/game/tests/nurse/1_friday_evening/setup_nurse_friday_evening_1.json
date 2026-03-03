@@ -262,7 +262,7 @@
         "Go rest for the night"
       ],
       "selected": "Tea room",
-      "redirect": "nurse_day1_evening_tea_room",
+      "redirect": "nurse_tea_room_default",
       "time_left": 30,
       "timestamp": "2026-02-27T16:49:57.508197",
       "time_to_decide": 2.069271,

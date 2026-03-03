@@ -5,27 +5,29 @@ label nurse_day1_evening_map_menu:
         nurse_day1_evening_map_menu = TimedMenu(
             "nurse_day1_evening_map_menu", 
             [
-            # Default values
-            TimedMenuChoice(default_room_text('storage'), 'nurse_day1_evening_storage', 10, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'nurse_day1_evening_males_room', 10, room='males_room'),
-            TimedMenuChoice(default_room_text('females_room'), 'nurse_day1_evening_females_room', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day1_evening_butler_room', 10, room='butler_room'),
+            # Downstairs
+            TimedMenuChoice(default_room_text('kitchen'), 'nurse_day1_evening_downstairs_crowded', 20, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'nurse_day1_evening_downstairs_crowded', 20, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 20, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room'),
+            # First floor
+            TimedMenuChoice(default_room_text('tea_room'), 'nurse_tea_room_default', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'nurse_day1_evening_dining_room', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day1_evening_garden', 10, room='manor_garden'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
             #bedroom
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day1_evening_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'nurse_day1_evening_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'nurse_day1_evening_bedroom_host', 10, room='bedroom_host'),
             TimedMenuChoice(default_room_text('bedroom_broken'), 'nurse_day1_evening_bedroom_broken', 10, room='bedroom_broken'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day1_evening_bedroom_doctor', 10, room='bedroom_doctor'),
-            TimedMenuChoice(default_room_text('tea_room'), 'nurse_day1_evening_tea_room', 10, room='tea_room'),
-            TimedMenuChoice(default_room_text('dining_room'), 'nurse_day1_evening_dining_room', 10, room='dining_room'),
-            TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day1_evening_garden', 10, room='manor_garden'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
-            TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
-            # Downstairs
-            TimedMenuChoice(default_room_text('kitchen'), 'nurse_day1_evening_downstairs_crowded', 20, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'nurse_day1_evening_downstairs_crowded', 20, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 20, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room'),
+
+            # attic
+            TimedMenuChoice(default_room_text('storage'), 'nurse_day1_evening_storage', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'nurse_day1_evening_males_room', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'nurse_day1_evening_females_room', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day1_evening_butler_room', 10, room='butler_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="nurse_day1_evening_bedroom_drunk"),
             TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
@@ -80,28 +82,7 @@ label nurse_day1_evening_downstairs_crowded:
     return
 
 
-
-
-
 # First Floor
-
-
-
-label nurse_day1_evening_tea_room:
-
-    $ change_room('tea_room')
-
-    """
-    The room is quite empty.
-
-    The teapot has gone cold.
-
-    There is nothing to keep me here.
-    """
-
-    return
-
-
 label nurse_day1_evening_dining_room:
 
     $ change_room('dining_room')
@@ -136,21 +117,9 @@ label nurse_day1_evening_garden:
     """
 
     return
-label nurse_day1_evening_portrait_gallery:
 
-    $ change_room('portrait_gallery')
 
-    """
-    The gallery is lit by a single gas lamp.
 
-    The Claythorn ancestors gaze down from their frames with an air of collective disapproval.
-
-    I feel rather as though I am being assessed.
-
-    I do not linger.
-    """
-
-    return
 
 # First Floor — Bedrooms
 label nurse_day1_evening_bedroom_too_dangerous:
@@ -166,10 +135,12 @@ label nurse_day1_evening_bedroom_too_dangerous:
         """
         I could try my skills to enter anyway.
 
-        But that seems far too dangerous to try anything now, with the house still so full of people.
-
-        There must be better places to explore.
+        But that seems far too dangerous to try anything, with the house still so full of people.
         """
+        
+    """    
+    There must be better places to explore for now.
+    """
 
     return
 

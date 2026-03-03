@@ -30,7 +30,7 @@ label nurse_bedroom_lockpick_choice(search_label):
         This is nothing remarkable.
         """
 
-    call run_menu(TimedMenu("nurse_day1_evening_lockpick_" + search_label, [
+    call run_menu(TimedMenu("nurse_lockpick_default_" + search_label, [
         TimedMenuChoice("Pick the lock and go in.", search_label, 10, early_exit=True, keep_alive=True),
         TimedMenuChoice("No. Leave it.", 'generic_cancel', early_exit=True, keep_alive=True),
     ]))
@@ -39,7 +39,7 @@ label nurse_bedroom_lockpick_choice(search_label):
 
 # Possible searches for treasure => Only after day 2 (during the hunt there is nobody)
 
-label nurse_day1_evening_search_captain:
+label nurse_search_captain_default:
 
     $ change_room("bedrooms_hallway")
 
@@ -64,7 +64,7 @@ label nurse_day1_evening_search_captain:
     return
 
 
-label nurse_day1_evening_search_host:
+label nurse_search_host_default:
 
     $ change_room("bedroom_host")
 
@@ -82,15 +82,15 @@ label nurse_day1_evening_search_host:
 
     $ unlock_map('bedroom_host')
 
-    call run_menu(TimedMenu("nurse_day1_evening_search_host_choice", [
-        TimedMenuChoice("Take the garnets.", 'nurse_day1_evening_take_garnets', 5, early_exit=True),
+    call run_menu(TimedMenu("nurse_search_host_choice_default", [
+        TimedMenuChoice("Take the garnets.", 'nurse_take_garnets', 5, early_exit=True),
         TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
     ]))
 
     return
 
 
-label nurse_day1_evening_take_garnets:
+label nurse_take_garnets:
 
     """
     Not first-rate, but they will fetch something.
@@ -103,7 +103,7 @@ label nurse_day1_evening_take_garnets:
     return
 
 
-label nurse_day1_evening_search_lad:
+label nurse_search_lad_default:
 
     $ change_room("bedrooms_hallway")
 
@@ -120,7 +120,7 @@ label nurse_day1_evening_search_lad:
     return
 
 
-label nurse_day1_evening_search_broken:
+label nurse_search_broken_default:
 
     $ change_room("bedrooms_hallway")
 
@@ -141,7 +141,7 @@ label nurse_day1_evening_search_broken:
     return
 
 
-label nurse_day1_evening_search_doctor:
+label nurse_search_doctor_default:
 
     $ change_room("bedrooms_hallway")
 
@@ -274,6 +274,21 @@ label nurse_take_gun:
     return
 
 
+label nurse_tea_room_default:
+
+    $ change_room('tea_room')
+
+    """
+    The room is quite empty.
+
+    The teapot has gone cold.
+
+    There is nothing to keep me here.
+    """
+
+    return
+
+
 label nurse_entrance_hall_default:
 
     $ change_room('entrance_hall')
@@ -396,5 +411,22 @@ label nurse_library_war_book:
     """
 
     $ nurse_details.threads.unlock('captain_zanzibar')
+
+    return
+
+
+label nurse_portrait_gallery_default:
+
+    $ change_room('portrait_gallery')
+
+    """
+    The gallery is lit by a single gas lamp.
+
+    The Claythorn ancestors gaze down from their frames with an air of collective disapproval.
+
+    I feel rather as though I am being assessed.
+
+    I do not linger.
+    """
 
     return
