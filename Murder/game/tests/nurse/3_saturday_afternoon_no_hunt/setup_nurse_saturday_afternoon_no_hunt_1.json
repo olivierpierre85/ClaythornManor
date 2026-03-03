@@ -1,0 +1,25 @@
+{
+    "tester_id": "admin",
+    "timestamp": "2026-03-03T10:00:00.000000",
+    "unlocked_threads": [],
+    "choices": [
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Take a rest",
+            "redirect": "nurse_day2_no_hunt_cancel",
+            "time_left": 60,
+            "timestamp": "2026-03-03T10:00:05.000000",
+            "time_to_decide": 5.0,
+            "time_since_last": 5.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Wait until the others return",
+            "redirect": "nurse_day2_no_hunt_cancel",
+            "time_left": 150,
+            "timestamp": "2026-03-03T10:01:05.000000",
+            "time_to_decide": 5.0,
+            "time_since_last": 60.0
+        }
+    ]
+}
