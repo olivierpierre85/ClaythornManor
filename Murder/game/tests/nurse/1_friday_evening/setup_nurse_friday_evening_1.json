@@ -319,7 +319,7 @@
         "Go rest for the night"
       ],
       "selected": "Portrait Gallery",
-      "redirect": "nurse_day1_evening_portrait_gallery",
+      "redirect": "nurse_portrait_gallery_default",
       "time_left": 10,
       "timestamp": "2026-02-27T16:50:00.607830",
       "time_to_decide": 0.717608,

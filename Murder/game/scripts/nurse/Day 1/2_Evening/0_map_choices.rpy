@@ -136,8 +136,6 @@ label nurse_day1_evening_garden:
     """
 
     return
-
-
 label nurse_day1_evening_portrait_gallery:
 
     $ change_room('portrait_gallery')
@@ -153,7 +151,6 @@ label nurse_day1_evening_portrait_gallery:
     """
 
     return
-
 
 # First Floor — Bedrooms
 label nurse_day1_evening_bedroom_too_dangerous:

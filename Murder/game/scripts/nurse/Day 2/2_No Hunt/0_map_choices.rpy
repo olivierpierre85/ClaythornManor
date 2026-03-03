@@ -12,8 +12,10 @@ label nurse_day2_no_hunt_map_menu:
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_billiard_room_default', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_dining_room_default', 10, room='dining_room'),
-            TimedMenuChoice(default_room_text('manor_garden'), 'nurse_garden_default', 30, room='manor_garden'),
+            TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day2_no_hunt_garden', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_no_hunt_bedroom_doctor', 10, room='bedroom_doctor'),
@@ -59,7 +61,7 @@ label nurse_day2_no_hunt_map_menu:
                 20, 
                 room = 'bedroom_broken',
             )
-        ] + copy.deepcopy(lord_choices), 
+        ], 
         is_map = True)
     
     return
@@ -90,10 +92,36 @@ label nurse_day2_no_hunt_downstairs_maid:
     return
 
 
-
-
-
 # First Floor
+
+label nurse_day2_no_hunt_garden:
+
+    $ change_room('manor_garden')
+
+    """
+    The morning air is quite still, and there is a pale brightness to the sky that has been absent since our arrival.
+
+    Not warm, precisely, but a good deal better than yesterday.
+
+    A short walk in the garden can only do one good.
+
+    The paths are a little damp underfoot, but the ground is firm enough.
+
+    I follow the gravel along the low hedgerow, taking my time.
+
+    The house stands behind me, quiet and closed.
+
+    There is something restoring about being outside, away from the corridors and other people's doors.
+
+    I could walk further, but I know better than to encourage that impulse.
+
+    One must not confuse feeling a little better with being well.
+
+    I do a single turn of the garden and return to the entrance.
+    """
+
+    return
+
 
 # Bedroom
 label nurse_day2_no_hunt_bedroom_try_enter(menu_id, enter_result, enter_duration=5):
