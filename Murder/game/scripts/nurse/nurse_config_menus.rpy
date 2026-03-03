@@ -23,4 +23,23 @@ label nurse_config_menu:
         TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "drunk")
 
+    #---------------------------------------------------------------------
+    # Psychic
+    $ psychic_generic_menu_nurse = TimedMenu("psychic_generic_menu_nurse", [
+        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday_morning', 10, condition = condition_saturday),
+        TimedMenuChoice('Tell me more about yourself.', 'psychic_generic_background_nurse', 20, linked_choice = "psychic_generic_heroic_act_nurse"),
+        TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act_nurse', 20, condition = "is_linked_choice_hidden('psychic_generic_menu_nurse', 'psychic_generic_heroic_act_nurse')"),
+        TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 10),
+        TimedMenuChoice('How old are you?', 'psychic_generic_age', 10),
+        TimedMenuChoice('What room are you in?', 'psychic_generic_room_nurse', 10),
+        TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = condition_saturday, next_menu = 'psychic_generic_other_guests_menu_nurse'),
+        TimedMenuChoice("You don't have anymore questions for her", 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "psychic")
+
+    $ psychic_generic_other_guests_menu_nurse = TimedMenu("psychic_generic_other_guests_menu_nurse", [
+        TimedMenuChoice('What do you think of Samuel Manning?', 'psychic_generic_drunk_saturday_morning', 10, condition = condition_saturday),
+        TimedMenuChoice('What do you think of Lady Claythorn?', 'psychic_generic_host_saturday_morning', 10, condition = condition_saturday),
+        TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "psychic")
+
     return

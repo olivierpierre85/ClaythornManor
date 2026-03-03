@@ -79,6 +79,16 @@ label psychic_generic_drunk_saturday_morning:
     We better stay away from him.
     """
 
+    if current_character.text_id == "nurse":
+
+        """
+        A reasonable enough assessment, I suppose.
+
+        Though I would have put it differently.
+
+        He is a man in considerable difficulty, and staying away from him will not help him one bit.
+        """
+
     $ drunk_details.description_hidden.unlock('addict') 
 
     return
@@ -123,11 +133,23 @@ label psychic_generic_host_saturday_morning:
     ... and me.
     """
 
-    """
-    She paused a little too long before adding "and me".
+    if current_character.text_id == "nurse":
 
-    I don't like that.
-    """
+        """
+        She paused a little too long before adding "and me."
+
+        I am not sure I appreciate being counted among those she intended to condescend to.
+
+        Still, Lady Claythorn has been perfectly kind to me. That much is true enough.
+        """
+
+    else:
+
+        """
+        She paused a little too long before adding "and me".
+
+        I don't like that.
+        """
 
     $ host_details.description_hidden.unlock('down_to_earth') 
 

@@ -22,7 +22,7 @@ label nurse_day2_hunt_tea_room:
     It seems we haven't really had a chance to talk yet, right?
     """
 
-    call nurse_generic
+    call psychic_generic
 
     """
     A member of the household staff steps in quietly.

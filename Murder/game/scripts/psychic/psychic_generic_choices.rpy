@@ -83,7 +83,7 @@ label psychic_generic_age:
     return
 
 
-label psychic_generic_background:
+label psychic_generic_background_intro:
 
     psychic """
     Oh, where to begin? I suppose I'm just an old woman who keeps herself busy.
@@ -92,6 +92,13 @@ label psychic_generic_background:
 
     and I usually keep to myself, save for the séances I frequently organise.
     """
+
+    return
+
+
+label psychic_generic_background:
+
+    call psychic_generic_background_intro
 
     lad """
     Séances? You mean like talking to the dead?
@@ -137,9 +144,7 @@ label psychic_generic_background:
 
     return
 
-label psychic_generic_heroic_act:
-
-    $ play_music('mysterious')
+label psychic_generic_heroic_act_story:
 
     psychic """
     I was invited here because of something I did a couple of years ago.
@@ -148,7 +153,7 @@ label psychic_generic_heroic_act:
 
     You see, with my talent, I am sometimes able to help people who desperately need it.
 
-    One day, a young couple came to see me. 
+    One day, a young couple came to see me.
 
     Their only son, not even five years old, had been kidnapped.
 
@@ -174,6 +179,15 @@ label psychic_generic_heroic_act:
 
     My popularity grew quite a lot after that.
     """
+
+    return
+
+
+label psychic_generic_heroic_act:
+
+    $ play_music('mysterious')
+
+    call psychic_generic_heroic_act_story
 
     lad """
     Wait, I don't understand.
@@ -282,4 +296,105 @@ label psychic_generic_manor:
 
     $ psychic_details.description_hidden.unlock('status')
     
+    return
+
+
+# -----------------------------------------------------------------------
+# NURSE-SPECIFIC LABELS
+
+label psychic_generic_weather_saturday_morning:
+
+    call psychic_generic_weather_saturday
+
+    nurse """
+    Indeed. One hopes for a quieter day ahead.
+    """
+
+    return
+
+
+label psychic_generic_background_nurse:
+
+    nurse """
+    I should like to know a little more about you, if you don't mind.
+    """
+
+    call psychic_generic_background_intro
+
+    nurse """
+    Séances. I see.
+    """
+
+    """
+    I keep my expression neutral.
+
+    I have met women like her before — well-meaning, perhaps, but utterly convinced of things that simply are not there.
+    """
+
+    psychic """
+    You don't sound convinced, Miss Marsh.
+    """
+
+    nurse """
+    Not at all, I am merely listening.
+    """
+
+    """
+    She studies me for a moment before letting it pass.
+
+    Good.
+    """
+
+    $ psychic_details.description_hidden.unlock('background')
+
+    return
+
+
+label psychic_generic_heroic_act_nurse:
+
+    nurse """
+    Why were you invited here, Mrs Baxter?
+    """
+
+    call psychic_generic_heroic_act_story
+
+    """
+    I listen carefully and say nothing for a moment.
+
+    It is, of course, possible that the police had made progress they did not disclose to the family.
+
+    That the woman she named was guilty does not prove she fore-saw it.
+
+    A lucky guess, most likely, combined with a good deal of charm.
+
+    Still, I will not say so.
+    """
+
+    nurse """
+    That must have been an enormous relief for the family.
+    """
+
+    $ psychic_details.description_hidden.unlock('heroic_act')
+
+    return
+
+
+label psychic_generic_room_nurse:
+
+    nurse """
+    Which room are you staying in?
+    """
+
+    call psychic_generic_room
+
+    nurse """
+    Thank you.
+    """
+
+    """
+    She watches me as though she expected a warmer reaction.
+
+    I offer her a brief smile instead.
+    """
+
     return
