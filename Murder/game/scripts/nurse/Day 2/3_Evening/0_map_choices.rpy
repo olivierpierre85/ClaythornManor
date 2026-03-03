@@ -15,7 +15,7 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day2_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_day2_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('library'), 'nurse_day2_evening_library', 10, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 10, room='library'),
             TimedMenuChoice(
                 'Check who is in the billiard room',
                 'nurse_day2_evening_billiard_room',
@@ -153,21 +153,7 @@ label nurse_day2_evening_portrait_gallery:
     return
 
 
-label nurse_day2_evening_library:
 
-    $ change_room('library')
-
-    """
-    The library.
-
-    It would be a pleasant enough place to sit with a book.
-
-    But tonight I am too restless to read.
-
-    I should look elsewhere.
-    """
-
-    return
 
 
 # Billiard Room

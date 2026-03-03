@@ -19,7 +19,7 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('tea_room'), 'nurse_day1_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day1_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day1_evening_garden', 10, room='manor_garden'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_day1_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             # Downstairs
             TimedMenuChoice(default_room_text('kitchen'), 'nurse_day1_evening_downstairs_crowded', 20, room='kitchen'),
@@ -28,7 +28,7 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="nurse_day1_evening_bedroom_drunk"),
-            TimedMenuChoice(default_room_text('library'), 'nurse_day1_evening_library', 0, next_menu="nurse_library_default", room='library'),
+            TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
                 'nurse_day1_evening_bedroom_psychic', 
@@ -84,71 +84,7 @@ label nurse_day1_evening_downstairs_crowded:
 
 
 # First Floor
-label nurse_day1_evening_library:
 
-    $ change_room('library')
-
-    """
-    A well-appointed library.
-
-    "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." lies open on a table.
-
-    I cast my eye along the shelves.
-
-    Mostly heraldry, county histories, and bound journals.
-
-    Nothing worth taking — far too heavy, and of no particular value.
-
-    I am about to leave when a title catches my attention.
-
-    "A History of the British Army" — Fortescue.
-
-    Fourteen volumes.
-
-    I have seen this set before, in the officers' mess at Netley.
-
-    The Captain mentioned Zanzibar at some point I remember.
-
-    Something in the way he spoke of it nagged at me, though I could not quite place it at the time.
-
-    I could try to learn more about that conflict, though it may take some time.
-    """
-
-    call run_menu(TimedMenu("nurse_library_default", [
-        TimedMenuChoice("Look it up. It may be useful.", 'nurse_day1_evening_library_war_book', 30, early_exit=True),
-        TimedMenuChoice("Leave it. I am too tired for reading tonight.", 'generic_cancel', 20, early_exit=True),
-    ]))
-
-    return
-
-
-label nurse_day1_evening_library_war_book:
-
-    """
-    I take down the volume covering the latter campaigns in India and East Africa.
-
-    I find the index and look up Zanzibar.
-
-    A single page.
-
-    The engagement lasted thirty-eight minutes.
-
-    The shortest war in recorded history, apparently.
-
-    The British bombardment was overwhelming.
-
-    Casualties on the British side were minimal — one man, lightly wounded.
-
-    If what the Captain said is true, he would be the only injured soldier from the entire war.
-
-    That seems most unlikely.
-
-    He may well have invented the whole story — but to what end?
-    """
-
-    $ nurse_details.threads.unlock('captain_zanzibar')
-
-    return
 
 
 label nurse_day1_evening_tea_room:
@@ -197,25 +133,6 @@ label nurse_day1_evening_garden:
     I am not well enough to be wandering about in the cold and the dark.
 
     I turn back.
-    """
-
-    return
-
-
-label nurse_day1_evening_entrance_hall:
-
-    $ change_room('entrance_hall')
-
-    """
-    The great hall is quiet.
-
-    The chandelier has been turned down low.
-
-    I stand beneath it for a moment, listening.
-
-    The house settles around me.
-
-    There is something watchful about the place at this hour.
     """
 
     return

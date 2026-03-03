@@ -274,6 +274,25 @@ label nurse_take_gun:
     return
 
 
+label nurse_entrance_hall_default:
+
+    $ change_room('entrance_hall')
+
+    """
+    The great hall is quiet.
+
+    The chandelier has been turned down low.
+
+    I stand beneath it for a moment, listening.
+
+    The house settles around me.
+
+    There is something watchful about the place at this hour.
+    """
+
+    return
+
+
 label nurse_downstairs_approach:
 
     """
@@ -283,5 +302,99 @@ label nurse_downstairs_approach:
 
     I reach the kitchen door and ease it open an inch.
     """
+
+    return
+
+
+label nurse_library_default:
+
+    if nurse_details.saved_variables.get("visited_library"):
+
+        $ change_room("library")
+
+        if nurse_details.threads.is_unlocked('captain_zanzibar'):
+
+            """
+            There is nothing more for me to find here.
+
+            I already know what I need to know about Zanzibar.
+            """
+
+            return
+
+        else:
+
+            """
+            The library remains as it was.
+
+            The volumes of "A History of the British Army" are still on the shelf.
+            """
+
+    else:
+
+        $ nurse_details.saved_variables["visited_library"] = True
+
+        $ change_room("library")
+
+        """
+        A well-appointed library.
+
+        "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain" lies open on a table.
+
+        I cast my eye along the shelves.
+
+        Mostly heraldry, county histories, and bound journals.
+
+        Nothing worth taking — far too heavy, and of no particular value.
+
+        I am about to leave when a title catches my attention.
+
+        "A History of the British Army" — Fortescue.
+
+        Fourteen volumes.
+
+        I have seen this set before, in the officers' mess at Netley.
+
+        The Captain mentioned Zanzibar at some point, I remember.
+
+        Something in the way he spoke of it nagged at me, though I could not quite place it at the time.
+
+        I could try to learn more about that conflict, though it may take some time.
+        """
+
+    if not nurse_details.threads.is_unlocked('captain_zanzibar'):
+        call run_menu(TimedMenu("nurse_library_choice", [
+            TimedMenuChoice("Look it up. It may be useful.", 'nurse_library_war_book', 30, early_exit=True),
+            TimedMenuChoice("Leave it. I am too tired for reading.", 'generic_cancel', 20, early_exit=True),
+        ]))
+
+    return
+
+
+label nurse_library_war_book:
+
+    """
+    I take down the volume covering the latter campaigns in India and East Africa.
+
+    I find the index and look up Zanzibar.
+
+    A single page.
+
+    The engagement lasted thirty-eight minutes.
+
+    The shortest war in recorded history, apparently.
+
+    The British bombardment was overwhelming.
+
+    Casualties on the British side were minimal — one man, lightly wounded.
+
+    If what the Captain said is true, he would be the only injured soldier from the entire war.
+
+    That seems most unlikely.
+
+    He may well have invented the whole story — but to what end?
+    """
+
+    $ nurse_details.threads.unlock('captain_zanzibar')
 
     return
