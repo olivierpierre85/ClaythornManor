@@ -417,16 +417,30 @@ label nurse_library_war_book:
 
 label nurse_portrait_gallery_default:
 
-    $ change_room('portrait_gallery')
+    if nurse_details.saved_variables.get("visited_portrait_gallery"):
 
-    """
-    The gallery is lit by a single gas lamp.
+        $ change_room('portrait_gallery')
 
-    The Claythorn ancestors gaze down from their frames with an air of collective disapproval.
+        """
+        The portraits remain as they were, their silent judgement unchanged.
 
-    I feel rather as though I am being assessed.
+        There is nothing here for me.
+        """
 
-    I do not linger.
-    """
+    else:
+
+        $ nurse_details.saved_variables["visited_portrait_gallery"] = True
+
+        $ change_room('portrait_gallery')
+
+        """
+        The gallery is lit by a single gas lamp.
+
+        The Claythorn ancestors gaze down from their frames with an air of collective disapproval.
+
+        I feel rather as though I am being assessed.
+
+        I do not linger.
+        """
 
     return
