@@ -306,13 +306,19 @@ label nurse_day1_evening_bedroom_too_dangerous:
 
     """
     No answer.
-
-    I could try my skills to enter anyway.
-
-    But that seems far too dangerous to try anything now, with the house still so full of people.
-
-    There must be better places to explore.
     """
+
+    if not nurse_details.saved_variables["bedroom_too_dangerous_seen"]:
+
+        $ nurse_details.saved_variables["bedroom_too_dangerous_seen"] = True
+
+        """
+        I could try my skills to enter anyway.
+
+        But that seems far too dangerous to try anything now, with the house still so full of people.
+
+        There must be better places to explore.
+        """
 
     return
 
