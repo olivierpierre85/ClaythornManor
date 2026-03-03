@@ -13,11 +13,12 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_billiard_room_default', 10, room='billiard_room'),
-            TimedMenuChoice(default_room_text('dining_room'), 'nurse_dining_room_default', 10, room='dining_room'),
+            TimedMenuChoice(default_room_text('dining_room'), 'nurse_day2_no_hunt_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day2_no_hunt_garden', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('tea_room'), 'nurse_day2_hunt_tea_room', 10, room='tea_room', condition=condition_saturday_hunt_morning),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_no_hunt_bedroom_doctor', 10, room='bedroom_doctor'),
@@ -95,6 +96,21 @@ label nurse_day2_no_hunt_downstairs_maid:
 
 
 # First Floor
+label nurse_day2_no_hunt_dining_room:
+
+    $ change_room('dining_room')
+
+    """
+    The dining room is empty.
+
+    The table is not entirely cleared.
+
+    Strange, that should have be done by now.
+
+    Looks like the manor is understaffed.
+    """
+
+    return
 
 label nurse_day2_no_hunt_garden:
 
