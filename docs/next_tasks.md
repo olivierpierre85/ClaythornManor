@@ -9,8 +9,14 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 ## Write Story : NURSE - Day 2
 - 
 - [ ] Part 1 - Hunt
+  - [ ] Cough warning (call to every choice in map choice), if time < x """ I m exhausting my self"
+  - [ ] MAKe on death (or escape) possible when NO exhaustion at all
 - [ ] Part 2 - Evening
   - [ ] DRAFT ONLY made by AI -> Re read EVERYTHING
+  - [ ] Discussion with captain SINHA => NEED the 2 unlock from before AND ask him in details about boxer's rebellion. If you can spot the lie => UNMASK him. => Then, make friend or die?
+  
+  ### Endings
+- Exhaustion => Possible from the hunt? Evening? (if exhausted the day before?)
   
   
 ## Write Story : Day 3 - Doctor FINIS DOCTOR
@@ -32,6 +38,7 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 - Doctor: TODO Full
 
 ## Technical Tasks
+- [ ] Veo in main menu by adding a window with the version (DEMO 0.2)
 -  [ ] **Testing**: Define paths that test all dialogs for the first 3 character
     - [ ] Doctor
     - [ ] Lad

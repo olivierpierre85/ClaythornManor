@@ -5,10 +5,10 @@ label nurse_day2_no_hunt_map_menu:
         # -------------------------        
         nurse_day2_no_hunt_map_menu = TimedMenu("nurse_day2_no_hunt_map_menu", [
             # Downstairs
-            TimedMenuChoice(default_room_text('kitchen'), 'nurse_day2_no_hunt_downstairs_default', 10, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'nurse_day2_no_hunt_downstairs_default', 10, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'nurse_day2_no_hunt_downstairs_default', 10, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day2_no_hunt_downstairs_default', 10, room='gun_room'),
+            TimedMenuChoice(default_room_text('kitchen'), 'nurse_day2_no_hunt_downstairs_maid', 10, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'nurse_day2_no_hunt_downstairs_maid', 10, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 10, room='gun_room'),
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_billiard_room_default', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_dining_room_default', 10, room='dining_room'),
@@ -65,16 +65,40 @@ label nurse_day2_no_hunt_map_menu:
     return
 
 # Downstairs
-label nurse_day2_no_hunt_downstairs_default:
+label nurse_day2_no_hunt_downstairs_maid:
 
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('gun_room'))
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('garage'))
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
+    # Hide both kitchen and scullery — they share the same discovery
     $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('kitchen'))
+    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
 
-    call nurse_downstairs_default
+    $ change_room("basement_stairs")
+
+    """
+    I move quietly through the back passage.
+
+    Years of moving through dark passages in hospitals and large houses have taught me how to remain unseen.
+
+    I reach the kitchen door and ease it open an inch.
+    """
+
+    $ change_room("kitchen")
+
+    """
+    I almost go in until I notice one of the maids. 
+    
+    She is busy, likely cleaning up after the morning meal.
+
+    There is no chance of doing anything useful in there today.
+
+    The scullery will be just the same, connected as it is to the kitchen.
+
+    I pull the door to and leave without anyone having noticed me.
+    """
 
     return
+
+
+
 
 
 # First Floor

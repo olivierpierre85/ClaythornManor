@@ -37,4 +37,8 @@ label nurse_config_progress:
                 {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': False}},
                 {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': True}},
             ],
+            'saturday_afternoon_no_hunt': [
+                {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': False}},
+                {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': True}},
+            ],
         }

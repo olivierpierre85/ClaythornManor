@@ -162,3 +162,87 @@ label nurse_day1_evening_search_doctor:
     $ unlock_map('bedroom_doctor')
 
     return
+
+label nurse_garage_default:
+
+    if nurse_details.saved_variables.get("visited_garage"):
+
+        $ change_room("garage")
+
+        """
+        I have already seen everything there was to see here.
+        """
+
+    else:
+
+        $ nurse_details.saved_variables["visited_garage"] = True
+
+        $ change_room("garage")
+
+        """
+        I reach the garage, making sure I wouldn't encounter anyone.
+
+        It is a cold, oil-smelling place.
+
+        There is an old car, it doesn't look like it's working anymore.
+
+        Tools hang neatly along one wall, and a bicycle leans against another.
+
+        Nothing here that is of any use to me.
+        """
+
+    return
+
+
+label nurse_gun_room_default:
+
+    if nurse_details.saved_variables.get("visited_gun_room"):
+
+        $ change_room("gun_room")
+
+        """
+        I have already seen everything there was to see here.
+        """
+
+    else:
+
+        $ nurse_details.saved_variables["visited_gun_room"] = True
+
+        $ change_room("gun_room")
+
+        """
+        The gun room.
+        
+        I am confident that I shouldn't be here, so I made sure no one notices me.
+
+        Shotguns and hunting rifles line three walls, arranged on open racks.
+
+        The smell of gun oil is sharp.
+
+        Everything is laid out as though ready for use — nothing locked away.
+        """
+
+    if not nurse_details.threads.is_unlocked('take_gun'):
+        call run_menu(TimedMenu("nurse_gun_room_choice", [
+            TimedMenuChoice("Take a pistol", 'nurse_take_gun', 20, early_exit=True),
+            TimedMenuChoice("Leave it. Too dangerous to carry.", 'generic_cancel', 20, early_exit=True),
+        ]))
+
+    return
+
+
+label nurse_take_gun:
+
+    """
+    My hand closes around the grip of a small revolver.
+
+    It is loaded.
+
+    I slip it into my bag.
+
+    Nobody will notice. Not for a while, at any rate.
+    """
+
+    $ nurse_details.threads.unlock('take_gun')
+
+    return

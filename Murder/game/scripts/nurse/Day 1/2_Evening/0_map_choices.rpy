@@ -24,8 +24,8 @@ label nurse_day1_evening_map_menu:
             # Downstairs
             TimedMenuChoice(default_room_text('kitchen'), 'nurse_day1_evening_downstairs_crowded', 20, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day1_evening_downstairs_crowded', 20, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'nurse_day1_evening_garage', 20, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day1_evening_gun_room', 0, room='gun_room'),
+            TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 20, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="nurse_day1_evening_bedroom_drunk"),
             TimedMenuChoice(default_room_text('library'), 'nurse_day1_evening_library', 0, next_menu="nurse_library_default", room='library'),
@@ -86,64 +86,7 @@ label nurse_day1_evening_downstairs_crowded:
     return
 
 
-label nurse_day1_evening_garage:
 
-    $ change_room("garage")
-
-    """
-    I reach the garage, making sure I wouldn't encounter anyone.
-
-    It is a cold, oil-smelling place.
-
-    There is an old car, it doesn't look like it's working anymore.
-
-    Tools hang neatly along one wall, and a bicycle leans against another.
-
-    Nothing here that is of any use to me.
-    """
-
-    return
-
-
-label nurse_day1_evening_gun_room:
-
-    $ change_room("gun_room")
-
-    """
-    The gun room.
-    
-    I am confident that I shouldn't be here, so I made sure no one notices me.
-
-    Shotguns and hunting rifles line three walls, arranged on open racks.
-
-    The smell of gun oil is sharp.
-
-    Everything is laid out as though ready for use — nothing locked away.
-    """
-
-    call run_menu(TimedMenu("nurse_day1_evening_gun_room_choice", [
-        TimedMenuChoice("Take a pistol", 'nurse_day1_evening_take_gun', 20, early_exit=True),
-        TimedMenuChoice("Leave it. Too dangerous to carry.", 'generic_cancel', 20, early_exit=True),
-    ]))
-
-    return
-
-
-label nurse_day1_evening_take_gun:
-
-    """
-    My hand closes around the grip of a small revolver.
-
-    It is loaded.
-
-    I slip it into my bag.
-
-    Nobody will notice — not tonight, at any rate.
-    """
-
-    $ nurse_details.threads.unlock('take_gun')
-
-    return
 
 
 # First Floor
