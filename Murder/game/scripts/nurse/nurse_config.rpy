@@ -2,7 +2,9 @@ label init_nurse:
 
     call nurse_day1_evening_map_menu
     call nurse_day2_no_hunt_map_menu
-    
+    call nurse_day2_evening_map_menu
+    call nurse_day2_evening_billiard_room_menu #TODO check needed
+
     call nurse_config_menu
 
     call nurse_config_progress
@@ -15,6 +17,7 @@ label init_nurse:
             # MAP Menus
             "day1_evening_map_menu" : nurse_day1_evening_map_menu,
             "day2_no_hunt_map_menu" : nurse_day2_no_hunt_map_menu,
+            "day2_evening_map_menu" : nurse_day2_evening_map_menu,
 
             # Generic Menus
             "drunk_generic_menu" : drunk_generic_menu_nurse,
@@ -23,6 +26,7 @@ label init_nurse:
             # story var
             "lockpick_seen" : False,
             "bedroom_too_dangerous_seen" : False,
+            "day2_evening_bedroom_closed" : False,
             "day1_evening_billiard_room_visited" : False,
             "library_visited": False,
             "portrait_gallery_visited": False,

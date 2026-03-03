@@ -10,6 +10,7 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 - 
 - [ ] Part 1 - Hunt
 - [ ] Part 2 - Evening
+  - [ ] DRAFT ONLY made by AI -> Re read EVERYTHING
   
   
 ## Write Story : Day 3 - Doctor FINIS DOCTOR
