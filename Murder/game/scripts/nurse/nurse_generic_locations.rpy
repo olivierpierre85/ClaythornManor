@@ -200,9 +200,19 @@ label nurse_gun_room_default:
 
         $ change_room("gun_room")
 
-        """
-        I have already seen everything there was to see here.
-        """
+        if nurse_details.threads.is_unlocked('take_gun'):
+
+            """
+            I have already seen everything there was to see here.
+            """
+
+            return
+
+        else:
+
+            """
+            The rows of weapons remain exactly as they were.
+            """
 
     else:
 
@@ -244,5 +254,18 @@ label nurse_take_gun:
     """
 
     $ nurse_details.threads.unlock('take_gun')
+
+    return
+
+
+label nurse_downstairs_approach:
+
+    """
+    I move quietly through the back passage.
+
+    Years of moving through dark passages in hospitals and large houses have taught me how to remain unseen.
+
+    I reach the kitchen door and ease it open an inch.
+    """
 
     return

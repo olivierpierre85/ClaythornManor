@@ -61,13 +61,7 @@ label nurse_day1_evening_downstairs_crowded:
 
     $ change_room("basement_stairs")
 
-    """
-    I move quietly through the back passage.
-
-    Years of night moving in the dark in large house taught me how to stay hidden.
-
-    I reach the kitchen door and ease it open an inch.
-    """
+    call nurse_downstairs_approach
 
     $ change_room("kitchen")
 

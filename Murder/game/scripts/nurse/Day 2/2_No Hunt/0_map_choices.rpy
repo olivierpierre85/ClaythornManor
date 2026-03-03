@@ -73,13 +73,7 @@ label nurse_day2_no_hunt_downstairs_maid:
 
     $ change_room("basement_stairs")
 
-    """
-    I move quietly through the back passage.
-
-    Years of moving through dark passages in hospitals and large houses have taught me how to remain unseen.
-
-    I reach the kitchen door and ease it open an inch.
-    """
+    call nurse_downstairs_approach
 
     $ change_room("kitchen")
 
