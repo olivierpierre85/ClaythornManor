@@ -289,6 +289,19 @@ label nurse_tea_room_default:
     return
 
 
+label nurse_billiard_room_default:
+
+    $ change_room('billiard_room')
+
+    """
+    The billiard room is empty, the table undisturbed.
+
+    There is nothing here for me.
+    """
+
+    return
+
+
 label nurse_entrance_hall_default:
 
     $ change_room('entrance_hall')

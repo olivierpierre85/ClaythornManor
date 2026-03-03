@@ -58,23 +58,17 @@ label nurse_day2_hunt:
     $ time_left = 60
     call run_menu(nurse_details.saved_variables["day2_no_hunt_map_menu"])
 
-    if time_left > 55:
+    if time_left <= 0:
 
         """
-        I have not really moved from the spot.
-
-        I should at least make my way to the tea room and join Mrs Baxter for luncheon.
-        """
-
-    elif time_left >= 10:
-
-        """
-        I have done enough wandering for now.
-
-        I should make my way to the tea room for luncheon with Mrs Baxter.
+        I pushed myself again.
+        
+        No cough this time but I should still be more careful, there is no need to explore until I collapse.
         """
 
     else:
+
+    if not nurse_details.saved_variables.get('day2_hunt_tea_room_early', False):
 
         """
         It is almost noon. I should not keep Mrs Baxter waiting any longer.

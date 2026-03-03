@@ -2,20 +2,32 @@ label nurse_day2_hunt_tea_room:
 
     $ change_room("tea_room")
 
-    """
-    Mrs Baxter is already seated when I arrive, composed as ever.
+    if nurse_details.saved_variables.get('day2_hunt_tea_room_early', False):
 
-    I take the chair across from her.
-    """
+        """
+        I reach the Tea Room before Amelia Baxter.
+
+        She is composed as ever when she arrives.
+
+        She takes the chair across from me.
+        """
+
+    else:
+
+        """
+        Mrs Baxter is already seated when I arrive, composed as ever.
+
+        I take the chair across from her.
+        """
 
     call change_time(12, 0)
 
     psychic """
-    Miss Marsh, would you like to join me?
+    Miss Marsh, how are you?
     """
 
     nurse """
-    Yes, thank you.
+    Fine, thank you.
     """
 
     psychic """

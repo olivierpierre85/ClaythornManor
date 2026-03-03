@@ -18,7 +18,7 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('tea_room'), 'nurse_day2_hunt_tea_room', 10, room='tea_room', condition=condition_saturday_hunt_morning),
+            TimedMenuChoice("Go wait for luncheon in the Tea Room", 'nurse_day2_hunt_tea_room_early', 0, early_exit = True,  room='tea_room', condition=condition_saturday_hunt_morning),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_no_hunt_bedroom_doctor', 10, room='bedroom_doctor'),
@@ -43,9 +43,9 @@ label nurse_day2_no_hunt_map_menu:
                 condition = condition_saturday_hunt_morning,
             ),
             TimedMenuChoice(
-                'Take a rest', 
-                'nurse_day2_no_hunt_cancel', 
-                60, 
+                'Take a rest before lunch', 
+                'nurse_day2_no_hunt_rest_before_lunch', 
+                0, 
                 early_exit = True, 
                 room = 'bedroom_nurse',
                 condition = condition_saturday_hunt_morning
@@ -67,6 +67,34 @@ label nurse_day2_no_hunt_map_menu:
         ], 
         is_map = True)
     
+    return
+
+
+label nurse_day2_no_hunt_rest_before_lunch:
+
+    $ change_room("bedroom_nurse")
+
+    """
+    I am exhausted.
+
+    A quick nap before luncheon is what I need.
+    """
+
+    return
+
+
+label nurse_day2_hunt_tea_room_early:
+
+    $ change_room("tea_room")
+
+    """
+    I don't really have the strength to explore.
+
+    I should just wait for luncheon here.
+    """
+
+    $ nurse_details.saved_variables['day2_hunt_tea_room_early'] = True
+
     return
 
 # Downstairs
