@@ -344,6 +344,7 @@ label nurse_day2_no_hunt_bedroom_drunk:
 # Attic
 label nurse_day2_no_hunt_attic_approach:
 
+    
     $ change_room("attic_hallway")
 
     if not nurse_details.saved_variables.get("day2_no_hunt_attic_visited", False):
@@ -392,8 +393,6 @@ label nurse_day2_no_hunt_attic_females_room:
     $ change_room("females_room")
 
     """
-    The door to the maids' room is unlocked.
-
     It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
 
     On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company. A faded photograph is tucked behind them.
@@ -423,9 +422,7 @@ label nurse_day2_no_hunt_attic_butler_room:
     $ change_room("butler_room")
 
     """
-    The butler's room is unlocked, but it is the adjoining pantry that draws my eye immediately.
-
-    The door to it stands ajar.
+    The adjoining pantry door stands ajar.
     """
 
     play sound door_open
@@ -452,8 +449,6 @@ label nurse_day2_no_hunt_attic_males_room:
     $ change_room("males_room")
 
     """
-    The footmen's room is unlocked and empty.
-
     Two beds, a chest of drawers, a peg for each man's jacket.
 
     I check the drawers quickly — folded shirts, a penknife, a few coins.

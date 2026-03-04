@@ -11,7 +11,11 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 - [ ] Part 1 - Hunt
   - [ ] MAP CHOICES
     - [ ] Downstairs OK
-    - [ ] 1st floor, ongoing
+    - [ ] 1st floor, OK
+    - [ ] Bedrooms, to test and finish
+    - [ ] Attic
+      - [ ] **Storage room**, if all three choices not exhausted, don't hide entirely? too complicated, make only one option to search or not?? Think about => Could be that you need a clue to find bullets, in multiple menus impossible to find without the clue. You'll get the clue only after a certain death?
+      - [ ] Butler rooms, the pantry is too well locked, need a the key to enter. You'll need to steal it from butler? but how?
   - [ ] DAY 2 EVENING
     - [ ] Cough warning (call to every choice in map choice ), if time < x """ I m exhausting my self"
     - [ ] MAKe on death (or escape) possible when NO exhaustion at all
