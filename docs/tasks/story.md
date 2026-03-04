@@ -24,7 +24,7 @@
     - [ ] If spotted too many times (or right time) -> Arrest and death (Suspicious LAD DEATH).
 - [ ] Get keys for the attic at the end? Lad can open locked doors, but won't at first (needs combination). Cheating -> Ending (assumed killer). Captain can force open.
 - [ ] **Achievements**: Add achievement with all "Stand alone" choices.
-- [ ] **Items/Inventory**: "Object drink on hand?" instead of unlock `day3_drunk` -> Add object glass of sherry for the last day (option to throw it?).
+- [ ] **Items/Inventory**: "Object drink on hand?" instead of unlock `day3_drunk` -> Add object glass of sherry for the last day (option to throw it?). LOVE IT
 - [ ] **Attic**: Attic not closed, but only rooms closed? Add "First time in attic" label.
 - [ ] **Gun Mechanics**:
     - [ ] More difference when you have gun for fell ending? Maybe need bullets?
@@ -191,6 +191,10 @@ JUMP FROM ONE CHARACTER TO ANOTHER
 
 ## 💡Generic Ideas
 - [ ] Access to servants if you befriend one? (Doctor or Captain likely, NOT Lad).
+- [ ] MORE DEAD!!! For some (how many) characters, the death are coming faster. But why?
+  - [ ] Psychic realise Moody is not who he is, she loses it.
+  - [ ] Moody gives whiskey to lad, he dies. She loses it
+  - [ ] Somebody realises the police will not come, so they go fetch them. Needs to accelerate stuff
 - [ ] - **End Note**: "For those who haven't realized it, you are not gonna leave this place alive."
 - [ ] **Phone**: Where to put the phone? Add phone room? Basement?
 - [ ] SOMETIMES, someone should be caught entering a room. 

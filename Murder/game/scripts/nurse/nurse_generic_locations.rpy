@@ -212,6 +212,9 @@ label nurse_gun_room_default:
             So there is no reason to stay here.
             """
 
+            # We still have to remove some time, even if we've been here before
+            $ time_left = time_left - 10
+
             return
 
         else:

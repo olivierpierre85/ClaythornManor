@@ -12,9 +12,9 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
   - [ ] MAP CHOICES
     - [ ] Downstairs OK
     - [ ] 1st floor, ongoing
-      - [ ] 
-  - [ ] Cough warning (call to every choice in map choice), if time < x """ I m exhausting my self"
-  - [ ] MAKe on death (or escape) possible when NO exhaustion at all
+  - [ ] DAY 2 EVENING
+    - [ ] Cough warning (call to every choice in map choice ), if time < x """ I m exhausting my self"
+    - [ ] MAKe on death (or escape) possible when NO exhaustion at all
   - [ ] the test for no hunt chapter don't work, the result is just a ted harring intro? what is happening?
 - [ ] Part 2 - Evening
   - [ ] DRAFT ONLY made by AI -> Re read EVERYTHING

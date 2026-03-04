@@ -86,7 +86,9 @@ label psychic_generic_drunk_saturday_morning:
 
         Though I would have put it differently.
 
-        He is a man in considerable difficulty, and staying away from him will not help him one bit.
+        In my experience, drunks are simply wounded persons.
+
+        There is no reason to vilify them.
         """
 
     $ drunk_details.description_hidden.unlock('addict') 
@@ -127,25 +129,15 @@ label psychic_generic_host_saturday_morning:
     What pleased me even more was that she addressed me as an equal.
 
     That's very different from most noble people I've met.
-    
-    They usually look down on people like you...
-    
-    ... and me.
     """
 
-    if current_character.text_id == "nurse":
+    if current_character.text_id == "lad":
 
         """
-        She paused a little too long before adding "and me."
+        They usually look down on people like you...
+        
+        ... and me.
 
-        I am not sure I appreciate being counted among those she intended to condescend to.
-
-        Still, Lady Claythorn has been perfectly kind to me. That much is true enough.
-        """
-
-    else:
-
-        """
         She paused a little too long before adding "and me".
 
         I don't like that.

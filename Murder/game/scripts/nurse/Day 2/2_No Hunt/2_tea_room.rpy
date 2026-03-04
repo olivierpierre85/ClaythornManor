@@ -2,10 +2,12 @@ label nurse_day2_hunt_tea_room:
 
     $ change_room("tea_room")
 
+    call change_time(12, 0)
+
     if nurse_details.saved_variables.get('day2_hunt_tea_room_early', False):
 
         """
-        I reach the Tea Room before Amelia Baxter.
+        Amelia Baxter comes a bit later.
 
         She is composed as ever when she arrives.
 
@@ -20,8 +22,6 @@ label nurse_day2_hunt_tea_room:
         I take the chair across from her.
         """
 
-    call change_time(12, 0)
-
     psychic """
     Miss Marsh, how are you?
     """
@@ -31,7 +31,11 @@ label nurse_day2_hunt_tea_room:
     """
 
     psychic """
-    It seems we haven't really had a chance to talk yet, right?
+    It seems we have not yet had a proper chance to talk, have we?
+    """
+
+    nurse """
+    Indeed.
     """
 
     call psychic_generic

@@ -22,6 +22,9 @@ label init_nurse:
             # Generic Menus
             "drunk_generic_menu" : drunk_generic_menu_nurse,
             "drunk_generic_other_guests_menu" : drunk_generic_other_guests_menu_nurse,
+
+            "psychic_generic_menu": psychic_generic_menu_nurse,
+            "psychic_generic_other_guests_menu": psychic_generic_other_guests_menu_nurse,
             
             # story var
             "lockpick_seen" : False,

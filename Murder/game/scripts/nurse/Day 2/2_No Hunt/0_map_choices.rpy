@@ -8,8 +8,6 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('kitchen'), 'nurse_day2_no_hunt_downstairs_maid', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day2_no_hunt_downstairs_maid', 10, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 10, room='garage'),
-            # Two options, if the gun already taken, take just a bit of time
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 10, room='gun_room', condition="nurse_details.threads.is_unlocked('take_gun')"),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_billiard_room_default', 10, room='billiard_room'),
@@ -18,7 +16,7 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
-            TimedMenuChoice("Go wait for luncheon in the Tea Room", 'nurse_day2_hunt_tea_room_early', 0, early_exit = True,  room='tea_room', condition=condition_saturday_hunt_morning),
+            TimedMenuChoice("Wait for luncheon in the Tea Room", 'nurse_day2_hunt_tea_room_early', 0, early_exit = True,  room='tea_room', condition=condition_saturday_hunt_morning),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_no_hunt_bedroom_doctor', 10, room='bedroom_doctor'),
@@ -80,6 +78,10 @@ label nurse_day2_no_hunt_rest_before_lunch:
     A quick nap before luncheon is what I need.
     """
 
+    call wait_screen_transition()
+
+    call change_time(11, 45)
+
     return
 
 
@@ -88,7 +90,7 @@ label nurse_day2_hunt_tea_room_early:
     $ change_room("tea_room")
 
     """
-    I don't really have the strength to explore.
+    I do not really have the strength to explore.
 
     I should just wait for luncheon here.
     """
@@ -133,7 +135,7 @@ label nurse_day2_no_hunt_dining_room:
 
     The table is not entirely cleared.
 
-    Strange, that should have be done by now.
+    Strange, that should have been done by now.
 
     Looks like the manor is understaffed.
     """

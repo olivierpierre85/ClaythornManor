@@ -66,8 +66,6 @@ label nurse_day2_hunt:
         No cough this time but I should still be more careful, there is no need to explore until I collapse.
         """
 
-    else:
-
     if not nurse_details.saved_variables.get('day2_hunt_tea_room_early', False):
 
         """
@@ -78,15 +76,23 @@ label nurse_day2_hunt:
 
     call nurse_day2_hunt_tea_room
 
-    call change_time(13, 30)
+    $ change_room("bedroom_nurse", dissolve)
 
     """
-    The manor is quiet once more.
+    I lay for a bit, I need to get some strength if I want to get through the day.
+    """
+
+    call change_time(14, 0)
+
+    call wait_screen_transition()
+
+    """
+    After a little while, I am starting to feel better.
 
     Perhaps I can use the remaining time productively.
     """
 
-    $ time_left += 90
+    $ time_left += 60
     call run_menu(nurse_details.saved_variables["day2_no_hunt_map_menu"])
 
     """

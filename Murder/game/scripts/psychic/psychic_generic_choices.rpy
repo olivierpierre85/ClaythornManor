@@ -64,7 +64,7 @@ label psychic_generic_room:
     return
 
 
-label psychic_generic_age:
+label psychic_generic_age_lad:
 
     psychic angry """
     I beg your pardon?
@@ -76,6 +76,25 @@ label psychic_generic_age:
 
     """
     I mutter an apology and quickly change the subject.
+    """
+
+    $ psychic_details.description_hidden.unlock('age') 
+
+    return
+
+
+label psychic_generic_age_nurse:
+
+    psychic """
+    My, my. I would not have expected that question from you, Miss Marsh.
+
+    Surely you know some things simply are not asked.
+    """
+
+    """
+    She holds my gaze for a moment, a faint smile playing on her lips.
+
+    I have no good answer to that. I clear my throat and move on.
     """
 
     $ psychic_details.description_hidden.unlock('age') 
@@ -328,21 +347,31 @@ label psychic_generic_background_nurse:
     """
     I keep my expression neutral.
 
-    I have met women like her before — well-meaning, perhaps, but utterly convinced of things that simply are not there.
+    I have met women like her before.
+    
+    Sometimes well-meaning, utterly convinced of things that simply are not there.
+
+    But more often they are just frauds.
+
+    They take advantage of the vulnerable, the grieving to make a profit.
+
+    Those people disgust me.
     """
 
     psychic """
-    You don't sound convinced, Miss Marsh.
+    Are you alright, Miss Marsh?
     """
 
     nurse """
-    Not at all, I am merely listening.
+    Of course, I am merely listening.
     """
 
     """
+    My face must have betrayed my thoughts.
+
     She studies me for a moment before letting it pass.
 
-    Good.
+    But she doesn't elaborate further on her "powers".
     """
 
     $ psychic_details.description_hidden.unlock('background')
@@ -361,10 +390,8 @@ label psychic_generic_heroic_act_nurse:
     """
     I listen carefully and say nothing for a moment.
 
-    It is, of course, possible that the police had made progress they did not disclose to the family.
-
     That the woman she named was guilty does not prove she fore-saw it.
-
+    
     A lucky guess, most likely, combined with a good deal of charm.
 
     Still, I will not say so.
@@ -375,26 +402,5 @@ label psychic_generic_heroic_act_nurse:
     """
 
     $ psychic_details.description_hidden.unlock('heroic_act')
-
-    return
-
-
-label psychic_generic_room_nurse:
-
-    nurse """
-    Which room are you staying in?
-    """
-
-    call psychic_generic_room
-
-    nurse """
-    Thank you.
-    """
-
-    """
-    She watches me as though she expected a warmer reaction.
-
-    I offer her a brief smile instead.
-    """
 
     return
