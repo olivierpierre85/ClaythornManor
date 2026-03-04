@@ -28,7 +28,8 @@ init -1000 python:
         • tb_file   → path to a .txt file Ren'Py already wrote
         """
 
-        export_choices_to_file(all_choices)
+        if not debug_activated:
+            export_choices_to_file(all_choices)
 
         return False
 
