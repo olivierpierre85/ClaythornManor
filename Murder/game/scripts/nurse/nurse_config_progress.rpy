@@ -15,14 +15,36 @@ label nurse_config_progress:
             ],
             # Second line, ...
             [
-                # Chapter(image_checkpoint_empty_small),    
-                # Chapter(image_checkpoint_line),
-                # Chapter(image_checkpoint_empty),
-                # Chapter(image_checkpoint_line),
-                # Chapter(image_checkpoint_line),
-                # Chapter(image_checkpoint_empty),
-                # Chapter(image_checkpoint_double_corner),
-                # Chapter(image_ending_question, "ending", "run_over", "end"),
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question, "ending", "todo", "end"),
+            ],
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "todo", "sunday_morning"),
+                Chapter(image_checkpoint_empty_after_ending),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question, "ending", "todo", "end"),
+            ],
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "todo", "saturday_evening"),
+                Chapter(image_checkpoint_empty_after_ending),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "todo", "end"),
             ],
         ]
 
@@ -40,5 +62,9 @@ label nurse_config_progress:
             'saturday_afternoon_no_hunt': [
                 {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': False}},
                 {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': True}},
+            ],
+            'saturday_evening': [
+                {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': False}},
+                {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True}},
             ],
         }

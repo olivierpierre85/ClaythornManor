@@ -36,7 +36,6 @@ label doctor_config_progress:
                 Chapter(image_checkpoint_empty_after_ending),
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "shot", "end"),
-
             ],
             [
                 Chapter(image_checkpoint_empty_small),    
