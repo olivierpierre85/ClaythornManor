@@ -31,10 +31,10 @@ label nurse_day2_no_hunt_map_menu:
                 condition = condition_saturday_hunt_morning,
             ),
             # attic
-            TimedMenuChoice(default_room_text('storage'), 'nurse_day2_no_hunt_attic_default', 60, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'nurse_day2_no_hunt_attic_default', 60, room='males_room'),
-            TimedMenuChoice(default_room_text('females_room'), 'nurse_day2_no_hunt_attic_default', 60, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_no_hunt_attic_default', 60, room='butler_room'),
+            TimedMenuChoice(default_room_text('storage'), 'nurse_day2_no_hunt_attic_storage', 0, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'nurse_day2_no_hunt_attic_males_room', 20, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'nurse_day2_no_hunt_attic_females_room', 20, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_no_hunt_attic_butler_room', 20, room='butler_room'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 
                 'nurse_day2_no_hunt_bedroom_psychic_busy', 
                 10, 
@@ -342,13 +342,230 @@ label nurse_day2_no_hunt_bedroom_drunk:
     return
 
 # Attic
-label nurse_day2_no_hunt_attic_default:
-        
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('storage'))
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+label nurse_day2_no_hunt_attic_approach:
 
-    call nurse_attic_default
+    $ change_room("attic_hallway")
+
+    if not nurse_details.saved_variables.get("day2_no_hunt_attic_visited", False):
+
+        $ nurse_details.saved_variables["day2_no_hunt_attic_visited"] = True
+
+        """
+        The attic staircase creaks with every step.
+
+        Up here, the air is close and smells of dust and old timber.
+
+        The corridor runs the length of the house, doors on either side.
+
+        With the servants all occupied below, there is no one to question what I am doing up here.
+        """
+
+    """
+    The door is locked.
+    """
+
+    if not nurse_details.saved_variables["lockpick_seen"]:
+
+        $ nurse_details.saved_variables["lockpick_seen"] = True
+
+        """
+        It would take very little effort to open it.
+
+        In my years of nursing, one becomes acquainted with all manner of locks — on medicine cabinets, ward doors, supply rooms.
+
+        This is nothing remarkable.
+        """
+
+    else:
+
+        """
+        But I easily make my way inside.
+        """
+
+    return
+
+
+label nurse_day2_no_hunt_attic_females_room:
+
+    call nurse_day2_no_hunt_attic_approach
+
+    $ change_room("females_room")
+
+    """
+    The door to the maids' room is unlocked.
+
+    It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
+
+    On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company. A faded photograph is tucked behind them.
+    """
+
+    """
+    I take the photograph down.
+
+    A young woman in stage dress, posed with a man I do not recognise.
+
+    She is smiling broadly.
+
+    I would not have expected it of any of the maids here. One of them has a past she has not spoken of.
+    """
+
+    """
+    I replace everything as it was and step back out.
+    """
+
+    return
+
+
+label nurse_day2_no_hunt_attic_butler_room:
+
+    call nurse_day2_no_hunt_attic_approach
+
+    $ change_room("butler_room")
+
+    """
+    The butler's room is unlocked, but it is the adjoining pantry that draws my eye immediately.
+
+    The door to it stands ajar.
+    """
+
+    play sound door_open
+
+    """
+    Inside: a polished cabinet of household silver, a rack of decanted wine, a locked case that can only hold valuables of some kind.
+
+    This is the nerve centre of the house's wealth.
+
+    Whatever the butler knows — or suspects — he keeps it well-guarded.
+
+    There is too much here to search quickly, and I dare not disturb anything.
+
+    I make a note of it and withdraw.
+    """
+
+    return
+
+
+label nurse_day2_no_hunt_attic_males_room:
+
+    call nurse_day2_no_hunt_attic_approach
+
+    $ change_room("males_room")
+
+    """
+    The footmen's room is unlocked and empty.
+
+    Two beds, a chest of drawers, a peg for each man's jacket.
+
+    I check the drawers quickly — folded shirts, a penknife, a few coins.
+    """
+
+    """
+    Tucked at the very back of the bottom drawer, I find it.
+
+    A passport. Belgian.
+
+    I open it carefully.
+
+    The photograph inside shows a man I do not recognise, though the name on the document is that of one of the footmen.
+
+    It may mean nothing. Or it may mean rather a great deal.
+
+    I close it and replace it exactly as I found it.
+    """
+
+    return
+
+
+label nurse_day2_no_hunt_attic_storage:
+
+    call nurse_day2_no_hunt_attic_approach
+
+    $ change_room("storage")
+
+    """
+    The storage room is vast.
+
+    Trunks stacked three deep, old furniture draped in dust sheets, boxes of every shape and size.
+
+    I barely know where to begin.
+    """
+
+    call run_menu(
+        TimedMenu(
+            id='nurse_day2_no_hunt_attic_storage_search',
+            choices=[
+                TimedMenuChoice('Search the trunks along the far wall', 'nurse_day2_no_hunt_attic_storage_trunks', 30),
+                TimedMenuChoice('Look through the old furniture', 'nurse_day2_no_hunt_attic_storage_furniture', 30),
+                TimedMenuChoice('Check the shelves near the door', 'nurse_day2_no_hunt_attic_storage_shelves', 30),
+                TimedMenuChoice('Give up. This will take all day.', 'nurse_day2_no_hunt_attic_storage_give_up', 10, early_exit=True),
+            ]
+        )
+    )
+
+    return
+
+
+label nurse_day2_no_hunt_attic_storage_trunks:
+
+    """
+    The trunks are packed tightly and most of them are locked.
+
+    I manage to open one — old curtains, heavy and mildewed.
+
+    Another: crockery wrapped in cloth.
+
+    I move on.
+    """
+
+    return
+
+
+label nurse_day2_no_hunt_attic_storage_furniture:
+
+    """
+    I lift a dust sheet from what turns out to be an old escritoire.
+
+    The drawers are empty save for a few dried-up pen nibs and a folded invoice from eighteen ninety.
+
+    Nothing useful.
+    """
+
+    return
+
+
+label nurse_day2_no_hunt_attic_storage_shelves:
+
+    """
+    The shelves near the door hold rows of old tins and jars, most unlabelled.
+
+    I move some aside — and then I stop.
+
+    Behind a row of old paint tins, stacked neatly and deliberately out of sight:
+    """
+
+    """
+    Bullets.
+
+    A good number of them. Military calibre, by the look of it.
+
+    Someone has gone to some trouble to hide these.
+
+    I stand very still for a moment.
+
+    Then I replace the tins exactly as they were, and leave the room as quietly as I came.
+    """
+
+    return
+
+
+label nurse_day2_no_hunt_attic_storage_give_up:
+
+    """
+    I have been in here long enough.
+
+    There is too much to search properly, and I am beginning to feel uneasy.
+
+    I leave without having found anything of note.
+    """
 
     return
