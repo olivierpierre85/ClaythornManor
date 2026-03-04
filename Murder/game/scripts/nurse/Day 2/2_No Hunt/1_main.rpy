@@ -92,7 +92,7 @@ label nurse_day2_hunt:
     Perhaps I can use the remaining time productively.
     """
 
-    $ time_left += 60
+    $ time_left = 60
     call run_menu(nurse_details.saved_variables["day2_no_hunt_map_menu"])
 
     """
@@ -156,11 +156,13 @@ label nurse_day2_no_hunt_bedroom_psychic_busy:
     psychic """
     Oh, Miss Marsh, I am resting my eyes at present.
 
-    Might we speak a little later?
+    But I'll join you for luncheon.
+
+    Might we speak then?
     """
 
     nurse """
-    Of course. Do not disturb yourself on my account.
+    Of course.
     """
     
     $ unlock_map('bedroom_psychic')

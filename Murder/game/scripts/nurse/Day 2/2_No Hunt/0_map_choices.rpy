@@ -16,6 +16,7 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('tea_room'), 'nurse_tea_room_default', 10,  room='tea_room', condition= "not " + condition_saturday_hunt_morning),
             TimedMenuChoice("Wait for luncheon in the Tea Room", 'nurse_day2_hunt_tea_room_early', 0, early_exit = True,  room='tea_room', condition=condition_saturday_hunt_morning),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
@@ -39,6 +40,12 @@ label nurse_day2_no_hunt_map_menu:
                 10, 
                 room='bedroom_psychic',
                 condition = condition_saturday_hunt_morning,
+            ),
+            TimedMenuChoice(default_room_text('bedroom_psychic'), 
+                'nurse_day2_no_hunt_bedroom_psychic_busy', 
+                10, 
+                room='bedroom_psychic',
+                condition = "not " + condition_saturday_hunt_morning,
             ),
             TimedMenuChoice(
                 'Take a rest before lunch', 
@@ -115,8 +122,6 @@ label nurse_day2_no_hunt_downstairs_maid:
     """
     I almost step inside until I notice one of the maids, alone.
     
-    She is busy, likely preparing our luncheon.
-
     It is better if she does not see me.
 
     I pull the door to and leave.
@@ -185,7 +190,7 @@ label nurse_day2_no_hunt_bedroom_try_enter(menu_id, enter_result, enter_duration
     if nurse_details.saved_variables.get('day2_nohunt_bedroom_tries', 0) == 0:
 
         """
-        With most of the household out shooting, one could easily slip inside unseen.
+        With most of the household out hunting, one could easily slip inside unseen.
 
         Though it would be rather difficult to explain if I were caught.
         """
@@ -233,7 +238,7 @@ label nurse_day2_no_hunt_default_room_locked:
 # Lad
 label nurse_day2_no_hunt_bedroom_lad:
 
-    call nurse_bedroom_default_no_answer
+    call nurse_bedroom_default
 
     call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_lad', 'nurse_day2_no_hunt_default_room_locked')
 
@@ -243,7 +248,7 @@ label nurse_day2_no_hunt_bedroom_lad:
 # Doctor
 label nurse_day2_no_hunt_bedroom_doctor:
 
-    call nurse_bedroom_default_no_answer
+    call nurse_bedroom_default
 
     call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_doctor', 'nurse_day2_no_hunt_default_room_locked')
 
@@ -253,7 +258,7 @@ label nurse_day2_no_hunt_bedroom_doctor:
 # Captain
 label nurse_day2_no_hunt_bedroom_captain:
 
-    call nurse_bedroom_default_no_answer
+    call nurse_bedroom_default
 
     call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_captain', 'nurse_day2_no_hunt_default_room_locked')
 
@@ -263,7 +268,7 @@ label nurse_day2_no_hunt_bedroom_captain:
 # Host
 label nurse_day2_no_hunt_bedroom_host:
 
-    call nurse_bedroom_default_no_answer
+    call nurse_bedroom_default
 
     call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_host', 'nurse_day2_no_hunt_default_room_locked')
 
@@ -273,7 +278,7 @@ label nurse_day2_no_hunt_bedroom_host:
 # Drunk
 label nurse_day2_no_hunt_bedroom_drunk:
 
-    call nurse_bedroom_default_no_answer
+    call nurse_bedroom_default
 
     """
     The door shifts slightly under my touch.
