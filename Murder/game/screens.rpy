@@ -414,6 +414,7 @@ screen main_menu():
         
 
     # add "gui/overlay/main_menu_logo.png"
+    use version_screen
 
 
 style main_menu_frame is empty
@@ -507,6 +508,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
                     transclude
 
     use navigation
+    use version_screen
 
 style game_menu_outer_frame is empty
 style game_menu_navigation_frame is empty

@@ -37,9 +37,6 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 
 
 ## Proofreading
-- Fix grammar workflow
-  - Workflow and Agent guidelines ok
-  - Find a way to to this for more that one run in chapter, but for all the runs in the chapter that cover all the texts
 - TODO add internal logic workflow? /logic-test that will read the same file but not correct grammar?
 - NOW Must go hand in hand with TESTING by chapter
 - Lad : Next  DAY 3
