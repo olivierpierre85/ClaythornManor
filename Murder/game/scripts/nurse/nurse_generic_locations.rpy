@@ -16,6 +16,14 @@ label nurse_bedroom_default:
 
 label nurse_bedroom_lockpick_choice(search_label):
 
+    call nurse_lockpick_door
+
+    call expression search_label
+
+    return
+
+label nurse_lockpick_door:
+
     """
     The door is locked.
     """
@@ -25,20 +33,24 @@ label nurse_bedroom_lockpick_choice(search_label):
         $ nurse_details.saved_variables["lockpick_seen"] = True
 
         """
-        It would take very little effort to open it.
+        But it would take me very little effort to open it.
 
-        In my years of nursing, one becomes acquainted with all manner of locks — on medicine cabinets, ward doors, supply rooms.
+        In my years of nursing, I have become acquainted with all manner of locks — on medicine cabinets, ward doors, and supply rooms.
 
-        This is nothing remarkable.
+        And I quickly realised how convenient it is to be able to open them all.
+
+        That is why I learned to pick locks.
+
+        A most useful skill.
+
+        So, I easily make my way inside.
         """
 
     else:
 
         """
-        But I easily make my way inside.
+        I easily make my way inside.
         """
-
-    call expression search_label
 
     return
 
@@ -119,7 +131,9 @@ label nurse_search_lad_default:
 
     There is nothing here worth taking.
 
-    A young man travelling light and spending freely is unlikely to be carrying anything of value.
+    But it should not be a surprise.
+
+    Anyone looking more than a few seconds at Ted Harring would see he is not a man of means.
     """
 
     return
@@ -485,5 +499,210 @@ label nurse_portrait_gallery_default:
 
         I do not linger.
         """
+
+    return
+
+
+# Attic
+label nurse_attic_approach:
+
+    
+    $ change_room("attic_hallway")
+
+    if not nurse_details.saved_variables.get("generic_attic_visited", False):
+
+        $ nurse_details.saved_variables["generic_attic_visited"] = True
+
+        """
+        The attic staircase creaks with every step.
+
+        Up here, the air is close and smells of dust and old timber.
+
+        The corridor runs the length of the house, doors on either side.
+
+        With the servants all occupied below, there is no one to question what I am doing up here.
+        """
+
+    call nurse_lockpick_door
+
+    return
+
+
+label nurse_attic_females_room:
+
+    call nurse_attic_approach
+
+    $ change_room("females_room")
+
+    """
+    It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
+
+    On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company. A faded photograph is tucked behind them.
+    """
+
+    """
+    I take the photograph down.
+
+    A young woman in stage dress, posed with a man I do not recognise.
+
+    She is smiling broadly.
+
+    I would not have expected it of any of the maids here. One of them has a past she has not spoken of.
+    """
+
+    """
+    I replace everything as it was and step back out.
+    """
+
+    return
+
+
+label nurse_attic_butler_room:
+
+    call nurse_attic_approach
+
+    $ change_room("butler_room")
+
+    """
+    The adjoining pantry door stands ajar.
+    """
+
+    play sound door_open
+
+    """
+    Inside: a polished cabinet of household silver, a rack of decanted wine, a locked case that can only hold valuables of some kind.
+
+    This is the nerve centre of the house's wealth.
+
+    Whatever the butler knows — or suspects — he keeps it well-guarded.
+
+    There is too much here to search quickly, and I dare not disturb anything.
+
+    I make a note of it and withdraw.
+    """
+
+    return
+
+
+label nurse_attic_males_room:
+
+    call nurse_attic_approach
+
+    $ change_room("males_room")
+
+    """
+    Two beds, a chest of drawers, a peg for each man's jacket.
+
+    I check the drawers quickly — folded shirts, a penknife, a few coins.
+    """
+
+    """
+    Tucked at the very back of the bottom drawer, I find it.
+
+    A passport. Belgian.
+
+    I open it carefully.
+
+    The photograph inside shows a man I do not recognise, though the name on the document is that of one of the footmen.
+
+    It may mean nothing. Or it may mean rather a great deal.
+
+    I close it and replace it exactly as I found it.
+    """
+
+    return
+
+
+label nurse_attic_storage:
+
+    call nurse_attic_approach
+
+    $ change_room("storage")
+
+    """
+    The storage room is vast.
+
+    Trunks stacked three deep, old furniture draped in dust sheets, boxes of every shape and size.
+
+    I barely know where to begin.
+    """
+
+    call run_menu(
+        TimedMenu(
+            id='nurse_attic_storage_search',
+            choices=[
+                TimedMenuChoice('Search the trunks along the far wall', 'nurse_attic_storage_trunks', 30),
+                TimedMenuChoice('Look through the old furniture', 'nurse_attic_storage_furniture', 30),
+                TimedMenuChoice('Check the shelves near the door', 'nurse_attic_storage_shelves', 30),
+                TimedMenuChoice('Give up. This will take all day.', 'nurse_attic_storage_give_up', 10, early_exit=True),
+            ]
+        )
+    )
+
+    return
+
+
+label nurse_attic_storage_trunks:
+
+    """
+    The trunks are packed tightly and most of them are locked.
+
+    I manage to open one — old curtains, heavy and mildewed.
+
+    Another: crockery wrapped in cloth.
+
+    I move on.
+    """
+
+    return
+
+
+label nurse_attic_storage_furniture:
+
+    """
+    I lift a dust sheet from what turns out to be an old escritoire.
+
+    The drawers are empty save for a few dried-up pen nibs and a folded invoice from eighteen ninety.
+
+    Nothing useful.
+    """
+
+    return
+
+
+label nurse_attic_storage_shelves:
+
+    """
+    The shelves near the door hold rows of old tins and jars, most unlabelled.
+
+    I move some aside — and then I stop.
+
+    Behind a row of old paint tins, stacked neatly and deliberately out of sight:
+    """
+
+    """
+    Bullets.
+
+    A good number of them. Military calibre, by the look of it.
+
+    Someone has gone to some trouble to hide these.
+
+    I stand very still for a moment.
+
+    Then I replace the tins exactly as they were, and leave the room as quietly as I came.
+    """
+
+    return
+
+
+label nurse_attic_storage_give_up:
+
+    """
+    I have been in here long enough.
+
+    There is too much to search properly, and I am beginning to feel uneasy.
+
+    I leave without having found anything of note.
+    """
 
     return
