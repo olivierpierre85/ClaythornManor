@@ -19,28 +19,22 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('tea_room'), 'nurse_tea_room_default', 10,  room='tea_room', condition= "not " + condition_saturday_hunt_morning),
             TimedMenuChoice("Wait for luncheon in the Tea Room", 'nurse_day2_hunt_tea_room_early', 0, early_exit = True,  room='tea_room', condition=condition_saturday_hunt_morning),
             # Bedrooms 
-            TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_no_hunt_bedroom_lad', 10, room='bedroom_lad'),
-            TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_no_hunt_bedroom_doctor', 10, room='bedroom_doctor'),
-            TimedMenuChoice(default_room_text('bedroom_captain'), 'nurse_day2_no_hunt_bedroom_captain', 10, room='bedroom_captain'),
-            TimedMenuChoice(default_room_text('bedroom_host'), 'nurse_day2_no_hunt_bedroom_host', 10, room='bedroom_host'),
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day2_no_hunt_bedroom_drunk', 10, room='bedroom_drunk'),
-            # attic
-            TimedMenuChoice(default_room_text('storage'), 'nurse_day2_no_hunt_attic_default', 60, room='storage', condition=attic_default),
-            TimedMenuChoice(default_room_text('males_room'), 'nurse_day2_no_hunt_attic_default', 60, room='males_room', condition=attic_default),
-            TimedMenuChoice(default_room_text('females_room'), 'nurse_day2_no_hunt_attic_default', 60, room='females_room', condition=attic_default),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_no_hunt_attic_default', 60, room='butler_room', condition=attic_default),
-            
-            TimedMenuChoice(default_room_text('storage'), 'nurse_day2_no_hunt_attic_return_too_soon', 10, room='storage', condition=attic_return_too_soon),
-            TimedMenuChoice(default_room_text('males_room'), 'nurse_day2_no_hunt_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
-            TimedMenuChoice(default_room_text('females_room'), 'nurse_day2_no_hunt_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_no_hunt_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
-            
+            TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_no_hunt_bedroom_lad', 0, room='bedroom_lad'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_no_hunt_bedroom_doctor', 0, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'nurse_day2_no_hunt_bedroom_captain', 0, room='bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'nurse_day2_no_hunt_bedroom_host', 0, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day2_no_hunt_bedroom_drunk', 20, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 
-                'nurse_day2_no_hunt_bedroom_psychic_busy', 
-                10, 
+                'nurse_day2_no_hunt_bedroom_psychic', 
+                0, 
                 room='bedroom_psychic',
                 condition = condition_saturday_hunt_morning,
             ),
+            # attic
+            TimedMenuChoice(default_room_text('storage'), 'nurse_day2_no_hunt_attic_default', 60, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'nurse_day2_no_hunt_attic_default', 60, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'nurse_day2_no_hunt_attic_default', 60, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_no_hunt_attic_default', 60, room='butler_room'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 
                 'nurse_day2_no_hunt_bedroom_psychic_busy', 
                 10, 
@@ -234,13 +228,50 @@ label nurse_day2_no_hunt_default_room_locked:
 
     return
 
+label nurse_day2_no_hunt_enter_psychic:
+    call nurse_bedroom_lockpick_choice('nurse_search_psychic_default')
+    return
+
+label nurse_day2_no_hunt_enter_lad:
+    call nurse_bedroom_lockpick_choice('nurse_search_lad_default')
+    return
+
+label nurse_day2_no_hunt_enter_doctor:
+    call nurse_bedroom_lockpick_choice('nurse_search_doctor_default')
+    return
+
+label nurse_day2_no_hunt_enter_captain:
+    call nurse_bedroom_lockpick_choice('nurse_search_captain_default')
+    return
+
+label nurse_day2_no_hunt_enter_host:
+    call nurse_bedroom_lockpick_choice('nurse_search_host_default')
+    return
+
+
+# Psychic
+label nurse_day2_no_hunt_bedroom_psychic:
+
+    call nurse_bedroom_default
+
+    """
+    Amelia Baxter is not there. This could be my best opportunity to have a look inside her room.
+
+    But she is nearby. It will not look well if she returns and finds me here.
+
+    It is a considerable risk.
+    """
+
+    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_psychic', 'nurse_day2_no_hunt_enter_psychic')
+
+    return
 
 # Lad
 label nurse_day2_no_hunt_bedroom_lad:
 
     call nurse_bedroom_default
 
-    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_lad', 'nurse_day2_no_hunt_default_room_locked')
+    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_lad', 'nurse_day2_no_hunt_enter_lad')
 
     return
 
@@ -250,7 +281,7 @@ label nurse_day2_no_hunt_bedroom_doctor:
 
     call nurse_bedroom_default
 
-    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_doctor', 'nurse_day2_no_hunt_default_room_locked')
+    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_doctor', 'nurse_day2_no_hunt_enter_doctor')
 
     return
 
@@ -260,7 +291,7 @@ label nurse_day2_no_hunt_bedroom_captain:
 
     call nurse_bedroom_default
 
-    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_captain', 'nurse_day2_no_hunt_default_room_locked')
+    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_captain', 'nurse_day2_no_hunt_enter_captain')
 
     return
 
@@ -270,7 +301,7 @@ label nurse_day2_no_hunt_bedroom_host:
 
     call nurse_bedroom_default
 
-    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_host', 'nurse_day2_no_hunt_default_room_locked')
+    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_host', 'nurse_day2_no_hunt_enter_host')
 
     return
 
@@ -284,15 +315,9 @@ label nurse_day2_no_hunt_bedroom_drunk:
     The door shifts slightly under my touch.
 
     It appears Mr Manning has left it resting on the latch.
-    """
 
-    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_drunk', 'nurse_day2_no_hunt_bedroom_drunk_enter', enter_duration=20)
+    Since he is not coming back yet, I could take a quick look.
 
-    return
-
-label nurse_day2_no_hunt_bedroom_drunk_enter:
-
-    """
     I push the door open quietly, ensuring no one is watching.
     """
 
@@ -311,7 +336,7 @@ label nurse_day2_no_hunt_bedroom_drunk_enter:
     """
     A brief glance reveals only empty whisky bottles.
 
-    Quite as I suspected. There is nothing of interest for me here.
+    Quite as I suspected. There is nothing of value for me here.
     """
 
     return
@@ -325,17 +350,5 @@ label nurse_day2_no_hunt_attic_default:
     $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
 
     call nurse_attic_default
-
-    return
-
-
-label nurse_day2_no_hunt_attic_return_too_soon:
-
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('storage'))
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[nurse_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
-
-    call nurse_attic_return_too_soon
 
     return

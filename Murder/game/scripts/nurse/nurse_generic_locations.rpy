@@ -16,13 +16,15 @@ label nurse_bedroom_default:
 
 label nurse_bedroom_lockpick_choice(search_label):
 
+    """
+    The door is locked.
+    """
+
     if not nurse_details.saved_variables["lockpick_seen"]:
 
         $ nurse_details.saved_variables["lockpick_seen"] = True
 
         """
-        The door is locked.
-
         It would take very little effort to open it.
 
         In my years of nursing, one becomes acquainted with all manner of locks — on medicine cabinets, ward doors, supply rooms.
@@ -30,10 +32,13 @@ label nurse_bedroom_lockpick_choice(search_label):
         This is nothing remarkable.
         """
 
-    call run_menu(TimedMenu("nurse_lockpick_default_" + search_label, [
-        TimedMenuChoice("Pick the lock and go in.", search_label, 10, early_exit=True, keep_alive=True),
-        TimedMenuChoice("No. Leave it.", 'generic_cancel', early_exit=True, keep_alive=True),
-    ]))
+    else:
+
+        """
+        But I easily make my way inside.
+        """
+
+    call expression search_label
 
     return
 
@@ -41,7 +46,7 @@ label nurse_bedroom_lockpick_choice(search_label):
 
 label nurse_search_captain_default:
 
-    $ change_room("bedrooms_hallway")
+    $ change_room("bedroom_captain")
 
     play sound door_locked
 
@@ -105,7 +110,7 @@ label nurse_take_garnets:
 
 label nurse_search_lad_default:
 
-    $ change_room("bedrooms_hallway")
+    $ change_room("bedroom_lad")
 
     """
     There isn't much in here.
@@ -122,7 +127,7 @@ label nurse_search_lad_default:
 
 label nurse_search_broken_default:
 
-    $ change_room("bedrooms_hallway")
+    $ change_room("bedroom_broken")
 
     """
     I push the door open.
@@ -143,7 +148,7 @@ label nurse_search_broken_default:
 
 label nurse_search_doctor_default:
 
-    $ change_room("bedrooms_hallway")
+    $ change_room("bedroom_doctor")
 
     """
     A doctor's bag sits open on the small writing desk.
@@ -162,6 +167,28 @@ label nurse_search_doctor_default:
     $ unlock_map('bedroom_doctor')
 
     return
+
+
+label nurse_search_psychic_default:
+
+    $ change_room("bedroom_psychic")
+
+    """
+    The room has a heavy, sweet scent to it. Something thick, like incense or dried lavender.
+
+    A deck of unusual cards is spread across the dressing table.
+
+    Several books on spiritualism and the occult are stacked carelessly by the bed.
+
+    I look through the drawers, but find only clothes and more peculiar trinkets.
+
+    There is nothing of practical use or real monetary value here.
+    """
+
+    $ unlock_map('bedroom_psychic')
+
+    return
+
 
 label nurse_garage_default:
 
