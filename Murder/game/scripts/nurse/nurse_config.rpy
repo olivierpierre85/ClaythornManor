@@ -39,6 +39,25 @@ label init_nurse:
 
         nurse_important_choices = CharacterImportantChoiceList([
             CharacterInformation(
+                0, "day1_exhaustion",
+                "You overexerted yourself on Friday evening and suffered a coughing fit",
+                content_negative="You didn't overexerted yourself on Friday evening",
+                image_file="blood_handkerchief_1",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning' ,'saturday_evening'],
+            ),
+            CharacterInformation(
+                0, "spotted_by_psychic",
+                "You were spotted by Mrs Baxter while searching her room",
+                content_negative="Mrs Baxter did not notice anything amiss",
+                image_file="psychic",
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
+            ),
+        ])
+
+        nurse_objects = CharacterObjectList([
+            CharacterInformation(
                 0, "steal_cutlery_1",
                 "You took some cutlery after Friday's dinner",
                 content_negative="You did not take some cutlery after Friday's dinner",
@@ -70,14 +89,6 @@ label init_nurse:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening','sunday_afternoon'],
             ),
-            CharacterInformation(
-                0, "day1_exhaustion",
-                "You overexerted yourself on Friday evening and suffered a coughing fit",
-                content_negative="You didn't overexerted yourself on Friday evening",
-                image_file="blood_handkerchief_1",
-                chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_morning' ,'saturday_evening'],
-            ),
         ])
 
         nurse_extra_information = CharacterDescriptionHiddenList([
@@ -99,6 +110,14 @@ label init_nurse:
                 image_file="captain",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
+            ),
+            CharacterInformation(
+                2, "host_safe_exists",
+                "You deduced that Lady Claythorn must have a hidden safe in her room",
+                content_negative="You did not look beyond the obvious in Lady Claythorn's room",
+                image_file="host",
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
         ])
         # nurse_description_full = """
@@ -130,7 +149,7 @@ label init_nurse:
             important_choices = nurse_important_choices,
             endings = CharacterInformationList([]),
             observations = nurse_observations,
-            objects = CharacterInformationList([]),
+            objects = nurse_objects,
             progress = nurse_progress,
             saved_variables = copy.deepcopy(nurse_init_variables),
             test_checkpoints = nurse_test_checkpoints,

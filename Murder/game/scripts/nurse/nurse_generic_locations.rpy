@@ -98,7 +98,7 @@ label nurse_search_host_default:
 
     A jet brooch, a few hairpins, a string of garnets in a velvet case.
 
-    They catch my eye for a moment.
+    They catch my eye for a moment — but only for a moment.
     """
 
     $ unlock_map('bedroom_host')
@@ -107,6 +107,42 @@ label nurse_search_host_default:
         TimedMenuChoice("Take the garnets.", 'nurse_take_garnets', 5, early_exit=True),
         TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
     ]))
+
+    """
+    This is not what a woman like Lady Claythorn keeps on her dressing table.
+
+    Garnets and jet are for show — for evenings and guests.
+
+    And then there are the bonds.
+
+    One thousand pounds each. Seven guests. Seven thousand pounds in bearer bonds, held by Lady Claythorn until the ceremony.
+
+    Whoever holds bearer bonds holds the money. There are no names on them. No register.
+
+    They could walk out of this house in anyone's pocket.
+
+    If they exist at all.
+
+    I knew a con when I read that letter. The vague wording, the insistence on attending in person — and a sum of money generous enough to silence most people's doubts.
+
+    It would not surprise me greatly if there were no bonds. No ceremony. Nothing.
+
+    But if they are real, they are here somewhere.
+    """
+
+    """
+    I look more carefully. Behind the curtain, beneath the floorboards, behind a picture — it could be anywhere.
+
+    But I find nothing.
+
+    There is a safe somewhere. There must be.
+
+    Though perhaps not here. A woman like Lady Claythorn may well keep it in a study, or some other room she considers entirely her own.
+
+    I simply have not found it yet.
+    """
+
+    $ nurse_details.threads.unlock('host_safe_exists')
 
     return
 
@@ -220,6 +256,76 @@ label nurse_search_psychic_default:
     """
 
     $ unlock_map('bedroom_psychic')
+
+    """
+    I am about to leave when I hear footsteps in the corridor.
+
+    The door opens.
+    """
+
+    play sound door_open
+
+    psychic """
+    Oh —
+    """
+
+    """
+    Mrs Baxter stops in the doorway. Her eyes move slowly across the room, then settle on me.
+    """
+
+    nurse """
+    Mrs Baxter. Forgive me — I have made a dreadful mistake. I thought this was my room.
+    """
+
+    """
+    A brief silence. I hold her gaze steadily.
+    """
+
+    psychic """
+    Your room.
+    """
+
+    nurse """
+    The corridor all looks rather alike at this end. I am sorry to have disturbed you. I shall leave you to rest.
+    """
+
+    psychic """
+    Yes. I came back to lie down for a short while.
+    """
+
+    """
+    She does not move from the doorway. Her expression is difficult to read — polite enough on the surface, but there is something watchful underneath.
+    """
+
+    psychic """
+    It is curious, though.
+
+    I am quite certain I locked the door when I left this morning.
+    """
+
+    """
+    She says it lightly, almost to herself. But her gaze does not leave me.
+    """
+
+    nurse """
+    Perhaps the latch did not catch properly. These old doors can be unreliable.
+    """
+
+    psychic """
+    Perhaps.
+    """
+
+    """
+    I step past her into the corridor, keeping my pace unhurried.
+
+    She watches me go.
+
+    She is not a fool.
+
+    Whatever she thinks now, she will be watching me more carefully from this moment on.
+    """
+
+    $ nurse_details.threads.unlock('spotted_by_psychic')
 
     return
 
