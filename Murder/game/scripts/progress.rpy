@@ -95,6 +95,7 @@ screen progress:
                                             action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
                                     else:
                                         idle "images/characters/side_bw/side " + char.text_id +" bw.png" at character_progress
+                                        hover "images/characters/side_bw_hover/side " + char.text_id + " bw hover.png"
                                         if not tutorial_on:
                                             action [SetVariable("current_storyline", char), SetVariable("current_checkpoint", None)]
 

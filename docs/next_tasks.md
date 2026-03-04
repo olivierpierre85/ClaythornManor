@@ -72,7 +72,6 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 
 ## Assets & artistic Tasks
 
-- [ ] Black & White image in Progress need a second version with more light when mouse over
 - [ ] For info_cards, RENAME so it's correct, then change everything to webp?
 - [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
 - [ ] Try Locations with characters inside (Whisk/experimental).
