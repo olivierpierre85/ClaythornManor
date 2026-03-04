@@ -161,19 +161,19 @@ label nurse_day2_no_hunt_garden:
 
 
 # Bedroom
-label nurse_day2_no_hunt_bedroom_try_enter(menu_id, enter_result, enter_duration=5):
+label nurse_day2_no_hunt_bedroom_try_enter(menu_id, enter_result, enter_duration=5, do_not_enter_duration=10):
 
     python:
         enter_text_list = [
-            "Perhaps I should take a quick look inside.",
-            "There is no harm in a brief inspection.",
-            "I will just see if anything is out of place."
+            "This is my chance. I should search the room before anyone returns.",
+            "I must be quick. There may be something worth taking in there.",
+            "I cannot afford to hesitate. I go in."
         ]
 
         no_enter_text_list = [
-            "No, I should not pry.",
-            "It is none of my business to be entering other people's rooms.",
-            "I had better leave it be."
+            "Not now. The timing is not right.",
+            "Too risky. If someone were to come along, I could not explain myself.",
+            "I step back. I will find another opportunity."
         ]
     
         # Ensure we don't go out of bounds if the player tries many times
@@ -202,7 +202,7 @@ label nurse_day2_no_hunt_bedroom_try_enter(menu_id, enter_result, enter_duration
             id=menu_id, 
             choices=[
                 TimedMenuChoice(enter_text, enter_result, enter_duration, early_exit=True),
-                TimedMenuChoice(no_enter_text, 'nurse_day2_no_hunt_default_room_no_enter', enter_duration, early_exit=True),
+                TimedMenuChoice(no_enter_text, 'nurse_day2_no_hunt_default_room_no_enter', do_not_enter_duration, early_exit=True),
             ]
         )
     )
