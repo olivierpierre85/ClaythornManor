@@ -24,6 +24,8 @@ label nurse_bedroom_lockpick_choice(search_label):
 
 label nurse_lockpick_door:
 
+    play sound door_locked
+
     """
     The door is locked.
     """
@@ -67,13 +69,15 @@ label nurse_search_captain_default:
 
     A coat hangs straight on its hook.
 
-    A leather case sits unpacked on the stand, its straps buckled precisely.
+    A leather case sits packed on the stand, its straps buckled precisely.
 
     Nothing is left in reach.
 
     Military discipline of this kind belongs to one man in this house.
 
-    And whatever the Captain values, he keeps it close to his person.
+    I search thoroughly, but find nothing of use.
+
+    Whatever the Captain values, he keeps it close to his person.
     """
 
     $ unlock_map('bedroom_captain')
@@ -143,19 +147,35 @@ label nurse_search_broken_default:
 
     $ change_room("bedroom_broken")
 
+    $ play_music('sad', 2)
+
     """
-    I push the door open.
+    Mr Moody's room.
 
-    It is dark inside, and quieter than it ought to be.
+    There is a distinct finality to a room once its occupant is gone.
 
-    The room has a stillness to it that gives me pause.
+    I have seen it many times before.
+    """
+
+    $ unlock_map('bedroom_broken')
+
+    $ nurse_details.saved_variables['day2_has_seen_bedroom_broken'] = True
+
+    """
+    And yet here I am, going through his things.
 
     Nothing on the dressing table.
 
-    A small case under the bed, locked.
+    A small case with his clothes under the bed.
+
+    That's it.
 
     I close the door softly and leave.
     """
+
+    pause 1.0
+
+    $ play_music('PREVIOUS')
 
     return
 

@@ -108,33 +108,6 @@ label nurse_day2_hunt:
     jump nurse_day2_evening
 
 
-label nurse_day2_bedroom_broken:
-
-    $ change_room('bedroom_broken')
-
-    $ play_music('sad', 2)
-
-    """
-    Mr Moody's room.
-
-    There is a distinct finality to a room once its occupant is gone.
-
-    I have seen it many times before.
-
-    I should not linger here. It serves no purpose.
-    """
-
-    $ unlock_map('bedroom_broken')
-
-    pause 1.0
-
-    $ play_music('PREVIOUS')
-
-    $ nurse_details.saved_variables['day2_has_seen_bedroom_broken'] = True
-
-    return
-
-
 label nurse_day2_no_hunt_bedroom_psychic_busy:
     
     $ change_room("bedrooms_hallway")

@@ -59,7 +59,7 @@ label nurse_day2_no_hunt_map_menu:
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
-                'nurse_day2_bedroom_broken', 
+                'nurse_search_broken_default', 
                 20, 
                 room = 'bedroom_broken',
             )
