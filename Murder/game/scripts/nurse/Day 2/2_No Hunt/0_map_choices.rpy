@@ -40,7 +40,7 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'nurse_attic_storage', 0, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'nurse_attic_males_room', 20, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'nurse_attic_females_room', 20, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_attic_butler_room', 20, room='butler_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'nurse_attic_butler_room', 0, room='butler_room'),
 
             TimedMenuChoice(
                 'Take a rest before lunch', 

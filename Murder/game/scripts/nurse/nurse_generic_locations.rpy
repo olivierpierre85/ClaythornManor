@@ -605,21 +605,39 @@ label nurse_attic_butler_room:
     $ change_room("butler_room")
 
     """
-    The adjoining pantry door stands ajar.
+    The room itself is surprisingly ordinary.
+
+    A neat bed, a small washstand, and a plain wooden chair.
+
+    However, standing against the far wall is a large, reinforced cabinet.
+
+    Through its glass panes, I can see the household silver and other valuables gleaming in the dim light.
+
+    This must be where the true wealth of the house is kept.
     """
 
-    play sound door_open
+    call run_menu(TimedMenu("nurse_attic_butler_cabinet_choice", [
+        TimedMenuChoice("Try to open the cabinet", 'nurse_butler_cabinet_lockpick', 20, early_exit=True),
+        TimedMenuChoice("Leave it for now", 'generic_cancel', 10, early_exit=True),
+    ]))
+
+    return
+
+
+label nurse_butler_cabinet_lockpick:
 
     """
-    Inside: a polished cabinet of household silver, a rack of decanted wine, a locked case that can only hold valuables of some kind.
+    I approach the cabinet and attempt to pick the lock.
 
-    This is the nerve centre of the house's wealth.
+    But this is no ordinary lock.
 
-    Whatever the butler knows — or suspects — he keeps it well-guarded.
+    The mechanism inside is far more intricate than those I am used to.
 
-    There is too much here to search quickly, and I dare not disturb anything.
+    After a few moments of fruitless effort, I am forced to admit defeat.
 
-    I make a note of it and withdraw.
+    I shall not be able to open this by force or skill alone.
+
+    I will need the butler's key.
     """
 
     return
