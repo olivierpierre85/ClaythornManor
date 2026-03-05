@@ -27,19 +27,19 @@ label nurse_introduction:
 
     On the surface, it is perfectly composed. Generous, even.
 
-    A weekend at a Scottish manor, an award for distinguished service, a cheque for one thousand pounds.
+    A weekend at a Scottish manor, an award for distinguished service, prize money of one thousand pounds.
 
-    On the surface.
-
-    But I know a con when I see one.
+    But dig deeper and you'll notice something is not right.
 
     The vague wording. The pressure to attend in person. The promise of money that exists only so long as you show up.
 
-    Someone is gathering people. The question is why.
+    Everything in this letter seems to be a ploy to gather people in an isolated place. 
+    
+    The question is why.
 
     The sensible thing would have been to stay at home.
-
-    And yet here I am, somewhere in the north of Scotland, watching the countryside blur past the window.
+    
+    But here I am, somewhere in the north of Scotland, watching the countryside blur past the window.
 
     I fold the letter and slip it back into my bag.
     """
@@ -63,9 +63,7 @@ label nurse_introduction:
 
     A sanatorium.
 
-    Do they imagine money simply appears?
-
-    I cannot afford to rest. Not yet. But I cannot afford to run myself into the ground either.
+    I can't afford that kind of luxury. Not yet. But I cannot afford to run myself into the ground either.
 
     A fine line to walk, and I intend to walk it carefully.
 

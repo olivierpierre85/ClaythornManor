@@ -96,41 +96,34 @@ label nurse_search_host_default:
 
     I look quickly through the dressing table.
 
-    A jet brooch, a few hairpins, a string of garnets in a velvet case.
+    A jet brooch, a few hairpins, a string of pearls in a velvet case.
 
     They catch my eye for a moment — but only for a moment.
     """
 
     $ unlock_map('bedroom_host')
 
-    call run_menu(TimedMenu("nurse_search_host_choice_default", [
-        TimedMenuChoice("Take the garnets.", 'nurse_take_garnets', 5, early_exit=True),
-        TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
-    ]))
-
     """
-    This is not what a woman like Lady Claythorn keeps on her dressing table.
+    This is not much for a woman of Lady Claythorn's standing.
 
-    Garnets and jet are for show — for evenings and guests.
+    Pearls and jet are for show — for evenings and guests.
 
-    And then there are the bonds.
+    There should be more.
 
-    One thousand pounds each. Seven guests. Seven thousand pounds in bearer bonds, held by Lady Claythorn until the ceremony.
+    I also don't see the prize money anywhere. That's the real reason I am in this room.
+
+    One thousand pounds each. Seven guests. Seven thousand pounds in bearer bonds.
 
     Whoever holds bearer bonds holds the money. There are no names on them. No register.
 
     They could walk out of this house in anyone's pocket.
 
-    If they exist at all.
-
-    I knew a con when I read that letter. The vague wording, the insistence on attending in person — and a sum of money generous enough to silence most people's doubts.
+    But that is if they exist at all.
 
     It would not surprise me greatly if there were no bonds. No ceremony. Nothing.
 
     But if they are real, they are here somewhere.
-    """
 
-    """
     I look more carefully. Behind the curtain, beneath the floorboards, behind a picture — it could be anywhere.
 
     But I find nothing.
@@ -140,22 +133,29 @@ label nurse_search_host_default:
     Though perhaps not here. A woman like Lady Claythorn may well keep it in a study, or some other room she considers entirely her own.
 
     I simply have not found it yet.
+
+    Before I leave, I look over what might be worth taking.
+
+    The pearls are the only items of any real value.
     """
 
-    $ nurse_details.threads.unlock('host_safe_exists')
+    call run_menu(TimedMenu("nurse_search_host_choice_default", [
+        TimedMenuChoice("Take the pearls.", 'nurse_take_pearls', 5, early_exit=True),
+        TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
+    ]))
 
     return
 
 
-label nurse_take_garnets:
+label nurse_take_pearls:
 
     """
     Not first-rate, but they will fetch something.
 
-    I slip the case into my bag and close the drawer as I found it.
+    I slip them into my bag and leave.
     """
 
-    $ nurse_details.threads.unlock('steal_garnets')
+    $ nurse_details.threads.unlock('steal_pearls')
 
     return
 
@@ -188,17 +188,19 @@ label nurse_search_broken_default:
     """
     Mr Moody's room.
 
-    There is a distinct finality to a room once its occupant is gone.
+    His body settled on the bed, hidden underneath the bed sheets.
 
-    I have seen it many times before.
-    """
+    One could be easily frightened, but I am used to this.
 
-    $ unlock_map('bedroom_broken')
+    Usually, a dead body doesn't cause me anguish, only respect and sadness.
 
-    $ nurse_details.saved_variables['day2_has_seen_bedroom_broken'] = True
+    And yet here I am, with the purpose of stealing from a man who can't defend himself anymore.
 
-    """
-    And yet here I am, going through his things.
+    I should feel bad, but I know I need the money more than he does now.
+
+    So I start looking.
+
+    But the bounty is meager.
 
     Nothing on the dressing table.
 
@@ -206,10 +208,14 @@ label nurse_search_broken_default:
 
     That's it.
 
+    I could also search his body, but that would be going too far, even for me.
+
     I close the door softly and leave.
     """
 
-    pause 1.0
+    $ unlock_map('bedroom_broken')
+
+    $ nurse_details.saved_variables['day2_has_seen_bedroom_broken'] = True
 
     $ play_music('PREVIOUS')
 

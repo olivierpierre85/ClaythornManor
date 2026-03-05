@@ -56,6 +56,18 @@ label init_nurse:
             ),
         ])
 
+        
+        nurse_observations = CharacterObservationList([
+            CharacterInformation(
+                1, "captain_lie_rank",
+                "You noticed an inconsistency in Captain Sinha's story about his rank",
+                content_negative="You didn't notice the inconsistency in Captain Sinha's story",
+                image_file="captain",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
+        ])
+
         nurse_objects = CharacterObjectList([
             CharacterInformation(
                 0, "steal_cutlery_1",
@@ -74,10 +86,10 @@ label init_nurse:
                 relevant_chapters=['friday_evening','sunday_afternoon'],
             ),
             CharacterInformation(
-                0, "steal_garnets",
-                "You took some garnets from Lady Claythorn's room",
-                content_negative="You did not take some garnets from Lady Claythorn's room",
-                image_file="garnets",
+                0, "steal_pearls",
+                "You took some pearls from Lady Claythorn's room",
+                content_negative="You did not take some pearls from Lady Claythorn's room",
+                image_file="pearls",
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon','sunday_afternoon'],
             ),
@@ -101,25 +113,6 @@ label init_nurse:
             CharacterInformation(60, "lie", "stealing from her patients, or from anyone whenever she has the opportunity.", is_important = True),
             ], nurse_name
         )
-
-        nurse_observations = CharacterObservationList([
-            CharacterInformation(
-                1, "captain_lie_rank",
-                "You noticed an inconsistency in Captain Sinha's story about his rank",
-                content_negative="You didn't notice the inconsistency in Captain Sinha's story",
-                image_file="captain",
-                chapters=['friday_evening'],
-                relevant_chapters=['friday_evening'],
-            ),
-            CharacterInformation(
-                2, "host_safe_exists",
-                "You deduced that Lady Claythorn must have a hidden safe in her room",
-                content_negative="You did not look beyond the obvious in Lady Claythorn's room",
-                image_file="host",
-                chapters=['saturday_afternoon'],
-                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
-            ),
-        ])
         # nurse_description_full = """
         # A discreet 42 years old woman, she is well-dressed in an understated style. 
         # She worked as nurse most of her life, mostly in the army or at an hospital.

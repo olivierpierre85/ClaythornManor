@@ -25,22 +25,23 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('bedroom_host'), 'nurse_day2_no_hunt_bedroom_host', 0, room='bedroom_host'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day2_no_hunt_bedroom_drunk', 20, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 
-                'nurse_day2_no_hunt_bedroom_psychic', 
+                'nurse_day2_no_hunt_bedroom_psychic_busy', 
                 0, 
                 room='bedroom_psychic',
                 condition = condition_saturday_hunt_morning,
+            ),
+            TimedMenuChoice(default_room_text('bedroom_psychic'), 
+                'nurse_day2_no_hunt_bedroom_psychic_risk', 
+                10, 
+                room='bedroom_psychic',
+                condition = "not " + condition_saturday_hunt_morning,
             ),
             # attic
             TimedMenuChoice(default_room_text('storage'), 'nurse_attic_storage', 0, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'nurse_attic_males_room', 20, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'nurse_attic_females_room', 20, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'nurse_attic_butler_room', 20, room='butler_room'),
-            TimedMenuChoice(default_room_text('bedroom_psychic'), 
-                'nurse_day2_no_hunt_bedroom_psychic_busy', 
-                10, 
-                room='bedroom_psychic',
-                condition = "not " + condition_saturday_hunt_morning,
-            ),
+
             TimedMenuChoice(
                 'Take a rest before lunch', 
                 'nurse_day2_no_hunt_rest_before_lunch', 
@@ -250,7 +251,7 @@ label nurse_day2_no_hunt_enter_host:
 
 
 # Psychic
-label nurse_day2_no_hunt_bedroom_psychic:
+label nurse_day2_no_hunt_bedroom_psychic_risk:
 
     call nurse_bedroom_default
 
@@ -262,7 +263,15 @@ label nurse_day2_no_hunt_bedroom_psychic:
     It is a considerable risk.
     """
 
-    call nurse_day2_no_hunt_bedroom_try_enter('nurse_day2_no_hunt_bedroom_psychic', 'nurse_day2_no_hunt_enter_psychic')
+    call run_menu(
+        TimedMenu(
+            id='nurse_day2_no_hunt_bedroom_psychic_busy', 
+            choices=[
+                TimedMenuChoice('Take the risk and go in.', 'nurse_day2_no_hunt_enter_psychic', 5, early_exit=True),
+                TimedMenuChoice('It is too dangerous. Leave.', 'nurse_day2_no_hunt_default_room_no_enter', 10, early_exit=True),
+            ]
+        )
+    )
 
     return
 
