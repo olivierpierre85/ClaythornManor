@@ -13,7 +13,7 @@
 #       - Dead : Broken
 #
 #   Notes : 
-#       - Generic nurse OR map, 240 minutes,?TODO too long?
+#       - Generic psychic OR map
 #       
 # --------------------------------------------
 label nurse_day2_hunt:
@@ -140,6 +140,96 @@ label nurse_day2_no_hunt_bedroom_psychic_busy:
     
     $ unlock_map('bedroom_psychic')
     
+    return
+
+label nurse_search_psychic_caught:
+
+    $ change_room("bedroom_psychic")
+
+    """
+    The room has a heavy, sweet scent to it. Something thick, like incense or dried lavender.
+
+    A deck of unusual cards is spread across the dressing table.
+
+    Several books on spiritualism and the occult are stacked carelessly by the bed.
+
+    I look through the drawers, but find only clothes and more peculiar trinkets.
+
+    There is nothing of real value here.
+    """
+
+    $ unlock_map('bedroom_psychic')
+
+    """
+    I am about to leave when I hear footsteps in the corridor.
+
+    The door opens.
+    """
+
+    play sound door_open
+
+    psychic """
+    Oh —
+    """
+
+    """
+    Mrs Baxter stops in the doorway. Her eyes move slowly across the room, then settle on me.
+    """
+
+    nurse """
+    Mrs Baxter. Forgive me — I have made a dreadful mistake. I thought this was my room.
+    """
+
+    """
+    A brief silence. I hold her gaze steadily.
+    """
+
+    psychic """
+    Your room.
+    """
+
+    nurse """
+    The corridor all looks rather alike at this end. I am sorry to have disturbed you. I shall leave you to rest.
+    """
+
+    psychic """
+    Yes. I came back to lie down for a short while.
+    """
+
+    """
+    She does not move from the doorway. Her expression is difficult to read — polite enough on the surface, but there is something watchful underneath.
+    """
+
+    psychic """
+    It is curious, though.
+
+    I am quite certain I locked the door when I left this morning.
+    """
+
+    """
+    She says it lightly, almost to herself. But her gaze does not leave me.
+    """
+
+    nurse """
+    Perhaps the latch did not catch properly. These old doors can be unreliable.
+    """
+
+    psychic """
+    Perhaps.
+    """
+
+    """
+    I step past her into the corridor, keeping my pace unhurried.
+
+    She watches me go.
+
+    She is not a fool.
+
+    Whatever she thinks now, she will be watching me more carefully from this moment on.
+    """
+
+    $ nurse_details.threads.unlock('spotted_by_psychic')
+
     return
 
 

@@ -230,7 +230,7 @@ label nurse_day2_no_hunt_default_room_locked:
     return
 
 label nurse_day2_no_hunt_enter_psychic:
-    call nurse_bedroom_lockpick_choice('nurse_search_psychic_default')
+    call nurse_bedroom_lockpick_choice('nurse_search_psychic_caught')
     return
 
 label nurse_day2_no_hunt_enter_lad:
