@@ -66,6 +66,22 @@ label init_nurse:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
+            CharacterInformation(
+                0, "footman_belgian",
+                "You found out that the footman is actually from Belgium.",
+                content_negative="You don't know much about the footman.",
+                image_file="footman_belgian",
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
+            ),
+            CharacterInformation(
+                0, "maid_actress",
+                "You discovered that the maid used to be an aspiring actress.",
+                content_negative="You don't know much about the maid.",
+                image_file="maid_actress",
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
+            ),
         ])
 
         nurse_objects = CharacterObjectList([

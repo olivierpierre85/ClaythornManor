@@ -597,6 +597,8 @@ label nurse_attic_females_room:
     I replace everything as it was and step back out.
     """
 
+    $ nurse_details.threads.unlock('maid_actress')
+
     return
 
 
@@ -670,6 +672,8 @@ label nurse_attic_males_room:
 
     I close it and replace it exactly as I found it.
     """
+
+    $ nurse_details.threads.unlock('footman_belgian')
 
     return
 
