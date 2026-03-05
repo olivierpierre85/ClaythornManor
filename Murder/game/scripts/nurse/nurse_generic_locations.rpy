@@ -573,7 +573,7 @@ label nurse_attic_females_room:
 
     call nurse_attic_approach
 
-    $ change_room("females_room")
+    $ change_room("attic_females_room")
 
     """
     It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
@@ -651,7 +651,7 @@ label nurse_attic_males_room:
 
     call nurse_attic_approach
 
-    $ change_room("males_room")
+    $ change_room("attic_males_room")
 
     """
     Two beds, a chest of drawers, a peg for each man's jacket.
