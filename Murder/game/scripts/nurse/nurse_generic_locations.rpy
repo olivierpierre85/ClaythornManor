@@ -578,20 +578,22 @@ label nurse_attic_females_room:
     """
     It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
 
-    On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company. A faded photograph is tucked behind them.
-    """
+    On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company. 
+    
+    A faded photograph is tucked behind them.
 
-    """
     I take the photograph down.
 
     A young woman in stage dress, posed with a man I do not recognise.
 
-    She is smiling broadly.
+    She is smiling broadly. I recognise the young maid working here.
 
-    I would not have expected it of any of the maids here. One of them has a past she has not spoken of.
-    """
+    So she is, or was, an aspiring actress.
 
-    """
+    How peculiar for her to end up here.
+
+    I wonder what her story is.
+
     I replace everything as it was and step back out.
     """
 

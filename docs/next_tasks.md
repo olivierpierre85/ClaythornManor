@@ -7,17 +7,16 @@ Nurse => CHECK the way the lad is handling recurring map choices is Applied to E
 PNG => WEBP conflict in screen. Change all webmp to png? And change infocard python ?
 
 ## Write Story : NURSE - Day 2
-- 
+- IDEAS
+  - Ask the maid why she is an actress? need the unlock from her room?
+  - Or tell the captain that the people are not what to expect
+    - need the footman and the maid unlock?
+    - **Storage room**, if all three choices not exhausted, don't hide entirely? too complicated, make only one option to search or not?? Think about => Could be that you need a clue to find bullets, in multiple menus impossible to find without the clue. You'll get the clue only after a certain death?
+    -  Add clue about Lady Claythorn in her room? We've got nothing now, it's a good place to do that. YES for captain (add to footman and maid unlocks)
 - [ ] Part 1 - Hunt
-  - [ ] MAP CHOICES
-    - [ ] Downstairs OK
-    - [ ] 1st floor, OK
-    - [ ] Bedrooms OK
-      - [ ] Add clue about Lady Claythorn in her room? We've got nothing now, it's a good place to do that
     - [ ] Attic **ONgOING**
-      - [ ] **Storage room**, if all three choices not exhausted, don't hide entirely? too complicated, make only one option to search or not?? Think about => Could be that you need a clue to find bullets, in multiple menus impossible to find without the clue. You'll get the clue only after a certain death?
-      - [ ] Butler rooms, the pantry is too well locked, need a the key to enter. You'll need to steal it from butler? but how?
-  - [ ] DAY 2 EVENING
+
+  - [ ] Part 2 EVENING
     - [ ] Cough warning (call to every choice in map choice ), if time < x """ I m exhausting my self"
     - [ ] MAKe on death (or escape) possible when NO exhaustion at all
   - [ ] the test for no hunt chapter don't work, the result is just a ted harring intro? what is happening?
