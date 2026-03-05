@@ -342,7 +342,7 @@ label psychic_confront_lord:
 
     play sound door_open
 
-    $ change_room("attic_big_room")
+    $ change_room("attic_storage_room")
 
     """
     It's even more decrepit than the rest of the attic.

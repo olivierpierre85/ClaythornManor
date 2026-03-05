@@ -682,7 +682,7 @@ label nurse_attic_storage:
 
     call nurse_attic_approach
 
-    $ change_room("storage")
+    $ change_room("attic_storage_room")
 
     """
     The storage room is vast.
