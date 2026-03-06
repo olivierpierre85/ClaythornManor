@@ -1,0 +1,183 @@
+{
+    "tester_id": "admin",
+    "timestamp": "2026-03-06T10:26:40.656201",
+    "unlocked_threads": [
+        "day1_exhaustion"
+    ],
+    "choices": [
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "other_choices": [
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Gun room",
+                "Billiard room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Library",
+                "Portrait Gallery",
+                "Wait for luncheon in the Tea Room",
+                "William the Conqueror Bedroom",
+                "Edward II Bedroom",
+                "George I Bedroom",
+                "Henry IV Bedroom",
+                "George IV Bedroom",
+                "Elizabeth I Bedroom",
+                "Storage Room",
+                "Male Servants Room",
+                "Female Servants Room",
+                "Butler's Room",
+                "Take a rest before lunch",
+                "Richard III Bedroom"
+            ],
+            "selected": "Butler's Room",
+            "redirect": "nurse_attic_butler_room",
+            "time_left": 60,
+            "timestamp": "2026-03-06T11:33:59.632209",
+            "time_to_decide": 7.565006,
+            "time_since_last": 7.028003
+        },
+        {
+            "menu": "nurse_attic_butler_cabinet_choice",
+            "other_choices": [
+                "Try to open the cabinet",
+                "Leave it for now"
+            ],
+            "selected": "Try to open the cabinet",
+            "redirect": "nurse_butler_cabinet_lockpick",
+            "time_left": 60,
+            "timestamp": "2026-03-06T11:34:08.895228",
+            "time_to_decide": 2.449443,
+            "time_since_last": 9.263019
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "other_choices": [
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Gun room",
+                "Billiard room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Library",
+                "Portrait Gallery",
+                "Wait for luncheon in the Tea Room",
+                "William the Conqueror Bedroom",
+                "Edward II Bedroom",
+                "George I Bedroom",
+                "Henry IV Bedroom",
+                "George IV Bedroom",
+                "Elizabeth I Bedroom",
+                "Storage Room",
+                "Male Servants Room",
+                "Female Servants Room",
+                "Take a rest before lunch",
+                "Richard III Bedroom"
+            ],
+            "selected": "Female Servants Room",
+            "redirect": "nurse_attic_females_room",
+            "time_left": 40,
+            "timestamp": "2026-03-06T11:34:11.621868",
+            "time_to_decide": 13.664722,
+            "time_since_last": 2.72664
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "other_choices": [
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Gun room",
+                "Billiard room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Library",
+                "Portrait Gallery",
+                "Wait for luncheon in the Tea Room",
+                "William the Conqueror Bedroom",
+                "Edward II Bedroom",
+                "George I Bedroom",
+                "Henry IV Bedroom",
+                "George IV Bedroom",
+                "Elizabeth I Bedroom",
+                "Storage Room",
+                "Male Servants Room",
+                "Take a rest before lunch",
+                "Richard III Bedroom"
+            ],
+            "selected": "Male Servants Room",
+            "redirect": "nurse_attic_males_room",
+            "time_left": 20,
+            "timestamp": "2026-03-06T11:34:26.189309",
+            "time_to_decide": 0.778654,
+            "time_since_last": 14.567441
+        },
+        {
+            "menu": "psychic_generic_menu_nurse",
+            "other_choices": [
+                "What do you think of this weather?",
+                "Tell me more about yourself.",
+                "What do you think of this place?",
+                "How old are you?",
+                "What room are you in?",
+                "What do you think of the other guests?",
+                "You don't have anymore questions for her"
+            ],
+            "selected": "You don't have anymore questions for her",
+            "redirect": "generic_cancel",
+            "time_left": 60,
+            "timestamp": "2026-03-06T11:34:27.757784",
+            "time_to_decide": 4.189987,
+            "time_since_last": 1.568475
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "other_choices": [
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Gun room",
+                "Billiard room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Library",
+                "Portrait Gallery",
+                "Tea room",
+                "William the Conqueror Bedroom",
+                "Edward II Bedroom",
+                "George I Bedroom",
+                "Henry IV Bedroom",
+                "George IV Bedroom",
+                "Elizabeth I Bedroom",
+                "Storage Room",
+                "Wait until the others return",
+                "Richard III Bedroom"
+            ],
+            "selected": "Storage Room",
+            "redirect": "nurse_attic_storage",
+            "time_left": 60,
+            "timestamp": "2026-03-06T11:34:32.565598",
+            "time_to_decide": 21.462764,
+            "time_since_last": 4.807814
+        },
+        {
+            "menu": "nurse_attic_storage_search",
+            "other_choices": [
+                "Search everything carefully",
+                "Give up. This will take all day."
+            ],
+            "selected": "Search everything carefully",
+            "redirect": "nurse_attic_storage_search_all",
+            "time_left": 60,
+            "timestamp": "2026-03-06T11:34:58.108526",
+            "time_to_decide": 4.596652,
+            "time_since_last": 25.542928
+        }
+    ]
+}

@@ -745,6 +745,7 @@ label nurse_attic_storage_search_all:
     A good number of them. 
 
     Someone has gone to some trouble to hide these.
+    """
 
     $ nurse_details.threads.unlock('find_bullets')
 

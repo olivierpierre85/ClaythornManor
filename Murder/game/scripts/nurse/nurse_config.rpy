@@ -121,7 +121,7 @@ label init_nurse:
                 0, "find_bullets",
                 "You found a stash of military calibre bullets hidden in the attic storage room",
                 content_negative="You did not find the hidden bullets",
-                image_file="bullets_1",
+                image_file="bullets",
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon','saturday_evening'],
             ),
