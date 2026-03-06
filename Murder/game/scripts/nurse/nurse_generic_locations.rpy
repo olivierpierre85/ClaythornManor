@@ -344,11 +344,27 @@ label nurse_take_gun:
     My hand closes around the grip of a small revolver.
 
     It is not loaded.
+    """
 
-    And I have not seen any bullets lying about.
+    if nurse_details.threads.is_unlocked('find_bullets'):
 
-    Nevertheless, it could prove useful.
+        """
+        But I already have the bullets I found in the attic.
 
+        I take them out and carefully load the weapon.
+
+        It is good to be prepared.
+        """
+
+    else:
+
+        """
+        And I have not seen any bullets lying about.
+
+        Nevertheless, it could prove useful.
+        """
+
+    """
     I slip it into my bag.
 
     Nobody will notice. Not for a while, at any rate.
@@ -696,9 +712,7 @@ label nurse_attic_storage:
         TimedMenu(
             id='nurse_attic_storage_search',
             choices=[
-                TimedMenuChoice('Search the trunks along the far wall', 'nurse_attic_storage_trunks', 30),
-                TimedMenuChoice('Look through the old furniture', 'nurse_attic_storage_furniture', 30),
-                TimedMenuChoice('Check the shelves near the door', 'nurse_attic_storage_shelves', 30),
+                TimedMenuChoice('Search everything carefully', 'nurse_attic_storage_search_all', 60, early_exit=True),
                 TimedMenuChoice('Give up. This will take all day.', 'nurse_attic_storage_give_up', 10, early_exit=True),
             ]
         )
@@ -707,7 +721,7 @@ label nurse_attic_storage:
     return
 
 
-label nurse_attic_storage_trunks:
+label nurse_attic_storage_search_all:
 
     """
     The trunks are packed tightly and most of them are locked.
@@ -716,46 +730,42 @@ label nurse_attic_storage_trunks:
 
     Another: crockery wrapped in cloth.
 
-    I move on.
-    """
-
-    return
-
-
-label nurse_attic_storage_furniture:
-
-    """
     I lift a dust sheet from what turns out to be an old escritoire.
 
     The drawers are empty save for a few dried-up pen nibs and a folded invoice from eighteen ninety.
 
-    Nothing useful.
-    """
-
-    return
-
-
-label nurse_attic_storage_shelves:
-
-    """
     The shelves near the door hold rows of old tins and jars, most unlabelled.
 
     I move some aside — and then I stop.
 
     Behind a row of old paint tins, stacked neatly and deliberately out of sight:
-    """
 
-    """
     Bullets.
 
-    A good number of them. Military calibre, by the look of it.
+    A good number of them. 
 
     Someone has gone to some trouble to hide these.
 
-    I stand very still for a moment.
+    $ nurse_details.threads.unlock('find_bullets')
 
+    if nurse_details.threads.is_unlocked('take_gun'):
+
+        """
+        I take them out and carefully load the small revolver I took from the gun room.
+
+        It is good to be prepared.
+        """
+
+    else:
+
+        """
+        I shall need a gun to use these, but I take them regardless.
+        """
+
+    """
     Then I replace the tins exactly as they were, and leave the room as quietly as I came.
     """
+
 
     return
 
