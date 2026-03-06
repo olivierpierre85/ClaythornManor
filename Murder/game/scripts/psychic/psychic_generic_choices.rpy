@@ -321,7 +321,7 @@ label psychic_generic_manor:
 # -----------------------------------------------------------------------
 # NURSE-SPECIFIC LABELS
 
-label psychic_generic_weather_saturday_morning:
+label psychic_generic_weather_saturday_nurse:
 
     call psychic_generic_weather_saturday
 

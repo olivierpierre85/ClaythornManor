@@ -26,7 +26,7 @@ label nurse_config_menu:
     #---------------------------------------------------------------------
     # Psychic
     $ psychic_generic_menu_nurse = TimedMenu("psychic_generic_menu_nurse", [
-        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday_morning', 10, condition = condition_saturday),
+        TimedMenuChoice('What do you think of this weather?', 'psychic_generic_weather_saturday_nurse', 10, condition = condition_saturday),
         TimedMenuChoice('Tell me more about yourself.', 'psychic_generic_background_nurse', 20, linked_choice = "psychic_generic_heroic_act_nurse"),
         TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act_nurse', 20, condition = "is_linked_choice_hidden('psychic_generic_menu_nurse', 'psychic_generic_heroic_act_nurse')"),
         TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 10),
