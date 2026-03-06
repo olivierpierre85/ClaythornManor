@@ -117,6 +117,14 @@ label init_nurse:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening','sunday_afternoon'],
             ),
+            CharacterInformation(
+                0, "find_bullets",
+                "You found a stash of military calibre bullets hidden in the attic storage room",
+                content_negative="You did not find the hidden bullets",
+                image_file="bullets_1",
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon','saturday_evening'],
+            ),
         ])
 
         nurse_extra_information = CharacterDescriptionHiddenList([
