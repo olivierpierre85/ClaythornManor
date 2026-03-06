@@ -11,7 +11,8 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 - [ ] Part 1 - Hunt
     - [ ] Attic **ONgOING**
     - [ ] TEST TEST TESTS create manuel PATH WITH EVERYTHING;
-    - [ ] EXTEND OTHER GUESTS ? Too similar that first day ? Maybe Later
+    - [ ] CHECK Music and sound => New music when caught by psychic
+    - [ ] EXTEND OTHER GUESTS for Psychic? Too similar that first day ? Maybe Later
 
   - [ ] Part 2 EVENING
     - [ ] - IDEAS - For evening

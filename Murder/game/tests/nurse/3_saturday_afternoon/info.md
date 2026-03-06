@@ -1,24 +1,6 @@
 ## File 1
+- **Morning**: Scullery, Garage, Gun Room (Take Pistol), Early exit to Tea Room
+- **Lunch**: Weather, Host
+- **Afternoon**: Dining Room, Billiard Room, Entrance Hall, Garden (Timeout)
 
-### Map Choices Part 1
 
-- Scullery
-- Gun Room - Take Pistol
-- garage
-- TEA Room end of part 1
-
-### Amelia Baxter
-
-- Weather
-- Lady Claythorn
-- No more questions
-
-### Map Choices Part 2
-
-- Dining Room
-- Billiard Room
-- Entrance hall
-- Garden
-- END
-  
-## File 2
