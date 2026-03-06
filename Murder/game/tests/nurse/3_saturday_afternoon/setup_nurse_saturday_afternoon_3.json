@@ -4,11 +4,6 @@
     "unlocked_threads": [],
     "choices": [
         {
-            "menu": "character_selection",
-            "character_choice": "nurse",
-            "timestamp": "2026-03-06T11:39:50.675771"
-        },
-        {
             "menu": "nurse_day2_no_hunt_map_menu",
             "other_choices": [
                 "Kitchen",

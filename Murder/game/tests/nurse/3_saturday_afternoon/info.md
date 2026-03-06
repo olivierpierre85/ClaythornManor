@@ -13,3 +13,8 @@
 - **Morning**: Gun Room (Take Pistol), Storage room Find bullets (guns on hand)
 - **Lunch**: No talk
 - - **Afternoon**: lad, doctor, captain, host(take pearls), drunk
+
+## File 
+- **Morning**: broken,host (don't take), doctor (don't enter), nurse (rest)
+- **Lunch**: No talk
+- - **Afternoon**: nurse (rest)
