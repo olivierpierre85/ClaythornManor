@@ -123,7 +123,7 @@
       "time_since_last": 5.932331
     },
     {
-      "menu": "nurse_library_default",
+      "menu": "nurse_library_choice",
       "other_choices": [
         "Look it up. It may be useful.",
         "Leave it. I am too tired for reading tonight."

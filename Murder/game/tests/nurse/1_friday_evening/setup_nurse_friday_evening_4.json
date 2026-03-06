@@ -45,7 +45,7 @@
             "time_since_last": 1.0
         },
         {
-            "menu": "nurse_day1_evening_gun_room_choice",
+            "menu": "nurse_gun_room_choice",
             "other_choices": [
                 "Take a pistol",
                 "Leave it. Too dangerous to carry."

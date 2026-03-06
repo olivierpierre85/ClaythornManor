@@ -195,13 +195,13 @@
       "time_since_last": 4.332487
     },
     {
-      "menu": "nurse_day1_evening_gun_room_choice",
+      "menu": "nurse_gun_room_choice",
       "other_choices": [
         "Take a pistol",
         "Leave it. Too dangerous to carry."
       ],
       "selected": "Take a pistol",
-      "redirect": "nurse_day1_evening_take_gun",
+      "redirect": "nurse_take_gun",
       "time_left": 70,
       "timestamp": "2026-02-27T16:49:54.525350",
       "time_to_decide": 0.899328,

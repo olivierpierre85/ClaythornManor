@@ -275,13 +275,13 @@
       "time_since_last": 3.633738
     },
     {
-      "menu": "nurse_library_default",
+      "menu": "nurse_library_choice",
       "other_choices": [
         "Look it up. It may be useful.",
         "Leave it. I am too tired for reading tonight."
       ],
       "selected": "Look it up. It may be useful.",
-      "redirect": "nurse_day1_evening_library_war_book",
+      "redirect": "nurse_library_war_book",
       "time_left": 20,
       "timestamp": "2026-02-27T16:52:58.014181",
       "time_to_decide": 4.041711,
