@@ -13,7 +13,7 @@
         "nurse::friday_afternoon",
         "nurse::friday_evening",
         "nurse::saturday_morning",
-        "nurse::saturday_afternoon_no_hunt",
+        "nurse::saturday_afternoon",
       ],
       "default": "lad"
     },
