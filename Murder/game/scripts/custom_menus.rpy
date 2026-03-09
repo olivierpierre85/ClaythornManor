@@ -318,14 +318,19 @@ init -1 python:
             elif full_testing_mode and full_testing_mode_choices:
 
                 full_testing_mode_choice = full_testing_mode_choices.pop(0)
+                redirect_target = full_testing_mode_choice.get("redirect")
 
-                for i, choice in enumerate(self.choices): 
-                    if choice.is_valid() and full_testing_mode_choice["redirect"] == choice.redirect: 
-                        selected_choice = choice
-                        selected_choice_i = i
+                if redirect_target:
+                    for i, choice in enumerate(self.choices): 
+                        if choice.is_valid() and redirect_target == choice.redirect: 
+                            selected_choice = choice
+                            selected_choice_i = i
+                            break
 
                 if not selected_choice:
-                    raise Exception("full_testing_mode: planned choice not valid / not found")
+                    # If we don't find the choice, we stop the full testing mode and return to manual
+                    # This allows the user to continue from where the test ended
+                    renpy.store.full_testing_mode = False
                 
 
             if not selected_choice:

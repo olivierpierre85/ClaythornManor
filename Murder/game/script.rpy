@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 # Global Variable
 
 init -1000 python:
@@ -57,10 +57,10 @@ init -1000 python:
 
     def load_latest_choices_from_testing():
         base = renpy.config.gamedir
-        folder = os.path.join(base, "tests", "result")
+        folder = os.path.join(base, "tests", "testing_mode_choices")
         files = glob.glob(os.path.join(folder, "*.json"))
         if not files:
-            return None, []
+            return []
 
         latest_file = max(files, key=os.path.getmtime)
         with open(latest_file, "r", encoding="utf-8") as fh:  # use fh, not f
@@ -142,7 +142,6 @@ label start():
     $ current_character = lad_details
     $ current_storyline = lad_details # TODO move
 
-    # TODO: Implement full_testing_mode 
     python: 
    
         full_testing_mode_choices = None
@@ -150,14 +149,32 @@ label start():
         # Load latest path file for test
         if full_testing_mode:
             full_testing_mode_choices = load_latest_choices_from_testing()
-            print(full_testing_mode_choices)
+            # print(full_testing_mode_choices)
 
+    if full_testing_mode:
 
-    if debug_activated:
+        # Jump to the first choice menu item (usualy character selection, but can be modify for starting later in the game)
+        python:
+            if full_testing_mode_choices:
+                first_choice = full_testing_mode_choices[0]
+                menu_id = first_choice.get("menu")
+                
+                if renpy.has_label(menu_id):
+                    # We pop if it's a direct jump, EXCEPT for character_selection which pops itself
+                    if menu_id != "character_selection":
+                        full_testing_mode_choices.pop(0)
+                    renpy.jump(menu_id)
+                else:
+                    renpy.jump("character_selection")
+            else:
+                renpy.jump("character_selection")
+
+    elif debug_activated:
         call init_debug
 
         # These display lines of dialogue.
         jump character_selection
+    
     else:
 
         jump lad_introduction
