@@ -148,6 +148,12 @@ TODO rename !!!!!
 - **Transitions**: After death, a voice/text appears: "Ok this not the right path try again", "Computation complete", etc.
 - **Visuals**: Show lines of code in some scenes between deaths. Fake bugs where we see part of the code/simulation.
 
+### Second idea : Claythorn is training game
+You are an inspector (two juniors inspectors for dialog), you are in charge of learning how to use the AI solve crime, with visual aid. 
+
+Visual AID  Crime solving A I  : VAcsAI
+Or a variation of that.
+
 ### The "Almost Ending"
 *Dialogue between Detective and AI:*
 - **AI**: "Computation complete. Total computation too complex, chose manually next possibility. (waiting time between 3 to 876 days)."
