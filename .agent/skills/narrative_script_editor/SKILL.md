@@ -1,8 +1,8 @@
-### **Claude Skill: Narrative Script Architect**
-
-**Name:** `narrative_script_editor`
-
-**Description:** Performs a targeted editorial pass on Ren'Py (.rpy) script files. This skill specialises in replacing "TODO" placeholders with context-aware prose and making minimal, necessary corrections to existing dialogue and narration, while strictly preserving code integrity and indentation.
+---
+name: narrative_script_editor
+description: Performs a targeted editorial pass on Ren'Py (.rpy) script files. This skill specialises in replacing "TODO" placeholders with context-aware prose and making minimal, necessary corrections to existing dialogue and narration, while strictly preserving code integrity and indentation.
+---
+--------------
 
 **Instructions:**
 1. **Scope & Identification:** - Identify the target file (primarily `.rpy` scripts). 
