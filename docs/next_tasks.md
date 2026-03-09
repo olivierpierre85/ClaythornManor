@@ -49,8 +49,7 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 - Doctor: TODO Full
 
 ## Technical Tasks
-- NORMALIZE every skills in AGENTS.MD (it should be seen by claude)
-- [ ] Veo in main menu by adding a window with the version (DEMO 0.2)
+- Make TEST_mode useful. Get
 -  [ ] **Testing**: Define paths that test all dialogs for the first 3 character
     - [ ] Doctor
     - [ ] Lad

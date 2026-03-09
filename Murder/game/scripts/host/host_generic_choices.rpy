@@ -56,10 +56,6 @@ label host_generic_background_nurse:
 
 label host_generic_invite_nurse:
 
-    nurse """
-    Why did you invite us here?
-    """
-
     host """
     Everything was explained in the letter, was it not?
     """
@@ -97,7 +93,7 @@ label host_generic_other_guests_nurse:
     host """
     A group of people of great value.
 
-    We shouldn't talk about them behind their backs.
+    But we shouldn't talk about them behind their backs.
 
     That is improper.
     """
@@ -108,13 +104,13 @@ label host_generic_other_guests_nurse:
 label host_generic_manor:
 
     host """
-    It has been in my husband's family for quite some time.
+    This "place" has been in my family for quite some time.
 
     I have always found it rather quaint.
 
     It is a trifle too large for me and my staff, I am afraid.
 
-    But I can't really give it up, it's my family's legacy.
+    But I can't really give it up, it's my legacy.
     """
 
     return
