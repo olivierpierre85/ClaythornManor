@@ -1,3 +1,4 @@
+label init_host:
     # call host_config_menu
     
     call host_config_progress

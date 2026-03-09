@@ -9,12 +9,11 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
 ## Write Story : NURSE - Day 2
 
 - [ ] Part 1 - Hunt
-    - [ ] Attic **ONgOING**
     - [ ] TEST TEST TESTS create manuel PATH WITH EVERYTHING;
     - [ ] CHECK Music and sound => New music when caught by psychic
     - [ ] EXTEND OTHER GUESTS for Psychic? Too similar that first day ? Maybe Later
 
-  - [ ] Part 2 EVENING
+  - [ ]** Part 2 EVENING**
     - [ ] - IDEAS - For evening
     - Ask the maid why she is an actress? need the unlock from her room?
     - Or tell the captain that the people are not what to expect
@@ -30,6 +29,9 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
   ### Endings
 - Exhaustion => Possible from the hunt? Evening? (if exhausted the day before?)
   
+## Write Story : NURSE - Day 3
+
+???
   
 ## Write Story : Day 3 - Doctor FINIS DOCTOR
 - [ ] RETRY EVERYTHING
