@@ -14,6 +14,7 @@ PNG => WEBP conflict in screen. Change all webmp to png? And change infocard pyt
     - [ ] EXTEND OTHER GUESTS for Psychic? Too similar that first day ? Maybe Later
 
   - [ ]** Part 2 EVENING**
+  - - NEXT => MAP ROOM
     - [ ] - IDEAS - For evening
     - Ask the maid why she is an actress? need the unlock from her room?
     - Or tell the captain that the people are not what to expect
