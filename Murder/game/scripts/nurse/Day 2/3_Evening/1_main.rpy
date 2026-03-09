@@ -105,6 +105,10 @@ label nurse_day2_evening:
         But that, in itself, proves nothing.
         """
 
+    """
+    I decide I should rest before dinner.
+    """
+
     call wait_screen_transition()
 
     call change_time(18, 30)
@@ -114,9 +118,7 @@ label nurse_day2_evening:
     """
     The gong sounds.
 
-    I would have preferred to stay in my room, but that is not the right course.
-
-    It is better to be seen than to be conspicuous by my absence.
+    I would prefer to stay in my room, but that would raise questions.
     """
 
     $ change_room("dining_room", irisout)
@@ -130,6 +132,22 @@ label nurse_day2_evening:
 
     I take my usual place and look around the table.
 
+    But I realise that I have no one in front of me, nor to my side.
+
+    Lady Claythorn observes my awkward position.
+    """
+
+    host """
+    I think it's better if you come sit next to me tonight.
+
+    No reason to leave you alone at the end of the table.
+    """
+
+    nurse """
+    Thank you.
+    """
+
+    """
     Everyone is subdued.
 
     Lady Claythorn stands.
@@ -144,17 +162,14 @@ label nurse_day2_evening:
 
     I find myself wondering what she is actually feeling beneath that composed exterior.
 
-    To my right, Amelia Baxter sits quietly.
-
-    Across from me, Ted Harring stares at the tablecloth.
+    Now that she is sitting to my right, I have the opportunity to question her.
     """
 
     $ time_left = 90
     call run_menu(TimedMenu("nurse_day2_evening_dinner", [
-        TimedMenuChoice("Speak to Mrs Baxter", 'nurse_day2_dinner_psychic'),
-        TimedMenuChoice("Speak to Ted Harring", 'nurse_day2_dinner_lad'),
+        TimedMenuChoice("Speak to Lady Claythorn", 'nurse_day2_dinner_host'),
         TimedMenuChoice("Say nothing, eat your dinner", 'generic_cancel', early_exit=True),
-    ], image_left = "psychic", image_right = "lad"))
+    ], image_right = "host"))
 
     call change_time(21, 00)
 
@@ -200,75 +215,32 @@ label nurse_day2_evening:
     jump work_in_progress
 
 
-label nurse_day2_dinner_psychic:
+label nurse_day2_dinner_host:
 
     nurse """
-    Are you quite all right, Mrs Baxter?
+    It has been a dreadful day, has it not, Lady Claythorn?
+
+    To lose such a man as Doctor Baldwin in such a manner...
     """
 
-    psychic """
-    As well as one can be, I think.
-
-    I keep seeing the poor man being carried in.
-
-    It is not an easy image to shake.
+    host """
+    It is indeed a tragedy.
     """
 
     nurse """
-    It is not.
+    And poor Mr Manning.
 
-    But we must not let it overwhelm us.
-
-    We shall leave tomorrow. The police will handle it from there.
+    One can only hope the authorities arrive soon to settle this matter.
     """
 
-    psychic """
-    Yes. You are quite right.
-
-    Still, it is very sobering.
-
-    One does not expect this sort of thing.
-    """
-
-    return
-
-
-label nurse_day2_dinner_lad:
-
-    nurse """
-    Mr Harring.
-    """
-
-    lad """
-    Miss Marsh.
-
-    Quite a day, wasn't it.
-    """
-
-    nurse """
+    host """
     Indeed.
-
-    I hope you are not too shaken.
-    """
-
-    lad """
-    Me? Oh, I'm all right. I mean...
-
-    It's not the nicest thing, is it.
-
-    Carrying someone back like that.
+    
+    But please, let us not dwell on such dark matters while we eat, my dear.
     """
 
     nurse """
-    No.
-
-    You did well, though.
-    """
-
-    lad """
-    Suppose I did.
-
-    Thanks, Miss Marsh.
+    Of course.
     """
 
     return
