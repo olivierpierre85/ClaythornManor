@@ -1,14 +1,16 @@
-label init_host:
-
-    # call host_config_map
-    
     # call host_config_menu
+    
+    call host_config_progress
     
     python:
         host_name = "Lady Claythorn"
         
         host_init_variables = {
         }
+
+        host_important_choices = CharacterImportantChoiceList([])
+        host_observations = CharacterObservationList([])
+        host_objects = CharacterObjectList([])
 
         host_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "name_age", "Elisabeth - is born in 1865 and", is_important = True), 
@@ -43,11 +45,13 @@ label init_host:
             description_short = "Older Lady",
             description_long = host_description,
             description_hidden = host_extra_information,
-            important_choices = CharacterInformationList([]),
+            important_choices = host_important_choices,
             endings = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
-            objects = CharacterInformationList([]),
-            progress = [],
+            observations = host_observations,
+            objects = host_objects,
+            progress = host_progress,
+            saved_variables = copy.deepcopy(host_init_variables),
+            test_checkpoints = host_test_checkpoints,
         )
         host = Character("host_details.get_name()", image="host", dynamic=True)
     
