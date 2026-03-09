@@ -243,4 +243,6 @@ label nurse_day2_dinner_host:
     Of course.
     """
 
+    call host_generic
+
     return
