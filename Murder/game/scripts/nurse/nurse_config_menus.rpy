@@ -43,4 +43,16 @@ label nurse_config_menu:
         TimedMenuChoice('Talk about something else', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "psychic")
 
+    #---------------------------------------------------------------------
+    # Host
+    $ host_generic_menu_nurse = TimedMenu("host_generic_menu_nurse", [
+        TimedMenuChoice('Tell me more about yourself.', 'host_generic_background_nurse', 20, linked_choice ="host_generic_invite_nurse"),
+        TimedMenuChoice('Why did you invite us here?', 'host_generic_invite_nurse', 20, condition = "is_linked_choice_hidden('host_generic_menu_nurse', 'host_generic_invite_nurse')"),
+        TimedMenuChoice('What do you think of the other guests?', 'host_generic_other_guests_nurse', 10),
+        TimedMenuChoice('What do you think of this place?', 'host_generic_manor', 10),
+        TimedMenuChoice('How old are you?', 'host_generic_age', 10),
+        TimedMenuChoice('What room are you in?', 'host_generic_room', 10),
+        TimedMenuChoice("You don't have anymore questions for her", 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "host")
+
     return
