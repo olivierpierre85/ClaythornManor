@@ -300,5 +300,16 @@
             "call wait_screen_transition()"
         ],
         "description": "Wait screen transition"
+    },
+    "Character Check": {
+        "prefix": [
+            "if character",
+            "if char",
+            "current_character"
+        ],
+        "body": [
+            "if current_character.text_id == \"${1|lad,doctor,psychic,nurse,captain,broken,drunk,host|}\":"
+        ],
+        "description": "Check the current character's text_id with a dropdown"
     }
 }
