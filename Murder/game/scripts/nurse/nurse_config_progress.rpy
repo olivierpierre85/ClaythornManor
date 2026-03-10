@@ -30,7 +30,7 @@ label nurse_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_ending_question, "ending", "todo", "sunday_morning"),
+                Chapter(image_ending_question, "ending", "exhausted", "sunday_morning"),
                 Chapter(image_checkpoint_empty_after_ending),
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "todo", "end"),
@@ -66,5 +66,7 @@ label nurse_config_progress:
             'saturday_evening': [
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': False}},
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True}},
+                {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
+                
             ],
         }

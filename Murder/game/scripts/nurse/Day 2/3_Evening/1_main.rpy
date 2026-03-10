@@ -189,9 +189,10 @@ label nurse_day2_evening:
     The others are distracted by the evening's events.
     """
 
+
     $ time_left = 1 
     call run_menu(TimedMenu("nurse_day2_evening_steal", [
-        TimedMenuChoice("Pocket some silverware discretely", 'nurse_day2_evening_steal_caught', early_exit=True),
+        TimedMenuChoice("Pocket some silverware discretely", 'nurse_day2_evening_steal', early_exit=True),
         TimedMenuChoice("It is not worth the risk", 'nurse_day2_evening_do_not_steal', early_exit=True),
     ]))
 
@@ -286,6 +287,8 @@ label nurse_day2_dinner_host:
 
 label nurse_day2_exhaution:
 
+    $ play_music('mysterious', 3)
+
     play sound woman_cough
 
     """
@@ -323,95 +326,167 @@ label nurse_day2_exhaution:
     jump nurse_ending_exhausted
 
 
-
-label nurse_day2_evening_steal_caught:
+label nurse_day2_evening_steal:
 
     """
     A quick glance to either side.
 
-    No one seems to be paying the slightest attention.
+    The others are moving towards the door, their backs turned.
 
-    My hand moves to slide a silver spoon into my bag with the faintest clink.
+    My hand moves, sliding a silver spoon into my bag with the faintest clink.
     """
 
-    host """
-    Miss Marsh. What exactly do you think you are doing?
+    if nurse_details.threads.is_unlocked('steal_cutlery_1') and nurse_details.threads.is_unlocked('steal_cutlery_2'):
+
+        call nurse_day2_evening_steal_caught
+
+    else:
+
+        """
+        Nobody seems to notice.
+        """
+
+    return
+
+
+label nurse_day2_evening_steal_caught:
+
+    $ play_music('scary', 3)
+
+    butler """
+    Forgive me, Miss Marsh.
+
+    I believe that item belongs with the service.
     """
 
     """
     I freeze.
 
-    Lady Claythorn is standing by the doorway, her eyes fixed upon my bag.
+    The butler is standing entirely too close, his expression as impassive as ever.
+
+    He extends an open, expectant hand.
     """
 
     nurse """
-    I... I am just gathering my things, Lady Claythorn.
+    I can explain.
+
+    I assure you, it is a misunderstanding.
     """
 
     host """
-    Do not insult my intelligence.
-
-    Empty your bag at once.
+    Is there a problem?
     """
 
     """
-    My face burns as I slowly reach inside and pull out the silver spoon.
+    Lady Claythorn pauses at the doorway, her sharp eyes taking in the scene.
+    """
 
-    I place it on the table.
+    butler """
+    I observed Miss Marsh securing a piece of the silverware in her bag, my lady.
     """
 
     host """
-    I had my suspicions.
+    Is this true?
+    """
 
-    But to see it with my own eyes... It is beyond belief.
+    """
+    My face burns as I slowly reach inside and place the silver spoon back upon the table.
+    """
+
+    host """
+    I can hardly believe my own eyes.
     """
 
     nurse """
-    Lady Claythorn, please, I can explain...
+    Lady Claythorn, please...
 
-    I was only admiring the craftsmanship. I had no intention of keeping it.
+    I had no intention of keeping it.
+
+    I was only admiring the craftsmanship.
     """
 
-    host """
-    Do you take me for a fool?
+    """
+    Lady Claythorn looks straight at me.
 
-    We have a dead man in the house, and you use the opportunity to pilfer my silver.
+    A hard look that says she is not believing me, not one bit.
+
+    But that she also doesn't know what to do.
+
+    That must be a first for her.
     """
 
-    lad """
-    Blimey, right out of the dining room! Who'd have thought it of a nurse?
-    """
-
-    psychic """
-    I sensed a darkness in her aura the moment she arrived. A shadow of deceit.
-    """
-
-    nurse """
-    That is not true! I am a respectable professional. I have served in hospitals across the country.
+    nurse scared """
+    Please believe me.
 
     This is all a terrible misunderstanding!
     """
 
-    captain """
-    Professional or not, Miss Marsh, the evidence is rather plainly on the table.
+    butler """
+    I am sorry, but I am not in the habit of making mistakes.
 
-    Given the circumstances, Lady Claythorn is entirely justified in her concern.
+    I've noticed several pieces were missing from the previous meal.
+
+    That's why I was more watchful tonight.
+    """
+
+    """
+    This silences everyone in the room.
+
+    All eyes are on me now.
+    """
+
+    captain """
+    Given the circumstances of this week-end, I am a bit worried that there might be more to this than simple pickpocketing.
     """
 
     host """
-    Indeed. You will confine yourself to your room immediately.
+    What do you mean captain?
+    """
 
-    And I shall lock the door to ensure you stay there.
+    captain """
+    I mean Miss Marsh might not be who she says she is.
+    """
+
+    nurse """
+    What !? No, that's ridiculous.
+
+    It is a misunderstanding.
+    """
+
+    captain """
+    So you keep saying. But it's hard to trust you right now.
+    """
+
+    lad """
+    What are we going to do?
+    """
+
+    psychic """
+    We can't allow her to roam freely here.
+
+    Sorry Miss Marsh but I won't feel safe until you are locked somewhere.
+    """
+
+    host """
+    Indeed.
+
+    We can confine her to her room, like Mister Manning.
 
     Tomorrow, we shall see what the police have to say about this.
     """
 
     captain """
-    Allow me to escort her upstairs, Lady Claythorn. Just to be absolutely certain there is no further... trouble.
+    I think that's best.
+
+    Allow me to escort her upstairs, Lady Claythorn.
+
+    Just to be absolutely certain there is no further trouble.
     """
 
     host """
-    Thank you, Captain. See to it that she is securely locked in.
+    Thank you, Captain.
+
+    See to it that she is securely locked in.
     """
 
     """
@@ -430,15 +505,11 @@ label nurse_day2_evening_steal_caught:
     The door closes firmly behind me, followed by the definitive click of a key turning in the lock.
     """
 
-    call change_time(22, 00)
-    
-    """
-    I am trapped here now.
-
-    There is nothing left to do tonight but sleep.
-    """
-
-    $ stop_music()
+    # New ending, Add that she can lockpick if the var hasn't bee set yet.
+    # Then say she will wait until everyone is asleep then leave.
+    # That is not ideal but the only way 
+    # If she was exhausted from yesterday, she will day the same way as exhaused, but on the road to the city.
+    # If not, she can make it alive but alone, she leaves with no money no better than when she started
 
     jump work_in_progress
 
