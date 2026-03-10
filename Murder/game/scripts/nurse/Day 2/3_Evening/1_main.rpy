@@ -196,13 +196,22 @@ label nurse_day2_evening:
 
     if time_left <= 0:
 
-        """
-        I have seen enough.
+        if lad_details.threads.is_unlocked('day1_exhaustion'):
+            
+            jump nurse_exhaustion_ending
 
-        It is time to sleep.
-        """
+        else:
+
+            """
+            TODO, cough and warning. It was close, I was reckless staying up so late.
+            """
+
 
     """
+    I have seen enough.
+
+    It is time to sleep.
+
     I return to my room and lock the door behind me.
 
     It has been a long day.
