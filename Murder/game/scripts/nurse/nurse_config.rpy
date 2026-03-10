@@ -3,7 +3,6 @@ label init_nurse:
     call nurse_day1_evening_map_menu
     call nurse_day2_no_hunt_map_menu
     call nurse_day2_evening_map_menu
-    call nurse_day2_evening_billiard_room_menu #TODO check needed
 
     call nurse_config_menu
 

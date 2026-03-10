@@ -35,7 +35,7 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('butler_room'), 'nurse_attic_butler_room', 0, room='butler_room'),
 
             TimedMenuChoice(
-                'Take a rest before dinner', 
+                'Go to sleep', 
                 'nurse_day2_evening_rest_before_dinner', 
                 0, 
                 early_exit = True, 
@@ -55,23 +55,19 @@ label nurse_day2_evening_map_menu:
 
 label nurse_day2_evening_downstairs_maid:
 
-    $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('gun_room'))
-    $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('garage'))
     $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
     $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('kitchen'))
 
-    $ change_room("basement_stairs")
+    $ change_room("kitchen")
 
     """
-    I approach the back stairs.
+    I ease the door open just enough to look inside.
 
-    A maid is there, quietly clearing up.
+    The kitchen is a hive of activity.
 
-    She gives me a polite but firm look.
+    The staff are busy cleaning after the evening meal.
 
-    Lady Claythorn's instructions, no doubt.
-
-    I withdraw without making a scene.
+    I withdraw before anyone notices my presence.
     """
 
     return
@@ -152,8 +148,6 @@ label nurse_day2_evening_portrait_gallery:
     The gallery is lit only by a single lamp at the far end.
 
     The portraits watch me in silence.
-
-    I am in no mood for them tonight.
     """
 
     return
@@ -169,30 +163,13 @@ label nurse_day2_evening_billiard_room:
 
     """
     The billiard room.
-
-    I can hear voices inside.
-
-    I push open the door far enough to see.
     """
 
-    # TODO: add meaningful billiard room interactions
+    # TODO: add meeting the captain here
 
     return
 
 
-label nurse_day2_evening_billiard_room_menu:
-    python:
-        nurse_day2_evening_billiard_room_menu = TimedMenu("nurse_day2_evening_billiard_room_menu", [
-            TimedMenuChoice(
-                'Leave the billiard room',
-                'generic_cancel',
-                0,
-                early_exit = True,
-                room = 'billiard_room'
-            ),
-        ])
-
-    return
 
 
 # Bedrooms
@@ -251,8 +228,23 @@ label nurse_day2_evening_bedroom_host:
 
 label nurse_day2_evening_bedroom_doctor:
 
-    call nurse_bedroom_default
-    call nurse_day2_evening_bedroom_closed
+    $ change_room("bedroom_doctor")
+
+    """
+    The door to Doctor Baldwin's room stands open.
+
+    I step inside, and the stillness of the room is immediate.
+
+    He lies on the bed, just as they left him after the tragedy.
+
+    It feels wrong to be here, in the presence of a colleague who has met such a sudden end.
+
+    There is nothing a nurse can do for him now.
+
+    I shall leave him to his rest.
+    """
+
+    $ unlock_map('bedroom_doctor')
 
     return
 

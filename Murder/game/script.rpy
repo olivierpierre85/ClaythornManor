@@ -153,6 +153,8 @@ label start():
 
     if full_testing_mode:
 
+        call init_debug
+
         # Jump to the first choice menu item (usualy character selection, but can be modify for starting later in the game)
         python:
             if full_testing_mode_choices:
