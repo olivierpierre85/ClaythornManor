@@ -368,7 +368,7 @@ label nurse_day2_evening_steal_caught:
     """
 
     host """
-    Do you take me for a fool? You are a common thief.
+    Do you take me for a fool?
 
     We have a dead man in the house, and you use the opportunity to pilfer my silver.
     """
