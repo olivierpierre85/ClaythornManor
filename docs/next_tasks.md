@@ -11,6 +11,7 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
   - [ ]** Part 2 EVENING**
   - - NEXT => MAP ROOM
     - [ ] - IDEAS - For evening
+    - [ ] THIEF ENDING => Host notices nurse pocketing a some cutlery. If you've already stolen stuff => You are lock into you room? 
     - Ask the maid why she is an actress? need the unlock from her room?
     - Or tell the captain that the people are not what to expect
       - need the footman and the maid unlock?

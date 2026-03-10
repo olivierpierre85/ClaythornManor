@@ -182,6 +182,20 @@ label nurse_day2_evening:
 
     Most of the others drift away towards their rooms.
 
+    Before they all leave, my eyes settle on the silverware scattered about the table.
+
+    It would be so easy to slide a piece into my bag undetected.
+
+    The others are distracted by the evening's events.
+    """
+
+    $ time_left = 1 
+    call run_menu(TimedMenu("nurse_day2_evening_steal", [
+        TimedMenuChoice("Pocket some silverware discretely", 'nurse_day2_evening_steal_caught', early_exit=True),
+        TimedMenuChoice("It is not worth the risk", 'nurse_day2_evening_do_not_steal', early_exit=True),
+    ]))
+
+    """
     I do not feel ready to sleep just yet.
 
     The manor is quiet, but that is not the same as saying it is safe.
@@ -301,5 +315,137 @@ label nurse_day2_dinner_host:
     """
 
     call host_generic
+
+    return
+
+
+label nurse_day2_evening_steal_caught:
+
+    """
+    A quick glance to either side.
+
+    No one seems to be paying the slightest attention.
+
+    My hand moves to slide a silver spoon into my bag with the faintest clink.
+    """
+
+    host """
+    Miss Marsh. What exactly do you think you are doing?
+    """
+
+    """
+    I freeze.
+
+    Lady Claythorn is standing by the doorway, her eyes fixed upon my bag.
+    """
+
+    nurse """
+    I... I am just gathering my things, Lady Claythorn.
+    """
+
+    host """
+    Do not insult my intelligence.
+
+    Empty your bag at once.
+    """
+
+    """
+    My face burns as I slowly reach inside and pull out the silver spoon.
+
+    I place it on the table.
+    """
+
+    host """
+    I had my suspicions.
+
+    But to see it with my own eyes... It is beyond belief.
+    """
+
+    nurse """
+    Lady Claythorn, please, I can explain...
+
+    I was only admiring the craftsmanship. I had no intention of keeping it.
+    """
+
+    host """
+    Do you take me for a fool? You are a common thief.
+
+    We have a dead man in the house, and you use the opportunity to pilfer my silver.
+    """
+
+    lad """
+    Blimey, right out of the dining room! Who'd have thought it of a nurse?
+    """
+
+    psychic """
+    I sensed a darkness in her aura the moment she arrived. A shadow of deceit.
+    """
+
+    nurse """
+    That is not true! I am a respectable professional. I have served in hospitals across the country.
+
+    This is all a terrible misunderstanding!
+    """
+
+    captain """
+    Professional or not, Miss Marsh, the evidence is rather plainly on the table.
+
+    Given the circumstances, Lady Claythorn is entirely justified in her concern.
+    """
+
+    host """
+    Indeed. You will confine yourself to your room immediately.
+
+    And I shall lock the door to ensure you stay there.
+
+    Tomorrow, we shall see what the police have to say about this.
+    """
+
+    captain """
+    Allow me to escort her upstairs, Lady Claythorn. Just to be absolutely certain there is no further... trouble.
+    """
+
+    host """
+    Thank you, Captain. See to it that she is securely locked in.
+    """
+
+    """
+    I try to muster some dignity, but with all their eyes upon me, there is none to be had.
+
+    I follow the Captain upstairs with my head bowed.
+
+    He walks closely behind me the whole way, ensuring I do not stray.
+    """
+
+    $ change_room("bedroom_nurse", dissolve)
+
+    """
+    When I reach my room, I step inside.
+
+    The door closes firmly behind me, followed by the definitive click of a key turning in the lock.
+    """
+
+    call change_time(22, 00)
+    
+    """
+    I am trapped here now.
+
+    There is nothing left to do tonight but sleep.
+    """
+
+    $ stop_music()
+
+    jump work_in_progress
+
+
+label nurse_day2_evening_do_not_steal:
+
+    """
+    I look at the silverware for a moment longer than I ought.
+
+    Then I push the thought aside.
+
+    It is not worth the risk.
+    """
 
     return
