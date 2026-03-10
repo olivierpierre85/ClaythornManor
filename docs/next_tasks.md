@@ -9,6 +9,7 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
     - [ ] EXTEND OTHER GUESTS for Psychic? Too similar that first day ? Maybe Later
 
   - [ ]** Part 2 EVENING**
+  - ENDING ESCAPE POOR FINISH
   - - NEXT => MAP ROOM
     - [ ] - IDEAS - For evening
     - [ ] THIEF ENDING => Host notices nurse pocketing a some cutlery. If you've already stolen stuff => You are lock into you room? => **FIX DRAFT**

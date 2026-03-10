@@ -408,75 +408,77 @@ label nurse_day2_evening_steal_caught:
     """
     Lady Claythorn looks straight at me.
 
-    A hard look that says she is not believing me, not one bit.
+    A hard look that says she does not believe me, not a single word.
 
-    But that she also doesn't know what to do.
+    But that she also does not quite know what to do.
 
     That must be a first for her.
     """
 
     nurse scared """
-    Please believe me.
+    Please, believe me.
 
     This is all a terrible misunderstanding!
     """
 
     butler """
-    I am sorry, but I am not in the habit of making mistakes.
+    Forgive me, my lady, but I am not in the habit of making mistakes.
 
-    I've noticed several pieces were missing from the previous meal.
+    I noted several pieces missing after luncheon.
 
-    That's why I was more watchful tonight.
+    That is why I took it upon myself to be more watchful this evening.
     """
 
     """
     This silences everyone in the room.
 
-    All eyes are on me now.
+    All eyes are fixed upon me now.
     """
 
     captain """
-    Given the circumstances of this week-end, I am a bit worried that there might be more to this than simple pickpocketing.
+    Given the circumstances of this weekend, I am inclined to think there might be more to this than simple pilfering.
     """
 
     host """
-    What do you mean captain?
+    Whatever do you mean, Captain?
     """
 
     captain """
-    I mean Miss Marsh might not be who she says she is.
+    I mean that Miss Marsh might not be who she claims to be.
     """
 
     nurse """
-    What !? No, that's ridiculous.
+    What? No, that is ridiculous!
 
-    It is a misunderstanding.
+    It is a misunderstanding!
     """
 
     captain """
-    So you keep saying. But it's hard to trust you right now.
+    So you continue to say.
+
+    But you must admit, it is rather difficult to take you at your word just now.
     """
 
     lad """
-    What are we going to do?
+    What are we going to do then?
     """
 
     psychic """
-    We can't allow her to roam freely here.
+    We cannot possibly allow her to roam the house freely.
 
-    Sorry Miss Marsh but I won't feel safe until you are locked somewhere.
+    I am sorry, Miss Marsh, but I shall not feel safe until you are secured somewhere.
     """
 
     host """
-    Indeed.
+    Quite right.
 
-    We can confine her to her room, like Mister Manning.
+    We shall confine her to her room, just as we did with Mr Manning.
 
-    Tomorrow, we shall see what the police have to say about this.
+    Tomorrow, we shall see what the police make of all this.
     """
 
     captain """
-    I think that's best.
+    A sensible precaution.
 
     Allow me to escort her upstairs, Lady Claythorn.
 
@@ -490,7 +492,7 @@ label nurse_day2_evening_steal_caught:
     """
 
     """
-    I try to muster some dignity, but with all their eyes upon me, there is none to be had.
+    I try to muster some dignity, but with all their eyes upon me, there is none to be found.
 
     I follow the Captain upstairs with my head bowed.
 
@@ -505,13 +507,69 @@ label nurse_day2_evening_steal_caught:
     The door closes firmly behind me, followed by the definitive click of a key turning in the lock.
     """
 
-    # New ending, Add that she can lockpick if the var hasn't bee set yet.
-    # Then say she will wait until everyone is asleep then leave.
-    # That is not ideal but the only way 
-    # If she was exhausted from yesterday, she will day the same way as exhaused, but on the road to the city.
-    # If not, she can make it alive but alone, she leaves with no money no better than when she started
+    captain """
+    Sorry Miss Marsh, but I don't have a choice.
+    """
 
-    jump work_in_progress
+    """
+    They believe I am trapped here.
+    
+    But they underestimate me.
+    
+    A hairpin and a steady hand are all I require to open such a simple lock.
+    
+    I shall wait until the house is completely silent, and then I will take my leave.
+    
+    It is far from ideal, but it is my only chance.
+    """
+
+    call black_screen_transition()
+
+    call change_time(23, 30)
+
+    $ change_room("bedrooms_hallway")
+
+    """
+    I slip out into the hallway undetected.
+
+    Nobody is there.
+    """
+
+    $ change_room("entrance_hall")
+
+    """
+    I reach the entrance hall, then quickly make my way outside.
+    """
+
+    # TODO finish from here
+    
+    """
+    The road ahead is long, and the air is bitterly cold.
+    """
+
+    if nurse_details.threads.is_unlocked('day1_exhaustion'):
+
+        """
+        I push myself forward, intending to walk all the way to the village.
+        """
+
+        jump nurse_day2_exhaution
+
+    else:
+
+        """
+        I walk through the night until my feet are raw, pushing myself onward until the first light of dawn breaks over the village.
+
+        I have escaped with my life.
+
+        But I am entirely alone, shivering in the morning chill.
+
+        I have no money, no position, and I am no better off than when I first arrived at Claythorn Manor.
+        
+        Still, I have my freedom. And for now, that must suffice.
+        """
+
+        jump nurse_ending_escaped_alone
 
 
 label nurse_day2_evening_do_not_steal:
