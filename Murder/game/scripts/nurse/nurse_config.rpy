@@ -37,6 +37,7 @@ label init_nurse:
             "portrait_gallery_visited": False,
             "attic_visited": False,
             "day2_hunt_tea_room_early" : False,
+            "day2_evening_exhaustion_triggered" : False,
         }
 
         nurse_important_choices = CharacterImportantChoiceList([

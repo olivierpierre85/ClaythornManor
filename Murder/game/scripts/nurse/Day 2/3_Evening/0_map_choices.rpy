@@ -7,14 +7,14 @@ label nurse_day2_evening_map_menu:
             # Downstairs
             TimedMenuChoice(default_room_text('kitchen'), 'nurse_day2_evening_downstairs_maid', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day2_evening_downstairs_maid', 10, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 10, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
+            TimedMenuChoice(default_room_text('garage'), 'nurse_day2_evening_garage', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day2_evening_gun_room', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_day2_evening_billiard_room', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day2_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day2_evening_garden', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_day2_evening_entrance_hall', 10, room='entrance_hall'),
-            TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'nurse_day2_evening_library', 0, room='library'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('tea_room'), 'nurse_day2_evening_tea_room', 10,  room='tea_room'),
             # Bedrooms 
@@ -29,10 +29,10 @@ label nurse_day2_evening_map_menu:
                 room='bedroom_psychic'
             ),
             # attic
-            TimedMenuChoice(default_room_text('storage'), 'nurse_attic_storage', 0, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'nurse_attic_males_room', 20, room='males_room'),
-            TimedMenuChoice(default_room_text('females_room'), 'nurse_attic_females_room', 20, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_attic_butler_room', 0, room='butler_room'),
+            TimedMenuChoice(default_room_text('storage'), 'nurse_day2_evening_attic_storage', 0, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'nurse_day2_evening_attic_males_room', 20, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'nurse_day2_evening_attic_females_room', 20, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_evening_attic_butler_room', 0, room='butler_room'),
 
             TimedMenuChoice(
                 'Go to sleep', 
@@ -70,6 +70,8 @@ label nurse_day2_evening_downstairs_maid:
     I withdraw before anyone notices my presence.
     """
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
@@ -88,6 +90,8 @@ label nurse_day2_evening_tea_room:
     I shall try elsewhere.
     """
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
@@ -102,6 +106,8 @@ label nurse_day2_evening_dining_room:
 
     There is nothing to keep me here.
     """
+
+    call nurse_day2_evening_check_exhaustion
 
     return
 
@@ -120,6 +126,8 @@ label nurse_day2_evening_garden:
     I turn and go back in.
     """
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
@@ -137,6 +145,8 @@ label nurse_day2_evening_entrance_hall:
     I move on.
     """
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
@@ -149,6 +159,8 @@ label nurse_day2_evening_portrait_gallery:
 
     The portraits watch me in silence.
     """
+
+    call nurse_day2_evening_check_exhaustion
 
     return
 
@@ -190,6 +202,8 @@ label nurse_day2_evening_bedroom_lad:
     call nurse_bedroom_default
     call nurse_day2_evening_bedroom_closed
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
@@ -198,6 +212,8 @@ label nurse_day2_evening_bedroom_captain:
     call nurse_bedroom_default
     call nurse_day2_evening_bedroom_closed
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
@@ -205,6 +221,8 @@ label nurse_day2_evening_bedroom_host:
 
     call nurse_bedroom_default
     call nurse_day2_evening_bedroom_closed
+
+    call nurse_day2_evening_check_exhaustion
 
     return
 
@@ -228,6 +246,8 @@ label nurse_day2_evening_bedroom_doctor:
     """
 
     $ unlock_map('bedroom_doctor')
+
+    call nurse_day2_evening_check_exhaustion
 
     return
 
@@ -272,6 +292,8 @@ label nurse_day2_evening_bedroom_psychic:
 
     $ unlock_map('bedroom_psychic')
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
@@ -303,12 +325,16 @@ label nurse_day2_evening_bedroom_drunk:
 
     $ unlock_map('bedroom_drunk')
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
 label nurse_day2_evening_bedroom_broken:
 
     call nurse_search_broken_default
+
+    call nurse_day2_evening_check_exhaustion
 
     return
 
@@ -332,6 +358,8 @@ label nurse_day2_evening_attic_default:
 
     I had better go back down.
     """
+
+    call nurse_day2_evening_check_exhaustion
 
     return
 
@@ -380,5 +408,97 @@ label nurse_day2_evening_sleep:
     """
 
     call wait_screen_transition()
+
+    return
+
+
+label nurse_day2_evening_garage:
+
+    call nurse_garage_default
+
+    call nurse_day2_evening_check_exhaustion
+
+    return
+
+
+label nurse_day2_evening_gun_room:
+
+    call nurse_gun_room_default
+
+    call nurse_day2_evening_check_exhaustion
+
+    return
+
+
+label nurse_day2_evening_library:
+
+    call nurse_library_default
+
+    call nurse_day2_evening_check_exhaustion
+
+    return
+
+
+label nurse_day2_evening_attic_storage:
+
+    call nurse_attic_storage
+
+    call nurse_day2_evening_check_exhaustion
+
+    return
+
+
+label nurse_day2_evening_attic_males_room:
+
+    call nurse_attic_males_room
+
+    call nurse_day2_evening_check_exhaustion
+
+    return
+
+
+label nurse_day2_evening_attic_females_room:
+
+    call nurse_attic_females_room
+
+    call nurse_day2_evening_check_exhaustion
+
+    return
+
+
+label nurse_day2_evening_attic_butler_room:
+
+    call nurse_attic_butler_room
+
+    call nurse_day2_evening_check_exhaustion
+
+    return
+
+
+label nurse_day2_evening_check_exhaustion:
+
+    if time_left < 40 and not nurse_details.saved_variables["day2_evening_exhaustion_triggered"] and nurse_details.threads.unlock('day1_exhaustion'):
+
+        $ nurse_details.saved_variables["day2_evening_exhaustion_triggered"] = True
+
+        play sound woman_cough
+
+        """
+        A cough comes to me, a strong one.
+
+        I reach for my handkerchief to cover my mouth.
+        """
+
+        play sound woman_cough
+
+        """
+        It is followed by a second.
+
+        It should not come as a surprise; I haven't rested as much as I ought to.
+
+        The only sane thing to do now is to go to bed.
+
+        If I don't, God knows what could happen.
+        """
 
     return

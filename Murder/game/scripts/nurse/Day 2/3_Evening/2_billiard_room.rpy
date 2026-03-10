@@ -58,6 +58,8 @@ label nurse_day2_evening_billiard_room:
 
     call run_menu(nurse_day2_evening_billiard_room_menu)
 
+    call nurse_day2_evening_check_exhaustion
+
     return
 
 
