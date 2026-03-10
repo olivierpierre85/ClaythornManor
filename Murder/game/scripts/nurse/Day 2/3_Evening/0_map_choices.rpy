@@ -10,14 +10,13 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
-            TimedMenuChoice(default_room_text('billiard_room'), 'nurse_billiard_room_default', 10, room='billiard_room'),
+            TimedMenuChoice(default_room_text('billiard_room'), 'nurse_day2_evening_billiard_room', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day2_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day2_evening_garden', 30, room='manor_garden'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_day2_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
-            TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('tea_room'), 'nurse_tea_room_default', 10,  room='tea_room', condition= "not " + condition_saturday_hunt_morning),
-            TimedMenuChoice("Wait for luncheon in the Tea Room", 'nurse_day2_hunt_tea_room_early', 0, early_exit = True,  room='tea_room', condition=condition_saturday_hunt_morning),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('tea_room'), 'nurse_day2_evening_tea_room', 10,  room='tea_room'),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_evening_bedroom_lad', 0, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_evening_bedroom_doctor', 0, room='bedroom_doctor'),
@@ -25,16 +24,9 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('bedroom_host'), 'nurse_day2_evening_bedroom_host', 0, room='bedroom_host'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day2_evening_bedroom_drunk', 20, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 
-                'nurse_day2_evening_bedroom_psychic_busy', 
-                0, 
-                room='bedroom_psychic',
-                condition = condition_saturday_hunt_morning,
-            ),
-            TimedMenuChoice(default_room_text('bedroom_psychic'), 
-                'nurse_day2_evening_bedroom_psychic_risk', 
+                'nurse_day2_evening_bedroom_psychic', 
                 10, 
-                room='bedroom_psychic',
-                condition = "not " + condition_saturday_hunt_morning,
+                room='bedroom_psychic'
             ),
             # attic
             TimedMenuChoice(default_room_text('storage'), 'nurse_attic_storage', 0, room='storage'),
@@ -43,24 +35,15 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('butler_room'), 'nurse_attic_butler_room', 0, room='butler_room'),
 
             TimedMenuChoice(
-                'Take a rest before lunch', 
-                'nurse_day2_evening_rest_before_lunch', 
+                'Take a rest before dinner', 
+                'nurse_day2_evening_rest_before_dinner', 
                 0, 
                 early_exit = True, 
-                room = 'bedroom_nurse',
-                condition = condition_saturday_hunt_morning
-            ),
-            TimedMenuChoice(
-                'Wait until the others return', 
-                'nurse_day2_evening_cancel', 
-                90, 
-                early_exit = True, 
-                room = 'bedroom_nurse',
-                condition = "not " + condition_saturday_hunt_morning
+                room = 'bedroom_nurse'
             ),
             TimedMenuChoice(
                 'Richard III Bedroom', 
-                'nurse_search_broken_default', 
+                'nurse_day2_evening_bedroom_broken', 
                 20, 
                 room = 'bedroom_broken',
             )
@@ -70,7 +53,7 @@ label nurse_day2_evening_map_menu:
     return
 
 
-label nurse_day2_evening_downstairs_default:
+label nurse_day2_evening_downstairs_maid:
 
     $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('gun_room'))
     $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('garage'))
@@ -266,6 +249,14 @@ label nurse_day2_evening_bedroom_host:
     return
 
 
+label nurse_day2_evening_bedroom_doctor:
+
+    call nurse_bedroom_default
+    call nurse_day2_evening_bedroom_closed
+
+    return
+
+
 label nurse_day2_evening_bedroom_psychic:
 
     call nurse_bedroom_default
@@ -342,15 +333,7 @@ label nurse_day2_evening_bedroom_drunk:
 
 label nurse_day2_evening_bedroom_broken:
 
-    $ change_room("bedrooms_hallway")
-
-    """
-    I stop outside Thomas Moody's room.
-
-    I have stood outside enough rooms like this over the years to know what a closed door can mean.
-
-    I do not linger.
-    """
+    call nurse_search_broken_default
 
     return
 
@@ -379,6 +362,32 @@ label nurse_day2_evening_attic_default:
 
 
 # Cancel / Sleep
+label nurse_day2_evening_rest_before_dinner:
+
+    $ change_room("bedroom_nurse")
+
+    """
+    I am quite exhausted.
+
+    The events of the day have taken their toll.
+
+    I shall lie down for a moment before the evening meal is served.
+    """
+
+    call wait_screen_transition()
+
+    call change_time(19, 30)
+
+    return
+
+
+label nurse_day2_evening_cancel:
+
+    """
+    I shall wait in my room until I am needed.
+    """
+
+    return
 label nurse_day2_evening_sleep:
 
     $ change_room("bedroom_nurse", dissolve)
