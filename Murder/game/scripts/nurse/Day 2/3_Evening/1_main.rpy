@@ -195,12 +195,14 @@ label nurse_day2_evening:
         TimedMenuChoice("It is not worth the risk", 'nurse_day2_evening_do_not_steal', early_exit=True),
     ]))
 
+    $ change_room("bedroom_nurse", dissolve)
+
     """
     I do not feel ready to sleep just yet.
 
     The manor is quiet, but that is not the same as saying it is safe.
 
-    Perhaps I ought to make a brief survey before I retire.
+    Perhaps I ought to make a brief exploration before I retire.
     """
 
     $ time_left = 90
@@ -212,41 +214,7 @@ label nurse_day2_evening:
 
         if nurse_details.threads.is_unlocked('day1_exhaustion'):
 
-            play sound woman_cough
-
-            """
-            A cough takes me without warning.
-
-            Harder than the ones before.
-
-            I press my handkerchief to my lips.
-            """
-
-            play sound woman_cough
-
-            """
-            A second.
-
-            My knees feel uncertain beneath me.
-
-            I find the wall and lean against it.
-            """
-
-            play sound woman_cough
-
-            """
-            A third, and I cannot check it.
-
-            I sink down.
-
-            The handkerchief, when I pull it away, tells me everything I already knew.
-
-            The walls are very cold.
-
-            I cannot seem to rise.
-            """
-
-            jump nurse_ending_exhausted
+            call nurse_day2_exhaution
 
         else:
 
@@ -256,9 +224,7 @@ label nurse_day2_evening:
             A cough catches me in the corridor.
 
             I stop and press a hand against the wall until it passes.
-            """
 
-            """
             When it does, I become suddenly aware of how late it must be.
 
             I have been wandering this house for the better part of an hour.
@@ -270,7 +236,6 @@ label nurse_day2_evening:
             I shall not press my luck further tonight.
             """
 
-
     """
     It is time to sleep.
 
@@ -278,12 +243,12 @@ label nurse_day2_evening:
 
     It has been a long day.
 
-    I need tto rest.
+    I need to rest.
     """
 
     $ stop_music()
 
-    jump work_in_progress
+    jump nurse_day3_morning
 
 
 label nurse_day2_dinner_host:
@@ -317,6 +282,46 @@ label nurse_day2_dinner_host:
     call host_generic
 
     return
+
+
+label nurse_day2_exhaution:
+
+    play sound woman_cough
+
+    """
+    A cough takes me without warning.
+
+    Harder than the ones before.
+
+    I press my handkerchief to my lips.
+    """
+
+    play sound woman_cough
+
+    """
+    A second.
+
+    My knees feel uncertain beneath me.
+
+    I find the wall and lean against it.
+    """
+
+    play sound woman_cough
+
+    """
+    A third, and I cannot check it.
+
+    I sink down.
+
+    The handkerchief, when I pull it away, tells me everything I already knew.
+
+    The walls are very cold.
+
+    I cannot seem to rise.
+    """
+
+    jump nurse_ending_exhausted
+
 
 
 label nurse_day2_evening_steal_caught:

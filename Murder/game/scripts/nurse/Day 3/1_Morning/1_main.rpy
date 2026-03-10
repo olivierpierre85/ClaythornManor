@@ -30,6 +30,7 @@ label nurse_day3_morning:
     $ play_music('mysterious')
 
     """
+    TODO READ THIS DRAFT
     I wake before the sun has fully conquered the Scottish mist.
 
     My chest feels heavy, a dull ache that has become my constant companion.

@@ -46,7 +46,6 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
 - Doctor: TODO Full
 
 ## Technical Tasks
-- Make TEST_mode useful. Get
 -  [ ] **Testing**: Define paths that test all dialogs for the first 3 character
     - [ ] Doctor
     - [ ] Lad
