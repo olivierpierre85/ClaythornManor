@@ -196,27 +196,75 @@ label nurse_day2_evening:
 
     if time_left <= 0:
 
-        if lad_details.threads.is_unlocked('day1_exhaustion'):
-            
-            jump nurse_exhaustion_ending
+        if nurse_details.threads.is_unlocked('day1_exhaustion'):
+
+            play sound woman_cough
+
+            """
+            A cough takes me without warning.
+
+            Harder than the ones before.
+
+            I press my handkerchief to my lips.
+            """
+
+            play sound woman_cough
+
+            """
+            A second.
+
+            My knees feel uncertain beneath me.
+
+            I find the wall and lean against it.
+            """
+
+            play sound woman_cough
+
+            """
+            A third, and I cannot check it.
+
+            I sink down.
+
+            The handkerchief, when I pull it away, tells me everything I already knew.
+
+            The walls are very cold.
+
+            I cannot seem to rise.
+            """
+
+            jump nurse_ending_exhausted
 
         else:
 
+            play sound woman_cough
+
             """
-            TODO, cough and warning. It was close, I was reckless staying up so late.
+            A cough catches me in the corridor.
+
+            I stop and press a hand against the wall until it passes.
+            """
+
+            """
+            When it does, I become suddenly aware of how late it must be.
+
+            I have been wandering this house for the better part of an hour.
+
+            That was not wise of me.
+
+            There are some indulgences I cannot afford, and pushing myself through the small hours of the night is one of them.
+
+            I shall not press my luck further tonight.
             """
 
 
     """
-    I have seen enough.
-
     It is time to sleep.
 
     I return to my room and lock the door behind me.
 
     It has been a long day.
 
-    I need to sleep.
+    I need tto rest.
     """
 
     $ stop_music()

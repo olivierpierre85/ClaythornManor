@@ -1,10 +1,5 @@
 <!-- # cSpell:disable -->
-Nurse => CHECK the way the lad is handling recurring map choices is Applied to EVERY cHARACTER? (with already visit var)
-
-=> Move default map choices for nurse to default page?
-
-
-PNG => WEBP conflict in screen. Change all webmp to png? And change infocard python ?
+BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
 
 ## Write Story : NURSE - Day 2
 

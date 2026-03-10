@@ -477,7 +477,8 @@ label nurse_day2_evening_attic_butler_room:
 
 label nurse_day2_evening_check_exhaustion:
 
-    if time_left < 40 and not nurse_details.saved_variables["day2_evening_exhaustion_triggered"] and nurse_details.threads.unlock('day1_exhaustion'):
+
+    if (time_left < 40  and nurse_details.threads.is_unlocked('day1_exhaustion')) and not nurse_details.saved_variables["day2_evening_exhaustion_triggered"]:
 
         $ nurse_details.saved_variables["day2_evening_exhaustion_triggered"] = True
 

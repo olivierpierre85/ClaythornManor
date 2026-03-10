@@ -130,6 +130,10 @@ label init_nurse:
             ),
         ])
 
+        nurse_endings = CharacterEndingList ([
+            CharacterInformation(1, "exhausted", "You collapsed from exhaustion", image_file="blood_handkerchief_1", chapters=['saturday_evening']), 
+        ])
+
         nurse_extra_information = CharacterDescriptionHiddenList([
             CharacterInformation(1, "job", "nurse most of her life, mostly in the army or at an hospital. Lately, she started to perform at home service for rich individuals", is_important = True), 
             CharacterInformation(2, "clothes", "well-dressed in an understated style", is_important = True),
@@ -167,7 +171,7 @@ label init_nurse:
             description_long = nurse_description,
             description_hidden = nurse_extra_information,
             important_choices = nurse_important_choices,
-            endings = CharacterInformationList([]),
+            endings = nurse_endings,
             observations = nurse_observations,
             objects = nurse_objects,
             progress = nurse_progress,
