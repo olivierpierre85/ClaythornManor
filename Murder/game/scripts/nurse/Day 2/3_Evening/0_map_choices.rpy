@@ -152,24 +152,7 @@ label nurse_day2_evening_portrait_gallery:
 
     return
 
-
-
-
-
-# Billiard Room
-label nurse_day2_evening_billiard_room:
-
-    $ change_room("billiard_room")
-
-    """
-    The billiard room.
-    """
-
-    # TODO: add meeting the captain here
-
-    return
-
-
+# Billiard Room — see 2_billiard_room.rpy
 
 
 # Bedrooms
