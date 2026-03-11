@@ -36,7 +36,7 @@ label nurse_day2_evening_map_menu:
 
             TimedMenuChoice(
                 'Go to sleep', 
-                'nurse_day2_evening_rest_before_dinner', 
+                'generic_cancel', 
                 0, 
                 early_exit = True, 
                 room = 'bedroom_nurse'
@@ -363,7 +363,7 @@ label nurse_day2_evening_bedroom_doctor:
 
 label nurse_day2_evening_bedroom_psychic:
 
-    call nurse_bedroom_default
+    call nurse_bedroom_default_intro
 
     psychic """
     Yes? Who is there?
@@ -408,23 +408,13 @@ label nurse_day2_evening_bedroom_psychic:
 
 label nurse_day2_evening_bedroom_drunk:
 
-    $ change_room("bedrooms_hallway")
-
-    play sound door_knock
-
-    """
-    I stand at Samuel Manning's door. I try the handle, but it is locked from the inside.
-
-    I can hear him moving about on the other side. Restless, or perhaps delirious.
-    """
+    call nurse_bedroom_default_intro
 
     drunk """
     Hmm... urrh...
     """
 
     """
-    I tap again, gently.
-
     He is quite beyond rational conversation.
 
     I step back.
@@ -444,79 +434,6 @@ label nurse_day2_evening_bedroom_broken:
     call nurse_search_broken_default
 
     call nurse_day2_evening_check_exhaustion
-
-    return
-
-
-# Attic
-label nurse_day2_evening_attic_default:
-
-    $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
-    $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
-    $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[nurse_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
-
-    $ change_room("attic_hallway")
-
-    """
-    The attic corridor.
-
-    A faint light shows under one of the doors.
-
-    I have no proper reason to be up here at this hour.
-
-    I had better go back down.
-    """
-
-    call nurse_day2_evening_check_exhaustion
-
-    return
-
-
-# Cancel / Sleep
-label nurse_day2_evening_rest_before_dinner:
-
-    $ change_room("bedroom_nurse")
-
-    """
-    I am quite exhausted.
-
-    The events of the day have taken their toll.
-
-    I shall lie down for a moment before the evening meal is served.
-    """
-
-    call wait_screen_transition()
-
-    call change_time(19, 30)
-
-    return
-
-
-label nurse_day2_evening_cancel:
-
-    """
-    I shall wait in my room until I am needed.
-    """
-
-    return
-label nurse_day2_evening_sleep:
-
-    $ change_room("bedroom_nurse", dissolve)
-
-    """
-    There is nothing more for me to do tonight.
-
-    I lock my door and sit on the edge of the bed for a moment.
-
-    The events of the day turn over in my mind.
-
-    I am tired.
-
-    I close my eyes and let the darkness come.
-    """
-
-    call wait_screen_transition()
 
     return
 

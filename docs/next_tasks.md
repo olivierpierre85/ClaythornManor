@@ -6,6 +6,7 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
 Needed infocard
 - escape in the night
 - die of exhaustion (nurse lying on the ground? Or just very bloody handkerchief)?
+- Captain boxer rebellion AND ZAnzibar inconsitency
 
 - [ ] Part 1 - Hunt
     - [ ] TEST TEST TESTS create manuel PATH WITH EVERYTHING;

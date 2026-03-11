@@ -1,15 +1,20 @@
 label nurse_bedroom_default:
 
+    """
+    No answer.
+    """
+
+    return
+
+
+label nurse_bedroom_default_intro:
+
     $ change_room("bedrooms_hallway")
 
     play sound door_knock
 
     nurse """
     Hello? Is anyone there?
-    """
-
-    """
-    No answer.
     """
 
     return
