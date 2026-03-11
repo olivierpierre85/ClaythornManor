@@ -141,21 +141,22 @@ screen in_game_menu_btn:
             yminimum 80
 
 screen version_screen:
-    modal False
-    zorder 1000
-    style_prefix "confirm"  # TODO use own style
-    frame:
-        xalign 1.0
-        yalign 1.0
-        xoffset 0
-        yoffset 0
-        ypadding 0
-        xpadding 0
-        textbutton "Demo version:" + config.version:
-            action Function(export_transcript)
-            xminimum 200  # Adjust these values as needed
-            yminimum 80
-            text_size 18
+    if not renpy.get_screen("progress") and not renpy.get_screen("progress_details") and not renpy.get_screen("manor_map") and not renpy.get_screen("in_game_map_menu"):
+        modal False
+        zorder 1000
+        style_prefix "confirm"  # TODO use own style
+        frame:
+            xalign 1.0
+            yalign 1.0
+            xoffset 0
+            yoffset 0
+            ypadding 0
+            xpadding 0
+            textbutton "Demo version:" + config.version:
+                action Function(export_transcript)
+                xminimum 200  # Adjust these values as needed
+                yminimum 80
+                text_size 18
 
 init python:
     config.overlay_screens.append("version_screen")
