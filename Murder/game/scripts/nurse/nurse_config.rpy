@@ -80,7 +80,7 @@ label init_nurse:
                 1, "captain_lie_zanzibar",
                 "You noticed something odd in the way Captain Sinha spoke about the Anglo-Zanzibar War.",
                 content_negative="You didn't notice anything unusual about the Captain's story.",
-                image_file="captain",
+                image_file="captain_lie_zanzibar",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
