@@ -107,8 +107,8 @@
         "Take the pearls.",
         "Leave them. It's not worth the risk."
       ],
-      "selected": "Take the pearls.",
-      "redirect": "nurse_take_pearls",
+      "selected": "Leave them. It's not worth the risk.",
+      "redirect": "generic_cancel",
       "time_left": 50,
       "timestamp": "2026-03-11T14:33:32.216465",
       "time_to_decide": 1.218635,

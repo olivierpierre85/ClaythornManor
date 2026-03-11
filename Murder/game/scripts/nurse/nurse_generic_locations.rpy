@@ -180,6 +180,19 @@ label nurse_search_host_again:
     If the bearer bonds are here, they are in a safe I cannot locate.
     """
 
+    if not nurse_details.threads.is_unlocked('steal_pearls'):
+        
+        """
+        The string of pearls still sits in its velvet case on the dressing table.
+
+        I left them earlier, but they remain the only transportable item of value in the room.
+        """
+
+        call run_menu(TimedMenu("nurse_search_host_choice_again", [
+            TimedMenuChoice("Take the pearls.", 'nurse_take_pearls', 5, early_exit=True),
+            TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
+        ]))
+
     return
 
 
