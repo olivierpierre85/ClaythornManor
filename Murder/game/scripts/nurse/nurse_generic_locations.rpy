@@ -495,7 +495,7 @@ label nurse_library_default:
 
         $ change_room("library")
 
-        if nurse_details.threads.is_unlocked('captain_zanzibar'):
+        if nurse_details.threads.is_unlocked('captain_lie_zanzibar'):
 
             """
             There is nothing more for me to find here.
@@ -545,7 +545,7 @@ label nurse_library_default:
         I could try to learn more about that conflict, though it may take some time.
         """
 
-    if not nurse_details.threads.is_unlocked('captain_zanzibar'):
+    if not nurse_details.threads.is_unlocked('captain_lie_zanzibar'):
         call run_menu(TimedMenu("nurse_library_choice", [
             TimedMenuChoice("Look it up. It may be useful.", 'nurse_library_war_book', 30, early_exit=True),
             TimedMenuChoice("Leave it. I am too tired for reading.", 'generic_cancel', 20, early_exit=True),
@@ -578,7 +578,7 @@ label nurse_library_war_book:
     He may well have invented the whole story — but to what end?
     """
 
-    $ nurse_details.threads.unlock('captain_zanzibar')
+    $ nurse_details.threads.unlock('captain_lie_zanzibar')
 
     return
 

@@ -91,7 +91,7 @@ label nurse_day2_evening:
     It leaves a stillness in the air that does not belong there.
     """
 
-    if nurse_details.threads.is_unlocked('captain_zanzibar'):
+    if nurse_details.threads.is_unlocked('captain_lie_zanzibar'):
 
         """
         I think of the Captain and what I found in the library.

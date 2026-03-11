@@ -168,6 +168,7 @@ label nurse_generic_background_doctor:
 
     return
 
+
 label nurse_generic_heroic_act_doctor:
 
     nurse """

@@ -77,6 +77,22 @@ label init_nurse:
                 relevant_chapters=['friday_evening'],
             ),
             CharacterInformation(
+                1, "captain_lie_zanzibar",
+                "You noticed something odd in the way Captain Sinha spoke about the Anglo-Zanzibar War.",
+                content_negative="You didn't notice anything unusual about the Captain's story.",
+                image_file="captain",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
+            CharacterInformation(
+                1, "captain_boxer",
+                "You found Captain Sinha's account of the Boxer Rebellion to be highly doubtful.",
+                content_negative="You didn't hear Captain Sinha's account of the Boxer Rebellion",
+                image_file="captain",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
+            CharacterInformation(
                 0, "footman_belgian",
                 "You found out that the footman is actually from Belgium.",
                 content_negative="You don't know much about the footman.",

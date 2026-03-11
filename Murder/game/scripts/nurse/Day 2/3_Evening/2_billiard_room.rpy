@@ -36,7 +36,17 @@ label nurse_day2_evening_billiard_room:
 
         He carries his glass to the chairs by the fire.
 
-        After a moment, I follow.
+        After a moment, I follow him.
+        """
+
+        captain """
+        So how are you doing Miss Marsh?
+
+        You are not too upset about what happened are you?
+        """
+
+        nurse """
+        Of course
         """
 
         $ nurse_day2_evening_billiard_room_menu = TimedMenu("nurse_day2_evening_billiard_room_menu", [
@@ -130,7 +140,7 @@ label nurse_day2_evening_billiard_room_zanzibar:
     What of it?
     """
 
-    if nurse_details.threads.is_unlocked('captain_zanzibar'):
+    if nurse_details.threads.is_unlocked('captain_lie_zanzibar'):
 
         nurse """
         # TODO placeholder — nurse uses what she found in the library.

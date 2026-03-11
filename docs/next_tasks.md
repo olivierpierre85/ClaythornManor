@@ -3,6 +3,8 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
 
 ## Write Story : NURSE - Day 2
 
+WHAT TO DO with NURSE KNEW Doctor before?
+
 Needed infocard
 - escape in the night
 - die of exhaustion (nurse lying on the ground? Or just very bloody handkerchief)?
