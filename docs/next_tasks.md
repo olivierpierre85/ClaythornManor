@@ -13,10 +13,10 @@ Needed infocard
     - [ ] EXTEND OTHER GUESTS for Psychic? Too similar that first day ? Maybe Later
 
   - [ ]** Part 2 EVENING**
-  - ENDING ESCAPE POOR FINISH
+
   - - NEXT => MAP ROOM
+    - TEST after the hunt when that you have a already visited var for the room with choices
     - [ ] - IDEAS - For evening
-    - [ ] THIEF ENDING => Host notices nurse pocketing a some cutlery. If you've already stolen stuff => You are lock into you room? => **FIX DRAFT**
     - Ask the maid why she is an actress? need the unlock from her room?
     - Or tell the captain that the people are not what to expect
       - need the footman and the maid unlock?

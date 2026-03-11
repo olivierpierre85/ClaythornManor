@@ -165,6 +165,12 @@ label start():
                     # We pop if it's a direct jump, EXCEPT for character_selection which pops itself
                     if menu_id != "character_selection":
                         full_testing_mode_choices.pop(0)
+                        
+                        char_choice = first_choice.get("character_choice")
+                        if char_choice:
+                            current_character = eval(char_choice + "_details")
+                            current_storyline = current_character
+
                     renpy.jump(menu_id)
                 else:
                     renpy.jump("character_selection")

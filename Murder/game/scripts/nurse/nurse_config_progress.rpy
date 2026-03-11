@@ -56,11 +56,11 @@ label nurse_config_progress:
                 {"label": "nurse_day1_evening", "threads": {}},
             ],
             'saturday_morning': [
-                {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': False}},
+                {"label": "nurse_day2_morning", "threads": {}},
                 {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': True}},
             ],
             'saturday_afternoon': [
-                {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': False}},
+                {"label": "nurse_day2_hunt", "threads": {}},
                 {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': True}},
             ],
             'saturday_evening': [
@@ -68,5 +68,7 @@ label nurse_config_progress:
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True}},
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': False, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
+                {"label": "nurse_day2_evening", "threads": {'captain_lie_rank': True, 'footman_belgian': True,  'maid_actress': True}},
+                
             ],
         }

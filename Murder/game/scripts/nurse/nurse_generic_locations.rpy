@@ -589,31 +589,45 @@ label nurse_attic_females_room:
 
     call nurse_attic_approach
 
-    $ change_room("attic_females_room")
+    if nurse_details.saved_variables.get("visited_attic_females_room"):
 
-    """
-    It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
+        $ change_room("attic_females_room")
 
-    On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company. 
-    
-    A faded photograph is tucked behind them.
+        """
+        It looks exactly the same as before.
 
-    I take the photograph down.
+        No need to search any further.
+        """
 
-    A young woman in stage dress, posed with a man I do not recognise.
+    else:
 
-    She is smiling broadly. I recognise the young maid working here.
+        $ nurse_details.saved_variables["visited_attic_females_room"] = True
 
-    So she is, or was, an aspiring actress.
+        $ change_room("attic_females_room")
 
-    How peculiar for her to end up here.
+        """
+        It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
 
-    I wonder what her story is.
+        On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company. 
+        
+        A faded photograph is tucked behind them.
 
-    I replace everything as it was and step back out.
-    """
+        I take the photograph down.
 
-    $ nurse_details.threads.unlock('maid_actress')
+        A young woman in stage dress, posed with a man I do not recognise.
+
+        She is smiling broadly. I recognise the young maid working here.
+
+        So she is, or was, an aspiring actress.
+
+        How peculiar for her to end up here.
+
+        I wonder what her story is.
+
+        I replace everything as it was and step back out.
+        """
+
+        $ nurse_details.threads.unlock('maid_actress')
 
     return
 
@@ -622,29 +636,57 @@ label nurse_attic_butler_room:
 
     call nurse_attic_approach
 
-    $ change_room("butler_room")
+    if nurse_details.saved_variables.get("visited_attic_butler_room"):
 
-    """
-    The room itself is surprisingly ordinary.
+        $ change_room("butler_room")
 
-    A neat bed, a small washstand, and a plain wooden chair.
+        if nurse_details.saved_variables.get("tried_butler_cabinet"):
 
-    However, standing against the far wall is a large, reinforced cabinet.
+            """
+            The reinforced cabinet still stands against the far wall.
 
-    Through its glass panes, I can see the household silver and other valuables gleaming in the dim light.
+            Without the butler's key, there is nothing I can do here.
+            """
 
-    This must be where the true wealth of the house is kept.
-    """
+        else:
 
-    call run_menu(TimedMenu("nurse_attic_butler_cabinet_choice", [
-        TimedMenuChoice("Try to open the cabinet", 'nurse_butler_cabinet_lockpick', 20, early_exit=True),
-        TimedMenuChoice("Leave it for now", 'generic_cancel', 10, early_exit=True),
-    ]))
+            """
+            The room itself is surprisingly ordinary.
+
+            However, standing against the far wall is a large, reinforced cabinet.
+            """
+
+    else:
+
+        $ nurse_details.saved_variables["visited_attic_butler_room"] = True
+
+        $ change_room("butler_room")
+
+        """
+        The room itself is surprisingly ordinary.
+
+        A neat bed, a small washstand, and a plain wooden chair.
+
+        However, standing against the far wall is a large, reinforced cabinet.
+
+        Through its glass panes, I can see the household silver and other valuables gleaming in the dim light.
+
+        This must be where the true wealth of the house is kept.
+        """
+
+    if not nurse_details.saved_variables.get("tried_butler_cabinet"):
+
+        call run_menu(TimedMenu("nurse_attic_butler_cabinet_choice", [
+            TimedMenuChoice("Try to open the cabinet", 'nurse_butler_cabinet_lockpick', 20, early_exit=True),
+            TimedMenuChoice("Leave it for now", 'generic_cancel', 10, early_exit=True),
+        ]))
 
     return
 
 
 label nurse_butler_cabinet_lockpick:
+
+    $ nurse_details.saved_variables["tried_butler_cabinet"] = True
 
     """
     I approach the cabinet and attempt to pick the lock.
@@ -667,29 +709,43 @@ label nurse_attic_males_room:
 
     call nurse_attic_approach
 
-    $ change_room("attic_males_room")
+    if nurse_details.saved_variables.get("visited_attic_males_room"):
 
-    """
-    Two beds, a chest of drawers, a peg for each man's jacket.
+        $ change_room("attic_males_room")
 
-    I check the drawers quickly — folded shirts, a penknife, a few coins.
+        """
+        It looks exactly the same as before.
 
-    No valuables here.
+        No need to search any further.
+        """
 
-    Tucked at the very back of the bottom drawer, I find a passport. Belgian.
+    else:
 
-    I open it carefully.
+        $ nurse_details.saved_variables["visited_attic_males_room"] = True
 
-    On the photograph inside I recognize Lady Claythorn's footman.
+        $ change_room("attic_males_room")
 
-    But his name is indeed not british at all. "André De Prei"
+        """
+        Two beds, a chest of drawers, a peg for each man's jacket.
 
-    That is very peculiar.
+        I check the drawers quickly — folded shirts, a penknife, a few coins.
 
-    I close it and replace it exactly as I found it.
-    """
+        No valuables here.
 
-    $ nurse_details.threads.unlock('footman_belgian')
+        Tucked at the very back of the bottom drawer, I find a passport. Belgian.
+
+        I open it carefully.
+
+        On the photograph inside I recognize Lady Claythorn's footman.
+
+        But his name is indeed not british at all. "André De Prei"
+
+        That is very peculiar.
+
+        I close it and replace it exactly as I found it.
+        """
+
+        $ nurse_details.threads.unlock('footman_belgian')
 
     return
 
@@ -698,25 +754,51 @@ label nurse_attic_storage:
 
     call nurse_attic_approach
 
-    $ change_room("attic_storage_room")
+    if nurse_details.saved_variables.get("visited_attic_storage"):
 
-    """
-    The storage room is vast.
+        $ change_room("attic_storage_room")
 
-    Trunks stacked three deep, old furniture draped in dust sheets, boxes of every shape and size.
+        if nurse_details.threads.is_unlocked('find_bullets'):
 
-    I barely know where to begin.
-    """
+            """
+            There is nothing more for me to find here.
 
-    call run_menu(
-        TimedMenu(
-            id='nurse_attic_storage_search',
-            choices=[
-                TimedMenuChoice('Search everything carefully', 'nurse_attic_storage_search_all', 60, early_exit=True),
-                TimedMenuChoice('Give up. This will take all day.', 'nurse_attic_storage_give_up', 10, early_exit=True),
-            ]
+            I have already gone through the important items.
+            """
+
+        else:
+
+            """
+            The storage room remains a jumble of trunks and boxes.
+
+            I still have not searched it thoroughly.
+            """
+
+    else:
+
+        $ nurse_details.saved_variables["visited_attic_storage"] = True
+
+        $ change_room("attic_storage_room")
+
+        """
+        The storage room is vast.
+
+        Trunks stacked three deep, old furniture draped in dust sheets, boxes of every shape and size.
+
+        I barely know where to begin.
+        """
+
+    if not nurse_details.threads.is_unlocked('find_bullets'):
+
+        call run_menu(
+            TimedMenu(
+                id='nurse_attic_storage_search',
+                choices=[
+                    TimedMenuChoice('Search everything carefully', 'nurse_attic_storage_search_all', 60, early_exit=True),
+                    TimedMenuChoice('Give up. This will take all day.', 'nurse_attic_storage_give_up', 10, early_exit=True),
+                ]
+            )
         )
-    )
 
     return
 
