@@ -210,7 +210,7 @@ label nurse_day2_evening_billiard_room_boxer:
     # Whatever he says, the nurse can test it against her own memory.
     """
 
-    if nurse_details.threads.is_unlocked('captain_lie_rank'):
+    if nurse_details.threads.is_unlocked('captain_lie_boxer'):
 
         nurse """
         # TODO placeholder — nurse is more pointed. She already noted on Friday evening
@@ -237,7 +237,7 @@ label nurse_day2_evening_billiard_room_boxer:
         # She mentions a detail she remembers clearly, watches how he responds.
         """
 
-        # TODO: consider unlocking captain_lie_rank here for players who missed the Day 1 billiard room.
+        # TODO: consider unlocking captain_lie_boxer here for players who missed the Day 1 billiard room.
 
     return
 

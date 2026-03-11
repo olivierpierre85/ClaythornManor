@@ -85,7 +85,7 @@ label nurse_day1_evening_billiard_room_captain:
     I should keep it in mind.
     """
 
-    $ nurse_details.threads.unlock('captain_lie_rank')
+    $ nurse_details.threads.unlock('captain_lie_boxer')
 
     return
 

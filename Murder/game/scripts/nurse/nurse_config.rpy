@@ -69,10 +69,10 @@ label init_nurse:
         
         nurse_observations = CharacterObservationList([
             CharacterInformation(
-                1, "captain_lie_rank",
+                1, "captain_lie_boxer",
                 "You noticed an inconsistency in Captain Sinha's story about his rank",
                 content_negative="You didn't notice the inconsistency in Captain Sinha's story",
-                image_file="captain",
+                image_file="captain_lie_boxer",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
@@ -81,14 +81,6 @@ label init_nurse:
                 "You noticed something odd in the way Captain Sinha spoke about the Anglo-Zanzibar War.",
                 content_negative="You didn't notice anything unusual about the Captain's story.",
                 image_file="captain_lie_zanzibar",
-                chapters=['friday_evening'],
-                relevant_chapters=['friday_evening'],
-            ),
-            CharacterInformation(
-                1, "captain_boxer",
-                "You found Captain Sinha's account of the Boxer Rebellion to be highly doubtful.",
-                content_negative="You didn't hear Captain Sinha's account of the Boxer Rebellion",
-                image_file="captain",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
