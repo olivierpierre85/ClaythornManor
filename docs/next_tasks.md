@@ -3,6 +3,10 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
 
 ## Write Story : NURSE - Day 2
 
+Needed infocard
+- escape in the night
+- die of exhaustion (nurse lying on the ground? Or just very bloody handkerchief)?
+
 - [ ] Part 1 - Hunt
     - [ ] TEST TEST TESTS create manuel PATH WITH EVERYTHING;
     - [ ] CHECK Music and sound => New music when caught by psychic

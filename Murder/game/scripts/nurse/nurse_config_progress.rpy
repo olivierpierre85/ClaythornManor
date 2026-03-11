@@ -41,7 +41,7 @@ label nurse_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "todo", "sunday_morning"),
+                Chapter(image_ending_question, "ending", "escape_poor", "sunday_morning"),
                 Chapter(image_checkpoint_empty_after_ending),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "todo", "end"),

@@ -131,7 +131,9 @@ label init_nurse:
         ])
 
         nurse_endings = CharacterEndingList ([
-            CharacterInformation(1, "exhausted", "You collapsed from exhaustion", image_file="blood_handkerchief_1", chapters=['saturday_evening']), 
+            CharacterInformation(1, "exhausted", "You collapsed from exhaustion", image_file="blood_handkerchief_1", chapters=['saturday_evening']),
+            CharacterInformation(1, "escape_poor", "You escaped in the night, but with very little to show for it", image_file="escape", chapters=['saturday_evening']),
+            
         ])
 
         nurse_extra_information = CharacterDescriptionHiddenList([
