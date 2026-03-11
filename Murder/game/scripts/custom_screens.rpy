@@ -78,7 +78,7 @@ label wait_screen_transition():
     return 
 
 # BLACK transition
-label black_screen_transition(display_text, display_text_2 = None):
+label black_screen_transition(display_text="", display_text_2 = None):
     if not renpy.is_in_test():
         scene black_background with irisin
         show screen centered_text(display_text, display_text_2)

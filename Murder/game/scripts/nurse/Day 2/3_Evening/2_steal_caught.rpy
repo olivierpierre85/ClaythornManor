@@ -172,7 +172,7 @@ label nurse_day2_evening_steal_caught:
     It is far from ideal, but it is my only chance.
     """
 
-    call black_screen_transition()
+    call wait_screen_transition()
 
     call change_time(23, 30)
 

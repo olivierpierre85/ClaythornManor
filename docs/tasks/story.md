@@ -102,15 +102,12 @@
   - When reach I don't know 100 pounds => I have enough to finish my life in peace, I am out of here. Or I have enough to live in the south of France to cure my turbeculosis? See Backstory
 - [ ] **Chase mechanic** path (Hide in scullery).
 - [ ] **Chase mechanic** path (Hide in scullery).
-- [ ] She has the power to find things in most rooms, so it uncovers => Car keys, no bearer bond, gasoline for car, bullets for gun
 - [ ] SHE KNOWS there is no money ? write Path to discover that => Inside Lady CLaythorn room!!!!!!
-- [ ] She talks to Lady Claythorn on the first Day (When?).
-- [ ] Is easily exhausted, wait too late to wonder and GAIN a bleeding card => get 3and die !
-- [ ] WHY is the gun from TED harring ending  is loaded when nurse point at psychic? SHE knows where bullets are
 - [ ] Unlocks Captain by finding "holes" in his many speeches, you have to navigate multiple dialogs to unlock that
 
 ### Ideas to think over (optional)
 
+- Extend the dialogs for when she is caught stealing. They go a bit fast
 - [ ] queen alexandra => Not clear it's a nurse Queen
   - [ ] => Replace with a THIEF king or queen for forshadowing? Henry 8 or charles 1 ? (or Prince John of Robin hood)
 
