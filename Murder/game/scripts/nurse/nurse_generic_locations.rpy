@@ -60,6 +60,7 @@ label nurse_lockpick_door:
 
 label nurse_search_captain_default:
 
+    $ nurse_details.saved_variables["visited_bedroom_captain"] = True
     $ change_room("bedroom_captain")
 
     play sound door_locked
@@ -85,8 +86,26 @@ label nurse_search_captain_default:
     return
 
 
+label nurse_search_captain_again:
+
+    $ change_room("bedroom_captain")
+
+    """
+    I look over the Captain's immaculate room one last time.
+
+    Everything remains exactly as I found it earlier. 
+
+    If there is a secret here, it is too well hidden for me to find now. 
+
+    I should not linger and press my luck.
+    """
+
+    return
+
+
 label nurse_search_host_default:
 
+    $ nurse_details.saved_variables["visited_bedroom_host"] = True
     $ change_room("bedroom_host")
 
     """
@@ -143,6 +162,23 @@ label nurse_search_host_default:
         TimedMenuChoice("Take the pearls.", 'nurse_take_pearls', 5, early_exit=True),
         TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
     ]))
+
+    return
+
+
+label nurse_search_host_again:
+
+    $ change_room("bedroom_host")
+
+    """
+    I carefully search Lady Claythorn's room once more.
+
+    The heavy curtains, the dressing table, the floorboards... I check it all again.
+
+    But there is simply nothing else to be found. 
+
+    If the bearer bonds are here, they are in a safe I cannot locate.
+    """
 
     return
 

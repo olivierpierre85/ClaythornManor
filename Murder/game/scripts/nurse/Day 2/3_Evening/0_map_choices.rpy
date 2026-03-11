@@ -18,8 +18,8 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('tea_room'), 'nurse_day2_evening_tea_room', 10,  room='tea_room'),
             # Bedrooms 
-            TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_evening_bedroom_lad', 0, room='bedroom_lad'),
-            TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_evening_bedroom_doctor', 0, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_evening_bedroom_doctor', 10, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'nurse_day2_evening_bedroom_captain', 0, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'nurse_day2_evening_bedroom_host', 0, room='bedroom_host'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day2_evening_bedroom_drunk', 20, room='bedroom_drunk'),
@@ -199,31 +199,140 @@ label nurse_day2_evening_bedroom_closed:
 
 label nurse_day2_evening_bedroom_lad:
 
-    call nurse_bedroom_default
-    call nurse_day2_evening_bedroom_closed
+    $ change_room("bedrooms_hallway")
+
+    play sound door_knock
+
+    """
+    I approach Mr Harring's room and knock gently.
+
+    There is no reply, but I can hear the sound of heavy furniture being dragged across the floorboards.
+
+    It seems he is barricading himself inside.
+
+    Under the circumstances, I suppose I cannot blame him.
+    """
+
 
     call nurse_day2_evening_check_exhaustion
 
     return
 
+
+label nurse_day2_evening_default_room_no_enter:
+    
+    """
+    It is best I do not go in there for now.
+    """
+
+    return
 
 label nurse_day2_evening_bedroom_captain:
 
     call nurse_bedroom_default
-    call nurse_day2_evening_bedroom_closed
+
+    """
+    Captain Sinha is nowhere to be seen, though I suspect he is not far away.
+    """
+
+    if nurse_details.saved_variables.get("visited_bedroom_captain"):
+
+        """
+        This corridor remains quite deserted as well.
+        """
+
+        call run_menu(
+            TimedMenu(
+                id="nurse_day2_evening_bedroom_captain_again",
+                choices=[
+                    TimedMenuChoice("I should take another look just to be certain I missed nothing.", 'nurse_day2_evening_enter_captain_again', 10, early_exit=True),
+                    TimedMenuChoice("No, I have already searched here.", 'nurse_day2_evening_default_room_no_enter', 10, early_exit=True),
+                ]
+            )
+        )
+
+    else:
+
+        """
+        With most of the household downstairs or retired, one could easily slip inside unseen.
+
+        Though it would be rather difficult to explain if I were caught.
+        """
+
+        call run_menu(
+            TimedMenu(
+                id="nurse_day2_evening_bedroom_captain",
+                choices=[
+                    TimedMenuChoice("We leave tomorrow. This might be my last chance to search the room.", 'nurse_day2_evening_enter_captain', 10, early_exit=True),
+                    TimedMenuChoice("No, if I am caught, I could lose everything before we leave.", 'nurse_day2_evening_default_room_no_enter', 10, early_exit=True),
+                ]
+            )
+        )
 
     call nurse_day2_evening_check_exhaustion
 
     return
 
+label nurse_day2_evening_enter_captain:
+    call nurse_bedroom_lockpick_choice('nurse_search_captain_default')
+    return
+
+label nurse_day2_evening_enter_captain_again:
+    call nurse_bedroom_lockpick_choice('nurse_search_captain_again')
+    return
 
 label nurse_day2_evening_bedroom_host:
 
     call nurse_bedroom_default
-    call nurse_day2_evening_bedroom_closed
+
+    """
+    It is highly unusual for Lady Claythorn to be absent from her room at this hour.
+    """
+
+    if nurse_details.saved_variables.get("visited_bedroom_host"):
+
+        """
+        This corridor remains quite deserted as well.
+        """
+
+        call run_menu(
+            TimedMenu(
+                id="nurse_day2_evening_bedroom_host_again",
+                choices=[
+                    TimedMenuChoice("Perhaps I missed a hidden drawer earlier.", 'nurse_day2_evening_enter_host_again', 10, early_exit=True),
+                    TimedMenuChoice("I have already seen what I need to see.", 'nurse_day2_evening_default_room_no_enter', 10, early_exit=True),
+                ]
+            )
+        )
+
+    else:
+
+        """
+        With most of the household downstairs or retired, one could easily slip inside unseen.
+
+        Though it would be rather difficult to explain if I were caught.
+        """
+
+        call run_menu(
+            TimedMenu(
+                id="nurse_day2_evening_bedroom_host",
+                choices=[
+                    TimedMenuChoice("We leave tomorrow. This might be my last chance to search the room.", 'nurse_day2_evening_enter_host', 10, early_exit=True),
+                    TimedMenuChoice("No, if I am caught, I could lose everything before we leave.", 'nurse_day2_evening_default_room_no_enter', 10, early_exit=True),
+                ]
+            )
+        )
 
     call nurse_day2_evening_check_exhaustion
 
+    return
+
+label nurse_day2_evening_enter_host:
+    call nurse_bedroom_lockpick_choice('nurse_search_host_default')
+    return
+
+label nurse_day2_evening_enter_host_again:
+    call nurse_bedroom_lockpick_choice('nurse_search_host_again')
     return
 
 
@@ -267,21 +376,21 @@ label nurse_day2_evening_bedroom_psychic:
     """
 
     psychic """
-    Oh, Miss Marsh. How very kind.
+    Oh, Miss Marsh. You are very kind to ask.
 
-    I am as well as can be expected, under the circumstances.
+    But I am quite exhausted, if I am perfectly honest.
 
-    It has been a dreadful day.
+    I really just wish to sleep now.
     """
 
     nurse """
-    It has.
+    Of course.
 
-    Try to get some rest. We shall both feel better in the morning.
+    I shall not keep you. We shall both feel better in the morning.
     """
 
     psychic """
-    Yes.
+    Indeed.
 
     Good night, Miss Marsh.
     """
@@ -304,7 +413,7 @@ label nurse_day2_evening_bedroom_drunk:
     play sound door_knock
 
     """
-    I stand at Samuel Manning's door.
+    I stand at Samuel Manning's door. I try the handle, but it is locked from the inside.
 
     I can hear him moving about on the other side. Restless, or perhaps delirious.
     """
