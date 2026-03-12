@@ -20,7 +20,7 @@
       "console": "integratedTerminal"
     },
     {
-      "name": "Antigravity: Process Infocards",
+      "name": "Process Infocards",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/.vscode/dummy.py",
@@ -29,7 +29,7 @@
       "console": "integratedTerminal"
     },
     {
-      "name": "Antigravity: Process Infocards (with Addon)",
+      "name": "Process Infocards (with Addon)",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/.vscode/dummy.py",

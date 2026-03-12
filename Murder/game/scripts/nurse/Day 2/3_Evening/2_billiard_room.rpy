@@ -134,6 +134,10 @@ label nurse_day2_evening_billiard_room_staff:
     In what sense?
     """
 
+    """
+    I should be careful here, I can't really say I went searching their rooms.
+    """
+
     nurse """
     The footman.
 
@@ -228,7 +232,7 @@ label nurse_day2_evening_billiard_room_boxer:
     """
 
     """
-    He is quiet for a moment, turning his glass slowly in his hand.
+    He is quiet for a moment.
     """
 
     captain """
@@ -240,7 +244,7 @@ label nurse_day2_evening_billiard_room_boxer:
 
     But I never made the connection, it's no like we were in the same circles.
 
-    But this is very strange.
+    This is very strange.
     """
 
     nurse """
