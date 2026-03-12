@@ -60,14 +60,13 @@ init -1000 python:
         folder = os.path.join(base, "tests", "testing_mode_choices")
         files = glob.glob(os.path.join(folder, "*.json"))
         if not files:
-            return []
+            return None
 
         latest_file = max(files, key=os.path.getmtime)
-        with open(latest_file, "r", encoding="utf-8") as fh:  # use fh, not f
+        with open(latest_file, "r", encoding="utf-8") as fh:
             data = json.load(fh)
 
-        choices = data.get("choices", [])
-        return choices
+        return data
 
 define config.exception_handler = dump_state
 
@@ -75,6 +74,7 @@ define config.exception_handler = dump_state
 default debug_activated = False
 
 default full_testing_mode = False
+default full_testing_mode_unlocked_threads = []
 # default persistent.not_already_chosen = {}
 
 default drunk_mode = False
@@ -144,12 +144,16 @@ label start():
 
     python: 
    
+        full_testing_mode_data = None
         full_testing_mode_choices = None
+        full_testing_mode_unlocked_threads = None
 
         # Load latest path file for test
         if full_testing_mode:
-            full_testing_mode_choices = load_latest_choices_from_testing()
-            # print(full_testing_mode_choices)
+            full_testing_mode_data = load_latest_choices_from_testing()
+            if full_testing_mode_data:
+                full_testing_mode_choices = full_testing_mode_data.get("choices", [])
+                full_testing_mode_unlocked_threads = full_testing_mode_data.get("unlocked_threads", [])
 
     if full_testing_mode:
 
@@ -170,6 +174,14 @@ label start():
                         if char_choice:
                             current_character = eval(char_choice + "_details")
                             current_storyline = current_character
+
+                        if full_testing_mode_unlocked_threads:
+                            for thread in full_testing_mode_unlocked_threads:
+                                current_character.threads.unlock(thread, is_restart=True)
+                                # Mark as discovered too
+                                item = current_character.threads.get_item(thread)
+                                if item:
+                                    item.discovered = True
 
                     renpy.jump(menu_id)
                 else:

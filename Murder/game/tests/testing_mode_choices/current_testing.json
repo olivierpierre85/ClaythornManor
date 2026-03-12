@@ -1,171 +1,57 @@
 {
   "tester_id": "admin",
   "timestamp": "2026-03-09T17:03:07.532198",
-  "unlocked_threads": [],
+  "unlocked_threads": [
+    "captain_lie_boxer",
+    "boxer_rebellion_1",
+    "boxer_rebellion_2",
+    "captain_fraud",
+    "captain_lie_zanzibar",
+    "remember_doctor",
+    "footman_belgian",
+    "maid_actress",
+    "day1_exhaustion",
+    "spotted_by_psychic",
+    "steal_cutlery_1",
+    "steal_cutlery_2",
+    "steal_pearls",
+    "take_gun",
+    "find_bullets"
+  ],
   "choices": [
     {
-      "menu": "nurse_day2_hunt",
+      "menu": "nurse_day2_evening",
       "character_choice": "nurse",
-      "timestamp": "2026-03-09T17:02:45.382152"
+      "timestamp": "2026-03-12T11:36:22.567705"
     },
     {
-      "menu": "nurse_day2_no_hunt_map_menu",
+      "menu": "nurse_day2_evening_dinner",
       "other_choices": [
-        "Kitchen",
-        "Scullery",
-        "Garage",
-        "Gun room",
-        "Billiard room",
-        "Dining Room",
-        "Garden",
-        "Entrance Hall",
-        "Library",
-        "Portrait Gallery",
-        "Wait for luncheon in the Tea Room",
-        "William the Conqueror Bedroom",
-        "Edward II Bedroom",
-        "George I Bedroom",
-        "Henry IV Bedroom",
-        "George IV Bedroom",
-        "Elizabeth I Bedroom",
-        "Storage Room",
-        "Male Servants Room",
-        "Female Servants Room",
-        "Butler's Room",
-        "Take a rest before lunch",
-        "Richard III Bedroom"
+        "Speak to Lady Claythorn",
+        "Say nothing, eat your dinner"
       ],
-      "selected": "George I Bedroom",
-      "redirect": "nurse_day2_no_hunt_bedroom_captain",
-      "time_left": 60,
-      "timestamp": "2026-03-11T14:33:27.362839",
-      "time_to_decide": 1.655653,
-      "time_since_last": 9.473187
-    },
-    {
-      "menu": "nurse_day2_no_hunt_bedroom_captain",
-      "other_choices": [
-        "This is my chance. I should search the room before anyone returns.",
-        "Not now. The timing is not right."
-      ],
-      "selected": "This is my chance. I should search the room before anyone returns.",
-      "redirect": "nurse_day2_no_hunt_enter_captain",
-      "time_left": 60,
-      "timestamp": "2026-03-11T14:33:29.112957",
-      "time_to_decide": 0.601122,
-      "time_since_last": 1.750118
-    },
-    {
-      "menu": "nurse_day2_no_hunt_map_menu",
-      "other_choices": [
-        "Kitchen",
-        "Scullery",
-        "Garage",
-        "Gun room",
-        "Billiard room",
-        "Dining Room",
-        "Garden",
-        "Entrance Hall",
-        "Library",
-        "Portrait Gallery",
-        "Wait for luncheon in the Tea Room",
-        "William the Conqueror Bedroom",
-        "Edward II Bedroom",
-        "Henry IV Bedroom",
-        "George IV Bedroom",
-        "Elizabeth I Bedroom",
-        "Storage Room",
-        "Male Servants Room",
-        "Female Servants Room",
-        "Butler's Room",
-        "Take a rest before lunch",
-        "Richard III Bedroom"
-      ],
-      "selected": "Henry IV Bedroom",
-      "redirect": "nurse_day2_no_hunt_bedroom_host",
-      "time_left": 55,
-      "timestamp": "2026-03-11T14:33:30.047731",
-      "time_to_decide": 0.80156,
-      "time_since_last": 0.934774
-    },
-    {
-      "menu": "nurse_day2_no_hunt_bedroom_host",
-      "other_choices": [
-        "I must be quick. There may be something worth taking in there.",
-        "Too risky. If someone were to come along, I could not explain myself."
-      ],
-      "selected": "I must be quick. There may be something worth taking in there.",
-      "redirect": "nurse_day2_no_hunt_enter_host",
-      "time_left": 55,
-      "timestamp": "2026-03-11T14:33:30.981786",
-      "time_to_decide": 0.751104,
-      "time_since_last": 0.934055
-    },
-    {
-      "menu": "nurse_search_host_choice_default",
-      "other_choices": [
-        "Take the pearls.",
-        "Leave them. It's not worth the risk."
-      ],
-      "selected": "Leave them. It's not worth the risk.",
+      "selected": "Say nothing, eat your dinner",
       "redirect": "generic_cancel",
-      "time_left": 50,
-      "timestamp": "2026-03-11T14:33:32.216465",
-      "time_to_decide": 1.218635,
-      "time_since_last": 1.234679
+      "time_left": 90,
+      "timestamp": "2026-03-12T11:36:49.586680",
+      "time_to_decide": 1.449404,
+      "time_since_last": 27.018975
     },
     {
-      "menu": "nurse_day2_no_hunt_map_menu",
+      "menu": "nurse_day2_evening_steal",
       "other_choices": [
-        "Kitchen",
-        "Scullery",
-        "Garage",
-        "Gun room",
-        "Billiard room",
-        "Dining Room",
-        "Garden",
-        "Entrance Hall",
-        "Library",
-        "Portrait Gallery",
-        "Wait for luncheon in the Tea Room",
-        "William the Conqueror Bedroom",
-        "Edward II Bedroom",
-        "George IV Bedroom",
-        "Elizabeth I Bedroom",
-        "Storage Room",
-        "Male Servants Room",
-        "Female Servants Room",
-        "Butler's Room",
-        "Take a rest before lunch",
-        "Richard III Bedroom"
+        "Pocket some silverware discreetly",
+        "It is not worth the risk"
       ],
-      "selected": "Take a rest before lunch",
-      "redirect": "nurse_day2_no_hunt_rest_before_lunch",
-      "time_left": 45,
-      "timestamp": "2026-03-11T14:33:33.550581",
-      "time_to_decide": 1.818682,
-      "time_since_last": 1.334116
+      "selected": "It is not worth the risk",
+      "redirect": "nurse_day2_evening_do_not_steal",
+      "time_left": 1,
+      "timestamp": "2026-03-12T11:36:51.187377",
+      "time_to_decide": 0.465556,
+      "time_since_last": 1.600697
     },
     {
-      "menu": "psychic_generic_menu_nurse",
-      "other_choices": [
-        "What do you think of this weather?",
-        "Tell me more about yourself.",
-        "What do you think of this place?",
-        "How old are you?",
-        "What room are you in?",
-        "What do you think of the other guests?",
-        "You don't have anymore questions for her"
-      ],
-      "selected": "You don't have anymore questions for her",
-      "redirect": "generic_cancel",
-      "time_left": 60,
-      "timestamp": "2026-03-11T14:33:35.703326",
-      "time_to_decide": 0.749179,
-      "time_since_last": 2.152745
-    },
-    {
-      "menu": "nurse_day2_no_hunt_map_menu",
+      "menu": "nurse_day2_evening_map_menu",
       "other_choices": [
         "Kitchen",
         "Scullery",
@@ -180,47 +66,23 @@
         "Tea room",
         "William the Conqueror Bedroom",
         "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
         "George IV Bedroom",
         "Elizabeth I Bedroom",
         "Storage Room",
         "Male Servants Room",
         "Female Servants Room",
         "Butler's Room",
-        "Wait until the others return",
+        "Go to sleep",
         "Richard III Bedroom"
       ],
-      "selected": "Wait until the others return",
-      "redirect": "nurse_day2_no_hunt_cancel",
-      "time_left": 60,
-      "timestamp": "2026-03-11T14:33:36.853829",
-      "time_to_decide": 0.817772,
-      "time_since_last": 1.150503
-    },
-    {
-      "menu": "nurse_day2_evening_dinner",
-      "other_choices": [
-        "Speak to Lady Claythorn",
-        "Say nothing, eat your dinner"
-      ],
-      "selected": "Say nothing, eat your dinner",
-      "redirect": "generic_cancel",
+      "selected": "Billiard room",
+      "redirect": "nurse_day2_evening_billiard_room",
       "time_left": 90,
-      "timestamp": "2026-03-11T14:33:40.072075",
-      "time_to_decide": 0.684729,
-      "time_since_last": 3.218246
-    },
-    {
-      "menu": "nurse_day2_evening_steal",
-      "other_choices": [
-        "Pocket some silverware discreetly",
-        "It is not worth the risk"
-      ],
-      "selected": "It is not worth the risk",
-      "redirect": "nurse_day2_evening_do_not_steal",
-      "time_left": 1,
-      "timestamp": "2026-03-11T14:33:40.956760",
-      "time_to_decide": 0.667563,
-      "time_since_last": 0.884685
+      "timestamp": "2026-03-12T11:36:51.786428",
+      "time_to_decide": 5.520692,
+      "time_since_last": 0.599051
     }
   ]
 }

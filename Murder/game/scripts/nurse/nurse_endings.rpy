@@ -22,6 +22,28 @@ label nurse_ending_exhausted:
     jump ending_generic
 
 
+label nurse_ending_billiard_room_death:
+
+    $ nurse_details.endings.unlock('billiard_room_death')
+    $ nurse_details.add_ending_checkpoint(ending=nurse_details.endings.get_item('billiard_room_death'))
+
+    call death_screen_transition
+
+    """
+    The confrontation was too much.
+
+    The strain that had been following you all weekend finally found its moment.
+
+    The Captain tried to help.
+
+    It was not enough.
+
+    You died in the billiard room of Claythorn Manor, on a Saturday night, with your accusations still warm on your lips.
+    """
+
+    jump ending_generic
+
+
 label nurse_ending_escape_poor:
 
     $ nurse_details.endings.unlock('escape_poor')

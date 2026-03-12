@@ -77,6 +77,30 @@ label init_nurse:
                 relevant_chapters=['friday_evening'],
             ),
             CharacterInformation(
+                0, "boxer_rebellion_1",
+                "You told the Captain you were at the Boxer Rebellion too, and discussed who else might have been there.",
+                content_negative="You did not mention the Boxer Rebellion to the Captain.",
+                image_file="captain_lie_boxer",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening'],
+            ),
+            CharacterInformation(
+                0, "boxer_rebellion_2",
+                "You confronted the Captain about his rank during the Boxer Rebellion.",
+                content_negative="You did not press the Captain about his rank.",
+                image_file="captain_lie_boxer",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening'],
+            ),
+            CharacterInformation(
+                0, "captain_fraud",
+                "The Captain admitted that most of his war stories were fabricated.",
+                content_negative="The Captain did not confess.",
+                image_file="captain_lie_boxer",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening'],
+            ),
+            CharacterInformation(
                 1, "captain_lie_zanzibar",
                 "You noticed something odd in the way Captain Sinha spoke about the Anglo-Zanzibar War.",
                 content_negative="You didn't notice anything unusual about the Captain's story.",
@@ -156,7 +180,7 @@ label init_nurse:
         nurse_endings = CharacterEndingList ([
             CharacterInformation(1, "exhausted", "You collapsed from exhaustion", image_file="blood_handkerchief_1", chapters=['saturday_evening']),
             CharacterInformation(1, "escape_poor", "You escaped in the night, but with very little to show for it", image_file="escape", chapters=['saturday_evening']),
-            
+            CharacterInformation(1, "billiard_room_death", "You died in the billiard room after confronting the Captain", image_file="blood_handkerchief_1", chapters=['saturday_evening']),
         ])
 
         nurse_extra_information = CharacterDescriptionHiddenList([

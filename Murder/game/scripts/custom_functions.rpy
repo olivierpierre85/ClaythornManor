@@ -347,6 +347,13 @@ label start_again():
         # Reset object, observation, choices...
         current_character.reset_information()
 
+        if full_testing_mode and full_testing_mode_unlocked_threads:
+            for thread in full_testing_mode_unlocked_threads:
+                current_character.threads.unlock(thread, is_restart=True)
+                item = current_character.threads.get_item(thread)
+                if item:
+                    item.discovered = True
+
         # re run objects and observations from checkpoint
         for item in current_checkpoint.objects:
             current_character.objects.unlock(item, True)
