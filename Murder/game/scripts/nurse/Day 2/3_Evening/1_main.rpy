@@ -59,6 +59,17 @@ label nurse_day2_evening:
     There is nothing more for me to do for Doctor Baldwin now.
     """
 
+    if nurse_details.threads.is_unlocked('remember_doctor'):
+
+        """
+        I feel a sharp pang of regret. 
+
+        The questions I intended to ask him will never be answered. 
+
+        I missed my chance to talk of the Boxer Rebellion, of those long nights in China... and of whether he remembered me at all.
+        """
+
+
     call common_day2_evening_samuel_manning_discussion_part_1
 
     call common_day2_evening_samuel_manning_discussion_part_2

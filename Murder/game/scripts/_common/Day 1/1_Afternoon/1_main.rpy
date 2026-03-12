@@ -16,6 +16,16 @@ label common_day1_afternoon_station_doctor_nurse:
     Nice to meet you, Miss Marsh. I'm Doctor Daniel Baldwin.
     """
 
+    if current_character.text_id == "nurse":
+
+        """
+        Daniel Baldwin...
+
+        The name is familiar, and yet I cannot quite place where I have heard it before.
+
+        It is probably nothing. I have met a great many doctors in my time.
+        """
+
     nurse """
     Nice to meet you, doctor. Was your trip pleasant?
     """

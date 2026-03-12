@@ -85,6 +85,14 @@ label init_nurse:
                 relevant_chapters=['friday_evening'],
             ),
             CharacterInformation(
+                0, "remember_doctor",
+                "You realised that you worked with Doctor Baldwin during the Boxer Rebellion.",
+                content_negative="You didn't realise that you worked with Doctor Baldwin during the Boxer Rebellion.",
+                image_file="remember_nurse",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
+            ),
+            CharacterInformation(
                 0, "footman_belgian",
                 "You found out that the footman is actually from Belgium.",
                 content_negative="You don't know much about the footman.",

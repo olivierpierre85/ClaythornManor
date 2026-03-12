@@ -3,7 +3,10 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
 
 ## Write Story : NURSE - Day 2
 
-WHAT TO DO with NURSE KNEW Doctor before?
+Add GEneric dialog with daniel balwin? To ensure recognition? No,
+
+Add doctor in Billiard captain path
+
 
 Needed infocard
 - escape in the night

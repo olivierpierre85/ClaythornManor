@@ -89,8 +89,28 @@ label nurse_day2_morning:
     While he thinks I am not looking, he gets a silver flask from his pocket and pours a generous measure into his cup.
 
     Well, that settles it, I am not talking to him this morning.
+    """
+    
+        if nurse_details.threads.is_unlocked('remember_doctor'):
 
-    Shortly after, the butler slips into the room and bends to murmur something in Lady Claythorn's ear.
+        """
+        My gaze drifts to the other side of the table.
+
+        Doctor Baldwin is there, as composed and professional as ever.
+
+        Since the Captain's story last night, the fog has lifted. I am quite certain now.
+
+        It was indeed him. The same steady hands, the same tireless focus... though the years have added a certain weariness to his features.
+
+        I wonder if he knows? If he recognizes the young girl who once assisted him under such dreadful circumstances?
+
+        I have a mind to ask him, but it would hardly be proper to address him from across the table.
+
+        I shall wait for a more suitable moment.
+        """
+
+    """
+    Suddenly, the butler slips into the room and bends to murmur something in Lady Claythorn's ear.
 
     Her face changes at once.
 

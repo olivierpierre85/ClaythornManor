@@ -62,10 +62,22 @@ label nurse_day1_evening_billiard_room_captain:
 
     I remember those. That was one of my first campaigns, and perhaps the most terrible of them all.
 
+    Suddenly, it all comes back to me. 
+
+    The crowded wards, the smell of antiseptic struggling against the heat, and a young doctor—far younger then—working tirelessly through the night.
+
+    Daniel Baldwin. 
+
+    He was there. We were there, in the middle of that nightmare.
+    
+    I glance across the room at him, but he remains as distant as before.
+
     Was Captain Sinha there as well? How curious that would be.
 
     I had better listen until the end.
     """
+
+    $ nurse_details.threads.unlock('remember_doctor')
 
     call common_day1_evening_captain_billiard_room_speech_part_2
 
