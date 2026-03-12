@@ -91,7 +91,7 @@ label nurse_day2_morning:
     Well, that settles it, I am not talking to him this morning.
     """
     
-        if nurse_details.threads.is_unlocked('remember_doctor'):
+    if nurse_details.threads.is_unlocked('remember_doctor'):
 
         """
         My gaze drifts to the other side of the table.
@@ -100,13 +100,13 @@ label nurse_day2_morning:
 
         Since the Captain's story last night, the fog has lifted. I am quite certain now.
 
-        It was indeed him. The same steady hands, the same tireless focus... though the years have added a certain weariness to his features.
+        It was indeed him. Though the years have added a certain weariness to his features.
 
-        I wonder if he knows? If he recognizes the young girl who once assisted him under such dreadful circumstances?
+        I wonder if he knows? If he recognises the young girl who once assisted him under such dreadful circumstances?
 
         I have a mind to ask him, but it would hardly be proper to address him from across the table.
 
-        I shall wait for a more suitable moment.
+        I shall wait for a more opportune moment.
         """
 
     """

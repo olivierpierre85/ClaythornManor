@@ -62,15 +62,15 @@ label nurse_day1_evening_billiard_room_captain:
 
     I remember those. That was one of my first campaigns, and perhaps the most terrible of them all.
 
-    Suddenly, it all comes back to me. 
+    Quite of a sudden, it all comes back to me. 
 
     The crowded wards, the smell of antiseptic struggling against the heat, and a young doctor—far younger then—working tirelessly through the night.
 
     Daniel Baldwin. 
 
-    He was there. We were there, in the middle of that nightmare.
+    He was there. We were there, in the middle of that dreadful business.
     
-    I glance across the room at him, but he remains as distant as before.
+    I glance across the room at him, but he remains as aloof as before.
 
     Was Captain Sinha there as well? How curious that would be.
 

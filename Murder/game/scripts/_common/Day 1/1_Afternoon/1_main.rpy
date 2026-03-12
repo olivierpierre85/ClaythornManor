@@ -21,9 +21,9 @@ label common_day1_afternoon_station_doctor_nurse:
         """
         Daniel Baldwin...
 
-        The name is familiar, and yet I cannot quite place where I have heard it before.
+        The name is familiar, and yet I cannot quite recollect from where I know it.
 
-        It is probably nothing. I have met a great many doctors in my time.
+        No doubt it is nothing. I have met a great many doctors in my time.
         """
 
     nurse """
