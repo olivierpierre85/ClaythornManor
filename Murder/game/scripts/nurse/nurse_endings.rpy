@@ -30,15 +30,13 @@ label nurse_ending_billiard_room_death:
     call death_screen_transition
 
     """
-    The confrontation was too much.
+    You confronted a dangerous man, alone.
 
-    The strain that had been following you all weekend finally found its moment.
+    In a room without witnesses.
 
-    The Captain tried to help.
+    Already weakened by a deadly disease, the shock was enough to be the end of you.
 
-    It was not enough.
-
-    You died in the billiard room of Claythorn Manor, on a Saturday night, with your accusations still warm on your lips.
+    You died on the floor, your accusations still warm on your lips.
     """
 
     jump ending_generic
@@ -54,7 +52,7 @@ label nurse_ending_escape_poor:
     """
     You escaped in the night.
 
-    But took very little with you. Clearly not enough to make a difference to your finances.
+    But take very little with you. Clearly not enough to make a difference to your finances.
     
     You can forget the dreams of vacations in the sun.
 

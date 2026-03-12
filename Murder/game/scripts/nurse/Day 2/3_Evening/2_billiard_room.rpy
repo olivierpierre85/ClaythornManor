@@ -462,14 +462,24 @@ label nurse_day2_evening_billiard_room_zanzibar_confrontation:
     """
 
     $ nurse_day2_evening_billiard_room_zanzibar_final_menu = TimedMenu("nurse_day2_evening_billiard_room_zanzibar_final_menu", [
-        TimedMenuChoice('I understand. There was no need to lie.', 'nurse_day2_evening_billiard_room_captain_end_good', 30, early_exit=True),
-        TimedMenuChoice('You are a fraud. I shall tell the staff.', 'nurse_day2_evening_billiard_room_captain_end_bad', 30, early_exit=True),
+        TimedMenuChoice('Be sympathetic', 'nurse_day2_evening_billiard_room_captain_end_good', 30, early_exit=True),
+        TimedMenuChoice('Accuse him of being a fraud', 'nurse_day2_evening_billiard_room_captain_end_bad', 30, early_exit=True),
     ])
 
     call run_menu(nurse_day2_evening_billiard_room_zanzibar_final_menu)
 
 
 label nurse_day2_evening_billiard_room_captain_end_good:
+
+    nurse """
+    You know, you don't need to lie to me.
+
+    As a nurse in the army, I understand very well your situation: the humiliation of being given orders by incompetent young men.
+
+    Your true value never fully recognised.
+
+    If I could have painted a brighter picture of my time in the army, I probably would have too.
+    """
 
     """
     He looks at me for a long moment.
@@ -478,11 +488,13 @@ label nurse_day2_evening_billiard_room_captain_end_good:
     """
 
     captain """
+    You are right, of course, you are.
+
     The campaigns, yes, those were real.
 
     But the rank, the command, the prestige —
 
-    fabricated, every word.
+    Fabricated, every word.
     """
 
     """
@@ -526,9 +538,7 @@ label nurse_day2_evening_billiard_room_captain_end_good:
 
     The stories gave me a way in.
 
-    Not because I was extraordinary.
-
-    Simply in the hope of a better life.
+    It was my only way to a better life.
     """
 
     """
@@ -538,16 +548,16 @@ label nurse_day2_evening_billiard_room_captain_end_good:
     """
 
     nurse """
-    I believe you.
+    I understand.
+
+    Don't worry, I won't tell the others.
     """
 
     """
-    It is not forgiveness.
-
-    But it is the truth, as far as I can give it.
+    Thank you, Miss Marsh.
     """
 
-    $ nurse_details.threads.unlock('captain_fraud')
+    $ captain_details.description_hidden.unlock('lie')
 
     return
 
@@ -570,28 +580,50 @@ label nurse_day2_evening_billiard_room_captain_end_bad:
     He rises from the chair.
 
     I do not step back.
-
-    The room contracts around us — two people who know too much, in a house where knowing too much is dangerous.
-
-    And then my chest seizes.
     """
+
+    captain angry """
+    You don't understand, if the word goes out, I'll be finished.
+
+    My standing in London reduced to nothing.
+
+    You can't say anything.
+    """
+
+    """
+    He grabs me.
+
+    His eyes are different, like those of a madman.
+    """
+
+    nurse """
+    Captain, stop!
+    """
+
+    play sound woman_cough
 
     """
     The cough comes from nowhere.
 
-    Or from everywhere.
-
     It comes the way it always comes when I have pushed too far — sudden, total, unstoppable.
+
+    I feel instantly that it is stronger than other times.
+
+    Blood splatters on Captain Sinha who jumps back.
     """
 
+    captain """
+    Miss Marsh!
     """
-    I hear the Captain's voice, urgent, panicked, close.
 
-    I cannot make out the words.
+    play sound body_fall
 
-    The lamp. The carpet. The fire.
+    """
+    I slip to the floor.
 
-    And then nothing.
+    I keep hearing the Captain's voice, urgent, panicked, but the voice is getting softer.
+
+    Until I cannot make out the words.
     """
 
     jump nurse_ending_billiard_room_death
