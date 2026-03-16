@@ -34,12 +34,14 @@ Needed infocard
   - [ ] DRAFT ONLY made by AI -> Re read EVERYTHING
   - [ ] Discussion with captain SINHA => NEED the 2 unlock from before AND ask him in details about boxer's rebellion. If you can spot the lie => UNMASK him. => Then, make friend or die?
   
-  ### Endings
-- Exhaustion => Possible from the hunt? Evening? (if exhausted the day before?)
   
 ## Write Story : NURSE - Day 3
 
-???
+- A last manor map? To find what?
+- Or hide in the attic, then decides if you want to join the Lad and the Psychic => Final point of view for this POISONED ENDING?
+- CHOICE => Go to talk with others => Dies POISONED by ...
+- OR ESCAPE Poor, 
+- if you don't have anything, OR RICH if => with the butlers key you found, you empty the pantry, AND you have other stuf/ ESCAPE rich
   
 ## Write Story : Day 3 - Doctor FINIS DOCTOR
 - [ ] RETRY EVERYTHING

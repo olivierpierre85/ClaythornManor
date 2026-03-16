@@ -29,18 +29,27 @@ label nurse_day3_morning:
 
     $ play_music('mysterious')
 
-    """
-    TODO READ THIS DRAFT
-    I wake before the sun has fully conquered the Scottish mist.
+    #TODO
 
-    My chest feels heavy, a dull ache that has become my constant companion.
+    # nurse wakes up, if day1_exhaustion or day2_exhaustion, small comment about it.
 
-    I lie still for a moment, listening to the silence of the manor.
+    # then she goes to have breakfast in the dinning, room
 
-    It is a heavy, expectant silence.
+    # The dinning room is empty
 
-    The events of the past two days weigh upon me like a physical burden.
-    """
+    # She realise there is no help in the manor, and that something is not right. (I should have known, it may be too late now, what should I do)
+    # she gets out in the entrance hall.    #  
+    # There she notices a weird key next to the entrance
+    # The butlers ghost key, to open everything.
+
+    # If she has seen the butler's room before, she will know that she now can open the silver drawer
+    # If not, give a hint that it might be there.
+
+    # then she hears others coming down 
+
+    # She now has 2 choices => leave now ( leave poor ending)
+
+    # => Go into the attic to try to steal the good stuff. then wait until the afternoon.
 
 
     jump work_in_progress
