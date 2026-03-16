@@ -76,7 +76,7 @@ label init_nurse:
                 0, "swapped_plates",
                 "You swapped your plate with Mr Harring's before luncheon",
                 content_negative="You did not swap plates before luncheon",
-                image_file="blood_handkerchief_1",
+                image_file="swapping_of_plates",
                 chapters=['sunday_afternoon'],
                 relevant_chapters=['sunday_afternoon'],
             ),
