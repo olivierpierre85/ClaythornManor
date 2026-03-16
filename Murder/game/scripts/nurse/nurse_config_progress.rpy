@@ -69,6 +69,12 @@ label nurse_config_progress:
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': False, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
                 {"label": "nurse_day2_evening", "threads": {'captain_lie_zanzibar': True, 'captain_lie_boxer': True, 'footman_belgian': True,  'maid_actress': True}},
-                
+            ],
+            'sunday_morning': [
+                {"label": "nurse_day3_morning", "threads": {'day1_exhaustion': False}},
+                {"label": "nurse_day3_morning", "threads": {'day1_exhaustion': True}},
+                {"label": "nurse_day3_morning", "threads": {'day1_exhaustion': True, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
+                {"label": "nurse_day3_morning", "threads": {'day1_exhaustion': False, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
+                {"label": "nurse_day3_morning", "threads": {'captain_lie_zanzibar': True, 'captain_lie_boxer': True, 'footman_belgian': True,  'maid_actress': True}},
             ],
         }

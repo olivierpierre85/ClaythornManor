@@ -26,7 +26,7 @@ label nurse_day3_morning:
 
     $ change_room("bedroom_nurse", irisout)
 
-    $ play_music('mysterious')
+    $ play_music('mysterious', 2)
 
     if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
 

@@ -2,17 +2,19 @@ label common_day3_afternoon_lad_psychic_stay:
 
     $ stop_music(2)
 
-    psychic """
-    Well, there's no point in waiting around doing nothing.
+    if current_character.text_id != "nurse":
 
-    We haven't eaten since yesterday.
+        psychic """
+        Well, there's no point in waiting around doing nothing.
 
-    I could check the kitchen to see if there's anything I can prepare.
-    """
+        We haven't eaten since yesterday.
 
-    lad """
-    Okay, I'll come with you.
-    """    
+        I could check the kitchen to see if there's anything I can prepare.
+        """
+
+        lad """
+        Okay, I'll come with you.
+        """
 
     $ change_room('basement_stairs', dissolve)
 
@@ -22,11 +24,35 @@ label common_day3_afternoon_lad_psychic_stay:
         We are heading to the lower floor when we hear a shout.
         """
 
-    else:
+    elif current_character.text_id == "psychic":
 
         """
         On our way to the basement, I hear a familiar voice.
-        """   
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        I am halfway down the service stairs when I hear voices.
+
+        Two of them, coming from the ground floor.
+
+        My heart lurches.
+
+        The house was supposed to be empty.
+        """
+
+        pause 1.0
+
+        """
+        I recognise the voices — Ted Harring and Amelia Baxter.
+
+        They are heading this way.
+
+        There is no time to retreat.
+
+        Very well. I shall have to be convincing.
+        """
 
     $ play_music('mysterious', 2)
     
@@ -68,14 +94,32 @@ label common_day3_afternoon_lad_psychic_stay:
         When we had finished telling her the story, she remained relatively calm, considering the situation.
         """
 
-    else:
+    elif current_character.text_id == "psychic":
         # TODO: Add more details or elaborate, since the previous explanation was brief?
         """
         We explained the situation to her as best we could.
 
         She doesn't appear very alarmed by it.
-        
+
         I am finding that peculiar.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        The lie comes easily enough. I have had practice.
+
+        They tell me what has happened since this morning.
+
+        Mr Manning — dead. The doctor — missing. Lady Claythorn — vanished.
+
+        Captain Sinha has gone to fetch help.
+
+        I keep my expression steady throughout.
+
+        Not too alarmed, not too indifferent.
+
+        Just the right measure of concern.
         """
 
     nurse """
@@ -105,6 +149,10 @@ label common_day3_afternoon_lad_psychic_stay:
     elif current_character.text_id == "psychic":
         """
         So we go downstairs.
+        """
+    elif current_character.text_id == "nurse":
+        """
+        Food. Precisely what I came down here for.
         """
 
     $ change_room('kitchen', dissolve)
@@ -146,6 +194,16 @@ label common_day3_afternoon_lad_psychic_stay:
 
         So we decide it's best if he doesn't get involved.
         """
+    elif current_character.text_id == "nurse":
+        """
+        Mr Harring offers to assist, but between Miss Baxter and myself we have it well in hand.
+
+        He takes a seat and watches.
+
+        As far as they know, I simply overslept.
+
+        All I need do is eat, wait for the right moment, and slip away.
+        """
 
     pause 1.0
 
@@ -165,7 +223,12 @@ label common_day3_afternoon_lad_psychic_stay:
 
         Ted Harring sets the table and then tries to leave.
         """
+    elif current_character.text_id == "nurse":
+        """
+        We carry the plates to the dining room.
 
+        Mr Harring sets the table and then tries to leave.
+        """
 
     psychic """
     Where are you going, Mr Harring?
@@ -226,7 +289,278 @@ label common_day3_afternoon_lad_falls:
         """
         He is unable to say another word before he collapses to the floor.
         """
+    elif current_character.text_id == "nurse":
+        """
+        He cannot finish the sentence.
+
+        His legs give way beneath him.
+        """
 
     play sound body_fall
+
+    return
+
+
+# Shared scene after Ted collapses: nurse checks pulse, reveals the swap,
+# finds the gun, and starts to feel unwell. Used by both psychic and nurse.
+label common_day3_afternoon_nurse_revelation:
+
+    if current_character.text_id == "psychic":
+
+        psychic """
+        Mr Harring?!
+        """
+
+        """
+        Rosalind Marsh rushes to his side.
+
+        Her nurse's training kicks in.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        He collapses to the floor.
+
+        I rush to his side. My training takes over before my mind catches up.
+        """
+
+    nurse """
+    Mr Harring, can you hear me?
+    """
+
+    psychic """
+    What's happened?
+
+    How is he?
+    """
+
+    if current_character.text_id == "psychic":
+
+        nurse """
+        He's not well, I don't understand.
+        """
+
+        """
+        She checks his heartbeat.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        I check his pulse.
+
+        There is nothing.
+        """
+
+    nurse """
+    He has no pulse.
+
+    He's dead.
+    """
+
+    psychic """
+    What?! No, that can't be.
+
+    How is this possible?
+    """
+
+    nurse """
+    I'm not sure, but I doubt it's a coincidence at this point.
+
+    I believe he's been poisoned.
+    """
+
+    if current_character.text_id == "nurse":
+
+        """
+        Poisoned.
+
+        From the plate I gave him.
+
+        The plate that was meant for me.
+
+        I was right about the food.
+
+        And now a man is dead because of what I did.
+        """
+
+    psychic """
+    No, no, no ...
+
+    Mr Harring, why?
+    """
+
+    if current_character.text_id == "psychic":
+
+        """
+        My hands shake.
+
+        Tears run down my cheeks.
+
+        Rosalind Marsh keeps talking, but I can barely understand what she's saying.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        Miss Baxter weeps.
+
+        I barely hear her.
+
+        I swapped the plates. I know what that means.
+
+        If I tell the truth, they will think I am the poisoner.
+
+        If I stay silent, I might still get out of this.
+
+        But I cannot stay silent. Not entirely.
+
+        Because if my plate was poisoned, then someone in this house wanted me dead.
+
+        And there are only two people left.
+        """
+
+    pause 1.0
+
+    nurse """
+    All I know is that he wasn't the target.
+
+    I switched my plate with his before we started eating.
+
+    I was the one supposed to die, not him.
+    """
+
+    psychic """
+    You switched plates? Why?
+    """
+
+    nurse """
+    Why?!
+
+    After all that's happened, weren't you suspecting anything?
+    """
+
+    if current_character.text_id == "psychic":
+
+        """
+        I try to form a coherent response, but words elude me.
+        """
+
+    psychic """
+    ...
+    """
+
+    nurse """
+    When I woke to find this place empty, I knew something was wrong.
+
+    I heard the three of you rummaging around the house and I hid.
+
+    I didn't trust Sushil Sinha, but once he left I felt safe enough to reveal myself.
+
+    But I should have been more suspicious of Ted Harring.
+
+    After all, he was the least respectable of everyone here.
+
+    Clearly out of place in this environment.
+
+    And I bet I can prove it.
+    """
+
+    pause 1.0
+
+    if current_character.text_id == "psychic":
+
+        """
+        She searches Ted Harring's pockets and takes out a gun.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        I search his pockets.
+
+        My fingers close around cold metal.
+
+        A revolver.
+        """
+
+    nurse """
+    Look. He even had a weapon on him the whole time.
+
+    He...
+    """
+
+    pause 1.0
+
+    if current_character.text_id == "psychic":
+
+        """
+        She pauses.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        I stop.
+
+        Something is wrong.
+
+        Not with the room. With me.
+
+        A wave of nausea rises from my stomach, sudden and sharp.
+
+        My vision swims.
+        """
+
+    nurse """
+    I don't know what his motives were, but...
+    """
+
+    pause 1.0
+
+    nurse """
+    ...it doesn't matter now.
+    """
+
+    if current_character.text_id == "psychic":
+
+        """
+        She clearly struggles to speak.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        My hands tremble.
+
+        The revolver feels impossibly heavy.
+        """
+
+    nurse """
+    Wait, something feels off.
+    """
+
+    pause 1.0
+
+    if current_character.text_id == "psychic":
+
+        """
+        She grasps the chair next to her for support.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        I grasp the chair for support.
+
+        The room tilts.
+        """
+
+        $ stop_music(2)
+
+    nurse """
+    I think I'm going to faint.
+    """
 
     return
