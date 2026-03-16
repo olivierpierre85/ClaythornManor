@@ -262,7 +262,7 @@ screen progress:
                 vbox:
 
                     xsize 1700
-                    yoffset 20
+                    # yoffset 20
 
                     $ checkpoint_x = 283
                     $ checkpoint_x_small = 100
