@@ -29,7 +29,7 @@ label nurse_day3_morning:
 
     $ play_music('mysterious')
 
-    if nurse_details.threads.is_unlocked('day1_exhaustion'):
+    if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
 
         play sound woman_cough
 

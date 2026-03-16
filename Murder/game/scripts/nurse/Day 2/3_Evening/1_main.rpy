@@ -221,6 +221,8 @@ label nurse_day2_evening:
 
         else:
 
+            $ nurse_details.threads.unlock('day2_exhaustion')
+
             play sound woman_cough
 
             """

@@ -57,6 +57,14 @@ label init_nurse:
                 relevant_chapters=['friday_evening', 'saturday_morning' ,'saturday_evening'],
             ),
             CharacterInformation(
+                0, "day2_exhaustion",
+                "You overexerted yourself on Saturday evening and suffered a coughing fit",
+                content_negative="You didn't overexert yourself on Saturday evening",
+                image_file="blood_handkerchief_2",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
                 0, "spotted_by_psychic",
                 "You were spotted by Mrs Baxter while searching her room",
                 content_negative="Mrs Baxter did not notice anything amiss",
