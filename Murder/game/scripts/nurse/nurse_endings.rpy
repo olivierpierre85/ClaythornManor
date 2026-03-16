@@ -50,9 +50,9 @@ label nurse_ending_escape_poor:
     call survive_screen_transition
 
     """
-    You escaped in the night.
-
-    But take very little with you. Clearly not enough to make a difference to your finances.
+    You escaped, but took very little with you. 
+    
+    Clearly not enough to make a difference to your finances.
     
     You can forget the dreams of vacations in the sun.
 

@@ -716,17 +716,7 @@ label nurse_attic_butler_room:
 
         $ change_room("butler_room")
 
-        """
-        The room itself is surprisingly ordinary.
-
-        A neat bed, a small washstand, and a plain wooden chair.
-
-        However, standing against the far wall is a large, reinforced cabinet.
-
-        Through its glass panes, I can see the household silver and other valuables gleaming in the dim light.
-
-        This must be where the true wealth of the house is kept.
-        """
+        call nurse_butler_room_first_visit
 
     if not nurse_details.saved_variables.get("tried_butler_cabinet"):
 
@@ -915,6 +905,23 @@ label nurse_attic_storage_give_up:
     There is too much to search properly, and I am beginning to feel uneasy.
 
     I leave without having found anything of note.
+    """
+
+    return
+
+
+label nurse_butler_room_first_visit:
+
+    """
+    The room itself is surprisingly ordinary — a head servant's quarters.
+
+    A neat bed, a small washstand, and a plain wooden chair.
+
+    However, standing against the far wall is a large, reinforced cabinet.
+
+    Through its glass panes, I can see the household silver and other valuables gleaming in the dim light.
+
+    This must be where the true wealth of the house is kept.
     """
 
     return

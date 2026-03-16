@@ -71,6 +71,8 @@ label nurse_day3_morning:
     I wash and dress methodically.
 
     Whatever this morning holds, it is better faced upright and properly buttoned.
+
+    I head down to have breakfast.
     """
 
     call change_time(8, 45)
@@ -92,30 +94,12 @@ label nurse_day3_morning:
 
     Something is wrong.
 
-    I think I knew it before I reached the bottom of the stairs.
-
     And perhaps I have known it, in some quieter part of my mind, since the moment I read that letter on the train.
 
     There is no prize here. There never was.
 
     Whatever this weekend is truly about, it has moved well beyond the point of pretending otherwise.
-    """
 
-    if nurse_details.threads.is_unlocked('footman_belgian'):
-
-        """
-        The footman.
-
-        Belgian, not English. Whatever his real name might be.
-
-        Gone, like all the rest of them.
-
-        I find myself wondering whether he was ever truly a footman.
-
-        Whether any of them were what they appeared to be.
-        """
-
-    """
     I should have acted sooner.
 
     I may be running out of time.
@@ -133,9 +117,7 @@ label nurse_day3_morning:
     Then something catches my eye.
 
     On the small side table beside the front door, placed neatly — deliberately, I think — is a key on a plain chain.
-    """
 
-    """
     I pick it up.
 
     It is small and well-worn, with the heft of something often used.
@@ -143,33 +125,19 @@ label nurse_day3_morning:
 
     if nurse_details.saved_variables.get('visited_attic_butler_room', False):
 
-        if nurse_details.saved_variables.get('tried_butler_cabinet', False):
+        """
+        I turn it over.
 
-            """
-            I recognise it at once.
+        A master key, by the look of it — the kind a head of household staff would carry.
 
-            The butler's key. The master key to the household.
+        I think of the reinforced cabinet in the butler's room.
 
-            I have stood in front of that reinforced cabinet upstairs and been beaten by it.
+        The silver gleaming behind the glass.
 
-            I shall not be beaten again.
-            """
+        I could not get at it before.
 
-        else:
-
-            """
-            I turn it over.
-
-            A master key, by the look of it — the kind a head of household staff would carry.
-
-            I think of the reinforced cabinet in the butler's room.
-
-            The silver gleaming behind the glass.
-
-            I could not get at it before.
-
-            I rather think I could now.
-            """
+        I rather think I could now.
+        """
 
     else:
 
@@ -184,9 +152,7 @@ label nurse_day3_morning:
 
         Most of them do.
 
-        Somewhere in the attic, most likely.
-
-        I would be a fool not to look.
+        Somewhere in his bedroom, most likely.
         """
 
     """
@@ -198,15 +164,23 @@ label nurse_day3_morning:
 
     Someone is up, and moving.
 
+    And they will be coming downstairs before long.
+
     I slip the key into my coat pocket.
 
-    I have perhaps a few minutes, no more, before whoever it is comes downstairs.
+    I cannot afford to be found standing here.
+
+    Yet I am not certain it is wise to use it.
+
+    Every moment I remain is a risk.
+
+    Perhaps the wisest course is simply to go.
     """
 
     $ time_left = 1
     call run_menu(TimedMenu("nurse_day3_morning_choice", [
-        TimedMenuChoice("Slip out now, while there is still time", 'nurse_day3_morning_leave', early_exit=True),
-        TimedMenuChoice("Go up to the attic and take what you can", 'nurse_day3_morning_attic', early_exit=True),
+        TimedMenuChoice("Leave now, while there is still time", 'nurse_day3_morning_leave', early_exit=True),
+        TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True),
     ]))
 
     jump nurse_day3_afternoon
@@ -217,14 +191,14 @@ label nurse_day3_morning_leave:
     """
     I take my coat from the stand.
 
-    My bag is where I always leave it — by the door, within reach.
-
-    Old habit from the wards.
-
     I do not hesitate.
 
     I open the front door and step outside.
+    """
 
+    $ change_room("manor_exterior", dissolve)
+
+    """
     The air is cold and wet, the drive still damp from the night.
 
     I walk quickly, without looking back at the house.
@@ -233,11 +207,17 @@ label nurse_day3_morning_leave:
 
     I have understood that for some time now, and yet I stayed.
 
-    I shall not make that mistake twice.
-
     The gate at the end of the drive. Eyes on that, and nothing else.
+    """
 
-    Forward.
+    $ change_room("forest_road", dissolve)
+
+    """
+    The road stretches ahead, quiet and grey beneath the morning cloud.
+
+    I keep walking.
+
+    There is nothing behind me worth turning back for.
     """
 
     jump nurse_ending_escape_poor
@@ -246,37 +226,31 @@ label nurse_day3_morning_leave:
 label nurse_day3_morning_attic:
 
     """
-    I move quickly and without a sound.
+    I press myself to the back of the hall as the footsteps grow closer.
 
-    I know this house well enough by now to find my way without a candle.
+    Ted Harring and Amelia Baxter descend the stairs and move through to the dining room without glancing my way.
 
-    The service stairs at the far end of the corridor.
+    I waste no time.
+
+    The service stairs are at the far end of the corridor.
 
     Up to the attic.
     """
 
     $ change_room("attic_hallway")
 
-    if not nurse_details.saved_variables.get("generic_attic_visited", False):
-
-        $ nurse_details.saved_variables["generic_attic_visited"] = True
-
-        """
-        The attic corridor is narrow and very still.
-
-        Dust on every surface.
-
-        The staff quarters line the passage, their doors all shut.
-
-        No sound from behind any of them.
-
-        The whole house might as well be empty.
-        """
-
     """
-    The butler's room.
+    The attic corridor is narrow and very still.
 
-    At the far end.
+    Dust on every surface.
+
+    The staff quarters line the passage, their doors all shut.
+
+    No sound from behind any of them.
+
+    The whole house might as well be empty.
+
+    At the far end of the hallway, I find the butler's room.
     """
 
     $ change_room("butler_room")
@@ -293,19 +267,7 @@ label nurse_day3_morning_attic:
 
         $ nurse_details.saved_variables["visited_attic_butler_room"] = True
 
-        """
-        The room is plain and orderly — a head servant's quarters.
-
-        A narrow bed, a washstand, a plain wooden chair.
-
-        And against the far wall, the cabinet.
-
-        Reinforced. Glass-paned.
-
-        The household silver sits inside it — candlesticks, a salver, serving pieces.
-
-        There may be other things I cannot quite see from here.
-        """
+        call nurse_butler_room_first_visit
 
     """
     I take the key from my pocket and fit it into the cabinet lock.
@@ -313,28 +275,26 @@ label nurse_day3_morning_attic:
     It turns without effort.
 
     The doors swing open.
-    """
 
-    $ nurse_details.saved_variables["tried_butler_cabinet"] = True
+    No bearer bonds. But then I never truly believed in those.
 
-    """
-    The silver is real.
+    The silver is real though.
 
     A pair of candlesticks, a salver, a set of heavy serving spoons.
 
-    Not bearer bonds. But then I never truly believed in those.
+    Not a fortune, by any standard. But it is something.
+
+    That will make this weekend a profitable one, at least.
 
     I take what will fit without making my bag unmanageable.
 
-    My hands are quite steady.
-
     Then I close the cabinet as best I can and step back.
 
-    Done.
-    """
+    I ease the bedroom door closed behind me.
 
-    """
-    Now I wait.
+    Nobody should have cause to come in here now.
+
+    There is nothing to do but wait.
 
     I settle on the edge of the narrow bed and fold my hands.
 
