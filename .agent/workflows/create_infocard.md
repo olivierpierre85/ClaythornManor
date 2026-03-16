@@ -10,7 +10,7 @@ description: Create a square infocard image for a 1920s murder mystery
 2. **Generate the image**
    - Use the `generate_image` tool.
    - **Prompt**: [The user's description] + style modifiers.
-   - **ImageName**: A descriptive snake_case name for the image (e.g., `silver_letter_opener_infocard`).
+   - **ImageName**: A descriptive snake_case name for the image without a suffix (e.g., `silver_letter_opener`).
 
 3. **Save to the target folder**
    - The generated image will be in the artifacts directory.
