@@ -373,6 +373,7 @@ label init_technical_variables:
 
         image_checkpoint_straight_line ="images/ui/progress/rectangle_progress_straight_line.png"
         image_checkpoint_three_sides ="images/ui/progress/rectangle_progress_three_sides.png"
+        image_checkpoint_four_sides ="images/ui/progress/rectangle_progress_four_sides.png"
 
         # Fillers
         image_checkpoint_empty = "images/ui/progress/rectangle_progress_empty.png"
