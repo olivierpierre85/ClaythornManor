@@ -35,11 +35,7 @@ Needed infocard
   
 ## Write Story : NURSE - Day 3
 
-- A last manor map? To find what?
-- Or hide in the attic, then decides if you want to join the Lad and the Psychic => Final point of view for this POISONED ENDING?
-- CHOICE => Go to talk with others => Dies POISONED by ...
-- OR ESCAPE Poor, 
-- if you don't have anything, OR RICH if => with the butlers key you found, you empty the pantry, AND you have other stuf/ ESCAPE rich
+RECHECK Ending, when I you have the sleeping pills, you shouldn't collapsed after Ted Harring, just accuse the Psychic, Then what ? Kill her ? If you have the gun and bullets, that will leave you enough time to do something else? If you don't, the psychic kills you in the struggle? => See ending from the psychic point of view, make MERMAID CHART
   
 ## Write Story : Day 3 - Doctor FINIS DOCTOR
 - [ ] RETRY EVERYTHING

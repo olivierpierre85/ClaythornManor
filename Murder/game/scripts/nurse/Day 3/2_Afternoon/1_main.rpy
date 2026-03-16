@@ -166,9 +166,7 @@ label nurse_day3_afternoon_swap_no:
     """
     No.
 
-    If I am wrong, I will have poisoned an innocent man for nothing.
-
-    I cannot take that risk.
+    I am clearly being paranoid.
 
     I leave the plates where they are.
     """

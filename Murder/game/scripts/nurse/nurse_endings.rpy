@@ -59,8 +59,6 @@ label nurse_ending_poisoned:
         There was never a way out of that dining room.
 
         Your instincts were sharp, but not sharp enough.
-
-        In the end, the silver you stole will sit unclaimed in an empty attic, gathering dust.
         """
 
     else:
@@ -68,14 +66,16 @@ label nurse_ending_poisoned:
         """
         You suspected the food, but chose not to act.
 
-        It would not have mattered.
-
         The poison was in every dish.
 
-        There was never a way out of that dining room.
+        Would swapping plates have changed anything?
 
-        In the end, the silver you stole will sit unclaimed in an empty attic, gathering dust.
+        Impossible to tell.
         """
+
+    """
+    In the end, the silver you stole will sit unclaimed in an empty attic, gathering dust.
+    """
 
     jump ending_generic
 
