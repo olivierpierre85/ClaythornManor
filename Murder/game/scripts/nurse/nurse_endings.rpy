@@ -42,6 +42,28 @@ label nurse_ending_billiard_room_death:
     jump ending_generic
 
 
+label nurse_ending_poisoned:
+
+    $ nurse_details.endings.unlock('poisoned')
+    $ nurse_details.add_ending_checkpoint(ending=nurse_details.endings.get_item('poisoned'))
+
+    call death_screen_transition
+
+    """
+    You swapped plates, thinking yourself clever.
+
+    But the poison was in every dish.
+
+    There was never a way out of that dining room.
+
+    Your instincts were sharp, but not sharp enough.
+
+    In the end, the silver you stole will sit unclaimed in an empty attic, gathering dust.
+    """
+
+    jump ending_generic
+
+
 label nurse_ending_escape_poor:
 
     $ nurse_details.endings.unlock('escape_poor')
