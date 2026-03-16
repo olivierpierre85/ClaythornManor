@@ -72,6 +72,14 @@ label init_nurse:
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
+            CharacterInformation(
+                0, "swapped_plates",
+                "You swapped your plate with Mr Harring's before luncheon",
+                content_negative="You did not swap plates before luncheon",
+                image_file="blood_handkerchief_1",
+                chapters=['sunday_afternoon'],
+                relevant_chapters=['sunday_afternoon'],
+            ),
         ])
 
         

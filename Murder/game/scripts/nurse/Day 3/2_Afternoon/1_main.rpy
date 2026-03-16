@@ -103,32 +103,35 @@ label nurse_day3_afternoon:
     If I am wrong, no harm done.
 
     If I am right...
+    """
 
+    call run_menu(
+        TimedMenu("nurse_day3_afternoon_swap_plates", [
+            TimedMenuChoice("Swap my plate with Mr Harring's", "nurse_day3_afternoon_swap_yes", TIME_MAX, early_exit = True),
+            TimedMenuChoice("Leave the plates as they are", "nurse_day3_afternoon_swap_no", early_exit = True),
+        ])
+    )
+
+    return
+
+
+label nurse_day3_afternoon_swap_yes:
+
+    $ nurse_details.important_choices.unlock('swapped_plates')
+
+    """
     I swap my plate with his.
     """
 
+    call nurse_day3_afternoon_meal
+
     pause 1.0
-
-    """
-    They return, and we eat in silence.
-
-    The food is plain but filling.
-
-    I watch the other two carefully, looking for any sign that something is amiss.
-
-    Nothing. We finish our meal without incident.
-
-    Perhaps I was being foolish after all.
-    """
-
-    pause 2.0
 
     """
     Mr Harring stands and offers to help with the dishes.
 
     But as he rises, something changes in his expression.
     """
-
 
     $ play_music('danger', fadeout_val=2)
     call common_day3_afternoon_lad_falls
@@ -153,11 +156,116 @@ label nurse_day3_afternoon:
 
     play sound body_fall
 
+    call nurse_day3_afternoon_dying_thoughts
+
+    jump nurse_ending_poisoned
+
+
+label nurse_day3_afternoon_swap_no:
+
+    """
+    No.
+
+    If I am wrong, I will have poisoned an innocent man for nothing.
+
+    I cannot take that risk.
+
+    I leave the plates where they are.
+    """
+
+    call nurse_day3_afternoon_meal
+
+    """
+    I set down my fork.
+
+    Something is wrong.
+
+    Not with the room. With me.
+    """
+
+    $ play_music('danger', fadeout_val=2)
+
+    """
+    A wave of nausea rises from my stomach, sudden and sharp.
+
+    My vision swims.
+
+    I grip the edge of the table.
+    """
+
+    psychic """
+    Miss Marsh? Are you quite all right?
+    """
+
+    """
+    I try to answer, but my tongue feels thick and heavy.
+
+    The room tilts.
+
+    I know this feeling — not my illness, not the familiar ache in my chest.
+
+    This is something else entirely.
+    """
+
+    nurse """
+    The food...
+    """
+
+    psychic """
+    What about the food?
+    """
+
+    nurse """
+    It's been...
+    """
+
+    """
+    I cannot finish the sentence.
+
+    My legs give way beneath me.
+    """
+
+    play sound body_fall
+
     """
     My knees hit the floor.
 
     The cold of the stone rises through me.
 
+    Through the haze, I see Mr Harring rushing to my side.
+
+    Miss Baxter is saying something, but the words are very far away now.
+    """
+
+    call nurse_day3_afternoon_dying_thoughts
+
+    jump nurse_ending_poisoned
+
+
+# Shared: the meal itself, used by both swap and no-swap paths
+label nurse_day3_afternoon_meal:
+
+    pause 1.0
+
+    """
+    They return, and we eat in silence.
+
+    The food is plain but filling.
+
+    I watch the other two carefully, looking for any sign that something is amiss.
+
+    Nothing. We finish our meal without incident.
+
+    Perhaps I was being foolish after all.
+    """
+
+    return
+
+
+# Shared: the nurse's final thoughts as she collapses
+label nurse_day3_afternoon_dying_thoughts:
+
+    """
     I think of the silver in the butler's room.
 
     The candlesticks, the salver, the spoons.
@@ -167,4 +275,4 @@ label nurse_day3_afternoon:
     Everything, from the very first letter, was for nothing.
     """
 
-    jump nurse_ending_poisoned
+    return

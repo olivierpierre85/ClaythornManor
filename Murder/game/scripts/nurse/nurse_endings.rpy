@@ -49,17 +49,33 @@ label nurse_ending_poisoned:
 
     call death_screen_transition
 
-    """
-    You swapped plates, thinking yourself clever.
+    if nurse_details.important_choices.is_unlocked('swapped_plates'):
 
-    But the poison was in every dish.
+        """
+        You swapped plates, thinking yourself clever.
 
-    There was never a way out of that dining room.
+        But the poison was in every dish.
 
-    Your instincts were sharp, but not sharp enough.
+        There was never a way out of that dining room.
 
-    In the end, the silver you stole will sit unclaimed in an empty attic, gathering dust.
-    """
+        Your instincts were sharp, but not sharp enough.
+
+        In the end, the silver you stole will sit unclaimed in an empty attic, gathering dust.
+        """
+
+    else:
+
+        """
+        You suspected the food, but chose not to act.
+
+        It would not have mattered.
+
+        The poison was in every dish.
+
+        There was never a way out of that dining room.
+
+        In the end, the silver you stole will sit unclaimed in an empty attic, gathering dust.
+        """
 
     jump ending_generic
 
