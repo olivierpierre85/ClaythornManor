@@ -5,6 +5,8 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
   
 ## Write Story : Full
 
+MONEY COUNTER?? Like if I had 500 pounds, I'll be fine. Then you add a money counter Below her name? With only possible to reach it if you open the butler box and have already a few thingss
+
 RECHECK Ending, when I you have the sleeping pills, you shouldn't collapsed after Ted Harring, just accuse the Psychic, Then what ? Kill her ? If you have the gun and bullets, that will leave you enough time to do something else? If you don't, the psychic kills you in the struggle? => See ending from the psychic point of view, make MERMAID CHART
 
 Change second poisoning to gunned down, like in psychic ending
