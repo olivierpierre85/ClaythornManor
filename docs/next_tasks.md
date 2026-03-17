@@ -1,43 +1,14 @@
 <!-- # cSpell:disable -->
 BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
 
-## Write Story : NURSE - Day 2
 
-Add doctor in Billiard captain path
-
-
-Needed infocard
-- escape in the night
-- die of exhaustion (nurse lying on the ground? Or just very bloody handkerchief)?
-- Captain boxer rebellion AND ZAnzibar inconsitency
-
-- [ ] Part 1 - Hunt
-    - [ ] TEST TEST TESTS create manuel PATH WITH EVERYTHING;
-    - [ ] CHECK Music and sound => New music when caught by psychic
-    - [ ] EXTEND OTHER GUESTS for Psychic? Too similar that first day ? Maybe Later
-
-  - [ ]** Part 2 EVENING**
-
-  - - NEXT => MAP ROOM
-    - TEST after the hunt when that you have a already visited var for the room with choices
-    - [ ] - IDEAS - For evening
-    - Ask the maid why she is an actress? need the unlock from her room?
-    - Or tell the captain that the people are not what to expect
-      - need the footman and the maid unlock?
-      - **Storage room**, if all three choices not exhausted, don't hide entirely? too complicated, make only one option to search or not?? Think about => Could be that you need a clue to find bullets, in multiple menus impossible to find without the clue. You'll get the clue only after a certain death?
-      -  Add clue about Lady Claythorn in her room? We've got nothing now, it's a good place to do that. YES for captain (add to footman and maid unlocks)
-    - [ ] Cough warning (call to every choice in map choice ), if time < x """ I m exhausting my self"
-    - [ ] MAKe on death (or escape) possible when NO exhaustion at all
-    - [ ] HOw to get butler's key ? Also, this way you learn something about the butler, making the whole staff suspicious => ? New key choice for captain, team up with captain?
-  - [ ] DRAFT ONLY made by AI -> Re read EVERYTHING
-  - [ ] Discussion with captain SINHA => NEED the 2 unlock from before AND ask him in details about boxer's rebellion. If you can spot the lie => UNMASK him. => Then, make friend or die?
   
-  
-## Write Story : NURSE - Day 3
+## Write Story : Full
 
 RECHECK Ending, when I you have the sleeping pills, you shouldn't collapsed after Ted Harring, just accuse the Psychic, Then what ? Kill her ? If you have the gun and bullets, that will leave you enough time to do something else? If you don't, the psychic kills you in the struggle? => See ending from the psychic point of view, make MERMAID CHART
-  
-## Write Story : Day 3 - Doctor FINIS DOCTOR
+
+Change second poisoning to gunned down, like in psychic ending
+
 - [ ] RETRY EVERYTHING
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).
 - [ ] Menus: Ensure "Next menu" is correct everywhere.
