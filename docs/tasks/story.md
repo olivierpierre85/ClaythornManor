@@ -107,6 +107,9 @@
 
 ### Ideas to think over (optional)
 
+- MONEY COUNTER?? Like if I had 500 pounds, I'll be fine. Then you add a money counter Below her name? With only possible to reach it if you open the butler box and have already a few thingss
+The nurse path allows to unlock objects of value. Can you try to introduce the concept of total value needed to leave (e.g. I need at least at least 500 pounds to take the vacations I desperatly need) then for each object stolen, add  value to them. And 
+
 - Extend the dialogs for when she is caught stealing. They go a bit fast
 - [ ] queen alexandra => Not clear it's a nurse Queen
   - [ ] => Replace with a THIEF king or queen for forshadowing? Henry 8 or charles 1 ? (or Prince John of Robin hood)

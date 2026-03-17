@@ -54,7 +54,7 @@ label init_nurse:
                 content_negative="You didn't overexerted yourself on Friday evening",
                 image_file="blood_handkerchief_1",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_morning' ,'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(
                 0, "day2_exhaustion",
@@ -90,7 +90,7 @@ label init_nurse:
                 content_negative="You didn't notice the inconsistency in Captain Sinha's story",
                 image_file="captain_lie_boxer",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
             CharacterInformation(
                 1, "captain_lie_zanzibar",
@@ -98,7 +98,7 @@ label init_nurse:
                 content_negative="You didn't notice anything unusual about the Captain's story.",
                 image_file="captain_lie_zanzibar",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
             CharacterInformation(
                 0, "remember_doctor",
@@ -133,7 +133,7 @@ label init_nurse:
                 content_negative="You did not take some cutlery after Friday's dinner",
                 image_file="cutlery_1",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening','sunday_afternoon'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_afternoon'],
             ),
             CharacterInformation(
                 0, "steal_cutlery_2",
@@ -141,7 +141,7 @@ label init_nurse:
                 content_negative="You did not take some cutlery after Saturday's breakfast",
                 image_file="cutlery_2",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening','sunday_afternoon'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_afternoon'],
             ),
             CharacterInformation(
                 0, "steal_pearls",
@@ -157,7 +157,7 @@ label init_nurse:
                 content_negative="You did not take a revolver from the gun room",
                 image_file="gun",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening','sunday_afternoon'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_afternoon'],
             ),
             CharacterInformation(
                 0, "find_bullets",
@@ -165,7 +165,7 @@ label init_nurse:
                 content_negative="You did not find the hidden bullets",
                 image_file="bullets",
                 chapters=['saturday_afternoon'],
-                relevant_chapters=['saturday_afternoon','saturday_evening'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening', 'sunday_afternoon'],
             ),
         ])
 
