@@ -391,107 +391,155 @@ label psychic_day2_evening_butler_room:
     $ nurse_details.description_hidden.unlock('lie') 
 
     nurse """
-    And now you leave me no choice.
+    And now you have put me in a very difficult position.
     """
 
     """
-    She draws something swiftly from her pocket — a revolver. 
+    Her voice is strained, almost pleading.
 
-    I scarcely comprehend before Sushil thrusts his hand into his coat. 
+    But the captain is not moved.
 
-    But he is too late.
+    His jaw tightens and he reaches into his coat.
+    """
+
+    captain """
+    I think not. You will come with us downstairs, and we shall settle this properly.
+    """
+
+    """
+    He draws a revolver and levels it at her.
+
+    Miss Marsh recoils, but does not move towards the door.
+    """
+
+    nurse """
+    You wouldn't dare.
+    """
+
+    captain """
+    I said move.
     """
 
     play sound gun
 
     """
-    The shot cracks through the room. 
+    The captain fires into the ceiling.
 
-    The bullet strikes him full in the face. 
+    Plaster rains down upon us.
 
-    He drops at once beside me.
+    Miss Marsh screams — and in the same breath, her hand darts into her pocket.
+
+    She has a gun of her own.
+    """
+
+    play sound gun
+
+    """
+    The shot catches the captain square in the chest.
+
+    He staggers back, a look of utter disbelief upon his face, and crumples to the floor.
     """
 
     play sound body_fall
 
     """
-    She turns the revolver upon me.
+    She stands over him, breathing hard, her hands trembling.
+
+    For a moment she looks as though she might be sick.
+
+    Then she turns to me, the revolver still in her grip.
     """
 
     nurse """
-    I am sorry, Miss Baxter, but I cannot have you telling the police.
+    He fired at me. You saw it. He fired at me.
     """
 
     psychic surprised """
-    I do not understand — why do such a thing? 
+    I did. But you needn't make things worse. Put the gun down. We can explain what happened.
+    """
 
-    We were about to receive far more money than these trifles are worth.
+    """
+    For a fleeting instant, I believe she might listen.
+
+    But then her expression hardens.
     """
 
     nurse """
-    Ha! 
+    You went through my room. You told the captain. You led him up here.
 
-    You truly believed that? That we were about to get rich? 
+    None of this would have happened if you had simply left well enough alone.
 
-    How very naive.
+    But you couldn't, could you? You had to play the clairvoyant.
+
+    Now you will tell them everything, I assume.
+
+    About the silver, the stealing — all of it.
+
+    You will claim that you "saw" it.
+
+    That will give you another "proof" of your power.
+
+    Another reason to take advantage of vulnerable people.
     """
 
     psychic """
-    What do you mean? What makes you say so? I—
+    That is not true. I would not -
     """
 
     nurse """
-    I am sorry. I have no need to explain myself. 
+    Well it doesn't matter now.
 
-    Goodbye, Miss Baxter.
+    I can't really take the chance.
+    """
+
+    """
+    Her hand steadies on the gun.
+
+    There is no madness in her eyes — only a dreadful, weary resolve.
+
+    The look of someone who has already made her choice and cannot turn back.
+    """
+
+    nurse """
+    I am sorry, Miss Baxter. Truly I am.
+
+    But I cannot go to prison. Not for this.
     """
 
     play sound gun
 
     """
-    She fires. 
-
-    A searing pain tears through my shoulder and I fall.
+    The shot strikes my shoulder and I fall.
     """
 
     play sound body_fall
 
     """
-    I am grievously wounded — but alive. 
+    I am grievously wounded — but alive.
 
-    Rosalind Marsh advances, revolver still in hand.
-    """
+    Rosalind Marsh stands over me. Her face is pale, drawn tight with fear.
 
-    nurse """
-    A pity I missed your head. 
-
-    Let me correct that.
+    She raises the gun once more.
     """
 
     play sound gun_empty
 
     """
-    She pulls the trigger. 
+    A dull click. Empty.
 
-    A dull click. Empty. 
+    She lets out a shuddering breath.
+    """
+
+    """
+    For a long moment she simply stands there, the useless weapon hanging at her side.
+
+    Then, without a word, she sets it down and picks up the candelabra.
+
+    Her hands are still shaking.
     """
 
     nurse """
-    Well, that is my luck. 
-
-    Do not move.
-    """
-
-    """
-    She turns away. I summon what strength I can to crawl across the floor. 
-
-    But I cannot reach far before she returns. 
-
-    Her gaze is vacant. 
-
-    She holds the candelabra again,
-
-    raises it high above her head...
+    I wish you hadn't made me do this.
     """
 
     play sound bludgeon
