@@ -86,5 +86,6 @@ label nurse_config_progress:
             'sunday_afternoon': [
                 {"label": "nurse_day3_afternoon", "threads": {'day1_exhaustion': False}},
                 {"label": "nurse_day3_afternoon", "threads": {'day1_exhaustion': True}},
+                {"label": "nurse_day3_afternoon", "threads": {'day1_exhaustion': False, 'find_bullets': True, 'take_gun': True}},
             ],
         }

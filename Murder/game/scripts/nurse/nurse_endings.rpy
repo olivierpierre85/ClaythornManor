@@ -94,9 +94,9 @@ label nurse_ending_gunned_down:
 
     But it didn't change a thing.
 
-    A firearm is of no use if you are not accustomed to handling one.
-
     In the end, it was turned against you — and that was that.
+
+    A firearm is of no use if you don't know how to handle one.
     """
 
     jump ending_generic

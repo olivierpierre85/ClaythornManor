@@ -105,6 +105,7 @@ label nurse_day3_afternoon:
     If I am right...
     """
 
+    $ time_left = 1
     call run_menu(
         TimedMenu("nurse_day3_afternoon_swap_plates", [
             TimedMenuChoice("Swap my plate with Mr Harring's", "nurse_day3_afternoon_swap_yes", TIME_MAX, early_exit = True),
@@ -158,10 +159,14 @@ label nurse_day3_afternoon_swap_yes:
     And there is still one person in this room who isn't dying.
     """
 
+    call common_day3_afternoon_nurse_accuses_psychic
+
     if nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets'):
         jump nurse_day3_afternoon_confrontation_armed
     else:
         jump nurse_day3_afternoon_confrontation_unarmed
+
+    return
 
 
 label nurse_day3_afternoon_swap_no:
@@ -266,8 +271,6 @@ label nurse_day3_afternoon_meal:
 # Armed confrontation: nurse has her own loaded gun
 label nurse_day3_afternoon_confrontation_armed:
 
-    call common_day3_afternoon_nurse_accuses_psychic
-
     call common_day3_afternoon_nurse_gun_confrontation
 
     call common_day3_afternoon_nurse_gun_fight
@@ -276,12 +279,6 @@ label nurse_day3_afternoon_confrontation_armed:
     I am on the floor now.
 
     The ceiling swims above me.
-
-    I think of the trouble I went to — finding the bullets in the attic, loading the revolver in the dead of night.
-
-    All that preparation, and it changed nothing.
-
-    A gun is of no use if you are not accustomed to handling one.
     """
 
     call nurse_day3_afternoon_dying_thoughts
@@ -291,8 +288,6 @@ label nurse_day3_afternoon_confrontation_armed:
 
 # Unarmed confrontation: nurse has no loaded gun
 label nurse_day3_afternoon_confrontation_unarmed:
-
-    call common_day3_afternoon_nurse_accuses_psychic
 
     """
     I lunge at her.

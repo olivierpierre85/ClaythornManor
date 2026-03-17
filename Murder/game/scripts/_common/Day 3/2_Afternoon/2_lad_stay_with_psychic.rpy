@@ -405,23 +405,7 @@ label common_day3_afternoon_nurse_revelation:
 
         """
         Miss Baxter weeps.
-
-        I barely hear her.
-
-        I swapped the plates. I know what that means.
-
-        If I tell the truth, they will think I am the poisoner.
-
-        If I stay silent, I might still get out of this.
-
-        But I cannot stay silent. Not entirely.
-
-        Because if my plate was poisoned, then someone in this house wanted me dead.
-
-        And there are only two people left.
         """
-
-    pause 1.0
 
     nurse """
     All I know is that he wasn't the target.
@@ -456,42 +440,14 @@ label common_day3_afternoon_nurse_revelation:
 
     I heard the three of you rummaging around the house and I hid.
 
-    I didn't trust Sushil Sinha, but once he left I felt safe enough to reveal myself.
-
-    But I should have been more suspicious of Ted Harring.
+    I didn't trust Sushil Sinha, but I should have been more suspicious of Ted Harring.
 
     After all, he was the least respectable of everyone here.
 
     Clearly out of place in this environment.
 
-    And I bet I can prove it.
-    """
-
-    pause 1.0
-
-    if current_character.text_id == "psychic":
-
-        """
-        She searches Ted Harring's pockets and takes out a gun.
-        """
-
-    elif current_character.text_id == "nurse":
-
-        """
-        I search his pockets.
-
-        My fingers close around cold metal.
-
-        A revolver.
-        """
-
-    nurse """
-    Look. He even had a weapon on him the whole time.
-
     He...
     """
-
-    pause 1.0
 
     if current_character.text_id == "psychic":
 
@@ -533,8 +489,6 @@ label common_day3_afternoon_nurse_revelation:
 
         """
         My hands tremble.
-
-        The revolver feels impossibly heavy.
         """
 
     nurse """
@@ -587,8 +541,6 @@ label common_day3_afternoon_nurse_accuses_psychic:
 
         """
         The words leave my mouth before I can think them through.
-
-        But I mean every one of them.
         """
 
     psychic """
@@ -610,7 +562,7 @@ label common_day3_afternoon_nurse_gun_confrontation:
     elif current_character.text_id == "nurse":
 
         """
-        I pull out the revolver and level it at her.
+        I pull out the revolver I took from the gun room and level it at her.
 
         My hand is shaking.
         """
