@@ -9,8 +9,6 @@ MONEY COUNTER?? Like if I had 500 pounds, I'll be fine. Then you add a money cou
 
 RECHECK Ending, when I you have the sleeping pills, you shouldn't collapsed after Ted Harring, just accuse the Psychic, Then what ? Kill her ? If you have the gun and bullets, that will leave you enough time to do something else? If you don't, the psychic kills you in the struggle? => See ending from the psychic point of view, make MERMAID CHART
 
-Change second poisoning to gunned down, like in psychic ending
-
 - [ ] RETRY EVERYTHING
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).
 - [ ] Menus: Ensure "Next menu" is correct everywhere.
