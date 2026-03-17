@@ -564,3 +564,131 @@ label common_day3_afternoon_nurse_revelation:
     """
 
     return
+
+
+# Shared: nurse accuses psychic after revelation
+label common_day3_afternoon_nurse_accuses_psychic:
+
+    pause 1.0
+
+    nurse """
+    What have you done?
+    """
+
+    if current_character.text_id == "psychic":
+
+        """
+        I barely register her words.
+
+        It feels like I'm about to collapse myself.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        The words leave my mouth before I can think them through.
+
+        But I mean every one of them.
+        """
+
+    psychic """
+    Me? What about me?
+    """
+
+    return
+
+
+# Shared: nurse draws gun on psychic, psychic lunges, gun struggle
+label common_day3_afternoon_nurse_gun_confrontation:
+
+    if current_character.text_id == "psychic":
+
+        """
+        I turn towards her and see that she is pointing a gun at me.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        I pull out the revolver and level it at her.
+
+        My hand is shaking.
+        """
+
+    nurse """
+    Don't move.
+    """
+
+    return
+
+
+# Shared: the physical gun struggle between nurse and psychic
+label common_day3_afternoon_nurse_gun_fight:
+
+    if current_character.text_id == "psychic":
+
+        """
+        Without hesitation, I jump at her.
+
+        It happened so swiftly that she didn't have time to react.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        She lunges at me.
+
+        It happens so swiftly that I cannot react.
+        """
+
+    nurse surprised """
+    Wait! I'll shoot.
+    """
+
+    if current_character.text_id == "psychic":
+
+        """
+        But I am already upon her, grappling for the gun.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        But she is already upon me, grappling for the gun.
+        """
+
+    $ stop_music()
+
+    nurse """
+    Stop, or I'll ...
+    """
+
+    play sound gun
+
+    if current_character.text_id == "psychic":
+
+        """
+        The sound of a gunshot pierces the air, ending the fight.
+
+        Silence descends, heavy and suffocating.
+
+        I stand frozen, the nurse's body slumping to the ground.
+
+        The gun, now a cold weight in my hand, drops to the floor alongside her.
+        """
+
+    elif current_character.text_id == "nurse":
+
+        """
+        The sound of a gunshot pierces the air, ending the fight.
+
+        A sharp, burning pain blooms in my chest.
+
+        The revolver slips from my fingers.
+
+        My legs give way.
+        """
+
+    play sound body_fall
+
+    return

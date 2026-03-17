@@ -152,13 +152,16 @@ label nurse_day3_afternoon_swap_yes:
     I was dead the moment I sat down.
 
     The swap changed nothing.
+
+    But the poison hasn't taken me yet.
+
+    And there is still one person in this room who isn't dying.
     """
 
-    play sound body_fall
-
-    call nurse_day3_afternoon_dying_thoughts
-
-    jump nurse_ending_poisoned
+    if nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets'):
+        jump nurse_day3_afternoon_confrontation_armed
+    else:
+        jump nurse_day3_afternoon_confrontation_unarmed
 
 
 label nurse_day3_afternoon_swap_no:
@@ -258,6 +261,80 @@ label nurse_day3_afternoon_meal:
     """
 
     return
+
+
+# Armed confrontation: nurse has her own loaded gun
+label nurse_day3_afternoon_confrontation_armed:
+
+    call common_day3_afternoon_nurse_accuses_psychic
+
+    call common_day3_afternoon_nurse_gun_confrontation
+
+    call common_day3_afternoon_nurse_gun_fight
+
+    """
+    I am on the floor now.
+
+    The ceiling swims above me.
+
+    I think of the trouble I went to — finding the bullets in the attic, loading the revolver in the dead of night.
+
+    All that preparation, and it changed nothing.
+
+    A gun is of no use if you are not accustomed to handling one.
+    """
+
+    call nurse_day3_afternoon_dying_thoughts
+
+    jump nurse_ending_gunned_down
+
+
+# Unarmed confrontation: nurse has no loaded gun
+label nurse_day3_afternoon_confrontation_unarmed:
+
+    call common_day3_afternoon_nurse_accuses_psychic
+
+    """
+    I lunge at her.
+
+    It is a clumsy, desperate thing — more a stumble than an attack.
+
+    But I catch her off guard and we both crash against the sideboard.
+    """
+
+    play sound broken_glass
+
+    """
+    She pushes me back and I stagger, catching myself on the table's edge.
+    """
+
+    play sound woman_cough
+
+    """
+    The cough comes.
+
+    Not the small, manageable sort I have learnt to live with.
+
+    This is the deep, tearing kind that brings blood with it.
+
+    I double over, one hand pressed to my mouth, the other still gripping the table.
+    """
+
+    $ stop_music()
+
+    """
+    My body has nothing left to give.
+
+    The poison, the illness, the exertion — it is all catching up at once.
+
+    I slide to my knees.
+    """
+
+    play sound body_fall
+
+    call nurse_day3_afternoon_dying_thoughts
+
+    jump nurse_ending_exhausted
 
 
 # Shared: the nurse's final thoughts as she collapses

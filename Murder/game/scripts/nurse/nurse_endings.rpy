@@ -80,6 +80,28 @@ label nurse_ending_poisoned:
     jump ending_generic
 
 
+label nurse_ending_gunned_down:
+
+    $ nurse_details.endings.unlock('gunned_down')
+    $ nurse_details.add_ending_checkpoint(ending=nurse_details.endings.get_item('gunned_down'))
+
+    call death_screen_transition
+
+    """
+    You went to a great deal of trouble to arm yourself.
+
+    Finding a gun and the bullets to load it was no small endeavour.
+
+    But it didn't change a thing.
+
+    A firearm is of no use if you are not accustomed to handling one.
+
+    In the end, it was turned against you — and that was that.
+    """
+
+    jump ending_generic
+
+
 label nurse_ending_escape_poor:
 
     $ nurse_details.endings.unlock('escape_poor')

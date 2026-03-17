@@ -173,7 +173,7 @@ label init_nurse:
             CharacterInformation(1, "exhausted", "You collapsed from exhaustion", image_file="blood_handkerchief_1", chapters=['saturday_evening']),
             CharacterInformation(1, "escape_poor", "You escaped in the night, but with very little to show for it", image_file="escape", chapters=['saturday_evening']),
             CharacterInformation(1, "billiard_room_death", "You died in the billiard room after confronting the Captain", image_file="blood_handkerchief_1", chapters=['saturday_evening']),
-            CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing", chapters=['end']), 
+            CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing", chapters=['sunday_afternoon']),
             CharacterInformation(1, "poisoned", "You were poisoned at luncheon on Sunday", image_file="poison_food", chapters=['sunday_afternoon']),
         ])
 

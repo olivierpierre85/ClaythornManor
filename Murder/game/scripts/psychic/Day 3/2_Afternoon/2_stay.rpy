@@ -40,33 +40,12 @@ label psychic_day3_afternoon_stay:
 
     call common_day3_afternoon_nurse_revelation
 
-    pause 1.0
+    call common_day3_afternoon_nurse_accuses_psychic
 
-    nurse """
-    What have you done?
-    """
-
-
-    """
-    I barely register her words.
-
-    It feels like I'm about to collapse myself.
-    """
-
-    psychic """
-    Me? What about me?
-    """
-
-    """
-    I turn towards her and see that she is pointing a gun at me.
-    """
-
-    nurse """
-    Don't move. 
-    """
+    call common_day3_afternoon_nurse_gun_confrontation
 
     $ time_left = 1
-    call run_menu( TimedMenu("psychic_day3_gun", [        
+    call run_menu( TimedMenu("psychic_day3_gun", [
         TimedMenuChoice("Try to talk her", 'psychic_day3_afternoon_convince_nurse', early_exit=True),
         TimedMenuChoice("Try to take the gun by force. It's probably not loaded anyway", 'psychic_day3_afternoon_gun_death', early_exit=True )
         ])
@@ -77,39 +56,7 @@ label psychic_day3_afternoon_gun_death:
 
     $ psychic_details.threads.unlock('steal_gun')
 
-    """
-    Without hesitation, I jump at her.
-
-    It happened so swiftly that she didn't have time to react.
-    """
-    
-    nurse surprised """
-    Wait! I'll shoot.
-    """
-
-    """
-    But I am already upon her, grappling for the gun.
-    """
-
-    $ stop_music()
-
-    nurse """
-    Stop, or I'll ...
-    """
-
-    play sound gun
-
-    """
-    The sound of a gunshot pierces the air, ending the fight.
-
-    Silence descends, heavy and suffocating. 
-    
-    I stand frozen, the nurse's body slumping to the ground. 
-    
-    The gun, now a cold weight in my hand, drops to the floor alongside her.
-    """
-
-    play sound body_fall
+    call common_day3_afternoon_nurse_gun_fight
 
     $ play_music('sad', 3)
 
