@@ -537,12 +537,6 @@ label common_day3_afternoon_nurse_accuses_psychic:
         It feels like I'm about to collapse myself.
         """
 
-    elif current_character.text_id == "nurse":
-
-        """
-        The words leave my mouth before I can think them through.
-        """
-
     psychic """
     Me? What about me?
     """

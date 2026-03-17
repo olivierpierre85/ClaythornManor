@@ -243,7 +243,6 @@ label nurse_day3_afternoon_swap_no:
     Miss Baxter is saying something, but the words are very far away now.
     """
 
-    call nurse_day3_afternoon_dying_thoughts
 
     jump nurse_ending_poisoned
 
@@ -280,8 +279,6 @@ label nurse_day3_afternoon_confrontation_armed:
 
     The ceiling swims above me.
     """
-
-    call nurse_day3_afternoon_dying_thoughts
 
     jump nurse_ending_gunned_down
 
@@ -327,22 +324,4 @@ label nurse_day3_afternoon_confrontation_unarmed:
 
     play sound body_fall
 
-    call nurse_day3_afternoon_dying_thoughts
-
     jump nurse_ending_exhausted
-
-
-# Shared: the nurse's final thoughts as she collapses
-label nurse_day3_afternoon_dying_thoughts:
-
-    """
-    I think of the silver in the butler's room.
-
-    The candlesticks, the salver, the spoons.
-
-    All for nothing.
-
-    Everything, from the very first letter, was for nothing.
-    """
-
-    return

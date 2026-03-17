@@ -54,11 +54,7 @@ label nurse_ending_poisoned:
         """
         You swapped plates, thinking yourself clever.
 
-        But the poison was in every dish.
-
-        There was never a way out of that dining room.
-
-        Your instincts were sharp, but not sharp enough.
+        But that didn't help your fate.
         """
 
     else:
@@ -66,16 +62,8 @@ label nurse_ending_poisoned:
         """
         You suspected the food, but chose not to act.
 
-        The poison was in every dish.
-
-        Would swapping plates have changed anything?
-
-        Impossible to tell.
+        So your fate was sealed.
         """
-
-    """
-    In the end, the silver you stole will sit unclaimed in an empty attic, gathering dust.
-    """
 
     jump ending_generic
 
@@ -88,9 +76,7 @@ label nurse_ending_gunned_down:
     call death_screen_transition
 
     """
-    You went to a great deal of trouble to arm yourself.
-
-    Finding a gun and the bullets to load it was no small endeavour.
+    You went to a great deal of trouble find a gun and the bullets to load it.
 
     But it didn't change a thing.
 
