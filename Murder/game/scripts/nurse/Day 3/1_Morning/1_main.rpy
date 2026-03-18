@@ -252,7 +252,32 @@ label nurse_day3_morning_leave:
 
     """
     The road stretches ahead, quiet and grey beneath the morning cloud.
+    """
 
+    if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
+
+
+        """
+        I keep walking — or I try to.
+
+        My legs feel heavier with every step.
+
+        I should not have pushed myself so hard these past days.
+        """
+
+        play sound woman_cough
+
+        """
+        The cough takes hold, and this time it does not let go.
+
+        I stumble.
+
+        The road swims before my eyes.
+        """
+
+        jump nurse_ending_escape_collapse
+
+    """
     I keep walking.
 
     There is nothing behind me worth turning back for.
@@ -269,7 +294,7 @@ label nurse_day3_morning_leave_rich:
     The silver is in my bag, along with everything else I gathered this weekend.
 
     There is nothing left to wait for.
-        
+
     I take my coat from the stand.
 
     I do not hesitate.
@@ -290,6 +315,30 @@ label nurse_day3_morning_leave_rich:
     """
 
     $ change_room("forest_road", dissolve)
+
+    if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
+
+        """
+        The road stretches ahead, and the bag grows heavier with every step.
+
+        I should drop some of the silver. I know that. But I cannot bring myself to part with it.
+
+        My legs falter beneath the weight — of the bag, of the illness, of everything I have put my body through.
+        """
+
+        play sound woman_cough
+
+        """
+        The cough takes hold, and this time it does not let go.
+
+        I sink to my knees on the wet road, the bag spilling open beside me.
+
+        All that silver, scattered in the mud.
+
+        What a waste.
+        """
+
+        jump nurse_ending_escape_collapse
 
     """
     The road stretches ahead, quiet and grey beneath the morning cloud.

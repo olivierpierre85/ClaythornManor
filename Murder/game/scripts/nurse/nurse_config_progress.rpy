@@ -2,7 +2,7 @@ label nurse_config_progress:
     python:  
     # First define the possible progress
         nurse_progress = [
-            # First Line (main path -> poisoned)
+            # Row 0: Main path -> poisoned
             [
                 Chapter(image_checkpoint_start, "start", "nurse_introduction", "friday_afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "nurse_day1_evening", "friday_evening"),
@@ -13,7 +13,7 @@ label nurse_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "nurse_day3_afternoon", "sunday_afternoon"),
                 Chapter(image_ending_question, "ending", "poisoned", "end"),
             ],
-            # Second line: escape_rich branches from sat_eve, gunned_down branches from sun_aft
+            # Row 1: gunned_down branches from sun_aft
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
@@ -24,37 +24,40 @@ label nurse_config_progress:
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "gunned_down", "end"),
             ],
-            # Third line: exhausted branches from sat_aft to sat_eve
+            # Row 2: psychic_fight_death branches from sun_aft
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_checkpoint_four_sides),
-                Chapter(image_checkpoint_three_sides),
+                Chapter(image_ending_question, "ending", "billiard_room_death", "sunday_morning"),
+                Chapter(image_checkpoint_double_corner_half),
+                Chapter(image_ending_question, "ending", "escape_rich", "sunday_afternoon"),
+                Chapter(image_checkpoint_corner_half),
+                Chapter(image_ending_question, "ending", "psychic_fight_death", "end"),
+            ],
+            # Row 3: exhausted - horizontal from sat_eve through to end
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "exhausted", "end"),
+                Chapter(image_checkpoint_double_corner_half),
+                Chapter(image_ending_question, "ending", "escape_collapse", "sunday_afternoon"),
+
             ],
-            # Fourth line: escape_poor branches from sat_aft to sat_eve
-            [
-                Chapter(image_checkpoint_empty_small),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_double_corner),
-                Chapter(image_checkpoint_four_sides),
-                Chapter(image_ending_question, "ending", "escape_poor", "sunday_afternoon"),
-            ],
-            # Fifth line: billiard_room_death branches from sat_aft to sat_eve
+            # Row 4: escape_collapse branches from sun_morn
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "billiard_room_death", "sunday_morning"),
-                Chapter(image_checkpoint_corner_half),
-                Chapter(image_ending_question, "ending", "escape_rich", "sunday_afternoon"),
+                Chapter(image_checkpoint_three_sides),
+                Chapter(image_ending_question, "ending", "escape_poor", "sunday_afternoon"),
             ],
         ]
 

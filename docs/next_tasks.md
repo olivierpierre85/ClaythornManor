@@ -5,12 +5,10 @@ BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
   
 ## Write Story : Full
 
-CHECK NEW ENDING
-- No need for goodbyes after leaving biliard room
-- REwrite exchange too obvious about manning
-- Too many vars?
+CHECK NEW ENDINGs
 
-What to do with spotted_by_psychic
+
+What to do with spotted_by_psychic? Nothing, because psychic is killer? hum maybe
 
 RECHECK Ending, when I you have the sleeping pills, you shouldn't collapsed after Ted Harring, just accuse the Psychic, Then what ? Kill her ? If you have the gun and bullets, that will leave you enough time to do something else? If you don't, the psychic kills you in the struggle? => See ending from the psychic point of view, make MERMAID CHART
 

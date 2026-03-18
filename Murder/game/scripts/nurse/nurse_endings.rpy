@@ -110,6 +110,50 @@ label nurse_ending_escape_poor:
     jump ending_generic
 
 
+label nurse_ending_psychic_fight_death:
+
+    $ nurse_details.endings.unlock('psychic_fight_death')
+    $ nurse_details.add_ending_checkpoint(ending=nurse_details.endings.get_item('psychic_fight_death'))
+
+    call death_screen_transition
+
+    """
+    You fought back — unarmed, poisoned, and already half-dead.
+
+    It was never going to be enough.
+
+    The poison had already done its work, and the struggle finished what remained.
+
+    You died on the dining room floor, still reaching for the woman who killed you.
+    """
+
+    jump ending_generic
+
+
+label nurse_ending_escape_collapse:
+
+    $ nurse_details.endings.unlock('escape_collapse')
+    $ nurse_details.add_ending_checkpoint(ending=nurse_details.endings.get_item('escape_collapse'))
+
+    call death_screen_transition
+
+    """
+    You made it past the gate and onto the road.
+
+    For a while, the cold air and the promise of freedom kept you moving.
+
+    But your body had nothing left to give.
+
+    The cough came first, then the weakness in your legs, then the ground.
+
+    They found you the next morning, face down in the mud, your bag of stolen silver still clutched to your chest.
+
+    So close. But not close enough.
+    """
+
+    jump ending_generic
+
+
 label nurse_ending_escape_rich:
 
     $ nurse_details.endings.unlock('escape_rich')

@@ -324,4 +324,4 @@ label nurse_day3_afternoon_confrontation_unarmed:
 
     play sound body_fall
 
-    jump nurse_ending_exhausted
+    jump nurse_ending_psychic_fight_death
