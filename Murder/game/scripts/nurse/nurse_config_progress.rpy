@@ -53,7 +53,7 @@ label nurse_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "billiard_room_death", "sunday_morning"),
-                Chapter(image_checkpoint_corner),
+                Chapter(image_checkpoint_corner_half),
                 Chapter(image_ending_question, "ending", "escape_rich", "sunday_afternoon"),
             ],
         ]

@@ -384,6 +384,11 @@ label init_technical_variables:
         image_checkpoint_corner_merge = "images/ui/progress/rectangle_progress_corner_merge.png"          
         image_checkpoint_double_corner = "images/ui/progress/rectangle_progress_double_corner.png"
         image_checkpoint_line = "images/ui/progress/rectangle_progress_line.png"
+        
+        # Half (208px = 283 - 75, used after an ending icon on the same row)
+        image_checkpoint_corner_half = "images/ui/progress/rectangle_progress_corner_half.png"
+        image_checkpoint_double_corner_half = "images/ui/progress/rectangle_progress_double_corner_half.png"
+        image_checkpoint_line_half = "images/ui/progress/rectangle_progress_line_half.png"
 
         # Endings
         image_ending_question = "images/info_cards/question_mark_bw.webp"
