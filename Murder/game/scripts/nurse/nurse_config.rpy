@@ -119,7 +119,7 @@ label init_nurse:
             CharacterInformation(
                 0, "maid_actress",
                 "You discovered that the maid used to be an aspiring actress.",
-                content_negative="You don't know much about the maid.",
+                content_negative="You didn't discover that the maid used to be an aspiring actress.",
                 image_file="maid_actress",
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
