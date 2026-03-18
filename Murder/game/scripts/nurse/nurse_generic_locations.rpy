@@ -141,7 +141,7 @@ label nurse_search_captain_skeleton_key:
 
     A key, heavy and old, with a long shaft and an open bit at the end.
 
-    A skeleton key.
+    A master key.
 
     This will open a great deal more than Mr Manning's door.
     """
@@ -752,7 +752,7 @@ label nurse_attic_butler_room:
                 """
                 The reinforced cabinet still stands against the far wall.
 
-                But this time, I have the skeleton key.
+                But this time, I have the master key.
                 """
 
                 call nurse_butler_cabinet_open_with_skeleton_key
@@ -823,7 +823,7 @@ label nurse_butler_cabinet_open_with_skeleton_key:
     """
     I approach the cabinet.
 
-    But before I waste time with my lockpicks, I remember the skeleton key.
+    But before I waste time with my lockpicks, I remember the master key.
 
     I take it from my pocket and fit it into the lock.
 
