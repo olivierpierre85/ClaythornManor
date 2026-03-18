@@ -2,9 +2,9 @@ label nurse_config_progress:
     python:  
     # First define the possible progress
         nurse_progress = [
-            # First Line
+            # First Line (main path -> poisoned)
             [
-                Chapter(image_checkpoint_start, "start", "nurse_introduction", "friday_afternoon"), 
+                Chapter(image_checkpoint_start, "start", "nurse_introduction", "friday_afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "nurse_day1_evening", "friday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "nurse_day2_morning", "saturday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "nurse_day2_hunt", "saturday_afternoon"),
@@ -13,44 +13,48 @@ label nurse_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "nurse_day3_afternoon", "sunday_afternoon"),
                 Chapter(image_ending_question, "ending", "poisoned", "end"),
             ],
-            # Second line, ...
+            # Second line: escape_rich branches from sat_eve, gunned_down branches from sun_aft
             [
-                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),
-                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "gunned_down", "end"),
             ],
+            # Third line: exhausted branches from sat_aft to sat_eve
             [
-                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_checkpoint_straight_line),
                 Chapter(image_checkpoint_four_sides),
+                Chapter(image_checkpoint_three_sides),
                 Chapter(image_ending_question, "ending", "exhausted", "end"),
             ],
+            # Fourth line: escape_poor branches from sat_aft to sat_eve
             [
-                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
-                Chapter(image_checkpoint_straight_line),
-                Chapter(image_checkpoint_three_sides),
-                Chapter(image_ending_question, "ending", "escape_poor", "end"),
+                Chapter(image_checkpoint_four_sides),
+                Chapter(image_ending_question, "ending", "escape_poor", "sunday_afternoon"),
             ],
-                        [
-                Chapter(image_checkpoint_empty_small),    
+            # Fifth line: billiard_room_death branches from sat_aft to sat_eve
+            [
+                Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "billiard_room_death", "sunday_morning"),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "escape_rich", "sunday_afternoon"),
             ],
         ]
 
