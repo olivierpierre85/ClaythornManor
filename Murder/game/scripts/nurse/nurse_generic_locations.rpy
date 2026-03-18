@@ -1,5 +1,7 @@
 label nurse_bedroom_default:
 
+    call nurse_bedroom_default_intro
+
     """
     No answer.
     """
@@ -86,10 +88,6 @@ label nurse_search_captain_default:
     Whatever the Captain values, he keeps it close to his person.
     """
 
-    if nurse_details.threads.is_unlocked('captain_master_key') and not nurse_details.threads.is_unlocked('master_key'):
-
-        call nurse_search_captain_master_key
-
     $ unlock_map('bedroom_captain')
 
     return
@@ -99,27 +97,15 @@ label nurse_search_captain_again:
 
     $ change_room("bedroom_captain")
 
-    if nurse_details.threads.is_unlocked('captain_master_key') and not nurse_details.threads.is_unlocked('master_key'):
+    """
+    I look over the Captain's immaculate room one last time.
 
-        """
-        I look over the Captain's immaculate room once more.
+    Everything remains exactly as I found it earlier.
 
-        The hunting coat — of course.
-        """
+    If there is a secret here, it is too well hidden for me to find now.
 
-        call nurse_search_captain_master_key
-
-    else:
-
-        """
-        I look over the Captain's immaculate room one last time.
-
-        Everything remains exactly as I found it earlier.
-
-        If there is a secret here, it is too well hidden for me to find now.
-
-        I should not linger and press my luck.
-        """
+    I should not linger and press my luck.
+    """
 
     return
 
@@ -127,9 +113,9 @@ label nurse_search_captain_again:
 label nurse_search_captain_master_key:
 
     """
-    I turn to the coat on the hook by the door.
+    I turn to the jacket on the hook by the door.
 
-    The hunting coat — heavier than the dinner jacket, rougher cloth.
+    The hunting jacket — heavier than the dinner jacket, rougher cloth.
 
     I slip my hand into the right pocket.
 
@@ -141,9 +127,11 @@ label nurse_search_captain_master_key:
 
     A key, heavy and old, with a long shaft and an open bit at the end.
 
-    A master key.
+    It doesn't look like a normal bedroom key.
 
-    This will open a great deal more than Mr Manning's door.
+    That must be the butler's master key.
+
+    This might come in handy.
     """
 
     $ nurse_details.threads.unlock('master_key')
@@ -831,19 +819,21 @@ label nurse_butler_cabinet_open_with_master_key:
 
     The cabinet doors swing open.
 
-    No bearer bonds, of course. There never were going to be.
+    No bearer bonds.
 
-    But the silver is real.
+    Disappointing, but I was expecting it.
+
+    Luckily, the cabinet is not empty.
 
     A pair of candlesticks, a salver, a set of heavy serving spoons — all solid, all worth a good deal more than sentiment.
 
-    I take what will fit without making my bag unmanageable.
+    I take what I can fit in my bag.
 
     Then I close the cabinet and step back.
 
     This changes everything.
 
-    With what I have already taken, and now this — it might actually be enough.
+    This might actually be enough.
 
     Enough to matter.
     """

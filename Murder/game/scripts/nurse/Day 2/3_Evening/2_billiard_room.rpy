@@ -18,7 +18,7 @@ label nurse_day2_evening_billiard_room:
         $ nurse_day2_evening_billiard_room_menu = TimedMenu("nurse_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Go to the sideboard for a drink', 'nurse_day2_evening_billiard_room_bar', 10),
             TimedMenuChoice('Talk to Captain Sinha', 'nurse_day2_evening_billiard_room_captain_intro', next_menu="nurse_day2_evening_billiard_room_captain_menu"),
-            TimedMenuChoice('Leave', 'nurse_day2_evening_billiard_room_leave', 0, keep_alive=True, early_exit=True),
+            TimedMenuChoice('Leave', 'generic_cancel', 0, keep_alive=True, early_exit=True),
         ])
 
     else:
@@ -115,7 +115,7 @@ label nurse_day2_evening_billiard_room_captain_intro:
         TimedMenuChoice('About your rank at the Boxer Rebellion{{observation}}', 'nurse_day2_evening_billiard_room_boxer_2', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')", linked_choice="nurse_day2_evening_billiard_room_zanzibar_confrontation"),
         TimedMenuChoice('About the Zanzibar War{{observation}}', 'nurse_day2_evening_billiard_room_zanzibar_confrontation', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_zanzibar_confrontation') and nurse_details.threads.is_unlocked('captain_lie_zanzibar') and not nurse_details.threads.is_unlocked('captain_lie_boxer')"),
         TimedMenuChoice('Ask about Mr Manning', 'nurse_day2_evening_billiard_room_manning', 20),
-        TimedMenuChoice('Leave', 'nurse_day2_evening_billiard_room_leave', 0, keep_alive=True, early_exit=True),
+        TimedMenuChoice("You don't have anything else to say to him", 'generic_cancel', 0, keep_alive=True, early_exit=True),
     ])
 
     call run_menu(nurse_day2_evening_billiard_room_captain_menu)
@@ -690,49 +690,58 @@ label nurse_day2_evening_billiard_room_manning:
 
     nurse """
     That is reassuring.
-
-    And I suppose you still have that key?
     """
 
-    captain """
-    Of course.
+    if nurse_details.threads.is_unlocked('master_key'):
 
-    It is still right here with me.
-    """
+        """
+        Especially since I am now in possession of that key.
+        """
 
-    """
-    He reaches into his jacket pocket.
+    else:
 
-    Then stops.
+        """
+        And I suppose you still have that key?
+        """
 
-    His hand comes out empty.
-    """
+        captain """
+        Of course.
 
-    captain """
-    Blast.
+        It is still right here with me.
+        """
 
-    I had it earlier, but it is in my hunting coat.
+        """
+        He reaches into his jacket pocket.
 
-    Upstairs, in my room.
+        Then stops.
 
-    I changed for dinner and left it in the pocket.
-    """
+        His hand comes out empty.
+        """
 
-    nurse """
-    I see.
-    """
+        captain """
+        Blast.
 
-    captain """
-    You shouldn't worry, I still locked my room with my regular key.
+        I had it earlier, but it is in my hunting coat.
 
-    It is safe there.
-    """
+        Upstairs, in my room.
 
-    nurse """
-    Good, I am reassured.
-    """
+        I changed for dinner and left it in the pocket.
+        """
 
-    $ nurse_details.threads.unlock('captain_master_key')
+        nurse """
+        I see.
+        """
+
+        captain """
+        You shouldn't worry, I still locked my room with my regular key.
+
+        It is safe there.
+        """
+
+        nurse """
+        Good.
+        """
+
 
     return
 

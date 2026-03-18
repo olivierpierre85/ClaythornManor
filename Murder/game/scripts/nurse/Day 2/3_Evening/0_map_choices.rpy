@@ -274,11 +274,41 @@ label nurse_day2_evening_bedroom_captain:
     return
 
 label nurse_day2_evening_enter_captain:
+
     call nurse_bedroom_lockpick_choice('nurse_search_captain_default')
+
+    if not nurse_details.threads.is_unlocked('master_key'):
+
+        """
+        As I turn to leave, I notice something I had not expected.
+
+        A heavy hunting jacket hangs on the hook by the door.
+
+        It does not match the rest of the room's careful order — it looks as though it was tossed there in haste.
+
+        The Captain must have changed for dinner and left it behind.
+        """
+
+        call nurse_search_captain_master_key
+
     return
 
 label nurse_day2_evening_enter_captain_again:
+
     call nurse_bedroom_lockpick_choice('nurse_search_captain_again')
+
+    if not nurse_details.threads.is_unlocked('master_key'):
+
+        """
+        But wait — something is different.
+
+        A hunting jacket now hangs on the hook by the door.
+
+        That was not there before. The Captain must have changed for dinner since my last visit.
+        """
+
+        call nurse_search_captain_master_key
+
     return
 
 label nurse_day2_evening_bedroom_host:
