@@ -86,6 +86,10 @@ label nurse_search_captain_default:
     Whatever the Captain values, he keeps it close to his person.
     """
 
+    if nurse_details.threads.is_unlocked('captain_skeleton_key') and not nurse_details.threads.is_unlocked('skeleton_key'):
+
+        call nurse_search_captain_skeleton_key
+
     $ unlock_map('bedroom_captain')
 
     return
@@ -95,15 +99,54 @@ label nurse_search_captain_again:
 
     $ change_room("bedroom_captain")
 
+    if nurse_details.threads.is_unlocked('captain_skeleton_key') and not nurse_details.threads.is_unlocked('skeleton_key'):
+
+        """
+        I look over the Captain's immaculate room once more.
+
+        The hunting coat — of course.
+        """
+
+        call nurse_search_captain_skeleton_key
+
+    else:
+
+        """
+        I look over the Captain's immaculate room one last time.
+
+        Everything remains exactly as I found it earlier.
+
+        If there is a secret here, it is too well hidden for me to find now.
+
+        I should not linger and press my luck.
+        """
+
+    return
+
+
+label nurse_search_captain_skeleton_key:
+
     """
-    I look over the Captain's immaculate room one last time.
+    I turn to the coat on the hook by the door.
 
-    Everything remains exactly as I found it earlier. 
+    The hunting coat — heavier than the dinner jacket, rougher cloth.
 
-    If there is a secret here, it is too well hidden for me to find now. 
+    I slip my hand into the right pocket.
 
-    I should not linger and press my luck.
+    Nothing.
+
+    The left.
+
+    My fingers close around cold metal.
+
+    A key, heavy and old, with a long shaft and an open bit at the end.
+
+    A skeleton key.
+
+    This will open a great deal more than Mr Manning's door.
     """
+
+    $ nurse_details.threads.unlock('skeleton_key')
 
     return
 
@@ -694,13 +737,33 @@ label nurse_attic_butler_room:
 
         $ change_room("butler_room")
 
-        if nurse_details.saved_variables.get("tried_butler_cabinet"):
+        if nurse_details.threads.is_unlocked('silverware_big'):
 
             """
-            The reinforced cabinet still stands against the far wall.
+            The cabinet stands open, emptied of anything worth taking.
 
-            Without the butler's key, there is nothing I can do here.
+            There is nothing more for me here.
             """
+
+        elif nurse_details.saved_variables.get("tried_butler_cabinet"):
+
+            if nurse_details.threads.is_unlocked('skeleton_key'):
+
+                """
+                The reinforced cabinet still stands against the far wall.
+
+                But this time, I have the skeleton key.
+                """
+
+                call nurse_butler_cabinet_open_with_skeleton_key
+
+            else:
+
+                """
+                The reinforced cabinet still stands against the far wall.
+
+                Without the butler's key, there is nothing I can do here.
+                """
 
         else:
 
@@ -718,7 +781,7 @@ label nurse_attic_butler_room:
 
         call nurse_butler_room_first_visit
 
-    if not nurse_details.saved_variables.get("tried_butler_cabinet"):
+    if not nurse_details.saved_variables.get("tried_butler_cabinet") and not nurse_details.threads.is_unlocked('silverware_big'):
 
         call run_menu(TimedMenu("nurse_attic_butler_cabinet_choice", [
             TimedMenuChoice("Try to open the cabinet", 'nurse_butler_cabinet_lockpick', 20, early_exit=True),
@@ -732,18 +795,57 @@ label nurse_butler_cabinet_lockpick:
 
     $ nurse_details.saved_variables["tried_butler_cabinet"] = True
 
+    if nurse_details.threads.is_unlocked('skeleton_key'):
+
+        call nurse_butler_cabinet_open_with_skeleton_key
+
+    else:
+
+        """
+        I approach the cabinet and attempt to pick the lock.
+
+        But this is no ordinary lock.
+
+        The mechanism inside is far more intricate than those I am used to.
+
+        After a few moments of fruitless effort, I am forced to admit defeat.
+
+        I shall not be able to open this by force or skill alone.
+
+        I will need the butler's key.
+        """
+
+    return
+
+
+label nurse_butler_cabinet_open_with_skeleton_key:
+
     """
-    I approach the cabinet and attempt to pick the lock.
+    I approach the cabinet.
 
-    But this is no ordinary lock.
+    But before I waste time with my lockpicks, I remember the skeleton key.
 
-    The mechanism inside is far more intricate than those I am used to.
+    I take it from my pocket and fit it into the lock.
 
-    After a few moments of fruitless effort, I am forced to admit defeat.
+    It turns with a satisfying click.
 
-    I shall not be able to open this by force or skill alone.
+    The cabinet doors swing open.
 
-    I will need the butler's key.
+    No bearer bonds, of course. There never were going to be.
+
+    But the silver is real.
+
+    A pair of candlesticks, a salver, a set of heavy serving spoons — all solid, all worth a good deal more than sentiment.
+
+    I take what will fit without making my bag unmanageable.
+
+    Then I close the cabinet and step back.
+
+    This changes everything.
+
+    With what I have already taken, and now this — it might actually be enough.
+
+    Enough to matter.
     """
 
     return

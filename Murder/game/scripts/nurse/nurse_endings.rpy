@@ -108,3 +108,23 @@ label nurse_ending_escape_poor:
     """
 
     jump ending_generic
+
+
+label nurse_ending_escape_rich:
+
+    $ nurse_details.endings.unlock('escape_rich')
+    $ nurse_details.add_ending_checkpoint(ending=nurse_details.endings.get_item('escape_rich'))
+
+    call survive_screen_transition
+
+    """
+    You escaped, and you took enough with you to make a real difference.
+
+    The silver, the pearls, the cutlery,...
+
+    It will not last for ever. But it is enough to settle somewhere quiet, to see a proper doctor, to live a little longer than you feared.
+
+    That's probably the best ending you could hoped for.
+    """
+
+    jump ending_generic

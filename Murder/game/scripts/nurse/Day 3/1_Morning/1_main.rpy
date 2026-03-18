@@ -154,15 +154,14 @@ label nurse_day3_morning:
         Somewhere in his bedroom, most likely.
         """
 
+    call nurse_day3_morning_creak
+
+    if nurse_details.threads.is_unlocked('silverware_big'):
+
+
+        jump nurse_day3_morning_leave_rich
+
     """
-    Above me, floorboards creak.
-
-    I go still.
-
-    Then another creak, further along the upper corridor.
-
-    Someone is up, and moving.
-
     And they will be coming downstairs before long.
 
     I slip the key into my coat pocket.
@@ -221,3 +220,63 @@ label nurse_day3_morning_leave:
     """
 
     jump nurse_ending_escape_poor
+
+
+label nurse_day3_morning_leave_rich:
+
+    """
+    I look at the key on the table.
+
+    I do not need it. I have already taken what I came for.
+
+    The silver is in my bag, along with everything else I gathered this weekend.
+
+    There is nothing left to wait for.
+        
+    I take my coat from the stand.
+
+    I do not hesitate.
+
+    I open the front door and step outside.
+    """
+
+    $ change_room("manor_exterior", dissolve)
+
+    """
+    The air is cold and sharp, but I scarcely feel it.
+
+    My bag is heavy on my shoulder — heavier than it has any right to be.
+
+    I walk quickly down the drive, my heels crunching on the gravel.
+
+    I do not look back.
+    """
+
+    $ change_room("forest_road", dissolve)
+
+    """
+    The road stretches ahead, quiet and grey beneath the morning cloud.
+
+    But for the first time in a very long while, I am not afraid of what lies at the end of it.
+
+    I have enough now. Enough to settle somewhere. Enough to see a proper doctor.
+
+    Enough to hope.
+    """
+
+    jump nurse_ending_escape_rich
+
+
+label nurse_day3_morning_creak:
+
+    """
+    Above me, floorboards creak.
+
+    I go still.
+
+    Then another creak, further along the upper corridor.
+
+    Someone is up, and moving.
+    """
+
+    return

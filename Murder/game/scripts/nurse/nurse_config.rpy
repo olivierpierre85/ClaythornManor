@@ -124,6 +124,14 @@ label init_nurse:
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
+            CharacterInformation(
+                0, "captain_skeleton_key",
+                "Captain Sinha told you about the butler's skeleton key, left in his hunting coat upstairs.",
+                content_negative="You did not learn about the skeleton key.",
+                image_file="skeleton_key",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
         ])
 
         nurse_objects = CharacterObjectList([
@@ -167,6 +175,22 @@ label init_nurse:
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening', 'sunday_afternoon'],
             ),
+            CharacterInformation(
+                0, "skeleton_key",
+                "You obtained the butler's skeleton key from Captain Sinha's hunting coat",
+                content_negative="You did not obtain the skeleton key",
+                image_file="skeleton_key",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
+                0, "silverware_big",
+                "You stole the contents of the butler's silverware cabinet",
+                content_negative="You did not open the butler's silverware cabinet",
+                image_file="silverware",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
         ])
 
         nurse_endings = CharacterEndingList ([
@@ -175,6 +199,7 @@ label init_nurse:
             CharacterInformation(1, "billiard_room_death", "You died in the billiard room after confronting the Captain", image_file="fight_nurse_and_captain", chapters=['saturday_evening']),
             CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing", chapters=['sunday_afternoon']),
             CharacterInformation(1, "poisoned", "You were poisoned at luncheon on Sunday", image_file="poison_food", chapters=['sunday_afternoon']),
+            CharacterInformation(1, "escape_rich", "You escaped with a lot more money than when you came", image_file="escape", chapters=['sunday_morning']),
         ])
 
         nurse_extra_information = CharacterDescriptionHiddenList([

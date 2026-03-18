@@ -110,10 +110,11 @@ label nurse_day2_evening_billiard_room_captain_intro:
     """
 
     $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu("nurse_day2_evening_billiard_room_captain_menu", [
-        TimedMenuChoice('Something is not right about the staff{{observation}}', 'nurse_day2_evening_billiard_room_staff', 15, condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_belgian')"),
-        TimedMenuChoice('I was at the Boxer Rebellion too{{observation}}', 'nurse_day2_evening_billiard_room_boxer', 15, condition="nurse_details.threads.is_unlocked('remember_doctor')", linked_choice="nurse_day2_evening_billiard_room_boxer_2"),
-        TimedMenuChoice('About your rank at the Boxer Rebellion{{observation}}', 'nurse_day2_evening_billiard_room_boxer_2', 15, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')", linked_choice="nurse_day2_evening_billiard_room_zanzibar_confrontation"),
-        TimedMenuChoice('About the Zanzibar War{{observation}}', 'nurse_day2_evening_billiard_room_zanzibar_confrontation', 15, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_zanzibar_confrontation') and nurse_details.threads.is_unlocked('captain_lie_zanzibar') and not nurse_details.threads.is_unlocked('captain_lie_boxer')"),
+        TimedMenuChoice('Something is not right about the staff{{observation}}', 'nurse_day2_evening_billiard_room_staff', 20, condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_belgian')"),
+        TimedMenuChoice('I was at the Boxer Rebellion too{{observation}}', 'nurse_day2_evening_billiard_room_boxer', 20, condition="nurse_details.threads.is_unlocked('remember_doctor')", linked_choice="nurse_day2_evening_billiard_room_boxer_2"),
+        TimedMenuChoice('About your rank at the Boxer Rebellion{{observation}}', 'nurse_day2_evening_billiard_room_boxer_2', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')", linked_choice="nurse_day2_evening_billiard_room_zanzibar_confrontation"),
+        TimedMenuChoice('About the Zanzibar War{{observation}}', 'nurse_day2_evening_billiard_room_zanzibar_confrontation', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_zanzibar_confrontation') and nurse_details.threads.is_unlocked('captain_lie_zanzibar') and not nurse_details.threads.is_unlocked('captain_lie_boxer')"),
+        TimedMenuChoice('Ask about Mr Manning', 'nurse_day2_evening_billiard_room_manning', 20),
         TimedMenuChoice('Leave', 'nurse_day2_evening_billiard_room_leave', 0, keep_alive=True, early_exit=True),
     ])
 
@@ -627,6 +628,111 @@ label nurse_day2_evening_billiard_room_captain_end_bad:
     """
 
     jump nurse_ending_billiard_room_death
+
+    return
+
+
+label nurse_day2_evening_billiard_room_manning:
+
+    nurse """
+    Captain, I have been thinking about this afternoon.
+
+    About what happened to Doctor Baldwin.
+    """
+
+    captain """
+    A dreadful accident, Miss Marsh.
+
+    Manning was drunk and careless with a firearm. 
+    
+    A tragic combination.
+    """
+
+    nurse """
+    You sound very certain.
+
+    Yet, this is not the only "accident" that happened this weekend.
+
+    Could something else be at play here?
+    """
+
+    captain """
+    I don't think so.
+
+    Sadly, this type of accident is not rare at all.
+
+    A hunt is still a dangerous business.
+
+    And for Thomas Moody, we all saw his injuries.
+
+    That probably meant he was very weakened.
+
+    His death would have happened anywhere.
+    """
+
+    nurse """
+    Perhaps you are right.
+
+    Still, I confess I am uneasy knowing Samuel Manning is just upstairs.
+
+    A few steps from my own room.
+
+    Are we sure he cannot get out?
+    """
+
+    captain """
+    Quite sure.
+
+    I locked the door myself, with the key the butler gave me.
+
+    The doors in this house are solid oak. He is going nowhere.
+    """
+
+    nurse """
+    That is reassuring.
+
+    And I suppose you still have that key?
+    """
+
+    captain """
+    Of course.
+
+    It is still right here with me.
+    """
+
+    """
+    He reaches into his jacket pocket.
+
+    Then stops.
+
+    His hand comes out empty.
+    """
+
+    captain """
+    Blast.
+
+    I had it earlier, but it is in my hunting coat.
+
+    Upstairs, in my room.
+
+    I changed for dinner and left it in the pocket.
+    """
+
+    nurse """
+    I see.
+    """
+
+    captain """
+    You shouldn't worry, I still locked my room with my regular key.
+
+    It is safe there.
+    """
+
+    nurse """
+    Good, I am reassured.
+    """
+
+    $ nurse_details.threads.unlock('captain_skeleton_key')
 
     return
 

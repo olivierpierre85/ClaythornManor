@@ -169,7 +169,7 @@ label nurse_day2_evening:
 
     $ time_left = 90
     call run_menu(TimedMenu("nurse_day2_evening_dinner", [
-        TimedMenuChoice("Speak to Lady Claythorn", 'nurse_day2_dinner_host'),
+        TimedMenuChoice("Speak to Lady Claythorn", 'nurse_day2_dinner_host', early_exit=True),
         TimedMenuChoice("Say nothing, eat your dinner", 'generic_cancel', early_exit=True),
     ], image_right = "host"))
 

@@ -61,7 +61,7 @@ label host_generic_invite_nurse:
     """
 
     nurse """
-    True, but it didn't mention the reasons for this very generous act.
+    True, but it didn't mention the reasons for this very selfless act.
     """
 
     host """
