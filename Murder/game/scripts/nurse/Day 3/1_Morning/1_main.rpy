@@ -122,7 +122,31 @@ label nurse_day3_morning:
     It is small and well-worn, with the heft of something often used.
     """
 
-    if nurse_details.saved_variables.get('visited_attic_butler_room', False):
+    if nurse_details.threads.is_unlocked('silverware_big'):
+
+        """
+        I turn it over.
+
+        A master key, by the look of it.
+
+        I set it back down.
+        """
+
+    elif nurse_details.threads.is_unlocked('master_key'):
+
+        """
+        I turn it over.
+
+        Another master key.
+
+        I already hold one, I have no need for a second.
+
+        Though I wonder why this one was left here so openly.
+
+        I set it back down.
+        """
+
+    elif nurse_details.saved_variables.get('visited_attic_butler_room', False):
 
         """
         I turn it over.
@@ -158,22 +182,37 @@ label nurse_day3_morning:
 
     if nurse_details.threads.is_unlocked('silverware_big'):
 
-
         jump nurse_day3_morning_leave_rich
 
     """
     And they will be coming downstairs before long.
-
-    I slip the key into my coat pocket.
-
-    I cannot afford to be found standing here.
-
-    Yet I am not certain it is wise to use it.
-
-    Every moment I remain is a risk.
-
-    Perhaps the wisest course is simply to go.
     """
+
+    if nurse_details.threads.is_unlocked('master_key'):
+
+        """
+        I cannot afford to be found standing here.
+
+        Yet the question remains — do I make one last attempt before I leave?
+
+        Every moment I remain is a risk.
+
+        Perhaps the wisest course is simply to go.
+        """
+
+    else:
+
+        """
+        I slip the key into my coat pocket.
+
+        I cannot afford to be found standing here.
+
+        Yet I am not certain it is wise to use it.
+
+        Every moment I remain is a risk.
+
+        Perhaps the wisest course is simply to go.
+        """
 
     $ time_left = 1
     call run_menu(TimedMenu("nurse_day3_morning_choice", [
@@ -225,9 +264,7 @@ label nurse_day3_morning_leave:
 label nurse_day3_morning_leave_rich:
 
     """
-    I look at the key on the table.
-
-    I do not need it. I have already taken what I came for.
+    I have already taken what I came for.
 
     The silver is in my bag, along with everything else I gathered this weekend.
 

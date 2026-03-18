@@ -125,7 +125,7 @@ label init_nurse:
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
             CharacterInformation(
-                0, "captain_skeleton_key",
+                0, "captain_master_key",
                 "Captain Sinha told you about the butler's master key, left in his hunting coat upstairs.",
                 content_negative="You did not learn about the master key.",
                 image_file="butler_key",
@@ -176,7 +176,7 @@ label init_nurse:
                 relevant_chapters=['saturday_afternoon', 'saturday_evening', 'sunday_afternoon'],
             ),
             CharacterInformation(
-                0, "skeleton_key",
+                0, "master_key",
                 "You obtained the butler's master key from Captain Sinha's hunting coat",
                 content_negative="You did not obtain the master key",
                 image_file="butler_key",

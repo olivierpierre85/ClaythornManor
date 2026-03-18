@@ -84,6 +84,8 @@ label nurse_config_progress:
                 {"label": "nurse_day3_morning", "threads": {'day1_exhaustion': True}},
                 {"label": "nurse_day3_morning", "threads": {'day2_exhaustion': True}},
                 {"label": "nurse_day3_morning", "threads": {'day1_exhaustion': True, 'day2_exhaustion': True}},
+                {"label": "nurse_day3_morning", "threads": {'silverware_big': True, 'master_key': True}},
+                {"label": "nurse_day3_morning", "threads": {'master_key': True}},
             ],
             'sunday_afternoon': [
                 {"label": "nurse_day3_afternoon", "threads": {}},

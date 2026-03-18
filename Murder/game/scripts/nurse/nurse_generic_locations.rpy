@@ -86,9 +86,9 @@ label nurse_search_captain_default:
     Whatever the Captain values, he keeps it close to his person.
     """
 
-    if nurse_details.threads.is_unlocked('captain_skeleton_key') and not nurse_details.threads.is_unlocked('skeleton_key'):
+    if nurse_details.threads.is_unlocked('captain_master_key') and not nurse_details.threads.is_unlocked('master_key'):
 
-        call nurse_search_captain_skeleton_key
+        call nurse_search_captain_master_key
 
     $ unlock_map('bedroom_captain')
 
@@ -99,7 +99,7 @@ label nurse_search_captain_again:
 
     $ change_room("bedroom_captain")
 
-    if nurse_details.threads.is_unlocked('captain_skeleton_key') and not nurse_details.threads.is_unlocked('skeleton_key'):
+    if nurse_details.threads.is_unlocked('captain_master_key') and not nurse_details.threads.is_unlocked('master_key'):
 
         """
         I look over the Captain's immaculate room once more.
@@ -107,7 +107,7 @@ label nurse_search_captain_again:
         The hunting coat — of course.
         """
 
-        call nurse_search_captain_skeleton_key
+        call nurse_search_captain_master_key
 
     else:
 
@@ -124,7 +124,7 @@ label nurse_search_captain_again:
     return
 
 
-label nurse_search_captain_skeleton_key:
+label nurse_search_captain_master_key:
 
     """
     I turn to the coat on the hook by the door.
@@ -146,7 +146,7 @@ label nurse_search_captain_skeleton_key:
     This will open a great deal more than Mr Manning's door.
     """
 
-    $ nurse_details.threads.unlock('skeleton_key')
+    $ nurse_details.threads.unlock('master_key')
 
     return
 
@@ -747,7 +747,7 @@ label nurse_attic_butler_room:
 
         elif nurse_details.saved_variables.get("tried_butler_cabinet"):
 
-            if nurse_details.threads.is_unlocked('skeleton_key'):
+            if nurse_details.threads.is_unlocked('master_key'):
 
                 """
                 The reinforced cabinet still stands against the far wall.
@@ -755,7 +755,7 @@ label nurse_attic_butler_room:
                 But this time, I have the master key.
                 """
 
-                call nurse_butler_cabinet_open_with_skeleton_key
+                call nurse_butler_cabinet_open_with_master_key
 
             else:
 
@@ -795,9 +795,9 @@ label nurse_butler_cabinet_lockpick:
 
     $ nurse_details.saved_variables["tried_butler_cabinet"] = True
 
-    if nurse_details.threads.is_unlocked('skeleton_key'):
+    if nurse_details.threads.is_unlocked('master_key'):
 
-        call nurse_butler_cabinet_open_with_skeleton_key
+        call nurse_butler_cabinet_open_with_master_key
 
     else:
 
@@ -818,7 +818,7 @@ label nurse_butler_cabinet_lockpick:
     return
 
 
-label nurse_butler_cabinet_open_with_skeleton_key:
+label nurse_butler_cabinet_open_with_master_key:
 
     """
     I approach the cabinet.

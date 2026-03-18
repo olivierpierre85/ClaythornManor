@@ -122,9 +122,11 @@ label nurse_ending_escape_rich:
 
     The silver, the pearls, the cutlery,...
 
-    It will not last for ever. But it is enough to settle somewhere quiet, to see a proper doctor, to live a little longer than you feared.
+    It will not last for ever. But it is enough to help you live a little longer, and a little better.
 
     That's probably the best ending you could hoped for.
+
+    At least if you don't care what happened to the rest.
     """
 
     jump ending_generic

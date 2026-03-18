@@ -732,7 +732,7 @@ label nurse_day2_evening_billiard_room_manning:
     Good, I am reassured.
     """
 
-    $ nurse_details.threads.unlock('captain_skeleton_key')
+    $ nurse_details.threads.unlock('captain_master_key')
 
     return
 
