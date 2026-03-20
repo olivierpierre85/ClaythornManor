@@ -84,4 +84,6 @@ label nurse_day3_morning_attic:
     But it is the plan I have, and it will have to do.
     """
 
+    $ nurse_details.objects.unlock('silverware_big')
+
     jump nurse_day3_afternoon

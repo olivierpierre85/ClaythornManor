@@ -838,6 +838,8 @@ label nurse_butler_cabinet_open_with_master_key:
     Enough to matter.
     """
 
+    $ nurse_details.objects.unlock('silverware_big')
+
     return
 
 
