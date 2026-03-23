@@ -256,7 +256,10 @@ init python:
         # """
         # Saves transcript to:
         #   <project>/testing_results/<current_character.text_id>/<current_chapter>/<text_id>__<chapter>__YYYYMMDD_HHMMSS.txt
-
+        #
+        # When running automated tests with a plan file, saves to the same
+        # folder as the setup JSON, using its base name (e.g. setup_nurse_friday_afternoon_1.txt).
+        #
         # Uses global vars:
         #   - current_character (must have .text_id)
         #   - current_chapter   (string)
@@ -264,14 +267,30 @@ init python:
         try:
             text_id = current_character.text_id
             chapter = current_chapter
-
-            # Get numeric order from chapters_names
-            chapters_order = list(renpy.store.chapters_names.keys())
-            chapter_index = chapters_order.index(renpy.store.current_chapter) if renpy.store.current_chapter in chapters_order else -1
-            numbered_chapter = f"{chapter_index}_{_sanitize(renpy.store.current_chapter)}" if chapter_index >= 0 else _sanitize(renpy.store.current_chapter)
-
             game_dir = renpy.config.gamedir
-            out_dir  = os.path.join(game_dir, "tests", "result", text_id, numbered_chapter)
+
+            # When in automated test mode, save alongside the setup JSON file
+            plan_file = None
+            if hasattr(store, "test") and hasattr(store.test, "autorunner"):
+                plan_file = store.test.autorunner.plan_file
+
+            if plan_file:
+                # plan_file is relative to gamedir, e.g. "tests/nurse/0_friday_afternoon/setup_nurse_friday_afternoon_1.json"
+                abs_plan = os.path.join(game_dir, plan_file)
+                out_dir = os.path.dirname(abs_plan)
+                base_name = os.path.splitext(os.path.basename(abs_plan))[0]
+                fname = f"{base_name}.txt"
+            else:
+                # Get numeric order from chapters_names
+                chapters_order = list(renpy.store.chapters_names.keys())
+                chapter_index = chapters_order.index(renpy.store.current_chapter) if renpy.store.current_chapter in chapters_order else -1
+                numbered_chapter = f"{chapter_index}_{_sanitize(renpy.store.current_chapter)}" if chapter_index >= 0 else _sanitize(renpy.store.current_chapter)
+
+                out_dir = os.path.join(game_dir, "tests", "result", text_id, numbered_chapter)
+
+                ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+                fname = f"{text_id}__{chapter}__{ts}.txt"
+
             os.makedirs(out_dir, exist_ok=True)
 
             lines = _transcript_lines()
@@ -286,9 +305,6 @@ init python:
 
             if lines:
                 body = u"\n".join(lines)
-
-                ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-                fname = f"{text_id}__{chapter}__{ts}.txt"
                 fpath = os.path.join(out_dir, fname)
 
                 with open(fpath, "w", encoding="utf-8", newline="\n") as f:

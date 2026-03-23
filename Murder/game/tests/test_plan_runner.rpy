@@ -24,6 +24,7 @@ init python in test:
             self.target_chapter = None
             self.start_chapter = None
             self.reached_new_chapter = None
+            self.plan_file = None
 
         def load_plan_file(self, path_in_game_dir):
             raw = renpy.open_file(path_in_game_dir).read().decode("utf-8")
@@ -31,6 +32,7 @@ init python in test:
             data = load_json_from_game(path_in_game_dir)
             self.steps = data.get("choices", data)  # accept {"choices":[...]} or directly a list
             self.unlocked_threads = data.get("unlocked_threads", [])
+            self.plan_file = path_in_game_dir
             self.i = 0
             self.active = True
 

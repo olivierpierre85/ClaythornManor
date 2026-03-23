@@ -15,7 +15,6 @@ ENDING WITH MONEY => NEED Pearls, all the shit and ONE cutlery at least? Or just
   - [ ] Friday evening
   - [ ] ..
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).
-- [ ] Menus: Ensure "Next menu" is correct everywhere.
 - [ ] Gun room has a Menu choice Day 3.
 - [ ] Rethink unlocking FULLY
 
