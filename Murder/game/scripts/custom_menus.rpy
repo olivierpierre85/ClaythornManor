@@ -319,10 +319,19 @@ init -1 python:
 
                 full_testing_mode_choice = full_testing_mode_choices.pop(0)
                 redirect_target = full_testing_mode_choice.get("redirect")
+                selected_text = full_testing_mode_choice.get("selected")
 
+                # Prefer redirect match (most stable), fallback to text match
                 if redirect_target:
-                    for i, choice in enumerate(self.choices): 
-                        if choice.is_valid() and redirect_target == choice.redirect: 
+                    for i, choice in enumerate(self.choices):
+                        if choice.is_valid() and redirect_target == choice.redirect:
+                            selected_choice = choice
+                            selected_choice_i = i
+                            break
+
+                if not selected_choice and selected_text:
+                    for i, choice in enumerate(self.choices):
+                        if choice.is_valid() and selected_text == choice.text:
                             selected_choice = choice
                             selected_choice_i = i
                             break

@@ -76,7 +76,7 @@ Shortly after, the staff circle the table to pour the wine.
 Samuel Manning: Ah, capital! Fill it up to the very brim, if you please.
 Samuel Manning: Much obliged.
 It appears the evening will be quite as taxing as I had feared.
-I am conflicted, if I ignore him, I might have to eat in silence, that could appear weird.
+I am conflicted. If I ignore him, I might have to eat in silence, which could appear odd.
 But I don't know that I want to engage with him.
 What to do?
 Menu Choice: Just keep to yourself
@@ -96,12 +96,12 @@ Ideally, I could search the place to find something valuable.
 The silver is probably in the butler's pantry.
 That could be in his bedroom, or the kitchen.
 But there could be more valuables in other places.
-I must keep in mind that I should exert myself too much.
+I must keep in mind that I should not exert myself too much.
 That could end badly.
 So where should I venture?
 Map Choice: Gun room
 The gun room.
-I am confident that I should not be here, so I made sure no one noticed me.
+I am certain that I should not be here, so I made sure no one noticed me.
 Shotguns and hunting rifles line three walls, arranged on open racks.
 The smell of gun oil is sharp.
 Everything is laid out as though ready for use — nothing locked away.

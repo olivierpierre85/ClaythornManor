@@ -76,15 +76,15 @@ Shortly after, the staff circle the table to pour the wine.
 Samuel Manning: Ah, capital! Fill it up to the very brim, if you please.
 Samuel Manning: Much obliged.
 It appears the evening will be quite as taxing as I had feared.
-I am conflicted, if I ignore him, I might have to eat in silence, that could appear weird.
+I am conflicted. If I ignore him, I might have to eat in silence, which could appear odd.
 But I don't know that I want to engage with him.
 What to do?
 Menu Choice: Talk to Samuel Manning
 I can't believe I am doing this.
 But It would feel too rude for me to just ignore him.
-And he might also take it the wrong.
+And he might also take it the wrong way.
 So I guess I don't have a choice.
-Rosalind Marsh: How are you doing Mister Manning?
+Rosalind Marsh: How are you, Mr Manning?
 Samuel Manning: Me? Oh very well.
 Samuel Manning: The wine is first rate, you should take a sip.
 I wet my lips into it.
@@ -116,7 +116,7 @@ Ideally, I could search the place to find something valuable.
 The silver is probably in the butler's pantry.
 That could be in his bedroom, or the kitchen.
 But there could be more valuables in other places.
-I must keep in mind that I should exert myself too much.
+I must keep in mind that I should not exert myself too much.
 That could end badly.
 So where should I venture?
 Map Choice: Kitchen

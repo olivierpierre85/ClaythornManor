@@ -76,15 +76,15 @@ Shortly after, the staff circle the table to pour the wine.
 Samuel Manning: Ah, capital! Fill it up to the very brim, if you please.
 Samuel Manning: Much obliged.
 It appears the evening will be quite as taxing as I had feared.
-I am conflicted, if I ignore him, I might have to eat in silence, that could appear weird.
+I am conflicted. If I ignore him, I might have to eat in silence, which could appear odd.
 But I don't know that I want to engage with him.
 What to do?
 Menu Choice: Talk to Samuel Manning
 I can't believe I am doing this.
 But It would feel too rude for me to just ignore him.
-And he might also take it the wrong.
+And he might also take it the wrong way.
 So I guess I don't have a choice.
-Rosalind Marsh: How are you doing Mister Manning?
+Rosalind Marsh: How are you, Mr Manning?
 Samuel Manning: Me? Oh very well.
 Samuel Manning: The wine is first rate, you should take a sip.
 I wet my lips into it.
@@ -109,7 +109,7 @@ Samuel Manning: I am a man of the law.
 Samuel Manning: A barrister, you see.
 Samuel Manning: Or I was.
 Samuel Manning: Doesn't... doesn't quite matter now, does it.
-Rosalind Marsh: Oh, and which type of barrister were you?
+Rosalind Marsh: Oh, and what sort of barrister were you?
 Samuel Manning: A defence barrister.
 Samuel Manning: Look, it's... it's complicated.
 Samuel Manning: I'd rather not bore a lady.
@@ -165,7 +165,7 @@ Ideally, I could search the place to find something valuable.
 The silver is probably in the butler's pantry.
 That could be in his bedroom, or the kitchen.
 But there could be more valuables in other places.
-I must keep in mind that I should exert myself too much.
+I must keep in mind that I should not exert myself too much.
 That could end badly.
 So where should I venture?
 Map Choice: Kitchen
@@ -179,7 +179,7 @@ The scullery will be just the same, connected as it is to the kitchen.
 I pull the door to and leave without anyone having noticed me.
 Map Choice: Gun room
 The gun room.
-I am confident that I should not be here, so I made sure no one noticed me.
+I am certain that I should not be here, so I made sure no one noticed me.
 Shotguns and hunting rifles line three walls, arranged on open racks.
 The smell of gun oil is sharp.
 Everything is laid out as though ready for use — nothing locked away.
