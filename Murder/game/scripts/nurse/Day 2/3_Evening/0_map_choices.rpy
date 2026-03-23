@@ -10,7 +10,7 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('garage'), 'nurse_day2_evening_garage', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_day2_evening_gun_room', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
-            TimedMenuChoice(default_room_text('billiard_room'), 'nurse_day2_evening_billiard_room', 10, room='billiard_room'),
+            TimedMenuChoice(default_room_text('billiard_room'), 'nurse_day2_evening_billiard_room', 0, room='billiard_room', next_menu='nurse_day2_evening_billiard_room_menu'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day2_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day2_evening_garden', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_day2_evening_entrance_hall', 10, room='entrance_hall'),

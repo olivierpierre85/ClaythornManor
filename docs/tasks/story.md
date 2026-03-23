@@ -160,6 +160,7 @@ Or a variation of that.
 - **Detective**: "So it’s up to us now. It means we are not totally obsolete yet."
 - **Mechanic**: The machine is at a deadlock. The player must manually introduce the "path" (guess the guilty party) to run extra analysis.
 
+THen the last path, the what happened path is played, but without saying who it is? And if it is wrong, it stops as soon as it doesn't make sense.... Game broken,restart,
 
 ## Last run (Maybe, check if still doable)
 Before last part, you must GUESS the killer for special achievement. Straight away or by answering questions.

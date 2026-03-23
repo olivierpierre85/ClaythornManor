@@ -1,18 +1,19 @@
 <!-- # cSpell:disable -->
-BUG => FULL_TESTINGMODE, if doing a restart, missing menu???
+BUG => FULL_TESTINGMODE, if doing a restart, then missing menu???
 
 
-  
 ## Write Story : Full
 
 CHECK NEW ENDINGs
-Should I separete escape poor ?
-Is it possible to escape poor
+
+ENDING WITH MONEY => NEED Pearls, all the shit and ONE cutlery at least? Or just big silverware?
 
 
-RECHECK Ending, when I you have the sleeping pills, you shouldn't collapsed after Ted Harring, just accuse the Psychic, Then what ? Kill her ? If you have the gun and bullets, that will leave you enough time to do something else? If you don't, the psychic kills you in the struggle? => See ending from the psychic point of view, make MERMAID CHART
 
 - [ ] RETRY EVERYTHING
+  - [ ] Friday afternoon
+  - [ ] Friday evening
+  - [ ] ..
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).
 - [ ] Menus: Ensure "Next menu" is correct everywhere.
 - [ ] Gun room has a Menu choice Day 3.

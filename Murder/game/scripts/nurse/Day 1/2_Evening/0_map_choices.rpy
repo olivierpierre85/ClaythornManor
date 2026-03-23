@@ -29,7 +29,7 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('females_room'), 'nurse_day1_evening_females_room', 10, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'nurse_day1_evening_butler_room', 10, room='butler_room'),
             # Specific actions
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="nurse_day1_evening_bedroom_drunk"),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
