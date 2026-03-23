@@ -55,6 +55,33 @@ init -1000 python:
     #         renpy.log("UNPICKLEABLE: {}".format(item))
     #     return bad
 
+    # Known character text_ids for parsing setup filenames
+    _known_characters = {"lad", "doctor", "host", "drunk", "psychic", "broken", "captain", "nurse"}
+
+    def _parse_setup_filename(filename):
+        """
+        Parse a setup filename like 'setup_nurse_friday_afternoon_1.json'
+        into (character, start_label) e.g. ('nurse', 'nurse_friday_afternoon').
+        Returns (None, None) if the filename doesn't match the expected pattern.
+        """
+        name = os.path.splitext(filename)[0]  # strip .json
+        if not name.startswith("setup_"):
+            return None, None
+        rest = name[len("setup_"):]  # e.g. "nurse_friday_afternoon_1"
+
+        # The first segment is the character
+        parts = rest.split("_")
+        if not parts or parts[0] not in _known_characters:
+            return None, None
+
+        character = parts[0]
+        # Last segment is the plan number — everything in between is the chapter
+        if len(parts) < 3:
+            return None, None
+        chapter_parts = parts[1:-1]  # drop character and plan number
+        start_label = character + "_" + "_".join(chapter_parts)
+        return character, start_label
+
     def load_latest_choices_from_testing():
         base = renpy.config.gamedir
         folder = os.path.join(base, "tests", "testing_mode_choices")
@@ -65,6 +92,20 @@ init -1000 python:
         latest_file = max(files, key=os.path.getmtime)
         with open(latest_file, "r", encoding="utf-8") as fh:
             data = json.load(fh)
+
+        # If the first choice lacks character_choice, try to infer from filename
+        choices = data.get("choices", [])
+        has_header = choices and choices[0].get("character_choice")
+
+        if not has_header:
+            character, start_label = _parse_setup_filename(os.path.basename(latest_file))
+            if character and start_label:
+                header = {
+                    "menu": start_label,
+                    "character_choice": character,
+                }
+                choices.insert(0, header)
+                data["choices"] = choices
 
         return data
 

@@ -401,7 +401,7 @@ label nurse_gun_room_default:
         """
         The gun room.
         
-        I am confident that I should not be here, so I made sure no one noticed me.
+        I am certain that I should not be here, so I made sure no one noticed me.
 
         Shotguns and hunting rifles line three walls, arranged on open racks.
 

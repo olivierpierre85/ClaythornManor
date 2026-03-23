@@ -227,7 +227,7 @@ label nurse_day1_evening:
     """
     It appears the evening will be quite as taxing as I had feared.
 
-    I am conflicted, if I ignore him, I might have to eat in silence, that could appear weird.
+    I am conflicted. If I ignore him, I might have to eat in silence, which could appear odd.
 
     But I don't know that I want to engage with him.
 
@@ -281,7 +281,7 @@ label nurse_day1_evening:
 
     But there could be more valuables in other places.
 
-    I must keep in mind that I should exert myself too much.
+    I must keep in mind that I should not exert myself too much.
 
     That could end badly.
 
@@ -330,13 +330,13 @@ label nurse_day1_dinner_drunk:
 
     But It would feel too rude for me to just ignore him.
 
-    And he might also take it the wrong.
+    And he might also take it the wrong way.
 
     So I guess I don't have a choice.
     """
 
     nurse """
-    How are you doing Mister Manning?
+    How are you, Mr Manning?
     """
 
     drunk """

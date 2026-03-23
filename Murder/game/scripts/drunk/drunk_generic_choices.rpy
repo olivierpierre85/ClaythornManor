@@ -64,7 +64,7 @@ label drunk_generic_background_nurse:
     """
 
     nurse """
-    Oh, and which type of barrister were you?
+    Oh, and what sort of barrister were you?
     """
 
     drunk """

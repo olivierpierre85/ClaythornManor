@@ -199,7 +199,7 @@ init python:
         ts = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
         fname = f"choices_{data['tester_id']}_{ts}.json"
         game_dir = renpy.config.gamedir
-        out_dir = os.path.join(game_dir, "tests", "result")
+        out_dir = os.path.join(game_dir, "tests", "testing_mode_choices")
         fpath = os.path.join(out_dir, fname)
 
         # ---- Desktop / mobile: write to disk ----
