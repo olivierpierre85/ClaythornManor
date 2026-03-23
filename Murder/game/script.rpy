@@ -58,29 +58,19 @@ init -1000 python:
     # Known character text_ids for parsing setup filenames
     _known_characters = {"lad", "doctor", "host", "drunk", "psychic", "broken", "captain", "nurse"}
 
-    def _parse_setup_filename(filename):
+    def _parse_character_from_filename(filename):
         """
-        Parse a setup filename like 'setup_nurse_friday_afternoon_1.json'
-        into (character, start_label) e.g. ('nurse', 'nurse_friday_afternoon').
-        Returns (None, None) if the filename doesn't match the expected pattern.
+        Extract the character text_id from a setup filename like
+        'setup_nurse_friday_afternoon_1.json' → 'nurse'.
+        Returns None if the filename doesn't match.
         """
-        name = os.path.splitext(filename)[0]  # strip .json
+        name = os.path.splitext(filename)[0]
         if not name.startswith("setup_"):
-            return None, None
-        rest = name[len("setup_"):]  # e.g. "nurse_friday_afternoon_1"
-
-        # The first segment is the character
-        parts = rest.split("_")
-        if not parts or parts[0] not in _known_characters:
-            return None, None
-
-        character = parts[0]
-        # Last segment is the plan number — everything in between is the chapter
-        if len(parts) < 3:
-            return None, None
-        chapter_parts = parts[1:-1]  # drop character and plan number
-        start_label = character + "_" + "_".join(chapter_parts)
-        return character, start_label
+            return None
+        parts = name[len("setup_"):].split("_")
+        if parts and parts[0] in _known_characters:
+            return parts[0]
+        return None
 
     def load_latest_choices_from_testing():
         base = renpy.config.gamedir
@@ -93,13 +83,15 @@ init -1000 python:
         with open(latest_file, "r", encoding="utf-8") as fh:
             data = json.load(fh)
 
-        # If the first choice lacks character_choice, try to infer from filename
+        # If the first choice lacks character_choice, build a header from
+        # start_label (in the JSON) and character (from the filename).
         choices = data.get("choices", [])
         has_header = choices and choices[0].get("character_choice")
 
         if not has_header:
-            character, start_label = _parse_setup_filename(os.path.basename(latest_file))
-            if character and start_label:
+            start_label = data.get("start_label")
+            character = _parse_character_from_filename(os.path.basename(latest_file))
+            if start_label and character:
                 header = {
                     "menu": start_label,
                     "character_choice": character,
