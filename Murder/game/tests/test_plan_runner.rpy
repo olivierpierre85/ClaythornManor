@@ -78,6 +78,14 @@ init python in test:
             if expected_text:
                 for c in valid_choices:
                     if c.text == expected_text:
+                        if expected_redirect:
+                            renpy.log(
+                                f"[TEST WARNING] Redirect mismatch in menu '{timed_menu.id}': "
+                                f"expected redirect='{expected_redirect}', "
+                                f"actual redirect='{c.redirect}'. "
+                                f"Matched by text='{expected_text}' instead. "
+                                f"Update the setup JSON to fix this."
+                            )
                         return c
 
             available = [(c.text, c.redirect) for c in valid_choices]
