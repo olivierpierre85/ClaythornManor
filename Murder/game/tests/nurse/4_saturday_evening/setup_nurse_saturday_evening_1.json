@@ -1,0 +1,158 @@
+{
+    "start_label": "nurse_day2_evening",
+    "tester_id": "admin",
+    "timestamp": "2026-03-06T10:26:40.656201",
+    "unlocked_threads": [
+        "day1_exhaustion",
+        "steal_cutlery_1",
+        "steal_cutlery_2"
+    ],
+    "choices": [
+        {
+            "menu": "nurse_day2_evening_dinner",
+            "other_choices": [
+                "Speak to Lady Claythorn",
+                "Say nothing, eat your dinner"
+            ],
+            "selected": "Speak to Lady Claythorn",
+            "redirect": "nurse_day2_dinner_host",
+            "time_left": 90,
+            "timestamp": "2026-03-24T10:30:51.008579",
+            "time_to_decide": 3.161678,
+            "time_since_last": 374.834219
+        },
+        {
+            "menu": "host_generic_menu_nurse",
+            "other_choices": [
+                "What do you think of this weather?",
+                "Tell me more about yourself.",
+                "What do you think of the other guests?",
+                "What do you think of this place?",
+                "How old are you?",
+                "What room are you in?",
+                "You don't have anymore questions for her"
+            ],
+            "selected": "What do you think of this weather?",
+            "redirect": "host_generic_weather",
+            "time_left": 90,
+            "timestamp": "2026-03-24T10:31:21.812764",
+            "time_to_decide": 2.819168,
+            "time_since_last": 30.804185
+        },
+        {
+            "menu": "host_generic_menu_nurse",
+            "other_choices": [
+                "Tell me more about yourself.",
+                "Why did you invite us here?",
+                "What do you think of the other guests?",
+                "What do you think of this place?",
+                "How old are you?",
+                "What room are you in?",
+                "You don't have anymore questions for her"
+            ],
+            "selected": "Tell me more about yourself.",
+            "redirect": "host_generic_background_nurse",
+            "time_left": 80,
+            "timestamp": "2026-03-24T10:31:27.078428",
+            "time_to_decide": 0.599944,
+            "time_since_last": 5.265664
+        },
+        {
+            "menu": "host_generic_menu_nurse",
+            "other_choices": [
+                "Why did you invite us here?",
+                "What do you think of the other guests?",
+                "What do you think of this place?",
+                "How old are you?",
+                "What room are you in?",
+                "You don't have anymore questions for her"
+            ],
+            "selected": "Why did you invite us here?",
+            "redirect": "host_generic_invite_nurse",
+            "time_left": 60,
+            "timestamp": "2026-03-24T10:31:31.960412",
+            "time_to_decide": 0.766368,
+            "time_since_last": 4.881984
+        },
+        {
+            "menu": "host_generic_menu_nurse",
+            "other_choices": [
+                "What do you think of the other guests?",
+                "What do you think of this place?",
+                "How old are you?",
+                "What room are you in?",
+                "You don't have anymore questions for her"
+            ],
+            "selected": "What do you think of the other guests?",
+            "redirect": "host_generic_other_guests_nurse",
+            "time_left": 40,
+            "timestamp": "2026-03-24T10:31:36.242636",
+            "time_to_decide": 16.95471,
+            "time_since_last": 4.282224
+        },
+        {
+            "menu": "host_generic_menu_nurse",
+            "other_choices": [
+                "What do you think of this place?",
+                "How old are you?",
+                "What room are you in?",
+                "You don't have anymore questions for her"
+            ],
+            "selected": "What do you think of this place?",
+            "redirect": "host_generic_manor",
+            "time_left": 30,
+            "timestamp": "2026-03-24T10:31:54.532430",
+            "time_to_decide": 0.964844,
+            "time_since_last": 18.289794
+        },
+        {
+            "menu": "host_generic_menu_nurse",
+            "other_choices": [
+                "How old are you?",
+                "What room are you in?",
+                "You don't have anymore questions for her"
+            ],
+            "selected": "How old are you?",
+            "redirect": "host_generic_age_nurse",
+            "time_left": 20,
+            "timestamp": "2026-03-24T10:31:58.329879",
+            "time_to_decide": 0.602817,
+            "time_since_last": 3.797449
+        },
+        {
+            "menu": "host_generic_menu_nurse",
+            "other_choices": [
+                "What room are you in?",
+                "You don't have anymore questions for her"
+            ],
+            "selected": "What room are you in?",
+            "redirect": "host_generic_room",
+            "time_left": 10,
+            "timestamp": "2026-03-24T10:32:01.612532",
+            "time_to_decide": 1.600237,
+            "time_since_last": 3.282653
+        },
+        {
+            "menu": "nurse_day2_evening_steal",
+            "other_choices": [
+                "Pocket some silverware discreetly",
+                "It is not worth the risk"
+            ],
+            "selected": "Pocket some silverware discreetly",
+            "redirect": "nurse_day2_evening_steal",
+            "time_left": 1,
+            "timestamp": "2026-03-24T10:32:19.592395",
+            "time_to_decide": 14.614236,
+            "time_since_last": 17.979863
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Go to sleep",
+            "redirect": "generic_cancel",
+            "time_left": 90,
+            "timestamp": "2026-03-24T10:32:25.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 5.0
+        }
+    ]
+}

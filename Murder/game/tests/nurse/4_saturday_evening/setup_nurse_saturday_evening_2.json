@@ -1,0 +1,46 @@
+{
+    "start_label": "nurse_day2_evening",
+    "tester_id": "admin",
+    "timestamp": "2026-03-06T10:26:40.656201",
+    "unlocked_threads": [
+        "steal_cutlery_1",
+        "steal_cutlery_2"
+    ],
+    "choices": [
+        {
+            "menu": "nurse_day2_evening_dinner",
+            "other_choices": [
+                "Speak to Lady Claythorn",
+                "Say nothing, eat your dinner"
+            ],
+            "selected": "Say nothing, eat your dinner",
+            "redirect": "generic_cancel",
+            "time_left": 90,
+            "timestamp": "2026-03-24T10:37:28.704061",
+            "time_to_decide": 1.100038,
+            "time_since_last": 12.804275
+        },
+        {
+            "menu": "nurse_day2_evening_steal",
+            "other_choices": [
+                "Pocket some silverware discreetly",
+                "It is not worth the risk"
+            ],
+            "selected": "Pocket some silverware discreetly",
+            "redirect": "nurse_day2_evening_steal",
+            "time_left": 1,
+            "timestamp": "2026-03-24T10:37:29.970644",
+            "time_to_decide": 1.649817,
+            "time_since_last": 1.266583
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Go to sleep",
+            "redirect": "generic_cancel",
+            "time_left": 90,
+            "timestamp": "2026-03-24T10:37:35.000000",
+            "time_to_decide": 1.0,
+            "time_since_last": 5.0
+        }
+    ]
+}

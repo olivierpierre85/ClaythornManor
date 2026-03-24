@@ -2,7 +2,8 @@ label ending_generic:
 
     # For tests
     if renpy.is_in_test():
-        call test_chapter_end
+        $ renpy.show_screen("test_end")
+        jump test_end_pause
 
     $ stop_music(2)
 
