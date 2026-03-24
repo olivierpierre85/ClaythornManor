@@ -18,8 +18,10 @@
 - **Lunch**: No talk
 - - **Afternoon**: nurse (rest)
 - 
-## File 5 (TODO analyze with other chapters to make sense)
+## File 5 (with day1_exhaustion, remember_doctor, steal_cutlery_1)
 - **Morning**: Portrait Gallery (Intro), Library (Zanzibar research), Gun Room (Leave it), Psychic Room (Knock/Busy).
-- **Lunch**: Weather, About self, About place, Age, Room, Samuel Manning, Sushil Sinha.
-- **Afternoon**: Storage room (Give up), Butler's room (Leave it), Host's bedroom (Leave pearls), Psychic Room (Take risk/Caught), Subsequent Library visit.
+- **Lunch**: Weather, About self, About place, Age, Room.
+- **Afternoon**: Storage room (Give up), Butler's room (Leave it), Psychic Room (Take risk/Caught), Rest.
+- **Also covers**: steal_cutlery branch intro text.
+- **Note**: Portrait Gallery intro and Library (Zanzibar) also covered in Friday Evening tests. Gun Room (Leave it) also covered in FE4. Host bedroom (Leave pearls) covered in File 4.
 

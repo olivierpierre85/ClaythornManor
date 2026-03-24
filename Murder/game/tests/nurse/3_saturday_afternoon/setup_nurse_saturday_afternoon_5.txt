@@ -1,0 +1,194 @@
+Chapter: The Hunt
+Character: Rosalind Marsh
+I am quite content to remain behind.
+It will allow me to rest.
+Even though I should at least join Mrs Baxter for lunch.
+And I could take the opportunity that most people are outside to "look" for treasure.
+The priority would be to find the stash of money promised to everyone.
+But, if as I suspect, there isn't any, I am sure I can find other valuables in here.
+Once I feel I have found enough, I might be able to leave early and avoid any suspicion.
+I already secured some silverware.
+But that may not help me much, and it was a rather risky thing to do.
+Perhaps I ought to curb such impulsive behaviour if I do not wish to be caught.
+Map Choice: Portrait Gallery
+The gallery is lit by a single gas lamp.
+The Claythorn ancestors gaze down from their frames with an air of collective disapproval.
+I feel rather as though I am being assessed.
+I do not linger.
+Map Choice: Library
+A well-appointed library.
+"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain" lies open on a table.
+I cast my eye along the shelves.
+Mostly heraldry, county histories, and bound journals.
+Nothing worth taking — far too heavy, and of no particular value.
+I am about to leave when a title catches my attention.
+"A History of the British Army" — Fortescue.
+Fourteen volumes.
+I have seen this set before, in the officers' mess at Netley.
+The Captain mentioned Zanzibar at some point, I remember.
+Something in the way he spoke of it nagged at me, though I could not quite place it at the time.
+I could try to learn more about that conflict, though it may take some time.
+Menu Choice: Look it up. It may be useful.
+I take down the volume covering the latter campaigns in India and East Africa.
+I find the index and look up Zanzibar.
+A single page.
+The engagement lasted thirty-eight minutes.
+The shortest war in recorded history, apparently.
+The British bombardment was overwhelming.
+Casualties on the British side were minimal — one man, lightly wounded.
+If what the Captain said is true, he would be the only injured soldier from the entire war.
+That seems most unlikely.
+He may well have invented the whole story — but to what end?
+Map Choice: Elizabeth I Bedroom
+I knock politely on the door.
+Amelia Baxter: Yes? Who is there?
+Rosalind Marsh: It is Rosalind Marsh.
+Amelia Baxter: Oh, Miss Marsh, I am resting my eyes at present.
+Amelia Baxter: But I'll join you for luncheon.
+Amelia Baxter: Might we speak then?
+Rosalind Marsh: Of course.
+Map Choice: Gun room
+The gun room.
+I am certain that I should not be here, so I made sure no one noticed me.
+Shotguns and hunting rifles line three walls, arranged on open racks.
+The smell of gun oil is sharp.
+Everything is laid out as though ready for use — nothing locked away.
+There are even a few small handguns lying on a table.
+It looks like something I could use.
+Menu Choice: Leave it. Too dangerous to carry.
+I pushed myself again.
+No cough this time but I should still be more careful, there is no need to explore until I collapse.
+It is almost noon. I should not keep Mrs Baxter waiting any longer.
+Mrs Baxter is already seated when I arrive, composed as ever.
+I take the chair across from her.
+Amelia Baxter: Miss Marsh, how are you?
+Rosalind Marsh: Fine, thank you.
+Amelia Baxter: It seems we have not yet had a proper chance to talk, have we?
+Rosalind Marsh: Indeed.
+Menu Choice: What do you think of this weather?
+Amelia Baxter: I must say that last night was quite scary.
+Amelia Baxter: It has been a while since I've experienced a storm like that.
+Amelia Baxter: We should consider ourselves lucky if there is no damage to the manor.
+Rosalind Marsh: Indeed. One hopes for a quieter day ahead.
+Menu Choice: Tell me more about yourself.
+Rosalind Marsh: I should like to know a little more about you, if you don't mind.
+Amelia Baxter: Oh, where to begin? I suppose I'm just an old woman who keeps herself busy.
+Amelia Baxter: I tend to my garden and brew herbal remedies,
+Amelia Baxter: and I usually keep to myself, save for the séances I frequently organise.
+Rosalind Marsh: Séances. I see.
+I keep my expression neutral.
+I have met women like her before.
+Sometimes well-meaning, utterly convinced of things that simply are not there.
+But more often they are just frauds.
+They take advantage of the vulnerable, the grieving to make a profit.
+Those people disgust me.
+Amelia Baxter: Are you alright, Miss Marsh?
+Rosalind Marsh: Of course, I am merely listening.
+My face must have betrayed my thoughts.
+She studies me for a moment before letting it pass.
+But she doesn't elaborate further on her "powers".
+Menu Choice: What do you think of this place?
+Amelia Baxter: Such a magnificent house, is it not?
+Amelia Baxter: Even if the style is not very recent, it still possesses a great deal of charm.
+Amelia Baxter: You don't see a lot of that type of place anymore.
+Amelia Baxter: The only problem is I don't see a lot of help for a house this big.
+Amelia Baxter: And I don't think money is a problem.
+Amelia Baxter: Lady Claythorn couldn't possibly give away so much money if she lacked the means.
+Amelia Baxter: More likely, she couldn't find enough people to come live here.
+Amelia Baxter: It has become very hard to recruit good help since the war.
+Amelia Baxter: And it must be especially difficult when you are so far away from a city.
+Amelia Baxter: Even in London, some of my neighbours struggle to find staff.
+Amelia Baxter: In any case, she should have made more of an effort for this weekend.
+Amelia Baxter: I hope we won't suffer any inconvenience because of this.
+Menu Choice: How old are you?
+Amelia Baxter: My, my. I would not have expected that question from you, Miss Marsh.
+Amelia Baxter: Surely you know some things simply are not asked.
+She holds my gaze for a moment, a faint smile playing on her lips.
+I have no good answer to that. I clear my throat and move on.
+Menu Choice: What room are you in?
+Amelia Baxter: That's a strange question.
+Amelia Baxter: But if you must know, my room is "Elizabeth the First."
+A member of the household staff steps in quietly.
+Young woman: Excuse me for interrupting, but do you ladies need some lunch?
+Rosalind Marsh: That would be lovely, thank you.
+She returns shortly with some plates.
+We eat and exchange pleasantries.
+When we have finished, I set my napkin aside.
+I have been feeling out of sorts all morning, and the feeling has not quite left me.
+A cough escapes me, sharper than I expected.
+Rosalind Marsh: I am feeling rather poorly, I am afraid.
+Rosalind Marsh: I think I shall retire to my room for a short while.
+Rosalind Marsh: Would you mind being left on your own?
+Amelia Baxter: Not at all, please don't concern yourself.
+Amelia Baxter: There is more than enough here to occupy me.
+I leave her to it and make my way back upstairs.
+A brief rest should do me good before the hunting party returns.
+I lay for a bit, I need to get some strength if I want to get through the day.
+After a little while, I am starting to feel better.
+Perhaps I can use the remaining time productively.
+Map Choice: Storage Room
+The attic staircase creaks with every step.
+Up here, the air is close and smells of dust and old timber.
+The corridor runs the length of the house, doors on either side.
+With the servants all occupied below, there is no one to question what I am doing up here.
+The door is locked.
+But it would take me very little effort to open it.
+In my years of nursing, I have become acquainted with all manner of locks — on medicine cabinets, ward doors, and supply rooms.
+And I quickly realised how convenient it is to be able to open them all.
+That is why I learned to pick locks.
+A most useful skill.
+So, I easily make my way inside.
+The storage room is vast.
+Trunks stacked three deep, old furniture draped in dust sheets, boxes of every shape and size.
+I barely know where to begin.
+Menu Choice: Give up. This will take all day.
+I have been in here long enough.
+There is too much to search properly, and I am beginning to feel uneasy.
+I leave without having found anything of note.
+Map Choice: Butler's Room
+The door is locked.
+I easily make my way inside.
+The room itself is surprisingly ordinary — a head servant's quarters.
+A neat bed, a small washstand, and a plain wooden chair.
+However, standing against the far wall is a large, reinforced cabinet.
+Through its glass panes, I can see the household silver and other valuables gleaming in the dim light.
+This must be where the true wealth of the house is kept.
+Menu Choice: Leave it for now
+Map Choice: Elizabeth I Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+Amelia Baxter is not there. This could be my best opportunity to have a look inside her room.
+But she is nearby. It will not look well if she returns and finds me here.
+It is a considerable risk.
+Menu Choice: Take the risk and go in.
+The door is locked.
+I easily make my way inside.
+The room has a heavy, sweet scent to it. Something thick, like incense or dried lavender.
+A deck of unusual cards is spread across the dressing table.
+Several books on spiritualism and the occult are stacked carelessly by the bed.
+I look through the drawers, but find only clothes and more peculiar trinkets.
+There is nothing of real value here.
+I am about to leave when I hear footsteps in the corridor.
+The door opens.
+Amelia Baxter: Oh —
+Mrs Baxter stops in the doorway. Her eyes move slowly across the room, then settle on me.
+Rosalind Marsh: Mrs Baxter. Forgive me — I have made a dreadful mistake. I thought this was my room.
+A brief silence. I hold her gaze steadily.
+Amelia Baxter: Your room.
+Rosalind Marsh: The corridor all looks rather alike at this end. I am sorry to have disturbed you. I shall leave you to rest.
+Amelia Baxter: Yes. I came back to lie down for a short while.
+She does not move from the doorway. Her expression is difficult to read — polite enough on the surface, but there is something watchful underneath.
+Amelia Baxter: It is curious, though.
+Amelia Baxter: I am quite certain I locked the door when I left this morning.
+She says it lightly, almost to herself. But her gaze does not leave me.
+Rosalind Marsh: Perhaps the latch did not catch properly. These old doors can be unreliable.
+Amelia Baxter: Perhaps.
+I step past her into the corridor, keeping my pace unhurried.
+She watches me go.
+She is not a fool.
+Whatever she thinks now, she will be watching me more carefully from this moment on.
+Map Choice: Wait until the others return
+I have no desire to wander further for the time being.
+I shall stay in my room and rest until the others return.
+A commotion from the entrance hall draws my attention.
+It seems the hunting party has returned.

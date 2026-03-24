@@ -1,0 +1,174 @@
+{
+    "start_label": "nurse_day2_hunt",
+    "tester_id": "admin",
+    "timestamp": "2026-03-24T10:26:40.656201",
+    "unlocked_threads": [
+        "day1_exhaustion",
+        "remember_doctor",
+        "steal_cutlery_1"
+    ],
+    "choices": [
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "nurse_portrait_gallery_default",
+            "time_left": 60,
+            "timestamp": "2026-03-24T10:27:00.000000",
+            "time_to_decide": 5.0,
+            "time_since_last": 5.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Library",
+            "redirect": "nurse_library_default",
+            "time_left": 50,
+            "timestamp": "2026-03-24T10:27:15.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 15.0
+        },
+        {
+            "menu": "nurse_library_choice",
+            "selected": "Look it up. It may be useful.",
+            "redirect": "nurse_library_war_book",
+            "time_left": 50,
+            "timestamp": "2026-03-24T10:27:18.000000",
+            "time_to_decide": 2.0,
+            "time_since_last": 3.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Elizabeth I Bedroom",
+            "redirect": "nurse_day2_no_hunt_bedroom_psychic_busy",
+            "time_left": 20,
+            "timestamp": "2026-03-24T10:28:00.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 42.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Gun room",
+            "redirect": "nurse_gun_room_default",
+            "time_left": 20,
+            "timestamp": "2026-03-24T10:28:10.000000",
+            "time_to_decide": 2.0,
+            "time_since_last": 10.0
+        },
+        {
+            "menu": "nurse_gun_room_choice",
+            "selected": "Leave it. Too dangerous to carry.",
+            "redirect": "generic_cancel",
+            "time_left": 20,
+            "timestamp": "2026-03-24T10:28:13.000000",
+            "time_to_decide": 2.0,
+            "time_since_last": 3.0
+        },
+        {
+            "menu": "psychic_generic_menu_nurse",
+            "selected": "What do you think of this weather?",
+            "redirect": "psychic_generic_weather_saturday_nurse",
+            "time_left": 60,
+            "timestamp": "2026-03-24T10:30:00.000000",
+            "time_to_decide": 5.0,
+            "time_since_last": 110.0
+        },
+        {
+            "menu": "psychic_generic_menu_nurse",
+            "selected": "Tell me more about yourself.",
+            "redirect": "psychic_generic_background_nurse",
+            "time_left": 50,
+            "timestamp": "2026-03-24T10:31:00.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 60.0
+        },
+        {
+            "menu": "psychic_generic_menu_nurse",
+            "selected": "What do you think of this place?",
+            "redirect": "psychic_generic_manor",
+            "time_left": 30,
+            "timestamp": "2026-03-24T10:32:00.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 60.0
+        },
+        {
+            "menu": "psychic_generic_menu_nurse",
+            "selected": "How old are you?",
+            "redirect": "psychic_generic_age_nurse",
+            "time_left": 20,
+            "timestamp": "2026-03-24T10:33:00.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 60.0
+        },
+        {
+            "menu": "psychic_generic_menu_nurse",
+            "selected": "What room are you in?",
+            "redirect": "psychic_generic_room",
+            "time_left": 10,
+            "timestamp": "2026-03-24T10:34:00.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 60.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Storage Room",
+            "redirect": "nurse_attic_storage",
+            "time_left": 60,
+            "timestamp": "2026-03-24T10:45:00.000000",
+            "time_to_decide": 5.0,
+            "time_since_last": 360.0
+        },
+        {
+            "menu": "nurse_attic_storage_search",
+            "selected": "Give up. This will take all day.",
+            "redirect": "nurse_attic_storage_give_up",
+            "time_left": 60,
+            "timestamp": "2026-03-24T10:45:15.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 15.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Butler's Room",
+            "redirect": "nurse_attic_butler_room",
+            "time_left": 50,
+            "timestamp": "2026-03-24T10:45:30.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 15.0
+        },
+        {
+            "menu": "nurse_attic_butler_cabinet_choice",
+            "selected": "Leave it for now",
+            "redirect": "generic_cancel",
+            "time_left": 50,
+            "timestamp": "2026-03-24T10:45:45.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 15.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Elizabeth I Bedroom",
+            "redirect": "nurse_day2_no_hunt_bedroom_psychic_risk",
+            "time_left": 40,
+            "timestamp": "2026-03-24T10:46:00.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 15.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_bedroom_psychic_busy",
+            "selected": "Take the risk and go in.",
+            "redirect": "nurse_day2_no_hunt_enter_psychic",
+            "time_left": 40,
+            "timestamp": "2026-03-24T10:46:05.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 5.0
+        },
+        {
+            "menu": "nurse_day2_no_hunt_map_menu",
+            "selected": "Wait until the others return",
+            "redirect": "nurse_day2_no_hunt_cancel",
+            "time_left": 30,
+            "timestamp": "2026-03-24T10:46:30.000000",
+            "time_to_decide": 3.0,
+            "time_since_last": 25.0
+        }
+    ]
+}
