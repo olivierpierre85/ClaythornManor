@@ -2,6 +2,7 @@ label ending_generic:
 
     # For tests
     if renpy.is_in_test():
+        $ export_transcript(False)
         $ renpy.show_screen("test_end")
         jump test_end_pause
 
