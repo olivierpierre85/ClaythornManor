@@ -85,28 +85,77 @@ label nurse_day2_evening_steal_caught:
     """
 
     captain """
-    Given the circumstances of this weekend, I am inclined to think there might be more to this than simple pilfering.
+    Several pieces, you say?
+
+    Then we ought to know exactly how far this has gone.
     """
 
-    host """
-    Whatever do you mean, Captain?
+    """
+    The Captain turns to the butler without waiting for Lady Claythorn's leave.
     """
 
     captain """
-    I mean that Miss Marsh might not be who she claims to be.
+    Go to Miss Marsh's room and search her belongings.
+
+    If she has taken anything else, bring it here.
+    """
+
+    butler """
+    At once, sir.
+    """
+
+    """
+    He leaves without another word.
+
+    I stand rooted to the spot, my heart hammering against my ribs.
+
+    I know precisely what he will find.
+
+    No one speaks. Lady Claythorn remains in the doorway, watching me with that terrible, steady gaze.
+
+    The Captain stands with his arms folded. The others avoid my eyes.
+
+    The minutes stretch unbearably.
     """
 
     nurse """
-    What? No, that is ridiculous!
-
-    It is a misunderstanding!
+    Please, this really is not necessary...
     """
 
     captain """
-    So you continue to say.
-
-    But you must admit, it is rather difficult to take you at your word just now.
+    I rather think it is.
     """
+
+    """
+    At last, I hear footsteps on the stairs.
+
+    The butler reappears, carrying a small cloth bundle which he sets upon the table.
+
+    He unfolds it carefully, revealing a silver spoon and a fork, identical to the ones we have been using this weekend.
+    """
+
+    butler """
+    These were in Miss Marsh's travelling case, my lady.
+
+    Concealed beneath her garments.
+    """
+
+    """
+    The room falls utterly silent.
+
+    There is nothing left to say. The evidence is laid out before them, plain as day.
+    """
+
+    captain """
+    Given what has just been found, I think we can dispense with any further talk of misunderstandings.
+
+    Miss Marsh is clearly not who she claims to be.
+    """
+
+    """
+    I try to think of an answer, but words elude me.
+    """
+
 
     lad """
     What are we going to do then?
@@ -121,7 +170,7 @@ label nurse_day2_evening_steal_caught:
     host """
     Quite right.
 
-    We shall confine her to her room, just as we did with Mr Manning.
+    We could confine her to her room, just as we did with Mr Manning.
 
     Tomorrow, we shall see what the police make of all this.
     """

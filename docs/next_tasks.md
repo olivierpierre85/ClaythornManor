@@ -9,6 +9,11 @@ CHECK NEW ENDINGs
 
 ENDING WITH MONEY => NEED Pearls, all the shit and ONE cutlery at least? Or just big silverware?
 
+ENDING ESCAPING at night, caught for thievery =>** If you escape at night, you might spot the staff leaving in the car**
+You notice it => Rethink the endings (escape during the night => Not possible to die of exhaution ?)
+
+=> Then to die of exhaution, you need 2/3 exhaution unlock => add one during the hunt ?
+
 
 
 - [ ] RETRY EVERYTHING
