@@ -55,6 +55,13 @@ ENDING WITH MONEY => NEED Pearls, all the shit and ONE cutlery at least? Or just
 
 ## Assets & artistic Tasks
 
+### STABLE DIFFUSION FUN
+
+Flow or SDXL ?
+=> Flow slower but I think much better.
+ADAPTA FLOW TO GENERATE IMAGES, but with a more cartoonish style
+
+
 - [ ] For info_cards, RENAME so it's correct, then change everything to webp?
 - [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
 - [ ] Try Locations with characters inside (Whisk/experimental).
