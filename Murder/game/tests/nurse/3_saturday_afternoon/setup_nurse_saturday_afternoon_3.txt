@@ -1,0 +1,181 @@
+Chapter: The Hunt
+Character: Rosalind Marsh
+I am quite content to remain behind.
+It will allow me to rest.
+Even though I should at least join Mrs Baxter for lunch.
+And I could take the opportunity that most people are outside to "look" for treasure.
+The priority would be to find the stash of money promised to everyone.
+But, if as I suspect, there isn't any, I am sure I can find other valuables in here.
+Once I feel I have found enough, I might be able to leave early and avoid any suspicion.
+Map Choice: Gun room
+The gun room.
+I am certain that I should not be here, so I made sure no one noticed me.
+Shotguns and hunting rifles line three walls, arranged on open racks.
+The smell of gun oil is sharp.
+Everything is laid out as though ready for use — nothing locked away.
+There are even a few small handguns lying on a table.
+It looks like something I could use.
+Menu Choice: Take a pistol
+My hand closes around the grip of a small revolver.
+It is not loaded.
+And I have not seen any bullets lying about.
+Nevertheless, it could prove useful.
+I slip it into my bag.
+Nobody will notice. Not for a while, at any rate.
+Map Choice: Storage Room
+The attic staircase creaks with every step.
+Up here, the air is close and smells of dust and old timber.
+The corridor runs the length of the house, doors on either side.
+With the servants all occupied below, there is no one to question what I am doing up here.
+The door is locked.
+But it would take me very little effort to open it.
+In my years of nursing, I have become acquainted with all manner of locks — on medicine cabinets, ward doors, and supply rooms.
+And I quickly realised how convenient it is to be able to open them all.
+That is why I learned to pick locks.
+A most useful skill.
+So, I easily make my way inside.
+The storage room is vast.
+Trunks stacked three deep, old furniture draped in dust sheets, boxes of every shape and size.
+I barely know where to begin.
+Menu Choice: Search everything carefully
+The trunks are packed tightly and most of them are locked.
+I manage to open one — old curtains, heavy and mildewed.
+Another: crockery wrapped in cloth.
+I lift a dust sheet from what turns out to be an old escritoire.
+The drawers are empty save for a few dried-up pen nibs and a folded invoice from eighteen ninety.
+The shelves near the door hold rows of old tins and jars, most unlabelled.
+I move some aside — and then I stop.
+Behind a row of old paint tins, stacked neatly and deliberately out of sight:
+Bullets.
+A good number of them.
+Someone has gone to some trouble to hide these.
+I take them out and carefully load the small revolver I took from the gun room.
+It is good to be prepared.
+Then I replace the tins exactly as they were, and leave the room as quietly as I came.
+I pushed myself again.
+No cough this time but I should still be more careful, there is no need to explore until I collapse.
+It is almost noon. I should not keep Mrs Baxter waiting any longer.
+Mrs Baxter is already seated when I arrive, composed as ever.
+I take the chair across from her.
+Amelia Baxter: Miss Marsh, how are you?
+Rosalind Marsh: Fine, thank you.
+Amelia Baxter: It seems we have not yet had a proper chance to talk, have we?
+Rosalind Marsh: Indeed.
+Menu Choice: You don't have anymore questions for her
+A member of the household staff steps in quietly.
+Young woman: Excuse me for interrupting, but do you ladies need some lunch?
+Rosalind Marsh: That would be lovely, thank you.
+She returns shortly with some plates.
+We eat and exchange pleasantries.
+When we have finished, I set my napkin aside.
+I have been feeling out of sorts all morning, and the feeling has not quite left me.
+A cough escapes me, sharper than I expected.
+Rosalind Marsh: I am feeling rather poorly, I am afraid.
+Rosalind Marsh: I think I shall retire to my room for a short while.
+Rosalind Marsh: Would you mind being left on your own?
+Amelia Baxter: Not at all, please don't concern yourself.
+Amelia Baxter: There is more than enough here to occupy me.
+I leave her to it and make my way back upstairs.
+A brief rest should do me good before the hunting party returns.
+I lay for a bit, I need to get some strength if I want to get through the day.
+After a little while, I am starting to feel better.
+Perhaps I can use the remaining time productively.
+Map Choice: William the Conqueror Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+With most of the household out hunting, one could easily slip inside unseen.
+Though it would be rather difficult to explain if I were caught.
+Menu Choice: This is my chance. I should search the room before anyone returns.
+The door is locked.
+I easily make my way inside.
+There isn't much in here.
+A jacket thrown over the chair, a battered holdall on the floor.
+There is nothing here worth taking.
+But it should not be a surprise.
+Anyone looking more than a few seconds at Ted Harring would see he is not a man of means.
+Map Choice: Edward II Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+This corridor remains quite deserted as well.
+Menu Choice: I must be quick. There may be something worth taking in there.
+The door is locked.
+I easily make my way inside.
+A doctor's bag sits open on the small writing desk.
+Instruments, a bottle of laudanum, a notebook with the clasp shut.
+There is no mistaking whose room this is.
+I know better than to disturb another's bag.
+Partly professional courtesy.
+Partly because there is nothing in there I could make use of.
+Map Choice: George I Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+This corridor remains quite deserted as well.
+Menu Choice: I cannot afford to hesitate. I go in.
+The door is locked.
+I easily make my way inside.
+The room is neat to the point of severity.
+A coat hangs straight on its hook.
+A leather case sits packed on the stand, its straps buckled precisely.
+Nothing is left in reach.
+Military discipline of this kind belongs to one man in this house.
+I search thoroughly, but find nothing of use.
+Whatever the Captain values, he keeps it close to his person.
+Map Choice: Henry IV Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+This corridor remains quite deserted as well.
+Menu Choice: I cannot afford to hesitate. I go in.
+The door is locked.
+I easily make my way inside.
+The room is larger than mine, dressed in pale silks and heavy curtains.
+This is unquestionably the lady of the house's own chamber.
+I look quickly through the dressing table.
+A jet brooch, a few hairpins, a string of pearls in a velvet case.
+They catch my eye for a moment — but only for a moment.
+This is not much for a woman of Lady Claythorn's standing.
+Pearls and jet are for show — for evenings and guests.
+There should be more.
+I also don't see the prize money anywhere. That's the real reason I am in this room.
+One thousand pounds each. Seven guests. Seven thousand pounds in bearer bonds.
+Whoever holds bearer bonds holds the money. There are no names on them. No register.
+They could walk out of this house in anyone's pocket.
+But that is if they exist at all.
+It would not surprise me greatly if there were no bonds. No ceremony. Nothing.
+But if they are real, they are here somewhere.
+I look more carefully. Behind the curtain, beneath the floorboards, behind a picture — it could be anywhere.
+But I find nothing.
+There is a safe somewhere. There must be.
+Though perhaps not here. A woman like Lady Claythorn may well keep it in a study, or some other room she considers entirely her own.
+I simply have not found it yet.
+Before I leave, I look over what might be worth taking.
+The pearls are the only items of any real value.
+Menu Choice: Take the pearls.
+Not first-rate, but they will fetch something.
+I slip them into my bag and leave.
+Map Choice: George IV Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+The door shifts slightly under my touch.
+It appears Mr Manning has left it resting on the latch.
+Since he is not coming back yet, I could take a quick look.
+I push the door open quietly, ensuring no one is watching.
+The room is in a frightful state.
+Clothes are discarded carelessly, and the unmistakable smell of spirits hangs in the air.
+A brief glance reveals only empty whisky bottles.
+Quite as I suspected. There is nothing of value for me here.
+Map Choice: Richard III Bedroom
+Mr Moody's room.
+His body settled on the bed, hidden underneath the bed sheets.
+One could be easily frightened, but I am used to this.
+Usually, a dead body doesn't cause me anguish, only respect and sadness.
+And yet here I am, with the purpose of stealing from a man who can't defend himself anymore.
+I should feel bad, but I know I need the money more than he does now.
+So I start looking.
+But the bounty is meager.
+Nothing on the dressing table.
+A small case with his clothes under the bed.
+That's it.
+I could also search his body, but that would be going too far, even for me.
+I close the door softly and leave.
+A commotion from the entrance hall draws my attention.
+It seems the hunting party has returned.

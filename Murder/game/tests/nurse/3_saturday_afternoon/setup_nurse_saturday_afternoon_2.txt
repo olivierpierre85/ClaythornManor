@@ -1,0 +1,108 @@
+Chapter: The Hunt
+Character: Rosalind Marsh
+I am quite content to remain behind.
+It will allow me to rest.
+Even though I should at least join Mrs Baxter for lunch.
+And I could take the opportunity that most people are outside to "look" for treasure.
+The priority would be to find the stash of money promised to everyone.
+But, if as I suspect, there isn't any, I am sure I can find other valuables in here.
+Once I feel I have found enough, I might be able to leave early and avoid any suspicion.
+Map Choice: Butler's Room
+The attic staircase creaks with every step.
+Up here, the air is close and smells of dust and old timber.
+The corridor runs the length of the house, doors on either side.
+With the servants all occupied below, there is no one to question what I am doing up here.
+The door is locked.
+But it would take me very little effort to open it.
+In my years of nursing, I have become acquainted with all manner of locks — on medicine cabinets, ward doors, and supply rooms.
+And I quickly realised how convenient it is to be able to open them all.
+That is why I learned to pick locks.
+A most useful skill.
+So, I easily make my way inside.
+The room itself is surprisingly ordinary — a head servant's quarters.
+A neat bed, a small washstand, and a plain wooden chair.
+However, standing against the far wall is a large, reinforced cabinet.
+Through its glass panes, I can see the household silver and other valuables gleaming in the dim light.
+This must be where the true wealth of the house is kept.
+Menu Choice: Try to open the cabinet
+I approach the cabinet and attempt to pick the lock.
+But this is no ordinary lock.
+The mechanism inside is far more intricate than those I am used to.
+After a few moments of fruitless effort, I am forced to admit defeat.
+I shall not be able to open this by force or skill alone.
+I will need the butler's key.
+Map Choice: Female Servants Room
+The door is locked.
+I easily make my way inside.
+It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
+On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company.
+A faded photograph is tucked behind them.
+I take the photograph down.
+A young woman in stage dress, posed with a man I do not recognise.
+She is smiling broadly. I recognise the young maid working here.
+So she is, or was, an aspiring actress.
+How peculiar for her to end up here.
+I wonder what her story is.
+I replace everything as it was and step back out.
+Map Choice: Male Servants Room
+The door is locked.
+I easily make my way inside.
+Two beds, a chest of drawers, a peg for each man's jacket.
+I check the drawers quickly — folded shirts, a penknife, a few coins.
+No valuables here.
+Tucked at the very back of the bottom drawer, I find a passport. Belgian.
+I open it carefully.
+On the photograph inside I recognize Lady Claythorn's footman.
+But his name is indeed not british at all. "André De Prei"
+That is very peculiar.
+I close it and replace it exactly as I found it.
+I pushed myself again.
+No cough this time but I should still be more careful, there is no need to explore until I collapse.
+It is almost noon. I should not keep Mrs Baxter waiting any longer.
+Mrs Baxter is already seated when I arrive, composed as ever.
+I take the chair across from her.
+Amelia Baxter: Miss Marsh, how are you?
+Rosalind Marsh: Fine, thank you.
+Amelia Baxter: It seems we have not yet had a proper chance to talk, have we?
+Rosalind Marsh: Indeed.
+Menu Choice: You don't have anymore questions for her
+A member of the household staff steps in quietly.
+Young woman: Excuse me for interrupting, but do you ladies need some lunch?
+Rosalind Marsh: That would be lovely, thank you.
+She returns shortly with some plates.
+We eat and exchange pleasantries.
+When we have finished, I set my napkin aside.
+I have been feeling out of sorts all morning, and the feeling has not quite left me.
+A cough escapes me, sharper than I expected.
+Rosalind Marsh: I am feeling rather poorly, I am afraid.
+Rosalind Marsh: I think I shall retire to my room for a short while.
+Rosalind Marsh: Would you mind being left on your own?
+Amelia Baxter: Not at all, please don't concern yourself.
+Amelia Baxter: There is more than enough here to occupy me.
+I leave her to it and make my way back upstairs.
+A brief rest should do me good before the hunting party returns.
+I lay for a bit, I need to get some strength if I want to get through the day.
+After a little while, I am starting to feel better.
+Perhaps I can use the remaining time productively.
+Map Choice: Storage Room
+The door is locked.
+I easily make my way inside.
+The storage room is vast.
+Trunks stacked three deep, old furniture draped in dust sheets, boxes of every shape and size.
+I barely know where to begin.
+Menu Choice: Search everything carefully
+The trunks are packed tightly and most of them are locked.
+I manage to open one — old curtains, heavy and mildewed.
+Another: crockery wrapped in cloth.
+I lift a dust sheet from what turns out to be an old escritoire.
+The drawers are empty save for a few dried-up pen nibs and a folded invoice from eighteen ninety.
+The shelves near the door hold rows of old tins and jars, most unlabelled.
+I move some aside — and then I stop.
+Behind a row of old paint tins, stacked neatly and deliberately out of sight:
+Bullets.
+A good number of them.
+Someone has gone to some trouble to hide these.
+I shall need a gun to use these, but I take them regardless.
+Then I replace the tins exactly as they were, and leave the room as quietly as I came.
+A commotion from the entrance hall draws my attention.
+It seems the hunting party has returned.

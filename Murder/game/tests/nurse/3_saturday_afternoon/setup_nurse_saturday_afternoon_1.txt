@@ -1,0 +1,98 @@
+Chapter: The Hunt
+Character: Rosalind Marsh
+I am quite content to remain behind.
+It will allow me to rest.
+Even though I should at least join Mrs Baxter for lunch.
+And I could take the opportunity that most people are outside to "look" for treasure.
+The priority would be to find the stash of money promised to everyone.
+But, if as I suspect, there isn't any, I am sure I can find other valuables in here.
+Once I feel I have found enough, I might be able to leave early and avoid any suspicion.
+Map Choice: Kitchen
+I move quietly through the back passage.
+Years of moving through dark passages in hospitals and large houses have taught me how to remain unseen.
+I reach the kitchen door and ease it open an inch.
+I almost step inside until I notice one of the maids, alone.
+It is better if she does not see me.
+I pull the door to and leave.
+Map Choice: Garage
+I reach the garage, making sure I should not encounter anyone.
+It is a cold, oil-smelling place.
+There is an old car; it does not look as though it is working any more.
+Tools hang neatly along one wall, and a bicycle leans against another.
+Nothing here that is of any use to me.
+Map Choice: Gun room
+The gun room.
+I am certain that I should not be here, so I made sure no one noticed me.
+Shotguns and hunting rifles line three walls, arranged on open racks.
+The smell of gun oil is sharp.
+Everything is laid out as though ready for use — nothing locked away.
+There are even a few small handguns lying on a table.
+It looks like something I could use.
+Menu Choice: Take a pistol
+My hand closes around the grip of a small revolver.
+It is not loaded.
+And I have not seen any bullets lying about.
+Nevertheless, it could prove useful.
+I slip it into my bag.
+Nobody will notice. Not for a while, at any rate.
+Map Choice: Wait for luncheon in the Tea Room
+I do not really have the strength to explore.
+I should just wait for luncheon here.
+Amelia Baxter comes a bit later.
+She is composed as ever when she arrives.
+She takes the chair across from me.
+Amelia Baxter: Miss Marsh, how are you?
+Rosalind Marsh: Fine, thank you.
+Amelia Baxter: It seems we have not yet had a proper chance to talk, have we?
+Rosalind Marsh: Indeed.
+Menu Choice: What do you think of the other guests?
+Amelia Baxter: I haven't had time to form an opinion of everyone yet.
+Amelia Baxter: I have only had time to speak with Captain Sinha, and with that poor drunkard Samuel Manning.
+Amelia Baxter: And I could also exchange a few words with our hostess, Lady Claythorn.
+Menu Choice: What do you think of Lady Claythorn?
+Amelia Baxter: I only exchanged a few pleasantries with the lady of the house.
+Amelia Baxter: She seems delightful to me.
+Amelia Baxter: What pleased me even more was that she addressed me as an equal.
+Amelia Baxter: That's very different from most noble people I've met.
+Menu Choice: Talk about something else
+Menu Choice: You don't have anymore questions for her
+A member of the household staff steps in quietly.
+Young woman: Excuse me for interrupting, but do you ladies need some lunch?
+Rosalind Marsh: That would be lovely, thank you.
+She returns shortly with some plates.
+We eat and exchange pleasantries.
+When we have finished, I set my napkin aside.
+I have been feeling out of sorts all morning, and the feeling has not quite left me.
+A cough escapes me, sharper than I expected.
+Rosalind Marsh: I am feeling rather poorly, I am afraid.
+Rosalind Marsh: I think I shall retire to my room for a short while.
+Rosalind Marsh: Would you mind being left on your own?
+Amelia Baxter: Not at all, please don't concern yourself.
+Amelia Baxter: There is more than enough here to occupy me.
+I leave her to it and make my way back upstairs.
+A brief rest should do me good before the hunting party returns.
+I lay for a bit, I need to get some strength if I want to get through the day.
+After a little while, I am starting to feel better.
+Perhaps I can use the remaining time productively.
+Map Choice: Dining Room
+The dining room is empty.
+The table is not entirely cleared.
+Strange, that should have been done by now.
+Looks like the manor is understaffed.
+Map Choice: Billiard room
+The billiard room is empty, the table undisturbed.
+There is nothing here for me.
+Map Choice: Entrance Hall
+The great hall is quiet.
+The chandelier has been turned down low.
+I stand beneath it for a moment, listening.
+The house settles around me.
+There is something watchful about the place at this hour.
+Map Choice: Garden
+The sky is a little brighter this morning. Not much, but enough.
+The paths are damp underfoot, and there is a chill still in the air, but it is pleasant to be outside.
+I walk the length of the garden slowly, not pushing myself.
+The house is quiet behind me. It is a relief, for a moment, to be away from it.
+I do not stay long. One circuit, and then back inside.
+A commotion from the entrance hall draws my attention.
+It seems the hunting party has returned.
