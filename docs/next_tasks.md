@@ -1,6 +1,7 @@
 <!-- # cSpell:disable -->
 BUG => FULL_TESTINGMODE, if doing a restart, then missing menu???
 
+n Can you make sure that the tests checkpoints for nurse cover all the possible unlocked threads when starting a new chapter? I need to be able to reach every dialogs from the list of checkpoints for a 
 
 ## Write Story : Full
 
