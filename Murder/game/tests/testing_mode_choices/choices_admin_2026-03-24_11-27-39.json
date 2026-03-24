@@ -1,0 +1,246 @@
+{
+  "tester_id": "admin",
+  "timestamp": "2026-03-24T11:27:39.296668",
+  "unlocked_threads": [],
+  "choices": [
+    {
+      "menu": "character_selection",
+      "character_choice": "nurse",
+      "timestamp": "2026-03-24T11:26:01.528762"
+    },
+    {
+      "menu": "nurse_day2_evening_dinner",
+      "other_choices": [
+        "Speak to Lady Claythorn",
+        "Say nothing, eat your dinner"
+      ],
+      "selected": "Say nothing, eat your dinner",
+      "redirect": "generic_cancel",
+      "time_left": 90,
+      "timestamp": "2026-03-24T11:26:18.691495",
+      "time_to_decide": 1.56708,
+      "time_since_last": 17.162733
+    },
+    {
+      "menu": "nurse_day2_evening_steal",
+      "other_choices": [
+        "Pocket some silverware discreetly",
+        "It is not worth the risk"
+      ],
+      "selected": "Pocket some silverware discreetly",
+      "redirect": "nurse_day2_evening_steal",
+      "time_left": 1,
+      "timestamp": "2026-03-24T11:26:20.440699",
+      "time_to_decide": 1.100948,
+      "time_since_last": 1.749204
+    },
+    {
+      "menu": "nurse_day2_evening_map_menu",
+      "other_choices": [
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "Billiard room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Library",
+        "Portrait Gallery",
+        "Tea room",
+        "William the Conqueror Bedroom",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Elizabeth I Bedroom",
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Go to sleep",
+        "Richard III Bedroom"
+      ],
+      "selected": "Scullery",
+      "redirect": "nurse_day2_evening_downstairs_maid",
+      "time_left": 90,
+      "timestamp": "2026-03-24T11:26:21.725481",
+      "time_to_decide": 4.169677,
+      "time_since_last": 1.284782
+    },
+    {
+      "menu": "nurse_day2_evening_map_menu",
+      "other_choices": [
+        "Garage",
+        "Gun room",
+        "Billiard room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Library",
+        "Portrait Gallery",
+        "Tea room",
+        "William the Conqueror Bedroom",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Elizabeth I Bedroom",
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Go to sleep",
+        "Richard III Bedroom"
+      ],
+      "selected": "Henry IV Bedroom",
+      "redirect": "nurse_day2_evening_bedroom_host",
+      "time_left": 80,
+      "timestamp": "2026-03-24T11:26:27.908560",
+      "time_to_decide": 13.286145,
+      "time_since_last": 6.183079
+    },
+    {
+      "menu": "nurse_day2_evening_bedroom_host",
+      "other_choices": [
+        "We leave tomorrow. This might be my last chance to search the room.",
+        "No, if I am caught, I could lose everything before we leave."
+      ],
+      "selected": "We leave tomorrow. This might be my last chance to search the room.",
+      "redirect": "nurse_day2_evening_enter_host",
+      "time_left": 80,
+      "timestamp": "2026-03-24T11:26:46.914308",
+      "time_to_decide": 1.394128,
+      "time_since_last": 19.005748
+    },
+    {
+      "menu": "nurse_search_host_choice_default",
+      "other_choices": [
+        "Take the pearls.",
+        "Leave them. It's not worth the risk."
+      ],
+      "selected": "Take the pearls.",
+      "redirect": "nurse_take_pearls",
+      "time_left": 70,
+      "timestamp": "2026-03-24T11:26:57.025930",
+      "time_to_decide": 0.993654,
+      "time_since_last": 10.111622
+    },
+    {
+      "menu": "nurse_day2_evening_map_menu",
+      "other_choices": [
+        "Garage",
+        "Gun room",
+        "Billiard room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Library",
+        "Portrait Gallery",
+        "Tea room",
+        "William the Conqueror Bedroom",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "George IV Bedroom",
+        "Elizabeth I Bedroom",
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Go to sleep",
+        "Richard III Bedroom"
+      ],
+      "selected": "George I Bedroom",
+      "redirect": "nurse_day2_evening_bedroom_captain",
+      "time_left": 65,
+      "timestamp": "2026-03-24T11:26:58.224581",
+      "time_to_decide": 1.535081,
+      "time_since_last": 1.198651
+    },
+    {
+      "menu": "nurse_day2_evening_bedroom_captain",
+      "other_choices": [
+        "We leave tomorrow. This might be my last chance to search the room.",
+        "No, if I am caught, I could lose everything before we leave."
+      ],
+      "selected": "We leave tomorrow. This might be my last chance to search the room.",
+      "redirect": "nurse_day2_evening_enter_captain",
+      "time_left": 65,
+      "timestamp": "2026-03-24T11:27:01.524271",
+      "time_to_decide": 1.51966,
+      "time_since_last": 3.29969
+    },
+    {
+      "menu": "nurse_day2_evening_map_menu",
+      "other_choices": [
+        "Garage",
+        "Gun room",
+        "Billiard room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Library",
+        "Portrait Gallery",
+        "Tea room",
+        "William the Conqueror Bedroom",
+        "Edward II Bedroom",
+        "George IV Bedroom",
+        "Elizabeth I Bedroom",
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Go to sleep",
+        "Richard III Bedroom"
+      ],
+      "selected": "Butler's Room",
+      "redirect": "nurse_day2_evening_attic_butler_room",
+      "time_left": 55,
+      "timestamp": "2026-03-24T11:27:03.941420",
+      "time_to_decide": 3.519302,
+      "time_since_last": 2.417149
+    },
+    {
+      "menu": "nurse_attic_butler_cabinet_choice",
+      "other_choices": [
+        "Try to open the cabinet",
+        "Leave it for now"
+      ],
+      "selected": "Try to open the cabinet",
+      "redirect": "nurse_butler_cabinet_lockpick",
+      "time_left": 55,
+      "timestamp": "2026-03-24T11:27:09.374993",
+      "time_to_decide": 2.172156,
+      "time_since_last": 5.433573
+    },
+    {
+      "menu": "nurse_day2_evening_map_menu",
+      "other_choices": [
+        "Garage",
+        "Gun room",
+        "Billiard room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Library",
+        "Portrait Gallery",
+        "Tea room",
+        "William the Conqueror Bedroom",
+        "Edward II Bedroom",
+        "George IV Bedroom",
+        "Elizabeth I Bedroom",
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Go to sleep",
+        "Richard III Bedroom"
+      ],
+      "selected": "Go to sleep",
+      "redirect": "generic_cancel",
+      "time_left": 35,
+      "timestamp": "2026-03-24T11:27:15.275883",
+      "time_to_decide": 5.551187,
+      "time_since_last": 5.90089
+    }
+  ]
+}
