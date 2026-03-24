@@ -3,6 +3,9 @@ BUG => FULL_TESTINGMODE, if doing a restart, then missing menu???
 
 n Can you make sure that the tests checkpoints for nurse cover all the possible unlocked threads when starting a new chapter? I need to be able to reach every dialogs from the list of checkpoints for a 
 
+IDIOT !!!!!!! THERE IS NO NUMBER ONe in the infocard => YOU added the I of intuition, that is reserved for endings. CORRECT EVERYTHING
+
+
 ## Write Story : Full
 
 CHECK NEW ENDINGs
@@ -10,7 +13,9 @@ CHECK NEW ENDINGs
 ENDING WITH MONEY => NEED Pearls, all the shit and ONE cutlery at least? Or just big silverware?
 
 ENDING ESCAPING at night, caught for thievery =>** If you escape at night, you might spot the staff leaving in the car**
-You notice it => Rethink the endings (escape during the night => Not possible to die of exhaution ?)
+You notice it => Rethink the endings (escape during the night => Not possible to die of exhaution ?) INTUITON UNLOCKED?????
+
+ALSO, add if pearl => add that the butler show that as well, and the host noticing ! That's were they were? I was planning on wearing them tonight!
 
 => Then to die of exhaution, you need 2/3 exhaution unlock => add one during the hunt ?
 

@@ -27,53 +27,81 @@ label nurse_day3_afternoon:
 
     call black_screen_transition("Rosalind Marsh", chapters_names[current_chapter])
 
-    $ change_room("butler_room", irisout)
-
     $ play_music('mysterious')
 
-    """
-    I sit on the edge of the narrow bed, hands folded, listening.
+    if nurse_details.objects.is_unlocked('silverware_big'):
 
-    The manor has been restless all morning — footsteps, doors, muffled voices I cannot quite make out.
+        $ change_room("butler_room", irisout)
 
-    Then, at last, the front door.
+        """
+        I sit on the edge of the narrow bed, hands folded, listening.
 
-    It opens. It closes.
+        The manor has been restless all morning — footsteps, doors, muffled voices I cannot quite make out.
 
-    And after that, silence.
+        Then, at last, the front door.
 
-    Not the silence of people holding still, but the silence of an empty house.
+        It opens. It closes.
 
-    I wait a little longer, counting my breaths.
+        And after that, silence.
 
-    Nothing.
+        Not the silence of people holding still, but the silence of an empty house.
 
-    It is time.
-    """
+        I wait a little longer, counting my breaths.
 
-    $ change_room("entrance_hall", dissolve)
+        Nothing.
 
-    """
-    The entrance hall is deserted.
+        It is time.
+        """
 
-    I cross to the window and glance at the drive.
+        $ change_room("entrance_hall", dissolve)
 
-    No figures. No movement. Just the gravel and the grey sky beyond.
+        """
+        The entrance hall is deserted.
 
-    Good.
+        I cross to the window and glance at the drive.
 
-    I check the weight of my bag — the candlesticks, the salver, the spoons.
+        No figures. No movement. Just the gravel and the grey sky beyond.
 
-    All still there.
+        Good.
 
-    I should leave now, while the way is clear.
+        I check the weight of my bag — the candlesticks, the salver, the spoons.
 
-    But my stomach tightens with a familiar pang.
+        All still there.
 
-    I have not eaten since yesterday evening, and the walk to the nearest village will be long.
+        I should leave now, while the way is clear.
 
-    The kitchen is just below. It would take only a few minutes.
-    """
+        But my stomach tightens with a familiar pang.
+
+        I have not eaten since yesterday evening, and the walk to the nearest village will be long.
+
+        The kitchen is just below. It would take only a few minutes.
+        """
+
+    else:
+
+        $ change_room("bedroom_nurse", irisout)
+
+        """
+        I have been sitting here long enough.
+
+        The house has grown quiet — the restless footsteps from earlier have settled.
+
+        My stomach reminds me why I stayed.
+
+        I need to eat before I attempt the walk to the village.
+
+        There must be something in the kitchen.
+        """
+
+        $ change_room("entrance_hall", dissolve)
+
+        """
+        The entrance hall is deserted.
+
+        I glance towards the kitchen stairs.
+
+        A quick meal, and then I am gone.
+        """
 
     # Nurse encounters Ted and Amelia on the stairs, lies about oversleeping,
     # they prepare food together, then split up before the meal.

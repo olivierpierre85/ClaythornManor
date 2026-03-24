@@ -88,6 +88,32 @@ label nurse_ending_gunned_down:
     jump ending_generic
 
 
+label nurse_ending_escape_at_night:
+
+    $ nurse_details.endings.unlock('escape_at_night')
+    $ nurse_details.add_ending_checkpoint(ending=nurse_details.endings.get_item('escape_at_night'))
+
+    call death_screen_transition
+
+    """
+    You escaped the manor, but the night swallowed you whole.
+
+    Lost in the woods, cold and exhausted, you sat down to rest and never rose again.
+
+    They found you the next morning, curled beneath an oak, frost on your eyelashes.
+
+    You saw the truth — Lady Claythorn fleeing her own house — and it should have told you everything.
+
+    Don't wait too long. 
+    
+    Leave as fast as you can.
+    
+    Leave before the doors close behind you.
+    """
+
+    jump ending_generic
+
+
 label nurse_ending_escape_poor:
 
     $ nurse_details.endings.unlock('escape_poor')

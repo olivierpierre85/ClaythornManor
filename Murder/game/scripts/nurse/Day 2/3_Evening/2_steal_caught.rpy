@@ -245,28 +245,92 @@ label nurse_day2_evening_steal_caught:
     I force the lock, then quickly make my way outside.
     """
 
+    $ change_room("manor_exterior")
+
+    """
+    The night air hits me like a slap.
+
+    I keep to the shadows, moving along the side of the house towards the drive.
+
+    Then I stop.
+
+    Ahead, near the garage, a motorcar stands with its engine running, its headlamps cutting two pale beams into the dark.
+
+    Figures are moving around it — quickly, purposefully.
+
+    I press myself flat against the wall and watch.
+    """
+
+    """
+    The butler emerges first, carrying two heavy cases which he loads into the boot.
+
+    Behind him, the footman and the maid, each with bags of their own.
+
+    And then Lady Claythorn herself, wrapped in a fur coat, clutching a leather valise to her chest.
+
+    She does not look back at the house. Not once.
+
+    She climbs into the rear of the motorcar without a word.
+    """
+
+    """
+    The doors close. The engine growls.
+
+    The motorcar pulls away down the drive, its lights shrinking into the darkness until they are gone entirely.
+
+    I stand there for a long moment, pressed against the cold stone, trying to make sense of what I have just seen.
+
+    The lady of the house, fleeing her own estate in the dead of night, with every last member of her staff.
+
+    Whatever is happening in this place, it's better if I don't linger.
+    """
+
     $ change_room("forest_road")
-    
+
     """
     The road ahead is long, and the air is bitterly cold.
+
+    I walk quickly at first, putting as much distance as I can between myself and the house.
+
+    But the road is dark, and I did not think to bring a lamp.
+
+    The drive gives way to a narrow lane, then to a fork I do not remember from the journey here.
+
+    I choose left. Or perhaps right. I am no longer sure.
     """
 
-    if nurse_details.threads.is_unlocked('day1_exhaustion'):
+    """
+    The trees press closer.
 
-        """
-        I push myself forward, intending to walk all the way to the next town.
-        """
+    The road, if it is still a road, narrows to little more than a track.
 
-        jump nurse_day2_exhaution
+    I stumble over a root and catch myself against a trunk, bark scraping my palms.
 
-    else:
+    I should turn back. But turn back to where?
 
-        """
-        I walk through the night until my feet are raw, pushing myself onward until the first light of dawn breaks over the town.
+    I have lost the road entirely.
+    """
 
-        I have escaped with my life.
+    """
+    The cold settles into me like water filling a glass.
 
-        But I am entirely alone, shivering in the morning chill.
-        """
+    I keep walking, but my steps grow shorter, slower.
 
-        jump nurse_ending_escape_poor
+    The trees all look the same.
+
+    Every direction is darkness.
+    """
+
+    """
+    I sit down against a tree, just for a moment.
+
+    Just to gather my strength.
+
+    The ground is damp and freezing, but my legs will not carry me any further.
+
+    I pull my coat tighter and close my eyes.
+
+    Just for a moment.
+    """
+
+    jump nurse_ending_escape_at_night

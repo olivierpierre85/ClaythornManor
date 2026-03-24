@@ -216,7 +216,8 @@ label nurse_day3_morning:
 
     $ time_left = 1
     call run_menu(TimedMenu("nurse_day3_morning_choice", [
-        TimedMenuChoice("Leave now, while there is still time", 'nurse_day3_morning_leave', early_exit=True),
+        TimedMenuChoice("Leave now, while there is still time{{intuition}}", 'nurse_day3_morning_leave', early_exit=True, condition="nurse_details.endings.is_unlocked('escape_at_night')"),
+        TimedMenuChoice("I need to eat something before leaving", 'nurse_day3_morning_eat_first', early_exit=True, condition="not nurse_details.endings.is_unlocked('escape_at_night')"),
         TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True),
     ]))
 
@@ -351,6 +352,31 @@ label nurse_day3_morning_leave_rich:
     """
 
     jump nurse_ending_escape_rich
+
+
+label nurse_day3_morning_eat_first:
+
+    """
+    I cannot walk to the village on an empty stomach.
+
+    Not in my condition.
+
+    I shall wait until the others have come down and take what breakfast I can.
+
+    Then I leave.
+    """
+
+    $ change_room("bedroom_nurse", dissolve)
+
+    """
+    I return to my room and sit on the edge of the bed, listening to the house stir beneath me.
+
+    Footsteps on the landing. Doors opening and closing.
+
+    I count the minutes.
+    """
+
+    jump nurse_day3_afternoon
 
 
 label nurse_day3_morning_creak:

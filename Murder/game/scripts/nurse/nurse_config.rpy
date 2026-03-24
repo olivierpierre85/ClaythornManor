@@ -187,6 +187,7 @@ label init_nurse:
 
         nurse_endings = CharacterEndingList ([
             CharacterInformation(1, "exhausted", "You collapsed from exhaustion", image_file="nurse_sick", chapters=['saturday_evening']),
+            CharacterInformation(1, "escape_at_night", "You escaped the manor but perished in the woods", image_file="escape_at_night", is_intuition=True, chapters=['saturday_evening']),
             CharacterInformation(1, "escape_poor", "You escaped, but with very little to show for it", image_file="escape_poor", chapters=['saturday_evening']),
             CharacterInformation(1, "billiard_room_death", "You died in the billiard room after confronting the Captain", image_file="fight_nurse_and_captain", chapters=['saturday_evening']),
             CharacterInformation(1, "escape_collapse", "You collapsed on the road while attempting to escape", image_file="escape_collapse", chapters=['sunday_morning']),
