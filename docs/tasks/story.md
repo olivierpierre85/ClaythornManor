@@ -127,6 +127,9 @@ The nurse path allows to unlock objects of value. Can you try to introduce the c
 
 ### Important
 
+Introduction starts with a memory of his childhood. Where he was raised in English, taught how to be a gentleman.
+Then he wakes up and is on the train. Far from the expectations her mother set for him. But then, should he be unlocked differently, with a more important emphasis on his nobility background? Who could has him that? => Doctor?
+
 ### Ideas to think over (optional)
 
 

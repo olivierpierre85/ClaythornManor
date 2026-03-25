@@ -217,7 +217,7 @@ label nurse_day3_morning:
     $ time_left = 1
     call run_menu(TimedMenu("nurse_day3_morning_choice", [
         TimedMenuChoice("Leave now, while there is still time{{intuition}}", 'nurse_day3_morning_leave', early_exit=True, condition="nurse_details.endings.is_unlocked('escape_at_night')"),
-        TimedMenuChoice("I need to eat something before leaving", 'nurse_day3_morning_eat_first', early_exit=True, condition="not nurse_details.endings.is_unlocked('escape_at_night')"),
+        TimedMenuChoice("I need to eat something before leaving", 'nurse_day3_morning_eat_first', early_exit=True),
         TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True),
     ]))
 
@@ -343,15 +343,35 @@ label nurse_day3_morning_leave_rich:
 
     """
     The road stretches ahead, quiet and grey beneath the morning cloud.
-
-    But for the first time in a very long while, I am not afraid of what lies at the end of it.
-
-    I have enough now. Enough to settle somewhere. Enough to see a proper doctor.
-
-    Enough to hope.
     """
 
-    jump nurse_ending_escape_rich
+    if nurse_details.threads.is_unlocked('steal_pearls'):
+
+        """
+        But for the first time in a very long while, I am not afraid of what lies at the end of it.
+
+        The silver, the pearls — together, they are worth a good deal more than I dared hope.
+
+        Enough to settle somewhere. Enough to see a proper doctor.
+
+        Enough to hope.
+        """
+
+        jump nurse_ending_escape_rich
+    
+    else:
+
+        """
+        I run the figures in my head again. The candlesticks, the salver, the spoons.
+
+        It is something. But not enough. Not nearly enough.
+
+        If only I had taken something else — one more item of real value, and I might have had enough.
+
+        That thought will haunt me, I think.
+        """
+
+        jump nurse_ending_escape_poor
 
 
 label nurse_day3_morning_eat_first:

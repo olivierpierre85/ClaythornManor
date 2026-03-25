@@ -106,9 +106,7 @@ label nurse_ending_escape_at_night:
 
     Don't wait too long. 
     
-    Leave as fast as you can.
-    
-    Leave before the doors close behind you.
+    Leave this place as fast as you can.
     """
 
     jump ending_generic
@@ -194,7 +192,7 @@ label nurse_ending_escape_rich:
 
     It will not last for ever. But it is enough to help you live a little longer, and a little better.
 
-    That's probably the best ending you could hoped for.
+    That's probably the best ending you could have hoped for.
 
     At least if you don't care what happened to the rest.
     """

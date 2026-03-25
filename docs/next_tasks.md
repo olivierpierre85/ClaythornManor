@@ -5,19 +5,21 @@ n Can you make sure that the tests checkpoints for nurse cover all the possible 
 
 IDIOT !!!!!!! THERE IS NO NUMBER ONe in the infocard => YOU added the I of intuition, that is reserved for endings. CORRECT EVERYTHING
 
+EVery story but the lad, a memory on the train? 
+Or just : Captain, Broken?
 
-## Write Story : Full
+## Write nurseStory : Full
 
 CHECK NEW ENDINGs
 
 ENDING WITH MONEY => NEED Pearls, all the shit and ONE cutlery at least? Or just big silverware?
 
 ENDING ESCAPING at night, caught for thievery =>** If you escape at night, you might spot the staff leaving in the car**
-You notice it => Rethink the endings (escape during the night => Not possible to die of exhaution ?) INTUITON UNLOCKED?????
+You notice it => Rethink the endings (escape during the night => Not possible to die of exhaution ?) 
+INTUITON UNLOCKED????? help escape? Or better to help unlock captain ? => TO FINISH GAME you need everyone alive?
 
-ALSO, add if pearl => add that the butler show that as well, and the host noticing ! That's were they were? I was planning on wearing them tonight!
 
-=> Then to die of exhaution, you need 2/3 exhaution unlock => add one during the hunt ?
+=> Then to die of exhaution, you need 2/3 exhaution unlock => add one during the hunt ? NO it's ok JUST INSIST, every little extra effort this weekend might have pushed you over the edge. Be careful
 
 
 

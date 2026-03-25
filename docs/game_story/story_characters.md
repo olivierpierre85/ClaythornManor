@@ -8,7 +8,7 @@ In China, a young girl is saved by a **young officer** during the Boxer Rebellio
 
 A **Nurse** there was also in love with the officer. Out of jealousy, she ratted her out to management.
 
-The **Captain** receives the news. He then reassigns the young officer back to another company, for the sake of the girl's honour (because he is a nobleman, etc.).
+The **Captain** receives the news. He then reassigns the young officer back to another company, for the sake of the girl's honour (because he is a nobleman, etc.).!!!!!! The captain has no real power back then, he will just transfer the information to a "real" officer!!!!!
 
 The woman is left pregnant. In 1902, she gives birth to the **young Lad**. She wants to keep the baby, but he is stolen by the doctor in charge, who claims she would not be a decent mother. She does not know where he has been taken. The **Doctor** sends the baby to an orphanage in England.
 
@@ -103,16 +103,16 @@ She is hired for a very specific, and theoretically lucrative, job (she received
 
 ## ☠️ Initial Death Plan & Relationships
 
-| Character            | Allegedly caused pain to                                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Character            | Allegedly caused pain to                                                                                                                 |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | The Doctor           | Killed the Drunk's wife? Or refused her treatment? She was at the free clinic and badly treated. The Drunk recognises him (incorrectly). |
-| **The hero**         | **NOBODY** Raised in the same orphanage run by Doctor X?                                                               |
-| The Nurse            | ????                                                                                                                     |
-| The Psychic / Schizo | The Captain / A psychic drove his wife to insanity.                                                                       |
-| The Drunk            | The Broken Face (brother) / A drunk driver killed his parents.                                                            |
-| The Captain          | The Broken Face / Sent him to his death?                                                                                 |
-| The Broken Face      | The Nurse (he is the young officer).                                                                                     |
-| The Host             | NOBODY?                                                                                                                 |
+| **The hero**         | **NOBODY** Raised in the same orphanage run by Doctor X?                                                                                 |
+| The Nurse            | ????                                                                                                                                     |
+| The Psychic / Schizo | The Captain / A psychic drove his wife to insanity.                                                                                      |
+| The Drunk            | The Broken Face (brother) / A drunk driver killed his parents.                                                                           |
+| The Captain          | The Broken Face / Sent him to his death?                                                                                                 |
+| The Broken Face      | The Nurse (he is the young officer).                                                                                                     |
+| The Host             | NOBODY?                                                                                                                                  |
 
 ### The Doctor
 - **Alleged**: Killed the Drunk's wife or refused treatment? She was at the free clinic and badly treated. The Drunk recognises him (incorrectly).
@@ -150,13 +150,13 @@ She is hired for a very specific, and theoretically lucrative, job (she received
 Everyone is related to the killer. How for the hero?
 However, when faced with this, we realise that the Psychic set all of this up.
 
-| Character       | Connection to the Hero                                                              | Connection to the Psychic                           |
-| --------------- | ----------------------------------------------------------------------------------- | ----------------------------------------- |
-| The Doctor      | RAISED IN ORPHANAGE                                                                 | Stole her baby at birth.                       |
-| **The Nurse**   | MOTHER, abandoned him.                                                              | She ratted out the Psychic to the Captain. |
-| The Psychic     | Asked for information, lead him on?                                                     | x                                         |
-| The Drunk       | Killed the father of the Broken Face.                                                        | Hid her child.                            |
-| The Captain     | Used to supervise the young officer; did nothing.                                         | Separated her from her lover.               |
+| Character       | Connection to the Hero                                                        | Connection to the Psychic                  |
+| --------------- | ----------------------------------------------------------------------------- | ------------------------------------------ |
+| The Doctor      | RAISED IN ORPHANAGE                                                           | Stole her baby at birth.                   |
+| **The Nurse**   | MOTHER, abandoned him.                                                        | She ratted out the Psychic to the Captain. |
+| The Psychic     | Asked for information, lead him on?                                           | x                                          |
+| The Drunk       | Killed the father of the Broken Face.                                         | Hid her child.                             |
+| The Captain     | Used to supervise the young officer; did nothing.                             | Separated her from her lover.              |
 | The Broken Face | He is the young officer (thus his father). The 'brother' theory is a mistake. | Scorned her.                               |
-| The Host        | QUID? Actress - Jealousy.                                                         | Nothing; she was not supposed to die?      |
+| The Host        | QUID? Actress - Jealousy.                                                     | Nothing; she was not supposed to die?      |
 
