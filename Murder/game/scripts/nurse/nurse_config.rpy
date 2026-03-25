@@ -109,10 +109,10 @@ label init_nurse:
                 relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
             ),
             CharacterInformation(
-                0, "footman_belgian",
-                "You found out that the footman is actually from Belgium.",
+                0, "footman_actor",
+                "You found out that the footman is actually an actor.",
                 content_negative="You don't know much about the footman.",
-                image_file="footman_belgian",
+                image_file="footman_actor",
                 chapters=['saturday_afternoon', 'saturday_evening'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),

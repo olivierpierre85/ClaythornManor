@@ -86,8 +86,8 @@ label nurse_config_progress:
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
                 {"label": "nurse_day2_evening", "threads": {'steal_pearls': True, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': False, 'steal_cutlery_1': True,  'steal_cutlery_2': True}},
-                {"label": "nurse_day2_evening", "threads": {'captain_lie_zanzibar': True, 'captain_lie_boxer': True, 'footman_belgian': True, 'maid_actress': True}},
-                {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True, 'remember_doctor': True, 'captain_lie_zanzibar': True, 'captain_lie_boxer': True, 'spotted_by_psychic': True, 'footman_belgian': True, 'maid_actress': True, 'steal_cutlery_1': True, 'steal_cutlery_2': True, 'take_gun': True, 'find_bullets': True}},
+                {"label": "nurse_day2_evening", "threads": {'captain_lie_zanzibar': True, 'captain_lie_boxer': True, 'footman_actor': True, 'maid_actress': True}},
+                {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': True, 'remember_doctor': True, 'captain_lie_zanzibar': True, 'captain_lie_boxer': True, 'spotted_by_psychic': True, 'footman_actor': True, 'maid_actress': True, 'steal_cutlery_1': True, 'steal_cutlery_2': True, 'take_gun': True, 'find_bullets': True}},
             ],
             'sunday_morning': [
                 {"label": "nurse_day3_morning", "threads": {'day1_exhaustion': False}},

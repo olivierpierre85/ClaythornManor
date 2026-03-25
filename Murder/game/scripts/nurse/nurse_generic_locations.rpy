@@ -714,6 +714,10 @@ label nurse_attic_females_room:
 
         $ nurse_details.threads.unlock('maid_actress')
 
+        if nurse_details.threads.is_unlocked('footman_actor'):
+
+            call nurse_two_actors_realisation
+
     return
 
 
@@ -870,20 +874,38 @@ label nurse_attic_males_room:
 
         No valuables here.
 
-        Tucked at the very back of the bottom drawer, I find a passport. Belgian.
+        Tucked at the very back of the bottom drawer, beneath folded shirts, I find a letter.
 
-        I open it carefully.
+        It is from a theatre company in London — a rejection, politely worded but unmistakable.
 
-        On the photograph inside I recognize Lady Claythorn's footman.
+        "We regret to inform you that the role has been filled. We wish you every success in your future endeavours."
 
-        But his name is indeed not british at all. "André De Prei"
 
-        That is very peculiar.
+        An actor. Playing at being a servant.
 
-        I close it and replace it exactly as I found it.
+        But why would he stay so far from a theatre?
+
+        That is rather suspicious.
+
+        I fold the letter and replace it exactly as I found it.
         """
 
-        $ nurse_details.threads.unlock('footman_belgian')
+        $ nurse_details.threads.unlock('footman_actor')
+
+        if nurse_details.threads.is_unlocked('maid_actress'):
+
+            call nurse_two_actors_realisation
+
+    return
+
+
+label nurse_two_actors_realisation:
+
+    """
+    Two actors in the same household, so far from any major city.
+
+    That cannot be a coincidence.
+    """
 
     return
 

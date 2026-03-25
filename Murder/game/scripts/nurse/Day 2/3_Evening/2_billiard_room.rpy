@@ -110,7 +110,7 @@ label nurse_day2_evening_billiard_room_captain_intro:
     """
 
     $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu("nurse_day2_evening_billiard_room_captain_menu", [
-        TimedMenuChoice('Something is not right about the staff{{observation}}', 'nurse_day2_evening_billiard_room_staff', 20, condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_belgian')", linked_choice="nurse_day2_evening_billiard_room_confront_butler"),
+        TimedMenuChoice('Something is not right about the staff{{observation}}', 'nurse_day2_evening_billiard_room_staff', 20, condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_actor')", linked_choice="nurse_day2_evening_billiard_room_confront_butler"),
         TimedMenuChoice('Insist we confront the butler{{intuition}}', 'nurse_day2_evening_billiard_room_confront_butler', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront_butler') and nurse_details.endings.is_unlocked('escape_at_night') and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')"),
         TimedMenuChoice('I was at the Boxer Rebellion too{{observation}}', 'nurse_day2_evening_billiard_room_boxer', 20, condition="nurse_details.threads.is_unlocked('remember_doctor')", linked_choice="nurse_day2_evening_billiard_room_boxer_2"),
         TimedMenuChoice('About your rank at the Boxer Rebellion{{observation}}', 'nurse_day2_evening_billiard_room_boxer_2', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')", linked_choice="nurse_day2_evening_billiard_room_zanzibar_confrontation"),
@@ -141,37 +141,41 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     nurse """
-    The footman.
+    The maid.
 
-    There is something in the way he speaks.
-
-    A vowel here, a cadence there — not quite English.
-
-    I noticed it this afternoon and could not entirely set it aside.
-    """
-
-    captain """
-    A foreign-born man in service is hardly remarkable, Miss Marsh.
-
-    Half the footmen in London came over from the continent at one point or another.
-    """
-
-    nurse """
-    Maybe, but there is something about the maid too.
-    """
-
-    captain """
-    What about her?
-    """
-
-    nurse """
-    I have seen her before.
-
-    Not here.
+    I have seen her before. Not here.
 
     In London, in a play at the theatre.
 
-    She is dress differently of course, but I am certain that it is her.
+    She is dressed differently of course, but I am certain that it is her.
+    """
+
+    captain """
+    You think you saw a housemaid on stage.
+    """
+
+    nurse """
+    I do not think it. I know it.
+
+    And that is not all.
+
+    The footman. I have seen him on stage as well.
+
+    A different production, but I am quite sure of it.
+    """
+
+    captain """
+    You attend a great deal of theatre, Miss Marsh.
+    """
+
+    nurse """
+    I do, as it happens.
+
+    And I know what I saw.
+
+    Two actors, both employed as servants in the same country house.
+
+    That cannot be a coincidence.
     """
 
     """
@@ -181,13 +185,13 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     captain """
-    You may be onto something, Miss Marsh.
+    No.
 
-    A foreign footman and an actress playing housemaid — that is an unusual household, especially for the country.
+    No, I rather think it cannot.
 
-    In London, perhaps that would made sense.
+    In London that would perhaps be possible.
 
-    But here, that is very suspicious.
+    But not here.
     """
 
     nurse """
@@ -195,17 +199,25 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     captain """
-    And if the staff are not what they seem, that raises a rather uncomfortable question about who hired them.
+    But to be sure, we should check if there is something strange with the only other person on staff I've seen this week end.
     """
 
     nurse """
-    The butler.
+    You mean the butler.
     """
 
     captain """
     Quite.
 
-    But what could we do?
+    If we could find that he too is not a career servant, that would confirm our suspicions, and we could confront Lady Claythorn about it.
+    """
+
+    nurse """
+    Good idea, but how could we make him confess?
+    """
+
+    captain """
+    That's a good question.
 
     We cannot simply march up to the man and demand an explanation.
 
@@ -225,7 +237,7 @@ label nurse_day2_evening_billiard_room_staff:
 
     And more than a little dangerous.
 
-    If you want a man like that to talk, you would need to properly frighten him.
+    Besides, if you want a man like that to talk, you would need to properly frighten him.
 
     And I do not have anything that would do the trick.
 
@@ -254,23 +266,18 @@ label nurse_day2_evening_billiard_room_confront_butler:
     """
 
     nurse """
-    You said we would need something to frighten him.
+    If we need something to frighten him.
 
-    Well, I have something.
+    I think I found it.
     """
 
     """
     I reach into my coat and produce the revolver.
-
-    Then the ammunition.
-
-    I set them both on the table between us.
     """
 
     nurse """
     I found these in the house.
 
-    The gun in the gun room, the bullets hidden separately in the attic.
 
     If the butler is behind all this, we confront him tonight.
 
@@ -286,6 +293,11 @@ label nurse_day2_evening_billiard_room_confront_butler:
     captain """
     You cannot be serious.
     """
+
+    # TODO add that we need bullets, if she doesn't have them, too end of discussion
+
+    # but if she has them => keep going.
+    
 
     nurse """
     I am entirely serious.
