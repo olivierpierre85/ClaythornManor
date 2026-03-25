@@ -25,11 +25,12 @@
       "type": "pickString",
       "description": "Select an addon to apply to all images",
       "options": [
-        "letter_i_art_deco.png",
+        "number_1_art_deco.png",
         "number_2_art_deco.png",
-        "number_3_art_deco.png"
+        "number_3_art_deco.png",
+        "letter_i_art_deco.png"
       ],
-      "default": "letter_i_art_deco.png"
+      "default": "number_1_art_deco.png"
     }
   ],
   "tasks": [

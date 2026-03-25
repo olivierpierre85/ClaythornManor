@@ -9,14 +9,6 @@ DEST_DIR = Path(r"c:\Projects\ClaythornManor\Murder\game\images\info_cards")
 BORDER_IMAGE_PATH = SOURCE_DIR / "addons" / "main_border.png"
 TARGET_SIZE = (75, 75)
 
-# Addon configurations for specific images
-# Format: "filename.ext": [("suffix", "addon_filename.ext")]
-WITH_ADDONS = {
-    "cutlery.png": [
-        ("1", "letter_i_art_deco.png"),
-        ("2", "number_2_art_deco.png")
-    ]
-}
 
 def process_images(global_addon=None):
     # Ensure destination directory exists
@@ -50,17 +42,13 @@ def process_images(global_addon=None):
             
             if global_addon:
                 # Decide on suffix dynamically
-                if global_addon == "letter_i_art_deco.png":
-                    suffix = "1"
-                elif global_addon.startswith("number_"):
+                if global_addon.startswith("number_"):
                     suffix = global_addon.split("_")[1]
                 else:
                     suffix = Path(global_addon).stem
                 variants.append((suffix, global_addon))
             else:
                 variants.append((None, None))
-                if file_path.name in WITH_ADDONS:
-                    variants.extend(WITH_ADDONS[file_path.name])
 
             try:
                 # Load source image
