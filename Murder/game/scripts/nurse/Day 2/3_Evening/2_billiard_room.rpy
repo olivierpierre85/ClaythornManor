@@ -96,7 +96,7 @@ label nurse_day2_evening_billiard_room_captain_intro:
     """
 
     nurse """
-    I am not certain I can put it into words.
+    I am not certain how I can put it into words.
 
     But I cannot help feeling that something here is wrong.
     """
@@ -110,7 +110,8 @@ label nurse_day2_evening_billiard_room_captain_intro:
     """
 
     $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu("nurse_day2_evening_billiard_room_captain_menu", [
-        TimedMenuChoice('Something is not right about the staff{{observation}}', 'nurse_day2_evening_billiard_room_staff', 20, condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_belgian')"),
+        TimedMenuChoice('Something is not right about the staff{{observation}}', 'nurse_day2_evening_billiard_room_staff', 20, condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_belgian')", linked_choice="nurse_day2_evening_billiard_room_confront_butler"),
+        TimedMenuChoice('Insist we confront the butler{{intuition}}', 'nurse_day2_evening_billiard_room_confront_butler', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront_butler') and nurse_details.endings.is_unlocked('escape_at_night') and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')"),
         TimedMenuChoice('I was at the Boxer Rebellion too{{observation}}', 'nurse_day2_evening_billiard_room_boxer', 20, condition="nurse_details.threads.is_unlocked('remember_doctor')", linked_choice="nurse_day2_evening_billiard_room_boxer_2"),
         TimedMenuChoice('About your rank at the Boxer Rebellion{{observation}}', 'nurse_day2_evening_billiard_room_boxer_2', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')", linked_choice="nurse_day2_evening_billiard_room_zanzibar_confrontation"),
         TimedMenuChoice('About the Zanzibar War{{observation}}', 'nurse_day2_evening_billiard_room_zanzibar_confrontation', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_zanzibar_confrontation') and nurse_details.threads.is_unlocked('captain_lie_zanzibar') and not nurse_details.threads.is_unlocked('captain_lie_boxer')"),
@@ -136,7 +137,7 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     """
-    I should be careful here, I can't really say I went searching their rooms.
+    I should be careful here. I cannot very well say I went searching their rooms.
     """
 
     nurse """
@@ -156,40 +157,263 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     nurse """
-    And the maid.
+    Maybe, but there is something about the maid too.
+    """
 
-    I have the strangest feeling I have seen her before somewhere.
+    captain """
+    What about her?
+    """
+
+    nurse """
+    I have seen her before.
 
     Not here.
 
-    In London, perhaps.
+    In London, in a play at the theatre.
 
-    A theatre, I think.
+    She is dress differently of course, but I am certain that it is her.
+    """
 
-    There is something too precise about her — her movements, her expressions.
+    """
+    He is quiet for a moment.
+
+    Then, to my surprise, he does not dismiss it.
     """
 
     captain """
-    You think you once saw a housemaid on stage.
+    You may be onto something, Miss Marsh.
+
+    A foreign footman and an actress playing housemaid — that is an unusual household, especially for the country.
+
+    In London, perhaps that would made sense.
+
+    But here, that is very suspicious.
     """
 
-    """
-    He does not say it unkindly, but he does not say it with conviction either.
+    nurse """
+    Exactly.
     """
 
     captain """
-    An accent and a familiar face are not evidence of anything, Miss Marsh.
+    And if the staff are not what they seem, that raises a rather uncomfortable question about who hired them.
+    """
 
-    People land where they can, and do what they must.
+    nurse """
+    The butler.
+    """
 
-    I would not read too much into it.
+    captain """
+    Quite.
+
+    But what could we do?
+
+    We cannot simply march up to the man and demand an explanation.
+
+    If there is something amiss, he is not going to confess over a polite enquiry.
+    """
+
+    nurse """
+    Then perhaps we should try a less polite one.
     """
 
     """
-    He is not wrong.
-
-    But I am not entirely satisfied either.
+    He looks at me sharply.
     """
+
+    captain """
+    That would be unwise.
+
+    And more than a little dangerous.
+
+    If you want a man like that to talk, you would need to properly frighten him.
+
+    And I do not have anything that would do the trick.
+
+    At least not here with me.
+
+    So it's better not to think of it.
+    """
+
+    """
+    He turns back to the fire, signalling the matter closed.
+
+    But something in his voice tells me he is more unsettled than he lets on.
+    """
+
+    return
+
+
+label nurse_day2_evening_billiard_room_confront_butler:
+
+    nurse """
+    Captain, about the butler.
+    """
+
+    captain """
+    Miss Marsh, I thought we had settled that matter.
+    """
+
+    nurse """
+    You said we would need something to frighten him.
+
+    Well, I have something.
+    """
+
+    """
+    I reach into my coat and produce the revolver.
+
+    Then the ammunition.
+
+    I set them both on the table between us.
+    """
+
+    nurse """
+    I found these in the house.
+
+    The gun in the gun room, the bullets hidden separately in the attic.
+
+    If the butler is behind all this, we confront him tonight.
+
+    Together.
+    """
+
+    """
+    The Captain stares at the revolver.
+
+    He does not reach for it.
+    """
+
+    captain """
+    You cannot be serious.
+    """
+
+    nurse """
+    I am entirely serious.
+
+    Two people are dead, Captain. The staff are impostors. And the butler is the one thread that ties it all together.
+
+    You are a military man. You have fought in wars.
+
+    Take the gun.
+    """
+
+    """
+    He does not move.
+
+    The silence stretches between us, broken only by the crackle of the fire.
+
+    Then I see it — something I have not seen in him before.
+
+    Not caution. Not calculation.
+
+    Fear.
+    """
+
+    captain """
+    Miss Marsh.
+
+    I...
+    """
+
+    """
+    He stops. Starts again.
+    """
+
+    captain """
+    I cannot take that gun.
+    """
+
+    nurse """
+    Why not?
+    """
+
+    """
+    He looks at me.
+
+    And the mask he has worn all weekend — the upright soldier, the man of experience, the captain — slips, just slightly.
+    """
+
+    captain """
+    I have held a rifle on a hunt, yes.
+
+    I have shot at birds and game.
+
+    But I have never once pointed a weapon at another human being.
+
+    Not in China. Not in Zanzibar. Not anywhere.
+    """
+
+    """
+    The words come slowly, as though each one costs him something.
+    """
+
+    captain """
+    I was never on the front lines, Miss Marsh.
+
+    I was behind them. Always behind them.
+
+    Logistics. Supply routes. Dispatches.
+
+    The battles I described on Friday evening — I watched some of them from a distance.
+
+    Others I only read about in reports.
+    """
+
+    nurse """
+    Then everything you told us —
+    """
+
+    captain """
+    Was a story.
+
+    A very old story, told so many times it nearly became the truth.
+
+    But it is not the truth.
+    """
+
+    """
+    He presses his hands together and stares at the fire.
+    """
+
+    captain """
+    I cannot walk into that room with a loaded revolver and threaten a man.
+
+    I would not know how.
+
+    And I think, if it came to it, I could not pull the trigger.
+
+    I have never had to. And that is precisely the problem.
+    """
+
+    """
+    The fire crackles.
+
+    I pick the revolver back up and slip it into my coat.
+    """
+
+    nurse """
+    Thank you for telling me the truth, Captain.
+    """
+
+    captain """
+    I am not sure I had much choice in the matter.
+    """
+
+    """
+    A faint, tired smile crosses his face.
+
+    He looks older than he did a moment ago.
+    """
+
+    captain """
+    Whatever you decide to do about the butler, Miss Marsh, I would urge caution.
+
+    You are braver than I am. That much is plain.
+
+    But bravery and a revolver do not make you safe.
+    """
+
+    $ captain_details.description_hidden.unlock('lie')
 
     return
 

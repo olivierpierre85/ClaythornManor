@@ -12,15 +12,12 @@ Or just : Captain, Broken?
 
 CHECK NEW ENDINGs
 
-ENDING ESCAPING at night, caught for thievery =>** If you escape at night, you might spot the staff leaving in the car**
-You notice it => Rethink the endings (escape during the night => Not possible to die of exhaution ?) 
-INTUITON UNLOCKED????? help escape? Or better to help unlock captain ? => TO FINISH GAME you need everyone alive?
 
-NEED THE INTUITION TO UNLOCK => There is something wrong with the staff when talking with captain =>
-Ask the captain to look ito it? But how? Wait in the billiard room to check what happens? Then they witness the staff leaving?
-HOw does this unlock captain? Double check captain unlocking
+- Re test all captain possibilities, and unlocks incompatibilities
+  - Check that the texts where she is scared of captain don't appear if she has unlocked captain secret (or just delete them.)
+  - SHE DOESN't say where she found the gun (I always have one with me, for protection?)
 
-=> Then to die of exhaution NO it's ok JUST INSIST, every little extra effort this weekend might have pushed you over the edge. Be careful
+- Recheck leave with money or without logic, I might forgotten something there
 
 
 
