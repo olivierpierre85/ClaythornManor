@@ -112,6 +112,7 @@ label nurse_day2_evening_billiard_room_captain_intro:
     $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu("nurse_day2_evening_billiard_room_captain_menu", [
         TimedMenuChoice('Something is not right about the staff{{observation}}', 'nurse_day2_evening_billiard_room_staff', 20, condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_actor')", linked_choice="nurse_day2_evening_billiard_room_confront_butler"),
         TimedMenuChoice('Insist we confront the butler{{intuition}}', 'nurse_day2_evening_billiard_room_confront_butler', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront_butler') and nurse_details.endings.is_unlocked('escape_at_night') and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')"),
+        TimedMenuChoice('Insist we confront the butler{{intuition}}', 'nurse_day2_evening_billiard_room_confront_butler_without_bullets', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront_butler') and nurse_details.endings.is_unlocked('escape_at_night') and nurse_details.threads.is_unlocked('take_gun') and not nurse_details.threads.is_unlocked('find_bullets')"),
         TimedMenuChoice('I was at the Boxer Rebellion too{{observation}}', 'nurse_day2_evening_billiard_room_boxer', 20, condition="nurse_details.threads.is_unlocked('remember_doctor')", linked_choice="nurse_day2_evening_billiard_room_boxer_2"),
         TimedMenuChoice('About your rank at the Boxer Rebellion{{observation}}', 'nurse_day2_evening_billiard_room_boxer_2', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')", linked_choice="nurse_day2_evening_billiard_room_zanzibar_confrontation"),
         TimedMenuChoice('About the Zanzibar War{{observation}}', 'nurse_day2_evening_billiard_room_zanzibar_confrontation', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_zanzibar_confrontation') and nurse_details.threads.is_unlocked('captain_lie_zanzibar') and not nurse_details.threads.is_unlocked('captain_lie_boxer')"),
@@ -199,7 +200,7 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     captain """
-    But to be sure, we should check if there is something strange with the only other person on staff I've seen this week end.
+    But to be sure, we should check if there is something strange with the only other person on staff I have seen this weekend.
     """
 
     nurse """
@@ -207,7 +208,7 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     captain """
-    Quite.
+    Precisely.
 
     If we could find that he too is not a career servant, that would confirm our suspicions, and we could confront Lady Claythorn about it.
     """
@@ -254,8 +255,7 @@ label nurse_day2_evening_billiard_room_staff:
 
     return
 
-
-label nurse_day2_evening_billiard_room_confront_butler:
+label nurse_day2_evening_billiard_room_confront_butler_intro:
 
     nurse """
     Captain, about the butler.
@@ -276,8 +276,9 @@ label nurse_day2_evening_billiard_room_confront_butler:
     """
 
     nurse """
-    I found these in the house.
+    I always have this with me.
 
+    A single woman must be able to defend herself.
 
     If the butler is behind all this, we confront him tonight.
 
@@ -292,15 +293,48 @@ label nurse_day2_evening_billiard_room_confront_butler:
 
     captain """
     You cannot be serious.
+
+    Is that thing even loaded?
     """
 
-    # TODO add that we need bullets, if she doesn't have them, too end of discussion
+    return
 
-    # but if she has them => keep going.
-    
+label nurse_day2_evening_billiard_room_confront_butler_without_bullets:
+
+    call nurse_day2_evening_billiard_room_confront_butler_intro
 
     nurse """
-    I am entirely serious.
+    It is not loaded, no.
+
+    But he does not need to know that.
+    """
+
+    captain """
+    Miss Marsh, that is precisely what makes this foolish.
+
+    If you threaten a man with an empty weapon, you had better pray he believes you.
+
+    And if he does not — if he calls your bluff — you are entirely defenceless.
+
+    He would be within his rights to strike back, and we would have nothing to stop him.
+    """
+
+    """
+    He is right, of course.
+
+    I put the revolver away.
+    """
+
+    return
+
+label nurse_day2_evening_billiard_room_confront_butler:
+
+    call nurse_day2_evening_billiard_room_confront_butler_intro
+
+    nurse """
+    It is.
+
+    And I am entirely serious.
 
     Two people are dead, Captain. The staff are impostors. And the butler is the one thread that ties it all together.
 
@@ -366,7 +400,7 @@ label nurse_day2_evening_billiard_room_confront_butler:
 
     Logistics. Supply routes. Dispatches.
 
-    The battles I described on Friday evening — I watched some of them from a distance.
+    The battles I describe — I watched some of them from a distance.
 
     Others I only read about in reports.
     """
@@ -378,7 +412,7 @@ label nurse_day2_evening_billiard_room_confront_butler:
     captain """
     Was a story.
 
-    A very old story, told so many times it nearly became the truth.
+    A very old story, told so many times it nearly became the truth in my mind.
 
     But it is not the truth.
     """
@@ -406,26 +440,24 @@ label nurse_day2_evening_billiard_room_confront_butler:
     nurse """
     Thank you for telling me the truth, Captain.
     """
-
-    captain """
-    I am not sure I had much choice in the matter.
-    """
-
+    $ captain_details.description_hidden.unlock('lie')
     """
     A faint, tired smile crosses his face.
 
     He looks older than he did a moment ago.
+
+    Now, I would have to confront the butler myself if I want the truth.
+
+    But don't have that strength in me.
+
+    I was ready when I taught the captain would help.
+
+    But now it feels to dangerous.
     """
 
-    captain """
-    Whatever you decide to do about the butler, Miss Marsh, I would urge caution.
 
-    You are braver than I am. That much is plain.
 
-    But bravery and a revolver do not make you safe.
-    """
 
-    $ captain_details.description_hidden.unlock('lie')
 
     return
 
@@ -479,7 +511,7 @@ label nurse_day2_evening_billiard_room_boxer:
 
     I might remember a doctor by that name.
 
-    But I never made the connection, it's no like we were in the same circles.
+    But I never made the connection. It is not as though we were in the same circles.
 
     This is very strange.
     """
@@ -535,9 +567,9 @@ label nurse_day2_evening_billiard_room_boxer:
 
     But it is not completely impossible.
 
-    And with terrible things that happened this week-end, I will concede that something is not quite right.
+    And with the terrible things that happened this weekend, I will concede that something is not quite right.
 
-    I'll be on my guards from now on, and I suggest you do the same.
+    I shall be on my guard from now on, and I suggest you do the same.
     """
 
     $ nurse_details.threads.unlock('boxer_rebellion_1')
@@ -725,7 +757,7 @@ label nurse_day2_evening_billiard_room_captain_end_good:
     """
 
     captain """
-    You are right, of course, you are.
+    You are right. Of course you are.
 
     The campaigns, yes, those were real.
 
@@ -790,7 +822,7 @@ label nurse_day2_evening_billiard_room_captain_end_good:
     Don't worry, I won't tell the others.
     """
 
-    """
+    captain """
     Thank you, Miss Marsh.
     """
 
@@ -846,7 +878,7 @@ label nurse_day2_evening_billiard_room_captain_end_bad:
 
     I feel instantly that it is stronger than other times.
 
-    Blood splatters on Captain Sinha who jumps back.
+    Blood splatters on Captain Sinha, who jumps back.
     """
 
     captain """

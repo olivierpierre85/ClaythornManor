@@ -167,7 +167,7 @@ label nurse_day3_morning:
     $ time_left = 1
     call run_menu(TimedMenu("nurse_day3_morning_choice", [
         TimedMenuChoice("Leave now, while there is still time{{intuition}}", 'nurse_day3_morning_leave', early_exit=True, condition="nurse_details.endings.is_unlocked('escape_at_night')"),
-        TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True, condition="nurse_details.thread.is_unlocked('silverware_big')"),
+        TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True, condition="nurse_details.threads.is_unlocked('silverware_big')"),
     ]))
 
 
