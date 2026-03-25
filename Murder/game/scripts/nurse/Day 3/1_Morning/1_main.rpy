@@ -188,39 +188,35 @@ label nurse_day3_morning:
     Someone is up, and moving.
     """
 
-    if nurse_details.threads.is_unlocked('silverware_big'):
-
-        jump nurse_day3_morning_leave_rich
-
     """
     And they will be coming downstairs before long.
     """
 
-    if nurse_details.threads.is_unlocked('master_key'):
+    if nurse_details.threads.is_unlocked('silverware_big'):
+
+        jump nurse_day3_morning_leave
+
+    if not nurse_details.threads.is_unlocked('master_key'):
 
         """
-        I cannot afford to be found standing here.
+        I slip the key into my coat pocket.
 
-        Yet the question remains — do I make one last attempt before I leave?
-
-        Every moment I remain is a risk.
-
-        Perhaps the wisest course is simply to go.
+        Yet I am not certain it is wise to use it.
         """
 
     else:
 
         """
-        I slip the key into my coat pocket.
-
-        I cannot afford to be found standing here.
-
-        Yet I am not certain it is wise to use it.
-
-        Every moment I remain is a risk.
-
-        Perhaps the wisest course is simply to go.
+        Yet the question remains — do I make one last attempt before I leave?
         """
+
+    """
+    I cannot afford to be found standing here.
+
+    Every moment I remain is a risk.
+
+    Perhaps the wisest course is simply to go.
+    """
 
     $ time_left = 1
     call run_menu(TimedMenu("nurse_day3_morning_choice", [
@@ -235,138 +231,138 @@ label nurse_day3_morning:
 
 label nurse_day3_morning_leave:
 
-    call nurse_day3_morning_leave_house
-
-    $ change_room("manor_exterior", dissolve)
-
-    """
-    The air is cold and wet, the drive still damp from the night.
-
-    I walk quickly, without looking back at the house.
-
-    There will be no prize. There was never going to be one.
-
-    I have understood that for some time now, and yet I stayed.
-
-    The gate at the end of the drive. Eyes on that, and nothing else.
-    """
-
-    $ change_room("forest_road", dissolve)
-
-    """
-    The road stretches ahead, quiet and grey beneath the morning cloud.
-    """
-
-    if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
-
+    if nurse_details.threads.is_unlocked('silverware_big'):
 
         """
-        I keep walking — or I try to.
+        I have already taken what I came for.
 
-        My legs feel heavier with every step.
+        The silver is in my bag, along with everything else I gathered this weekend.
 
-        I should not have pushed myself so hard these past days.
+        There is nothing left to wait for.
         """
-
-        play sound woman_cough
-
-        """
-        The cough takes hold, and this time it does not let go.
-
-        I stumble.
-
-        The road swims before my eyes.
-        """
-
-        jump nurse_ending_escape_collapse
-
-    """
-    I keep walking.
-
-    There is nothing behind me worth turning back for.
-    """
-
-    jump nurse_ending_escape_poor
-
-
-label nurse_day3_morning_leave_rich:
-
-    """
-    I have already taken what I came for.
-
-    The silver is in my bag, along with everything else I gathered this weekend.
-
-    There is nothing left to wait for.
-    """
 
     call nurse_day3_morning_leave_house
 
     $ change_room("manor_exterior", dissolve)
 
-    """
-    The air is cold and sharp, but I scarcely feel it.
-
-    My bag is heavy on my shoulder — heavier than it has any right to be.
-
-    I walk quickly down the drive, my heels crunching on the gravel.
-
-    I do not look back.
-    """
-
-    $ change_room("forest_road", dissolve)
-
-    if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
+    if nurse_details.threads.is_unlocked('silverware_big'):
 
         """
-        The road stretches ahead, and the bag grows heavier with every step.
+        The air is cold and sharp, but I scarcely feel it.
 
-        I should drop some of the silver. I know that. But I cannot bring myself to part with it.
+        My bag is heavy on my shoulder — heavier than it has any right to be.
 
-        My legs falter beneath the weight — of the bag, of the illness, of everything I have put my body through.
+        I walk quickly down the drive, my heels crunching on the gravel.
+
+        I do not look back.
         """
 
-        play sound woman_cough
-
-        """
-        The cough takes hold, and this time it does not let go.
-
-        I sink to my knees on the wet road, the bag spilling open beside me.
-
-        All that silver, scattered in the mud.
-
-        What a waste.
-        """
-
-        jump nurse_ending_escape_collapse
-
-    """
-    The road stretches ahead, quiet and grey beneath the morning cloud.
-    """
-
-    if nurse_details.threads.is_unlocked('steal_pearls'):
-
-        """
-        But for the first time in a very long while, I am not afraid of what lies at the end of it.
-
-        The silver, the pearls — together, they are worth a good deal more than I dared hope.
-
-        Enough to settle somewhere. Enough to see a proper doctor.
-
-        Enough to hope.
-        """
-
-        jump nurse_ending_escape_rich
-    
     else:
 
         """
-        I run the figures in my head again. The candlesticks, the salver, the spoons.
+        The air is cold and wet, the drive still damp from the night.
 
-        It is something. But not enough. Not nearly enough.
+        I walk quickly, without looking back at the house.
 
-        If only I had taken something else — one more item of real value, and I might have had enough.
+        There will be no prize. There was never going to be one.
 
-        That thought will haunt me, I think.
+        I have understood that for some time now, and yet I stayed.
+
+        The gate at the end of the drive. Eyes on that, and nothing else.
+        """
+
+    $ change_room("forest_road", dissolve)
+
+    if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
+
+        if nurse_details.threads.is_unlocked('silverware_big'):
+
+            """
+            The road stretches ahead, and the bag grows heavier with every step.
+
+            I should drop some of the silver. I know that. But I cannot bring myself to part with it.
+
+            My legs falter beneath the weight — of the bag, of the illness, of everything I have put my body through.
+            """
+
+        else:
+
+            """
+            The road stretches ahead, quiet and grey beneath the morning cloud.
+
+            I keep walking — or I try to.
+
+            My legs feel heavier with every step.
+
+            I should not have pushed myself so hard these past days.
+            """
+
+        play sound woman_cough
+
+        if nurse_details.threads.is_unlocked('silverware_big'):
+
+            """
+            The cough takes hold, and this time it does not let go.
+
+            I sink to my knees on the wet road, the bag spilling open beside me.
+
+            All that silver, scattered in the mud.
+
+            What a waste.
+            """
+
+        else:
+
+            """
+            The cough takes hold, and this time it does not let go.
+
+            I stumble.
+
+            The road swims before my eyes.
+            """
+
+        jump nurse_ending_escape_collapse
+
+    """
+    The road stretches ahead, quiet and grey beneath the morning cloud.
+    """
+
+    if nurse_details.threads.is_unlocked('silverware_big'):
+
+        if nurse_details.threads.is_unlocked('steal_pearls'):
+
+            """
+            But for the first time in a very long while, I am not afraid of what lies at the end of it.
+
+            The silver, the pearls — together, they are worth a good deal more than I dared hope.
+
+            Enough to settle somewhere. Enough to see a proper doctor.
+
+            Enough to hope.
+            """
+
+            jump nurse_ending_escape_rich
+        
+        else:
+
+            """
+            I run the figures in my head again. The candlesticks, the salver, the spoons.
+
+            It is something. But not enough. Not nearly enough.
+
+            If only I had taken something else — one more item of real value, and I might have had enough.
+
+            That thought will haunt me, I think.
+            """
+
+            jump nurse_ending_escape_poor
+
+    else:
+
+        """
+        I keep walking.
+
+        There is nothing behind me worth turning back for.
         """
 
         jump nurse_ending_escape_poor

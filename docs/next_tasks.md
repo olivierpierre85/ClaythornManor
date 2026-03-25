@@ -12,8 +12,6 @@ Or just : Captain, Broken?
 
 CHECK NEW ENDINGs
 
-ENDING WITH MONEY => NEED Pearls, all the shit and ONE cutlery at least? Or just big silverware?
-
 ENDING ESCAPING at night, caught for thievery =>** If you escape at night, you might spot the staff leaving in the car**
 You notice it => Rethink the endings (escape during the night => Not possible to die of exhaution ?) 
 INTUITON UNLOCKED????? help escape? Or better to help unlock captain ? => TO FINISH GAME you need everyone alive?
