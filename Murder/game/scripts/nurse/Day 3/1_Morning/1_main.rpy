@@ -178,7 +178,15 @@ label nurse_day3_morning:
         Somewhere in his bedroom, most likely.
         """
 
-    call nurse_day3_morning_creak
+    """
+    Above me, floorboards creak.
+
+    I go still.
+
+    Then another creak, further along the upper corridor.
+
+    Someone is up, and moving.
+    """
 
     if nurse_details.threads.is_unlocked('silverware_big'):
 
@@ -227,13 +235,7 @@ label nurse_day3_morning:
 
 label nurse_day3_morning_leave:
 
-    """
-    I take my coat from the stand.
-
-    I do not hesitate.
-
-    I open the front door and step outside.
-    """
+    call nurse_day3_morning_leave_house
 
     $ change_room("manor_exterior", dissolve)
 
@@ -295,13 +297,9 @@ label nurse_day3_morning_leave_rich:
     The silver is in my bag, along with everything else I gathered this weekend.
 
     There is nothing left to wait for.
-
-    I take my coat from the stand.
-
-    I do not hesitate.
-
-    I open the front door and step outside.
     """
+
+    call nurse_day3_morning_leave_house
 
     $ change_room("manor_exterior", dissolve)
 
@@ -399,16 +397,14 @@ label nurse_day3_morning_eat_first:
     jump nurse_day3_afternoon
 
 
-label nurse_day3_morning_creak:
+label nurse_day3_morning_leave_house:
 
     """
-    Above me, floorboards creak.
+    I take my coat from the stand.
 
-    I go still.
+    I do not hesitate.
 
-    Then another creak, further along the upper corridor.
-
-    Someone is up, and moving.
+    I open the front door and step outside.
     """
 
     return
