@@ -120,23 +120,13 @@ label nurse_day3_morning:
     I pick it up.
 
     It is small and well-worn, with the heft of something often used.
+
+    I turn it over.
     """
 
-    if nurse_details.threads.is_unlocked('silverware_big'):
+    if nurse_details.threads.is_unlocked('master_key'):
 
         """
-        I turn it over.
-
-        A master key, by the look of it.
-
-        I set it back down.
-        """
-
-    elif nurse_details.threads.is_unlocked('master_key'):
-
-        """
-        I turn it over.
-
         Another master key.
 
         I already hold one, I have no need for a second.
@@ -146,36 +136,16 @@ label nurse_day3_morning:
         I set it back down.
         """
 
-    elif nurse_details.saved_variables.get('visited_attic_butler_room', False):
-
-        """
-        I turn it over.
-
-        A master key, by the look of it — the kind a head of household staff would carry.
-
-        I think of the reinforced cabinet in the butler's room.
-
-        The silver gleaming behind the glass.
-
-        I could not get at it before.
-
-        I rather think I could now.
-        """
-
     else:
 
         """
-        I turn it over.
+        A master key, by the look of it — the kind a head of household staff would carry.
 
-        It has the look of a household master key — well-used, heavier than it appears.
+        The sort that opens every room in the house.
+        
+        If there was a door that resisted me before, I might be able to open it now.
 
-        The sort that opens every room in a house this size.
-
-        A butler of this standing would keep his own cabinet somewhere.
-
-        Most of them do.
-
-        Somewhere in his bedroom, most likely.
+        I slip the key into my coat pocket.
         """
 
     """
@@ -186,43 +156,18 @@ label nurse_day3_morning:
     Then another creak, further along the upper corridor.
 
     Someone is up, and moving.
-    """
 
-    """
     And they will be coming downstairs before long.
-    """
 
-    if nurse_details.threads.is_unlocked('silverware_big'):
-
-        jump nurse_day3_morning_leave
-
-    if not nurse_details.threads.is_unlocked('master_key'):
-
-        """
-        I slip the key into my coat pocket.
-
-        Yet I am not certain it is wise to use it.
-        """
-
-    else:
-
-        """
-        Yet the question remains — do I make one last attempt before I leave?
-        """
-
-    """
     I cannot afford to be found standing here.
 
     Every moment I remain is a risk.
-
-    Perhaps the wisest course is simply to go.
     """
 
     $ time_left = 1
     call run_menu(TimedMenu("nurse_day3_morning_choice", [
         TimedMenuChoice("Leave now, while there is still time{{intuition}}", 'nurse_day3_morning_leave', early_exit=True, condition="nurse_details.endings.is_unlocked('escape_at_night')"),
-        TimedMenuChoice("I need to eat something before leaving", 'nurse_day3_morning_eat_first', early_exit=True),
-        TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True),
+        TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True, condition="nurse_details.thread.is_unlocked('silverware_big')"),
     ]))
 
 
@@ -231,17 +176,23 @@ label nurse_day3_morning:
 
 label nurse_day3_morning_leave:
 
-    if nurse_details.threads.is_unlocked('silverware_big'):
+    # if nurse_details.threads.is_unlocked('silverware_big'):
 
-        """
-        I have already taken what I came for.
+    #     """
+    #     I have already taken what I came for.
 
-        The silver is in my bag, along with everything else I gathered this weekend.
+    #     The silver is in my bag, along with everything else I gathered this weekend.
 
-        There is nothing left to wait for.
-        """
+    #     There is nothing left to wait for.
+    #     """
 
-    call nurse_day3_morning_leave_house
+    """
+    I take my coat from the stand.
+
+    I do not hesitate.
+
+    I open the front door and step outside.
+    """
 
     $ change_room("manor_exterior", dissolve)
 
@@ -391,16 +342,3 @@ label nurse_day3_morning_eat_first:
     """
 
     jump nurse_day3_afternoon
-
-
-label nurse_day3_morning_leave_house:
-
-    """
-    I take my coat from the stand.
-
-    I do not hesitate.
-
-    I open the front door and step outside.
-    """
-
-    return

@@ -16,8 +16,11 @@ ENDING ESCAPING at night, caught for thievery =>** If you escape at night, you m
 You notice it => Rethink the endings (escape during the night => Not possible to die of exhaution ?) 
 INTUITON UNLOCKED????? help escape? Or better to help unlock captain ? => TO FINISH GAME you need everyone alive?
 
+NEED THE INTUITION TO UNLOCK => There is something wrong with the staff when talking with captain =>
+Ask the captain to look ito it? But how? Wait in the billiard room to check what happens? Then they witness the staff leaving?
+HOw does this unlock captain? Double check captain unlocking
 
-=> Then to die of exhaution, you need 2/3 exhaution unlock => add one during the hunt ? NO it's ok JUST INSIST, every little extra effort this weekend might have pushed you over the edge. Be careful
+=> Then to die of exhaution NO it's ok JUST INSIST, every little extra effort this weekend might have pushed you over the edge. Be careful
 
 
 
@@ -26,7 +29,6 @@ INTUITON UNLOCKED????? help escape? Or better to help unlock captain ? => TO FIN
   - [ ] Friday evening
   - [ ] Saturday Morning
   - [ ] Saturday Hunt
-  - [ ] --
   - [ ] Sat evening
   - [ ] Sun mornning
   - [ ] Sun ENDING

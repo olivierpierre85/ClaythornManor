@@ -36,7 +36,7 @@ label init_captain:
             CharacterInformation(30, "mansion", "running of a large mansion", is_important = True),
             CharacterInformation(30, "table", "proper table manners", is_important = True),
             CharacterInformation(30, "family", "noble lineage ensured he received an education far superior to most", is_important = True), # TODO unlock somewhere, ? In captain walkthroug?            
-            CharacterInformation(60, "lie", "they do not really include the fighting he claims to have participated in. As an administrative officer, he most likely spent most of his time behind desks", is_important = True),
+            CharacterInformation(60, "lie", "they do not really include the fighting he claims to have participated in. As an administrative officer, he spent most of his time behind desks", is_important = True),
             ], captain_name
         )
 
@@ -45,7 +45,7 @@ label init_captain:
         # He cannot resist being at the centre of attention, so he tend to monopolize the conversation, usually by telling tales of his exploits in one of the several wars he fought in. Whether it was Burma, China, or during the Great War.
         # Born in India 54 years ago, he now resides London. 
         # Although he came from a region often looked down upon by the British, his noble lineage ensured he received an education far superior to most. That also means that the running of a large mansion and proper table manners have no secrets for him.
-        # Invited to the manor for his impressive military career, it turns out they do not really include the fighting he claims to have participated in. As an administrative officer, he most likely spent most of his time behind desks.
+        # Invited to the manor for his impressive military career, it turns out they do not really include the fighting he claims to have participated in. As an administrative officer, he spent most of his time behind desks.
         # """
 
         captain_description = """
