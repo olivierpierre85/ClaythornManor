@@ -140,6 +140,28 @@ label nurse_day2_evening_steal_caught:
     Concealed beneath her garments.
     """
 
+    if nurse_details.threads.is_unlocked('steal_pearls'):
+
+        """
+        He reaches into the cloth once more and produces a string of pearls, which he sets down beside the cutlery.
+        """
+
+        butler """
+        And these, my lady.
+        """
+
+        host """
+        My pearls!
+
+        Good heavens, those are my pearls!
+
+        I was planning to wear them this very evening!
+        """
+
+        """
+        Lady Claythorn's composure cracks, if only for a moment, before she steadies herself again.
+        """
+
     """
     The room falls utterly silent.
 
