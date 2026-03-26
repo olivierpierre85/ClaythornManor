@@ -10,21 +10,20 @@ Or just : Captain, Broken?
 
 ## Write nurseStory : Full
 
-CHECK NEW ENDINGs
+Finish billiard room
+- Suspicious not great
+- STILL not sure about the intuition
 
-BILLIARD ROOM STILL NOT GOOD ENOUGH
-- Questions his war stories : IF ZANZIBAR AND remember_doctor (he knows)
-  - I have heard you talk =>>> INCLUDE ask about rank
+Retest leaving endings
+- What about INTUITION there? What are intuitions for? For reveal characters => CHECK????
+
+FUCK MUST REWRITE THE PSYCHIC pov => where captain shot a gun without showing fear (show that he felt force to do so, and that fighting a woman is easier than a man)
 
 - [ ] RETRY EVERYTHING - ADD TESTSTSSSSS
 
   - [ ] Sat evening
     - [ ] BUGGGGG TWO COUGH story WHEN DEAD => Fucking claude doubling everything (OR JUST when already exhausted)=> Move to your room first before you dead
-  - [ ] Sun mornning
-  - [ ] Sun ENDING
-- [ ] Nurse Path: More info for poisoned ending (Strychnine).
-- [ ] Gun room has a Menu choice Day 3.
-- [ ] Rethink unlocking FULLY
+  - [ ] Sunday TODO TEST
 
 
 ## Proofreading

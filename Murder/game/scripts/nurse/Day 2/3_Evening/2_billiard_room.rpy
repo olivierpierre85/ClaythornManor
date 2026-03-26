@@ -63,30 +63,8 @@ label nurse_day2_evening_billiard_room_captain_intro:
 
     nurse """
     Not quite yet.
-    """
 
-    captain """
-    Nor am I.
-
-    Help yourself to something, if you wish.
-    """
-
-    """
-    I decline with a small shake of my head.
-
-    He carries his glass to the chairs by the fire.
-
-    After a moment, I follow him.
-    """
-
-    captain """
-    You look as though something is troubling you, Miss Marsh.
-    """
-
-    nurse """
-    I confess it is.
-
-    There are things about this weekend that I cannot quite account for.
+    There are a few things about this weekend that don't make sense to me.
     """
 
     captain """
@@ -95,59 +73,32 @@ label nurse_day2_evening_billiard_room_captain_intro:
     Such as?
     """
 
-    nurse """
-    I am not certain how I can put it into words.
-
-    But I cannot help feeling that something here is wrong.
-    """
-
-    """
-    He watches me for a moment, then nods, once.
-    """
-
-    captain """
-    Very well, Miss Marsh. Say what is on your mind.
-    """
-
-
     $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu(
         "nurse_day2_evening_billiard_room_captain_menu", [
 
         TimedMenuChoice(
-            'Ask about Mr Manning',
-            'nurse_day2_evening_billiard_room_manning', 20),
+            'Talk about the deaths of Thomas Moody and Daniel Baldwin',
+            'nurse_day2_evening_billiard_room_manning', 10),
 
         TimedMenuChoice(
-            'Something is not right about the staff{{observation}}',
-            'nurse_day2_evening_billiard_room_staff', 20,
+            "Reveal the staff other occupations{{observation}}",
+            'nurse_day2_evening_billiard_room_staff', 10,
             condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_actor')",
             linked_choice="nurse_day2_evening_billiard_room_confront"),
 
         TimedMenuChoice(
-            'I was at the Boxer Rebellion too{{observation}}',
-            'nurse_day2_evening_billiard_room_boxer', 20,
-            condition="nurse_details.threads.is_unlocked('remember_doctor')",
-            linked_choice="nurse_day2_evening_billiard_room_boxer_2"),
+            'Tell him you were at the Boxer Rebellion too{{observation}}',
+            'nurse_day2_evening_billiard_room_boxer', 10,
+            condition="nurse_details.threads.is_unlocked('remember_doctor')"),
 
         TimedMenuChoice(
-            'About your rank at the Boxer Rebellion{{observation}}',
-            'nurse_day2_evening_billiard_room_boxer_2', 20,
-            condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')",
-            linked_choice="nurse_day2_evening_billiard_room_zanzibar"),
+            'Confront him about the "inconsistencies" in his stories{{observation}}',
+            'nurse_day2_evening_billiard_room_war_stories', 10,
+            condition="nurse_details.threads.is_unlocked('captain_lie_zanzibar') and nurse_details.threads.is_unlocked('remember_doctor')"),
 
         TimedMenuChoice(
-            'About the Zanzibar War{{observation}}',
-            'nurse_day2_evening_billiard_room_zanzibar', 20,
-            condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_zanzibar') and nurse_details.threads.is_unlocked('captain_lie_zanzibar') and not nurse_details.threads.is_unlocked('captain_lie_boxer')"),
-
-        TimedMenuChoice(
-            'Your war stories, Captain{{observation}}',
-            'nurse_day2_evening_billiard_room_lies', 20,
-            condition="nurse_details.threads.is_unlocked('captain_lie_boxer') or nurse_details.threads.is_unlocked('captain_lie_zanzibar')"),
-
-        TimedMenuChoice(
-            'We need to confront the butler{{observation}}{{intuition}}',
-            'nurse_day2_evening_billiard_room_confront', 20,
+            'Show him the loaded gun you found{{observation}} ',
+            'nurse_day2_evening_billiard_room_confront', 10,
             condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront') and nurse_details.saved_variables['captain_boxer_discussed'] and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')",
             early_exit=True),
 
@@ -164,23 +115,95 @@ label nurse_day2_evening_billiard_room_captain_intro:
 
 label nurse_day2_evening_billiard_room_suspicions:
 
-    # TODO if no var has been set
-    nurse """
-    Exactly.
+    if nurse_details.saved_variables["captain_boxer_discussed"] and nurse_details.saved_variables["captain_staff_discussed"]:
 
-    That is proof that something is very wrong here.
-    """
+        nurse """
+        Two actors employed as servants. Three of us at the same war. And a soldier whose stories do not hold up.
 
-    captain """
-    I wouldn't say proof, not yet.
+        There are too many things wrong in this house, Captain.
+        """
 
-    You'll need more to convince me that something is very wrong here.
-    """
+        captain """
+        I am inclined to agree.
 
-    #     NEXT add a label at the end of path A, B, and C, the label will give a different text based on how many path have been completed:
-    # 0 : I'll need more that to convince him
-    # 1 : He looked suspicious enough, but i'll need a small push to decide him
-    # 2 : "You are are right, that is too suspicious" .... I wish but I need to have ...
+        Whatever is happening here, we should tread very carefully.
+        """
+        
+        # captain """
+        # But to be sure, we should check if there is something strange with the only other person on staff I have seen this weekend.
+        # """
+
+        # nurse """
+        # You mean the butler.
+        # """
+
+        # captain """
+        # Precisely.
+
+        # If we could find that he too is not a career servant, that would confirm our suspicions, and we could confront Lady Claythorn about it.
+        # """
+
+        # nurse """
+        # Good idea, but how could we make him confess?
+        # """
+
+        # captain """
+        # That's a good question.
+
+        # We cannot simply march up to the man and demand an explanation.
+
+        # If there is something amiss, he is not going to confess over a polite enquiry.
+        # """
+
+        # nurse """
+        # Then perhaps we should try a less polite one.
+        # """
+
+        # """
+        # He looks at me sharply.
+        # """
+
+        captain """
+        That would be unwise.
+
+        And more than a little dangerous.
+
+        Besides, if you want a man like that to talk, you would need to properly frighten him.
+
+        And I do not have anything that would do the trick.
+
+        At least not here with me.
+
+        So it's better not to think of it.
+        """
+
+        nurse """
+        What would you need?
+        """
+
+        captain """
+        Well, I don't like talking about those things with a lady.
+
+        But if you must know, a gun can get a confession from about any man.
+
+        I mean at least if it is loaded, that way you can enforce that you are serious about the matter.
+
+        Without that, I wouldn't even try.
+        """
+
+    else:
+
+        nurse """
+        Exactly.
+
+        That is proof that something is very wrong here.
+        """
+
+        captain """
+        I wouldn't say proof, not yet.
+
+        You will need more than that to convince me.
+        """
 
     return
 
@@ -188,9 +211,7 @@ label nurse_day2_evening_billiard_room_suspicions:
 label nurse_day2_evening_billiard_room_staff:
 
     nurse """
-    The staff here.
-
-    Have you taken much notice of them, Captain?
+    I believe that something strange is going on with the staff.
     """
 
     captain """
@@ -206,9 +227,9 @@ label nurse_day2_evening_billiard_room_staff:
 
     I have seen her before. Not here.
 
-    In London, in a play at the theatre.
+    In London, at the theater, playing a role.
 
-    She is dressed differently of course, but I am certain that it is her.
+    I can't quite remember the name of the play, but I am certain that it is her.
     """
 
     captain """
@@ -220,7 +241,7 @@ label nurse_day2_evening_billiard_room_staff:
 
     And that is not all.
 
-    The footman. I have seen him on stage as well.
+    The footman. I have seen him in a play as well.
 
     A different production, but I am quite sure of it.
     """
@@ -253,81 +274,230 @@ label nurse_day2_evening_billiard_room_staff:
     But here, very unlikely.
     """
 
+    $ nurse_details.saved_variables["captain_staff_discussed"] = True
+
     call nurse_day2_evening_billiard_room_suspicions
 
-    # captain """
-    # But to be sure, we should check if there is something strange with the only other person on staff I have seen this weekend.
-    # """
+    return
 
-    # nurse """
-    # You mean the butler.
-    # """
+# Second suspicious stuff
+label nurse_day2_evening_billiard_room_boxer:
 
-    # captain """
-    # Precisely.
+    nurse """
+    Yesterday you told a story about the Boxer Rebellion.
+    """
 
-    # If we could find that he too is not a career servant, that would confirm our suspicions, and we could confront Lady Claythorn about it.
-    # """
+    captain """
+    Yes, I might have. What of it?
+    """
 
-    # nurse """
-    # Good idea, but how could we make him confess?
-    # """
+    nurse """
+    I was there too, you know.
 
-    # captain """
-    # That's a good question.
+    As a nurse, attached to the field hospital at Tientsin before the column set out for Peking.
+    """
 
-    # We cannot simply march up to the man and demand an explanation.
+    """
+    He pauses.
 
-    # If there is something amiss, he is not going to confess over a polite enquiry.
-    # """
+    This surprises him.
+    """
 
-    # nurse """
-    # Then perhaps we should try a less polite one.
-    # """
+    captain """
+    Were you indeed?
 
-    # """
-    # He looks at me sharply.
-    # """
+    That is a remarkable coincidence.
+    """
 
-    # captain """
-    # That would be unwise.
+    nurse """
+    There is more.
 
-    # And more than a little dangerous.
+    Daniel Baldwin was there too.
 
-    # Besides, if you want a man like that to talk, you would need to properly frighten him.
+    He was a young doctor at the time — I am almost certain of it.
 
-    # And I do not have anything that would do the trick.
+    When you spoke of your campaign on Friday evening, it all came back to me.
+    """
 
-    # At least not here with me.
+    """
+    He is quiet for a moment.
+    """
 
-    # So it's better not to think of it.
-    # """
+    captain """
+    Baldwin.
 
-    # """
-    # He turns back to the fire, signalling the matter closed.
+    Yes.
 
-    # But something in his voice tells me he is more unsettled than he lets on.
-    # """
+    I might remember a doctor by that name.
+
+    But I never made the connection. It is not as though we were in the same circles.
+
+    This is very strange.
+    """
+
+    nurse """
+    I have been wondering if anyone else here might have been present.
+
+    Thomas Moody, perhaps?
+    """
+
+    captain """
+    Moody.
+
+    It is not impossible, I suppose.
+
+    Though I could not say with any certainty.
+
+    It would be difficult to recognise him with his mask on.
+    """
+
+    nurse """
+    What about Ted Harring?
+    """
+
+    captain """
+    No.
+
+    Far too young.
+
+    He would have been a boy.
+    """
+
+    nurse """
+    Lady Claythorn? Samuel Manning? Mrs Baxter?
+    """
+
+    captain """
+    I honestly do not remember.
+
+    It was a long time ago, and there were a great many people passing through those camps.
+
+    I would not stake much on absence of memory.
+    """
+
+    """
+    He sets down his glass.
+    """
+
+    captain """
+    Three guests at this table who were all in China at the same time.
+
+    It is strange, I grant you that.
+
+    But it is not completely impossible.
+
+    And with the terrible things that happened this weekend, I will concede that something is not quite right.
+
+    I shall be on my guard from now on, and I suggest you do the same.
+    """
+
+    $ nurse_details.threads.unlock('boxer_rebellion_1')
+    $ nurse_details.saved_variables["captain_boxer_discussed"] = True
 
     return
 
 
-# Z - Confront the butler (linked from A, requires B + gun + bullets)
-label nurse_day2_evening_billiard_room_confront:
+# Questions his war stories (merged: rank + zanzibar + lies)
+label nurse_day2_evening_billiard_room_war_stories:
 
     nurse """
-    Captain, about the butler.
+    Captain, I have heard you talk a great deal about your campaigns.
+
+    And there are details that trouble me.
     """
 
     captain """
-    Miss Marsh, I thought we had settled that matter.
+    Really, which details?
     """
 
     nurse """
-    If we need something to frighten him.
+    Well first, I can tell you with some confidence that Indian officers did not hold the rank of captain at the time of the Boxer Rebellion.
 
-    I think I found it.
+    Not then. And it still must be very rare today.
     """
+
+    """
+    A stillness settles over him.
+    """
+
+    captain """
+    You are not wrong.
+
+    I was not officially a captain.
+
+    I was the higher rank allowed for a non white officer: ## TODO find equivalent of lower rank
+
+    The law at the time made quite sure that — no matters one's ability — a coloured man could never give order to a white man.
+
+    But explaining all that in polite company is tedious, and tends to sour the mood, that is why I omitted it.
+
+    But the rest of my account is true.
+    """
+
+    nurse """
+    Is it?
+
+    Because I have also looked into the Anglo-Zanzibar War.
+
+    The entire engagement lasted less than an hour. British naval artillery. No real resistance to speak of.
+
+    The fighting you described does not quite correspond to the historical record.
+    """
+
+    """
+    He does not flinch.
+
+    If anything, he straightens slightly.
+    """
+
+    captain """
+    I was there, Miss Marsh.
+
+    And I was wounded.
+    """
+
+    nurse """
+    Wounded.
+
+    In an engagement that lasted forty-five minutes.
+
+    With only one man lightly injured on the British side.
+    """
+
+    """
+    He is quiet for a moment.
+
+    Then he sets down his glass.
+    """
+
+    captain """
+    Well my injuries were maybe so minor that they weren't reported.
+
+    War is a messy business, not everything that happened can be recorded in history books.
+
+    And the war was very short of course.
+
+    I might have embelished it's retelling.
+
+    But It's just that i like to tell good stories.
+
+    Every good storyteller does it Miss Marsh
+    """
+
+    """
+    He smiles.
+
+    That is true that he could just have exagareted some facts, but I am not entirely convinced.
+    """
+
+    $ captain_details.description_hidden.unlock('embellishment')
+
+    return
+
+
+
+# Z - Confront the butler (linked from A, requires B + gun + bullets)
+label nurse_day2_evening_billiard_room_confront:
 
     """
     I reach into my coat and produce the revolver.
@@ -339,8 +509,6 @@ label nurse_day2_evening_billiard_room_confront:
     Two people are dead, Captain. The staff are impostors. Three of us were at the very same war twenty-four years ago.
 
     Something is very wrong in this house.
-
-    And the butler is the one thread that ties it all together.
 
     You are a military man. You have fought in wars.
 
@@ -528,398 +696,42 @@ label nurse_day2_evening_billiard_room_confront:
     return
 
 
-# Second suspicious stuff
-label nurse_day2_evening_billiard_room_boxer:
-
-    nurse """
-    Yesterday you told a story about the Boxer Rebellion.
-    """
-
-    captain """
-    Yes, I might have. What of it?
-    """
-
-    nurse """
-    I was there too, you know.
-
-    As a nurse, attached to the field hospital at Tientsin before the column set out for Peking.
-    """
-
-    """
-    He pauses.
-
-    This surprises him.
-    """
-
-    captain """
-    Were you indeed?
-
-    That is a remarkable coincidence.
-    """
-
-    nurse """
-    There is more.
-
-    Daniel Baldwin was there too.
-
-    He was a young doctor at the time — I am almost certain of it.
-
-    When you spoke of your campaign on Friday evening, it all came back to me.
-    """
-
-    """
-    He is quiet for a moment.
-    """
-
-    captain """
-    Baldwin.
-
-    Yes.
-
-    I might remember a doctor by that name.
-
-    But I never made the connection. It is not as though we were in the same circles.
-
-    This is very strange.
-    """
-
-    nurse """
-    I have been wondering if anyone else here might have been present.
-
-    Thomas Moody, perhaps?
-    """
-
-    captain """
-    Moody.
-
-    It is not impossible, I suppose.
-
-    Though I could not say with any certainty.
-
-    It would be difficult to recognise him with his mask on.
-    """
-
-    nurse """
-    What about Ted Harring?
-    """
-
-    captain """
-    No.
-
-    Far too young.
-
-    He would have been a boy.
-    """
-
-    nurse """
-    Lady Claythorn? Samuel Manning? Mrs Baxter?
-    """
-
-    captain """
-    I honestly do not remember.
-
-    It was a long time ago, and there were a great many people passing through those camps.
-
-    I would not stake much on absence of memory.
-    """
-
-    """
-    He sets down his glass.
-    """
-
-    captain """
-    Three guests at this table who were all in China at the same time.
-
-    It is strange, I grant you that.
-
-    But it is not completely impossible.
-
-    And with the terrible things that happened this weekend, I will concede that something is not quite right.
-
-    I shall be on my guard from now on, and I suggest you do the same.
-    """
-
-    $ nurse_details.threads.unlock('boxer_rebellion_1')
-    $ nurse_details.saved_variables["captain_boxer_discussed"] = True
-
-    return
-
-
-# B chain - Rank at the Boxer Rebellion
-label nurse_day2_evening_billiard_room_boxer_2:
-
-    nurse """
-    There is something I have been meaning to raise with you, Captain.
-
-    About your rank at the time of the Boxer Rebellion.
-    """
-
-    """
-    A stillness settles over him.
-    """
-
-    captain """
-    Go on.
-    """
-
-    nurse """
-    I was there, as I said.
-
-    And I can tell you with some confidence that Indian officers did not hold the rank of captain at that time.
-
-    Not officially.
-
-    I would have known.
-    """
-
-    """
-    He does not flinch.
-
-    But he does not answer immediately either.
-    """
-
-    captain """
-    You are not wrong.
-
-    I was never officially a captain.
-
-    The law at the time made quite sure of that — whatever one's ability, whatever one's service, whatever one's devotion to the Crown.
-
-    I earned that rank. I was denied it.
-
-    So yes, I took it for myself.
-
-    The rest of my account is true.
-    """
-
-    """
-    He meets my eyes.
-
-    There is no shame in it — or if there is, he has long since made his peace with it.
-    """
-
-    nurse """
-    I see.
-    """
-
-    """
-    A lie, even a comprehensible one, is still a lie.
-
-    But I say nothing more.
-
-    Not yet.
-    """
-
-    $ nurse_details.threads.unlock('boxer_rebellion_2')
-
-    return
-
-
-# B chain - Zanzibar War
-label nurse_day2_evening_billiard_room_zanzibar:
-
-    nurse """
-    You spoke of the Anglo-Zanzibar War on Friday.
-
-    Dangerous fighting.
-
-    Wounds earned in the press of battle.
-    """
-
-    captain """
-    What of it?
-    """
-
-    nurse """
-    I have since looked it up.
-
-    The entire engagement lasted less than an hour.
-
-    British naval artillery. No real resistance to speak of.
-
-    The fighting you described does not quite correspond to the historical record.
-    """
-
-    """
-    He does not flinch.
-
-    If anything, he straightens slightly.
-    """
-
-    captain """
-    No, perhaps it does not.
-
-    But I was there, Miss Marsh.
-
-    And I was wounded.
-    """
-
-    nurse """
-    Wounded.
-
-    In an engagement that lasted forty-five minutes.
-    """
-
-    captain """
-    I admit, the bombardment was brief, yes.
-
-    But there was real exchange of fire.
-
-    I may well have been one of the only men on that shore to sustain a serious injury that day.
-
-    Perhaps the only one.
-    """
-
-    """
-    He is not confessing.
-
-    He is retreating into a smaller, more defensible position — and doing it with some composure.
-    """
-
-    nurse """
-    And the rank?
-
-    The command?
-    """
-
-    captain """
-    I have already spoken to you about that.
-
-    What more is there to add?
-    """
-
-    """
-    He turns back towards the fire.
-
-    The conversation, in his estimation, is over.
-
-    But something he said lingers.
-
-    I have no proof. Only suspicion.
-
-    And suspicion alone is not enough.
-    """
-
-    return
-
-
-# C - Captain's embellished stories (independent)
-label nurse_day2_evening_billiard_room_lies:
-
-    nurse """
-    Captain, may I speak frankly?
-    """
-
-    captain """
-    You have been doing so all evening, Miss Marsh.
-
-    I see no reason to stop now.
-    """
-
-    nurse """
-    Your war stories.
-
-    Some of the details do not quite hold up to scrutiny.
-    """
-
-    """
-    He does not flinch.
-
-    But something shifts behind his eyes.
-    """
-
-    captain """
-    In what way?
-    """
-
-    nurse """
-    Small things.
-
-    Dates that do not quite align. Details that seem enhanced.
-
-    I was a nurse in the field, Captain. I know what a real campaign looks like.
-    """
-
-    """
-    He is quiet for a moment.
-
-    Then he sets down his glass.
-    """
-
-    captain """
-    You are not entirely wrong.
-
-    I may have polished certain details over the years.
-
-    A soldier's prerogative, Miss Marsh.
-
-    Every old campaigner does it.
-
-    The stories grow in the telling. It is hardly a crime.
-    """
-
-    nurse """
-    So you admit it.
-    """
-
-    captain """
-    I admit to being human.
-
-    Show me a man who has not improved upon his own history, and I will show you a man with no history worth telling.
-    """
-
-    """
-    He smiles, but it does not quite reach his eyes.
-
-    He has retreated to safe ground — the harmless embellisher, the old soldier with a flair for storytelling.
-
-    It is a convincing performance.
-
-    But I am not entirely convinced.
-    """
-
-    $ captain_details.description_hidden.unlock('embellishment')
-
-    return
-
-
-# D - Manning
 label nurse_day2_evening_billiard_room_manning:
 
     nurse """
-    Captain, I have been thinking about this afternoon.
+    We've witness two deaths in as many days.
 
-    About what happened to Doctor Baldwin.
+    Doesn't it seem strange to you?
     """
 
     captain """
+    Not really.
+
+    They seem pretty natural to me Ms Marsh.
+
+    Thomas Moody died of injuries he got during the war.
+
+    Even if you thought he was fine, he might have been suffering in silence.
+
+    Some people prefer to hide their distress to the people around them.
+    """
+
+    """
+    Well, I can't really argue against that.
+    """
+
+    nurse """
+    But for Doctor Baldwin?
+    """
+
+    """
     A dreadful accident, Miss Marsh.
 
     Manning was drunk and careless with a firearm.
 
-    A tragic combination.
-    """
-
-    nurse """
-    You sound very certain.
-
-    Yet, this is not the only "accident" that happened this weekend.
-
-    Could something else be at play here?
-    """
-
-    captain """
-    I don't think so.
-
     Sadly, this type of accident is not rare at all.
 
     A hunt is still a dangerous business.
-
-    And for Thomas Moody, we all saw his injuries.
-
-    That probably meant he was very weakened.
-
-    His death would have happened anywhere.
     """
 
     nurse """
@@ -993,7 +805,6 @@ label nurse_day2_evening_billiard_room_manning:
         nurse """
         Good.
         """
-
 
     return
 
