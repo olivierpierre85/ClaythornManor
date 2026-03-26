@@ -45,11 +45,7 @@ label nurse_day3_morning:
 
         I have been pushing myself too hard.
 
-        I knew it, and I did it regardless.
-
-        That will not do. Not today.
-
-        Today, of all mornings, I need to think clearly.
+        Hopefully, I can still hold on until the end of the day.
         """
 
     else:
@@ -129,7 +125,7 @@ label nurse_day3_morning:
         """
         Another master key.
 
-        I already hold one, I have no need for a second.
+        I already hold one. I have no need for a second.
 
         Though I wonder why this one was left here so openly.
 
@@ -141,10 +137,30 @@ label nurse_day3_morning:
         """
         A master key, by the look of it — the kind a head of household staff would carry.
 
-        The sort that opens every room in the house.
-        
-        If there was a door that resisted me before, I might be able to open it now.
+        The sort that opens every door in the house.
+        """
 
+        if nurse_details.saved_variables['visited_attic_butler_room']:
+
+            """
+            My mind goes directly to the butler's room — that reinforced cabinet.
+
+            A lock like that does not guard trinkets.
+
+            This key might be exactly what I need.
+            """
+
+        else:
+
+            """
+            Normally, I would not need such a key. I can open most anything with a hairpin and patience.
+
+            But a butler keeps a household's valuables under proper lock and key — the sort that resists my usual methods.
+
+            His room would be worth a visit.
+            """
+        
+        """
         I slip the key into my coat pocket.
         """
 
@@ -164,11 +180,25 @@ label nurse_day3_morning:
     Every moment I remain is a risk.
     """
 
-    $ time_left = 1
-    call run_menu(TimedMenu("nurse_day3_morning_choice", [
-        TimedMenuChoice("Leave now, while there is still time{{intuition}}", 'nurse_day3_morning_leave', early_exit=True, condition="nurse_details.endings.is_unlocked('escape_at_night')"),
-        TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True, condition="nurse_details.threads.is_unlocked('silverware_big')"),
-    ]))
+    if nurse_details.threads.is_unlocked('silverware_big'):
+
+        """
+        I have already taken what I came for.
+
+        The silver is in my bag, along with everything else I gathered this weekend.
+
+        There is nothing left to wait for.
+        """
+        
+        call nurse_day3_morning_leave
+
+    else:
+
+        $ time_left = 1
+        call run_menu(TimedMenu("nurse_day3_morning_choice", [
+            TimedMenuChoice("Leave now, while there is still time", 'nurse_day3_morning_leave', early_exit=True),
+            TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True),
+        ]))
 
 
     return
@@ -176,15 +206,6 @@ label nurse_day3_morning:
 
 label nurse_day3_morning_leave:
 
-    # if nurse_details.threads.is_unlocked('silverware_big'):
-
-    #     """
-    #     I have already taken what I came for.
-
-    #     The silver is in my bag, along with everything else I gathered this weekend.
-
-    #     There is nothing left to wait for.
-    #     """
 
     """
     I take my coat from the stand.
@@ -217,7 +238,7 @@ label nurse_day3_morning_leave:
 
         There will be no prize. There was never going to be one.
 
-        I have understood that for some time now, and yet I stayed.
+        I have understood that for some time now, and yet I stay.
 
         The gate at the end of the drive. Eyes on that, and nothing else.
         """
@@ -280,33 +301,34 @@ label nurse_day3_morning_leave:
 
     if nurse_details.threads.is_unlocked('silverware_big'):
 
-        if nurse_details.threads.is_unlocked('steal_pearls'):
+        # No need for pearls now, too complicated
+        # if nurse_details.threads.is_unlocked('steal_pearls'):
 
-            """
-            But for the first time in a very long while, I am not afraid of what lies at the end of it.
+        """
+        But for the first time in a very long while, I am not afraid of what lies at the end of it.
 
-            The silver, the pearls — together, they are worth a good deal more than I dared hope.
+        The silver, the pearls — together, they are worth a good deal more than I dared hope.
 
-            Enough to settle somewhere. Enough to see a proper doctor.
+        Enough to settle somewhere. Enough to see a proper doctor.
 
-            Enough to hope.
-            """
+        Enough to hope.
+        """
 
-            jump nurse_ending_escape_rich
+        jump nurse_ending_escape_rich
         
-        else:
+        # else:
 
-            """
-            I run the figures in my head again. The candlesticks, the salver, the spoons.
+        #     """
+        #     I run the figures in my head again. The candlesticks, the salver, the spoons.
 
-            It is something. But not enough. Not nearly enough.
+        #     It is something. But not enough. Not nearly enough.
 
-            If only I had taken something else — one more item of real value, and I might have had enough.
+        #     If only I had taken something else — one more item of real value, and I might have had enough.
 
-            That thought will haunt me, I think.
-            """
+        #     That thought will haunt me, I think.
+        #     """
 
-            jump nurse_ending_escape_poor
+        #     jump nurse_ending_escape_poor
 
     else:
 
@@ -317,28 +339,3 @@ label nurse_day3_morning_leave:
         """
 
         jump nurse_ending_escape_poor
-
-
-label nurse_day3_morning_eat_first:
-
-    """
-    I cannot walk to the village on an empty stomach.
-
-    Not in my condition.
-
-    I shall wait until the others have come down and take what breakfast I can.
-
-    Then I leave.
-    """
-
-    $ change_room("bedroom_nurse", dissolve)
-
-    """
-    I return to my room and sit on the edge of the bed, listening to the house stir beneath me.
-
-    Footsteps on the landing. Doors opening and closing.
-
-    I count the minutes.
-    """
-
-    jump nurse_day3_afternoon

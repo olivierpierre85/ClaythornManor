@@ -450,14 +450,10 @@ label nurse_day2_evening_billiard_room_confront_butler:
 
     But don't have that strength in me.
 
-    I was ready when I taught the captain would help.
+    I was ready when I thought the captain would help.
 
     But now it feels to dangerous.
     """
-
-
-
-
 
     return
 

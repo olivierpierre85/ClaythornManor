@@ -1,0 +1,97 @@
+{
+  "tester_id": "admin",
+  "timestamp": "2026-03-26T11:11:30.091965",
+  "unlocked_threads": [
+    "day1_exhaustion",
+    "remember_doctor",
+    "captain_lie_zanzibar",
+    "captain_lie_boxer",
+    "spotted_by_psychic",
+    "footman_actor",
+    "maid_actress",
+    "steal_cutlery_1",
+    "steal_cutlery_2",
+    "take_gun",
+    "find_bullets"
+  ],
+  "choices": [
+    {
+      "menu": "nurse_day2_evening",
+      "character_choice": "nurse",
+      "timestamp": "2026-03-26T11:09:59.863813"
+    },
+    {
+      "menu": "nurse_day2_evening_dinner",
+      "other_choices": [
+        "Speak to Lady Claythorn",
+        "Say nothing, eat your dinner"
+      ],
+      "selected": "Say nothing, eat your dinner",
+      "redirect": "generic_cancel",
+      "time_left": 90,
+      "timestamp": "2026-03-26T11:11:10.069593",
+      "time_to_decide": 4.441165,
+      "time_since_last": 70.20578
+    },
+    {
+      "menu": "nurse_day2_evening_steal",
+      "other_choices": [
+        "Pocket some silverware discreetly",
+        "It is not worth the risk"
+      ],
+      "selected": "It is not worth the risk",
+      "redirect": "nurse_day2_evening_do_not_steal",
+      "time_left": 1,
+      "timestamp": "2026-03-26T11:11:14.785989",
+      "time_to_decide": 1.332941,
+      "time_since_last": 4.716396
+    },
+    {
+      "menu": "nurse_day2_evening_map_menu",
+      "other_choices": [
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Billiard room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Library",
+        "Portrait Gallery",
+        "Tea room",
+        "William the Conqueror Bedroom",
+        "Edward II Bedroom",
+        "George I Bedroom",
+        "Henry IV Bedroom",
+        "George IV Bedroom",
+        "Elizabeth I Bedroom",
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "Go to sleep",
+        "Richard III Bedroom"
+      ],
+      "selected": "Billiard room",
+      "redirect": "nurse_day2_evening_billiard_room",
+      "time_left": 90,
+      "timestamp": "2026-03-26T11:11:16.386033",
+      "time_to_decide": 5.768041,
+      "time_since_last": 1.600044
+    },
+    {
+      "menu": "nurse_day2_evening_billiard_room_menu",
+      "other_choices": [
+        "Go to the sideboard for a drink",
+        "Talk to Captain Sinha",
+        "Leave"
+      ],
+      "selected": "Talk to Captain Sinha",
+      "redirect": "nurse_day2_evening_billiard_room_captain_intro",
+      "time_left": 90,
+      "timestamp": "2026-03-26T11:11:23.235584",
+      "time_to_decide": 1.314319,
+      "time_since_last": 6.849551
+    }
+  ]
+}
