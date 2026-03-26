@@ -45,6 +45,9 @@ label init_nurse:
             "visited_gun_room": False,
             "day2_hunt_tea_room_early" : False,
             "day2_evening_exhaustion_triggered" : False,
+            "captain_staff_discussed" : False,
+            "captain_boxer_discussed" : False,
+            "captain_lies_discussed" : False,
         }
 
         nurse_important_choices = CharacterImportantChoiceList([

@@ -12,41 +12,14 @@ Or just : Captain, Broken?
 
 CHECK NEW ENDINGs
 
+BILLIARD ROOM STILL NOT GOOD ENOUGH
+- Questions his war stories : IF ZANZIBAR AND remember_doctor (he knows)
+  - I have heard you talk =>>> INCLUDE ask about rank
 
-- Re test all captain possibilities, and unlocks incompatibilities
-  - Check that the texts where she is scared of captain don't appear if she has unlocked captain secret (or just delete them.)
-  - SHE DOESN't say where she found the gun (I always have one with me, for protection?)
-  - WHAT TO DO WITH THE captain's lie other than staff then ? Just a way to reach killed by captain
+- [ ] RETRY EVERYTHING - ADD TESTSTSSSSS
 
-
-I've rethink the ebtire thing.
-The way I see a total revamping.  4 lines of questionning for nurse to captain
-
-A - 2 Actors in the middle of nowhere => THat is weird I garantee, but there is still could be a an explantion
-B - 3 persons were at the same war on zanzibar => Samesies
-C - Captain lies about his services => Admits he as embellished some stories, everybody does the same => unlock his stories are not always true BUT not the there are extremely wrong? Just a minor lie in the his bio
-D - Manning (Not needed for )
-
-Z - I Have a weapon, and even bullets
-We'll need the 3 (A,B,C) to unlock this. Ask captain to Confront Lady Claythorn, OR the butler? => Then I am just a fraud. Now, the nurse insists that if he doesn't help her to confront host or butler, she will tell his story => NOW we have the captain sinha kills her ending, plus we've unlocked the big lie, so probably unlock him as well. 
-
-What do you think ?
-
-- Recheck leave with money or without logic, I might forgotten something there
-
-NEXT add a label at the end of path A, B, and C, the label will give a different text based on how many path have been completed:
-0 : I'll need more that to convince him
-1 : He looked suspicious enough, but i'll need a small push to decide him
-2 : "You are are right, that is too suspicious" .... I wish but I need to have ...
-
-
-
-- [ ] RETRY EVERYTHING
-  - [ ] Friday afternoon
-  - [ ] Friday evening
-  - [ ] Saturday Morning
-  - [ ] Saturday Hunts
   - [ ] Sat evening
+    - [ ] BUGGGGG TWO COUGH story WHEN DEAD => Fucking claude doubling everything (OR JUST when already exhausted)=> Move to your room first before you dead
   - [ ] Sun mornning
   - [ ] Sun ENDING
 - [ ] Nurse Path: More info for poisoned ending (Strychnine).

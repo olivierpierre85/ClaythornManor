@@ -36,6 +36,7 @@ label init_captain:
             CharacterInformation(30, "mansion", "running of a large mansion", is_important = True),
             CharacterInformation(30, "table", "proper table manners", is_important = True),
             CharacterInformation(30, "family", "noble lineage ensured he received an education far superior to most", is_important = True), # TODO unlock somewhere, ? In captain walkthroug?            
+            CharacterInformation(45, "embellishment", "he has admitted that some of the details may have been somewhat enhanced over the years"),
             CharacterInformation(60, "lie", "they do not really include the fighting he claims to have participated in. As an administrative officer, he spent most of his time behind desks", is_important = True),
             ], captain_name
         )
@@ -50,7 +51,7 @@ label init_captain:
 
         captain_description = """
         When you enter a room, chances are you'll immediately notice this retired army officer. 
-        He cannot resist <info:talker>. And usually its by telling tales of <info:wars>.
+        He cannot resist <info:talker>. And usually its by telling tales of <info:wars>. <info:embellishment>.
         Born in India <info:age>, he now resides <info:city>. 
         Although he came from a region often looked down upon by the British, his <info:family>. That also means that the <info:mansion> and <info:table> have no secrets for him.
         Invited to the manor for his <info:heroic_act>, it turns out <info:lie>.

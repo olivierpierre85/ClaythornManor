@@ -109,15 +109,52 @@ label nurse_day2_evening_billiard_room_captain_intro:
     Very well, Miss Marsh. Say what is on your mind.
     """
 
-    $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu("nurse_day2_evening_billiard_room_captain_menu", [
-        TimedMenuChoice('Something is not right about the staff{{observation}}', 'nurse_day2_evening_billiard_room_staff', 20, condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_actor')", linked_choice="nurse_day2_evening_billiard_room_confront_butler"),
-        TimedMenuChoice('Insist we confront the butler{{intuition}}', 'nurse_day2_evening_billiard_room_confront_butler', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront_butler') and nurse_details.endings.is_unlocked('escape_at_night') and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')"),
-        TimedMenuChoice('Insist we confront the butler{{intuition}}', 'nurse_day2_evening_billiard_room_confront_butler_without_bullets', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront_butler') and nurse_details.endings.is_unlocked('escape_at_night') and nurse_details.threads.is_unlocked('take_gun') and not nurse_details.threads.is_unlocked('find_bullets')"),
-        TimedMenuChoice('I was at the Boxer Rebellion too{{observation}}', 'nurse_day2_evening_billiard_room_boxer', 20, condition="nurse_details.threads.is_unlocked('remember_doctor')", linked_choice="nurse_day2_evening_billiard_room_boxer_2"),
-        TimedMenuChoice('About your rank at the Boxer Rebellion{{observation}}', 'nurse_day2_evening_billiard_room_boxer_2', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')", linked_choice="nurse_day2_evening_billiard_room_zanzibar_confrontation"),
-        TimedMenuChoice('About the Zanzibar War{{observation}}', 'nurse_day2_evening_billiard_room_zanzibar_confrontation', 20, condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_zanzibar_confrontation') and nurse_details.threads.is_unlocked('captain_lie_zanzibar') and not nurse_details.threads.is_unlocked('captain_lie_boxer')"),
-        TimedMenuChoice('Ask about Mr Manning', 'nurse_day2_evening_billiard_room_manning', 20),
-        TimedMenuChoice("You don't have anything else to say to him", 'generic_cancel', 0, keep_alive=True, early_exit=True),
+
+    $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu(
+        "nurse_day2_evening_billiard_room_captain_menu", [
+
+        TimedMenuChoice(
+            'Ask about Mr Manning',
+            'nurse_day2_evening_billiard_room_manning', 20),
+
+        TimedMenuChoice(
+            'Something is not right about the staff{{observation}}',
+            'nurse_day2_evening_billiard_room_staff', 20,
+            condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_actor')",
+            linked_choice="nurse_day2_evening_billiard_room_confront"),
+
+        TimedMenuChoice(
+            'I was at the Boxer Rebellion too{{observation}}',
+            'nurse_day2_evening_billiard_room_boxer', 20,
+            condition="nurse_details.threads.is_unlocked('remember_doctor')",
+            linked_choice="nurse_day2_evening_billiard_room_boxer_2"),
+
+        TimedMenuChoice(
+            'About your rank at the Boxer Rebellion{{observation}}',
+            'nurse_day2_evening_billiard_room_boxer_2', 20,
+            condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_boxer_2')",
+            linked_choice="nurse_day2_evening_billiard_room_zanzibar"),
+
+        TimedMenuChoice(
+            'About the Zanzibar War{{observation}}',
+            'nurse_day2_evening_billiard_room_zanzibar', 20,
+            condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_zanzibar') and nurse_details.threads.is_unlocked('captain_lie_zanzibar') and not nurse_details.threads.is_unlocked('captain_lie_boxer')"),
+
+        TimedMenuChoice(
+            'Your war stories, Captain{{observation}}',
+            'nurse_day2_evening_billiard_room_lies', 20,
+            condition="nurse_details.threads.is_unlocked('captain_lie_boxer') or nurse_details.threads.is_unlocked('captain_lie_zanzibar')"),
+
+        TimedMenuChoice(
+            'We need to confront the butler{{observation}}{{intuition}}',
+            'nurse_day2_evening_billiard_room_confront', 20,
+            condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront') and nurse_details.saved_variables['captain_boxer_discussed'] and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')",
+            early_exit=True),
+
+        TimedMenuChoice(
+            "You don't have anything else to say to him",
+            'generic_cancel', 0,
+            keep_alive=True, early_exit=True),
     ])
 
     call run_menu(nurse_day2_evening_billiard_room_captain_menu)
@@ -125,6 +162,29 @@ label nurse_day2_evening_billiard_room_captain_intro:
     return
 
 
+label nurse_day2_evening_billiard_room_suspicions:
+
+    # TODO if no var has been set
+    nurse """
+    Exactly.
+
+    That is proof that something is very wrong here.
+    """
+
+    captain """
+    I wouldn't say proof, not yet.
+
+    You'll need more to convince me that something is very wrong here.
+    """
+
+    #     NEXT add a label at the end of path A, B, and C, the label will give a different text based on how many path have been completed:
+    # 0 : I'll need more that to convince him
+    # 1 : He looked suspicious enough, but i'll need a small push to decide him
+    # 2 : "You are are right, that is too suspicious" .... I wish but I need to have ...
+
+    return
+
+# First suspicious stuff
 label nurse_day2_evening_billiard_room_staff:
 
     nurse """
@@ -186,76 +246,74 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     captain """
-    No.
-
-    No, I rather think it cannot.
+    It is indeed hard to believe.
 
     In London that would perhaps be possible.
 
-    But not here.
+    But here, very unlikely.
     """
 
-    nurse """
-    Exactly.
-    """
+    call nurse_day2_evening_billiard_room_suspicions
 
-    captain """
-    But to be sure, we should check if there is something strange with the only other person on staff I have seen this weekend.
-    """
+    # captain """
+    # But to be sure, we should check if there is something strange with the only other person on staff I have seen this weekend.
+    # """
 
-    nurse """
-    You mean the butler.
-    """
+    # nurse """
+    # You mean the butler.
+    # """
 
-    captain """
-    Precisely.
+    # captain """
+    # Precisely.
 
-    If we could find that he too is not a career servant, that would confirm our suspicions, and we could confront Lady Claythorn about it.
-    """
+    # If we could find that he too is not a career servant, that would confirm our suspicions, and we could confront Lady Claythorn about it.
+    # """
 
-    nurse """
-    Good idea, but how could we make him confess?
-    """
+    # nurse """
+    # Good idea, but how could we make him confess?
+    # """
 
-    captain """
-    That's a good question.
+    # captain """
+    # That's a good question.
 
-    We cannot simply march up to the man and demand an explanation.
+    # We cannot simply march up to the man and demand an explanation.
 
-    If there is something amiss, he is not going to confess over a polite enquiry.
-    """
+    # If there is something amiss, he is not going to confess over a polite enquiry.
+    # """
 
-    nurse """
-    Then perhaps we should try a less polite one.
-    """
+    # nurse """
+    # Then perhaps we should try a less polite one.
+    # """
 
-    """
-    He looks at me sharply.
-    """
+    # """
+    # He looks at me sharply.
+    # """
 
-    captain """
-    That would be unwise.
+    # captain """
+    # That would be unwise.
 
-    And more than a little dangerous.
+    # And more than a little dangerous.
 
-    Besides, if you want a man like that to talk, you would need to properly frighten him.
+    # Besides, if you want a man like that to talk, you would need to properly frighten him.
 
-    And I do not have anything that would do the trick.
+    # And I do not have anything that would do the trick.
 
-    At least not here with me.
+    # At least not here with me.
 
-    So it's better not to think of it.
-    """
+    # So it's better not to think of it.
+    # """
 
-    """
-    He turns back to the fire, signalling the matter closed.
+    # """
+    # He turns back to the fire, signalling the matter closed.
 
-    But something in his voice tells me he is more unsettled than he lets on.
-    """
+    # But something in his voice tells me he is more unsettled than he lets on.
+    # """
 
     return
 
-label nurse_day2_evening_billiard_room_confront_butler_intro:
+
+# Z - Confront the butler (linked from A, requires B + gun + bullets)
+label nurse_day2_evening_billiard_room_confront:
 
     nurse """
     Captain, about the butler.
@@ -276,67 +334,13 @@ label nurse_day2_evening_billiard_room_confront_butler_intro:
     """
 
     nurse """
-    I always have this with me.
+    It is loaded.
 
-    A single woman must be able to defend herself.
+    Two people are dead, Captain. The staff are impostors. Three of us were at the very same war twenty-four years ago.
 
-    If the butler is behind all this, we confront him tonight.
+    Something is very wrong in this house.
 
-    Together.
-    """
-
-    """
-    The Captain stares at the revolver.
-
-    He does not reach for it.
-    """
-
-    captain """
-    You cannot be serious.
-
-    Is that thing even loaded?
-    """
-
-    return
-
-label nurse_day2_evening_billiard_room_confront_butler_without_bullets:
-
-    call nurse_day2_evening_billiard_room_confront_butler_intro
-
-    nurse """
-    It is not loaded, no.
-
-    But he does not need to know that.
-    """
-
-    captain """
-    Miss Marsh, that is precisely what makes this foolish.
-
-    If you threaten a man with an empty weapon, you had better pray he believes you.
-
-    And if he does not — if he calls your bluff — you are entirely defenceless.
-
-    He would be within his rights to strike back, and we would have nothing to stop him.
-    """
-
-    """
-    He is right, of course.
-
-    I put the revolver away.
-    """
-
-    return
-
-label nurse_day2_evening_billiard_room_confront_butler:
-
-    call nurse_day2_evening_billiard_room_confront_butler_intro
-
-    nurse """
-    It is.
-
-    And I am entirely serious.
-
-    Two people are dead, Captain. The staff are impostors. And the butler is the one thread that ties it all together.
+    And the butler is the one thread that ties it all together.
 
     You are a military man. You have fought in wars.
 
@@ -344,6 +348,8 @@ label nurse_day2_evening_billiard_room_confront_butler:
     """
 
     """
+    I hold it out to him.
+
     He does not move.
 
     The silence stretches between us, broken only by the crackle of the fire.
@@ -434,30 +440,95 @@ label nurse_day2_evening_billiard_room_confront_butler:
     """
     The fire crackles.
 
-    I pick the revolver back up and slip it into my coat.
+    I slip the revolver back into my coat.
+    """
+
+    $ captain_details.description_hidden.unlock('lie')
+
+    nurse """
+    Then you are a fraud.
+
+    Every word. Every story. Every medal you claim to have earned.
+
+    All of it, a lie.
+    """
+
+    captain """
+    Miss Marsh, please —
     """
 
     nurse """
-    Thank you for telling me the truth, Captain.
+    And when we leave this house, I shall make sure the others know exactly what sort of man they have been dining with.
     """
-    $ captain_details.description_hidden.unlock('lie')
+
     """
-    A faint, tired smile crosses his face.
-
-    He looks older than he did a moment ago.
-
-    Now, I would have to confront the butler myself if I want the truth.
-
-    But don't have that strength in me.
-
-    I was ready when I thought the captain would help.
-
-    But now it feels to dangerous.
+    Something changes in his expression.
     """
+
+    captain """
+    You would not dare.
+    """
+
+    nurse """
+    Watch me.
+    """
+
+    """
+    He rises from the chair.
+
+    I do not step back.
+    """
+
+    captain angry """
+    You don't understand. If the word goes out, I'll be finished.
+
+    My standing in London reduced to nothing.
+
+    You can't say anything.
+    """
+
+    """
+    He grabs me.
+
+    His eyes are different, like those of a madman.
+    """
+
+    nurse """
+    Captain, stop!
+    """
+
+    play sound woman_cough
+
+    """
+    The cough comes from nowhere.
+
+    It comes the way it always comes when I have pushed too far — sudden, total, unstoppable.
+
+    I feel instantly that it is stronger than other times.
+
+    Blood splatters on Captain Sinha, who jumps back.
+    """
+
+    captain """
+    Miss Marsh!
+    """
+
+    play sound body_fall
+
+    """
+    I slip to the floor.
+
+    I keep hearing the Captain's voice, urgent, panicked, but the voice is getting softer.
+
+    Until I cannot make out the words.
+    """
+
+    jump nurse_ending_billiard_room_death
 
     return
 
 
+# Second suspicious stuff
 label nurse_day2_evening_billiard_room_boxer:
 
     nurse """
@@ -569,10 +640,12 @@ label nurse_day2_evening_billiard_room_boxer:
     """
 
     $ nurse_details.threads.unlock('boxer_rebellion_1')
+    $ nurse_details.saved_variables["captain_boxer_discussed"] = True
 
     return
 
 
+# B chain - Rank at the Boxer Rebellion
 label nurse_day2_evening_billiard_room_boxer_2:
 
     nurse """
@@ -642,7 +715,8 @@ label nurse_day2_evening_billiard_room_boxer_2:
     return
 
 
-label nurse_day2_evening_billiard_room_zanzibar_confrontation:
+# B chain - Zanzibar War
+label nurse_day2_evening_billiard_room_zanzibar:
 
     nurse """
     You spoke of the Anglo-Zanzibar War on Friday.
@@ -687,13 +761,9 @@ label nurse_day2_evening_billiard_room_zanzibar_confrontation:
     """
 
     captain """
-    Precisely.
+    I admit, the bombardment was brief, yes.
 
-    Which rather proves my point.
-
-    The bombardment was brief, yes.
-
-    But buildings do not care how long a battle lasts before they fall on you.
+    But there was real exchange of fire.
 
     I may well have been one of the only men on that shore to sustain a serious injury that day.
 
@@ -724,178 +794,96 @@ label nurse_day2_evening_billiard_room_zanzibar_confrontation:
     The conversation, in his estimation, is over.
 
     But something he said lingers.
+
+    I have no proof. Only suspicion.
+
+    And suspicion alone is not enough.
     """
-
-    $ nurse_day2_evening_billiard_room_zanzibar_final_menu = TimedMenu("nurse_day2_evening_billiard_room_zanzibar_final_menu", [
-        TimedMenuChoice('Be sympathetic', 'nurse_day2_evening_billiard_room_captain_end_good', 30, early_exit=True),
-        TimedMenuChoice('Accuse him of being a fraud', 'nurse_day2_evening_billiard_room_captain_end_bad', 30, early_exit=True),
-    ])
-
-    call run_menu(nurse_day2_evening_billiard_room_zanzibar_final_menu)
-
-
-label nurse_day2_evening_billiard_room_captain_end_good:
-
-    nurse """
-    You know, you don't need to lie to me.
-
-    As a nurse in the army, I understand very well your situation: the humiliation of being given orders by incompetent young men.
-
-    Your true value never fully recognised.
-
-    If I could have painted a brighter picture of my time in the army, I probably would have too.
-    """
-
-    """
-    He looks at me for a long moment.
-
-    Then something gives way.
-    """
-
-    captain """
-    You are right. Of course you are.
-
-    The campaigns, yes, those were real.
-
-    But the rank, the command, the prestige —
-
-    Fabricated, every word.
-    """
-
-    """
-    He presses his hands together.
-    """
-
-    captain """
-    And the battles themselves.
-
-    I was there, you understand.
-
-    But behind the lines.
-
-    Always behind the lines.
-
-    Logistics. Supply routes. Dispatches.
-
-    I never once saw what you saw.
-
-    Never saw what the soldiers saw.
-
-    It is rather difficult to make a heroic story out of a supply depot.
-    """
-
-    """
-    He does not look ashamed.
-
-    Only tired.
-    """
-
-    captain """
-    It was not vanity, Miss Marsh.
-
-    Or not only vanity.
-
-    When I came to London, no one looked at me.
-
-    I was not a hero to them.
-
-    I was simply something they did not recognise.
-
-    The stories gave me a way in.
-
-    It was my only way to a better life.
-    """
-
-    """
-    The fire has burned low.
-
-    Neither of us speaks for a time.
-    """
-
-    nurse """
-    I understand.
-
-    Don't worry, I won't tell the others.
-    """
-
-    captain """
-    Thank you, Miss Marsh.
-    """
-
-    $ captain_details.description_hidden.unlock('lie')
 
     return
 
 
-label nurse_day2_evening_billiard_room_captain_end_bad:
+# C - Captain's embellished stories (independent)
+label nurse_day2_evening_billiard_room_lies:
 
-    """
-    Something changes in his expression.
+    nurse """
+    Captain, may I speak frankly?
     """
 
     captain """
-    You would not dare.
+    You have been doing so all evening, Miss Marsh.
+
+    I see no reason to stop now.
     """
 
     nurse """
-    Watch me.
+    Your war stories.
+
+    Some of the details do not quite hold up to scrutiny.
     """
 
     """
-    He rises from the chair.
+    He does not flinch.
 
-    I do not step back.
-    """
-
-    captain angry """
-    You don't understand, if the word goes out, I'll be finished.
-
-    My standing in London reduced to nothing.
-
-    You can't say anything.
-    """
-
-    """
-    He grabs me.
-
-    His eyes are different, like those of a madman.
-    """
-
-    nurse """
-    Captain, stop!
-    """
-
-    play sound woman_cough
-
-    """
-    The cough comes from nowhere.
-
-    It comes the way it always comes when I have pushed too far — sudden, total, unstoppable.
-
-    I feel instantly that it is stronger than other times.
-
-    Blood splatters on Captain Sinha, who jumps back.
+    But something shifts behind his eyes.
     """
 
     captain """
-    Miss Marsh!
+    In what way?
     """
 
-    play sound body_fall
+    nurse """
+    Small things.
 
-    """
-    I slip to the floor.
+    Dates that do not quite align. Details that seem enhanced.
 
-    I keep hearing the Captain's voice, urgent, panicked, but the voice is getting softer.
-
-    Until I cannot make out the words.
+    I was a nurse in the field, Captain. I know what a real campaign looks like.
     """
 
-    jump nurse_ending_billiard_room_death
+    """
+    He is quiet for a moment.
+
+    Then he sets down his glass.
+    """
+
+    captain """
+    You are not entirely wrong.
+
+    I may have polished certain details over the years.
+
+    A soldier's prerogative, Miss Marsh.
+
+    Every old campaigner does it.
+
+    The stories grow in the telling. It is hardly a crime.
+    """
+
+    nurse """
+    So you admit it.
+    """
+
+    captain """
+    I admit to being human.
+
+    Show me a man who has not improved upon his own history, and I will show you a man with no history worth telling.
+    """
+
+    """
+    He smiles, but it does not quite reach his eyes.
+
+    He has retreated to safe ground — the harmless embellisher, the old soldier with a flair for storytelling.
+
+    It is a convincing performance.
+
+    But I am not entirely convinced.
+    """
+
+    $ captain_details.description_hidden.unlock('embellishment')
 
     return
 
 
+# D - Manning
 label nurse_day2_evening_billiard_room_manning:
 
     nurse """
@@ -907,8 +895,8 @@ label nurse_day2_evening_billiard_room_manning:
     captain """
     A dreadful accident, Miss Marsh.
 
-    Manning was drunk and careless with a firearm. 
-    
+    Manning was drunk and careless with a firearm.
+
     A tragic combination.
     """
 
