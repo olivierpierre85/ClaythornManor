@@ -132,7 +132,7 @@ label nurse_day2_evening_billiard_room_suspicions:
 
         Something is happening here.
 
-        There is great chance that this weekend is not what it appears to be.
+        There is a great chance that this weekend is not what it appears to be.
         """
 
         nurse """
@@ -142,23 +142,23 @@ label nurse_day2_evening_billiard_room_suspicions:
         captain """
         But how to be sure?
         
-        There is still chance that all of this is a coincidence.
+        There is still a chance that all of this is a coincidence.
 
-        I don't want to put Lady Claythorn in awkward position if she has done nothing wrong.
+        I don't want to put Lady Claythorn in an awkward position if she has done nothing wrong.
 
         That would be improper.
         """
 
         """
-        He won't mention it, but he is certainly not just worry about making a scandal.
+        He won't mention it, but he is certainly not just worried about making a scandal.
 
         He is thinking about the reward as well.
 
-        Antigonizing Lady CLaythorn could make here renounce giving the price.
+        Antagonising Lady Claythorn could make her renounce giving the prize.
 
         That's a powerful incentive to keep people in line.
 
-        But can't just do nothing.
+        But I cannot just do nothing.
         """
 
         nurse """
@@ -214,21 +214,21 @@ label nurse_day2_evening_billiard_room_suspicions:
         captain """
         Well, I don't like talking about those things with a lady.
 
-        But if you must know, a gun can get a confession from about any man.
+        But if you must know, a gun can get a confession from almost any man.
 
-        I mean at least if it is loaded, that way you can show force that you are serious about the matter.
+        I mean at least if it is loaded, that way you can show that you are serious about the matter.
 
-        I have seen battle harden soldiers lose all confidence when a gun is shot close to them.
+        I have seen battle-hardened soldiers lose all confidence when a gun is shot close to them.
 
-        But I don't have a gun with me here, so I don't think I can do anything.
+        But I don't have one with me here, so I don't think I can do anything.
 
-        I am afraid we can just be on our guards tonight, and leave as soon as possible in the morning.
+        I am afraid we must just be on our guard tonight, and leave as soon as possible in the morning.
 
-        Yes, now than I think of it, that's the only sensible think to do.
+        Yes, now that I think of it, that's the only sensible thing to do.
         """
 
         """
-        He turns back to his book, to him the conversation is over.
+        He turns back to his book, for him the conversation is over.
 
         I don't like this but I won't convince him with words only.
         """
@@ -269,7 +269,7 @@ label nurse_day2_evening_billiard_room_staff:
 
     I have seen her before. Not here.
 
-    In London, at the theater, playing a role.
+    In London, at the theatre, playing a role.
 
     I can't quite remember the name of the play, but I am certain that it is her.
     """
@@ -459,11 +459,11 @@ label nurse_day2_evening_billiard_room_war_stories:
 
     I was not officially a captain.
 
-    I was the higher rank allowed for a non white officer: ## TODO find equivalent of lower rank
+    I was a Subedar. The highest rank allowed for a non-white officer.
 
-    The law at the time made quite sure that — no matters one's ability — a coloured man could never give order to a white man.
+    The law at the time made quite sure that — no matter one's ability — a coloured man could never give orders to a white man.
 
-    But explaining all that in polite company is tedious, and tends to sour the mood, that is why I omitted it.
+    But explaining all that in polite company is tedious, and tends to sour the mood, which is why I omitted it.
 
     But the rest of my account is true.
     """
@@ -511,17 +511,17 @@ label nurse_day2_evening_billiard_room_war_stories:
 
     And the war was very short of course.
 
-    I might have embelished it's retelling.
+    I might have embellished its retelling.
 
-    But It's just that i like to tell good stories.
+    But it is just that I like to tell good stories.
 
-    Every good storyteller does it Miss Marsh
+    Every good storyteller does it, Miss Marsh.
     """
 
     """
     He smiles.
 
-    That is true that he could just have exagareted some facts, but I am not entirely convinced.
+    It is true that he could just have exaggerated some facts, but I am not entirely convinced.
     """
 
     $ captain_details.description_hidden.unlock('embellishment')
@@ -538,14 +538,14 @@ label nurse_day2_evening_billiard_room_confront:
     """
 
     captain """
-    Miss Marsh, how on earth do you have this with?
+    Miss Marsh, how on earth do you have this with you?
     """
 
 
     nurse """
     I've learned at war that it's better to always be prepared.
 
-    I never leave my house without with it since.
+    I never leave my house without it since.
     """
 
     """
@@ -748,7 +748,7 @@ label nurse_day2_evening_billiard_room_confront:
 label nurse_day2_evening_billiard_room_manning:
 
     nurse """
-    We've witness two deaths in as many days.
+    We've witnessed two deaths in as many days.
 
     Doesn't it seem strange to you?
     """
@@ -756,13 +756,13 @@ label nurse_day2_evening_billiard_room_manning:
     captain """
     Not really.
 
-    They seem pretty natural to me Ms Marsh.
+    They seem pretty natural to me, Miss Marsh.
 
     Thomas Moody died of injuries he got during the war.
 
     Even if you thought he was fine, he might have been suffering in silence.
 
-    Some people prefer to hide their distress to the people around them.
+    Some people prefer to hide their distress from the people around them.
     """
 
     """
@@ -773,7 +773,7 @@ label nurse_day2_evening_billiard_room_manning:
     But for Doctor Baldwin?
     """
 
-    """
+    captain """
     A dreadful accident, Miss Marsh.
 
     Manning was drunk and careless with a firearm.
