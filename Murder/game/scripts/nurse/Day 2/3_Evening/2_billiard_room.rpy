@@ -118,57 +118,87 @@ label nurse_day2_evening_billiard_room_suspicions:
     if nurse_details.saved_variables["captain_boxer_discussed"] and nurse_details.saved_variables["captain_staff_discussed"]:
 
         nurse """
-        Two actors employed as servants. Three of us at the same war. And a soldier whose stories do not hold up.
+        Two actors employed as servants. Three of us at the same war. 
 
         There are too many things wrong in this house, Captain.
+        """
+
+        """
+        He pauses and ponders for a second.
         """
 
         captain """
         I am inclined to agree.
 
-        Whatever is happening here, we should tread very carefully.
+        Something is happening here.
+
+        There is great chance that this weekend is not what it appears to be.
+        """
+
+        nurse """
+        That's what I believe too.
         """
         
-        # captain """
-        # But to be sure, we should check if there is something strange with the only other person on staff I have seen this weekend.
-        # """
+        captain """
+        But how to be sure?
+        
+        There is still chance that all of this is a coincidence.
 
-        # nurse """
-        # You mean the butler.
-        # """
+        I don't want to put Lady Claythorn in awkward position if she has done nothing wrong.
 
-        # captain """
-        # Precisely.
+        That would be improper.
+        """
 
-        # If we could find that he too is not a career servant, that would confirm our suspicions, and we could confront Lady Claythorn about it.
-        # """
+        """
+        He won't mention it, but he is certainly not just worry about making a scandal.
 
-        # nurse """
-        # Good idea, but how could we make him confess?
-        # """
+        He is thinking about the reward as well.
 
-        # captain """
-        # That's a good question.
+        Antigonizing Lady CLaythorn could make here renounce giving the price.
 
-        # We cannot simply march up to the man and demand an explanation.
+        That's a powerful incentive to keep people in line.
 
-        # If there is something amiss, he is not going to confess over a polite enquiry.
-        # """
+        But can't just do nothing.
+        """
 
-        # nurse """
-        # Then perhaps we should try a less polite one.
-        # """
+        nurse """
+        There is someone else we can interrogate.
+        
+        The only other person on staff I have seen this weekend.
+        """
 
-        # """
-        # He looks at me sharply.
-        # """
+        captain """
+        You mean the butler?
+        """
+
+        nurse """
+        Precisely.
+        """
+
+        captain """
+        That's not a bad idea.
+
+        If we could find that he too is not a career servant, that would confirm our suspicions, and we could confront Lady Claythorn about it.
+
+        But we cannot simply march up to the man and demand an explanation.
+
+        If there is something amiss, he is not going to confess over a polite enquiry.
+        """
+
+        nurse """
+        Then perhaps we should try a less polite one.
+        """
+
+        """
+        He looks at me sharply.
+        """
 
         captain """
         That would be unwise.
 
         And more than a little dangerous.
 
-        Besides, if you want a man like that to talk, you would need to properly frighten him.
+        Besides, if you want to make a man talk, you would need to properly frighten him.
 
         And I do not have anything that would do the trick.
 
@@ -186,9 +216,21 @@ label nurse_day2_evening_billiard_room_suspicions:
 
         But if you must know, a gun can get a confession from about any man.
 
-        I mean at least if it is loaded, that way you can enforce that you are serious about the matter.
+        I mean at least if it is loaded, that way you can show force that you are serious about the matter.
 
-        Without that, I wouldn't even try.
+        I have seen battle harden soldiers lose all confidence when a gun is shot close to them.
+
+        But I don't have a gun with me here, so I don't think I can do anything.
+
+        I am afraid we can just be on our guards tonight, and leave as soon as possible in the morning.
+
+        Yes, now than I think of it, that's the only sensible think to do.
+        """
+
+        """
+        He turns back to his book, to him the conversation is over.
+
+        I don't like this but I won't convince him with words only.
         """
 
     else:
@@ -383,21 +425,13 @@ label nurse_day2_evening_billiard_room_boxer:
     Three guests at this table who were all in China at the same time.
 
     It is strange, I grant you that.
-
-    But it is not completely impossible.
-
-    And with the terrible things that happened this weekend, I will concede that something is not quite right.
-
-    I shall be on my guard from now on, and I suggest you do the same.
     """
 
-    $ nurse_details.threads.unlock('boxer_rebellion_1')
     $ nurse_details.saved_variables["captain_boxer_discussed"] = True
 
     return
 
 
-# Questions his war stories (merged: rank + zanzibar + lies)
 label nurse_day2_evening_billiard_room_war_stories:
 
     nurse """
@@ -495,24 +529,39 @@ label nurse_day2_evening_billiard_room_war_stories:
     return
 
 
-
-# Z - Confront the butler (linked from A, requires B + gun + bullets)
 label nurse_day2_evening_billiard_room_confront:
 
     """
     I reach into my coat and produce the revolver.
+
+    Captain Sinha looks at me astonished.
     """
 
+    captain """
+    Miss Marsh, how on earth do you have this with?
+    """
+
+
     nurse """
+    I've learned at war that it's better to always be prepared.
+
+    I never leave my house without with it since.
+    """
+
+    """
+    I hope this lie is convincing enough.
+    """
+
+    """
     It is loaded.
 
     Two people are dead, Captain. The staff are impostors. Three of us were at the very same war twenty-four years ago.
 
     Something is very wrong in this house.
 
-    You are a military man. You have fought in wars.
-
-    Take the gun.
+    You are a military man.
+    
+    Take the gun, and let's confront the butler.
     """
 
     """
