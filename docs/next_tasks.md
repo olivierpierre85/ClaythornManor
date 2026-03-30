@@ -5,7 +5,6 @@ n Can you make sure that the tests checkpoints for nurse cover all the possible 
 
 IDIOT !!!!!!! THERE IS NO NUMBER ONe in the infocard => YOU added the I of intuition, that is reserved for endings. CORRECT EVERYTHING => PUT BACK THE I???? OR NOT
 
-Re think INTUITION system entirely FOR EVERYONE
 
 EVery story but the lad, a memory on the train? 
 Or just : Captain, Broken?
@@ -30,7 +29,7 @@ ANd if not enough money, you just can't leave
 
 # Write story captain
 
-Unlock => where is unlock "his noble lineage ensured"
+NEXT CHARACTER - UNlocked by Nurse (and psychic)
 
 ## Proofreading
 - TODO add internal logic workflow? /logic-test that will read the same file but not correct grammar?
@@ -40,6 +39,13 @@ Unlock => where is unlock "his noble lineage ensured"
 - Doctor: TODO Full
 
 ## Technical Tasks
+
+### INTUITION system entirely FOR EVERYONE SAVED concept
+Now an intuition is needed to SAVE a person.
+When Someone is saved, it add a SAVED over their name in the progress view 
+- (need a lot of new images)
+- Need a new var saved over time for each character. (is_saved)
+- 
 -  [ ] **Testing**: Define paths that test all dialogs for the first 3 character
     - [ ] Doctor
     - [ ] Lad

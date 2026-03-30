@@ -83,6 +83,8 @@ label captain_generic_origin_psychic_1:
     I have been living there for the last two decades.    
     """
 
+    $ captain_details.description_hidden.unlock('city')
+
     psychic """
     London.
 
@@ -96,7 +98,7 @@ label captain_generic_origin_psychic_1:
     """
 
     $ psychic_details.description_hidden.unlock('racist')
-    $ captain_details.description_hidden.unlock('city')
+    
 
     return 
 
@@ -116,9 +118,10 @@ label captain_generic_origin_psychic_2:
     Yes, it's in North India.
     """
 
-    # ChatGPT
     captain """
     I was born there. 
+    
+    My noble lineage ensured I received an excellent education, far superior to most in the region.
     
     Growing up, I was always fascinated by the stories of the Raj army and their brave officers. 
     
@@ -164,10 +167,13 @@ label captain_generic_origin_psychic_2:
 
     And there is no way to avoid him here.
 
-    So I nod in assent and barely listens to what he is saying.
+    So I nod in assent and barely listen to what he is saying.
     """
+    
+    # I don't think it can loaded here, but just in case 
+    $ captain_details.description_hidden.unlock('talker')
 
-    $ captain_details.description_hidden.unlock('talker')     
+    $ captain_details.description_hidden.unlock('family')    
 
     return
 
@@ -212,27 +218,6 @@ label captain_generic_background_psychic:
 
 
     return
-
-# NOT here anymore, maybe used this for the nurse.
-# label captain_generic_background_psychic_2:
-
-#     # Again, there is something wrong with his story. I can feel he doesn't say the truth
-#     """
-#     2
-#     """
-
-#     return
-
-
-# label captain_generic_background_psychic_3:
-
-#     # You noticed some inconsistency before, so now is you chance to ask which one is a problem
-
-#     """
-#     Really, is there a
-#     """
-
-#     return
 
 
 label captain_generic_heroic_act_psychic:
