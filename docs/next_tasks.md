@@ -28,6 +28,10 @@ ANd if not enough money, you just can't leave
   - [ ] Sunday TODO TEST
 
 
+# Write story captain
+
+Unlock => where is unlock "his noble lineage ensured"
+
 ## Proofreading
 - TODO add internal logic workflow? /logic-test that will read the same file but not correct grammar?
 - NOW Must go hand in hand with TESTING by chapter

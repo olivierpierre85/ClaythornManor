@@ -48,6 +48,11 @@ label init_debug:
     call unlock_nurse
     $ nurse_details.load_manual_checkpoints()
     
+    # Not finished vvvvv
+
+    $ current_character = captain_details
+    $ current_storyline = captain_details
+    call unlock_captain
 
     $ current_character = broken_details
     $ current_storyline = broken_details
@@ -118,20 +123,6 @@ label unlock_doctor:
 
     return
 
-label unlock_captain:
-
-    $ captain_details.description_hidden.unlock('wars')
-    $ captain_details.description_hidden.unlock('talker')
-    $ captain_details.description_hidden.unlock('heroic_act') 
-    $ captain_details.description_hidden.unlock('city') 
-    $ captain_details.description_hidden.unlock('age')
-    $ captain_details.description_hidden.unlock('mansion')
-    $ captain_details.description_hidden.unlock('table') 
-    # $ captain_details.description_hidden.unlock('family')
-    $ captain_details.description_hidden.unlock('lie')
-
-    return
-
 label unlock_nurse:
 
     $ nurse_details.description_hidden.unlock('job')
@@ -144,6 +135,20 @@ label unlock_nurse:
 
     return
 
+label unlock_captain:
+
+    $ captain_details.description_hidden.unlock('wars')
+    $ captain_details.description_hidden.unlock('talker')
+    $ captain_details.description_hidden.unlock('heroic_act') 
+    $ captain_details.description_hidden.unlock('city') 
+    $ captain_details.description_hidden.unlock('age')
+    $ captain_details.description_hidden.unlock('mansion')
+    $ captain_details.description_hidden.unlock('table') 
+    $ captain_details.description_hidden.unlock('family')
+    $ captain_details.description_hidden.unlock('embellishment')
+    $ captain_details.description_hidden.unlock('lie')
+
+    return
 
 label unlock_broken:
 
