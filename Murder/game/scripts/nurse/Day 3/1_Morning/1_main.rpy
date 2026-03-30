@@ -187,19 +187,15 @@ label nurse_day3_morning:
 
         The silver is in my bag, along with everything else I gathered this weekend.
 
-        There is nothing left to wait for.
+        There is nothing left to stay for.
         """
         
-        call nurse_day3_morning_leave
-
-    else:
-
-        $ time_left = 1
-        call run_menu(TimedMenu("nurse_day3_morning_choice", [
-            TimedMenuChoice("Leave now, while there is still time", 'nurse_day3_morning_leave', early_exit=True),
-            TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True),
-        ]))
-
+    $ time_left = 1
+    call run_menu(TimedMenu("nurse_day3_morning_choice_rich", [
+        TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True, condition="not nurse_details.threads.is_unlocked('silverware_big')"),
+        TimedMenuChoice("Get your things from your room and leave", 'nurse_day3_morning_room_nap', early_exit=True, condition="nurse_details.threads.is_unlocked('silverware_big')"),
+        TimedMenuChoice("Leave now, without wasting another second!{{intuition}}", 'nurse_day3_morning_leave', early_exit=True, condition="nurse_details.intuitions.is_unlocked('escape_at_night')"),
+    ]))
 
     return
 
@@ -208,43 +204,54 @@ label nurse_day3_morning_leave:
 
 
     """
-    I take my coat from the stand.
+    An irrational feeling overtakes me.
 
-    I do not hesitate.
+    I know I should prepare more before attempting the long journey back.
+
+    But a deep rooted fear prevents me from getting to my room.
+
+    No, I need to leave now, there is no time to waste.
+    """
+
+    if nurse_details.threads.is_unlocked('silverware_big'):
+
+        """
+        Luckily, I have the valuables I've "found" with me in my bag.
+        """
+
+    """
+    I take my coat from the stand.
 
     I open the front door and step outside.
     """
 
     $ change_room("manor_exterior", dissolve)
 
+    """
+    The air is cold and sharp, but I scarcely feel it.
+    """
+
     if nurse_details.threads.is_unlocked('silverware_big'):
 
         """
-        The air is cold and sharp, but I scarcely feel it.
-
         My bag is heavy on my shoulder — heavier than it has any right to be.
-
-        I walk quickly down the drive, my heels crunching on the gravel.
-
-        I do not look back.
         """
 
-    else:
+    """
+    I walk quickly down the drive, my heels crunching on the gravel.
 
-        """
-        The air is cold and wet, the drive still damp from the night.
+    I do not look back.
 
-        I walk quickly, without looking back at the house.
+    There will be no prize. There was never going to be one.
 
-        There will be no prize. There was never going to be one.
+    I have understood that for some time now, and yet I stay.
 
-        I have understood that for some time now, and yet I stay.
-
-        The gate at the end of the drive. Eyes on that, and nothing else.
-        """
+    The gate at the end of the drive. Eyes on that, and nothing else.
+    """
 
     $ change_room("forest_road", dissolve)
 
+    #TOO: Maybe not very useful ending? Maybe if you were exhausted you are forced to take a nap ???
     if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
 
         if nurse_details.threads.is_unlocked('silverware_big'):

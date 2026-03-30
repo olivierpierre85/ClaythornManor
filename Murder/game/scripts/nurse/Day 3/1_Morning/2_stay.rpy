@@ -1,4 +1,4 @@
-label nurse_day3_morning_attic:
+label nurse_day3_morning_stay:
 
     """
     I press myself to the back of the hall as the footsteps grow closer.
@@ -8,9 +8,20 @@ label nurse_day3_morning_attic:
     I waste no time.
 
     The service stairs are at the far end of the corridor.
-
-    Up to the attic.
     """
+
+    return
+
+
+label nurse_day3_morning_room_nap:
+
+    call nurse_day3_morning_stay
+    
+    call nurse_day3_morning_room_grab_belongings
+    
+label nurse_day3_morning_attic:
+
+    call nurse_day3_morning_stay
 
     $ change_room("attic_hallway")
 
@@ -63,27 +74,34 @@ label nurse_day3_morning_attic:
 
     Then I close the cabinet as best I can and step back.
 
-    I ease the bedroom door closed behind me.
-
-    Nobody should have cause to come in here now.
-
-    There is nothing to do but wait.
-
-    I settle on the edge of the narrow bed and fold my hands.
-
-    Somewhere below me, the others are waking, moving through the house, drawing their own conclusions.
-
-    When they look for me, they will find an empty room.
-
-    Good. Let them wonder.
-
-    I shall stay up here until things have quietened, then slip out this afternoon when no one is watching the drive.
-
-    It is not the ideal plan.
-
-    But it is the plan I have, and it will have to do.
+    I ease the bedroom door closed behind me, and return to my room discretely.
     """
 
     $ nurse_details.objects.unlock('silverware_big')
 
+    jump nurse_day3_morning_room_grab_belongings
+
+
+label nurse_day3_morning_room_grab_belongings:
+
+    $ change_room("bedroom_nurse", dissolve)
+
+    """
+    I gather my few belongings, lock the door, and get ready to leave.
+
+    My legs are weak. My chest aches.
+
+    If I attempt the walk to the village now, I will not make it. I know that.
+
+    I need to rest. Just a short nap before I make the journey.
+
+    I settle on the edge of the narrow bed and fold my hands.
+
+    I lie fully clothed upon the bed.
+
+    I close my eyes.
+    """
+
     jump nurse_day3_afternoon
+
+    return

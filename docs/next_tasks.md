@@ -14,11 +14,12 @@ Or just : Captain, Broken?
 
 Finish billiard room
 - Suspicious not great
-- STILL not sure about the intuition
 
 Retest leaving endings
-- What about INTUITION there? What are intuitions for? For reveal characters => CHECK????
-  Intuition to talk to butler => ONLY way to unlock staff? 
+
+=>>> Only one escape possible !!! Nurse dies exhausted on the road ? Maybe not very useful ending? If you were exhausted, you just can't escape, you are forced to nap?
+ANd if not enough money, you just can't leave
+
 
 FUCK MUST REWRITE THE PSYCHIC pov => where captain shot a gun without showing fear (show that he felt force to do so, and that fighting a woman is easier than a man)
 
