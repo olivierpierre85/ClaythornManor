@@ -207,7 +207,7 @@ label init_lad:
         lad_endings = CharacterEndingList ([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed", chapters=['saturday_morning']), 
             CharacterInformation(2, "gunned_down", "You were killed by a gunshot", image_file="gun_firing", chapters=['end']), 
-            CharacterInformation(3, "poisoned", "Your food was poisoned", image_file="poison_food", is_intuition=True, chapters=['end']), 
+            CharacterInformation(3, "poisoned", "Your food was poisoned", image_file="poison_food_i", is_intuition=True, chapters=['end']), 
             CharacterInformation(4, "fell", "You got impaled on a picket fence", image_file="fence", chapters=['end']), 
             CharacterInformation(5, "escape", "You escaped, alone", image_file="escape", chapters=['end']), 
             CharacterInformation(6, "final_ending", "You finally got the truth", image_file="question_mark", chapters=['end']), 

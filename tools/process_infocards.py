@@ -42,7 +42,7 @@ def process_images(global_addon=None):
             
             if global_addon:
                 # Decide on suffix dynamically
-                if global_addon.startswith("number_"):
+                if global_addon.startswith("number_") or global_addon.startswith("letter_"):
                     suffix = global_addon.split("_")[1]
                 else:
                     suffix = Path(global_addon).stem

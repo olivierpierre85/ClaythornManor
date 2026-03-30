@@ -177,7 +177,7 @@ label init_doctor:
 
         doctor_endings = CharacterEndingList ([
             CharacterInformation(1, "overdose", "You overdosed on opioids", image_file="laudanum_overdose", chapters=['saturday_morning']), 
-            CharacterInformation(2, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle", is_intuition=True, chapters=['saturday_evening']), 
+            CharacterInformation(2, "shot_by_drunk", "You were shot to death by Samuel Manning", image_file="hunting_rifle_i", is_intuition=True, chapters=['saturday_evening']), 
             CharacterInformation(3, "burned", "You died in a fire", image_file="manor_burns", chapters=['saturday_morning']), 
             CharacterInformation(4, "throat_cut", "Someone slashed your throat in your sleep", image_file="throat_cut", chapters=['sunday_morning']), 
             CharacterInformation(5, "poisoned", "You were poisoned", image_file="poison", chapters=['end']), 
