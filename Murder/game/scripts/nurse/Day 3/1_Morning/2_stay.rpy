@@ -19,6 +19,7 @@ label nurse_day3_morning_room_nap:
     
     call nurse_day3_morning_room_grab_belongings
     
+
 label nurse_day3_morning_attic:
 
     call nurse_day3_morning_stay
@@ -74,7 +75,7 @@ label nurse_day3_morning_attic:
 
     Then I close the cabinet as best I can and step back.
 
-    I ease the bedroom door closed behind me, and return to my room discretely.
+    I ease the bedroom door closed behind me, and return to my room discreetly.
     """
 
     $ nurse_details.objects.unlock('silverware_big')
@@ -87,7 +88,7 @@ label nurse_day3_morning_room_grab_belongings:
     $ change_room("bedroom_nurse", dissolve)
 
     """
-    I gather my few belongings, lock the door, and get ready to leave.
+    I gather my few belongings and get ready to leave.
 
     My legs are weak. My chest aches.
 
@@ -95,11 +96,7 @@ label nurse_day3_morning_room_grab_belongings:
 
     I need to rest. Just a short nap before I make the journey.
 
-    I settle on the edge of the narrow bed and fold my hands.
-
-    I lie fully clothed upon the bed.
-
-    I close my eyes.
+    I lock the door, lie fully clothed upon the bed, and close my eyes.
     """
 
     jump nurse_day3_afternoon

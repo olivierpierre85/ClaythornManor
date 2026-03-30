@@ -67,7 +67,7 @@ label nurse_day3_morning:
 
     Whatever this morning holds, it is better faced upright and properly buttoned.
 
-    I head down to have breakfast.
+    I make my way downstairs for breakfast.
     """
 
     call change_time(8, 45)
@@ -194,7 +194,7 @@ label nurse_day3_morning:
     call run_menu(TimedMenu("nurse_day3_morning_choice_rich", [
         TimedMenuChoice("Go check the butler's room first", 'nurse_day3_morning_attic', early_exit=True, condition="not nurse_details.threads.is_unlocked('silverware_big')"),
         TimedMenuChoice("Get your things from your room and leave", 'nurse_day3_morning_room_nap', early_exit=True, condition="nurse_details.threads.is_unlocked('silverware_big')"),
-        TimedMenuChoice("Leave now, without wasting another second!{{intuition}}", 'nurse_day3_morning_leave', early_exit=True, condition="nurse_details.intuitions.is_unlocked('escape_at_night')"),
+        TimedMenuChoice("Leave now, without wasting another second!{{intuition}}", 'nurse_day3_morning_leave', early_exit=True, condition="nurse_details.endings.is_unlocked('escape_at_night')"),
     ]))
 
     return
@@ -208,15 +208,15 @@ label nurse_day3_morning_leave:
 
     I know I should prepare more before attempting the long journey back.
 
-    But a deep rooted fear prevents me from getting to my room.
+    But a deep-rooted fear prevents me from getting to my room.
 
-    No, I need to leave now, there is no time to waste.
+    No. I need to leave now — there is no time to waste.
     """
 
     if nurse_details.threads.is_unlocked('silverware_big'):
 
         """
-        Luckily, I have the valuables I've "found" with me in my bag.
+        At least I have the valuables I acquired with me in my bag.
         """
 
     """
@@ -244,7 +244,7 @@ label nurse_day3_morning_leave:
 
     There will be no prize. There was never going to be one.
 
-    I have understood that for some time now, and yet I stay.
+    I have understood that for some time now, and yet I stayed.
 
     The gate at the end of the drive. Eyes on that, and nothing else.
     """

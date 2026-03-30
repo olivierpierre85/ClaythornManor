@@ -252,6 +252,8 @@ label psychic_day2_evening_butler_room:
 
     captain """
     Not at all, I don't have much else to do anyway.
+
+    But I really don't think we will find her there.
     """
 
     $ change_room('attic_hallway', dissolve)
@@ -408,6 +410,8 @@ label psychic_day2_evening_butler_room:
 
     """
     He draws a revolver and levels it at her.
+
+    He acts with confidence, but I can see his hand shaking.
 
     Miss Marsh recoils, but does not move towards the door.
     """

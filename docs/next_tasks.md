@@ -21,8 +21,6 @@ Retest leaving endings
 ANd if not enough money, you just can't leave
 
 
-FUCK MUST REWRITE THE PSYCHIC pov => where captain shot a gun without showing fear (show that he felt force to do so, and that fighting a woman is easier than a man)
-
 - [ ] RETRY EVERYTHING - ADD TESTSTSSSSS
 
   - [ ] Sat evening

@@ -81,7 +81,7 @@ label nurse_day2_evening_billiard_room_captain_intro:
             'nurse_day2_evening_billiard_room_manning', 10),
 
         TimedMenuChoice(
-            "Reveal the staff other occupations{{observation}}",
+            "Reveal the staff's other occupations{{observation}}",
             'nurse_day2_evening_billiard_room_staff', 10,
             condition="nurse_details.threads.is_unlocked('maid_actress') and nurse_details.threads.is_unlocked('footman_actor')",
             linked_choice="nurse_day2_evening_billiard_room_confront"),
@@ -505,9 +505,9 @@ label nurse_day2_evening_billiard_room_war_stories:
     """
 
     captain """
-    Well my injuries were maybe so minor that they weren't reported.
+    Well, my injuries were perhaps so minor that they were not reported.
 
-    War is a messy business, not everything that happened can be recorded in history books.
+    War is a messy business. Not everything that happened can be recorded in history books.
 
     And the war was very short of course.
 
@@ -543,9 +543,9 @@ label nurse_day2_evening_billiard_room_confront:
 
 
     nurse """
-    I've learned at war that it's better to always be prepared.
+    I learnt during the war that it is better to always be prepared.
 
-    I never leave my house without it since.
+    I have never left my house without it since.
     """
 
     """
@@ -675,11 +675,11 @@ label nurse_day2_evening_billiard_room_confront:
     """
 
     nurse """
-    No, you don't understand, you have to take the gun, our lives depend on it.
+    No, you don't understand. You have to take the gun. Our lives depend on it.
 
-    And if you don't, then,...
+    And if you don't, then...
 
-    Then I shall make sure everyone in here know exactly what sort of man you are.
+    Then I shall make sure everyone in here knows exactly what sort of man you are.
     """
 
     """
@@ -691,9 +691,9 @@ label nurse_day2_evening_billiard_room_confront:
     """
 
     nurse """
-    Why not, after all, if you are an impostor, that makes you suspicious.
+    Why not? After all, if you are an impostor, that makes you suspicious.
 
-    Everyone deserve to know it.
+    Everyone deserves to know it.
     """
 
     """
@@ -758,7 +758,7 @@ label nurse_day2_evening_billiard_room_manning:
     captain """
     Not really.
 
-    They seem pretty natural to me, Miss Marsh.
+    They seem quite natural to me, Miss Marsh.
 
     Thomas Moody died of injuries he got during the war.
 
