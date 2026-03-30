@@ -97,9 +97,9 @@ label nurse_day2_evening_billiard_room_captain_intro:
             condition="nurse_details.threads.is_unlocked('captain_lie_zanzibar') and nurse_details.threads.is_unlocked('remember_doctor')"),
 
         TimedMenuChoice(
-            'Show him the loaded gun you found{{observation}} ',
+            'Show him the loaded gun you found{{object}} ',
             'nurse_day2_evening_billiard_room_confront', 10,
-            condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_confront') and nurse_details.saved_variables['captain_boxer_discussed'] and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')",
+            condition="nurse_details.saved_variables['captain_staff_discussed'] and nurse_details.saved_variables['captain_boxer_discussed'] and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')",
             early_exit=True),
 
         TimedMenuChoice(
@@ -552,7 +552,7 @@ label nurse_day2_evening_billiard_room_confront:
     I hope this lie is convincing enough.
     """
 
-    """
+    nurse """
     It is loaded.
 
     Two people are dead, Captain. The staff are impostors. Three of us were at the very same war twenty-four years ago.
@@ -654,11 +654,11 @@ label nurse_day2_evening_billiard_room_confront:
     I have never had to. And that is precisely the problem.
     """
 
-    """
-    The fire crackles.
+    # """
+    # The fire crackles.
 
-    I slip the revolver back into my coat.
-    """
+    # I slip the revolver back into my coat.
+    # """
 
     $ captain_details.description_hidden.unlock('lie')
 
@@ -675,7 +675,11 @@ label nurse_day2_evening_billiard_room_confront:
     """
 
     nurse """
-    And when we leave this house, I shall make sure the others know exactly what sort of man they have been dining with.
+    No, you don't understand, you have to take the gun, our lives depend on it.
+
+    And if you don't, then,...
+
+    Then I shall make sure everyone in here know exactly what sort of man you are.
     """
 
     """
@@ -687,7 +691,9 @@ label nurse_day2_evening_billiard_room_confront:
     """
 
     nurse """
-    Watch me.
+    Why not, after all, if you are an impostor, that makes you suspicious.
+
+    Everyone deserve to know it.
     """
 
     """
@@ -726,16 +732,12 @@ label nurse_day2_evening_billiard_room_confront:
     Blood splatters on Captain Sinha, who jumps back.
     """
 
-    captain """
-    Miss Marsh!
-    """
-
     play sound body_fall
 
     """
     I slip to the floor.
 
-    I keep hearing the Captain's voice, urgent, panicked, but the voice is getting softer.
+    I keep hearing the Captain's voice, but the voice is getting softer.
 
     Until I cannot make out the words.
     """

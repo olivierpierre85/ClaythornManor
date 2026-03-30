@@ -321,6 +321,8 @@ label nurse_day2_evening_steal_caught:
     I choose left. Or perhaps right. I am no longer sure.
     """
 
+    $ change_room("forest")
+
     """
     The trees press closer.
 
