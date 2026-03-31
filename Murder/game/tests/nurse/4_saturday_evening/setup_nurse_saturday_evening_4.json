@@ -1,0 +1,190 @@
+{
+    "start_label": "nurse_day2_evening",
+    "tester_id": "admin",
+    "timestamp": "2026-03-06T10:26:40.656201",
+    "unlocked_threads": [
+        "captain_lie_zanzibar",
+        "maid_actress",
+        "footman_actor",
+        "remember_doctor",
+        "take_gun",
+        "find_bullets"
+    ],
+    "choices": [
+        {
+            "menu": "nurse_day2_evening_dinner",
+            "other_choices": [
+                "Speak to Lady Claythorn",
+                "Say nothing, eat your dinner"
+            ],
+            "selected": "Say nothing, eat your dinner",
+            "redirect": "generic_cancel",
+            "time_left": 90,
+            "timestamp": "2026-03-31T15:20:10.207236",
+            "time_to_decide": 1.500945,
+            "time_since_last": 34.287068
+        },
+        {
+            "menu": "nurse_day2_evening_steal",
+            "other_choices": [
+                "Pocket some silverware discreetly",
+                "It is not worth the risk"
+            ],
+            "selected": "It is not worth the risk",
+            "redirect": "nurse_day2_evening_do_not_steal",
+            "time_left": 1,
+            "timestamp": "2026-03-31T15:20:11.876139",
+            "time_to_decide": 0.799553,
+            "time_since_last": 1.668903
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "other_choices": [
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Billiard room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Library",
+                "Portrait Gallery",
+                "Tea room",
+                "William the Conqueror Bedroom",
+                "Edward II Bedroom",
+                "George I Bedroom",
+                "Henry IV Bedroom",
+                "George IV Bedroom",
+                "Elizabeth I Bedroom",
+                "Storage Room",
+                "Male Servants Room",
+                "Female Servants Room",
+                "Butler's Room",
+                "Go to sleep",
+                "Richard III Bedroom"
+            ],
+            "selected": "Billiard room",
+            "redirect": "nurse_day2_evening_billiard_room",
+            "time_left": 90,
+            "timestamp": "2026-03-31T15:20:12.843792",
+            "time_to_decide": 6.604478,
+            "time_since_last": 0.967653
+        },
+        {
+            "menu": "nurse_day2_evening_billiard_room_menu",
+            "other_choices": [
+                "Go to the sideboard for a drink",
+                "Talk to Captain Sinha",
+                "Leave"
+            ],
+            "selected": "Go to the sideboard for a drink",
+            "redirect": "nurse_day2_evening_billiard_room_bar",
+            "time_left": 90,
+            "timestamp": "2026-03-31T15:20:19.815065",
+            "time_to_decide": 1.0036,
+            "time_since_last": 6.971273
+        },
+        {
+            "menu": "nurse_day2_evening_billiard_room_menu",
+            "other_choices": [
+                "Talk to Captain Sinha",
+                "Leave"
+            ],
+            "selected": "Talk to Captain Sinha",
+            "redirect": "nurse_day2_evening_billiard_room_captain_intro",
+            "time_left": 80,
+            "timestamp": "2026-03-31T15:20:20.932822",
+            "time_to_decide": 2.702349,
+            "time_since_last": 1.117757
+        },
+        {
+            "menu": "nurse_day2_evening_billiard_room_captain_menu",
+            "other_choices": [
+                "Talk about the deaths of Thomas Moody and Daniel Baldwin",
+                "Ask about the butler's key",
+                "Reveal the staff's other occupations{{observation}}",
+                "Tell him you were at the Boxer Rebellion too{{observation}}",
+                "Confront him about the \"inconsistencies\" in his stories{{observation}}",
+                "You don't have anything else to say to him"
+            ],
+            "selected": "Talk about the deaths of Thomas Moody and Daniel Baldwin",
+            "redirect": "nurse_day2_evening_billiard_room_manning",
+            "time_left": 80,
+            "timestamp": "2026-03-31T15:20:23.852901",
+            "time_to_decide": 1.403061,
+            "time_since_last": 2.920079
+        },
+        {
+            "menu": "nurse_day2_evening_billiard_room_captain_menu",
+            "other_choices": [
+                "Ask about the butler's key",
+                "Reveal the staff's other occupations{{observation}}",
+                "Tell him you were at the Boxer Rebellion too{{observation}}",
+                "Confront him about the \"inconsistencies\" in his stories{{observation}}",
+                "You don't have anything else to say to him"
+            ],
+            "selected": "Ask about the butler's key",
+            "redirect": "nurse_day2_evening_billiard_room_captain_key",
+            "time_left": 70,
+            "timestamp": "2026-03-31T15:20:25.753973",
+            "time_to_decide": 1.250853,
+            "time_since_last": 1.901072
+        },
+        {
+            "menu": "nurse_day2_evening_billiard_room_captain_menu",
+            "other_choices": [
+                "Reveal the staff's other occupations{{observation}}",
+                "Tell him you were at the Boxer Rebellion too{{observation}}",
+                "Confront him about the \"inconsistencies\" in his stories{{observation}}",
+                "You don't have anything else to say to him"
+            ],
+            "selected": "Reveal the staff's other occupations{{observation}}",
+            "redirect": "nurse_day2_evening_billiard_room_staff",
+            "time_left": 60,
+            "timestamp": "2026-03-31T15:20:27.372007",
+            "time_to_decide": 2.567977,
+            "time_since_last": 1.618034
+        },
+        {
+            "menu": "nurse_day2_evening_billiard_room_captain_menu",
+            "other_choices": [
+                "Tell him you were at the Boxer Rebellion too{{observation}}",
+                "Confront him about the \"inconsistencies\" in his stories{{observation}}",
+                "You don't have anything else to say to him"
+            ],
+            "selected": "Tell him you were at the Boxer Rebellion too{{observation}}",
+            "redirect": "nurse_day2_evening_billiard_room_boxer",
+            "time_left": 50,
+            "timestamp": "2026-03-31T15:20:30.490944",
+            "time_to_decide": 2.134716,
+            "time_since_last": 3.118937
+        },
+        {
+            "menu": "nurse_day2_evening_billiard_room_captain_menu",
+            "other_choices": [
+                "Confront him about the \"inconsistencies\" in his stories{{observation}}",
+                "Show him the loaded gun{{object}} ",
+                "You don't have anything else to say to him"
+            ],
+            "selected": "Confront him about the \"inconsistencies\" in his stories{{observation}}",
+            "redirect": "nurse_day2_evening_billiard_room_war_stories",
+            "time_left": 40,
+            "timestamp": "2026-03-31T15:20:34.293459",
+            "time_to_decide": 3.616791,
+            "time_since_last": 3.802515
+        },
+        {
+            "menu": "nurse_day2_evening_billiard_room_captain_menu",
+            "other_choices": [
+                "Show him the loaded gun{{object}} ",
+                "You don't have anything else to say to him"
+            ],
+            "selected": "Show him the loaded gun{{object}} ",
+            "redirect": "nurse_day2_evening_billiard_room_confront",
+            "time_left": 30,
+            "timestamp": "2026-03-31T15:20:38.563804",
+            "time_to_decide": 2.852419,
+            "time_since_last": 4.270345
+        }
+    ]
+}
