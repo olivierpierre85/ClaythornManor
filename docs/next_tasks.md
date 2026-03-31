@@ -8,16 +8,15 @@ Or just : Captain, Broken?
 
 Retest leaving endings
 
+LAST DAY REST
 =>>> Only one escape possible !!! Nurse dies exhausted on the road ? Maybe not very useful ending? If you were exhausted, you just can't escape, you are forced to nap?
 ANd if not enough money, you just can't leave
 
 
 - [ ] RETRY EVERYTHING - ADD TESTSTSSSSS
-
-nurse_day2_evening_bedroom_captain : NOT GOOD choice for key => REDO entirely
-
   - [ ] Sat evening
     - [ ] BUGGGGG TWO COUGH story WHEN DEAD => Fucking claude doubling everything (OR JUST when already exhausted)=> Move to your room first before you dead
+    - [ ] REBUILD EVERY setup (new choices)
   - [ ] Sunday TODO TEST
 
 

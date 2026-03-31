@@ -17,7 +17,7 @@ label nurse_day2_evening_billiard_room:
 
         $ nurse_day2_evening_billiard_room_menu = TimedMenu("nurse_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Go to the sideboard for a drink', 'nurse_day2_evening_billiard_room_bar', 10),
-            TimedMenuChoice('Talk to Captain Sinha', 'nurse_day2_evening_billiard_room_captain_intro', next_menu="nurse_day2_evening_billiard_room_captain_menu"),
+            TimedMenuChoice('Talk to Captain Sinha', 'nurse_day2_evening_billiard_room_captain_intro', keep_alive=True, next_menu="nurse_day2_evening_billiard_room_captain_menu"),
             TimedMenuChoice('Leave', 'generic_cancel', 0, keep_alive=True, early_exit=True),
         ])
 
@@ -55,23 +55,27 @@ label nurse_day2_evening_billiard_room_bar:
 
 label nurse_day2_evening_billiard_room_captain_intro:
 
-    captain """
-    Miss Marsh.
+    if not nurse_details.saved_variables.get("captain_intro_done"):
 
-    I thought everyone had retired.
-    """
+        $ nurse_details.saved_variables["captain_intro_done"] = True
 
-    nurse """
-    Not quite yet.
+        captain """
+        Miss Marsh.
 
-    There are a few things about this weekend that don't make sense to me.
-    """
+        I thought everyone had retired.
+        """
 
-    captain """
-    Oh?
+        nurse """
+        Not quite yet.
 
-    Such as?
-    """
+        There are a few things about this weekend that don't make sense to me.
+        """
+
+        captain """
+        Oh?
+
+        Such as?
+        """
 
     $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu(
         "nurse_day2_evening_billiard_room_captain_menu", [
@@ -82,7 +86,7 @@ label nurse_day2_evening_billiard_room_captain_intro:
             linked_choice="nurse_day2_evening_billiard_room_captain_key"),
 
         TimedMenuChoice(
-            'Ask about the butler\'s key?',
+            'Ask about the butler\'s key',
             'nurse_day2_evening_billiard_room_captain_key', 10,
             condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_captain_key') and not nurse_details.threads.is_unlocked('master_key')"),
 
@@ -890,7 +894,7 @@ label nurse_day2_evening_billiard_room_manning:
 label nurse_day2_evening_billiard_room_captain_key:
 
     nurse """
-    And I suppose you still have that key?
+    Do you still have the butler's key with you?
     """
 
     """

@@ -111,5 +111,6 @@ label nurse_config_progress:
                 {"label": "nurse_day3_afternoon", "threads": {'steal_cutlery_1': True, 'steal_cutlery_2': True, 'steal_pearls': True}},
                 {"label": "nurse_day3_afternoon", "threads": {'find_bullets': True, 'take_gun': True}},
                 {"label": "nurse_day3_afternoon", "threads": {'steal_cutlery_1': True, 'steal_cutlery_2': True, 'steal_pearls': True, 'take_gun': True, 'find_bullets': True}},
+                {"label": "nurse_day3_afternoon", "threads": {'silverware_big': True, 'steal_cutlery_1': True, 'steal_cutlery_2': True, 'steal_pearls': True, 'take_gun': True, 'find_bullets': True}},
             ],
         }
