@@ -143,102 +143,68 @@ It is not worth the risk.
 I do not feel ready to sleep just yet.
 The manor is quiet, but that is not the same as saying it is safe.
 Perhaps I ought to make a brief exploration before I retire.
-Map Choice: Library
-A well-appointed library.
-"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain" lies open on a table.
-I cast my eye along the shelves.
-Mostly heraldry, county histories, and bound journals.
-Nothing worth taking — far too heavy, and of no particular value.
-I am about to leave when a title catches my attention.
-"A History of the British Army" — Fortescue.
-Fourteen volumes.
-I have seen this set before, in the officers' mess at Netley.
-The Captain mentioned Zanzibar at some point, I remember.
-Something in the way he spoke of it nagged at me, though I could not quite place it at the time.
-I could try to learn more about that conflict, though it may take some time.
-Menu Choice: Look it up. It may be useful.
-I take down the volume covering the latter campaigns in India and East Africa.
-I find the index and look up Zanzibar.
-A single page.
-The engagement lasted thirty-eight minutes.
-The shortest war in recorded history, apparently.
-The British bombardment was overwhelming.
-Casualties on the British side were minimal — one man, lightly wounded.
-If what the Captain said is true, he would be the only injured soldier from the entire war.
-That seems most unlikely.
-He may well have invented the whole story — but to what end?
-Map Choice: Gun room
-The gun room.
-I am certain that I should not be here, so I made sure no one noticed me.
-Shotguns and hunting rifles line three walls, arranged on open racks.
-The smell of gun oil is sharp.
-Everything is laid out as though ready for use — nothing locked away.
-There are even a few small handguns lying on a table.
-It looks like something I could use.
-Menu Choice: Take a pistol
-My hand closes around the grip of a small revolver.
-It is not loaded.
-And I have not seen any bullets lying about.
-Nevertheless, it could prove useful.
-I slip it into my bag.
-Nobody will notice. Not for a while, at any rate.
-Map Choice: Female Servants Room
-The attic staircase creaks with every step.
-Up here, the air is close and smells of dust and old timber.
-The corridor runs the length of the house, doors on either side.
-With the servants all occupied below, there is no one to question what I am doing up here.
-The door is locked.
-But it would take me very little effort to open it.
-In my years of nursing, I have become acquainted with all manner of locks — on medicine cabinets, ward doors, and supply rooms.
-And I quickly realised how convenient it is to be able to open them all.
-That is why I learned to pick locks.
-A most useful skill.
-So, I easily make my way inside.
-It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
-On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company.
-A faded photograph is tucked behind them.
-I take the photograph down.
-A young woman in stage dress, posed with a man I do not recognise.
-She is smiling broadly. I recognise the young maid working here.
-So she is, or was, an aspiring actress.
-How peculiar for her to end up here.
-I wonder what her story is.
-I replace everything as it was and step back out.
-A cough comes to me, a strong one.
-I reach for my handkerchief to cover my mouth.
-It is followed by a second.
-It should not come as a surprise; I haven't rested as much as I ought to.
-The only sane thing to do now is to go to bed.
-If I don't, God knows what could happen.
-Map Choice: Male Servants Room
-The door is locked.
-I easily make my way inside.
-Two beds, a chest of drawers, a peg for each man's jacket.
-I check the drawers quickly — folded shirts, a penknife, a few coins.
-No valuables here.
-Tucked at the very back of the bottom drawer, beneath folded shirts, I find a letter.
-It is from a theatre company in London — a rejection, politely worded but unmistakable.
-"We regret to inform you that the role has been filled. We wish you every success in your future endeavours."
-An actor. Playing at being a servant.
-But why would he stay so far from a theatre?
-That is rather suspicious.
-I fold the letter and replace it exactly as I found it.
-Two actors in the same household, so far from any major city.
-That cannot be a coincidence.
-A cough takes me without warning.
-Harder than the ones before.
-I press my handkerchief to my lips.
-A second.
-My knees feel uncertain beneath me.
-I find the wall and lean against it.
-A third, and I cannot check it.
-I sink down.
-The handkerchief, when I pull it away, tells me everything I already knew.
-The floor is very cold.
-I cannot seem to rise.
-You pushed yourself beyond the limits of your endurance.
-The illness that has been shadowing your every step finally claimed its due.
-There was no one to hear your final, desperate cough.
-No one to offer a glass of water, or a steadying hand.
-In the cold silence of the night, you were simply too tired to go on.
-Perhaps if you had managed your strength from the start, the outcome might have been different.
+Map Choice: Tea room
+The room is empty.
+The fire has burned low.
+I sit for a moment but find no comfort in it.
+I shall try elsewhere.
+Map Choice: Entrance Hall
+The great hall is very quiet.
+The place where Doctor Baldwin was carried in is no different from any other part of the floor.
+And yet I cannot quite look at it without thinking of him.
+I move on.
+Map Choice: William the Conqueror Bedroom
+I approach Mr Harring's room and knock gently.
+There is no reply, but I can hear the sound of heavy furniture being dragged across the floorboards.
+It seems he is barricading himself inside.
+Under the circumstances, I suppose I cannot blame him.
+Map Choice: Edward II Bedroom
+The door to Doctor Baldwin's room stands open.
+I step inside, and the stillness of the room is immediate.
+He lies on the bed, just as they left him after the tragedy.
+It feels wrong to be here, in the presence of a colleague who has met such a sudden end.
+There is nothing a nurse can do for him now.
+I shall leave him to his rest.
+Map Choice: Elizabeth I Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+Amelia Baxter: Yes? Who is there?
+Rosalind Marsh: Miss Marsh.
+Rosalind Marsh: I only wished to enquire whether you were quite all right.
+Amelia Baxter: Oh, Miss Marsh. You are very kind to ask.
+Amelia Baxter: But I am quite exhausted, if I am perfectly honest.
+Amelia Baxter: I really just wish to sleep now.
+Rosalind Marsh: Of course.
+Rosalind Marsh: I shall not keep you. We shall both feel better in the morning.
+Amelia Baxter: Indeed.
+Amelia Baxter: Good night, Miss Marsh.
+Rosalind Marsh: Good night.
+Map Choice: Richard III Bedroom
+Mr Moody's room.
+His body settled on the bed, hidden underneath the bed sheets.
+One could be easily frightened, but I am used to this.
+Usually, a dead body doesn't cause me anguish, only respect and sadness.
+And yet here I am, with the purpose of stealing from a man who can't defend himself anymore.
+I should feel bad, but I know I need the money more than he does now.
+So I start looking.
+But the bounty is meager.
+Nothing on the dressing table.
+A small case with his clothes under the bed.
+That's it.
+I could also search his body, but that would be going too far, even for me.
+I close the door softly and leave.
+Map Choice: George IV Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+Samuel Manning: Hmm... urrh...
+He is quite beyond rational conversation.
+I step back.
+There is nothing to be done for him tonight.
+A cough catches me by surprise.
+I stop and press a hand against the wall until it passes.
+When it does, I become suddenly aware of how late it must be.
+I have been wandering this house for too long.
+That was not wise of me.
+There are some indulgences I cannot afford, and pushing myself through the small hours of the night is one of them.
+I shall not press my luck further tonight.
+I return to my room and lock the door behind me.
+It has been a long day.
+It is time to sleep.
