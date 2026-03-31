@@ -19,6 +19,8 @@ ANd if not enough money, you just can't leave
     - [ ] REBUILD EVERY setup (new choices)
   - [ ] Sunday TODO TEST
 
+Important, test all endings are reachables with current time values, and that they make sense (specifically Search for bullets)
+
 
 # Write story captain
 

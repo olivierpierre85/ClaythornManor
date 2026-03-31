@@ -226,13 +226,13 @@ label nurse_day2_evening:
             play sound woman_cough
 
             """
-            A cough catches me in the corridor.
+            A cough catches me by surprise.
 
             I stop and press a hand against the wall until it passes.
 
             When it does, I become suddenly aware of how late it must be.
 
-            I have been wandering this house for the better part of an hour.
+            I have been wandering this house for too long.
 
             That was not wise of me.
 
@@ -242,13 +242,15 @@ label nurse_day2_evening:
             """
 
     """
-    It is time to sleep.
-
     I return to my room and lock the door behind me.
+    """
 
+    $ change_room("bedroom_nurse", dissolve)
+
+    """
     It has been a long day.
-
-    I need to rest.
+    
+    It is time to sleep.
     """
 
     $ stop_music()
