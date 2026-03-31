@@ -72,13 +72,15 @@ label nurse_config_progress:
             'saturday_morning': [
                 {"label": "nurse_day2_morning", "threads": {}},
                 {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': True}},
+                {"label": "nurse_day2_morning", "threads": {'steal_cutlery_1': True}},
                 {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': True, 'remember_doctor': True}},
+                {"label": "nurse_day2_morning", "threads": {'day1_exhaustion': True, 'remember_doctor': True, 'steal_cutlery_1': True}},
             ],
             'saturday_afternoon': [
                 {"label": "nurse_day2_hunt", "threads": {}},
-                {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': True}},
-                {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': True, 'remember_doctor': True, 'steal_cutlery_1': True, 'steal_cutlery_2': True, 'take_gun': True}},
-                {"label": "nurse_day2_hunt", "threads": {'day1_exhaustion': True, 'remember_doctor': True, 'steal_cutlery_1': True}},
+                {"label": "nurse_day2_hunt", "threads": {'steal_cutlery_1': True}},
+                {"label": "nurse_day2_hunt", "threads": {'steal_cutlery_2': True}},
+                {"label": "nurse_day2_hunt", "threads": {'steal_cutlery_1': True, 'steal_cutlery_2': True}},
             ],
             'saturday_evening': [
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': False}},
@@ -106,6 +108,7 @@ label nurse_config_progress:
             ],
             'sunday_afternoon': [
                 {"label": "nurse_day3_afternoon", "threads": {}},
+                {"label": "nurse_day3_afternoon", "threads": {'steal_cutlery_1': True, 'steal_cutlery_2': True, 'steal_pearls': True}},
                 {"label": "nurse_day3_afternoon", "threads": {'find_bullets': True, 'take_gun': True}},
                 {"label": "nurse_day3_afternoon", "threads": {'steal_cutlery_1': True, 'steal_cutlery_2': True, 'steal_pearls': True, 'take_gun': True, 'find_bullets': True}},
             ],

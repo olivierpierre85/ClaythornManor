@@ -1,9 +1,7 @@
 <!-- # cSpell:disable -->
 BUG => FULL_TESTINGMODE, if doing a restart, then missing menu???
 
-n Can you make sure that the tests checkpoints for nurse cover all the possible unlocked threads when starting a new chapter? I need to be able to reach every dialogs from the list of checkpoints for a 
-
-IDIOT !!!!!!! THERE IS NO NUMBER ONe in the infocard => YOU added the I of intuition, that is reserved for endings. CORRECT EVERYTHING => PUT BACK THE I???? OR NOT
+Can you make sure that the tests checkpoints for nurse cover all the possible unlocked threads when starting a new chapter? I need to be able to reach every dialogs from the list of checkpoints for a character. You can use the chapter_relevant to know where the thread are used.
 
 
 EVery story but the lad, a memory on the train? 
