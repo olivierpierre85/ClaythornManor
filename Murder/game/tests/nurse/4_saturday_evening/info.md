@@ -12,3 +12,40 @@
 - **Dinner**: Don't speak at all
 - **Steal**: Yes
 - **Map**: Lady CLaythorn (Steal), Sushil Sinha (find key), butler's room (open cabinet), Rosalind Marsh (Sleep)
+
+---
+
+## File 4 (captain_lie_zanzibar & maid_actress & footman_actor & remember_doctor & take_gun & find_bullets)
+Covers: captain_lie_zanzibar inner monologue, "do not steal" path, full billiard room conversation, billiard room death ending.
+- **Dinner**: Don't speak at all
+- **Steal**: Do not steal
+- **Map**: Billiard room
+  - Go to the sideboard for a drink
+  - Talk to Captain Sinha
+    - Talk about the deaths of Thomas Moody and Daniel Baldwin
+    - Ask about the butler's key (revealed after deaths topic)
+    - Reveal the staff's other occupations
+    - Tell him you were at the Boxer Rebellion too
+    - Confront him about the "inconsistencies" in his stories
+    - Show him the loaded gun
+- **Ending**: Billiard room death
+
+## File 5 (no special threads)
+Covers: most map rooms, day2_exhaustion branch (time runs out without day1_exhaustion).
+- **Dinner**: Don't speak at all
+- **Steal**: Do not steal
+- **Map**: Tea room, Entrance Hall, William the Conqueror Bedroom (lad), Edward II Bedroom (doctor), Elizabeth I Bedroom (psychic), Richard III Bedroom (broken), George IV Bedroom (drunk) — 90 min total
+- **Ending**: day2_exhaustion cough warning, then sleep
+
+## File 6 (remember_doctor & day1_exhaustion)
+Covers: library first visit + war book (unlocks captain_lie_zanzibar), gun room first visit + take pistol (no bullets yet), attic females room (unlocks maid_actress), attic males room (unlocks footman_actor + two_actors_realisation), mid-map exhaustion warning, exhaustion death.
+- **Dinner**: Don't speak at all
+- **Steal**: Do not steal
+- **Map**: Library (look it up), Gun room (take a pistol), Female Servants Room, Male Servants Room — 90 min total
+- **Ending**: Dead of exhaustion (day1 + day2 combined)
+
+## File 7 (steal_cutlery_1 & steal_cutlery_2 & steal_pearls)
+Covers: steal caught scene with pearls variant (minor variant of File 2).
+- **Dinner**: Don't speak at all
+- **Steal**: Steal — caught, pearls also found in room search
+- **Ending**: Survive while leaving in the night, but poor.

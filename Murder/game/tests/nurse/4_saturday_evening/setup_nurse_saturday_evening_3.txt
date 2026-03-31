@@ -246,7 +246,6 @@ This changes everything.
 This might actually be enough.
 Enough to matter.
 Map Choice: Go to sleep
-It is time to sleep.
 I return to my room and lock the door behind me.
 It has been a long day.
-I need to rest.
+It is time to sleep.
