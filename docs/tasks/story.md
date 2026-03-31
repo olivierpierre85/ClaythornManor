@@ -132,6 +132,8 @@ Then he wakes up and is on the train. Far from the expectations her mother set f
 
 ### Ideas to think over (optional)
 
+- Expands story about his noble upbringing in generic dialogs.
+
 
 ## Host
 

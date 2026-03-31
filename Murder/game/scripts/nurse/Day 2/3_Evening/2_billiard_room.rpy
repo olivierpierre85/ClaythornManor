@@ -78,7 +78,13 @@ label nurse_day2_evening_billiard_room_captain_intro:
 
         TimedMenuChoice(
             'Talk about the deaths of Thomas Moody and Daniel Baldwin',
-            'nurse_day2_evening_billiard_room_manning', 10),
+            'nurse_day2_evening_billiard_room_manning', 10,
+            linked_choice="nurse_day2_evening_billiard_room_captain_key"),
+
+        TimedMenuChoice(
+            'Ask about the butler\'s key?',
+            'nurse_day2_evening_billiard_room_captain_key', 10,
+            condition="is_linked_choice_hidden('nurse_day2_evening_billiard_room_captain_menu', 'nurse_day2_evening_billiard_room_captain_key') and not nurse_details.threads.is_unlocked('master_key')"),
 
         TimedMenuChoice(
             "Reveal the staff's other occupations{{observation}}",
@@ -97,7 +103,7 @@ label nurse_day2_evening_billiard_room_captain_intro:
             condition="nurse_details.threads.is_unlocked('captain_lie_zanzibar') and nurse_details.threads.is_unlocked('remember_doctor')"),
 
         TimedMenuChoice(
-            'Show him the loaded gun you found{{object}} ',
+            'Show him the loaded gun{{object}} ',
             'nurse_day2_evening_billiard_room_confront', 10,
             condition="nurse_details.saved_variables['captain_staff_discussed'] and nurse_details.saved_variables['captain_boxer_discussed'] and nurse_details.threads.is_unlocked('take_gun') and nurse_details.threads.is_unlocked('find_bullets')",
             early_exit=True),
@@ -128,11 +134,33 @@ label nurse_day2_evening_billiard_room_suspicions:
         """
 
         captain """
+        I confess it is difficult to dismiss entirely.
+
+        And yet, taken separately, each element has a reasonable explanation.
+
+        Actors find their way into service when times are lean. 
+        
+        Three of us crossing paths in a war is not so remarkable.
+        
+        Especially since I believe most of us were invited for something related to our role in a conflict.
+
+        And two deaths, both apparently accidental...
+        """
+
+        """
+        He trails off. Stares into his glass.
+
+        Then he sets it down deliberately.
+        """
+
+        captain """
+        No.
+
         I am inclined to agree.
 
-        Something is happening here.
+        The sum of it is harder to explain away.
 
-        There is a great chance that this weekend is not what it appears to be.
+        There is a real possibility that this weekend is not what it appears to be.
         """
 
         nurse """
@@ -194,6 +222,8 @@ label nurse_day2_evening_billiard_room_suspicions:
         """
 
         captain """
+        You mean threaten him?
+
         That would be unwise.
 
         And more than a little dangerous.
@@ -261,7 +291,7 @@ label nurse_day2_evening_billiard_room_staff:
     """
 
     """
-    I should be careful here. I cannot very well say I went searching their rooms.
+    I should be careful here. I cannot say I went searching their rooms.
     """
 
     nurse """
@@ -336,7 +366,7 @@ label nurse_day2_evening_billiard_room_boxer:
     nurse """
     I was there too, you know.
 
-    As a nurse, attached to the field hospital at Tientsin before the column set out for Peking.
+    As a nurse, attached to the field hospital.
     """
 
     """
@@ -375,6 +405,34 @@ label nurse_day2_evening_billiard_room_boxer:
     But I never made the connection. It is not as though we were in the same circles.
 
     This is very strange.
+    """
+
+    """
+    He is quiet.
+
+    The fire crackles between us.
+    """
+
+    nurse """
+    I thought so too, at first.
+
+    A coincidence. Three people who happened to be in the same country at the same time, twenty-four years ago.
+
+    But then the doctor died.
+    """
+
+    captain """
+    You are saying his death changes things.
+    """
+
+    nurse """
+    I am saying I cannot stop thinking about it.
+
+    If there is something behind it — if the connection means something — then the question becomes: are we the only ones?
+    """
+
+    captain """
+    You think there may be others here.
     """
 
     nurse """
@@ -428,6 +486,8 @@ label nurse_day2_evening_billiard_room_boxer:
     """
 
     $ nurse_details.saved_variables["captain_boxer_discussed"] = True
+
+    call nurse_day2_evening_billiard_room_suspicions
 
     return
 
@@ -509,13 +569,11 @@ label nurse_day2_evening_billiard_room_war_stories:
 
     War is a messy business. Not everything that happened can be recorded in history books.
 
-    And the war was very short of course.
+    But I must admit I might have been carried away with my description.
 
-    I might have embellished its retelling.
+    You see, a good story does not simply recount the facts.
 
-    But it is just that I like to tell good stories.
-
-    Every good storyteller does it, Miss Marsh.
+    Perhaps I lent mine a little colour. That is not the same as dishonesty.
     """
 
     """
@@ -532,13 +590,17 @@ label nurse_day2_evening_billiard_room_war_stories:
 label nurse_day2_evening_billiard_room_confront:
 
     """
-    I reach into my coat and produce the revolver.
+    I reach into my coat and produce the revolver I got from the gun room.
 
     Captain Sinha looks at me astonished.
     """
 
     captain """
     Miss Marsh, how on earth do you have this with you?
+    """
+
+    """
+    Again, it's probably best to not tell the truth.
     """
 
 
@@ -649,20 +711,21 @@ label nurse_day2_evening_billiard_room_confront:
 
     I would not know how.
 
-    And I think, if it came to it, I could not pull the trigger.
+    I could perhaps use a gun in self-defence.
 
-    I have never had to. And that is precisely the problem.
+    But not in cold blood. Not like this.
+
+    If it came to it, I don't know that I could pull the trigger.
+
+    I have never had to.
     """
 
-    # """
-    # The fire crackles.
-
-    # I slip the revolver back into my coat.
-    # """
 
     $ captain_details.description_hidden.unlock('lie')
 
     nurse """
+    I see.
+
     Then you are a fraud.
 
     Every word. Every story. Every medal you claim to have earned.
@@ -720,16 +783,22 @@ label nurse_day2_evening_billiard_room_confront:
     Captain, stop!
     """
 
+    """
+    He is shaking me, and I cannot get out of his grip.
+    """
+
     play sound woman_cough
 
     """
-    The cough comes from nowhere.
+    A cough comes.
 
     It comes the way it always comes when I have pushed too far — sudden, total, unstoppable.
 
     I feel instantly that it is stronger than other times.
 
-    Blood splatters on Captain Sinha, who jumps back.
+    Blood splatters on Captain Sinha, who lets me go and jumps back.
+
+    My legs are weak.
     """
 
     play sound body_fall
@@ -768,7 +837,9 @@ label nurse_day2_evening_billiard_room_manning:
     """
 
     """
-    Well, I can't really argue against that.
+    He looks at me intently as he is saying those words.
+
+    Could it be that he found out about my condition?
     """
 
     nurse """
@@ -780,9 +851,9 @@ label nurse_day2_evening_billiard_room_manning:
 
     Manning was drunk and careless with a firearm.
 
-    Sadly, this type of accident is not rare at all.
+    Sadly, this type of tragic event is not rare at all.
 
-    A hunt is still a dangerous business.
+    Although some people treat it as a light form of entertainment, a hunt is a dangerous business.
     """
 
     nurse """
@@ -813,49 +884,70 @@ label nurse_day2_evening_billiard_room_manning:
         Especially since I am now in possession of that key.
         """
 
-    else:
+    return
 
-        """
-        And I suppose you still have that key?
-        """
 
-        captain """
-        Of course.
+label nurse_day2_evening_billiard_room_captain_key:
 
-        It is still right here with me.
-        """
+    nurse """
+    And I suppose you still have that key?
+    """
 
-        """
-        He reaches into his jacket pocket.
+    """
+    He sets down his glass and regards me steadily.
+    """
 
-        Then stops.
+    captain """
+    Why do you ask?
+    """
 
-        His hand comes out empty.
-        """
+    nurse """
+    Just to reassure myself.
+    
+    I won't be able to sleep if I am not absolutely sure that Samuel Manning is properly locked in his room, with no way of escaping.
+    """
 
-        captain """
-        Blast.
+    """
+    He holds my gaze for a moment, then seems to decide the question is reasonable enough.
+    """
 
-        I had it earlier, but it is in my hunting coat.
+    captain """
+    Of course.
 
-        Upstairs, in my room.
+    It is still right here with me.
+    """
 
-        I changed for dinner and left it in the pocket.
-        """
+    """
+    He reaches into his jacket pocket.
 
-        nurse """
-        I see.
-        """
+    Then stops.
 
-        captain """
-        You shouldn't worry, I still locked my room with my regular key.
+    His hand comes out empty.
+    """
 
-        It is safe there.
-        """
+    captain """
+    Blast.
 
-        nurse """
-        Good.
-        """
+    I had it earlier, but it is in my hunting coat.
+
+    Upstairs, in my room.
+
+    I changed for dinner and left it in the pocket.
+    """
+
+    nurse """
+    I see.
+    """
+
+    captain """
+    You shouldn't worry, I still locked my room with my regular key.
+
+    It is safe there.
+    """
+
+    nurse """
+    Good.
+    """
 
     return
 

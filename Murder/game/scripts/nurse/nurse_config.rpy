@@ -183,7 +183,7 @@ label init_nurse:
                 content_negative="You did not open the butler's silverware cabinet",
                 image_file="silverware_big",
                 chapters=['saturday_evening', 'sunday_morning'],
-                relevant_chapters=['saturday_evening', 'sunday_morning'],
+                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon'],
             ),
         ])
 
