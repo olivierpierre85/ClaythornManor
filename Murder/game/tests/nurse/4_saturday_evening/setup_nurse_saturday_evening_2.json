@@ -16,9 +16,9 @@
             "selected": "Say nothing, eat your dinner",
             "redirect": "generic_cancel",
             "time_left": 90,
-            "timestamp": "2026-03-31T15:28:21.040996",
-            "time_to_decide": 1.100876,
-            "time_since_last": 11.266683
+            "timestamp": "2026-03-31T15:45:23.807637",
+            "time_to_decide": 0.601249,
+            "time_since_last": 17.237575
         },
         {
             "menu": "nurse_day2_evening_steal",
@@ -29,9 +29,9 @@
             "selected": "It is not worth the risk",
             "redirect": "nurse_day2_evening_do_not_steal",
             "time_left": 1,
-            "timestamp": "2026-03-31T15:28:22.292500",
-            "time_to_decide": 0.433235,
-            "time_since_last": 1.251504
+            "timestamp": "2026-03-31T15:45:24.592246",
+            "time_to_decide": 0.784023,
+            "time_since_last": 0.784609
         },
         {
             "menu": "nurse_day2_evening_map_menu",
@@ -60,25 +60,12 @@
                 "Go to sleep",
                 "Richard III Bedroom"
             ],
-            "selected": "Library",
-            "redirect": "nurse_day2_evening_library",
+            "selected": "Dining Room",
+            "redirect": "nurse_day2_evening_dining_room",
             "time_left": 90,
-            "timestamp": "2026-03-31T15:28:22.926181",
-            "time_to_decide": 3.26995,
-            "time_since_last": 0.633681
-        },
-        {
-            "menu": "nurse_library_choice",
-            "other_choices": [
-                "Look it up. It may be useful.",
-                "Leave it. I am too tired for reading."
-            ],
-            "selected": "Look it up. It may be useful.",
-            "redirect": "nurse_library_war_book",
-            "time_left": 90,
-            "timestamp": "2026-03-31T15:28:26.696017",
-            "time_to_decide": 0.650396,
-            "time_since_last": 3.769836
+            "timestamp": "2026-03-31T15:45:25.559919",
+            "time_to_decide": 3.439322,
+            "time_since_last": 0.967673
         },
         {
             "menu": "nurse_day2_evening_map_menu",
@@ -88,9 +75,41 @@
                 "Garage",
                 "Gun room",
                 "Billiard room",
-                "Dining Room",
                 "Garden",
                 "Entrance Hall",
+                "Library",
+                "Portrait Gallery",
+                "Tea room",
+                "William the Conqueror Bedroom",
+                "Edward II Bedroom",
+                "George I Bedroom",
+                "Henry IV Bedroom",
+                "George IV Bedroom",
+                "Elizabeth I Bedroom",
+                "Storage Room",
+                "Male Servants Room",
+                "Female Servants Room",
+                "Butler's Room",
+                "Go to sleep",
+                "Richard III Bedroom"
+            ],
+            "selected": "Garden",
+            "redirect": "nurse_day2_evening_garden",
+            "time_left": 80,
+            "timestamp": "2026-03-31T15:45:30.947588",
+            "time_to_decide": 1.434727,
+            "time_since_last": 5.387669
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "other_choices": [
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Gun room",
+                "Billiard room",
+                "Entrance Hall",
+                "Library",
                 "Portrait Gallery",
                 "Tea room",
                 "William the Conqueror Bedroom",
@@ -108,10 +127,10 @@
             ],
             "selected": "Gun room",
             "redirect": "nurse_day2_evening_gun_room",
-            "time_left": 60,
-            "timestamp": "2026-03-31T15:28:27.612546",
-            "time_to_decide": 9.141444,
-            "time_since_last": 0.916529
+            "time_left": 70,
+            "timestamp": "2026-03-31T15:45:33.099159",
+            "time_to_decide": 25.871513,
+            "time_since_last": 2.151571
         },
         {
             "menu": "nurse_gun_room_choice",
@@ -121,10 +140,10 @@
             ],
             "selected": "Take a pistol",
             "redirect": "nurse_take_gun",
-            "time_left": 60,
-            "timestamp": "2026-03-31T15:28:37.003972",
-            "time_to_decide": 0.67948,
-            "time_since_last": 9.391426
+            "time_left": 70,
+            "timestamp": "2026-03-31T15:45:59.253668",
+            "time_to_decide": 0.833655,
+            "time_since_last": 26.154509
         },
         {
             "menu": "nurse_day2_evening_map_menu",
@@ -133,9 +152,8 @@
                 "Scullery",
                 "Garage",
                 "Billiard room",
-                "Dining Room",
-                "Garden",
                 "Entrance Hall",
+                "Library",
                 "Portrait Gallery",
                 "Tea room",
                 "William the Conqueror Bedroom",
@@ -153,10 +171,10 @@
             ],
             "selected": "Female Servants Room",
             "redirect": "nurse_day2_evening_attic_females_room",
-            "time_left": 40,
-            "timestamp": "2026-03-31T15:28:37.871691",
-            "time_to_decide": 5.242677,
-            "time_since_last": 0.867719
+            "time_left": 50,
+            "timestamp": "2026-03-31T15:46:00.286853",
+            "time_to_decide": 4.791583,
+            "time_since_last": 1.033185
         },
         {
             "menu": "nurse_day2_evening_map_menu",
@@ -165,9 +183,8 @@
                 "Scullery",
                 "Garage",
                 "Billiard room",
-                "Dining Room",
-                "Garden",
                 "Entrance Hall",
+                "Library",
                 "Portrait Gallery",
                 "Tea room",
                 "William the Conqueror Bedroom",
@@ -184,10 +201,52 @@
             ],
             "selected": "Male Servants Room",
             "redirect": "nurse_day2_evening_attic_males_room",
-            "time_left": 20,
-            "timestamp": "2026-03-31T15:28:43.725930",
-            "time_to_decide": 1.935486,
-            "time_since_last": 5.854239
+            "time_left": 30,
+            "timestamp": "2026-03-31T15:46:05.691954",
+            "time_to_decide": 0.601314,
+            "time_since_last": 5.405101
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "other_choices": [
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Billiard room",
+                "Entrance Hall",
+                "Library",
+                "Portrait Gallery",
+                "Tea room",
+                "William the Conqueror Bedroom",
+                "Edward II Bedroom",
+                "George I Bedroom",
+                "Henry IV Bedroom",
+                "George IV Bedroom",
+                "Elizabeth I Bedroom",
+                "Storage Room",
+                "Butler's Room",
+                "Go to sleep",
+                "Richard III Bedroom"
+            ],
+            "selected": "Library",
+            "redirect": "nurse_day2_evening_library",
+            "time_left": 10,
+            "timestamp": "2026-03-31T15:46:06.643283",
+            "time_to_decide": 82.200246,
+            "time_since_last": 0.951329
+        },
+        {
+            "menu": "nurse_library_choice",
+            "other_choices": [
+                "Look it up. It may be useful.",
+                "Leave it. I am too tired for reading."
+            ],
+            "selected": "Look it up. It may be useful.",
+            "redirect": "nurse_library_war_book",
+            "time_left": 10,
+            "timestamp": "2026-03-31T15:47:30.246290",
+            "time_to_decide": 0.896012,
+            "time_since_last": 83.603007
         }
     ]
 }

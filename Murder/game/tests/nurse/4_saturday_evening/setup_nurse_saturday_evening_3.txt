@@ -144,11 +144,6 @@ Nobody seems to notice.
 I do not feel ready to sleep just yet.
 The manor is quiet, but that is not the same as saying it is safe.
 Perhaps I ought to make a brief exploration before I retire.
-Map Choice: Kitchen
-I ease the door open just enough to look inside.
-The kitchen is a hive of activity.
-The staff are busy cleaning after the evening meal.
-I withdraw before anyone notices my presence.
 Map Choice: Henry IV Bedroom
 Rosalind Marsh: Hello? Is anyone there?
 No answer.
@@ -245,6 +240,50 @@ Then I close the cabinet and step back.
 This changes everything.
 This might actually be enough.
 Enough to matter.
+Map Choice: Portrait Gallery
+The gallery is lit only by a single lamp at the far end.
+The portraits watch me in silence.
+Map Choice: Billiard room
+A single lamp burns at the far end of the room.
+Captain Sinha is alone on a chair, reading.
+He turns as I enter, but does not seem surprised to see me.
+Menu Choice: Talk to Captain Sinha
+Sushil Sinha: Miss Marsh.
+Sushil Sinha: I thought everyone had retired.
+Rosalind Marsh: Not quite yet.
+Rosalind Marsh: There are a few things about this weekend that don't make sense to me.
+Sushil Sinha: Oh?
+Sushil Sinha: Such as?
+Menu Choice: Talk about the deaths of Thomas Moody and Daniel Baldwin
+Rosalind Marsh: We've witnessed two deaths in as many days.
+Rosalind Marsh: Doesn't it seem strange to you?
+Sushil Sinha: Not really.
+Sushil Sinha: They seem quite natural to me, Miss Marsh.
+Sushil Sinha: Thomas Moody died of injuries he got during the war.
+Sushil Sinha: Even if you thought he was fine, he might have been suffering in silence.
+Sushil Sinha: Some people prefer to hide their distress from the people around them.
+He looks at me intently as he is saying those words.
+Could it be that he found out about my condition?
+Rosalind Marsh: But for Doctor Baldwin?
+Sushil Sinha: A dreadful accident, Miss Marsh.
+Sushil Sinha: Manning was drunk and careless with a firearm.
+Sushil Sinha: Sadly, this type of tragic event is not rare at all.
+Sushil Sinha: Although some people treat it as a light form of entertainment, a hunt is a dangerous business.
+Rosalind Marsh: Perhaps you are right.
+Rosalind Marsh: Still, I confess I am uneasy knowing Samuel Manning is just upstairs.
+Rosalind Marsh: A few steps from my own room.
+Rosalind Marsh: Are we sure he cannot get out?
+Sushil Sinha: Quite sure.
+Sushil Sinha: I locked the door myself, with the key the butler gave me.
+Sushil Sinha: The doors in this house are solid oak. He is going nowhere.
+Rosalind Marsh: That is reassuring.
+Especially since I am now in possession of that key.
+Menu Choice: You don't have anything else to say to him
+Menu Choice: Leave
+Map Choice: Billiard room
+The Captain is still here.
+He glances up as I enter and raises his glass slightly.
+Menu Choice: Leave
 Map Choice: Go to sleep
 I return to my room and lock the door behind me.
 It has been a long day.
