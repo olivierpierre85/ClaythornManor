@@ -206,6 +206,11 @@ init python in test:
                     renpy.store.all_menus.clear()
                     renpy.store.all_choices.clear()
 
+                    # Fix: Reset menu level and choice state
+                    renpy.store.menu_level = -1
+                    renpy.store.selected_choice = [None, None, None, None, None]
+                    renpy.store.time_diff = [None, None, None, None, None]
+
                     while renpy.exports.call_stack_depth() > 0:
                         renpy.exports.pop_call()
                 
