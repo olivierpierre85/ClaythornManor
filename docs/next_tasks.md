@@ -6,19 +6,10 @@ Or just : Captain, Broken?
 
 ## Write nurseStory : Full
 
-Retest leaving endings
+Test Nurse manually to get a feel
 
-LAST DAY REST
-Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies exhausted on the road ? Maybe not very useful ending? If you were exhausted, you just can't escape, you are forced to nap? ANd if not enough money, you just can't leave. That would remove Escape and die exhausted, and escape poor? Or delete just escape poor?
+Read full report in detail
 
-
-- [ ] RETRY EVERYTHING - ADD TESTSTSSSSS
-  - [ ] Sat evening
-    - [ ] BUGGGGG TWO COUGH story WHEN DEAD => Fucking claude doubling everything (OR JUST when already exhausted)=> Move to your room first before you dead
-    - [ ] REBUILD EVERY setup (new choices)
-  - [ ] Sunday TODO TEST
-
-Important, test all endings are reachables with current time values, and that they make sense (specifically Search for bullets)
 
 
 # Write story captain

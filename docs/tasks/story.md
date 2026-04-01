@@ -96,21 +96,16 @@
 
 ### Important
 
-- [ ] Add **Stealing mechanic** with a value count. Ex:
-  - Candelabra : 5 pounds
-  - Cuttlery : 2 pounds
-  - When reach I don't know 100 pounds => I have enough to finish my life in peace, I am out of here. Or I have enough to live in the south of France to cure my turbeculosis? See Backstory
-- [ ] **Chase mechanic** path (Hide in scullery).
-- [ ] **Chase mechanic** path (Hide in scullery).
-- [ ] SHE KNOWS there is no money ? write Path to discover that => Inside Lady CLaythorn room!!!!!!
-- [ ] Unlocks Captain by finding "holes" in his many speeches, you have to navigate multiple dialogs to unlock that
 
 ### Ideas to think over (optional)
 
-- MONEY COUNTER?? Like if I had 500 pounds, I'll be fine. Then you add a money counter Below her name? With only possible to reach it if you open the butler box and have already a few thingss
-The nurse path allows to unlock objects of value. Can you try to introduce the concept of total value needed to leave (e.g. I need at least at least 500 pounds to take the vacations I desperatly need) then for each object stolen, add  value to them. And 
+- Intro too generic. Add a dream ? Something more personal? Decent as it is but could be improved
 
-- Extend the dialogs for when she is caught stealing. They go a bit fast
+- LAST DAY REST
+Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies exhausted on the road ? Maybe not very useful ending? If you were exhausted, you just can't escape, you are forced to nap? ANd if not enough money, you just can't leave. That would remove Escape and die exhausted, and escape poor? Or delete just escape poor?
+
+- MONEY COUNTER?? Like if I had 500 pounds, I'll be fine. needs pearl + silverware? Maybe not
+
 - [ ] queen alexandra => Not clear it's a nurse Queen
   - [ ] => Replace with a THIEF king or queen for forshadowing? Henry 8 or charles 1 ? (or Prince John of Robin hood)
 
