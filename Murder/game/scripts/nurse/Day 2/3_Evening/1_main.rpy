@@ -29,7 +29,8 @@ label nurse_day2_evening:
 
     $ change_room("entrance_hall", irisout)
 
-    $ play_music('sad')
+    # $ play_music('sad')
+    $ play_music('mysterious_new')
 
     """
     I hear them before I see them.
