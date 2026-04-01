@@ -1,0 +1,28 @@
+{
+    "start_label": "nurse_day3_morning",
+    "tester_id": "admin",
+    "timestamp": "2026-04-01T11:15:10",
+    "unlocked_endings": [
+        "escape_at_night"
+    ],
+    "unlocked_threads": [
+        "master_key",
+        "day1_exhaustion",
+        "escape_at_night"
+    ],
+    "choices": [
+        {
+            "menu": "nurse_day3_morning_choice_rich",
+            "other_choices": [
+                "Go check the butler's room first",
+                "Leave now, without wasting another second!{{intuition}}"
+            ],
+            "selected": "Leave now, without wasting another second!{{intuition}}",
+            "redirect": "nurse_day3_morning_leave",
+            "time_left": 1,
+            "timestamp": "2026-04-01T11:34:35.972156",
+            "time_to_decide": 2.333848,
+            "time_since_last": 10.0902
+        }
+    ]
+}

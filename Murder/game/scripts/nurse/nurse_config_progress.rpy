@@ -105,6 +105,7 @@ label nurse_config_progress:
                 {"label": "nurse_day3_morning", "threads": {'silverware_big': True, 'master_key': True}},
                 {"label": "nurse_day3_morning", "threads": {'silverware_big': True, 'master_key': True, 'steal_pearls': True}},
                 {"label": "nurse_day3_morning", "threads": {'silverware_big': True, 'master_key': True,  'day2_exhaustion': True}},
+                {"label": "nurse_day3_morning", "threads": { 'master_key': True,  'day1_exhaustion': True}},
             ],
             'sunday_afternoon': [
                 {"label": "nurse_day3_afternoon", "threads": {}},

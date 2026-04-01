@@ -1,0 +1,23 @@
+{
+    "start_label": "nurse_day3_morning",
+    "tester_id": "admin",
+    "timestamp": "2026-04-01T11:15:15",
+    "unlocked_endings": [
+        "escape_at_night"
+    ],
+    "saved_variables": {
+        "visited_attic_butler_room": true
+    },
+    "choices": [
+        {
+            "menu": "nurse_day3_morning_choice_rich",
+            "other_choices": [
+                "Go check the butler's room first",
+                "Leave now, without wasting another second!{{intuition}}"
+            ],
+            "selected": "Go check the butler's room first",
+            "redirect": "nurse_day3_morning_attic",
+            "time_left": 1
+        }
+    ]
+}

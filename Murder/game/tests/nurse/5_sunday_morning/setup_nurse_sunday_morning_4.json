@@ -1,0 +1,22 @@
+{
+    "start_label": "nurse_day3_morning",
+    "tester_id": "admin",
+    "timestamp": "2026-04-01T11:15:00",
+    "unlocked_threads": [
+        "master_key",
+        "silverware_big",
+        "escape_at_night"
+    ],
+    "choices": [
+        {
+            "menu": "nurse_day3_morning_choice_rich",
+            "other_choices": [
+                "Get your things from your room and leave",
+                "Leave now, without wasting another second!{{intuition}}"
+            ],
+            "selected": "Leave now, without wasting another second!{{intuition}}",
+            "redirect": "nurse_day3_morning_leave",
+            "time_left": 1
+        }
+    ]
+}
