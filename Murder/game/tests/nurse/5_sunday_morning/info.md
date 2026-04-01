@@ -36,3 +36,10 @@
 - Normal wake (no exhaustion)
 - Find master key (recognizes it is for the butler's room from previous visit)
 - Go check the butler's room
+
+## File 8 (with master_key)
+- Normal wake (no exhaustion)
+- Dismiss master key (already has one from a previous chapter)
+- No silverware, no escape_at_night — only butler's room option available
+- Go to butler's room (first visit) using previously acquired master key
+- Covers the untested combination: "Another master key" dismissal text + attic first visit path

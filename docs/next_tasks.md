@@ -68,6 +68,9 @@ When Someone is saved, it add a SAVED over their name in the progress view
 
 ## Assets & artistic Tasks
 
+### MUSIC with producer AI
+Get new music from internet and put them at the right place
+
 ### STABLE DIFFUSION FUN
 
 Flow or SDXL ?
