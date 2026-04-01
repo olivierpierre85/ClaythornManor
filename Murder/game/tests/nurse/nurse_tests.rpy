@@ -23,3 +23,7 @@ testsuite nurse:
     testcase sunday_morning:
         python:
             test.run_chapter(nurse_details, 'sunday_morning', 'nurse_day3_morning')
+
+    testcase sunday_afternoon:
+        python:
+            test.run_chapter(nurse_details, 'sunday_afternoon', 'nurse_day3_afternoon')

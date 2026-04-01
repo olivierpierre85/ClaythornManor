@@ -21,6 +21,7 @@ init python in test:
             self.steps = []
             self.i = 0
             self.unlocked_threads = []
+            self.unlocked_endings = []
             self.target_chapter = None
             self.start_chapter = None
             self.reached_new_chapter = None
@@ -32,6 +33,7 @@ init python in test:
             data = load_json_from_game(path_in_game_dir)
             self.steps = data.get("choices", data)  # accept {"choices":[...]} or directly a list
             self.unlocked_threads = data.get("unlocked_threads", [])
+            self.unlocked_endings = data.get("unlocked_endings", [])
             self.plan_file = path_in_game_dir
             self.i = 0
             self.active = True
@@ -112,6 +114,8 @@ init python in test:
     def unlock_threads(details_obj, names):
         for n in (names or []):
             details_obj.threads.unlock(n)
+            if hasattr(details_obj, 'endings'):
+                details_obj.endings.unlock(n)
 
     def start(character, chapter, plan_file=None, threads=None):
         """
@@ -213,10 +217,12 @@ init python in test:
             current_node.chain(setup_node)
             current_node = setup_node
             
-            # Apply threads if present in the plan
+            # Apply threads and endings if present in the plan
             def apply_threads():
                 if autorunner.unlocked_threads:
                     unlock_threads(renpy.store.current_character, autorunner.unlocked_threads)
+                for ending in (autorunner.unlocked_endings or []):
+                    renpy.store.current_character.endings.unlock(ending)
             
             threads_node = PyCallNode(loc, apply_threads)
             current_node.chain(threads_node)
