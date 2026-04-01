@@ -34,6 +34,7 @@ init python in test:
             self.steps = data.get("choices", data)  # accept {"choices":[...]} or directly a list
             self.unlocked_threads = data.get("unlocked_threads", [])
             self.unlocked_endings = data.get("unlocked_endings", [])
+            self.saved_variables = data.get("saved_variables", {})
             self.plan_file = path_in_game_dir
             self.i = 0
             self.active = True
@@ -223,6 +224,9 @@ init python in test:
                     unlock_threads(renpy.store.current_character, autorunner.unlocked_threads)
                 for ending in (autorunner.unlocked_endings or []):
                     renpy.store.current_character.endings.unlock(ending)
+
+                if hasattr(autorunner, "saved_variables") and autorunner.saved_variables:
+                    renpy.store.current_character.saved_variables.update(autorunner.saved_variables)
             
             threads_node = PyCallNode(loc, apply_threads)
             current_node.chain(threads_node)
