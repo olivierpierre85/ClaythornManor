@@ -2,7 +2,7 @@
     "start_label": "nurse_day3_morning",
     "tester_id": "admin",
     "timestamp": "2026-04-01T11:15:05",
-    "unlocked_threads": [
+    "unlocked_threads_and_endings": [
         "master_key",
         "escape_at_night"
     ],

@@ -20,8 +20,7 @@ init python in test:
             self.active = False
             self.steps = []
             self.i = 0
-            self.unlocked_threads = []
-            self.unlocked_endings = []
+            self.unlocked_threads_and_endings = []
             self.target_chapter = None
             self.start_chapter = None
             self.reached_new_chapter = None
@@ -32,8 +31,14 @@ init python in test:
             # data = json.loads(raw)
             data = load_json_from_game(path_in_game_dir)
             self.steps = data.get("choices", data)  # accept {"choices":[...]} or directly a list
-            self.unlocked_threads = data.get("unlocked_threads", [])
-            self.unlocked_endings = data.get("unlocked_endings", [])
+            # Combine all for ease of use
+            self.unlocked_threads_and_endings = data.get("unlocked_threads_and_endings", [])
+            self.unlocked_threads_and_endings.extend(data.get("unlocked_threads", []))
+            self.unlocked_threads_and_endings.extend(data.get("unlocked_endings", []))
+
+            # Deduplicate just in case
+            self.unlocked_threads_and_endings = list(set(self.unlocked_threads_and_endings))
+
             self.saved_variables = data.get("saved_variables", {})
             self.plan_file = path_in_game_dir
             self.i = 0
@@ -225,10 +230,8 @@ init python in test:
             
             # Apply threads and endings if present in the plan
             def apply_threads():
-                if autorunner.unlocked_threads:
-                    unlock_threads(renpy.store.current_character, autorunner.unlocked_threads)
-                for ending in (autorunner.unlocked_endings or []):
-                    renpy.store.current_character.endings.unlock(ending)
+                if autorunner.unlocked_threads_and_endings:
+                    unlock_threads(renpy.store.current_character, autorunner.unlocked_threads_and_endings)
 
                 if hasattr(autorunner, "saved_variables") and autorunner.saved_variables:
                     renpy.store.current_character.saved_variables.update(autorunner.saved_variables)
