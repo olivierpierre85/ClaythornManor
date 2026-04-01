@@ -1,8 +1,17 @@
-## File 1 (Default)
+## File 1 (Default - Poisoned)
 - No silverware
-- **Choice**: "Leave the plates as they are" -> **Ending**: Poisoned
-- **Choice**: "Swap my plate with Mr Harring's" -> Confrontation (unarmed) -> **Ending**: Psychic fight death
+- **Choice**: "Leave the plates as they are"
+- **Ending**: Poisoned
 
-## File 2 (with silverware_big, take_gun, find_bullets)
-- Mention stolen silverware
-- **Choice**: "Swap my plate with Mr Harring's" -> Confrontation (armed) -> **Ending**: Gunned down
+## File 2 (Unarmed - Psychic Fight)
+- No silverware
+- **Choice**: "Swap my plate with Mr Harring's"
+- Confrontation (unarmed)
+- **Ending**: Psychic fight death
+
+## File 3 (Armed - Gunned Down)
+- Mention stolen silverware (requires silverware_big)
+- Requires take_gun and find_bullets
+- **Choice**: "Swap my plate with Mr Harring's"
+- Confrontation (armed)
+- **Ending**: Gunned down

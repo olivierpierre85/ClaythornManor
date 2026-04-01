@@ -1,0 +1,21 @@
+{
+    "start_label": "nurse_day3_afternoon",
+    "tester_id": "admin",
+    "timestamp": "2026-03-06T10:26:40.656201",
+    "unlocked_threads": [],
+    "choices": [
+        {
+            "menu": "nurse_day3_afternoon_swap_plates",
+            "other_choices": [
+                "Swap my plate with Mr Harring's",
+                "Leave the plates as they are"
+            ],
+            "selected": "Swap my plate with Mr Harring's",
+            "redirect": "nurse_day3_afternoon_swap_yes",
+            "time_left": 1,
+            "timestamp": "2026-04-01T11:10:19.216726",
+            "time_to_decide": 0.934813,
+            "time_since_last": 14.132273
+        }
+    ]
+}
