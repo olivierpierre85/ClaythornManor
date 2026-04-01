@@ -9,8 +9,7 @@ Or just : Captain, Broken?
 Retest leaving endings
 
 LAST DAY REST
-=>>> Only one escape possible !!! Nurse dies exhausted on the road ? Maybe not very useful ending? If you were exhausted, you just can't escape, you are forced to nap?
-ANd if not enough money, you just can't leave
+Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies exhausted on the road ? Maybe not very useful ending? If you were exhausted, you just can't escape, you are forced to nap? ANd if not enough money, you just can't leave. That would remove Escape and die exhausted, and escape poor? Or delete just escape poor?
 
 
 - [ ] RETRY EVERYTHING - ADD TESTSTSSSSS
