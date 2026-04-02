@@ -7,8 +7,10 @@ Or just : Captain, Broken?
 ## Write nurseStory : Full
 
 Test Nurse manually to get a feel
+- now in day2 morning
+  - Error dialog doctor leaves and comes back(she says they both come back at the same time, I don't think it's correct, check how it happened with the psychic for explanaiont)
 
-ADD A coughing warning also on the firs day ? 
+TEST coughing warning on first day.
 
 # Write story captain
 

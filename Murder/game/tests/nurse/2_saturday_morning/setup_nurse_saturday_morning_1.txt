@@ -1,7 +1,6 @@
 Chapter: A Shocking Morning
 Character: Rosalind Marsh
-I wake with a start — and immediately regret it.
-A fit of coughing seizes me before I am properly conscious.
+I wake with a start and a fit of coughing seizes me before I am properly conscious.
 I grip the edge of the mattress and wait for it to pass.
 There is blood on the handkerchief. More than yesterday.
 I fold it away and sit quietly until the dizziness fades.
@@ -11,9 +10,8 @@ I wash and dress methodically, whatever this day holds, it is best faced with on
 The dining room is already partially occupied.
 Captain Sinha sits alone at the far end of the table, eating in his customary silence.
 I take a seat and help myself to some toast and tea.
-Presently, Amelia Baxter and Ted Harring appear and settle nearby.
+Amelia Baxter and Ted Harring appear and settle nearby.
 They are engaged in some conversation.
-I do not follow it closely.
 Then Samuel Manning enters the room.
 He looks dreadful — waxy, unsteady, clutching the frame for a moment before making his way to the buffet.
 Nobody comments on it, though I notice Miss Baxter's expression harden considerably.
@@ -27,13 +25,23 @@ Lady Claythorn: Doctor Baldwin, I'm sorry to interrupt your breakfast, but would
 Lady Claythorn: We need your assistance.
 Without hesitation, Daniel Baldwin stands up.
 Daniel Baldwin: Of course, I'll follow you.
-The room has gone quiet.
-Nobody is quite sure what has happened, but something clearly has.
 After the doctor has gone upstairs with Lady Claythorn, the room settles into an uneasy hush.
 Nobody seems to know quite what to do with themselves.
 The food sits barely touched on most plates.
-It is not long before Doctor Baldwin and Lady Claythorn return.
-When they do, everyone looks up at once.
+Suddenly, Lady Claythorn and the butler are back in the room.
+Sushil Sinha: Lady Claythorn, what is happening?
+The lady is visibly distressed.
+Lady Claythorn: I'm sorry to announce such horrible news, everyone.
+Lady Claythorn: It appears that Mr Moody passed away in his sleep last night.
+The room instantly falls silent.
+Sushil Sinha: Do we know what happened?
+Lady Claythorn: Doctor Baldwin is examining him right now.
+Lady Claythorn: He will likely tell us more later.
+She then sits down in her chair.
+Everyone looks shaken up.
+Sushil Sinha: How terrible.
+Amelia Baxter: Yes, such sad news.
+We continue eating slowly in silence for a moment when the doctor enters the room.
 Lady Claythorn: Doctor Baldwin, can you tell us more about what happened?
 Daniel Baldwin: I can't say anything definitive for now.
 Daniel Baldwin: But it's very likely a natural death, possibly triggered by an old wound from the war.

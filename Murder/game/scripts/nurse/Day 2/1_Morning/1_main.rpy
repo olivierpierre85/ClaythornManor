@@ -70,11 +70,9 @@ label nurse_day2_morning:
 
     I take a seat and help myself to some toast and tea.
 
-    Presently, Amelia Baxter and Ted Harring appear and settle nearby.
+    Amelia Baxter and Ted Harring appear and settle nearby.
 
     They are engaged in some conversation.
-
-    I do not follow it closely.
 
     Then Samuel Manning enters the room.
 
@@ -94,13 +92,13 @@ label nurse_day2_morning:
         """
         My gaze drifts to the other side of the table.
 
-        Doctor Baldwin is there, as composed and professional as ever.
+        Doctor Baldwin is there, composed and professional.
 
         Since the Captain's story last night, the fog has lifted. I am quite certain now.
 
         It was indeed him. Though the years have added a certain weariness to his features.
 
-        I wonder if he knows? If he recognises the young girl who once assisted him under such dreadful circumstances?
+        I wonder if he recognises me.
 
         I have a mind to ask him, but it would hardly be proper to address him from across the table.
 
@@ -118,26 +116,16 @@ label nurse_day2_morning:
     call common_day2_morning_host_to_doctor
 
     """
-    The room has gone quiet.
-
-    Nobody is quite sure what has happened, but something clearly has.
-    """
-
-    call change_time(10, 0)
-
-    $ change_room('dining_room')
-
-    """
     After the doctor has gone upstairs with Lady Claythorn, the room settles into an uneasy hush.
 
     Nobody seems to know quite what to do with themselves.
 
     The food sits barely touched on most plates.
-
-    It is not long before Doctor Baldwin and Lady Claythorn return.
-
-    When they do, everyone looks up at once.
     """
+
+    call change_time(10, 0)
+
+    call common_day2_morning_host_death
 
     call common_day2_morning_host_death_doctor
 
