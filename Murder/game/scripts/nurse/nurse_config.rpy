@@ -44,6 +44,7 @@ label init_nurse:
             "visited_garage": False,
             "visited_gun_room": False,
             "day2_hunt_tea_room_early" : False,
+            "day1_evening_exhaustion_triggered" : False,
             "day2_evening_exhaustion_triggered" : False,
             "captain_staff_discussed" : False,
             "captain_boxer_discussed" : False,

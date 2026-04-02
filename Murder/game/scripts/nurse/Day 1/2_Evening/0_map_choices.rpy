@@ -79,6 +79,8 @@ label nurse_day1_evening_downstairs_crowded:
     I pull the door to and leave without anyone having noticed me.
     """
 
+    call nurse_day1_evening_check_exhaustion
+
     return
 
 
@@ -96,6 +98,8 @@ label nurse_day1_evening_dining_room:
 
     I offer no explanation and withdraw.
     """
+
+    call nurse_day1_evening_check_exhaustion
 
     return
 
@@ -115,6 +119,8 @@ label nurse_day1_evening_garden:
 
     I turn back.
     """
+
+    call nurse_day1_evening_check_exhaustion
 
     return
 
@@ -142,6 +148,8 @@ label nurse_day1_evening_bedroom_too_dangerous:
     There must be better places to explore for now.
     """
 
+    call nurse_day1_evening_check_exhaustion
+
     return
 
 
@@ -160,7 +168,9 @@ label nurse_day1_evening_bedroom_drunk:
 
     I know better than to enter.
     """
-    
+
+    call nurse_day1_evening_check_exhaustion
+
     return
 
 
@@ -190,32 +200,39 @@ label nurse_day1_evening_bedroom_psychic:
 
     $ unlock_map('bedroom_psychic')
 
+    call nurse_day1_evening_check_exhaustion
+
     return
 
 
 label nurse_day1_evening_bedroom_captain:
     call nurse_bedroom_default
     call nurse_day1_evening_bedroom_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 label nurse_day1_evening_bedroom_host:
     call nurse_bedroom_default
     call nurse_day1_evening_bedroom_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 label nurse_day1_evening_bedroom_lad:
     call nurse_bedroom_default
     call nurse_day1_evening_bedroom_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 label nurse_day1_evening_bedroom_broken:
     call nurse_bedroom_default
     call nurse_day1_evening_bedroom_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 label nurse_day1_evening_bedroom_doctor:
     call nurse_bedroom_default
     call nurse_day1_evening_bedroom_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 
@@ -223,21 +240,25 @@ label nurse_day1_evening_bedroom_doctor:
 label nurse_day1_evening_storage:
     call nurse_attic_default
     call nurse_attic_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 label nurse_day1_evening_males_room:
     call nurse_attic_default
     call nurse_attic_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 label nurse_day1_evening_females_room:
     call nurse_attic_default
     call nurse_attic_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 label nurse_day1_evening_butler_room:
     call nurse_attic_default
     call nurse_attic_too_dangerous
+    call nurse_day1_evening_check_exhaustion
     return
 
 
@@ -268,5 +289,22 @@ label nurse_attic_too_dangerous:
 
     This is not the right moment to venture around here.
     """
+
+    return
+
+
+label nurse_day1_evening_check_exhaustion:
+
+    if (time_left < 40) and not nurse_details.saved_variables["day1_evening_exhaustion_triggered"]:
+
+        $ nurse_details.saved_variables["day1_evening_exhaustion_triggered"] = True
+
+        """
+        A wave of tiredness washes over me quite suddenly.
+
+        The journey here took more out of me than I thought.
+
+        If I push myself much further tonight, I shall pay for it.
+        """
 
     return
