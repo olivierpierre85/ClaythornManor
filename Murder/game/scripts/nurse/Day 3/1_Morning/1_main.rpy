@@ -314,9 +314,11 @@ label nurse_day3_morning_leave:
         """
         But for the first time in a very long while, I am not afraid of what lies at the end of it.
 
-        The silver, the pearls — together, they are worth a good deal more than I dared hope.
+        I won't come home with one thousand pounds, not by far.
+        
+        But I still managed to get something of value out of this adventure.
 
-        Enough to settle somewhere. Enough to see a proper doctor.
+        It will not last for ever. But it is enough to help you live a little longer, and a little better.
 
         Enough to hope.
         """

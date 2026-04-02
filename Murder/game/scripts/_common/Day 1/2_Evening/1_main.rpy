@@ -189,7 +189,7 @@ label common_day1_drinks_lad_psychic_encounter:
     """
 
     psychic """
-    Nice to meet you, Mr Harring.
+    How do you do, Mr Harring.
     """
 
     return

@@ -33,7 +33,7 @@ He seems the sort who finishes what he starts.
 I position myself nearby and wait.
 Sushil Sinha: Oh, hello Miss ... ?
 Rosalind Marsh: Miss Marsh.
-Sushil Sinha: Nice to meet you, Miss Marsh. Captain Sushil Sinha.
+Sushil Sinha: How do you do, Miss Marsh. Captain Sushil Sinha.
 Sushil Sinha: I was telling those gentlemen a story about a certain conflict I was involved in.
 Sushil Sinha: But I can change the subject if you prefer.
 Rosalind Marsh: No, please, go on. I am quite familiar with wartime stories, having served as a nurse through more than one.
@@ -106,7 +106,7 @@ Shotguns and hunting rifles line three walls, arranged on open racks.
 The smell of gun oil is sharp.
 Everything is laid out as though ready for use — nothing locked away.
 There are even a few small handguns lying on a table.
-It looks like something I could use.
+It would be foolish not to take one.
 Menu Choice: Leave it. Too dangerous to carry.
 Map Choice: George IV Bedroom
 Rosalind Marsh: Hello? Is anyone there?

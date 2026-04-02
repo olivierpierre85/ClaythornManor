@@ -411,7 +411,7 @@ label nurse_gun_room_default:
 
         There are even a few small handguns lying on a table.
 
-        It looks like something I could use.
+        It would be foolish not to take one.
         """
 
     if not nurse_details.threads.is_unlocked('take_gun'):

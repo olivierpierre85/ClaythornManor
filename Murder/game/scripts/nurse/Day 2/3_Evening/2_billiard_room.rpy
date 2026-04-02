@@ -194,7 +194,7 @@ label nurse_day2_evening_billiard_room_suspicions:
         """
 
         nurse """
-        There is someone else we can interrogate.
+        There is someone else we can question.
         
         The only other person on staff I have seen this weekend.
         """

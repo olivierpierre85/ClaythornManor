@@ -1,7 +1,7 @@
 label common_day2_evening_entrance_dialog:
 
     psychic surprised """
-    Oh my God! What happened!?
+    Good heavens! What happened!?
 
     Is that Doctor Baldwin? Is he injured?
 
@@ -53,7 +53,7 @@ label common_day2_evening_entrance_dialog:
     captain """
     We should tell them to hurry.
 
-    Lady Claythorn, where's the phone?
+    Lady Claythorn, where's the telephone?
     """
 
     host """
@@ -126,7 +126,7 @@ label common_day2_evening_samuel_manning_discussion_part_1:
     However, these are extraordinary circumstances, which leave me at a loss.
     """
 
-    nurse """
+    psychic """
     Indeed, but that shouldn't stop us from taking measures.
 
     Our safety must be a priority.
@@ -138,12 +138,12 @@ label common_day2_evening_samuel_manning_discussion_part_1:
     There's a risk he could attempt to escape.
     """
 
-    psychic """
+    nurse """
     Or, he might lash out and harm someone.
     """
 
-    nurse """
-    Precisely!
+    psychic """
+    Precisely.
 
     So we are in agreement, something needs to be done?
     """
@@ -153,7 +153,7 @@ label common_day2_evening_samuel_manning_discussion_part_1:
     """
 
     butler """
-    The most sensible course would seem to be confining him to his room.
+    The most sensible course would be confining him to his room.
 
     The doors are sufficiently robust, and considering his current condition, it's unlikely he'd manage to break free even if he tried.
     """

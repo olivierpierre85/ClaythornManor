@@ -111,7 +111,7 @@ label common_day3_afternoon_lad_psychic_stay:
 
         They tell me what has happened since this morning.
 
-        Mr Manning — dead. The doctor — missing. Lady Claythorn — vanished.
+        Mr Manning — dead. Lady Claythorn — vanished.
 
         Captain Sinha has gone to fetch help.
 
@@ -143,14 +143,19 @@ label common_day3_afternoon_lad_psychic_stay:
     """
 
     if current_character.text_id == "lad":
+
         """
         And just like that, we go downstairs to the kitchen.
         """
+
     elif current_character.text_id == "psychic":
+
         """
         So we go downstairs.
         """
+
     elif current_character.text_id == "nurse":
+
         """
         Food. Precisely what I came down here for.
         """
@@ -174,6 +179,7 @@ label common_day3_afternoon_lad_psychic_stay:
     """
 
     if current_character.text_id == "lad":
+
         """
         I offer to help as well, but they decline.
         
@@ -187,6 +193,7 @@ label common_day3_afternoon_lad_psychic_stay:
         $ lad_details.description_hidden.unlock('cook') 
 
     elif current_character.text_id == "psychic":
+
         """
         Mr Harring is nice enough to offer his help.
 
@@ -194,7 +201,9 @@ label common_day3_afternoon_lad_psychic_stay:
 
         So we decide it's best if he doesn't get involved.
         """
+        
     elif current_character.text_id == "nurse":
+        
         """
         Mr Harring offers to assist, but between Miss Baxter and myself we have it well in hand.
 

@@ -76,13 +76,13 @@ label nurse_ending_gunned_down:
     call death_screen_transition
 
     """
-    You went to a great deal of trouble find a gun and the bullets to load it.
+    You went to a great deal of trouble to find a gun and the bullets to load it.
 
-    But it didn't change a thing.
+    But that didn't change a thing.
 
-    In the end, it was turned against you — and that was that.
+    In the confusion, the weapon turned against you.
 
-    A firearm is of no use if you don't know how to handle one.
+    A firearm is dangerous for those who don't know how to handle one.
     """
 
     jump ending_generic
@@ -188,13 +188,9 @@ label nurse_ending_escape_rich:
     """
     You escaped, and you took enough with you to make a real difference.
 
-    The silver, the pearls, the cutlery,...
+    That's about as good as this weekend could have ended.
 
-    It will not last for ever. But it is enough to help you live a little longer, and a little better.
-
-    That's probably the best ending you could have hoped for.
-
-    At least if you don't care what happened to the rest.
+    As long as you don't think too hard about what happened to the others.
     """
 
     jump ending_generic

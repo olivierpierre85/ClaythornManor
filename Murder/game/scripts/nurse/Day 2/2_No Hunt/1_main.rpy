@@ -79,7 +79,7 @@ label nurse_day2_hunt:
     $ change_room("bedroom_nurse", dissolve)
 
     """
-    I lay for a bit, I need to get some strength if I want to get through the day.
+    I rested a while, I need to get some strength if I want to get through the day.
     """
 
     call change_time(14, 0)

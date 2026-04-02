@@ -11,7 +11,6 @@ Test Nurse manually to get a feel
 Read full report in detail
 
 
-
 # Write story captain
 
 NEXT CHARACTER - UNlocked by Nurse (and psychic)

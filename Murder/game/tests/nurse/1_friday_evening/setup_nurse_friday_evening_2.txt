@@ -33,7 +33,7 @@ He seems the sort who finishes what he starts.
 I position myself nearby and wait.
 Sushil Sinha: Oh, hello Miss ... ?
 Rosalind Marsh: Miss Marsh.
-Sushil Sinha: Nice to meet you, Miss Marsh. Captain Sushil Sinha.
+Sushil Sinha: How do you do, Miss Marsh. Captain Sushil Sinha.
 Sushil Sinha: I was telling those gentlemen a story about a certain conflict I was involved in.
 Sushil Sinha: But I can change the subject if you prefer.
 Rosalind Marsh: No, please, go on. I am quite familiar with wartime stories, having served as a nurse through more than one.
@@ -83,13 +83,13 @@ Menu Choice: Talk to Samuel Manning
 I can't believe I am doing this.
 But It would feel too rude for me to just ignore him.
 And he might also take it the wrong way.
-So I guess I don't have a choice.
+It seems I have little choice
 Rosalind Marsh: How are you, Mr Manning?
 Samuel Manning: Me? Oh very well.
 Samuel Manning: The wine is first rate, you should take a sip.
 I wet my lips into it.
 It's actually not that great.
-Just passable
+Barely passable.
 Rosalind Marsh: Yes, it's rather good.
 Well, what should we talk about?
 Menu Choice: What do you think of the other guests?

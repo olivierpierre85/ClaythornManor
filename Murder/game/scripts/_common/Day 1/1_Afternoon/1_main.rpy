@@ -5,7 +5,7 @@
 label common_day1_afternoon_station_doctor_nurse:
 
     nurse """
-    Hi, I'm Rosalind Marsh. Are you going to Claythorn Manor?
+    Forgive me — Rosalind Marsh. Are you bound for Claythorn Manor?
     """
 
     footman """
@@ -13,7 +13,7 @@ label common_day1_afternoon_station_doctor_nurse:
     """
 
     doctor """
-    Nice to meet you, Miss Marsh. I'm Doctor Daniel Baldwin.
+    How do you do, Miss Marsh. Doctor Daniel Baldwin.
     """
 
     if current_character.text_id == "nurse":
@@ -27,17 +27,15 @@ label common_day1_afternoon_station_doctor_nurse:
         """
 
     nurse """
-    Nice to meet you, doctor. Was your trip pleasant?
+    How do you do, doctor. Was your trip pleasant?
     """
 
     doctor """
-    It was pleasant, thank you.
-
-    How about you?
+    Quite pleasant, as it happens. And yours?
     """
 
     nurse """
-    It was fine, thank you. And what...
+    Well enough, thank you. And what...
     """
 
     if current_character.text_id == "doctor":
@@ -67,9 +65,7 @@ label common_day1_afternoon_station_doctor_nurse:
         """
 
     broken """
-    Hi, I'm Thomas Moody.
-
-    Lady Claythorn invited me. Maybe you can help?
+    Thomas Moody. Lady Claythorn invited me. I don't suppose you are bound for the same place?
     """
 
     if current_character.text_id == "doctor":

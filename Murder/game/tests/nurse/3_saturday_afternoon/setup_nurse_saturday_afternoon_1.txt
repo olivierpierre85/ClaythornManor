@@ -27,7 +27,7 @@ Shotguns and hunting rifles line three walls, arranged on open racks.
 The smell of gun oil is sharp.
 Everything is laid out as though ready for use — nothing locked away.
 There are even a few small handguns lying on a table.
-It looks like something I could use.
+It would be foolish not to take one.
 Menu Choice: Take a pistol
 My hand closes around the grip of a small revolver.
 It is not loaded.
@@ -71,7 +71,7 @@ Amelia Baxter: Not at all, please don't concern yourself.
 Amelia Baxter: There is more than enough here to occupy me.
 I leave her to it and make my way back upstairs.
 A brief rest should do me good before the hunting party returns.
-I lay for a bit, I need to get some strength if I want to get through the day.
+I rested a while, I need to get some strength if I want to get through the day.
 After a little while, I am starting to feel better.
 Perhaps I can use the remaining time productively.
 Map Choice: Dining Room

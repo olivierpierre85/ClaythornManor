@@ -32,7 +32,7 @@ label nurse_day3_afternoon:
     $ change_room("bedroom_nurse", irisout)
         
     """
-    I am awaken by a noise.
+    I am awakened by a noise.
 
     The front door, I can hear it from here.
 
@@ -44,7 +44,7 @@ label nurse_day3_afternoon:
 
     I wait a little longer, counting my breaths.
 
-    Maybe everyone else has left now.
+    Perhaps everyone else has left now.
 
     I should go too.
     """
@@ -160,7 +160,7 @@ label nurse_day3_afternoon_swap_yes:
 
     But the poison hasn't taken me yet.
 
-    And there is still one person in this room who isn't dying.
+    I look at Amelia Baxter
     """
 
     call common_day3_afternoon_nurse_accuses_psychic

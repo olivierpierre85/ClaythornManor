@@ -52,7 +52,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion_1:
     captain """
     That's the most logical explanation.
 
-    No one was around when the phone calls were supposedly made.
+    No one was around when the telephone calls were supposedly made.
 
     So, there's no way to verify if they actually happened.
     """

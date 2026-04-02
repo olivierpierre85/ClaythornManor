@@ -7,7 +7,7 @@ Something is wrong.
 Lady Claythorn's face is ashen.
 Two of the men are carrying someone between them.
 I step forward at once.
-Amelia Baxter: Oh my God! What happened!?
+Amelia Baxter: Good heavens! What happened!?
 Amelia Baxter: Is that Doctor Baldwin? Is he injured?
 Amelia Baxter: Oh no! Is he... dead?
 Sushil Sinha: I'm sorry, dear, but he is.
@@ -24,7 +24,7 @@ Sushil Sinha: Speaking of which, has anyone from the city arrived yet?
 Amelia Baxter: No, not yet.
 Amelia Baxter: We're still waiting for them.
 Sushil Sinha: We should tell them to hurry.
-Sushil Sinha: Lady Claythorn, where's the phone?
+Sushil Sinha: Lady Claythorn, where's the telephone?
 Lady Claythorn: I'll handle it.
 She leaves the group, with the butler following closely behind.
 The room falls silent.
@@ -50,16 +50,16 @@ Lady Claythorn: We certainly can't allow him to wander freely.
 Butler: It's difficult to say.
 Butler: Ordinarily, this would be a matter for the police.
 Butler: However, these are extraordinary circumstances, which leave me at a loss.
-Rosalind Marsh: Indeed, but that shouldn't stop us from taking measures.
-Rosalind Marsh: Our safety must be a priority.
-Rosalind Marsh: While he may appear harmless now, it's uncertain if that will remain so.
-Rosalind Marsh: Once the effect of the alcohol wanes and he grasps his situation, who knows how he'll respond.
-Rosalind Marsh: There's a risk he could attempt to escape.
-Amelia Baxter: Or, he might lash out and harm someone.
-Rosalind Marsh: Precisely!
-Rosalind Marsh: So we are in agreement, something needs to be done?
+Amelia Baxter: Indeed, but that shouldn't stop us from taking measures.
+Amelia Baxter: Our safety must be a priority.
+Amelia Baxter: While he may appear harmless now, it's uncertain if that will remain so.
+Amelia Baxter: Once the effect of the alcohol wanes and he grasps his situation, who knows how he'll respond.
+Amelia Baxter: There's a risk he could attempt to escape.
+Rosalind Marsh: Or, he might lash out and harm someone.
+Amelia Baxter: Precisely.
+Amelia Baxter: So we are in agreement, something needs to be done?
 Everyone agrees, albeit silently.
-Butler: The most sensible course would seem to be confining him to his room.
+Butler: The most sensible course would be confining him to his room.
 Butler: The doors are sufficiently robust, and considering his current condition, it's unlikely he'd manage to break free even if he tried.
 Lady Claythorn: Yes, that seems like a prudent measure.
 At that moment, Sushil Sinha makes his return from upstairs.
@@ -159,7 +159,7 @@ Shotguns and hunting rifles line three walls, arranged on open racks.
 The smell of gun oil is sharp.
 Everything is laid out as though ready for use — nothing locked away.
 There are even a few small handguns lying on a table.
-It looks like something I could use.
+It would be foolish not to take one.
 Menu Choice: Take a pistol
 My hand closes around the grip of a small revolver.
 It is not loaded.

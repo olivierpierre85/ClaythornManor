@@ -129,7 +129,7 @@ label nurse_day1_evening:
     """
 
     captain """
-    Nice to meet you, Miss Marsh. Captain Sushil Sinha.
+    How do you do, Miss Marsh. Captain Sushil Sinha.
 
     I was telling those gentlemen a story about a certain conflict I was involved in.
 
@@ -332,7 +332,7 @@ label nurse_day1_dinner_drunk:
 
     And he might also take it the wrong way.
 
-    So I guess I don't have a choice.
+    It seems I have little choice
     """
 
     nurse """
@@ -350,7 +350,7 @@ label nurse_day1_dinner_drunk:
 
     It's actually not that great.
 
-    Just passable
+    Barely passable.
     """
 
     nurse """
