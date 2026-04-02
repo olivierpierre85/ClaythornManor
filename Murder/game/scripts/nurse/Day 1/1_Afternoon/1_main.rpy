@@ -23,7 +23,7 @@ label nurse_introduction:
     $ play_music('chill')
 
     """
-    The letter rests upon my lap. I have read it enough times to know it by heart.
+    The letter rests upon my lap.
 
     On the surface, it is perfectly composed. Generous, even.
 
@@ -63,7 +63,9 @@ label nurse_introduction:
 
     A sanatorium.
 
-    I cannot afford that sort of luxury. Not yet. But I cannot afford to do nothing, either.
+    I cannot afford that sort of luxury. 
+    
+    But I cannot afford to do nothing, either.
 
     So in the end, I had little choice but to attend this weekend, regardless of the risks.
 

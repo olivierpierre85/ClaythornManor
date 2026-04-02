@@ -35,7 +35,7 @@ label nurse_day1_evening:
     $ change_room('bedrooms_hallway', dissolve)
 
     """
-    The butler shows Doctor Baldwin and Thomas Moody rooms, then we reach mine.
+    The butler shows Doctor Baldwin and Thomas Moody their rooms, then we reach mine.
     """
 
     butler """
@@ -59,7 +59,7 @@ label nurse_day1_evening:
     """
     The journey has taken rather more out of me than I'd care to admit.
 
-    I'll rest before dinner.
+    I should rest before dinner.
     """
 
     call wait_screen_transition()
@@ -67,7 +67,7 @@ label nurse_day1_evening:
     call change_time(16,30)
 
     """
-    I wake up a bit rested — enough to get through dinner.
+    I wake up a bit refreshed — enough to face the evening.
 
     I should go downstairs to meet the others.
     """
@@ -115,8 +115,6 @@ label nurse_day1_evening:
 
     The soldier is still with Baldwin and Moody.
 
-    He seems the sort who finishes what he starts.
-
     I position myself nearby and wait.
     """
 
@@ -151,6 +149,8 @@ label nurse_day1_evening:
     """
 
     captain """
+    Right.
+
     That's where I got my first battle scar.
 
     It's on my back so I won't show it to you, but it was rather dangerous fighting.
@@ -189,10 +189,14 @@ label nurse_day1_evening:
     
     A young man and a woman in rather more elaborate dress than the occasion perhaps warrants.
 
-    I have no time to speak to them. The gong sounds from the corridor.
+    I have no time to speak to them.
     """
 
     play sound dinner_gong
+
+    """
+    The gong sounds from the corridor.
+    """
 
     $ stop_music()
 
@@ -219,9 +223,9 @@ label nurse_day1_evening:
     """
 
     drunk """
-    Ah, capital! Fill it up to the very brim, if you please.
+    Yes, yes — don't be stingy with it.
 
-    Much obliged.
+    Thank you.
     """
 
     """
@@ -291,8 +295,13 @@ label nurse_day1_evening:
     $ time_left = 90
     call run_menu(nurse_details.saved_variables["day1_evening_map_menu"])
 
-
     $ stop_music()
+
+    """
+    It has been a long day, and the weariness has settled into my bones.
+
+    I should go back to my room.
+    """
 
     $ change_room('bedroom_nurse', dissolve)
 
@@ -300,21 +309,19 @@ label nurse_day1_evening:
 
         $ nurse_details.threads.unlock('day1_exhaustion')
 
-        """
-        I have pushed myself rather too far this evening.
+        play sound woman_cough
 
+        """
         As I reach my room, a fit of coughing takes hold — sharp and wretched.
 
         I grip the bedpost until it passes.
 
-        I ought not to have done so much.
+        I have pushed myself rather too far this evening.
         """
 
     else:
 
         """
-        It has been a long day, and the weariness has settled into my bones.
-
         I change and get into bed without ceremony.
 
         Sleep comes before I have quite decided to close my eyes.
@@ -348,9 +355,7 @@ label nurse_day1_dinner_drunk:
     """
     I wet my lips into it.
 
-    It's actually not that great.
-
-    Barely passable.
+    It's barely passable.
     """
 
     nurse """

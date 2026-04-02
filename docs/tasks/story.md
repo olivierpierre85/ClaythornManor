@@ -99,6 +99,8 @@
 
 ### Ideas to think over (optional)
 
+- TODO maybe add dialog with the doctor to help see connection with boxer rebellion? (billiard room day 1)
+
 - Intro too generic. Add a dream ? Something more personal? Decent as it is but could be improved
 
 - LAST DAY REST

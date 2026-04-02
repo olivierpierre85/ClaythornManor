@@ -75,6 +75,32 @@ label drunk_generic_background_nurse:
     I'd rather not bore a lady.
     """
 
+    nurse """
+    Why did you stop, Mr Manning?
+    """
+
+    drunk """
+    Why did I stop.
+
+    There were cases.
+
+    Cases I should not have taken.
+
+    Or should have... handled differently.
+
+    The law is a merciless thing when you get it wrong.
+    """
+
+    nurse """
+    What happened?
+    """
+
+    drunk """
+    Nothing worth repeating.
+
+    Ancient history, all of it.
+    """
+
     """
     He trails off and stares into his glass.
 
@@ -157,11 +183,13 @@ label drunk_generic_age:
     """
 
     """
-    He catches himself, as if he said more than he intended.
-
     He empties his glass.
 
     Then he waves to the footman for another one.
+
+    Fifty-five years.
+
+    Yet he looks a great deal older.
     """
 
     $ drunk_details.description_hidden.unlock('age')
@@ -193,7 +221,7 @@ label drunk_generic_room_nurse:
 
     Or some such name.
 
-    They all run together after a while.
+    Those kings, they all run together after a while.
     """
 
     $ unlock_map('bedroom_drunk')
@@ -218,7 +246,7 @@ label drunk_generic_other_guests_friday_dinner:
     """
     He waves a hand vaguely in the direction of the dining table.
 
-    I suppose that is as much as I shall get from him this evening.
+    I suppose that is as much as I shall get from him.
     """
 
     return

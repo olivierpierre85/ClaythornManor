@@ -8,8 +8,7 @@ Or just : Captain, Broken?
 
 Test Nurse manually to get a feel
 
-Read full report in detail
-
+ADD A coughing warning also on the firs day ? 
 
 # Write story captain
 

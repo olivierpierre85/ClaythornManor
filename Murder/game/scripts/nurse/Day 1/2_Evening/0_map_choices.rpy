@@ -263,11 +263,7 @@ label nurse_attic_default:
 
 label nurse_attic_too_dangerous:
 
-    play sound door_locked
-
     """
-    The door is locked, in any case.
-
     I ought not to have come up here at all.
 
     This is not the right moment to venture around here.

@@ -451,8 +451,6 @@ label nurse_take_gun:
 
     """
     I slip it into my bag.
-
-    Nobody will notice. Not for a while, at any rate.
     """
 
     $ nurse_details.threads.unlock('take_gun')
@@ -512,7 +510,7 @@ label nurse_downstairs_approach:
     """
     I move quietly through the back passage.
 
-    Years of moving through dark passages in hospitals and large houses have taught me how to remain unseen.
+    Years of moving discretely in hospitals and large houses have taught me how to remain unseen.
 
     I reach the kitchen door and ease it open an inch.
     """

@@ -90,7 +90,9 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     I was part of the most important one, and the only successful one: The \"Gaselee Expedition,\" named after Alfred Gaselee, the British expedition leader.
 
-    It was a mish-mash of troops from eight different countries: Japan, The British Empire, The United States, France, Russia, German Empire, Italy, and Austria-Hungary.
+    It was a mish-mash of troops from eight different countries.
+    
+    Japan, The British Empire, The United States, France, Russia, German Empire, Italy, and Austria-Hungary.
 
     As an Indian officer, I was obviously part of the British army.
 

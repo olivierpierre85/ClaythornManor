@@ -88,7 +88,7 @@ label nurse_day1_evening_billiard_room_captain:
 
     There was no Indian officers during that time — not at that rank.
 
-    That may well have changed after the Great War, but I am quite certain he did not hold that rank in those days.
+    That may well have changed after the Great War, but I am quite certain he wasn't a captain in those days.
 
     And the claim that he was sent to London to command a training regiment — which would have been composed entirely of white men — is even more far-fetched.
 
@@ -128,9 +128,7 @@ label nurse_day1_evening_billiard_room_doctor:
 
     He is distant, tired.
 
-    It is plain he wishes to be left alone.
-
-    I had better not.
+    I should leave him alone.
     """
 
     # TODO maybe add dialog with the doctor to help see connection with boxer rebellion?

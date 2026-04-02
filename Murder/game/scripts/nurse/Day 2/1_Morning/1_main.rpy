@@ -32,9 +32,7 @@ label nurse_day2_morning:
         play sound woman_cough
 
         """
-        I wake with a start — and immediately regret it.
-
-        A fit of coughing seizes me before I am properly conscious.
+        I wake with a start and a fit of coughing seizes me before I am properly conscious.
 
         I grip the edge of the mattress and wait for it to pass.
 
