@@ -185,7 +185,17 @@ label nurse_day3_morning:
 
 
 label nurse_day3_morning_butler_room_hint:
-    
+
+    """
+    I am not sure what to do now.
+
+    Two days in this house, and I have precious little to show for it.
+
+    It's too risky to scour the entire place.
+
+    So, if I am to leave with anything worth the trouble, I need to be clever about where I look.
+    """
+
     if nurse_details.saved_variables['visited_attic_butler_room']:
 
         """
@@ -195,11 +205,7 @@ label nurse_day3_morning_butler_room_hint:
     else:
 
         """
-        My mind turns to where I might find something of value.
-
-        It's too risky to scour the entire place.
-
-        But a butler sometimes keeps a household's valuables in his quarters.
+        I know that a butler sometimes keeps a household's valuables in his quarters.
         """
 
     """
