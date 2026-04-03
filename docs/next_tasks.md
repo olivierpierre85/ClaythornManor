@@ -6,12 +6,10 @@ Or just : Captain, Broken?
 
 ## Write nurseStory : Full
 
-END steal caught, use two music, a less intense first, then the worst for when she sees the car
 
 Test Nurse manually to get a feel
-- now in day2 evening
+- now in day2 morning, error if master key and not visited butler room, add dialogs
 
-TEST coughing warning on first day.
 
 # Write story captain
 
@@ -80,6 +78,8 @@ PATHS, “Actions”, Findings, discoveries ? Forks, Threads, Leads
 NEW paths PAGE wil ALL the unlockables, different from breakpoint page
 - DO I NEED the map menu ? Since there is almost 0 info on it, maybe not
 - Are important choices TOO confusing => Everything or NOT? But that means WAY harder to unlock?
+- 
+## add captain feared expression, showed only for his confession
 
 ### Update ITCH.IO
 - Update itch.io

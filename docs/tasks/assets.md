@@ -29,7 +29,7 @@
 | footman   |         |       |                    |       |       |                     |                  |
 | drunk     |         |       |         –          |       |       |                     |                  |
 | butler    |         |       |                    |       |       |                     |                  |
-| captain   |         |       |                    |       |       |                     |                  |
+| captain   |         |       |        TODO        |       |       |                     |                  |
 | doctor    |         |       |                    |       |       |                     |                  |
 | broken    |         |       |                    |       |       |                     |                  |
 | Lord?     |         |       |                    |       |       |                     |                  |

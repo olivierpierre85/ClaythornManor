@@ -644,6 +644,8 @@ label nurse_day2_evening_billiard_room_confront:
     Fear.
     """
 
+
+    # TODO add captain fear
     captain """
     Miss Marsh.
 
@@ -661,6 +663,8 @@ label nurse_day2_evening_billiard_room_confront:
     nurse """
     Why not?
     """
+
+    $ play_music('danger')
 
     """
     He looks at me.
@@ -685,9 +689,7 @@ label nurse_day2_evening_billiard_room_confront:
     captain """
     I was never on the front lines, Miss Marsh.
 
-    I was behind them. Always behind them.
-
-    Logistics. Supply routes. Dispatches.
+    I was behind them. Always safe in an office far from the action.
 
     The battles I describe — I watched some of them from a distance.
 
@@ -699,11 +701,9 @@ label nurse_day2_evening_billiard_room_confront:
     """
 
     captain """
-    Was a story.
+    Were stories.
 
-    A very old story, told so many times it nearly became the truth in my mind.
-
-    But it is not the truth.
+    Very old stories, told so many times it nearly became the truth in my mind.
     """
 
     """
@@ -723,7 +723,6 @@ label nurse_day2_evening_billiard_room_confront:
 
     I have never had to.
     """
-
 
     $ captain_details.description_hidden.unlock('lie')
 
@@ -810,7 +809,7 @@ label nurse_day2_evening_billiard_room_confront:
     """
     I slip to the floor.
 
-    I keep hearing the Captain's voice, but the voice is getting softer.
+    I keep hearing the Captain's voice, but it's is getting softer and softer.
 
     Until I cannot make out the words.
     """

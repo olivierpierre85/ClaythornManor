@@ -111,13 +111,11 @@ label nurse_day3_morning:
 
     Then something catches my eye.
 
-    On the small side table beside the front door, placed neatly — deliberately, I think — is a key on a plain chain.
+    On the small side table beside the front door, placed neatly, is a key on a plain chain.
 
     I pick it up.
 
     It is small and well-worn, with the heft of something often used.
-
-    I turn it over.
     """
 
     if nurse_details.threads.is_unlocked('master_key'):
@@ -132,6 +130,10 @@ label nurse_day3_morning:
         I set it back down.
         """
 
+        if not nurse_details.threads.is_unlocked('silverware_big'):
+
+            call nurse_day3_morning_butler_room_hint
+
     else:
 
         """
@@ -140,26 +142,8 @@ label nurse_day3_morning:
         The sort that opens every door in the house.
         """
 
-        if nurse_details.saved_variables['visited_attic_butler_room']:
+        call nurse_day3_morning_butler_room_hint
 
-            """
-            My mind goes directly to the butler's room — that reinforced cabinet.
-
-            A lock like that does not guard trinkets.
-
-            This key might be exactly what I need.
-            """
-
-        else:
-
-            """
-            Normally, I would not need such a key. I can open most anything with a hairpin and patience.
-
-            But a butler keeps a household's valuables under proper lock and key — the sort that resists my usual methods.
-
-            His room would be worth a visit.
-            """
-        
         """
         I slip the key into my coat pocket.
         """
@@ -199,6 +183,30 @@ label nurse_day3_morning:
 
     return
 
+
+label nurse_day3_morning_butler_room_hint:
+    
+    if nurse_details.saved_variables['visited_attic_butler_room']:
+
+        """
+        My mind goes to the butler's room — that reinforced cabinet.
+        """
+
+    else:
+
+        """
+        My mind turns to where I might find something of value.
+
+        It's too risky to scour the entire place.
+
+        But a butler sometimes keeps a household's valuables in his quarters.
+        """
+
+    """
+    It might be worth a visit before the morning is through.
+    """
+
+    return
 
 label nurse_day3_morning_leave:
 
@@ -251,7 +259,7 @@ label nurse_day3_morning_leave:
 
     $ change_room("forest_road", dissolve)
 
-    #TOO: Maybe not very useful ending? Maybe if you were exhausted you are forced to take a nap ???
+    #TODO: Maybe not very useful ending? Maybe if you were exhausted you are forced to take a nap ???
     if nurse_details.threads.is_unlocked('day1_exhaustion') or nurse_details.threads.is_unlocked('day2_exhaustion'):
 
         if nurse_details.threads.is_unlocked('silverware_big'):
