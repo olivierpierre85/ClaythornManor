@@ -189,8 +189,6 @@ label nurse_day3_afternoon_swap_no:
     I set down my fork.
 
     Something is wrong.
-
-    Not with the room. With me.
     """
 
     $ play_music('danger', fadeout_val=2)

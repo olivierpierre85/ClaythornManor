@@ -471,8 +471,6 @@ label common_day3_afternoon_nurse_revelation:
 
         Something is wrong.
 
-        Not with the room. With me.
-
         A wave of nausea rises from my stomach, sudden and sharp.
 
         My vision swims.

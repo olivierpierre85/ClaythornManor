@@ -49,6 +49,10 @@ label nurse_ending_poisoned:
 
     call death_screen_transition
 
+    """
+    You collapsed on the floor, and died there.
+    """
+
     if nurse_details.important_choices.is_unlocked('swapped_plates'):
 
         """
@@ -170,7 +174,7 @@ label nurse_ending_escape_collapse:
 
     The cough came first, then the weakness in your legs, then the ground.
 
-    They found you the next morning, face down in the mud, your bag of stolen silver still clutched to your chest.
+    They found you the next morning, face down in the mud.
 
     So close. But not close enough.
     """
