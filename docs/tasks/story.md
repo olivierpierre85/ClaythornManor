@@ -136,6 +136,9 @@ Then he wakes up and is on the train. Far from the expectations her mother set f
 
 ### Important
 
+- Explain that the butler will act as a real one (that's why is checking the possible missing silverware). And the staff doesn't know how their buyer is?
+- It was suppose to be a surprised, on return of old friends, where everything would be revealed on the last day.
+
 ### Ideas to think over (optional)
 
 
