@@ -8,14 +8,14 @@ label nurse_day1_evening_map_menu:
             # Downstairs
             TimedMenuChoice(default_room_text('kitchen'), 'nurse_day1_evening_downstairs_crowded', 20, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day1_evening_downstairs_crowded', 20, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 20, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room'),
+            TimedMenuChoice(default_room_text('garage'), 'nurse_day1_evening_garage', 20, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day1_evening_gun_room', 0, room='gun_room'),
             # First floor
-            TimedMenuChoice(default_room_text('tea_room'), 'nurse_tea_room_default', 10, room='tea_room'),
+            TimedMenuChoice(default_room_text('tea_room'), 'nurse_day1_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day1_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day1_evening_garden', 10, room='manor_garden'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
-            TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_day1_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             #bedroom
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day1_evening_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'nurse_day1_evening_bedroom_captain', 10, room='bedroom_captain'),
@@ -30,7 +30,7 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('butler_room'), 'nurse_day1_evening_butler_room', 10, room='butler_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
-            TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 0, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'nurse_day1_evening_library', 0, room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
                 'nurse_day1_evening_bedroom_psychic', 
@@ -262,6 +262,60 @@ label nurse_day1_evening_butler_room:
     return
 
 
+label nurse_day1_evening_garage:
+
+    call nurse_garage_default
+
+    call nurse_day1_evening_check_exhaustion
+
+    return
+
+
+label nurse_day1_evening_gun_room:
+
+    call nurse_gun_room_default
+
+    call nurse_day1_evening_check_exhaustion
+
+    return
+
+
+label nurse_day1_evening_tea_room:
+
+    call nurse_tea_room_default
+
+    call nurse_day1_evening_check_exhaustion
+
+    return
+
+
+label nurse_day1_evening_entrance_hall:
+
+    call nurse_entrance_hall_default
+
+    call nurse_day1_evening_check_exhaustion
+
+    return
+
+
+label nurse_day1_evening_portrait_gallery:
+
+    call nurse_portrait_gallery_default
+
+    call nurse_day1_evening_check_exhaustion
+
+    return
+
+
+label nurse_day1_evening_library:
+
+    call nurse_library_default
+
+    call nurse_day1_evening_check_exhaustion
+
+    return
+
+
 label nurse_attic_default:
 
     $ change_room("attic_hallway")
@@ -295,7 +349,7 @@ label nurse_attic_too_dangerous:
 
 label nurse_day1_evening_check_exhaustion:
 
-    if (time_left < 40) and not nurse_details.saved_variables["day1_evening_exhaustion_triggered"]:
+    if (time_left < 30) and not nurse_details.saved_variables["day1_evening_exhaustion_triggered"]:
 
         $ nurse_details.saved_variables["day1_evening_exhaustion_triggered"] = True
 

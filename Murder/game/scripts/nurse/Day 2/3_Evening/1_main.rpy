@@ -29,8 +29,8 @@ label nurse_day2_evening:
 
     $ change_room("entrance_hall", irisout)
 
-    # $ play_music('sad')
-    $ play_music('mysterious_new')
+    $ play_music('sad')
+    # $ play_music('mysterious_new')# TOO intense
 
     """
     I hear them before I see them.
@@ -178,8 +178,6 @@ label nurse_day2_evening:
 
     """
     Dinner ends.
-
-    Very few words were exchanged.
 
     The butler sees the guests out of the room with quiet efficiency.
 

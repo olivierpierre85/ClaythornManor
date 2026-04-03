@@ -63,7 +63,6 @@ label nurse_lockpick_door:
 
     return
 
-# Possible searches for treasure => Only after day 2 (during the hunt there is nobody)
 
 label nurse_search_captain_default:
 
@@ -194,10 +193,7 @@ label nurse_search_host_default:
     The pearls are the only items of any real value.
     """
 
-    call run_menu(TimedMenu("nurse_search_host_choice_default", [
-        TimedMenuChoice("Take the pearls.", 'nurse_take_pearls', 5, early_exit=True),
-        TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
-    ]))
+    call nurse_pearl_choice
 
     return
 
@@ -217,17 +213,22 @@ label nurse_search_host_again:
     """
 
     if not nurse_details.threads.is_unlocked('steal_pearls'):
-        
+
         """
         The string of pearls still sits in its velvet case on the dressing table.
-
-        I left them earlier, but they remain the only transportable item of value in the room.
         """
 
-        call run_menu(TimedMenu("nurse_search_host_choice_again", [
-            TimedMenuChoice("Take the pearls.", 'nurse_take_pearls', 5, early_exit=True),
-            TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel', early_exit=True),
-        ]))
+        call nurse_pearl_choice
+
+    return
+
+
+label nurse_pearl_choice:
+
+    call run_menu(TimedMenu("nurse_pearl_choice", [
+        TimedMenuChoice("Take the pearls.", 'nurse_take_pearls', 20, early_exit=True),
+        TimedMenuChoice("Leave them. It's not worth the risk.", 'generic_cancel',20, keep_alive = True, early_exit=True),
+    ]))
 
     return
 
@@ -417,7 +418,7 @@ label nurse_gun_room_default:
     if not nurse_details.threads.is_unlocked('take_gun'):
         call run_menu(TimedMenu("nurse_gun_room_choice", [
             TimedMenuChoice("Take a pistol", 'nurse_take_gun', 20, early_exit=True),
-            TimedMenuChoice("Leave it. Too dangerous to carry.", 'generic_cancel', 20, early_exit=True),
+            TimedMenuChoice("Leave it. Too dangerous to carry.", 'generic_cancel', 20, keep_alive = True, early_exit=True),
         ]))
 
     return
@@ -577,7 +578,7 @@ label nurse_library_default:
     if not nurse_details.threads.is_unlocked('captain_lie_zanzibar'):
         call run_menu(TimedMenu("nurse_library_choice", [
             TimedMenuChoice("Look it up. It may be useful.", 'nurse_library_war_book', 30, early_exit=True),
-            TimedMenuChoice("Leave it. I am too tired for reading.", 'generic_cancel', 20, early_exit=True),
+            TimedMenuChoice("Leave it. I am too tired for reading.", 'generic_cancel', 20, keep_alive = True, early_exit=True),
         ]))
 
     return
@@ -775,7 +776,7 @@ label nurse_attic_butler_room:
 
         call run_menu(TimedMenu("nurse_attic_butler_cabinet_choice", [
             TimedMenuChoice("Try to open the cabinet", 'nurse_butler_cabinet_lockpick', 20, early_exit=True),
-            TimedMenuChoice("Leave it for now", 'generic_cancel', 10, early_exit=True),
+            TimedMenuChoice("Leave it for now", 'generic_cancel', 10, keep_alive = True, early_exit=True),
         ]))
 
     return
@@ -953,7 +954,7 @@ label nurse_attic_storage:
                 id='nurse_attic_storage_search',
                 choices=[
                     TimedMenuChoice('Search everything carefully', 'nurse_attic_storage_search_all', 60, early_exit=True),
-                    TimedMenuChoice('Give up. This will take all day.', 'nurse_attic_storage_give_up', 10, early_exit=True),
+                    TimedMenuChoice('Give up. This will take all day.', 'nurse_attic_storage_give_up', 10, keep_alive = True, early_exit=True),
                 ]
             )
         )

@@ -35,13 +35,11 @@ label nurse_day2_hunt:
 
     Even though I should at least join Mrs Baxter for lunch.
 
-    And I could take the opportunity that most people are outside to "look" for treasure.
+    And I could take the opportunity that most people are outside to "look" more intensively into this place.
 
-    The priority would be to find the stash of money promised to everyone.
+    Obviously, the priority would be to find the stash of money promised to everyone.
 
-    But, if as I suspect, there isn't any, I am sure I can find other valuables in here.
-
-    Once I feel I have found enough, I might be able to leave early and avoid any suspicion.
+    But, if as I suspect, there isn't any, I am sure I can find other valuables.
     """
 
     if nurse_details.threads.is_unlocked('steal_cutlery_1') or nurse_details.threads.is_unlocked('steal_cutlery_2'):
@@ -49,9 +47,9 @@ label nurse_day2_hunt:
         """
         I already secured some silverware.
         
-        But that may not help me much, and it was a rather risky thing to do.
+        A rather risky thing to do.
 
-        Perhaps I ought to curb such impulsive behaviour if I do not wish to be caught.
+        That may not help me much, but it's still something.
         """
 
 

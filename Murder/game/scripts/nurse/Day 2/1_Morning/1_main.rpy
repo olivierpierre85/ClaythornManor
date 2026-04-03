@@ -168,9 +168,10 @@ label nurse_day2_morning:
     """
 
     """
-    I think about it for a second.
+    I consider it for a second.
 
-    But a trudge across wet Scottish moorland, rifle in hand, is not what the doctor ordered.
+    But a trudge across a cold forest
+    , rifle in hand, would only make my condition worse.
     """
 
     call common_day2_morning_hunt_nurse
