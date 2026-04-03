@@ -1,6 +1,6 @@
 label nurse_day2_evening_steal_caught:
 
-    $ play_music('scary', 3)
+    $ play_music('danger', 2)
 
     butler """
     Forgive me, Miss Marsh.
@@ -39,11 +39,17 @@ label nurse_day2_evening_steal_caught:
     """
 
     """
-    My face burns as I slowly reach inside and place the silver spoon back upon the table.
+    Every excuse I have ever rehearsed vanishes at once.
+
+    My throat tightens. My hands will not stop trembling.
+
+    No point in denying now.
+
+    I slowly reach inside my bag and place the silver spoon back upon the table.
     """
 
     host """
-    I can hardly believe my own eyes.
+    Miss Marsh, I can hardly believe it.
     """
 
     nurse """
@@ -60,8 +66,6 @@ label nurse_day2_evening_steal_caught:
     A hard look that says she does not believe me, not a single word.
 
     But that she also does not quite know what to do.
-
-    That must be a first for her.
     """
 
     nurse scared """
@@ -108,8 +112,6 @@ label nurse_day2_evening_steal_caught:
     He leaves without another word.
 
     I stand rooted to the spot, my heart hammering against my ribs.
-
-    I know precisely what he will find.
 
     No one speaks. Lady Claythorn remains in the doorway, watching me with that terrible, steady gaze.
 
@@ -189,26 +191,18 @@ label nurse_day2_evening_steal_caught:
     I am sorry, Miss Marsh, but I shall not feel safe until you are secured somewhere.
     """
 
-    host """
-    Quite right.
-
-    We could confine her to her room, just as we did with Mr Manning.
-
-    Tomorrow, we shall see what the police make of all this.
-    """
-
     captain """
-    A sensible precaution.
+    We ought to confine her to her room, just as we did with Mr Manning.
+
+    Tomorrow, we shall let the police sort this out.
 
     Allow me to escort her upstairs, Lady Claythorn.
-
-    Just to be absolutely certain there is no further trouble.
     """
 
     host """
-    Thank you, Captain.
+    Yes, I think that is wise.
 
-    See to it that she is securely locked in.
+    Thank you, Captain.
     """
 
     """
@@ -232,20 +226,42 @@ label nurse_day2_evening_steal_caught:
     """
 
     """
-    They believe I am trapped here.
-    
-    But they underestimate me.
-    
-    A hairpin and a steady hand are all I require to open such a simple lock.
-    
-    I shall wait until the house is completely silent, and then I will take my leave.
-    
-    It is far from ideal, but it is my only chance.
+    His footsteps retreat down the corridor.
+
+    I press my back against the door and sink to the floor.
+
+    I don't think the police will arrest me for this.
+
+    But what will happen if the words go out?
+
+    My reputation could be gone in an instant.
+
+    I sit there for a long while, staring at nothing.
     """
+
+    $ stop_music(2)
 
     call wait_screen_transition()
 
     call change_time(23, 30)
+
+    """
+    Then something steadies inside me. Self-pity will not help me.
+
+    They believe I am trapped here.
+
+    But a hairpin and a steady hand are all I require to open my door.
+
+    I shall wait until the house is completely silent, and then I will take my leave.
+
+    Certainly, they will not come after me.
+
+    Not for such a minor small crime.
+
+    I could leave and it would be as I've never been here.
+    """
+
+    $ play_music('scary', 3)
 
     $ change_room("bedrooms_hallway")
 

@@ -6,10 +6,10 @@ Or just : Captain, Broken?
 
 ## Write nurseStory : Full
 
-BUG, NOt working warning day 1
+END steal caught, use two music, a less intense first, then the worst for when she sees the car
 
 Test Nurse manually to get a feel
-- now in day2 morning
+- now in day2 evening
 
 TEST coughing warning on first day.
 
