@@ -85,6 +85,7 @@
   - [ ] Psychic realise Moody is not who he is, she loses it.
   - [ ] Moody gives whiskey to lad, he dies. She loses it
   - [ ] Somebody realises the police will not come, so they go fetch them. Needs to accelerate stuff
+THE OUTside shed will show nothing of interest for captain. But the Broken will find the bodies of the staff there if he survives.
 
 - [ ] MAKE THE NAME change by using a function for it => “Archibald”
 - [ ] Why is he angered by the doctor? His brother was a broken face, that’s his mask AND scared of being recognize
