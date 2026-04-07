@@ -55,6 +55,49 @@ label common_day1_evening_host_welcome_speech:
     return
 
 # ------------------------------------
+#       CAPTAIN - PSYCHIC - DRUNK
+# ------------------------------------
+label common_day1_evening_second_arrival_part_1:
+
+    butler """
+    Good afternoon, everyone, and welcome to Claythorn Manor.
+
+    I'm sorry that Lady Claythorn can't greet you herself.
+
+    She is still busy preparing for tonight.
+
+    In the meantime, you can enjoy some drinks in the tea room.
+
+    Or, if you wish to change, I can show you to your room right now.
+    """
+
+    drunk """
+    I'm good, but I could use a drink.
+
+    Which way is the tea room?
+    """
+
+    return
+
+
+label common_day1_evening_second_arrival_part_2:
+
+    butler """
+    Very well, sir. You'll find the tea room through the door on your left.
+
+    Other guests who arrived earlier are already settled there.
+
+    You can join them.
+    """
+
+    captain """
+    I'll come with you.
+    """
+
+    return
+
+
+# ------------------------------------
 #               CAPTAIN
 # ------------------------------------
 label common_day1_evening_captain_billiard_room_speech_part_1:

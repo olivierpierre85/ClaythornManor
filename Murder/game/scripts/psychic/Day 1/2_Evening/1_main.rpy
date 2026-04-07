@@ -26,41 +26,15 @@ label psychic_day1_evening:
     
     $ play_music('upbeat')
 
-    butler """
-    Good afternoon, everyone, and welcome to Claythorn Manor.
-
-    I'm sorry that Lady Claythorn can't greet you herself.
-
-    She is still busy preparing for tonight.
-
-    In the meantime, you can enjoy some drinks in the tea room.
-
-    Or, if you wish to change, I can show you to your room right now.
-    """
-
-    drunk """
-    I'm good, but I could use a drink.
-
-    Which way is the tea room?
-    """
+    call common_day1_evening_second_arrival_part_1
 
     """
     Astonishing. He looked passed out drunk in the car.
-    
+
     How could he possibly want another drink now?
     """
 
-    butler """
-    Very well, sir. You'll find the tea room through the door on your left.
-
-    Other guests who arrived earlier are already settled there.
-
-    You can join them.
-    """
-
-    captain """
-    I'll come with you.
-    """
+    call common_day1_evening_second_arrival_part_2
 
     butler """
     What about you, Miss ...?

@@ -1,14 +1,18 @@
 label init_captain:
-    
-    # call captain_config_map
-    
+
+    call captain_day1_evening_map_menu
+
     # call captain_config_menu
 
     python:
         captain_name = "Sushil Sinha"
         # Story Variables
         captain_init_variables = {
-            # "map_menu" : captain_map_menu,
+            # MAP Menus
+            "day1_evening_map_menu" : captain_day1_evening_map_menu,
+
+            # Evening day 1
+            "day1_evening_billiard_room_visited" : False,
         }
 
         captain_objects = CharacterObjectList([
