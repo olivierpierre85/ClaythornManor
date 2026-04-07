@@ -1,8 +1,44 @@
 label captain_introduction:
 
-    $ captain_details.add_checkpoint("captain_introduction") 
-    
+    $ captain_details.add_checkpoint("captain_introduction")
+
     call change_time(17, 00, 'Evening', 'Friday', hide_minutes = True)
+
+    # TODO add new background
+    $ change_room("india")
+
+    # TODO add new music
+    # $ play_music('chill')
+
+    """
+    The governess is speaking, but I cannot hear her words.
+
+    I am watching the garden below from the upstairs window.
+
+    Two English boys are playing cricket on the lawn, their laughter carrying up through the warm Calcutta air.
+
+    I want to join them, but I know better than to ask.
+
+    Mother's hand rests on my shoulder.
+
+    "You are the son of a zamindar," she says softly. "Our family has held land in Bengal for generations."
+
+    "You will learn their manners. You will master every rule of their world."
+
+    "And one day, they will have no choice but to respect you."
+
+    I nod, though I do not fully understand.
+
+    I am seven years old.
+
+    The governess resumes her lesson. Posture. The correct way to hold a teacup. How to address a gentleman. How to enter a room.
+
+    I practise until my back aches and my knees are stiff from sitting perfectly still.
+
+    Mother watches me, and I can see in her eyes that she believes every word she has told me.
+
+    That if I am polished enough, refined enough, the doors of the Empire will open for me.
+    """
 
     $ change_room("train_inside")
 
@@ -11,21 +47,37 @@ label captain_introduction:
     $ play_music('chill')
 
     """
-    I don't like it.
+    ...
 
-    I don't like it one bit.
+    The train jolts, and the memory dissolves.
 
-    I am committing fraud, that's the only way to put it.
+    I blink.
 
-    I don't understand where Lady Claythorn got the idea of this "heroic action" of mine.
+    My neck is stiff from sleeping against the window, and the English countryside rushes past in a grey-green blur.
 
-    She most certainly mistook me for another Indian soldier.
+    I straighten my collar and catch my reflection in the darkened glass.
 
-    God knows it wouldn't be the first time.
+    Distinguished enough, I suppose. But that was not enough to make my mother's dream come true.
+    
+    The doors she promised me? They remain firmly shut.
 
-    Yet, her invitation was so vague it could still apply to me.
+    Twenty years in London, and I am still the Indian officer whom people greet with polite surprise, as though my perfect English were some sort of parlour trick.
 
-    I look at it again, mostly trying to convince myself.
+    Invited to some receptions, yet never to the clubs that matter. Tolerated at dinners, yet never truly welcomed.
+
+    I have done everything she asked of me. I mastered their language, learned their manners.
+
+    I served their Empire faithfully for over thirty years.
+
+    And yet, I am still just an outsider looking through the window.
+
+    Good manners were not enough. 
+    
+    If I want a proper place in society, I will also need money.
+
+    Which brings me to the matter at hand.
+
+    I reach into my breast pocket and unfold the letter once more.
     """
 
     letter """
@@ -33,21 +85,37 @@ label captain_introduction:
     """
 
     """
-    Yet, I am sure I saved lives...
+    I don't know where Lady Claythorn got the idea of this "heroic action" of mine.
 
-    ... technically.
+    She most certainly mistook me for another Indian soldier.
 
-    Many soldiers died because they didn't receive their rations on time.
+    God knows it wouldn't be the first time.
 
-    Or because they didn't have the proper winter clothing.
+    Yet, the invitation is vague enough that it could still apply to me.
 
-    But I know that can't be what she meant.
+    And I am sure I saved lives... technically.
 
-    Well, it's too late now.
+    Many soldiers died because they didn't receive their rations on time. Or because they lacked proper clothing.
 
-    I don't have any choice but to act the part.
-    
-    I should be forthright, authoritative, and act as if I am used to leading dozens of men to their deaths.
+    I made certain such things did not happen on my watch. But I know that can't be what she meant.
+
+    The honest thing would have been to write back and correct her mistake.
+
+    But when has honesty ever helped me?
+
+    The money promised by Lady Claythorn would go a long way. Enough to host a few proper dinners, join the right club, and be seen in the right company.
+
+    That could finally be my way in.
+
+    So yes, I am committing fraud. That is the only way to put it.
+
+    But I have spent my whole life earning a place that was promised to me and never delivered.
+
+    If they won't give it to me, I shall simply have to take it.
+
+    I fold the letter away and sit up straighter.
+
+    I will play the part, and act as if I am used to leading dozens of men to their deaths.
 
     How hard could that be?
     """
@@ -57,20 +125,20 @@ label captain_introduction:
     $ change_room("train_station")
 
     pause 2.0
-    
+
     """
     As soon as the train stops, I am on the platform.
 
-    I scan the few people waiting there and quickly notice there is only one servant there.
+    I scan the few people waiting and quickly notice there is only one servant.
 
-    If Lady Claythorn is well-organized, he must be there for me.
+    If Lady Claythorn is well-organised, he must be here for me.
 
-    I reached him before he saw me.
+    I reach him before he sees me.
     """
 
     captain """
-    Excuse me, young man. 
-    
+    Excuse me, young man.
+
     Are you working for Lady Claythorn?
     """
 
@@ -109,13 +177,13 @@ label captain_introduction:
 
     So, I have only the older lady to make conversation with.
 
-    She asked me a few questions. Some of them have a tinge of racism to them.
+    She asks me a few questions. Some of them have a tinge of racism to them.
 
     Sadly, it's something I am too familiar with, so I say nothing.
 
     No matter how I feel, I have learned it's better to stay polite.
 
-    But to avoid another inappropriate question, I decide to monopolize the conversation while we stay in the car.
+    But to avoid another inappropriate question, I decide to monopolise the conversation while we stay in the car.
 
     Let's see how she likes being forced to listen to something she doesn't want to.
     """

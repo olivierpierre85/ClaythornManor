@@ -13,6 +13,11 @@ Test Nurse manually to get a feel
 
 # Write story captain
 
+Introduction starts with a memory of his childhood. Where he was raised in English, taught how to be a gentleman.
+Then he wakes up and is on the train. Far from the expectations her mother set for him. Merge with the current introduction. 
+
+
+
 NEXT CHARACTER - UNlocked by Nurse (and psychic)
 
 ## Proofreading
