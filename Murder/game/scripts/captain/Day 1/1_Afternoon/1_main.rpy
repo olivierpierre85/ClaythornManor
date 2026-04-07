@@ -1,21 +1,34 @@
+# --------------------------------------------
+#   Captain
+#           
+#   Friday - Afternoon
+#   
+#   14:00 -> 14:45
+#
+#   Music: Indian, Chill
+#
+#   Alive: Everyone
+#
+#   Notes : 
+#       - 
+# --------------------------------------------
+
 label captain_introduction:
+
+    $ play_music('captain', fadein_val=2)
 
     $ captain_details.add_checkpoint("captain_introduction")
 
-    call change_time(17, 00, 'Evening', 'Friday', hide_minutes = True)
+    call change_time(14, 00, 'Evening', 'Friday', hide_minutes = True, chapter='friday_afternoon')
 
-    # TODO add new background
-    $ change_room("india")
-
-    # TODO add new music
-    # $ play_music('chill')
+    $ change_room("india_young_captain")
 
     """
     The governess is speaking, but I cannot hear her words.
 
     I am watching the garden below from the upstairs window.
 
-    Two English boys are playing cricket on the lawn, their laughter carrying up through the warm Calcutta air.
+    A group of white children are playing cricket outside, their laughter carrying up through the warm Calcutta air.
 
     I want to join them, but I know better than to ask.
 
@@ -33,18 +46,36 @@ label captain_introduction:
 
     The governess resumes her lesson. Posture. The correct way to hold a teacup. How to address a gentleman. How to enter a room.
 
-    I practise until my back aches and my knees are stiff from sitting perfectly still.
+    I practise until my back aches and my mind grows heavy with rules I do not yet understand.
+
+    Outside, the cricket game ends. The boys run off laughing.
+
+    They don't sit through tedious lessons like I do. 
+    
+    And yet, one day, they will rule the world all the same.
+
+    The governess clears her throat. I turn back to face her and continue with my lesson.
 
     Mother watches me, and I can see in her eyes that she believes every word she has told me.
 
-    That if I am polished enough, refined enough, the doors of the Empire will open for me.
+    That if I am polished enough, refined enough, the doors of the Empire will open for me too.
+
+    "Again," she says.
+
+    So I sit up straight, and I begin again.
     """
+
+    $ stop_music()
+
+    pause 1.0
+
+    call black_screen_transition("", "Sushil Sinha")
+
+    $ play_music('chill')
 
     $ change_room("train_inside")
 
     play sound train_moving loop
-
-    $ play_music('chill')
 
     """
     ...
@@ -57,7 +88,7 @@ label captain_introduction:
 
     I straighten my collar and catch my reflection in the darkened glass.
 
-    Distinguished enough, I suppose. But that was not enough to make my mother's dream come true.
+    Distinguished enough, I suppose. But it was never going to make my mother's dream come true.
     
     The doors she promised me? They remain firmly shut.
 
@@ -75,7 +106,7 @@ label captain_introduction:
     
     If I want a proper place in society, I will also need money.
 
-    Which brings me to the matter at hand.
+    That is the reason I am here.
 
     I reach into my breast pocket and unfold the letter once more.
     """
@@ -97,7 +128,9 @@ label captain_introduction:
 
     Many soldiers died because they didn't receive their rations on time. Or because they lacked proper clothing.
 
-    I made certain such things did not happen on my watch. But I know that can't be what she meant.
+    I made certain that didn't happen on my watch.
+
+    But I know that can't be what she meant.
 
     The honest thing would have been to write back and correct her mistake.
 
@@ -115,7 +148,7 @@ label captain_introduction:
 
     I fold the letter away and sit up straighter.
 
-    I will play the part, and act as if I am used to leading dozens of men to their deaths.
+    I will play the part of a battle-hardened officer.
 
     How hard could that be?
     """
