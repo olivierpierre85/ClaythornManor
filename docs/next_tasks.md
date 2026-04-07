@@ -11,10 +11,43 @@ Test Nurse manually to get a feel
 - now in day2 morning, error if master key and not visited butler room, add dialogs
 
 
-# Write story captain
+## Write story captain
 
-Introduction starts with a memory of his childhood. Where he was raised in English, taught how to be a gentleman.
-Then he wakes up and is on the train. Far from the expectations her mother set for him. Merge with the current introduction. 
+
+### Generic 
+- Fun thing, must find lady claythorn is an impostor, leading to her death by an angry mob (or burned at night?) => unlock Lady Claythorn is an impostor, and final character
+  - BOOK about genealogy
+  - "Lady Claythorn is not a normal Name, Claythorn is the place, she should have a proper surname" Like Lady Grantham of Claythorn Manor.
+  - FIND more dinner manner inconsitencies
+
+but to unlock Lady Clay we will need info also from DRUNK (if drunk is unlocked by broken.)
+
+- When he takes charge, he feels like he has too.
+  
+### Friday
+- Friday dinner, Evening dinner: his analytical eye picks up on everyone's social standing
+
+
+### Saturday
+- Can test the host on the hunt (not dinner)
+- ON the hunt he observes and talke to lady claythorn, but he is also trying to appear good at shooting.
+(I thouhght I would have a trouble following them, but they are even worst than I am. It was to be expected from Ted Harring, but Lady Claythorn should be better at this, especially since she was the one initiated this)
+
+- On saturday evening, he is suspicious, but don't reveal it to other people BECAUSe he is not trusting them.
+
+### Sunday
+
+- Last day, he never stays, always chose to run (not happy if lad also want's to run)
+
+**MAPS**
+- After saturdat evening, he has the masterkey to go everywhere, ( But how is it different thant the nurse?)
+  - He will find different things because he is more meticulous?
+- First day, he is talking, so he won't wander the house, also it's not done.
+
+**endings**
+- The hero, to survive AND redempt yourself. You will have the choice to save people. But you first need an intuition. An intuition that escaping alone will kill you? 
+- 
+
 
 
 
@@ -65,6 +98,13 @@ When Someone is saved, it add a SAVED over their name in the progress view
 
 ### MUSIC with producer AI
 Get new music from internet and put them at the right place
+
+## New place
+
+India
+A room in a nice india house calcuta, 1880.
+
+New music, captain's theme? Old india ? or no music?
 
 ### STABLE DIFFUSION FUN
 

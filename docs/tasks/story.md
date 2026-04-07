@@ -81,6 +81,10 @@
 ## Broken
 
 ### Important
+- [ ] MORE DEAD!!! For some THOMAS MOODY, the death are coming faster. Because the psychic saw into his lies and loses it
+  - [ ] Psychic realise Moody is not who he is, she loses it.
+  - [ ] Moody gives whiskey to lad, he dies. She loses it
+  - [ ] Somebody realises the police will not come, so they go fetch them. Needs to accelerate stuff
 
 - [ ] MAKE THE NAME change by using a function for it => “Archibald”
 - [ ] Why is he angered by the doctor? His brother was a broken face, that’s his mask AND scared of being recognize
@@ -202,10 +206,7 @@ JUMP FROM ONE CHARACTER TO ANOTHER
 
 ## 💡Generic Ideas
 - [ ] Access to servants if you befriend one? (Doctor or Captain likely, NOT Lad).
-- [ ] MORE DEAD!!! For some (how many) characters, the death are coming faster. But why?
-  - [ ] Psychic realise Moody is not who he is, she loses it.
-  - [ ] Moody gives whiskey to lad, he dies. She loses it
-  - [ ] Somebody realises the police will not come, so they go fetch them. Needs to accelerate stuff
+
 - [ ] - **End Note**: "For those who haven't realized it, you are not gonna leave this place alive."
 - [ ] **Phone**: Where to put the phone? Add phone room? Basement?
 - [ ] SOMETIMES, someone should be caught entering a room. 
