@@ -16,10 +16,19 @@ Test Nurse manually to get a feel
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
 
 
-- 
+- Friday Afternoon - Done
+- Friday Evening On going
+  - [ ] Ai generated : Test and modify
+    - [ ]  An ordinary room named after an ordinary King. Not very good
+    - [ ] Bedroom manning fix
+    - [ ] Bedrooms, Hidden after only on try, not good
+    - [ ] Insist on the fact that he knows he is an impostor and should hide it the best that he can.
+  - [ ] Add and validate tests
+  - [ ]
 
-
-
+- Saturday Morning 13 april
+  
+- Saturday Morning Hunt 20 April
 
 NEXT CHARACTER - UNlocked by Nurse (and psychic)
 

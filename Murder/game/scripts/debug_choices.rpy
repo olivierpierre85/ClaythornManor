@@ -53,6 +53,7 @@ label init_debug:
     $ current_character = captain_details
     $ current_storyline = captain_details
     call unlock_captain
+    $ captain_details.load_manual_checkpoints()
 
     $ current_character = broken_details
     $ current_storyline = broken_details

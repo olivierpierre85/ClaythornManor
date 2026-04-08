@@ -13,7 +13,7 @@
 #
 #   Notes :
 #       - Tea room: meet Doctor, Broken, Nurse
-#       - Dinner: Psychic, Broken
+#       - Dinner: Psychic (on his right), Broken across (no talk)
 #       - Map visit, 90 minutes
 #       - Billiard room: tell Boxer story
 # --------------------------------------------
@@ -258,7 +258,7 @@ label captain_day1_evening:
 
     I find mine near the head of the table. A good position.
 
-    Miss Baxter is on my right. Mr Moody sits across from me.
+    Miss Baxter is on my right. Mr Moody sits across from me, but far too distant for conversation.
     """
 
     """
@@ -267,6 +267,18 @@ label captain_day1_evening:
     She is younger than I expected. Elegantly dressed, with the quiet confidence of old money.
 
     She takes her seat at the head of the table.
+    """
+
+    """
+    I watch her closely as she settles in.
+
+    Her posture is excellent. Her gestures are graceful.
+
+    And yet there is something oddly deliberate about every movement.
+
+    It is not the ease of someone born into this. It is the precision of someone who has studied it.
+
+    Like an actress performing a part she has rehearsed too many times.
     """
 
     call common_day1_evening_host_welcome_speech
@@ -284,11 +296,25 @@ label captain_day1_evening:
     $ captain_details.description_hidden.unlock('heroic_act')
 
     """
-    I glance at the people nearest to me.
+    As we begin to eat, I notice Miss Baxter turning to her right.
 
-    Miss Baxter, whom I already spoke with at length during the car ride.
+    She has struck up a conversation with Mr Harring.
 
-    And Mr Moody, the war veteran.
+    That is unusual. In a formal setting, one addresses the person on one's left first.
+
+    I am on her left. She ought to have spoken to me.
+
+    Either she is unaware of the convention, or she is deliberately avoiding me.
+
+    Given our car ride, I suspect the latter.
+    """
+
+    $ captain_details.description_hidden.unlock('table')
+
+    """
+    After a while, she seems to have exhausted her conversation with the young man.
+
+    She turns to me at last.
     """
 
     call change_time(19, 30)
@@ -296,9 +322,8 @@ label captain_day1_evening:
     $ time_left = 90
     call run_menu(TimedMenu("captain_day1_evening", [
         TimedMenuChoice("Talk to Amelia Baxter", 'captain_day1_dinner_psychic', early_exit=True),
-        TimedMenuChoice("Talk to Thomas Moody", 'captain_day1_dinner_broken', early_exit=True),
         TimedMenuChoice("Eat in dignified silence", 'generic_cancel', early_exit=True),
-    ], image_left = "psychic", image_right = "broken"))
+    ], image_left = "psychic"))
 
     call change_time(21, 00)
 
@@ -378,115 +403,80 @@ label captain_day1_evening:
 # ------------------------------------
 label captain_day1_dinner_psychic:
 
+    psychic """
+    Well, Mr Sinha. It seems we are neighbours again.
+    """
+
+    """
+    She smiles. But I know what comes next. Questions.
+
+    Questions about where I am really from. About my rank. About my service.
+
+    I have learnt that the best defence against questions is to leave no room for them.
+    """
+
     captain """
-    Miss Baxter. We meet again.
+    Indeed, Miss Baxter. And I must say, this is a remarkable setting.
+
+    It reminds me of the officers' mess in Calcutta. Not in style, of course, but in atmosphere.
+
+    There was a hall there, built during the time of Lord Wellesley, with the most extraordinary ceiling.
+
+    Painted by an Italian artist whose name escapes me now, but the detail was remarkable.
+
+    Every panel depicted a different campaign of the East India Company.
+
+    I used to stand beneath it and study the brushwork during long evenings when the heat made sleep impossible.
     """
 
     psychic """
-    Indeed, Mr Sinha. I trust the tea room was more entertaining than our car ride?
+    How fascinating. But I was merely asking—
     """
 
     captain """
-    I hope I was not too tedious in the car. I do tend to go on.
+    And speaking of ceilings, have you noticed the plasterwork in this dining room?
+
+    It is Georgian, if I am not mistaken. The acanthus motifs along the cornice are quite distinctive.
+
+    In London, one sees a great deal of Adam-style ornamentation, but this is earlier.
+
+    More restrained, if you will. Quite tasteful.
+    """
+
+    """
+    She has stopped trying to interject.
+
+    Good. That is precisely the effect I was hoping for.
+
+    The key is to sound knowledgeable without saying anything of substance.
+
+    It is a skill I have perfected over many years.
     """
 
     psychic """
-    You were thorough, I will say that much.
+    You are certainly well-informed, Captain.
     """
 
-    """
-    I cannot tell whether she is being kind or cutting.
+    captain """
+    One picks things up. The army takes you to a great many places.
 
-    Either way, I had better be more measured this time.
+    Have I told you about the time I was stationed near the Khyber Pass?
+
+    The light there in the early morning is unlike anything you have ever seen.
+
+    It catches the mountains in such a way that—
     """
 
     psychic """
-    Tell me, Captain. What brings a man of your standing to a place like this?
-    """
-
-    captain """
-    The letter, naturally. Lady Claythorn was generous enough to invite me.
-
-    As recognition of my years of service.
-    """
-
-    psychic """
-    Your years of service. Yes, you mentioned that. Several times, in fact.
+    I think the next course is arriving.
     """
 
     """
-    She is sharper than I gave her credit for.
+    She turns back to her plate with a tight smile.
 
-    I had better not overplay my hand with this one.
-    """
+    Excellent. Another conversation in which I have said a great deal and revealed nothing.
 
-    captain """
-    And you, Miss Baxter? I confess I did most of the talking earlier.
-
-    I should like to hear about you.
-    """
-
-    psychic """
-    How very gracious of you. Perhaps another time.
-
-    The food is getting cold.
-    """
-
-    """
-    She returns to her plate with a polite smile.
-
-    I have not learnt much about her, but she has learnt rather too much about me.
-
-    I must be more careful.
-    """
-
-    return
-
-
-label captain_day1_dinner_broken:
-
-    captain """
-    Mr Moody. I hope you are enjoying the dinner.
-    """
-
-    broken """
-    It is very fine, Captain. I am not used to such extravagance.
-    """
-
-    captain """
-    Nor I, if I am honest.
-
-    Tell me, were you in the war?
-    """
-
-    broken """
-    I was. France, mostly.
-    """
-
-    """
-    He does not elaborate. The mask speaks for itself.
-
-    I know better than to press a man on his wounds.
-
-    But a shared experience, even an exaggerated one, can build trust.
-    """
-
-    captain """
-    I saw action myself. Nothing compared to what you must have endured, of course.
-
-    But war leaves its mark on all of us.
-    """
-
-    broken """
-    That it does, Captain.
-    """
-
-    """
-    He nods slowly and returns to his meal.
-
-    A man of few words. I respect that.
-
-    In truth, I envy it.
+    She is sharp, this Miss Baxter, but she will not catch me out so easily.
     """
 
     return

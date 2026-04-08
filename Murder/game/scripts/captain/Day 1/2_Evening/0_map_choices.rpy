@@ -20,7 +20,7 @@ label captain_day1_evening_map_menu:
             # First floor
             TimedMenuChoice(default_room_text('tea_room'), 'captain_day1_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day1_evening_dining_room', 10, room='dining_room'),
-            TimedMenuChoice(default_room_text('manor_garden'), 'captain_day1_evening_garden', 10, room='manor_garden'),
+            TimedMenuChoice(default_room_text('manor_garden'), 'captain_day1_evening_garden', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day1_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('library'), 'captain_day1_evening_library', 10, room='library'),
@@ -58,26 +58,12 @@ label captain_day1_evening_downstairs_default:
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('kitchen'))
 
-    $ change_room("basement_stairs")
-
     """
-    I head down the stairs to the service area.
+    The service area is downstairs. I have no reason to venture there.
 
-    A footman steps forward before I reach the bottom.
-    """
+    A proper gentleman does not intrude upon the domestic quarters.
 
-    footman """
-    Good evening, sir. I'm afraid guests aren't permitted beyond this point.
-    """
-
-    captain """
-    Of course. My apologies.
-    """
-
-    """
-    Rules are rules. I of all people understand that.
-
-    I turn back without argument.
+    If I were seen poking around the kitchen on the first evening, it would invite exactly the sort of suspicion I am trying to avoid.
     """
 
     return
@@ -115,11 +101,37 @@ label captain_day1_evening_garden:
     $ change_room('entrance_hall')
 
     """
-    I consider stepping outside, but the weather has worsened considerably.
+    I look through the window. The rain is coming down hard now.
 
-    A storm is gathering. I can hear the wind picking up against the windows.
+    A storm is gathering. I can hear the wind picking up against the glass.
 
-    Not a night for a stroll.
+    Most people would turn back at this point.
+
+    But I have marched through monsoons. A Scottish drizzle is hardly cause for concern.
+    """
+
+    $ change_room('manor_garden')
+
+    """
+    I step outside.
+
+    The air is cold and the rain is heavier than it looked from indoors.
+
+    Within moments, my jacket is soaked through.
+
+    I walk a short distance around the house. Nothing remarkable in the dark. A garden, a gravel path, what appears to be an outbuilding further on.
+
+    But the cold is beginning to bite, and I am not dressed for this.
+    """
+
+    $ change_room('bedroom_captain')
+
+    """
+    I return inside and head straight to my room to change.
+
+    A foolish exercise, perhaps, but at least I know the grounds extend further than I thought.
+
+    It cost me some time, however. I shall have to be quicker about my business.
     """
 
     return
@@ -156,6 +168,30 @@ label captain_day1_evening_portrait_gallery:
     She would have wanted me to belong here.
     """
 
+    """
+    Wait.
+
+    I look more carefully. There are perhaps a dozen portraits here, spanning several generations.
+
+    Stern-looking gentlemen in powdered wigs. Ladies in elaborate gowns.
+
+    But none of them resemble our host.
+
+    In fact, there is no recent portrait at all. The most recent one appears to be from the middle of the last century.
+
+    Where is Lady Claythorn?
+
+    If she is the current mistress of this house, her portrait ought to hang here alongside her forebears.
+
+    And yet there is nothing.
+    """
+
+    $ captain_details.threads.unlock('captain_host_suspicion_2')
+
+    """
+    I leave the gallery with a growing sense that something is not quite right about our host.
+    """
+
     return
 
 
@@ -170,9 +206,41 @@ label captain_day1_evening_library:
 
     'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
 
-    I glance through a few pages, but my name would never appear in such a volume.
+    I glance through a few pages. My name would never appear in such a volume, of course.
 
-    I close it and move on.
+    But let us see if the Claythorns are mentioned.
+    """
+
+    """
+    I search through the index. Clarendon, Claridge, Clark ...
+
+    Claythorn.
+
+    'Claythorn: a parish and manor in the county of Stirlingshire, Scotland.'
+
+    That is all. Claythorn is the name of the manor and the surrounding estate.
+
+    It is not a family name.
+    """
+
+    """
+    That is peculiar.
+
+    A titled lady would not call herself 'Lady Claythorn.' One does not take the name of one's house as a surname.
+
+    She ought to be 'Lady Something of Claythorn.' A proper family name, followed by the estate.
+
+    It is the sort of mistake no one born into the aristocracy would ever make.
+
+    But it is precisely the sort of mistake an outsider might.
+    """
+
+    $ captain_details.threads.unlock('captain_host_suspicion_1')
+
+    """
+    I close the book and place it back on the desk.
+
+    Interesting. Very interesting indeed.
     """
 
     return
@@ -188,16 +256,12 @@ label captain_day1_evening_attic_default:
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
 
-    $ change_room("attic_hallway")
-
     """
-    The servants' quarters. Narrow stairs, plain walls.
+    The servants' quarters are upstairs. I have no business going there.
 
-    I know this part of a house well enough. It is where people like the staff live.
+    A guest does not wander into the staff's private rooms. It would be a serious breach of propriety.
 
-    And, in some ways, it is where people like me were expected to stay.
-
-    There is nothing for me up here. I go back down.
+    Whatever is up there is none of my concern.
     """
 
     return
@@ -208,26 +272,41 @@ label captain_day1_evening_attic_default:
 # ------------------------------------
 label captain_day1_evening_bedroom_closed:
 
-    $ change_room("bedrooms_hallway")
+    $ captain_details.saved_variables["day1_evening_bedroom_refusals"] += 1
 
-    play sound door_knock
+    if captain_details.saved_variables["day1_evening_bedroom_refusals"] == 1:
 
-    captain """
-    Hello?
-    """
+        """
+        I pause outside the door.
 
-    """
-    No answer.
+        No. It would be improper to enter someone's room uninvited.
 
-    It would be improper to enter someone's room uninvited.
+        That is not how a gentleman conducts himself.
+        """
 
-    That is not how a gentleman conducts himself.
-    """
+    elif captain_details.saved_variables["day1_evening_bedroom_refusals"] == 2:
+
+        """
+        I consider it for a moment, then think better of it.
+
+        A man does not go rummaging through another person's private quarters. Not on the first evening.
+        """
+
+        # Block all other bedrooms after 2 refusals
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
 
     return
 
 
 label captain_day1_evening_bedroom_drunk:
+
+    $ captain_details.saved_variables["day1_evening_bedroom_refusals"] += 1
 
     $ change_room("bedrooms_hallway")
 
@@ -249,10 +328,21 @@ label captain_day1_evening_bedroom_drunk:
     Whatever is in there is not my concern.
     """
 
+    if captain_details.saved_variables["day1_evening_bedroom_refusals"] >= 2:
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
+
     return
 
 
 label captain_day1_evening_bedroom_psychic:
+
+    $ captain_details.saved_variables["day1_evening_bedroom_refusals"] += 1
 
     $ change_room("bedrooms_hallway")
 
@@ -281,5 +371,14 @@ label captain_day1_evening_bedroom_psychic:
     """
 
     $ unlock_map('bedroom_psychic')
+
+    if captain_details.saved_variables["day1_evening_bedroom_refusals"] >= 2:
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
+        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
 
     return

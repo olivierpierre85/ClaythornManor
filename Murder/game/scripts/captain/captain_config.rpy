@@ -1,5 +1,7 @@
 label init_captain:
 
+    call captain_config_progress
+
     call captain_day1_evening_map_menu
 
     # call captain_config_menu
@@ -13,6 +15,7 @@ label init_captain:
 
             # Evening day 1
             "day1_evening_billiard_room_visited" : False,
+            "day1_evening_bedroom_refusals" : 0,
         }
 
         captain_objects = CharacterObjectList([
@@ -70,11 +73,25 @@ label init_captain:
             description_short = "Older Indian man",
             description_long = captain_description,
             description_hidden = captain_extra_information,
-            important_choices = CharacterInformationList([]),
+            important_choices = CharacterInformationList([
+                CharacterInformation(1, "captain_host_suspicion_1", "You noticed a problem with the name 'Lady Claythorn'",
+                    content_negative="You didn't investigate the library",
+                    image_file="lord",
+                    chapters=['friday_evening'],
+                    relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
+                ),
+                CharacterInformation(2, "captain_host_suspicion_2", "You couldn't find Lady Claythorn's portrait in the gallery",
+                    content_negative="You didn't investigate the portrait gallery",
+                    image_file="lord_2",
+                    chapters=['friday_evening'],
+                    relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
+                ),
+            ]),
             endings = captain_endings,
             observations = CharacterInformationList([]),
             objects = captain_objects,
-            progress = [],
+            progress = captain_progress,
+            test_checkpoints = captain_test_checkpoints,
             saved_variables = copy.deepcopy(captain_init_variables),
         )
         captain = Character("captain_details.get_name()", image="captain", dynamic=True)
