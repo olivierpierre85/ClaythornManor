@@ -62,6 +62,15 @@ Murder/game/scripts/
 - Blank line after every dialogue or narration sentence.
 - Shared dialogue blocks must be extracted into a named label and `call`ed — never duplicated.
 
+### Cross-character shared dialogue (`_common/`)
+
+Many scenes are witnessed by multiple characters (e.g. the dinner speech, a guest collapsing, a confrontation in the hall). When the same or near-identical dialogue/narration appears in more than one character's script, it must be moved to a label in `_common/` and `call`ed from each character's script.
+
+- Name the label descriptively: `common_day1_dinner_host_speech`, `common_day2_morning_body_discovered`, etc.
+- Every label in `_common/` must end with `return`.
+- When writing new scenes, check `_common/` first — the scene may already exist.
+- When editing an existing scene that appears in multiple characters, locate the shared label in `_common/` and edit it there; do not patch each character file individually.
+
 ### Key variables
 
 ```renpy
