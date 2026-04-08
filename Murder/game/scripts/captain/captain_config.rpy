@@ -18,6 +18,21 @@ label init_captain:
             "day1_evening_bedroom_refusals" : 0,
         }
 
+        captain_important_choices = CharacterImportantChoiceList([
+            CharacterInformation(1, "captain_host_suspicion_1", "You noticed a problem with the name 'Lady Claythorn'",
+                content_negative="You didn't investigate the library",
+                image_file="lord",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
+            ),
+            CharacterInformation(2, "captain_host_suspicion_2", "You couldn't find Lady Claythorn's portrait in the gallery",
+                content_negative="You didn't investigate the portrait gallery",
+                image_file="lord_2",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
+            ),
+        ])
+
         captain_objects = CharacterObjectList([
             CharacterInformation(
                 1, "butler_key",
@@ -73,22 +88,9 @@ label init_captain:
             description_short = "Older Indian man",
             description_long = captain_description,
             description_hidden = captain_extra_information,
-            important_choices = CharacterInformationList([
-                CharacterInformation(1, "captain_host_suspicion_1", "You noticed a problem with the name 'Lady Claythorn'",
-                    content_negative="You didn't investigate the library",
-                    image_file="lord",
-                    chapters=['friday_evening'],
-                    relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
-                ),
-                CharacterInformation(2, "captain_host_suspicion_2", "You couldn't find Lady Claythorn's portrait in the gallery",
-                    content_negative="You didn't investigate the portrait gallery",
-                    image_file="lord_2",
-                    chapters=['friday_evening'],
-                    relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
-                ),
-            ]),
+            important_choices = captain_important_choices,
             endings = captain_endings,
-            observations = CharacterInformationList([]),
+            observations = CharacterObservationList([]),
             objects = captain_objects,
             progress = captain_progress,
             test_checkpoints = captain_test_checkpoints,
