@@ -19,13 +19,13 @@ label init_captain:
         }
 
         captain_important_choices = CharacterImportantChoiceList([
-            CharacterInformation(1, "captain_host_suspicion_1", "You noticed a problem with the name 'Lady Claythorn'",
+            CharacterInformation(1, "captain_host_suspicion_name", "You noticed a problem with the name 'Lady Claythorn'",
                 content_negative="You didn't investigate the library",
                 image_file="lord",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
             ),
-            CharacterInformation(2, "captain_host_suspicion_2", "You couldn't find Lady Claythorn's portrait in the gallery",
+            CharacterInformation(2, "captain_host_suspicion_portrait", "You couldn't find Lady Claythorn's portrait in the gallery",
                 content_negative="You didn't investigate the portrait gallery",
                 image_file="lord_2",
                 chapters=['friday_evening'],

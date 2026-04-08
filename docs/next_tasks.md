@@ -19,7 +19,8 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
 - Friday Afternoon - Done
 - Friday Evening On going
   - [ ] Ai generated : Test and modify
-    - [ ]  An ordinary room named after an ordinary King. Not very good
+    - [ ] CURRENT TEST - ARRIVAL
+    - [ ] An ordinary room named after an ordinary King. Not very good
     - [ ] Bedroom manning fix
     - [ ] Bedrooms, Hidden after only on try, not good
     - [ ] Insist on the fact that he knows he is an impostor and should hide it the best that he can.

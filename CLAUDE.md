@@ -22,16 +22,16 @@ For full character backstories, motivations, and relationships see:
 
 ### Quick Reference — Characters
 
-| Code name | Full name | Role |
-|-----------|-----------|------|
-| `lad` | Ted Harring | Hero, petty thief, raised in orphanage |
-| `psychic` | Amelia Baxter | The killer; flowery language |
-| `doctor` | Daniel Baldwin | Opium addict; stole the Psychic's baby |
-| `captain` | Sushil Sinha | Formal Indian officer; noble ancestry |
-| `nurse` | Rosalind Marsh | Pseudo-villain; ratted out the Psychic |
-| `drunk` | Samuel Manning | Defence lawyer; mostly incoherent |
-| `broken` | Thomas Moody | Imposter wearing a mask; amateur sleuth |
-| `host` | Lady Claythorn | Out-of-work actress hired to run the manor |
+| Code name | Full name      | Role                                       |
+| --------- | -------------- | ------------------------------------------ |
+| `lad`     | Ted Harring    | Hero, petty thief, raised in orphanage     |
+| `psychic` | Amelia Baxter  | The killer; flowery language               |
+| `doctor`  | Daniel Baldwin | Opium addict; stole the Psychic's baby     |
+| `captain` | Sushil Sinha   | Formal Indian officer; noble ancestry      |
+| `nurse`   | Rosalind Marsh | Pseudo-villain; ratted out the Psychic     |
+| `drunk`   | Samuel Manning | Defence lawyer; mostly incoherent          |
+| `broken`  | Thomas Moody   | Imposter wearing a mask; amateur sleuth    |
+| `host`    | Lady Claythorn | Out-of-work actress hired to run the manor |
 
 The **Psychic** is the killer. The **Broken Face** is the first victim (killed Night 1 when the Psychic realises he is not the officer she loved).
 
@@ -140,7 +140,7 @@ captain_test_checkpoints = {
     ],
     'friday_evening': [
         {"label": "captain_day1_evening", "threads": {}},
-        {"label": "captain_day1_evening", "threads": {"captain_host_suspicion_1": True}},
+        {"label": "captain_day1_evening", "threads": {"captain_host_suspicion_name": True}},
     ],
 }
 ```

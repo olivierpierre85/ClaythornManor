@@ -186,7 +186,7 @@ label captain_day1_evening_portrait_gallery:
     And yet there is nothing.
     """
 
-    $ captain_details.threads.unlock('captain_host_suspicion_2')
+    $ captain_details.threads.unlock('captain_host_suspicion_portrait')
 
     """
     I leave the gallery with a growing sense that something is not quite right about our host.
@@ -235,7 +235,7 @@ label captain_day1_evening_library:
     But it is precisely the sort of mistake an outsider might.
     """
 
-    $ captain_details.threads.unlock('captain_host_suspicion_1')
+    $ captain_details.threads.unlock('captain_host_suspicion_name')
 
     """
     I close the book and place it back on the desk.
