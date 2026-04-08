@@ -20,6 +20,6 @@ label captain_config_progress:
                 {"label": "captain_introduction", "threads": {}},
             ],
             'friday_evening': [
-                {"label": "captain_day1_evening", "threads": {}},True}},
+                {"label": "captain_day1_evening", "threads": {}},
             ],
         }
