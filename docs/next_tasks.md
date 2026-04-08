@@ -11,58 +11,11 @@ Test Nurse manually to get a feel
 - now in day2 morning, error if master key and not visited butler room, add dialogs
 
 
-## Write story captain
+## Write Story: Captain (Sushil Sinha)
+
+Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
 
 
-### Generic 
-- Fun thing, must find lady claythorn is an impostor, leading to her death by an angry mob (or burned at night?) => unlock Lady Claythorn is an impostor, and final character
-  - BOOK about genealogy
-    - "Lady Claythorn is not a normal Name, Claythorn is the place, she should have a proper surname" Like Lady Grantham of Claythorn Manor.
-  - FIND more dinner manner inconsitencies
-
-First option - dinner on saturday evening. 
-- Make a scene
-- Say nothing
-- Try to make her tell the story herself? Trip during conversation? Takes thomas moody seat ? BECAUSE you know that it's how a table must be made. Talk with the butler
-How/when to confront? Saturday evening, but she is not in her room? until I go there before a certain time, she is caught leaving?
-
-GIVE him options that others don't have, like **going outside in the rain** : At least it's a place I am allowed to be. BUT he will need a torch t go there. Where to find a torch? in the attic, add a note on the nurse attic visit.
-HE HAS all the options in map menu, but will do nothing in most due to proper manners. UNLOCKS an "outside" map. For the search on sunday morning.
-THE OUTside shed will show THE **OIL** for the car, that allows him to escape with everyone, but then he will die on the road?
-But the Broken will find the bodies of the staff there if he survives.
-
-but to unlock Lady Clay we will need info also from DRUNK (if drunk is unlocked by broken.)
-
-- When he takes charge, he feels like he has too.
-  
-### Friday
-- Friday dinner, Evening dinner: his analytical eye picks up on everyone's social standing
-
-EVENING - Test Ai generate scaffold
-=> A lot of duplicates with Psychic, 
-=> Map doe he have a choice to wander at this point? NO maybe JUST give a limited choices since he is a stikler? Billiard room and BED?
-
-### Saturday
-- Can test the host on the hunt (not dinner)
-- ON the hunt he observes and talks to lady claythorn, but he is also trying to appear good at shooting.
-(I thouhght I would have a trouble following them, but they are even worst than I am. It was to be expected from Ted Harring, but Lady Claythorn should be better at this, especially since she was the one initiated this)
-
-- On saturday evening, he is suspicious, but don't reveal it to other people BECAUSe he is not trusting them. He as the choice in getting to the billiard room and his bed
-- ONe person appears when he is reading? Could it be Lady Claythorn => YES if you make the right choices at dinner and before (Make her understand you are on her side, but you see through her lies)
-- Otherwise, who? Lad, psychic, nurse? all of them and rebuff all of them?
-- BUT if he managed to find suspicion on Lady Claythorn, he will allow himself to dig deeper?
-
-### Sunday
-
-- Last day, he never stays, always chose to run (not happy if lad also want's to run)
-
-**MAPS**
-- After saturdat evening, he has the masterkey to go everywhere, ( But how is it different thant the nurse?)
-  - He will find different things because he is more meticulous?
-- First day, he is talking, so he won't wander the house, also it's not done.
-
-**endings**
-- The hero, to survive AND redempt yourself. You will have the choice to save people. But you first need an intuition. An intuition that escaping alone will kill you? 
 - 
 
 
