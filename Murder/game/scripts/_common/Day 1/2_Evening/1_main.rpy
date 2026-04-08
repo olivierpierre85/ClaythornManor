@@ -225,6 +225,57 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
     return
 
 # ------------------------------------
+#       CAPTAIN - NURSE - BROKEN
+#       (Nurse joins Captain's group)
+# ------------------------------------
+label common_day1_evening_nurse_joins_captain:
+
+    captain """
+    Oh, hello Miss ... ?
+    """
+
+    nurse """
+    Miss Marsh.
+    """
+
+    captain """
+    How do you do, Miss Marsh. Captain Sushil Sinha.
+
+    I was telling those gentlemen a story about a certain conflict I was involved in.
+
+    But I can change the subject if you prefer.
+    """
+
+    nurse """
+    No, please, go on. I am quite familiar with wartime stories, having served as a nurse through more than one.
+    """
+
+    captain """
+    Really? You were a wartime nurse. How interesting.
+
+    Well, where was I?
+    """
+
+    broken """
+    I believe you were talking about the Anglo-Zanzibar War.
+    """
+
+    captain """
+    Right.
+
+    That's where I got my first battle scar.
+
+    It's on my back so I won't show it to you, but it was rather dangerous fighting.
+
+    Not like the Great War of course, and not that I can understand your pain.
+
+    But still, a battle wound is a battle wound.
+    """
+
+    return
+
+
+# ------------------------------------
 #               LAD - PSYCHIC
 # ------------------------------------
 label common_day1_drinks_lad_psychic_encounter:

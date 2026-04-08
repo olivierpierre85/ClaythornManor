@@ -157,7 +157,7 @@ label doctor_day1_evening:
         """
 
     broken """
-    Nice to meet you captain, I am Thomas Moody.
+    Nice to meet you, Captain. I am Thomas Moody.
     """
 
     doctor """
@@ -199,11 +199,11 @@ label doctor_day1_evening:
     """
 
     captain """
-    It reminds me of a guy I knew back in the Army.
+    It reminds me of a fellow I knew back in the Army.
 
-    He was my superior but I swear I never saw him sober.
+    He was my superior, but I swear I never saw him sober.
 
-    Even in the morning he was always still drunk from the day before.
+    Even in the mornings, he was always still drunk from the day before.
 
     And...
     """
