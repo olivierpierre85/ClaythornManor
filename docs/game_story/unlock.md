@@ -15,7 +15,7 @@ graph TD;
     doctor -->|Is a thief| lad;
     doctor -->|Escape| broken;
     nurse -->|Not a fighter| captain;
-    nurse -->|Wife Story| drunk;
+    captain-->|Wife Story| drunk;
     captain -->|is not nobility| host;
     drunk -->|full confession| host;
     broken -->|TODO| drunk;
