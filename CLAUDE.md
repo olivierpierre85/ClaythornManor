@@ -94,6 +94,76 @@ Cheat sheet for less common patterns: [docs/_code_cheat_sheet.md](docs/_code_che
 
 ---
 
+## Progress Screen & Checkpoints
+
+Each character needs a `<char>_config_progress.rpy` file that defines the progress row layout and dev checkpoints.
+
+### File structure
+
+```
+<char>_config_progress.rpy   # defines <char>_progress and <char>_test_checkpoints
+```
+
+`<char>_config.rpy` must:
+1. `call <char>_config_progress` **before** the `python:` block that creates `CharacterDetails`
+2. Pass `progress = <char>_progress` and `test_checkpoints = <char>_test_checkpoints` to `CharacterDetails`
+
+### Progress rows (`<char>_progress`)
+
+A list of rows; each row is a list of `Chapter` objects left-to-right:
+
+```python
+captain_progress = [
+    [
+        Chapter(image_checkpoint_start, "start", "captain_introduction", "friday_afternoon"),
+        Chapter(image_checkpoint_right, "checkpoint", "captain_day1_evening", "friday_evening"),
+        Chapter(image_checkpoint_empty),   # placeholder for unwritten chapters
+        ...
+        Chapter(image_ending_question, "ending", "poisoned", "end"),
+    ],
+]
+```
+
+- Argument order: `(image, chapter_type, label, name)`
+- `label` — the Ren'Py label that `add_checkpoint(label)` is called with in the chapter script
+- `name` — the `chapter_index` key (e.g. `"friday_evening"`); used for display text and completion checks
+- Always fill all 8 columns (start + 6 chapters + ending) even for unwritten chapters — use `Chapter(image_checkpoint_empty)` as placeholders
+
+### Test checkpoints (`<char>_test_checkpoints`)
+
+Maps chapter keys to a list of checkpoint configs used by the debug mode:
+
+```python
+captain_test_checkpoints = {
+    'friday_afternoon': [
+        {"label": "captain_introduction", "threads": {}},
+    ],
+    'friday_evening': [
+        {"label": "captain_day1_evening", "threads": {}},
+        {"label": "captain_day1_evening", "threads": {"captain_host_suspicion_1": True}},
+    ],
+}
+```
+
+Only include chapters that have been written. The engine (`load_manual_checkpoints`) creates one `Checkpoint` per entry.
+
+### Wiring into debug mode
+
+After adding a new character's progress config, add `load_manual_checkpoints()` to `debug_choices.rpy` → `label init_debug`:
+
+```renpy
+$ current_character = captain_details
+$ current_storyline = captain_details
+call unlock_captain
+$ captain_details.load_manual_checkpoints()   # ← required for breakpoints to appear
+```
+
+### image_file is mandatory on all threads
+
+Every `CharacterInformation` item that can appear in the progress details screen **must** have `image_file` set — `None` crashes the screen. Use a placeholder image (e.g. `"lord"`) until a proper image exists.
+
+---
+
 ## Testing Framework
 
 ### Folder layout
