@@ -19,14 +19,11 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
 - Friday Afternoon - Done
 - Friday Evening On going
   - [ ] Ai generated : Test and modify
-    - [ ] CURRENT TEST - ARRIVAL
-    - [ ] An ordinary room named after an ordinary King. Not very good
-    - [ ] Bedroom manning fix
-    - [ ] Bedrooms, Hidden after only on try, not good
-    - [ ] Insist on the fact that he knows he is an impostor and should hide it the best that he can.
-    - [ ]     # TODO this whole part is not needed, delete
-    """
-    The doctor starts to say something, but I cannot afford silences.
+    - [ ] CURRENT TEST - dinner
+      - [ ] captain_day1_dinner_psychic
+    - [ ] MAP
+      - [ ] Bedroom manning fix
+      - [ ] Bedrooms, Hidden after only on try, not good
   - [ ] Add and validate tests
   - [ ]
 

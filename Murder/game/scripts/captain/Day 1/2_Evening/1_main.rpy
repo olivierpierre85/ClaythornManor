@@ -160,6 +160,16 @@ label captain_day1_evening:
     call common_day1_evening_host_welcome_speech
 
     """
+    After the speech, I can't help but notice a tightness in my stomach.
+
+    It reminds me that I am an impostor here, not worthy of any award.
+
+    If I am discovered not only will I lose the money, there might be talk about what I've done.
+
+    That could hurt my reputation.
+
+    So I should watch what I am saying carefully.
+
     The first course is served shortly after.
 
     As we begin to eat, I notice Miss Baxter turning to her right.
@@ -172,9 +182,6 @@ label captain_day1_evening:
 
     Either she is unaware of the convention, or she is deliberately avoiding me.
 
-    Given our car ride, I suspect the latter.
-    """
-    """
     It could be the latter. But as I examine the other guests, small lapses begin to reveal themselves.
 
     Mr Manning holds his wine glass by the bowl, not the stem.
@@ -184,35 +191,34 @@ label captain_day1_evening:
     Dr Baldwin has not touched his napkin at all. It lies folded beside his plate, forgotten.
 
     Small things. The sort a man like me has trained himself to notice in others.
-    """
 
-    """
     None of them are accustomed to proper company. That much is plain enough.
-    """
 
-    """
     Then my gaze drifts to the head of the table, and I pause.
 
-    Lady Claythorn lifts her soup spoon towards her mouth, then corrects the angle of her wrist mid-gesture.
+    Lady Claythorn reaches for her bread roll and picks up the butter knife.
 
-    Almost imperceptible. But the correction is unmistakable.
+    She cuts the roll in half and butters it whole.
 
-    Curious. One would expect a woman of her standing to perform such rituals without thought.
+    A small thing. Invisible to most at this table.
+
+    But one does not butter an entire roll. One breaks off a single piece and attends to that alone.
+
+    I have been told that so many times I cannot fail to notice it.
+
+    Of all the people at this table, I did not expect that from her.
+
+    Then again, this alone probably means nothing. 
+    
+    With a manor this remote, perhaps she has simply not had occasion for proper company in some time.
     """
+    
+    pause 1.0
 
     """
-    Only the butler moves with perfect precision.
+    After a while Miss Baxter seems to have exhausted her conversation with the young man.
 
-    Every plate set down in silence. Every glass filled to the correct measure.
-
-    In a room full of small imperfections, he alone is flawless.
-    """
-
-
-    """
-    After a while, she seems to have exhausted her conversation with the young man.
-
-    She turns to me at last.
+    I can talk to her now if I please.
     """
 
     call change_time(19, 30)
@@ -250,8 +256,6 @@ label captain_day1_evening:
     """
     The room is adequate. Not extravagant, but respectable.
 
-    'George I.' An ordinary room named after an ordinary King.
-
     Still, it is more comfortable than my lodgings in London.
 
     I unpack quickly and consider my options.
@@ -284,7 +288,7 @@ label captain_day1_evening:
 
     I have done well. Nobody suspects a thing.
 
-    My stories held their attention, and I avoided any question that might have caught me out.
+    My stories have held their attention, and I have avoided any question that might have caught me out.
 
     Tomorrow, I shall do the same.
 
@@ -344,7 +348,7 @@ label captain_day1_dinner_psychic:
     """
     She has stopped trying to interject.
 
-    Good. That is precisely the effect I was hoping for.
+    Good. Exactly as intended.
 
     The key is to sound knowledgeable without saying anything of substance.
 
