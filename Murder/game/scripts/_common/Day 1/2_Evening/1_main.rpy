@@ -225,6 +225,113 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
     return
 
 # ------------------------------------
+#       DOCTOR - CAPTAIN
+#       (Captain arrives in tea room)
+# ------------------------------------
+label common_day1_evening_tea_room_captain_arrives:
+
+    captain """
+    Hello there, I am Captain Sushil Sinha.
+    """
+
+    if current_character == doctor_details:
+        if doctor_details.threads.is_unlocked('broken_offended'):
+            """
+            As he sees the new guests coming in, Thomas Moody joins me back to greet them.
+            """
+
+    broken """
+    Nice to meet you, Captain. I am Thomas Moody.
+    """
+
+    doctor """
+    Doctor Daniel Baldwin.
+
+    How do you do.
+    """
+
+    captain """
+    Nice to meet you both.
+    """
+
+    if current_character == captain_details:
+        """
+        I notice at once that Mr Moody is wearing a tin mask.
+
+        I have seen many of those. The poor man must have suffered terribly during the war.
+
+        I must be careful not to stare.
+        """
+
+    $ broken_details.description_hidden.unlock('mask')
+
+    broken """
+    And who is the gentleman over there?
+    """
+
+    if current_character == captain_details:
+        """
+        He is referring to Manning, who has found the drinks tray with remarkable speed.
+        """
+
+    captain """
+    That would be Samuel Manning.
+
+    I am afraid he had a bit too much to drink.
+
+    But don't worry about him.
+    """
+
+    if current_character == captain_details:
+        """
+        We watch as Manning fills a water glass to the brim with sherry.
+
+        He drinks it in one go, then sits down on the sofa and falls asleep almost immediately.
+        """
+
+    elif current_character == doctor_details:
+        """
+        We all glance at him from afar as he fills a water glass to the brim with sherry.
+
+        He then proceeds to chug it in one sip.
+
+        After that, he sits down on the sofa next to him and immediately falls asleep.
+        """
+
+    captain """
+    Well, that should keep him still for a while.
+    """
+
+    $ drunk_details.description_hidden.unlock('addict')
+
+    doctor """
+    Indeed, it's impressive that...
+    """
+
+    
+    if current_character == captain_details:
+        """
+        The words are already leaving my mouth before I have weighed them.
+
+        An old habit, picked up a lot time ago, when I noticed that if I don't impose myself, no one will pay attention to me.
+
+        Only once I am halfway through do I notice that I have spoken straight over the doctor.
+
+        Rude, perhaps. Yet stopping now would be worse than carrying on.
+        """
+
+    captain """
+    It reminds me of a fellow I knew back in the Army.
+
+    He was my superior, but I swear I never saw him sober.
+
+    Even in the mornings, he was always still drunk from the day before.
+    """
+
+    return
+
+
+# ------------------------------------
 #       CAPTAIN - NURSE - BROKEN
 #       (Nurse joins Captain's group)
 # ------------------------------------

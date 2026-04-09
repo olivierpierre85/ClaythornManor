@@ -62,88 +62,20 @@ label captain_day1_evening:
     call change_time(16, 45)
 
     """
-    Three people are already here.
+    Four people are already here.
 
-    Two men in quiet conversation and a woman standing a little apart, sipping tea.
+    I am not surprised to see Samuel Manning next to the tray of drinks.
+
+    He is trying to engage in conversation with a woman who seems rather embarrassed.
+
+    I could go and rescue her, but I don't really feel like dealing with Mr Manning right now.
+
+    I also spot two men in quiet conversation.
 
     Time to introduce myself.
     """
-
-    captain """
-    Hello there, I am Captain Sushil Sinha.
-    """
-
-    broken """
-    Nice to meet you, Captain. I am Thomas Moody.
-    """
-
-    doctor """
-    Doctor Daniel Baldwin.
-
-    How do you do.
-    """
-
-    captain """
-    Nice to meet you both.
-    """
-
-    """
-    I notice at once that Mr Moody is wearing a tin mask.
-
-    I have seen many of those. The poor man must have suffered terribly during the war.
-
-    I must be careful not to stare.
-    """
-
-    $ broken_details.description_hidden.unlock('mask')
-
-    broken """
-    And who is the gentleman over there?
-    """
-
-    """
-    He is referring to Manning, who has found the drinks tray with remarkable speed.
-    """
-
-    captain """
-    That would be Samuel Manning.
-
-    I am afraid he had a bit too much to drink.
-
-    But don't worry about him.
-    """
-
-    """
-    We watch as Manning fills a water glass to the brim with sherry.
-
-    He drinks it in one go, then sits down on the sofa and falls asleep almost immediately.
-    """
-
-    captain """
-    Well, that should keep him still for a while.
-    """
-
-    $ drunk_details.description_hidden.unlock('addict')
-
-    doctor """
-    Indeed, it's impressive that...
-    """
-
-    """
-    The doctor starts to say something, but I cannot afford silences.
-
-    Silences invite questions. Questions lead to lies. And lies must be kept to a minimum.
-
-    Better to fill the air myself.
-    """
-
-    captain """
-    It reminds me of a fellow I knew back in the Army.
-
-    He was my superior, but I swear I never saw him sober.
-
-    Even in the mornings, he was always still drunk from the day before.
-    """
+    
+    call common_day1_evening_tea_room_captain_arrives
 
     """
     That part, at least, is true.
@@ -152,13 +84,11 @@ label captain_day1_evening:
 
     Then another about the supply lines in Burma.
 
+    And another.
+
     I can tell the doctor has stopped listening after a while, but Mr Moody seems genuinely interested.
 
-    Good. As long as I am the one talking, nobody can ask me anything awkward.
-    """
-
-    """
-    The woman approaches our group.
+    Then, the woman approaches our group.
     """
 
     call common_day1_evening_nurse_joins_captain
@@ -168,7 +98,7 @@ label captain_day1_evening:
 
     But they do not need to know that.
 
-    The Anglo-Zanzibar War. A conflict that lasted barely an hour.
+    The Anglo-Zanzibar War. The shortest war in the history of Great Britain.
 
     Not that anyone here is likely to remember that detail.
     """
@@ -176,7 +106,7 @@ label captain_day1_evening:
     $ captain_details.description_hidden.unlock('embellishment')
 
     """
-    I carry on. Miss Marsh listens attentively, though I notice something sharp behind her eyes.
+    I carry on. Miss Marsh listens attentively.
 
     The doctor, on the other hand, has drifted off entirely. He nods, but his mind is elsewhere.
 

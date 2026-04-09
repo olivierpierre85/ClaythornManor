@@ -24,6 +24,9 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
     - [ ] Bedroom manning fix
     - [ ] Bedrooms, Hidden after only on try, not good
     - [ ] Insist on the fact that he knows he is an impostor and should hide it the best that he can.
+    - [ ]     # TODO this whole part is not needed, delete
+    """
+    The doctor starts to say something, but I cannot afford silences.
   - [ ] Add and validate tests
   - [ ]
 
