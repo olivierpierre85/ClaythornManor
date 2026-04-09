@@ -46,14 +46,12 @@ label captain_generic_room:
 
     captain """
     The 'George I' Bedroom.
-
-    An ordinary room named after an ordinary King.
     """
 
     if current_character.text_id == "psychic":
 
         captain """
-        The only remarkable thing about 'George I' is that ...
+        The most remarkable thing about 'George I' is that ...
         """
 
         psychic """
