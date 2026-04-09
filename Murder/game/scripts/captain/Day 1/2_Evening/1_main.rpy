@@ -149,9 +149,7 @@ label captain_day1_evening:
     I find mine near the head of the table. A good position.
 
     Miss Baxter is on my right. Mr Moody sits across from me, but far too distant for conversation.
-    """
 
-    """
     Then, our host makes her entrance.
 
     She is younger than I expected. Elegantly dressed, with the quiet confidence of old money.
@@ -159,33 +157,11 @@ label captain_day1_evening:
     She takes her seat at the head of the table.
     """
 
-    """
-    I watch her closely as she settles in.
-
-    Her posture is excellent. Her gestures are graceful.
-
-    And yet there is something oddly deliberate about every movement.
-
-    It is not the ease of someone born into this. It is the precision of someone who has studied it.
-
-    Like an actress performing a part she has rehearsed too many times.
-    """
-
     call common_day1_evening_host_welcome_speech
 
     """
-    One thousand pounds, shared among seven guests. Roughly one hundred and forty each.
-
-    Not as much as I had hoped, but still a significant sum.
-
-    If used wisely, it could open the right doors.
-
     The first course is served shortly after.
-    """
 
-    $ captain_details.description_hidden.unlock('heroic_act')
-
-    """
     As we begin to eat, I notice Miss Baxter turning to her right.
 
     She has struck up a conversation with Mr Harring.
@@ -198,8 +174,40 @@ label captain_day1_evening:
 
     Given our car ride, I suspect the latter.
     """
+    """
+    It could be the latter. But as I examine the other guests, small lapses begin to reveal themselves.
 
-    $ captain_details.description_hidden.unlock('table')
+    Mr Manning holds his wine glass by the bowl, not the stem.
+
+    Mr Harring hesitates over his cutlery, glancing at his neighbour before choosing a fork.
+
+    Dr Baldwin has not touched his napkin at all. It lies folded beside his plate, forgotten.
+
+    Small things. The sort a man like me has trained himself to notice in others.
+    """
+
+    """
+    None of them are accustomed to proper company. That much is plain enough.
+    """
+
+    """
+    Then my gaze drifts to the head of the table, and I pause.
+
+    Lady Claythorn lifts her soup spoon towards her mouth, then corrects the angle of her wrist mid-gesture.
+
+    Almost imperceptible. But the correction is unmistakable.
+
+    Curious. One would expect a woman of her standing to perform such rituals without thought.
+    """
+
+    """
+    Only the butler moves with perfect precision.
+
+    Every plate set down in silence. Every glass filled to the correct measure.
+
+    In a room full of small imperfections, he alone is flawless.
+    """
+
 
     """
     After a while, she seems to have exhausted her conversation with the young man.
