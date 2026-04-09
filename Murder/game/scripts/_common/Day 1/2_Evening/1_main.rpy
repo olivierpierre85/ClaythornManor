@@ -224,6 +224,20 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     return
 
+label captain_psychic_should_talk_to_captain_first:
+
+    captain """
+    I don't want to make a scene, but I am the one on your left.
+
+    You should have engaged in conversation with me first.
+    """
+
+    psychic """
+    Oh, how dreadful of me. I do apologise.
+    """
+
+    return
+    
 # ------------------------------------
 #       DOCTOR - CAPTAIN
 #       (Captain arrives in tea room)

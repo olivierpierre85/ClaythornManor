@@ -303,15 +303,7 @@ label psychic_day1_dinner_captain:
 
     if psychic_details.saved_variables["day1_evening_talk_to_lad"] and not psychic_details.saved_variables["day1_evening_talk_to_captain"]:
 
-        captain """
-        I don't want to make a big deal out of it, but I am the one on your left.
-        
-        You should have engaged in conversation with me first.
-        """
-
-        psychic """
-        Oh right, I am sorry.
-        """
+        call captain_psychic_should_talk_to_captain_first
 
         """
         What a stickler he is.

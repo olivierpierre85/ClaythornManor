@@ -223,17 +223,15 @@ label captain_day1_evening:
 
     call change_time(19, 30)
 
-    $ time_left = 90
+    $ time_left = 1
     call run_menu(TimedMenu("captain_day1_evening", [
         TimedMenuChoice("Talk to Amelia Baxter", 'captain_day1_dinner_psychic', early_exit=True),
-        TimedMenuChoice("Eat in dignified silence", 'generic_cancel', early_exit=True),
+        TimedMenuChoice("Ignore her", 'captain_day1_dinner_no_talk', early_exit=True),
     ], image_left = "psychic"))
 
     call change_time(21, 00)
 
     """
-    The dinner draws to a close.
-
     Lady Claythorn mentions that drinks will be available in the billiard room for those who wish to continue the evening.
 
     First, I should like to see my room. I have not yet had the chance to settle in.
@@ -249,9 +247,9 @@ label captain_day1_evening:
     You've been assigned the 'George I' room.
     """
 
-    $ unlock_map('bedroom_captain')
-
     $ change_room('bedroom_captain', dissolve)
+    
+    $ unlock_map('bedroom_captain')
 
     """
     The room is adequate. Not extravagant, but respectable.
@@ -282,7 +280,7 @@ label captain_day1_evening:
     $ change_room('bedroom_captain', dissolve)
 
     """
-    I change and prepare for bed with military efficiency.
+    I change and prepare for bed.
 
     As I lie down, I review the evening.
 
@@ -290,7 +288,7 @@ label captain_day1_evening:
 
     My stories have held their attention, and I have avoided any question that might have caught me out.
 
-    Tomorrow, I shall do the same.
+    If I can keep doing this, I might be able to pull this off.
 
     With that thought, I close my eyes.
     """
@@ -303,82 +301,39 @@ label captain_day1_evening:
 # ------------------------------------
 #   DINNER SCENES
 # ------------------------------------
+label captain_day1_dinner_no_talk:
+
+    """
+    I decide that the best way not to be discovered is to simply keep to myself.
+
+    So I do not engage with Miss Baxter.
+
+    She does not seem to mind.
+
+    We eat in silence until the end of dinner.
+    """
+
+    return
+
+
 label captain_day1_dinner_psychic:
 
-    psychic """
-    Well, Mr Sinha. It seems we are neighbours again.
-    """
-
-    """
-    She smiles. But I know what comes next. Questions.
-
-    Questions about where I am really from. About my rank. About my service.
-
-    I have learnt that the best defence against questions is to leave no room for them.
-    """
-
     captain """
-    Indeed, Miss Baxter. And I must say, this is a remarkable setting.
-
-    It reminds me of the officers' mess in Calcutta. Not in style, of course, but in atmosphere.
-
-    There was a hall there, built during the time of Lord Wellesley, with the most extraordinary ceiling.
-
-    Painted by an Italian artist whose name escapes me now, but the detail was remarkable.
-
-    Every panel depicted a different campaign of the East India Company.
-
-    I used to stand beneath it and study the brushwork during long evenings when the heat made sleep impossible.
+    Miss Baxter.
     """
 
-    psychic """
-    How fascinating. But I was merely asking—
-    """
-
-    captain """
-    And speaking of ceilings, have you noticed the plasterwork in this dining room?
-
-    It is Georgian, if I am not mistaken. The acanthus motifs along the cornice are quite distinctive.
-
-    In London, one sees a great deal of Adam-style ornamentation, but this is earlier.
-
-    More restrained, if you will. Quite tasteful.
-    """
+    call captain_psychic_should_talk_to_captain_first
 
     """
-    She has stopped trying to interject.
+    She gives me an annoyed look. I do not think she was expecting to be put back in her place by someone like me.
 
-    Good. Exactly as intended.
+    That gives me a small feeling of satisfaction.
 
-    The key is to sound knowledgeable without saying anything of substance.
+    She then proceeds to ask me questions about myself, and I make sure each answer is filled with inconsequential details.
 
-    It is a skill I have perfected over many years.
-    """
+    Hopefully, if I drown her in information, she might not notice any inconsistencies.
 
-    psychic """
-    You are certainly well-informed, Captain.
-    """
-
-    captain """
-    One picks things up. The army takes you to a great many places.
-
-    Have I told you about the time I was stationed near the Khyber Pass?
-
-    The light there in the early morning is unlike anything you have ever seen.
-
-    It catches the mountains in such a way that—
-    """
-
-    psychic """
-    I think the next course is arriving.
-    """
-
-    """
-    She turns back to her plate with a tight smile.
-
-    Excellent. Another conversation in which I have said a great deal and revealed nothing.
-
-    She is sharp, this Miss Baxter, but she will not catch me out so easily.
+    When the dinner reaches its conclusion, I realise I have not even asked her anything about herself.
     """
 
     return
