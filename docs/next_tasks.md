@@ -22,7 +22,7 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
     - [ ] CURRENT TEST - dinner
       - [ ] captain_day1_dinner_psychic
     - [ ] MAP
-      - [ ] Captain shouldn't consider going to Sam Manning's room
+      - [ ] Captain shouldn't consider going to Sam Manning's room, like for other rooms
       - [ ] All the Bedrooms should only be Hidden after two tries, not on the first
   - [ ] Add and validate tests
   - [ ]

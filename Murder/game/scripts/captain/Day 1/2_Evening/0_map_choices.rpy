@@ -15,7 +15,7 @@ label captain_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('bedroom_broken'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_broken'),
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_nurse'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_doctor'),
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'captain_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 'captain_day1_evening_bedroom_psychic', 10, room='bedroom_psychic'),
             # First floor
             TimedMenuChoice(default_room_text('tea_room'), 'captain_day1_evening_tea_room', 10, room='tea_room'),
@@ -107,7 +107,7 @@ label captain_day1_evening_garden:
 
     Most people would turn back at this point.
 
-    But I have marched through monsoons. A Scottish drizzle is hardly cause for concern.
+    But I have marched through monsoons. A bit of rain is hardly cause for concern.
     """
 
     $ change_room('manor_garden')
@@ -119,9 +119,15 @@ label captain_day1_evening_garden:
 
     Within moments, my jacket is soaked through.
 
-    I walk a short distance around the house. Nothing remarkable in the dark. A garden, a gravel path, what appears to be an outbuilding further on.
+    I walk a short distance around the house.
 
-    But the cold is beginning to bite, and I am not dressed for this.
+    Nothing remarkable in the dark.
+
+    A garden, a gravel path, what appears to be an outbuilding further on.
+
+    But I am soaking wet and the cold is beginning to bite.
+
+    In these conditions, there is no point in staying any longer.
     """
 
     $ change_room('bedroom_captain')
@@ -129,9 +135,7 @@ label captain_day1_evening_garden:
     """
     I return inside and head straight to my room to change.
 
-    A foolish exercise, perhaps, but at least I know the grounds extend further than I thought.
-
-    It cost me some time, however. I shall have to be quicker about my business.
+    A foolish exercise, perhaps, but at least I have a better understanding of the estate.
     """
 
     return
@@ -163,34 +167,28 @@ label captain_day1_evening_portrait_gallery:
 
     I study the faces. Old money, passed down through blood.
 
-    I wonder what my mother would have thought of this place.
-
-    She would have wanted me to belong here.
-    """
-
-    """
-    Wait.
-
-    I look more carefully. There are perhaps a dozen portraits here, spanning several generations.
+    There are perhaps a dozen portraits here, spanning several generations.
 
     Stern-looking gentlemen in powdered wigs. Ladies in elaborate gowns.
 
-    But none of them resemble our host.
+    But then something strikes me.
 
-    In fact, there is no recent portrait at all. The most recent one appears to be from the middle of the last century.
+    None of them resemble our host.
 
     Where is Lady Claythorn?
 
     If she is the current mistress of this house, her portrait ought to hang here alongside her forebears.
 
     And yet there is nothing.
+
+    In itself, that doesn't mean much.
+
+    It could be a personal preference, or perhaps she had difficulty persuading a decent artist to come all the way out here.
+
+    Still, I will keep that in mind.
     """
 
     $ captain_details.threads.unlock('captain_host_suspicion_portrait')
-
-    """
-    I leave the gallery with a growing sense that something is not quite right about our host.
-    """
 
     return
 
@@ -202,17 +200,35 @@ label captain_day1_evening_library:
     """
     A well-stocked library. The kind one would expect in a house like this.
 
-    A book lies open on the desk.
+    A book lies open on a table.
 
     'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
 
-    I glance through a few pages. My name would never appear in such a volume, of course.
+    The eighth edition, printed in 1894.
 
-    But let us see if the Claythorns are mentioned.
+    I remember dreaming of seeing my name in such a book.
+
+    I know now that it will never happen.
     """
 
+    call run_menu(
+        TimedMenu("captain_day1_evening_library_menu", [
+            TimedMenuChoice('Look up the Claythorns in the index', 'captain_day1_evening_library_read', early_exit=True),
+            TimedMenuChoice('Leave the book be', 'generic_cancel', early_exit=True)
+        ])
+    )
+
+    return
+
+
+label captain_day1_evening_library_read:
+
     """
-    I search through the index. Clarendon, Claridge, Clark ...
+    I glance through a few pages.
+
+    Let us see if the Claythorns are mentioned.
+
+    I search through the index. Clarendon, Claridge, Clark...
 
     Claythorn.
 
@@ -226,9 +242,9 @@ label captain_day1_evening_library:
     """
     That is peculiar.
 
-    A titled lady would not call herself 'Lady Claythorn.' One does not take the name of one's house as a surname.
+    A titled lady would not call herself 'Lady Claythorn'. One does not take the name of one's house as a surname.
 
-    She ought to be 'Lady Something of Claythorn.' A proper family name, followed by the estate.
+    She ought to be 'Lady Something of Claythorn'. A proper family name, followed by the estate.
 
     It is the sort of mistake no one born into the aristocracy would ever make.
 
@@ -238,7 +254,7 @@ label captain_day1_evening_library:
     $ captain_details.threads.unlock('captain_host_suspicion_name')
 
     """
-    I close the book and place it back on the desk.
+    I close the book and place it back on the table.
 
     Interesting. Very interesting indeed.
     """
@@ -293,42 +309,6 @@ label captain_day1_evening_bedroom_closed:
         """
 
         # Block all other bedrooms after 2 refusals
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
-
-    return
-
-
-label captain_day1_evening_bedroom_drunk:
-
-    $ captain_details.saved_variables["day1_evening_bedroom_refusals"] += 1
-
-    $ change_room("bedrooms_hallway")
-
-    play sound door_knock
-
-    captain """
-    Mr Manning?
-    """
-
-    play sound door_open
-
-    """
-    The door swings open at my knock. It was not even latched.
-
-    The smell is appalling.
-
-    I close the door and walk away.
-
-    Whatever is in there is not my concern.
-    """
-
-    if captain_details.saved_variables["day1_evening_bedroom_refusals"] >= 2:
         $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
         $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
         $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))
