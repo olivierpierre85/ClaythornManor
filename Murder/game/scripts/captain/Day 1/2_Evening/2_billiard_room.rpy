@@ -22,13 +22,13 @@ label captain_day1_evening_billiard_room:
 
         As I enter, a few heads turn my way.
 
-        I recognise that look, they are bored and are waiting for any kind of distraction.
+        I recognise that look. They are bored and waiting for any kind of distraction.
         """
 
         $ captain_day1_evening_billiard_room_menu = TimedMenu("captain_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Approach the large group', 'captain_day1_evening_billiard_room_story', 60),
             TimedMenuChoice('Have a drink at the bar', 'captain_day1_evening_billiard_room_bar', 10),
-            # TODO add a Daniel Baldwin choice,
+            TimedMenuChoice('Approach Dr Baldwin', 'captain_day1_evening_billiard_room_baldwin', 10),
             TimedMenuChoice('Leave the room', 'captain_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -47,13 +47,34 @@ label captain_day1_evening_billiard_room:
 
 label captain_day1_evening_billiard_room_story:
 
-    # Too direct, first captain makes his way to Miss Marsh and claythorn
-    # Then, miss Marsh ask captain for one of his stories. (he saw that coming)
+    """
+    I make my way towards Lady Claythorn and the others.
+    """
+
+    host """
+    Captain Sinha. Do come and join us.
+    """
+
+    captain """
+    Thank you, Lady Claythorn.
+    """
+
+    nurse """
+    Captain, you must tell us one of your stories.
+
+    Mr Moody was just saying what a fine storyteller you are.
+    """
+
+    captain """
+    How kind of him.
+
+    Well, if you insist.
+    """
 
     """
     I take a position near the fireplace and begin.
 
-    This is my best story. The one I have been saving.
+    This is my best story.
 
     I have told it so many times that it almost feels true.
     """
@@ -108,10 +129,25 @@ label captain_day1_evening_billiard_room_bar:
     return
 
 
+label captain_day1_evening_billiard_room_baldwin:
+
+    """
+    I approach Baldwin.
+
+    He looks up. His eyes are flat, offering nothing.
+
+    I stop, give a small nod, and withdraw.
+
+    Some conversations are better never begun.
+    """
+
+    return
+
+
 label captain_day1_evening_billiard_room_cancel:
 
     """
-    I don't think I really want to be  be here.
+    There is little here that warrants my attention.
 
     I leave.
     """
