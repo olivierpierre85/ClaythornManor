@@ -93,6 +93,22 @@
       "problemMatcher": []
     },
     {
+      "label": "Antigravity: Extract Thread Prompts",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\extract_thread_prompts.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Antigravity: Process Infocards",
       "type": "process",
       "command": "python",

@@ -20,6 +20,15 @@
       "console": "integratedTerminal"
     },
     {
+      "name": "Extract Thread Prompts",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/dummy.py",
+      "preLaunchTask": "Antigravity: Extract Thread Prompts",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
       "name": "Process Infocards",
       "type": "debugpy",
       "request": "launch",
