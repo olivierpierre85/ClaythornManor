@@ -283,11 +283,6 @@ label common_day1_evening_tea_room_captain_arrives:
     And who is the gentleman over there?
     """
 
-    if current_character == captain_details:
-        """
-        He is referring to Manning, who has found the drinks tray with remarkable speed.
-        """
-
     captain """
     That would be Samuel Manning.
 

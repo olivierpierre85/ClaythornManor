@@ -62,15 +62,15 @@ label captain_day1_evening:
     call change_time(16, 45)
 
     """
-    Four people are already here.
+    As soon as we enter, Samuel Manning rushes to the tray of drinks.
 
-    I am not surprised to see Samuel Manning next to the tray of drinks.
+    There is a woman there already. And Samuel Manning seems to be trying to engage in conversation with her.
 
-    He is trying to engage in conversation with a woman who seems rather embarrassed.
-
-    I could go and rescue her, but I don't really feel like dealing with Mr Manning right now.
+    I could go and rescue her, but I do not really feel like dealing with that right now.
 
     I also spot two men in quiet conversation.
+
+    That seems like a better alternative.
 
     Time to introduce myself.
     """
@@ -160,11 +160,11 @@ label captain_day1_evening:
     call common_day1_evening_host_welcome_speech
 
     """
-    After the speech, I can't help but notice a tightness in my stomach.
+    After the speech, I cannot help but notice a tightness in my stomach.
 
     It reminds me that I am an impostor here, not worthy of any award.
 
-    If I am discovered not only will I lose the money, there might be talk about what I've done.
+    If I am discovered, not only will I lose the money, but there will certainly be talk about what I have done.
 
     That could hurt my reputation.
 
@@ -178,7 +178,7 @@ label captain_day1_evening:
 
     That is unusual. In a formal setting, one addresses the person on one's left first.
 
-    I am on her left. She ought to have spoken to me.
+    So she ought to have spoken to me.
 
     Either she is unaware of the convention, or she is deliberately avoiding me.
 
@@ -210,7 +210,7 @@ label captain_day1_evening:
 
     Then again, this alone probably means nothing. 
     
-    With a manor this remote, perhaps she has simply not had occasion for proper company in some time.
+    With a manor this remote, perhaps she has simply not had occasion for proper company in some time, so she has forfeited some of the usual habits.
     """
     
     pause 1.0

@@ -292,6 +292,8 @@ label captain_day1_evening_bedroom_closed:
 
     if captain_details.saved_variables["day1_evening_bedroom_refusals"] == 1:
 
+        $ change_room("bedrooms_hallway")
+        
         """
         I pause outside the door.
 
@@ -306,6 +308,8 @@ label captain_day1_evening_bedroom_closed:
         I consider it for a moment, then think better of it.
 
         A man does not go rummaging through another person's private quarters. Not on the first evening.
+
+        I should keep the bedrooms out of my mind entirely.
         """
 
         # Block all other bedrooms after 2 refusals
