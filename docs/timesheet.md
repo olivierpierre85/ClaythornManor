@@ -3,8 +3,8 @@
 
 | Character      | Month   | Introduction and character planning | Friday Evening | Saturday Morning and Hunt | Saturday Evening |   Sunday   |  Testing   |
 | :------------- | :------ | :---------------------------------: | :------------: | :-----------------------: | :--------------: | :--------: | :--------: |
-| **Nurse**      | Feb/Mar |             Feb 23 [x]              |   Mar 02 [x]   |        Mar 09 [x]         |    Mar 16 [x]    | Mar 23 [x] | Mar 30 [ ] |
-| **Captain**    | Apr/May |           **Apr 06** [ ]            |   Apr 13 [ ]   |        Apr 20 [ ]         |    Apr 27 [ ]    | May 04 [ ] | May 11 [ ] |
+| **Nurse**      | Feb/Mar |             Feb 23 [x]              |   Mar 02 [x]   |        Mar 09 [x]         |    Mar 16 [x]    | Mar 23 [x] | Mar 30 [x] |
+| **Captain**    | Apr/May |             Apr 06 [x]              | **Apr 13** [ ] |        Apr 20 [ ]         |    Apr 27 [ ]    | May 04 [ ] | May 11 [ ] |
 | **Broken**     | May/Jun |             May 18 [ ]              |   May 25 [ ]   |        Jun 01 [ ]         |    Jun 08 [ ]    | Jun 15 [ ] | Jun 22 [ ] |
 | **Drunk**      | Jun/Aug |             Jun 29 [ ]              |   Jul 06 [ ]   |        Jul 13 [ ]         |    Jul 20 [ ]    | Jul 27 [ ] | Aug 03 [ ] |
 | **Host**       | Aug/Sep |             Aug 10 [ ]              |   Aug 17 [ ]   |        Aug 24 [ ]         |    Aug 31 [ ]    | Sep 07 [ ] | Sep 14 [ ] |

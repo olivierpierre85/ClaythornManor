@@ -26,14 +26,14 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
     - [ ] CURRENT TEST - day1 map
     - [ ] MAP
       - [x] Move the default text to generic locations and add a var for already visited (if no threads are linked to the visit) : Library, portrait room.
-      - [ ] IMPORTANT, HOW to manage default choices followed by a menu. because I can't put time in the map_choice, otherwise, the next menu might not show. but I can't put 0 because even if it was already visited, i still need to deduct time. How should I manage this?
+      - [ ]Biliard, room. maybe no need to tell the story again, since the player must have listened to it by the nurse to have unlocked captain (check that it is true)
   - [ ] 
   - [ ] Add and validate tests
   - [ ]
 
-- Saturday Morning 13 april
+- end of friday 13 april
   
-- Saturday Morning Hunt 20 April
+- Saturday Morning and Hunt 20 April
 
 NEXT CHARACTER - UNlocked by Nurse (and psychic)
 

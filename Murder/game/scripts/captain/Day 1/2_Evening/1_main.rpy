@@ -295,7 +295,7 @@ label captain_day1_evening:
 
     $ stop_music()
 
-    jump work_in_progress
+    jump captain_day2_morning
 
 
 # ------------------------------------
