@@ -366,42 +366,23 @@ label nurse_garage_default:
 
 label nurse_gun_room_default:
 
+    $ change_room("gun_room")
+
     if nurse_details.saved_variables.get("visited_gun_room"):
 
-        $ change_room("gun_room")
+        """
+        The rows of weapons remain exactly as they were.
 
-        if nurse_details.threads.is_unlocked('take_gun'):
-
-            """
-            There is nothing new in here.
-
-            I search a bit more for bullets, but still cannot find any.
-
-            So there is no reason to stay here.
-            """
-
-            # We still have to remove some time, even if we've been here before
-            $ time_left = time_left - 10
-
-            return
-
-        else:
-
-            """
-            The rows of weapons remain exactly as they were.
-
-            The small pistols are still available if I so desire.
-            """
+        The small pistols are still available if I so desire.
+        """
 
     else:
 
         $ nurse_details.saved_variables["visited_gun_room"] = True
 
-        $ change_room("gun_room")
-
         """
         The gun room.
-        
+
         I am certain that I should not be here, so I made sure no one noticed me.
 
         Shotguns and hunting rifles line three walls, arranged on open racks.
@@ -415,11 +396,25 @@ label nurse_gun_room_default:
         It would be foolish not to take one.
         """
 
-    if not nurse_details.threads.is_unlocked('take_gun'):
-        call run_menu(TimedMenu("nurse_gun_room_choice", [
-            TimedMenuChoice("Take a pistol", 'nurse_take_gun', 20, early_exit=True),
-            TimedMenuChoice("Leave it. Too dangerous to carry.", 'generic_cancel', 20, keep_alive = True, early_exit=True),
-        ]))
+    call run_menu(TimedMenu("nurse_gun_room_choice", [
+        TimedMenuChoice("Take a pistol", 'nurse_take_gun', 20, early_exit=True),
+        TimedMenuChoice("Leave it. Too dangerous to carry.", 'generic_cancel', 20, keep_alive = True, early_exit=True),
+    ]))
+
+    return
+
+
+label nurse_gun_room_already_taken:
+
+    $ change_room("gun_room")
+
+    """
+    There is nothing new in here.
+
+    I search a bit more for bullets, but still cannot find any.
+
+    So there is no reason to stay here.
+    """
 
     return
 

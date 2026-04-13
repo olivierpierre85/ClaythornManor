@@ -22,8 +22,8 @@ label captain_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day1_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'captain_day1_evening_garden', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day1_evening_entrance_hall', 10, room='entrance_hall'),
-            TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('library'), 'captain_day1_evening_library', 10, room='library'),
+            TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_portrait_gallery_default', 10, room='portrait_gallery'),
+            TimedMenuChoice(default_room_text('library'), 'captain_library_default', 10, room='library'),
             # Downstairs
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day1_evening_downstairs_default', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day1_evening_downstairs_default', 10, room='scullery'),
@@ -151,132 +151,6 @@ label captain_day1_evening_entrance_hall:
     It is a fine space. The kind of hall that speaks of generations.
 
     I take a moment to study the architecture, then move on.
-    """
-
-    return
-
-
-label captain_day1_evening_portrait_gallery:
-
-    $ change_room('portrait_gallery')
-
-    """
-    A gallery of family portraits lines the walls.
-
-    The Claythorn lineage, rendered in oil and gilt frames.
-
-    I study the faces. Old money, passed down through blood.
-
-    There are perhaps a dozen portraits here, spanning several generations.
-
-    Stern-looking gentlemen in powdered wigs. Ladies in elaborate gowns.
-
-    But then something strikes me.
-
-    None of them resemble our host.
-
-    Where is Lady Claythorn?
-
-    If she is the current mistress of this house, her portrait ought to hang here alongside her forebears.
-
-    And yet there is nothing.
-
-    In itself, that doesn't mean much.
-
-    It could be a personal preference, or perhaps she had difficulty persuading a decent artist to come all the way out here.
-
-    Still, I will keep that in mind.
-    """
-
-    $ captain_details.threads.unlock('captain_host_suspicion_portrait')
-
-    return
-
-
-label captain_day1_evening_library:
-
-    $ change_room('library')
-
-    """
-    A well-stocked library. The kind one would expect in a house like this.
-
-    A book lies open on a table.
-
-    'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
-
-    The eighth edition, printed in 1894.
-
-    I remember dreaming of seeing my name in such a book.
-
-    I know now that it will never happen.
-    """
-
-    call run_menu(
-        TimedMenu("captain_day1_evening_library_menu", [
-            TimedMenuChoice('Look up the Claythorns in the index', 'captain_day1_evening_library_read', early_exit=True),
-            TimedMenuChoice('Leave the book be', 'generic_cancel', early_exit=True)
-        ])
-    )
-
-    return
-
-
-label captain_day1_evening_library_read:
-
-    """
-    I glance through a few pages.
-
-    Let us see if the Claythorns are mentioned.
-
-    I search through the index. Clarendon, Claridge, Clark...
-
-    Claythorn.
-
-    There are several entries. I find the one concerning this manor.
-    """
-
-    book """
-    Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith, .
-
-    Born on June 22, 1813.
-
-    His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
-
-    With Mary Kirwan, his wife, he fathered one son and one daughter:
-
-    1. Elisabeth, his heir, born in 1865.
-
-    2. Andrew, born in 1867, died in 1869.
-
-    Lineage...
-    """
-
-    """
-    I read the entry twice.
-
-    There it is. The family name is Claythorn, but their title is not.
-
-    They hold a peerage — the Earldom of Kilbraith. Their seat is this manor, but the title is quite separate.
-
-    A peer is addressed by his title, not by his surname. The Earl of Kilbraith is styled 'Lord Kilbraith', and his countess, 'Lady Kilbraith'.
-
-    Never 'Lord Claythorn'. Never 'Lady Claythorn'.
-
-    Still, I should not leap to conclusions.
-
-    It is not unheard of for a family to set the formal title aside in daily use. Since the war, I have heard of peers who have grown weary of ceremony.
-
-    Or perhaps it is a local habit. The villagers call her 'Lady Claythorn' after the name of the house, and in time she has simply let it stick.
-
-    And yet, it is something strange enough that I should not dismiss it entirely.
-    """
-
-    $ captain_details.threads.unlock('captain_host_suspicion_name')
-
-    """
-    I close the book and place it back on the table.
-
-    Interesting. Very interesting indeed.
     """
 
     return

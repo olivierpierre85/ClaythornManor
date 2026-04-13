@@ -159,8 +159,8 @@ label init_nurse:
                 "You took a revolver from the gun room",
                 content_negative="You did not take a revolver from the gun room",
                 image_file="gun",
-                chapters=['saturday_afternoon', 'saturday_evening'],
-                relevant_chapters=['saturday_afternoon', 'saturday_evening', 'sunday_afternoon'],
+                chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_afternoon', 'saturday_evening', 'sunday_afternoon'],
             ),
             CharacterInformation(
                 0, "find_bullets",

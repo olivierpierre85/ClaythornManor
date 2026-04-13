@@ -12,26 +12,23 @@ label captain_day1_evening_billiard_room:
 
         Most of the guests have gathered here.
 
-        Thomas Moody stands near the fireplace. Lady Claythorn is in conversation with Miss Marsh.
+        Lady Claythorn is in conversation with Miss Marsh and Thomas Moody.
 
-        Ted Harring hovers near the bar, looking as uncomfortable as ever.
+        Ted Harring hovers near them, looking as uncomfortable as ever.
 
         Daniel Baldwin sits alone in a chair, nursing a glass.
 
         And Manning is at the bar. Naturally.
-        """
 
-        """
         As I enter, a few heads turn my way.
 
-        I recognise that look. They are hoping I will talk.
-
-        Good. That is precisely what I intend to do.
+        I recognise that look, they are bored and are waiting for any kind of distraction.
         """
 
         $ captain_day1_evening_billiard_room_menu = TimedMenu("captain_day1_evening_billiard_room_menu", [
-            TimedMenuChoice('Tell the group about the Boxer Rebellion', 'captain_day1_evening_billiard_room_story', 60),
+            TimedMenuChoice('Approach the large group', 'captain_day1_evening_billiard_room_story', 60),
             TimedMenuChoice('Have a drink at the bar', 'captain_day1_evening_billiard_room_bar', 10),
+            # TODO add a Daniel Baldwin choice,
             TimedMenuChoice('Leave the room', 'captain_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -49,6 +46,9 @@ label captain_day1_evening_billiard_room:
 
 
 label captain_day1_evening_billiard_room_story:
+
+    # Too direct, first captain makes his way to Miss Marsh and claythorn
+    # Then, miss Marsh ask captain for one of his stories. (he saw that coming)
 
     """
     I take a position near the fireplace and begin.
@@ -111,7 +111,9 @@ label captain_day1_evening_billiard_room_bar:
 label captain_day1_evening_billiard_room_cancel:
 
     """
-    I have done enough for one evening.
+    I don't think I really want to be  be here.
+
+    I leave.
     """
 
     return

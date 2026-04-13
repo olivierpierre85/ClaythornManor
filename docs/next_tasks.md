@@ -6,6 +6,10 @@ Or just : Captain, Broken?
 
 ## Write nurseStory : Full
 
+RETEST :
+Day 2 maps left alone intentionally. Both [Day 2/2_No Hunt/0_map_choices.rpy:11](Murder/game/scripts/nurse/Day 2/2_No Hunt/0_map_choices.rpy#L11) and [Day 2/3_Evening/0_map_choices.rpy:11](Murder/game/scripts/nurse/Day 2/3_Evening/0_map_choices.rpy#L11) already gate on not is_unlocked('take_gun'), so they only ever call nurse_gun_room_default when the gun has not been taken — the removed branch was unreachable from them, and the manual time deduction never fired there. Current behaviour ("gun room hidden on Day 2 once you've taken the pistol") is preserved.
+
+If you'd rather let the nurse re-visit the gun room on Day 2 as well (same narration, 10 min), say the word and I'll add the twin entries to both Day 2 maps plus a nurse_day2_evening_gun_room_already_taken wrapper for the exhaustion check.
 
 Test Nurse manually to get a feel
 - now in day2 morning, error if master key and not visited butler room, add dialogs
@@ -19,11 +23,11 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
 - Friday Afternoon - Done
 - Friday Evening On going
   - [ ] Ai generated : Test and modify
-    - [ ] CURRENT TEST - dinner
-      - [ ] captain_day1_dinner_psychic
+    - [ ] CURRENT TEST - day1 map
     - [ ] MAP
-      - [ ] Captain shouldn't consider going to Sam Manning's room, like for other rooms
-      - [ ] All the Bedrooms should only be Hidden after two tries, not on the first
+      - [x] Move the default text to generic locations and add a var for already visited (if no threads are linked to the visit) : Library, portrait room.
+      - [ ] IMPORTANT, HOW to manage default choices followed by a menu. because I can't put time in the map_choice, otherwise, the next menu might not show. but I can't put 0 because even if it was already visited, i still need to deduct time. How should I manage this?
+  - [ ] 
   - [ ] Add and validate tests
   - [ ]
 

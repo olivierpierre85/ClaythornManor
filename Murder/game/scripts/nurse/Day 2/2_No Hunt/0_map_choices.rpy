@@ -9,6 +9,7 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day2_no_hunt_downstairs_maid', 10, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'nurse_garage_default', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_default', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_gun_room_already_taken', 10, room='gun_room', condition="nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_billiard_room_default', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day2_no_hunt_dining_room', 10, room='dining_room'),

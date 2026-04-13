@@ -81,6 +81,7 @@ label nurse_config_progress:
                 {"label": "nurse_day2_hunt", "threads": {'steal_cutlery_1': True}},
                 {"label": "nurse_day2_hunt", "threads": {'steal_cutlery_2': True}},
                 {"label": "nurse_day2_hunt", "threads": {'steal_cutlery_1': True, 'steal_cutlery_2': True}},
+                {"label": "nurse_day2_hunt", "threads": {'take_gun': True}},
             ],
             'saturday_evening': [
                 {"label": "nurse_day2_evening", "threads": {'day1_exhaustion': False}},

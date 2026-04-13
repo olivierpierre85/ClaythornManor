@@ -144,20 +144,20 @@
                 "Retire for the night"
             ],
             "selected": "Library",
-            "redirect": "captain_day1_evening_library",
+            "redirect": "captain_library_default",
             "time_left": 50,
             "timestamp": "2026-04-13T10:25:47.597606",
             "time_to_decide": 11.473092,
             "time_since_last": 167.969084
         },
         {
-            "menu": "captain_day1_evening_library_menu",
+            "menu": "captain_library_menu",
             "other_choices": [
                 "Look up the Claythorns in the index",
                 "Leave the book be"
             ],
             "selected": "Look up the Claythorns in the index",
-            "redirect": "captain_day1_evening_library_read",
+            "redirect": "captain_library_read",
             "time_left": 40,
             "timestamp": "2026-04-13T10:26:10.347613",
             "time_to_decide": 6.631788,
@@ -192,7 +192,7 @@
                 "Retire for the night"
             ],
             "selected": "Portrait Gallery",
-            "redirect": "captain_day1_evening_portrait_gallery",
+            "redirect": "captain_portrait_gallery_default",
             "time_left": 30,
             "timestamp": "2026-04-13T10:29:00.286799",
             "time_to_decide": 3.352813,

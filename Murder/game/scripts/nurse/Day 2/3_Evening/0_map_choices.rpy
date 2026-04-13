@@ -9,6 +9,7 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day2_evening_downstairs_maid', 10, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'nurse_day2_evening_garage', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_day2_evening_gun_room', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day2_evening_gun_room_already_taken', 10, room='gun_room', condition="nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_day2_evening_billiard_room', 0, room='billiard_room', keep_alive=True, next_menu='nurse_day2_evening_billiard_room_menu'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day2_evening_dining_room', 10, room='dining_room'),
@@ -480,6 +481,15 @@ label nurse_day2_evening_garage:
 label nurse_day2_evening_gun_room:
 
     call nurse_gun_room_default
+
+    call nurse_day2_evening_check_exhaustion
+
+    return
+
+
+label nurse_day2_evening_gun_room_already_taken:
+
+    call nurse_gun_room_already_taken
 
     call nurse_day2_evening_check_exhaustion
 
