@@ -14,9 +14,9 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `steal_gun`   | Tried to take Rosalind's gun | A hand reaching toward a revolver on a table                                |
 | `leave_manor` | Left the manor               | An open door with moonlight beyond it and a single figure stepping through  |
 
-- [ ] visit_lad
-- [ ] steal_gun
-- [ ] leave_manor
+- [x] visit_lad
+- [x] steal_gun
+- [x] leave_manor
 
 ### Observations
 
@@ -28,11 +28,11 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `nurse_sick`    | Nurse revealed her disease   | A nurse's cap next to a wilting flower                                      |
 | `silverware`    | Silverware found             | A silver fork and knife crossed on a folded napkin                          |
 
-- [ ] visited_attic
-- [ ] lord_name
-- [ ] lord_age
-- [ ] nurse_sick
-- [ ] silverware
+- [x] visited_attic
+- [x] lord_name
+- [x] lord_age
+- [x] nurse_sick
+- [x] silverware
 
 ### Endings
 
@@ -44,11 +44,11 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `bludgeoned` | Bludgeoned to death  | A candle holder lying on its side, flame just extinguished |
 | `escape`     | Escaped with Ted     | Two silhouettes running side by side toward an open gate   |
 
-- [ ] fell
-- [ ] burned
-- [ ] shot
-- [ ] bludgeoned
-- [ ] escape
+- [x] fell
+- [x] burned
+- [x] shot
+- [x] bludgeoned
+- [x] escape
 
 ---
 
@@ -64,11 +64,11 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `trust_captain`   | Slept in Captain's room     | A neatly made bed with a military cap on the pillow |
 | `trust_nurse`     | Slept in Nurse's room       | A neatly made bed with a nurse's cap on the pillow  |
 
-- [ ] broken_offended
-- [ ] flirt
-- [ ] broken_unmasked
-- [ ] trust_captain
-- [ ] trust_nurse
+- [x] broken_offended
+- [x] flirt
+- [x] broken_unmasked
+- [x] trust_captain
+- [x] trust_nurse
 
 ### Objects
 
@@ -77,8 +77,8 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `book_mystery` | "The Mysterious Affair at Styles"       | A closed book with a small question mark embossed on the cover |
 | `book_opium`   | "Confessions of an English Opium-Eater" | A closed book with a small poppy flower embossed on the cover  |
 
-- [ ] book_mystery
-- [ ] book_opium
+- [x] book_mystery
+- [x] book_opium
 
 ### Observations
 
@@ -91,12 +91,12 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `burned_letter`    | Burned letter in Samuel's room    | A curled, partially burned sheet of paper                 |
 | `footman_actor`    | Footman is an actor               | A theatre mask peeping from behind a formal livery jacket |
 
-- [ ] footman_french_1
-- [ ] footman_french_2
-- [ ] remember_nurse
-- [ ] drunk_letter
-- [ ] burned_letter
-- [ ] footman_actor
+- [x] footman_french_1
+- [x] footman_french_2
+- [x] remember_nurse
+- [x] drunk_letter
+- [x] burned_letter
+- [x] footman_actor
 
 ### Endings
 
@@ -111,14 +111,14 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `shot`          | Shot in the face       | A bullet hole in glass with radiating cracks           |
 | `escape`        | Escaped with others    | Three silhouettes walking through open gates at dawn   |
 
-- [ ] overdose
-- [ ] shot_by_drunk
-- [ ] burned
-- [ ] throat_cut
-- [ ] poisoned
-- [ ] run_over
-- [ ] shot
-- [ ] escape
+- [x] overdose
+- [x] shot_by_drunk
+- [x] burned
+- [x] throat_cut
+- [x] poisoned
+- [x] run_over
+- [x] shot
+- [x] escape
 
 ---
 
@@ -142,19 +142,19 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `downstairs_3`      | Went downstairs a third time | The staircase again, this time fully dark at the top                   |
 | `day3_drunk`        | Got drunk (Last day)         | A shattered glass on flagstones                                        |
 
-- [ ] whisky
-- [ ] day1_drunk
-- [ ] downstairs_1
-- [ ] hunt
-- [ ] hunt_captain_host
-- [ ] hunt_doctor_drunk
-- [ ] downstairs_2
-- [ ] day2_drunk
-- [ ] trust_psychic
-- [ ] abandoned_psychic
-- [ ] protect_food
-- [ ] downstairs_3
-- [ ] day3_drunk
+- [x] whisky
+- [x] day1_drunk
+- [x] downstairs_1
+- [x] hunt
+- [x] hunt_captain_host
+- [x] hunt_doctor_drunk
+- [x] downstairs_2
+- [x] day2_drunk
+- [x] trust_psychic
+- [x] abandoned_psychic
+- [x] protect_food
+- [x] downstairs_3
+- [x] day3_drunk
 
 ### Observations
 
@@ -163,8 +163,8 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `green_liquid` | Green liquid on Thomas's nightstand | A small dark bottle with a green tinted stopper       |
 | `seen_car`     | Saw a car in the basement           | A motor car silhouette in a dark, low-ceilinged space |
 
-- [ ] green_liquid
-- [ ] seen_car
+- [x] green_liquid
+- [x] seen_car
 
 ### Objects
 
@@ -174,9 +174,9 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `burned_letter` | Burned letter    | A curled, partially burned sheet of paper               |
 | `laudanum`      | Vial of laudanum | A small amber medicine bottle                           |
 
-- [ ] gun
-- [ ] burned_letter
-- [ ] laudanum
+- [x] gun
+- [x] burned_letter
+- [x] laudanum
 
 ### Endings
 
@@ -189,12 +189,12 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `escape`       | Escaped alone             | A single silhouette on an empty road at dawn                |
 | `final_ending` | Got the truth             | A silhouette standing in an open doorway, light flooding in |
 
-- [ ] deathbed
-- [ ] gunned_down
-- [ ] poisoned
-- [ ] fell
-- [ ] escape
-- [ ] final_ending
+- [x] deathbed
+- [x] gunned_down
+- [x] poisoned
+- [x] fell
+- [x] escape
+- [x] final_ending
 
 ---
 
@@ -209,10 +209,10 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `spotted_by_psychic` | Caught searching Amelia's room | A figure frozen in place, a doorway behind with a silhouette in it |
 | `swapped_plates`     | Swapped plate with Ted's       | Two dinner plates, one nudged in front of the other                |
 
-- [ ] day1_exhaustion
-- [ ] day2_exhaustion
-- [ ] spotted_by_psychic
-- [ ] swapped_plates
+- [x] day1_exhaustion
+- [x] day2_exhaustion
+- [x] spotted_by_psychic
+- [x] swapped_plates
 
 ### Observations
 
@@ -224,11 +224,11 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `footman_actor`        | Footman is an actor                       | A theatre mask peeping from behind a formal livery jacket        |
 | `maid_actress`         | Maid was an aspiring actress              | A maid's apron hanging on a peg with a playbill tucked behind it |
 
-- [ ] captain_lie_boxer
-- [ ] captain_lie_zanzibar
-- [ ] remember_doctor
-- [ ] footman_actor
-- [ ] maid_actress
+- [x] captain_lie_boxer
+- [x] captain_lie_zanzibar
+- [x] remember_doctor
+- [x] footman_actor
+- [x] maid_actress
 
 ### Objects
 
@@ -242,13 +242,13 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `master_key`      | Found butler's master key              | A large ornate skeleton key on a plain ring                      |
 | `silverware_big`  | Stole the silverware cabinet contents  | An open cabinet with bare velvet-lined shelves — everything gone |
 
-- [ ] steal_cutlery_1
-- [ ] steal_cutlery_2
-- [ ] steal_pearls
-- [ ] take_gun
-- [ ] find_bullets
-- [ ] master_key
-- [ ] silverware_big
+- [x] steal_cutlery_1
+- [x] steal_cutlery_2
+- [x] steal_pearls
+- [x] take_gun
+- [x] find_bullets
+- [x] master_key
+- [x] silverware_big
 
 ### Endings
 
@@ -264,15 +264,15 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `psychic_fight_death` | Died confronting Amelia       | A crystal ball cracked in half                            |
 | `escape_rich`         | Escaped with a great deal     | A full carpet bag, bulging at the seams, on a sunny road  |
 
-- [ ] exhausted
-- [ ] escape_at_night
-- [ ] escape_poor
-- [ ] billiard_room_death
-- [ ] escape_collapse
-- [ ] gunned_down
-- [ ] poisoned
-- [ ] psychic_fight_death
-- [ ] escape_rich
+- [x] exhausted
+- [x] escape_at_night
+- [x] escape_poor
+- [x] billiard_room_death
+- [x] escape_collapse
+- [x] gunned_down
+- [x] poisoned
+- [x] psychic_fight_death
+- [x] escape_rich
 
 ---
 
@@ -294,7 +294,7 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | ------------ | ------------------- | ------------------------------------------- |
 | `butler_key` | Butler's master key | A large ornate skeleton key on a plain ring |
 
-- [ ] butler_key
+- [x] butler_key
 
 ### Endings
 
@@ -302,4 +302,4 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | ---------- | ----------------- | ----------------------------------------- |
 | `todo`     | Died in his sleep | A pillow with an impression, no one there |
 
-- [ ] todo
+- [x] todo
