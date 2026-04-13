@@ -1,0 +1,233 @@
+{
+    "start_label": "captain_day1_evening",
+    "choices": [
+        {
+            "menu": "captain_day1_evening",
+            "other_choices": [
+                "Talk to Amelia Baxter",
+                "Ignore her"
+            ],
+            "selected": "Ignore her",
+            "redirect": "captain_day1_dinner_no_talk",
+            "time_left": 1,
+            "timestamp": "2026-04-13T10:20:03.535583",
+            "time_to_decide": 1.533596,
+            "time_since_last": 629.133423
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Storage Room",
+                "Male Servants Room",
+                "Female Servants Room",
+                "Butler's Room",
+                "William the Conqueror Bedroom",
+                "Henry IV Bedroom",
+                "Richard III Bedroom",
+                "Queen Alexandra",
+                "Edward II Bedroom",
+                "George IV Bedroom",
+                "Elizabeth I Bedroom",
+                "Tea room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Portrait Gallery",
+                "Library",
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Gun room",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "George IV Bedroom",
+            "redirect": "captain_day1_evening_bedroom_closed",
+            "time_left": 90,
+            "timestamp": "2026-04-13T10:20:05.451938",
+            "time_to_decide": 1.671387,
+            "time_since_last": 1.916355
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Storage Room",
+                "Male Servants Room",
+                "Female Servants Room",
+                "Butler's Room",
+                "William the Conqueror Bedroom",
+                "Henry IV Bedroom",
+                "Richard III Bedroom",
+                "Queen Alexandra",
+                "Edward II Bedroom",
+                "Elizabeth I Bedroom",
+                "Tea room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Portrait Gallery",
+                "Library",
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Gun room",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "Edward II Bedroom",
+            "redirect": "captain_day1_evening_bedroom_closed",
+            "time_left": 80,
+            "timestamp": "2026-04-13T10:20:14.302200",
+            "time_to_decide": 0.833575,
+            "time_since_last": 8.850262
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Storage Room",
+                "Male Servants Room",
+                "Female Servants Room",
+                "Butler's Room",
+                "Tea room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Portrait Gallery",
+                "Library",
+                "Kitchen",
+                "Scullery",
+                "Garage",
+                "Gun room",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "Gun room",
+            "redirect": "captain_day1_evening_downstairs_default",
+            "time_left": 70,
+            "timestamp": "2026-04-13T10:22:37.800535",
+            "time_to_decide": 8.470365,
+            "time_since_last": 143.498335
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Storage Room",
+                "Male Servants Room",
+                "Female Servants Room",
+                "Butler's Room",
+                "Tea room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Portrait Gallery",
+                "Library",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "Storage Room",
+            "redirect": "captain_day1_evening_attic_default",
+            "time_left": 60,
+            "timestamp": "2026-04-13T10:22:59.628522",
+            "time_to_decide": 3.270844,
+            "time_since_last": 21.827987
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Tea room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Portrait Gallery",
+                "Library",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "Library",
+            "redirect": "captain_day1_evening_library",
+            "time_left": 50,
+            "timestamp": "2026-04-13T10:25:47.597606",
+            "time_to_decide": 11.473092,
+            "time_since_last": 167.969084
+        },
+        {
+            "menu": "captain_day1_evening_library_menu",
+            "other_choices": [
+                "Look up the Claythorns in the index",
+                "Leave the book be"
+            ],
+            "selected": "Look up the Claythorns in the index",
+            "redirect": "captain_day1_evening_library_read",
+            "time_left": 40,
+            "timestamp": "2026-04-13T10:26:10.347613",
+            "time_to_decide": 6.631788,
+            "time_since_last": 22.750007
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Tea room",
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Portrait Gallery",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "Tea room",
+            "redirect": "captain_day1_evening_tea_room",
+            "time_left": 40,
+            "timestamp": "2026-04-13T10:26:43.251838",
+            "time_to_decide": 134.25177,
+            "time_since_last": 32.904225
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Portrait Gallery",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "Portrait Gallery",
+            "redirect": "captain_day1_evening_portrait_gallery",
+            "time_left": 30,
+            "timestamp": "2026-04-13T10:29:00.286799",
+            "time_to_decide": 3.352813,
+            "time_since_last": 137.034961
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Dining Room",
+                "Garden",
+                "Entrance Hall",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "Dining Room",
+            "redirect": "captain_day1_evening_dining_room",
+            "time_left": 20,
+            "timestamp": "2026-04-13T10:43:33.939076",
+            "time_to_decide": 60.452961,
+            "time_since_last": 873.652277
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "other_choices": [
+                "Garden",
+                "Entrance Hall",
+                "Meet the others in the billiard room",
+                "Retire for the night"
+            ],
+            "selected": "Entrance Hall",
+            "redirect": "captain_day1_evening_entrance_hall",
+            "time_left": 10,
+            "timestamp": "2026-04-13T10:44:41.188249",
+            "time_to_decide": 2.453378,
+            "time_since_last": 67.249173
+        }
+    ]
+}
