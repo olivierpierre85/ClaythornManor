@@ -232,21 +232,37 @@ label captain_day1_evening_library_read:
 
     Claythorn.
 
-    'Claythorn: a parish and manor in the county of Stirlingshire, Scotland.'
+    There are several entries. I find the one concerning this manor.
+    """
 
-    That is all. Claythorn is the name of the manor and the surrounding estate.
+    book """
+    Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith, .
 
-    It is not a family name.
+    Born on June 22, 1813.
+
+    His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
+
+    With Mary Kirwan, his wife, he fathered one son and one daughter:
+
+    1. Elisabeth, his heir, born in 1865.
+
+    2. Andrew, born in 1867, died in 1869.
+
+    Lineage...
     """
 
     """
-    That is peculiar.
+    I read the entry twice.
 
-    A titled lady would not call herself 'Lady Claythorn'. One does not take the name of one's house as a surname.
+    There it is. The family name is Claythorn, but their title is not.
 
-    She ought to be 'Lady Something of Claythorn'. A proper family name, followed by the estate.
+    They hold a peerage — the Earldom of Kilbraith. Their seat is this manor, but the title is quite separate.
 
-    It is the sort of mistake no one born into the aristocracy would ever make.
+    A peer is addressed by his title, not by his surname. The Earl of Kilbraith is styled 'Lord Kilbraith', and his countess, 'Lady Kilbraith'.
+
+    Never 'Lord Claythorn'. Never 'Lady Claythorn'.
+
+    It is the sort of mistake no one born into such a family would ever make.
 
     But it is precisely the sort of mistake an outsider might.
     """
