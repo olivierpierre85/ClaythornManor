@@ -262,9 +262,13 @@ label captain_day1_evening_library_read:
 
     Never 'Lord Claythorn'. Never 'Lady Claythorn'.
 
-    It is the sort of mistake no one born into such a family would ever make.
+    Still, I should not leap to conclusions.
 
-    But it is precisely the sort of mistake an outsider might.
+    It is not unheard of for a family to set the formal title aside in daily use. Since the war, I have heard of peers who have grown weary of ceremony.
+
+    Or perhaps it is a local habit. The villagers call her 'Lady Claythorn' after the name of the house, and in time she has simply let it stick.
+
+    And yet, it is something strange enough that I should not dismiss it entirely.
     """
 
     $ captain_details.threads.unlock('captain_host_suspicion_name')

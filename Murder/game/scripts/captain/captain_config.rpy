@@ -18,7 +18,9 @@ label init_captain:
             "day1_evening_bedroom_refusals" : 0,
         }
 
-        captain_important_choices = CharacterImportantChoiceList([
+        captain_important_choices = CharacterImportantChoiceList([])
+
+        captain_observations = CharacterObservationList([
             CharacterInformation(1, "captain_host_suspicion_name", "You noticed a problem with the name 'Lady Claythorn'",
                 content_negative="You didn't investigate the library",
                 image_file="captain_host_suspicion_name",
@@ -90,7 +92,7 @@ label init_captain:
             description_hidden = captain_extra_information,
             important_choices = captain_important_choices,
             endings = captain_endings,
-            observations = CharacterObservationList([]),
+            observations = captain_observations,
             objects = captain_objects,
             progress = captain_progress,
             test_checkpoints = captain_test_checkpoints,
