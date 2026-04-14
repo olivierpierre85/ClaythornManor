@@ -47,8 +47,8 @@ label captain_library_default:
 
     call run_menu(
         TimedMenu("captain_library_menu", [
-            TimedMenuChoice('Look up the Claythorns in the index', 'captain_library_read', early_exit=True),
-            TimedMenuChoice('Leave the book be', 'generic_cancel', early_exit=True)
+            TimedMenuChoice('Look up the Claythorns in the index', 'captain_library_read', 30, early_exit=True),
+            TimedMenuChoice('Leave the book be', 'generic_cancel', 10, early_exit=True)
         ])
     )
 

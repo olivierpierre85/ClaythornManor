@@ -28,7 +28,7 @@ label captain_day1_evening_billiard_room:
         $ captain_day1_evening_billiard_room_menu = TimedMenu("captain_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Approach the large group', 'captain_day1_evening_billiard_room_story', 60),
             TimedMenuChoice('Have a drink at the bar', 'captain_day1_evening_billiard_room_bar', 10),
-            TimedMenuChoice('Approach Dr Baldwin', 'captain_day1_evening_billiard_room_baldwin', 10),
+            TimedMenuChoice('Talk to Dr Baldwin', 'captain_day1_evening_billiard_room_baldwin', 10),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -64,6 +64,28 @@ label captain_day1_evening_billiard_room_story:
 
     Mr Moody was just saying what a fine storyteller you are.
     """
+
+    """
+    My old standby rises to the tip of my tongue. The Boxer Rebellion.
+
+    I have told that tale a hundred times. It almost feels like a memory of my own.
+
+    Yet Miss Marsh is watching me rather too closely for my liking.
+
+    A single misplaced detail in front of the wrong listener could unravel the whole pretence.
+
+    And refusing outright would be its own kind of admission.
+    """
+
+    call run_menu(TimedMenu("captain_day1_evening_billiard_room_story_menu", [
+        TimedMenuChoice('Tell the story of the Boxer Rebellion', 'captain_day1_evening_billiard_room_story_tell', 0, early_exit=True),
+        TimedMenuChoice('Decline the request', 'captain_day1_evening_billiard_room_story_refuse', 0, early_exit=True),
+    ]))
+
+    return
+
+
+label captain_day1_evening_billiard_room_story_tell:
 
     captain """
     How kind of him.
@@ -104,6 +126,47 @@ label captain_day1_evening_billiard_room_story:
 
     It is a good story. That is what matters.
     """
+
+    $ captain_details.threads.unlock('tell_boxer_story')
+
+    return
+
+
+label captain_day1_evening_billiard_room_story_refuse:
+
+    captain """
+    You are most kind, Miss Marsh. But I fear I must disappoint you this evening.
+
+    These old campaigns grow rather tired in the telling, and the journey has left me in no humour for performance.
+
+    Perhaps another time.
+    """
+
+    """
+    The silence that follows is a fraction too long.
+
+    Lady Claythorn's smile thins. Mr Moody's face slips into open disappointment.
+
+    And Miss Marsh. Miss Marsh holds her eyes upon me a moment longer than she ought to.
+
+    A bad mistake.
+
+    A man invited here for his military exploits who will not tell a single war story is a man with something to conceal.
+
+    There is no mending it now. The best I can manage is to take myself out of sight before I make it any worse.
+    """
+
+    captain """
+    Forgive me. I believe I shall retire for a moment and collect myself.
+    """
+
+    """
+    I incline my head politely and withdraw from the group, conscious that every pair of eyes in the room is following me to the door.
+
+    That will not have gone unnoticed.
+    """
+
+    $ captain_day1_evening_billiard_room_menu.early_exit = True
 
     return
 

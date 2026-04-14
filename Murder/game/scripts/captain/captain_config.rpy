@@ -18,7 +18,16 @@ label init_captain:
             "day1_evening_bedroom_refusals" : 0,
         }
 
-        captain_important_choices = CharacterImportantChoiceList([])
+        captain_important_choices = CharacterImportantChoiceList([
+            CharacterInformation(
+                0, "tell_boxer_story",
+                "You told a story about the Boxer Rebellion",
+                content_negative="You refused to tell a story in the billiard room",
+                image_file="captain_lie_boxer",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening', 'sunday_morning'],
+            ),
+        ])
 
         captain_observations = CharacterObservationList([
             CharacterInformation(1, "captain_host_suspicion_name", "You noticed a problem with the name 'Lady Claythorn'",

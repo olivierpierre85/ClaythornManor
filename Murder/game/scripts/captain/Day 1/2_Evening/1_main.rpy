@@ -166,8 +166,6 @@ label captain_day1_evening:
 
     So I should watch what I am saying carefully.
 
-    The first course is served shortly after.
-
     As we begin to eat, I notice Miss Baxter turning to her right.
 
     She has struck up a conversation with Mr Harring.
@@ -228,6 +226,8 @@ label captain_day1_evening:
     call change_time(21, 00)
 
     """
+    The dinner reaches its conclusion.
+
     Lady Claythorn mentions that drinks will be available in the billiard room for those who wish to continue the evening.
 
     First, I should like to see my room. I have not yet had the chance to settle in.

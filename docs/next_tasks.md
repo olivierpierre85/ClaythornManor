@@ -19,7 +19,10 @@ THREAD, locked shed image
   - [ ] Ai generated : Test and modify
     - [ ] CURRENT TEST - day1 map
     - [ ] MAP
-      - [ ]Biliard, room. maybe no need to tell the story again, since the player must have listened to it by the nurse to have unlocked captain (check that it is true)
+      - [ ] Billiard room is weak.
+        - [ ] What to gain from telling the story? NOT DYING. If you tell the story, thomas moody realises something is not ok, tells
+        - [ ] TODO change LAd dialog, he was so into captain sinha story that he forgot his flasks next to the bar. NO story he doesn't die. => Then why is Sinha dies when doesn't tell story. He switches FLASK
+        - [ ] Nothing to say to Dr Baldwin? I don't think so, there must be something to do here
   - [ ] 
   - [ ] Add and validate tests
   - [ ]

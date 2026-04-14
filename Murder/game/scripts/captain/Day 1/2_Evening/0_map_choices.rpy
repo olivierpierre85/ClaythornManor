@@ -23,7 +23,7 @@ label captain_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('manor_garden'), 'captain_day1_evening_garden', 0, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day1_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_portrait_gallery_default', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('library'), 'captain_library_default', 10, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'captain_library_default', 0, room='library'),
             # Downstairs
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day1_evening_downstairs_default', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day1_evening_downstairs_default', 10, room='scullery'),
@@ -63,7 +63,7 @@ label captain_day1_evening_downstairs_default:
     """
     Downstairs is reserved for the staff, so I should not go.
 
-    If I were seen poking around there on the first evening, it would invite exactly the sort of suspicion I am trying to avoid.
+    If I were seen poking around there, it would invite exactly the sort of suspicion I am trying to avoid.
     """
 
     return
@@ -233,7 +233,7 @@ label captain_day1_evening_bedroom_avoid:
         """
         I consider it for a moment, then think better of it.
 
-        A man does not go rummaging through another person's private quarters. Not on the first evening.
+        A man does not go rummaging through another person's private quarters.
 
         I should keep the bedrooms out of my mind entirely.
         """

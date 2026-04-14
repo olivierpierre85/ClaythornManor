@@ -169,10 +169,20 @@ Or a variation of that.
 - **Detective**: "So it’s up to us now. It means we are not totally obsolete yet."
 - **Mechanic**: The machine is at a deadlock. The player must manually introduce the "path" (guess the guilty party) to run extra analysis.
 
-THen the last path, the what happened path is played, but without saying who it is? And if it is wrong, it stops as soon as it doesn't make sense.... Game broken,restart,
+THen the last path, the what happened path is played, but without saying who it is? And if it is wrong, it stops as soon as it doesn't make sense.... Game broken,restart.
+
+## Real RUN
+
+You must guess the right PATH. 
+  - When dies thomas Moody? WHY poisoned WHEN? => His flasks was switched as when he was listening to the captain story.
+    - TODO change LAd dialog, he was so into captain sinha story that he forgot his flasks next to the bar. NO story he doesn't die.
+  - Has ted Harring followed the doctor upstairs
+  - What are the groups for the hunt
+  - Who comes to see the captain in the billiard room sat evening
+  - Who survives
 
 ## Last run (Maybe, check if still doable)
-Before last part, you must GUESS the killer for special achievement. Straight away or by answering questions.
+At the very end OR at the start, you must GUESS the killer for special achievement. Straight away or by answering questions.
 
 
 Once you’ve unlock the real ending, where the hero is alive and in front of the nurse. You can go with the flow and just call the police later. You escape alone and everyone else is dead.
@@ -199,12 +209,7 @@ JUMP FROM ONE CHARACTER TO ANOTHER
 ### 🔮 Unlocking & Intuitions
 
 - **Last Run Killer**: Before the last part, you must GUESS the killer for special achievement. 
-- **Last Run Story**: You must guess the right PATH. In the real path, 
-  - Has ted Harring followed the doctor upstairs
-  - When dies thomas Moody? Doctor balwin? ...
-  - What are the groups for the hunt
-  - Who comes to see the captain in the billiard room sat evening
-  - Who survives
+- **Last Run Story**: 
 - **Real Ending**: Hero is alive in front of the nurse.
 - **Meta Run**: Once you understand everything, do a new run where everyone does what they *shouldn't* do (e.g., Drunk spares Doctor, Host confesses).
 
