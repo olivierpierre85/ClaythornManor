@@ -297,10 +297,6 @@ init -1 python:
             for i, choice in enumerate(self.choices):                
                 # When a choice is keep_alive and early_exit, it's a generic choice to leave and shouldn't count on it's own
                 if choice.is_valid():
-                    print("choice valid:")
-                    print(next_menu)
-                    print(choice.keep_alive)
-                    print(choice.early_exit)
                     if not (next_menu and choice.keep_alive and choice.early_exit):
                         visible_choices += 1
                     
