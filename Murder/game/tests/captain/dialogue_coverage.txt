@@ -1,0 +1,43 @@
+Generated:                2026-04-14 15:49:47
+Scope:                    character=captain
+Dialogue entries scanned: 377
+Test lines collected:     471
+Covered:                  349
+Missing:                  28
+
+  game/scripts/_common/Day 1/2_Evening/1_main.rpy  (4 missing)
+    [common_day1_evening_tea_room_captain_arrives_f8fed4bc] As he sees the new guests coming in, Thomas Moody joins me back to greet them.
+    [common_day1_evening_tea_room_captain_arrives_b60ca65f] We all glance at him from afar as he fills a water glass to the brim with sherry.
+    [common_day1_evening_tea_room_captain_arrives_a3ea6984] He then proceeds to chug it in one sip.
+    [common_day1_evening_tea_room_captain_arrives_d5e443ad] After that, he sits down on the sofa next to him and immediately falls asleep.
+
+  game/scripts/captain/Day 1/2_Evening/2_billiard_room.rpy  (1 missing)
+    [captain_day1_evening_billiard_room_619510f0] I am back in the billiard room.
+
+  game/scripts/captain/Day 2/1_Morning/1_main.rpy  (15 missing)
+    [captain_day2_morning_c23646a6] I wake before the sun has fully cleared the horizon.
+    [captain_day2_morning_2d92070d] The 'George I' room is silent, its heavy curtains muffling the morning bird-song.
+    [captain_day2_morning_a7272f2c] I lie still for a moment, listening to the house.
+    [captain_day2_morning_6983c569] Day two.
+    [captain_day2_morning_e8e2f628] My performance yesterday was adequate. I played the part of the retired officer to perfection.
+    [captain_day2_morning_e0bae6c5] Yet I must not grow complacent. A single slip, a misplaced word, and this entire charade collapses.
+    [captain_day2_morning_8cb57d36] I have survived thirty years of Imperial politics. I can survive a weekend in the Highlands.
+    [captain_day2_morning_ea7c95b8] I rise and begin my preparations.
+    [captain_day2_morning_479c76c8] Washing is a brief, cold affair. Dressing is done with practised efficiency.
+    [captain_day2_morning_5f875178] Every button fastened. Every crease straightened.
+    [captain_day2_morning_8130409a] The mirror shows a man who belongs here. That is all that matters.
+    [captain_day2_morning_840ab04a] I cannot afford to be late for breakfast. Punctuality is the bedrock of authority.
+    [captain_day2_morning_b975a713] I enter the dining room.
+    [captain_day2_morning_b092756c] The table is set, and the smell of coffee and fried bread fills the air.
+    [captain_day2_morning_4a8b717e] It is time to resume the act.
+
+  game/scripts/captain/captain_generic_locations.rpy  (8 missing)
+    [captain_library_default_159e3f8e] The library is as I left it.
+    [captain_library_default_454f8f41] I have already read what I needed from the genealogy book.
+    [captain_library_default_f6c02ecf] There is nothing more here for me.
+    [captain_library_default_159e3f8e_1] The library is as I left it.
+    [captain_library_default_b548ae0c] The genealogy book still lies open on the table, waiting.
+    [captain_portrait_gallery_default_e1eb8dd6] The Claythorn forebears still gaze down from their frames, silent and stern.
+    [captain_portrait_gallery_default_faafe096] The absence of our host's portrait remains as striking as before.
+    [captain_portrait_gallery_default_ae94ed59] There is nothing more the gallery can tell me.
+

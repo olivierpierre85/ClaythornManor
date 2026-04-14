@@ -30,6 +30,7 @@ import argparse
 import re
 import sys
 from collections import defaultdict
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -152,28 +153,46 @@ def main() -> int:
     missing_total = sum(len(v) for v in missing_by_file.values())
     covered = total - missing_total
 
-    print(f"Scope:                    {scope}")
-    print(f"Dialogue entries scanned: {total}")
-    print(f"Test lines collected:     {len(test_lines)}")
-    print(f"Covered:                  {covered}")
-    print(f"Missing:                  {missing_total}")
-    print()
+    output_lines: list[str] = []
+
+    def out(line: str = "") -> None:
+        print(line)
+        output_lines.append(line)
+
+    out(f"Generated:                {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    out(f"Scope:                    {scope}")
+    out(f"Dialogue entries scanned: {total}")
+    out(f"Test lines collected:     {len(test_lines)}")
+    out(f"Covered:                  {covered}")
+    out(f"Missing:                  {missing_total}")
+    out()
 
     if missing_by_file:
         for filename in sorted(missing_by_file):
             entries = missing_by_file[filename]
-            print(f"  {filename}  ({len(entries)} missing)")
+            out(f"  {filename}  ({len(entries)} missing)")
             shown = entries if args.limit <= 0 else entries[: args.limit]
             for ident, text in shown:
                 preview = text if len(text) <= 110 else text[:107] + "..."
-                print(f"    [{ident}] {preview}")
+                out(f"    [{ident}] {preview}")
             if args.limit > 0 and len(entries) > args.limit:
-                print(f"    ... {len(entries) - args.limit} more")
-            print()
-        return 1
+                out(f"    ... {len(entries) - args.limit} more")
+            out()
+        exit_code = 1
+    else:
+        out("All dialogue lines covered.")
+        exit_code = 0
 
-    print("All dialogue lines covered.")
-    return 0
+    # Save the report alongside the tests it describes.
+    if character:
+        report_path = tests_path / character / "dialogue_coverage.txt"
+    else:
+        report_path = tests_path / "dialogue_coverage.txt"
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text("\n".join(output_lines) + "\n", encoding="utf-8")
+    print(f"Report saved to: {report_path}")
+
+    return exit_code
 
 
 if __name__ == "__main__":
