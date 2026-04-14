@@ -33,11 +33,9 @@ For full character backstories, motivations, and relationships see:
 | `broken`  | Thomas Moody   | Imposter wearing a mask; amateur sleuth    |
 | `host`    | Lady Claythorn | Out-of-work actress hired to run the manor |
 
-The **Psychic** is the killer. The **Broken Face** is the first victim (killed Night 1 when the Psychic realises he is not the officer she loved).
 
 ### Unlock Order
 
-Lad → Doctor / Psychic → Nurse / Broken → Captain / Drunk → Host → Final run  
 Details and cross-character prerequisites: [docs/game_story/unlock.md](docs/game_story/unlock.md)
 
 ---
@@ -228,3 +226,34 @@ Murder/game/tests/
 ### Running tests
 
 Tests run inside Ren'Py's built-in test runner (not a separate CI tool). Launch the game in test mode via the Ren'Py launcher or `renpy.exe … --test`.
+
+### Checking dialogue coverage
+
+`Murder/check_test_dialogue_coverage.py` verifies that every dialogue and narration line in the game is exercised by at least one test plan. It compares `Murder/dialogue.tab` (the authoritative extract of all in-game text) against the `.txt` output files produced by the test runner.
+
+**You must use this script instead of reading script files manually** to assess whether tests cover a chapter. Reading `.rpy` files to find gaps is slow and error-prone; the script does it accurately in one pass.
+
+```bash
+# Check one character (own scripts + _common labels that character calls)
+python Murder/check_test_dialogue_coverage.py --character captain
+```
+
+**What is excluded from the character-specific check:**
+- Other characters' scripts (only `scripts/<character>/` + relevant `_common/` labels are scanned)
+- `*_generic_choices.rpy` and `*_generic_other_guests.rpy` — these files contain NPC dialogue triggered when *another* character is playing, so they will never appear in this character's own test output
+- `_common/` labels that the character never `call`s or `jump`s to
+
+**Interpreting the output:**
+
+```
+Scope:                    character=captain
+Dialogue entries scanned: 549
+Test lines collected:     1823
+Covered:                  532
+Missing:                  17
+
+  game/scripts/captain/captain_generic_locations.rpy  (3 missing)
+    [captain_library_default_...] The library is as I left it. ...
+```
+
+Each missing entry shows the Ren'Py identifier and a preview of the text. Add a new `.json` plan (or extend an existing one) to cover the missing branch, then re-run to confirm the count drops to zero.
