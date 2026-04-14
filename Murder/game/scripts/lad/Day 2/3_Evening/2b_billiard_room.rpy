@@ -359,7 +359,7 @@ label lad_day2_evening_billiard_room_captain:
 
     I think everyone is overreacting because they're not accustomed to death like I am.
 
-    Once you remove fear from the equation, you'll realize there's nothing abnormal about today's events.
+    Once you remove fear from the equation, you'll realise there's nothing abnormal about today's events.
 
     Don't you agree?
 

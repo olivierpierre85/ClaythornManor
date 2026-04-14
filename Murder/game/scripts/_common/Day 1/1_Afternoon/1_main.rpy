@@ -57,7 +57,7 @@ label common_day1_afternoon_station_doctor_nurse:
 
         A man has appeared farther along the platform.
 
-        He is tall and composed, and most of his face is concealed behind a tin mask.
+        He is tall and composed, and most of his face is concealed behind a mask.
 
         I have seen worse, working on the wards. Much worse.
 

@@ -302,7 +302,7 @@ label psychic_portrait_gallery_look_for_lord:
     call psychic_portrait_gallery_default
 
     """
-    Now, I realize that there are probably paintings of the Claythorn family here.
+    Now, I realise that there are probably paintings of the Claythorn family here.
     """
 
     pause 1.0

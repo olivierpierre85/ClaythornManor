@@ -119,7 +119,7 @@ label lad_day2_hunt_tea_room:
     """
 
     """
-    It's creepy to realize there's a dead man upstairs.
+    It's creepy to realise there's a dead man upstairs.
 
     He's there in his bed, as if nothing happened.
 

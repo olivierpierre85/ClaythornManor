@@ -345,7 +345,7 @@ label doctor_day1_evening:
 
                 I dreaded reading this for a long time.
 
-                I am uneasy at first but very quickly I realize I won't be able to stop until the end.
+                I am uneasy at first but very quickly I realise I won't be able to stop until the end.
                 """
 
                 call wait_screen_transition()

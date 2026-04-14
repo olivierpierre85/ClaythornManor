@@ -307,7 +307,7 @@ label broken_generic_manor_offended:
     call broken_generic_doctor_improprieties
 
     """
-    In any case, I realize now he is the tallest man in the room.
+    In any case, I realise now he is the tallest man in the room.
 
     Only the footman seems to be about the same height as he is.
     """

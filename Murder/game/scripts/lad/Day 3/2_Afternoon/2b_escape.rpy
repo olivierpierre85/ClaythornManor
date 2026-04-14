@@ -197,7 +197,7 @@ label lad_day3_escape:
         
         Pointing it at him, I pull the trigger.
         
-        But then realize it's empty.
+        But then realise it's empty.
         """
 
         play sound gun

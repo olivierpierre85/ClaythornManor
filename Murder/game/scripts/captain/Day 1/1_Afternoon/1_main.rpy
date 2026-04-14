@@ -98,7 +98,7 @@ label captain_introduction:
 
     I have done everything she asked of me. I mastered their language, learned their manners.
 
-    I served their Empire faithfully for over thirty years.
+    I served their Empire faithfully all my life.
 
     And yet, I am still just an outsider looking through the window.
 
@@ -124,7 +124,7 @@ label captain_introduction:
 
     Yet, the invitation is vague enough that it could still apply to me.
 
-    And I am sure I saved lives... technically.
+    I mean, I am sure I saved lives... technically.
 
     Many soldiers died because they didn't receive their rations on time. Or because they lacked proper clothing.
 
@@ -140,7 +140,7 @@ label captain_introduction:
 
     That could finally be my way in.
 
-    So yes, I am committing fraud. That is the only way to put it.
+    So yes, I am committing fraud. There is no other way to put it.
 
     But I have spent my whole life earning a place that was promised to me and never delivered.
 

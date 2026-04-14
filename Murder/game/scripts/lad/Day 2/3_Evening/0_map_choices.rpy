@@ -124,7 +124,7 @@ label lad_day2_evening_garden:
     """
     I open the door to go to the garden.
 
-    But after a quick glance outside, I realize it's pitch black.
+    But after a quick glance outside, I realise it's pitch black.
 
     I don't think I'll be able to do anything there at this hour.
     """

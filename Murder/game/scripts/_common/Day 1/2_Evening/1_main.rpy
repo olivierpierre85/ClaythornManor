@@ -35,7 +35,7 @@ label common_day1_evening_host_welcome_speech:
 
     I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
 
-    I realize the invitation letter you received was somewhat vague, so let me clarify its contents now.
+    I realise the invitation letter you received was somewhat vague, so let me clarify its contents now.
 
     My first gift to you is a stay at my manor. 
     
@@ -270,7 +270,7 @@ label common_day1_evening_tea_room_captain_arrives:
 
     if current_character == captain_details:
         """
-        I notice at once that Mr Moody is wearing a tin mask.
+        I notice at once that Mr Moody is wearing a mask.
 
         I have seen many of those. The poor man must have suffered terribly during the war.
 
@@ -317,21 +317,23 @@ label common_day1_evening_tea_room_captain_arrives:
     Indeed, it's impressive that...
     """
 
+    captain """
+    It reminds me of a fellow I knew back in the Army.
+    """
     
     if current_character == captain_details:
-        """
-        The words are already leaving my mouth before I have weighed them.
 
-        An old habit, picked up a lot time ago, when I noticed that if I don't impose myself, no one will pay attention to me.
+        """
+        The words left my mouth before I have weighed them.
 
         Only once I am halfway through do I notice that I have spoken straight over the doctor.
+
+        An old habit, picked up a lot time ago, when I noticed that if I don't impose myself, no one will pay attention to me.
 
         Rude, perhaps. Yet stopping now would be worse than carrying on.
         """
 
     captain """
-    It reminds me of a fellow I knew back in the Army.
-
     He was my superior, but I swear I never saw him sober.
 
     Even in the mornings, he was always still drunk from the day before.

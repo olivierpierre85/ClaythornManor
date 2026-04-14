@@ -97,10 +97,6 @@ label captain_day1_evening:
     That particular scar is from falling off a chair in my office in Calcutta.
 
     But they do not need to know that.
-
-    The Anglo-Zanzibar War. The shortest war in the history of Great Britain.
-
-    Not that anyone here is likely to remember that detail.
     """
 
     $ captain_details.description_hidden.unlock('embellishment')
@@ -152,7 +148,7 @@ label captain_day1_evening:
 
     Then, our host makes her entrance.
 
-    She is younger than I expected. Elegantly dressed, with the quiet confidence of old money.
+    She is rather young, elegantly dressed, with the quiet confidence of old money.
 
     She takes her seat at the head of the table.
     """

@@ -147,7 +147,7 @@ label lad_day3_afternoon_toilet:
     $ play_music('danger', fadeout_val=2)
 
     """
-    But as soon as I stand up, I realize I can't stay on my feet.
+    But as soon as I stand up, I realise I can't stay on my feet.
 
     My head spins, and I feel faint.
     """
@@ -385,7 +385,7 @@ label lad_day3_afternoon_no_toilet:
 
     Have I eaten the same thing as her?
 
-    Now that I think about it, I realize I am suddenly very tired.
+    Now that I think about it, I realise I am suddenly very tired.
     """
 
     lad scared """

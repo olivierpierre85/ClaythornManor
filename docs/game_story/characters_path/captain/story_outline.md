@@ -12,7 +12,7 @@ The Captain is a formal, meticulous, and highly observant Indian officer. He has
 
 ### 🌙 Day 1: Friday Evening
 **The First Observations**
-- **Dinner Scene**: The Captain notes the Host's lack of true aristocratic polish. He observes her mannerisms and realizes they feel rehearsed—like an actress on a stage. Also, he notices the psychic starts talking first with Ted harring, while she have addressed him first. No need for a generic psychic here, just explain that each time she talks to him he gives a very long answer to discourage her.
+- **Dinner Scene**: The Captain notes the Host's lack of true aristocratic polish. He observes her mannerisms and realises they feel rehearsed—like an actress on a stage. Also, he notices the psychic starts talking first with Ted harring, while she have addressed him first. No need for a generic psychic here, just explain that each time she talks to him he gives a very long answer to discourage her.
 
 #### Map choices
 - **Library Investigation**: 

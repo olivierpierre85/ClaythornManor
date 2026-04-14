@@ -29,7 +29,7 @@ label lad_generic_room_friday:
     lad """
     I don't know, I haven't been to my room yet.
 
-    I just arrived, and I didn't realize I would be the last one here.
+    I just arrived, and I didn't realise I would be the last one here.
     """
 
     return
