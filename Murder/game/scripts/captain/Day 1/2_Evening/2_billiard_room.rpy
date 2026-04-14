@@ -77,14 +77,16 @@ label captain_day1_evening_billiard_room_story:
     This is my best story.
 
     I have told it so many times that it almost feels true.
-    """
 
-    call common_day1_evening_captain_billiard_room_speech_part_1
+    I speak of the Boxer Rebellion. The Eight-Nation Alliance. The march on Beijing.
+
+    I give them the full account.
+    """
 
     """
     Everyone is listening. Even the doctor has looked up from his glass.
 
-    Good. Now for the main act.
+    Good.
 
     The truth is, during the Boxer Rebellion, I was a supply officer stationed behind the lines.
 
@@ -94,10 +96,6 @@ label captain_day1_evening_billiard_room_story:
 
     And over the years, the story has become so polished that even I sometimes forget the reality.
     """
-
-    $ captain_details.description_hidden.unlock('lie')
-
-    call common_day1_evening_captain_billiard_room_speech_part_2
 
     """
     I finish the story and pause, letting the silence settle.
