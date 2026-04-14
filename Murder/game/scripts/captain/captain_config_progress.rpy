@@ -13,6 +13,17 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
             ],
+            # Second line, ...
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_line),
+            ],
+            # 3
+            [
+                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "TODO", "saturday_morning"),
+            ],
         ]
 
     # Define Checkpoints for TEST
