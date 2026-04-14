@@ -29,7 +29,7 @@ label captain_day1_evening_billiard_room:
             TimedMenuChoice('Approach the large group', 'captain_day1_evening_billiard_room_story', 60),
             TimedMenuChoice('Have a drink at the bar', 'captain_day1_evening_billiard_room_bar', 10),
             TimedMenuChoice('Approach Dr Baldwin', 'captain_day1_evening_billiard_room_baldwin', 10),
-            TimedMenuChoice('Leave the room', 'captain_day1_evening_billiard_room_cancel', 0, keep_alive = True, early_exit = True)
+            TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
     else:
@@ -81,9 +81,7 @@ label captain_day1_evening_billiard_room_story:
     I speak of the Boxer Rebellion. The Eight-Nation Alliance. The march on Beijing.
 
     I give them the full account.
-    """
 
-    """
     Everyone is listening. Even the doctor has looked up from his glass.
 
     Good.
@@ -95,9 +93,7 @@ label captain_day1_evening_billiard_room_story:
     But I have read enough accounts of the expedition to describe it as though I were there.
 
     And over the years, the story has become so polished that even I sometimes forget the reality.
-    """
 
-    """
     I finish the story and pause, letting the silence settle.
 
     Miss Marsh is studying me. There is something in her expression that I do not quite like.
@@ -137,17 +133,6 @@ label captain_day1_evening_billiard_room_baldwin:
     I stop, give a small nod, and withdraw.
 
     Some conversations are better never begun.
-    """
-
-    return
-
-
-label captain_day1_evening_billiard_room_cancel:
-
-    """
-    There is little here that warrants my attention.
-
-    I leave.
     """
 
     return

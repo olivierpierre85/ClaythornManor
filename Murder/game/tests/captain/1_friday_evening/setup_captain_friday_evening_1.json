@@ -42,7 +42,7 @@
                 "Retire for the night"
             ],
             "selected": "George IV Bedroom",
-            "redirect": "captain_day1_evening_bedroom_closed",
+            "redirect": "captain_day1_evening_bedroom_avoid",
             "time_left": 90,
             "timestamp": "2026-04-13T10:20:05.451938",
             "time_to_decide": 1.671387,
@@ -75,7 +75,7 @@
                 "Retire for the night"
             ],
             "selected": "Edward II Bedroom",
-            "redirect": "captain_day1_evening_bedroom_closed",
+            "redirect": "captain_day1_evening_bedroom_avoid",
             "time_left": 80,
             "timestamp": "2026-04-13T10:20:14.302200",
             "time_to_decide": 0.833575,

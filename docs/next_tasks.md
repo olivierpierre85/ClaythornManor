@@ -4,10 +4,12 @@ BUG => FULL_TESTINGMODE, if doing a restart, then missing menu???
 EVery story but the lad, a memory on the train? 
 Or just : Captain, Broken?
 
+
+
+WHY Is there a call the generic LAD in psychic day 1 billiard room?
+
 ## Write nurseStory : Full
 
-RETEST :
-Day 2 maps left alone intentionally. Both [Day 2/2_No Hunt/0_map_choices.rpy:11](Murder/game/scripts/nurse/Day 2/2_No Hunt/0_map_choices.rpy#L11) and [Day 2/3_Evening/0_map_choices.rpy:11](Murder/game/scripts/nurse/Day 2/3_Evening/0_map_choices.rpy#L11) already gate on not is_unlocked('take_gun'), so they only ever call nurse_gun_room_default when the gun has not been taken — the removed branch was unreachable from them, and the manual time deduction never fired there. Current behaviour ("gun room hidden on Day 2 once you've taken the pistol") is preserved.
 
 If you'd rather let the nurse re-visit the gun room on Day 2 as well (same narration, 10 min), say the word and I'll add the twin entries to both Day 2 maps plus a nurse_day2_evening_gun_room_already_taken wrapper for the exhaustion check.
 
@@ -25,7 +27,6 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
   - [ ] Ai generated : Test and modify
     - [ ] CURRENT TEST - day1 map
     - [ ] MAP
-      - [x] Move the default text to generic locations and add a var for already visited (if no threads are linked to the visit) : Library, portrait room.
       - [ ]Biliard, room. maybe no need to tell the story again, since the player must have listened to it by the nurse to have unlocked captain (check that it is true)
   - [ ] 
   - [ ] Add and validate tests

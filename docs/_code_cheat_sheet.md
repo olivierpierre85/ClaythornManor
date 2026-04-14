@@ -32,6 +32,8 @@ $ stop_music()
 
 play sound gun
 
+# Avoid showing a empty menu in choice
+condition="is_menu_valid('captain_day1_evening_billiard_room_menu')"
 
 
 # Init a var at screen opening

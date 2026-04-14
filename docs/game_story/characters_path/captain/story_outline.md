@@ -23,6 +23,9 @@ The Captain is a formal, meticulous, and highly observant Indian officer. He has
 - **portrait gallery**: Look for lady claythorn, can't find her. Another thread suspicion.
 - **Billiard Room**: give the story to people there (already written)
 
+
+??? Servant Stairs??? As he knows a fancy house, he can see the servants stairs that was hidden ??? NO everybody should see it to go to attic?
+
 ### ☀️ Day 2: Saturday
 **Morning: The Hunt**
 - **Observation**: During the hunt, the Captain tests the Host. He notes her shooting skill (or lack thereof) and her inability to lead a group of this standing correctly.

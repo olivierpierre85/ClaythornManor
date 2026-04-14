@@ -10,13 +10,13 @@ label captain_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('females_room'), 'captain_day1_evening_attic_default', 10, room='females_room'),
             TimedMenuChoice(default_room_text('butler_room'), 'captain_day1_evening_attic_default', 10, room='butler_room'),
             # Bedrooms
-            TimedMenuChoice(default_room_text('bedroom_lad'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_lad'),
-            TimedMenuChoice(default_room_text('bedroom_host'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_host'),
-            TimedMenuChoice(default_room_text('bedroom_broken'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_broken'),
-            TimedMenuChoice(default_room_text('bedroom_nurse'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_nurse'),
-            TimedMenuChoice(default_room_text('bedroom_doctor'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_doctor'),
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'captain_day1_evening_bedroom_closed', 10, room='bedroom_drunk'),
-            TimedMenuChoice(default_room_text('bedroom_psychic'), 'captain_day1_evening_bedroom_psychic', 10, room='bedroom_psychic'),
+            TimedMenuChoice(default_room_text('bedroom_lad'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_lad'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_broken'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_broken'),
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_nurse'),
+            TimedMenuChoice(default_room_text('bedroom_doctor'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_doctor'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_drunk'),
+            TimedMenuChoice(default_room_text('bedroom_psychic'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_psychic'),
             # First floor
             TimedMenuChoice(default_room_text('tea_room'), 'captain_day1_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day1_evening_dining_room', 10, room='dining_room'),
@@ -35,7 +35,9 @@ label captain_day1_evening_map_menu:
                 'captain_day1_evening_billiard_room',
                 0,
                 room = 'billiard_room',
-                next_menu = 'captain_day1_evening_billiard_room_menu'
+                keep_alive=True,
+                next_menu = 'captain_day1_evening_billiard_room_menu', 
+                condition="is_menu_valid('captain_day1_evening_billiard_room_menu')"
             ),
             TimedMenuChoice(
                 'Retire for the night',
@@ -59,11 +61,9 @@ label captain_day1_evening_downstairs_default:
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('kitchen'))
 
     """
-    The service area is downstairs. I have no reason to venture there.
+    Downstairs is reserved for the staff, so I should not go.
 
-    A proper gentleman does not intrude upon the domestic quarters.
-
-    If I were seen poking around the kitchen on the first evening, it would invite exactly the sort of suspicion I am trying to avoid.
+    If I were seen poking around there on the first evening, it would invite exactly the sort of suspicion I am trying to avoid.
     """
 
     return
@@ -125,6 +125,15 @@ label captain_day1_evening_garden:
 
     A garden, a gravel path, what appears to be an outbuilding further on.
 
+    """
+
+    # TODO:Add a choice here, where we wonder if we should go and see the outbuilding/
+    # If no, just keep the rest
+    # if yes, move to the shed, try to open the door, but realise it's closed, then you can go back to the normal path. Don't forget to change the time_spend value.
+    
+    # Also, mention the shed when the psychic go outside during the hunt, but she will think says there is no point going there;
+
+    """
     But I am soaking wet and the cold is beginning to bite.
 
     In these conditions, there is no point in staying any longer.
@@ -167,7 +176,9 @@ label captain_day1_evening_attic_default:
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
 
     """
-    The servants' quarters are upstairs. I have no business going there.
+    The servants' quarters are upstairs. 
+    
+    I have no business going there.
 
     A guest does not wander into the staff's private rooms. It would be a serious breach of propriety.
 
@@ -180,7 +191,7 @@ label captain_day1_evening_attic_default:
 # ------------------------------------
 #   BEDROOMS
 # ------------------------------------
-label captain_day1_evening_bedroom_closed:
+label captain_day1_evening_bedroom_avoid:
 
     $ captain_details.saved_variables["day1_evening_bedroom_refusals"] += 1
 
@@ -207,50 +218,6 @@ label captain_day1_evening_bedroom_closed:
         """
 
         # Block all other bedrooms after 2 refusals
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
-        $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
-
-    return
-
-
-label captain_day1_evening_bedroom_psychic:
-
-    $ captain_details.saved_variables["day1_evening_bedroom_refusals"] += 1
-
-    $ change_room("bedrooms_hallway")
-
-    play sound door_knock
-
-    captain """
-    Miss Baxter? Are you there?
-    """
-
-    psychic """
-    Yes? Who is it?
-    """
-
-    captain """
-    Captain Sinha. I was wondering if you might care for a conversation.
-    """
-
-    psychic """
-    That is kind of you, Captain. But I am rather tired.
-
-    We can speak again tomorrow.
-    """
-
-    captain """
-    Of course. Good night.
-    """
-
-    $ unlock_map('bedroom_psychic')
-
-    if captain_details.saved_variables["day1_evening_bedroom_refusals"] >= 2:
         $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
         $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
         $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))

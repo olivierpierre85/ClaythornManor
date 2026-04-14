@@ -163,6 +163,12 @@ init -1 python:
                     return choice.hidden
         return False
 
+    # Shortcut to be used in the Menu to avoid showing a menu when there is nothing after. e.g: Used for billiard room
+    def is_menu_valid(menu_id):
+        if menu_id not in all_menus:
+            return True
+        return all_menus[menu_id].is_valid(next_menu=True)
+
     # Possible choices for a menu
     class TimedMenuChoice:
     
@@ -290,7 +296,11 @@ init -1 python:
             visible_choices = 0
             for i, choice in enumerate(self.choices):                
                 # When a choice is keep_alive and early_exit, it's a generic choice to leave and shouldn't count on it's own
-                if choice.is_valid(): 
+                if choice.is_valid():
+                    print("choice valid:")
+                    print(next_menu)
+                    print(choice.keep_alive)
+                    print(choice.early_exit)
                     if not (next_menu and choice.keep_alive and choice.early_exit):
                         visible_choices += 1
                     

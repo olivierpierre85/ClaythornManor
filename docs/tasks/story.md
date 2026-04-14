@@ -198,7 +198,13 @@ JUMP FROM ONE CHARACTER TO ANOTHER
 
 ### 🔮 Unlocking & Intuitions
 
-- **Last Run**: Before the last part, you must GUESS the killer for special achievement.
+- **Last Run Killer**: Before the last part, you must GUESS the killer for special achievement. 
+- **Last Run Story**: You must guess the right PATH. In the real path, 
+  - Has ted Harring followed the doctor upstairs
+  - When dies thomas Moody? Doctor balwin? ...
+  - What are the groups for the hunt
+  - Who comes to see the captain in the billiard room sat evening
+  - Who survives
 - **Real Ending**: Hero is alive in front of the nurse.
 - **Meta Run**: Once you understand everything, do a new run where everyone does what they *shouldn't* do (e.g., Drunk spares Doctor, Host confesses).
 
