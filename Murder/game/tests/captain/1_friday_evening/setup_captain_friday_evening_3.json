@@ -1,0 +1,25 @@
+{
+    "start_label": "captain_day1_evening",
+    "choices": [
+        {
+            "menu": "captain_day1_evening",
+            "selected": "Ignore her",
+            "redirect": "captain_day1_dinner_no_talk"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Garden",
+            "redirect": "captain_day1_evening_garden"
+        },
+        {
+            "menu": "captain_day1_evening_garden_shed_menu",
+            "selected": "Take a closer look at the outbuilding",
+            "redirect": "captain_day1_evening_shed"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Retire for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

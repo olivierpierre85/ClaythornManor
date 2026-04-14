@@ -20,6 +20,24 @@
       "console": "integratedTerminal"
     },
     {
+      "name": "Dialogue Coverage: by character",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/dummy.py",
+      "preLaunchTask": "Dialogue Coverage: Check by character",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Dialogue Coverage: ALL",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/dummy.py",
+      "preLaunchTask": "Dialogue Coverage: Check ALL",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
       "name": "Extract Thread Prompts",
       "type": "debugpy",
       "request": "launch",

@@ -126,11 +126,16 @@ Then again, this alone probably means nothing.
 With a manor this remote, perhaps she has simply not had occasion for proper company in some time, so she has forfeited some of the usual habits.
 After a while Miss Baxter seems to have exhausted her conversation with the young man.
 I can talk to her now if I please.
-Menu Choice: Ignore her
-I decide that the best way not to be discovered is to simply keep to myself.
-So I do not engage with Miss Baxter.
-She does not seem to mind.
-We eat in silence until the end of dinner.
+Menu Choice: Talk to Amelia Baxter
+Sushil Sinha: Miss Baxter.
+Sushil Sinha: I don't want to make a scene, but I am the one on your left.
+Sushil Sinha: You should have engaged in conversation with me first.
+Amelia Baxter: Oh, how dreadful of me. I do apologise.
+She gives me an annoyed look. I do not think she was expecting to be put back in her place by someone like me.
+That gives me a small feeling of satisfaction.
+She then proceeds to ask me questions about myself, and I make sure each answer is filled with inconsequential details.
+Hopefully, if I drown her in information, she might not notice any inconsistencies.
+When the dinner reaches its conclusion, I realise I have not even asked her anything about herself.
 Lady Claythorn mentions that drinks will be available in the billiard room for those who wish to continue the evening.
 First, I should like to see my room. I have not yet had the chance to settle in.
 I ask the footman to show me the way.
@@ -139,76 +144,51 @@ Footman: You've been assigned the 'George I' room.
 The room is adequate. Not extravagant, but respectable.
 Still, it is more comfortable than my lodgings in London.
 I unpack quickly and consider my options.
-Map Choice: William the Conqueror Bedroom
-I pause outside the door.
-No. It would be improper to enter someone's room uninvited.
-That is not how a gentleman conducts himself.
-Map Choice: Henry IV Bedroom
-I consider it for a moment, then think better of it.
-A man does not go rummaging through another person's private quarters. Not on the first evening.
-I should keep the bedrooms out of my mind entirely.
-Map Choice: Kitchen
-Downstairs is reserved for the staff, so I should not go.
-If I were seen poking around there on the first evening, it would invite exactly the sort of suspicion I am trying to avoid.
-Map Choice: Storage Room
-The servants' quarters are upstairs.
-I have no business going there.
-A guest does not wander into the staff's private rooms. It would be a serious breach of propriety.
-Whatever is up there is none of my concern.
-Map Choice: Library
-A well-stocked library. The kind one would expect in a house like this.
-A book lies open on a table.
-'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
-The eighth edition, printed in 1894.
-I remember dreaming of seeing my name in such a book.
-I know now that it will never happen.
-Menu Choice: Look up the Claythorns in the index
-I glance through a few pages.
-Let us see if the Claythorns are mentioned.
-I search through the index. Clarendon, Claridge, Clark...
-Claythorn.
-There are several entries. I find the one concerning this manor.
-Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith, .
-Book: Born on June 22, 1813.
-Book: His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
-Book: With Mary Kirwan, his wife, he fathered one son and one daughter:
-Book: 1. Elisabeth, his heir, born in 1865.
-Book: 2. Andrew, born in 1867, died in 1869.
-Book: Lineage...
-I read the entry twice.
-There it is. The family name is Claythorn, but their title is not.
-They hold a peerage — the Earldom of Kilbraith. Their seat is this manor, but the title is quite separate.
-A peer is addressed by his title, not by his surname. The Earl of Kilbraith is styled 'Lord Kilbraith', and his countess, 'Lady Kilbraith'.
-Never 'Lord Claythorn'. Never 'Lady Claythorn'.
-Still, I should not leap to conclusions.
-It is not unheard of for a family to set the formal title aside in daily use. Since the war, I have heard of peers who have grown weary of ceremony.
-Or perhaps it is a local habit. The villagers call her 'Lady Claythorn' after the name of the house, and in time she has simply let it stick.
-And yet, it is something strange enough that I should not dismiss it entirely.
-I close the book and place it back on the table.
-Interesting. Very interesting indeed.
-Map Choice: Tea room
-The tea room is deserted now. Nothing of interest here.
-Map Choice: Portrait Gallery
-A gallery of family portraits lines the walls.
-The Claythorn lineage, rendered in oil and gilt frames.
-I study the faces. Old money, passed down through blood.
-There are perhaps a dozen portraits here, spanning several generations.
-Stern-looking gentlemen in powdered wigs. Ladies in elaborate gowns.
-But then something strikes me.
-None of them resemble our host.
-Where is Lady Claythorn?
-If she is the current mistress of this house, her portrait ought to hang here alongside her forebears.
-And yet there is nothing.
-In itself, that doesn't mean much.
-It could be a personal preference, or perhaps she had difficulty persuading a decent artist to come all the way out here.
-Still, I will keep that in mind.
-Map Choice: Dining Room
-The staff are clearing away the last of the dinner service.
-No reason to linger.
-Map Choice: Entrance Hall
-The entrance hall is quiet at this hour.
-It is a fine space. The kind of hall that speaks of generations.
-I take a moment to study the architecture, then move on.
+Map Choice: Meet the others in the billiard room
+The billiard room is warm and well lit.
+Most of the guests have gathered here.
+Lady Claythorn is in conversation with Miss Marsh and Thomas Moody.
+Ted Harring hovers near them, looking as uncomfortable as ever.
+Daniel Baldwin sits alone in a chair, nursing a glass.
+And Manning is at the bar. Naturally.
+As I enter, a few heads turn my way.
+I recognise that look. They are bored and waiting for any kind of distraction.
+Menu Choice: Approach the large group
+I make my way towards Lady Claythorn and the others.
+Lady Claythorn: Captain Sinha. Do come and join us.
+Sushil Sinha: Thank you, Lady Claythorn.
+Rosalind Marsh: Captain, you must tell us one of your stories.
+Rosalind Marsh: Mr Moody was just saying what a fine storyteller you are.
+Sushil Sinha: How kind of him.
+Sushil Sinha: Well, if you insist.
+I take a position near the fireplace and begin.
+This is my best story.
+I have told it so many times that it almost feels true.
+I speak of the Boxer Rebellion. The Eight-Nation Alliance. The march on Beijing.
+I give them the full account.
+Everyone is listening. Even the doctor has looked up from his glass.
+Good.
+The truth is, during the Boxer Rebellion, I was a supply officer stationed behind the lines.
+I never saw a single Boxer. I never fired a single shot.
+But I have read enough accounts of the expedition to describe it as though I were there.
+And over the years, the story has become so polished that even I sometimes forget the reality.
+I finish the story and pause, letting the silence settle.
+Miss Marsh is studying me. There is something in her expression that I do not quite like.
+But the rest of the room seems satisfied.
+Mr Moody nods approvingly. Lady Claythorn offers a polite smile.
+It is a good story. That is what matters.
+Menu Choice: Have a drink at the bar
+I make my way to the bar.
+Manning is there, slumped against the counter.
+I pour myself a small measure of port and stand apart from him.
+There is nothing to be gained from associating with a drunkard.
+Menu Choice: Approach Dr Baldwin
+I approach Baldwin.
+He looks up. His eyes are flat, offering nothing.
+I stop, give a small nod, and withdraw.
+Some conversations are better never begun.
+Menu Choice: Leave the room
+Map Choice: Retire for the night
 The hour is late and the house has grown quiet.
 I return to my room.
 I change and prepare for bed.

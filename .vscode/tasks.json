@@ -29,6 +29,22 @@
       "default": "lad"
     },
     {
+      "id": "dialogueCoverageCharacter",
+      "type": "pickString",
+      "description": "Pick a character to check dialogue coverage for",
+      "options": [
+        "broken",
+        "captain",
+        "doctor",
+        "drunk",
+        "host",
+        "lad",
+        "nurse",
+        "psychic"
+      ],
+      "default": "captain"
+    },
+    {
       "id": "infoCardAddon",
       "type": "pickString",
       "description": "Select an addon to apply to all images",
@@ -90,6 +106,40 @@
       "args": [
         "C:\\Projects\\ClaythornManor\\Murder"
       ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Dialogue Coverage: Check by character",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\Murder\\check_test_dialogue_coverage.py",
+        "--character",
+        "${input:dialogueCoverageCharacter}"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Dialogue Coverage: Check ALL",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\Murder\\check_test_dialogue_coverage.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
       "problemMatcher": []
     },
     {
