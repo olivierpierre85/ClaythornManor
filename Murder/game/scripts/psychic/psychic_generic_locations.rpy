@@ -88,9 +88,15 @@ label psychic_garden_default:
     """
     A lovely garden.
 
-    I took a peaceful stroll through it.
+    I take a peaceful stroll through it.
 
     Still, I notice nothing out of the ordinary.
+
+    There is a small shed at the far end of the garden.
+
+    Nothing in there but tools, I should think.
+
+    Not worth the trouble.
     """
 
     return

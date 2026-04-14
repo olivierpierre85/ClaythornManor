@@ -278,15 +278,17 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 
 ## CAPTAIN — Sushil Sinha
 
-### Important Choices
+### Observations
 
 | Thread key                        | Title concept                            | Image description                                                                                                                   |
 | --------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `captain_host_suspicion_name`     | Problem with "Lady Claythorn" name       | A calling card with the name "Lady Claythorn", where "Claythorn" is crossed out in pencil, and the Name "Kilbraith" written instead |
 | `captain_host_suspicion_portrait` | No portrait of Lady Claythorn in gallery | An ornate picture frame on a wall — conspicuously empty                                                                             |
+| `captain_garden_shed_locked`      | Garden shed locked for no reason         | A weathered wooden shed door with a heavy iron padlock hanging from the hasp                                                        |
 
 - [x] captain_host_suspicion_name
 - [x] captain_host_suspicion_portrait
+- [ ] captain_garden_shed_locked
 
 ### Objects
 

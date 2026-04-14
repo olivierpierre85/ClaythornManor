@@ -33,6 +33,12 @@ label init_captain:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
             ),
+            CharacterInformation(3, "captain_garden_shed_locked", "You found the garden shed locked for no apparent reason",
+                content_negative="You didn't investigate the garden shed",
+                image_file="lord",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
+            ),
         ])
 
         captain_objects = CharacterObjectList([

@@ -288,7 +288,7 @@ label captain_day1_evening:
 
     My stories have held their attention, and I have avoided any question that might have caught me out.
 
-    If I can keep doing this, I might be able to pull this off.
+    If I can keep doing this, I might be able to get out of here with the reward without anyone the wiser.
 
     With that thought, I close my eyes.
     """

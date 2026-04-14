@@ -4,23 +4,15 @@ BUG => FULL_TESTINGMODE, if doing a restart, then missing menu???
 EVery story but the lad, a memory on the train? 
 Or just : Captain, Broken?
 
-
-
-WHY Is there a call the generic LAD in psychic day 1 billiard room?
-
-## Write nurseStory : Full
-
-
-If you'd rather let the nurse re-visit the gun room on Day 2 as well (same narration, 10 min), say the word and I'll add the twin entries to both Day 2 maps plus a nurse_day2_evening_gun_room_already_taken wrapper for the exhaustion check.
-
-Test Nurse manually to get a feel
-- now in day2 morning, error if master key and not visited butler room, add dialogs
+BUG??? Or by design. WHY Is there a call the generic LAD in psychic day 1 billiard room?
 
 
 ## Write Story: Captain (Sushil Sinha)
 
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
 
+
+THREAD, locked shed image
 
 - Friday Afternoon - Done
 - Friday Evening On going
