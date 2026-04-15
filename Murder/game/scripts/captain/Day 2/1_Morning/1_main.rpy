@@ -31,18 +31,26 @@ label captain_day2_morning:
     """
     I wake before the sun has fully cleared the horizon.
 
-    The 'George I' room is silent, its heavy curtains muffling the morning bird-song.
+    The room is silent, its heavy curtains muffling the morning bird-song.
 
     I lie still for a moment, listening to the house.
 
     Day two.
+    """
 
-    My performance yesterday was adequate. I played the part of the retired officer to perfection.
+    # TODO: Now, captain must reflect on the letter 
 
-    Yet I must not grow complacent. A single slip, a misplaced word, and this entire charade collapses.
+    if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
+        
+        """
+        Also, our gracious hostess is not quite the woman she claims to be.
 
-    I have survived thirty years of Imperial politics. I can survive a weekend in the Highlands.
+        I shall have to tread very carefully today.
+        """
 
+    # and the fact he must be very cautious.
+
+    """
     I rise and begin my preparations.
 
     Washing is a brief, cold affair. Dressing is done with practised efficiency.
@@ -51,7 +59,7 @@ label captain_day2_morning:
 
     The mirror shows a man who belongs here. That is all that matters.
 
-    I cannot afford to be late for breakfast. Punctuality is the bedrock of authority.
+    Now, it's time for breakfast.
     """
 
     call change_time(8, 45)
@@ -80,19 +88,13 @@ label captain_day2_morning:
     He helps himself to a plate and eats without a word.
 
     A sensible man. He has already understood that the morning is not for chatter.
+
+    My mind, however, is not entirely on my breakfast.
+
+    What I uncovered last night still sits uncomfortably at the back of my thoughts.
+
+    I'll have to be extra careful today, especially around Thomas Moody.
     """
-
-    if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
-
-        """
-        My mind, however, is not entirely on my breakfast.
-
-        What I uncovered last night still sits uncomfortably at the back of my thoughts.
-
-        Our gracious hostess is not quite the woman she claims to be.
-
-        I shall have to tread very carefully today.
-        """
 
     call change_time(9, 20)
 
@@ -105,17 +107,21 @@ label captain_day2_morning:
 
     Miss Marsh follows a moment later. A nod, a word of greeting, and she settles at the far side of the table with her tea.
 
-    Lastly, Mr Harring slips in with that habitual air of not quite belonging, and seats himself near Miss Baxter.
+    Lastly, Mr Harring slips in with an air of not quite belonging, and seats himself near Miss Baxter.
 
-    She greets him warmly and they fall into conversation at once.
-    """
+    I have no interest in following their exchange, so I keep eating in silence.
 
-    call change_time(9, 30)
+    While I am eating, Samuel Manning makes his entrance.
 
-    """
-    I have no interest in following their exchange.
+    Or rather, he stumbles through it.
 
-    The young man's chatter is no concern of mine, and I take the opportunity to study the others in silence.
+    His complexion is ashen, his cravat askew, and his hands shake so badly that he drops a spoon twice before finally securing a cup of black coffee.
+
+    He has clearly not recovered from yesterday.
+
+    He drops into the nearest seat without a word to anyone.
+
+    Miss Baxter's expression hardens at the sight of him, though she says nothing.
     """
 
     if captain_details.threads.is_unlocked('tell_boxer_story'):
@@ -132,22 +138,6 @@ label captain_day2_morning:
 #   (Captain told the Boxer Rebellion story)
 # --------------------------------------------
 label captain_day2_morning_breakfast_death:
-
-    """
-    While I am eating, Samuel Manning makes his entrance.
-
-    Or rather, he stumbles through it.
-
-    His complexion is ashen, his cravat askew, and his hands shake so badly that he drops a spoon twice before finally securing a cup of black coffee.
-
-    He has clearly not recovered from yesterday, and seems to have no intention of doing so today either.
-
-    He drops into the nearest seat without a word to anyone.
-
-    Miss Baxter's expression hardens at the sight of him, though she says nothing.
-
-    A reputable man would at least have the decency to remain in his room until he was fit for company.
-    """
 
     """
     While I am observing Mr Manning, the butler slips into the room and bends to Lady Claythorn's ear.
@@ -267,23 +257,9 @@ label captain_day2_morning_breakfast_death:
 
 # --------------------------------------------
 #   VERSION B — Moody arrives alive
-#   (Captain refused to tell the Boxer story)
+#   (Captain didn't tell the Boxer story)
 # --------------------------------------------
 label captain_day2_morning_breakfast_alive:
-
-    """
-    While I am eating, Samuel Manning makes his entrance.
-
-    Or rather, he stumbles through it.
-
-    His complexion is ashen, his cravat askew, and his hands shake so badly that he drops a spoon twice before finally securing a cup of black coffee.
-
-    He has clearly not recovered from yesterday, and seems to have no intention of doing so today either.
-
-    He drops into the nearest seat without a word to anyone.
-
-    Miss Baxter's expression hardens at the sight of him, though she says nothing.
-    """
 
     """
     Mr Moody appears a moment later, his mask in place and his step as measured as ever.

@@ -137,29 +137,37 @@ Footman: You've been assigned the 'George I' room.
 The room is adequate. Not extravagant, but respectable.
 Still, it is more comfortable than my lodgings in London.
 I unpack quickly and consider my options.
-Map Choice: Garden
-I look through the window. The rain is coming down hard now.
-A storm is gathering. I can hear the wind picking up against the glass.
-Most people would turn back at this point.
-But I have marched through monsoons. A bit of rain is hardly cause for concern.
-I step outside.
-The air is cold and the rain is heavier than it looked from indoors.
-Within moments, my jacket is soaked through.
-I walk a short distance around the house.
-Nothing remarkable in the dark.
-A garden, a gravel path, and what appears to be an outbuilding further on.
-Menu Choice: Take a closer look at the outbuilding
-I press on through the rain, boots sinking into the sodden gravel.
-The outbuilding proves to be a squat timber shed, half hidden behind an overgrown hedge.
-I try the handle.
-It does not give. The door is locked, and firmly so.
-That is odd.
-A garden shed, out here in the middle of nowhere, bolted shut against what exactly?
-Whoever fitted that lock had a reason, and it was not the threat of common thieves.
-I am soaking wet and the cold is beginning to bite.
-In these conditions, there is no point in staying any longer.
-I return inside and head straight to my room to change.
-A foolish exercise, perhaps, but at least I have a better understanding of the estate.
+Map Choice: Meet the others in the billiard room
+The billiard room is warm and well lit.
+Most of the guests have gathered here.
+Lady Claythorn is in conversation with Miss Marsh and Thomas Moody.
+Ted Harring hovers near them, looking as uncomfortable as ever.
+Daniel Baldwin sits alone in a chair, nursing a glass.
+And Manning is at the bar. Naturally.
+As I enter, a few heads turn my way.
+I recognise that look. They are bored and waiting for any kind of distraction.
+Menu Choice: Approach the large group
+I make my way towards Lady Claythorn and the others.
+Lady Claythorn: Captain Sinha. Do come and join us.
+Sushil Sinha: Thank you, Lady Claythorn.
+Rosalind Marsh: Captain, you must tell us one of your stories.
+Rosalind Marsh: Mr Moody was just saying what a fine storyteller you are.
+My old standby rises to the tip of my tongue. The Boxer Rebellion.
+I have told that tale a hundred times. It almost feels like a memory of my own.
+Yet, a single misplaced detail in front of the wrong listener could unravel the whole pretence.
+On the other hand, refusing outright might invite suspicion.
+Menu Choice: Decline the request
+Sushil Sinha: You are most kind, Miss Marsh. But I fear I must disappoint you this evening.
+Sushil Sinha: The journey has left me no strength for a performance.
+Sushil Sinha: Perhaps another time.
+The silence that follows is a fraction too long.
+Lady Claythorn's smile thins. Mr Moody's face slips into open disappointment.
+My refusal has made everyone uneasy.
+A man invited for his military exploits who refuses to tell a war story is a man with something to conceal.
+Maybe I made a mistake.
+I should take myself out of sight before I make it any worse.
+Sushil Sinha: Forgive me. I believe I shall retire to my room now.
+I incline my head politely and withdraw from the group, conscious that everyone in the room is following me to the door.
 Map Choice: Retire for the night
 The hour is late and the house has grown quiet.
 I return to my room.

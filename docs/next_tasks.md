@@ -24,6 +24,8 @@ THREAD, locked shed image
   - Rewrite to add suspicion of Thomas moody
   - CHECK everything ai written
   - Add and validate tests
+  - CHECK that Ted harring ALWAYS follow the Doctor (nurse? Psychic?)
+  - CHeck exchange with psychic same as in PSYCHIC STORY
 - [ ] Saturday Hunt - **Ongoing**
   - Maybe rethink Unlocking of Thomas moody => Needs something here. Confrontation at hunt, die but unlocks thomas moody.
   - Add and validate tests

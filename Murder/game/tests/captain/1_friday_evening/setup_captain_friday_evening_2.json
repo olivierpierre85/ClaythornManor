@@ -17,6 +17,11 @@
             "redirect": "captain_day1_evening_billiard_room_story"
         },
         {
+            "menu": "captain_day1_evening_billiard_room_story_menu",
+            "selected": "Tell the story of the Boxer Rebellion",
+            "redirect": "captain_day1_evening_billiard_room_story_tell"
+        },
+        {
             "menu": "captain_day1_evening_billiard_room_menu",
             "selected": "Have a drink at the bar",
             "redirect": "captain_day1_evening_billiard_room_bar"

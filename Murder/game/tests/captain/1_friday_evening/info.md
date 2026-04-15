@@ -15,14 +15,15 @@
 - Entrance Hall
 - Ends when the 90-minute timer runs out
 
-## File 2 — Billiard room
+## File 2 — Billiard room (tell the story)
 
 ### Dinner
 - Talk to Miss Baxter (psychic dinner branch)
 
 ### Map Choices
 - Meet the others in the billiard room
-    - Approach the large group (Boxer Rebellion story)
+    - Approach the large group
+        - Tell the story of the Boxer Rebellion
     - Have a drink at the bar
     - Approach Dr Baldwin
     - Leave the room
@@ -35,4 +36,15 @@
 
 ### Map Choices
 - Garden — Take a closer look at the outbuilding (unlocks `captain_garden_shed_locked`)
+- Retire for the night
+
+## File 4 — Billiard room (refuse the story)
+
+### Dinner
+- Ignore Miss Baxter
+
+### Map Choices
+- Meet the others in the billiard room
+    - Approach the large group
+        - Decline the request (forces an early exit from the billiard room)
 - Retire for the night

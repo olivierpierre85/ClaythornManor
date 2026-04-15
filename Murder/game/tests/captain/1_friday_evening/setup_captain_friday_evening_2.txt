@@ -31,7 +31,7 @@ Thomas Moody: Nice to meet you, Captain. I am Thomas Moody.
 Daniel Baldwin: Doctor Daniel Baldwin.
 Daniel Baldwin: How do you do.
 Sushil Sinha: Nice to meet you both.
-I notice at once that Mr Moody is wearing a tin mask.
+I notice at once that Mr Moody is wearing a mask.
 I have seen many of those. The poor man must have suffered terribly during the war.
 I must be careful not to stare.
 Thomas Moody: And who is the gentleman over there?
@@ -42,11 +42,11 @@ We watch as Manning fills a water glass to the brim with sherry.
 He drinks it in one go, then sits down on the sofa and falls asleep almost immediately.
 Sushil Sinha: Well, that should keep him still for a while.
 Daniel Baldwin: Indeed, it's impressive that...
-The words are already leaving my mouth before I have weighed them.
-An old habit, picked up a lot time ago, when I noticed that if I don't impose myself, no one will pay attention to me.
-Only once I am halfway through do I notice that I have spoken straight over the doctor.
-Rude, perhaps. Yet stopping now would be worse than carrying on.
 Sushil Sinha: It reminds me of a fellow I knew back in the Army.
+The words left my mouth before I have weighed them.
+Only once I am halfway through do I notice that I have spoken straight over the doctor.
+An old habit, picked up a lot time ago, when I noticed that if I don't impose myself, no one will pay attention to me.
+Rude, perhaps. Yet stopping now would be worse than carrying on.
 Sushil Sinha: He was my superior, but I swear I never saw him sober.
 Sushil Sinha: Even in the mornings, he was always still drunk from the day before.
 That part, at least, is true.
@@ -71,8 +71,6 @@ Sushil Sinha: Not like the Great War of course, and not that I can understand yo
 Sushil Sinha: But still, a battle wound is a battle wound.
 That particular scar is from falling off a chair in my office in Calcutta.
 But they do not need to know that.
-The Anglo-Zanzibar War. The shortest war in the history of Great Britain.
-Not that anyone here is likely to remember that detail.
 I carry on. Miss Marsh listens attentively.
 The doctor, on the other hand, has drifted off entirely. He nods, but his mind is elsewhere.
 Two more guests slip into the room. The butler announces the young man.
@@ -85,13 +83,13 @@ We file into the dining room. Each place is marked with a name card.
 I find mine near the head of the table. A good position.
 Miss Baxter is on my right. Mr Moody sits across from me, but far too distant for conversation.
 Then, our host makes her entrance.
-She is younger than I expected. Elegantly dressed, with the quiet confidence of old money.
+She is rather young, elegantly dressed, with the quiet confidence of old money.
 She takes her seat at the head of the table.
 Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
 Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
 Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
 Lady Claythorn: I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
-Lady Claythorn: I realize the invitation letter you received was somewhat vague, so let me clarify its contents now.
+Lady Claythorn: I realise the invitation letter you received was somewhat vague, so let me clarify its contents now.
 Lady Claythorn: My first gift to you is a stay at my manor.
 Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
 Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
@@ -103,7 +101,6 @@ It reminds me that I am an impostor here, not worthy of any award.
 If I am discovered, not only will I lose the money, but there will certainly be talk about what I have done.
 That could hurt my reputation.
 So I should watch what I am saying carefully.
-The first course is served shortly after.
 As we begin to eat, I notice Miss Baxter turning to her right.
 She has struck up a conversation with Mr Harring.
 That is unusual. In a formal setting, one addresses the person on one's left first.
@@ -136,6 +133,7 @@ That gives me a small feeling of satisfaction.
 She then proceeds to ask me questions about myself, and I make sure each answer is filled with inconsequential details.
 Hopefully, if I drown her in information, she might not notice any inconsistencies.
 When the dinner reaches its conclusion, I realise I have not even asked her anything about herself.
+The dinner reaches its conclusion.
 Lady Claythorn mentions that drinks will be available in the billiard room for those who wish to continue the evening.
 First, I should like to see my room. I have not yet had the chance to settle in.
 I ask the footman to show me the way.
@@ -159,6 +157,11 @@ Lady Claythorn: Captain Sinha. Do come and join us.
 Sushil Sinha: Thank you, Lady Claythorn.
 Rosalind Marsh: Captain, you must tell us one of your stories.
 Rosalind Marsh: Mr Moody was just saying what a fine storyteller you are.
+My old standby rises to the tip of my tongue. The Boxer Rebellion.
+I have told that tale a hundred times. It almost feels like a memory of my own.
+Yet, a single misplaced detail in front of the wrong listener could unravel the whole pretence.
+On the other hand, refusing outright might invite suspicion.
+Menu Choice: Tell the story of the Boxer Rebellion
 Sushil Sinha: How kind of him.
 Sushil Sinha: Well, if you insist.
 I take a position near the fireplace and begin.
@@ -182,18 +185,58 @@ I make my way to the bar.
 Manning is there, slumped against the counter.
 I pour myself a small measure of port and stand apart from him.
 There is nothing to be gained from associating with a drunkard.
-Menu Choice: Approach Dr Baldwin
+Menu Choice: Talk to Dr Baldwin
 I approach Baldwin.
-He looks up. His eyes are flat, offering nothing.
-I stop, give a small nod, and withdraw.
-Some conversations are better never begun.
+He looks up. His eyes are flat.
+Daniel Baldwin: Captain Sinha, how are you?
+Sushil Sinha: I am fine, Doctor.
+Sushil Sinha: What about you?
+Daniel Baldwin: A little tired if I am being honest.
+Daniel Baldwin: The journey has exhausted me.
+Yes, the journey was long. But I can tell that is not entirely what is causing Dr Baldwin's tiredness.
+But no need to say anything.
+Sushil Sinha: Very well, I'll leave you alone then.
+Sushil Sinha: Have a good night.
+Daniel Baldwin: You too.
 Menu Choice: Leave the room
 Map Choice: Retire for the night
 The hour is late and the house has grown quiet.
 I return to my room.
-I change and prepare for bed.
-As I lie down, I review the evening.
+I change and prepare for bed while I review the evening in my head.
 I have done well. Nobody suspects a thing.
 My stories have held their attention, and I have avoided any question that might have caught me out.
 If I can keep doing this, I might be able to get out of here with the reward without anyone the wiser.
-With that thought, I close my eyes.
+I turn back the covers and find a folded sheet of paper resting on the pillow.
+Plain. Unmarked.
+I pick it up and unfold it.
+Letter: You are a fraud.
+My hand stills.
+For a moment, I am frozen, unable to react.
+I gather all my strength not to panic.
+I breathe. I think.
+I set the paper down.
+Someone in this house knows. Someone has been in this very room tonight and placed this where I could not miss it.
+But why?
+Is it a threat? A warning?
+And from whom?
+From the Mistress of this place? Then this whole weekend could be designed just to torture me?
+But I cannot see a reason why — I have no enemies, not real ones at least.
+It could also come from a guest.
+Someone who knows me, and realised I do not belong here.
+But then, why not say it in front of everybody?
+To torture me?
+I sit on the edge of the bed. I go through every face at dinner, trying to remember someone.
+I find nothing.
+Unless, of course, the culprit is the person behind the mask.
+The other military man in the house.
+Thomas Moody is the most likely to have recognised me, realised I am not who I claim to be, and decided to make me pay for it.
+Still, he did not show it at all tonight.
+I stay still for a while, trying to make sense of this, but cannot.
+The question now is what to do.
+I could flee. Leave this place and everyone behind.
+But then I would give up the money.
+The letter's goal could be to make me do just that.
+But I cannot. I will not.
+I have come too far, put too much hope in this journey to give up now.
+Whatever is at play here, I will stay at least until tomorrow, and decide accordingly.
+I lie back, but sleep does not come easily.

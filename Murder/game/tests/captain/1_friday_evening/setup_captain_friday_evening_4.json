@@ -1,0 +1,30 @@
+{
+    "start_label": "captain_day1_evening",
+    "choices": [
+        {
+            "menu": "captain_day1_evening",
+            "selected": "Ignore her",
+            "redirect": "captain_day1_dinner_no_talk"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Meet the others in the billiard room",
+            "redirect": "captain_day1_evening_billiard_room"
+        },
+        {
+            "menu": "captain_day1_evening_billiard_room_menu",
+            "selected": "Approach the large group",
+            "redirect": "captain_day1_evening_billiard_room_story"
+        },
+        {
+            "menu": "captain_day1_evening_billiard_room_story_menu",
+            "selected": "Decline the request",
+            "redirect": "captain_day1_evening_billiard_room_story_refuse"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Retire for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

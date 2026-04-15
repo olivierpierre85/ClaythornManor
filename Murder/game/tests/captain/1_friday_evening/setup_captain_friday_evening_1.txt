@@ -31,7 +31,7 @@ Thomas Moody: Nice to meet you, Captain. I am Thomas Moody.
 Daniel Baldwin: Doctor Daniel Baldwin.
 Daniel Baldwin: How do you do.
 Sushil Sinha: Nice to meet you both.
-I notice at once that Mr Moody is wearing a tin mask.
+I notice at once that Mr Moody is wearing a mask.
 I have seen many of those. The poor man must have suffered terribly during the war.
 I must be careful not to stare.
 Thomas Moody: And who is the gentleman over there?
@@ -42,11 +42,11 @@ We watch as Manning fills a water glass to the brim with sherry.
 He drinks it in one go, then sits down on the sofa and falls asleep almost immediately.
 Sushil Sinha: Well, that should keep him still for a while.
 Daniel Baldwin: Indeed, it's impressive that...
-The words are already leaving my mouth before I have weighed them.
-An old habit, picked up a lot time ago, when I noticed that if I don't impose myself, no one will pay attention to me.
-Only once I am halfway through do I notice that I have spoken straight over the doctor.
-Rude, perhaps. Yet stopping now would be worse than carrying on.
 Sushil Sinha: It reminds me of a fellow I knew back in the Army.
+The words left my mouth before I have weighed them.
+Only once I am halfway through do I notice that I have spoken straight over the doctor.
+An old habit, picked up a lot time ago, when I noticed that if I don't impose myself, no one will pay attention to me.
+Rude, perhaps. Yet stopping now would be worse than carrying on.
 Sushil Sinha: He was my superior, but I swear I never saw him sober.
 Sushil Sinha: Even in the mornings, he was always still drunk from the day before.
 That part, at least, is true.
@@ -71,8 +71,6 @@ Sushil Sinha: Not like the Great War of course, and not that I can understand yo
 Sushil Sinha: But still, a battle wound is a battle wound.
 That particular scar is from falling off a chair in my office in Calcutta.
 But they do not need to know that.
-The Anglo-Zanzibar War. The shortest war in the history of Great Britain.
-Not that anyone here is likely to remember that detail.
 I carry on. Miss Marsh listens attentively.
 The doctor, on the other hand, has drifted off entirely. He nods, but his mind is elsewhere.
 Two more guests slip into the room. The butler announces the young man.
@@ -85,13 +83,13 @@ We file into the dining room. Each place is marked with a name card.
 I find mine near the head of the table. A good position.
 Miss Baxter is on my right. Mr Moody sits across from me, but far too distant for conversation.
 Then, our host makes her entrance.
-She is younger than I expected. Elegantly dressed, with the quiet confidence of old money.
+She is rather young, elegantly dressed, with the quiet confidence of old money.
 She takes her seat at the head of the table.
 Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
 Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
 Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
 Lady Claythorn: I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
-Lady Claythorn: I realize the invitation letter you received was somewhat vague, so let me clarify its contents now.
+Lady Claythorn: I realise the invitation letter you received was somewhat vague, so let me clarify its contents now.
 Lady Claythorn: My first gift to you is a stay at my manor.
 Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
 Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
@@ -103,7 +101,6 @@ It reminds me that I am an impostor here, not worthy of any award.
 If I am discovered, not only will I lose the money, but there will certainly be talk about what I have done.
 That could hurt my reputation.
 So I should watch what I am saying carefully.
-The first course is served shortly after.
 As we begin to eat, I notice Miss Baxter turning to her right.
 She has struck up a conversation with Mr Harring.
 That is unusual. In a formal setting, one addresses the person on one's left first.
@@ -131,6 +128,7 @@ I decide that the best way not to be discovered is to simply keep to myself.
 So I do not engage with Miss Baxter.
 She does not seem to mind.
 We eat in silence until the end of dinner.
+The dinner reaches its conclusion.
 Lady Claythorn mentions that drinks will be available in the billiard room for those who wish to continue the evening.
 First, I should like to see my room. I have not yet had the chance to settle in.
 I ask the footman to show me the way.
@@ -145,11 +143,11 @@ No. It would be improper to enter someone's room uninvited.
 That is not how a gentleman conducts himself.
 Map Choice: Henry IV Bedroom
 I consider it for a moment, then think better of it.
-A man does not go rummaging through another person's private quarters. Not on the first evening.
+A man does not go rummaging through another person's private quarters.
 I should keep the bedrooms out of my mind entirely.
 Map Choice: Kitchen
 Downstairs is reserved for the staff, so I should not go.
-If I were seen poking around there on the first evening, it would invite exactly the sort of suspicion I am trying to avoid.
+If I were seen poking around there, it would invite exactly the sort of suspicion I am trying to avoid.
 Map Choice: Storage Room
 The servants' quarters are upstairs.
 I have no business going there.
@@ -168,7 +166,7 @@ Let us see if the Claythorns are mentioned.
 I search through the index. Clarendon, Claridge, Clark...
 Claythorn.
 There are several entries. I find the one concerning this manor.
-Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith, .
+Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith.
 Book: Born on June 22, 1813.
 Book: His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
 Book: With Mary Kirwan, his wife, he fathered one son and one daughter:
@@ -179,13 +177,13 @@ I read the entry twice.
 There it is. The family name is Claythorn, but their title is not.
 They hold a peerage — the Earldom of Kilbraith. Their seat is this manor, but the title is quite separate.
 A peer is addressed by his title, not by his surname. The Earl of Kilbraith is styled 'Lord Kilbraith', and his countess, 'Lady Kilbraith'.
-Never 'Lord Claythorn'. Never 'Lady Claythorn'.
+Never 'Lord Claythorn', nor 'Lady Claythorn'.
 Still, I should not leap to conclusions.
-It is not unheard of for a family to set the formal title aside in daily use. Since the war, I have heard of peers who have grown weary of ceremony.
+It is not unheard of for a family to set the formal title aside in daily use.
+Since the war, I have heard of peers who have grown weary of ceremony.
 Or perhaps it is a local habit. The villagers call her 'Lady Claythorn' after the name of the house, and in time she has simply let it stick.
 And yet, it is something strange enough that I should not dismiss it entirely.
 I close the book and place it back on the table.
-Interesting. Very interesting indeed.
 Map Choice: Tea room
 The tea room is deserted now. Nothing of interest here.
 Map Choice: Portrait Gallery
@@ -199,21 +197,53 @@ None of them resemble our host.
 Where is Lady Claythorn?
 If she is the current mistress of this house, her portrait ought to hang here alongside her forebears.
 And yet there is nothing.
-In itself, that doesn't mean much.
-It could be a personal preference, or perhaps she had difficulty persuading a decent artist to come all the way out here.
-Still, I will keep that in mind.
-Map Choice: Dining Room
-The staff are clearing away the last of the dinner service.
-No reason to linger.
-Map Choice: Entrance Hall
-The entrance hall is quiet at this hour.
-It is a fine space. The kind of hall that speaks of generations.
-I take a moment to study the architecture, then move on.
+And I do not recall seeing it anywhere else in the house.
+In itself, that does not mean much.
+Perhaps she had difficulty persuading a decent artist to come all the way out here.
+Or, it could simply be a personal preference.
+But I will keep that in mind nonetheless.
 The hour is late and the house has grown quiet.
 I return to my room.
-I change and prepare for bed.
-As I lie down, I review the evening.
+I change and prepare for bed while I review the evening in my head.
 I have done well. Nobody suspects a thing.
 My stories have held their attention, and I have avoided any question that might have caught me out.
 If I can keep doing this, I might be able to get out of here with the reward without anyone the wiser.
-With that thought, I close my eyes.
+I turn back the covers and find a folded sheet of paper resting on the pillow.
+Plain. Unmarked.
+I pick it up and unfold it.
+Letter: You are a fraud.
+My hand stills.
+For a moment, I am frozen, unable to react.
+I gather all my strength not to panic.
+I breathe. I think.
+I set the paper down.
+Someone in this house knows. Someone has been in this very room tonight and placed this where I could not miss it.
+But why?
+Is it a threat? A warning?
+And from whom?
+From the Mistress of this place? Then this whole weekend could be designed just to torture me?
+But I cannot see a reason why — I have no enemies, not real ones at least.
+It could also come from a guest.
+Someone who knows me, and realised I do not belong here.
+But then, why not say it in front of everybody?
+To torture me?
+I sit on the edge of the bed. I go through every face at dinner, trying to remember someone.
+I find nothing.
+Unless, of course, the culprit is the person behind the mask.
+The other military man in the house.
+Thomas Moody is the most likely to have recognised me, realised I am not who I claim to be, and decided to make me pay for it.
+Still, he did not show it at all tonight.
+I stay still for a while, trying to make sense of this, but cannot.
+And the letter is not the only thing weighing on my mind.
+Lady Claythorn, from what I have learnt tonight, could be an impostor too.
+No more the mistress of this manor than I am a decorated war hero.
+Perhaps we all are.
+Perhaps this whole weekend is some elaborate piece of theatre, and each of us has been handed a part to play.
+The question now is what to do.
+I could flee. Leave this place and everyone behind.
+But then I would give up the money.
+The letter's goal could be to make me do just that.
+But I cannot. I will not.
+I have come too far, put too much hope in this journey to give up now.
+Whatever is at play here, I will stay at least until tomorrow, and decide accordingly.
+I lie back, but sleep does not come easily.
