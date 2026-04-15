@@ -49,11 +49,15 @@ label captain_config_progress:
 
             # ===== SATURDAY MORNING =====
             # Threads SET before (friday_evening) & RELEVANT here:
+            #   - tell_boxer_story: chapters=['friday_evening'], relevant=['friday_evening', 'saturday_morning', 'saturday_evening', 'sunday_morning']
+            #     (drives the main branching — told: Moody is found dead / refused: Moody arrives alive)
             #   - captain_host_suspicion_name: chapters=['friday_evening'], relevant=['friday_evening', 'saturday_morning', 'saturday_evening']
             #   - captain_host_suspicion_portrait: chapters=['friday_evening'], relevant=['friday_evening', 'saturday_morning', 'saturday_evening']
             #   - captain_garden_shed_locked: chapters=['friday_evening'], relevant=['friday_evening', 'saturday_morning', 'saturday_evening']
-            # All eight combinations covered.
+            # Alive branch: all 8 suspicion/shed combinations.
+            # Death branch: 2 focused entries (bare + both suspicions) to exercise both narration paths.
             'saturday_morning': [
+                # --- Alive branch (tell_boxer_story refused) ---
                 {"label": "captain_day2_morning", "threads": {'captain_host_suspicion_name': False, 'captain_host_suspicion_portrait': False, 'captain_garden_shed_locked': False}},
                 {"label": "captain_day2_morning", "threads": {'captain_host_suspicion_name': True,  'captain_host_suspicion_portrait': False, 'captain_garden_shed_locked': False}},
                 {"label": "captain_day2_morning", "threads": {'captain_host_suspicion_name': False, 'captain_host_suspicion_portrait': True,  'captain_garden_shed_locked': False}},
@@ -62,5 +66,8 @@ label captain_config_progress:
                 {"label": "captain_day2_morning", "threads": {'captain_host_suspicion_name': True,  'captain_host_suspicion_portrait': False, 'captain_garden_shed_locked': True}},
                 {"label": "captain_day2_morning", "threads": {'captain_host_suspicion_name': False, 'captain_host_suspicion_portrait': True,  'captain_garden_shed_locked': True}},
                 {"label": "captain_day2_morning", "threads": {'captain_host_suspicion_name': True,  'captain_host_suspicion_portrait': True,  'captain_garden_shed_locked': True}},
+                # --- Death branch (tell_boxer_story told) ---
+                {"label": "captain_day2_morning", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': False, 'captain_host_suspicion_portrait': False, 'captain_garden_shed_locked': False}},
+                {"label": "captain_day2_morning", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True,  'captain_host_suspicion_portrait': True,  'captain_garden_shed_locked': False}},
             ],
         }

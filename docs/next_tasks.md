@@ -23,8 +23,9 @@ THREAD, locked shed image
         - [ ] What to gain from telling the story? NOT DYING. If you tell the story, thomas moody realises something is not ok, tells
         - [ ] TODO change LAd dialog, he was so into captain sinha story that he forgot his flasks next to the bar. NO story he doesn't die. => Then why is Sinha dies when doesn't tell story. He switches FLASK
         - [ ] Nothing to say to Dr Baldwin? I don't think so, there must be something to do here
-  - [ ] 
+  - [ ] END of day 1 - Add a letter, you are an impostor, see how it impacts when he sees letter from manning (Doctor, lad)
   - [ ] Add and validate tests
+  - [ ] AND if suspicions from host add text to reflect that at the en dof the d
   - [ ]
 
 - end of friday 13 april
