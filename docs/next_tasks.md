@@ -14,26 +14,20 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
 
 THREAD, locked shed image
 
-- Friday Afternoon - Done
-- Friday Evening On going
+- [x] Friday Afternoon
+- [x] Friday Evening
   - [ ] Ai generated : Test and modify
     - [ ] CURRENT TEST - day1 map
-    - [ ] MAP
-      - [ ] Billiard room is weak.
-        - [ ] What to gain from telling the story? NOT DYING. If you tell the story, thomas moody realises something is not ok, tells
-        - [ ] TODO change LAd dialog, he was so into captain sinha story that he forgot his flasks next to the bar. OR that he gave it to Moody
-  - [ ] END of day 1 - Add a letter, you are an impostor, see how it impacts when he sees letter from manning (Doctor, lad)
   - [ ] Add and validate tests
-  - [ ] AND if suspicions from host add text to reflect that at the en dof the d
-  - [ ]
-- Saturday Morning
+- [ ] Saturday Morning - **Ongoing**
   - Add thouhgts about the letter
   - Rewrite to add suspicion of Thomas moody
   - CHECK everything ai written
-
-- end of friday 13 april
+  - Add and validate tests
+- [ ] Saturday Hunt - **Ongoing**
+  - Maybe rethink Unlocking of Thomas moody => Needs something here. Confrontation at hunt, die but unlocks thomas moody.
+  - Add and validate tests
   
-- Saturday Morning and Hunt 20 April
 
 NEXT CHARACTER - UNlocked by Nurse (and psychic)
 

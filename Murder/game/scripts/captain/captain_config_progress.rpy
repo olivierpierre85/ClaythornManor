@@ -7,7 +7,7 @@ label captain_config_progress:
                 Chapter(image_checkpoint_start, "start", "captain_introduction", "friday_afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day1_evening", "friday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_morning", "saturday_morning"),
-                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_right, "checkpoint", "captain_day2_hunt", "saturday_afternoon"),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
@@ -15,12 +15,16 @@ label captain_config_progress:
             ],
             # Second line, ...
             [
-                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),    
+                Chapter(image_checkpoint_empty), 
                 Chapter(image_checkpoint_line),
             ],
             # 3
             [
-                Chapter(image_checkpoint_empty_small),    
+                Chapter(image_checkpoint_empty_small),   
+                Chapter(image_checkpoint_empty),    
+                Chapter(image_checkpoint_empty),  
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "TODO", "saturday_morning"),
             ],
