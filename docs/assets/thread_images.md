@@ -218,13 +218,13 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 
 | Thread key             | Title concept                             | Image description                                                |
 | ---------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
-| `captain_lie_boxer`    | Inconsistency in Captain's rank story     | A chinese Boxer fighter                                          |
+| `captain_lie_boxer`    | Inconsistency in Captain's rank story     | An old map of china, with a chinese sword                        |
 | `captain_lie_zanzibar` | Odd remark about Zanzibar War             | A map outline of East Africa with a question mark over it        |
 | `remember_doctor`      | Worked with Doctor during Boxer Rebellion | A military field tent with a red cross on it                     |
 | `footman_actor`        | Footman is an actor                       | A theatre mask peeping from behind a formal livery jacket        |
 | `maid_actress`         | Maid was an aspiring actress              | A maid's apron hanging on a peg with a playbill tucked behind it |
 
-- [ ] captain_lie_boxer
+- [x] captain_lie_boxer
 - [x] captain_lie_zanzibar
 - [x] remember_doctor
 - [x] footman_actor

@@ -91,7 +91,7 @@ label init_nurse:
                 1, "captain_lie_boxer",
                 "You noticed an inconsistency in Captain Sinha's story about his rank",
                 content_negative="You didn't notice the inconsistency in Captain Sinha's story",
-                image_file="captain_lie_boxer",
+                image_file="boxer_rebellion",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
