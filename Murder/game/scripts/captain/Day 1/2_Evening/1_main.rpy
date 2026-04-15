@@ -276,18 +276,67 @@ label captain_day1_evening:
     $ change_room('bedroom_captain', dissolve)
 
     """
-    I change and prepare for bed.
-
-    As I lie down, I review the evening.
+    I change and prepare for bed while I review the evening in my head.
 
     I have done well. Nobody suspects a thing.
 
     My stories have held their attention, and I have avoided any question that might have caught me out.
 
     If I can keep doing this, I might be able to get out of here with the reward without anyone the wiser.
-
-    With that thought, I close my eyes.
     """
+
+    """
+    I turn back the covers and find a folded sheet of paper resting on the pillow.
+
+    Plain. Unmarked.
+
+    I pick it up and unfold it.
+    """
+
+    letter """
+    I know you are an impostor.
+    """
+
+    """
+    My hand stills.
+
+    Someone in this house knows. Someone has stood in this very room tonight and left this where I could not fail to see it.
+
+    A threat? A jest? The prelude to blackmail?
+
+    I fold the paper and slip it inside my jacket, out of sight.
+
+    I cannot yet say who wrote it, and that troubles me more than the words themselves.
+    """
+
+    if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
+
+        """
+        And the letter is not the only thing weighing on my mind.
+
+        The name struck through in that old book. 'Claythorn' crossed out, 'Kilbraith' written above it in pencil.
+
+        The empty frame in the portrait gallery, where the lady of the house ought to hang.
+
+        I have been so preoccupied with my own performance that I have failed to see the obvious.
+
+        Lady Claythorn is no more the mistress of this manor than I am a decorated war hero.
+
+        She is an impostor. As I am.
+
+        Perhaps we all are. Perhaps this whole weekend is some elaborate piece of theatre, and each of us has been handed a part to play.
+
+        The question is whether to confront her, or hold my tongue and watch.
+
+        For tonight, I hold my tongue.
+
+        I lie back, but sleep does not come easily.
+        """
+
+    else:
+        """
+        With that thought, I close my eyes.
+        """
 
     $ stop_music()
 

@@ -70,11 +70,9 @@ label captain_day1_evening_billiard_room_story:
 
     I have told that tale a hundred times. It almost feels like a memory of my own.
 
-    Yet Miss Marsh is watching me rather too closely for my liking.
+    Yet, a single misplaced detail in front of the wrong listener could unravel the whole pretence.
 
-    A single misplaced detail in front of the wrong listener could unravel the whole pretence.
-
-    And refusing outright would be its own kind of admission.
+    On the other hand, refusing outright might invite suspicion.
     """
 
     call run_menu(TimedMenu("captain_day1_evening_billiard_room_story_menu", [
@@ -137,7 +135,7 @@ label captain_day1_evening_billiard_room_story_refuse:
     captain """
     You are most kind, Miss Marsh. But I fear I must disappoint you this evening.
 
-    These old campaigns grow rather tired in the telling, and the journey has left me in no humour for performance.
+    The journey has left me no strength for a performance.
 
     Perhaps another time.
     """
@@ -147,25 +145,24 @@ label captain_day1_evening_billiard_room_story_refuse:
 
     Lady Claythorn's smile thins. Mr Moody's face slips into open disappointment.
 
-    And Miss Marsh. Miss Marsh holds her eyes upon me a moment longer than she ought to.
+    My refusal has made everyone uneasy.
 
-    A bad mistake.
+    A man invited for his military exploits who refuses to tell a war story is a man with something to conceal.
 
-    A man invited here for his military exploits who will not tell a single war story is a man with something to conceal.
-
-    There is no mending it now. The best I can manage is to take myself out of sight before I make it any worse.
+    Maybe I made a mistake.
+    
+    I should take myself out of sight before I make it any worse.
     """
 
     captain """
-    Forgive me. I believe I shall retire for a moment and collect myself.
+    Forgive me. I believe I shall retire to my room now.
     """
 
     """
-    I incline my head politely and withdraw from the group, conscious that every pair of eyes in the room is following me to the door.
-
-    That will not have gone unnoticed.
+    I incline my head politely and withdraw from the group, conscious that everyone in the room is following me to the door.
     """
 
+    # Set the previous menu to early exit
     $ captain_day1_evening_billiard_room_menu.early_exit = True
 
     return
@@ -191,11 +188,39 @@ label captain_day1_evening_billiard_room_baldwin:
     """
     I approach Baldwin.
 
-    He looks up. His eyes are flat, offering nothing.
+    He looks up. His eyes are flat.
+    """
 
-    I stop, give a small nod, and withdraw.
+    doctor """
+    Captain Sinha, how are you?
+    """
 
-    Some conversations are better never begun.
+    captain """
+    I am fine, Doctor.
+
+    What about you?
+    """
+
+    doctor """
+    A little tired if I am being honest.
+
+    The journey has exhausted me.
+    """
+
+    """
+    Yes, the journey was long. But I can tell that is not entirely what is causing Dr Baldwin's tiredness.
+
+    But no need to say anything.
+    """
+
+    captain """
+    Very well, I'll leave you alone then.
+
+    Have a good night.
+    """
+
+    doctor """
+    You too.
     """
 
     return

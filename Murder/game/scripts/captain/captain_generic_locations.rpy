@@ -69,21 +69,7 @@ label captain_library_read:
     There are several entries. I find the one concerning this manor.
     """
 
-    book """
-    Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith, .
-
-    Born on June 22, 1813.
-
-    His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
-
-    With Mary Kirwan, his wife, he fathered one son and one daughter:
-
-    1. Elisabeth, his heir, born in 1865.
-
-    2. Andrew, born in 1867, died in 1869.
-
-    Lineage...
-    """
+    call library_book_content
 
     """
     I read the entry twice.
@@ -103,15 +89,33 @@ label captain_library_read:
     Or perhaps it is a local habit. The villagers call her 'Lady Claythorn' after the name of the house, and in time she has simply let it stick.
 
     And yet, it is something strange enough that I should not dismiss it entirely.
+
+    I close the book and place it back on the table.
     """
 
     $ captain_details.threads.unlock('captain_host_suspicion_name')
 
-    """
-    I close the book and place it back on the table.
+    call captain_host_suspicion
 
-    Interesting. Very interesting indeed.
-    """
+    return
+
+label captain_host_suspicion:
+
+    if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
+
+        """
+        That is the third intriguing thing I notice about Lady "Claythorn".
+
+        A lapse in manner at dinner.
+
+        No visible portrait of her in her house.
+
+        And a rather unconventional use of her name.
+
+        What could this mean?
+
+        I am starting to fear that something is amiss here.
+        """
 
     return
 
@@ -153,11 +157,15 @@ label captain_portrait_gallery_default:
 
     And yet there is nothing.
 
-    In itself, that doesn't mean much.
+    And I do not recall seeing it anywhere else in the house.
 
-    It could be a personal preference, or perhaps she had difficulty persuading a decent artist to come all the way out here.
+    In itself, that does not mean much.
 
-    Still, I will keep that in mind.
+    Perhaps she had difficulty persuading a decent artist to come all the way out here.
+
+    Or, it could simply be a personal preference.
+
+    But I will keep that in mind nonetheless.
     """
 
     $ captain_details.threads.unlock('captain_host_suspicion_portrait')

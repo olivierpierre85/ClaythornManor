@@ -82,7 +82,7 @@ label captain_day2_morning:
     A sensible man. He has already understood that the morning is not for chatter.
     """
 
-    if captain_details.threads.is_unlocked('captain_host_suspicion_name') or captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
+    if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
 
         """
         My mind, however, is not entirely on my breakfast.

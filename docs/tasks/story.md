@@ -91,6 +91,7 @@ THE OUTside shed will show nothing of interest for captain. But the Broken will 
 - [ ] Why is he angered by the doctor? His brother was a broken face, that’s his mask AND scared of being recognize
 - [ ] Servant uniform: Only one who can wear the footman livery in the servants stairs
 - [ ] When broken learns his whisky is poisoned, he doesn’t offer one to Ted harring
+- [ ] Explain the thing with the flask (I forgot my flask while distracted by captain)
 
 ### Ideas to think over (optional)
 
@@ -142,6 +143,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 
 - Explain that the butler will act as a real one (that's why is checking the possible missing silverware). And the staff doesn't know how their buyer is?
 - It was suppose to be a surprised, on return of old friends, where everything would be revealed on the last day.
+- She is the one who will poison Thomas Moody (Everybody is watching Sinha, he left his flask next to the bar) => It's a sleeping draught, don't worry about it. BUT then, it should be noted how horrified she is. SHe receives a letter, that is so unfortunate, but keep going.
 
 ### Ideas to think over (optional)
 

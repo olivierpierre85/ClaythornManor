@@ -235,21 +235,7 @@ label psychic_library_look_for_lord_succeed:
     There's only one place associated with a Nicholas.
     """
 
-    book """
-    Nicholas Claythorn, of Claythorn Manor,  3rd Earl of Kilbraith.
-
-    Born on June 22, 1813.
-
-    His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
-
-    With Mary Kirwan, his wife, he fathered one son and one daughter:
-
-    1. Elisabeth, his heir, born in 1865.
-
-    2. Andrew, born in 1867, died in 1869.
-
-    Lineage...
-    """
+    call library_book_content
 
     $ host_details.description_hidden.unlock('name_age') 
 
