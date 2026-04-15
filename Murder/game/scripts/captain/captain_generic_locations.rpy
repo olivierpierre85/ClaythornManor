@@ -80,11 +80,13 @@ label captain_library_read:
 
     A peer is addressed by his title, not by his surname. The Earl of Kilbraith is styled 'Lord Kilbraith', and his countess, 'Lady Kilbraith'.
 
-    Never 'Lord Claythorn'. Never 'Lady Claythorn'.
+    Never 'Lord Claythorn', nor 'Lady Claythorn'.
 
     Still, I should not leap to conclusions.
 
-    It is not unheard of for a family to set the formal title aside in daily use. Since the war, I have heard of peers who have grown weary of ceremony.
+    It is not unheard of for a family to set the formal title aside in daily use. 
+    
+    Since the war, I have heard of peers who have grown weary of ceremony.
 
     Or perhaps it is a local habit. The villagers call her 'Lady Claythorn' after the name of the house, and in time she has simply let it stick.
 

@@ -26,6 +26,10 @@ THREAD, locked shed image
   - [ ] Add and validate tests
   - [ ] AND if suspicions from host add text to reflect that at the en dof the d
   - [ ]
+- Saturday Morning
+  - Add thouhgts about the letter
+  - Rewrite to add suspicion of Thomas moody
+  - CHECK everything ai written
 
 - end of friday 13 april
   

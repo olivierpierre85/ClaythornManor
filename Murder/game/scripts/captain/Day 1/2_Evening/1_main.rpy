@@ -283,9 +283,7 @@ label captain_day1_evening:
     My stories have held their attention, and I have avoided any question that might have caught me out.
 
     If I can keep doing this, I might be able to get out of here with the reward without anyone the wiser.
-    """
 
-    """
     I turn back the covers and find a folded sheet of paper resting on the pillow.
 
     Plain. Unmarked.
@@ -293,20 +291,56 @@ label captain_day1_evening:
     I pick it up and unfold it.
     """
 
+    $ play_music('scary')
+
     letter """
-    I know you are an impostor.
+    You are a fraud.
     """
 
     """
     My hand stills.
 
-    Someone in this house knows. Someone has stood in this very room tonight and left this where I could not fail to see it.
+    For a moment, I am frozen, unable to react.
 
-    A threat? A jest? The prelude to blackmail?
+    I gather all my strength not to panic.
 
-    I fold the paper and slip it inside my jacket, out of sight.
+    I breathe. I think.
+    
+    I set the paper down. 
 
-    I cannot yet say who wrote it, and that troubles me more than the words themselves.
+    Someone in this house knows. Someone has been in this very room tonight and placed this where I could not miss it.
+
+    But why?
+
+    Is it a threat? A warning?
+
+    And from whom? 
+
+    From the Mistress of this place? Then this whole weekend could be designed just to torture me?
+
+    But I cannot see a reason why — I have no enemies, not real ones at least.
+
+    It could also come from a guest. 
+    
+    Someone who knows me, and realised I do not belong here.
+
+    But then, why not say it in front of everybody?
+
+    To torture me?
+
+    I sit on the edge of the bed. I go through every face at dinner, trying to remember someone.
+
+    I find nothing.
+
+    Unless, of course, the culprit is the person behind the mask.
+
+    The other military man in the house.
+
+    Thomas Moody is the most likely to have recognised me, realised I am not who I claim to be, and decided to make me pay for it.
+
+    Still, he did not show it at all tonight.
+
+    I stay still for a while, trying to make sense of this, but cannot.
     """
 
     if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
@@ -314,29 +348,34 @@ label captain_day1_evening:
         """
         And the letter is not the only thing weighing on my mind.
 
-        The name struck through in that old book. 'Claythorn' crossed out, 'Kilbraith' written above it in pencil.
+        Lady Claythorn, from what I have learnt tonight, could be an impostor too.
+        
+        No more the mistress of this manor than I am a decorated war hero.
 
-        The empty frame in the portrait gallery, where the lady of the house ought to hang.
-
-        I have been so preoccupied with my own performance that I have failed to see the obvious.
-
-        Lady Claythorn is no more the mistress of this manor than I am a decorated war hero.
-
-        She is an impostor. As I am.
-
-        Perhaps we all are. Perhaps this whole weekend is some elaborate piece of theatre, and each of us has been handed a part to play.
-
-        The question is whether to confront her, or hold my tongue and watch.
-
-        For tonight, I hold my tongue.
-
-        I lie back, but sleep does not come easily.
+        Perhaps we all are. 
+        
+        Perhaps this whole weekend is some elaborate piece of theatre, and each of us has been handed a part to play.
         """
 
-    else:
-        """
-        With that thought, I close my eyes.
-        """
+    $ stop_music()
+
+    """
+    The question now is what to do.
+
+    I could flee. Leave this place and everyone behind.
+
+    But then I would give up the money.
+
+    The letter's goal could be to make me do just that.
+
+    But I cannot. I will not.
+
+    I have come too far, put too much hope in this journey to give up now.
+
+    Whatever is at play here, I will stay at least until tomorrow, and decide accordingly.    
+
+    I lie back, but sleep does not come easily.
+    """
 
     $ stop_music()
 
