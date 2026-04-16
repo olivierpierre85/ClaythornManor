@@ -243,95 +243,11 @@ label captain_day2_morning_breakfast_alive:
 
     He pauses at the threshold, surveys the room with his usual unreadable courtesy, and helps himself to a light plate.
 
-    He then takes a seat near the middle of the table.
-    """
+    He then takes the seat in front of me and starts engaging with our hostess.
 
-    broken """
-    Good morning to you all.
+    Miss Baxter is still talking with Ted Harring, which leaves me with no one to talk to.
 
-    I trust the storm did not trouble anyone too greatly.
-    """
-
-    host """
-    Good morning, Mr Moody. We were beginning to wonder whether we should see you at all.
-    """
-
-    broken """
-    A little later than I intended, I am afraid. Old habits from the convalescent home die hard.
-    """
-
-    """
-    A polite murmur of sympathy runs around the table.
-
-    The breakfast settles into a decorous rhythm at last.
-
-    A remark on the weather here, a brief comment upon last night's dinner there.
-
-    Nothing of any consequence, which is precisely as it should be.
-    """
-
-    if captain_details.threads.is_unlocked('captain_garden_shed_locked'):
-
-        """
-        I permit myself a moment to consider what I found yesterday.
-
-        The garden shed, its door firmly locked. An odd detail to dwell upon in a house this remote.
-
-        Perhaps it means nothing. Perhaps it means a good deal.
-        """
-
-    broken """
-    Captain Sinha, if I may say so, I was rather hoping to hear one of your stories last night.
-
-    Miss Marsh spoke so warmly of them. It seemed a pity you were indisposed.
-    """
-
-    """
-    The table turns, politely, in my direction.
-
-    An awkward moment. I feel Miss Marsh's eyes upon me, and I know perfectly well what she is thinking.
-
-    A man invited for his military record who will not tell a single war story is a man with something to conceal.
-
-    I must answer carefully.
-    """
-
-    captain """
-    You are very kind, Mr Moody.
-
-    The journey had left me in no humour for performance. I trust I shall make amends in due course.
-    """
-
-    broken """
-    I shall hold you to it, Captain.
-    """
-
-    """
-    A faint smile from behind the mask, and he returns to his plate.
-
-    Miss Marsh does not smile. She looks at me a moment longer than is necessary, then at her tea, and says nothing at all.
-
-    I shall have to manage her carefully.
-    """
-
-    psychic -angry """
-    Mr Sinha, you have been very quiet this morning.
-    """
-
-    captain """
-    A man is not obliged to speak merely because others expect him to, Miss Baxter.
-
-    I find a little silence does the digestion a world of good.
-    """
-
-    psychic """
-    How very practical.
-    """
-
-    """
-    She says it with a thin smile that does not quite reach her eyes.
-
-    She has not forgiven me for last night's dinner, it seems.
+    That suits me well enough.
     """
 
     call change_time(10, 00)
@@ -350,44 +266,11 @@ label captain_day2_morning_breakfast_alive:
     Our staff will lend you everything you need, clothes, guns, and their assistance throughout the event.
 
     Of course, if you would rather remain indoors by the fire, that is perfectly welcome too.
-    """
-
-    """
     A hunt. Yes, I remember it being mentioned.
 
     I can scarcely refuse without drawing attention to myself.
 
-    And a morning in the open air will do me no harm at all.
+    And a morning in the open air will do me good.
     """
-
-    call common_day2_morning_hunt_captain_drunk
-
-    """
-    A few eyebrows are raised at Mr Manning's answer. He is in no fit state for a country walk, let alone a hunt.
-
-    But nobody says anything aloud, and I see no reason to be the first.
-    """
-
-    call common_day2_morning_hunt_psychic
-
-    call common_day2_morning_hunt_nurse
-
-    call common_day2_morning_hunt_lad
-
-    host """
-    Very good. And you, Mr Moody? Are you well enough to join us?
-    """
-
-    broken """
-    I shall come as well, if I may.
-
-    A little fresh air would be most welcome.
-    """
-
-    call common_day2_morning_hunt_host_to_doctor
-
-    call doctor_day2_hunt_choice
-
-    call common_day2_morning_hunt_end
 
     jump captain_day2_hunt
