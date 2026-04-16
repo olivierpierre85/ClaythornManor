@@ -116,7 +116,9 @@ label nurse_day2_morning:
     call common_day2_morning_host_to_doctor
 
     """
-    After the doctor has gone upstairs with Lady Claythorn, the room settles into an uneasy hush.
+    Ted Harring is rising quietly to follow them, uninvited as far as I can tell.
+    
+    Then, the room settles into an uneasy hush.
 
     Nobody seems to know quite what to do with themselves.
 

@@ -56,7 +56,7 @@ label psychic_day2_morning:
     It seems I am left with Sushil Sinha.
     """
 
-    psychic -angry """
+    psychic """
     Good morning, Mr Sinha.
     """
 
