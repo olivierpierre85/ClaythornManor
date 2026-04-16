@@ -8,9 +8,9 @@ testsuite captain:
         python:
             test.run_chapter(captain_details, "friday_evening", "captain_day1_evening")
 
-    # testcase saturday_morning:
-    #     python:
-    #         test.run_chapter(captain_details, "saturday_morning", "captain_day2_morning")
+    testcase saturday_morning:
+        python:
+            test.run_chapter(captain_details, "saturday_morning", "captain_day2_morning")
 
     # testcase saturday_afternoon:
     #     python:
