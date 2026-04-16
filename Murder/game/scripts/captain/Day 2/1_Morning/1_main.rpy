@@ -26,7 +26,7 @@ label captain_day2_morning:
 
     $ change_room("bedroom_captain", irisout)
 
-    $ play_music('chill', 3)
+    $ play_music('mysterious_new')
 
     """
     I wake before the sun has fully cleared the horizon.

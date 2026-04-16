@@ -1,0 +1,40 @@
+{
+    "start_label": "captain_day1_evening",
+    "choices": [
+        {
+            "menu": "captain_day1_evening",
+            "selected": "Ignore her",
+            "redirect": "captain_day1_dinner_no_talk"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "captain_portrait_gallery_default"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Dining Room",
+            "redirect": "captain_day1_evening_dining_room"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Entrance Hall",
+            "redirect": "captain_day1_evening_entrance_hall"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Library",
+            "redirect": "captain_library_default"
+        },
+        {
+            "menu": "captain_library_menu",
+            "selected": "Look up the Claythorns in the index",
+            "redirect": "captain_library_read"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Retire for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

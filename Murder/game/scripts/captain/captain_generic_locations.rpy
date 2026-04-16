@@ -7,11 +7,13 @@ label captain_library_default:
 
     if captain_details.saved_variables.get("visited_library"):
 
+        """
+        The library is as I left it.
+        """
+        
         if captain_details.threads.is_unlocked('captain_host_suspicion_name'):
 
             """
-            The library is as I left it.
-
             I have already read what I needed from the genealogy book.
 
             There is nothing more here for me.
@@ -22,8 +24,6 @@ label captain_library_default:
         else:
 
             """
-            The library is as I left it.
-
             The genealogy book still lies open on the table, waiting.
             """
 

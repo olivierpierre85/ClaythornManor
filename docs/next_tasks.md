@@ -7,6 +7,8 @@ Or just : Captain, Broken?
 BUG??? Or by design. WHY Is there a call the generic LAD in psychic day 1 billiard room?
 
 
+NEW
+
 ## Write Story: Captain (Sushil Sinha)
 
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
@@ -21,7 +23,7 @@ THREAD, locked shed image
   - [ ] Add and validate tests
 - [ ] Saturday Morning - **Ongoing**
   - [ ] **Chill is not the best music**, maybe something more mysterious
-  - [ ] CHECK everything ai written
+  - [ ] TODO also add a mysterious music when Thomas Moody comes. That's the first time we see him make it alive for day 2
   - [ ] Add and validate tests
 - [ ] Saturday Hunt - **Ongoing**
   - Maybe rethink Unlocking of Thomas moody => Needs something here. Confrontation at hunt, die but unlocks thomas moody.

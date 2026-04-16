@@ -23,6 +23,16 @@
         },
         {
             "menu": "captain_day1_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "captain_day1_evening_map_menu",
+            "selected": "Meet the others in the billiard room",
+            "redirect": "captain_day1_evening_billiard_room"
+        },
+        {
+            "menu": "captain_day1_evening_billiard_room_menu",
             "selected": "Have a drink at the bar",
             "redirect": "captain_day1_evening_billiard_room_bar"
         },
