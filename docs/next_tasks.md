@@ -21,12 +21,8 @@ THREAD, locked shed image
   - [ ] Add and validate tests
 - [ ] Saturday Morning - **Ongoing**
   - [ ] **Chill is not the best music**, maybe something more mysterious
-  - Add thouhgts about the letter
-  - Rewrite to add suspicion of Thomas moody
-  - CHECK everything ai written
-  - Add and validate tests
-  - CHECK that Ted harring ALWAYS follow the Doctor (nurse? Psychic?)
-  - CHeck exchange with psychic same as in PSYCHIC STORY
+  - [ ] CHECK everything ai written
+  - [ ] Add and validate tests
 - [ ] Saturday Hunt - **Ongoing**
   - Maybe rethink Unlocking of Thomas moody => Needs something here. Confrontation at hunt, die but unlocks thomas moody.
   - Add and validate tests

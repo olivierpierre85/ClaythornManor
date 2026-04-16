@@ -56,13 +56,7 @@ label psychic_day2_morning:
     It seems I am left with Sushil Sinha.
     """
 
-    psychic """
-    Good morning, Mr Sinha.
-    """
-
-    captain """
-    Miss Baxter.
-    """
+    call common_day2_morning_captain_psychic_greeting
 
     $ time_left = 30
 

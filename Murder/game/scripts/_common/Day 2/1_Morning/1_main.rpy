@@ -279,6 +279,34 @@ label common_day2_morning_lad_psychic:
     return
 
 
+# ------------------------------------
+#           CAPTAIN / PSYCHIC
+# ------------------------------------
+label common_day2_morning_captain_psychic_greeting:
+
+    psychic """
+    Good morning, Mr Sinha.
+    """
+
+    captain """
+    Miss Baxter.
+    """
+
+    psychic """
+    An unfortunate way to begin a day.
+
+    What do you suppose has happened?
+    """
+
+    captain """
+    I could not say, Miss Baxter. The butler was not speaking loudly enough for my benefit.
+
+    Whatever it is, our hostess will no doubt inform us when she feels it appropriate.
+    """
+
+    return
+
+
 label common_day2_morning_host_to_doctor:
     
     host """

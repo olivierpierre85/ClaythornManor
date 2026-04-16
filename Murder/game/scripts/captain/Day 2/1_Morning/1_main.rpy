@@ -53,7 +53,7 @@ label captain_day2_morning:
 
         Our gracious hostess is not quite the woman she claims to be either.
 
-        That add a layer of risk to everything.
+        That adds a layer of risk to everything.
         """
 
     """
@@ -67,7 +67,7 @@ label captain_day2_morning:
 
     The mirror shows a man who belongs here. That is all that matters.
 
-    Now, it's time for breakfast.
+    Now, it is time for breakfast.
     """
 
     call change_time(8, 45)
@@ -101,7 +101,7 @@ label captain_day2_morning:
 
     What I uncovered last night still sits uncomfortably at the back of my thoughts.
 
-    I'll have to be extra careful today, especially around Thomas Moody.
+    I shall have to be extremely careful today, especially around Thomas Moody.
     """
 
     call change_time(9, 20)
@@ -109,9 +109,9 @@ label captain_day2_morning:
     """
     Miss Baxter is next to appear.
 
-    She drifts in as though arriving at a reading rather than a breakfast, and helps herself to a small serving.
+    She drifts in and helps herself to a small serving.
 
-    She takes her seat a short way from mine and, to my quiet relief, seems in no more hurry to speak than I am.
+    She takes her seat next to mine and, to my quiet relief, seems in no more hurry to speak than I am.
 
     Miss Marsh follows a moment later. A nod, a word of greeting, and she settles at the far side of the table with her tea.
 
@@ -160,47 +160,21 @@ label captain_day2_morning_breakfast_death:
     """
     The three of them leave together.
 
-    To my mild surprise, Mr Harring also stands and follows them out, with no apparent invitation and no apparent reason.
+    To my surprise, Mr Harring also stands and follows them out, with no apparent reason.
 
-    The room settles into an uneasy hush.
+    The room settles into silence.
 
     Nobody speaks, though every face bears the same unspoken question.
+
+    After a moment, Miss Baxter realises she can't ignore me forever.
     """
 
-    psychic -angry """
-    Good morning, Mr Sinha.
-    """
-
-    captain """
-    Miss Baxter.
-    """
-
-    psychic """
-    An unfortunate way to begin a day.
-
-    What do you suppose has happened?
-    """
-
-    captain """
-    I could not say, Miss Baxter. The butler was not speaking loudly enough for my benefit.
-
-    Whatever it is, our hostess will no doubt inform us when she feels it appropriate.
-    """
-
-    psychic """
-    You are very composed, Mr Sinha.
-    """
-
-    captain """
-    A man who has served in the Empire learns to be composed, Miss Baxter.
-
-    Impatience solves nothing, and makes a poor impression on those around you.
-    """
+    call common_day2_morning_captain_psychic_greeting
 
     """
-    She inclines her head slightly, and we lapse into silence once more.
+    She then proceeds to ask me various questions.
 
-    Whatever has passed upstairs, we are not to know for some while yet.
+    I try to fill the time with the most detailed stories I can. I do not reciprocate her questions.
     """
 
     call change_time(10, 00)
@@ -212,16 +186,28 @@ label captain_day2_morning_breakfast_death:
     """
     Mr Moody. Dead in his bed.
 
-    Only last night he stood beside me at the fireplace, nodding approvingly at my tale of the Boxer Rebellion.
-
-    A man in reasonable health, so far as I was able to judge.
-
     The doctor speaks of old war wounds and natural failure, and it is plausible enough.
 
     Yet something in me refuses to accept it quite so readily.
 
-    I have seen too many men die in ways that were not at all what they first appeared to be.
+    The letter comes back to me at once.
+
+    Someone under this roof sent it. And now, barely twelve hours later, a man is dead.
+
+    That is not a coincidence I am prepared to dismiss.
     """
+
+    if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
+
+        """
+        The hostess is not what she presents herself to be, either.
+
+        A letter, a false identity, a dead man. Three things beneath the same roof.
+
+        Doubt creeps into my mind. Maybe I should not have stayed.
+
+        But I feel I am in too deep to turn back now.
+        """
 
     $ stop_music()
 
@@ -230,37 +216,20 @@ label captain_day2_morning_breakfast_death:
     """
     Our hostess is remarkably composed.
 
-    A death beneath one's roof is no small matter, and yet she presses on as though nothing more pressing had occurred than a postponed tea.
+    A death beneath one's roof is no small matter, and yet she carries on as though nothing more serious had occurred than a postponed tea.
 
     That, in itself, is worth noting.
 
     For my part, I am in no position to refuse her.
 
     A man invited for his military record would look strange indeed if he shrank from a morning's shooting.
+
+    So I readily accept the invitation to join in this afternoon exercise.
+
+    All the other men accept as well. The ladies will stay behind this afternoon.
     """
 
-    call common_day2_morning_hunt_captain_drunk
-
-    """
-    A few eyebrows are raised at Mr Manning's answer. He is in no fit state for a country walk, let alone a hunt.
-
-    But nobody says anything aloud, and I see no reason to be the first.
-    """
-
-    call common_day2_morning_hunt_psychic
-
-    call common_day2_morning_hunt_nurse
-
-    call common_day2_morning_hunt_lad
-
-    call common_day2_morning_hunt_host_to_doctor
-
-    call doctor_day2_hunt_choice
-
-    call common_day2_morning_hunt_end
-
-    # TODO: continue to captain hunt chapter (not yet written)
-    jump work_in_progress
+    jump captain_day2_hunt
 
 
 # --------------------------------------------
@@ -421,5 +390,4 @@ label captain_day2_morning_breakfast_alive:
 
     call common_day2_morning_hunt_end
 
-    # TODO: continue to captain hunt chapter (not yet written)
-    jump work_in_progress
+    jump captain_day2_hunt
