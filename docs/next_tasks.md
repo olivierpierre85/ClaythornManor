@@ -18,13 +18,9 @@ THREAD, locked shed image
 
 - [x] Friday Afternoon
 - [x] Friday Evening
-  - [ ] Ai generated : Test and modify
-    - [ ] CURRENT TEST - day1 map
-  - [ ] Add and validate tests
 - [ ] Saturday Morning - **Ongoing**
   - [ ] **Chill is not the best music**, maybe something more mysterious
-  - [ ] TODO also add a mysterious music when Thomas Moody comes. That's the first time we see him make it alive for day 2
-  - [ ] Add and validate tests
+  - [ ] TODO also add a mysterious Sound when Thomas Moody comes. That's the first time we see him make it alive for day 2
 - [ ] Saturday Hunt - **Ongoing**
   - Maybe rethink Unlocking of Thomas moody => Needs something here. Confrontation at hunt, die but unlocks thomas moody.
   - Add and validate tests

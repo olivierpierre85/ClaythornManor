@@ -27,7 +27,7 @@ label captain_day2_hunt:
 
     $ change_room('bedroom_captain')
 
-    $ play_music('upbeat', 1)
+    $ play_music('upbeat', 1) # TODO better song, he is still suspicious of things
 
     """
     I retire briefly to my room to change.

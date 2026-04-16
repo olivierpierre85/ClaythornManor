@@ -26,7 +26,7 @@ label captain_day2_morning:
 
     $ change_room("bedroom_captain", irisout)
 
-    $ play_music('mysterious_new')
+    $ play_music('mysterious', 2)
 
     """
     I wake before the sun has fully cleared the horizon.
@@ -51,7 +51,7 @@ label captain_day2_morning:
         """
         And the letter is not the only matter that weighs upon me.
 
-        Our gracious hostess is not quite the woman she claims to be either.
+        Nor is our gracious hostess quite who she pretends to be.
 
         That adds a layer of risk to everything.
         """
@@ -134,11 +134,19 @@ label captain_day2_morning:
 
     if captain_details.threads.is_unlocked('tell_boxer_story'):
 
-        jump captain_day2_morning_breakfast_death
+        call captain_day2_morning_breakfast_death
 
     else:
 
-        jump captain_day2_morning_breakfast_alive
+        call captain_day2_morning_breakfast_alive
+
+    """
+    So I readily accept the invitation to join in this afternoon exercise.
+
+    All the other men accept as well, but the ladies will remain behind.
+    """
+
+    jump captain_day2_hunt
 
 
 # --------------------------------------------
@@ -223,13 +231,9 @@ label captain_day2_morning_breakfast_death:
     For my part, I am in no position to refuse her.
 
     A man invited for his military record would look strange indeed if he shrank from a morning's shooting.
-
-    So I readily accept the invitation to join in this afternoon exercise.
-
-    All the other men accept as well. The ladies will stay behind this afternoon.
     """
 
-    jump captain_day2_hunt
+    return
 
 
 # --------------------------------------------
@@ -239,11 +243,25 @@ label captain_day2_morning_breakfast_death:
 label captain_day2_morning_breakfast_alive:
 
     """
-    Mr Moody appears a moment later, his mask in place and his step as measured as ever.
+    Mr Moody appears a moment later.
+    """
 
-    He pauses at the threshold, surveys the room with his usual unreadable courtesy, and helps himself to a light plate.
+    pause 1.0
+
+    """
+    He pauses at the threshold and surveys the room before heading to the buffet.
+    
+    There, he helps himself to a light plate.
 
     He then takes the seat in front of me and starts engaging with our hostess.
+
+    I look at him for a few seconds.
+
+    His presence makes me uneasy.
+
+    Even if I have no proof, I still suspect he is responsible for the letter.
+
+    Before he can notice my staring, I turn my head to the side.
 
     Miss Baxter is still talking with Ted Harring, which leaves me with no one to talk to.
 
@@ -251,6 +269,8 @@ label captain_day2_morning_breakfast_alive:
     """
 
     call change_time(10, 00)
+
+    call wait_screen_transition()
 
     """
     As the plates are gradually cleared, Lady Claythorn rises and addresses the table.
@@ -266,6 +286,9 @@ label captain_day2_morning_breakfast_alive:
     Our staff will lend you everything you need, clothes, guns, and their assistance throughout the event.
 
     Of course, if you would rather remain indoors by the fire, that is perfectly welcome too.
+    """
+
+    """
     A hunt. Yes, I remember it being mentioned.
 
     I can scarcely refuse without drawing attention to myself.
@@ -273,4 +296,4 @@ label captain_day2_morning_breakfast_alive:
     And a morning in the open air will do me good.
     """
 
-    jump captain_day2_hunt
+    return
