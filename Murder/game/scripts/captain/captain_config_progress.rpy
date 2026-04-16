@@ -74,4 +74,19 @@ label captain_config_progress:
                 {"label": "captain_day2_morning", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': False, 'captain_host_suspicion_portrait': False, 'captain_garden_shed_locked': False}},
                 {"label": "captain_day2_morning", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True,  'captain_host_suspicion_portrait': True,  'captain_garden_shed_locked': False}},
             ],
+
+            # ===== SATURDAY AFTERNOON (THE HUNT) =====
+            # Threads SET before & RELEVANT here:
+            #   - tell_boxer_story: relevant=['saturday_morning', 'saturday_afternoon', ...] — Moody dead/alive context
+            #   - captain_host_suspicion_name / _portrait: gate the host confrontation branch
+            'saturday_afternoon': [
+                # --- Moody alive, no host suspicion ---
+                {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': False}},
+                # --- Moody alive, both host suspicions ---
+                {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': False, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True}},
+                # --- Moody dead, no host suspicion ---
+                {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': True}},
+                # --- Moody dead, both host suspicions ---
+                {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True}},
+            ],
         }

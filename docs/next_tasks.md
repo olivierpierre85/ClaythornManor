@@ -20,6 +20,7 @@ THREAD, locked shed image
     - [ ] CURRENT TEST - day1 map
   - [ ] Add and validate tests
 - [ ] Saturday Morning - **Ongoing**
+  - [ ] **Chill is not the best music**, maybe something more mysterious
   - Add thouhgts about the letter
   - Rewrite to add suspicion of Thomas moody
   - CHECK everything ai written

@@ -36,21 +36,29 @@ label captain_day2_morning:
     I lie still for a moment, listening to the house.
 
     Day two.
-    """
 
-    # TODO: Now, captain must reflect on the letter 
+    The letter still lies on the bedside table where I left it last night.
+
+    Four words, unsigned. 
+    
+    I turned them over a hundred times before sleep finally found me, and I am no nearer an answer this morning than I was then.
+
+    Someone beneath this roof knows I am not the hero I claim to be.
+    """
 
     if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
-        
-        """
-        Also, our gracious hostess is not quite the woman she claims to be.
 
-        I shall have to tread very carefully today.
         """
+        And the letter is not the only matter that weighs upon me.
 
-    # and the fact he must be very cautious.
+        Our gracious hostess is not quite the woman she claims to be either.
+
+        That add a layer of risk to everything.
+        """
 
     """
+    Whatever is at play here, I must be extremely careful.
+
     I rise and begin my preparations.
 
     Washing is a brief, cold affair. Dressing is done with practised efficiency.
