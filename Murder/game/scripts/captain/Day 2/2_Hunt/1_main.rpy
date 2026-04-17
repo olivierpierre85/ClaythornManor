@@ -9,12 +9,13 @@
 #
 #   Position
 #       - House, Tea room : nurse, psychic
-#       - Forest         : host, captain, lad, doctor, drunk
+#       - Forest         : host, captain, lad, doctor, drunk (+broken if alive)
 #       - Dead           : Broken (death branch only)
 #
 #   Notes :
-#       - Captain observes Lady Claythorn's poor shooting and weak leadership.
-#       - IF both host suspicions unlocked : opportunity to confront her later in the chapter.
+#       - Branches on tell_boxer_story:
+#           - told    (Moody dead)  : Captain paired with Lady + butler; optional confrontation
+#           - refused (Moody alive) : Moody insists on joining Captain + Lady; linear death
 # --------------------------------------------
 
 label captain_day2_hunt:
@@ -27,7 +28,7 @@ label captain_day2_hunt:
 
     $ change_room('bedroom_captain')
 
-    $ play_music('upbeat', 1) # TODO better song, he is still suspicious of things
+    $ play_music('upbeat', 1)
 
     """
     I retire briefly to my room to change.
@@ -42,7 +43,7 @@ label captain_day2_hunt:
     $ change_room('gun_room')
 
     """
-    The butler is already there, attending to the rifles with the unhurried care of a man who has done this many times before.
+    The butler is already there, attending to the rifles with unhurried care.
 
     He hands me a piece, well-kept and finely balanced.
 
@@ -55,6 +56,41 @@ label captain_day2_hunt:
     I shall have to be careful, in any event, not to outshine our hostess.
     """
 
-    # TODO: meet the others in the garden, butler splits the parties, observe Lady Claythorn's shooting,
-    #       optional confrontation if both host suspicion threads are unlocked.
+    $ change_room('manor_garden')
+
+    """
+    I step out into the garden, where the others are already gathering.
+
+    Doctor Baldwin is checking the action of his rifle with quiet competence.
+
+    Samuel Manning stands a little apart, a flask in one hand and a gun in the other. A poor pairing.
+
+    Mr Harring hovers at the edge of the group, plainly ill at ease. A footman attends him closely, as well he should.
+
+    Lady Claythorn is the last to emerge, dressed in tweed with a practised elegance that does not quite convince me.
+    """
+
+    if not captain_details.threads.is_unlocked('tell_boxer_story'):
+
+        """
+        And there, to my considerable displeasure, stands Thomas Moody.
+
+        He has evidently recovered from whatever indisposition kept him to his bed yesterday.
+
+        He catches my eye and offers a thin, knowing smile.
+
+        I return the barest nod a gentleman may give.
+        """
+
+    call common_day2_hunt_butler_groups
+
+    if captain_details.threads.is_unlocked('tell_boxer_story'):
+
+        call captain_day2_hunt_moody_dead
+
+    else:
+
+        call captain_day2_hunt_moody_alive
+
     jump work_in_progress
+    
