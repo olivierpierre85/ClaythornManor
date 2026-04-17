@@ -3,11 +3,11 @@
 #
 #   Grouping:
 #       - Captain + Lady Claythorn + butler     (north field)
-#       - Doctor + Drunk + Lad + footman        (western copse)
+#       - Doctor + Drunk + Lad + footman        (western grove)
 #
 #   Branches at luncheon on both host suspicions:
 #       - Confront Lady -> butler returns, strangulation ending
-#       - Hold tongue   -> hunt resumes, distant shots, drunk found dead, survive
+#       - Hold tongue   -> hunt resumes, distant shots, doctor found dead, survive
 # --------------------------------------------
 
 label captain_day2_hunt_moody_dead:
@@ -15,7 +15,7 @@ label captain_day2_hunt_moody_dead:
     butler """
     With your leave, my lady.
 
-    Doctor Baldwin and Mr Manning to the western copse, with Mr Harring.
+    Doctor Baldwin and Mr Manning to the western grove, with Mr Harring.
 
     A footman to go along with them.
 
@@ -203,7 +203,7 @@ label captain_day2_hunt_silent_luncheon:
     pause 0.5
 
     """
-    Two shots, close together, from the direction of the western copse.
+    Two shots, close together, from the direction of the western grove.
 
     Lady Claythorn lifts her head.
     """
@@ -401,6 +401,7 @@ label captain_day2_hunt_confront_host:
     I was not told he would not.
     """
 
+    #TODO add she is shifting
     """
     Her answers come too readily.
 
@@ -447,13 +448,7 @@ label captain_day2_hunt_confront_host:
     Something draws tight around my throat.
 
     The rifle is struck cleanly from my hands before I can bring it round.
-    """
 
-    butler """
-    My lady, I must ask you to look away.
-    """
-
-    """
     A broad forearm crosses my shoulders.
 
     A thin leather strap, a rifle sling I think dully, crushes against my windpipe.
@@ -461,20 +456,20 @@ label captain_day2_hunt_confront_host:
     I drive an elbow backwards and find nothing but heavy tweed.
 
     The butler's breath is steady against my ear.
-
-    He has done this before.
     """
 
     host """
     Wait.
 
-    Let him speak.
+    There is no need to hurt him.
     """
 
     butler """
-    Better he does not, my lady.
+    I am afraid there is.
 
-    Gentlemen who ask such questions seldom keep the answers to themselves.
+    I've heard what he said to you.
+
+    He knows too much.
     """
 
     """

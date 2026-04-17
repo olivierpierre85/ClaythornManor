@@ -19,17 +19,13 @@ THREAD, locked shed image
 - [x] Friday Afternoon
 - [x] Friday Evening
 - [x] Saturday Morning
-- [x] Saturday Hunt
+- [ ] Saturday Hunt - **Ongoing**
   - There are two main paths during the hunt,
+    - The choices of team must be like the one in the Lad story
     - **Version 1** : Thomas moody is dead
-      - In that case, Ted harring goes with doctor and drunk
-      - Captain is alone with Lady Claythorn. Which means he will observe a third suspicion thread. She is not very good at this ("Even worse than I am"). She will compliment captain's shooting that is not great at all
-      - If you already have the two other suspicions, there is a menu asking to confront her (but point out that confronted someone with a gun might not be the best idea). If you do, she will admit that she is not who she says she is, but not entirely (some info for unlock, but not all). Captain ask about the letter, she knows nothing of it. About Thomas Moody,... Captain points gun at Lady to have a more complete confessions. By then the butler who was away comes back, see the situation and, and shot him after a small exchange between the two men. Ending shot in the woods.
-      - If you don't have all suspicions then, or you don't confront lady claythorn. The hunt happens the same as usual (death of drunk)
+      - REwrite
     - **Version 2 **: Thomas moody is alive
-      - In that case, Thomas Moody insists on going with Lady and captain. That makes captain uneasy, but he can't really say no.
-      - The nervousness makes captain even worse at shooting that usual (which is not great). So thomas Moody teases him. He is himself very good, and is congratulated by Lady Claythorn. After lunch, thomas moody manages to isolate the captain, then point it's gun at him. Captain panics. Thomas moody says something like "It's pretty obvious you never saw battle. Well, that is as close as it gets". Shot in the woods by thomas Moody ending.
-    - Note of the two deaths.Maybe being twice is too repetitive, keep the shot in the woods for the most likely, find another for one of the two. 
+      - Rewrite
   - Add and validate tests
   
 

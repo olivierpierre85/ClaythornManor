@@ -14,7 +14,7 @@ label captain_day2_hunt_moody_alive:
     butler """
     If it please my lady, the arrangement might run thus.
 
-    Doctor Baldwin, Mr Manning and Mr Harring to the western copse, with a footman in attendance.
+    Doctor Baldwin, Mr Manning and Mr Harring to the western grove, with a footman in attendance.
 
     My lady, Captain Sinha and myself to the north field.
     """
@@ -103,6 +103,7 @@ label captain_day2_hunt_moody_alive:
     Though I confess I had expected rather better of a decorated officer.
     """
 
+    # TODO: That's the host excuse's, find a better one
     captain """
     The light is most unhelpful today.
     """
@@ -198,6 +199,10 @@ label captain_day2_hunt_moody_alive:
     captain """
     Mr Moody. What is the meaning of this?
     """
+
+    # TODO: He didn't write a letter, but he receives another explaining who the captain was
+    # The captain will explain that it means he is also in danger.
+    # But thomas moody says he can quite look after hiself
 
     broken """
     The letter, Captain.
