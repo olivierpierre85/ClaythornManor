@@ -246,6 +246,7 @@ label captain_day2_morning_breakfast_alive:
     Mr Moody appears a moment later.
     """
 
+    # TODO special music to signify it's the first time he survives?
     pause 1.0
 
     """

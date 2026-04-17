@@ -84,6 +84,7 @@
 - [ ] MORE DEAD!!! For some THOMAS MOODY, the death are coming faster. Because the psychic saw into his lies and loses it
   - [ ] Psychic realise Moody is not who he is, she loses it.
   - [ ] Moody gives whiskey to lad, he dies. She loses it
+  - [ ] Moody also receives letter, telling him the captain is the reason of his disfigurement (Bad inventory, blame the support captain.)
   - [ ] Somebody realises the police will not come, so they go fetch them. Needs to accelerate stuff
 THE OUTside shed will show nothing of interest for captain. But the Broken will find the bodies of the staff there if he survives.
 
@@ -92,6 +93,7 @@ THE OUTside shed will show nothing of interest for captain. But the Broken will 
 - [ ] Servant uniform: Only one who can wear the footman livery in the servants stairs
 - [ ] When broken learns his whisky is poisoned, he doesn’t offer one to Ted harring
 - [ ] Explain the thing with the flask (I forgot my flask while distracted by captain)
+- [ ] THE **butler will kill him**, by putting poison in his flasks while he is distracted by captain
 
 ### Ideas to think over (optional)
 
@@ -133,7 +135,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 
 
 ### Ideas to think over (optional)
-
+- add a mysterious Sound when Thomas Moody comes. That's the first time we see him make it alive for day 2
 - Expands story about his noble upbringing in generic dialogs.
 
 

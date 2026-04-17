@@ -29,7 +29,7 @@ The Captain is a formal, meticulous, and highly observant Indian officer. He has
 ### ☀️ Day 2: Saturday
 **Morning: The Hunt**
 - **Observation**: During the hunt, the Captain tests the Host. He notes her shooting skill (or lack thereof) and her inability to lead a group of this standing correctly.
-- **Internal Monologue**: *"I thought I would have trouble following them, but they are even worse than I am. It was to be expected from Ted Harring, but Lady Claythorn should be better at this, especially since she initiated it."*
+- **Internal Monologue**: *"I thought I would have trouble following them, but they are even worse than I am. Lady Claythorn should be better at this, especially since she initiated it."*
 - IF "host suspicion unlocked": possibility to ask her more about an explanation. It will lead to host_suspicion_2.
 
 **Evening: The Confrontation**
@@ -39,7 +39,7 @@ The Captain is a formal, meticulous, and highly observant Indian officer. He has
 - **The Host's Room**: If the Captain has made unlocked the two suspicious host, he finds the courage to knock on her door. (Depending on the time?), a confrontation occurs. He discovers she is an out-of-work actress hired for this "immersive performance." She says run while you can. Add ending
 - **Infiltration**: 
     - **Attic**: Finds a **Torch** (requires a hint from the Nurse's attic visit).
-    - **Garden Shed**: Uses as a **Master Key** (obtained earlier or found) to open the shed and secure **Oil** for the car. IF you get out at that moment, you will also notice everyon leaving. WHAT to do?
+    - **Garden Shed**: Uses as a **Master Key** (obtained earlier or found) to open the shed and secure **Oil** for the car. IF you get out at that moment, you will also notice everyone leaving. WHAT to do?
 
 ### ☀️ Day 3: Sunday
 **The Escape**
