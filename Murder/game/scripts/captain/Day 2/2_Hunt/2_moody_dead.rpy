@@ -13,17 +13,17 @@
 label captain_day2_hunt_moody_dead:
 
     butler """
-    If it please my lady, the arrangement might run thus.
+    With your leave, my lady.
 
-    Doctor Baldwin and Mr Manning to the western copse, with Mr Harring in their company.
+    Doctor Baldwin and Mr Manning to the western copse, with Mr Harring.
 
-    A footman shall accompany them.
+    A footman to go along with them.
 
-    My lady and Captain Sinha to the north field, with myself to assist.
+    My lady and Captain Sinha to the north field, and I shall attend.
     """
 
     host """
-    An admirable arrangement, Hargreaves.
+    An admirable arrangement.
 
     Captain, I trust the company shall not disappoint.
     """
@@ -47,17 +47,23 @@ label captain_day2_hunt_moody_dead:
     """
     We walk for some time through the undergrowth before coming across anything worth a shot.
 
-    Lady Claythorn carries her piece with the easy confidence of a woman who wishes to appear practised.
+    Lady Claythorn carries her piece as though it were a parasol that had grown unaccountably heavy.
 
-    The bearing is correct. The eye is not.
+    Twice the barrel has dipped toward the earth. Once she has shifted her grip in plain sight, as if she could not recall where her hands belonged.
+    """
+
+
+    """
+    A pheasant breaks cover. She brings the rifle up late, the stock set too high against her shoulder.
     """
 
     play sound gun
 
     pause 1.0
 
+
     """
-    Her first shot, at a pheasant breaking cover, goes wide by several yards.
+    The shot goes wide by a great margin. The recoil jolts her visibly, and she winces before she thinks to hide it.
 
     She laughs it off with a small, embarrassed shake of the head.
     """
@@ -69,24 +75,25 @@ label captain_day2_hunt_moody_dead:
     """
     The light is perfectly fine.
 
-    She is simply a poor shot.
+    She has scarcely handled a rifle in her life. That much is plain.
 
-    I had thought I would have trouble keeping pace with her.
-
-    Instead, she is worse than I am, and I am hardly impressive.
-
-    A gentlewoman who has organised a hunting weekend on her own grounds ought to carry herself better than this.
+    A gentlewoman who has organised a hunting weekend on her own grounds ought to know one end of her gun from the other.
     """
 
-    $ captain_details.observations.unlock('captain_host_suspicion_shooting')
+    $ captain_details.threads.unlock('captain_host_suspicion_shooting')
+
+
+
+    """
+    A rabbit bolts from the fern.
+    I raise, aim, and fire.
+    """
 
     play sound gun
 
     pause 1.0
 
     """
-    A rabbit bolts from the fern. I raise, aim, and fire.
-
     A clean miss, though not by much.
 
     I lower the rifle and allow myself a small, private smile.
@@ -121,7 +128,7 @@ label captain_day2_hunt_moody_dead:
     """
 
     host """
-    Very well, Hargreaves. Thank you.
+    Very well. Thank you.
     """
 
     """
@@ -139,22 +146,30 @@ label captain_day2_hunt_moody_dead:
 
         It may never come again.
 
-        And yet confronting a lady with a loaded weapon is not, perhaps, the wisest course for a gentleman.
+        And yet confronting a lady with a loaded weapon is not, perhaps, the wisest course of action.
         """
 
         $ time_left = 1
         call run_menu(
             TimedMenu("captain_day2_hunt_menu_confront", [
                 TimedMenuChoice("Press her on who she really is", 'captain_day2_hunt_confront_host', early_exit=True),
-                TimedMenuChoice("Hold my tongue and enjoy the luncheon", 'captain_day2_hunt_silent_luncheon', early_exit=True),
+                TimedMenuChoice("Hold my tongue, for now", 'captain_day2_hunt_silent_luncheon', early_exit=True),
             ])
         )
 
     else:
 
+        """
+        A moment alone with her, and precious little to show for it.
+
+        A poor hand with a rifle is no crime. A hostess who praises too freely is no crime either.
+
+        Whatever lies beneath the polish, I have not yet laid my finger upon it.
+        """
+
         call captain_day2_hunt_silent_luncheon
 
-    jump work_in_progress
+    return
 
 
 # --------------------------------------------
@@ -206,7 +221,7 @@ label captain_day2_hunt_silent_luncheon:
     $ play_music('danger', 2)
 
     host """
-    Captain. Hargreaves. With me, please.
+    Captain. With me, please.
     """
 
     """
@@ -218,37 +233,39 @@ label captain_day2_hunt_silent_luncheon:
     call wait_screen_transition()
 
     """
-    When we reach the others, Samuel Manning is on his back in the fern.
+    When we reach the others, Doctor Baldwin lies on his back in the fern.
 
-    His shirt is dark with blood. A rifle lies a few feet from his hand.
+    His shirt has been torn open and pressed dark with blood. His bag is open at his side, a pair of emptied vials loose in the moss.
 
-    Doctor Baldwin kneels beside him, pale, his own jacket flecked with crimson.
+    Mr Harring kneels beside him, white as paper, a useless hand resting on the ruined shirt.
 
-    Mr Harring stands a few paces off, white as paper.
+    Samuel Manning stands a few paces off, his rifle at his feet, his whole frame trembling.
 
     The footman hovers uncertainly, having clearly not known where to place himself.
     """
 
-    doctor """
-    He raised his gun at me.
+    drunk """
+    A rabbit. It was a rabbit.
 
-    Raving about a letter. About his wife.
+    I never saw him. I swear it on my life, I never saw him.
+    """
 
-    I moved to disarm him.
+    footman """
+    Mr Manning fired at something in the undergrowth, my lady.
 
-    We struggled, and the weapon discharged.
+    The doctor was ahead of him, and the bracken was thick between them.
+
+    The bullet took him in the side.
     """
 
     """
-    The doctor is plainly shaken, yet his account is too neat to be improvised.
+    The doctor's face has already settled into the stillness of the dead.
 
-    Whether it is true or merely well prepared, I cannot say.
+    A liver shot, from the placement of the blood. Quick enough, though not quickly enough for comfort.
     """
 
     butler """
-    A dreadful business, sir.
-
-    Dreadful.
+    A dreadful business, my lady.
 
     If you will permit me, we ought to return to the house and send for the proper authorities.
     """
@@ -256,7 +273,7 @@ label captain_day2_hunt_silent_luncheon:
     host """
     Yes. Yes, of course.
 
-    Poor Mr Manning. What a terrible, terrible accident.
+    Poor Doctor Baldwin. What a terrible, terrible accident.
     """
 
     $ stop_music(2)
@@ -311,21 +328,41 @@ label captain_day2_hunt_confront_host:
     """
 
     """
-    Her smile holds for a single heartbeat.
+    Her smile holds.
 
-    Then it fades, and something tired and older takes its place.
+    Firmly, as a practised hostess will hold a smile through a guest's poor taste.
     """
 
     host """
-    No.
+    Captain, I confess myself astonished.
 
-    No, I am not.
+    The morning sun has plainly done your head a mischief. Shall I send for the butler to walk you back?
+    """
+
+    captain """
+    Your Christian name, madam.
+
+    A Claythorn would give it without thinking.
+    """
+
+    """
+    There.
+
+    A single beat too long before her mouth opens.
+
+    Then the smile fades by degrees, and something tired and older takes its place beneath it.
+    """
+
+    host """
+    ...Very well, Captain.
+
+    No. I am not.
 
     I was hired to play the part.
 
     An out-of-work actress with a passable voice and the good fortune to look the role.
 
-    That is all I am able to tell you, Captain.
+    That is all I am able to tell you.
     """
 
     captain """
@@ -413,7 +450,7 @@ label captain_day2_hunt_confront_host:
     """
 
     butler """
-    Forgive the intrusion, my lady.
+    My lady, I must ask you to look away.
     """
 
     """
@@ -429,7 +466,7 @@ label captain_day2_hunt_confront_host:
     """
 
     host """
-    Hargreaves, wait.
+    Wait.
 
     Let him speak.
     """
