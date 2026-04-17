@@ -51,7 +51,7 @@ label init_captain:
             CharacterInformation(4, "captain_host_suspicion_shooting",
                 "You noticed Lady Claythorn shoots very poorly",
                 content_negative="You didn't observe Lady Claythorn on the hunt",
-                image_file="outdoor_shed_locked", # TODO placeholder, needs proper image
+                image_file="poor_shot",
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
@@ -71,11 +71,11 @@ label init_captain:
         captain_endings = CharacterEndingList ([
             CharacterInformation(1, "strangled",
                 "You were strangled by the butler in the woods",
-                image_file="outdoor_shed_locked", # TODO placeholder, needs proper image
+                image_file="strangled",
                 chapters=['saturday_afternoon']),
             CharacterInformation(2, "shot_in_woods",
                 "You were shot in the woods by Thomas Moody",
-                image_file="outdoor_shed_locked", # TODO placeholder, needs proper image
+                image_file="hunting_rifle",
                 chapters=['saturday_afternoon']),
         ])
 

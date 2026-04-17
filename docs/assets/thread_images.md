@@ -278,6 +278,14 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 
 ## CAPTAIN — Sushil Sinha
 
+### Important Choices
+
+| Thread key         | Title concept                          | Image description                                                 |
+| ------------------ | -------------------------------------- | ----------------------------------------------------------------- |
+| `tell_boxer_story` | Told a story about the Boxer Rebellion | An old, tattered map of China with a military medal resting on it |
+
+- [x] tell_boxer_story
+
 ### Observations
 
 | Thread key                        | Title concept                            | Image description                                                                                                                   |
@@ -285,10 +293,12 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | `captain_host_suspicion_name`     | Problem with "Lady Claythorn" name       | A calling card with the name "Lady Claythorn", where "Claythorn" is crossed out in pencil, and the Name "Kilbraith" written instead |
 | `captain_host_suspicion_portrait` | No portrait of Lady Claythorn in gallery | An ornate picture frame on a wall — conspicuously empty                                                                             |
 | `captain_garden_shed_locked`      | Garden shed locked for no reason         | A weathered wooden shed door with a heavy iron padlock, on a grey stone shed                                                        |
+| `captain_host_suspicion_shooting` | Noticed Lady Claythorn's poor aim        | a target for a gun range, with gun holes outside of the target                                                                      |
 
 - [x] captain_host_suspicion_name
 - [x] captain_host_suspicion_portrait
-- [ ] captain_garden_shed_locked
+- [x] captain_garden_shed_locked
+- [x] captain_host_suspicion_shooting
 
 ### Objects
 
@@ -300,8 +310,10 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 
 ### Endings
 
-| Thread key | Title concept     | Image description                         |
-| ---------- | ----------------- | ----------------------------------------- |
-| `todo`     | Died in his sleep | A pillow with an impression, no one there |
+| Thread key      | Title concept                    | Image description                                                                       |
+| --------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
+| `strangled`     | Strangled by butler in the woods | A hangman's noose, in the woods                                                         |
+| `shot_in_woods` | Shot in the woods by Thomas      | A rifle barrel protruding from a dense thicket of ferns, mist swirling around the trees |
 
-- [x] todo
+- [x] strangled
+- [x] shot_in_woods
