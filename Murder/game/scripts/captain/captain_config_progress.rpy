@@ -16,17 +16,25 @@ label captain_config_progress:
             # Second line, ...
             [
                 Chapter(image_checkpoint_empty_small),
-                Chapter(image_checkpoint_empty),    
-                Chapter(image_checkpoint_empty), 
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),
             ],
-            # 3
+            # Row 3: strangled ending (Moody dead + confront host)
             [
-                Chapter(image_checkpoint_empty_small),   
-                Chapter(image_checkpoint_empty),    
-                Chapter(image_checkpoint_empty),  
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
+            ],
+            # Row 4: shot_in_woods ending (Moody alive)
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "TODO", "saturday_morning"),
+                Chapter(image_ending_question, "ending", "shot_in_woods", "saturday_afternoon"),
             ],
         ]
 
@@ -79,14 +87,19 @@ label captain_config_progress:
             # Threads SET before & RELEVANT here:
             #   - tell_boxer_story: relevant=['saturday_morning', 'saturday_afternoon', ...] — Moody dead/alive context
             #   - captain_host_suspicion_name / _portrait: gate the host confrontation branch
+            # Threads SET here:
+            #   - captain_host_suspicion_shooting (observed on the hunt itself)
+            # Endings fired here:
+            #   - Moody alive  -> shot_in_woods (linear death)
+            #   - Moody dead + both host suspicions + confront -> strangled
             'saturday_afternoon': [
-                # --- Moody alive, no host suspicion ---
+                # --- Moody alive, no host suspicion (linear death by Moody) ---
                 {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': False}},
-                # --- Moody alive, both host suspicions ---
+                # --- Moody alive, both host suspicions (still linear death by Moody) ---
                 {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': False, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True}},
-                # --- Moody dead, no host suspicion ---
+                # --- Moody dead, no host suspicion (silent luncheon, survives) ---
                 {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': True}},
-                # --- Moody dead, both host suspicions ---
+                # --- Moody dead, both host suspicions (opens confrontation menu; survives or dies strangled) ---
                 {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True}},
             ],
         }

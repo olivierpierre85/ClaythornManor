@@ -32,6 +32,12 @@ The Captain is a formal, meticulous, and highly observant Indian officer. He has
 - **Internal Monologue**: *"I thought I would have trouble following them, but they are even worse than I am. Lady Claythorn should be better at this, especially since she initiated it."*
 - IF "host suspicion unlocked": possibility to ask her more about an explanation. It will lead to host_suspicion_2.
 
+### The Hunt — two endings
+
+To avoid two "shot in the woods" deaths, the endings are deliberately contrasted:
+- **Version 1 (Moody dead, confronts Lady)** — the butler returns to the luncheon clearing while the Captain is pressing Lady Claythorn with his rifle levelled. He takes the Captain from behind with a rifle sling (garrote). Silent, close, servile — the household closing ranks. → `captain_ending_strangled`.
+- **Version 2 (Moody alive)** — Moody isolates the Captain after luncheon on a pretext, reveals he wrote the letter, taunts him (*"it's rather plain you never saw battle — well, this is as close as it gets"*), and shoots him. Loud, distant, military — the foil to V1. → `captain_ending_shot_in_woods`.
+
 **Evening: The Confrontation**
 - **take the gun** : Question on wether he should keep his gun with him before going out. Add a thread object.
 - **Social Manoeuvring**: In the Billiard Room, the Captain can choose to wait and watch who appears first in the room. his thinking, whoever is brave/foolish enough to come is probably the culprit.
