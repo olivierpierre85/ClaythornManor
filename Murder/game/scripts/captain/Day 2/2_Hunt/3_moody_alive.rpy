@@ -11,10 +11,11 @@
 
 label captain_day2_hunt_moody_alive:
 
-    broken """
-    Come now, surely you shall have room for one more in the lady's party?
 
-    I should be sorry to miss our hostess's company.
+    broken """
+    Doctor Baldwin's party is already three guns strong.
+
+    I shall round out your own, if my lady will have me.
     """
 
     host """
@@ -42,7 +43,7 @@ label captain_day2_hunt_moody_alive:
     """
 
     """
-    The butler, who has watched the parties form with the unobtrusive attention of his trade, steps forward.
+    The butler steps forward.
     """
 
     butler """
@@ -65,8 +66,6 @@ label captain_day2_hunt_moody_alive:
 
     play sound gun
 
-    pause 1.0
-
     """
     Mr Moody's rifle cracks before mine is even at my shoulder.
 
@@ -86,16 +85,14 @@ label captain_day2_hunt_moody_alive:
     """
     I do not care for the ease of it.
 
-    That was not the shot of a man merely doing his best.
+    Mr Moody must be a remarkable marksman. His modesty is a performance.
+
+    My own turn comes a few minutes later, at a rabbit in the grass.
     """
 
     play sound gun
 
-    pause 1.0
-
     """
-    My own turn comes a few minutes later, at a rabbit in the heather.
-
     My hands are not as steady as I should like.
 
     The shot goes a full yard wide.
@@ -107,29 +104,26 @@ label captain_day2_hunt_moody_alive:
     Though I confess I had expected rather better of a decorated officer.
     """
 
-    # TODO: That's the host excuse's, find a better one
     captain """
-    The light is most unhelpful today.
+    I misjudged the lead.
     """
 
     broken """
-    Quite. The light.
+    Quite. The lead.
     """
 
     """
-    His tone carries the smallest edge, no more than a gentleman could credibly notice.
-
-    I feel it nonetheless.
-    """
-
-    host """
-    Oh, do leave the Captain in peace, Mr Moody.
-
-    Not every gentleman cares to spend his weekends slaughtering birds.
+    He is saying this playfully, but I cannot help but feel slighted.
     """
 
     """
-    A kind intervention, though offered a touch too late to count as kind.
+    The morning wears on in this fashion.
+
+    More birds burst from the bushes, and Mr Moody takes them without appearing to aim.
+
+    Lady Claythorn's shots go wide. My own find nothing but empty air.
+
+    By the time the butler calls us in, only Mr Moody has game to show.
     """
 
     call change_time(12, 30)
@@ -144,40 +138,34 @@ label captain_day2_hunt_moody_alive:
     I eat very little and say less.
     """
 
-    $ play_music('danger', 2)
+    call change_time(13, 00)
 
     broken """
-    Captain, you must come and see this.
+    Captain, a word, if I may.
 
-    There's a rather curious cairn a few paces off, up the track.
+    My rifle has been pulling to the left all morning. I should value a second eye upon it.
 
-    I wager you know your antiquities better than I do.
+    A few paces up the track will do.
     """
 
     """
-    I have not the slightest interest in his cairn.
+    I don't like the idea of being led alone into the trees.
 
-    I have every interest in not being led alone into the trees.
+    But I can't find a proper reason not to go.
+
+    My manners overrule my better judgement.
     """
 
-    host """
-    Do go, Captain. Mr Moody has quite the eye for these things.
-    """
-
-    """
-    The butler is tending to the horse at the edge of the clearing.
-
-    Lady Claythorn has already returned to her tea.
-
-    To refuse now would be conspicuous.
-    """
 
     captain """
     Very well.
+
+    Go on, Mr Moody. I shall be behind you.
     """
 
-    call change_time(13, 00)
 
+    $ play_music('danger', 2)
+    
     """
     I follow him up the track.
 
@@ -195,7 +183,7 @@ label captain_day2_hunt_moody_alive:
     """
 
     """
-    The muzzle is not yet levelled, but the grip is wrong for a man out for rabbits.
+    I have his gun now pointing straight at me.
 
     My own rifle hangs at my side. There is a yard too many between us for me to bring it up in time.
     """
@@ -204,26 +192,14 @@ label captain_day2_hunt_moody_alive:
     Mr Moody. What is the meaning of this?
     """
 
-    # TODO: He didn't write a letter, but he receives another explaining who the captain was
-    # The captain will explain that it means he is also in danger.
-    # But thomas moody says he can quite look after hiself
-
     broken """
-    The letter, Captain.
+    A letter arrived beneath my door this morning, Captain.
 
-    You did read it, I hope.
-
-    One hates to go to the trouble and find the recipient hasn't bothered.
-    """
-
-    captain """
-    You wrote it.
+    A most illuminating little document.
     """
 
     broken """
-    Of course I wrote it.
-
-    An administrative officer, Captain. A man who spent the war behind a desk in Rawalpindi pushing paper about.
+    An administrative officer, it said. A man who spent the war behind a desk in Rawalpindi pushing paper about.
 
     And here you are, entertaining the table with tales of Burma and the Boxers as though you had ever heard a shot fired in anger.
     """
@@ -233,7 +209,31 @@ label captain_day2_hunt_moody_alive:
 
     I have stood in front of angry colonels and unpaid sepoys without flinching.
 
-    Yet here, in the quiet of a Scottish wood, I find I cannot speak.
+    Yet here, in the quiet of a Scottish wood, I find the words slow in coming.
+    """
+
+    captain """
+    There was another such letter placed in my room, Mr Moody.
+
+    I had taken you for its author.
+    """
+
+    broken """
+    I? Good heavens, no.
+
+    It would appear we share a correspondent.
+    """
+
+    captain """
+    Then consider what his purpose is.
+
+    Whoever wrote to you means us both harm. You are being used to his end.
+    """
+
+    broken """
+    How very considerate of you, Captain.
+
+    I can quite look after myself, I assure you.
     """
 
     broken """
