@@ -116,20 +116,26 @@ label captain_day2_hunt_moody_alive:
     He is saying this playfully, but I cannot help but feel slighted.
     """
 
+    pause 1.0
+
     """
     The morning wears on in this fashion.
 
     More birds burst from the bushes, and Mr Moody takes them without appearing to aim.
 
-    Lady Claythorn's shots go wide. My own find nothing but empty air.
+    Lady Claythorn's shots go wide. 
+    
+    My own find nothing but empty air.
 
     By the time the butler calls us in, only Mr Moody has game to show.
     """
 
     call change_time(12, 30)
 
+    # TODO add dialog of host praising mister moody, he answer politely, but teasing a little the captain
+
     """
-    We stop for luncheon in a clearing bordered by birches.
+    We settle for luncheon in a clearing bordered by birches.
 
     The butler lays out a spread upon a linen cloth and serves the tea with his customary care.
 
@@ -156,22 +162,22 @@ label captain_day2_hunt_moody_alive:
     My manners overrule my better judgement.
     """
 
-
     captain """
     Very well.
 
     Go on, Mr Moody. I shall be behind you.
     """
 
-
     $ play_music('danger', 2)
-    
+
     """
     I follow him up the track.
 
     He walks easily, his rifle slung at his shoulder, whistling a tune I do not recognise.
 
-    Thirty yards from the clearing, the cover thickens. The voices from the luncheon fall away.
+    Thirty yards from the clearing, the cover thickens. 
+    
+    The voices from the luncheon fall away.
 
     He stops, turns, and lifts the rifle from his shoulder.
 
@@ -184,32 +190,74 @@ label captain_day2_hunt_moody_alive:
 
     """
     I have his gun now pointing straight at me.
-
-    My own rifle hangs at my side. There is a yard too many between us for me to bring it up in time.
     """
-
+    
     captain """
     Mr Moody. What is the meaning of this?
     """
 
-    broken """
-    A letter arrived beneath my door this morning, Captain.
-
-    A most illuminating little document.
+    """
+    My own rifle hangs at my side. There is a yard too many between us for me to bring it up in time.
     """
 
     broken """
-    An administrative officer, it said. A man who spent the war behind a desk in Rawalpindi pushing paper about.
+    I found a letter on my bed yesterday.
 
-    And here you are, entertaining the table with tales of Burma and the Boxers as though you had ever heard a shot fired in anger.
+    It told an interesting story. One about an administrative officer, a man who spent wars pushing paper about.
+
+    I believe you recognise whose story this is, Captain. 
+
+    Yet, here you are, entertaining the table with tales of Burma and the Boxers as though you had won those battles by yourself.
+    """
+
+    broken """
+    But the true sting of it, Captain, lay in the final page.
+
+    A signal misdirected. A column marched up an open ridge in the autumn of '17.
+
+    Thirty men cut down in the space of an afternoon, and much more gravely injured. 
+    
+    Some force to carried out wearing faces such as this.
+    """
+
+    """
+    He taps the porcelain of his mask with two gloved fingers.
+    """
+
+    broken """
+    Signed, so the letter was careful to note, by one Captain S. Sinha of the adjutant's office. 
+    
+    So many innocent people victims, because of your incompetence.
+
+    Including one who was force to wear this mask to hide his horrific injuries.
     """
 
     """
     My mouth is dry.
 
-    I have stood in front of angry colonels and unpaid sepoys without flinching.
+    I have stood in front of angry colonels without flinching.
 
     Yet here, in the quiet of a Scottish wood, I find the words slow in coming.
+    """
+
+    """
+    I have signed a great many papers in my time. Transfers, requisitions, routine dispatches.
+
+    Most of them I could not recall if my life depended upon it.
+
+    I can tell myself, with reasonable confidence, that I am not the man his letter describes.
+
+    Only reasonable confidence.
+    """
+
+    captain """
+    That is a slander, Mr Moody.
+
+    I have signed no order that sent men to their deaths.
+    """
+
+    """
+    He does not lower the rifle.
     """
 
     captain """
@@ -226,6 +274,8 @@ label captain_day2_hunt_moody_alive:
 
     captain """
     Then consider what his purpose is.
+
+    If he has written to us twice, he will be writing again. No soul beneath that roof is safe.
 
     Whoever wrote to you means us both harm. You are being used to his end.
     """

@@ -14,6 +14,8 @@ NEW
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
 
 
+INTUITION WHERE to place it? 
+
 THREAD, locked shed image
 
 - [x] Friday Afternoon
@@ -25,7 +27,7 @@ THREAD, locked shed image
     - **Version 1** : Thomas moody is dead
       - REwrite
     - **Version 2 **: Thomas moody is alive
-      - Rewrite
+      - Rewrite KEEP check the ideas and TODOS
   - Add and validate tests
   
 
