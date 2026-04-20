@@ -28,6 +28,7 @@ THREAD, locked shed image
       - REwrite
     - **Version 2 **: Thomas moody is alive
       - Rewrite KEEP check the ideas and TODOS
+        - Maybe make the mask fall? See for unlockings.
   - Add and validate tests
   
 
