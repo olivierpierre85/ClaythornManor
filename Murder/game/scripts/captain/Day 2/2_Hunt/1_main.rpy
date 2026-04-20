@@ -130,5 +130,5 @@ label captain_day2_hunt:
 
         call captain_day2_hunt_moody_alive
 
-    jump work_in_progress
-    
+    jump captain_day2_evening
+
