@@ -102,9 +102,9 @@ label captain_day2_hunt_moody_dead:
     """
 
     captain """
-    You are too kind my lady. 
-    
-    I guess you were right about the light.
+    You are too kind, my lady.
+
+    I suppose you were right about the light.
     """
 
     """
@@ -126,7 +126,7 @@ label captain_day2_hunt_moody_dead:
     butler """
     If you don't mind, my lady. I should like to look in upon the other party, that they might not want for anything.
 
-    I shall back soon.
+    I shall be back soon.
     """
 
     host """
@@ -148,9 +148,9 @@ label captain_day2_hunt_moody_dead:
 
         And yet, I will have to suppress everything in my education if I want to tell her that.
         
-        It doesn't help that she has a loaded weapong next to her person. 
-        
-        So confronting her now might not be the wisest course of action.
+        It does not help that she has a loaded weapon beside her.
+
+        Confronting her now might not be the wisest course of action.
         """
 
         $ time_left = 1
@@ -168,13 +168,15 @@ label captain_day2_hunt_moody_dead:
         
         I could use it to press her on the unusual things I noticed.
 
-        But deverything in me prevents me from doing so. 
+        But everything in me prevents me from doing so.
 
         My suspicions are clearly not strong enough to make me risk angering our hostess.
 
-        and I may not like it, but the money plays role in that decision.
+        It would be improper, but that is not the only reason.
 
-        No, I need to be surer than that if I want to risk it all by confronting her.
+        I may not like it, but I am also afraid of losing the money that was promised to me.
+
+        No, I need more evidence if I want to risk it all by confronting her.
         """
 
         call captain_day2_hunt_silent_luncheon
@@ -191,10 +193,6 @@ label captain_day2_hunt_silent_luncheon:
     """
     I hold my peace.
 
-    Whatever she is, she has a butler at her call and, for all I know, more besides.
-
-    A gentleman chooses his ground with care.
-
     We finish the luncheon with the sort of polite small talk that reveals nothing and obliges nothing.
     """
 
@@ -203,8 +201,6 @@ label captain_day2_hunt_silent_luncheon:
     """
     In due course the butler returns, composed as ever, and we resume the hunt.
     """
-
-    play sound gun
 
     pause 1.0
 
@@ -324,17 +320,23 @@ label captain_day2_hunt_confront_host:
     host """
     Goodness, Captain, how grave you sound.
 
-    Has the luncheon offended you?
+    Whatever can be the matter?
     """
 
     captain """
-    Your surname is the name of this estate.
+    I notice a lot of things that do not make sense this weekend:
 
     Your portrait is nowhere in the gallery.
 
-    And the hunt you yourself arranged appears to be quite beyond your skill.
+    You either do not know, or do not follow, proper dining etiquette.
 
-    You are not Lady Claythorn.
+    The hunt you yourself arranged appears to be quite beyond your skill.
+
+    And, worst of all, the surname you are using is not your title, as it should be.
+
+    I do not believe you are Lady Claythorn.
+
+    In fact, I do not think there is a "Lady Claythorn."
     """
 
     """
@@ -346,45 +348,127 @@ label captain_day2_hunt_confront_host:
     host """
     Captain, I confess myself astonished.
 
-    The morning sun has plainly done your head a mischief. Shall I send for the butler to walk you back?
+    The morning sun has plainly done your head a mischief.
+
+    You are clearly confusing yourself with some detective from a poorly written novel.
+
+    There is a perfectly good explanation for everything you have mentioned.
     """
 
     captain """
-    Your Christian name, madam.
-
-    A Claythorn would give it without thinking.
-    """
-
-    """
-    There.
-
-    A single beat too long before her mouth opens.
-
-    Then the smile fades by degrees, and something tired and older takes its place beneath it.
+    Well, in that case, please enlighten me.
     """
 
     host """
-    ...Very well, Captain.
+    Shall we take them in turn, Captain?
 
-    No. I am not.
+    As for my portrait, I have never cared to sit for one.
 
-    I was hired to play the part.
+    Its absence in the gallery is my own doing, nothing more sinister than vanity in reverse.
 
-    An out-of-work actress with a passable voice and the good fortune to look the role.
+    For my manners at table, I live here for the most part alone.
 
-    That is all I am able to tell you.
+    When one dines without company for months on end, the old conventions grow dusty.
+
+    And for the hunt, I arranged it for the pleasure of my guests, not my own.
+
+    I take up a rifle perhaps once a year.
+
+    The light was unkind to me this morning, but I confess that even in fair weather I should be no credit to my name.
+
+    Now, for the name itself, my late husband had grown weary of ceremony, as so many did after the war.
+
+    He preferred that we be addressed by the house rather than the peerage.
+
+    A small indulgence, perhaps. Hardly a conspiracy.
+    """
+
+    """
+    Each answer, taken on its own, is perfectly plausible.
+
+    Worse than that. Each echoes the very explanations I myself had turned over in my mind when I first noticed these things.
+
+    But the answers come too readily, as if rehearsed.
+
+    An honest woman would stumble. Take offence. Demand to know what on earth I meant by it all.
+
+    Instead, she has submitted to my interrogation as if she were prepared for it.
+
+    But let's see how well she is really prepared.
     """
 
     captain """
-    By whom were you hired?
+    That is a very logical explanation for everything.
+
+    But in that case, what is your title?
+
+    If you are right, you cannot have forgotten it.
+    """
+
+    """
+    There, she hesitates.
     """
 
     host """
-    That, I genuinely do not know.
+    My memory, I am afraid, is not what it once was.
+    """
 
+    captain """
+    Surely, my Lady would know her title.
+
+    There is no doubt your father has repeated it constantly as you were growing up.
+
+    You should have heard it said by friends, by visitors, in letters addressed to you.
+
+    You must have heard it when you were presented at court.
+    """
+
+    """
+    She prepares to answer, but cannot find the words.
+
+    Finally, her smile fades by degrees, and something tired and older takes its place beneath it.
+    """
+
+    host """
+    Very well, Captain.
+
+    You are right.
+
+    I am not Lady Claythorn.
+
+    I am just playing the part.
+    """
+
+    captain """
+    But why? What is the purpose of this?
+    """
+
+    host """
+    That, I do not know.
+
+    I was hired for a role, an unconventional one I admit.
+
+    But all I was told was what to do, not the reason behind it.
+    """
+
+    captain """
+    Hired? By whom?
+    """
+
+    host """
     The arrangement was made through a firm of solicitors in London.
 
-    The pay was generous. Questions were discouraged.
+    I never met the person behind this enterprise.
+
+    The pay was generous, so I didn't ask many questions.
+    """
+
+    """
+    It takes me a while to take everything in.
+
+    That story goes way beyond what I had imagined.
+
+    It leads to even more questions.
     """
 
     captain """
@@ -395,8 +479,6 @@ label captain_day2_hunt_confront_host:
     What letter?
 
     I know nothing of any letter, Captain.
-
-    On my mother's grave.
     """
 
     captain """
@@ -406,27 +488,21 @@ label captain_day2_hunt_confront_host:
     """
 
     host """
-    I was told he was frail. That he might not last the weekend.
+    I have no idea what happened to him.
 
-    I was not told he would not.
+    That was never planned!
     """
 
     """
-    She shifts upon the rug as she speaks, her weight settling then settling again, as though the ground beneath her would not hold still.
-
-    Her fingers return twice to the rim of her cup without lifting it.
-
-    Her answers come too readily.
-
-    Too readily, and yet too little.
+    She shifts as she speaks, her weight settling then settling again, as though the ground beneath her would not hold still.
     """
 
     captain """
-    With the greatest respect, madam, I do not believe you.
+    I am sorry to say, madam, but I do not believe you.
     """
 
     """
-    I lift the rifle and level it across the tea-things at her.
+    I lift the rifle and level it at her.
 
     Not aiming, precisely. Simply making it plain that, at this small clearing, I am the one asking the questions.
 
@@ -438,11 +514,9 @@ label captain_day2_hunt_confront_host:
     """
 
     captain """
-    The name of the solicitor.
+    Now, you will explain clearly the terms of the arrangement.
 
-    The terms of the arrangement.
-
-    Everything you were told about the other guests beneath this roof.
+    I want to know everything.
     """
 
     """
@@ -464,7 +538,7 @@ label captain_day2_hunt_confront_host:
 
     A broad forearm crosses my shoulders.
 
-    A thin leather strap, a rifle sling I think dully, crushes against my windpipe.
+    A thin leather strap crushes against my windpipe.
 
     I drive an elbow backwards and find nothing but heavy tweed.
 

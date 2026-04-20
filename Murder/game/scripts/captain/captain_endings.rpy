@@ -10,13 +10,13 @@ label captain_ending_strangled:
     call death_screen_transition
 
     """
-    You pressed your hostess at the wrong moment, with the wrong witness at your back.
+    You pressed your hostess at the wrong moment, in the wrong place.
 
-    The butler is no ordinary servant, and you gave him every reason to prove it.
+    You felt safe with your gun next to you.
 
-    A gentleman's rifle is a poor weapon when the threat walks up on soft soles behind him.
+    But a rifle is a poor weapon when the threat comes silently from behind.
 
-    Next time, choose your ground. And remember the staff.
+    Next time you want to confront someone, choose your ground wisely.
     """
 
     jump ending_generic
