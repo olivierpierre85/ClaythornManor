@@ -12,33 +12,29 @@
 
 label captain_day2_hunt_moody_dead:
 
+    """
+    The butler, who has been listening with the unobtrusive attention of his trade, steps forward.
+    """
+
     butler """
-    With your leave, my lady.
+    If I may, my lady.
 
     Doctor Baldwin and Mr Manning to the western grove, with Mr Harring.
 
-    A footman to go along with them.
+    The footman will go along with them.
 
     My lady and Captain Sinha to the north field, and I shall attend.
     """
 
-    host """
-    An admirable arrangement.
-
-    Captain, I trust the company shall not disappoint.
+    """
+    Good, a morning in our hostess's company is definitely the better outcome for me.
     """
 
-    captain """
-    On the contrary, my lady. I consider it a privilege.
-    """
+    if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
 
-    """
-    The arrangement suits me very well indeed.
-
-    A morning in our hostess's company is precisely what I had hoped for.
-
-    Whatever she conceals, a few hours alone may loosen her tongue.
-    """
+        """
+        Whatever she conceals, a few hours alone may loosen her tongue.
+        """
 
     call change_time(11, 45)
 
@@ -83,9 +79,9 @@ label captain_day2_hunt_moody_dead:
     $ captain_details.threads.unlock('captain_host_suspicion_shooting')
 
 
-
     """
     A rabbit bolts from the fern.
+
     I raise, aim, and fire.
     """
 
@@ -97,56 +93,64 @@ label captain_day2_hunt_moody_dead:
     A clean miss, though not by much.
 
     I lower the rifle and allow myself a small, private smile.
-
-    Just as well. It would not do to outshine the hostess on her own ground.
     """
 
     host """
-    Captain, that was a splendid attempt.
+    Captain, that was a nice attempt.
 
-    The beast turned at quite the wrong moment.
+    I am sure you will have better luck next time.
+    """
+
+    captain """
+    You are too kind my lady. 
+    
+    I guess you were right about the light.
     """
 
     """
-    The beast did nothing of the sort.
+    Well, if I must keep my cover, I might as well go along with her lies.
+    """
 
-    Her praise is as rehearsed as her manners.
+    pause 1.0
+
+    """
+    Nothing else comes our way, and soon it is time to stop for luncheon.
     """
 
     call change_time(12, 30)
 
     """
-    In due course we stop for luncheon in a small clearing.
-
     The butler lays out a modest spread on a linen cloth, pours tea, then steps back with a brief bow.
     """
 
     butler """
-    With your leave, my lady. I should like to see how the other party fares.
+    If you don't mind, my lady. I should like to look in upon the other party, that they might not want for anything.
 
-    I shan't be more than a quarter of an hour.
+    I shall back soon.
     """
 
     host """
     Very well. Thank you.
     """
 
-    """
-    And just like that, we are alone.
-
-    A circumstance I had dared hope for but not expected.
-    """
-
     if captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'):
 
         """
-        She pours a second cup with the same rehearsed grace I have marked since Friday evening.
+        Finally, we are alone.
 
-        A moment alone with her. A rifle across my knees. The butler a quarter-hour away.
+        The moment I was hoping for.
 
-        It may never come again.
+        A rifle across my knees. The butler away.
 
-        And yet confronting a lady with a loaded weapon is not, perhaps, the wisest course of action.
+        It may not come again.
+
+        I feel like I have seen enough to know "Lady Claythorn" is not who she appears to be.
+
+        And yet, I will have to suppress everything in my education if I want to tell her that.
+        
+        It doesn't help that she has a loaded weapong next to her person. 
+        
+        So confronting her now might not be the wisest course of action.
         """
 
         $ time_left = 1
@@ -160,11 +164,17 @@ label captain_day2_hunt_moody_dead:
     else:
 
         """
-        A moment alone with her, and precious little to show for it.
+        A moment alone with her. 
+        
+        I could use it to press her on the unusual things I noticed.
 
-        A poor hand with a rifle is no crime. A hostess who praises too freely is no crime either.
+        But deverything in me prevents me from doing so. 
 
-        Whatever lies beneath the polish, I have not yet laid my finger upon it.
+        My suspicions are clearly not strong enough to make me risk angering our hostess.
+
+        and I may not like it, but the money plays role in that decision.
+
+        No, I need to be surer than that if I want to risk it all by confronting her.
         """
 
         call captain_day2_hunt_silent_luncheon
@@ -401,8 +411,11 @@ label captain_day2_hunt_confront_host:
     I was not told he would not.
     """
 
-    #TODO add she is shifting
     """
+    She shifts upon the rug as she speaks, her weight settling then settling again, as though the ground beneath her would not hold still.
+
+    Her fingers return twice to the rim of her cup without lifting it.
+
     Her answers come too readily.
 
     Too readily, and yet too little.

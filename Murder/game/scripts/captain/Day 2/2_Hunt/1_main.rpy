@@ -90,6 +90,38 @@ label captain_day2_hunt:
 
     call common_day2_hunt_butler_groups
 
+    """
+    A sensible proposal. Though the precise arrangement of the parties is a matter I shall not leave to chance.
+    """
+
+    captain """
+    If I may, my lady. I should consider it a privilege to accompany you.
+    """
+
+    host """
+    How gallant of you, Captain. The privilege, I assure you, is mine.
+    """
+
+    drunk """
+    Doctor, I would be honoured to partner with you.
+
+    You don't mind, do you?
+    """
+
+    """
+    Doctor Baldwin's mouth opens, then closes again. It is plain he does mind, but cannot find the words to refuse.
+    """
+
+    doctor """
+    Well... no, of course not.
+    """
+
+    """
+    Mr Harring hovers at the edge of the gathering, plainly uncertain where he belongs.
+
+    He settles, in the end, with Mr Manning and Baldwin.
+    """
+
     if captain_details.threads.is_unlocked('tell_boxer_story'):
 
         call captain_day2_hunt_moody_dead

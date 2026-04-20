@@ -11,18 +11,10 @@
 
 label captain_day2_hunt_moody_alive:
 
-    butler """
-    If it please my lady, the arrangement might run thus.
-
-    Doctor Baldwin, Mr Manning and Mr Harring to the western grove, with a footman in attendance.
-
-    My lady, Captain Sinha and myself to the north field.
-    """
-
     broken """
-    Come now, Hargreaves, surely you'll have room for one more?
+    Come now, surely you shall have room for one more in the lady's party?
 
-    I should be sorry to miss our hostess's party.
+    I should be sorry to miss our hostess's company.
     """
 
     host """
@@ -36,7 +28,7 @@ label captain_day2_hunt_moody_alive:
 
     The letter on my bedside table.
 
-    The man who may have written it, now asking for a place in my shooting party.
+    The man who may have written it, now inviting himself into my shooting party.
 
     I cannot object without drawing attention to myself.
     """
@@ -47,6 +39,18 @@ label captain_day2_hunt_moody_alive:
 
     broken """
     The pleasure is entirely mine, Captain.
+    """
+
+    """
+    The butler, who has watched the parties form with the unobtrusive attention of his trade, steps forward.
+    """
+
+    butler """
+    Very good. Doctor Baldwin and Mr Manning to the western grove, with Mr Harring.
+
+    The footman will go along with them.
+
+    My lady, Captain Sinha and Mr Moody to the north field, and I shall attend.
     """
 
     call change_time(11, 45)
