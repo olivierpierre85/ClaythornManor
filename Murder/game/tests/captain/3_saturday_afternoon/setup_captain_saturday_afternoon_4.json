@@ -1,0 +1,16 @@
+{
+    "start_label": "captain_day2_hunt",
+    "unlocked_threads": [
+        "tell_boxer_story",
+        "captain_host_suspicion_name",
+        "captain_host_suspicion_portrait"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day2_hunt_menu_confront",
+            "selected": "Hold my tongue, for now",
+            "redirect": "captain_day2_hunt_silent_luncheon"
+        }
+    ]
+}
