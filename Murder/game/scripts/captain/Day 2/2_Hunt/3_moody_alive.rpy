@@ -203,7 +203,9 @@ label captain_day2_hunt_moody_alive:
     broken """
     I found a letter on my bed yesterday.
 
-    It told an interesting story. One about an administrative officer, a man who spent wars pushing paper about.
+    It told an interesting story. 
+    
+    One about an administrative officer from India, a man who spent wars pushing paper about.
 
     I believe you recognise whose story this is, Captain. 
 
@@ -213,11 +215,11 @@ label captain_day2_hunt_moody_alive:
     broken """
     But the true sting of it, Captain, lay in the final page.
 
-    A signal misdirected. A column marched up an open ridge in the autumn of '17.
+    Because of a blatant error of communication, a column was sent up an open ridge in the autumn of '17.
 
-    Thirty men cut down in the space of an afternoon, and much more gravely injured. 
+    Three hundred men were cut down in the space of an afternoon, and much more gravely injured. 
     
-    Some force to carried out wearing faces such as this.
+    Some ended up having to carry wearing faces such as this.
     """
 
     """
@@ -225,9 +227,13 @@ label captain_day2_hunt_moody_alive:
     """
 
     broken """
-    Signed, so the letter was careful to note, by one Captain S. Sinha of the adjutant's office. 
+    There life were ruined forever.
+
+    The letter was careful to note who signed to wrong order. 
     
-    So many innocent people victims, because of your incompetence.
+    You won't be surprised it was you, Captain. 
+    
+    So many innocent victims, because of your incompetence.
 
     Including one who was force to wear this mask to hide his horrific injuries.
     """
@@ -237,17 +243,15 @@ label captain_day2_hunt_moody_alive:
 
     I have stood in front of angry colonels without flinching.
 
-    Yet here, in the quiet of a Scottish wood, I find the words slow in coming.
-    """
+    Yet here, in the quiet of a Scottish wood, I find the words stuck in my throat.
 
-    """
     I have signed a great many papers in my time. Transfers, requisitions, routine dispatches.
 
     Most of them I could not recall if my life depended upon it.
 
-    I can tell myself, with reasonable confidence, that I am not the man his letter describes.
+    Yet, I can't believe I am the man his letter describes.
 
-    Only reasonable confidence.
+    Despite all the horror happening around, I would have remember being responsible of something so horrific.
     """
 
     captain """
@@ -258,26 +262,36 @@ label captain_day2_hunt_moody_alive:
 
     """
     He does not lower the rifle.
+
+    I must try to win some time.
     """
 
     captain """
-    There was another such letter placed in my room, Mr Moody.
+    So, you were the one who placed the accusotary letter in my room.
 
-    I had taken you for its author.
+    The one accusing me.
     """
 
     broken """
-    I? Good heavens, no.
+    A letter in your room? 
+    
+    No, that wasn't me.
 
-    It would appear we share a correspondent.
+    Why would I have done something like that?
+
+    That would have tip you off.
     """
 
     captain """
     Then consider what his purpose is.
 
-    If he has written to us twice, he will be writing again. No soul beneath that roof is safe.
+    Someone here is manufactiring all of  this. 
+    
+    He was probably hoping for exactly this to happen.
+        
+    You are being used to his end.
 
-    Whoever wrote to you means us both harm. You are being used to his end.
+    And you are not safe either.
     """
 
     broken """
@@ -286,16 +300,16 @@ label captain_day2_hunt_moody_alive:
     I can quite look after myself, I assure you.
     """
 
+    """
+    He lefts the rifle at my head.
+
+    I raise a hand, uselessly.
+    """
+    
     broken """
     It's rather plain you never saw battle, Captain.
 
     Well. This is as close as it gets.
-    """
-
-    """
-    He lifts the rifle in one clean movement.
-
-    I raise a hand, uselessly.
     """
 
     play sound gun
