@@ -133,7 +133,7 @@ label captain_day2_hunt_moody_alive:
     call change_time(12, 30)
 
     host """
-    Three birds and a pair of rabbits, Mr Moody. You are quite the marvel.
+    Three birds and a pair of rabbits, Mr Moody. You are most impressive.
 
     I confess I had no notion we should be so splendidly provided for.
     """
@@ -141,24 +141,16 @@ label captain_day2_hunt_moody_alive:
     broken """
     Your ladyship is too generous.
 
-    A fair morning and an obliging quarry — nothing more.
-    """
+    I was just very lucky today, that is all.
 
-    broken """
-    Though I must say, Captain Sinha had the harder sport of us both.
-
-    The lead does have a way of evading those unaccustomed to chasing it.
-    """
-
-    captain """
-    Quite.
+    Otherwise, I am certain a decorated veteran like Captain Sinha would have put me quite to shame.
     """
 
     """
+    He says it politely enough, but I feel the mockery in his tone.
+
     I force a thin smile and say no more.
-    """
 
-    """
     We settle for luncheon in a clearing bordered by birches.
 
     The butler lays out a spread upon a linen cloth and serves the tea with his customary care.
