@@ -90,10 +90,6 @@ label captain_day2_hunt:
 
     call common_day2_hunt_butler_groups
 
-    """
-    A sensible proposal. Though the precise arrangement of the parties is a matter I shall not leave to chance.
-    """
-
     captain """
     If I may, my lady. I should consider it a privilege to accompany you.
     """

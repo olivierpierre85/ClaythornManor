@@ -172,7 +172,7 @@ screen debug_screen:
         yoffset 0
         ypadding 0
         xpadding 0
-        textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter+ "\n captain_day1_evening_billiard_room_menu:" + str(is_menu_valid('captain_day1_evening_billiard_room_menu')):
+        textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter:
         # textbutton "Time left:" + str(time_left) + "\nChapter:" + current_chapter + "\nSubmenu(nurse_generic_other_guests_menu):" + str(all_menus['nurse_generic_menu_doctor'].choices[6].already_chosen) :
             # action Function(export_choices_to_file, all_choices)
             action Function(export_transcript)

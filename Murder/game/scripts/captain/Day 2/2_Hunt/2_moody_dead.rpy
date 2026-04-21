@@ -303,12 +303,8 @@ label captain_day2_hunt_silent_luncheon:
 # --------------------------------------------
 label captain_day2_hunt_confront_host:
 
-    $ play_music('danger', 2, fadeout_val=4)
-
     """
     I set down my cup with deliberate care and allow the rifle to rest within easier reach.
-
-    Opportunity will not wait upon a man's second thoughts.
     """
 
     captain """
@@ -422,6 +418,8 @@ label captain_day2_hunt_confront_host:
 
     You must have heard it when you were presented at court.
     """
+
+    $ play_music('danger', 2, fadeout_val=4)
 
     """
     She prepares to answer, but cannot find the words.

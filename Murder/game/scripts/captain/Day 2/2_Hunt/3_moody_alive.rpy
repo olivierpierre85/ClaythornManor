@@ -27,11 +27,9 @@ label captain_day2_hunt_moody_alive:
     """
     A chill passes through me.
 
-    The letter on my bedside table.
+    I would rather have avoided him this afternoon.
 
-    The man who may have written it, now inviting himself into my shooting party.
-
-    I cannot object without drawing attention to myself.
+    But, I cannot object without drawing attention to myself.
     """
 
     captain """
@@ -208,18 +206,16 @@ label captain_day2_hunt_moody_alive:
 
     """
     I have his gun now pointing straight at me.
+
+    My own rifle hangs at my side. There is a yard too many between us for me to bring it up in time.
     """
     
     captain """
     Mr Moody. What is the meaning of this?
     """
 
-    """
-    My own rifle hangs at my side. There is a yard too many between us for me to bring it up in time.
-    """
-
     broken """
-    I found a letter on my bed yesterday.
+    You see Captain, I found a letter on my bed yesterday.
 
     It told an interesting story.
 
@@ -251,15 +247,11 @@ label captain_day2_hunt_moody_alive:
 
     You shall not be surprised to learn it was you, Captain.
 
-    So many innocent victims, because of your incompetence.s
+    So many innocent victims, because of your incompetence.
     """
 
     """
     My mouth is dry.
-
-    I have stood in front of angry colonels without flinching.
-
-    Yet here, in the quiet of a Scottish wood, I find the words stuck in my throat.
 
     I have signed a great many papers in my time. Transfers, requisitions, routine dispatches.
 
@@ -279,6 +271,40 @@ label captain_day2_hunt_moody_alive:
 
     I am in no way responsible for your... for your... condition.
     """
+
+    broken """
+    You see, Captain, I am not Thomas Moody.
+
+    Thomas Moody was my brother.
+
+    He was one of the three hundred who went up that ridge, on orders you signed.
+
+    They say he fell gallantly. I take no comfort in it.
+
+    Lady Claythorn invited him to the manor in recognition of his sacrifice. He was meant to be here today, in my place.
+
+    He could not come, for reasons you can well imagine. So I came in his stead.
+    """
+
+    """
+    His voice does not rise. It does not have to.
+
+    I search his eyes for a crack, for some sign of exaggeration, and find none.
+    """
+
+    captain """
+    Your brother.
+
+    Then what is your name, man?
+    """
+
+    broken """
+    It does not matter now.
+    """
+
+    $ broken_details.description_hidden.unlock('lie_mask')
+
+    $ broken_details.description_hidden.unlock('lie_origin')
 
     """
     He does not lower the rifle.

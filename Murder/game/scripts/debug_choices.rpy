@@ -171,8 +171,8 @@ label unlock_host:
 
     $ host_details.description_hidden.unlock('name_age')
     $ host_details.description_hidden.unlock('down_to_earth')
-    # $ host_details.description_hidden.unlock('independent') 
-    # $ host_details.description_hidden.unlock('guns') 
+    # $ host_details.description_hidden.unlock('incompetent')
+    # $ host_details.description_hidden.unlock('hunt')
     # $ host_details.description_hidden.unlock('car')
     # $ host_details.description_hidden.unlock('lie') 
 
