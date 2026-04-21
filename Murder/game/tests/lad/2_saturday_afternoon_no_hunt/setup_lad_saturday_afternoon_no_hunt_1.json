@@ -1,0 +1,12 @@
+{
+  "start_label": "lad_day2_no_hunt",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Take a nap until the others return",
+      "redirect": "lad_day2_no_hunt_cancel"
+    }
+  ]
+}
