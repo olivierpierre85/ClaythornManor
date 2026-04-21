@@ -16,21 +16,19 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
 
 INTUITION WHERE to place it? 
 
-ADD info unlocks
+
 
 THREAD, locked shed image
 
 - [x] Friday Afternoon
 - [x] Friday Evening
 - [x] Saturday Morning
-- [ ] Saturday Hunt - **Ongoing**
-  - There are two main paths during the hunt,
-    - The choices of team must be like the one in the Lad story
-    - **Version 1** : Thomas moody is dead
-      - REwrite
-    - **Version 2 **: Thomas moody is alive
-      - Rewrite KEEP check the ideas and TODOS
-        - Maybe make the mask fall? See for unlockings.
+- [x] Saturday Hunt
+  - [ ] TODO: ADD info unlocks
+    - [ ] LADY not independant, just incompetent? 
+    - [ ] Not insist on Broken being a footman? => Conflict with his friend and brother? Add a way to reveal full story from Thomas Moody, lost of mask? (but then doctor conflict? Check) => If intuition, explain that problem is someone is trying to kill them. After killed
+- [ ] Saturday evening
+  - [ ] **Major confrontation** -You need to have all suspicion (so you held your tongue in moody's death path) so now you can accuse the host in front of everybody. First, send the butler to accompany Sam Manning => then isolated everyone the a room, the tea room, close the door. Big reveal discussion about link between everyone => Is everyone really an impostor, or something else? In the end, everyone burned down? No the butler might kill one person, but not everyone? => If good choice => unlock intuition that will unlock Thomas moody.
   - Add and validate tests
   
 

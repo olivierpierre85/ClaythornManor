@@ -19,6 +19,7 @@
     - [ ] Scared to go to the attic. Let him go once then cancel all attic choices.
 - [ ] "So I tell her my story" => Only time doing that? Is it necessary?
 - [ ] Add "you follow Daniel Baldwin" upstairs as an important choice, even for misdirect?
+- [ ] Make him fake his own death on day3, so he can spy on everyone when he realises he has been tricked killing the doctor
 - [ ] **New Ending**: Snooping is bad!
     - [ ] "You can’t enter their room" (lad day3 morning) ALWAYS offer to open the door?
     - [ ] If spotted too many times (or right time) -> Arrest and death (Suspicious LAD DEATH).

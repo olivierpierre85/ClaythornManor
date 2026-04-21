@@ -19,8 +19,9 @@ label init_broken:
             CharacterInformation(0, "heroic_act", "the act of bravery that led to his injuries is what made Lady Claythorn invite him to the Manor", is_important = True),   
             CharacterInformation(0, "city", "Liverpool", is_important = True),         
             CharacterInformation(0, "shy", "married, perhaps because his condition has rendered him rather shy towards the opposite sex", is_important = True),   
-            CharacterInformation(0, "lie_mask", "entirely true, except for two small details: his injuries, which are faked,", is_important = True),   
-            CharacterInformation(0, "lie_name", "name, which he stole from his deceased brother and real war hero", is_important = True), 
+            CharacterInformation(0, "lie_mask", "entirely true, except for three small details: his injuries, which are faked,", is_important = True),   
+            CharacterInformation(0, "lie_name", "name, which is actually 'Archibald',", is_important = True), 
+            CharacterInformation(0, "lie_origin", " a name, which he stole from his deceased brother and real war hero, in order to investigate the manor.", is_important = True), 
             ], broken_name
         )
 
@@ -37,7 +38,7 @@ label init_broken:
         His life took a dramatic turn when he was called to serve during the Great War. Badly <info:mask>. However, the silver lining is that <info:heroic_act>.
         After the war, he managed to find a job as <info:job>. 
         He is not <info:shy>. 
-        Well, that story is almost <info:lie_mask> and his <info:lie_name>.
+        Well, that story is almost <info:lie_mask> and his <info:lie_name><info:lie_origin>.
         """
 
         broken_details  = CharacterDetails(

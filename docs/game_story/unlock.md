@@ -6,8 +6,9 @@
 graph TD;
     lad -->|Full| doctor;
     lad -->|Full| psychic;
+    lad -->|unlocks drunk mode| drunk;
     psychic -->|Thief| nurse;
-    psychic -->|TODO| broken;
+    psychic -->|details| host;
     doctor -->|Boxers Rebellion| nurse;
     doctor -->|Boxers Rebellion| captain;
     doctor -->|Letter and not drunk| drunk;
@@ -15,12 +16,13 @@ graph TD;
     doctor -->|Is a thief| lad;
     doctor -->|Escape| broken;
     nurse -->|Not a fighter| captain;
-    captain-->|Wife Story| drunk;
+    nurse -->|SOMETHING| drunk;
+    captain -->|Is not who he is | broken;
     captain -->|is not nobility| host;
-    drunk -->|full confession| host;
-    broken -->|TODO| drunk;
-    broken -->|Secret Basement| host;
-    host -->|Final info| lad;
+    captain -->|SOMETHING| drunk;
+    broken -->|Name of employer| host;
+    host -->|Wife Story| drunk;
+    drunk -->|Final info, observes lad waking up after scene with psychic| lad;
 ```
 
 ## 1. The Lad
@@ -34,19 +36,22 @@ First character, from there it's possible to unlock fully the psychic and the do
 Is unlocked by information found in Doctor & Psychic
 Can unlock Captain ? Or just part of captain ?
 
-## 3.2 Broken
-Can be unlocked by doctor ? And other? or just doctor is enough?
 
 ## 4.1 Captain
 Can be unlocked by NURSE ? and other for trivial things?
 
-## 4.2 Drunk
-TODO be unlocked by Broken ? How?
+## 5 Broken
+Can be unlocked by doctor ? And other? or just doctor is enough?
 
 ## 5 Host
 The last piece of the puzzle, needs info from DRUNK & Captain
 
-## 6 The last run
+## 6 Drunk
+TODO be unlocked by Broken ? How?
+
+
+
+## 7 The last run
 After unlocking full information on the lad
 
 
