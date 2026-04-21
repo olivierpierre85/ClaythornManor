@@ -173,6 +173,8 @@ label captain_day2_hunt_moody_alive:
     """
     I don't like the idea of being led alone into the trees.
 
+    And it's hard to believe there is anything wrong with his gun.
+
     But I can't find a proper reason not to go.
 
     My manners overrule my better judgement.

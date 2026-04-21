@@ -1,9 +1,9 @@
-Generated:                2026-04-16 11:43:29
+Generated:                2026-04-21 10:45:12
 Scope:                    character=captain
-Dialogue entries scanned: 546
-Test lines collected:     701
-Covered:                  533
-Missing:                  13
+Dialogue entries scanned: 581
+Test lines collected:     1169
+Covered:                  535
+Missing:                  46
 
   game/scripts/_common/Day 1/2_Evening/1_main.rpy  (4 missing)
     [common_day1_evening_tea_room_captain_arrives_f8fed4bc] As he sees the new guests coming in, Thomas Moody joins me back to greet them.
@@ -13,6 +13,41 @@ Missing:                  13
 
   game/scripts/_common/Day 2/1_Morning/1_main.rpy  (1 missing)
     [common_day2_morning_host_to_doctor_9c5fcce5] I quickly stands up.
+
+  game/scripts/_common/Day 2/3_Evening/1_main.rpy  (33 missing)
+    [common_day2_evening_entrance_dialog_1c7dd021] Good heavens! What happened!?
+    [common_day2_evening_entrance_dialog_254aa254] Is that Doctor Baldwin? Is he injured?
+    [common_day2_evening_entrance_dialog_9180e9a7] Oh no! Is he... dead?
+    [common_day2_evening_entrance_dialog_a3b2f566] I'm sorry, dear, but he is.
+    [common_day2_evening_entrance_dialog_2ce6f188] But... what happened?
+    [common_day2_evening_entrance_dialog_bfc01660] It was an accident.
+    [common_day2_evening_entrance_dialog_e3eaf210] I swear it was! I have no idea how I could have hit him.
+    [common_day2_evening_entrance_dialog_a36ca5f3] I was aiming at a rabbit. I didn't even see him.
+    [common_day2_evening_entrance_dialog_2b52a80f] Everyone turns to him.
+    [common_day2_evening_entrance_dialog_2037b1c3] You fool! You were probably too drunk, and that's why you hit him.
+    [common_day2_evening_entrance_dialog_8a8e29ca] You could barely walk this morning. Who gave you a gun?
+    [common_day2_evening_entrance_dialog_fe6dea12] Please, there's no need to point fingers now. It's done.
+    [common_day2_evening_entrance_dialog_751cd8d4] The police will handle it.
+    [common_day2_evening_entrance_dialog_55113289] Speaking of which, has anyone from the city arrived yet?
+    [common_day2_evening_entrance_dialog_a0f97368] No, not yet.
+    [common_day2_evening_entrance_dialog_1a7a6156] We're still waiting for them.
+    [common_day2_evening_entrance_dialog_53c1b82c] We should tell them to hurry.
+    [common_day2_evening_entrance_dialog_304acd78] Lady Claythorn, where's the telephone?
+    [common_day2_evening_entrance_dialog_2177771c] I'll handle it.
+    [common_day2_evening_entrance_dialog_1ccedd78] She leaves the group, with the butler following closely behind.
+    [common_day2_evening_entrance_dialog_e4a562e0] The room falls silent.
+    [common_day2_evening_entrance_dialog_78a0c7e9] Most eyes are on Sam Manning, filled with disdain.
+    [common_day2_evening_entrance_dialog_4f7d43ed] Then, the hostess returns.
+    [common_day2_evening_entrance_dialog_caf926d6] I just spoke with the police. They aren't coming today.
+    [common_day2_evening_entrance_dialog_17420013] What!? Why not?
+    [common_day2_evening_entrance_dialog_a9945160] They were on their way but encountered a huge tree blocking the road.
+    [common_day2_evening_entrance_dialog_01b8c68d] They couldn't get past it.
+    [common_day2_evening_entrance_dialog_6bcb9ba6] They said they'll be back tomorrow with assistance.
+    [common_day2_evening_entrance_dialog_7ca89adb] But... what are we going to do with him until then?
+    [common_day2_evening_entrance_dialog_65cd96cd] We'll move him to his bed for now.
+    [common_day2_evening_entrance_dialog_afbe5651] It's the best we can do under the circumstances.
+    [common_day2_evening_entrance_dialog_c06bf2fc] Anyone willing to help?
+    [common_day2_evening_entrance_dialog_0b8c324a] I will.
 
   game/scripts/captain/captain_generic_locations.rpy  (8 missing)
     [captain_library_default_159e3f8e] The library is as I left it.
