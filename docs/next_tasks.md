@@ -16,6 +16,8 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
 
 INTUITION WHERE to place it? 
 
+ADD info unlocks
+
 THREAD, locked shed image
 
 - [x] Friday Afternoon

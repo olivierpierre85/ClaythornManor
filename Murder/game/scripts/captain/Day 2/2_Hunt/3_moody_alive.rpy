@@ -25,7 +25,7 @@ label captain_day2_hunt_moody_alive:
     """
 
     """
-    A chill passes through me at his easy smile.
+    A chill passes through me.
 
     The letter on my bedside table.
 
@@ -132,7 +132,31 @@ label captain_day2_hunt_moody_alive:
 
     call change_time(12, 30)
 
-    # TODO add dialog of host praising mister moody, he answer politely, but teasing a little the captain
+    host """
+    Three birds and a pair of rabbits, Mr Moody. You are quite the marvel.
+
+    I confess I had no notion we should be so splendidly provided for.
+    """
+
+    broken """
+    Your ladyship is too generous.
+
+    A fair morning and an obliging quarry — nothing more.
+    """
+
+    broken """
+    Though I must say, Captain Sinha had the harder sport of us both.
+
+    The lead does have a way of evading those unaccustomed to chasing it.
+    """
+
+    captain """
+    Quite.
+    """
+
+    """
+    I force a thin smile and say no more.
+    """
 
     """
     We settle for luncheon in a clearing bordered by birches.
@@ -203,23 +227,23 @@ label captain_day2_hunt_moody_alive:
     broken """
     I found a letter on my bed yesterday.
 
-    It told an interesting story. 
-    
-    One about an administrative officer from India, a man who spent wars pushing paper about.
+    It told an interesting story.
 
-    I believe you recognise whose story this is, Captain. 
+    One about an administrative officer from India, a man who spent his wars pushing paper about.
 
-    Yet, here you are, entertaining the table with tales of Burma and the Boxers as though you had won those battles by yourself.
+    I believe you recognise whose story this is, Captain.
+
+    Yet here you are, entertaining the table with tales of Burma and the Boxers as though you had fought in them yourself.
     """
 
     broken """
     But the true sting of it, Captain, lay in the final page.
 
-    Because of a blatant error of communication, a column was sent up an open ridge in the autumn of '17.
+    Owing to a blatant failure of communication, a column was sent up an open ridge in the autumn of '17.
 
-    Three hundred men were cut down in the space of an afternoon, and much more gravely injured. 
-    
-    Some ended up having to carry wearing faces such as this.
+    Three hundred men were cut down in the space of an afternoon, and many more gravely wounded.
+
+    Some were left so disfigured that they must wear masks such as this for the rest of their days.
     """
 
     """
@@ -227,15 +251,13 @@ label captain_day2_hunt_moody_alive:
     """
 
     broken """
-    There life were ruined forever.
+    Their lives were ruined forever.
 
-    The letter was careful to note who signed to wrong order. 
-    
-    You won't be surprised it was you, Captain. 
-    
-    So many innocent victims, because of your incompetence.
+    And the letter was careful to note who signed the wrong order.
 
-    Including one who was force to wear this mask to hide his horrific injuries.
+    You shall not be surprised to learn it was you, Captain.
+
+    So many innocent victims, because of your incompetence.s
     """
 
     """
@@ -249,49 +271,55 @@ label captain_day2_hunt_moody_alive:
 
     Most of them I could not recall if my life depended upon it.
 
-    Yet, I can't believe I am the man his letter describes.
+    Yet I cannot believe I am the man his letter describes.
 
-    Despite all the horror happening around, I would have remember being responsible of something so horrific.
+    Amid all the horrors of those years, a sin of that magnitude would not have slipped my memory.
+
+    Whatever happened to him, I am not responsible. I am sure of that.
     """
 
     captain """
     That is a slander, Mr Moody.
 
-    I have signed no order that sent men to their deaths.
+    I have never sent men to their deaths by mistake.
+
+    I am in no way responsible for your... for your... condition.
     """
 
     """
     He does not lower the rifle.
 
-    I must try to win some time.
+    His gaze is resolute, heavy with a hatred.
+
+    I see now there is nothing I can say that will change his mind.
     """
 
     captain """
-    So, you were the one who placed the accusotary letter in my room.
+    Then you were the one who placed the letter in my room.
 
     The one accusing me.
     """
 
     broken """
-    A letter in your room? 
-    
-    No, that wasn't me.
+    A letter in your room?
 
-    Why would I have done something like that?
+    No, that was not me.
 
-    That would have tip you off.
+    Why would I have done something so foolish?
+
+    It would only have tipped you off.
     """
 
     captain """
-    Then consider what his purpose is.
+    Then consider what its purpose is.
 
-    Someone here is manufactiring all of  this. 
-    
-    He was probably hoping for exactly this to happen.
-        
+    Someone here is manufacturing all of this.
+
+    He was likely hoping for precisely this to happen.
+
     You are being used to his end.
 
-    And you are not safe either.
+    And you are no safer than I.
     """
 
     broken """
@@ -301,13 +329,13 @@ label captain_day2_hunt_moody_alive:
     """
 
     """
-    He lefts the rifle at my head.
+    He levels the rifle at my head.
 
     I raise a hand, uselessly.
     """
-    
+
     broken """
-    It's rather plain you never saw battle, Captain.
+    It is rather plain you never saw battle, Captain.
 
     Well. This is as close as it gets.
     """
@@ -316,6 +344,6 @@ label captain_day2_hunt_moody_alive:
 
     $ stop_music(1)
 
-    pause 2.0
+    pause 1.0
 
     jump captain_ending_shot_in_woods

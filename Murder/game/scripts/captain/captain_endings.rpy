@@ -30,11 +30,11 @@ label captain_ending_shot_in_woods:
     call death_screen_transition
 
     """
-    You were led into the trees by a man who had taken the measure of you on Friday evening.
+    You were led into the woods by a man who had cultivated a deep hatred for you.
 
-    There was no battle in your past, and he had guessed as much.
+    You knew the danger, yet good manners compelled you to proceed regardless.
 
-    Perhaps, if you had left your war stories in the drawing room, he would have had no reason to write that letter at all.
+    It is curious how the fear of causing a scene can prove stronger than any other.
     """
 
     jump ending_generic
