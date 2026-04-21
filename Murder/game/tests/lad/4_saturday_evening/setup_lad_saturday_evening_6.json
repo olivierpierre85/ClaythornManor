@@ -1,0 +1,27 @@
+{
+  "start_label": "lad_day2_evening",
+  "unlocked_threads": ["downstairs_1"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Have a talk with Amelia Baxter",
+      "redirect": "lad_day2_evening_bedroom_psychic"
+    },
+    {
+      "menu": "lad_day2_evening_bedroom_psychic",
+      "selected": "Admit she might be right",
+      "redirect": "lad_day2_believe_psychic"
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Go to sleep and hope for the best.",
+      "redirect": "lad_day2_evening_sleep"
+    }
+  ]
+}

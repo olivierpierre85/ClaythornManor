@@ -1,0 +1,17 @@
+{
+  "start_label": "lad_day2_hunt",
+  "unlocked_threads": ["hunt"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_hunt_menu",
+      "selected": "Daniel Baldwin and Samuel Manning",
+      "redirect": "lad_day2_hunt_accident"
+    },
+    {
+      "menu": "doctor_generic_menu_lad",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

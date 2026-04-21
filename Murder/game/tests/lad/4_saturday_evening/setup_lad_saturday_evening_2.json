@@ -1,0 +1,42 @@
+{
+  "start_label": "lad_day2_evening",
+  "unlocked_threads": ["hunt", "hunt_captain_host", "day1_drunk"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Check if there is someone in the Billiard Room",
+      "redirect": "lad_day2_evening_billiard_room"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Go to the bar for a drink",
+      "redirect": "lad_day2_evening_billiard_room_bar"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Have another drink to calm the nerves",
+      "redirect": "lad_day2_evening_billiard_room_bar_2"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Maybe a few more drinks would help",
+      "redirect": "lad_day2_evening_billiard_room_bar_3"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Don't listen to him, just get plastered",
+      "redirect": "lad_day2_evening_billiard_room_bar_4"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Go to sleep and hope for the best.",
+      "redirect": "lad_day2_evening_sleep"
+    }
+  ]
+}

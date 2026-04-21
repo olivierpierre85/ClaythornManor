@@ -1,0 +1,22 @@
+{
+  "start_label": "lad_day2_evening",
+  "unlocked_threads": ["hunt", "hunt_doctor_drunk", "day1_drunk"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Have a talk with Amelia Baxter",
+      "redirect": "lad_day2_evening_bedroom_psychic"
+    },
+    {
+      "menu": "lad_day2_evening_bedroom_psychic",
+      "selected": "No way, she is clearly imagining things",
+      "redirect": "lad_day2_believe_dont_believe_psychic"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Go to sleep and hope for the best.",
+      "redirect": "lad_day2_evening_sleep"
+    }
+  ]
+}

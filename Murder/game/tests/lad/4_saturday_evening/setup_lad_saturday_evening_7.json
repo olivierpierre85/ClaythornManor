@@ -1,0 +1,67 @@
+{
+  "start_label": "lad_day2_evening",
+  "unlocked_threads": ["downstairs_1", "downstairs_2", "green_liquid", "burned_letter"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Richard III Bedroom",
+      "redirect": "lad_day2_bedroom_broken_back"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Edward II Bedroom",
+      "redirect": "lad_day2_bedroom_doctor"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Check if there is someone in the Billiard Room",
+      "redirect": "lad_day2_evening_billiard_room"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Talk to Sushil Sinha",
+      "redirect": "lad_day2_evening_billiard_room_captain"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_captain_hypothesis_menu",
+      "selected": "Reveal Daniel Baldwin's opium addiction",
+      "redirect": "lad_day2_evening_billiard_room_captain_hypothesis_doctor"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_captain_hypothesis_menu",
+      "selected": "Point out the strange liquid on Thomas Moody's room",
+      "redirect": "lad_day2_evening_billiard_room_captain_hypothesis_broken"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_captain_hypothesis_menu",
+      "selected": "Show the letter found in Samuel's Manning room",
+      "redirect": "lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_captain_hypothesis_menu",
+      "selected": "Question Samuel Manning's state of inebriation at the time of the accident",
+      "redirect": "lad_day2_evening_billiard_room_captain_hypothesis_drunk"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_captain_hypothesis_menu",
+      "selected": "Accept you don't have any real suspicions",
+      "redirect": "lad_day2_evening_billiard_room_captain_hypothesis_cancel"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Richard III Bedroom",
+      "redirect": "lad_day2_bedroom_broken_back_for_drink"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Go to sleep and hope for the best.",
+      "redirect": "lad_day2_evening_sleep"
+    }
+  ]
+}

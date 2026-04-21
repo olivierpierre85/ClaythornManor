@@ -1,0 +1,12 @@
+{
+  "start_label": "lad_day2_hunt",
+  "unlocked_threads": ["hunt"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_hunt_menu",
+      "selected": "Lady Claythorn and Sushil Sinha",
+      "redirect": "lad_day2_hunt_noaccident"
+    }
+  ]
+}
