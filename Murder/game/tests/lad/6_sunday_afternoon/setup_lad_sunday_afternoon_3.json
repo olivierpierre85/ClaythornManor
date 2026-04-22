@@ -1,0 +1,12 @@
+{
+  "start_label": "lad_day3_afternoon",
+  "unlocked_threads": ["gun"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day3_escape_menu",
+      "selected": "Follow Sushil Sinha. Amelia Baxter will probably be fine on her own",
+      "redirect": "lad_day3_escape"
+    }
+  ]
+}

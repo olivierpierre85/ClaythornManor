@@ -1,0 +1,18 @@
+{
+  "start_label": "lad_day3_afternoon",
+  "unlocked_threads": [],
+  "unlocked_endings": ["poisoned"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day3_escape_menu",
+      "selected": "Stay here with Amelia Baxter",
+      "redirect": "lad_day3_stay"
+    },
+    {
+      "menu": "lad_day3_stay",
+      "selected": "I'm being paranoid. Besides, I really need to go",
+      "redirect": "lad_day3_afternoon_toilet"
+    }
+  ]
+}

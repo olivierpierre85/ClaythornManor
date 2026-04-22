@@ -23,12 +23,11 @@ THREAD, locked shed image
 - [x] Friday Afternoon
 - [x] Friday Evening
 - [x] Saturday Morning
-- [ ] Saturday Hunt
-  - [ ] Music, rethink music in kill by butler => there is two danger, so two changes might be needed
+- [ ] Saturday Hunt - **almost**
   - [ ] TODO: ADD info unlocks
-    - [ ] LADY not independant, just incompetent? Rewrite text properly
-    - [ ] NO unlock for Thomas Moody ? Or find something else? => add the single thing?
-- [ ] Saturday evening
+    - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
+    - [ ] NO unlock for Thomas Moody ? Or find something else? => add the single thing? NO, no need.
+- [ ] Saturday evening - **ongoing**
   - [ ] **Major confrontation** -You need to have all suspicion (so you held your tongue in moody's death path) so now you can accuse the host in front of everybody. First, send the butler to accompany Sam Manning => then isolated everyone the a room, the tea room, close the door. Big reveal discussion about link between everyone => Is everyone really an impostor, or something else? In the end, everyone burned down? No the butler might kill one person, but not everyone? => If good choice => unlock intuition that will unlock Thomas moody.
   - Add and validate tests
   
