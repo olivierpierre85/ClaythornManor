@@ -20,26 +20,21 @@ label init_broken:
             CharacterInformation(0, "city", "Liverpool", is_important = True),         
             CharacterInformation(0, "shy", "married, perhaps because his condition has rendered him rather shy towards the opposite sex", is_important = True),   
             CharacterInformation(0, "lie_mask", "entirely true, except for three small details: his injuries, which are faked,", is_important = True),   
-            CharacterInformation(0, "lie_name", "name, which is actually 'Archibald',", is_important = True), 
-            CharacterInformation(0, "lie_origin", " a name, which he stole from his deceased brother and real war hero, in order to investigate the manor.", is_important = True), 
+            CharacterInformation(0, "lie_name", "name, which is actually 'Archibald',  a name", is_important = True), 
+            CharacterInformation(0, "lie_origin", "stole from his deceased brother and real war hero, in order to investigate the manor", is_important = True), 
             ], broken_name
         )
 
-        # broken_description_full = """
-        # Thomas Moody is a 27-year-old working-class fellow. Born in Liverpool, he started working in a fancy house as a boot boy before graduating to footman, securing the job in part thanks to his above-average height.
-        # There he learned how to behave among the rich and wealthy.
-        # His life took a dramatic turn when he was called to serve during the Great War. Badly injured at the Somme at the start of the war, he is now what people call a 'Gueule Cassée' or broken face. However, the silver lining is that the act of bravery that led to his injuries is what made Lady Claythorn invite him to the Manor.
-        # He is not married, perhaps because his condition has rendered him rather shy towards the opposite sex. 
-        # After the war, he managed to find a job as a car mechanic.
-        # Well, that story is almost entirely true, entirely true, except for two small details: his injuries, which are faked, and his name, which he stole from his deceased brother and real war hero.
-        # """
         broken_description = """
         Thomas Moody is a <info:age> working-class fellow. Born in <info:city>, he started working in <info:background>, securing the job in part thanks to his <info:tall>.
         His life took a dramatic turn when he was called to serve during the Great War. Badly <info:mask>. However, the silver lining is that <info:heroic_act>.
         After the war, he managed to find a job as <info:job>. 
         He is not <info:shy>. 
-        Well, that story is almost <info:lie_mask> and his <info:lie_name><info:lie_origin>.
+        Well, that story is almost <info:lie_mask> and his <info:lie_name>, which he <info:lie_origin>.
         """
+
+        # TODO Only last one should be considered important? too obvious
+        # TODO: New, Well, that is a compelling story the problem, is that it is not his own, but his <brother>. His <real_name is Archibald> and he took the identity of .... 
 
         broken_details  = CharacterDetails(
             text_id = "broken", 

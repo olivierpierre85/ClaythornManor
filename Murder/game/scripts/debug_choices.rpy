@@ -160,9 +160,10 @@ label unlock_broken:
     $ broken_details.description_hidden.unlock('job') 
     $ broken_details.description_hidden.unlock('heroic_act')
     $ broken_details.description_hidden.unlock('city')
-    $ broken_details.description_hidden.unlock('shy')
+    $ broken_details.description_hidden.unlock('shy') #NOt unlocked YET?
     $ broken_details.description_hidden.unlock('lie_mask')
     $ broken_details.description_hidden.unlock('lie_name') 
+    $ broken_details.description_hidden.unlock('lie_origin') 
 
     return
 

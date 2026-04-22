@@ -163,17 +163,19 @@ label captain_day2_hunt_moody_alive:
     broken """
     Captain, a word, if I may.
 
-    My rifle has been pulling to the left all morning. I should value a second eye upon it.
+    My rifle has been pulling to the left all morning.
+
+    I should value a second eye upon it.
 
     A few paces up the track will do.
     """
 
     """
-    I don't like the idea of being led alone into the trees.
+    I do not like the idea of following him alone into the trees.
 
-    And it's hard to believe there is anything wrong with his gun.
+    It is hard to believe there is anything wrong with his weapon.
 
-    But I can't find a proper reason not to go.
+    But I cannot find a polite reason to refuse.
 
     My manners overrule my better judgement.
     """
@@ -181,7 +183,9 @@ label captain_day2_hunt_moody_alive:
     captain """
     Very well.
 
-    Go on, Mr Moody. I shall be behind you.
+    Lead on, Mr Moody.
+
+    I shall be right behind you.
     """
 
     $ play_music('danger', 2)
@@ -197,43 +201,53 @@ label captain_day2_hunt_moody_alive:
 
     He stops, turns, and lifts the rifle from his shoulder.
 
-    Not to show me. To hold.
+    Not to show me.
+
+    To hold.
     """
 
     broken """
-    That's far enough, I think, Captain.
+    That is quite far enough, I think, Captain.
     """
 
     """
-    I have his gun now pointing straight at me.
+    His gun is now pointing directly at my chest.
 
-    My own rifle hangs at my side. There is a yard too many between us for me to bring it up in time.
+    My own rifle hangs uselessly at my side.
+
+    There is a yard too many between us for me to raise it in time.
     """
     
     captain """
-    Mr Moody. What is the meaning of this?
+    Mr Moody.
+
+    What is the meaning of this?
     """
 
     broken """
-    You see Captain, I found a letter on my bed yesterday.
+    You see, Captain, I found a letter upon my bed yesterday.
 
-    It told an interesting story.
+    It told a most interesting story.
 
-    One about an administrative officer from India, a man who spent his wars pushing paper about.
+    One about an administrative officer from India.
 
-    I believe you recognise whose story this is, Captain.
+    A man who spent his war pushing paper about.
+
+    I believe you recognise the subject of this story, Captain.
 
     Yet here you are, entertaining the table with tales of Burma and the Boxers as though you had fought in them yourself.
     """
 
     broken """
-    But the true sting of it, Captain, lay in the final page.
+    But that was not the letter's true revelation.
 
-    Owing to a blatant failure of communication, a column was sent up an open ridge in the autumn of '17.
+    No, it also stated that due to a blatant failure of communication, a column was sent up an open ridge in the autumn of '17.
 
-    Three hundred men were cut down in the space of an afternoon, and many more gravely wounded.
+    Three hundred men were cut down in the space of an afternoon.
 
-    Some were left so disfigured that they must wear masks such as this for the rest of their days.
+    Many more were gravely wounded.
+
+    Some were left so disfigured they must wear masks such as this for the rest of their days.
     """
 
     """
@@ -243,63 +257,77 @@ label captain_day2_hunt_moody_alive:
     broken """
     Their lives were ruined forever.
 
-    And the letter was careful to note who signed the wrong order.
+    And the letter was careful to note the name of the man who signed the fatal order.
 
     You shall not be surprised to learn it was you, Captain.
 
-    So many innocent victims, because of your incompetence.
+    So many innocent souls, destroyed by your incompetence.
     """
 
     """
     My mouth is dry.
 
-    I have signed a great many papers in my time. Transfers, requisitions, routine dispatches.
+    I have signed a great many papers in my time.
+
+    Transfers, requisitions, routine dispatches.
 
     Most of them I could not recall if my life depended upon it.
 
-    Yet I cannot believe I am the man his letter describes.
+    Yet I cannot believe I am the man this letter describes.
 
     Amid all the horrors of those years, a sin of that magnitude would not have slipped my memory.
 
-    Whatever happened to him, I am not responsible. I am sure of that.
+    Whatever happened to him, I am not responsible.
+
+    I am certain of that.
     """
 
     captain """
-    That is a slander, Mr Moody.
+    That is a slander, sir.
 
     I have never sent men to their deaths by mistake.
 
-    I am in no way responsible for your... for your... condition.
+    I am in no way responsible for your... condition.
     """
 
     broken """
     You see, Captain, I am not Thomas Moody.
 
-    Thomas Moody was my brother.
+    Thomas was my brother.
 
-    He was one of the three hundred who went up that ridge, on orders you signed.
+    He was one of the three hundred who went up that ridge.
 
-    They say he fell gallantly. I take no comfort in it.
+    He did not survive.
 
-    Lady Claythorn invited him to the manor in recognition of his sacrifice. He was meant to be here today, in my place.
+    I was beside him that day.
 
-    He could not come, for reasons you can well imagine. So I came in his stead.
+    I lived, though I was left like this.
+
+    Lady Claythorn invited Thomas to the manor to honour his service, quite unaware he had perished.
+
+    He was meant to be here today.
+
+    He could not come, for reasons you can well imagine.
+
+    So I took his name, and came in his stead.
     """
 
     """
-    His voice does not rise. It does not have to.
+    His voice does not rise.
 
-    I search his eyes for a crack, for some sign of exaggeration, and find none.
+    It does not need to.
+
+    I search his eyes for a crack, for some sign of hesitation, and find none.
     """
 
     captain """
     Your brother.
 
-    Then what is your name, man?
+    Then what is your true name?
     """
 
     broken """
-    It does not matter now.
+    It hardly matters now.
     """
 
     $ broken_details.description_hidden.unlock('lie_mask')
@@ -309,7 +337,7 @@ label captain_day2_hunt_moody_alive:
     """
     He does not lower the rifle.
 
-    His gaze is resolute, heavy with a hatred.
+    His gaze is resolute, heavy with hatred.
 
     I see now there is nothing I can say that will change his mind.
     """
@@ -323,7 +351,7 @@ label captain_day2_hunt_moody_alive:
     broken """
     A letter in your room?
 
-    No, that was not me.
+    No, that was not my doing.
 
     Why would I have done something so foolish?
 
@@ -331,15 +359,15 @@ label captain_day2_hunt_moody_alive:
     """
 
     captain """
-    Then consider what its purpose is.
+    Then consider what its true purpose is.
 
     Someone here is manufacturing all of this.
 
-    He was likely hoping for precisely this to happen.
+    They were likely hoping for precisely this to happen.
 
-    You are being used to his end.
+    You are being used to their end.
 
-    And you are no safer than I.
+    And you are no safer than I am.
     """
 
     broken """
@@ -357,7 +385,9 @@ label captain_day2_hunt_moody_alive:
     broken """
     It is rather plain you never saw battle, Captain.
 
-    Well. This is as close as it gets.
+    Well.
+
+    This is as close as you shall ever get.
     """
 
     play sound gun
