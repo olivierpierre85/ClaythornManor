@@ -27,7 +27,7 @@ THREAD, locked shed image
   - [ ] Music, rethink music in kill by butler => there is two danger, so two changes might be needed
   - [ ] TODO: ADD info unlocks
     - [ ] LADY not independant, just incompetent? Rewrite text properly
-    - [ ] Not insist on Broken being a footman? => Conflict with his friend and brother? Add a way to reveal full story from Thomas Moody, lost of mask? (but then doctor conflict? Check) => If intuition, explain that problem is someone is trying to kill them. After killed DON't mention the mask so doctor can still have the reveal. But how to explain Broken back story without revealing 1 NAME and 2 Mask? **"You see I am not Thomas Moody's, he was my brother, and he is dead now, because of you. He died heroicaly. He was supposed to be here, but cou" What is your name then? "It doesn't matter now, "** => REAL unlock of Thomas Moody. BUT for that, you need intuition?
+    - [ ] NO unlock for Thomas Moody ? Or find something else? => add the single thing?
 - [ ] Saturday evening
   - [ ] **Major confrontation** -You need to have all suspicion (so you held your tongue in moody's death path) so now you can accuse the host in front of everybody. First, send the butler to accompany Sam Manning => then isolated everyone the a room, the tea room, close the door. Big reveal discussion about link between everyone => Is everyone really an impostor, or something else? In the end, everyone burned down? No the butler might kill one person, but not everyone? => If good choice => unlock intuition that will unlock Thomas moody.
   - Add and validate tests

@@ -17,7 +17,6 @@ graph TD;
     doctor -->|Escape| broken;
     nurse -->|Not a fighter| captain;
     nurse -->|SOMETHING| drunk;
-    captain -->|Is not who he is | broken;
     captain -->|is not nobility| host;
     captain -->|SOMETHING| drunk;
     broken -->|Name of employer| host;

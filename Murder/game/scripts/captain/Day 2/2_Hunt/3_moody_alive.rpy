@@ -231,33 +231,31 @@ label captain_day2_hunt_moody_alive:
 
     The order was to send men to take a vaguely strategic position in Flanders.
 
-    There must have been thousands of such orders issued during the war.
-
     At first, I did not understand what it was doing here.
 
-    Then I recognised the date.
+    There must have been thousands of such orders issued during the war.
 
-    It is a date that will remain engraved in my memory for ever.
+    Then I recognised the name of the company that received the order: B Company, 2nd Battalion, Lancashire Fusiliers.
 
-    And the name of the company that received the order: B Company, 2nd Battalion, Lancashire Fusiliers.
+    And then I checked the date of the order.
+    
+    As I suspected, it is a date that will remain engraved in my memory for ever.
 
-    Hundreds of men were sent to take a small village of no importance.
+    And at the end of the order, the name of the man who signed the fatal order.
 
-    Most of them are dead by now.
+    Captain S. Sinha, Staff Officer, General Headquarters.
 
-    And the few survivors of that horrific day were not a lot luckier.
+    Hundreds of men were sent by your hand, to take a small village of no importance.
 
-    They are forced to go through life as living monsters, hiding behind a mask such as this.
+    Most of them, dead by now.
+
+    And the few survivors of that horrific day were not much luckier.
+
+    They were forced to go through life as living monsters, hiding behind a mask such as this.
     """
 
     """
     He taps the porcelain of his mask with two gloved fingers.
-    """
-
-    broken """
-    And at the end of the order, the name of the man who signed the fatal order.
-
-    Captain S. Sinha, Staff Officer, General Headquarters.
     """
 
     """
@@ -291,11 +289,11 @@ label captain_day2_hunt_moody_alive:
 
     Especially since I am now sure that you are not the war hero you claim.
 
-    I know a staff officer when I see one — never sees battle.
+    I know that a staff officer never sees battle.
 
-    You cannot even shoot a bird right under your nose.
+    It was obvious today, when you could not even shoot a bird right under your nose.
 
-    Yet here you are, entertaining the table with tales of Burma and the Boxers as though you had fought in them yourself.
+    Yet yesterday you were entertaining everyone with tales of Burma and the Boxers, as though you had fought in them yourself.
 
     You are a fraud, that is plain.
 
@@ -308,26 +306,10 @@ label captain_day2_hunt_moody_alive:
     He does not lower the rifle.
 
     His gaze is resolute, heavy with hatred.
-
-    I see now there is nothing I can say that will change his mind.
     """
 
     captain """
-    So I suppose you were the one who placed the letter in my room.
-
-    The one accusing me.
-    """
-
-    broken """
-    A letter in your room?
-
-    Why would I have done something so foolish?
-
-    It would only have tipped you off.
-    """
-
-    captain """
-    Then consider what its true purpose is.
+    Please, Mr Moody, consider what is at stake here.
 
     Someone here is manufacturing all of this.
 
