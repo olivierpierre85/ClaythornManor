@@ -1,0 +1,37 @@
+{
+  "start_label": "lad_day3_morning",
+  "unlocked_threads": ["day2_drunk", "trust_psychic"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Garage",
+      "redirect": "lad_day3_morning_garage"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Billiard Room",
+      "redirect": "lad_day3_morning_billiard_room"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Kitchen",
+      "redirect": "lad_day3_morning_kitchen"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Scullery",
+      "redirect": "lad_day3_morning_scullery"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Entrance Hall",
+      "redirect": "lad_day3_morning_entrance_hall"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Go wait for Sushil",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

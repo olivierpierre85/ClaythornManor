@@ -19,3 +19,7 @@ testsuite lad:
     testcase saturday_evening:
         python:
             test.run_chapter(lad_details, "saturday_evening", "lad_day2_evening")
+
+    testcase sunday_morning:
+        python:
+            test.run_chapter(lad_details, "sunday_morning", "lad_day3_morning")

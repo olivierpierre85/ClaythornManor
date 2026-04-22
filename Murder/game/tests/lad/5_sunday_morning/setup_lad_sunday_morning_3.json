@@ -1,0 +1,52 @@
+{
+  "start_label": "lad_day3_morning",
+  "unlocked_threads": ["trust_psychic"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Richard III Bedroom",
+      "redirect": "lad_day3_morning_bedroom_broken"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Lady Claythorn's Bedroom",
+      "redirect": "lad_day3_morning_bedroom_host"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Nurse's Bedroom",
+      "redirect": "lad_day3_morning_bedroom_nurse"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Amelia Baxter's Bedroom",
+      "redirect": "lad_day3_morning_bedroom_psychic"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Samuel Manning's Bedroom",
+      "redirect": "lad_day3_morning_bedroom_drunk"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Captain's Bedroom",
+      "redirect": "lad_day3_morning_bedroom_captain"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Doctor's Bedroom",
+      "redirect": "lad_day3_morning_bedroom_doctor"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Entrance Hall",
+      "redirect": "lad_day3_morning_entrance_hall"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Go wait for Sushil",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

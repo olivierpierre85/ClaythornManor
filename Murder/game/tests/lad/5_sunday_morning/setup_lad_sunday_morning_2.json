@@ -1,0 +1,32 @@
+{
+  "start_label": "lad_day3_morning",
+  "unlocked_threads": ["day2_drunk", "day1_drunk"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Billiard Room",
+      "redirect": "lad_day3_morning_billiard_room"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Gun Room",
+      "redirect": "lad_day3_morning_gun_room"
+    },
+    {
+      "menu": "lad_day3_morning_gun_room",
+      "selected": "Take the gun. It doesn't matter that I don't know how to use it",
+      "redirect": "lad_day3_take_gun"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Entrance Hall",
+      "redirect": "lad_day3_morning_entrance_hall"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Go wait for Sushil",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

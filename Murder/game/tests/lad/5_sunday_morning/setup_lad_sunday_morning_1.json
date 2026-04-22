@@ -1,0 +1,32 @@
+{
+  "start_label": "lad_day3_morning",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Garage",
+      "redirect": "lad_day3_morning_garage"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Gun Room",
+      "redirect": "lad_day3_morning_gun_room"
+    },
+    {
+      "menu": "lad_day3_morning_gun_room",
+      "selected": "Don't take the gun. You might hurt yourself.",
+      "redirect": "lad_day3_no_gun"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Entrance Hall",
+      "redirect": "lad_day3_morning_entrance_hall"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Go wait for Sushil",
+      "redirect": "generic_cancel"
+    }
+  ]
+}
