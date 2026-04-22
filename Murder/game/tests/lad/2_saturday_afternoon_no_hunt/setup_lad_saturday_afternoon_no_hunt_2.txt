@@ -1,0 +1,110 @@
+Chapter: No Hunt
+Character: Ted Harring
+I turned down the invitation for the hunt.
+So, I'm staying inside with Amelia Baxter and Rosalind Marsh.
+They are in the tea room, waiting for a small luncheon to be served.
+Now, what should I do?
+Map Choice: Kitchen
+I am on my way to the basement when a young maid stops me.
+Young woman: Hello Sir, may I help you?
+Ted Harring: Oh, don't mind me. I'm just taking a look around.
+Young woman: I'm sorry, but the basement is off-limits to guests.
+Young woman: However, there are plenty of rooms upstairs that you can explore.
+Ted Harring: Of course, thank you.
+Map Choice: Library
+It's a very nice library. But what am I doing here?
+I can hardly read.
+There is an open book on a small table.
+"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
+Yeah, I'm not reading that.
+I should probably look elsewhere.
+Map Choice: Meet the others in the Tea Room
+Amelia Baxter and Rosalind Marsh are in the room.
+They're drinking tea and talking calmly.
+I join them.
+Rosalind Marsh: Oh Mr Harring, I'm glad you're here.
+Rosalind Marsh: Miss Baxter and I were discussing something quite fascinating.
+Rosalind Marsh: You should join us.
+Ted Harring: Of course, I'd be happy to chat with you for a bit.
+Ted Harring: What were you talking about?
+Rosalind Marsh: Miss Baxter was explaining that she can communicate with the dead.
+Ted Harring: Really? That's fascinating.
+Amelia Baxter: Yes, but so as not to bore Miss Marsh, I shall not go into the details again.
+Amelia Baxter: If you're interested, we can discuss it another time.
+Rosalind Marsh: Anyway, you mentioned being concerned about the man who died last night.
+Amelia Baxter: That is correct. I have a feeling there is something amiss about his death.
+Rosalind Marsh: What do you mean?
+Amelia Baxter: I sense his spirit, and it's restless. It's a sign of an unnatural death.
+Amelia Baxter: There is something amiss, I simply cannot tell what.
+Amelia Baxter: But I do not wish to alarm you.
+Amelia Baxter: It might be nothing.
+Amelia Baxter: In any case, we'll know more once the police arrive.
+Ted Harring: That's true. We're still waiting for them, right?
+Ted Harring: But Lady Claythorn left and didn't assign anyone to handle this matter?
+Amelia Baxter: Well, she has staff to manage such situations.
+Ted Harring: Ah, like the girl I encountered when I tried to go downstairs.
+Amelia Baxter: What were you attempting to do downstairs?
+Amelia Baxter: That area isn't somewhere we should wander into, Mr Harring.
+Amelia Baxter: Regardless, there are probably many staff members you haven't met yet.
+Amelia Baxter: Such a large house requires a sizable team.
+Amelia Baxter: So, don't worry. There will definitely be someone available to talk with the police.
+Rosalind Marsh: Indeed, and it might take a while for the police to get here.
+Rosalind Marsh: It's not a pressing emergency. They might not arrive until later this evening.
+It's creepy to realise there's a dead man upstairs.
+He's there in his bed, as if nothing happened.
+Strange.
+While we talk, someone enters the room.
+Young woman: I'm glad to find you all here.
+Young woman: I've prepared a light luncheon.
+Young woman: Would you like me to bring it over?
+Amelia Baxter: Thank you, Miss. That sounds wonderful.
+Amelia Baxter: But I must ask, did you cook it?
+Amelia Baxter: Aren't you the maid? I thought I saw you tidying my room earlier.
+Young woman: Well, ... the truth is, I am the cook. But I occasionally assist as a maid when needed.
+Amelia Baxter: A cook and a maid? That's quite the workload.
+Young woman: Don't be concerned for me. I can manage.
+Young woman: I'll fetch your meal now.
+She exits the room.
+Amelia Baxter: It seems worse than I initially thought. A cook who also acts as a maid.
+Amelia Baxter: That's rather unusual.
+Miss Marsh and I stay silent.
+Perhaps she knows as little as I do about the workings of this household.
+Or she might be refraining from criticising our host.
+After a moment, the cook returns with our food, and we enjoy a light chat while dining.
+Once we're done, Rosalind Marsh stands up.
+Rosalind Marsh: That was delightful.
+Rosalind Marsh: If you'll excuse me, I need to rest in my room for a bit.
+Rosalind Marsh: The storm kept me awake most of the night.
+Amelia Baxter: Certainly, we understand.
+Amelia Baxter: See you later.
+Rosalind Marsh leaves the tea room.
+I'm left with Amelia Baxter.
+Amelia Baxter: It seems it's just you and me, Mr Harring.
+Menu Choice: You don't have anymore questions for her
+Map Choice: Richard III Bedroom
+I slowly enter through the unlocked door.
+It's Thomas Moody's.
+His lifeless body lies on the bed.
+I don't know what morbid curiosity led me here.
+Good grief.
+Now that I am here, perhaps I should take a quick look.
+There might be something that helps me understand what happened.
+I look around the room.
+Nothing seems out of the ordinary.
+He looks peaceful.
+His mask is still in place.
+The doctor didn't even remove it for the examination.
+Well, if the doctor didn't, I certainly won't either.
+On a chair beside the bed, his clothes are meticulously folded.
+There is a flask on the nightstand.
+It lies on its side, empty.
+Next to it is a stain.
+I suppose it is whisky, but it has an odd shade of green.
+That is peculiar.
+What could it be?
+That's all I notice in the room.
+Map Choice: Take a nap until the others return
+I don't think there's anything interesting to do now.
+So, I'll just lie down on my bed for a while.
+Suddenly, I hear noises from the entrance hall.
+I decide to see what's happening.

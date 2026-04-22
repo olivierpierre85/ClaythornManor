@@ -1,0 +1,141 @@
+Chapter: Final Decisions
+Character: Ted Harring
+We stayed in the tea room and gathered our strength while Sushil Sinha kept searching the manor.
+When he returned, we had started to feel a bit better.
+Sushil Sinha: I believe I've looked absolutely everywhere now.
+Sushil Sinha: There is no trace of anyone.
+Sushil Sinha: I also tried to use the telephone, and it's not working.
+Sushil Sinha: Thus, there is no way for us to call for help.
+Sushil Sinha: The way I see it now, we don't have many options left.
+Sushil Sinha: I believe we must leave this place.
+Sushil Sinha: The longer we stay, the more at risk we are.
+Amelia Baxter: But... shouldn't we wait for the police?
+Amelia Baxter: They were expected today. They could arrive any moment.
+Sushil Sinha: I wouldn't count on it.
+Sushil Sinha: From what I gather, there's no evidence that the police were called yesterday.
+Amelia Baxter: But Miss Claythorn said...
+Amelia Baxter: She said...
+She stops mid-sentence, realising the implication.
+Amelia Baxter: I see, you believe she never called.
+Amelia Baxter: That the police have no idea about what's happened here.
+Amelia Baxter: That she lied to us.
+Sushil Sinha: That's the most logical explanation.
+Sushil Sinha: No one was around when the telephone calls were supposedly made.
+Sushil Sinha: So, there's no way to verify if they actually happened.
+Ted Harring: But why?
+Ted Harring: Why would anyone do this?
+Ted Harring: I don't understand what's happening.
+Sushil Sinha: Neither do I.
+Sushil Sinha: I've thought about it, and I have no clue why we were all invited here.
+Sushil Sinha: I'm certain it wasn't to give us any money.
+Sushil Sinha: In any case, all I know is we need to leave as soon as possible.
+Amelia Baxter: But how could we leave?
+Amelia Baxter: The nearest town is miles away.
+Amelia Baxter: I can't walk that far.
+Amelia Baxter: And even if I could, I'm not prepared for such a journey.
+Captain Sinha and I consider this for a moment.
+Sushil Sinha: You might be right.
+Sushil Sinha: It would be a long walk, and the weather might turn at any moment.
+Sushil Sinha: We could get caught in another storm.
+Sushil Sinha: It's probably unsafe for you to join us.
+Amelia Baxter: But you're not going to leave me here alone, are you?
+Amelia Baxter: What would become of me?
+Sushil Sinha: We could lock you in a room.
+Sushil Sinha: Though, that's far from ideal.
+Sushil Sinha: Perhaps one of us should stay with you.
+Amelia Baxter: Yes!
+Amelia Baxter: Mr Harring can stay with me, right?
+Amelia Baxter: The two of us should be safe until you return with help.
+Sushil Sinha: That seems to be the wisest choice.
+Sushil Sinha: What do you think, Mr Harring?
+Menu Choice: Stay here with Amelia Baxter
+I don't feel comfortable leaving Amelia Baxter alone here.
+And in any case, I don't like the idea of being alone with this guy in the forest.
+For all we know, he might very well be the killer.
+Miss Baxter doesn't seem to trust him either.
+So I figure it's best for us to stay here and be on our guard.
+If we're lucky, the captain will return with reinforcements, and everything will be fine.
+Ted Harring: I think I should stay here.
+Amelia Baxter: Yes! Thank you, Mr Harring.
+Sushil Sinha: It's decided then, I'll go alone.
+Sushil Sinha: And there is no time to lose, so I better leave immediately.
+Amelia Baxter: Good thinking. And don't worry about us, we'll be fine here.
+Amelia Baxter: Be careful.
+Ted Harring: Good luck, Captain.
+Sushil Sinha: Thank you both. I will be back soon.
+We watched him leave the room, and I can sense relief in Miss Baxter's eyes.
+As soon as Captain Sinha is out of sight, she stands up.
+Amelia Baxter: Well, there's no point in waiting around doing nothing.
+Amelia Baxter: We haven't eaten since yesterday.
+Amelia Baxter: I could check the kitchen to see if there's anything I can prepare.
+Ted Harring: Okay, I'll come with you.
+We are heading to the lower floor when we hear a shout.
+Rosalind Marsh: Hello!
+Rosalind Marsh: Is there someone here?
+Amelia Baxter: Oh my God, Miss Marsh, you're here!
+Rosalind Marsh: Of course I am here. Why do you look so surprised?
+Rosalind Marsh: I'm afraid I overslept. I don't feel quite like myself today.
+Rosalind Marsh: When I woke up, I went to check the dining room but found it empty.
+Rosalind Marsh: I wandered in the house for a while but I didn't see anyone until I met you.
+Rosalind Marsh: Where is everybody?
+Amelia Baxter: Oh my dear, we don't know.
+We updated her on what happened since this morning.
+When we had finished telling her the story, she remained relatively calm, considering the situation.
+Rosalind Marsh: Poor Mr Manning, what a terrible fate.
+Rosalind Marsh: And what horror that must have been for you, my dear.
+Rosalind Marsh: Are you all right?
+Amelia Baxter: I am better now.
+Amelia Baxter: Captain Sinha should be back with help soon, so I'll be fine if I can keep my mind occupied until then.
+Amelia Baxter: Speaking of which, we were heading to the kitchen to see if we can prepare some sort of meal.
+Rosalind Marsh: Right, it's a good idea. We might as well keep ourselves busy.
+And just like that, we go downstairs to the kitchen.
+We look around for something to eat.
+Amelia Baxter: There isn't much.
+Amelia Baxter: But I think we can manage a light luncheon if you're not picky.
+Rosalind Marsh: I'll help you.
+I offer to help as well, but they decline.
+So, I take a seat while they prepare the food.
+That's probably for the best.
+I couldn't do much to help anyway.
+When everything is ready, I carry the plates to the dining room.
+I set them at our usual places.
+Then I leave the dining room.
+Amelia Baxter: Where are you going, Mr Harring?
+Amelia Baxter: It's better if we stick together at all times.
+Ted Harring: I understand, but there's something I need to do alone.
+Ted Harring: We haven't had a moment apart the entire day and...
+Amelia Baxter: Say no more, I understand.
+Amelia Baxter: I'm in the same situation.
+Amelia Baxter: What about you, Miss Marsh?
+Rosalind Marsh: Oh, I'm fine, thank you.
+Rosalind Marsh: You both go, I'll finish preparing the table.
+Amelia Baxter: Very well.
+Amelia Baxter: Let's meet back here in a few minutes then.
+Ted Harring: Of course.
+I accompany Miss Baxter to her room.
+Amelia Baxter: This is where we part.
+Amelia Baxter: We'll meet again in the dining room in a few minutes.
+Ted Harring: Alright, see you soon.
+After seeing her enter her room, I head to mine.
+As I walk down the hallway, I constantly look around.
+It feels like someone might jump out at me any moment.
+Once I reached my room, I try not to waste any time.
+First things first, I spend a penny.
+Once I'm done, I rush back as quickly as possible, nearly running down the stairs.
+Rosalind Marsh is already at her place.
+I sat down at my seat.
+When Miss Baxter comes back, we start eating in silence.
+There's not much we want to discuss.
+After finishing my meal, I offer to help her with the dishes.
+Not that it really matters now.
+It's just something to do while we wait.
+But as soon as I stand up, I realise I can't stay on my feet.
+My head spins, and I feel faint.
+Ted Harring: What's happening?
+Ted Harring: Why am I...
+I try to speak further, but no words come out.
+I collapse to the ground.
+You lay on the floor, saliva dripping from your mouth.
+Whatever poison you ingested is now coursing through your veins.
+Let this be a lesson to you.
+Never trust anyone.

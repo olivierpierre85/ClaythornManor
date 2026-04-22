@@ -236,7 +236,7 @@ label lad_day2_no_hunt_bedroom_captain:
 
     call lad_bedroom_default
 
-    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_captain', 'lad_day2_no_hunt_default_room_locked', enter_duration=20)
+    call lad_day2_no_hunt_bedroom_try_enter('lad_day2_no_hunt_bedroom_captain', 'lad_day2_no_hunt_bedroom_captain_enter', enter_duration=20)
 
     return
 

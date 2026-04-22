@@ -1,0 +1,120 @@
+Chapter: Final Decisions
+Character: Ted Harring
+We stayed in the tea room and gathered our strength while Sushil Sinha kept searching the manor.
+When he returned, we had started to feel a bit better.
+Sushil Sinha: I believe I've looked absolutely everywhere now.
+Sushil Sinha: There is no trace of anyone.
+Sushil Sinha: I also tried to use the telephone, and it's not working.
+Sushil Sinha: Thus, there is no way for us to call for help.
+Sushil Sinha: The way I see it now, we don't have many options left.
+Sushil Sinha: I believe we must leave this place.
+Sushil Sinha: The longer we stay, the more at risk we are.
+Amelia Baxter: But... shouldn't we wait for the police?
+Amelia Baxter: They were expected today. They could arrive any moment.
+Sushil Sinha: I wouldn't count on it.
+Sushil Sinha: From what I gather, there's no evidence that the police were called yesterday.
+Amelia Baxter: But Miss Claythorn said...
+Amelia Baxter: She said...
+She stops mid-sentence, realising the implication.
+Amelia Baxter: I see, you believe she never called.
+Amelia Baxter: That the police have no idea about what's happened here.
+Amelia Baxter: That she lied to us.
+Sushil Sinha: That's the most logical explanation.
+Sushil Sinha: No one was around when the telephone calls were supposedly made.
+Sushil Sinha: So, there's no way to verify if they actually happened.
+Ted Harring: But why?
+Ted Harring: Why would anyone do this?
+Ted Harring: I don't understand what's happening.
+Sushil Sinha: Neither do I.
+Sushil Sinha: I've thought about it, and I have no clue why we were all invited here.
+Sushil Sinha: I'm certain it wasn't to give us any money.
+Sushil Sinha: In any case, all I know is we need to leave as soon as possible.
+Amelia Baxter: But how could we leave?
+Amelia Baxter: The nearest town is miles away.
+Amelia Baxter: I can't walk that far.
+Amelia Baxter: And even if I could, I'm not prepared for such a journey.
+Captain Sinha and I consider this for a moment.
+Sushil Sinha: You might be right.
+Sushil Sinha: It would be a long walk, and the weather might turn at any moment.
+Sushil Sinha: We could get caught in another storm.
+Sushil Sinha: It's probably unsafe for you to join us.
+Amelia Baxter: But you're not going to leave me here alone, are you?
+Amelia Baxter: What would become of me?
+Sushil Sinha: We could lock you in a room.
+Sushil Sinha: Though, that's far from ideal.
+Sushil Sinha: Perhaps one of us should stay with you.
+Amelia Baxter: Yes!
+Amelia Baxter: Mr Harring can stay with me, right?
+Amelia Baxter: The two of us should be safe until you return with help.
+Sushil Sinha: That seems to be the wisest choice.
+Sushil Sinha: What do you think, Mr Harring?
+Menu Choice: Follow Sushil Sinha. Amelia Baxter will probably be fine on her own
+Ted Harring: I think I should come with you.
+Ted Harring: It would be safer for both of us.
+Ted Harring: We don't know what's outside.
+Sushil Sinha: Alright, that's settled then.
+Amelia Baxter: What?!
+Amelia Baxter: You can't abandon me here!
+Amelia Baxter: There's a killer in this house.
+Amelia Baxter: When you come back, I might be dead.
+Sushil Sinha: There's no need to be so dramatic.
+Sushil Sinha: If you lock yourself in your room, you'll likely be safe.
+Amelia Baxter: Really? Like Mr Manning was safe?
+Sushil Sinha: That's different. Samuel Manning didn't expect anyone would come for him.
+Sushil Sinha: He was probably killed in his sleep.
+Sushil Sinha: Or maybe he took his own life.
+Sushil Sinha: For you, it'll be different. You'll be on your guard.
+Amelia Baxter: What good will that do when someone breaks down my door?
+He ponders this for a second.
+Sushil Sinha: Right. You might need a gun to defend yourself.
+Sushil Sinha: Here, take this one.
+He hands her a small gun.
+Amelia Baxter: But... I don't know how to use this!
+Sushil Sinha: It's simple. If someone breaks down your bedroom door, just point it at them and press the trigger.
+Sushil Sinha: That's all there is to it.
+Amelia Baxter: I don't know if I can do that, I...
+Sushil Sinha: I know you can.
+Sushil Sinha: Now, go to your room and lock the door.
+Sushil Sinha: Maybe even move some furniture in front of it.
+Sushil Sinha: If anyone other than us tries to enter, shoot them.
+Sushil Sinha: Understood?
+Amelia Baxter is visibly terrified.
+But the natural authority of Sushil Sinha makes her nod in agreement.
+Sushil Sinha: Good.
+Sushil Sinha: We'll leave you for now. Time is of the essence.
+Sushil Sinha: But we will come back for you, I promise.
+Without waiting for a reply, he gestures for me to follow him to the entrance hall.
+Sushil Sinha: Let's go, Mr Harring. The sooner, the better.
+We leave Amelia Baxter behind and exit the manor.
+Sushil Sinha: It was rather ungentlemanly to leave her alone like that.
+Sushil Sinha: But I understand. I wouldn't want to remain in this house any longer than necessary either.
+He says he understands, but his expression suggests disapproval.
+He likely would have preferred if I stayed in the house.
+Sushil Sinha: In any case, this won't be an easy journey.
+Sushil Sinha: The roads are probably still muddy, and if I recall correctly, the distance to the next house is at least 10 miles.
+Sushil Sinha: Maybe even more.
+Sushil Sinha: It will likely take us a few hours on the road.
+With that, he begins moving towards the exit gate.
+We had been walking for about an hour when he stops.
+Ted Harring: Is something wrong?
+Sushil Sinha: I don't know, you tell me.
+He takes out a gun from his back pocket and points it at me.
+Ted Harring: What the hell?!
+Sushil Sinha: Oh, don't act so surprised.
+Sushil Sinha: Did you really think you fooled me?
+Sushil Sinha: I spotted the gun in your pocket this morning.
+Sushil Sinha: If you were waiting for a chance to catch me off-guard, you're in for a disappointment.
+Ted Harring: No! That's not what I planned, it's ...
+He fires at me.
+He misses.
+For the first time, he looks panicked.
+I reach for the gun in my pocket.
+Pointing it at him, I pull the trigger.
+But then realise it's empty.
+Well, you're dead.
+Shot to death.
+And no explanation was given.
+If you feel you're owed one, think again.
+Why would someone explain to their victims why they're being killed?
+It wouldn't make sense.
+If you want a clearer understanding, you'll have to seek it out yourself.
