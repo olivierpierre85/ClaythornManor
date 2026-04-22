@@ -303,6 +303,10 @@ label captain_day2_hunt_silent_luncheon:
 # --------------------------------------------
 label captain_day2_hunt_confront_host:
 
+
+    $ play_music('mysterious', 3, fadeout_val=4)
+
+
     """
     I set down my cup with deliberate care and allow the rifle to rest within easier reach.
     """
@@ -320,7 +324,7 @@ label captain_day2_hunt_confront_host:
     """
 
     captain """
-    I notice a lot of things that do not make sense this weekend:
+    I noticed a lot of things that do not make sense this weekend:
 
     Your portrait is nowhere in the gallery.
 
@@ -419,8 +423,6 @@ label captain_day2_hunt_confront_host:
     You must have heard it when you were presented at court.
     """
 
-    $ play_music('danger', 2, fadeout_val=4)
-
     """
     She prepares to answer, but cannot find the words.
 
@@ -502,7 +504,7 @@ label captain_day2_hunt_confront_host:
     """
     I lift the rifle and level it at her.
 
-    Not aiming, precisely. Simply making it plain that, at this small clearing, I am the one asking the questions.
+    Not aiming, precisely. Simply making it plain that I am the one asking the questions.
 
     Her eyes widen. She sets her cup down with a slow, careful hand.
     """
@@ -517,13 +519,18 @@ label captain_day2_hunt_confront_host:
     I want to know everything.
     """
 
+    $ play_music('danger', 2, fadein_val=1)
+
+
     """
     She opens her mouth to answer.
-
-    A twig snaps behind me.
     """
 
-    $ stop_music(1)
+    play sound twig
+
+    """
+    A twig snaps behind me.
+    """
 
     pause 1.0
 
