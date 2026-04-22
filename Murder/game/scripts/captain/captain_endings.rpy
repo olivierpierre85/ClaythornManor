@@ -30,11 +30,11 @@ label captain_ending_shot_in_woods:
     call death_screen_transition
 
     """
-    You were led into the woods by a man who had cultivated a deep hatred for you.
+    You were led into the woods by a man who suspected of wishing you harm.
 
     You knew the danger, yet good manners compelled you to proceed regardless.
 
-    It is curious how the fear of causing a scene can prove stronger than any other.
+    It is curious how the fear of causing a scene is sometimes stronger than any other.
     """
 
     jump ending_generic

@@ -98,8 +98,6 @@ label captain_day2_hunt_moody_alive:
 
     broken """
     Hard luck, Captain. Hard luck indeed.
-
-    Though I confess I had expected rather better of a decorated officer.
     """
 
     captain """
@@ -239,7 +237,7 @@ label captain_day2_hunt_moody_alive:
 
     And then I checked the date of the order.
     
-    As I suspected, it is a date that will remain engraved in my memory for ever.
+    It was a date that will remain engraved in my memory for ever.
 
     And at the end of the order, the name of the man who signed the fatal order.
 
