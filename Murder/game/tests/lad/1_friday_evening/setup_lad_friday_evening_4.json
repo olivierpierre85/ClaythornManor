@@ -1,0 +1,37 @@
+{
+  "start_label": "lad_day1_evening",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_introduction",
+      "selected": "Stand awkwardly in the corner",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day1_evening",
+      "selected": "Eat in silence, like a sociopath",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "selected": "Meet the others in the billiard room",
+      "redirect": "lad_day1_evening_billiard_room"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Go to the bar to have a drink",
+      "redirect": "lad_day1_evening_billiard_room_bar_1"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "lad_day1_evening_billiard_room_cancel"
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "selected": "Go to sleep",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

@@ -38,7 +38,7 @@ However, the first part of the plan is that her love does not show up. Someone e
 
 ### The Lad (Ted Harring)
 Born in 1902 (22 in 1924), he was abandoned at birth and raised in an orphanage. 
-At the age of approximately 12 to 14, he was adopted by an upper-middle-class family with one boy his age, Archibald. They quickly became best friends.
+At the age of approximately 12 to 14,
 
 However, upon reaching the age of 18, and without a good education, he left and began a life as a thief in Birmingham.
 
@@ -88,6 +88,7 @@ He is supposed to be the young officer whom the Psychic loved, invited for his s
 However, it turns out that the officer is dead (or perhaps Thomas killed him or stole from him), and a friend saw the invitation made in his name. That is why he stole the papers and put on a mask in case anyone was supposed to recognise him (which turned out to be unnecessary).
 Upon his arrival at the manor, the Psychic quickly realises he is not the right person, so she poisons his drink immediately.
 He is an amateur sleuth and is skilled at interrogation; he can sneak into certain places.
+MOODY and ARCHIE WERE war buddies, both officers.
 
 ### The Host - Lady Claythorn (OR ????)
 An out-of-work actress, she stole the job that the Psychic wanted some years ago. It is not a revenge as strong as the others, but as they say, 'you cannot make an omelette without breaking eggs.'

@@ -1,0 +1,22 @@
+{
+  "start_label": "lad_day2_morning",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_morning_follow",
+      "selected": "Stay there and finish the most important meal of the day",
+      "redirect": "lad_day2_breakfast_eat"
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day2_morning_hunt",
+      "selected": "Stay here where it's cosy",
+      "redirect": "lad_day2_no_hunt_choice"
+    }
+  ]
+}

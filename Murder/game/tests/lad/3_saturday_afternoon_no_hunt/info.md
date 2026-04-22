@@ -30,3 +30,27 @@ Covers intro narration and `lad_day2_no_hunt_cancel`.
 - Drunk bedroom: Ted enters, finds the burned letter. Unlocks `burned_letter`.
 - Kitchen: second downstairs attempt — maid stops Ted again, unlocks `downstairs_2`.
 - Nap to end the chapter.
+
+---
+
+## setup_lad_saturday_afternoon_no_hunt_4.json
+**Checkpoint**: downstairs_1=True, has_met_maid=True, day2_breakfast_follow=True,
+day2_nohunt_has_visited_tea_room=True  
+**Path**: Nurse busy → Psychic try-enter (locked) → Host try-enter (locked) → Broken back-visit
+→ Garden → Nap.
+- Covers `lad_day2_no_hunt_bedroom_nurse_busy` (post-tea-room nurse visit).
+- Covers `lad_day2_no_hunt_default_room_locked` (the "I try to push the door open. It's
+  locked." line shared by every locked bedroom).
+- Covers the broken bedroom back-visit branch (`day2_breakfast_follow=True`).
+- Covers `lad_garden_default` via the no-hunt Garden choice.
+
+---
+
+## setup_lad_saturday_afternoon_no_hunt_5.json
+**Checkpoint**: all flags False (fresh chapter)  
+**Path**: Tea Room first (no kitchen visit, so `has_met_maid=False`) → Library twice (first +
+back-visit) → Portrait Gallery twice → Billiard Room → Dining Room → Entrance Hall → Nap.
+- Covers the tea room else-branch (`Aren't they all out on the hunt?`).
+- Covers `lad_library_default` second-visit dialogue.
+- Covers `lad_portrait_gallery_default` second-visit dialogue.
+- Covers `lad_billiard_room_default`, `lad_dining_room_default`, `lad_entrance_hall_default`.

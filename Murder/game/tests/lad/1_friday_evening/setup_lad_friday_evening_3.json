@@ -1,0 +1,87 @@
+{
+  "start_label": "lad_day1_evening",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_introduction",
+      "selected": "Stand awkwardly in the corner",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day1_evening",
+      "selected": "Eat in silence, like a sociopath",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "selected": "Meet the others in the billiard room",
+      "redirect": "lad_day1_evening_billiard_room"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Talk to Daniel Baldwin",
+      "redirect": "lad_day1_evening_billiard_room_doctor"
+    },
+    {
+      "menu": "doctor_generic_menu_lad",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Ask the butler about Amelia's room",
+      "redirect": "lad_day1_evening_billiard_room_butler"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Approach the large group of people",
+      "redirect": "lad_day1_evening_billiard_room_group"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_group",
+      "selected": "I would rather do something else",
+      "redirect": "lad_day1_evening_billiard_group_cancel"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "lad_day1_evening_billiard_room_cancel"
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "selected": "Garden",
+      "redirect": "lad_day1_evening_garden"
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "selected": "Meet the others in the billiard room",
+      "redirect": "lad_day1_evening_billiard_room"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Go to the bar to have a drink",
+      "redirect": "lad_day1_evening_billiard_room_bar_1"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Have another drink",
+      "redirect": "lad_day1_evening_billiard_room_bar_2"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Maybe one last drink",
+      "redirect": "lad_day1_evening_billiard_room_bar_3"
+    },
+    {
+      "menu": "lad_day1_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "lad_day1_evening_billiard_room_cancel"
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "selected": "Go to sleep",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

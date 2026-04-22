@@ -1,0 +1,47 @@
+{
+  "start_label": "lad_day3_morning",
+  "unlocked_threads": ["trust_psychic"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Library",
+      "redirect": "lad_day3_morning_library"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Dining Room",
+      "redirect": "lad_day3_morning_dining_room"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Garden",
+      "redirect": "lad_day3_morning_garden"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Portrait Gallery",
+      "redirect": "lad_day3_morning_portrait_gallery"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Tea room",
+      "redirect": "lad_day3_morning_tea_room"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "William the Conqueror Bedroom",
+      "redirect": "lad_day3_morning_bedroom_lad"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Entrance Hall",
+      "redirect": "lad_day3_morning_entrance_hall"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Go wait for Sushil",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

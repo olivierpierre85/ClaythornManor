@@ -1,0 +1,17 @@
+{
+  "start_label": "lad_day2_morning",
+  "unlocked_threads": ["day1_drunk"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_morning_follow",
+      "selected": "Follow them",
+      "redirect": "common_day2_breakfast_follow_doctor_lad_host"
+    },
+    {
+      "menu": "lad_day2_morning_hunt",
+      "selected": "Go on the hunt and risk to embarrass yourself, or worse",
+      "redirect": "lad_day2_hunt_choice"
+    }
+  ]
+}

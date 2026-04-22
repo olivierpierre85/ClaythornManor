@@ -1,0 +1,37 @@
+{
+  "start_label": "lad_day2_evening",
+  "unlocked_threads": ["hunt", "hunt_captain_host", "whisky", "green_liquid"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Check if there is someone in the Billiard Room",
+      "redirect": "lad_day2_evening_billiard_room"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Talk to Sushil Sinha",
+      "redirect": "lad_day2_evening_billiard_room_captain"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_captain_hypothesis_menu",
+      "selected": "Point out the strange liquid on Thomas Moody's room{{observation}}",
+      "redirect": "lad_day2_evening_billiard_room_captain_hypothesis_broken"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_captain_hypothesis_menu",
+      "selected": "Accept you don't have any real suspicions",
+      "redirect": "lad_day2_evening_billiard_room_captain_hypothesis_cancel"
+    },
+    {
+      "menu": "lad_day2_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Go to sleep and hope for the best.",
+      "redirect": "lad_day2_evening_sleep"
+    }
+  ]
+}

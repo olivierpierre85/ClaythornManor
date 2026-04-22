@@ -75,3 +75,24 @@ the no-hunt investigation threads.
 **Path**: Billiard room (4 drinks → `day2_drunk`) → sleep  
 - Covers the drunk-evening path on the no-hunt route.  
 - End-of-chapter: `day2_drunk + day1_drunk` branch unlocks `poor_drinker`.
+
+---
+
+## setup_lad_saturday_evening_9.json
+**Checkpoint**: hunt=True, hunt_captain_host=True  
+**Path**: Garden → Captain bedroom (locked stay-away) → Nurse bedroom → Drunk bedroom →
+Billiard (Sushil hypothesis cancel) → leave → Billiard back-visit (Sushil "again" cancel) →
+leave → sleep.
+- Covers `lad_day2_evening_garden`, `lad_bedroom_stay_away_day2` (third "too risky" line),
+  `lad_day2_evening_bedroom_nurse`, `lad_day2_evening_bedroom_drunk`,
+  `lad_day2_evening_billiard_room` back-visit narration ("I am back in the billiard room.")
+  and `lad_day2_evening_billiard_room_captain_2`.
+
+---
+
+## setup_lad_saturday_evening_10.json
+**Checkpoint**: hunt=True, hunt_captain_host=True, whisky=True, green_liquid=True  
+**Path**: Billiard → Sushil → broken-liquid hypothesis (whisky branch) → cancel → leave → sleep.
+- Covers the `whisky`-unlocked branch of
+  `lad_day2_evening_billiard_room_captain_hypothesis_broken` ("But the flask didn't contain
+  any of those alcohols. I tasted it, and it was just whisky. I'm certain of that.").

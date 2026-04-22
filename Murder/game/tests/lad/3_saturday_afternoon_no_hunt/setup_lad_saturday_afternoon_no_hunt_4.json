@@ -1,0 +1,51 @@
+{
+  "start_label": "lad_day2_no_hunt",
+  "unlocked_threads": ["downstairs_1"],
+  "saved_variables": {
+    "has_met_maid": true,
+    "day2_breakfast_follow": true,
+    "day2_nohunt_has_visited_tea_room": true
+  },
+  "choices": [
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Queen Alexandra",
+      "redirect": "lad_day2_no_hunt_bedroom_nurse_busy"
+    },
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Edward II Bedroom",
+      "redirect": "lad_day2_no_hunt_bedroom_psychic"
+    },
+    {
+      "menu": "lad_day2_no_hunt_bedroom_psychic",
+      "selected": "Let's go in. What's the worst that could happen?",
+      "redirect": "lad_day2_no_hunt_default_room_locked"
+    },
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Henry IV Bedroom",
+      "redirect": "lad_day2_no_hunt_bedroom_host"
+    },
+    {
+      "menu": "lad_day2_no_hunt_bedroom_host",
+      "selected": "It won't hurt to give it a try. Let's go in and find out.",
+      "redirect": "lad_day2_no_hunt_default_room_locked"
+    },
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Richard III Bedroom",
+      "redirect": "lad_day2_bedroom_broken"
+    },
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Garden",
+      "redirect": "lad_day2_no_hunt_garden"
+    },
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Take a nap until the others return",
+      "redirect": "lad_day2_no_hunt_cancel"
+    }
+  ]
+}
