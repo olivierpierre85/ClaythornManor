@@ -1,0 +1,549 @@
+Generated:                2026-04-22 15:06:37
+Scope:                    character=lad
+Dialogue entries scanned: 1990
+Test lines collected:     2536
+Covered:                  1494
+Missing:                  496
+
+  game/scripts/_common/Day 2/1_Morning/1_main.rpy  (54 missing)
+    [common_day2_morning_host_death_788fab01] Suddenly, Lady Claythorn and the butler are back in the room.
+    [common_day2_morning_host_death_f0318b3b] Lady Claythorn, what is happening?
+    [common_day2_morning_host_death_8b160ed9] The lady is visibly distressed.
+    [common_day2_morning_host_death_a5bd97f0] I'm sorry to announce such horrible news, everyone.
+    [common_day2_morning_host_death_98cbccba] It appears that Mr Moody passed away in his sleep last night.
+    [common_day2_morning_host_death_8684730e] The room instantly falls silent.
+    [common_day2_morning_host_death_32268fe4] Do we know what happened?
+    [common_day2_morning_host_death_082d5f9f] Doctor Baldwin is examining him right now.
+    [common_day2_morning_host_death_29ab908c] He will likely tell us more later.
+    [common_day2_morning_host_death_245e865b] She then sits down in her chair.
+    [common_day2_morning_host_death_9ee81a4b] Everyone looks shaken up.
+    [common_day2_morning_host_death_a817f93e] How terrible.
+    [common_day2_morning_host_death_d854879c] Yes, such sad news.
+    [common_day2_morning_host_death_1693a62c] We continue eating slowly in silence for a moment when the doctor enters the room.
+    [common_day2_morning_host_death_doctor_fd055ac5] Doctor Baldwin, can you tell us more about what happened?
+    [common_day2_morning_host_death_doctor_68a0183e] I can't say anything definitive for now.
+    [common_day2_morning_host_death_doctor_2aca9fba] But it's very likely a natural death, possibly triggered by an old wound from the war.
+    [common_day2_morning_host_death_doctor_940efa62] In any case, we need to call the authorities.
+    [common_day2_morning_host_death_doctor_be994720] Yes, of course.
+    [common_day2_morning_host_death_doctor_92c6031b] My butler will take care of it.
+    [common_day2_morning_host_death_doctor_75df1622] We continue eating in a heavy silence.
+    [common_day2_morning_host_death_doctor_913c071b] Nobody speaks much.
+    [common_day2_morning_host_hunt_db7a5a70] Well, as I mentioned earlier, activities were planned for today.
+    [common_day2_morning_host_hunt_a6b31717] This morning, those who wished to were supposed to go on a hunt.
+    [common_day2_morning_host_hunt_3e3bc0b8] A sad event has happened, but it's not a reason to remain idle.
+    [common_day2_morning_host_hunt_ed09e8ce] So, if no one objects, I propose that we continue according to what was planned.
+    [common_day2_morning_host_hunt_367cabb6] A faint murmur of assent passes through the room.
+    [common_day2_morning_host_hunt_bca27853] Excellent.
+    [common_day2_morning_host_hunt_1c9dcb91] Everything is ready for those who wish to join the hunt.
+    [common_day2_morning_host_hunt_5d06ae5f] I know most of you are probably not accustomed to this type of event.
+    [common_day2_morning_host_hunt_70247bd5] That's why our staff can lend you everything you'll need—clothes, guns—and they will also assist you throug...
+    [common_day2_morning_host_hunt_100a3da4] Of course, you can choose to simply stay here.
+    [common_day2_morning_host_hunt_d57e16bd] You can relax and enjoy the warmth of the house until the others return.
+    [common_day2_morning_lad_psychic_e736902c] Hello, Mr Harring. How are you?
+    [common_day2_morning_lad_psychic_27572bd5] Very well, thank you.
+    [common_day2_morning_lad_psychic_aed14fe4] I was wondering if everyone would join us on time.
+    [common_day2_morning_lad_psychic_41f8c29d] There are still a few people missing.
+    [common_day2_morning_lad_psychic_6c8baac9] For instance, I don't think we'll see Mr Manning anytime soon.
+    [common_day2_morning_lad_psychic_69d4c3df] He was so drunk yesterday that I wouldn't be surprised if he doesn't show up before noon.
+    [common_day2_morning_lad_psychic_76d0c00f] Suddenly, Samuel Manning enters the room.
+    [common_day2_morning_lad_psychic_c0b12f13] He stumbles to the buffet table and takes up a plate, visibly shaking.
+    [common_day2_morning_lad_psychic_c5c727e5] Right after saying those words, Samuel Manning steps into the room.
+    [common_day2_morning_lad_psychic_eeba3b25] Displaying evident unease, he makes his way to the buffet and, with trembling hands, selects a plate.
+    [common_day2_morning_lad_psychic_f6c2de7a] He appears to still be drunk, or at least seriously hungover.
+    [common_day2_morning_lad_psychic_180738f0] Well, I spoke too soon. Here he is, and in such a state.
+    [common_day2_morning_lad_psychic_e72a9f66] How dreadful.
+    [common_day2_morning_lad_psychic_d3dcc391] At the same moment, the butler rushes into the room.
+    [common_day2_morning_lad_psychic_a98a7429] He goes to Lady Claythorn and murmurs something in her ear.
+    [common_day2_morning_lad_psychic_e6cb7582] I can tell it's not good news.
+    [common_day2_morning_lad_psychic_a1011e34] She looks shocked and worried.
+    [common_day2_morning_lad_psychic_c7543487] She rises and walks in my direction, then stops before the doctor.
+    [common_day2_morning_lad_psychic_6e7354cf] While I am watching Samuel Manning, the butler enters and discreetly shares a message with Lady Claythorn.
+    [common_day2_morning_lad_psychic_b5a43d0e] Her alarmed expression indicates the gravity of the news.
+    [common_day2_morning_lad_psychic_32c7abdc] Rising, she approaches, pausing only when she reaches the doctor.
+
+  game/scripts/_common/Day 2/2_Hunt/2_accident.rpy  (26 missing)
+    [common_day2_hunt_accident_death_69ff4253] A sharp pain irradiates through my stomach.
+    [common_day2_hunt_accident_death_b0b9d553] My legs give way and I fall to the ground.
+    [common_day2_hunt_accident_death_a0899d9b] I allowed myself a moment of distraction and he seized it.
+    [common_day2_hunt_accident_death_446acbb2] Bloody hell.
+    [common_day2_hunt_accident_death_0c763d10] Bloody hell, the fool has shot me.
+    [common_day2_hunt_accident_death_eddd49f7] He avoids my gaze, feigning remorse.
+    [common_day2_hunt_accident_death_b77f607e] Yet I can see the truth in his eyes.
+    [common_day2_hunt_accident_death_5930facf] He is delighted.
+    [common_day2_hunt_accident_death_c693ece7] I was a fool to let him anywhere near me.
+    [common_day2_hunt_accident_death_cd84b87b] He stands there trembling, shame washing over his face.
+    [common_day2_hunt_accident_death_d940585a] There is something else in his expression, yet I cannot place it.
+    [common_day2_hunt_accident_death_b5e2d618] But there is no time for that now.
+    [common_day2_hunt_accident_death_8ad45b92] I must act quickly.
+    [common_day2_hunt_accident_death_9ff9952e] I call out to Ted Harring.
+    [common_day2_hunt_accident_death_a9acfe06] The lad helps me remove my shirt as best he can, though he is shaking like a leaf.
+    [common_day2_hunt_accident_death_be6fecbd] I look down at the small, neat hole in my abdomen.
+    [common_day2_hunt_accident_death_5f45c6ca] Dark blood oozes slowly, thick and heavy.
+    [common_day2_hunt_accident_death_ba306ad9] The liver.
+    [common_day2_hunt_accident_death_3c1da7bb] Of all the places it could strike, it had to be the liver.
+    [common_day2_hunt_accident_death_735724c0] Damn it.
+    [common_day2_hunt_accident_death_e1a681ce] Filled with anger, I turn my eyes upon the man who has shot me.
+    [common_day2_hunt_accident_death_e83e3f87] But it doesn't matter now.
+    [common_day2_hunt_accident_death_14937ec3] Ted Harring speaks again.
+    [common_day2_hunt_accident_death_8e7663c7] He fumbles about, then places my bag into my hands.
+    [common_day2_hunt_accident_death_27071159] Time for one final indulgence.
+    [common_day2_hunt_accident_death_39fc1ce9] I take a few vials from my bag and drink them down as swiftly as I can manage.
+
+  game/scripts/_common/Day 2/3_Evening/2_lad_psychic_discussion.rpy  (1 missing)
+    [common_day2_evening_lad_psychic_discussion_0_6e281206] He nods in agreement.
+
+  game/scripts/_common/Day 3/1_Morning/2_lad_psychic_journey.rpy  (8 missing)
+    [common_day3_morning_lad_psychic_journey_9da43bc9] Finally, I was getting worried.
+    [common_day3_morning_lad_psychic_journey_f62c5e41] He opens the door for me and I enter.
+    [common_day3_morning_lad_psychic_journey_1b9b4748] He paused for a second there, he must have realised it's serious.
+    [common_day3_morning_lad_psychic_tea_room_1_9a322362] I respond without hesitation.
+    [common_day3_morning_lad_psychic_tea_room_1_ddbbd3e2] Yes, Ted Harring. I'm here, and Amelia Baxter's with me.
+    [common_day3_morning_lad_psychic_tea_room_1_9dc00038] Amelia stiffens. I sense her unease, perhaps thinking I replied too quickly.
+    [common_day3_morning_lad_psychic_tea_room_1_8b156097] It's too late for second thoughts now.
+    [common_day3_morning_lad_psychic_tea_room_1_050034cd] Captain Sinha soon joins us in the room.
+
+  game/scripts/_common/Day 3/1_Morning/3_lad_psychic_captain_meeting.rpy  (12 missing)
+    [common_day3_morning_meeting_captain_56cde512] There is an awkward silence.
+    [common_day3_morning_lad_psychic_captain_death_manning_cc018e17] Without warning, he opens the door and enters.
+    [common_day3_morning_lad_psychic_captain_death_manning_a3f39251] We quickly follow him, but he attempts to stop us.
+    [common_day3_morning_lad_psychic_captain_death_manning_51b25f47] But we are already in.
+    [common_day3_morning_lad_psychic_captain_death_manning_22d549f0] There lies Samuel Manning, dead in his bed.
+    [common_day3_morning_lad_psychic_captain_death_manning_bbddf92f] Blood is all over him.
+    [common_day3_morning_lad_psychic_captain_death_manning_d5ba0145] I let out a gasp.
+    [common_day3_morning_lad_psychic_captain_death_manning_33ae94c0] Without a word, Sushil Sinha drags me out of the room.
+    [common_day3_morning_lad_psychic_captain_death_manning_02348bed] Ted Harring looks terribly distraught.
+    [common_day3_morning_lad_psychic_captain_death_manning_5d8ac36b] Looking less affected, Captain Sinha guides us back to the tea room.
+    [common_day3_morning_lad_psychic_captain_deaths_end_1bfaab1b] I have no objection to that.
+    [common_day3_morning_lad_psychic_captain_deaths_end_e2dad4e3] Ted Harring seems to want to say something, then changes his mind.
+
+  game/scripts/_common/Day 3/2_Afternoon/1_main.rpy  (3 missing)
+    [common_day3_afternoon_lad_psychic_captain_discussion_2_92aaf12c] I disregard the uneasy feeling I've just experienced.
+    [common_day3_afternoon_lad_psychic_captain_discussion_2_5d1138e5] It's probably just nerves.
+    [common_day3_afternoon_lad_psychic_captain_discussion_2_42768c22] I definitely should stay here.
+
+  game/scripts/_common/Day 3/2_Afternoon/2_lad_stay_with_psychic.rpy  (35 missing)
+    [common_day3_afternoon_lad_psychic_stay_f5329334] On our way to the basement, I hear a familiar voice.
+    [common_day3_afternoon_lad_psychic_stay_7c92481f] I am halfway down the service stairs when I hear voices.
+    [common_day3_afternoon_lad_psychic_stay_c7c9f89e] Two of them, coming from the ground floor.
+    [common_day3_afternoon_lad_psychic_stay_e42a6c6f] My heart lurches.
+    [common_day3_afternoon_lad_psychic_stay_c94a5b02] The house was supposed to be empty.
+    [common_day3_afternoon_lad_psychic_stay_596f736c] I recognise the voices — Ted Harring and Amelia Baxter.
+    [common_day3_afternoon_lad_psychic_stay_50306199] They are heading this way.
+    [common_day3_afternoon_lad_psychic_stay_81753296] There is no time to retreat.
+    [common_day3_afternoon_lad_psychic_stay_d76f8eb8] Very well. I shall have to be convincing.
+    [common_day3_afternoon_lad_psychic_stay_f802fda4] We explained the situation to her as best we could.
+    [common_day3_afternoon_lad_psychic_stay_8ff000db] She doesn't appear very alarmed by it.
+    [common_day3_afternoon_lad_psychic_stay_d630fbd5] I am finding that peculiar.
+    [common_day3_afternoon_lad_psychic_stay_e10c8950] The lie comes easily enough. I have had practice.
+    [common_day3_afternoon_lad_psychic_stay_9bb9b44b] They tell me what has happened since this morning.
+    [common_day3_afternoon_lad_psychic_stay_1ad8a4ef] Mr Manning — dead. Lady Claythorn — vanished.
+    [common_day3_afternoon_lad_psychic_stay_306c1f02] Captain Sinha has gone to fetch help.
+    [common_day3_afternoon_lad_psychic_stay_ee6ce8e5] I keep my expression steady throughout.
+    [common_day3_afternoon_lad_psychic_stay_bf959617] Not too alarmed, not too indifferent.
+    [common_day3_afternoon_lad_psychic_stay_12c638c7] Just the right measure of concern.
+    [common_day3_afternoon_lad_psychic_stay_26339381] So we go downstairs.
+    [common_day3_afternoon_lad_psychic_stay_b6cac470] Food. Precisely what I came down here for.
+    [common_day3_afternoon_lad_psychic_stay_42e0eaca] Mr Harring is nice enough to offer his help.
+    [common_day3_afternoon_lad_psychic_stay_5b24bdf3] But I don't think he has much experience in this department.
+    [common_day3_afternoon_lad_psychic_stay_40d8db3a] So we decide it's best if he doesn't get involved.
+    [common_day3_afternoon_lad_psychic_stay_a68f1e21] Mr Harring offers to assist, but between Miss Baxter and myself we have it well in hand.
+    [common_day3_afternoon_lad_psychic_stay_6242a000] He takes a seat and watches.
+    [common_day3_afternoon_lad_psychic_stay_c236fef5] As far as they know, I simply overslept.
+    [common_day3_afternoon_lad_psychic_stay_77434114] All I need do is eat, wait for the right moment, and slip away.
+    [common_day3_afternoon_lad_psychic_stay_8a6736b0] When the food is ready, we go to the dining room to eat.
+    [common_day3_afternoon_lad_psychic_stay_8ee5fb31] Ted Harring sets the table and then tries to leave.
+    [common_day3_afternoon_lad_psychic_stay_f4c855b4] We carry the plates to the dining room.
+    [common_day3_afternoon_lad_psychic_stay_86378ac9] Mr Harring sets the table and then tries to leave.
+    [common_day3_afternoon_lad_falls_e29d047c] He is unable to say another word before he collapses to the floor.
+    [common_day3_afternoon_lad_falls_2de0718b] He cannot finish the sentence.
+    [common_day3_afternoon_lad_falls_c2000b3b] His legs give way beneath him.
+
+  game/scripts/lad/Day 1/1_Afternoon/1_main.rpy  (54 missing)
+    [lad_introduction_02033c81] As I approach my destination, I read the letter that has brought me on this trip for the tenth time.
+    [lad_introduction_54914e0b] 5th September, [current_year]
+    [lad_introduction_996f97ad] Dear Mr Harring,
+    [lad_introduction_041e4064] I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Br...
+    [lad_introduction_ea79939a] You'll be receiving the prize, along with six other courageous individuals, at a reception organised in you...
+    [lad_introduction_ca9128c1] As a thank you, a weekend of leisure at Claythorn Manor has been planned for all of you to enjoy.
+    [lad_introduction_a447451d] Afterwards, a prize of one thousand pounds in bearer bonds will be handed to you.
+    [lad_introduction_1e6fa86a] Please note that your presence is mandatory in order to receive the prize.
+    [lad_introduction_d1389fc5] All you have to do is be at Aberdeen Station, on the 13th of October around 4PM, where someone will drive y...
+    [lad_introduction_17708218] Hoping to see you soon, ...
+    [lad_introduction_e1c6b98a] More information follows, but that's about the content of it.
+    [lad_introduction_8a6fd04f] It is signed by "Lady Claythorn".
+    [lad_introduction_031ae690] I've never heard of her.
+    [lad_introduction_bf874adf] I couldn't really believe it at first.
+    [lad_introduction_d6ca56e5] I don't think I am that deserving. At least no more than hundreds of other guys in this country.
+    [lad_introduction_f042ff7f] But no matter the reason, I can't possibly say no to this amount of money.
+    [lad_introduction_10f032c8] So I feel as if I do not have much choice.
+    [lad_introduction_017ffba8] But still, there's a part of me thinking,
+    [lad_introduction_48a05a4a] maybe I should never have come.
+    [lad_introduction_52b6decd] As I step off the train, a man approaches me.
+    [lad_introduction_cd3257ba] Welcome, sir. Are you by any chance heading to Claythorn Manor?
+    [lad_introduction_1b7886bf] Yes, as a matter of fact I am.
+    [lad_introduction_27ae9ae7] As proof, I hand him the letter that I still have in my hand.
+    [lad_introduction_2b13f8cc] Very well, sir. Allow me to assist you with your luggage. You can follow me to the car.
+    [lad_introduction_047fa876] And just like that, we are on our way.
+    [lad_introduction_40afd89d] So, you're Lady Claythorn's driver?
+    [lad_introduction_a4e9988a] Yes— I mean, no.
+    [lad_introduction_ba54d5d8] I am actually her footman. I also drive people when necessary.
+    [lad_introduction_1b0158e4] Oh. The driver must be busy with all the guests coming, I suppose.
+    [lad_introduction_a58480e4] Do you know how many people have been invited this weekend?
+    [lad_introduction_c8b265bc] Well... I am not sure, sir. Half a dozen at least, I believe.
+    [lad_introduction_d6c09df9] I'm sorry, sir, but I must concentrate on the road. Lady Claythorn doesn't like it when I'm distracted.
+    [lad_introduction_f9ac74ee] Of course, I am sorry.
+    [lad_introduction_0d1d8cfa] No need for apologies, sir.
+    [lad_introduction_e76ee63b] I seem to have made him uneasy. Perhaps he's not used to small talk with guests.
+    [lad_introduction_39cc19a5] This feels odd, as I'm usually on the other end of this treatment.
+    [lad_introduction_143ac34f] I wonder how well I'll blend in with the other folks at the manor.
+    [lad_introduction_4ac3eeb6] They might be used to this kind of service.
+    [lad_introduction_6dae6201] But then again, perhaps not. Maybe Lady Claythorn likes to help people like me.
+    [lad_introduction_ccd78b76] We'll see.
+    [lad_introduction_283ec2df] After we leave Aberdeen, we drive into the countryside, then into what seems to be a vast forest.
+    [lad_introduction_0627ea49] About twenty minutes later, all signs of human life disappear.
+    [lad_introduction_e5bb9feb] It's nothing but dense woodland as far as the eye can see.
+    [lad_introduction_a74443ae] The isolation makes me feel a bit uneasy, being so far from everywhere else.
+    [lad_introduction_2e0be89f] And the sight of an approaching storm in the sky only adds to my unease.
+    [lad_introduction_1d05768c] Eventually, an imposing mansion emerges on the horizon.
+    [lad_introduction_8ce8cec2] It's bigger than any house I've ever been in.
+    [lad_introduction_af26a13a] A big country house.
+    [lad_introduction_63686e1f] Everyone who was anyone in England used to have one.
+    [lad_introduction_cd839bfc] Now I've heard a lot of people can't afford them anymore.
+    [lad_introduction_2e9f2464] They're sold, turned into hotels, or simply abandoned—left there to rot.
+    [lad_introduction_b49fa377] What a shame.
+    [lad_introduction_3fb30bec] As the footman unloads my luggage from the car, I approach the entrance, where a butler opens the door to w...
+    [lad_introduction_f6686c1e] I step into the most remarkable hall I've ever set foot in.
+
+  game/scripts/lad/Day 1/2_Evening/0_map_choices.rpy  (3 missing)
+    [lad_day1_evening_garden_6052df6a] I reach the great hall and prepare to open the door.
+    [lad_day1_evening_garden_82674b80] However, the weather is so bad that only a madman would venture out now.
+    [lad_day1_evening_garden_ff3b428f] I'd be better off doing something else at the moment.
+
+  game/scripts/lad/Day 1/2_Evening/1_main.rpy  (7 missing)
+    [lad_day1_evening_19c3396a] Wow, I'm not feeling well.
+    [lad_day1_evening_38edfc7b] Even worse, I think I might be getting sick.
+    [lad_day1_evening_86fdf571] I'd better return to my room.
+    [lad_day1_evening_8eb87d82] I hurry to my room.
+    [lad_day1_evening_43fe9498] I head straight for the bathroom and throw up all the Port I've been drinking.
+    [lad_day1_evening_06aca590] Great. If I didn't look foolish enough before, this surely seals it.
+    [lad_day1_evening_28128dc2] I should go to bed before I do anything more embarrassing.
+
+  game/scripts/lad/Day 1/2_Evening/2a_billiard_room.rpy  (54 missing)
+    [lad_day1_evening_billiard_room_619510f0] I am back in the billiard room.
+    [lad_day1_evening_billiard_room_bar_1_bc5d3b8f] I approach the bar.
+    [lad_day1_evening_billiard_room_bar_1_4ad772ca] Samuel Manning is there.
+    [lad_day1_evening_billiard_room_bar_1_d99ab0eb] Hello sir.
+    [lad_day1_evening_billiard_room_bar_1_28a57bf8] ...
+    [lad_day1_evening_billiard_room_bar_1_eaad5d50] The man stares at me but makes no sound.
+    [lad_day1_evening_billiard_room_bar_1_ddd9632b] Don't mind him, he seems to be totally out of it.
+    [lad_day1_evening_billiard_room_bar_1_4999c04f] I am startled by the man who approaches me.
+    [lad_day1_evening_billiard_room_bar_1_b3e27a16] He wears one of those masks I've seen on wounded soldiers from the war.
+    [lad_day1_evening_billiard_room_bar_1_0d20de38] They were so badly injured that they have to hide their faces.
+    [lad_day1_evening_billiard_room_bar_1_ff25fa2c] He pretends not to notice my surprise and keeps on talking.
+    [lad_day1_evening_billiard_room_bar_1_e6229abb] He was already asleep when I arrived. It is impressive he still manages to be here.
+    [lad_day1_evening_billiard_room_bar_1_bf3e018a] I was sitting next to him at dinner and it was impossible to get him to say anything coherent.
+    [lad_day1_evening_billiard_room_bar_1_c85303ce] He could eat, though. You can tell he is used to functioning like this. Poor fellow.
+    [lad_day1_evening_billiard_room_bar_1_c10b84a8] Anyway, I am Thomas Moody.
+    [lad_day1_evening_billiard_room_bar_1_ab2f4049] Ted Harring, how do you do.
+    [lad_day1_evening_billiard_room_bar_1_d32f8194] Nice to meet you, Mr Harring. I suppose you are here for a drink.
+    [lad_day1_evening_billiard_room_bar_1_681861da] The choice is rather restricted, I'm afraid. There is only sherry or port.
+    [lad_day1_evening_billiard_room_bar_1_4fe2b2ee] But luckily, I've come prepared.
+    [lad_day1_evening_billiard_room_bar_1_0ba75894] Before I can say anything, he reaches into his coat pocket and pulls out a flask.
+    [lad_day1_evening_billiard_room_bar_1_0f1adc63] Then he starts pouring me a glass of what looks like whisky.
+    [lad_day1_evening_billiard_room_bar_1_c08df77a] You'll probably enjoy this more.
+    [lad_day1_evening_billiard_room_bar_1_1018644b] Well, I can't really say no to that.
+    [lad_day1_evening_billiard_room_bar_1_266653ae] Thanks. Cheers.
+    [lad_day1_evening_billiard_room_bar_1_8fe15628] Cheers, Mr Harring. Now if you don't mind, I'll see what this group is talking about.
+    [lad_day1_evening_billiard_room_bar_1_acc1401b] He joins the group of people talking.
+    [lad_day1_evening_billiard_group_cancel_f253d229] I pretend to hear something coming from the other side of the room and quietly leave the group.
+    [lad_day1_evening_billiard_room_bar_2_09d3266f] I really don't feel comfortable here.
+    [lad_day1_evening_billiard_room_bar_2_e1c40148] Perhaps another drink will help me relax.
+    [lad_day1_evening_billiard_room_bar_2_47336644] So, I decide to go back to the bar and pour myself a sherry.
+    [lad_day1_evening_billiard_room_bar_3_d3eee48f] Well, I haven't tried the Port wine yet.
+    [lad_day1_evening_billiard_room_bar_3_a7384da8] It's probably better than what I'm used to.
+    [lad_day1_evening_billiard_room_bar_3_81c62873] So, I pour myself a glass.
+    [lad_day1_evening_billiard_room_bar_3_5050c3d2] It's exquisite.
+    [lad_day1_evening_billiard_room_bar_3_0c5e452e] So good that it would be foolish not to have another one.
+    [lad_day1_evening_billiard_room_bar_3_771ca589] So I do.
+    [lad_day1_evening_billiard_room_bar_3_27069f53] And another...
+    [lad_day1_evening_billiard_room_bar_3_27069f53_1] And another...
+    [lad_day1_evening_billiard_room_doctor_94ed1128] Hello Doctor.
+    [lad_day1_evening_billiard_room_cancel_69a55f04] I don't feel like staying in this room.
+    [lad_day1_evening_billiard_room_butler_d5125d94] Hello, I was wondering if you could help me.
+    [lad_day1_evening_billiard_room_butler_ba009261] Of course, Mr Harring.
+    [lad_day1_evening_billiard_room_butler_8855efd4] I would like to talk to Miss Baxter.
+    [lad_day1_evening_billiard_room_butler_80e2063b] Do you know where her room is?
+    [lad_day1_evening_billiard_room_butler_adb3e044] I certainly do.
+    [lad_day1_evening_billiard_room_butler_533c2727] But I'm not sure that I should tell you.
+    [lad_day1_evening_billiard_room_butler_06ebfe84] That's not very appropriate.
+    [lad_day1_evening_billiard_room_butler_6f19d527] Hmm, well, no, it's nothing like that.
+    [lad_day1_evening_billiard_room_butler_08ac4735] I'd just like to finish the conversation we had earlier.
+    [lad_day1_evening_billiard_room_butler_36c7f965] I'm sure Miss Baxter won't mind.
+    [lad_day1_evening_billiard_room_butler_f22abb86] Well, I suppose it's not a big secret whose rooms are whose.
+    [lad_day1_evening_billiard_room_butler_cbaf17c2] So, I might as well tell you.
+    [lad_day1_evening_billiard_room_butler_f9c6e36c] She is in the "Elizabeth I" room.
+    [lad_day1_evening_billiard_room_butler_c6bc39d5] Thank you.
+
+  game/scripts/lad/Day 2/1_Morning/1_main.rpy  (28 missing)
+    [lad_day2_morning_8cf07d35] I slept through the night.
+    [lad_day2_morning_41418911] The storm from yesterday has passed and the weather is clearer now.
+    [lad_day2_morning_5f859a86] Oh my God, my head is pounding.
+    [lad_day2_morning_82821dc1] Why on earth did I drink so much yesterday?
+    [lad_day2_morning_ddcac06b] After getting ready, I leave my room to have breakfast.
+    [lad_day2_morning_ea365b90] Most of the guests are already seated in the dining room.
+    [lad_day2_morning_9b8086e1] There is a breakfast buffet set out.
+    [lad_day2_morning_c7c71037] I help myself to eggs, bacon, bread and a few other things, not really following any particular order.
+    [lad_day2_morning_0438279f] I have no idea if this is what I'm supposed to do.
+    [lad_day2_morning_d9c0f1f5] I quietly take the same seat I occupied yesterday, hoping to go unnoticed.
+    [lad_day2_morning_f04aaa99] Daniel Baldwin and Amelia Baxter are already present.
+    [lad_day2_morning_5ea5720e] Everything is happening fast. What should I do?
+    [lad_day2_morning_f4c44510] As we returned to the dining room, our hostess had just finished explaining the situation.
+    [lad_day2_morning_1e08e512] She seemed to regain her composure upon seeing the doctor.
+    [lad_day2_morning_5793658a] When everyone is done eating, Lady Claythorn speaks up.
+    [lad_day2_morning_0400f238] A hunt... A proper aristocratic hunt.
+    [lad_day2_morning_067a9efc] Now that's something to witness.
+    [lad_day2_morning_2261bb70] It's not as if I'll get this opportunity often.
+    [lad_day2_morning_05dd2f39] And I might not be the only one feeling out of place, especially if Lady Claythorn is correct.
+    [lad_day2_morning_bf30d372] So there's no need for embarrassment.
+    [lad_day2_morning_cad07ae9] However, I have never so much as held a gun in my life.
+    [lad_day2_morning_e38ce860] Those older men might not be of the gentry, but they likely learned to shoot during the war.
+    [lad_day2_breakfast_eat_c98cc7eb] I wonder what this is about.
+    [lad_day2_breakfast_eat_b9eba6ff] Me too. I have a bad feeling about it.
+    [lad_day2_breakfast_eat_b27da5d2] Well, there's no reason to worry now.
+    [lad_day2_breakfast_eat_3c7c8bea] We'll just have to wait and see.
+    [lad_day2_breakfast_eat_e4a09a5f] You're right.
+    [lad_day2_breakfast_eat_42de7c1f] We should probably talk about something else.
+
+  game/scripts/lad/Day 2/2a_Hunt/2b_noaccident.rpy  (42 missing)
+    [lad_day2_hunt_noaccident_fea60584] Following our hostess seemed to be the safest course of action.
+    [lad_day2_hunt_noaccident_5ba0028e] The only problem is that both she and Sushil Sinha are completely in their element.
+    [lad_day2_hunt_noaccident_22c2a9c6] While I clearly am not.
+    [lad_day2_hunt_noaccident_3d46a878] They've already shot a few rabbits and a pheasant.
+    [lad_day2_hunt_noaccident_5be45637] Out of pity, they even tried to help me shoot a deer that crossed my path.
+    [lad_day2_hunt_noaccident_d86bed10] However, I merely managed to scare the animal away.
+    [lad_day2_hunt_noaccident_60352b13] Tough luck, Mr Harring. I'm sure you'll get the next one.
+    [lad_day2_hunt_noaccident_8ae559b5] Thank you, but I don't think this is for me. I believe I missed it by several feet.
+    [lad_day2_hunt_noaccident_febbdc11] Don't fret, you just lack practice.
+    [lad_day2_hunt_noaccident_f79dbbe5] Then again, it might be for the best. You wouldn't have wanted to serve in the war.
+    [lad_day2_hunt_noaccident_cd4af849] It was truly brutal. Nothing like the previous conflicts I participated in.
+    [lad_day2_hunt_noaccident_f204ff27] Have you fought in many wars?
+    [lad_day2_hunt_noaccident_8f850b98] Indeed, I began my career in India and encountered my first battle during the war with Burma.
+    [lad_day2_hunt_noaccident_ecb9e7fd] I was also involved in the Chinese rebellion of the Boxer's. Then ...
+    [lad_day2_hunt_noaccident_baf3a93d] Our conversation about the wars seemed to make Lady Claythorn uneasy, as she suddenly interrupts us.
+    [lad_day2_hunt_noaccident_2cb0103d] Well, I believe it's time for luncheon. How would you feel about settling here for our picnic?
+    [lad_day2_hunt_noaccident_083a855d] Yes, it's a perfect spot.
+    [lad_day2_hunt_noaccident_29e41d2a] We began setting up the picnic.
+    [lad_day2_hunt_noaccident_1180048f] However, before we could start eating, we heard a gunshot nearby.
+    [lad_day2_hunt_noaccident_d8721bcb] Ah, it sounds like the others have caught something. And they're not far from here.
+    [lad_day2_hunt_noaccident_78156140] But soon after the gunshot, another sound followed.
+    [lad_day2_hunt_noaccident_52d11435] A desperate cry for help.
+    [lad_day2_hunt_noaccident_8daaa8ec] The captain and I heard it, immediately jumping to our feet.
+    [lad_day2_hunt_noaccident_11146098] We rushed in the direction of the cry.
+    [lad_day2_hunt_noaccident_b7571fd1] Soon, we came upon the others.
+    [lad_day2_hunt_noaccident_555c0045] Doctor Baldwin is on the ground.
+    [lad_day2_hunt_noaccident_136366fa] Standing beside him is Samuel Manning, visibly shaken.
+    [lad_day2_hunt_noaccident_88f0d110] Oh my God, oh my God.
+    [lad_day2_hunt_noaccident_2adc6b67] I can't believe this happened.
+    [lad_day2_hunt_noaccident_7bae0b94] Captain Sinha grabbed him.
+    [lad_day2_hunt_noaccident_6d1f558c] What have you done, fool?
+    [lad_day2_hunt_noaccident_6ca8a520] I shot at a rabbit, but missed.
+    [lad_day2_hunt_noaccident_8cc32979] I didn't mean to hit him.
+    [lad_day2_hunt_noaccident_5e290c27] I didn't...
+    [lad_day2_hunt_noaccident_a7652025] We look down at Daniel Baldwin.
+    [lad_day2_hunt_noaccident_a37b9d4f] Next to him are empty vials and a syringe.
+    [lad_day2_hunt_noaccident_d81844cc] He asked me to give him that.
+    [lad_day2_hunt_noaccident_4248f917] Then he nodded off right after.
+    [lad_day2_hunt_noaccident_d4e58c6a] Captain Sinha sits next to the victim to check his pulse.
+    [lad_day2_hunt_noaccident_cb0c46fc] It is too late.
+    [lad_day2_hunt_noaccident_9fa388f8] His heart has stopped.
+    [lad_day2_hunt_noaccident_6a9796df] He is dead.
+
+  game/scripts/lad/Day 2/2b_No Hunt/0_map_choices.rpy  (1 missing)
+    [lad_day2_no_hunt_default_room_locked_87e17c00] I try to push the door open.
+
+  game/scripts/lad/Day 2/2b_No Hunt/1_main.rpy  (6 missing)
+    [lad_day2_bedroom_broken_9547f281] The poor man is still there. I don't think he's moved.
+    [lad_day2_no_hunt_bedroom_nurse_busy_c199b72e] I knock upon the door.
+    [lad_day2_no_hunt_bedroom_nurse_busy_800d3ad7] It's Ted Harring.
+    [lad_day2_no_hunt_bedroom_nurse_busy_897db1b4] Ah, Mr Harring, I'm quite exhausted at the moment.
+    [lad_day2_no_hunt_bedroom_nurse_busy_6ab64786] Would you mind coming back later?
+    [lad_day2_no_hunt_bedroom_nurse_busy_715022a4] Of course, sorry for bothering you.
+
+  game/scripts/lad/Day 2/2b_No Hunt/2_tea_room.rpy  (9 missing)
+    [lad_day2_hunt_tea_room_ab77c264] Ah, yes, we've discussed that before.
+    [lad_day2_hunt_tea_room_b6db98f1] Aren't they all out on the hunt?
+    [lad_day2_hunt_tea_room_651f07ef] No, dear. The kitchen staff and some maids remain in the mansion.
+    [lad_day2_hunt_tea_room_ef1a6231] Everything in such a home is well-organized.
+    [lad_day2_hunt_tea_room_return_92bdcb36] I re-enter the tea room.
+    [lad_day2_hunt_tea_room_return_141c880f] Amelia Baxter is still present, engrossed in a book.
+    [lad_day2_hunt_tea_room_return_e4ba3c50] I approach her.
+    [lad_day2_hunt_tea_room_return_526fd270] Mr Harring?
+    [lad_day2_hunt_tea_room_return_6c4e1d51] How may I assist you?
+
+  game/scripts/lad/Day 2/3_Evening/0_map_choices.rpy  (15 missing)
+    [lad_day2_evening_garden_1f3ffba9] I open the door to go to the garden.
+    [lad_day2_evening_garden_855f2f4f] But after a quick glance outside, I realise it's pitch black.
+    [lad_day2_evening_garden_d91fa59f] I don't think I'll be able to do anything there at this hour.
+    [lad_bedroom_stay_away_day2_87a606ed] Everyone is in the house now, so it would be too risky.
+    [lad_day2_evening_bedroom_nurse_e84634c5] A low voice answers.
+    [lad_day2_evening_bedroom_nurse_1fe35604] Yes? What is it?
+    [lad_day2_evening_bedroom_nurse_ff340e77] Miss Marsh, it's Ted Harring.
+    [lad_day2_evening_bedroom_nurse_ac7aaaee] I was wondering if we could talk.
+    [lad_day2_evening_bedroom_nurse_0475f42f] It's incredibly late, Mr Harring.
+    [lad_day2_evening_bedroom_nurse_209fa5a5] Can't it wait until the morning?
+    [lad_day2_evening_bedroom_nurse_bf4dd88b] Yes, of course, sorry for disturbing you.
+    [lad_day2_evening_bedroom_drunk_871a2394] Grrr, Mrrrr, Errrr
+    [lad_day2_evening_bedroom_drunk_b9de3603] I can hear Samuel Manning's voice, but it's incoherent and he's mostly just moaning.
+    [lad_day2_evening_bedroom_drunk_1b5ebac3] It's pretty clear that he's blind drunk.
+    [lad_day2_evening_bedroom_drunk_a72a9dc3] I know the door is locked, so there' i's no point trying to enter.
+
+  game/scripts/lad/Day 2/3_Evening/2b_billiard_room.rpy  (6 missing)
+    [lad_day2_evening_billiard_room_619510f0] I am back in the billiard room.
+    [lad_day2_evening_billiard_room_captain_hypothesis_broken_8a35bd5c] But the flask didn't contain any of those alcohols.
+    [lad_day2_evening_billiard_room_captain_hypothesis_broken_660ebc82] I tasted it, and it was just whisky.
+    [lad_day2_evening_billiard_room_captain_hypothesis_broken_6a960c0f] I'm certain of that.
+    [lad_day2_evening_billiard_room_captain_2_dff47488] Yes, Mr Harring?
+    [lad_day2_evening_billiard_room_captain_2_fa1f2226] Do you have anything to add to our last conversation?
+
+  game/scripts/lad/Day 3/1_Morning/0_map_choices.rpy  (28 missing)
+    [lad_day3_morning_library_3b182e69] We enter the small library and find it empty.
+    [lad_day3_morning_library_9e500e81] There's no room for anyone to hide here.
+    [lad_day3_morning_library_54514ecd] Let's move on.
+    [lad_day3_morning_dining_room_8c99467c] Nobody seems to be here.
+    [lad_day3_morning_dining_room_1068e77d] And the table isn't set for breakfast either.
+    [lad_day3_morning_dining_room_19f118eb] That's unusual.
+    [lad_day3_morning_garden_c03b4eae] We venture out to explore the garden.
+    [lad_day3_morning_garden_bae46c3a] But there's no trace of anyone.
+    [lad_day3_morning_garden_a65d60f3] Lady Claythorn's car isn't there either.
+    [lad_day3_morning_garden_bae45013] I try shouting to attract attention.
+    [lad_day3_morning_garden_d6284fa1] Hello! Is anyone here?
+    [lad_day3_morning_garden_50d78a0c] Hello!!
+    [lad_day3_morning_garden_b893884a] I don't think shouting will help.
+    [lad_day3_morning_garden_3fcf59c7] If someone's here, we'll find them.
+    [lad_day3_morning_garden_3ce9b6f6] Oh, was shouting inappropriate?
+    [lad_day3_morning_garden_6dce9ea0] I guess she'll always prioritize decorum, no matter the situation.
+    [lad_day3_morning_garden_b3d48449] Let's head back inside then.
+    [lad_day3_morning_portrait_gallery_d1d16ce3] The creepy portrait gallery.
+    [lad_day3_morning_portrait_gallery_ee3da6c8] The paintings seem to be looking at me.
+    [lad_day3_morning_portrait_gallery_86b92abd] But besides them, no one in here.
+    [lad_day3_morning_tea_room_dd81ad65] Here I am, back in the first room I visited in the manor.
+    [lad_day3_morning_tea_room_58ecab74] All the liveliness of that first day is gone.
+    [lad_day3_morning_tea_room_9e1d247d] Now, it stands silent and empty.
+    [lad_day3_morning_tea_room_0560bf13] There's no one in here.
+    [lad_day3_morning_tea_room_5de46a90] Let's look elsewhere.
+    [lad_day3_morning_tea_room_c9e6b762] Right, of course.
+    [lad_day3_morning_bedroom_lad_268e53ab] There's no need to double-check my room.
+    [lad_day3_morning_bedroom_lad_c08c1132] I know what's in there.
+
+  game/scripts/lad/Day 3/1_Morning/1_main.rpy  (2 missing)
+    [lad_day3_morning_1b721dc2] Just when we started losing hope, we decided to rest in the tea room.
+    [lad_day3_morning_03565043] But as we settled down, an authoritative voice echoed from outside the room.
+
+  game/scripts/lad/Endings/endings.rpy  (6 missing)
+    [lad_ending_day1_deathbed_85f154fd] You don't wake up.
+    [lad_ending_day1_deathbed_4eef33c4] You have died during the night.
+    [lad_ending_day1_deathbed_ba2f12cd] It's unfair, I know.
+    [lad_ending_day1_deathbed_8938e772] You don't think that you have done anything wrong.
+    [lad_ending_day1_deathbed_f995b70b] And you probably haven't.
+    [lad_ending_day1_deathbed_a0cc98c5] But sometimes, people die without knowing why.
+
+  game/scripts/lad/lad_generic_locations.rpy  (57 missing)
+    [lad_library_default_d029f857] There is nothing different from the last time I was in here.
+    [lad_library_default_8fa1599b] No reason to look further.
+    [lad_downstairs_default_dfbe8e19] Maybe I'm pushing my luck, trying to go downstairs, but I feel like I have to go there.
+    [lad_downstairs_default_5aea444c] Mr Harring? I thought I made myself clear earlier.
+    [lad_downstairs_default_37412708] What are you trying to do here?
+    [lad_downstairs_default_f228136f] You can't possibly make me believe that you got lost again?
+    [lad_downstairs_lost_f88e864c] I'm really sorry. This house is too big.
+    [lad_downstairs_lost_c27d9edc] I was on my way to the billiard room and I don't know how I ended up here.
+    [lad_downstairs_sleepwalk_1a9d56fa] I keep staring in front of me, pretending not to have heard her.
+    [lad_downstairs_sleepwalk_d983c4d8] I add a realistic snore to sell the trick.
+    [lad_downstairs_sleepwalk_be97bdc2] She looks at me, confused.
+    [lad_downstairs_sleepwalk_68d59f00] She hesitates, uncertain of what to do.
+    [lad_downstairs_sleepwalk_4315d6b1] Sir, are you well?
+    [lad_downstairs_sleepwalk_eba0751f] Are you sleepwalking?
+    [lad_downstairs_sleepwalk_d932864b] I keep saying nothing and slowly move back up the stairs.
+    [lad_downstairs_sleepwalk_3cdd67c9] She doesn't follow me.
+    [lad_downstairs_sleepwalk_1fd77c76] I think I'm in the clear.
+    [lad_downstairs_sleepwalk_472294ce] I know you're not asleep.
+    [lad_downstairs_sleepwalk_0c183cac] First, your snore is obviously fake.
+    [lad_downstairs_sleepwalk_f9e43cb7] Second, you're still fully clothed.
+    [lad_downstairs_sleepwalk_4769551b] I can't break character.
+    [lad_downstairs_sleepwalk_ebf651a6] I need to commit to the end, so I ignore her and keep moving up the stairs.
+    [lad_downstairs_sleepwalk_f53575d1] Once I reach the main floor, I look for somewhere else to go.
+    [lad_downstairs_flirt_b4333c38] Actually, I just wanted to talk to you.
+    [lad_downstairs_flirt_886b5277] Really, Why?
+    [lad_downstairs_flirt_759bcdfc] The kitchen is closed, but I can fix you a plate of leftovers if you're still hungry.
+    [lad_downstairs_flirt_1fd318ad] Oh, uh, no thank you. I'm not really, um, hungry or anything.
+    [lad_downstairs_flirt_69e7e9ed] What brings you here so late then?
+    [lad_downstairs_flirt_28ab4405] I was just looking for someone to talk to.
+    [lad_downstairs_flirt_6c5236f7] I see. Well, there are many people around if you're looking for company.
+    [lad_downstairs_flirt_3c3f8b28] Yeah, I know. But I don't think anyone is as interesting as you.
+    [lad_downstairs_flirt_9c2f88a0] Okay, that was quite straightforward.
+    [lad_downstairs_flirt_d7cbd60f] She seems speechless for a moment.
+    [lad_downstairs_flirt_ee3cc2d6] When she regains her composure, she appears annoyed.
+    [lad_downstairs_flirt_95bb0333] That's kind of you to say.
+    [lad_downstairs_flirt_b5c62ad2] However, I shouldn't have to tell you that it's inappropriate for you to flirt with me in this manner.
+    [lad_downstairs_flirt_0092715c] Oh, uh, I didn't mean to, um, make you uncomfortable or anything.
+    [lad_downstairs_flirt_a7dacc6e] I was just looking for friendly conversation.
+    [lad_downstairs_flirt_504b2f18] I'm afraid I'm too busy for this, sir.
+    [lad_downstairs_flirt_8f9c9e2d] I must return to my tasks.
+    [lad_downstairs_flirt_e34639c6] Good night.
+    [lad_downstairs_flirt_ab02a743] Of course. Good night.
+    [lad_downstairs_flirt_a34d9f86] Alright, that was uncomfortable.
+    [lad_downstairs_flirt_edb97903] But at least she doesn't think I was sneaking down here; that was a close call.
+    [lad_downstairs_flirt_55d3e439] Still, I'd better go look somewhere else.
+    [lad_garden_default_6ad26779] A beautiful garden.
+    [lad_garden_default_9d85fc77] I wandered in it for a while, enjoying a relaxing walk.
+    [lad_garden_default_9074643c] But I didn't find anything of interest.
+    [lad_dining_room_default_e146f77a] The dining room is empty at the moment.
+    [lad_dining_room_default_a19c6425] I shouldn't stay here.
+    [lad_billiard_room_default_99045eb6] It's empty.
+    [lad_billiard_room_default_6a0e8311] No need to stay here.
+    [lad_entrance_hall_default_b2dc77ee] It's certainly an impressive entrance hall.
+    [lad_servant_stairs_default_ecd076cc] I entered a hidden space that is clearly meant for servants.
+    [lad_servant_stairs_default_150a6002] It's narrow TODO
+    [lad_portrait_gallery_default_ea459cc6] Nothing new here.
+    [lad_portrait_gallery_default_979c9c2c] It still gives me a weird, creepy feeling.
+
+  game/scripts/lad/lad_other_guests.rpy  (39 missing)
+    [lad_generic_other_guests_friday_dinner_66103915] Well, I just arrived.
+    [lad_generic_other_guests_friday_dinner_f77bd511] So I don't really have an opinion on anyone yet.
+    [lad_generic_other_guests_friday_doctor_f089bad3] I haven't talk a lot to other people yet, except maybe to Miss Baxter.
+    [lad_generic_other_guests_friday_doctor_c960d8f4] And what do you make of her?
+    [lad_generic_psychic_opinion_ae17cb01] I am not sure.
+    [lad_generic_psychic_opinion_a3b77118] She seems very nice, but there is something odd about her.
+    [lad_generic_psychic_opinion_f41e668e] Really, for what specific reason?
+    [lad_generic_psychic_opinion_7cafcf8e] Sorry, I do not know how to explain it.
+    [lad_generic_psychic_opinion_df01cb44] It is just a feeling.
+    [lad_generic_psychic_opinion_c9b5288c] I see.
+    [lad_generic_other_guests_saturday_doctor_4254340a] I do not know, I have not had a chance to talk to everyone yet.
+    [lad_generic_other_guests_saturday_doctor_183495f1] So far everyone seems normal to me.
+    [lad_generic_other_guests_saturday_doctor_0afad5b2] I was not expecting a deep character analysis.
+    [lad_generic_other_guests_saturday_doctor_509bff20] Merely your general impression.
+    [lad_generic_other_guests_saturday_doctor_2c508038] Right then.
+    [lad_generic_psychic_hunt_doctor_6d12478d] Well, we have already spoken about her, have we not?
+    [lad_generic_psychic_hunt_doctor_88a339fe] Have we? I suppose you are right.
+    [lad_generic_psychic_hunt_doctor_b8f4a575] And you have not noticed anything new?
+    [lad_generic_psychic_hunt_doctor_cb3f08ba] Afraid not.
+    [lad_generic_drunk_hunt_doctor_666bb0a5] Samuel Manning?
+    [lad_generic_drunk_hunt_doctor_8f7b7a1f] You really want to talk about him when he is right there?
+    [lad_generic_drunk_hunt_doctor_58d2cbdd] Never mind that, he will not notice.
+    [lad_generic_drunk_hunt_doctor_2bf9bef3] He looks quite out of his wits again.
+    [lad_generic_drunk_hunt_doctor_a7648fc6] Yes, I noticed he is drunk most of the time.
+    [lad_generic_drunk_hunt_doctor_73d7d6cd] But that is about all I have witnessed so far.
+    [lad_generic_drunk_hunt_doctor_7d5e161c] Yes, I suppose that was obvious to everyone.
+    [lad_generic_drunk_hunt_doctor_dead_666bb0a5] Samuel Manning?
+    [lad_generic_drunk_hunt_doctor_dead_b221494d] Well does it really matter what I think of him now?
+    [lad_generic_drunk_hunt_doctor_dead_046f73d5] I don't know why I asked you that.
+    [lad_generic_drunk_hunt_doctor_dead_6c60e55a] I am sorry.
+    [lad_generic_captain_hunt_doctor_d0868180] Captain Sinha is serious, and he does go on about himself.
+    [lad_generic_captain_hunt_doctor_6a5a0aa1] I have observed the same.
+    [lad_generic_host_hunt_doctor_16c72fa6] She is very distinguished.
+    [lad_generic_host_hunt_doctor_2c269cb9] I have not dared to speak to her yet.
+    [lad_generic_nurse_hunt_doctor_149886e8] I do not have much to say about her.
+    [lad_generic_nurse_hunt_doctor_d6855187] She is a rather discreet woman, so I have not learnt much about her.
+    [lad_generic_broken_hunt_doctor_54db5588] Poor Mr Manning, it is creepy to imagine he is still in his room.
+    [lad_generic_broken_hunt_doctor_d369b44e] You know, dead.
+    [lad_generic_broken_hunt_doctor_8f3bb949] That is how we left him, so I daresay his condition has not changed.
+
