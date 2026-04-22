@@ -121,9 +121,9 @@ label captain_day2_hunt_moody_alive:
 
     More birds burst from the bushes, and Mr Moody takes them without appearing to aim.
 
-    Lady Claythorn's shots go wide. 
-    
-    My own find nothing but empty air.
+    Lady Claythorn's shots go wide.
+
+    My own shots find nothing but empty air.
 
     By the time the butler calls us in, only Mr Moody has game to show.
     """
@@ -193,10 +193,10 @@ label captain_day2_hunt_moody_alive:
     """
     I follow him up the track.
 
-    He walks easily, his rifle slung at his shoulder, whistling a tune I do not recognise.
+    He walks easily, his rifle slung over his shoulder.
 
-    Thirty yards from the clearing, the cover thickens. 
-    
+    Thirty yards from the clearing, the cover thickens.
+
     The voices from the luncheon fall away.
 
     He stops, turns, and lifts the rifle from his shoulder.
@@ -225,29 +225,29 @@ label captain_day2_hunt_moody_alive:
     """
 
     broken """
-    You see, Captain, I found a letter upon my bed yesterday.
+    You see, Captain, I found a piece of paper upon my bed yesterday.
 
-    It told a most interesting story.
+    An old order from the War, written in the autumn of 1917.
 
-    One about an administrative officer from India.
+    The order was to send men to take a vaguely strategic position in Flanders.
 
-    A man who spent his war pushing paper about.
+    There must have been thousands of such orders issued during the war.
 
-    I believe you recognise the subject of this story, Captain.
+    At first, I did not understand what it was doing here.
 
-    Yet here you are, entertaining the table with tales of Burma and the Boxers as though you had fought in them yourself.
-    """
+    Then I recognised the date.
 
-    broken """
-    But that was not the letter's true revelation.
+    It is a date that will remain engraved in my memory for ever.
 
-    No, it also stated that due to a blatant failure of communication, a column was sent up an open ridge in the autumn of '17.
+    And the name of the company that received the order: B Company, 2nd Battalion, Lancashire Fusiliers.
 
-    Three hundred men were cut down in the space of an afternoon.
+    Hundreds of men were sent to take a small village of no importance.
 
-    Many more were gravely wounded.
+    Most of them are dead by now.
 
-    Some were left so disfigured they must wear masks such as this for the rest of their days.
+    And the few survivors of that horrific day were not a lot luckier.
+
+    They are forced to go through life as living monsters, hiding behind a mask such as this.
     """
 
     """
@@ -255,13 +255,9 @@ label captain_day2_hunt_moody_alive:
     """
 
     broken """
-    Their lives were ruined forever.
+    And at the end of the order, the name of the man who signed the fatal order.
 
-    And the letter was careful to note the name of the man who signed the fatal order.
-
-    You shall not be surprised to learn it was you, Captain.
-
-    So many innocent souls, destroyed by your incompetence.
+    Captain S. Sinha, Staff Officer, General Headquarters.
     """
 
     """
@@ -273,66 +269,40 @@ label captain_day2_hunt_moody_alive:
 
     Most of them I could not recall if my life depended upon it.
 
-    Yet I cannot believe I am the man this letter describes.
-
-    Amid all the horrors of those years, a sin of that magnitude would not have slipped my memory.
-
-    Whatever happened to him, I am not responsible.
-
-    I am certain of that.
+    Yet I never ordered men to battle, that was never my job.
     """
 
     captain """
-    That is a slander, sir.
+    You are mistaken, Mr Moody.
 
-    I have never sent men to their deaths by mistake.
+    That is a slander.
 
-    I am in no way responsible for your... condition.
+    I have never sent men to their deaths.
+
+    My work relied only on securing rations, arranging transport, and endorsing requisitions.
+
+    Someone is trying to pit you against me.
     """
 
     broken """
-    You see, Captain, I am not Thomas Moody.
+    Ah! How convenient for you, Captain.
 
-    Thomas was my brother.
+    But I have no reason to believe you.
 
-    He was one of the three hundred who went up that ridge.
+    Especially since I am now sure that you are not the war hero you claim.
 
-    He did not survive.
+    I know a staff officer when I see one — never sees battle.
 
-    I was beside him that day.
+    You cannot even shoot a bird right under your nose.
 
-    I lived, though I was left like this.
+    Yet here you are, entertaining the table with tales of Burma and the Boxers as though you had fought in them yourself.
 
-    Lady Claythorn invited Thomas to the manor to honour his service, quite unaware he had perished.
+    You are a fraud, that is plain.
 
-    He was meant to be here today.
+    And maybe somebody is using me to hurt you.
 
-    He could not come, for reasons you can well imagine.
-
-    So I took his name, and came in his stead.
+    But I am very happy to oblige.
     """
-
-    """
-    His voice does not rise.
-
-    It does not need to.
-
-    I search his eyes for a crack, for some sign of hesitation, and find none.
-    """
-
-    captain """
-    Your brother.
-
-    Then what is your true name?
-    """
-
-    broken """
-    It hardly matters now.
-    """
-
-    $ broken_details.description_hidden.unlock('lie_mask')
-
-    $ broken_details.description_hidden.unlock('lie_origin')
 
     """
     He does not lower the rifle.
@@ -343,15 +313,13 @@ label captain_day2_hunt_moody_alive:
     """
 
     captain """
-    Then you were the one who placed the letter in my room.
+    So I suppose you were the one who placed the letter in my room.
 
     The one accusing me.
     """
 
     broken """
     A letter in your room?
-
-    No, that was not my doing.
 
     Why would I have done something so foolish?
 
@@ -373,21 +341,21 @@ label captain_day2_hunt_moody_alive:
     broken """
     How very considerate of you, Captain.
 
-    I can quite look after myself, I assure you.
+    But I can quite look after myself, I assure you.
     """
 
     """
     He levels the rifle at my head.
 
-    I raise a hand, uselessly.
+    I raise my hands to protect myself.
     """
 
     broken """
-    It is rather plain you never saw battle, Captain.
+    Ah! It is rather plain you never saw battle, Captain.
 
     Well.
 
-    This is as close as you shall ever get.
+    This is as close as it gets.
     """
 
     play sound gun
