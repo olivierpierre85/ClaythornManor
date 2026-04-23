@@ -30,11 +30,6 @@
     },
     {
       "menu": "lad_day1_evening_billiard_room_menu",
-      "selected": "Ask the butler about Amelia's room",
-      "redirect": "lad_day1_evening_billiard_room_butler"
-    },
-    {
-      "menu": "lad_day1_evening_billiard_room_menu",
       "selected": "Approach the large group of people",
       "redirect": "lad_day1_evening_billiard_room_group"
     },

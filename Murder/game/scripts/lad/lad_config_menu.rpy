@@ -9,7 +9,7 @@ label lad_config_menu:
         TimedMenuChoice('Why were you invited here?', 'psychic_generic_heroic_act', 30, condition = "is_linked_choice_hidden('psychic_generic_menu_lad', 'psychic_generic_heroic_act')"), # Can Only show this choice when the one before has be selected because the answers are linked
         TimedMenuChoice('What do you think of this place?', 'psychic_generic_manor', 20),
         TimedMenuChoice('How old are you?', 'psychic_generic_age_lad', 10),
-        TimedMenuChoice('What room are you in?', 'psychic_generic_room', 10, condition = "not is_unlock_map('bedroom_psychic')"),
+        TimedMenuChoice('What room are you in?', 'psychic_generic_room', 10),
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 10, condition = condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = condition_saturday_morning, next_menu="psychic_generic_other_guests_menu_lad"),
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = condition_saturday_hunt, next_menu="psychic_generic_other_guests_menu_lad"),

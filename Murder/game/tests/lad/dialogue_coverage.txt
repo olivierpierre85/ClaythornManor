@@ -1,9 +1,9 @@
-Generated:                2026-04-23 15:35:27
+Generated:                2026-04-23 15:56:20
 Scope:                    character=lad
-Dialogue entries scanned: 1950
-Test lines collected:     3346
-Covered:                  1678
-Missing:                  272
+Dialogue entries scanned: 1934
+Test lines collected:     3201
+Covered:                  1743
+Missing:                  191
 
   game/scripts/_common/Day 2/1_Morning/1_main.rpy  (6 missing)
     [common_day2_morning_lad_psychic_c5c727e5] Right after saying those words, Samuel Manning steps into the room.
@@ -113,75 +113,6 @@ Missing:                  272
   game/scripts/lad/Day 1/1_Afternoon/1_main.rpy  (1 missing)
     [lad_introduction_54914e0b] 5th September, [current_year]
 
-  game/scripts/lad/Day 1/2_Evening/0_map_choices.rpy  (3 missing)
-    [lad_day1_evening_garden_6052df6a] I reach the great hall and prepare to open the door.
-    [lad_day1_evening_garden_82674b80] However, the weather is so bad that only a madman would venture out now.
-    [lad_day1_evening_garden_ff3b428f] I'd be better off doing something else at the moment.
-
-  game/scripts/lad/Day 1/2_Evening/1_main.rpy  (7 missing)
-    [lad_day1_evening_19c3396a] Wow, I'm not feeling well.
-    [lad_day1_evening_38edfc7b] Even worse, I think I might be getting sick.
-    [lad_day1_evening_86fdf571] I'd better return to my room.
-    [lad_day1_evening_8eb87d82] I hurry to my room.
-    [lad_day1_evening_43fe9498] I head straight for the bathroom and throw up all the Port I've been drinking.
-    [lad_day1_evening_06aca590] Great. If I didn't look foolish enough before, this surely seals it.
-    [lad_day1_evening_28128dc2] I should go to bed before I do anything more embarrassing.
-
-  game/scripts/lad/Day 1/2_Evening/2a_billiard_room.rpy  (53 missing)
-    [lad_day1_evening_billiard_room_bar_1_bc5d3b8f] I approach the bar.
-    [lad_day1_evening_billiard_room_bar_1_4ad772ca] Samuel Manning is there.
-    [lad_day1_evening_billiard_room_bar_1_d99ab0eb] Hello sir.
-    [lad_day1_evening_billiard_room_bar_1_28a57bf8] ...
-    [lad_day1_evening_billiard_room_bar_1_eaad5d50] The man stares at me but makes no sound.
-    [lad_day1_evening_billiard_room_bar_1_ddd9632b] Don't mind him, he seems to be totally out of it.
-    [lad_day1_evening_billiard_room_bar_1_4999c04f] I am startled by the man who approaches me.
-    [lad_day1_evening_billiard_room_bar_1_b3e27a16] He wears one of those masks I've seen on wounded soldiers from the war.
-    [lad_day1_evening_billiard_room_bar_1_0d20de38] They were so badly injured that they have to hide their faces.
-    [lad_day1_evening_billiard_room_bar_1_ff25fa2c] He pretends not to notice my surprise and keeps on talking.
-    [lad_day1_evening_billiard_room_bar_1_e6229abb] He was already asleep when I arrived. It is impressive he still manages to be here.
-    [lad_day1_evening_billiard_room_bar_1_bf3e018a] I was sitting next to him at dinner and it was impossible to get him to say anything coherent.
-    [lad_day1_evening_billiard_room_bar_1_c85303ce] He could eat, though. You can tell he is used to functioning like this. Poor fellow.
-    [lad_day1_evening_billiard_room_bar_1_c10b84a8] Anyway, I am Thomas Moody.
-    [lad_day1_evening_billiard_room_bar_1_ab2f4049] Ted Harring, how do you do.
-    [lad_day1_evening_billiard_room_bar_1_d32f8194] Nice to meet you, Mr Harring. I suppose you are here for a drink.
-    [lad_day1_evening_billiard_room_bar_1_681861da] The choice is rather restricted, I'm afraid. There is only sherry or port.
-    [lad_day1_evening_billiard_room_bar_1_4fe2b2ee] But luckily, I've come prepared.
-    [lad_day1_evening_billiard_room_bar_1_0ba75894] Before I can say anything, he reaches into his coat pocket and pulls out a flask.
-    [lad_day1_evening_billiard_room_bar_1_0f1adc63] Then he starts pouring me a glass of what looks like whisky.
-    [lad_day1_evening_billiard_room_bar_1_c08df77a] You'll probably enjoy this more.
-    [lad_day1_evening_billiard_room_bar_1_1018644b] Well, I can't really say no to that.
-    [lad_day1_evening_billiard_room_bar_1_266653ae] Thanks. Cheers.
-    [lad_day1_evening_billiard_room_bar_1_8fe15628] Cheers, Mr Harring. Now if you don't mind, I'll see what this group is talking about.
-    [lad_day1_evening_billiard_room_bar_1_acc1401b] He joins the group of people talking.
-    [lad_day1_evening_billiard_group_cancel_f253d229] I pretend to hear something coming from the other side of the room and quietly leave the group.
-    [lad_day1_evening_billiard_room_bar_2_09d3266f] I really don't feel comfortable here.
-    [lad_day1_evening_billiard_room_bar_2_e1c40148] Perhaps another drink will help me relax.
-    [lad_day1_evening_billiard_room_bar_2_47336644] So, I decide to go back to the bar and pour myself a sherry.
-    [lad_day1_evening_billiard_room_bar_3_d3eee48f] Well, I haven't tried the Port wine yet.
-    [lad_day1_evening_billiard_room_bar_3_a7384da8] It's probably better than what I'm used to.
-    [lad_day1_evening_billiard_room_bar_3_81c62873] So, I pour myself a glass.
-    [lad_day1_evening_billiard_room_bar_3_5050c3d2] It's exquisite.
-    [lad_day1_evening_billiard_room_bar_3_0c5e452e] So good that it would be foolish not to have another one.
-    [lad_day1_evening_billiard_room_bar_3_771ca589] So I do.
-    [lad_day1_evening_billiard_room_bar_3_27069f53] And another...
-    [lad_day1_evening_billiard_room_bar_3_27069f53_1] And another...
-    [lad_day1_evening_billiard_room_doctor_94ed1128] Hello Doctor.
-    [lad_day1_evening_billiard_room_cancel_69a55f04] I don't feel like staying in this room.
-    [lad_day1_evening_billiard_room_butler_d5125d94] Hello, I was wondering if you could help me.
-    [lad_day1_evening_billiard_room_butler_ba009261] Of course, Mr Harring.
-    [lad_day1_evening_billiard_room_butler_8855efd4] I would like to talk to Miss Baxter.
-    [lad_day1_evening_billiard_room_butler_80e2063b] Do you know where her room is?
-    [lad_day1_evening_billiard_room_butler_adb3e044] I certainly do.
-    [lad_day1_evening_billiard_room_butler_533c2727] But I'm not sure that I should tell you.
-    [lad_day1_evening_billiard_room_butler_06ebfe84] That's not very appropriate.
-    [lad_day1_evening_billiard_room_butler_6f19d527] Hmm, well, no, it's nothing like that.
-    [lad_day1_evening_billiard_room_butler_08ac4735] I'd just like to finish the conversation we had earlier.
-    [lad_day1_evening_billiard_room_butler_36c7f965] I'm sure Miss Baxter won't mind.
-    [lad_day1_evening_billiard_room_butler_f22abb86] Well, I suppose it's not a big secret whose rooms are whose.
-    [lad_day1_evening_billiard_room_butler_cbaf17c2] So, I might as well tell you.
-    [lad_day1_evening_billiard_room_butler_f9c6e36c] She is in the "Elizabeth I" room.
-    [lad_day1_evening_billiard_room_butler_c6bc39d5] Thank you.
-
   game/scripts/lad/Day 2/1_Morning/1_main.rpy  (4 missing)
     [lad_day2_morning_5f859a86] Oh my God, my head is pounding.
     [lad_day2_morning_82821dc1] Why on earth did I drink so much yesterday?
@@ -232,11 +163,8 @@ Missing:                  272
     [lad_day2_hunt_noaccident_9fa388f8] His heart has stopped.
     [lad_day2_hunt_noaccident_6a9796df] He is dead.
 
-  game/scripts/lad/Day 2/2b_No Hunt/2_tea_room.rpy  (9 missing)
+  game/scripts/lad/Day 2/2b_No Hunt/2_tea_room.rpy  (6 missing)
     [lad_day2_hunt_tea_room_ab77c264] Ah, yes, we've discussed that before.
-    [lad_day2_hunt_tea_room_b6db98f1] Aren't they all out on the hunt?
-    [lad_day2_hunt_tea_room_651f07ef] No, dear. The kitchen staff and some maids remain in the mansion.
-    [lad_day2_hunt_tea_room_ef1a6231] Everything in such a home is well-organized.
     [lad_day2_hunt_tea_room_return_92bdcb36] I re-enter the tea room.
     [lad_day2_hunt_tea_room_return_141c880f] Amelia Baxter is still present, engrossed in a book.
     [lad_day2_hunt_tea_room_return_e4ba3c50] I approach her.
@@ -247,17 +175,7 @@ Missing:                  272
     [lad_day3_morning_1b721dc2] Just when we started losing hope, we decided to rest in the tea room.
     [lad_day3_morning_03565043] But as we settled down, an authoritative voice echoed from outside the room.
 
-  game/scripts/lad/Endings/endings.rpy  (6 missing)
-    [lad_ending_day1_deathbed_85f154fd] You don't wake up.
-    [lad_ending_day1_deathbed_4eef33c4] You have died during the night.
-    [lad_ending_day1_deathbed_ba2f12cd] It's unfair, I know.
-    [lad_ending_day1_deathbed_8938e772] You don't think that you have done anything wrong.
-    [lad_ending_day1_deathbed_f995b70b] And you probably haven't.
-    [lad_ending_day1_deathbed_a0cc98c5] But sometimes, people die without knowing why.
-
-  game/scripts/lad/lad_generic_locations.rpy  (54 missing)
-    [lad_library_default_d029f857] There is nothing different from the last time I was in here.
-    [lad_library_default_8fa1599b] No reason to look further.
+  game/scripts/lad/lad_generic_locations.rpy  (45 missing)
     [lad_downstairs_default_dfbe8e19] Maybe I'm pushing my luck, trying to go downstairs, but I feel like I have to go there.
     [lad_downstairs_default_5aea444c] Mr Harring? I thought I made myself clear earlier.
     [lad_downstairs_default_37412708] What are you trying to do here?
@@ -301,13 +219,6 @@ Missing:                  272
     [lad_downstairs_flirt_a34d9f86] Alright, that was uncomfortable.
     [lad_downstairs_flirt_edb97903] But at least she doesn't think I was sneaking down here; that was a close call.
     [lad_downstairs_flirt_55d3e439] Still, I'd better go look somewhere else.
-    [lad_dining_room_default_e146f77a] The dining room is empty at the moment.
-    [lad_dining_room_default_a19c6425] I shouldn't stay here.
-    [lad_billiard_room_default_99045eb6] It's empty.
-    [lad_billiard_room_default_6a0e8311] No need to stay here.
-    [lad_entrance_hall_default_b2dc77ee] It's certainly an impressive entrance hall.
     [lad_servant_stairs_default_ecd076cc] I entered a hidden space that is clearly meant for servants.
     [lad_servant_stairs_default_150a6002] It's narrow TODO
-    [lad_portrait_gallery_default_ea459cc6] Nothing new here.
-    [lad_portrait_gallery_default_979c9c2c] It still gives me a weird, creepy feeling.
 

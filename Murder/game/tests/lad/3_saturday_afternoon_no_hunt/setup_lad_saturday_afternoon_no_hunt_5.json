@@ -1,7 +1,10 @@
 {
   "start_label": "lad_day2_no_hunt",
   "unlocked_threads": [],
-  "saved_variables": {},
+  "saved_variables": {
+    "library_visited": true,
+    "portrait_gallery_visited": true
+  },
   "choices": [
     {
       "menu": "lad_day2_no_hunt_map_menu",
@@ -17,16 +20,6 @@
       "menu": "lad_day2_no_hunt_map_menu",
       "selected": "Library",
       "redirect": "lad_day2_no_hunt_library"
-    },
-    {
-      "menu": "lad_day2_no_hunt_map_menu",
-      "selected": "Library",
-      "redirect": "lad_day2_no_hunt_library"
-    },
-    {
-      "menu": "lad_day2_no_hunt_map_menu",
-      "selected": "Portrait Gallery",
-      "redirect": "lad_day2_no_hunt_portrait_gallery"
     },
     {
       "menu": "lad_day2_no_hunt_map_menu",

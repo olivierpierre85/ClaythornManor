@@ -47,9 +47,10 @@ day2_nohunt_has_visited_tea_room=True
 ---
 
 ## setup_lad_saturday_afternoon_no_hunt_5.json
-**Checkpoint**: all flags False (fresh chapter)  
-**Path**: Tea Room first (no kitchen visit, so `has_met_maid=False`) → Library twice (first +
-back-visit) → Portrait Gallery twice → Billiard Room → Dining Room → Entrance Hall → Nap.
+**Checkpoint**: library_visited=True, portrait_gallery_visited=True (simulates a prior visit
+from Day 1 evening so the back-visit branches fire).  
+**Path**: Tea Room first (no kitchen visit, so `has_met_maid=False`) → Library (back-visit)
+→ Portrait Gallery (back-visit) → Billiard Room → Dining Room → Entrance Hall → Nap.
 - Covers the tea room else-branch (`Aren't they all out on the hunt?`).
 - Covers `lad_library_default` second-visit dialogue.
 - Covers `lad_portrait_gallery_default` second-visit dialogue.
