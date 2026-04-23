@@ -215,7 +215,7 @@ label captain_day2_hunt_silent_luncheon:
     """
 
     host """
-    It seems the others have had better fortune than ourselves.
+    It seems the others have seen something.
     """
 
     """
@@ -228,12 +228,6 @@ label captain_day2_hunt_silent_luncheon:
 
     host """
     Captain. With me, please.
-    """
-
-    """
-    She is the first to move.
-
-    For a woman who cannot shoot, she has a commanding stride when it suits her.
     """
 
     call wait_screen_transition()

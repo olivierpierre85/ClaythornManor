@@ -2,13 +2,13 @@ label captain_config_progress:
     python:
     # First define the possible progress
         captain_progress = [
-            # Row 0: Main path (up to Saturday morning for now)
+            # Row 0: Main path (up to Saturday evening for now)
             [
                 Chapter(image_checkpoint_start, "start", "captain_introduction", "friday_afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day1_evening", "friday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_morning", "saturday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_hunt", "saturday_afternoon"),
-                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_right, "checkpoint", "captain_day2_evening", "saturday_evening"),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
@@ -101,5 +101,25 @@ label captain_config_progress:
                 {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': True}},
                 # --- Moody dead, both host suspicions (opens confrontation menu; survives or dies strangled) ---
                 {"label": "captain_day2_hunt", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True}},
+            ],
+
+            # ===== SATURDAY EVENING =====
+            # Only reachable on the Moody-dead branch, so tell_boxer_story is always True here.
+            # Threads SET before & RELEVANT here:
+            #   - tell_boxer_story: relevant=['saturday_evening'] (doctor carried in, three chairs empty at dinner)
+            #   - captain_host_suspicion_name / _portrait: set friday_evening, relevant saturday_evening
+            #   - captain_host_suspicion_shooting: set saturday_afternoon, relevant saturday_evening
+            #   All three host suspicions together unlock the confrontation menu in the hall.
+            # Threads SET here:
+            #   - butler_key (pocketed on the normal escort path)
+            # Saved variables SET here:
+            #   - confronted_host_publicly (changes the dinner narration)
+            'saturday_evening': [
+                # --- Bare path: no host suspicions, normal escort only ---
+                {"label": "captain_day2_evening", "threads": {'tell_boxer_story': True}},
+                # --- Two of three suspicions (missing shooting): still no confrontation menu ---
+                {"label": "captain_day2_evening", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True}},
+                # --- All three host suspicions: unlocks the confrontation menu ---
+                {"label": "captain_day2_evening", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True, 'captain_host_suspicion_shooting': True}},
             ],
         }
