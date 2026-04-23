@@ -45,11 +45,11 @@ label host_introduction:
     """
 
     butler """
-    I was a footman when I was younger, a very long time ago.
+    Right, I was a footman when I was younger, a very long time ago.
 
     But that's precisely why I should be the butler.
 
-    You see, in this kind of environnmnent, the staff is more scrutinize that than the host.
+    You see, in this kind of environment, the staff is more scrutinize that than the host.
 
     That's a rule.
 
@@ -77,7 +77,11 @@ label host_introduction:
     """
     The "Staff", are actually all actors, some with very little domestic experience, if any.
 
-    That would an incredible feat if the weekend goes as planned.
+    But I've been assured that the guests we are receiving won't be accustomed to all this.
+
+    None of them is from a standing important enough so that they should notice little mistakes with the service.
+
+    Still, that would an incredible feat if the weekend goes as planned.
     """
 
     # $ stop_music()
