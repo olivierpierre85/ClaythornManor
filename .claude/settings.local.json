@@ -4,7 +4,8 @@
       "Bash(python -c \":*)",
       "Bash(git -C c:/Projects/ClaythornManor log -p --follow -- \"Murder/game/scripts/lad/Day 2/2b_No Hunt/0_map_choices.rpy\")",
       "Bash(git -C c:/Projects/ClaythornManor show cc644ba4 -- \"Murder/game/scripts/lad/Day 2/2b_No Hunt/0_map_choices.rpy\")",
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(python Murder/check_test_dialogue_coverage.py --character lad)"
     ]
   }
 }

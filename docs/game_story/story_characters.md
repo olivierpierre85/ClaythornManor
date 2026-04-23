@@ -85,10 +85,10 @@ Invited because, despite everything, he managed to become a defence lawyer, albe
 ### The Broken Face (Thomas Moody / Imposter)
 Badly injured in the war, he wears a mask to cover his face.
 He is supposed to be the young officer whom the Psychic loved, invited for his service.
-However, it turns out that the officer is dead (or perhaps Thomas killed him or stole from him), and a friend saw the invitation made in his name. That is why he stole the papers and put on a mask in case anyone was supposed to recognise him (which turned out to be unnecessary).
+However, it turns out that the officer is dead, and a friend saw the invitation made in his name. That is why he stole the papers and put on a mask in case anyone was supposed to recognise him (which turned out to be unnecessary).
 Upon his arrival at the manor, the Psychic quickly realises he is not the right person, so she poisons his drink immediately.
 He is an amateur sleuth and is skilled at interrogation; he can sneak into certain places.
-MOODY and ARCHIE WERE war buddies, both officers.
+MOODY and ARCHIE WERE war buddies, both officers, maybe lovers.
 
 ### The Host - Lady Claythorn (OR ????)
 An out-of-work actress, she stole the job that the Psychic wanted some years ago. It is not a revenge as strong as the others, but as they say, 'you cannot make an omelette without breaking eggs.'
@@ -157,7 +157,7 @@ However, when faced with this, we realise that the Psychic set all of this up.
 | **The Nurse**   | MOTHER, abandoned him.                                                        | She ratted out the Psychic to the Captain. |
 | The Psychic     | Asked for information, lead him on?                                           | x                                          |
 | The Drunk       | Killed the father of the Broken Face.                                         | Hid her child.                             |
-| The Captain     | Used to supervise the young officer; did nothing.                             | Separated her from her lover.              |
+| The Captain     | Signed the papers re assigning the young officer.                             | Separated her from her lover.              |
 | The Broken Face | He is the young officer (thus his father). The 'brother' theory is a mistake. | Scorned her.                               |
 | The Host        | QUID? Actress - Jealousy.                                                     | Nothing; she was not supposed to die?      |
 

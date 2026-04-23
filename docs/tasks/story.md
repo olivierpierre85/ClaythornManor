@@ -125,6 +125,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 ### Important
 
 - [ ] Same kind story as Doctor when find the letter => Tell everyone about the letter, everyone want’s to leave, but die in FIREE. The discussions will give an idea of what could have been said in the doctor timeline !
+- [ ] Is the one that can go to sunday evening. he sees psychic waking up Ted harring in the ... IF he managed to SAVE him from poison. But how could he save everyone?
 
 ### Ideas to think over (optional)
 
