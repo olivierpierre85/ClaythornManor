@@ -149,6 +149,22 @@
       "problemMatcher": []
     },
     {
+      "label": "Common: Check inner dialogue filter",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\Murder\\check_common_inner_dialogue.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Antigravity: Extract Thread Prompts",
       "type": "process",
       "command": "python",

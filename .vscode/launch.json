@@ -38,6 +38,15 @@
       "console": "integratedTerminal"
     },
     {
+      "name": "Common: Check inner dialogue filter",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/dummy.py",
+      "preLaunchTask": "Common: Check inner dialogue filter",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
       "name": "Extract Thread Prompts",
       "type": "debugpy",
       "request": "launch",

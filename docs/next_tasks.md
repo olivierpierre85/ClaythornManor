@@ -7,6 +7,10 @@ Or just : Captain, Broken?
 BUG??? Or by design. WHY Is there a call the generic LAD in psychic day 1 billiard room?
 
 
+BUG CHECK all commons for inner dialogs with person filter => Exemple Day2 Evening..
+
+Search in common for  """"
+
 NEW
 
 ## Write Story: Captain (Sushil Sinha)
