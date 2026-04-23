@@ -63,21 +63,7 @@ label lad_day2_evening:
     Sushil then covered him with a blanket.
     """
 
-    captain """
-    It's the best we can do at the moment.
-
-    We shouldn't linger here.
-
-    I want to keep an eye on Samuel Manning.
-    """
-
-    lad """
-    Of course.
-    """
-
-    captain """
-    Also Mr Harring, you might want to change before rejoining us.
-    """
+    call common_day2_evening_bedroom_doctor_dialogue
 
     """
     I glance at my clothes.

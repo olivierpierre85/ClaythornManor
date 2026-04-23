@@ -104,6 +104,27 @@ label common_day2_evening_entrance_dialog:
 
     return
 
+label common_day2_evening_bedroom_doctor_dialogue:
+
+    captain """
+    It's the best we can do at the moment.
+
+    We shouldn't linger here.
+
+    I want to keep an eye on Samuel Manning.
+    """
+
+    lad """
+    Of course.
+    """
+
+    captain """
+    Also Mr Harring, you might want to change before rejoining us.
+    """
+
+    return
+
+
 label common_day2_evening_samuel_manning_discussion_part_1:
 
     # Present: psychic, host, drunk, nurse, butler
