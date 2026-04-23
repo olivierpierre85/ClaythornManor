@@ -1,9 +1,9 @@
-Generated:                2026-04-23 15:56:20
+Generated:                2026-04-23 16:11:12
 Scope:                    character=lad
 Dialogue entries scanned: 1934
-Test lines collected:     3201
-Covered:                  1743
-Missing:                  191
+Test lines collected:     3244
+Covered:                  1789
+Missing:                  145
 
   game/scripts/_common/Day 2/1_Morning/1_main.rpy  (6 missing)
     [common_day2_morning_lad_psychic_c5c727e5] Right after saying those words, Samuel Manning steps into the room.
@@ -112,56 +112,6 @@ Missing:                  191
 
   game/scripts/lad/Day 1/1_Afternoon/1_main.rpy  (1 missing)
     [lad_introduction_54914e0b] 5th September, [current_year]
-
-  game/scripts/lad/Day 2/1_Morning/1_main.rpy  (4 missing)
-    [lad_day2_morning_5f859a86] Oh my God, my head is pounding.
-    [lad_day2_morning_82821dc1] Why on earth did I drink so much yesterday?
-    [lad_day2_morning_f4c44510] As we returned to the dining room, our hostess had just finished explaining the situation.
-    [lad_day2_morning_1e08e512] She seemed to regain her composure upon seeing the doctor.
-
-  game/scripts/lad/Day 2/2a_Hunt/2b_noaccident.rpy  (42 missing)
-    [lad_day2_hunt_noaccident_fea60584] Following our hostess seemed to be the safest course of action.
-    [lad_day2_hunt_noaccident_5ba0028e] The only problem is that both she and Sushil Sinha are completely in their element.
-    [lad_day2_hunt_noaccident_22c2a9c6] While I clearly am not.
-    [lad_day2_hunt_noaccident_3d46a878] They've already shot a few rabbits and a pheasant.
-    [lad_day2_hunt_noaccident_5be45637] Out of pity, they even tried to help me shoot a deer that crossed my path.
-    [lad_day2_hunt_noaccident_d86bed10] However, I merely managed to scare the animal away.
-    [lad_day2_hunt_noaccident_60352b13] Tough luck, Mr Harring. I'm sure you'll get the next one.
-    [lad_day2_hunt_noaccident_8ae559b5] Thank you, but I don't think this is for me. I believe I missed it by several feet.
-    [lad_day2_hunt_noaccident_febbdc11] Don't fret, you just lack practice.
-    [lad_day2_hunt_noaccident_f79dbbe5] Then again, it might be for the best. You wouldn't have wanted to serve in the war.
-    [lad_day2_hunt_noaccident_cd4af849] It was truly brutal. Nothing like the previous conflicts I participated in.
-    [lad_day2_hunt_noaccident_f204ff27] Have you fought in many wars?
-    [lad_day2_hunt_noaccident_8f850b98] Indeed, I began my career in India and encountered my first battle during the war with Burma.
-    [lad_day2_hunt_noaccident_ecb9e7fd] I was also involved in the Chinese rebellion of the Boxer's. Then ...
-    [lad_day2_hunt_noaccident_baf3a93d] Our conversation about the wars seemed to make Lady Claythorn uneasy, as she suddenly interrupts us.
-    [lad_day2_hunt_noaccident_2cb0103d] Well, I believe it's time for luncheon. How would you feel about settling here for our picnic?
-    [lad_day2_hunt_noaccident_083a855d] Yes, it's a perfect spot.
-    [lad_day2_hunt_noaccident_29e41d2a] We began setting up the picnic.
-    [lad_day2_hunt_noaccident_1180048f] However, before we could start eating, we heard a gunshot nearby.
-    [lad_day2_hunt_noaccident_d8721bcb] Ah, it sounds like the others have caught something. And they're not far from here.
-    [lad_day2_hunt_noaccident_78156140] But soon after the gunshot, another sound followed.
-    [lad_day2_hunt_noaccident_52d11435] A desperate cry for help.
-    [lad_day2_hunt_noaccident_8daaa8ec] The captain and I heard it, immediately jumping to our feet.
-    [lad_day2_hunt_noaccident_11146098] We rushed in the direction of the cry.
-    [lad_day2_hunt_noaccident_b7571fd1] Soon, we came upon the others.
-    [lad_day2_hunt_noaccident_555c0045] Doctor Baldwin is on the ground.
-    [lad_day2_hunt_noaccident_136366fa] Standing beside him is Samuel Manning, visibly shaken.
-    [lad_day2_hunt_noaccident_88f0d110] Oh my God, oh my God.
-    [lad_day2_hunt_noaccident_2adc6b67] I can't believe this happened.
-    [lad_day2_hunt_noaccident_7bae0b94] Captain Sinha grabbed him.
-    [lad_day2_hunt_noaccident_6d1f558c] What have you done, fool?
-    [lad_day2_hunt_noaccident_6ca8a520] I shot at a rabbit, but missed.
-    [lad_day2_hunt_noaccident_8cc32979] I didn't mean to hit him.
-    [lad_day2_hunt_noaccident_5e290c27] I didn't...
-    [lad_day2_hunt_noaccident_a7652025] We look down at Daniel Baldwin.
-    [lad_day2_hunt_noaccident_a37b9d4f] Next to him are empty vials and a syringe.
-    [lad_day2_hunt_noaccident_d81844cc] He asked me to give him that.
-    [lad_day2_hunt_noaccident_4248f917] Then he nodded off right after.
-    [lad_day2_hunt_noaccident_d4e58c6a] Captain Sinha sits next to the victim to check his pulse.
-    [lad_day2_hunt_noaccident_cb0c46fc] It is too late.
-    [lad_day2_hunt_noaccident_9fa388f8] His heart has stopped.
-    [lad_day2_hunt_noaccident_6a9796df] He is dead.
 
   game/scripts/lad/Day 2/2b_No Hunt/2_tea_room.rpy  (6 missing)
     [lad_day2_hunt_tea_room_ab77c264] Ah, yes, we've discussed that before.

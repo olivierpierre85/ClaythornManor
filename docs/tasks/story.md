@@ -13,6 +13,22 @@
 - [ ] Dialog: "Can you read mister Harring? 'I GET BY'".
 - [ ] $ lad_generic_menu NO MENTIONNED OF WEATHER? ADd ? or reason?
 
+ Dead code in lad_generic_locations.rpy (42 of the 45 missing)
+The third-attempt "downstairs" branch is unreachable:
+
+lad_generic_locations.rpy:57-113
+
+
+if not lad_details.threads.is_unlocked('downstairs_1'):
+    ...
+elif lad_details.threads.is_unlocked('downstairs_1'):   # catches everything forever
+    ...unlock downstairs_2
+elif lad_details.threads.is_unlocked('downstairs_2'):   # unreachable
+    ...third-attempt menu (sleepwalk / flirt)
+The whole third-visit block plus lad_downstairs_sleepwalk (15 lines), lad_downstairs_flirt (23 lines), and lad_downstairs_lost (2 lines — its menu choice is also commented out at line 129) is dead. No test can reach it until the second elif is changed to elif not lad_details.threads.is_unlocked('downstairs_2'): (and the third made else).
+
+Action: this is a source bug, not a test gap. Once fixed, add a saturday_evening plan with downstairs_1=True, downstairs_2=True pre-unlocked that visits the kitchen — one run per sub-label (sleepwalk, flirt).
+
 ### Ideas to think over (optional)
 
 - [ ] Make him afraid of ghosts.
