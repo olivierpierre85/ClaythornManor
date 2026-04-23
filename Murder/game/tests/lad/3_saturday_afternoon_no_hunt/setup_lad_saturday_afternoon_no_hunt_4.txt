@@ -1,0 +1,56 @@
+Chapter: No Hunt
+Character: Ted Harring
+I turned down the invitation for the hunt.
+So, I'm staying inside with Amelia Baxter and Rosalind Marsh.
+They are in the tea room, waiting for a small luncheon to be served.
+Now, what should I do?
+Map Choice: Queen Alexandra
+I knock upon the door.
+Rosalind Marsh: Yes? Who is it?
+Ted Harring: It's Ted Harring.
+Rosalind Marsh: Ah, Mr Harring, I'm quite exhausted at the moment.
+Rosalind Marsh: Would you mind coming back later?
+Ted Harring: Of course, sorry for bothering you.
+Map Choice: Elizabeth I Bedroom
+I knock on the door.
+Nobody answers.
+Most people are out for the hunt, so I guess I could try to enter the room anyway.
+But it won't look good if I get caught.
+What should I do?
+Menu Choice: Let's go in. What's the worst that could happen?
+I try to push the door open.
+It's locked.
+Map Choice: Henry IV Bedroom
+I knock on the door.
+Nobody answers.
+There seems to be nobody here as well.
+Menu Choice: It won't hurt to give it a try. Let's go in and find out.
+I try to push the door open.
+It's locked.
+Map Choice: Richard III Bedroom
+The poor man is still there. I don't think he's moved.
+Now that I am here, perhaps I should take a quick look.
+There might be something that helps me understand what happened.
+I look around the room.
+Nothing seems out of the ordinary.
+He looks peaceful.
+His mask is still in place.
+The doctor didn't even remove it for the examination.
+Well, if the doctor didn't, I certainly won't either.
+On a chair beside the bed, his clothes are meticulously folded.
+There is a flask on the nightstand.
+It lies on its side, empty.
+Next to it is a stain.
+I suppose it is whisky, but it has an odd shade of green.
+That is peculiar.
+What could it be?
+That's all I notice in the room.
+Map Choice: Garden
+A beautiful garden.
+I wandered in it for a while, enjoying a relaxing walk.
+But I didn't find anything of interest.
+Map Choice: Take a nap until the others return
+I don't think there's anything interesting to do now.
+So, I'll just lie down on my bed for a while.
+Suddenly, I hear noises from the entrance hall.
+I decide to see what's happening.

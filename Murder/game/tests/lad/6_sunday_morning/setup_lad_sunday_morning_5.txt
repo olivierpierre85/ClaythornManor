@@ -1,0 +1,185 @@
+Chapter: An Empty Manor
+Character: Ted Harring
+I am awaken by the sound of frantic knocking at the door.
+Amelia Baxter: Mr Harring, are you there?
+Miss Baxter?
+Right, we agreed to wake each other up.
+I just didn't expect it to be this early.
+Ted Harring: I'm coming!
+I quickly get dressed and open the door.
+Amelia Baxter enters, looking visibly nervous.
+Amelia Baxter: Mr Harring, I believe my hunch was right yesterday.
+Amelia Baxter: Something strange is afoot.
+Ted Harring: What do you mean?
+Amelia Baxter: I haven't seen any staff members on my way here.
+Amelia Baxter: At this hour, they should be busy with lighting fires, cleaning and setting up breakfast.
+Amelia Baxter: Yet, I neither saw nor heard anyone.
+Amelia Baxter: It's as silent as a graveyard in here.
+Ted Harring: Are you sure it's not just because it's so early?
+Amelia Baxter: I'm certain.
+Amelia Baxter: I was up at the same time yesterday, and the house was bustling with activity.
+Amelia Baxter: Something's not right, I assure you.
+Ted Harring: Okay, if you say so.
+Ted Harring: But how is that related to a robbery?
+Amelia Baxter: I'm not so sure anymore that this is about a robbery.
+Amelia Baxter: I have a feeling it could be something much worse.
+A chill goes through my body.
+Worse than a robbery? What could she mean?
+But I'm hesitant to ask her.
+Instead, I try to appear confident.
+Ted Harring: Alright, we'd better investigate then.
+Map Choice: Library
+We enter the small library and find it empty.
+There's no room for anyone to hide here.
+Let's move on.
+Map Choice: Dining Room
+Ted Harring: Nobody seems to be here.
+Amelia Baxter: And the table isn't set for breakfast either.
+Amelia Baxter: That's unusual.
+Map Choice: Garden
+We venture out to explore the garden.
+But there's no trace of anyone.
+Lady Claythorn's car isn't there either.
+I try shouting to attract attention.
+Ted Harring: Hello! Is anyone here?
+Ted Harring: Hello!!
+No response.
+Amelia Baxter: I don't think shouting will help.
+Amelia Baxter: If someone's here, we'll find them.
+Oh, was shouting inappropriate?
+I guess she'll always prioritize decorum, no matter the situation.
+Let's head back inside then.
+Map Choice: Portrait Gallery
+The creepy portrait gallery.
+The paintings seem to be looking at me.
+But besides them, no one in here.
+Map Choice: Tea room
+Here I am, back in the first room I visited in the manor.
+All the liveliness of that first day is gone.
+Now, it stands silent and empty.
+Amelia Baxter: There's no one in here.
+Amelia Baxter: Let's look elsewhere.
+Ted Harring: Right, of course.
+Map Choice: William the Conqueror Bedroom
+There's no need to double-check my room.
+I know what's in there.
+Map Choice: Entrance Hall
+The entrance hall is usually the heart of the house.
+But there's no activity today.
+Just in case, I try to call out for someone.
+Ted Harring: Is anyone here?
+I didn't really expect an answer.
+But an authoritative voice echoes from up the stairs.
+Sushil Sinha: Who goes there?
+Ted Harring: It's Ted Harring. I'm down here, and Amelia Baxter's with me.
+Sushil Sinha: Understood. I'm on my way down.
+Soon enough, Captain Sinha comes into view, descending the staircase to join us on the ground floor.
+Sushil Sinha: At last, living, breathing souls.
+Sushil Sinha: I was starting to feel like I was in a ghost house.
+Amelia Baxter: We feel the same. You two are the first persons we've encountered today as well.
+Ted Harring: Do you have any idea what's going on?
+Sushil Sinha: Nothing concrete. All I know is, I don't like it.
+Sushil Sinha: People don't just vanish from their homes without reason.
+Amelia Baxter: They certainly don't.
+Sushil Sinha: And then there's the matter of the suspicious deaths.
+Sushil Sinha: I could've dismissed them as bad luck yesterday, but now... I'm not so certain.
+The conversation lingers in the air, a heavy silence stretching between us.
+Amelia Baxter: Staying put won't give us any answers.
+Amelia Baxter: We need to continue exploring the house.
+Sushil Sinha: Agreed. Should we search together?
+Amelia Baxter: Thank you, but... maybe it's better to split up.
+Amelia Baxter: We'd cover more ground that way.
+Amelia seemed nervous when she answered.
+Sushil Sinha: Makes sense. Let's proceed on our own and regroup later.
+Sushil Sinha: How about the tea room?
+Amelia Baxter: That sounds good.
+Amelia Baxter: See you there.
+Map Choice: Go wait for Sushil
+I doubt we'll find anyone now.
+So we settled in the tea room to wait for Captain Sinha.
+Sushil Sinha: It's unbelievable, but it seems we're the only three living souls left here.
+Sushil Sinha: Did you find anything?
+Ted Harring: Nothing.
+Ted Harring: It seems everyone is gone.
+Ted Harring: Except for the bodies.
+Ted Harring: By the way, did you check on Samuel Manning?
+Ted Harring: You're the only one with the key to his room.
+Sushil Sinha: No, not yet. I assumed he couldn't have gone far.
+Sushil Sinha: But you're right, we should check on him.
+Ted Harring: I think so too.
+Ted Harring: We'll follow you.
+Amelia shoots me a concerned look but remains silent.
+She follows us nonetheless.
+Sushil Sinha: Mr Manning, are you there?
+No response.
+Sushil Sinha: Alright, I'm going in.
+He unlocks the door, and we trail behind him.
+But as I step inside, Captain Sinha tries to halt us.
+Sushil Sinha: Wait! Don't come in.
+But it's already too late.
+The sight inside is beyond horrifying.
+Samuel Manning lies in his bed, drenched in blood, his throat slashed multiple times.
+Pale as a sheet, his eyes frozen in a blank stare.
+Miss Baxter almost screams.
+Sushil Sinha: Miss Baxter, please don't stay here.
+She's speechless, her gaze fixed on the horrifying scene.
+Sushil Sinha gently pulls her arm, leading her out. I quickly follow.
+Sushil Sinha: I regret letting you see that.
+Sushil Sinha: You shouldn't have entered.
+Amelia Baxter: Is... is he... dead?
+Sushil Sinha: I'm afraid so.
+Ted Harring: Are you certain?
+Ted Harring: Shouldn't we check his pulse?
+Ted Harring: Maybe... just maybe, there's a chance he's alive.
+My voice trembles as I speak, realisation dawning on me.
+Sushil Sinha: I'm sorry, but it's too late.
+Sushil Sinha: I've seen enough dead people to know. He's been gone for a long time.
+Sushil Sinha: Likely since last night.
+Amelia Baxter: Oh my God.
+The weight of shock renders me motionless.
+To help us recover, Sushil guides us back to the tea room.
+Sushil Sinha: Miss Baxter, you should probably rest here for a little bit.
+Sushil Sinha: I have something to check out, and I'll be back soon.
+Sushil Sinha: Mr Harring, would you mind coming with me?
+I'm still shaken from what we saw, but doing something might help me recover my senses.
+Ted Harring: Well, sure.
+Ted Harring: I'll follow you.
+Amelia Baxter: Please don't be long.
+Sushil Sinha: Don't worry, this should only take a few minutes.
+He walks back up the stairs and stands in front of another room.
+Sushil Sinha: It's Miss Marsh's room.
+Sushil Sinha: When I tried the handle earlier it was locked.
+Sushil Sinha: At the time, I didn't dare to go further.
+Sushil Sinha: But now, I fear we may have no choice.
+Ted Harring: Do you believe she might still be inside?
+Ted Harring: Then she would be...
+Sushil Sinha: Dead, I am afraid.
+Sushil Sinha: After what we witnessed, I think it a very strong possibility.
+Ted Harring: Oh my God.
+Sushil Sinha: There is no need to break the door.
+Sushil Sinha: The butler entrusted me with a master key when we confined Mr Manning.
+Sushil Sinha: It should open every room in the house.
+He has a master key?
+That mean he is able to visit every room of this place.
+Captain Sinha then slips a small key from his pocket.
+With a steady hand he turns the lock.
+The mechanism clicks, and the door swings open into the silence beyond.
+The room is eerily quiet.
+But Rosalind Marsh is not there.
+We look in every corner, but we can't find anything of interest.
+Ted Harring: What a relief.
+Sushil Sinha: Yes, of course. But there's no need to linger here.
+Sushil Sinha: Let's return to the tea room, we need to talk with Miss Baxter to decide our next steps.
+Amelia Baxter: You've been gone for a while. What happened?
+Sushil Sinha: I'm afraid we haven't been able to find Miss Marsh.
+Sushil Sinha: We searched her room but it was empty.
+Amelia Baxter: Well, what should we do now?
+Sushil Sinha: You both seem a bit shaken up.
+Sushil Sinha: That's not surprising, given what you've witnessed.
+Sushil Sinha: It's easier for me.
+Sushil Sinha: Sadly, I've seen my share of dead people.
+Sushil Sinha: So I suggest you two rest for a bit while I continue to explore the manor.
+Sushil Sinha: I'll be back soon.
+I feel like I should accompany him.
+But he is right, I am exhausted and overwhelmed.
+So I just agree with a nod and sit down.
