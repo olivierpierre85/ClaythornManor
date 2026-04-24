@@ -1,0 +1,47 @@
+{
+  "start_label": "psychic_day1_evening",
+  "unlocked_threads": ["visited_attic", "lord_name", "lord_age"],
+  "saved_variables": {
+    "attic_visited": true,
+    "book_read": true,
+    "library_visited": true,
+    "portrait_gallery_visited": true
+  },
+  "choices": [
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening",
+      "selected": "Don't engage with anyone, it's unladylike",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Portrait Gallery",
+      "redirect": "psychic_portrait_gallery_look_for_lord"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Library",
+      "redirect": "psychic_library_look_for_lord_succeed"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Return to the Attic",
+      "redirect": "psychic_attic_return"
+    },
+    {
+      "menu": "psychic_lord_ending_menu",
+      "selected": "On second thought, it is rather scary. Let's back down",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Go to bed",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

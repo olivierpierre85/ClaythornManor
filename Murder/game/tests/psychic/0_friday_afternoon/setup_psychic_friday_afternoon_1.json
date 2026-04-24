@@ -1,0 +1,15 @@
+{
+  "start_label": "psychic_introduction",
+  "choices": [
+    {
+      "menu": "psychic_captain_origin_1",
+      "selected": "Where are you from?",
+      "redirect": "captain_generic_origin_psychic_1"
+    },
+    {
+      "menu": "psychic_captain_origin_2",
+      "selected": "I mean, where are you \"Really\" from?",
+      "redirect": "captain_generic_origin_psychic_2"
+    }
+  ]
+}

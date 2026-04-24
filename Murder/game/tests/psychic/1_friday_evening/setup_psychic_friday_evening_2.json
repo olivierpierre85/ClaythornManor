@@ -1,0 +1,65 @@
+{
+  "start_label": "psychic_day1_evening",
+  "choices": [
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening",
+      "selected": "Don't engage with anyone, it's unladylike",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Tea room",
+      "redirect": "psychic_tea_room_default"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Dining Room",
+      "redirect": "psychic_dining_room_default"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Garden",
+      "redirect": "psychic_day1_evening_garden"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Entrance Hall",
+      "redirect": "psychic_entrance_hall_default"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Library",
+      "redirect": "psychic_library_default"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Portrait Gallery",
+      "redirect": "psychic_portrait_gallery_default"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Edward II Bedroom",
+      "redirect": "psychic_day1_evening_default_bedroom"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "George IV Bedroom",
+      "redirect": "psychic_day1_evening_bedroom_drunk"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Kitchen",
+      "redirect": "psychic_day1_evening_downstairs_default"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Go to bed",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "start_label": "psychic_day1_evening",
+  "choices": [
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening",
+      "selected": "Don't engage with anyone, it's unladylike",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Meet the others in the billiard room",
+      "redirect": "psychic_day1_evening_billiard_room"
+    },
+    {
+      "menu": "psychic_day1_evening_billiard_room_menu",
+      "selected": "Go to the bar",
+      "redirect": "psychic_day1_evening_billiard_room_bar"
+    },
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Meet the others in the billiard room",
+      "redirect": "psychic_day1_evening_billiard_room"
+    },
+    {
+      "menu": "psychic_day1_evening_billiard_room_menu",
+      "selected": "Endure another story by Mr Sinha",
+      "redirect": "psychic_day1_evening_billiard_room_group"
+    }
+  ]
+}

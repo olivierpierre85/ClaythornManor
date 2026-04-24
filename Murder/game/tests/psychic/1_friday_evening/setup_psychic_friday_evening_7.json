@@ -1,0 +1,55 @@
+{
+  "start_label": "psychic_day1_evening",
+  "choices": [
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "What do you think of the other guests?",
+      "redirect": "lad_generic_other_guests_friday_dinner"
+    },
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening",
+      "selected": "Talk to Sushil Sinha",
+      "redirect": "psychic_day1_dinner_captain"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "Tell me more about yourself",
+      "redirect": "captain_generic_background_psychic"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "Why were you invited here?",
+      "redirect": "captain_generic_heroic_act_psychic"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "What do you think of the other guests?",
+      "redirect": "captain_generic_other_guests_friday"
+    },
+    {
+      "menu": "captain_generic_other_guests_menu_psychic",
+      "selected": "What do you think of Lady Claythorn?",
+      "redirect": "captain_generic_host_friday_psychic"
+    },
+    {
+      "menu": "captain_generic_other_guests_menu_psychic",
+      "selected": "What do you think of Rosalind Marsh?",
+      "redirect": "captain_generic_nurse_friday"
+    },
+    {
+      "menu": "captain_generic_other_guests_menu_psychic",
+      "selected": "What do you think of Daniel Baldwin?",
+      "redirect": "captain_generic_doctor_friday"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Go to bed",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

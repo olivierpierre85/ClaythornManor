@@ -1,0 +1,35 @@
+{
+  "start_label": "psychic_day1_evening",
+  "choices": [
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening",
+      "selected": "Don't engage with anyone, it's unladylike",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Library",
+      "redirect": "psychic_library_default"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Storage Room",
+      "redirect": "psychic_day1_evening_attic_default"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Library",
+      "redirect": "psychic_library_look_for_lord_failed"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Portrait Gallery",
+      "redirect": "psychic_portrait_gallery_look_for_lord"
+    }
+  ]
+}

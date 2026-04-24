@@ -13,6 +13,8 @@ Search in common for  """"
 
 NEW
 
+TRY CONSOLE
+
 ## Write Story: Captain (Sushil Sinha)
 
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)

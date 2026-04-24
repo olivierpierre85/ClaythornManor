@@ -1,0 +1,125 @@
+{
+  "start_label": "psychic_day1_evening",
+  "choices": [
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening",
+      "selected": "Talk to Ted Harring",
+      "redirect": "psychic_day1_dinner_lad"
+    },
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "Tell me more about yourself.",
+      "redirect": "lad_generic_background_psychic"
+    },
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "Why were you invited here?",
+      "redirect": "lad_generic_heroic_act_psychic"
+    },
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "What do you think of this place?",
+      "redirect": "lad_generic_manor"
+    },
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "How old are you?",
+      "redirect": "lad_generic_age_psychic"
+    },
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "What room are you in?",
+      "redirect": "lad_generic_room_friday"
+    },
+    {
+      "menu": "lad_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening",
+      "selected": "Talk to Sushil Sinha",
+      "redirect": "psychic_day1_dinner_captain"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "Tell me more about yourself",
+      "redirect": "captain_generic_background_psychic"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Meet the others in the billiard room",
+      "redirect": "psychic_day1_evening_billiard_room"
+    },
+    {
+      "menu": "psychic_day1_evening_billiard_room_menu",
+      "selected": "Talk to Daniel Baldwin",
+      "redirect": "psychic_day1_evening_billiard_room_doctor"
+    },
+    {
+      "menu": "doctor_generic_menu_psychic",
+      "selected": "What do you think of this weather?",
+      "redirect": "doctor_generic_weather_friday"
+    },
+    {
+      "menu": "doctor_generic_menu_psychic",
+      "selected": "Tell me more about yourself.",
+      "redirect": "doctor_generic_background"
+    },
+    {
+      "menu": "doctor_generic_menu_psychic",
+      "selected": "Why were you invited here?",
+      "redirect": "doctor_generic_heroic_act"
+    },
+    {
+      "menu": "doctor_generic_menu_psychic",
+      "selected": "What do you think of this place?",
+      "redirect": "doctor_generic_manor"
+    },
+    {
+      "menu": "doctor_generic_menu_psychic",
+      "selected": "How old are you?",
+      "redirect": "doctor_generic_age"
+    },
+    {
+      "menu": "doctor_generic_menu_psychic",
+      "selected": "What room are you in?",
+      "redirect": "doctor_generic_room"
+    },
+    {
+      "menu": "doctor_generic_menu_psychic",
+      "selected": "What do you think of the other guests?",
+      "redirect": "doctor_generic_other_guests_friday"
+    },
+    {
+      "menu": "doctor_generic_other_guests_menu_psychic",
+      "selected": "What about Samuel Manning?",
+      "redirect": "doctor_generic_drunk"
+    },
+    {
+      "menu": "doctor_generic_other_guests_menu_psychic",
+      "selected": "I want to talk about something else.",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "doctor_generic_menu_psychic",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day1_evening_map_menu",
+      "selected": "Go to bed",
+      "redirect": "generic_cancel"
+    }
+  ]
+}
