@@ -31,6 +31,7 @@ label lad_introduction:
 
     # --- Console Interaction Start ---
     # TODO just for tests now, fun console plugin
+    # IF KEPT => DONT FORGET TO MENTION IN THE CREDITS
     # $ console.show()
 
     # python:
