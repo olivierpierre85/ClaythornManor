@@ -55,3 +55,11 @@ from Day 1 evening so the back-visit branches fire).
 - Covers `lad_library_default` second-visit dialogue.
 - Covers `lad_portrait_gallery_default` second-visit dialogue.
 - Covers `lad_billiard_room_default`, `lad_dining_room_default`, `lad_entrance_hall_default`.
+
+---
+
+## setup_lad_saturday_afternoon_no_hunt_6.json
+**Checkpoint**: downstairs_1=True, has_met_maid=True  
+**Path**: Tea Room (cancel psychic_generic) → Tea Room back-visit (cancel psychic_generic) → Nap.
+- Covers `lad_day2_hunt_tea_room_return` — the "Go back to the Tea Room" map option that only
+  appears after `day2_nohunt_has_visited_tea_room` has been set by the first visit.

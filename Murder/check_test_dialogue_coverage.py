@@ -19,11 +19,12 @@ Usage:
 
 Character mode
 --------------
-  Dialogue source : game/scripts/<character>/  +  game/scripts/_common/
+  Dialogue source : game/scripts/<character>/ only (excludes _common/)
   Test pool       : game/tests/<character>/
 
-  _common/ labels are included because they are called during the character's playthrough
-  and therefore appear verbatim in that character's test output files.
+  _common/ labels are excluded in character mode because they are shared across multiple
+  characters and are best reviewed at the suite level. Run without --character to include
+  them.
 """
 
 import argparse
@@ -36,7 +37,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DIALOGUE_TAB = ROOT / "dialogue.tab"
 TESTS_ROOT = ROOT / "game" / "tests"
-SCRIPTS_ROOT = ROOT / "game" / "scripts"
 
 SKIP_PREFIXES = ("Chapter:", "Character:", "Menu Choice:", "Map Choice:")
 
@@ -52,26 +52,11 @@ def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text.strip())
 
 
-def find_called_common_labels(scripts_root: Path, character: str) -> set[str]:
-    """Scan the character's .rpy files and return every common_* label they call or jump to."""
-    called: set[str] = set()
-    char_dir = scripts_root / character
-    if not char_dir.exists():
-        return called
-    for rpy in char_dir.rglob("*.rpy"):
-        for line in rpy.read_text(encoding="utf-8").splitlines():
-            m = re.search(r"\b(?:call|jump)\s+(common_\w+)", line)
-            if m:
-                called.add(m.group(1))
-    return called
-
-
-
-def load_dialogue_tab(path: Path, character: str | None, common_labels: set[str]):
+def load_dialogue_tab(path: Path, character: str | None):
     """Yield (identifier, filename, dialogue) tuples, optionally filtered by character.
 
-    For _common/ entries, only those whose identifier starts with a label the character
-    actually calls are included.
+    In character mode, only dialogue under game/scripts/<character>/ is included.
+    _common/ and other characters' scripts are skipped.
     """
     with path.open(encoding="utf-8") as f:
         f.readline()  # header
@@ -87,16 +72,11 @@ def load_dialogue_tab(path: Path, character: str | None, common_labels: set[str]
                 continue
             if character:
                 norm = filename.replace("\\", "/")
-                if f"/scripts/{character}/" in norm:
-                    # Exclude NPC files — dialogue accessed when other characters are playing
-                    if any(norm.endswith(suffix) for suffix in EXCLUDED_OWN_SUFFIXES):
-                        continue
-                elif "/scripts/_common/" in norm:
-                    # Only include if the identifier belongs to a called common label
-                    if not any(ident.startswith(label) for label in common_labels):
-                        continue
-                else:
-                    continue  # other character's scripts
+                if f"/scripts/{character}/" not in norm:
+                    continue
+                # Exclude NPC files — dialogue accessed when other characters are playing
+                if any(norm.endswith(suffix) for suffix in EXCLUDED_OWN_SUFFIXES):
+                    continue
             yield ident, filename, dialogue
 
 
@@ -139,12 +119,11 @@ def main() -> int:
         return 2
 
     character = args.character
-    common_labels = find_called_common_labels(SCRIPTS_ROOT, character) if character else set()
     test_lines = collect_test_lines(tests_path, character)
 
     total = 0
     missing_by_file: dict[str, list[tuple[str, str]]] = defaultdict(list)
-    for ident, filename, dialogue in load_dialogue_tab(dialogue_path, character, common_labels):
+    for ident, filename, dialogue in load_dialogue_tab(dialogue_path, character):
         total += 1
         if normalize(dialogue) not in test_lines:
             missing_by_file[filename].append((ident, dialogue))

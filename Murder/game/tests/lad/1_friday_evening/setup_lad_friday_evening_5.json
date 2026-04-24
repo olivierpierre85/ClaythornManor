@@ -1,0 +1,25 @@
+{
+  "start_label": "lad_day1_evening",
+  "choices": [
+    {
+      "menu": "lad_introduction",
+      "selected": "Stand awkwardly in the corner",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day1_evening",
+      "selected": "Eat in silence, like a sociopath",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "selected": "Servant Stairs",
+      "redirect": "lad_day1_evening_servant_stairs"
+    },
+    {
+      "menu": "lad_day1_evening_map_menu",
+      "selected": "Go to sleep",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

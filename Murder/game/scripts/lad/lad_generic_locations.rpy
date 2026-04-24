@@ -82,7 +82,7 @@ label lad_downstairs_default:
 
         $ lad_details.threads.unlock('downstairs_1')
 
-    elif lad_details.threads.is_unlocked('downstairs_1'):
+    elif not lad_details.threads.is_unlocked('downstairs_2'):
 
         """
         Let's see if I can check downstairs now.
@@ -110,7 +110,7 @@ label lad_downstairs_default:
 
         $ lad_details.threads.unlock('downstairs_2')
 
-    elif lad_details.threads.is_unlocked('downstairs_2'):
+    else:
 
         """
         Maybe I'm pushing my luck, trying to go downstairs, but I feel like I have to go there.
@@ -136,19 +136,22 @@ label lad_downstairs_default:
 
     return
 
-label lad_downstairs_lost:
-    # TODO: complicated arc with dead ending:
-    # Captain/butler overhears discussion with maid; you are locked in your room for the night.
-    # Over the night, somebody opens your door? Who? Psychic? Nurse?
-    # But when the captain sees you, he is scared and shoots you?
-
-    lad """
-    I'm really sorry. This house is too big.
-
-    I was on my way to the billiard room and I don't know how I ended up here.
-    """
-
-    return
+# TODO: complicated arc with dead ending, currently not wired up (menu choice in
+# lad_downstairs_default is commented out). Uncomment the label below and the
+# matching TimedMenuChoice when the arc is ready.
+#     Captain/butler overhears discussion with maid; you are locked in your room for the night.
+#     Over the night, somebody opens your door? Who? Psychic? Nurse?
+#     But when the captain sees you, he is scared and shoots you?
+#
+# label lad_downstairs_lost:
+#
+#     lad """
+#     I'm really sorry. This house is too big.
+#
+#     I was on my way to the billiard room and I don't know how I ended up here.
+#     """
+#
+#     return
 
 label lad_downstairs_sleepwalk:
 

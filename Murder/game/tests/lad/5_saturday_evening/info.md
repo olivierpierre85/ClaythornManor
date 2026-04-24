@@ -96,3 +96,19 @@ leave → sleep.
 - Covers the `whisky`-unlocked branch of
   `lad_day2_evening_billiard_room_captain_hypothesis_broken` ("But the flask didn't contain
   any of those alcohols. I tasted it, and it was just whisky. I'm certain of that.").
+
+---
+
+## setup_lad_saturday_evening_11.json
+**Checkpoint**: downstairs_1=True, downstairs_2=True, has_met_maid=True  
+**Path**: Map → Kitchen (third-attempt downstairs) → Pretend to sleepwalk → sleep.
+- Covers the third branch of `lad_downstairs_default` and the full
+  `lad_downstairs_sleepwalk` sub-label.
+
+---
+
+## setup_lad_saturday_evening_12.json
+**Checkpoint**: downstairs_1=True, downstairs_2=True, has_met_maid=True  
+**Path**: Map → Kitchen (third-attempt downstairs) → Flirt with the maid → sleep.
+- Covers the third branch of `lad_downstairs_default` and the full
+  `lad_downstairs_flirt` sub-label.

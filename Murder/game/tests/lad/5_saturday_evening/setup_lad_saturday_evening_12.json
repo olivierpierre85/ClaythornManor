@@ -1,0 +1,24 @@
+{
+  "start_label": "lad_day2_evening",
+  "unlocked_threads": ["downstairs_1", "downstairs_2"],
+  "saved_variables": {
+    "has_met_maid": true
+  },
+  "choices": [
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Kitchen",
+      "redirect": "lad_day2_evening_kitchen"
+    },
+    {
+      "menu": "lad_has_try_sneaking_downstairs",
+      "selected": "Actually, I just wanted to talk to you (flirt your way out)",
+      "redirect": "lad_downstairs_flirt"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Go to sleep and hope for the best.",
+      "redirect": "lad_day2_evening_sleep"
+    }
+  ]
+}

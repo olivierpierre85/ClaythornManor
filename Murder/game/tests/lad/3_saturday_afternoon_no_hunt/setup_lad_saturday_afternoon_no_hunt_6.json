@@ -1,0 +1,34 @@
+{
+  "start_label": "lad_day2_no_hunt",
+  "unlocked_threads": ["downstairs_1"],
+  "saved_variables": {
+    "has_met_maid": true
+  },
+  "choices": [
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Meet the others in the Tea Room",
+      "redirect": "lad_day2_hunt_tea_room"
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Go back to the Tea Room",
+      "redirect": "lad_day2_hunt_tea_room_return"
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day2_no_hunt_map_menu",
+      "selected": "Take a nap until the others return",
+      "redirect": "lad_day2_no_hunt_cancel"
+    }
+  ]
+}

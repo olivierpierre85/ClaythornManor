@@ -36,3 +36,9 @@ back in the billiard room") → bar_1 (whisky + Moody intro) → bar_2 (sherry) 
 unlocked, no `day1_drunk`) → Leave → sleep → `lad_ending_day1_deathbed` ending.
 - Covers the deathbed ending where Moody's whisky is poisoned but Ted does not drown it
   out with port.
+
+---
+
+## setup_lad_friday_evening_5.json
+**Path**: Stand awkwardly → Eat in silence → Map: Servant Stairs → sleep.
+- Covers `lad_servant_stairs_default` (the only chapter where that map room is reachable).
