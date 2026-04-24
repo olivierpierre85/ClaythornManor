@@ -24,7 +24,7 @@ Not content merely to kill them, she will make them suffer. Then, she will revea
 
 She needs help for her plan, and she manages to find a company of actors needing money—the same company that once rejected her, effectively killing her dream of being famous. She has never met them, but needs to kill them anyway.
 
-1924 - Current Year
+**1924 - Current Year**
 
 However, the first part of the plan is that her love does not show up. Someone else has taken his place; she does not realise it at first because of his mask. But when she sees the truth, she kills him.
 

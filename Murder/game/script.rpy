@@ -128,8 +128,6 @@ define config.autosave_on_quit = False
 default  time_left = 0
 default  hours_angle = 0
 
-define current_year = "1924"
-
 # var needed for imbricated menus choices
 # default  menu_level = -1
 # default  selected_choice = [None, None, None, None, None]
