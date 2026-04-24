@@ -29,6 +29,39 @@ label lad_introduction:
     As I approach my destination, I read the letter that has brought me on this trip for the tenth time.
     """
 
+    # --- Console Interaction Start ---
+    # TODO just for tests now, fun console plugin
+    # $ console.show()
+
+    # python:
+    #     # The choices displayed in a single block
+    #     menu_prompt = "SELECT FILING SYSTEM:\n1. Personal Records\n2. Business Ledger\n3. Close Folder"
+        
+    #     while True:
+    #         console.output(menu_prompt)
+            
+    #         # allow="123" restricts input to these specific keys
+    #         # input_entry=True mirrors the choice back into the terminal history
+    #         res = console.interact(allow="123", length=1, input_entry=True)
+
+    #         if res == "1":
+    #             console.output("SEARCHING... No records found for this date.")
+    #             # We break the loop to move to the next dialogue
+    #             break
+    #         elif res == "2":
+    #             console.output("SEARCHING... Ledger entry located.")
+    #             break
+    #         elif res == "3":
+    #             console.output("Closing terminal...")
+    #             break
+    #         else:
+    #             # This handles cases where the user might press Enter without a value
+    #             console.output("INVALID INPUT. PLEASE TRY AGAIN.")
+
+    # $ console.hide()
+    # --- Console Interaction End ---
+
+
     letter """
     5th September, 1924
 
