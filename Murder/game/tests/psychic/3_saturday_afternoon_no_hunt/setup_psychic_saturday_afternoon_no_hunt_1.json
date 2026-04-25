@@ -1,0 +1,45 @@
+{
+  "start_label": "psychic_day2_no_hunt",
+  "choices": [
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Edward II Bedroom",
+      "redirect": "psychic_day2_no_hunt_bedroom_doctor"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_bedroom_doctor",
+      "selected": "Let's go in. What's the worst that could happen?",
+      "redirect": "psychic_day2_no_hunt_default_room_locked"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Wait for Rosalind Marsh in the Tea Room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "nurse_generic_menu_psychic",
+      "selected": "What do you think of this weather?",
+      "redirect": "nurse_generic_weather_saturday_morning"
+    },
+    {
+      "menu": "nurse_generic_menu_psychic",
+      "selected": "Tell me more about yourself.",
+      "redirect": "nurse_generic_background_psychic"
+    },
+    {
+      "menu": "nurse_generic_menu_psychic",
+      "selected": "Why were you invited here?",
+      "redirect": "nurse_generic_heroic_act_psychic"
+    },
+    {
+      "menu": "nurse_generic_menu_psychic",
+      "selected": "What do you think of this place?",
+      "redirect": "nurse_generic_manor"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Wait until the others come back",
+      "redirect": "psychic_day2_no_hunt_cancel"
+    }
+  ]
+}

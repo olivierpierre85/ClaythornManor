@@ -1,0 +1,30 @@
+{
+  "start_label": "psychic_day2_no_hunt",
+  "choices": [
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Storage Room",
+      "redirect": "psychic_day2_no_hunt_attic_default"
+    },
+    {
+      "menu": "nurse_generic_menu_psychic",
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Kitchen",
+      "redirect": "psychic_day2_no_hunt_downstairs_default"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Library",
+      "redirect": "psychic_library_look_for_lord_failed"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Wait until the others come back",
+      "redirect": "psychic_day2_no_hunt_cancel"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "start_label": "psychic_day2_no_hunt",
+  "choices": [
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Edward II Bedroom",
+      "redirect": "psychic_day2_no_hunt_bedroom_doctor"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_bedroom_doctor",
+      "selected": "I definitely shouldn't enter. That would be reckless!",
+      "redirect": "psychic_day2_no_hunt_default_room_no_enter"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "George IV Bedroom",
+      "redirect": "psychic_day2_no_hunt_bedroom_drunk"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_bedroom_drunk",
+      "selected": "It won't hurt to give it a try. Let's go in and find out.",
+      "redirect": "psychic_day2_no_hunt_bedroom_drunk_enter"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Wait for Rosalind Marsh in the Tea Room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "nurse_generic_menu_psychic",
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Garden",
+      "redirect": "psychic_garden_default"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Billiard room",
+      "redirect": "psychic_billiard_room_default"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Dining Room",
+      "redirect": "psychic_dining_room_default"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Entrance Hall",
+      "redirect": "psychic_entrance_hall_default"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_map_menu",
+      "selected": "Wait until the others come back",
+      "redirect": "psychic_day2_no_hunt_cancel"
+    }
+  ]
+}

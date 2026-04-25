@@ -11,3 +11,7 @@ testsuite psychic:
     testcase saturday_morning:
         python:
             test.run_chapter(psychic_details, "saturday_morning", "psychic_day2_morning")
+
+    testcase saturday_afternoon:
+        python:
+            test.run_chapter(psychic_details, "saturday_afternoon", "psychic_day2_no_hunt")
