@@ -1,0 +1,10 @@
+{
+  "start_label": "psychic_day2_morning",
+  "choices": [
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "On second thought, I'd better not talk to him",
+      "redirect": "generic_cancel"
+    }
+  ]
+}

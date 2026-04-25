@@ -1,0 +1,10 @@
+{
+  "start_label": "psychic_day2_morning",
+  "choices": [
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "What do you think of this place?",
+      "redirect": "captain_generic_manor_psychic"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "start_label": "psychic_day2_morning",
+  "choices": [
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "What do you think of the other guests?",
+      "redirect": "captain_generic_other_guests_saturday_morning"
+    },
+    {
+      "menu": "captain_generic_other_guests_menu_psychic",
+      "selected": "What do you think of Thomas Moody?",
+      "redirect": "captain_generic_broken_friday"
+    },
+    {
+      "menu": "captain_generic_other_guests_menu_psychic",
+      "selected": "What do you think of Samuel Manning?",
+      "redirect": "captain_generic_drunk_friday_psychic"
+    }
+  ]
+}

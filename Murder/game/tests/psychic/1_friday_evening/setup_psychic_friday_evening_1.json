@@ -97,16 +97,6 @@
       "redirect": "doctor_generic_other_guests_friday"
     },
     {
-      "menu": "doctor_generic_other_guests_menu_psychic",
-      "selected": "What about Samuel Manning?",
-      "redirect": "doctor_generic_drunk"
-    },
-    {
-      "menu": "doctor_generic_other_guests_menu_psychic",
-      "selected": "I want to talk about something else.",
-      "redirect": "generic_cancel"
-    },
-    {
       "menu": "doctor_generic_menu_psychic",
       "selected": "You don't have anymore questions for him",
       "redirect": "generic_cancel"

@@ -1,0 +1,166 @@
+Chapter: The Arrival
+Character: Amelia Baxter
+Butler: Good afternoon, everyone, and welcome to Claythorn Manor.
+Butler: I'm sorry that Lady Claythorn can't greet you herself.
+Butler: She is still busy preparing for tonight.
+Butler: In the meantime, you can enjoy some drinks in the tea room.
+Butler: Or, if you wish to change, I can show you to your room right now.
+Samuel Manning: I'm good, but I could use a drink.
+Samuel Manning: Which way is the tea room?
+Astonishing. He looked passed out drunk in the car.
+How could he possibly want another drink now?
+Butler: Very well, sir. You'll find the tea room through the door on your left.
+Butler: Other guests who arrived earlier are already settled there.
+Butler: You can join them.
+Sushil Sinha: I'll come with you.
+Butler: What about you, Miss ...?
+Amelia Baxter: Miss Baxter.
+Amelia Baxter: I believe I shall freshen up in my room first.
+Amelia Baxter: It has been a very long journey.
+Butler: Of course, please follow me upstairs.
+Butler: Here we are, Miss.
+Butler: The "Elizabeth I Bedroom."
+Butler: I hope it's to your liking.
+He opens my room and lets me in.
+At the same time, the driver arrives with my luggage.
+He leaves them there and then excuses himself.
+Butler: Well, it looks like you're all set.
+Butler: Please join us in the dining room when you're ready.
+I nod and take a look at my room.
+It is a bit worn, but it still looks decent.
+I should be quite comfortable here.
+When I am ready, I head downstairs to the tea room.
+Butler: Miss Baxter.
+Butler: Almost everyone is here now.
+He quickly introduces me to those I have not yet met.
+Butler: Please make yourself at home.
+Butler: Now, if you'll excuse me, I hear the car is back with the last guest.
+He leaves me on my own.
+I glance about the room.
+Nearly everyone is gathered around Sushil Sinha.
+He is in the midst of what sounds like yet another tedious story.
+I am not eager to listen to that again.
+On a chair, Samuel Manning sits alone with a glass in his hand.
+I can't believe it.
+He fell asleep again.
+Well, I suppose I have no choice but to join the larger group.
+But before I can move, the butler returns.
+Butler: Mr Ted Harring!
+The butler nearly shouts the name of the new guest.
+He is a good-looking young man, but he appears unsure.
+It is clear he is not in his natural element here.
+I smile at him and, after some hesitation, he comes towards me.
+Ted Harring: Nice to meet you, Miss Baxter. I am Ted Harring.
+Amelia Baxter: How do you do, Mr Harring.
+Menu Choice: You don't have anymore questions for him
+Butler: Dinner is served. Please follow me to the dining room.
+I sit down at the place with my name on it.
+Then, a lady enters the room.
+She is wearing expensive clothing.
+Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
+Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
+Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
+Lady Claythorn: I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
+Lady Claythorn: I realise the invitation letter you received was somewhat vague, so let me clarify its contents now.
+Lady Claythorn: My first gift to you is a stay at my manor.
+Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
+Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
+Lady Claythorn: My second gift is a sum of one thousand pounds, awarded to each and every one of you.
+Lady Claythorn: This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
+Following her speech, our host settles back down in her chair.
+Well said.
+I join in the applause with the rest of the guests.
+Lady Claythorn: Please no need to thank me. The food will be served, enjoy your meal.
+The food arrives right after the speech.
+The timing is perfect.
+It seems I already know the persons next to me.
+On my left is Mr Sinha.
+And Ted Harring is on my right.
+Menu Choice: Don't engage with anyone, it's unladylike
+The dinner is over.
+The host gave us the opportunity to meet again for drinks.
+But I do not know, this has been quite a long day.
+Perhaps I should simply go to bed.
+In any case, I ought to retire to my room first.
+Well, I am comfortably settled.
+What should I do now?
+Map Choice: Meet the others in the billiard room
+It appears that most guests have chosen to gather here.
+Daniel Baldwin stands alone in the corner.
+Ted Harring is at the bar with Samuel Manning.
+A crowd has formed around Sushil Sinha.
+He is likely monopolising the conversation.
+Menu Choice: Go to the bar
+Amelia Baxter: Good evening, Mr Harring.
+Amelia Baxter: Mr Manning.
+Ted Harring: Oh, hi Miss Baxter.
+Ted Harring: Don't mind Mr Manning.
+Ted Harring: I think he might have had one too many.
+Yes, or perhaps ten too many.
+Ted Harring: Would you like something to drink?
+Ted Harring: We have port and sherry.
+Amelia Baxter: That is not a wide selection.
+Amelia Baxter: But I shall have a sherry, thank you.
+Ted Harring: No problem. I'll pour one for myself as well.
+He is trembling slightly while pouring the drinks.
+Could he be a little drunk as well?
+Menu Choice: You don't have anymore questions for him
+Menu Choice: Leave the room
+Map Choice: Meet the others in the billiard room
+I should check again what's happening here.
+Menu Choice: Endure another story by Mr Sinha
+I discreetly approach the group.
+The story has just begun.
+Sushil Sinha: It was in June of 1900, so some of you might remember.
+Sushil Sinha: In China, a group of rebels, called the "Boxers," had taken up arms against foreign presence in their country.
+Sushil Sinha: They were a group of mostly peasants, poorly armed.
+Sushil Sinha: We called them "Boxers" because of their use of martial arts in their fights.
+Sushil Sinha: They managed to surround the Europeans and Japanese in the "International Legations" quarter, in China's capital, Beijing.
+Sushil Sinha: There, the besieged did their best to resist the Chinese assaults, but it was obvious to everyone that they wouldn't last very long.
+Sushil Sinha: In order to break the siege and rescue their compatriots, the largest foreign nations formed expeditions to help lift the siege of Beijing.
+Sushil Sinha: I was part of the most important one, and the only successful one: The "Gaselee Expedition," named after Alfred Gaselee, the British expedition leader.
+Sushil Sinha: It was a mish-mash of troops from eight different countries.
+Sushil Sinha: Japan, The British Empire, The United States, France, Russia, German Empire, Italy, and Austria-Hungary.
+Sushil Sinha: As an Indian officer, I was obviously part of the British army.
+Sushil Sinha: We first landed at Tientsin, then we marched from there to reach Beijing.
+Sushil Sinha: Our goal was to rescue the civilians besieged there, as well as people from previous expeditions.
+Sushil Sinha: The journey was a total nightmare.
+Sushil Sinha: We endured a march of almost a hundred miles, where we were under constant attacks from Chinese troops.
+Sushil Sinha: If that wasn't bad enough, some poorly led and confused soldiers, notably from the French army, often ended up shooting at their allies.
+Sushil Sinha: But the worst part was the scorching heat.
+Sushil Sinha: Even my fellow Indian soldiers were not immune to it, and many died of sunstroke.
+Sushil Sinha: By the time we reached Peking, our expedition had lost hundred of men.
+Sushil Sinha: By that time, the soldiers were angry, tired, and restless.
+Sushil Sinha: They had started to commit such acts that I can't even repeat here.
+Sushil Sinha: I was expecting the exactions of the Japanese and the Russians, who were known for their ruthlessness.
+Sushil Sinha: But in the end, our proud "civilized" European nations fared no better.
+Sushil Sinha: The final assault of the besieged was also an example of a lack of discipline among the soldiers and their commanders.
+Sushil Sinha: Each country was supposed to attack a different gate of the city.
+Sushil Sinha: But the Russians were not happy with their assigned choice of gate.
+Sushil Sinha: So they woke up early and assaulted the closest gate to the Legation Quarters, where the Americans were supposed to be.
+Sushil Sinha: They wanted to be the first army to reach the defenders, and so claim the glory of having liberated the city by themselves.
+Sushil Sinha: Bloody fools.
+Sushil Sinha: Luckily, in the end, we managed to conquer Beijing without too much trouble.
+Sushil Sinha: We even entered the Imperial City and rooted out the Empress.
+Sushil Sinha: It was an undeniable victory, but the price paid was high.
+Sushil Sinha: Afterwards, we stayed and occupied the city.
+Sushil Sinha: To compensate themselves, the soldiers went on a looting frenzy.
+Sushil Sinha: Sadly, people in the British army also took part in it.
+Sushil Sinha: But not in the same outrageous manner as other nations.
+Sushil Sinha: At least, looting on the part of British troops was carried out in the most orderly fashion.
+Sushil Sinha: We held loot auctions every day except Sunday in front of the main gate to the British Legation.
+Sushil Sinha: It was the best way to compensate for the loss of our compatriots who had suffered the siege for three months.
+Sushil Sinha: There was no way around it, I'm afraid.
+Sushil Sinha: Well, in any case, that was my first campaign as a captain.
+Sushil Sinha: And I do not regret it.
+Sushil Sinha: I stayed a few more months in China to ensure the peaceful transition.
+Sushil Sinha: In the end, my commanders were really pleased with me.
+Sushil Sinha: So, I was sent to London to lead a training regiment nearby.
+Sushil Sinha: That was very rare for someone of Indian descent.
+Sushil Sinha: In any case, that's why I live in England today.
+Well, that was a long detour for such a simple question.
+It has been a long day.
+I cannot stay up any longer.
+It is time to go to bed.
+After taking a bit of time to get ready, I can get into bed.
+I have no problem falling asleep.

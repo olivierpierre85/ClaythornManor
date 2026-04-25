@@ -1,0 +1,129 @@
+Chapter: The Arrival
+Character: Amelia Baxter
+Butler: Good afternoon, everyone, and welcome to Claythorn Manor.
+Butler: I'm sorry that Lady Claythorn can't greet you herself.
+Butler: She is still busy preparing for tonight.
+Butler: In the meantime, you can enjoy some drinks in the tea room.
+Butler: Or, if you wish to change, I can show you to your room right now.
+Samuel Manning: I'm good, but I could use a drink.
+Samuel Manning: Which way is the tea room?
+Astonishing. He looked passed out drunk in the car.
+How could he possibly want another drink now?
+Butler: Very well, sir. You'll find the tea room through the door on your left.
+Butler: Other guests who arrived earlier are already settled there.
+Butler: You can join them.
+Sushil Sinha: I'll come with you.
+Butler: What about you, Miss ...?
+Amelia Baxter: Miss Baxter.
+Amelia Baxter: I believe I shall freshen up in my room first.
+Amelia Baxter: It has been a very long journey.
+Butler: Of course, please follow me upstairs.
+Butler: Here we are, Miss.
+Butler: The "Elizabeth I Bedroom."
+Butler: I hope it's to your liking.
+He opens my room and lets me in.
+At the same time, the driver arrives with my luggage.
+He leaves them there and then excuses himself.
+Butler: Well, it looks like you're all set.
+Butler: Please join us in the dining room when you're ready.
+I nod and take a look at my room.
+It is a bit worn, but it still looks decent.
+I should be quite comfortable here.
+When I am ready, I head downstairs to the tea room.
+Butler: Miss Baxter.
+Butler: Almost everyone is here now.
+He quickly introduces me to those I have not yet met.
+Butler: Please make yourself at home.
+Butler: Now, if you'll excuse me, I hear the car is back with the last guest.
+He leaves me on my own.
+I glance about the room.
+Nearly everyone is gathered around Sushil Sinha.
+He is in the midst of what sounds like yet another tedious story.
+I am not eager to listen to that again.
+On a chair, Samuel Manning sits alone with a glass in his hand.
+I can't believe it.
+He fell asleep again.
+Well, I suppose I have no choice but to join the larger group.
+But before I can move, the butler returns.
+Butler: Mr Ted Harring!
+The butler nearly shouts the name of the new guest.
+He is a good-looking young man, but he appears unsure.
+It is clear he is not in his natural element here.
+I smile at him and, after some hesitation, he comes towards me.
+Ted Harring: Nice to meet you, Miss Baxter. I am Ted Harring.
+Amelia Baxter: How do you do, Mr Harring.
+Menu Choice: You don't have anymore questions for him
+Butler: Dinner is served. Please follow me to the dining room.
+I sit down at the place with my name on it.
+Then, a lady enters the room.
+She is wearing expensive clothing.
+Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
+Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
+Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
+Lady Claythorn: I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
+Lady Claythorn: I realise the invitation letter you received was somewhat vague, so let me clarify its contents now.
+Lady Claythorn: My first gift to you is a stay at my manor.
+Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
+Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
+Lady Claythorn: My second gift is a sum of one thousand pounds, awarded to each and every one of you.
+Lady Claythorn: This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
+Following her speech, our host settles back down in her chair.
+Well said.
+I join in the applause with the rest of the guests.
+Lady Claythorn: Please no need to thank me. The food will be served, enjoy your meal.
+The food arrives right after the speech.
+The timing is perfect.
+It seems I already know the persons next to me.
+On my left is Mr Sinha.
+And Ted Harring is on my right.
+Menu Choice: Don't engage with anyone, it's unladylike
+The dinner is over.
+The host gave us the opportunity to meet again for drinks.
+But I do not know, this has been quite a long day.
+Perhaps I should simply go to bed.
+In any case, I ought to retire to my room first.
+Well, I am comfortably settled.
+What should I do now?
+Map Choice: Portrait Gallery
+The paintings remain unchanged.
+Now, I realise that there are probably paintings of the Claythorn family here.
+I can't find Lady Claythorn here, but after a while I spot Lord Claythorn.
+He looks exactly as he does in real life.
+I check the label below the painting.
+"Nicholas III, of Claythorn Manor"
+So, Nicholas is his first name.
+Map Choice: Library
+I turn back to the page with the Claythorn name.
+Now I know which one to look at.
+There's only one place associated with a Nicholas.
+Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith.
+Book: Born on June 22, 1813.
+Book: His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
+Book: With Mary Kirwan, his wife, he fathered one son and one daughter:
+Book: 1. Elisabeth, his heir, born in 1865.
+Book: 2. Andrew, born in 1867, died in 1869.
+Book: Lineage...
+There's additional information about the history of this place.
+But something seems off.
+Born in 1813.
+Wait, that would make him...
+111 years old?
+That can't be right.
+If that were true, he'd likely be the oldest man in England.
+Possibly even the world.
+Yet he didn't appear to be that old.
+I suppose this must be an mistake in the book.
+If they tried to list all the gentry of this country, they were bound to make some errors.
+Map Choice: Return to the Attic
+I've decided to return to the attic.
+I have some questions to ask the "Lord" of this place.
+But am I sure I should?
+Menu Choice: On second thought, it is rather scary. Let's back down
+I've changed my mind, I'd better leave him alone.
+God knows what I might stir up here.
+Map Choice: Go to bed
+It has been a long day.
+I cannot stay up any longer.
+It is time to go to bed.
+After taking a bit of time to get ready, I can get into bed.
+I have no problem falling asleep.

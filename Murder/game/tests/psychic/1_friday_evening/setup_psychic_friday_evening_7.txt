@@ -1,0 +1,152 @@
+Chapter: The Arrival
+Character: Amelia Baxter
+Butler: Good afternoon, everyone, and welcome to Claythorn Manor.
+Butler: I'm sorry that Lady Claythorn can't greet you herself.
+Butler: She is still busy preparing for tonight.
+Butler: In the meantime, you can enjoy some drinks in the tea room.
+Butler: Or, if you wish to change, I can show you to your room right now.
+Samuel Manning: I'm good, but I could use a drink.
+Samuel Manning: Which way is the tea room?
+Astonishing. He looked passed out drunk in the car.
+How could he possibly want another drink now?
+Butler: Very well, sir. You'll find the tea room through the door on your left.
+Butler: Other guests who arrived earlier are already settled there.
+Butler: You can join them.
+Sushil Sinha: I'll come with you.
+Butler: What about you, Miss ...?
+Amelia Baxter: Miss Baxter.
+Amelia Baxter: I believe I shall freshen up in my room first.
+Amelia Baxter: It has been a very long journey.
+Butler: Of course, please follow me upstairs.
+Butler: Here we are, Miss.
+Butler: The "Elizabeth I Bedroom."
+Butler: I hope it's to your liking.
+He opens my room and lets me in.
+At the same time, the driver arrives with my luggage.
+He leaves them there and then excuses himself.
+Butler: Well, it looks like you're all set.
+Butler: Please join us in the dining room when you're ready.
+I nod and take a look at my room.
+It is a bit worn, but it still looks decent.
+I should be quite comfortable here.
+When I am ready, I head downstairs to the tea room.
+Butler: Miss Baxter.
+Butler: Almost everyone is here now.
+He quickly introduces me to those I have not yet met.
+Butler: Please make yourself at home.
+Butler: Now, if you'll excuse me, I hear the car is back with the last guest.
+He leaves me on my own.
+I glance about the room.
+Nearly everyone is gathered around Sushil Sinha.
+He is in the midst of what sounds like yet another tedious story.
+I am not eager to listen to that again.
+On a chair, Samuel Manning sits alone with a glass in his hand.
+I can't believe it.
+He fell asleep again.
+Well, I suppose I have no choice but to join the larger group.
+But before I can move, the butler returns.
+Butler: Mr Ted Harring!
+The butler nearly shouts the name of the new guest.
+He is a good-looking young man, but he appears unsure.
+It is clear he is not in his natural element here.
+I smile at him and, after some hesitation, he comes towards me.
+Ted Harring: Nice to meet you, Miss Baxter. I am Ted Harring.
+Amelia Baxter: How do you do, Mr Harring.
+Menu Choice: What do you think of the other guests?
+Ted Harring: Well, I just arrived.
+Ted Harring: So I don't really have an opinion on anyone yet.
+Menu Choice: You don't have anymore questions for him
+Butler: Dinner is served. Please follow me to the dining room.
+I sit down at the place with my name on it.
+Then, a lady enters the room.
+She is wearing expensive clothing.
+Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
+Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
+Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
+Lady Claythorn: I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
+Lady Claythorn: I realise the invitation letter you received was somewhat vague, so let me clarify its contents now.
+Lady Claythorn: My first gift to you is a stay at my manor.
+Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
+Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
+Lady Claythorn: My second gift is a sum of one thousand pounds, awarded to each and every one of you.
+Lady Claythorn: This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
+Following her speech, our host settles back down in her chair.
+Well said.
+I join in the applause with the rest of the guests.
+Lady Claythorn: Please no need to thank me. The food will be served, enjoy your meal.
+The food arrives right after the speech.
+The timing is perfect.
+It seems I already know the persons next to me.
+On my left is Mr Sinha.
+And Ted Harring is on my right.
+Menu Choice: Talk to Sushil Sinha
+Maybe I was too quick to judge him.
+I should try to talk to him again.
+Amelia Baxter: Mr Sinha.
+Sushil Sinha: Miss Baxter.
+Menu Choice: Tell me more about yourself
+Wait, why am I encouraging him?
+Sushil Sinha: Oh, I thought I already said plenty in the car.
+Sushil Sinha: But, if you insist of course.
+Sushil Sinha: Where did we stop last time?
+Sushil Sinha: Ah yes, I was telling you about the time I was sent to London.
+Sushil Sinha: My mission there was to train new officers, a duty I regarded as both an honour and a burden.
+Sushil Sinha: The young men were eager, full of fire, but they had little understanding of what it truly meant to lead others into danger.
+Sushil Sinha: It was my task to temper their enthusiasm with discipline, to teach them not merely how to fight, but how to think, how to endure, and how to carry the weight of command.
+Sushil Sinha: In those years I saw the very best and the very worst of human nature.
+Sushil Sinha: Some rose splendidly to the challenge, others faltered and fell away.
+Sushil Sinha: But I gave them all that I could, for I knew that the fate of many would one day rest upon their shoulders, just as it had once rested upon mine.
+Sushil Sinha: When at last my service came to its end, I retired with a measure of pride, though also with a heavy heart.
+Sushil Sinha: For the army had been my life, my purpose, and leaving it behind was no easy thing.
+Sushil Sinha: Still, I hold no regrets. I served faithfully, and I did my duty, as any officer ought.
+All right, I think I have heard his whole life story now.
+Menu Choice: Why were you invited here?
+Sushil Sinha: It is most likely because of my actions during the Great War.
+Sushil Sinha: In particular, those in 1917, during the Mesopotamian campaign.
+Sushil Sinha: Our regiment was tasked with taking control of a heavily fortified Turkish position.
+Sushil Sinha: The battle was intense and brutal, with heavy gunfire and explosions all around us.
+Sushil Sinha: I led my men through the chaos, urging them forward and providing cover fire.
+Sushil Sinha: Despite the danger, we were able to push through the enemy lines and take control of the position.
+Sushil Sinha: I was severely injured in the battle, but I refused to be taken off the field until the objective was secured.
+Sushil Sinha: My actions, bravery and leadership inspired my men and led to the success of our mission.
+Sushil Sinha: For my actions, I was awarded the Military Cross, one of the highest honors that can be given to an officer of the British army.
+Sushil Sinha: I was proud to have served my country and to have played a role in the ultimate victory of the Great War.
+Well, he certainly likes to tell a story in full.
+That's my fault for asking.
+Menu Choice: What do you think of the other guests?
+Sushil Sinha: Well, I don't know.
+Sushil Sinha: I don't have a strong opinion about anyone at this point.
+Sushil Sinha: Do you have someone in particular in mind?
+Menu Choice: What do you think of Lady Claythorn?
+Sushil Sinha: A charming lady, for sure.
+Sushil Sinha: However, there's something about her that intrigues me.
+Amelia Baxter: Really?
+Amelia Baxter: What exactly do you mean?
+He seems unsure.
+A bit embarrassed, even.
+Sushil Sinha: I'm sorry, I meant nothing specific.
+Sushil Sinha: I shouldn't be talking about our gracious host in any case.
+Amelia Baxter: Of course.
+He knows more than he's willing to say.
+But he won't disclose it with other people around.
+Menu Choice: What do you think of Rosalind Marsh?
+Sushil Sinha: A discreet woman.
+Sushil Sinha: She's stylishly dressed, but in a humble way.
+Sushil Sinha: You can immediately tell she's at ease in these kinds of gatherings.
+Menu Choice: What do you think of Daniel Baldwin?
+Sushil Sinha: At first glance, he seems like a decent gentleman.
+Sushil Sinha: However, he looked a bit nervous to me.
+Sushil Sinha: I noticed him fidgeting earlier, as if he were anxious about something.
+The dinner is over.
+The host gave us the opportunity to meet again for drinks.
+But I do not know, this has been quite a long day.
+Perhaps I should simply go to bed.
+In any case, I ought to retire to my room first.
+Well, I am comfortably settled.
+What should I do now?
+Map Choice: Go to bed
+It has been a long day.
+I cannot stay up any longer.
+It is time to go to bed.
+After taking a bit of time to get ready, I can get into bed.
+I have no problem falling asleep.

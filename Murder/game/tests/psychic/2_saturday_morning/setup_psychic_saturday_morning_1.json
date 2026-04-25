@@ -1,0 +1,20 @@
+{
+  "start_label": "psychic_day2_morning",
+  "choices": [
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "How old are you?",
+      "redirect": "captain_generic_age_psychic"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "What room are you in?",
+      "redirect": "captain_generic_room"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "Tell me more about yourself",
+      "redirect": "captain_generic_background_psychic"
+    }
+  ]
+}
