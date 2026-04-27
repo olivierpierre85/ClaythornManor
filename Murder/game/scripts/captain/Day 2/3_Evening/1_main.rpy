@@ -34,18 +34,26 @@ label captain_day2_evening:
     $ play_music('sad', 2)
 
     """
-    The walk back from the western grove felt twice as long as it ought to have.
+    The walk back from the woods felt twice as long as it ought to have.
 
     Doctor Baldwin was a heavier man than he appeared, and the makeshift stretcher was poor work.
-
-    But that is the sort of thought one keeps firmly to oneself.
 
     As we carry him through the entrance hall, I hear footsteps on the stair.
 
     Miss Baxter and Miss Marsh come to a halt at the bottom, and both their faces change at once.
-    """
 
-    call common_day2_evening_entrance_dialog
+    What follows is much as one might expect.
+
+    Miss Baxter, on the brink of tears, demands to know what has happened.
+
+    She wastes no kindness upon Mr Manning.
+
+    Lady Claythorn calls the police, then tells us the road out is blocked by a fallen tree, and the constabulary will not reach the manor before tomorrow.
+
+    It appears there is not much to do but wait. In the meantime, I propose moving Doctor Baldwin to his room.
+
+    Mr Harring volunteers his help without being asked.
+    """
 
     $ change_room("bedroom_doctor")
 
@@ -62,14 +70,10 @@ label captain_day2_evening:
     call common_day2_evening_bedroom_doctor_dialogue
 
     """
-    I leave him to his change of clothes and start back down the stair.
-
-    A household cannot be permitted to drift. Someone must hold it steady, and the task, by default, falls to me.
+    I leave him to get back to his room, and I join the others.
     """
 
     $ change_room("entrance_hall")
-
-    call common_day2_evening_samuel_manning_discussion_part_1
 
     if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
         and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')

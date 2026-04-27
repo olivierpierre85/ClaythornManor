@@ -17,17 +17,15 @@ label common_day2_evening_entrance_dialog:
     """
 
     captain """
-    It was an accident. 
+    A terrible thing. 
+
+    Samuel Manning missed his target and hit Doctor Baldwin instead.
     """
 
     drunk sad """
-    I swear it was! I have no idea how I could have hit him.
+    It was an accident, I swear! I have no idea how I could have hit him.
     
     I was aiming at a rabbit. I didn't even see him.
-    """
-
-    """
-    Everyone turns to him.
     """
         
     psychic angry """
@@ -53,6 +51,8 @@ label common_day2_evening_entrance_dialog:
     captain """
     We should tell them to hurry.
 
+    There are now two bodies to inspect, that will make matters even more complicated.
+
     Lady Claythorn, where's the telephone?
     """
 
@@ -60,15 +60,49 @@ label common_day2_evening_entrance_dialog:
     I'll handle it.
     """
 
-    """
-    She leaves the group, with the butler following closely behind.
+    if current_character == lad_details:
 
-    The room falls silent.
+        """
+        The hostess and her butler clear off down the corridor.
 
-    Most eyes are on Sam Manning, filled with disdain.
+        Then the room goes dead quiet.
 
-    Then, the hostess returns.
-    """
+        All eyes are on Sam Manning. He doesn't see them.
+
+        He's somewhere else entirely, staring at his own hands as if he's only just realised they're his.
+
+        Best to keep my mouth shut.
+
+        When the hostess comes back, no one has moved an inch.
+        """
+
+    elif current_character == psychic_details:
+
+        """
+        Our hostess exits the hall, her butler trailing in her wake.
+
+        I look upon Mr Manning.
+
+        The drunkard is altogether elsewhere. His eyes have gone soft as mist, his hands trembling upon his knees.
+
+        No one utters a word until Lady Claythorn has returned.
+        """
+
+    elif current_character == nurse_details:
+
+        """
+        Lady Claythorn leaves with the butler.
+
+        I keep my hands folded before me. It is what one is taught to do, when there is nothing useful left to be done.
+
+        Mr Manning sits upon the bottom stair, drained of whatever spirit he had this morning.
+
+        He looks rather pitiable, though I doubt anyone here would thank me for saying so.
+
+        I hold my peace.
+
+        The hostess returns presently.
+        """
 
     host """
     I just spoke with the police. They aren't coming today.
