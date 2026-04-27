@@ -1,0 +1,113 @@
+Chapter: The Hunt
+Character: Amelia Baxter
+I let everyone know that I am opting out of the hunt.
+It turns out Rosalind Marsh is the only other one who made the same choice.
+We agreed to meet shortly for luncheon in the tea room.
+I should find her there a bit before noon.
+Map Choice: Storage Room
+I climb the stairs to the attic and arrive in a dimly lit hallway.
+There are multiple doors, most of them lie in darkness.
+As I move into the hallway, I hear something.
+Older Man: Hello, is someone there?
+Amelia Baxter: Hello...
+Amelia Baxter: My name is Amelia Baxter.
+Older Man: Nice to meet you, Miss Baxter.
+Older Man: It's rare to meet someone up here.
+Older Man: I am usually by myself.
+Amelia Baxter: Nice to meet you too.
+Amelia Baxter: I am sorry to ask,
+Amelia Baxter: but who are you?
+Older Man: Oh, where are my manners?
+Older Man: I am the Lord of this Manor, of course.
+Wait, what?
+Amelia Baxter: I am sorry, Lady Claythorn didn't mention you.
+Older Man: Lady Claythorn? You probably mean my daughter then.
+Older Man: I suppose she likes having all the attention to herself.
+Older Man: She must be relieved that I spend most of my time alone in my room here.
+Amelia Baxter: You live here?
+Older Man: Yes, it's rather uncommon, but I enjoy how peaceful it is.
+Older Man: Plus, I believe I have the biggest room in the manor.
+He points to the big door in front of the stairs.
+Amelia Baxter: Right...
+I don't know what to say. There is something wrong with all this.
+Older Man: So my dear, were you looking for something in particular by coming here?
+Amelia Baxter: Well, not really. I was mostly exploring your home.
+Older Man: In that case, I would advise you not to linger here.
+Older Man: There's not much to see in this old attic.
+Older Man: You'll find more interesting rooms downstairs.
+Alright, he probably wants to stay alone.
+Amelia Baxter: Of course, I will continue visiting elsewhere.
+Older Man: Thank you, my dear.
+Older Man: Enjoy your stay.
+Amelia Baxter: Thank you.
+This was rather peculiar.
+I don't think I should return here too soon.
+It's almost time for lunch, I should go wait in the Tea Room.
+I am the first to arrive, so I pick a table and wait for Rosalind Marsh.
+I am seated comfortably, lost in my thoughts when she enters the room.
+Amelia Baxter: Miss Marsh, would you like to join me?
+Rosalind Marsh: Yes, thank you.
+Amelia Baxter: It seems we haven't really had a chance to talk yet, right?
+Menu Choice: You don't have anymore questions for her
+Suddenly, a staff member walks in.
+Young woman: Excuse me for interrupting, but do you ladies need some lunch?
+Rosalind Marsh: That would be lovely, thank you.
+After a few minutes, she returns with some plates.
+As we eat, we chat about trivial matters.
+When our lunch is over, Rosalind rises from her seat.
+She lets out a painful cough.
+Rosalind Marsh: I'm feeling rather poorly.
+Rosalind Marsh: I think I will retire to my room.
+Rosalind Marsh: Would you mind being left on your own?
+Amelia Baxter: Not at all, please don't concern yourself.
+Amelia Baxter: There is more than enough here to occupy me.
+With the manor so quiet, I might seize the chance to explore unnoticed.
+And perhaps I should call upon Rosalind Marsh later, to see how she is doing.
+What should I do know?
+Map Choice: Portrait Gallery
+There are quite a few impressive portraits here.
+However, no one else is present.
+Now, I realise that there are probably paintings of the Claythorn family here.
+I can't find Lady Claythorn here, but after a while I spot Lord Claythorn.
+He looks exactly as he does in real life.
+I check the label below the painting.
+"Nicholas III, of Claythorn Manor"
+So, Nicholas is his first name.
+Map Choice: Library
+Here is an impressive library.
+"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." is open on a table.
+I take a closer look at the book.
+It's the 8th edition, printed in 1894. That was quite some time ago.
+Perhaps I should look up information about the people living here.
+I find multiple entries for families with the name Claythorn.
+There's only one place associated with a Nicholas.
+Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith.
+Book: Born on June 22, 1813.
+Book: His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
+Book: With Mary Kirwan, his wife, he fathered one son and one daughter:
+Book: 1. Elisabeth, his heir, born in 1865.
+Book: 2. Andrew, born in 1867, died in 1869.
+Book: Lineage...
+There's additional information about the history of this place.
+But something seems off.
+Born in 1813.
+Wait, that would make him...
+111 years old?
+That can't be right.
+If that were true, he'd likely be the oldest man in England.
+Possibly even the world.
+Yet he didn't appear to be that old.
+I suppose this must be an mistake in the book.
+If they tried to list all the gentry of this country, they were bound to make some errors.
+Map Choice: Return to the Attic
+I've decided to return to the attic.
+I have some questions to ask the "Lord" of this place.
+But am I sure I should?
+Menu Choice: On second thought, it is rather scary. Let's back down
+I've changed my mind, I'd better leave him alone.
+God knows what I might stir up here.
+Map Choice: Wait until the others come back
+There's nothing else I want to do right now.
+I should just lie down on my bed for a bit.
+Suddenly, noises from the main entrance catch my attention.
+I should investigate.

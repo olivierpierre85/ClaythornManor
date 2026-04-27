@@ -16,7 +16,7 @@ The chapter then jumps to `psychic_day2_evening`.
 
 ---
 
-## setup_psychic_saturday_afternoon_no_hunt_1.json
+## setup_psychic_saturday_afternoon_1.json
 **Path**: Map 1: Edward II Bedroom → enter (locked) → Wait for Rosalind. Tea:
 nurse_generic full (weather + bg + heroic + manor, exhausting the 60-min budget).
 Map 2: Wait until others.
@@ -29,7 +29,7 @@ Map 2: Wait until others.
 
 ---
 
-## setup_psychic_saturday_afternoon_no_hunt_2.json
+## setup_psychic_saturday_afternoon_2.json
 **Path**: Map 1: Doctor (no_enter) → Drunk (enter, finds the messy room) → Wait
 for Rosalind. Tea: nurse exit. Map 2: Garden (30) → Billiard → Dining →
 Entrance Hall → Wait until others.
@@ -40,7 +40,7 @@ Entrance Hall → Wait until others.
 
 ---
 
-## setup_psychic_saturday_afternoon_no_hunt_3.json
+## setup_psychic_saturday_afternoon_3.json
 **Path**: Map 1: Queen Alexandra (nurse busy) → Captain (no_enter) → Host
 (no_enter) → Wait for Rosalind. Tea: nurse_generic guests sub-menu (Manning +
 Lady Claythorn). Map 2: Go check on Rosalind Marsh → Insist (unlocks
@@ -54,7 +54,7 @@ Lady Claythorn). Map 2: Go check on Rosalind Marsh → Insist (unlocks
 
 ---
 
-## setup_psychic_saturday_afternoon_no_hunt_4.json
+## setup_psychic_saturday_afternoon_4.json
 **Path**: Map 1: Storage Room (60-min attic visit, unlocks `visited_attic`).
 Tea: nurse exit. Map 2: Kitchen (downstairs hides others) → Library
 (`look_for_lord_failed` since attic_visited and not lord_name) → Wait until
@@ -65,7 +65,7 @@ others.
 
 ---
 
-## setup_psychic_saturday_afternoon_no_hunt_5.json
+## setup_psychic_saturday_afternoon_5.json
 **Path**: Map 1: Storage Room (attic, unlocks `visited_attic`). Tea: nurse exit.
 Map 2: Portrait Gallery (`look_for_lord`, unlocks `lord_name`) → Library
 (`look_for_lord_succeed`, unlocks `lord_age`) → Return to the Attic
@@ -76,7 +76,7 @@ Map 2: Portrait Gallery (`look_for_lord`, unlocks `lord_name`) → Library
 
 ---
 
-## setup_psychic_saturday_afternoon_no_hunt_6.json
+## setup_psychic_saturday_afternoon_6.json
 **Checkpoint**: thread `visited_attic` pre-unlocked, `attic_visited=True`.  
 **Path**: Map 1: Storage Room (`psychic_day2_no_hunt_attic_return_too_soon`,
 because `visited_attic` and not `lord_age`) → Wait for Rosalind. Tea: nurse
@@ -88,7 +88,7 @@ branch). Wait until others.
 
 ---
 
-## setup_psychic_saturday_afternoon_no_hunt_7.json
+## setup_psychic_saturday_afternoon_7.json
 **Path**: Map 1: Take a nap (early-exit, runs `psychic_day2_no_hunt_cancel`).
 Tea: nurse exit. Map 2: Wait until others.
 - Covers the "Take a nap" Map 1 exit option.
