@@ -40,23 +40,27 @@ label captain_ending_shot_in_woods:
     jump ending_generic
 
 
-label captain_ending_poisoned:
+label captain_ending_burned:
 
-    $ captain_details.endings.unlock('poisoned')
-    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('poisoned'))
+    $ captain_details.endings.unlock('burned')
+    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('burned'))
 
     call death_screen_transition
 
     """
-    You locked the wrong people away.
+    You took the man at his word, after he had twice told you he had lied.
 
-    Your suspicions had settled upon the household, and so you confined the household, and slept the easier for it.
+    Of all the night's small mistakes, that was the one that had no remedy.
 
-    But it was never the maids, nor the footman, nor even the butler whose hand you had to fear.
+    There was no need of poison, nor of further bullets, nor of any of the small careful violences a household provides.
 
-    Whoever poured what was in your glass that night walked freely past your locked doors, and bid you a perfectly civil good night.
+    A locked door, and a candle laid carelessly close to a curtain, will cover a great many things by morning.
 
-    The dead are not always killed by those they suspect.
+    The manor burnt to its foundations before the dawn.
+
+    The fallen tree across the road was found, in due course, to have been cut.
+
+    Of the gentleman behind it all, no trace was ever recovered.
     """
 
     jump ending_generic
@@ -70,11 +74,11 @@ label captain_ending_shot_butler:
     call death_screen_transition
 
     """
-    You took the man for an actor in a fine coat, and rushed him as you might have rushed a steward.
+    You read the man rightly. A wrist that still, on a hand that holds a revolver, is not the wrist of any honest butler.
 
-    You did not allow for the possibility that an actor in this house might be carrying a revolver.
+    And you went for him all the same.
 
-    A man with a great deal to lose will arm himself, even if it sits ill with his manners.
+    There is a courage in that, of a sort, and there is a folly in it of another sort, and the bullet does not greatly distinguish between them.
 
     He fired only when you left him no other choice. That is, in its way, a courtesy.
     """

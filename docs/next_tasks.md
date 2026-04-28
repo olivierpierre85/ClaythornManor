@@ -7,18 +7,16 @@ Or just : Captain, Broken?
 BUG??? Or by design. WHY Is there a call the generic LAD in psychic day 1 billiard room?
 
 
-BUG CHECK all commons for inner dialogs with person filter => Exemple Day2 Evening..
+Should we name the butler now that is a has a role?
 
-Search in common for  """"
-
-NEW
-
-TRY CONSOLE
+TRY CONSOLE Add on
 
 ## Write Story: Captain (Sushil Sinha)
 
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
 
+
+IDEA THE Butler is the psychic WIFESSSSSSS => An actor but also a thief? He played along with the psychic story, and he hopes that he could at least gain something of value from this? Or does he just want revenge as well?
 
 INTUITION WHERE to place it? 
 
