@@ -37,7 +37,33 @@ label captain_day2_evening:
     The walk back from the woods felt twice as long as it ought to have.
 
     Doctor Baldwin was a heavier man than he appeared, and the makeshift stretcher was poor work.
+    """
 
+    if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
+        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
+        and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
+
+        """
+        Throughout the walk, something keeps nagging at me.
+
+        I now have a long list of things that do not sit well with our host.
+
+        Her name that is not her title, no portrait of her in the house, her cavalier eating manners.
+
+        And I have just witnessed that she is no great hunter either.
+
+        And now, a second death.
+
+        One death may pass as a terrible accident.
+
+        Two deaths are more concerning.
+
+        Especially with everything I know about her.
+
+        But as I reach the house, I am still not sure what to do.
+        """
+
+    """
     As we carry him through the entrance hall, I hear footsteps on the stair.
 
     Miss Baxter and Miss Marsh come to a halt at the bottom, and both their faces change at once.
@@ -57,88 +83,94 @@ label captain_day2_evening:
 
     $ change_room("bedroom_doctor")
 
-    """
-    Mr Harring and I carry the doctor up the stair and lay him upon his bed.
+    # """
+    # Mr Harring and I carry the doctor up the stair and lay him upon his bed.
 
-    I draw a blanket over him to the shoulders, as one would for a man asleep.
+    # I draw a blanket over him to the shoulders, as one would for a man asleep.
 
-    The boy stays beside me, drained of colour.
+    # The boy stays beside me, drained of colour.
 
-    He has seen enough today to last him a long time.
-    """
+    # He has seen enough today to last him a long time.
+    # """
 
     call common_day2_evening_bedroom_doctor_dialogue
 
     """
-    I leave him to get back to his room, and I join the others.
+    I notice the blood Mr Harring has on him. Thankfully, my own jacket is untouched.
+
+    He withdraws to his room to change, and I return to the others.
     """
 
     $ change_room("entrance_hall")
+
+    """
+    As I come down the stairs, everyone turns to me.
+
+    It is clear they are hoping I might give them some kind of direction.
+    """
+
+    call common_day2_evening_samuel_manning_discussion_part_2
+
+    """
+    I believe everyone assumes I should take him myself.
+
+    After all, I represent the authority here.
+    """
 
     if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
         and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
         and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
 
         """
-        The plan is laid. Manning to his room.
+        But instead, I take a careful look at our host.
 
-        Then, I have no doubt, our hostess will urge the rest of us to scatter to our own, and we shall meet again at dinner as though nothing of consequence had occurred.
+        I have enough arguments to confront her in front of everybody.
 
-        That will not do. Not with what I know.
+        And it would be better to do so without the staff present.
 
-        A name that is no title. A portrait that is not upon the wall. A hostess who cannot shoulder her own rifle.
+        Right now, only the butler is with us.
 
-        And now, a second death.
+        If I were to send him to lock Manning up, that would be the perfect moment to confront our hostess.
 
-        One death, beneath a capable mistress, may pass as ill fortune.
+        But a public accusation, if it does not land, will put me in an incredibly awkward position.
 
-        Two deaths, beneath a mistress who is not its mistress, does not.
-
-        If I am to press her on any of this, I must do it now, before witnesses who are still shaken enough to listen.
-
-        But I must also have the field to myself.
-
-        The butler is her prop. Her steadiness. His keys, his discretion, his composure at her elbow.
-
-        If I am to challenge her, I should like him well out of the room. Upstairs, seeing to Mr Manning, would do nicely.
-
-        Or I may simply take Manning up myself, as the house has invited me to, and let this moment pass.
-
-        A public accusation, if it does not land, will finish me just as surely as a rifle in a wood.
+        I need to be sure about this.
         """
 
         $ time_left = 1
         call run_menu(
             TimedMenu("captain_day2_evening_menu_confront", [
                 TimedMenuChoice("Send the butler with Manning, and challenge her", 'captain_day2_evening_confront_path', early_exit=True),
-                TimedMenuChoice("Take Manning up myself, as offered", 'captain_day2_evening_normal_escort', early_exit=True),
+                TimedMenuChoice("Take Manning up myself", 'captain_day2_evening_normal_escort', early_exit=True),
             ])
         )
 
     else:
 
+        """
+        And I have no reason to disappoint them.
+        """
+
         call captain_day2_evening_normal_escort
 
-    call common_day2_evening_samuel_manning_discussion_part_3
+    call common_day2_evening_samuel_manning_discussion_part_4
 
     $ change_room("bedroom_captain", dissolve)
 
     call change_time(17, 00)
 
     """
-    I sit upon the edge of the bed with my hands pressed together.
-
-    A good officer reviews the field after the action, not during it.
-
-    So I let the afternoon settle in my mind, piece by piece.
+    I sit upon the edge of the bed with my hands pressed together and let the afternoon settle in my mind, piece by piece.
 
     Doctor Baldwin, shot under circumstances that can be explained, but that hang uneasily all the same.
 
     Mr Moody, dead in his bed only this morning.
 
-    A butler with a ready set of keys. A hostess with an unruffled composure.
+    A suspicious hostess and a letter left upon my pillow last night.
 
-    And a letter left upon my pillow last night that I have still not accounted for.
+    So many things to make sense of.
+
+    I ponder for a while on what my next move should be, but cannot decide on a course.
     """
 
     call wait_screen_transition()
@@ -148,9 +180,9 @@ label captain_day2_evening:
     play sound dinner_gong
 
     """
-    The gong.
+    The gong still rings.
 
-    As though we were the same party that sat down last night.
+    At least the order of the house is not disturbed.
     """
 
     $ change_room("dining_room", irisout)
@@ -173,27 +205,14 @@ label captain_day2_evening:
 
     call common_day2_evening_dinner_host
 
-    if captain_details.saved_variables.get('confronted_host_publicly', False):
 
-        """
-        Not a glance, not a flicker, to acknowledge the exchange of an hour past.
+    """
+    A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
 
-        She might as well have taken tea with me between whiles.
+    A man less suspicious than I am would take her at her word and think no further of it.
 
-        I watch her carefully and learn nothing I did not already know.
-
-        That, in itself, is worth noting. A woman truly disturbed by a guest's accusation would not be this still.
-        """
-
-    else:
-
-        """
-        A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
-
-        A man less suspicious than I am would take her at her word and think no further of it.
-
-        As it is, I take note of her composure, and say nothing of it aloud.
-        """
+    As it is, I take note of her composure, and say nothing of it aloud.
+    """
 
     jump work_in_progress
 
@@ -204,7 +223,7 @@ label captain_day2_evening:
 # --------------------------------------------
 label captain_day2_evening_normal_escort:
 
-    call common_day2_evening_samuel_manning_discussion_part_2
+    call common_day2_evening_samuel_manning_discussion_part_3
 
     $ change_room("bedrooms_hallway", dissolve)
 
@@ -258,80 +277,7 @@ label captain_day2_evening_normal_escort:
 # --------------------------------------------
 label captain_day2_evening_confront_path:
 
-    call captain_day2_evening_butler_escorts_manning
-
     call captain_day2_evening_confront_host
-
-    return
-
-
-label captain_day2_evening_butler_escorts_manning:
-
-    captain """
-    Mr Harring needed to change, he'll join us shortly.
-    """
-
-    host """
-    Ah, Captain! It's good you're here.
-
-    We've been deliberating over what action to take concerning Samuel Manning.
-    """
-
-    captain """
-    I see.
-
-    And what is your plan?
-    """
-
-    host """
-    We've decided to confine him to his chamber.
-
-    At least until the authorities can take over.
-    """
-
-    captain """
-    A prudent measure, my lady.
-
-    Though I hope you will forgive me if I stop short of playing gaoler in a house not my own.
-
-    The task ought to fall to a member of your household.
-    """
-
-    """
-    A brief silence.
-
-    The hostess hesitates, then turns to the butler.
-    """
-
-    host """
-    Of course, Captain. How thoughtless of me to have supposed otherwise.
-    """
-
-    butler """
-    I shall see to it, my lady.
-    """
-
-    """
-    The butler produces his keys with practised ease and moves to Samuel Manning's side.
-    """
-
-    butler """
-    If you will come with me, sir. This way.
-    """
-
-    drunk """
-    Yes... yes, of course.
-    """
-
-    """
-    Manning rises without protest and follows the butler towards the stair.
-
-    The two men disappear up the steps, and the hall quiets in their wake.
-
-    That is precisely the ground I wanted.
-
-    With the butler out of the room, our hostess has lost her closest prop.
-    """
 
     return
 

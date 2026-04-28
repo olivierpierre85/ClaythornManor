@@ -54,13 +54,20 @@ label psychic_day2_evening:
 
     call common_day2_evening_samuel_manning_discussion_part_2
 
+    call common_day2_evening_samuel_manning_discussion_part_3
+
+
     """
-    We all watch the two men leave down the stairs.
+    Samuel Manning offers a silent nod, rises, and follows Captain Sinha up the staircase.
+
+    His gaze betrays a mix of resignation and confusion.
+
+    We all watch the two men disappear up the stairs.
 
     Then an awkward silence fills the room.
     """
 
-    call common_day2_evening_samuel_manning_discussion_part_3
+    call common_day2_evening_samuel_manning_discussion_part_4
 
     """
     Before heading to my room, there is something I would like to understand.

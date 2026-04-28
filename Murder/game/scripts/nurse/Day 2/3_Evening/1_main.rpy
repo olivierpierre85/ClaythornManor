@@ -66,15 +66,15 @@ label nurse_day2_evening:
 
     call common_day2_evening_samuel_manning_discussion_part_2
 
-    """
-    I watch the Captain lead Samuel Manning away.
-
-    The man goes quietly, which surprises me.
-
-    He seems to have only a dim sense of what has happened.
-    """
-
     call common_day2_evening_samuel_manning_discussion_part_3
+
+    """
+    Mr Manning gives the smallest nod, rises, and follows the Captain towards the stair.
+
+    He moves quietly, and seems to have only a dim sense of what has happened.
+    """
+
+    call common_day2_evening_samuel_manning_discussion_part_4
 
     $ change_room("bedroom_nurse")
 

@@ -254,16 +254,20 @@ label common_day2_evening_samuel_manning_discussion_part_2:
     That does seem like the wisest approach.
     """
 
-    """
-    He shifts his attention towards Samuel Manning.
-    """
+    if current_character.text_id == "captain":
+
+        """
+        I turn to look at Samuel Manning.
+        """
+
+    else:
+
+        """
+        He shifts his attention towards Samuel Manning.
+        """
 
     captain """
     I hope you understand we're left with little choice right now.
-    """
-
-    """ 
-    Samuel Manning gives no sign of comprehension.
     """
 
     drunk """
@@ -285,6 +289,11 @@ label common_day2_evening_samuel_manning_discussion_part_2:
 
     I understand.
     """
+    
+    return
+
+
+label common_day2_evening_samuel_manning_discussion_part_3:
 
     captain """
     Good, come with me, please.
@@ -306,16 +315,10 @@ label common_day2_evening_samuel_manning_discussion_part_2:
     Now, Mr Manning, let's go shall we?
     """
 
-    """
-    Samuel Manning offers a silent nod, rises, and follows Captain Sinha up the staircase.
-
-    His gaze betrays a mix of resignation and confusion.
-    """
-    
     return
 
 
-label common_day2_evening_samuel_manning_discussion_part_3:
+label common_day2_evening_samuel_manning_discussion_part_4:
 
     host """
     What a sad business.
