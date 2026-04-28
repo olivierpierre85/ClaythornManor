@@ -1,0 +1,12 @@
+{
+  "start_label": "psychic_day3_afternoon",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "psychic_day3_gun",
+      "selected": "Try to take the gun by force. It's probably not loaded anyway",
+      "redirect": "psychic_day3_afternoon_gun_death"
+    }
+  ]
+}

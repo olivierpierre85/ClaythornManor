@@ -1,0 +1,12 @@
+{
+  "start_label": "psychic_day3_afternoon",
+  "unlocked_threads": ["burned"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "psychic_day3_stay",
+      "selected": "Let's not take any chance and leave this place{intuition}",
+      "redirect": "psychic_day3_afternoon_escape"
+    }
+  ]
+}
