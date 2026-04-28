@@ -77,6 +77,14 @@ label init_captain:
                 "You were shot in the woods by Thomas Moody",
                 image_file="hunting_rifle",
                 chapters=['saturday_afternoon']),
+            CharacterInformation(3, "poisoned",
+                "You were poisoned in the night after confining the staff",
+                image_file="poison_bedstand",
+                chapters=['saturday_evening']),
+            CharacterInformation(4, "shot_butler",
+                "You were shot by the butler when you tried to overpower him",
+                image_file="gun",
+                chapters=['saturday_evening']),
         ])
 
         # Character Class

@@ -140,7 +140,7 @@ label captain_day2_evening:
         $ time_left = 1
         call run_menu(
             TimedMenu("captain_day2_evening_menu_confront", [
-                TimedMenuChoice("Send the butler with Manning, and challenge her", 'captain_day2_evening_confront_path', early_exit=True),
+                TimedMenuChoice("Send the butler with Manning, and challenge her", 'captain_day2_evening_confront_host', early_exit=True),
                 TimedMenuChoice("Take Manning up myself", 'captain_day2_evening_normal_escort', early_exit=True),
             ])
         )
@@ -204,7 +204,6 @@ label captain_day2_evening:
     """
 
     call common_day2_evening_dinner_host
-
 
     """
     A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
@@ -275,171 +274,428 @@ label captain_day2_evening_normal_escort:
 #   Manning task onto the butler, then presses
 #   the hostess before the remaining witnesses
 # --------------------------------------------
-label captain_day2_evening_confront_path:
-
-    call captain_day2_evening_confront_host
-
-    return
-
-
 label captain_day2_evening_confront_host:
 
     $ play_music('mysterious', 3, fadeout_val=4)
 
+    captain """
+    A moment, if you would.
+
+    Would you be so good as to escort Mr Manning to his room and lock the door behind him?
+
+    Use your own key. Do not let him out under any circumstance until I come for him myself.
     """
-    Miss Baxter and Miss Marsh linger uncertainly near the foot of the stair.
 
-    Lady Claythorn draws breath to speak, no doubt to send us all to our rooms until the gong.
+    butler """
+    Of course, Captain.
+    """
 
-    I move before she can.
+    """
+    The butler bows, takes Manning by the elbow, and guides him up the stair without a word.
+
+    A quarter of an hour, perhaps. Less, if he is half as careful as I take him to be.
+
+    I shall not have a better moment than this.
     """
 
     captain """
-    Forgive me, Lady Claythorn. I am afraid I cannot, in good conscience, retire to my room as though this were merely a weekend grown tiresome.
+    Ladies, Mr Harring.
+
+    If I might prevail upon you to follow me into the tea room.
+
+    There is a matter I should put to you while we are still alone in the house.
     """
 
     host """
-    Captain?
+    Captain, whatever can be the matter?
     """
 
     captain """
-    Two men dead within the space of a day, beneath the same roof.
-
-    Mr Moody in the small hours. Doctor Baldwin in the woods this afternoon.
-
-    And now you mean to send us upstairs, to wait upon our dinner in quiet reflection.
-
-    That, my lady, is not the conduct of a house in mourning. That is the conduct of a house carrying on a performance.
+    Please, my lady. It will not take long.
     """
 
-    host """
-    Captain, I ask only that we preserve what order we may.
+    $ change_room("tea_room", dissolve)
 
-    The police cannot reach us before morning. Running about in alarm will not bring back either man.
+    """
+    Miss Baxter and Miss Marsh take the small settee. Mr Harring stays standing near the window.
+
+    Lady Claythorn lowers herself into the wingback chair as though it were a witness box.
+
+    I close the door behind us and place myself between it and our hostess.
     """
 
     captain """
-    Order has its place, my lady. And grief has another.
+    Forgive the abruptness. I have my reasons for the haste.
 
-    You have shown us no sign of the second.
-    """
+    Throughout this weekend I have noticed a great many things that do not sit comfortably with the role our hostess claims to hold.
 
-    """
-    The hall stills.
+    Her portrait is nowhere in the gallery.
 
-    Miss Marsh has turned her head. Miss Baxter watches me with an expression I cannot read at all.
+    She either does not know, or does not follow, the proper manners at table.
+
+    The hunt she herself arranged appears to be quite beyond her skill.
+
+    And, worst of all, the surname she is using is not her title, as it ought to be.
+
+    I do not believe she is Lady Claythorn.
+
+    In truth, I do not believe there is a Lady Claythorn at all.
     """
 
     psychic surprised """
-    Captain... surely you cannot mean to suggest our hostess is in some way answerable for what has happened?
-    """
-
-    captain """
-    I mean, Miss Baxter, that we ought not accept this evening at its face value.
-
-    For there is a great deal about our hostess that does not sit well with me.
-    """
-
-    """
-    Her smile holds, as a hostess's smile will hold through a guest's poor taste.
-
-    But the set of her shoulders has shifted.
-    """
-
-    captain """
-    Your portrait, my lady, is nowhere in the gallery upstairs.
-
-    In a house as old as this, where every Claythorn since Cromwell hangs upon the wall, the present mistress is absent.
-
-    And on the hunt this afternoon, you could scarcely shoulder a rifle. A gentlewoman who arranges a shooting weekend on her own grounds ought to know her piece.
-
-    And most particular of all, your surname is not a title, as it ought to be. There is no such style as 'Lady Claythorn.'
-
-    Any one of these, taken alone, would perhaps pass for nothing.
-
-    Taken together, they paint a picture I cannot unsee.
-    """
-
-    host """
-    Captain, you overreach yourself.
-
-    Each of those trifles has a perfectly ordinary explanation.
-
-    You will forgive me if, after the day we have had, I am not minded to deliver them in detail.
-    """
-
-    captain """
-    Then deliver me this one, my lady, and I shall press you no further tonight.
-
-    What is your title?
-    """
-
-    """
-    A silence.
-
-    It is the silence of a woman who was not expecting the question put quite so plainly.
-
-    Her eye flicks towards the stair, as though to measure how long the butler has been gone.
-    """
-
-    host """
-    Captain, I find your tone intolerable.
-
-    I shall not be interrogated in my own hall.
+    Captain! What an extraordinary thing to say.
     """
 
     nurse """
-    Captain Sinha... perhaps this is not the hour for such a discussion.
-
-    We are all of us shaken.
+    Surely there is some misunderstanding.
     """
 
     """
-    Miss Marsh speaks gently, but there is something close to a warning in her eye.
+    Their voices come on her behalf. Their eyes do not.
 
-    I realise at once that I have spent my ammunition.
-
-    To press further now, before witnesses too tired and too frightened to weigh the matter, would serve only to make me appear unhinged.
-
-    I let a beat pass, and incline my head.
-    """
-
-    captain """
-    Of course, Miss Marsh. Forgive me.
-
-    I have said what I felt I must.
-
-    I shall say no more of it tonight.
-    """
-
-    """
-    But I have said it, and before two witnesses. That cannot be taken back.
-
-    Lady Claythorn recovers her smile.
+    They have noticed things too. I see that now.
     """
 
     host """
-    No harm done, Captain. These are trying hours for us all.
+    Captain, you have plainly taken the events of today rather harder than the rest of us.
 
-    I trust we shall meet at dinner on better terms.
+    Each of those small oddities has a perfectly ordinary explanation.
+
+    I would gladly walk you through them, if I thought it would settle your nerves.
+    """
+
+    captain """
+    Then let us begin with the simplest of them, my lady.
+
+    What is your title?
+
+    A lady cannot have forgotten the title she was raised under.
+
+    Her father would have had it spoken in her presence a hundred times before she was ten.
+
+    Letters would have come addressed to it. Servants would have addressed her by it.
+
+    She would have heard it pronounced when she was presented at court.
+
+    What is yours?
     """
 
     """
-    A gracious answer, and perfectly delivered.
+    She opens her mouth.
 
-    At that moment, I hear the butler's tread upon the stair.
+    She closes it again. Her eyes go to her hands, then to the door, then back to me.
 
-    He returns to the hall in the manner of a man who has heard what he was not meant to hear.
-
-    Her eye meets his for the briefest of moments.
-
-    A look passes between them. Brief. Unambiguous.
-
-    Whatever I have planted in this hall tonight, I have been marked for it.
+    The room takes the silence and settles into it.
     """
 
-    $ captain_details.saved_variables['confronted_host_publicly'] = True
+    psychic """
+    Lady Claythorn?
+    """
 
-    $ stop_music(2)
+    """
+    There is no answer.
 
-    return
+    Miss Marsh's hand closes upon the arm of the settee. Mr Harring has gone very still.
+
+    Whatever air of authority she has worn this weekend leaves her by inches.
+    """
+
+    host """
+    Very well, Captain.
+
+    You are right.
+
+    I am not Lady Claythorn.
+
+    I do not know that there is one.
+
+    I was hired for the part. Through a firm of solicitors in London.
+
+    I never met the gentleman behind the arrangement.
+
+    I was given a script of sorts, and the run of the house, and a quite extraordinary fee.
+
+    That is the whole of what I know.
+    """
+
+    nurse """
+    Hired? You mean to tell us this entire weekend has been a... a performance?
+    """
+
+    host """
+    Only my part of it.
+
+    I swear to you, what has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
+
+    None of that was in any script I was given.
+
+    I am every bit as frightened as you are. More so, perhaps.
+    """
+
+    captain """
+    Frightened of whom, madam?
+
+    Who is here with you?
+    """
+
+    host """
+    The staff. They are not staff.
+
+    The maids, the footman, the cook. Players, all of them, hired the same way I was.
+
+    They know less than I do, if anything at all.
+
+    All but one.
+    """
+
+    captain """
+    The butler.
+    """
+
+    host """
+    Yes.
+
+    He is not on the same arrangement as the rest of us.
+
+    He answers to the gentleman directly.
+
+    He gives the orders. He chooses what we are told and what we are not.
+
+    If anyone in this house knows what is truly being done under its roof, it is he.
+    """
+
+    play sound door_knock
+
+    """
+    A measured rap upon the door of the tea room.
+
+    Three knocks. Unhurried.
+
+    The colour leaves Lady Claythorn's face entirely.
+    """
+
+    butler """
+    My lady? Captain Sinha?
+
+    Forgive the intrusion.
+
+    I find myself rather curious as to why you have all withdrawn together at this hour.
+    """
+
+    """
+    He has his own key, of course, and he uses it.
+
+    He closes the door behind him with the same patient courtesy he uses to draw out a chair at dinner.
+
+    But the courtesy is paper-thin tonight.
+
+    His eyes go straight to the lady's face and read it in a single glance, and what he sees there does not please him.
+    """
+
+    butler """
+    Madam.
+
+    What have you told them?
+    """
+
+    host """
+    Everything, I am afraid.
+
+    Or what little I know of it.
+    """
+
+    """
+    He receives this in silence.
+
+    A man weighing, very rapidly, a number of unpleasant arithmetics.
+    """
+
+    butler """
+    Then we have a difficulty.
+
+    Captain, I shall not insult any of us with theatre.
+
+    I am not the master of this house. I am no more the butler here than the lady is its mistress.
+
+    My arrangement, however, is not the same as hers.
+
+    I have rather more to lose than a pleasant fee, you understand.
+    """
+
+    captain """
+    Then who do you answer to?
+
+    And what is being done in this house?
+    """
+
+    butler """
+    To the first, I do not know his name. Only his bank.
+
+    To the second, I was not told. I was told only what to do, and what to prevent.
+
+    The road is blocked because I had it blocked. The telephone is mute for the same reason.
+
+    No one is coming tonight, Captain. That much I can tell you.
+    """
+
+    $ play_music('danger', 2, fadein_val=1)
+
+    """
+    He says it without relish, as a man recites a debt he cannot settle.
+
+    His hand has not strayed from his side, but it has not quite settled either. The fingers move once, twice, against the line of his coat.
+
+    Around me the others have gone perfectly still. Miss Baxter's hands are folded white. Miss Marsh sits forward, her chin set.
+
+    Mr Harring's eyes have not left the butler since he stepped through the door.
+
+    Whatever the man came in here ready to do, he has not yet decided to do it. There is still a course to be set.
+    """
+
+    $ time_left = 1
+    call run_menu(
+        TimedMenu("captain_day2_evening_menu_butler_offer", [
+            TimedMenuChoice("Propose confining the staff until the police arrive", 'captain_day2_evening_butler_offer_confine', early_exit=True),
+            TimedMenuChoice("Lunge at him before he can decide", 'captain_day2_evening_butler_offer_attack', early_exit=True),
+        ])
+    )
+
+
+label captain_day2_evening_butler_offer_confine:
+
+    captain """
+    Then let us be practical, all of us.
+
+    You have a great deal to lose, by your own admission, and I have no wish to see anyone lose anything further tonight.
+
+    Here is my proposal.
+
+    The staff, all of them, you and the lady included, will retire to their rooms and remain there until morning.
+
+    The keys come to me.
+
+    My fellow guests and I shall sit out the night together in this room.
+
+    When the police arrive, as they will, the matter passes from your hands and from mine.
+
+    You give me no cause for violence. I give you none.
+    """
+
+    """
+    The butler is silent for a long moment.
+
+    His hand drops at last from the line of his coat. His shoulders, which I had not noticed were set so high, lower a fraction.
+
+    Whatever was about to happen here was not, I think, what he wished to happen.
+
+    He inclines his head with something close to relief.
+    """
+
+    butler """
+    A sensible compromise, Captain.
+
+    The keys are yours.
+
+    I shall instruct the staff myself, and present them to you in the entrance hall in five minutes.
+    """
+
+    """
+    He withdraws as quietly as he came.
+
+    Lady Claythorn lets out a breath she has plainly been holding for the last quarter of an hour, and presses her hand to her mouth.
+    """
+
+    psychic """
+    Captain, that was... bravely done.
+    """
+
+    nurse """
+    And cleverly, too.
+    """
+
+    captain """
+    Let us not congratulate ourselves until morning.
+
+    Until then, we sit here together. No one wanders. No one drinks anything that has not been opened in front of all of us.
+
+    Are we agreed?
+    """
+
+    """
+    A nod from each of them.
+
+    A long night ahead, but a survivable one.
+
+    That, at least, is what I tell myself as the butler's footsteps recede along the corridor.
+    """
+
+    pause 1.0
+
+    """
+    The hours pass slowly.
+
+    Tea is brought in, which we ourselves pour. Sandwiches arrive on a tray, which Mr Harring inspects and Miss Marsh portions out.
+
+    The clock on the mantelpiece marks each quarter with a small, polite chime.
+
+    By two o'clock my eyes are heavy. The fire has burnt low. Miss Baxter sits beside me with her hands folded in her lap, perfectly composed.
+    """
+
+    pause 1.0
+
+    """
+    A weariness comes over me of a sort I have not felt in many years. Not the honest fatigue of a long day, but something heavier, and oddly sweet at the back of the tongue.
+
+    I lift my head to speak, and find I have already half forgotten what I meant to say.
+
+    The room recedes by a careful degree.
+
+    Miss Baxter's voice is very gentle, though I cannot any longer make out the words.
+    """
+
+    jump captain_ending_poisoned
+
+
+label captain_day2_evening_butler_offer_attack:
+
+    """
+    The man is uncertain. The lady is undone. They will not be in this state again tonight.
+
+    If I am to act, I must act now.
+    """
+
+    """
+    I draw the knife from my belt and close the distance in two strides.
+    """
+
+    pause 0.5
+
+    play sound gun
+
+    pause 1.0
+
+    """
+    He does not flinch. His hand is already inside his coat as I move, and what comes out of it is not what I had expected to find on a butler.
+
+    A small revolver, dark and businesslike. The hand that holds it trembles once, and then is still.
+
+    A flat, ugly sound in the small room.
+
+    Something very hot opens beneath my ribs.
+
+    The knife is no longer in my hand. I am no longer, properly, on my feet.
+    """
+
+    butler """
+    Forgive me, Captain.
+
+    You left me no choice.
+    """
+
+    """
+    He sounds, of all things, sincere.
+
+    The room narrows to a single point of grey.
+    """
+
+    jump captain_ending_shot_butler

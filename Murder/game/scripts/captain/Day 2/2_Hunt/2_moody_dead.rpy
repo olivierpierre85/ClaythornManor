@@ -297,9 +297,7 @@ label captain_day2_hunt_silent_luncheon:
 # --------------------------------------------
 label captain_day2_hunt_confront_host:
 
-
     $ play_music('mysterious', 3, fadeout_val=4)
-
 
     """
     I set down my cup with deliberate care and allow the rifle to rest within easier reach.
