@@ -1,0 +1,36 @@
+{
+  "start_label": "psychic_day2_evening",
+  "unlocked_threads": ["nurse_sick", "silverware"],
+  "choices": [
+    {
+      "menu": "psychic_day2_evening_bedroom",
+      "selected": "Just have a quick nap instead",
+      "redirect": "psychic_day2_evening_cancel_nap"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Check if there is someone in the Billiard Room",
+      "redirect": "psychic_day2_evening_billiard_room"
+    },
+    {
+      "menu": "psychic_day2_evening_billiard_room_menu",
+      "selected": "First things first, go to the bar for a drink",
+      "redirect": "psychic_day2_evening_billiard_room_bar"
+    },
+    {
+      "menu": "psychic_day2_evening_billiard_room_menu",
+      "selected": "Reluctantly talk to Sushil Sinha",
+      "redirect": "psychic_day2_evening_billiard_room_captain"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "There is something weird about Rosalind Marsh{{observation}}",
+      "redirect": "psychic_day2_evening_nurse_captain"
+    },
+    {
+      "menu": "psychic_day2_evening_nurse_captain",
+      "selected": "I suppose there is no other choice",
+      "redirect": "psychic_day2_evening_butler_room"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "start_label": "psychic_day2_evening",
+  "unlocked_threads": ["visited_attic", "lord_name", "lord_age", "nurse_sick"],
+  "saved_variables": {
+    "day2_has_seen_bedroom_broken": true,
+    "attic_visited": true
+  },
+  "choices": [
+    {
+      "menu": "psychic_day2_evening_bedroom",
+      "selected": "Just have a quick nap instead",
+      "redirect": "psychic_day2_evening_cancel_nap"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Richard III Bedroom",
+      "redirect": "psychic_day2_bedroom_broken_already_see"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Storage Room",
+      "redirect": "psychic_day2_evening_attic_default"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Queen Alexandra",
+      "redirect": "psychic_day2_evening_bedroom_nurse_gone"
+    },
+    {
+      "menu": "psychic_day2_evening_bedroom_nurse_gone",
+      "selected": "Don't be so nosy",
+      "redirect": "psychic_day2_evening_bedroom_nurse_gone_do_not_enter"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Library",
+      "redirect": "psychic_library_default"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Wait in your room",
+      "redirect": "psychic_day2_evening_cancel"
+    }
+  ]
+}

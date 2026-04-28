@@ -1,0 +1,71 @@
+{
+  "start_label": "psychic_day2_evening",
+  "unlocked_threads": ["nurse_sick", "silverware"],
+  "choices": [
+    {
+      "menu": "psychic_day2_evening_bedroom",
+      "selected": "Just have a quick nap instead",
+      "redirect": "psychic_day2_evening_cancel_nap"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Check if there is someone in the Billiard Room",
+      "redirect": "psychic_day2_evening_billiard_room"
+    },
+    {
+      "menu": "psychic_day2_evening_billiard_room_menu",
+      "selected": "First things first, go to the bar for a drink",
+      "redirect": "psychic_day2_evening_billiard_room_bar"
+    },
+    {
+      "menu": "psychic_day2_evening_billiard_room_menu",
+      "selected": "Reluctantly talk to Sushil Sinha",
+      "redirect": "psychic_day2_evening_billiard_room_captain"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "There is something weird about Rosalind Marsh{{observation}}",
+      "redirect": "psychic_day2_evening_nurse_captain"
+    },
+    {
+      "menu": "psychic_day2_evening_nurse_captain",
+      "selected": "Do not go alone with him",
+      "redirect": "psychic_day2_evening_nurse_captain_cancel"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "On second thought, I'd better not talk to him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day2_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Check if there is someone in the Billiard Room",
+      "redirect": "psychic_day2_evening_billiard_room"
+    },
+    {
+      "menu": "psychic_day2_evening_billiard_room_menu",
+      "selected": "Reluctantly talk to Sushil Sinha",
+      "redirect": "psychic_day2_evening_billiard_room_captain"
+    },
+    {
+      "menu": "captain_generic_menu_psychic",
+      "selected": "On second thought, I'd better not talk to him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day2_evening_billiard_room_menu",
+      "selected": "Leave the room",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Wait in your room",
+      "redirect": "psychic_day2_evening_cancel"
+    }
+  ]
+}

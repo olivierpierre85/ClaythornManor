@@ -1,0 +1,35 @@
+{
+  "start_label": "psychic_day2_evening",
+  "choices": [
+    {
+      "menu": "psychic_day2_evening_bedroom",
+      "selected": "Just have a quick nap instead",
+      "redirect": "psychic_day2_evening_cancel_nap"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Kitchen",
+      "redirect": "psychic_day2_evening_downstairs_default"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Garden",
+      "redirect": "psychic_day2_evening_garden"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Edward II Bedroom",
+      "redirect": "psychic_day2_evening_bedroom_doctor"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "George IV Bedroom",
+      "redirect": "psychic_day2_evening_bedroom_drunk"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Wait in your room",
+      "redirect": "psychic_day2_evening_cancel"
+    }
+  ]
+}

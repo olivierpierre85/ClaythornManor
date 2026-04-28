@@ -1,0 +1,50 @@
+{
+  "start_label": "psychic_day2_evening",
+  "choices": [
+    {
+      "menu": "psychic_day2_evening_bedroom",
+      "selected": "Try to talk to Rosalind Marsh",
+      "redirect": "psychic_day2_evening_bedroom_nurse_blood"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_bedroom_nurse",
+      "selected": "Do not push her further",
+      "redirect": "psychic_day2_no_hunt_bedroom_nurse_ignore"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "George I Bedroom",
+      "redirect": "psychic_day2_evening_bedroom_captain"
+    },
+    {
+      "menu": "psychic_day2_evening_bedroom_captain",
+      "selected": "I definitely shouldn't enter. That would be reckless!",
+      "redirect": "psychic_day2_evening_default_room_no_enter"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Henry IV Bedroom",
+      "redirect": "psychic_day2_evening_bedroom_host"
+    },
+    {
+      "menu": "psychic_day2_evening_bedroom_host",
+      "selected": "It won't hurt to give it a try. Let's go in and find out.",
+      "redirect": "psychic_day2_evening_default_room_locked"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Storage Room",
+      "redirect": "psychic_day2_evening_attic_default"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Male Servants Room",
+      "redirect": "psychic_day2_evening_attic_default"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Wait in your room",
+      "redirect": "psychic_day2_evening_cancel"
+    }
+  ]
+}

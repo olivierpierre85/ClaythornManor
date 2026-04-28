@@ -1,0 +1,325 @@
+Generated:                2026-04-28 14:44:50
+Scope:                    character=psychic
+Dialogue entries scanned: 972
+Test lines collected:     2335
+Covered:                  672
+Missing:                  300
+
+  game/scripts/psychic/Day 2/2_No Hunt/1_main.rpy  (1 missing)
+    [psychic_day2_no_hunt_94436caa] I don't really feel like exploring the Manor, so I decide to wait in the Tea Room.
+
+  game/scripts/psychic/Day 2/3_Evening/1_main.rpy  (1 missing)
+    [psychic_day2_evening_531b5946] We all watch the two men leave down the stairs.
+
+  game/scripts/psychic/Day 3/1_Morning/1_main.rpy  (39 missing)
+    [psychic_day3_morning_9d9b9f6d] Unsurprisingly, I slept terribly.
+    [psychic_day3_morning_303c7ca3] At least it's the last day. All of this will be over soon.
+    [psychic_day3_morning_95d3b284] Now I need to get my things ready and head to Ted Harring.
+    [psychic_day3_morning_96480bbb] Even though I didn't have a talk with Ted Harring last night, I should still see him.
+    [psychic_day3_morning_412124a6] On my way to Ted's, the emptiness of the Manor hits me.
+    [psychic_day3_morning_c63bb81f] There is not a sound that can be heard.
+    [psychic_day3_morning_d34be711] It gives me a chill.
+    [psychic_day3_morning_798961ee] I stop in front of his door.
+    [psychic_day3_morning_bfba5f04] He is not responding.
+    [psychic_day3_morning_ed9b4db2] I hope he is well.
+    [psychic_day3_morning_ec85bbed] Mr Harring, are you there?
+    [psychic_day3_morning_9c998fb0] And we started to look for others in the manor,
+    [psychic_day3_morning_9c235a67] inspecting every room.
+    [psychic_day3_morning_68a7c450] I let him choose where we were going,
+    [psychic_day3_morning_1042dd2b] even though his choices didn't always make much sense.
+    [psychic_day3_morning_80014cf0] We searched the Manor extensively, but we didn't find much anything interesting.
+    [psychic_day3_morning_ab8ec6a2] Ted Harring insisted on taking an empty gun from the gun room.
+    [psychic_day3_morning_b22d9779] I am not sure what he intends to do with it.
+    [psychic_day3_morning_19084138] Tired and demoralised, we decided to take a break in the tea room.
+    [psychic_day3_morning_498cc902] We rested there until we heard a familiar voice.
+    [psychic_day3_morning_4ca5f41d] I sat there quietly, pondering what had happened, what I should do next.
+    [psychic_day3_morning_3d4bc1c2] After some time, they came back.
+    [psychic_day3_morning_has_not_visited_lad_74cf0e24] I'm coming!
+    [psychic_day3_morning_has_not_visited_lad_9da43bc9] Finally, I was getting worried.
+    [psychic_day3_morning_has_not_visited_lad_f62c5e41] He opens the door for me and I enter.
+    [psychic_day3_morning_has_not_visited_lad_b7d91352] Mr Harring, I am sorry to disturb you but something strange is happening.
+    [psychic_day3_morning_has_not_visited_lad_feceb16a] I haven't seen any staff members on my way here.
+    [psychic_day3_morning_has_not_visited_lad_52434750] At this hour, they should be busy with lighting fires, cleaning and setting up breakfast.
+    [psychic_day3_morning_has_not_visited_lad_c94b7d90] Yet, I neither saw nor heard anyone.
+    [psychic_day3_morning_has_not_visited_lad_f5e8f1ce] It's as silent as a graveyard in here.
+    [psychic_day3_morning_has_not_visited_lad_40d8711a] Are you sure it's not just because it's so early?
+    [psychic_day3_morning_has_not_visited_lad_402a526d] I'm certain.
+    [psychic_day3_morning_has_not_visited_lad_569f2baf] I was up at the same time yesterday, and the house was bustling with activity.
+    [psychic_day3_morning_has_not_visited_lad_d054e3ce] Something's not right, I assure you.
+    [psychic_day3_morning_has_not_visited_lad_85df4b75] Okay, if you say so.
+    [psychic_day3_morning_has_not_visited_lad_1b9b4748] He paused for a second there, he must have realised it's serious.
+    [psychic_day3_morning_has_not_visited_lad_443e8e9a] What do you propose we do then?
+    [psychic_day3_morning_has_not_visited_lad_5f104d7b] I am not sure, but I think we should start by searching the Manor to try to understand what's happening.
+    [psychic_day3_morning_has_not_visited_lad_9be09d4d] Alright, let's investigate then.
+
+  game/scripts/psychic/Day 3/2_Afternoon/1_main.rpy  (18 missing)
+    [psychic_day3_afternoon_63b7e1c7] We waited in the tea room without exchanging any words for a short time.
+    [psychic_day3_afternoon_52673076] Finally, Captain Sinha comes back.
+    [psychic_day3_afternoon_1bd62419] Leave? I can't leave.
+    [psychic_day3_afternoon_c5e4627a] Yet something doesn't feel right.
+    [psychic_day3_afternoon_6612254e] I have a terrible premonition about this place.
+    [psychic_day3_afternoon_5d3a08ff] I can see it... burning.
+    [psychic_day3_afternoon_53c8b9f6] Gosh, it's like I can smell it too.
+    [psychic_day3_afternoon_529b090b] What's happening to me? Am I losing my mind?
+    [psychic_day3_afternoon_3bfd05c9] I know it makes no sense to go out right now, but everything in my body compels me to leave this place as f...
+    [psychic_day3_afternoon_618cd510] Of course, I'll stay.
+    [psychic_day3_afternoon_04c8310e] Only a monster would leave you alone here in this condition.
+    [psychic_day3_afternoon_10964d25] Thank you Mr Harring!
+    [psychic_day3_afternoon_f8d7357c] That means the world to me.
+    [psychic_day3_afternoon_eb80151b] I will go right now then. I don't want to lose time.
+    [psychic_day3_afternoon_90d7fb47] Hopefully, I'll be back with help before nightfall.
+    [psychic_day3_afternoon_8e05b74f] Thank you captain.
+    [psychic_day3_afternoon_254faa87] I hope you'll be safe.
+    [psychic_day3_afternoon_287e2a10] And then he is on his way.
+
+  game/scripts/psychic/Day 3/2_Afternoon/2_stay.rpy  (51 missing)
+    [psychic_day3_afternoon_stay_fa62c0e8] We both go on to our room, leaving Rosalind Marsh alone in the dining room.
+    [psychic_day3_afternoon_stay_391e2694] I did not waste time going to my room and back, but Rosalind Marsh and Ted Harring are already seated when ...
+    [psychic_day3_afternoon_stay_8add07b1] Ted Harring must have been very fast, I suppose he was scared to stay alone for too long.
+    [psychic_day3_afternoon_stay_4f1b3c80] We start eating in silence, each deep in our own thoughts.
+    [psychic_day3_afternoon_stay_7fcc92f9] I don't eat much, nor does Mrs Marsh.
+    [psychic_day3_afternoon_stay_4ebb040b] But Ted Harring finishes his plate,
+    [psychic_day3_afternoon_stay_bdc09aec] then as soon as he is done, stands up.
+    [psychic_day3_afternoon_stay_68cc4749] He looks anxious to do something.
+    [psychic_day3_afternoon_stay_2dc0c3fa] But as he stands, he suddenly looks dizzy.
+    [psychic_day3_afternoon_gun_death_893ebbec] No...
+    [psychic_day3_afternoon_gun_death_e2351173] Tears cloud my vision as I stare at the horrific scene before me.
+    [psychic_day3_afternoon_gun_death_bef5c067] When I look upon the dead body, the room spins, I am overwhelmed with guilt and disbelief.
+    [psychic_day3_afternoon_gun_death_b0f9c9c8] As I feel myself falling, I attempt to grasp the table but end up catching the tablecloth instead.
+    [psychic_day3_afternoon_gun_death_16dee7ff] It is not strong enough to prevent my fall.
+    [psychic_day3_afternoon_gun_death_abae22bb] I am on the floor, having dragged most of the table's contents down with me.
+    [psychic_day3_afternoon_gun_death_02d9524d] Broken glass all around me now, shattered plates, spilled food...
+    [psychic_day3_afternoon_gun_death_d087fdb3] I try to stand up but injure my hands on a shard of glass.
+    [psychic_day3_afternoon_gun_death_61b10655] Once again, I fall onto my back.
+    [psychic_day3_afternoon_gun_death_edf3931a] Perhaps I should just rest here.
+    [psychic_day3_afternoon_gun_death_2215478b] I have almost no strength left, anyway.
+    [psychic_day3_afternoon_gun_death_71f6d66b] But I smell something.
+    [psychic_day3_afternoon_gun_death_fd36083a] Something is burning.
+    [psychic_day3_afternoon_gun_death_5793f73b] Only then do I see it,
+    [psychic_day3_afternoon_gun_death_4a123abc] a candle from the table,
+    [psychic_day3_afternoon_gun_death_12dd7d91] now lying on the floor.
+    [psychic_day3_afternoon_gun_death_5eaed34c] And all around it, flames,
+    [psychic_day3_afternoon_gun_death_f55eabdd] spreading from the carpet to the entrance door.
+    [psychic_day3_afternoon_gun_death_0684e3b1] The fire is spreading rapidly.
+    [psychic_day3_afternoon_gun_death_528393c2] I make one last effort to stand and manage to get to my feet.
+    [psychic_day3_afternoon_gun_death_bd82758a] But I can see no way out.
+    [psychic_day3_afternoon_gun_death_3e2a54c4] Everything surrounding me is engulfed in smoke, so thick it's hard to breathe.
+    [psychic_day3_afternoon_gun_death_21dd7e8a] Upon this sight, the little strength I had left ebbs away.
+    [psychic_day3_afternoon_gun_death_03d592e9] As I am about to lose consciousness, my last feeling is a strong sense.
+    [psychic_day3_afternoon_gun_death_8d50e569] I never should have stayed here, I should have left when I had the chance.
+    [psychic_day3_afternoon_convince_nurse_45b5e78e] Don't do this. There's been a terrible misunderstanding.
+    [psychic_day3_afternoon_convince_nurse_6278a23c] The nurse's grip on the gun wavers, her eyes swimming with doubt and fear.
+    [psychic_day3_afternoon_convince_nurse_65c48a8b] I... I don't know what to believe anymore.
+    [psychic_day3_afternoon_convince_nurse_2bff1f12] None of this makes sense.
+    [psychic_day3_afternoon_convince_nurse_5c34d007] But I can't trust you.
+    [psychic_day3_afternoon_convince_nurse_814bbb9b] Yes, you can. No one else needs to get hurt.
+    [psychic_day3_afternoon_convince_nurse_b0ad7283] We can find a peaceful solution to this.
+    [psychic_day3_afternoon_convince_nurse_e71bb0c0] As I am talking, I also move slowly towards her.
+    [psychic_day3_afternoon_convince_nurse_8f88e6eb] Wait!
+    [psychic_day3_afternoon_convince_nurse_870dfc19] Don't come so close, don't...
+    [psychic_day3_afternoon_convince_nurse_15ae35be] A loud bang resonates in the room.
+    [psychic_day3_afternoon_convince_nurse_cab287e9] I look into Rosalind Marsh's eyes and see she's terrified.
+    [psychic_day3_afternoon_convince_nurse_4baa63f1] No!
+    [psychic_day3_afternoon_convince_nurse_5d233911] Look what you made me do!
+    [psychic_day3_afternoon_convince_nurse_66e620ec] I... just wanted... to...
+    [psychic_day3_afternoon_convince_nurse_5b3c0f47] I look down at my stomach.
+    [psychic_day3_afternoon_convince_nurse_2ae7891d] It's all covered in blood.
+
+  game/scripts/psychic/Day 3/2_Afternoon/2b_escape.rpy  (58 missing)
+    [psychic_day3_afternoon_escape_714d64ff] You're right.
+    [psychic_day3_afternoon_escape_572d27cf] I can't stay one more minute in this cursed place.
+    [psychic_day3_afternoon_escape_16b5c73f] Are you sure?
+    [psychic_day3_afternoon_escape_85d1b9fb] It won't be an easy walk.
+    [psychic_day3_afternoon_escape_c9524329] I am certain.
+    [psychic_day3_afternoon_escape_9f8ca64d] Very well, let's get ready before we leave then.
+    [psychic_day3_afternoon_escape_5c553e6e] I suggest we all put on our most comfortable shoes, warm clothing and leave everything else here.
+    [psychic_day3_afternoon_escape_ac08cad1] No need to be encumbered by our luggage. Hopefully, we will come back soon enough to retrieve it.
+    [psychic_day3_afternoon_escape_4a657954] Let's get ready and meet in the main hall in 15 minutes.
+    [psychic_day3_afternoon_escape_188b3bbc] Do you agree?
+    [psychic_day3_afternoon_escape_732ae0a3] Sounds good to me.
+    [psychic_day3_afternoon_escape_5c8483cd] I rush to my room, grab what I need, and hurry down to the hall as fast as possible.
+    [psychic_day3_afternoon_escape_f8dec43b] The others are already there.
+    [psychic_day3_afternoon_escape_a8b0f1d1] Captain Sinha has a large coat and sturdy boots with him.
+    [psychic_day3_afternoon_escape_3bcec7cb] Ted Harring, on the other hand, doesn't seem to have changed his clothes at all.
+    [psychic_day3_afternoon_escape_54ce378d] All right, if everyone is ready, let's set out.
+    [psychic_day3_afternoon_escape_42a95a16] We then proceed to exit the house, leaving its impressive shadow behind us.
+    [psychic_day3_afternoon_escape_65d1d4b0] We've been walking for a couple of miles already.
+    [psychic_day3_afternoon_escape_521bedc3] I am struggling to keep up but, besides that, everything is going smoothly.
+    [psychic_day3_afternoon_escape_00b1579f] Maybe too smoothly.
+    [psychic_day3_afternoon_escape_6c7c483e] I stop to take a brief break.
+    [psychic_day3_afternoon_escape_58d1e457] As I catch my breath, I look at the forest surrounding us.
+    [psychic_day3_afternoon_escape_f64ee9d8] Then...
+    [psychic_day3_afternoon_escape_c49db165] Captain, could you come and see something?
+    [psychic_day3_afternoon_escape_a60f3985] Of course, what is it?
+    [psychic_day3_afternoon_escape_8df4bf61] He retraces his steps to my level, while Ted Harring continues walking ahead.
+    [psychic_day3_afternoon_escape_251b381f] Can you look over there, behind that huge oak tree?
+    [psychic_day3_afternoon_escape_2b377656] I thought I saw something.
+    [psychic_day3_afternoon_escape_c7a4350f] I might be imagining things, but it looked like a person.
+    [psychic_day3_afternoon_escape_a2845688] I can spot the tree but see no one.
+    [psychic_day3_afternoon_escape_c88b45f7] I don't see it anymore, but it was definitely there a second ago.
+    [psychic_day3_afternoon_escape_229d4982] I'm sure of it.
+    [psychic_day3_afternoon_escape_2007b19e] Alright, I'll go and check quickly.
+    [psychic_day3_afternoon_escape_6d1b47c2] Without hesitation, he rushes towards the large tree ahead.
+    [psychic_day3_afternoon_escape_df65e885] A gunshot stops him in his tracks.
+    [psychic_day3_afternoon_escape_d267ac38] For a brief moment he manages to keep standing up.
+    [psychic_day3_afternoon_escape_70e27dfd] He turns back towards me.
+    [psychic_day3_afternoon_escape_08d2ac89] There is blood on his hands.
+    [psychic_day3_afternoon_escape_bc9fd200] His face usually emotion less now shows panic, and pain.
+    [psychic_day3_afternoon_escape_0ae2e8b4] He tries to take a step in my direction, but collapses on the ground.
+    [psychic_day3_afternoon_escape_e08e8950] When I realise what is happening, I quickly decide I can't stay here for long.
+    [psychic_day3_afternoon_escape_5ea695a7] So I leave the Captain behind and start to run as fast as I can.
+    [psychic_day3_afternoon_escape_9c9ab626] I try to catch up with Ted Harring, but he is already so far away that I can't even see him.
+    [psychic_day3_afternoon_escape_9d228389] He didn't even pretend to wait for us.
+    [psychic_day3_afternoon_escape_e58b5c5c] I go as fast as I can but I don't see Ted Harring until I reach the town.
+    [psychic_day3_afternoon_escape_6ac39e82] I head straight to the police station and there he is.
+    [psychic_day3_afternoon_escape_9e39f34f] When I enter, he looks embarrassed to see me.
+    [psychic_day3_afternoon_escape_98bb6f29] Probably feeling the weight of the guilt of leaving me to an uncertain fate.
+    [psychic_day3_afternoon_escape_2f2f4490] But I am glad he made it anyway.
+    [psychic_day3_afternoon_escape_e2feca1a] I hug him and tell him about Captain Sinha.
+    [psychic_day3_afternoon_escape_3ced706b] He replies that officers are on their way to Claythorn Manor.
+    [psychic_day3_afternoon_escape_f60b6b5c] We wait for them for a long time.
+    [psychic_day3_afternoon_escape_6ca81131] They come back only to confirm what we already knew.
+    [psychic_day3_afternoon_escape_f5ff33b5] Sushil Sinha has succumbed to his injuries.
+    [psychic_day3_afternoon_escape_d2df70b1] There is no one alive at the manor.
+    [psychic_day3_afternoon_escape_1c9f57c6] In addition to Samuel Manning, Thomas Moody, and Daniel Baldwin, they've also found Rosalind Marsh's body.
+    [psychic_day3_afternoon_escape_6acefdd7] She has been stabbed to death and is lying somewhere in the attic.
+    [psychic_day3_afternoon_escape_c7b1b824] However, they have found no trace of Lady Claythorn and her staff.
+
+  game/scripts/psychic/psychic_endings.rpy  (17 missing)
+    [psychic_ending_lord_25518147] You fell in the staircase.
+    [psychic_ending_lord_bea55201] You are not sure what happened there in the attic, but it got the best of you.
+    [psychic_ending_burns_78d5f871] The smoke from the fire caused you to lose consciousness.
+    [psychic_ending_burns_b6c0766e] Needless to say, you didn't survive it.
+    [psychic_ending_burns_df080157] The whole place burned down.
+    [psychic_ending_burns_a5621fc0] A tragic ending for Claythorn Manor and everyone still within.
+    [psychic_ending_shot_942d34d1] You were shot.
+    [psychic_ending_shot_0acab5b7] That is on you for trusting strangers.
+    [psychic_ending_shot_ac953e1b] In tough situations, sometimes the best course of action is to fight.
+    [psychic_ending_shot_b128c513] Keep that in mind for the future.
+    [psychic_ending_escape_272bcd27] You've made it!
+    [psychic_ending_escape_8661558b] And you've managed to save one person with you.
+    [psychic_ending_escape_c4075684] That's not bad, and you could stop there.
+    [psychic_ending_escape_9b0a8348] Not everybody needs a happy ending.
+    [psychic_ending_escape_d1b23609] And this one is as good as any.
+    [psychic_ending_escape_ddf8b423] So it's up to you to just stop,
+    [psychic_ending_escape_75de6faf] Or to keep playing.
+
+  game/scripts/psychic/psychic_lord_locations.rpy  (57 missing)
+    [psychic_attic_default_8de0f676] I really shouldn't go back there right now.
+    [psychic_confront_lord_6686db65] I know I must confront him.
+    [psychic_confront_lord_7df9d327] But what am I hoping to prove?
+    [psychic_confront_lord_939c35ab] That's a dangerous path I fear I'm taking here.
+    [psychic_confront_lord_14c5173a] He is not in the hallway, so I head to his room.
+    [psychic_confront_lord_8c8a02dc] I don't bother knocking and enter right away.
+    [psychic_confront_lord_36dfb844] It's even more decrepit than the rest of the attic.
+    [psychic_confront_lord_2569715a] Why would anyone decide to live here?
+    [psychic_confront_lord_01d9eef9] Sir Nicholas, are you there?
+    [psychic_confront_lord_f0be3730] Oh good, you've returned.
+    [psychic_confront_lord_ad4b15f5] And you've learned my name as well.
+    [psychic_confront_lord_f0db397b] Impressive.
+    [psychic_confront_lord_c2424056] That's not all I've learned, though.
+    [psychic_confront_lord_04f089ae] Really? What else?
+    [psychic_confront_lord_7c5ffe81] That you're supposed to be 111 years old.
+    [psychic_confront_lord_005b1c15] Is this true?
+    [psychic_confront_lord_6ea3b237] 111 years...
+    [psychic_confront_lord_74952fc5] Has it been that long already?
+    [psychic_confront_lord_a11006ed] Well, I suppose that's true.
+    [psychic_confront_lord_b905d013] No one can live this long.
+    [psychic_confront_lord_488d00ca] Probably not.
+    [psychic_confront_lord_f8732536] So, are you...
+    [psychic_confront_lord_f27311da] Are you...
+    [psychic_confront_lord_e0f4cbf2] Am I what, my dear?
+    [psychic_confront_lord_7488fcef] Dead?
+    [psychic_confront_lord_8e3c1572] That's what you think, right?
+    [psychic_confront_lord_ab8d0987] Or rather, it's what you're hoping.
+    [psychic_confront_lord_83ccac25] Because either I am a ghost...
+    [psychic_confront_lord_81721182] Or you're just losing your mind.
+    [psychic_confront_lord_b51cbe5b] He inches closer to me.
+    [psychic_confront_lord_fdc30a58] So, which will it be?
+    [psychic_confront_lord_c844ef75] That a liar, someone who preyed on the bereaved to make money,
+    [psychic_confront_lord_4b7eeb5f] is actually a real-life medium?
+    [psychic_confront_lord_7e412d79] That it was in her all along?
+    [psychic_confront_lord_f9f0c2a1] I understand the appeal to believe that now.
+    [psychic_confront_lord_29fa8b1c] That would mean that you weren't really deceiving people your entire life.
+    [psychic_confront_lord_50c1e03a] But that would be too easy, wouldn't it?
+    [psychic_confront_lord_b47a1f8c] I am afraid there is only one other alternative.
+    [psychic_confront_lord_e8790b55] You must see it too now.
+    [psychic_confront_lord_5b9d2182] You understand what's happening here, don't you?
+    [psychic_confront_lord_cca9c215] He is now almost next to my face.
+    [psychic_confront_lord_f19b02b0] I can't take this.
+    [psychic_confront_lord_a4b48b23] I rush outside his room.
+    [psychic_confront_lord_13a4defa] But he is already there.
+    [psychic_confront_lord_0413eb4b] Standing in front of me.
+    [psychic_confront_lord_96a13cf1] Where are you going?
+    [psychic_confront_lord_b6e3b285] Do you think you can get rid of me that easily?
+    [psychic_confront_lord_223fec09] What do you want from me?
+    [psychic_confront_lord_bb1a15b6] Me? I don't want anything.
+    [psychic_confront_lord_f9ba7f26] The question is: what do you want?
+    [psychic_confront_lord_5bbba9f6] I slowly take a step back towards the stairs.
+    [psychic_confront_lord_2053ce00] Do you feel remorse maybe?
+    [psychic_confront_lord_78fe6d00] I take another step.
+    [psychic_confront_lord_4b0730c9] Some regret over what you've done?
+    [psychic_confront_lord_067290b1] Please, leave me alone.
+    [psychic_confront_lord_c7c5adaf] I try to walk back further,
+    [psychic_confront_lord_f0f766a9] but my foot doesn't find the ground behind me.
+
+  game/scripts/psychic/psychic_other_guests.rpy  (58 missing)
+    [psychic_generic_other_guests_saturday_3dd74d4d] I haven't had time to form an opinion of everyone yet.
+    [psychic_generic_other_guests_saturday_e2cb56ab] I have only had time to speak with Captain Sinha, and with that poor drunkard Samuel Manning.
+    [psychic_generic_other_guests_saturday_6a088463] And I could also exchange a few words with our hostess, Lady Claythorn.
+    [psychic_generic_other_guests_saturday_hunt_4ef976b2] You know that I already talked with Samuel Manning, Captain Sinha and our host.
+    [psychic_generic_other_guests_saturday_hunt_2ad5cb85] Now, I have also talked a little with Miss Marsh.
+    [psychic_generic_other_guests_friday_daeb35bf] I've just met them. So I can't say I know a lot yet.
+    [psychic_generic_other_guests_friday_9531e223] All I know is that this guy over there ...
+    [psychic_generic_other_guests_friday_38e2ec2e] She points at Sushil Sinha.
+    [psychic_generic_other_guests_friday_a90e991e] ... is monopolising the conversation.
+    [psychic_generic_other_guests_friday_94aa6098] And he is very noisy too.
+    [psychic_generic_other_guests_friday_03a459f9] It's not very tactful if you ask me.
+    [psychic_generic_drunk_saturday_morning_8b37fe51] Well, I believe you can tell as well as I that he is a dangerous drunk.
+    [psychic_generic_drunk_saturday_morning_2a29d6df] We better stay away from him.
+    [psychic_generic_drunk_saturday_morning_83565488] A reasonable enough assessment, I suppose.
+    [psychic_generic_drunk_saturday_morning_0e5fbaf1] Though I would have put it differently.
+    [psychic_generic_drunk_saturday_morning_e440404d] In my experience, drunks are simply wounded persons.
+    [psychic_generic_drunk_saturday_morning_ac072aff] There is no reason to vilify them.
+    [psychic_generic_captain_saturday_morning_38fd0162] He appears to me the very image of a military man.
+    [psychic_generic_captain_saturday_morning_3c4b89aa] Except for, you know, his origin.
+    [psychic_generic_captain_saturday_morning_e38d699d] I did not think they would accept indigenous people in the British Army.
+    [psychic_generic_captain_saturday_morning_073b2de4] But aside from that, he is exactly like other officers I have met.
+    [psychic_generic_captain_saturday_morning_133bbe7c] Bold, sure of himself, and never shy of speaking about himself.
+    [psychic_generic_captain_saturday_morning_ffb8eb56] I bet he will keep on telling stories about his "Glorious Days" during one war or another.
+    [psychic_generic_captain_saturday_morning_00d9cdc0] I find it in poor taste, so I shall try to avoid him in the coming days.
+    [psychic_generic_captain_saturday_morning_8cce9435] I suggest you do the same, unless you want to be bored to death.
+    [psychic_generic_host_saturday_morning_ae2f7036] I only exchanged a few pleasantries with the lady of the house.
+    [psychic_generic_host_saturday_morning_a2cb3148] She seems delightful to me.
+    [psychic_generic_host_saturday_morning_c109a640] What pleased me even more was that she addressed me as an equal.
+    [psychic_generic_host_saturday_morning_ac616b26] That's very different from most noble people I've met.
+    [psychic_generic_host_saturday_morning_c1ed4be3] They usually look down on people like you...
+    [psychic_generic_host_saturday_morning_704be2d2] ... and me.
+    [psychic_generic_host_saturday_morning_d6773484] She paused a little too long before adding "and me".
+    [psychic_generic_host_saturday_morning_6c7f0c79] I don't like that.
+    [psychic_generic_nurse_saturday_hunt_a696ee4e] From what I've seen, I believe she is a very respectable woman.
+    [psychic_generic_nurse_saturday_hunt_847e84f1] She worked most of her life as a nurse.
+    [psychic_generic_nurse_saturday_hunt_6df83fbe] So I believe the prize money could help her retire.
+    [psychic_generic_other_guests_saturday_evening_1d5ff287] Good question, we'll be stronger if we know who to be wary of.
+    [psychic_generic_other_guests_saturday_evening_95ce4441] I've thought about it and Samuel Manning is of course the prime suspect.
+    [psychic_generic_other_guests_saturday_evening_6572d05f] But he is locked in his room now, so I wouldn't worry about him too much.
+    [psychic_generic_other_guests_saturday_evening_25251b17] The other obvious suspect is Thomas Moody.
+    [psychic_generic_other_guests_saturday_evening_2b29af66] The fact that he wears a mask is the perfect way to hide his true identity.
+    [psychic_generic_other_guests_saturday_evening_c4787da5] But he can't really hurt us anymore, can he?
+    [psychic_generic_other_guests_saturday_evening_29b0c484] So that leaves us three persons to worry about: Sushil Sinha, Lady Claythorn and Rosalind Marsh.
+    [psychic_generic_captain_saturday_evening_7630a618] Captain Sinha is the one I am most worried about.
+    [psychic_generic_captain_saturday_evening_2108dc97] He is the strongest of us, has military experience.
+    [psychic_generic_captain_saturday_evening_92eb1356] And he often took command during dramatic moments, which means he can try to drive us where he wants.
+    [psychic_generic_captain_saturday_evening_5b769418] I would be very cautious around him if I were you.
+    [psychic_generic_host_saturday_evening_ad42ced1] If money is not the reason behind the murders, then I suppose she would be suspicious.
+    [psychic_generic_host_saturday_evening_5a51378c] After all, she is the one who called all of us here.
+    [psychic_generic_host_saturday_evening_6183f3c9] But as I said, it would be a lot of work to organise all this, and for what?
+    [psychic_generic_host_saturday_evening_ae288a13] To kill a few of her enemies?
+    [psychic_generic_host_saturday_evening_1084681e] That seems a bit far-fetched.
+    [psychic_generic_host_saturday_evening_f5c2bca9] Also, she seemed very nice to me.
+    [psychic_generic_host_saturday_evening_9adf6964] But of course that doesn't mean much.
+    [psychic_generic_nurse_saturday_evening_e2a4cbe3] Miss Marsh definitely doesn't have the type of a killer.
+    [psychic_generic_nurse_saturday_evening_47e80f71] But that's not reason enough to think she couldn't be.
+    [psychic_generic_nurse_saturday_evening_8c191371] She is very discreet.
+    [psychic_generic_nurse_saturday_evening_9c435dd5] That could be a way to search the manor while she relies on an accomplice for the more "physical" part of t...
+

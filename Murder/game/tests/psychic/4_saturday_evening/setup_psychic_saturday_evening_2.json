@@ -1,0 +1,30 @@
+{
+  "start_label": "psychic_day2_evening",
+  "choices": [
+    {
+      "menu": "psychic_day2_evening_bedroom",
+      "selected": "Try to talk to Rosalind Marsh",
+      "redirect": "psychic_day2_evening_bedroom_nurse_blood"
+    },
+    {
+      "menu": "psychic_day2_no_hunt_bedroom_nurse",
+      "selected": "Insist, something is clearly wrong here",
+      "redirect": "psychic_day2_no_hunt_bedroom_nurse_insist"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Queen Alexandra",
+      "redirect": "psychic_day2_evening_bedroom_nurse_gone"
+    },
+    {
+      "menu": "psychic_day2_evening_bedroom_nurse_gone",
+      "selected": "Make sure she is still alive{{observation}}",
+      "redirect": "psychic_day2_evening_bedroom_nurse_gone_enter"
+    },
+    {
+      "menu": "psychic_day2_evening_map_menu",
+      "selected": "Wait in your room",
+      "redirect": "psychic_day2_evening_cancel"
+    }
+  ]
+}
