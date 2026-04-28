@@ -16,9 +16,9 @@ testsuite captain:
         python:
             test.run_chapter(captain_details, "saturday_afternoon", "captain_day2_hunt")
 
-    # testcase saturday_evening:
-    #     python:
-    #         test.run_chapter(captain_details, "saturday_evening", "captain_day2_evening")
+    testcase saturday_evening:
+        python:
+            test.run_chapter(captain_details, "saturday_evening", "captain_day2_evening")
 
     # testcase sunday_morning:
     #     python:

@@ -1,0 +1,21 @@
+{
+    "start_label": "captain_day2_evening",
+    "unlocked_threads": [
+        "captain_host_suspicion_name",
+        "captain_host_suspicion_portrait",
+        "captain_host_suspicion_shooting"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day2_evening_menu_confront",
+            "selected": "Send the butler with Manning, and challenge her",
+            "redirect": "captain_day2_evening_confront_host"
+        },
+        {
+            "menu": "captain_day2_evening_menu_butler_offer",
+            "selected": "Accepts being confined",
+            "redirect": "captain_day2_evening_butler_offer_confine"
+        }
+    ]
+}
