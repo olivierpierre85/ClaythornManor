@@ -1,42 +1,67 @@
 {
   "start_label": "doctor_day1_evening",
-  "unlocked_threads": ["shot_by_drunk"],
+  "unlocked_threads": [],
   "saved_variables": {},
   "choices": [
     {
       "menu": "broken_generic_menu_doctor",
+      "selected": "Tell me more about yourself.",
+      "redirect": "broken_generic_background"
+    },
+    {
+      "menu": "broken_generic_background_offense",
+      "selected": "Did you have to change profession because of the war?",
+      "redirect": "broken_generic_background_offended_1"
+    },
+    {
+      "menu": "broken_generic_background_offended_1",
+      "selected": "Wait? Really?",
+      "redirect": "broken_generic_background_offended_2"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "What do you think of this place?",
+      "redirect": "broken_generic_manor"
+    },
+    {
+      "menu": "broken_generic_manor_offense",
+      "selected": "Of course, the war changed everyone perspective",
+      "redirect": "broken_generic_manor_offended"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "Why were you invited here?",
+      "redirect": "broken_generic_heroic_act"
+    },
+    {
+      "menu": "broken_generic_heroic_act_offended",
+      "selected": "What do you mean?",
+      "redirect": "broken_generic_heroic_act_offended"
+    },
+    {
+      "menu": "doctor_day1_evening",
+      "selected": "Talk to Ted Harring",
+      "redirect": "doctor_day1_dinner_lad"
+    },
+    {
+      "menu": "lad_generic_menu_doctor",
+      "selected": "Tell me more about yourself.",
+      "redirect": "lad_generic_background_doctor"
+    },
+    {
+      "menu": "lad_generic_background_doctor",
+      "selected": "I might have something to sell you",
+      "redirect": "lad_generic_background_doctor_thief"
+    },
+    {
+      "menu": "lad_generic_menu_doctor",
       "selected": "You don't have anymore questions for him",
       "redirect": "generic_cancel"
     },
     {
-      "menu": "doctor_day1_evening",
-      "selected": "Just keep to yourself",
-      "redirect": "generic_cancel"
-    },
-    {
       "menu": "doctor_day1_evening_3",
-      "selected": "Let's go down and meet the others",
-      "redirect": "generic_cancel"
-    },
-    {
-      "menu": "doctor_day1_evening_map_menu",
-      "selected": "George IV Bedroom",
-      "redirect": "doctor_day1_evening_bedroom_drunk"
-    },
-    {
-      "menu": "doctor_day1_evening_bedroom_drunk",
-      "selected": "Follow your intuition, they exist for a reason{intuition}",
-      "redirect": "doctor_day1_evening_bedroom_drunk_enter"
-    },
-    {
-      "menu": "doctor_day1_evening_bedroom_drunk_enter",
-      "selected": "Do not risk your life — leave this place",
-      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor"
-    },
-    {
-      "menu": "doctor_day1_evening_bedroom_drunk_leave_manor",
-      "selected": "I should stay awake to be safe",
-      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor_awake"
+      "selected": "Stay here—this might be more... enjoyable",
+      "redirect": "doctor_laudanum_death"
     }
   ]
 }

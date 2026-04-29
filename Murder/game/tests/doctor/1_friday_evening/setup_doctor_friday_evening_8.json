@@ -30,13 +30,13 @@
     },
     {
       "menu": "doctor_day1_evening_bedroom_drunk_enter",
-      "selected": "Do not risk your life — leave this place",
-      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor"
+      "selected": "Do not risk losing the money — stay",
+      "redirect": "doctor_day1_evening_bedroom_drunk_stay"
     },
     {
-      "menu": "doctor_day1_evening_bedroom_drunk_leave_manor",
-      "selected": "I should stay awake to be safe",
-      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor_awake"
+      "menu": "doctor_day1_evening_map_menu",
+      "selected": "Go to sleep",
+      "redirect": "generic_cancel"
     }
   ]
 }

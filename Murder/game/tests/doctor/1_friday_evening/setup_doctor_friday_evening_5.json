@@ -1,12 +1,32 @@
 {
   "start_label": "doctor_day1_evening",
-  "unlocked_threads": ["shot_by_drunk"],
+  "unlocked_threads": [],
   "saved_variables": {},
   "choices": [
     {
       "menu": "broken_generic_menu_doctor",
-      "selected": "You don't have anymore questions for him",
-      "redirect": "generic_cancel"
+      "selected": "What room are you in?",
+      "redirect": "broken_generic_room"
+    },
+    {
+      "menu": "broken_generic_room_offense",
+      "selected": "I saw a Shakespeare's play about him",
+      "redirect": "broken_generic_room_offended"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "How old are you?",
+      "redirect": "broken_generic_age"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "What do you think of the other guests?",
+      "redirect": "broken_generic_other_guests_friday"
+    },
+    {
+      "menu": "broken_generic_other_guests_friday_offense",
+      "selected": "I can think of another reason she was uneasy",
+      "redirect": "broken_generic_other_guests_friday_offended"
     },
     {
       "menu": "doctor_day1_evening",
@@ -20,23 +40,8 @@
     },
     {
       "menu": "doctor_day1_evening_map_menu",
-      "selected": "George IV Bedroom",
-      "redirect": "doctor_day1_evening_bedroom_drunk"
-    },
-    {
-      "menu": "doctor_day1_evening_bedroom_drunk",
-      "selected": "Follow your intuition, they exist for a reason{intuition}",
-      "redirect": "doctor_day1_evening_bedroom_drunk_enter"
-    },
-    {
-      "menu": "doctor_day1_evening_bedroom_drunk_enter",
-      "selected": "Do not risk your life — leave this place",
-      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor"
-    },
-    {
-      "menu": "doctor_day1_evening_bedroom_drunk_leave_manor",
-      "selected": "I know something that will help me sleep",
-      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor_sleep"
+      "selected": "Go to sleep",
+      "redirect": "generic_cancel"
     }
   ]
 }

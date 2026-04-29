@@ -637,7 +637,7 @@ label captain_day2_evening_confront_host:
 
     play sound door_knock
 
-    $ play_music('danger', 2s)
+    $ play_music('danger', 2)
 
     """
     A measured rap upon the door of the tea room.

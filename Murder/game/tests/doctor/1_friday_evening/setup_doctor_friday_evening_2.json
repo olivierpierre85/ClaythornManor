@@ -10,16 +10,6 @@
     },
     {
       "menu": "broken_generic_menu_doctor",
-      "selected": "Tell me more about yourself.",
-      "redirect": "broken_generic_background"
-    },
-    {
-      "menu": "broken_generic_background_offense",
-      "selected": "That's a very noble profession",
-      "redirect": "broken_generic_background_not_offended"
-    },
-    {
-      "menu": "broken_generic_menu_doctor",
       "selected": "Why were you invited here?",
       "redirect": "broken_generic_heroic_act"
     },
@@ -39,73 +29,8 @@
       "redirect": "broken_generic_manor_not_offended"
     },
     {
-      "menu": "broken_generic_menu_doctor",
-      "selected": "What room are you in?",
-      "redirect": "broken_generic_room"
-    },
-    {
-      "menu": "broken_generic_room_offense",
-      "selected": "Me neither",
-      "redirect": "generic_cancel"
-    },
-    {
-      "menu": "broken_generic_menu_doctor",
-      "selected": "What do you think of the other guests?",
-      "redirect": "broken_generic_other_guests_friday"
-    },
-    {
-      "menu": "broken_generic_other_guests_friday_offense",
-      "selected": "Yes, it must be that",
-      "redirect": "broken_generic_other_guests_friday_not_offended"
-    },
-    {
-      "menu": "broken_generic_menu_doctor",
-      "selected": "You don't have anymore questions for him",
-      "redirect": "generic_cancel"
-    },
-    {
       "menu": "doctor_day1_evening",
-      "selected": "Talk to Ted Harring",
-      "redirect": "doctor_day1_dinner_lad"
-    },
-    {
-      "menu": "lad_generic_menu_doctor",
-      "selected": "Tell me more about yourself.",
-      "redirect": "lad_generic_background_doctor"
-    },
-    {
-      "menu": "lad_generic_background_doctor",
-      "selected": "No, let us just leave it at that",
-      "redirect": "generic_cancel"
-    },
-    {
-      "menu": "lad_generic_menu_doctor",
-      "selected": "Why were you invited here?",
-      "redirect": "lad_generic_heroic_act_doctor"
-    },
-    {
-      "menu": "lad_generic_menu_doctor",
-      "selected": "What do you think of this place?",
-      "redirect": "lad_generic_manor"
-    },
-    {
-      "menu": "lad_generic_menu_doctor",
-      "selected": "How old are you?",
-      "redirect": "lad_generic_age"
-    },
-    {
-      "menu": "lad_generic_menu_doctor",
-      "selected": "What room are you in?",
-      "redirect": "lad_generic_room_friday"
-    },
-    {
-      "menu": "lad_generic_menu_doctor",
-      "selected": "What do you think of the other guests?",
-      "redirect": "lad_generic_other_guests_friday_dinner"
-    },
-    {
-      "menu": "lad_generic_menu_doctor",
-      "selected": "You don't have anymore questions for him",
+      "selected": "Just keep to yourself",
       "redirect": "generic_cancel"
     },
     {
@@ -120,8 +45,8 @@
     },
     {
       "menu": "doctor_has_try_sneaking_downstairs",
-      "selected": "Try flirting with him",
-      "redirect": "doctor_downstairs_flirt"
+      "selected": "No, he clearly won't change his mind",
+      "redirect": "doctor_downstairs_apologize"
     },
     {
       "menu": "doctor_day1_evening_map_menu",
@@ -130,17 +55,7 @@
     },
     {
       "menu": "doctor_library_default",
-      "selected": "Take \"Confessions of an English Opium-Eater\" by Thomas De Quincey",
-      "redirect": "doctor_day1_evening_library_book_opium"
-    },
-    {
-      "menu": "doctor_day1_evening_map_menu",
-      "selected": "Meet the others in the billiard room",
-      "redirect": "doctor_day1_evening_billiard_room"
-    },
-    {
-      "menu": "lad_generic_menu_doctor",
-      "selected": "You don't have anymore questions for him",
+      "selected": "On second thought, I'd better not take anything",
       "redirect": "generic_cancel"
     },
     {

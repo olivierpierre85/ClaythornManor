@@ -35,8 +35,8 @@
     },
     {
       "menu": "doctor_day1_evening_bedroom_drunk_leave_manor",
-      "selected": "I should stay awake to be safe",
-      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor_awake"
+      "selected": "I know something that will help me sleep",
+      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor_sleep"
     }
   ]
 }

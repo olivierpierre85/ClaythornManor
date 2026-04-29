@@ -5,6 +5,11 @@
   "choices": [
     {
       "menu": "broken_generic_menu_doctor",
+      "selected": "What do you think of this weather?",
+      "redirect": "broken_generic_weather_friday"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
       "selected": "Tell me more about yourself.",
       "redirect": "broken_generic_background"
     },
@@ -12,6 +17,26 @@
       "menu": "broken_generic_background_offense",
       "selected": "That's a very noble profession",
       "redirect": "broken_generic_background_not_offended"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "Why were you invited here?",
+      "redirect": "broken_generic_heroic_act"
+    },
+    {
+      "menu": "broken_generic_heroic_act_offended",
+      "selected": "Nod, but don't engage",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "What do you think of this place?",
+      "redirect": "broken_generic_manor"
+    },
+    {
+      "menu": "broken_generic_manor_offense",
+      "selected": "The war didn't change much for me",
+      "redirect": "broken_generic_manor_not_offended"
     },
     {
       "menu": "broken_generic_menu_doctor",
