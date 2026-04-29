@@ -95,7 +95,7 @@ An out-of-work actress, she stole the job that the Psychic wanted some years ago
 She is hired for a very specific, and theoretically lucrative, job (she received a decent advance to convince her). She is supposed to hire the rest of the staff to organise the weekend.
 
 ### The Staff
-- **The Butler**: In the Butler's Room, you find a letter: "Looking for actors and actresses for an immersive theatre performance. Spend..."
+- **The Butler**: The strongman of the team. He is an hired hand, not an actor like the others. He was promised money to make sure the weekend is going well, and maybe kill everyone. The psychic knows the key and location of Claythorn Manor, having work there as a maid, she offers some of her money + everything he will find at the manor. (ALTERNATIVE: HE is in love with the psychic. Less believable.)
 - **The Footman/Driver (Andrew)**: He is partly Belgian but tries to hide it because it does not match his backstory. He wanted to stay but could not marry for obvious reasons. He became a master actor to hide his identity.
 - **The Maid/Cook**: (Undefined)
 

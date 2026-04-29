@@ -29,7 +29,7 @@ label captain_day2_evening:
 
     call black_screen_transition("Sushil Sinha", chapters_names[current_chapter])
 
-    $ change_room('entrance_hall', irisout)
+    $ change_room("manor_garden")
 
     $ play_music('sad', 2)
 
@@ -61,6 +61,8 @@ label captain_day2_evening:
         But as I reach the house, I am still not sure what to do.
         """
 
+    $ change_room('entrance_hall', irisout)
+
     """
     As we carry him through the entrance hall, I hear footsteps on the stair.
 
@@ -78,7 +80,7 @@ label captain_day2_evening:
 
     Mr Harring volunteers his help without being asked.
 
-    so we carry the doctor up the stair and lay him upon his bed.
+    So we carry the doctor up the stair and lay him upon his bed.
     """
 
     $ change_room("bedroom_doctor")
@@ -371,6 +373,14 @@ label captain_day2_dinner_silence:
 # --------------------------------------------
 label captain_day2_evening_normal_escort:
 
+    captain """
+    Mister Manning, are you ready to go to your room?
+    """
+
+    drunk """
+    Well - yes, of course.
+    """
+
     call common_day2_evening_samuel_manning_discussion_part_3
 
     $ change_room("bedrooms_hallway", dissolve)
@@ -390,8 +400,6 @@ label captain_day2_evening_normal_escort:
     pause 0.5
 
     """
-    For good measure, I try the handle twice. It holds.
-
     He will trouble no one for the remainder of the evening.
 
     I weigh the key in my palm.
@@ -436,8 +444,6 @@ label captain_day2_evening_confront_host:
     """
 
     captain """
-    A moment, if you would.
-
     Would you be so good as to escort Mr Manning to his room and lock the door behind him?
 
     See to it that he is not allowed out under any circumstance.
@@ -524,19 +530,11 @@ label captain_day2_evening_confront_host:
     """
 
     captain """
-    We could review them all in detail, but why not begin with the simplest of them, my lady.
+    We could review them all in detail, of course.
+    
+    But why not begin with the simplest of them, my lady.
 
     What is your title?
-
-    A lady cannot have forgotten the title she was raised under.
-
-    Her father would have had it spoken in her presence a hundred times before she was ten.
-
-    Letters would have come addressed to it. Servants would have addressed her by it.
-
-    She would have heard it pronounced when she was presented at court.
-
-    What is yours?
     """
 
     host """
@@ -547,6 +545,16 @@ label captain_day2_evening_confront_host:
     That is not what I have seen. There is no 'Claythorn' title. That is meant to be your family name.
 
     What is your title?
+    
+    Surely you have not forgotten the title you were raised under.
+
+    Your father would have say it aloud in your presence a hundred times.
+
+    Letters would have come addressed to it.
+
+    You must have heard it pronounced when you were presented at court.
+
+    What is it?
     """
 
     """
@@ -565,30 +573,30 @@ label captain_day2_evening_confront_host:
     There is no answer.
 
     Whatever air of authority she has worn this weekend leaves her by inches.
+
+    Instead, her calm composure changes to something else.
+
+    Fear.
     """
 
-    host """
+    host -scared """
     Very well, Captain.
 
     You are right.
 
     I am not Lady Claythorn.
-
-    I do not know that there is one.
     """
 
     captain """
     Who are you then?
     """
 
-    """
+    host """
     An actress.
     
-    I was hired for the part.
+    I was hired for being here.
 
-    I was given a script of sorts, and the run of the house, and a quite extraordinary fee.
-
-    That is the whole of what I know.
+    I was given a script of sorts, and the run of the house, and a fee.
     """
 
     nurse """
@@ -619,6 +627,8 @@ label captain_day2_evening_confront_host:
     I think they know less than I do, if anything at all.
 
     Except for...
+
+    Except the...
     """
 
     captain """
@@ -628,7 +638,7 @@ label captain_day2_evening_confront_host:
     host """
     Yes.
 
-    He answers to the gentleman directly.
+    He answers to whoever is behind this directly.
 
     He gives the orders. He chooses what we are told and what we are not.
 
@@ -678,10 +688,10 @@ label captain_day2_evening_confront_host:
     """
     He receives this in silence.
 
-    A man weighing, very rapidly, a number of unpleasant arithmetics.
+    A man weighing, very rapidly, a number of unpleasant choices.
     """
 
-    butler """
+    butler -angry """
     Then we have a difficulty.
 
     Captain, I shall not insult any of us with theatre.
@@ -764,19 +774,23 @@ label captain_day2_evening_confront_host:
     host """
     He is.
 
-    There was never any money. From what was explained to me, all of this was meant to be a very elaborate prank.
+    There was never any money. From what was explained to me, all of this was meant to attract you all here for the week-end.
 
     But I have no notion of the reasons behind it.
     """
 
     butler """
-    Neither have I.
+    Enough talking!
 
-    Now, enough talk. You are all going to stay in your rooms.
+    Here is what is going to happen now.
+    
+    You will all go to your rooms, give me your key as I close the door behind you.
 
     You will have to do without supper, but I daresay it will not kill you.
 
-    You shall be free to leave tomorrow.
+    You shall be free to leave tomorrow. 
+
+    The police will come and get you.
     """
 
     captain """
@@ -805,6 +819,12 @@ label captain_day2_evening_confront_host:
     This is for my own protection, I assure you.
     """
 
+    """
+    He looks very sure of him, holding the gun with a firm hand.
+
+    Whatever this man was before he was a butler, he was no stranger to a revolver.
+    """
+
     $ time_left = 1
     call run_menu(
         TimedMenu("captain_day2_evening_menu_butler_offer", [
@@ -819,13 +839,9 @@ label captain_day2_evening_butler_offer_confine:
     """
     A revolver is a poor argument, but an argument all the same.
 
-    The butler holds it as a man holds a tool he has held a great many times before.
+    And it is clear to me this man knows how to use one.
 
-    The wrist is locked. The trigger finger lies flat along the guard, in the manner the regulars are taught.
-
-    Whatever this man was before he was a butler, he carried a piece in earnest. A footpad, perhaps, or worse. There is a quietness to him that I have seen, once or twice, in men who came up through a rougher apprenticeship than the army.
-
-    There is no profit in three of us bleeding into the carpet for the sake of a point well made.
+    I can already see myself bleeding into the carpet if I attempt anything.
     """
 
     captain """
@@ -843,7 +859,7 @@ label captain_day2_evening_butler_offer_confine:
     """
 
     """
-    He gestures with the muzzle, as polite as a steward directing his guests in to dinner, towards the door.
+    He gestures with the muzzle, as polite as a steward directing his guests into dinner, towards the door.
 
     Lady Claythorn rises unsteadily. Miss Marsh offers her an arm. Miss Baxter follows in silence.
 
@@ -914,15 +930,11 @@ label captain_day2_evening_butler_offer_confine:
 label captain_day2_evening_butler_offer_attack:
 
     """
-    The wrist is locked. The trigger finger lies flat along the guard.
-
-    Whatever this man was before he was a butler, he was no stranger to a revolver.
-
-    The nurse is silent. Miss Baxter sits as though carved from her chair.
+    Miss Marsh is silent. Miss Baxter looks terrorized.
 
     Whatever is to be done here, I must do alone. 
     
-    And I will not stand quietly while a man marches my to an unknown fate.
+    And I will not follow quietly a man to an unknown fate.
     """
 
     # TODO add here a reflection on it might be the first he is in combat situation,  a redemption of sorts

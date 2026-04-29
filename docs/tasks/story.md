@@ -110,7 +110,7 @@ THE OUTside shed will show nothing of interest for captain. But the Broken will 
 - [ ] Servant uniform: Only one who can wear the footman livery in the servants stairs
 - [ ] When broken learns his whisky is poisoned, he doesn’t offer one to Ted harring
 - [ ] Explain the thing with the flask (I forgot my flask while distracted by captain)
-- [ ] THE **butler will kill him**, by putting poison in his flasks while he is distracted by captain
+- [ ] THE **butler will kill him**, by putting poison in his flasks while he is distracted by captain YES he is an accomplice
 
 ### Ideas to think over (optional)
 
@@ -121,6 +121,7 @@ THE OUTside shed will show nothing of interest for captain. But the Broken will 
 
 ### Important
 
+- If she look for treasure on the last day, she will die, but also she won't find the jewlery. The butler has taken it all with him before leaving
 
 ### Ideas to think over (optional)
 

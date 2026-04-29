@@ -141,9 +141,9 @@ label common_day2_evening_entrance_dialog:
 label common_day2_evening_bedroom_doctor_dialogue:
 
     captain """
-    It's the best we can do at the moment.
+    It is the best we can do at the moment.
 
-    We shouldn't linger here.
+    We should not linger here.
 
     I want to keep an eye on Samuel Manning.
     """
