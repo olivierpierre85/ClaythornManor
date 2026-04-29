@@ -46,9 +46,7 @@ label captain_day2_evening:
         """
         Throughout the walk, something keeps nagging at me.
 
-        I now have a long list of things that do not sit well with our host.
-
-        Her name that is not her title, no portrait of her in the house, her cavalier eating manners.
+        I already had a long list of things that do not sit well with our host.
 
         And I have just witnessed that she is no great hunter either.
 
@@ -79,24 +77,24 @@ label captain_day2_evening:
     It appears there is not much to do but wait. In the meantime, I propose moving Doctor Baldwin to his room.
 
     Mr Harring volunteers his help without being asked.
+
+    so we carry the doctor up the stair and lay him upon his bed.
     """
 
     $ change_room("bedroom_doctor")
 
-    # """
-    # Mr Harring and I carry the doctor up the stair and lay him upon his bed.
+    """
+    I draw a blanket over him to the shoulders, as one would for a man asleep.
 
-    # I draw a blanket over him to the shoulders, as one would for a man asleep.
+    The boy stays beside me, drained of colour.
 
-    # The boy stays beside me, drained of colour.
-
-    # He has seen enough today to last him a long time.
-    # """
+    He has seen enough today to last him a long time.
+    """
 
     call common_day2_evening_bedroom_doctor_dialogue
 
     """
-    I notice the blood Mr Harring has on him. Thankfully, my own jacket is untouched.
+    I point at the blood Mr Harring has on him. Thankfully, my own jacket is untouched.
 
     He withdraws to his room to change, and I return to the others.
     """
@@ -114,7 +112,7 @@ label captain_day2_evening:
     """
     I believe everyone assumes I should take him myself.
 
-    After all, I represent the authority here.
+    After all, I represent the closest thing to a form of authority here.
     """
 
     if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
@@ -213,7 +211,158 @@ label captain_day2_evening:
     As it is, I take note of her composure, and say nothing of it aloud.
     """
 
+    """
+    The food is served shortly after, but most of us merely push it about our plates.
+
+    Miss Marsh, in her new place at the hostess's elbow, picks at her meal without raising her eyes.
+
+    Mr Harring keeps his head bent over his plate and answers nothing that is not put directly to him.
+
+    Miss Baxter has scarcely touched a thing.
+
+    She has not said a dozen words since we sat down.
+    """
+
+    $ time_left = 1
+    call run_menu(TimedMenu("captain_day2_evening_menu_dinner", [
+        TimedMenuChoice("Speak to Miss Baxter", 'captain_day2_dinner_psychic', early_exit=True),
+        TimedMenuChoice("Say nothing, eat in silence", 'captain_day2_dinner_silence', early_exit=True),
+    ], image_right = "psychic"))
+
+    call change_time(21, 00)
+
+    """
+    The dinner draws to a close in much the same hush in which it began.
+
+    The butler sees the plates cleared with the same patient courtesy he has shown all weekend.
+
+    Lady Claythorn rises and bids us each a measured good-night.
+
+    Before she withdraws, she reminds us that drinks are laid out in the billiard room, as they were yesterday.
+
+    A curious thing after the day we have had.
+
+    The other guests rise from the table without ceremony.
+
+    I linger over the last of my wine and turn the invitation over in my head.
+
+    The billiard room is no place a careful man would go tonight.
+
+    Two of our number lie dead, a third sits locked above stairs, and someone under this roof has had a hand in the arrangement of all of it.
+
+    A glass passed across a green baize table is no harder to spoil than one laid down at dinner.
+
+    And yet.
+
+    A man who fears poison in the house does not stand quietly amongst the bottles.
+
+    A woman who fears for her life does not call upon her hostess for a brandy.
+
+    Whoever takes the invitation tonight will, by that very act, be telling me something.
+
+    Either they have nothing to fear, or they wish very much to be seen as having nothing to fear.
+
+    In either case, that is information I do not now possess.
+
+    And there is precious little I can sift from these walls if I retire and lock my door against them.
+
+    Very well.
+
+    The billiard room can wait a little while. There are corners of this house I have so far had no proper reason to visit — and tonight, with the butler's key in my pocket, I find I have every reason.
+    """
+
+    $ play_music('mysterious', 2)
+
+    $ time_left = 120
+
+    call run_menu(captain_details.saved_variables["day2_evening_map_menu"])
+
+    call change_time(23, 00)
+
+    $ stop_music()
+
+    $ change_room("bedroom_captain", dissolve)
+
+    """
+    I close the door of my room behind me and turn the key in the lock.
+
+    Whatever I have learnt tonight, I shall need a clear head to make any use of it in the morning.
+    """
+
     jump work_in_progress
+
+
+# ------------------------------------
+#   DINNER SCENES
+# ------------------------------------
+label captain_day2_dinner_psychic:
+
+    captain """
+    Miss Baxter.
+
+    Forgive me, but I find I cannot eat in silence whilst you sit beside me untouched.
+    """
+
+    psychic """
+    You are very kind, Captain.
+
+    But I am poor company this evening. I do not believe a plate of food will mend that.
+    """
+
+    captain """
+    None of us is much use tonight.
+
+    Doctor Baldwin was a good man.
+
+    He met an end he had done nothing to deserve.
+    """
+
+    psychic """
+    He was the one soul under this roof who spoke to me as though I had a mind worth answering.
+
+    I shall not soon find another like him.
+    """
+
+    """
+    She presses a handkerchief to her cheek and turns her face a fraction from mine.
+
+    Whatever else she may be, her grief is the only honest thing I have seen at this table tonight.
+    """
+
+    captain """
+    Tomorrow the police will be here, and we shall all of us be away from this place by the afternoon.
+
+    Until then, if there is any service I can render you, you have only to ask.
+    """
+
+    psychic """
+    That is most generous of you, Captain.
+
+    For now, I should like only to be left to my own thoughts for a little while.
+    """
+
+    captain """
+    Of course.
+    """
+
+    """
+    I turn back to my plate and let her be.
+
+    There is a kindness in not pressing a woman who has just lost the one ally she had under this roof.
+    """
+
+    return
+
+
+label captain_day2_dinner_silence:
+
+    """
+    I cannot think of any comfort I might offer Miss Baxter.
+
+    So I keep my counsel and attend to my plate.
+    """
+
+    return
 
 
 # --------------------------------------------
@@ -639,9 +788,9 @@ label captain_day2_evening_confront_host:
     """
     He swiftly produces a revolver and points it directly at me.
 
-    I came armed myself. But the pistol is in the pocket of my other jacket.
+    I came armed myself. But the pistol is in the pocket of my other jacket, in my bedroom.
 
-    I am, at present, defenceless.
+    At present, I am defenceless.
     """
 
     nurse """

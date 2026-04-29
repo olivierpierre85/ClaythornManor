@@ -4,6 +4,8 @@ label init_captain:
 
     call captain_day1_evening_map_menu
 
+    call captain_day2_evening_map_menu
+
     # call captain_config_menu
 
     python:
@@ -12,10 +14,21 @@ label init_captain:
         captain_init_variables = {
             # MAP Menus
             "day1_evening_map_menu" : captain_day1_evening_map_menu,
+            "day2_evening_map_menu" : captain_day2_evening_map_menu,
 
             # Evening day 1
             "day1_evening_billiard_room_visited" : False,
             "day1_evening_bedroom_refusals" : 0,
+
+            # Evening day 2
+            "day2_evening_billiard_room_visited" : False,
+            "day2_evening_attic_visited" : False,
+            "day2_evening_garden_visited" : False,
+            "day2_evening_shed_visited" : False,
+            "visited_attic_storage" : False,
+            "visited_attic_males_room" : False,
+            "visited_attic_females_room" : False,
+            "visited_attic_butler_room" : False,
         }
 
         captain_important_choices = CharacterImportantChoiceList([
@@ -55,6 +68,27 @@ label init_captain:
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
+            CharacterInformation(5, "captain_actor_letter",
+                "You found a rejection letter from a London theatre, hidden amongst the footman's things",
+                content_negative="You didn't search the footman's room",
+                image_file="lord", # TODO placeholder
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(6, "captain_actress_photo",
+                "You found a photograph of the maid in stage dress",
+                content_negative="You didn't search the maids' room",
+                image_file="lord", # TODO placeholder
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(7, "captain_jerrycan_in_shed",
+                "You found a jerrycan of gasoline in the locked garden shed",
+                content_negative="You didn't get into the garden shed",
+                image_file="lord", # TODO placeholder
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
         ])
 
         captain_objects = CharacterObjectList([
@@ -65,6 +99,14 @@ label init_captain:
                 image_file="butler_key",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon', 'end'],
+            ),
+            CharacterInformation(
+                2, "torch",
+                "You took a torch from the attic storage",
+                content_negative="You don't have a torch",
+                image_file="lord", # TODO placeholder
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
         ])
 

@@ -228,9 +228,9 @@ label common_day2_evening_samuel_manning_discussion_part_1:
 
 label common_day2_evening_samuel_manning_discussion_part_2:
     
-    captain """
-    Mr Harring needed to change, he'll join us shortly.
-    """
+    # captain """
+    # Mr Harring needed to change, he'll join us shortly.
+    # """
 
     host """
     Ah, Captain! It's good you're here.
