@@ -575,10 +575,16 @@ label captain_day2_evening_confront_host:
     I am not Lady Claythorn.
 
     I do not know that there is one.
+    """
 
-    I was hired for the part. Through a firm of solicitors in London.
+    captain """
+    Who are you then?
+    """
 
-    I never met the gentleman behind the arrangement.
+    """
+    An actress.
+    
+    I was hired for the part.
 
     I was given a script of sorts, and the run of the house, and a quite extraordinary fee.
 
@@ -590,7 +596,7 @@ label captain_day2_evening_confront_host:
     """
 
     host """
-    Only my part of it.
+    Only some of it.
 
     I swear to you, what has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
 
@@ -601,18 +607,18 @@ label captain_day2_evening_confront_host:
 
     captain """
     Frightened of whom, madam?
-
-    Who is here with you?
     """
 
     host """
+    I don't know, I don't understand most of what is happening here.
+
     The staff. They are not staff.
 
-    The maids, the footman, the cook. Players, all of them, hired the same way I was.
+    They were hired the same way I was.
 
-    They know less than I do, if anything at all.
+    I think they know less than I do, if anything at all.
 
-    All but one.
+    Except for...
     """
 
     captain """
@@ -630,6 +636,8 @@ label captain_day2_evening_confront_host:
     """
 
     play sound door_knock
+
+    $ play_music('danger', 2s)
 
     """
     A measured rap upon the door of the tea room.
@@ -657,8 +665,6 @@ label captain_day2_evening_confront_host:
     Madam.
 
     What is happening here?
-
-    What have you told them?
     """
 
     captain """
@@ -680,8 +686,6 @@ label captain_day2_evening_confront_host:
 
     Captain, I shall not insult any of us with theatre.
 
-    I am not the master of this house.
-
     I am no more the butler here than the lady is its mistress.
     """
 
@@ -692,7 +696,7 @@ label captain_day2_evening_confront_host:
     """
 
     butler """
-    I am afraid I know no more of it than Lady Claythorn has told you.
+    I am afraid I know no more of it than whatever Lady Claythorn might have told you.
     """
 
     host """
@@ -706,7 +710,7 @@ label captain_day2_evening_confront_host:
     """
 
     captain """
-    What things?
+    Do what?
 
     What were you meant to do to us?
 
@@ -730,8 +734,6 @@ label captain_day2_evening_confront_host:
     captain """
     Just what?
     """
-
-    $ play_music('danger', 2, fadein_val=1)
 
     butler """
     I cannot say more than that.
@@ -914,14 +916,16 @@ label captain_day2_evening_butler_offer_attack:
     """
     The wrist is locked. The trigger finger lies flat along the guard.
 
-    Whatever this man was before he was a butler, he was no stranger to a revolver. A footpad's apprenticeship, perhaps, or some rougher schooling than that. The regulars do not stand quite so still.
+    Whatever this man was before he was a butler, he was no stranger to a revolver.
 
-    A clever man would mark that, and stand quite still himself.
+    The nurse is silent. Miss Baxter sits as though carved from her chair.
 
-    But the lady is undone. The nurse is silent. Miss Baxter sits as though carved from her chair.
-
-    Whatever is to be done here, I must do alone. And I will not stand quietly while a man with a pistol marches three women to their bedrooms.
+    Whatever is to be done here, I must do alone. 
+    
+    And I will not stand quietly while a man marches my to an unknown fate.
     """
+
+    # TODO add here a reflection on it might be the first he is in combat situation,  a redemption of sorts
 
     """
     I lunge for his wrist.
