@@ -1,0 +1,42 @@
+{
+  "start_label": "doctor_day1_evening",
+  "unlocked_threads": ["shot_by_drunk"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "doctor_day1_evening",
+      "selected": "Just keep to yourself",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "doctor_day1_evening_3",
+      "selected": "Let's go down and meet the others",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "doctor_day1_evening_map_menu",
+      "selected": "George IV Bedroom",
+      "redirect": "doctor_day1_evening_bedroom_drunk"
+    },
+    {
+      "menu": "doctor_day1_evening_bedroom_drunk",
+      "selected": "Follow your intuition, they exist for a reason{intuition}",
+      "redirect": "doctor_day1_evening_bedroom_drunk_enter"
+    },
+    {
+      "menu": "doctor_day1_evening_bedroom_drunk_enter",
+      "selected": "Do not risk your life — leave this place",
+      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor"
+    },
+    {
+      "menu": "doctor_day1_evening_bedroom_drunk_leave_manor",
+      "selected": "I know something that will help me sleep",
+      "redirect": "doctor_day1_evening_bedroom_drunk_leave_manor_sleep"
+    }
+  ]
+}

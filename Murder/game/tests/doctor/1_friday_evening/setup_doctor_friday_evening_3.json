@@ -1,0 +1,52 @@
+{
+  "start_label": "doctor_day1_evening",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "Tell me more about yourself.",
+      "redirect": "broken_generic_background"
+    },
+    {
+      "menu": "broken_generic_background_offense",
+      "selected": "Did you have to change profession because of the war?",
+      "redirect": "broken_generic_background_offended_1"
+    },
+    {
+      "menu": "broken_generic_background_offended_1",
+      "selected": "Wait? Really?",
+      "redirect": "broken_generic_background_offended_2"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "What do you think of this place?",
+      "redirect": "broken_generic_manor"
+    },
+    {
+      "menu": "broken_generic_manor_offense",
+      "selected": "Of course, the war changed everyone perspective",
+      "redirect": "broken_generic_manor_offended"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "Why were you invited here?",
+      "redirect": "broken_generic_heroic_act"
+    },
+    {
+      "menu": "broken_generic_heroic_act_offended",
+      "selected": "What do you mean?",
+      "redirect": "broken_generic_heroic_act_offended"
+    },
+    {
+      "menu": "doctor_day1_evening",
+      "selected": "Just keep to yourself",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "doctor_day1_evening_3",
+      "selected": "Stay here—this might be more... enjoyable",
+      "redirect": "doctor_laudanum_death"
+    }
+  ]
+}
