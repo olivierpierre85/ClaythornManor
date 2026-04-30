@@ -58,9 +58,7 @@ label captain_ending_burned:
 
     The manor burnt to its foundations before the dawn.
 
-    The fallen tree across the road was found, in due course, to have been cut.
-
-    Of the gentleman behind it all, no trace was ever recovered.
+    With you in it.
     """
 
     jump ending_generic
@@ -74,13 +72,19 @@ label captain_ending_shot_butler:
     call death_screen_transition
 
     """
-    You read the man rightly. A wrist that still, on a hand that holds a revolver, is not the wrist of any honest butler.
-
+    You read your opponent rightly. 
+    
+    A dangerous man to engage, not an ordinary butler.
+    
     And you went for him all the same.
 
-    There is a courage in that, of a sort, and there is a folly in it of another sort, and the bullet does not greatly distinguish between them.
+    Years of staying on the sidelines of battles made you want to try yourself at a real one.
 
-    He fired only when you left him no other choice. That is, in its way, a courtesy.
+    There is a courage in that, but also folly.
+    
+    And the bullet does not greatly distinguish between them.
+
+    Your first battle will also be your last one.
     """
 
     jump ending_generic
