@@ -1,357 +1,9 @@
-Generated:                2026-04-29 08:17:35
+Generated:                2026-04-30 11:09:56
 Scope:                    character=doctor
 Dialogue entries scanned: 1842
-Test lines collected:     69
-Covered:                  35
-Missing:                  1807
-
-  game/scripts/doctor/Day 1/2_Evening/0_map_choices.rpy  (72 missing)
-    [doctor_downstairs_day1_9342f037] I ought to have a look downstairs. Might be something of interest there.
-    [doctor_downstairs_day1_bc9313d9] Good evening, sir. I'm afraid guests aren't permitted beyond this point.
-    [doctor_downstairs_day1_3f285e1e] I offer him my warmest smile.
-    [doctor_downstairs_day1_6827d1c2] I do apologise. I'm only having a quick look. Could you make an exception?
-    [doctor_downstairs_day1_74fe5b9f] I promise I won't be long.
-    [doctor_downstairs_day1_5c30c593] If it were up to me, I'd gladly say yes.
-    [doctor_downstairs_day1_c0780646] But Lady Claythorn was quite clear with her instructions.
-    [doctor_downstairs_day1_ba6d9818] I'm sure you understand.
-    [doctor_downstairs_day1_c4e84946] Please don't take it personally.
-    [doctor_downstairs_day1_d5eef9fb] He says it with a warm smile of his own.
-    [doctor_downstairs_day1_db4e644a] His eyes say sorry, but there's something else there, too.
-    [doctor_downstairs_day1_3ab0530b] I wonder if...
-    [doctor_downstairs_flirt_5e35b606] That's a shame, but I quite understand. Orders are orders.
-    [doctor_downstairs_flirt_56e84a32] Still, I had rather hoped you might show me around.
-    [doctor_downstairs_flirt_aeaa4858] There are a few things I'd not mind discussing with you.
-    [doctor_downstairs_flirt_833422b7] I'm a bit tied up at the moment, sir.
-    [doctor_downstairs_flirt_cfaa7feb] But I could make time later, if you'd still care to talk.
-    [doctor_downstairs_flirt_7a5a9d1c] I'd like that very much.
-    [doctor_downstairs_flirt_99e530b3] Where shall we meet?
-    [doctor_downstairs_flirt_9300500a] Hard to say when I'll be free.
-    [doctor_downstairs_flirt_26f11820] But I could stop by your room once I've a moment—if you don't mind, that is.
-    [doctor_downstairs_flirt_7fb5cd4d] Well, that is rather forward.
-    [doctor_downstairs_flirt_59428c37] I glance about to be sure we're alone.
-    [doctor_downstairs_flirt_6ac1d039] We are.
-    [doctor_downstairs_flirt_bccc96d8] I let my gaze linger a moment longer than necessary.
-    [doctor_downstairs_flirt_df8e6040] Are you certain you can't come now?
-    [doctor_downstairs_flirt_0d79ff0a] No, truly I can't.
-    [doctor_downstairs_flirt_e87c2236] But I'll be done soon enough.
-    [doctor_downstairs_flirt_9d93e7cd] I'll see you later then, Doctor Baldwin.
-    [doctor_downstairs_flirt_051b9d15] Please—call me Daniel.
-    [doctor_downstairs_flirt_bc888356] Very well, Daniel. I'm Andrew.
-    [doctor_downstairs_flirt_d24a10cc] I'll see you later, Andrew.
-    [doctor_downstairs_apologize_eddf6947] Quite right.
-    [doctor_downstairs_apologize_860f2cee] I'll be off, then.
-    [doctor_downstairs_apologize_776ba773] Good evening.
-    [doctor_downstairs_apologize_3050204c] Good evening, sir.
-    [doctor_day1_evening_library_ed71b42e] That is a well-furnished library.
-    [doctor_day1_evening_library_56485fb4] It's been a while since I've seen that many books.
-    [doctor_day1_evening_library_fdd0f525] There is one already opened on a desk.
-    [doctor_day1_evening_library_bd3589c1] "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
-    [doctor_day1_evening_library_9aeff08f] That sounds tedious.
-    [doctor_day1_evening_library_fe27ecea] But maybe I can borrow something else to read later in my room?
-    [doctor_day1_evening_library_1846ca73] I'm sure our host won't mind.
-    [doctor_day1_evening_library_6aac250f] I looked around for a book that might be of interest, and found a couple of options.
-    [doctor_day1_evening_book_mystery_ea91edaf] That appears to be the most recent book they have.
-    [doctor_day1_evening_book_mystery_c4efed3c] A mystery novel.
-    [doctor_day1_evening_book_mystery_811c1a34] I don't know the author, but a quick look at her biography tells me she was a nurse during the war.
-    [doctor_day1_evening_book_mystery_ea6f4633] So I feel like I could relate to the her.
-    [doctor_day1_evening_library_book_opium_7f15897b] I have been meaning to read this for a long time.
-    [doctor_day1_evening_library_book_opium_0de46f29] Maybe now is the time.
-    [doctor_day1_evening_garden_2b3be8d1] From the great hall, I am ready to go and have a look outside.
-    [doctor_day1_evening_garden_6ea23b5b] But the weather has worsened, I do not think it is safe to go out tonight.
-    [doctor_day1_evening_bedroom_drunk_85ad116f] My knocking slightly opens the door.
-    [doctor_day1_evening_bedroom_drunk_b3fedafa] From the hallway, I can see part of the room.
-    [doctor_day1_evening_bedroom_drunk_8e8ed769] It is in a dreadful state.
-    [doctor_day1_evening_bedroom_drunk_2d53f05a] Should I take a peek?
-    [doctor_day1_evening_bedroom_drunk_24129003] I know and it's probably a bad idea and that I should close this door.
-    [doctor_day1_evening_bedroom_drunk_2fef76d8] But I've got an intrusive feeling that if don't enter, something bad will happen.
-    [doctor_day1_evening_bedroom_drunk_a42dfaa7] That is obviously silly, but...
-    [doctor_day1_evening_bedroom_drunk_not_enter_e45406f4] Why am I thinking, there is no reason for me to intrude.
-    [doctor_day1_evening_bedroom_drunk_not_enter_e850a37d] I close the door and leave.
-    [doctor_bedroom_psychic_evening_50c0def1] Yes? Who is it?
-    [doctor_bedroom_psychic_evening_7bc599c3] It's Doctor Baldwin.
-    [doctor_bedroom_psychic_evening_4ec3edd7] Yes, Doctor, what can I do for you?
-    [doctor_bedroom_psychic_evening_0929a2a6] I just wanted to have chat. Do you have time?
-    [doctor_bedroom_psychic_evening_89f8eb36] I'm afraid It's a bit too late for me.
-    [doctor_bedroom_psychic_evening_1735ef90] But we can speak again tomorrow.
-    [doctor_bedroom_psychic_evening_bff7f5c1] Of course, I am sorry.
-    [doctor_bedroom_stay_away_6e057ae7] Should I try to see what's inside?
-    [doctor_bedroom_stay_away_38fc20bf] No, of course not.
-    [doctor_bedroom_stay_away_57409b7e] Most people are downstairs now, but they could come back anytime.
-    [doctor_bedroom_stay_away_9f49faf7] Also, that's wildly inappropriate.
-
-  game/scripts/doctor/Day 1/2_Evening/1_main.rpy  (86 missing)
-    [doctor_day1_evening_f3253e0e] We all reach the hall together, leaving the driver to look after our luggage.
-    [doctor_day1_evening_ad269728] I quickly check my pocket watch.
-    [doctor_day1_evening_51eaa5d3] That would leave me at least one hour of solitude in my room.
-    [doctor_day1_evening_bc3013ba] That's perfect.
-    [doctor_day1_evening_16929909] If you don't have any more questions, please follow me upstairs.
-    [doctor_day1_evening_40d9bb75] The butler shows me to my room first.
-    [doctor_day1_evening_a8c12534] I quickly settle in and wait for five minutes for the driver to bring my bag back.
-    [doctor_day1_evening_aa6f4cda] Now I can finally relax.
-    [doctor_day1_evening_233deec9] Doctor Baldwin, the tea room has been set for drinks.
-    [doctor_day1_evening_729db108] You can come down if you are ready.
-    [doctor_day1_evening_a07ebd99] Very, very well.
-    [doctor_day1_evening_a112cca2] I will be there soon.
-    [doctor_day1_evening_42e5e9fe] Thank you.
-    [doctor_day1_evening_a034fd24] I am not sure how long I've been out.
-    [doctor_day1_evening_c6cc0453] It's better if I hurry downstairs so I do not appear suspicious.
-    [doctor_day1_evening_9b6e1c9d] Well, it looks like I am the first one.
-    [doctor_day1_evening_1ea35c60] There was no reason to rush.
-    [doctor_day1_evening_12387a26] Doctor Baldwin, would you like a glass of sherry?
-    [doctor_day1_evening_614aaf4f] Sure why not, thank you.
-    [doctor_day1_evening_f42d9549] As the butler hands me my drink, Thomas Moody enters the room.
-    [doctor_day1_evening_ee447919] Doctor Baldwin, I suppose we are the first ones.
-    [doctor_day1_evening_3eb09c83] It seems like it.
-    [doctor_day1_evening_e91fdf9c] Excuse me, I have something to do.
-    [doctor_day1_evening_cc34a9ce] He goes back to the bar and starts to talk to the butler, leaving me alone in a corner.
-    [doctor_day1_evening_c2caedf3] Well that will teach me.
-    [doctor_day1_evening_1199b348] After a while, Miss Marsh enters the room.
-    [doctor_day1_evening_ae6f7e09] She nods at me and heads to the bar.
-    [doctor_day1_evening_d7c05a7d] She is soon followed by an Indian man in an army uniform and an older gentleman.
-    [doctor_day1_evening_dce3a590] They must have just arrived from the station.
-    [doctor_day1_evening_f55e06ae] The older man goes directly to the tray with drinks.
-    [doctor_day1_evening_b698521f] He walks in an unsure fashion, almost bumping into the butler who swiftly avoids him.
-    [doctor_day1_evening_e5e9c7f5] The military man walks towards me.
-    [doctor_day1_evening_18c898d4] He proceeds to tell a tedious story about its time in the military.
-    [doctor_day1_evening_782b794b] I try to concentrate on what he is saying but I can't focus.
-    [doctor_day1_evening_08fe9016] So I just nod in agreement and wonder when I will be able to go quietly back to my room.
-    [doctor_day1_evening_d27dd73e] I am brutally awoken from my daydreaming by the dinner gong.
-    [doctor_day1_evening_69696cf9] I barely even notice what has happened over the past few hours.
-    [doctor_day1_evening_ceefd5b4] Everyone is heading towards the dining area, so I go with them.
-    [doctor_day1_evening_7277f054] My place is at the end of the table.
-    [doctor_day1_evening_0532f306] That is better because I don't feel like talking too much.
-    [doctor_day1_evening_8cb34c8c] Then, the host finally joins us.
-    [doctor_day1_evening_31a4e745] This speech is quickly followed by the first course.
-    [doctor_day1_evening_1817dba5] I look who I have on my side, it's a young man I didn't even notice before.
-    [doctor_day1_evening_b822247f] Finally, the dinner is over.
-    [doctor_day1_evening_2f2711fb] I barely listen to Lady Claythorn talking about meeting afterwards in the tea room, and I rush to my room.
-    [doctor_day1_evening_fbb13d0f] After I have performed the well-rehearsed ritual, I ponder whether I should go down or stay in my room.
-    [doctor_day1_evening_ee236820] All right, where should I go first?
-    [doctor_day1_evening_227d4b96] That is quite enough for one day.
-    [doctor_day1_evening_3438f3d6] It is late, time to go and relax.
-    [doctor_day1_evening_3b699467] So I walk back to my room.
-    [doctor_day1_evening_56783b23] I barely have time to settle in my room that I hear someone knocking.
-    [doctor_day1_evening_4f4bc3d2] Doctor Baldwin?
-    [doctor_day1_evening_867e06f5] I let him in without a word.
-    [doctor_day1_evening_5de54398] Afterwards, he prepares to leave.
-    [doctor_day1_evening_be5bdbf4] Are you certain you can't stay a bit longer?
-    [doctor_day1_evening_8ef44915] No, I really can't.
-    [doctor_day1_evening_08286695] Sadly, I have other cats to whip.
-    [doctor_day1_evening_7afba655] Wait, what?
-    [doctor_day1_evening_04466bff] I'll see you tomorrow then.
-    [doctor_day1_evening_3c003233] Yes... Of course.
-    [doctor_day1_evening_c44e02e5] Good night.
-    [doctor_day1_evening_8ca170b4] What did he say about cats?
-    [doctor_day1_evening_46dd88cc] That's odd.
-    [doctor_day1_evening_b19abd7d] I must have misunderstood.
-    [doctor_day1_evening_504a5d57] It is not too late yet, so I can read the book I took from the library before sleeping.
-    [doctor_day1_evening_e9e63884] "The Mysterious Affair at Styles"
-    [doctor_day1_evening_9cc39273] Let's see.
-    [doctor_day1_evening_923286b2] It is an interesting mystery book.
-    [doctor_day1_evening_05341976] I especially like how accurately the effect of the poison, the murder weapon, is described.
-    [doctor_day1_evening_b1ed04d1] You can really tell that the writer has medical training.
-    [doctor_day1_evening_dbcdc5ca] But I am tired of reading.
-    [doctor_day1_evening_b326cc88] I set the book aside and doze off.
-    [doctor_day1_evening_ecff9ba9] "Confessions of an English Opium-Eater"
-    [doctor_day1_evening_913bcfe8] I dreaded reading this for a long time.
-    [doctor_day1_evening_3f8a2a52] I am uneasy at first but very quickly I realise I won't be able to stop until the end.
-    [doctor_day1_evening_22036876] It must be very late now, but I think it was worth it.
-    [doctor_day1_evening_767f020e] I feel that something in me has changed forever.
-    [doctor_day1_evening_b6408962] Filled with a brand new resolution, I fall asleep easily.
-    [doctor_day1_evening_c49ee522] It is quiet now, but my mind is at ease.
-    [doctor_day1_evening_0498854f] I fall asleep easily.
-    [doctor_day1_evening_130615ee] Well, I do not have anything to do right now.
-    [doctor_day1_evening_780777f2] Even though I am tired, I have too much on my mind.
-    [doctor_day1_evening_f1e08972] I will not be able to close my eyes.
-    [doctor_day1_evening_244fec42] Luckily, I have something to help me relax.
-    [doctor_day1_dinner_lad_1614a257] Hello. I am doctor Daniel Baldwin.
-    [doctor_day1_dinner_lad_f812e049] Nice to meet you doctor, I am Ted Harring.
-
-  game/scripts/doctor/Day 1/2_Evening/2a_billiard_room.rpy  (15 missing)
-    [doctor_day1_evening_billiard_room_b51992ab] As I enter the room, I wonder why I've come here.
-    [doctor_day1_evening_billiard_room_d741958f] To talk to other people?
-    [doctor_day1_evening_billiard_room_b01a64dd] Right now, this feels too much for me.
-    [doctor_day1_evening_billiard_room_4824eab5] I check around the room and notice a chair that looks comfortable enough.
-    [doctor_day1_evening_billiard_room_219cb240] So I sit there and look at what's happening in the room.
-    [doctor_day1_evening_billiard_room_a0611b91] Samuel Manning is moving around in an unsure manner.
-    [doctor_day1_evening_billiard_room_d1387006] Most people are gathered around Captain Sinha, who is probably telling a war story.
-    [doctor_day1_evening_billiard_room_79cf9599] I see Ted Harring talking with the butler.
-    [doctor_day1_evening_billiard_room_402e0a0b] Then he looks over the room and catch me looking at him.
-    [doctor_day1_evening_billiard_room_c11dcc86] He smiles and comes towards me.
-    [doctor_day1_evening_billiard_room_f18c226a] Oh no, now I'll have to talk to him.
-    [doctor_day1_evening_billiard_room_34391f6c] Hello Doctor Baldwin.
-    [doctor_day1_evening_billiard_room_a4c1fb51] Mr Harring.
-    [doctor_day1_evening_billiard_room_044a587d] We don't have anything else to say to each other.
-    [doctor_day1_evening_billiard_room_0bbd9691] And I don't want to talk to anyone else tonight, so I stand up and leave the room.
-
-  game/scripts/doctor/Day 1/2_Evening/2b_laudanum.rpy  (12 missing)
-    [doctor_laudanum_death_c8d15f04] A flicker of doubt appears at the edge of my mind, maybe I have already had too many today.
-    [doctor_laudanum_death_f21bccef] I could try to resist, yet the stillness of this room is unbearable.
-    [doctor_laudanum_death_25df3d5a] Being alone with my thoughts always is.
-    [doctor_laudanum_death_4d9f465c] It feels as though I have no choice at all.
-    [doctor_laudanum_death_dcd1949b] So I prepare myself for the familiar ritual.
-    [doctor_laudanum_death_acdf0c32] It takes only a moment before everything is in place.
-    [doctor_laudanum_death_2ab42747] My hand trembles slightly as I raise the spoon to my lips.
-    [doctor_laudanum_death_a1a4c3f8] The bitter draught slides down my throat, and I wait for its sweet relaxing effect.
-    [doctor_laudanum_death_ce74679e] My pulse slows. The room tilts.
-    [doctor_laudanum_death_58154e0c] My eyelids grow heavy.
-    [doctor_laudanum_death_2a28e342] The voices that have tormented me all my life at last fall quiet.
-    [doctor_laudanum_death_46ff932b] All is silent now.
-
-  game/scripts/doctor/Day 1/2_Evening/2c_bedroom_drunk.rpy  (153 missing)
-    [doctor_day1_evening_bedroom_drunk_enter_60de6d91] I step into the room.
-    [doctor_day1_evening_bedroom_drunk_enter_77181000] It is a dreadful mess.
-    [doctor_day1_evening_bedroom_drunk_enter_14a54b32] The bottles of whisky, some already emptied, give me a fair idea whose room this is.
-    [doctor_day1_evening_bedroom_drunk_enter_d70720bb] There is no doubt that Samuel Manning sleeps here.
-    [doctor_day1_evening_bedroom_drunk_enter_98dba009] I glance around, uncertain what I am hoping to find, when I notice a letter upon the desk.
-    [doctor_day1_evening_bedroom_drunk_enter_1ae412fc] I take it up.
-    [doctor_day1_evening_bedroom_drunk_enter_40e7b517] The first part is written in a fine, elegant hand.
-    [doctor_day1_evening_bedroom_drunk_enter_6c3bd2cf] What on earth does this mean?
-    [doctor_day1_evening_bedroom_drunk_enter_b1d4a179] Who could have written such a thing?
-    [doctor_day1_evening_bedroom_drunk_enter_b85bfd66] Still, what troubles me most is the second part, barely legible, most likely added later by Samuel Manning ...
-    [doctor_day1_evening_bedroom_drunk_enter_0cdd58bb] My legs feel weak.
-    [doctor_day1_evening_bedroom_drunk_enter_f114d7b7] I sit on the edge of the bed, struggling to make sense of it all.
-    [doctor_day1_evening_bedroom_drunk_enter_a00db05e] I try to remember Samuel Manning, but I cannot say for certain that I ever treated his wife.
-    [doctor_day1_evening_bedroom_drunk_enter_cb66d162] That does not mean the charge is false.
-    [doctor_day1_evening_bedroom_drunk_enter_a8f25187] I know I have done similar things to a good many patients. Mrs Manning may well have been among them, and I...
-    [doctor_day1_evening_bedroom_drunk_enter_d94f9a90] One thing is certain though. Someone in this house means me harm.
-    [doctor_day1_evening_bedroom_drunk_enter_79a48df1] And they are trying to use Samuel Manning to hurt me.
-    [doctor_day1_evening_bedroom_drunk_enter_60aefb24] I say they, but it is plain enough who must have written this note.
-    [doctor_day1_evening_bedroom_drunk_enter_c3759046] Lady Claythorn invited me here. She is the most obvious culprit.
-    [doctor_day1_evening_bedroom_drunk_enter_1fd169ef] In that case my invitation here was no kindly whim, but a deliberate act.
-    [doctor_day1_evening_bedroom_drunk_enter_37eb5b4d] Yet I cannot be sure, for I did not recognise her at all when we were introduced.
-    [doctor_day1_evening_bedroom_drunk_enter_56097cad] But that, again, may mean very little.
-    [doctor_day1_evening_bedroom_drunk_enter_cb7d6996] It could, of course, be an extraordinary coincidence.
-    [doctor_day1_evening_bedroom_drunk_enter_e83bd2ea] Perhaps some enemy of mine is numbered among the guests, and Lady Claythorn has nothing at all to do with t...
-    [doctor_day1_evening_bedroom_drunk_enter_f0691f9a] It is not very likely, yet not impossible.
-    [doctor_day1_evening_bedroom_drunk_enter_acd642ba] What am I to do now.
-    [doctor_day1_evening_bedroom_drunk_enter_bbf85bb7] The prudent course might be to warn everyone and abandon the whole business.
-    [doctor_day1_evening_bedroom_drunk_enter_eee6ba65] But I have no notion how any of them would react to such an announcement.
-    [doctor_day1_evening_bedroom_drunk_enter_74d5f5b1] That could mean sacrificing the prize money.
-    [doctor_day1_evening_bedroom_drunk_enter_b14d5cdf] And if this letter were to be spoken of outside these walls, it might cost me my practice as well.
-    [doctor_day1_evening_bedroom_drunk_enter_77be1505] I cannot afford that.
-    [doctor_day1_evening_bedroom_drunk_enter_f277ebee] Besides, this could yet prove no more than a cruel jest, or some wretched misunderstanding.
-    [doctor_day1_evening_bedroom_drunk_enter_8ff0e1a9] If I remain, nothing more may come of it.
-    [doctor_day1_evening_bedroom_drunk_enter_aa49476d] I need only be on my guard, and watch Samuel Manning closely.
-    [doctor_day1_evening_bedroom_drunk_enter_d5135ad9] I must decide.
-    [doctor_day1_evening_bedroom_drunk_enter_9398f9b1] Do I risk my life, or do I risk losing the kind of money that would set me up comfortably for years to come.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_e77dbf01] Why am I even considering staying here?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_454e4877] I should leave at once and warn the others.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_f3cfb2ec] I believe they are all gathered in the billiard room.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_86298e97] If Lady Claythorn truly is behind this, I would rather face her with witnesses than wait alone for whatever...
-    [doctor_day1_evening_bedroom_drunk_leave_manor_a45bb9da] I find most of them assembled around Captain Sinha.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_4fd30174] I interrupt him.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_a8902ad1] Pardon me, Captain, but I have something you should see.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_5b147553] I hand him the letter.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_64079dd5] He reads it aloud to the assembled company.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_64ea55f7] What is the meaning of this?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_5ddb44f0] Where did you find it?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_736d0e20] In Samuel Manning's room.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_07fb0286] Really? And what were you doing there?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_90dcac10] The door was open, and I was—
-    [doctor_day1_evening_bedroom_drunk_leave_manor_e9f4ea86] Wait, you went into my room?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_a3054be8] What gave you the right to do such a thing?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_07abdf9c] That is not the issue. How do you explain this letter?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_63b5a956] I have never seen it before.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_86ea484c] It isn't mine.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_9b9e6ad5] Truly? And we are supposed to take you at your word?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_302de678] I don't see why anyone should believe you either.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_c9bae6bd] A man who thinks it proper to barge into another's room.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_f1820f3a] Unless, of course, you did not enter it at all, and wrote this yourself.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_9560efdb] Why on earth would I do that? It makes no sense.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_d1351678] No less sense than what you're implying, Doctor.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_63a1b62a] Do you truly expect anyone here to believe you?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_9cf58935] I glance around the room. All eyes are upon us.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_4e25bac5] The others look perplexed, unsure what to make of the exchange.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_9a349fe2] Silence lingers until Captain Sinha finally speaks.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_dfb1aca8] There is something amiss here, though I cannot tell who is at fault.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_358fc539] Surely it cannot be me. Just look at Samuel Manning.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_63cce7fb] Is he even sober enough to make sense?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_68781cce] What makes you say I am drunk?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_56d7f1e1] I can gather my wits when the occasion calls for it.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_8b44228f] Enough, both of you.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_6c929279] I do not understand any of this. We should think it over with cooler heads.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_a45ad4ed] Lady Claythorn, what do you make of it?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_f7769fd9] Our hostess is visibly shaken, yet manages to reply.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_322af410] I watch her closely.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_84c318b8] If she wrote the first part of that letter, then this is her handiwork laid bare before everyone.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_5759bc07] Yet I cannot tell whether her distress is genuine horror or a performance.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_df2333f9] I, I don't know.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_fe0aafbe] I'm not certain whom to believe.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_7edf24c4] What do you suggest, Captain?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_800bc7a1] We shan't settle this now. It requires thought.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_2b2d269c] I propose we confine the two of you to your rooms until we reach a conclusion.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_e9933edb] What? No.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_586c3220] I must leave this place at once. I am not safe here.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_42668e12] It's far too late to leave now. The storm makes travel dangerous.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_bc5ca8b2] You'll be safer in your room.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_f8cca1f3] I ponder that for a moment. The storm is raging outside, leaving now would be perilous.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_2b0ecfd9] Yet staying in my room hardly feels safer, not with Samuel Manning and perhaps Lady Claythorn herself set a...
-    [doctor_day1_evening_bedroom_drunk_leave_manor_d7a255e0] The others watch me uneasily. I can tell they do not quite believe me.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_a7a2cf67] Very well, I'll go to my room.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_b2670cb0] But I want your word that I will be allowed to leave at first light.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_c98ac8e9] I do not wish to remain here a moment longer than necessary.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_1bd273eb] You have my word, Doctor.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_c05dcace] And you, Mr Manning?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_bfe61392] All right, I'll go to my room as well.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_3d3160b9] It's late enough.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_1ec1538b] Then it's settled. Please, follow me, Doctor Baldwin.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_8f714453] Captain Sinha escorts me to my room.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_c9a07fc5] The butler and Lady Claythorn accompany Samuel Manning to his.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_a425ab76] I am far from reassured, yet see no alternative.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_1c9392a9] I enter my room as the Captain remain outside.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_419f594b] My apologies, Doctor Baldwin. I am sure we shall sort this out soon enough.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_5fefe53e] In the meantime, we shall have to lock you in.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_77d6e7ec] Before he can close the door, I lower my voice.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_367f7eac] Captain, between ourselves, you must see what this implies.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_837c0f06] Lady Claythorn invited us both here.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_d9e0553c] She is in all likelihood the one who wrote that letter to Samuel Manning.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_db9be5d1] Which means something dangerous may be at play here.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_0150824f] He hesitates, then answers just as quietly.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_02b0bc6f] I cannot deny the thought has crossed my mind.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_72f10861] But from my point of view, I have only an anonymous letter that you say you found in rather singular circum...
-    [doctor_day1_evening_bedroom_drunk_leave_manor_7e294641] I cannot possibly accuse our hostess openly on that alone.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_82e48591] I understand your position, but please keep it in mind, and be careful.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_f1f5fa08] You have my word.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_e4175efe] He leaves me alone, so I lock my door and do what I can to secure it.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_1cfbc6b4] I have no intention of sitting idly by, so I barricade the door in case Manning, or even Lady Claythorn her...
-    [doctor_day1_evening_bedroom_drunk_leave_manor_657d85a8] Now all I can do is wait.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_5f54d212] After what feels like hours, someone knocks at my door.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_b3dfbebb] Doctor Baldwin, after some discussion, we have decided you may be right in one respect.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_4943583e] There is too much here that does not add up.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_d340dcdb] We shall all leave in the morning.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_f29fda82] For the time being, we shall all rest easier if you and Mister Manning stay in your rooms for the night.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_b9ed4ffa] I did not dare accused Lady Claythorn directly, but I will also keep an eye her.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_6ebea522] Good, he has not dismissed my suspicions entirely.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_04582365] Very well. I have barricaded myself anyway.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_d74de910] A wise precaution, Doctor. Again, my apologies.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_1172ae20] Of course, I understand, Captain. Good night.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_ed95eb32] Good night, Doctor.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_9d8bb2e7] At least this dreadful business will soon be over.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_d9764205] What am I to do now?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_26f1670c] I do not think I could sleep in this state.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_32f5dc3a] And perhaps it is better to stay alert.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_0e766270] But on the other hand, I think I am protected enough here.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_sleep_047f08b8] I am far too tense.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_sleep_5277c007] Despite the risk, I cannot resist the urge to calm my nerves.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_3738f434] I lie on my bed, not expecting to close my eyes before morning.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_3f8f1e9d] Nevertheless, after a few hours, I doze off, utterly exhausted.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_2ee56621] I am awakened by a strange noise.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_1b1ce6a4] What is that?
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_affe8440] I realise I cannot breathe.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_95b1f42b] Smoke.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_fd36083a] Something is burning.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_1407746e] I spring to my feet.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_660daa88] The walls of the room are ablaze.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_01ce547d] Smoke fills the air, I can scarcely see a thing.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_7724baae] I rush towards the door, but the furniture I placed against it blocks my way.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_4da44f25] I summon all my strength to move it, yet I have no energy left.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_ec50daa3] My head spins.
-    [doctor_day1_evening_bedroom_drunk_leave_manor_awake_efccfaf5] I...
-    [doctor_day1_evening_bedroom_drunk_stay_c744fc64] I do not believe I am in any great danger.
-    [doctor_day1_evening_bedroom_drunk_stay_bd941e89] I shall stay, though I must be cautious from now on.
-    [doctor_day1_evening_bedroom_drunk_stay_db32b8dd] Especially around Samuel Manning.
-    [doctor_day1_evening_bedroom_drunk_stay_aea94b70] And I should try to discover who could have written this wretched letter.
+Test lines collected:     2357
+Covered:                  417
+Missing:                  1425
 
   game/scripts/doctor/Day 2/1_Morning/1_main.rpy  (100 missing)
     [doctor_day2_morning_87eace4d] Awake, and alive.
@@ -455,7 +107,7 @@ Missing:                  1807
     [doctor_day2_behind_the_mask_d88fc84d] Not until I know who I can trust.
     [doctor_day2_behind_the_mask_2c0c6fa1] I replace the mask and leave the room.
 
-  game/scripts/doctor/Day 2/2_Hunt/1_main.rpy  (37 missing)
+  game/scripts/doctor/Day 2/2_Hunt/1_main.rpy  (36 missing)
     [doctor_day2_hunt_feeba281] As I had no reason to remain behind, I changed for the hunt.
     [doctor_day2_hunt_131245fd] Fortunately, I had thought to bring more suitable outdoor clothes for the weekend.
     [doctor_day2_hunt_834e5b97] It was not difficult to imagine that a hunt would be on the agenda.
@@ -490,7 +142,6 @@ Missing:                  1807
     [doctor_day2_hunt_f90314e5] Andrew stands at his side and gives me a meaningful look.
     [doctor_day2_hunt_e0fa7bb7] Of course not.
     [doctor_day2_hunt_d3d3e965] Do come with us, Mr Harring.
-    [doctor_day2_hunt_ded26b58] Excellent.
     [doctor_day2_hunt_dfb9b20a] The parties are settled.
     [doctor_day2_hunt_9dbc3bf1] Let us have a pleasant afternoon.
 
@@ -592,9 +243,8 @@ Missing:                  1807
     [doctor_day2_hunt_accident_death_not_careful_2a3ecf9f] I am lost in my thoughts when I a hear the voice of Samuel Manning shouting.
     [doctor_day2_hunt_accident_death_not_careful_89600e2f] For a second I have forgotten to watch him.
 
-  game/scripts/doctor/Day 2/3_Evening/0_map_choices.rpy  (37 missing)
+  game/scripts/doctor/Day 2/3_Evening/0_map_choices.rpy  (36 missing)
     [doctor_downstairs_day2_evening_4bb1e64a] I am about to go downstairs when someone stops me.
-    [doctor_downstairs_day2_evening_22bfd17d] Good evening, sir.
     [doctor_downstairs_day2_evening_662b8420] May I help you?
     [doctor_downstairs_day2_evening_34436add] Well, perhaps.
     [doctor_downstairs_day2_evening_b9e6fcc8] I am looking for someone.
@@ -722,7 +372,7 @@ Missing:                  1807
     [doctor_day2_dinner_nurse_4051fb01] Miss Marsh.
     [doctor_day2_dinner_nurse_0fe7314c] Doctor.
 
-  game/scripts/doctor/Day 2/3_Evening/2_attic.rpy  (116 missing)
+  game/scripts/doctor/Day 2/3_Evening/2_attic.rpy  (112 missing)
     [doctor_day2_evening_males_room_default_6ea3da5d] I could just barge in, but I prefer to knock just in case.
     [doctor_day2_evening_males_room_default_cd6c3f79] Who is it?
     [doctor_day2_evening_males_room_do_no_enter_d50d780d] It is Doctor Baldwin.
@@ -734,7 +384,6 @@ Missing:                  1807
     [doctor_day2_evening_males_room_do_no_enter_f621cdcb] This is the servants quarters.
     [doctor_day2_evening_males_room_do_no_enter_98aae4b4] I was about to go to bed myself, as I have to be up early tomorrow.
     [doctor_day2_evening_males_room_do_no_enter_175e78f5] Of course, my apologies for disturbing you.
-    [doctor_day2_evening_males_room_do_no_enter_c44e02e5] Good night.
     [doctor_day2_evening_males_room_do_no_enter_cdfdc6c7] Goodnight, sir.
     [doctor_day2_evening_males_room_do_no_enter_2851d449] Well, that was rather embarrassing.
     [doctor_day2_evening_males_room_do_no_enter_4c4b7b1d] That is what happens when one wanders about a house without a clear purpose, I suppose.
@@ -746,7 +395,6 @@ Missing:                  1807
     [doctor_day2_evening_males_room_enter_6a539ab7] I am well aware.
     [doctor_day2_evening_males_room_enter_6895daa3] But I sincerely hope you do not hold me responsible for today's accident.
     [doctor_day2_evening_males_room_enter_24fc6bda] He pauses for a second before answering.
-    [doctor_day2_evening_males_room_enter_dad7b707] No, of course not.
     [doctor_day2_evening_males_room_enter_d3fd152e] I am sure it was only a terrible mistake.
     [doctor_day2_evening_males_room_enter_5c401c7d] There is a pause, then the soft sound of the bolt sliding back.
     [doctor_day2_evening_males_room_enter_3b4b5ee5] The door opens just enough for me to slip inside.
@@ -801,7 +449,6 @@ Missing:                  1807
     [doctor_day2_evening_males_room_enter_8cb15024] I am not bloody French.
     [doctor_day2_evening_males_room_enter_bbffcd19] People always assume that.
     [doctor_day2_evening_males_room_enter_1d83b966] I am Belgian, from a French speaking family.
-    [doctor_day2_evening_males_room_enter_c9b5288c] I see.
     [doctor_day2_evening_males_room_enter_40f5eb8c] My apologies.
     [doctor_day2_evening_males_room_enter_ba6aee5e] Still, why hide it?
     [doctor_day2_evening_males_room_enter_261c34b3] Because I am not meant to be here.
@@ -822,7 +469,6 @@ Missing:                  1807
     [doctor_day2_evening_males_room_enter_e04b620c] You are an actor?
     [doctor_day2_evening_males_room_enter_acdb89ab] Then what are you doing here, in the middle of the woods?
     [doctor_day2_evening_males_room_enter_8817c989] There cannot be many roles for you in a place like this.
-    [doctor_day2_evening_males_room_enter_dad7b707_1] No, of course not.
     [doctor_day2_evening_males_room_enter_52beed1f] But one must earn a living.
     [doctor_day2_evening_males_room_enter_ce9fe6fc] Acting is not a secure profession.
     [doctor_day2_evening_males_room_enter_ad95c81b] I take odd jobs when I must.
@@ -840,7 +486,7 @@ Missing:                  1807
     [doctor_day2_evening_males_room_enter_36277fe8] Then he opens the door just enough for me to slip back into the corridor.
     [doctor_day2_evening_males_room_enter_9faf5fdd] The bolt slides shut behind me.
 
-  game/scripts/doctor/Day 2/3_Evening/2_bedroom_nurse.rpy  (92 missing)
+  game/scripts/doctor/Day 2/3_Evening/2_bedroom_nurse.rpy  (88 missing)
     [doctor_day2_evening_bedroom_nurse_default_c091f2f0] Hello?
     [doctor_day2_evening_bedroom_nurse_default_4a921aa7] Yes?
     [doctor_day2_evening_bedroom_nurse_default_53e0afce] Is that you Doctor Baldwin?
@@ -856,8 +502,6 @@ Missing:                  1807
     [doctor_day2_evening_bedroom_nurse_do_not_remember_f37e7bf2] I should not press the matter.
     [doctor_day2_evening_bedroom_nurse_do_not_remember_9d28e16b] My apologies for disturbing you.
     [doctor_day2_evening_bedroom_nurse_do_not_remember_87632eeb] I shall leave you in peace, Miss Marsh.
-    [doctor_day2_evening_bedroom_nurse_do_not_remember_c44e02e5] Good night.
-    [doctor_day2_evening_bedroom_nurse_do_not_remember_9ad8d92c] Good night, Doctor.
     [doctor_day2_evening_bedroom_nurse_remember_b86ccc94] I do understand, believe me.
     [doctor_day2_evening_bedroom_nurse_remember_6783b8e9] Yet, as you reminded me earlier, you and I have worked side by side in far less proper circumstances than t...
     [doctor_day2_evening_bedroom_nurse_remember_24e23885] I would not trouble you now without very good reason.
@@ -871,7 +515,6 @@ Missing:                  1807
     [doctor_day2_evening_bedroom_nurse_remember_186f66b8] Please come in, Doctor.
     [doctor_day2_evening_bedroom_nurse_remember_5dc44673] I step into Miss Marsh's room.
     [doctor_day2_evening_bedroom_nurse_remember_7268db7c] She has not yet undressed, but her shoulders sag with weariness, and there are dark shadows beneath her eyes.
-    [doctor_day2_evening_bedroom_nurse_remember_42e5e9fe] Thank you.
     [doctor_day2_evening_bedroom_nurse_remember_e9c20dc2] I shall be as brief as I can.
     [doctor_day2_evening_bedroom_nurse_remember_0b2bec33] I give her a concise account of the letter I discovered in Samuel Manning's room.
     [doctor_day2_evening_bedroom_nurse_remember_46d45e92] Then I explain how it urged him to provoke me before the hunt, and how it led, step by step, to his death.
@@ -903,7 +546,6 @@ Missing:                  1807
     [doctor_day2_evening_bedroom_nurse_sleep_yes_d325b136] Miss Marsh sits upon the edge of the bed, then lies down without undressing, her eyes already half closed.
     [doctor_day2_evening_bedroom_nurse_sleep_yes_50f09faf] Wake me if anything seems amiss.
     [doctor_day2_evening_bedroom_nurse_sleep_yes_8eb55b7d] Otherwise, let us hope the night passes quietly.
-    [doctor_day2_evening_bedroom_nurse_sleep_yes_405528cd] You have my word.
     [doctor_day2_evening_bedroom_nurse_sleep_yes_b30226e3] Try to rest.
     [doctor_day2_evening_bedroom_nurse_sleep_yes_efc61e31] The fire burns low in the grate, filling the room with a dull orange glow.
     [doctor_day2_evening_bedroom_nurse_sleep_yes_3b0dab42] I settle into the chair, listening to the ticking of the clock, and the slow deepening of Miss Marsh's brea...
@@ -934,7 +576,7 @@ Missing:                  1807
     [doctor_day2_evening_bedroom_nurse_sleep_no_6b98fabc] Miss Marsh follows me to the threshold and closes the door softly behind me.
     [doctor_day2_evening_bedroom_nurse_sleep_no_7bdd2014] The hallway feels colder than before, and the silence of the sleeping house presses in on every side.
 
-  game/scripts/doctor/Day 2/3_Evening/2_billiard_room.rpy  (180 missing)
+  game/scripts/doctor/Day 2/3_Evening/2_billiard_room.rpy  (176 missing)
     [doctor_day2_evening_billiard_room_2b1a4817] Just as I imagined, the room is almost deserted.
     [doctor_day2_evening_billiard_room_58ee495e] I can see only Captain Sinha seated upon a sofa, and the butler standing discreetly in the corner.
     [doctor_day2_evening_billiard_room_1d8d06ac] The bar is still available, but I promised myself to keep a clear head, so I ought to avoid it.
@@ -951,7 +593,6 @@ Missing:                  1807
     [doctor_day2_evening_billiard_room_captain_03580b51] He notices my approach and sets his book down upon the table.
     [doctor_day2_evening_billiard_room_captain_4bacaf42] Doctor Baldwin, it is good to see you.
     [doctor_day2_evening_billiard_room_captain_ca04410a] I fear most of the other guests have decided to remain in their rooms.
-    [doctor_day2_evening_billiard_room_captain_f752cca3] Really?
     [doctor_day2_evening_billiard_room_captain_e4fd4e12] Why do you say that?
     [doctor_day2_evening_billiard_room_captain_368bc066] I cannot be certain.
     [doctor_day2_evening_billiard_room_captain_dab3abe5] But after what has happened today, I should not be surprised if some of our fellow guests are afraid to lea...
@@ -981,10 +622,8 @@ Missing:                  1807
     [doctor_day2_evening_billiard_room_captain_letter_d8b83418] This surely proves beyond doubt that something very wrong is happening here.
     [doctor_day2_evening_billiard_room_captain_letter_d3d242c9] I am telling you so that we may work together to discover what is truly going on.
     [doctor_day2_evening_billiard_room_captain_letter_87f4701c] Sushil Sinha studies me in silence for a moment.
-    [doctor_day2_evening_billiard_room_captain_letter_499543b1] I see.
     [doctor_day2_evening_billiard_room_captain_letter_0b5cd24f] Do not take this the wrong way , Doctor, but I cannot simply accept your word on what you have just told me.
     [doctor_day2_evening_billiard_room_captain_letter_d8ae0edd] Do you have any proof of it?
-    [doctor_day2_evening_billiard_room_captain_letter_15d65481] Not really.
     [doctor_day2_evening_billiard_room_captain_letter_e4b88ad2] I did not take the letter with me, that would have appeared far too suspicious.
     [doctor_day2_evening_billiard_room_captain_letter_0e3ed573] And I have been in Samuel Manning's room since.
     [doctor_day2_evening_billiard_room_captain_letter_38e26895] He burned the letter before leaving for the hunt.
@@ -1051,7 +690,6 @@ Missing:                  1807
     [doctor_day2_evening_billiard_room_captain_mask_794fcee0] Everything points to a form of strychnine poisoning.
     [doctor_day2_evening_billiard_room_captain_mask_4a51ad74] It is a common active ingredient in certain rat poisons.
     [doctor_day2_evening_billiard_room_captain_mask_9f179d8b] That is probably what has given his whisky this greenish hue.
-    [doctor_day2_evening_billiard_room_captain_mask_499543b1] I see.
     [doctor_day2_evening_billiard_room_captain_mask_df4c84e2] So we now have two deaths that are highly suspicious.
     [doctor_day2_evening_billiard_room_captain_mask_61a6349d] He thinks for few seconds about what that implies.
     [doctor_day2_evening_billiard_room_captain_mask_c6b18397] If someone in this house is prepared to kill once, perhaps even twice, there is no reason to imagine they w...
@@ -1357,7 +995,7 @@ Missing:                  1807
     [doctor_day3_morning_nurse_9cc1c026] As well as Lady Claythorn.
     [doctor_day3_morning_nurse_1a4338b3] Yes, it's very likely.
 
-  game/scripts/doctor/Day 3/2_Afternoon/2a_captain.rpy  (149 missing)
+  game/scripts/doctor/Day 3/2_Afternoon/2a_captain.rpy  (148 missing)
     [doctor_day3_afternoon_captain_6997644a] We are all seated in the tea room, Captain Sinha, Ted Harring, Amelia Baxter, and I.
     [doctor_day3_afternoon_captain_49ffe780] Each of us is deep in thought.
     [doctor_day3_afternoon_captain_fb395ca3] The manor feels hollow now, stripped of its usual life.
@@ -1502,13 +1140,12 @@ Missing:                  1807
     [doctor_day3_afternoon_captain_share_broken_910fc2ce] At the time, we realised something was terribly wrong in the manor.
     [doctor_day3_afternoon_captain_share_broken_47576beb] But we did not know whom we could trust.
     [doctor_day3_afternoon_captain_share_broken_54a97c3c] So we kept it to ourselves.
-    [doctor_day3_afternoon_captain_share_broken_f0dbb82d] Right.
     [doctor_day3_afternoon_captain_share_broken_59366bf1] I am not sure how that helps us just now.
     [doctor_day3_afternoon_captain_share_broken_9b142bd3] It is one more reason to worry, and nothing that truly helps us.
     [doctor_day3_afternoon_captain_share_broken_e573c1cd] Still, at least you have told us.
     [doctor_day3_afternoon_captain_share_broken_6c60e55a] I am sorry.
 
-  game/scripts/doctor/Day 3/2_Afternoon/2b_nurse.rpy  (145 missing)
+  game/scripts/doctor/Day 3/2_Afternoon/2b_nurse.rpy  (142 missing)
     [doctor_day3_afternoon_nurse_02cfe100] I believe it has been long enough.
     [doctor_day3_afternoon_nurse_820ffcac] We should head back downstairs, and see where the others have settled.
     [doctor_day3_afternoon_nurse_c317d8c6] We climb down from the attic and reach the top of the main staircase.
@@ -1567,7 +1204,6 @@ Missing:                  1807
     [doctor_day3_afternoon_nurse_wait_captain_leave_290f3697] Then the front door closes.
     [doctor_day3_afternoon_nurse_talk_b4ef3d62] I think we should speak to them.
     [doctor_day3_afternoon_nurse_talk_86f21462] We can wait for Captain Sinha to leave, if you would prefer.
-    [doctor_day3_afternoon_nurse_talk_1e77908f] Right.
     [doctor_day3_afternoon_nurse_talk_f22215f2] He has left.
     [doctor_day3_afternoon_nurse_talk_84c01b48] We can safely approach the others now.
     [doctor_day3_afternoon_nurse_talk_db997dea] We slip out of the library and cross the hall.
@@ -1584,7 +1220,6 @@ Missing:                  1807
     [doctor_day3_afternoon_nurse_hide_58825de8] We just have to find a safe spot and wait there.
     [doctor_day3_afternoon_nurse_hide_80e37c38] But first, let us be certain Captain Sinha has gone.
     [doctor_day3_afternoon_nurse_hide_60866fce] Very well.
-    [doctor_day3_afternoon_nurse_hide_1e77908f] Right.
     [doctor_day3_afternoon_nurse_hide_f22215f2] He has left.
     [doctor_day3_afternoon_nurse_hide_d80fed02] All right.
     [doctor_day3_afternoon_nurse_hide_e076173e] Let us go then.
@@ -1619,7 +1254,6 @@ Missing:                  1807
     [doctor_day3_afternoon_nurse_kitchen_3a9cd996] There you are.
     [doctor_day3_afternoon_nurse_kitchen_9a7e6ce0] It is not much, but it will see us through the day.
     [doctor_day3_afternoon_nurse_kitchen_acc007d1] It looks excellent.
-    [doctor_day3_afternoon_nurse_kitchen_42e5e9fe] Thank you.
     [doctor_day3_afternoon_nurse_kitchen_d58da20d] We sit and begin to eat at once.
     [doctor_day3_afternoon_nurse_kitchen_697dd485] I believe we are all famished.
     [doctor_day3_afternoon_nurse_kitchen_9626aff5] For a time, we eat without speaking.
@@ -1787,7 +1421,7 @@ Missing:                  1807
     [doctor_day3_afternoon_captain_escape_with_psychic_a29f1fd7] Then she added something else.
     [doctor_day3_afternoon_captain_escape_with_psychic_0caec45c] Her other son, Archibald, had been missing for a week or more.
 
-  game/scripts/doctor/doctor_endings.rpy  (30 missing)
+  game/scripts/doctor/doctor_endings.rpy  (24 missing)
     [doctor_ending_escape_16a28bb6] You escaped.
     [doctor_ending_escape_0a079de8] Three other guests were fortunate enough to leave the manor alive with you.
     [doctor_ending_escape_978f1433] By now, you may have a clearer understanding of what has been happening.
@@ -1805,12 +1439,6 @@ Missing:                  1807
     [doctor_ending_shot_4086799f] Only the sharp crack of a pistol, and a brief, dreadful heat.
     [doctor_ending_shot_0ea32858] You were so close to getting out alive.
     [doctor_ending_shot_e5dff5e2] What a pity.
-    [doctor_ending_burn_5c284ab3] A dreadful fire burned the manor down.
-    [doctor_ending_burn_df513904] Trapped in your room, there was no possible way to escape.
-    [doctor_ending_burn_0c5e61f1] What a ghastly end.
-    [doctor_ending_overdose_55b047b9] You thought you could manage it, but you were mistaken.
-    [doctor_ending_overdose_c8b7964b] That last spoonful was one too many.
-    [doctor_ending_overdose_fd5e85a0] You will have to be more careful next time.
     [doctor_ending_shot_by_drunk_d28f9d31] Despite knowing better, you still joined a hunt with a half-drunk man and a loaded gun.
     [doctor_ending_shot_by_drunk_8d2d452b] At least this dreadful end might teach you to make wiser choices next time.
     [doctor_ending_throat_cut_01b7f085] You believed yourself safe.
@@ -1819,31 +1447,11 @@ Missing:                  1807
     [doctor_ending_throat_cut_1a86bc36] Sometimes the safest path lies in choosing whom to trust, rather than trusting no one at all.
     [doctor_ending_throat_cut_530d2787] It's dangerous to go alone.
 
-  game/scripts/doctor/doctor_generic_locations.rpy  (24 missing)
-    [doctor_tea_room_default_5f170ed7] There is not a soul in here and nothing to do at the moment.
-    [doctor_tea_room_default_7ca33d49] No need to stay any longer.
-    [doctor_library_default_ed71b42e] That is a well-furnished library.
+  game/scripts/doctor/doctor_generic_locations.rpy  (4 missing)
     [doctor_library_default_da4ead7d] But with everything that has happened, I do not feel like reading today.
     [doctor_library_default_3eb097a1] I really don't feel like reading today.
-    [doctor_portrait_gallery_default_ea39dd4d] This is clearly where the Claythorn family display their portraits.
-    [doctor_portrait_gallery_default_c9d49b45] It's rather odd to have so many crammed into such a small room.
-    [doctor_portrait_gallery_default_fdd1183b] It gives the place quite an eerie atmosphere.
-    [doctor_portrait_gallery_default_0d1b7cf8] I don't feel comfortable lingering here too long.
     [doctor_portrait_gallery_default_545c1465] It still gives me an eerie feeling.
     [doctor_portrait_gallery_default_cd7f6a54] I'd rather not stay.
-    [doctor_dining_room_default_f256735b] The dining room.
-    [doctor_dining_room_default_0f2bf6cf] No need to linger, nobody will come back here until tomorrow.
-    [doctor_entrance_hall_default_d67f3e10] I feel compelled to take another look at this entrance hall.
-    [doctor_entrance_hall_default_d75ea669] It is quite magnificent.
-    [doctor_entrance_hall_default_689a50e8] I take in the view for a few minutes.
-    [doctor_entrance_hall_default_e90e7307] Nobody comes.
-    [doctor_bedroom_default_c29a4ffd] Hello, is anyone there?
-    [doctor_bedroom_default_cde4eaca] There is no answer.
-    [doctor_attic_default_96169023] I decide to take the stairs to the attic.
-    [doctor_attic_default_126d7e47] I probably shouldn't be here but I could still feign ignorance if I am spotted.
-    [doctor_attic_closed_79805797] The door is locked.
-    [doctor_attic_closed_0be35494] That's no surprise.
-    [doctor_attic_closed_f94a27f8] Whoever is sleeping here must keep the key close to themselves.
 
   game/scripts/doctor/doctor_other_guests.rpy  (9 missing)
     [doctor_generic_other_guests_friday_5fbe33e0] Oh, I haven't talked to many people so far.

@@ -59,3 +59,10 @@ The broken_generic budget (50 minutes) is too tight for a single-plan full Q&A, 
 - Same pre-set `shot_by_drunk` ending.
 - bedroom_drunk_enter menu: **Do not risk losing the money — stay** → returns to map.
 - Go to sleep → no flirt and no book unlocked → `doctor_laudanum_death` → `doctor_ending_overdose`.
+
+## setup_doctor_friday_evening_9.json — Flirt with the footman, no book
+- Skip broken_generic immediately.
+- Dinner: ignore Ted.
+- Post-dinner: go down.
+- Map: kitchen → **Try flirting with him** → `doctor_downstairs_flirt` (`flirt` thread); Go to sleep.
+- End: `flirt` unlocked but no book → footman knock scene (`footman_french_1`) followed by the no-book fallback ("It is quiet now, but my mind is at ease." / "I fall asleep easily.").

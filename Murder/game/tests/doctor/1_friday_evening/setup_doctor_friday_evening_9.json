@@ -1,0 +1,37 @@
+{
+  "start_label": "doctor_day1_evening",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "broken_generic_menu_doctor",
+      "selected": "You don't have anymore questions for him",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "doctor_day1_evening",
+      "selected": "Just keep to yourself",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "doctor_day1_evening_3",
+      "selected": "Let's go down and meet the others",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "doctor_day1_evening_map_menu",
+      "selected": "Kitchen",
+      "redirect": "doctor_day1_evening_downstairs_default"
+    },
+    {
+      "menu": "doctor_has_try_sneaking_downstairs",
+      "selected": "Try flirting with him",
+      "redirect": "doctor_downstairs_flirt"
+    },
+    {
+      "menu": "doctor_day1_evening_map_menu",
+      "selected": "Go to sleep",
+      "redirect": "generic_cancel"
+    }
+  ]
+}
