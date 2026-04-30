@@ -28,20 +28,18 @@ Daniel Baldwin: Sure why not, thank you.
 As the butler hands me my drink, Thomas Moody enters the room.
 Thomas Moody: Doctor Baldwin, I suppose we are the first ones.
 Daniel Baldwin: It seems like it.
-Menu Choice: What do you think of this weather?
-Thomas Moody: It is not the ideal weather, but there is no reason to lose sleep over it, is there?
 Menu Choice: Tell me more about yourself.
 Thomas Moody: There is not much to say, I am afraid.
 Thomas Moody: I am a mechanic. I have been doing this since the end of the war.
-Menu Choice: That's a very noble profession
-Thomas Moody: Thank you.
-Thomas Moody: It is not saving lives, but I like it well enough.
-Menu Choice: Why were you invited here?
-Thomas Moody: Well, I suppose it is related to what I did in the war.
-Thomas Moody: But there were a lot of heroic acts that happened at that time.
-Thomas Moody: I am not sure mine was particularly exceptional.
-Thomas Moody: I suppose I am here for a different reason.
-Menu Choice: Nod, but don't engage
+Menu Choice: Did you have to change profession because of the war?
+Thomas Moody: Well yes, I was a famous actor before.
+Thomas Moody: Sadly I can't do that anymore.
+Menu Choice: Wait? Really?
+Thomas Moody: No, of course not.
+Thomas Moody: I was obviously joking.
+Then he gives me a weird look.
+Well, I was not very polite here.
+I should watch what I am saying, shouldn't I?
 Menu Choice: What do you think of this place?
 Thomas Moody: It is a decent-sized house.
 Thomas Moody: Probably originally for a wealthy local landowner.
@@ -54,10 +52,41 @@ Daniel Baldwin: Where did you learn all of this?
 Thomas Moody: Because I was raised in a house a bit like this one.
 Thomas Moody: I started as a bootboy when I was a wee lad, but quickly rose in rank to become a footman.
 Thomas Moody: Then the war happened and everything changed.
-Menu Choice: The war didn't change much for me
-Thomas Moody: Really?
-Thomas Moody: That is quite a unique perspective.
-Thomas Moody: How refreshing.
+Menu Choice: Of course, the war changed everyone perspective
+Daniel Baldwin: I understand that you did not want to keep doing this after the war.
+Daniel Baldwin: It must have seemed too trivial to keep being a servant after such a horrific experience.
+Thomas Moody: Not really.
+Thomas Moody: I do not think there is anything wrong with being a servant.
+Thomas Moody: I would have loved to keep doing this job.
+Thomas Moody: I even hoped to be a butler someday.
+Thomas Moody: But it turns out a footman has to fit certain characteristics.
+Thomas Moody: For instance, they have to be tall.
+Thomas Moody: I am not sure why, but it is a matter of pride for them to have the tallest servants possible.
+Thomas Moody: It is all part of us being seen as part of the "image" of their property.
+Thomas Moody: As you can guess, when I returned from the war, I was not considered "footman" material and was relegated to grunt work.
+Thomas Moody: I decided it was better to leave.
+Thomas Moody: But it is not easy talking about it.
+Daniel Baldwin: I am sorry, I did not mean to offend you.
+Thomas Moody: It is all right.
+Blast it, I did it again. I really ought to be more careful.
+In any case, I realise now he is the tallest man in the room.
+Only the footman seems to be about the same height as he is.
+Menu Choice: Why were you invited here?
+Thomas Moody: Well, I suppose it is related to what I did in the war.
+Thomas Moody: But there were a lot of heroic acts that happened at that time.
+Thomas Moody: I am not sure mine was particularly exceptional.
+Thomas Moody: I suppose I am here for a different reason.
+Menu Choice: What do you mean?
+He looks at me with a blank stare.
+Thomas Moody: Is it not obvious?
+Thomas Moody: My ... "condition" makes my actions more memorable than others'.
+Thomas Moody: But I really do not want to talk about it.
+Daniel Baldwin: No, of course.
+I cannot believe I was rude again.
+I must sound like an absolute tosser to him now.
+Thomas Moody: Excuse me, I have something to do.
+He goes back to the bar and starts to talk to the butler, leaving me alone in a corner.
+Well that will teach me.
 After a while, Miss Marsh enters the room.
 She nods at me and heads to the bar.
 She is soon followed by an Indian man in an army uniform and an older gentleman.
@@ -66,6 +95,7 @@ The older man goes directly to the tray with drinks.
 He walks in an unsure fashion, almost bumping into the butler who swiftly avoids him.
 The military man walks towards me.
 Sushil Sinha: Hello there, I am Captain Sushil Sinha.
+As he sees the new guests coming in, Thomas Moody joins me back to greet them.
 Thomas Moody: Nice to meet you, Captain. I am Thomas Moody.
 Daniel Baldwin: Doctor Daniel Baldwin.
 Daniel Baldwin: How do you do.
@@ -104,48 +134,44 @@ Lady Claythorn: This is my way of thanking those as selfless as yourselves, who 
 Following her speech, our host settles back down in her chair.
 This speech is quickly followed by the first course.
 I look who I have on my side, it's a young man I didn't even notice before.
-Menu Choice: Just keep to yourself
+Menu Choice: Talk to Ted Harring
+Daniel Baldwin: Hello. I am doctor Daniel Baldwin.
+Ted Harring: Nice to meet you doctor, I am Ted Harring.
+Menu Choice: Tell me more about yourself.
+Ted Harring: There isn't much to say about me.
+Ted Harring: I was born and raised in Birmingham.
+Ted Harring: I work there as a business associate.
+Daniel Baldwin: In what line of business?
+Ted Harring: Oh, you know, regular sales.
+Daniel Baldwin: Of course. What do you sell the most?
+Ted Harring: I cannot say that I work with a specific product; it depends on the opportunities.
+Daniel Baldwin: I see.
+There is something off about his answers.
+I do not think he is telling me the whole story.
+Perhaps I could probe him a little further.
+Menu Choice: I might have something to sell you
+Ted Harring: Really?
+Ted Harring: I thought you were a doctor.
+Daniel Baldwin: I am.
+Daniel Baldwin: And because of that, I sometimes have access to certain products in large quantities.
+Daniel Baldwin: Perhaps you could assist me with a small matter.
+Ted Harring: That depends.
+Ted Harring: Care to tell me a bit more?
+Daniel Baldwin: Not here.
+Daniel Baldwin: It is rather sensitive.
+Daniel Baldwin: Not something meant for every ear, if you take my meaning.
+Ted Harring: Fair enough.
+Ted Harring: I can keep my mouth shut when I need to.
+Daniel Baldwin: Excellent.
+Daniel Baldwin: We shall speak again later.
+Interesting.
+He is clearly willing to take part in something rather unorthodox.
+And it is equally clear he has done this sort of thing before.
+Menu Choice: You don't have anymore questions for him
 Finally, the dinner is over.
 I barely listen to Lady Claythorn talking about meeting afterwards in the tea room, and I rush to my room.
 After I have performed the well-rehearsed ritual, I ponder whether I should go down or stay in my room.
-Menu Choice: Let's go down and meet the others
-All right, where should I go first?
-Map Choice: Kitchen
-I ought to have a look downstairs. Might be something of interest there.
-Footman: Good evening, sir. I'm afraid guests aren't permitted beyond this point.
-I offer him my warmest smile.
-Daniel Baldwin: I do apologise. I'm only having a quick look. Could you make an exception?
-Daniel Baldwin: I promise I won't be long.
-Footman: If it were up to me, I'd gladly say yes.
-Footman: But Lady Claythorn was quite clear with her instructions.
-Footman: I'm sure you understand.
-Footman: Please don't take it personally.
-He says it with a warm smile of his own.
-His eyes say sorry, but there's something else there, too.
-I wonder if...
-Menu Choice: No, he clearly won't change his mind
-Daniel Baldwin: Quite right.
-Daniel Baldwin: I'll be off, then.
-Daniel Baldwin: Good evening.
-Footman: Good evening, sir.
-Map Choice: Library
-That is a well-furnished library.
-It's been a while since I've seen that many books.
-There is one already opened on a desk.
-"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
-That sounds tedious.
-But maybe I can borrow something else to read later in my room?
-I'm sure our host won't mind.
-I looked around for a book that might be of interest, and found a couple of options.
-Menu Choice: On second thought, I'd better not take anything
-Map Choice: Go to sleep
-That is quite enough for one day.
-It is late, time to go and relax.
-So I walk back to my room.
-Well, I do not have anything to do right now.
-Even though I am tired, I have too much on my mind.
-I will not be able to close my eyes.
-Luckily, I have something to help me relax.
+Menu Choice: Stay here—this might be more... enjoyable
 A flicker of doubt appears at the edge of my mind, maybe I have already had too many today.
 I could try to resist, yet the stillness of this room is unbearable.
 Being alone with my thoughts always is.

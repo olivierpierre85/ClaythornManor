@@ -28,36 +28,41 @@ Daniel Baldwin: Sure why not, thank you.
 As the butler hands me my drink, Thomas Moody enters the room.
 Thomas Moody: Doctor Baldwin, I suppose we are the first ones.
 Daniel Baldwin: It seems like it.
-Menu Choice: What do you think of this weather?
-Thomas Moody: It is not the ideal weather, but there is no reason to lose sleep over it, is there?
-Menu Choice: Tell me more about yourself.
-Thomas Moody: There is not much to say, I am afraid.
-Thomas Moody: I am a mechanic. I have been doing this since the end of the war.
-Menu Choice: That's a very noble profession
-Thomas Moody: Thank you.
-Thomas Moody: It is not saving lives, but I like it well enough.
-Menu Choice: Why were you invited here?
-Thomas Moody: Well, I suppose it is related to what I did in the war.
-Thomas Moody: But there were a lot of heroic acts that happened at that time.
-Thomas Moody: I am not sure mine was particularly exceptional.
-Thomas Moody: I suppose I am here for a different reason.
-Menu Choice: Nod, but don't engage
-Menu Choice: What do you think of this place?
-Thomas Moody: It is a decent-sized house.
-Thomas Moody: Probably originally for a wealthy local landowner.
-Thomas Moody: Though it is not large enough for an important aristocrat like a Duke or an Earl.
-Thomas Moody: I do not know much about this Lady Claythorn, but her family are probably squires or baronets.
-Thomas Moody: Unless they are just wealthy industrialists and they added the "Lady" to lend some prestige to their name.
-Thomas Moody: That would be quite outrageous if that were the case.
-Daniel Baldwin: Really? I would not have thought of that.
-Daniel Baldwin: Where did you learn all of this?
-Thomas Moody: Because I was raised in a house a bit like this one.
-Thomas Moody: I started as a bootboy when I was a wee lad, but quickly rose in rank to become a footman.
-Thomas Moody: Then the war happened and everything changed.
-Menu Choice: The war didn't change much for me
-Thomas Moody: Really?
-Thomas Moody: That is quite a unique perspective.
-Thomas Moody: How refreshing.
+Menu Choice: What room are you in?
+Thomas Moody: My room is named "Richard the Third".
+Thomas Moody: I must admit I do not know much about him.
+Menu Choice: I saw a Shakespeare's play about him
+Thomas Moody: Really? What did you learn about him?
+Daniel Baldwin: From what I remember, Shakespeare paints him as a man twisted both in body and in soul.
+Daniel Baldwin: The most impressive thing about the play was how the actor managed to convey Richard's deformity.
+Daniel Baldwin: His crooked posture, the twisted arm, the limp — all brought vividly to life upon the stage.
+Daniel Baldwin: It left no doubt in one's mind that he was meant to be both pitied and feared.
+I see Thomas Moody's gaze harden and quickly stop talking.
+I didn't realise who I was talking to.
+Well, I was not very polite here.
+I should watch what I am saying, shouldn't I?
+Menu Choice: How old are you?
+Thomas Moody: 27 years old.
+Thomas Moody: I know it is hard to guess, considering.
+Daniel Baldwin: I am sorry, I did not want to imply anything.
+Thomas Moody: Do not worry about it.
+Blast it, I did it again. I really ought to be more careful.
+Menu Choice: What do you think of the other guests?
+Thomas Moody: The other guests? You mean Miss Marsh, I presume?
+Daniel Baldwin: Well, yes, of course. She is the only one we have met so far.
+Thomas Moody: Right.
+Thomas Moody: I am not sure. She was very quiet during our journey.
+Thomas Moody: But being alone with men around her must have made her uneasy.
+Menu Choice: I can think of another reason she was uneasy
+Daniel Baldwin: Well, or it might be your... your...
+Thomas Moody: My what?
+Daniel Baldwin: No, nothing.
+He may not say anything, but he understands very well what I meant.
+I cannot believe I was rude again.
+I must sound like an absolute tosser to him now.
+Thomas Moody: Excuse me, I have something to do.
+He goes back to the bar and starts to talk to the butler, leaving me alone in a corner.
+Well that will teach me.
 After a while, Miss Marsh enters the room.
 She nods at me and heads to the bar.
 She is soon followed by an Indian man in an army uniform and an older gentleman.
@@ -66,6 +71,7 @@ The older man goes directly to the tray with drinks.
 He walks in an unsure fashion, almost bumping into the butler who swiftly avoids him.
 The military man walks towards me.
 Sushil Sinha: Hello there, I am Captain Sushil Sinha.
+As he sees the new guests coming in, Thomas Moody joins me back to greet them.
 Thomas Moody: Nice to meet you, Captain. I am Thomas Moody.
 Daniel Baldwin: Doctor Daniel Baldwin.
 Daniel Baldwin: How do you do.
@@ -110,34 +116,6 @@ I barely listen to Lady Claythorn talking about meeting afterwards in the tea ro
 After I have performed the well-rehearsed ritual, I ponder whether I should go down or stay in my room.
 Menu Choice: Let's go down and meet the others
 All right, where should I go first?
-Map Choice: Kitchen
-I ought to have a look downstairs. Might be something of interest there.
-Footman: Good evening, sir. I'm afraid guests aren't permitted beyond this point.
-I offer him my warmest smile.
-Daniel Baldwin: I do apologise. I'm only having a quick look. Could you make an exception?
-Daniel Baldwin: I promise I won't be long.
-Footman: If it were up to me, I'd gladly say yes.
-Footman: But Lady Claythorn was quite clear with her instructions.
-Footman: I'm sure you understand.
-Footman: Please don't take it personally.
-He says it with a warm smile of his own.
-His eyes say sorry, but there's something else there, too.
-I wonder if...
-Menu Choice: No, he clearly won't change his mind
-Daniel Baldwin: Quite right.
-Daniel Baldwin: I'll be off, then.
-Daniel Baldwin: Good evening.
-Footman: Good evening, sir.
-Map Choice: Library
-That is a well-furnished library.
-It's been a while since I've seen that many books.
-There is one already opened on a desk.
-"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
-That sounds tedious.
-But maybe I can borrow something else to read later in my room?
-I'm sure our host won't mind.
-I looked around for a book that might be of interest, and found a couple of options.
-Menu Choice: On second thought, I'd better not take anything
 Map Choice: Go to sleep
 That is quite enough for one day.
 It is late, time to go and relax.

@@ -10,6 +10,16 @@
     },
     {
       "menu": "broken_generic_menu_doctor",
+      "selected": "Tell me more about yourself.",
+      "redirect": "broken_generic_background"
+    },
+    {
+      "menu": "broken_generic_background_offense",
+      "selected": "That's a very noble profession",
+      "redirect": "broken_generic_background_not_offended"
+    },
+    {
+      "menu": "broken_generic_menu_doctor",
       "selected": "Why were you invited here?",
       "redirect": "broken_generic_heroic_act"
     },

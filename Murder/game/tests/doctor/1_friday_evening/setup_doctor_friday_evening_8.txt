@@ -28,36 +28,7 @@ Daniel Baldwin: Sure why not, thank you.
 As the butler hands me my drink, Thomas Moody enters the room.
 Thomas Moody: Doctor Baldwin, I suppose we are the first ones.
 Daniel Baldwin: It seems like it.
-Menu Choice: What do you think of this weather?
-Thomas Moody: It is not the ideal weather, but there is no reason to lose sleep over it, is there?
-Menu Choice: Tell me more about yourself.
-Thomas Moody: There is not much to say, I am afraid.
-Thomas Moody: I am a mechanic. I have been doing this since the end of the war.
-Menu Choice: That's a very noble profession
-Thomas Moody: Thank you.
-Thomas Moody: It is not saving lives, but I like it well enough.
-Menu Choice: Why were you invited here?
-Thomas Moody: Well, I suppose it is related to what I did in the war.
-Thomas Moody: But there were a lot of heroic acts that happened at that time.
-Thomas Moody: I am not sure mine was particularly exceptional.
-Thomas Moody: I suppose I am here for a different reason.
-Menu Choice: Nod, but don't engage
-Menu Choice: What do you think of this place?
-Thomas Moody: It is a decent-sized house.
-Thomas Moody: Probably originally for a wealthy local landowner.
-Thomas Moody: Though it is not large enough for an important aristocrat like a Duke or an Earl.
-Thomas Moody: I do not know much about this Lady Claythorn, but her family are probably squires or baronets.
-Thomas Moody: Unless they are just wealthy industrialists and they added the "Lady" to lend some prestige to their name.
-Thomas Moody: That would be quite outrageous if that were the case.
-Daniel Baldwin: Really? I would not have thought of that.
-Daniel Baldwin: Where did you learn all of this?
-Thomas Moody: Because I was raised in a house a bit like this one.
-Thomas Moody: I started as a bootboy when I was a wee lad, but quickly rose in rank to become a footman.
-Thomas Moody: Then the war happened and everything changed.
-Menu Choice: The war didn't change much for me
-Thomas Moody: Really?
-Thomas Moody: That is quite a unique perspective.
-Thomas Moody: How refreshing.
+Menu Choice: You don't have anymore questions for him
 After a while, Miss Marsh enters the room.
 She nods at me and heads to the bar.
 She is soon followed by an Indian man in an army uniform and an older gentleman.
@@ -110,34 +81,63 @@ I barely listen to Lady Claythorn talking about meeting afterwards in the tea ro
 After I have performed the well-rehearsed ritual, I ponder whether I should go down or stay in my room.
 Menu Choice: Let's go down and meet the others
 All right, where should I go first?
-Map Choice: Kitchen
-I ought to have a look downstairs. Might be something of interest there.
-Footman: Good evening, sir. I'm afraid guests aren't permitted beyond this point.
-I offer him my warmest smile.
-Daniel Baldwin: I do apologise. I'm only having a quick look. Could you make an exception?
-Daniel Baldwin: I promise I won't be long.
-Footman: If it were up to me, I'd gladly say yes.
-Footman: But Lady Claythorn was quite clear with her instructions.
-Footman: I'm sure you understand.
-Footman: Please don't take it personally.
-He says it with a warm smile of his own.
-His eyes say sorry, but there's something else there, too.
-I wonder if...
-Menu Choice: No, he clearly won't change his mind
-Daniel Baldwin: Quite right.
-Daniel Baldwin: I'll be off, then.
-Daniel Baldwin: Good evening.
-Footman: Good evening, sir.
-Map Choice: Library
-That is a well-furnished library.
-It's been a while since I've seen that many books.
-There is one already opened on a desk.
-"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain."
-That sounds tedious.
-But maybe I can borrow something else to read later in my room?
-I'm sure our host won't mind.
-I looked around for a book that might be of interest, and found a couple of options.
-Menu Choice: On second thought, I'd better not take anything
+Map Choice: George IV Bedroom
+Daniel Baldwin: Hello, is anyone there?
+There is no answer.
+My knocking slightly opens the door.
+From the hallway, I can see part of the room.
+It is in a dreadful state.
+Should I take a peek?
+I know and it's probably a bad idea and that I should close this door.
+But I've got an intrusive feeling that if don't enter, something bad will happen.
+That is obviously silly, but...
+Menu Choice: Follow your intuition, they exist for a reason{{intuition}}
+I step into the room.
+It is a dreadful mess.
+The bottles of whisky, some already emptied, give me a fair idea whose room this is.
+There is no doubt that Samuel Manning sleeps here.
+I glance around, uncertain what I am hoping to find, when I notice a letter upon the desk.
+I take it up.
+The first part is written in a fine, elegant hand.
+Letter: In case you haven't recognized him yet, the doctor invited this weekend is the same one who treated your wife years ago.
+Letter: He is the reason she never recovered, due to his inadequate treatment and withholding of medication for his own benefit.
+Letter: Do what you will with this information.
+What on earth does this mean?
+Who could have written such a thing?
+Still, what troubles me most is the second part, barely legible, most likely added later by Samuel Manning himself.
+Letter: The bastard must pay.
+Letter: Don't hesitate.
+My legs feel weak.
+I sit on the edge of the bed, struggling to make sense of it all.
+I try to remember Samuel Manning, but I cannot say for certain that I ever treated his wife.
+That does not mean the charge is false.
+I know I have done similar things to a good many patients. Mrs Manning may well have been among them, and I have simply forgotten.
+One thing is certain though. Someone in this house means me harm.
+And they are trying to use Samuel Manning to hurt me.
+I say they, but it is plain enough who must have written this note.
+Lady Claythorn invited me here. She is the most obvious culprit.
+In that case my invitation here was no kindly whim, but a deliberate act.
+Yet I cannot be sure, for I did not recognise her at all when we were introduced.
+But that, again, may mean very little.
+It could, of course, be an extraordinary coincidence.
+Perhaps some enemy of mine is numbered among the guests, and Lady Claythorn has nothing at all to do with this.
+It is not very likely, yet not impossible.
+What am I to do now.
+The prudent course might be to warn everyone and abandon the whole business.
+But I have no notion how any of them would react to such an announcement.
+That could mean sacrificing the prize money.
+And if this letter were to be spoken of outside these walls, it might cost me my practice as well.
+I cannot afford that.
+Besides, this could yet prove no more than a cruel jest, or some wretched misunderstanding.
+If I remain, nothing more may come of it.
+I need only be on my guard, and watch Samuel Manning closely.
+I must decide.
+Do I risk my life, or do I risk losing the kind of money that would set me up comfortably for years to come.
+Menu Choice: Do not risk losing the money — stay
+I do not believe I am in any great danger.
+I shall stay, though I must be cautious from now on.
+Especially around Samuel Manning.
+And I should try to discover who could have written this wretched letter.
 Map Choice: Go to sleep
 That is quite enough for one day.
 It is late, time to go and relax.

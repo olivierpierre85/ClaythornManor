@@ -1,0 +1,251 @@
+Chapter: The Arrival
+Character: Daniel Baldwin
+We all reach the hall together, leaving the driver to look after our luggage.
+Butler: Welcome everyone.
+Butler: You are the first guests to arrive for this week-end event.
+Butler: It's a bit early, so it may take a while before others arrive. In the meantime, let me show you to your rooms.
+Butler: You can rest there a bit, there will be drinks later in the tea room.
+Daniel Baldwin: Perfect, when should we meet later?
+Butler: Around four I believe.
+I quickly check my pocket watch.
+That would leave me at least one hour of solitude in my room.
+That's perfect.
+Butler: If you don't have any more questions, please follow me upstairs.
+The butler shows me to my room first.
+I quickly settle in and wait for five minutes for the driver to bring my bag back.
+Now I can finally relax.
+Footman: Doctor Baldwin, the tea room has been set for drinks.
+Footman: You can come down if you are ready.
+Daniel Baldwin: Very, very well.
+Daniel Baldwin: I will be there soon.
+Daniel Baldwin: Thank you.
+I am not sure how long I've been out.
+It's better if I hurry downstairs so I do not appear suspicious.
+Well, it looks like I am the first one.
+There was no reason to rush.
+Butler: Doctor Baldwin, would you like a glass of sherry?
+Daniel Baldwin: Sure why not, thank you.
+As the butler hands me my drink, Thomas Moody enters the room.
+Thomas Moody: Doctor Baldwin, I suppose we are the first ones.
+Daniel Baldwin: It seems like it.
+Menu Choice: You don't have anymore questions for him
+After a while, Miss Marsh enters the room.
+She nods at me and heads to the bar.
+She is soon followed by an Indian man in an army uniform and an older gentleman.
+They must have just arrived from the station.
+The older man goes directly to the tray with drinks.
+He walks in an unsure fashion, almost bumping into the butler who swiftly avoids him.
+The military man walks towards me.
+Sushil Sinha: Hello there, I am Captain Sushil Sinha.
+Thomas Moody: Nice to meet you, Captain. I am Thomas Moody.
+Daniel Baldwin: Doctor Daniel Baldwin.
+Daniel Baldwin: How do you do.
+Sushil Sinha: Nice to meet you both.
+Thomas Moody: And who is the gentleman over there?
+Sushil Sinha: That would be Samuel Manning.
+Sushil Sinha: I am afraid he had a bit too much to drink.
+Sushil Sinha: But don't worry about him.
+We all glance at him from afar as he fills a water glass to the brim with sherry.
+He then proceeds to chug it in one sip.
+After that, he sits down on the sofa next to him and immediately falls asleep.
+Sushil Sinha: Well, that should keep him still for a while.
+Daniel Baldwin: Indeed, it's impressive that...
+Sushil Sinha: It reminds me of a fellow I knew back in the Army.
+Sushil Sinha: He was my superior, but I swear I never saw him sober.
+Sushil Sinha: Even in the mornings, he was always still drunk from the day before.
+He proceeds to tell a tedious story about its time in the military.
+I try to concentrate on what he is saying but I can't focus.
+So I just nod in agreement and wonder when I will be able to go quietly back to my room.
+I am brutally awoken from my daydreaming by the dinner gong.
+I barely even notice what has happened over the past few hours.
+Everyone is heading towards the dining area, so I go with them.
+My place is at the end of the table.
+That is better because I don't feel like talking too much.
+Then, the host finally joins us.
+Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
+Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
+Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
+Lady Claythorn: I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
+Lady Claythorn: I realise the invitation letter you received was somewhat vague, so let me clarify its contents now.
+Lady Claythorn: My first gift to you is a stay at my manor.
+Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
+Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
+Lady Claythorn: My second gift is a sum of one thousand pounds, awarded to each and every one of you.
+Lady Claythorn: This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
+Following her speech, our host settles back down in her chair.
+This speech is quickly followed by the first course.
+I look who I have on my side, it's a young man I didn't even notice before.
+Menu Choice: Just keep to yourself
+Finally, the dinner is over.
+I barely listen to Lady Claythorn talking about meeting afterwards in the tea room, and I rush to my room.
+After I have performed the well-rehearsed ritual, I ponder whether I should go down or stay in my room.
+Menu Choice: Let's go down and meet the others
+All right, where should I go first?
+Map Choice: George IV Bedroom
+Daniel Baldwin: Hello, is anyone there?
+There is no answer.
+My knocking slightly opens the door.
+From the hallway, I can see part of the room.
+It is in a dreadful state.
+Should I take a peek?
+I know and it's probably a bad idea and that I should close this door.
+But I've got an intrusive feeling that if don't enter, something bad will happen.
+That is obviously silly, but...
+Menu Choice: Follow your intuition, they exist for a reason{{intuition}}
+I step into the room.
+It is a dreadful mess.
+The bottles of whisky, some already emptied, give me a fair idea whose room this is.
+There is no doubt that Samuel Manning sleeps here.
+I glance around, uncertain what I am hoping to find, when I notice a letter upon the desk.
+I take it up.
+The first part is written in a fine, elegant hand.
+Letter: In case you haven't recognized him yet, the doctor invited this weekend is the same one who treated your wife years ago.
+Letter: He is the reason she never recovered, due to his inadequate treatment and withholding of medication for his own benefit.
+Letter: Do what you will with this information.
+What on earth does this mean?
+Who could have written such a thing?
+Still, what troubles me most is the second part, barely legible, most likely added later by Samuel Manning himself.
+Letter: The bastard must pay.
+Letter: Don't hesitate.
+My legs feel weak.
+I sit on the edge of the bed, struggling to make sense of it all.
+I try to remember Samuel Manning, but I cannot say for certain that I ever treated his wife.
+That does not mean the charge is false.
+I know I have done similar things to a good many patients. Mrs Manning may well have been among them, and I have simply forgotten.
+One thing is certain though. Someone in this house means me harm.
+And they are trying to use Samuel Manning to hurt me.
+I say they, but it is plain enough who must have written this note.
+Lady Claythorn invited me here. She is the most obvious culprit.
+In that case my invitation here was no kindly whim, but a deliberate act.
+Yet I cannot be sure, for I did not recognise her at all when we were introduced.
+But that, again, may mean very little.
+It could, of course, be an extraordinary coincidence.
+Perhaps some enemy of mine is numbered among the guests, and Lady Claythorn has nothing at all to do with this.
+It is not very likely, yet not impossible.
+What am I to do now.
+The prudent course might be to warn everyone and abandon the whole business.
+But I have no notion how any of them would react to such an announcement.
+That could mean sacrificing the prize money.
+And if this letter were to be spoken of outside these walls, it might cost me my practice as well.
+I cannot afford that.
+Besides, this could yet prove no more than a cruel jest, or some wretched misunderstanding.
+If I remain, nothing more may come of it.
+I need only be on my guard, and watch Samuel Manning closely.
+I must decide.
+Do I risk my life, or do I risk losing the kind of money that would set me up comfortably for years to come.
+Menu Choice: Do not risk your life — leave this place
+Why am I even considering staying here?
+I should leave at once and warn the others.
+I believe they are all gathered in the billiard room.
+If Lady Claythorn truly is behind this, I would rather face her with witnesses than wait alone for whatever she has planned.
+I find most of them assembled around Captain Sinha.
+I interrupt him.
+Daniel Baldwin: Pardon me, Captain, but I have something you should see.
+I hand him the letter.
+He reads it aloud to the assembled company.
+Sushil Sinha: What is the meaning of this?
+Sushil Sinha: Where did you find it?
+Daniel Baldwin: In Samuel Manning's room.
+Sushil Sinha: Really? And what were you doing there?
+Daniel Baldwin: The door was open, and I was—
+Samuel Manning: Wait, you went into my room?
+Samuel Manning: What gave you the right to do such a thing?
+Daniel Baldwin: That is not the issue. How do you explain this letter?
+Samuel Manning: I have never seen it before.
+Samuel Manning: It isn't mine.
+Daniel Baldwin: Truly? And we are supposed to take you at your word?
+Samuel Manning: I don't see why anyone should believe you either.
+Samuel Manning: A man who thinks it proper to barge into another's room.
+Samuel Manning: Unless, of course, you did not enter it at all, and wrote this yourself.
+Daniel Baldwin: Why on earth would I do that? It makes no sense.
+Samuel Manning: No less sense than what you're implying, Doctor.
+Samuel Manning: Do you truly expect anyone here to believe you?
+I glance around the room. All eyes are upon us.
+The others look perplexed, unsure what to make of the exchange.
+Silence lingers until Captain Sinha finally speaks.
+Sushil Sinha: There is something amiss here, though I cannot tell who is at fault.
+Daniel Baldwin: Surely it cannot be me. Just look at Samuel Manning.
+Daniel Baldwin: Is he even sober enough to make sense?
+Samuel Manning: What makes you say I am drunk?
+Samuel Manning: I can gather my wits when the occasion calls for it.
+Sushil Sinha: Enough, both of you.
+Sushil Sinha: I do not understand any of this. We should think it over with cooler heads.
+Sushil Sinha: Lady Claythorn, what do you make of it?
+Our hostess is visibly shaken, yet manages to reply.
+I watch her closely.
+If she wrote the first part of that letter, then this is her handiwork laid bare before everyone.
+Yet I cannot tell whether her distress is genuine horror or a performance.
+Lady Claythorn: I, I don't know.
+Lady Claythorn: I'm not certain whom to believe.
+Lady Claythorn: What do you suggest, Captain?
+Sushil Sinha: We shan't settle this now. It requires thought.
+Sushil Sinha: I propose we confine the two of you to your rooms until we reach a conclusion.
+Daniel Baldwin: What? No.
+Daniel Baldwin: I must leave this place at once. I am not safe here.
+Sushil Sinha: It's far too late to leave now. The storm makes travel dangerous.
+Sushil Sinha: You'll be safer in your room.
+I ponder that for a moment. The storm is raging outside, leaving now would be perilous.
+Yet staying in my room hardly feels safer, not with Samuel Manning and perhaps Lady Claythorn herself set against me.
+The others watch me uneasily. I can tell they do not quite believe me.
+Daniel Baldwin: Very well, I'll go to my room.
+Daniel Baldwin: But I want your word that I will be allowed to leave at first light.
+Daniel Baldwin: I do not wish to remain here a moment longer than necessary.
+Sushil Sinha: You have my word, Doctor.
+Sushil Sinha: And you, Mr Manning?
+Samuel Manning: All right, I'll go to my room as well.
+Samuel Manning: It's late enough.
+Sushil Sinha: Then it's settled. Please, follow me, Doctor Baldwin.
+Captain Sinha escorts me to my room.
+The butler and Lady Claythorn accompany Samuel Manning to his.
+I am far from reassured, yet see no alternative.
+I enter my room as the Captain remain outside.
+Sushil Sinha: My apologies, Doctor Baldwin. I am sure we shall sort this out soon enough.
+Sushil Sinha: In the meantime, we shall have to lock you in.
+Before he can close the door, I lower my voice.
+Daniel Baldwin: Captain, between ourselves, you must see what this implies.
+Daniel Baldwin: Lady Claythorn invited us both here.
+Daniel Baldwin: She is in all likelihood the one who wrote that letter to Samuel Manning.
+Daniel Baldwin: Which means something dangerous may be at play here.
+He hesitates, then answers just as quietly.
+Sushil Sinha: I cannot deny the thought has crossed my mind.
+Sushil Sinha: But from my point of view, I have only an anonymous letter that you say you found in rather singular circumstances.
+Sushil Sinha: I cannot possibly accuse our hostess openly on that alone.
+Daniel Baldwin: I understand your position, but please keep it in mind, and be careful.
+Sushil Sinha: You have my word.
+He leaves me alone, so I lock my door and do what I can to secure it.
+I have no intention of sitting idly by, so I barricade the door in case Manning, or even Lady Claythorn herself, decides to pay a visit.
+Now all I can do is wait.
+After what feels like hours, someone knocks at my door.
+Sushil Sinha: Doctor Baldwin, after some discussion, we have decided you may be right in one respect.
+Sushil Sinha: There is too much here that does not add up.
+Sushil Sinha: We shall all leave in the morning.
+Sushil Sinha: For the time being, we shall all rest easier if you and Mister Manning stay in your rooms for the night.
+Sushil Sinha: I did not dare accused Lady Claythorn directly, but I will also keep an eye her.
+Good, he has not dismissed my suspicions entirely.
+Daniel Baldwin: Very well. I have barricaded myself anyway.
+Sushil Sinha: A wise precaution, Doctor. Again, my apologies.
+Daniel Baldwin: Of course, I understand, Captain. Good night.
+Sushil Sinha: Good night, Doctor.
+At least this dreadful business will soon be over.
+What am I to do now?
+I do not think I could sleep in this state.
+And perhaps it is better to stay alert.
+But on the other hand, I think I am protected enough here.
+Menu Choice: I know something that will help me sleep
+I am far too tense.
+Despite the risk, I cannot resist the urge to calm my nerves.
+A flicker of doubt appears at the edge of my mind, maybe I have already had too many today.
+I could try to resist, yet the stillness of this room is unbearable.
+Being alone with my thoughts always is.
+It feels as though I have no choice at all.
+So I prepare myself for the familiar ritual.
+It takes only a moment before everything is in place.
+My hand trembles slightly as I raise the spoon to my lips.
+The bitter draught slides down my throat, and I wait for its sweet relaxing effect.
+My pulse slows. The room tilts.
+My eyelids grow heavy.
+The voices that have tormented me all my life at last fall quiet.
+All is silent now.
+You thought you could manage it, but you were mistaken.
+That last spoonful was one too many.
+You will have to be more careful next time.
