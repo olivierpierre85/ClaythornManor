@@ -11,3 +11,7 @@ testsuite doctor:
     testcase saturday_morning:
         python:
             test.run_chapter(doctor_details, "saturday_morning", "doctor_day2_morning")
+
+    testcase saturday_afternoon:
+        python:
+            test.run_chapter(doctor_details, "saturday_afternoon", "doctor_day2_hunt")

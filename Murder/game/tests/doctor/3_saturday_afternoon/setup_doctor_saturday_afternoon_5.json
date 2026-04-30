@@ -1,0 +1,19 @@
+{
+    "start_label": "doctor_day2_hunt",
+    "unlocked_threads": [
+        "book_opium"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "Tell me more about yourself.",
+            "redirect": "lad_generic_background_doctor"
+        },
+        {
+            "menu": "lad_generic_background_doctor",
+            "selected": "I might have something to sell you",
+            "redirect": "lad_generic_background_doctor_thief"
+        }
+    ]
+}

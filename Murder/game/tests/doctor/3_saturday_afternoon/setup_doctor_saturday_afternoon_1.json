@@ -1,0 +1,22 @@
+{
+    "start_label": "doctor_day2_hunt",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "What room are you in?",
+            "redirect": "lad_generic_room_doctor"
+        },
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "What do you think of this place?",
+            "redirect": "lad_generic_manor"
+        },
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "How old are you?",
+            "redirect": "lad_generic_age"
+        }
+    ]
+}

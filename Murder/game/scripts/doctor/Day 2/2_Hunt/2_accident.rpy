@@ -367,15 +367,3 @@ label doctor_day2_hunt_accident_confront_drunk:
     $ drunk_details.description_hidden.unlock('wife') 
 
     jump doctor_day2_evening
-
-
-label doctor_day2_hunt_accident_death_not_careful:
-
-
-    """
-    I am lost in my thoughts when I a hear the voice of Samuel Manning shouting.
-
-    For a second I have forgotten to watch him.
-    """
-
-    return

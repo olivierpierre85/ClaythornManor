@@ -1,0 +1,98 @@
+Chapter: The Hunt
+Character: Daniel Baldwin
+As I had no reason to remain behind, I changed for the hunt.
+Fortunately, I had thought to bring more suitable outdoor clothes for the weekend.
+It was not difficult to imagine that a hunt would be on the agenda.
+Lady Claythorn may pretend it is arranged for our benefit, yet I suspect she will enjoy it most of all.
+She might even have planned the entire weekend simply for the pleasure of today's event.
+After all, I doubt she can readily find hunting partners in so isolated a place.
+In any case, the butler has provided me with a hunting rifle.
+It has been some time since I last handled one, yet I dare say I will remember how to use it.
+I step outside to join the others.
+To my surprise, Samuel Manning is there as well.
+I must watch him carefully.
+However drunk he appeared this morning, it does not mean he is any less dangerous.
+I notice the butler walking just behind Lady Claythorn.
+The footman is there as well.
+He is attending to Ted Harring, who looks somewhat out of place.
+The butler clears his throat and addresses us.
+Butler: Good, now that everyone is ready, I propose we split into two groups.
+Butler: It will be easier to spot game that way.
+I have barely a moment to gather my thoughts before Samuel Manning is upon me.
+Samuel Manning: Doctor, I would be honoured to partner with you.
+Samuel Manning: You don't mind, do you?
+He is too eager to join me.
+It may mean he is ready to make good on his threat.
+I am anxious, yet also curious.
+I cannot back out now.
+Daniel Baldwin: No, of course. We may go together.
+Samuel Manning: Splendid!
+Samuel Manning: We shall have a jolly time.
+Ted Harring: You don't mind if I tag along as well, do you?
+Daniel Baldwin: Of course not.
+Daniel Baldwin: Do come with us, Mr Harring.
+Butler: Excellent.
+Butler: The parties are settled.
+Butler: Let us have a pleasant afternoon.
+Our little group made its way into the forest.
+We walked for a while yet encountered nothing.
+So we stopped for luncheon.
+The footman is exceedingly professional and remains silent whilst preparing our food.
+If Samuel Manning seemed somewhat sobered at first, he now appears intent on making up for lost drinking.
+He has a flask which I assume is whisky, and he has been drinking from it non-stop since the start of the hunt.
+If I trust the content of the letter, he looks like he is summoning the courage to do something terrible.
+I feel like I should talk to him before he is too drunk.
+On the other hand, it could be prudent to wait for a better time.
+If I am on my guard, I could probably avoid him until the hunt is over.
+Menu Choice: Confront the drunk man with a gun {{object}}
+I summon the courage to go and speak to Samuel Manning.
+Ted Harring does not follow me, he probably wants nothing to do with him.
+Daniel Baldwin: Mr Manning?
+He looks bewildered that I am addressing him.
+Samuel Manning: Hum... yes?
+Daniel Baldwin: I was wondering if we could talk alone for a moment.
+Daniel Baldwin: I have rather a sensitive subject to broach with you.
+Samuel Manning: Well, hum... yes, I suppose we could, of course.
+Daniel Baldwin: Very well, if you would come this way.
+Samuel Manning: Fine.
+I move a few paces from our luncheon place, far enough to be out of earshot.
+But close enough that, if something happens, they can join us quickly.
+Daniel Baldwin: Here is perfect, Mr Manning.
+Samuel Manning: All right, what is it, doctor?
+I see no reason to beat about the bush.
+Daniel Baldwin: It is about the letter I found in your room, the one where you wrote that "I must pay".
+This confession seems to take him by surprise.
+But he quickly regains his composure, and speaks in a more assertive tone.
+Any trace of intoxication is gone from his face.
+He was likely faking it.
+I should have guessed.
+Samuel Manning: What were you doing in my room?
+Samuel Manning: Who gave you permission?
+Samuel Manning: But I should not be surprised, doctors do as they please.
+Samuel Manning: They always do.
+Daniel Baldwin: That is not the point, you wrote that you wanted to hurt me, and I am not even certain I know why.
+My words strike him strongly, and he answers in anger.
+Samuel Manning: You do not know why?!!!
+Samuel Manning: I thought it was clear enough!
+Samuel Manning: You killed her.
+Samuel Manning: My poor Margaret.
+Samuel Manning: My God, you stood by her bedside and watched her slip away.
+Samuel Manning: And now you come here as though nothing happened, you probably do not even remember, do you?
+Samuel Manning: Is it because you killed so many of them?
+I am dumbstruck, I cannot find the right words to say.
+Samuel Manning raises his gun and points it at me.
+Daniel Baldwin: Lower the weapon, Mr Manning.
+Daniel Baldwin: It's a misunderstanding, someone is manipulating you.
+Daniel Baldwin: They want you to do this.
+Samuel Manning: Well, that is all right, because I want to do it too.
+He is about to shoot, so I jump towards him.
+He misses me and I am on him.
+We struggle.
+I grab his rifle and try to wrestle it out of his arms.
+For a moment everything is silent, until I feel the weight of Samuel Manning against me.
+I push him and he collapses at my feet.
+The rifle lies beside him.
+I kneel at once, though a single glance tells me the truth.
+He has shot himself in the chest during the fight.
+Daniel Baldwin: Dear God.
+Daniel Baldwin: What have I done.

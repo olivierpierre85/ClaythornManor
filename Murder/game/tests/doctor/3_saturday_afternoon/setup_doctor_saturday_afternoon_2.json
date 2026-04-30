@@ -1,0 +1,34 @@
+{
+    "start_label": "doctor_day2_hunt",
+    "unlocked_threads": [
+        "drunk_letter"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_hunt_accident",
+            "selected": "Ignore him and talk with Ted Harring",
+            "redirect": "doctor_day2_hunt_accident_lad_conversation"
+        },
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "What do you think of the other guests?",
+            "redirect": "lad_generic_other_guests_saturday_doctor"
+        },
+        {
+            "menu": "lad_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Samuel Manning?",
+            "redirect": "lad_generic_drunk_hunt_doctor"
+        },
+        {
+            "menu": "lad_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Sushil Sinha?",
+            "redirect": "lad_generic_captain_hunt_doctor"
+        },
+        {
+            "menu": "lad_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Lady Claythorn?",
+            "redirect": "lad_generic_host_hunt_doctor"
+        }
+    ]
+}

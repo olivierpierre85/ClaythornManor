@@ -1,0 +1,14 @@
+{
+    "start_label": "doctor_day2_hunt",
+    "unlocked_threads": [
+        "drunk_letter"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_hunt_accident",
+            "selected": "Confront the drunk man with a gun {{object}}",
+            "redirect": "doctor_day2_hunt_accident_confront_drunk"
+        }
+    ]
+}

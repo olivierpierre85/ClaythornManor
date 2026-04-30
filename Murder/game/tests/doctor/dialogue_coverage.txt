@@ -1,143 +1,11 @@
-Generated:                2026-04-30 11:22:43
+Generated:                2026-04-30 17:22:00
 Scope:                    character=doctor
 Dialogue entries scanned: 1842
-Test lines collected:     2597
-Covered:                  533
-Missing:                  1309
+Test lines collected:     2918
+Covered:                  669
+Missing:                  1173
 
-  game/scripts/doctor/Day 2/2_Hunt/1_main.rpy  (36 missing)
-    [doctor_day2_hunt_feeba281] As I had no reason to remain behind, I changed for the hunt.
-    [doctor_day2_hunt_131245fd] Fortunately, I had thought to bring more suitable outdoor clothes for the weekend.
-    [doctor_day2_hunt_834e5b97] It was not difficult to imagine that a hunt would be on the agenda.
-    [doctor_day2_hunt_3c6980ef] Lady Claythorn may pretend it is arranged for our benefit, yet I suspect she will enjoy it most of all.
-    [doctor_day2_hunt_6408ce33] She might even have planned the entire weekend simply for the pleasure of today's event.
-    [doctor_day2_hunt_6b4c006c] After all, I doubt she can readily find hunting partners in so isolated a place.
-    [doctor_day2_hunt_8be3d935] In any case, the butler has provided me with a hunting rifle.
-    [doctor_day2_hunt_22191561] It has been some time since I last handled one, yet I dare say I will remember how to use it.
-    [doctor_day2_hunt_f29cf66c] I step outside to join the others.
-    [doctor_day2_hunt_8ed0e6c4] To my surprise, Samuel Manning is there as well.
-    [doctor_day2_hunt_5e55cfb9] I must watch him carefully.
-    [doctor_day2_hunt_cd3f4ea8] However drunk he appeared this morning, it does not mean he is any less dangerous.
-    [doctor_day2_hunt_3b2ce31e] I can only hope he has sobered up.
-    [doctor_day2_hunt_201d178b] I notice the butler walking just behind Lady Claythorn.
-    [doctor_day2_hunt_7a071d13] Andrew is there too.
-    [doctor_day2_hunt_3cf67f4f] The footman is there as well.
-    [doctor_day2_hunt_72d3ea17] He is attending to Ted Harring, who looks somewhat out of place.
-    [doctor_day2_hunt_5c89e972] The butler clears his throat and addresses us.
-    [doctor_day2_hunt_fdd2cf09] I have barely a moment to gather my thoughts before Samuel Manning is upon me.
-    [doctor_day2_hunt_3c409755] Doctor, I would be honoured to partner with you.
-    [doctor_day2_hunt_43b993aa] You don't mind, do you?
-    [doctor_day2_hunt_d9cc6119] He is too eager to join me.
-    [doctor_day2_hunt_1e804dcc] It may mean he is ready to make good on his threat.
-    [doctor_day2_hunt_440cb9b0] I am anxious, yet also curious.
-    [doctor_day2_hunt_ff92da26] I cannot back out now.
-    [doctor_day2_hunt_82ee798a] No, of course. We may go together.
-    [doctor_day2_hunt_1719d099] I cannot find the words to politely refuse him.
-    [doctor_day2_hunt_49ca4043] Well... no, of course not.
-    [doctor_day2_hunt_40e580ac] Splendid!
-    [doctor_day2_hunt_0dd22886] We shall have a jolly time.
-    [doctor_day2_hunt_7a468fe4] You don't mind if I tag along as well, do you?
-    [doctor_day2_hunt_f90314e5] Andrew stands at his side and gives me a meaningful look.
-    [doctor_day2_hunt_e0fa7bb7] Of course not.
-    [doctor_day2_hunt_d3d3e965] Do come with us, Mr Harring.
-    [doctor_day2_hunt_dfb9b20a] The parties are settled.
-    [doctor_day2_hunt_9dbc3bf1] Let us have a pleasant afternoon.
-
-  game/scripts/doctor/Day 2/2_Hunt/2_accident.rpy  (96 missing)
-    [doctor_day2_hunt_accident_3a0704b3] Our little group made its way into the forest.
-    [doctor_day2_hunt_accident_65075f38] We walked for a while yet encountered nothing.
-    [doctor_day2_hunt_accident_520cae1d] So we stopped for luncheon.
-    [doctor_day2_hunt_accident_c0e4fe58] I should like to speak further with Andrew, but he is exceedingly cautious and professional.
-    [doctor_day2_hunt_accident_95529b15] He does not respond to any of my meaningful looks.
-    [doctor_day2_hunt_accident_afa7b44a] I understand only too well that there is no sense in risking discovery here.
-    [doctor_day2_hunt_accident_14fb8f39] With luck, I shall see more of him later.
-    [doctor_day2_hunt_accident_eee629bd] The footman is exceedingly professional and remains silent whilst preparing our food.
-    [doctor_day2_hunt_accident_f25169d7] If Samuel Manning seemed somewhat sobered at first, he now appears intent on making up for lost drinking.
-    [doctor_day2_hunt_accident_3dd98303] He has a flask which I assume is whisky, and he has been drinking from it non-stop since the start of the h...
-    [doctor_day2_hunt_accident_5d5ba578] If I trust the content of the letter, he looks like he is summoning the courage to do something terrible.
-    [doctor_day2_hunt_accident_665a8cbd] I feel like I should talk to him before he is too drunk.
-    [doctor_day2_hunt_accident_b36daddd] On the other hand, it could be prudent to wait for a better time.
-    [doctor_day2_hunt_accident_4c84cc85] If I am on my guard, I could probably avoid him until the hunt is over.
-    [doctor_day2_hunt_accident_35bfd098] I am concerned he is in no condition to handle a gun.
-    [doctor_day2_hunt_accident_a15a4475] He mutters to himself and I have no wish to engage him.
-    [doctor_day2_hunt_accident_f2ebd7ff] Only Ted Harring is willing to make conversation, so I address him.
-    [doctor_day2_hunt_accident_74bf26b3] As I did this morning, I take care to keep Samuel Manning within my line of sight.
-    [doctor_day2_hunt_accident_25f5fc6f] At first, it seems the afternoon will be as uneventful as the morning.
-    [doctor_day2_hunt_accident_b87f2cc0] I walk on mechanically, without thinking.
-    [doctor_day2_hunt_accident_13010ae6] Finding an animal to shoot is far from my mind.
-    [doctor_day2_hunt_accident_86fef780] The fact is that I have begun to notice the first symptoms of withdrawal.
-    [doctor_day2_hunt_accident_f78e1e49] I am sweating profusely, I have cramps, and my hands have begun to tremble.
-    [doctor_day2_hunt_accident_3d3364c0] Hardly ideal for holding a gun.
-    [doctor_day2_hunt_accident_2f692f2e] I knew this was coming, and I am worried now.
-    [doctor_day2_hunt_accident_62895014] From what I have seen in my patients, it will not be easy to manage.
-    [doctor_day2_hunt_accident_81770c61] I hope I can govern it well enough that no one notices.
-    [doctor_day2_hunt_accident_7349e2c9] Despite my caution, my gaze is drawn again and again to Andrew, looking rather dashing in his footman's liv...
-    [doctor_day2_hunt_accident_05acd577] I wonder if we shall see one another tonight.
-    [doctor_day2_hunt_accident_f3a9a6c7] I regret not taking my "medicine" with me.
-    [doctor_day2_hunt_accident_fbd28198] All I can think about is when I shall be alone in my room again.
-    [doctor_day2_hunt_accident_6421295d] I hope we shall not hunt for much longer.
-    [doctor_day2_hunt_accident_bbfffb53] I am lost in my thoughts when I hear Samuel Manning shout.
-    [doctor_day2_hunt_accident_560011e9] Damn it, for a moment I have let him out of my sight.
-    [doctor_day2_hunt_accident_858af6aa] I am roused from my stupor by Samuel Manning.
-    [doctor_day2_hunt_accident_ef5724c8] Very quickly I start to enjoy the familiar feeling of calm.
-    [doctor_day2_hunt_accident_0441703d] It won't be long now.
-    [doctor_day2_hunt_accident_08e0bd75] Ironically, I truly believe I would have managed to quit this time.
-    [doctor_day2_hunt_accident_d41be79c] Ironically, this is likely how I was meant to go anyway.
-    [doctor_day2_hunt_accident_lad_conversation_044ccf17] How are you getting on Mr Harring?
-    [doctor_day2_hunt_accident_lad_conversation_692de59a] Very well Doctor.
-    [doctor_day2_hunt_accident_lad_conversation_a60ec41e] Well, that was hardly the most stimulating conversation.
-    [doctor_day2_hunt_accident_lad_conversation_18a9d7c2] Still, I suppose we're ready to keep going with the hunt.
-    [doctor_day2_hunt_accident_lad_conversation_080afc29] After a short while, we're ready to keep going with the hunt.
-    [doctor_day2_hunt_accident_confront_drunk_0e295a49] I summon the courage to go and speak to Samuel Manning.
-    [doctor_day2_hunt_accident_confront_drunk_59443129] Ted Harring does not follow me, he probably wants nothing to do with him.
-    [doctor_day2_hunt_accident_confront_drunk_884b4436] Mr Manning?
-    [doctor_day2_hunt_accident_confront_drunk_be77712e] He looks bewildered that I am addressing him.
-    [doctor_day2_hunt_accident_confront_drunk_485067b6] Hum... yes?
-    [doctor_day2_hunt_accident_confront_drunk_8a0c63f1] I was wondering if we could talk alone for a moment.
-    [doctor_day2_hunt_accident_confront_drunk_203f2e8c] I have rather a sensitive subject to broach with you.
-    [doctor_day2_hunt_accident_confront_drunk_7324f1bb] Well, hum... yes, I suppose we could, of course.
-    [doctor_day2_hunt_accident_confront_drunk_ce89efa3] Very well, if you would come this way.
-    [doctor_day2_hunt_accident_confront_drunk_84bfd813] I move a few paces from our luncheon place, far enough to be out of earshot.
-    [doctor_day2_hunt_accident_confront_drunk_07fb182d] But close enough that, if something happens, they can join us quickly.
-    [doctor_day2_hunt_accident_confront_drunk_e186e7c6] Here is perfect, Mr Manning.
-    [doctor_day2_hunt_accident_confront_drunk_e3f672ed] All right, what is it, doctor?
-    [doctor_day2_hunt_accident_confront_drunk_3f3ecb20] I see no reason to beat about the bush.
-    [doctor_day2_hunt_accident_confront_drunk_fb5a7461] It is about the letter I found in your room, the one where you wrote that "I must pay".
-    [doctor_day2_hunt_accident_confront_drunk_3fbdbc08] This confession seems to take him by surprise.
-    [doctor_day2_hunt_accident_confront_drunk_72bc49d5] But he quickly regains his composure, and speaks in a more assertive tone.
-    [doctor_day2_hunt_accident_confront_drunk_0fa23770] Any trace of intoxication is gone from his face.
-    [doctor_day2_hunt_accident_confront_drunk_65473ac4] He was likely faking it.
-    [doctor_day2_hunt_accident_confront_drunk_914e3e4b] I should have guessed.
-    [doctor_day2_hunt_accident_confront_drunk_da4ee6d6] What were you doing in my room?
-    [doctor_day2_hunt_accident_confront_drunk_92c59104] Who gave you permission?
-    [doctor_day2_hunt_accident_confront_drunk_34c34376] But I should not be surprised, doctors do as they please.
-    [doctor_day2_hunt_accident_confront_drunk_8ff19f2d] They always do.
-    [doctor_day2_hunt_accident_confront_drunk_4333a46c] That is not the point, you wrote that you wanted to hurt me, and I am not even certain I know why.
-    [doctor_day2_hunt_accident_confront_drunk_1fd1b5ae] My words strike him strongly, and he answers in anger.
-    [doctor_day2_hunt_accident_confront_drunk_7f594ca9] You do not know why?!!!
-    [doctor_day2_hunt_accident_confront_drunk_8a95e3af] I thought it was clear enough!
-    [doctor_day2_hunt_accident_confront_drunk_4ee18d7a] You killed her.
-    [doctor_day2_hunt_accident_confront_drunk_8a004263] My poor Margaret.
-    [doctor_day2_hunt_accident_confront_drunk_c5ccc71d] My God, you stood by her bedside and watched her slip away.
-    [doctor_day2_hunt_accident_confront_drunk_8948cb6e] And now you come here as though nothing happened, you probably do not even remember, do you?
-    [doctor_day2_hunt_accident_confront_drunk_7ed8776d] Is it because you killed so many of them?
-    [doctor_day2_hunt_accident_confront_drunk_4c5b3459] I am dumbstruck, I cannot find the right words to say.
-    [doctor_day2_hunt_accident_confront_drunk_56d2243c] Samuel Manning raises his gun and points it at me.
-    [doctor_day2_hunt_accident_confront_drunk_50b3158d] Lower the weapon, Mr Manning.
-    [doctor_day2_hunt_accident_confront_drunk_afaa9569] It's a misunderstanding, someone is manipulating you.
-    [doctor_day2_hunt_accident_confront_drunk_691673c9] They want you to do this.
-    [doctor_day2_hunt_accident_confront_drunk_1516056a] Well, that is all right, because I want to do it too.
-    [doctor_day2_hunt_accident_confront_drunk_b49c6047] He is about to shoot, so I jump towards him.
-    [doctor_day2_hunt_accident_confront_drunk_fe461a0e] He misses me and I am on him.
-    [doctor_day2_hunt_accident_confront_drunk_79c801eb] We struggle.
-    [doctor_day2_hunt_accident_confront_drunk_4fc55ba9] I grab his rifle and try to wrestle it out of his arms.
-    [doctor_day2_hunt_accident_confront_drunk_d6de9cc8] For a moment everything is silent, until I feel the weight of Samuel Manning against me.
-    [doctor_day2_hunt_accident_confront_drunk_82eea8a3] I push him and he collapses at my feet.
-    [doctor_day2_hunt_accident_confront_drunk_f70312b1] The rifle lies beside him.
-    [doctor_day2_hunt_accident_confront_drunk_f3bb9891] I kneel at once, though a single glance tells me the truth.
-    [doctor_day2_hunt_accident_confront_drunk_664c69f2] He has shot himself in the chest during the fight.
-    [doctor_day2_hunt_accident_confront_drunk_1c244619] Dear God.
-    [doctor_day2_hunt_accident_confront_drunk_2034d137] What have I done.
+  game/scripts/doctor/Day 2/2_Hunt/2_accident.rpy  (2 missing)
     [doctor_day2_hunt_accident_death_not_careful_2a3ecf9f] I am lost in my thoughts when I a hear the voice of Samuel Manning shouting.
     [doctor_day2_hunt_accident_death_not_careful_89600e2f] For a second I have forgotten to watch him.
 
@@ -179,7 +47,7 @@ Missing:                  1309
     [doctor_day2_evening_bedroom_psychic_aa36559a] I cannot blame her.
     [doctor_day2_evening_bedroom_psychic_e9722f75] After all that has happened, she has little reason to place her trust in me.
 
-  game/scripts/doctor/Day 2/3_Evening/1_main.rpy  (88 missing)
+  game/scripts/doctor/Day 2/3_Evening/1_main.rpy  (86 missing)
     [doctor_day2_evening_7cbf8a1e] I am still in shock when we reach the mansion.
     [doctor_day2_evening_d592c827] I can scarcely recall what happened in the woods.
     [doctor_day2_evening_1b7d8c18] Samuel Manning bled to death whilst I tried to save him.
@@ -197,7 +65,6 @@ Missing:                  1309
     [doctor_day2_evening_0bfdae88] Oh no. Is he... dead?
     [doctor_day2_evening_7372e922] I am sorry, my dear, but he is.
     [doctor_day2_evening_2ce6f188] But... what happened?
-    [doctor_day2_evening_bfc01660] It was an accident.
     [doctor_day2_evening_6618077e] He got into a fight with Doctor Baldwin.
     [doctor_day2_evening_0d5c2cbc] And he accidentally shot himself.
     [doctor_day2_evening_9cb26c68] How terrible. What was the quarrel about, Doctor?
@@ -265,7 +132,6 @@ Missing:                  1309
     [doctor_day2_evening_reason_drunk_silent_5e6d2ac8] Will you assist me, Mr Harring?
     [doctor_day2_dinner_lad_e87a0a2b] Mister Harring.
     [doctor_day2_dinner_lad_1171675c] Yes, doctor?
-    [doctor_day2_dinner_lad_a60ec41e] Well, that was hardly the most stimulating conversation.
     [doctor_day2_dinner_nurse_4051fb01] Miss Marsh.
     [doctor_day2_dinner_nurse_0fe7314c] Doctor.
 
@@ -885,7 +751,7 @@ Missing:                  1309
     [doctor_day3_morning_nurse_9cc1c026] As well as Lady Claythorn.
     [doctor_day3_morning_nurse_1a4338b3] Yes, it's very likely.
 
-  game/scripts/doctor/Day 3/2_Afternoon/2a_captain.rpy  (146 missing)
+  game/scripts/doctor/Day 3/2_Afternoon/2a_captain.rpy  (145 missing)
     [doctor_day3_afternoon_captain_6997644a] We are all seated in the tea room, Captain Sinha, Ted Harring, Amelia Baxter, and I.
     [doctor_day3_afternoon_captain_49ffe780] Each of us is deep in thought.
     [doctor_day3_afternoon_captain_fb395ca3] The manor feels hollow now, stripped of its usual life.
@@ -905,7 +771,6 @@ Missing:                  1309
     [doctor_day3_afternoon_captain_422b9c89] So what now?
     [doctor_day3_afternoon_captain_5670ea04] I feel like we've explored the whole place already.
     [doctor_day3_afternoon_captain_3af6f6a1] And we can't just sit around waiting for answers.
-    [doctor_day3_afternoon_captain_845f31db] No.
     [doctor_day3_afternoon_captain_4ed5066a] We must act sensibly.
     [doctor_day3_afternoon_captain_88bbb53d] It is obvious now that we have to leave.
     [doctor_day3_afternoon_captain_18c46f3b] Of course, but how?
@@ -1033,7 +898,7 @@ Missing:                  1309
     [doctor_day3_afternoon_captain_share_broken_e573c1cd] Still, at least you have told us.
     [doctor_day3_afternoon_captain_share_broken_6c60e55a] I am sorry.
 
-  game/scripts/doctor/Day 3/2_Afternoon/2b_nurse.rpy  (139 missing)
+  game/scripts/doctor/Day 3/2_Afternoon/2b_nurse.rpy  (138 missing)
     [doctor_day3_afternoon_nurse_02cfe100] I believe it has been long enough.
     [doctor_day3_afternoon_nurse_820ffcac] We should head back downstairs, and see where the others have settled.
     [doctor_day3_afternoon_nurse_c317d8c6] We climb down from the attic and reach the top of the main staircase.
@@ -1149,7 +1014,6 @@ Missing:                  1309
     [doctor_day3_afternoon_nurse_kitchen_b0839d06] My stomach tightens as if a fist has closed around it.
     [doctor_day3_afternoon_nurse_kitchen_b4a99683] I set my knife down carefully, as though the smallest sound might split my skull.
     [doctor_day3_afternoon_nurse_kitchen_fb2d635f] The room seems to tilt, ever so slightly.
-    [doctor_day3_afternoon_nurse_kitchen_bcf6dd4d] No.
     [doctor_day3_afternoon_nurse_kitchen_e396f948] Not the room.
     [doctor_day3_afternoon_nurse_kitchen_4997fee2] It is me.
     [doctor_day3_afternoon_nurse_kitchen_e066997e] Forgive me.
@@ -1303,7 +1167,7 @@ Missing:                  1309
     [doctor_day3_afternoon_captain_escape_with_psychic_a29f1fd7] Then she added something else.
     [doctor_day3_afternoon_captain_escape_with_psychic_0caec45c] Her other son, Archibald, had been missing for a week or more.
 
-  game/scripts/doctor/doctor_endings.rpy  (24 missing)
+  game/scripts/doctor/doctor_endings.rpy  (22 missing)
     [doctor_ending_escape_16a28bb6] You escaped.
     [doctor_ending_escape_0a079de8] Three other guests were fortunate enough to leave the manor alive with you.
     [doctor_ending_escape_978f1433] By now, you may have a clearer understanding of what has been happening.
@@ -1321,8 +1185,6 @@ Missing:                  1309
     [doctor_ending_shot_4086799f] Only the sharp crack of a pistol, and a brief, dreadful heat.
     [doctor_ending_shot_0ea32858] You were so close to getting out alive.
     [doctor_ending_shot_e5dff5e2] What a pity.
-    [doctor_ending_shot_by_drunk_d28f9d31] Despite knowing better, you still joined a hunt with a half-drunk man and a loaded gun.
-    [doctor_ending_shot_by_drunk_8d2d452b] At least this dreadful end might teach you to make wiser choices next time.
     [doctor_ending_throat_cut_01b7f085] You believed yourself safe.
     [doctor_ending_throat_cut_abb26407] Yet there was something you failed to see.
     [doctor_ending_throat_cut_426e31f7] Alone in your room, you were an easy target for whoever wished you harm.

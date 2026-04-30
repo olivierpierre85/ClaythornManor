@@ -1,0 +1,24 @@
+{
+    "start_label": "doctor_day2_hunt",
+    "unlocked_threads": [
+        "flirt"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "Tell me more about yourself.",
+            "redirect": "lad_generic_background_doctor"
+        },
+        {
+            "menu": "lad_generic_background_doctor",
+            "selected": "No, let us just leave it at that",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "Why were you invited here?",
+            "redirect": "lad_generic_heroic_act_doctor"
+        }
+    ]
+}
