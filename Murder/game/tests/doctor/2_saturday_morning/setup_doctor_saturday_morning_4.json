@@ -1,0 +1,25 @@
+{
+    "start_label": "doctor_day2_morning",
+    "unlocked_threads": [
+        "book_opium",
+        "flirt"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_morning_nurse",
+            "selected": "Talk to Rosalind Marsh",
+            "redirect": "doctor_day2_morning_nurse"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "Tell me more about yourself.",
+            "redirect": "nurse_generic_background_doctor"
+        },
+        {
+            "menu": "doctor_day2_morning_hunt",
+            "selected": "Stay here",
+            "redirect": "doctor_day2_no_hunt_choice"
+        }
+    ]
+}

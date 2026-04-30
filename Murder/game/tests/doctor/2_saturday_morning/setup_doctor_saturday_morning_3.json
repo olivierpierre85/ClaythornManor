@@ -1,0 +1,25 @@
+{
+    "start_label": "doctor_day2_morning",
+    "unlocked_threads": [
+        "drunk_letter",
+        "broken_offended"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_morning_nurse",
+            "selected": "Just keep to yourself",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_morning_remove_mask",
+            "selected": "Don't remove the mask, let him rest in peace",
+            "redirect": "common_day2_breakfast_follow_doctor_lad_keep_mask"
+        },
+        {
+            "menu": "doctor_day2_morning_hunt",
+            "selected": "Stay here",
+            "redirect": "doctor_day2_no_hunt_choice"
+        }
+    ]
+}

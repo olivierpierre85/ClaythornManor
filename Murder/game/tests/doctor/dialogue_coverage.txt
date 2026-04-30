@@ -1,111 +1,9 @@
-Generated:                2026-04-30 11:09:56
+Generated:                2026-04-30 11:22:43
 Scope:                    character=doctor
 Dialogue entries scanned: 1842
-Test lines collected:     2357
-Covered:                  417
-Missing:                  1425
-
-  game/scripts/doctor/Day 2/1_Morning/1_main.rpy  (100 missing)
-    [doctor_day2_morning_87eace4d] Awake, and alive.
-    [doctor_day2_morning_0e2a02ac] Despite my suspicions, it seems no one tried to harm me in the night.
-    [doctor_day2_morning_1adb647b] It is a relief, though the weekend is far from over.
-    [doctor_day2_morning_0b8178f0] I should prepare myself for breakfast.
-    [doctor_day2_morning_93ce04ad] Strange how those two words came to mind first.
-    [doctor_day2_morning_0903345f] An odd way to begin the day.
-    [doctor_day2_morning_feb5c70f] No matter. I ought to prepare myself.
-    [doctor_day2_morning_0c55d0a7] On most mornings, I would begin in the usual manner.
-    [doctor_day2_morning_58103d4e] But today is not most mornings.
-    [doctor_day2_morning_3a9d6b85] Today, I must be different.
-    [doctor_day2_morning_592053a6] I resist the urge and wash thoroughly with cold water.
-    [doctor_day2_morning_4be7fdc6] Then I dress, ready to face the others over breakfast.
-    [doctor_day2_morning_94d90097] As always, I begin with my usual routine.
-    [doctor_day2_morning_ec234563] Much better. I feel calmer now—prepared to greet the day and those within it.
-    [doctor_day2_morning_71da71fa] I take my seat at the breakfast table. Few have arrived so far.
-    [doctor_day2_morning_54c02450] Aside from the staff, only Captain Sinha is present.
-    [doctor_day2_morning_290c62b2] He sits across the room and merely offers a silent nod in greeting.
-    [doctor_day2_morning_5b5b0737] With nothing to do but eat, I quietly serve myself a plate.
-    [doctor_day2_morning_2d35d91c] Gradually, the other guests begin to appear.
-    [doctor_day2_morning_68c428f8] Lady Claythorn and Rosalind Marsh enter together, deep in conversation.
-    [doctor_day2_morning_0a53177c] Lady Claythorn joins Captain Sinha.
-    [doctor_day2_morning_93783a35] Rosalind Marsh sits beside me.
-    [doctor_day2_morning_a66c4bac] I know it is not entirely proper to address someone across the table.
-    [doctor_day2_morning_9fd35241] But at present, she is the only one near enough to speak to.
-    [doctor_day2_morning_3dd9b203] Suddenly, our host approaches me.
-    [doctor_day2_morning_636423b8] When I reach the dining room, our host turns to me at once.
-    [doctor_day2_morning_1863d7aa] After a while, everyone has finished eating.
-    [doctor_day2_morning_0e2a282c] We are to go out on a hunt.
-    [doctor_day2_morning_03f98ca6] I am not sure I feel up to it, and I do not think I am the only one.
-    [doctor_day2_morning_7affa4ab] Everyone looks a little uncomfortable.
-    [doctor_day2_morning_e6f2ccf7] Captain Sinha is the first to break the silence.
-    [doctor_day2_morning_79571bc8] I can see looks of disapproval at this.
-    [doctor_day2_morning_bbd5b1a0] But no one dares say anything.
-    [doctor_day2_morning_98796419] Given Samuel Manning's obvious inebriety, most seem to assume he will fall asleep before the hunt even begins.
-    [doctor_day2_morning_16bf760e] He says it without much conviction.
-    [doctor_day2_morning_aa9848fb] One can tell he is on the fence about the whole thing.
-    [doctor_day2_morning_3f7351f3] Everyone is looking towards me now.
-    [doctor_day2_morning_d078a4ff] They clearly assume I shall go as well.
-    [doctor_day2_morning_2f0bc1d7] Yet something troubles me.
-    [doctor_day2_morning_d36744c2] I cannot make sense of Thomas Moody not being truly injured.
-    [doctor_day2_morning_efe2b5ac] I do not understand it, and it makes me question everything.
-    [doctor_day2_morning_e9efdfe2] Something is not right, and a hunt is hardly the safest place to be.
-    [doctor_day2_morning_45fb3cb7] Yet I have not taken my 'medicine' today.
-    [doctor_day2_morning_796c525e] Withdrawal could set in at any moment.
-    [doctor_day2_morning_09bba127] In that case, it would be better to remain indoors and manage the symptoms.
-    [doctor_day2_morning_3df0a1f5] Besides, if I were to stay, I might spend a little more time with my new friend.
-    [doctor_day2_morning_e22e7fae] So, which shall it be?
-    [doctor_day2_hunt_choice_97b094c5] I shall come as well.
-    [doctor_day2_hunt_choice_f0256626] You are right. A distraction may serve us.
-    [doctor_day2_hunt_choice_dfa3a31e] Excellent. That settles it, then.
-    [doctor_day2_no_hunt_choice_5f23d216] I do not feel at all well.
-    [doctor_day2_no_hunt_choice_3674f137] I think it would be wiser if I stayed.
-    [doctor_day2_no_hunt_choice_8c507208] I am sorry to hear it, Doctor. Are you quite sure?
-    [doctor_day2_no_hunt_choice_82678dde] The weather has really improved today. It might do you good.
-    [doctor_day2_no_hunt_choice_677e9011] Yes, there is nothing like fresh air to set a man right.
-    [doctor_day2_no_hunt_choice_9d7dd3a4] And I do not wish to be dramatic, but it is always prudent to have a doctor with us.
-    [doctor_day2_no_hunt_choice_166a3d12] They are pressing me from all sides.
-    [doctor_day2_no_hunt_choice_03f65694] I am not certain I can refuse now.
-    [doctor_day2_no_hunt_choice_9d50572f] Not without a very sound reason.
-    [doctor_day2_no_hunt_choice_b9ca3ade] I do have one.
-    [doctor_day2_no_hunt_choice_7312d518] Samuel Manning may very well use this hunt as an opportunity to harm me.
-    [doctor_day2_no_hunt_choice_9a827561] To be alone with him, armed and far from the house, would be an unreasonable risk.
-    [doctor_day2_no_hunt_choice_69347292] Yet it would be difficult to refuse without exposing the contents of the letter.
-    [doctor_day2_no_hunt_choice_c8a5abab] And there is a chance I could use the hunt to get an explanation out of Samuel Manning.
-    [doctor_day2_no_hunt_choice_6c5b96e5] I must simply remain alert at every moment.
-    [doctor_day2_no_hunt_choice_55edcfc7] Perhaps you are right. The fine weather may do me good.
-    [doctor_day2_no_hunt_choice_1d0c469e] I shall join you.
-    [doctor_day2_no_hunt_choice_9db7d5fe] That is very good news.
-    [doctor_day2_morning_nurse_b53490cb] Good morning, Miss Marsh.
-    [doctor_day2_morning_nurse_3d009ecd] Good morning, Doctor.
-    [doctor_day2_breakfast_follow_doctor_lad_remove_mask_a5c10d55] I can't ignore the signs. I need to see for myself.
-    [doctor_day2_breakfast_follow_doctor_lad_remove_mask_60d0289a] But I should be alone for this.
-    [doctor_day2_breakfast_follow_doctor_lad_remove_mask_f76fc263] Thank you for your help, Mr Harring.
-    [doctor_day2_breakfast_follow_doctor_lad_remove_mask_1e51ae4b] I need to examine Thomas Moody's face now.
-    [doctor_day2_breakfast_follow_doctor_lad_remove_mask_d62583ec] Would you step outside?
-    [doctor_day2_breakfast_follow_doctor_lad_remove_mask_c50302e8] Of course.
-    [doctor_day2_breakfast_follow_doctor_lad_remove_mask_5fdf9510] Once I'm sure the room is empty, I remove the mask.
-    [doctor_day2_breakfast_follow_doctor_lad_remove_mask_f909b257] Ted Harring is waiting in the hallway.
-    [doctor_day2_behind_the_mask_31a5ea1c] His face is twisted in a horrible grimace.
-    [doctor_day2_behind_the_mask_7017457b] This is not the face of someone dying peacefully in his sleep.
-    [doctor_day2_behind_the_mask_b0779427] It suggests distress in his final moments.
-    [doctor_day2_behind_the_mask_ff7bb6cc] Yet that does not prove it was not a natural death.
-    [doctor_day2_behind_the_mask_4438b7f7] It could have been a violent heart attack.
-    [doctor_day2_behind_the_mask_b24b4cc1] But then, something strikes me.
-    [doctor_day2_behind_the_mask_6e6afd4a] I should have noticed it at once.
-    [doctor_day2_behind_the_mask_9586d30b] No disfigurement. No scars.
-    [doctor_day2_behind_the_mask_6ee7f518] His face is untouched.
-    [doctor_day2_behind_the_mask_27bb9726] He never needed a mask.
-    [doctor_day2_behind_the_mask_c1aba2f1] What does that mean?
-    [doctor_day2_behind_the_mask_cef14b8e] I pause, trying to make sense of it.
-    [doctor_day2_behind_the_mask_5d0402d4] There are too many questions at once.
-    [doctor_day2_behind_the_mask_57a9de83] Thomas Moody is dead, and I cannot yet say how it happened.
-    [doctor_day2_behind_the_mask_c7451287] It may have been deliberate.
-    [doctor_day2_behind_the_mask_a04fed43] It may have been an accident.
-    [doctor_day2_behind_the_mask_ad504c25] But what troubles me most is that he chose to hide behind a mask.
-    [doctor_day2_behind_the_mask_594b60d9] I cannot think of a logical explanation for it.
-    [doctor_day2_behind_the_mask_3664f3dc] I should keep this to myself for now.
-    [doctor_day2_behind_the_mask_c1c20dca] I do not feel comfortable sharing it with everyone just yet.
-    [doctor_day2_behind_the_mask_d88fc84d] Not until I know who I can trust.
-    [doctor_day2_behind_the_mask_2c0c6fa1] I replace the mask and leave the room.
+Test lines collected:     2597
+Covered:                  533
+Missing:                  1309
 
   game/scripts/doctor/Day 2/2_Hunt/1_main.rpy  (36 missing)
     [doctor_day2_hunt_feeba281] As I had no reason to remain behind, I changed for the hunt.
@@ -281,7 +179,7 @@ Missing:                  1425
     [doctor_day2_evening_bedroom_psychic_aa36559a] I cannot blame her.
     [doctor_day2_evening_bedroom_psychic_e9722f75] After all that has happened, she has little reason to place her trust in me.
 
-  game/scripts/doctor/Day 2/3_Evening/1_main.rpy  (89 missing)
+  game/scripts/doctor/Day 2/3_Evening/1_main.rpy  (88 missing)
     [doctor_day2_evening_7cbf8a1e] I am still in shock when we reach the mansion.
     [doctor_day2_evening_d592c827] I can scarcely recall what happened in the woods.
     [doctor_day2_evening_1b7d8c18] Samuel Manning bled to death whilst I tried to save him.
@@ -365,7 +263,6 @@ Missing:                  1425
     [doctor_day2_evening_reason_drunk_silent_96400906] Of course not, Doctor, go and rest.
     [doctor_day2_evening_reason_drunk_silent_9cdc5b58] We shall have Mr Manning taken to his room for the time being.
     [doctor_day2_evening_reason_drunk_silent_5e6d2ac8] Will you assist me, Mr Harring?
-    [doctor_day2_evening_reason_drunk_silent_c50302e8] Of course.
     [doctor_day2_dinner_lad_e87a0a2b] Mister Harring.
     [doctor_day2_dinner_lad_1171675c] Yes, doctor?
     [doctor_day2_dinner_lad_a60ec41e] Well, that was hardly the most stimulating conversation.
@@ -486,7 +383,7 @@ Missing:                  1425
     [doctor_day2_evening_males_room_enter_36277fe8] Then he opens the door just enough for me to slip back into the corridor.
     [doctor_day2_evening_males_room_enter_9faf5fdd] The bolt slides shut behind me.
 
-  game/scripts/doctor/Day 2/3_Evening/2_bedroom_nurse.rpy  (88 missing)
+  game/scripts/doctor/Day 2/3_Evening/2_bedroom_nurse.rpy  (87 missing)
     [doctor_day2_evening_bedroom_nurse_default_c091f2f0] Hello?
     [doctor_day2_evening_bedroom_nurse_default_4a921aa7] Yes?
     [doctor_day2_evening_bedroom_nurse_default_53e0afce] Is that you Doctor Baldwin?
@@ -535,7 +432,6 @@ Missing:                  1425
     [doctor_day2_evening_bedroom_nurse_remember_0bbd42b1] All right then, I meant that , if we really are in danger, you should probably ... sleep here tonight.
     [doctor_day2_evening_bedroom_nurse_remember_eada773f] Not on the bed I mean, maybe on a chair.
     [doctor_day2_evening_bedroom_nurse_remember_81c52b08] I know it's very unconventional, but that would make me feel better.
-    [doctor_day2_evening_bedroom_nurse_sleep_yes_60866fce] Very well.
     [doctor_day2_evening_bedroom_nurse_sleep_yes_6b23cec3] If you will permit it, I shall take that chair by the door.
     [doctor_day2_evening_bedroom_nurse_sleep_yes_2324d36a] You may lie down and try to sleep, and I shall keep watch.
     [doctor_day2_evening_bedroom_nurse_sleep_yes_ccf7de48] Thank you, Doctor.
@@ -576,7 +472,7 @@ Missing:                  1425
     [doctor_day2_evening_bedroom_nurse_sleep_no_6b98fabc] Miss Marsh follows me to the threshold and closes the door softly behind me.
     [doctor_day2_evening_bedroom_nurse_sleep_no_7bdd2014] The hallway feels colder than before, and the silence of the sleeping house presses in on every side.
 
-  game/scripts/doctor/Day 2/3_Evening/2_billiard_room.rpy  (176 missing)
+  game/scripts/doctor/Day 2/3_Evening/2_billiard_room.rpy  (175 missing)
     [doctor_day2_evening_billiard_room_2b1a4817] Just as I imagined, the room is almost deserted.
     [doctor_day2_evening_billiard_room_58ee495e] I can see only Captain Sinha seated upon a sofa, and the butler standing discreetly in the corner.
     [doctor_day2_evening_billiard_room_1d8d06ac] The bar is still available, but I promised myself to keep a clear head, so I ought to avoid it.
@@ -681,7 +577,6 @@ Missing:                  1425
     [doctor_day2_evening_billiard_room_captain_mask_a00c2c1e] How odd.
     [doctor_day2_evening_billiard_room_captain_mask_222867fc] That smells like whisky, heavily peated I might add.
     [doctor_day2_evening_billiard_room_captain_mask_476986ba] But why is there a green puddle on the nightstand?
-    [doctor_day2_evening_billiard_room_captain_mask_e5f4a4e1] Of course.
     [doctor_day2_evening_billiard_room_captain_mask_f49d1cd1] I cannot believe I did not notice this before.
     [doctor_day2_evening_billiard_room_captain_mask_ce7daa93] Do not drink it, Captain.
     [doctor_day2_evening_billiard_room_captain_mask_ea63ccf9] I believe you may have found the murder weapon.
@@ -754,7 +649,7 @@ Missing:                  1425
     [doctor_day2_evening_captain_sleep_no_93e41e64] I nod, though my resolve feels far less steady than I should like.
     [doctor_day2_evening_captain_sleep_no_f958772f] If I insist upon facing the night alone, I must be ready for whatever it may bring.
 
-  game/scripts/doctor/Day 2/3_Evening/2_exploration.rpy  (87 missing)
+  game/scripts/doctor/Day 2/3_Evening/2_exploration.rpy  (86 missing)
     [doctor_day2_evening_exploration_6148b956] I now find myself faced with several courses of action.
     [doctor_day2_evening_exploration_28775a97] The most obvious would be to remain here in my room and wait for the morning.
     [doctor_day2_evening_exploration_a661af29] I could even move some furniture against the door to make certain no one can enter.
@@ -830,7 +725,6 @@ Missing:                  1425
     [doctor_day2_evening_bedroom_drunk_32e86d60] I remember that Captain Sinha and Ted Harring carried him here.
     [doctor_day2_evening_bedroom_drunk_f4183f14] I do not know why I have come back.
     [doctor_day2_evening_bedroom_drunk_65e94b9a] Perhaps I wished to look one last time upon the man I killed.
-    [doctor_day2_evening_bedroom_drunk_fa02ea2f] I approach the bed.
     [doctor_day2_evening_bedroom_drunk_e2d4df38] He looks peaceful.
     [doctor_day2_evening_bedroom_drunk_6ca47554] I try to convince myself that I had no choice, that it was either him or me.
     [doctor_day2_evening_bedroom_drunk_1e31d014] But that does not make the guilt go away.
@@ -843,7 +737,7 @@ Missing:                  1425
     [doctor_day2_evening_bedroom_drunk_e6b4a997] Samuel Manning has taken care to erase all trace of his plans.
     [doctor_day2_evening_bedroom_drunk_671b247a] There is no point in lingering here any longer.
 
-  game/scripts/doctor/Day 3/1_Morning/2a_captain.rpy  (80 missing)
+  game/scripts/doctor/Day 3/1_Morning/2a_captain.rpy  (76 missing)
     [doctor_day3_morning_captain_f9a18797] Doctor Baldwin.
     [doctor_day3_morning_captain_e711e3ec] Doctor Baldwin, are you awake?
     [doctor_day3_morning_captain_495b477a] I slowly open my eyes to find Captain Sinha standing over me.
@@ -851,9 +745,7 @@ Missing:                  1425
     [doctor_day3_morning_captain_eb72e573] I am awake.
     [doctor_day3_morning_captain_e9f0734f] I apologise for the intrusion, Doctor, but it is already well past eight o'clock.
     [doctor_day3_morning_captain_5e284df6] I believe we should leave the room without delay.
-    [doctor_day3_morning_captain_60866fce] Very well.
     [doctor_day3_morning_captain_e52794ef] Give me a moment.
-    [doctor_day3_morning_captain_2130b4d1] Of course.
     [doctor_day3_morning_captain_dd983e9c] A quick glance at Sushil Sinha tells me he is perfectly prepared.
     [doctor_day3_morning_captain_919fa83b] I do not know when he woke up, but he must have been waiting for quite some time.
     [doctor_day3_morning_captain_05fd4dae] In contrast, I must look a terrible sight.
@@ -907,7 +799,6 @@ Missing:                  1425
     [doctor_day3_morning_captain_122292fa] I believe if the three of us shove together, the door will give way.
     [doctor_day3_morning_captain_79c55656] Are you sure it is wise to do this?
     [doctor_day3_morning_captain_d69f779b] I am afraid that under the circumstances, we have no other choice.
-    [doctor_day3_morning_captain_3e5aac63] Very well.
     [doctor_day3_morning_captain_4fe273a6] Lads, on my command.
     [doctor_day3_morning_captain_5142eab2] One.
     [doctor_day3_morning_captain_448b90c4] Two.
@@ -921,7 +812,6 @@ Missing:                  1425
     [doctor_day3_morning_captain_3138a626] A heavy silence settles over us.
     [doctor_day3_morning_captain_fbdf887c] I do not understand what is happening.
     [doctor_day3_morning_captain_b4e44720] We need to discuss this.
-    [doctor_day3_morning_captain_e418ad92] Of course.
     [doctor_day3_morning_captain_0b697bb5] Perhaps we should settle somewhere more comfortable, like the tea room?
     [doctor_day3_morning_captain_cf41912f] A good idea.
 
@@ -995,7 +885,7 @@ Missing:                  1425
     [doctor_day3_morning_nurse_9cc1c026] As well as Lady Claythorn.
     [doctor_day3_morning_nurse_1a4338b3] Yes, it's very likely.
 
-  game/scripts/doctor/Day 3/2_Afternoon/2a_captain.rpy  (148 missing)
+  game/scripts/doctor/Day 3/2_Afternoon/2a_captain.rpy  (146 missing)
     [doctor_day3_afternoon_captain_6997644a] We are all seated in the tea room, Captain Sinha, Ted Harring, Amelia Baxter, and I.
     [doctor_day3_afternoon_captain_49ffe780] Each of us is deep in thought.
     [doctor_day3_afternoon_captain_fb395ca3] The manor feels hollow now, stripped of its usual life.
@@ -1086,7 +976,6 @@ Missing:                  1425
     [doctor_day3_afternoon_captain_share_footman_738fba26] On the other hand, it could also mean they were part of whatever is happening here.
     [doctor_day3_afternoon_captain_share_footman_b7e6d3da] It would explain why we cannot see any of them here today.
     [doctor_day3_afternoon_captain_share_footman_f0e25e26] Maybe, but again, there is no way to know for sure.
-    [doctor_day3_afternoon_captain_share_footman_2130b4d1] Of course.
     [doctor_day3_afternoon_captain_share_footman_5b8c04ae] I do not believe Andrew was involved, at least not in anything that would harm us.
     [doctor_day3_afternoon_captain_share_footman_84d0b5f4] But I cannot tell them why.
     [doctor_day3_afternoon_captain_share_footman_4a304f51] Besides, I did not know him all that well.
@@ -1124,7 +1013,6 @@ Missing:                  1425
     [doctor_day3_afternoon_captain_share_broken_56061d94] It concerns Thomas Moody.
     [doctor_day3_afternoon_captain_share_broken_9de22f3e] What about him?
     [doctor_day3_afternoon_captain_share_broken_c8668f6d] You all noticed the mask he wore to hide his war injuries, I presume.
-    [doctor_day3_afternoon_captain_share_broken_e418ad92] Of course.
     [doctor_day3_afternoon_captain_share_broken_c8b53e92] How could we miss it?
     [doctor_day3_afternoon_captain_share_broken_65b1d584] When I examined him, I had to remove the mask to determine the cause of death.
     [doctor_day3_afternoon_captain_share_broken_dc7bebc9] I confess I was apprehensive about what I might find.
@@ -1145,7 +1033,7 @@ Missing:                  1425
     [doctor_day3_afternoon_captain_share_broken_e573c1cd] Still, at least you have told us.
     [doctor_day3_afternoon_captain_share_broken_6c60e55a] I am sorry.
 
-  game/scripts/doctor/Day 3/2_Afternoon/2b_nurse.rpy  (142 missing)
+  game/scripts/doctor/Day 3/2_Afternoon/2b_nurse.rpy  (139 missing)
     [doctor_day3_afternoon_nurse_02cfe100] I believe it has been long enough.
     [doctor_day3_afternoon_nurse_820ffcac] We should head back downstairs, and see where the others have settled.
     [doctor_day3_afternoon_nurse_c317d8c6] We climb down from the attic and reach the top of the main staircase.
@@ -1161,7 +1049,6 @@ Missing:                  1425
     [doctor_day3_afternoon_nurse_a59addd7] I follow her at once.
     [doctor_day3_afternoon_nurse_d9d213c6] Good.
     [doctor_day3_afternoon_nurse_acccb271] We should be safe in here, for the moment.
-    [doctor_day3_afternoon_nurse_60866fce] Very well.
     [doctor_day3_afternoon_nurse_956e4828] But what do we do next?
     [doctor_day3_afternoon_nurse_fdc591d0] From what we heard, they are no closer to understanding what is happening than we are.
     [doctor_day3_afternoon_nurse_073b23a2] It may be safe to speak with them, do you not agree?
@@ -1219,7 +1106,6 @@ Missing:                  1425
     [doctor_day3_afternoon_nurse_hide_49cbef53] I was hoping you would say that.
     [doctor_day3_afternoon_nurse_hide_58825de8] We just have to find a safe spot and wait there.
     [doctor_day3_afternoon_nurse_hide_80e37c38] But first, let us be certain Captain Sinha has gone.
-    [doctor_day3_afternoon_nurse_hide_60866fce] Very well.
     [doctor_day3_afternoon_nurse_hide_f22215f2] He has left.
     [doctor_day3_afternoon_nurse_hide_d80fed02] All right.
     [doctor_day3_afternoon_nurse_hide_e076173e] Let us go then.
@@ -1236,7 +1122,6 @@ Missing:                  1425
     [doctor_day3_afternoon_nurse_kitchen_539b582e] Bread, some cheese, and perhaps soup if the range still works.
     [doctor_day3_afternoon_nurse_kitchen_17791e6a] We do not need a feast.
     [doctor_day3_afternoon_nurse_kitchen_739eed77] Just enough to keep our strength.
-    [doctor_day3_afternoon_nurse_kitchen_60866fce] Very well.
     [doctor_day3_afternoon_nurse_kitchen_7ba5e9ac] What can I do to help?
     [doctor_day3_afternoon_nurse_kitchen_c1611f4a] I think Rosalind and I can manage, Doctor.
     [doctor_day3_afternoon_nurse_kitchen_8e1f4477] Perhaps you could set the table?
@@ -1289,7 +1174,7 @@ Missing:                  1425
     [doctor_day3_afternoon_nurse_kitchen_6fc77545] The ceiling swims.
     [doctor_day3_afternoon_nurse_kitchen_b90f4c3e] Then the light folds in on itself.
 
-  game/scripts/doctor/Day 3/2_Afternoon/3a_captain_escape.rpy  (130 missing)
+  game/scripts/doctor/Day 3/2_Afternoon/3a_captain_escape.rpy  (127 missing)
     [doctor_day3_afternoon_captain_escape_without_psychic_8e0221b2] Ted Harring pauses for a second.
     [doctor_day3_afternoon_captain_escape_without_psychic_b92343a2] I can see my revelations have troubled him.
     [doctor_day3_afternoon_captain_escape_without_psychic_1746642b] He does not seem certain what he ought to do.
@@ -1298,7 +1183,6 @@ Missing:                  1425
     [doctor_day3_afternoon_captain_escape_without_psychic_c85bf0ac] Only a monster would leave you alone like this.
     [doctor_day3_afternoon_captain_escape_without_psychic_83853800] Thank you, Mr Harring.
     [doctor_day3_afternoon_captain_escape_without_psychic_f8d7357c] That means the world to me.
-    [doctor_day3_afternoon_captain_escape_without_psychic_a001c80a] Very well.
     [doctor_day3_afternoon_captain_escape_without_psychic_79848eb3] Doctor Baldwin and I will go at once.
     [doctor_day3_afternoon_captain_escape_without_psychic_99317e13] I do not wish to lose time, darkness will be upon us soon.
     [doctor_day3_afternoon_captain_escape_without_psychic_81cd0af7] With luck, we shall be back with help tonight.
@@ -1369,14 +1253,12 @@ Missing:                  1425
     [doctor_day3_afternoon_captain_escape_with_psychic_4ef1fa11] Experience to walk along a road.
     [doctor_day3_afternoon_captain_escape_with_psychic_6114d98d] It is an odd remark from a decorated soldier.
     [doctor_day3_afternoon_captain_escape_with_psychic_50c73572] Could it be that, behind his impassive face, he is frightened after all?
-    [doctor_day3_afternoon_captain_escape_with_psychic_3e5aac63] Very well.
     [doctor_day3_afternoon_captain_escape_with_psychic_582a142c] Then I have no choice but to come with you.
     [doctor_day3_afternoon_captain_escape_with_psychic_b80e26cb] Are you quite certain?
     [doctor_day3_afternoon_captain_escape_with_psychic_c39e2856] It will not be an easy walk.
     [doctor_day3_afternoon_captain_escape_with_psychic_c9524329] I am certain.
     [doctor_day3_afternoon_captain_escape_with_psychic_521739d6] I will likely be slower than you.
     [doctor_day3_afternoon_captain_escape_with_psychic_4122e952] I trust you will not leave me behind.
-    [doctor_day3_afternoon_captain_escape_with_psychic_a001c80a] Very well.
     [doctor_day3_afternoon_captain_escape_with_psychic_749cb13a] Let us prepare ourselves before we set off.
     [doctor_day3_afternoon_captain_escape_with_psychic_3bf152a0] Captain Sinha instructs us to take the bare minimum from our rooms.
     [doctor_day3_afternoon_captain_escape_with_psychic_cc7b5ce3] He tells us to meet outside without delay.

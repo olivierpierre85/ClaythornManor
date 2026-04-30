@@ -1,0 +1,32 @@
+{
+    "start_label": "doctor_day2_morning",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_morning_nurse",
+            "selected": "Talk to Rosalind Marsh",
+            "redirect": "doctor_day2_morning_nurse"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "What do you think of this weather?",
+            "redirect": "nurse_generic_weather_saturday_morning"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "What do you think of this place?",
+            "redirect": "nurse_generic_manor"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "How old are you?",
+            "redirect": "nurse_generic_age"
+        },
+        {
+            "menu": "doctor_day2_morning_hunt",
+            "selected": "Go on the hunt",
+            "redirect": "doctor_day2_hunt_choice"
+        }
+    ]
+}

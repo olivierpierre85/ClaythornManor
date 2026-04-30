@@ -174,7 +174,7 @@ label doctor_day2_morning:
     They clearly assume I shall go as well.
     """
 
-    if doctor_details.threads.is_unlocked('remove_mask'):
+    if doctor_details.threads.is_unlocked('broken_unmasked'):
 
         """
         Yet something troubles me.

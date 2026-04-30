@@ -1,0 +1,182 @@
+Chapter: A Shocking Morning
+Character: Daniel Baldwin
+Awake, and alive.
+Strange how those two words came to mind first.
+An odd way to begin the day.
+No matter. I ought to prepare myself.
+As always, I begin with my usual routine.
+Much better. I feel calmer now—prepared to greet the day and those within it.
+I take my seat at the breakfast table. Few have arrived so far.
+Aside from the staff, only Captain Sinha is present.
+He sits across the room and merely offers a silent nod in greeting.
+With nothing to do but eat, I quietly serve myself a plate.
+Gradually, the other guests begin to appear.
+Lady Claythorn and Rosalind Marsh enter together, deep in conversation.
+Lady Claythorn joins Captain Sinha.
+Rosalind Marsh sits beside me.
+I know it is not entirely proper to address someone across the table.
+But at present, she is the only one near enough to speak to.
+Menu Choice: Talk to Rosalind Marsh
+Daniel Baldwin: Good morning, Miss Marsh.
+Rosalind Marsh: Good morning, Doctor.
+Menu Choice: What room are you in?
+Rosalind Marsh: My room is named after "Queen Alexandra."
+Rosalind Marsh: Like the queen mother, I believe.
+Menu Choice: What do you think of the other guests?
+Rosalind Marsh: Oh, up until now, I've mostly kept to myself.
+Rosalind Marsh: I haven't talked to many people.
+Rosalind Marsh: I am seated next to Samuel Manning, but we haven't had a very deep conversation yet.
+Rosalind Marsh: Our host is the only other person I've had any real exchange with.
+Rosalind Marsh: But we stuck mostly to simple pleasantries.
+Menu Choice: What do you think of Samuel Manning
+Rosalind Marsh: I usually don't like to spread gossip.
+Rosalind Marsh: But in this case, I don't think it's a big secret.
+Rosalind Marsh: I believe Samuel Manning is an alcoholic.
+Rosalind Marsh: He was barely intelligible both at dinner yesterday and this morning.
+Rosalind Marsh: Those were two pretty unpleasant meals for me.
+Menu Choice: What do you think of Lady Claythorn
+Rosalind Marsh: I only share a few words with the Lady of the house.
+Rosalind Marsh: I tried to know more about the details of the Manor, the staff, that sort of things.
+Rosalind Marsh: She was quite polite, but her responses were short and not very informative.
+Rosalind Marsh: I hope I wasn't rude to her.
+Suddenly, our host approaches me.
+Lady Claythorn: Doctor Baldwin, I'm sorry to interrupt your breakfast, but would you mind coming with me?
+Lady Claythorn: We need your assistance.
+I quickly stands up.
+Daniel Baldwin: Of course, I'll follow you.
+I followed Lady Claythorn and her butler upstairs.
+For some reason, Ted Harring came along.
+Butler: Here we are. Thomas Moody's room.
+We all step into the room.
+Butler: He's here in his bed. He didn't respond when I tried to wake him up.
+I approach the bed.
+The body is stiff.
+I place my hand on his wrist.
+Daniel Baldwin: No pulse.
+Daniel Baldwin: He's dead.
+Lady Claythorn: Dead?!!!
+Lady Claythorn: How is that possible?
+Daniel Baldwin: I'm not sure yet. I'll need to examine him further.
+Daniel Baldwin: Best if you stepped out for this.
+Daniel Baldwin: I'll return downstairs once I know more.
+Butler: Please, My Lady—this way.
+Lady Claythorn: Oh... Yes, of course...
+Lady Claythorn and the butler leave,
+leaving me alone with Ted Harring.
+Why did he come up here?
+Daniel Baldwin: Mr Harring, may I ask—why are you here?
+Ted Harring: I was just... I thought I might...
+Daniel Baldwin: Never mind. Since you're here, you can help.
+Daniel Baldwin: Let's turn him over and check for injuries.
+I examine the body carefully for signs of foul play. Nothing obvious.
+Rigor mortis has set in—quite early.
+Which suggests he died shortly after going to bed.
+Not unusual, in itself.
+Normally, I'd remove the mask for closer observation...
+But it feels wrong. Perhaps best left to the coroner.
+Yet something's nagging at me.
+That book I read yesterday—how did the victim die?
+Strychnine poisoning.
+Probably coincidence, but one of the telltale signs is early rigor mortis.
+Others include: blue lips, frothing at the mouth, and a twisted expression.
+All visible—if I remove the mask.
+Menu Choice: Remove the mask
+I can't ignore the signs. I need to see for myself.
+But I should be alone for this.
+Daniel Baldwin: Thank you for your help, Mr Harring.
+Daniel Baldwin: I need to examine Thomas Moody's face now.
+Daniel Baldwin: Would you step outside?
+Ted Harring: Of course.
+Once I'm sure the room is empty, I remove the mask.
+His face is twisted in a horrible grimace.
+This is not the face of someone dying peacefully in his sleep.
+It suggests distress in his final moments.
+Yet that does not prove it was not a natural death.
+It could have been a violent heart attack.
+But then, something strikes me.
+I should have noticed it at once.
+No disfigurement. No scars.
+His face is untouched.
+He never needed a mask.
+What does that mean?
+I pause, trying to make sense of it.
+There are too many questions at once.
+Thomas Moody is dead, and I cannot yet say how it happened.
+It may have been deliberate.
+It may have been an accident.
+But what troubles me most is that he chose to hide behind a mask.
+I cannot think of a logical explanation for it.
+I should keep this to myself for now.
+I do not feel comfortable sharing it with everyone just yet.
+Not until I know who I can trust.
+I replace the mask and leave the room.
+Ted Harring is waiting in the hallway.
+Ted Harring: What do you think happened, Doctor?
+Daniel Baldwin: I'm not certain.
+Daniel Baldwin: He seemed in reasonable health.
+Daniel Baldwin: But war injuries can be unpredictable.
+Daniel Baldwin: Some patients are stable for years, then... sudden failure.
+Ted Harring: So it was natural?
+Daniel Baldwin: Possibly. But I can't be sure.
+Daniel Baldwin: Nothing can be ruled out.
+Daniel Baldwin: We'll need a post-mortem to know for certain.
+Daniel Baldwin: First, we should contact the authorities.
+We both head back downstairs.
+When I reach the dining room, our host turns to me at once.
+Lady Claythorn: Doctor Baldwin, can you tell us more about what happened?
+Daniel Baldwin: I can't say anything definitive for now.
+Daniel Baldwin: But it's very likely a natural death, possibly triggered by an old wound from the war.
+Daniel Baldwin: In any case, we need to call the authorities.
+Lady Claythorn: Yes, of course.
+Lady Claythorn: My butler will take care of it.
+Daniel Baldwin: Very well.
+We continue eating in a heavy silence.
+Nobody speaks much.
+After a while, everyone has finished eating.
+Lady Claythorn: Well, as I mentioned earlier, activities were planned for today.
+Lady Claythorn: This morning, those who wished to were supposed to go on a hunt.
+Lady Claythorn: A sad event has happened, but it's not a reason to remain idle.
+Lady Claythorn: So, if no one objects, I propose that we continue according to what was planned.
+A faint murmur of assent passes through the room.
+Lady Claythorn: Excellent.
+Lady Claythorn: Everything is ready for those who wish to join the hunt.
+Lady Claythorn: I know most of you are probably not accustomed to this type of event.
+Lady Claythorn: That's why our staff can lend you everything you'll need—clothes, guns—and they will also assist you throughout the event.
+Lady Claythorn: Of course, you can choose to simply stay here.
+Lady Claythorn: You can relax and enjoy the warmth of the house until the others return.
+We are to go out on a hunt.
+I am not sure I feel up to it, and I do not think I am the only one.
+Everyone looks a little uncomfortable.
+Captain Sinha is the first to break the silence.
+Sushil Sinha: I will come.
+Sushil Sinha: What has happened today is tragic, but there is no point in lingering here.
+Samuel Manning: I'll... come too.
+Samuel Manning: Fresh air will do me well.
+I can see looks of disapproval at this.
+But no one dares say anything.
+Given Samuel Manning's obvious inebriety, most seem to assume he will fall asleep before the hunt even begins.
+Amelia Baxter: I am sorry, but I would rather not.
+Amelia Baxter: If you do not mind, I should prefer to remain indoors.
+Amelia Baxter: Please do not let me stand in your way.
+Rosalind Marsh: I feel the same as Miss Baxter, I'm afraid.
+Rosalind Marsh: I should not know what to do with a gun.
+Lady Claythorn: Of course, I understand.
+Lady Claythorn: I shall make sure you are comfortable staying inside.
+Lady Claythorn: And how do you feel, Mister Harring?
+Ted Harring: I'll... I'll come too, of course.
+He says it without much conviction.
+One can tell he is on the fence about the whole thing.
+Lady Claythorn: Very good. What about you, Doctor Baldwin?
+Everyone is looking towards me now.
+They clearly assume I shall go as well.
+Yet something troubles me.
+I cannot make sense of Thomas Moody not being truly injured.
+I do not understand it, and it makes me question everything.
+Something is not right, and a hunt is hardly the safest place to be.
+So, which shall it be?
+Menu Choice: Go on the hunt
+Daniel Baldwin: I shall come as well.
+Daniel Baldwin: You are right. A distraction may serve us.
+Lady Claythorn: Excellent. That settles it, then.
+Lady Claythorn: Those of you who are going may change and then fetch a weapon downstairs.
+Lady Claythorn: We shall meet outside in a little while.

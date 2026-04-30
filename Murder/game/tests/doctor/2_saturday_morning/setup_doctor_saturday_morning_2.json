@@ -1,0 +1,44 @@
+{
+    "start_label": "doctor_day2_morning",
+    "unlocked_threads": [
+        "book_mystery"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_morning_nurse",
+            "selected": "Talk to Rosalind Marsh",
+            "redirect": "doctor_day2_morning_nurse"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "What room are you in?",
+            "redirect": "nurse_generic_room"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "What do you think of the other guests?",
+            "redirect": "nurse_generic_other_guests_saturday_morning"
+        },
+        {
+            "menu": "nurse_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Samuel Manning",
+            "redirect": "nurse_generic_drunk_saturday_morning"
+        },
+        {
+            "menu": "nurse_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Lady Claythorn",
+            "redirect": "nurse_generic_host_saturday"
+        },
+        {
+            "menu": "doctor_day2_morning_remove_mask",
+            "selected": "Remove the mask",
+            "redirect": "doctor_day2_breakfast_follow_doctor_lad_remove_mask"
+        },
+        {
+            "menu": "doctor_day2_morning_hunt",
+            "selected": "Go on the hunt",
+            "redirect": "doctor_day2_hunt_choice"
+        }
+    ]
+}
