@@ -125,7 +125,7 @@ label init_captain:
                 chapters=['saturday_evening']),
             CharacterInformation(4, "shot_butler",
                 "You were shot by the butler when you tried to overpower him",
-                image_file="gun",
+                image_file="gun_firing",
                 chapters=['saturday_evening']),
         ])
 

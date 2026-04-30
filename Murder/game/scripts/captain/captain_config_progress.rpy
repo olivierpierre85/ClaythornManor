@@ -19,6 +19,7 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_line),
             ],
             # Row 3: strangled ending (Moody dead + confront host)
             [
@@ -27,6 +28,8 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
+                Chapter(image_checkpoint_double_corner_half),
+                Chapter(image_ending_question, "ending", "burned", "saturday_evening"),
             ],
             # Row 4: shot_in_woods ending (Moody alive)
             [
@@ -35,6 +38,9 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "shot_in_woods", "saturday_afternoon"),
+                Chapter(image_checkpoint_corner_half),
+                Chapter(image_ending_question, "ending", "shot_butler", "saturday_evening"),
+                
             ],
         ]
 
