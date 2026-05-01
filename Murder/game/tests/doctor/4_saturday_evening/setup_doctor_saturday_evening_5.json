@@ -1,0 +1,34 @@
+{
+    "start_label": "doctor_day2_evening",
+    "unlocked_threads": [
+        "flirt"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_evening_reason",
+            "selected": "Say he was just too drunk",
+            "redirect": "doctor_day2_evening_reason_drunk"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Enjoy the creepy silence",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "doctor_day2_evening_downstairs_default"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Male Servants Room",
+            "redirect": "doctor_day2_evening_males_room_enter"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Go to sleep, alone",
+            "redirect": "doctor_day2_evening_sleep_alone"
+        }
+    ]
+}

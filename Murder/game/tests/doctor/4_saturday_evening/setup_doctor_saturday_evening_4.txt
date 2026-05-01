@@ -1,0 +1,212 @@
+Chapter: Things Get Darker
+Character: Daniel Baldwin
+I am still in shock when we reach the mansion.
+I can scarcely recall what happened in the woods.
+Samuel Manning bled to death whilst I tried to save him.
+The other group, drawn by the noise, rejoined us to witness the horrific scene.
+Once it was clear the poor man was dead, Captain Sinha took charge and had us carry Samuel Manning back to the house.
+I still can hardly believe it.
+I have killed a man.
+I cannot seem to convince myself that it was him or me.
+Yet I must not waste time dwelling on it.
+The others will have questions.
+I must think very carefully about what I am going to say to them.
+As we enter, we are greeted by Rosalind Marsh and Amelia Baxter.
+Amelia Baxter: Oh my God! What happened?
+Amelia Baxter: Is that Samuel Manning? Is he injured?
+Amelia Baxter: Oh no. Is he... dead?
+Sushil Sinha: I am sorry, my dear, but he is.
+Amelia Baxter: But... what happened?
+Sushil Sinha: It was an accident.
+Sushil Sinha: He got into a fight with Doctor Baldwin.
+Sushil Sinha: And he accidentally shot himself.
+Amelia Baxter: How terrible. What was the quarrel about, Doctor?
+All eyes turn to me.
+Menu Choice: Say he was just too drunk
+Daniel Baldwin: I have no idea what he was angry about.
+Daniel Baldwin: I only wished to speak to him about his drinking, and he lost his temper with me.
+Daniel Baldwin: He was not making any sense, then he pointed his gun at me.
+Daniel Baldwin: Without thinking, I tried to jump him and wrest the weapon away, but, but...
+Sushil Sinha: The poor man shot himself by accident.
+Sushil Sinha: I cannot say I am surprised, I think we all noticed his state of inebriation today and yesterday.
+Sushil Sinha: Samuel Manning clearly had troubles he could not master.
+Sushil Sinha: There is no reason to blame yourself, Doctor.
+Amelia Baxter: Of course, we are all quite certain you only wished to help that poor soul.
+I hear a murmur of assent from everyone.
+They will not suspect a thing.
+It is true that most people will believe a doctor without a second thought.
+Daniel Baldwin: Thank you, everyone.
+Daniel Baldwin: It has been a horrific experience.
+Daniel Baldwin: If you do not mind, I think I shall retire to my room now.
+Sushil Sinha: Of course not, Doctor, go and rest.
+Sushil Sinha: We shall have Mr Manning taken to his room for the time being.
+Sushil Sinha: Will you assist me, Mr Harring?
+Ted Harring: Of course.
+I am back in my room, shaken by a wretched mix of nervousness and remorse.
+My first impulse is to seek relief in the usual way.
+I even reach for my bag before I stop myself.
+I think of the letter I found in Samuel Manning's room.
+All of this is too strange, as though I had stepped into the pages of a mystery novel.
+It is plain that someone in this house is hiding something.
+If I dull my senses now, I might miss some vital clue, or fail to react when danger comes.
+I draw my hand back from the bag and clench it into a fist.
+No, I must keep my wits about me.
+Until I know whom I may trust, I shall remain sober.
+I rest for a while, until the familiar sound of the gong draws me out of my thoughts.
+I suppose I am steady enough to join the others for dinner.
+It seems as though everyone turns to look at me as I enter the room.
+Glances and stares follow me to my seat.
+When all are present, Lady Claythorn begins to speak.
+Lady Claythorn: Now that everyone is here, I want to express my deepest regret for what happened today.
+Lady Claythorn: This isn't how I imagined our weekend.
+Lady Claythorn: I don't believe any of us are in the mood for more entertainment.
+Lady Claythorn: So, tomorrow morning, you'll receive your rewards.
+Lady Claythorn: Afterward, we'll wait for the police to arrive.
+Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
+Lady Claythorn: For now, enjoy your dinner.
+Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
+That is a considerable relief.
+I just need to make it through one more night and a single morning, then I shall be able to leave this place.
+No doubt I shall have to give an account of myself to the police before I go, yet from what I understand it should be little more than a formality.
+I turn to my left. Ted Harring is looking rather downcast.
+Opposite me, Rosalind Marsh now sits alone.
+She has kept to her usual seat, though there is no one beside her any longer.
+Should I speak to either of them, or remain silent as most of the table seems determined to do?
+Menu Choice: Talk to Rosalind Marsh
+Daniel Baldwin: Miss Marsh.
+Rosalind Marsh: Doctor.
+Menu Choice: What do you think of this weather?
+Rosalind Marsh: The weather is much better today than it was last night.
+Rosalind Marsh: Hopefully I shall sleep better tonight.
+Menu Choice: What do you think of the other guests?
+Rosalind Marsh: Well, I must admit I have not tried to socialise much.
+Rosalind Marsh: I have spoken a little with our host, though nothing of any real substance.
+Rosalind Marsh: This afternoon I shared lunch with Amelia Baxter, quite an interesting character.
+Rosalind Marsh: And of course there was our poor Mister Manning, ...
+She realises to whom she is speaking and falls silent.
+Daniel Baldwin: Yes, a most tragic event. I still can scarcely believe what has happened.
+Rosalind Marsh: I am terribly sorry, Doctor. I did not mean to upset you.
+Daniel Baldwin: That is all right.
+Menu Choice: What do you think of Lady Claythorn
+Rosalind Marsh: I only share a few words with the Lady of the house.
+Rosalind Marsh: I tried to know more about the details of the Manor, the staff, that sort of things.
+Rosalind Marsh: She was quite polite, but her responses were short and not very informative.
+Rosalind Marsh: I hope I wasn't rude to her.
+Menu Choice: What do you think of Amelia Baxter
+Rosalind Marsh: Miss Baxter is a very pleasant woman, quite easy to talk to.
+Rosalind Marsh: But she made me a little uneasy when she spoke of her "gift".
+Daniel Baldwin: Gift? What do you mean?
+Rosalind Marsh: She is convinced that she can speak with the deceased, or with some other version of them that exists upon another plane.
+Rosalind Marsh: I must confess I did not follow every word. I do not care to speak of the dead, and I found it most unsettling.
+Daniel Baldwin: I can imagine. It is a delicate subject to raise with a stranger.
+Daniel Baldwin: Did she seem well otherwise?
+Rosalind Marsh: She did.
+Rosalind Marsh: You might be thinking as I did at first. That she might be ill.
+Rosalind Marsh: I have seen this sort of thing in certain patients, particularly those approaching the end of their lives.
+Rosalind Marsh: But the rest of her behaviour was perfectly normal, and that was what troubled me most.
+Daniel Baldwin: I see. It is not unheard of for someone to hold a fixed idea upon a single matter, yet remain entirely sound in all others.
+Daniel Baldwin: In my experience such notions may arise from strain or some powerful emotional shock, even when the mind is otherwise quite stable.
+Daniel Baldwin: So she could be perfectly well in every other respect.
+Daniel Baldwin: Of course, we cannot disregard the possibility of a more serious condition.
+Daniel Baldwin: In rare cases a fixed belief of that nature may be an early sign of dementia praecox, or what some of my colleagues have begun to call schizophrenia.
+Daniel Baldwin: But I would not draw conclusions too hastily. It is far more likely that Miss Baxter is of sound mind, eccentricities notwithstanding.
+Rosalind Marsh: Thank you. That is a relief.
+Menu Choice: I want to talk about something else.
+Menu Choice: You don't have anymore questions for her
+Menu Choice: Enjoy the creepy silence
+The dinner is over.
+It seemed longer than usual, for there was scarcely any conversation at all.
+Like most of the other guests, I retire to my room.
+I now find myself faced with several courses of action.
+The most obvious would be to remain here in my room and wait for the morning.
+I could even move some furniture against the door to make certain no one can enter.
+Yet that, too, feels dangerous. There are other ways for someone to reach me.
+The alternative is to attempt to discover who wrote that note to Samuel Manning.
+That is the person I ought to fear.
+Everything points towards Lady Claythorn, yet I cannot be sure.
+If only I could trust at least one other person, I might ask for their assistance.
+It would be safer to investigate in company, but in whom ought I place my trust?
+It would be ideal to have someone implicitly trustworthy, like a judge.
+But everyone here appears suspicious to me.
+By good fortune, I already know Nurse Rosalind Marsh. That acquaintance makes me more comfortable about approaching her.
+I feel very much at a crossroads.
+What I decide to do now may mean the difference between life and death.
+So what shall it be?
+Map Choice: Queen Alexandra
+Daniel Baldwin: Hello?
+Rosalind Marsh: Yes?
+Rosalind Marsh: Is that you Doctor Baldwin?
+Daniel Baldwin: Yes, it is.
+Daniel Baldwin: Do you mind if I come in for a minute?
+Daniel Baldwin: I have something important to discuss.
+Rosalind Marsh: I do not know, Doctor.
+Rosalind Marsh: It is late, and that would be rather inappropriate.
+Rosalind Marsh: Also, with everything that has happened today, I would prefer to stay alone.
+Rosalind Marsh: I hope you understand.
+Daniel Baldwin: I do understand, believe me.
+Daniel Baldwin: Yet, as you reminded me earlier, you and I have worked side by side in far less proper circumstances than this.
+Daniel Baldwin: I would not trouble you now without very good reason.
+There is a brief pause.
+I hear the soft creak of a floorboard, as if she has stepped closer to the door.
+Rosalind Marsh: Very well, what is it then?
+Daniel Baldwin: It is not something I care to discuss in the hallway.
+Daniel Baldwin: May I come in, just for a moment?
+For a few seconds there is only silence, and the faint crackle of a fire from within her room.
+Rosalind Marsh: All right.
+Rosalind Marsh: Please come in, Doctor.
+I step into Miss Marsh's room.
+She has not yet undressed, but her shoulders sag with weariness, and there are dark shadows beneath her eyes.
+Daniel Baldwin: Thank you.
+Daniel Baldwin: I shall be as brief as I can.
+I give her a concise account of the letter I discovered in Samuel Manning's room.
+Then I explain how it urged him to provoke me before the hunt, and how it led, step by step, to his death.
+As I speak, the colour drains from her face.
+Rosalind Marsh: Good heavens.
+Rosalind Marsh: Are you saying someone lured you both into that situation on purpose?
+Daniel Baldwin: That is precisely what I fear.
+Daniel Baldwin: Whoever wrote that letter knew far too much, and I doubt they are finished.
+Daniel Baldwin: I believe they may try again, with me or with someone else in this house.
+Rosalind Marsh: And you came to me because we worked together before?
+Rosalind Marsh: Because you think you can trust me?
+Daniel Baldwin: Indeed, I would rather face this night with an ally than entirely alone.
+Rosalind Marsh: I cannot pretend I am not frightened.
+Rosalind Marsh: Every sound in this place sets my nerves on edge.
+Rosalind Marsh: I am thinking, to be perfectly safe maybe you could ...
+Rosalind Marsh: No, never mind, it's probably not a good idea.
+Daniel Baldwin: What could be? In these circumstances, we shouldn't be afraid to share what we think.
+Rosalind Marsh: All right then, I meant that , if we really are in danger, you should probably ... sleep here tonight.
+Rosalind Marsh: Not on the bed I mean, maybe on a chair.
+Rosalind Marsh: I know it's very unconventional, but that would make me feel better.
+Menu Choice: I guess it's the safest thing to do
+Daniel Baldwin: Very well.
+Daniel Baldwin: If you will permit it, I shall take that chair by the door.
+Daniel Baldwin: You may lie down and try to sleep, and I shall keep watch.
+Rosalind Marsh: Thank you, Doctor.
+Rosalind Marsh: I confess I shall feel safer knowing you are here.
+Rosalind Marsh: And I am sorry if I am not good company, but I imagine I shall be asleep in a few moments.
+Daniel Baldwin: No worries, please rest.
+I move a straight-backed chair to a position where I can see both the door and the window.
+Miss Marsh sits upon the edge of the bed, then lies down without undressing, her eyes already half closed.
+Rosalind Marsh: Wake me if anything seems amiss.
+Rosalind Marsh: Otherwise, let us hope the night passes quietly.
+Daniel Baldwin: You have my word.
+Daniel Baldwin: Try to rest.
+The fire burns low in the grate, filling the room with a dull orange glow.
+I settle into the chair, listening to the ticking of the clock, and the slow deepening of Miss Marsh's breathing as she drifts into sleep.
+Pretty soon it's my turn to doze off.
+I am deep asleep when the door suddenly rattles.
+I blink myself awake and see Rosalind Marsh standing close to it, one hand still near the bolt.
+Daniel Baldwin: Miss Marsh?
+Daniel Baldwin: What are you doing?
+Daniel Baldwin: Are you going somewhere?
+Rosalind Marsh: Oh, of course not, Doctor.
+Rosalind Marsh: I am afraid I am becoming rather paranoid.
+Rosalind Marsh: I only wanted to be certain the door was properly fastened.
+Rosalind Marsh: But it is, so I can return to bed now.
+Rosalind Marsh: I am sorry to have woken you.
+Daniel Baldwin: Do not apologise.
+Daniel Baldwin: Try to get some rest.
+Daniel Baldwin: Good night, Miss Marsh.
+Rosalind Marsh: Good night, Doctor Baldwin.
+Strange.
+Still, I cannot blame her for being on edge.

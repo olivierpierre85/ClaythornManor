@@ -1,0 +1,211 @@
+Chapter: Things Get Darker
+Character: Daniel Baldwin
+I am still in shock when we reach the mansion.
+I can scarcely recall what happened in the woods.
+Samuel Manning bled to death whilst I tried to save him.
+The other group, drawn by the noise, rejoined us to witness the horrific scene.
+Once it was clear the poor man was dead, Captain Sinha took charge and had us carry Samuel Manning back to the house.
+I still can hardly believe it.
+I have killed a man.
+I cannot seem to convince myself that it was him or me.
+Yet I must not waste time dwelling on it.
+The others will have questions.
+I must think very carefully about what I am going to say to them.
+As we enter, we are greeted by Rosalind Marsh and Amelia Baxter.
+Amelia Baxter: Oh my God! What happened?
+Amelia Baxter: Is that Samuel Manning? Is he injured?
+Amelia Baxter: Oh no. Is he... dead?
+Sushil Sinha: I am sorry, my dear, but he is.
+Amelia Baxter: But... what happened?
+Sushil Sinha: It was an accident.
+Sushil Sinha: He got into a fight with Doctor Baldwin.
+Sushil Sinha: And he accidentally shot himself.
+Amelia Baxter: How terrible. What was the quarrel about, Doctor?
+All eyes turn to me.
+Menu Choice: Say nothing
+I try to think of something to say, yet I am at a loss for words.
+My mind feels quite empty.
+Everyone is looking at me with concern.
+Sushil Sinha: There is no need to answer, Doctor.
+Sushil Sinha: I am sure it was all a misunderstanding.
+Sushil Sinha: It is quite obvious what happened.
+Sushil Sinha: The poor man shot himself by accident.
+Sushil Sinha: I cannot say I am surprised, I think we all noticed his state of inebriation today and yesterday.
+Sushil Sinha: Samuel Manning clearly had troubles he could not master.
+Sushil Sinha: There is no reason to blame yourself, Doctor.
+Amelia Baxter: Of course, we are all quite certain you only wished to help that poor soul.
+I hear a murmur of assent from everyone.
+They will not suspect a thing.
+It is true that most people will believe a doctor without a second thought.
+Daniel Baldwin: Thank you, everyone.
+Daniel Baldwin: It has been a horrific experience.
+Daniel Baldwin: If you do not mind, I think I shall retire to my room now.
+Sushil Sinha: Of course not, Doctor, go and rest.
+Sushil Sinha: We shall have Mr Manning taken to his room for the time being.
+Sushil Sinha: Will you assist me, Mr Harring?
+Ted Harring: Of course.
+I am back in my room, shaken by a wretched mix of nervousness and remorse.
+I pace the room, my hands still trembling.
+The urge to reach for my laudanum is almost overwhelming.
+Yet the words from that book I read yesterday return to me with cruel clarity.
+I have been poisoning myself for years.
+If I go on like this, I shall end as helpless as any of my poorest patients.
+With a sudden surge of resolve, I open my bag and look down at the familiar little vials.
+For a long moment I merely stare at them.
+Then I close the bag again, leaving them untouched.
+I will endure the shaking and the sleeplessness if I must.
+Better a clear mind and a fighting chance than a drugged stupor in this house.
+I rest for a while, until the familiar sound of the gong draws me out of my thoughts.
+I suppose I am steady enough to join the others for dinner.
+It seems as though everyone turns to look at me as I enter the room.
+Glances and stares follow me to my seat.
+When all are present, Lady Claythorn begins to speak.
+Lady Claythorn: Now that everyone is here, I want to express my deepest regret for what happened today.
+Lady Claythorn: This isn't how I imagined our weekend.
+Lady Claythorn: I don't believe any of us are in the mood for more entertainment.
+Lady Claythorn: So, tomorrow morning, you'll receive your rewards.
+Lady Claythorn: Afterward, we'll wait for the police to arrive.
+Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
+Lady Claythorn: For now, enjoy your dinner.
+Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
+That is a considerable relief.
+I just need to make it through one more night and a single morning, then I shall be able to leave this place.
+No doubt I shall have to give an account of myself to the police before I go, yet from what I understand it should be little more than a formality.
+I turn to my left. Ted Harring is looking rather downcast.
+Opposite me, Rosalind Marsh now sits alone.
+She has kept to her usual seat, though there is no one beside her any longer.
+Should I speak to either of them, or remain silent as most of the table seems determined to do?
+Menu Choice: Talk to Ted Harring
+Daniel Baldwin: Mister Harring.
+Ted Harring: Yes, doctor?
+Menu Choice: What do you think of the other guests?
+Ted Harring: I do not know, I have not had a chance to talk to everyone yet.
+Ted Harring: So far everyone seems normal to me.
+Daniel Baldwin: I was not expecting a deep character analysis.
+Daniel Baldwin: Merely your general impression.
+Ted Harring: Right then.
+Menu Choice: What do you think of Samuel Manning?
+Ted Harring: Samuel Manning?
+Ted Harring: Well does it really matter what I think of him now?
+Daniel Baldwin: No, of course not.
+Daniel Baldwin: I don't know why I asked you that.
+Daniel Baldwin: I am sorry.
+Menu Choice: What do you think of Sushil Sinha?
+Ted Harring: Captain Sinha is serious, and he does go on about himself.
+Daniel Baldwin: I have observed the same.
+Menu Choice: What do you think of Lady Claythorn?
+Ted Harring: She is very distinguished.
+Ted Harring: I have not dared to speak to her yet.
+Menu Choice: Talk about something else
+Menu Choice: You don't have anymore questions for him
+Well, that was hardly the most stimulating conversation.
+Menu Choice: Enjoy the creepy silence
+The dinner is over.
+It seemed longer than usual, for there was scarcely any conversation at all.
+Like most of the other guests, I retire to my room.
+I now find myself faced with several courses of action.
+The most obvious would be to remain here in my room and wait for the morning.
+I could even move some furniture against the door to make certain no one can enter.
+Yet that, too, feels dangerous. There are other ways for someone to reach me.
+The alternative is to attempt to discover who wrote that note to Samuel Manning.
+That is the person I ought to fear.
+Everything points towards Lady Claythorn, yet I cannot be sure.
+If only I could trust at least one other person, I might ask for their assistance.
+It would be safer to investigate in company, but in whom ought I place my trust?
+It would be ideal to have someone implicitly trustworthy, like a judge.
+But everyone here appears suspicious to me.
+I also have to manage symptoms of withdrawal.
+My hands tremble, and I am sweating more than is reasonable.
+They will only grow worse as the night wears on, which will not be in my favour.
+I feel very much at a crossroads.
+What I decide to do now may mean the difference between life and death.
+So what shall it be?
+Map Choice: George IV Bedroom
+I am back in Samuel Manning's room.
+It is still a mess.
+But now Samuel Manning is lying on his bed, seemingly at peace.
+I remember that Captain Sinha and Ted Harring carried him here.
+I do not know why I have come back.
+Perhaps I wished to look one last time upon the man I killed.
+I approach the bed.
+He looks peaceful.
+I try to convince myself that I had no choice, that it was either him or me.
+But that does not make the guilt go away.
+My thoughts return to the simple letter that set all of this in motion.
+I wonder if it is still here.
+I look around and do not find it on the desk.
+Then I spot something in the fire.
+The letter is there, burned so badly I cannot make out what was written.
+If I had hoped to use it as proof of my innocence, I am too late.
+Samuel Manning has taken care to erase all trace of his plans.
+There is no point in lingering here any longer.
+Map Choice: Richard III Bedroom
+Thomas Moody's room looks exactly as it did this morning.
+The poor man's body lies just as before upon the bed.
+This morning I chose not to look beneath his mask, out of respect.
+After all that has occurred since, that restraint feels misplaced.
+I am compelled to examine him more closely.
+I step nearer to the bed and lean over him.
+At once I notice small details, such as the way the face beneath the mask does not seem as peaceful as it ought.
+Almost before I realise what I am doing, my hand reaches for the mask and I lift it away.
+His face is twisted in a horrible grimace.
+This is not the face of someone dying peacefully in his sleep.
+It suggests distress in his final moments.
+Yet that does not prove it was not a natural death.
+It could have been a violent heart attack.
+But then, something strikes me.
+I should have noticed it at once.
+No disfigurement. No scars.
+His face is untouched.
+He never needed a mask.
+What does that mean?
+I pause, trying to make sense of it.
+There are too many questions at once.
+Thomas Moody is dead, and I cannot yet say how it happened.
+It may have been deliberate.
+It may have been an accident.
+But what troubles me most is that he chose to hide behind a mask.
+I cannot think of a logical explanation for it.
+I should keep this to myself for now.
+I do not feel comfortable sharing it with everyone just yet.
+Not until I know who I can trust.
+I replace the mask and leave the room.
+Map Choice: Check who is in the billiard room
+Just as I imagined, the room is almost deserted.
+I can see only Captain Sinha seated upon a sofa, and the butler standing discreetly in the corner.
+The bar is still available, but I promised myself to keep a clear head, so I ought to avoid it.
+Menu Choice: Go to the bar for a drink
+In spite of knowing full well it is a mistake, my steps carry me straight to the bar.
+Before I have quite registered it, I am already pouring myself a glass of sherry.
+The moment I realise what I have done, a wave of shame washes over me.
+Yet now that the glass is in my hand, I cannot simply set it aside.
+I might as well drink it.
+But this will be the last one.
+At last, I have a chance to free myself from opium entirely.
+I shouldn't exchange one addiction for another.
+Menu Choice: Leave the room
+Map Choice: Go to sleep, alone
+I reach my room alone.
+I lock my door and do what I can to secure it.
+Then I drag a chair and the small chest of drawers against the door, in case Lady Claythorn or one of her accomplices decides to pay me a visit.
+Now that everything is in place, I lie down upon the bed, fully dressed in case I need to move quickly.
+Now that I have settled, the cravings grow stronger than ever.
+I toss and turn upon the sofa, praying for the light of day.
+After what feels like an eternity, I finally fall asleep.
+I do not know how long I have slept when a faint sound rouses me.
+It is a soft scrape, close by my ear, out of place in the stillness of the room.
+Before I can stir, a hand clamps hard across my mouth, stifling any cry.
+The weight of a body leans over me, pinning me to the mattress.
+I clutch at the arm that holds me, but my limbs feel heavy and slow, still dulled by sleep.
+My heart hammers so loudly that I can scarcely hear my own thoughts.
+Something cold touches the bare skin of my throat.
+For one dreadful instant I understand exactly what is about to happen.
+Pain sears across my neck in a sudden, burning line.
+Hot wetness spills down my collar, soaking the front of my shirt.
+I struggle blindly, fingers clawing at the air and at the implacable hand that silences me.
+My strength ebbs almost at once, as if it were pouring away with my blood.
+You believed yourself safe.
+Yet there was something you failed to see.
+Alone in your room, you were an easy target for whoever wished you harm.
+Sometimes the safest path lies in choosing whom to trust, rather than trusting no one at all.
+It's dangerous to go alone.

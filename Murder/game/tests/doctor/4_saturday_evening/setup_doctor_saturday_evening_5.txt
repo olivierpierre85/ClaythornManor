@@ -1,0 +1,239 @@
+Chapter: Things Get Darker
+Character: Daniel Baldwin
+I am still in shock when we reach the mansion.
+I can scarcely recall what happened in the woods.
+Samuel Manning bled to death whilst I tried to save him.
+The other group, drawn by the noise, rejoined us to witness the horrific scene.
+Once it was clear the poor man was dead, Captain Sinha took charge and had us carry Samuel Manning back to the house.
+I still can hardly believe it.
+I have killed a man.
+I cannot seem to convince myself that it was him or me.
+Yet I must not waste time dwelling on it.
+The others will have questions.
+I must think very carefully about what I am going to say to them.
+As we enter, we are greeted by Rosalind Marsh and Amelia Baxter.
+Amelia Baxter: Oh my God! What happened?
+Amelia Baxter: Is that Samuel Manning? Is he injured?
+Amelia Baxter: Oh no. Is he... dead?
+Sushil Sinha: I am sorry, my dear, but he is.
+Amelia Baxter: But... what happened?
+Sushil Sinha: It was an accident.
+Sushil Sinha: He got into a fight with Doctor Baldwin.
+Sushil Sinha: And he accidentally shot himself.
+Amelia Baxter: How terrible. What was the quarrel about, Doctor?
+All eyes turn to me.
+Menu Choice: Say he was just too drunk
+Daniel Baldwin: I have no idea what he was angry about.
+Daniel Baldwin: I only wished to speak to him about his drinking, and he lost his temper with me.
+Daniel Baldwin: He was not making any sense, then he pointed his gun at me.
+Daniel Baldwin: Without thinking, I tried to jump him and wrest the weapon away, but, but...
+Sushil Sinha: The poor man shot himself by accident.
+Sushil Sinha: I cannot say I am surprised, I think we all noticed his state of inebriation today and yesterday.
+Sushil Sinha: Samuel Manning clearly had troubles he could not master.
+Sushil Sinha: There is no reason to blame yourself, Doctor.
+Amelia Baxter: Of course, we are all quite certain you only wished to help that poor soul.
+I hear a murmur of assent from everyone.
+They will not suspect a thing.
+It is true that most people will believe a doctor without a second thought.
+Daniel Baldwin: Thank you, everyone.
+Daniel Baldwin: It has been a horrific experience.
+Daniel Baldwin: If you do not mind, I think I shall retire to my room now.
+Sushil Sinha: Of course not, Doctor, go and rest.
+Sushil Sinha: We shall have Mr Manning taken to his room for the time being.
+Sushil Sinha: Will you assist me, Mr Harring?
+Ted Harring: Of course.
+I am back in my room, shaken by a wretched mix of nervousness and remorse.
+My first impulse is to seek relief in the usual way.
+I even reach for my bag before I stop myself.
+I think of the letter I found in Samuel Manning's room.
+All of this is too strange, as though I had stepped into the pages of a mystery novel.
+It is plain that someone in this house is hiding something.
+If I dull my senses now, I might miss some vital clue, or fail to react when danger comes.
+I draw my hand back from the bag and clench it into a fist.
+No, I must keep my wits about me.
+Until I know whom I may trust, I shall remain sober.
+I rest for a while, until the familiar sound of the gong draws me out of my thoughts.
+I suppose I am steady enough to join the others for dinner.
+It seems as though everyone turns to look at me as I enter the room.
+Glances and stares follow me to my seat.
+When all are present, Lady Claythorn begins to speak.
+Lady Claythorn: Now that everyone is here, I want to express my deepest regret for what happened today.
+Lady Claythorn: This isn't how I imagined our weekend.
+Lady Claythorn: I don't believe any of us are in the mood for more entertainment.
+Lady Claythorn: So, tomorrow morning, you'll receive your rewards.
+Lady Claythorn: Afterward, we'll wait for the police to arrive.
+Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
+Lady Claythorn: For now, enjoy your dinner.
+Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
+That is a considerable relief.
+I just need to make it through one more night and a single morning, then I shall be able to leave this place.
+No doubt I shall have to give an account of myself to the police before I go, yet from what I understand it should be little more than a formality.
+I turn to my left. Ted Harring is looking rather downcast.
+Opposite me, Rosalind Marsh now sits alone.
+She has kept to her usual seat, though there is no one beside her any longer.
+Should I speak to either of them, or remain silent as most of the table seems determined to do?
+Menu Choice: Enjoy the creepy silence
+The dinner is over.
+It seemed longer than usual, for there was scarcely any conversation at all.
+Like most of the other guests, I retire to my room.
+I now find myself faced with several courses of action.
+The most obvious would be to remain here in my room and wait for the morning.
+I could even move some furniture against the door to make certain no one can enter.
+Yet that, too, feels dangerous. There are other ways for someone to reach me.
+The alternative is to attempt to discover who wrote that note to Samuel Manning.
+That is the person I ought to fear.
+Everything points towards Lady Claythorn, yet I cannot be sure.
+If only I could trust at least one other person, I might ask for their assistance.
+It would be safer to investigate in company, but in whom ought I place my trust?
+It would be ideal to have someone implicitly trustworthy, like a judge.
+But everyone here appears suspicious to me.
+I might turn to Andrew. After the time we have spent together, I find it hard to picture him as a likely culprit.
+He is probably downstairs with the staff at present, unless he has already retired for the night.
+I feel very much at a crossroads.
+What I decide to do now may mean the difference between life and death.
+So what shall it be?
+Map Choice: Kitchen
+I am about to go downstairs when someone stops me.
+Young woman: Good evening, sir.
+Young woman: May I help you?
+Daniel Baldwin: Well, perhaps.
+Daniel Baldwin: I am looking for someone.
+Daniel Baldwin: I would like to have a word with your footman.
+Daniel Baldwin: I believe he is called Andrew.
+Young woman: I am sorry, sir, but Andrew is not here any longer.
+Young woman: I believe you will find him in his room.
+Daniel Baldwin: Very good.
+Daniel Baldwin: And where is that, exactly?
+Young woman: In the attic, sir.
+Young woman: The first room to your left after the stairs.
+Daniel Baldwin: Perfect, thank you.
+Map Choice: Male Servants Room
+I decide to take the stairs to the attic.
+I probably shouldn't be here but I could still feign ignorance if I am spotted.
+I could just barge in, but I prefer to knock just in case.
+Footman: Who is it?
+I answer in a whisper.
+Daniel Baldwin: Andrew, it is me, Daniel.
+Footman: Doctor?
+Footman: You should not be here.
+Footman: Tonight is not the best time, with... everything that has happened.
+Daniel Baldwin: I am well aware.
+Daniel Baldwin: But I sincerely hope you do not hold me responsible for today's accident.
+He pauses for a second before answering.
+Footman: No, of course not.
+Footman: I am sure it was only a terrible mistake.
+There is a pause, then the soft sound of the bolt sliding back.
+The door opens just enough for me to slip inside.
+He closes it carefully behind me.
+Words quickly become unnecessary.
+In a moment we are both on his bed, our clothes discarded on the floor.
+When it is over, reality returns far too quickly.
+Footman: I think you should go back to your room now.
+Daniel Baldwin: Already?
+Daniel Baldwin: I was hoping to stay here for the night.
+Footman: I do not think that would be prudent.
+Footman: People might see you in the morning.
+Daniel Baldwin: I could rise early and leave before anyone is awake.
+Footman: I am not certain you could.
+Footman: Servants are usually up when you would still think it the middle of the night.
+Footman: I would rather not take that risk.
+Footman: Besides, in only a few hours I have an errand to run.
+Daniel Baldwin: So early?
+Daniel Baldwin: Why on earth do you have to do that?
+Footman: I am sorry, I cannot say.
+Footman: It is an order from Lady Claythorn.
+I glance towards the small window.
+The wind has picked up, and distant thunder rolls across the moor.
+Daniel Baldwin: It does look as though it may rain again.
+Daniel Baldwin: You will catch your death if you stay outside too long.
+Footman: Do not worry, I shall be taking the car.
+Footman: And besides, I am not made out of sugar.
+The expression strikes me as oddly familiar, and somewhat out of place.
+Daniel Baldwin: That is a curious turn of phrase.
+Daniel Baldwin: And yesterday, I recall you mentioning something about whipping cats.
+Daniel Baldwin: That was even more peculiar.
+Daniel Baldwin: Where did you learn such expressions?
+Footman: Hm.
+Footman: You have truly never heard them before?
+Footman: I suppose I got them from my grandmother.
+Footman: We are from the North, near Sunderland.
+Footman: People there have rather strange sayings, you know.
+Daniel Baldwin: I am aware of that.
+Daniel Baldwin: I have family from that region myself.
+Daniel Baldwin: Yet I have never heard those expressions.
+He looks embarrassed.
+Footman: Well.
+Footman: I might as well tell you.
+Footman: There is no point in keeping this for myself.
+Footman: I am not British.
+Footman: I was brought here as a young teen, so you would not hear it in my accent.
+Footman: But those are French expressions my parents used often.
+Footman: I suppose I translated them without realising they might not exist in the King's English.
+Daniel Baldwin: You are French?
+Daniel Baldwin: How interesting.
+Daniel Baldwin: But why keep it a secret?
+Footman: I am not bloody French.
+Footman: People always assume that.
+Footman: I am Belgian, from a French speaking family.
+Daniel Baldwin: I see.
+Daniel Baldwin: My apologies.
+Daniel Baldwin: Still, why hide it?
+Footman: Because I am not meant to be here.
+Footman: My parents were war refugees.
+Footman: They worked in a weapons factory during the war, in a small northern village called Birtley.
+Footman: When the war ended, we were supposed to return to Belgium.
+Footman: But I had spent my teenage years here.
+Footman: I did not want to go back.
+Footman: I was seventeen, and I was in love.
+Footman: I could not bear to leave him behind.
+Footman: So I pretended to be British.
+Footman: My English was good enough not to raise suspicion.
+Footman: Ever since, I have hidden my true identity.
+Footman: That is why I became an actor.
+Footman: And...
+He stops short.
+That is information I was not meant to hear.
+Daniel Baldwin: You are an actor?
+Daniel Baldwin: Then what are you doing here, in the middle of the woods?
+Daniel Baldwin: There cannot be many roles for you in a place like this.
+Footman: No, of course not.
+Footman: But one must earn a living.
+Footman: Acting is not a secure profession.
+Footman: I take odd jobs when I must.
+Footman: I was never meant to stay in this manor for long.
+Footman: Just long enough to get back on my feet.
+Footman: But it is late now.
+Footman: I have spoken far too much about myself.
+Footman: I need my rest for tomorrow.
+Footman: You should go now, Doctor.
+Footman: Before we are both discovered.
+The dismissal is abrupt.
+Nevertheless, I nod reluctantly.
+Daniel Baldwin: If you insist, I shall be on my way.
+I dress in silence.
+Then he opens the door just enough for me to slip back into the corridor.
+The bolt slides shut behind me.
+Map Choice: Go to sleep, alone
+I reach my room alone.
+I lock my door and do what I can to secure it.
+Then I drag a chair and the small chest of drawers against the door, in case Lady Claythorn or one of her accomplices decides to pay me a visit.
+Now that everything is in place, I lie down upon the bed, fully dressed in case I need to move quickly.
+Now that I am alone with my thoughts, every possible scenario runs through my mind.
+I feel certain I shall never fall asleep, yet at some point I do.
+I do not know how long I have slept when a faint sound rouses me.
+It is a soft scrape, close by my ear, out of place in the stillness of the room.
+Before I can stir, a hand clamps hard across my mouth, stifling any cry.
+The weight of a body leans over me, pinning me to the mattress.
+I clutch at the arm that holds me, but my limbs feel heavy and slow, still dulled by sleep.
+My heart hammers so loudly that I can scarcely hear my own thoughts.
+Something cold touches the bare skin of my throat.
+For one dreadful instant I understand exactly what is about to happen.
+Pain sears across my neck in a sudden, burning line.
+Hot wetness spills down my collar, soaking the front of my shirt.
+I struggle blindly, fingers clawing at the air and at the implacable hand that silences me.
+My strength ebbs almost at once, as if it were pouring away with my blood.
+You believed yourself safe.
+Yet there was something you failed to see.
+Alone in your room, you were an easy target for whoever wished you harm.
+Sometimes the safest path lies in choosing whom to trust, rather than trusting no one at all.
+It's dangerous to go alone.

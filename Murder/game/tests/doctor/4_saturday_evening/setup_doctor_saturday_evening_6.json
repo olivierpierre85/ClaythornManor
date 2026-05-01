@@ -1,0 +1,69 @@
+{
+    "start_label": "doctor_day2_evening",
+    "unlocked_threads": [
+        "remember_nurse"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_evening_reason",
+            "selected": "Say he was just too drunk",
+            "redirect": "doctor_day2_evening_reason_drunk"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Enjoy the creepy silence",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Check who is in the billiard room",
+            "redirect": "doctor_day2_evening_billiard_room"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_menu",
+            "selected": "Go to the bar for a drink",
+            "redirect": "doctor_day2_evening_billiard_room_bar"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_menu",
+            "selected": "Talk to Sushil Sinha",
+            "redirect": "doctor_day2_evening_billiard_room_captain"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_captain",
+            "selected": "Leave him alone",
+            "redirect": "doctor_day2_evening_billiard_room_captain_avoid"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Check who is in the billiard room",
+            "redirect": "doctor_day2_evening_billiard_room"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Male Servants Room",
+            "redirect": "doctor_day2_evening_males_room_do_no_enter"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Queen Alexandra",
+            "redirect": "doctor_day2_evening_bedroom_nurse_remember"
+        },
+        {
+            "menu": "broken_generic_other_guests_friday_offense",
+            "selected": "I'd rather sleep alone",
+            "redirect": "doctor_day2_evening_bedroom_nurse_sleep_no"
+        }
+    ]
+}

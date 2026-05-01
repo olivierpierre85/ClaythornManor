@@ -1,0 +1,74 @@
+{
+    "start_label": "doctor_day2_evening",
+    "unlocked_threads": [
+        "broken_unmasked"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_evening_reason",
+            "selected": "Say he was just too drunk",
+            "redirect": "doctor_day2_evening_reason_drunk"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Talk to Rosalind Marsh",
+            "redirect": "doctor_day2_dinner_nurse"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "Tell me more about yourself.",
+            "redirect": "nurse_generic_background_doctor"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "Why were you invited here?",
+            "redirect": "nurse_generic_heroic_act_doctor"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "You don't have anymore questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Enjoy the creepy silence",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "George IV Bedroom",
+            "redirect": "doctor_day2_evening_bedroom_drunk"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Richard III Bedroom",
+            "redirect": "doctor_day2_evening_bedroom_broken"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Check who is in the billiard room",
+            "redirect": "doctor_day2_evening_billiard_room"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_menu",
+            "selected": "Talk to Sushil Sinha",
+            "redirect": "doctor_day2_evening_billiard_room_captain"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_captain",
+            "selected": "Tell him about the letter",
+            "redirect": "doctor_day2_evening_billiard_room_captain_letter"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_captain",
+            "selected": "Tell him about Thomas Moody's face {{observation}}",
+            "redirect": "doctor_day2_evening_billiard_room_captain_mask"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_captain_sleep",
+            "selected": "Accept his offer and sleep in his room",
+            "redirect": "doctor_day2_evening_captain_sleep_yes"
+        }
+    ]
+}

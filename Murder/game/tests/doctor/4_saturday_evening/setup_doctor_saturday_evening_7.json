@@ -1,0 +1,59 @@
+{
+    "start_label": "doctor_day2_evening",
+    "unlocked_threads": [
+        "broken_unmasked"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_evening_reason",
+            "selected": "Say he was just too drunk",
+            "redirect": "doctor_day2_evening_reason_drunk"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Enjoy the creepy silence",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "doctor_day2_evening_downstairs_default"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Elizabeth I Bedroom",
+            "redirect": "doctor_day2_evening_bedroom_psychic"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Queen Alexandra",
+            "redirect": "doctor_day2_evening_bedroom_nurse_do_not_remember"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Check who is in the billiard room",
+            "redirect": "doctor_day2_evening_billiard_room"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_menu",
+            "selected": "Talk to Sushil Sinha",
+            "redirect": "doctor_day2_evening_billiard_room_captain"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_captain",
+            "selected": "Tell him about the letter",
+            "redirect": "doctor_day2_evening_billiard_room_captain_letter"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_captain",
+            "selected": "Tell him about Thomas Moody's face {{observation}}",
+            "redirect": "doctor_day2_evening_billiard_room_captain_mask"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_captain_sleep",
+            "selected": "Refuse",
+            "redirect": "doctor_day2_evening_captain_sleep_no"
+        }
+    ]
+}

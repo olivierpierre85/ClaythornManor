@@ -1,0 +1,62 @@
+{
+    "start_label": "doctor_day2_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_evening_reason",
+            "selected": "Say he was just too drunk",
+            "redirect": "doctor_day2_evening_reason_drunk"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Enjoy the creepy silence",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Tea room",
+            "redirect": "doctor_day2_evening_tea_room"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Dining Room",
+            "redirect": "doctor_day2_evening_dining_room"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Garden",
+            "redirect": "doctor_day2_evening_garden"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Entrance Hall",
+            "redirect": "doctor_day2_evening_entrance_hall"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "doctor_day2_evening_portrait_gallery"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "William the Conqueror Bedroom",
+            "redirect": "doctor_day2_evening_bedroom_lad"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Library",
+            "redirect": "doctor_day2_evening_library"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "George I Bedroom",
+            "redirect": "doctor_day2_evening_bedroom_captain"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Henry IV Bedroom",
+            "redirect": "doctor_day2_evening_bedroom_host"
+        }
+    ]
+}

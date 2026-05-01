@@ -1,0 +1,84 @@
+{
+    "start_label": "doctor_day2_evening",
+    "unlocked_threads": [
+        "book_opium"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_evening_reason",
+            "selected": "Say nothing",
+            "redirect": "doctor_day2_evening_reason_silence"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Talk to Ted Harring",
+            "redirect": "doctor_day2_dinner_lad"
+        },
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "What do you think of the other guests?",
+            "redirect": "lad_generic_other_guests_saturday_doctor"
+        },
+        {
+            "menu": "lad_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Samuel Manning?",
+            "redirect": "lad_generic_drunk_hunt_doctor_dead"
+        },
+        {
+            "menu": "lad_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Sushil Sinha?",
+            "redirect": "lad_generic_captain_hunt_doctor"
+        },
+        {
+            "menu": "lad_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Lady Claythorn?",
+            "redirect": "lad_generic_host_hunt_doctor"
+        },
+        {
+            "menu": "lad_generic_other_guests_menu_doctor",
+            "selected": "Talk about something else",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "lad_generic_menu_doctor",
+            "selected": "You don't have anymore questions for him",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Enjoy the creepy silence",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "George IV Bedroom",
+            "redirect": "doctor_day2_evening_bedroom_drunk"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Richard III Bedroom",
+            "redirect": "doctor_day2_evening_bedroom_broken"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Billiard room",
+            "redirect": "doctor_day2_evening_billiard_room"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_menu",
+            "selected": "Go to the bar for a drink",
+            "redirect": "doctor_day2_evening_billiard_room_bar"
+        },
+        {
+            "menu": "doctor_day2_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Go to sleep, alone",
+            "redirect": "doctor_day2_evening_sleep_alone"
+        }
+    ]
+}

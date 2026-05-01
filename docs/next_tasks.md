@@ -29,6 +29,7 @@ THREAD, locked shed image
 - [x] Friday Evening
 - [x] Saturday Morning
 - [ ] Saturday Hunt - **almost**
+  - [ ] insiST that captain SINHA is taking charge (strecher, .... it's the only place it shouldn't be passed over)
   - [ ] TODO: ADD info unlocks
     - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
     - [ ] NO unlock for Thomas Moody ? Or find something else? => add the single thing? NO, no need. REWRITE STORY of thomas moody and the link with his brother? The real thomas is an orphan. Archie grew up with staff, so he pretends to be staff. BUT WHY??? I don't think Archie is Thomas Brother,  just his FRIEND for war? Lover? He knows everything about THomas moody. Needs rewrite the doctor. So you don't have the unlock BROTHER from doctor escape, just happy to escape. You'll need to ///. ALSO to unlock Thomas moody, add the captain notice he is the only one fitting perfectly. He is clearly posh. Yet, he told me he was a simple soldier, a former footman. That makes no sense. => Maybe it's the only way to survive for him. Befriend the Broken.?

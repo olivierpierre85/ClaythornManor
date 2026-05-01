@@ -1,0 +1,64 @@
+{
+    "start_label": "doctor_day2_evening",
+    "unlocked_threads": [
+        "remember_nurse"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day2_evening_reason",
+            "selected": "Say he was just too drunk",
+            "redirect": "doctor_day2_evening_reason_drunk"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Talk to Rosalind Marsh",
+            "redirect": "doctor_day2_dinner_nurse"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "What do you think of this weather?",
+            "redirect": "nurse_generic_weather_saturday_evening"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "What do you think of the other guests?",
+            "redirect": "nurse_generic_other_guests_saturday_evening_doctor"
+        },
+        {
+            "menu": "nurse_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Lady Claythorn",
+            "redirect": "nurse_generic_host_saturday"
+        },
+        {
+            "menu": "nurse_generic_other_guests_menu_doctor",
+            "selected": "What do you think of Amelia Baxter",
+            "redirect": "nurse_generic_psychic_saturday_evening_doctor"
+        },
+        {
+            "menu": "nurse_generic_other_guests_menu_doctor",
+            "selected": "I want to talk about something else.",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "nurse_generic_menu_doctor",
+            "selected": "You don't have anymore questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day1_evening",
+            "selected": "Enjoy the creepy silence",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "doctor_day2_evening_map_menu",
+            "selected": "Queen Alexandra",
+            "redirect": "doctor_day2_evening_bedroom_nurse_remember"
+        },
+        {
+            "menu": "broken_generic_other_guests_friday_offense",
+            "selected": "I guess it's the safest thing to do",
+            "redirect": "doctor_day2_evening_bedroom_nurse_sleep_yes"
+        }
+    ]
+}
