@@ -7,14 +7,14 @@ Butler: It's a bit early, so it may take a while before others arrive. In the me
 Butler: You can rest there a bit, there will be drinks later in the tea room.
 Daniel Baldwin: Perfect, when should we meet later?
 Butler: Around four I believe.
-The butler shows Doctor Baldwin and Thomas Moody rooms, then we reach mine.
+The butler shows Doctor Baldwin and Thomas Moody their rooms, then we reach mine.
 Butler: Miss Marsh, you'll stay in the "Queen Alexandra Room".
 He opens the door to a spacious, well-appointed room.
 Butler: Let me know if I can do anything for you.
 Rosalind Marsh: Very well, thank you.
 The journey has taken rather more out of me than I'd care to admit.
-I'll rest before dinner.
-I wake up a bit rested — enough to get through dinner.
+I should rest before dinner.
+I wake up a bit refreshed — enough to face the evening.
 I should go downstairs to meet the others.
 The tea room is quieter than I expected.
 Doctor Baldwin and Thomas Moody are deep in some hushed exchange.
@@ -29,7 +29,6 @@ He extends a hand, misses mine by several inches, and beams at me regardless.
 Rosalind Marsh: How do you do, Mr Manning.
 I make my excuses before he can finish his next sentence.
 The soldier is still with Baldwin and Moody.
-He seems the sort who finishes what he starts.
 I position myself nearby and wait.
 Sushil Sinha: Oh, hello Miss ... ?
 Rosalind Marsh: Miss Marsh.
@@ -38,11 +37,12 @@ Sushil Sinha: I was telling those gentlemen a story about a certain conflict I w
 Sushil Sinha: But I can change the subject if you prefer.
 Rosalind Marsh: No, please, go on. I am quite familiar with wartime stories, having served as a nurse through more than one.
 Sushil Sinha: Really? You were a wartime nurse. How interesting.
-Sushil Sinha: Well where was I?
+Sushil Sinha: Well, where was I?
 Thomas Moody: I believe you were talking about the Anglo-Zanzibar War.
+Sushil Sinha: Right.
 Sushil Sinha: That's where I got my first battle scar.
 Sushil Sinha: It's on my back so I won't show it to you, but it was rather dangerous fighting.
-Sushil Sinha: Not like the great war of course, and not that I can understand your pain.
+Sushil Sinha: Not like the Great War of course, and not that I can understand your pain.
 Sushil Sinha: But still, a battle wound is a battle wound.
 He's comparing a small scar on his back to the disfigured face of Thomas Moody.
 That's rather insensitive.
@@ -56,7 +56,8 @@ He nods along, but his eyes are elsewhere.
 I know that look. Something on his mind, and not the conversation in front of him.
 Two more have slipped into the room without my noticing.
 A young man and a woman in rather more elaborate dress than the occasion perhaps warrants.
-I have no time to speak to them. The gong sounds from the corridor.
+I have no time to speak to them.
+The gong sounds from the corridor.
 My place is set at the far end of the table.
 To my distinct dismay, the only person situated next to me is Mr Manning.
 Of all the guests to be seated beside, I must endure the one who can scarcely stand straight.
@@ -64,17 +65,17 @@ Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
 Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
 Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
 Lady Claythorn: I've taken notice of these actions and felt it was my responsibility to extend a formal 'thank you.'
-Lady Claythorn: I realize the invitation letter you received was somewhat vague, so let me clarify its contents now.
+Lady Claythorn: I realise the invitation letter you received was somewhat vague, so let me clarify its contents now.
 Lady Claythorn: My first gift to you is a stay at my manor.
 Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expertly prepared by my personal chef.
 Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
-Lady Claythorn: My second gift is a sum of one thousand pounds, to be shared among you.
+Lady Claythorn: My second gift is a sum of one thousand pounds, awarded to each and every one of you.
 Lady Claythorn: This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
 Following her speech, our host settles back down in her chair.
 Once the speech concludes, the first course promptly follows.
 Shortly after, the staff circle the table to pour the wine.
-Samuel Manning: Ah, capital! Fill it up to the very brim, if you please.
-Samuel Manning: Much obliged.
+Samuel Manning: Yes, yes — don't be stingy with it.
+Samuel Manning: Thank you.
 It appears the evening will be quite as taxing as I had feared.
 I am conflicted. If I ignore him, I might have to eat in silence, which could appear odd.
 But I don't know that I want to engage with him.
@@ -104,7 +105,6 @@ Map Choice: Male Servants Room
 The attic staircase is narrow and the floorboards announce every step.
 I stop.
 A woman wandering uninvited through the servants' quarters would not go unremarked.
-The door is locked, in any case.
 I ought not to have come up here at all.
 This is not the right moment to venture around here.
 Map Choice: Edward II Bedroom
@@ -142,8 +142,7 @@ Doctor Baldwin is sitting alone in his chair, a glass of port in hand.
 I make to approach him.
 But there is something in his eyes that unsettles me.
 He is distant, tired.
-It is plain he wishes to be left alone.
-I had better not.
+I should leave him alone.
 Menu Choice: Listen to Captain Sinha
 I move a little closer to the group.
 Thomas Moody, Lady Claythorn, and Ted Harring are all listening attentively.
@@ -169,7 +168,8 @@ Sushil Sinha: They managed to surround the Europeans and Japanese in the "Intern
 Sushil Sinha: There, the besieged did their best to resist the Chinese assaults, but it was obvious to everyone that they wouldn't last very long.
 Sushil Sinha: In order to break the siege and rescue their compatriots, the largest foreign nations formed expeditions to help lift the siege of Beijing.
 Sushil Sinha: I was part of the most important one, and the only successful one: The "Gaselee Expedition," named after Alfred Gaselee, the British expedition leader.
-Sushil Sinha: It was a mish-mash of troops from eight different countries: Japan, The British Empire, The United States, France, Russia, German Empire, Italy, and Austria-Hungary.
+Sushil Sinha: It was a mish-mash of troops from eight different countries.
+Sushil Sinha: Japan, The British Empire, The United States, France, Russia, German Empire, Italy, and Austria-Hungary.
 Sushil Sinha: As an Indian officer, I was obviously part of the British army.
 Sushil Sinha: We first landed at Tientsin, then we marched from there to reach Beijing.
 Sushil Sinha: Our goal was to rescue the civilians besieged there, as well as people from previous expeditions.
@@ -210,11 +210,15 @@ Sushil Sinha: In any case, that's why I live in England today.
 Not the worst story-teller, I will grant him that.
 But there is something that troubles me about his tale.
 There was no Indian officers during that time — not at that rank.
-That may well have changed after the Great War, but I am quite certain he did not hold that rank in those days.
+That may well have changed after the Great War, but I am quite certain he wasn't a captain in those days.
 And the claim that he was sent to London to command a training regiment — which would have been composed entirely of white men — is even more far-fetched.
 There is something wrong about his story.
 I should keep it in mind.
-I have pushed myself rather too far this evening.
+A wave of tiredness washes over me quite suddenly.
+The journey here took more out of me than I thought.
+If I push myself much further tonight, I shall pay for it.
+It has been a long day, and the weariness has settled into my bones.
+I should go back to my room.
 As I reach my room, a fit of coughing takes hold — sharp and wretched.
 I grip the bedpost until it passes.
-I ought not to have done so much.
+I have pushed myself rather too far this evening.

@@ -1,0 +1,128 @@
+Chapter: The Hunt
+Character: Amelia Baxter
+I let everyone know that I am opting out of the hunt.
+It turns out Rosalind Marsh is the only other one who made the same choice.
+We agreed to meet shortly for luncheon in the tea room.
+I should find her there a bit before noon.
+Map Choice: Wait for Rosalind Marsh in the Tea Room
+I don't really feel like exploring the Manor, so I decide to wait in the Tea Room.
+I am the first to arrive, so I pick a table and wait for Rosalind Marsh.
+I am seated comfortably, lost in my thoughts when she enters the room.
+Amelia Baxter: Miss Marsh, would you like to join me?
+Rosalind Marsh: Yes, thank you.
+Amelia Baxter: It seems we haven't really had a chance to talk yet, right?
+Menu Choice: You don't have anymore questions for her
+Suddenly, a staff member walks in.
+Young woman: Excuse me for interrupting, but do you ladies need some lunch?
+Rosalind Marsh: That would be lovely, thank you.
+After a few minutes, she returns with some plates.
+As we eat, we chat about trivial matters.
+When our lunch is over, Rosalind rises from her seat.
+She lets out a painful cough.
+Rosalind Marsh: I'm feeling rather poorly.
+Rosalind Marsh: I think I will retire to my room.
+Rosalind Marsh: Would you mind being left on your own?
+Amelia Baxter: Not at all, please don't concern yourself.
+Amelia Baxter: There is more than enough here to occupy me.
+With the manor so quiet, I might seize the chance to explore unnoticed.
+And perhaps I should call upon Rosalind Marsh later, to see how she is doing.
+What should I do know?
+Map Choice: Portrait Gallery
+There are quite a few impressive portraits here.
+However, no one else is present.
+Now, I realise that there are probably paintings of the Claythorn family here.
+I can't find Lady Claythorn here, but after a while I spot Lord Claythorn.
+He looks exactly as he does in real life.
+I check the label below the painting.
+"Nicholas III, of Claythorn Manor"
+So, Nicholas is his first name.
+Map Choice: Library
+Here is an impressive library.
+"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." is open on a table.
+I take a closer look at the book.
+It's the 8th edition, printed in 1894. That was quite some time ago.
+Perhaps I should look up information about the people living here.
+I find multiple entries for families with the name Claythorn.
+There's only one place associated with a Nicholas.
+Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith.
+Book: Born on June 22, 1813.
+Book: His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
+Book: With Mary Kirwan, his wife, he fathered one son and one daughter:
+Book: 1. Elisabeth, his heir, born in 1865.
+Book: 2. Andrew, born in 1867, died in 1869.
+Book: Lineage...
+There's additional information about the history of this place.
+But something seems off.
+Born in 1813.
+Wait, that would make him...
+111 years old?
+That can't be right.
+If that were true, he'd likely be the oldest man in England.
+Possibly even the world.
+Yet he didn't appear to be that old.
+I suppose this must be an mistake in the book.
+If they tried to list all the gentry of this country, they were bound to make some errors.
+Map Choice: Return to the Attic
+I've decided to return to the attic.
+I have some questions to ask the "Lord" of this place.
+But am I sure I should?
+Menu Choice: Of course, there is no logical reason to be afraid
+I know I must confront him.
+But what am I hoping to prove?
+That's a dangerous path I fear I'm taking here.
+He is not in the hallway, so I head to his room.
+I don't bother knocking and enter right away.
+It's even more decrepit than the rest of the attic.
+Why would anyone decide to live here?
+Amelia Baxter: Sir Nicholas, are you there?
+Older Man: Oh good, you've returned.
+Older Man: And you've learned my name as well.
+Older Man: Impressive.
+Amelia Baxter: That's not all I've learned, though.
+Older Man: Really? What else?
+Amelia Baxter: That you're supposed to be 111 years old.
+Amelia Baxter: Is this true?
+Older Man: 111 years...
+Older Man: Has it been that long already?
+Older Man: Well, I suppose that's true.
+Amelia Baxter: No one can live this long.
+Older Man: Probably not.
+Amelia Baxter: So, are you...
+Amelia Baxter: Are you...
+Older Man: Am I what, my dear?
+Older Man: Dead?
+Older Man: That's what you think, right?
+Older Man: Or rather, it's what you're hoping.
+Amelia Baxter: What do you mean?
+Older Man: Because either I am a ghost...
+Older Man: Or you're just losing your mind.
+He inches closer to me.
+Older Man: So, which will it be?
+Older Man: That a liar, someone who preyed on the bereaved to make money,
+Older Man: is actually a real-life medium?
+Older Man: That it was in her all along?
+Older Man: I understand the appeal to believe that now.
+Older Man: That would mean that you weren't really deceiving people your entire life.
+Older Man: But that would be too easy, wouldn't it?
+Older Man: I am afraid there is only one other alternative.
+Older Man: You must see it too now.
+Older Man: You understand what's happening here, don't you?
+He is now almost next to my face.
+I can't take this.
+I rush outside his room.
+But he is already there.
+Standing in front of me.
+Older Man: Where are you going?
+Older Man: Do you think you can get rid of me that easily?
+Amelia Baxter: What do you want from me?
+Older Man: Me? I don't want anything.
+Older Man: The question is: what do you want?
+I slowly take a step back towards the stairs.
+Older Man: Do you feel remorse maybe?
+I take another step.
+Older Man: Some regret over what you've done?
+Amelia Baxter: Please, leave me alone.
+I try to walk back further,
+but my foot doesn't find the ground behind me.
+You fell in the staircase.
+You are not sure what happened there in the attic, but it got the best of you.

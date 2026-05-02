@@ -3,10 +3,9 @@ Character: Rosalind Marsh
 I am quite content to remain behind.
 It will allow me to rest.
 Even though I should at least join Mrs Baxter for lunch.
-And I could take the opportunity that most people are outside to "look" for treasure.
-The priority would be to find the stash of money promised to everyone.
-But, if as I suspect, there isn't any, I am sure I can find other valuables in here.
-Once I feel I have found enough, I might be able to leave early and avoid any suspicion.
+And I could take the opportunity that most people are outside to "look" more intensively into this place.
+Obviously, the priority would be to find the stash of money promised to everyone.
+But, if as I suspect, there isn't any, I am sure I can find other valuables.
 Map Choice: Gun room
 The gun room.
 I am certain that I should not be here, so I made sure no one noticed me.
@@ -21,7 +20,6 @@ It is not loaded.
 And I have not seen any bullets lying about.
 Nevertheless, it could prove useful.
 I slip it into my bag.
-Nobody will notice. Not for a while, at any rate.
 Map Choice: Storage Room
 The attic staircase creaks with every step.
 Up here, the air is close and smells of dust and old timber.
@@ -163,19 +161,5 @@ The room is in a frightful state.
 Clothes are discarded carelessly, and the unmistakable smell of spirits hangs in the air.
 A brief glance reveals only empty whisky bottles.
 Quite as I suspected. There is nothing of value for me here.
-Map Choice: Richard III Bedroom
-Mr Moody's room.
-His body settled on the bed, hidden underneath the bed sheets.
-One could be easily frightened, but I am used to this.
-Usually, a dead body doesn't cause me anguish, only respect and sadness.
-And yet here I am, with the purpose of stealing from a man who can't defend himself anymore.
-I should feel bad, but I know I need the money more than he does now.
-So I start looking.
-But the bounty is meager.
-Nothing on the dressing table.
-A small case with his clothes under the bed.
-That's it.
-I could also search his body, but that would be going too far, even for me.
-I close the door softly and leave.
 A commotion from the entrance hall draws my attention.
 It seems the hunting party has returned.

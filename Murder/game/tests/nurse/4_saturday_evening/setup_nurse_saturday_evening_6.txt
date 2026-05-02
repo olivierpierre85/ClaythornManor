@@ -140,110 +140,68 @@ It is not worth the risk.
 I do not feel ready to sleep just yet.
 The manor is quiet, but that is not the same as saying it is safe.
 Perhaps I ought to make a brief exploration before I retire.
-Map Choice: Dining Room
-The dining room has been cleared.
-Only the large table remains, bare and polished under the cold light.
-There is nothing to keep me here.
-Map Choice: Garden
-I step towards the door.
-It is dark outside, and the wind has risen again.
-There is nothing to be gained by wandering out there in the cold.
-I turn and go back in.
-Map Choice: Gun room
-The gun room.
-I am certain that I should not be here, so I made sure no one noticed me.
-Shotguns and hunting rifles line three walls, arranged on open racks.
-The smell of gun oil is sharp.
-Everything is laid out as though ready for use — nothing locked away.
-There are even a few small handguns lying on a table.
-It would be foolish not to take one.
-Menu Choice: Take a pistol
-My hand closes around the grip of a small revolver.
-It is not loaded.
-And I have not seen any bullets lying about.
-Nevertheless, it could prove useful.
-I slip it into my bag.
-Map Choice: Female Servants Room
-The attic staircase creaks with every step.
-Up here, the air is close and smells of dust and old timber.
-The corridor runs the length of the house, doors on either side.
-With the servants all occupied below, there is no one to question what I am doing up here.
-The door is locked.
-But it would take me very little effort to open it.
-In my years of nursing, I have become acquainted with all manner of locks — on medicine cabinets, ward doors, and supply rooms.
-And I quickly realised how convenient it is to be able to open them all.
-That is why I learned to pick locks.
-A most useful skill.
-So, I easily make my way inside.
-It is a small, spare space — two narrow beds, a washstand, a single trunk between them.
-On the shelf above one of the beds, a small collection of things: a dog-eared playbill from a London theatre, another from a touring company.
-A faded photograph is tucked behind them.
-I take the photograph down.
-A young woman in stage dress, posed with a man I do not recognise.
-She is smiling broadly. I recognise the young maid working here.
-So she is, or was, an aspiring actress.
-How peculiar for her to end up here.
-I wonder what her story is.
-I replace everything as it was and step back out.
-A cough comes to me, a strong one.
-I reach for my handkerchief to cover my mouth.
-It is followed by a second.
-It should not come as a surprise; I haven't rested as much as I ought to.
-The only sane thing to do now is to go to bed.
-If I don't, God knows what could happen.
-Map Choice: Male Servants Room
+Map Choice: Kitchen
+I ease the door open just enough to look inside.
+The kitchen is a hive of activity.
+The staff are busy cleaning after the evening meal.
+I withdraw before anyone notices my presence.
+Map Choice: Garage
+It looks exactly the same as before.
+No need to search any further.
+Map Choice: Henry IV Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+It is highly unusual for Lady Claythorn to be absent from her room at this hour.
+This corridor remains quite deserted as well.
+Menu Choice: Perhaps I missed a hidden drawer earlier.
 The door is locked.
 I easily make my way inside.
-Two beds, a chest of drawers, a peg for each man's jacket.
-I check the drawers quickly — folded shirts, a penknife, a few coins.
-No valuables here.
-Tucked at the very back of the bottom drawer, beneath folded shirts, I find a letter.
-It is from a theatre company in London — a rejection, politely worded but unmistakable.
-"We regret to inform you that the role has been filled. We wish you every success in your future endeavours."
-An actor. Playing at being a servant.
-But why would he stay so far from a theatre?
-That is rather suspicious.
-I fold the letter and replace it exactly as I found it.
-Two actors in the same household, so far from any major city.
-That cannot be a coincidence.
+I carefully search Lady Claythorn's room once more.
+The heavy curtains, the dressing table, the floorboards... I check it all again.
+But there is simply nothing else to be found.
+If the bearer bonds are here, they are in a safe I cannot locate.
+The string of pearls still sits in its velvet case on the dressing table.
+Menu Choice: Leave them. It's not worth the risk.
+Map Choice: George I Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+Captain Sinha is nowhere to be seen, though I suspect he is not far away.
+This corridor remains quite deserted as well.
+Menu Choice: I should take another look just to be certain I missed nothing.
+The door is locked.
+I easily make my way inside.
+I look over the Captain's immaculate room one last time.
+Everything remains exactly as I found it earlier.
+If there is a secret here, it is too well hidden for me to find now.
+I should not linger and press my luck.
+But wait — something is different.
+A hunting jacket now hangs on the hook by the door.
+That was not there before. The Captain must have changed for dinner since my last visit.
+I turn to the jacket on the hook by the door.
+The hunting jacket — heavier than the dinner jacket, rougher cloth.
+I slip my hand into the right pocket.
+Nothing.
+The left.
+My fingers close around cold metal.
+A key, heavy and old, with a long shaft and an open bit at the end.
+It doesn't look like a normal bedroom key.
+That must be the butler's master key.
+This might come in handy.
+Map Choice: Gun room
+There is nothing new in here.
+I search a bit more for bullets, but still cannot find any.
+So there is no reason to stay here.
 Map Choice: Library
-A well-appointed library.
-"A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain" lies open on a table.
-I cast my eye along the shelves.
-Mostly heraldry, county histories, and bound journals.
-Nothing worth taking — far too heavy, and of no particular value.
-I am about to leave when a title catches my attention.
-"A History of the British Army" — Fortescue.
-Fourteen volumes.
-I have seen this set before, in the officers' mess at Netley.
-The Captain mentioned Zanzibar at some point, I remember.
-Something in the way he spoke of it nagged at me, though I could not quite place it at the time.
-I could try to learn more about that conflict, though it may take some time.
-Menu Choice: Look it up. It may be useful.
-I take down the volume covering the latter campaigns in India and East Africa.
-I find the index and look up Zanzibar.
-A single page.
-The engagement lasted thirty-eight minutes.
-The shortest war in recorded history, apparently.
-The British bombardment was overwhelming.
-Casualties on the British side were minimal — one man, lightly wounded.
-If what the Captain said is true, he would be the only injured soldier from the entire war.
-That seems most unlikely.
-He may well have invented the whole story — but to what end?
-A cough takes me without warning.
-Harder than the ones before.
-I press my handkerchief to my lips.
-A second.
-My knees feel uncertain beneath me.
-I find the wall and lean against it.
-A third, and I cannot check it.
-I sink down.
-The handkerchief, when I pull it away, tells me everything I already knew.
-The floor is very cold.
-I cannot seem to rise.
-You pushed yourself beyond the limits of your endurance.
-The illness that has been shadowing your every step finally claimed its due.
-There was no one to hear your final, desperate cough.
-No one to offer a glass of water, or a steadying hand.
-In the cold silence of the night, you were simply too tired to go on.
-Perhaps if you had managed your strength from the start, the outcome might have been different.
+The library remains as it was.
+The volumes of "A History of the British Army" are still on the shelf.
+Menu Choice: Leave it. I am too tired for reading.
+A cough catches me by surprise.
+I stop and press a hand against the wall until it passes.
+When it does, I become suddenly aware of how late it must be.
+I have been wandering this house for too long.
+That was not wise of me.
+There are some indulgences I cannot afford, and pushing myself through the small hours of the night is one of them.
+I shall not press my luck further tonight.
+I return to my room and lock the door behind me.
+It has been a long day.
+It is time to sleep.

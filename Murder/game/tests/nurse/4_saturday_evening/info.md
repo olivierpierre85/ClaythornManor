@@ -39,3 +39,10 @@ Covers: most map rooms, day2_exhaustion branch (time runs out without day1_exhau
 - **Map**: Tea room, Entrance Hall, William the Conqueror Bedroom (lad), Edward II Bedroom (doctor), Elizabeth I Bedroom (psychic), Richard III Bedroom (broken), George IV Bedroom (drunk) — 90 min total
 - **Ending**: day2_exhaustion cough warning, then sleep
 
+## File 6 (revisits — pre-set visited flags + take_gun + find_bullets)
+Covers the second-visit / "_again" narration that previous plans never reach. All `visited_*` saved_variables are pre-set, plus `lockpick_seen`, `tried_butler_cabinet`, `generic_attic_visited`, and the `take_gun` + `find_bullets` threads.
+- **Dinner**: Don't speak at all
+- **Steal**: Do not steal
+- **Map**: Kitchen (`downstairs_maid`), Garage (already-visited), Henry IV Bedroom (host revisit + pearl menu, leave them), George I Bedroom (captain revisit, unlocks `master_key` mid-chapter), Gun room (`already_taken`), Library (revisit, "remains as it was", leave), Portrait Gallery (revisit), Storage Room (revisit with `find_bullets`), Female & Male Servants Rooms (revisit), Butler's Room (revisit with `master_key` from captain step → opens cabinet)
+- **Ending**: Go to sleep
+

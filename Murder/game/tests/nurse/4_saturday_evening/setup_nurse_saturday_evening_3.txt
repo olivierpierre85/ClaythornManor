@@ -12,10 +12,10 @@ Amelia Baxter: Is that Doctor Baldwin? Is he injured?
 Amelia Baxter: Oh no! Is he... dead?
 Sushil Sinha: I'm sorry, dear, but he is.
 Amelia Baxter: But... what happened?
-Sushil Sinha: It was an accident.
-Samuel Manning: I swear it was! I have no idea how I could have hit him.
+Sushil Sinha: A terrible thing.
+Sushil Sinha: Samuel Manning missed his target and hit Doctor Baldwin instead.
+Samuel Manning: It was an accident, I swear! I have no idea how I could have hit him.
 Samuel Manning: I was aiming at a rabbit. I didn't even see him.
-Everyone turns to him.
 Amelia Baxter: You fool! You were probably too drunk, and that's why you hit him.
 Amelia Baxter: You could barely walk this morning. Who gave you a gun?
 Sushil Sinha: Please, there's no need to point fingers now. It's done.
@@ -24,12 +24,15 @@ Sushil Sinha: Speaking of which, has anyone from the city arrived yet?
 Amelia Baxter: No, not yet.
 Amelia Baxter: We're still waiting for them.
 Sushil Sinha: We should tell them to hurry.
+Sushil Sinha: There are now two bodies to inspect, that will make matters even more complicated.
 Sushil Sinha: Lady Claythorn, where's the telephone?
 Lady Claythorn: I'll handle it.
-She leaves the group, with the butler following closely behind.
-The room falls silent.
-Most eyes are on Sam Manning, filled with disdain.
-Then, the hostess returns.
+Lady Claythorn leaves with the butler.
+I keep my hands folded before me. It is what one is taught to do, when there is nothing useful left to be done.
+Mr Manning sits upon the bottom stair, drained of whatever spirit he had this morning.
+He looks rather pitiable, though I doubt anyone here would thank me for saying so.
+I hold my peace.
+The hostess returns presently.
 Lady Claythorn: I just spoke with the police. They aren't coming today.
 Sushil Sinha: What!? Why not?
 Lady Claythorn: They were on their way but encountered a huge tree blocking the road.
@@ -64,7 +67,6 @@ Butler: The doors are sufficiently robust, and considering his current condition
 Lady Claythorn: Yes, that seems like a prudent measure.
 At that moment, Sushil Sinha makes his return from upstairs.
 Ted Harring is not with him.
-Sushil Sinha: Mr Harring needed to change, he'll join us shortly.
 Lady Claythorn: Ah, Captain! It's good you're here.
 Lady Claythorn: We've been deliberating over what action to take concerning Samuel Manning.
 Sushil Sinha: I see.
@@ -74,7 +76,6 @@ Lady Claythorn: At least until the authorities can take over.
 Sushil Sinha: That does seem like the wisest approach.
 He shifts his attention towards Samuel Manning.
 Sushil Sinha: I hope you understand we're left with little choice right now.
-Samuel Manning gives no sign of comprehension.
 Samuel Manning: Choice? What choice?
 Samuel Manning: What do you mean?
 Sushil Sinha: You have to retire to your room for now.
@@ -88,11 +89,8 @@ After sifting through them, he presents one to Mr Sinha.
 Butler: Use this key to lock his room.
 Sushil Sinha: Excellent, thank you.
 Sushil Sinha: Now, Mr Manning, let's go shall we?
-Samuel Manning offers a silent nod, rises, and follows Captain Sinha up the staircase.
-His gaze betrays a mix of resignation and confusion.
-I watch the Captain lead Samuel Manning away.
-The man goes quietly, which surprises me.
-He seems to have only a dim sense of what has happened.
+Mr Manning gives the smallest nod, rises, and follows the Captain towards the stair.
+He moves quietly, and seems to have only a dim sense of what has happened.
 Lady Claythorn: What a sad business.
 Lady Claythorn: But, sadly, there is nothing else to be done at the moment.
 Lady Claythorn: I suggest you all return to your rooms for now.
@@ -130,7 +128,6 @@ I find myself wondering what she is actually feeling beneath that composed exter
 Now that she is sitting to my right, I have the opportunity to question her.
 Menu Choice: Say nothing, eat your dinner
 Dinner ends.
-Very few words were exchanged.
 The butler sees the guests out of the room with quiet efficiency.
 Most of the others drift away towards their rooms.
 Before they all leave, my eyes settle on the silverware scattered about the table.

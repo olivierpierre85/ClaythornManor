@@ -92,3 +92,33 @@ branch). Wait until others.
 **Path**: Map 1: Take a nap (early-exit, runs `psychic_day2_no_hunt_cancel`).
 Tea: nurse exit. Map 2: Wait until others.
 - Covers the "Take a nap" Map 1 exit option.
+
+---
+
+## setup_psychic_saturday_afternoon_8.json
+**Checkpoint**: thread `visited_attic` pre-unlocked, `attic_visited=True`. This
+mimics a player who already met the Lord on Day 1 evening.  
+**Path**: Map 1: **Wait for Rosalind Marsh in the Tea Room** as the first
+choice (`time_left == 60 > 55`, triggers the early "I don't really feel like
+exploring" narration). Tea: nurse exit. Map 2: Portrait Gallery
+(`look_for_lord`, unlocks `lord_name`) → Library (`look_for_lord_succeed`,
+takes the "I turn back to the page" branch since `book_read` was never set in
+this run, then unlocks `lord_age`) → Return to the Attic (`psychic_attic_return`)
+→ **Of course, there is no logical reason to be afraid** → `psychic_confront_lord`
+→ `psychic_ending_lord` (chapter ends).
+- Covers the Map 1 `time_left > 55` narration branch
+  (`I don't really feel like exploring the Manor, so I decide to wait...`),
+  the full `psychic_confront_lord` confrontation dialogue, and the
+  `psychic_ending_lord` death ending.
+
+---
+
+## setup_psychic_saturday_afternoon_9.json
+**Checkpoint**: thread `visited_attic` pre-unlocked, `attic_visited=True`.  
+**Path**: Map 1: Storage Room with redirect `psychic_day2_no_hunt_attic_default`
+(both this and `_attic_return_too_soon` are valid here — picking the
+`_attic_default` redirect routes through `psychic_attic_default`'s else branch
+since `attic_visited` is already True). Tea: nurse exit. Map 2: Wait until
+others.
+- Covers the `psychic_attic_default` else branch one-liner
+  ("I really shouldn't go back there right now").

@@ -30,7 +30,6 @@ label init_nurse:
             # story var
             "lockpick_seen" : False,
             "bedroom_too_dangerous_seen" : False,
-            "day2_evening_bedroom_closed" : False,
             "day1_evening_billiard_room_visited" : False,
             "day2_evening_billiard_room_visited" : False,
             "visited_library": False,

@@ -12,10 +12,10 @@ Amelia Baxter: Is that Doctor Baldwin? Is he injured?
 Amelia Baxter: Oh no! Is he... dead?
 Sushil Sinha: I'm sorry, dear, but he is.
 Amelia Baxter: But... what happened?
-Sushil Sinha: It was an accident.
-Samuel Manning: I swear it was! I have no idea how I could have hit him.
+Sushil Sinha: A terrible thing.
+Sushil Sinha: Samuel Manning missed his target and hit Doctor Baldwin instead.
+Samuel Manning: It was an accident, I swear! I have no idea how I could have hit him.
 Samuel Manning: I was aiming at a rabbit. I didn't even see him.
-Everyone turns to him.
 Amelia Baxter: You fool! You were probably too drunk, and that's why you hit him.
 Amelia Baxter: You could barely walk this morning. Who gave you a gun?
 Sushil Sinha: Please, there's no need to point fingers now. It's done.
@@ -24,12 +24,15 @@ Sushil Sinha: Speaking of which, has anyone from the city arrived yet?
 Amelia Baxter: No, not yet.
 Amelia Baxter: We're still waiting for them.
 Sushil Sinha: We should tell them to hurry.
+Sushil Sinha: There are now two bodies to inspect, that will make matters even more complicated.
 Sushil Sinha: Lady Claythorn, where's the telephone?
 Lady Claythorn: I'll handle it.
-She leaves the group, with the butler following closely behind.
-The room falls silent.
-Most eyes are on Sam Manning, filled with disdain.
-Then, the hostess returns.
+Lady Claythorn leaves with the butler.
+I keep my hands folded before me. It is what one is taught to do, when there is nothing useful left to be done.
+Mr Manning sits upon the bottom stair, drained of whatever spirit he had this morning.
+He looks rather pitiable, though I doubt anyone here would thank me for saying so.
+I hold my peace.
+The hostess returns presently.
 Lady Claythorn: I just spoke with the police. They aren't coming today.
 Sushil Sinha: What!? Why not?
 Lady Claythorn: They were on their way but encountered a huge tree blocking the road.
@@ -64,7 +67,6 @@ Butler: The doors are sufficiently robust, and considering his current condition
 Lady Claythorn: Yes, that seems like a prudent measure.
 At that moment, Sushil Sinha makes his return from upstairs.
 Ted Harring is not with him.
-Sushil Sinha: Mr Harring needed to change, he'll join us shortly.
 Lady Claythorn: Ah, Captain! It's good you're here.
 Lady Claythorn: We've been deliberating over what action to take concerning Samuel Manning.
 Sushil Sinha: I see.
@@ -74,7 +76,6 @@ Lady Claythorn: At least until the authorities can take over.
 Sushil Sinha: That does seem like the wisest approach.
 He shifts his attention towards Samuel Manning.
 Sushil Sinha: I hope you understand we're left with little choice right now.
-Samuel Manning gives no sign of comprehension.
 Samuel Manning: Choice? What choice?
 Samuel Manning: What do you mean?
 Sushil Sinha: You have to retire to your room for now.
@@ -88,11 +89,8 @@ After sifting through them, he presents one to Mr Sinha.
 Butler: Use this key to lock his room.
 Sushil Sinha: Excellent, thank you.
 Sushil Sinha: Now, Mr Manning, let's go shall we?
-Samuel Manning offers a silent nod, rises, and follows Captain Sinha up the staircase.
-His gaze betrays a mix of resignation and confusion.
-I watch the Captain lead Samuel Manning away.
-The man goes quietly, which surprises me.
-He seems to have only a dim sense of what has happened.
+Mr Manning gives the smallest nod, rises, and follows the Captain towards the stair.
+He moves quietly, and seems to have only a dim sense of what has happened.
 Lady Claythorn: What a sad business.
 Lady Claythorn: But, sadly, there is nothing else to be done at the moment.
 Lady Claythorn: I suggest you all return to your rooms for now.
@@ -179,7 +177,6 @@ Menu Choice: What room are you in?
 Lady Claythorn: The master bedroom is named after Henry IV.
 Lady Claythorn: Why, I am not sure exactly.
 Dinner ends.
-Very few words were exchanged.
 The butler sees the guests out of the room with quiet efficiency.
 Most of the others drift away towards their rooms.
 Before they all leave, my eyes settle on the silverware scattered about the table.
@@ -200,15 +197,17 @@ Lady Claythorn: Is there a problem?
 Lady Claythorn pauses at the doorway, her sharp eyes taking in the scene.
 Butler: I observed Miss Marsh securing a piece of the silverware in her bag, my lady.
 Lady Claythorn: Is this true?
-My face burns as I slowly reach inside and place the silver spoon back upon the table.
-Lady Claythorn: I can hardly believe my own eyes.
+Every excuse I have ever rehearsed vanishes at once.
+My throat tightens. My hands will not stop trembling.
+No point in denying now.
+I slowly reach inside my bag and place the silver spoon back upon the table.
+Lady Claythorn: Miss Marsh, I can hardly believe it.
 Rosalind Marsh: Lady Claythorn, please...
 Rosalind Marsh: I had no intention of keeping it.
 Rosalind Marsh: I was only admiring the craftsmanship.
 Lady Claythorn looks straight at me.
 A hard look that says she does not believe me, not a single word.
 But that she also does not quite know what to do.
-That must be a first for her.
 Rosalind Marsh: Please, believe me.
 Rosalind Marsh: This is all a terrible misunderstanding!
 Butler: Forgive me, my lady, but I am not in the habit of making mistakes.
@@ -224,7 +223,6 @@ Sushil Sinha: If she has taken anything else, bring it here.
 Butler: At once, sir.
 He leaves without another word.
 I stand rooted to the spot, my heart hammering against my ribs.
-I know precisely what he will find.
 No one speaks. Lady Claythorn remains in the doorway, watching me with that terrible, steady gaze.
 The Captain stands with his arms folded. The others avoid my eyes.
 The minutes stretch unbearably.
@@ -249,25 +247,30 @@ I try to think of an answer, but words elude me.
 Ted Harring: What are we going to do then?
 Amelia Baxter: We cannot possibly allow her to roam the house freely.
 Amelia Baxter: I am sorry, Miss Marsh, but I shall not feel safe until you are secured somewhere.
-Lady Claythorn: Quite right.
-Lady Claythorn: We could confine her to her room, just as we did with Mr Manning.
-Lady Claythorn: Tomorrow, we shall see what the police make of all this.
-Sushil Sinha: A sensible precaution.
+Sushil Sinha: We ought to confine her to her room, just as we did with Mr Manning.
+Sushil Sinha: Tomorrow, we shall let the police sort this out.
 Sushil Sinha: Allow me to escort her upstairs, Lady Claythorn.
-Sushil Sinha: Just to be absolutely certain there is no further trouble.
+Lady Claythorn: Yes, I think that is wise.
 Lady Claythorn: Thank you, Captain.
-Lady Claythorn: See to it that she is securely locked in.
 I try to muster some dignity, but with all their eyes upon me, there is none to be found.
 I follow the Captain upstairs with my head bowed.
 He walks closely behind me the whole way, ensuring I do not stray.
 When I reach my room, I step inside.
 The door closes firmly behind me, followed by the definitive click of a key turning in the lock.
 Sushil Sinha: Forgive me, Miss Marsh. I have no choice in the matter.
+His footsteps retreat down the corridor.
+I press my back against the door and sink to the floor.
+I don't think the police will arrest me for this.
+But what will happen if the words go out?
+My reputation could be gone in an instant.
+I sit there for a long while, staring at nothing.
+Then something steadies inside me. Self-pity will not help me.
 They believe I am trapped here.
-But they underestimate me.
-A hairpin and a steady hand are all I require to open such a simple lock.
+But a hairpin and a steady hand are all I require to open my door.
 I shall wait until the house is completely silent, and then I will take my leave.
-It is far from ideal, but it is my only chance.
+Certainly, they will not come after me.
+Not for such a minor small crime.
+I could leave and it would be as I've never been here.
 I slip out into the hallway undetected.
 Nobody is there.
 I keep close to the walls, hoping I do not run into any servants performing their night duties.

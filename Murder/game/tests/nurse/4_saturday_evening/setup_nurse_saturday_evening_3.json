@@ -78,7 +78,7 @@
             "time_since_last": 7.439573
         },
         {
-            "menu": "nurse_search_host_choice_default",
+            "menu": "nurse_pearl_choice",
             "other_choices": [
                 "Take the pearls.",
                 "Leave them. It's not worth the risk."

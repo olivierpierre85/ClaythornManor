@@ -1,0 +1,116 @@
+{
+    "start_label": "nurse_day2_evening",
+    "tester_id": "claude",
+    "timestamp": "2026-05-02T00:00:00",
+    "unlocked_threads_and_endings": [
+        "take_gun",
+        "find_bullets"
+    ],
+    "saved_variables": {
+        "generic_attic_visited": true,
+        "lockpick_seen": true,
+        "visited_garage": true,
+        "visited_gun_room": true,
+        "visited_library": true,
+        "visited_portrait_gallery": true,
+        "visited_bedroom_captain": true,
+        "visited_bedroom_host": true,
+        "visited_attic_females_room": true,
+        "visited_attic_males_room": true,
+        "visited_attic_storage": true,
+        "visited_attic_butler_room": true,
+        "tried_butler_cabinet": true
+    },
+    "choices": [
+        {
+            "menu": "nurse_day2_evening_dinner",
+            "selected": "Say nothing, eat your dinner",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "nurse_day2_evening_steal",
+            "selected": "It is not worth the risk",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "nurse_day2_evening_downstairs_maid"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Garage",
+            "redirect": "nurse_day2_evening_garage"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Henry IV Bedroom",
+            "redirect": "nurse_day2_evening_bedroom_host"
+        },
+        {
+            "menu": "nurse_day2_evening_bedroom_host_again",
+            "selected": "Perhaps I missed a hidden drawer earlier.",
+            "redirect": "nurse_day2_evening_enter_host_again"
+        },
+        {
+            "menu": "nurse_pearl_choice",
+            "selected": "Leave them. It's not worth the risk.",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "George I Bedroom",
+            "redirect": "nurse_day2_evening_bedroom_captain"
+        },
+        {
+            "menu": "nurse_day2_evening_bedroom_captain_again",
+            "selected": "I should take another look just to be certain I missed nothing.",
+            "redirect": "nurse_day2_evening_enter_captain_again"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Gun room",
+            "redirect": "nurse_day2_evening_gun_room_already_taken"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Library",
+            "redirect": "nurse_day2_evening_library"
+        },
+        {
+            "menu": "nurse_library_choice",
+            "selected": "Leave it. I am too tired for reading.",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "nurse_day2_evening_portrait_gallery"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Storage Room",
+            "redirect": "nurse_day2_evening_attic_storage"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Female Servants Room",
+            "redirect": "nurse_day2_evening_attic_females_room"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Male Servants Room",
+            "redirect": "nurse_day2_evening_attic_males_room"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Butler's Room",
+            "redirect": "nurse_day2_evening_attic_butler_room"
+        },
+        {
+            "menu": "nurse_day2_evening_map_menu",
+            "selected": "Go to sleep",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

@@ -3,13 +3,12 @@ Character: Rosalind Marsh
 I am quite content to remain behind.
 It will allow me to rest.
 Even though I should at least join Mrs Baxter for lunch.
-And I could take the opportunity that most people are outside to "look" for treasure.
-The priority would be to find the stash of money promised to everyone.
-But, if as I suspect, there isn't any, I am sure I can find other valuables in here.
-Once I feel I have found enough, I might be able to leave early and avoid any suspicion.
+And I could take the opportunity that most people are outside to "look" more intensively into this place.
+Obviously, the priority would be to find the stash of money promised to everyone.
+But, if as I suspect, there isn't any, I am sure I can find other valuables.
 Map Choice: Kitchen
 I move quietly through the back passage.
-Years of moving through dark passages in hospitals and large houses have taught me how to remain unseen.
+Years of moving discretely in hospitals and large houses have taught me how to remain unseen.
 I reach the kitchen door and ease it open an inch.
 I almost step inside until I notice one of the maids, alone.
 It is better if she does not see me.
@@ -34,7 +33,6 @@ It is not loaded.
 And I have not seen any bullets lying about.
 Nevertheless, it could prove useful.
 I slip it into my bag.
-Nobody will notice. Not for a while, at any rate.
 Map Choice: Wait for luncheon in the Tea Room
 I do not really have the strength to explore.
 I should just wait for luncheon here.

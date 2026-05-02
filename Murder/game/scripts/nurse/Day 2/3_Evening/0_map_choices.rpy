@@ -169,35 +169,6 @@ label nurse_day2_evening_portrait_gallery:
 
 
 # Bedrooms
-label nurse_day2_evening_bedroom_closed:
-
-    if not nurse_details.saved_variables["day2_evening_bedroom_closed"]:
-
-        $ nurse_details.saved_variables["day2_evening_bedroom_closed"] = True
-
-        """
-        I knock quietly.
-
-        There is no answer.
-
-        The house is still on edge after today's events.
-
-        It is no great surprise that people are keeping their doors shut.
-
-        I shall not press the matter.
-        """
-
-    else:
-
-        """
-        Still no answer.
-
-        I shall not disturb them again.
-        """
-
-    return
-
-
 label nurse_day2_evening_bedroom_lad:
 
     $ change_room("bedrooms_hallway")
