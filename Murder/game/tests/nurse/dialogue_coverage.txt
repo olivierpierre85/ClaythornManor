@@ -1,0 +1,191 @@
+Generated:                2026-05-01 16:21:00
+Scope:                    character=nurse
+Dialogue entries scanned: 1480
+Test lines collected:     2530
+Covered:                  1326
+Missing:                  154
+
+  game/scripts/nurse/Day 1/1_Afternoon/1_main.rpy  (3 missing)
+    [nurse_introduction_c7eff3c0] The letter rests upon my lap.
+    [nurse_introduction_d12ce09a] I cannot afford that sort of luxury.
+    [nurse_introduction_3ca7b6f1] But I cannot afford to do nothing, either.
+
+  game/scripts/nurse/Day 1/2_Evening/0_map_choices.rpy  (3 missing)
+    [nurse_day1_evening_check_exhaustion_50deeaea] A wave of tiredness washes over me quite suddenly.
+    [nurse_day1_evening_check_exhaustion_0d546c35] The journey here took more out of me than I thought.
+    [nurse_day1_evening_check_exhaustion_d71ccf17] If I push myself much further tonight, I shall pay for it.
+
+  game/scripts/nurse/Day 1/2_Evening/1_main.rpy  (8 missing)
+    [nurse_day1_evening_7c004858] The butler shows Doctor Baldwin and Thomas Moody their rooms, then we reach mine.
+    [nurse_day1_evening_021a24e9] I should rest before dinner.
+    [nurse_day1_evening_3d55f686] I wake up a bit refreshed — enough to face the evening.
+    [nurse_day1_evening_35794098] I have no time to speak to them.
+    [nurse_day1_evening_d7d4fd93] The gong sounds from the corridor.
+    [nurse_day1_evening_3559b8bc] Yes, yes — don't be stingy with it.
+    [nurse_day1_evening_5f06b005] I should go back to my room.
+    [nurse_day1_dinner_drunk_6b9f961c] It's barely passable.
+
+  game/scripts/nurse/Day 1/2_Evening/2_billiard_room.rpy  (3 missing)
+    [nurse_day1_evening_billiard_room_619510f0] I am back in the billiard room.
+    [nurse_day1_evening_billiard_room_captain_77ba6da8] That may well have changed after the Great War, but I am quite certain he wasn't a captain in those days.
+    [nurse_day1_evening_billiard_room_doctor_f485d894] I should leave him alone.
+
+  game/scripts/nurse/Day 2/1_Morning/1_main.rpy  (4 missing)
+    [nurse_day2_morning_764ee15c] Ted Harring is rising quietly to follow them, uninvited as far as I can tell.
+    [nurse_day2_morning_132cb757] Then, the room settles into an uneasy hush.
+    [nurse_day2_morning_e3c70bfe] I consider it for a second.
+    [nurse_day2_morning_17a60cc7] But a trudge across a cold forest , rifle in hand, would only make my condition worse.
+
+  game/scripts/nurse/Day 2/2_No Hunt/0_map_choices.rpy  (2 missing)
+    [nurse_day2_no_hunt_default_room_locked_c3919936] I try the handle gently.
+    [nurse_day2_no_hunt_default_room_locked_88811a78] It is securely locked.
+
+  game/scripts/nurse/Day 2/2_No Hunt/1_main.rpy  (5 missing)
+    [nurse_day2_hunt_6b590cf1] And I could take the opportunity that most people are outside to "look" more intensively into this place.
+    [nurse_day2_hunt_cd05d0b5] Obviously, the priority would be to find the stash of money promised to everyone.
+    [nurse_day2_hunt_712c2435] But, if as I suspect, there isn't any, I am sure I can find other valuables.
+    [nurse_day2_hunt_c039c17f] A rather risky thing to do.
+    [nurse_day2_hunt_7ccce06f] That may not help me much, but it's still something.
+
+  game/scripts/nurse/Day 2/3_Evening/0_map_choices.rpy  (14 missing)
+    [nurse_day2_evening_downstairs_maid_d3d9d577] I ease the door open just enough to look inside.
+    [nurse_day2_evening_downstairs_maid_bf83e33b] The kitchen is a hive of activity.
+    [nurse_day2_evening_downstairs_maid_bf4dc664] The staff are busy cleaning after the evening meal.
+    [nurse_day2_evening_downstairs_maid_0a07a80d] I withdraw before anyone notices my presence.
+    [nurse_day2_evening_bedroom_closed_3dfa53a2] I knock quietly.
+    [nurse_day2_evening_bedroom_closed_cde4eaca] There is no answer.
+    [nurse_day2_evening_bedroom_closed_c9f73d3f] The house is still on edge after today's events.
+    [nurse_day2_evening_bedroom_closed_cb5279bb] It is no great surprise that people are keeping their doors shut.
+    [nurse_day2_evening_bedroom_closed_eaf22562] I shall not press the matter.
+    [nurse_day2_evening_bedroom_closed_0f00efd5] Still no answer.
+    [nurse_day2_evening_bedroom_closed_61355713] I shall not disturb them again.
+    [nurse_day2_evening_enter_captain_again_ab6633e6] But wait — something is different.
+    [nurse_day2_evening_enter_captain_again_b7971142] A hunting jacket now hangs on the hook by the door.
+    [nurse_day2_evening_enter_captain_again_91b9bfc8] That was not there before. The Captain must have changed for dinner since my last visit.
+
+  game/scripts/nurse/Day 2/3_Evening/1_main.rpy  (2 missing)
+    [nurse_day2_evening_310622d0] Mr Manning gives the smallest nod, rises, and follows the Captain towards the stair.
+    [nurse_day2_evening_1d763890] He moves quietly, and seems to have only a dim sense of what has happened.
+
+  game/scripts/nurse/Day 2/3_Evening/2_billiard_room.rpy  (5 missing)
+    [nurse_day2_evening_billiard_room_confront_202fd9e6] I was behind them. Always safe in an office far from the action.
+    [nurse_day2_evening_billiard_room_confront_3910c530] Were stories.
+    [nurse_day2_evening_billiard_room_confront_00ea427b] Very old stories, told so many times it nearly became the truth in my mind.
+    [nurse_day2_evening_billiard_room_confront_f7564698] I keep hearing the Captain's voice, but it's is getting softer and softer.
+    [nurse_day2_evening_billiard_room_leave_13e3f175] I have nothing more to say tonight.
+
+  game/scripts/nurse/Day 2/3_Evening/2_steal_caught.rpy  (19 missing)
+    [nurse_day2_evening_steal_caught_2dfb617b] Every excuse I have ever rehearsed vanishes at once.
+    [nurse_day2_evening_steal_caught_86e4c1ee] My throat tightens. My hands will not stop trembling.
+    [nurse_day2_evening_steal_caught_cb1454ee] No point in denying now.
+    [nurse_day2_evening_steal_caught_95fa95d9] I slowly reach inside my bag and place the silver spoon back upon the table.
+    [nurse_day2_evening_steal_caught_c04be5a7] Miss Marsh, I can hardly believe it.
+    [nurse_day2_evening_steal_caught_8c735d52] We ought to confine her to her room, just as we did with Mr Manning.
+    [nurse_day2_evening_steal_caught_d76cacc9] Tomorrow, we shall let the police sort this out.
+    [nurse_day2_evening_steal_caught_bad3ebd6] Yes, I think that is wise.
+    [nurse_day2_evening_steal_caught_50b8723b] His footsteps retreat down the corridor.
+    [nurse_day2_evening_steal_caught_90f0db06] I press my back against the door and sink to the floor.
+    [nurse_day2_evening_steal_caught_6a340901] I don't think the police will arrest me for this.
+    [nurse_day2_evening_steal_caught_2c88e9c1] But what will happen if the words go out?
+    [nurse_day2_evening_steal_caught_21392e6d] My reputation could be gone in an instant.
+    [nurse_day2_evening_steal_caught_6e55a8da] I sit there for a long while, staring at nothing.
+    [nurse_day2_evening_steal_caught_0730c692] Then something steadies inside me. Self-pity will not help me.
+    [nurse_day2_evening_steal_caught_9c8893ee] But a hairpin and a steady hand are all I require to open my door.
+    [nurse_day2_evening_steal_caught_96acc893] Certainly, they will not come after me.
+    [nurse_day2_evening_steal_caught_e7282120] Not for such a minor small crime.
+    [nurse_day2_evening_steal_caught_6af8366c] I could leave and it would be as I've never been here.
+
+  game/scripts/nurse/Day 3/2_Afternoon/1_main.rpy  (2 missing)
+    [nurse_day3_afternoon_d6e616c1] I check the weight of my bag — the candlesticks, the salver, the spoons.
+    [nurse_day3_afternoon_6fa5bfe3] All still there.
+
+  game/scripts/nurse/nurse_endings.rpy  (4 missing)
+    [nurse_ending_poisoned_123d102a] You collapsed on the floor, and died there.
+    [nurse_ending_poisoned_d24dd843] You swapped plates, thinking yourself clever.
+    [nurse_ending_poisoned_6e5e2cea] But that didn't help your fate.
+    [nurse_ending_escape_collapse_803e4b3b] They found you the next morning, face down in the mud.
+
+  game/scripts/nurse/nurse_generic_locations.rpy  (39 missing)
+    [nurse_search_captain_again_a476310a] I look over the Captain's immaculate room one last time.
+    [nurse_search_captain_again_abbafc0a] Everything remains exactly as I found it earlier.
+    [nurse_search_captain_again_2ea8e3e5] If there is a secret here, it is too well hidden for me to find now.
+    [nurse_search_captain_again_208572e1] I should not linger and press my luck.
+    [nurse_search_host_again_98c0cb42] I carefully search Lady Claythorn's room once more.
+    [nurse_search_host_again_793203e0] The heavy curtains, the dressing table, the floorboards... I check it all again.
+    [nurse_search_host_again_d5a59de0] But there is simply nothing else to be found.
+    [nurse_search_host_again_fee85a62] If the bearer bonds are here, they are in a safe I cannot locate.
+    [nurse_search_host_again_e7b1d493] The string of pearls still sits in its velvet case on the dressing table.
+    [nurse_garage_default_ac292ef0] It looks exactly the same as before.
+    [nurse_garage_default_69e30bff] No need to search any further.
+    [nurse_gun_room_default_f9ab33b5] The rows of weapons remain exactly as they were.
+    [nurse_gun_room_default_f8e8707a] The small pistols are still available if I so desire.
+    [nurse_gun_room_already_taken_550dc8e2] There is nothing new in here.
+    [nurse_gun_room_already_taken_2c1f800b] I search a bit more for bullets, but still cannot find any.
+    [nurse_gun_room_already_taken_f6121a7e] So there is no reason to stay here.
+    [nurse_take_gun_2f225af6] But I already have the bullets I found in the attic.
+    [nurse_take_gun_16aff36d] I take them out and carefully load the weapon.
+    [nurse_downstairs_approach_ffbe024c] Years of moving discretely in hospitals and large houses have taught me how to remain unseen.
+    [nurse_library_default_21fd6917] There is nothing more for me to find here.
+    [nurse_library_default_2608e112] I already know what I need to know about Zanzibar.
+    [nurse_library_default_cb5e0c68] The library remains as it was.
+    [nurse_library_default_b510d7d4] The volumes of "A History of the British Army" are still on the shelf.
+    [nurse_portrait_gallery_default_1f47acb7] The portraits remain as they were, their silent judgement unchanged.
+    [nurse_attic_females_room_ac292ef0] It looks exactly the same as before.
+    [nurse_attic_females_room_69e30bff] No need to search any further.
+    [nurse_attic_butler_room_13eaf381] The cabinet stands open, emptied of anything worth taking.
+    [nurse_attic_butler_room_7da5e42c] There is nothing more for me here.
+    [nurse_attic_butler_room_c78112ba] The reinforced cabinet still stands against the far wall.
+    [nurse_attic_butler_room_8e9a0b3f] But this time, I have the master key.
+    [nurse_attic_butler_room_c78112ba_1] The reinforced cabinet still stands against the far wall.
+    [nurse_attic_butler_room_d7c432ba] Without the butler's key, there is nothing I can do here.
+    [nurse_attic_butler_room_250c4b59] The room itself is surprisingly ordinary.
+    [nurse_attic_males_room_ac292ef0] It looks exactly the same as before.
+    [nurse_attic_males_room_69e30bff] No need to search any further.
+    [nurse_attic_storage_21fd6917] There is nothing more for me to find here.
+    [nurse_attic_storage_e645a4a2] I have already gone through the important items.
+    [nurse_attic_storage_0042c41e] The storage room remains a jumble of trunks and boxes.
+    [nurse_attic_storage_375d4d39] I still have not searched it thoroughly.
+
+  game/scripts/nurse/nurse_other_guests.rpy  (41 missing)
+    [nurse_generic_other_guests_saturday_morning_30704ffb] Oh, up until now, I've mostly kept to myself.
+    [nurse_generic_other_guests_saturday_morning_8407cbab] I haven't talked to many people.
+    [nurse_generic_other_guests_saturday_morning_b141f7f8] I am seated next to Samuel Manning, but we haven't had a very deep conversation yet.
+    [nurse_generic_other_guests_saturday_morning_2f7aecd2] Our host is the only other person I've had any real exchange with.
+    [nurse_generic_other_guests_saturday_morning_8284d917] But we stuck mostly to simple pleasantries.
+    [nurse_generic_drunk_saturday_morning_e149f905] I usually don't like to spread gossip.
+    [nurse_generic_drunk_saturday_morning_e9d4944c] But in this case, I don't think it's a big secret.
+    [nurse_generic_drunk_saturday_morning_989bcef9] I believe Samuel Manning is an alcoholic.
+    [nurse_generic_drunk_saturday_morning_b3cf5016] He was barely intelligible both at dinner yesterday and this morning.
+    [nurse_generic_drunk_saturday_morning_2cbf3139] Those were two pretty unpleasant meals for me.
+    [nurse_generic_drunk_saturday_morning_409c04e1] Well, that's nothing I didn't already know.
+    [nurse_generic_other_guests_saturday_evening_doctor_ed42fbda] Well, I must admit I have not tried to socialise much.
+    [nurse_generic_other_guests_saturday_evening_doctor_b27b15cd] I have spoken a little with our host, though nothing of any real substance.
+    [nurse_generic_other_guests_saturday_evening_doctor_c765303e] This afternoon I shared lunch with Amelia Baxter, quite an interesting character.
+    [nurse_generic_other_guests_saturday_evening_doctor_a8d8c1b3] And of course there was our poor Mister Manning, ...
+    [nurse_generic_other_guests_saturday_evening_doctor_d76517f2] She realises to whom she is speaking and falls silent.
+    [nurse_generic_other_guests_saturday_evening_doctor_4d745126] Yes, a most tragic event. I still can scarcely believe what has happened.
+    [nurse_generic_other_guests_saturday_evening_doctor_1e6615e8] I am terribly sorry, Doctor. I did not mean to upset you.
+    [nurse_generic_other_guests_saturday_evening_doctor_3268e862] That is all right.
+    [nurse_generic_psychic_saturday_evening_doctor_b2864fec] Miss Baxter is a very pleasant woman, quite easy to talk to.
+    [nurse_generic_psychic_saturday_evening_doctor_17777a08] But she made me a little uneasy when she spoke of her "gift".
+    [nurse_generic_psychic_saturday_evening_doctor_a129ddd0] Gift? What do you mean?
+    [nurse_generic_psychic_saturday_evening_doctor_e50330ed] She is convinced that she can speak with the deceased, or with some other version of them that exists upon ...
+    [nurse_generic_psychic_saturday_evening_doctor_ab5607a6] I must confess I did not follow every word. I do not care to speak of the dead, and I found it most unsettl...
+    [nurse_generic_psychic_saturday_evening_doctor_89f14168] I can imagine. It is a delicate subject to raise with a stranger.
+    [nurse_generic_psychic_saturday_evening_doctor_13944985] Did she seem well otherwise?
+    [nurse_generic_psychic_saturday_evening_doctor_ee3a7a9e] She did.
+    [nurse_generic_psychic_saturday_evening_doctor_a7b72f51] You might be thinking as I did at first. That she might be ill.
+    [nurse_generic_psychic_saturday_evening_doctor_155060ce] I have seen this sort of thing in certain patients, particularly those approaching the end of their lives.
+    [nurse_generic_psychic_saturday_evening_doctor_8fafb300] But the rest of her behaviour was perfectly normal, and that was what troubled me most.
+    [nurse_generic_psychic_saturday_evening_doctor_33085062] I see. It is not unheard of for someone to hold a fixed idea upon a single matter, yet remain entirely soun...
+    [nurse_generic_psychic_saturday_evening_doctor_abe9feab] In my experience such notions may arise from strain or some powerful emotional shock, even when the mind is...
+    [nurse_generic_psychic_saturday_evening_doctor_137e51cd] So she could be perfectly well in every other respect.
+    [nurse_generic_psychic_saturday_evening_doctor_2b1fc424] Of course, we cannot disregard the possibility of a more serious condition.
+    [nurse_generic_psychic_saturday_evening_doctor_8dcb4643] In rare cases a fixed belief of that nature may be an early sign of dementia praecox, or what some of my co...
+    [nurse_generic_psychic_saturday_evening_doctor_697de4fb] But I would not draw conclusions too hastily. It is far more likely that Miss Baxter is of sound mind, ecce...
+    [nurse_generic_psychic_saturday_evening_doctor_6ef3dd2f] Thank you. That is a relief.
+    [nurse_generic_host_saturday_82cf6465] I only share a few words with the Lady of the house.
+    [nurse_generic_host_saturday_bdc1d868] I tried to know more about the details of the Manor, the staff, that sort of things.
+    [nurse_generic_host_saturday_3d0ae17d] She was quite polite, but her responses were short and not very informative.
+    [nurse_generic_host_saturday_8cd9c398] I hope I wasn't rude to her.
+

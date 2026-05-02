@@ -1,0 +1,14 @@
+{
+    "start_label": "doctor_day3_afternoon",
+    "unlocked_threads": [
+        "trust_captain"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day3_afternoon_captain_choice",
+            "selected": "No, do not trust them.",
+            "redirect": "doctor_day3_afternoon_captain_do_not_share"
+        }
+    ]
+}

@@ -1,0 +1,883 @@
+Generated:                2026-05-01 16:21:57
+Scope:                    all characters
+Dialogue entries scanned: 8603
+Test lines collected:     11773
+Covered:                  7819
+Missing:                  784
+
+  game/scripts/_common/Day 1/1_Afternoon/1_main.rpy  (1 missing)
+    [common_day1_afternoon_station_doctor_nurse_e17d8a46] He is tall and composed, and most of his face is concealed behind a mask.
+
+  game/scripts/_common/Day 2/1_Morning/2_follow.rpy  (2 missing)
+    [common_day2_breakfast_follow_doctor_lad_host_ad4b9a32] TODO
+    [common_day2_breakfast_follow_doctor_lad_host_ad4b9a32_1] TODO
+
+  game/scripts/_common/Day 2/3_Evening/1_main.rpy  (13 missing)
+    [common_day2_evening_entrance_dialog_b3bd00dd] The hostess and her butler clear off down the corridor.
+    [common_day2_evening_entrance_dialog_42a470fd] Then the room goes dead quiet.
+    [common_day2_evening_entrance_dialog_dee07ab1] All eyes are on Sam Manning. He doesn't see them.
+    [common_day2_evening_entrance_dialog_98d9b762] He's somewhere else entirely, staring at his own hands as if he's only just realised they're his.
+    [common_day2_evening_entrance_dialog_45916416] Best to keep my mouth shut.
+    [common_day2_evening_entrance_dialog_da483e40] When the hostess comes back, no one has moved an inch.
+    [common_day2_evening_entrance_dialog_6d79b7ac] Lady Claythorn leaves with the butler.
+    [common_day2_evening_entrance_dialog_f3199f00] I keep my hands folded before me. It is what one is taught to do, when there is nothing useful left to be d...
+    [common_day2_evening_entrance_dialog_7ccbb066] Mr Manning sits upon the bottom stair, drained of whatever spirit he had this morning.
+    [common_day2_evening_entrance_dialog_d7022066] He looks rather pitiable, though I doubt anyone here would thank me for saying so.
+    [common_day2_evening_entrance_dialog_4b77e998] The hostess returns presently.
+    [common_day2_evening_bedroom_doctor_dialogue_59ab5246] It is the best we can do at the moment.
+    [common_day2_evening_bedroom_doctor_dialogue_7f7b85fc] We should not linger here.
+
+  game/scripts/_common/Day 3/1_Morning/2_lad_psychic_journey.rpy  (4 missing)
+    [common_day3_morning_lad_psychic_tea_room_1_9a322362] I respond without hesitation.
+    [common_day3_morning_lad_psychic_tea_room_1_9dc00038] Amelia stiffens. I sense her unease, perhaps thinking I replied too quickly.
+    [common_day3_morning_lad_psychic_tea_room_1_8b156097] It's too late for second thoughts now.
+    [common_day3_morning_lad_psychic_tea_room_1_050034cd] Captain Sinha soon joins us in the room.
+
+  game/scripts/broken/Day 1/1_Afternoon/1_main.rpy  (17 missing)
+    [broken_introduction_d0f6ae8c] I am looking at my brother, lifeless on his bed.
+    [broken_introduction_78cc0cf9] His injuries had the best of him in the end.
+    [broken_introduction_0935940e] The mask that was suppose to help him live a normal live is next to him.
+    [broken_introduction_fc8132ee] He won't have to wear it anymore.
+    [broken_introduction_e525f88b] That's not so bad, he couldn't bare the look of the people around him.
+    [broken_introduction_fdbc0f5d] After dedicated his youth to the army he ends up alone in his apartment.
+    [broken_introduction_9f25cc4a] To scared to go out most of the time.
+    [broken_introduction_8b5e55de] The loneliness might have been the cause of death as much the failings of his aching body.
+    [broken_introduction_902a5e3c] I search about his place and found nothing that was not a necessity.
+    [broken_introduction_b03781a0] On his desk is a picture of us when we were teens, the caption reads: Thomas and Archie spring 1892).
+    [broken_introduction_c88c86a7] We were inseparable back then, two brothers who were also best friends.
+    [broken_introduction_1bc7138c] Next to the picture sits a letter.
+    [broken_introduction_1230f004] Well he won't might me reading it now.
+    [broken_introduction_bdfe8568] Dear Mr Moody,
+    [broken_introduction_f88efe81] I am still not sure what I am doing here.
+    [broken_introduction_80086045] In my hand rest my brother's mask.
+    [broken_introduction_574f44ae] test
+
+  game/scripts/captain/Day 2/1_Morning/1_main.rpy  (11 missing)
+    [captain_day2_morning_2a160ea0] Nor is our gracious hostess quite who she pretends to be.
+    [captain_day2_morning_79aba749] All the other men accept as well, but the ladies will remain behind.
+    [captain_day2_morning_breakfast_alive_1929557d] Mr Moody appears a moment later.
+    [captain_day2_morning_breakfast_alive_f222a84c] He pauses at the threshold and surveys the room before heading to the buffet.
+    [captain_day2_morning_breakfast_alive_c23c2dd8] There, he helps himself to a light plate.
+    [captain_day2_morning_breakfast_alive_245359c2] I look at him for a few seconds.
+    [captain_day2_morning_breakfast_alive_bb1af29c] His presence makes me uneasy.
+    [captain_day2_morning_breakfast_alive_2e2064a4] Even if I have no proof, I still suspect he is responsible for the letter.
+    [captain_day2_morning_breakfast_alive_d67cbe8a] Before he can notice my staring, I turn my head to the side.
+    [captain_day2_morning_breakfast_alive_cbd9f236] Of course, if you would rather remain indoors by the fire, that is perfectly welcome too.
+    [captain_day2_morning_breakfast_alive_d70a5fe5] A hunt. Yes, I remember it being mentioned.
+
+  game/scripts/captain/Day 2/2_Hunt/2_moody_dead.rpy  (3 missing)
+    [captain_day2_hunt_silent_luncheon_5ed2f5b7] It seems the others have seen something.
+    [captain_day2_hunt_confront_host_4bdae6c8] I noticed a lot of things that do not make sense this weekend:
+    [captain_day2_hunt_confront_host_5a9f7623] Not aiming, precisely. Simply making it plain that I am the one asking the questions.
+
+  game/scripts/captain/Day 2/2_Hunt/3_moody_alive.rpy  (58 missing)
+    [captain_day2_hunt_moody_alive_50c6bd62] I would rather have avoided him this afternoon.
+    [captain_day2_hunt_moody_alive_a63a2024] But, I cannot object without drawing attention to myself.
+    [captain_day2_hunt_moody_alive_3623d702] My own shots find nothing but empty air.
+    [captain_day2_hunt_moody_alive_2ee3cc07] My rifle has been pulling to the left all morning.
+    [captain_day2_hunt_moody_alive_da2198ef] I should value a second eye upon it.
+    [captain_day2_hunt_moody_alive_f71f56b5] I do not like the idea of following him alone into the trees.
+    [captain_day2_hunt_moody_alive_23d7cd2a] It is hard to believe there is anything wrong with his weapon.
+    [captain_day2_hunt_moody_alive_d2986124] But I cannot find a polite reason to refuse.
+    [captain_day2_hunt_moody_alive_1fb044c7] Lead on, Mr Moody.
+    [captain_day2_hunt_moody_alive_29905261] I shall be right behind you.
+    [captain_day2_hunt_moody_alive_912418e0] He walks easily, his rifle slung over his shoulder.
+    [captain_day2_hunt_moody_alive_5784bee0] Not to show me.
+    [captain_day2_hunt_moody_alive_c342417f] To hold.
+    [captain_day2_hunt_moody_alive_20e0215a] That is quite far enough, I think, Captain.
+    [captain_day2_hunt_moody_alive_c709f8cf] His gun is now pointing directly at my chest.
+    [captain_day2_hunt_moody_alive_6908f552] My own rifle hangs uselessly at my side.
+    [captain_day2_hunt_moody_alive_efd86df6] There is a yard too many between us for me to raise it in time.
+    [captain_day2_hunt_moody_alive_b21c4528] Mr Moody.
+    [captain_day2_hunt_moody_alive_c02ea99a] You see, Captain, I found a piece of paper upon my bed yesterday.
+    [captain_day2_hunt_moody_alive_81ed9ebd] An old order from the War, written in the autumn of 1917.
+    [captain_day2_hunt_moody_alive_58d7876f] The order was to send men to take a vaguely strategic position in Flanders.
+    [captain_day2_hunt_moody_alive_c8fd453f] At first, I did not understand what it was doing here.
+    [captain_day2_hunt_moody_alive_0fee3000] There must have been thousands of such orders issued during the war.
+    [captain_day2_hunt_moody_alive_8854d175] Then I recognised the name of the company that received the order: B Company, 2nd Battalion, Lancashire Fus...
+    [captain_day2_hunt_moody_alive_35e4522b] And then I checked the date of the order.
+    [captain_day2_hunt_moody_alive_6940705b] It was a date that will remain engraved in my memory for ever.
+    [captain_day2_hunt_moody_alive_e46a4d4c] And at the end of the order, the name of the man who signed the fatal order.
+    [captain_day2_hunt_moody_alive_3ce41a8f] Captain S. Sinha, Staff Officer, General Headquarters.
+    [captain_day2_hunt_moody_alive_b96baced] Hundreds of men were sent by your hand, to take a small village of no importance.
+    [captain_day2_hunt_moody_alive_4b27ab75] Most of them, dead by now.
+    [captain_day2_hunt_moody_alive_09b0725a] And the few survivors of that horrific day were not much luckier.
+    [captain_day2_hunt_moody_alive_a8147361] They were forced to go through life as living monsters, hiding behind a mask such as this.
+    [captain_day2_hunt_moody_alive_b53f572d] I have signed a great many papers in my time.
+    [captain_day2_hunt_moody_alive_22a30b12] Transfers, requisitions, routine dispatches.
+    [captain_day2_hunt_moody_alive_f27a1307] Yet I never ordered men to battle, that was never my job.
+    [captain_day2_hunt_moody_alive_40d992d1] You are mistaken, Mr Moody.
+    [captain_day2_hunt_moody_alive_eec250e1] That is a slander.
+    [captain_day2_hunt_moody_alive_cd5841ca] I have never sent men to their deaths.
+    [captain_day2_hunt_moody_alive_d5dd50d7] My work relied only on securing rations, arranging transport, and endorsing requisitions.
+    [captain_day2_hunt_moody_alive_3d356d30] Someone is trying to pit you against me.
+    [captain_day2_hunt_moody_alive_c0b32f38] Ah! How convenient for you, Captain.
+    [captain_day2_hunt_moody_alive_54e6a537] But I have no reason to believe you.
+    [captain_day2_hunt_moody_alive_e0f5b539] Especially since I am now sure that you are not the war hero you claim.
+    [captain_day2_hunt_moody_alive_cb1b306c] I know that a staff officer never sees battle.
+    [captain_day2_hunt_moody_alive_96446eea] It was obvious today, when you could not even shoot a bird right under your nose.
+    [captain_day2_hunt_moody_alive_c23e8a5c] Yet yesterday you were entertaining everyone with tales of Burma and the Boxers, as though you had fought i...
+    [captain_day2_hunt_moody_alive_44e541b5] You are a fraud, that is plain.
+    [captain_day2_hunt_moody_alive_1e590caa] And maybe somebody is using me to hurt you.
+    [captain_day2_hunt_moody_alive_2fc7411e] But I am very happy to oblige.
+    [captain_day2_hunt_moody_alive_21bff9ce] His gaze is resolute, heavy with hatred.
+    [captain_day2_hunt_moody_alive_1804485e] Please, Mr Moody, consider what is at stake here.
+    [captain_day2_hunt_moody_alive_5ebd5bb2] They were likely hoping for precisely this to happen.
+    [captain_day2_hunt_moody_alive_0932afc0] You are being used to their end.
+    [captain_day2_hunt_moody_alive_58e4b84d] And you are no safer than I am.
+    [captain_day2_hunt_moody_alive_657ff964] But I can quite look after myself, I assure you.
+    [captain_day2_hunt_moody_alive_2c5fc823] I raise my hands to protect myself.
+    [captain_day2_hunt_moody_alive_b4cfe94c] Ah! It is rather plain you never saw battle, Captain.
+    [captain_day2_hunt_moody_alive_6d69ee27] This is as close as it gets.
+
+  game/scripts/captain/Day 2/3_Evening/0_map_choices.rpy  (101 missing)
+    [captain_day2_evening_downstairs_default_fea00bb4] The staff are still about their work down there.
+    [captain_day2_evening_downstairs_default_3d314d2c] Master key or not, I can think of no plausible errand that would carry a guest into the kitchens at this hour.
+    [captain_day2_evening_downstairs_default_3ae03adc] Better to leave the lower floor alone.
+    [captain_day2_evening_tea_room_04262453] The tea room is empty and the fire has burned low.
+    [captain_day2_evening_tea_room_14529b69] Nothing to be learned here.
+    [captain_day2_evening_dining_room_68016e5d] The table has been cleared.
+    [captain_day2_evening_dining_room_006a0717] Only the polished wood remains, reflecting the lamps.
+    [captain_day2_evening_entrance_hall_f6c9efaa] The hall is quiet.
+    [captain_day2_evening_entrance_hall_91246a13] The same flagstones where we laid Doctor Baldwin a few hours ago.
+    [captain_day2_evening_entrance_hall_daa4f6e8] But nothing of interest.
+    [captain_day2_evening_garden_ae8cb0e2] I look out through the window.
+    [captain_day2_evening_garden_18d6f1f3] The night is utterly black, and a thick mist is rolling in across the lawn.
+    [captain_day2_evening_garden_215d2745] Without a light, a man would lose himself between the house and the hedge.
+    [captain_day2_evening_garden_50da8433] I shall not stumble about out there blind.
+    [captain_day2_evening_garden_3689aa6f] I have seen all I needed to see out there.
+    [captain_day2_evening_garden_3c6fe407] No reason to brave the cold a second time.
+    [captain_day2_evening_garden_d8e99005] I draw the side door closed behind me and switch on the torch.
+    [captain_day2_evening_garden_28782ad7] The beam picks out the gravel path, the wet grass beyond, the dark mass of the hedge.
+    [captain_day2_evening_garden_91299df1] I make my way around to the outbuilding I found yesterday.
+    [captain_day2_evening_garden_5dc8a46d] I slip back inside and brush the damp from my coat.
+    [captain_day2_evening_garden_32eef6e0] No one seems to have marked my absence.
+    [captain_day2_evening_shed_baeb3997] I fit the master key to the lock. It does not turn at first.
+    [captain_day2_evening_shed_c071fac7] A patient adjustment, and the bolt slides clear.
+    [captain_day2_evening_shed_08883af5] The door creaks open on a small, low-roofed space smelling strongly of oil and old timber.
+    [captain_day2_evening_shed_c950a354] The torch beam picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
+    [captain_day2_evening_shed_833d1dd5] And, set rather neatly in the middle of the floor, a metal jerrycan.
+    [captain_day2_evening_shed_048f6bab] I unscrew the cap and lower my nose to it for a moment. Petrol, and a great deal of it.
+    [captain_day2_evening_shed_a1ddf709] A full can, that could be useful.
+    [captain_day2_evening_shed_a9499806] I search a little further but found nothing of interest, so I step out of this shed.
+    [captain_day2_evening_shed_74a3fa1d] I lock the door behind me as carefully as I opened it.
+    [captain_day2_evening_attic_default_92020f4e] I climb the narrow stair to the attic.
+    [captain_day2_evening_attic_default_e57470d9] The boards creak under my weight. The air up here is closer, smelling of dust and old wood.
+    [captain_day2_evening_attic_default_a58feb0f] A short corridor runs the length of the house, doors on either side.
+    [captain_day2_evening_attic_default_9f0a838f] It is not a place a guest has any honest business being in.
+    [captain_day2_evening_attic_default_25984933] But I am long past the point of pretending to be an honest guest tonight.
+    [captain_day2_evening_attic_storage_689bac6e] Nothing more for me here. I have what I came for.
+    [captain_day2_evening_attic_storage_3e59d892] The storage room is crammed with the leavings of decades.
+    [captain_day2_evening_attic_storage_51278f0f] Trunks stacked three deep, dust-sheeted furniture, boxes that have not been opened in a generation.
+    [captain_day2_evening_attic_storage_a54fe4dc] I work my way along the shelves nearest the door, where the more recent items seem to live.
+    [captain_day2_evening_attic_storage_34734e88] Tins of paint. A pair of oil lamps. A small case of candles.
+    [captain_day2_evening_attic_storage_0e430545] And, set on its side beneath a folded oilcloth, an electric torch.
+    [captain_day2_evening_attic_storage_0ee19c0e] I press the switch. A clean white beam answers.
+    [captain_day2_evening_attic_storage_b011e1e5] A modern thing, and freshly charged. Someone in this house has been keeping it ready.
+    [captain_day2_evening_attic_storage_813cf1c4] That, by itself, is interesting.
+    [captain_day2_evening_attic_storage_d86ca167] I slip it into my pocket. It will be wanted before the night is out.
+    [captain_day2_evening_attic_males_room_185459ea] I have already gone through this room.
+    [captain_day2_evening_attic_males_room_e1f36327] Nothing more here.
+    [captain_day2_evening_attic_males_room_87701f11] Two beds, a chest of drawers, a peg for each man's coat.
+    [captain_day2_evening_attic_males_room_a13670f3] I work the drawers quickly. Folded shirts, a penknife, a few coins. Nothing of note.
+    [captain_day2_evening_attic_males_room_18eaa273] Then, at the back of the bottom drawer, beneath the linen, a folded sheet of paper.
+    [captain_day2_evening_attic_males_room_fe203c27] A letter from a London theatre company. Politely worded, but a rejection all the same.
+    [captain_day2_evening_attic_males_room_048603dc] 'We regret to inform you that the role has been filled. We wish you every success in your future endeavours.'
+    [captain_day2_evening_attic_males_room_e746b51d] An actor. Playing at being a footman.
+    [captain_day2_evening_attic_males_room_5bbf7fe5] A curious choice of employment for a man with that ambition. And rather further from a stage than one would...
+    [captain_day2_evening_attic_males_room_b86ad5c8] I fold the letter back exactly as I found it.
+    [captain_day2_evening_attic_females_room_d7eb7044] I have already searched this room.
+    [captain_day2_evening_attic_females_room_d763cdb5] Nothing more for me here.
+    [captain_day2_evening_attic_females_room_fda6ef4d] A small, spare room. Two narrow beds, a washstand, a single trunk between them.
+    [captain_day2_evening_attic_females_room_4859bfe1] On the shelf above one of the beds, a few keepsakes — a dog-eared London playbill, another from a touring c...
+    [captain_day2_evening_attic_females_room_0652b60b] Tucked behind them, a faded photograph.
+    [captain_day2_evening_attic_females_room_860fc760] A young woman in stage dress, posed beside a man I do not recognise. Smiling broadly for the camera.
+    [captain_day2_evening_attic_females_room_b6cb989a] The maid who has been waiting on us all weekend.
+    [captain_day2_evening_attic_females_room_7ab57f40] Or, more likely, the actress who has been playing at it.
+    [captain_day2_evening_attic_females_room_ba4651c0] Two players in the same household, so far from any theatre worth the name.
+    [captain_day2_evening_attic_females_room_073ef2c8] That is no coincidence at all.
+    [captain_day2_evening_attic_females_room_f3ef5935] I replace the photograph and step back out.
+    [captain_day2_evening_attic_butler_room_c78112ba] The reinforced cabinet still stands against the far wall.
+    [captain_day2_evening_attic_butler_room_1ee053a4] I have already seen what is inside.
+    [captain_day2_evening_attic_butler_room_5e80a7aa] The room itself is plain enough. A narrow bed, a washstand, a single chair.
+    [captain_day2_evening_attic_butler_room_73d6ffd1] A head servant's quarters, and not a thing out of place.
+    [captain_day2_evening_attic_butler_room_8b5252cc] But against the far wall stands a heavy reinforced cabinet, glass-panelled, the household silver visible be...
+    [captain_day2_evening_attic_butler_room_2caf99fa] The lock is a modern one, and a good one.
+    [captain_day2_evening_attic_butler_room_d0a725d8] I take the master key from my pocket and try it.
+    [captain_day2_evening_attic_butler_room_369475e0] It turns without complaint.
+    [captain_day2_evening_attic_butler_room_40a24e03] Inside: candlesticks, a salver, several sets of heavy plate. The honest wealth of the house, locked behind ...
+    [captain_day2_evening_attic_butler_room_624e73c9] Curious. In a properly run household this would all be in the strong room downstairs, under the mistress's ...
+    [captain_day2_evening_attic_butler_room_ce14dc75] I close the cabinet, lock it again, and step back.
+    [captain_day2_evening_attic_butler_room_30a7d20f] Whoever is truly running this house, it is not Lady Claythorn.
+    [captain_day2_evening_bedroom_lad_bfafc2c4] Only the sound of heavy furniture being dragged across the floor on the other side.
+    [captain_day2_evening_bedroom_lad_53a06c92] Mr Harring is barricading himself in.
+    [captain_day2_evening_bedroom_lad_8a59ab40] I cannot say I blame the lad.
+    [captain_day2_evening_bedroom_psychic_5b069491] Captain Sinha. Forgive me, Miss Baxter.
+    [captain_day2_evening_bedroom_psychic_a8fd1840] I only wished to know whether you were quite all right.
+    [captain_day2_evening_bedroom_psychic_6ee12dea] You are kind, Captain. But I am very tired.
+    [captain_day2_evening_bedroom_psychic_9740a185] Would you mind very much if we spoke in the morning?
+    [captain_day2_evening_bedroom_psychic_33ef78e9] Of course not. Sleep well, Miss Baxter.
+    [captain_day2_evening_bedroom_nurse_77bc6cca] No reply.
+    [captain_day2_evening_bedroom_nurse_a893ff58] Either Miss Marsh is already asleep, or she is not in her room at all.
+    [captain_day2_evening_bedroom_host_302b3819] The lady of the house, it seems, has not yet retired — or does not wish to be disturbed if she has.
+    [captain_day2_evening_bedroom_doctor_651f6b53] Doctor Baldwin lies upon the bed exactly as we left him this afternoon.
+    [captain_day2_evening_bedroom_doctor_19ca1b65] The blanket I drew over him has not been disturbed.
+    [captain_day2_evening_bedroom_doctor_cceba785] There is nothing more I can do for the man.
+    [captain_day2_evening_bedroom_doctor_9282466a] I close the door quietly behind me.
+    [captain_day2_evening_bedroom_broken_7dfece14] Mr Moody's room sits much as it must have done since this morning.
+    [captain_day2_evening_bedroom_broken_dab14ca8] The bed has been straightened. His effects have been arranged with a tidy hand.
+    [captain_day2_evening_bedroom_broken_7334424f] A little too tidy, perhaps, for a man who died in his sleep.
+    [captain_day2_evening_bedroom_broken_d2f5578f] I leave the room as I found it.
+    [captain_day2_evening_bedroom_drunk_97090948] Mmf... go 'way...
+    [captain_day2_evening_bedroom_drunk_f8d2bee7] Mr Manning is still locked in, and very much the worse for the day's drinking.
+    [captain_day2_evening_bedroom_drunk_93e6b5ae] The key in my pocket would let me through that door at any moment.
+    [captain_day2_evening_bedroom_drunk_74a08480] Tonight, however, he is more use to me where he is.
+
+  game/scripts/captain/Day 2/3_Evening/1_main.rpy  (138 missing)
+    [captain_day2_evening_39e78066] So we carry the doctor up the stair and lay him upon his bed.
+    [captain_day2_evening_aa6b04bc] I point at the blood Mr Harring has on him. Thankfully, my own jacket is untouched.
+    [captain_day2_evening_3f38e9cc] And I have no reason to disappoint them.
+    [captain_day2_evening_859bb1df] I sit upon the edge of the bed with my hands pressed together and let the afternoon settle in my mind, piec...
+    [captain_day2_evening_13c35241] Doctor Baldwin, shot under circumstances that can be explained, but that hang uneasily all the same.
+    [captain_day2_evening_9bf061c4] Mr Moody, dead in his bed only this morning.
+    [captain_day2_evening_8cf1cf87] A suspicious hostess and a letter left upon my pillow last night.
+    [captain_day2_evening_57e02479] So many things to make sense of.
+    [captain_day2_evening_adba06bc] I ponder for a while on what my next move should be, but cannot decide on a course.
+    [captain_day2_evening_650ea114] The gong still rings.
+    [captain_day2_evening_7be1a7b4] At least the order of the house is not disturbed.
+    [captain_day2_evening_3f2a0924] Doctor Baldwin. Mr Moody. Mr Manning.
+    [captain_day2_evening_612a1a82] I take my usual place. Miss Baxter settles on my right, quieter than I have yet seen her.
+    [captain_day2_evening_6e3f747b] Miss Marsh has been moved nearer to the head of the table, at our hostess's invitation.
+    [captain_day2_evening_60bfdb1d] Mr Harring slips in a moment later, hair damp, a fresh shirt at his collar.
+    [captain_day2_evening_4a34e572] Lady Claythorn rises to speak.
+    [captain_day2_evening_17732b73] A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
+    [captain_day2_evening_d44d56f6] A man less suspicious than I am would take her at her word and think no further of it.
+    [captain_day2_evening_7c9a5a29] As it is, I take note of her composure, and say nothing of it aloud.
+    [captain_day2_evening_c360d05f] The food is served shortly after, but most of us merely push it about our plates.
+    [captain_day2_evening_8cf0e548] Miss Marsh, in her new place at the hostess's elbow, picks at her meal without raising her eyes.
+    [captain_day2_evening_105961da] Mr Harring keeps his head bent over his plate and answers nothing that is not put directly to him.
+    [captain_day2_evening_9f091ee8] Miss Baxter has scarcely touched a thing.
+    [captain_day2_evening_6bc1eb3b] She has not said a dozen words since we sat down.
+    [captain_day2_evening_e5d491e1] The dinner draws to a close in much the same hush in which it began.
+    [captain_day2_evening_03c4fe5e] The butler sees the plates cleared with the same patient courtesy he has shown all weekend.
+    [captain_day2_evening_a467f207] Lady Claythorn rises and bids us each a measured good-night.
+    [captain_day2_evening_cf26f2ba] Before she withdraws, she reminds us that drinks are laid out in the billiard room, as they were yesterday.
+    [captain_day2_evening_cd3ce9cf] A curious thing after the day we have had.
+    [captain_day2_evening_c089cff1] The other guests rise from the table without ceremony.
+    [captain_day2_evening_0b8afeca] I linger over the last of my wine and turn the invitation over in my head.
+    [captain_day2_evening_243c3e83] The billiard room is no place a careful man would go tonight.
+    [captain_day2_evening_0dcb88b3] Two of our number lie dead, a third sits locked above stairs, and someone under this roof has had a hand in...
+    [captain_day2_evening_9a97c6d1] A glass passed across a green baize table is no harder to spoil than one laid down at dinner.
+    [captain_day2_evening_72d5b785] And yet.
+    [captain_day2_evening_088ec047] A man who fears poison in the house does not stand quietly amongst the bottles.
+    [captain_day2_evening_88ae25e1] A woman who fears for her life does not call upon her hostess for a brandy.
+    [captain_day2_evening_de328a2d] Whoever takes the invitation tonight will, by that very act, be telling me something.
+    [captain_day2_evening_dca42fc4] Either they have nothing to fear, or they wish very much to be seen as having nothing to fear.
+    [captain_day2_evening_b979baa3] In either case, that is information I do not now possess.
+    [captain_day2_evening_928d1106] And there is precious little I can sift from these walls if I retire and lock my door against them.
+    [captain_day2_evening_a386c65c] The billiard room can wait a little while. There are corners of this house I have so far had no proper reas...
+    [captain_day2_evening_c979441e] I close the door of my room behind me and turn the key in the lock.
+    [captain_day2_evening_ebed2530] Whatever I have learnt tonight, I shall need a clear head to make any use of it in the morning.
+    [captain_day2_dinner_psychic_3b4403e1] Forgive me, but I find I cannot eat in silence whilst you sit beside me untouched.
+    [captain_day2_dinner_psychic_68f52ff3] You are very kind, Captain.
+    [captain_day2_dinner_psychic_2fb41973] But I am poor company this evening. I do not believe a plate of food will mend that.
+    [captain_day2_dinner_psychic_1d1d40ac] None of us is much use tonight.
+    [captain_day2_dinner_psychic_59029ae8] Doctor Baldwin was a good man.
+    [captain_day2_dinner_psychic_29484f37] He met an end he had done nothing to deserve.
+    [captain_day2_dinner_psychic_92675c47] He was the one soul under this roof who spoke to me as though I had a mind worth answering.
+    [captain_day2_dinner_psychic_5c47af57] I shall not soon find another like him.
+    [captain_day2_dinner_psychic_49bf42f4] She presses a handkerchief to her cheek and turns her face a fraction from mine.
+    [captain_day2_dinner_psychic_a328ad37] Whatever else she may be, her grief is the only honest thing I have seen at this table tonight.
+    [captain_day2_dinner_psychic_30d7312a] Tomorrow the police will be here, and we shall all of us be away from this place by the afternoon.
+    [captain_day2_dinner_psychic_6d16c7c2] Until then, if there is any service I can render you, you have only to ask.
+    [captain_day2_dinner_psychic_41849424] That is most generous of you, Captain.
+    [captain_day2_dinner_psychic_8aff9ac6] For now, I should like only to be left to my own thoughts for a little while.
+    [captain_day2_dinner_psychic_507c6e19] I turn back to my plate and let her be.
+    [captain_day2_dinner_psychic_47b279b4] There is a kindness in not pressing a woman who has just lost the one ally she had under this roof.
+    [captain_day2_dinner_silence_60f6bc78] I cannot think of any comfort I might offer Miss Baxter.
+    [captain_day2_dinner_silence_7f131f65] So I keep my counsel and attend to my plate.
+    [captain_day2_evening_normal_escort_935e0eba] Mister Manning, are you ready to go to your room?
+    [captain_day2_evening_normal_escort_c8c08ded] Well - yes, of course.
+    [captain_day2_evening_normal_escort_bac9e75d] Manning walks ahead of me without speaking.
+    [captain_day2_evening_normal_escort_3d86005f] The drink is still on him, though quieter now. He moves like a man in a dream he does not care to interrupt.
+    [captain_day2_evening_normal_escort_727840bd] I see him into his room and draw the door closed behind him.
+    [captain_day2_evening_normal_escort_b7d59823] The key turns in the lock with a heavy, deliberate click.
+    [captain_day2_evening_normal_escort_5e737dc8] He will trouble no one for the remainder of the evening.
+    [captain_day2_evening_normal_escort_5a400875] I weigh the key in my palm.
+    [captain_day2_evening_normal_escort_8c08f956] It would be the natural thing to return it to the butler at once.
+    [captain_day2_evening_normal_escort_1fcf5991] And yet... I should prefer it stayed where it is.
+    [captain_day2_evening_normal_escort_10618b1d] Tonight, under this roof, a key is not a small thing.
+    [captain_day2_evening_normal_escort_bae9bc55] I slip it quietly into my waistcoat pocket.
+    [captain_day2_evening_normal_escort_fa418489] When I come back down, the others have remained much as I left them.
+    [captain_day2_evening_normal_escort_d6165930] Lady Claythorn looks towards me with the faintly anxious composure of a hostess whose weekend has slipped b...
+    [captain_day2_evening_confront_host_12dcbbb2] We could review them all in detail, of course.
+    [captain_day2_evening_confront_host_0e8609d2] But why not begin with the simplest of them, my lady.
+    [captain_day2_evening_confront_host_dc93bc82] Surely you have not forgotten the title you were raised under.
+    [captain_day2_evening_confront_host_09764d75] Your father would have say it aloud in your presence a hundred times.
+    [captain_day2_evening_confront_host_ef9fd8dc] Letters would have come addressed to it.
+    [captain_day2_evening_confront_host_8ba533a1] You must have heard it pronounced when you were presented at court.
+    [captain_day2_evening_confront_host_08f34ea0] Instead, her calm composure changes to something else.
+    [captain_day2_evening_confront_host_35f70cc9] Who are you then?
+    [captain_day2_evening_confront_host_77f59382] An actress.
+    [captain_day2_evening_confront_host_b85b2b39] I was hired for being here.
+    [captain_day2_evening_confront_host_3b9b4b57] I was given a script of sorts, and the run of the house, and a fee.
+    [captain_day2_evening_confront_host_83332243] Only some of it.
+    [captain_day2_evening_confront_host_0c6f8e3c] I don't know, I don't understand most of what is happening here.
+    [captain_day2_evening_confront_host_b2fa4793] They were hired the same way I was.
+    [captain_day2_evening_confront_host_a86bd9dc] I think they know less than I do, if anything at all.
+    [captain_day2_evening_confront_host_399bb11f] Except for...
+    [captain_day2_evening_confront_host_389bff65] Except the...
+    [captain_day2_evening_confront_host_7d22c273] He answers to whoever is behind this directly.
+    [captain_day2_evening_confront_host_bfc7dd8c] A man weighing, very rapidly, a number of unpleasant choices.
+    [captain_day2_evening_confront_host_053b7c5a] I am afraid I know no more of it than whatever Lady Claythorn might have told you.
+    [captain_day2_evening_confront_host_ae9bfbbb] Do what?
+    [captain_day2_evening_confront_host_864f27fc] There was never any money. From what was explained to me, all of this was meant to attract you all here for...
+    [captain_day2_evening_confront_host_02a92b72] Enough talking!
+    [captain_day2_evening_confront_host_0348cea4] Here is what is going to happen now.
+    [captain_day2_evening_confront_host_e5fe94de] You will all go to your rooms, give me your key as I close the door behind you.
+    [captain_day2_evening_confront_host_00584b79] The police will come and get you.
+    [captain_day2_evening_confront_host_a79a746f] He looks very sure of him, holding the gun with a firm hand.
+    [captain_day2_evening_confront_host_e5a8e04f] Whatever this man was before he was a butler, he was no stranger to a revolver.
+    [captain_day2_evening_butler_offer_confine_b32741d6] I have worn the King's uniform the better part of twenty years, and never once stood in proper combat.
+    [captain_day2_evening_butler_offer_confine_5b0ff2b6] Whatever instinct a soldier is meant to acquire from being shot at, I have not had the chance to acquire it.
+    [captain_day2_evening_butler_offer_confine_cf5eda58] I can already see myself bleeding into the carpet if I attempt anything.
+    [captain_day2_evening_butler_offer_confine_608a4385] He gestures with the muzzle towards the door.
+    [captain_day2_evening_butler_offer_confine_ec9753b1] Miss Marsh rises first. Miss Baxter follows in silence.
+    [captain_day2_evening_butler_offer_confine_614e9ed1] Lady Claythorn doesn't seem to know what to do.
+    [captain_day2_evening_butler_offer_confine_26634671] She was part of this, yet, I don't think she wills us any harm.
+    [captain_day2_evening_butler_offer_confine_6e023cef] The butler sense this and turns to her.
+    [captain_day2_evening_butler_offer_confine_ef13c395] Go warn the others.
+    [captain_day2_evening_butler_offer_confine_a286f80a] I will lock those up, hopefully Ted Harring is still in his room, that will make things easier.
+    [captain_day2_evening_butler_offer_confine_2b12bdb9] She does not protest. She has not the strength left for it.
+    [captain_day2_evening_butler_offer_confine_007f83e4] Whatever she is in this affair, she will not contradict him.
+    [captain_day2_evening_butler_offer_confine_39e31e03] I bring up the rear behind the two ladies, and feel the weight of the revolver at my back the whole length ...
+    [captain_day2_evening_butler_offer_confine_18a604a8] Very quickly, I am in my room.
+    [captain_day2_evening_butler_offer_confine_2aaadabe] Go in captain, no need to make this more complicated that it is.
+    [captain_day2_evening_butler_offer_confine_c8e89638] I have no choice but to go in.
+    [captain_day2_evening_butler_offer_confine_0274e932] Have a good night captain.
+    [captain_day2_evening_butler_offer_confine_a62dd78e] And no need to worry, the police will come for you tomorrow, I assure you.
+    [captain_day2_evening_butler_offer_confine_0b350c50] I don't have an answer to that.
+    [captain_day2_evening_butler_offer_confine_a9388a59] Will the police come? I have no idea.
+    [captain_day2_evening_butler_offer_confine_8655c47c] I should make the most of it and try to get out.
+    [captain_day2_evening_butler_offer_confine_a43df895] I cross to the window and try the latch. Painted shut, of course. Two storeys down besides.
+    [captain_day2_evening_butler_offer_confine_e407cb15] Desperate, I finnally fall asleep.
+    [captain_day2_evening_butler_offer_confine_d59daec6] Then the smell — the dry, urgent sweetness of old wood beginning to burn.
+    [captain_day2_evening_butler_offer_confine_f9641c8e] I shoulder it twice, three times.
+    [captain_day2_evening_butler_offer_confine_085bc32b] The frame holds.
+    [captain_day2_evening_butler_offer_attack_58805b0c] Miss Marsh is silent. Miss Baxter looks terrorized.
+    [captain_day2_evening_butler_offer_attack_287fc28c] Whatever is to be done here, I must do alone.
+    [captain_day2_evening_butler_offer_attack_105e0c12] And I will not follow quietly a man to an unknown fate.
+    [captain_day2_evening_butler_offer_attack_f8468063] Twenty years I have been an officer, but never once have I seen battle.
+    [captain_day2_evening_butler_offer_attack_397189f8] A barracks officer, a parade officer.
+    [captain_day2_evening_butler_offer_attack_366abba9] Other men around me went to the line.
+    [captain_day2_evening_butler_offer_attack_420291d1] I never did.
+    [captain_day2_evening_butler_offer_attack_29210aba] Here is my chance to see what metal I am made of.
+
+  game/scripts/captain/Day 2/3_Evening/2_billiard_room.rpy  (8 missing)
+    [captain_day2_evening_billiard_room_b0f6bba5] The billiard room is lit much as it was last night, but the warmth of the place has gone out of it.
+    [captain_day2_evening_billiard_room_50a204c4] The decanters stand untouched on the side. The glasses have been laid out in expectation of a company that ...
+    [captain_day2_evening_billiard_room_8224945c] I am quite alone.
+    [captain_day2_evening_billiard_room_cbeda625] I make no move towards the bottles.
+    [captain_day2_evening_billiard_room_df5b4d96] Instead I take a chair near the fire, where I can keep both the door and the drinks in plain view.
+    [captain_day2_evening_billiard_room_fbd13c63] And I wait.
+    [captain_day2_evening_billiard_room_6d267ac7] TODO: someone joins the captain here.
+    [captain_day2_evening_billiard_room_ea37e9a9] The chairs sit much as I left them.
+
+  game/scripts/captain/captain_endings.rpy  (9 missing)
+    [captain_ending_shot_in_woods_4c7f55da] You were led into the woods by a man who suspected of wishing you harm.
+    [captain_ending_shot_in_woods_828e8834] It is curious how the fear of causing a scene is sometimes stronger than any other.
+    [captain_ending_burned_30a71123] With you in it.
+    [captain_ending_shot_butler_d6884342] You read your opponent rightly.
+    [captain_ending_shot_butler_b2ca3bcf] A dangerous man to engage, not an ordinary butler.
+    [captain_ending_shot_butler_c4d441b9] Years of staying on the sidelines of battles made you want to try yourself at a real one.
+    [captain_ending_shot_butler_b5f3a6dd] There is a courage in that, but also folly.
+    [captain_ending_shot_butler_2a277f7e] And the bullet does not greatly distinguish between them.
+    [captain_ending_shot_butler_89f6e70c] Your first battle will also be your last one.
+
+  game/scripts/captain/captain_generic_choices.rpy  (7 missing)
+    [captain_generic_weather_friday_8018a0d2] I can see that a storm is coming.
+    [captain_generic_weather_friday_bf773979] And it looks like a big one.
+    [captain_generic_weather_saturday_ee9e5c34] The little storm we had yesterday seems to have worn off.
+    [captain_generic_weather_saturday_55b5f900] The weather should improve from now on.
+    [captain_generic_weather_sunday_7d95538e] (Placeholder for Sunday weather dialogue)
+    [captain_generic_room_friday_3f75c1f8] I am not sure actually.
+    [captain_generic_room_friday_8f26ad82] I guess I'll see after dinner.
+
+  game/scripts/captain/captain_generic_locations.rpy  (7 missing)
+    [captain_library_default_159e3f8e] The library is as I left it.
+    [captain_library_default_454f8f41] I have already read what I needed from the genealogy book.
+    [captain_library_default_f6c02ecf] There is nothing more here for me.
+    [captain_library_default_b548ae0c] The genealogy book still lies open on the table, waiting.
+    [captain_portrait_gallery_default_e1eb8dd6] The Claythorn forebears still gaze down from their frames, silent and stern.
+    [captain_portrait_gallery_default_faafe096] The absence of our host's portrait remains as striking as before.
+    [captain_portrait_gallery_default_ae94ed59] There is nothing more the gallery can tell me.
+
+  game/scripts/captain/captain_generic_other_guests.rpy  (31 missing)
+    [captain_generic_other_guests_saturday_evening_4ba26398] You are right, after all that happened we should discuss the others.
+    [captain_generic_other_guests_saturday_evening_eb0503f9] Who do you have in mind?
+    [captain_generic_drunk_saturday_psychic_f615cf7e] I can't believe we gave him a gun.
+    [captain_generic_drunk_saturday_psychic_980a5286] Anyone could have seen he was drunk more often than not.
+    [captain_generic_drunk_saturday_psychic_7ba2814e] In hindsight, this tragedy ought to have been avoided.
+    [captain_generic_drunk_saturday_psychic_1931f669] What do you think will happen to him?
+    [captain_generic_drunk_saturday_psychic_917c7f5f] I can't say for certain.
+    [captain_generic_drunk_saturday_psychic_b63da7ce] He could be charged with manslaughter by negligence and face prison time.
+    [captain_generic_drunk_saturday_psychic_21c97111] Or he might be acquitted, if the death is ruled an accident.
+    [captain_generic_drunk_saturday_psychic_b837e618] Really? He could just walk free after all this?
+    [captain_generic_drunk_saturday_psychic_5440ed1d] That depends on how the situation is presented to the police—
+    [captain_generic_drunk_saturday_psychic_0e1e4335] and more importantly, on his connections.
+    [captain_generic_drunk_saturday_psychic_518c3bfa] If he were a prominent aristocrat, I've no doubt he could sweep it all under the rug.
+    [captain_generic_drunk_saturday_psychic_0d0acb13] But I don't believe that'll be the case for our friend.
+    [captain_generic_broken_saturday_09d4edc2] What can I say, other than the obvious?
+    [captain_generic_broken_saturday_66587c39] It's a shame he died like that.
+    [captain_generic_broken_saturday_122d937d] Then again, perhaps he was in a great deal of pain from his injuries.
+    [captain_generic_broken_saturday_b974ee3f] If so, he might have welcomed death as a release.
+    [captain_generic_broken_saturday_380f706b] You don't think there was anything odd about his death?
+    [captain_generic_broken_saturday_8e64a1bf] Not really, no. If there had been, Doctor Baldwin would've said something.
+    [captain_generic_broken_saturday_22fcfb9c] I believe Thomas Moody died a natural death.
+    [captain_generic_broken_saturday_dac19870] I suppose you're right.
+    [captain_generic_lad_friday_psychic_af803cd8] Mr Harring seems like a fine young fellow.
+    [captain_generic_lad_friday_psychic_007bc0cc] But you've talked to him more than I have.
+    [captain_generic_lad_friday_psychic_2a112503] You must have a more accurate opinion of him.
+    [captain_generic_lad_friday_psychic_26561d6f] That's true. Nevertheless, have you noticed anything specific about him?
+    [captain_generic_lad_friday_psychic_347b147f] Well, I did notice that his clothes are a bit dated and worn.
+    [captain_generic_lad_friday_psychic_30363674] Either he doesn't care about his appearance, or he can't afford more recent clothing.
+    [captain_generic_lad_friday_psychic_f92cf583] I'll leave it to you to make your own judgment about that.
+    [captain_generic_doctor_saturday_498d41b8] I didn't know him very well but he seemed like a decent person.
+    [captain_generic_doctor_saturday_46ac34e1] Such a pity he died like that.
+
+  game/scripts/custom_functions.rpy  (3 missing)
+    [breakpoint_0d30a068] DEBUG
+    [work_in_progress_db4afd84] You've reached to end of the story written so far.
+    [work_in_progress_d2fbcd7b] But don't worry, the rest of this game will be ready soon ! (or at some point in the future).
+
+  game/scripts/doctor/doctor_generic_choices.rpy  (3 missing)
+    [doctor_generic_weather_saturday_bc481e4d] We are lucky that the weather improved greatly today.
+    [doctor_generic_weather_saturday_fd26c2a2] For a while, I thought we would be trapped inside the manor all weekend.
+    [doctor_generic_weather_saturday_9e6c59b4] But everything seems fine now.
+
+  game/scripts/doctor/doctor_generic_locations.rpy  (4 missing)
+    [doctor_library_default_da4ead7d] But with everything that has happened, I do not feel like reading today.
+    [doctor_library_default_3eb097a1] I really don't feel like reading today.
+    [doctor_portrait_gallery_default_545c1465] It still gives me an eerie feeling.
+    [doctor_portrait_gallery_default_cd7f6a54] I'd rather not stay.
+
+  game/scripts/doctor/doctor_other_guests.rpy  (4 missing)
+    [doctor_generic_other_guests_saturday_6b5ca168] I haven't spoken in detail with anyone yet.
+    [doctor_generic_other_guests_saturday_71b731eb] So, I don't really have an opinion on the guests.
+    [doctor_generic_drunk_6f628454] Well, I think by now you can tell as well as I can that he is a dangerous drunk.
+    [doctor_generic_drunk_fc4d5169] We'd better stay away from him.
+
+  game/scripts/drunk/drunk_generic_choices.rpy  (15 missing)
+    [drunk_generic_background_nurse_824ff5e1] Why did you stop, Mr Manning?
+    [drunk_generic_background_nurse_16f15c6e] Why did I stop.
+    [drunk_generic_background_nurse_44bab723] There were cases.
+    [drunk_generic_background_nurse_0d320e20] Cases I should not have taken.
+    [drunk_generic_background_nurse_6cf13503] Or should have... handled differently.
+    [drunk_generic_background_nurse_6ca9251c] The law is a merciless thing when you get it wrong.
+    [drunk_generic_background_nurse_0766dcc4] What happened?
+    [drunk_generic_background_nurse_7de9ee52] Nothing worth repeating.
+    [drunk_generic_background_nurse_7e15d25a] Ancient history, all of it.
+    [drunk_generic_age_8a8412ce] Fifty-five years.
+    [drunk_generic_age_096abd3d] Yet he looks a great deal older.
+    [drunk_generic_room_nurse_9b145179] The... the "George IV" room, I believe.
+    [drunk_generic_room_nurse_7386dfd4] Or some such name.
+    [drunk_generic_room_nurse_c5cf3552] Those kings, they all run together after a while.
+    [drunk_generic_other_guests_friday_dinner_84b7b312] I suppose that is as much as I shall get from him.
+
+  game/scripts/endings.rpy  (14 missing)
+    [ending_generic_9e793168] You made it out alive.
+    [ending_generic_9220702b] But it's not the perfect ending either.
+    [ending_generic_01e3b003] Don't get me wrong, it's still an impressive feat.
+    [ending_generic_89839b75] But surviving Claythorn Manor is merely the first step.
+    [ending_generic_b18039d1] Your goal is to save everyone.
+    [ending_generic_8b5ad905] And to do that, you need to start the story over.
+    [ending_generic_0a22607b] Don't worry, you'll have more chances to change the fate of this character.
+    [ending_generic_f99991b1] You can start again now. Ideally, you've learned something that will help you in your next attempts.
+    [ending_generic_8982cf3b] But perhaps you haven't learned anything.
+    [ending_generic_2cd1d5bf] In that case, try to look at the story from a different perspective.
+    [ending_generic_350af135] This story isn't about just one hero.
+    [ending_generic_98944632] You'll get to play as different characters.
+    [ending_generic_5c700a8f] And you must.
+    [ending_generic_c767a620] Otherwise you will never uncover the whole truth of what happened that weekend at Claythorn Manor.
+
+  game/scripts/host/Day 1/1_Afternoon/1_main.rpy  (22 missing)
+    [host_introduction_dbee7c6b] Al right, from now on you are the lady of this place. Don't forget it.
+    [host_introduction_7b86e200] I don't understand why you can't be the lord.
+    [host_introduction_280e0f46] You will clearly be better at it than I.
+    [host_introduction_33029a59] You mean because I am the better actor?
+    [host_introduction_01aba996] I didn't say that.
+    [host_introduction_6e4fe814] And you are not.
+    [host_introduction_7f5030a2] But I know you are familiar with that type of house.
+    [host_introduction_d9529d9c] Right, I was a footman when I was younger, a very long time ago.
+    [host_introduction_351caf3c] But that's precisely why I should be the butler.
+    [host_introduction_3973ddd5] You see, in this kind of environment, the staff is more scrutinize that than the host.
+    [host_introduction_e5ded49c] That's a rule.
+    [host_introduction_89b0113c] As the Lady of the house, you can do almost anything.
+    [host_introduction_e3b3616d] At worst you'll be labelled "eccentric".
+    [host_introduction_41adcd87] But to maintain the illusion, the staff can't afford a mistake.
+    [host_introduction_7c6aacb0] That's why I have to be in charge of them.
+    [host_introduction_e146c6ce] Besides, a butler must always be a man.
+    [host_introduction_f1cee129] But let's go in, the rest of our staff arrived yesterday to prepare the house.
+    [host_introduction_cb0c350c] Now it's time to explain what's expected of them.
+    [host_introduction_d70e9749] The "Staff", are actually all actors, some with very little domestic experience, if any.
+    [host_introduction_d87aea00] But I've been assured that the guests we are receiving won't be accustomed to all this.
+    [host_introduction_6485e6a8] None of them is from a standing important enough so that they should notice little mistakes with the service.
+    [host_introduction_8d40e561] Still, that would an incredible feat if the weekend goes as planned.
+
+  game/scripts/lad/Day 2/2b_No Hunt/2_tea_room.rpy  (1 missing)
+    [lad_day2_hunt_tea_room_ab77c264] Ah, yes, we've discussed that before.
+
+  game/scripts/lad/Day 3/1_Morning/1_main.rpy  (2 missing)
+    [lad_day3_morning_1b721dc2] Just when we started losing hope, we decided to rest in the tea room.
+    [lad_day3_morning_03565043] But as we settled down, an authoritative voice echoed from outside the room.
+
+  game/scripts/lad/lad_generic_choices.rpy  (9 missing)
+    [lad_generic_room_psychic_d82264ac] Oh, I am in the "William the Conqueror" Bedroom.
+    [lad_generic_room_psychic_f9e88e18] An impressive king.
+    [lad_generic_room_psychic_411b4d19] Really, he was?
+    [lad_generic_room_psychic_e06b438c] Is he serious?
+    [lad_generic_room_psychic_6a2ba3be] Hasn't he heard of "William the Conqueror"?
+    [lad_generic_room_psychic_b9c38f64] Well, he was a French Duke who was able to take the throne of England from very powerful men.
+    [lad_generic_room_psychic_68e77c3f] That's not nothing.
+    [lad_generic_room_psychic_982778a0] On the other hand, he was sometimes also called the Bastard King.
+    [lad_generic_room_psychic_bcbfbaf3] So make of that what you will.
+
+  game/scripts/lad/lad_generic_other_guests.rpy  (15 missing)
+    [lad_generic_other_guests_friday_doctor_f089bad3] I haven't talk a lot to other people yet, except maybe to Miss Baxter.
+    [lad_generic_other_guests_friday_doctor_c960d8f4] And what do you make of her?
+    [lad_generic_psychic_opinion_a3b77118] She seems very nice, but there is something odd about her.
+    [lad_generic_psychic_opinion_f41e668e] Really, for what specific reason?
+    [lad_generic_psychic_opinion_7cafcf8e] Sorry, I do not know how to explain it.
+    [lad_generic_psychic_opinion_df01cb44] It is just a feeling.
+    [lad_generic_psychic_hunt_doctor_6d12478d] Well, we have already spoken about her, have we not?
+    [lad_generic_psychic_hunt_doctor_88a339fe] Have we? I suppose you are right.
+    [lad_generic_psychic_hunt_doctor_b8f4a575] And you have not noticed anything new?
+    [lad_generic_psychic_hunt_doctor_cb3f08ba] Afraid not.
+    [lad_generic_nurse_hunt_doctor_149886e8] I do not have much to say about her.
+    [lad_generic_nurse_hunt_doctor_d6855187] She is a rather discreet woman, so I have not learnt much about her.
+    [lad_generic_broken_hunt_doctor_54db5588] Poor Mr Manning, it is creepy to imagine he is still in his room.
+    [lad_generic_broken_hunt_doctor_d369b44e] You know, dead.
+    [lad_generic_broken_hunt_doctor_8f3bb949] That is how we left him, so I daresay his condition has not changed.
+
+  game/scripts/nurse/Day 1/1_Afternoon/1_main.rpy  (3 missing)
+    [nurse_introduction_c7eff3c0] The letter rests upon my lap.
+    [nurse_introduction_d12ce09a] I cannot afford that sort of luxury.
+    [nurse_introduction_3ca7b6f1] But I cannot afford to do nothing, either.
+
+  game/scripts/nurse/Day 1/2_Evening/0_map_choices.rpy  (3 missing)
+    [nurse_day1_evening_check_exhaustion_50deeaea] A wave of tiredness washes over me quite suddenly.
+    [nurse_day1_evening_check_exhaustion_0d546c35] The journey here took more out of me than I thought.
+    [nurse_day1_evening_check_exhaustion_d71ccf17] If I push myself much further tonight, I shall pay for it.
+
+  game/scripts/nurse/Day 1/2_Evening/1_main.rpy  (7 missing)
+    [nurse_day1_evening_7c004858] The butler shows Doctor Baldwin and Thomas Moody their rooms, then we reach mine.
+    [nurse_day1_evening_021a24e9] I should rest before dinner.
+    [nurse_day1_evening_3d55f686] I wake up a bit refreshed — enough to face the evening.
+    [nurse_day1_evening_35794098] I have no time to speak to them.
+    [nurse_day1_evening_d7d4fd93] The gong sounds from the corridor.
+    [nurse_day1_evening_3559b8bc] Yes, yes — don't be stingy with it.
+    [nurse_day1_dinner_drunk_6b9f961c] It's barely passable.
+
+  game/scripts/nurse/Day 1/2_Evening/2_billiard_room.rpy  (2 missing)
+    [nurse_day1_evening_billiard_room_captain_77ba6da8] That may well have changed after the Great War, but I am quite certain he wasn't a captain in those days.
+    [nurse_day1_evening_billiard_room_doctor_f485d894] I should leave him alone.
+
+  game/scripts/nurse/Day 2/1_Morning/1_main.rpy  (4 missing)
+    [nurse_day2_morning_764ee15c] Ted Harring is rising quietly to follow them, uninvited as far as I can tell.
+    [nurse_day2_morning_132cb757] Then, the room settles into an uneasy hush.
+    [nurse_day2_morning_e3c70bfe] I consider it for a second.
+    [nurse_day2_morning_17a60cc7] But a trudge across a cold forest , rifle in hand, would only make my condition worse.
+
+  game/scripts/nurse/Day 2/2_No Hunt/0_map_choices.rpy  (2 missing)
+    [nurse_day2_no_hunt_default_room_locked_c3919936] I try the handle gently.
+    [nurse_day2_no_hunt_default_room_locked_88811a78] It is securely locked.
+
+  game/scripts/nurse/Day 2/2_No Hunt/1_main.rpy  (5 missing)
+    [nurse_day2_hunt_6b590cf1] And I could take the opportunity that most people are outside to "look" more intensively into this place.
+    [nurse_day2_hunt_cd05d0b5] Obviously, the priority would be to find the stash of money promised to everyone.
+    [nurse_day2_hunt_712c2435] But, if as I suspect, there isn't any, I am sure I can find other valuables.
+    [nurse_day2_hunt_c039c17f] A rather risky thing to do.
+    [nurse_day2_hunt_7ccce06f] That may not help me much, but it's still something.
+
+  game/scripts/nurse/Day 2/3_Evening/0_map_choices.rpy  (13 missing)
+    [nurse_day2_evening_downstairs_maid_d3d9d577] I ease the door open just enough to look inside.
+    [nurse_day2_evening_downstairs_maid_bf83e33b] The kitchen is a hive of activity.
+    [nurse_day2_evening_downstairs_maid_bf4dc664] The staff are busy cleaning after the evening meal.
+    [nurse_day2_evening_downstairs_maid_0a07a80d] I withdraw before anyone notices my presence.
+    [nurse_day2_evening_bedroom_closed_3dfa53a2] I knock quietly.
+    [nurse_day2_evening_bedroom_closed_c9f73d3f] The house is still on edge after today's events.
+    [nurse_day2_evening_bedroom_closed_cb5279bb] It is no great surprise that people are keeping their doors shut.
+    [nurse_day2_evening_bedroom_closed_eaf22562] I shall not press the matter.
+    [nurse_day2_evening_bedroom_closed_0f00efd5] Still no answer.
+    [nurse_day2_evening_bedroom_closed_61355713] I shall not disturb them again.
+    [nurse_day2_evening_enter_captain_again_ab6633e6] But wait — something is different.
+    [nurse_day2_evening_enter_captain_again_b7971142] A hunting jacket now hangs on the hook by the door.
+    [nurse_day2_evening_enter_captain_again_91b9bfc8] That was not there before. The Captain must have changed for dinner since my last visit.
+
+  game/scripts/nurse/Day 2/3_Evening/1_main.rpy  (2 missing)
+    [nurse_day2_evening_310622d0] Mr Manning gives the smallest nod, rises, and follows the Captain towards the stair.
+    [nurse_day2_evening_1d763890] He moves quietly, and seems to have only a dim sense of what has happened.
+
+  game/scripts/nurse/Day 2/3_Evening/2_billiard_room.rpy  (5 missing)
+    [nurse_day2_evening_billiard_room_confront_202fd9e6] I was behind them. Always safe in an office far from the action.
+    [nurse_day2_evening_billiard_room_confront_3910c530] Were stories.
+    [nurse_day2_evening_billiard_room_confront_00ea427b] Very old stories, told so many times it nearly became the truth in my mind.
+    [nurse_day2_evening_billiard_room_confront_f7564698] I keep hearing the Captain's voice, but it's is getting softer and softer.
+    [nurse_day2_evening_billiard_room_leave_13e3f175] I have nothing more to say tonight.
+
+  game/scripts/nurse/Day 2/3_Evening/2_steal_caught.rpy  (19 missing)
+    [nurse_day2_evening_steal_caught_2dfb617b] Every excuse I have ever rehearsed vanishes at once.
+    [nurse_day2_evening_steal_caught_86e4c1ee] My throat tightens. My hands will not stop trembling.
+    [nurse_day2_evening_steal_caught_cb1454ee] No point in denying now.
+    [nurse_day2_evening_steal_caught_95fa95d9] I slowly reach inside my bag and place the silver spoon back upon the table.
+    [nurse_day2_evening_steal_caught_c04be5a7] Miss Marsh, I can hardly believe it.
+    [nurse_day2_evening_steal_caught_8c735d52] We ought to confine her to her room, just as we did with Mr Manning.
+    [nurse_day2_evening_steal_caught_d76cacc9] Tomorrow, we shall let the police sort this out.
+    [nurse_day2_evening_steal_caught_bad3ebd6] Yes, I think that is wise.
+    [nurse_day2_evening_steal_caught_50b8723b] His footsteps retreat down the corridor.
+    [nurse_day2_evening_steal_caught_90f0db06] I press my back against the door and sink to the floor.
+    [nurse_day2_evening_steal_caught_6a340901] I don't think the police will arrest me for this.
+    [nurse_day2_evening_steal_caught_2c88e9c1] But what will happen if the words go out?
+    [nurse_day2_evening_steal_caught_21392e6d] My reputation could be gone in an instant.
+    [nurse_day2_evening_steal_caught_6e55a8da] I sit there for a long while, staring at nothing.
+    [nurse_day2_evening_steal_caught_0730c692] Then something steadies inside me. Self-pity will not help me.
+    [nurse_day2_evening_steal_caught_9c8893ee] But a hairpin and a steady hand are all I require to open my door.
+    [nurse_day2_evening_steal_caught_96acc893] Certainly, they will not come after me.
+    [nurse_day2_evening_steal_caught_e7282120] Not for such a minor small crime.
+    [nurse_day2_evening_steal_caught_6af8366c] I could leave and it would be as I've never been here.
+
+  game/scripts/nurse/Day 3/2_Afternoon/1_main.rpy  (2 missing)
+    [nurse_day3_afternoon_d6e616c1] I check the weight of my bag — the candlesticks, the salver, the spoons.
+    [nurse_day3_afternoon_6fa5bfe3] All still there.
+
+  game/scripts/nurse/nurse_endings.rpy  (4 missing)
+    [nurse_ending_poisoned_123d102a] You collapsed on the floor, and died there.
+    [nurse_ending_poisoned_d24dd843] You swapped plates, thinking yourself clever.
+    [nurse_ending_poisoned_6e5e2cea] But that didn't help your fate.
+    [nurse_ending_escape_collapse_803e4b3b] They found you the next morning, face down in the mud.
+
+  game/scripts/nurse/nurse_generic_locations.rpy  (39 missing)
+    [nurse_search_captain_again_a476310a] I look over the Captain's immaculate room one last time.
+    [nurse_search_captain_again_abbafc0a] Everything remains exactly as I found it earlier.
+    [nurse_search_captain_again_2ea8e3e5] If there is a secret here, it is too well hidden for me to find now.
+    [nurse_search_captain_again_208572e1] I should not linger and press my luck.
+    [nurse_search_host_again_98c0cb42] I carefully search Lady Claythorn's room once more.
+    [nurse_search_host_again_793203e0] The heavy curtains, the dressing table, the floorboards... I check it all again.
+    [nurse_search_host_again_d5a59de0] But there is simply nothing else to be found.
+    [nurse_search_host_again_fee85a62] If the bearer bonds are here, they are in a safe I cannot locate.
+    [nurse_search_host_again_e7b1d493] The string of pearls still sits in its velvet case on the dressing table.
+    [nurse_garage_default_ac292ef0] It looks exactly the same as before.
+    [nurse_garage_default_69e30bff] No need to search any further.
+    [nurse_gun_room_default_f9ab33b5] The rows of weapons remain exactly as they were.
+    [nurse_gun_room_default_f8e8707a] The small pistols are still available if I so desire.
+    [nurse_gun_room_already_taken_550dc8e2] There is nothing new in here.
+    [nurse_gun_room_already_taken_2c1f800b] I search a bit more for bullets, but still cannot find any.
+    [nurse_gun_room_already_taken_f6121a7e] So there is no reason to stay here.
+    [nurse_take_gun_2f225af6] But I already have the bullets I found in the attic.
+    [nurse_take_gun_16aff36d] I take them out and carefully load the weapon.
+    [nurse_downstairs_approach_ffbe024c] Years of moving discretely in hospitals and large houses have taught me how to remain unseen.
+    [nurse_library_default_21fd6917] There is nothing more for me to find here.
+    [nurse_library_default_2608e112] I already know what I need to know about Zanzibar.
+    [nurse_library_default_cb5e0c68] The library remains as it was.
+    [nurse_library_default_b510d7d4] The volumes of "A History of the British Army" are still on the shelf.
+    [nurse_portrait_gallery_default_1f47acb7] The portraits remain as they were, their silent judgement unchanged.
+    [nurse_attic_females_room_ac292ef0] It looks exactly the same as before.
+    [nurse_attic_females_room_69e30bff] No need to search any further.
+    [nurse_attic_butler_room_13eaf381] The cabinet stands open, emptied of anything worth taking.
+    [nurse_attic_butler_room_7da5e42c] There is nothing more for me here.
+    [nurse_attic_butler_room_c78112ba] The reinforced cabinet still stands against the far wall.
+    [nurse_attic_butler_room_8e9a0b3f] But this time, I have the master key.
+    [nurse_attic_butler_room_c78112ba_1] The reinforced cabinet still stands against the far wall.
+    [nurse_attic_butler_room_d7c432ba] Without the butler's key, there is nothing I can do here.
+    [nurse_attic_butler_room_250c4b59] The room itself is surprisingly ordinary.
+    [nurse_attic_males_room_ac292ef0] It looks exactly the same as before.
+    [nurse_attic_males_room_69e30bff] No need to search any further.
+    [nurse_attic_storage_21fd6917] There is nothing more for me to find here.
+    [nurse_attic_storage_e645a4a2] I have already gone through the important items.
+    [nurse_attic_storage_0042c41e] The storage room remains a jumble of trunks and boxes.
+    [nurse_attic_storage_375d4d39] I still have not searched it thoroughly.
+
+  game/scripts/psychic/Day 2/2_No Hunt/1_main.rpy  (1 missing)
+    [psychic_day2_no_hunt_94436caa] I don't really feel like exploring the Manor, so I decide to wait in the Tea Room.
+
+  game/scripts/psychic/psychic_endings.rpy  (2 missing)
+    [psychic_ending_lord_25518147] You fell in the staircase.
+    [psychic_ending_lord_bea55201] You are not sure what happened there in the attic, but it got the best of you.
+
+  game/scripts/psychic/psychic_generic_choices.rpy  (8 missing)
+    [psychic_generic_weather_sunday_3ecb335a] Really, you want to talk about the weather with everything that is happening around us?
+    [psychic_generic_weather_sunday_6954b67e] What is wrong with you?
+    [psychic_generic_heroic_act_nurse_032808c4] Why were you invited here, Mrs Baxter?
+    [psychic_generic_heroic_act_nurse_12efdf98] I listen carefully and say nothing for a moment.
+    [psychic_generic_heroic_act_nurse_9325b43d] That the woman she named was guilty does not prove she fore-saw it.
+    [psychic_generic_heroic_act_nurse_06ea04cb] A lucky guess, most likely, combined with a good deal of charm.
+    [psychic_generic_heroic_act_nurse_ee9387f6] Still, I will not say so.
+    [psychic_generic_heroic_act_nurse_2afcd495] That must have been an enormous relief for the family.
+
+  game/scripts/psychic/psychic_lord_locations.rpy  (56 missing)
+    [psychic_attic_default_8de0f676] I really shouldn't go back there right now.
+    [psychic_confront_lord_6686db65] I know I must confront him.
+    [psychic_confront_lord_7df9d327] But what am I hoping to prove?
+    [psychic_confront_lord_939c35ab] That's a dangerous path I fear I'm taking here.
+    [psychic_confront_lord_14c5173a] He is not in the hallway, so I head to his room.
+    [psychic_confront_lord_8c8a02dc] I don't bother knocking and enter right away.
+    [psychic_confront_lord_36dfb844] It's even more decrepit than the rest of the attic.
+    [psychic_confront_lord_2569715a] Why would anyone decide to live here?
+    [psychic_confront_lord_01d9eef9] Sir Nicholas, are you there?
+    [psychic_confront_lord_f0be3730] Oh good, you've returned.
+    [psychic_confront_lord_ad4b15f5] And you've learned my name as well.
+    [psychic_confront_lord_f0db397b] Impressive.
+    [psychic_confront_lord_c2424056] That's not all I've learned, though.
+    [psychic_confront_lord_04f089ae] Really? What else?
+    [psychic_confront_lord_7c5ffe81] That you're supposed to be 111 years old.
+    [psychic_confront_lord_6ea3b237] 111 years...
+    [psychic_confront_lord_74952fc5] Has it been that long already?
+    [psychic_confront_lord_a11006ed] Well, I suppose that's true.
+    [psychic_confront_lord_b905d013] No one can live this long.
+    [psychic_confront_lord_488d00ca] Probably not.
+    [psychic_confront_lord_f8732536] So, are you...
+    [psychic_confront_lord_f27311da] Are you...
+    [psychic_confront_lord_e0f4cbf2] Am I what, my dear?
+    [psychic_confront_lord_7488fcef] Dead?
+    [psychic_confront_lord_8e3c1572] That's what you think, right?
+    [psychic_confront_lord_ab8d0987] Or rather, it's what you're hoping.
+    [psychic_confront_lord_83ccac25] Because either I am a ghost...
+    [psychic_confront_lord_81721182] Or you're just losing your mind.
+    [psychic_confront_lord_b51cbe5b] He inches closer to me.
+    [psychic_confront_lord_fdc30a58] So, which will it be?
+    [psychic_confront_lord_c844ef75] That a liar, someone who preyed on the bereaved to make money,
+    [psychic_confront_lord_4b7eeb5f] is actually a real-life medium?
+    [psychic_confront_lord_7e412d79] That it was in her all along?
+    [psychic_confront_lord_f9f0c2a1] I understand the appeal to believe that now.
+    [psychic_confront_lord_29fa8b1c] That would mean that you weren't really deceiving people your entire life.
+    [psychic_confront_lord_50c1e03a] But that would be too easy, wouldn't it?
+    [psychic_confront_lord_b47a1f8c] I am afraid there is only one other alternative.
+    [psychic_confront_lord_e8790b55] You must see it too now.
+    [psychic_confront_lord_5b9d2182] You understand what's happening here, don't you?
+    [psychic_confront_lord_cca9c215] He is now almost next to my face.
+    [psychic_confront_lord_f19b02b0] I can't take this.
+    [psychic_confront_lord_a4b48b23] I rush outside his room.
+    [psychic_confront_lord_13a4defa] But he is already there.
+    [psychic_confront_lord_0413eb4b] Standing in front of me.
+    [psychic_confront_lord_96a13cf1] Where are you going?
+    [psychic_confront_lord_b6e3b285] Do you think you can get rid of me that easily?
+    [psychic_confront_lord_223fec09] What do you want from me?
+    [psychic_confront_lord_bb1a15b6] Me? I don't want anything.
+    [psychic_confront_lord_f9ba7f26] The question is: what do you want?
+    [psychic_confront_lord_5bbba9f6] I slowly take a step back towards the stairs.
+    [psychic_confront_lord_2053ce00] Do you feel remorse maybe?
+    [psychic_confront_lord_78fe6d00] I take another step.
+    [psychic_confront_lord_4b0730c9] Some regret over what you've done?
+    [psychic_confront_lord_067290b1] Please, leave me alone.
+    [psychic_confront_lord_c7c5adaf] I try to walk back further,
+    [psychic_confront_lord_f0f766a9] but my foot doesn't find the ground behind me.
+
+  game/scripts/psychic/psychic_other_guests.rpy  (45 missing)
+    [psychic_generic_other_guests_saturday_hunt_4ef976b2] You know that I already talked with Samuel Manning, Captain Sinha and our host.
+    [psychic_generic_other_guests_saturday_hunt_2ad5cb85] Now, I have also talked a little with Miss Marsh.
+    [psychic_generic_drunk_saturday_morning_8b37fe51] Well, I believe you can tell as well as I that he is a dangerous drunk.
+    [psychic_generic_drunk_saturday_morning_2a29d6df] We better stay away from him.
+    [psychic_generic_drunk_saturday_morning_83565488] A reasonable enough assessment, I suppose.
+    [psychic_generic_drunk_saturday_morning_0e5fbaf1] Though I would have put it differently.
+    [psychic_generic_drunk_saturday_morning_e440404d] In my experience, drunks are simply wounded persons.
+    [psychic_generic_drunk_saturday_morning_ac072aff] There is no reason to vilify them.
+    [psychic_generic_captain_saturday_morning_38fd0162] He appears to me the very image of a military man.
+    [psychic_generic_captain_saturday_morning_3c4b89aa] Except for, you know, his origin.
+    [psychic_generic_captain_saturday_morning_e38d699d] I did not think they would accept indigenous people in the British Army.
+    [psychic_generic_captain_saturday_morning_073b2de4] But aside from that, he is exactly like other officers I have met.
+    [psychic_generic_captain_saturday_morning_133bbe7c] Bold, sure of himself, and never shy of speaking about himself.
+    [psychic_generic_captain_saturday_morning_ffb8eb56] I bet he will keep on telling stories about his "Glorious Days" during one war or another.
+    [psychic_generic_captain_saturday_morning_00d9cdc0] I find it in poor taste, so I shall try to avoid him in the coming days.
+    [psychic_generic_captain_saturday_morning_8cce9435] I suggest you do the same, unless you want to be bored to death.
+    [psychic_generic_host_saturday_morning_c1ed4be3] They usually look down on people like you...
+    [psychic_generic_host_saturday_morning_704be2d2] ... and me.
+    [psychic_generic_host_saturday_morning_d6773484] She paused a little too long before adding "and me".
+    [psychic_generic_host_saturday_morning_6c7f0c79] I don't like that.
+    [psychic_generic_nurse_saturday_hunt_a696ee4e] From what I've seen, I believe she is a very respectable woman.
+    [psychic_generic_nurse_saturday_hunt_847e84f1] She worked most of her life as a nurse.
+    [psychic_generic_nurse_saturday_hunt_6df83fbe] So I believe the prize money could help her retire.
+    [psychic_generic_other_guests_saturday_evening_1d5ff287] Good question, we'll be stronger if we know who to be wary of.
+    [psychic_generic_other_guests_saturday_evening_95ce4441] I've thought about it and Samuel Manning is of course the prime suspect.
+    [psychic_generic_other_guests_saturday_evening_6572d05f] But he is locked in his room now, so I wouldn't worry about him too much.
+    [psychic_generic_other_guests_saturday_evening_25251b17] The other obvious suspect is Thomas Moody.
+    [psychic_generic_other_guests_saturday_evening_2b29af66] The fact that he wears a mask is the perfect way to hide his true identity.
+    [psychic_generic_other_guests_saturday_evening_c4787da5] But he can't really hurt us anymore, can he?
+    [psychic_generic_other_guests_saturday_evening_29b0c484] So that leaves us three persons to worry about: Sushil Sinha, Lady Claythorn and Rosalind Marsh.
+    [psychic_generic_captain_saturday_evening_7630a618] Captain Sinha is the one I am most worried about.
+    [psychic_generic_captain_saturday_evening_2108dc97] He is the strongest of us, has military experience.
+    [psychic_generic_captain_saturday_evening_92eb1356] And he often took command during dramatic moments, which means he can try to drive us where he wants.
+    [psychic_generic_captain_saturday_evening_5b769418] I would be very cautious around him if I were you.
+    [psychic_generic_host_saturday_evening_ad42ced1] If money is not the reason behind the murders, then I suppose she would be suspicious.
+    [psychic_generic_host_saturday_evening_5a51378c] After all, she is the one who called all of us here.
+    [psychic_generic_host_saturday_evening_6183f3c9] But as I said, it would be a lot of work to organise all this, and for what?
+    [psychic_generic_host_saturday_evening_ae288a13] To kill a few of her enemies?
+    [psychic_generic_host_saturday_evening_1084681e] That seems a bit far-fetched.
+    [psychic_generic_host_saturday_evening_f5c2bca9] Also, she seemed very nice to me.
+    [psychic_generic_host_saturday_evening_9adf6964] But of course that doesn't mean much.
+    [psychic_generic_nurse_saturday_evening_e2a4cbe3] Miss Marsh definitely doesn't have the type of a killer.
+    [psychic_generic_nurse_saturday_evening_47e80f71] But that's not reason enough to think she couldn't be.
+    [psychic_generic_nurse_saturday_evening_8c191371] She is very discreet.
+    [psychic_generic_nurse_saturday_evening_9c435dd5] That could be a way to search the manor while she relies on an accomplice for the more "physical" part of t...
+
+  game/scripts/tutorials.rpy  (60 missing)
+    [tutorial_clock_51bd4dc3] Wait, don't you hear something ticking?
+    [tutorial_clock_86a754c4] If you haven't noticed it yet, look at the clock in the upper-left corner.
+    [tutorial_clock_5a0ca5eb] There, you can see the current time, as well as the day.
+    [tutorial_clock_dabb7d11] This helpful tool will move as the story progresses, for example, when you start a new chapter of this adve...
+    [tutorial_clock_f2ffdee4] Also, when you are faced with multiple choices, each action will take a different amount of time.
+    [tutorial_clock_f9cdb12c] Since each scene has a limited duration, this means you won't always have the opportunity to explore every ...
+    [tutorial_clock_1a5056e6] So make every choice count.
+    [tutorial_clock_cf695f8f] Also, there is no need to rush reading, the time spent on an choice is set and not dependent on the speed o...
+    [tutorial_description_hidden_df478a60] Congratulations on discovering your first piece of information about a character!
+    [tutorial_description_hidden_1974e106] Learning about characters is crucial in this game. You can find two types of information: essential and tri...
+    [tutorial_description_hidden_a7a817bd] To unlock a new playable character, it is necessary to learn all the essential facts about them.
+    [tutorial_description_hidden_4e749191] Once you have acquired this knowledge, you will be able to restart the story from their perspective.
+    [tutorial_description_hidden_a9d34e28] While conversing with a character can unlock certain information, some facts can only be revealed at specif...
+    [tutorial_description_hidden_6ae5ea2f] The "Characters" menu gives you an estimation of how much essential information has been unlocked, as well ...
+    [tutorial_description_hidden_fcdfabf3] At the beginning, the descriptions are riddled with holes. It's up to you to fill those holes to reveal som...
+    [tutorial_description_hidden_c9bb0971] Check out for yourself.
+    [tutorial_map_f7d5cd2e] Well done, you just found new information about the Manor.
+    [tutorial_map_8fa297ad] As a result, additional details have been added to the Manor map to assist you in navigating the house.
+    [tutorial_map_7bd96e9b] You can access this information by navigating to the "Map" menu here.
+    [tutorial_intuition_8cab1c54] You just received your first "Intuition"
+    [tutorial_intuition_32a2c26a] An "Intuition" is a powerful tool.
+    [tutorial_intuition_0178edcc] Some say that when a death is particularly strong, it leaves a mark that can be felt across different plane...
+    [tutorial_intuition_4232042a] Others believe it's the ghost of an alternate timeline returning to warn you.
+    [tutorial_intuition_601ebdba] In any case, it means you will now receive a warning at some point during this adventure.
+    [tutorial_intuition_88ad3212] This will allow you to change the course of the story in ways that were previously impossible.
+    [tutorial_intuition_1f3ad676] Make good use of it.
+    [tutorial_unlock_character_fd86b2c9] You've unlocked a new character!
+    [tutorial_unlock_character_34cba2ba] Now, you can begin the narrative through their point of view.
+    [tutorial_unlock_character_10994769] Each character possesses a distinct story, persona, and background.
+    [tutorial_unlock_character_11d8e157] This individuality may grant you access to specific choices unavailable to others.
+    [tutorial_unlock_character_92d95747] Use the characters' full potential to unravel the mystery of this weekend.
+    [tutorial_progress_6523986e] Wait, it looks like you've unlocked something.
+    [tutorial_progress_6821cebb] It could be that you made a choice, an observation, or found an object.
+    [tutorial_progress_94abe5df] Basically, something that can influence the rest of the story.
+    [tutorial_progress_11fdfa5d] To help you, you can now consult the "Progress" page.
+    [tutorial_progress_5c9a92a2] Let's have a look at it.
+    [tutorial_restart_4afc8a82] You now have to restart the story.
+    [tutorial_restart_91cf3992] However, there's no need to worry as you can use the skip button located at the bottom right of the screen ...
+    [tutorial_restart_f209d0e3] You can also use the "CTRL" key on your keyboard.
+    [tutorial_restart_f0e355ca] This blinking icon will be visible when it is possible to fast forward.
+    [tutorial_restart_82ba1291] Furthermore, you now have access to the "Restart" button in the "Progress" menu.
+    [tutorial_restart_5a26731f] Just choose a chapter on that screen, then any checkpoint from the list.
+    [tutorial_restart_93061741] It's now possible to restart the story from the selected checkpoint.
+    [tutorial_restart_2c1aaa7a] Please be cautious, as these checkpoints save the previous choices you've made.
+    [tutorial_restart_29631c27] Therefore, it may be necessary to start from an earlier point to unlock new story paths.
+    [tutorial_already_chosen_245248ca] You've selected a choice that was in dark.
+    [tutorial_already_chosen_66359ae8] That means you've already made that choice before.
+    [tutorial_already_chosen_6047283b] No need to worry — there's nothing wrong with wanting to retrace your steps.
+    [tutorial_already_chosen_daf931cf] However, you should know that if there were other choices to be made afterwards, you've already explored th...
+    [tutorial_already_chosen_47058487] To explain, let's take a simple example: imagine a question such as "Do you like apples?"
+    [tutorial_already_chosen_968aaf7f] If you answer "no", then the conversation ends there.
+    [tutorial_already_chosen_b2c741b7] But if you choose "yes", a new question appears: "Do you prefer red or green apples?"
+    [tutorial_already_chosen_f0218313] In that case, the "no" will turn dark once you've chosen it once.
+    [tutorial_already_chosen_4a3bb279] But the "yes" option from the first question won't turn dark until you've also selected both "red apples" a...
+    [tutorial_already_chosen_b14e8208] I hope that makes things clearer.
+    [tutorial_already_chosen_map_5a1efd79] You've selected a place you've already visited — at least during the same period.
+    [tutorial_already_chosen_map_57d54b2f] If you didn't notice, the text appeared in a darker tone.
+    [tutorial_already_chosen_map_b86a803a] No need to worry — there's nothing wrong with revisiting the same location.
+    [tutorial_already_chosen_map_2257d5d1] But on a map, if a place name appears in dark, you're unlikely to find anything new there.
+    [tutorial_already_chosen_map_39df6c09] I hope that helps you save some time.
+

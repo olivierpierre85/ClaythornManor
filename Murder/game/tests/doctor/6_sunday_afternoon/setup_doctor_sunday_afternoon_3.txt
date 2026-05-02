@@ -1,0 +1,225 @@
+Chapter: Final Decisions
+Character: Daniel Baldwin
+We are all seated in the tea room, Captain Sinha, Ted Harring, Amelia Baxter, and I.
+Each of us is deep in thought.
+The manor feels hollow now, stripped of its usual life.
+Captain Sinha breaks the silence.
+Sushil Sinha: Whatever happened here was coordinated.
+Sushil Sinha: Staff and guests alike did not simply wander off.
+Ted Harring: But why?
+Captain Sinha leans towards me and whispers in my ear.
+Sushil Sinha: Perhaps it is better to tell them everything.
+Sushil Sinha: We might need their help if we are to get out of here intact.
+Sushil Sinha: What do you think, Doctor?
+Amelia Baxter: Excuse me, what are you two whispering about?
+Amelia Baxter: Is there something we should know?
+Menu Choice: Share what you know with the others
+Daniel Baldwin: I believe you are right, Captain.
+Daniel Baldwin: We might as well tell you everything we know.
+So I tell them about the letter we found in Samuel Manning's room, and how it lead to our fight, and his death.
+They look at me puzzled at first, taking it in.
+When the implications are clear to them, they look frightened.
+Amelia Baxter: How terrible.
+Amelia Baxter: But who could be behind this?
+Sushil Sinha: That's what we've been trying to figure out, without success.
+Of course, we are not saying what everyone is thinking.
+We are all suspects to the others.
+We may have made a choice to trust them, but deep down we'll stay watchful.
+Amelia Baxter: Right, so right now you don't have more idea than we do.
+Sushil Sinha: That is correct.
+Sushil Sinha: We only believe that the obvious suspect is Lady Claythorn.
+Amelia Baxter: Of course, but we don't know enough to be sure are we?
+Amelia Baxter: We need more information to really know what's happening.
+Menu Choice: Tell them about the footman{{observation}}
+Daniel Baldwin: There is something else you should know.
+Daniel Baldwin: The footman was not who he claimed to be.
+Daniel Baldwin: He told me he was an actor.
+Sushil Sinha: An actor?
+Sushil Sinha: Now that you mention it, I remember he made a few mistakes during dinner.
+Sushil Sinha: I assumed he was new to the job.
+Amelia Baxter: It is true, he was a bit inexperienced.
+Sushil Sinha: And now that you mention it, so were the others.
+Amelia Baxter: Right, and there were not many of them either.
+Amelia Baxter: A house this big should have twice the staff, at least, compared to what I have seen.
+Amelia Baxter: I simply thought it was due to a labour shortage.
+Ted Harring remains silent through the whole exchange.
+He clearly did not notice anything out of place.
+I must admit I did not either.
+Daniel Baldwin: So, in your view, the staff was not what you expected.
+Amelia Baxter: Perhaps not.
+Sushil Sinha: Not at all, in my opinion.
+Sushil Sinha: But that doesn't say much.
+Sushil Sinha: I assume a lot of struggling artist end up doing this kind of work.
+Sushil Sinha: The times have changed, it is no longer the case that you were born in service and stay in it your whole life.
+Amelia Baxter: Sadly.
+Sushil Sinha: On the other hand, it could also mean they were part of whatever is happening here.
+Sushil Sinha: It would explain why we cannot see any of them here today.
+Amelia Baxter: Maybe, but again, there is no way to know for sure.
+Sushil Sinha: Of course.
+I do not believe Andrew was involved, at least not in anything that would harm us.
+But I cannot tell them why.
+Besides, I did not know him all that well.
+Menu Choice: Tell them about Rosalind Marsh{{observation}}
+Daniel Baldwin: I am not sure if it is relevant, but I realised earlier that Miss Marsh and I were already acquainted.
+Daniel Baldwin: I don't know if it is relevant or if it just a coincidence.
+Sushil Sinha: It would be a very improbable coincidence indeed.
+Sushil Sinha: That out of the millions of people in the realm, Lady Claythorn chose two that know each other.
+Sushil Sinha: You could be onto something doctor.
+Sushil Sinha: How well did you know her?
+Daniel Baldwin: Not very well of course, I didn't even recognize her at first.
+Daniel Baldwin: We met a very long time ago, during the Boxer's rebellion, you see we...
+Sushil Sinha: Wait, Doctor. You were in China during the Boxer's Rebellion?
+Daniel Baldwin: Yes, as was miss Marsh apparently.
+Sushil Sinha: In that case, that can't be a coincidence Doctor.
+Sushil Sinha: You see, I was there myself.
+Daniel Baldwin: You were?
+Daniel Baldwin: I don't remember you.
+Sushil Sinha: Well, there was a vast among of Indian soldiers fighting for the country.
+Sushil Sinha: It may have been different for you to tell us apart.
+Sushil Sinha: In any case, we didn't associate a lot with people from the metropolis.
+Sushil Sinha: But know that I try to remember, I think I can see talking to a young doctor looking a bit like yourself.
+Daniel Baldwin: Well, right.
+Daniel Baldwin: It's possible we've met before as well, then.
+Ted Harring: How queer.
+Ted Harring: What are the chances of that?
+Sushil Sinha: That it happened by chance that at least three people present here tonight met before?
+Sushil Sinha: I would say close to to zero Mr Harring.
+Sushil Sinha: I would even dare to say that what happened in China could be the reason we are all here this weekend.
+Everybody pounders that for a second.
+Ted Harring: But I'be never been to China.
+Amelia Baxter: Neither have I.
+Amelia Baxter: And I am confident I never met anyone here before as well.
+Sushil Sinha: Right, still this a very weird coincidence, we shouldn't overlook it.
+Menu Choice: Tell them about Thomas Moody{{observation}}
+Daniel Baldwin: There was something else that struck me as strange, though I do not yet see how it helps us make sense of our situation.
+Daniel Baldwin: It concerns Thomas Moody.
+Amelia Baxter: What about him?
+Daniel Baldwin: You all noticed the mask he wore to hide his war injuries, I presume.
+Amelia Baxter: Of course.
+Ted Harring: How could we miss it?
+Daniel Baldwin: When I examined him, I had to remove the mask to determine the cause of death.
+Daniel Baldwin: I confess I was apprehensive about what I might find.
+Daniel Baldwin: But behind it, there were no injuries at all.
+Ted Harring: No injuries?
+Ted Harring: Then why wear the bloody thing?
+Daniel Baldwin: Honestly, I cannot offer a logical explanation.
+Daniel Baldwin: It was so unsettling that I kept it to myself, as I wished to understand more before speaking of it.
+Daniel Baldwin: When I shared what I knew with Captain Sinha, he helped me realise something else.
+Daniel Baldwin: That Thomas Moody may have been poisoned.
+Amelia Baxter: Poisoned?!
+Amelia Baxter: And you did not think you ought to have told us?
+Sushil Sinha: At the time, we realised something was terribly wrong in the manor.
+Sushil Sinha: But we did not know whom we could trust.
+Sushil Sinha: So we kept it to ourselves.
+Amelia Baxter: Right.
+Amelia Baxter: I am not sure how that helps us just now.
+Amelia Baxter: It is one more reason to worry, and nothing that truly helps us.
+Amelia Baxter: Still, at least you have told us.
+Daniel Baldwin: I am sorry.
+Menu Choice: Do not tell them anything more
+Once again, we all fall silent.
+Trying to make sense of what is happening to us.
+Ted Harring: Right, as I see it, we don't know much more than we did this morning.
+Ted Harring: So what now?
+Ted Harring: I feel like we've explored the whole place already.
+Ted Harring: And we can't just sit around waiting for answers.
+Sushil Sinha: No.
+Sushil Sinha: We must act sensibly.
+Sushil Sinha: It is obvious now that we have to leave.
+Amelia Baxter: Of course, but how?
+Amelia Baxter: The nearest town is miles away.
+Amelia Baxter: I can't walk that far.
+Amelia Baxter: And even if I could, I'm not prepared for such a journey.
+Sushil Sinha: You might be right.
+Sushil Sinha: It would be a long walk, and the weather might turn at any moment.
+Sushil Sinha: We could be caught in another storm.
+Sushil Sinha: It is probably unsafe for you to join us.
+Amelia Baxter: But you're not going to leave me here alone, are you?
+Amelia Baxter: What would become of me?
+Sushil Sinha: We could lock you in a room.
+Sushil Sinha: Though that is far from ideal.
+Sushil Sinha: Perhaps one of us should stay with you.
+Amelia Baxter: Yes!
+Amelia Baxter: Mr Harring can stay with me, right?
+Amelia Baxter: The two of us should be safe until you return with help.
+Sushil Sinha: That seems to be the wisest choice.
+Sushil Sinha: What do you think, Mr Harring?
+Ted Harring: I don't know.
+Ted Harring: After everything they've just told us, I don't think we're safe.
+Ted Harring: Not even if the two of us stay behind.
+Amelia Baxter: But I cannot travel that far.
+Ted Harring stares at the floor, ashamed.
+He looks as though he wishes he could vanish into the carpet.
+Ted Harring: I'm sorry.
+Ted Harring: I can't stay here any longer.
+Ted Harring: I can't.
+Amelia Baxter: What?
+Amelia Baxter: Are you truly going to abandon me?
+Amelia Baxter: And you, Doctor?
+Amelia Baxter: Or you, Captain?
+Amelia Baxter: Can't one of you stay with me?
+An awkward silence follows.
+None of us replies.
+Amelia Baxter: Oh, I see.
+Amelia Baxter: So there is no chance of convincing you, is there?
+Sushil Sinha: I would stay, of course.
+Sushil Sinha: But I am afraid you will need my experience to make the journey.
+Experience to walk along a road.
+It is an odd remark from a decorated soldier.
+Could it be that, behind his impassive face, he is frightened after all?
+Amelia Baxter: Very well.
+Amelia Baxter: Then I have no choice but to come with you.
+Sushil Sinha: Are you quite certain?
+Sushil Sinha: It will not be an easy walk.
+Amelia Baxter: I am certain.
+Amelia Baxter: I will likely be slower than you.
+Amelia Baxter: I trust you will not leave me behind.
+Sushil Sinha: Very well.
+Sushil Sinha: Let us prepare ourselves before we set off.
+Captain Sinha instructs us to take the bare minimum from our rooms.
+He tells us to meet outside without delay.
+Once the four of us were ready, we wasted no time and took to the road.
+Our progress was slow, but we stayed together for two long hours.
+I had begun to lose hope when we finally reached Aberdeen.
+After a quick search, we located the police station.
+We entered in a rush, calling for help.
+We must have looked half-mad.
+It took some time before anyone took us seriously.
+They sent men to check on the manor, while we remained to give our statements.
+I explained everything, insisting on the peculiar situation of Samuel Manning.
+A couple of hours later, they returned.
+By then, we had given our statements twice over.
+With sombre faces, they told us they had found another body.
+Rosalind Marsh.
+She was in the attic, stabbed to death.
+Even if we half expected it, the news struck us hard.
+My mind went at once to Andrew.
+What could have become of him?
+They had found nothing to explain where Lady Claythorn and the staff had gone.
+In the days that followed, the police contacted the families of the missing guests.
+We were asked to remain nearby for a short while.
+They soon dismissed us as suspects.
+They accepted the most obvious conclusion.
+The culprits were among the missing.
+Their motives remained unclear.
+Captain Sinha, Ted Harring, and Amelia Baxter eventually returned home.
+As for me, I tried to find Andrew again.
+I asked after him.
+I described him.
+I waited near the station, hoping he would appear as if nothing had happened.
+He never did.
+I can only hope he is all right.
+And that he had the sense to keep moving.
+A week later, I returned to the police station one last time.
+They were ready to move on.
+Yet they had just received unsettling news.
+They had found Thomas Moody's mother, and informed her of her son's death.
+But when they told her Thomas was dead, she said they were mistaken.
+Thomas Moody had died months ago, apparently from war injuries.
+Then she added something else.
+Her other son, Archibald, had been missing for a week or more.
+You escaped.
+Three other guests were fortunate enough to leave the manor alive with you.
+By now, you may have a clearer understanding of what has been happening.
+But do not blame yourself too harshly if you don't.
+There are still plenty of secrets to uncover at Claythorn Manor.

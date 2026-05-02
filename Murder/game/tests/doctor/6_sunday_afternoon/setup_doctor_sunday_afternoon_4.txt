@@ -1,0 +1,129 @@
+Chapter: Final Decisions
+Character: Daniel Baldwin
+Rosalind Marsh: I believe it has been long enough.
+Rosalind Marsh: We should head back downstairs, and see where the others have settled.
+We climb down from the attic and reach the top of the main staircase.
+From there, we can hear voices coming from the tea room.
+We go down and linger by the doorway, careful not to be seen.
+We try to make out what they are saying.
+We cannot catch every word, but the gist is clear.
+Captain Sinha intends to leave on his own.
+Ted Harring and Amelia Baxter will wait for him to return with help.
+Rosalind Marsh: I think they are coming.
+Rosalind Marsh: Quickly.
+She darts towards the library to hide.
+I follow her at once.
+Rosalind Marsh: Good.
+Rosalind Marsh: We should be safe in here, for the moment.
+Daniel Baldwin: Very well.
+Daniel Baldwin: But what do we do next?
+Daniel Baldwin: From what we heard, they are no closer to understanding what is happening than we are.
+Daniel Baldwin: It may be safe to speak with them, do you not agree?
+Rosalind Marsh: I am not sure.
+Rosalind Marsh: One of them could be lying to the others.
+Rosalind Marsh: Mostly, I am frightened of Captain Sinha.
+Rosalind Marsh: I do not think the other two are as dangerous.
+Rosalind Marsh: We should at least wait for him to leave.
+Rosalind Marsh: After that, I do not know.
+Rosalind Marsh: We could remain hidden, and see whether the police come.
+Rosalind Marsh: Or we could try to speak to them.
+Rosalind Marsh: What do you think?
+Menu Choice: Speak to them, they look harmless
+Daniel Baldwin: I think we should speak to them.
+Daniel Baldwin: We can wait for Captain Sinha to leave, if you would prefer.
+Rosalind Marsh: All right.
+Rosalind Marsh: Let us wait a little.
+We do not have to wait long.
+A few minutes later, we hear the Captain say his goodbyes.
+Then the front door closes.
+Rosalind Marsh: Right.
+Rosalind Marsh: He has left.
+Rosalind Marsh: We can safely approach the others now.
+We slip out of the library and cross the hall.
+Ted Harring and Amelia Baxter are still there.
+They look startled to see us.
+Amelia Baxter: Doctor?
+Amelia Baxter: And Miss Marsh?
+Amelia Baxter: Where have you been?
+Ted Harring: You two gave us a fright.
+Ted Harring: Thought you'd done a runner like the others.
+Rosalind Marsh: We have been searching the house.
+Rosalind Marsh: We did not find anything useful.
+Rosalind Marsh: We heard the front door close, so we came at once.
+Rosalind Marsh: Has someone just left?
+Amelia Baxter: Yes, Captain Sinha.
+Amelia Baxter: He has gone to fetch help.
+Amelia Baxter: He says he can make it alone, and that we should not all risk ourselves on the road.
+Amelia Baxter: So we shall wait for him here.
+Rosalind Marsh: That seems sensible.
+Rosalind Marsh: Then we shall wait with you.
+Amelia Baxter: All right.
+Amelia Baxter: In the meantime, none of us has eaten properly in hours.
+Amelia Baxter: Since we have little else to do, we ought to prepare something.
+Amelia Baxter: That would at least keep us occupied until the police arrive.
+Rosalind Marsh: I agree.
+Rosalind Marsh: We should go and see what is in the kitchen.
+Amelia Baxter: Good idea.
+Amelia Baxter: Let's go.
+The kitchen is cold, but not abandoned.
+A few pots still sit where they were left.
+A loaf of bread rests beneath a cloth, as if someone meant to return.
+Rosalind Marsh: There should be enough here for a simple meal.
+Rosalind Marsh: Bread, some cheese, and perhaps soup if the range still works.
+Rosalind Marsh: We do not need a feast.
+Rosalind Marsh: Just enough to keep our strength.
+Daniel Baldwin: Very well.
+Daniel Baldwin: What can I do to help?
+Amelia Baxter: I think Rosalind and I can manage, Doctor.
+Amelia Baxter: Perhaps you could set the table?
+Daniel Baldwin: Certainly.
+Daniel Baldwin: I shall do that.
+Amelia Baxter: And maybe Mr Harring can go with you?
+Ted Harring: Yeah, alright.
+Ted Harring: I'll tag along, Doctor.
+Ted Harring and I set the table, then he excuses himself.
+I linger a moment, looking at the place where we have eaten for three days.
+It feels oddly grand for just the four of us.
+I cannot help thinking of my own home, and my own table.
+Soon enough, the two ladies join us with our makeshift lunch.
+Ted Harring returns a moment later.
+Amelia Baxter: There you are.
+Amelia Baxter: It is not much, but it will see us through the day.
+Daniel Baldwin: It looks excellent.
+Daniel Baldwin: Thank you.
+We sit and begin to eat at once.
+I believe we are all famished.
+For a time, we eat without speaking.
+Halfway through my bread, an odd taste blooms at the back of my tongue.
+Bitter.
+Metallic.
+I pause, chewing more slowly.
+My stomach tightens as if a fist has closed around it.
+I set my knife down carefully, as though the smallest sound might split my skull.
+The room seems to tilt, ever so slightly.
+No.
+Not the room.
+It is me.
+Daniel Baldwin: Forgive me.
+Daniel Baldwin: I feel quite unwell.
+Ted Harring: What?
+Ted Harring: Doctor, you alright?
+Rosalind Marsh: Doctor?
+Rosalind Marsh: Daniel, what is it?
+Heat rushes through my chest, then drains away at once.
+My hands have gone cold.
+The edges of my vision darken, as if someone is drawing curtains.
+I try to stand.
+My legs do not answer properly.
+The chair scrapes.
+The sound is far too loud.
+I reach for the table, but my fingers miss the edge.
+Ted Harring: Careful!
+Ted Harring: Doctor!
+The floor rises to meet me.
+My shoulder strikes first, then my cheek.
+Voices rush in, muffled and distant, as though I am submerged.
+The ceiling swims.
+Then the light folds in on itself.
+You chose to trust, and you paid the price.
+You were close to the end but you let your guard down.

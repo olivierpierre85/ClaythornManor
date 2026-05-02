@@ -1,0 +1,172 @@
+Chapter: Final Decisions
+Character: Daniel Baldwin
+We are all seated in the tea room, Captain Sinha, Ted Harring, Amelia Baxter, and I.
+Each of us is deep in thought.
+The manor feels hollow now, stripped of its usual life.
+Captain Sinha breaks the silence.
+Sushil Sinha: Whatever happened here was coordinated.
+Sushil Sinha: Staff and guests alike did not simply wander off.
+Ted Harring: But why?
+Captain Sinha leans towards me and whispers in my ear.
+Sushil Sinha: Perhaps it is better to tell them everything.
+Sushil Sinha: We might need their help if we are to get out of here intact.
+Sushil Sinha: What do you think, Doctor?
+Amelia Baxter: Excuse me, what are you two whispering about?
+Amelia Baxter: Is there something we should know?
+Menu Choice: Share what you know with the others
+Daniel Baldwin: I believe you are right, Captain.
+Daniel Baldwin: We might as well tell you everything we know.
+So I tell them about the letter we found in Samuel Manning's room, and how it lead to our fight, and his death.
+They look at me puzzled at first, taking it in.
+When the implications are clear to them, they look frightened.
+Amelia Baxter: How terrible.
+Amelia Baxter: But who could be behind this?
+Sushil Sinha: That's what we've been trying to figure out, without success.
+Of course, we are not saying what everyone is thinking.
+We are all suspects to the others.
+We may have made a choice to trust them, but deep down we'll stay watchful.
+Amelia Baxter: Right, so right now you don't have more idea than we do.
+Sushil Sinha: That is correct.
+Sushil Sinha: We only believe that the obvious suspect is Lady Claythorn.
+Amelia Baxter: Of course, but we don't know enough to be sure are we?
+Amelia Baxter: We need more information to really know what's happening.
+Menu Choice: Tell them about the footman{{observation}}
+Daniel Baldwin: There is something else you should know.
+Daniel Baldwin: The footman was not who he claimed to be.
+Daniel Baldwin: He told me he was an actor.
+Sushil Sinha: An actor?
+Sushil Sinha: Now that you mention it, I remember he made a few mistakes during dinner.
+Sushil Sinha: I assumed he was new to the job.
+Amelia Baxter: It is true, he was a bit inexperienced.
+Sushil Sinha: And now that you mention it, so were the others.
+Amelia Baxter: Right, and there were not many of them either.
+Amelia Baxter: A house this big should have twice the staff, at least, compared to what I have seen.
+Amelia Baxter: I simply thought it was due to a labour shortage.
+Ted Harring remains silent through the whole exchange.
+He clearly did not notice anything out of place.
+I must admit I did not either.
+Daniel Baldwin: So, in your view, the staff was not what you expected.
+Amelia Baxter: Perhaps not.
+Sushil Sinha: Not at all, in my opinion.
+Sushil Sinha: But that doesn't say much.
+Sushil Sinha: I assume a lot of struggling artist end up doing this kind of work.
+Sushil Sinha: The times have changed, it is no longer the case that you were born in service and stay in it your whole life.
+Amelia Baxter: Sadly.
+Sushil Sinha: On the other hand, it could also mean they were part of whatever is happening here.
+Sushil Sinha: It would explain why we cannot see any of them here today.
+Amelia Baxter: Maybe, but again, there is no way to know for sure.
+Sushil Sinha: Of course.
+I do not believe Andrew was involved, at least not in anything that would harm us.
+But I cannot tell them why.
+Besides, I did not know him all that well.
+Menu Choice: Tell them about Rosalind Marsh{{observation}}
+Daniel Baldwin: I am not sure if it is relevant, but I realised earlier that Miss Marsh and I were already acquainted.
+Daniel Baldwin: I don't know if it is relevant or if it just a coincidence.
+Sushil Sinha: It would be a very improbable coincidence indeed.
+Sushil Sinha: That out of the millions of people in the realm, Lady Claythorn chose two that know each other.
+Sushil Sinha: You could be onto something doctor.
+Sushil Sinha: How well did you know her?
+Daniel Baldwin: Not very well of course, I didn't even recognize her at first.
+Daniel Baldwin: We met a very long time ago, during the Boxer's rebellion, you see we...
+Sushil Sinha: Wait, Doctor. You were in China during the Boxer's Rebellion?
+Daniel Baldwin: Yes, as was miss Marsh apparently.
+Sushil Sinha: In that case, that can't be a coincidence Doctor.
+Sushil Sinha: You see, I was there myself.
+Daniel Baldwin: You were?
+Daniel Baldwin: I don't remember you.
+Sushil Sinha: Well, there was a vast among of Indian soldiers fighting for the country.
+Sushil Sinha: It may have been different for you to tell us apart.
+Sushil Sinha: In any case, we didn't associate a lot with people from the metropolis.
+Sushil Sinha: But know that I try to remember, I think I can see talking to a young doctor looking a bit like yourself.
+Daniel Baldwin: Well, right.
+Daniel Baldwin: It's possible we've met before as well, then.
+Ted Harring: How queer.
+Ted Harring: What are the chances of that?
+Sushil Sinha: That it happened by chance that at least three people present here tonight met before?
+Sushil Sinha: I would say close to to zero Mr Harring.
+Sushil Sinha: I would even dare to say that what happened in China could be the reason we are all here this weekend.
+Everybody pounders that for a second.
+Ted Harring: But I'be never been to China.
+Amelia Baxter: Neither have I.
+Amelia Baxter: And I am confident I never met anyone here before as well.
+Sushil Sinha: Right, still this a very weird coincidence, we shouldn't overlook it.
+Menu Choice: Do not tell them anything more
+Once again, we all fall silent.
+Trying to make sense of what is happening to us.
+Ted Harring: Right, as I see it, we don't know much more than we did this morning.
+Ted Harring: So what now?
+Ted Harring: I feel like we've explored the whole place already.
+Ted Harring: And we can't just sit around waiting for answers.
+Sushil Sinha: No.
+Sushil Sinha: We must act sensibly.
+Sushil Sinha: It is obvious now that we have to leave.
+Amelia Baxter: Of course, but how?
+Amelia Baxter: The nearest town is miles away.
+Amelia Baxter: I can't walk that far.
+Amelia Baxter: And even if I could, I'm not prepared for such a journey.
+Sushil Sinha: You might be right.
+Sushil Sinha: It would be a long walk, and the weather might turn at any moment.
+Sushil Sinha: We could be caught in another storm.
+Sushil Sinha: It is probably unsafe for you to join us.
+Amelia Baxter: But you're not going to leave me here alone, are you?
+Amelia Baxter: What would become of me?
+Sushil Sinha: We could lock you in a room.
+Sushil Sinha: Though that is far from ideal.
+Sushil Sinha: Perhaps one of us should stay with you.
+Amelia Baxter: Yes!
+Amelia Baxter: Mr Harring can stay with me, right?
+Amelia Baxter: The two of us should be safe until you return with help.
+Sushil Sinha: That seems to be the wisest choice.
+Sushil Sinha: What do you think, Mr Harring?
+Ted Harring pauses for a second.
+I can see my revelations have troubled him.
+He does not seem certain what he ought to do.
+Ted Harring: Of course, I'll stay.
+Ted Harring: Only a monster would leave you alone like this.
+Amelia Baxter: Thank you, Mr Harring.
+Amelia Baxter: That means the world to me.
+Sushil Sinha: Very well.
+Sushil Sinha: Doctor Baldwin and I will go at once.
+Sushil Sinha: I do not wish to lose time, darkness will be upon us soon.
+Sushil Sinha: With luck, we shall be back with help tonight.
+Amelia Baxter: Very well, we will wait here.
+Amelia Baxter: Hopefully nothing will happen until then.
+Sushil Sinha: Then it is decided.
+Sushil Sinha: Doctor, let us take the bare necessities from our rooms and be on our way.
+Sushil Sinha: The sooner, the better.
+We took only a few things to help us on the road.
+Most of our luggage remains at the manor.
+We shall have it back soon enough, I hope.
+Daniel Baldwin: That was a rather swift departure.
+Sushil Sinha: Perhaps.
+Sushil Sinha: But we were at an impasse.
+Sushil Sinha: I do not believe we would have learned more by staying.
+Sushil Sinha: There was no point in delaying the inevitable.
+Sushil Sinha: Night will be upon us before long, and we must not waste a moment.
+Daniel Baldwin: Indeed.
+We set off at a brisk pace, hoping to reach the town before dark.
+A couple of hours in, I am exhausted.
+If I had been at my best, I might have kept up with Captain Sinha.
+But my withdrawal is at its peak, and my pace is wretchedly slow.
+He tried to encourage me at first.
+Soon enough, he grew tired of waiting.
+He is now well ahead, and with darkness drawing in, I can barely make him out in the distance.
+I think I can hear something coming.
+It sounds like a motor car.
+It is coming from behind.
+Could it be that the others finally found a way out?
+I turn around.
+I think I recognise Lady Claythorn's car.
+I wave at it.
+It does not slow.
+It is coming at full speed towards me.
+Have they not seen me?
+I turn and try to run.
+But I am too weak.
+My legs give way, and I fall hard to the ground.
+I look back at the car.
+It only seems to be gaining speed.
+I brace for impact.
+You were hit by a car while crouching on the floor.
+If you had more strength, you probably could have outrun it, or at least avoided it.
+Perhaps you didn't pick the best of times to stop taking drugs.

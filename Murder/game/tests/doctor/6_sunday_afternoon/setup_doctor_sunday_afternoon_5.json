@@ -1,0 +1,14 @@
+{
+    "start_label": "doctor_day3_afternoon",
+    "unlocked_threads": [
+        "trust_nurse"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day3_afternoon_nurse",
+            "selected": "Stay hidden, they look dangerous",
+            "redirect": "doctor_day3_afternoon_nurse_hide"
+        }
+    ]
+}

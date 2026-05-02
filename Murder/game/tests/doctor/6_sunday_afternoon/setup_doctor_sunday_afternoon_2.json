@@ -1,0 +1,32 @@
+{
+    "start_label": "doctor_day3_afternoon",
+    "unlocked_threads": [
+        "trust_captain",
+        "book_opium",
+        "footman_actor",
+        "remember_nurse"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "doctor_day3_afternoon_captain_choice",
+            "selected": "Share what you know with the others",
+            "redirect": "doctor_day3_afternoon_captain_share"
+        },
+        {
+            "menu": "doctor_day3_afternoon_captain_share",
+            "selected": "Tell them about the footman{{observation}}",
+            "redirect": "doctor_day3_afternoon_captain_share_footman"
+        },
+        {
+            "menu": "doctor_day3_afternoon_captain_share",
+            "selected": "Tell them about Rosalind Marsh{{observation}}",
+            "redirect": "doctor_day3_afternoon_captain_share_nurse"
+        },
+        {
+            "menu": "doctor_day3_afternoon_captain_share",
+            "selected": "Do not tell them anything more",
+            "redirect": "generic_cancel"
+        }
+    ]
+}
