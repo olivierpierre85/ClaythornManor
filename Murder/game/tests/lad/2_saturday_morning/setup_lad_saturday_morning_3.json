@@ -1,0 +1,37 @@
+{
+  "start_label": "lad_day2_morning",
+  "unlocked_threads": [],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_morning_follow",
+      "selected": "Stay there and finish the most important meal of the day",
+      "redirect": "lad_day2_breakfast_eat"
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "selected": "What do you think of the other guests?",
+      "redirect": "psychic_generic_other_guests_saturday_morning"
+    },
+    {
+      "menu": "psychic_generic_other_guests_menu_lad",
+      "selected": "What do you think of Samuel Manning?",
+      "redirect": "psychic_generic_drunk_saturday_morning"
+    },
+    {
+      "menu": "psychic_generic_other_guests_menu_lad",
+      "selected": "What do you think of Sushil Sinha?",
+      "redirect": "psychic_generic_captain_saturday_morning"
+    },
+    {
+      "menu": "psychic_generic_other_guests_menu_lad",
+      "selected": "What do you think of Lady Claythorn?",
+      "redirect": "psychic_generic_host_saturday_morning"
+    },
+    {
+      "menu": "lad_day2_morning_hunt",
+      "selected": "Stay here where it's cosy",
+      "redirect": "lad_day2_no_hunt_choice"
+    }
+  ]
+}

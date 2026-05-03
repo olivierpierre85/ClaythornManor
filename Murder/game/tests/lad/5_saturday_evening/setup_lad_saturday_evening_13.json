@@ -1,0 +1,52 @@
+{
+  "start_label": "lad_day2_evening",
+  "unlocked_threads": ["hunt", "hunt_doctor_drunk"],
+  "saved_variables": {},
+  "choices": [
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Have a talk with Amelia Baxter",
+      "redirect": "lad_day2_evening_bedroom_psychic"
+    },
+    {
+      "menu": "lad_day2_evening_bedroom_psychic",
+      "selected": "Admit she might be right",
+      "redirect": "lad_day2_believe_psychic"
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "selected": "Which guests do you think could be dangerous?",
+      "redirect": "psychic_generic_other_guests_saturday_evening"
+    },
+    {
+      "menu": "psychic_generic_other_guests_menu_lad",
+      "selected": "What do you think of Sushil Sinha?",
+      "redirect": "psychic_generic_captain_saturday_evening"
+    },
+    {
+      "menu": "psychic_generic_other_guests_menu_lad",
+      "selected": "What do you think of Lady Claythorn?",
+      "redirect": "psychic_generic_host_saturday_evening"
+    },
+    {
+      "menu": "psychic_generic_other_guests_menu_lad",
+      "selected": "What do you think of Rosalind Marsh?",
+      "redirect": "psychic_generic_nurse_saturday_evening"
+    },
+    {
+      "menu": "psychic_generic_other_guests_menu_lad",
+      "selected": "Talk about something else",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "psychic_generic_menu_lad",
+      "selected": "You don't have anymore questions for her",
+      "redirect": "generic_cancel"
+    },
+    {
+      "menu": "lad_day2_evening_map_menu",
+      "selected": "Go to sleep and hope for the best.",
+      "redirect": "lad_day2_evening_sleep"
+    }
+  ]
+}

@@ -10,10 +10,10 @@ Amelia Baxter: Is that Doctor Baldwin? Is he injured?
 Amelia Baxter: Oh no! Is he... dead?
 Sushil Sinha: I'm sorry, dear, but he is.
 Amelia Baxter: But... what happened?
-Sushil Sinha: It was an accident.
-Samuel Manning: I swear it was! I have no idea how I could have hit him.
+Sushil Sinha: A terrible thing.
+Sushil Sinha: Samuel Manning missed his target and hit Doctor Baldwin instead.
+Samuel Manning: It was an accident, I swear! I have no idea how I could have hit him.
 Samuel Manning: I was aiming at a rabbit. I didn't even see him.
-Everyone turns to him.
 Amelia Baxter: You fool! You were probably too drunk, and that's why you hit him.
 Amelia Baxter: You could barely walk this morning. Who gave you a gun?
 Sushil Sinha: Please, there's no need to point fingers now. It's done.
@@ -22,12 +22,15 @@ Sushil Sinha: Speaking of which, has anyone from the city arrived yet?
 Amelia Baxter: No, not yet.
 Amelia Baxter: We're still waiting for them.
 Sushil Sinha: We should tell them to hurry.
+Sushil Sinha: There are now two bodies to inspect, that will make matters even more complicated.
 Sushil Sinha: Lady Claythorn, where's the telephone?
 Lady Claythorn: I'll handle it.
-She leaves the group, with the butler following closely behind.
-The room falls silent.
-Most eyes are on Sam Manning, filled with disdain.
-Then, the hostess returns.
+The hostess and her butler clear off down the corridor.
+Then the room goes dead quiet.
+All eyes are on Sam Manning. He doesn't see them.
+He's somewhere else entirely, staring at his own hands as if he's only just realised they're his.
+Best to keep my mouth shut.
+When the hostess comes back, no one has moved an inch.
 Lady Claythorn: I just spoke with the police. They aren't coming today.
 Sushil Sinha: What!? Why not?
 Lady Claythorn: They were on their way but encountered a huge tree blocking the road.
@@ -40,8 +43,8 @@ Sushil Sinha: Anyone willing to help?
 Ted Harring: I will.
 We carried Doctor Baldwin to his room and laid him on his bed.
 Sushil then covered him with a blanket.
-Sushil Sinha: It's the best we can do at the moment.
-Sushil Sinha: We shouldn't linger here.
+Sushil Sinha: It is the best we can do at the moment.
+Sushil Sinha: We should not linger here.
 Sushil Sinha: I want to keep an eye on Samuel Manning.
 Ted Harring: Of course.
 Sushil Sinha: Also Mr Harring, you might want to change before rejoining us.

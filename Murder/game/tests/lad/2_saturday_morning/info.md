@@ -21,3 +21,17 @@ narration) → choose to join the hunt.
 `psychic_generic` cancel) → stay behind during the hunt.
 - Covers the sober wake-up narration.
 - Covers `lad_day2_breakfast_eat` and the no-hunt branch.
+
+---
+
+## setup_lad_saturday_morning_3.json
+**Path**: Stay and eat breakfast → drill the psychic morning other-guests menu
+(Manning, Sinha, Lady Claythorn) → menu auto-exits when the time budget runs
+out → stay behind during the hunt.
+- Covers `psychic_generic_other_guests_saturday_morning` (which calls the
+  shared `psychic_generic_other_guests_saturday` intro) and sets the
+  `psychic_generic_other_guests_saturday_morning_ask` flag for later chapters.
+- Covers `psychic_generic_drunk_saturday_morning` (lad branch — no nurse text),
+  `psychic_generic_captain_saturday_morning`, and
+  `psychic_generic_host_saturday_morning` (with the `lad`-only paranoia
+  follow-up).

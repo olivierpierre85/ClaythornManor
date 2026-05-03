@@ -112,3 +112,15 @@ leave → sleep.
 **Path**: Map → Kitchen (third-attempt downstairs) → Flirt with the maid → sleep.
 - Covers the third branch of `lad_downstairs_default` and the full
   `lad_downstairs_flirt` sub-label.
+
+---
+
+## setup_lad_saturday_evening_13.json
+**Checkpoint**: hunt=True, hunt_doctor_drunk=True  
+**Path**: Psychic room → Admit she might be right (`trust_psychic`) →
+`psychic_generic_menu_lad` opens → "Which guests do you think could be
+dangerous?" → drill Sushil / Lady / Marsh → cancel sub → cancel parent → sleep.
+- Covers `psychic_generic_other_guests_saturday_evening`,
+  `psychic_generic_captain_saturday_evening`,
+  `psychic_generic_host_saturday_evening`, and
+  `psychic_generic_nurse_saturday_evening`.

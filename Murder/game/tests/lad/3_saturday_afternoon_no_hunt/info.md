@@ -63,3 +63,15 @@ from Day 1 evening so the back-visit branches fire).
 **Path**: Tea Room (cancel psychic_generic) → Tea Room back-visit (cancel psychic_generic) → Nap.
 - Covers `lad_day2_hunt_tea_room_return` — the "Go back to the Tea Room" map option that only
   appears after `day2_nohunt_has_visited_tea_room` has been set by the first visit.
+
+---
+
+## setup_lad_saturday_afternoon_no_hunt_7.json
+**Checkpoint**: psychic_generic_other_guests_saturday_morning_ask=True (simulates
+asking the psychic about the others at breakfast).  
+**Path**: Tea Room → drill into the psychic other-guests menu (saturday_hunt
+version) → ask about Rosalind Marsh → cancel sub → cancel parent → Nap.
+- Covers the `psychic_generic_other_guests_saturday_hunt` else branch
+  ("You know that I already talked with Samuel Manning, Captain Sinha and our
+  host.") that only fires when the morning ask flag is set.
+- Covers `psychic_generic_nurse_saturday_hunt`.
