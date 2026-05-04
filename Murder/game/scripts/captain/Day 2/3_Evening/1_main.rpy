@@ -244,33 +244,27 @@ label captain_day2_evening:
 
     A curious thing after the day we have had.
 
-    The other guests rise from the table without ceremony.
+    The other guests rise from the table without ceremony, so I follow them upstairs.
+    """
 
-    I linger over the last of my wine and turn the invitation over in my head.
+    $ change_room("bedroom_captain")
+
+    """
+    I turn the invitation for drinks over in my head.
 
     The billiard room is no place a careful man would go tonight.
 
-    Two of our number lie dead, a third sits locked above stairs, and someone under this roof has had a hand in the arrangement of all of it.
-
-    A glass passed across a green baize table is no harder to spoil than one laid down at dinner.
+    Two of us lie now dead, a third sits locked above stairs, and someone under this roof has had a hand in the arrangement of all of it.
 
     And yet.
-
-    A man who fears poison in the house does not stand quietly amongst the bottles.
-
-    A woman who fears for her life does not call upon her hostess for a brandy.
 
     Whoever takes the invitation tonight will, by that very act, be telling me something.
 
     Either they have nothing to fear, or they wish very much to be seen as having nothing to fear.
 
-    In either case, that is information I do not now possess.
+    In either case, seeing who will be there might teach me something of value.
 
-    And there is precious little I can sift from these walls if I retire and lock my door against them.
-
-    Very well.
-
-    The billiard room can wait a little while. There are corners of this house I have so far had no proper reason to visit — and tonight, with the butler's key in my pocket, I find I have every reason.
+    And there is precious little I can learn if I keep to my room.
     """
 
     $ play_music('mysterious', 2)
@@ -291,7 +285,7 @@ label captain_day2_evening:
     Whatever I have learnt tonight, I shall need a clear head to make any use of it in the morning.
     """
 
-    jump work_in_progress
+    jump captain_day3_morning
 
 
 # ------------------------------------
