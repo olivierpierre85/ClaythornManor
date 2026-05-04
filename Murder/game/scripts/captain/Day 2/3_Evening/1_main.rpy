@@ -306,17 +306,17 @@ label captain_day2_dinner_psychic:
     """
 
     psychic """
-    As well as one can Captain, thank you for asking.
+    As well as one can, Captain, thank you for asking.
 
     But such a tragic event must have shaken everyone to their core.
     """
 
     captain """
-    Of course, everyone must be processing this terrible fate.
+    Of course, everyone must be processing this terrible loss.
 
-    But for myself, I have seen my share of death to know it is a natural part of life. 
+    But for myself, I have seen enough of death to know it is a natural part of life.
 
-    From dust to dust, from ashes to ashes as they say.
+    From dust to dust, from ashes to ashes, as they say.
     """
 
     psychic """
@@ -326,7 +326,7 @@ label captain_day2_dinner_psychic:
     """
     She turns away from me.
 
-    It was maybe a bit heartless, but at least it helps me maintain my image.
+    It was perhaps a touch heartless, but at least it helps me maintain my image.
     """
     
     return
