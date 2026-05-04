@@ -101,10 +101,10 @@ label init_captain:
                 relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon', 'end'],
             ),
             CharacterInformation(
-                2, "torch",
-                "You took a torch from the attic storage",
-                content_negative="You don't have a torch",
-                image_file="lord", # TODO placeholder
+                2, "lantern",
+                "You took a lantern from the attic storage",
+                content_negative="You don't have a lantern",
+                image_file="lantern",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),

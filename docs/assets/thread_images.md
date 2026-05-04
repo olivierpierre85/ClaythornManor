@@ -305,8 +305,10 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | Thread key   | Title concept       | Image description                           |
 | ------------ | ------------------- | ------------------------------------------- |
 | `butler_key` | Butler's master key | A large ornate skeleton key on a plain ring |
+| `lantern`    | Storm lantern       | A lantern, hold by a hand                   |
 
 - [x] butler_key
+- [x lantern
 
 ### Endings
 

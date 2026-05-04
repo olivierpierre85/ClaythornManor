@@ -44,7 +44,7 @@ To avoid two "shot in the woods" deaths, the endings are deliberately contrasted
 - **The Drunk Room** engage the "Drunk" (Samuel Manning) to learn about his story. 
 - **The Host's Room**: If the Captain has made unlocked the two suspicious host, he finds the courage to knock on her door. (Depending on the time?), a confrontation occurs. He discovers she is an out-of-work actress hired for this "immersive performance." She says run while you can. Add ending
 - **Infiltration**: 
-    - **Attic**: Finds a **Torch** (requires a hint from the Nurse's attic visit).
+    - **Attic**: Finds a **Lantern** (requires a hint from the Nurse's attic visit).
     - **Garden Shed**: Uses as a **Master Key** (obtained earlier or found) to open the shed and secure **Oil** for the car. IF you get out at that moment, you will also notice everyone leaving. WHAT to do?
 
 ### ☀️ Day 3: Sunday
@@ -61,7 +61,7 @@ To avoid two "shot in the woods" deaths, the endings are deliberately contrasted
 
 ### 🔑 Key Items
 - **Genealogy Book**: Found in the Library. Unlocks the "Surname Inconsistency" clue.
-- **Torch**: Found in the Attic. Necessary for exploring the Grounds at night.
+- **Lantern**: Found in the Attic. Necessary for exploring the Grounds at night.
 - **Oil**: Found in the Garden Shed. Essential for the car escape.
 - **Master Key**: Used to access restricted areas (provided by his background or gathered).
 
