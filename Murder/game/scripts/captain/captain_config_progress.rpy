@@ -9,7 +9,7 @@ label captain_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_morning", "saturday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_hunt", "saturday_afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_evening", "saturday_evening"),
-                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_right, "checkpoint", "captain_day3_morning", "sunday_morning"),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
             ],
