@@ -226,14 +226,14 @@ label captain_day2_hunt_silent_luncheon:
 
     $ play_music('danger', 2)
 
-    host """
-    Captain. With me, please.
+    """
+    Without time to think it over, I rush towards their direction.
     """
 
     call wait_screen_transition()
 
     """
-    When we reach the others, Doctor Baldwin lies on his back in the fern.
+    When I reach the others, Doctor Baldwin lies on his back in the fern.
 
     His shirt has been torn open and pressed dark with blood. His bag is open at his side, a pair of emptied vials loose in the moss.
 
@@ -250,6 +250,14 @@ label captain_day2_hunt_silent_luncheon:
     I never saw him. I swear it on my life, I never saw him.
     """
 
+    """
+    Lady Claythorn catches up with us.
+    """
+
+    host -scared """
+    Oh my god, what happened?
+    """
+
     footman """
     Mr Manning fired at something in the undergrowth, my lady.
 
@@ -264,29 +272,89 @@ label captain_day2_hunt_silent_luncheon:
     A liver shot, from the placement of the blood. Quick enough, though not quickly enough for comfort.
     """
 
-    butler """
-    A dreadful business, my lady.
+    """
+    Lady Claythorn's hand has gone to her throat. She steps back from the body, and back again, until a sapling halts her retreat.
 
-    If you will permit me, we ought to return to the house and send for the proper authorities.
+    The colour is gone from her face.
     """
 
-    host """
-    Yes. Yes, of course.
+    host -scared """
+    He is... he is truly dead?
 
-    Poor Doctor Baldwin. What a terrible, terrible accident.
+    But this cannot be. This was meant to be...
     """
 
-    $ stop_music(2)
-
     """
-    Two men dead in the same day.
+    She does not finish the thought. She catches herself mid-breath.
 
-    And our hostess receives the second with the same well-rehearsed composure as the first.
-
-    I shall have a great deal to think about tonight.
+    She closes her mouth and turns her face away from the doctor.
     """
 
-    pause 2.0
+    host -scared """
+    Forgive me. I am being of no use whatsoever.
+
+    Captain, you must... you must tell us what is to be done.
+    """
+
+    """
+    There is no time for grief, and even less for shock.
+
+    The doctor must be brought back.
+    """
+
+    captain """
+    Of course.
+    
+    Mr Harring, take the footman. Cut me two straight saplings, the length of a man and as thick as your wrist.
+
+    The doctor's bag will hold a blade.
+    """
+
+    captain """
+    Mr Manning. Sit down. Head between your knees, and breathe slowly.
+
+    You will be of no use to anyone fainting in the bracken.
+    """
+
+    """
+    The lad nods and is gone before I have finished speaking.
+
+    Samuel Manning sinks where he stands, his rifle forgotten in the moss.
+
+    The footman lingers a heartbeat, then follows the lad into the trees.
+    """
+
+    """
+    When they return, I take my own jacket and the footman's, and lay them open upon the ground.
+
+    Sleeves threaded onto the saplings. Buttons fastened beneath. The cloth drawn taut between.
+
+    A makeshift stretcher, rough but serviceable.
+    """
+
+    """
+    My hands work without instruction.
+
+    The knot at the shoulder. The half-hitch at the foot. The way one tests the give of the cloth before trusting any weight to it.
+
+    I have done this before.
+
+    I may never have seen battle, but overseeing the carrying of the dead and the wounded was often amongst my duties.
+    """
+
+    captain """
+    Mr Harring at the head, the footman at the feet.
+
+    Walk in step. Short paces.
+
+    If you must rest, set him down evenly.
+
+    Mr Manning, follow behind with his bag.
+    """
+
+    """
+    We begin the slow march back through the ferns.
+    """
 
     return
 
