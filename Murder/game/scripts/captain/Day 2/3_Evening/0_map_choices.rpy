@@ -225,9 +225,19 @@ label captain_day2_evening_attic_default:
 
         A short corridor runs the length of the house, doors on either side.
 
-        It is not a place a guest has any honest business being in.
+        It is not a place a guest has any business being in.
 
-        But I am long past the point of pretending to be an honest guest tonight.
+        But after what happen today, I am not above breaking some rules if that means I can understand better what is happening today.
+
+        I fit the master key to the door. 
+        """
+
+        play sound door_unlock
+
+        """
+        The bolt slides back without protest.
+
+        A single key for the whole house. If it opens this one, it will open all the others up here just as readily.
         """
 
     return
@@ -520,8 +530,6 @@ label captain_day2_evening_bedroom_broken:
     Mr Moody's room sits much as it must have done since this morning.
 
     The bed has been straightened. His effects have been arranged with a tidy hand.
-
-    A little too tidy, perhaps, for a man who died in his sleep.
 
     I leave the room as I found it.
     """
