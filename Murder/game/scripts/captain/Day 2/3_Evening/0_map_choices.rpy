@@ -122,7 +122,7 @@ label captain_day2_evening_garden:
 
     $ change_room('entrance_hall')
 
-    if not captain_details.objects.is_unlocked('torch'):
+    if not captain_details.objects.is_unlocked('lantern'):
 
         """
         I look out through the window.
@@ -151,9 +151,9 @@ label captain_day2_evening_garden:
     $ change_room('manor_garden')
 
     """
-    I draw the side door closed behind me and switch on the torch.
+    I draw the side door closed behind me and light the lantern.
 
-    The beam picks out the gravel path, the wet grass beyond, the dark mass of the hedge.
+    The pool of light picks out the gravel path, the wet grass beyond, the dark mass of the hedge.
 
     I make my way around to the outbuilding I found yesterday.
     """
@@ -189,9 +189,9 @@ label captain_day2_evening_shed:
     play sound door_unlock # TODO confirm sound exists
 
     """
-    The torch beam picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
+    The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
 
-    And, set rather neatly in the middle of the floor, a metal jerrycan.
+    And, set rather neatly in the middle of the floor, a metal petrol tin.
 
     I unscrew the cap and lower my nose to it for a moment. Petrol, and a great deal of it.
 
@@ -202,7 +202,7 @@ label captain_day2_evening_shed:
     I lock the door behind me as carefully as I opened it.
     """
 
-    $ captain_details.threads.unlock('captain_jerrycan_in_shed')
+    $ captain_details.threads.unlock('petrol_tin_in_shed')
 
     return
 
@@ -247,7 +247,7 @@ label captain_day2_evening_attic_storage:
 
     call captain_day2_evening_attic_default
 
-    if captain_details.objects.is_unlocked('torch'):
+    if captain_details.objects.is_unlocked('lantern'):
 
         $ change_room("attic_storage_room")
 
@@ -268,18 +268,18 @@ label captain_day2_evening_attic_storage:
 
     Tins of paint. A pair of oil lamps. A small case of candles.
 
-    And, set on its side beneath a folded oilcloth, an electric torch.
+    And, set on its side beneath a folded oilcloth, a storm lantern.
 
-    I press the switch. A clean white beam answers.
+    I lift it from the shelf. The reservoir is half full, the wick recently trimmed.
 
-    A modern thing, and freshly charged. Someone in this house has been keeping it ready.
+    A well-kept piece, in an attic full of old leavings. Someone in this house has been keeping it ready.
 
     That, by itself, is interesting.
 
-    I slip it into my pocket. It will be wanted before the night is out.
+    I take it up. It will be wanted before the night is out.
     """
 
-    $ captain_details.objects.unlock('torch')
+    $ captain_details.objects.unlock('lantern')
 
     return
 
@@ -322,7 +322,7 @@ label captain_day2_evening_attic_males_room:
     I fold the letter back exactly as I found it.
     """
 
-    $ captain_details.threads.unlock('captain_actor_letter')
+    $ captain_details.threads.unlock('footman_actor_letter')
 
     return
 
@@ -367,7 +367,7 @@ label captain_day2_evening_attic_females_room:
     I replace the photograph and step back out.
     """
 
-    $ captain_details.threads.unlock('captain_actress_photo')
+    $ captain_details.threads.unlock('maid_actress_photo')
 
     return
 

@@ -40,7 +40,7 @@ billiard room" re-entry narration is exercised.
 - Ignore Miss Baxter
 
 ### Map Choices
-- Garden — Take a closer look at the outbuilding (unlocks `captain_garden_shed_locked`)
+- Garden — Take a closer look at the outbuilding (unlocks `garden_shed_locked`)
 - Retire for the night
 
 ## File 4 — Billiard room (refuse the story)

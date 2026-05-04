@@ -166,7 +166,7 @@ label captain_day1_evening_shed:
     Whoever fitted that lock had a reason, and it was not the threat of common thieves.
     """
 
-    $ captain_details.threads.unlock('captain_garden_shed_locked')
+    $ captain_details.threads.unlock('garden_shed_locked')
 
     return
 

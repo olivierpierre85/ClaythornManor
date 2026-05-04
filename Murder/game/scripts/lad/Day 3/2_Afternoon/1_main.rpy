@@ -87,7 +87,7 @@ label lad_day3_leave_with_car:
 
     So, I'm afraid that car won't be much help.
 
-    Unless either of you spotted a jerrycan somewhere in the mansion?
+    Unless either of you spotted a petrol tin somewhere in the mansion?
     """
 
     lad """
