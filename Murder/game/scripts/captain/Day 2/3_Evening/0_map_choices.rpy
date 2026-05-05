@@ -186,7 +186,9 @@ label captain_day2_evening_shed:
     The door creaks open on a small, low-roofed space smelling strongly of oil and old timber.
     """
 
-    play sound door_unlock # TODO confirm sound exists
+    play sound door_open
+
+    $ change_room("toolshed")
 
     """
     The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
@@ -232,7 +234,7 @@ label captain_day2_evening_attic_default:
         I fit the master key to the door. 
         """
 
-        play sound door_unlock
+        play sound door_open
 
         """
         The bolt slides back without protest.

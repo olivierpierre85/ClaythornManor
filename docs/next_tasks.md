@@ -35,6 +35,14 @@ THREAD, locked shed image
     - [ ] NO unlock for Thomas Moody ? Or find something else? => add the single thing? NO, no need. REWRITE STORY of thomas moody and the link with his brother? The real thomas is an orphan. Archie grew up with staff, so he pretends to be staff. BUT WHY??? I don't think Archie is Thomas Brother,  just his FRIEND for war? Lover? He knows everything about THomas moody. Needs rewrite the doctor. So you don't have the unlock BROTHER from doctor escape, just happy to escape. You'll need to ///. ALSO to unlock Thomas moody, add the captain notice he is the only one fitting perfectly. He is clearly posh. Yet, he told me he was a simple soldier, a former footman. That makes no sense. => Maybe it's the only way to survive for him. Befriend the Broken.?
 - [ ] Saturday evening - **ongoing**
   - [ ] TESt map 
+  - [ ] Check new images
+  - [ ] read and rewrie billiard Logic, the nurse is showing up...BETTER TWo possible showing up. But based on on what ? We would need to add a thing here.
+    - [ ] Maybe need to have three version AND A KEEP WAITING
+      - [ ] CHOICES BASED ON current time!! First time its used like that?
+      - [ ] First HOST,
+      - [ ] One nurse, (done) => remove key question
+      - [ ] Seconde Psychic
+    - [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big problem now
   - Add and validate tests
   
 

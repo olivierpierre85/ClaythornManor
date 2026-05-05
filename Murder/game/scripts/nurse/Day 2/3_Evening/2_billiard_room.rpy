@@ -59,23 +59,7 @@ label nurse_day2_evening_billiard_room_captain_intro:
 
         $ nurse_details.saved_variables["captain_intro_done"] = True
 
-        captain """
-        Miss Marsh.
-
-        I thought everyone had retired.
-        """
-
-        nurse """
-        Not quite yet.
-
-        There are a few things about this weekend that don't make sense to me.
-        """
-
-        captain """
-        Oh?
-
-        Such as?
-        """
+        call common_day2_evening_billiard_room_nurse_captain_intro
 
     $ nurse_day2_evening_billiard_room_captain_menu = TimedMenu(
         "nurse_day2_evening_billiard_room_captain_menu", [
@@ -821,136 +805,14 @@ label nurse_day2_evening_billiard_room_confront:
 
 label nurse_day2_evening_billiard_room_manning:
 
-    nurse """
-    We've witnessed two deaths in as many days.
-
-    Doesn't it seem strange to you?
-    """
-
-    captain """
-    Not really.
-
-    They seem quite natural to me, Miss Marsh.
-
-    Thomas Moody died of injuries he got during the war.
-
-    Even if you thought he was fine, he might have been suffering in silence.
-
-    Some people prefer to hide their distress from the people around them.
-    """
-
-    """
-    He looks at me intently as he is saying those words.
-
-    Could it be that he found out about my condition?
-    """
-
-    nurse """
-    But for Doctor Baldwin?
-    """
-
-    captain """
-    A dreadful accident, Miss Marsh.
-
-    Manning was drunk and careless with a firearm.
-
-    Sadly, this type of tragic event is not rare at all.
-
-    Although some people treat it as a light form of entertainment, a hunt is a dangerous business.
-    """
-
-    nurse """
-    Perhaps you are right.
-
-    Still, I confess I am uneasy knowing Samuel Manning is just upstairs.
-
-    A few steps from my own room.
-
-    Are we sure he cannot get out?
-    """
-
-    captain """
-    Quite sure.
-
-    I locked the door myself, with the key the butler gave me.
-
-    The doors in this house are solid oak. He is going nowhere.
-    """
-
-    nurse """
-    That is reassuring.
-    """
-
-    if nurse_details.threads.is_unlocked('master_key'):
-
-        """
-        Especially since I am now in possession of that key.
-        """
+    call common_day2_evening_billiard_room_nurse_captain_two_deaths
 
     return
 
 
 label nurse_day2_evening_billiard_room_captain_key:
 
-    nurse """
-    Do you still have the butler's key with you?
-    """
-
-    """
-    He sets down his glass and regards me steadily.
-    """
-
-    captain """
-    Why do you ask?
-    """
-
-    nurse """
-    Just to reassure myself.
-    
-    I won't be able to sleep if I am not absolutely sure that Samuel Manning is properly locked in his room, with no way of escaping.
-    """
-
-    """
-    He holds my gaze for a moment, then seems to decide the question is reasonable enough.
-    """
-
-    captain """
-    Of course.
-
-    It is still right here with me.
-    """
-
-    """
-    He reaches into his jacket pocket.
-
-    Then stops.
-
-    His hand comes out empty.
-    """
-
-    captain """
-    Blast.
-
-    I had it earlier, but it is in my hunting coat.
-
-    Upstairs, in my room.
-
-    I changed for dinner and left it in the pocket.
-    """
-
-    nurse """
-    I see.
-    """
-
-    captain """
-    You shouldn't worry, I still locked my room with my regular key.
-
-    It is safe there.
-    """
-
-    nurse """
-    Good.
-    """
+    call common_day2_evening_billiard_room_nurse_captain_key
 
     return
 
