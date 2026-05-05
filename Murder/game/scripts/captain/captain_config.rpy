@@ -22,7 +22,7 @@ label init_captain:
 
             # Evening day 2
             "day2_evening_billiard_room_visited" : False,
-            "day2_evening_billiard_waited" : 0,
+            "day2_evening_billiard_encounters" : 0,
             "day2_evening_attic_visited" : False,
             "day2_evening_garden_visited" : False,
             "day2_evening_shed_visited" : False,

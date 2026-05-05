@@ -1,9 +1,12 @@
 # Billiard room — Saturday evening
-# Captain enters alone. He may wait up to three times to see who joins him:
-#   first wait  → Miss Marsh (nurse)
-#   second wait → Miss Baxter (psychic)
-#   third wait  → Lady Claythorn (host) — packed and ready to leave; if all
-#                three host suspicions are unlocked, a final chance to accuse her.
+# Captain enters alone. The evening runs 21:00 → 23:00.
+# Each "wait" costs 40 minutes; whoever joins him depends on the time slot
+# the wait begins in:
+#   21:00 – 21:40 → Miss Marsh (nurse)
+#   21:40 – 22:20 → Miss Baxter (psychic)
+#   22:20 – 23:00 → Lady Claythorn (host), packed and ready to leave;
+#                   with all three host suspicions, a final chance to accuse her.
+# A captain who lingers elsewhere first will simply miss earlier visitors.
 label captain_day2_evening_billiard_room:
 
     $ change_room('billiard_room')
@@ -24,18 +27,12 @@ label captain_day2_evening_billiard_room:
 
         $ captain_day2_evening_billiard_room_menu = TimedMenu("captain_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Wait and see who comes',
-                'captain_day2_evening_billiard_room_nurse', 40,
-                condition='captain_details.saved_variables["day2_evening_billiard_waited"] == 0'),
-            TimedMenuChoice('Wait further to see who else may come',
-                'captain_day2_evening_billiard_room_psychic', 40,
-                condition='captain_details.saved_variables["day2_evening_billiard_waited"] == 1'),
-            TimedMenuChoice('Wait one last time',
-                'captain_day2_evening_billiard_room_host', 40,
-                condition='captain_details.saved_variables["day2_evening_billiard_waited"] == 2'),
+                'captain_day2_evening_billiard_room_wait', 40,
+                keep_alive=True),
             TimedMenuChoice('Pour a glass of sherry',
                 'captain_day2_evening_billiard_room_sherry', 10),
             TimedMenuChoice('Leave the room',
-                'generic_cancel', 0, keep_alive = True, early_exit=True),
+                'generic_cancel', 0, keep_alive=True, early_exit=True),
         ])
 
     else:
@@ -64,12 +61,25 @@ label captain_day2_evening_billiard_room_sherry:
     return
 
 
+# Dispatcher: picks the encounter according to the time slot in which
+# the captain begins his wait. current_time has not yet been advanced
+# by the choice's time_spent at this point.
+label captain_day2_evening_billiard_room_wait:
+
+    if current_time < time(21, 40):
+        call captain_day2_evening_billiard_room_nurse
+    elif current_time < time(22, 20):
+        call captain_day2_evening_billiard_room_psychic
+    else:
+        call captain_day2_evening_billiard_room_host
+
+    return
+
+
 # ------------------------------------
-#   First encounter — Miss Marsh
+#   First slot — Miss Marsh (21:00 – 21:40)
 # ------------------------------------
 label captain_day2_evening_billiard_room_nurse:
-
-    $ captain_details.saved_variables["day2_evening_billiard_waited"] = 1
 
     """
     I take down a book from the shelf and settle into a chair by the fire.
@@ -111,25 +121,43 @@ label captain_day2_evening_billiard_room_nurse:
     The door clicks shut behind her, and the room is mine again.
     """
 
+    $ captain_details.saved_variables["day2_evening_billiard_encounters"] += 1
+
     return
 
 
 # ------------------------------------
-#   Second encounter — Miss Baxter
+#   Second slot — Miss Baxter (21:40 – 22:20)
 # ------------------------------------
 label captain_day2_evening_billiard_room_psychic:
 
-    $ captain_details.saved_variables["day2_evening_billiard_waited"] = 2
+    if captain_details.saved_variables["day2_evening_billiard_encounters"] == 0:
+
+        """
+        I take down a book from the shelf and settle into a chair by the fire.
+
+        The half hour goes slowly by.
+        """
+
+        call wait_screen_transition
+
+        """
+        At length the door eases open behind me.
+        """
+
+    else:
+
+        """
+        I turn another page, more for the look of the thing than to read.
+        """
+
+        call wait_screen_transition
+
+        """
+        After a little while the door opens a second time.
+        """
 
     """
-    I turn another page, more for the look of the thing than to read.
-    """
-
-    call wait_screen_transition
-
-    """
-    The door opens a second time.
-
     Miss Baxter pauses on the threshold and surveys the room before stepping in.
 
     She crosses to the sideboard and pours herself a small glass with the air of one who is glad to have something to do with her hands.
@@ -211,25 +239,55 @@ label captain_day2_evening_billiard_room_psychic:
     I doubt very much that she will sleep tonight.
     """
 
+    $ captain_details.saved_variables["day2_evening_billiard_encounters"] += 1
+
     return
 
 
 # ------------------------------------
-#   Third encounter — Lady Claythorn
+#   Third slot — Lady Claythorn (22:20 – 23:00)
 # ------------------------------------
 label captain_day2_evening_billiard_room_host:
 
-    $ captain_details.saved_variables["day2_evening_billiard_waited"] = 3
+    if captain_details.saved_variables["day2_evening_billiard_encounters"] == 0:
+
+        """
+        I take down a book from the shelf and settle into a chair by the fire.
+
+        The hour grows late, and the manor has gone very quiet.
+        """
+
+        call wait_screen_transition
+
+        """
+        At length, the door opens — and stops short.
+        """
+
+    elif captain_details.saved_variables["day2_evening_billiard_encounters"] == 1:
+
+        """
+        I turn another page, more for the look of the thing than to read.
+        """
+
+        call wait_screen_transition
+
+        """
+        Some little time passes, and the door opens again — and stops short.
+        """
+
+    else:
+
+        """
+        I had nearly given up on company for the night.
+        """
+
+        call wait_screen_transition
+
+        """
+        The door opens a third time — and stops short.
+        """
 
     """
-    I had nearly given up on company for the night.
-    """
-
-    call wait_screen_transition
-
-    """
-    The door opens once more — and stops short.
-
     Lady Claythorn is on the threshold, and the sight of me has brought her up at once.
 
     For an instant her face is quite undefended.
@@ -299,6 +357,8 @@ label captain_day2_evening_billiard_room_host:
 
         She gathers up her case and is gone before I have set down my book.
         """
+
+    $ captain_details.saved_variables["day2_evening_billiard_encounters"] += 1
 
     return
 

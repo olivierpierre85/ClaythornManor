@@ -42,6 +42,7 @@ THREAD, locked shed image
       - [ ] First HOST,
       - [ ] One nurse, (done) => remove key question
       - [ ] Seconde Psychic
+
     - [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big problem now
   - Add and validate tests
   
