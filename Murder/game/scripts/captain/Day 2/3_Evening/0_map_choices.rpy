@@ -20,7 +20,20 @@ label captain_day2_evening_map_menu:
             # First floor
             TimedMenuChoice(default_room_text('tea_room'), 'captain_day2_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day2_evening_dining_room', 10, room='dining_room'),
-            TimedMenuChoice(default_room_text('manor_garden'), 'captain_day2_evening_garden', 0, room='manor_garden'),
+            TimedMenuChoice(
+                default_room_text('manor_garden'),
+                'captain_day2_evening_garden_with_lantern',
+                0,
+                room='manor_garden',
+                condition="captain_details.objects.is_unlocked('lantern')",
+            ),
+            TimedMenuChoice(
+                default_room_text('manor_garden'),
+                'captain_day2_evening_garden_no_lantern',
+                10,
+                room='manor_garden',
+                condition="not captain_details.objects.is_unlocked('lantern')",
+            ),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day2_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_portrait_gallery_default', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('library'), 'captain_library_default', 0, room='library'),
@@ -118,25 +131,28 @@ label captain_day2_evening_entrance_hall:
 # ------------------------------------
 #   GARDEN AND SHED
 # ------------------------------------
-label captain_day2_evening_garden:
+label captain_day2_evening_garden_no_lantern:
 
     $ change_room('entrance_hall')
 
-    if not captain_details.objects.is_unlocked('lantern'):
+    """
+    I look out through the window.
 
-        """
-        I look out through the window.
+    The night is utterly black, and a thick mist is rolling in across the lawn.
 
-        The night is utterly black, and a thick mist is rolling in across the lawn.
+    Without a light, a man would lose himself between the house and the hedge.
 
-        Without a light, a man would lose himself between the house and the hedge.
+    I shall not stumble about out there blind.
+    """
 
-        I shall not stumble about out there blind.
-        """
+    return
 
-        return
+
+label captain_day2_evening_garden_with_lantern:
 
     if captain_details.saved_variables["day2_evening_shed_visited"]:
+
+        $ change_room('entrance_hall')
 
         """
         I have seen all I needed to see out there.
