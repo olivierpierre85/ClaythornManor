@@ -74,8 +74,14 @@ init python in test:
             expected_redirect = step.get("redirect", None)
             expected_text = step.get("selected", None)
 
-            # Only consider choices that are valid (your logic)
-            valid_choices = [c for c in timed_menu.choices if c.is_valid()]
+            # Only consider choices that are valid (your logic).
+            # Map menus mirror in-game behaviour: the map UI lets the player
+            # revisit any room and only checks the choice condition, so we
+            # ignore the `hidden` flag here too.
+            if getattr(timed_menu, "is_map", False):
+                valid_choices = [c for c in timed_menu.choices if c.get_condition()]
+            else:
+                valid_choices = [c for c in timed_menu.choices if c.is_valid()]
 
             # Prefer redirect match (most stable), fallback to text match
             if expected_redirect:
