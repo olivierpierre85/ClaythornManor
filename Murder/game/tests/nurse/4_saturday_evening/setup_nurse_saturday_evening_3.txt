@@ -272,7 +272,8 @@ Rosalind Marsh: A few steps from my own room.
 Rosalind Marsh: Are we sure he cannot get out?
 Sushil Sinha: Quite sure.
 Sushil Sinha: I locked the door myself, with the key the butler gave me.
-Sushil Sinha: The doors in this house are solid oak. He is going nowhere.
+Sushil Sinha: The doors in this house are solid oak.
+Sushil Sinha: He is going nowhere.
 Rosalind Marsh: That is reassuring.
 Especially since I am now in possession of that key.
 Menu Choice: You don't have anything else to say to him

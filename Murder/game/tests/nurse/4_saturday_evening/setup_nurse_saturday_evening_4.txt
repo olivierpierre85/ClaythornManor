@@ -182,7 +182,8 @@ Rosalind Marsh: A few steps from my own room.
 Rosalind Marsh: Are we sure he cannot get out?
 Sushil Sinha: Quite sure.
 Sushil Sinha: I locked the door myself, with the key the butler gave me.
-Sushil Sinha: The doors in this house are solid oak. He is going nowhere.
+Sushil Sinha: The doors in this house are solid oak.
+Sushil Sinha: He is going nowhere.
 Rosalind Marsh: That is reassuring.
 Menu Choice: Ask about the butler's key
 Rosalind Marsh: Do you still have the butler's key with you?
@@ -201,7 +202,8 @@ Sushil Sinha: I had it earlier, but it is in my hunting coat.
 Sushil Sinha: Upstairs, in my room.
 Sushil Sinha: I changed for dinner and left it in the pocket.
 Rosalind Marsh: I see.
-Sushil Sinha: You shouldn't worry, I still locked my room with my regular key.
+Sushil Sinha: You shouldn't worry.
+Sushil Sinha: I locked my room with my own key.
 Sushil Sinha: It is safe there.
 Rosalind Marsh: Good.
 Menu Choice: Reveal the staff's other occupations{{observation}}

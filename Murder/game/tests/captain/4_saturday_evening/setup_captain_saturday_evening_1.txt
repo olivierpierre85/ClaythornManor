@@ -18,20 +18,19 @@ She wastes no kindness upon Mr Manning.
 Lady Claythorn calls the police, then tells us the road out is blocked by a fallen tree, and the constabulary will not reach the manor before tomorrow.
 It appears there is not much to do but wait. In the meantime, I propose moving Doctor Baldwin to his room.
 Mr Harring volunteers his help without being asked.
-so we carry the doctor up the stair and lay him upon his bed.
+So we carry the doctor up the stair and lay him upon his bed.
 I draw a blanket over him to the shoulders, as one would for a man asleep.
 The boy stays beside me, drained of colour.
 He has seen enough today to last him a long time.
-Sushil Sinha: It's the best we can do at the moment.
-Sushil Sinha: We shouldn't linger here.
+Sushil Sinha: It is the best we can do at the moment.
+Sushil Sinha: We should not linger here.
 Sushil Sinha: I want to keep an eye on Samuel Manning.
 Ted Harring: Of course.
 Sushil Sinha: Also Mr Harring, you might want to change before rejoining us.
-I notice the blood Mr Harring has on him. Thankfully, my own jacket is untouched.
+I point at the blood Mr Harring has on him. Thankfully, my own jacket is untouched.
 He withdraws to his room to change, and I return to the others.
 As I come down the stairs, everyone turns to me.
 It is clear they are hoping I might give them some kind of direction.
-Sushil Sinha: Mr Harring needed to change, he'll join us shortly.
 Lady Claythorn: Ah, Captain! It's good you're here.
 Lady Claythorn: We've been deliberating over what action to take concerning Samuel Manning.
 Sushil Sinha: I see.
@@ -59,7 +58,6 @@ But a public accusation, if it does not land, will put me in an incredibly awkwa
 I need to be sure about this.
 Menu Choice: Send the butler with Manning, and challenge her
 I turn to the butler.
-Sushil Sinha: A moment, if you would.
 Sushil Sinha: Would you be so good as to escort Mr Manning to his room and lock the door behind him?
 Sushil Sinha: See to it that he is not allowed out under any circumstance.
 He gives a brief glance at Lady Claythorn, who nods her assent.
@@ -89,44 +87,47 @@ They have noticed things too. I see that now.
 Lady Claythorn: Captain, you have plainly taken the events of today rather harder than the rest of us.
 Lady Claythorn: Each of those small oddities has a perfectly ordinary explanation.
 Lady Claythorn: I would gladly walk you through them, if I thought it would settle your nerves.
-Sushil Sinha: We could review them all in detail, but why not begin with the simplest of them, my lady.
+Sushil Sinha: We could review them all in detail, of course.
+Sushil Sinha: But why not begin with the simplest of them, my lady.
 Sushil Sinha: What is your title?
-Sushil Sinha: A lady cannot have forgotten the title she was raised under.
-Sushil Sinha: Her father would have had it spoken in her presence a hundred times before she was ten.
-Sushil Sinha: Letters would have come addressed to it. Servants would have addressed her by it.
-Sushil Sinha: She would have heard it pronounced when she was presented at court.
-Sushil Sinha: What is yours?
 Lady Claythorn: Well, it is Claythorn of course, the...
 Sushil Sinha: That is not what I have seen. There is no 'Claythorn' title. That is meant to be your family name.
 Sushil Sinha: What is your title?
+Sushil Sinha: Surely you have not forgotten the title you were raised under.
+Sushil Sinha: Your father would have say it aloud in your presence a hundred times.
+Sushil Sinha: Letters would have come addressed to it.
+Sushil Sinha: You must have heard it pronounced when you were presented at court.
+Sushil Sinha: What is it?
 She opens her mouth.
 She closes it again. Her eyes go to her hands, then to the door, then back to me.
 The room takes the silence and settles into it.
 Amelia Baxter: Lady Claythorn?
 There is no answer.
 Whatever air of authority she has worn this weekend leaves her by inches.
+Instead, her calm composure changes to something else.
+Fear.
 Lady Claythorn: Very well, Captain.
 Lady Claythorn: You are right.
 Lady Claythorn: I am not Lady Claythorn.
-Lady Claythorn: I do not know that there is one.
-Lady Claythorn: I was hired for the part. Through a firm of solicitors in London.
-Lady Claythorn: I never met the gentleman behind the arrangement.
-Lady Claythorn: I was given a script of sorts, and the run of the house, and a quite extraordinary fee.
-Lady Claythorn: That is the whole of what I know.
+Sushil Sinha: Who are you then?
+Lady Claythorn: An actress.
+Lady Claythorn: I was hired for being here.
+Lady Claythorn: I was given a script of sorts, and the run of the house, and a fee.
 Rosalind Marsh: Hired? You mean to tell us this entire weekend has been a... a performance?
-Lady Claythorn: Only my part of it.
+Lady Claythorn: Only some of it.
 Lady Claythorn: I swear to you, what has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
 Lady Claythorn: None of that was in any script I was given.
 Lady Claythorn: I am every bit as frightened as you are. More so, perhaps.
 Sushil Sinha: Frightened of whom, madam?
-Sushil Sinha: Who is here with you?
+Lady Claythorn: I don't know, I don't understand most of what is happening here.
 Lady Claythorn: The staff. They are not staff.
-Lady Claythorn: The maids, the footman, the cook. Players, all of them, hired the same way I was.
-Lady Claythorn: They know less than I do, if anything at all.
-Lady Claythorn: All but one.
+Lady Claythorn: They were hired the same way I was.
+Lady Claythorn: I think they know less than I do, if anything at all.
+Lady Claythorn: Except for...
+Lady Claythorn: Except the...
 Sushil Sinha: The butler.
 Lady Claythorn: Yes.
-Lady Claythorn: He answers to the gentleman directly.
+Lady Claythorn: He answers to whoever is behind this directly.
 Lady Claythorn: He gives the orders. He chooses what we are told and what we are not.
 Lady Claythorn: If anyone in this house knows what is truly being done under its roof, it is he.
 A measured rap upon the door of the tea room.
@@ -139,23 +140,21 @@ He closes the door behind him with patient courtesy.
 His eyes go straight to Lady Claythorn's face and read it in a single glance.
 Butler: Madam.
 Butler: What is happening here?
-Butler: What have you told them?
 Sushil Sinha: She told us everything, I am afraid.
 Sushil Sinha: About her role in the events of this weekend.
 Sushil Sinha: And about yours.
 He receives this in silence.
-A man weighing, very rapidly, a number of unpleasant arithmetics.
+A man weighing, very rapidly, a number of unpleasant choices.
 Butler: Then we have a difficulty.
 Butler: Captain, I shall not insult any of us with theatre.
-Butler: I am not the master of this house.
 Butler: I am no more the butler here than the lady is its mistress.
 Sushil Sinha: Then to whom do you answer?
 Sushil Sinha: And what is being done in this house?
-Butler: I am afraid I know no more of it than Lady Claythorn has told you.
+Butler: I am afraid I know no more of it than whatever Lady Claythorn might have told you.
 Lady Claythorn: You are lying! You have been in charge here the whole time!
 Butler: That does not mean I know more than you.
 Butler: Only that I have more to do.
-Sushil Sinha: What things?
+Sushil Sinha: Do what?
 Sushil Sinha: What were you meant to do to us?
 Sushil Sinha: I think it is clear, now, that we are not here to receive any prize.
 Sushil Sinha: What then?
@@ -175,12 +174,14 @@ Rosalind Marsh: And the prize money?
 Butler: I am afraid that was another lie. I am sorry.
 Rosalind Marsh: Lady Claythorn, or whatever your name truly is, is he telling the truth?
 Lady Claythorn: He is.
-Lady Claythorn: There was never any money. From what was explained to me, all of this was meant to be a very elaborate prank.
+Lady Claythorn: There was never any money. From what was explained to me, all of this was meant to attract you all here for the week-end.
 Lady Claythorn: But I have no notion of the reasons behind it.
-Butler: Neither have I.
-Butler: Now, enough talk. You are all going to stay in your rooms.
+Butler: Enough talking!
+Butler: Here is what is going to happen now.
+Butler: You will all go to your rooms, give me your key as I close the door behind you.
 Butler: You will have to do without supper, but I daresay it will not kill you.
 Butler: You shall be free to leave tomorrow.
+Butler: The police will come and get you.
 Sushil Sinha: You really expect us to follow your orders?
 Butler: I believe you will, if you value your life, Captain.
 He swiftly produces a revolver and points it directly at me.
@@ -189,32 +190,46 @@ At present, I am defenceless.
 Rosalind Marsh: But you swore you would not hurt us.
 Butler: I will not, unless I am forced to.
 Butler: This is for my own protection, I assure you.
+He looks very sure of him, holding the gun with a firm hand.
+Whatever this man was before he was a butler, he was no stranger to a revolver.
 Menu Choice: Accepts being confined
-A revolver is a poor argument, but an argument all the same.
-The butler holds it as a man holds a tool he has held a great many times before.
-The wrist is locked. The trigger finger lies flat along the guard, in the manner the regulars are taught.
-Whatever this man was before he was a butler, he carried a piece in earnest. A footpad, perhaps, or worse. There is a quietness to him that I have seen, once or twice, in men who came up through a rougher apprenticeship than the army.
-There is no profit in three of us bleeding into the carpet for the sake of a point well made.
+I have worn the King's uniform the better part of twenty years, and never once stood in proper combat.
+Whatever instinct a soldier is meant to acquire from being shot at, I do no have it.
+I can already see myself bleeding into the carpet if I attempt anything.
 Sushil Sinha: Very well.
 Sushil Sinha: Lower the weapon, sir, if you please.
 Sushil Sinha: We shall do as you ask.
 Butler: A wise decision, Captain.
 Butler: No further trouble. Only quiet, until morning.
-He gestures with the muzzle, as polite as a steward directing his guests in to dinner, towards the door.
-Lady Claythorn rises unsteadily. Miss Marsh offers her an arm. Miss Baxter follows in silence.
-I bring up the rear, and feel the weight of the revolver at my back the whole length of the corridor.
+He gestures with the muzzle towards the door.
+Miss Marsh rises first. Miss Baxter follows in silence.
+Lady Claythorn doesn't seem to know what to do.
+She was part of this, yet, I don't think she wills us any harm.
+The butler sense this and turns to her.
+Butler: Go warn the others.
+Butler: I will lock those up, hopefully Ted Harring is still in his room, that will make things easier.
+She does not protest. She has not the strength left for it.
+Whatever she is in this affair, she will not contradict him.
+I bring up the rear behind the two ladies, and feel the weight of the revolver at my back the whole length of the corridor.
+Very quickly, I am in my room.
+Butler: Go in captain, no need to make this more complicated that it is.
+I have no choice but to go in.
 The bolt slides home from the corridor side.
-A small, deliberate sound, which says rather more than the butler did in any of his speeches downstairs.
-I cross to the window and try the latch. Painted shut, of course. Three storeys down besides.
+Butler: Have a good night captain.
+Butler: And no need to worry, the police will come for you tomorrow, I assure you.
+I don't have an answer to that.
+Will the police come? I have no idea.
+I should make the most of it and try to get out.
+I cross to the window and try the latch. Painted shut, of course. Two storeys down besides.
 For a long while I sit upon the edge of the bed and listen to the house.
-The footsteps along the corridor cease, one room at a time.
-Somewhere, very faintly, a clock strikes two.
+Desperate, I finally fall asleep.
 I do not know what wakes me.
 A scrape, perhaps. A door drawn shut along the corridor.
-Then the smell — the dry, urgent sweetness of old wood beginning to char.
+Then the smell — the dry, urgent sweetness of old wood beginning to burn.
 A thin grey ribbon of smoke is already feeling its way under the door.
 I throw myself at the door and find what I knew I should find. The bolt holds.
-I shoulder it twice, three times. The frame answers each blow with a politeness it did not extend to the butler's key.
+I shoulder it twice, three times.
+The frame holds.
 Below me, somewhere, glass goes with the sound of a dropped tray.
 The smoke comes faster than I had thought it could.
 I sink to my knees with my coat across my mouth, and find the air no kinder there.
@@ -225,5 +240,4 @@ Of all the night's small mistakes, that was the one that had no remedy.
 There was no need of poison, nor of further bullets, nor of any of the small careful violences a household provides.
 A locked door, and a candle laid carelessly close to a curtain, will cover a great many things by morning.
 The manor burnt to its foundations before the dawn.
-The fallen tree across the road was found, in due course, to have been cut.
-Of the gentleman behind it all, no trace was ever recovered.
+With you in it.

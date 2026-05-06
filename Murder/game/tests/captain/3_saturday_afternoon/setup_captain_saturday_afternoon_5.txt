@@ -17,7 +17,6 @@ Lady Claythorn is the last to emerge, dressed all in tweed.
 At least, her outfit is perfect. But we will see if she can act the part.
 Butler: Good, now that everyone is ready, I propose we split into two groups.
 Butler: It will be easier to spot game that way.
-A sensible proposal. Though the precise arrangement of the parties is a matter I shall not leave to chance.
 Sushil Sinha: If I may, my lady. I should consider it a privilege to accompany you.
 Lady Claythorn: How gallant of you, Captain. The privilege, I assure you, is mine.
 Samuel Manning: Doctor, I would be honoured to partner with you.
@@ -67,12 +66,11 @@ It does not help that she has a loaded weapon beside her.
 Confronting her now might not be the wisest course of action.
 Menu Choice: Press her on who she really is
 I set down my cup with deliberate care and allow the rifle to rest within easier reach.
-Opportunity will not wait upon a man's second thoughts.
 Sushil Sinha: Lady Claythorn. Forgive the indelicacy.
 Sushil Sinha: There is a matter I should like to put to you plainly.
 Lady Claythorn: Goodness, Captain, how grave you sound.
 Lady Claythorn: Whatever can be the matter?
-Sushil Sinha: I notice a lot of things that do not make sense this weekend:
+Sushil Sinha: I noticed a lot of things that do not make sense this weekend:
 Sushil Sinha: Your portrait is nowhere in the gallery.
 Sushil Sinha: You either do not know, or do not follow, proper dining etiquette.
 Sushil Sinha: The hunt you yourself arranged appears to be quite beyond your skill.
@@ -139,7 +137,7 @@ Lady Claythorn: That was never planned!
 She shifts as she speaks, her weight settling then settling again, as though the ground beneath her would not hold still.
 Sushil Sinha: I am sorry to say, madam, but I do not believe you.
 I lift the rifle and level it at her.
-Not aiming, precisely. Simply making it plain that, at this small clearing, I am the one asking the questions.
+Not aiming, precisely. Simply making it plain that I am the one asking the questions.
 Her eyes widen. She sets her cup down with a slow, careful hand.
 Lady Claythorn: Captain. Please.
 Sushil Sinha: Now, you will explain clearly the terms of the arrangement.
