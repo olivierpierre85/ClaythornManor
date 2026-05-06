@@ -31,11 +31,7 @@ Confess to nurse, but she doesn't trust you back? You might not just see her in 
 
 Confront host, killed by butler like the woods 
 
-Normal day 3, has to find car, petrol and ... To unlock let's all leave.
 
-If let's all leave, food is taken and dies while driving, poisoned
-
-Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
 
 How to fully unlock Host? Both ending needed?
 
@@ -63,9 +59,11 @@ THREAD, locked shed image
 
     - [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big problem now
   - Add and validate tests
-  
-
-NEXT CHARACTER - UNlocked by Nurse (and psychic)
+- [ ] sunday - **ongoing**
+    Normal day 3, has to find car, petrol and ... To unlock let's all leave.
+    If let's all leave, food is taken and dies while driving, poisoned
+    Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
+    NEXT CHARACTER - UNlocked by Nurse (and psychic)
 
 ## Proofreading
 - TODO add internal logic workflow? /logic-test that will read the same file but not correct grammar?

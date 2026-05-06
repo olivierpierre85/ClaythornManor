@@ -460,11 +460,13 @@ label captain_day2_evening_bedroom_lad:
     """
     There is no reply.
 
-    Only the sound of heavy furniture being dragged across the floor on the other side.
+    Either Mr Harring is not in his room at all, or he is keeping silent on the other side of the door.
 
-    Mr Harring is barricading himself in.
+    The first would be a curious thing on a night like this.
 
-    I cannot say I blame the lad.
+    The second would mean the lad has lost his nerve and means to keep his head down until morning.
+
+    There is no telling which from out here.
     """
 
     return

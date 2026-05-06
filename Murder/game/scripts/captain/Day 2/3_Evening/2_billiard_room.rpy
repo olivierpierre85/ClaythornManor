@@ -3,7 +3,7 @@
 # Each "wait" costs 40 minutes; whoever joins him depends on the time slot
 # the wait begins in:
 #   21:00 – 21:40 → Miss Marsh (nurse)
-#   21:40 – 22:20 → Miss Baxter (psychic)
+#   21:40 – 22:20 → Mr Harring (lad), come down looking for reassurance
 #   22:20 – 23:00 → Lady Claythorn (host), packed and ready to leave;
 #                   with all three host suspicions, a final chance to accuse her.
 # A captain who lingers elsewhere first will simply miss earlier visitors.
@@ -30,7 +30,7 @@ label captain_day2_evening_billiard_room:
                 'captain_day2_evening_billiard_room_nurse', 40,
                 condition="time_left>80"),
             TimedMenuChoice('Wait and see who comes',
-                'captain_day2_evening_billiard_room_psychic', 40,
+                'captain_day2_evening_billiard_room_lad', 40,
                 condition="time_left>40 and time_left<=80"),
             TimedMenuChoice('Wait and see who comes',
                 'captain_day2_evening_billiard_room_host', 40,
@@ -66,25 +66,55 @@ label captain_day2_evening_billiard_room_sherry:
 
     return
 
+label captain_day2_evening_billiard_room_wait:
 
+    if captain_details.saved_variables["day2_evening_billiard_encounters"] == 0:
+
+        """
+        I take down a book from the shelf and settle into a chair by the fire.
+        """
+
+        call wait_screen_transition
+
+    elif captain_details.saved_variables["day2_evening_billiard_encounters"] == 1:
+
+        """
+        I turn another page, more for the look of the thing than to read.
+        """
+
+        call wait_screen_transition
+
+        """
+        After a little while the door opens a second time.
+        """
+
+    else:
+
+        """
+        It is getting late, yet I feel like I could wait a little more.
+        """
+
+        call wait_screen_transition
+
+        """
+        The door opens a third time — and stops short.
+        """
+
+    $ captain_details.saved_variables["day2_evening_billiard_encounters"] += 1
+    
+    return
 
 # ------------------------------------
 #   First slot — Miss Marsh (21:00 – 21:40)
 # ------------------------------------
 label captain_day2_evening_billiard_room_nurse:
 
-    """
-    I take down a book from the shelf and settle into a chair by the fire.
-    """
-
-    call wait_screen_transition
+    call captain_day2_evening_billiard_room_wait
 
     """
     A few minutes pass before the door eases open behind me.
 
-    Miss Marsh hesitates a moment in the doorway, then crosses the room with her usual quiet composure.
-
-    Whatever has brought her here, it was not for the company of the decanters.
+    Rosalind Marsh hesitates a moment in the doorway, then crosses the room with her usual quiet composure.
     """
 
     call common_day2_evening_billiard_room_nurse_captain_intro
@@ -111,127 +141,130 @@ label captain_day2_evening_billiard_room_nurse:
     She withdraws as quietly as she came.
 
     The door clicks shut behind her, and the room is mine again.
-    """
+    
+    I wonder what made a middle-aged nurse risk coming downstairs tonight.
 
-    $ captain_details.saved_variables["day2_evening_billiard_encounters"] += 1
+    She had every excuses to stay in her room and yet she decided to check on who would be there.
+
+    That is interesting to know.
+    """ 
 
     return
 
 
 # ------------------------------------
-#   Second slot — Miss Baxter (21:40 – 22:20)
+#   Second slot — Mr Harring (21:40 – 22:20)
 # ------------------------------------
-label captain_day2_evening_billiard_room_psychic:
+label captain_day2_evening_billiard_room_lad:
 
-    if captain_details.saved_variables["day2_evening_billiard_encounters"] == 0:
+    call captain_day2_evening_billiard_room_wait
 
-        """
-        I take down a book from the shelf and settle into a chair by the fire.
+    """
+    Ted Harring eases the door open and casts his eye round the room before stepping in.
 
-        The half hour goes slowly by.
-        """
+    He crosses to the chair opposite mine with a careful, studied air, and seats himself.
+    """
 
-        call wait_screen_transition
+    lad """
+    Captain. Could I have a word?
+    """
 
-        """
-        At length the door eases open behind me.
-        """
+    """
+    He has come down here for a reason.
+
+    He is making a fair show of being at his ease, but it is plainly costing him something.
+
+    The question is whether I mean to give him what he came for, or send him back upstairs none the wiser.
+    """
+
+    if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
+        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
+        and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
+
+        call run_menu(TimedMenu("captain_day2_evening_billiard_room_lad_menu", [
+            TimedMenuChoice("Tell him he is right to be uneasy",
+                'captain_day2_evening_billiard_room_lad_agree', 0, early_exit=True),
+            TimedMenuChoice("Hold the line — nothing is amiss",
+                'captain_day2_evening_billiard_room_lad_dismiss', 0, early_exit=True),
+        ]))
 
     else:
 
-        """
-        I turn another page, more for the look of the thing than to read.
-        """
+        call captain_day2_evening_billiard_room_lad_dismiss
 
-        call wait_screen_transition
+    return
 
-        """
-        After a little while the door opens a second time.
-        """
+
+label captain_day2_evening_billiard_room_lad_dismiss:
+
+    call common_day2_evening_billiard_room_lad_captain_dismiss
 
     """
-    Miss Baxter pauses on the threshold and surveys the room before stepping in.
+    He looks at me a moment longer than is comfortable.
 
-    She crosses to the sideboard and pours herself a small glass with the air of one who is glad to have something to do with her hands.
+    Whatever he came for, he is not going to get it from me tonight.
     """
 
-    psychic """
-    Captain.
+    call common_day2_evening_billiard_room_lad_captain_close
 
-    I had thought I should find the room empty.
+    """
+    He drains his glass and withdraws without another word.
+
+    A young man can be told a great many things, if one is firm about it.
+
+    Whether it does him any good is another matter.
+    """
+
+    return
+
+
+label captain_day2_evening_billiard_room_lad_agree:
+
+    captain """
+    You are right to be uneasy, Mr Harring.
+
+    I have been turning the day over in my own mind, and the more I do, the less it sits well with me.
+    """
+
+    lad """
+    So you do think there's something behind it?
     """
 
     captain """
-    Miss Baxter.
+    I think there is rather more behind it than any of us can yet account for.
 
-    Please, sit by the fire if you wish.
+    But it is gone eleven of the clock, and the house is shut up for the night.
+
+    Whatever has been set in motion here, we shall not unpick it now.
     """
 
-    """
-    She lowers herself into the chair opposite mine and rests her glass upon her knee.
-
-    Her composure is admirable, but it is composure all the same. The sort one puts on, like a coat.
-    """
-
-    psychic """
-    A dreadful day, Captain.
-
-    Two of our number gone, and that poor man locked above stairs.
+    lad """
+    Then what should we do?
     """
 
     captain """
-    A dreadful day, indeed.
+    Be on your guard, Mr Harring.
+
+    Wedge a chair beneath your door if you must, and sleep lightly.
+
+    There is precious little more to be done at this hour.
+
+    Come the morning we shall see what can be made of it.
     """
 
-    psychic """
-    I confess I do not feel quite easy in my own room tonight.
-
-    I cannot help wondering whether we are as safe as our hostess assures us.
-    """
-
-    """
-    A careful question, asked very lightly.
-
-    I do not wish to give her more than she has come for.
-    """
-
-    captain """
-    The doors of this house are solid oak, Miss Baxter.
-
-    And Mr Manning is locked behind one of them.
-
-    I should not lose any sleep on his account.
-    """
-
-    psychic """
-    No.
-
-    No, I daresay you are right.
-    """
-
-    """
-    She does not look as though she believes me.
-
-    She finishes her sherry in two small sips and rises.
-    """
-
-    psychic """
-    Forgive me, Captain. I find I am more tired than I had thought.
+    lad """
+    Right. Goodnight then, Captain.
     """
 
     captain """
-    Of course. Sleep well, Miss Baxter.
+    Goodnight, Mr Harring.
     """
 
     """
-    She inclines her head and withdraws.
+    He goes more steadily than he came.
 
-    She came down looking for reassurance, and I have given her precious little of it.
-
-    I doubt very much that she will sleep tonight.
+    Whatever else I have done tonight, I have at least not left the lad to bear his fears alone.
     """
-
-    $ captain_details.saved_variables["day2_evening_billiard_encounters"] += 1
 
     return
 
@@ -241,43 +274,7 @@ label captain_day2_evening_billiard_room_psychic:
 # ------------------------------------
 label captain_day2_evening_billiard_room_host:
 
-    if captain_details.saved_variables["day2_evening_billiard_encounters"] == 0:
-
-        """
-        I take down a book from the shelf and settle into a chair by the fire.
-
-        The hour grows late, and the manor has gone very quiet.
-        """
-
-        call wait_screen_transition
-
-        """
-        At length, the door opens — and stops short.
-        """
-
-    elif captain_details.saved_variables["day2_evening_billiard_encounters"] == 1:
-
-        """
-        I turn another page, more for the look of the thing than to read.
-        """
-
-        call wait_screen_transition
-
-        """
-        Some little time passes, and the door opens again — and stops short.
-        """
-
-    else:
-
-        """
-        I had nearly given up on company for the night.
-        """
-
-        call wait_screen_transition
-
-        """
-        The door opens a third time — and stops short.
-        """
+    call captain_day2_evening_billiard_room_wait
 
     """
     Lady Claythorn is on the threshold, and the sight of me has brought her up at once.
@@ -350,7 +347,6 @@ label captain_day2_evening_billiard_room_host:
         She gathers up her case and is gone before I have set down my book.
         """
 
-    $ captain_details.saved_variables["day2_evening_billiard_encounters"] += 1
 
     return
 
