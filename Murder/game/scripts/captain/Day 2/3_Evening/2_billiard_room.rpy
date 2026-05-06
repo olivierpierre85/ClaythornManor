@@ -27,8 +27,14 @@ label captain_day2_evening_billiard_room:
 
         $ captain_day2_evening_billiard_room_menu = TimedMenu("captain_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Wait and see who comes',
-                'captain_day2_evening_billiard_room_wait', 40,
-                keep_alive=True),
+                'captain_day2_evening_billiard_room_nurse', 40,
+                condition="time_left>80"),
+            TimedMenuChoice('Wait and see who comes',
+                'captain_day2_evening_billiard_room_psychic', 40,
+                condition="time_left>40 and time_left<=80"),
+            TimedMenuChoice('Wait and see who comes',
+                'captain_day2_evening_billiard_room_host', 40,
+                condition="time_left<=40"),
             TimedMenuChoice('Pour a glass of sherry',
                 'captain_day2_evening_billiard_room_sherry', 10),
             TimedMenuChoice('Leave the room',
@@ -60,20 +66,6 @@ label captain_day2_evening_billiard_room_sherry:
 
     return
 
-
-# Dispatcher: picks the encounter according to the time slot in which
-# the captain begins his wait. current_time has not yet been advanced
-# by the choice's time_spent at this point.
-label captain_day2_evening_billiard_room_wait:
-
-    if current_time < time(21, 40):
-        call captain_day2_evening_billiard_room_nurse
-    elif current_time < time(22, 20):
-        call captain_day2_evening_billiard_room_psychic
-    else:
-        call captain_day2_evening_billiard_room_host
-
-    return
 
 
 # ------------------------------------
