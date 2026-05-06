@@ -30,7 +30,12 @@
         {
             "menu": "captain_day2_evening_billiard_room_menu",
             "selected": "Wait and see who comes",
-            "redirect": "captain_day2_evening_billiard_room_psychic"
+            "redirect": "captain_day2_evening_billiard_room_lad"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_lad_menu",
+            "selected": "Tell him he is right to be uneasy",
+            "redirect": "captain_day2_evening_billiard_room_lad_agree"
         },
         {
             "menu": "captain_day2_evening_billiard_room_menu",

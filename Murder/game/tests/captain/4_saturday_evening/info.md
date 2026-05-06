@@ -39,7 +39,8 @@
 - Confrontation menu is offered; picks "Take Manning up myself" -> `captain_day2_evening_normal_escort` (covers the normal escort + butler key narration).
 - Dinner menu picks "Speak to Miss Baxter" -> `captain_day2_dinner_psychic`.
 - Map menu picks "Look in on the billiard room" -> `captain_day2_evening_billiard_room`.
-- Three "Wait and see who comes" choices in succession bring in Miss Marsh (nurse), Miss Baxter (psychic), then Lady Claythorn (host).
+- Three "Wait and see who comes" choices in succession bring in Miss Marsh (nurse), Mr Harring (lad), then Lady Claythorn (host).
+- With all three suspicions active, the lad arrival opens the agree/dismiss menu; picks "Tell him he is right to be uneasy" -> `captain_day2_evening_billiard_room_lad_agree`.
 - With all three suspicions active, the host arrival opens the confront menu; picks "Confront her with what I know" -> `captain_day2_evening_billiard_room_host_accuse`.
 - Captain leaves the billiard room and the chapter wraps up normally.
 
@@ -52,8 +53,8 @@
 - No suspicions -> the confrontation menu does not appear; the captain auto-runs `captain_day2_evening_normal_escort`.
 - Dinner menu picks "Speak to Miss Baxter" -> `captain_day2_dinner_psychic`.
 - Map menu picks "Look in on the billiard room" -> `captain_day2_evening_billiard_room`.
-- Three waits cycle through nurse, psychic and host. With no suspicions, the host arrival skips the confront menu and the captain swallows her thin "turn outside" excuse.
-- Covers the no-suspicions branch of the host billiard scene and the dinner narration with no host suspicions.
+- Three waits cycle through nurse, lad and host. With no suspicions, the lad arrival auto-runs the dismiss path (no menu) and the host arrival skips the confront menu — the captain swallows her thin "turn outside" excuse.
+- Covers the no-suspicions branch of the host billiard scene, the auto-dismiss branch of the lad billiard scene, and the dinner narration with no host suspicions.
 
 ## File 5 — Suspicions, take Manning up, let the host go in silence
 
@@ -66,6 +67,7 @@
 - Confrontation menu picks "Take Manning up myself" -> `captain_day2_evening_normal_escort`.
 - Dinner menu picks "Say nothing, eat in silence" (covers the silent dinner branch).
 - Map menu picks the billiard room and the captain waits through the three slots.
+- With suspicions active, the lad arrival opens the agree/dismiss menu; picks "Hold the line — nothing is amiss" -> `captain_day2_evening_billiard_room_lad_dismiss` (covers the manual-dismiss branch and the shared captain↔lad dialogue).
 - At the host arrival the confront menu picks "Let her go and say nothing" -> `captain_day2_evening_billiard_room_host_silent`.
 - Captain leaves the billiard room and the chapter wraps up normally.
 

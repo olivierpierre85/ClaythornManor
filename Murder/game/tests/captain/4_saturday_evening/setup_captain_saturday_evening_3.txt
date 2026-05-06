@@ -188,33 +188,28 @@ That is interesting to know.
 Menu Choice: Wait and see who comes
 I turn another page, more for the look of the thing than to read.
 After a little while the door opens a second time.
-Amelia Baxter pauses on the threshold and surveys the room before stepping in.
-She feels unsure what to do.
-Amelia Baxter: Captain.
-Amelia Baxter: I had thought I should find the room empty.
-Sushil Sinha: Miss Baxter.
-Sushil Sinha: Please, sit by the fire if you wish.
-She lowers herself into the chair opposite mine and rests her glass upon her knee.
-Her composure is admirable, but it is composure all the same. The sort one puts on, like a coat.
-Amelia Baxter: A dreadful day, Captain.
-Amelia Baxter: Two of our number gone, and that poor man locked above stairs.
-Sushil Sinha: A dreadful day, indeed.
-Amelia Baxter: I confess I do not feel quite easy in my own room tonight.
-Amelia Baxter: I cannot help wondering whether we are as safe as our hostess assures us.
-A careful question, asked very lightly.
-I do not wish to give her more than she has come for.
-Sushil Sinha: The doors of this house are solid oak, Miss Baxter.
-Sushil Sinha: And Mr Manning is locked behind one of them.
-Sushil Sinha: I should not lose any sleep on his account.
-Amelia Baxter: No.
-Amelia Baxter: No, I daresay you are right.
-She does not look as though she believes me.
-She finishes her sherry in two small sips and rises.
-Amelia Baxter: Forgive me, Captain. I find I am more tired than I had thought.
-Sushil Sinha: Of course. Sleep well, Miss Baxter.
-She inclines her head and withdraws.
-She came down looking for reassurance, and I have given her precious little of it.
-I doubt very much that she will sleep tonight.
+Ted Harring eases the door open and casts his eye round the room before stepping in.
+He crosses to the chair opposite mine with a careful, studied air, and seats himself.
+Ted Harring: Captain. Could I have a word?
+He has come down here for a reason.
+He is making a fair show of being at his ease, but it is plainly costing him something.
+The question is whether I mean to give him what he came for, or send him back upstairs none the wiser.
+Menu Choice: Tell him he is right to be uneasy
+Sushil Sinha: You are right to be uneasy, Mr Harring.
+Sushil Sinha: I have been turning the day over in my own mind, and the more I do, the less it sits well with me.
+Ted Harring: So you do think there's something behind it?
+Sushil Sinha: I think there is rather more behind it than any of us can yet account for.
+Sushil Sinha: But it is gone eleven of the clock, and the house is shut up for the night.
+Sushil Sinha: Whatever has been set in motion here, we shall not unpick it now.
+Ted Harring: Then what should we do?
+Sushil Sinha: Be on your guard, Mr Harring.
+Sushil Sinha: Wedge a chair beneath your door if you must, and sleep lightly.
+Sushil Sinha: There is precious little more to be done at this hour.
+Sushil Sinha: Come the morning we shall see what can be made of it.
+Ted Harring: Right. Goodnight then, Captain.
+Sushil Sinha: Goodnight, Mr Harring.
+He goes more steadily than he came.
+Whatever else I have done tonight, I have at least not left the lad to bear his fears alone.
 Menu Choice: Wait and see who comes
 It is getting late, yet I feel like I could wait a little more.
 The door opens a third time — and stops short.

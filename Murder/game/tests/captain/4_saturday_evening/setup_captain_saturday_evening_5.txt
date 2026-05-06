@@ -178,33 +178,48 @@ That is interesting to know.
 Menu Choice: Wait and see who comes
 I turn another page, more for the look of the thing than to read.
 After a little while the door opens a second time.
-Amelia Baxter pauses on the threshold and surveys the room before stepping in.
-She feels unsure what to do.
-Amelia Baxter: Captain.
-Amelia Baxter: I had thought I should find the room empty.
-Sushil Sinha: Miss Baxter.
-Sushil Sinha: Please, sit by the fire if you wish.
-She lowers herself into the chair opposite mine and rests her glass upon her knee.
-Her composure is admirable, but it is composure all the same. The sort one puts on, like a coat.
-Amelia Baxter: A dreadful day, Captain.
-Amelia Baxter: Two of our number gone, and that poor man locked above stairs.
-Sushil Sinha: A dreadful day, indeed.
-Amelia Baxter: I confess I do not feel quite easy in my own room tonight.
-Amelia Baxter: I cannot help wondering whether we are as safe as our hostess assures us.
-A careful question, asked very lightly.
-I do not wish to give her more than she has come for.
-Sushil Sinha: The doors of this house are solid oak, Miss Baxter.
-Sushil Sinha: And Mr Manning is locked behind one of them.
-Sushil Sinha: I should not lose any sleep on his account.
-Amelia Baxter: No.
-Amelia Baxter: No, I daresay you are right.
-She does not look as though she believes me.
-She finishes her sherry in two small sips and rises.
-Amelia Baxter: Forgive me, Captain. I find I am more tired than I had thought.
-Sushil Sinha: Of course. Sleep well, Miss Baxter.
-She inclines her head and withdraws.
-She came down looking for reassurance, and I have given her precious little of it.
-I doubt very much that she will sleep tonight.
+Ted Harring eases the door open and casts his eye round the room before stepping in.
+He crosses to the chair opposite mine with a careful, studied air, and seats himself.
+Ted Harring: Captain. Could I have a word?
+He has come down here for a reason.
+He is making a fair show of being at his ease, but it is plainly costing him something.
+The question is whether I mean to give him what he came for, or send him back upstairs none the wiser.
+Menu Choice: Hold the line — nothing is amiss
+Sushil Sinha: Good evening, Mr Harring.
+Sushil Sinha: It's nice to see someone else who isn't scared out of their wits tonight.
+Sushil Sinha: The reaction of the others seems quite ridiculous to me.
+Ted Harring: You don't think we should be at least a bit worried?
+Sushil Sinha: Absolutely not. What happened today was obviously accidental.
+Sushil Sinha: There's no reason to think otherwise.
+Sushil Sinha: And now everyone is holed up in their rooms, as if some mysterious murderer is out to get them.
+Ted Harring: So you don't believe there's a murderer among us?
+Sushil Sinha: Of course, there is.
+Sushil Sinha: His name is Samuel Manning.
+Sushil Sinha: Once the police arrive, they'll probably charge him with involuntary manslaughter.
+Sushil Sinha: He's likely to be sent to prison for a long time.
+Sushil Sinha: But he won't cause any more harm tonight. Of that, you can be certain.
+Ted Harring: What makes you so sure?
+Ted Harring: You must admit, two deaths in a single day is quite a coincidence.
+Sushil Sinha: Sadly, I'll have to disagree with you.
+Sushil Sinha: It has happened to me more times than I can count.
+Sushil Sinha: And I know what you're going to say.
+Sushil Sinha: We're not at war anymore. It's not the same.
+Sushil Sinha: True. But on the other hand, I don't believe it's that improbable.
+Sushil Sinha: I think everyone is overreacting because they're not accustomed to death like I am.
+Sushil Sinha: Once you remove fear from the equation, you'll realise there's nothing abnormal about today's events.
+Sushil Sinha: Don't you agree?
+Sushil Sinha: Or do you have tangible evidence to believe otherwise?
+He looks at me a moment longer than is comfortable.
+Whatever he came for, he is not going to get it from me tonight.
+Ted Harring: Okay. Maybe there isn't anything particularly suspicious after all.
+Sushil Sinha: Precisely.
+Sushil Sinha: Two unfortunate, unrelated accidents is the simplest and most logical explanation here.
+Sushil Sinha: As the famous saying goes, the simplest explanation is usually the best.
+Sushil Sinha: Now, if you'll excuse me, I'd like to finish my book.
+Ted Harring: Of course.
+He drains his glass and withdraws without another word.
+A young man can be told a great many things, if one is firm about it.
+Whether it does him any good is another matter.
 Menu Choice: Wait and see who comes
 It is getting late, yet I feel like I could wait a little more.
 The door opens a third time — and stops short.

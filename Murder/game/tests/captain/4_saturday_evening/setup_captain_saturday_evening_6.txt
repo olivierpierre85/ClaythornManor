@@ -121,116 +121,105 @@ Whoever takes the invitation tonight will, by that very act, be telling me somet
 Either they have nothing to fear, or they wish very much to be seen as having nothing to fear.
 In either case, seeing who will be there might teach me something of value.
 And there is precious little I can learn if I keep to my room.
-Map Choice: Look in on the billiard room
-The billiard room is lit much as it was last night, but the warmth of the place has gone out of it.
-The decanters stand untouched on the side.
-The glasses have been laid out in expectation of a company that has chosen not to come.
-I am quite alone.
-Menu Choice: Wait and see who comes
-I take down a book from the shelf and settle into a chair by the fire.
-A few minutes pass before the door eases open behind me.
-Rosalind Marsh hesitates a moment in the doorway, then crosses the room with her usual quiet composure.
-Sushil Sinha: Miss Marsh.
-Sushil Sinha: I thought everyone had retired.
-Rosalind Marsh: Not quite yet.
-Rosalind Marsh: There are a few things about this weekend that don't make sense to me.
-Sushil Sinha: Oh?
-Sushil Sinha: Such as?
-Rosalind Marsh: We've witnessed two deaths in as many days.
-Rosalind Marsh: Doesn't it seem strange to you?
-A direct question, asked very simply.
-A man with nothing to hide would dismiss it without a second thought.
-So I shall do precisely that.
-Sushil Sinha: Not really.
-Sushil Sinha: They seem quite natural to me, Miss Marsh.
-Sushil Sinha: Thomas Moody died of injuries he got during the war.
-Sushil Sinha: Even if you thought he was fine, he might have been suffering in silence.
-Sushil Sinha: Some people prefer to hide their distress from the people around them.
-Rosalind Marsh: But for Doctor Baldwin?
-Sushil Sinha: A dreadful accident, Miss Marsh.
-Sushil Sinha: Manning was drunk and careless with a firearm.
-Sushil Sinha: Sadly, this type of tragic event is not rare at all.
-Sushil Sinha: Although some people treat it as a light form of entertainment, a hunt is a dangerous business.
-Rosalind Marsh: Perhaps you are right.
-Rosalind Marsh: Still, I confess I am uneasy knowing Samuel Manning is just upstairs.
-Rosalind Marsh: A few steps from my own room.
-Rosalind Marsh: Are we sure he cannot get out?
-Sushil Sinha: Quite sure.
-Sushil Sinha: I locked the door myself, with the key the butler gave me.
-Sushil Sinha: The doors in this house are solid oak.
-Sushil Sinha: He is going nowhere.
-Rosalind Marsh: That is reassuring.
-She regards me a moment longer than I should like.
-She did not believe a word of it.
-But she knows better than to press me on it tonight.
-Rosalind Marsh: Good night, Captain.
-Sushil Sinha: Good night, Miss Marsh.
-She withdraws as quietly as she came.
-The door clicks shut behind her, and the room is mine again.
-I wonder what made a middle-aged nurse risk coming downstairs tonight.
-She had every excuses to stay in her room and yet she decided to check on who would be there.
-That is interesting to know.
-Menu Choice: Wait and see who comes
-I turn another page, more for the look of the thing than to read.
-After a little while the door opens a second time.
-Ted Harring eases the door open and casts his eye round the room before stepping in.
-He crosses to the chair opposite mine with a careful, studied air, and seats himself.
-Ted Harring: Captain. Could I have a word?
-He has come down here for a reason.
-He is making a fair show of being at his ease, but it is plainly costing him something.
-The question is whether I mean to give him what he came for, or send him back upstairs none the wiser.
-Sushil Sinha: Good evening, Mr Harring.
-Sushil Sinha: It's nice to see someone else who isn't scared out of their wits tonight.
-Sushil Sinha: The reaction of the others seems quite ridiculous to me.
-Ted Harring: You don't think we should be at least a bit worried?
-Sushil Sinha: Absolutely not. What happened today was obviously accidental.
-Sushil Sinha: There's no reason to think otherwise.
-Sushil Sinha: And now everyone is holed up in their rooms, as if some mysterious murderer is out to get them.
-Ted Harring: So you don't believe there's a murderer among us?
-Sushil Sinha: Of course, there is.
-Sushil Sinha: His name is Samuel Manning.
-Sushil Sinha: Once the police arrive, they'll probably charge him with involuntary manslaughter.
-Sushil Sinha: He's likely to be sent to prison for a long time.
-Sushil Sinha: But he won't cause any more harm tonight. Of that, you can be certain.
-Ted Harring: What makes you so sure?
-Ted Harring: You must admit, two deaths in a single day is quite a coincidence.
-Sushil Sinha: Sadly, I'll have to disagree with you.
-Sushil Sinha: It has happened to me more times than I can count.
-Sushil Sinha: And I know what you're going to say.
-Sushil Sinha: We're not at war anymore. It's not the same.
-Sushil Sinha: True. But on the other hand, I don't believe it's that improbable.
-Sushil Sinha: I think everyone is overreacting because they're not accustomed to death like I am.
-Sushil Sinha: Once you remove fear from the equation, you'll realise there's nothing abnormal about today's events.
-Sushil Sinha: Don't you agree?
-Sushil Sinha: Or do you have tangible evidence to believe otherwise?
-He looks at me a moment longer than is comfortable.
-Whatever he came for, he is not going to get it from me tonight.
-Ted Harring: Okay. Maybe there isn't anything particularly suspicious after all.
-Sushil Sinha: Precisely.
-Sushil Sinha: Two unfortunate, unrelated accidents is the simplest and most logical explanation here.
-Sushil Sinha: As the famous saying goes, the simplest explanation is usually the best.
-Sushil Sinha: Now, if you'll excuse me, I'd like to finish my book.
-Ted Harring: Of course.
-He drains his glass and withdraws without another word.
-A young man can be told a great many things, if one is firm about it.
-Whether it does him any good is another matter.
-Menu Choice: Wait and see who comes
-It is getting late, yet I feel like I could wait a little more.
-The door opens a third time — and stops short.
-Lady Claythorn is on the threshold, and the sight of me has brought her up at once.
-For an instant her face is quite undefended.
-Her travelling coat is buttoned to the throat. A small leather case stands at her feet.
-She had not expected to find anyone in this room.
-Lady Claythorn: Captain.
-Lady Claythorn: I... did not realise anyone was still up.
-Sushil Sinha: Evidently.
-She recovers herself with admirable speed, but the case at her feet is not so easily concealed.
-Wherever she had thought to be at this hour, it was not in the manor.
-Lady Claythorn: I had thought to take a turn outside before retiring.
-Lady Claythorn: The air has been so close in the house all day.
-Sushil Sinha: Of course, Lady Claythorn.
-It is a poor lie, told with a packed case at her feet.
-But I have not enough in hand to challenge her on it.
-She gathers up her case and is gone before I have set down my book.
+Map Choice: Storage Room
+I climb the narrow stair to the attic.
+The boards creak under my weight. The air up here is closer, smelling of dust and old wood.
+A short corridor runs the length of the house, doors on either side.
+It is not a place a guest has any business being in.
+But after what happen today, I am not above breaking some rules if that means I can understand better what is happening today.
+I fit the master key to the door.
+The bolt slides back without protest.
+A single key for the whole house. If it opens this one, it will open all the others up here just as readily.
+The storage room is crammed with the leavings of decades.
+Trunks stacked three deep, dust-sheeted furniture, boxes that have not been opened in a generation.
+I work my way along the shelves nearest the door, where the more recent items seem to live.
+Tins of paint. A pair of oil lamps. A small case of candles.
+And, set on its side beneath a folded oilcloth, a storm lantern.
+I lift it from the shelf. The reservoir is half full, the wick recently trimmed.
+A well-kept piece, in an attic full of old leavings. Someone in this house has been keeping it ready.
+That, by itself, is interesting.
+I take it up. It will be wanted before the night is out.
+Map Choice: Garden
+I draw the side door closed behind me and light the lantern.
+The pool of light picks out the gravel path, the wet grass beyond, the dark mass of the hedge.
+I make my way around to the outbuilding I found yesterday.
+Menu Choice: Try the shed door with the master key
+I fit the master key to the lock. It does not turn at first.
+A patient adjustment, and the bolt slides clear.
+The door creaks open on a small, low-roofed space smelling strongly of oil and old timber.
+The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
+And, set rather neatly in the middle of the floor, a metal petrol tin.
+I unscrew the cap and lower my nose to it for a moment. Petrol, and a great deal of it.
+A full can, that could be useful.
+I search a little further but found nothing of interest, so I step out of this shed.
+I lock the door behind me as carefully as I opened it.
+I slip back inside and brush the damp from my coat.
+No one seems to have marked my absence.
+Map Choice: Garden
+I have seen all I needed to see out there.
+No reason to brave the cold a second time.
+Map Choice: Storage Room
+Nothing more for me here. I have what I came for.
+Map Choice: Butler's Room
+The room itself is plain enough. A narrow bed, a washstand, a single chair.
+A head servant's quarters, and not a thing out of place.
+But against the far wall stands a heavy reinforced cabinet, glass-panelled, the household silver visible behind it.
+The lock is a modern one, and a good one.
+I take the master key from my pocket and try it.
+It turns without complaint.
+Inside: candlesticks, a salver, several sets of heavy plate. The honest wealth of the house, locked behind a butler's door rather than the master's.
+Curious. In a properly run household this would all be in the strong room downstairs, under the mistress's hand.
+I close the cabinet, lock it again, and step back.
+Whoever is truly running this house, it is not Lady Claythorn.
+Map Choice: Butler's Room
+The reinforced cabinet still stands against the far wall.
+I have already seen what is inside.
+Map Choice: Male Servants Room
+Two beds, a chest of drawers, a peg for each man's coat.
+I work the drawers quickly. Folded shirts, a penknife, a few coins. Nothing of note.
+Then, at the back of the bottom drawer, beneath the linen, a folded sheet of paper.
+A letter from a London theatre company. Politely worded, but a rejection all the same.
+'We regret to inform you that the role has been filled. We wish you every success in your future endeavours.'
+An actor. Playing at being a footman.
+A curious choice of employment for a man with that ambition. And rather further from a stage than one would expect.
+I fold the letter back exactly as I found it.
+Map Choice: Female Servants Room
+A small, spare room. Two narrow beds, a washstand, a single trunk between them.
+On the shelf above one of the beds, a few keepsakes — a dog-eared London playbill, another from a touring company.
+Tucked behind them, a faded photograph.
+A young woman in stage dress, posed beside a man I do not recognise. Smiling broadly for the camera.
+The maid who has been waiting on us all weekend.
+Or, more likely, the actress who has been playing at it.
+Two players in the same household, so far from any theatre worth the name.
+That is no coincidence at all.
+I replace the photograph and step back out.
+Map Choice: Elizabeth I Bedroom
+Sushil Sinha: Hello? Is anyone there?
+Amelia Baxter: Yes? Who is it?
+Sushil Sinha: Captain Sinha. Forgive me, Miss Baxter.
+Sushil Sinha: I only wished to know whether you were quite all right.
+Amelia Baxter: You are kind, Captain. But I am very tired.
+Amelia Baxter: Would you mind very much if we spoke in the morning?
+Sushil Sinha: Of course not. Sleep well, Miss Baxter.
+Map Choice: Edward II Bedroom
+Doctor Baldwin lies upon the bed exactly as we left him this afternoon.
+The blanket I drew over him has not been disturbed.
+There is nothing more I can do for the man.
+I close the door quietly behind me.
+Map Choice: George IV Bedroom
+Samuel Manning: Mmf... go 'way...
+Mr Manning is still locked in, and very much the worse for the day's drinking.
+The key in my pocket would let me through that door at any moment.
+Tonight, however, he is more use to me where he is.
+Map Choice: William the Conqueror Bedroom
+There is no reply.
+Either Mr Harring is not in his room at all, or he is keeping silent on the other side of the door.
+The first would be a curious thing on a night like this.
+The second would mean the lad has lost his nerve and means to keep his head down until morning.
+There is no telling which from out here.
+Map Choice: Richard III Bedroom
+Mr Moody's room sits much as it must have done since this morning.
+The bed has been straightened. His effects have been arranged with a tidy hand.
+I leave the room as I found it.
 I close the door of my room behind me and turn the key in the lock.
 Whatever I have learnt tonight, I shall need a clear head to make any use of it in the morning.
