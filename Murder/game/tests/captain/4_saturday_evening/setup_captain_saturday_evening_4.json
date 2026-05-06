@@ -1,0 +1,37 @@
+{
+    "start_label": "captain_day2_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day2_evening_menu_dinner",
+            "selected": "Speak to Miss Baxter",
+            "redirect": "captain_day2_dinner_psychic"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Look in on the billiard room",
+            "redirect": "captain_day2_evening_billiard_room"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_nurse"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_psychic"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_host"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

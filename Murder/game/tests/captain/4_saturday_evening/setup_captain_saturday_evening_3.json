@@ -1,0 +1,51 @@
+{
+    "start_label": "captain_day2_evening",
+    "unlocked_threads": [
+        "captain_host_suspicion_name",
+        "captain_host_suspicion_portrait",
+        "captain_host_suspicion_shooting"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day2_evening_menu_confront",
+            "selected": "Take Manning up myself",
+            "redirect": "captain_day2_evening_normal_escort"
+        },
+        {
+            "menu": "captain_day2_evening_menu_dinner",
+            "selected": "Speak to Miss Baxter",
+            "redirect": "captain_day2_dinner_psychic"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Look in on the billiard room",
+            "redirect": "captain_day2_evening_billiard_room"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_nurse"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_psychic"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_host"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_host_menu",
+            "selected": "Confront her with what I know",
+            "redirect": "captain_day2_evening_billiard_room_host_accuse"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

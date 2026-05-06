@@ -1,0 +1,67 @@
+{
+    "start_label": "captain_day2_evening",
+    "unlocked_threads": [
+        "captain_host_suspicion_name",
+        "captain_host_suspicion_portrait"
+    ],
+    "saved_variables": {
+        "visited_library": true
+    },
+    "choices": [
+        {
+            "menu": "captain_day2_evening_menu_dinner",
+            "selected": "Say nothing, eat in silence",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "captain_day2_evening_downstairs_default"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Tea room",
+            "redirect": "captain_day2_evening_tea_room"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Dining room",
+            "redirect": "captain_day2_evening_dining_room"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Entrance hall",
+            "redirect": "captain_day2_evening_entrance_hall"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Garden",
+            "redirect": "captain_day2_evening_garden_no_lantern"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Portrait gallery",
+            "redirect": "captain_portrait_gallery_default"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Library",
+            "redirect": "captain_library_default"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Miss Marsh's room",
+            "redirect": "captain_day2_evening_bedroom_nurse"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Lady Claythorn's room",
+            "redirect": "captain_day2_evening_bedroom_host"
+        },
+        {
+            "menu": "captain_day2_evening_map_menu",
+            "selected": "Retire for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}
