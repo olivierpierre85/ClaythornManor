@@ -23,6 +23,24 @@ INTUITION WHERE to place it?
 UNLOCKS Lady
 
 
+Ted harring not barricading, just not answering 
+
+Confess to Ted, dies
+
+Confess to nurse, but she doesn't trust you back? You might not just see her in the morning
+
+Confront host, killed by butler like the woods 
+
+Normal day 3, has to find car, petrol and ... To unlock let's all leave.
+
+If let's all leave, food is taken and dies while driving, poisoned
+
+Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
+
+How to fully unlock Host? Both ending needed?
+
+Maybe twist, add a character the butler. Yes there is a hidden butler, if you find something about him, it unlocks him. Only captain, host, broken and drunk could find info.. With new things to unlock. And only one possible path, one choice at the beginning. I'll d what you want... Character selection 
+
 THREAD, locked shed image
 
 - [x] Friday Afternoon
