@@ -1,10 +1,13 @@
 # Billiard room — Saturday evening
 # Captain enters alone. The evening runs 21:00 → 23:00.
-# Each "wait" costs 40 minutes; whoever joins him depends on the time slot
+# Each "wait" costs 20 minutes; whoever joins him depends on the time slot
 # the wait begins in:
-#   21:00 – 21:40 → Miss Marsh (nurse)
-#   21:40 – 22:20 → Mr Harring (lad), come down looking for reassurance
-#   22:20 – 23:00 → Lady Claythorn (host), packed and ready to leave;
+#   21:00 – 21:20 → Miss Marsh (nurse)
+#   21:20 – 21:40 → Empty — captain reads, no one comes
+#   21:40 – 22:00 → Mr Harring (lad), come down looking for reassurance
+#   22:00 – 22:20 → Empty — captain reads, no one comes
+#   22:20 – 22:40 → Empty — captain reads, no one comes
+#   22:40 – 23:00 → Lady Claythorn (host), packed and ready to leave;
 #                   with all three host suspicions, a final chance to accuse her.
 # A captain who lingers elsewhere first will simply miss earlier visitors.
 label captain_day2_evening_billiard_room:
@@ -27,14 +30,23 @@ label captain_day2_evening_billiard_room:
 
         $ captain_day2_evening_billiard_room_menu = TimedMenu("captain_day2_evening_billiard_room_menu", [
             TimedMenuChoice('Wait and see who comes',
-                'captain_day2_evening_billiard_room_nurse', 40,
-                condition="time_left>80"),
+                'captain_day2_evening_billiard_room_nurse', 20,
+                condition="time_left>100"),
             TimedMenuChoice('Wait and see who comes',
-                'captain_day2_evening_billiard_room_lad', 40,
-                condition="time_left>40 and time_left<=80"),
+                'captain_day2_evening_billiard_room_empty_1', 20,
+                condition="time_left>80 and time_left<=100"),
             TimedMenuChoice('Wait and see who comes',
-                'captain_day2_evening_billiard_room_host', 40,
-                condition="time_left<=40"),
+                'captain_day2_evening_billiard_room_lad', 20,
+                condition="time_left>60 and time_left<=80"),
+            TimedMenuChoice('Wait and see who comes',
+                'captain_day2_evening_billiard_room_empty_2', 20,
+                condition="time_left>40 and time_left<=60"),
+            TimedMenuChoice('Wait and see who comes',
+                'captain_day2_evening_billiard_room_empty_3', 20,
+                condition="time_left>20 and time_left<=40"),
+            TimedMenuChoice('Wait and see who comes',
+                'captain_day2_evening_billiard_room_host', 20,
+                condition="time_left<=20"),
             TimedMenuChoice('Pour a glass of sherry',
                 'captain_day2_evening_billiard_room_sherry', 10),
             TimedMenuChoice('Leave the room',
@@ -101,11 +113,66 @@ label captain_day2_evening_billiard_room_wait:
         """
 
     $ captain_details.saved_variables["day2_evening_billiard_encounters"] += 1
-    
+
     return
 
+
 # ------------------------------------
-#   First slot — Miss Marsh (21:00 – 21:40)
+#   Empty waits — captain reads, no one comes
+# ------------------------------------
+label captain_day2_evening_billiard_room_empty_1:
+
+    """
+    I turn back to my book and try to settle to it.
+
+    A page or two go by, easily enough.
+    """
+
+    call wait_screen_transition
+
+    """
+    The fire shifts in the grate, and the clock on the mantel ticks on.
+
+    Whoever I had thought might come, has not.
+    """
+
+    return
+
+
+label captain_day2_evening_billiard_room_empty_2:
+
+    """
+    I read on, though the words come more slowly now.
+    """
+
+    call wait_screen_transition
+
+    """
+    Nothing stirs in the corridor beyond.
+
+    The house has gone properly quiet.
+    """
+
+    return
+
+
+label captain_day2_evening_billiard_room_empty_3:
+
+    """
+    I let the book lie open on my knee and watch the fire awhile instead.
+    """
+
+    call wait_screen_transition
+
+    """
+    Still no one comes.
+    """
+
+    return
+
+
+# ------------------------------------
+#   First slot — Miss Marsh (21:00 – 21:20)
 # ------------------------------------
 label captain_day2_evening_billiard_room_nurse:
 
@@ -144,7 +211,7 @@ label captain_day2_evening_billiard_room_nurse:
     
     I wonder what made a middle-aged nurse risk coming downstairs tonight.
 
-    She had every excuses to stay in her room and yet she decided to check on who would be there.
+    She had every excuse to stay in her room, and yet she chose to come down and see who would be here.
 
     That is interesting to know.
     """ 
@@ -153,7 +220,7 @@ label captain_day2_evening_billiard_room_nurse:
 
 
 # ------------------------------------
-#   Second slot — Mr Harring (21:40 – 22:20)
+#   Second slot — Mr Harring (21:40 – 22:00)
 # ------------------------------------
 label captain_day2_evening_billiard_room_lad:
 
@@ -162,7 +229,9 @@ label captain_day2_evening_billiard_room_lad:
     """
     Ted Harring eases the door open and casts his eye round the room before stepping in.
 
-    He crosses to the chair opposite mine with a careful, studied air, and seats himself.
+    He goes straight to the bar and pours himself a glass of sherry filled to the brim.
+
+    Then he comes towards me.
     """
 
     lad """
@@ -170,25 +239,39 @@ label captain_day2_evening_billiard_room_lad:
     """
 
     """
-    He has come down here for a reason.
-
-    He is making a fair show of being at his ease, but it is plainly costing him something.
-
-    The question is whether I mean to give him what he came for, or send him back upstairs none the wiser.
+    He is making a fair show of being at his ease, but it is plain that he is really scared.
     """
 
     if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
         and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
         and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
 
+        """
+        I have a choice to make here.
+
+        I have seen enough oddities in Lady Claythorn's behaviour to truly suspect something is amiss here.
+
+        I could tell Mr Harring what I found.
+
+        He might prove a useful ally for what may come.
+
+        But if I am wrong to trust him, I might have to pay a high price.
+        """
+
         call run_menu(TimedMenu("captain_day2_evening_billiard_room_lad_menu", [
-            TimedMenuChoice("Tell him he is right to be uneasy",
+            TimedMenuChoice("Tell him about your doubts",
                 'captain_day2_evening_billiard_room_lad_agree', 0, early_exit=True),
-            TimedMenuChoice("Hold the line — nothing is amiss",
+            TimedMenuChoice("Keep pretending everything is fine",
                 'captain_day2_evening_billiard_room_lad_dismiss', 0, early_exit=True),
         ]))
 
     else:
+
+        """
+        I am worried about what is happening here as well.
+
+        But I can't really tell him that.
+        """
 
         call captain_day2_evening_billiard_room_lad_dismiss
 
@@ -196,6 +279,12 @@ label captain_day2_evening_billiard_room_lad:
 
 
 label captain_day2_evening_billiard_room_lad_dismiss:
+
+    """
+    No, I must keep my composure, and act as the tough fighter I am supposed to be.
+
+    That is the safest choice.
+    """
 
     call common_day2_evening_billiard_room_lad_captain_dismiss
 
@@ -221,25 +310,59 @@ label captain_day2_evening_billiard_room_lad_dismiss:
 label captain_day2_evening_billiard_room_lad_agree:
 
     captain """
-    You are right to be uneasy, Mr Harring.
-
-    I have been turning the day over in my own mind, and the more I do, the less it sits well with me.
+    You look uneasy, Mr Harring.
     """
 
     lad """
-    So you do think there's something behind it?
+    Well, I think we have every reason to be, don't you think?
     """
 
     captain """
-    I think there is rather more behind it than any of us can yet account for.
-
-    But it is gone eleven of the clock, and the house is shut up for the night.
-
-    Whatever has been set in motion here, we shall not unpick it now.
+    I am afraid you are probably right.
     """
 
     lad """
-    Then what should we do?
+    So you also think those deaths are suspicious?
+    """
+
+    captain """
+    I think so, yes.
+
+    But that is not the worst of it.
+
+    I have learnt things about our host that do not sit well with me.
+    """
+
+    lad """
+    Really? Such as?
+    """
+
+    captain """
+    I will spare you the details.
+    """
+
+    """
+    I do not believe he could understand them in any case.
+    """
+
+    captain """
+    But I am very confident that our host is not Lady Claythorn, but an impostor.
+    """
+
+    lad """
+    Really? But why ?
+
+    What does this all mean?
+    """
+
+    captain """
+    I am afraid I do not know more than this, but I think it is good to know.
+
+    This way we can take precautions during the night.
+    """
+
+    lad """
+    What sort of precaution?
     """
 
     captain """
@@ -247,30 +370,38 @@ label captain_day2_evening_billiard_room_lad_agree:
 
     Wedge a chair beneath your door if you must, and sleep lightly.
 
-    There is precious little more to be done at this hour.
-
     Come the morning we shall see what can be made of it.
+
+    Do you agree?
     """
 
     lad """
-    Right. Goodnight then, Captain.
+    Right. It is sensible I suppose Captain.
+
+    If you don't mind, I think I'll head up to my room right away then.
     """
 
     captain """
+    A good idea.
+
     Goodnight, Mr Harring.
+    """
+
+    lad """
+    Good night, Captain.
     """
 
     """
     He goes more steadily than he came.
 
-    Whatever else I have done tonight, I have at least not left the lad to bear his fears alone.
+    Whatever else I have done tonight, I have at least not left him to bear his fears alone.
     """
 
     return
 
 
 # ------------------------------------
-#   Third slot — Lady Claythorn (22:20 – 23:00)
+#   Third slot — Lady Claythorn (22:40 – 23:00)
 # ------------------------------------
 label captain_day2_evening_billiard_room_host:
 

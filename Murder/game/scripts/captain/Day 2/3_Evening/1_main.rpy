@@ -277,13 +277,19 @@ label captain_day2_evening:
 
     $ stop_music()
 
+    """
+    I feel it's time to turn back to my room.
+    """
+
     $ change_room("bedroom_captain", dissolve)
 
     """
     I close the door of my room behind me and turn the key in the lock.
-
-    Whatever I have learnt tonight, I shall need a clear head to make any use of it in the morning.
     """
+
+    # TODO, if captain has talk to lad and confess => He will die in his sleep? Not burned, it's been done already. Throat slit I guess then
+
+
 
     jump captain_day3_morning
 
