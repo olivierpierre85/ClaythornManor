@@ -72,19 +72,43 @@ label captain_ending_shot_butler:
     call death_screen_transition
 
     """
-    You read your opponent rightly. 
-    
+    You read your opponent rightly.
+
     A dangerous man to engage, not an ordinary butler.
-    
+
     And you went for him all the same.
 
     Years of staying on the sidelines of battles made you want to try yourself at a real one.
 
     There is a courage in that, but also folly.
-    
+
     And the bullet does not greatly distinguish between them.
 
     Your first battle will also be your last one.
+    """
+
+    jump ending_generic
+
+
+label captain_ending_throat_slit:
+
+    $ captain_details.endings.unlock('throat_slit')
+    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('throat_slit'))
+
+    call death_screen_transition
+
+    """
+    You took young Mr Harring into your confidence, and thought a locked door enough to see you safely to the morning.
+
+    A frightened young man, fresh from his first taste of real danger, cannot keep a secret long when pressed.
+
+    Your suspicions reached the wrong ears within the hour.
+
+    A bolt is no great obstacle to those who keep the keys of a house.
+
+    The man who came for you was practised, and quiet, and quite as patient as he needed to be.
+
+    You knew nothing of it until there was nothing left to know.
     """
 
     jump ending_generic

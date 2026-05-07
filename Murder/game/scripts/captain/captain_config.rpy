@@ -144,6 +144,10 @@ label init_captain:
                 "You were shot by the butler when you tried to overpower him",
                 image_file="gun_firing",
                 chapters=['saturday_evening']),
+            CharacterInformation(5, "throat_slit",
+                "Your throat was cut in your sleep after confiding in Mr Harring",
+                image_file="lord", # TODO placeholder
+                chapters=['saturday_evening']),
         ])
 
         # Character Class

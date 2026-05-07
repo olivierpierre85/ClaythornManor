@@ -285,10 +285,53 @@ label captain_day2_evening:
 
     """
     I close the door of my room behind me and turn the key in the lock.
+
+    It probably will not be easy, but I should try to sleep.
     """
 
-    # TODO, if captain has talk to lad and confess => He will die in his sleep? Not burned, it's been done already. Throat slit I guess then
+    if captain_details.threads.is_unlocked('confide_in_lad'):
 
+        """
+        I undress without lighting the lamp and lie down upon the bed.
+
+        Sleep, when it comes, comes more readily than I should have thought.
+
+        A soldier's habit, perhaps. One learns to take rest where it is offered.
+        """
+
+        call wait_screen_transition()
+
+        call change_time(2, 30)
+
+        """
+        I do not know what wakes me.
+
+        A breath of air, perhaps. A board easing under a careful foot.
+
+        The room is utterly black, and yet I know, with the certainty of a man who has slept in too many rough places, that I am not alone in it.
+        """
+
+        """
+        A weight settles on the edge of the bed.
+
+        I open my mouth to speak and a hand closes over it before any sound can leave me.
+
+        The grip is firm. Practised.
+
+        I struggle, but the arm that holds me is younger than mine, and braced for it.
+        """
+
+        pause 0.5
+
+        """
+        There is a brief, cold pressure at my throat.
+
+        No more than that.
+
+        Then a great quietness, and the room seems to fall away from me by degrees.
+        """
+
+        jump captain_ending_throat_slit
 
 
     jump captain_day3_morning
