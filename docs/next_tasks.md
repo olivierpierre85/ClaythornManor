@@ -52,8 +52,10 @@ THREAD, locked shed image
   - [ ] TEST billiard room
     - [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big problem now
     - [ ] Rewrite NURSE + Thread that leads to no nurse the next morning. while going to eat. 
-    - [ ] Rewrite Lad agree + Ending
-    - [ ] REWRITE HOST + Ending
+    - [x] Rewrite Lad agree 
+      - [ ] + Ending
+    - [ ] REWRITE HOST 
+      - [ ] + Ending
   - Add and validate tests
 - [ ] sunday -
     Normal day 3, has to find car, petrol and ... To unlock let's all leave.

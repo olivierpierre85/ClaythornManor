@@ -41,6 +41,22 @@ label init_captain:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_morning' , 'saturday_afternoon', 'saturday_evening', 'sunday_morning'],
             ),
+            CharacterInformation(
+                1, "confide_in_nurse",
+                "You confided your suspicions about Lady Claythorn to Miss Marsh",
+                content_negative="You kept your suspicions about Lady Claythorn from Miss Marsh",
+                image_file="lord", # TODO placeholder
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
+                2, "confide_in_lad",
+                "You confided your suspicions about Lady Claythorn to Mr Harring",
+                content_negative="You kept your suspicions about Lady Claythorn from Mr Harring",
+                image_file="lord", # TODO placeholder
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
         ])
 
         captain_observations = CharacterObservationList([

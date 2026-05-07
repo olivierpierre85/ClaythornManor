@@ -188,6 +188,50 @@ label captain_day2_evening_billiard_room_nurse:
 
     call common_day2_evening_billiard_room_nurse_captain_two_deaths
 
+    if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
+        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
+        and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
+
+        """
+        I have a choice to make here.
+
+        Miss Marsh strikes me as the sensible sort, and uncommonly observant in her own quiet way.
+
+        I could share with her what I have come to suspect of our hostess.
+
+        She might prove a steadier ally than most, should this house turn nastier still tonight.
+
+        But if I have misread her, the price for trusting her could be very high indeed.
+        """
+
+        call run_menu(TimedMenu("captain_day2_evening_billiard_room_nurse_menu", [
+            TimedMenuChoice("Tell her about your doubts",
+                'captain_day2_evening_billiard_room_nurse_agree', 0, early_exit=True),
+            TimedMenuChoice("Keep pretending everything is fine",
+                'captain_day2_evening_billiard_room_nurse_dismiss', 0, early_exit=True),
+        ]))
+
+    else:
+
+        """
+        I am uneasy at what is unfolding here as well.
+
+        But I cannot really tell her that.
+        """
+
+        call captain_day2_evening_billiard_room_nurse_dismiss
+
+    return
+
+
+label captain_day2_evening_billiard_room_nurse_dismiss:
+
+    """
+    No, I must keep my composure and let her go on supposing I find nothing amiss.
+
+    That is the safer choice.
+    """
+
     """
     She regards me a moment longer than I should like.
 
@@ -208,13 +252,92 @@ label captain_day2_evening_billiard_room_nurse:
     She withdraws as quietly as she came.
 
     The door clicks shut behind her, and the room is mine again.
-    
+
     I wonder what made a middle-aged nurse risk coming downstairs tonight.
 
     She had every excuse to stay in her room, and yet she chose to come down and see who would be here.
 
     That is interesting to know.
-    """ 
+    """
+
+    return
+
+
+label captain_day2_evening_billiard_room_nurse_agree:
+
+    $ captain_details.threads.unlock('confide_in_nurse')
+
+    captain """
+    Miss Marsh — before you retire, there is something I should put to you.
+    """
+
+    nurse """
+    Yes, Captain?
+    """
+
+    captain """
+    I have not been quite straight with you about these deaths.
+
+    I do not believe them to be the natural misfortunes I have made them out to be.
+
+    More than that, I have come to doubt our hostess is who she claims to be.
+    """
+
+    nurse """
+    Lady Claythorn?
+    """
+
+    captain """
+    The same.
+
+    There is no portrait of her in the gallery upstairs.
+
+    The name itself does not stand to scrutiny — Claythorn is the house, not a title.
+
+    And on the hunt this morning she handled a rifle as no shooting woman ever would.
+
+    I cannot say what stands behind it, but the lady before us is not who she says she is.
+    """
+
+    """
+    She does not start.
+
+    She does not protest.
+
+    If anything, she seems to settle, as though I have only confirmed something she had been weighing on her own.
+    """
+
+    nurse """
+    Thank you for telling me, Captain.
+
+    I had felt something was not quite right, but I had not allowed myself to put it into words.
+    """
+
+    captain """
+    Be on your guard tonight, Miss Marsh.
+
+    Wedge a chair beneath your door if you must, and sleep lightly.
+
+    Come the morning we shall see what is to be made of it.
+    """
+
+    nurse """
+    I shall, Captain.
+
+    Good night to you.
+    """
+
+    captain """
+    Good night, Miss Marsh.
+    """
+
+    """
+    She withdraws with a measured tread, and the door clicks gently shut behind her.
+
+    Whether I have done well to confide in her, only the morning will tell.
+
+    But she struck me as a steady head, and steady heads are in short supply in this house tonight.
+    """
 
     return
 
@@ -308,6 +431,8 @@ label captain_day2_evening_billiard_room_lad_dismiss:
 
 
 label captain_day2_evening_billiard_room_lad_agree:
+
+    $ captain_details.threads.unlock('confide_in_lad')
 
     captain """
     You look uneasy, Mr Harring.
