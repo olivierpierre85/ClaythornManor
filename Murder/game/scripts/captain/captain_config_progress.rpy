@@ -10,8 +10,8 @@ label captain_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_hunt", "saturday_afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_evening", "saturday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day3_morning", "sunday_morning"),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_right, "checkpoint", "captain_day3_morning", "sunday_afternoon"),
+                Chapter(image_ending_question, "ending", "poisoned", "end"),
             ],
             # Second line, ...
             [
@@ -20,6 +20,9 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "survives", "end"),
             ],
             # Row 3: strangled ending (Moody dead + confront host)
             [
@@ -38,9 +41,16 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "shot_in_woods", "saturday_afternoon"),
-                Chapter(image_checkpoint_corner_half),
+                Chapter(image_checkpoint_double_corner_half),
                 Chapter(image_ending_question, "ending", "shot_butler", "saturday_evening"),
-                
+            ],
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "throat_slitTODO", "saturday_evening"),
             ],
         ]
 
