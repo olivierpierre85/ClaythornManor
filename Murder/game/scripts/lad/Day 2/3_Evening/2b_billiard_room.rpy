@@ -111,7 +111,7 @@ label lad_day2_evening_billiard_room_captain_hypothesis_drunk:
     And I assume he had more drinks during the hunt.
     """
 
-    if lad_details.threads.is_unlocked('hunt_doctor_drunk'):
+    if current_character.text_id=="lad" and lad_details.threads.is_unlocked('hunt_doctor_drunk'):
 
         captain """
         You were with him, weren't you?

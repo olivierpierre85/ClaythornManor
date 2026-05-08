@@ -805,7 +805,9 @@ label nurse_day2_evening_billiard_room_confront:
 
 label nurse_day2_evening_billiard_room_manning:
 
-    call common_day2_evening_billiard_room_nurse_captain_two_deaths
+    call common_day2_evening_billiard_room_nurse_captain_two_deaths_1
+
+    call common_day2_evening_billiard_room_nurse_captain_two_deaths_2
 
     return
 

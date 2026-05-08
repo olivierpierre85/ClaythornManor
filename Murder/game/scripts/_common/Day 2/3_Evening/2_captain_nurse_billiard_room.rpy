@@ -19,7 +19,20 @@ label common_day2_evening_billiard_room_nurse_captain_intro:
     nurse """
     Not quite yet.
 
-    There are a few things about this weekend that don't make sense to me.
+    I am glad you are here captain.
+
+    I would like to talk about something sensitive.
+
+    I hope you don't mind.
+    """
+    
+    captain """
+    Not at all.
+    """
+    nurse """
+    Good.
+
+    You see, there are a few things about this weekend that don't make sense to me.
     """
 
     captain """
@@ -31,7 +44,7 @@ label common_day2_evening_billiard_room_nurse_captain_intro:
     return
 
 
-label common_day2_evening_billiard_room_nurse_captain_two_deaths:
+label common_day2_evening_billiard_room_nurse_captain_two_deaths_1:
 
     nurse """
     We've witnessed two deaths in as many days.
@@ -39,15 +52,9 @@ label common_day2_evening_billiard_room_nurse_captain_two_deaths:
     Doesn't it seem strange to you?
     """
 
-    if current_character.text_id == "captain":
+    return
 
-        """
-        A direct question, asked very simply.
-
-        A man with nothing to hide would dismiss it without a second thought.
-
-        So I shall do precisely that.
-        """
+label common_day2_evening_billiard_room_nurse_captain_two_deaths_2:
 
     captain """
     Not really.

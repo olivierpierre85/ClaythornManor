@@ -1,13 +1,13 @@
 # Billiard room — Saturday evening
 # Captain enters alone. The evening runs 21:00 → 23:00.
-# Each "wait" costs 20 minutes; whoever joins him depends on the time slot
+# Each "wait" costs 20 minutes. Whoever joins him depends on the time slot
 # the wait begins in:
 #   21:00 – 21:20 → Miss Marsh (nurse)
 #   21:20 – 21:40 → Empty — captain reads, no one comes
 #   21:40 – 22:00 → Mr Harring (lad), come down looking for reassurance
 #   22:00 – 22:20 → Empty — captain reads, no one comes
 #   22:20 – 22:40 → Empty — captain reads, no one comes
-#   22:40 – 23:00 → Lady Claythorn (host), packed and ready to leave;
+#   22:40 – 23:00 → Lady Claythorn (host), packed and ready to leave,
 #                   with all three host suspicions, a final chance to accuse her.
 # A captain who lingers elsewhere first will simply miss earlier visitors.
 label captain_day2_evening_billiard_room:
@@ -97,13 +97,13 @@ label captain_day2_evening_billiard_room_wait:
         call wait_screen_transition
 
         """
-        After a little while the door opens a second time.
+        After a little while, the door opens a second time.
         """
 
     else:
 
         """
-        It is getting late, yet I feel like I could wait a little more.
+        It is getting late, yet I feel as though I could wait a little longer.
         """
 
         call wait_screen_transition
@@ -133,7 +133,7 @@ label captain_day2_evening_billiard_room_empty_1:
     """
     The fire shifts in the grate, and the clock on the mantel ticks on.
 
-    Whoever I had thought might come, has not.
+    Nobody disturbs me.
     """
 
     return
@@ -159,7 +159,7 @@ label captain_day2_evening_billiard_room_empty_2:
 label captain_day2_evening_billiard_room_empty_3:
 
     """
-    I let the book lie open on my knee and watch the fire awhile instead.
+    I let the book lie open on my knee and watch the fire for a while instead.
     """
 
     call wait_screen_transition
@@ -181,12 +181,16 @@ label captain_day2_evening_billiard_room_nurse:
     """
     A few minutes pass before the door eases open behind me.
 
-    Rosalind Marsh hesitates a moment in the doorway, then crosses the room with her usual quiet composure.
+    Rosalind Marsh hesitates for a moment in the doorway, then crosses the room with her usual quiet composure.
     """
 
     call common_day2_evening_billiard_room_nurse_captain_intro
 
-    call common_day2_evening_billiard_room_nurse_captain_two_deaths
+    call common_day2_evening_billiard_room_nurse_captain_two_deaths_1
+
+    """
+    A direct question, asked very simply.
+    """
 
     if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
         and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
@@ -195,11 +199,11 @@ label captain_day2_evening_billiard_room_nurse:
         """
         I have a choice to make here.
 
-        Miss Marsh strikes me as the sensible sort, and uncommonly observant in her own quiet way.
+        Miss Marsh does not strike me as someone who could harm someone with purpose.
 
         I could share with her what I have come to suspect of our hostess.
 
-        She might prove a steadier ally than most, should this house turn nastier still tonight.
+        She might prove an ally, should I need one later.
 
         But if I have misread her, the price for trusting her could be very high indeed.
         """
@@ -216,7 +220,9 @@ label captain_day2_evening_billiard_room_nurse:
         """
         I am uneasy at what is unfolding here as well.
 
-        But I cannot really tell her that.
+        But I do not have enough tangible evidence to prove it.
+
+        So the safest course is to pretend everything is fine.
         """
 
         call captain_day2_evening_billiard_room_nurse_dismiss
@@ -226,21 +232,18 @@ label captain_day2_evening_billiard_room_nurse:
 
 label captain_day2_evening_billiard_room_nurse_dismiss:
 
-    """
-    No, I must keep my composure and let her go on supposing I find nothing amiss.
-
-    That is the safer choice.
-    """
+    
+    call common_day2_evening_billiard_room_nurse_captain_two_deaths_2
 
     """
     She regards me a moment longer than I should like.
-
-    She did not believe a word of it.
-
-    But she knows better than to press me on it tonight.
     """
 
     nurse """
+    Well, in that case, I am quite tired.
+
+    I should retire.
+
     Good night, Captain.
     """
 
@@ -276,7 +279,7 @@ label captain_day2_evening_billiard_room_nurse_agree:
     """
 
     captain """
-    I have not been quite straight with you about these deaths.
+    I have not been entirely straight with you about these deaths.
 
     I do not believe them to be the natural misfortunes I have made them out to be.
 
@@ -296,7 +299,7 @@ label captain_day2_evening_billiard_room_nurse_agree:
 
     And on the hunt this morning she handled a rifle as no shooting woman ever would.
 
-    I cannot say what stands behind it, but the lady before us is not who she says she is.
+    I cannot say what lies behind it, but the lady before us is not who she says she is.
     """
 
     """
@@ -318,7 +321,7 @@ label captain_day2_evening_billiard_room_nurse_agree:
 
     Wedge a chair beneath your door if you must, and sleep lightly.
 
-    Come the morning we shall see what is to be made of it.
+    Come the morning, we shall see what is to be made of it.
     """
 
     nurse """
@@ -358,11 +361,11 @@ label captain_day2_evening_billiard_room_lad:
     """
 
     lad """
-    Captain. Could I have a word?
+    Captain, could I have a word?
     """
 
     """
-    He is making a fair show of being at his ease, but it is plain that he is really scared.
+    He is making a fair show of being at his ease, but it is plain that he is quite frightened.
     """
 
     if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
@@ -413,9 +416,9 @@ label captain_day2_evening_billiard_room_lad_dismiss:
 
     """
     He looks at me a moment longer than is comfortable.
-
-    Whatever he came for, he is not going to get it from me tonight.
     """
+
+    call lad_day2_evening_billiard_room_captain_hypothesis_drunk
 
     call common_day2_evening_billiard_room_lad_captain_close
 
@@ -447,7 +450,7 @@ label captain_day2_evening_billiard_room_lad_agree:
     """
 
     lad """
-    So you also think those deaths are suspicious?
+    So you also think these deaths are suspicious?
     """
 
     captain """
@@ -474,16 +477,14 @@ label captain_day2_evening_billiard_room_lad_agree:
     But I am very confident that our host is not Lady Claythorn, but an impostor.
     """
 
-    lad """
-    Really? But why ?
+    Really? But why?
 
     What does this all mean?
     """
 
-    captain """
-    I am afraid I do not know more than this, but I think it is good to know.
+    I am afraid I do not know more than this, but it is as well to be informed.
 
-    This way we can take precautions during the night.
+    In this way, we can take precautions during the night.
     """
 
     lad """
@@ -501,15 +502,17 @@ label captain_day2_evening_billiard_room_lad_agree:
     """
 
     lad """
-    Right. It is sensible I suppose Captain.
+    Right.
 
-    If you don't mind, I think I'll head up to my room right away then.
+    It is sensible, I suppose, Captain.
+
+    If you don't mind, I think I'll head up to my room straight away, then.
     """
 
     captain """
     A good idea.
 
-    Goodnight, Mr Harring.
+    Good night, Mr Harring.
     """
 
     lad """
@@ -571,7 +574,7 @@ label captain_day2_evening_billiard_room_host:
 
         She cannot shoot, nor keep a proper table.
 
-        And now she stands before me, packed and bound for the door at near eleven of the clock, with two of her guests dead beneath her roof.
+        And now she stands before me, packed and bound for the door at near eleven o'clock, with two of her guests dead beneath her roof.
 
         If I am to put it to her, it must be now.
         """
@@ -624,7 +627,7 @@ label captain_day2_evening_billiard_room_host_accuse:
 
     You are styled Lady Claythorn, and yet Claythorn is the name of the house, not of any title I have ever heard of.
 
-    On the hunt this morning you handled a rifle as no shooting woman would.
+    On the hunt this morning, you handled a rifle as no shooting woman would.
 
     And tonight, with two of your guests dead beneath your roof, you are dressed for the road.
     """
@@ -668,7 +671,9 @@ label captain_day2_evening_billiard_room_host_accuse:
     """
 
     host """
-    I should sit by the fire if I were you, Captain. Finish your book.
+    I should sit by the fire if I were you, Captain.
+
+    Finish your book.
 
     Whatever has been arranged for this house, it is not arranged for you.
 
@@ -695,7 +700,7 @@ label captain_day2_evening_billiard_room_host_silent:
     """
     I let her go.
 
-    A packed case and a startled face are not enough to set against a hostess in her own house, not at near eleven at night, not with the only other witnesses asleep upstairs.
+    A packed case and a startled face are not enough to set against a hostess in her own house, not at near eleven o'clock, not with the only other witnesses asleep upstairs.
 
     She gathers the case and goes without another word.
 
