@@ -477,11 +477,13 @@ label captain_day2_evening_billiard_room_lad_agree:
     But I am very confident that our host is not Lady Claythorn, but an impostor.
     """
 
+    lad """
     Really? But why?
 
     What does this all mean?
     """
 
+    captain """
     I am afraid I do not know more than this, but it is as well to be informed.
 
     In this way, we can take precautions during the night.
