@@ -7,30 +7,17 @@ Or just : Captain, Broken?
 BUG??? Or by design. WHY Is there a call the generic LAD in psychic day 1 billiard room?
 
 
-Should we name the butler now that is a has a role?
-
 TRY CONSOLE Add on
 
 ## Write Story: Captain (Sushil Sinha)
 
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
 
-
-IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill...
+IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill. OR LOVER of Psychic, they met in service?
 
 INTUITION WHERE to place it? 
 
 UNLOCKS Lady
-
-
-Ted harring not barricading, just not answering 
-
-Confess to Ted, dies
-
-Confess to nurse, but she doesn't trust you back? You might not just see her in the morning
-
-Confront host, killed by butler like the woods 
-
 
 
 How to fully unlock Host? Both ending needed?
@@ -58,6 +45,10 @@ THREAD, locked shed image
       - [ ] + Ending
   - Add and validate tests
 - [ ] sunday -
+- [ ] Confess to nurse, but she doesn't trust you back? You might not just see her in the morning
+
+Confront host, killed by butler like the woods 
+
     Normal day 3, has to find car, petrol and ... To unlock let's all leave.
     If let's all leave, food is taken and dies while driving, poisoned
     Intuition, leave alone the cowardly exit. Lead to captain survives alone, 

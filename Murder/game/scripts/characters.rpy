@@ -62,6 +62,9 @@ label init_characters:
 
         char_list_flat = [lad_details, doctor_details, host_details, drunk_details, psychic_details, broken_details, captain_details, nurse_details]
 
+        if is_butler_visible:
+            char_list_flat.append(butler_details)
+
     return
 
 # LABELS

@@ -112,6 +112,8 @@ default full_testing_mode_unlocked_threads = []
 
 default drunk_mode = False
 
+default is_butler_visible = False
+
 
 # My config variables
 
@@ -437,6 +439,7 @@ label init_story_variables:
     call init_host
     call init_broken
     call init_drunk
-    
+    call init_butler
+
     return
 
