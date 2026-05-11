@@ -180,7 +180,12 @@ init -100 python:
                                 notify_sound = "audio/sound_effects/writing_short.ogg"
 
                         if notify_text:
-                            renpy.notify(notify_text)
+                            if getattr(info, "image_file", None):
+                                renpy.hide_screen('notify')
+                                renpy.show_screen('thread_unlock_notify', message=notify_text, image_file=info.image_file)
+                                renpy.restart_interaction()
+                            else:
+                                renpy.notify(notify_text)
                         if notify_sound:
                             renpy.play(notify_sound, "sound")
 

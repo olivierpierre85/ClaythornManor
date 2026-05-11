@@ -1359,6 +1359,21 @@ screen notify(message):
 
     timer 5 action Hide('notify')
 
+screen thread_unlock_notify(message, image_file=None):
+
+    zorder 1000
+    style_prefix "notify"
+
+    frame at notify_appear:
+        vbox:
+            spacing 14
+            xalign 0.5
+            text "[message!tq]" xalign 0.5
+            if image_file:
+                add Transform("images/info_cards/" + image_file + ".webp", zoom=0.7) xalign 0.5
+
+    timer 5 action Hide('thread_unlock_notify')
+
 transform notify_appear:
     on show:
         alpha 0
