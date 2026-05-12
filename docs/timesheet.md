@@ -9,11 +9,13 @@
 | **Broken**     | Jun/Jul |             Jun 01 [ ]              |   Jun 08 [ ]   |        Jun 15 [ ]         |    Jun 22 [ ]    | Jun 29 [ ] | Jul 06 [ ] |
 | *🏖 Vacation*   | Jul     |                                     |                |                           |                  |            |            |
 | **Host**       | Jul/Aug |             Jul 13 [ ]              |   Jul 20 [ ]   |        Jul 27 [ ]         |    Aug 03 [ ]    | Aug 10 [ ] | Aug 17 [ ] |
-| **Drunk**      | Aug/Sep |             Aug 24 [ ]              |   Aug 31 [ ]   |        Sep 07 [ ]         |    Sep 14 [ ]    | Sep 21 [ ] | Sep 28 [ ] |
+| *🏖 Vacation*   | Aug     |                                     |                |                           |                  |            |            |
+| **Drunk**      | Aug/Oct |             Aug 31 [ ]              |   Sep 07 [ ]   |        Sep 14 [ ]         |    Sep 21 [ ]    | Sep 28 [ ] | Oct 05 [ ] |
 | *🏖 Vacation*   | Oct     |                                     |                |                           |                  |            |            |
-| **REAL STORY** | Oct     |           End in october            |
+| **Butler**     | Oct/Nov |             Oct 19 [ ]              |   Oct 26 [ ]   |        Nov 02 [ ]         |    Nov 09 [ ]    | Nov 16 [ ] | Nov 23 [ ] |
+| **REAL STORY** | Nov/Dec |           End in december           |
 
-Start real work again : October (start looking in august)
+Start real work again : November (start looking in september)
 
 ---
 
@@ -34,8 +36,9 @@ Start real work again : October (start looking in august)
 - **Captain**: 05/2026
 - **Broken**: 07/2026
 - **Host**: 08/2026
-- **Drunk**: 09/2026
-- Final Polish 10/2026 => Full game ready for October
+- **Drunk**: 10/2026
+- **Butler**: 11/2026
+- Final Polish 12/2026 => Full game ready for December
 
 
 
