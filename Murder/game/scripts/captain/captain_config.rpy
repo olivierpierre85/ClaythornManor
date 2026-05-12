@@ -6,6 +6,8 @@ label init_captain:
 
     call captain_day2_evening_map_menu
 
+    call captain_day3_morning_map_menu
+
     # call captain_config_menu
 
     python:
@@ -15,6 +17,7 @@ label init_captain:
             # MAP Menus
             "day1_evening_map_menu" : captain_day1_evening_map_menu,
             "day2_evening_map_menu" : captain_day2_evening_map_menu,
+            "day3_morning_map_menu" : captain_day3_morning_map_menu,
 
             # Evening day 1
             "day1_evening_billiard_room_visited" : False,
@@ -30,6 +33,12 @@ label init_captain:
             "visited_attic_males_room" : False,
             "visited_attic_females_room" : False,
             "visited_attic_butler_room" : False,
+
+            # Morning day 3
+            "day3_morning_downstairs_visited" : False,
+            "day3_morning_car_seen" : False,
+            "day3_morning_gun_room_visited" : False,
+            "day3_morning_drunk_checked" : False,
         }
 
         captain_important_choices = CharacterImportantChoiceList([
