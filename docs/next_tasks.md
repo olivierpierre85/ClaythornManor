@@ -15,14 +15,9 @@ Detailed narrative logic and branches have been moved to: [story_outline.md](fil
 
 IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill. OR LOVER of Psychic, they met in service?
 
-INTUITION WHERE to place it? 
+UNLOCKS HOST Rethink with Broken
 
-UNLOCKS Lady
-
-
-How to fully unlock Host? Both ending needed?
-
-Maybe twist, add a character the butler. Yes there is a hidden butler, if you find something about him, it unlocks him. Only captain, host, broken and drunk could find info.. With new things to unlock. And only one possible path, one choice at the beginning. I'll d what you want... Character selection 
+Maybe twist, add a character the butler. Yes there is a hidden butler, if you find something about him, it unlocks him OR, WHEN ALL THE CHARACTER HAVE BEEN SAVED. Only captain, host, broken and drunk could find info.. With new things to unlock. And only one possible path, one choice at the beginning. I'll d what you want... Character selection => I
 
 THREAD, locked shed image
 
@@ -30,7 +25,6 @@ THREAD, locked shed image
 - [x] Friday Evening
 - [x] Saturday Morning
 - [ ] Saturday Hunt - **almost**
-  - [ ] insiST that captain SINHA is taking charge (strecher, .... it's the only place it shouldn't be passed over)
   - [ ] TODO: ADD info unlocks
     - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
     - [ ] NO unlock for Thomas Moody ? Or find something else?
