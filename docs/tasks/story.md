@@ -31,6 +31,7 @@ Action: this is a source bug, not a test gap. Once fixed, add a saturday_evening
 
 ### Ideas to think over (optional)
 
+- [ ] I the complicated way to meet the captain on day 3 necessary? Overcomplicated thing for no reason? Maybe just meet him at the end of the time has passed (but then we need a way to skip time?)
 - [ ] Make him afraid of ghosts.
     - [ ] Scared to go to the attic. Let him go once then cancel all attic choices.
 - [ ] "So I tell her my story" => Only time doing that? Is it necessary?

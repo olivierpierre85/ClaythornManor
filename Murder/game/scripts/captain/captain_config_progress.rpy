@@ -50,7 +50,7 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "throat_slitTODO", "saturday_evening"),
+                Chapter(image_ending_question, "ending", "throat_cut", "saturday_evening"),
             ],
         ]
 

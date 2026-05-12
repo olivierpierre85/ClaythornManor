@@ -331,7 +331,7 @@ label captain_day2_evening:
         Then a great quietness, and the room seems to fall away from me by degrees.
         """
 
-        jump captain_ending_throat_slit
+        jump captain_ending_throat_cut
 
 
     jump captain_day3_morning

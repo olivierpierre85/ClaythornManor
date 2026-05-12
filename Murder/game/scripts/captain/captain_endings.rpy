@@ -90,10 +90,10 @@ label captain_ending_shot_butler:
     jump ending_generic
 
 
-label captain_ending_throat_slit:
+label captain_ending_throat_cut:
 
-    $ captain_details.endings.unlock('throat_slit')
-    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('throat_slit'))
+    $ captain_details.endings.unlock('throat_cut')
+    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('throat_cut'))
 
     call death_screen_transition
 
