@@ -1362,7 +1362,7 @@ screen notify(message):
 screen thread_unlock_notify(message, image_file=None):
 
     zorder 1000
-    style_prefix "notify"
+    style_prefix "thread_unlock_notify"
 
     frame at notify_appear:
         vbox:
@@ -1392,6 +1392,20 @@ style notify_frame:
     padding gui.notify_frame_borders.padding
 
 style notify_text:
+    properties gui.text_properties("notify")
+
+
+style thread_unlock_notify_frame is empty
+style thread_unlock_notify_text is gui_text
+
+style thread_unlock_notify_frame:
+    ypos 0
+    xalign 0.5
+
+    background Frame("gui/notify_vertical.png", Borders(12, 128, 12, 128), tile=gui.frame_tile)
+    padding (24, 32, 24, 80)
+
+style thread_unlock_notify_text:
     properties gui.text_properties("notify")
 
 
