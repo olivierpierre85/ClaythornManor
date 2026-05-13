@@ -1,7 +1,9 @@
 # Billiard room — Saturday evening — first slot (21:00 – 21:20)
-# Miss Marsh comes down. The captain may confide his suspicions of the host,
-# or keep up appearances.
-label captain_day2_evening_billiard_room_nurse:
+# Miss Marsh comes down. Branch chosen by the top-level menu in
+# 2_billiard_room.rpy:
+#   - with_suspicions: captain may confide his doubts about the host
+#   - no_suspicions: captain has no firm evidence, dismisses the line of talk
+label captain_day2_evening_billiard_room_nurse_intro:
 
     call captain_day2_evening_billiard_room_wait
 
@@ -19,40 +21,48 @@ label captain_day2_evening_billiard_room_nurse:
     A direct question, asked very simply.
     """
 
-    if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
-        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
-        and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
+    return
 
-        """
-        I have a choice to make here.
 
-        Miss Marsh does not strike me as someone who could harm someone with purpose.
+label captain_day2_evening_billiard_room_nurse_with_suspicions:
 
-        I could share with her what I have come to suspect of our hostess.
+    call captain_day2_evening_billiard_room_nurse_intro
 
-        She might prove an ally, should I need one later.
+    """
+    I have a choice to make here.
 
-        But if I have misread her, the price for trusting her could be very high indeed.
-        """
+    Miss Marsh does not strike me as someone who could harm someone with purpose.
 
-        call run_menu(TimedMenu("captain_day2_evening_billiard_room_nurse_menu", [
-            TimedMenuChoice("Tell her about your doubts",
-                'captain_day2_evening_billiard_room_nurse_agree', 0, early_exit=True),
-            TimedMenuChoice("Keep pretending everything is fine",
-                'captain_day2_evening_billiard_room_nurse_dismiss', 0, early_exit=True),
-        ]))
+    I could share with her what I have come to suspect of our hostess.
 
-    else:
+    She might prove an ally, should I need one later.
 
-        """
-        I am uneasy at what is unfolding here as well.
+    But if I have misread her, the price for trusting her could be very high indeed.
+    """
 
-        But I do not have enough tangible evidence to prove it.
+    call run_menu(TimedMenu("captain_day2_evening_billiard_room_nurse_menu", [
+        TimedMenuChoice("Tell her about your doubts",
+            'captain_day2_evening_billiard_room_nurse_agree', 0, early_exit=True),
+        TimedMenuChoice("Keep pretending everything is fine",
+            'captain_day2_evening_billiard_room_nurse_dismiss', 0, early_exit=True),
+    ]))
 
-        So the safest course is to pretend everything is fine.
-        """
+    return
 
-        call captain_day2_evening_billiard_room_nurse_dismiss
+
+label captain_day2_evening_billiard_room_nurse_no_suspicions:
+
+    call captain_day2_evening_billiard_room_nurse_intro
+
+    """
+    I am uneasy at what is unfolding here as well.
+
+    But I do not have enough tangible evidence to prove it.
+
+    So the safest course is to pretend everything is fine.
+    """
+
+    call captain_day2_evening_billiard_room_nurse_dismiss
 
     return
 
@@ -162,7 +172,7 @@ label captain_day2_evening_billiard_room_nurse_agree:
 
     Whether I have done well to confide in her, only the morning will tell..
     """
-    
+
     $ captain_details.threads.unlock('confide_in_nurse')
 
     return

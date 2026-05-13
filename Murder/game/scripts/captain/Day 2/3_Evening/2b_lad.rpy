@@ -1,7 +1,9 @@
 # Billiard room — Saturday evening — second slot (21:40 – 22:00)
-# Mr Harring comes down looking for reassurance. The captain may confide his
-# suspicions of the host, or keep up appearances.
-label captain_day2_evening_billiard_room_lad:
+# Mr Harring comes down looking for reassurance. Branch chosen by the
+# top-level menu in 2_billiard_room.rpy:
+#   - with_suspicions: captain may confide his doubts about the host
+#   - no_suspicions: captain keeps up the soldierly front
+label captain_day2_evening_billiard_room_lad_intro:
 
     call captain_day2_evening_billiard_room_wait
 
@@ -21,38 +23,46 @@ label captain_day2_evening_billiard_room_lad:
     He is making a fair show of being at his ease, but it is plain that he is quite frightened.
     """
 
-    if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
-        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
-        and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
+    return
 
-        """
-        I have a choice to make here.
 
-        I have seen enough oddities in Lady Claythorn's behaviour to truly suspect something is amiss here.
+label captain_day2_evening_billiard_room_lad_with_suspicions:
 
-        I could tell Mr Harring what I found.
+    call captain_day2_evening_billiard_room_lad_intro
 
-        He might prove a useful ally for what may come.
+    """
+    I have a choice to make here.
 
-        But if I am wrong to trust him, I might have to pay a high price.
-        """
+    I have seen enough oddities in Lady Claythorn's behaviour to truly suspect something is amiss here.
 
-        call run_menu(TimedMenu("captain_day2_evening_billiard_room_lad_menu", [
-            TimedMenuChoice("Tell him about your doubts",
-                'captain_day2_evening_billiard_room_lad_agree', 0, early_exit=True),
-            TimedMenuChoice("Keep pretending everything is fine",
-                'captain_day2_evening_billiard_room_lad_dismiss', 0, early_exit=True),
-        ]))
+    I could tell Mr Harring what I found.
 
-    else:
+    He might prove a useful ally for what may come.
 
-        """
-        I am worried about what is happening here as well.
+    But if I am wrong to trust him, I might have to pay a high price.
+    """
 
-        But I can't really tell him that.
-        """
+    call run_menu(TimedMenu("captain_day2_evening_billiard_room_lad_menu", [
+        TimedMenuChoice("Tell him about your doubts",
+            'captain_day2_evening_billiard_room_lad_agree', 0, early_exit=True),
+        TimedMenuChoice("Keep pretending everything is fine",
+            'captain_day2_evening_billiard_room_lad_dismiss', 0, early_exit=True),
+    ]))
 
-        call captain_day2_evening_billiard_room_lad_dismiss
+    return
+
+
+label captain_day2_evening_billiard_room_lad_no_suspicions:
+
+    call captain_day2_evening_billiard_room_lad_intro
+
+    """
+    I am worried about what is happening here as well.
+
+    But I can't really tell him that.
+    """
+
+    call captain_day2_evening_billiard_room_lad_dismiss
 
     return
 
