@@ -22,7 +22,7 @@ label captain_day2_evening_billiard_room:
 
         The decanters stand untouched on the side.
 
-        The glasses have been laid out in expectation of a company that has chosen not to come.
+        The glasses have been laid out in expectation of company that has chosen not to come.
 
         I am quite alone.
         """
@@ -91,11 +91,11 @@ label captain_day2_evening_billiard_room_wait:
     if captain_details.saved_variables["day2_evening_billiard_encounters"] == 0:
 
         """
-        I sat down on chair by the fire.
+        I sit down on a chair by the fire.
         
         On the table next to it is a book: "The Seven and a Half Lives of Evelyn Softhovel".
 
-        It is not at all the sort of thing I should choose for myself, but the evening offers little else, so I grab it.
+        It is not at all the sort of thing I should choose for myself, but the evening offers little else, so I take it up.
         """
 
         call wait_screen_transition
@@ -103,7 +103,7 @@ label captain_day2_evening_billiard_room_wait:
     elif captain_details.saved_variables["day2_evening_billiard_encounters"] == 1:
 
         """
-        I turn a few other pages, more for the look of the thing than to read.
+        I turn a few more pages, more for the look of the thing than to read.
         """
 
         call wait_screen_transition
@@ -173,7 +173,7 @@ label captain_day2_evening_billiard_room_empty_2:
 label captain_day2_evening_billiard_room_empty_3:
 
     """
-    I am really into the book now, and pay attention to little else.
+    I am quite absorbed in the book now, and pay attention to little else.
     """
 
     call wait_screen_transition
