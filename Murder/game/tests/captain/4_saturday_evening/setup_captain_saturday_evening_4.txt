@@ -124,23 +124,31 @@ And there is precious little I can learn if I keep to my room.
 Map Choice: Look in on the billiard room
 The billiard room is lit much as it was last night, but the warmth of the place has gone out of it.
 The decanters stand untouched on the side.
-The glasses have been laid out in expectation of a company that has chosen not to come.
+The glasses have been laid out in expectation of company that has chosen not to come.
 I am quite alone.
 Menu Choice: Wait and see who comes
-I take down a book from the shelf and settle into a chair by the fire.
+I sit down on a chair by the fire.
+On the table next to it is a book: "The Seven and a Half Lives of Evelyn Softhovel".
+It is not at all the sort of thing I should choose for myself, but the evening offers little else, so I take it up.
 A few minutes pass before the door eases open behind me.
-Rosalind Marsh hesitates a moment in the doorway, then crosses the room with her usual quiet composure.
+Rosalind Marsh hesitates for a moment in the doorway, then crosses the room with her usual quiet composure.
 Sushil Sinha: Miss Marsh.
 Sushil Sinha: I thought everyone had retired.
 Rosalind Marsh: Not quite yet.
-Rosalind Marsh: There are a few things about this weekend that don't make sense to me.
+Rosalind Marsh: I am glad you are here captain.
+Rosalind Marsh: I would like to talk about something sensitive.
+Rosalind Marsh: I hope you don't mind.
+Sushil Sinha: Not at all.
+Rosalind Marsh: Good.
+Rosalind Marsh: You see, there are a few things about this weekend that don't make sense to me.
 Sushil Sinha: Oh?
 Sushil Sinha: Such as?
 Rosalind Marsh: We've witnessed two deaths in as many days.
 Rosalind Marsh: Doesn't it seem strange to you?
 A direct question, asked very simply.
-A man with nothing to hide would dismiss it without a second thought.
-So I shall do precisely that.
+I am uneasy at what is unfolding here as well.
+But I do not have enough tangible evidence to prove it.
+So the safest course is to pretend everything is fine.
 Sushil Sinha: Not really.
 Sushil Sinha: They seem quite natural to me, Miss Marsh.
 Sushil Sinha: Thomas Moody died of injuries he got during the war.
@@ -161,24 +169,32 @@ Sushil Sinha: The doors in this house are solid oak.
 Sushil Sinha: He is going nowhere.
 Rosalind Marsh: That is reassuring.
 She regards me a moment longer than I should like.
-She did not believe a word of it.
-But she knows better than to press me on it tonight.
+Rosalind Marsh: Well, in that case, I am quite tired.
+Rosalind Marsh: I should retire.
 Rosalind Marsh: Good night, Captain.
 Sushil Sinha: Good night, Miss Marsh.
 She withdraws as quietly as she came.
 The door clicks shut behind her, and the room is mine again.
 I wonder what made a middle-aged nurse risk coming downstairs tonight.
-She had every excuses to stay in her room and yet she decided to check on who would be there.
+She had every excuse to stay in her room, and yet she chose to come down and see who would be here.
 That is interesting to know.
 Menu Choice: Wait and see who comes
-I turn another page, more for the look of the thing than to read.
-After a little while the door opens a second time.
+I turn back to my book and try to settle to it.
+A page or two go by, easily enough.
+The fire shifts in the grate, and the clock on the mantel ticks on.
+Nobody disturbs me.
+Menu Choice: Wait and see who comes
+I turn a few more pages, more for the look of the thing than to read.
+After a little while, the door opens a second time.
 Ted Harring eases the door open and casts his eye round the room before stepping in.
-He crosses to the chair opposite mine with a careful, studied air, and seats himself.
-Ted Harring: Captain. Could I have a word?
-He has come down here for a reason.
-He is making a fair show of being at his ease, but it is plainly costing him something.
-The question is whether I mean to give him what he came for, or send him back upstairs none the wiser.
+He goes straight to the bar and pours himself a glass of sherry filled to the brim.
+Then he comes towards me.
+Ted Harring: Captain, could I have a word?
+He is making a fair show of being at his ease, but it is plain that he is quite frightened.
+I am worried about what is happening here as well.
+But I can't really tell him that.
+No, I must keep my composure, and act as the tough fighter I am supposed to be.
+That is the safest choice.
 Sushil Sinha: Good evening, Mr Harring.
 Sushil Sinha: It's nice to see someone else who isn't scared out of their wits tonight.
 Sushil Sinha: The reaction of the others seems quite ridiculous to me.
@@ -204,7 +220,14 @@ Sushil Sinha: Once you remove fear from the equation, you'll realise there's not
 Sushil Sinha: Don't you agree?
 Sushil Sinha: Or do you have tangible evidence to believe otherwise?
 He looks at me a moment longer than is comfortable.
-Whatever he came for, he is not going to get it from me tonight.
+Ted Harring: I doubt that Samuel Manning was truly drunk at the time of the accident.
+Sushil Sinha: Really?
+Sushil Sinha: He seemed quite drunk to me.
+Ted Harring: Yes, early in the morning. And then again before the accident.
+Ted Harring: But not right before the hunt began.
+Sushil Sinha: If that's true, maybe breakfast sobered him up.
+Sushil Sinha: And I assume he had more drinks during the hunt.
+Ted Harring: I suppose so.
 Ted Harring: Okay. Maybe there isn't anything particularly suspicious after all.
 Sushil Sinha: Precisely.
 Sushil Sinha: Two unfortunate, unrelated accidents is the simplest and most logical explanation here.
@@ -215,22 +238,38 @@ He drains his glass and withdraws without another word.
 A young man can be told a great many things, if one is firm about it.
 Whether it does him any good is another matter.
 Menu Choice: Wait and see who comes
-It is getting late, yet I feel like I could wait a little more.
+I read on, though the words come more slowly now.
+Nothing stirs in the corridor beyond.
+The house has gone properly quiet.
+Menu Choice: Wait and see who comes
+I am quite absorbed in the book now, and pay attention to little else.
+Still no one comes.
+Menu Choice: Wait and see who comes
+It is getting late, yet I feel as though I could wait a little longer.
+Mostly because I cannot set the book down.
 The door opens a third time — and stops short.
-Lady Claythorn is on the threshold, and the sight of me has brought her up at once.
+Lady Claythorn pauses on the threshold, and the sight of me brings her up at once.
 For an instant her face is quite undefended.
-Her travelling coat is buttoned to the throat. A small leather case stands at her feet.
+She wears her travelling coat, buttoned to the throat.
 She had not expected to find anyone in this room.
 Lady Claythorn: Captain.
 Lady Claythorn: I... did not realise anyone was still up.
 Sushil Sinha: Evidently.
-She recovers herself with admirable speed, but the case at her feet is not so easily concealed.
-Wherever she had thought to be at this hour, it was not in the manor.
-Lady Claythorn: I had thought to take a turn outside before retiring.
-Lady Claythorn: The air has been so close in the house all day.
-Sushil Sinha: Of course, Lady Claythorn.
-It is a poor lie, told with a packed case at her feet.
-But I have not enough in hand to challenge her on it.
-She gathers up her case and is gone before I have set down my book.
+Lady Claythorn: Forgive me. I came down for the book I left here earlier.
+Lady Claythorn: I see you've taken it up — please, do keep at it. I shan't disturb you.
+The book in my lap is one I took down from the shelf myself this evening.
+She has not left it anywhere.
+It is excuse enough on its face — a thin one, but a hostess in her own house may name any book she likes.
+The coat is not so easily explained.
+A travelling coat, buttoned for the road at near eleven o'clock — and not so much as a bag with her to give the lie away.
+Wherever she had thought to be at this hour, it was not in her bed.
+I should ask her why a woman going up to bed has need of a travelling coat.
+But I have no proof of anything — only a coat, and a feeling.
+To set that against a hostess in her own house would be unpardonable.
+Sushil Sinha: Of course, my lady. Don't let me keep you.
+She gives the smallest of nods, and is gone before I have set down my book.
+The door clicks shut.
+Whatever was waiting for her at this hour, she will reach it without my interference.
+I feel it's time to turn back to my room.
 I close the door of my room behind me and turn the key in the lock.
-Whatever I have learnt tonight, I shall need a clear head to make any use of it in the morning.
+It probably will not be easy, but I should try to sleep.

@@ -25,32 +25,47 @@
         {
             "menu": "captain_day2_evening_billiard_room_menu",
             "selected": "Wait and see who comes",
-            "redirect": "captain_day2_evening_billiard_room_nurse"
+            "redirect": "captain_day2_evening_billiard_room_nurse_with_suspicions"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_nurse_menu",
+            "selected": "Tell her about your doubts",
+            "redirect": "captain_day2_evening_billiard_room_nurse_agree"
         },
         {
             "menu": "captain_day2_evening_billiard_room_menu",
             "selected": "Wait and see who comes",
-            "redirect": "captain_day2_evening_billiard_room_lad"
+            "redirect": "captain_day2_evening_billiard_room_empty_1"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_lad_with_suspicions"
         },
         {
             "menu": "captain_day2_evening_billiard_room_lad_menu",
-            "selected": "Tell him he is right to be uneasy",
+            "selected": "Tell him about your doubts",
             "redirect": "captain_day2_evening_billiard_room_lad_agree"
         },
         {
             "menu": "captain_day2_evening_billiard_room_menu",
             "selected": "Wait and see who comes",
-            "redirect": "captain_day2_evening_billiard_room_host"
+            "redirect": "captain_day2_evening_billiard_room_empty_2"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_empty_3"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_host_with_suspicions"
         },
         {
             "menu": "captain_day2_evening_billiard_room_host_menu",
             "selected": "Confront her with what I know",
             "redirect": "captain_day2_evening_billiard_room_host_accuse"
-        },
-        {
-            "menu": "captain_day2_evening_billiard_room_menu",
-            "selected": "Leave the room",
-            "redirect": "generic_cancel"
         }
     ]
 }

@@ -20,6 +20,15 @@
       "console": "integratedTerminal"
     },
     {
+      "name": "Ren'Py: Regenerate dialogue.tab",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/dummy.py",
+      "preLaunchTask": "Ren'Py: Regenerate dialogue.tab",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
       "name": "Dialogue Coverage: by character",
       "type": "debugpy",
       "request": "launch",

@@ -25,32 +25,47 @@
         {
             "menu": "captain_day2_evening_billiard_room_menu",
             "selected": "Wait and see who comes",
-            "redirect": "captain_day2_evening_billiard_room_nurse"
+            "redirect": "captain_day2_evening_billiard_room_nurse_with_suspicions"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_nurse_menu",
+            "selected": "Keep pretending everything is fine",
+            "redirect": "captain_day2_evening_billiard_room_nurse_dismiss"
         },
         {
             "menu": "captain_day2_evening_billiard_room_menu",
             "selected": "Wait and see who comes",
-            "redirect": "captain_day2_evening_billiard_room_lad"
+            "redirect": "captain_day2_evening_billiard_room_empty_1"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_lad_with_suspicions"
         },
         {
             "menu": "captain_day2_evening_billiard_room_lad_menu",
-            "selected": "Hold the line — nothing is amiss",
+            "selected": "Keep pretending everything is fine",
             "redirect": "captain_day2_evening_billiard_room_lad_dismiss"
         },
         {
             "menu": "captain_day2_evening_billiard_room_menu",
             "selected": "Wait and see who comes",
-            "redirect": "captain_day2_evening_billiard_room_host"
+            "redirect": "captain_day2_evening_billiard_room_empty_2"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_empty_3"
+        },
+        {
+            "menu": "captain_day2_evening_billiard_room_menu",
+            "selected": "Wait and see who comes",
+            "redirect": "captain_day2_evening_billiard_room_host_with_suspicions"
         },
         {
             "menu": "captain_day2_evening_billiard_room_host_menu",
             "selected": "Let her go and say nothing",
             "redirect": "captain_day2_evening_billiard_room_host_silent"
-        },
-        {
-            "menu": "captain_day2_evening_billiard_room_menu",
-            "selected": "Leave the room",
-            "redirect": "generic_cancel"
         }
     ]
 }

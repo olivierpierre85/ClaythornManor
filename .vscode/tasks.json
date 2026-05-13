@@ -147,6 +147,25 @@
       "problemMatcher": []
     },
     {
+      "label": "Ren'Py: Regenerate dialogue.tab",
+      "type": "process",
+      "command": "C:\\Program Files\\renpy-8.4.1-sdk\\lib\\py3-windows-x86_64\\python.exe",
+      "args": [
+        "C:\\Program Files\\renpy-8.4.1-sdk\\renpy.py",
+        "C:\\Projects\\ClaythornManor\\Murder",
+        "dialogue",
+        "None"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Dialogue Coverage: Check by character",
       "type": "process",
       "command": "python",
