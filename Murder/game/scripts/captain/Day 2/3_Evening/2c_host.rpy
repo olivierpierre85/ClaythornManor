@@ -8,11 +8,11 @@ label captain_day2_evening_billiard_room_host_intro:
     call captain_day2_evening_billiard_room_wait
 
     """
-    Lady Claythorn is on the threshold, and the sight of me has brought her up at once.
+    Lady Claythorn pauses on the threshold, and the sight of me brings her up at once.
 
     For an instant her face is quite undefended.
 
-    Her travelling coat is buttoned to the throat. A small leather case stands at her feet.
+    She wears her travelling coat, buttoned to the throat.
 
     She had not expected to find anyone in this room.
     """
@@ -27,10 +27,24 @@ label captain_day2_evening_billiard_room_host_intro:
     Evidently.
     """
 
-    """
-    She recovers herself with admirable speed, but the case at her feet is not so easily concealed.
+    host """
+    Forgive me. I came down for the book I left here earlier.
 
-    Wherever she had thought to be at this hour, it was not in the manor.
+    I see you've taken it up — please, do keep at it. I shan't disturb you.
+    """
+
+    """
+    The book in my lap is one I took down from the shelf myself this evening.
+
+    She has not left it anywhere.
+
+    It is excuse enough on its face — a thin one, but a hostess in her own house may name any book she likes.
+
+    The coat is not so easily explained.
+
+    A travelling coat, buttoned for the road at near eleven o'clock — and not so much as a bag with her to give the lie away.
+
+    Wherever she had thought to be at this hour, it was not in her bed.
     """
 
     return
@@ -49,7 +63,7 @@ label captain_day2_evening_billiard_room_host_with_suspicions:
 
     She cannot shoot, nor keep a proper table.
 
-    And now she stands before me, packed and bound for the door at near eleven o'clock, with two of her guests dead beneath her roof.
+    And now she stands before me in a travelling coat at near eleven o'clock, with two of her guests dead beneath her roof.
 
     If I am to put it to her, it must be now.
     """
@@ -68,22 +82,24 @@ label captain_day2_evening_billiard_room_host_no_suspicions:
 
     call captain_day2_evening_billiard_room_host_intro
 
-    host """
-    I had thought to take a turn outside before retiring.
+    """
+    I should ask her why a woman going up to bed has need of a travelling coat.
 
-    The air has been so close in the house all day.
+    But I have no proof of anything — only a coat, and a feeling.
+
+    To set that against a hostess in her own house would be unpardonable.
     """
 
     captain """
-    Of course, Lady Claythorn.
+    Of course, my lady. Don't let me keep you.
     """
 
     """
-    It is a poor lie, told with a packed case at her feet.
+    She gives the smallest of nods, and is gone before I have set down my book.
 
-    But I have not enough in hand to challenge her on it.
+    The door clicks shut.
 
-    She gathers up her case and is gone before I have set down my book.
+    Whatever was waiting for her at this hour, she will reach it without my interference.
     """
 
     return
@@ -100,7 +116,7 @@ label captain_day2_evening_billiard_room_host_accuse:
     """
 
     captain """
-    At this hour, with your case at your feet, yes.
+    At this hour, with your coat buttoned for the road, yes.
 
     There is no portrait of you in the gallery upstairs. Not one.
 
@@ -108,7 +124,7 @@ label captain_day2_evening_billiard_room_host_accuse:
 
     On the hunt this morning, you handled a rifle as no shooting woman would.
 
-    And tonight, with two of your guests dead beneath your roof, you are dressed for the road.
+    And tonight, with two of your guests dead beneath your roof, you stand dressed for the door.
     """
 
     """
@@ -116,7 +132,7 @@ label captain_day2_evening_billiard_room_host_accuse:
 
     For a long moment she does not answer at all.
 
-    Then she sets the case down again, very deliberately, and meets my eye.
+    Then she draws a slow breath, and meets my eye.
     """
 
     host """
@@ -146,7 +162,7 @@ label captain_day2_evening_billiard_room_host_accuse:
     """
 
     """
-    She lifts her case once more.
+    She turns toward the door.
     """
 
     host """
@@ -179,9 +195,9 @@ label captain_day2_evening_billiard_room_host_silent:
     """
     I let her go.
 
-    A packed case and a startled face are not enough to set against a hostess in her own house, not at near eleven o'clock, not with the only other witnesses asleep upstairs.
+    A travelling coat and a startled face are not enough to set against a hostess in her own house, not at near eleven o'clock, not with the only other witnesses asleep upstairs.
 
-    She gathers the case and goes without another word.
+    She murmurs a goodnight and goes without another word.
 
     Whatever I might have asked her, the moment is past.
     """

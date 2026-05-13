@@ -91,7 +91,11 @@ label captain_day2_evening_billiard_room_wait:
     if captain_details.saved_variables["day2_evening_billiard_encounters"] == 0:
 
         """
-        I take down a book from the shelf and settle into a chair by the fire.
+        I sat down on chair by the fire.
+        
+        On the table next to it is a book: "The Seven and a Half Lives of Evelyn Softhovel".
+
+        It is not at all the sort of thing I should choose for myself, but the evening offers little else, so I grab it.
         """
 
         call wait_screen_transition
@@ -99,7 +103,7 @@ label captain_day2_evening_billiard_room_wait:
     elif captain_details.saved_variables["day2_evening_billiard_encounters"] == 1:
 
         """
-        I turn another page, more for the look of the thing than to read.
+        I turn a few other pages, more for the look of the thing than to read.
         """
 
         call wait_screen_transition
@@ -112,6 +116,8 @@ label captain_day2_evening_billiard_room_wait:
 
         """
         It is getting late, yet I feel as though I could wait a little longer.
+
+        Mostly because I cannot set the book down.
         """
 
         call wait_screen_transition
@@ -167,7 +173,7 @@ label captain_day2_evening_billiard_room_empty_2:
 label captain_day2_evening_billiard_room_empty_3:
 
     """
-    I let the book lie open on my knee and watch the fire for a while instead.
+    I am really into the book now, and pay attention to little else.
     """
 
     call wait_screen_transition
