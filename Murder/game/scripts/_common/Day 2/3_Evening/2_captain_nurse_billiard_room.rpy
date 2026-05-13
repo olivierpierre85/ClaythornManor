@@ -19,7 +19,7 @@ label common_day2_evening_billiard_room_nurse_captain_intro:
     nurse """
     Not quite yet.
 
-    I am glad you are here captain.
+    I am glad you are here, Captain.
 
     I would like to talk about something sensitive.
 

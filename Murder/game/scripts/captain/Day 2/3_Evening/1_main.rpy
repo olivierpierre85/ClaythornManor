@@ -180,7 +180,7 @@ label captain_day2_evening:
     play sound dinner_gong
 
     """
-    The gong still rings.
+    The gong sounds, even now.
 
     At least the order of the house is not disturbed.
     """
@@ -278,7 +278,7 @@ label captain_day2_evening:
     $ stop_music()
 
     """
-    I feel it's time to turn back to my room.
+    It is time I retired to my room.
     """
 
     $ change_room("bedroom_captain", dissolve)
@@ -355,7 +355,7 @@ label captain_day2_dinner_psychic:
     """
 
     captain """
-    Of course, everyone must be processing this terrible loss.
+    Of course, everyone must be coming to terms with this terrible loss.
 
     But for myself, I have seen enough of death to know it is a natural part of life.
 
@@ -382,7 +382,7 @@ label captain_day2_dinner_psychic:
 label captain_day2_evening_normal_escort:
 
     captain """
-    Mister Manning, are you ready to go to your room?
+    Mr Manning, are you ready to go to your room?
     """
 
     drunk """

@@ -98,11 +98,7 @@ label captain_ending_throat_cut:
     call death_screen_transition
 
     """
-    You took young Mr Harring into your confidence, and thought a locked door enough to see you safely to the morning.
-
-    A frightened young man, fresh from his first taste of real danger, cannot keep a secret long when pressed.
-
-    Your suspicions reached the wrong ears within the hour.
+    You thought a locked door enough to see you safely to the morning.
 
     A bolt is no great obstacle to those who keep the keys of a house.
 

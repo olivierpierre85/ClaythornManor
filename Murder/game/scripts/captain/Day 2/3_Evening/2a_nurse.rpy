@@ -106,19 +106,11 @@ label captain_day2_evening_billiard_room_nurse_dismiss:
 label captain_day2_evening_billiard_room_nurse_agree:
 
     captain """
-    Miss Marsh — before you retire, there is something I should put to you.
-    """
+    Indeed, Miss Marsh, it does seem strange to me too.
 
-    nurse """
-    Yes, Captain?
-    """
+    As a matter of fact, I do not believe these deaths to be entirely accidental.
 
-    captain """
-    I have not been entirely straight with you about these deaths.
-
-    I do not believe them to be entirely accidental as well.
-
-    More than that, I have come to doubt our hostess is who she claims to be.
+    The reason is that I have come to doubt our hostess is who she claims to be.
     """
 
     nurse """
@@ -170,7 +162,7 @@ label captain_day2_evening_billiard_room_nurse_agree:
     """
     She withdraws with a measured tread, and the door clicks gently shut behind her.
 
-    Whether I have done well to confide in her, only the morning will tell..
+    Whether I have done well to confide in her, only the morning will tell.
     """
 
     $ captain_details.threads.unlock('confide_in_nurse')

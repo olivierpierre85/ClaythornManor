@@ -28,21 +28,19 @@ label captain_day2_evening_billiard_room_host_intro:
     """
 
     host """
-    Forgive me. I came down for the book I left here earlier.
+    Forgive me. I came down to fetch my book.
 
-    I see you've taken it up — please, do keep at it. I shan't disturb you.
+    I find I cannot sleep without something to read.
     """
 
     """
-    The book in my lap is one I took down from the shelf myself this evening.
-
-    She has not left it anywhere.
-
-    It is excuse enough on its face — a thin one, but a hostess in her own house may name any book she likes.
+    A thin excuse, but a hostess in her own house may name her reason as she likes.
 
     The coat is not so easily explained.
 
     A travelling coat, buttoned for the road at near eleven o'clock — and not so much as a bag with her to give the lie away.
+
+    A woman seeking a book for her bedside does not come for it dressed for travel.
 
     Wherever she had thought to be at this hour, it was not in her bed.
     """
@@ -84,22 +82,54 @@ label captain_day2_evening_billiard_room_host_no_suspicions:
 
     """
     I should ask her why a woman going up to bed has need of a travelling coat.
+    
+    And there is more here than the coat alone.
 
-    But I have no proof of anything — only a coat, and a feeling.
+    But I feel I still do not have proof enough to confront a lady in her own house.
 
-    To set that against a hostess in her own house would be unpardonable.
+    To press her now, on what I have, would be a discourtesy of the worst kind.
+    """
+
+    """
+    I rise, and hold out the book she came for.
     """
 
     captain """
-    Of course, my lady. Don't let me keep you.
+    Your book, my lady.
+    """
+
+    host """
+    Oh — keep it, Captain, please. I would not dream of disturbing your evening.
+
+    I shall do well enough without.
+    """
+
+    captain """
+    I would not hear of it, my lady. You came down for it, and it is yours.
+
+    I must insist.
     """
 
     """
-    She gives the smallest of nods, and is gone before I have set down my book.
+    She hesitates a moment longer than I should have expected, then takes the book from my hand.
+    """
+
+    host """
+    You are very kind.
+    """
+
+    captain """
+    Not at all. Good night, my lady.
+    """
+
+    """
+    She gives the smallest of nods, and is gone before I have settled back in my chair.
 
     The door clicks shut.
 
-    Whatever was waiting for her at this hour, she will reach it without my interference.
+    I have the uncomfortable feeling that my manners have prevented me from doing something I should have done.
+
+    But it is too late now.
     """
 
     return

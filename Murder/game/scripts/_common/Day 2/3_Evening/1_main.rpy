@@ -301,9 +301,19 @@ label common_day2_evening_samuel_manning_discussion_part_3:
 
     """
     The butler retrieves a set of keys from his pocket.
-
-    After sifting through them, he presents one to Mr Sinha.
     """
+
+    if current_character.text_id == "captain":
+
+        """
+        After sifting through them, he presents one to me.
+        """
+
+    else:
+
+        """
+        After sifting through them, he presents one to Mr Sinha.
+        """
 
     butler """
     Use this key to lock his room.
@@ -312,7 +322,7 @@ label common_day2_evening_samuel_manning_discussion_part_3:
     captain """
     Excellent, thank you.
 
-    Now, Mr Manning, let's go shall we?
+    Now, Mr Manning, let us go, shall we?
     """
 
     return
@@ -343,7 +353,7 @@ label common_day2_evening_dinner_host:
 
     So, tomorrow morning, you'll receive your rewards.
     
-    Afterward, we'll wait for the police to arrive.
+    Afterwards, we'll wait for the police to arrive.
 
     You're free to head home as soon as the officers give the all-clear.
 
