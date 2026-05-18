@@ -60,6 +60,8 @@ label captain_day2_evening_billiard_room_lad_no_suspicions:
     I am worried about what is happening here as well.
 
     But I can't really tell him that.
+
+    Not with the little evidence I have now.
     """
 
     call captain_day2_evening_billiard_room_lad_dismiss
@@ -87,10 +89,6 @@ label captain_day2_evening_billiard_room_lad_dismiss:
 
     """
     He drains his glass and withdraws without another word.
-
-    A young man can be told a great many things, if one is firm about it.
-
-    Whether it does him any good is another matter.
     """
 
     return

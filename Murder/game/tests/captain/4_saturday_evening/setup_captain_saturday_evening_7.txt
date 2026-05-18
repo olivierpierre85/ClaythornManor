@@ -42,14 +42,14 @@ Samuel Manning: I understand.
 I believe everyone assumes I should take him myself.
 After all, I represent the closest thing to a form of authority here.
 And I have no reason to disappoint them.
-Sushil Sinha: Mister Manning, are you ready to go to your room?
+Sushil Sinha: Mr Manning, are you ready to go to your room?
 Samuel Manning: Well - yes, of course.
 Sushil Sinha: Good, come with me, please.
 The butler retrieves a set of keys from his pocket.
-After sifting through them, he presents one to Mr Sinha.
+After sifting through them, he presents one to me.
 Butler: Use this key to lock his room.
 Sushil Sinha: Excellent, thank you.
-Sushil Sinha: Now, Mr Manning, let's go shall we?
+Sushil Sinha: Now, Mr Manning, let us go, shall we?
 Manning walks ahead of me without speaking.
 The drink is still on him, though quieter now. He moves like a man in a dream he does not care to interrupt.
 I see him into his room and draw the door closed behind him.
@@ -72,7 +72,7 @@ Mr Moody, dead in his bed only this morning.
 A suspicious hostess and a letter left upon my pillow last night.
 So many things to make sense of.
 I ponder for a while on what my next move should be, but cannot decide on a course.
-The gong still rings.
+The gong sounds, even now.
 At least the order of the house is not disturbed.
 Three chairs sit empty.
 Doctor Baldwin. Mr Moody. Mr Manning.
@@ -84,7 +84,7 @@ Lady Claythorn: Now that everyone is here, I want to express my deepest regret f
 Lady Claythorn: This isn't how I imagined our weekend.
 Lady Claythorn: I don't believe any of us are in the mood for more entertainment.
 Lady Claythorn: So, tomorrow morning, you'll receive your rewards.
-Lady Claythorn: Afterward, we'll wait for the police to arrive.
+Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
@@ -148,6 +148,6 @@ Sushil Sinha: Hello? Is anyone there?
 No answer.
 The lady of the house, it seems, has not yet retired — or does not wish to be disturbed if she has.
 Map Choice: Retire for the night
-I feel it's time to turn back to my room.
+It is time I retired to my room.
 I close the door of my room behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.

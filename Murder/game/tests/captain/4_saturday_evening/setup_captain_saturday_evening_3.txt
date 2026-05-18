@@ -57,14 +57,14 @@ If I were to send him to lock Manning up, that would be the perfect moment to co
 But a public accusation, if it does not land, will put me in an incredibly awkward position.
 I need to be sure about this.
 Menu Choice: Take Manning up myself
-Sushil Sinha: Mister Manning, are you ready to go to your room?
+Sushil Sinha: Mr Manning, are you ready to go to your room?
 Samuel Manning: Well - yes, of course.
 Sushil Sinha: Good, come with me, please.
 The butler retrieves a set of keys from his pocket.
-After sifting through them, he presents one to Mr Sinha.
+After sifting through them, he presents one to me.
 Butler: Use this key to lock his room.
 Sushil Sinha: Excellent, thank you.
-Sushil Sinha: Now, Mr Manning, let's go shall we?
+Sushil Sinha: Now, Mr Manning, let us go, shall we?
 Manning walks ahead of me without speaking.
 The drink is still on him, though quieter now. He moves like a man in a dream he does not care to interrupt.
 I see him into his room and draw the door closed behind him.
@@ -87,7 +87,7 @@ Mr Moody, dead in his bed only this morning.
 A suspicious hostess and a letter left upon my pillow last night.
 So many things to make sense of.
 I ponder for a while on what my next move should be, but cannot decide on a course.
-The gong still rings.
+The gong sounds, even now.
 At least the order of the house is not disturbed.
 Three chairs sit empty.
 Doctor Baldwin. Mr Moody. Mr Manning.
@@ -99,7 +99,7 @@ Lady Claythorn: Now that everyone is here, I want to express my deepest regret f
 Lady Claythorn: This isn't how I imagined our weekend.
 Lady Claythorn: I don't believe any of us are in the mood for more entertainment.
 Lady Claythorn: So, tomorrow morning, you'll receive your rewards.
-Lady Claythorn: Afterward, we'll wait for the police to arrive.
+Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
@@ -116,7 +116,7 @@ Sushil Sinha: Miss Baxter.
 Sushil Sinha: How are you holding up after today's events?
 Amelia Baxter: As well as one can, Captain, thank you for asking.
 Amelia Baxter: But such a tragic event must have shaken everyone to their core.
-Sushil Sinha: Of course, everyone must be processing this terrible loss.
+Sushil Sinha: Of course, everyone must be coming to terms with this terrible loss.
 Sushil Sinha: But for myself, I have seen enough of death to know it is a natural part of life.
 Sushil Sinha: From dust to dust, from ashes to ashes, as they say.
 Amelia Baxter: Of course.
@@ -150,7 +150,7 @@ Rosalind Marsh hesitates for a moment in the doorway, then crosses the room with
 Sushil Sinha: Miss Marsh.
 Sushil Sinha: I thought everyone had retired.
 Rosalind Marsh: Not quite yet.
-Rosalind Marsh: I am glad you are here captain.
+Rosalind Marsh: I am glad you are here, Captain.
 Rosalind Marsh: I would like to talk about something sensitive.
 Rosalind Marsh: I hope you don't mind.
 Sushil Sinha: Not at all.
@@ -167,11 +167,9 @@ I could share with her what I have come to suspect of our hostess.
 She might prove an ally, should I need one later.
 But if I have misread her, the price for trusting her could be very high indeed.
 Menu Choice: Tell her about your doubts
-Sushil Sinha: Miss Marsh — before you retire, there is something I should put to you.
-Rosalind Marsh: Yes, Captain?
-Sushil Sinha: I have not been entirely straight with you about these deaths.
-Sushil Sinha: I do not believe them to be entirely accidental as well.
-Sushil Sinha: More than that, I have come to doubt our hostess is who she claims to be.
+Sushil Sinha: Indeed, Miss Marsh, it does seem strange to me too.
+Sushil Sinha: As a matter of fact, I do not believe these deaths to be entirely accidental.
+Sushil Sinha: The reason is that I have come to doubt our hostess is who she claims to be.
 Rosalind Marsh: Lady Claythorn?
 Sushil Sinha: Precisely.
 Sushil Sinha: There is no portrait of her in the gallery upstairs.
@@ -189,7 +187,7 @@ Rosalind Marsh: I shall, Captain.
 Rosalind Marsh: Good night to you.
 Sushil Sinha: Good night, Miss Marsh.
 She withdraws with a measured tread, and the door clicks gently shut behind her.
-Whether I have done well to confide in her, only the morning will tell..
+Whether I have done well to confide in her, only the morning will tell.
 Menu Choice: Wait and see who comes
 I turn back to my book and try to settle to it.
 A page or two go by, easily enough.
@@ -256,13 +254,12 @@ She had not expected to find anyone in this room.
 Lady Claythorn: Captain.
 Lady Claythorn: I... did not realise anyone was still up.
 Sushil Sinha: Evidently.
-Lady Claythorn: Forgive me. I came down for the book I left here earlier.
-Lady Claythorn: I see you've taken it up — please, do keep at it. I shan't disturb you.
-The book in my lap is one I took down from the shelf myself this evening.
-She has not left it anywhere.
-It is excuse enough on its face — a thin one, but a hostess in her own house may name any book she likes.
+Lady Claythorn: Forgive me. I came down to fetch my book.
+Lady Claythorn: I find I cannot sleep without something to read.
+A thin excuse, but a hostess in her own house may name her reason as she likes.
 The coat is not so easily explained.
 A travelling coat, buttoned for the road at near eleven o'clock — and not so much as a bag with her to give the lie away.
+A woman seeking a book for her bedside does not come for it dressed for travel.
 Wherever she had thought to be at this hour, it was not in her bed.
 And here, plainly, is what I have been waiting for the whole evening.
 Her name is not her own.
@@ -299,7 +296,7 @@ A confession of sorts, even if she did not name a name.
 I have not stopped her. I doubt very much I could have.
 But I have had it from her own mouth that she is not what she has claimed to be.
 That, at least, is something to take into the morning.
-I feel it's time to turn back to my room.
+It is time I retired to my room.
 I close the door of my room behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.
 I undress without lighting the lamp and lie down upon the bed.
@@ -315,9 +312,7 @@ I struggle, but the arm that holds me is younger than mine, and braced for it.
 There is a brief, cold pressure at my throat.
 No more than that.
 Then a great quietness, and the room seems to fall away from me by degrees.
-You took young Mr Harring into your confidence, and thought a locked door enough to see you safely to the morning.
-A frightened young man, fresh from his first taste of real danger, cannot keep a secret long when pressed.
-Your suspicions reached the wrong ears within the hour.
+You thought a locked door enough to see you safely to the morning.
 A bolt is no great obstacle to those who keep the keys of a house.
 The man who came for you was practised, and quiet, and quite as patient as he needed to be.
 You knew nothing of it until there was nothing left to know.

@@ -42,14 +42,14 @@ Samuel Manning: I understand.
 I believe everyone assumes I should take him myself.
 After all, I represent the closest thing to a form of authority here.
 And I have no reason to disappoint them.
-Sushil Sinha: Mister Manning, are you ready to go to your room?
+Sushil Sinha: Mr Manning, are you ready to go to your room?
 Samuel Manning: Well - yes, of course.
 Sushil Sinha: Good, come with me, please.
 The butler retrieves a set of keys from his pocket.
-After sifting through them, he presents one to Mr Sinha.
+After sifting through them, he presents one to me.
 Butler: Use this key to lock his room.
 Sushil Sinha: Excellent, thank you.
-Sushil Sinha: Now, Mr Manning, let's go shall we?
+Sushil Sinha: Now, Mr Manning, let us go, shall we?
 Manning walks ahead of me without speaking.
 The drink is still on him, though quieter now. He moves like a man in a dream he does not care to interrupt.
 I see him into his room and draw the door closed behind him.
@@ -72,7 +72,7 @@ Mr Moody, dead in his bed only this morning.
 A suspicious hostess and a letter left upon my pillow last night.
 So many things to make sense of.
 I ponder for a while on what my next move should be, but cannot decide on a course.
-The gong still rings.
+The gong sounds, even now.
 At least the order of the house is not disturbed.
 Three chairs sit empty.
 Doctor Baldwin. Mr Moody. Mr Manning.
@@ -84,7 +84,7 @@ Lady Claythorn: Now that everyone is here, I want to express my deepest regret f
 Lady Claythorn: This isn't how I imagined our weekend.
 Lady Claythorn: I don't believe any of us are in the mood for more entertainment.
 Lady Claythorn: So, tomorrow morning, you'll receive your rewards.
-Lady Claythorn: Afterward, we'll wait for the police to arrive.
+Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
@@ -101,7 +101,7 @@ Sushil Sinha: Miss Baxter.
 Sushil Sinha: How are you holding up after today's events?
 Amelia Baxter: As well as one can, Captain, thank you for asking.
 Amelia Baxter: But such a tragic event must have shaken everyone to their core.
-Sushil Sinha: Of course, everyone must be processing this terrible loss.
+Sushil Sinha: Of course, everyone must be coming to terms with this terrible loss.
 Sushil Sinha: But for myself, I have seen enough of death to know it is a natural part of life.
 Sushil Sinha: From dust to dust, from ashes to ashes, as they say.
 Amelia Baxter: Of course.
@@ -135,7 +135,7 @@ Rosalind Marsh hesitates for a moment in the doorway, then crosses the room with
 Sushil Sinha: Miss Marsh.
 Sushil Sinha: I thought everyone had retired.
 Rosalind Marsh: Not quite yet.
-Rosalind Marsh: I am glad you are here captain.
+Rosalind Marsh: I am glad you are here, Captain.
 Rosalind Marsh: I would like to talk about something sensitive.
 Rosalind Marsh: I hope you don't mind.
 Sushil Sinha: Not at all.
@@ -193,6 +193,7 @@ Ted Harring: Captain, could I have a word?
 He is making a fair show of being at his ease, but it is plain that he is quite frightened.
 I am worried about what is happening here as well.
 But I can't really tell him that.
+Not with the little evidence I have now.
 No, I must keep my composure, and act as the tough fighter I am supposed to be.
 That is the safest choice.
 Sushil Sinha: Good evening, Mr Harring.
@@ -235,8 +236,6 @@ Sushil Sinha: As the famous saying goes, the simplest explanation is usually the
 Sushil Sinha: Now, if you'll excuse me, I'd like to finish my book.
 Ted Harring: Of course.
 He drains his glass and withdraws without another word.
-A young man can be told a great many things, if one is firm about it.
-Whether it does him any good is another matter.
 Menu Choice: Wait and see who comes
 I read on, though the words come more slowly now.
 Nothing stirs in the corridor beyond.
@@ -255,21 +254,30 @@ She had not expected to find anyone in this room.
 Lady Claythorn: Captain.
 Lady Claythorn: I... did not realise anyone was still up.
 Sushil Sinha: Evidently.
-Lady Claythorn: Forgive me. I came down for the book I left here earlier.
-Lady Claythorn: I see you've taken it up — please, do keep at it. I shan't disturb you.
-The book in my lap is one I took down from the shelf myself this evening.
-She has not left it anywhere.
-It is excuse enough on its face — a thin one, but a hostess in her own house may name any book she likes.
+Lady Claythorn: Forgive me. I came down to fetch my book.
+Lady Claythorn: I find I cannot sleep without something to read.
+A thin excuse, but a hostess in her own house may name her reason as she likes.
 The coat is not so easily explained.
 A travelling coat, buttoned for the road at near eleven o'clock — and not so much as a bag with her to give the lie away.
+A woman seeking a book for her bedside does not come for it dressed for travel.
 Wherever she had thought to be at this hour, it was not in her bed.
 I should ask her why a woman going up to bed has need of a travelling coat.
-But I have no proof of anything — only a coat, and a feeling.
-To set that against a hostess in her own house would be unpardonable.
-Sushil Sinha: Of course, my lady. Don't let me keep you.
-She gives the smallest of nods, and is gone before I have set down my book.
+And there is more here than the coat alone.
+But I feel I still do not have proof enough to confront a lady in her own house.
+To press her now, on what I have, would be a discourtesy of the worst kind.
+I rise, and hold out the book she came for.
+Sushil Sinha: Your book, my lady.
+Lady Claythorn: Oh — keep it, Captain, please. I would not dream of disturbing your evening.
+Lady Claythorn: I shall do well enough without.
+Sushil Sinha: I would not hear of it, my lady. You came down for it, and it is yours.
+Sushil Sinha: I must insist.
+She hesitates a moment longer than I should have expected, then takes the book from my hand.
+Lady Claythorn: You are very kind.
+Sushil Sinha: Not at all. Good night, my lady.
+She gives the smallest of nods, and is gone before I have settled back in my chair.
 The door clicks shut.
-Whatever was waiting for her at this hour, she will reach it without my interference.
-I feel it's time to turn back to my room.
+I have the uncomfortable feeling that my manners have prevented me from doing something I should have done.
+But it is too late now.
+It is time I retired to my room.
 I close the door of my room behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.
