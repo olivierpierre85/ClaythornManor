@@ -284,7 +284,7 @@ label captain_day2_evening:
     $ change_room("bedroom_captain", dissolve)
 
     """
-    I close the door of my room behind me and turn the key in the lock.
+    I close the door behind me and turn the key in the lock.
 
     It probably will not be easy, but I should try to sleep.
     """

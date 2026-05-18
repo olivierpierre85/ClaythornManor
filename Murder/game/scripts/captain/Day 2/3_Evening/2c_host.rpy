@@ -38,11 +38,9 @@ label captain_day2_evening_billiard_room_host_intro:
 
     The coat is not so easily explained.
 
-    A travelling coat, buttoned for the road at near eleven o'clock — and not so much as a bag with her to give the lie away.
+    A travelling coat, buttoned for the road at near eleven o'clock.
 
     A woman seeking a book for her bedside does not come for it dressed for travel.
-
-    Wherever she had thought to be at this hour, it was not in her bed.
     """
 
     return
@@ -81,9 +79,9 @@ label captain_day2_evening_billiard_room_host_no_suspicions:
     call captain_day2_evening_billiard_room_host_intro
 
     """
-    I should ask her why a woman going up to bed has need of a travelling coat.
+    I should ask her why she is dressed that way.
     
-    And there is more here than the coat alone.
+    Especially since it is not the only suspicious thing I have discovered about her.
 
     But I feel I still do not have proof enough to confront a lady in her own house.
 
