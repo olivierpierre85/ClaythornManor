@@ -54,7 +54,7 @@ label init_captain:
                 1, "confide_in_nurse",
                 "You confided your suspicions about Lady Claythorn to Miss Marsh",
                 content_negative="You kept your suspicions about Lady Claythorn from Miss Marsh",
-                image_file="lord", # TODO placeholder
+                image_file="lad", # TODO placeholder
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
@@ -62,7 +62,7 @@ label init_captain:
                 2, "confide_in_lad",
                 "You confided your suspicions about Lady Claythorn to Mr Harring",
                 content_negative="You kept your suspicions about Lady Claythorn from Mr Harring",
-                image_file="lord", # TODO placeholder
+                image_file="nurse", # TODO placeholder
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
@@ -97,14 +97,14 @@ label init_captain:
             CharacterInformation(5, "footman_actor_letter",
                 "You found a rejection letter from a London theatre, hidden amongst the footman's things",
                 content_negative="You didn't search the footman's room",
-                image_file="lord", # TODO placeholder
+                image_file="footman_actor",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(6, "maid_actress_photo",
                 "You found a photograph of the maid in stage dress",
                 content_negative="You didn't search the maids' room",
-                image_file="lord", # TODO placeholder
+                image_file="maid_actress",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
