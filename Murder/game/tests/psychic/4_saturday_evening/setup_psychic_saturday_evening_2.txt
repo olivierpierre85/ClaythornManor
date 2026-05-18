@@ -84,7 +84,7 @@ The butler retrieves a set of keys from his pocket.
 After sifting through them, he presents one to Mr Sinha.
 Butler: Use this key to lock his room.
 Sushil Sinha: Excellent, thank you.
-Sushil Sinha: Now, Mr Manning, let's go shall we?
+Sushil Sinha: Now, Mr Manning, let us go, shall we?
 Samuel Manning offers a silent nod, rises, and follows Captain Sinha up the staircase.
 His gaze betrays a mix of resignation and confusion.
 We all watch the two men disappear up the stairs.
@@ -169,7 +169,7 @@ Lady Claythorn: Now that everyone is here, I want to express my deepest regret f
 Lady Claythorn: This isn't how I imagined our weekend.
 Lady Claythorn: I don't believe any of us are in the mood for more entertainment.
 Lady Claythorn: So, tomorrow morning, you'll receive your rewards.
-Lady Claythorn: Afterward, we'll wait for the police to arrive.
+Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
