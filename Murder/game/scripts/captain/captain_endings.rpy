@@ -90,6 +90,24 @@ label captain_ending_shot_butler:
     jump ending_generic
 
 
+label captain_ending_bludgeoned:
+
+    $ captain_details.endings.unlock('bludgeoned')
+    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('bludgeoned'))
+
+    call death_screen_transition
+
+    """
+    You laid hands upon a frightened woman, and the man who answers for her did not hesitate.
+
+    A confrontation is not something to be taken lightly.
+
+    Sometimes, it is best to keep your doubts to yourself.
+    """
+
+    jump ending_generic
+
+
 label captain_ending_throat_cut:
 
     $ captain_details.endings.unlock('throat_cut')

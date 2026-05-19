@@ -33,7 +33,7 @@ label psychic_config_progress:
                     # Chapter(image_checkpoint_straight_line),
                     Chapter(image_checkpoint_corner),
                     Chapter(image_ending_question, "ending", "bludgeoned", "sunday_morning"),
-                    Chapter(image_checkpoint_empty_after_ending),
+                    Chapter(image_checkpoint_empty_half),
                     Chapter(image_checkpoint_corner),
                     Chapter(image_ending_question, "ending", "escape", "end"),
                 ],
@@ -46,7 +46,7 @@ label psychic_config_progress:
                     # Chapter(image_checkpoint_straight_line),
                     # Chapter(image_checkpoint_three_sides),
                     Chapter(image_ending_question, "ending", "fell", "sunday_morning"),
-                    Chapter(image_checkpoint_empty_after_ending),
+                    Chapter(image_checkpoint_empty_half),
                 ],
             ]
 

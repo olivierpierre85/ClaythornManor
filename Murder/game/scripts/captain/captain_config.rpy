@@ -155,6 +155,10 @@ label init_captain:
                 "Your throat was cut in your sleep on the second night",
                 image_file="throat_cut",
                 chapters=['saturday_evening']),
+            CharacterInformation(6, "bludgeoned",
+                "You were beaten to death by the butler after laying hands on Lady Claythorn",
+                image_file="strangled",
+                chapters=['saturday_evening']),
         ])
 
         # Character Class

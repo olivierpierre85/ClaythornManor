@@ -49,11 +49,7 @@ label captain_day2_evening_billiard_room_host_with_suspicions:
     """
     And here, plainly, is what I have been waiting for the whole evening.
 
-    Her name is not her own.
-
-    Her portrait is nowhere to be found in the gallery.
-
-    She cannot shoot, nor keep a proper table.
+    I have learned enough about her to know she is not who she claims to be.
 
     And now she stands before me in a travelling coat at near eleven o'clock, with two of her guests dead beneath her roof.
 
@@ -61,7 +57,7 @@ label captain_day2_evening_billiard_room_host_with_suspicions:
     """
 
     call run_menu(TimedMenu("captain_day2_evening_billiard_room_host_menu", [
-        TimedMenuChoice("Confront her with what I know",
+        TimedMenuChoice("Confront her",
             'captain_day2_evening_billiard_room_host_accuse', 20, early_exit=True),
         TimedMenuChoice("Let her go and say nothing",
             'captain_day2_evening_billiard_room_host_silent', 20, early_exit=True),
@@ -91,8 +87,10 @@ label captain_day2_evening_billiard_room_host_no_suspicions:
 
 label captain_day2_evening_billiard_room_host_accuse:
 
+    $ play_music('danger', 2)
+
     captain """
-    Forgive me, my lady. Before you go, there is a matter I should put to you.
+    Forgive me, my lady, there is a matter I should put to you.
     """
 
     host """
@@ -100,13 +98,15 @@ label captain_day2_evening_billiard_room_host_accuse:
     """
 
     captain """
-    At this hour, with your coat buttoned for the road, yes.
+    At this hour, yes.
+
+    But do not worry, I will make it quick.
 
     There is no portrait of you in the gallery upstairs. Not one.
 
     You are styled Lady Claythorn, and yet Claythorn is the name of the house, not of any title I have ever heard of.
 
-    On the hunt this morning, you handled a rifle as no shooting woman would.
+    On the hunt this morning, you handled a rifle as no real Lady would.
 
     And tonight, with two of your guests dead beneath your roof, you stand dressed for the door.
     """
@@ -120,58 +120,76 @@ label captain_day2_evening_billiard_room_host_accuse:
     """
 
     host """
-    You are an observant man, Captain.
+    I don't know what you mean by that, Captain, but I am rather tired, so I will retire now.
 
-    Rather more observant than was wanted here.
-    """
-
-    captain """
-    Who are you, my lady?
-    """
-
-    host """
-    No one in particular.
-
-    A woman who was paid handsomely to play a part for a weekend, and who now finds the part has run rather beyond her contract.
-    """
-
-    captain """
-    Paid by whom?
-    """
-
-    host """
-    That, Captain, I am not going to tell you.
-
-    And I would advise you very strongly not to press the question further tonight.
+    Hopefully you will have recovered your senses in the morning.
     """
 
     """
     She turns toward the door.
     """
 
-    host """
-    I should sit by the fire if I were you, Captain.
-
-    Finish your book.
-
-    Whatever has been arranged for this house, it is not arranged for you.
-
-    Not yet.
+    captain """
+    Not so fast.
     """
 
     """
-    She withdraws without another word, and the door clicks shut behind her.
+    I step between her and the doorway, and take her by the arm.
 
-    A confession of sorts, even if she did not name a name.
-
-    I have not stopped her. I doubt very much I could have.
-
-    But I have had it from her own mouth that she is not what she has claimed to be.
-
-    That, at least, is something to take into the morning.
+    The grip is firmer than I had intended, but my patience is at an end.
     """
 
-    return
+    host -scared """
+    Captain! What on earth do you think you are doing?
+
+    Stop this instant!
+    """
+
+    """
+    She wants to look outraged, but she is visibly scared.
+    """
+
+    captain """
+    I am truly sorry, I do not want to harm you.
+
+    But I need to know what is happening here.
+
+    Who are you? 
+
+    What is this all about?
+    """
+
+    """
+    Her gaze is panicked, but for a second I notice she sees something behind me.
+
+    But I do not have the time to turn to see what it is.
+    """
+
+    play sound bludgeon
+
+    """
+    The blow tears across my temple.
+
+    The room tilts, and the carpet rises to meet me.
+
+    Somewhere very far off, the lady is screaming.
+    """
+
+    host -scared """
+    Stop! You're going to kill him!
+    """
+
+    """
+    I turn towards my attacker and see the butler looking down on me.
+
+    In his hand is a poker, snatched from the fire.
+
+    He raises it above his head, then brings it down quickly towards me.
+    """
+
+    play sound bludgeon
+
+    jump captain_ending_bludgeoned
 
 
 label captain_day2_evening_billiard_room_host_silent:
