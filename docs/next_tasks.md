@@ -11,6 +11,10 @@ TRY CONSOLE Add on
 
 LOGIC of libray and TIME, how is it handled? When visiting back a place already visited, if there are a menu the first time, but not the second, there is no time that is used...... NEED TO FIX THAT, find a better way EVERY FUCKING WHERE??????? => Complete overhaul later?
 
+
+BIG OTHER bug, SOME VISITED var now are ported from chapter to chapter. It should not be the case. How should I write to avoid this? I think it is ok to repeat some dialog.
+BUT THEN IT should be check EVERY FUcKING WHERE
+
 ## Write Story: Captain (Sushil Sinha)
 
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
@@ -31,10 +35,10 @@ THREAD, locked shed image
     - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [ ] Saturday evening - **ongoing**
-  - [ ] **TESt map **
-    - [ ] Garden inconsistency. Captain doesn't want to go out in the dark on day 2 ?
+  - [ ] **TESt map**
+    - [ ] Garden inconsistency. test new version
     - [ ] Re write attic rooms
-
+    - [ ] test all options, rewrite when needed.
   - Add and validate tests
 - [ ] sunday -
 - [ ] Confess to nurse, but she doesn't trust you back? You might not just see her in the morning

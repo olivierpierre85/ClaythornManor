@@ -92,7 +92,7 @@
 
 ### Path
 - Dinner menu picks "Speak to Miss Baxter" so the dinner conversation runs once.
-- Map menu visits: storage (unlocks the lantern), garden with lantern -> outbuilding (unlocks `garden_shed_locked` and the petrol tin via the master key), storage again (lantern-already-have branch), butler's room (cabinet inspection), butler's room again (already-seen branch), footmen's room (rejection letter), maids' room (actress photograph), then bedrooms for Miss Baxter, Doctor Baldwin, Mr Manning, Mr Harring and Mr Moody.
+- Map menu visits: storage (unlocks the lantern), garden with lantern -> outbuilding (unlocks  the petrol tin via the master key), storage again (lantern-already-have branch), butler's room (cabinet inspection), butler's room again (already-seen branch), footmen's room (rejection letter), maids' room (actress photograph), then bedrooms for Miss Baxter, Doctor Baldwin, Mr Manning, Mr Harring and Mr Moody.
 - Time runs out after the last bedroom; the map closes naturally and the captain falls through to `captain_day3_morning`.
 
 ## File 7 — Map exploration: first floor, downstairs, gallery and library revisits

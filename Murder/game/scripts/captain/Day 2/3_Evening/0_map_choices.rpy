@@ -74,7 +74,7 @@ label captain_day2_evening_downstairs_default:
     """
     The staff are still about their work down there.
 
-    Master key or not, I can think of no plausible errand that would carry a guest into the kitchens at this hour.
+    Master key or not, I can think of no plausible errand that would carry a guest into the basement.
 
     Better to leave the lower floor alone.
     """

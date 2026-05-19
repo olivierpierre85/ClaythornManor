@@ -292,12 +292,10 @@ All images appear at small size in the progress/thread UI. Keep compositions sim
 | --------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `captain_host_suspicion_name`     | Problem with "Lady Claythorn" name       | A calling card with the name "Lady Claythorn", where "Claythorn" is crossed out in pencil, and the Name "Kilbraith" written instead |
 | `captain_host_suspicion_portrait` | No portrait of Lady Claythorn in gallery | An ornate picture frame on a wall — conspicuously empty                                                                             |
-| `garden_shed_locked`              | Garden shed locked for no reason         | A weathered wooden shed door with a heavy iron padlock, on a grey stone shed                                                        |
 | `captain_host_suspicion_shooting` | Noticed Lady Claythorn's poor aim        | a target for a gun range, with gun holes outside of the target                                                                      |
 
 - [x] captain_host_suspicion_name
 - [x] captain_host_suspicion_portrait
-- [x] garden_shed_locked
 - [x] captain_host_suspicion_shooting
 
 ### Objects

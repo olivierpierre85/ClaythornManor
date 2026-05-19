@@ -5,27 +5,15 @@ label captain_library_default:
 
     $ change_room('library')
 
-    if captain_details.saved_variables.get("visited_library"):
+    if captain_details.threads.is_unlocked('captain_host_suspicion_name'):
 
         """
-        The library is as I left it.
+        I have already read what I needed from the genealogy book.
+
+        There is nothing more here for me.
         """
-        
-        if captain_details.threads.is_unlocked('captain_host_suspicion_name'):
 
-            """
-            I have already read what I needed from the genealogy book.
-
-            There is nothing more here for me.
-            """
-
-            return
-
-        else:
-
-            """
-            The genealogy book still lies open on the table, waiting.
-            """
+        return
 
     else:
 
@@ -242,6 +230,8 @@ label captain_garden_default_with_lantern:
 
 label captain_garden_shed:
 
+    $ change_room('toolshed_outside_night')
+    
     """
     I press on through the rain, boots sinking into the sodden gravel.
 
@@ -251,8 +241,6 @@ label captain_garden_shed:
 
     It does not give. The door is locked, and firmly so.
     """
-
-    $ captain_details.threads.unlock('garden_shed_locked')
 
     if not captain_details.objects.is_unlocked('butler_key'):
 
