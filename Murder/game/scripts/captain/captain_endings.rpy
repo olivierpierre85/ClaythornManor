@@ -100,9 +100,9 @@ label captain_ending_throat_cut:
     """
     You thought a locked door enough to see you safely to the morning.
 
-    A bolt is no great obstacle to those who keep the keys of a house.
+    But a bolt is no great obstacle.
 
-    The man who came for you was practised, and quiet, and quite as patient as he needed to be.
+    The person who came for you was practised, and quiet, and as patient as they needed to be.
 
     You knew nothing of it until there was nothing left to know.
     """

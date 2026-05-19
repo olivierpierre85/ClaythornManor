@@ -281,48 +281,36 @@ label captain_day2_evening:
     I close the door behind me and turn the key in the lock.
 
     It probably will not be easy, but I should try to sleep.
+
+    I undress without lighting the lamp and lie down upon the bed.
+
+    Sleep, when it comes, comes more readily than I should have thought.
     """
 
     if captain_details.threads.is_unlocked('confide_in_lad'):
 
-        """
-        I undress without lighting the lamp and lie down upon the bed.
-
-        Sleep, when it comes, comes more readily than I should have thought.
-
-        A soldier's habit, perhaps. One learns to take rest where it is offered.
-        """
+        $ play_music('danger_short')
 
         call wait_screen_transition()
-
-        call change_time(2, 30)
 
         """
         I do not know what wakes me.
 
         A breath of air, perhaps. A board easing under a careful foot.
 
-        The room is utterly black, and yet I know, with the certainty of a man who has slept in too many rough places, that I am not alone in it.
-        """
+        The room is utterly black, and yet I know with the certainty that I am not alone in it.
 
-        """
         A weight settles on the edge of the bed.
 
         I open my mouth to speak and a hand closes over it before any sound can leave me.
 
         The grip is firm. Practised.
 
-        I struggle, but the arm that holds me is younger than mine, and braced for it.
-        """
-
-        pause 0.5
-
-        """
+        I struggle, but the arm that holds me is stronger than mine.
+        
         There is a brief, cold pressure at my throat.
 
-        No more than that.
-
-        Then a great quietness, and the room seems to fall away from me by degrees.
+        Then a great quietness, and the room seems to fall away from me.
         """
 
         jump captain_ending_throat_cut

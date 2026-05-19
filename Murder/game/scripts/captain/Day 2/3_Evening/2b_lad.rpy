@@ -184,8 +184,6 @@ label captain_day2_evening_billiard_room_lad_agree:
 
     """
     He goes more steadily than he came.
-
-    Whatever else I have done tonight, I have at least not left him to bear his fears alone.
     """
 
     $ captain_details.threads.unlock('confide_in_lad')

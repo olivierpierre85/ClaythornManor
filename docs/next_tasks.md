@@ -36,10 +36,10 @@ THREAD, locked shed image
     - [ ] Re write attic rooms
   - [ ] TEST billiard room
 problem now
-    - [ ] Rewrite NURSE + Thread that leads to no nurse the next morning. while going to eat. 
+    - [x] Rewrite NURSE + Thread that leads to no nurse the next morning. while going to eat. 
     - [x] Rewrite Lad agree 
       - [ ] + Ending
-    - [ ] REWRITE HOST 
+    - [ ] REWRITE HOST Confront
       - [ ] + Ending
   - Add and validate tests
 - [ ] sunday -
