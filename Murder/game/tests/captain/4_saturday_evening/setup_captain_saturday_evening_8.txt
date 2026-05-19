@@ -58,7 +58,6 @@ He will trouble no one for the remainder of the evening.
 I weigh the key in my palm.
 It would be the natural thing to return it to the butler at once.
 And yet... I should prefer it stayed where it is.
-Tonight, under this roof, a key is not a small thing.
 I slip it quietly into my waistcoat pocket.
 When I come back down, the others have remained much as I left them.
 Lady Claythorn looks towards me with the faintly anxious composure of a hostess whose weekend has slipped beyond repair.
@@ -88,9 +87,7 @@ Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
-A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
-A man less suspicious than I am would take her at her word and think no further of it.
-As it is, I take note of her composure, and say nothing of it aloud.
+A measured address. She is troubled but tries not to show it.
 The food is served shortly after, but most of us merely push it about our plates.
 Miss Marsh, in her new place at the hostess's elbow, picks at her meal without raising her eyes.
 Mr Harring keeps his head bent over his plate and answers nothing that is not put directly to him.
@@ -216,11 +213,8 @@ Map Choice: Female Servants Room
 A small, spare room. Two narrow beds, a washstand, a single trunk between them.
 On the shelf above one of the beds, a few keepsakes — a dog-eared London playbill, another from a touring company.
 Tucked behind them, a faded photograph.
-A young woman in stage dress, posed beside a man I do not recognise. Smiling broadly for the camera.
-The maid who has been waiting on us all weekend.
-Or, more likely, the actress who has been playing at it.
-Two players in the same household, so far from any theatre worth the name.
-That is no coincidence at all.
+A young woman in stage dress, posed beside a man. Both smiling broadly for the camera.
+I do not recognise them.
 I replace the photograph and step back out.
 Map Choice: Female Servants Room
 I have already searched this room.
@@ -240,9 +234,7 @@ Lady Claythorn: I... did not realise anyone was still up.
 Sushil Sinha: Evidently.
 Lady Claythorn: Forgive me. I came down to fetch my book.
 Lady Claythorn: I find I cannot sleep without something to read.
-A thin excuse, but a hostess in her own house may name her reason as she likes.
-The coat is not so easily explained.
-A travelling coat, buttoned for the road at near eleven o'clock.
+That is possible explanation, but why is she wearing a coat then?
 A woman seeking a book for her bedside does not come for it dressed for travel.
 I should ask her why she is dressed that way.
 Especially since it is not the only suspicious thing I have discovered about her.
@@ -264,3 +256,5 @@ But it is too late now.
 It is time I retired to my room.
 I close the door behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.
+I undress without lighting the lamp and lie down upon the bed.
+Sleep, when it comes, comes more readily than I should have thought.

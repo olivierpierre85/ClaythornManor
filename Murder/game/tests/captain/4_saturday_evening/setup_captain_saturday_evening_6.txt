@@ -58,7 +58,6 @@ He will trouble no one for the remainder of the evening.
 I weigh the key in my palm.
 It would be the natural thing to return it to the butler at once.
 And yet... I should prefer it stayed where it is.
-Tonight, under this roof, a key is not a small thing.
 I slip it quietly into my waistcoat pocket.
 When I come back down, the others have remained much as I left them.
 Lady Claythorn looks towards me with the faintly anxious composure of a hostess whose weekend has slipped beyond repair.
@@ -88,9 +87,7 @@ Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
-A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
-A man less suspicious than I am would take her at her word and think no further of it.
-As it is, I take note of her composure, and say nothing of it aloud.
+A measured address. She is troubled but tries not to show it.
 The food is served shortly after, but most of us merely push it about our plates.
 Miss Marsh, in her new place at the hostess's elbow, picks at her meal without raising her eyes.
 Mr Harring keeps his head bent over his plate and answers nothing that is not put directly to him.
@@ -140,24 +137,25 @@ A well-kept piece, in an attic full of old leavings. Someone in this house has b
 That, by itself, is interesting.
 I take it up. It will be wanted before the night is out.
 Map Choice: Garden
-I draw the side door closed behind me and light the lantern.
-The pool of light picks out the gravel path, the wet grass beyond, the dark mass of the hedge.
-I make my way around to the outbuilding I found yesterday.
-Menu Choice: Try the shed door with the master key
-I fit the master key to the lock. It does not turn at first.
-A patient adjustment, and the bolt slides clear.
-The door creaks open on a small, low-roofed space smelling strongly of oil and old timber.
-The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
-And, set rather neatly in the middle of the floor, a metal petrol tin.
-I unscrew the cap and lower my nose to it for a moment. Petrol, and a great deal of it.
-A full can, that could be useful.
-I search a little further but found nothing of interest, so I step out of this shed.
-I lock the door behind me as carefully as I opened it.
+I look through the window. The storm has passed, but a steady rain is falling again.
+Lighter than last night, though enough to soak a man through.
+But that is nothing that can really prevent me from going.
+I step outside.
+The air is cold and the rain heavier than it looked from indoors.
+Within moments my jacket is soaked through.
+I walk a short distance around the house.
+A gravel path, wet grass, and, further off in the dark, the shape of an outbuilding.
+The lantern's pool of light picks out the gravel path, the wet grass beyond, the dark mass of the hedge.
+I make my way around to the outbuilding.
+Menu Choice: Take a closer look at the outbuilding
+I press on through the rain, boots sinking into the sodden gravel.
+The outbuilding proves to be a squat timber shed, half hidden behind an overgrown hedge.
+I try the handle.
+It does not give. The door is locked, and firmly so.
+A garden shed, out here in the middle of nowhere, bolted shut against what?
+Whoever fitted that lock had a reason, and it was not the threat of common thieves.
+I have no means of opening it tonight.
 I slip back inside and brush the damp from my coat.
-No one seems to have marked my absence.
-Map Choice: Garden
-I have seen all I needed to see out there.
-No reason to brave the cold a second time.
 Map Choice: Storage Room
 Nothing more for me here. I have what I came for.
 Map Choice: Butler's Room
@@ -168,7 +166,7 @@ The lock is a modern one, and a good one.
 I take the master key from my pocket and try it.
 It turns without complaint.
 Inside: candlesticks, a salver, several sets of heavy plate. The honest wealth of the house, locked behind a butler's door rather than the master's.
-Curious. In a properly run household this would all be in the strong room downstairs, under the mistress's hand.
+I have no will to take
 I close the cabinet, lock it again, and step back.
 Whoever is truly running this house, it is not Lady Claythorn.
 Map Choice: Butler's Room
@@ -187,11 +185,8 @@ Map Choice: Female Servants Room
 A small, spare room. Two narrow beds, a washstand, a single trunk between them.
 On the shelf above one of the beds, a few keepsakes — a dog-eared London playbill, another from a touring company.
 Tucked behind them, a faded photograph.
-A young woman in stage dress, posed beside a man I do not recognise. Smiling broadly for the camera.
-The maid who has been waiting on us all weekend.
-Or, more likely, the actress who has been playing at it.
-Two players in the same household, so far from any theatre worth the name.
-That is no coincidence at all.
+A young woman in stage dress, posed beside a man. Both smiling broadly for the camera.
+I do not recognise them.
 I replace the photograph and step back out.
 Map Choice: Elizabeth I Bedroom
 Sushil Sinha: Hello? Is anyone there?
@@ -224,3 +219,5 @@ I leave the room as I found it.
 It is time I retired to my room.
 I close the door behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.
+I undress without lighting the lamp and lie down upon the bed.
+Sleep, when it comes, comes more readily than I should have thought.

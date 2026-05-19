@@ -73,7 +73,6 @@ He will trouble no one for the remainder of the evening.
 I weigh the key in my palm.
 It would be the natural thing to return it to the butler at once.
 And yet... I should prefer it stayed where it is.
-Tonight, under this roof, a key is not a small thing.
 I slip it quietly into my waistcoat pocket.
 When I come back down, the others have remained much as I left them.
 Lady Claythorn looks towards me with the faintly anxious composure of a hostess whose weekend has slipped beyond repair.
@@ -103,9 +102,7 @@ Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
-A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
-A man less suspicious than I am would take her at her word and think no further of it.
-As it is, I take note of her composure, and say nothing of it aloud.
+A measured address. She is troubled but tries not to show it.
 The food is served shortly after, but most of us merely push it about our plates.
 Miss Marsh, in her new place at the hostess's elbow, picks at her meal without raising her eyes.
 Mr Harring keeps his head bent over his plate and answers nothing that is not put directly to him.
@@ -267,21 +264,28 @@ Lady Claythorn: I... did not realise anyone was still up.
 Sushil Sinha: Evidently.
 Lady Claythorn: Forgive me. I came down to fetch my book.
 Lady Claythorn: I find I cannot sleep without something to read.
-A thin excuse, but a hostess in her own house may name her reason as she likes.
-The coat is not so easily explained.
-A travelling coat, buttoned for the road at near eleven o'clock.
+That is possible explanation, but why is she wearing a coat then?
 A woman seeking a book for her bedside does not come for it dressed for travel.
 And here, plainly, is what I have been waiting for the whole evening.
-Her name is not her own.
-Her portrait is nowhere to be found in the gallery.
-She cannot shoot, nor keep a proper table.
+I have learned enough about her to know she is not who she claims to be.
 And now she stands before me in a travelling coat at near eleven o'clock, with two of her guests dead beneath her roof.
 If I am to put it to her, it must be now.
 Menu Choice: Let her go and say nothing
-I let her go.
-A travelling coat and a startled face are not enough to set against a hostess in her own house, not at near eleven o'clock, not with the only other witnesses asleep upstairs.
-She murmurs a goodnight and goes without another word.
-Whatever I might have asked her, the moment is past.
+I rise, and hold out the book she came for.
+Sushil Sinha: Your book, my lady.
+Lady Claythorn: Oh — keep it, Captain, please. I would not dream of disturbing your evening.
+Lady Claythorn: I shall do well enough without.
+Sushil Sinha: I would not hear of it, my lady. You came down for it, and it is yours.
+Sushil Sinha: I must insist.
+She hesitates a moment longer than I should have expected, then takes the book from my hand.
+Lady Claythorn: You are very kind.
+Sushil Sinha: Not at all. Good night, my lady.
+She gives the smallest of nods, and is gone before I have settled back in my chair.
+The door clicks shut.
+I have the uncomfortable feeling that my manners have prevented me from doing something I should have done.
+But it is too late now.
 It is time I retired to my room.
 I close the door behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.
+I undress without lighting the lamp and lie down upon the bed.
+Sleep, when it comes, comes more readily than I should have thought.

@@ -58,7 +58,6 @@ He will trouble no one for the remainder of the evening.
 I weigh the key in my palm.
 It would be the natural thing to return it to the butler at once.
 And yet... I should prefer it stayed where it is.
-Tonight, under this roof, a key is not a small thing.
 I slip it quietly into my waistcoat pocket.
 When I come back down, the others have remained much as I left them.
 Lady Claythorn looks towards me with the faintly anxious composure of a hostess whose weekend has slipped beyond repair.
@@ -88,9 +87,7 @@ Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
-A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
-A man less suspicious than I am would take her at her word and think no further of it.
-As it is, I take note of her composure, and say nothing of it aloud.
+A measured address. She is troubled but tries not to show it.
 The food is served shortly after, but most of us merely push it about our plates.
 Miss Marsh, in her new place at the hostess's elbow, picks at her meal without raising her eyes.
 Mr Harring keeps his head bent over his plate and answers nothing that is not put directly to him.
@@ -127,10 +124,18 @@ The hall is quiet.
 The same flagstones where we laid Doctor Baldwin a few hours ago.
 But nothing of interest.
 Map Choice: Garden
-I look out through the window.
-The night is utterly black, and a thick mist is rolling in across the lawn.
-Without a light, a man would lose himself between the house and the hedge.
-I shall not stumble about out there blind.
+I look through the window. The storm has passed, but a steady rain is falling again.
+Lighter than last night, though enough to soak a man through.
+But that is nothing that can really prevent me from going.
+I step outside.
+The air is cold and the rain heavier than it looked from indoors.
+Within moments my jacket is soaked through.
+I walk a short distance around the house.
+A gravel path, wet grass, and, further off in the dark, the shape of an outbuilding.
+Without a light, I cannot venture any further out here.
+I shall not stumble about in the dark.
+I turn back to the house.
+I head inside to change out of these wet clothes.
 Map Choice: Portrait Gallery
 The Claythorn forebears still gaze down from their frames, silent and stern.
 The absence of our host's portrait remains as striking as before.
@@ -151,3 +156,5 @@ Map Choice: Retire for the night
 It is time I retired to my room.
 I close the door behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.
+I undress without lighting the lamp and lie down upon the bed.
+Sleep, when it comes, comes more readily than I should have thought.
