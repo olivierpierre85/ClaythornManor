@@ -121,3 +121,23 @@
 - Back on the map, the captain visits the footmen's room twice and the maids' room twice to exercise the already-visited branches for both attic dormitories.
 - The captain then returns to the billiard room, which now triggers the re-entry narration ("I am back in the billiard room. The chairs sit much as I left them.") before a final wait resolves to `_host_no_suspicions`.
 - Time runs out, the map closes naturally and the captain falls through to `captain_day3_morning`.
+
+## File 9 — Confide in lad, let host go, throat cut in the bedroom
+
+### Pre-unlocked threads
+- `captain_host_suspicion_name`
+- `captain_host_suspicion_portrait`
+- `captain_host_suspicion_shooting`
+
+### Path
+- Confrontation menu picks "Take Manning up myself" -> `captain_day2_evening_normal_escort`.
+- Dinner menu picks "Speak to Miss Baxter" -> `captain_day2_dinner_psychic`.
+- Map menu picks "Look in on the billiard room" -> `captain_day2_evening_billiard_room`.
+- Six successive waits cycle through every billiard slot:
+  - 21:00–21:20 -> `_nurse_with_suspicions`; nurse menu picks "Keep pretending everything is fine" -> `_nurse_dismiss`.
+  - 21:20–21:40 -> `_empty_1`.
+  - 21:40–22:00 -> `_lad_with_suspicions`; lad menu picks "Tell him about your doubts" -> `_lad_agree` (unlocks `confide_in_lad`).
+  - 22:00–22:20 -> `_empty_2`.
+  - 22:20–22:40 -> `_empty_3`.
+  - 22:40–23:00 -> `_host_with_suspicions`; host menu picks "Let her go and say nothing" -> `_host_silent`.
+- Time runs out, the map closes, and the captain retires. With `confide_in_lad` unlocked, the bedroom ambush triggers and routes to `captain_ending_throat_cut`.

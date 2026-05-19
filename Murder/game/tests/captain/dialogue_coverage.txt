@@ -1,11 +1,11 @@
-Generated:                2026-05-13 15:03:57
+Generated:                2026-05-19 12:03:51
 Scope:                    character=captain
-Dialogue entries scanned: 1614
-Test lines collected:     2429
-Covered:                  1408
-Missing:                  206
+Dialogue entries scanned: 1604
+Test lines collected:     2450
+Covered:                  1384
+Missing:                  220
 
-  game/scripts/captain/Day 3/1_Morning/0_map_choices.rpy  (92 missing)
+  game/scripts/captain/Day 3/1_Morning/0_map_choices.rpy  (93 missing)
     [captain_day3_first_downstairs_22532a1d] I take the stairs to the basement.
     [captain_day3_first_downstairs_647f9423] No staff. No voices. No clatter of pans.
     [captain_day3_first_downstairs_7f3f2be0] The house has been emptied to its bones.
@@ -44,6 +44,7 @@ Missing:                  206
     [captain_day3_morning_escape_alone_6f48e131] The garden lies under a thin mist.
     [captain_day3_morning_escape_alone_45580728] The shed is where I left it last night.
     [captain_day3_morning_stay_with_others_845f31db] No.
+    [captain_day3_morning_stay_with_others_33086073] Not yet.
     [captain_day3_morning_stay_with_others_b4800991] I will not take the only way out of this house before I know what has become of the rest of them.
     [captain_day3_morning_stay_with_others_9607c7a3] I close the bonnet and step back.
     [captain_day3_morning_tea_room_fb65ec15] The fire is dead in the grate.
@@ -216,6 +217,19 @@ Missing:                  206
     [captain_day3_morning_explore_113965fc] Thank you, Captain.
     [captain_day3_morning_explore_ebd2026c] She rises, and the three of us cross the hall together.
 
-  game/scripts/captain/captain_generic_locations.rpy  (1 missing)
+  game/scripts/captain/captain_generic_locations.rpy  (14 missing)
     [captain_library_default_b548ae0c] The genealogy book still lies open on the table, waiting.
+    [captain_garden_intro_cad35886] I step back out into the rain.
+    [captain_garden_intro_9b0f4ec7] The garden is as I left it earlier: gravel underfoot, the outbuilding waiting in the dark.
+    [captain_garden_intro_4d9184f8] I look through the window. The rain is coming down hard.
+    [captain_garden_intro_d4099d00] Most men would turn back at this point.
+    [captain_garden_shed_baeb3997] I fit the master key to the lock. It does not turn at first.
+    [captain_garden_shed_c071fac7] A patient adjustment, and the bolt slides clear.
+    [captain_garden_shed_08883af5] The door creaks open on a small, low-roofed space smelling strongly of oil and old timber.
+    [captain_garden_shed_9bfc8ffd] The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
+    [captain_garden_shed_a635693c] And, set rather neatly in the middle of the floor, a metal petrol tin.
+    [captain_garden_shed_048f6bab] I unscrew the cap and lower my nose to it for a moment. Petrol, and a great deal of it.
+    [captain_garden_shed_026eeafe] A full can — that could be useful.
+    [captain_garden_shed_bebf9505] I search a little further but find nothing more of interest.
+    [captain_garden_shed_b3d074a8] I step out and lock the door behind me as carefully as I opened it.
 

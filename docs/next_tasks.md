@@ -34,13 +34,7 @@ THREAD, locked shed image
   - [ ] **TESt map **
     - [ ] Garden inconsistency. Captain doesn't want to go out in the dark on day 2 ?
     - [ ] Re write attic rooms
-  - [ ] TEST billiard room
-problem now
-    - [x] Rewrite NURSE + Thread that leads to no nurse the next morning. while going to eat. 
-    - [x] Rewrite Lad agree 
-      - [ ] + Ending
-    - [ ] REWRITE HOST Confront
-      - [ ] + Ending
+
   - Add and validate tests
 - [ ] sunday -
 - [ ] Confess to nurse, but she doesn't trust you back? You might not just see her in the morning
