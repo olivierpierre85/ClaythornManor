@@ -36,7 +36,7 @@
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Garden",
-            "redirect": "captain_day2_evening_garden_no_lantern"
+            "redirect": "captain_garden_default_no_lantern"
         },
         {
             "menu": "captain_day2_evening_map_menu",

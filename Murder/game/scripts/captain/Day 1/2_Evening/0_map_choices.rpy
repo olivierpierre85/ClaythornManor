@@ -20,7 +20,8 @@ label captain_day1_evening_map_menu:
             # First floor
             TimedMenuChoice(default_room_text('tea_room'), 'captain_day1_evening_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day1_evening_dining_room', 10, room='dining_room'),
-            TimedMenuChoice(default_room_text('manor_garden'), 'captain_day1_evening_garden', 0, room='manor_garden'),
+            # The lantern is only obtainable in saturday_evening's attic, so day 1 only has the no-lantern variant.
+            TimedMenuChoice(default_room_text('manor_garden'), 'captain_garden_default_no_lantern', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day1_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_portrait_gallery_default', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('library'), 'captain_library_default', 0, room='library'),
@@ -92,81 +93,6 @@ label captain_day1_evening_dining_room:
 
     No reason to linger.
     """
-
-    return
-
-
-label captain_day1_evening_garden:
-
-    $ change_room('entrance_hall')
-
-    """
-    I look through the window. The rain is coming down hard now.
-
-    A storm is gathering. I can hear the wind picking up against the glass.
-
-    Most people would turn back at this point.
-
-    But I have marched through monsoons. A bit of rain is hardly cause for concern.
-    """
-
-    $ change_room('manor_garden')
-
-    """
-    I step outside.
-
-    The air is cold and the rain is heavier than it looked from indoors.
-
-    Within moments, my jacket is soaked through.
-
-    I walk a short distance around the house.
-
-    Nothing remarkable in the dark.
-
-    A garden, a gravel path, and what appears to be an outbuilding further on.
-    """
-
-    call run_menu(TimedMenu("captain_day1_evening_garden_shed_menu", [
-        TimedMenuChoice("Take a closer look at the outbuilding", 'captain_day1_evening_shed', 40, early_exit=True),
-        TimedMenuChoice("Don't stay too long in the rain", 'generic_cancel', 20, early_exit=True),
-    ]))
-
-    """
-    I am soaking wet and the cold is beginning to bite.
-
-    In these conditions, there is no point in staying any longer.
-    """
-
-    $ change_room('bedroom_captain')
-
-    """
-    I return inside and head straight to my room to change.
-
-    A foolish exercise, perhaps, but at least I have a better understanding of the estate.
-    """
-
-    return
-
-
-label captain_day1_evening_shed:
-
-    """
-    I press on through the rain, boots sinking into the sodden gravel.
-
-    The outbuilding proves to be a squat timber shed, half hidden behind an overgrown hedge.
-
-    I try the handle.
-
-    It does not give. The door is locked, and firmly so.
-
-    That is odd.
-
-    A garden shed, out here in the middle of nowhere, bolted shut against what exactly?
-
-    Whoever fitted that lock had a reason, and it was not the threat of common thieves.
-    """
-
-    $ captain_details.threads.unlock('garden_shed_locked')
 
     return
 

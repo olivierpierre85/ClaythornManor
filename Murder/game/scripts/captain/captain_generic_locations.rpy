@@ -122,6 +122,181 @@ label captain_host_suspicion:
     return
 
 
+# ------------------------------------
+#   GARDEN AND SHED (shared across days)
+# ------------------------------------
+# The captain always braves the rain, regardless of weather.
+# Two map choices share the same intro:
+#   - captain_garden_default_no_lantern  (visible when the captain has no lantern)
+#   - captain_garden_default_with_lantern (visible when the lantern is in hand)
+# Without a lantern he turns back; the choice itself deducts the time on the map.
+# With a lantern he can approach the shed; the inner sub-menu deducts the time.
+# The shed door is always locked. With the master key (only available from
+# saturday_evening onward) he opens it and discovers the petrol tin inside.
+
+label captain_garden_intro:
+
+    python:
+        _captain_garden_intro_key = current_chapter + "_captain_garden_intro_done"
+        _captain_garden_intro_done = captain_details.saved_variables.get(_captain_garden_intro_key, False)
+
+    if _captain_garden_intro_done:
+
+        $ change_room('manor_garden')
+
+        """
+        I step back out into the rain.
+
+        The garden is as I left it earlier: gravel underfoot, the outbuilding waiting in the dark.
+        """
+
+        return
+
+    $ captain_details.saved_variables[_captain_garden_intro_key] = True
+
+    $ change_room('entrance_hall')
+
+    if current_chapter == 'friday_evening':
+
+        """
+        I look through the window. The rain is coming down hard.
+
+        A storm is gathering. I can hear the wind picking up against the glass.
+
+        Most men would turn back at this point.
+
+        But I have marched through monsoons. A bit of rain is hardly cause for concern.
+        """
+
+    else:
+
+        """
+        I look through the window. The storm has passed, but a steady rain is falling again.
+
+        Lighter than last night, though enough to soak a man through.
+
+        But that is nothing that can really prevent me from going.
+        """
+
+    $ change_room('manor_garden')
+
+    """
+    I step outside.
+
+    The air is cold and the rain heavier than it looked from indoors.
+
+    Within moments my jacket is soaked through.
+
+    I walk a short distance around the house.
+
+    A gravel path, wet grass, and, further off in the dark, the shape of an outbuilding.
+    """
+
+    return
+
+
+label captain_garden_default_no_lantern:
+
+    call captain_garden_intro
+
+    """
+    Without a light, I cannot venture any further out here.
+
+    I shall not stumble about in the dark.
+
+    I turn back to the house.
+    """
+
+    $ change_room('bedroom_captain')
+
+    """
+    I head inside to change out of these wet clothes.
+    """
+
+    return
+
+
+label captain_garden_default_with_lantern:
+
+    call captain_garden_intro
+
+    """
+    The lantern's pool of light picks out the gravel path, the wet grass beyond, the dark mass of the hedge.
+
+    I make my way around to the outbuilding.
+    """
+
+    call run_menu(TimedMenu("captain_garden_shed_menu", [
+        TimedMenuChoice("Take a closer look at the outbuilding", 'captain_garden_shed', 30, early_exit=True),
+        TimedMenuChoice("Don't stay too long in the rain", 'generic_cancel', 10, early_exit=True),
+    ]))
+
+    $ change_room('bedroom_captain')
+
+    """
+    I slip back inside and brush the damp from my coat.
+    """
+
+    return
+
+
+label captain_garden_shed:
+
+    """
+    I press on through the rain, boots sinking into the sodden gravel.
+
+    The outbuilding proves to be a squat timber shed, half hidden behind an overgrown hedge.
+
+    I try the handle.
+
+    It does not give. The door is locked, and firmly so.
+    """
+
+    $ captain_details.threads.unlock('garden_shed_locked')
+
+    if not captain_details.objects.is_unlocked('butler_key'):
+
+        """
+        A garden shed, out here in the middle of nowhere, bolted shut against what?
+
+        Whoever fitted that lock had a reason, and it was not the threat of common thieves.
+
+        I have no means of opening it tonight.
+        """
+
+        return
+
+    """
+    I fit the master key to the lock. It does not turn at first.
+
+    A patient adjustment, and the bolt slides clear.
+
+    The door creaks open on a small, low-roofed space smelling strongly of oil and old timber.
+    """
+
+    play sound door_open
+
+    $ change_room("toolshed")
+
+    """
+    The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
+
+    And, set rather neatly in the middle of the floor, a metal petrol tin.
+
+    I unscrew the cap and lower my nose to it for a moment. Petrol, and a great deal of it.
+
+    A full can — that could be useful.
+
+    I search a little further but find nothing more of interest.
+
+    I step out and lock the door behind me as carefully as I opened it.
+    """
+
+    $ captain_details.threads.unlock('petrol_tin_in_shed')
+
+    return
+
+
 label captain_portrait_gallery_default:
 
     $ change_room('portrait_gallery')

@@ -92,7 +92,7 @@
 
 ### Path
 - Dinner menu picks "Speak to Miss Baxter" so the dinner conversation runs once.
-- Map menu visits: storage (unlocks the lantern), garden with lantern -> shed (unlocks the petrol tin), garden again (already-seen branch), storage again (lantern-already-have branch), butler's room (cabinet inspection), butler's room again (already-seen branch), footmen's room (rejection letter), maids' room (actress photograph), then bedrooms for Miss Baxter, Doctor Baldwin, Mr Manning, Mr Harring and Mr Moody.
+- Map menu visits: storage (unlocks the lantern), garden with lantern -> outbuilding (unlocks `garden_shed_locked` and the petrol tin via the master key), storage again (lantern-already-have branch), butler's room (cabinet inspection), butler's room again (already-seen branch), footmen's room (rejection letter), maids' room (actress photograph), then bedrooms for Miss Baxter, Doctor Baldwin, Mr Manning, Mr Harring and Mr Moody.
 - Time runs out after the last bedroom; the map closes naturally and the captain falls through to `captain_day3_morning`.
 
 ## File 7 — Map exploration: first floor, downstairs, gallery and library revisits
@@ -106,7 +106,7 @@
 
 ### Path
 - Dinner menu picks "Say nothing, eat in silence".
-- Map menu visits: kitchen (downstairs default; the four downstairs choices are coalesced after the first), tea room, dining room, entrance hall, garden (no lantern branch), portrait gallery (revisit, with `captain_host_suspicion_portrait` already unlocked), library (revisit, with `captain_host_suspicion_name` already unlocked), Miss Marsh's room and Lady Claythorn's room.
+- Map menu visits: kitchen (downstairs default; the four downstairs choices are coalesced after the first), tea room, dining room, entrance hall, garden (no-lantern branch: captain goes out, spots the shed, turns back without approaching), portrait gallery (revisit, with `captain_host_suspicion_portrait` already unlocked), library (revisit, with `captain_host_suspicion_name` already unlocked), Miss Marsh's room and Lady Claythorn's room.
 - "Retire for the night" closes the chapter.
 - Covers the revisit branches of the library and gallery, the no-lantern garden text, and the small bedrooms skipped in File 6.
 

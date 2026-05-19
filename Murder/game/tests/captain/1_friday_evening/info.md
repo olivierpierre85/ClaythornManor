@@ -34,13 +34,17 @@ billiard room" re-entry narration is exercised.
     - Leave the room
 - Retire for the night
 
-## File 3 — Outside (garden shed)
+## File 3 — Outside (garden, no lantern)
+
+The captain has no lantern on Friday, so the no-lantern garden choice fires:
+he braves the rain, spots the outbuilding, and turns back. No shed thread is
+set on this evening.
 
 ### Dinner
 - Ignore Miss Baxter
 
 ### Map Choices
-- Garden — Take a closer look at the outbuilding (unlocks `garden_shed_locked`)
+- Garden (no-lantern branch) -> `captain_garden_default_no_lantern`
 - Retire for the night
 
 ## File 4 — Billiard room (refuse the story)

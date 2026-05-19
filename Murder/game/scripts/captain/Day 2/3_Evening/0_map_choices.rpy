@@ -22,14 +22,14 @@ label captain_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day2_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(
                 default_room_text('manor_garden'),
-                'captain_day2_evening_garden_with_lantern',
+                'captain_garden_default_with_lantern',
                 0,
                 room='manor_garden',
                 condition="captain_details.objects.is_unlocked('lantern')",
             ),
             TimedMenuChoice(
                 default_room_text('manor_garden'),
-                'captain_day2_evening_garden_no_lantern',
+                'captain_garden_default_no_lantern',
                 10,
                 room='manor_garden',
                 condition="not captain_details.objects.is_unlocked('lantern')",
@@ -124,103 +124,6 @@ label captain_day2_evening_entrance_hall:
 
     But nothing of interest.
     """
-
-    return
-
-
-# ------------------------------------
-#   GARDEN AND SHED
-# ------------------------------------
-label captain_day2_evening_garden_no_lantern:
-
-    $ change_room('entrance_hall')
-
-    """
-    I look out through the window.
-
-    The night is utterly black, and a thick mist is rolling in across the lawn.
-
-    Without a light, a man would lose himself between the house and the hedge.
-
-    I shall not stumble about out there blind.
-    """
-
-    return
-
-
-label captain_day2_evening_garden_with_lantern:
-
-    if captain_details.saved_variables["day2_evening_shed_visited"]:
-
-        $ change_room('entrance_hall')
-
-        """
-        I have seen all I needed to see out there.
-
-        No reason to brave the cold a second time.
-        """
-
-        return
-
-    $ captain_details.saved_variables["day2_evening_garden_visited"] = True
-
-    $ change_room('manor_garden')
-
-    """
-    I draw the side door closed behind me and light the lantern.
-
-    The pool of light picks out the gravel path, the wet grass beyond, the dark mass of the hedge.
-
-    I make my way around to the outbuilding I found yesterday.
-    """
-
-    call run_menu(TimedMenu("captain_day2_evening_garden_menu", [
-        TimedMenuChoice("Try the shed door with the master key", 'captain_day2_evening_shed', 30, early_exit=True),
-        TimedMenuChoice("Better not linger out here", 'generic_cancel', 10, early_exit=True),
-    ]))
-
-    $ change_room('bedroom_captain')
-
-    """
-    I slip back inside and brush the damp from my coat.
-
-    No one seems to have marked my absence.
-    """
-
-    return
-
-
-label captain_day2_evening_shed:
-
-    $ captain_details.saved_variables["day2_evening_shed_visited"] = True
-
-    """
-    I fit the master key to the lock. It does not turn at first.
-
-    A patient adjustment, and the bolt slides clear.
-
-    The door creaks open on a small, low-roofed space smelling strongly of oil and old timber.
-    """
-
-    play sound door_open
-
-    $ change_room("toolshed")
-
-    """
-    The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
-
-    And, set rather neatly in the middle of the floor, a metal petrol tin.
-
-    I unscrew the cap and lower my nose to it for a moment. Petrol, and a great deal of it.
-
-    A full can, that could be useful.
-
-    I search a little further but found nothing of interest, so I step out of this shed.
-
-    I lock the door behind me as carefully as I opened it.
-    """
-
-    $ captain_details.threads.unlock('petrol_tin_in_shed')
 
     return
 
@@ -372,15 +275,9 @@ label captain_day2_evening_attic_females_room:
 
     Tucked behind them, a faded photograph.
 
-    A young woman in stage dress, posed beside a man I do not recognise. Smiling broadly for the camera.
+    A young woman in stage dress, posed beside a man. Both smiling broadly for the camera.
 
-    The maid who has been waiting on us all weekend.
-
-    Or, more likely, the actress who has been playing at it.
-
-    Two players in the same household, so far from any theatre worth the name.
-
-    That is no coincidence at all.
+    I do not recognise them.
 
     I replace the photograph and step back out.
     """
@@ -423,7 +320,7 @@ label captain_day2_evening_attic_butler_room:
 
     Inside: candlesticks, a salver, several sets of heavy plate. The honest wealth of the house, locked behind a butler's door rather than the master's.
 
-    Curious. In a properly run household this would all be in the strong room downstairs, under the mistress's hand.
+    I have no will to take 
 
     I close the cabinet, lock it again, and step back.
 

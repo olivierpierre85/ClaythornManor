@@ -155,9 +155,9 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 
 
 ### Ideas to think over (optional)
-- add a mysterious Sound when Thomas Moody comes. That's the first time we see him make it alive for day 2
+- add a mysterious Sound when Thomas Moody comes. That's the first time we see him make it alive for day 2. Or maybe at least an ominous "There is no reason he shouldn't be ther?" No to obvious
 - Expands story about his noble upbringing in generic dialogs.
-
+- [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big 
 
 ## Host
 

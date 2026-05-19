@@ -16,17 +16,12 @@
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Garden",
-            "redirect": "captain_day2_evening_garden_with_lantern"
+            "redirect": "captain_garden_default_with_lantern"
         },
         {
-            "menu": "captain_day2_evening_garden_menu",
-            "selected": "Try the shed door with the master key",
-            "redirect": "captain_day2_evening_shed"
-        },
-        {
-            "menu": "captain_day2_evening_map_menu",
-            "selected": "Garden",
-            "redirect": "captain_day2_evening_garden_with_lantern"
+            "menu": "captain_garden_shed_menu",
+            "selected": "Take a closer look at the outbuilding",
+            "redirect": "captain_garden_shed"
         },
         {
             "menu": "captain_day2_evening_map_menu",
