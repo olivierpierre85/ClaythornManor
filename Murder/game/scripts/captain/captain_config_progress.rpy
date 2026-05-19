@@ -138,4 +138,25 @@ label captain_config_progress:
                 # --- All three host suspicions: unlocks the confrontation menu ---
                 {"label": "captain_day2_evening", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True, 'captain_host_suspicion_shooting': True}},
             ],
+
+            # ===== SUNDAY MORNING =====
+            # Only reachable on the Moody-dead branch, so tell_boxer_story is always True here.
+            # The captain also always carries butler_key on the normal escort path that
+            # leads here, so it is set in every entry for narrative consistency.
+            # Threads SET before & RELEVANT here:
+            #   - confide_in_nurse: set saturday_evening, relevant=['sunday_morning']
+            #     (main branching — confided: Miss Marsh fetches him, they hide in the
+            #      butler's attic room / refused: captain explores the manor alone)
+            #   - petrol_tin_in_shed: set saturday_evening, relevant=['sunday_morning']
+            #     (in the explore path, unlocks the escape/stay menu in the garage)
+            # Threads SET here:
+            #   - seen_car (set on the first garage visit, explore branch only)
+            'sunday_morning': [
+                # --- Explore path: no petrol; garage shows the "dead weight" branch ---
+                {"label": "captain_day3_morning", "threads": {'tell_boxer_story': True, 'butler_key': True}},
+                # --- Explore path with petrol tin: garage opens the escape/stay menu ---
+                {"label": "captain_day3_morning", "threads": {'tell_boxer_story': True, 'butler_key': True, 'petrol_tin_in_shed': True}},
+                # --- Nurse path: Miss Marsh fetches him; they hide in the butler's room ---
+                {"label": "captain_day3_morning", "threads": {'tell_boxer_story': True, 'butler_key': True, 'confide_in_nurse': True}},
+            ],
         }

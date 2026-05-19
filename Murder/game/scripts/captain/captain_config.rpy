@@ -54,7 +54,7 @@ label init_captain:
                 1, "confide_in_nurse",
                 "You confided your suspicions about Lady Claythorn to Miss Marsh",
                 content_negative="You kept your suspicions about Lady Claythorn from Miss Marsh",
-                image_file="lad", # TODO placeholder
+                image_file="nurse",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
@@ -62,7 +62,7 @@ label init_captain:
                 2, "confide_in_lad",
                 "You confided your suspicions about Lady Claythorn to Mr Harring",
                 content_negative="You kept your suspicions about Lady Claythorn from Mr Harring",
-                image_file="nurse", # TODO placeholder
+                image_file="lad",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),

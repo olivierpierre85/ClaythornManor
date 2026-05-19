@@ -29,7 +29,7 @@ THREAD, locked shed image
     - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [ ] Saturday evening - **ongoing**
-  - [ ] TESt map 
+  - [ ] **TESt map **
   - [ ] TEST billiard room
     - [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big problem now
     - [ ] Rewrite NURSE + Thread that leads to no nurse the next morning. while going to eat. 

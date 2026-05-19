@@ -206,14 +206,8 @@ label captain_day2_evening:
     call common_day2_evening_dinner_host
 
     """
-    A measured address. If she is troubled by what has happened beneath her roof today, nothing of it shows.
+    A measured address. She is troubled but tries not to show it.
 
-    A man less suspicious than I am would take her at her word and think no further of it.
-
-    As it is, I take note of her composure, and say nothing of it aloud.
-    """
-
-    """
     The food is served shortly after, but most of us merely push it about our plates.
 
     Miss Marsh, in her new place at the hostess's elbow, picks at her meal without raising her eyes.
@@ -415,8 +409,6 @@ label captain_day2_evening_normal_escort:
     It would be the natural thing to return it to the butler at once.
 
     And yet... I should prefer it stayed where it is.
-
-    Tonight, under this roof, a key is not a small thing.
 
     I slip it quietly into my waistcoat pocket.
     """
