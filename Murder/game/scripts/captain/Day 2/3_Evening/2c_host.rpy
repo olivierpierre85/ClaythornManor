@@ -34,11 +34,7 @@ label captain_day2_evening_billiard_room_host_intro:
     """
 
     """
-    A thin excuse, but a hostess in her own house may name her reason as she likes.
-
-    The coat is not so easily explained.
-
-    A travelling coat, buttoned for the road at near eleven o'clock.
+    That is possible explanation, but why is she wearing a coat then?
 
     A woman seeking a book for her bedside does not come for it dressed for travel.
     """
@@ -88,47 +84,7 @@ label captain_day2_evening_billiard_room_host_no_suspicions:
     To press her now, on what I have, would be a discourtesy of the worst kind.
     """
 
-    """
-    I rise, and hold out the book she came for.
-    """
-
-    captain """
-    Your book, my lady.
-    """
-
-    host """
-    Oh — keep it, Captain, please. I would not dream of disturbing your evening.
-
-    I shall do well enough without.
-    """
-
-    captain """
-    I would not hear of it, my lady. You came down for it, and it is yours.
-
-    I must insist.
-    """
-
-    """
-    She hesitates a moment longer than I should have expected, then takes the book from my hand.
-    """
-
-    host """
-    You are very kind.
-    """
-
-    captain """
-    Not at all. Good night, my lady.
-    """
-
-    """
-    She gives the smallest of nods, and is gone before I have settled back in my chair.
-
-    The door clicks shut.
-
-    I have the uncomfortable feeling that my manners have prevented me from doing something I should have done.
-
-    But it is too late now.
-    """
+    call captain_day2_evening_billiard_room_host_silent
 
     return
 
@@ -221,13 +177,45 @@ label captain_day2_evening_billiard_room_host_accuse:
 label captain_day2_evening_billiard_room_host_silent:
 
     """
-    I let her go.
+    I rise, and hold out the book she came for.
+    """
 
-    A travelling coat and a startled face are not enough to set against a hostess in her own house, not at near eleven o'clock, not with the only other witnesses asleep upstairs.
+    captain """
+    Your book, my lady.
+    """
 
-    She murmurs a goodnight and goes without another word.
+    host """
+    Oh — keep it, Captain, please. I would not dream of disturbing your evening.
 
-    Whatever I might have asked her, the moment is past.
+    I shall do well enough without.
+    """
+
+    captain """
+    I would not hear of it, my lady. You came down for it, and it is yours.
+
+    I must insist.
+    """
+
+    """
+    She hesitates a moment longer than I should have expected, then takes the book from my hand.
+    """
+
+    host """
+    You are very kind.
+    """
+
+    captain """
+    Not at all. Good night, my lady.
+    """
+
+    """
+    She gives the smallest of nods, and is gone before I have settled back in my chair.
+
+    The door clicks shut.
+
+    I have the uncomfortable feeling that my manners have prevented me from doing something I should have done.
+
+    But it is too late now.
     """
 
     return

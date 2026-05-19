@@ -9,6 +9,8 @@ BUG??? Or by design. WHY Is there a call the generic LAD in psychic day 1 billia
 
 TRY CONSOLE Add on
 
+LOGIC of libray and TIME, how is it handled? When visiting back a place already visited, if there are a menu the first time, but not the second, there is no time that is used...... NEED TO FIX THAT, find a better way EVERY FUCKING WHERE??????? => Complete overhaul later?
+
 ## Write Story: Captain (Sushil Sinha)
 
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
