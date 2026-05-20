@@ -12,11 +12,7 @@ TRY CONSOLE Add on
 LOGIC of libray and TIME, how is it handled? When visiting back a place already visited, if there are a menu the first time, but not the second, there is no time that is used...... NEED TO FIX THAT, find a better way EVERY FUCKING WHERE??????? => Complete overhaul later?
 
 
-## Simplify already visited (not needed from chapter to chapter) => Check everywhere?
-BIG OTHER bug, SOME VISITED var now are ported from chapter to chapter. It should not be the case. How should I write to avoid this? I think it is ok to repeat some dialog.
-BUT THEN IT should be check EVERY FUcKING WHERE
-- Follow example here : captain_library_default
-=> Chapters should be isolated from saved variables !!
+## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse
 
 ## Write Story: Captain (Sushil Sinha)
 
