@@ -37,7 +37,12 @@ label captain_day2_evening_map_menu:
             ),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day2_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_portrait_gallery_default', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('library'), 'captain_library_default', 0, room='library', next_menu='captain_library_menu'),
+            # Test fixture for the relaxed is_valid: real walk-cost (10) instead
+            # of 0. The already-read branch (no sub-menu) now charges this 10
+            # correctly; the first-read branch opens captain_library_menu, which
+            # the relaxed is_valid lets through even if this 10 took the clock to
+            # <= 0. Adjust/replicate to other rooms once you've confirmed it.
+            TimedMenuChoice(default_room_text('library'), 'captain_library_default', 50, room='library', next_menu='captain_library_menu'),
             # Downstairs — staff still working there, captain stays out
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day2_evening_downstairs_default', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day2_evening_downstairs_default', 10, room='scullery'),

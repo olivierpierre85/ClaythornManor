@@ -31,7 +31,7 @@ label run_menu(current_menu, change_level=True):
         if menu_level > 0 and len(selected_choice) >= menu_level and selected_choice[menu_level - 1]:
             $ selected_choice[menu_level - 1].next_menu = current_menu.id
 
-    if current_menu.is_valid():
+    if current_menu.is_valid(opening=change_level):
 
         # Record the time at opening of the menu
         python:
@@ -281,10 +281,27 @@ init -1 python:
             
             return all_redirects
 
-        def is_valid(self, next_menu=False):
+        def is_valid(self, next_menu=False, opening=False):
             if self.get_visible_choices_total(next_menu) <= 0:
                 return False
-                
+
+            # A sub-menu the player has just committed to may proceed even when
+            # the clock has run out, so the parent choice can charge a real visit
+            # cost without the sub-menu vanishing.
+            # Conditions:
+            #   opening      -> this is the first open (change_level=True), not a
+            #                   re-display of the same menu after a choice.
+            #   not next_menu -> only the run check is relaxed, never the choice
+            #                   visibility check, so parent map choices stay
+            #                   time-gated and cannot be started at <= 0 time.
+            #   menu_level>0 -> only sub-menus, never a top-level map menu.
+            # Re-displays (opening=False) fall through to the strict check below,
+            # so the sub-menu still closes once the player runs out of time.
+            if (opening and not next_menu and menu_level > 0
+                    and len(selected_choice) >= menu_level
+                    and selected_choice[menu_level - 1]):
+                return True
+
             if time_left <= 0 or self.early_exit:
                 return False
 
