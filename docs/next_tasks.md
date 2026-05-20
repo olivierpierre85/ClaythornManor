@@ -1,18 +1,8 @@
 <!-- # cSpell:disable -->
-BUG => FULL_TESTINGMODE, if doing a restart, then missing menu???
-
-EVery story but the lad, a memory on the train? 
-Or just : Captain, Broken?
-
-BUG??? Or by design. WHY Is there a call the generic LAD in psychic day 1 billiard room?
+BUG => FULL_TESTINGMODE, if doing a restart, then missing menu??? Also doesn't restart thread => AVOID RESTART
 
 
-TRY CONSOLE Add on
-
-LOGIC of libray and TIME, how is it handled? When visiting back a place already visited, if there are a menu the first time, but not the second, there is no time that is used...... NEED TO FIX THAT, find a better way EVERY FUCKING WHERE??????? => Complete overhaul later?
-
-
-## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse
+## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, no give values all the time?
 
 ## Write Story: Captain (Sushil Sinha)
 
