@@ -15,23 +15,19 @@ label captain_library_default:
 
         return
 
-    else:
+    """
+    A well-stocked library. The kind one would expect in a house like this.
 
-        $ captain_details.saved_variables["visited_library"] = True
+    A book lies open on a table.
 
-        """
-        A well-stocked library. The kind one would expect in a house like this.
+    'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
 
-        A book lies open on a table.
+    The eighth edition, printed in 1894.
 
-        'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
+    I remember dreaming of seeing my name in such a book.
 
-        The eighth edition, printed in 1894.
-
-        I remember dreaming of seeing my name in such a book.
-
-        I know now that it will never happen.
-        """
+    I know now that it will never happen.
+    """
 
     call run_menu(
         TimedMenu("captain_library_menu", [
@@ -88,6 +84,7 @@ label captain_library_read:
     call captain_host_suspicion
 
     return
+
 
 label captain_host_suspicion:
 
@@ -159,7 +156,9 @@ label captain_garden_intro:
     else:
 
         """
-        I look through the window. The storm has passed, but a steady rain is falling again.
+        I look through the window.
+
+        A steady rain is falling again.
 
         Lighter than last night, though enough to soak a man through.
 

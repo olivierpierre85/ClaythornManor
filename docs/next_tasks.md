@@ -12,8 +12,16 @@ TRY CONSOLE Add on
 LOGIC of libray and TIME, how is it handled? When visiting back a place already visited, if there are a menu the first time, but not the second, there is no time that is used...... NEED TO FIX THAT, find a better way EVERY FUCKING WHERE??????? => Complete overhaul later?
 
 
+## Simplify already visited (not needed from chapter to chapter) => Check everywhere?
 BIG OTHER bug, SOME VISITED var now are ported from chapter to chapter. It should not be the case. How should I write to avoid this? I think it is ok to repeat some dialog.
 BUT THEN IT should be check EVERY FUcKING WHERE
+
+- Follow example here : captain_library_default
+
+=> Chapters should be isolated from saved variables !!
+
+
+## next_menu often absent => Re roll for captain (or for everyone)
 
 ## Write Story: Captain (Sushil Sinha)
 
@@ -34,18 +42,10 @@ THREAD, locked shed image
   - [ ] TODO: ADD info unlocks
     - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
     - [ ] NO unlock for Thomas Moody ? Or find something else?
-- [ ] Saturday evening - **ongoing**
-  - [ ] **TESt map**
-    - [ ] Garden inconsistency. test new version
-    - [ ] Re write attic rooms
-    - [ ] test all options, rewrite when needed.
-  - Add and validate tests
-- [ ] sunday -
-- [ ] Confess to nurse, but she doesn't trust you back? You might not just see her in the morning
-
-Confront host, killed by butler like the woods 
-
-    Normal day 3, has to find car, petrol and ... To unlock let's all leave.
+- [x] Saturday evening
+- [ ] sunday Morning
+  - Add and validate tests    
+  - Normal day 3, has to find car, petrol and ... To unlock let's all leave.
     If let's all leave, food is taken and dies while driving, poisoned
     Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
     NEXT CHARACTER - UNlocked by Nurse (and psychic)

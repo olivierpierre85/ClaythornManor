@@ -5,10 +5,10 @@ label captain_day2_evening_map_menu:
             "captain_day2_evening_map_menu",
             [
             # Attic — now reachable: he is suspicious and has the master key
-            TimedMenuChoice(default_room_text('storage'), 'captain_day2_evening_attic_storage', 0, room='storage'),
+            TimedMenuChoice(default_room_text('storage'), 'captain_day2_evening_attic_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'captain_day2_evening_attic_males_room', 20, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'captain_day2_evening_attic_females_room', 20, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'captain_day2_evening_attic_butler_room', 0, room='butler_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'captain_day2_evening_attic_butler_room', 10, room='butler_room'),
             # Bedrooms
             TimedMenuChoice(default_room_text('bedroom_lad'), 'captain_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'captain_day2_evening_bedroom_host', 10, room='bedroom_host'),
@@ -66,13 +66,15 @@ label captain_day2_evening_map_menu:
 # ------------------------------------
 label captain_day2_evening_downstairs_default:
 
+    $ change_room("basement_stairs")
+
     $ all_menus[captain_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('gun_room'))
     $ all_menus[captain_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('garage'))
     $ all_menus[captain_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('scullery'))
     $ all_menus[captain_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('kitchen'))
 
     """
-    The staff are still about their work down there.
+    The staff are still about their work downstairs.
 
     Master key or not, I can think of no plausible errand that would carry a guest into the basement.
 
@@ -191,13 +193,9 @@ label captain_day2_evening_attic_storage:
 
     And, set on its side beneath a folded oilcloth, a storm lantern.
 
-    I lift it from the shelf. The reservoir is half full, the wick recently trimmed.
+    I lift it from the shelf. The reservoir is half full.
 
-    A well-kept piece, in an attic full of old leavings. Someone in this house has been keeping it ready.
-
-    That, by itself, is interesting.
-
-    I take it up. It will be wanted before the night is out.
+    It could prove useful, so I take it up.
     """
 
     $ captain_details.objects.unlock('lantern')
@@ -228,22 +226,10 @@ label captain_day2_evening_attic_males_room:
     """
     Two beds, a chest of drawers, a peg for each man's coat.
 
-    I work the drawers quickly. Folded shirts, a penknife, a few coins. Nothing of note.
+    I work the drawers quickly. Folded shirts, a penknife, a few coins, some letters.
 
-    Then, at the back of the bottom drawer, beneath the linen, a folded sheet of paper.
-
-    A letter from a London theatre company. Politely worded, but a rejection all the same.
-
-    'We regret to inform you that the role has been filled. We wish you every success in your future endeavours.'
-
-    An actor. Playing at being a footman.
-
-    A curious choice of employment for a man with that ambition. And rather further from a stage than one would expect.
-
-    I fold the letter back exactly as I found it.
+    Nothing out of the ordinary here.
     """
-
-    $ captain_details.threads.unlock('footman_actor_letter')
 
     return
 
@@ -282,8 +268,6 @@ label captain_day2_evening_attic_females_room:
     I replace the photograph and step back out.
     """
 
-    $ captain_details.threads.unlock('maid_actress_photo')
-
     return
 
 
@@ -318,16 +302,12 @@ label captain_day2_evening_attic_butler_room:
 
     It turns without complaint.
 
-    Inside: candlesticks, a salver, several sets of heavy plate. The honest wealth of the house, locked behind a butler's door rather than the master's.
+    Inside: candlesticks, a salver, several sets of heavy plate.
 
-    I have no will to take 
+    Nothing of use to me.
 
     I close the cabinet, lock it again, and step back.
-
-    Whoever is truly running this house, it is not Lady Claythorn.
     """
-
-    # TODO consider an observation thread for this realisation
 
     return
 
@@ -357,11 +337,7 @@ label captain_day2_evening_bedroom_lad:
     """
     There is no reply.
 
-    Either Mr Harring is not in his room at all, or he is keeping silent on the other side of the door.
-
-    The first would be a curious thing on a night like this.
-
-    The second would mean the lad has lost his nerve and means to keep his head down until morning.
+    Perhaps Mr Harring is not in his room, or he is too frightened to answer.
 
     There is no telling which from out here.
     """
@@ -444,9 +420,9 @@ label captain_day2_evening_bedroom_broken:
     $ change_room("bedroom_broken")
 
     """
-    Mr Moody's room sits much as it must have done since this morning.
+    Mr Moody lies dead on his bed.
 
-    The bed has been straightened. His effects have been arranged with a tidy hand.
+    I wish I knew more of the cause of his death, but I lack the expertise to examine him properly.
 
     I leave the room as I found it.
     """
@@ -467,9 +443,7 @@ label captain_day2_evening_bedroom_drunk:
     """
     Mr Manning is still locked in, and very much the worse for the day's drinking.
 
-    The key in my pocket would let me through that door at any moment.
-
-    Tonight, however, he is more use to me where he is.
+    I should leave him be.
     """
 
     return
