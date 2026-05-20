@@ -10,7 +10,7 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day1_evening_downstairs_crowded', 20, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'nurse_day1_evening_garage', 20, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_day1_evening_gun_room', 0, room='gun_room',
-                condition="not nurse_details.threads.is_unlocked('take_gun')"),
+                condition="not nurse_details.threads.is_unlocked('take_gun')", next_menu='nurse_gun_room_choice'),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_day1_evening_gun_room_already_taken', 10, room='gun_room',
                 condition="nurse_details.threads.is_unlocked('take_gun')"),
             # First floor
@@ -33,7 +33,7 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('butler_room'), 'nurse_day1_evening_butler_room', 10, room='butler_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
-            TimedMenuChoice(default_room_text('library'), 'nurse_day1_evening_library', 0, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'nurse_day1_evening_library', 0, room='library', next_menu='nurse_library_choice'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
                 'nurse_day1_evening_bedroom_psychic', 

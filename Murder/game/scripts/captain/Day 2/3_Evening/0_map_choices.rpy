@@ -26,6 +26,7 @@ label captain_day2_evening_map_menu:
                 0,
                 room='manor_garden',
                 condition="captain_details.objects.is_unlocked('lantern')",
+                next_menu='captain_garden_shed_menu',
             ),
             TimedMenuChoice(
                 default_room_text('manor_garden'),
@@ -36,7 +37,7 @@ label captain_day2_evening_map_menu:
             ),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day2_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_portrait_gallery_default', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('library'), 'captain_library_default', 0, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'captain_library_default', 0, room='library', next_menu='captain_library_menu'),
             # Downstairs — staff still working there, captain stays out
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day2_evening_downstairs_default', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day2_evening_downstairs_default', 10, room='scullery'),
@@ -49,6 +50,7 @@ label captain_day2_evening_map_menu:
                 0,
                 room = 'billiard_room',
                 keep_alive=True,
+                next_menu='captain_day2_evening_billiard_room_menu',
             ),
             TimedMenuChoice(
                 'Retire for the night',

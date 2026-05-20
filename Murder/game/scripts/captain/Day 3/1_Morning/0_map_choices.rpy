@@ -11,7 +11,7 @@ label captain_day3_morning_map_menu:
     python:
         captain_day3_morning_map_menu = TimedMenu("captain_day3_morning_map_menu", [
             # First floor
-            TimedMenuChoice(default_room_text('library'), 'captain_day3_morning_library', 10, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'captain_day3_morning_library', 10, room='library', next_menu='captain_library_menu'),
             TimedMenuChoice(default_room_text('tea_room'), 'captain_day3_morning_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day3_morning_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
@@ -34,7 +34,7 @@ label captain_day3_morning_map_menu:
             # Basement — now reachable, no staff
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day3_morning_kitchen', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day3_morning_scullery', 10, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'captain_day3_morning_garage', 10, room='garage'),
+            TimedMenuChoice(default_room_text('garage'), 'captain_day3_morning_garage', 10, room='garage', next_menu='captain_day3_morning_garage_menu'),
             TimedMenuChoice(default_room_text('gun_room'), 'captain_day3_morning_gun_room', 10, room='gun_room'),
             # End
             TimedMenuChoice(

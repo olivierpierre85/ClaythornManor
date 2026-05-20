@@ -15,13 +15,8 @@ LOGIC of libray and TIME, how is it handled? When visiting back a place already 
 ## Simplify already visited (not needed from chapter to chapter) => Check everywhere?
 BIG OTHER bug, SOME VISITED var now are ported from chapter to chapter. It should not be the case. How should I write to avoid this? I think it is ok to repeat some dialog.
 BUT THEN IT should be check EVERY FUcKING WHERE
-
 - Follow example here : captain_library_default
-
 => Chapters should be isolated from saved variables !!
-
-
-## next_menu often absent => Re roll for captain (or for everyone)
 
 ## Write Story: Captain (Sushil Sinha)
 

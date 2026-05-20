@@ -140,7 +140,7 @@ label captain_day2_evening:
         $ time_left = 1
         call run_menu(
             TimedMenu("captain_day2_evening_menu_confront", [
-                TimedMenuChoice("Send the butler with Manning, and challenge her", 'captain_day2_evening_confront_host', early_exit=True),
+                TimedMenuChoice("Send the butler with Manning, and challenge her", 'captain_day2_evening_confront_host', early_exit=True, next_menu='captain_day2_evening_menu_butler_offer'),
                 TimedMenuChoice("Take Manning up myself", 'captain_day2_evening_normal_escort', early_exit=True),
             ])
         )

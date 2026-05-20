@@ -8,21 +8,21 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('kitchen'), 'nurse_day2_evening_downstairs_maid', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'nurse_day2_evening_downstairs_maid', 10, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'nurse_day2_evening_garage', 10, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day2_evening_gun_room', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')"),
+            TimedMenuChoice(default_room_text('gun_room'), 'nurse_day2_evening_gun_room', 0, room='gun_room', condition="not nurse_details.threads.is_unlocked('take_gun')", next_menu='nurse_gun_room_choice'),
             TimedMenuChoice(default_room_text('gun_room'), 'nurse_day2_evening_gun_room_already_taken', 10, room='gun_room', condition="nurse_details.threads.is_unlocked('take_gun')"),
             # first floor
             TimedMenuChoice(default_room_text('billiard_room'), 'nurse_day2_evening_billiard_room', 0, room='billiard_room', keep_alive=True, next_menu='nurse_day2_evening_billiard_room_menu'),
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day2_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day2_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_day2_evening_entrance_hall', 10, room='entrance_hall'),
-            TimedMenuChoice(default_room_text('library'), 'nurse_day2_evening_library', 0, room='library'),
+            TimedMenuChoice(default_room_text('library'), 'nurse_day2_evening_library', 0, room='library', next_menu='nurse_library_choice'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('tea_room'), 'nurse_day2_evening_tea_room', 10,  room='tea_room'),
             # Bedrooms 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'nurse_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'nurse_day2_evening_bedroom_doctor', 10, room='bedroom_doctor'),
-            TimedMenuChoice(default_room_text('bedroom_captain'), 'nurse_day2_evening_bedroom_captain', 0, room='bedroom_captain'),
-            TimedMenuChoice(default_room_text('bedroom_host'), 'nurse_day2_evening_bedroom_host', 0, room='bedroom_host'),
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'nurse_day2_evening_bedroom_captain', 0, room='bedroom_captain', next_menu='nurse_day2_evening_bedroom_captain'),
+            TimedMenuChoice(default_room_text('bedroom_host'), 'nurse_day2_evening_bedroom_host', 0, room='bedroom_host', next_menu='nurse_day2_evening_bedroom_host'),
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day2_evening_bedroom_drunk', 20, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 
                 'nurse_day2_evening_bedroom_psychic', 
@@ -30,10 +30,10 @@ label nurse_day2_evening_map_menu:
                 room='bedroom_psychic'
             ),
             # attic
-            TimedMenuChoice(default_room_text('storage'), 'nurse_day2_evening_attic_storage', 0, room='storage'),
+            TimedMenuChoice(default_room_text('storage'), 'nurse_day2_evening_attic_storage', 0, room='storage', next_menu='nurse_attic_storage_search'),
             TimedMenuChoice(default_room_text('males_room'), 'nurse_day2_evening_attic_males_room', 20, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'nurse_day2_evening_attic_females_room', 20, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_evening_attic_butler_room', 0, room='butler_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_evening_attic_butler_room', 0, room='butler_room', next_menu='nurse_attic_butler_cabinet_choice'),
 
             TimedMenuChoice(
                 'Go to sleep', 

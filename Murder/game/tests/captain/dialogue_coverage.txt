@@ -1,7 +1,7 @@
-Generated:                2026-05-19 12:03:51
+Generated:                2026-05-20 11:01:08
 Scope:                    character=captain
 Dialogue entries scanned: 1604
-Test lines collected:     2450
+Test lines collected:     2436
 Covered:                  1384
 Missing:                  220
 
