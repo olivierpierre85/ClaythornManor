@@ -38,8 +38,5 @@ label captain_day3_morning:
 
         call captain_day3_morning_explore
 
-    pause 1.0
-
-    $ stop_music()
 
     jump work_in_progress

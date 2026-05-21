@@ -31,12 +31,8 @@ THREAD, locked shed image
     Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
     NEXT CHARACTER - UNlocked by Nurse (and psychic)
 
-## Proofreading
-- TODO add internal logic workflow? /logic-test that will read the same file but not correct grammar?
-- NOW Must go hand in hand with TESTING by chapter
-- Lad : Next  DAY 3
-- Psychic: TODO Full
-- Doctor: TODO Full
+**Captain's gun**
+QUID gun for the captain ? Has one when he confront the nurse, so he should have one, or a way to get one? It seems assume he has one with him at all time? Or should I rewrite that ?
 
 ## Technical Tasks
 
@@ -87,9 +83,6 @@ New music, captain's theme? Old india ? or no music?
 ### STABLE DIFFUSION FUN
 
 Flow or SDXL ?
-=> Flow slower but I think much better.
-ADAPTA FLOW TO GENERATE IMAGES, but with a more cartoonish style
-
 
 - [ ] For info_cards, RENAME so it's correct, then change everything to webp?
 - [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).

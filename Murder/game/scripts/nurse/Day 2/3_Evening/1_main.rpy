@@ -39,8 +39,6 @@ label nurse_day2_evening:
 
     Then the door swings wide and the hunting party files in.
 
-    Something is wrong.
-
     Lady Claythorn's face is ashen.
 
     Two of the men are carrying someone between them.

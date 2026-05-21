@@ -15,18 +15,12 @@ label captain_day3_morning_explore:
 
     The house is silent.
 
-    Not the ordinary silence of an early hour, when the staff move quietly about their work.
+    Not the ordinary silence of an early hour.
 
     A heavier kind.
 
     No footsteps below stairs. No fires being laid. No clatter of breakfast trays.
-    """
 
-    captain """
-    Something is wrong.
-    """
-
-    """
     I dress without hurry, and check the master key is still in my waistcoat pocket.
 
     Then I open the door.
@@ -41,11 +35,25 @@ label captain_day3_morning_explore:
 
     The doors are all shut.
 
-    I had thought I would meet at least one of the others up and dressed by now, but no one stirs.
+    I head to the dining room.
+    """
 
-    I have a few hours before the house ought to be sitting down to luncheon.
+    $ change_room('dining_room', dissolve)
 
-    I shall use them.
+    """
+    The room is empty.
+
+    The table has not been laid.
+
+    No one has been down before me.
+
+    A cold feeling engulfs me.
+
+    All my doubts, the things I had noticed about our host, were not my imagination.
+
+    Something is clearly wrong in this house.
+
+    Now I need to understand what.
     """
 
     $ time_left = 150
@@ -106,6 +114,7 @@ label captain_day3_morning_explore:
     Mr Manning we have not been able to reach.
     """
 
+    # TODO Add if captain actually went there? thread or var?
     captain """
     Mr Manning will not be coming down.
 
