@@ -43,7 +43,7 @@ label lad_day2_evening_map_menu:
             TimedMenuChoice(
                 'Check if there is someone in the Billiard Room', 
                 'lad_day2_evening_billiard_room', 
-                0, 
+                10, 
                 room = 'billiard_room',
                 keep_alive = True, 
             ),

@@ -312,11 +312,9 @@ label lad_day2_evening_billiard_room_captain:
         TimedMenuChoice('Show the letter found in Samuel\'s Manning room{{object}}', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk_letter', 10, condition="lad_details.threads.is_unlocked('burned_letter')"),
         TimedMenuChoice('Question Samuel Manning\'s state of inebriation at the time of the accident', 'lad_day2_evening_billiard_room_captain_hypothesis_drunk', 10),
         # TODO: If you have ALL the suspicions, you can convince the captain something strange is afoot. Need to decide next steps.
-        TimedMenuChoice('Accept you don\'t have any real suspicions', 'lad_day2_evening_billiard_room_captain_hypothesis_cancel', keep_alive=True, early_exit=True),
+        TimedMenuChoice('Accept you don\'t have any real suspicions', 'common_day2_evening_billiard_room_lad_captain_close', keep_alive=True, early_exit=True),
     ])
     call run_menu(lad_day2_evening_billiard_room_captain_hypothesis_menu)
-
-    call common_day2_evening_billiard_room_lad_captain_close
 
     $ lad_details.saved_variables["day2_evening_billiard_room_captain_talked"] = True
 
