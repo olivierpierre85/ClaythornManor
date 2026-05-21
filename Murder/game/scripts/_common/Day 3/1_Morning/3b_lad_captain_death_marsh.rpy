@@ -4,9 +4,14 @@
 
 label common_day3_morning_lad_psychic_captain_marsh_empty:
 
-    """
-    He walks back up the stairs and stands in front of another room.
-    """
+    if current_character.text_id == "captain":
+        """
+        I walk back up the stairs and stop before another door.
+        """
+    else:
+        """
+        He walks back up the stairs and stands in front of another room.
+        """
 
     $ change_room("bedrooms_hallway")
 
@@ -52,13 +57,20 @@ label common_day3_morning_lad_psychic_captain_marsh_empty:
         That mean he is able to visit every room of this place.
         """
 
-    """
-    Captain Sinha then slips a small key from his pocket. 
+    if current_character.text_id == "captain":
+        """
+        I slip the master key from my pocket and turn the lock.
 
-    With a steady hand he turns the lock. 
+        The mechanism clicks, and the door swings open into the silence beyond.
+        """
+    else:
+        """
+        Captain Sinha then slips a small key from his pocket.
 
-    The mechanism clicks, and the door swings open into the silence beyond.
-    """
+        With a steady hand he turns the lock.
+
+        The mechanism clicks, and the door swings open into the silence beyond.
+        """
 
     $ change_room("bedroom_nurse")
 

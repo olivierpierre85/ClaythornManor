@@ -25,6 +25,8 @@ THREAD, locked shed image
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
+  - Explore creates to much possibilities
+  - maybe simplify LAD AND pSYCHIC VERSION TO have simpler Captain's version? OR when the captain is alone, do something? Special  ? But what ?
   - Add and validate tests    
   - Normal day 3, has to find car, petrol and ... To unlock let's all leave.
     If let's all leave, food is taken and dies while driving, poisoned

@@ -31,7 +31,7 @@ label captain_day3_morning_explore:
     $ change_room('bedrooms_hallway', dissolve)
 
     """
-    The corridor is empty.
+    There is no one is the corridor.
 
     The doors are all shut.
 
@@ -114,67 +114,85 @@ label captain_day3_morning_explore:
     Mr Manning we have not been able to reach.
     """
 
-    # TODO Add if captain actually went there? thread or var?
-    captain """
-    Mr Manning will not be coming down.
+    if captain_details.saved_variables["day3_morning_drunk_checked"]:
 
-    I went into his room myself. He was killed in his bed during the night.
-    """
+        # The captain went into Manning's room during his own search.
+        captain """
+        Mr Manning will not be coming down.
 
-    psychic surprised """
-    Oh dear God.
-    """
+        I went into his room myself. He was killed in his bed during the night.
+        """
 
-    lad """
-    Killed?
-    """
+        psychic surprised """
+        Oh dear God.
+        """
 
-    captain """
-    Throat cut.
+        lad """
+        Killed?
+        """
 
-    Whoever did it had a key. He never woke.
-    """
+        captain """
+        Throat cut.
 
-    """
-    Miss Baxter sits down on the lowest step.
+        Whoever did it had a key. He never woke.
+        """
 
-    Mr Harring takes a moment to find his voice.
-    """
+        """
+        Miss Baxter sits down on the lowest step.
 
-    lad """
-    What are we to do?
-    """
+        Mr Harring takes a moment to find his voice.
+        """
 
-    captain """
-    We stop walking the corridors on our own.
+        lad """
+        What are we to do?
+        """
 
-    From now on, we keep together.
-    """
+        captain """
+        We stop walking the corridors on our own.
 
-    psychic """
-    Should we not search a little more?
+        From now on, we keep together.
+        """
 
-    There may still be someone in the house who needs help.
-    """
+        psychic """
+        Should we not search a little more?
 
-    captain """
-    We will. But not in three separate parties.
+        There may still be someone in the house who needs help.
+        """
 
-    Take a few minutes in the tea room. I will see to Miss Baxter, and then we go on together.
-    """
+        captain """
+        We will. But not in three separate parties.
 
-    lad """
-    Right. The tea room.
-    """
+        Take a few minutes in the tea room. I will see to Miss Baxter, and then we go on together.
+        """
 
-    psychic """
-    Thank you, Captain.
-    """
+        lad """
+        Right. The tea room.
+        """
 
-    """
-    She rises, and the three of us cross the hall together.
-    """
+        psychic """
+        Thank you, Captain.
+        """
 
-    $ change_room('tea_room', dissolve)
+        """
+        She rises, and the three of us cross the hall together.
+        """
+
+        $ change_room('tea_room', dissolve)
+
+    else:
+
+        # The captain never reached Manning's room, so the three of them
+        # discover him together, as on the lad's and psychic's paths.
+        captain """
+        His room is locked, and I am the one with the master key.
+
+        We had better look in on him before we do anything else.
+        """
+
+        call common_day3_morning_lad_psychic_captain_death_manning
+
+        call common_day3_morning_lad_psychic_captain_marsh_empty
+
+        call common_day3_morning_lad_psychic_captain_deaths_end
 
     return

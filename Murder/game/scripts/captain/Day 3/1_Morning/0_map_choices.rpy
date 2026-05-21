@@ -11,7 +11,7 @@ label captain_day3_morning_map_menu:
     python:
         captain_day3_morning_map_menu = TimedMenu("captain_day3_morning_map_menu", [
             # First floor
-            TimedMenuChoice(default_room_text('library'), 'captain_day3_morning_library', 10, room='library', next_menu='captain_library_menu'),
+            TimedMenuChoice(default_room_text('library'), 'captain_day3_morning_library', 10, room='library'),
             TimedMenuChoice(default_room_text('tea_room'), 'captain_day3_morning_tea_room', 10, room='tea_room'),
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day3_morning_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
@@ -248,7 +248,29 @@ label captain_day3_morning_stay_with_others:
 # ------------------------------------
 label captain_day3_morning_library:
 
-    call captain_library_default
+    $ change_room('library')
+
+    if captain_details.threads.is_unlocked('captain_host_suspicion_name'):
+
+        """
+        The genealogy book still lies open on the table.
+
+        I have already read what I needed from it.
+        """
+
+        return
+
+    """
+    The genealogy book lies open on the table, where I left it.
+
+    There was a time I might have sat and read it through.
+
+    Not now. Not with the staff vanished and the house emptied around me.
+
+    Whatever name is written in those pages, it will not help the living.
+
+    I leave the book where it lies.
+    """
 
     return
 

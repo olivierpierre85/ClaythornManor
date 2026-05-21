@@ -101,11 +101,17 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
         But as I step inside, Captain Sinha tries to halt us.
         """
+    elif current_character.text_id == "captain":
+        """
+        I unlock the door and step inside, meaning to go in alone.
+
+        But the boy and Miss Baxter are at my shoulder before I can wave them back.
+        """
     else:
         """
         Without warning, he opens the door and enters.
 
-        We quickly follow him, but he attempts to stop us. 
+        We quickly follow him, but he attempts to stop us.
         """
 
     captain """
@@ -115,6 +121,10 @@ label common_day3_morning_lad_psychic_captain_death_manning:
     if current_character.text_id == "lad":
         """
         But it's already too late.
+        """
+    elif current_character.text_id == "captain":
+        """
+        But they are already past me.
         """
     else:
         """
@@ -135,6 +145,14 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
         Miss Baxter almost screams.
         """
+    elif current_character.text_id == "captain":
+        """
+        Samuel Manning lies in his bed, the sheets dark with blood, his throat cut through.
+
+        I have seen dead men before. It does not make this one easier to look upon.
+
+        Behind me, Miss Baxter draws a sharp breath.
+        """
     else:
         """
         There lies Samuel Manning, dead in his bed.
@@ -153,6 +171,12 @@ label common_day3_morning_lad_psychic_captain_death_manning:
         She's speechless, her gaze fixed on the horrifying scene.
 
         Sushil Sinha gently pulls her arm, leading her out. I quickly follow.
+        """
+    elif current_character.text_id == "captain":
+        """
+        She does not move, her eyes fixed on the bed.
+
+        I take her gently by the arm and lead her out into the corridor. The boy follows.
         """
     else:
         """
@@ -205,6 +229,12 @@ label common_day3_morning_lad_psychic_captain_death_manning:
         The weight of shock renders me motionless.
 
         To help us recover, Sushil guides us back to the tea room.
+        """
+    elif current_character.text_id == "captain":
+        """
+        The boy looks badly shaken, and Miss Baxter no better.
+
+        I guide them both back to the tea room.
         """
     else:
         """
@@ -296,6 +326,13 @@ label common_day3_morning_lad_psychic_captain_deaths_end:
         But he is right, I am exhausted and overwhelmed.
 
         So I just agree with a nod and sit down.
+        """
+
+    elif current_character.text_id == "captain":
+        """
+        The boy looks as though he means to object, then thinks better of it.
+
+        Miss Baxter gives a tired nod and settles into a chair.
         """
 
     else:
