@@ -13,11 +13,22 @@
 #       
 # --------------------------------------------
 
+image entrance_hall_movie_test = Movie(play="cutscenes/entrance_hall_movie_test.webm", keep_last_frame=True, size=(1920, 1080), loop=False)
+
 label lad_introduction:
 
     call change_time(17,30, 'Afternoon', 'Friday', hide_minutes = True, chapter='friday_afternoon')
 
     call black_screen_transition("", "Ted Harring")
+
+    # Full screen, no text real cutscene
+    # $ renpy.movie_cutscene("cutscenes/entrance_hall_movie_test.webm")
+    #"I'm feeling quite animated today."
+
+    # Loop background
+    show entrance_hall_movie_test
+
+    "I'm feeling quite animated today."
 
     $ change_room("train_inside")
 
