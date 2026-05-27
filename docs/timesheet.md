@@ -51,8 +51,8 @@ Start real work again : November (start looking in september)
 | 2023      | 106     |
 | 2024      | 114     |
 | 2025      | 290     |
-| 2026      | ---     |
-| **Total** | **770** |
+| 2026      | 206 AND counting |
+| **Total** | **970** |
 
 ≈ **150 days** in real FTE (5h coding a day)
 
