@@ -6,14 +6,14 @@
 | **Nurse**      | Feb/Mar |             Feb 23 [x]              |   Mar 02 [x]   |        Mar 09 [x]         |    Mar 16 [x]    | Mar 23 [x] | Mar 30 [x] |
 | **Captain**    | Apr/May |             Apr 06 [x]              |   Apr 13 [x]   |        Apr 27 [ ]         |  **May 04** [ ]  | May 11 [ ] | May 18 [ ] |
 | *🏖 Vacation*   | May     |                                     |                |                           |                  |            |            |
-| **Broken**     | Jun/Jul |             Jun 01 [ ]              |   Jun 08 [ ]   |        Jun 15 [ ]         |    Jun 22 [ ]    | Jun 29 [ ] | Jul 06 [ ] |
+| **Broken**     | Jun/Jul |             Jun 15 [ ]              |   Jun 22 [ ]   |        Jun 29 [ ]         |    Jul 06 [ ]    | Jul 13 [ ] | Jul 20 [ ] |
 | *🏖 Vacation*   | Jul     |                                     |                |                           |                  |            |            |
-| **Host**       | Jul/Aug |             Jul 13 [ ]              |   Jul 20 [ ]   |        Jul 27 [ ]         |    Aug 03 [ ]    | Aug 10 [ ] | Aug 17 [ ] |
+| **Host**       | Jul/Aug |             Jul 27 [ ]              |   Aug 03 [ ]   |        Aug 10 [ ]         |    Aug 17 [ ]    | Aug 24 [ ] | Aug 31 [ ] |
 | *🏖 Vacation*   | Aug     |                                     |                |                           |                  |            |            |
-| **Drunk**      | Aug/Oct |             Aug 31 [ ]              |   Sep 07 [ ]   |        Sep 14 [ ]         |    Sep 21 [ ]    | Sep 28 [ ] | Oct 05 [ ] |
+| **Drunk**      | Sep/Oct |             Sep 14 [ ]              |   Sep 21 [ ]   |        Sep 28 [ ]         |    Oct 05 [ ]    | Oct 12 [ ] | Oct 19 [ ] |
 | *🏖 Vacation*   | Oct     |                                     |                |                           |                  |            |            |
-| **Butler**     | Oct/Nov |             Oct 19 [ ]              |   Oct 26 [ ]   |        Nov 02 [ ]         |    Nov 09 [ ]    | Nov 16 [ ] | Nov 23 [ ] |
-| **REAL STORY** | Nov/Dec |           End in december           |
+| **Butler**     | Nov/Dec |             Nov 02 [ ]              |   Nov 09 [ ]   |        Nov 16 [ ]         |    Nov 23 [ ]    | Nov 30 [ ] | Dec 07 [ ] |
+| **REAL STORY** | Dec     |           End in december           |
 
 Start real work again : November (start looking in september)
 
@@ -37,8 +37,8 @@ Start real work again : November (start looking in september)
 - **Broken**: 07/2026
 - **Host**: 08/2026
 - **Drunk**: 10/2026
-- **Butler**: 11/2026
-- Final Polish 12/2026 => Full game ready for December
+- **Butler**: 12/2026
+- Final Polish 12/2026 => Full game ready for late December
 
 
 
