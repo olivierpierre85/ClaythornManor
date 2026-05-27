@@ -41,13 +41,11 @@ label captain_day3_morning_nurse:
     """
 
     nurse """
-    I am.
-
-    But the house is not.
+    I am, but there is something wrong with the house.
     """
 
     captain """
-    Explain.
+    What do you mean?
     """
 
     nurse """
@@ -59,42 +57,38 @@ label captain_day3_morning_nurse:
     """
 
     captain """
-    And Lady Claythorn?
+    So I was right, something is afoot.
+
+    Have you tried to check some other rooms?
     """
 
     nurse """
-    Her door is locked.
-
-    She does not answer.
-    """
-
-    """
-    So it begins.
-
-    Whatever is at the heart of this house, it has moved in the night.
-    """
-
-    captain """
-    What of Miss Baxter and Mr Harring?
-    """
-
-    nurse """
-    I have not knocked on their doors.
-
-    I came straight to you.
+    No, I came straight to you.
     """
 
     captain """
     A sound choice.
     """
 
+    nurse """
+    But what are we going to do now?
+
+    I was thinking we might hide for a while, until we can learn more about what is happening here.
+
+    Maybe it would be better to leave, but I am afraid whoever is behind all of this might spot us.
+
+    And ... then I don't know what they might do.
+    """
+
     """
     I think for a moment.
 
-    The two of us alone in the corridors, looking for a fight, would be a poor plan.
+    If someone in this house means us harm, it might be best to remain hidden.
 
-    Better to get out of sight, take stock, and decide on a course before we are found.
+    On the other hand, we cannot hide forever.
     """
+
+    # TODO how should things evolve from here?
 
     captain """
     We should not stay here.

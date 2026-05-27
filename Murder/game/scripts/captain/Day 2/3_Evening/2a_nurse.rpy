@@ -137,8 +137,6 @@ label captain_day2_evening_billiard_room_nurse_agree:
 
     nurse """
     Thank you for telling me, Captain.
-
-    I had felt something was not quite right, but I had not allowed myself to put it into words.
     """
 
     captain """
