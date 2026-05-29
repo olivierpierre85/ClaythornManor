@@ -89,6 +89,9 @@ label captain_day3_morning_nurse:
     """
 
     # TODO how should things evolve from here?
+    # IF seen car and Petrol, has the option to leave immediately? Why ? 
+    # IF stay, meet the two others, and they say they spotted a car? And a outside shed? Captain says he has the key
+    # They all get in the car and leave but => DEAD HOW
 
     captain """
     We should not stay here.

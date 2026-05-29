@@ -25,6 +25,7 @@ THREAD, locked shed image
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
+  - [ ] FIRST finish Nurse path with => GET THE Hell out of here, wait?
   - Explore creates to much possibilities
   - maybe simplify LAD AND pSYCHIC VERSION TO have simpler Captain's version? OR when the captain is alone, do something? Special  ? But what ?
   - Add and validate tests    
@@ -32,6 +33,26 @@ THREAD, locked shed image
     If let's all leave, food is taken and dies while driving, poisoned
     Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
     NEXT CHARACTER - UNlocked by Nurse (and psychic)
+    - IF he escape on foot, he can die shot or run over?
+  
+captain 3 endings 
+morning :
+From Nurse path, after reflexion, two choices:
+- Leaves early with nurse, but they ran into the two others, they have to accept going with them. => Car stop, he checks the pipe, it's potato filled, he dies.
+- Hides until the afternoon. => Afternoon
+From normal path:
+Has a last chance to find car and petrol while exploring. run into the others and if seen manning dead in his room(see lad and psychic), do not go back with them. then all of them rest before deciding what will be next. => afternoon
+
+
+Afternoon.
+If coming from nurse path, they go down and found the others while going to get some food.
+
+If normal path he runs into psychic and lad.
+- If car and petrol => Possibility to leave straight away together OR To lie to leave alone
+  - Leave with others, The nurse appears as they leave the house, she then enters the car => Same car ending? No find something else
+  - LIE (needs intuition), the coward way out, you leave alone, but alive. Once a coward always a coward.
+- If not, he will leave alone on foot and die (see psychic and lad endings), run over of shot, not sure which
+
 
 **Captain's gun**
 QUID gun for the captain ? Has one when he confront the nurse, so he should have one, or a way to get one? It seems assume he has one with him at all time? Or should I rewrite that ?
