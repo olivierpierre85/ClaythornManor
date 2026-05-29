@@ -1,0 +1,24 @@
+{
+    "start_label": "captain_day3_morning",
+    "unlocked_threads": [
+        "petrol_tin_in_shed"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Garage",
+            "redirect": "captain_day3_morning_garage"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Samuel Manning's room",
+            "redirect": "captain_day3_morning_bedroom_drunk"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Wait for the others in the entrance hall",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

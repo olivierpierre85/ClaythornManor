@@ -1,9 +1,12 @@
 # --------------------------------------------
 #   Captain — Sunday morning, nurse path
 #
-#   The captain confided in Miss Marsh last night.
-#   She comes for him at first light, and they go to ground in the butler's
-#   room in the attic to wait the morning out.
+#   The captain confided in Miss Marsh last night, and she comes for him at
+#   first light. After they take stock, he must choose:
+#     - Leave at once: they run into Mr Harring and Miss Baxter, take the old
+#       motor car together, and are ambushed on the road -> car_ambush ending.
+#     - Go to ground: they hide in the butler's attic room and wait the
+#       morning out, then come down in the afternoon.
 # --------------------------------------------
 
 label captain_day3_morning_nurse:
@@ -86,12 +89,137 @@ label captain_day3_morning_nurse:
     If someone in this house means us harm, it might be best to remain hidden.
 
     On the other hand, we cannot hide forever.
+
+    Two courses lie open to me, and neither is without risk.
     """
 
-    # TODO how should things evolve from here?
-    # IF seen car and Petrol, has the option to leave immediately? Why ? 
-    # IF stay, meet the two others, and they say they spotted a car? And a outside shed? Captain says he has the key
-    # They all get in the car and leave but => DEAD HOW
+    $ time_left = 1
+    call run_menu( TimedMenu("captain_day3_morning_nurse_menu", [
+        TimedMenuChoice("Slip out of the house now, while it is quiet", 'captain_day3_morning_nurse_leave', early_exit=True),
+        TimedMenuChoice("Go to ground and wait the morning out", 'captain_day3_morning_nurse_hide', early_exit=True),
+    ]))
+
+    return
+
+
+# ------------------------------------
+#   NURSE PATH — leave at once
+#
+#   The captain and Miss Marsh try to quit the house early. They run into
+#   Mr Harring and Miss Baxter, who will not be left behind, and the four of
+#   them take the old motor car. It does not see them clear of the estate.
+# ------------------------------------
+label captain_day3_morning_nurse_leave:
+
+    captain """
+    We are not going to wait to be found.
+
+    We leave now, on foot if we must, and we put this house behind us.
+    """
+
+    nurse """
+    You are certain?
+    """
+
+    captain """
+    I am certain of very little this morning.
+
+    But I would sooner take my chances on the road than in a locked room.
+    """
+
+    $ change_room('bedrooms_hallway', dissolve)
+
+    """
+    We go down together, keeping close to the wall.
+
+    The hall is grey and still.
+
+    I mean to make for the garage and see whether the old car can be made to serve.
+    """
+
+    $ change_room('entrance_hall', dissolve)
+
+    """
+    We are halfway across the entrance hall when a voice stops us.
+    """
+
+    lad """
+    Captain! Miss Marsh!
+    """
+
+    """
+    Ted Harring comes quickly down the stair, Miss Baxter close behind him.
+
+    Relief is plain on both their faces.
+    """
+
+    psychic """
+    Thank heaven. We thought we were the only ones left.
+    """
+
+    lad """
+    Where are you going?
+    """
+
+    captain """
+    Out.
+
+    The staff are gone, the telephone is dead, and Mr Manning is murdered in his bed.
+
+    I do not intend to be next.
+    """
+
+    psychic surprised """
+    Murdered?
+    """
+
+    captain """
+    Yes.
+
+    A house like this keeps a motor somewhere. I mean to find it and get it running.
+
+    Miss Marsh and I are leaving.
+    """
+
+    lad """
+    Then we are coming with you.
+
+    You cannot mean to leave us here.
+    """
+
+    """
+    I look at the boy, and at Miss Baxter beside him.
+
+    I had meant to travel light and quiet, two and no more.
+
+    But I cannot in conscience shut the door on them.
+    """
+
+    captain """
+    Very well.
+
+    All four of us, then.
+
+    Quickly, and quietly.
+    """
+
+    $ change_room('manor_garden', dissolve)
+
+    """
+    The garage gives up an old motor car, left behind when the good one went.
+
+    There is fuel enough in a can on the bench to fill the tank.
+
+    I coax the engine into life on the third try, and we crowd aboard.
+    """
+
+    call captain_day3_car_ride_ambush
+
+
+# ------------------------------------
+#   NURSE PATH — go to ground
+# ------------------------------------
+label captain_day3_morning_nurse_hide:
 
     captain """
     We should not stay here.

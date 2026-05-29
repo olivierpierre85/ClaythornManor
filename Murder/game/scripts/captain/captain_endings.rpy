@@ -126,3 +126,77 @@ label captain_ending_throat_cut:
     """
 
     jump ending_generic
+
+
+label captain_ending_car_ambush:
+
+    call death_screen_transition
+
+    $ captain_details.endings.unlock('car_ambush')
+    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('car_ambush'))
+
+    """
+    You trusted the open road more than the house you fled.
+
+    But the road was theirs as surely as the manor was.
+
+    A stalled engine, a quiet wood, and a man waiting where the trees came close.
+
+    You never saw the one who fired.
+
+    A leader does not get the rest of his party killed simply because he could not bear to wait a little longer.
+    """
+
+    $ is_intuition = True
+
+    jump ending_generic
+
+
+label captain_ending_shot_fleeing:
+
+    call death_screen_transition
+
+    $ captain_details.endings.unlock('shot_fleeing')
+    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('shot_fleeing'))
+
+    """
+    You set out alone, on foot, into open country you did not know.
+
+    A soldier ought to have known better than to cross such ground without cover.
+
+    But you were no soldier, whatever the medals said.
+
+    The shot came from the treeline, and you did not hear the second one.
+    """
+
+    jump ending_generic
+
+
+label captain_ending_survives:
+
+    call survive_screen_transition
+
+    $ play_music('end_credits')
+
+    $ captain_details.endings.unlock('survives')
+    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('survives'))
+
+    """
+    You took the only motor that ran, and you took it alone.
+
+    You told yourself it was sense, and perhaps it was.
+
+    The others would only have slowed you, and the road was no place for a frightened woman or a half-grown boy.
+
+    That is what you told yourself, all the long miles to the town.
+
+    You reached it alive.
+
+    A coward reaches it alive too.
+
+    Once a coward, always a coward.
+    """
+
+    $ is_death = False
+
+    jump ending_generic

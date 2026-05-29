@@ -34,7 +34,7 @@ label captain_day3_morning_map_menu:
             # Basement — now reachable, no staff
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day3_morning_kitchen', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day3_morning_scullery', 10, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'captain_day3_morning_garage', 10, room='garage', next_menu='captain_day3_morning_garage_menu'),
+            TimedMenuChoice(default_room_text('garage'), 'captain_day3_morning_garage', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'captain_day3_morning_gun_room', 10, room='gun_room'),
             # End
             TimedMenuChoice(
@@ -182,19 +182,14 @@ label captain_day3_morning_garage:
 
         A full can would more than serve.
 
-        I could go down to the shed, fetch it, fill the tank, and be gone before the house knows I am missing.
+        With the tin in the tank, this old machine would carry a man clear of the estate within the hour.
 
-        It would be the safe choice for one man.
+        It is a card worth holding.
 
-        It would also leave the others to whatever is happening here.
+        But I will not play it until I know what has become of the others.
+
+        I close the bonnet and leave the car as it stands.
         """
-
-        call run_menu(TimedMenu("captain_day3_morning_garage_menu", [
-            TimedMenuChoice("Fetch the petrol and drive out alone",
-                'captain_day3_morning_escape_alone', 0, early_exit=True),
-            TimedMenuChoice("Leave the car. The others come first",
-                'captain_day3_morning_stay_with_others', 0, early_exit=True),
-        ]))
 
     else:
 
@@ -205,40 +200,6 @@ label captain_day3_morning_garage:
 
         I close the bonnet and step back.
         """
-
-    return
-
-
-label captain_day3_morning_escape_alone:
-
-    """
-    Decision made.
-
-    I close the bonnet, fetch the master key from my pocket, and slip out through the side door.
-
-    The garden lies under a thin mist.
-
-    The shed is where I left it last night.
-    """
-
-    # TODO: write the actual escape sequence and ending (captain survives alone).
-    # For now, route to the placeholder so the rest of the chapter keeps building.
-    jump work_in_progress
-
-
-label captain_day3_morning_stay_with_others:
-
-    captain """
-    No.
-
-    Not yet.
-    """
-
-    """
-    I will not take the only way out of this house before I know what has become of the rest of them.
-
-    I close the bonnet and step back.
-    """
 
     return
 

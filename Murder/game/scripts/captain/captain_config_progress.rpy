@@ -10,8 +10,8 @@ label captain_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_hunt", "saturday_afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day2_evening", "saturday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "captain_day3_morning", "sunday_morning"),
-                Chapter(image_checkpoint_right, "checkpoint", "captain_day3_morning", "sunday_afternoon"),
-                Chapter(image_ending_question, "ending", "poisoned", "end"),
+                Chapter(image_checkpoint_right, "checkpoint", "captain_day3_afternoon", "sunday_afternoon"),
+                Chapter(image_ending_question, "ending", "car_ambush", "end"),
             ],
             # Second line, ...
             [
@@ -52,6 +52,17 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "throat_cut", "saturday_evening"),
+            ],
+            # Row 6: shot_fleeing ending (left the manor alone on foot, Sunday afternoon)
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "shot_fleeing", "end"),
             ],
         ]
 
@@ -156,5 +167,28 @@ label captain_config_progress:
                 {"label": "captain_day3_morning", "threads": {'tell_boxer_story': True, 'butler_key': True, 'petrol_tin_in_shed': True}},
                 # --- Nurse path: Miss Marsh fetches him; they hide in the butler's room ---
                 {"label": "captain_day3_morning", "threads": {'tell_boxer_story': True, 'butler_key': True, 'confide_in_nurse': True}},
+            ],
+
+            # ===== SUNDAY AFTERNOON (FINAL DECISIONS) =====
+            # Both morning paths converge here.
+            # Threads SET before & RELEVANT here:
+            #   - confide_in_nurse: changes the arrival framing (came down with Miss Marsh)
+            #   - seen_car: set sunday_morning (explore garage), relevant sunday_afternoon
+            #   - petrol_tin_in_shed: set saturday_evening, relevant sunday_afternoon
+            #     seen_car AND petrol_tin_in_shed together unlock the motor-car branch.
+            # Endings fired here:
+            #   - No car          -> shot_fleeing (leaves alone on foot)
+            #   - Car, no intuition -> car_ambush (all leave together)
+            #   - Car + car_ambush already unlocked -> opens the coward's lie -> survives
+            # NOTE: the "lie / survives" branch is gated on endings.is_unlocked('car_ambush'),
+            #       an intuition that the checkpoint thread-presets cannot reproduce, so it
+            #       is exercised by reaching car_ambush first and replaying.
+            'sunday_afternoon': [
+                # --- Explore path, no working car -> on foot, shot_fleeing ---
+                {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True}},
+                # --- Explore path with car + petrol -> all leave together, car_ambush ---
+                {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'seen_car': True, 'petrol_tin_in_shed': True}},
+                # --- Nurse path (hid in the morning), no car -> on foot, shot_fleeing ---
+                {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'confide_in_nurse': True}},
             ],
         }

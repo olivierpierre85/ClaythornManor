@@ -39,4 +39,4 @@ label captain_day3_morning:
         call captain_day3_morning_explore
 
 
-    jump work_in_progress
+    jump captain_day3_afternoon
