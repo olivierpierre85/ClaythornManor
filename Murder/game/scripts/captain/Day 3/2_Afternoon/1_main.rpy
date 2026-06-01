@@ -40,11 +40,7 @@ label captain_day3_afternoon:
         $ change_room('bedrooms_hallway', irisout)
 
         """
-        By noon the house has gone as quiet as a church.
-
         Miss Marsh and I come down from the attic at last.
-
-        Hunger as much as anything drives us out of hiding.
         """
 
         $ change_room('entrance_hall', dissolve)
@@ -67,8 +63,16 @@ label captain_day3_afternoon:
         Thank heaven. We had begun to think we were the last souls left in the place.
         """
 
+        lad """
+        We have been over the whole house, top to bottom.
+
+        There is a motor car in the garage, but not a drop of petrol to put in it.
+
+        Whoever left made very sure of that.
+        """
+
         captain """
-        Very nearly, I fear.
+        Then the road is all that is left to us.
 
         Come. We had far better talk this through together.
         """

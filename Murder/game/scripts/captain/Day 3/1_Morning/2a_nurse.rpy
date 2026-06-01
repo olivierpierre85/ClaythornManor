@@ -2,11 +2,12 @@
 #   Captain — Sunday morning, nurse path
 #
 #   The captain confided in Miss Marsh last night, and she comes for him at
-#   first light. After they take stock, he must choose:
-#     - Leave at once: they run into Mr Harring and Miss Baxter, take the old
-#       motor car together, and are ambushed on the road -> car_ambush ending.
-#     - Go to ground: they hide in the butler's attic room and wait the
-#       morning out, then come down in the afternoon.
+#   first light. After they take stock, he is offered a choice that is really
+#   no choice at all:
+#     - Leave at once: Miss Marsh cannot face the road on foot and admits she
+#       is unwell, so the captain yields and they go to ground after all.
+#     - Go to ground: they hide in the butler's attic room directly.
+#   Either way they wait the morning out and come down in the afternoon.
 # --------------------------------------------
 
 label captain_day3_morning_nurse:
@@ -62,7 +63,7 @@ label captain_day3_morning_nurse:
     captain """
     So I was right, something is afoot.
 
-    Have you tried to check some other rooms?
+    Have you checked any of the other rooms?
     """
 
     nurse """
@@ -95,7 +96,7 @@ label captain_day3_morning_nurse:
 
     $ time_left = 1
     call run_menu( TimedMenu("captain_day3_morning_nurse_menu", [
-        TimedMenuChoice("Slip out of the house now, while it is quiet", 'captain_day3_morning_nurse_leave', early_exit=True),
+        TimedMenuChoice("Do not waste time, leave the house now", 'captain_day3_morning_nurse_leave', early_exit=True),
         TimedMenuChoice("Go to ground and wait the morning out", 'captain_day3_morning_nurse_hide', early_exit=True),
     ]))
 
@@ -103,117 +104,73 @@ label captain_day3_morning_nurse:
 
 
 # ------------------------------------
-#   NURSE PATH — leave at once
+#   NURSE PATH — leave at once (a false choice)
 #
-#   The captain and Miss Marsh try to quit the house early. They run into
-#   Mr Harring and Miss Baxter, who will not be left behind, and the four of
-#   them take the old motor car. It does not see them clear of the estate.
+#   Miss Marsh cannot face the road on foot and admits she is unwell, though
+#   she will not say how badly. The captain yields and they go to ground after
+#   all, falling through to the hide sequence.
 # ------------------------------------
 label captain_day3_morning_nurse_leave:
 
     captain """
-    We are not going to wait to be found.
+    I have no wish to wait here to be found.
 
-    We leave now, on foot if we must, and we put this house behind us.
+    I would put this house behind me now, while it is quiet.
     """
 
     nurse """
-    You are certain?
+    On foot, Captain?
     """
 
     captain """
-    I am certain of very little this morning.
+    I am afraid yes.
 
-    But I would sooner take my chances on the road than in a locked room.
+    I do not see another way.
+
+    Lady Claythorn and her staff most likely left with the motor car.
+
+    It is a fairly long walk to the town, but it is still early, I am sure we can make it.
     """
 
-    $ change_room('bedrooms_hallway', dissolve)
+    nurse """
+    Oh, I am sure you could, Captain.
 
-    """
-    We go down together, keeping close to the wall.
-
-    The hall is grey and still.
-
-    I mean to make for the garage and see whether the old car can be made to serve.
-    """
-
-    $ change_room('entrance_hall', dissolve)
-
-    """
-    We are halfway across the entrance hall when a voice stops us.
-    """
-
-    lad """
-    Captain! Miss Marsh!
+    Sadly I can't.
     """
 
     """
-    Ted Harring comes quickly down the stair, Miss Baxter close behind him.
+    She says it quietly, and I see now what I had been too preoccupied to mark before.
 
-    Relief is plain on both their faces.
+    The pallor that is not only fear.
+
+    The careful way she holds herself.
     """
 
-    psychic """
-    Thank heaven. We thought we were the only ones left.
-    """
+    nurse """
+    I am not a healthy woman, Captain.
 
-    lad """
-    Where are you going?
+    There is a good chance my body will not hold for such a long journey.
     """
 
     captain """
-    Out.
-
-    The staff are gone, the telephone is dead, and Mr Manning is murdered in his bed.
-
-    I do not intend to be next.
-    """
-
-    psychic surprised """
-    Murdered?
-    """
-
-    captain """
-    Yes.
-
-    A house like this keeps a motor somewhere. I mean to find it and get it running.
-
-    Miss Marsh and I are leaving.
-    """
-
-    lad """
-    Then we are coming with you.
-
-    You cannot mean to leave us here.
+    I see.
     """
 
     """
-    I look at the boy, and at Miss Baxter beside him.
+    I think her condition might be worse than her quiet behaviour shows.
 
-    I had meant to travel light and quiet, two and no more.
-
-    But I cannot in conscience shut the door on them.
+    But if she does not want to tell me more, I will not press her.
     """
 
     captain """
-    Very well.
-
-    All four of us, then.
-
-    Quickly, and quietly.
+    All right, we can stay at the manor a bit longer until we work out a better plan.
     """
 
-    $ change_room('manor_garden', dissolve)
-
-    """
-    The garage gives up an old motor car, left behind when the good one went.
-
-    There is fuel enough in a can on the bench to fill the tank.
-
-    I coax the engine into life on the third try, and we crowd aboard.
+    nurse """
+    Thank you, Captain.
     """
 
-    call captain_day3_car_ride_ambush
+    jump captain_day3_morning_nurse_hide
 
 
 # ------------------------------------
@@ -228,20 +185,24 @@ label captain_day3_morning_nurse_hide:
     """
 
     nurse """
-    Where, then?
+    You are right.
+
+    I believe the attic is the best place to hide.
+
+    It should be empty now.
     """
 
     captain """
-    The attic.
+    The attic, good idea.
 
     I have the butler's master key.
 
-    His room will do.
-
-    No guest has any business being up there, so no one will think to look for us.
+    So we can hide in his room and lock the door.
     """
 
     nurse """
+    Perfect.
+
     Lead the way, Captain.
     """
 
@@ -287,32 +248,8 @@ label captain_day3_morning_nurse_hide:
     We are going to be here a little while.
     """
 
-    nurse """
-    Thank you.
-    """
-
     """
     She sits on the edge of the narrow bed and folds her hands in her lap.
-
-    A composed woman.
-
-    She has not asked me a single foolish question since she came through my door.
-    """
-
-    captain """
-    Tell me what you saw, room by room.
-
-    Leave nothing out.
-    """
-
-    """
-    She does, plainly and in order.
-
-    Empty dining room. Cold range. Back door bolted from the inside.
-
-    No coats taken from the hall. No carriage in the drive.
-
-    Whoever has gone, has gone in a hurry, or has not gone at all.
     """
 
     call change_time(10, 30)
@@ -320,15 +257,27 @@ label captain_day3_morning_nurse_hide:
     """
     We sit in silence for a long while after that.
 
-    Now and again I hear a board ease somewhere below.
+    Then, I hear a board ease somewhere below.
 
     Once, footsteps in the upstairs corridor — slow, deliberate, then gone.
+    """
 
-    I keep my hand close to my pocket and say nothing.
+    captain """
+    Somebody is downstairs.
+    """
 
-    Miss Marsh does the same.
+    nurse """
+    It could be one of the others.
+    """
 
-    She has the gift, rare in any company, of being able to sit quite still and quite quiet.
+    captain """
+    It could be, but I do not know whether they are friend or foe.
+
+    It is probably better to wait for them to leave.
+    """
+
+    nurse """
+    You are probably right.
     """
 
     call change_time(11, 30)
@@ -350,7 +299,7 @@ label captain_day3_morning_nurse_hide:
 
     Carefully.
 
-    And we find out what has become of the others.
+    And we try to make sense of what is happening.
     """
 
     return

@@ -7,7 +7,7 @@
     "choices": [
         {
             "menu": "captain_day3_morning_nurse_menu",
-            "selected": "Slip out of the house now, while it is quiet",
+            "selected": "Do not waste time, leave the house now",
             "redirect": "captain_day3_morning_nurse_leave"
         }
     ]
