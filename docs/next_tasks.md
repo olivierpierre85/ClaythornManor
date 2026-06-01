@@ -2,7 +2,7 @@
 BUG => FULL_TESTINGMODE, if doing a restart, then missing menu??? Also doesn't restart thread => AVOID RESTART
 
 
-## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, no give values all the time?
+## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, now give values all the time?
 
 ## Write Story: Captain (Sushil Sinha)
 
@@ -34,15 +34,6 @@ THREAD, locked shed image
     Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
     NEXT CHARACTER - UNlocked by Nurse (and psychic)
     - IF he escape on foot, he can die shot or run over?
-  
-captain 3 endings 
-morning :
-From Nurse path, after reflexion, two choices:
-- Leaves early with nurse, but they ran into the two others, they have to accept going with them. => Car stop, he checks the pipe, it's potato filled, he dies.
-- Hides until the afternoon. => Afternoon
-From normal path:
-Has a last chance to find car and petrol while exploring. run into the others and if seen manning dead in his room(see lad and psychic), do not go back with them. then all of them rest before deciding what will be next. => afternoon
-
 
 Afternoon.
 If coming from nurse path, they go down and found the others while going to get some food.

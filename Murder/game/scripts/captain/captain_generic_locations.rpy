@@ -265,8 +265,14 @@ label captain_garden_shed:
 
     $ change_room("toolshed")
 
+    call captain_garden_shed_inside
+
+    return
+
+label captain_garden_shed_inside:
+
     """
-    The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
+    I spot a workbench, a coil of rope, old worn out tools gathering dust.
 
     And, set rather neatly in the middle of the floor, a metal petrol tin.
 
@@ -282,7 +288,6 @@ label captain_garden_shed:
     $ captain_details.threads.unlock('petrol_tin_in_shed')
 
     return
-
 
 label captain_portrait_gallery_default:
 

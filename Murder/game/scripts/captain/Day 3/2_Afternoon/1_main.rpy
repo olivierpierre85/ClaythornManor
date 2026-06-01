@@ -102,7 +102,7 @@ label captain_day3_afternoon:
 
         There is an old motor car in the garage.
 
-        It wants petrol, but I found a full tin in the garden shed last night.
+        It wants petrol, but I found a full tin in the garden shed.
 
         I can have it running inside the hour.
         """

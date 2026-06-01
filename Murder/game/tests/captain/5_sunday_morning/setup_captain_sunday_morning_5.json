@@ -1,8 +1,6 @@
 {
     "start_label": "captain_day3_morning",
-    "unlocked_threads": [
-        "petrol_tin_in_shed"
-    ],
+    "unlocked_threads": [],
     "saved_variables": {},
     "choices": [
         {
@@ -14,11 +12,6 @@
             "menu": "captain_day3_morning_map_menu",
             "selected": "Garden",
             "redirect": "captain_day3_morning_garden"
-        },
-        {
-            "menu": "captain_day3_morning_map_menu",
-            "selected": "Samuel Manning's room",
-            "redirect": "captain_day3_morning_bedroom_drunk"
         },
         {
             "menu": "captain_day3_morning_map_menu",

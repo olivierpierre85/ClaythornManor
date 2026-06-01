@@ -3,8 +3,10 @@
 #
 #   With the staff gone, the basement is finally open to him.
 #   The garage holds an old motor car.
-#   If he found the petrol tin in the shed on Saturday evening, he can
-#   choose to take the car and flee alone.
+#   The garden gives a second chance at the petrol: with the staff gone he
+#   can let himself into the locked shed with the master key and take the
+#   tin, even if he missed it on Saturday evening (sets petrol_tin_in_shed).
+#   The car and petrol together open the flight options in the afternoon.
 # --------------------------------------------
 
 label captain_day3_morning_map_menu:
@@ -16,7 +18,7 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day3_morning_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('billiard_room'), 'captain_day3_morning_billiard_room', 10, room='billiard_room'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day3_morning_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day3_morning_entrance_hall', 0, room='entrance_hall', early_exit=True),
             TimedMenuChoice(default_room_text('manor_garden'), 'captain_day3_morning_garden', 10, room='manor_garden'),
             # Bedrooms
             TimedMenuChoice(default_room_text('bedroom_lad'), 'captain_day3_morning_bedroom_lad', 10, room='bedroom_lad'),
@@ -36,13 +38,6 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('scullery'), 'captain_day3_morning_scullery', 10, room='scullery'),
             TimedMenuChoice(default_room_text('garage'), 'captain_day3_morning_garage', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'captain_day3_morning_gun_room', 10, room='gun_room'),
-            # End
-            TimedMenuChoice(
-                'Wait for the others in the entrance hall',
-                'generic_cancel',
-                early_exit = True,
-                room = 'entrance_hall',
-            ),
         ], is_map = True)
 
     return
@@ -143,20 +138,6 @@ label captain_day3_morning_garage:
 
     $ change_room('garage')
 
-    if captain_details.saved_variables["day3_morning_car_seen"]:
-
-        $ change_room('garage')
-
-        """
-        The car still sits where I left it.
-
-        Nothing has changed.
-        """
-
-        return
-
-    $ captain_details.saved_variables["day3_morning_car_seen"] = True
-
     """
     The garage is dim.
 
@@ -178,15 +159,11 @@ label captain_day3_morning_garage:
         """
         The shed.
 
-        The petrol tin I found last night, set out in the middle of the floor as if waiting to be carried away.
+        I found petrol there, a full can.
 
-        A full can would more than serve.
+        That is more than enough to leave this place.
 
-        With the tin in the tank, this old machine would carry a man clear of the estate within the hour.
-
-        It is a card worth holding.
-
-        But I will not play it until I know what has become of the others.
+        But first I should know what has become of the others.
 
         I close the bonnet and leave the car as it stands.
         """
@@ -224,11 +201,9 @@ label captain_day3_morning_library:
     """
     The genealogy book lies open on the table, where I left it.
 
-    There was a time I might have sat and read it through.
+    But I do not have time to sit and read it through.
 
     Not now. Not with the staff vanished and the house emptied around me.
-
-    Whatever name is written in those pages, it will not help the living.
 
     I leave the book where it lies.
     """
@@ -305,17 +280,50 @@ label captain_day3_morning_garden:
 
     $ change_room('manor_garden')
 
+    if captain_details.threads.is_unlocked('petrol_tin_in_shed'):
+
+        """
+        The drive is empty.
+
+        Lady Claythorn's good motor car is gone, and the chauffeur with it.
+
+        A thin mist hangs over the gravel and the wet grass.
+
+        The shed at the end of the garden holds the petrol tin I found on Saturday night.
+
+        If that old car in the garage will run, the means to fill it are close at hand.
+
+        I have no reason to linger out here in the cold.
+        """
+
+        return
+
     """
     The drive is empty.
 
-    No cars. No carts. No tracks fresh on the gravel.
+    Lady Claythorn's good motor car is gone, and the chauffeur with it.
 
-    Whoever has gone, has gone on foot, or some hours ago.
+    A thin mist hangs over the gravel and the wet grass. No rain this morning, only the cold.
 
-    A thin mist hangs in the trees. The air is cold.
+    With the staff gone, there is no longer anyone to keep me out of any corner of this place.
 
-    I do not linger.
+    I walk down to the squat timber outbuilding at the end of the garden.
     """
+
+    # TODO add this image
+    $ change_room('toolshed_outside')
+
+    """
+    The door is locked.
+
+    But the master key is in my pocket, and there is no one left to answer for it.
+    """
+
+    play sound door_open
+
+    $ change_room('toolshed')
+
+    call captain_garden_shed_inside
 
     return
 
