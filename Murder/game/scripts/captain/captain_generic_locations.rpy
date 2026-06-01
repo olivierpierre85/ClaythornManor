@@ -265,8 +265,14 @@ label captain_garden_shed:
 
     $ change_room("toolshed")
 
+    call captain_garden_shed_inside
+
+    return
+
+label captain_garden_shed_inside:
+
     """
-    The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
+    I spot a workbench, a coil of rope, old worn out tools gathering dust.
 
     And, set rather neatly in the middle of the floor, a metal petrol tin.
 
@@ -282,7 +288,6 @@ label captain_garden_shed:
     $ captain_details.threads.unlock('petrol_tin_in_shed')
 
     return
-
 
 label captain_portrait_gallery_default:
 
@@ -333,5 +338,192 @@ label captain_portrait_gallery_default:
     """
 
     $ captain_details.threads.unlock('captain_host_suspicion_portrait')
+
+    return
+
+
+# ------------------------------------
+#   ATTIC (shared across days)
+# ------------------------------------
+# Reachable once the captain is suspicious and carries the master key
+# (saturday evening onward, and again on sunday once the staff have gone).
+# The per-room search state persists across days through saved_variables,
+# so a room already gone through reads as already searched the next day.
+
+label captain_attic_approach:
+
+    $ change_room("attic_hallway")
+
+    if not captain_details.saved_variables.get("generic_attic_visited", False):
+
+        $ captain_details.saved_variables["generic_attic_visited"] = True
+
+        """
+        I climb the narrow stair to the attic.
+
+        The boards creak under my weight. The air up here is closer, smelling of dust and old wood.
+
+        A short corridor runs the length of the house, doors on either side.
+
+        It is not a place a guest has any business being in.
+
+        But I am well past minding that now. If there are answers up here, I mean to have them.
+
+        I fit the master key to the door.
+        """
+
+        play sound door_open
+
+        """
+        The bolt slides back without protest.
+
+        A single key for the whole house. If it opens this one, it will open all the others up here just as readily.
+        """
+
+    return
+
+
+label captain_attic_storage:
+
+    call captain_attic_approach
+
+    if captain_details.objects.is_unlocked('lantern'):
+
+        $ change_room("attic_storage_room")
+
+        """
+        Nothing more for me here. I have what I came for.
+        """
+
+        return
+
+    $ change_room("attic_storage_room")
+
+    """
+    The storage room is crammed with the leavings of decades.
+
+    Trunks stacked three deep, dust-sheeted furniture, boxes that have not been opened in a generation.
+
+    I work my way along the shelves nearest the door, where the more recent items seem to live.
+
+    Tins of paint. A pair of oil lamps. A small case of candles.
+
+    And, set on its side beneath a folded oilcloth, a storm lantern.
+
+    I lift it from the shelf. The reservoir is half full.
+
+    It could prove useful, so I take it up.
+    """
+
+    $ captain_details.objects.unlock('lantern')
+
+    return
+
+
+label captain_attic_males_room:
+
+    call captain_attic_approach
+
+    if captain_details.saved_variables["visited_attic_males_room"]:
+
+        $ change_room("attic_males_room")
+
+        """
+        I have already gone through this room.
+
+        Nothing more here.
+        """
+
+        return
+
+    $ captain_details.saved_variables["visited_attic_males_room"] = True
+
+    $ change_room("attic_males_room")
+
+    """
+    Two beds, a chest of drawers, a peg for each man's coat.
+
+    I work the drawers quickly. Folded shirts, a penknife, a few coins, some letters.
+
+    Nothing out of the ordinary here.
+    """
+
+    return
+
+
+label captain_attic_females_room:
+
+    call captain_attic_approach
+
+    if captain_details.saved_variables["visited_attic_females_room"]:
+
+        $ change_room("attic_females_room")
+
+        """
+        I have already searched this room.
+
+        Nothing more for me here.
+        """
+
+        return
+
+    $ captain_details.saved_variables["visited_attic_females_room"] = True
+
+    $ change_room("attic_females_room")
+
+    """
+    A small, spare room. Two narrow beds, a washstand, a single trunk between them.
+
+    On the shelf above one of the beds, a few keepsakes — a dog-eared London playbill, another from a touring company.
+
+    Tucked behind them, a faded photograph.
+
+    A young woman in stage dress, posed beside a man. Both smiling broadly for the camera.
+
+    I do not recognise them.
+
+    I replace the photograph and step back out.
+    """
+
+    return
+
+
+label captain_attic_butler_room:
+
+    call captain_attic_approach
+
+    $ change_room("butler_room")
+
+    if captain_details.saved_variables["visited_attic_butler_room"]:
+
+        """
+        The reinforced cabinet still stands against the far wall.
+
+        I have already seen what is inside.
+        """
+
+        return
+
+    $ captain_details.saved_variables["visited_attic_butler_room"] = True
+
+    """
+    The room itself is plain enough. A narrow bed, a washstand, a single chair.
+
+    A head servant's quarters, and not a thing out of place.
+
+    But against the far wall stands a heavy reinforced cabinet, glass-panelled, the household silver visible behind it.
+
+    The lock is a modern one, and a good one.
+
+    I take the master key from my pocket and try it.
+
+    It turns without complaint.
+
+    Inside: candlesticks, a salver, several sets of heavy plate.
+
+    Nothing of use to me.
+
+    I close the cabinet, lock it again, and step back.
+    """
 
     return

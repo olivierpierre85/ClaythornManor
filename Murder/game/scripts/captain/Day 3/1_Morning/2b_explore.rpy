@@ -143,6 +143,22 @@ label captain_day3_morning_explore:
         Mr Harring takes a moment to find his voice.
         """
 
+        if captain_details.saved_variables["day3_morning_nurse_checked"]:
+
+            captain """
+            There is Miss Marsh's room besides. I let myself into it this morning.
+
+            It was empty, her bed not slept in. She was not there.
+            """
+
+            psychic """
+            Then she is somewhere about the house, or gone from it altogether.
+            """
+
+            captain """
+            One or the other. We shall not settle which by standing apart.
+            """
+
         lad """
         What are we to do?
         """
@@ -191,8 +207,41 @@ label captain_day3_morning_explore:
 
         call common_day3_morning_lad_psychic_captain_death_manning
 
-        call common_day3_morning_lad_psychic_captain_marsh_empty
+        if captain_details.saved_variables["day3_morning_nurse_checked"]:
 
-        call common_day3_morning_lad_psychic_captain_deaths_end
+            # death_manning's tail had the captain offer to check the last locked
+            # door with the lad. He has already opened it himself, so he stands
+            # the boy down and reports what he found instead.
+            captain """
+            On reflection, Mr Harring, there is no need for you to come.
+
+            The last locked door upstairs is Miss Marsh's, and I let myself into it on my round this morning.
+            """
+
+            captain """
+            It was empty. Her bed had not been slept in.
+
+            Wherever she is, she did not pass the night there.
+            """
+
+            psychic """
+            Then she may yet be somewhere in the house.
+            """
+
+            captain """
+            Perhaps. Rest here a while longer, the both of you.
+
+            I will take another turn about the place and be back before noon.
+            """
+
+            """
+            The boy sinks back into his chair. Miss Baxter does the same.
+            """
+
+        else:
+
+            call common_day3_morning_lad_psychic_captain_marsh_empty
+
+            call common_day3_morning_lad_psychic_captain_deaths_end
 
     return

@@ -1,0 +1,22 @@
+{
+    "start_label": "captain_day3_morning",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Garage",
+            "redirect": "captain_day3_morning_garage"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Garden",
+            "redirect": "captain_day3_morning_garden"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Wait for the others in the entrance hall",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

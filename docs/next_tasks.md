@@ -2,7 +2,7 @@
 BUG => FULL_TESTINGMODE, if doing a restart, then missing menu??? Also doesn't restart thread => AVOID RESTART
 
 
-## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, no give values all the time?
+## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, now give values all the time?
 
 ## Write Story: Captain (Sushil Sinha)
 
@@ -25,13 +25,24 @@ THREAD, locked shed image
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
-  - Explore creates to much possibilities
   - maybe simplify LAD AND pSYCHIC VERSION TO have simpler Captain's version? OR when the captain is alone, do something? Special  ? But what ?
-  - Add and validate tests    
+  - Add and validate tests   
+
   - Normal day 3, has to find car, petrol and ... To unlock let's all leave.
     If let's all leave, food is taken and dies while driving, poisoned
     Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
     NEXT CHARACTER - UNlocked by Nurse (and psychic)
+    - IF he escape on foot, he can die shot or run over?
+
+Afternoon.
+If coming from nurse path, they go down and found the others while going to get some food.
+
+If normal path he runs into psychic and lad.
+- If car and petrol => Possibility to leave straight away together OR To lie to leave alone
+  - Leave with others, The nurse appears as they leave the house, she then enters the car => Same car ending? No find something else
+  - LIE (needs intuition), the coward way out, you leave alone, but alive. Once a coward always a coward.
+- If not, he will leave alone on foot and die (see psychic and lad endings), run over of shot, not sure which
+
 
 **Captain's gun**
 QUID gun for the captain ? Has one when he confront the nurse, so he should have one, or a way to get one? It seems assume he has one with him at all time? Or should I rewrite that ?

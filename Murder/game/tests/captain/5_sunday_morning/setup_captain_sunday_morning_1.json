@@ -1,0 +1,12 @@
+{
+    "start_label": "captain_day3_morning",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Wait for the others in the entrance hall",
+            "redirect": "generic_cancel"
+        }
+    ]
+}
