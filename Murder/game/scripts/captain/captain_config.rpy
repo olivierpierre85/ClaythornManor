@@ -26,7 +26,9 @@ label init_captain:
             # Evening day 2
             "day2_evening_billiard_room_visited" : False,
             "day2_evening_billiard_encounters" : 0,
-            "day2_evening_attic_visited" : False,
+
+            # Attic — shared across days (saturday evening and sunday morning)
+            "generic_attic_visited" : False,
             "visited_attic_storage" : False,
             "visited_attic_males_room" : False,
             "visited_attic_females_room" : False,
@@ -37,6 +39,7 @@ label init_captain:
             "day3_morning_car_seen" : False,
             "day3_morning_gun_room_visited" : False,
             "day3_morning_drunk_checked" : False,
+            "day3_morning_nurse_checked" : False,
         }
 
         captain_important_choices = CharacterImportantChoiceList([

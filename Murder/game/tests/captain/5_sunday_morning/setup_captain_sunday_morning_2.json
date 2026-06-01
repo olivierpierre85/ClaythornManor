@@ -22,6 +22,16 @@
         },
         {
             "menu": "captain_day3_morning_map_menu",
+            "selected": "Sushil Sinha's room",
+            "redirect": "captain_day3_morning_bedroom_captain"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Rosalind Marsh's room",
+            "redirect": "captain_day3_morning_bedroom_nurse"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
             "selected": "Wait for the others in the entrance hall",
             "redirect": "generic_cancel"
         }

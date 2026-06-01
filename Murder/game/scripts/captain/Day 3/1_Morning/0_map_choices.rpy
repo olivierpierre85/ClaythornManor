@@ -21,6 +21,7 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day3_morning_entrance_hall', 0, room='entrance_hall', early_exit=True),
             TimedMenuChoice(default_room_text('manor_garden'), 'captain_day3_morning_garden', 10, room='manor_garden'),
             # Bedrooms
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'captain_day3_morning_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_lad'), 'captain_day3_morning_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 'captain_day3_morning_bedroom_psychic', 10, room='bedroom_psychic'),
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'captain_day3_morning_bedroom_nurse', 10, room='bedroom_nurse'),
@@ -28,11 +29,11 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'captain_day3_morning_bedroom_drunk', 10, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'captain_day3_morning_bedroom_doctor', 10, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_broken'), 'captain_day3_morning_bedroom_broken', 10, room='bedroom_broken'),
-            # Attic
-            TimedMenuChoice(default_room_text('storage'), 'captain_day3_morning_attic_default', 10, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'captain_day3_morning_attic_default', 10, room='males_room'),
-            TimedMenuChoice(default_room_text('females_room'), 'captain_day3_morning_attic_default', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'captain_day3_morning_attic_default', 10, room='butler_room'),
+            # Attic — same rooms as the night before (state carries over)
+            TimedMenuChoice(default_room_text('storage'), 'captain_attic_storage', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'captain_attic_males_room', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'captain_attic_females_room', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'captain_attic_butler_room', 10, room='butler_room'),
             # Basement — now reachable, no staff
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day3_morning_kitchen', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day3_morning_scullery', 10, room='scullery'),
@@ -280,31 +281,25 @@ label captain_day3_morning_garden:
 
     $ change_room('manor_garden')
 
-    if captain_details.threads.is_unlocked('petrol_tin_in_shed'):
-
-        """
-        The drive is empty.
-
-        Lady Claythorn's good motor car is gone, and the chauffeur with it.
-
-        A thin mist hangs over the gravel and the wet grass.
-
-        The shed at the end of the garden holds the petrol tin I found on Saturday night.
-
-        If that old car in the garage will run, the means to fill it are close at hand.
-
-        I have no reason to linger out here in the cold.
-        """
-
-        return
-
     """
     The drive is empty.
 
     Lady Claythorn's good motor car is gone, and the chauffeur with it.
 
-    A thin mist hangs over the gravel and the wet grass. No rain this morning, only the cold.
+    A thin mist hangs over the gravel and the wet grass.
+    """
 
+    if captain_details.threads.is_unlocked('petrol_tin_in_shed'):
+
+        """
+        The shed at the end of the garden probably still holds the petrol tin I found on Saturday night.
+
+        No need to check there again.
+        """
+
+        return
+
+    """
     With the staff gone, there is no longer anyone to keep me out of any corner of this place.
 
     I walk down to the squat timber outbuilding at the end of the garden.
@@ -340,6 +335,23 @@ label captain_day3_morning_bedroom_default_intro:
     return
 
 
+label captain_day3_morning_bedroom_captain:
+
+    $ change_room('bedroom_captain')
+
+    """
+    My own room, just as I left it.
+
+    I cannot say why my feet have carried me back here.
+
+    There is no time to nap, and no inclination for it either.
+
+    The bed can wait. I have a house to search.
+    """
+
+    return
+
+
 label captain_day3_morning_bedroom_lad:
 
     call captain_day3_morning_bedroom_default_intro
@@ -351,7 +363,13 @@ label captain_day3_morning_bedroom_lad:
     """
     No answer.
 
-    I try the handle. The door is not locked. The room is empty, the bed made.
+    I try the handle. The door is not locked.
+    """
+
+    $ change_room("bedroom_lad")
+
+    """
+    The room is empty, the bed made.
 
     Wherever the boy is, he is not in his quarters.
     """
@@ -370,7 +388,13 @@ label captain_day3_morning_bedroom_psychic:
     """
     No reply.
 
-    I try the handle. The door opens on an empty room.
+    I try the handle. The door is not locked, and swings open.
+    """
+
+    $ change_room("bedroom_psychic")
+
+    """
+    The room is empty.
 
     The bed has been slept in, but Miss Baxter is gone.
     """
@@ -388,14 +412,42 @@ label captain_day3_morning_bedroom_nurse:
 
     """
     Silence.
+    """
 
+    if captain_details.saved_variables["day3_morning_nurse_checked"]:
+
+        """
+        I have already let myself into Miss Marsh's room.
+
+        It was empty then, and there is no reason it should be otherwise now.
+        """
+
+        return
+
+    $ captain_details.saved_variables["day3_morning_nurse_checked"] = True
+
+    """
     The door is locked.
 
-    I have the master key in my pocket, but I do not use it yet.
+    Yesterday I would have left it at that and respected her privacy.
 
-    If she is in there and means to stay hidden, that is her choice.
+    Today, with the staff vanished and a man lying murdered down the corridor, I will not.
 
-    If she is not in there, the room can wait.
+    I fit the master key and turn it.
+    """
+
+    play sound door_open
+
+    $ change_room("bedroom_nurse")
+
+    """
+    The room is empty.
+
+    The bed is made and has not been slept in.
+
+    Miss Marsh is not here, and nothing in these four walls tells me where she has gone.
+
+    I take note of it, lock the door behind me, and step back out.
     """
 
     return
@@ -412,9 +464,15 @@ label captain_day3_morning_bedroom_host:
     """
     No answer.
 
-    The door is locked.
+    The door is locked. I fit the master key.
+    """
 
-    I fit the master key. The wardrobe stands open, clothes scattered on the floor.
+    play sound door_open
+
+    $ change_room("bedroom_host")
+
+    """
+    The wardrobe stands open, clothes scattered on the floor.
 
     Whoever calls herself Lady Claythorn has gone in a hurry.
     """
@@ -426,25 +484,27 @@ label captain_day3_morning_bedroom_drunk:
 
     call captain_day3_morning_bedroom_default_intro
 
-    if captain_details.saved_variables["day3_morning_drunk_checked"]:
-
-        """
-        I have already been through Mr Manning's room.
-
-        There is nothing more I can do for him.
-        """
-
-        return
-
-    $ captain_details.saved_variables["day3_morning_drunk_checked"] = True
-
     captain """
     Mr Manning?
     """
 
     """
     No reply.
+    """
 
+    if captain_details.saved_variables["day3_morning_drunk_checked"]:
+
+        """
+        I have already seen what was done to Mr Manning in this room.
+
+        Once was enough. I do not need to look on him again.
+        """
+
+        return
+
+    $ captain_details.saved_variables["day3_morning_drunk_checked"] = True
+
+    """
     I unlock the door with the master key and step inside.
     """
 
@@ -453,25 +513,25 @@ label captain_day3_morning_bedroom_drunk:
     $ play_music('scary', fadeout_val=1)
 
     """
-    Manning lies in his bed, sheets soaked through.
+    Manning lies in his bed, the sheets soaked through and dark. His throat has been cut.
 
-    His throat has been cut.
+    I have seen death enough to be hardened to it. I had thought myself hardened to it.
 
-    He has been dead for hours.
+    But this turns my stomach. A man asleep and drunk, killed where he lay, never given the chance to lift a hand.
 
-    Someone came through this door in the night, and Manning, drunk as he was, never woke.
+    My fists close at my sides. The anger comes before the grief, and I let it come.
+
+    He was a guest under this roof. We shut him in to keep the peace, and someone walked through that door in the night and cut his throat while he slept.
     """
 
     captain """
-    God rest you.
+    God rest you, Mr Manning. You deserved a better end than this.
     """
 
     """
-    I draw the sheet up over him and step back into the corridor.
+    I draw the sheet up over his face. It takes me a moment to steady my hand.
 
-    Whoever did this had a key.
-
-    I had thought I was the only one with one, but evidently I was wrong.
+    Then I step back into the corridor.
     """
 
     $ play_music('mysterious', 2)
@@ -504,24 +564,6 @@ label captain_day3_morning_bedroom_broken:
     The bed has been straightened around him. His effects, set in order.
 
     The house has tidied its dead with the same calm hand it tidies everything else.
-    """
-
-    return
-
-
-# ------------------------------------
-#   ATTIC
-# ------------------------------------
-label captain_day3_morning_attic_default:
-
-    $ change_room("attic_hallway")
-
-    """
-    The attic is much as I left it last night.
-
-    I have already seen what is up here.
-
-    There is nothing more for me in these rooms.
     """
 
     return
