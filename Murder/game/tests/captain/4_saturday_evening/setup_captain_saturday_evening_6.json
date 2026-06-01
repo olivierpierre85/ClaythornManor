@@ -11,7 +11,7 @@
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Storage",
-            "redirect": "captain_day2_evening_attic_storage"
+            "redirect": "captain_attic_storage"
         },
         {
             "menu": "captain_day2_evening_map_menu",
@@ -26,27 +26,27 @@
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Storage",
-            "redirect": "captain_day2_evening_attic_storage"
+            "redirect": "captain_attic_storage"
         },
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Butler's room",
-            "redirect": "captain_day2_evening_attic_butler_room"
+            "redirect": "captain_attic_butler_room"
         },
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Butler's room",
-            "redirect": "captain_day2_evening_attic_butler_room"
+            "redirect": "captain_attic_butler_room"
         },
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Footmen's room",
-            "redirect": "captain_day2_evening_attic_males_room"
+            "redirect": "captain_attic_males_room"
         },
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Maids' room",
-            "redirect": "captain_day2_evening_attic_females_room"
+            "redirect": "captain_attic_females_room"
         },
         {
             "menu": "captain_day2_evening_map_menu",

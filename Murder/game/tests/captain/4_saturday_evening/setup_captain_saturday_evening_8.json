@@ -11,7 +11,7 @@
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Storage Room",
-            "redirect": "captain_day2_evening_attic_storage"
+            "redirect": "captain_attic_storage"
         },
         {
             "menu": "captain_day2_evening_map_menu",
@@ -36,22 +36,22 @@
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Male Servants Room",
-            "redirect": "captain_day2_evening_attic_males_room"
+            "redirect": "captain_attic_males_room"
         },
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Male Servants Room",
-            "redirect": "captain_day2_evening_attic_males_room"
+            "redirect": "captain_attic_males_room"
         },
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Female Servants Room",
-            "redirect": "captain_day2_evening_attic_females_room"
+            "redirect": "captain_attic_females_room"
         },
         {
             "menu": "captain_day2_evening_map_menu",
             "selected": "Female Servants Room",
-            "redirect": "captain_day2_evening_attic_females_room"
+            "redirect": "captain_attic_females_room"
         },
         {
             "menu": "captain_day2_evening_map_menu",

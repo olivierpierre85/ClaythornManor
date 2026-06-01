@@ -3,8 +3,10 @@
 #
 #   With the staff gone, the basement is finally open to him.
 #   The garage holds an old motor car.
-#   If he found the petrol tin in the shed on Saturday evening, he can
-#   choose to take the car and flee alone.
+#   The garden gives a second chance at the petrol: with the staff gone he
+#   can let himself into the locked shed with the master key and take the
+#   tin, even if he missed it on Saturday evening (sets petrol_tin_in_shed).
+#   The car and petrol together open the flight options in the afternoon.
 # --------------------------------------------
 
 label captain_day3_morning_map_menu:
@@ -16,9 +18,10 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day3_morning_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('billiard_room'), 'captain_day3_morning_billiard_room', 10, room='billiard_room'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day3_morning_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day3_morning_entrance_hall', 0, room='entrance_hall', early_exit=True),
             TimedMenuChoice(default_room_text('manor_garden'), 'captain_day3_morning_garden', 10, room='manor_garden'),
             # Bedrooms
+            TimedMenuChoice(default_room_text('bedroom_captain'), 'captain_day3_morning_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_lad'), 'captain_day3_morning_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 'captain_day3_morning_bedroom_psychic', 10, room='bedroom_psychic'),
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'captain_day3_morning_bedroom_nurse', 10, room='bedroom_nurse'),
@@ -26,23 +29,16 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'captain_day3_morning_bedroom_drunk', 10, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'captain_day3_morning_bedroom_doctor', 10, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_broken'), 'captain_day3_morning_bedroom_broken', 10, room='bedroom_broken'),
-            # Attic
-            TimedMenuChoice(default_room_text('storage'), 'captain_day3_morning_attic_default', 10, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'captain_day3_morning_attic_default', 10, room='males_room'),
-            TimedMenuChoice(default_room_text('females_room'), 'captain_day3_morning_attic_default', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'captain_day3_morning_attic_default', 10, room='butler_room'),
+            # Attic — same rooms as the night before (state carries over)
+            TimedMenuChoice(default_room_text('storage'), 'captain_attic_storage', 10, room='storage'),
+            TimedMenuChoice(default_room_text('males_room'), 'captain_attic_males_room', 10, room='males_room'),
+            TimedMenuChoice(default_room_text('females_room'), 'captain_attic_females_room', 10, room='females_room'),
+            TimedMenuChoice(default_room_text('butler_room'), 'captain_attic_butler_room', 10, room='butler_room'),
             # Basement — now reachable, no staff
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day3_morning_kitchen', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day3_morning_scullery', 10, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'captain_day3_morning_garage', 10, room='garage', next_menu='captain_day3_morning_garage_menu'),
+            TimedMenuChoice(default_room_text('garage'), 'captain_day3_morning_garage', 10, room='garage'),
             TimedMenuChoice(default_room_text('gun_room'), 'captain_day3_morning_gun_room', 10, room='gun_room'),
-            # End
-            TimedMenuChoice(
-                'Wait for the others in the entrance hall',
-                'generic_cancel',
-                early_exit = True,
-                room = 'entrance_hall',
-            ),
         ], is_map = True)
 
     return
@@ -143,20 +139,6 @@ label captain_day3_morning_garage:
 
     $ change_room('garage')
 
-    if captain_details.saved_variables["day3_morning_car_seen"]:
-
-        $ change_room('garage')
-
-        """
-        The car still sits where I left it.
-
-        Nothing has changed.
-        """
-
-        return
-
-    $ captain_details.saved_variables["day3_morning_car_seen"] = True
-
     """
     The garage is dim.
 
@@ -178,23 +160,14 @@ label captain_day3_morning_garage:
         """
         The shed.
 
-        The petrol tin I found last night, set out in the middle of the floor as if waiting to be carried away.
+        I found petrol there, a full can.
 
-        A full can would more than serve.
+        That is more than enough to leave this place.
 
-        I could go down to the shed, fetch it, fill the tank, and be gone before the house knows I am missing.
+        But first I should know what has become of the others.
 
-        It would be the safe choice for one man.
-
-        It would also leave the others to whatever is happening here.
+        I close the bonnet and leave the car as it stands.
         """
-
-        call run_menu(TimedMenu("captain_day3_morning_garage_menu", [
-            TimedMenuChoice("Fetch the petrol and drive out alone",
-                'captain_day3_morning_escape_alone', 0, early_exit=True),
-            TimedMenuChoice("Leave the car. The others come first",
-                'captain_day3_morning_stay_with_others', 0, early_exit=True),
-        ]))
 
     else:
 
@@ -205,40 +178,6 @@ label captain_day3_morning_garage:
 
         I close the bonnet and step back.
         """
-
-    return
-
-
-label captain_day3_morning_escape_alone:
-
-    """
-    Decision made.
-
-    I close the bonnet, fetch the master key from my pocket, and slip out through the side door.
-
-    The garden lies under a thin mist.
-
-    The shed is where I left it last night.
-    """
-
-    # TODO: write the actual escape sequence and ending (captain survives alone).
-    # For now, route to the placeholder so the rest of the chapter keeps building.
-    jump work_in_progress
-
-
-label captain_day3_morning_stay_with_others:
-
-    captain """
-    No.
-
-    Not yet.
-    """
-
-    """
-    I will not take the only way out of this house before I know what has become of the rest of them.
-
-    I close the bonnet and step back.
-    """
 
     return
 
@@ -263,11 +202,9 @@ label captain_day3_morning_library:
     """
     The genealogy book lies open on the table, where I left it.
 
-    There was a time I might have sat and read it through.
+    But I do not have time to sit and read it through.
 
     Not now. Not with the staff vanished and the house emptied around me.
-
-    Whatever name is written in those pages, it will not help the living.
 
     I leave the book where it lies.
     """
@@ -347,14 +284,41 @@ label captain_day3_morning_garden:
     """
     The drive is empty.
 
-    No cars. No carts. No tracks fresh on the gravel.
+    Lady Claythorn's good motor car is gone, and the chauffeur with it.
 
-    Whoever has gone, has gone on foot, or some hours ago.
-
-    A thin mist hangs in the trees. The air is cold.
-
-    I do not linger.
+    A thin mist hangs over the gravel and the wet grass.
     """
+
+    if captain_details.threads.is_unlocked('petrol_tin_in_shed'):
+
+        """
+        The shed at the end of the garden probably still holds the petrol tin I found on Saturday night.
+
+        No need to check there again.
+        """
+
+        return
+
+    """
+    With the staff gone, there is no longer anyone to keep me out of any corner of this place.
+
+    I walk down to the squat timber outbuilding at the end of the garden.
+    """
+
+    # TODO add this image
+    $ change_room('toolshed_outside')
+
+    """
+    The door is locked.
+
+    But the master key is in my pocket, and there is no one left to answer for it.
+    """
+
+    play sound door_open
+
+    $ change_room('toolshed')
+
+    call captain_garden_shed_inside
 
     return
 
@@ -371,6 +335,23 @@ label captain_day3_morning_bedroom_default_intro:
     return
 
 
+label captain_day3_morning_bedroom_captain:
+
+    $ change_room('bedroom_captain')
+
+    """
+    My own room, just as I left it.
+
+    I cannot say why my feet have carried me back here.
+
+    There is no time to nap, and no inclination for it either.
+
+    The bed can wait. I have a house to search.
+    """
+
+    return
+
+
 label captain_day3_morning_bedroom_lad:
 
     call captain_day3_morning_bedroom_default_intro
@@ -382,7 +363,13 @@ label captain_day3_morning_bedroom_lad:
     """
     No answer.
 
-    I try the handle. The door is not locked. The room is empty, the bed made.
+    I try the handle. The door is not locked.
+    """
+
+    $ change_room("bedroom_lad")
+
+    """
+    The room is empty, the bed made.
 
     Wherever the boy is, he is not in his quarters.
     """
@@ -401,7 +388,13 @@ label captain_day3_morning_bedroom_psychic:
     """
     No reply.
 
-    I try the handle. The door opens on an empty room.
+    I try the handle. The door is not locked, and swings open.
+    """
+
+    $ change_room("bedroom_psychic")
+
+    """
+    The room is empty.
 
     The bed has been slept in, but Miss Baxter is gone.
     """
@@ -419,14 +412,42 @@ label captain_day3_morning_bedroom_nurse:
 
     """
     Silence.
+    """
 
+    if captain_details.saved_variables["day3_morning_nurse_checked"]:
+
+        """
+        I have already let myself into Miss Marsh's room.
+
+        It was empty then, and there is no reason it should be otherwise now.
+        """
+
+        return
+
+    $ captain_details.saved_variables["day3_morning_nurse_checked"] = True
+
+    """
     The door is locked.
 
-    I have the master key in my pocket, but I do not use it yet.
+    Yesterday I would have left it at that and respected her privacy.
 
-    If she is in there and means to stay hidden, that is her choice.
+    Today, with the staff vanished and a man lying murdered down the corridor, I will not.
 
-    If she is not in there, the room can wait.
+    I fit the master key and turn it.
+    """
+
+    play sound door_open
+
+    $ change_room("bedroom_nurse")
+
+    """
+    The room is empty.
+
+    The bed is made and has not been slept in.
+
+    Miss Marsh is not here, and nothing in these four walls tells me where she has gone.
+
+    I take note of it, lock the door behind me, and step back out.
     """
 
     return
@@ -443,9 +464,15 @@ label captain_day3_morning_bedroom_host:
     """
     No answer.
 
-    The door is locked.
+    The door is locked. I fit the master key.
+    """
 
-    I fit the master key. The wardrobe stands open, clothes scattered on the floor.
+    play sound door_open
+
+    $ change_room("bedroom_host")
+
+    """
+    The wardrobe stands open, clothes scattered on the floor.
 
     Whoever calls herself Lady Claythorn has gone in a hurry.
     """
@@ -457,25 +484,27 @@ label captain_day3_morning_bedroom_drunk:
 
     call captain_day3_morning_bedroom_default_intro
 
-    if captain_details.saved_variables["day3_morning_drunk_checked"]:
-
-        """
-        I have already been through Mr Manning's room.
-
-        There is nothing more I can do for him.
-        """
-
-        return
-
-    $ captain_details.saved_variables["day3_morning_drunk_checked"] = True
-
     captain """
     Mr Manning?
     """
 
     """
     No reply.
+    """
 
+    if captain_details.saved_variables["day3_morning_drunk_checked"]:
+
+        """
+        I have already seen what was done to Mr Manning in this room.
+
+        Once was enough. I do not need to look on him again.
+        """
+
+        return
+
+    $ captain_details.saved_variables["day3_morning_drunk_checked"] = True
+
+    """
     I unlock the door with the master key and step inside.
     """
 
@@ -484,25 +513,25 @@ label captain_day3_morning_bedroom_drunk:
     $ play_music('scary', fadeout_val=1)
 
     """
-    Manning lies in his bed, sheets soaked through.
+    Manning lies in his bed, the sheets soaked through and dark. His throat has been cut.
 
-    His throat has been cut.
+    I have seen death enough to be hardened to it. I had thought myself hardened to it.
 
-    He has been dead for hours.
+    But this turns my stomach. A man asleep and drunk, killed where he lay, never given the chance to lift a hand.
 
-    Someone came through this door in the night, and Manning, drunk as he was, never woke.
+    My fists close at my sides. The anger comes before the grief, and I let it come.
+
+    He was a guest under this roof. We shut him in to keep the peace, and someone walked through that door in the night and cut his throat while he slept.
     """
 
     captain """
-    God rest you.
+    God rest you, Mr Manning. You deserved a better end than this.
     """
 
     """
-    I draw the sheet up over him and step back into the corridor.
+    I draw the sheet up over his face. It takes me a moment to steady my hand.
 
-    Whoever did this had a key.
-
-    I had thought I was the only one with one, but evidently I was wrong.
+    Then I step back into the corridor.
     """
 
     $ play_music('mysterious', 2)
@@ -535,24 +564,6 @@ label captain_day3_morning_bedroom_broken:
     The bed has been straightened around him. His effects, set in order.
 
     The house has tidied its dead with the same calm hand it tidies everything else.
-    """
-
-    return
-
-
-# ------------------------------------
-#   ATTIC
-# ------------------------------------
-label captain_day3_morning_attic_default:
-
-    $ change_room("attic_hallway")
-
-    """
-    The attic is much as I left it last night.
-
-    I have already seen what is up here.
-
-    There is nothing more for me in these rooms.
     """
 
     return

@@ -26,7 +26,9 @@ label init_captain:
             # Evening day 2
             "day2_evening_billiard_room_visited" : False,
             "day2_evening_billiard_encounters" : 0,
-            "day2_evening_attic_visited" : False,
+
+            # Attic — shared across days (saturday evening and sunday morning)
+            "generic_attic_visited" : False,
             "visited_attic_storage" : False,
             "visited_attic_males_room" : False,
             "visited_attic_females_room" : False,
@@ -37,6 +39,7 @@ label init_captain:
             "day3_morning_car_seen" : False,
             "day3_morning_gun_room_visited" : False,
             "day3_morning_drunk_checked" : False,
+            "day3_morning_nurse_checked" : False,
         }
 
         captain_important_choices = CharacterImportantChoiceList([
@@ -54,7 +57,7 @@ label init_captain:
                 content_negative="You kept your suspicions about Lady Claythorn from Miss Marsh",
                 image_file="nurse",
                 chapters=['saturday_evening'],
-                relevant_chapters=['saturday_evening', 'sunday_morning'],
+                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon'],
             ),
             CharacterInformation(
                 2, "confide_in_lad",
@@ -105,7 +108,14 @@ label init_captain:
                 content_negative="You didn't get into the garden shed",
                 image_file="petrol_tin",
                 chapters=['saturday_evening'],
-                relevant_chapters=['saturday_evening', 'sunday_morning'],
+                relevant_chapters=['saturday_evening', 'sunday_morning', 'sunday_afternoon'],
+            ),
+            CharacterInformation(8, "seen_car",
+                "You found an old motor car in the garage",
+                content_negative="You didn't find a motor car to leave in",
+                image_file="seen_car",
+                chapters=['sunday_morning'],
+                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
             ),
         ])
 
@@ -153,6 +163,19 @@ label init_captain:
                 "You were beaten to death by the butler after laying hands on Lady Claythorn",
                 image_file="strangled",
                 chapters=['saturday_evening']),
+            CharacterInformation(7, "car_ambush",
+                "The motor car was stopped on the road and you were shot from behind",
+                image_file="gun_firing",
+                is_intuition=True,
+                chapters=['sunday_morning', 'sunday_afternoon']),
+            CharacterInformation(8, "shot_fleeing",
+                "You were shot in the woods as you fled the manor on foot",
+                image_file="hunting_rifle",
+                chapters=['sunday_afternoon']),
+            CharacterInformation(9, "survives",
+                "You slipped away alone in the motor car and lived",
+                image_file="escape",
+                chapters=['sunday_afternoon']),
         ])
 
         # Character Class

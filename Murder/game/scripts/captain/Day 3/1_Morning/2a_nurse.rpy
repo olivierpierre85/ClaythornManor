@@ -1,9 +1,13 @@
 # --------------------------------------------
 #   Captain — Sunday morning, nurse path
 #
-#   The captain confided in Miss Marsh last night.
-#   She comes for him at first light, and they go to ground in the butler's
-#   room in the attic to wait the morning out.
+#   The captain confided in Miss Marsh last night, and she comes for him at
+#   first light. After they take stock, he is offered a choice that is really
+#   no choice at all:
+#     - Leave at once: Miss Marsh cannot face the road on foot and admits she
+#       is unwell, so the captain yields and they go to ground after all.
+#     - Go to ground: they hide in the butler's attic room directly.
+#   Either way they wait the morning out and come down in the afternoon.
 # --------------------------------------------
 
 label captain_day3_morning_nurse:
@@ -59,7 +63,7 @@ label captain_day3_morning_nurse:
     captain """
     So I was right, something is afoot.
 
-    Have you tried to check some other rooms?
+    Have you checked any of the other rooms?
     """
 
     nurse """
@@ -86,12 +90,93 @@ label captain_day3_morning_nurse:
     If someone in this house means us harm, it might be best to remain hidden.
 
     On the other hand, we cannot hide forever.
+
+    Two courses lie open to me, and neither is without risk.
     """
 
-    # TODO how should things evolve from here?
-    # IF seen car and Petrol, has the option to leave immediately? Why ? 
-    # IF stay, meet the two others, and they say they spotted a car? And a outside shed? Captain says he has the key
-    # They all get in the car and leave but => DEAD HOW
+    $ time_left = 1
+    call run_menu( TimedMenu("captain_day3_morning_nurse_menu", [
+        TimedMenuChoice("Do not waste time, leave the house now", 'captain_day3_morning_nurse_leave', early_exit=True),
+        TimedMenuChoice("Go to ground and wait the morning out", 'captain_day3_morning_nurse_hide', early_exit=True),
+    ]))
+
+    return
+
+
+# ------------------------------------
+#   NURSE PATH — leave at once (a false choice)
+#
+#   Miss Marsh cannot face the road on foot and admits she is unwell, though
+#   she will not say how badly. The captain yields and they go to ground after
+#   all, falling through to the hide sequence.
+# ------------------------------------
+label captain_day3_morning_nurse_leave:
+
+    captain """
+    I have no wish to wait here to be found.
+
+    I would put this house behind me now, while it is quiet.
+    """
+
+    nurse """
+    On foot, Captain?
+    """
+
+    captain """
+    I am afraid yes.
+
+    I do not see another way.
+
+    Lady Claythorn and her staff most likely left with the motor car.
+
+    It is a fairly long walk to the town, but it is still early, I am sure we can make it.
+    """
+
+    nurse """
+    Oh, I am sure you could, Captain.
+
+    Sadly I can't.
+    """
+
+    """
+    She says it quietly, and I see now what I had been too preoccupied to mark before.
+
+    The pallor that is not only fear.
+
+    The careful way she holds herself.
+    """
+
+    nurse """
+    I am not a healthy woman, Captain.
+
+    There is a good chance my body will not hold for such a long journey.
+    """
+
+    captain """
+    I see.
+    """
+
+    """
+    I think her condition might be worse than her quiet behaviour shows.
+
+    But if she does not want to tell me more, I will not press her.
+    """
+
+    captain """
+    All right, we can stay at the manor a bit longer until we work out a better plan.
+    """
+
+    nurse """
+    Thank you, Captain.
+    """
+
+    jump captain_day3_morning_nurse_hide
+
+
+# ------------------------------------
+#   NURSE PATH — go to ground
+# ------------------------------------
+label captain_day3_morning_nurse_hide:
 
     captain """
     We should not stay here.
@@ -100,20 +185,24 @@ label captain_day3_morning_nurse:
     """
 
     nurse """
-    Where, then?
+    You are right.
+
+    I believe the attic is the best place to hide.
+
+    It should be empty now.
     """
 
     captain """
-    The attic.
+    The attic, good idea.
 
     I have the butler's master key.
 
-    His room will do.
-
-    No guest has any business being up there, so no one will think to look for us.
+    So we can hide in his room and lock the door.
     """
 
     nurse """
+    Perfect.
+
     Lead the way, Captain.
     """
 
@@ -159,32 +248,8 @@ label captain_day3_morning_nurse:
     We are going to be here a little while.
     """
 
-    nurse """
-    Thank you.
-    """
-
     """
     She sits on the edge of the narrow bed and folds her hands in her lap.
-
-    A composed woman.
-
-    She has not asked me a single foolish question since she came through my door.
-    """
-
-    captain """
-    Tell me what you saw, room by room.
-
-    Leave nothing out.
-    """
-
-    """
-    She does, plainly and in order.
-
-    Empty dining room. Cold range. Back door bolted from the inside.
-
-    No coats taken from the hall. No carriage in the drive.
-
-    Whoever has gone, has gone in a hurry, or has not gone at all.
     """
 
     call change_time(10, 30)
@@ -192,15 +257,27 @@ label captain_day3_morning_nurse:
     """
     We sit in silence for a long while after that.
 
-    Now and again I hear a board ease somewhere below.
+    Then, I hear a board ease somewhere below.
 
     Once, footsteps in the upstairs corridor — slow, deliberate, then gone.
+    """
 
-    I keep my hand close to my pocket and say nothing.
+    captain """
+    Somebody is downstairs.
+    """
 
-    Miss Marsh does the same.
+    nurse """
+    It could be one of the others.
+    """
 
-    She has the gift, rare in any company, of being able to sit quite still and quite quiet.
+    captain """
+    It could be, but I do not know whether they are friend or foe.
+
+    It is probably better to wait for them to leave.
+    """
+
+    nurse """
+    You are probably right.
     """
 
     call change_time(11, 30)
@@ -222,7 +299,7 @@ label captain_day3_morning_nurse:
 
     Carefully.
 
-    And we find out what has become of the others.
+    And we try to make sense of what is happening.
     """
 
     return
