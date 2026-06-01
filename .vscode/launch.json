@@ -65,6 +65,24 @@
       "console": "integratedTerminal"
     },
     {
+      "name": "Locations: Generate ALL images (FLUX.2 Klein)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/dummy.py",
+      "preLaunchTask": "Locations: Generate ALL images (FLUX.2 Klein)",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Locations: Generate one image (FLUX.2 Klein)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/dummy.py",
+      "preLaunchTask": "Locations: Generate one image (FLUX.2 Klein)",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
       "name": "Process Infocards",
       "type": "debugpy",
       "request": "launch",

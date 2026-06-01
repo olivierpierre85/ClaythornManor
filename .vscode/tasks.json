@@ -93,6 +93,42 @@
         "letter_i_art_deco.png"
       ],
       "default": "number_1_art_deco.png"
+    },
+    {
+      "id": "locationId",
+      "type": "pickString",
+      "description": "Pick a room to generate",
+      "options": [
+        "entrance_hall",
+        "tea_room",
+        "billiard_room",
+        "dining_room",
+        "library",
+        "portrait_gallery",
+        "hallway",
+        "bedrooms_hallway",
+        "bedroom_lad",
+        "bedroom_psychic",
+        "bedroom_doctor",
+        "bedroom_captain",
+        "bedroom_host",
+        "bedroom_drunk",
+        "bedroom_broken",
+        "bedroom_nurse",
+        "basement_stairs",
+        "servant_stairs",
+        "kitchen",
+        "scullery",
+        "gun_room",
+        "garage",
+        "attic_hallway",
+        "attic_storage_room",
+        "attic_males_room",
+        "attic_females_room",
+        "butler_room",
+        "toolshed"
+      ],
+      "default": "library"
     }
   ],
   "tasks": [
@@ -221,6 +257,40 @@
       "command": "python",
       "args": [
         "c:\\Projects\\ClaythornManor\\tools\\extract_thread_prompts.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Locations: Generate ALL images (FLUX.2 Klein)",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\generate_location_images.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Locations: Generate one image (FLUX.2 Klein)",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\generate_location_images.py",
+        "${input:locationId}",
+        "--force"
       ],
       "presentation": {
         "reveal": "always",
