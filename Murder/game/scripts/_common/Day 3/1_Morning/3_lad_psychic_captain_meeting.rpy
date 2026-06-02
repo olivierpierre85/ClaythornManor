@@ -7,7 +7,7 @@ label common_day3_morning_meeting_captain:
     """
 
     psychic """
-    We feel the same. You two are the first persons we've encountered today as well.
+    We feel the same.
     """
 
     lad """

@@ -6,6 +6,9 @@ BUG => FULL_TESTINGMODE, if doing a restart, then missing menu??? Also doesn't r
 
 ## Write Story: Captain (Sushil Sinha)
 
+
+FIX EVERYONE CAPTAIN MEETING
+
 Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
 
 IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill. OR LOVER of Psychic, they met in service?

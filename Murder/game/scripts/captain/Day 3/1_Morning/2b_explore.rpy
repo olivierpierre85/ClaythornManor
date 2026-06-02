@@ -99,7 +99,25 @@ label captain_day3_morning_explore:
     """
 
     captain """
-    Have you found anyone else?
+    We have got a lot to talk about, maybe we should settle somewhere more comfortable.
+    """
+
+    psychic """
+    The tea room perhaps?
+    """
+
+    captain """
+    Perfect.
+    """
+
+    $ change_room("tea_room")
+
+    """
+    Everyone finds a chair before we can continue our conversation.
+    """
+
+    captain """
+    So you have not found anyone else?
     """
 
     psychic """
@@ -114,9 +132,16 @@ label captain_day3_morning_explore:
     Mr Manning we have not been able to reach.
     """
 
+    # On his solo round the captain may already have settled two of the rooms
+    # the psychic has just left open. Each flag decides whether he reports what
+    # he found or discovers it now, together with the others:
+    #   day3_morning_drunk_checked - he found Mr Manning dead in his bed
+    #   day3_morning_nurse_checked - he let himself into Miss Marsh's empty room
+
     if captain_details.saved_variables["day3_morning_drunk_checked"]:
 
-        # The captain went into Manning's room during his own search.
+        # He saw Manning's body himself, so he breaks the news here rather than
+        # leading the others up to discover it.
         captain """
         Mr Manning will not be coming down.
 
@@ -138,13 +163,14 @@ label captain_day3_morning_explore:
         """
 
         """
-        Miss Baxter sits down on the lowest step.
+        Miss Baxter sinks into the nearest chair.
 
         Mr Harring takes a moment to find his voice.
         """
 
         if captain_details.saved_variables["day3_morning_nurse_checked"]:
 
+            # He opened Miss Marsh's room on his round too, so he can speak to it.
             captain """
             There is Miss Marsh's room besides. I let myself into it this morning.
 
@@ -178,11 +204,11 @@ label captain_day3_morning_explore:
         captain """
         We will. But not in three separate parties.
 
-        Take a few minutes in the tea room. I will see to Miss Baxter, and then we go on together.
+        Take a few minutes to gather yourselves, and then we go on together.
         """
 
         lad """
-        Right. The tea room.
+        Right.
         """
 
         psychic """
@@ -190,10 +216,8 @@ label captain_day3_morning_explore:
         """
 
         """
-        She rises, and the three of us cross the hall together.
+        Miss Baxter settles back into her chair, and the boy does the same.
         """
-
-        $ change_room('tea_room', dissolve)
 
     else:
 
