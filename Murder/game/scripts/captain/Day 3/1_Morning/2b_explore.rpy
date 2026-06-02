@@ -31,7 +31,7 @@ label captain_day3_morning_explore:
     $ change_room('bedrooms_hallway', dissolve)
 
     """
-    There is no one is the corridor.
+    There is no one in the corridor.
 
     The doors are all shut.
 
@@ -62,20 +62,20 @@ label captain_day3_morning_explore:
 
     call change_time(11, 30)
 
-    $ change_room('entrance_hall', dissolve)
+    if time_left <= 0:
+  
+        $ change_room('entrance_hall', dissolve)
+
+        """
+        I have been searching the house for some time now.
+
+        I come back to the entrance hall to think.
+        """
+
+    pause 1
 
     """
-    I have walked the house from the cellar to the eaves and found nothing alive in it save dust.
-
-    The dead lie where we left them. The living are not in their rooms.
-
-    I come back to the entrance hall to think.
-    """
-
-    pause 0.5
-
-    """
-    A voice rises from the foot of the stair.
+    Suddenly, I hear a voice rising.
     """
 
     lad """

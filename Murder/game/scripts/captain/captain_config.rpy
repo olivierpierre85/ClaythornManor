@@ -40,6 +40,7 @@ label init_captain:
             "day3_morning_gun_room_visited" : False,
             "day3_morning_drunk_checked" : False,
             "day3_morning_nurse_checked" : False,
+            "day3_morning_privacy_explained" : False,
         }
 
         captain_important_choices = CharacterImportantChoiceList([

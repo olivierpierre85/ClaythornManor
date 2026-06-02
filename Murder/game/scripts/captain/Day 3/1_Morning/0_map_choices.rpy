@@ -123,9 +123,7 @@ label captain_day3_morning_gun_room:
 
     There is a revolver on the bench. I check it: empty.
 
-    The cartridges are not in the room. Whoever cleared the staff out has taken them, or hidden them.
-
-    A loaded gun would be a comfort. An empty one is only a weight.
+    No matter, I still have mine in my pocket.
 
     I leave them where they are.
     """
@@ -254,9 +252,7 @@ label captain_day3_morning_entrance_hall:
     """
     The hall is empty.
 
-    The front door is shut, but not bolted.
-
-    Whoever came or went last night did so without making any noise of it.
+    It is the heart of the house, so I linger a little to see if I can hear something.
     """
 
     return
@@ -306,7 +302,7 @@ label captain_day3_morning_garden:
     """
 
     # TODO add this image
-    $ change_room('toolshed_outside')
+    $ change_room('toolshed_outside_day')
 
     """
     The door is locked.
@@ -331,6 +327,24 @@ label captain_day3_morning_bedroom_default_intro:
     $ change_room("bedrooms_hallway")
 
     play sound door_knock
+
+    return
+
+
+# Spoken only the first time the captain lets himself into someone's private
+# room, whether the door was locked or simply unanswered. Every later room is
+# entered without comment.
+label captain_day3_morning_privacy_resolve:
+
+    if not captain_details.saved_variables["day3_morning_privacy_explained"]:
+
+        """
+        Yesterday I would have left it at that and respected their privacy.
+
+        Today, with the staff vanished and a man lying murdered down the corridor, I will not.
+        """
+
+        $ captain_details.saved_variables["day3_morning_privacy_explained"] = True
 
     return
 
@@ -362,14 +376,18 @@ label captain_day3_morning_bedroom_lad:
 
     """
     No answer.
+    """
 
+    call captain_day3_morning_privacy_resolve
+
+    """
     I try the handle. The door is not locked.
     """
 
     $ change_room("bedroom_lad")
 
     """
-    The room is empty, the bed made.
+    The room is empty.
 
     Wherever the boy is, he is not in his quarters.
     """
@@ -387,7 +405,11 @@ label captain_day3_morning_bedroom_psychic:
 
     """
     No reply.
+    """
 
+    call captain_day3_morning_privacy_resolve
+
+    """
     I try the handle. The door is not locked, and swings open.
     """
 
@@ -414,26 +436,14 @@ label captain_day3_morning_bedroom_nurse:
     Silence.
     """
 
-    if captain_details.saved_variables["day3_morning_nurse_checked"]:
-
-        """
-        I have already let myself into Miss Marsh's room.
-
-        It was empty then, and there is no reason it should be otherwise now.
-        """
-
-        return
-
     $ captain_details.saved_variables["day3_morning_nurse_checked"] = True
 
+    call captain_day3_morning_privacy_resolve
+
     """
-    The door is locked.
+    I try the handle. The door is locked.
 
-    Yesterday I would have left it at that and respected her privacy.
-
-    Today, with the staff vanished and a man lying murdered down the corridor, I will not.
-
-    I fit the master key and turn it.
+    I fit the key and turn it.
     """
 
     play sound door_open
@@ -463,8 +473,14 @@ label captain_day3_morning_bedroom_host:
 
     """
     No answer.
+    """
 
-    The door is locked. I fit the master key.
+    call captain_day3_morning_privacy_resolve
+
+    """
+    I try the handle. The door is locked.
+
+    I fit the key.
     """
 
     play sound door_open
@@ -492,20 +508,14 @@ label captain_day3_morning_bedroom_drunk:
     No reply.
     """
 
-    if captain_details.saved_variables["day3_morning_drunk_checked"]:
-
-        """
-        I have already seen what was done to Mr Manning in this room.
-
-        Once was enough. I do not need to look on him again.
-        """
-
-        return
-
     $ captain_details.saved_variables["day3_morning_drunk_checked"] = True
 
+    call captain_day3_morning_privacy_resolve
+
     """
-    I unlock the door with the master key and step inside.
+    I try the handle. The door is locked.
+
+    I unlock it with the master key and step inside.
     """
 
     $ change_room("bedroom_drunk")
@@ -513,28 +523,36 @@ label captain_day3_morning_bedroom_drunk:
     $ play_music('scary', fadeout_val=1)
 
     """
-    Manning lies in his bed, the sheets soaked through and dark. His throat has been cut.
+    Manning lies in his bed, the sheets soaked through and dark. 
 
-    I have seen death enough to be hardened to it. I had thought myself hardened to it.
+    I approach the bed.    
+    
+    His throat has been cut.
 
-    But this turns my stomach. A man asleep and drunk, killed where he lay, never given the chance to lift a hand.
+    I jump back in horror.
 
-    My fists close at my sides. The anger comes before the grief, and I let it come.
+    I thought I had seen death enough to be hardened to it. 
 
-    He was a guest under this roof. We shut him in to keep the peace, and someone walked through that door in the night and cut his throat while he slept.
+    But this turns my stomach. 
+    
+    A man killed in his bed, not given the chance to lift a hand.
+
+    Shivers run through my body and guilt overwhelms me.
+
+    I was the one who shut him in to keep the peace.
+    
+    That made him easy prey for whoever is behind this horrific weekend.
+
+    Tears start running down my face and my hands begin to shake.
+
+    It takes me a moment to steady myself.
+
+    It is good I am alone to witness this. If anyone had been with me, they would have seen right through my act. 
+
+    I step back into the corridor.
     """
 
-    captain """
-    God rest you, Mr Manning. You deserved a better end than this.
-    """
-
-    """
-    I draw the sheet up over his face. It takes me a moment to steady my hand.
-
-    Then I step back into the corridor.
-    """
-
-    $ play_music('mysterious', 2)
+    $ play_music('PREVIOUS')
 
     return
 

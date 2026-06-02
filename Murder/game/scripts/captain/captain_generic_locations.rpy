@@ -351,10 +351,10 @@ label captain_portrait_gallery_default:
 # so a room already gone through reads as already searched the next day.
 
 label captain_attic_approach:
-
-    $ change_room("attic_hallway")
-
+    
     if not captain_details.saved_variables.get("generic_attic_visited", False):
+
+        $ change_room("attic_hallway")
 
         $ captain_details.saved_variables["generic_attic_visited"] = True
 
