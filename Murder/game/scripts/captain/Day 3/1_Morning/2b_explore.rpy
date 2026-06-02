@@ -53,14 +53,26 @@ label captain_day3_morning_explore:
 
     Something is clearly wrong in this house.
 
-    Now I need to understand what.
+    I think about the telephone, I believe it was somewhere in the entrance hall.
+    """
+
+    $ change_room("entrance_hall")
+
+    """
+    I found the telephone in the corner of the room and pick it up.
+
+    No signal.
+
+    Maybe Lady Claythorn disconnected it before she left.
+
+    Or maybe it was never working.
+
+    I consider what to do and decide the best is to first try to explore the place.
     """
 
     $ time_left = 150
 
     call run_menu(captain_details.saved_variables["day3_morning_map_menu"])
-
-    call change_time(11, 30)
 
     if time_left <= 0:
   
@@ -93,10 +105,6 @@ label captain_day3_morning_explore:
     """
 
     call common_day3_morning_meeting_captain
-
-    """
-    I let the silence sit a moment before I break it.
-    """
 
     captain """
     We have got a lot to talk about, maybe we should settle somewhere more comfortable.
@@ -168,104 +176,44 @@ label captain_day3_morning_explore:
         Mr Harring takes a moment to find his voice.
         """
 
-        if captain_details.saved_variables["day3_morning_nurse_checked"]:
-
-            # He opened Miss Marsh's room on his round too, so he can speak to it.
-            captain """
-            There is Miss Marsh's room besides. I let myself into it this morning.
-
-            It was empty, her bed not slept in. She was not there.
-            """
-
-            psychic """
-            Then she is somewhere about the house, or gone from it altogether.
-            """
-
-            captain """
-            One or the other. We shall not settle which by standing apart.
-            """
-
-        lad """
-        What are we to do?
-        """
-
-        captain """
-        We stop walking the corridors on our own.
-
-        From now on, we keep together.
-        """
-
-        psychic """
-        Should we not search a little more?
-
-        There may still be someone in the house who needs help.
-        """
-
-        captain """
-        We will. But not in three separate parties.
-
-        Take a few minutes to gather yourselves, and then we go on together.
-        """
-
-        lad """
-        Right.
-        """
-
-        psychic """
-        Thank you, Captain.
-        """
-
-        """
-        Miss Baxter settles back into her chair, and the boy does the same.
-        """
-
     else:
 
         # The captain never reached Manning's room, so the three of them
         # discover him together, as on the lad's and psychic's paths.
         captain """
-        His room is locked, and I am the one with the master key.
+        Well, Samuel Manning is normally in his room, since I locked him there yesterday. 
 
         We had better look in on him before we do anything else.
         """
 
         call common_day3_morning_lad_psychic_captain_death_manning
 
-        if captain_details.saved_variables["day3_morning_nurse_checked"]:
+    if captain_details.saved_variables["day3_morning_nurse_checked"]:
 
-            # death_manning's tail had the captain offer to check the last locked
-            # door with the lad. He has already opened it himself, so he stands
-            # the boy down and reports what he found instead.
-            captain """
-            On reflection, Mr Harring, there is no need for you to come.
+        # He opened Miss Marsh's room on his round too, so he can speak to it.
+        captain """
+        There is Miss Marsh's room besides. I let myself into it this morning.
 
-            The last locked door upstairs is Miss Marsh's, and I let myself into it on my round this morning.
-            """
+        It was empty, her bed not slept in. She was not there.
+        """
 
-            captain """
-            It was empty. Her bed had not been slept in.
+        psychic """
+        Then she is somewhere about the house, or gone from it altogether.
+        """
 
-            Wherever she is, she did not pass the night there.
-            """
+        captain """
+        One or the other. We shall not settle which by standing apart.
+        """
 
-            psychic """
-            Then she may yet be somewhere in the house.
-            """
+    else:
 
-            captain """
-            Perhaps. Rest here a while longer, the both of you.
+        call common_day3_morning_lad_psychic_captain_search_nurse
 
-            I will take another turn about the place and be back before noon.
-            """
+        call common_day3_morning_lad_psychic_captain_marsh_empty
 
-            """
-            The boy sinks back into his chair. Miss Baxter does the same.
-            """
+        call common_day3_morning_lad_psychic_captain_search_report
 
-        else:
+    call common_day3_morning_lad_psychic_captain_deaths_end
 
-            call common_day3_morning_lad_psychic_captain_marsh_empty
-
-            call common_day3_morning_lad_psychic_captain_deaths_end
 
     return

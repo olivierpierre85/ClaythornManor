@@ -245,10 +245,15 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
     $ change_room("tea_room")
 
+    return
+
+
+label common_day3_morning_lad_psychic_captain_search_nurse:
+
     captain """
     Miss Baxter, you should probably rest here for a little bit.
 
-    I have something to check out, and I'll be back soon.
+    I think we should check Miss Marsh's as well.
 
     Mr Harring, would you mind coming with me?
     """
@@ -274,8 +279,7 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
     return
 
-
-label common_day3_morning_lad_psychic_captain_deaths_end:
+label common_day3_morning_lad_psychic_captain_search_report:
 
     psychic """
     You've been gone for a while. What happened?
@@ -301,6 +305,11 @@ label common_day3_morning_lad_psychic_captain_deaths_end:
     We searched her room but it was empty.
     """
 
+    return
+
+
+label common_day3_morning_lad_psychic_captain_deaths_end:
+
     psychic """
     Well, what should we do now?
     """
@@ -313,33 +322,51 @@ label common_day3_morning_lad_psychic_captain_deaths_end:
     It's easier for me. 
     
     Sadly, I've seen my share of dead people.
-
-    So I suggest you two rest for a bit while I continue to explore the manor.
-
-    I'll be back soon.
     """
 
-    if current_character.text_id == "lad":
-        """
-        I feel like I should accompany him.
+    captain """
+    Nevertheless, we could all use a break.
 
-        But he is right, I am exhausted and overwhelmed.
+    Let's wait and think a bit before taking further decision.
+    """
 
-        So I just agree with a nod and sit down.
-        """
+    psychic """
+    Good idea captain.
+    """
 
-    elif current_character.text_id == "captain":
-        """
-        The boy looks as though he means to object, then thinks better of it.
+    lad """
+    All right.
+    """
 
-        Miss Baxter gives a tired nod and settles into a chair.
-        """
 
-    else:
-        """
-        I have no objection to that.
+    # OLD IDEAS 
+    # """
+    # So I suggest you two rest for a bit while I continue to explore the manor.
 
-        Ted Harring seems to want to say something, then changes his mind.
-        """
+    # I'll be back soon.
+    # """
 
-    return
+    # if current_character.text_id == "lad":
+    #     """
+    #     I feel like I should accompany him.
+
+    #     But he is right, I am exhausted and overwhelmed.
+
+    #     So I just agree with a nod and sit down.
+    #     """
+
+    # elif current_character.text_id == "captain":
+    #     """
+    #     The boy looks as though he means to object, then thinks better of it.
+
+    #     Miss Baxter gives a tired nod and settles into a chair.
+    #     """
+
+    # else:
+    #     """
+    #     I have no objection to that.
+
+    #     Ted Harring seems to want to say something, then changes his mind.
+    #     """
+
+    # return

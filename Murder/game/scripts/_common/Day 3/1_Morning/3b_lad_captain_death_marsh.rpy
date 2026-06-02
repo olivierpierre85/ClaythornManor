@@ -17,18 +17,12 @@ label common_day3_morning_lad_psychic_captain_marsh_empty:
 
     captain """
     It's Miss Marsh's room.
-
-    When I tried the handle earlier it was locked.
-
-    At the time, I didn't dare to go further.
-
-    But now, I fear we may have no choice.
     """
 
     lad """
     Do you believe she might still be inside?
 
-    Then she would be...
+    Then she could be...
     """
 
     captain """
@@ -41,33 +35,31 @@ label common_day3_morning_lad_psychic_captain_marsh_empty:
     Oh my God.
     """
 
-    captain """
-    There is no need to break the door.
-
-    The butler entrusted me with a master key when we confined Mr Manning.
-
-    It should open every room in the house.
-    """
-
     if current_character.text_id == "lad":
+
+        captain """
+        There is no need to break the door.
+
+        The butler entrusted me with a master key when we confined Mr Manning.
+
+        It should open every room in the house.
+        """
 
         """
         He has a master key?
 
         That mean he is able to visit every room of this place.
-        """
+        
+        He then slips a small key from his pocket.
 
-    if current_character.text_id == "captain":
-        """
-        I slip the master key from my pocket and turn the lock.
+        With a steady hand he turns the lock.
 
         The mechanism clicks, and the door swings open into the silence beyond.
         """
-    else:
-        """
-        Captain Sinha then slips a small key from his pocket.
 
-        With a steady hand he turns the lock.
+    elif current_character.text_id == "captain":
+        """
+        I slip the master key from my pocket and turn the lock.
 
         The mechanism clicks, and the door swings open into the silence beyond.
         """

@@ -86,11 +86,7 @@ label captain_day3_afternoon:
         $ change_room('tea_room', irisout)
 
         """
-        I left the boy and Miss Baxter to gather themselves in the tea room while I finished what I had begun.
-
-        I walked the house a second time, from the cellar to the eaves.
-
-        When I come back to them, a little before noon, I have nothing new to show for it.
+        We rested a while in silence, 
         """
 
     call common_day3_afternoon_lad_psychic_captain_discussion_1

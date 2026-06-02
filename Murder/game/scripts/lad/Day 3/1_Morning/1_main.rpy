@@ -193,7 +193,11 @@ label lad_day3_morning:
 
     call common_day3_morning_lad_psychic_captain_death_manning
 
+    call common_day3_morning_lad_psychic_captain_search_nurse
+
     call common_day3_morning_lad_psychic_captain_marsh_empty
+
+    call common_day3_morning_lad_psychic_captain_search_report
 
     call common_day3_morning_lad_psychic_captain_deaths_end
 

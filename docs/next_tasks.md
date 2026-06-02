@@ -4,14 +4,17 @@ BUG => FULL_TESTINGMODE, if doing a restart, then missing menu??? Also doesn't r
 
 ## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, now give values all the time?
 
+
+## BEFORE NEW STORY :
+
+FIX EVERYONE CAPTAIN MEETING Day 3 morning for
+- ted
+- psychic 
+- Others?
+
 ## Write Story: Captain (Sushil Sinha)
 
-
-FIX EVERYONE CAPTAIN MEETING
-
-Detailed narrative logic and branches have been moved to: [story_outline.md](file:///c:/Projects/ClaythornManor/docs/game_story/characters_path/captain/story_outline.md)
-
-IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill. OR LOVER of Psychic, they met in service?
+IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill. OR LOVER of Psychic, they met in service? => Check afternoon deaths
 
 UNLOCKS HOST Rethink with Broken
 
@@ -28,15 +31,9 @@ THREAD, locked shed image
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
-  - maybe simplify LAD AND pSYCHIC VERSION TO have simpler Captain's version? OR when the captain is alone, do something? Special  ? But what ?
-  - Add and validate tests   
-
-  - Normal day 3, has to find car, petrol and ... To unlock let's all leave.
-    If let's all leave, food is taken and dies while driving, poisoned
-    Intuition, leave alone the cowardly exit. Lead to captain survives alone, 
-    NEXT CHARACTER - UNlocked by Nurse (and psychic)
-    - IF he escape on foot, he can die shot or run over?
-
+  - TEST NEW LOGIC
+- [ ] sunday AFternoon
+  - [ ] 
 Afternoon.
 If coming from nurse path, they go down and found the others while going to get some food.
 

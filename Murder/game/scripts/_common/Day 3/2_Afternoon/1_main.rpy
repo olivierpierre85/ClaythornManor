@@ -5,7 +5,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion_1:
 
     There is no trace of anyone.
 
-    I also tried to use the telephone, and it's not working.
+    And the telephone is not working.
 
     Thus, there is no way for us to call for help.
 

@@ -111,6 +111,8 @@ label psychic_day3_morning:
 
     call common_day3_morning_lad_psychic_captain_death_manning
 
+    call common_day3_morning_lad_psychic_captain_search_nurse
+
     """
     I sat there quietly, pondering what had happened, what I should do next.
     """
@@ -120,6 +122,8 @@ label psychic_day3_morning:
     """
     After some time, they came back.
     """
+
+    call common_day3_morning_lad_psychic_captain_search_report
 
     call common_day3_morning_lad_psychic_captain_deaths_end
 
