@@ -1,0 +1,22 @@
+{
+    "start_label": "captain_day3_morning",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Scullery",
+            "redirect": "captain_day3_morning_scullery"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Gun room",
+            "redirect": "captain_day3_morning_gun_room"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Entrance Hall",
+            "redirect": "captain_day3_morning_entrance_hall"
+        }
+    ]
+}

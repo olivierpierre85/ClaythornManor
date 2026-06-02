@@ -1,0 +1,82 @@
+{
+    "start_label": "captain_day3_morning",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Library",
+            "redirect": "captain_day3_morning_library"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Tea room",
+            "redirect": "captain_day3_morning_tea_room"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Dining Room",
+            "redirect": "captain_day3_morning_dining_room"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "captain_day3_morning_portrait_gallery"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Billiard room",
+            "redirect": "captain_day3_morning_billiard_room"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Ted Harring's room",
+            "redirect": "captain_day3_morning_bedroom_lad"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Amelia Baxter's room",
+            "redirect": "captain_day3_morning_bedroom_psychic"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Lady Claythorn's room",
+            "redirect": "captain_day3_morning_bedroom_host"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Daniel Baldwin's room",
+            "redirect": "captain_day3_morning_bedroom_doctor"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Thomas Moody's room",
+            "redirect": "captain_day3_morning_bedroom_broken"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Storage Room",
+            "redirect": "captain_attic_storage"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Male Servants Room",
+            "redirect": "captain_attic_males_room"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Female Servants Room",
+            "redirect": "captain_attic_females_room"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Butler's Room",
+            "redirect": "captain_attic_butler_room"
+        },
+        {
+            "menu": "captain_day3_morning_map_menu",
+            "selected": "Kitchen",
+            "redirect": "captain_day3_morning_kitchen"
+        }
+    ]
+}
