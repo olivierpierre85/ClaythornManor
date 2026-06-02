@@ -5,13 +5,13 @@
     "choices": [
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Rosalind Marsh's room",
+            "selected": "Queen Alexandra",
             "redirect": "captain_day3_morning_bedroom_nurse"
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Wait for the others in the entrance hall",
-            "redirect": "generic_cancel"
+            "selected": "Entrance Hall",
+            "redirect": "captain_day3_morning_entrance_hall"
         }
     ]
 }

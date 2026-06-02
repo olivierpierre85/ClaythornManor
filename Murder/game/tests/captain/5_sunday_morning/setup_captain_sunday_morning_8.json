@@ -30,27 +30,27 @@
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Ted Harring's room",
+            "selected": "William the Conqueror Bedroom",
             "redirect": "captain_day3_morning_bedroom_lad"
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Amelia Baxter's room",
+            "selected": "Elizabeth I Bedroom",
             "redirect": "captain_day3_morning_bedroom_psychic"
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Lady Claythorn's room",
+            "selected": "Henry IV Bedroom",
             "redirect": "captain_day3_morning_bedroom_host"
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Daniel Baldwin's room",
+            "selected": "Edward II Bedroom",
             "redirect": "captain_day3_morning_bedroom_doctor"
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Thomas Moody's room",
+            "selected": "Richard III Bedroom",
             "redirect": "captain_day3_morning_bedroom_broken"
         },
         {

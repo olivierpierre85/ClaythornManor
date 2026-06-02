@@ -1,0 +1,218 @@
+Chapter: An Empty Manor
+Character: Sushil Sinha
+I sleep in fits and wake well before the gong should have sounded.
+The house is silent.
+Not the ordinary silence of an early hour.
+A heavier kind.
+No footsteps below stairs. No fires being laid. No clatter of breakfast trays.
+I dress without hurry, and check the master key is still in my waistcoat pocket.
+Then I open the door.
+There is no one in the corridor.
+The doors are all shut.
+I head to the dining room.
+The room is empty.
+The table has not been laid.
+No one has been down before me.
+A cold feeling engulfs me.
+All my doubts, the things I had noticed about our host, were not my imagination.
+Something is clearly wrong in this house.
+I think about the telephone, I believe it was somewhere in the entrance hall.
+I found the telephone in the corner of the room and pick it up.
+No signal.
+Maybe Lady Claythorn disconnected it before she left.
+Or maybe it was never working.
+I consider what to do and decide the best is to first try to explore the place.
+Map Choice: Library
+The genealogy book lies open on the table, where I left it.
+But I do not have time to sit and read it through.
+Not now. Not with the staff vanished and the house emptied around me.
+I leave the book where it lies.
+Map Choice: Tea room
+The fire is dead in the grate.
+No tea has been laid. No one has been in this room since last night.
+Map Choice: Dining Room
+The table is bare.
+No breakfast service.
+The room has been left exactly as the butler closed it down after dinner.
+Map Choice: Portrait Gallery
+A gallery of family portraits lines the walls.
+The Claythorn lineage, rendered in oil and gilt frames.
+I study the faces. Old money, passed down through blood.
+There are perhaps a dozen portraits here, spanning several generations.
+Stern-looking gentlemen in powdered wigs. Ladies in elaborate gowns.
+But then something strikes me.
+None of them resemble our host.
+Where is Lady Claythorn?
+If she is the current mistress of this house, her portrait ought to hang here alongside her forebears.
+And yet there is nothing.
+And I do not recall seeing it anywhere else in the house.
+In itself, that does not mean much.
+Perhaps she had difficulty persuading a decent artist to come all the way out here.
+Or, it could simply be a personal preference.
+But I will keep that in mind nonetheless.
+Map Choice: Billiard room
+The decanters stand on the side, untouched.
+Last night's glasses have not been cleared.
+The staff did not get round to this room before they vanished.
+Map Choice: William the Conqueror Bedroom
+Sushil Sinha: Mr Harring?
+No answer.
+Yesterday I would have left it at that and respected their privacy.
+Today, with the staff vanished and a man lying murdered down the corridor, I will not.
+I try the handle. The door is not locked.
+The room is empty.
+Wherever the boy is, he is not in his quarters.
+Map Choice: Elizabeth I Bedroom
+Sushil Sinha: Miss Baxter?
+No reply.
+I try the handle. The door is not locked, and swings open.
+The room is empty.
+The bed has been slept in, but Miss Baxter is gone.
+Map Choice: Henry IV Bedroom
+Sushil Sinha: Lady Claythorn?
+No answer.
+I try the handle. The door is locked.
+I fit the key.
+The wardrobe stands open, clothes scattered on the floor.
+Whoever calls herself Lady Claythorn has gone in a hurry.
+Map Choice: Edward II Bedroom
+Doctor Baldwin still lies where we left him yesterday.
+The blanket has not been moved.
+Whoever has been about the house in the night, they did not trouble him.
+Map Choice: Richard III Bedroom
+Mr Moody's room is as it was yesterday.
+The bed has been straightened around him. His effects, set in order.
+The house has tidied its dead with the same calm hand it tidies everything else.
+Map Choice: Storage Room
+I climb the narrow stair to the attic.
+The boards creak under my weight. The air up here is closer, smelling of dust and old wood.
+A short corridor runs the length of the house, doors on either side.
+It is not a place a guest has any business being in.
+But I am well past minding that now. If there are answers up here, I mean to have them.
+I fit the master key to the door.
+The bolt slides back without protest.
+A single key for the whole house. If it opens this one, it will open all the others up here just as readily.
+The storage room is crammed with the leavings of decades.
+Trunks stacked three deep, dust-sheeted furniture, boxes that have not been opened in a generation.
+I work my way along the shelves nearest the door, where the more recent items seem to live.
+Tins of paint. A pair of oil lamps. A small case of candles.
+And, set on its side beneath a folded oilcloth, a storm lantern.
+I lift it from the shelf. The reservoir is half full.
+It could prove useful, so I take it up.
+Map Choice: Male Servants Room
+Two beds, a chest of drawers, a peg for each man's coat.
+I work the drawers quickly. Folded shirts, a penknife, a few coins, some letters.
+Nothing out of the ordinary here.
+Map Choice: Female Servants Room
+A small, spare room. Two narrow beds, a washstand, a single trunk between them.
+On the shelf above one of the beds, a few keepsakes — a dog-eared London playbill, another from a touring company.
+Tucked behind them, a faded photograph.
+A young woman in stage dress, posed beside a man. Both smiling broadly for the camera.
+I do not recognise them.
+I replace the photograph and step back out.
+Map Choice: Butler's Room
+The room itself is plain enough. A narrow bed, a washstand, a single chair.
+A head servant's quarters, and not a thing out of place.
+But against the far wall stands a heavy reinforced cabinet, glass-panelled, the household silver visible behind it.
+The lock is a modern one, and a good one.
+I take the master key from my pocket and try it.
+It turns without complaint.
+Inside: candlesticks, a salver, several sets of heavy plate.
+Nothing of use to me.
+I close the cabinet, lock it again, and step back.
+Map Choice: Kitchen
+I take the stairs to the basement.
+No staff. No voices. No clatter of pans.
+The house has been emptied to its bones.
+The range is cold.
+No bread has been put out. No water set to boil.
+A breakfast service that was never begun.
+I have been searching the house for some time now.
+I come back to the entrance hall to think.
+Suddenly, I hear a voice rising.
+Ted Harring: Hello? Is anyone there?
+Sushil Sinha: Mr Harring. I am here.
+Ted Harring appears at the bottom of the stair, with Miss Baxter just behind him.
+Some of the colour comes back into his face when he sees me.
+Sushil Sinha: At last, living, breathing souls.
+Sushil Sinha: I was starting to feel like I was in a ghost house.
+Amelia Baxter: We feel the same.
+Ted Harring: Do you have any idea what's going on?
+Sushil Sinha: Nothing concrete. All I know is, I don't like it.
+Sushil Sinha: People don't just vanish from their homes without reason.
+Amelia Baxter: They certainly don't.
+Sushil Sinha: And then there's the matter of the suspicious deaths.
+Sushil Sinha: I could've dismissed them as bad luck yesterday, but now... I'm not so certain.
+There is an awkward silence.
+Sushil Sinha: We have got a lot to talk about, maybe we should settle somewhere more comfortable.
+Amelia Baxter: The tea room perhaps?
+Sushil Sinha: Perfect.
+Everyone finds a chair before we can continue our conversation.
+Sushil Sinha: So you have not found anyone else?
+Amelia Baxter: No one.
+Amelia Baxter: We have knocked on every door upstairs.
+Amelia Baxter: Miss Marsh's room is locked and she does not answer.
+Amelia Baxter: Lady Claythorn's room is empty, and her things are scattered about.
+Amelia Baxter: Mr Manning we have not been able to reach.
+Sushil Sinha: Well, Samuel Manning is normally in his room, since I locked him there yesterday.
+Sushil Sinha: We had better look in on him before we do anything else.
+Sushil Sinha: Mr Manning, are you there?
+No response.
+Sushil Sinha: Alright, I'm going in.
+I unlock the door and step inside, meaning to go in alone.
+But the boy and Miss Baxter are at my shoulder before I can wave them back.
+Sushil Sinha: Wait! Don't come in.
+But they are already past me.
+Samuel Manning lies in his bed, the sheets dark with blood, his throat cut through.
+I have seen dead men before. It does not make this one easier to look upon.
+Behind me, Miss Baxter draws a sharp breath.
+Sushil Sinha: Miss Baxter, please don't stay here.
+She does not move, her eyes fixed on the bed.
+I take her gently by the arm and lead her out into the corridor. The boy follows.
+Sushil Sinha: I regret letting you see that.
+Sushil Sinha: You shouldn't have entered.
+Amelia Baxter: Is... is he... dead?
+Sushil Sinha: I'm afraid so.
+Ted Harring: Are you certain?
+Ted Harring: Shouldn't we check his pulse?
+Ted Harring: Maybe... just maybe, there's a chance he's alive.
+Sushil Sinha: I'm sorry, but it's too late.
+Sushil Sinha: I've seen enough dead people to know. He's been gone for a long time.
+Sushil Sinha: Likely since last night.
+Amelia Baxter: Oh my God.
+The boy looks badly shaken, and Miss Baxter no better.
+I guide them both back to the tea room.
+Sushil Sinha: Miss Baxter, you should probably rest here for a little bit.
+Sushil Sinha: I think we should check Miss Marsh's as well.
+Sushil Sinha: Mr Harring, would you mind coming with me?
+Ted Harring: Well, sure.
+Ted Harring: I'll follow you.
+Amelia Baxter: Please don't be long.
+Sushil Sinha: Don't worry, this should only take a few minutes.
+I walk back up the stairs and stop before another door.
+Sushil Sinha: It's Miss Marsh's room.
+Ted Harring: Do you believe she might still be inside?
+Ted Harring: Then she could be...
+Sushil Sinha: Dead, I am afraid.
+Sushil Sinha: After what we witnessed, I think it a very strong possibility.
+Ted Harring: Oh my God.
+I slip the master key from my pocket and turn the lock.
+The mechanism clicks, and the door swings open into the silence beyond.
+The room is eerily quiet.
+But Rosalind Marsh is not there.
+We look in every corner, but we can't find anything of interest.
+Ted Harring: What a relief.
+Sushil Sinha: Yes, of course. But there's no need to linger here.
+Sushil Sinha: Let's return to the tea room, we need to talk with Miss Baxter to decide our next steps.
+Amelia Baxter: You've been gone for a while. What happened?
+Sushil Sinha: I'm afraid we haven't been able to find Miss Marsh.
+Sushil Sinha: We searched her room but it was empty.
+Amelia Baxter: Well, what should we do now?
+Sushil Sinha: You both seem a bit shaken up.
+Sushil Sinha: That's not surprising, given what you've witnessed.
+Sushil Sinha: It's easier for me.
+Sushil Sinha: Sadly, I've seen my share of dead people.
+Sushil Sinha: Nevertheless, we could all use a break.
+Sushil Sinha: Let's wait and think a bit before taking further decision.
+Amelia Baxter: Good idea captain.
+Ted Harring: All right.
