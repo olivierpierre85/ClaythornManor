@@ -129,6 +129,12 @@
         "toolshed"
       ],
       "default": "library"
+    },
+    {
+      "id": "locationCount",
+      "type": "promptString",
+      "description": "How many images to generate (each with a different seed)",
+      "default": "1"
     }
   ],
   "tasks": [
@@ -290,7 +296,8 @@
       "args": [
         "c:\\Projects\\ClaythornManor\\tools\\generate_location_images.py",
         "${input:locationId}",
-        "--force"
+        "--count",
+        "${input:locationCount}"
       ],
       "presentation": {
         "reveal": "always",
