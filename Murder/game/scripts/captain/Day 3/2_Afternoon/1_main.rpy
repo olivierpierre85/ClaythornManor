@@ -180,7 +180,10 @@ label captain_day3_afternoon:
 # ------------------------------------
 #   AFTERNOON — leave together by car
 #
-#   The nurse appears at the threshold and climbs in. Shared ride follows.
+#   The captain brings the car round to the front of the manor and the others
+#   board there. On the explore path the hiding nurse emerges from the front
+#   door at this moment; on the confide path she is already among them. Either
+#   way all four end up aboard and the shared ambush ride follows.
 # ------------------------------------
 label captain_day3_afternoon_car_together:
 
@@ -189,17 +192,19 @@ label captain_day3_afternoon_car_together:
     $ change_room('manor_garden', dissolve)
 
     """
+    I leave the others by the front steps and go round to the garage alone.
+
     I fetch the tin from the shed, fill the tank, and coax the old engine into life.
 
     It runs rough, but it runs.
 
-    The boy hands Miss Baxter up into the back, and we are nearly away.
+    I bring it round to the front of the manor and draw up before the steps.
     """
 
     if not captain_details.threads.is_unlocked('confide_in_nurse'):
 
         """
-        Then a figure comes out of the side door of the house.
+        As I do, a figure comes out of the front door.
 
         Rosalind Marsh.
 
@@ -217,7 +222,7 @@ label captain_day3_afternoon_car_together:
         """
 
         """
-        She climbs in beside Miss Baxter without another word.
+        The boy hands Miss Baxter up into the back, and Miss Marsh climbs in beside her without another word.
 
         I do not care for the timing of it.
 
@@ -227,7 +232,7 @@ label captain_day3_afternoon_car_together:
     else:
 
         """
-        Miss Marsh takes her place beside Miss Baxter.
+        The boy hands Miss Baxter up into the back, and Miss Marsh takes her place beside her.
 
         The four of us, and one tired engine.
         """
@@ -328,8 +333,8 @@ label captain_day3_afternoon_on_foot:
 # ------------------------------------
 #   SHARED — the car ride that ends in ambush
 #
-#   Called from the morning nurse "leave early" branch and from the afternoon
-#   "leave together" branch. Assumes four are aboard.
+#   Called from the afternoon "leave together" branch, once all four are aboard
+#   the car at the front of the manor.
 # ------------------------------------
 label captain_day3_car_ride_ambush:
 
