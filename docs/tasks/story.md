@@ -99,16 +99,20 @@ Action: this is a source bug, not a test gap. Once fixed, add a saturday_evening
 ## Broken
 
 ### Important
-- [ ] MORE DEAD!!! For some THOMAS MOODY, the death are coming faster. Because the psychic saw into his lies and loses it
+- [ ] MORE DEAD!!! For some THOMAS MOODY,**the deaths are coming faster**. Because the psychic saw into his lies and loses it. VERY VERY hard to survive till the end
+    - [ ] For that, needs to observe poison => so possibility to avoid eating at dinner
+    - [ ] Then need to steal food from someone to not starve? go downstairs? Switch plates?
   - [ ] Psychic realise Moody is not who he is, she loses it.
   - [ ] Moody gives whiskey to lad, he dies. She loses it
-  - [ ] Moody also receives letter, telling him the captain is the reason of his disfigurement (Bad inventory, blame the support captain.)
+  - [ ] Moody also receives letter, telling him the captain is the reason of his disfigurement (see cap endings)
   - [ ] Somebody realises the police will not come, so they go fetch them. Needs to accelerate stuff
+  - [ ] Can check the telephone as he is very sus (choice in the entrance hall)
 THE OUTside shed will show nothing of interest for captain. But the Broken will find the bodies of the staff there if he survives.
 
 - [ ] MAKE THE NAME change by using a function for it => “Archibald”
-- [ ] Why is he angered by the doctor? His brother was a broken face, that’s his mask AND scared of being recognize
+- [ ] Why is he angered by the doctor? His brother?/best friend?/Lover? was a broken face, that’s his mask AND scared of being recognize
 - [ ] Servant uniform: Only one who can wear the footman livery in the servants stairs
+  - [ ] As a journalist, he will find poison downstairs. and take it with him?
 - [ ] When broken learns his whisky is poisoned, he doesn’t offer one to Ted harring
 - [ ] Explain the thing with the flask (I forgot my flask while distracted by captain)
 - [ ] THE **butler will kill him**, by putting poison in his flasks while he is distracted by captain YES he is an accomplice
@@ -163,13 +167,22 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 ## Host
 
 ### Important
-
+- NOt many choices, but very different story
+- Lots of going over previously seen dialogs.
+- Her goal is to save most people as possible without getting killed by suspicious butler. If she escape with butler, they will all be killed => All killed in the outdoor shed, mirror way to get there by Broken
 - Explain that the butler will act as a real one (that's why is checking the possible missing silverware). And the staff doesn't know how their buyer is?
 - It was suppose to be a surprised, on return of old friends, where everything would be revealed on the last day.
-- She is the one who will poison Thomas Moody (Everybody is watching Sinha, he left his flask next to the bar) => It's a sleeping draught, don't worry about it. BUT then, it should be noted how horrified she is. SHe receives a letter, that is so unfortunate, but keep going.
+- the butler will poison Thomas Moody (Everybody is watching Sinha, he left his flask next to the bar) => It's a sleeping draught, don't worry about it. BUT then, it should be noted how horrified she is. SHe receives a letter, that is so unfortunate, but keep going.
 
 ### Ideas to think over (optional)
 
+
+## BUTLER
+### Important
+That is the last test. The real path (as asked by meta dialogs)
+LAST question, is when the butler meat the Person behind all of this? (he escapes, and meet them in town. Last choice)
+- First will Thomas moody listen to sinha? Yes, so poisoned
+- and so forth. It shoul be straightforward
 
 ## 🧠 The AI Concept (CLAITHORN)
 

@@ -22,7 +22,9 @@ label captain_config_progress:
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "bludgeoned", "saturday_afternoon"),
                 Chapter(image_checkpoint_empty_half),
-                Chapter(image_checkpoint_corner),
+                # double_corner (not corner): the "end" trunk must keep running down
+                # col 6 to reach shot_fleeing several rows below.
+                Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "survives", "end"),
             ],
             # Row 3: strangled ending (Moody dead + confront host)
@@ -34,6 +36,10 @@ label captain_config_progress:
                 Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
                 Chapter(image_checkpoint_double_corner_half),
                 Chapter(image_ending_question, "ending", "burned", "saturday_evening"),
+                # filler + "end" trunk passing down col 6 towards shot_fleeing
+                Chapter(image_checkpoint_empty_half),
+                Chapter(image_checkpoint_corner),
+                Chapter(image_ending_question, "ending", "shot_fleeing", "end"),
             ],
             # Row 4: shot_in_woods ending (Moody alive)
             [
@@ -52,17 +58,6 @@ label captain_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_corner),
                 Chapter(image_ending_question, "ending", "throat_cut", "saturday_evening"),
-            ],
-            # Row 6: shot_fleeing ending (left the manor alone on foot, Sunday afternoon)
-            [
-                Chapter(image_checkpoint_empty_small),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "shot_fleeing", "end"),
             ],
         ]
 
@@ -173,22 +168,35 @@ label captain_config_progress:
             # Both morning paths converge here.
             # Threads SET before & RELEVANT here:
             #   - confide_in_nurse: changes the arrival framing (came down with Miss Marsh)
-            #   - seen_car: set sunday_morning (explore garage), relevant sunday_afternoon
+            #   - seen_car: set sunday_morning (explore garage) OR sunday_afternoon
+            #     (the lad's report on the confide path), relevant sunday_afternoon
             #   - petrol_tin_in_shed: set saturday_evening, relevant sunday_afternoon
             #     seen_car AND petrol_tin_in_shed together unlock the motor-car branch.
-            # Endings fired here:
-            #   - No car          -> shot_fleeing (leaves alone on foot)
-            #   - Car, no intuition -> car_ambush (all leave together)
-            #   - Car + car_ambush already unlocked -> opens the coward's lie -> survives
-            # NOTE: the "lie / survives" branch is gated on endings.is_unlocked('car_ambush'),
-            #       an intuition that the checkpoint thread-presets cannot reproduce, so it
-            #       is exercised by reaching car_ambush first and replaying.
+            # Endings reachable here: shot_fleeing (no car); car_ambush and survives
+            # (car + petrol).
+            #
+            # DEBUG-MODE NOTE: load_manual_checkpoints() pre-unlocks every ending and
+            # nothing re-locks them, so the car_ambush intuition is always set in debug
+            # mode. The car_menu therefore appears on BOTH car checkpoints below, and you
+            # pick the outcome from it:
+            #     "leave together"  -> car_together -> car_ambush
+            #     "drive off alone" -> lie_alone    -> survives
+            # (The JSON plans reproduce the no-intuition direct jump separately by NOT
+            #  presetting the car_ambush ending.)
+            #
+            # Checkpoint -> JSON plan coverage:
+            #     1 explore, no car       -> plan 1        (shot_fleeing)
+            #     2 explore, car + petrol -> plans 2, 4, 5 (car_ambush / survives via menu)
+            #     3 confide, no car       -> plan 3        (shot_fleeing)
+            #     4 confide, car + petrol -> plans 6, 7    (car_ambush / survives via menu)
             'sunday_afternoon': [
-                # --- Explore path, no working car -> on foot, shot_fleeing ---
+                # 1 - Explore path, no working car -> on foot, shot_fleeing
                 {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True}},
-                # --- Explore path with car + petrol -> all leave together, car_ambush ---
+                # 2 - Explore path with car + petrol -> car_menu -> car_ambush / survives
                 {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'seen_car': True, 'petrol_tin_in_shed': True}},
-                # --- Nurse path (hid in the morning), no car -> on foot, shot_fleeing ---
+                # 3 - Nurse path (hid in the morning), no car -> on foot, shot_fleeing
                 {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'confide_in_nurse': True}},
+                # 4 - Nurse path with car + petrol (seen_car from the lad's report) -> car_menu -> car_ambush / survives
+                {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'confide_in_nurse': True, 'seen_car': True, 'petrol_tin_in_shed': True}},
             ],
         }

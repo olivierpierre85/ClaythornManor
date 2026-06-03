@@ -115,7 +115,9 @@ label init_captain:
                 "You found an old motor car in the garage",
                 content_negative="You didn't find a motor car to leave in",
                 image_file="seen_car",
-                chapters=['sunday_morning'],
+                # Set on the explore-path garage visit (sunday_morning) OR from the
+                # lad's report on the confide/hide path (sunday_afternoon).
+                chapters=['sunday_morning', 'sunday_afternoon'],
                 relevant_chapters=['sunday_morning', 'sunday_afternoon'],
             ),
         ])

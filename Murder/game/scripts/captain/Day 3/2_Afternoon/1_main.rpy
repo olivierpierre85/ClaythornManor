@@ -71,8 +71,12 @@ label captain_day3_afternoon:
         Whoever left made very sure of that.
         """
 
+        # The captain never reaches the garage himself on this path, so the lad's
+        # report is what lets him count on the car in the afternoon (seen_car).
+        $ captain_details.threads.unlock('seen_car')
+
         captain """
-        Then the road is all that is left to us.
+        Then we have much to decide.
 
         Come. We had far better talk this through together.
         """
@@ -96,9 +100,7 @@ label captain_day3_afternoon:
         captain """
         As it happens, we are not obliged to walk.
 
-        There is an old motor car in the garage.
-
-        It wants petrol, but I found a full tin in the garden shed.
+        The old motor car in the garage wants only petrol, and I have a full tin from the garden shed.
 
         I can have it running inside the hour.
         """

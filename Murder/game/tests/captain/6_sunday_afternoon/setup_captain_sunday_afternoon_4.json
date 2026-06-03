@@ -1,0 +1,18 @@
+{
+    "start_label": "captain_day3_afternoon",
+    "unlocked_threads": [
+        "seen_car",
+        "petrol_tin_in_shed"
+    ],
+    "unlocked_endings": [
+        "car_ambush"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day3_afternoon_car_menu",
+            "selected": "We all leave together, in the car",
+            "redirect": "captain_day3_afternoon_car_together"
+        }
+    ]
+}

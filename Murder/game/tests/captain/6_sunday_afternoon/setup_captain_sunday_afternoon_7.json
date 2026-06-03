@@ -1,0 +1,19 @@
+{
+    "start_label": "captain_day3_afternoon",
+    "unlocked_threads": [
+        "confide_in_nurse",
+        "seen_car",
+        "petrol_tin_in_shed"
+    ],
+    "unlocked_endings": [
+        "car_ambush"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day3_afternoon_car_menu",
+            "selected": "Tell them I will scout the road, then drive off alone{{intuition}}",
+            "redirect": "captain_day3_afternoon_lie_alone"
+        }
+    ]
+}
