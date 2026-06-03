@@ -1,7 +1,7 @@
 label common_day3_afternoon_lad_psychic_captain_discussion_1:
 
     captain """
-    I believe I've looked absolutely everywhere now.
+    I believe between ourselves we have check every room in this place.
 
     There is no trace of anyone.
 

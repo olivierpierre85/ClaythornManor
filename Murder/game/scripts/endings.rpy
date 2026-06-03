@@ -58,11 +58,6 @@ label ending_generic:
             seen_tutorial_restart = True
             renpy.call('tutorial_restart')
 
-        if not seen_tutorial_restart and is_intuition:
-            is_intuition = False
-            seen_tutorial_restart = True
-            renpy.call('tutorial_restart')
-
         if show_tutorial_unlock_character:
             show_tutorial_unlock_character = False
             renpy.call('tutorial_unlock_character')

@@ -4,9 +4,6 @@ BUG => FULL_TESTINGMODE, if doing a restart, then missing menu??? Also doesn't r
 
 ## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, now give values all the time?
 
-What is the use of this?
-$ is_intuition = True
-
 ## BEFORE NEW STORY :
 
 FIX EVERYONE CAPTAIN MEETING Day 3 morning for

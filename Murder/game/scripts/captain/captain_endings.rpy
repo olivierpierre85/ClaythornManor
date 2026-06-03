@@ -147,8 +147,6 @@ label captain_ending_car_ambush:
     A leader does not get the rest of his party killed simply because he could not bear to wait a little longer.
     """
 
-    $ is_intuition = True
-
     jump ending_generic
 
 

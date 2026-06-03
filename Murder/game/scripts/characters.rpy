@@ -224,8 +224,7 @@ init -100 python:
     class CharacterEndingList(CharacterInformationList):
         def __init__(self, ending_list):
             super().__init__(
-                ending_list,
-                is_intuition
+                ending_list
             )
 
 

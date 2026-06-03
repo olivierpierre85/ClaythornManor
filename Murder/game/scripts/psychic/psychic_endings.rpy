@@ -34,8 +34,6 @@ label psychic_ending_burns:
     A tragic ending for Claythorn Manor and everyone still within.
     """
 
-    $ is_intuition = True
-
     jump ending_generic
 
 

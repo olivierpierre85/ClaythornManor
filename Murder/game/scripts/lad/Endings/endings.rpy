@@ -69,8 +69,6 @@ label lad_ending_day3_poisoned:
     Never trust anyone.
     """
 
-    $ is_intuition = True
-
     jump ending_generic
 
 
