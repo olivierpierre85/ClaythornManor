@@ -31,17 +31,12 @@ THREAD, locked shed image
 - [x] Saturday evening
 - [ ] sunday Morning
   - TEST NEW LOGIC
-- [ ] sunday AFternoon
-  - [ ] 
-Afternoon.
-If coming from nurse path, they go down and found the others while going to get some food.
-
-If normal path he runs into psychic and lad.
-- If car and petrol => Possibility to leave straight away together OR To lie to leave alone
-  - Leave with others, The nurse appears as they leave the house, she then enters the car => Same car ending? No find something else
-  - LIE (needs intuition), the coward way out, you leave alone, but alive. Once a coward always a coward.
-- If not, he will leave alone on foot and die (see psychic and lad endings), run over of shot, not sure which
-
+- [ ] **sunday AFternoon**
+  - [ ] DRive, when he actually walks
+  - [ ] All the dialogs are too short
+  - [ ] Not natural arrival of nurse
+  - [ ] Nurse path is the same as the rest, the nurse says nothing, that is weird, we should add her saying something.
+  - [ ] Scouting is terrible excuse. Put more emphasis on the decision, with backstory,...
 
 **Captain's gun**
 QUID gun for the captain ? Has one when he confront the nurse, so he should have one, or a way to get one? It seems assume he has one with him at all time? Or should I rewrite that ?
