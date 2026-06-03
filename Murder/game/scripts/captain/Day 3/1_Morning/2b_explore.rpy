@@ -67,15 +67,21 @@ label captain_day3_morning_explore:
 
     Or maybe it was never working.
 
-    I consider what to do and decide the best is to first try to explore the place.
+    I consider what to do.
+
+    The sensible course is to search the house and find out what has become of the others.
+
+    Or I could shut myself in my own room, lock the door, and simply wait to see what happens.
     """
 
-    $ time_left = 150
+    call change_time(9, 30)
+
+    $ time_left = 120
 
     call run_menu(captain_details.saved_variables["day3_morning_map_menu"])
 
     if time_left <= 0:
-  
+
         $ change_room('entrance_hall', dissolve)
 
         """
@@ -83,6 +89,8 @@ label captain_day3_morning_explore:
 
         I come back to the entrance hall to think.
         """
+
+    call change_time(11, 30)
 
     pause 1
 

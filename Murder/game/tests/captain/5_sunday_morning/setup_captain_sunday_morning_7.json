@@ -10,8 +10,8 @@
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Entrance Hall",
-            "redirect": "captain_day3_morning_entrance_hall"
+            "selected": "Hide in my room",
+            "redirect": "captain_day3_morning_bedroom_captain"
         }
     ]
 }

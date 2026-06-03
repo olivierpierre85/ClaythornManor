@@ -18,10 +18,10 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'captain_day3_morning_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('billiard_room'), 'captain_day3_morning_billiard_room', 10, room='billiard_room'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day3_morning_entrance_hall', 0, room='entrance_hall', early_exit=True),
+            TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day3_morning_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('manor_garden'), 'captain_day3_morning_garden', 10, room='manor_garden'),
             # Bedrooms
-            TimedMenuChoice(default_room_text('bedroom_captain'), 'captain_day3_morning_bedroom_captain', 10, room='bedroom_captain'),
+            TimedMenuChoice("Hide in my room", 'captain_day3_morning_bedroom_captain', 0, room='bedroom_captain', early_exit=True),
             TimedMenuChoice(default_room_text('bedroom_lad'), 'captain_day3_morning_bedroom_lad', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_psychic'), 'captain_day3_morning_bedroom_psychic', 10, room='bedroom_psychic'),
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'captain_day3_morning_bedroom_nurse', 10, room='bedroom_nurse'),
@@ -252,7 +252,9 @@ label captain_day3_morning_entrance_hall:
     """
     The hall is empty.
 
-    It is the heart of the house, so I linger a little to see if I can hear something.
+    I stand still a moment and listen for any sound in the house, but there is nothing.
+
+    No one here either. I move on.
     """
 
     return
@@ -349,18 +351,35 @@ label captain_day3_morning_privacy_resolve:
     return
 
 
+# Selecting his own room is the player's way out of the morning's search: instead
+# of exploring, the captain shuts himself in and waits the morning out. This ends
+# the map (time_left is run out) and sets a flag so the explore script plays the
+# "came out and went down" framing rather than "searched for hours". The option is
+# introduced in the narration before the map opens (see captain_day3_morning).
 label captain_day3_morning_bedroom_captain:
 
     $ change_room('bedroom_captain')
 
     """
-    My own room, just as I left it.
+    I step back into my own room and turn the key in the lock behind me.
 
-    I cannot say why my feet have carried me back here.
+    Whatever is moving through this house can do so without me in its path.
 
-    There is no time to nap, and no inclination for it either.
+    I will sit tight, keep my revolver to hand, and wait to see what comes of it.
+    """
 
-    The bed can wait. I have a house to search.
+    call wait_screen_transition()
+    
+    """
+    The hours pass. No one tries my door.
+
+    When the house has been quiet long enough, I turn the key and step out into the corridor.
+    """
+
+    $ change_room('entrance_hall', dissolve)
+
+    """
+    I make my way down to the empty hall.
     """
 
     return

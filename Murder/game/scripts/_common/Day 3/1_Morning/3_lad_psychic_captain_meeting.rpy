@@ -327,11 +327,11 @@ label common_day3_morning_lad_psychic_captain_deaths_end:
     captain """
     Nevertheless, we could all use a break.
 
-    Let's wait and think a bit before taking further decision.
+    Let's wait and think a bit before taking any further decisions.
     """
 
     psychic """
-    Good idea captain.
+    Good idea, captain.
     """
 
     lad """

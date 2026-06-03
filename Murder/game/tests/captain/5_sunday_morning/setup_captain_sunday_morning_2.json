@@ -22,18 +22,13 @@
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "George I Bedroom",
-            "redirect": "captain_day3_morning_bedroom_captain"
-        },
-        {
-            "menu": "captain_day3_morning_map_menu",
             "selected": "Queen Alexandra",
             "redirect": "captain_day3_morning_bedroom_nurse"
         },
         {
             "menu": "captain_day3_morning_map_menu",
-            "selected": "Entrance Hall",
-            "redirect": "captain_day3_morning_entrance_hall"
+            "selected": "Hide in my room",
+            "redirect": "captain_day3_morning_bedroom_captain"
         }
     ]
 }
