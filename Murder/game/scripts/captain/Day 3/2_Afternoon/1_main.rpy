@@ -83,7 +83,7 @@ label captain_day3_afternoon:
             $ time_left = 1
             call run_menu( TimedMenu("captain_day3_afternoon_car_menu", [
                 TimedMenuChoice("We all leave together, in the car", 'captain_day3_afternoon_car_together', early_exit=True),
-                TimedMenuChoice("Tell them I will scout the road, then drive off alone{{intuition}}", 'captain_day3_afternoon_lie_alone', early_exit=True),
+                TimedMenuChoice("Drive off alone{{intuition}}", 'captain_day3_afternoon_lie_alone', early_exit=True),
             ], image_left="psychic", image_right="lad"))
 
         else:
@@ -150,45 +150,69 @@ label captain_day3_afternoon_car_together:
     It runs rough, but it runs.
 
     I bring it round to the front of the manor and draw up before the steps.
+
+    As I do, a figure comes out of the front door.
+
+    Rosalind Marsh.
+
+    She has been somewhere in the manor all this while, and says nothing of where.
     """
 
-    if not captain_details.threads.is_unlocked('confide_in_nurse'):
+    nurse """
+    You were going to leave without me.
+    """
 
-        """
-        As I do, a figure comes out of the front door.
+    captain """
+    We did not know you were alive, Miss Marsh.
 
-        Rosalind Marsh.
+    Get in. Quickly.
+    """
 
-        She has been somewhere in the manor all this while, and says nothing of where.
-        """
+    """
+    The boy hands Miss Baxter up into the back, and Miss Marsh climbs in beside her without another word.
 
-        nurse """
-        You were going to leave without me.
-        """
+    I do not care for the timing of it.
 
-        captain """
-        We did not know you were alive, Miss Marsh.
+    But I will not leave a living soul on that gravel.
+    """
 
-        Get in. Quickly.
-        """
+    $ change_room('forest_road', dissolve)
 
-        """
-        The boy hands Miss Baxter up into the back, and Miss Marsh climbs in beside her without another word.
+    """
+    The gate falls behind us, and for a little while it is almost easy.
 
-        I do not care for the timing of it.
+    The road unrolls between the trees. The engine settles into its work.
 
-        But I will not leave a living soul on that gravel.
-        """
+    I begin, against my better judgement, to believe we have managed it.
+    """
 
-    else:
+    $ play_music('danger')
 
-        """
-        The boy hands Miss Baxter up into the back, and Miss Marsh takes her place beside her.
+    """
+    Then the engine coughs.
 
-        The four of us, and one tired engine.
-        """
+    It catches, falters, and dies, and we coast to a stop in the middle of the empty road.
+    """
 
-    call captain_day3_car_ride_ambush
+    captain """
+    Stay in the car.
+
+    All of you.
+    """
+
+    """
+    I get out to look at the engine, because that is what a man does, and because I cannot think what else to do.
+
+    The wood on either side is very still.
+
+    Too still.
+
+    I understand, in the last clear moment I am granted, that the car was never meant to carry us far.
+    """
+
+    play sound gun
+
+    jump captain_ending_car_ambush
 
 
 # ------------------------------------
@@ -240,49 +264,3 @@ label captain_day3_afternoon_lie_alone:
 
     jump captain_ending_survives
 
-
-# ------------------------------------
-#   SHARED — the car ride that ends in ambush
-#
-#   Called from the afternoon "leave together" branch, once all four are aboard
-#   the car at the front of the manor.
-# ------------------------------------
-label captain_day3_car_ride_ambush:
-
-    $ change_room('forest_road', dissolve)
-
-    """
-    The gate falls behind us, and for a little while it is almost easy.
-
-    The road unrolls between the trees. The engine settles into its work.
-
-    I begin, against my better judgement, to believe we have managed it.
-    """
-
-    $ play_music('danger')
-
-    """
-    Then the engine coughs.
-
-    It catches, falters, and dies, and we coast to a stop in the middle of the empty road.
-    """
-
-    captain """
-    Stay in the car.
-
-    All of you.
-    """
-
-    """
-    I get out to look at the engine, because that is what a man does, and because I cannot think what else to do.
-
-    The wood on either side is very still.
-
-    Too still.
-
-    I understand, in the last clear moment I am granted, that the car was never meant to carry us far.
-    """
-
-    play sound gun
-
-    jump captain_ending_car_ambush

@@ -12,7 +12,7 @@
     "choices": [
         {
             "menu": "captain_day3_afternoon_car_menu",
-            "selected": "Tell them I will scout the road, then drive off alone{{intuition}}",
+            "selected": "Drive off alone{{intuition}}",
             "redirect": "captain_day3_afternoon_lie_alone"
         }
     ]

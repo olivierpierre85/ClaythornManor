@@ -40,7 +40,7 @@ label broken_introduction:
 
     On his desk is a picture of us we took when we were on leave for a weekend.
     
-    The caption reads: Thomas and Archie, Poperinge, 1916.
+    The caption reads: Thomas and Archie, Talbot House, Poperinge, 1916.
 
     Two officers thrown in the middle of hell.
     

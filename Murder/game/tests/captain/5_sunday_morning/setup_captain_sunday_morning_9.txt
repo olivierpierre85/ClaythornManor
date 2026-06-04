@@ -21,7 +21,9 @@ I found the telephone in the corner of the room and pick it up.
 No signal.
 Maybe Lady Claythorn disconnected it before she left.
 Or maybe it was never working.
-I consider what to do and decide the best is to first try to explore the place.
+I consider what to do.
+The sensible course is to search the house and find out what has become of the others.
+Or I could shut myself in my own room, lock the door, and simply wait to see what happens.
 Map Choice: Scullery
 I take the stairs to the basement.
 No staff. No voices. No clatter of pans.
@@ -36,7 +38,15 @@ No matter, I still have mine in my pocket.
 I leave them where they are.
 Map Choice: Entrance Hall
 The hall is empty.
-It is the heart of the house, so I linger a little to see if I can hear something.
+I stand still a moment and listen for any sound in the house, but there is nothing.
+No one here either. I move on.
+Map Choice: Hide in my room
+I step back into my own room and turn the key in the lock behind me.
+Whatever is moving through this house can do so without me in its path.
+I will sit tight, keep my revolver to hand, and wait to see what comes of it.
+The hours pass. No one tries my door.
+When the house has been quiet long enough, I turn the key and step out into the corridor.
+I make my way down to the empty hall.
 Suddenly, I hear a voice rising.
 Ted Harring: Hello? Is anyone there?
 Sushil Sinha: Mr Harring. I am here.
@@ -121,6 +131,6 @@ Sushil Sinha: That's not surprising, given what you've witnessed.
 Sushil Sinha: It's easier for me.
 Sushil Sinha: Sadly, I've seen my share of dead people.
 Sushil Sinha: Nevertheless, we could all use a break.
-Sushil Sinha: Let's wait and think a bit before taking further decision.
-Amelia Baxter: Good idea captain.
+Sushil Sinha: Let's wait and think a bit before taking any further decisions.
+Amelia Baxter: Good idea, captain.
 Ted Harring: All right.

@@ -1,16 +1,6 @@
 Chapter: Final Decisions
 Character: Sushil Sinha
-Miss Marsh and I come down from the attic at last.
-We are making for the kitchen when we hear voices in the hall below.
-Living voices.
-Ted Harring: Captain Sinha!
-Ted Harring and Miss Baxter cross the hall towards us, plainly relieved to find us upright.
-Amelia Baxter: Thank heaven. We had begun to think we were the last souls left in the place.
-Ted Harring: We have been over the whole house, top to bottom.
-Ted Harring: There is a motor car in the garage, but not a drop of petrol to put in it.
-Ted Harring: Whoever left made very sure of that.
-Sushil Sinha: Then we have much to decide.
-Sushil Sinha: Come. We had far better talk this through together.
+After resting for a while, I believe it is time to take action.
 Sushil Sinha: I believe between ourselves we have check every room in this place.
 Sushil Sinha: There is no trace of anyone.
 Sushil Sinha: And the telephone is not working.
@@ -38,7 +28,7 @@ Sushil Sinha: I've thought about it, and I have no clue why we were all invited 
 Sushil Sinha: I'm certain it wasn't to give us any money.
 Sushil Sinha: In any case, all I know is we need to leave as soon as possible.
 Sushil Sinha: As it happens, we are not obliged to walk.
-Sushil Sinha: The old motor car in the garage wants only petrol, and I have a full tin from the garden shed.
+Sushil Sinha: The old motor car in the garage wants only petrol, and I have seen a full tin in the garden shed.
 Sushil Sinha: I can have it running inside the hour.
 Ted Harring: You can drive?
 Sushil Sinha: I have driven worse, on worse roads than these.
@@ -49,7 +39,7 @@ I cannot say why, but I have the strongest sense that to leave together, in that
 One man, travelling light and quiet, would stand a far better chance.
 It would be a contemptible thing to do.
 It might also be the only thing that works.
-Menu Choice: Tell them I will scout the road, then drive off alone{{intuition}}
+Menu Choice: Drive off alone{{intuition}}
 Sushil Sinha: On reflection, the car will not carry all four of us over that ground.
 Sushil Sinha: Let me take it ahead, scout the road to the lodge, and come back for you.
 Sushil Sinha: Bar the doors until I do.

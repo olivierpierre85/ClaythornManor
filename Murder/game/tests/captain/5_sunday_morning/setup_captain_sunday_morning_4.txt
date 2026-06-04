@@ -45,7 +45,7 @@ Rosalind Marsh: There is a good chance my body will not hold for such a long jou
 Sushil Sinha: I see.
 I think her condition might be worse than her quiet behaviour shows.
 But if she does not want to tell me more, I will not press her.
-Sushil Sinha: All right, we can stay at the manor a bit longer until we work out a better plan.
+Sushil Sinha: All right, we can stay at the manor a bit longer until things settle down.
 Rosalind Marsh: Thank you, Captain.
 Sushil Sinha: We should not stay here.
 Sushil Sinha: This room is the first place anyone would look for me.
@@ -81,6 +81,40 @@ By late morning, the house has settled into a heavy silence.
 Whatever was moving about earlier seems to have stopped, or gone elsewhere.
 Miss Marsh looks at me.
 Rosalind Marsh: What now, Captain?
-Sushil Sinha: Now we go down.
-Sushil Sinha: Carefully.
-Sushil Sinha: And we try to make sense of what is happening.
+Sushil Sinha: Well, I have tried to find the best way to act now.
+Rosalind Marsh: And?
+Sushil Sinha: I believe the safer bet is for me to leave.
+Sushil Sinha: Even if I have to do it on foot.
+Sushil Sinha: You could stay safely here, I am sure I can make it before the end of the day.
+Rosalind Marsh: I see.
+Rosalind Marsh: If I am being honest I do not like this captain, it feels extremely dangerous for me.
+Sushil Sinha: I know and I am sorry, but I still believe it is our best chance.
+Sushil Sinha: And if it can ease your mind, you can take this pistol.
+Sushil Sinha: I try to always keep it on me, one never knows when one might need protection.
+Sushil Sinha: Do you know how to use one?
+Rosalind Marsh: I can manage, I believe.
+Rosalind Marsh: But I really wish I won't have to use it.
+Sushil Sinha: You probably won't, just stay here, close the door and do not open to anybody.
+Sushil Sinha: It is safe to say that everyone is a suspect at this point.
+Rosalind Marsh: All right, I think I can manage that.
+Rosalind Marsh: Thank you captain.
+Sushil Sinha: Good luck Miss Marsh.
+I do not waste time and go down fast to the entrance hall.
+It is still empty, so I make it outside.
+I took only my coat and what will fit in its pockets.
+The drive gives way to a rough road, and the road to open country between the trees.
+I keep a solid pace for the better part of an hour.
+Then, somewhere behind me, I hear an engine.
+A motor car, coming up the road at my back.
+For a moment I let myself hope it is help, sent on ahead of the others.
+I raise a hand and step to the verge to let it pass.
+It does not slow.
+If anything it gathers speed, and it holds straight for me.
+I throw myself towards the trees.
+But the road is wide open, and a man on foot is no match for a motor.
+The car corrects as I move, and the wheels come with me.
+You left a sick woman behind and set out alone, certain the open road was safer than the house.
+You heard the motor in good time.
+A real soldier would have read it for what it was and taken to the trees.
+Instead you stood in the road and waited to be saved.
+The road belonged to them, just as the manor had.

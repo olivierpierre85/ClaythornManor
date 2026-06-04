@@ -21,7 +21,9 @@ I found the telephone in the corner of the room and pick it up.
 No signal.
 Maybe Lady Claythorn disconnected it before she left.
 Or maybe it was never working.
-I consider what to do and decide the best is to first try to explore the place.
+I consider what to do.
+The sensible course is to search the house and find out what has become of the others.
+Or I could shut myself in my own room, lock the door, and simply wait to see what happens.
 Map Choice: Library
 The genealogy book lies open on the table, where I left it.
 But I do not have time to sit and read it through.
@@ -103,30 +105,6 @@ Map Choice: Male Servants Room
 Two beds, a chest of drawers, a peg for each man's coat.
 I work the drawers quickly. Folded shirts, a penknife, a few coins, some letters.
 Nothing out of the ordinary here.
-Map Choice: Female Servants Room
-A small, spare room. Two narrow beds, a washstand, a single trunk between them.
-On the shelf above one of the beds, a few keepsakes — a dog-eared London playbill, another from a touring company.
-Tucked behind them, a faded photograph.
-A young woman in stage dress, posed beside a man. Both smiling broadly for the camera.
-I do not recognise them.
-I replace the photograph and step back out.
-Map Choice: Butler's Room
-The room itself is plain enough. A narrow bed, a washstand, a single chair.
-A head servant's quarters, and not a thing out of place.
-But against the far wall stands a heavy reinforced cabinet, glass-panelled, the household silver visible behind it.
-The lock is a modern one, and a good one.
-I take the master key from my pocket and try it.
-It turns without complaint.
-Inside: candlesticks, a salver, several sets of heavy plate.
-Nothing of use to me.
-I close the cabinet, lock it again, and step back.
-Map Choice: Kitchen
-I take the stairs to the basement.
-No staff. No voices. No clatter of pans.
-The house has been emptied to its bones.
-The range is cold.
-No bread has been put out. No water set to boil.
-A breakfast service that was never begun.
 I have been searching the house for some time now.
 I come back to the entrance hall to think.
 Suddenly, I hear a voice rising.
@@ -213,6 +191,6 @@ Sushil Sinha: That's not surprising, given what you've witnessed.
 Sushil Sinha: It's easier for me.
 Sushil Sinha: Sadly, I've seen my share of dead people.
 Sushil Sinha: Nevertheless, we could all use a break.
-Sushil Sinha: Let's wait and think a bit before taking further decision.
-Amelia Baxter: Good idea captain.
+Sushil Sinha: Let's wait and think a bit before taking any further decisions.
+Amelia Baxter: Good idea, captain.
 Ted Harring: All right.
