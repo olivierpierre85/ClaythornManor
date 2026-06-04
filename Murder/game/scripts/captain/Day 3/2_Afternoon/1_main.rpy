@@ -38,7 +38,7 @@ label captain_day3_afternoon:
     $ change_room('tea_room', irisout)
 
     """
-    We rested a while in silence, 
+    After resting for a while, I believe it is time to take action.
     """
 
     call common_day3_afternoon_lad_psychic_captain_discussion_1
@@ -48,7 +48,7 @@ label captain_day3_afternoon:
         captain """
         As it happens, we are not obliged to walk.
 
-        The old motor car in the garage wants only petrol, and I have a full tin from the garden shed.
+        The old motor car in the garage wants only petrol, and I have seen a full tin in the garden shed.
 
         I can have it running inside the hour.
         """
@@ -98,33 +98,34 @@ label captain_day3_afternoon:
 
     else:
 
-        captain """
-        There is no telephone, no motor with any fuel in it, and no help coming that I can find.
+        call common_day3_afternoon_lad_psychic_captain_discussion_2
 
-        If we are to be saved, we must save ourselves, and that means the road.
+        call common_day3_afternoon_lad_psychic_captain_discussion_3
 
-        It is a long walk, and I will go faster alone.
-        """
 
-        psychic surprised """
-        Alone? You cannot mean to leave us here.
-        """
-
-        captain """
-        I can move quicker than any of you, and quicker is what will fetch help before dark.
-
-        Bar the doors, keep together, and wait for me.
-
-        I will bring men back tonight.
-        """
+        $ change_room('forest_road', dissolve)
 
         """
-        It is not a course I am proud of.
+        I took only my coat and what will fit in its pockets.
 
-        But it is the only one I can see, and there is no profit in standing about discussing it.
+        The drive gives way to a rough road, and the road to open country between the trees.
         """
 
-        jump captain_day3_afternoon_on_foot
+        $ play_music('danger')
+
+        """
+        I keep a solid pace for an hour, then, away to my right, I notice something.
+
+        A shape that is the wrong colour for bark.
+
+        And from that shape, I can spot the canon of a rifle.
+
+        I jump to the ground to hide. But the road is wide open, I am too easy a target.
+        """
+
+        play sound gun
+
+        jump captain_ending_shot_fleeing
 
 
 # ------------------------------------

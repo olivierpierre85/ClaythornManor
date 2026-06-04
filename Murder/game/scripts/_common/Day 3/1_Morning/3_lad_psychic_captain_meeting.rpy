@@ -338,6 +338,7 @@ label common_day3_morning_lad_psychic_captain_deaths_end:
     All right.
     """
 
+    return
 
     # OLD IDEAS 
     # """

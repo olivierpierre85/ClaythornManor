@@ -64,35 +64,7 @@ label psychic_day3_afternoon:
         
         call common_day3_afternoon_lad_psychic_captain_discussion_2
 
-    lad """
-    Of course, I'll stay.
-
-    Only a monster would leave you alone here in this condition.
-    """
-
-    psychic normal """
-    Thank you Mr Harring! 
-
-    That means the world to me.
-    """
-
-    captain """
-    Very well.
-
-    I will go right now then. I don't want to lose time.
-
-    Hopefully, I'll be back with help before nightfall.
-    """
-
-    psychic """
-    Thank you captain.
-
-    I hope you'll be safe.
-    """
-
-    lad """
-    Yes, thank you.
-    """
+    call common_day3_afternoon_lad_psychic_captain_discussion_3
 
     """
     And then he is on his way.
