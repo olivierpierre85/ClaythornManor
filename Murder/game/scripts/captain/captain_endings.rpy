@@ -170,6 +170,28 @@ label captain_ending_shot_fleeing:
     jump ending_generic
 
 
+label captain_ending_run_over:
+
+    call death_screen_transition
+
+    $ captain_details.endings.unlock('run_over')
+    $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('run_over'))
+
+    """
+    You left a sick woman behind and set out alone, certain the open road was safer than the house.
+
+    You heard the motor in good time.
+
+    A real soldier would have read it for what it was and taken to the trees.
+
+    Instead you stood in the road and waited to be saved.
+
+    The road belonged to them, just as the manor had.
+    """
+
+    jump ending_generic
+
+
 label captain_ending_survives:
 
     call survive_screen_transition

@@ -37,7 +37,7 @@ label captain_config_progress:
                 # corner_half: the col 5 (sunday_morning) trunk turns right here, so the
                 # shot_fleeing icon now sits in the sunday_afternoon column (one before the end).
                 Chapter(image_checkpoint_corner_half),
-                Chapter(image_ending_question, "ending", "shot_fleeing", "sunday_morning"),
+                Chapter(image_ending_question, "ending", "run_over", "sunday_morning"),
                 Chapter(image_checkpoint_corner_half),
                 Chapter(image_ending_question, "ending", "shot_fleeing", "sunday_afternoon"),
             ],
