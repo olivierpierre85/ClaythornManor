@@ -11,10 +11,10 @@ The **id** column is the output filename (`<id>.png`) and matches the `change_ro
 | entrance_hall      | grand entrance hall with a central staircase, side doors and a piano in a distant corner, flamboyant and impressive, deep perspective across a broad polished floor |
 | tea_room           | large tea room with several chairs and a couple of tables, and drinks tray, flamboyant,impressive and bright                                                        |
 | billiard_room      | billiard room with a green baize table and a small bar on the side                                                                                                  |
-| dining_room        | formal dining room with a long table laid for dinner, tall candelabra, high-backed chairs and a great stone fireplace                                               |
+| dining_room        | formal dining room with a long table laid for dinner, tall candelabra, eight high-backed chairs                                                                     |
 | library            | library with tall bookshelves and a small table holding an open book                                                                                                |
-| portrait_gallery   | long portrait gallery lined with gilt-framed ancestral oil paintings, a narrow runner carpet and wall sconces                                                       |
-| hallway            | panelled ground-floor corridor with a runner carpet, closed doors and a longcase clock                                                                              |
+| portrait_gallery   | narrow gallery lined with portrait paintings of various size, age with both men, women and children, a narrow runner carpet, end with a closed door                 |
+| hallway            | panelled ground-floor corridor with a runner carpet, closed doors only on one side, and a longcase clock                                                            |
 | bedrooms_hallway   | upstairs bedroom corridor with rows of panelled doors, a long runner carpet and wall sconces                                                                        |
 | bedroom_lad        | modest guest bedroom plainly furnished with a simple iron bed and a worn travelling case                                                                            |
 | bedroom_psychic    | mysterious guest bedroom draped in dark velvet, with a crystal ball and tarot cards on the dressing table                                                           |
