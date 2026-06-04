@@ -21,9 +21,7 @@ label captain_config_progress:
                 Chapter(image_checkpoint_line),
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "bludgeoned", "saturday_afternoon"),
-                Chapter(image_checkpoint_empty_half),
-                # double_corner (not corner): the "end" trunk must keep running down
-                # col 6 to reach shot_fleeing several rows below.
+                Chapter(image_checkpoint_line_half),
                 Chapter(image_checkpoint_double_corner),
                 Chapter(image_ending_question, "ending", "survives", "end"),
             ],
@@ -36,10 +34,12 @@ label captain_config_progress:
                 Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
                 Chapter(image_checkpoint_double_corner_half),
                 Chapter(image_ending_question, "ending", "burned", "saturday_evening"),
-                # filler + "end" trunk passing down col 6 towards shot_fleeing
-                Chapter(image_checkpoint_empty_half),
-                Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "shot_fleeing", "end"),
+                # corner_half: the col 5 (sunday_morning) trunk turns right here, so the
+                # shot_fleeing icon now sits in the sunday_afternoon column (one before the end).
+                Chapter(image_checkpoint_corner_half),
+                Chapter(image_ending_question, "ending", "shot_fleeing", "sunday_morning"),
+                Chapter(image_checkpoint_corner_half),
+                Chapter(image_ending_question, "ending", "shot_fleeing", "sunday_afternoon"),
             ],
             # Row 4: shot_in_woods ending (Moody alive)
             [

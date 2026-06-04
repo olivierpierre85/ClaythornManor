@@ -30,6 +30,7 @@ THREAD, locked shed image
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
+  - [ ] Shot death redundant? Should be run over instead? YESSSS
   - TEST NEW LOGIC
 - [ ] **sunday AFternoon**
   - [ ] DRive, when he actually walks

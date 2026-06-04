@@ -33,65 +33,13 @@ label captain_day3_afternoon:
 
     $ play_music('mysterious')
 
-    if captain_details.threads.is_unlocked('confide_in_nurse'):
+    # Explore path — the captain finished his sweep of the house. The others
+    # rested in the tea room while he worked.
+    $ change_room('tea_room', irisout)
 
-        # Nurse path — the captain and Miss Marsh waited out the morning in the
-        # butler's room. They come down at last, and find the others.
-        $ change_room('bedrooms_hallway', irisout)
-
-        """
-        Miss Marsh and I come down from the attic at last.
-        """
-
-        $ change_room('entrance_hall', dissolve)
-
-        """
-        We are making for the kitchen when we hear voices in the hall below.
-
-        Living voices.
-        """
-
-        lad """
-        Captain Sinha!
-        """
-
-        """
-        Ted Harring and Miss Baxter cross the hall towards us, plainly relieved to find us upright.
-        """
-
-        psychic """
-        Thank heaven. We had begun to think we were the last souls left in the place.
-        """
-
-        lad """
-        We have been over the whole house, top to bottom.
-
-        There is a motor car in the garage, but not a drop of petrol to put in it.
-
-        Whoever left made very sure of that.
-        """
-
-        # The captain never reaches the garage himself on this path, so the lad's
-        # report is what lets him count on the car in the afternoon (seen_car).
-        $ captain_details.threads.unlock('seen_car')
-
-        captain """
-        Then we have much to decide.
-
-        Come. We had far better talk this through together.
-        """
-
-        $ change_room('tea_room', dissolve)
-
-    else:
-
-        # Explore path — the captain finished his sweep of the house. The others
-        # rested in the tea room while he worked.
-        $ change_room('tea_room', irisout)
-
-        """
-        We rested a while in silence, 
-        """
+    """
+    We rested a while in silence, 
+    """
 
     call common_day3_afternoon_lad_psychic_captain_discussion_1
 
@@ -290,46 +238,6 @@ label captain_day3_afternoon_lie_alone:
     """
 
     jump captain_ending_survives
-
-
-# ------------------------------------
-#   AFTERNOON — leave alone on foot
-# ------------------------------------
-label captain_day3_afternoon_on_foot:
-
-    call change_time(13, 00)
-
-    $ change_room('forest_road', dissolve)
-
-    """
-    I take only my coat and what will fit in its pockets.
-
-    The drive gives way to a rough road, and the road to open country between the trees.
-
-    I keep a soldier's pace, or the pace I imagine a soldier keeps.
-
-    For an hour there is nothing but my own breath and the cold.
-    """
-
-    $ play_music('danger')
-
-    """
-    Then, away to my right, the treeline.
-
-    A branch that does not move with the wind.
-
-    A shape that is the wrong colour for bark.
-
-    I have read enough accounts of ambush to know one when I am standing in it.
-
-    Too late, of course.
-
-    A real soldier would have known an hour ago.
-    """
-
-    play sound gun
-
-    jump captain_ending_shot_fleeing
 
 
 # ------------------------------------

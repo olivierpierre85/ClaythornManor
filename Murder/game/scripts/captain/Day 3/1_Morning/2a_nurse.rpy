@@ -97,7 +97,7 @@ label captain_day3_morning_nurse:
     $ time_left = 1
     call run_menu( TimedMenu("captain_day3_morning_nurse_menu", [
         TimedMenuChoice("Do not waste time, leave the house now", 'captain_day3_morning_nurse_leave', early_exit=True),
-        TimedMenuChoice("Go to ground and wait the morning out", 'captain_day3_morning_nurse_hide', early_exit=True),
+        TimedMenuChoice("Go to attic and wait the morning out", 'captain_day3_morning_nurse_hide', early_exit=True),
     ]))
 
     return
@@ -163,7 +163,7 @@ label captain_day3_morning_nurse_leave:
     """
 
     captain """
-    All right, we can stay at the manor a bit longer until we work out a better plan.
+    All right, we can stay at the manor a bit longer until things settle down.
     """
 
     nurse """
@@ -295,11 +295,94 @@ label captain_day3_morning_nurse_hide:
     """
 
     captain """
-    Now we go down.
-
-    Carefully.
-
-    And we try to make sense of what is happening.
+    Well, I have tried to find the best way to act now.
     """
 
-    return
+    nurse """
+    And?
+    """
+
+    captain """
+    I believe the safer bet is for me to leave.
+
+    Even if I have to do it on foot.
+
+    You could stay safely here, I am sure I can make it before the end of the day.
+    """
+
+    nurse """
+    I see.
+
+    If I am being honest I do not like this captain, it feels extremely dangerous for me.
+    """
+
+    captain """
+    I know and I am sorry, but I still believe it is our best chance.
+
+    And if it can ease your mind, you can take this pistol.
+
+    I try to always keep it on me, one never knows when one might need protection.
+
+    Do you know how to use one?
+    """
+
+    nurse """
+    I can manage, I believe.
+
+    But I really wish I won't have to use it.
+    """
+
+    captain """
+    You probably won't, just stay here, close the door and do not open to anybody.
+
+    It is safe to say that everyone is a suspect at this point.
+    """
+
+    nurse """
+    All right, I think I can manage that.
+
+    Thank you captain.
+    """
+
+    captain """
+    Good luck Miss Marsh.
+    """
+
+    $ change_room('entrance_hall', dissolve)
+
+    """
+    I do not waste time and go down fast to the entrance hall.
+
+    It is still empty, so I make it outside.
+    """
+
+    call change_time(12, 00)
+
+    $ change_room('forest_road', dissolve)
+
+    """
+    I took only my coat and what will fit in its pockets.
+
+    The drive gives way to a rough road, and the road to open country between the trees.
+    """
+
+    $ play_music('danger')
+
+    # TODO change to run over, reuse this if no petrol spotted
+    """
+    I keep a solid pace for an hour, then, away to my right, I notice something.
+
+    A shape that is the wrong colour for bark.
+
+    And from that shape, I can spot the canon of a rifle.
+
+    I try to reach for my own pistol but came up empty.
+
+    Miss Marsh as it of course.
+
+    I jump to the ground to hide. But the road is wide open, I am too easy a target.
+    """
+
+    play sound gun
+
+    jump captain_ending_shot_fleeing

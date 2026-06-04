@@ -174,7 +174,7 @@ label init_captain:
             CharacterInformation(8, "shot_fleeing",
                 "You were shot in the woods as you fled the manor on foot",
                 image_file="hunting_rifle",
-                chapters=['sunday_afternoon']),
+                chapters=['sunday_morning']),
             CharacterInformation(9, "survives",
                 "You slipped away alone in the motor car and lived",
                 image_file="escape",
