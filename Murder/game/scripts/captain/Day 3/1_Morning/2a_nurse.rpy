@@ -368,21 +368,34 @@ label captain_day3_morning_nurse_hide:
 
     $ play_music('danger')
 
-    # TODO change to run over, reuse this if no petrol spotted
     """
-    I keep a solid pace for an hour, then, away to my right, I notice something.
+    I keep a solid pace for the better part of an hour.
 
-    A shape that is the wrong colour for bark.
-
-    And from that shape, I can spot the canon of a rifle.
-
-    I try to reach for my own pistol but came up empty.
-
-    Miss Marsh as it of course.
-
-    I jump to the ground to hide. But the road is wide open, I am too easy a target.
+    Then, somewhere behind me, I hear an engine.
     """
 
-    play sound gun
+    play sound car_driving fadein 4 loop
 
-    jump captain_ending_shot_fleeing
+    """
+    A motor car, coming up the road at my back.
+
+    For a moment I let myself hope it is help, sent on ahead of the others.
+
+    I raise a hand and step to the verge to let it pass.
+
+    It does not slow.
+
+    If anything it gathers speed, and it holds straight for me.
+    """
+
+    """
+    I throw myself towards the trees.
+
+    But the road is wide open, and a man on foot is no match for a motor.
+
+    The car corrects as I move, and the wheels come with me.
+    """
+
+    play sound body_fall
+
+    jump captain_ending_run_over
