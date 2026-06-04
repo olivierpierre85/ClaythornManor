@@ -3,7 +3,7 @@
 #           
 #   Friday - Afternoon
 #   
-#   ???????????????14:00 -> 14:45
+#   14:00 -> 14:45
 #
 #   Music: Chill, upbeat
 #
@@ -18,15 +18,17 @@ label broken_introduction:
 
     # A DAY EARLIER 
     """
-    I am looking at my brother, lifeless on his bed.
+    I am looking at Thomas, lifeless on his bed.
 
     His injuries had the best of him in the end.
 
-    The mask that was suppose to help him live a normal live is next to him.
+    The mask that was suppose to help him live a normal live sits next to him.
 
     He won't have to wear it anymore.
 
-    That's not so bad, he couldn't bare the look of the people around him.
+    That brings a sort of relief.
+    
+    He couldn't bare the look of the people around him.
 
     After dedicated his youth to the army he ends up alone in his apartment.
 
@@ -36,9 +38,13 @@ label broken_introduction:
 
     I search about his place and found nothing that was not a necessity.
 
-    On his desk is a picture of us when we were teens, the caption reads: Thomas and Archie spring 1892).
+    On his desk is a picture of us we took when we were on leave for a weekend.
+    
+    The caption reads: Thomas and Archie, Poperinge, 1916.
 
-    We were inseparable back then, two brothers who were also best friends.
+    Two officers thrown in the middle of hell.
+    
+    With death all around us, we became best friends rapidly.
 
     Next to the picture sits a letter.
 
@@ -68,16 +74,10 @@ label broken_introduction:
     """
     I am still not sure what I am doing here.
 
-    In my hand rest my brother's mask.
-    
-    ...
     """
 
     broken """
     test
     """
-
-
-
 
     jump broken_day1_evening
