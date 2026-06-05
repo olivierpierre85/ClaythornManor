@@ -106,26 +106,36 @@ label captain_day3_afternoon:
         $ change_room('forest_road', dissolve)
 
         """
-        I took only my coat and what will fit in its pockets.
+        I keep a solid pace for the better part of an hour.
 
-        The drive gives way to a rough road, and the road to open country between the trees.
+        Then, somewhere behind me, I hear an engine.
         """
 
-        $ play_music('danger')
+        play sound car_driving fadein 4 loop
 
         """
-        I keep a solid pace for an hour, then, away to my right, I notice something.
+        A motor car, coming up the road at my back.
 
-        A shape that is the wrong colour for bark.
+        For a moment I let myself hope it is help, sent on ahead of the others.
 
-        And from that shape, I can spot the canon of a rifle.
+        I raise a hand and step to the verge to let it pass.
 
-        I jump to the ground to hide. But the road is wide open, I am too easy a target.
+        It does not slow.
+
+        If anything it gathers speed, and it holds straight for me.
         """
 
-        play sound gun
+        """
+        I throw myself towards the trees.
 
-        jump captain_ending_shot_fleeing
+        But the road is wide open, and a man on foot is no match for a motor.
+
+        The car corrects as I move, and the wheels come with me.
+        """
+
+        play sound body_fall
+
+        jump captain_ending_run_over
 
 
 # ------------------------------------
