@@ -30,10 +30,8 @@ THREAD, locked shed image
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
-  - [ ] Shot death redundant? Should be run over instead? YESSSS
-  - TEST NEW LOGIC
+  - [ ] hard to reach DIALOG but unlocks NOTHINg => Find something to put there.
 - [ ] **sunday AFternoon**
-  - [ ] DRive, when he actually walks
   - [ ] All the dialogs are too short
   - [ ] Not natural arrival of nurse
   - [ ] Nurse path is the same as the rest, the nurse says nothing, that is weird, we should add her saying something.
