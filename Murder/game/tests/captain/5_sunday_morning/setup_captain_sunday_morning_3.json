@@ -4,11 +4,5 @@
         "confide_in_nurse"
     ],
     "saved_variables": {},
-    "choices": [
-        {
-            "menu": "captain_day3_morning_nurse_menu",
-            "selected": "Go to ground and wait the morning out",
-            "redirect": "captain_day3_morning_nurse_hide"
-        }
-    ]
+    "choices": []
 }

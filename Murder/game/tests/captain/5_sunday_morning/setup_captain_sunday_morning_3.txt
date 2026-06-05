@@ -15,58 +15,44 @@ Sushil Sinha: What do you mean?
 Rosalind Marsh: There are no staff. No fires lit. No breakfast laid.
 Rosalind Marsh: I have walked the dining room, the kitchen, the back corridor.
 Rosalind Marsh: Not a soul.
-Sushil Sinha: So I was right, something is afoot.
+Sushil Sinha: So I was right, something strange is happening here.
 Sushil Sinha: Have you checked any of the other rooms?
 Rosalind Marsh: No, I came straight to you.
 Sushil Sinha: A sound choice.
-Rosalind Marsh: But what are we going to do now?
-Rosalind Marsh: I was thinking we might hide for a while, until we can learn more about what is happening here.
-Rosalind Marsh: Maybe it would be better to leave, but I am afraid whoever is behind all of this might spot us.
-Rosalind Marsh: And ... then I don't know what they might do.
-I think for a moment.
-If someone in this house means us harm, it might be best to remain hidden.
-On the other hand, we cannot hide forever.
-Two courses lie open to me, and neither is without risk.
-Menu Choice: Go to attic and wait the morning out
-Sushil Sinha: We should not stay here.
-Sushil Sinha: This room is the first place anyone would look for me.
-Rosalind Marsh: You are right.
-Rosalind Marsh: I believe the attic is the best place to hide.
-Rosalind Marsh: It should be empty now.
-Sushil Sinha: The attic, good idea.
-Sushil Sinha: I have the butler's master key.
-Sushil Sinha: So we can hide in his room and lock the door.
-Rosalind Marsh: Perfect.
-Rosalind Marsh: Lead the way, Captain.
-I open the door a crack and listen.
-The corridor is empty, and very still.
-I step out, Miss Marsh close behind.
-We move quickly, keeping to the side of the hall, and reach the foot of the attic stair without seeing anyone.
-The boards creak under our weight.
-I take the master key from my pocket and fit it to the butler's door.
-The bolt slides back without protest.
-I usher Miss Marsh inside and close the door behind us.
-I turn the key in the lock.
-Sushil Sinha: Sit down, Miss Marsh.
-Sushil Sinha: We are going to be here a little while.
-She sits on the edge of the narrow bed and folds her hands in her lap.
-We sit in silence for a long while after that.
-Then, I hear a board ease somewhere below.
-Once, footsteps in the upstairs corridor — slow, deliberate, then gone.
-Sushil Sinha: Somebody is downstairs.
-Rosalind Marsh: It could be one of the others.
-Sushil Sinha: It could be, but I do not know whether they are friend or foe.
-Sushil Sinha: It is probably better to wait for them to leave.
-Rosalind Marsh: You are probably right.
-By late morning, the house has settled into a heavy silence.
-Whatever was moving about earlier seems to have stopped, or gone elsewhere.
-Miss Marsh looks at me.
-Rosalind Marsh: What now, Captain?
-Sushil Sinha: Well, I have tried to find the best way to act now.
-Rosalind Marsh: And?
-Sushil Sinha: I believe the safer bet is for me to leave.
-Sushil Sinha: Even if I have to do it on foot.
-Sushil Sinha: You could stay safely here, I am sure I can make it before the end of the day.
+Sushil Sinha: It might not be safe for you to just roam around the house.
+Rosalind Marsh: I believe you are right.
+Rosalind Marsh: I was thinking we might hide for a while, at least until the police come.
+Sushil Sinha: Right, the police.
+Sushil Sinha: I do not know for sure they will come, Miss Marsh.
+Sushil Sinha: There is a good chance they were never called in the first place.
+Rosalind Marsh: Never called, but Lady Claythorn...
+Rosalind Marsh: Oh...
+Sushil Sinha: Yes, if Lady Claythorn is behind this masquerade, and there is a very good chance that she is, there was no reason for her to call the police.
+Sushil Sinha: We might wait here indefinitely.
+Rosalind Marsh: What can we do then?
+Sushil Sinha: I see two options:
+Sushil Sinha: First, we could search this place and try to make sense of what is happening.
+Sushil Sinha: I have a gun, so I can protect myself.
+Rosalind Marsh: But could you protect me?
+Rosalind Marsh: And what is the second option.
+We could leave right away, on foot if we must.
+Rosalind Marsh: On foot, Captain?
+Sushil Sinha: I am afraid yes.
+Sushil Sinha: I do not see another way.
+Sushil Sinha: Lady Claythorn and her staff most likely left with the motor car.
+Sushil Sinha: It is a fairly long walk to the town, but it is still early, I am sure we can make it.
+Rosalind Marsh: Oh, I am sure you could, Captain.
+Rosalind Marsh: Sadly I can't.
+She says it quietly, and I see now what I had been too preoccupied to mark before.
+The pallor that is not only fear.
+The careful way she holds herself.
+Rosalind Marsh: I am not a healthy woman, Captain.
+Rosalind Marsh: There is a good chance my body will not hold for such a long journey.
+Sushil Sinha: I see.
+I think her condition might be worse than her quiet behaviour shows.
+But if she does not want to tell me more, I will not press her.
+Sushil Sinha: In that case, I believe the safer bet is for me to leave alone.
+Sushil Sinha: You could hide until I come back, I am sure I can make it before the end of the day.
 Rosalind Marsh: I see.
 Rosalind Marsh: If I am being honest I do not like this captain, it feels extremely dangerous for me.
 Sushil Sinha: I know and I am sorry, but I still believe it is our best chance.
@@ -75,8 +61,14 @@ Sushil Sinha: I try to always keep it on me, one never knows when one might need
 Sushil Sinha: Do you know how to use one?
 Rosalind Marsh: I can manage, I believe.
 Rosalind Marsh: But I really wish I won't have to use it.
-Sushil Sinha: You probably won't, just stay here, close the door and do not open to anybody.
+Sushil Sinha: You probably won't, just find a safe hidden place, close the door and do not open to anybody.
 Sushil Sinha: It is safe to say that everyone is a suspect at this point.
+Rosalind Marsh: You are right.
+Rosalind Marsh: I believe the attic is the best place to hide.
+Rosalind Marsh: It should be empty now.
+Sushil Sinha: The attic, good idea.
+Sushil Sinha: I have the butler's master key.
+Sushil Sinha: Use it to open a room and hide in it.
 Rosalind Marsh: All right, I think I can manage that.
 Rosalind Marsh: Thank you captain.
 Sushil Sinha: Good luck Miss Marsh.
