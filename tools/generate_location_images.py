@@ -1,11 +1,15 @@
 """
-Generate Claythorn Manor interior location backgrounds with the local FLUX.2
-Klein server (Forge Neo, A1111-compatible API at http://127.0.0.1:7860).
+Generate Claythorn Manor location backgrounds (interior + outdoor) with the
+local FLUX.2 Klein server (Forge Neo, A1111-compatible API at
+http://127.0.0.1:7860).
 
 Reads room ids + descriptions from:
-    Murder/game/images/locations/_locations.md   (a Markdown table)
+    Murder/game/images/locations/_locations.md   (Markdown tables)
 
-Each description is wrapped in the manor prompt template and POSTed to
+The file has an "Interior locations" and an "Outdoor locations" section; rows
+under each use the matching prompt template (see PROMPT_TEMPLATES below).
+
+Each description is wrapped in its prompt template and POSTed to
 /sdapi/v1/txt2img. The returned PNG is saved as <id>.png in the output folder
 (default: Images/locations_new/generated/), ready to be reviewed and promoted
 into Murder/game/images/locations/ once approved.
@@ -35,11 +39,20 @@ DEFAULT_OUT = ROOT / "Images/locations_new/generated"
 API_URL = "http://127.0.0.1:7860"
 TXT2IMG = "/sdapi/v1/txt2img"
 
-PROMPT_TEMPLATE = (
-    "A high-quality semi-realistic digital painting of a 1920s Scottish manor "
-    "{description} at night. Warm amber light, touches of colorful objects. "
-    "Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures."
-)
+# One template per section in _locations.md. parse_locations() tags each row
+# with the key of the section it sits under.
+PROMPT_TEMPLATES = {
+    "interior": (
+        "A high-quality semi-realistic digital painting of a 1920s Scottish manor "
+        "{description} at night. Warm amber light, touches of colorful objects. "
+        "Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures."
+    ),
+    "outdoor": (
+        "A high-quality semi-realistic digital painting of a {description}. "
+        "Warm amber light. Deep soft shadows, mysterious atmosphere, wide shot, "
+        "rich textures."
+    ),
+}
 
 NEGATIVE_PROMPT = (
     "people, person, human, figure, crowd, text, signature, watermark, "
@@ -60,10 +73,22 @@ GEN_DEFAULTS = {
 
 
 def parse_locations(md_path):
-    """Return [(id, description), ...] from the Markdown table."""
+    """Return [(id, description, template), ...] from the Markdown tables.
+
+    Rows under an "Outdoor"/"Outside"/"Exterior" heading use the outdoor
+    template; everything else defaults to the interior template.
+    """
     rows = []
+    template = "interior"
     for raw in md_path.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
+        if line.startswith("#"):  # markdown heading -> pick the active template
+            low = line.lower()
+            if any(k in low for k in ("outdoor", "outside", "exterior")):
+                template = "outdoor"
+            elif "interior" in low:
+                template = "interior"
+            continue
         if not line.startswith("|"):
             continue
         cells = [c.strip() for c in line.strip("|").split("|")]
@@ -75,7 +100,7 @@ def parse_locations(md_path):
             continue
         rid = rid.strip("`").strip()
         if rid and desc:
-            rows.append((rid, desc))
+            rows.append((rid, desc, template))
     return rows
 
 
@@ -101,10 +126,10 @@ def next_available_path(out_dir, rid):
         n += 1
 
 
-def generate_one(rid, desc, out_path, args, seed):
+def generate_one(rid, desc, template, out_path, args, seed):
     payload = dict(GEN_DEFAULTS)
     payload.update(
-        prompt=PROMPT_TEMPLATE.format(description=desc),
+        prompt=PROMPT_TEMPLATES[template].format(description=desc),
         negative_prompt=NEGATIVE_PROMPT,
         seed=seed,
         batch_size=1,
@@ -161,14 +186,14 @@ def main():
     rooms = parse_locations(md_path)
     if args.ids:
         wanted = set(args.ids)
-        unknown = wanted - {r for r, _ in rooms}
+        unknown = wanted - {r for r, _, _ in rooms}
         if unknown:
             sys.exit(f"Unknown room id(s): {', '.join(sorted(unknown))}")
-        rooms = [(r, d) for r, d in rooms if r in wanted]
+        rooms = [(r, d, t) for r, d, t in rooms if r in wanted]
 
     if args.list:
-        for rid, desc in rooms:
-            print(f"{rid:22} {desc}")
+        for rid, desc, template in rooms:
+            print(f"{rid:22} [{template:8}] {desc}")
         print(f"\n{len(rooms)} room(s).")
         return
 
@@ -184,7 +209,7 @@ def main():
     total = len(rooms)
     generated = failed = 0
     aborted = False
-    for i, (rid, desc) in enumerate(rooms, 1):
+    for i, (rid, desc, template) in enumerate(rooms, 1):
         for k in range(count):
             if (generating_all or args.force) and k == 0:
                 # Fresh timestamped folder, or explicit overwrite request.
@@ -199,7 +224,7 @@ def main():
             print(f"[{i}/{total}] gen    {label} -> {out_path.name} ...", end="", flush=True)
             t0 = time.time()
             try:
-                generate_one(rid, desc, out_path, args, seed)
+                generate_one(rid, desc, template, out_path, args, seed)
             except urllib.error.HTTPError as e:
                 print(f" FAILED (HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:200]}).")
                 failed += 1

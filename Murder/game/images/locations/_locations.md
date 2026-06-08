@@ -1,10 +1,12 @@
-# Claythorn Manor — Interior Location Prompts
+# Claythorn Manor — Location Prompts
 
-Source table for `tools/generate_location_images.py`. Each **description** is wrapped in the FLUX.2 Klein manor template:
+Source tables for `tools/generate_location_images.py`. Each **description** is wrapped in a FLUX.2 Klein prompt template chosen by the section it sits under. The **id** column is the output filename (`<id>.png`) and matches the `change_room('<id>')` id used in the scripts.
+
+## Interior locations
+
+Wrapped in the interior manor template:
 
 > A high-quality semi-realistic digital painting of a 1920s Scottish manor **{description}** at night. Warm amber light, touches of colorful objects. Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures.
-
-The **id** column is the output filename (`<id>.png`) and matches the `change_room('<id>')` id used in the scripts.
 
 | id                 | description                                                                                                                                                         |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,3 +37,21 @@ The **id** column is the output filename (`<id>.png`) and matches the `change_ro
 | attic_females_room | modest servants' attic room for the maids, with twin iron beds and a small dresser                                                                                  |
 | butler_room        | the butler's tidy attic room, with a single bed, a writing desk and a neatly pressed livery                                                                         |
 | toolshed           | toolshed interior with a rectangular red petrol tin in the corner                                                                                                   |
+
+## Outdoor locations
+
+Wrapped in the outdoor template:
+
+> A high-quality semi-realistic digital painting of a **{description}**. Warm amber light. Deep soft shadows, mysterious atmosphere, wide shot, rich textures.
+
+| id                     | description                                                                                                                  |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| manor_exterior         | grand 1920s Scottish manor seen from the gravel drive, its towering stone facade and lit windows rising against a stormy sky  |
+| manor_garden           | 1920s Scottish manor garden with clipped hedges, gravel paths and a stone fountain, the dark house looming behind            |
+| forest                 | dense Scottish pine forest, tall trees and tangled undergrowth, mist drifting between the trunks                             |
+| forest_road            | narrow rutted road winding through a dark Scottish forest, tall trees crowding either side                                  |
+| toolshed_outside_day   | weathered stone toolshed in the manor grounds by day, a heavy wooden door and overgrown grass around it                     |
+| toolshed_outside_night | weathered stone toolshed in the manor grounds at night, a heavy wooden door and shadows pooling around it in the rain       |
+| train_station          | small rural Scottish railway station with an empty platform, gas lamps, a wooden bench and a canopy                         |
+| police_station         | modest small-town Scottish police station of grey stone, seen from the street, a blue lamp above its door                   |
+| house_on_fire          | 1920s Scottish manor engulfed in flames at night, fire bursting from the windows and roof, smoke billowing into a dark sky  |
