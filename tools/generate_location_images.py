@@ -10,16 +10,18 @@ The file has an "Interior locations" and an "Outdoor locations" section; rows
 under each use the matching prompt template (see PROMPT_TEMPLATES below).
 
 Each description is wrapped in its prompt template and POSTed to
-/sdapi/v1/txt2img. The returned PNG is saved as <id>.png in the output folder
-(default: Images/locations_new/generated/), ready to be reviewed and promoted
-into Murder/game/images/locations/ once approved.
+/sdapi/v1/txt2img. The returned PNG is saved as <id>_<variant>.png (the variant
+defaults to "night") in the output folder (default:
+Images/locations_new/generated/), ready to be reviewed and promoted into
+Murder/game/images/locations/ once approved.
 
 Usage (from the repo root):
     python tools/generate_location_images.py                  # all rooms -> a new timestamped subfolder
     python tools/generate_location_images.py library kitchen  # only these ids; keeps existing files and
-                                                              #   writes <id>_1.png, <id>_2.png, ... on collision
+                                                              #   writes <id>_night_1.png, ... on collision
     python tools/generate_location_images.py library -n 4     # 4 variants of one room, each with a different seed
-    python tools/generate_location_images.py --force          # overwrite <id>.png in place instead of numbering
+    python tools/generate_location_images.py --variant day    # write <id>_day.png instead of <id>_night.png
+    python tools/generate_location_images.py --force          # overwrite <id>_night.png in place instead of numbering
     python tools/generate_location_images.py --list           # list parsed rooms and exit
     python tools/generate_location_images.py --out some/dir --seed 1234
 """
@@ -113,14 +115,14 @@ def post_json(path, payload, timeout):
         return json.loads(resp.read().decode("utf-8"))
 
 
-def next_available_path(out_dir, rid):
-    """Return <id>.png, or <id>_1.png, <id>_2.png, ... if earlier ones exist."""
-    out_path = out_dir / f"{rid}.png"
+def next_available_path(out_dir, stem):
+    """Return <stem>.png, or <stem>_1.png, <stem>_2.png, ... if earlier ones exist."""
+    out_path = out_dir / f"{stem}.png"
     if not out_path.exists():
         return out_path
     n = 1
     while True:
-        candidate = out_dir / f"{rid}_{n}.png"
+        candidate = out_dir / f"{stem}_{n}.png"
         if not candidate.exists():
             return candidate
         n += 1
@@ -167,7 +169,8 @@ def main():
     ap.add_argument("ids", nargs="*", help="Only generate these room ids (default: all).")
     ap.add_argument("--md", default=str(MD_FILE), help="Markdown source file.")
     ap.add_argument("--out", default=str(DEFAULT_OUT), help="Output folder.")
-    ap.add_argument("--force", action="store_true", help="Overwrite <id>.png in place instead of writing a numbered copy (one-by-one mode).")
+    ap.add_argument("--variant", default="night", help="Time-of-day variant appended to filenames: output is <id>_<variant>.png (default: night). Use '' for no suffix.")
+    ap.add_argument("--force", action="store_true", help="Overwrite <id>_<variant>.png in place instead of writing a numbered copy (one-by-one mode).")
     ap.add_argument("--list", action="store_true", help="List parsed rooms and exit.")
     ap.add_argument("--seed", type=int, default=-1, help="Seed (-1 = random). With --count, fixed seeds are incremented per image.")
     ap.add_argument("--count", "-n", type=int, default=1, help="How many images to generate per room, each with a different seed.")
@@ -210,13 +213,14 @@ def main():
     generated = failed = 0
     aborted = False
     for i, (rid, desc, template) in enumerate(rooms, 1):
+        stem = f"{rid}_{args.variant}" if args.variant else rid
         for k in range(count):
             if (generating_all or args.force) and k == 0:
                 # Fresh timestamped folder, or explicit overwrite request.
-                out_path = out_dir / f"{rid}.png"
+                out_path = out_dir / f"{stem}.png"
             else:
                 # Keep existing files and number new ones.
-                out_path = next_available_path(out_dir, rid)
+                out_path = next_available_path(out_dir, stem)
             # Random seed (-1) stays random each time; a fixed seed is bumped
             # per image so the variants actually differ.
             seed = args.seed if args.seed < 0 else args.seed + k
