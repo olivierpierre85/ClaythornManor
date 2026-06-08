@@ -94,7 +94,7 @@ label captain_day3_afternoon:
         $ change_room('manor_garden', dissolve)
 
         """
-        I ease the car out of the garage and bring toward the Manor's entrance.
+        I ease the car out of the garage and bring it towards the manor's entrance.
 
         The engine runs rough beneath me, but it runs.
         """
@@ -111,11 +111,11 @@ label captain_day3_afternoon:
 
             I cannot say why, but I have the strongest sense that to leave together, in that car, is to die together.
 
-            I assumed everyone still in the house were in the same boat as I.
+            I assume everyone still in the house is in the same boat as I am.
 
-            But what if they are not.
+            But what if they are not?
 
-            Maybe I was too quick to disregard them as a thread.
+            Maybe I have been too quick to disregard them as a threat.
 
             The safest thing now would be to leave alone.
 
@@ -217,9 +217,9 @@ label captain_day3_afternoon_car_together:
     """
 
     """
-    We are all baffle by her apparition, but there is no time for long explanation.
+    We are all baffled by her sudden appearance, but there is no time for long explanations.
 
-    I want to leave as soone as possible.
+    I want to leave as soon as possible.
     """
 
     captain """
@@ -315,69 +315,35 @@ label captain_day3_afternoon_car_together:
 label captain_day3_afternoon_lie_alone:
 
     """
-    I roll the car up to the front steps, where the three of them are waiting.
+    I roll the car up to the driveway.
 
-    The boy steps forward to open the door.
+    I can see Mr Harring and Miss Baxter waiting for me.
 
-    I do not let him.
+    But I do not stop.
+
+    I put my foot down and pass in front of them as fast as I can.
+
+    I see their expressions change from relief to fear.
+
+    The car reaches the outer gate, and in a few moments I am on the open road.
+
+    Alone.
     """
-
-    captain """
-    The car will not carry four of us over the rough ground to the lodge.
-
-    Loaded as we are, she will founder inside a mile, and then we have nothing at all.
-
-    I will take her light, reach the lodge, and bring back help and a second motor.
-
-    Bar the doors.
-
-    Do not open for a single engine.
-
-    Wait until you hear two.
-    """
-
-    lad """
-    You will come back?
-    """
-
-    captain """
-    On my honour.
-    """
+    
+    $ change_room('forest_road', dissolve)
 
     """
-    On my honour.
-
-    The words come out smooth and steady, as they always have.
-
-    I have said such things all my life and been believed.
-
-    A supply officer who never saw a shot fired, telling boys of battles I watched from miles behind the lines.
-
-    I learned young that a calm voice and a straight back will carry a room further than courage ever did.
-
     My whole life has been spent near the fighting and never once in it.
 
     Other men did the dying.
 
     I signed the papers, and told the stories afterwards.
 
-    I am too old to become a braver man this afternoon.
-
-    I have no intention of coming back, and I think the boy half knows it.
-
-    He asks anyway, because he would sooner be lied to than left without a word.
-    """
-
-    $ change_room('forest_road', dissolve)
-
-    """
-    I let out the clutch and pull away, past the three of them on the steps, and do not look back at the house.
-
-    A man who looks back might turn the car around, and I have decided not to be that man today.
+    This weekend, I was given an opportunity to do something brave, and I turned it down.
 
     The engine holds. The road, for me, stays empty.
 
-    Mile after mile, and not a soul on it.
+    Mile after mile, until I reach safety.
     """
 
     jump captain_ending_survives

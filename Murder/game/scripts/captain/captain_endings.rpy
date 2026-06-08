@@ -30,7 +30,7 @@ label captain_ending_shot_in_woods:
     call death_screen_transition
 
     """
-    You were led into the woods by a man who suspected of wishing you harm.
+    You were led into the woods by a man you suspected of wishing you harm.
 
     You knew the danger, yet good manners compelled you to proceed regardless.
 
@@ -202,19 +202,15 @@ label captain_ending_survives:
     $ captain_details.add_ending_checkpoint(ending=captain_details.endings.get_item('survives'))
 
     """
-    You took the only motor that ran, and you took it alone.
+    You took the only motor that ran, and you escaped alone.
 
     You told yourself it was sense, and perhaps it was.
 
-    The others would only have slowed you, and the road was no place for a frightened woman or a half-grown boy.
+    You know most people will call you a coward for what you did.
 
-    That is what you told yourself, all the long miles to the town.
+    But in the end, you got out alive.
 
-    You reached it alive.
-
-    A coward reaches it alive too.
-
-    Once a coward, always a coward.
+    And maybe that is all that matters.
     """
 
     $ is_death = False

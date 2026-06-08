@@ -25,18 +25,16 @@ THREAD, locked shed image
 - [x] Friday Evening
 - [x] Saturday Morning
 - [ ] Saturday Hunt - **almost**
-  - [ ] TODO: ADD info unlocks
+  - [ ] TODO: **ADD info unlocks**
     - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
-  - [ ] hard to reach DIALOG but unlocks NOTHINg => Find something to put there.
-- [ ] **sunday AFternoon**
-  - [ ] All the dialogs are too short
-  - [ ] Not natural arrival of nurse
-  - [ ] Scouting is terrible excuse. Put more emphasis on the decision, with backstory,...
+  - [ ] hard to reach DIALOG but unlocks NOTHINg => **Find something to put there**. 
+- [x] **sunday AFternoon**
 
 **Captain's gun**
+**Add dialog somewhere to say he has a gun.**
 QUID gun for the captain ? Has one when he confront the nurse, so he should have one, or a way to get one? It seems assume he has one with him at all time? Or should I rewrite that ?
 
 ## Technical Tasks
