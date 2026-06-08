@@ -48,13 +48,11 @@ label captain_ending_burned:
     call death_screen_transition
 
     """
-    You took the man at his word, after he had twice told you he had lied.
+    You took a proven liar man at his word.
 
-    Of all the night's small mistakes, that was the one that had no remedy.
+    And you let him lock you up without complaining.
 
-    There was no need of poison, nor of further bullets, nor of any of the small careful violences a household provides.
-
-    A locked door, and a candle laid carelessly close to a curtain, will cover a great many things by morning.
+    There was no need of poison, nor bullets.
 
     The manor burnt to its foundations before the dawn.
 

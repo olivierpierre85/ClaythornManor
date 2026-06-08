@@ -30,7 +30,7 @@ THREAD, locked shed image
     - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
-  - [ ] hard to reach DIALOG but unlocks NOTHINg => **Find something to put there**. 
+  - [ ] hard to reach DIALOG but unlocks NOTHINg => **Find something to put there**. => maybe the intuition should be there. DO NOT TAKE THE CAR we replace the survive ending here, leaving no way to escape on the last chapter? Worth thinking about
 - [x] **sunday AFternoon**
 
 **Captain's gun**
