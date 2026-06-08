@@ -34,7 +34,6 @@ THREAD, locked shed image
 - [ ] **sunday AFternoon**
   - [ ] All the dialogs are too short
   - [ ] Not natural arrival of nurse
-  - [ ] Nurse path is the same as the rest, the nurse says nothing, that is weird, we should add her saying something.
   - [ ] Scouting is terrible excuse. Put more emphasis on the decision, with backstory,...
 
 **Captain's gun**

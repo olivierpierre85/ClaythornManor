@@ -1,15 +1,17 @@
 # Captain — Sunday Afternoon (Final Decisions)
 
-Both morning paths converge on `captain_day3_afternoon`. The single menu
-(`captain_day3_afternoon_car_menu`) only appears when the captain has a working
-car (`seen_car` + `petrol_tin_in_shed`) **and** has already unlocked the
-`car_ambush` ending — the intuition that to leave together is to die together.
+Both morning paths (explore / nurse-hide) converge on `captain_day3_afternoon`.
+The afternoon itself no longer branches on `confide_in_nurse` — the arrival
+narration, the shared discussion, and `car_together` are identical whichever
+morning path was taken. Only the car threads change what happens here.
 
-`seen_car` reaches the afternoon from two places: the explore-path garage visit
-(sunday morning) or the lad's report on the confide/hide path (unlocked during
-the confide arrival here). So the car routes are reachable on **both** morning
-paths, and `car_together` has two arrival variants — the hiding Miss Marsh
-appears at the front door (explore), or she is already with the party (confide).
+The single menu (`captain_day3_afternoon_car_menu`) only appears when the captain
+has a working car (`seen_car` + `petrol_tin_in_shed`) **and** has already unlocked
+the `car_ambush` ending — the intuition that to leave together is to die together.
+
+`seen_car` can reach the afternoon from either morning path (the explore-path
+garage visit, or the lad's report on the confide/hide path), so the car routes
+are reachable regardless of the morning. The afternoon plays them the same way.
 
 ## ⚠️ Test-runner constraint: endings leak between plans
 
@@ -33,14 +35,13 @@ remaining car plans are all menu-driven.
 
 ```
 captain_day3_afternoon
-├─ confide_in_nurse?  arrival narration (confide arrival also unlocks seen_car)
 ├─ shared discussion (common_day3_afternoon_lad_psychic_captain_discussion_1)
 ├─ seen_car AND petrol_tin_in_shed?
 │   ├─ car_ambush already unlocked (intuition) -> car_menu
 │   │     ├─ "leave together" -> car_together -> car_ambush
 │   │     └─ "drive off alone" -> lie_alone   -> survives
 │   └─ no intuition           -> car_together -> car_ambush   (direct jump, no menu)
-│        car_together: nurse appears at the door (explore) / already aboard (confide)
+│        car_together: the nurse always emerges from the front door
 └─ no working car             -> on_foot      -> shot_fleeing
 ```
 
@@ -48,19 +49,14 @@ captain_day3_afternoon
 
 | Plan | Threads / endings preset | Menu | Path covered |
 | ---- | ------------------------ | ---- | ------------ |
-| `..._1` | none | — | **Explore, no car.** On foot → `shot_fleeing`. |
-| `..._2` | `seen_car`, `petrol_tin_in_shed` | none | **Explore, car, no intuition.** Runs while `car_ambush` is still locked → the *direct jump* (no menu); Miss Marsh appears at the door → `car_ambush`. |
-| `..._3` | `confide_in_nurse` | — | **Confide, no car.** Comes down from hiding, then on foot → `shot_fleeing`. |
-| `..._4` | `seen_car`, `petrol_tin_in_shed`, ending `car_ambush` | leave together | **Explore, car, intuition.** Menu → `car_together` (nurse appears) → `car_ambush`. |
-| `..._5` | `seen_car`, `petrol_tin_in_shed`, ending `car_ambush` | drive off alone | **Explore, car, intuition.** Menu → `lie_alone` → `survives`. |
-| `..._6` | `confide_in_nurse`, `seen_car`, `petrol_tin_in_shed`, ending `car_ambush` | leave together | **Confide, car, intuition.** Menu → `car_together` *else* (nurse already aboard) → `car_ambush`. |
-| `..._7` | `confide_in_nurse`, `seen_car`, `petrol_tin_in_shed`, ending `car_ambush` | drive off alone | **Confide, car, intuition.** Menu → `lie_alone` → `survives`. |
+| `..._1` | none | — | **No car.** On foot → `shot_fleeing`. |
+| `..._2` | `seen_car`, `petrol_tin_in_shed` | none | **Car, no intuition.** Runs while `car_ambush` is still locked → the *direct jump* (no menu) → `car_together` → `car_ambush`. |
+| `..._3` | `seen_car`, `petrol_tin_in_shed`, ending `car_ambush` | leave together | **Car, intuition.** Menu → `car_together` → `car_ambush`. |
+| `..._4` | `seen_car`, `petrol_tin_in_shed`, ending `car_ambush` | drive off alone | **Car, intuition.** Menu → `lie_alone` → `survives`. |
 
 ## Coverage
 
-- **Endings:** `shot_fleeing` (1, 3), `car_ambush` (2, 4, 6), `survives` (5, 7).
-- **`car_together` branches:** nurse appears at the door (2, 4); nurse already
-  aboard (6).
-- **`car_menu` choices:** leave together (4, 6); drive off alone (5, 7).
+- **Endings:** `shot_fleeing` (1), `car_ambush` (2, 3), `survives` (4).
+- **`car_menu` choices:** leave together (3); drive off alone (4).
 - **No-menu direct jump** (`"It is settled, then…"`): plan 2 only.
-- **Arrival narration:** explore (1, 2, 4, 5); confide-in-nurse (3, 6, 7).
+- **`car_together`:** reached by the direct jump (2) and the menu (3).

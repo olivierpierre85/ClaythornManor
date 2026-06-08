@@ -39,33 +39,36 @@ I cannot say why, but I have the strongest sense that to leave together, in that
 One man, travelling light and quiet, would stand a far better chance.
 It would be a contemptible thing to do.
 It might also be the only thing that works.
-Menu Choice: We all leave together, in the car
-I leave the others by the front steps and go round to the garage alone.
-I fetch the tin from the shed, fill the tank, and coax the old engine into life.
-It runs rough, but it runs.
-I bring it round to the front of the manor and draw up before the steps.
-As I do, a figure comes out of the front door.
-Rosalind Marsh.
-She has been somewhere in the manor all this while, and says nothing of where.
-Rosalind Marsh: You were going to leave without me.
-Sushil Sinha: We did not know you were alive, Miss Marsh.
-Sushil Sinha: Get in. Quickly.
-The boy hands Miss Baxter up into the back, and Miss Marsh climbs in beside her without another word.
-I do not care for the timing of it.
-But I will not leave a living soul on that gravel.
-The gate falls behind us, and for a little while it is almost easy.
-The road unrolls between the trees. The engine settles into its work.
-I begin, against my better judgement, to believe we have managed it.
-Then the engine coughs.
-It catches, falters, and dies, and we coast to a stop in the middle of the empty road.
-Sushil Sinha: Stay in the car.
-Sushil Sinha: All of you.
-I get out to look at the engine, because that is what a man does, and because I cannot think what else to do.
-The wood on either side is very still.
-Too still.
-I understand, in the last clear moment I am granted, that the car was never meant to carry us far.
-You trusted the open road more than the house you fled.
-But the road was theirs as surely as the manor was.
-A stalled engine, a quiet wood, and a man waiting where the trees came close.
-You never saw the one who fired.
-A leader does not get the rest of his party killed simply because he could not bear to wait a little longer.
+Menu Choice: Drive off alone{{intuition}}
+Sushil Sinha: The car will not carry four of us over the rough ground to the lodge.
+Sushil Sinha: Loaded as we are, she will founder inside a mile, and then we have nothing at all.
+Sushil Sinha: I will take her light, reach the lodge, and bring back help and a second motor.
+Sushil Sinha: Bar the doors.
+Sushil Sinha: Do not open for a single engine.
+Sushil Sinha: Wait until you hear two.
+Ted Harring: You will come back?
+Sushil Sinha: On my honour.
+On my honour.
+The words come out smooth and steady, as they always have.
+I have said such things all my life and been believed.
+A supply officer who never saw a shot fired, telling boys of battles I watched from miles behind the lines.
+I learned young that a calm voice and a straight back will carry a room further than courage ever did.
+My whole life has been spent near the fighting and never once in it.
+Other men did the dying.
+I signed the papers, and told the stories afterwards.
+I am too old to become a braver man this afternoon.
+I have no intention of coming back, and I think the boy half knows it.
+He asks anyway, because he would sooner be lied to than left without a word.
+I fetch the tin from the shed, fill the tank, and bring the old car grinding up the drive.
+Alone.
+I do not look back at the house.
+A man who looks back might turn the car around, and I have decided not to be that man today.
+The engine holds. The road, for me, stays empty.
+Mile after mile, and not a soul on it.
+You took the only motor that ran, and you took it alone.
+You told yourself it was sense, and perhaps it was.
+The others would only have slowed you, and the road was no place for a frightened woman or a half-grown boy.
+That is what you told yourself, all the long miles to the town.
+You reached it alive.
+A coward reaches it alive too.
+Once a coward, always a coward.

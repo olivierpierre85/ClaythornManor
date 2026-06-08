@@ -27,41 +27,45 @@ Sushil Sinha: Neither do I.
 Sushil Sinha: I've thought about it, and I have no clue why we were all invited here.
 Sushil Sinha: I'm certain it wasn't to give us any money.
 Sushil Sinha: In any case, all I know is we need to leave as soon as possible.
-Amelia Baxter: But how could we leave?
-Amelia Baxter: The nearest town is miles away.
-Amelia Baxter: I can't walk that far.
-Amelia Baxter: And even if I could, I'm not prepared for such a journey.
-Sushil Sinha: You might be right.
-Sushil Sinha: It would be a long walk, and the weather might turn at any moment.
-Sushil Sinha: We could get caught in another storm.
-Sushil Sinha: It's probably unsafe for you to join us.
-Amelia Baxter: But you're not going to leave me here alone, are you?
-Amelia Baxter: What would become of me?
-Sushil Sinha: We could lock you in a room.
-Sushil Sinha: Though, that's far from ideal.
-Sushil Sinha: Perhaps one of us should stay with you.
-Amelia Baxter: Yes!
-Amelia Baxter: Mr Harring can stay with me, right?
-Amelia Baxter: The two of us should be safe until you return with help.
-Sushil Sinha: That seems to be the wisest choice.
-Sushil Sinha: What do you think, Mr Harring?
-Ted Harring: Of course, I'll stay.
-Ted Harring: Only a monster would leave you alone here in this condition.
-Amelia Baxter: Thank you Mr Harring!
-Amelia Baxter: That means the world to me.
-Sushil Sinha: Very well.
-Sushil Sinha: I will go right now then. I don't want to lose time.
-Sushil Sinha: Hopefully, I'll be back with help before nightfall.
-Amelia Baxter: Thank you captain.
-Amelia Baxter: I hope you'll be safe.
-Ted Harring: Yes, thank you.
-I took only my coat and what will fit in its pockets.
-The drive gives way to a rough road, and the road to open country between the trees.
-I keep a solid pace for an hour, then, away to my right, I notice something.
-A shape that is the wrong colour for bark.
-And from that shape, I can spot the canon of a rifle.
-I jump to the ground to hide. But the road is wide open, I am too easy a target.
-You set out alone, on foot, into open country you did not know.
-A soldier ought to have known better than to cross such ground without cover.
-But you were no soldier, whatever the medals said.
-The shot came from the treeline, and you did not hear the second one.
+Sushil Sinha: As it happens, we are not obliged to walk.
+Sushil Sinha: The old motor car in the garage wants only petrol, and I have seen a full tin in the garden shed.
+Sushil Sinha: I can have it running inside the hour.
+Ted Harring: You can drive?
+Sushil Sinha: I have driven worse, on worse roads than these.
+And yet.
+Something in me baulks at the picture of it.
+The four of us packed into one slow machine, crawling down a single road that anyone might be watching.
+I cannot say why, but I have the strongest sense that to leave together, in that car, is to die together.
+One man, travelling light and quiet, would stand a far better chance.
+It would be a contemptible thing to do.
+It might also be the only thing that works.
+Menu Choice: We all leave together, in the car
+I leave the others by the front steps and go round to the garage alone.
+I fetch the tin from the shed, fill the tank, and coax the old engine into life.
+It runs rough, but it runs.
+I bring it round to the front of the manor and draw up before the steps.
+As I do, a figure comes out of the front door.
+Rosalind Marsh.
+She has been somewhere in the manor all this while, and says nothing of where.
+Rosalind Marsh: You were going to leave without me.
+Sushil Sinha: We did not know you were alive, Miss Marsh.
+Sushil Sinha: Get in. Quickly.
+The boy hands Miss Baxter up into the back, and Miss Marsh climbs in beside her without another word.
+I do not care for the timing of it.
+But I will not leave a living soul on that gravel.
+The gate falls behind us, and for a little while it is almost easy.
+The road unrolls between the trees. The engine settles into its work.
+I begin, against my better judgement, to believe we have managed it.
+Then the engine coughs.
+It catches, falters, and dies, and we coast to a stop in the middle of the empty road.
+Sushil Sinha: Stay in the car.
+Sushil Sinha: All of you.
+I get out to look at the engine, because that is what a man does, and because I cannot think what else to do.
+The wood on either side is very still.
+Too still.
+I understand, in the last clear moment I am granted, that the car was never meant to carry us far.
+You trusted the open road more than the house you fled.
+But the road was theirs as surely as the manor was.
+A stalled engine, a quiet wood, and a man waiting where the trees came close.
+You never saw the one who fired.
+A leader does not get the rest of his party killed simply because he could not bear to wait a little longer.

@@ -244,23 +244,9 @@ label captain_day3_morning_nurse:
     Good luck, Captain.
     """
 
-    $ change_room('entrance_hall', dissolve)
-
-    """
-    I do not waste time and go down fast to the entrance hall.
-
-    It is still empty, so I make it outside.
-    """
-
     call change_time(12, 00)
 
-    $ change_room('forest_road', dissolve)
-    
-    """
-    I take only my coat and what will fit in its pockets.
-
-    The drive gives way to a rough road, and the road to open country between the trees.
-    """
+    call captain_day3_leave_alone_introduction
 
     $ play_music('danger')
 
@@ -282,3 +268,24 @@ label captain_day3_morning_nurse:
 
     jump captain_ending_shot_fleeing
 
+
+
+label captain_day3_leave_alone_introduction:
+
+    # Same leaving introduction for both paths
+    $ change_room('entrance_hall', dissolve)
+
+    """
+    I do not waste time and go down fast to the entrance hall.
+
+    It is still empty, so I make it outside.
+    """
+
+    $ change_room('forest_road', dissolve)
+    
+    """
+    I take only my coat and what will fit in its pockets.
+
+    The drive gives way to a rough road, and the road to open country between the trees.
+    """
+    return

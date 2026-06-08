@@ -166,9 +166,10 @@ label captain_config_progress:
             ],
 
             # ===== SUNDAY AFTERNOON (FINAL DECISIONS) =====
-            # Both morning paths converge here.
+            # Both morning paths converge here. The afternoon no longer branches on
+            # confide_in_nurse — it plays the same whichever morning path was taken,
+            # so only the car threads matter for the checkpoints below.
             # Threads SET before & RELEVANT here:
-            #   - confide_in_nurse: changes the arrival framing (came down with Miss Marsh)
             #   - seen_car: set sunday_morning (explore garage) OR sunday_afternoon
             #     (the lad's report on the confide path), relevant sunday_afternoon
             #   - petrol_tin_in_shed: set saturday_evening, relevant sunday_afternoon
@@ -178,7 +179,7 @@ label captain_config_progress:
             #
             # DEBUG-MODE NOTE: load_manual_checkpoints() pre-unlocks every ending and
             # nothing re-locks them, so the car_ambush intuition is always set in debug
-            # mode. The car_menu therefore appears on BOTH car checkpoints below, and you
+            # mode. The car_menu therefore appears on the car checkpoint below, and you
             # pick the outcome from it:
             #     "leave together"  -> car_together -> car_ambush
             #     "drive off alone" -> lie_alone    -> survives
@@ -186,18 +187,12 @@ label captain_config_progress:
             #  presetting the car_ambush ending.)
             #
             # Checkpoint -> JSON plan coverage:
-            #     1 explore, no car       -> plan 1        (shot_fleeing)
-            #     2 explore, car + petrol -> plans 2, 4, 5 (car_ambush / survives via menu)
-            #     3 confide, no car       -> plan 3        (shot_fleeing)
-            #     4 confide, car + petrol -> plans 6, 7    (car_ambush / survives via menu)
+            #     1 no car       -> plan 1        (shot_fleeing)
+            #     2 car + petrol -> plans 2, 3, 4 (car_ambush / survives via menu)
             'sunday_afternoon': [
-                # 1 - Explore path, no working car -> on foot, shot_fleeing
+                # 1 - No working car -> on foot, shot_fleeing
                 {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True}},
-                # 2 - Explore path with car + petrol -> car_menu -> car_ambush / survives
+                # 2 - Car + petrol -> car_menu -> car_ambush / survives
                 {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'seen_car': True, 'petrol_tin_in_shed': True}},
-                # 3 - Nurse path (hid in the morning), no car -> on foot, shot_fleeing
-                {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'confide_in_nurse': True}},
-                # 4 - Nurse path with car + petrol (seen_car from the lad's report) -> car_menu -> car_ambush / survives
-                {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'confide_in_nurse': True, 'seen_car': True, 'petrol_tin_in_shed': True}},
             ],
         }

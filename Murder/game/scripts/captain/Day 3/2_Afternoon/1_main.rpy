@@ -33,8 +33,6 @@ label captain_day3_afternoon:
 
     $ play_music('mysterious')
 
-    # Explore path — the captain finished his sweep of the house. The others
-    # rested in the tea room while he worked.
     $ change_room('tea_room', irisout)
 
     """
@@ -103,7 +101,7 @@ label captain_day3_afternoon:
         call common_day3_afternoon_lad_psychic_captain_discussion_3
 
 
-        $ change_room('forest_road', dissolve)
+        call captain_day3_leave_alone_introduction
 
         """
         I keep a solid pace for the better part of an hour.
@@ -231,11 +229,17 @@ label captain_day3_afternoon_car_together:
 label captain_day3_afternoon_lie_alone:
 
     captain """
-    On reflection, the car will not carry all four of us over that ground.
+    The car will not carry four of us over the rough ground to the lodge.
 
-    Let me take it ahead, scout the road to the lodge, and come back for you.
+    Loaded as we are, she will founder inside a mile, and then we have nothing at all.
 
-    Bar the doors until I do.
+    I will take her light, reach the lodge, and bring back help and a second motor.
+
+    Bar the doors.
+
+    Do not open for a single engine.
+
+    Wait until you hear two.
     """
 
     lad """
@@ -251,7 +255,23 @@ label captain_day3_afternoon_lie_alone:
 
     The words come out smooth and steady, as they always have.
 
+    I have said such things all my life and been believed.
+
+    A supply officer who never saw a shot fired, telling boys of battles I watched from miles behind the lines.
+
+    I learned young that a calm voice and a straight back will carry a room further than courage ever did.
+
+    My whole life has been spent near the fighting and never once in it.
+
+    Other men did the dying.
+
+    I signed the papers, and told the stories afterwards.
+
+    I am too old to become a braver man this afternoon.
+
     I have no intention of coming back, and I think the boy half knows it.
+
+    He asks anyway, because he would sooner be lied to than left without a word.
 
     I fetch the tin from the shed, fill the tank, and bring the old car grinding up the drive.
 

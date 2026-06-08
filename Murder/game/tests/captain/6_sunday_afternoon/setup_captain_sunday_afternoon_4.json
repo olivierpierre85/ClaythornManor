@@ -11,8 +11,8 @@
     "choices": [
         {
             "menu": "captain_day3_afternoon_car_menu",
-            "selected": "We all leave together, in the car",
-            "redirect": "captain_day3_afternoon_car_together"
+            "selected": "Drive off alone{{intuition}}",
+            "redirect": "captain_day3_afternoon_lie_alone"
         }
     ]
 }
