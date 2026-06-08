@@ -77,6 +77,19 @@ label common_day3_afternoon_lad_psychic_captain_discussion_1:
 
     return
 
+label common_day3_afternoon_lad_psychic_captain_discussion_2b:
+
+    psychic """
+    But how could we leave?
+
+    The nearest town is miles away.
+
+    I can't walk that far. 
+
+    And even if I could, I'm not prepared for such a journey.
+    """
+    
+    return
 
 label common_day3_afternoon_lad_psychic_captain_discussion_2:
     
@@ -90,15 +103,7 @@ label common_day3_afternoon_lad_psychic_captain_discussion_2:
         I definitely should stay here.
         """
 
-    psychic """
-    But how could we leave?
-
-    The nearest town is miles away.
-
-    I can't walk that far. 
-
-    And even if I could, I'm not prepared for such a journey.
-    """
+    call common_day3_afternoon_lad_psychic_captain_discussion_2b
 
     if current_character.text_id == "lad":
         """

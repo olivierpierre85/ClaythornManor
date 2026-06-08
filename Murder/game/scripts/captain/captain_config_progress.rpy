@@ -187,12 +187,16 @@ label captain_config_progress:
             #  presetting the car_ambush ending.)
             #
             # Checkpoint -> JSON plan coverage:
-            #     1 no car       -> plan 1        (shot_fleeing)
-            #     2 car + petrol -> plans 2, 3, 4 (car_ambush / survives via menu)
+            #     1 no car            -> plan 1        (shot_fleeing)
+            #     2 petrol, no car    -> plan 1        (shot_fleeing; petrol alone does
+            #                                           not open the car branch)
+            #     3 car + petrol      -> plans 2, 3, 4 (car_ambush / survives via menu)
             'sunday_afternoon': [
                 # 1 - No working car -> on foot, shot_fleeing
                 {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True}},
-                # 2 - Car + petrol -> car_menu -> car_ambush / survives
+                # 2 - Petrol but no seen_car -> still no car branch -> on foot, shot_fleeing
+                {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'petrol_tin_in_shed': True}},
+                # 3 - Car + petrol -> car_menu -> car_ambush / survives
                 {"label": "captain_day3_afternoon", "threads": {'tell_boxer_story': True, 'butler_key': True, 'seen_car': True, 'petrol_tin_in_shed': True}},
             ],
         }

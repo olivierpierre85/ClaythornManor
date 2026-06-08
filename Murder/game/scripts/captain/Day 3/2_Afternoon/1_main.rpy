@@ -43,12 +43,16 @@ label captain_day3_afternoon:
 
     if captain_details.threads.is_unlocked('seen_car') and captain_details.threads.is_unlocked('petrol_tin_in_shed'):
 
+        call common_day3_afternoon_lad_psychic_captain_discussion_2b
+
         captain """
-        As it happens, we are not obliged to walk.
+        Luckily, we might not need to walk.
 
-        The old motor car in the garage wants only petrol, and I have seen a full tin in the garden shed.
+        There is an old car in the garage, probably Lady Claythorn's old vehicle.
 
-        I can have it running inside the hour.
+        It was out of petrol when I checked it, but I have also seen a full tin of petrol in the garden shed.
+
+        If the old car is in decent enough shape, I might be able to get it running.
         """
 
         lad """
@@ -56,7 +60,9 @@ label captain_day3_afternoon:
         """
 
         captain """
-        I have driven worse, on worse roads than these.
+        Yes. I have driven worse, on worse roads than these.
+
+        So I do not think it would be a problem to drive out of here.
         """
 
         if captain_details.endings.is_unlocked('car_ambush'):
