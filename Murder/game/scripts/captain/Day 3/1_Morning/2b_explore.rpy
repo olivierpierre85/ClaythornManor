@@ -69,9 +69,9 @@ label captain_day3_morning_explore:
 
     I consider what to do.
 
-    The sensible course is to search the house and find out what has become of the others.
+    My instincts tell me to search the house and find out what has become of the others.
 
-    Or I could shut myself in my own room, lock the door, and simply wait to see what happens.
+    But I could also shut myself in my own room, lock the door, and simply wait to see what happens.
     """
 
     call change_time(9, 30)
@@ -149,8 +149,6 @@ label captain_day3_morning_explore:
     """
 
     # On his solo round the captain may already have settled two of the rooms
-    # the psychic has just left open. Each flag decides whether he reports what
-    # he found or discovers it now, together with the others:
     #   day3_morning_drunk_checked - he found Mr Manning dead in his bed
     #   day3_morning_nurse_checked - he let himself into Miss Marsh's empty room
 
@@ -168,7 +166,7 @@ label captain_day3_morning_explore:
         Oh dear God.
         """
 
-        lad """
+        lad -scared """
         Killed?
         """
 

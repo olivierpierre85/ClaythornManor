@@ -275,7 +275,7 @@ label captain_day3_morning_nurse:
 
     Miss Marsh has it.
 
-    I am now defenceless.
+    I am defenceless.
     """
 
     play sound gun

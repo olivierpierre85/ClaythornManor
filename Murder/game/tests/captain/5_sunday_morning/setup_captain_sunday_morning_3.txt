@@ -33,12 +33,11 @@ Rosalind Marsh: What can we do then?
 Sushil Sinha: I see two options:
 Sushil Sinha: First, we could search this place and try to make sense of what is happening.
 Sushil Sinha: I have a gun, so I can protect myself.
-Rosalind Marsh: But could you protect me?
-Rosalind Marsh: And what is the second option.
-We could leave right away, on foot if we must.
+Rosalind Marsh: I do not like the idea of roaming around the house, even with you to protect me.
+Rosalind Marsh: What is the second option?
+Sushil Sinha: We could leave right away, on foot if we must.
 Rosalind Marsh: On foot, Captain?
 Sushil Sinha: I am afraid yes.
-Sushil Sinha: I do not see another way.
 Sushil Sinha: Lady Claythorn and her staff most likely left with the motor car.
 Sushil Sinha: It is a fairly long walk to the town, but it is still early, I am sure we can make it.
 Rosalind Marsh: Oh, I am sure you could, Captain.
@@ -52,15 +51,17 @@ Sushil Sinha: I see.
 I think her condition might be worse than her quiet behaviour shows.
 But if she does not want to tell me more, I will not press her.
 Sushil Sinha: In that case, I believe the safer bet is for me to leave alone.
-Sushil Sinha: You could hide until I come back, I am sure I can make it before the end of the day.
+Sushil Sinha: And I should go as soon as possible then, this way there is a very good chance that I can come back for you before the end of the day.
+Sushil Sinha: You could hide until then.
 Rosalind Marsh: I see.
-Rosalind Marsh: If I am being honest I do not like this captain, it feels extremely dangerous for me.
+Rosalind Marsh: If I am being honest, I do not like this, Captain.
+Rosalind Marsh: It feels extremely dangerous for me.
 Sushil Sinha: I know and I am sorry, but I still believe it is our best chance.
 Sushil Sinha: And if it can ease your mind, you can take this pistol.
 Sushil Sinha: I try to always keep it on me, one never knows when one might need protection.
 Sushil Sinha: Do you know how to use one?
 Rosalind Marsh: I can manage, I believe.
-Rosalind Marsh: But I really wish I won't have to use it.
+Rosalind Marsh: But I really hope I won't have to use it.
 Sushil Sinha: You probably won't, just find a safe hidden place, close the door and do not open to anybody.
 Sushil Sinha: It is safe to say that everyone is a suspect at this point.
 Rosalind Marsh: You are right.
@@ -69,25 +70,24 @@ Rosalind Marsh: It should be empty now.
 Sushil Sinha: The attic, good idea.
 Sushil Sinha: I have the butler's master key.
 Sushil Sinha: Use it to open a room and hide in it.
+I hand her the key, I do not need it anymore anyway.
 Rosalind Marsh: All right, I think I can manage that.
-Rosalind Marsh: Thank you captain.
-Sushil Sinha: Good luck Miss Marsh.
+Rosalind Marsh: Thank you, Captain.
+Sushil Sinha: Great, in that case I see no reason to linger.
+Sushil Sinha: I will go straight away and come back as soon as possible.
+Sushil Sinha: Good luck, Miss Marsh.
+Rosalind Marsh: Good luck, Captain.
 I do not waste time and go down fast to the entrance hall.
 It is still empty, so I make it outside.
-I took only my coat and what will fit in its pockets.
+I take only my coat and what will fit in its pockets.
 The drive gives way to a rough road, and the road to open country between the trees.
-I keep a solid pace for the better part of an hour.
-Then, somewhere behind me, I hear an engine.
-A motor car, coming up the road at my back.
-For a moment I let myself hope it is help, sent on ahead of the others.
-I raise a hand and step to the verge to let it pass.
-It does not slow.
-If anything it gathers speed, and it holds straight for me.
-I throw myself towards the trees.
-But the road is wide open, and a man on foot is no match for a motor.
-The car corrects as I move, and the wheels come with me.
-You left a sick woman behind and set out alone, certain the open road was safer than the house.
-You heard the motor in good time.
-A real soldier would have read it for what it was and taken to the trees.
-Instead you stood in the road and waited to be saved.
-The road belonged to them, just as the manor had.
+I keep a solid pace for an hour, then, away to my right, I notice something.
+A shape that is the wrong colour for bark.
+And from that shape, I can spot the barrel of a rifle.
+I quickly grab for my own gun but come up empty.
+Miss Marsh has it.
+I am defenceless.
+You set out alone, on foot, into open country you did not know.
+A soldier ought to have known better than to cross such ground without cover.
+But you were no soldier, whatever the medals said.
+The shot came from the treeline, and you did not hear the second one.
