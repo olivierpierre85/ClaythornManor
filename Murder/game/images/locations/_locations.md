@@ -13,16 +13,15 @@ The **id** column is the output filename (`<id>.png`) and matches the `change_ro
 | billiard_room      | billiard room with a green baize table and a small bar on the side                                                                                                  |
 | dining_room        | formal dining room with a long table laid for dinner, tall candelabra, eight high-backed chairs                                                                     |
 | library            | library with tall bookshelves and a small table holding an open book                                                                                                |
-| portrait_gallery   | narrow gallery lined with portrait paintings of various size, age with both men, women and children, a narrow runner carpet, end with a closed door                 |
-| hallway            | panelled ground-floor corridor with a runner carpet, closed doors only on one side, and a longcase clock                                                            |
-| bedrooms_hallway   | upstairs bedroom corridor with rows of panelled doors, a long runner carpet and wall sconces                                                                        |
-| bedroom_lad        | modest guest bedroom plainly furnished with a simple iron bed and a worn travelling case                                                                            |
-| bedroom_psychic    | mysterious guest bedroom draped in dark velvet, with a crystal ball and tarot cards on the dressing table                                                           |
-| bedroom_doctor     | disordered guest bedroom with a doctor's bag, scattered glass vials and an unmade bed                                                                               |
-| bedroom_captain    | neat guest bedroom with a military trunk, a folded officer's uniform and a ceremonial sabre on the wall                                                             |
-| bedroom_host       | elegant lady's bedroom with a large vanity mirror, draped theatrical gowns and a chaise longue                                                                      |
-| bedroom_drunk      | dishevelled guest bedroom with empty bottles, a rumpled bed and a coat thrown over a chair                                                                          |
-| bedroom_broken     | shadowy guest bedroom with the curtains drawn, a wash basin and a discarded face mask on the dresser                                                                |
+| portrait_gallery   | narrow gallery lined with portrait paintings of various size, age with both men, women and children, a narrow runner carpet, end with a closed door                 |  |
+| bedrooms_hallway   | panelled ground-floor corridor with a runner carpet, closed doors only on one side, and a longcase clock                                                            |
+| bedroom_lad        | impressive guest bedroom with a worn travelling case                                                                                                                |
+| bedroom_psychic    | mysterious guest bedroom draped in dark velvet, with tarot cards on the dressing table                                                                              |
+| bedroom_doctor     | slightly disordered guest bedroom with a doctor's bag, and a syringe on a desk                                                                                      |
+| bedroom_captain    | neat guest bedroom with a military trunk, a folded officer's uniform on a stand                                                                                     |
+| bedroom_host       | elegant lady's bedroom with a large vanity mirror, a chaise longue, and a bed                                                                                       |
+| bedroom_drunk      | dishevelled guest bedroom with two empty whiskies bottle, a rumpled bed and a coat thrown over a chair                                                              |
+| bedroom_broken     | shadowy guest bedroom with the curtains drawn                                                                                                                       |
 | bedroom_nurse      | tidy guest bedroom with a neatly made bed, a folded nurse's apron and a small medical case                                                                          |
 | basement_stairs    | narrow stone staircase descending into the basement, bare brick walls and an iron handrail                                                                          |
 | servant_stairs     | narrow servants' staircase, plain and steep with a worn wooden handrail                                                                                             |

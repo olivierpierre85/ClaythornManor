@@ -182,7 +182,7 @@ label doctor_day3_morning_captain:
 
     call change_time(11, 40)
 
-    $ change_room('hallway', dissolve)
+    $ change_room('bedrooms_hallway', dissolve)
 
     """
     We all stand in front of Miss Marsh's room.
