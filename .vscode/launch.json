@@ -99,6 +99,15 @@
       "preLaunchTask": "Antigravity: Process Infocards (with Addon)",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
+    },
+    {
+      "name": "Locations: Toggle day/night lighting",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/dummy.py",
+      "preLaunchTask": "Locations: Toggle day/night lighting",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
     }
   ]
 }

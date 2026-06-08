@@ -126,7 +126,16 @@
         "attic_males_room",
         "attic_females_room",
         "butler_room",
-        "toolshed"
+        "toolshed",
+        "manor_exterior",
+        "manor_garden",
+        "forest",
+        "forest_road",
+        "toolshed_outside_day",
+        "toolshed_outside_night",
+        "train_station",
+        "police_station",
+        "house_on_fire"
       ],
       "default": "library"
     },
@@ -135,6 +144,32 @@
       "type": "promptString",
       "description": "How many images to generate (each with a different seed)",
       "default": "1"
+    },
+    {
+      "id": "fluxFile",
+      "type": "pickString",
+      "description": "Select the file in flux_2_final_choices to toggle",
+      "options": [
+        "bedroom_broken.png",
+        "bedroom_broken_day.png",
+        "bedroom_captain.png",
+        "bedroom_doctor.png",
+        "bedroom_drunk.png",
+        "bedroom_host.png",
+        "bedroom_lad.png",
+        "bedroom_nurse.png",
+        "bedroom_psychic.png",
+        "bedrooms_hallway.png",
+        "billiard_room.png",
+        "dining_room.png",
+        "entrance_hall.png",
+        "library.png",
+        "manor_exterior.png",
+        "manor_exterior_day.png",
+        "portrait_gallery.png",
+        "tea_room.png"
+      ],
+      "default": "bedroom_broken.png"
     }
   ],
   "tasks": [
@@ -332,6 +367,23 @@
         "c:\\Projects\\ClaythornManor\\tools\\process_infocards.py",
         "--addon",
         "${input:infoCardAddon}"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Locations: Toggle day/night lighting",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\toggle_location_lighting.py",
+        "c:\\Projects\\ClaythornManor\\Images\\locations_new\\flux_2_final_choices\\${input:fluxFile}"
       ],
       "presentation": {
         "reveal": "always",
