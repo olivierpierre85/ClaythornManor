@@ -63,6 +63,40 @@ label captain_day3_afternoon:
         Yes. I have driven worse, on worse roads than these.
 
         So I do not think it would be a problem to drive out of here.
+
+        I will see if I can start the car and bring it in front of the entrance.
+
+        You can wait for me there, it should not take very long.
+        """
+
+        call change_time(13, 00)
+
+        $ change_room('manor_garden', dissolve)
+
+        """
+        I leave the others by the front steps and go round alone.
+
+        The petrol tin still sits in the garden shed where I found it. 
+        
+        I pick it up.
+        """
+
+        $ change_room('garage', dissolve)
+
+        """
+        I fill the tank, set the choke, and work the crank.
+
+        The engine baulks twice, then catches on the third pull and settles into a rough idle.
+
+        It runs. That is all I ask of it.
+        """
+
+        $ change_room('manor_garden', dissolve)
+
+        """
+        I ease the car out of the garage and bring toward the Manor's entrance.
+
+        The engine runs rough beneath me, but it runs.
         """
 
         if captain_details.endings.is_unlocked('car_ambush'):
@@ -71,32 +105,40 @@ label captain_day3_afternoon:
             """
             And yet.
 
-            Something in me baulks at the picture of it.
+            Something in me shivers.
 
-            The four of us packed into one slow machine, crawling down a single road that anyone might be watching.
+            I feel an overwhelming sense of doom.
 
             I cannot say why, but I have the strongest sense that to leave together, in that car, is to die together.
 
-            One man, travelling light and quiet, would stand a far better chance.
+            I assumed everyone still in the house were in the same boat as I.
+
+            But what if they are not.
+
+            Maybe I was too quick to disregard them as a thread.
+
+            The safest thing now would be to leave alone.
 
             It would be a contemptible thing to do.
 
-            It might also be the only thing that works.
+            It might also be the only way to get out of here alive.
+
+            I can send help after I reach town.
+
+            Maybe they will be fine just waiting a few hours there.
+
+            But as I am thinking this, I know it is probably not true.
+
+            If I leave now, I might not see them alive again.
             """
 
             $ time_left = 1
             call run_menu( TimedMenu("captain_day3_afternoon_car_menu", [
-                TimedMenuChoice("We all leave together, in the car", 'captain_day3_afternoon_car_together', early_exit=True),
+                TimedMenuChoice("We all leave together, in the car", 'captain_day3_afternoon_car_together_intro', early_exit=True),
                 TimedMenuChoice("Drive off alone{{intuition}}", 'captain_day3_afternoon_lie_alone', early_exit=True),
             ], image_left="psychic", image_right="lad"))
 
         else:
-
-            """
-            It is settled, then.
-
-            We go together, and we go at once.
-            """
 
             jump captain_day3_afternoon_car_together
 
@@ -141,45 +183,51 @@ label captain_day3_afternoon:
 
         jump captain_ending_run_over
 
-
-# ------------------------------------
-#   AFTERNOON — leave together by car
-#
-#   The captain brings the car round to the front of the manor and the others
-#   board there. On the explore path the hiding nurse emerges from the front
-#   door at this moment; on the confide path she is already among them. Either
-#   way all four end up aboard and the shared ambush ride follows.
-# ------------------------------------
-label captain_day3_afternoon_car_together:
-
-    call change_time(13, 00)
-
-    $ change_room('manor_garden', dissolve)
+label captain_day3_afternoon_car_together_intro:
 
     """
-    I leave the others by the front steps and go round to the garage alone.
+    Despite everything in my body telling me to leave, I can not make myself abandon them to their fate.
 
-    I fetch the tin from the shed, fill the tank, and coax the old engine into life.
+    We will all leave together.
+    """
 
-    It runs rough, but it runs.
+    jump captain_day3_afternoon_car_together
 
-    I bring it round to the front of the manor and draw up before the steps.
+    return
 
-    As I do, a figure comes out of the front door.
+
+label captain_day3_afternoon_car_together:
+
+    """
+    I bring the car round to the front of the manor.
+
+    Mr Harring and Miss Baxter are already outside, ready for the road.
+
+    As I draw up before the steps, another figure comes out of the front door.
 
     Rosalind Marsh.
 
-    She has been somewhere in the manor all this while, and says nothing of where.
+    She has been somewhere in the manor all this while.
+
+    I step out of the car.
     """
 
     nurse """
     You were going to leave without me.
     """
 
+    """
+    We are all baffle by her apparition, but there is no time for long explanation.
+
+    I want to leave as soone as possible.
+    """
+
     captain """
     We did not know you were alive, Miss Marsh.
 
-    Get in. Quickly.
+    But now you can come with us.
+
+    Please, all of you, get in.
     """
 
     """
@@ -187,7 +235,7 @@ label captain_day3_afternoon_car_together:
 
     I do not care for the timing of it.
 
-    But I will not leave a living soul on that gravel.
+    But I can not in good conscience leave her on that gravel.
     """
 
     $ change_room('forest_road', dissolve)
@@ -215,13 +263,45 @@ label captain_day3_afternoon_car_together:
     """
 
     """
-    I get out to look at the engine, because that is what a man does, and because I cannot think what else to do.
+    I get out to look at the engine, because that is what a man does, and I cannot think what else to do.
 
     The wood on either side is very still.
 
-    Too still.
+    We are utterly alone.
+    """
 
-    I understand, in the last clear moment I am granted, that the car was never meant to carry us far.
+    play sound door_open
+
+    """
+    Someone gets out of the car.
+
+    I yell while I am still looking at the engine.
+    """
+
+    captain """
+    Stay inside!
+
+    We do not know if it is safe here.
+    """
+
+    """
+    I keep examining the car and check the exhaust.
+    
+    There is something stuck in it.
+
+    I reach into the exhaust and pull out what is blocking it.
+
+    A potato.
+
+    How did it get there?
+    """
+    
+    """
+    I hear footsteps coming towards me.
+    """
+
+    captain """
+    Please, go back in the car!
     """
 
     play sound gun
@@ -233,6 +313,14 @@ label captain_day3_afternoon_car_together:
 #   AFTERNOON — the coward's lie (survive)
 # ------------------------------------
 label captain_day3_afternoon_lie_alone:
+
+    """
+    I roll the car up to the front steps, where the three of them are waiting.
+
+    The boy steps forward to open the door.
+
+    I do not let him.
+    """
 
     captain """
     The car will not carry four of us over the rough ground to the lodge.
@@ -278,18 +366,12 @@ label captain_day3_afternoon_lie_alone:
     I have no intention of coming back, and I think the boy half knows it.
 
     He asks anyway, because he would sooner be lied to than left without a word.
-
-    I fetch the tin from the shed, fill the tank, and bring the old car grinding up the drive.
-
-    Alone.
     """
 
-    $ change_room('manor_garden', dissolve)
-
-    call change_time(13, 00)
+    $ change_room('forest_road', dissolve)
 
     """
-    I do not look back at the house.
+    I let out the clutch and pull away, past the three of them on the steps, and do not look back at the house.
 
     A man who looks back might turn the car around, and I have decided not to be that man today.
 
