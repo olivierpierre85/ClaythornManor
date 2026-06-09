@@ -6,8 +6,9 @@ http://127.0.0.1:7860).
 Reads room ids + descriptions from:
     Murder/game/images/locations/_locations.md   (Markdown tables)
 
-The file has an "Interior locations" and an "Outdoor locations" section; rows
-under each use the matching prompt template (see PROMPT_TEMPLATES below).
+The file has "Interior locations", "Attic locations" and "Outdoor locations"
+sections; rows under each use the matching prompt template (see
+PROMPT_TEMPLATES below).
 
 Each description is wrapped in its prompt template and POSTed to
 /sdapi/v1/txt2img. The returned PNG is saved as <id>_<variant>.png (the variant
@@ -49,6 +50,11 @@ PROMPT_TEMPLATES = {
         "{description} at night. Warm amber light, touches of colorful objects. "
         "Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures."
     ),
+    "attic": (
+        "A high-quality semi-realistic digital painting of a 1920s Scottish manor "
+        "{description} at night. Warm amber light. "
+        "Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures."
+    ),
     "outdoor": (
         "A high-quality semi-realistic digital painting of a {description}. "
         "Warm amber light. Deep soft shadows, mysterious atmosphere, wide shot, "
@@ -78,7 +84,8 @@ def parse_locations(md_path):
     """Return [(id, description, template), ...] from the Markdown tables.
 
     Rows under an "Outdoor"/"Outside"/"Exterior" heading use the outdoor
-    template; everything else defaults to the interior template.
+    template, rows under an "Attic" heading use the attic template, and
+    everything else defaults to the interior template.
     """
     rows = []
     template = "interior"
@@ -88,6 +95,8 @@ def parse_locations(md_path):
             low = line.lower()
             if any(k in low for k in ("outdoor", "outside", "exterior")):
                 template = "outdoor"
+            elif "attic" in low:
+                template = "attic"
             elif "interior" in low:
                 template = "interior"
             continue
