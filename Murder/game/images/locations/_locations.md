@@ -25,13 +25,13 @@ Wrapped in the interior manor template:
 | bedroom_drunk      | dishevelled guest bedroom with two empty whiskies bottle, a rumpled bed and a coat thrown over a chair                                                              |
 | bedroom_broken     | shadowy guest bedroom with the curtains drawn                                                                                                                       |
 | bedroom_nurse      | tidy guest bedroom with a neatly made bed, a folded nurse's apron and a small medical case                                                                          |
-| basement_stairs    | narrow stone staircase descending into the basement, bare brick walls and an iron handrail                                                                          |
-| servant_stairs     | narrow servants' staircase, plain and steep with a worn wooden handrail                                                                                             |
-| kitchen            | large servants' kitchen with a cast-iron range, copper pots hung above a long worktable and a flagstone floor                                                       |
-| scullery           | cramped scullery with a deep stone sink, washing tubs and shelves of crockery                                                                                       |
-| gun_room           | gun room with a glass-fronted cabinet of hunting rifles, a revolver on the table and mounted antlers                                                                |
-| garage             | manor garage with an old motor car, stacked petrol cans and tools hung on the wall                                                                                  |
-| attic_hallway      | cramped attic corridor with sloping beamed ceilings, bare floorboards and a single small window                                                                     |
+| basement_stairs    | staircase descending into the basement, view from the top                                                                                                           |
+| servant_stairs     | narrow servants' staircase, plain and steep with a worn wooden handrail, a footman livery hangs on the wall                                                         |
+| kitchen            | large servants' kitchen with a cast-iron range, a long worktable and a flagstone floor                                                                              |
+| scullery           | cramped scullery with a deep stone sink                                                                                                                             |
+| gun_room           | large downstairs gun room with a glass-fronted cabinet of hunting rifles, central table with small handgun, flagstone floor                                         |
+| garage             | manor garage with an old motor car, tools hung on the wall, large garage door closed                                                                                |
+| attic_hallway      | wide attic corridor, high ceiling, doors on the side, scary vibe, bare floorboards, point of view standing at the top of a staircase                                |
 | attic_storage_room | cluttered attic storage room full of dust-sheeted furniture, old trunks and cobwebbed crates                                                                        |
 | attic_males_room   | spartan servants' attic room for the menfolk, with a narrow iron bed and a plain washstand                                                                          |
 | attic_females_room | modest servants' attic room for the maids, with twin iron beds and a small dresser                                                                                  |
@@ -46,12 +46,12 @@ Wrapped in the outdoor template:
 
 | id                     | description                                                                                                                  |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| manor_exterior         | grand 1920s Scottish manor seen from the gravel drive, its towering stone facade and lit windows rising against a stormy sky  |
+| manor_exterior         | grand 1920s Scottish manor seen from the gravel drive, its towering stone facade and lit windows rising against a stormy sky |
 | manor_garden           | 1920s Scottish manor garden with clipped hedges, gravel paths and a stone fountain, the dark house looming behind            |
 | forest                 | dense Scottish pine forest, tall trees and tangled undergrowth, mist drifting between the trunks                             |
-| forest_road            | narrow rutted road winding through a dark Scottish forest, tall trees crowding either side                                  |
-| toolshed_outside_day   | weathered stone toolshed in the manor grounds by day, a heavy wooden door and overgrown grass around it                     |
-| toolshed_outside_night | weathered stone toolshed in the manor grounds at night, a heavy wooden door and shadows pooling around it in the rain       |
-| train_station          | small rural Scottish railway station with an empty platform, gas lamps, a wooden bench and a canopy                         |
-| police_station         | modest small-town Scottish police station of grey stone, seen from the street, a blue lamp above its door                   |
-| house_on_fire          | 1920s Scottish manor engulfed in flames at night, fire bursting from the windows and roof, smoke billowing into a dark sky  |
+| forest_road            | narrow rutted road winding through a dark Scottish forest, tall trees crowding either side                                   |
+| toolshed_outside_day   | weathered stone toolshed in the manor grounds by day, a heavy wooden door and overgrown grass around it                      |
+| toolshed_outside_night | weathered stone toolshed in the manor grounds at night, a heavy wooden door and shadows pooling around it in the rain        |
+| train_station          | small rural Scottish railway station with an empty platform, gas lamps, a wooden bench and a canopy                          |
+| police_station         | modest small-town Scottish police station of grey stone, seen from the street, a blue lamp above its door                    |
+| house_on_fire          | 1920s Scottish manor engulfed in flames at night, fire bursting from the windows and roof, smoke billowing into a dark sky   |
