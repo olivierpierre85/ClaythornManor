@@ -361,6 +361,8 @@ label doctor_day3_afternoon_captain_escape_with_psychic:
     Their motives remained unclear.
     """
 
+    pause 1
+
     """
     Captain Sinha, Ted Harring, and Amelia Baxter eventually returned home.
 
@@ -379,6 +381,8 @@ label doctor_day3_afternoon_captain_escape_with_psychic:
     And that he had the sense to keep moving.
     """
 
+    pause 1
+
     """
     A week later, I returned to the police station one last time.
 
@@ -390,13 +394,11 @@ label doctor_day3_afternoon_captain_escape_with_psychic:
 
     But when they told her Thomas was dead, she said they were mistaken.
 
-    Thomas Moody had died months ago, apparently from war injuries.
+    Her son had already died months ago, apparently from war injuries.
 
-    Then she added something else.
-
-    Her other son, Archibald, had been missing for a week or more.
+    Whoever was at the manor, it was not Thomas Moody.
     """
 
-    $ broken_details.description_hidden.unlock('lie_name')
+    $ broken_details.description_hidden.unlock('lie_impostor')
 
     jump doctor_ending_escape

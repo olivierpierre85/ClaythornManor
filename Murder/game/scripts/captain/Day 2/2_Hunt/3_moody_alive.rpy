@@ -171,7 +171,7 @@ label captain_day2_hunt_moody_alive:
     """
     I do not like the idea of following him alone into the trees.
 
-    It is hard to believe there is anything wrong with his weapon.
+    And it is hard to believe there is anything wrong with his weapon.
 
     But I cannot find a polite reason to refuse.
 
@@ -235,6 +235,8 @@ label captain_day2_hunt_moody_alive:
 
     Then I recognised the name of the company that received the order: B Company, 2nd Battalion, Lancashire Fusiliers.
 
+    My own company.
+
     And then I checked the date of the order.
     
     It was a date that will remain engraved in my memory for ever.
@@ -293,7 +295,7 @@ label captain_day2_hunt_moody_alive:
 
     Yet yesterday you were entertaining everyone with tales of Burma and the Boxers, as though you had fought in them yourself.
 
-    You are a fraud, that is plain.
+    You are a fraud, that is clear enough.
 
     And maybe somebody is using me to hurt you.
 
@@ -324,8 +326,38 @@ label captain_day2_hunt_moody_alive:
     But I can quite look after myself, I assure you.
     """
 
+    captain """
+    Thomas. Please.
+
+    It is all a mistake.
     """
-    He levels the rifle at my head.
+
+    broken """
+    You will not sway me by using that name.
+
+    You will only anger me the more.
+    """
+
+    captain """
+    What do you mean?
+    """
+
+    broken """
+    Well, I suppose there is no reason to hide it anymore.
+
+    Thomas was the name of someone very dear to me.
+
+    I would call him Tom, and he would call me Archie.
+
+    But that is over now.
+
+    All because of you.
+    """
+
+    $ broken_details.description_hidden.unlock('lie_name')
+
+    """
+    Before I can make sense of what he is saying, he levels the rifle at my head.
 
     I raise my hands to protect myself.
     """

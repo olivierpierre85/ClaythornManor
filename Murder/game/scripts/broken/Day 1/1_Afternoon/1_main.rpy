@@ -63,7 +63,7 @@ label broken_introduction:
 
     call change_time(14, 00, 'Arrival', 'Friday', hide_minutes=True, chapter='friday_afternoon')
 
-    call black_screen_transition("{s}Thomas Moody{/s}", "Archibald Moody")
+    call black_screen_transition("{s}Thomas Moody{/s}", "Archibald Devereux")
 
     $ change_room("train_inside")
 

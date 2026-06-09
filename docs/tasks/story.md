@@ -104,6 +104,7 @@ THE OUTside shed will show nothing of interest for captain. But the Broken will 
 ### Ideas to think over (optional)
 
 - [ ] Thomas moody room ransacked?
+- [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
   
 
 ## Nurse
@@ -147,6 +148,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 - add a mysterious Sound when Thomas Moody comes. That's the first time we see him make it alive for day 2. Or maybe at least an ominous "There is no reason he shouldn't be ther?" No to obvious
 - Expands story about his noble upbringing in generic dialogs.
 - [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big 
+- [ ] - [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
 
 ## Host
 

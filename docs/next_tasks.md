@@ -17,6 +17,8 @@ IDEA THE Butler is hired thug, in here for the money, not to kill, but not not t
 
 UNLOCKS HOST Rethink with Broken
 
+UNlock Broken not great
+
 Maybe twist, add a character the butler. Yes there is a hidden butler, if you find something about him, it unlocks him OR, WHEN ALL THE CHARACTER HAVE BEEN SAVED. Only captain, host, broken and drunk could find info.. With new things to unlock. And only one possible path, one choice at the beginning. I'll d what you want... Character selection => I
 
 THREAD, locked shed image
@@ -25,17 +27,12 @@ THREAD, locked shed image
 - [x] Friday Evening
 - [x] Saturday Morning
 - [ ] Saturday Hunt - **almost**
-  - [ ] TODO: **ADD info unlocks**
     - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
-    - [ ] NO unlock for Thomas Moody ? Or find something else?
 - [x] Saturday evening
 - [ ] sunday Morning
   - [ ] hard to reach DIALOG but unlocks NOTHINg => **Find something to put there**. => maybe the intuition should be there. DO NOT TAKE THE CAR we replace the survive ending here, leaving no way to escape on the last chapter? Worth thinking about
 - [x] **sunday AFternoon**
 
-**Captain's gun**
-**Add dialog somewhere to say he has a gun.**
-QUID gun for the captain ? Has one when he confront the nurse, so he should have one, or a way to get one? It seems assume he has one with him at all time? Or should I rewrite that ?
 
 ## Technical Tasks
 
