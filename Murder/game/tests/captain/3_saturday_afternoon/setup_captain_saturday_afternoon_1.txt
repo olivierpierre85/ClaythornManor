@@ -79,7 +79,7 @@ Thomas Moody: My rifle has been pulling to the left all morning.
 Thomas Moody: I should value a second eye upon it.
 Thomas Moody: A few paces up the track will do.
 I do not like the idea of following him alone into the trees.
-It is hard to believe there is anything wrong with his weapon.
+And it is hard to believe there is anything wrong with his weapon.
 But I cannot find a polite reason to refuse.
 My manners overrule my better judgement.
 Sushil Sinha: Very well.
@@ -104,6 +104,7 @@ Thomas Moody: The order was to send men to take a vaguely strategic position in 
 Thomas Moody: At first, I did not understand what it was doing here.
 Thomas Moody: There must have been thousands of such orders issued during the war.
 Thomas Moody: Then I recognised the name of the company that received the order: B Company, 2nd Battalion, Lancashire Fusiliers.
+Thomas Moody: My own company.
 Thomas Moody: And then I checked the date of the order.
 Thomas Moody: It was a date that will remain engraved in my memory for ever.
 Thomas Moody: And at the end of the order, the name of the man who signed the fatal order.
@@ -129,7 +130,7 @@ Thomas Moody: Especially since I am now sure that you are not the war hero you c
 Thomas Moody: I know that a staff officer never sees battle.
 Thomas Moody: It was obvious today, when you could not even shoot a bird right under your nose.
 Thomas Moody: Yet yesterday you were entertaining everyone with tales of Burma and the Boxers, as though you had fought in them yourself.
-Thomas Moody: You are a fraud, that is plain.
+Thomas Moody: You are a fraud, that is clear enough.
 Thomas Moody: And maybe somebody is using me to hurt you.
 Thomas Moody: But I am very happy to oblige.
 He does not lower the rifle.
@@ -141,11 +142,21 @@ Sushil Sinha: You are being used to their end.
 Sushil Sinha: And you are no safer than I am.
 Thomas Moody: How very considerate of you, Captain.
 Thomas Moody: But I can quite look after myself, I assure you.
-He levels the rifle at my head.
+Sushil Sinha: Thomas. Please.
+Sushil Sinha: It is all a mistake.
+Thomas Moody: You will not sway me by using that name.
+Thomas Moody: You will only anger me the more.
+Sushil Sinha: What do you mean?
+Thomas Moody: Well, I suppose there is no reason to hide it anymore.
+Thomas Moody: Thomas was the name of someone very dear to me.
+Thomas Moody: I would call him Tom, and he would call me Archie.
+Thomas Moody: But that is over now.
+Thomas Moody: All because of you.
+Before I can make sense of what he is saying, he levels the rifle at my head.
 I raise my hands to protect myself.
 Thomas Moody: Ah! It is rather plain you never saw battle, Captain.
 Thomas Moody: Well.
 Thomas Moody: This is as close as it gets.
-You were led into the woods by a man who suspected of wishing you harm.
+You were led into the woods by a man you suspected of wishing you harm.
 You knew the danger, yet good manners compelled you to proceed regardless.
 It is curious how the fear of causing a scene is sometimes stronger than any other.

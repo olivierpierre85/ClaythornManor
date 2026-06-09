@@ -3,7 +3,7 @@
 ## UI
 
 ### Generic
-
+- [ ] BUG => FULL_TESTINGMODE, if doing a restart, then missing menu??? Also doesn't restart thread => AVOID RESTART
 - [ ] Redo The buttons at the bottom of the say dialog (remove backtrack...)
 - IN PROGRESS, Make the chapter image 20% bigger so the text on two lines can be bigger (28 instead of 26, 
 - ?Replace the —- for the missing description by a redacted marker? 

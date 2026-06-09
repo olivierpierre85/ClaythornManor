@@ -1,6 +1,4 @@
 <!-- # cSpell:disable -->
-BUG => FULL_TESTINGMODE, if doing a restart, then missing menu??? Also doesn't restart thread => AVOID RESTART
-
 
 ## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, now give values all the time?
 
@@ -27,7 +25,7 @@ THREAD, locked shed image
 - [x] Friday Evening
 - [x] Saturday Morning
 - [ ] Saturday Hunt - **almost**
-    - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock?
+    - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock? IN captain and other
 - [x] Saturday evening
 - [ ] sunday Morning
   - [ ] hard to reach DIALOG but unlocks NOTHINg => **Find something to put there**. => maybe the intuition should be there. DO NOT TAKE THE CAR we replace the survive ending here, leaving no way to escape on the last chapter? Worth thinking about
