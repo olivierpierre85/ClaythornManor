@@ -374,6 +374,14 @@ label captain_day1_evening:
 
     Whatever is at play here, I will stay at least until tomorrow, and decide accordingly.    
 
+    Besides, I am not defenceless. 
+    
+    My service revolver is in my jacket, where I always keep it.
+
+    I have not used it much, but I believe I can still hit a close-range target.
+
+    This gives me a bit of relief.
+
     I lie back, but sleep does not come easily.
     """
 
