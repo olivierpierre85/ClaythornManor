@@ -14,13 +14,18 @@ graph TD;
     doctor -->|Letter and not drunk| drunk;
     doctor -->|Unmask| broken;
     doctor -->|Is a thief| lad;
-    doctor -->|Escape - NOT DEAD?| broken;
+    doctor -->|Impostor| broken;
     nurse -->|Not a fighter| captain;
     nurse -->|SOMETHING| drunk;
     captain -->|is not nobility| host;
+    captain -->|is not Thomas Moody| broken;
     broken -->|Name of employer| host;
     host -->|Wife Story| drunk;
     drunk -->|Final info, observes lad waking up after scene with psychic| lad;
+    captain -->|is a killer| butler;
+    drunk -->|TODO| butler;
+    host -->|TODO| butler;
+    broken -->|TODO| butler;
 ```
 
 ## 1. The Lad
