@@ -25,8 +25,13 @@
     },
     {
       "menu": "lad_day3_morning_map_menu",
-      "selected": "Go wait for Sushil",
-      "redirect": "generic_cancel"
+      "selected": "Garden",
+      "redirect": "lad_day3_morning_garden"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Portrait Gallery",
+      "redirect": "lad_day3_morning_portrait_gallery"
     }
   ]
 }

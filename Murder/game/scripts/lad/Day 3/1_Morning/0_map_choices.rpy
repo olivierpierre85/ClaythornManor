@@ -89,18 +89,10 @@ label lad_day3_morning_map_menu:
             ),
             
             TimedMenuChoice(
-                default_room_text('tea_room'), 
-                'lad_day3_morning_tea_room', 
-                10, 
-                room='tea_room',
-                condition = 'not lad_details.saved_variables["day3_morning_captain_found"]'
-            ),
-            TimedMenuChoice(
-                'Go wait for Sushil', 
-                'generic_cancel', 
-                early_exit = True, 
-                room = 'tea_room', 
-                condition = 'lad_details.saved_variables["day3_morning_captain_found"]'
+                default_room_text('tea_room'),
+                'lad_day3_morning_tea_room',
+                10,
+                room='tea_room'
             ),
 
         ], is_map = True)
@@ -457,62 +449,16 @@ label lad_day3_morning_entrance_hall:
     """
 
     """
-    I didn't really expect an answer.
+    No response.
 
-    But an authoritative voice echoes from up the stairs.
-    """
-
-    captain """
-    Who goes there?
-    """
-
-    lad """
-    It's Ted Harring. I'm down here, and Amelia Baxter's with me.
-    """
-
-    captain """
-    Understood. I'm on my way down.
-    """
-
-    """
-    Soon enough, Captain Sinha comes into view, descending the staircase to join us on the ground floor.
-    """
-
-    call common_day3_morning_meeting_captain
-
-    psychic """
-    Staying put won't give us any answers.
-    
-    We need to continue exploring the house.
-    """
-
-    captain """
-    Agreed. Should we search together?
+    My voice just echoes through the empty hall.
     """
 
     psychic """
-    Thank you, but... maybe it's better to split up. 
-    
-    We'd cover more ground that way.
+    There's no one here.
+
+    Let's continue our search.
     """
-
-    """
-    Amelia seemed nervous when she answered.
-    """
-
-    captain """
-    Makes sense. Let's proceed on our own and regroup later. 
-
-    How about the tea room?
-    """
-
-    psychic """
-    That sounds good.
-
-    See you there.
-    """
-
-    $ lad_details.saved_variables["day3_morning_captain_found"] = True
 
     return
 

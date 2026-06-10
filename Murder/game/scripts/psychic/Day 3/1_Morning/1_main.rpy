@@ -89,23 +89,21 @@ label psychic_day3_morning:
     even though his choices didn't always make much sense.
     """
 
-    call change_time(11,00)
+    call change_time(11, 30)
 
-    $ change_room('tea_room', irisout)
+    $ change_room('entrance_hall', irisout)
 
     """
-    We searched the Manor extensively, but we didn't find much anything interesting.
+    We searched the Manor extensively, but we didn't find much of anything interesting.
 
     Ted Harring insisted on taking an empty gun from the gun room.
 
     I am not sure what he intends to do with it.
 
-    Tired and demoralised, we decided to take a break in the tea room.
-
-    We rested there until we heard a familiar voice.
+    Tired and demoralised, we came back to the entrance hall.
     """
 
-    call common_day3_morning_lad_psychic_tea_room_1
+    call common_day3_morning_entrance_hall_meeting
 
     call common_day3_morning_lad_psychic_tea_room_2
 

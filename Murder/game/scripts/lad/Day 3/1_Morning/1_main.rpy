@@ -153,42 +153,20 @@ label lad_day3_morning:
 
     call run_menu(lad_details.saved_variables["day3_morning_map_menu"])
 
-    call change_time(11,00)
+    $ change_room('entrance_hall', dissolve)
 
-    $ change_room('tea_room', dissolve)
+    """
+    We've searched everywhere we could think of and found no one.
 
-    if lad_details.saved_variables["day3_morning_captain_found"]:
+    With nowhere left to look, we come back to the entrance hall.
+    """
 
-        """
-        I doubt we'll find anyone now.
+    call change_time(11, 30)
 
-        So we settled in the tea room to wait for Captain Sinha.
-        """
+    pause 1
 
-        captain """
-        It's unbelievable, but it seems we're the only three living souls left here.
+    call common_day3_morning_entrance_hall_meeting
 
-        Did you find anything?
-        """
-
-        lad """
-        Nothing.
-
-        It seems everyone is gone.
-
-        Except for the bodies.
-        """
-
-    else:
-
-        """
-        Just when we started losing hope, we decided to rest in the tea room.
-
-        But as we settled down, an authoritative voice echoed from outside the room.
-        """
-
-        call common_day3_morning_lad_psychic_tea_room_1
-        
     call common_day3_morning_lad_psychic_tea_room_2
 
     call common_day3_morning_lad_psychic_captain_death_manning

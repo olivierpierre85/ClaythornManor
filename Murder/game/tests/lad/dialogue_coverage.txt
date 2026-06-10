@@ -1,17 +1,13 @@
-Generated:                2026-04-24 11:08:00
+Generated:                2026-06-10 15:05:00
 Scope:                    character=lad
-Dialogue entries scanned: 1315
-Test lines collected:     3165
-Covered:                  1311
-Missing:                  4
-
-  game/scripts/lad/Day 1/1_Afternoon/1_main.rpy  (1 missing)
-    [lad_introduction_54914e0b] 5th September, [current_year]
+Dialogue entries scanned: 1266
+Test lines collected:     3196
+Covered:                  1264
+Missing:                  2
 
   game/scripts/lad/Day 2/2b_No Hunt/2_tea_room.rpy  (1 missing)
     [lad_day2_hunt_tea_room_ab77c264] Ah, yes, we've discussed that before.
 
-  game/scripts/lad/Day 3/1_Morning/1_main.rpy  (2 missing)
-    [lad_day3_morning_1b721dc2] Just when we started losing hope, we decided to rest in the tea room.
-    [lad_day3_morning_03565043] But as we settled down, an authoritative voice echoed from outside the room.
+  game/scripts/lad/Day 3/2_Afternoon/1_main.rpy  (1 missing)
+    [lad_day3_leave_with_car_73c696ff] Unless either of you spotted a petrol tin somewhere in the mansion?
 

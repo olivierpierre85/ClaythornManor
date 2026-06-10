@@ -1,145 +1,152 @@
-Generated:                2026-06-08 10:17:30
+Generated:                2026-06-10 15:06:21
 Scope:                    character=captain
-Dialogue entries scanned: 1604
-Test lines collected:     3014
-Covered:                  1474
-Missing:                  130
+Dialogue entries scanned: 1772
+Test lines collected:     3034
+Covered:                  1643
+Missing:                  129
 
-  game/scripts/captain/Day 3/1_Morning/0_map_choices.rpy  (46 missing)
+  game/scripts/captain/Day 1/2_Evening/1_main.rpy  (4 missing)
+    [captain_day1_evening_e82d10de] Besides, I am not defenceless.
+    [captain_day1_evening_b1cc45c3] My service revolver is in my jacket, where I always keep it.
+    [captain_day1_evening_1db400b6] I have not used it much, but I believe I can still hit a close-range target.
+    [captain_day1_evening_393fdddf] This gives me a bit of relief.
+
+  game/scripts/captain/Day 2/2_Hunt/2_moody_dead.rpy  (28 missing)
+    [captain_day2_hunt_confront_host_ff397d04] Instead, she has submitted to my interrogation as if she were expecting it.
+    [captain_day2_hunt_confront_host_bf857dd1] Her chin lifts a fraction, and the practised warmth drains from her voice.
+    [captain_day2_hunt_confront_host_85d29024] Captain, this has gone quite far enough.
+    [captain_day2_hunt_confront_host_fd73dcae] I have indulged your questions out of regard for a guest, and you have repaid me with insolence.
+    [captain_day2_hunt_confront_host_0b562773] I am not in the habit of reciting my lineage to satisfy a stranger's curiosity.
+    [captain_day2_hunt_confront_host_06597b6d] One more word on the subject, and you may pack your things this very afternoon.
+    [captain_day2_hunt_confront_host_71bfe9f3] Send me away if you wish, madam. It will change nothing.
+    [captain_day2_hunt_confront_host_b1328072] You see, I am not asking you a question I cannot answer myself.
+    [captain_day2_hunt_confront_host_7d30f294] There is a book in your own library. A registry of the great families of this county.
+    [captain_day2_hunt_confront_host_ff88bf6c] It records the peerage your family holds, and the name of that peerage is not Claythorn.
+    [captain_day2_hunt_confront_host_cbfed639] The true mistress of this house would have carried it her whole life.
+    [captain_day2_hunt_confront_host_b58e4a41] Name it, madam, and I shall offer you my fullest apology and never speak of this again.
+    [captain_day2_hunt_confront_host_0dc0349a] She does not name it.
+    [captain_day2_hunt_confront_host_a1b1d276] She sits very still, her hands folded in her lap, and for a long moment the only sound is the wind working ...
+    [captain_day2_hunt_confront_host_d2328f38] It is the Earldom of Kilbraith.
+    [captain_day2_hunt_confront_host_9d96710d] The woman you claim to be would be styled Lady Kilbraith.
+    [captain_day2_hunt_confront_host_5de84dd4] You have been answering to the name of a building, madam.
+    [captain_day2_hunt_confront_host_24966f74] A stranger to this county learnt that in an evening, from a shelf in your own library.
+    [captain_day2_hunt_confront_host_c61dd4af] She remains silent.
+    [captain_day2_hunt_confront_host_8136dd56] A man died under this roof last night.
+    [captain_day2_hunt_confront_host_caa2c362] The doctor speaks of a tired heart, and perhaps he is correct.
+    [captain_day2_hunt_confront_host_70c6ab1b] But a death must be reported all the same, and the police will come to this house.
+    [captain_day2_hunt_confront_host_aa310c92] When they do, I shall lay before them everything I have laid before you.
+    [captain_day2_hunt_confront_host_ce3851bc] A lady with nothing to hide loses nothing by it.
+    [captain_day2_hunt_confront_host_cc81494d] A woman who is not what she claims, on the very weekend a guest dies in his bed, will find their questions ...
+    [captain_day2_hunt_confront_host_028ee36c] I leave it to you to decide which of the two receives them.
+    [captain_day2_hunt_confront_host_b8f4c00e] I watch the arithmetic move behind her eyes.
+    [captain_day2_hunt_confront_host_58dcb6b1] Then her smile fades by degrees, and something tired and older takes its place beneath it.
+
+  game/scripts/captain/Day 2/3_Evening/0_map_choices.rpy  (6 missing)
+    [captain_day2_evening_downstairs_default_518d1266] The staff are still about their work downstairs.
+    [captain_day2_evening_downstairs_default_0265164f] Master key or not, I can think of no plausible errand that would carry a guest into the basement.
+    [captain_day2_evening_bedroom_lad_b88fa447] Perhaps Mr Harring is not in his room, or he is too frightened to answer.
+    [captain_day2_evening_bedroom_broken_4d6f6e85] Mr Moody lies dead on his bed.
+    [captain_day2_evening_bedroom_broken_773d2498] I wish I knew more of the cause of his death, but I lack the expertise to examine him properly.
+    [captain_day2_evening_bedroom_drunk_4f49c904] I should leave him be.
+
+  game/scripts/captain/Day 2/3_Evening/3_confrontation.rpy  (6 missing)
+    [captain_day2_evening_confront_host_09b77b5f] I believe it is time I dropped the mask.
+    [captain_day2_evening_confront_host_350b9b8f] But I swear to you, things have gone far beyond what was planned.
+    [captain_day2_evening_confront_host_ce468d9e] What has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
+    [captain_day2_evening_butler_offer_attack_715e3ac4] Miss Marsh is silent. Miss Baxter looks terrified.
+    [captain_day2_evening_butler_offer_attack_578f983d] And I will not quietly follow a man to an unknown fate.
+    [captain_day2_evening_butler_offer_attack_68682d85] Here is my chance to see what mettle I am made of.
+
+  game/scripts/captain/Day 3/1_Morning/0_map_choices.rpy  (7 missing)
     [captain_day3_morning_kitchen_f537e0d2] The range is cold.
     [captain_day3_morning_kitchen_0ae26f35] No bread has been put out. No water set to boil.
     [captain_day3_morning_kitchen_310abf2e] A breakfast service that was never begun.
     [captain_day3_morning_gun_room_c808ada8] I have already been through what is here.
     [captain_day3_morning_gun_room_a4096572] Nothing more for me.
-    [captain_day3_morning_gun_room_9c601dcb] The cartridges are not in the room. Whoever cleared the staff out has taken them, or hidden them.
-    [captain_day3_morning_gun_room_33ba537b] A loaded gun would be a comfort. An empty one is only a weight.
-    [captain_day3_morning_garage_425709af] The car still sits where I left it.
-    [captain_day3_morning_garage_f4505867] Nothing has changed.
-    [captain_day3_morning_garage_3bd059b9] The petrol tin I found last night, set out in the middle of the floor as if waiting to be carried away.
-    [captain_day3_morning_garage_b1d74422] A full can would more than serve.
-    [captain_day3_morning_garage_c16a8a2d] I could go down to the shed, fetch it, fill the tank, and be gone before the house knows I am missing.
-    [captain_day3_morning_garage_42a50a1e] It would be the safe choice for one man.
-    [captain_day3_morning_garage_bcb48319] It would also leave the others to whatever is happening here.
-    [captain_day3_morning_escape_alone_02727ed4] Decision made.
-    [captain_day3_morning_escape_alone_ea50a4fb] I close the bonnet, fetch the master key from my pocket, and slip out through the side door.
-    [captain_day3_morning_escape_alone_6f48e131] The garden lies under a thin mist.
-    [captain_day3_morning_escape_alone_45580728] The shed is where I left it last night.
-    [captain_day3_morning_stay_with_others_845f31db] No.
-    [captain_day3_morning_stay_with_others_33086073] Not yet.
-    [captain_day3_morning_stay_with_others_b4800991] I will not take the only way out of this house before I know what has become of the rest of them.
-    [captain_day3_morning_entrance_hall_240ef9ba] The front door is shut, but not bolted.
-    [captain_day3_morning_entrance_hall_9c05465e] Whoever came or went last night did so without making any noise of it.
-    [captain_day3_morning_garden_ca7a0baa] No cars. No carts. No tracks fresh on the gravel.
-    [captain_day3_morning_garden_2730c431] Whoever has gone, has gone on foot, or some hours ago.
-    [captain_day3_morning_garden_942e443f] A thin mist hangs in the trees. The air is cold.
-    [captain_day3_morning_garden_ec709533] I do not linger.
-    [captain_day3_morning_bedroom_lad_3462b07f] I try the handle. The door is not locked. The room is empty, the bed made.
-    [captain_day3_morning_bedroom_psychic_52ce108b] I try the handle. The door opens on an empty room.
-    [captain_day3_morning_bedroom_nurse_9fff9fa9] I have the master key in my pocket, but I do not use it yet.
-    [captain_day3_morning_bedroom_nurse_5c41154f] If she is in there and means to stay hidden, that is her choice.
-    [captain_day3_morning_bedroom_nurse_83541ed0] If she is not in there, the room can wait.
-    [captain_day3_morning_bedroom_host_83d8bd8c] I fit the master key. The wardrobe stands open, clothes scattered on the floor.
-    [captain_day3_morning_bedroom_drunk_6417a1fe] I have already been through Mr Manning's room.
-    [captain_day3_morning_bedroom_drunk_ab321449] There is nothing more I can do for him.
-    [captain_day3_morning_bedroom_drunk_ad9257f2] I unlock the door with the master key and step inside.
-    [captain_day3_morning_bedroom_drunk_6e31c9d0] Manning lies in his bed, sheets soaked through.
-    [captain_day3_morning_bedroom_drunk_74b23946] He has been dead for hours.
-    [captain_day3_morning_bedroom_drunk_a5b6f0c1] Someone came through this door in the night, and Manning, drunk as he was, never woke.
-    [captain_day3_morning_bedroom_drunk_857ed456] God rest you.
-    [captain_day3_morning_bedroom_drunk_a5f23161] I draw the sheet up over him and step back into the corridor.
-    [captain_day3_morning_bedroom_drunk_f1124473] Whoever did this had a key.
-    [captain_day3_morning_bedroom_drunk_ec3d416f] I had thought I was the only one with one, but evidently I was wrong.
-    [captain_day3_morning_attic_default_bd34a572] The attic is much as I left it last night.
-    [captain_day3_morning_attic_default_eee77091] I have already seen what is up here.
-    [captain_day3_morning_attic_default_f7d2c43a] There is nothing more for me in these rooms.
+    [captain_day3_morning_library_5a8aae85] The genealogy book still lies open on the table.
+    [captain_day3_morning_library_f9668c45] I have already read what I needed from it.
 
-  game/scripts/captain/Day 3/1_Morning/2a_nurse.rpy  (54 missing)
-    [captain_day3_morning_nurse_5c05ca4c] I am.
-    [captain_day3_morning_nurse_28b24d98] But the house is not.
-    [captain_day3_morning_nurse_037b095b] Explain.
-    [captain_day3_morning_nurse_824fc62b] And Lady Claythorn?
-    [captain_day3_morning_nurse_677280dc] Her door is locked.
-    [captain_day3_morning_nurse_98538d2a] She does not answer.
-    [captain_day3_morning_nurse_bcd6c43c] So it begins.
-    [captain_day3_morning_nurse_6f17a891] Whatever is at the heart of this house, it has moved in the night.
-    [captain_day3_morning_nurse_471c64e6] What of Miss Baxter and Mr Harring?
-    [captain_day3_morning_nurse_a0182ec7] I have not knocked on their doors.
-    [captain_day3_morning_nurse_091a8107] I came straight to you.
-    [captain_day3_morning_nurse_a3506f66] I think for a moment.
-    [captain_day3_morning_nurse_28632c49] The two of us alone in the corridors, looking for a fight, would be a poor plan.
-    [captain_day3_morning_nurse_134749b2] Better to get out of sight, take stock, and decide on a course before we are found.
-    [captain_day3_morning_nurse_40a957b0] We should not stay here.
-    [captain_day3_morning_nurse_e6a18baf] This room is the first place anyone would look for me.
-    [captain_day3_morning_nurse_e204a9f7] Where, then?
-    [captain_day3_morning_nurse_3687b3e5] The attic.
-    [captain_day3_morning_nurse_65e82410] His room will do.
-    [captain_day3_morning_nurse_f64fb000] No guest has any business being up there, so no one will think to look for us.
-    [captain_day3_morning_nurse_8428b286] Lead the way, Captain.
-    [captain_day3_morning_nurse_5b4782c5] I open the door a crack and listen.
-    [captain_day3_morning_nurse_d46f74d5] The corridor is empty, and very still.
-    [captain_day3_morning_nurse_ba735cee] I step out, Miss Marsh close behind.
-    [captain_day3_morning_nurse_7c9863b4] We move quickly, keeping to the side of the hall, and reach the foot of the attic stair without seeing anyone.
-    [captain_day3_morning_nurse_f2a7cb8f] The boards creak under our weight.
-    [captain_day3_morning_nurse_66a2ed43] I take the master key from my pocket and fit it to the butler's door.
-    [captain_day3_morning_nurse_1b7877a2] I usher Miss Marsh inside and close the door behind us.
-    [captain_day3_morning_nurse_cd143f22] I turn the key in the lock.
-    [captain_day3_morning_nurse_b67aeb91] Sit down, Miss Marsh.
-    [captain_day3_morning_nurse_41fb47cb] We are going to be here a little while.
-    [captain_day3_morning_nurse_5dd7ece7] Thank you.
-    [captain_day3_morning_nurse_8cd4a5fa] She sits on the edge of the narrow bed and folds her hands in her lap.
-    [captain_day3_morning_nurse_2563520a] A composed woman.
-    [captain_day3_morning_nurse_5800b875] She has not asked me a single foolish question since she came through my door.
-    [captain_day3_morning_nurse_1306ee7c] Tell me what you saw, room by room.
-    [captain_day3_morning_nurse_cd6c1ed6] Leave nothing out.
-    [captain_day3_morning_nurse_4b9a3f47] She does, plainly and in order.
-    [captain_day3_morning_nurse_b0d63ec1] Empty dining room. Cold range. Back door bolted from the inside.
-    [captain_day3_morning_nurse_8177799f] No coats taken from the hall. No carriage in the drive.
-    [captain_day3_morning_nurse_692898e3] Whoever has gone, has gone in a hurry, or has not gone at all.
-    [captain_day3_morning_nurse_008f9db9] We sit in silence for a long while after that.
-    [captain_day3_morning_nurse_d1d8c581] Now and again I hear a board ease somewhere below.
-    [captain_day3_morning_nurse_0192cbd2] Once, footsteps in the upstairs corridor — slow, deliberate, then gone.
-    [captain_day3_morning_nurse_ac546f90] I keep my hand close to my pocket and say nothing.
-    [captain_day3_morning_nurse_32aedda0] Miss Marsh does the same.
-    [captain_day3_morning_nurse_3f1f445b] She has the gift, rare in any company, of being able to sit quite still and quite quiet.
-    [captain_day3_morning_nurse_016630d1] By late morning, the house has settled into a heavy silence.
-    [captain_day3_morning_nurse_bd48a131] Whatever was moving about earlier seems to have stopped, or gone elsewhere.
-    [captain_day3_morning_nurse_5c35181f] Miss Marsh looks at me.
-    [captain_day3_morning_nurse_522df9cb] What now, Captain?
-    [captain_day3_morning_nurse_1d7ef2e5] Now we go down.
-    [captain_day3_morning_nurse_f8a26a0d] Carefully.
-    [captain_day3_morning_nurse_df277391] And we find out what has become of the others.
+  game/scripts/captain/Day 3/2_Afternoon/1_main.rpy  (60 missing)
+    [captain_day3_afternoon_6661bc26] Luckily, we might not need to walk.
+    [captain_day3_afternoon_931262f0] There is an old car in the garage, probably Lady Claythorn's old vehicle.
+    [captain_day3_afternoon_b47d5a64] It was out of petrol when I checked it, but I have also seen a full tin of petrol in the garden shed.
+    [captain_day3_afternoon_b84c6133] If the old car is in decent enough shape, I might be able to get it running.
+    [captain_day3_afternoon_37cf643c] Yes. I have driven worse, on worse roads than these.
+    [captain_day3_afternoon_8e0dab27] So I do not think it would be a problem to drive out of here.
+    [captain_day3_afternoon_4cd0f958] I will see if I can start the car and bring it in front of the entrance.
+    [captain_day3_afternoon_0c8ccf10] You can wait for me there, it should not take very long.
+    [captain_day3_afternoon_a3015625] I leave the others by the front steps and go round alone.
+    [captain_day3_afternoon_fb8532c4] The petrol tin still sits in the garden shed where I found it.
+    [captain_day3_afternoon_644cae76] I pick it up.
+    [captain_day3_afternoon_510117d7] I fill the tank, set the choke, and work the crank.
+    [captain_day3_afternoon_92d8e46e] The engine baulks twice, then catches on the third pull and settles into a rough idle.
+    [captain_day3_afternoon_0d12c551] It runs. That is all I ask of it.
+    [captain_day3_afternoon_70bc8b60] I ease the car out of the garage and bring it towards the manor's entrance.
+    [captain_day3_afternoon_fd62b951] The engine runs rough beneath me, but it runs.
+    [captain_day3_afternoon_8fa2e284] Something in me shivers.
+    [captain_day3_afternoon_1191c5ea] I feel an overwhelming sense of doom.
+    [captain_day3_afternoon_45dd46b2] I assume everyone still in the house is in the same boat as I am.
+    [captain_day3_afternoon_02a5cad6] But what if they are not?
+    [captain_day3_afternoon_69e2f904] Maybe I have been too quick to disregard them as a threat.
+    [captain_day3_afternoon_f79d8800] The safest thing now would be to leave alone.
+    [captain_day3_afternoon_9f26edaa] It might also be the only way to get out of here alive.
+    [captain_day3_afternoon_7c1692ad] I can send help after I reach town.
+    [captain_day3_afternoon_8f544948] Maybe they will be fine just waiting a few hours there.
+    [captain_day3_afternoon_d6c82b84] But as I am thinking this, I know it is probably not true.
+    [captain_day3_afternoon_8fab671f] If I leave now, I might not see them alive again.
+    [captain_day3_afternoon_car_together_intro_f4c16b1c] Despite everything in my body telling me to leave, I can not make myself abandon them to their fate.
+    [captain_day3_afternoon_car_together_intro_b605c857] We will all leave together.
+    [captain_day3_afternoon_car_together_2b84a403] I bring the car round to the front of the manor.
+    [captain_day3_afternoon_car_together_88d9dcfd] Mr Harring and Miss Baxter are already outside, ready for the road.
+    [captain_day3_afternoon_car_together_4fe92e39] As I draw up before the steps, another figure comes out of the front door.
+    [captain_day3_afternoon_car_together_db0aff0d] She has been somewhere in the manor all this while.
+    [captain_day3_afternoon_car_together_10f373e7] I step out of the car.
+    [captain_day3_afternoon_car_together_c54d9438] We are all baffled by her sudden appearance, but there is no time for long explanations.
+    [captain_day3_afternoon_car_together_f23e8c55] I want to leave as soon as possible.
+    [captain_day3_afternoon_car_together_b8b97253] But now you can come with us.
+    [captain_day3_afternoon_car_together_9e76a29d] Please, all of you, get in.
+    [captain_day3_afternoon_car_together_3c8ffd3e] But I can not in good conscience leave her on that gravel.
+    [captain_day3_afternoon_car_together_b4481f1d] I get out to look at the engine, because that is what a man does, and I cannot think what else to do.
+    [captain_day3_afternoon_car_together_81d90834] We are utterly alone.
+    [captain_day3_afternoon_car_together_4b9f197a] Someone gets out of the car.
+    [captain_day3_afternoon_car_together_14475b74] I yell while I am still looking at the engine.
+    [captain_day3_afternoon_car_together_8f8d6e28] Stay inside!
+    [captain_day3_afternoon_car_together_105ebe79] We do not know if it is safe here.
+    [captain_day3_afternoon_car_together_802ff1ac] I keep examining the car and check the exhaust.
+    [captain_day3_afternoon_car_together_4d44c43c] There is something stuck in it.
+    [captain_day3_afternoon_car_together_2a4433d7] I reach into the exhaust and pull out what is blocking it.
+    [captain_day3_afternoon_car_together_646f66c7] A potato.
+    [captain_day3_afternoon_car_together_1559993d] How did it get there?
+    [captain_day3_afternoon_car_together_4103de58] I hear footsteps coming towards me.
+    [captain_day3_afternoon_car_together_1b3d2c07] Please, go back in the car!
+    [captain_day3_afternoon_lie_alone_7d2f105c] I roll the car up to the driveway.
+    [captain_day3_afternoon_lie_alone_3d71fedc] I can see Mr Harring and Miss Baxter waiting for me.
+    [captain_day3_afternoon_lie_alone_74dd08de] But I do not stop.
+    [captain_day3_afternoon_lie_alone_616e54c8] I put my foot down and pass in front of them as fast as I can.
+    [captain_day3_afternoon_lie_alone_ed286fe0] I see their expressions change from relief to fear.
+    [captain_day3_afternoon_lie_alone_b2ae6dac] The car reaches the outer gate, and in a few moments I am on the open road.
+    [captain_day3_afternoon_lie_alone_f2a8e7bb] This weekend, I was given an opportunity to do something brave, and I turned it down.
+    [captain_day3_afternoon_lie_alone_1aedec2e] Mile after mile, until I reach safety.
 
-  game/scripts/captain/Day 3/1_Morning/2b_explore.rpy  (21 missing)
-    [captain_day3_morning_explore_b722f852] Not the ordinary silence of an early hour, when the staff move quietly about their work.
-    [captain_day3_morning_explore_65468966] Something is wrong.
-    [captain_day3_morning_explore_bd7318c6] The corridor is empty.
-    [captain_day3_morning_explore_05709027] I had thought I would meet at least one of the others up and dressed by now, but no one stirs.
-    [captain_day3_morning_explore_90e0ebe9] I have a few hours before the house ought to be sitting down to luncheon.
-    [captain_day3_morning_explore_5e8f7c73] I shall use them.
-    [captain_day3_morning_explore_cbc77cc9] I have walked the house from the cellar to the eaves and found nothing alive in it save dust.
-    [captain_day3_morning_explore_80f0455d] The dead lie where we left them. The living are not in their rooms.
-    [captain_day3_morning_explore_e53596bf] A voice rises from the foot of the stair.
-    [captain_day3_morning_explore_538ae9fd] I let the silence sit a moment before I break it.
-    [captain_day3_morning_explore_be5273c1] Have you found anyone else?
-    [captain_day3_morning_explore_8e7df839] Miss Baxter sits down on the lowest step.
-    [captain_day3_morning_explore_e2236cca] What are we to do?
-    [captain_day3_morning_explore_bab386ed] We stop walking the corridors on our own.
-    [captain_day3_morning_explore_8df9e2d1] From now on, we keep together.
-    [captain_day3_morning_explore_4b04ba3c] Should we not search a little more?
-    [captain_day3_morning_explore_066ece30] There may still be someone in the house who needs help.
-    [captain_day3_morning_explore_4a2082b8] We will. But not in three separate parties.
-    [captain_day3_morning_explore_487b92a2] Take a few minutes in the tea room. I will see to Miss Baxter, and then we go on together.
-    [captain_day3_morning_explore_47c75766] Right. The tea room.
-    [captain_day3_morning_explore_ebd2026c] She rises, and the three of us cross the hall together.
+  game/scripts/captain/captain_endings.rpy  (7 missing)
+    [captain_ending_burned_ce94aa2a] You took a proven liar man at his word.
+    [captain_ending_burned_bad21192] And you let him lock you up without complaining.
+    [captain_ending_burned_ba373f0d] There was no need of poison, nor bullets.
+    [captain_ending_survives_1b2c953f] You took the only motor that ran, and you escaped alone.
+    [captain_ending_survives_6b57c1bc] You know most people will call you a coward for what you did.
+    [captain_ending_survives_3294781e] But in the end, you got out alive.
+    [captain_ending_survives_6fd6dfbd] And maybe that is all that matters.
 
-  game/scripts/captain/captain_generic_locations.rpy  (9 missing)
-    [captain_library_default_b548ae0c] The genealogy book still lies open on the table, waiting.
+  game/scripts/captain/captain_generic_locations.rpy  (11 missing)
     [captain_garden_intro_cad35886] I step back out into the rain.
     [captain_garden_intro_9b0f4ec7] The garden is as I left it earlier: gravel underfoot, the outbuilding waiting in the dark.
     [captain_garden_intro_4d9184f8] I look through the window. The rain is coming down hard.
     [captain_garden_intro_d4099d00] Most men would turn back at this point.
+    [captain_garden_intro_a41ca573] I look through the window.
+    [captain_garden_intro_956d3961] A steady rain is falling again.
     [captain_garden_shed_baeb3997] I fit the master key to the lock. It does not turn at first.
     [captain_garden_shed_c071fac7] A patient adjustment, and the bolt slides clear.
     [captain_garden_shed_08883af5] The door creaks open on a small, low-roofed space smelling strongly of oil and old timber.
-    [captain_garden_shed_9bfc8ffd] The lantern's glow picks out a workbench, a coil of rope, a tarpaulin folded against one wall.
+    [captain_attic_butler_room_47239ae9] Inside: candlesticks, a salver, several sets of heavy plate.
+    [captain_attic_butler_room_9f283030] Nothing of use to me.
 

@@ -94,43 +94,7 @@ label captain_day3_morning_explore:
 
     pause 1
 
-    """
-    Suddenly, I hear a voice rising.
-    """
-
-    lad """
-    Hello? Is anyone there?
-    """
-
-    captain """
-    Mr Harring. I am here.
-    """
-
-    """
-    Ted Harring appears at the bottom of the stair, with Miss Baxter just behind him.
-
-    Some of the colour comes back into his face when he sees me.
-    """
-
-    call common_day3_morning_meeting_captain
-
-    captain """
-    We have got a lot to talk about, maybe we should settle somewhere more comfortable.
-    """
-
-    psychic """
-    The tea room perhaps?
-    """
-
-    captain """
-    Perfect.
-    """
-
-    $ change_room("tea_room")
-
-    """
-    Everyone finds a chair before we can continue our conversation.
-    """
+    call common_day3_morning_entrance_hall_meeting
 
     captain """
     So you have not found anyone else?

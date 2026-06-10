@@ -93,31 +93,76 @@ label common_day3_morning_lad_psychic_journey:
     return
 
 
-label common_day3_morning_lad_psychic_tea_room_1:
+label common_day3_morning_entrance_hall_meeting:
 
-    captain """
-    Is anyone here?
-    """
+    if current_character.text_id == "captain":
 
-    if current_character.text_id == "lad":
         """
-        I respond without hesitation.
+        Suddenly, I hear a voice rising.
+        """
+
+    elif current_character.text_id == "lad":
+
+        """
+        Just in case, I try calling out one more time.
+        """
+
+    else:
+
+        """
+        Mr Harring tries calling out one last time.
         """
 
     lad """
-    Yes, Ted Harring. I'm here, and Amelia Baxter's with me.
+    Hello? Is anyone there?
     """
 
-    if current_character.text_id == "lad":
+    captain """
+    Mr Harring. I am here.
+    """
+
+    if current_character.text_id == "captain":
 
         """
-        Amelia stiffens. I sense her unease, perhaps thinking I replied too quickly.
+        Ted Harring appears at the bottom of the stair, with Miss Baxter just behind him.
 
-        It's too late for second thoughts now.
-
-        Captain Sinha soon joins us in the room.
+        Some of the colour comes back into his face when he sees me.
         """
-    
+
+    elif current_character.text_id == "lad":
+
+        """
+        Captain Sinha appears at the top of the stairs and comes down to join us.
+
+        I didn't expect to be this relieved to see him.
+        """
+
+    else:
+
+        """
+        Captain Sinha appears at the top of the stairs and descends to join us.
+
+        Mr Harring's face brightens at the sight of him.
+        """
+
     call common_day3_morning_meeting_captain
+
+    captain """
+    We have got a lot to talk about, maybe we should settle somewhere more comfortable.
+    """
+
+    psychic """
+    The tea room perhaps?
+    """
+
+    captain """
+    Perfect.
+    """
+
+    $ change_room("tea_room")
+
+    """
+    Everyone finds a chair before we can continue our conversation.
+    """
 
     return

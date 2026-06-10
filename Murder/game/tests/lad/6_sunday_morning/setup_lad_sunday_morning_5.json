@@ -35,13 +35,38 @@
     },
     {
       "menu": "lad_day3_morning_map_menu",
-      "selected": "Entrance Hall",
-      "redirect": "lad_day3_morning_entrance_hall"
+      "selected": "Butler's Room",
+      "redirect": "lad_day3_morning_butler_room"
     },
     {
       "menu": "lad_day3_morning_map_menu",
-      "selected": "Go wait for Sushil",
-      "redirect": "generic_cancel"
+      "selected": "Storage Room",
+      "redirect": "lad_day3_morning_storage"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Kitchen",
+      "redirect": "lad_day3_morning_kitchen"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Scullery",
+      "redirect": "lad_day3_morning_scullery"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Lady Claythorn's Bedroom",
+      "redirect": "lad_day3_morning_bedroom_host"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Female Servants Room",
+      "redirect": "lad_day3_morning_females_room"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Entrance Hall",
+      "redirect": "lad_day3_morning_entrance_hall"
     }
   ]
 }

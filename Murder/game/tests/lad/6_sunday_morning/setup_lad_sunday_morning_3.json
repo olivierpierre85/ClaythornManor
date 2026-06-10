@@ -45,8 +45,23 @@
     },
     {
       "menu": "lad_day3_morning_map_menu",
-      "selected": "Go wait for Sushil",
-      "redirect": "generic_cancel"
+      "selected": "Storage Room",
+      "redirect": "lad_day3_morning_storage"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Male Servants Room",
+      "redirect": "lad_day3_morning_males_room"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Female Servants Room",
+      "redirect": "lad_day3_morning_females_room"
+    },
+    {
+      "menu": "lad_day3_morning_map_menu",
+      "selected": "Butler's Room",
+      "redirect": "lad_day3_morning_butler_room"
     }
   ]
 }

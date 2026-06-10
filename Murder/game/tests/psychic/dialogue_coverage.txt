@@ -1,8 +1,8 @@
-Generated:                2026-05-02 18:01:33
+Generated:                2026-06-10 15:06:21
 Scope:                    character=psychic
-Dialogue entries scanned: 916
-Test lines collected:     2867
-Covered:                  916
+Dialogue entries scanned: 905
+Test lines collected:     2754
+Covered:                  905
 Missing:                  0
 
 All dialogue lines covered.

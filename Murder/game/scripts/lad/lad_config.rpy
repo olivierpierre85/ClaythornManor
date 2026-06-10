@@ -46,7 +46,6 @@ label init_lad:
             "day2_evening_billiard_room_captain_talked" : False,
             "day2_evening_taste_from_flask" : False,
 
-            "day3_morning_captain_found" : False,
             "day3_ending" : "",
             "day3_downstairs_visited" : False
         }
