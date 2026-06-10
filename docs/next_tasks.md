@@ -1,40 +1,23 @@
 <!-- # cSpell:disable -->
 
-## Simplify already visited (not needed from chapter to chapter) => Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, now give values all the time?
 
-## BEFORE NEW STORY :
-
-Add logic with unplayable BUTLER player, tutorial etc....
-
-FIX EVERYONE CAPTAIN MEETING Day 3 morning for
-- ted
-- psychic 
-- Others?
 
 ## Write Story: Captain (Sushil Sinha)
-
-UNLOCKS HOST Rethink with Broken
-
-UNlock Broken not great
-
-Maybe twist, add a character the butler. Yes there is a hidden butler, if you find something about him, it unlocks him OR, WHEN ALL THE CHARACTER HAVE BEEN SAVED. Only captain, host, broken and drunk could find info.. With new things to unlock. And only one possible path, one choice at the beginning. I'll d what you want... Character selection => I
-
-THREAD, locked shed image
-
 - [x] Friday Afternoon
 - [x] Friday Evening
 - [x] Saturday Morning
-- [ ] Saturday Hunt - **almost**
-    - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock? IN captain and other
-      - [ ] UNlock about the car in the nurse run?
-      - [ ] So her real name is actually buttface
+- [x] Saturday Hunt
 - [x] Saturday evening
 - [ ] sunday Morning
   - [ ] hard to reach DIALOG but unlocks NOTHINg => **Find something to put there**. => maybe the intuition should be there. DO NOT TAKE THE CAR we replace the survive ending here, leaving no way to escape on the last chapter? Worth thinking about
 - [x] **sunday AFternoon**
 
+## Write Story: NEXT => Broken or HOST?
 
 ## Technical Tasks
+
+## Simplify already visited (not needed from chapter to chapter) => 
+Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, now give values all the time?
 
 ### INTUITION system entirely FOR EVERYONE SAVED concept
 Now an intuition is needed to SAVE a person.
@@ -68,25 +51,25 @@ When Someone is saved, it add a SAVED over their name in the progress view
     - Add new page with **All threads** ?
 
 
+## REWRITE OLD CHARACTERS
+
+FIX EVERYONE CAPTAIN MEETING Day 3 morning for
+- ted
+- psychic 
+- Others?
+
 ## Assets & artistic Tasks
 
 ### MUSIC with producer AI
 Get new music from internet and put them at the right place
 
-## New place
 
-India
-A room in a nice india house calcuta, 1880.
-
-New music, captain's theme? Old india ? or no music?
-
-### STABLE DIFFUSION FUN
-
-Flow or SDXL ?
+### FLUX REBUILD
 
 - [ ] For info_cards, RENAME so it's correct, then change everything to webp?
 - [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
-- [ ] Try Locations with characters inside (Whisk/experimental).
+- [ ] REDRAW full locations with flux, day and night
+- [ ] Redraw character face AND add full body size images
 
 ## Question for Testers
 - What about **NEW PROGRESS PAGE** and no character page
@@ -94,8 +77,7 @@ PATHS, “Actions”, Findings, discoveries ? Forks, Threads, Leads
 NEW paths PAGE wil ALL the unlockables, different from breakpoint page
 - DO I NEED the map menu ? Since there is almost 0 info on it, maybe not
 - Are important choices TOO confusing => Everything or NOT? But that means WAY harder to unlock?
-- 
-## add captain feared expression, showed only for his confession
+
 
 ### Update ITCH.IO
 - Update itch.io
