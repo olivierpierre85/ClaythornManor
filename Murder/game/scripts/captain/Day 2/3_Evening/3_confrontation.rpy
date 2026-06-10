@@ -569,7 +569,6 @@ label captain_day2_evening_butler_offer_attack:
 
     play sound gun
 
-
     """
     He fires before I have closed the half of the distance.
 

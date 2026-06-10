@@ -1359,7 +1359,7 @@ screen notify(message):
 
     timer 5 action Hide('notify')
 
-screen thread_unlock_notify(message, image_file=None):
+screen thread_unlock_notify(message, image_file=None, image_path=None):
 
     zorder 1000
     style_prefix "thread_unlock_notify"
@@ -1371,6 +1371,10 @@ screen thread_unlock_notify(message, image_file=None):
             text "[message!tq]" xalign 0.5
             if image_file:
                 add Transform("images/info_cards/" + image_file + ".webp", zoom=0.7) xalign 0.5
+            elif image_path:
+                # Full path to an arbitrary image (e.g. a character side portrait),
+                # scaled to match the info card size (75px * 0.7)
+                add Transform(image_path, zoom=0.2) xalign 0.5
 
     timer 5 action Hide('thread_unlock_notify')
 

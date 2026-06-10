@@ -281,6 +281,22 @@ init -100 python:
             )
             self.character_name = character_name
 
+        def get_owner_image_path(self):
+            # Side portrait of the character this description list belongs to
+            for char in char_list_flat + [butler_details]:
+                if char.description_hidden is self:
+                    return "images/characters/side/side " + char.text_id + ".png"
+            return None
+
+        def show_character_notify(self, message):
+            image_path = self.get_owner_image_path()
+            if image_path:
+                renpy.hide_screen('notify')
+                renpy.show_screen('thread_unlock_notify', message=message, image_path=image_path)
+                renpy.restart_interaction()
+            else:
+                renpy.notify(message)
+
         def unlock(self, text_id):
             global seen_tutorial_description_hidden, seen_tutorial_unlock_character, show_tutorial_unlock_character, seen_tutorial_butler, show_tutorial_butler
             for info in self.information_list:
@@ -290,7 +306,7 @@ init -100 python:
                     info.discovered = True
 
                     if not hide_notifications:
-                        renpy.notify("You have found information about " + self.character_name)
+                        self.show_character_notify("You have found information about " + self.character_name)
                         renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
                     if info.is_important and self.all_description_hidden_unlocked():
@@ -298,7 +314,7 @@ init -100 python:
                             # Unlock a character
                             renpy.pause(2)
                             renpy.play("audio/sound_effects/unlock_char.ogg", "sound")
-                            renpy.notify("You have unlock a new Character : " + self.character_name)
+                            self.show_character_notify("You have unlocked a new character : " + self.character_name)
                             if not seen_tutorial_unlock_character:
                                 seen_tutorial_unlock_character = True
                                 show_tutorial_unlock_character = True
