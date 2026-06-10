@@ -308,8 +308,14 @@ label nurse_day2_evening_steal_caught:
 
     She does not look back at the house. Not once.
 
-    She climbs into the rear of the motorcar without a word.
+    She walks straight to the motorcar and settles herself behind the wheel.
+
+    A lady of her station, driving her own motorcar.
+
+    And by the easy, practised way she takes hold of it, this is not the first time.
     """
+
+    $ host_details.description_hidden.unlock('car')
 
     """
     The doors close. The engine growls.
