@@ -108,8 +108,8 @@ label captain_config_progress:
             # Threads SET before & RELEVANT here:
             #   - tell_boxer_story: relevant=['saturday_morning', 'saturday_afternoon', ...] — Moody dead/alive context
             #   - captain_host_suspicion_name / _portrait: gate the host confrontation branch
-            # Threads SET here:
-            #   - captain_host_suspicion_shooting (observed on the hunt itself)
+            # Host information SET here:
+            #   - host 'hunt' description info (her poor shooting, observed in every hunt path)
             # Endings fired here:
             #   - Moody alive  -> shot_in_woods (linear death)
             #   - Moody dead + both host suspicions + confront -> strangled
@@ -129,8 +129,7 @@ label captain_config_progress:
             # Threads SET before & RELEVANT here:
             #   - tell_boxer_story: relevant=['saturday_evening'] (doctor carried in, three chairs empty at dinner)
             #   - captain_host_suspicion_name / _portrait: set friday_evening, relevant saturday_evening
-            #   - captain_host_suspicion_shooting: set saturday_afternoon, relevant saturday_evening
-            #   All three host suspicions together unlock the confrontation menu in the hall.
+            #   Both host suspicions together unlock the confrontation menu in the hall.
             # Threads SET here:
             #   - butler_key (pocketed on the normal escort path)
             # Saved variables SET here:
@@ -138,10 +137,10 @@ label captain_config_progress:
             'saturday_evening': [
                 # --- Bare path: no host suspicions, normal escort only ---
                 {"label": "captain_day2_evening", "threads": {'tell_boxer_story': True}},
-                # --- Two of three suspicions (missing shooting): still no confrontation menu ---
+                # --- One of two suspicions: still no confrontation menu ---
+                {"label": "captain_day2_evening", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True}},
+                # --- Both host suspicions: unlocks the confrontation menu ---
                 {"label": "captain_day2_evening", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True}},
-                # --- All three host suspicions: unlocks the confrontation menu ---
-                {"label": "captain_day2_evening", "threads": {'tell_boxer_story': True, 'captain_host_suspicion_name': True, 'captain_host_suspicion_portrait': True, 'captain_host_suspicion_shooting': True}},
             ],
 
             # ===== SUNDAY MORNING =====

@@ -26,6 +26,8 @@ THREAD, locked shed image
 - [x] Saturday Morning
 - [ ] Saturday Hunt - **almost**
     - [ ] LADY not independant, just incompetent? Rewrite text properly => Prepare unlock? IN captain and other
+      - [ ] UNlock about the car in the nurse run?
+      - [ ] So her real name is actually buttface
 - [x] Saturday evening
 - [ ] sunday Morning
   - [ ] hard to reach DIALOG but unlocks NOTHINg => **Find something to put there**. => maybe the intuition should be there. DO NOT TAKE THE CAR we replace the survive ending here, leaving no way to escape on the last chapter? Worth thinking about

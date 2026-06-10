@@ -76,7 +76,7 @@ label captain_day2_hunt_moody_dead:
     A gentlewoman who has organised a hunting weekend on her own grounds ought to know one end of her gun from the other.
     """
 
-    $ captain_details.threads.unlock('captain_host_suspicion_shooting')
+    $ host_details.description_hidden.unlock('hunt')
 
 
     """

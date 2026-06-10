@@ -126,6 +126,8 @@ label captain_day2_hunt_moody_alive:
     By the time the butler calls us in, only Mr Moody has game to show.
     """
 
+    $ host_details.description_hidden.unlock('hunt')
+
     call change_time(12, 30)
 
     host """

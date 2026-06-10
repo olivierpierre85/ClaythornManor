@@ -392,7 +392,7 @@ label init_technical_variables:
         condition_sunday = "current_day == 'Sunday'"
 
         # USE for the captain only
-        condition_captain_host_suspicions = "(captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait') and captain_details.threads.is_unlocked('captain_host_suspicion_shooting'))"
+        condition_captain_host_suspicions = "(captain_details.threads.is_unlocked('captain_host_suspicion_name') and captain_details.threads.is_unlocked('captain_host_suspicion_portrait'))"
 
         # Image for progress view
         image_checkpoint = "images/ui/progress/rectangle_progress.png"

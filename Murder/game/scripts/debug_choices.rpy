@@ -61,6 +61,10 @@ label init_debug:
     # TODO check where to put this
     $ broken_name = "Archibald Devereux"
 
+    # $ current_character = host_details
+    # $ current_storyline = host_details
+    # call unlock_host
+
     $ hide_notifications = False
 
     return
@@ -172,10 +176,10 @@ label unlock_host:
 
     $ host_details.description_hidden.unlock('name_age')
     $ host_details.description_hidden.unlock('down_to_earth')
-    # $ host_details.description_hidden.unlock('incompetent')
-    # $ host_details.description_hidden.unlock('hunt')
-    # $ host_details.description_hidden.unlock('car')
-    # $ host_details.description_hidden.unlock('lie') 
+    $ host_details.description_hidden.unlock('table_manners')
+    $ host_details.description_hidden.unlock('hunt')
+    $ host_details.description_hidden.unlock('car')
+    $ host_details.description_hidden.unlock('lie')
 
     return
 

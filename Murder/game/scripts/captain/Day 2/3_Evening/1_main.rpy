@@ -40,8 +40,7 @@ label captain_day2_evening:
     """
 
     if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
-        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
-        and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
+        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')):
 
         """
         Throughout the walk, something keeps nagging at me.
@@ -118,8 +117,7 @@ label captain_day2_evening:
     """
 
     if (captain_details.threads.is_unlocked('captain_host_suspicion_name')
-        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')
-        and captain_details.threads.is_unlocked('captain_host_suspicion_shooting')):
+        and captain_details.threads.is_unlocked('captain_host_suspicion_portrait')):
 
         """
         But instead, I take a careful look at our host.

@@ -9,6 +9,11 @@
     },
     "choices": [
         {
+            "menu": "captain_day2_evening_menu_confront",
+            "selected": "Take Manning up myself",
+            "redirect": "captain_day2_evening_normal_escort"
+        },
+        {
             "menu": "captain_day2_evening_menu_dinner",
             "selected": "Say nothing, eat in silence",
             "redirect": "generic_cancel"

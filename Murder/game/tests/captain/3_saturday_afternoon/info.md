@@ -30,7 +30,7 @@
 - Moody dead branch -> Captain pairs with Lady + butler.
 - No suspicions, so the confrontation menu is skipped and the `else` branch plays the "need more evidence" reflection automatically.
 - Butler leaves, shots from the grove, doctor is found dead.
-- Unlocks `captain_host_suspicion_shooting` during the hunt.
+- Unlocks the host's `hunt` description information (her poor shooting) during the hunt.
 - Returns to main and jumps to `work_in_progress`.
 
 ## File 4 — Moody dead, both suspicions, hold tongue

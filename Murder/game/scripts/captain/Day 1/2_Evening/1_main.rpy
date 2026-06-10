@@ -206,7 +206,9 @@ label captain_day1_evening:
     
     With a manor this remote, perhaps she has simply not had occasion for proper company in some time, so she has forfeited some of the usual habits.
     """
-    
+
+    $ host_details.description_hidden.unlock('table_manners')
+
     pause 1.0
 
     """

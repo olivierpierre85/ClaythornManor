@@ -3,10 +3,9 @@
 ### Pre-unlocked threads
 - `captain_host_suspicion_name`
 - `captain_host_suspicion_portrait`
-- `captain_host_suspicion_shooting`
 
 ### Path
-- All three host suspicions trigger the confrontation menu after the Manning discussion.
+- Both host suspicions trigger the confrontation menu after the Manning discussion.
 - Picks "Send the butler with Manning, and challenge her" -> `captain_day2_evening_confront_host`.
 - Lady Claythorn confesses, the butler returns and produces a revolver.
 - Picks "Accepts being confined" -> `captain_day2_evening_butler_offer_confine`.
@@ -18,7 +17,6 @@
 ### Pre-unlocked threads
 - `captain_host_suspicion_name`
 - `captain_host_suspicion_portrait`
-- `captain_host_suspicion_shooting`
 
 ### Path
 - Same setup as File 1; suspicions unlock the confrontation menu.
@@ -33,7 +31,6 @@
 ### Pre-unlocked threads
 - `captain_host_suspicion_name`
 - `captain_host_suspicion_portrait`
-- `captain_host_suspicion_shooting`
 
 ### Path
 - Confrontation menu offered; picks "Take Manning up myself" -> `captain_day2_evening_normal_escort` (covers the normal escort + butler key narration).
@@ -71,7 +68,6 @@
 ### Pre-unlocked threads
 - `captain_host_suspicion_name`
 - `captain_host_suspicion_portrait`
-- `captain_host_suspicion_shooting`
 
 ### Path
 - Confrontation menu picks "Take Manning up myself" -> `captain_day2_evening_normal_escort`.
@@ -105,6 +101,7 @@
 - `visited_library = true`
 
 ### Path
+- Both suspicions trigger the confrontation menu; picks "Take Manning up myself" -> `captain_day2_evening_normal_escort`.
 - Dinner menu picks "Say nothing, eat in silence".
 - Map menu visits: kitchen (downstairs default; the four downstairs choices are coalesced after the first), tea room, dining room, entrance hall, garden (no-lantern branch: captain goes out, spots the shed, turns back without approaching), portrait gallery (revisit, with `captain_host_suspicion_portrait` already unlocked), library (revisit, with `captain_host_suspicion_name` already unlocked), Miss Marsh's room and Lady Claythorn's room.
 - "Retire for the night" closes the chapter.
@@ -127,7 +124,6 @@
 ### Pre-unlocked threads
 - `captain_host_suspicion_name`
 - `captain_host_suspicion_portrait`
-- `captain_host_suspicion_shooting`
 
 ### Path
 - Confrontation menu picks "Take Manning up myself" -> `captain_day2_evening_normal_escort`.
