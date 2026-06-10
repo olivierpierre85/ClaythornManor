@@ -164,11 +164,20 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 
 
 ## BUTLER
+
+### Unlock mechanic (partly implemented)
+- To finish the game, the butler must be unlocked like any other character (all important hidden infos).
+- [x] First info `manages_weekend` (he is managing the weekend for someone) unlocks after the death text of the captain `burned` and `shot_butler` endings (same paths as host `not_guilty`).
+- [x] He appears in the progress view as soon as any info about him is discovered (`is_butler_visible()` replaces the old static flag).
+- [x] A butler-specific tutorial text is shown after the death text on the first unlocked info (same pattern as the first-death tutorial in `ending_generic`).
+- [ ] TODO unlock points for the remaining infos (`poisoned_moody`, `took_valuables`).
+
 ### Important
 That is the last test. The real path (as asked by meta dialogs)
 LAST question, is when the butler meat the Person behind all of this? (he escapes, and meet them in town. Last choice)
 - First will Thomas moody listen to sinha? Yes, so poisoned
 - and so forth. It shoul be straightforward
+IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill. OR LOVER of Psychic, they met in service? => Check afternoon deaths
 
 ## 🧠 The AI Concept (CLAITHORN)
 

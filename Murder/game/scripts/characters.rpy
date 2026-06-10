@@ -62,9 +62,6 @@ label init_characters:
 
         char_list_flat = [lad_details, doctor_details, host_details, drunk_details, psychic_details, broken_details, captain_details, nurse_details]
 
-        if is_butler_visible:
-            char_list_flat.append(butler_details)
-
     return
 
 # LABELS
@@ -126,6 +123,15 @@ init -100 python:
             return nurse_details
         else:
             return False
+
+    def is_butler_visible():
+        # The butler joins the progress view once any information about him has been discovered
+        return len(butler_details.description_hidden.get_unlocked()) > 0
+
+    def get_progress_characters():
+        if is_butler_visible():
+            return char_list_flat + [butler_details]
+        return char_list_flat
 
     def get_footman_name():
         if current_character.text_id == 'doctor' and current_character.important_choices.is_unlocked('flirt'):
@@ -276,7 +282,7 @@ init -100 python:
             self.character_name = character_name
 
         def unlock(self, text_id):
-            global seen_tutorial_description_hidden, seen_tutorial_unlock_character, show_tutorial_unlock_character
+            global seen_tutorial_description_hidden, seen_tutorial_unlock_character, show_tutorial_unlock_character, seen_tutorial_butler, show_tutorial_butler
             for info in self.information_list:
                 if text_id == info.text_id and info.locked:
                     # Unlock the info
@@ -298,6 +304,12 @@ init -100 python:
                                 show_tutorial_unlock_character = True
 
             
+            # First information about the butler makes him appear in the progress view
+            # The tutorial itself is shown after the death text (see ending_generic)
+            if not seen_tutorial_butler and self is butler_details.description_hidden:
+                seen_tutorial_butler = True
+                show_tutorial_butler = True
+
             if not seen_tutorial_description_hidden:
                 seen_tutorial_description_hidden = True
                 renpy.call('tutorial_description_hidden')

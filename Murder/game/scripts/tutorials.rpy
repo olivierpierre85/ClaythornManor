@@ -158,6 +158,21 @@ label tutorial_progress:
 
     return
 
+label tutorial_butler:
+
+    tutorial """
+    Interesting. Even in death, you have learned something new.
+
+    Until now, one figure had escaped your attention entirely.
+
+    A new character has been added to the "Progress" view.
+
+    Uncover everything about him, and you may finally understand what truly happened at Claythorn Manor.
+    """
+
+    return
+
+
 label tutorial_restart:
     
     tutorial """

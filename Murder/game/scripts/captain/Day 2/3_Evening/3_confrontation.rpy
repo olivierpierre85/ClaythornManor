@@ -548,11 +548,11 @@ label captain_day2_evening_butler_offer_confine:
 label captain_day2_evening_butler_offer_attack:
 
     """
-    Miss Marsh is silent. Miss Baxter looks terrorized.
+    Miss Marsh is silent. Miss Baxter looks terrified.
 
     Whatever is to be done here, I must do alone.
 
-    And I will not follow quietly a man to an unknown fate.
+    And I will not quietly follow a man to an unknown fate.
 
     Twenty years I have been an officer, but never once have I seen battle.
 
@@ -562,7 +562,7 @@ label captain_day2_evening_butler_offer_attack:
 
     I never did.
 
-    Here is my chance to see what metal I am made of.
+    Here is my chance to see what mettle I am made of.
 
     I lunge for his wrist.
     """

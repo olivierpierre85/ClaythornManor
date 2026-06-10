@@ -62,6 +62,10 @@ label ending_generic:
             show_tutorial_unlock_character = False
             renpy.call('tutorial_unlock_character')
 
+        if show_tutorial_butler:
+            show_tutorial_butler = False
+            renpy.call('tutorial_butler')
+
         if export_transcript_activated:
             export_transcript(False)
 

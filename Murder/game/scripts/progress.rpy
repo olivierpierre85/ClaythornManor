@@ -75,10 +75,10 @@ screen progress:
                     # Character choice
                     hbox:
                         yoffset 25
-                        spacing (5 if is_butler_visible else 20)
+                        spacing (5 if is_butler_visible() else 20)
                         xalign 0.0
                         # Character choice list
-                        for char in char_list_flat:
+                        for char in get_progress_characters():
                             imagebutton:
                                 mouse "hover" 
                                 if char.text_id == current_storyline.text_id:

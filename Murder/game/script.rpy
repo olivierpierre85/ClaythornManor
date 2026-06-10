@@ -112,8 +112,6 @@ default full_testing_mode_unlocked_threads = []
 
 default drunk_mode = False
 
-default is_butler_visible = False
-
 
 # My config variables
 
@@ -296,6 +294,8 @@ label init_technical_variables:
         seen_tutorial_unlock_character = False
         show_tutorial_unlock_character = False
         seen_tutorial_progress = False
+        seen_tutorial_butler = False
+        show_tutorial_butler = False
         seen_tutorial_progress_details = False
         seen_tutorial_restart = False
         seen_tutorial_intuition = False

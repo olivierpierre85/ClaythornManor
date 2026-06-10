@@ -59,6 +59,8 @@ label captain_ending_burned:
     With you in it.
     """
 
+    $ butler_details.description_hidden.unlock('manages_weekend')
+
     jump ending_generic
 
 
@@ -84,6 +86,8 @@ label captain_ending_shot_butler:
 
     Your first battle will also be your last one.
     """
+
+    $ butler_details.description_hidden.unlock('manages_weekend')
 
     jump ending_generic
 

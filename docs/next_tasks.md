@@ -4,14 +4,14 @@
 
 ## BEFORE NEW STORY :
 
+Add logic with unplayable BUTLER player, tutorial etc....
+
 FIX EVERYONE CAPTAIN MEETING Day 3 morning for
 - ted
 - psychic 
 - Others?
 
 ## Write Story: Captain (Sushil Sinha)
-
-IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill. OR LOVER of Psychic, they met in service? => Check afternoon deaths
 
 UNLOCKS HOST Rethink with Broken
 
