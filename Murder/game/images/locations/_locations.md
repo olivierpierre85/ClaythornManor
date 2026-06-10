@@ -31,21 +31,21 @@ Wrapped in the interior manor template:
 | scullery         | cramped scullery with a deep stone sink                                                                                                                             |
 | gun_room         | large downstairs gun room with a glass-fronted cabinet of hunting rifles, central table with small handgun, flagstone floor                                         |
 | garage           | manor garage with an old motor car, tools hung on the wall, large garage door closed                                                                                |
-| toolshed         | toolshed interior with a rectangular red petrol tin in the corner                                                                                                   |
+| toolshed         | garden shed interior with a rectangular red petrol tin in the corner, mysterious atmosphere                                                                         |
 
 ## Attic locations
 
 Wrapped in the attic template — the interior template without the colourful objects, to keep the eerie attic atmosphere:
 
-> A high-quality semi-realistic digital painting of a 1920s Scottish manor **{description}** at night. Warm amber light. Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures.
+> A high-quality semi-realistic digital painting of a 1920s Scottish manor **{description}** at night. Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures.
 
 | id                 | description                                                                                                                                                                                  |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | attic_hallway      | wide attic corridor, high ceiling, three doors on the right, one on the left all closed, bare floorboards, point of view standing at the top of a staircase, discarded furniture and objects |
-| attic_storage_room | cluttered attic storage room full of dust-sheeted furniture, old trunks and cobwebbed crates                                                                                                 |
-| attic_males_room   | spartan servants' attic room for the menfolk, with a narrow iron bed and a plain washstand                                                                                                   |
-| attic_females_room | modest servants' attic room for the maids, with twin iron beds and a small dresser                                                                                                           |
-| butler_room        | the butler's tidy attic room, with a single bed, a writing desk and a neatly pressed livery                                                                                                  |
+| attic_storage_room | very large cluttered upstairs storage room, full of dust-sheeted furniture and other stuff                                                                                                   |
+| attic_males_room   | spartan servants upstairs room for the menfolk, with two narrow iron beds and a plain washstand, one worn-out luggage                                                                        |
+| attic_females_room | modest servants' upstairs room for the maids, with two narrow iron beds,a small dresser, one worn-out luggage                                                                                |
+| butler_room        | butler's tidy upstairs room, with a single bed, a writing desk, a neatly pressed livery, and a glass-fronted butler's pantry                                                                 |
 
 ## Outdoor locations
 

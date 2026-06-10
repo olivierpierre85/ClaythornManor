@@ -52,7 +52,7 @@ PROMPT_TEMPLATES = {
     ),
     "attic": (
         "A high-quality semi-realistic digital painting of a 1920s Scottish manor "
-        "{description} at night. Warm amber light. "
+        "{description} at night. "
         "Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures."
     ),
     "outdoor": (
