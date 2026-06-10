@@ -151,10 +151,12 @@ label captain_day2_evening_confront_host:
     Fear.
     """
 
-    host -scared """
+    host """
     Very well, Captain.
 
     You are right.
+
+    I believe it is time I dropped the mask.
 
     I am not Lady Claythorn.
     """
@@ -171,6 +173,8 @@ label captain_day2_evening_confront_host:
     I was given a script of sorts, and the run of the house, and a fee.
     """
 
+    $ host_details.description_hidden.unlock('lie')
+
     nurse """
     Hired? You mean to tell us this entire weekend has been a... a performance?
     """
@@ -178,7 +182,9 @@ label captain_day2_evening_confront_host:
     host """
     Only some of it.
 
-    I swear to you, what has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
+    But I swear to you, things have gone far beyond what was planned.
+
+    What has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
 
     None of that was in any script I was given.
 
@@ -489,8 +495,6 @@ label captain_day2_evening_butler_offer_confine:
 
     Will the police come? I have no idea.
 
-    I should make the most of it and try to get out.
-
     I cross to the window and try the latch. Painted shut, of course. Two storeys down besides.
 
     For a long while I sit upon the edge of the bed and listen to the house.
@@ -535,6 +539,8 @@ label captain_day2_evening_butler_offer_confine:
 
     A great, considered creaking, as of a vessel preparing, at last, to part with its ribs.
     """
+
+    $ host_details.description_hidden.unlock('not_guilty')
 
     jump captain_ending_burned
 
@@ -587,5 +593,7 @@ label captain_day2_evening_butler_offer_attack:
 
     The room narrows to a single point of grey.
     """
+
+    $ host_details.description_hidden.unlock('not_guilty')
 
     jump captain_ending_shot_butler

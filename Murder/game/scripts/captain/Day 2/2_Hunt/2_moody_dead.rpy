@@ -452,7 +452,7 @@ label captain_day2_hunt_confront_host:
 
     An honest woman would stumble. Take offence. Demand to know what on earth I meant by it all.
 
-    Instead, she has submitted to my interrogation as if she were prepared for it.
+    Instead, she has submitted to my interrogation as if she were expecting it.
 
     But let's see how well she is really prepared.
     """
@@ -484,9 +484,81 @@ label captain_day2_hunt_confront_host:
     """
 
     """
-    She prepares to answer, but cannot find the words.
+    Her chin lifts a fraction, and the practised warmth drains from her voice.
+    """
 
-    Finally, her smile fades by degrees, and something tired and older takes its place beneath it.
+    host """
+    Captain, this has gone quite far enough.
+
+    I have indulged your questions out of regard for a guest, and you have repaid me with insolence.
+
+    I am not in the habit of reciting my lineage to satisfy a stranger's curiosity.
+
+    One more word on the subject, and you may pack your things this very afternoon.
+    """
+
+    # """
+    # There it is at last. The offence. The wounded dignity. The threat.
+
+    # Everything an honest woman would have produced at my first question, arriving only now, at the very last.
+
+    # Like an actress given her cue a scene too late.
+    # """
+
+    captain """
+    Send me away if you wish, madam. It will change nothing.
+
+    You see, I am not asking you a question I cannot answer myself.
+
+    There is a book in your own library. A registry of the great families of this county.
+
+    It records the peerage your family holds, and the name of that peerage is not Claythorn.
+
+    The true mistress of this house would have carried it her whole life.
+
+    Name it, madam, and I shall offer you my fullest apology and never speak of this again.
+    """
+
+    """
+    She does not name it.
+
+    She sits very still, her hands folded in her lap, and for a long moment the only sound is the wind working through the trees.
+    """
+
+    captain """
+    It is the Earldom of Kilbraith.
+
+    The woman you claim to be would be styled Lady Kilbraith.
+
+    You have been answering to the name of a building, madam.
+
+    A stranger to this county learnt that in an evening, from a shelf in your own library.
+    """
+
+    """
+    She remains silent.
+    """
+
+    captain """
+    A man died under this roof last night.
+
+    The doctor speaks of a tired heart, and perhaps he is correct.
+
+    But a death must be reported all the same, and the police will come to this house.
+
+    When they do, I shall lay before them everything I have laid before you.
+
+    A lady with nothing to hide loses nothing by it.
+
+    A woman who is not what she claims, on the very weekend a guest dies in his bed, will find their questions far less courteous than mine.
+
+    I leave it to you to decide which of the two receives them.
+    """
+
+    """
+    I watch the arithmetic move behind her eyes.
+
+    Then her smile fades by degrees, and something tired and older takes its place beneath it.
     """
 
     host """
@@ -527,8 +599,6 @@ label captain_day2_hunt_confront_host:
     It takes me a while to take everything in.
 
     That story goes way beyond what I had imagined.
-
-    It leads to even more questions.
     """
 
     captain """
@@ -581,7 +651,6 @@ label captain_day2_hunt_confront_host:
 
     $ play_music('danger', 2, fadein_val=1)
 
-
     """
     She opens her mouth to answer.
     """
@@ -633,5 +702,7 @@ label captain_day2_hunt_confront_host:
 
     A moment more, and the forest folds inward and goes dark.
     """
+
+    $ host_details.description_hidden.unlock('lie')
 
     jump captain_ending_strangled

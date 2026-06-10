@@ -20,6 +20,7 @@ label init_host:
             CharacterInformation(60, "car", "to drive a car", is_important = True),
             CharacterInformation(60, "table_manners", "table manners are not quite what they ought to be"),
             CharacterInformation(60, "lie", "a progressive aristocrat close to the people. She is, in fact, one of the people - an out-of-work actress playing her most dangerous role", is_important = True),
+            CharacterInformation(60, "not_guilty", "guilty, she is not the mastermind behind the whole operation. She is not even in charge of it, the butler is.", is_important = True),
             ], host_name
         )
 
@@ -34,7 +35,7 @@ label init_host:
         Elegant and well-spoken, Lady Claythorn - first name <info:name_age> appears at first glance to embody everything expected of a wealthy lady.
         However, if you delve deeper, you'll notice her <info:table_manners>. Also, she <info:hunt>, a telling failing in a house such as this, though she has, oddly, learnt <info:car>.
         And, for a member of the nobility, she does not <info:down_to_earth>.
-        But as it turns out, she is not <info:lie>.
+        But as it turns out, she is not <info:lie>. Even if it makes her look <not_guilty>.
         """
 
         host_details  = CharacterDetails(

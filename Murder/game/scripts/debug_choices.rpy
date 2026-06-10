@@ -34,7 +34,7 @@ label init_debug:
 
     
     $ current_character = lad_details
-    $ current_storyline = lad_details # TODO move
+    $ current_storyline = lad_details 
     call unlock_lad
     $ lad_details.load_manual_checkpoints()
     

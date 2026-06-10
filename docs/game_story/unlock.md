@@ -19,7 +19,6 @@ graph TD;
     nurse -->|SOMETHING| drunk;
     captain -->|is not nobility| host;
     captain -->|is not Thomas Moody| broken;
-    broken -->|Name of employer| host;
     host -->|Wife Story| drunk;
     drunk -->|Final info, observes lad waking up after scene with psychic| lad;
     captain -->|is a killer| butler;
