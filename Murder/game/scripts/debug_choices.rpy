@@ -66,6 +66,9 @@ label init_debug:
     # $ current_storyline = host_details
     # call unlock_host
 
+    # Uncomment to make the butler visible (centre of character selection / progress view)
+    # $ butler_details.description_hidden.unlock('manages_weekend')
+
     $ hide_notifications = False
 
     return

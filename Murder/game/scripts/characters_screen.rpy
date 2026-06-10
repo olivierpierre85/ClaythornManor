@@ -25,7 +25,7 @@ screen character_selection:
     frame:
         xalign .5
         yalign .5
-        margin (310,110,310,150)
+        margin ((160, 110, 160, 150) if is_butler_visible() else (310, 110, 310, 150))
         label "Select a Character":
             yoffset -50
             style "confirm_prompt" # TODO specific styling TODO space after label .... why so complicated.....
@@ -33,47 +33,62 @@ screen character_selection:
         use character_list(True)
 
 
+screen character_card(char, is_selection = False, card_x_offset = 0, card_y_offset = 0):
+    vbox:
+        xoffset card_x_offset
+        yoffset card_y_offset
+        textbutton char.real_name:
+            if is_selection:
+                if char.is_character_unlocked():
+                    action Return(char.text_id)
+            else:
+                action ShowMenu("character_details", char)
+        imagebutton:
+            mouse "hover"
+            if char.is_character_unlocked():
+                idle "images/characters/side/side " + char.text_id + ".png"
+                hover "images/characters/side_hover/side " + char.text_id + " hover.png"
+            else:
+                idle "images/characters/side_bw/side " + char.text_id + " bw.png"
+                if not is_selection:
+                    hover "images/characters/side_bw_hover/side " + char.text_id + " bw hover.png"
+
+            if is_selection:
+                if char.is_character_unlocked():
+                    action Return(char.text_id)
+            else:
+                action ShowMenu("character_details", char)
+
+
 screen character_list(is_selection = False):
     #Two hbox of 4 characters
     $ char_x_offset = 0
     $ char_y_offset = 0
+    $ show_butler = is_butler_visible()
 
     for char_sub_list in char_list:
         hbox:
             yoffset char_y_offset
+            $ char_column = 0
             for char in char_sub_list:
-                vbox:
-                    xoffset char_x_offset
-                    textbutton char.real_name:
-                        if is_selection:
-                            if char.is_character_unlocked():
-                                action Return(char.text_id)
-                        else:
-                            action ShowMenu("character_details", char)
-                    imagebutton:
-                        mouse "hover"
-                        if char.is_character_unlocked():
-                            idle "images/characters/side/side " + char.text_id + ".png"
-                            hover "images/characters/side_hover/side " + char.text_id + " hover.png"
-                        else:
-                            idle "images/characters/side_bw/side " + char.text_id + " bw.png"
-                            if not is_selection:
-                                hover "images/characters/side_bw_hover/side " + char.text_id + " bw hover.png"
-
-                        if is_selection:
-                            if char.is_character_unlocked():
-                                action Return(char.text_id)   
-                        else:
-                            action ShowMenu("character_details", char)
-                
+                # Once the butler is discovered, open a slot in the middle of each row
+                if show_butler and char_column == 2:
+                    null width 260
+                use character_card(char, is_selection, char_x_offset)
                 $ char_x_offset += 50
+                $ char_column += 1
+
+            # The staggered x offsets do not count towards the layout width,
+            # reserve that space so the frame contains the last column
+            if show_butler:
+                null width 150
 
         $ char_x_offset = 0
+        $ char_y_offset += 340
 
-        if is_selection:
-            $ char_y_offset += 340
-        else:
-            $ char_y_offset += 340
+    # The butler sits in the dead centre, between the two rows
+    if show_butler:
+        use character_card(butler_details, is_selection, 595, 170)
 
 
 screen character_details(selected_char):
