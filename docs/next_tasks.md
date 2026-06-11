@@ -1,4 +1,10 @@
 <!-- # cSpell:disable -->
+## GEn
+
+once you have the WHAT happened RIGHT, you can activate the : 
+SAVED everyone PATH, sent it tot he past, and change the future
+that's the beauty of that new technology !! (maybe too convoluted?)
+
 
 ### TEST and validate
 
@@ -8,7 +14,8 @@ FIX EVERYONE CAPTAIN MEETING Day 3 morning for
   - When call captain, make it more dramatic
   - Remove kept searching the manor
 - psychic 
-  - Remove Captain sinha comes back
+  - Remove Captain sinha comes back dialog
+  - 
 - Others?
   - Nurse?
   - Doc?
@@ -34,13 +41,8 @@ NOT important : Weird that the captain doesn't run into the others? Should he hi
 ## No config menu for captain? No way to ask random question to host or other? Change that? Or ok like this?
 
 ### Threads Captain to redraw: 
-- shot on the road, not shot in the woods
-- strangle with a lace, not hang in the woods
-- Add Beaten to death instead of nose
-- Maybe better shot from behind?
-- Change place between run over and survive
-- Add car on the survive thread
-- Add intuition to the right thread
+
+- Add intuition to the right thread : view of the inside of 1920 car engine, with old gun being fired
 
 ### Write Story: NEXT => Broken or HOST?
 
