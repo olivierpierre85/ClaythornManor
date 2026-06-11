@@ -1,8 +1,8 @@
-Generated:                2026-06-11 09:20:39
+Generated:                2026-06-11 10:24:51
 Scope:                    character=captain
-Dialogue entries scanned: 1772
-Test lines collected:     3062
-Covered:                  1745
+Dialogue entries scanned: 1893
+Test lines collected:     3142
+Covered:                  1866
 Missing:                  27
 
   game/scripts/captain/Day 2/3_Evening/0_map_choices.rpy  (14 missing)

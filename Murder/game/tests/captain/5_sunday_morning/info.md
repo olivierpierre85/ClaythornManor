@@ -3,9 +3,26 @@
 The morning first branches on `confide_in_nurse` (set Saturday evening):
 **nurse path** (Miss Marsh fetches him) or **explore path** (he walks the house alone).
 
-The nurse path is a single linear sequence (no menu): Miss Marsh is too unwell to flee,
-so the captain leaves alone on foot and is run over on the forest road
-(`captain_ending_run_over`). It does not continue into the afternoon.
+On the **nurse path**, Miss Marsh fetches the captain at first light. While they take
+stock in his room she admits she could not manage the walk to town ("I am not a healthy
+woman"), and the captain proposes to fetch help alone while she hides. Right after his
+proposal they hear others moving through the house (the lad and the psychic, never
+named), and she persuades him to hide with her in the butler's attic room. While they
+wait out the morning, a hub menu (`captain_day3_attic_wait_menu`) lets the captain draw
+her out:
+
+- `captain_day3_attic_ask_health` — a follow-up to her earlier admission about the walk; she deflects politely (no unlock)
+- `captain_day3_attic_ask_prize` — the prize letters: neither of them deserves theirs, probably nobody does, but each letter held a grain of truth
+- `captain_day3_attic_ask_china` — **only visible after the prize talk**; she references his Friday-evening Boxer Rebellion story (no `tell_boxer_story` check needed — the captain only survives the hunt on the branch where he told it); she has spotted that Doctor Baldwin was in China too
+
+No saved variables are used: the asked/not-asked state is read from the menu's own
+choice state via `linked_choice` tokens and `is_linked_choice_hidden` (the same pattern
+as the generic "Tell me more / Why were you invited" menus).
+- `captain_day3_attic_wait_silence` — "Say nothing", `early_exit`; its text branches on whether anything was asked
+
+The path remains a dead-end: when the house falls quiet the captain leaves alone on
+foot, giving Miss Marsh his pistol and the master key, and is shot in the woods
+(`captain_ending_shot_fleeing`). It does not continue into the afternoon.
 
 On the explore path, the meeting in the tea room then branches independently on two
 flags the captain may have set during his solo round of the map:
@@ -28,7 +45,8 @@ This gives a 2×2 of meeting outcomes, all four of which must be exercised:
 | ---- | -------------- | ------------ |
 | `setup_captain_sunday_morning_1` | none | **Explore path, minimal.** Goes straight to his own room (the "Hide in my room" map choice) and locks himself in (`captain_day3_morning_bedroom_captain`), ending the morning at once with no other rooms searched. Manning is never checked, so the captain and the others discover his body together (`common_day3_morning_lad_psychic_captain_death_manning`), then on to the afternoon. |
 | `setup_captain_sunday_morning_2` | `petrol_tin_in_shed` | **Explore path, full sweep.** Visits the garage (finds the car, sets `seen_car`), the garden (already holds the petrol — the "already found on Saturday" branch), Mr Manning's room (sets `day3_morning_drunk_checked`), and Miss Marsh's room (opens it with the master key, sets `day3_morning_nurse_checked`), then ends the morning by locking himself in his own room (`captain_day3_morning_bedroom_captain`). Because both checks are set, at the meeting he reports both Manning's death and Marsh's empty room himself. Carries `seen_car` + `petrol_tin_in_shed` into the afternoon car branch. |
-| `setup_captain_sunday_morning_3` | `confide_in_nurse` | **Nurse path (linear, no menu).** Miss Marsh fetches him and admits she is too unwell to face the road, so the captain hands her his pistol, tells her to hide with the master key, and leaves alone on foot. He is run over on the forest road (`captain_ending_run_over`). This path ends the captain's story here and does not reach the afternoon. |
+| `setup_captain_sunday_morning_3` | `confide_in_nurse` | **Nurse path, full conversation.** Asks all three attic questions in order (health, the prize letters, China) then "Say nothing". Covers the health deflection, the prize-letter centrepiece, the China beat, and the "said what there is to say" silence variant. Ends with `captain_ending_shot_fleeing`. |
+| `setup_captain_sunday_morning_11` | `confide_in_nurse` | **Nurse path, silent wait.** Picks "Say nothing" immediately — covers the "no appetite for conversation" silence variant and confirms the morning resolves with no questions asked. Ends with `captain_ending_shot_fleeing`. |
 | `setup_captain_sunday_morning_5` | none | **Explore path, find the petrol on Sunday.** Visits the garage first (the car, no petrol yet — the "dead weight" branch, sets `seen_car`), then the garden, where with the staff gone he opens the locked shed with the master key and discovers the petrol tin (sets `petrol_tin_in_shed`). Ends the morning by locking himself in his own room (`captain_day3_morning_bedroom_captain`). This is the second chance for a player who missed the shed on Saturday evening to still reach the afternoon car branch. |
 | `setup_captain_sunday_morning_6` | none | **Explore path, meeting combo `(drunk=T, nurse=F)`.** Visits only Mr Manning's room (sets `day3_morning_drunk_checked`, sees the body alone), then ends the morning by locking himself in his own room (`captain_day3_morning_bedroom_captain`). At the meeting he reports Manning's death himself, but Miss Marsh's room is still unchecked, so the three go up and search it together (`search_nurse` → `marsh_empty` → `search_report`) before `deaths_end`. |
 | `setup_captain_sunday_morning_7` | none | **Explore path, meeting combo `(drunk=F, nurse=T)`.** Visits only Miss Marsh's room (sets `day3_morning_nurse_checked`, finds it empty), then ends the morning by locking himself in his own room (`captain_day3_morning_bedroom_captain`). At the meeting Manning is still unchecked, so they discover his body together (`death_manning`), then the captain reports Marsh's empty room himself, straight into `deaths_end` — no second search party. |

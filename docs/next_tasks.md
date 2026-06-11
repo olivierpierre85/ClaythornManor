@@ -4,8 +4,18 @@
 
 FIX EVERYONE CAPTAIN MEETING Day 3 morning for
 - ted
+  - Add a way to skip search and to just wait?
+  - When call captain, make it more dramatic
+  - Remove kept searching the manor
 - psychic 
+  - Remove Captain sinha comes back
 - Others?
+  - Nurse?
+  - Doc?
+
+## FABLE 5
+
+Take advantage to change CODE while it is available
 
 ## Write Story: Captain (Sushil Sinha)
 - [x] Friday Afternoon
@@ -14,8 +24,23 @@ FIX EVERYONE CAPTAIN MEETING Day 3 morning for
 - [x] Saturday Hunt
 - [x] Saturday evening
 - [ ] sunday Morning
-  - [ ] hard to reach DIALOG but unlocks NOTHINg => **Find something to put there**. => maybe the intuition should be there. DO NOT TAKE THE CAR we replace the survive ending here, leaving no way to escape on the last chapter? Worth thinking about
+  - [ ] Nurse path information
+    - [ ] Rewrite entirely : captain_day3_attic_ask_prize
+    - [ ] FIX grammar in whole file
 - [x] **sunday AFternoon**
+
+NOT important : Weird that the captain doesn't run into the others? Should he hide on purpose? To think about, but LATER
+
+## No config menu for captain? No way to ask random question to host or other? Change that? Or ok like this?
+
+### Threads Captain to redraw: 
+- shot on the road, not shot in the woods
+- strangle with a lace, not hang in the woods
+- Add Beaten to death instead of nose
+- Maybe better shot from behind?
+- Change place between run over and survive
+- Add car on the survive thread
+- Add intuition to the right thread
 
 ### Write Story: NEXT => Broken or HOST?
 
@@ -51,7 +76,7 @@ When Someone is saved, it add a SAVED over their name in the progress view
         - [x] Problem in Angry Broken (doctor path) the option next menu should be the menu where you can actually do something with the “angered” broken. Or maybe removed (fixed by removing the next_menu param so choices don't lock)
         - Ending Gun downed with sushil ted harring: Add a second choice when you escape with the gun. To avoid greying when there is another possible ending. (“Go out, you have a gun it’s safe”)
 
-- [ ] New Progress view
+- [ ] **New Progress view**
     - Add new **ENDINGS page** for symmetry? Or a tooltip that says, endings can be seen below
     - Add new page with **All threads** ?
 

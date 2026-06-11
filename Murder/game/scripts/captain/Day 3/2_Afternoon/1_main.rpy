@@ -152,9 +152,7 @@ label captain_day3_afternoon:
         call captain_day3_leave_alone_introduction
 
         """
-        I keep a solid pace for the better part of an hour.
-
-        Then, somewhere behind me, I hear an engine.
+        Then, coming from behind me, I hear an engine.
         """
 
         play sound car_driving fadein 4 loop
@@ -169,9 +167,7 @@ label captain_day3_afternoon:
         It does not slow.
 
         If anything it gathers speed, and it holds straight for me.
-        """
 
-        """
         I throw myself towards the trees.
 
         But the road is wide open, and a man on foot is no match for a motor.
@@ -182,6 +178,7 @@ label captain_day3_afternoon:
         play sound body_fall
 
         jump captain_ending_run_over
+
 
 label captain_day3_afternoon_car_together_intro:
 

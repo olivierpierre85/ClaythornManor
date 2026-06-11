@@ -1,0 +1,14 @@
+{
+    "start_label": "captain_day3_morning",
+    "unlocked_threads": [
+        "confide_in_nurse"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "captain_day3_attic_wait_menu",
+            "selected": "Say nothing",
+            "redirect": "captain_day3_attic_wait_silence"
+        }
+    ]
+}

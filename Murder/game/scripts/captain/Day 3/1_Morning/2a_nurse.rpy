@@ -2,12 +2,20 @@
 #   Captain — Sunday morning, nurse path
 #
 #   The captain confided in Miss Marsh last night, and she comes for him at
-#   first light. After they take stock, he is offered a choice that is really
-#   no choice at all:
-#     - Leave at once: Miss Marsh cannot face the road on foot and admits she
-#       is unwell, so the captain yields and they go to ground after all.
-#     - Go to ground: they hide in the butler's attic room directly.
-#   Either way they wait the morning out and come down in the afternoon.
+#   first light. While they take stock in his room, she admits she could not
+#   manage the walk to town, so the captain proposes to fetch help alone
+#   while she hides. Before they can move, they hear others going through
+#   the house (the lad and the psychic, searching — never named). Miss Marsh
+#   persuades the captain not to show himself, and they hide together in the
+#   butler's attic room.
+#
+#   While they wait for quiet, a single hub menu lets the captain draw her
+#   out (her health, the prize letters, then China once the letters have
+#   been discussed). Flavour and player insight only — no unlocks.
+#
+#   When the house falls silent he leaves alone on foot to fetch help,
+#   leaving her his pistol and the master key, and is shot on the road
+#   (captain_ending_shot_fleeing). This path does not reach the afternoon.
 # --------------------------------------------
 
 label captain_day3_morning_nurse:
@@ -94,48 +102,40 @@ label captain_day3_morning_nurse:
 
     nurse """
     Never called, but Lady Claythorn...
-
-    Oh...
     """
 
     captain """
-    Yes, if Lady Claythorn is behind this masquerade, and there is a very good chance that she is, there was no reason for her to call the police.
+    Lady Claythorn might be behind this masquerade, so there was no reason for her to call the police.
 
-    We might wait here indefinitely.
+    We could wait here indefinitely.
     """
 
     nurse """
+    Oh... you are right of course.
+
+    We really shouldn't trust anything that she said, should we?
+
     What can we do then?
     """
 
     captain """
-    I see two options: 
-    
-    First, we could search this place and try to make sense of what is happening.
+    The way I see it, we have two choices.
 
-    I have a gun, so I can protect myself.
+    We can search the house and try to make sense of what is happening, or we can leave at once and make for the town.
     """
 
     nurse """
     I do not like the idea of roaming around the house, even with you to protect me.
 
-    What is the second option?
+    But leave, Captain? On foot?
     """
 
     captain """
-    We could leave right away, on foot if we must.
-    """
-
-    nurse """
-    On foot, Captain?
-    """
-
-    captain """
-    I am afraid yes.
+    I am afraid so.
 
     Lady Claythorn and her staff most likely left with the motor car.
 
-    It is a fairly long walk to the town, but it is still early, I am sure we can make it.
+    It is a fairly long walk to the town, but it is still early. I am sure we can make it.
     """
 
     nurse """
@@ -145,7 +145,7 @@ label captain_day3_morning_nurse:
     """
 
     """
-    She says it quietly, and I see now what I had been too preoccupied to mark before.
+    She says it quietly, and I see now what I was too preoccupied to mark before.
 
     The pallor that is not only fear.
 
@@ -165,15 +165,166 @@ label captain_day3_morning_nurse:
     """
     I think her condition might be worse than her quiet behaviour shows.
 
-    But if she does not want to tell me more, I will not press her.
+    But this is not the moment to press her on it.
     """
 
     captain """
     In that case, I believe the safer bet is for me to leave alone.
 
-    And I should go as soon as possible then, this way there is a very good chance that I can come back for you before the end of the day.
+    And I should go as soon as possible then. This way there is a very good chance that I can come back for you before the end of the day.
 
     You could hide until then.
+    """
+
+    play sound door_shut
+
+    """
+    Somewhere below us, a door bangs.
+
+    Then footsteps. More than one set, moving fast.
+    """
+
+    nurse """
+    Captain...
+    """
+
+    """
+    I raise a hand for silence and listen.
+
+    Floorboards along the corridor below. A voice, too muffled to make out. Another door.
+
+    Whoever they are, they are going through the house room by room.
+    """
+
+    captain """
+    Someone is searching the house.
+
+    I should go out and meet them. Better to face a man than be cornered by one.
+    """
+
+    nurse """
+    Captain, no.
+
+    We do not know who is out there.
+
+    It might be one of the guests. It might be whoever did away with the staff.
+
+    If you open that door, you will find out which only when it is too late.
+    """
+
+    """
+    I weigh it.
+
+    I have one revolver, six rounds, and no notion of their numbers or their intent.
+
+    She is right. This is probably dangerous.
+    """
+
+    captain """
+    Very well, we stay out of sight.
+
+    But not here.
+
+    If they are opening doors, they will reach this room sooner or later.
+    """
+
+    nurse """
+    The attic.
+
+    The staff are gone, and no guest has any business up there.
+
+    Nobody will think to look for us amongst empty servants' rooms.
+    """
+
+    captain """
+    The attic, good.
+
+    I have the butler's master key, so the locked doors up there are no obstacle.
+
+    We wait for the corridor to clear, then we move. Quickly and quietly.
+    """
+
+    """
+    We stand on either side of the door and listen.
+
+    The footsteps pass along the corridor, pause somewhere at the far end, and fade towards the stairs.
+
+    I ease the door open.
+    """
+
+    call change_time(9, 0)
+
+    $ change_room('bedrooms_hallway', dissolve)
+
+    """
+    The corridor is empty.
+
+    We make for the attic stair, Miss Marsh ahead, my eyes on the landing behind us.
+    """
+
+    $ change_room('attic_hallway', dissolve)
+
+    """
+    The narrow stair creaks under our weight, and then we are up amongst the servants' doors.
+
+    I fit the master key to the butler's room. It belonged to the head man of the house, and it has the soundest door up here.
+    """
+
+    play sound door_open
+
+    $ change_room('butler_room')
+
+    """
+    I lock the door behind us.
+
+    A narrow bed, a washstand, a single chair. Against the far wall, a heavy glass-panelled cabinet with the household silver asleep inside it.
+
+    Miss Marsh takes the chair. I set my back against the wall where I can watch the door.
+    """
+
+    captain """
+    Now we wait until the house is quieter. 
+    
+    Then, we will decide our next move.
+    """
+
+    nurse """
+    Very well, Captain.
+    """
+
+    """
+    Miss Marsh sits in the chair, her hands folded in her lap.
+    
+    I keep my place by the wall and listen to what is happening downstairs.
+
+    This might take a while. Maybe now is a good opportunity to ask Miss Marsh some questions.
+    """
+
+    $ time_left = 60
+    call run_menu(TimedMenu("captain_day3_attic_wait_menu", [
+        TimedMenuChoice("Ask her about her health", 'captain_day3_attic_ask_health', 30, linked_choice='captain_day3_attic_health_done'),
+        TimedMenuChoice("Ask her what brought her here", 'captain_day3_attic_ask_prize', 30, linked_choice='captain_day3_attic_ask_china'),
+        TimedMenuChoice("Say nothing", 'generic_cancel', 0, early_exit=True, keep_alive=True),
+    ]))
+
+    call wait_screen_transition()
+
+    call change_time(11, 30)
+
+    """
+    The footsteps below stopped a long while ago, and the house has gone back to its heavy silence.
+
+    No one has tried the attic stair.
+    """
+
+    captain """
+    The house has been quiet for a long while now.
+
+    If I am to reach the town and come back with help before nightfall, I should leave now.
+
+    You will stay here, as we agreed.
+
+    This room has a sound door and a sound lock.
     """
 
     nurse """
@@ -189,7 +340,7 @@ label captain_day3_morning_nurse:
 
     And if it can ease your mind, you can take this pistol.
 
-    I try to always keep it on me, one never knows when one might need protection.
+    I try always to keep it on me. One never knows when one might need protection.
 
     Do you know how to use one?
     """
@@ -201,29 +352,17 @@ label captain_day3_morning_nurse:
     """
 
     captain """
-    You probably won't, just find a safe hidden place, close the door and do not open to anybody.
+    You probably won't.
+
+    Lock the door behind me and do not open it to anybody.
 
     It is safe to say that everyone is a suspect at this point.
     """
 
-    nurse """
-    You are right.
-
-    I believe the attic is the best place to hide.
-
-    It should be empty now.
     """
+    I hand her the pistol, and the master key with it.
 
-    captain """
-    The attic, good idea.
-
-    I have the butler's master key.
-
-    Use it to open a room and hide in it.
-    """
-
-    """
-    I hand her the key, I do not need it anymore anyway.
+    I do not need the key any more, anyway.
     """
 
     nurse """
@@ -233,7 +372,7 @@ label captain_day3_morning_nurse:
     """
 
     captain """
-    Great, in that case I see no reason to linger.
+    Good, in that case I see no reason to linger.
 
     I will go straight away and come back as soon as possible.
 
@@ -247,15 +386,21 @@ label captain_day3_morning_nurse:
     call change_time(12, 00)
 
     call captain_day3_leave_alone_introduction
-
-    $ play_music('danger')
-
+    
     """
-    I keep a solid pace for an hour, then, away to my right, I notice something.
+    Then, away to my right, I notice something.
 
-    A shape that is the wrong colour for bark.
+    Something in the wood is the wrong colour.
 
-    And from that shape, I can spot the barrel of a rifle.
+    I watch its shape with care.
+
+    From that shape, I can spot something shining, metal.
+
+    It takes me a moment to understand what it is.
+    
+    The barrel of a rifle.
+
+    And it is pointing right at me.
 
     I quickly grab for my own gun but come up empty.
 
@@ -268,6 +413,211 @@ label captain_day3_morning_nurse:
 
     jump captain_ending_shot_fleeing
 
+
+# ------------------------------------
+#   THE WAIT — attic hub menu
+# ------------------------------------
+
+label captain_day3_attic_ask_health:
+
+    captain """
+    You said the walk to the town would be more than your body could bear.
+
+    Forgive my asking plainly, Miss Marsh, but what ails you?
+    """
+
+    nurse """
+    You are direct, Captain.
+    """
+
+    captain """
+    I believe that, given the circumstances, it is best to be.
+    """
+
+    nurse """
+    Fine then, I suppose there is no reason to hide this from you.
+
+    I have been diagnosed with consumption.
+
+    Because of it, I have not been strong for some years.
+
+    This weekend has asked more of me than I expected, that is all.
+    """
+
+    """
+    She folds her hands again, and that is plainly the end of the matter.
+
+    Consumption. I know how serious that is.
+
+    She is right to believe she will not be able to leave on foot.
+
+    No, if she wants to leave safely, she will need a motor car, that is certain.
+    """
+
+    return
+
+
+label captain_day3_attic_ask_prize:
+
+    captain """
+    May I ask what brought you here, Miss Marsh?
+
+    The reason for your award, I mean.
+    """
+
+    nurse """
+    Well, the letter mentioned an award for distinguished service.
+
+    Something about having served in more wars than any other nurse.
+    """
+
+    captain """
+    Really, that is impressive.
+    """
+
+    nurse """
+    Yes.
+
+    And I have had two days to wonder what exactly I did that was so distinguished.
+
+    I have nursed for thirty years, Captain. I have done it well, I believe.
+
+    But no better than a hundred other women who were never offered a prize for it.
+
+    I do not deserve that money. I knew it when I read the letter.
+
+    And I came all the same.
+    """
+
+    """
+    I could let it pass with a polite word.
+
+    Instead I find myself answering her honestly. I cannot say why.
+
+    Perhaps because, after this morning, politeness seems a poor use of whatever time we have.
+    """
+
+    captain """
+    My letter spoke of an impressive military career.
+
+    Medals, campaigns, acts of courage in the field.
+    """
+
+    nurse """
+    And?
+    """
+
+    captain """
+    And the letter was a good deal more generous than the record, Miss Marsh.
+
+    I will leave it at that.
+    """
+
+    """
+    It costs me more to say than I care to admit.
+
+    I have told the other version of myself for thirty years. It comes out on its own now.
+    """
+
+    nurse """
+    Thank you, Captain.
+
+    Then we are the same.
+
+    And I would wager the others are too.
+
+    Mr Manning, the great defence lawyer. Doctor Baldwin. Poor Mr Moody.
+
+    A houseful of guests, every one of them honoured for something they know, in their hearts, they did not quite do.
+    """
+
+    captain """
+    Yet the letters were not invented out of nothing.
+
+    Mine had the regiments right, the postings, the dates.
+
+    There was enough truth in it that I never thought to question the rest.
+    """
+
+    nurse """
+    Yes.
+
+    That is what a good lie is, is it not? Mostly true.
+
+    Whoever wrote those letters knew us, Captain. Each of us, well enough to know which truth would bring us here.
+
+    Mine had my hospitals right. It even knew I had served abroad — that I was in China, during the Boxer Rebellion.
+    """
+
+    captain """
+    Wait.
+
+    You said you were in China, Miss Marsh.
+
+    During the Rebellion?
+    """
+
+    nurse """
+    Yes.
+
+    With the field hospitals, nursing the wounded out of the legations.
+
+    I know you were there too, Captain. We all heard your story on Friday evening.
+
+    And here is a curious thing I have been turning over since.
+
+    Doctor Baldwin was in China in those years as well, I am almost sure of that.
+    """
+
+    captain """
+    The doctor?
+
+    How do you know that?
+    """
+
+    nurse """
+    I recognised him.
+
+    It was a long time ago, and of course he must have changed quite a bit.
+
+    I wanted to ask him about it, but did not have the time.
+    """
+
+    captain """
+    Yes, what a sad end for Doctor Baldwin.
+    """
+
+    """
+    I weigh the implications of that information.
+    """
+
+    captain """
+    Yourself, myself, Doctor Baldwin.
+
+    Three guests out of seven, all in China a quarter of a century ago.
+    """
+
+    nurse """
+    It may be nothing.
+    """
+
+    captain """
+    Perhaps.
+
+    But the letters knew us, Miss Marsh. You said it yourself.
+
+    If our host went digging into our pasts, China is where three of those pasts cross.
+    """
+
+    """
+    I turn it over and can make nothing more of it.
+
+    Whatever happened out there, it was a long time ago, and half a world away.
+
+    But I do not like coincidences, and this house is too full of them.
+    """
+
+    return
 
 
 label captain_day3_leave_alone_introduction:
@@ -282,10 +632,19 @@ label captain_day3_leave_alone_introduction:
     """
 
     $ change_room('forest_road', dissolve)
-    
+
     """
     I take only my coat and what will fit in its pockets.
 
     The drive gives way to a rough road, and the road to open country between the trees.
     """
+    
+    $ play_music('danger')
+
+    """
+    I keep a steady pace for an hour.
+    
+    Fear is slowly being replaced by hope, and I start to think I might get away.
+    """
+
     return
