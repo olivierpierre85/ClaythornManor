@@ -123,7 +123,7 @@ I climb the narrow stair to the attic.
 The boards creak under my weight. The air up here is closer, smelling of dust and old wood.
 A short corridor runs the length of the house, doors on either side.
 It is not a place a guest has any business being in.
-But after what happen today, I am not above breaking some rules if that means I can understand better what is happening today.
+But I am well past minding that now. If there are answers up here, I mean to have them.
 I fit the master key to the door.
 The bolt slides back without protest.
 A single key for the whole house. If it opens this one, it will open all the others up here just as readily.
@@ -132,10 +132,8 @@ Trunks stacked three deep, dust-sheeted furniture, boxes that have not been open
 I work my way along the shelves nearest the door, where the more recent items seem to live.
 Tins of paint. A pair of oil lamps. A small case of candles.
 And, set on its side beneath a folded oilcloth, a storm lantern.
-I lift it from the shelf. The reservoir is half full, the wick recently trimmed.
-A well-kept piece, in an attic full of old leavings. Someone in this house has been keeping it ready.
-That, by itself, is interesting.
-I take it up. It will be wanted before the night is out.
+I lift it from the shelf. The reservoir is half full.
+It could prove useful, so I take it up.
 Map Choice: Look in on the billiard room
 The billiard room is lit much as it was last night, but the warmth of the place has gone out of it.
 The decanters stand untouched on the side.
@@ -145,67 +143,15 @@ Menu Choice: Pour a glass of sherry
 I cross to the sideboard and pour a small measure of sherry from one of the decanters.
 The glass is good crystal, the sherry darker than I would have chosen for myself, but it will do.
 Menu Choice: Wait and see who comes
-I sit down on a chair by the fire.
-On the table next to it is a book: "The Seven and a Half Lives of Evelyn Softhovel".
-It is not at all the sort of thing I should choose for myself, but the evening offers little else, so I take it up.
-A few minutes pass before the door eases open behind me.
-Rosalind Marsh hesitates for a moment in the doorway, then crosses the room with her usual quiet composure.
-Sushil Sinha: Miss Marsh.
-Sushil Sinha: I thought everyone had retired.
-Rosalind Marsh: Not quite yet.
-Rosalind Marsh: I am glad you are here, Captain.
-Rosalind Marsh: I would like to talk about something sensitive.
-Rosalind Marsh: I hope you don't mind.
-Sushil Sinha: Not at all.
-Rosalind Marsh: Good.
-Rosalind Marsh: You see, there are a few things about this weekend that don't make sense to me.
-Sushil Sinha: Oh?
-Sushil Sinha: Such as?
-Rosalind Marsh: We've witnessed two deaths in as many days.
-Rosalind Marsh: Doesn't it seem strange to you?
-A direct question, asked very simply.
-I am uneasy at what is unfolding here as well.
-But I do not have enough tangible evidence to prove it.
-So the safest course is to pretend everything is fine.
-Sushil Sinha: Not really.
-Sushil Sinha: They seem quite natural to me, Miss Marsh.
-Sushil Sinha: Thomas Moody died of injuries he got during the war.
-Sushil Sinha: Even if you thought he was fine, he might have been suffering in silence.
-Sushil Sinha: Some people prefer to hide their distress from the people around them.
-Rosalind Marsh: But for Doctor Baldwin?
-Sushil Sinha: A dreadful accident, Miss Marsh.
-Sushil Sinha: Manning was drunk and careless with a firearm.
-Sushil Sinha: Sadly, this type of tragic event is not rare at all.
-Sushil Sinha: Although some people treat it as a light form of entertainment, a hunt is a dangerous business.
-Rosalind Marsh: Perhaps you are right.
-Rosalind Marsh: Still, I confess I am uneasy knowing Samuel Manning is just upstairs.
-Rosalind Marsh: A few steps from my own room.
-Rosalind Marsh: Are we sure he cannot get out?
-Sushil Sinha: Quite sure.
-Sushil Sinha: I locked the door myself, with the key the butler gave me.
-Sushil Sinha: The doors in this house are solid oak.
-Sushil Sinha: He is going nowhere.
-Rosalind Marsh: That is reassuring.
-She regards me a moment longer than I should like.
-Rosalind Marsh: Well, in that case, I am quite tired.
-Rosalind Marsh: I should retire.
-Rosalind Marsh: Good night, Captain.
-Sushil Sinha: Good night, Miss Marsh.
-She withdraws as quietly as she came.
-The door clicks shut behind her, and the room is mine again.
-I wonder what made a middle-aged nurse risk coming downstairs tonight.
-She had every excuse to stay in her room, and yet she chose to come down and see who would be here.
-That is interesting to know.
+I turn back to my book and try to settle to it.
+A page or two go by, easily enough.
+The fire shifts in the grate, and the clock on the mantel ticks on.
+Nobody disturbs me.
 Menu Choice: Leave the room
 Map Choice: Male Servants Room
 Two beds, a chest of drawers, a peg for each man's coat.
-I work the drawers quickly. Folded shirts, a penknife, a few coins. Nothing of note.
-Then, at the back of the bottom drawer, beneath the linen, a folded sheet of paper.
-A letter from a London theatre company. Politely worded, but a rejection all the same.
-'We regret to inform you that the role has been filled. We wish you every success in your future endeavours.'
-An actor. Playing at being a footman.
-A curious choice of employment for a man with that ambition. And rather further from a stage than one would expect.
-I fold the letter back exactly as I found it.
+I work the drawers quickly. Folded shirts, a penknife, a few coins, some letters.
+Nothing out of the ordinary here.
 Map Choice: Male Servants Room
 I have already gone through this room.
 Nothing more here.
@@ -219,40 +165,6 @@ I replace the photograph and step back out.
 Map Choice: Female Servants Room
 I have already searched this room.
 Nothing more for me here.
-Map Choice: Look in on the billiard room
-I am back in the billiard room.
-The chairs sit much as I left them.
-Menu Choice: Wait and see who comes
-I turn a few more pages, more for the look of the thing than to read.
-After a little while, the door opens a second time.
-Lady Claythorn pauses on the threshold, and the sight of me brings her up at once.
-For an instant her face is quite undefended.
-She wears her travelling coat, buttoned to the throat.
-She had not expected to find anyone in this room.
-Lady Claythorn: Captain.
-Lady Claythorn: I... did not realise anyone was still up.
-Sushil Sinha: Evidently.
-Lady Claythorn: Forgive me. I came down to fetch my book.
-Lady Claythorn: I find I cannot sleep without something to read.
-That is possible explanation, but why is she wearing a coat then?
-A woman seeking a book for her bedside does not come for it dressed for travel.
-I should ask her why she is dressed that way.
-Especially since it is not the only suspicious thing I have discovered about her.
-But I feel I still do not have proof enough to confront a lady in her own house.
-To press her now, on what I have, would be a discourtesy of the worst kind.
-I rise, and hold out the book she came for.
-Sushil Sinha: Your book, my lady.
-Lady Claythorn: Oh — keep it, Captain, please. I would not dream of disturbing your evening.
-Lady Claythorn: I shall do well enough without.
-Sushil Sinha: I would not hear of it, my lady. You came down for it, and it is yours.
-Sushil Sinha: I must insist.
-She hesitates a moment longer than I should have expected, then takes the book from my hand.
-Lady Claythorn: You are very kind.
-Sushil Sinha: Not at all. Good night, my lady.
-She gives the smallest of nods, and is gone before I have settled back in my chair.
-The door clicks shut.
-I have the uncomfortable feeling that my manners have prevented me from doing something I should have done.
-But it is too late now.
 It is time I retired to my room.
 I close the door behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.

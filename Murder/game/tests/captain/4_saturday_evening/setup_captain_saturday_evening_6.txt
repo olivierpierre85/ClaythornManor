@@ -123,7 +123,7 @@ I climb the narrow stair to the attic.
 The boards creak under my weight. The air up here is closer, smelling of dust and old wood.
 A short corridor runs the length of the house, doors on either side.
 It is not a place a guest has any business being in.
-But after what happen today, I am not above breaking some rules if that means I can understand better what is happening today.
+But I am well past minding that now. If there are answers up here, I mean to have them.
 I fit the master key to the door.
 The bolt slides back without protest.
 A single key for the whole house. If it opens this one, it will open all the others up here just as readily.
@@ -132,12 +132,11 @@ Trunks stacked three deep, dust-sheeted furniture, boxes that have not been open
 I work my way along the shelves nearest the door, where the more recent items seem to live.
 Tins of paint. A pair of oil lamps. A small case of candles.
 And, set on its side beneath a folded oilcloth, a storm lantern.
-I lift it from the shelf. The reservoir is half full, the wick recently trimmed.
-A well-kept piece, in an attic full of old leavings. Someone in this house has been keeping it ready.
-That, by itself, is interesting.
-I take it up. It will be wanted before the night is out.
+I lift it from the shelf. The reservoir is half full.
+It could prove useful, so I take it up.
 Map Choice: Garden
-I look through the window. The storm has passed, but a steady rain is falling again.
+I look through the window.
+A steady rain is falling again.
 Lighter than last night, though enough to soak a man through.
 But that is nothing that can really prevent me from going.
 I step outside.
@@ -165,22 +164,16 @@ But against the far wall stands a heavy reinforced cabinet, glass-panelled, the 
 The lock is a modern one, and a good one.
 I take the master key from my pocket and try it.
 It turns without complaint.
-Inside: candlesticks, a salver, several sets of heavy plate. The honest wealth of the house, locked behind a butler's door rather than the master's.
-I have no will to take
+Inside: candlesticks, a salver, several sets of heavy plate.
+Nothing of use to me.
 I close the cabinet, lock it again, and step back.
-Whoever is truly running this house, it is not Lady Claythorn.
 Map Choice: Butler's Room
 The reinforced cabinet still stands against the far wall.
 I have already seen what is inside.
 Map Choice: Male Servants Room
 Two beds, a chest of drawers, a peg for each man's coat.
-I work the drawers quickly. Folded shirts, a penknife, a few coins. Nothing of note.
-Then, at the back of the bottom drawer, beneath the linen, a folded sheet of paper.
-A letter from a London theatre company. Politely worded, but a rejection all the same.
-'We regret to inform you that the role has been filled. We wish you every success in your future endeavours.'
-An actor. Playing at being a footman.
-A curious choice of employment for a man with that ambition. And rather further from a stage than one would expect.
-I fold the letter back exactly as I found it.
+I work the drawers quickly. Folded shirts, a penknife, a few coins, some letters.
+Nothing out of the ordinary here.
 Map Choice: Female Servants Room
 A small, spare room. Two narrow beds, a washstand, a single trunk between them.
 On the shelf above one of the beds, a few keepsakes — a dog-eared London playbill, another from a touring company.
@@ -196,26 +189,6 @@ Sushil Sinha: I only wished to know whether you were quite all right.
 Amelia Baxter: You are kind, Captain. But I am very tired.
 Amelia Baxter: Would you mind very much if we spoke in the morning?
 Sushil Sinha: Of course not. Sleep well, Miss Baxter.
-Map Choice: Edward II Bedroom
-Doctor Baldwin lies upon the bed exactly as we left him this afternoon.
-The blanket I drew over him has not been disturbed.
-There is nothing more I can do for the man.
-I close the door quietly behind me.
-Map Choice: George IV Bedroom
-Samuel Manning: Mmf... go 'way...
-Mr Manning is still locked in, and very much the worse for the day's drinking.
-The key in my pocket would let me through that door at any moment.
-Tonight, however, he is more use to me where he is.
-Map Choice: William the Conqueror Bedroom
-There is no reply.
-Either Mr Harring is not in his room at all, or he is keeping silent on the other side of the door.
-The first would be a curious thing on a night like this.
-The second would mean the lad has lost his nerve and means to keep his head down until morning.
-There is no telling which from out here.
-Map Choice: Richard III Bedroom
-Mr Moody's room sits much as it must have done since this morning.
-The bed has been straightened. His effects have been arranged with a tidy hand.
-I leave the room as I found it.
 It is time I retired to my room.
 I close the door behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.

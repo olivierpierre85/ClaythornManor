@@ -2,6 +2,14 @@ Chapter: Things Get Darker
 Character: Sushil Sinha
 The walk back from the woods felt twice as long as it ought to have.
 Doctor Baldwin was a heavier man than he appeared, and the makeshift stretcher was poor work.
+Throughout the walk, something keeps nagging at me.
+I already had a long list of things that do not sit well with our host.
+And I have just witnessed that she is no great hunter either.
+And now, a second death.
+One death may pass as a terrible accident.
+Two deaths are more concerning.
+Especially with everything I know about her.
+But as I reach the house, I am still not sure what to do.
 As we carry him through the entrance hall, I hear footsteps on the stair.
 Miss Baxter and Miss Marsh come to a halt at the bottom, and both their faces change at once.
 What follows is much as one might expect.
@@ -41,7 +49,14 @@ Samuel Manning: Yes, of course...
 Samuel Manning: I understand.
 I believe everyone assumes I should take him myself.
 After all, I represent the closest thing to a form of authority here.
-And I have no reason to disappoint them.
+But instead, I take a careful look at our host.
+I have enough arguments to confront her in front of everybody.
+And it would be better to do so without the staff present.
+Right now, only the butler is with us.
+If I were to send him to lock Manning up, that would be the perfect moment to confront our hostess.
+But a public accusation, if it does not land, will put me in an incredibly awkward position.
+I need to be sure about this.
+Menu Choice: Take Manning up myself
 Sushil Sinha: Mr Manning, are you ready to go to your room?
 Samuel Manning: Well - yes, of course.
 Sushil Sinha: Good, come with me, please.
@@ -109,8 +124,8 @@ Either they have nothing to fear, or they wish very much to be seen as having no
 In either case, seeing who will be there might teach me something of value.
 And there is precious little I can learn if I keep to my room.
 Map Choice: Kitchen
-The staff are still about their work down there.
-Master key or not, I can think of no plausible errand that would carry a guest into the kitchens at this hour.
+The staff are still about their work downstairs.
+Master key or not, I can think of no plausible errand that would carry a guest into the basement.
 Better to leave the lower floor alone.
 Map Choice: Tea room
 The tea room is empty and the fire has burned low.
@@ -124,7 +139,8 @@ The hall is quiet.
 The same flagstones where we laid Doctor Baldwin a few hours ago.
 But nothing of interest.
 Map Choice: Garden
-I look through the window. The storm has passed, but a steady rain is falling again.
+I look through the window.
+A steady rain is falling again.
 Lighter than last night, though enough to soak a man through.
 But that is nothing that can really prevent me from going.
 I step outside.
@@ -141,18 +157,12 @@ The Claythorn forebears still gaze down from their frames, silent and stern.
 The absence of our host's portrait remains as striking as before.
 There is nothing more the gallery can tell me.
 Map Choice: Library
-The library is as I left it.
 I have already read what I needed from the genealogy book.
 There is nothing more here for me.
 Map Choice: Queen Alexandra
 Sushil Sinha: Hello? Is anyone there?
 No reply.
 Either Miss Marsh is already asleep, or she is not in her room at all.
-Map Choice: Henry IV Bedroom
-Sushil Sinha: Hello? Is anyone there?
-No answer.
-The lady of the house, it seems, has not yet retired — or does not wish to be disturbed if she has.
-Map Choice: Retire for the night
 It is time I retired to my room.
 I close the door behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.

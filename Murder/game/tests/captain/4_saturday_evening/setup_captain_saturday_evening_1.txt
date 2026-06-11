@@ -108,6 +108,7 @@ Instead, her calm composure changes to something else.
 Fear.
 Lady Claythorn: Very well, Captain.
 Lady Claythorn: You are right.
+Lady Claythorn: I believe it is time I dropped the mask.
 Lady Claythorn: I am not Lady Claythorn.
 Sushil Sinha: Who are you then?
 Lady Claythorn: An actress.
@@ -115,7 +116,8 @@ Lady Claythorn: I was hired for being here.
 Lady Claythorn: I was given a script of sorts, and the run of the house, and a fee.
 Rosalind Marsh: Hired? You mean to tell us this entire weekend has been a... a performance?
 Lady Claythorn: Only some of it.
-Lady Claythorn: I swear to you, what has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
+Lady Claythorn: But I swear to you, things have gone far beyond what was planned.
+Lady Claythorn: What has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
 Lady Claythorn: None of that was in any script I was given.
 Lady Claythorn: I am every bit as frightened as you are. More so, perhaps.
 Sushil Sinha: Frightened of whom, madam?
@@ -219,7 +221,6 @@ Butler: Have a good night captain.
 Butler: And no need to worry, the police will come for you tomorrow, I assure you.
 I don't have an answer to that.
 Will the police come? I have no idea.
-I should make the most of it and try to get out.
 I cross to the window and try the latch. Painted shut, of course. Two storeys down besides.
 For a long while I sit upon the edge of the bed and listen to the house.
 Desperate, I finally fall asleep.
@@ -235,9 +236,8 @@ The smoke comes faster than I had thought it could.
 I sink to my knees with my coat across my mouth, and find the air no kinder there.
 Through the floorboards, very faintly, the manor begins to give voice to itself.
 A great, considered creaking, as of a vessel preparing, at last, to part with its ribs.
-You took the man at his word, after he had twice told you he had lied.
-Of all the night's small mistakes, that was the one that had no remedy.
-There was no need of poison, nor of further bullets, nor of any of the small careful violences a household provides.
-A locked door, and a candle laid carelessly close to a curtain, will cover a great many things by morning.
+You took a proven liar man at his word.
+And you let him lock you up without complaining.
+There was no need of poison, nor bullets.
 The manor burnt to its foundations before the dawn.
 With you in it.

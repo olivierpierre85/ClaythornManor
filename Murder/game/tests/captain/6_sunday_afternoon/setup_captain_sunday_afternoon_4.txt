@@ -27,48 +27,57 @@ Sushil Sinha: Neither do I.
 Sushil Sinha: I've thought about it, and I have no clue why we were all invited here.
 Sushil Sinha: I'm certain it wasn't to give us any money.
 Sushil Sinha: In any case, all I know is we need to leave as soon as possible.
-Sushil Sinha: As it happens, we are not obliged to walk.
-Sushil Sinha: The old motor car in the garage wants only petrol, and I have seen a full tin in the garden shed.
-Sushil Sinha: I can have it running inside the hour.
+Amelia Baxter: But how could we leave?
+Amelia Baxter: The nearest town is miles away.
+Amelia Baxter: I can't walk that far.
+Amelia Baxter: And even if I could, I'm not prepared for such a journey.
+Sushil Sinha: Luckily, we might not need to walk.
+Sushil Sinha: There is an old car in the garage, probably Lady Claythorn's old vehicle.
+Sushil Sinha: It was out of petrol when I checked it, but I have also seen a full tin of petrol in the garden shed.
+Sushil Sinha: If the old car is in decent enough shape, I might be able to get it running.
 Ted Harring: You can drive?
-Sushil Sinha: I have driven worse, on worse roads than these.
+Sushil Sinha: Yes. I have driven worse, on worse roads than these.
+Sushil Sinha: So I do not think it would be a problem to drive out of here.
+Sushil Sinha: I will see if I can start the car and bring it in front of the entrance.
+Sushil Sinha: You can wait for me there, it should not take very long.
+I leave the others by the front steps and go round alone.
+The petrol tin still sits in the garden shed where I found it.
+I pick it up.
+I fill the tank, set the choke, and work the crank.
+The engine baulks twice, then catches on the third pull and settles into a rough idle.
+It runs. That is all I ask of it.
+I ease the car out of the garage and bring it towards the manor's entrance.
+The engine runs rough beneath me, but it runs.
 And yet.
-Something in me baulks at the picture of it.
-The four of us packed into one slow machine, crawling down a single road that anyone might be watching.
+Something in me shivers.
+I feel an overwhelming sense of doom.
 I cannot say why, but I have the strongest sense that to leave together, in that car, is to die together.
-One man, travelling light and quiet, would stand a far better chance.
+I assume everyone still in the house is in the same boat as I am.
+But what if they are not?
+Maybe I have been too quick to disregard them as a threat.
+The safest thing now would be to leave alone.
 It would be a contemptible thing to do.
-It might also be the only thing that works.
+It might also be the only way to get out of here alive.
+I can send help after I reach town.
+Maybe they will be fine just waiting a few hours there.
+But as I am thinking this, I know it is probably not true.
+If I leave now, I might not see them alive again.
 Menu Choice: Drive off alone{{intuition}}
-Sushil Sinha: The car will not carry four of us over the rough ground to the lodge.
-Sushil Sinha: Loaded as we are, she will founder inside a mile, and then we have nothing at all.
-Sushil Sinha: I will take her light, reach the lodge, and bring back help and a second motor.
-Sushil Sinha: Bar the doors.
-Sushil Sinha: Do not open for a single engine.
-Sushil Sinha: Wait until you hear two.
-Ted Harring: You will come back?
-Sushil Sinha: On my honour.
-On my honour.
-The words come out smooth and steady, as they always have.
-I have said such things all my life and been believed.
-A supply officer who never saw a shot fired, telling boys of battles I watched from miles behind the lines.
-I learned young that a calm voice and a straight back will carry a room further than courage ever did.
+I roll the car up to the driveway.
+I can see Mr Harring and Miss Baxter waiting for me.
+But I do not stop.
+I put my foot down and pass in front of them as fast as I can.
+I see their expressions change from relief to fear.
+The car reaches the outer gate, and in a few moments I am on the open road.
+Alone.
 My whole life has been spent near the fighting and never once in it.
 Other men did the dying.
 I signed the papers, and told the stories afterwards.
-I am too old to become a braver man this afternoon.
-I have no intention of coming back, and I think the boy half knows it.
-He asks anyway, because he would sooner be lied to than left without a word.
-I fetch the tin from the shed, fill the tank, and bring the old car grinding up the drive.
-Alone.
-I do not look back at the house.
-A man who looks back might turn the car around, and I have decided not to be that man today.
+This weekend, I was given an opportunity to do something brave, and I turned it down.
 The engine holds. The road, for me, stays empty.
-Mile after mile, and not a soul on it.
-You took the only motor that ran, and you took it alone.
+Mile after mile, until I reach safety.
+You took the only motor that ran, and you escaped alone.
 You told yourself it was sense, and perhaps it was.
-The others would only have slowed you, and the road was no place for a frightened woman or a half-grown boy.
-That is what you told yourself, all the long miles to the town.
-You reached it alive.
-A coward reaches it alive too.
-Once a coward, always a coward.
+You know most people will call you a coward for what you did.
+But in the end, you got out alive.
+And maybe that is all that matters.

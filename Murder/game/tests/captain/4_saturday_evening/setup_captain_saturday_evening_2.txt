@@ -108,6 +108,7 @@ Instead, her calm composure changes to something else.
 Fear.
 Lady Claythorn: Very well, Captain.
 Lady Claythorn: You are right.
+Lady Claythorn: I believe it is time I dropped the mask.
 Lady Claythorn: I am not Lady Claythorn.
 Sushil Sinha: Who are you then?
 Lady Claythorn: An actress.
@@ -115,7 +116,8 @@ Lady Claythorn: I was hired for being here.
 Lady Claythorn: I was given a script of sorts, and the run of the house, and a fee.
 Rosalind Marsh: Hired? You mean to tell us this entire weekend has been a... a performance?
 Lady Claythorn: Only some of it.
-Lady Claythorn: I swear to you, what has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
+Lady Claythorn: But I swear to you, things have gone far beyond what was planned.
+Lady Claythorn: What has happened to Mr Moody, and to Doctor Baldwin, I had no notion.
 Lady Claythorn: None of that was in any script I was given.
 Lady Claythorn: I am every bit as frightened as you are. More so, perhaps.
 Sushil Sinha: Frightened of whom, madam?
@@ -193,14 +195,14 @@ Butler: This is for my own protection, I assure you.
 He looks very sure of him, holding the gun with a firm hand.
 Whatever this man was before he was a butler, he was no stranger to a revolver.
 Menu Choice: Lunge at him and grab the gun
-Miss Marsh is silent. Miss Baxter looks terrorized.
+Miss Marsh is silent. Miss Baxter looks terrified.
 Whatever is to be done here, I must do alone.
-And I will not follow quietly a man to an unknown fate.
+And I will not quietly follow a man to an unknown fate.
 Twenty years I have been an officer, but never once have I seen battle.
 A barracks officer, a parade officer.
 Other men around me went to the line.
 I never did.
-Here is my chance to see what metal I am made of.
+Here is my chance to see what mettle I am made of.
 I lunge for his wrist.
 He fires before I have closed the half of the distance.
 A flat, ugly sound, very loud in the small room.

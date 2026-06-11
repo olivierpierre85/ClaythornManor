@@ -138,28 +138,19 @@ The room is adequate. Not extravagant, but respectable.
 Still, it is more comfortable than my lodgings in London.
 I unpack quickly and consider my options.
 Map Choice: Garden
-I look through the window. The rain is coming down hard now.
+I look through the window. The rain is coming down hard.
 A storm is gathering. I can hear the wind picking up against the glass.
-Most people would turn back at this point.
+Most men would turn back at this point.
 But I have marched through monsoons. A bit of rain is hardly cause for concern.
 I step outside.
-The air is cold and the rain is heavier than it looked from indoors.
-Within moments, my jacket is soaked through.
+The air is cold and the rain heavier than it looked from indoors.
+Within moments my jacket is soaked through.
 I walk a short distance around the house.
-Nothing remarkable in the dark.
-A garden, a gravel path, and what appears to be an outbuilding further on.
-Menu Choice: Take a closer look at the outbuilding
-I press on through the rain, boots sinking into the sodden gravel.
-The outbuilding proves to be a squat timber shed, half hidden behind an overgrown hedge.
-I try the handle.
-It does not give. The door is locked, and firmly so.
-That is odd.
-A garden shed, out here in the middle of nowhere, bolted shut against what exactly?
-Whoever fitted that lock had a reason, and it was not the threat of common thieves.
-I am soaking wet and the cold is beginning to bite.
-In these conditions, there is no point in staying any longer.
-I return inside and head straight to my room to change.
-A foolish exercise, perhaps, but at least I have a better understanding of the estate.
+A gravel path, wet grass, and, further off in the dark, the shape of an outbuilding.
+Without a light, I cannot venture any further out here.
+I shall not stumble about in the dark.
+I turn back to the house.
+I head inside to change out of these wet clothes.
 Map Choice: Retire for the night
 The hour is late and the house has grown quiet.
 I return to my room.
@@ -200,4 +191,8 @@ The letter's goal could be to make me do just that.
 But I cannot. I will not.
 I have come too far, put too much hope in this journey to give up now.
 Whatever is at play here, I will stay at least until tomorrow, and decide accordingly.
+Besides, I am not defenceless.
+My service revolver is in my jacket, where I always keep it.
+I have not used it much, but I believe I can still hit a close-range target.
+This gives me a bit of relief.
 I lie back, but sleep does not come easily.

@@ -99,7 +99,7 @@ Each answer, taken on its own, is perfectly plausible.
 Worse than that. Each echoes the very explanations I myself had turned over in my mind when I first noticed these things.
 But the answers come too readily, as if rehearsed.
 An honest woman would stumble. Take offence. Demand to know what on earth I meant by it all.
-Instead, she has submitted to my interrogation as if she were prepared for it.
+Instead, she has submitted to my interrogation as if she were expecting it.
 But let's see how well she is really prepared.
 Sushil Sinha: That is a very logical explanation for everything.
 Sushil Sinha: But in that case, what is your title?
@@ -110,8 +110,33 @@ Sushil Sinha: Surely, my Lady would know her title.
 Sushil Sinha: There is no doubt your father has repeated it constantly as you were growing up.
 Sushil Sinha: You should have heard it said by friends, by visitors, in letters addressed to you.
 Sushil Sinha: You must have heard it when you were presented at court.
-She prepares to answer, but cannot find the words.
-Finally, her smile fades by degrees, and something tired and older takes its place beneath it.
+Her chin lifts a fraction, and the practised warmth drains from her voice.
+Lady Claythorn: Captain, this has gone quite far enough.
+Lady Claythorn: I have indulged your questions out of regard for a guest, and you have repaid me with insolence.
+Lady Claythorn: I am not in the habit of reciting my lineage to satisfy a stranger's curiosity.
+Lady Claythorn: One more word on the subject, and you may pack your things this very afternoon.
+Sushil Sinha: Send me away if you wish, madam. It will change nothing.
+Sushil Sinha: You see, I am not asking you a question I cannot answer myself.
+Sushil Sinha: There is a book in your own library. A registry of the great families of this county.
+Sushil Sinha: It records the peerage your family holds, and the name of that peerage is not Claythorn.
+Sushil Sinha: The true mistress of this house would have carried it her whole life.
+Sushil Sinha: Name it, madam, and I shall offer you my fullest apology and never speak of this again.
+She does not name it.
+She sits very still, her hands folded in her lap, and for a long moment the only sound is the wind working through the trees.
+Sushil Sinha: It is the Earldom of Kilbraith.
+Sushil Sinha: The woman you claim to be would be styled Lady Kilbraith.
+Sushil Sinha: You have been answering to the name of a building, madam.
+Sushil Sinha: A stranger to this county learnt that in an evening, from a shelf in your own library.
+She remains silent.
+Sushil Sinha: A man died under this roof last night.
+Sushil Sinha: The doctor speaks of a tired heart, and perhaps he is correct.
+Sushil Sinha: But a death must be reported all the same, and the police will come to this house.
+Sushil Sinha: When they do, I shall lay before them everything I have laid before you.
+Sushil Sinha: A lady with nothing to hide loses nothing by it.
+Sushil Sinha: A woman who is not what she claims, on the very weekend a guest dies in his bed, will find their questions far less courteous than mine.
+Sushil Sinha: I leave it to you to decide which of the two receives them.
+I watch the arithmetic move behind her eyes.
+Then her smile fades by degrees, and something tired and older takes its place beneath it.
 Lady Claythorn: Very well, Captain.
 Lady Claythorn: You are right.
 Lady Claythorn: I am not Lady Claythorn.
@@ -126,7 +151,6 @@ Lady Claythorn: I never met the person behind this enterprise.
 Lady Claythorn: The pay was generous, so I didn't ask many questions.
 It takes me a while to take everything in.
 That story goes way beyond what I had imagined.
-It leads to even more questions.
 Sushil Sinha: And the letter left in my room last night?
 Lady Claythorn: What letter?
 Lady Claythorn: I know nothing of any letter, Captain.
