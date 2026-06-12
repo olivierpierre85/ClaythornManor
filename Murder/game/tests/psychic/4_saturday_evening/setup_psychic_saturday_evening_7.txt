@@ -173,7 +173,6 @@ Map Choice: Library
 Here is an impressive library.
 "A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain." is open on a table.
 But I don't feel like reading now.
-Map Choice: Wait in your room
-There's nothing more I can do right now.
-I'll just go and lie on my bed for a bit.
+There's no need to wander the house further.
+I should return to my room.
 With nothing more to do, I quickly fall asleep.

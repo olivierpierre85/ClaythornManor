@@ -163,6 +163,11 @@ Map Choice: Queen Alexandra
 Sushil Sinha: Hello? Is anyone there?
 No reply.
 Either Miss Marsh is already asleep, or she is not in her room at all.
+Map Choice: Henry IV Bedroom
+Sushil Sinha: Hello? Is anyone there?
+No answer.
+The lady of the house, it seems, has not yet retired — or does not wish to be disturbed if she has.
+Map Choice: Retire for the night
 It is time I retired to my room.
 I close the door behind me and turn the key in the lock.
 It probably will not be easy, but I should try to sleep.

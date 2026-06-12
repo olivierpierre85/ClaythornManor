@@ -20,9 +20,9 @@ label psychic_day1_evening_billiard_room:
 
 
         $ psychic_day1_evening_billiard_room_menu = TimedMenu("psychic_day1_evening_billiard_room_menu", [
-            TimedMenuChoice('Talk to Daniel Baldwin', 'psychic_day1_evening_billiard_room_doctor', 10),
+            TimedMenuChoice('Talk to Daniel Baldwin', 'psychic_day1_evening_billiard_room_doctor', 10, next_menu='doctor_generic_menu_psychic'),
             TimedMenuChoice('Endure another story by Mr Sinha', 'psychic_day1_evening_billiard_room_group', 120),
-            TimedMenuChoice('Go to the bar', 'psychic_day1_evening_billiard_room_bar', 20),
+            TimedMenuChoice('Go to the bar', 'psychic_day1_evening_billiard_room_bar', 20, next_menu='lad_generic_menu_psychic'),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
 

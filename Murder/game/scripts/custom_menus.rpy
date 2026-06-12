@@ -379,6 +379,10 @@ init -1 python:
                         if c.room == room_id and c.get_condition():
                             selected_choice = c
                             selected_choice_i = idx
+                            # first match wins, same as the hotspot scan in the
+                            # map screen - otherwise tooltip and executed choice
+                            # disagree when two conditions overlap
+                            break
                 
                 else:
                     selected_choice_i = renpy.call_screen('custom_choice', self) 

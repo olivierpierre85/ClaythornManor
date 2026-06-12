@@ -49,16 +49,17 @@ label psychic_day2_evening_map_menu:
                 room='bedroom_lad',
             ),
             TimedMenuChoice(
-                'Check if there is someone in the Billiard Room', 
-                'psychic_day2_evening_billiard_room', 
-                0, 
+                'Check if there is someone in the Billiard Room',
+                'psychic_day2_evening_billiard_room',
+                10,
                 room = 'billiard_room',
-                keep_alive = True, 
+                keep_alive = True,
+                next_menu = 'psychic_day2_evening_billiard_room_menu',
             ),
             TimedMenuChoice(
                 default_room_text('bedroom_nurse'),
                 'psychic_day2_evening_bedroom_nurse_gone',
-                0, 
+                10,
                 room='bedroom_nurse',
             ),
             TimedMenuChoice(

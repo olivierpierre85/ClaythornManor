@@ -210,15 +210,6 @@ Amelia Baxter: I must have the wrong idea.
 Amelia Baxter: I am sure Miss Marsh has only gone for a walk to help her sleep.
 Amelia Baxter: Nothing more.
 Sushil Sinha: You are probably right.
-Menu Choice: On second thought, I'd better not talk to him
-Menu Choice: Leave the room
-Map Choice: Check if there is someone in the Billiard Room
-I am back in the billiard room.
-Menu Choice: Reluctantly talk to Sushil Sinha
-Sushil Sinha: Miss Baxter, is there anything else?
-Menu Choice: On second thought, I'd better not talk to him
-Menu Choice: Leave the room
-Map Choice: Wait in your room
-There's nothing more I can do right now.
-I'll just go and lie on my bed for a bit.
+There's no need to wander the house further.
+I should return to my room.
 With nothing more to do, I quickly fall asleep.

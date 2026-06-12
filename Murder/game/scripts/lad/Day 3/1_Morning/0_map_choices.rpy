@@ -82,10 +82,11 @@ label lad_day3_morning_map_menu:
                 room = 'garage'
             ),
             TimedMenuChoice(
-                default_room_text('gun_room'), 
-                'lad_day3_morning_gun_room', 
-                0, 
-                room = 'gun_room'
+                default_room_text('gun_room'),
+                'lad_day3_morning_gun_room',
+                10,
+                room = 'gun_room',
+                next_menu = 'lad_day3_morning_gun_room'
             ),
             
             TimedMenuChoice(

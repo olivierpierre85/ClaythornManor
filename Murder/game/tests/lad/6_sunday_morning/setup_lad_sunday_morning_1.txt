@@ -73,10 +73,6 @@ Map Choice: Library
 We enter the small library and find it empty.
 There's no room for anyone to hide here.
 Let's move on.
-Map Choice: Dining Room
-Ted Harring: Nobody seems to be here.
-Amelia Baxter: And the table isn't set for breakfast either.
-Amelia Baxter: That's unusual.
 We've searched everywhere we could think of and found no one.
 With nowhere left to look, we come back to the entrance hall.
 Just in case, I try calling out one more time.

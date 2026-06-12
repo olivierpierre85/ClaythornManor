@@ -227,6 +227,22 @@ Murder/game/tests/
 
 Tests run inside Ren'Py's built-in test runner (not a separate CI tool). Launch the game in test mode via the Ren'Py launcher or `renpy.exe … --test`.
 
+### Checking menu consistency
+
+`Murder/check_menu_consistency.py` statically audits every `TimedMenu`/`TimedMenuChoice` in `game/scripts/` against the menu conventions. **Run it after adding or editing any menu** — do not audit menus by reading `.rpy` files manually.
+
+```bash
+python Murder/check_menu_consistency.py [--character captain] [--verbose]
+```
+
+It checks four rules:
+1. **Map room conflicts** — two map choices on the same `room` must have provably mutually exclusive `condition`s (first match wins on the map).
+2. **Grey-out correctness** — duplicate menu ids across files (forbidden: `all_menus` is keyed by id for the whole playthrough), `linked_choice` must match a redirect in the same menu, `next_menu` must reference a menu that exists.
+3. **Time values** — every non-exit choice should carry a `time_spent`; exits (`early_exit` / `generic_cancel`) are exempt. Map choices charge the visit cost (typically 10) even when they open a sub-menu (the engine lets a just-committed sub-menu run at <= 0 time). Exception: in conversation menus, a pure *navigation opener* (e.g. "What do you think of the other guests?") costs 0 and the sub-menu questions charge the time, matching the cost of the direct-answer variants.
+4. **next_menu wiring** — a choice whose redirect (transitively) runs another menu must declare `next_menu` with that menu's id, so pre-open `is_valid` / `is_menu_valid` / grey-out work. Exception: do **not** declare `next_menu` when the redirect has unique one-time scene content and the sub-menu is a *shared* generic menu (e.g. `psychic_generic_menu_lad`) — the scene would be hidden if the shared menu was exhausted in an earlier chapter. Mark such menus with a `# no-next-menu: <reason>` comment inside the `TimedMenu(...)` so the checker accepts the omission.
+
+ERRORs are violations to fix; WARNs need a judgement call; `--verbose` notes are informational.
+
 ### Checking dialogue coverage
 
 `Murder/check_test_dialogue_coverage.py` verifies that every dialogue and narration line in the game is exercised by at least one test plan. It compares `Murder/dialogue.tab` (the authoritative extract of all in-game text) against the `.txt` output files produced by the test runner.

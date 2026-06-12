@@ -171,7 +171,7 @@ label doctor_day2_evening_bedroom_nurse_remember:
     I know it's very unconventional, but that would make me feel better.
     """
 
-    call run_menu( TimedMenu("broken_generic_other_guests_friday_offense", [
+    call run_menu( TimedMenu("doctor_day2_evening_bedroom_nurse_sleep", [
             TimedMenuChoice("I guess it's the safest thing to do", 'doctor_day2_evening_bedroom_nurse_sleep_yes', TIME_MAX, early_exit = True),
             TimedMenuChoice("I'd rather sleep alone", 'doctor_day2_evening_bedroom_nurse_sleep_no', 0, early_exit = True),
         ])

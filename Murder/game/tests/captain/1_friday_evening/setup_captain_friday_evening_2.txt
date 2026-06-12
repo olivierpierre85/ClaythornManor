@@ -188,21 +188,6 @@ I make my way to the bar.
 Manning is there, slumped against the counter.
 I pour myself a small measure of port and stand apart from him.
 There is nothing to be gained from associating with a drunkard.
-Menu Choice: Talk to Dr Baldwin
-I approach Baldwin.
-He looks up. His eyes are flat.
-Daniel Baldwin: Captain Sinha, how are you?
-Sushil Sinha: I am fine, Doctor.
-Sushil Sinha: What about you?
-Daniel Baldwin: A little tired if I am being honest.
-Daniel Baldwin: The journey has exhausted me.
-Yes, the journey was long. But I can tell that is not entirely what is causing Dr Baldwin's tiredness.
-But no need to say anything.
-Sushil Sinha: Very well, I'll leave you alone then.
-Sushil Sinha: Have a good night.
-Daniel Baldwin: You too.
-Menu Choice: Leave the room
-Map Choice: Retire for the night
 The hour is late and the house has grown quiet.
 I return to my room.
 I change and prepare for bed while I review the evening in my head.

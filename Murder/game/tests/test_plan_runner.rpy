@@ -52,11 +52,12 @@ init python in test:
             return step
 
         def assert_consumed(self):
-            if self.i != len(self.steps):
+            if self.active and self.i != len(self.steps):
                 remaining = len(self.steps) - self.i
                 nxt = self.steps[self.i] if self.i < len(self.steps) else None
                 raise PlanError(
-                    f"Chapter ended before plan was fully consumed. "
+                    f"Chapter ended before plan was fully consumed "
+                    f"(plan {self.plan_file}). "
                     f"{remaining} step(s) left. Next expected: {nxt}"
                 )
 
@@ -69,7 +70,12 @@ init python in test:
 
             expected_menu_id = step.get("menu")
             if expected_menu_id != timed_menu.id:
-                raise PlanError(f"Menu mismatch: expected '{expected_menu_id}', got '{timed_menu.id}'.")
+                raise PlanError(
+                    f"Menu mismatch: expected '{expected_menu_id}', got '{timed_menu.id}' "
+                    f"(plan {self.plan_file}, step {self.i}/{len(self.steps)}, "
+                    f"expected redirect '{step.get('redirect')}', "
+                    f"time_left {getattr(renpy.store, 'time_left', '?')})."
+                )
 
             expected_redirect = step.get("redirect", None)
             expected_text = step.get("selected", None)
@@ -256,6 +262,13 @@ init python in test:
             current_node.chain(until_node)
             current_node = until_node
             
+            # TODO (testing management): chain a PyCallNode(loc, autorunner.assert_consumed)
+            # here to fail loudly when a chapter ends with unused plan steps.
+            # Currently disabled: several old recordings (nurse friday_evening_1,
+            # saturday_morning_1, saturday_evening_1, sunday_*_1) leave steps
+            # unconsumed and need re-recording first, and a failed testcase leaks
+            # its test_end screen into the next one, cascading false failures.
+
             # Cleanup for next iteration
             cleanup_node = PyCallNode(loc, autorunner.reset)
             current_node.chain(cleanup_node)

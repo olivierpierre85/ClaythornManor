@@ -148,8 +148,10 @@ Sushil Sinha: It would have been very hard to just fabricate those things.
 Rosalind Marsh: Now that you mention it, mine had very precise information too.
 Rosalind Marsh: It had most of my postings right. It even knew I had served abroad — for instance, that I was in China during the Boxer Rebellion.
 Rosalind Marsh: Whoever wrote those letters knew us, Captain. Well enough to know which truth would bring us here.
-Sushil Sinha: Wait.
-Sushil Sinha: You said you were in China, Miss Marsh.
+China, during the Rebellion.
+The detail lodges itself at the back of my mind.
+Menu Choice: Ask her about the Boxer Rebellion
+Sushil Sinha: You said you were in China earlier, Miss Marsh.
 Sushil Sinha: During the Rebellion?
 Rosalind Marsh: Yes.
 Rosalind Marsh: With the field hospitals, nursing the wounded out of the legations.
@@ -173,6 +175,10 @@ Sushil Sinha: But the letters knew us, Miss Marsh. You said it yourself.
 Sushil Sinha: If our host went digging into our pasts, China is where three of those pasts cross.
 I turn it over and can make nothing more of it.
 Whatever happened out there, it was a long time ago, and half a world away.
+Menu Choice: Say nothing
+We have said what there is to say.
+Miss Marsh seems content to keep her own counsel, and I keep mine.
+We sit in silence and listen to the house below.
 The footsteps below stopped a long while ago, and the house has gone back to its heavy silence.
 No one has tried the attic stair.
 Sushil Sinha: The house has been quiet for a long while now.

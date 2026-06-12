@@ -207,24 +207,19 @@ It is a cold, oil-smelling place.
 There is an old car; it does not look as though it is working any more.
 Tools hang neatly along one wall, and a bicycle leans against another.
 Nothing here that is of any use to me.
+A wave of tiredness washes over me quite suddenly.
+The journey here took more out of me than I thought.
+If I push myself much further tonight, I shall pay for it.
 Map Choice: Tea room
 The room is quite empty.
 The teapot has gone cold.
 There is nothing to keep me here.
-A wave of tiredness washes over me quite suddenly.
-The journey here took more out of me than I thought.
-If I push myself much further tonight, I shall pay for it.
 Map Choice: Entrance Hall
 The great hall is quiet.
 The chandelier has been turned down low.
 I stand beneath it for a moment, listening.
 The house settles around me.
 There is something watchful about the place at this hour.
-Map Choice: Portrait Gallery
-The gallery is lit by a single gas lamp.
-The Claythorn ancestors gaze down from their frames with an air of collective disapproval.
-I feel rather as though I am being assessed.
-I do not linger.
 It has been a long day, and the weariness has settled into my bones.
 I should go back to my room.
 As I reach my room, a fit of coughing takes hold — sharp and wretched.

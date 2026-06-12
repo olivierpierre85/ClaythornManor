@@ -36,19 +36,24 @@ label lad_day2_no_hunt_map_menu:
                 room='bedroom_nurse',
                 condition = "not lad_details.saved_variables['day2_nohunt_has_visited_tea_room']"
             ),
+            # no-next-menu: the tea room scenes have their own one-time content,
+            # tying them to the shared psychic_generic_menu_lad could hide them
+            # when her questions were already exhausted in an earlier chapter
             TimedMenuChoice(
-                'Meet the others in the Tea Room', 
-                'lad_day2_hunt_tea_room', 
-                120, 
+                'Meet the others in the Tea Room',
+                'lad_day2_hunt_tea_room',
+                120,
                 room = 'tea_room',
-                keep_alive = True, 
+                condition = "not lad_details.saved_variables['day2_nohunt_has_visited_tea_room']",
+                keep_alive = True,
             ),
             TimedMenuChoice(
-                'Go back to the Tea Room', 
-                'lad_day2_hunt_tea_room_return',  
+                'Go back to the Tea Room',
+                'lad_day2_hunt_tea_room_return',
+                10,
                 room = 'tea_room',
                 condition = "lad_details.saved_variables['day2_nohunt_has_visited_tea_room']",
-                keep_alive = True, 
+                keep_alive = True,
             ),
             TimedMenuChoice(
                 'Take a nap until the others return', 

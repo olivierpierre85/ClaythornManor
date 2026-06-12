@@ -11,7 +11,7 @@
             "redirect": "doctor_day2_evening_reason_drunk"
         },
         {
-            "menu": "doctor_day1_evening",
+            "menu": "doctor_day2_evening_dinner",
             "selected": "Enjoy the creepy silence",
             "redirect": "generic_cancel"
         },
@@ -61,7 +61,7 @@
             "redirect": "doctor_day2_evening_bedroom_nurse_remember"
         },
         {
-            "menu": "broken_generic_other_guests_friday_offense",
+            "menu": "doctor_day2_evening_bedroom_nurse_sleep",
             "selected": "I'd rather sleep alone",
             "redirect": "doctor_day2_evening_bedroom_nurse_sleep_no"
         }

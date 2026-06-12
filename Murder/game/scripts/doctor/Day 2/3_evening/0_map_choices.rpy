@@ -17,13 +17,13 @@ label doctor_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('entrance_hall'), 'doctor_day2_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'doctor_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(
-                'Check who is in the billiard room', 
-                'doctor_day2_evening_billiard_room', 
-                0,
+                'Check who is in the billiard room',
+                'doctor_day2_evening_billiard_room',
+                10,
                 room = 'billiard_room',
                 next_menu = 'doctor_day2_evening_billiard_room_menu',
-                keep_alive = True, 
-            ), 
+                keep_alive = True,
+            ),
             #bedroom
             # Weird talk with lad who is scared 
             TimedMenuChoice(default_room_text('bedroom_lad'), 'doctor_day2_evening_bedroom_lad', 10, room='bedroom_lad'),
@@ -33,7 +33,7 @@ label doctor_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('bedroom_broken'), 'doctor_day2_evening_bedroom_broken', 10, room='bedroom_broken'),
             # Nurse path
             TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse_do_not_remember', 20, room='bedroom_nurse', condition="not doctor_details.threads.is_unlocked('remember_nurse')"),
-            TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse_remember', 0, room='bedroom_nurse', condition="doctor_details.threads.is_unlocked('remember_nurse')"),
+            TimedMenuChoice(default_room_text('bedroom_nurse'), 'doctor_day2_evening_bedroom_nurse_remember', 20, room='bedroom_nurse', condition="doctor_details.threads.is_unlocked('remember_nurse')"),
             # Find burned letter
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day2_evening_bedroom_drunk', 20, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('library'), 'doctor_day2_evening_library', 10, room='library'),

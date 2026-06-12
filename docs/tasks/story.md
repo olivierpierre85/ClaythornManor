@@ -83,9 +83,6 @@
 
 ## Broken
 
-the strenght => Journalist
-New thing, he can reach downstairs if he wears the footman livery
-
 ### Important
 - [ ] MORE DEAD!!! For some THOMAS MOODY,**the deaths are coming faster**. Because the psychic saw into his lies and loses it. VERY VERY hard to survive till the end
     - [ ] For that, needs to observe poison => so possibility to avoid eating at dinner

@@ -11,7 +11,7 @@
             "redirect": "doctor_day2_evening_reason_silence"
         },
         {
-            "menu": "doctor_day1_evening",
+            "menu": "doctor_day2_evening_dinner",
             "selected": "Talk to Ted Harring",
             "redirect": "doctor_day2_dinner_lad"
         },
@@ -46,7 +46,7 @@
             "redirect": "generic_cancel"
         },
         {
-            "menu": "doctor_day1_evening",
+            "menu": "doctor_day2_evening_dinner",
             "selected": "Enjoy the creepy silence",
             "redirect": "generic_cancel"
         },

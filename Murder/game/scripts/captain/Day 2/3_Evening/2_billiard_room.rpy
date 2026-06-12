@@ -50,7 +50,7 @@ label captain_day2_evening_billiard_room:
                 'captain_day2_evening_billiard_room_empty_3', 20,
                 condition="time_left>20 and time_left<=40"),
             TimedMenuChoice('Wait and see who comes',
-                'captain_day2_evening_billiard_room_host_with_suspicions', 0, next_menu="captain_day2_evening_billiard_room_host_menu",
+                'captain_day2_evening_billiard_room_host_with_suspicions', 20, next_menu="captain_day2_evening_billiard_room_host_menu",
                 condition="time_left<=20 and " + condition_captain_host_suspicions),
             TimedMenuChoice('Wait and see who comes',
                 'captain_day2_evening_billiard_room_host_no_suspicions', 20,

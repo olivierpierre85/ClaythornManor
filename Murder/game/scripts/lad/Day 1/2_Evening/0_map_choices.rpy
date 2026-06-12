@@ -34,10 +34,10 @@ label lad_day1_evening_map_menu:
                 room = 'bedroom_psychic'
             ),
             TimedMenuChoice(
-                'Meet the others in the billiard room', 
-                'lad_day1_evening_billiard_room', 
-                0, 
-                keep_alive = True, 
+                'Meet the others in the billiard room',
+                'lad_day1_evening_billiard_room',
+                10,
+                keep_alive = True,
                 room = 'billiard_room',
                 next_menu = 'lad_day1_evening_billiard_room_menu'
             ),

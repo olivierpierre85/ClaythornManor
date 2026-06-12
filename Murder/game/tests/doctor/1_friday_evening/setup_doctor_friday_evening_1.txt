@@ -139,14 +139,6 @@ I probably shouldn't be here but I could still feign ignorance if I am spotted.
 The door is locked.
 That's no surprise.
 Whoever is sleeping here must keep the key close to themselves.
-Map Choice: William the Conqueror Bedroom
-Daniel Baldwin: Hello, is anyone there?
-There is no answer.
-Should I try to see what's inside?
-No, of course not.
-Most people are downstairs now, but they could come back anytime.
-Also, that's wildly inappropriate.
-Map Choice: Go to sleep
 That is quite enough for one day.
 It is late, time to go and relax.
 So I walk back to my room.

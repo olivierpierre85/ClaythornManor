@@ -201,9 +201,9 @@ label doctor_day2_evening:
     """
 
     $ time_left = 90 
-    call run_menu(TimedMenu("doctor_day1_evening", [
-        TimedMenuChoice("Talk to Ted Harring", 'doctor_day2_dinner_lad'),
-        TimedMenuChoice("Talk to Rosalind Marsh", 'doctor_day2_dinner_nurse'),
+    call run_menu(TimedMenu("doctor_day2_evening_dinner", [
+        TimedMenuChoice("Talk to Ted Harring", 'doctor_day2_dinner_lad', next_menu='lad_generic_menu_doctor'),
+        TimedMenuChoice("Talk to Rosalind Marsh", 'doctor_day2_dinner_nurse', next_menu='nurse_generic_menu_doctor'),
         TimedMenuChoice("Enjoy the creepy silence", 'generic_cancel', early_exit=True),
     ], image_left = "lad", image_right = "nurse"))
 

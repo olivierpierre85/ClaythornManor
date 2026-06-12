@@ -6,78 +6,6 @@ Even though I should at least join Mrs Baxter for lunch.
 And I could take the opportunity that most people are outside to "look" more intensively into this place.
 Obviously, the priority would be to find the stash of money promised to everyone.
 But, if as I suspect, there isn't any, I am sure I can find other valuables.
-Map Choice: Gun room
-The gun room.
-I am certain that I should not be here, so I made sure no one noticed me.
-Shotguns and hunting rifles line three walls, arranged on open racks.
-The smell of gun oil is sharp.
-Everything is laid out as though ready for use — nothing locked away.
-There are even a few small handguns lying on a table.
-It would be foolish not to take one.
-Menu Choice: Take a pistol
-My hand closes around the grip of a small revolver.
-It is not loaded.
-And I have not seen any bullets lying about.
-Nevertheless, it could prove useful.
-I slip it into my bag.
-Map Choice: Storage Room
-The attic staircase creaks with every step.
-Up here, the air is close and smells of dust and old timber.
-The corridor runs the length of the house, doors on either side.
-With the servants all occupied below, there is no one to question what I am doing up here.
-The door is locked.
-But it would take me very little effort to open it.
-In my years of nursing, I have become acquainted with all manner of locks — on medicine cabinets, ward doors, and supply rooms.
-And I quickly realised how convenient it is to be able to open them all.
-That is why I learned to pick locks.
-A most useful skill.
-So, I easily make my way inside.
-The storage room is vast.
-Trunks stacked three deep, old furniture draped in dust sheets, boxes of every shape and size.
-I barely know where to begin.
-Menu Choice: Search everything carefully
-The trunks are packed tightly and most of them are locked.
-I manage to open one — old curtains, heavy and mildewed.
-Another: crockery wrapped in cloth.
-I lift a dust sheet from what turns out to be an old escritoire.
-The drawers are empty save for a few dried-up pen nibs and a folded invoice from eighteen ninety.
-The shelves near the door hold rows of old tins and jars, most unlabelled.
-I move some aside — and then I stop.
-Behind a row of old paint tins, stacked neatly and deliberately out of sight:
-Bullets.
-A good number of them.
-Someone has gone to some trouble to hide these.
-I take them out and carefully load the small revolver I took from the gun room.
-It is good to be prepared.
-Then I replace the tins exactly as they were, and leave the room as quietly as I came.
-I pushed myself again.
-No cough this time but I should still be more careful, there is no need to explore until I collapse.
-It is almost noon. I should not keep Mrs Baxter waiting any longer.
-Mrs Baxter is already seated when I arrive, composed as ever.
-I take the chair across from her.
-Amelia Baxter: Miss Marsh, how are you?
-Rosalind Marsh: Fine, thank you.
-Amelia Baxter: It seems we have not yet had a proper chance to talk, have we?
-Rosalind Marsh: Indeed.
-Menu Choice: You don't have anymore questions for her
-A member of the household staff steps in quietly.
-Young woman: Excuse me for interrupting, but do you ladies need some lunch?
-Rosalind Marsh: That would be lovely, thank you.
-She returns shortly with some plates.
-We eat and exchange pleasantries.
-When we have finished, I set my napkin aside.
-I have been feeling out of sorts all morning, and the feeling has not quite left me.
-A cough escapes me, sharper than I expected.
-Rosalind Marsh: I am feeling rather poorly, I am afraid.
-Rosalind Marsh: I think I shall retire to my room for a short while.
-Rosalind Marsh: Would you mind being left on your own?
-Amelia Baxter: Not at all, please don't concern yourself.
-Amelia Baxter: There is more than enough here to occupy me.
-I leave her to it and make my way back upstairs.
-A brief rest should do me good before the hunting party returns.
-I rested a while, I need to get some strength if I want to get through the day.
-After a little while, I am starting to feel better.
-Perhaps I can use the remaining time productively.
 Map Choice: William the Conqueror Bedroom
 Rosalind Marsh: Hello? Is anyone there?
 No answer.
@@ -85,7 +13,12 @@ With most of the household out hunting, one could easily slip inside unseen.
 Though it would be rather difficult to explain if I were caught.
 Menu Choice: This is my chance. I should search the room before anyone returns.
 The door is locked.
-I easily make my way inside.
+But it would take me very little effort to open it.
+In my years of nursing, I have become acquainted with all manner of locks — on medicine cabinets, ward doors, and supply rooms.
+And I quickly realised how convenient it is to be able to open them all.
+That is why I learned to pick locks.
+A most useful skill.
+So, I easily make my way inside.
 There isn't much in here.
 A jacket thrown over the chair, a battered holdall on the floor.
 There is nothing here worth taking.
@@ -118,6 +51,45 @@ Nothing is left in reach.
 Military discipline of this kind belongs to one man in this house.
 I search thoroughly, but find nothing of use.
 Whatever the Captain values, he keeps it close to his person.
+Map Choice: George IV Bedroom
+Rosalind Marsh: Hello? Is anyone there?
+No answer.
+The door shifts slightly under my touch.
+It appears Mr Manning has left it resting on the latch.
+Since he is not coming back yet, I could take a quick look.
+I push the door open quietly, ensuring no one is watching.
+The room is in a frightful state.
+Clothes are discarded carelessly, and the unmistakable smell of spirits hangs in the air.
+A brief glance reveals only empty whisky bottles.
+Quite as I suspected. There is nothing of value for me here.
+I pushed myself again.
+No cough this time but I should still be more careful, there is no need to explore until I collapse.
+It is almost noon. I should not keep Mrs Baxter waiting any longer.
+Mrs Baxter is already seated when I arrive, composed as ever.
+I take the chair across from her.
+Amelia Baxter: Miss Marsh, how are you?
+Rosalind Marsh: Fine, thank you.
+Amelia Baxter: It seems we have not yet had a proper chance to talk, have we?
+Rosalind Marsh: Indeed.
+Menu Choice: You don't have anymore questions for her
+A member of the household staff steps in quietly.
+Young woman: Excuse me for interrupting, but do you ladies need some lunch?
+Rosalind Marsh: That would be lovely, thank you.
+She returns shortly with some plates.
+We eat and exchange pleasantries.
+When we have finished, I set my napkin aside.
+I have been feeling out of sorts all morning, and the feeling has not quite left me.
+A cough escapes me, sharper than I expected.
+Rosalind Marsh: I am feeling rather poorly, I am afraid.
+Rosalind Marsh: I think I shall retire to my room for a short while.
+Rosalind Marsh: Would you mind being left on your own?
+Amelia Baxter: Not at all, please don't concern yourself.
+Amelia Baxter: There is more than enough here to occupy me.
+I leave her to it and make my way back upstairs.
+A brief rest should do me good before the hunting party returns.
+I rested a while, I need to get some strength if I want to get through the day.
+After a little while, I am starting to feel better.
+Perhaps I can use the remaining time productively.
 Map Choice: Henry IV Bedroom
 Rosalind Marsh: Hello? Is anyone there?
 No answer.
@@ -150,16 +122,8 @@ The pearls are the only items of any real value.
 Menu Choice: Take the pearls.
 Not first-rate, but they will fetch something.
 I slip them into my bag and leave.
-Map Choice: George IV Bedroom
-Rosalind Marsh: Hello? Is anyone there?
-No answer.
-The door shifts slightly under my touch.
-It appears Mr Manning has left it resting on the latch.
-Since he is not coming back yet, I could take a quick look.
-I push the door open quietly, ensuring no one is watching.
-The room is in a frightful state.
-Clothes are discarded carelessly, and the unmistakable smell of spirits hangs in the air.
-A brief glance reveals only empty whisky bottles.
-Quite as I suspected. There is nothing of value for me here.
+Map Choice: Wait until the others return
+I have no desire to wander further for the time being.
+I shall stay in my room and rest until the others return.
 A commotion from the entrance hall draws my attention.
 It seems the hunting party has returned.

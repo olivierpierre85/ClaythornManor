@@ -15,7 +15,7 @@ label doctor_day2_evening_billiard_room:
         """
 
         $ doctor_day2_evening_billiard_room_menu = TimedMenu("doctor_day2_evening_billiard_room_menu", [
-            TimedMenuChoice('Talk to Sushil Sinha', 'doctor_day2_evening_billiard_room_captain', 0, keep_alive = True),
+            TimedMenuChoice('Talk to Sushil Sinha', 'doctor_day2_evening_billiard_room_captain', 0, keep_alive = True, next_menu = 'doctor_day2_evening_billiard_room_captain'),
             TimedMenuChoice('Go to the bar for a drink', 'doctor_day2_evening_billiard_room_bar', 10),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
@@ -126,8 +126,8 @@ label doctor_day2_evening_billiard_room_captain:
 
     call run_menu(
         TimedMenu("doctor_day2_evening_billiard_room_captain", [
-            TimedMenuChoice("Tell him about the letter", 'doctor_day2_evening_billiard_room_captain_letter'),
-            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 0 ,condition="doctor_details.threads.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
+            TimedMenuChoice("Tell him about the letter", 'doctor_day2_evening_billiard_room_captain_letter', 20),
+            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 20, condition="doctor_details.threads.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
             TimedMenuChoice("Leave him alone", 'doctor_day2_evening_billiard_room_captain_avoid', 20, keep_alive=True, early_exit = True),
         ])
     )

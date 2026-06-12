@@ -11,7 +11,7 @@
             "redirect": "doctor_day2_evening_reason_drunk"
         },
         {
-            "menu": "doctor_day1_evening",
+            "menu": "doctor_day2_evening_dinner",
             "selected": "Talk to Rosalind Marsh",
             "redirect": "doctor_day2_dinner_nurse"
         },
@@ -31,7 +31,7 @@
             "redirect": "generic_cancel"
         },
         {
-            "menu": "doctor_day1_evening",
+            "menu": "doctor_day2_evening_dinner",
             "selected": "Enjoy the creepy silence",
             "redirect": "generic_cancel"
         },

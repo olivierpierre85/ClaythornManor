@@ -63,7 +63,7 @@ Lady Claythorn: Now that everyone is here, I want to express my deepest regret f
 Lady Claythorn: This isn't how I imagined our weekend.
 Lady Claythorn: I don't believe any of us are in the mood for more entertainment.
 Lady Claythorn: So, tomorrow morning, you'll receive your rewards.
-Lady Claythorn: Afterward, we'll wait for the police to arrive.
+Lady Claythorn: Afterwards, we'll wait for the police to arrive.
 Lady Claythorn: You're free to head home as soon as the officers give the all-clear.
 Lady Claythorn: For now, enjoy your dinner.
 Lady Claythorn: Drinks will be available in the billiard room afterwards, as they were yesterday.
@@ -186,104 +186,7 @@ He does not trust me, not entirely.
 I understand.
 In the end, I am the one who killed Samuel Manning, so to him I must be the most suspicious person in this house.
 If I truly wish to convince him, I will need stronger evidence.
-Menu Choice: Tell him about Thomas Moody's face {{observation}}
-Daniel Baldwin: There is indeed something else.
-Daniel Baldwin: It concerns Thomas Moody.
-Sushil Sinha: Moody?
-Sushil Sinha: Did you discover something about his death?
-Daniel Baldwin: Yes.
-Daniel Baldwin: But I think it is best if you see for yourself, so that you don't need to take my word for it.
-Sushil Sinha: Hm.
-Sushil Sinha: Very well, I suppose we could go to his room.
-Sushil Sinha: Please, lead the way, Doctor.
-I see that he has no intention of turning his back on me.
-We leave the billiard room together, moving as quietly as we can along the corridor.
-The house feels oddly hollow, as though all life has retreated behind closed doors.
-When we reach Thomas Moody's room, I open the door and step inside first.
-Daniel Baldwin: Here he is, Captain.
-Daniel Baldwin: I must warn you, it may not be a pleasant sight.
-Sushil Sinha: Do not trouble yourself, Doctor.
-Sushil Sinha: I have seen the dead before.
-He crosses to the bed and looks down at the still form, his expression grave but composed.
-Sushil Sinha: So, what is this about?
-I lay my hands upon Thomas Moody's mask and lift it away, revealing a contorted and intact face.
-Sushil Sinha: Good Lord, what a face he is making.
-Sushil Sinha: What could have caused that, Doctor?
-Daniel Baldwin: I am not certain, but it was no peaceful death, that much is clear.
-Daniel Baldwin: Yet you are not seeing the most peculiar part.
-Sushil Sinha: What do you mean?
-Sushil Sinha: Oh.
-Sushil Sinha: His face, it is... normal.
-Sushil Sinha: He made everyone believe that he had been disfigured during the war.
-Sushil Sinha: Yet it was all an act.
-Sushil Sinha: But why would he do such a thing?
-Sushil Sinha: What are we to make of this?
-Daniel Baldwin: I have no idea.
-Daniel Baldwin: It is suspicious enough that I did not wish to alert anyone else.
-Sushil Sinha: I understand what you mean, Doctor.
-Sushil Sinha: Of course you were right, something is amiss.
-Sushil Sinha: I cannot pretend any longer that these are merely unfortunate accidents.
-He pauses for a moment, pondering the implications of what he has just learnt.
-Then his gaze lingers on the nightstand.
-Thomas Moody's hip flask lies on its side, a greenish liquid spilling from its mouth and pooling upon the wood.
-Sushil Sinha: I assume our friend was drinking from this before he died.
-Sushil Sinha: What kind of alcohol could that be?
-Sushil Sinha: Crème de menthe, perhaps?
-He picks up the flask and brings it to his nose.
-Sushil Sinha: How odd.
-Sushil Sinha: That smells like whisky, heavily peated I might add.
-Sushil Sinha: But why is there a green puddle on the nightstand?
-Of course.
-I cannot believe I did not notice this before.
-Daniel Baldwin: Do not drink it, Captain.
-Daniel Baldwin: I believe you may have found the murder weapon.
-Sushil Sinha: Ah, so this is the poison that caused Thomas Moody's premature death, you think?
-Daniel Baldwin: Precisely.
-Daniel Baldwin: Everything points to a form of strychnine poisoning.
-Daniel Baldwin: It is a common active ingredient in certain rat poisons.
-Daniel Baldwin: That is probably what has given his whisky this greenish hue.
-Sushil Sinha: I see.
-Sushil Sinha: So we now have two deaths that are highly suspicious.
-He thinks for few seconds about what that implies.
-If someone in this house is prepared to kill once, perhaps even twice, there is no reason to imagine they will stop there.
-I believe we may both be in danger.
-I simply do not understand why.
-Who could wish me dead?
-It is not as though I have no enemies, but nothing so severe that it ought to come to this.
-At least, I do not think so.
-What about you?
-Daniel Baldwin: Well, as a doctor, I may have left a few unpleasant patients here and there.
-Daniel Baldwin: But, like you, I do not believe there is anything so serious that it should lead to murder.
-I am not entirely sure that I believe my own words.
-But I see no point in sharing those doubts.
-Sushil Sinha: So, we have no notion of what may be happening.
-Sushil Sinha: We know only that we are in danger here, presumably from Lady Claythorn herself, even if we have no proof we could present.
-Daniel Baldwin: That is what I believe as well.
-Daniel Baldwin: I am simply not sure what we ought to do about it.
-Sushil Sinha: Well, it would be difficult to leave now, in the middle of the night.
-Sushil Sinha: So we should at least be prepared to spend one more night here.
-Sushil Sinha: And attempting to confide in more people could be dangerous.
-Sushil Sinha: Lady Claythorn may not be acting alone in this enterprise.
-Sushil Sinha: If we confront her, she will become suspicious and it will be even harder to escape this place.
-Sushil Sinha: We must take every precaution we can.
-Daniel Baldwin: I agree, but what do you suggest we do?
-I believe we should not sleep alone tonight.
-Come and share my room.
-There is a perfectly decent sofa, and we shall be within earshot of one another.
-If anything happens, at least we shall not be taken unawares.
-I am not sure I like this idea.
-Yet, it may be the best chance I have of surviving this weekend.
-On the other hand, it forces me to trust Sushil Sinha with my life.
-I am not sure that I can do that.
-Menu Choice: Refuse
-Daniel Baldwin: I am grateful for your concern, Captain, but I would rather not impose upon you.
-Daniel Baldwin: I shall manage well enough in my own room.
-Sushil Sinha: As you wish.
-Sushil Sinha: I cannot compel you.
-Sushil Sinha: But at least lock your door.
-Sushil Sinha: I would rather not discover we have misjudged the danger come morning.
-I nod, though my resolve feels far less steady than I should like.
-If I insist upon facing the night alone, I must be ready for whatever it may bring.
+It's getting very late, I should go to bed.
 I reach my room alone.
 I lock my door and do what I can to secure it.
 Then I drag a chair and the small chest of drawers against the door, in case Lady Claythorn or one of her accomplices decides to pay me a visit.

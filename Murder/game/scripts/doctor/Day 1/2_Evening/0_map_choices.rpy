@@ -22,13 +22,13 @@ label doctor_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('entrance_hall'), 'doctor_day1_evening_entrance_hall', 10, room='entrance_hall'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'doctor_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             # Downstairs
-            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day1_evening_downstairs_default', 0, room='kitchen'),
-            TimedMenuChoice(default_room_text('scullery'), 'doctor_day1_evening_downstairs_default', 0, room='scullery'),
-            TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_downstairs_default', 0, room='garage'),
-            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_downstairs_default', 0, room='gun_room'),
+            TimedMenuChoice(default_room_text('kitchen'), 'doctor_day1_evening_downstairs_default', 10, room='kitchen'),
+            TimedMenuChoice(default_room_text('scullery'), 'doctor_day1_evening_downstairs_default', 10, room='scullery'),
+            TimedMenuChoice(default_room_text('garage'), 'doctor_day1_evening_downstairs_default', 10, room='garage'),
+            TimedMenuChoice(default_room_text('gun_room'), 'doctor_day1_evening_downstairs_default', 10, room='gun_room'),
             # Specific actions
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 0, room='bedroom_drunk', next_menu="doctor_day1_evening_bedroom_drunk"),
-            TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 0, next_menu="doctor_library_default", room='library'),
+            TimedMenuChoice(default_room_text('bedroom_drunk'), 'doctor_day1_evening_bedroom_drunk', 10, room='bedroom_drunk', next_menu="doctor_day1_evening_bedroom_drunk"),
+            TimedMenuChoice(default_room_text('library'), 'doctor_day1_evening_library', 10, next_menu="doctor_library_default", room='library'),
             TimedMenuChoice(
                 default_room_text('bedroom_psychic'), 
                 'doctor_day1_evening_bedroom_psychic', 
@@ -36,12 +36,14 @@ label doctor_day1_evening_map_menu:
                 room = 'bedroom_psychic'
             ),
             TimedMenuChoice(
-                'Meet the others in the billiard room', 
-                'doctor_day1_evening_billiard_room', 
-                0,
+                'Meet the others in the billiard room',
+                'doctor_day1_evening_billiard_room',
+                10,
                 room = 'billiard_room',
-                next_menu = 'doctor_day1_evening_billiard_room_menu'
-            ), 
+                # No next_menu: the scene is one-shot with its own narration,
+                # tying it to the shared lad_generic menu could hide it when
+                # the lad's questions were already exhausted at dinner
+            ),
             TimedMenuChoice(
                 'Go to sleep', 
                 'generic_cancel', 

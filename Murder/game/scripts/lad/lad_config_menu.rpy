@@ -13,7 +13,7 @@ label lad_config_menu:
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_friday', 10, condition = condition_friday),
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_morning', 0, keep_alive = True, condition = condition_saturday_morning, next_menu="psychic_generic_other_guests_menu_lad"),
         TimedMenuChoice('What do you think of the other guests?', 'psychic_generic_other_guests_saturday_hunt', 0, keep_alive = True, condition = condition_saturday_hunt, next_menu="psychic_generic_other_guests_menu_lad"),
-        TimedMenuChoice('Which guests do you think could be dangerous?', 'psychic_generic_other_guests_saturday_evening', 0, keep_alive = True, condition = condition_saturday_evening),
+        TimedMenuChoice('Which guests do you think could be dangerous?', 'psychic_generic_other_guests_saturday_evening', 0, keep_alive = True, condition = condition_saturday_evening, next_menu="psychic_generic_other_guests_menu_lad"),
         TimedMenuChoice('You don\'t have anymore questions for her', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "psychic")
 

@@ -300,11 +300,12 @@ label captain_day3_morning_nurse:
     This might take a while. Maybe now is a good opportunity to ask Miss Marsh some questions.
     """
 
-    $ time_left = 60
+    $ time_left = 120
     call run_menu(TimedMenu("captain_day3_attic_wait_menu", [
-        TimedMenuChoice("Ask her about her health", 'captain_day3_attic_ask_health', 30, linked_choice='captain_day3_attic_health_done'),
+        TimedMenuChoice("Ask her about her health", 'captain_day3_attic_ask_health', 30),
         TimedMenuChoice("Ask her what brought her here", 'captain_day3_attic_ask_prize', 30, linked_choice='captain_day3_attic_ask_china'),
-        TimedMenuChoice("Say nothing", 'generic_cancel', 0, early_exit=True, keep_alive=True),
+        TimedMenuChoice("Ask her about the Boxer Rebellion", 'captain_day3_attic_ask_china', 30, condition="is_linked_choice_hidden('captain_day3_attic_wait_menu', 'captain_day3_attic_ask_china')"),
+        TimedMenuChoice("Say nothing", 'captain_day3_attic_wait_silence', 0, early_exit=True, keep_alive=True),
     ]))
 
     call wait_screen_transition()
@@ -575,10 +576,19 @@ label captain_day3_attic_ask_prize:
     Whoever wrote those letters knew us, Captain. Well enough to know which truth would bring us here.
     """
 
-    captain """
-    Wait.
+    """
+    China, during the Rebellion.
 
-    You said you were in China, Miss Marsh.
+    The detail lodges itself at the back of my mind.
+    """
+
+    return
+
+
+label captain_day3_attic_ask_china:
+
+    captain """
+    You said you were in China earlier, Miss Marsh.
 
     During the Rebellion?
     """
@@ -647,6 +657,29 @@ label captain_day3_attic_ask_prize:
     I turn it over and can make nothing more of it.
 
     Whatever happened out there, it was a long time ago, and half a world away.
+    """
+
+    return
+
+
+label captain_day3_attic_wait_silence:
+
+    if all_menus['captain_day3_attic_wait_menu'].choices[0].already_chosen or all_menus['captain_day3_attic_wait_menu'].choices[1].already_chosen:
+
+        """
+        We have said what there is to say.
+
+        Miss Marsh seems content to keep her own counsel, and I keep mine.
+        """
+
+    else:
+
+        """
+        I find I have no appetite for conversation, and Miss Marsh does not press me.
+        """
+
+    """
+    We sit in silence and listen to the house below.
     """
 
     return
