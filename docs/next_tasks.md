@@ -1,61 +1,30 @@
 <!-- # cSpell:disable -->
-## GEn
-
-once you have the WHAT happened RIGHT, you can activate the : 
-SAVED everyone PATH, sent it tot he past, and change the future
-that's the beauty of that new technology !! (maybe too convoluted?)
-
-
-### TEST and validate
-
-FIX EVERYONE CAPTAIN MEETING Day 3 morning for
-- ted
-  - When call captain, make it more dramatic
-  - 
-- Others?
-  - Nurse?
-  - Doc?
-
-## FABLE 5
-
-Take advantage to change CODE while it is available
-
-## Write Story: Captain (Sushil Sinha)
-
 
 ### Write Story: NEXT => Broken, then HOST
 
+1. Broken map goals and discoveries
+2. Write story
+   1. Friday intro
+   2. Friday Evening ...
+
 ## Technical Tasks
 
-### Simplify already visited (not needed from chapter to chapter) => 
-Check everywhere? TEST now logic => No hunt for Psychic and Nurse SEEMS Ok, now give values all the time?
 
 ### INTUITION system entirely FOR EVERYONE SAVED concept
 Now an intuition is needed to SAVE a person.
 When Someone is saved, it add a SAVED over their name in the progress view 
 - (need a lot of new images)
 - Need a new var saved over time for each character. (is_saved)
-- 
--  [ ] **Testing**: Define paths that test all dialogs for the first 3 character
-    - [ ] Doctor
-    - [ ] Lad
-    - [ ] Psychic
-- [ ] WEB run for testing, so antigravity can take printscreen? 
-  - [ ] OR just a command to take printscreen when testing (at location change for isntance) and check if ok.
-  - [ ] Or add a condition to fail test is the image is missing (but how?)
+
 - [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
 - [ ] BUG: **save_transcript_to_file** button not working during menu????
 - [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
 
-- [ ] **MENUS - Big Challenge**: 
-    - [x] Menus: Ensure "Next menu" is correct everywhere AND That every choice with a following menu doesn't have a time value
-        - [x] Doctor
-        - [x] Lad
-        - [x] Psychic
+- [ ] **MENUS - Check and changes**: 
     - [ ]  when **Map choice has two possible choices**, it picks the first one. Either make sure there is only one by re-reading everything or put in place something to identity 2 choices conflict
-    - [ ] DOUBLE Check that when a **choice is greyed out**, there is no point in selected them (tutorial_already_chosen). Check specifically :
-        - [x] Problem in Angry Broken (doctor path) the option next menu should be the menu where you can actually do something with the “angered” broken. Or maybe removed (fixed by removing the next_menu param so choices don't lock)
-        - Ending Gun downed with sushil ted harring: Add a second choice when you escape with the gun. To avoid greying when there is another possible ending. (“Go out, you have a gun it’s safe”)
+    - [ ] DOUBLE Check that when a **choice is greyed out**, there is no point in selected them (tutorial_already_chosen). Check specifically
+    - [ ] CHeck that every choice now has a time value. The latest changes in menu management allow to deduct time in a choice, then open the next menu, even if there is not enough time. that allow one extra choice without time, but at least it doesn't break continuity. SI I need to check that every menu is ok now.
+    - [ ] Also check that every menu has the next_menu parameter well set. It allows to avoid greying a choice that has multiple options available in the future.
 
 - [ ] **New Progress view**
     - Add new **ENDINGS page** for symmetry? Or a tooltip that says, endings can be seen below

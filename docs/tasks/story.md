@@ -207,6 +207,12 @@ Or a variation of that.
 
 THen the last path, the what happened path is played, but without saying who it is? And if it is wrong, it stops as soon as it doesn't make sense.... Game broken,restart.
 
+
+## FINAL option?
+once you have the WHAT happened RIGHT, you can activate the : 
+SAVED everyone PATH, sent it tot he past, and change the future
+that's the beauty of that new technology !! (maybe too convoluted?) => AI is not the future, changing the past is? Or maybe it is in the alpha version => Prequel for the new game?
+
 ## Real RUN
 
 You must guess the right PATH. 
