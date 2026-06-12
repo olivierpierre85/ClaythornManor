@@ -21,7 +21,7 @@ When Someone is saved, it add a SAVED over their name in the progress view
 - [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
 
 - [ ] **MENUS - Check and changes**: 
-    - [ ]  when **Map choice has two possible choices**, it picks the first one. Either make sure there is only one by re-reading everything or put in place something to identity 2 choices conflict
+    - [ ]  when **Map choice has two possible choices**, it picks the first one. Either make sure there is only one by re-reading everything or put in place something to identity 2 choices conflict (basically, if there is two choices, the condition parameter must be set with mutually excluse values)
     - [ ] DOUBLE Check that when a **choice is greyed out**, there is no point in selected them (tutorial_already_chosen). Check specifically
     - [ ] CHeck that every choice now has a time value. The latest changes in menu management allow to deduct time in a choice, then open the next menu, even if there is not enough time. that allow one extra choice without time, but at least it doesn't break continuity. SI I need to check that every menu is ok now.
     - [ ] Also check that every menu has the next_menu parameter well set. It allows to avoid greying a choice that has multiple options available in the future.

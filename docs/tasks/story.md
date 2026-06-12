@@ -83,6 +83,9 @@
 
 ## Broken
 
+the strenght => Journalist
+New thing, he can reach downstairs if he wears the footman livery
+
 ### Important
 - [ ] MORE DEAD!!! For some THOMAS MOODY,**the deaths are coming faster**. Because the psychic saw into his lies and loses it. VERY VERY hard to survive till the end
     - [ ] For that, needs to observe poison => so possibility to avoid eating at dinner
@@ -94,13 +97,12 @@
   - [ ] Can check the telephone as he is very sus (choice in the entrance hall)
 THE OUTside shed will show nothing of interest for captain. But the Broken will find the bodies of the staff there if he survives.
 
-- [ ] MAKE THE NAME change by using a function for it => “Archibald”
 - [ ] Why is he angered by the doctor? His brother?/best friend?/Lover? was a broken face, that’s his mask AND scared of being recognize
 - [ ] Servant uniform: Only one who can wear the footman livery in the servants stairs
   - [ ] As a journalist, he will find poison downstairs. and take it with him?
 - [ ] When broken learns his whisky is poisoned, he doesn’t offer one to Ted harring
 - [ ] Explain the thing with the flask (I forgot my flask while distracted by captain)
-- [ ] THE **butler will kill him**, by putting poison in his flasks while he is distracted by captain YES he is an accomplice
+- [ ] THE **butler will kill him**, by putting poison in his flasks while he is distracted by captain YES he is an accomplice BUTLER fin
 
 ### Ideas to think over (optional)
 
