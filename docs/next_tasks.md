@@ -25,26 +25,9 @@ FIX EVERYONE CAPTAIN MEETING Day 3 morning for
 Take advantage to change CODE while it is available
 
 ## Write Story: Captain (Sushil Sinha)
-- [x] Friday Afternoon
-- [x] Friday Evening
-- [x] Saturday Morning
-- [x] Saturday Hunt
-- [x] Saturday evening
-- [ ] sunday Morning
-  - [ ] Nurse path information
-    - [ ] Rewrite entirely : captain_day3_attic_ask_prize
-    - [ ] FIX grammar in whole file
-- [x] **sunday AFternoon**
 
-NOT important : Weird that the captain doesn't run into the others? Should he hide on purpose? To think about, but LATER
 
-## No config menu for captain? No way to ask random question to host or other? Change that? Or ok like this?
-
-### Threads Captain to redraw: 
-
-- Add intuition to the right thread : view of the inside of 1920 car engine, with old gun being fired
-
-### Write Story: NEXT => Broken or HOST?
+### Write Story: NEXT => Broken, then HOST
 
 ## Technical Tasks
 

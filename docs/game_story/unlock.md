@@ -25,6 +25,7 @@ graph TD;
     drunk -->|TODO| butler;
     host -->|TODO| butler;
     broken -->|TODO| butler;
+    broken -->|TODO| drunk;
 ```
 
 ## 1. The Lad

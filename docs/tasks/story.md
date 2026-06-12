@@ -149,6 +149,8 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 - Expands story about his noble upbringing in generic dialogs.
 - [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big 
 - [ ] - [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
+- [ ] NOT important : Weird that the captain doesn't run into the others DAY 3 morning? Should he hide on purpose? To think about, but LATER
+- [ ] No config GENERIC menu for captain? No way to ask random question to host or other? Change that? Or ok like this?
 
 ## Host
 
