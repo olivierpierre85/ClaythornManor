@@ -476,25 +476,31 @@ label captain_day3_attic_ask_prize:
     """
 
     nurse """
-    Yes.
+    Yes. But also a little vague.
 
-    And I have had two days to wonder what exactly I did that was so distinguished.
+    It is hard to imagine that there are not hundreds of nurses as distinguished as myself, maybe more so.
 
-    I have nursed for thirty years, Captain. I have done it well, I believe.
+    From the day I received that letter I have been suspicious.
+    """
 
-    But no better than a hundred other women who were never offered a prize for it.
+    captain """
+    Yet you came anyway.
+    """
 
-    I do not deserve that money. I knew it when I read the letter.
+    nurse """
+    I did.
 
-    And I came all the same.
+    I need the money, you see.
+
+    A thousand pounds is not something you can just turn down.
+
+    Now, I regret I did not stay at home.
     """
 
     """
     I could let it pass with a polite word.
 
-    Instead I find myself answering her honestly. I cannot say why.
-
-    Perhaps because, after this morning, politeness seems a poor use of whatever time we have.
+    Instead I find myself answering her honestly.
     """
 
     captain """
@@ -508,45 +514,65 @@ label captain_day3_attic_ask_prize:
     """
 
     captain """
-    And the letter was a good deal more generous than the record, Miss Marsh.
+    Unlike yours, it was plain to see mine was pure fabrication from the start.
 
-    I will leave it at that.
-    """
+    The name was correct, the battles, the places.
 
-    """
-    It costs me more to say than I care to admit.
+    But my role in those battles was clearly exaggerated.
 
-    I have told the other version of myself for thirty years. It comes out on its own now.
+    I assumed it was a mix-up due to my origins.
+
+    I could have written back to correct it, but I did not.
+
+    I suppose you are right. We are willing to do an impressive number of things for the right amount of money.
     """
 
     nurse """
-    Thank you, Captain.
+    Thank you for your honesty, Captain.
 
     Then we are the same.
 
+    Two impostors, invited under false pretences.
+
     And I would wager the others are too.
 
-    Mr Manning, the great defence lawyer. Doctor Baldwin. Poor Mr Moody.
-
     A houseful of guests, every one of them honoured for something they know, in their hearts, they did not quite do.
+
+    Maybe this was just a test, to see who would be dishonest enough to come.
+
+    And to make us pay dearly for it.
     """
 
     captain """
-    Yet the letters were not invented out of nothing.
+    If that is true, then we are in even more danger than I thought.
+    """
 
-    Mine had the regiments right, the postings, the dates.
+    """
+    I ponder this for a few seconds.
 
-    There was enough truth in it that I never thought to question the rest.
+    Is this just an elaborate way to torture us?
+
+    But for what motive?
+    """
+
+    captain """
+    Something is troubling me.
+
+    The letters were not invented entirely out of nothing.
+
+    As I said, mine had the regiments right, the postings, the dates.
+
+    Battles I actually participated in, even if it was from afar.
+
+    It would have been very hard to just fabricate those things.
     """
 
     nurse """
-    Yes.
+    Now that you mention it, mine had very precise information too.
 
-    That is what a good lie is, is it not? Mostly true.
+    It had most of my postings right. It even knew I had served abroad — for instance, that I was in China during the Boxer Rebellion.
 
-    Whoever wrote those letters knew us, Captain. Each of us, well enough to know which truth would bring us here.
-
-    Mine had my hospitals right. It even knew I had served abroad — that I was in China, during the Boxer Rebellion.
+    Whoever wrote those letters knew us, Captain. Well enough to know which truth would bring us here.
     """
 
     captain """
@@ -563,8 +589,16 @@ label captain_day3_attic_ask_prize:
     With the field hospitals, nursing the wounded out of the legations.
 
     I know you were there too, Captain. We all heard your story on Friday evening.
+    """
 
-    And here is a curious thing I have been turning over since.
+    captain """
+    Interesting, that is a strange coincidence.
+    """
+
+    nurse """
+    If it is one at all.
+
+    There is a curious thing I have been turning over since your speech.
 
     Doctor Baldwin was in China in those years as well, I am almost sure of that.
     """
@@ -613,8 +647,6 @@ label captain_day3_attic_ask_prize:
     I turn it over and can make nothing more of it.
 
     Whatever happened out there, it was a long time ago, and half a world away.
-
-    But I do not like coincidences, and this house is too full of them.
     """
 
     return
