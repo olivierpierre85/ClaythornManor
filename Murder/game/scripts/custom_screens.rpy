@@ -78,9 +78,12 @@ label wait_screen_transition():
     return 
 
 # BLACK transition
-label black_screen_transition(display_text="", display_text_2 = None):
+label black_screen_transition(display_text="", display_text_2 = None, is_fast=False):
     if not renpy.is_in_test():
-        scene black_background with irisin
+        if is_fast:
+            scene black_background
+        else:
+            scene black_background with irisin
         show screen centered_text(display_text, display_text_2)
         play sound gong
         pause 4.0

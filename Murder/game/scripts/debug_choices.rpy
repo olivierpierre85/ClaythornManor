@@ -60,7 +60,7 @@ label init_debug:
     $ current_storyline = broken_details
     call unlock_broken
     # TODO check where to put this
-    $ broken_name = "Archibald Devereux"
+    # $ broken_name = "Archibald Devereux"
 
     # $ current_character = host_details
     # $ current_storyline = host_details

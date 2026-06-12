@@ -30,7 +30,7 @@ label broken_introduction:
     
     He couldn't bare the look of the people around him.
 
-    After dedicated his youth to the army he ends up alone in his apartment.
+    After sacrificing his youth to his country he ends up alone in his apartment.
 
     To scared to go out most of the time.
 
@@ -74,10 +74,23 @@ label broken_introduction:
     """
     I am still not sure what I am doing here.
 
+    Impersonating my dear Thomas.
+
+    I have no idea how much the host my know about him, so I should be prepared to answer everything as him.
+
+    Fortunately, I know all about his childhood, his dreams.
+
+    But I must be in character at all time.
+
+    From now one, I am no longer Archibald Devereux.
+
+    I am
     """
 
-    broken """
-    test
+    call black_screen_transition("", "Thomas Moody", is_fast=True)
+
+    """
+    TODO next
     """
 
     jump broken_day1_evening
