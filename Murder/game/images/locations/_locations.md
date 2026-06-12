@@ -31,7 +31,7 @@ Wrapped in the interior manor template:
 | scullery         | cramped scullery with a deep stone sink                                                                                                                             |
 | gun_room         | large downstairs gun room with a glass-fronted cabinet of hunting rifles, central table with small handgun, flagstone floor                                         |
 | garage           | manor garage with an old motor car, tools hung on the wall, large garage door closed                                                                                |
-| toolshed         | garden shed interior with a rectangular red petrol tin in the corner, mysterious atmosphere                                                                         |
+| toolshed         | garden shed interior with a rectangular red petrol tin in the corner, mysterious atmosphere, realistic style,                                                       |
 
 ## Attic locations
 
