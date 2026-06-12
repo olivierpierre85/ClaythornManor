@@ -10,11 +10,7 @@ that's the beauty of that new technology !! (maybe too convoluted?)
 
 FIX EVERYONE CAPTAIN MEETING Day 3 morning for
 - ted
-  - Add a way to skip search and to just wait?
   - When call captain, make it more dramatic
-  - Remove kept searching the manor
-- psychic 
-  - Remove Captain sinha comes back dialog
   - 
 - Others?
   - Nurse?

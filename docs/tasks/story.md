@@ -33,6 +33,7 @@
     - [ ] Option to get in Captain's room/attic to get BULLETS (he sees you and kills you?) if you got bullets Day 2?
 - [ ] **Billiard Room**: More options in TALK to butler? OR remove him entirely
 - [ ] "Trust Psychic": Add more meaning, not just more time. Real ending possible only if trust?
+- [ ] Day 3 morning ?Add a way to skip search and to just wait?
 
 
 ## Psychic

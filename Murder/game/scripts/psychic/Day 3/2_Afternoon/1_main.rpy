@@ -28,7 +28,7 @@ label psychic_day3_afternoon:
     """
     We waited in the tea room without exchanging any words for a short time.
 
-    Finally, Captain Sinha comes back.
+    Finally, Captain Sinha wakes up from our slumber.
     """
 
     $ play_music('mysterious')

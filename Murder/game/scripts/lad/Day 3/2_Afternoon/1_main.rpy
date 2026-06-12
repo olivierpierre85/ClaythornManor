@@ -28,9 +28,7 @@ label lad_day3_afternoon:
     $ change_room("tea_room", irisout)
 
     """
-    We stayed in the tea room and gathered our strength while Sushil Sinha kept searching the manor.
-
-    When he returned, we had started to feel a bit better.
+    After we had gathered our strength, Sushil Sinha takes charge.
     """
 
     $ play_music('mysterious')
