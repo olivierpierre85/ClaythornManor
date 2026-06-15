@@ -36,8 +36,6 @@ Multiple Class in train for outside IMAGEs
 
 Victorian pauper apartement, with a disfigured dead man on his bed. 
 
-NAMe without chapter should be centered in black transition
-
 ## Technical Tasks
 
 

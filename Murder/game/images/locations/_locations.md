@@ -51,16 +51,19 @@ Wrapped in the attic template — the interior template without the colourful ob
 
 Wrapped in the outdoor template:
 
-> A high-quality semi-realistic digital painting of a **{description}**. Warm amber light. Deep soft shadows, mysterious atmosphere, wide shot, rich textures.
+> A high-quality semi-realistic digital painting of a **{description}**. Deep soft shadows, mysterious atmosphere, wide shot, rich textures.
 
-| id                     | description                                                                                                                  |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| manor_exterior         | grand 1920s Scottish manor seen from the gravel drive, its towering stone facade and lit windows rising against a stormy sky |
-| manor_garden           | 1920s Scottish manor garden with clipped hedges, gravel paths and a stone fountain, the dark house looming behind            |
-| forest                 | dense Scottish pine forest, tall trees and tangled undergrowth, mist drifting between the trunks                             |
-| forest_road            | narrow rutted road winding through a dark Scottish forest, tall trees crowding either side                                   |
-| toolshed_outside_day   | weathered stone toolshed in the manor grounds by day, a heavy wooden door and overgrown grass around it                      |
-| toolshed_outside_night | weathered stone toolshed in the manor grounds at night, a heavy wooden door and shadows pooling around it in the rain        |
-| train_station          | small rural Scottish railway station with an empty platform, gas lamps, a wooden bench and a canopy                          |
-| police_station         | modest small-town Scottish police station of grey stone, seen from the street, a blue lamp above its door                    |
-| house_on_fire          | 1920s Scottish manor engulfed in flames at night, fire bursting from the windows and roof, smoke billowing into a dark sky   |
+| id               | description                                                                                                                                                                                 |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| broken_flat      | Victorian pauper apartment, with a dead man on his bed, with a sheet covering his head                                                                                                      |
+| manor_exterior   | grand 1920s two-storey Scottish manor seen from the gravel drive, surrounded by tall trees, towering stone facade and lit windows rising against a stormy sky, luxurious garden on the back |
+| manor_garden     | 1920s Scottish manor garden, gravel paths and a stone fountain, the dark house looming behind, tall trees around, touch of warm colors                                                      |
+| forest           | dense Scottish forest, tall trees and tangled undergrowth, mist drifting between the trunks, touch of warm colors                                                                           |
+| forest_road      | narrow rutted road winding through a dark Scottish forest, tall trees crowding either side, touch of warm colors                                                                            |
+| toolshed_outside | Done                                                                                                                                                                                        |
+| train_station    | medium size Scottish railway station, daytime, a few people on the platform, gas lamps, touch of warm colors                                                                                |
+| police_station   | modest small-town Scottish police station in 1920, inside with a few persons, touch of warm colors                                                                                          |
+| house_on_fire    | 1920s city house in flames at night, in the city center of a big british city, fire bursting from the windows and roof, smoke billowing into a dark sky, touch of warm colors               |
+
+
+

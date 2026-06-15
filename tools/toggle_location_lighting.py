@@ -25,8 +25,8 @@ PROMPT_TEMPLATES = {
         "Wide shot, empty room, rich textures, detailed."
     ),
     "outdoor_night": (
-        "A high-quality semi-realistic digital painting of a {description} at night. "
-        "Warm amber light. Deep soft shadows, mysterious atmosphere, wide shot, "
+        "A high-quality semi-realistic digital painting of a {description} at night."
+        "Deep soft shadows, mysterious atmosphere, wide shot, "
         "rich textures."
     ),
     "outdoor_day": (
