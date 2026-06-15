@@ -229,7 +229,7 @@ Tests run inside Ren'Py's built-in test runner (not a separate CI tool). Launch 
 
 ### Checking menu consistency
 
-`Murder/check_menu_consistency.py` statically audits every `TimedMenu`/`TimedMenuChoice` in `game/scripts/` against the menu conventions. **Run it after adding or editing any menu** — do not audit menus by reading `.rpy` files manually.
+`Murder/check_menu_consistency.py` statically audits every `TimedMenu`/`TimedMenuChoice` in `game/scripts/` against the menu conventions. **Run it only when explicitly asked** — not automatically after editing menus. When you do audit menus, use this script rather than reading `.rpy` files manually.
 
 ```bash
 python Murder/check_menu_consistency.py [--character captain] [--verbose]

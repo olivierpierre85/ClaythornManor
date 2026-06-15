@@ -1,13 +1,17 @@
 label init_broken:
 
     # call broken_config_map
-    
-    # call broken_config_menu
-    
+
+    call broken_config_progress
+
+    call broken_config_menu
+
     python:
         broken_name = "Thomas Moody"
-        
+
         broken_init_variables = {
+            # Generic Menus
+            "host_generic_menu": host_generic_menu_broken,
         }
 
         broken_extra_information = CharacterDescriptionHiddenList([
@@ -49,7 +53,9 @@ label init_broken:
             endings = CharacterInformationList([]),
             observations = CharacterInformationList([]),
             objects = CharacterInformationList([]),
-            progress = [],
+            progress = broken_progress,
+            test_checkpoints = broken_test_checkpoints,
+            saved_variables = copy.deepcopy(broken_init_variables),
         )
         broken = Character("broken_details.get_name()", image="broken", dynamic=True)
     

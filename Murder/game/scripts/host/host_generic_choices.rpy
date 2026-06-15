@@ -1,6 +1,7 @@
 # Generic Host Dialogs.
 # Accessible from :
 #                   - Nurse
+#                   - Broken
 
 label host_generic:
 
@@ -141,8 +142,84 @@ label host_generic_room:
 
     host """
     The master bedroom is named after Henry IV.
-    
+
     Why, I am not sure exactly.
+    """
+
+    return
+
+
+# ------------------------------------
+#               BROKEN
+# ------------------------------------
+label host_generic_background_broken:
+
+    call host_generic_background
+
+    """
+    She turns the talk aside as neatly as a card sharp turning a trick.
+
+    Mistress here since her father passed, she says. Nearly ten years.
+
+    And yet she cannot be far past thirty.
+
+    The sums do not quite tally.
+
+    Either she came to it remarkably young, or that is not the whole of the story.
+    """
+
+    return
+
+
+label host_generic_invite_broken:
+
+    broken """
+    Forgive my curiosity, but the letter never quite explained why you settled upon us in particular.
+
+    A thousand pounds apiece is no small sum.
+    """
+
+    host """
+    Is generosity so very suspect, Mr Moody?
+
+    Each of you performed an act of rare courage. One felt such things ought to be honoured.
+    """
+
+    broken """
+    Of course. It is only that such open-handedness is rare these days.
+    """
+
+    host """
+    Then let us call it an indulgence.
+
+    I have the means, and few enough occasions to put them to good use, out here.
+    """
+
+    """
+    The means.
+
+    That is the very thing her family no longer has, if my enquiries are to be trusted.
+
+    She answers without a flicker, smooth as glass.
+
+    Too smooth, perhaps. Either she is telling the truth, or she has rehearsed the lie until it fits like a glove.
+    """
+
+    return
+
+
+label host_generic_other_guests_broken:
+
+    host """
+    A remarkable assembly, every one of them.
+
+    But it would be improper of me to discuss my guests behind their backs.
+    """
+
+    """
+    A careful answer. She gives nothing away.
+
+    Then again, neither do I.
     """
 
     return

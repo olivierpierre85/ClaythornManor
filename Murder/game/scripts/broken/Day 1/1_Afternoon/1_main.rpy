@@ -14,6 +14,8 @@
 # --------------------------------------------
 label broken_introduction:
 
+    $ broken_details.add_checkpoint("broken_introduction")
+
     $ change_room("broken_flat")
 
     """

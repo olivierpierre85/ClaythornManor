@@ -307,6 +307,13 @@ label common_day1_evening_tea_room_captain_arrives:
         After that, he sits down on the sofa next to him and immediately falls asleep.
         """
 
+    elif current_character == broken_details:
+        """
+        We watch the older man fill a water glass to the brim with sherry.
+
+        He empties it in one draught, drops onto the sofa, and is asleep before his head has quite settled.
+        """
+
     captain """
     Well, that should keep him still for a while.
     """

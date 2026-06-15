@@ -34,6 +34,8 @@ Prequisite, ADD servant stairs as last room
 
 Location appartement. 
 
+Multiple Class in train for outside IMAGEs
+
 Victorian pauper apartement, with a disfigured dead man on his bed. 
 
 ## Technical Tasks

@@ -59,6 +59,7 @@ label init_debug:
     $ current_character = broken_details
     $ current_storyline = broken_details
     call unlock_broken
+    $ broken_details.load_manual_checkpoints()
     # TODO check where to put this
     # $ broken_name = "Archibald Devereux"
 
