@@ -18,6 +18,8 @@ label broken_introduction:
 
     $ change_room("broken_flat")
 
+    $ play_music('sad', 2)
+
     """
     I am looking at Thomas, lifeless on his bed.
 

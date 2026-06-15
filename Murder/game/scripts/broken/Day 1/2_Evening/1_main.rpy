@@ -70,11 +70,11 @@ label broken_day1_evening:
 
     His childhood in Liverpool. The boot-boy years. 
     
-    When he joined the army and raised through the ranks.
-    
-    Until the Great war when he became an officer.
+    When he joined the army and raised through the ranks, up until the Great war when he became an officer.
     
     Something his upbringing would have made impossible not so long ago. 
+
+    Then the tragedy that changed his life forever.
 
     When I am certain of every line, I go down to join the others.
     """
@@ -87,6 +87,7 @@ label broken_day1_evening:
     The tea room is empty but for one man — the doctor I shared the car with.
     """
 
+    #TODO:from here WHY not common???????
     broken """
     Doctor Baldwin, I suppose we are the first ones.
     """

@@ -6,22 +6,20 @@ Prequisite, ADD servant stairs as last room
 
 1. Broken map goals and discoveries
 2. Write story
-   1. Friday intro
-      1. Add : There is something weird about this letter, that would at least make a good story.
-   2. Friday Evening
+   1. Friday Evening
       1. First in tea room, goes to take a drink, leave his flask near the bar then sees the captain telling a story. When he meet ted at the bar, that is becaused he realised he forgot his flask, so he goes back to get it and dies gives to ted. If he doesn't go back to get it, TED dies also, but you only find it back the next day? where!!!
       2.  If not, (do not want to listen to this, USE intuition alreaydy?), he keeps at the bar and try to talk to DRUNK. -> he is the one who can unlock drunk with his clever investigative skills.
-   3. Saturday Morning
+   2. Saturday Morning
       1. Ted is ALWAYS dead. Same kind of talk, you follow the doctor into ted harring room, call back but new text. You enter in full Detective story.
-   4. Hunt
+   3. Hunt
       1. As option to kill captain, or not if he thinks it is a setup. But to be sure it is a setup, he needs to find more suspicious things? Like DRUNK also receives a message. If he didn't find drunk message, he kills captain. Drunk kills doctor. VEry gore new step
       2. IF he finds message, he knows something is up and goes with drunk and prevents his death. BACK to having multiple choice of partner for hunt since lad is dead.
-   5. After hunt
+   4. After hunt
       1. lots of death.
          1. Without captain, host panick and decides to leave even before dinner. So she is not there, only butler, that is weird, everone dies. EXCEPT if you had found AND taken the poison the first day.
       2. Just Ted is dead.
          1. NOrmal dinner, but SAME that with poison, EVERYone DIES
-   6. Satuday after dinner.
+   5. Satuday after dinner.
       1. IF you found poison, you gain some time to explore, in both cases. Now you can?????? PARNER UP WITH THE DRUNK => Unlocks HIm(at least partially)
       2. IF you do not find XXXXXX, you burn in your sleep. There is only one way to see day3 and it is to?
          1. leave ?
@@ -37,6 +35,8 @@ Location appartement.
 Multiple Class in train for outside IMAGEs
 
 Victorian pauper apartement, with a disfigured dead man on his bed. 
+
+NAMe without chapter should be centered in black transition
 
 ## Technical Tasks
 
