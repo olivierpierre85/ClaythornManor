@@ -84,6 +84,7 @@ label black_screen_transition(display_text="", display_text_2 = None, is_fast=Fa
             scene black_background
         else:
             scene black_background with irisin
+
         show screen centered_text(display_text, display_text_2)
         play sound gong
         pause 4.0
@@ -115,11 +116,12 @@ screen centered_text(display_text, display_text_2 = None):
     vbox:
         xalign 0.5 
         yalign 0.5
-        text display_text:
-            xalign 0.5 
-            yalign 0.5
-            font gui.transition_top_text_font
-            size gui.transition_top_text_size
+        if display_text:
+            text display_text:
+                xalign 0.5 
+                yalign 0.5
+                font gui.transition_top_text_font
+                size gui.transition_top_text_size
         if display_text_2:
             text display_text_2:
                 xalign 0.5 
