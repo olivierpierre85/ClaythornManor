@@ -64,6 +64,9 @@ Do it for all possibilities ( dining room with less and less persons as the time
 - If enough time and money, each character should have a different style of room. That means 8 times each location. That's quite a lot of work
 - For instance: If lad, everything looks **amazing**, for rest not so much. For psychic, weird things appear from time to time
 
+## (Optional) The Letter
+
+Each person could have the invitation letter as an image, not just part of a text? Could be a clue ?
 
 ## 🔊 Music / Sound
 

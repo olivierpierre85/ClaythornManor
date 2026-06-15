@@ -1,54 +1,53 @@
 # --------------------------------------------
 #   Broken
-#           
+#
 #   Friday - Afternoon
-#   
+#
 #   14:00 -> 14:45
 #
 #   Music: Chill, upbeat
 #
 #   Alive: Everyone
 #
-#   Notes : 
-#       - 
+#   Notes :
+#       -
 # --------------------------------------------
 label broken_introduction:
 
-    # The intro for BROKen is set in an apartment.
+    $ change_room("broken_flat")
 
-    # A DAY EARLIER 
     """
     I am looking at Thomas, lifeless on his bed.
 
-    His injuries had the best of him in the end.
+    His injuries got the best of him in the end.
 
-    The mask that was suppose to help him live a normal live sits next to him.
+    The mask that was supposed to help him live a normal life sits beside him.
 
-    He won't have to wear it anymore.
+    He won't have to wear it any longer.
 
-    That brings a sort of relief.
-    
-    He couldn't bare the look of the people around him.
+    That brings me a sort of relief.
 
-    After sacrificing his youth to his country he ends up alone in his apartment.
+    He could never bear the way people looked at him.
 
-    To scared to go out most of the time.
+    After sacrificing his youth to his country, he ended up alone in his flat.
 
-    The loneliness might have been the cause of death as much the failings of his aching body.
+    Too frightened to go out, most days.
 
-    I search about his place and found nothing that was not a necessity.
+    The loneliness may have killed him as surely as his failing body.
 
-    On his desk is a picture of us we took when we were on leave for a weekend.
-    
+    I searched the place and found nothing that was not a necessity.
+
+    On his desk sits a photograph of the two of us, taken on leave one weekend.
+
     The caption reads: Thomas and Archie, Talbot House, Poperinge, 1916.
 
-    Two officers thrown in the middle of hell.
-    
-    With death all around us, we became best friends rapidly.
+    Two officers thrown into the middle of hell.
 
-    Next to the picture sits a letter.
+    With death all around us, we became firm friends soon enough.
 
-    Well he won't might me reading it now.
+    Beside the photograph lies a letter.
+
+    Well, he won't mind me reading it now.
 
     I pick it up.
     """
@@ -76,21 +75,102 @@ label broken_introduction:
 
     Impersonating my dear Thomas.
 
-    I have no idea how much the host my know about him, so I should be prepared to answer everything as him.
+    But there was something about that letter that would not let me rest.
 
-    Fortunately, I know all about his childhood, his dreams.
+    Years of chasing stories have left me unable to look away from a thing that does not add up.
 
-    But I must be in character at all time.
+    A journalist learns to read between the lines, and these lines did not sit right.
 
-    From now one, I am no longer Archibald Devereux.
+    So I did what I always do.
+
+    I started asking questions.
+
+    The place, at least, exists.
+
+    That much I confirmed.
+
+    Yet the award was unheard of before this year, so this must be the very first time it has been given.
+
+    And a few quiet enquiries into the estate's finances told a familiar tale.
+
+    Like most second-rate aristocratic families, the one keeping Claythorn Manor has precious little to spare.
+
+    So why give away such a sum?
+
+    Perhaps it is the final wish of some dying aristocrat's fortune, to do a little good before the end.
+
+    Or perhaps it is bait, dressed up as charity, to draw a particular sort of guest to their door.
+
+    Either way, I feel there is a story in it worth the telling.
+
+    But I would be lying if I said that were the whole of it.
+
+    The money on offer is substantial, and a journalist's wage has never stretched far.
+
+    If I can carry off the part of Thomas, Lady Claythorn has no reason not to hand me the prize.
+
+    I glance at the mask I have brought with me.
+
+    It should help me pass unnoticed.
+
+    Still, I have no notion of how much the host already knows of him, so I must be ready to answer as Thomas, whatever she asks.
+
+    Fortunately, I know it all.
+
+    His childhood, his dreams, his every fear.
+
+    But I must stay in character at all times.
+
+    From now on, I am no longer Archibald Devereux.
 
     I am
     """
 
     call black_screen_transition("", "Thomas Moody", is_fast=True)
 
+    play sound train_stopping
+
+    $ change_room("train_station")
     """
-    TODO next
+    The train has stopped and I step out.
+
+    I look around for a few minutes until I spot a group of people who could be heading for the same place as me.
+
+    So I introduce myself.
     """
 
+    call common_day1_afternoon_station_doctor_nurse_broken
+
+    $ change_room("inside_car")
+
+    """
+    The journey is rather quiet, which suits me well.
+
+    The less I say, probably the better.
+
+    After a while, we reach our destination.
+    """    
+    
+    $ stop_music()
+    
+    $ change_room("manor_exterior")
+
+    """
+    It is good we have arrived early, for the sky promises a storm before long.
+
+    I take a good look at the place.
+
+    Claythorn Manor is what I imagined it would be.
+
+    Impressive but not regal.
+
+    One of hundreds of grand houses of this type.
+
+    If my research is correct, it is bound to be sold and turned into something else in the near future.
+
+    But in the meantime, it should prove a pleasant place to stay.
+    """
+
+    pause 1
+    
     jump broken_day1_evening

@@ -12,7 +12,7 @@ label init_broken:
 
         broken_extra_information = CharacterDescriptionHiddenList([
             CharacterInformation(0, "mask", "injured at the start of the war, he is now what people call a 'Gueule Cassée' or broken face"),
-            CharacterInformation(0, "age", "27-year-old", is_important = True),
+            CharacterInformation(0, "age", "43-year-old", is_important = True),
             CharacterInformation(0, "background", "a fancy house as a boot boy before graduating to footman. There he learned how to behave among the rich and wealthy", is_important = True),   
             CharacterInformation(0, "tall", "above-average height", is_important = True),
             CharacterInformation(0, "job", "a car mechanic", is_important = True),         

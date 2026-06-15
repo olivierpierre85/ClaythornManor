@@ -333,7 +333,7 @@ label broken_generic_manor_not_offended:
 label broken_generic_age:
 
     broken """
-    27 years old.
+    43 years old.
 
     I know it is hard to guess, considering.
     """

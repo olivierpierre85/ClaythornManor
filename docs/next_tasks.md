@@ -2,6 +2,8 @@
 
 ### Write Story: NEXT => Broken, then HOST
 
+Prequisite, ADD servant stairs as last room
+
 1. Broken map goals and discoveries
 2. Write story
    1. Friday intro
@@ -27,6 +29,12 @@
             2. Not alone, wake everyone up before the fire, but then dead anyway?
          2. HIDE in the garden shed?
 
+
+# Art for broke
+
+Location appartement. 
+
+Victorian pauper apartement, with a disfigured dead man on his bed. 
 
 ## Technical Tasks
 
@@ -55,6 +63,8 @@ When Someone is saved, it add a SAVED over their name in the progress view
 
 
 ## Assets & artistic Tasks
+
+
 
 ### MUSIC with producer AI
 Get new music from internet and put them at the right place

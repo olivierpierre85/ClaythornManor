@@ -64,6 +64,11 @@ label common_day1_afternoon_station_doctor_nurse:
         But I was not expecting it, and the surprise must have shown on my face.
         """
 
+    return
+
+
+label common_day1_afternoon_station_doctor_nurse_broken:
+    
     broken """
     Thomas Moody. Lady Claythorn invited me. I don't suppose you are bound for the same place?
     """
@@ -82,12 +87,21 @@ label common_day1_afternoon_station_doctor_nurse:
         Apparently, neither are the people next to me.
         """
 
-    else:
+    elif current_character.text_id == "nurse":
 
         """
         Nobody speaks for a moment.
 
         Doctor Baldwin collects himself first.
+        """
+    elif current_character.text_id == "broken":
+
+        """
+        There is a silence.
+
+        It is obvious I have startled them.
+
+        Well, if it what Thomas was experiencing every day, no wonder he mostly kept to himself.
         """
 
     doctor """
@@ -103,5 +117,6 @@ label common_day1_afternoon_station_doctor_nurse:
     """
     We exchange a few pleasantries, then go to the car and begin our journey to Claythorn Manor.
     """
+
 
     return

@@ -25,7 +25,7 @@ label doctor_introduction:
     $ play_music('chill')
 
     """
-    Anxiety hits me harder than usualy.
+    Anxiety hits me harder than usually.
 
     I haven't been away this long in years. It feels off, but there's no turning back.
 
@@ -91,6 +91,8 @@ label doctor_introduction:
     """
 
     call common_day1_afternoon_station_doctor_nurse
+    
+    call common_day1_afternoon_station_doctor_nurse_broken
 
     $ change_room("inside_car")
 
@@ -132,4 +134,4 @@ label doctor_introduction:
 
     pause 2.0
 
-    jump doctor_day1_evening
+    jump broken_day1_evening

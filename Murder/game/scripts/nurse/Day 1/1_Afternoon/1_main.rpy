@@ -89,6 +89,8 @@ label nurse_introduction:
     """
 
     call common_day1_afternoon_station_doctor_nurse
+    
+    call common_day1_afternoon_station_doctor_nurse_broken
 
     $ change_room("inside_car")
 
