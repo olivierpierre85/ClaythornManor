@@ -15,6 +15,7 @@ label nurse_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'nurse_day2_no_hunt_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'nurse_day2_no_hunt_garden', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'nurse_entrance_hall_default', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'nurse_servant_stairs_default', 10, room='servant_stairs'),
             TimedMenuChoice(default_room_text('library'), 'nurse_library_default', 10, room='library', next_menu='nurse_library_choice'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'nurse_portrait_gallery_default', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('tea_room'), 'nurse_tea_room_default', 10,  room='tea_room', condition= "not " + condition_saturday_hunt_morning),

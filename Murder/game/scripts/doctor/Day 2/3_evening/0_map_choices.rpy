@@ -15,6 +15,7 @@ label doctor_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'doctor_day2_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'doctor_day2_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'doctor_day2_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'doctor_servant_stairs_default', 10, room='servant_stairs'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'doctor_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(
                 'Check who is in the billiard room',

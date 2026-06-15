@@ -29,7 +29,7 @@ label lad_day2_hunt_tea_room:
     """
 
     # TODO if the psychic knowledge is not known, summarize it here? or just display the text?
-    if all_menus.get("psychic_generic_menu_lad") and all_menus["psychic_generic_menu_lad"].choices[3].hidden:
+    if is_choice_hidden("psychic_generic_menu_lad", "psychic_generic_background"):
 
         lad """
         Ah, yes, we've discussed that before.

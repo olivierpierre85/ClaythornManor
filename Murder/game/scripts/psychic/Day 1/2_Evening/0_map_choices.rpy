@@ -12,6 +12,7 @@ label psychic_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'psychic_dining_room_default', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'psychic_day1_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'psychic_entrance_hall_default', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'psychic_servant_stairs_default', 10, room='servant_stairs'),
             # TimedMenuChoice(default_room_text('portrait_gallery'), 'psychic_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
             #Bedrooms
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'psychic_day1_evening_default_bedroom', 10, room='bedroom_doctor'),

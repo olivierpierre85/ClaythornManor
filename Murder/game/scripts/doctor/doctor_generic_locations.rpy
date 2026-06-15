@@ -130,7 +130,7 @@ label doctor_entrance_hall_default:
     I feel compelled to take another look at this entrance hall.
 
     It is quite magnificent.
-    
+
     I take in the view for a few minutes.
 
     Nobody comes.
@@ -139,7 +139,24 @@ label doctor_entrance_hall_default:
     return
 
 
-# First Floor 
+label doctor_servant_stairs_default:
+
+    $ change_room('servant_stairs')
+
+    """
+    A narrow stair for the staff, with a footman's livery hung beside the door.
+
+    For half a heartbeat the notion of slipping it on crosses my mind, then leaves just as quickly.
+
+    One glance is enough.
+
+    It would never fit me across the shoulders, and I have no intention of playing at dress-up.
+    """
+
+    return
+
+
+# First Floor
 label doctor_bedroom_default:
     
     $ change_room("bedrooms_hallway")

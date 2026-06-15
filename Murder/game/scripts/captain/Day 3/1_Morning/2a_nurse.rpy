@@ -664,7 +664,7 @@ label captain_day3_attic_ask_china:
 
 label captain_day3_attic_wait_silence:
 
-    if all_menus['captain_day3_attic_wait_menu'].choices[0].already_chosen or all_menus['captain_day3_attic_wait_menu'].choices[1].already_chosen:
+    if is_choice_already_chosen('captain_day3_attic_wait_menu', 'captain_day3_attic_ask_health') or is_choice_already_chosen('captain_day3_attic_wait_menu', 'captain_day3_attic_ask_prize'):
 
         """
         We have said what there is to say.

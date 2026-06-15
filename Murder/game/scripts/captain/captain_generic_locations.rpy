@@ -289,6 +289,21 @@ label captain_garden_shed_inside:
 
     return
 
+label captain_servant_stairs_default:
+
+    $ change_room('servant_stairs')
+
+    """
+    The staff passage. A private way, for servants alone.
+
+    A guest has no business here.
+
+    I withdraw at once.
+    """
+
+    return
+
+
 label captain_portrait_gallery_default:
 
     $ change_room('portrait_gallery')

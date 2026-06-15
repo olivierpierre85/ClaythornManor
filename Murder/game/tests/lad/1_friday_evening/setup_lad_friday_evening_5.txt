@@ -74,8 +74,14 @@ I look around in disbelief.
 After a while, I unpack my modest luggage.
 It does not take long. So, what should I do now?
 Map Choice: Servant Stairs
-I entered a hidden space that is clearly meant for servants.
-It's narrow TODO
+I ducked through a low door and found myself on a narrow stair, plainly meant for the staff.
+A footman's livery hung on a peg, pressed and waiting for the morning.
+Menu Choice: Try the livery on
+On a whim, I held the livery up against myself.
+No use.
+It was cut for a bigger man, the shoulders far too broad.
+Pity.
+A get-up like that could open a fair few doors.
 Map Choice: Go to sleep
 It's getting quite late now.
 Going back to my room is probably the best thing to do.

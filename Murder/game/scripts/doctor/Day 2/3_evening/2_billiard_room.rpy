@@ -127,7 +127,7 @@ label doctor_day2_evening_billiard_room_captain:
     call run_menu(
         TimedMenu("doctor_day2_evening_billiard_room_captain", [
             TimedMenuChoice("Tell him about the letter", 'doctor_day2_evening_billiard_room_captain_letter', 20),
-            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 20, condition="doctor_details.threads.is_unlocked('broken_unmasked') and all_menus['doctor_day2_evening_billiard_room_captain'].choices[0].hidden"),
+            TimedMenuChoice("Tell him about Thomas Moody's face {{observation}}", 'doctor_day2_evening_billiard_room_captain_mask', 20, condition="doctor_details.threads.is_unlocked('broken_unmasked') and is_choice_hidden('doctor_day2_evening_billiard_room_captain', 'doctor_day2_evening_billiard_room_captain_letter')"),
             TimedMenuChoice("Leave him alone", 'doctor_day2_evening_billiard_room_captain_avoid', 20, keep_alive=True, early_exit = True),
         ])
     )

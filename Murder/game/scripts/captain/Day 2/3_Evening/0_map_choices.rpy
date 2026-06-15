@@ -36,6 +36,7 @@ label captain_day2_evening_map_menu:
                 condition="not captain_details.objects.is_unlocked('lantern')",
             ),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day2_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'captain_servant_stairs_default', 10, room='servant_stairs'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_portrait_gallery_default', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('library'), 'captain_library_default', 10, room='library', next_menu='captain_library_menu'),
             # Downstairs — staff still working there, captain stays out

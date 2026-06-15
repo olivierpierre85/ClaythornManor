@@ -19,6 +19,7 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('billiard_room'), 'captain_day3_morning_billiard_room', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day3_morning_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'captain_servant_stairs_default', 10, room='servant_stairs'),
             TimedMenuChoice(default_room_text('manor_garden'), 'captain_day3_morning_garden', 10, room='manor_garden'),
             # Bedrooms
             TimedMenuChoice("Hide in my room", 'captain_day3_morning_bedroom_captain', 0, room='bedroom_captain', early_exit=True),

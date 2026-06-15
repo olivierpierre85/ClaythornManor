@@ -103,13 +103,26 @@ label psychic_garden_default:
 
 
 label psychic_entrance_hall_default:
-    
+
     $ change_room("entrance_hall")
-    
+
     """
     A very nice great hall.
-    
+
     But it is totally empty.
+    """
+
+    return
+
+
+label psychic_servant_stairs_default:
+
+    $ change_room('servant_stairs')
+
+    """
+    A cramped little stair, the sort the staff slip up and down unseen.
+
+    There is nothing here to detain me, and I have no wish to be found lingering where I do not belong.
     """
 
     return

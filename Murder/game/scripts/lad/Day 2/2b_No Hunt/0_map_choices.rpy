@@ -18,6 +18,7 @@ label lad_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day2_no_hunt_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'lad_day2_no_hunt_garden', 30, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day2_no_hunt_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'lad_day2_no_hunt_servant_stairs', 10, room='servant_stairs', next_menu='lad_day2_no_hunt_servant_stairs_menu'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day2_no_hunt_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('kitchen'), 'lad_day2_no_hunt_kitchen', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'lad_day2_no_hunt_scullery', 10, room='scullery'),
@@ -125,6 +126,17 @@ label lad_day2_no_hunt_garden:
 
 label lad_day2_no_hunt_entrance_hall:
     call lad_entrance_hall_default
+    return
+
+label lad_day2_no_hunt_servant_stairs:
+
+    call lad_servant_stairs_default
+
+    call run_menu(TimedMenu("lad_day2_no_hunt_servant_stairs_menu", [
+        TimedMenuChoice("Try the livery on", 'lad_servant_stairs_try_outcome', 0, early_exit=True),
+        TimedMenuChoice("Leave it be", 'lad_servant_stairs_leave_outcome', 0, early_exit=True),
+    ]))
+
     return
 
 label lad_day2_no_hunt_portrait_gallery:

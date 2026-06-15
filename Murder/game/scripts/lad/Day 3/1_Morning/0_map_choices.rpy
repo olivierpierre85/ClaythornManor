@@ -9,6 +9,7 @@ label lad_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day3_morning_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'lad_day3_morning_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day3_morning_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'lad_day3_morning_servant_stairs', 10, room='servant_stairs'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day3_morning_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('billiard_room'), 'lad_day3_morning_billiard_room', 10, room='billiard_room'),
             TimedMenuChoice(default_room_text('storage'), 'lad_day3_morning_storage', 10, room='storage'),
@@ -464,8 +465,31 @@ label lad_day3_morning_entrance_hall:
     return
 
 
+label lad_day3_morning_servant_stairs:
+
+    $ change_room('servant_stairs')
+
+    """
+    A narrow stair for the staff, hidden away.
+
+    A footman's livery hung on its peg.
+
+    Any other day I might have been tempted to try it on.
+
+    But this was hardly the time for that sort of game.
+    """
+
+    psychic """
+    It would not fit you in any case, Mr Harring.
+
+    Now do come along.
+    """
+
+    return
+
+
 label lad_day3_morning_portrait_gallery:
-    
+
     $ change_room("portrait_gallery")
 
     """

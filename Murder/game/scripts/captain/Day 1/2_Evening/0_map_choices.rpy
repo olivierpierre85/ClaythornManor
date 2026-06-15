@@ -23,6 +23,7 @@ label captain_day1_evening_map_menu:
             # The lantern is only obtainable in saturday_evening's attic, so day 1 only has the no-lantern variant.
             TimedMenuChoice(default_room_text('manor_garden'), 'captain_garden_default_no_lantern', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'captain_day1_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'captain_servant_stairs_default', 10, room='servant_stairs'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'captain_portrait_gallery_default', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('library'), 'captain_library_default', 10, room='library', next_menu='captain_library_menu'),
             # Downstairs

@@ -501,6 +501,19 @@ label nurse_entrance_hall_default:
     return
 
 
+label nurse_servant_stairs_default:
+
+    $ change_room('servant_stairs')
+
+    """
+    A narrow service stair, cold and ill-lit.
+
+    Nothing here concerns me, and I have no wish to linger.
+    """
+
+    return
+
+
 label nurse_downstairs_approach:
 
     """

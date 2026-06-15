@@ -163,6 +163,34 @@ init -1 python:
                     return choice.hidden
         return False
 
+    def is_choice_hidden(menu_id, redirect):
+        """
+        Returns True if the choice in menu_id whose redirect matches `redirect` is
+        hidden (i.e. it has already been chosen).
+
+        Prefer this over positional access such as
+        all_menus[menu_id].choices[N].hidden: indexing by position breaks silently
+        the moment a choice is inserted into or removed from the menu, whereas the
+        redirect is stable. Positional .choices[N] access is deprecated.
+        """
+        if menu_id in all_menus:
+            for choice in all_menus[menu_id].choices:
+                if choice.redirect == redirect:
+                    return choice.hidden
+        return False
+
+    def is_choice_already_chosen(menu_id, redirect):
+        """
+        Returns True if the choice in menu_id whose redirect matches `redirect` has
+        already been chosen. Like is_choice_hidden, prefer this over positional
+        .choices[N].already_chosen access, which is deprecated.
+        """
+        if menu_id in all_menus:
+            for choice in all_menus[menu_id].choices:
+                if choice.redirect == redirect:
+                    return choice.already_chosen
+        return False
+
     # Shortcut to be used in the Menu to avoid showing a menu when there is nothing after. e.g: Used for billiard room
     def is_menu_valid(menu_id):
         if menu_id not in all_menus:

@@ -17,6 +17,7 @@ label lad_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('dining_room'), 'lad_day2_evening_dining_room', 10, room='dining_room'),
             TimedMenuChoice(default_room_text('manor_garden'), 'lad_day2_evening_garden', 10, room='manor_garden'),
             TimedMenuChoice(default_room_text('entrance_hall'), 'lad_day2_evening_entrance_hall', 10, room='entrance_hall'),
+            TimedMenuChoice(default_room_text('servant_stairs'), 'lad_day2_evening_servant_stairs', 10, room='servant_stairs', next_menu='lad_day2_evening_servant_stairs_menu'),
             TimedMenuChoice(default_room_text('portrait_gallery'), 'lad_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
             TimedMenuChoice(default_room_text('kitchen'), 'lad_day2_evening_kitchen', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'lad_day2_evening_scullery', 10, room='scullery'),
@@ -64,7 +65,7 @@ label lad_day2_evening_map_menu:
                 'lad_day2_bedroom_broken_back',
                 10,
                 room = 'bedroom_broken',
-                condition="lad_details.threads.is_unlocked('green_liquid') and not all_menus['lad_day2_evening_map_menu'].choices[22].hidden and not lad_details.saved_variables['day2_evening_taste_from_flask']"
+                condition="lad_details.threads.is_unlocked('green_liquid') and not is_choice_hidden('lad_day2_evening_map_menu', 'lad_day2_bedroom_broken') and not lad_details.saved_variables['day2_evening_taste_from_flask']"
             ),
             TimedMenuChoice(
                 'Richard III Bedroom',
@@ -137,6 +138,17 @@ label lad_day2_evening_garden:
 
 label lad_day2_evening_entrance_hall:
     call lad_entrance_hall_default
+    return
+
+label lad_day2_evening_servant_stairs:
+
+    call lad_servant_stairs_default
+
+    call run_menu(TimedMenu("lad_day2_evening_servant_stairs_menu", [
+        TimedMenuChoice("Try the livery on", 'lad_servant_stairs_try_outcome', 0, early_exit=True),
+        TimedMenuChoice("Leave it be", 'lad_servant_stairs_leave_outcome', 0, early_exit=True),
+    ]))
+
     return
 
 label lad_day2_evening_portrait_gallery:

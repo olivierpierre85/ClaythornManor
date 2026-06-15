@@ -367,13 +367,41 @@ label lad_entrance_hall_default:
     return
 
 label lad_servant_stairs_default:
-    
+
     $ change_room('servant_stairs')
 
     """
-    I entered a hidden space that is clearly meant for servants.
+    I ducked through a low door and found myself on a narrow stair, plainly meant for the staff.
 
-    It's narrow TODO
+    A footman's livery hung on a peg, pressed and waiting for the morning.
+    """
+
+    return
+
+
+label lad_servant_stairs_try_outcome:
+
+    """
+    On a whim, I held the livery up against myself.
+
+    No use.
+
+    It was cut for a bigger man, the shoulders far too broad.
+
+    Pity.
+
+    A get-up like that could open a fair few doors.
+    """
+
+    return
+
+
+label lad_servant_stairs_leave_outcome:
+
+    """
+    Best leave it be.
+
+    I'd no business pawing at the staff's things.
     """
 
     return

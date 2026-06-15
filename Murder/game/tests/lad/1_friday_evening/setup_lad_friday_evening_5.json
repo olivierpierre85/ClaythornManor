@@ -17,6 +17,11 @@
       "redirect": "lad_day1_evening_servant_stairs"
     },
     {
+      "menu": "lad_day1_evening_servant_stairs_menu",
+      "selected": "Try the livery on",
+      "redirect": "lad_servant_stairs_try_outcome"
+    },
+    {
       "menu": "lad_day1_evening_map_menu",
       "selected": "Go to sleep",
       "redirect": "generic_cancel"
