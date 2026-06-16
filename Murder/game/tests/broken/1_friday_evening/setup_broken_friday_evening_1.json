@@ -1,0 +1,42 @@
+{
+    "start_label": "broken_day1_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What do you make of this weather?",
+            "redirect": "host_generic_weather"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "I should like to hear a little about yourself.",
+            "redirect": "host_generic_background_broken"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "Why did you invite us here, exactly?",
+            "redirect": "host_generic_invite_broken"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What do you think of the other guests?",
+            "redirect": "host_generic_other_guests_broken"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "This is a fine old house.",
+            "redirect": "host_generic_manor"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "Which room have you given yourself?",
+            "redirect": "host_generic_room"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

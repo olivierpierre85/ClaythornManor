@@ -425,6 +425,12 @@ label start_again():
 # TODO remove when game finished
 label work_in_progress:
 
+    # For tests: the story stops here, so end the test cleanly like an ending does.
+    if renpy.is_in_test():
+        $ export_transcript(False)
+        $ renpy.show_screen("test_end")
+        jump test_end_pause
+
     hide screen current_time
     hide screen in_game_menu_btn
 
