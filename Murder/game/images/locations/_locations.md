@@ -68,7 +68,7 @@ Wrapped in the outdoor template:
 | house_on_fire          | 1920s terraced house in flames at night, in the city center of a big british city, fire bursting from the windows and roof, smoke billowing into a dark sky, touch of warm colors           |
 | train_inside_first     | 1920s first-class railway carriage interior, a few people, polished wood panelling and brass fittings, a window showing the grey-green English countryside rushing past, warm light         |
 | train_inside_second    | 1920s second-class railway carriage interior, a few people, plain wooden bench seats and a bare luggage rack, a window showing the grey-green English countryside rushing past, dim light   |
-| inside_car             | 1920s motor car interior, view across the worn leather seats towards the windscreen, a wooded road and stormy sky beyond the glass                                                          |
+| inside_car             | 1920s motor car interior, view from the passenger seat towards the windscreen, a wooded road and rainy sky outside                                                                          |
 | boxer_fight            | Boxer Rebellion in 1900 China, the Eight-Nation Alliance assault on Beijing, soldiers storming a great fortified city gate amid smoke and fire, the chaos of battle                         |
 | boxer                  | aftermath of the Boxer Rebellion in 1900 Beijing, foreign soldiers occupying the conquered city, looted goods piled in a square before grand Chinese gates, smoke hanging in the air        |
 
