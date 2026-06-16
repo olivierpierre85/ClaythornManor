@@ -45,10 +45,26 @@ label broken_introduction:
 
     The caption reads: Thomas and Archie, Talbot House, Poperinge, 1916.
 
-    Two officers thrown into the middle of hell.
+    Two officers from the Intelligence Service, assigned to chaperone the senior journalists reporting on the war.
 
-    With death all around us, we became firm friends soon enough.
+    I don't think I would have become a reporter without that assignment.
 
+    I met Thomas there, and with death all around us, both of us chasing the same stories, we became firm friends soon enough.
+
+    His upbringing would not normally have opened that path to him.
+
+    But war is the great leveller, and when given the opportunity, he took it and excelled.
+
+    Of the two of us, he was the natural journalist, always inquisitive, questioning everything.
+    
+    He was also not shy about showing his disapproval when we were ordered to soften a tragedy into a minor defeat, which sadly happened all too often.
+
+    Were it not for the accident, he would be the one working for The Times today, not me.
+    """
+
+    pause 1
+
+    """
     Beside the photograph lies a letter.
 
     Well, he won't mind me reading it now.

@@ -2,6 +2,12 @@
 
 ### Write Story: NEXT => Broken, then HOST
 
+Change for consistency
+
+=> If thomas is journalist, rethink the letter to the captain as the reason for his scar
+
+----
+
 Prequisite, ADD servant stairs as last room
 
 1. Broken map goals and discoveries
