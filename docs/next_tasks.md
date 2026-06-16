@@ -47,9 +47,13 @@ Prequisite, ADD servant stairs as last room => needs testing
 
 # Art for broke
 
-Multiple Class in train for outside IMAGEs
+## Locations
+Finish normal list- last one is train_second
 
-Victorian pauper apartement, with a disfigured dead man on his bed. 
+
+Multiple Class in train for outside IMAGEs
+- Two class at the moment. I think One image by person is more appropriate, with hints in them. See to do it later
+
 
 ## Technical Tasks
 
