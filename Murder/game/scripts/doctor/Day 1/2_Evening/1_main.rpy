@@ -104,13 +104,7 @@ label doctor_day1_evening:
     As the butler hands me my drink, Thomas Moody enters the room.
     """
 
-    broken """
-    Doctor Baldwin, I suppose we are the first ones.
-    """
-    
-    doctor """
-    It seems like it.
-    """
+    call common_day1_evening_doctor_broken_introduction
 
     $ time_left = 50
 

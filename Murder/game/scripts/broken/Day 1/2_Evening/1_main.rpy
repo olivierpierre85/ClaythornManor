@@ -58,11 +58,11 @@ label broken_day1_evening:
 
     I sit a while and go over what happened.
 
-    So far, I was able to play the part without nobody noticing.
+    So far, I have been able to play the part without anyone noticing.
 
     But I have only met strangers.
 
-    The real test will come when I will meet the Lady of the house.
+    The real test will come when I meet the Lady of the house.
 
     If anyone has any idea who Thomas Moody is, that would be her.
     
@@ -70,9 +70,7 @@ label broken_day1_evening:
 
     His childhood in Liverpool. The boot-boy years. 
     
-    When he joined the army and raised through the ranks, up until the Great war when he became an officer.
-    
-    Something his upbringing would have made impossible not so long ago. 
+    When he joined the army and rose through the ranks, up until the Great War when he became an officer.
 
     Then the tragedy that changed his life forever.
 
@@ -87,31 +85,28 @@ label broken_day1_evening:
     The tea room is empty but for one man — the doctor I shared the car with.
     """
 
-    #TODO:from here WHY not common???????
-    broken """
-    Doctor Baldwin, I suppose we are the first ones.
-    """
-
-    doctor """
-    It seems like it.
-    """
+    call common_day1_evening_doctor_broken_introduction
 
     """
-    The butler presses a glass of sherry on each of us.
+    The doctor makes the usual enquiries. 
+    
+    Where I am from, what I do, how I came by my injuries.
 
-    The doctor makes the usual enquiries. Where I am from, what I do, how I came by my injuries.
+    I answer as Thomas would have, but I add a brash tone to discourage him from asking too many questions.
+    
+    It is better to avoid any risk of revealing myself if I can avoid it, and if I sound a bit rude, so be it.
 
-    I answer as Thomas would, careful and unhurried, giving each lie the weight of a settled fact.
+    After a few questions, I realise I should not worry about him.
 
-    It is not the questions that trouble me, but the man asking them.
+    The way he nods at my answers without hearing them.
 
-    He nods at my answers without hearing them.
-
-    His eyes keep drifting to the middle distance, and his fingers worry at the stem of his glass.
+    His eyes drifting to the middle distance, his fingers worrying at the stem of his glass.
 
     A man waiting for something, or wanting something.
 
     I have interviewed enough of them to know the look.
+
+    Doctor Baldwin has more pressing things on his mind than trying to find inconsistencies in my story.
     """
 
     call change_time(16, 30)
@@ -127,7 +122,7 @@ label broken_day1_evening:
 
     And behind him an older man who makes straight for the drinks, walking as though the floor could not quite be trusted.
 
-    The older one founders off towards Miss Marsh.
+    The older one flounders off towards Miss Marsh.
 
     The officer comes to us.
     """
@@ -161,21 +156,9 @@ label broken_day1_evening:
     """
     Two more guests slip in while the captain holds court.
 
-    The butler announces the young man.
-    """
+    Ted Harring and Amelia Baxter.
 
-    butler """
-    Mr Ted Harring!
-    """
-
-    """
-    He is young, and his suit has been brushed once too often.
-
-    A working lad in borrowed feathers, if I am any judge. I should know the look.
-
-    The woman who follows needs no announcement. Her dress sees to that.
-
-    I have no chance to speak to either of them before the gong sounds.
+    But I have no time to assess them properly.
     """
 
     play sound dinner_gong
@@ -219,37 +202,11 @@ label broken_day1_evening:
     pause 1
 
     """
-    I watch her without seeming to.
-
-    It is an old habit, learned below stairs, where one's living depended on reading the family before they had so much as spoken.
-
-    She reaches for her bread roll and takes up the butter knife.
-
-    She cuts the roll clean in two and butters the whole of it.
-
-    The smallest thing.
-
-    But one does not butter a whole roll. One breaks off a single piece and attends to that alone.
-
-    I was corrected on precisely that point more times than I can count, and the lesson never left me.
-
-    A lady raised to this table would not make such a slip.
-
-    Then again, neither would a footman who had spent his life laying it.
-
-    I let the thought settle. Perhaps the manor is not the only thing here wearing a borrowed name.
-    """
-
-    $ host_details.description_hidden.unlock('table_manners')
-
-    pause 1.0
-
-    """
-    She turns to me with a hostess's practised smile, ready to begin the rounds of polite enquiry.
+    Our host turns to me with a hostess's practised smile, ready to begin the rounds of polite enquiry.
 
     I should make the most of it.
 
-    Few here will have a better chance to take her measure than I have now, at her very elbow.
+    Few here will have a better chance to take her measure than I have now.
     """
 
     call change_time(19, 30)

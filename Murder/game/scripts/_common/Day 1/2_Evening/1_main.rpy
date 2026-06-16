@@ -23,6 +23,17 @@ label common_day1_evening_doctor_nurse_broken_arrival:
 
     return
 
+label common_day1_evening_doctor_broken_introduction:
+
+    broken """
+    Doctor Baldwin, I suppose we are the first ones.
+    """
+    
+    doctor """
+    It seems like it.
+    """
+    
+    return
 
 label common_day1_evening_host_welcome_speech:
     
