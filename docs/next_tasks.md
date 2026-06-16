@@ -8,24 +8,35 @@ Change for consistency
 
 ----
 
-Prequisite, ADD servant stairs as last room
+Prequisite, ADD servant stairs as last room => needs testing
+
+
 
 1. Broken map goals and discoveries
+   1. Is well suited to uncover the host, but the captain does it? Or should I add something to make the broken be the one unlocking the host OR he could just realise that the HOST is keeping information to herself SO the most common way to learn about her is to.... Interrogate the staff
 2. Write story
-   1. Friday Evening
-      1. First in tea room, goes to take a drink, leave his flask near the bar then sees the captain telling a story. When he meet ted at the bar, that is becaused he realised he forgot his flask, so he goes back to get it and dies gives to ted. If he doesn't go back to get it, TED dies also, but you only find it back the next day? where!!!
+   1. 
+   2. Friday Evening
+         1. Add that his discoveries reveals her Name is Killbreath, but it not a major deal !!! 
+         2. PATH where as a journalist, you have to ask the best question. If you do, at the end of the interaction you unlock a THREAD => HOst is hiding something. 
+            1. NOT bad now, but I should add more questions, with misdirect. Until we reach the final (SHE IS Lying for sure TWO proofs) => Unlocks lady claythorn only NOW? Or conflict with captain ?
+         3. Once you have that, you can ask the staff more question. That leads to questionning the following BUT if you go downstairs.
+            1. Footman and maid, good if you have found their picture ? but key? Need one downstairs?
+            2. Butler => Question him, you die,
+         4. You'll discover things about actresses same as the others, make more connections. IF you can extract info from staff, you unlock a path towards all of them killed in the tooshed or the basement.
+      1. MAP CHOICES First in tea room, goes to take a drink, leave his flask near the bar then sees the captain telling a story. When he meet ted at the bar, that is becaused he realised he forgot his flask, so he goes back to get it and dies gives to ted. If he doesn't go back to get it, TED dies also, but you only find it back the next day? where!!!
       2.  If not, (do not want to listen to this, USE intuition alreaydy?), he keeps at the bar and try to talk to DRUNK. -> he is the one who can unlock drunk with his clever investigative skills.
-   2. Saturday Morning
+   3. Saturday Morning
       1. Ted is ALWAYS dead. Same kind of talk, you follow the doctor into ted harring room, call back but new text. You enter in full Detective story.
-   3. Hunt
+   4. Hunt
       1. As option to kill captain, or not if he thinks it is a setup. But to be sure it is a setup, he needs to find more suspicious things? Like DRUNK also receives a message. If he didn't find drunk message, he kills captain. Drunk kills doctor. VEry gore new step
       2. IF he finds message, he knows something is up and goes with drunk and prevents his death. BACK to having multiple choice of partner for hunt since lad is dead.
-   4. After hunt
+   5. After hunt
       1. lots of death.
          1. Without captain, host panick and decides to leave even before dinner. So she is not there, only butler, that is weird, everone dies. EXCEPT if you had found AND taken the poison the first day.
       2. Just Ted is dead.
          1. NOrmal dinner, but SAME that with poison, EVERYone DIES
-   5. Satuday after dinner.
+   6. Satuday after dinner.
       1. IF you found poison, you gain some time to explore, in both cases. Now you can?????? PARNER UP WITH THE DRUNK => Unlocks HIm(at least partially)
       2. IF you do not find XXXXXX, you burn in your sleep. There is only one way to see day3 and it is to?
          1. leave ?
@@ -44,7 +55,7 @@ Victorian pauper apartement, with a disfigured dead man on his bed.
 
 ## Technical Tasks
 
-
+IDEA => For choices already made (greyed out, add the time they will consume?)
 ### INTUITION system entirely FOR EVERYONE SAVED concept
 Now an intuition is needed to SAVE a person.
 When Someone is saved, it add a SAVED over their name in the progress view 

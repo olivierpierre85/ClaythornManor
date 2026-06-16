@@ -55,11 +55,19 @@ label host_generic_background_nurse:
 
     return
 
-label host_generic_invite_nurse:
+
+label host_generic_invite_intro:
 
     host """
     Everything was explained in the letter, was it not?
     """
+
+    return
+
+
+label host_generic_invite_nurse:
+
+    call host_generic_invite_intro
 
     nurse """
     True, but it didn't mention the reasons for this very selfless act.
@@ -75,16 +83,9 @@ label host_generic_invite_nurse:
     It is my great pleasure to give you something in return, since I have been blessed myself.
     """
 
+        
     nurse """
     That's very generous.
-
-    So you've been doing that often?
-    """
-
-    host """
-    Well, no, that is the first time I am giving away this prize.
-
-    But I might do for other people in the future of course.
     """
 
     return
@@ -138,6 +139,27 @@ label host_generic_age_nurse:
     return
 
 
+label host_generic_age_broken:
+
+    host surprised """
+    My age? What a peculiar thing to ask a lady.
+    """
+
+    broken """
+    Forgive me. I forgot myself.
+
+    I find a person's years often tell you a great deal about them.
+    """
+
+    host -surprised """
+    Then you shall have to be content with a great deal of mystery, Mr Moody.
+
+    A woman of my standing never reveals her age.
+    """
+
+    return
+
+
 label host_generic_room:
 
     host """
@@ -173,10 +195,16 @@ label host_generic_background_broken:
 
 label host_generic_invite_broken:
 
+    call host_generic_invite_intro
+
     broken """
-    Forgive my curiosity, but the letter never quite explained why you settled upon us in particular.
+    Indeed, but I would just like to know how this award came to exist.
+
+    The reasons behind giving away such an important prize, I mean.
 
     A thousand pounds apiece is no small sum.
+
+    Also, the letter never quite explained why you settled upon us in particular.
     """
 
     host """
@@ -199,10 +227,45 @@ label host_generic_invite_broken:
     The means.
 
     That is the very thing her family no longer has, if my enquiries are to be trusted.
+    """
 
-    She answers without a flicker, smooth as glass.
+    return
 
-    Too smooth, perhaps. Either she is telling the truth, or she has rehearsed the lie until it fits like a glove.
+
+label host_generic_award:
+    
+    host """
+    Indeed, for as long as I remember.
+
+    It is a tradition my late father started.
+
+    The prize money and the number of recipients might have changed over the years, of course.
+
+    But this is not a one-time occasion.
+    """
+
+    broken """
+    And the name was always the same? The "Exceptional Act of Bravery Award"?
+    """
+
+    host """
+    I believe so. 
+
+    I acknowledge it is a bit pompous, but I am not the one who named it — my father did.
+    """
+
+    """
+    Well, if that were true, I would have found something about it during my research.
+
+    I am sure of it now — she is plainly lying.
+
+    And if she is lying about that, then she is probably lying about everything.
+
+    A part of me becomes very disappointed suddenly.
+
+    I did not want to admit it to myself, but I was really counting on the prize money.
+
+    With that revelation, I am almost certain I will not get a penny here.
     """
 
     return

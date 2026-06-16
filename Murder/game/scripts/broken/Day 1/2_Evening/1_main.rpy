@@ -206,7 +206,11 @@ label broken_day1_evening:
 
     I should make the most of it.
 
-    Few here will have a better chance to take her measure than I have now.
+    I might not have a better chance to take her measure than I have now.
+
+    So I should conduct the conversation as an interview, and avoid any trivial questions.
+
+    Maybe this way I will learn something useful.
     """
 
     call change_time(19, 30)
@@ -214,6 +218,9 @@ label broken_day1_evening:
     $ time_left = 90
 
     call host_generic
+
+    # When the time is done, the broken must have unlocked the most important questions to have a special thread unlocked
+    # The question should be: host_generic_background_broken,host_generic_invite_broken, host_generic_age_broken
 
     """
     The dinner wears on around us.
