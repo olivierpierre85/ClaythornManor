@@ -73,7 +73,7 @@ label captain_introduction:
 
     $ play_music('chill')
 
-    $ change_room("train_inside")
+    $ change_room("train_inside_first")
 
     play sound train_moving loop
 

@@ -25,12 +25,12 @@ label psychic_day2_no_hunt_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'psychic_day2_no_hunt_attic_default', 60, room='storage', condition=attic_default),
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_attic_default', 60, room='males_room', condition=attic_default),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_attic_default', 60, room='females_room', condition=attic_default),
-            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_attic_default', 60, room='butler_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'psychic_day2_no_hunt_attic_default', 60, room='attic_butler_room', condition=attic_default),
             
             TimedMenuChoice(default_room_text('storage'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='storage', condition=attic_return_too_soon),
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
-            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'psychic_day2_no_hunt_attic_return_too_soon', 10, room='attic_butler_room', condition=attic_return_too_soon),
             TimedMenuChoice(default_room_text('bedroom_nurse'), 
                 'psychic_day2_no_hunt_bedroom_nurse_busy', 
                 10, 
@@ -274,12 +274,12 @@ label psychic_day2_no_hunt_attic_default:
     # $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('storage'))
     # $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('males_room'))
     # $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('females_room'))
-    # $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('butler_room'))
+    # $ psychic_details.saved_variables["day2_no_hunt_map_menu"].hide_specific_choice(default_room_text('attic_butler_room'))
 
     $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('storage'))
     $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
     $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+    $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('attic_butler_room'))
 
     call psychic_attic_default
 
@@ -292,7 +292,7 @@ label psychic_day2_no_hunt_attic_return_too_soon:
     $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('storage'))
     $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
     $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+    $ all_menus[psychic_details.saved_variables["day2_no_hunt_map_menu"].id].hide_specific_choice(default_room_text('attic_butler_room'))
 
     call psychic_attic_return_too_soon
 

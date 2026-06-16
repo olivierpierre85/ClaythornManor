@@ -734,7 +734,7 @@ label nurse_attic_butler_room:
 
     if nurse_details.saved_variables.get("visited_attic_butler_room"):
 
-        $ change_room("butler_room")
+        $ change_room("attic_butler_room")
 
         if nurse_details.threads.is_unlocked('silverware_big'):
 
@@ -776,7 +776,7 @@ label nurse_attic_butler_room:
 
         $ nurse_details.saved_variables["visited_attic_butler_room"] = True
 
-        $ change_room("butler_room")
+        $ change_room("attic_butler_room")
 
         call nurse_butler_room_first_visit
 

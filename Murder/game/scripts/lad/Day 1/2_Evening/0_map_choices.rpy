@@ -8,7 +8,7 @@ label lad_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'lad_day1_evening_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'lad_day1_evening_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'lad_day1_evening_females_room', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'lad_day1_evening_butler_room', 10, room='butler_room'),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'lad_day1_evening_butler_room', 10, room='attic_butler_room'),
             TimedMenuChoice(default_room_text('bedroom_doctor'), 'lad_day1_evening_bedroom_doctor', 10, room='bedroom_doctor'),
             TimedMenuChoice(default_room_text('bedroom_captain'), 'lad_day1_evening_bedroom_captain', 10, room='bedroom_captain'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'lad_day1_evening_bedroom_host', 10, room='bedroom_host'),

@@ -18,7 +18,7 @@ label doctor_introduction:
 
     call black_screen_transition("", "Daniel Baldwin")
 
-    $ change_room("train_inside")
+    $ change_room("train_inside_first")
 
     play sound train_moving loop
 

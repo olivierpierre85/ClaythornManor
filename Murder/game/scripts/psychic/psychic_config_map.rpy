@@ -23,7 +23,7 @@ label psychic_config_map:
             TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='storage', condition=attic_return),
             TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='males_room', condition=attic_return),
             TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='females_room', condition=attic_return),
-            TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='butler_room',condition=attic_return),     
+            TimedMenuChoice("Return to the Attic", 'psychic_attic_return', 10, room='attic_butler_room',condition=attic_return),     
         ]
 
     call psychic_day1_evening_map_menu

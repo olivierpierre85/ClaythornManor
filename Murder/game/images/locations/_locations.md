@@ -45,7 +45,7 @@ Wrapped in the attic template — the interior template without the colourful ob
 | attic_storage_room | very large cluttered upstairs storage room, full of dust-sheeted furniture and other stuff                                                                                                   |
 | attic_males_room   | spartan servants upstairs room for the menfolk, with two narrow iron beds and a plain washstand, one worn-out luggage                                                                        |
 | attic_females_room | modest servants' upstairs room for the maids, with two narrow iron beds,a small dresser, one worn-out luggage                                                                                |
-| butler_room        | butler's tidy upstairs room, with a single bed, a writing desk, a neatly pressed livery, and a glass-fronted butler's pantry                                                                 |
+| attic_butler_room  | butler's tidy upstairs room, with a single bed, a writing desk, a neatly pressed livery, and a glass-fronted butler's pantry                                                                 |
 
 ## Outdoor locations
 
@@ -53,17 +53,24 @@ Wrapped in the outdoor template:
 
 > A high-quality semi-realistic digital painting of a **{description}**. Deep soft shadows, mysterious atmosphere, wide shot, rich textures.
 
-| id               | description                                                                                                                                                                                 |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| broken_flat      | Victorian pauper apartment, with a dead man on his bed, with a sheet covering his head                                                                                                      |
-| manor_exterior   | grand 1920s two-storey Scottish manor seen from the gravel drive, surrounded by tall trees, towering stone facade and lit windows rising against a stormy sky, luxurious garden on the back |
-| manor_garden     | 1920s Scottish manor garden, gravel paths and a stone fountain, the dark house looming behind, tall trees around, touch of warm colors                                                      |
-| forest           | dense Scottish forest, tall trees and tangled undergrowth, mist drifting between the trunks, touch of warm colors                                                                           |
-| forest_road      | narrow rutted road winding through a dark Scottish forest, tall trees crowding either side, touch of warm colors                                                                            |
-| toolshed_outside | Done                                                                                                                                                                                        |
-| train_station    | medium size Scottish railway station, daytime, a few people on the platform, gas lamps, touch of warm colors                                                                                |
-| police_station   | modest small-town Scottish police station in 1920, inside with a few persons, touch of warm colors                                                                                          |
-| house_on_fire    | 1920s city house in flames at night, in the city center of a big british city, fire bursting from the windows and roof, smoke billowing into a dark sky, touch of warm colors               |
+| id                     | description                                                                                                                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| broken_flat            | Victorian pauper apartment, with a dead man on his bed, with a sheet covering his head                                                                                                      |
+| india_young_captain    | 1890s colonial Calcutta room, a young Indian boy at his lessons with a governess while his mother looks on, warm sunlight through a tall window overlooking a garden                        |
+| manor_exterior         | grand 1920s two-storey Scottish manor seen from the gravel drive, surrounded by tall trees, towering stone facade and lit windows rising against a stormy sky, luxurious garden on the back |
+| manor_garden           | 1920s Scottish manor garden, gravel paths and a stone fountain, the dark house looming behind, tall trees around, touch of warm colors                                                      |
+| forest                 | dense Scottish forest, tall trees and tangled undergrowth, mist drifting between the trunks, touch of warm colors                                                                           |
+| forest_road            | narrow rutted road winding through a dark Scottish forest, tall trees crowding either side, touch of warm colors                                                                            |
+| toolshed_outside_day   | small weathered wooden garden shed seen from outside, set among overgrown grass and tall trees, grey daylight                                                                               |
+| toolshed_outside_night | small weathered wooden garden shed seen from outside, set among overgrown grass and tall trees, moonlight and deep shadows at night                                                         |
+| train_station          | medium size Scottish railway station, daytime, old train from 1920, a few people on the platform, gas lamps, touch of warm colors                                                           |
+| police_station         | modest small-town Scottish police station in 1920, inside with a few persons working, touch of warm colors                                                                                  |
+| house_on_fire          | 1920s terraced house in flames at night, in the city center of a big british city, fire bursting from the windows and roof, smoke billowing into a dark sky, touch of warm colors           |
+| train_inside_first     | 1920s first-class railway carriage interior, a few people, polished wood panelling and brass fittings, a window showing the grey-green English countryside rushing past, warm light         |
+| train_inside_second    | 1920s second-class railway carriage interior, a few people, plain wooden bench seats and a bare luggage rack, a window showing the grey-green English countryside rushing past, dim light   |
+| inside_car             | 1920s motor car interior, view across the worn leather seats towards the windscreen, a wooded road and stormy sky beyond the glass                                                          |
+| boxer_fight            | Boxer Rebellion in 1900 China, the Eight-Nation Alliance assault on Beijing, soldiers storming a great fortified city gate amid smoke and fire, the chaos of battle                         |
+| boxer                  | aftermath of the Boxer Rebellion in 1900 Beijing, foreign soldiers occupying the conquered city, looted goods piled in a square before grand Chinese gates, smoke hanging in the air        |
 
 
 

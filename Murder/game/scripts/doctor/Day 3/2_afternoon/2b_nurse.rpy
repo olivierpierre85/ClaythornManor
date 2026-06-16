@@ -1,6 +1,6 @@
 label doctor_day3_afternoon_nurse:
 
-    $ change_room("butler_room")
+    $ change_room("attic_butler_room")
 
     nurse """
     I believe it has been long enough.

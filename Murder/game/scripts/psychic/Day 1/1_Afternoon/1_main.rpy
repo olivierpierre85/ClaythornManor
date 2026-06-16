@@ -16,7 +16,7 @@ label psychic_introduction:
 
     call black_screen_transition("", "Amelia Baxter")
 
-    $ change_room("train_inside", irisout)
+    $ change_room("train_inside_first", irisout)
 
     play sound train_moving loop
 

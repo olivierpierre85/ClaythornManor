@@ -34,7 +34,7 @@ label captain_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'captain_attic_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'captain_attic_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'captain_attic_females_room', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'captain_attic_butler_room', 10, room='butler_room'),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'captain_attic_butler_room', 10, room='attic_butler_room'),
             # Basement — now reachable, no staff
             TimedMenuChoice(default_room_text('kitchen'), 'captain_day3_morning_kitchen', 10, room='kitchen'),
             TimedMenuChoice(default_room_text('scullery'), 'captain_day3_morning_scullery', 10, room='scullery'),

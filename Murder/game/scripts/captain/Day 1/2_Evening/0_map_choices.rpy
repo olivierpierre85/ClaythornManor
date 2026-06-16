@@ -8,7 +8,7 @@ label captain_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'captain_day1_evening_attic_default', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'captain_day1_evening_attic_default', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'captain_day1_evening_attic_default', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'captain_day1_evening_attic_default', 10, room='butler_room'),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'captain_day1_evening_attic_default', 10, room='attic_butler_room'),
             # Bedrooms
             TimedMenuChoice(default_room_text('bedroom_lad'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_lad'),
             TimedMenuChoice(default_room_text('bedroom_host'), 'captain_day1_evening_bedroom_avoid', 10, room='bedroom_host'),
@@ -121,7 +121,7 @@ label captain_day1_evening_attic_default:
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
     $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+    $ all_menus[captain_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('attic_butler_room'))
 
     """
     The servants' quarters are upstairs. 

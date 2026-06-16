@@ -25,7 +25,7 @@
 # TimedMenuChoice(default_room_text('storage'), 'lad_day1_evening_storage', 10, room='storage', condition=condition_friday),
 # TimedMenuChoice(default_room_text('males_room'), 'lad_day1_evening_males_room', 10, room='males_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('females_room'), 'lad_day1_evening_females_room', 10, room='females_room', condition=condition_friday),
-# TimedMenuChoice(default_room_text('butler_room'), 'lad_day1_evening_butler_room', 10, room='butler_room', condition=condition_friday),
+# TimedMenuChoice(default_room_text('attic_butler_room'), 'lad_day1_evening_butler_room', 10, room='attic_butler_room', condition=condition_friday),
 # TimedMenuChoice(default_room_text('bedroom_lad'), 'lad_day1_evening_bedroom_lad', 10, room='bedroom_lad', condition=condition_friday),
 # TimedMenuChoice(default_room_text('bedroom_doctor'), 'lad_day1_evening_bedroom_doctor', 10, room='bedroom_doctor', condition=condition_friday),
 # TimedMenuChoice(default_room_text('bedroom_captain'), 'lad_day1_evening_bedroom_captain', 10, room='bedroom_captain', condition=condition_friday),

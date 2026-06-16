@@ -15,7 +15,7 @@ label lad_day3_morning_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'lad_day3_morning_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'lad_day3_morning_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'lad_day3_morning_females_room', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'lad_day3_morning_butler_room', 10, room='butler_room'),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'lad_day3_morning_butler_room', 10, room='attic_butler_room'),
             TimedMenuChoice(
                 default_room_text('bedroom_lad'), 
                 'lad_day3_morning_bedroom_lad',

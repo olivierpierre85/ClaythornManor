@@ -26,15 +26,15 @@ label psychic_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_default', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_default', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_default', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_default', 10, room='butler_room'),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'psychic_day2_evening_attic_default', 10, room='attic_butler_room'),
             # TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_default', 10, room='storage', condition=attic_default),
             # TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_default', 10, room='males_room', condition=attic_default),
             # TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_default', 10, room='females_room', condition=attic_default),
-            # TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_default', 10, room='butler_room', condition=attic_default),
+            # TimedMenuChoice(default_room_text('attic_butler_room'), 'psychic_day2_evening_attic_default', 10, room='attic_butler_room', condition=attic_default),
             # TimedMenuChoice(default_room_text('storage'), 'psychic_day2_evening_attic_return_too_soon', 10, room='storage', condition=attic_return_too_soon),
             # TimedMenuChoice(default_room_text('males_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='males_room', condition=attic_return_too_soon),
             # TimedMenuChoice(default_room_text('females_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='females_room', condition=attic_return_too_soon),
-            # TimedMenuChoice(default_room_text('butler_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='butler_room', condition=attic_return_too_soon),
+            # TimedMenuChoice(default_room_text('attic_butler_room'), 'psychic_day2_evening_attic_return_too_soon', 10, room='attic_butler_room', condition=attic_return_too_soon),
             # TOO late to approach Ted Harring, only chance during the simple menu before dinner
             # TimedMenuChoice(
             #     default_room_text('bedroom_lad'), 
@@ -357,7 +357,7 @@ label psychic_day2_evening_attic_default:
 #     $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
 #     $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
 #     $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-#     $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+#     $ all_menus[psychic_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('attic_butler_room'))
 
 #     call psychic_attic_return_too_soon
 

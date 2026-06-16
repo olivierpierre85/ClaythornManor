@@ -27,7 +27,7 @@ label init_map:
         # Full Map of the MANOR TODO no need to init each time
         
         # all rooms
-        # 'attic_hallway', 'storage', 'males_room', 'females_room', 'butler_room', 'bedrooms_hallway', 'bedroom_lad', 'bedroom_doctor', 'bedroom_captain', 'bedroom_psychic', 'bedroom_host', 'bedroom_drunk', 'bedroom_broken', 'bedroom_nurse', 'basement_stairs', 'library', 'tea_room', 'billiard_room', 'dining_room', 'garden', 'entrance_hall', 'portrait_gallery', 'kitchen', 'scullery', 'garage', 'gun_room'
+        # 'attic_hallway', 'storage', 'males_room', 'females_room', 'attic_butler_room', 'bedrooms_hallway', 'bedroom_lad', 'bedroom_doctor', 'bedroom_captain', 'bedroom_psychic', 'bedroom_host', 'bedroom_drunk', 'bedroom_broken', 'bedroom_nurse', 'basement_stairs', 'library', 'tea_room', 'billiard_room', 'dining_room', 'garden', 'entrance_hall', 'portrait_gallery', 'kitchen', 'scullery', 'garage', 'gun_room'
         rooms = [
             # Attic
             Room(3, None,   'attic_hallway',         'Attic Hallway' ), # No area points so not a real destination
@@ -35,7 +35,7 @@ label init_map:
             Room(3, (165, 90, 270, 523),   'storage',         'Storage Room' ),
             Room(3, (512, 204, 242, 127),   'males_room',      'Male Servants Room' ), # TODO Extra livery?
             Room(3, (512, 332, 242, 129),   'females_room',     'Female Servants Room' ),
-            Room(3, (512, 460, 242, 155),   'butler_room',      'Butler\'s Room' ),
+            Room(3, (512, 460, 242, 155),   'attic_butler_room',      'Butler\'s Room' ),
             # Bedrooms
             Room(2, None,   'bedrooms_hallway',         'Bedrooms Hallway' ), # No area points so not a real destination
 

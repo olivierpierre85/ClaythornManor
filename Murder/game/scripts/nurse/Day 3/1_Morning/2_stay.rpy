@@ -40,7 +40,7 @@ label nurse_day3_morning_attic:
     At the far end of the hallway, I find the butler's room.
     """
 
-    $ change_room("butler_room")
+    $ change_room("attic_butler_room")
 
     if nurse_details.saved_variables.get('visited_attic_butler_room', False):
 

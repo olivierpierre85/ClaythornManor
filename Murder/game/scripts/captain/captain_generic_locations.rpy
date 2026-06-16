@@ -507,7 +507,7 @@ label captain_attic_butler_room:
 
     call captain_attic_approach
 
-    $ change_room("butler_room")
+    $ change_room("attic_butler_room")
 
     if captain_details.saved_variables["visited_attic_butler_room"]:
 

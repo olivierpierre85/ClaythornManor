@@ -292,7 +292,7 @@ label psychic_day2_evening_butler_room:
     Captain's sinha unlocks the door and we both step in.
     """
     
-    $ change_room('bedroom_butler')
+    $ change_room('attic_butler_room')
 
     """
     As we suspected, Rosalind Marsh is there — holding a silver candelabra.

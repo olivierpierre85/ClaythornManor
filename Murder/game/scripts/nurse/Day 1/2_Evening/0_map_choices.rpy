@@ -31,7 +31,7 @@ label nurse_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'nurse_day1_evening_storage', 10, room='storage'),
             TimedMenuChoice(default_room_text('males_room'), 'nurse_day1_evening_males_room', 10, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'nurse_day1_evening_females_room', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day1_evening_butler_room', 10, room='butler_room'),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'nurse_day1_evening_butler_room', 10, room='attic_butler_room'),
             # Specific actions
             TimedMenuChoice(default_room_text('bedroom_drunk'), 'nurse_day1_evening_bedroom_drunk', 10, room='bedroom_drunk'),
             TimedMenuChoice(default_room_text('library'), 'nurse_day1_evening_library', 10, room='library', next_menu='nurse_library_choice'),
@@ -336,7 +336,7 @@ label nurse_attic_default:
     $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
     $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
     $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+    $ all_menus[nurse_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('attic_butler_room'))
 
     """
     The attic staircase is narrow and the floorboards announce every step.

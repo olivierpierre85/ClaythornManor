@@ -34,7 +34,7 @@ label nurse_day2_evening_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'nurse_day2_evening_attic_storage', 10, room='storage', next_menu='nurse_attic_storage_search'),
             TimedMenuChoice(default_room_text('males_room'), 'nurse_day2_evening_attic_males_room', 20, room='males_room'),
             TimedMenuChoice(default_room_text('females_room'), 'nurse_day2_evening_attic_females_room', 20, room='females_room'),
-            TimedMenuChoice(default_room_text('butler_room'), 'nurse_day2_evening_attic_butler_room', 10, room='butler_room', next_menu='nurse_attic_butler_cabinet_choice'),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'nurse_day2_evening_attic_butler_room', 10, room='attic_butler_room', next_menu='nurse_attic_butler_cabinet_choice'),
 
             TimedMenuChoice(
                 'Go to sleep', 

@@ -26,7 +26,7 @@ label psychic_day1_evening_map_menu:
             TimedMenuChoice(default_room_text('storage'), 'psychic_day1_evening_attic_default', 60, room='storage', condition=attic_default),
             TimedMenuChoice(default_room_text('males_room'), 'psychic_day1_evening_attic_default', 60, room='males_room', condition=attic_default),
             TimedMenuChoice(default_room_text('females_room'), 'psychic_day1_evening_attic_default', 60, room='females_room', condition=attic_default),
-            TimedMenuChoice(default_room_text('butler_room'), 'psychic_day1_evening_attic_default', 60, room='butler_room', condition=attic_default),
+            TimedMenuChoice(default_room_text('attic_butler_room'), 'psychic_day1_evening_attic_default', 60, room='attic_butler_room', condition=attic_default),
 
             # Specific actions
             TimedMenuChoice(
@@ -115,7 +115,7 @@ label psychic_day1_evening_attic_default:
     $ all_menus[psychic_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
     $ all_menus[psychic_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
     $ all_menus[psychic_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-    $ all_menus[psychic_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('butler_room'))
+    $ all_menus[psychic_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('attic_butler_room'))
 
     call psychic_attic_default
 

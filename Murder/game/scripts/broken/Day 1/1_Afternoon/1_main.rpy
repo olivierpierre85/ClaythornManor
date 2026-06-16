@@ -84,7 +84,7 @@ label broken_introduction:
 
     call black_screen_transition("{s}Thomas Moody{/s}", "Archibald Devereux")
 
-    $ change_room("train_inside")
+    $ change_room("train_inside_first")
 
     play sound train_moving loop
 

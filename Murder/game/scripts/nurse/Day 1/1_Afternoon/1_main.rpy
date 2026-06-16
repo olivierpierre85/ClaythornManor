@@ -16,7 +16,7 @@ label nurse_introduction:
 
     call black_screen_transition("", "Rosalind Marsh")
 
-    $ change_room("train_inside", irisout)
+    $ change_room("train_inside_second", irisout)
 
     play sound train_moving loop
 

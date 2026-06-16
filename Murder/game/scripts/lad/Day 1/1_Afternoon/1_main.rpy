@@ -19,7 +19,7 @@ label lad_introduction:
 
     call black_screen_transition("", "Ted Harring")
 
-    $ change_room("train_inside")
+    $ change_room("train_inside_second")
 
     play sound train_moving loop
 

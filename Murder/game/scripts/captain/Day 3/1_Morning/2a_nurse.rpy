@@ -272,7 +272,7 @@ label captain_day3_morning_nurse:
 
     play sound door_open
 
-    $ change_room('butler_room')
+    $ change_room('attic_butler_room')
 
     """
     I lock the door behind us.
