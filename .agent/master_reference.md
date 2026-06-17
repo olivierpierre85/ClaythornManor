@@ -9,16 +9,16 @@ This document consolidates the core project guidelines, coding standards, and na
 
 ## Story & Characters
 ### Quick Reference
-| Code name | Full name | Role & Style |
-|-----------|-----------|--------------|
-| `lad` | Ted Harring | Hero, petty thief; informal, subtle slang/contractions. |
-| `psychic` | Amelia Baxter | The killer; flowery and full language. |
-| `doctor` | Daniel Baldwin | Classic middle-class; proper manners. |
-| `captain` | Sushil Sinha | Formal Indian officer; noble ancestry; straight to the point. |
-| `nurse` | Rosalind Marsh | Pseudo-villain; classic middle-class; proper manners. |
-| `drunk` | Samuel Manning | Defence lawyer; mostly incoherent but sometimes educated. |
-| `broken` | Thomas Moody | Imposter in a mask; amateur sleuth; classic middle-class. |
-| `host` | Lady Claythorn | Aristocratic actress; elegant but not excessive. |
+| Code name | Full name      | Role & Style                                                  |
+| --------- | -------------- | ------------------------------------------------------------- |
+| `lad`     | Ted Harring    | Hero, petty thief; informal, subtle slang/contractions.       |
+| `psychic` | Amelia Baxter  | The killer; flowery and full language.                        |
+| `doctor`  | Daniel Baldwin | Classic middle-class; proper manners.                         |
+| `captain` | Sushil Sinha   | Formal Indian officer; noble ancestry; straight to the point. |
+| `nurse`   | Rosalind Marsh | Pseudo-villain; classic middle-class; proper manners.         |
+| `drunk`   | Samuel Manning | Defence lawyer; mostly incoherent but sometimes educated.     |
+| `broken`  | Thomas Moody   | Imposter in a mask; journalist, upper class upbringing.       |
+| `host`    | Lady Claythorn | Aristocratic actress; elegant but not excessive.              |
 
 ## Script & Coding Structure
 - **Folder Layout**: `Murder/game/scripts/<character>/`.

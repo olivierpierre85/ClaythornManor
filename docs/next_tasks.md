@@ -5,29 +5,38 @@
 Change for consistency
 
 => If thomas is journalist, rethink the letter to the captain as the reason for his scar
-
 ----
 
 Prequisite, ADD servant stairs as last room => needs testing
 
+SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstairs? Add the servant stairs as the image when we try to reach downstairs? Or at least mention you go through the servant stairs, and the you go down. TO CHECK?
 
+FIND a way to make Broken unlock HOST !! 
+   - If so, you can make the Killbreath discovery at the beginning
+  
+TEST the changing MALUS and the whole broken logic
+ 
+!!!!
 
 1. Broken map goals and discoveries
    1. Is well suited to uncover the host, but the captain does it? Or should I add something to make the broken be the one unlocking the host OR he could just realise that the HOST is keeping information to herself SO the most common way to learn about her is to.... Interrogate the staff
 2. Write story
    1. 
-   2. Friday Evening
-         1. Add that his discoveries reveals her Name is Killbreath, but it not a major deal !!! 
-         2. PATH where as a journalist, you have to ask the best question. If you do, at the end of the interaction you unlock a THREAD => HOst is hiding something. 
-            1. NOT bad now, but I should add more questions, with misdirect. Until we reach the final (SHE IS Lying for sure TWO proofs) => Unlocks lady claythorn only NOW? Or conflict with captain ?
-         3. Once you have that, you can ask the staff more question. That leads to questionning the following BUT if you go downstairs.
-            1. Footman and maid, good if you have found their picture ? but key? Need one downstairs?
-            2. Butler => Question him, you die,
-         4. You'll discover things about actresses same as the others, make more connections. IF you can extract info from staff, you unlock a path towards all of them killed in the tooshed or the basement.
+   2. Friday Evening 
+         1. PATH where as a journalist, you have to ask the best question. If you do, at the end of the interaction you unlock a THREAD => Host is hiding something. 
+            1. NOT bad now, but **I should add more questions**, with misdirect. Until we reach the final (SHE IS Lying for sure TWO proofs) => Unlocks lady claythorn only NOW? Or conflict with captain ?
+         2. Once you have that, you can ask the staff more question. That leads to questionning the following BUT if you go downstairs.
+            1. KITCHEN : Either hide and just moves around, directly talk to the maid and "FOOTMAN helping"?
+               1. => Disturb the staff unlocks => Will kill you during the night
+               2. Hide and look around in the scullery => Find rat poison a bit too visible, and open. TAke it to unlock you found poison? THen conflict with butler has it => SO not this time, maybe day 2 => not necesserly, the butler could have take a bit with him
+            2. Footman and maid, good if you have found their picture ? but key? Need one downstairs?
+               1. Needs to talk to 
+            3. Butler => Question him, you die,
+         3. You'll discover things about actresses same as the others, make more connections. IF you can extract info from staff, you unlock a path towards all of them killed in the tooshed or the basement.
       1. MAP CHOICES First in tea room, goes to take a drink, leave his flask near the bar then sees the captain telling a story. When he meet ted at the bar, that is becaused he realised he forgot his flask, so he goes back to get it and dies gives to ted. If he doesn't go back to get it, TED dies also, but you only find it back the next day? where!!!
       2.  If not, (do not want to listen to this, USE intuition alreaydy?), he keeps at the bar and try to talk to DRUNK. -> he is the one who can unlock drunk with his clever investigative skills.
    3. Saturday Morning
-      1. Ted is ALWAYS dead. Same kind of talk, you follow the doctor into ted harring room, call back but new text. You enter in full Detective story.
+      1. Ted is ALWAYS dead BUT HOW if you do not visit the BIlliard room? Run into him somewhere else? OR introduce the FLASK at the first thingy Same kind of talk, you follow the doctor into ted harring room, call back but new text. You enter in full Detective story.
    4. Hunt
       1. As option to kill captain, or not if he thinks it is a setup. But to be sure it is a setup, he needs to find more suspicious things? Like DRUNK also receives a message. If he didn't find drunk message, he kills captain. Drunk kills doctor. VEry gore new step
       2. IF he finds message, he knows something is up and goes with drunk and prevents his death. BACK to having multiple choice of partner for hunt since lad is dead.

@@ -6,12 +6,22 @@ label init_broken:
 
     call broken_config_menu
 
+    call broken_day1_evening_map_menu
+
     python:
         broken_name = "Thomas Moody"
 
         broken_init_variables = {
             # Generic Menus
             "host_generic_menu": host_generic_menu_broken,
+
+            # MAP Menus
+            "day1_evening_map_menu" : broken_day1_evening_map_menu,
+
+            # Evening day 1
+            "day1_evening_bedroom_refusals" : 0,
+            "day1_evening_billiard_room_visited" : False,
+            "day1_evening_downstairs_refused" : False,
         }
 
         broken_extra_information = CharacterDescriptionHiddenList([
@@ -51,7 +61,15 @@ label init_broken:
             description_hidden = broken_extra_information,
             important_choices = CharacterInformationList([]),
             endings = CharacterInformationList([]),
-            observations = CharacterInformationList([]),
+            observations = CharacterObservationList([
+                CharacterInformation(1, "found_livery",
+                    "You found a footman's livery in the servant stair that lets you pass below stairs unseen",
+                    content_negative="You didn't find a way down to the servants' floor",
+                    image_file="footman_livery",
+                    chapters=['friday_evening'],
+                    relevant_chapters=['friday_evening'],
+                ),
+            ]),
             objects = CharacterInformationList([]),
             progress = broken_progress,
             test_checkpoints = broken_test_checkpoints,

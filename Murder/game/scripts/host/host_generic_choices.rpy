@@ -31,7 +31,7 @@ label host_generic_background:
     host """
     There isn't much to say.
     
-    I have been the mistress of this estate since my late father passed away.
+    I have been the mistress of this estate since I took over for my father.
 
     That would have been nearly ten years ago.
 
@@ -179,15 +179,9 @@ label host_generic_background_broken:
     call host_generic_background
 
     """
-    She turns the talk aside as neatly as a card sharp turning a trick.
-
-    Mistress here since her father passed, she says. Nearly ten years.
-
-    And yet she cannot be far past thirty.
-
-    The sums do not quite tally.
-
-    Either she came to it remarkably young, or that is not the whole of the story.
+    Ten years ago, she must have been very young then.
+    
+    I don't remember reading anything about this in my research, but that doesn't prove anything.
     """
 
     return
@@ -281,8 +275,6 @@ label host_generic_other_guests_broken:
 
     """
     A careful answer. She gives nothing away.
-
-    Then again, neither do I.
     """
 
     return

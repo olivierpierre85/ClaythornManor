@@ -219,13 +219,61 @@ label broken_day1_evening:
 
     call host_generic
 
-    # When the time is done, the broken must have unlocked the most important questions to have a special thread unlocked
-    # The question should be: host_generic_background_broken,host_generic_invite_broken, host_generic_age_broken
+    $ stop_music()
+
+    call change_time(21, 00)
 
     """
-    The dinner wears on around us.
+    At length the dinner breaks up.
+
+    Lady Claythorn lets it be known that drinks will be laid on in the billiard room for those who care to sit up a while.
+
+    I assume most of the guests will be there, so it is a good opportunity to learn more about them.
+
+    But that also mean there is no better time to explore the house discretely, while the party is gathered in one room and the staff are run off their feet.
     """
+
+    $ change_room('bedroom_broken', dissolve)
+
+    $ unlock_map('bedroom_broken')
+
+    """
+    I go back to my room first, to leave my coat and take my bearings.
+
+    Then I set out to see the rest of Claythorn Manor for myself.
+    """
+
+    $ play_music('upbeat')
+
+    call change_time(21, 30)
+
+    $ time_left = 90
+
+    call run_menu(broken_details.saved_variables["day1_evening_map_menu"])
+
+    # If the evening ended below stairs, he changes back before retiring.
+    call broken_ascend_if_needed
+
+    call change_time(23, 00)
 
     $ stop_music()
+
+    """
+    The hour grows late and the house falls quiet.
+
+    I have seen what there is to see for one night.
+
+    I return to my room.
+    """
+
+    $ change_room('bedroom_broken', dissolve)
+
+    """
+    I take off the mask and let out a long breath.
+
+    So far, so good. No one has yet seen through Thomas Moody.
+
+    Tomorrow I shall have to be every bit as careful.
+    """
 
     jump work_in_progress
