@@ -373,48 +373,7 @@ label broken_day1_evening_library:
     return
 
 
-# ------------------------------------
-#   BILLIARD ROOM
-# ------------------------------------
-label broken_day1_evening_billiard_room:
 
-    call broken_ascend_if_needed
-
-    $ change_room('billiard_room')
-
-    if not broken_details.saved_variables['day1_evening_billiard_room_visited']:
-
-        $ broken_details.saved_variables['day1_evening_billiard_room_visited'] = True
-
-        """
-        The billiard room is warm and full.
-
-        Most of the party has gathered here over their drinks.
-
-        Lady Claythorn holds court near the fire, with Miss Marsh at her elbow. The captain is already deep in some tale or other.
-
-        Manning has found the bar, and Baldwin a chair to brood in.
-
-        I take a glass I do not mean to drink and find myself a place along the wall.
-
-        From here I can watch the lot of them at my leisure, which suits me very well.
-
-        Every soul in this room is playing some part or other.
-
-        It is only a question of who plays it best, and of what each of them stands to lose should the curtain ever come down.
-        """
-
-    else:
-
-        """
-        I look in on the billiard room again.
-
-        The same faces, the same performances.
-
-        I keep to the wall and watch a while longer.
-        """
-
-    return
 
 
 # ------------------------------------

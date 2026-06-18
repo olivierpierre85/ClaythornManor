@@ -14,6 +14,7 @@ label init_broken:
         broken_init_variables = {
             # Generic Menus
             "host_generic_menu": host_generic_menu_broken,
+            "doctor_generic_menu" : doctor_generic_menu_broken,
 
             # MAP Menus
             "day1_evening_map_menu" : broken_day1_evening_map_menu,

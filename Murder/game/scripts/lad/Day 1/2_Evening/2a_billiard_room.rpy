@@ -50,84 +50,10 @@ label lad_day1_evening_billiard_room_bar_1:
     Samuel Manning is there.
     """
 
-    lad """
-    Hello sir.
-    """
-
-    drunk """
-    ...
-    """
-
-    """
-    The man stares at me but makes no sound.
-    """
-
-    broken """
-    Don't mind him, he seems to be totally out of it.
-    """
-
-    """
-    I am startled by the man who approaches me.
-
-    He wears one of those masks I've seen on wounded soldiers from the war.
-
-    They were so badly injured that they have to hide their faces.
-
-    He pretends not to notice my surprise and keeps on talking.
-    """
-
-    $ broken_details.description_hidden.unlock('mask') 
-
-    broken """
-    He was already asleep when I arrived. It is impressive he still manages to be here.
-
-    I was sitting next to him at dinner and it was impossible to get him to say anything coherent.
-
-    He could eat, though. You can tell he is used to functioning like this. Poor fellow.
-
-    Anyway, I am Thomas Moody.
-    """
-
-    $ drunk_details.description_hidden.unlock('addict') 
-
-    lad """
-    Ted Harring, how do you do.
-    """
-
-    broken """
-    Nice to meet you, Mr Harring. I suppose you are here for a drink.
-
-    The choice is rather restricted, I'm afraid. There is only sherry or port.
-
-    But luckily, I've come prepared.
-    """
-
-    """
-    Before I can say anything, he reaches into his coat pocket and pulls out a flask.
-    
-    Then he starts pouring me a glass of what looks like whisky.
-    """
-
-    broken """
-    You'll probably enjoy this more.
-    """
-
-    "Well, I can't really say no to that."
-
-    lad """
-    Thanks. Cheers.
-    """
+    call common_day1_evening_moody_offers_harring_flask
 
     #TODO if needed for the story about drunk and puking ADD here that the drunk asks for a drink
     $ lad_details.saved_variables["day1_drinks"] = lad_details.saved_variables["day1_drinks"] + 1
-
-    broken """
-    Cheers, Mr Harring. Now if you don't mind, I'll see what this group is talking about.
-    """
-
-    """
-    He joins the group of people talking.
-    """
 
     return
 

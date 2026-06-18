@@ -412,6 +412,123 @@ label common_day1_evening_nurse_joins_captain:
 
 
 # ------------------------------------
+#       BROKEN - LAD
+#       (Moody shares his flask with Harring)
+# ------------------------------------
+label common_day1_evening_moody_offers_harring_flask:
+
+    lad """
+    Hello, sir.
+    """
+
+    drunk """
+    ...
+    """
+
+    if current_character == lad_details:
+
+        """
+        The man stares at me but makes no sound.
+        """
+
+    elif current_character == broken_details:
+
+        """
+        Manning lifts his head, stares clean through the young man, and lets it sink again without a word.
+        """
+
+    broken """
+    Don't mind him, he seems to be totally out of it.
+    """
+
+    if current_character == lad_details:
+
+        """
+        I am startled by the man who approaches me.
+
+        He wears one of those masks I've seen on wounded soldiers from the war.
+
+        They were so badly injured that they have to hide their faces.
+
+        He pretends not to notice my surprise and keeps on talking.
+        """
+
+        $ broken_details.description_hidden.unlock('mask')
+
+    broken """
+    I saw him earlier, sleeping on the couch. It is impressive he still manages to be here.
+
+    It is impossible to get a coherent word out of him.
+
+    I saw him eat, though. You can tell he is used to functioning like this. Poor fellow.
+    """
+
+    $ drunk_details.description_hidden.unlock('addict')
+
+    broken """
+    I am Thomas Moody.
+    """
+
+    lad """
+    Ted Harring, how do you do.
+    """
+
+    broken """
+    Nice to meet you, Mr Harring. I suppose you are here for a drink.
+
+    The choice is rather restricted, I'm afraid. There is only sherry or port left.
+
+    But luckily, I've come prepared.
+    """
+
+    if current_character == lad_details:
+
+        """
+        Before I can say anything, he reaches into his coat pocket and pulls out a flask.
+
+        Then he starts pouring me a glass of what looks like whisky.
+        """
+
+    elif current_character == broken_details:
+
+        """
+        I feel a little guilty for keeping all the whisky to myself.
+
+        So I draw the flask from my coat and pour a generous measure into a clean glass.
+        """
+
+    broken """
+    Here, you'll probably enjoy this more.
+    """
+
+    if current_character == lad_details:
+
+        "Well, I can't really say no to that."
+
+    lad """
+    Thanks. Cheers.
+    """
+
+    broken """
+    Cheers, Mr Harring. Now if you don't mind, I have to return to my group.
+    """
+
+    if current_character == lad_details:
+
+        """
+        He joins the group of people talking.
+        """
+
+    elif current_character == broken_details:
+
+        """
+        I leave him to his glass and drift back towards the fire, where the captain is gathering himself for the next part of his tale.
+        """
+
+    return
+
+
+# ------------------------------------
 #               LAD - PSYCHIC
 # ------------------------------------
 label common_day1_drinks_lad_psychic_encounter:
