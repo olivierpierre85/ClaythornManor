@@ -1,10 +1,11 @@
 import argparse
 import base64
+import io
 import json
 import os
 import pathlib
 import urllib.request
-from PIL import Image
+from PIL import Image, ImageEnhance
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve()
 MD_FILE = ROOT / "Murder/game/images/locations/_locations.md"
@@ -16,8 +17,11 @@ IMG2IMG = "/sdapi/v1/img2img"
 PROMPT_TEMPLATES = {
     "interior_night": (
         "A high-quality semi-realistic digital painting of a 1920s Scottish manor "
-        "{description} at night. Warm amber light, touches of colorful objects. "
-        "Deep soft shadows, mysterious atmosphere, wide shot, empty room, rich textures."
+        "{description} at night. The only light is the warm golden glow of oil lamps "
+        "and candlelight, strong cosy amber lighting filling the room, warm pools of "
+        "light, deep warm shadows in the corners. The windows are dark and unlit with "
+        "no light coming from outside. Warm candlelit nocturnal interior, wide shot, "
+        "empty room, rich textures. No daylight, no blue light."
     ),
     "interior_day": (
         "A high-quality semi-realistic digital painting of a 1920s Scottish manor "
@@ -25,9 +29,10 @@ PROMPT_TEMPLATES = {
         "Wide shot, empty room, rich textures, detailed."
     ),
     "outdoor_night": (
-        "A high-quality semi-realistic digital painting of a {description} at night."
-        "Deep soft shadows, mysterious atmosphere, wide shot, "
-        "rich textures."
+        "A high-quality semi-realistic digital painting of a {description} at night. "
+        "Very dark, dark overcast cloudy night sky, cool blue ambient light, long "
+        "shadows, cold nocturnal atmosphere, deep shadows, wide shot, rich textures. "
+        "No sun, no sunlight."
     ),
     "outdoor_day": (
         "A high-quality semi-realistic digital painting of a {description} by day. "
@@ -39,6 +44,19 @@ NEGATIVE_PROMPT = (
     "people, person, human, figure, crowd, text, signature, watermark, "
     "blurry, low quality, deformed, cartoon, anime"
 )
+
+# Extra negatives only applied when the target lighting is night, to push out the
+# leftover daylight that img2img tends to keep from a bright day source.
+NIGHT_NEGATIVE_EXTRA = (
+    "daylight, sunlight, sunbeams, god rays, golden hour, sunset, sunrise, "
+    "bright sky, blue sky, bright daylight, glowing windows, overexposed, warm sunlight, "
+    "moon, stars, starry sky"
+)
+
+# _locations.md files some genuinely interior rooms under its "Outdoor locations"
+# heading (e.g. broken_flat, a pauper apartment interior). Force them onto the interior
+# lighting path so day -> night gets the warm-lamp treatment, not the cold outdoor grade.
+FORCE_INTERIOR = {"broken_flat"}
 
 def parse_locations():
     rows = {}
@@ -77,6 +95,11 @@ def b64_encode(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
 
+def encode_image(img):
+    buf = io.BytesIO()
+    img.save(buf, format="PNG")
+    return base64.b64encode(buf.getvalue()).decode("utf-8")
+
 def process_toggle(image_path):
     image_path = pathlib.Path(image_path).resolve()
     if not image_path.exists():
@@ -111,6 +134,9 @@ def process_toggle(image_path):
     else:
         desc = locations[rid]["desc"]
         loc_type = locations[rid]["type"]
+
+    if rid in FORCE_INTERIOR:
+        loc_type = "interior"
         
     print(f"Source file: {filename}")
     print(f"Detected room ID: {rid}")
@@ -119,21 +145,46 @@ def process_toggle(image_path):
     
     # 3. Generate the image using img2img
     print(f"Encoding source image...")
-    init_b64 = b64_encode(image_path)
+    src_img = Image.open(image_path).convert("RGB")
+    if target_time == "night" and loc_type == "interior":
+        # Pre-darken the day source so the bright daylit window stops anchoring the
+        # relight; the warm lamp prompt then fills the dark room with golden light
+        # instead of the model applying a flat cold night grade with the lamps off.
+        src_img = ImageEnhance.Brightness(src_img).enhance(0.35)
+        src_img = ImageEnhance.Color(src_img).enhance(0.7)
+    init_b64 = encode_image(src_img)
     
     prompt_key = f"{loc_type}_{target_time}"
     prompt = PROMPT_TEMPLATES[prompt_key].format(description=desc)
-    
+
+    # Day -> night is the hard direction: the bright day source bleeds through as a
+    # luminance anchor, so push the denoise harder and fight daylight in the negative.
+    if target_time == "night":
+        negative_prompt = f"{NEGATIVE_PROMPT}, {NIGHT_NEGATIVE_EXTRA}"
+        distilled_cfg_scale = 4.0
+        if loc_type == "interior":
+            # The window-killing denoise works, but the model's night grade turns the
+            # room cold and snuffs the lamps. Keep the denoise and force warmth: fight
+            # the cool grade in the negative so the warm lamp glow survives.
+            negative_prompt += ", cold blue light, cool tones, blue cast, desaturated, dark gloomy room"
+            denoising_strength = 0.72
+        else:
+            denoising_strength = 0.88
+    else:
+        negative_prompt = NEGATIVE_PROMPT
+        denoising_strength = 0.75
+        distilled_cfg_scale = 3.5
+
     payload = {
         "prompt": prompt,
-        "negative_prompt": NEGATIVE_PROMPT,
+        "negative_prompt": negative_prompt,
         "init_images": [init_b64],
-        "denoising_strength": 0.75,
+        "denoising_strength": denoising_strength,
         "width": 1920,
         "height": 1088,
         "steps": 20,
         "cfg_scale": 1.0,
-        "distilled_cfg_scale": 3.5,
+        "distilled_cfg_scale": distilled_cfg_scale,
         "sampler_name": "Euler a",
         "scheduler": "Beta",
         "seed": 1924,

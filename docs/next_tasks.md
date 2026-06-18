@@ -59,6 +59,8 @@ TEST the changing MALUS and the whole broken logic
 
 ## Assets & artistic Tasks
 
+Try flux dev on my laptop?
+
 ### IMAGES NEXT REBUILD
 
 - [ ] For info_cards, RENAME so it's correct, then change everything to webp?
