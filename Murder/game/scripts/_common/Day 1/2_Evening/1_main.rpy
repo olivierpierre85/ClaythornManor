@@ -456,7 +456,7 @@ label common_day1_evening_moody_offers_harring_flask:
         $ broken_details.description_hidden.unlock('mask')
 
     broken """
-    I saw him earlier, sleeping on the couch. It is impressive he still manages to be here.
+    I saw him earlier, sleeping on the couch. It is impressive he still manages to stand.
 
     It is impossible to get a coherent word out of him.
 

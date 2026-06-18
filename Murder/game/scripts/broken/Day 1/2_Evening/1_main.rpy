@@ -268,12 +268,30 @@ label broken_day1_evening:
 
     $ change_room('bedroom_broken', dissolve)
 
-    """
-    I take off the mask and let out a long breath.
+    if broken_details.threads.is_unlocked('drink_good_whisky'):
 
-    So far, so good. No one has yet seen through Thomas Moody.
+        """
+        I take off the mask and let out a long breath.
 
-    Tomorrow I shall have to be every bit as careful.
-    """
+        So far, so good. No one has yet seen through Thomas Moody.
 
-    jump work_in_progress
+        Though I must confess that fine whisky has left me strangely heavy. My head swims, and my limbs feel like lead.
+
+        Too much excitement for one evening, no doubt. I shall be myself again come morning.
+
+        I lie down, and sleep takes me almost before my head has touched the pillow.
+        """
+
+        jump broken_ending_day1_deathbed
+
+    else:
+
+        """
+        I take off the mask and let out a long breath.
+
+        So far, so good. No one has yet seen through Thomas Moody.
+
+        Tomorrow I shall have to be every bit as careful.
+        """
+
+        jump work_in_progress

@@ -2,9 +2,10 @@
 
 ### Write Story: NEXT => Broken, then HOST
 
-Change for consistency
+ADD somewhere that in the cannon story, TED harring DRINKS from the Broken flasks, but survives by drinking so much he pukes !!
 
-=> If thomas is journalist, rethink the letter to the captain as the reason for his scar
+Changes for consistency:
+   - If thomas is journalist, rethink the letter to the captain as the reason for his scar
 ----
 
 Prequisite, ADD servant stairs as last room => needs testing
@@ -23,29 +24,32 @@ TEST the changing MALUS and the whole broken logic
 2. Write story
    1. 
    2. Friday Evening 
-         1. PATH where as a journalist, you have to ask the best question. If you do, at the end of the interaction you unlock a THREAD => Host is hiding something. 
-            1. NOT bad now, but **I should add more questions**, with misdirect. Until we reach the final (SHE IS Lying for sure TWO proofs) => Unlocks lady claythorn only NOW? Or conflict with captain ?
-         2. Once you have that, you can ask the staff more question. That leads to questionning the following BUT if you go downstairs.
+      1. Dinner -> Add more questions for host but**I should add more questions**, with misdirect. Until we reach the final (SHE IS Lying for sure TWO proofs) => Unlocks lady claythorn only NOW? Or conflict with captain ?
+         1. Once you have that, you can ask the staff more question. That leads to questionning the following BUT if you go downstairs.
             1. KITCHEN : Either hide and just moves around, directly talk to the maid and "FOOTMAN helping"?
                1. => Disturb the staff unlocks => Will kill you during the night
                2. Hide and look around in the scullery => Find rat poison a bit too visible, and open. TAke it to unlock you found poison? THen conflict with butler has it => SO not this time, maybe day 2 => not necesserly, the butler could have take a bit with him
             2. Footman and maid, good if you have found their picture ? but key? Need one downstairs?
                1. Needs to talk to 
             3. Butler => Question him, you die,
-         3. You'll discover things about actresses same as the others, make more connections. IF you can extract info from staff, you unlock a path towards all of them killed in the tooshed or the basement.
-      1. MAP CHOICES First in tea room, goes to take a drink, leave his flask near the bar then sees the captain telling a story. When he meet ted at the bar, that is becaused he realised he forgot his flask, so he goes back to get it and dies gives to ted. If he doesn't go back to get it, TED dies also, but you only find it back the next day? where!!! Butler finds it and gives it back? Or too obvious? NOOOO captain speech. So just listening to the speech kills you. What kills ted harring then? THEN I have to change captain version where butler can surviv if he doesn't give speech? THen how could he survive? HE can't => remove the full thing about he kills you AND also the fact he has received a letter to  kill you.... That is a lot to remove.
-      2.  If not, (do not want to listen to this, USE intuition alreaydy?), he keeps at the bar and try to talk to DRUNK. -> he is the one who can unlock drunk with his clever investigative skills.
-   3. Saturday Morning
-      1. Ted is ALWAYS dead BUT HOW if you do not visit the BIlliard room? Run into him somewhere else? OR introduce the FLASK at the first thingy Same kind of talk, you follow the doctor into ted harring room, call back but new text. You enter in full Detective story.
-   4. Hunt
+      2. MAP
+         1. You'll discover things about actresses same as the others, make more connections. IF you can extract info from staff, you unlock a path towards all of them killed in the tooshed or the basement.
+         2. Billiard room, 
+            1. HOW to kill TED harring without dying yourself? DO not interrupt the captain. If you don't, then TED harring drinks the WHISK
+               1. EVEN if you do not go to the billiard room, you can assume the special whisky will be drunk by TED and drunk? Make the butler say, (there is whisky, but the bottle is near empty)
+            2. Add generic doctor journalist insight
+3. 
+   1. Saturday Morning
+      1. IF Ted is dead => EARLY death for moody's and everybody else, because lost their mind. Not same as moody. Ted was young so HYPER suspicious NO hunt, just lunch while waiting for the police,then everybody dies
+   2. Hunt
       1. As option to kill captain, or not if he thinks it is a setup. But to be sure it is a setup, he needs to find more suspicious things? Like DRUNK also receives a message. If he didn't find drunk message, he kills captain. Drunk kills doctor. VEry gore new step
       2. IF he finds message, he knows something is up and goes with drunk and prevents his death. BACK to having multiple choice of partner for hunt since lad is dead.
-   5. After hunt
+   3. After hunt
       1. lots of death.
          1. Without captain, host panick and decides to leave even before dinner. So she is not there, only butler, that is weird, everone dies. EXCEPT if you had found AND taken the poison the first day.
       2. Just Ted is dead.
          1. NOrmal dinner, but SAME that with poison, EVERYone DIES
-   6. Satuday after dinner.
+   4. Satuday after dinner.
       1. IF you found poison, you gain some time to explore, in both cases. Now you can?????? PARNER UP WITH THE DRUNK => Unlocks HIm(at least partially)
       2. IF you do not find XXXXXX, you burn in your sleep. There is only one way to see day3 and it is to?
          1. leave ?
@@ -53,15 +57,23 @@ TEST the changing MALUS and the whole broken logic
             2. Not alone, wake everyone up before the fire, but then dead anyway?
          2. HIDE in the garden shed?
 
+## Assets & artistic Tasks
 
-# Art for broke
+### IMAGES NEXT REBUILD
 
-## Locations
+- [ ] For info_cards, RENAME so it's correct, then change everything to webp?
+- [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
+- [ ] Redraw character face AND add full body size images
+
+#### Locations
 Finish normal list- last one is train_second
 
 
 Multiple Class in train for outside IMAGEs
 - Two class at the moment. I think One image by person is more appropriate, with hints in them. See to do it later
+  
+### MUSIC with producer AI
+Get new music from internet and put them at the right place
 
 
 ## Technical Tasks
@@ -77,33 +89,11 @@ When Someone is saved, it add a SAVED over their name in the progress view
 - [ ] BUG: **save_transcript_to_file** button not working during menu????
 - [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
 
-- [x] **MENUS - Check and changes** (done June 2026 — `Murder/check_menu_consistency.py` audits all four rules, run it after any menu edit; conventions documented in CLAUDE.md):
-    - [x]  when **Map choice has two possible choices**, it picks the first one. `display_choices` now breaks on first match like the map screen; the checker proves condition exclusivity per room; conflicting conditions fixed (lad no-hunt tea room, lad day2 evening Richard III bedroom)
-    - [x] DOUBLE Check that when a **choice is greyed out**, there is no point in selected them (tutorial_already_chosen). Fixed: 2 duplicate menu ids (doctor day2 dinner + bedroom-nurse sleep), broken `linked_choice` refs in captain day3 attic (the ask-china follow-up choice was missing — re-added with the silence label), undefined `next_menu` on doctor day1 billiard
-    - [x] CHeck that every choice now has a time value. All map choices now charge a visit cost (incl. sub-menu openers, per the test fixture note in captain day2); conversation navigation openers deliberately stay at 0 (sub-menu questions charge)
-    - [x] Also check that every menu has the next_menu parameter well set. Filled everywhere it tracks grey-out; deliberate omissions (unique scene + shared generic menu) are marked `# no-next-menu`
-
 - [ ] **New Progress view**
     - Add new **ENDINGS page** for symmetry? Or a tooltip that says, endings can be seen below
     - Add new page with **All threads** ?
 
 
-
-
-## Assets & artistic Tasks
-
-
-
-### MUSIC with producer AI
-Get new music from internet and put them at the right place
-
-
-### FLUX REBUILD
-
-- [ ] For info_cards, RENAME so it's correct, then change everything to webp?
-- [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
-- [ ] REDRAW full locations with flux, day and night
-- [ ] Redraw character face AND add full body size images
 
 ## Question for Testers
 - What about **NEW PROGRESS PAGE** and no character page
@@ -113,7 +103,7 @@ NEW paths PAGE wil ALL the unlockables, different from breakpoint page
 - Are important choices TOO confusing => Everything or NOT? But that means WAY harder to unlock?
 
 
-### Update ITCH.IO
+## Update ITCH.IO
 - Update itch.io
 - Switch branch (Check export_file IN SAVE action has been deleted)
 - Define config.version = "0.1"

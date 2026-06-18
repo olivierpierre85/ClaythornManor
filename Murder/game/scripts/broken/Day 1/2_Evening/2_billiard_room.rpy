@@ -96,8 +96,9 @@ label broken_day1_evening_billiard_room:
 
 # ------------------------------------
 #   CAPTAIN'S STORY (the Boxer Rebellion)
-#   Listening empties the flask, so he charges it again from the
-#   butler's whisky and shares it with Harring before hearing the rest.
+#   Listening empties the flask. The player then chooses whether to charge
+#   it from the butler's special whisky (refill) or leave it be (abstain).
+#   The whisky is poisoned: refilling and drinking it is fatal.
 # ------------------------------------
 label broken_day1_evening_billiard_room_story:
 
@@ -122,11 +123,30 @@ label broken_day1_evening_billiard_room_story:
 
     If I am to sit through the rest of this, I had best charge it again.
 
-    The good whisky the butler promised should be waiting among the bottles by now.
+    The good whisky the butler set aside should be waiting among the bottles by now.
 
+    Then again, it was put by for a special occasion. To help myself to the last of another man's prize bottle would be poor manners indeed.
+    """
+
+    call run_menu(TimedMenu("broken_day1_evening_billiard_room_whisky_menu", [
+        TimedMenuChoice('Charge the flask from the special whisky', 'broken_day1_evening_billiard_room_refill', 0, early_exit=True),
+        TimedMenuChoice('Leave it be, it would be impolite', 'broken_day1_evening_billiard_room_abstain', 0, early_exit=True),
+    ]))
+
+    return
+
+
+# ------------------------------------
+#   REFILL (the fatal choice)
+#   He charges his flask from the poisoned whisky, shares a glass with
+#   Harring, and drinks the rest through the captain's tale.
+# ------------------------------------
+label broken_day1_evening_billiard_room_refill:
+
+    """
     I drift over to the bottles. The whisky stands among the sherry and the port, just as the butler promised.
 
-    Samuel Manning is there, so drunk he doesn't even notice me.
+    Samuel Manning is slumped there, so drunk he does not even notice me.
 
     I tip the last of the bottle into my flask and slip it back inside my coat.
 
@@ -140,7 +160,39 @@ label broken_day1_evening_billiard_room_story:
     call common_day1_evening_moody_offers_harring_flask
 
     """
-    I settle back among the listeners, the flask a comfortable weight in my coat again, and let the captain carry on.
+    I settle back among the listeners and take a long, well-earned pull from the flask.
+
+    The whisky is every bit as good as the butler promised. Smooth, with a faint bitter note at the finish that I cannot quite place.
+
+    I let the captain carry on.
+    """
+
+    $ broken_details.threads.unlock('drink_good_whisky')
+
+    call common_day1_evening_captain_billiard_room_speech_part_2
+
+    """
+    An interesting tale.
+
+    I remember my friend Thomas telling me about that war, one of his first campaigns, where he served as a young corporal.
+
+    His version and the captain's are similar enough.
+    """
+
+    return
+
+
+# ------------------------------------
+#   ABSTAIN (the safe choice)
+#   He leaves the whisky alone, hears the rest of the tale, then goes to
+#   try it afterwards out of curiosity, only to find the bottle empty.
+# ------------------------------------
+label broken_day1_evening_billiard_room_abstain:
+
+    """
+    No. The bottle was set aside for the occasion, and draining the last of it would be the height of bad manners.
+
+    I leave it where it stands and settle back among the listeners, dry flask and all, to let the captain carry on.
     """
 
     call common_day1_evening_captain_billiard_room_speech_part_2
@@ -151,6 +203,20 @@ label broken_day1_evening_billiard_room_story:
     I remember my friend Thomas telling me about that war, one of his first campaigns, where he served as a young corporal.
 
     His version and the captain's are similar enough.
+    """
+
+    """
+    Now that the captain has wound down, my curiosity gets the better of me. I should rather like to know what all the fuss was about.
+
+    I make my way over to the bottles.
+    """
+
+    """
+    The good whisky is gone. The bottle stands empty among the others.
+
+    Someone else must have finished it while I sat listening.
+
+    A pity. I shall never know what I missed.
     """
 
     return

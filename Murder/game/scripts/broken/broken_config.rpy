@@ -60,8 +60,19 @@ label init_broken:
             description_short = "Masked Man",
             description_long = broken_description,
             description_hidden = broken_extra_information,
-            important_choices = CharacterInformationList([]),
-            endings = CharacterInformationList([]),
+            important_choices = CharacterImportantChoiceList([
+                CharacterInformation(
+                    0, "drink_good_whisky",
+                    "You drank the special whisky on the first night",
+                    content_negative="You left the special whisky alone on the first night",
+                    image_file="whisky",
+                    chapters=['friday_evening'],
+                    relevant_chapters=['friday_evening', 'saturday_morning'],
+                ),
+            ]),
+            endings = CharacterEndingList([
+                CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed", chapters=['saturday_morning']),
+            ]),
             observations = CharacterObservationList([
                 CharacterInformation(1, "found_livery",
                     "You found a footman's livery in the servant stair that lets you pass below stairs unseen",
