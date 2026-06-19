@@ -16,8 +16,7 @@ FIND a way to make Broken unlock HOST !!
    - If so, you can make the Killbreath discovery at the beginning
   
 TEST the changing MALUS and the whole broken logic
- 
-!!!!
+
 
 1. Broken map goals and discoveries
    1. Is well suited to uncover the host, but the captain does it? Or should I add something to make the broken be the one unlocking the host OR he could just realise that the HOST is keeping information to herself SO the most common way to learn about her is to.... Interrogate the staff
@@ -37,7 +36,7 @@ TEST the changing MALUS and the whole broken logic
          2. Billiard room, 
             1. HOW to kill TED harring without dying yourself? DO not interrupt the captain. If you don't, then TED harring drinks the WHISK
                1. EVEN if you do not go to the billiard room, you can assume the special whisky will be drunk by TED and drunk? Make the butler say, (there is whisky, but the bottle is near empty)
-            2. Add generic doctor journalist insight
+            2. Add generic doctor journalist insight OR remove the doctor talks entirely, and fixates on the staff?
 3. 
    1. Saturday Morning
       1. IF Ted is dead => EARLY death for moody's and everybody else, because lost their mind. Not same as moody. Ted was young so HYPER suspicious NO hunt, just lunch while waiting for the police,then everybody dies

@@ -13,8 +13,6 @@ label broken_ending_day1_deathbed:
     """
     You don't wake up.
 
-    That fine whisky, set aside for a special occasion, was never meant for the likes of you.
-
     You came to this house behind another man's face, certain you were the one doing the watching.
 
     You were wrong.
