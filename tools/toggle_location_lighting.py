@@ -25,8 +25,9 @@ PROMPT_TEMPLATES = {
     ),
     "interior_day": (
         "A high-quality semi-realistic digital painting of a 1920s Scottish manor "
-        "{description} by day. Bright natural daylight streaming in, clear sunny atmosphere. "
-        "Wide shot, empty room, rich textures, detailed."
+        "{description} by day. Soft muted daylight filtering through the windows, "
+        "overcast grey light, subdued and dim, gentle soft shadows, quiet mysterious "
+        "atmosphere, wide shot, empty room, rich textures, detailed."
     ),
     "outdoor_night": (
         "A high-quality semi-realistic digital painting of a {description} at night. "
@@ -51,6 +52,13 @@ NIGHT_NEGATIVE_EXTRA = (
     "daylight, sunlight, sunbeams, god rays, golden hour, sunset, sunrise, "
     "bright sky, blue sky, bright daylight, glowing windows, overexposed, warm sunlight, "
     "moon, stars, starry sky"
+)
+
+# Extra negatives for interior daytime, to keep the manor's mystery: a soft, dim,
+# overcast room instead of a bright cheerful sunny one.
+INTERIOR_DAY_NEGATIVE_EXTRA = (
+    "bright sunlight, harsh sunlight, direct sunbeams, sunny, cheerful, "
+    "blown highlights, overexposed, hdr, washed out"
 )
 
 # _locations.md files some genuinely interior rooms under its "Outdoor locations"
@@ -171,9 +179,13 @@ def process_toggle(image_path):
         else:
             denoising_strength = 0.88
     else:
-        negative_prompt = NEGATIVE_PROMPT
         denoising_strength = 0.75
         distilled_cfg_scale = 3.5
+        if loc_type == "interior":
+            # Keep interior manor rooms moody by day rather than bright and cheerful.
+            negative_prompt = f"{NEGATIVE_PROMPT}, {INTERIOR_DAY_NEGATIVE_EXTRA}"
+        else:
+            negative_prompt = NEGATIVE_PROMPT
 
     payload = {
         "prompt": prompt,
