@@ -262,6 +262,8 @@ label host_generic_award:
     With that revelation, I am almost certain I will not get a penny here.
     """
 
+    $ broken_details.threads.unlock('host_lies')
+
     return
 
 

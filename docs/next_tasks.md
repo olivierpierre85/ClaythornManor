@@ -10,52 +10,59 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ### Write Story: NEXT => Broken
 
-FIND a way to make Broken unlock HOST !! 
-   - If so, you can make the Killbreath discovery at the beginning
+**Prerequisites / decisions before writing:**
+- Find a way for Broken to unlock the Host. If he does, the Killbreath discovery can come right at the start.
+- Test the changing MALUS and the whole Broken branching logic.
+
+#### 1. Map goals & discoveries
+- Broken is well suited to uncovering the Host, but at the moment the Captain is the one who does it.
+- Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.
+
+#### 2. Write story
+
+##### Friday Evening — Dinner
+- Add more questions for the Host, with misdirects, until the player reaches the conclusion that she is certainly lying (two proofs).
+  - Open question: does this unlock Lady Claythorn only now? Does it conflict with the Captain's path?
+- Once the player has the two proofs, they can press the staff further. This leads to interrogating the people below, but going downstairs is dangerous:
+
+
+##### Friday Evening — Map (after dinner)
+
+  - **Kitchen** — WRITE Maid text and discovery about butler
+- **Billiard room** (improvements)
+  - Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
+  - Add generic doctor/journalist insight, or drop the doctor talks entirely and fixate on the staff.
+  - Add a "question the butler" path (if you've unlocked the strange material about the Host) → **do it and you die no matter what.** Reuse throat cut ending
+- Add FIND A LETTER, if consistent with the Captain's story.
+##### Saturday Morning (Ted is always dead)
+- If Ted is dead → an early death for Moody and everyone else, because they have lost their minds (not the same as Moody). Ted was young, so suspicion runs very high: no hunt, just lunch while waiting for the police — then everyone dies.
+
+##### Saturday — Hunt
+- Option to kill the Captain, or not, if Broken thinks it is a setup. To be sure it is a setup he needs more suspicious findings — e.g. the Drunk also received a message.
+  - If he hasn't found the Drunk's message → he kills the Captain, and the Drunk kills the Doctor (very gory new step).
+  - If he has found the message → he knows something is wrong, goes with the Drunk and prevents his death. Back to choosing a hunt partner (since the Lad is dead).
+
+##### Saturday — After the Hunt
+- **Without the Captain** — the Host panics and leaves before dinner. With only the Butler present it feels wrong, and everyone dies at dinner — except if you found and took the poison on the first day. Otherwise the Butler burns everyone? And the psychic dies by suicide (first to collapse, apparently from smoke inhalation but actually sleeping pills).
+- **Only Ted is dead** — a normal dinner, but the same outcome: everyone dies. If you found the poison you can press on; if you found nothing you die in your sleep when the Butler sets the house on fire.
+
+##### Saturday — After Dinner
+- If you found the poison, you gain time to explore in both cases. Now you can partner up with the Drunk → unlocks him (at least partially). Or with someone else?
+- If you do not find [???], you burn in your sleep → INTUITION: DO NOT SLEEP. 
   
-TEST the changing MALUS and the whole broken logic
+- The only way to reach Day 3 is to have found the poison AND successfully interrogated all the staff, which makes Broken decide to spend the night in the tea room ("no one should leave our sight")
 
+##### Sunday Morning 
+If you survived with everyone but TED harring and host (who sneaked out after dinner), you are now face with what to do. You know you have to leave but how and with whom?
+- The car is gone, can you use the other car? NOt enough room?
+THE WHol stuff can be decided at the end of the writing
 
-1. Broken map goals and discoveries
-   1. Is well suited to uncover the host, but the captain does it? Or should I add something to make the broken be the one unlocking the host OR he could just realise that the HOST is keeping information to herself SO the most common way to learn about her is to.... Interrogate the staff
-2. Write story
-   1. 
-   2. Friday Evening 
-      1. Dinner -> Add more questions for host but**I should add more questions**, with misdirect. Until we reach the final (SHE IS Lying for sure TWO proofs) => Unlocks lady claythorn only NOW? Or conflict with captain ?
-         1. Once you have that, you can ask the staff more question. That leads to questionning the following BUT if you go downstairs.
-            1. KITCHEN : Either hide and just moves around, directly talk to the maid and "FOOTMAN helping"?
-               1. => Disturb the staff unlocks => Will kill you during the night
-               2. Hide and look around in the scullery => Find rat poison a bit too visible, and open. TAke it to unlock you found poison? Prevent more deaths by poisoning (lunch saturday)
-            2. Footman and maid, good if you have found their picture ? but key? Need one downstairs? WHERE to go to get keys? Or won't be able to enter their room
-               1. Needs to talk to 
-            3. Butler => Question him, you die,
-      2. MAP - after dinner
-         1. add FIND A LETTER if consistant with captain story !!!!!!!!!
-         2. You'll discover things about actresses same as the others, make more connections. IF you can extract info from staff, you unlock a path towards all of them killed in the tooshed or the basement.
-         3. Billiard room improvement
-            1.  But I could add a go to the bar first=> Then **ted harring doesn't DIE**! but it is complicated that he doesn't die
-            2. Add generic doctor journalist insight OR remove the doctor talks entirely, and fixates on the staff?
-            3. **ADD a question the butler path** (if unlocked weird stuff about host?) => Do that and die regardless of what you do
-3. 
-   1. Saturday Morning (TED is always DED)
-      1. IF Ted is dead => EARLY death for moody's and everybody else, because lost their mind. Not same as moody. Ted was young so HYPER suspicious NO hunt, just lunch while waiting for the police,then everybody dies
-   2. Hunt
-      1. As option to kill captain, or not if he thinks it is a setup. But to be sure it is a setup, he needs to find more suspicious things? Like DRUNK also receives a message. If he didn't find drunk message, he kills captain. Drunk kills doctor. VEry gore new step
-      2. IF he finds message, he knows something is up and goes with drunk and prevents his death. BACK to having multiple choice of partner for hunt since lad is dead.
-   3. After hunt
-      1. Lots of death.
-         1. Without captain, host panick and decides to leave even before dinner. So she is not there, only butler, that is weird, everone dies during dinner. EXCEPT if you had found AND taken the poison the first day. IF not the butler burns everyone? but the psychic? Suicide (first to collapse of SMOKE inhalation (but actually sleeping pill))
-      2. Just Ted is dead.
-         1. NOrmal dinner, but SAME that with poison, EVERYone DIES. IF found poison you can go ahead. If you found nothing you die in your sleep, as the butler has set the house on fire
-   4. Satuday after dinner.
-      1. IF you found poison, you gain some time to explore, in both cases. Now you can?????? PARNER UP WITH THE DRUNK => Unlocks HIm(at least partially) OR WITH someone else?
-      2. IF you do not find XXXXXX, you burn in your sleep => INTUITON DO NOT SLEEP!!. There is only one way to see day3 and it is to HAVE found poison AND INTERROGATE sucessfully ALL of the STAFF MAKES him decide to **spend the night in the tea room** NOONE should leave our sight. 
-         1. leave ?
-            1. Alone
-            2. Not alone, wake everyone up before the fire, but then dead anyway?
-         2. HIDE in the garden shed?
 
 ## Assets & artistic Tasks
+
+FOR BROKEN:
+- Image for talk with maid (maid side photo should be enough)
+- RAT poison bottle check already exists?
 
 Try flux dev on my laptop?
 

@@ -13,11 +13,33 @@ label broken_config_progress:
                 Chapter(image_checkpoint_empty),   # sunday_afternoon  (unwritten)
                 Chapter(image_ending_question, "ending", "todo", "end"),
             ],
-            # Row 1: Death branch — drinking the poisoned whisky on Friday night
+            # Row 1: empty trunk dropping down from Friday evening to the death branches
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_line),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+            ],
+            # Row 2: Death branch — drinking the poisoned whisky on Friday night
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_double_corner),
+                Chapter(image_ending_question, "ending", "deathbed", "saturday_morning"),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+            ],
+            # Row 3: Death branch — questioning the maid, throat cut in his sleep
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_corner),
-                Chapter(image_ending_question, "ending", "deathbed", "saturday_morning"),
+                Chapter(image_ending_question, "ending", "throat_cut", "saturday_morning"),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_empty),

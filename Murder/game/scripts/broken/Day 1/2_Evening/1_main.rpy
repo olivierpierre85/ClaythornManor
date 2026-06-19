@@ -280,6 +280,10 @@ label broken_day1_evening:
     I lie down, and sleep takes me almost before my head has touched the pillow
     """
 
+    if broken_details.threads.is_unlocked('talked_to_maid'):
+
+        jump broken_ending_day1_throat_cut
+
     if broken_details.threads.is_unlocked('drink_good_whisky'):
 
         jump broken_ending_day1_deathbed

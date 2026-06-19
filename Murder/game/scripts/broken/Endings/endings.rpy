@@ -19,3 +19,26 @@ label broken_ending_day1_deathbed:
     """
 
     jump ending_generic
+
+
+# DAY 1 — talked to the maid; the butler made certain he never woke
+label broken_ending_day1_throat_cut:
+
+    $ broken_details.endings.unlock('throat_cut')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('throat_cut'))
+
+    call death_screen_transition
+
+    $ play_music('mysterious')
+
+    """
+    You wake once, to a hand clamped across your mouth and a cold line drawn quick across your throat.
+
+    Then you do not wake again.
+
+    This tragic ending was likely caused because you did something careless.
+
+    You just need to figure out what.
+    """
+
+    jump ending_generic
