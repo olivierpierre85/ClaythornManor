@@ -33,10 +33,8 @@ TEST the changing MALUS and the whole broken logic
             3. Butler => Question him, you die,
       2. MAP
          1. You'll discover things about actresses same as the others, make more connections. IF you can extract info from staff, you unlock a path towards all of them killed in the tooshed or the basement.
-         2. Billiard room, 
-            1. HOW to kill TED harring without dying yourself? DO not interrupt the captain. If you don't, then TED harring drinks the WHISK
-               1. EVEN if you do not go to the billiard room, you can assume the special whisky will be drunk by TED and drunk? Make the butler say, (there is whisky, but the bottle is near empty)
-            2. Add generic doctor journalist insight OR remove the doctor talks entirely, and fixates on the staff?
+         2. Billiard room => DO i need the complex mechanism of interepted for drinks. YES it is cannon? **But I should add a go to the bar first=> Then ted harring doesn't DIE**!
+            1. Add generic doctor journalist insight OR remove the doctor talks entirely, and fixates on the staff?
 3. 
    1. Saturday Morning
       1. IF Ted is dead => EARLY death for moody's and everybody else, because lost their mind. Not same as moody. Ted was young so HYPER suspicious NO hunt, just lunch while waiting for the police,then everybody dies
