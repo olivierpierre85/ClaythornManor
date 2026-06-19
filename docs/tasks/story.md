@@ -174,6 +174,8 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 - [x] A butler-specific tutorial text is shown after the death text on the first unlocked info (same pattern as the first-death tutorial in `ending_generic`).
 - [ ] TODO unlock points for the remaining infos (`poisoned_moody`, `took_valuables`).
 
+ADD somewhere that in the cannon story, **TED harring DRINKS from the Broken flasks**, but survives by drinking so much he pukes !!
+
 ### Important
 That is the last test. The real path (as asked by meta dialogs)
 LAST question, is when the butler meat the Person behind all of this? (he escapes, and meet them in town. Last choice)
