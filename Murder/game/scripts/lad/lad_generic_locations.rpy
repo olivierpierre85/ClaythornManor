@@ -370,6 +370,16 @@ label lad_servant_stairs_default(menu_id):
 
     $ change_room('servant_stairs')
 
+    if lad_details.saved_variables["livery_tried"]:
+
+        """
+        Back on the narrow servant stair.
+
+        The livery still hung on its peg, no sense trying it on again.
+        """
+
+        return
+
     """
     I ducked through a low door and found myself on a narrow stair, plainly meant for the staff.
 
@@ -397,6 +407,8 @@ label lad_servant_stairs_try_outcome:
 
     A get-up like that could open a fair few doors.
     """
+
+    $ lad_details.saved_variables["livery_tried"] = True
 
     return
 
