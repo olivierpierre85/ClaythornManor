@@ -366,7 +366,7 @@ label lad_entrance_hall_default:
 
     return
 
-label lad_servant_stairs_default:
+label lad_servant_stairs_default(menu_id):
 
     $ change_room('servant_stairs')
 
@@ -375,6 +375,11 @@ label lad_servant_stairs_default:
 
     A footman's livery hung on a peg, pressed and waiting for the morning.
     """
+
+    call run_menu(TimedMenu(menu_id, [
+        TimedMenuChoice("Try the livery on", 'lad_servant_stairs_try_outcome', 10, early_exit=True),
+        TimedMenuChoice("Leave it be", 'lad_servant_stairs_leave_outcome', 0, early_exit=True),
+    ]))
 
     return
 

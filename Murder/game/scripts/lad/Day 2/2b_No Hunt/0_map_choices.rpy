@@ -130,12 +130,7 @@ label lad_day2_no_hunt_entrance_hall:
 
 label lad_day2_no_hunt_servant_stairs:
 
-    call lad_servant_stairs_default
-
-    call run_menu(TimedMenu("lad_day2_no_hunt_servant_stairs_menu", [
-        TimedMenuChoice("Try the livery on", 'lad_servant_stairs_try_outcome', 0, early_exit=True),
-        TimedMenuChoice("Leave it be", 'lad_servant_stairs_leave_outcome', 0, early_exit=True),
-    ]))
+    call lad_servant_stairs_default("lad_day2_no_hunt_servant_stairs_menu")
 
     return
 
