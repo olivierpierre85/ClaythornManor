@@ -257,13 +257,7 @@ label broken_day1_evening_garage:
 
     call broken_descend_if_needed
 
-    $ change_room('garage')
-
-    """
-    A motor car stands under a dust sheet, and the air is thick with petrol and cold iron.
-    """
-
-    # TODO
+    call broken_garage_default
 
     return
 
@@ -275,22 +269,6 @@ label broken_day1_evening_gun_room:
 
     call broken_descend_if_needed
 
-    $ change_room('gun_room')
-
-    """
-    The gun room.
-
-    A rack of sporting guns behind glass.
-
-    Locked.
-
-    On a table lies a handgun.
-
-    That could prove useful.
-    
-    But ever since the war, I have avoided guns when I can. 
-
-    So, I leave it as I found it.
-    """
+    call broken_gun_room_default
 
     return

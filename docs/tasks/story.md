@@ -134,6 +134,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 - [ ] Same kind story as Doctor when find the letter => Tell everyone about the letter, everyone want’s to leave, but die in FIREE. The discussions will give an idea of what could have been said in the doctor timeline !
 - [ ] Is the one that can go to sunday evening. he sees psychic waking up Ted harring in the ... IF he managed to SAVE him from poison. But how could he save everyone?
 - [ ] Put somewhere, dialog between an immigrant who would do anything to have the position of a wealthy person, and the wealthy person sharing suicidal thoughts? (Drunk vs LAD?, Drunk vs Captain? => Both not really immigrants One is british, the other rich)
+- [ ] ADD FOOD MENU - Only real enjoyer of this place
 
 ### Ideas to think over (optional)
 

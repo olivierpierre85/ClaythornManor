@@ -8,6 +8,7 @@ Servant stairs as last room => needs testing for other characters
 SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstairs? Add the servant stairs as the image when we try to reach downstairs? servant stairs could be servant room, or the upstairs stairs. But it will be fixed when we change the map
 
 
+
 ### Write Story: NEXT => Broken
 
 **Prerequisites / decisions before writing:**
@@ -28,12 +29,16 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ##### Friday Evening — Map (after dinner)
 
-  - **Kitchen** — WRITE Maid text and discovery about butler
 - **Billiard room** (improvements)
-  - Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
+  - MAYBE LATER Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
   - Add generic doctor/journalist insight, or drop the doctor talks entirely and fixate on the staff.
   - Add a "question the butler" path (if you've unlocked the strange material about the Host) → **do it and you die no matter what.** Reuse throat cut ending
+  - DOUBLe check maid + butler? Is the butler explanation leaving place for doubt? I guess it could. Or is it a revelation for
+  - MAKE sure you need to have unlock HOSt lies to talk to maid? IF yes, add clue to unlock it.
+  - More options to talk with butler? Where to find footman? Maybe interrogate during hunt instead
 - Add FIND A LETTER, if consistent with the Captain's story.
+- TEST all default locations
+  DO I have the opportunity to roam the bedrooms as a footman? It would be a great cover? I should allow this, but it makes it complicated, so no bedrooms for the moment.
 ##### Saturday Morning (Ted is always dead)
 - If Ted is dead → an early death for Moody and everyone else, because they have lost their minds (not the same as Moody). Ted was young, so suspicion runs very high: no hunt, just lunch while waiting for the police — then everyone dies.
 

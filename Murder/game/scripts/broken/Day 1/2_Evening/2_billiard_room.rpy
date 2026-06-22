@@ -66,6 +66,7 @@ label broken_day1_evening_billiard_room:
         $ broken_day1_evening_billiard_room_menu = TimedMenu("broken_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Join the group and listen to the Captain', 'broken_day1_evening_billiard_room_story', 60),
             TimedMenuChoice('Talk to Dr Baldwin', 'broken_day1_evening_billiard_room_doctor', 0, next_menu = 'doctor_generic_menu_broken'),
+            TimedMenuChoice('Question the butler about the manor', 'broken_day1_evening_billiard_room_butler', 20, condition = "broken_details.threads.is_unlocked('talked_to_maid')"),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -189,6 +190,79 @@ label broken_day1_evening_billiard_room_abstain:
     I'll have to listen to the story sober.
     """
     
+    return
+
+
+# ------------------------------------
+#   THE BUTLER (talked_to_maid required)
+#   The maid sent him here: the butler is the one who truly knows what
+#   the manor is about. He gives nothing away, and marks Moody for it.
+#   This is the man who later cuts his throat (broken_ending_day1_throat_cut).
+# ------------------------------------
+label broken_day1_evening_billiard_room_butler:
+
+    """
+    The maid's words are still turning over in my mind.
+
+    The butler is the one who knows what this house is about.
+
+    He stands in his corner, hands folded, missing nothing.
+
+    I cross to him as though only in want of conversation.
+    """
+
+    broken """
+    A fine room, this.
+
+    Though I confess the house puzzles me.
+
+    It has the feel of a place only lately woken from a long sleep.
+    """
+
+    """
+    Something flickers behind his eyes, there and gone.
+    """
+
+    butler """
+    Lady Claythorn lives rather a secluded life.
+
+    I must admit some of the rooms had to be reopened after standing empty for a long time.
+
+    That would explain why some of them have a rather untidy air about them.
+
+    I do apologise for it.
+    """
+
+    broken """
+    I had heard there might be some surprise laid on for us this weekend.
+
+    A diverting one, I hope.
+    """
+
+    """
+    He holds my gaze a moment longer than a servant ought.
+    """
+
+    butler """
+    I assume you are referring to the prize that will be awarded at the end of this weekend.
+
+    But it is hardly a surprise.
+
+    Everyone has been forewarned.
+    """
+
+    broken """
+    I see.
+
+    I must have misunderstood, of course.
+    """
+
+    """
+    The maid might have been mistaken about the surprise, but there is no doubt the butler is lying about the house.
+
+    I should be careful and not investigate further.
+    """
+
     return
 
 

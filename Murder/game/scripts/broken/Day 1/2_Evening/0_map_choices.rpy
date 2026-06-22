@@ -177,13 +177,7 @@ label broken_day1_evening_tea_room:
 
     call broken_ascend_if_needed
 
-    $ change_room('tea_room')
-
-    """
-    The tea room stands empty now, the cups long since cleared away.
-
-    Nothing here keeps me.
-    """
+    call broken_tea_room_default
 
     return
 
@@ -192,13 +186,7 @@ label broken_day1_evening_dining_room:
 
     call broken_ascend_if_needed
 
-    $ change_room('dining_room')
-
-    """
-    The staff are clearing the last of the dinner service.
-
-    I have no wish to be underfoot, so I do not linger.
-    """
+    call broken_dining_room_default
 
     return
 
@@ -207,15 +195,7 @@ label broken_day1_evening_entrance_hall:
 
     call broken_ascend_if_needed
 
-    $ change_room('entrance_hall')
-
-    """
-    The hall is quiet at this hour.
-
-    Worn carpet, brass wanting polish. A house keeping up appearances on a thinning purse, as I marked when I first came in.
-
-    I take its measure once more and move on.
-    """
+    call broken_entrance_hall_default
 
     return
 
@@ -241,17 +221,7 @@ label broken_day1_evening_portrait_gallery:
 
     call broken_ascend_if_needed
 
-    $ change_room('portrait_gallery')
-
-    """
-    A gallery of Claythorns, generations of them frowning down out of their gilt frames.
-
-    I study the faces out of habit, looking for the likeness that runs down a family line.
-
-    It is the one thing the mask has never stopped me doing.
-
-    There is nothing here that asks a question of me tonight.
-    """
+    call broken_portrait_gallery_default
 
     return
 
@@ -260,17 +230,7 @@ label broken_day1_evening_library:
 
     call broken_ascend_if_needed
 
-    $ change_room('library')
-
-    """
-    A decent library, better kept than the rest of the house.
-
-    A heavy book lies open on the table — a dictionary of the landed gentry.
-
-    I know the use of a book like that, even if I am no great reader.
-
-    Another time, perhaps. Tonight I would sooner walk the house than sit and read about it.
-    """
+    call broken_library_default
 
     return
 
@@ -287,7 +247,7 @@ label broken_day1_evening_bedroom_avoid:
 
     $ broken_details.saved_variables['day1_evening_bedroom_refusals'] += 1
 
-    if broken_details.saved_variables['day1_evening_bedroom_refusals'] == 1:
+    if broken_details.saved_variables['day1_evening_bedroom_refusals'] >= 1:
 
         $ change_room('bedrooms_hallway')
 
@@ -296,22 +256,16 @@ label broken_day1_evening_bedroom_avoid:
 
         No.
 
-        A man in my position cannot afford to be caught coming out of another guest's room.
+        I am already taking risk enough passing myself off as another man.
 
-        That is precisely the sort of attention I am here to avoid.
+        I cannot afford to be caught coming out of a guest's room.
+
+        Besides, this is not how I care to come by my information.
+
+        As a journalist, I know I will learn far more from talking to people than from rummaging through their belongings.
         """
 
-    elif broken_details.saved_variables['day1_evening_bedroom_refusals'] == 2:
-
-        """
-        I think better of it a second time.
-
-        Whatever these rooms might tell me is not worth the risk of being found in one.
-
-        I shall leave the bedrooms be.
-        """
-
-        # Block all other bedrooms after the second refusal
+        # Block all bedrooms on the first refusal
         $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
         $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
         $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))

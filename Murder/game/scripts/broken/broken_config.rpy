@@ -59,6 +59,9 @@ label init_broken:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
+        ])
+
+        broken_objects = CharacterObjectList([
             CharacterInformation(1, "found_poison",
                 "You took a bottle of rat poison from the scullery",
                 content_negative="You didn't take a bottle of rat poison from the scullery",
@@ -67,8 +70,6 @@ label init_broken:
                 relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
         ])
-
-        broken_objects = CharacterObjectList([])
 
         broken_endings = CharacterEndingList([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed", chapters=['saturday_morning']),
