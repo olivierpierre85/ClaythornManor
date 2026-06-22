@@ -5,7 +5,7 @@
 | :----------- | :------ | :---------------------------------: | :------------: | :-----------------------: | :--------------: | :--------: | :--------: |
 | **Nurse**    | Feb/Mar |             Feb 23 [x]              |   Mar 02 [x]   |        Mar 09 [x]         |    Mar 16 [x]    | Mar 23 [x] | Mar 30 [x] |
 | **Captain**  | Apr/May |             Apr 06 [x]              |   Apr 13 [x]   |        Apr 27 [ ]         |    May 04 [x]    | May 11 [x] | May 18 [x] |
-| **Broken**   | Jun/Jul |           **Jun 15** [ ]            |   Jun 22 [ ]   |        Jun 29 [ ]         |    Jul 06 [ ]    | Jul 13 [ ] | Jul 20 [ ] |
+| **Broken**   | Jun/Jul |             Jun 15 [ ]              | **Jun 22** [ ] |        Jun 29 [ ]         |    Jul 06 [ ]    | Jul 13 [ ] | Jul 20 [ ] |
 | *🏖 Vacation* | Jul     |                                     |                |                           |                  |            |            |
 | **Host**     | Aug/Sep |             Aug 03 [ ]              |   Aug 10 [ ]   |        Aug 17 [ ]         |    Aug 24 [ ]    | Aug 31 [ ] | Sep 07 [ ] |
 | *🏖 Vacation* | Aug     |                                     |                |                           |                  |            |            |
