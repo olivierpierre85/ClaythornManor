@@ -9,18 +9,14 @@
 #         real choices regardless of the refused flag).
 #
 # Floor crossing:
-#   - The engine tracks current_room/previous_room (custom_functions.rpy). At
-#     the top of a room's redirect label, current_room is still the room he is
-#     leaving, so we can tell when he crosses between floors.
-#   - Going DOWN from above stairs  -> broken_descend_if_needed (livery on, mask off)
-#   - Coming UP from below stairs   -> broken_ascend_if_needed (livery off, mask on)
-#   - Moving below-to-below or above-to-above triggers no change.
-
-init python:
-    def broken_is_downstairs(room_id):
-        # The servants' floor (basement). Crossing into or out of this group is
-        # what triggers the livery change.
-        return room_id in ('kitchen', 'scullery', 'garage', 'gun_room')
+#   - Whether he is currently in the livery is tracked by the saved variable
+#     day1_evening_wearing_livery. He may put it on early by trying it on in the
+#     servant stair (broken_day1_evening_servant_stairs); otherwise he changes at
+#     the threshold of the servants' floor.
+#   - Going DOWN below stairs   -> broken_descend_if_needed (puts the livery on,
+#     mask off, unless he is already wearing it).
+#   - Coming UP among the guests -> broken_ascend_if_needed (takes the livery off,
+#     mask on, if he is still wearing it).
 
 
 label broken_day1_evening_map_menu:
@@ -89,18 +85,17 @@ label broken_livery_change_penalty:
 
 label broken_descend_if_needed:
 
-    # Coming from above stairs -> change into the livery before going below.
-    if not broken_is_downstairs(current_room):
+    # Going below stairs -> make sure the livery is on. If he is already wearing
+    # it (he tried it on in the servant stair), there is nothing to change.
+    if not broken_details.saved_variables['day1_evening_wearing_livery']:
 
         $ change_room('servant_stairs')
 
         """
-        I duck into the servant stair, take the livery from its peg, and shrug it on.
-
-        Then the mask, worked loose and tucked away inside the coat.
-
-        A footman is furniture. No one below will give me a second glance.
+        I slip into the servant stair and quickly put the livery back on to go downstairs.
         """
+
+        $ broken_details.saved_variables['day1_evening_wearing_livery'] = True
 
         call broken_livery_change_penalty
 
@@ -109,8 +104,8 @@ label broken_descend_if_needed:
 
 label broken_ascend_if_needed:
 
-    # Coming from below stairs -> change back before rejoining the guests.
-    if broken_is_downstairs(current_room):
+    # Going above stairs -> change back before rejoining the guests.
+    if broken_details.saved_variables['day1_evening_wearing_livery']:
 
         $ change_room('servant_stairs')
 
@@ -122,6 +117,8 @@ label broken_ascend_if_needed:
         Mr Moody again.
         """
 
+        $ broken_details.saved_variables['day1_evening_wearing_livery'] = False
+
         call broken_livery_change_penalty
 
     return
@@ -132,8 +129,6 @@ label broken_ascend_if_needed:
 # ------------------------------------
 label broken_day1_evening_servant_stairs:
 
-    call broken_ascend_if_needed
-
     $ change_room('servant_stairs')
 
     if not broken_details.threads.is_unlocked('found_livery'):
@@ -141,26 +136,17 @@ label broken_day1_evening_servant_stairs:
         """
         A low door lets onto a narrow stair, plainly the servants' way through the house.
 
-        A footman's livery hangs on a peg, pressed and waiting for the morning.
+        A footman's livery hangs on a peg.
 
         On an impulse I hold it up against myself.
 
-        It fits. They cut these for tall men, and tall is the one thing I have never lacked.
+        It should fit.
         """
 
-        pause 0.5
-
-        """
-        And there it is. The thought arrives before I have quite decided to think it.
-
-        With this on my back, and the mask off my face, no one below stairs would look at me twice.
-
-        A guest cannot set foot on the servants' floor without being marked and remembered.
-
-        But a footman is furniture. He may go where he pleases.
-        """
-
-        $ broken_details.threads.unlock('found_livery')
+        call run_menu(TimedMenu("broken_day1_evening_servant_stairs_livery_menu", [
+            TimedMenuChoice('Try the livery on', 'broken_day1_evening_wear_livery', 10, early_exit=True),
+            TimedMenuChoice('Leave it on its peg for now', 'broken_day1_evening_leave_livery', 0, early_exit=True),
+        ]))
 
     else:
 
@@ -169,6 +155,38 @@ label broken_day1_evening_servant_stairs:
 
         The livery waits on its peg, where I leave it between uses.
         """
+
+    return
+
+
+label broken_day1_evening_wear_livery:
+
+    """
+    I try the livery on and remove my mask, tucking it away inside the coat.
+
+    With this on my back, and the mask off my face, no one below stairs would look at me twice.
+
+    A guest cannot set foot on the servants' floor without being marked and remembered.
+
+    But a footman is furniture.
+
+    He may go where he pleases.
+    """
+
+    $ broken_details.threads.unlock('found_livery')
+
+    $ broken_details.saved_variables['day1_evening_wearing_livery'] = True
+
+    return
+
+
+label broken_day1_evening_leave_livery:
+
+    """
+    No, it is too dangerous.
+
+    I let the livery fall back against its peg.
+    """
 
     return
 
@@ -186,7 +204,13 @@ label broken_day1_evening_dining_room:
 
     call broken_ascend_if_needed
 
-    call broken_dining_room_default
+    $ change_room('dining_room')
+
+    """
+    The staff are clearing the last of the dinner service.
+
+    I have no wish to be underfoot, so I do not linger.
+    """
 
     return
 
@@ -256,7 +280,7 @@ label broken_day1_evening_bedroom_avoid:
 
         No.
 
-        I am already taking risk enough passing myself off as another man.
+        I am already running risk enough passing myself off as another man.
 
         I cannot afford to be caught coming out of a guest's room.
 

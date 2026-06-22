@@ -9,6 +9,7 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 
 
+
 ### Write Story: NEXT => Broken
 
 **Prerequisites / decisions before writing:**
@@ -18,6 +19,7 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 #### 1. Map goals & discoveries
 - **Broken is well suited to uncovering the Host**, but at the moment the Captain is the one who does it.
 - Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.
+- DECIDE which logic I need? broken_details.saved_variables.get("visited_garage")
 
 #### 2. Write story
 
@@ -37,8 +39,8 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
   - MAKE sure you need to have unlock HOSt lies to talk to maid? IF yes, add clue to unlock it.
   - More options to talk with butler? Where to find footman? Maybe interrogate during hunt instead
 - Add FIND A LETTER, if consistent with the Captain's story.
-- TEST all default locations
-  DO I have the opportunity to roam the bedrooms as a footman? It would be a great cover? I should allow this, but it makes it complicated, so no bedrooms for the moment.
+  DO I have the opportunity to roam the **bedrooms** as a footman? It would be a great cover? I should allow this, but it makes it complicated, so no bedrooms for the moment.
+
 ##### Saturday Morning (Ted is always dead)
 - If Ted is dead → an early death for Moody and everyone else, because they have lost their minds (not the same as Moody). Ted was young, so suspicion runs very high: no hunt, just lunch while waiting for the police — then everyone dies.
 

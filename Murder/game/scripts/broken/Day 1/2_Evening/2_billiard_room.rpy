@@ -260,7 +260,7 @@ label broken_day1_evening_billiard_room_butler:
     """
     The maid might have been mistaken about the surprise, but there is no doubt the butler is lying about the house.
 
-    I should be careful and not investigate further.
+    I should be careful while I investigate further.
     """
 
     return

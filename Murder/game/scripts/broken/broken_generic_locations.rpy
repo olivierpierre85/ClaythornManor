@@ -19,25 +19,12 @@ label broken_tea_room_default:
     return
 
 
-label broken_dining_room_default:
-
-    $ change_room('dining_room')
-
-    """
-    The staff are clearing the last of the dinner service.
-
-    I have no wish to be underfoot, so I do not linger.
-    """
-
-    return
-
-
 label broken_entrance_hall_default:
 
     $ change_room('entrance_hall')
 
     """
-    The hall is quiet at this hour.
+    The hall is quiet.
 
     Worn carpet, brass wanting polish. A house keeping up appearances on a thinning purse, as I marked when I first came in.
 
@@ -56,8 +43,6 @@ label broken_portrait_gallery_default:
 
     I study the faces out of habit, looking for the likeness that runs down a family line.
 
-    It is the one thing the mask has never stopped me doing.
-
     There is nothing here that asks a question of me tonight.
     """
 
@@ -73,9 +58,9 @@ label broken_library_default:
 
     A heavy book lies open on the table — a dictionary of the landed gentry.
 
-    I know the use of a book like that, even if I am no great reader.
-
-    Another time, perhaps. Tonight I would sooner walk the house than sit and read about it.
+    But I don't have the time to read it.
+    
+    Tonight I have more important things to investigate.
     """
 
     return
@@ -101,19 +86,13 @@ label broken_garage_default:
         $ broken_details.saved_variables["visited_garage"] = True
 
         """
-        A motor car stands under a dust sheet, and the air is thick with petrol and cold iron.
+        The air is thick with petrol and cold iron.
 
-        I draw the sheet back a little.
+        A motor car stands in the middle of the room.
 
         An old tourer, well kept, though it has not been run in some time.
 
-        Force of habit has me looking it over — the tyres, the plugs, the state of the engine.
-
-        Whatever else I have set aside for this masquerade, the hands of a mechanic do not forget their trade.
-
-        Still, there is nothing here that speaks to the business that brought me to this house.
-
-        I let the sheet fall and leave it be.
+        Nothing else gets my attention.
         """
 
     return

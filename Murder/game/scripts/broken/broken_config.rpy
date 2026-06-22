@@ -23,6 +23,7 @@ label init_broken:
             "day1_evening_bedroom_refusals" : 0,
             "day1_evening_billiard_room_visited" : False,
             "day1_evening_downstairs_refused" : False,
+            "day1_evening_wearing_livery" : False,
         }
 
         broken_important_choices = CharacterImportantChoiceList([
