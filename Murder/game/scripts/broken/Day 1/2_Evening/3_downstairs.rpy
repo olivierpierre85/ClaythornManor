@@ -195,10 +195,53 @@ label broken_day1_evening_kitchen_maid:
     Alright, now is the time to see if I can bluff my way here.
     """
 
-    # TODO
+    broken """
+    Forgive me.
 
+    I am only taken on for the weekend, to lend a hand.
+
+    I was sent for in a hurry, and told precious little of what goes on.
+    """
+
+    maid """
+    Well, we all are.
+
+    The manor stood empty before this, you know.
+
+    If it is guidance you are after, find the butler.
+
+    He is the only one who truly knows what is going on here.
+    """
 
     """
+    Empty before this?
+
+    So the place has been prepared for this weekend, especially for us. How curious.
+    """
+
+    broken """
+    This is rather unusual.
+
+    If this place was empty before, why re-open it for this weekend?
+    """
+
+    maid """
+    I could not say, exactly.
+
+    There is some manner of surprise in store for the guests, I think.
+
+    So, of course, share none of this with them.
+
+    But ask the butler.
+
+    He will tell you more than I can.    
+    """
+
+    """
+    A surprise prepared for us. What does it all mean?
+
+    I want to ask more questions, but to do so would appear too suspicious.
+
     I leave her to her pots and make my way back up, turning it all over in my mind.
     """
 

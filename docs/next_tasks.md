@@ -15,7 +15,7 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 - Test the changing MALUS and the whole Broken branching logic.
 
 #### 1. Map goals & discoveries
-- Broken is well suited to uncovering the Host, but at the moment the Captain is the one who does it.
+- **Broken is well suited to uncovering the Host**, but at the moment the Captain is the one who does it.
 - Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.
 
 #### 2. Write story
