@@ -56,7 +56,7 @@ label init_broken:
             CharacterInformation(1, "host_lies",
                 "You noticed Lady Claythorn is hiding something",
                 content_negative="You didn't noticed Lady Claythorn is hiding something",
-                image_file="question_mark",
+                image_file="host",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),

@@ -68,8 +68,7 @@ THE WHol stuff can be decided at the end of the writing
 ## Assets & artistic Tasks
 
 FOR BROKEN:
-- Image for talk with maid (maid side photo should be enough)
-- RAT poison bottle check already exists?
+- Talk to butler? See check if necessery
 
 Try flux dev on my laptop?
 
