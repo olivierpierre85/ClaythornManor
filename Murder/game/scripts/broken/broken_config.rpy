@@ -22,6 +22,7 @@ label init_broken:
             # Evening day 1
             "day1_evening_bedroom_refusals" : 0,
             "day1_evening_billiard_room_visited" : False,
+            "day1_evening_billiard_room_butler_approached" : False,
             "day1_evening_downstairs_refused" : False,
             "day1_evening_wearing_livery" : False,
         }
@@ -57,6 +58,13 @@ label init_broken:
                 "You noticed Lady Claythorn is hiding something",
                 content_negative="You didn't noticed Lady Claythorn is hiding something",
                 image_file="host",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
+            CharacterInformation(1, "doctor_boxer",
+                "You learned Dr Baldwin served as a field surgeon in the Boxer Rebellion",
+                content_negative="You didn't learn where Dr Baldwin served",
+                image_file="doctor",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),

@@ -8,8 +8,6 @@ Servant stairs as last room => needs testing for other characters
 SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstairs? Add the servant stairs as the image when we try to reach downstairs? servant stairs could be servant room, or the upstairs stairs. But it will be fixed when we change the map
 
 
-
-
 ### Write Story: NEXT => Broken
 
 - Test the changing MALUS and the whole Broken branching logic.
@@ -17,13 +15,15 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 - **Broken is well suited to uncovering the Host**, but at the moment the Captain is the one who does it.
 - Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.  If he does, the Killbreath discovery can come right at the start.
 
-##### Friday Evening — Dinner
-- Add more questions for the Host, with misdirects, until the player reaches the conclusion that she is certainly lying (two proofs).
-  - Open question: does this unlock Lady Claythorn only now? Does it conflict with the Captain's path?
-- Once the player has the two proofs, they can press the staff further. This leads to interrogating the people below, but going downstairs is dangerous:
+##### **Friday Evening**
+
+IF ASK every questions, unlock the possibility to save people the next day-
+- suspicious of host => Dinner if right questions unlocked => Maybe it is enough as is. TEST
+- suspicious of Butler => Block if NOT suspicious of host. Lies about being open just for the day BUT do not tell about the surprise
+- suspicious of maid => Just for the questions
+- concidence with doctor => Boxer question
 
 
-##### Friday Evening — Map (after dinner)
 
 - **Billiard room** (improvements)
   - Add generic doctor/journalist insight, or drop the doctor talks entirely and fixate on the staff.
@@ -32,8 +32,6 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
   - DOUBLe check maid + butler? Is the butler explanation leaving place for doubt? I guess it could. BUT you need to add INFORMATION for the butler in the butler dialog => Menu generic butler? (I've heard someone talk about a surprise)
   - MAKE sure you need to have unlock HOSt lies to talk to maid? IF yes, add clue to unlock it.
   - More options to talk with butler? Where to find footman? Maybe interrogate during hunt instead
-- Add FIND A LETTER, if consistent with the Captain's story.
-  DO I have the opportunity to roam the **bedrooms** as a footman? It would be a great cover? I should allow this, but it makes it complicated, so no bedrooms for the moment.
 
 ##### Saturday Morning (Ted is always dead)
 - If Ted is dead → an early death for Moody and everyone else, because they have lost their minds (not the same as Moody). Ted was young, so suspicion runs very high: no hunt, just lunch while waiting for the police — then everyone dies.

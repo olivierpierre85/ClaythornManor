@@ -98,6 +98,7 @@ THE OUTside shed will show nothing of interest for captain. But the Broken will 
 - [ ] Thomas moody room ransacked?
 - [ ] Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
 - [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
+- [ ]   DO I have the opportunity to roam the **bedrooms** as a footman? It would be a great cover? I should allow this, but it makes it complicated, so no bedrooms for the moment.
   
 
 ## Nurse

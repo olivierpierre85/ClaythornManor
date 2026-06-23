@@ -59,14 +59,24 @@ label broken_day1_evening_billiard_room:
 
         """
         The butler returns to his place in a corner of the room.
+        """
 
+        if not broken_details.threads.is_unlocked('host_lies'):
+
+            """
+            I could put a few questions to the butler, but a guest who quizzes the servants soon makes himself memorable.
+
+            Without good reason to distrust this house, prying would only draw attention to me.
+            """
+
+        """
         What to do now?
         """
 
         $ broken_day1_evening_billiard_room_menu = TimedMenu("broken_day1_evening_billiard_room_menu", [
             TimedMenuChoice('Join the group and listen to the Captain', 'broken_day1_evening_billiard_room_story', 60),
             TimedMenuChoice('Talk to Dr Baldwin', 'broken_day1_evening_billiard_room_doctor', 0, next_menu = 'doctor_generic_menu_broken'),
-            TimedMenuChoice('Question the butler about the manor', 'broken_day1_evening_billiard_room_butler', 20, condition = "broken_details.threads.is_unlocked('talked_to_maid')"),
+            TimedMenuChoice('Speak with the butler', 'broken_day1_evening_billiard_room_butler', 0, keep_alive = True, next_menu = 'broken_butler_menu', condition = "broken_details.threads.is_unlocked('host_lies')"),
             TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
         ])
 
@@ -194,22 +204,56 @@ label broken_day1_evening_billiard_room_abstain:
 
 
 # ------------------------------------
-#   THE BUTLER (talked_to_maid required)
-#   The maid sent him here: the butler is the one who truly knows what
-#   the manor is about. He gives nothing away, and marks Moody for it.
-#   This is the man who later cuts his throat (broken_ending_day1_throat_cut).
+#   THE BUTLER
+#   Always available. Opens a small menu of questions. The butler gives
+#   nothing away, and marks Moody for the asking. This is the man who later
+#   cuts his throat (broken_ending_day1_throat_cut). The surprise question
+#   is only offered once the maid has been questioned (talked_to_maid).
 # ------------------------------------
 label broken_day1_evening_billiard_room_butler:
 
-    """
-    The maid's words are still turning over in my mind.
+    if not broken_details.saved_variables['day1_evening_billiard_room_butler_approached']:
 
-    The butler is the one who knows what this house is about.
+        $ broken_details.saved_variables['day1_evening_billiard_room_butler_approached'] = True
 
-    He stands in his corner, hands folded, missing nothing.
+        """
+        The butler stands in his corner, hands folded, missing nothing.
 
-    I cross to him as though only in want of conversation.
-    """
+        If I want information about this weekend, he should be the one to have it.
+
+        I cross to him as though only in want of conversation.
+        """
+
+        butler """
+        Mr Moody, what can I do for you?
+        """
+
+    else:
+
+        """
+        I drift back towards the butler in his corner.
+        """
+
+    $ broken_butler_menu.early_exit = False
+
+    
+    $ broken_butler_menu = TimedMenu("broken_butler_menu", [
+        TimedMenuChoice('Remark on the strange air of the house', 'broken_day1_evening_billiard_room_butler_house', 20),
+        TimedMenuChoice('Ask how large the household staff is', 'broken_day1_evening_billiard_room_butler_staff', 15),
+        TimedMenuChoice('Ask the butler about himself', 'broken_day1_evening_billiard_room_butler_about', 15),
+        TimedMenuChoice('Ask whether a surprise has been prepared', 'broken_day1_evening_billiard_room_butler_surprise', 20, condition = "broken_details.threads.is_unlocked('talked_to_maid')"),
+        TimedMenuChoice('Leave the butler to his work', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_left = "butler")
+
+    call run_menu(broken_butler_menu)
+
+    return
+
+
+# ------------------------------------
+#   BUTLER — THE STATE OF THE HOUSE
+# ------------------------------------
+label broken_day1_evening_billiard_room_butler_house:
 
     broken """
     A fine room, this.
@@ -233,6 +277,96 @@ label broken_day1_evening_billiard_room_butler:
     I do apologise for it.
     """
 
+    """
+    He answers smoothly enough, yet I have little doubt the butler is shading the truth about this house.
+    """
+
+    return
+
+
+# ------------------------------------
+#   BUTLER — THE SIZE OF THE STAFF
+# ------------------------------------
+label broken_day1_evening_billiard_room_butler_staff:
+
+    broken """
+    Tell me, how many of you are there, keeping a house of this size?
+
+    I have seen remarkably few faces about the place.
+    """
+
+    butler """
+    That is true we are a small staff, sir.
+
+    Smaller than a house like this would once have kept, I will own.
+
+    Her ladyship spend most of her time alone, she does not require a lot of help.
+    """
+
+    broken """
+    Aren't you worried it will be a rather limited staff for this weekend?
+    """
+
+    butler """
+    Not at all.
+
+    I can assure you we will manage well enough, sir.
+    """
+
+    """
+    A house this size ought to swarm with servants.
+
+    But I suppose his explanation is believable enough.
+    """
+
+    return
+
+
+# ------------------------------------
+#   BUTLER — THE MAN HIMSELF
+# ------------------------------------
+label broken_day1_evening_billiard_room_butler_about:
+
+    broken """
+    I would like to know 
+    """
+
+    butler """
+    You are kind to say so, sir.
+
+    I have been in service the better part of my life.
+
+    One house is much like another, in the end.
+    """
+
+    broken """
+    And how long have you been with Lady Claythorn?
+    """
+
+    butler """
+    Long enough to know my place, sir.
+
+    Her ladyship was good enough to take me on.
+
+    I should not wish to give her cause to regret it.
+    """
+
+    """
+    He gives nothing away, and turns the question as neatly as a card sharp turns a card.
+
+    And all the while those steady eyes are taking the measure of me.
+
+    I have the distinct impression I have been weighed, and noted.
+    """
+
+    return
+
+
+# ------------------------------------
+#   BUTLER — THE SURPRISE (talked_to_maid required)
+# ------------------------------------
+label broken_day1_evening_billiard_room_butler_surprise:
+
     broken """
     I had heard there might be some surprise laid on for us this weekend.
 
@@ -254,14 +388,19 @@ label broken_day1_evening_billiard_room_butler:
     broken """
     I see.
 
+    Someone in your staff led me to believe there was something else.
+
     I must have misunderstood, of course.
     """
 
     """
-    The maid might have been mistaken about the surprise, but there is no doubt the butler is lying about the house.
+    Something in the look of the butler changes for a second.
 
-    I should be careful while I investigate further.
+    He was genniuely trouble by this.
+
+    But he doesn't push further.
     """
+
 
     return
 
