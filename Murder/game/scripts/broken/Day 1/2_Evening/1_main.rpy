@@ -272,12 +272,86 @@ label broken_day1_evening:
     I take off the mask and let out a long breath.
 
     So far, so good. No one has yet seen through Thomas Moody.
+    """
 
-    Tomorrow I shall have to be every bit as careful.
+    $ play_music('mysterious', 2)
 
-    But for now I can rest, as it has been a very long day.
+    """
+    Then I see it.
 
-    I lie down, and sleep takes me almost before my head has touched the pillow
+    A single sheet of paper, folded once, lying upon my pillow.
+
+    It was not there when I dressed for dinner.
+
+    A cold weight settles behind my ribs.
+
+    Someone has stood in this room while I played the guest below.
+
+    I take up the paper and unfold it beneath the lamp.
+
+    The print faded and the creases gone soft with handling, written in the autumn of 1917.
+
+    It is an old army order, for the transfer of an officer.
+    
+    One soldier struck off his posting and sent up to a company in Flanders, into the worst of the War. 
+
+    The transferred officer's name: Thomas Moody.
+    
+    Before that, Thomas, like myself, had the softest billet in the whole Army.
+
+    Minding the gentlemen of the press. Shepherding war correspondents from one safe vantage to the next, well back of the guns, so they might pen their despatches and go home whole.
+
+    When the order came for one of us to go forward, they did not choose me.
+
+    They chose Thomas.
+
+    A boot-boy who had clawed his way to a commission, a temporary gentleman with Liverpool still thick in his vowels. 
+    
+    Set beside me, he was the cheaper life.
+
+    No one ever writes that reason on an order. But I have always known it, and have never once said it aloud.
+
+    He went forward in my stead, and he came back a ruined man.
+
+    The date of it I have never managed to forget, not for a single day.
+
+    Since then I have carried a press card and taken up the very work we were once only set to guard, as though wearing his trade might settle some part of the debt.
+
+    It never has.
+
+    And at the foot of the order, in a neat staff officer's hand, the name of the man who signed him away.
+
+    Captain S. Sinha, Staff Officer, General Headquarters.
+
+    Sinha.
+
+    The upright officer who held the tea room not five hours ago with his tales of war glory.
+
+    A staff officer at headquarters, for all his soldier's talk. 
+    
+    A man who never saw battle, yet did not blink at sending others to their deaths.
+
+    And he is sleeping beneath this very roof tonight.
+    """
+
+    pause 1.0
+
+    """
+    I sit a long while with the paper in my hands.
+
+    Someone wished for Thomas Moody to have this. 
+
+    Was Thomas invited here to exact revenge on Captain Sinha?
+
+    And are the others here for the same purpose?
+
+    The implications ought to frighten me.
+
+    Instead, the image of Tom, dead on his bed, fills me with a mixture of anger and sadness.
+
+    No matter how hard I try, I cannot seem to reason logically.
+
+    Sleep is a long time coming, and when it takes me, I still have no idea of what I am to do tomorrow.
     """
 
     if broken_details.threads.is_unlocked('talked_to_maid'):
