@@ -227,33 +227,27 @@ label captain_day2_hunt_moody_alive:
     broken """
     You see, Captain, I found a piece of paper upon my bed yesterday.
 
-    An old order from the War, written in the autumn of 1917.
+    An old army order, written in the autumn of 1917. A transfer.
 
-    The order was to send men to take a vaguely strategic position in Flanders.
+    Until then, the officer named upon it had held the safest billet in France.
 
-    At first, I did not understand what it was doing here.
+    Conducting officer to the war correspondents, minding the gentlemen of the press well back of the guns, where no harm could come to him.
 
-    There must have been thousands of such orders issued during the war.
+    This order pulled him off it and sent him up to the line.
 
-    Then I recognised the name of the company that received the order: B Company, 2nd Battalion, Lancashire Fusiliers.
+    I assume you can guess his name: Thomas Moody.
 
-    My own company.
-
-    And then I checked the date of the order.
-    
-    It was a date that will remain engraved in my memory for ever.
-
-    And at the end of the order, the name of the man who signed the fatal order.
+    And at the foot of the order, the name of the man who put his signature to it.
 
     Captain S. Sinha, Staff Officer, General Headquarters.
 
-    Hundreds of men were sent by your hand, to take a small village of no importance.
+    A stroke of your pen, and a man was taken from safety and marched into the worst of the war.
 
-    Most of them, dead by now.
+    Most who were sent up that season are in the Flanders mud yet.
 
-    And the few survivors of that horrific day were not much luckier.
+    And the few who came back were not much luckier.
 
-    They were forced to go through life as living monsters, hiding behind a mask such as this.
+    They go through life as living monsters, hiding behind a mask such as this.
     """
 
     """
@@ -269,29 +263,25 @@ label captain_day2_hunt_moody_alive:
 
     Most of them I could not recall if my life depended upon it.
 
-    Yet I never ordered men to battle, that was never my job.
+    It is true that by that autumn, they were combing the soft billets for officers to throw into the thick of battle.
+
+    Yet, that was never my job.
     """
 
     captain """
     You are mistaken, Mr Moody.
 
-    That is a slander.
+    I only ever signed what was laid before me, drafted by other hands.
 
-    I have never sent men to their deaths.
-
-    My work relied only on securing rations, arranging transport, and endorsing requisitions.
-
-    Someone is trying to pit you against me.
+    I never chose a single name, least of all his.
     """
 
     broken """
     Ah! How convenient for you, Captain.
 
-    But I have no reason to believe you.
+    But I have no reason to believe you, in any case.
 
     Especially since I am now sure that you are not the war hero you claim.
-
-    I know that a staff officer never sees battle.
 
     It was obvious today, when you could not even shoot a bird right under your nose.
 
@@ -365,7 +355,7 @@ label captain_day2_hunt_moody_alive:
     """
 
     broken """
-    Ah! It is rather plain you never saw battle, Captain.
+    Ah! Further proof you never saw battle, Captain.
 
     Well.
 
