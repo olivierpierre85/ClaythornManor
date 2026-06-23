@@ -207,9 +207,9 @@ label broken_day1_evening_dining_room:
     $ change_room('dining_room')
 
     """
-    The staff are clearing the last of the dinner service.
+    The staff have cleared the last of the dinner service.
 
-    I have no wish to be underfoot, so I do not linger.
+    I do not linger.
     """
 
     return

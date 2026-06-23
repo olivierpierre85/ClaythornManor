@@ -12,16 +12,10 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ### Write Story: NEXT => Broken
 
-**Prerequisites / decisions before writing:**
-- Find a way for Broken to unlock the Host. If he does, the Killbreath discovery can come right at the start.
 - Test the changing MALUS and the whole Broken branching logic.
 
-#### 1. Map goals & discoveries
 - **Broken is well suited to uncovering the Host**, but at the moment the Captain is the one who does it.
-- Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.
-- DECIDE which logic I need? broken_details.saved_variables.get("visited_garage")
-
-#### 2. Write story
+- Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.  If he does, the Killbreath discovery can come right at the start.
 
 ##### Friday Evening — Dinner
 - Add more questions for the Host, with misdirects, until the player reaches the conclusion that she is certainly lying (two proofs).
@@ -32,10 +26,10 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 ##### Friday Evening — Map (after dinner)
 
 - **Billiard room** (improvements)
-  - MAYBE LATER Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
   - Add generic doctor/journalist insight, or drop the doctor talks entirely and fixate on the staff.
+    - If talk to doctor, to discover what? Boxer's rebellion was already found there BUT he could be the one to make the full connexion? maybe
   - Add a "question the butler" path (if you've unlocked the strange material about the Host) → **do it and you die no matter what.** Reuse throat cut ending
-  - DOUBLe check maid + butler? Is the butler explanation leaving place for doubt? I guess it could. Or is it a revelation for
+  - DOUBLe check maid + butler? Is the butler explanation leaving place for doubt? I guess it could. BUT you need to add INFORMATION for the butler in the butler dialog => Menu generic butler? (I've heard someone talk about a surprise)
   - MAKE sure you need to have unlock HOSt lies to talk to maid? IF yes, add clue to unlock it.
   - More options to talk with butler? Where to find footman? Maybe interrogate during hunt instead
 - Add FIND A LETTER, if consistent with the Captain's story.

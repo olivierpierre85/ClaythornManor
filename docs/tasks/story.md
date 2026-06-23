@@ -86,24 +86,17 @@
 ### Important
 - [ ] MORE DEAD!!! For some THOMAS MOODY,**the deaths are coming faster**. Because the psychic saw into his lies and loses it. VERY VERY hard to survive till the end
     - [ ] For that, needs to observe poison => so possibility to avoid eating at dinner
-    - [ ] Then need to steal food from someone to not starve? go downstairs? Switch plates?
   - [ ] Psychic realise Moody is not who he is, she loses it.
-  - [ ] Moody gives whiskey to lad, he dies. She loses it
   - [ ] Moody also receives letter, telling him the captain is the reason of his disfigurement (see cap endings)
   - [ ] Somebody realises the police will not come, so they go fetch them. Needs to accelerate stuff
   - [ ] Can check the telephone as he is very sus (choice in the entrance hall)
 THE OUTside shed will show nothing of interest for captain. But the Broken will find the bodies of the staff there if he survives.
-
-- [ ] Why is he angered by the doctor? His brother?/best friend?/Lover? was a broken face, that’s his mask AND scared of being recognize
-- [ ] Servant uniform: Only one who can wear the footman livery in the servants stairs
-  - [ ] As a journalist, he will find poison downstairs. and take it with him?
-- [ ] When broken learns his whisky is poisoned, he doesn’t offer one to Ted harring
-- [ ] Explain the thing with the flask (I forgot my flask while distracted by captain)
-- [ ] THE **butler will kill him**, by putting poison in his flasks while he is distracted by captain YES he is an accomplice BUTLER fin
+- [ ] There is still a small hole in the whisky poisoned lying there, psychic would have made clear to give it to BROKEN. Not just stand there in the table? Minor?
 
 ### Ideas to think over (optional)
 
 - [ ] Thomas moody room ransacked?
+- [ ] Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
 - [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
   
 
