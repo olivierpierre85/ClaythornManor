@@ -68,6 +68,13 @@ label init_broken:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
+            CharacterInformation(1, "surprise_planned",
+                "You sensed the butler is hiding some kind of surprise",
+                content_negative="You didn't sense the butler is hiding some kind of surprised",
+                image_file="butler",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening'],
+            ),
         ])
 
         broken_objects = CharacterObjectList([
