@@ -25,6 +25,9 @@ init python in test:
             self.start_chapter = None
             self.reached_new_chapter = None
             self.plan_file = None
+            # When True, choices are decided by a local LLM (Ollama) instead of a
+            # recorded plan. See ollama_tester.rpy and run_chapter_ollama().
+            self.ollama_mode = False
 
         def load_plan_file(self, path_in_game_dir):
             raw = renpy.open_file(path_in_game_dir).read().decode("utf-8")
@@ -64,8 +67,24 @@ init python in test:
         def pick_choice_for_menu(self, timed_menu):
             """
             Called from TimedMenu.display_choices() during tests.
-            Picks a TimedMenuChoice from timed_menu.choices using the plan.
+            Picks a TimedMenuChoice from timed_menu.choices using the plan,
+            or (in ollama_mode) by asking the local LLM.
             """
+            # Only consider choices that are valid (your logic).
+            # Map menus mirror in-game behaviour: the map UI lets the player
+            # revisit any room and only checks the choice condition, so we
+            # ignore the `hidden` flag here too.
+            if getattr(timed_menu, "is_map", False):
+                valid_choices = [c for c in timed_menu.choices if c.get_condition()]
+            else:
+                valid_choices = [c for c in timed_menu.choices if c.is_valid()]
+
+            # --- Ollama tester mode: a local LLM reads the story so far and picks ---
+            if getattr(self, "ollama_mode", False):
+                idx = decide_choice(timed_menu, valid_choices)
+                return valid_choices[idx]
+
+            # --- Recorded plan mode (default) ---
             step = self._next_step()
 
             expected_menu_id = step.get("menu")
@@ -79,15 +98,6 @@ init python in test:
 
             expected_redirect = step.get("redirect", None)
             expected_text = step.get("selected", None)
-
-            # Only consider choices that are valid (your logic).
-            # Map menus mirror in-game behaviour: the map UI lets the player
-            # revisit any room and only checks the choice condition, so we
-            # ignore the `hidden` flag here too.
-            if getattr(timed_menu, "is_map", False):
-                valid_choices = [c for c in timed_menu.choices if c.get_condition()]
-            else:
-                valid_choices = [c for c in timed_menu.choices if c.is_valid()]
 
             # Prefer redirect match (most stable), fallback to text match
             if expected_redirect:
@@ -279,6 +289,84 @@ init python in test:
             # Its 'next' attribute will be used when it finishes.
             # We chain our generated sequence so it continues to the original next node.
             current_node.chain(node_executor.node.next)
-            
+
             # We then overwrite its 'next' property to be our dynamic chain.
+            node_executor.node.next = first_node.next
+
+    def run_chapter_ollama(character, chapter_id, start_label, runs=3, threads=None):
+        """
+        Plays a chapter `runs` times, letting the local LLM (Ollama) pick every
+        choice instead of a recorded JSON plan. Mirrors run_chapter()'s node
+        chaining (jump -> wait for test_end -> soft reset) but with no plan file
+        and autorunner.ollama_mode = True. Each run writes its own transcript
+        (via the existing change_time export hook) plus an Ollama decision log.
+
+        threads: optional list of thread/ending names to pre-unlock so a later
+        chapter exposes the branches that depend on earlier-day discoveries.
+        """
+        import renpy.test.testast as testast
+        from renpy.test.testexecution import node_executor
+
+        loc = ("", 0)
+        current_node = PyCallNode(loc, lambda: None)
+        first_node = current_node
+
+        def soft_reset():
+            renpy.exports.hide_screen('test_end')
+            import copy
+            if hasattr(character, '_test_pristine_snapshot'):
+                character.saved_variables = copy.deepcopy(character._test_pristine_snapshot)
+                character.threads = copy.deepcopy(character._test_pristine_threads)
+                character.progress = copy.deepcopy(character._test_pristine_progress)
+                character.observations = copy.deepcopy(character._test_pristine_observations)
+
+            if hasattr(character, 'reset_information'):
+                character.reset_information()
+
+            renpy.store.all_menus.clear()
+            renpy.store.all_choices.clear()
+
+            renpy.store.menu_level = -1
+            renpy.store.selected_choice = [None, None, None, None, None]
+            renpy.store.time_diff = [None, None, None, None, None]
+
+            while renpy.exports.call_stack_depth() > 0:
+                renpy.exports.pop_call()
+
+        def setup_ollama():
+            # plan_file=None: no recorded steps, decisions come from Ollama.
+            start(character, chapter_id, None, threads)
+            autorunner.ollama_mode = True
+            reset_decision_log()
+
+        for i in range(runs):
+            if i > 0:
+                reset_node = PyCallNode(loc, soft_reset)
+                current_node.chain(reset_node)
+                current_node = reset_node
+
+            setup_node = PyCallNode(loc, setup_ollama)
+            current_node.chain(setup_node)
+            current_node = setup_node
+
+            jump_node = testast.Action(loc, f"Jump('{start_label}')")
+            current_node.chain(jump_node)
+            current_node = jump_node
+
+            screen_selector = testast.DisplayableSelector(loc, screen="'test_end'")
+            until_node = testast.Until(loc, testast.Advance(loc), screen_selector, timeout="180.0")
+            current_node.chain(until_node)
+            current_node = until_node
+
+            # Save the LLM's reasoning for this run next to the transcript.
+            dump_node = PyCallNode(loc, dump_decision_log)
+            current_node.chain(dump_node)
+            current_node = dump_node
+
+            cleanup_node = PyCallNode(loc, autorunner.reset)
+            current_node.chain(cleanup_node)
+            current_node = cleanup_node
+
+        if first_node.next:
+            current_node.chain(node_executor.node.next)
             node_executor.node.next = first_node.next
