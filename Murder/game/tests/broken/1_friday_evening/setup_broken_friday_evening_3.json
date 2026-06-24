@@ -1,0 +1,62 @@
+{
+    "start_label": "broken_day1_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "broken_day1_evening_downstairs_refused"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Servant Stairs",
+            "redirect": "broken_day1_evening_servant_stairs"
+        },
+        {
+            "menu": "broken_day1_evening_servant_stairs_livery_menu",
+            "selected": "Try the livery on",
+            "redirect": "broken_day1_evening_wear_livery"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Servant Stairs",
+            "redirect": "broken_day1_evening_servant_stairs"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Scullery",
+            "redirect": "broken_day1_evening_scullery"
+        },
+        {
+            "menu": "broken_day1_evening_scullery_poison_menu",
+            "selected": "Take the bottle with you",
+            "redirect": "broken_day1_evening_scullery_take_poison"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "broken_day1_evening_kitchen"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Garage",
+            "redirect": "broken_day1_evening_garage"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Garage",
+            "redirect": "broken_day1_evening_garage"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Gun room",
+            "redirect": "broken_day1_evening_gun_room"
+        }
+    ]
+}

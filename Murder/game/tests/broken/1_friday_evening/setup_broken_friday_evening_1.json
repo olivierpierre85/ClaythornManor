@@ -5,37 +5,32 @@
     "choices": [
         {
             "menu": "host_generic_menu_broken",
-            "selected": "What do you make of this weather?",
-            "redirect": "host_generic_weather"
-        },
-        {
-            "menu": "host_generic_menu_broken",
-            "selected": "I should like to hear a little about yourself.",
+            "selected": "Tell me more about yourself.",
             "redirect": "host_generic_background_broken"
         },
         {
             "menu": "host_generic_menu_broken",
-            "selected": "Why did you invite us here, exactly?",
+            "selected": "Why did you invite us here?",
             "redirect": "host_generic_invite_broken"
         },
         {
             "menu": "host_generic_menu_broken",
-            "selected": "What do you think of the other guests?",
-            "redirect": "host_generic_other_guests_broken"
+            "selected": "Have you been giving this prize away for long?",
+            "redirect": "host_generic_award"
         },
         {
             "menu": "host_generic_menu_broken",
-            "selected": "This is a fine old house.",
-            "redirect": "host_generic_manor"
+            "selected": "How old are you?",
+            "redirect": "host_generic_age_broken"
         },
         {
             "menu": "host_generic_menu_broken",
-            "selected": "Which room have you given yourself?",
+            "selected": "What room are you in?",
             "redirect": "host_generic_room"
         },
         {
-            "menu": "host_generic_menu_broken",
-            "selected": "You don't have any more questions for her",
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Retire for the night",
             "redirect": "generic_cancel"
         }
     ]

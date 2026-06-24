@@ -1,0 +1,52 @@
+{
+    "start_label": "broken_day1_evening",
+    "unlocked_threads": ["host_lies", "found_livery"],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Look in on the others in the billiard room",
+            "redirect": "broken_day1_evening_billiard_room"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Look in on the others in the billiard room",
+            "redirect": "broken_day1_evening_billiard_room"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_menu",
+            "selected": "Join the group and listen to the Captain",
+            "redirect": "broken_day1_evening_billiard_room_story"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_whisky_menu",
+            "selected": "Leave it be, it would be impolite",
+            "redirect": "broken_day1_evening_billiard_room_abstain"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "broken_day1_evening_kitchen"
+        },
+        {
+            "menu": "broken_day1_evening_kitchen_menu",
+            "selected": "Ask her a few questions",
+            "redirect": "broken_day1_evening_kitchen_maid"
+        }
+    ]
+}

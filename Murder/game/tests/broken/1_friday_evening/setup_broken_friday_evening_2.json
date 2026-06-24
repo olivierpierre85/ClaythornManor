@@ -1,0 +1,77 @@
+{
+    "start_label": "broken_day1_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What do you think of this weather?",
+            "redirect": "host_generic_weather"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What do you think of this place?",
+            "redirect": "host_generic_manor"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What do you think of the other guests?",
+            "redirect": "host_generic_other_guests_broken"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Tea room",
+            "redirect": "broken_day1_evening_tea_room"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Dining Room",
+            "redirect": "broken_day1_evening_dining_room"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Garden",
+            "redirect": "broken_day1_evening_garden"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Entrance Hall",
+            "redirect": "broken_day1_evening_entrance_hall"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "broken_day1_evening_portrait_gallery"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Library",
+            "redirect": "broken_day1_evening_library"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Storage Room",
+            "redirect": "broken_day1_evening_attic_default"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "William the Conqueror Bedroom",
+            "redirect": "broken_day1_evening_bedroom_avoid"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Servant Stairs",
+            "redirect": "broken_day1_evening_servant_stairs"
+        },
+        {
+            "menu": "broken_day1_evening_servant_stairs_livery_menu",
+            "selected": "Leave it on its peg for now",
+            "redirect": "broken_day1_evening_leave_livery"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "start_label": "broken_day1_evening",
+    "unlocked_threads": ["host_lies", "talked_to_maid"],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Look in on the others in the billiard room",
+            "redirect": "broken_day1_evening_billiard_room"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_menu",
+            "selected": "Speak with the butler",
+            "redirect": "broken_day1_evening_billiard_room_butler"
+        },
+        {
+            "menu": "broken_butler_menu",
+            "selected": "Remark on the worn-out look of the house",
+            "redirect": "broken_day1_evening_billiard_room_butler_house"
+        },
+        {
+            "menu": "broken_butler_menu",
+            "selected": "Discuss the small number of staff",
+            "redirect": "broken_day1_evening_billiard_room_butler_staff"
+        },
+        {
+            "menu": "broken_butler_menu",
+            "selected": "Ask him about himself",
+            "redirect": "broken_day1_evening_billiard_room_butler_about"
+        },
+        {
+            "menu": "broken_butler_menu",
+            "selected": "Ask about the surprise the maid mentioned",
+            "redirect": "broken_day1_evening_billiard_room_butler_surprise"
+        },
+        {
+            "menu": "broken_butler_menu",
+            "selected": "Leave the butler to his work",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Retire for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

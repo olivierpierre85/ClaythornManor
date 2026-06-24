@@ -1,0 +1,52 @@
+{
+    "start_label": "broken_day1_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Look in on the others in the billiard room",
+            "redirect": "broken_day1_evening_billiard_room"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_menu",
+            "selected": "Join the group and listen to the Captain",
+            "redirect": "broken_day1_evening_billiard_room_story"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_whisky_menu",
+            "selected": "Go to the bar to charge the flask",
+            "redirect": "broken_day1_evening_billiard_room_refill"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_menu",
+            "selected": "Talk to Dr Baldwin",
+            "redirect": "broken_day1_evening_billiard_room_doctor"
+        },
+        {
+            "menu": "doctor_generic_menu_broken",
+            "selected": "What do you think of this weather?",
+            "redirect": "doctor_generic_weather_friday"
+        },
+        {
+            "menu": "doctor_generic_menu_broken",
+            "selected": "You don't have any more questions for him",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_billiard_room_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Retire for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

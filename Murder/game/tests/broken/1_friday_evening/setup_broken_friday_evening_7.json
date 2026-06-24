@@ -1,0 +1,42 @@
+{
+    "start_label": "broken_day1_evening",
+    "unlocked_threads": ["host_lies", "found_livery"],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Scullery",
+            "redirect": "broken_day1_evening_scullery"
+        },
+        {
+            "menu": "broken_day1_evening_scullery_poison_menu",
+            "selected": "Leave it where it stands",
+            "redirect": "broken_day1_evening_scullery_leave_poison"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "broken_day1_evening_kitchen"
+        },
+        {
+            "menu": "broken_day1_evening_kitchen_menu",
+            "selected": "Leave her be",
+            "redirect": "broken_day1_evening_kitchen_leave"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Tea room",
+            "redirect": "broken_day1_evening_tea_room"
+        },
+        {
+            "menu": "broken_day1_evening_map_menu",
+            "selected": "Retire for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}
