@@ -16,6 +16,8 @@ label broken_introduction:
 
     $ broken_details.add_checkpoint("broken_introduction")
 
+    call change_time(14, 00, 'Arrival', 'Friday', hide_minutes=True, chapter='friday_afternoon')
+
     $ change_room("broken_flat")
 
     $ play_music('sad', 2)
@@ -79,8 +81,6 @@ label broken_introduction:
 
     I am pleased to announce that you have been selected as one of the recipients of the "Exceptional Act of Bravery Award".
     """
-
-    call change_time(14, 00, 'Arrival', 'Friday', hide_minutes=True, chapter='friday_afternoon')
 
     call black_screen_transition("{s}Thomas Moody{/s}", "Archibald Devereux")
 
@@ -190,7 +190,5 @@ label broken_introduction:
 
     But in the meantime, it should prove a pleasant place to stay.
     """
-
-    pause 1
     
     jump broken_day1_evening

@@ -21,7 +21,7 @@ label broken_day1_evening:
 
     call change_time(14, 45, "Evening", "Friday", hide_minutes = True, chapter='friday_evening')
 
-    $ current_character.add_checkpoint("broken_day1_evening")
+    $ broken_details.add_checkpoint("broken_day1_evening")
 
     call black_screen_transition("Thomas Moody", chapters_names[current_chapter])
 

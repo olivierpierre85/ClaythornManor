@@ -1,0 +1,90 @@
+Generated:                2026-06-24 14:42:27
+Scope:                    character=broken
+Dialogue entries scanned: 488
+Test lines collected:     926
+Covered:                  409
+Missing:                  79
+
+  game/scripts/broken/Day 1/2_Evening/2_billiard_room.rpy  (1 missing)
+    [broken_day1_evening_billiard_room_butler_8d64ba76] I head back towards the butler in his corner.
+
+  game/scripts/broken/Day 2/1_Morning/1_main.rpy  (78 missing)
+    [broken_day2_morning_080eb74a] I wake to a thin grey light and the unfamiliar weight of a strange bed.
+    [broken_day2_morning_faf0c0e5] For a moment I cannot place myself.
+    [broken_day2_morning_899577eb] Then it comes back to me. The manor. The mask. Thomas.
+    [broken_day2_morning_6983c569] Day two.
+    [broken_day2_morning_5ee9713e] I came through the first night without being found out, but the hardest part is still ahead of me.
+    [broken_day2_morning_feef3f60] I sit up and reach for the mask on the bedside table.
+    [broken_day2_morning_b7b6af24] The leather is cold against my skin.
+    [broken_day2_morning_71fa6fd5] I settle it into place, and Archie disappears beneath Thomas Moody for another day.
+    [broken_day2_morning_ab8c8838] I run through his history once more, the way another man might say his prayers.
+    [broken_day2_morning_61dbeac6] Liverpool. The boot-boy years. The commission. The War.
+    [broken_day2_morning_709d1737] When I am word-perfect, I go down.
+    [broken_day2_morning_4bc9e5d2] The dining room is already half filled.
+    [broken_day2_morning_ef244c06] Captain Sinha sits at the far end, upright over his plate, eating as though it were a duty.
+    [broken_day2_morning_4ec57449] Doctor Baldwin is opposite him, his eyes ringed and distant, a man who has slept badly or not at all.
+    [broken_day2_morning_3f01033b] Miss Baxter and Miss Marsh have their heads bent together over the teapot.
+    [broken_day2_morning_605f9d2f] I take the chair I was given last night, near the head of the table, and help myself to a modest plate.
+    [broken_day2_morning_c687ef02] Then I let my gaze travel the room as Thomas never would, marking who is present and who is not.
+    [broken_day2_morning_a804b40a] One place stands empty.
+    [broken_day2_morning_a4dea629] The young fellow, Harring, who sat beside Miss Baxter at dinner, has not come down.
+    [broken_day2_morning_9385ec19] A late riser, perhaps. The young so often are.
+    [broken_day2_morning_d9cc65f7] Samuel Manning is the last to appear, or rather to fall through the door.
+    [broken_day2_morning_d0cdbc75] His colour is dreadful and his hands will not be still.
+    [broken_day2_morning_2d1fd6de] He makes for the coffee and nothing else, then drops into the nearest chair without a word to anyone.
+    [broken_day2_morning_b7588ce6] Miss Baxter's mouth thins at the sight of him, though she holds her tongue.
+    [broken_day2_morning_1ac3bc63] I am still taking the measure of them all when the butler slips in and bends to Lady Claythorn's ear.
+    [broken_day2_morning_5e6fa9a4] Whatever he tells her drains the colour from her face in an instant.
+    [broken_day2_morning_01e21fb7] She rises, gathers her composure back into place with an effort I should not have caught had I not been wat...
+    [broken_day2_morning_3cf6e135] The three of them leave together, the butler leading, the doctor a pace behind.
+    [broken_day2_morning_3e27e929] The door closes, and the room settles into a silence no one cares to break.
+    [broken_day2_morning_447e81fe] A summons for the doctor, before the plates are even cleared.
+    [broken_day2_morning_12afe03b] That is not a thing one does for a guest who has merely overslept.
+    [broken_day2_morning_80d04a99] Something is wrong in this house this morning.
+    [broken_day2_morning_b0c78101] I keep my eyes on my plate and my ears open.
+    [broken_day2_morning_5badbb62] The maid's words come back to me unbidden. A surprise prepared for the guests, she said.
+    [broken_day2_morning_6e91ed73] I begin to wonder what shape that surprise will take.
+    [broken_day2_morning_0cf2c61b] A long quarter of an hour passes before Lady Claythorn returns, the doctor a pace behind her.
+    [broken_day2_morning_98a569b9] She does not sit.
+    [broken_day2_morning_4fdfec79] She stands at the head of the table and folds her hands, and we all know before she speaks that the news is...
+    [broken_day2_morning_fd402721] I am so dreadfully sorry to bring you such news.
+    [broken_day2_morning_94bf85b6] It appears that Mr Harring passed away during the night.
+    [broken_day2_morning_0dfaf0ea] The room goes very still.
+    [broken_day2_morning_01ca0d80] Mr Harring?
+    [broken_day2_morning_32061f7b] But he was a young man, scarcely more than a boy.
+    [broken_day2_morning_3ecaffea] Are you quite certain, Doctor?
+    [broken_day2_morning_9e73b817] He seemed in perfect health only last evening.
+    [broken_day2_morning_da52ab5a] I can find no mark upon him, and no cause I am able to point to.
+    [broken_day2_morning_44094641] A man of his years, and sound by every appearance.
+    [broken_day2_morning_dc469c9f] I will not insult you by pretending I understand it.
+    [broken_day2_morning_6a571a9c] What I am certain of is that the authorities must be sent for.
+    [broken_day2_morning_d41ff383] Yes. Of course.
+    [broken_day2_morning_bb738044] My butler will see to it at once.
+    [broken_day2_morning_3d9e7282] That poor young man.
+    [broken_day2_morning_f7d13523] To be taken so early, with all his years still before him.
+    [broken_day2_morning_b173b4ac] It does not bear thinking on.
+    [broken_day2_morning_2238bb2c] We sit a while in a heavy silence.
+    [broken_day2_morning_a5f3ce4f] A young man, sound as a bell at dinner, dead before breakfast, and no mark upon him.
+    [broken_day2_morning_650449e5] I have written up enough inquests to know how seldom the world arranges itself so tidily.
+    [broken_day2_morning_3c558c8c] Men of thirty do not simply stop in the night.
+    [broken_day2_morning_242321b0] The bottle from the scullery lies at the bottom of my case, a measure lighter than it ought to be.
+    [broken_day2_morning_f8eda20a] I had put that down to carelessness. I am no longer certain that is what it was.
+    [broken_day2_morning_e19d9e45] And then there is the letter.
+    [broken_day2_morning_dfc1fb56] Last night someone laid an old army order upon my pillow, and at the foot of it sat a name. Captain S. Sinha.
+    [broken_day2_morning_81efc7e7] A staff officer who signed better men forward to their deaths, and never once went himself.
+    [broken_day2_morning_fb8cceca] He sits not ten feet from me now, eating his breakfast as though nothing in the world were amiss.
+    [broken_day2_morning_989c0f44] A man with that upon his conscience would hardly balk at one death more.
+    [broken_day2_morning_48107b45] Whatever brought me beneath this roof, I had not reckoned on murder.
+    [broken_day2_morning_9b06fbe7] And if it is murder, then no one here is safe, the false Thomas Moody least of all.
+    [broken_day2_morning_1e6e9b14] I had best keep my wits about me, and my eyes upon the rest of them.
+    [broken_day2_morning_7e27c0f7] When the worst of the murmuring has died away, Lady Claythorn draws breath and speaks again.
+    [broken_day2_morning_1a268d06] A man lies dead above our heads, and our hostess speaks of sport as though we had lost no more than an hour...
+    [broken_day2_morning_40f9915c] That composure is a thing worth remembering.
+    [broken_day2_morning_8eac1d16] For my own part, I have no wish to be left behind in this house, picking at cold eggs while I wait to learn...
+    [broken_day2_morning_1ede266f] Better to be out of doors and among them, where I can watch.
+    [broken_day2_morning_610bc974] And a man invited for his soldiering could hardly cry off a morning's shooting without turning every head t...
+    [broken_day2_morning_37661fa6] So I shall go.
+    [broken_day2_morning_d1299f14] A low murmur of assent runs round the table.
+    [broken_day2_morning_6492b195] The Captain accepts at once, and Mr Manning allows that the air may do him some good, though he looks fit f...
+    [broken_day2_morning_8fbf3b15] The two ladies will keep to the house.
+

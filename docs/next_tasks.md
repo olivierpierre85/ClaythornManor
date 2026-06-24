@@ -7,6 +7,7 @@ Servant stairs as last room => needs testing for other characters
 
 SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstairs? Add the servant stairs as the image when we try to reach downstairs? servant stairs could be servant room, or the upstairs stairs. But it will be fixed when we change the map
 
+TECH -> TESTING by having a llm reading logs, and chosing MENU (maybe local for API ease), See gemini, but re-ask CLAUDE
 
 ### Write Story: NEXT => Broken
 
@@ -33,6 +34,7 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 - Option to kill the Captain, or not, if Broken thinks it is a setup. To be sure it is a setup he needs more suspicious findings — e.g. the Drunk also received a message.
   - If he hasn't found the Drunk's message → he kills the Captain, and the Drunk kills the Doctor (very gory new step).
   - If he has found the message → he knows something is wrong, goes with the Drunk and prevents his death. Back to choosing a hunt partner (since the Lad is dead).
+- OPTION to not go on the hunt? maybe ????
 
 ##### Saturday — After the Hunt
 - **Without the Captain** — the Host panics and leaves before dinner. With only the Butler present it feels wrong, and everyone dies at dinner — except if you found and took the poison on the first day. Otherwise the Butler burns everyone? And the psychic dies by suicide (first to collapse, apparently from smoke inhalation but actually sleeping pills).
