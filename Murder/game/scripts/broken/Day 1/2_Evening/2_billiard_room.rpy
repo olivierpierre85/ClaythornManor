@@ -448,7 +448,7 @@ label broken_day1_evening_billiard_room_butler_surprise:
     But I should keep it in mind nevertheless.
     """
 
-    $ broken_details.threads.unlock('surprise_planned')
+    $ broken_details.threads.unlock('butler_surprise')
 
     return
 

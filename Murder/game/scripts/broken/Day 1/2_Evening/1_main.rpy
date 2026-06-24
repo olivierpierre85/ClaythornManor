@@ -354,7 +354,7 @@ label broken_day1_evening:
     Sleep is a long time coming, and when it takes me, I still have no idea of what I am to do tomorrow.
     """
 
-    if broken_details.threads.is_unlocked('talked_to_maid'):
+    if broken_details.threads.is_unlocked('butler_surprise'):
 
         jump broken_ending_day1_throat_cut
 

@@ -17,13 +17,6 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ##### **Friday Evening**
 
-IF ASK every questions, unlock the possibility to save people the next day-
-- suspicious of host => Dinner if right questions unlocked => Maybe it is enough as is. TEST
-- suspicious of Butler => Block if NOT suspicious of host. Lies about being open just for the day BUT do not tell about the surprise
-- suspicious of maid => Just for the questions
-- concidence with doctor => Boxer question
-
-
 
 - **Billiard room** (improvements)
   - Add generic doctor/journalist insight, or drop the doctor talks entirely and fixate on the staff.
