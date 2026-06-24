@@ -1,4 +1,4 @@
-# ------------------------------------
+﻿# ------------------------------------
 #   BILLIARD ROOM
 # ------------------------------------
 label broken_day1_evening_billiard_room:
@@ -61,12 +61,22 @@ label broken_day1_evening_billiard_room:
         The butler returns to his place in a corner of the room.
         """
 
-        if not broken_details.threads.is_unlocked('host_lies'):
+        if broken_details.threads.is_unlocked('host_lies'):
 
             """
-            I could put a few questions to the butler, but a guest who quizzes the servants soon makes himself memorable.
+            Normally, a guest wouldn't go and talk with the servants.
 
-            Without good reason to distrust this house, prying would only draw attention to me.
+            But since I know Lady Claythorn is hiding something, I think it might be interesting to ask a few questions to the butler.
+
+            The potential reward is higher than the risk of attracting attention.
+            """
+
+        else:
+
+            """
+            I could put a few questions to the butler, but a guest who quizzes the servants is rather unusual.
+
+            And I don't want to attract attention.
             """
 
         """
@@ -230,18 +240,19 @@ label broken_day1_evening_billiard_room_butler:
 
     else:
 
+        $ broken_butler_menu.early_exit = False
+
         """
-        I drift back towards the butler in his corner.
+        I head back towards the butler in his corner.
         """
 
-    $ broken_butler_menu.early_exit = False
 
     
     $ broken_butler_menu = TimedMenu("broken_butler_menu", [
-        TimedMenuChoice('Remark on the strange air of the house', 'broken_day1_evening_billiard_room_butler_house', 20),
-        TimedMenuChoice('Ask how large the household staff is', 'broken_day1_evening_billiard_room_butler_staff', 15),
-        TimedMenuChoice('Ask the butler about himself', 'broken_day1_evening_billiard_room_butler_about', 15),
-        TimedMenuChoice('Ask whether a surprise has been prepared', 'broken_day1_evening_billiard_room_butler_surprise', 20, condition = "broken_details.threads.is_unlocked('talked_to_maid')"),
+        TimedMenuChoice('Remark on the worn-out look of the house', 'broken_day1_evening_billiard_room_butler_house', 20),
+        TimedMenuChoice('Discuss the small number of staff', 'broken_day1_evening_billiard_room_butler_staff', 15),
+        TimedMenuChoice('Ask him about himself', 'broken_day1_evening_billiard_room_butler_about', 15),
+        TimedMenuChoice('Ask about the surprise the maid mentioned', 'broken_day1_evening_billiard_room_butler_surprise', 20, condition = "broken_details.threads.is_unlocked('talked_to_maid')"),
         TimedMenuChoice('Leave the butler to his work', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_left = "butler")
 
@@ -296,11 +307,11 @@ label broken_day1_evening_billiard_room_butler_staff:
     """
 
     butler """
-    That is true we are a small staff, sir.
+    That is true, we are a small staff, sir.
 
     Smaller than a house like this would once have kept, I will own.
 
-    Her ladyship spend most of her time alone, she does not require a lot of help.
+    Her ladyship spends most of her time alone, so she does not require a great deal of help.
     """
 
     broken """
@@ -328,35 +339,49 @@ label broken_day1_evening_billiard_room_butler_staff:
 label broken_day1_evening_billiard_room_butler_about:
 
     broken """
-    I would like to know 
+    Forgive me if I am intruding, but I would like to know how long you have been a butler here.
+
+    You seem to have a remarkable handle on things.
+    """
+
+    """
+    A bit of flattery is usually a good way to get better answers.
     """
 
     butler """
     You are kind to say so, sir.
 
-    I have been in service the better part of my life.
-
-    One house is much like another, in the end.
+    I have been in the service of Lady Claythorn for a few years now.
     """
 
     broken """
-    And how long have you been with Lady Claythorn?
+    And what were you doing before that?
     """
 
     butler """
-    Long enough to know my place, sir.
+    Well, the same thing, of course.
 
-    Her ladyship was good enough to take me on.
+    Just for another house, that is all.
 
-    I should not wish to give her cause to regret it.
+    Sadly, it had to close, and all of the staff were let go.
+    """
+
+    broken """
+    I am sorry, it is a story that is becoming too familiar these days.
+
+    But it is good that you found another job.
+    """
+
+    butler """
+    It is indeed.
+
+    I was very lucky.
     """
 
     """
-    He gives nothing away, and turns the question as neatly as a card sharp turns a card.
+    A plausible and very common story.
 
-    And all the while those steady eyes are taking the measure of me.
-
-    I have the distinct impression I have been weighed, and noted.
+    I will have to dig deeper if I want to learn something really useful.
     """
 
     return
@@ -386,21 +411,44 @@ label broken_day1_evening_billiard_room_butler_surprise:
     """
 
     broken """
-    I see.
+    Of course, but that is not what I meant.
 
-    Someone in your staff led me to believe there was something else.
-
-    I must have misunderstood, of course.
+    I know I shouldn't have eavesdropped, but I overheard someone on your staff talking of a possible special surprise for us.
     """
 
     """
     Something in the look of the butler changes for a second.
 
-    He was genniuely trouble by this.
-
-    But he doesn't push further.
+    He is genuinely troubled by this.
     """
 
+    butler """
+    I am sorry, I think you might have misheard.
+
+    There is nothing planned besides what Lady Claythorn explained at dinner.
+    """
+
+    broken """
+    Oh, sorry I didn't want to intrude.
+    """
+
+    butler """
+    No worries.
+    """
+
+    """
+    I do not believe him.
+
+    I have spent enough time doing interviews to know when someone is hiding something.
+
+    Of course, if it is a surprise, obviously he might want it a secret.
+
+    It doesn't necessarily mean it is a bad one.
+
+    But I should keep it in mind nevertheless.
+    """
+
+    $ broken_details.threads.unlock('surprise_planned')
 
     return
 
