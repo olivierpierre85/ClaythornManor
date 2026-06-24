@@ -57,7 +57,9 @@ THE WHol stuff can be decided at the end of the writing
 FOR BROKEN:
 - Talk to butler? See check if necessery
 
-Try flux dev on my laptop?
+NEW IMAGES CREATED/
+
+PROBLEM, PSYCHIC death in attic during the day not as scary as during the night. Change that?
 
 ### IMAGES NEXT REBUILD
 

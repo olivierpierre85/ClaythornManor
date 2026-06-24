@@ -137,7 +137,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     $ play_music('boxer', fadein_val=10.0)
 
-    scene boxer_fight with fade
+    scene boxer_fight_neutral with fade
 
     captain """
     In order to break the siege and rescue their compatriots, the largest foreign nations formed expeditions to help lift the siege of Beijing.
@@ -193,7 +193,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
     It was an undeniable victory, but the price paid was high.
     """
 
-    scene boxer with fade
+    scene boxer_neutral with fade
 
     captain """
     Afterwards, we stayed and occupied the city.
@@ -227,7 +227,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
     In any case, that's why I live in England today.
     """
 
-    scene billiard_room with fade
+    $ change_room('billiard_room', fade)
 
     $ play_music('PREVIOUS')
 

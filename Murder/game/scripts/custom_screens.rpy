@@ -72,7 +72,7 @@ label wait_screen_transition():
     pause 1
 
     $ renpy.scene()
-    $ renpy.show(current_room)
+    $ renpy.show(resolve_room_image(current_room))
     $ renpy.with_statement(dissolve)
 
     return 

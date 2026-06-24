@@ -1,6 +1,17 @@
 # Claythorn Manor — Location Prompts
 
-Source tables for `tools/generate_location_images.py`. Each **description** is wrapped in a FLUX.2 Klein prompt template chosen by the section it sits under. The **id** column is the output filename (`<id>.png`) and matches the `change_room('<id>')` id used in the scripts.
+Source tables for `tools/generate_location_images.py`. Each **description** is wrapped in a FLUX.2 Klein prompt template chosen by the section it sits under. The **id** column matches the `change_room('<id>')` id used in the scripts.
+
+## Image naming convention (time of day)
+
+Location images now encode the time of day in the filename suffix:
+
+- Most rooms ship a **`<id>_day.png`** / **`<id>_night.png`** pair.
+- Time-independent scenes (flashbacks, one-off cutscene shots — e.g. `boxer`, `broken_flat`, `train_station`) ship a single **`<id>_neutral.png`**.
+
+`change_room('<id>')` resolves the suffix automatically (see `resolve_room_image` in `scripts/custom_functions.rpy`): it prefers `_neutral`, otherwise picks `_night` when `current_phase == 'Evening'` and `_day` for every other phase (Morning / Afternoon / The Hunt / No Hunt), and finally falls back to a bare `<id>` for legacy/utility images with no variant (`black_background`, `india_young_captain`, `toolshed_outside_day`, `toolshed_outside_night`, `train_inside`).
+
+The previous single-image set has been archived under `version2/` with a `_version2` filename suffix.
 
 ## Interior locations
 

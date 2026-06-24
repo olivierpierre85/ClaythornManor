@@ -97,16 +97,32 @@ label breakpoint:
 
 # Smart music changes
 init python:
+    def resolve_room_image(room_id):
+        # 1. Time-independent scenes use a single _neutral image.
+        if renpy.has_image(room_id + "_neutral"):
+            return room_id + "_neutral"
+        # 2. Time-of-day variants: Evening is night, everything else is day.
+        if store.current_phase == "Evening":
+            primary, secondary = "_night", "_day"
+        else:
+            primary, secondary = "_day", "_night"
+        if renpy.has_image(room_id + primary):
+            return room_id + primary
+        if renpy.has_image(room_id + secondary):   # defensive fallback if one variant is missing
+            return room_id + secondary
+        # 3. Legacy / utility images with no suffix (black_background, india_young_captain, etc.)
+        return room_id
+
     def change_room(new_room, transition = dissolve):
         global current_floor, selected_floor, current_room, previous_room
-        
+
         if new_room == 'PREVIOUS':
             new_room = previous_room
         else:
             previous_room = current_room
 
         renpy.scene()
-        renpy.show(new_room)
+        renpy.show(resolve_room_image(new_room))
 
         if store.drunk_mode:
             renpy.show_layer_at(drunk_wobble_layer, layer="master")

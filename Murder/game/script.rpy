@@ -265,6 +265,7 @@ label init_technical_variables:
     }
 
     default current_chapter = "friday_afternoon"
+    default current_phase = None   # set by change_time; None/non-Evening is treated as day by resolve_room_image
 
     define config.mouse = { }
     define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
