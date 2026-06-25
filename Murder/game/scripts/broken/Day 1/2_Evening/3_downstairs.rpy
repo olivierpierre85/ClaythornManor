@@ -104,8 +104,6 @@ label broken_day1_evening_kitchen:
 
     call broken_descend_if_needed
 
-
-
     $ change_room('kitchen')
 
     """
@@ -132,14 +130,20 @@ label broken_day1_evening_kitchen:
     A young maid stands at the sink with her back to me, scouring the last of the pots and pans.
 
     She has not heard me come in.
+
+    I really want to ask her a few questions.
+
+    But she would see at once that I do not belong here.
+
+    She could expose me and reveal my true identity.
     """
 
     if not broken_details.threads.is_unlocked('host_lies'):
 
         """
-        But she would see at once that I do not belong here.
-        
-        And I have no reason to trouble her.
+        And I have no reasons strong enough to justify that risk.
+
+        So, it is better if she doesn't see me.
 
         I slip out the way I came, before she ever knows I was there.
         """
@@ -147,11 +151,9 @@ label broken_day1_evening_kitchen:
         return
 
     """
-    It would be risky to talk to her.
-
-    She would probably see right away I am an impostor.
-
     But she could also help me understand why Lady Claythorn is lying to us.
+
+    That could be a risk worth taking.
     """
 
     call run_menu(TimedMenu("broken_day1_evening_kitchen_menu", [
@@ -200,7 +202,9 @@ label broken_day1_evening_kitchen_maid:
 
     I am only taken on for the weekend, to lend a hand.
 
-    I was sent for in a hurry, and told precious little of what goes on.
+    And I was hoping you could guide me through what is to be done.
+
+    You see, I was sent for in a hurry, and told very little of what goes on.
     """
 
     maid """
@@ -226,10 +230,18 @@ label broken_day1_evening_kitchen_maid:
     """
 
     maid """
-    I could not say, exactly.
+    I think it is to award some prize to the guests, to give them a nice countryside weekend, and I believe a surprise is also planned for them.
+    """
 
-    There is some manner of surprise in store for the guests, I think.
+    broken """
+    A surprise? You mean the prize money?
+    """
 
+    maid """
+    No, they should know about that.
+
+    There is to be something else, though I could not say what exactly.
+    
     So, of course, share none of this with them.
 
     But ask the butler.

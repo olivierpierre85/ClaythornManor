@@ -2,12 +2,9 @@
 Chages for consistency:
    - Rethink the letter to the captain to comply more with the Journalist story
 
-
 Servant stairs as last room => needs testing for other characters
 
 SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstairs? Add the servant stairs as the image when we try to reach downstairs? servant stairs could be servant room, or the upstairs stairs. But it will be fixed when we change the map
-
-TECH -> TESTING by having a llm reading logs, and chosing MENU (maybe local for API ease), See gemini, but re-ask CLAUDE
 
 ### Write Story: NEXT => Broken
 
@@ -20,12 +17,9 @@ TECH -> TESTING by having a llm reading logs, and chosing MENU (maybe local for 
 
 
 - **Billiard room** (improvements)
-  - Add generic doctor/journalist insight, or drop the doctor talks entirely and fixate on the staff.
-    - If talk to doctor, to discover what? Boxer's rebellion was already found there BUT he could be the one to make the full connexion? maybe
-  - Add a "question the butler" path (if you've unlocked the strange material about the Host) → **do it and you die no matter what.** Reuse throat cut ending
+
   - DOUBLe check maid + butler? Is the butler explanation leaving place for doubt? I guess it could. BUT you need to add INFORMATION for the butler in the butler dialog => Menu generic butler? (I've heard someone talk about a surprise)
   - MAKE sure you need to have unlock HOSt lies to talk to maid? IF yes, add clue to unlock it.
-  - More options to talk with butler? Where to find footman? Maybe interrogate during hunt instead
 
 ##### Saturday Morning (Ted is always dead)
 - If Ted is dead → an early death for Moody and everyone else, because they have lost their minds (not the same as Moody). Ted was young, so suspicion runs very high: no hunt, just lunch while waiting for the police — then everyone dies.
@@ -54,12 +48,9 @@ THE WHol stuff can be decided at the end of the writing
 
 ## Assets & artistic Tasks
 
-FOR BROKEN:
-- Talk to butler? See check if necessery
+NEED a version unmaske of broken for when he is downstairs. I think I have it
 
-NEW IMAGES CREATED/
-
-PROBLEM, PSYCHIC death in attic during the day not as scary as during the night. Change that?
+PROBLEM, **PSYCHIC** death in attic during the day not as scary as during the night. Change that?
 
 ### IMAGES NEXT REBUILD
 
@@ -85,6 +76,8 @@ Get new music from internet and put them at the right place
 
 
 ## Technical Tasks
+
+Ongoing AI ollama tester, try with longer run. maybe needed to use a better LLM that local
 
 IDEA => For choices already made (greyed out, add the time they will consume?)
 ### INTUITION system entirely FOR EVERYONE SAVED concept
