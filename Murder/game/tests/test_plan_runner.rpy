@@ -370,3 +370,33 @@ init python in test:
         if first_node.next:
             current_node.chain(node_executor.node.next)
             node_executor.node.next = first_node.next
+
+    def run_autoplay(timeout=2000):
+        """
+        Launches the full-game cross-character autoplay tester (see
+        scripts/ollama_autoplay.rpy). Unlike run_chapter_ollama, this does NOT use
+        the autorunner or stop at a chapter boundary: it jumps to start_ollama_autoplay
+        (which sets ollama_autoplay = True and begins at lad_introduction) and lets the
+        game's own flow run - menus, character select, deaths/escapes and the WIP wall
+        all reroute to Ollama - until the autoplay checkpoint shows the test_end screen
+        (all endings reached or a safety cap). `timeout` must exceed OLLAMA_MAX_SECONDS
+        so the in-game cap ends the run cleanly before this hard ceiling.
+        """
+        import renpy.test.testast as testast
+        from renpy.test.testexecution import node_executor
+
+        loc = ("", 0)
+        first_node = current_node = PyCallNode(loc, lambda: None)
+
+        jump_node = testast.Action(loc, "Jump('start_ollama_autoplay')")
+        current_node.chain(jump_node)
+        current_node = jump_node
+
+        screen_selector = testast.DisplayableSelector(loc, screen="'test_end'")
+        until_node = testast.Until(loc, testast.Advance(loc), screen_selector, timeout=str(float(timeout)))
+        current_node.chain(until_node)
+        current_node = until_node
+
+        if first_node.next:
+            current_node.chain(node_executor.node.next)
+            node_executor.node.next = first_node.next

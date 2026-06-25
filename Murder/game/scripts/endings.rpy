@@ -1,10 +1,14 @@
 label ending_generic:
 
     # For tests
-    if renpy.is_in_test():
+    if renpy.is_in_test() and not ollama_autoplay:
         $ export_transcript(False)
         $ renpy.show_screen("test_end")
         jump test_end_pause
+
+    # Full-game autoplay: log this ending and continue (or stop on completion/cap).
+    if ollama_autoplay:
+        call ollama_autoplay_checkpoint("ending")
 
     $ stop_music(2)
 

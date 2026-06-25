@@ -359,11 +359,16 @@ init -1 python:
             selected_choice = None
 
             # --- Ren'Py automated tests: use recorded plan, never open UI ---
-            if renpy.is_in_test():
+            if renpy.is_in_test() and not ollama_autoplay:
                 t = getattr(renpy.store, "test", None)
                 if t and getattr(t, "autorunner", None) and t.autorunner.active:
                     selected_choice = t.autorunner.pick_choice_for_menu(self)
                     selected_choice_i = self.choices.index(selected_choice)
+
+            # --- Full-game autoplay: a local LLM (Ollama) picks the choice ---
+            elif ollama_autoplay:
+                selected_choice = ollama_pick_menu_choice(self)
+                selected_choice_i = self.choices.index(selected_choice)
 
             # --- (Optional) keep your existing full_testing_mode for manual debug runs ---
             elif full_testing_mode and full_testing_mode_choices:

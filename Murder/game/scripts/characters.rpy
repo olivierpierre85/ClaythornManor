@@ -77,10 +77,13 @@ label character_selection:
         if full_testing_mode and full_testing_mode_choices:
 
             character_choice = full_testing_mode_choices.pop(0)["character_choice"]
-        
+
+        # Full-game autoplay: let the local LLM pick the next character to play.
+        if not character_choice and ollama_autoplay:
+            character_choice = ollama_pick_character()
 
         if not character_choice:
-            character_choice = renpy.call_screen('character_selection') 
+            character_choice = renpy.call_screen('character_selection')
 
         # Save choice as well
         all_choices.append({

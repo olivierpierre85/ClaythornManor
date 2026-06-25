@@ -442,10 +442,15 @@ label start_again():
 label work_in_progress:
 
     # For tests: the story stops here, so end the test cleanly like an ending does.
-    if renpy.is_in_test():
+    if renpy.is_in_test() and not ollama_autoplay:
         $ export_transcript(False)
         $ renpy.show_screen("test_end")
         jump test_end_pause
+
+    # Full-game autoplay: the WIP wall is not terminal - log it and keep exploring
+    # (stops only once every ending is reached or a safety cap trips).
+    if ollama_autoplay:
+        call ollama_autoplay_checkpoint("work_in_progress")
 
     hide screen current_time
     hide screen in_game_menu_btn

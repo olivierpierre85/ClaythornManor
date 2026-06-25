@@ -1,0 +1,21 @@
+=== Ollama autoplay session 20260625_105938 (model gemma4:12b-it-qat) ===
+[10:59:55] MENU(L0 lad_introduction) char=lad -> #0 'Talk to Samuel Manning'  | reason: Samuel Manning appears exhausted and alone, making him a prime candidate for an initial interaction to gather information or build rapport.
+[11:00:03] MENU(L0 lad_introduction) char=lad -> #0 'Talk to Amelia Baxter'  | reason: Amelia Baxter seems like a more productive lead than trying to interact with face-down intoxicated man.
+[11:00:46] MENU(L1 psychic_generic_menu_lad) char=lad -> #1 'Tell me more about yourself.'  | reason: Establishing a connection with Amelia Baxter is key to gathering initial character information and potential motives.
+[11:00:59] MENU(L0 lad_day1_evening) char=lad -> #1 'Talk to Amelia Baxter'  | reason: Since I've already established a connection and shared information about her séance-conducting with the other character, I should continue the conversation to see if there's more to uncover or if she has any specific connections to this manor.
+[11:01:15] MENU(L1 psychic_generic_menu_lad) char=lad -> #1 'Why were you invited here?'  | reason: Since Lady Claythorn just explained that everyone was invited because of 'heroic acts,' asking Amelia why she specifically was invited helps clarify the backstory and character motivations.
+[11:01:33] MENU(L1 psychic_generic_menu_lad) char=lad -> #2 'How old are you?'  | reason: The player should inquire about Amelia's age to establish a baseline for her character and potentially uncover discrepancies in her backstory or current status.
+[11:01:46] MENU(L1 psychic_generic_menu_lad) char=lad -> #0 'What do you think of this weather?'  | reason: The weather is a classic trope in polite conversation and allows for an exploration of the atmosphere without risk of social offense.
+[11:02:13] MENU(L1 psychic_generic_menu_lad) char=lad -> #0 'What do you think of this place?'  | reason: Exploring the setting and atmosphere is a key part of investigation in a murder mystery; asking about the manor's history or vibes provides context clues.
+[11:02:23] MENU(L1 psychic_generic_menu_lad) char=lad -> #1 'What do you think of the other guests?'  | reason: Exploring the social dynamics and identifying potential suspects/allies among the guests is a standard investigative step in a murder mystery.
+[11:02:53] MENU(L1 psychic_generic_menu_lad) char=lad -> #0 'What room are you in?'  | reason: The player wants to establish their current location within the manor to better understand the layout and potential points of interest.
+[11:03:57] MAP(L0 lad_day1_evening_map_menu) char=lad [FALLBACK] -> #0 'Storage Room'  | reason: 
+[11:05:01] MAP(L0 lad_day1_evening_map_menu) char=lad [FALLBACK] -> #0 'Storage Room'  | reason: 
+[11:06:05] MAP(L0 lad_day1_evening_map_menu) char=lad [FALLBACK] -> #0 'Storage Room'  | reason: 
+[11:07:07] MAP(L0 lad_day1_evening_map_menu) char=lad -> #16 'Portrait Gallery'  | reason: The Portrait Gallery is a classic location for uncovering historical secrets or identifying key figures of the manor's lineage.
+[11:08:02] MAP(L0 lad_day1_evening_map_menu) char=lad -> #10 'Library'  | reason: The Library is a classic staple of manor house mysteries and likely contains historical records or clues about the family history.
+[11:09:07] MAP(L0 lad_day1_evening_map_menu) char=lad [FALLBACK] -> #0 'Storage Room'  | reason: 
+[11:10:11] MAP(L0 lad_day1_evening_map_menu) char=lad [FALLBACK] -> #0 'Storage Room'  | reason: 
+[11:10:38] MAP(L0 lad_day1_evening_map_menu) char=lad -> #15 'Servant Stairs'  | reason: Exploring the servant stairs provides a new perspective on the house's layout and potential secrets hidden from the guests.
+[11:10:49] MENU(L1 lad_day1_evening_servant_stairs_menu) char=lad -> #1 'Leave it be'  | reason: The player is in an 'exploring' phase and trying to unlock a new location or secret. Trying on the servant's livery would likely be acknowledge as out of character for a narrator who is currently just exploring the layout.
+[11:11:47] MAP(L0 lad_day1_evening_map_menu) char=lad -> #1 'Male Servants Room'  | reason: The player has already tried the Storage Room multiple times and found it locked; exploring the Male Servants Room now that they've discovered the servant stairs offers a new path of investigation.
