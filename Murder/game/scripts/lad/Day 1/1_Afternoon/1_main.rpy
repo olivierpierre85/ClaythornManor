@@ -193,7 +193,7 @@ label lad_introduction:
     
     play sound thunder loop
     
-    $ change_room("manor_exterior")
+    $ change_room("manor_exterior_storm")
 
     """
     Eventually, an imposing mansion emerges on the horizon.

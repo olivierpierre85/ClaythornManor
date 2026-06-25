@@ -215,7 +215,7 @@ label psychic_introduction:
     
     play sound thunder loop
     
-    $ change_room("manor_exterior")
+    $ change_room("manor_exterior_storm")
 
     """
     After what seems an eternity, the manor appears on the horizon.

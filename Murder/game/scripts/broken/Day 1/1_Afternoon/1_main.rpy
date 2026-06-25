@@ -173,7 +173,7 @@ label broken_introduction:
     
     $ stop_music()
     
-    $ change_room("manor_exterior")
+    $ change_room("manor_exterior_storm")
 
     """
     It is good we have arrived early, for the sky promises a storm before long.

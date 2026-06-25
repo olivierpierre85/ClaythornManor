@@ -126,7 +126,7 @@ label nurse_introduction:
 
     $ stop_music()
 
-    $ change_room("manor_exterior")
+    $ change_room("manor_exterior_storm")
 
     """
     The house comes into view just as the first drops of rain begin to fall.

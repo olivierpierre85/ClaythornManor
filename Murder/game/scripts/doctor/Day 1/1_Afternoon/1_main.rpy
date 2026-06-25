@@ -120,7 +120,7 @@ label doctor_introduction:
 
     $ stop_music()
     
-    $ change_room("manor_exterior")
+    $ change_room("manor_exterior_storm")
 
     """
     It looks like we've reached our destination right on time to avoid a storm.
