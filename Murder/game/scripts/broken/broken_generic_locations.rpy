@@ -105,15 +105,11 @@ label broken_gun_room_default:
     """
     The gun room.
 
-    A rack of sporting guns behind glass.
-
-    Locked.
-
-    On a table lies a handgun.
+    There is a rack of sporting guns behind glass, and on a table lies a handgun.
 
     That could prove useful.
 
-    But ever since the war, I have avoided guns when I can.
+    But if anyone notices me with a gun, that would attract questions I would rather avoid.
 
     So, I leave it as I found it.
     """

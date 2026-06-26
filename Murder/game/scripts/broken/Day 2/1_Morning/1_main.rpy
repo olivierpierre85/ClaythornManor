@@ -45,13 +45,13 @@ label broken_day2_morning:
 
     Who put it there, and why?
 
-    The first indication is clear enough.
-
-    Someone, probably the one who invited us here, wants me to harm Sushil Sinha.
+    It is most likely the one who invited us here.
+    
+    And they want Thomas Moody to harm Sushil Sinha.
 
     It is an obvious plot, and I am sure Thomas would have jumped at the chance to take revenge.
 
-    Even I find some relief at picturing someone paying for the loss of my friend.
+    And a part of me wants to avenge him as well.
     """
     
     if broken_details.threads.is_unlocked('talked_to_maid'):
@@ -93,14 +93,6 @@ label broken_day2_morning:
 
     I take the chair I was given last night, near the head of the table, and help myself to a modest plate.
 
-    Then I let my gaze travel the room as Thomas never would, marking who is present and who is not.
-
-    One place stands empty.
-
-    The young fellow, Harring, who sat beside Miss Baxter at dinner, has not come down.
-
-    A late riser, perhaps.
-
     Samuel Manning is the last to appear, or rather to fall through the door.
 
     His colour is dreadful and his hands will not be still.
@@ -108,6 +100,12 @@ label broken_day2_morning:
     He makes for the coffee and nothing else, then drops into the nearest chair without a word to anyone.
 
     Miss Baxter's mouth thins at the sight of him, though she holds her tongue.
+
+    Only one place stands empty.
+
+    The young fellow, Harring, who sat beside Miss Baxter at dinner, has not come down.
+
+    A late riser, perhaps.
     """
 
     $ play_music('mysterious', 2)
@@ -115,15 +113,19 @@ label broken_day2_morning:
     """
     I am still taking the measure of them all when the butler slips in and bends to Lady Claythorn's ear.
 
-    She rises and crosses to the doctor.
+    She rises and crosses to the doctor, and asks him to follow them upstairs.
     """
 
-    call common_day2_morning_host_to_doctor
+    pause 1
 
     """
     The three of them leave together, the butler leading, the doctor a pace behind.
 
+    I resist the urge to follow them, as I have no reason to.
+
     The door closes, and the room settles into a silence no one cares to break.
+
+    There are no happy reasons to call a doctor for, and everybody here knows it.
     """
 
     call change_time(10, 0)
@@ -178,38 +180,26 @@ label broken_day2_morning:
     My butler will see to it at once.
     """
 
-    psychic """
-    That poor young man.
-
-    To be taken so early, with all his years still before him.
-
-    It does not bear thinking on.
-    """
-
     """
     We sit a while in a heavy silence.
-    """
-
-    """
-    A young man, sound as a bell at dinner, dead before breakfast, and no mark upon him.
-
-    I have written up enough inquests to know how seldom the world arranges itself so tidily.
-
-    Men of thirty do not simply stop in the night.
     """
 
     if broken_details.threads.is_unlocked('found_poison'):
 
         """
-        The bottle from the scullery lies at the bottom of my case, a measure lighter than it ought to be.
+        The bottle of rat poison I still have in my pocket suddenly comes to mind.
 
-        I had put that down to carelessness. I am no longer certain that is what it was.
+        Why was it so carelessly left there, still open as if someone had just used it?
+
+        But it is too vague an intuition to bring it up.
+
+        Besides, I would have to explain what I was doing downstairs, and I am not ready for that.
+
+        So I say nothing for the moment.
         """
 
-
-
     """
-    Whatever brought me beneath this roof, I had not reckoned on murder.
+    Whatever brought me beneath this roof, I had not predicted a death would occur.
 
     And if it is murder, then no one here is safe, the false Thomas Moody least of all.
 
@@ -221,33 +211,67 @@ label broken_day2_morning:
     $ stop_music()
 
     """
-    When the worst of the murmuring has died away, Lady Claythorn draws breath and speaks again.
+    When the plates are empty and the worst of the murmuring has died away, Lady Claythorn speaks again.
     """
 
-    call common_day2_morning_host_hunt
+    $ play_music('upbeat')
+
+    host """
+    Now, as I told you all yesterday, there were diversions arranged for this morning.
+
+    A shooting party was to set out after breakfast, for those who cared to join it.
+
+    I know how dreadful this is.
+
+    But I do not believe it would do any good to sit and brood the day away.
+
+    So, if no one objects, I should like us to carry on much as we had planned.
+    """
 
     """
-    A man lies dead above our heads, and our hostess speaks of sport as though we had lost no more than an hour to bad weather.
+    For a moment no one answers at all.
 
-    That composure is a thing worth remembering.
+    Then the table finds its voice all at once, in a low murmur that is anything but agreement.
+    """
 
-    For my own part, I have no wish to be left behind in this house, picking at cold eggs while I wait to learn who is next.
+    nurse """
+    Forgive me, Lady Claythorn, but a young man has died in this house not an hour ago.
 
-    Better to be out of doors and among them, where I can watch.
+    Surely you cannot mean for us to go out shooting as though nothing had happened?
+    """
 
-    And a man invited for his soldiering could hardly cry off a morning's shooting without turning every head towards him.
+    """
+    A few quiet voices murmur their agreement with her.
+    """
+
+    host """
+    I understand you, truly I do.
+
+    But the authorities cannot reach us much before the afternoon, and there is nothing any of us can do for him now.
+
+    I would far sooner keep you all occupied than leave you to dwell upon it.
+    """
+
+    """
+    The objection falters, less from any real agreement than from the simple fact that Lady Claythorn is our hostess.
+
+    And habit commands us to simply go along with what she is proposing.
+
+    Amelia Baxter and Rosalind Marsh signals they would stay inside, as they would have done anyway.
+
+    For my own part, I weight for a second staying with them.
+    
+    That would the perfect opportunity to explore the house.
+    
+    And my injuries would be the perfect cover to explain my reluctance in participating.
+
+    But a hunt is a perfect opportunity to interrogate someone privately.
+
+    And there are a few question I would like to ask Captain Sinha.
+
+    This could be the perfect opportunity to talk to him alone.
 
     So I shall go.
     """
 
-    """
-    A low murmur of assent runs round the table.
-
-    The Captain accepts at once, and Mr Manning allows that the air may do him some good, though he looks fit for nothing but his bed.
-
-    The two ladies will keep to the house.
-    """
-
-    call common_day2_morning_hunt_end
-
-    jump work_in_progress
+    jump broken_day2_hunt
