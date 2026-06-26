@@ -7,7 +7,7 @@ label broken_config_progress:
                 Chapter(image_checkpoint_start, "start", "broken_introduction", "friday_afternoon"),
                 Chapter(image_checkpoint_right, "checkpoint", "broken_day1_evening", "friday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "broken_day2_morning", "saturday_morning"),
-                Chapter(image_checkpoint_empty),   # saturday_afternoon (unwritten)
+                Chapter(image_checkpoint_right, "checkpoint", "broken_day2_hunt", "saturday_afternoon"),
                 Chapter(image_checkpoint_empty),   # saturday_evening  (unwritten)
                 Chapter(image_checkpoint_empty),   # sunday_morning    (unwritten)
                 Chapter(image_checkpoint_empty),   # sunday_afternoon  (unwritten)
@@ -74,5 +74,13 @@ label broken_config_progress:
                 {"label": "broken_day2_morning", "threads": {'talked_to_maid': True}},
                 {"label": "broken_day2_morning", "threads": {'found_poison': True}},
                 {"label": "broken_day2_morning", "threads": {'talked_to_maid': True, 'found_poison': True}},
+            ],
+
+            # ===== SATURDAY AFTERNOON (THE HUNT) =====
+            # Linear chapter (no menus). Branches only on the small aside shown
+            # when the maid was questioned on Friday night (talked_to_maid).
+            'saturday_afternoon': [
+                {"label": "broken_day2_hunt", "threads": {}},
+                {"label": "broken_day2_hunt", "threads": {'talked_to_maid': True}},
             ],
         }
