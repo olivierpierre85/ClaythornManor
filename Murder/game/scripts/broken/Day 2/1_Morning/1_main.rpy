@@ -30,7 +30,7 @@ label broken_day2_morning:
 
     $ change_room("bedroom_broken", irisout)
 
-    $ play_music('upbeat', 2)
+    $ play_music('chill', 3)
 
     """
     I wake up from a restless sleep.
@@ -128,9 +128,9 @@ label broken_day2_morning:
     There are no happy reasons to call a doctor for, and everybody here knows it.
     """
 
-    call change_time(10, 0)
+    call wait_screen_transition()
 
-    $ stop_music()
+    call change_time(10, 0)
 
     """
     A long quarter of an hour passes before Lady Claythorn returns, the doctor a pace behind her.
@@ -145,8 +145,6 @@ label broken_day2_morning:
 
     It appears that Mr Harring passed away during the night.
     """
-
-    $ play_music('scary')
 
     """
     The room goes very still.
@@ -169,7 +167,7 @@ label broken_day2_morning:
 
     A man of his years, and sound by every appearance.
 
-    I will not insult you by pretending I understand it.
+    I so not I understand it.
 
     What I am certain of is that the authorities must be sent for.
     """
@@ -208,13 +206,11 @@ label broken_day2_morning:
 
     call wait_screen_transition()
 
-    $ stop_music()
-
     """
     When the plates are empty and the worst of the murmuring has died away, Lady Claythorn speaks again.
     """
 
-    $ play_music('upbeat')
+    $ play_music('chill', 3)
 
     host """
     Now, as I told you all yesterday, there were diversions arranged for this morning.
@@ -230,8 +226,6 @@ label broken_day2_morning:
 
     """
     For a moment no one answers at all.
-
-    Then the table finds its voice all at once, in a low murmur that is anything but agreement.
     """
 
     nurse """
@@ -253,7 +247,7 @@ label broken_day2_morning:
     """
 
     """
-    The objection falters, less from any real agreement than from the simple fact that Lady Claythorn is our hostess.
+    The objection falters, less from being really convinced but from the simple fact that Lady Claythorn is our hostess.
 
     And habit commands us to simply go along with what she is proposing.
 
