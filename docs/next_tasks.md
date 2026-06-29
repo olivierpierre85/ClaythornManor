@@ -15,17 +15,6 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ##### **Friday Evening**
 
-
-- **Billiard room** (improvements)
-
-  - DOUBLe check maid + butler? Is the butler explanation leaving place for doubt? I guess it could. BUT you need to add INFORMATION for the butler in the butler dialog => Menu generic butler? (I've heard someone talk about a surprise)
-  - MAKE sure you need to have unlock HOSt lies to talk to maid? IF yes, add clue to unlock it.
-
-##### Saturday Morning (Ted is always dead)
-- If Ted is dead → an early death for Moody and everyone else, because they have lost their minds (not the same as Moody). Ted was young, so suspicion runs very high: no hunt, just lunch while waiting for the police — then everyone dies.
-
-Thomas moody GAY? better reason for wanting to hurt captain.?
-
 ##### Saturday — Hunt
 - Option to kill the Captain, or not, if Broken thinks it is a setup. To be sure it is a setup he needs more suspicious findings — e.g. the Drunk also received a message.
   - If he hasn't found the Drunk's message → he kills the Captain, and the Drunk kills the Doctor (very gory new step).

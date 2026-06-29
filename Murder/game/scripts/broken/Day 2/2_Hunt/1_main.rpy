@@ -13,17 +13,26 @@
 #       - Dead            : Lad (Ted Harring)
 #
 #   Notes :
-#       - Broken (the false Thomas Moody) attaches himself to the Captain's
-#         party in order to get him alone, then confronts and kills him over
-#         the forged transfer order.
-#       - The confrontation is shared with the Captain's storyline through
-#         common_day2_hunt_captain_confrontation (narration branches on text_id).
+#       - Broken (the false Thomas Moody) joins the Captain's party in the
+#         north field. The hunt hardens his conviction that Sinha is a fraud.
+#       - Two of the Captain's actions stoke his anger; each is tempered by a
+#         thread the player may carry into the chapter:
+#           - host_lies      -> the Host is a fraud too, so the Captain's lie
+#                               proves nothing of Tom (tempers the poor shooting).
+#           - talked_to_maid -> the "surprise" warns of a setup (tempers the
+#                               luncheon war-story).
+#       - Choice gate: WITH talked_to_maid, Broken may SPARE or KILL the
+#         Captain. WITHOUT it, rage wins and the kill is the only path.
+#       - The north-field hunt (pairing, the shoot, the luncheon) and the kill
+#         (isolation + confrontation + shot) are both shared with the Captain's
+#         storyline and branch on current_character.text_id:
+#           - common_day2_hunt_pairing
+#           - common_day2_hunt_north_field  (holds the host_lies anger beat)
+#           - common_day2_hunt_captain_confrontation
 #       - In the far party, the Drunk shoots the Doctor, heard at a distance.
-#       - TODO (branch): if Broken has found the Drunk's warning, he should
-#         doubt the setup, spare the Captain, and join the far party to
-#         prevent the Doctor's death. That finding is not written yet, so for
-#         now this path is linear. See docs/next_tasks.md (Saturday - Hunt).
-#       - Stops at the hunt's end (work_in_progress).
+#       - TODO (spare branch): Broken should reach the far party to prevent the
+#         Doctor's death (docs/next_tasks.md, Saturday - Hunt). Not written yet.
+#       - Both branches stop at the hunt's end (work_in_progress).
 # --------------------------------------------
 label broken_day2_hunt:
 
@@ -35,22 +44,26 @@ label broken_day2_hunt:
 
     $ change_room('bedroom_broken')
 
-    $ play_music('upbeat', 1)
+    $ play_music('mysterious', 2)
 
     """
     I return to my room to change into the tweeds the household has laid out for me.
 
     My hands are steady as I dress. Steadier than they have any right to be.
 
-    The letter is folded in my breast pocket, where I can feel the small weight of it against my chest.
+    The letter still lies on my bedstand.
 
-    All night I turned it over, and all night the answer came back the same.
+    If I am to believe it, Captain Sinha put his name to the order that sent Tom up to the line.
 
-    Captain Sinha sent Tom up to the line, and Tom did not come home.
+    Picked him up amongst other possible candidates, likely due to his background.
 
-    Whatever else is false in this house, that much I am certain of.
+    Because of that, Tom came back from the war behind a mask, and lived a small and lonely life until his wounds got the better of him.
 
-    And a hunt is a careless sort of business. Accidents happen. Everyone says so.
+    A thought occurs to me, one I do not like but cannot ignore.
+
+    And a hunt is a careless sort of business. 
+    
+    Accidents happen.
     """
 
     $ change_room('gun_room')
@@ -58,13 +71,11 @@ label broken_day2_hunt:
     """
     The butler is in the gun room, attending the rifles with his unhurried care.
 
-    He hands me a piece, and the weight of it settles into my hands like an old habit.
+    He hands me a piece.
+
+    It has been years since I last held a rifle, yet it settles into my hands like an old habit.
 
     I check the action, sight along the barrel, and find it true.
-
-    I have handled guns since I was a boy, in yards and back rooms no gentleman would think to look.
-
-    Tom taught me the rest, on a fortnight's leave, laughing at how quick I took to it.
 
     I shall not embarrass myself today.
     """
@@ -74,15 +85,15 @@ label broken_day2_hunt:
     """
     The others are already gathering on the lawn.
 
-    Doctor Baldwin stands a little apart, grey and unwell, checking his rifle as though it were a patient.
+    Doctor Baldwin stands a little apart, grey and unwell.
 
-    Samuel Manning is a sorry sight, a flask in one hand and a gun in the other, swaying where he stands.
+    Samuel Manning is a sorry sight, swaying where he stands.
 
-    Lady Claythorn is the last to come out, turned out head to foot in tweed she plainly does not know how to wear.
+    Lady Claythorn is the last to come out.
 
-    And the Captain. Upright. Correct. A decorated officer at his ease.
-
-    The very picture of the man whose name is at the foot of my letter.
+    And the Captain. Upright. Correct. 
+    
+    A decorated officer at his ease, at least in appearance.
     """
 
     if broken_details.threads.is_unlocked('talked_to_maid'):
@@ -99,180 +110,78 @@ label broken_day2_hunt:
 
     call common_day2_hunt_butler_groups
 
-    captain """
-    If I may, my lady. I should consider it a privilege to accompany you.
-    """
+    call common_day2_hunt_pairing
+
+    call common_day2_hunt_north_field
 
     host """
-    How gallant of you, Captain. The privilege, I assure you, is mine.
-    """
+    Captain, you simply must tell us something of your soldiering.
 
-    drunk """
-    Doctor, I would be honoured to partner with you.
-
-    You don't mind, do you?
-    """
-
-    """
-    Doctor Baldwin's mouth opens and closes again. He plainly minds a great deal, yet he cannot find the words to refuse.
-    """
-
-    doctor """
-    Well... no, of course not.
-    """
-
-    """
-    That is the western grove settled, then. The doctor, the drunkard, and a footman to mind the pair of them.
-
-    Which leaves the north field to our hostess, the Captain, the butler, and whoever should round them out.
-
-    I do not mean to leave that to chance.
-    """
-
-    broken """
-    Doctor Baldwin's party is already three guns strong.
-
-    I shall round out your own, if my lady will have me.
-    """
-
-    host """
-    Why, Mr Moody, of course.
-
-    The more the merrier.
+    We have a real campaigner among us, and here I am letting him eat in silence.
     """
 
     captain """
-    A pleasure, Mr Moody.
-    """
+    There is little worth the telling, my lady.
 
-    broken """
-    The pleasure is entirely mine, Captain.
-    """
-
-    """
-    He returns my courtesy without a flicker.
-
-    He has no notion of what I carry in my pocket, nor what I mean to make of the morning.
-
-    Good.
-    """
-
-    butler """
-    Very good. Doctor Baldwin and Mr Manning to the western grove.
-
-    The footman will go along with them.
-
-    My lady, Captain Sinha and Mr Moody to the north field, and I shall attend.
-    """
-
-    call change_time(11, 45)
-
-    $ change_room('forest')
-
-    """
-    We walk some distance before the first quarry breaks cover. A pheasant, not ten yards off our line.
-
-    I have it before the Captain's rifle is even at his shoulder.
-    """
-
-    play sound gun
-
-    pause 1.0
-
-    """
-    The bird drops cleanly.
-    """
-
-    host """
-    Bravo, Mr Moody. A splendid shot.
-    """
-
-    broken """
-    You flatter me, my lady.
-
-    One does one's best.
+    But if it would amuse you, I might give you the relief of Tientsin. The heat of it, and the walls.
     """
 
     """
-    The Captain's turn comes a few minutes on, at a rabbit sat in the grass.
+    And he is away, modest and precise, with the polished ease of a man who has told it across a hundred dinner tables.
+
+    Lady Claythorn leans in, delighted.
+
+    I sit very still and let it wash over me.
+
+    This man held the safest billet in France, and came home to play the hero over the sandwiches, while Tom came home behind a mask and died by inches for the want of the very courage this fraud counterfeits so prettily.
+
+    My thumb finds the cold of the trigger guard where the rifle rests across my knee.
     """
 
-    play sound gun
+    if broken_details.threads.is_unlocked('talked_to_maid'):
 
-    pause 1.0
+        """
+        And still the maid's words will not leave me. A surprise, prepared for the guests.
 
-    """
-    He misses by a yard, and not for want of a steady morning.
+        The letter beneath my door. The hunt laid on the very next morning. The Captain set before me like a bottle on a wall.
 
-    A decorated soldier, and he cannot put a ball into a rabbit sitting still in the open.
+        Whoever arranged all this knew to a nicety what that order would do to me. They have written the scene and handed me the gun, and I am three lines from speaking my piece.
 
-    I had wondered at it. Now I am sure.
+        A man who kills to another's design is no avenger. He is a tool. And I have spent a year despising the men who let themselves be used.
+        """
 
-    Whatever he was in the war, it was not what he tells the dinner table.
-    """
+        """
+        For the first time since I read that paper, I am not certain of my own hand.
+        """
 
-    broken """
-    Hard luck, Captain. Hard luck indeed.
-    """
+        $ time_left = 1
+        call run_menu(
+            TimedMenu("broken_day2_hunt_menu_revenge", [
+                TimedMenuChoice("Stay my hand. I'll not dance to a stranger's tune.", 'broken_day2_hunt_spare', early_exit=True),
+                TimedMenuChoice("Design or not, his name is on the order. Lead him away.", 'broken_day2_hunt_kill', early_exit=True),
+            ])
+        )
 
-    captain """
-    I misjudged the lead.
-    """
+    else:
 
-    broken """
-    Quite. The lead.
-    """
+        """
+        There is no doubt left in me to stay my hand.
 
-    """
-    I let a little of the mockery show. I cannot help myself.
+        Whatever game is being played beneath this roof, the name at the foot of that order is his, and Tom is in the ground.
 
-    Lady Claythorn fares no better. Twice the barrel dips toward the earth, and once she shifts her grip as though she has forgotten where her hands belong.
+        That has always been enough.
+        """
 
-    A gentlewoman who arranged a shooting weekend on her own grounds, and she handles a gun like a parasol.
+        jump broken_day2_hunt_kill
 
-    There is not an honest article in this whole party.
 
-    Myself least of all.
-    """
-
-    $ host_details.description_hidden.unlock('hunt')
-
-    call change_time(12, 30)
-
-    """
-    By the time the butler calls us in for luncheon, only I have any game to show for the morning.
-    """
-
-    host """
-    Three birds and a pair of rabbits, Mr Moody. You are most impressive.
-
-    I confess I had no notion we should be so splendidly provided for.
-    """
-
-    broken """
-    Your ladyship is too generous.
-
-    I was simply very lucky today, that is all.
-
-    Otherwise, I am certain a decorated veteran like Captain Sinha would have put me quite to shame.
-    """
+# --------------------------------------------
+#   KILL - Broken gives in to the anger and shoots the Captain
+# --------------------------------------------
+label broken_day2_hunt_kill:
 
     """
-    The Captain says nothing to that. He only smiles, thin and correct.
-
-    We settle in a clearing among the birches. The butler lays a cloth and pours the tea with his customary care.
-
-    I keep up an easy flow of talk at Lady Claythorn's side, and watch the Captain over the rim of my cup, and wait for the butler to find some reason to leave us.
-    """
-
-    call change_time(13, 0)
-
-    """
-    In time, he does. A word about looking in upon the other party, and he is gone into the trees.
-
-    Three of us left in the clearing, and the Captain his own master no longer.
-
-    Now, then.
+    I let the talk run on a little longer, and gather myself, and wait for my opening.
     """
 
     call common_day2_hunt_captain_confrontation
@@ -306,7 +215,7 @@ label broken_day2_hunt:
     pause 0.5
 
     """
-    Then, from the direction of the western grove, another shot. And after it, faint and thin between the trees, a cry.
+    Then, from the direction of the other party, another shot. And after it, faint and thin between the trees, a cry.
 
     The doctor, or the drunkard, or both. It scarcely matters which.
 
@@ -316,9 +225,9 @@ label broken_day2_hunt:
     """
 
     """
-    I have no time for the horror of it. The butler will have heard the shots, and our hostess is a hundred yards off and waiting.
+    I have no time for the horror of it. The shot will have carried back to the clearing, and they will come looking.
 
-    I compose my face behind the mask, take up my rifle, and start back toward the clearing.
+    I compose my face behind the mask, take up my rifle, and start back the way we came.
 
     A dreadful accident, I shall tell them. The Captain wandered ahead, and the cover was thick, and I never saw him.
 
@@ -327,4 +236,65 @@ label broken_day2_hunt:
 
     # TODO: Saturday evening (saturday_evening). With the Captain dead, the Host
     # panics and leaves before dinner; the manor turns deadly. See docs/next_tasks.md.
+    jump work_in_progress
+
+
+# --------------------------------------------
+#   SPARE - Broken refuses to be used; the trap springs elsewhere
+#   (requires talked_to_maid)
+# --------------------------------------------
+label broken_day2_hunt_spare:
+
+    """
+    No.
+
+    I have spent a year hating the men who did the cruel thing because a cleverer man had arranged for them to do it.
+
+    I'll not become one more of them. Not even for Tom. Least of all for Tom.
+
+    I let the rage go cold in my hands. I let the Captain talk. I say nothing of the letter at all.
+    """
+
+    captain """
+    ... and so we held until the relief came up. A near thing, but a good one.
+    """
+
+    broken """
+    A remarkable account, Captain.
+    """
+
+    """
+    Whoever drew us here wanted him dead by my hand. Of that I am now certain.
+
+    Which means the danger was never the Captain at all. The danger is whoever wrote this morning for us, and they will not have written only the one death.
+    """
+
+    $ play_music('danger', 2)
+
+    play sound gun
+
+    pause 0.5
+
+    """
+    The thought has scarcely formed when a shot cracks from the direction of the other party. Then a second. And after them, thin between the trees, a cry.
+
+    Lady Claythorn is on her feet. The Captain reaches for his rifle.
+
+    My blood runs cold.
+
+    The doctor. They have left him alone with that poor drunken wreck, and I have sat here playing at conscience while the next act began without me.
+    """
+
+    broken """
+    Stay with her ladyship, Captain.
+
+    I shall go.
+    """
+
+    """
+    I am already moving, crashing through the bracken toward the sound, praying I am not as late as I fear.
+    """
+
+    # TODO: spare branch -> Broken reaches the far party and tries to prevent the
+    # Doctor's death (docs/next_tasks.md, Saturday - Hunt). Not written yet.
     jump work_in_progress

@@ -5,8 +5,8 @@
     "choices": [
         {
             "menu": "broken_day2_hunt_menu_revenge",
-            "selected": "Design or not, his name is on the order. Lead him away.",
-            "redirect": "broken_day2_hunt_kill"
+            "selected": "Stay my hand. I'll not dance to a stranger's tune.",
+            "redirect": "broken_day2_hunt_spare"
         }
     ]
 }

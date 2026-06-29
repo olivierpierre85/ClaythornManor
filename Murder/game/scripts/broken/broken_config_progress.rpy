@@ -77,10 +77,13 @@ label broken_config_progress:
             ],
 
             # ===== SATURDAY AFTERNOON (THE HUNT) =====
-            # Linear chapter (no menus). Branches only on the small aside shown
-            # when the maid was questioned on Friday night (talked_to_maid).
+            # Anger beats are tempered by host_lies / talked_to_maid. With
+            # talked_to_maid the player gets the spare/kill menu; without it the
+            # kill is forced.
             'saturday_afternoon': [
                 {"label": "broken_day2_hunt", "threads": {}},
+                {"label": "broken_day2_hunt", "threads": {'host_lies': True}},
                 {"label": "broken_day2_hunt", "threads": {'talked_to_maid': True}},
+                {"label": "broken_day2_hunt", "threads": {'talked_to_maid': True, 'host_lies': True}},
             ],
         }
