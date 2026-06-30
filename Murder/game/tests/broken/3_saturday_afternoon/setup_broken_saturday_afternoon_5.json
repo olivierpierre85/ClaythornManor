@@ -1,0 +1,17 @@
+{
+    "start_label": "broken_day2_hunt",
+    "unlocked_threads": ["talked_to_maid"],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day2_hunt_menu_party",
+            "selected": "Join the Doctor and Mr Manning instead",
+            "redirect": "broken_day2_hunt_western_grove"
+        },
+        {
+            "menu": "drunk_generic_menu_broken",
+            "selected": "Did you find anything odd in your room last night? A letter, perhaps?",
+            "redirect": "broken_drunk_hunt_letter"
+        }
+    ]
+}

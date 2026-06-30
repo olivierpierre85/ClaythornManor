@@ -35,4 +35,13 @@ label broken_config_menu:
         TimedMenuChoice('I want to talk about something else.', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "doctor")
 
+    #---------------------------------------------------------------------
+    # Drunk (used when Broken shadows the western-grove party on the hunt)
+    $ drunk_generic_menu_broken = TimedMenu("drunk_generic_menu_broken", [
+        TimedMenuChoice('What do you make of this place?', 'drunk_generic_manor', 10),
+        TimedMenuChoice('You have the look of a man with something on his mind.', 'broken_drunk_hunt_burden', 10),
+        TimedMenuChoice("Did you find anything odd in your room last night? A letter, perhaps?", 'broken_drunk_hunt_letter', 20, early_exit = True),
+        TimedMenuChoice("Leave him to his flask", 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ], image_right = "drunk")
+
     return

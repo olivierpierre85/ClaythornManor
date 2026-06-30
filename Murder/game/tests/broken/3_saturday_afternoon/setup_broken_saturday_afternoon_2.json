@@ -4,6 +4,11 @@
     "saved_variables": {},
     "choices": [
         {
+            "menu": "broken_day2_hunt_menu_party",
+            "selected": "Make up Lady Claythorn's party, and keep the Captain close",
+            "redirect": "broken_day2_hunt_north"
+        },
+        {
             "menu": "broken_day2_hunt_menu_revenge",
             "selected": "Design or not, his name is on the order. Lead him away.",
             "redirect": "broken_day2_hunt_kill"

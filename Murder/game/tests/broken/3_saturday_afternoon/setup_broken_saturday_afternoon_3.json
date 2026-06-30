@@ -4,6 +4,11 @@
     "saved_variables": {},
     "choices": [
         {
+            "menu": "broken_day2_hunt_menu_party",
+            "selected": "Make up Lady Claythorn's party, and keep the Captain close",
+            "redirect": "broken_day2_hunt_north"
+        },
+        {
             "menu": "broken_day2_hunt_menu_revenge",
             "selected": "Stay my hand. I'll not dance to a stranger's tune.",
             "redirect": "broken_day2_hunt_spare"

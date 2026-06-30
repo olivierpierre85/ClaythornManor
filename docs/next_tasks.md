@@ -25,11 +25,13 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 - **Without the Captain** — the Host panics and leaves before dinner. With only the Butler present it feels wrong, and everyone dies at dinner — except if you found and took the poison on the first day. Otherwise the Butler burns everyone? And the psychic dies by suicide (first to collapse, apparently from smoke inhalation but actually sleeping pills).
 - **Only Ted is dead** — a normal dinner, but the same outcome: everyone dies. If you found the poison you can press on; if you found nothing you die in your sleep when the Butler sets the house on fire.
 
+Add dialogs that, when going with captain instead of drunk, the butler kills him right after killing captain, if he spares captain, then broken dies after hearing of drunk killed? (captain rush towards other party faster, host stays behind, broken is in between, caught up by the butler who kills him) 
+
 ##### Saturday — After Dinner
 - If you found the poison, you gain time to explore in both cases. Now you can partner up with the Drunk → unlocks him (at least partially). Or with someone else?
 - If you do not find [???], you burn in your sleep → INTUITION: DO NOT SLEEP. 
   
-- The only way to reach Day 3 is to have found the poison AND successfully interrogated all the staff, which makes Broken decide to spend the night in the tea room ("no one should leave our sight")
+- The only way to reach Day 3 is to have found the poison AND successfully interrogated all the staff, which makes Broken decide to spend the night in the tea room ("no one should leave our sights")
 
 ##### Sunday Morning 
 If you survived with everyone but TED harring and host (who sneaked out after dinner), you are now face with what to do. You know you have to leave but how and with whom?

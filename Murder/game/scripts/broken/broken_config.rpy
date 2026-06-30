@@ -15,6 +15,7 @@ label init_broken:
             # Generic Menus
             "host_generic_menu": host_generic_menu_broken,
             "doctor_generic_menu" : doctor_generic_menu_broken,
+            "drunk_generic_menu" : drunk_generic_menu_broken,
 
             # MAP Menus
             "day1_evening_map_menu" : broken_day1_evening_map_menu,
@@ -75,6 +76,13 @@ label init_broken:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
             ),
+            CharacterInformation(1, "drunk_letter",
+                "Samuel Manning was sent a letter blaming Doctor Baldwin for his wife's death, just as you were turned against the Captain",
+                content_negative="You didn't learn what was driving Samuel Manning",
+                image_file="drunk_letter",
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon'],
+            ),
         ])
 
         broken_objects = CharacterObjectList([
@@ -90,6 +98,8 @@ label init_broken:
         broken_endings = CharacterEndingList([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed", chapters=['saturday_morning']),
             CharacterInformation(1, "throat_cut", "Your throat was cut in your sleep", image_file="throat_cut", chapters=['saturday_morning']),
+            CharacterInformation(1, "silenced", "The butler strangled you the moment the Captain was dead", image_file="strangled_woods", chapters=['saturday_afternoon']),
+            CharacterInformation(1, "overtaken", "The butler caught you alone and shot you down as the parties scattered", image_file="hunting_rifle", chapters=['saturday_afternoon']),
         ])
 
         broken_description_hidden = CharacterDescriptionHiddenList([
