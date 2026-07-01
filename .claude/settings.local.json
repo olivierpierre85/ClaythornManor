@@ -11,7 +11,8 @@
       "Bash(python Murder/check_test_dialogue_coverage.py)",
       "Bash(python*)",
       "Bash(Get-Content*)",
-      "Bash(*)"
+      "Bash(*)",
+      "*"
     ]
   }
 }

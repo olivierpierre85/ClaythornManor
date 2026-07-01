@@ -176,6 +176,38 @@
         "tea_room.png"
       ],
       "default": "bedroom_broken.png"
+    },
+    {
+      "id": "characterId",
+      "type": "pickString",
+      "description": "Pick a character (Flux 2 Dev art)",
+      "options": [
+        "captain",
+        "lad",
+        "psychic",
+        "doctor",
+        "nurse",
+        "drunk",
+        "broken",
+        "host"
+      ],
+      "default": "captain"
+    },
+    {
+      "id": "characterCount",
+      "type": "promptString",
+      "description": "How many images to generate (each a different seed)",
+      "default": "3"
+    },
+    {
+      "id": "turnDirection",
+      "type": "pickString",
+      "description": "Which way should the figure turn?",
+      "options": [
+        "left",
+        "right"
+      ],
+      "default": "left"
     }
   ],
   "tasks": [
@@ -390,6 +422,48 @@
       "args": [
         "c:\\Projects\\ClaythornManor\\tools\\toggle_location_lighting.py",
         "c:\\Projects\\ClaythornManor\\Images\\locations_new\\flux_2_final_choices\\${input:fluxFile}"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Character: 1. Create base from head-shot (Flux 2 Dev)",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\character_comfy.py",
+        "base",
+        "${input:characterId}",
+        "--count",
+        "${input:characterCount}"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Character: 2. Turn 3/4 from approved front (Flux 2 Dev)",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\character_comfy.py",
+        "turn",
+        "${input:characterId}",
+        "--direction",
+        "${input:turnDirection}",
+        "--count",
+        "${input:characterCount}"
       ],
       "presentation": {
         "reveal": "always",
