@@ -78,34 +78,82 @@ CHARACTERS = {
             "leather Sam Browne belt and diagonal shoulder strap"
         ),
     ),
-    # --- descriptions TODO (head-shots pre-filled where known) ---
     "lad": Character(
-        head_shot="Images/Archive/16_05_ARCHIVE/characters/artflowcharacters/lad.png",
-        description=None,
+        head_shot="Images/characters_original_and_archive/side/side lad.png",
+        description=(
+            "a young man of about twenty-two, fair skin with a faint ruddy flush, tousled "
+            "light blond hair swept across the forehead, clear green eyes, clean-shaven with "
+            "soft youthful features and a full mouth, a wary watchful expression, wearing a "
+            "light brown 1920s three-piece lounge suit with a waistcoat and a loosened "
+            "collar, the suit clean but a little cheap and ill-fitting, only subtly worn with "
+            "no visible dirt or stains, the clothes of a working man trying to pass in gentry "
+            "company"
+        ),
     ),
     "psychic": Character(
-        head_shot="Images/Archive/16_05_ARCHIVE/characters/artflowcharacters/psychic.png",
-        description=None,
+        head_shot="Images/characters_original_and_archive/side/side psychic.png",
+        description=(
+            "a gaunt woman in her early sixties, a deeply lined careworn face with hollow "
+            "cheeks, pale skin and calm pale hazel eyes with an ordinary, steady gaze, thin "
+            "lips touched with dark red, greying hair wrapped in a soft draped grey headscarf "
+            "or cloche, small drop earrings, wearing a layered dark 1920s dress with a fringed "
+            "shawl and long strings of beads, the theatrical look of a spiritualist medium"
+        ),
     ),
     "doctor": Character(
-        head_shot="Images/Archive/16_05_ARCHIVE/characters/artflowcharacters/doctor.png",
-        description=None,
+        head_shot="Images/characters_original_and_archive/side/side doctor.png",
+        description=(
+            "a gaunt middle-aged man of about fifty, greying dark hair combed back from a "
+            "high forehead, round wire-rimmed spectacles, sunken tired eyes with dark shadows "
+            "beneath, pale sallow skin and hollow lined cheeks, clean-shaven, a weary faintly "
+            "furtive expression, wearing a respectable bottle-green 1920s three-piece tweed "
+            "suit with a waistcoat and a warm brown tie, tidy and well-kept, the proper "
+            "middle-class look of a charity-hospital doctor with a quiet morphine habit"
+        ),
     ),
     "nurse": Character(
-        head_shot="Images/Archive/16_05_ARCHIVE/characters/artflowcharacters/nurse.png",
-        description=None,
+        head_shot="Images/characters_original_and_archive/side/side nurse.png",
+        description=(
+            "a plain woman in her early fifties, dark brown hair lightly greying, parted in "
+            "the centre and drawn loosely back, pale lined skin, cool blue-grey eyes, an "
+            "unadorned ageing face with a reserved, faintly severe and disapproving "
+            "expression, wearing a plain high-collared dark 1920s dress with a pale collar and "
+            "a small brooch, austere, spinsterish and respectable"
+        ),
     ),
     "drunk": Character(
-        head_shot="Images/Archive/16_05_ARCHIVE/characters/artflowcharacters/drunk.png",
-        description=None,
+        head_shot="Images/characters_original_and_archive/side/side drunk.png",
+        description=(
+            "a grizzled older man of about sixty, unkempt greying hair and a grey stubbled "
+            "beard, ruddy weathered and deeply lined skin, bleary bloodshot eyes and a loose "
+            "wry half-smile, wearing a rumpled grey 1920s three-piece suit with a crooked "
+            "loosened tie and an unbuttoned waistcoat, the suit clean but well-worn and "
+            "creased, only subtly shabby with no visible dirt or stains, a once-respectable "
+            "barrister gone to drink"
+        ),
     ),
     "broken": Character(
-        head_shot="Images/Archive/16_05_ARCHIVE/characters/artflowcharacters/broken_maskless.png",
-        description=None,
+        # Masked -- his in-game identity (the side portrait is masked too). For the
+        # disfigured face instead, point at the maskless portrait and describe the scarring.
+        head_shot="Images/characters_original_and_archive/side/side broken.png",
+        description=(
+            "a lean man of about forty wearing a carved painted wooden half-mask (a mask of "
+            "pale carved wood in muted browns, with a visible wood grain) that covers the "
+            "disfigured nose and upper face, weary watchful eyes visible through it, a soft "
+            "flat cloth cap over short hair, wearing a plain working-class 1920s outfit of "
+            "collarless pale shirt, waistcoat and jacket in muted tones, a disfigured war "
+            "veteran hiding behind the mask"
+        ),
     ),
     "host": Character(
-        head_shot=None,  # no head-shot located yet; set the path when you have one
-        description=None,
+        head_shot="Images/characters_original_and_archive/side/side host.png",
+        description=(
+            "an elegant woman of about forty-five, softly waved silver-grey hair set in a "
+            "1920s finger-wave bob, arched brows, striking green eyes, pale powdered skin and "
+            "dark red lips, a poised composed and faintly theatrical expression, wearing a "
+            "refined pale 1920s gown with a beaded lace collar and ropes of pearls, an "
+            "out-of-work actress playing the part of a grand lady"
+        ),
     ),
 }
 
