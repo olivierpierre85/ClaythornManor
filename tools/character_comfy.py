@@ -155,6 +155,34 @@ CHARACTERS = {
             "out-of-work actress playing the part of a grand lady"
         ),
     ),
+    # --- staff ---
+    "butler": Character(
+        head_shot="Images/characters_original_and_archive/side/side butler.png",
+        description=(
+            "a solidly built older man of about sixty, broad-shouldered and powerfully built, "
+            "greying hair swept back from a weathered composed face, green-hazel eyes and a "
+            "faint reserved smile, clean-shaven, wearing formal butler's attire of a black "
+            "1920s tailcoat, white wing-collar shirt and black bow tie, dignified and imposing"
+        ),
+    ),
+    "footman": Character(
+        head_shot="Images/characters_original_and_archive/side/side footman.png",
+        description=(
+            "a handsome man of about thirty-five, dark brown hair combed back, a neat dark "
+            "moustache, blue-grey eyes and a smooth composed expression, wearing footman's "
+            "livery of a dark tailcoat with a high stand collar and brass buttons over a "
+            "white shirt, poised and well-groomed"
+        ),
+    ),
+    "maid": Character(
+        head_shot="Images/characters_original_and_archive/side/side maid.png",
+        description=(
+            "a young woman of about twenty-two, dark brown hair pinned back beneath a white "
+            "cap, fair freckled skin, blue-grey eyes and a plain fresh reserved face, wearing "
+            "a black 1920s housemaid's dress with a white apron, white collar and cuffs, neat "
+            "and demure"
+        ),
+    ),
 }
 
 # ---- Prompt templates -------------------------------------------------------
