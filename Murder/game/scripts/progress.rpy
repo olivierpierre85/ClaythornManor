@@ -177,7 +177,7 @@ screen progress:
                                         yoffset 2
                                         mouse "hover"
                                         if not tutorial_on:
-                                            action ShowMenu("character_threads", current_storyline)
+                                            action [SetVariable("current_checkpoint", None), ShowMenu("character_threads", current_storyline)]
                                         if current_storyline.is_everything_completed():
                                             idle "images/info_cards/murder_board_big.webp" at menu_image
                                         else:
@@ -195,14 +195,14 @@ screen progress:
                                                 text_font gui.name_text_font
                                                 text_color gui.highlight_color
                                                 if not tutorial_on:
-                                                    action ShowMenu("character_threads", current_storyline)
+                                                    action [SetVariable("current_checkpoint", None), ShowMenu("character_threads", current_storyline)]
                                         else:
                                             textbutton "{color=#fff}[unlocked]{/color}/[total]":
                                                 text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.accent_color
                                                 if not tutorial_on:
-                                                    action ShowMenu("character_threads", current_storyline)
+                                                    action [SetVariable("current_checkpoint", None), ShowMenu("character_threads", current_storyline)]
 
                                         bar:
                                             # yoffset 20
@@ -229,6 +229,8 @@ screen progress:
                                     imagebutton:
                                         yoffset 2
                                         mouse "hover"
+                                        if not tutorial_on:
+                                            action [SetVariable("current_checkpoint", None), ShowMenu("character_endings", current_storyline)]
                                         if current_storyline.is_all_endings_reached():
                                             idle "images/info_cards/endings_curtains_big.webp" at menu_image
                                         else:
@@ -246,11 +248,15 @@ screen progress:
                                                 text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.highlight_color
+                                                if not tutorial_on:
+                                                    action [SetVariable("current_checkpoint", None), ShowMenu("character_endings", current_storyline)]
                                         else:
                                             textbutton "{color=#fff}[unlocked_endings]{/color}/[total_endings]":
                                                 text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.accent_color
+                                                if not tutorial_on:
+                                                    action [SetVariable("current_checkpoint", None), ShowMenu("character_endings", current_storyline)]
                                         bar:
                                             value current_storyline.get_character_progress_endings()
                                             range 100
@@ -523,10 +529,22 @@ screen info_card(item=None, item_type=None, is_small=False, dimmed=False):
                 icon_file = "{image=images/ui/observation_icon.png} "
             elif item_type == 'choice':
                 icon_file = "{image=images/ui/choice_icon.png} "
+            elif item_type == 'ending':
+                icon_file = ""
             else:
                 icon_file = "???"
+
+            # Endings marked as intuition carry the icon in their tooltip,
+            # matching the progress timeline
+            if item_type == 'ending' and item.is_intuition:
+                intuition_marker = " {image=images/ui/intuition_icon.png}"
+            else:
+                intuition_marker = ""
             
-            if current_checkpoint:
+            if item_type == 'ending':
+                # Endings are not tracked in checkpoints
+                locked = item.locked
+            elif current_checkpoint:
                 if item_type == 'object':
                     locked = (not item.text_id in current_checkpoint.objects)
                 elif item_type == 'observation':
@@ -549,9 +567,9 @@ screen info_card(item=None, item_type=None, is_small=False, dimmed=False):
             # elif not item.discovered:
             #     idle Transform("images/info_cards/question_mark_bw.webp", zoom=0.5) 
             #     tooltip "Hidden"
-            # elif not locked: 
-                idle Transform("images/info_cards/" + item.image_file + ".webp", zoom=0.5)   
-                tooltip icon_file + item.content
+            # elif not locked:
+                idle Transform("images/info_cards/" + item.image_file + ".webp", zoom=0.5)
+                tooltip icon_file + item.content + intuition_marker
             # else:
             #     idle Transform("images/info_cards/" + item.image_file + "_bw.webp", zoom=0.5)                           
             #     tooltip icon_file + item.content_negative
@@ -562,12 +580,12 @@ screen info_card(item=None, item_type=None, is_small=False, dimmed=False):
                 idle "images/info_cards/question_mark_bw.webp"   
                 tooltip "Hidden"
                 # tooltip item.content # Use this line to debug infocards
-            elif not locked: 
-                idle "images/info_cards/" + item.image_file + ".webp"     
-                tooltip icon_file + item.content
+            elif not locked:
+                idle "images/info_cards/" + item.image_file + ".webp"
+                tooltip icon_file + item.content + intuition_marker
             else:
-                idle "images/info_cards/" + item.image_file + "_bw.webp"                                
-                tooltip icon_file + item.content_negative
+                idle "images/info_cards/" + item.image_file + "_bw.webp"
+                tooltip icon_file + (item.content_negative or item.content)
 
 
 screen progress_details(selected_chapter, selected_char, ending = False, is_current = False):

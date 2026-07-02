@@ -1,8 +1,9 @@
-# Threads overview screen
+# Threads & Endings overview screens
 #
-# Shows every thread of a character as an info card, grouped in three day
-# columns (Friday / Saturday / Sunday) with one subtitle per chapter.
-# Two view modes:
+# Both screens share the same layout: portrait on the left, three day columns
+# (Friday / Saturday / Sunday) with one subtitle per chapter and info cards.
+#
+# Threads view modes:
 #   - "chapters"          : chapters where the thread can be unlocked
 #   - "relevant_chapters" : chapters where the thread is used (Impact view)
 # The Impact view is disabled for now - set show_impact_toggle to True to
@@ -31,6 +32,92 @@ define threads_screen.chapter_title_size = 28
 define threads_screen.show_impact_toggle = False
 
 
+# Left column shared by both overview screens: name, portrait, progress bar
+screen overview_portrait_column(selected_char, bar_value):
+
+    vbox:
+        spacing 10
+        yalign 0.0
+
+        text selected_char.real_name:
+            size 48
+            font gui.name_text_font
+            color gui.accent_color
+            outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
+
+        add "images/characters/side/side " + selected_char.text_id + ".png"
+
+        bar:
+            value bar_value
+            range 100
+            xmaximum 260
+            style 'progress_bar'
+
+
+# The three day columns, filled with threads or endings depending on source
+screen overview_day_columns(selected_char, source="threads", threads_view="chapters"):
+
+    $ usable_width = threads_screen.area_width - threads_screen.column_spacing * (len(threads_day_layout) - 1)
+
+    viewport:
+        xmaximum threads_screen.area_width
+        ymaximum 680
+        draggable True
+        mousewheel True
+        scrollbars "vertical"
+        # Only show the scrollbar when the content overflows
+        vscrollbar_unscrollable "hide"
+
+        hbox:
+            spacing threads_screen.column_spacing
+
+            for day_index, (day_label, day_chapters) in enumerate(threads_day_layout):
+                $ column_width = int(usable_width * threads_screen.day_widths[day_index])
+                $ cards_per_row = max(1, (column_width + 13) // threads_screen.card_slot)
+                if source == "endings":
+                    $ day_items = [(key, selected_char.get_endings_for_chapter(key)) for key in day_chapters]
+                else:
+                    $ day_items = [(key, selected_char.get_threads_for_chapter(key, threads_view)) for key in day_chapters]
+                $ day_items = [(key, items) for key, items in day_items if items]
+
+                vbox:
+                    xminimum column_width
+                    xmaximum column_width
+                    spacing 15
+
+                    text day_label:
+                        font gui.name_text_font
+                        color gui.accent_color
+                        size threads_screen.day_title_size
+
+                    if not day_items:
+                        text _("Nothing here"):
+                            font gui.name_text_font
+                            color gui.insensitive_color
+                            size threads_screen.chapter_title_size
+                    else:
+                        for key, items in day_items:
+                            $ found = len([item for item in items if item.discovered])
+                            $ subtitle = chapters_names[key] + "   " + str(found) + "/" + str(len(items))
+
+                            text subtitle:
+                                font gui.name_text_font
+                                size threads_screen.chapter_title_size
+                                if found == len(items):
+                                    color gui.insensitive_color
+                                else:
+                                    color "#FFFFFF"
+
+                            $ number_of_rows = ((len(items) + cards_per_row - 1) // cards_per_row)
+                            grid cards_per_row number_of_rows:
+                                spacing 13
+                                for item in items:
+                                    if source == "endings":
+                                        use info_card(item, 'ending')
+                                    else:
+                                        use info_card(item, item.type, dimmed=(threads_view == "relevant_chapters" and key not in item.chapters))
+
+
 screen character_threads(selected_char):
 
     tag menu
@@ -50,24 +137,7 @@ screen character_threads(selected_char):
                 spacing 60
                 yalign 0.0
 
-                # Left column: character name and picture
-                vbox:
-                    spacing 10
-                    yalign 0.0
-
-                    text selected_char.real_name:
-                        size 48
-                        font gui.name_text_font
-                        color gui.accent_color
-                        outlines [ (absolute(1), "#140303", absolute(0), absolute(0)) ]
-
-                    add "images/characters/side/side " + selected_char.text_id + ".png"
-
-                    bar:
-                        value selected_char.get_character_progress_choices_and_discoveries()
-                        range 100
-                        xmaximum 260
-                        style 'progress_bar'
+                use overview_portrait_column(selected_char, selected_char.get_character_progress_choices_and_discoveries())
 
                 # Right side: the three day columns
                 vbox:
@@ -98,59 +168,42 @@ screen character_threads(selected_char):
                                     text_color gui.accent_color
                                 text_hover_color gui.hover_color
 
-                    $ usable_width = threads_screen.area_width - threads_screen.column_spacing * (len(threads_day_layout) - 1)
+                    use overview_day_columns(selected_char, "threads", threads_view)
 
-                    viewport:
-                        xmaximum threads_screen.area_width
-                        ymaximum 680
-                        draggable True
-                        mousewheel True
-                        scrollbars "vertical"
-                        # Only show the scrollbar when the content overflows
-                        vscrollbar_unscrollable "hide"
+        fixed:
+            textbutton _("Return"):
+                align (1.0, 1.0)
+                xoffset 400
+                yoffset -150
+                action ShowMenu("progress")
 
-                        hbox:
-                            spacing threads_screen.column_spacing
+    use tooltip_display
 
-                            for day_index, (day_label, day_chapters) in enumerate(threads_day_layout):
-                                $ column_width = int(usable_width * threads_screen.day_widths[day_index])
-                                $ cards_per_row = max(1, (column_width + 13) // threads_screen.card_slot)
-                                $ day_items = [(key, selected_char.get_threads_for_chapter(key, threads_view)) for key in day_chapters]
-                                $ day_items = [(key, items) for key, items in day_items if items]
 
-                                vbox:
-                                    xminimum column_width
-                                    xmaximum column_width
-                                    spacing 15
+screen character_endings(selected_char):
 
-                                    text day_label:
-                                        font gui.name_text_font
-                                        color gui.accent_color
-                                        size threads_screen.day_title_size
+    tag menu
 
-                                    if not day_items:
-                                        text _("Nothing here"):
-                                            font gui.name_text_font
-                                            color gui.insensitive_color
-                                            size threads_screen.chapter_title_size
-                                    else:
-                                        for key, items in day_items:
-                                            $ found = len([item for item in items if item.discovered])
-                                            $ subtitle = chapters_names[key] + "   " + str(found) + "/" + str(len(items))
+    # info_card computes lock state from current_checkpoint when it is set,
+    # and the progress screen leaves it populated
+    on "show" action SetVariable("current_checkpoint", None)
 
-                                            text subtitle:
-                                                font gui.name_text_font
-                                                size threads_screen.chapter_title_size
-                                                if found == len(items):
-                                                    color gui.insensitive_color
-                                                else:
-                                                    color "#FFFFFF"
+    use game_menu(_("Storyline"), scroll="fixed"):
 
-                                            $ number_of_rows = ((len(items) + cards_per_row - 1) // cards_per_row)
-                                            grid cards_per_row number_of_rows:
-                                                spacing 13
-                                                for item in items:
-                                                    use info_card(item, item.type, dimmed=(threads_view == "relevant_chapters" and key not in item.chapters))
+        fixed:
+            hbox:
+                xpos 80
+                ypos 20
+                spacing 60
+                yalign 0.0
+
+                use overview_portrait_column(selected_char, selected_char.get_character_progress_endings())
+
+                vbox:
+                    spacing 20
+                    yalign 0.0
+
+                    use overview_day_columns(selected_char, "endings")
 
         fixed:
             textbutton _("Return"):

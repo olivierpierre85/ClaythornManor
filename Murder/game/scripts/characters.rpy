@@ -606,6 +606,10 @@ init -100 python:
         def get_threads_for_chapter(self, chapter_key, field="chapters"):
             return [item for item in self.get_choices_and_discoveries_ordered()
                     if chapter_key in getattr(item, field, [])]
+
+        def get_endings_for_chapter(self, chapter_key):
+            return [item for item in self.endings.information_list
+                    if chapter_key in item.chapters]
         
         def get_chapter_by_name(self, name):
             all_chapters = [chapter for line in self.progress for chapter in line]

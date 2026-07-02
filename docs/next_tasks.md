@@ -1,4 +1,25 @@
 <!-- # cSpell:disable -->
+
+## Technical Tasks !IMPORTANT USE FABLE 5 why we can!!!!!
+
+Ongoing AI ollama tester, try with longer run. maybe needed to use a better LLM that local
+
+IDEA => For choices already made (greyed out, add the time they will consume?)
+### INTUITION system entirely FOR EVERYONE SAVED concept
+Now an intuition is needed to SAVE a person.
+When Someone is saved, it add a SAVED over their name in the progress view 
+- (need a lot of new images)
+- Need a new var saved over time for each character. (is_saved)
+
+- [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
+- [ ] BUG: **save_transcript_to_file** button not working during menu????
+- [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
+- [ ] **New ENDINGS view** ? Same as new threads view?
+- [ ] **ADD tutorial overlay** for PROGRESS screen, with Thread, ending and Backstory view as well?
+
+
+
+----------------------------------------------------------
 Chages for consistency:
    - Rethink the letter to the captain to comply more with the Journalist story
 
@@ -68,33 +89,8 @@ Redraw BETTER maps
 Get new music from internet and put them at the right place
 
 
-## Technical Tasks
-
-Ongoing AI ollama tester, try with longer run. maybe needed to use a better LLM that local
-
-IDEA => For choices already made (greyed out, add the time they will consume?)
-### INTUITION system entirely FOR EVERYONE SAVED concept
-Now an intuition is needed to SAVE a person.
-When Someone is saved, it add a SAVED over their name in the progress view 
-- (need a lot of new images)
-- Need a new var saved over time for each character. (is_saved)
-
-- [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
-- [ ] BUG: **save_transcript_to_file** button not working during menu????
-- [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
-
-- [ ] **New Progress view**
-    - Add new **ENDINGS page** for symmetry? Or a tooltip that says, endings can be seen below
-    - Add new page with **All threads** ?
 
 
-
-## Question for Testers
-- What about **NEW PROGRESS PAGE** and no character page
-PATHS, “Actions”, Findings, discoveries ? Forks, Threads, Leads
-NEW paths PAGE wil ALL the unlockables, different from breakpoint page
-- DO I NEED the map menu ? Since there is almost 0 info on it, maybe not
-- Are important choices TOO confusing => Everything or NOT? But that means WAY harder to unlock?
 
 
 ## Update ITCH.IO
