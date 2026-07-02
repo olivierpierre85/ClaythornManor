@@ -352,9 +352,11 @@ screen navigation(tag="menu"):
                     action [QuickSave(), Function(export_choices_to_file, all_choices)]
             textbutton _("Quit"):
                 if not tutorial_on:
-                    # TODO: put back the save when testing demo !!
-                    # action [QuickSave(), Function(export_choices_to_file, all_choices), Show("confirmbutton")]
-                    action [QuickSave(), Show("confirmbutton")]
+                    # Autosave here so "Quit to main menu" is covered too
+                    # (autosave_on_quit only fires when the app terminates).
+                    # TODO: put back the choice export when testing demo !!
+                    # action [Function(renpy.force_autosave, False, True), Function(export_choices_to_file, all_choices), Show("confirmbutton")]
+                    action [Function(renpy.force_autosave, False, True), Show("confirmbutton")]
 
     #textbutton _("Return") action Return() xalign 0.95 yalign 0.93
 
@@ -391,16 +393,10 @@ screen main_menu():
     vbox:
         xpos 280
         ypos 330
-        # $ last_save = renpy.newest_slot(r"auto+")
-        # $ last_save = renpy.newest_slot()
-        $ last_save = renpy.newest_slot(r"quick+")
-        # $ print(str(last_save))
+        # Newest save across autosaves (choice/quit) and manual quick saves
+        $ last_save = renpy.newest_slot(r"(auto|quick)-")
         if last_save is not None:
-        #     $ name, page = last_save.split("-")
-            # $ print(name, page)
-            # textbutton _("Continue") action FileLoad(name, page)
-            # textbutton _("Continue") action FileLoad (1, confirm = False, page = "auto", newest = True)
-            textbutton _("Continue") action QuickLoad()
+            textbutton _("Continue") action FileLoad(last_save, confirm=False, slot=True)
 
         # textbutton _("Continue") action Start() at button0
         textbutton _("New Game") action Start() at button1

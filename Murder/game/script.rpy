@@ -115,11 +115,14 @@ default drunk_mode = False
 
 # My config variables
 
-# Autosave not Working (probably because of complicated transitions)
-# so I deactivated it an replaced with quicksave button (and after change time)
+# Autosave: choices never go through Ren'Py's `menu` statement (they use
+# run_menu in custom_menus.rpy), so autosave_on_choice does nothing by itself.
+# run_menu calls renpy.force_autosave after each committed choice and reuses
+# autosave_on_choice as its on/off switch (ollama autoplay turns it off).
+# autosave_on_quit covers the Quit action and the window close button.
 define config.has_autosave = True
 define config.autosave_on_choice = True
-define config.autosave_on_quit = False
+define config.autosave_on_quit = True
 
 # define config.default_fullscreen = True # TODO activate for DEMO
 # define config.rollback_enabled = False # TODO activate for DEMO

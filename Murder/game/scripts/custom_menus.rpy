@@ -105,6 +105,13 @@ label run_menu(current_menu, change_level=True):
                 # renpy.say(current_character.real_name, selected_choice[menu_level].text, interact=False)
 
 
+        # Autosave after every committed choice. The custom menus bypass the
+        # `menu` statement, so this is where autosave_on_choice actually happens.
+        # block=True keeps the save off the background thread (the old flaky
+        # path). Loading this save puts the player back at this menu.
+        if config.autosave_on_choice and not full_testing_mode and not renpy.is_in_test():
+            $ renpy.force_autosave(take_screenshot=True, block=True)
+
         if show_tutorial_already_chosen:
             $ show_tutorial_already_chosen = False
             call expression "tutorial_already_chosen"
