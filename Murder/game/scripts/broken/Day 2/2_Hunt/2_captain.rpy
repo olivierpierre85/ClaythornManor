@@ -15,12 +15,12 @@
 label broken_day2_hunt_captain:
 
     """
-    The groups are set, we are on our way into the woods.
+    Now that the groups are set, we make our way into the woods.
     """
 
-    call common_day2_hunt_north_field_2
+    call common_day2_hunt_north_field
 
-    #TODO read from here
+    #TODO read from here => Move captain discussion to common
 
     host """
     Captain, you simply must tell us something of your soldiering.

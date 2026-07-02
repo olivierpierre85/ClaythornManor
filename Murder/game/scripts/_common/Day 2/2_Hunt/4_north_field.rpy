@@ -15,98 +15,8 @@
 
 # Moody joins the host's party, the shoot, and the luncheon, up to the point
 # where the Captain is at Moody's mercy. Stops before the confrontation/choice.
+
 label common_day2_hunt_north_field:
-
-    # --- Moody attaches himself to the north-field party ---
-    if current_character.text_id == "captain":
-
-        broken """
-        Doctor Baldwin's party is already three guns strong.
-
-        I shall round out your own, if my lady will have me.
-        """
-
-    elif current_character.text_id == "broken":
-
-        """
-        That settles one party, then. The doctor, the drunkard, and a footman to mind the pair of them.
-
-        Which leaves our hostess and the Captain wanting a third gun for the other.
-
-        I do not mean to leave that to chance.
-        """
-
-        broken """
-        Doctor Baldwin and Mr Manning will do well enough together.
-
-        I should be glad to make up your party, my lady, if you will have me.
-        """
-
-    host """
-    Why, Mr Moody, of course.
-
-    The more the merrier.
-    """
-
-    if current_character.text_id == "captain":
-
-        """
-        A chill passes through me.
-
-        I would rather have avoided him this afternoon.
-
-        But, I cannot object without drawing attention to myself.
-        """
-
-    captain """
-    A pleasure, Mr Moody.
-    """
-
-    broken """
-    The pleasure is entirely mine, Captain.
-    """
-
-    if current_character.text_id == "captain":
-
-        """
-        The butler steps forward.
-        """
-
-    elif current_character.text_id == "broken":
-
-        """
-        He returns my courtesy without a flicker.
-
-        He has no notion of what I carry in my pocket, nor what I mean to make of the morning.
-
-        Good.
-        """
-
-    # --- The butler splits the field (Ted only exists on the Captain's side) ---
-    if current_character.text_id == "captain":
-
-        butler """
-        Very good. Doctor Baldwin and Mr Manning to the western grove, with Mr Harring.
-
-        The footman will go along with them.
-
-        My lady, Captain Sinha and Mr Moody to the north field, and I shall attend.
-        """
-
-    elif current_character.text_id == "broken":
-
-        butler """
-        Very good. Doctor Baldwin and Mr Manning to the western grove.
-
-        The footman will go along with them.
-
-        My lady, Captain Sinha and Mr Moody to the north field, and I shall attend.
-        """
-    
-    return
-
-
-label common_day2_hunt_north_field_2:
 
     call change_time(11, 45)
 
@@ -124,7 +34,7 @@ label common_day2_hunt_north_field_2:
     elif current_character.text_id == "broken":
 
         """
-        We walk some distance before the first quarry breaks cover. A pheasant, not ten yards off our line.
+        We walk some distance before I spot a pheasant, not ten yards off our line.
 
         I have it before the Captain's rifle is even at his shoulder.
         """
@@ -230,6 +140,8 @@ label common_day2_hunt_north_field_2:
         By the time the butler calls us in, only Mr Moody has game to show.
         """
 
+        $ host_details.description_hidden.unlock('hunt')
+
     elif current_character.text_id == "broken":
 
         """
@@ -237,7 +149,9 @@ label common_day2_hunt_north_field_2:
 
         So this is the great Captain Sinha. A man who cannot strike a rabbit at twenty paces, who holds forth each evening on Burma and the Boxers as though he had won the Empire single-handed.
 
-        A counterfeit hero in a borrowed reputation. The very hand that signed Tom away to the guns, and then dined out, year upon year, on a war he never once smelt.
+        A counterfeit hero in a borrowed reputation. 
+        
+        Someone who sent others to the guns, and then dined out, year upon year, on a war he never once smelt.
 
         The anger rises in my throat like bile.
         """
@@ -249,32 +163,18 @@ label common_day2_hunt_north_field_2:
 
             Lady Claythorn fares no better with her piece. Twice the barrel dips toward the earth, and she carries it like a parasol grown unaccountably heavy.
 
-            She is no more a great lady than the Captain is a great soldier. I would stake the letter upon it.
+            First her strange behavior during diner, then this.
 
-            Perhaps every soul beneath this roof is wearing a face that is not their own.
-
-            And if that is so, the Captain's lie tells me nothing of Tom. It tells me only that he is playing a part, the same as the rest of us.
+            She is no more a great lady than the Captain is a great soldier.
 
             The thought sits there, cold and unwelcome, and draws a little of the heat from my anger.
             """
 
-        else:
-
-            """
-            Lady Claythorn fares no better with her piece, dipping the barrel and handling it like a parasol.
-
-            But it is the Captain my eye keeps returning to.
-
-            There is not an honest article in this whole party.
-
-            Myself least of all.
-            """
+            $ host_details.description_hidden.unlock('hunt')
 
         """
         By the time the butler calls us in for luncheon, only I have any game to show for the morning.
         """
-
-    $ host_details.description_hidden.unlock('hunt')
 
     call change_time(12, 30)
 
