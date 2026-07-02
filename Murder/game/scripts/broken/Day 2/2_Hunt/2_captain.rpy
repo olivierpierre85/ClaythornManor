@@ -12,7 +12,7 @@
 #       - spare -> broken_ending_overtaken
 #   The spare option requires talked_to_maid; without it the kill is forced.
 # --------------------------------------------
-label broken_day2_hunt_north:
+label broken_day2_hunt_captain:
 
     call common_day2_hunt_north_field
 

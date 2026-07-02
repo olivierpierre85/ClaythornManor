@@ -14,7 +14,7 @@
 #   so is the branch where Broken never draws out the letter (the Drunk shoots
 #   the Doctor). Both currently end at work_in_progress.
 # --------------------------------------------
-label broken_day2_hunt_western_grove:
+label broken_day2_hunt_drunk:
 
     broken """
     If it is all the same to you, my lady, I should sooner go across with Doctor Baldwin.

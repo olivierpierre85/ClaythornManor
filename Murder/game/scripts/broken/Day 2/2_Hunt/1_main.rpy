@@ -14,8 +14,8 @@
 #
 #   This file is the entry point: the change, the gathering, the pairing, and
 #   the choice of which party to join. The two paths live in their own files:
-#       - 2_captain.rpy : broken_day2_hunt_north  (shadow the Captain -> death)
-#       - 3_drunk.rpy   : broken_day2_hunt_western_grove (shadow the Drunk)
+#       - 2_captain.rpy : broken_day2_hunt_captain  (shadow the Captain -> death)
+#       - 3_drunk.rpy   : broken_day2_hunt_drunk (shadow the Drunk)
 #
 #   Choice gate: WITHOUT talked_to_maid the path is forced (north -> kill).
 #   WITH it, the player picks the party (broken_day2_hunt_menu_party); shadowing
@@ -75,13 +75,7 @@ label broken_day2_hunt:
     """
     The others are already gathering on the lawn.
 
-    Doctor Baldwin stands a little apart, grey and unwell.
-
-    Samuel Manning is a sorry sight, swaying where he stands.
-
-    Lady Claythorn is the last to come out.
-
-    And the Captain. Upright. Correct.
+    I glance at the captain.
 
     A decorated officer at his ease, at least in appearance.
     """
@@ -117,11 +111,11 @@ label broken_day2_hunt:
         $ time_left = 1
         call run_menu(
             TimedMenu("broken_day2_hunt_menu_party", [
-                TimedMenuChoice("Make up Lady Claythorn's party, and keep the Captain close", 'broken_day2_hunt_north', early_exit=True),
-                TimedMenuChoice("Join the Doctor and Mr Manning instead", 'broken_day2_hunt_western_grove', early_exit=True),
-            ])
+                TimedMenuChoice("Make up Lady Claythorn's party, and keep the Captain close", 'broken_day2_hunt_captain', early_exit=True),
+                TimedMenuChoice("Join the Doctor and Mr Manning instead", 'broken_day2_hunt_drunk', early_exit=True),
+            ], image_right = "host", image_right_2 = "captain", image_left = "drunk", image_left_2 = "doctor"))
         )
 
     else:
 
-        jump broken_day2_hunt_north
+        jump broken_day2_hunt_captain

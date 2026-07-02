@@ -5,8 +5,8 @@ the path is forced (north field, then a forced kill of the Captain).
 
 Choices (all gated on `talked_to_maid`):
 1. **Which party** (`broken_day2_hunt_menu_party`):
-   - `broken_day2_hunt_north` — shadow the Captain in the north field.
-   - `broken_day2_hunt_western_grove` — shadow the Drunk with the Doctor.
+   - `broken_day2_hunt_captain` — shadow the Captain in the north field.
+   - `broken_day2_hunt_drunk` — shadow the Drunk with the Doctor.
 2. **North path** (`broken_day2_hunt_menu_revenge`): spare or kill the Captain.
    Two of the Captain's actions stoke Broken's anger; `host_lies` tempers the
    shooting beat.
