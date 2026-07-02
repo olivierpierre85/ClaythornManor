@@ -14,11 +14,11 @@ When Someone is saved, it add a SAVED over their name in the progress view
 - [ ] **Export Choices**: Export_choices_to_file => Find best time to export choices and send to me => Then see if the TEST_MODE with the choices works
 - [ ] BUG: **save_transcript_to_file** button not working during menu????
 - [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
-- [ ] **New ENDINGS view** ? Same as new threads view?
-- [ ] **ADD tutorial overlay** for PROGRESS screen, with Thread, ending and Backstory view as well?
 
+----
+TODO myself, clean the tutorial highlights, text and position.
 
-
+For the progress view, just say you can explore it and the other tutorials start they open the screen
 ----------------------------------------------------------
 Chages for consistency:
    - Rethink the letter to the captain to comply more with the Journalist story

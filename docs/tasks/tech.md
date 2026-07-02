@@ -10,12 +10,7 @@
 - [ ] **Map**: Add "You are here" on the map.
 - [ ] Create **NEW OPTIONS Page**
 - [ ] Add Icon for web distribution
-- [ ] **doctor** : Remove intuition from burning image, or make better image
-- [ ] REvise NEW **Help Page + Tutorials** 
-    Fill with all the information needed
-    Add IF for the parts that need a tutorial seen
-    Move tutorial from script to tutorial page
-    REWRITE Tutorials Based on new screen (characters, progress, …)
+- [ ] REvise NEW **Help Page + Tutorials**
 - **Tutorial** Explain that restarting from a chapter doesn't mean all branches are accessibles from there
 
 ### Menu usability / right click / skip / inputs
@@ -35,12 +30,6 @@
 - Check all keyboard shortcuts are deactivated
 - Fix problem with menu navigation with arrows and gamepad
   
-
-### Notifications / visuals
-
-- When Found an object or decision: add the image in the notification
-- At unlocking character, show the character image (with fadout ?)
-- Better looking notifications
 
 ### BEtter transitions ()
 - Better Custom transitions (blood dripping for DEATH)
