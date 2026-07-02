@@ -173,11 +173,20 @@ screen progress:
                                     spacing 15
                                     $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy.deepcopy(current_character.saved_variables), ending=False)
 
+                                    # Auto-open the threads tutorial on the first visit:
+                                    $ threads_tutorial_actions = []
+                                    if not seen_tutorial_threads:
+                                        $ threads_tutorial_actions = [
+                                            SetVariable("tutorial_on", True),
+                                            SetVariable("seen_tutorial_threads", True),
+                                        ]
+                                    $ threads_open_action = threads_tutorial_actions + [SetVariable("current_checkpoint", None), ShowMenu("character_threads", current_storyline)]
+
                                     imagebutton:
                                         yoffset 2
                                         mouse "hover"
                                         if not tutorial_on:
-                                            action [SetVariable("current_checkpoint", None), ShowMenu("character_threads", current_storyline)]
+                                            action threads_open_action
                                         if current_storyline.is_everything_completed():
                                             idle "images/info_cards/murder_board_big.webp" at menu_image
                                         else:
@@ -195,14 +204,14 @@ screen progress:
                                                 text_font gui.name_text_font
                                                 text_color gui.highlight_color
                                                 if not tutorial_on:
-                                                    action [SetVariable("current_checkpoint", None), ShowMenu("character_threads", current_storyline)]
+                                                    action threads_open_action
                                         else:
                                             textbutton "{color=#fff}[unlocked]{/color}/[total]":
                                                 text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.accent_color
                                                 if not tutorial_on:
-                                                    action [SetVariable("current_checkpoint", None), ShowMenu("character_threads", current_storyline)]
+                                                    action threads_open_action
 
                                         bar:
                                             # yoffset 20
@@ -226,11 +235,20 @@ screen progress:
                                     yoffset 10
                                     spacing 15
 
+                                    # Auto-open the endings tutorial on the first visit:
+                                    $ endings_tutorial_actions = []
+                                    if not seen_tutorial_endings:
+                                        $ endings_tutorial_actions = [
+                                            SetVariable("tutorial_on", True),
+                                            SetVariable("seen_tutorial_endings", True),
+                                        ]
+                                    $ endings_open_action = endings_tutorial_actions + [SetVariable("current_checkpoint", None), ShowMenu("character_endings", current_storyline)]
+
                                     imagebutton:
                                         yoffset 2
                                         mouse "hover"
                                         if not tutorial_on:
-                                            action [SetVariable("current_checkpoint", None), ShowMenu("character_endings", current_storyline)]
+                                            action endings_open_action
                                         if current_storyline.is_all_endings_reached():
                                             idle "images/info_cards/endings_curtains_big.webp" at menu_image
                                         else:
@@ -249,14 +267,14 @@ screen progress:
                                                 text_font gui.name_text_font
                                                 text_color gui.highlight_color
                                                 if not tutorial_on:
-                                                    action [SetVariable("current_checkpoint", None), ShowMenu("character_endings", current_storyline)]
+                                                    action endings_open_action
                                         else:
                                             textbutton "{color=#fff}[unlocked_endings]{/color}/[total_endings]":
                                                 text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.accent_color
                                                 if not tutorial_on:
-                                                    action [SetVariable("current_checkpoint", None), ShowMenu("character_endings", current_storyline)]
+                                                    action endings_open_action
                                         bar:
                                             value current_storyline.get_character_progress_endings()
                                             range 100

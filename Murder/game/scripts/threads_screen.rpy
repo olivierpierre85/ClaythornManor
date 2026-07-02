@@ -175,9 +175,12 @@ screen character_threads(selected_char):
                 align (1.0, 1.0)
                 xoffset 400
                 yoffset -150
-                action ShowMenu("progress")
+                if not tutorial_on:
+                    action ShowMenu("progress")
 
     use tooltip_display
+
+    use tutorial_with_steps(tutorial_steps_threads, tutorial_step_threads, "tutorial_step_threads")
 
 
 screen character_endings(selected_char):
@@ -210,6 +213,9 @@ screen character_endings(selected_char):
                 align (1.0, 1.0)
                 xoffset 400
                 yoffset -150
-                action ShowMenu("progress")
+                if not tutorial_on:
+                    action ShowMenu("progress")
 
     use tooltip_display
+
+    use tutorial_with_steps(tutorial_steps_endings, tutorial_step_endings, "tutorial_step_endings")

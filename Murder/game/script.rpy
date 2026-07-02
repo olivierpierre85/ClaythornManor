@@ -298,6 +298,8 @@ label init_technical_variables:
         seen_tutorial_butler = False
         show_tutorial_butler = False
         seen_tutorial_progress_details = False
+        seen_tutorial_threads = False
+        seen_tutorial_endings = False
         seen_tutorial_restart = False
         seen_tutorial_intuition = False
         seen_tutorial_icon = False
@@ -316,15 +318,20 @@ label init_technical_variables:
             (17, 280, 1020, 200, 550, 600, 
                 "Here you can select the character whose progress you wish to view."
             ),
-            (1050, 310, 270, 140, 1200, 600, 
-                "From here you can reach the Backstory of the selected character.\n" + 
+            (1050, 310, 270, 170, 1200, 600,
+                "From here you can reach the Backstory of the selected character.\n" +
                 "You can also see the number of important information found for this character.\n" + 
                 "Once you've unlocked them all, you'll be able to play this character (except Ted Harring)"
             ),
-            (1300, 310, 290, 170, 1400, 600, "You can see the total number of Choices and Discoveries\n" + 
-                "you have already encountered here."
+            (1300, 310, 290, 170, 1400, 600,
+                "Threads are the choices, observations and objects that can influence the rest of the story.\n" +
+                "You can see the total number of threads you have already found here.\n" +
+                "Clicking on the murder board will open an overview of all this character's threads."
             ),
-            (1630, 290, 280, 140, 1300, 400, "And here is the number of endings you have already reached for this character."),
+            (1600, 310, 310, 170, 1300, 620,
+                "And here is the number of endings you have already reached for this character.\n" +
+                "Clicking on the curtains will open an overview of all the endings, sorted by the day when they can happen."
+            ),
             (17, 445, 1890, 500, 1000, 300, 
             "Below is the timeline of the progress you have made so far.\n" +
             "The story is split into chapters occurring over three days."
@@ -361,6 +368,46 @@ label init_technical_variables:
             ),
         ]
         tutorial_step_progress_details = 0
+        # THREADS OVERVIEW TUTORIAL (character_threads screen)
+        # Text frames sit in the top band (over the darkened navigation),
+        # the only spot that never collides with the day columns.
+        tutorial_steps_threads = [
+            (30, 260, 1860, 770, 960, 190,
+                "Welcome to the Threads overview.\n" +
+                "Threads are the choices, observations and objects that can influence the rest of the story.\n" +
+                "Every thread of this character is shown here, sorted by day and chapter."
+            ),
+            (410, 330, 1480, 700, 960, 190,
+                "A thread is listed under every chapter where it can be unlocked.\n" +
+                "The count next to a chapter shows how many of its threads you have found.\n" +
+                "Once there is nothing left to find in a chapter, its name turns grey."
+            ),
+            (410, 330, 1480, 700, 960, 190,
+                "A question mark hides a thread you have not discovered yet.\n" +
+                "A card in black and white is a thread you know of but have not unlocked.\n" +
+                "Hover over a card to read the details."
+            ),
+            (60, 260, 380, 500, 1100, 500,
+                "Finally, the bar under the portrait shows your overall progress with this character's threads."
+            ),
+        ]
+        tutorial_step_threads = 0
+        # ENDINGS OVERVIEW TUTORIAL (character_endings screen)
+        tutorial_steps_endings = [
+            (30, 260, 1860, 770, 960, 190,
+                "This is the Endings overview.\n" +
+                "Every ending this character can reach is listed here, under the day when it can happen."
+            ),
+            (410, 330, 1480, 700, 960, 190,
+                "A question mark hides an ending you have not reached yet.\n" +
+                "Hover over a card to read how it all ended.\n" +
+                "Endings marked with the intuition icon are the ones that grant you an Intuition."
+            ),
+            (60, 260, 380, 500, 1100, 500,
+                "The bar under the portrait shows how many of this character's endings you have already reached."
+            ),
+        ]
+        tutorial_step_endings = 0
         tutorial_on = False
 
         current_run = 1 # TODO move

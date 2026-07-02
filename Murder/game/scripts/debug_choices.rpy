@@ -16,6 +16,8 @@ label init_debug:
     $ seen_tutorial_progress = True
     # $ seen_tutorial_butler = True
     $ seen_tutorial_progress_details = True
+    $ seen_tutorial_threads = True
+    $ seen_tutorial_endings = True
     $ seen_tutorial_restart = True
     $ seen_tutorial_intuition = True
     $ seen_tutorial_icon = True
