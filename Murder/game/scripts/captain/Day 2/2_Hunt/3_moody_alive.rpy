@@ -18,6 +18,8 @@ label captain_day2_hunt_moody_alive:
 
     call common_day2_hunt_north_field
 
+    call common_day2_hunt_north_field_2
+
     call common_day2_hunt_captain_confrontation
 
     jump captain_ending_shot_in_woods

@@ -14,7 +14,13 @@
 # --------------------------------------------
 label broken_day2_hunt_captain:
 
-    call common_day2_hunt_north_field
+    """
+    The groups are set, we are on our way into the woods.
+    """
+
+    call common_day2_hunt_north_field_2
+
+    #TODO read from here
 
     host """
     Captain, you simply must tell us something of your soldiering.
@@ -102,14 +108,6 @@ label broken_day2_hunt_kill:
     There is only a dead man in the bracken, and my two hands, and the quiet.
     """
 
-    if broken_details.threads.is_unlocked('talked_to_maid'):
-
-        """
-        A surprise, the maid said. Prepared for the guests.
-
-        I am beginning to understand what a poor part I have played in it.
-        """
-
     pause 1.0
 
     play sound gun
@@ -155,13 +153,7 @@ label broken_day2_hunt_kill:
     broken """
     You. You wanted this.
     """
-
-    butler """
-    What I want, sir, is a tidy house.
-
-    And a man who has just murdered a guest is a very untidy thing to leave lying about the grounds.
-    """
-
+    
     """
     I bring the rifle up.
 

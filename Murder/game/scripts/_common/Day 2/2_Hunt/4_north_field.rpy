@@ -8,38 +8,9 @@
 #       - "broken"  : Moody's point of view         (Ted Harring is dead)
 #
 #   Callers:
-#       - captain_day2_hunt 1_main  -> common_day2_hunt_pairing (before the split)
 #       - captain_day2_hunt_moody_alive -> common_day2_hunt_north_field
 #       - broken_day2_hunt          -> both
 # --------------------------------------------
-
-# Pairing off the parties, before Moody is placed.
-# Identical from either side, so no branch is needed here.
-label common_day2_hunt_pairing:
-
-    captain """
-    If I may, my lady. I should consider it a privilege to accompany you.
-    """
-
-    host """
-    How gallant of you, Captain. The privilege, I assure you, is mine.
-    """
-
-    drunk """
-    Doctor, I would be honoured to partner with you.
-
-    You don't mind, do you?
-    """
-
-    """
-    Doctor Baldwin's mouth opens, then closes again. It is plain he does mind, but cannot find the words to refuse.
-    """
-
-    doctor """
-    Well... no, of course not.
-    """
-
-    return
 
 
 # Moody joins the host's party, the shoot, and the luncheon, up to the point
@@ -131,6 +102,11 @@ label common_day2_hunt_north_field:
 
         My lady, Captain Sinha and Mr Moody to the north field, and I shall attend.
         """
+    
+    return
+
+
+label common_day2_hunt_north_field_2:
 
     call change_time(11, 45)
 

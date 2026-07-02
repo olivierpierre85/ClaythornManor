@@ -74,10 +74,6 @@ label broken_day2_hunt:
 
     """
     The others are already gathering on the lawn.
-
-    I glance at the captain.
-
-    A decorated officer at his ease, at least in appearance.
     """
 
     if broken_details.threads.is_unlocked('talked_to_maid'):
@@ -92,20 +88,32 @@ label broken_day2_hunt:
         But knowing a thing and heeding it are not at all the same, and the anger is by far the louder of the two.
         """
 
-    call common_day2_hunt_butler_groups
+    """
+    Two different groups are forming: Captain Sinha with Lady Claythorn and Samuel Manning with Doctor Baldwin.
 
-    call common_day2_hunt_pairing
+    It looks like it is up to me to decide which party I will join.
+    """
 
     if broken_details.threads.is_unlocked('talked_to_maid'):
 
         """
-        I do not trust a line of this morning. The letter, the hunt, the surprise the maid could not put a name to.
+        My first instinct is to follow Captain Sinha.
+
+        Even if it is suspicious, I cannot ignore the letter.
+
+        Being close to him will allow me to learn more of it.
+
+        Yet, I do not trust what is happening here this weekend.
+        
+        The letter, the hunt, the surprise the maid could not put a name to.
 
         If the Captain has been set before me like a target, then perhaps he is not the only one who has been arranged.
 
         And there is the drunkard, wound tight as a watch-spring, his eyes forever sliding back to the doctor.
 
         I should dearly like to know what is the matter with Mr Manning.
+
+        So, I am not sure which group I will join.
         """
 
         $ time_left = 1
@@ -114,8 +122,13 @@ label broken_day2_hunt:
                 TimedMenuChoice("Make up Lady Claythorn's party, and keep the Captain close", 'broken_day2_hunt_captain', early_exit=True),
                 TimedMenuChoice("Join the Doctor and Mr Manning instead", 'broken_day2_hunt_drunk', early_exit=True),
             ], image_right = "host", image_right_2 = "captain", image_left = "drunk", image_left_2 = "doctor"))
-        )
 
     else:
+
+        """
+        But I do not hesitate for a second.
+
+        I do not know what I will do yet, but I need to be with Captain Sinha.        
+        """
 
         jump broken_day2_hunt_captain
