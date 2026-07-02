@@ -42,8 +42,6 @@
 - (https://lemmasoft.renai.us/forums/viewtopic.php?f=8&t=25453&p=313338&hilit=caption.replace#p313338)
 
 
-## TIME subtraction: 
-- Still a problem when starting a path with a menu a time < 0 ? It stop suddenly when a menu should be available? Try again to make the subtraction only at the end, like the time move? NO because then it allows to read a full menu? Like during no hunt? THINK THINK THINK
 
 ## Improve Time Menus
 
