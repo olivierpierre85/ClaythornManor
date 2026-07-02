@@ -176,8 +176,8 @@ screen progress:
                                     imagebutton:
                                         yoffset 2
                                         mouse "hover"
-                                        if not tutorial_on and current_character == current_storyline:
-                                            action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                        if not tutorial_on:
+                                            action ShowMenu("character_threads", current_storyline)
                                         if current_storyline.is_everything_completed():
                                             idle "images/info_cards/murder_board_big.webp" at menu_image
                                         else:
@@ -191,18 +191,18 @@ screen progress:
                                         $ total    = current_storyline.get_total_discoveries()
                                         if current_storyline.is_everything_completed():
                                             textbutton "[unlocked]/[total]":
-                                                text_size character_subtitles.text_size 
+                                                text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.highlight_color
-                                                if not tutorial_on and current_character == current_storyline:
-                                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                                if not tutorial_on:
+                                                    action ShowMenu("character_threads", current_storyline)
                                         else:
                                             textbutton "{color=#fff}[unlocked]{/color}/[total]":
-                                                text_size character_subtitles.text_size 
+                                                text_size character_subtitles.text_size
                                                 text_font gui.name_text_font
                                                 text_color gui.accent_color
-                                                if not tutorial_on and current_character == current_storyline:
-                                                    action [SetVariable("current_checkpoint", current_status_checkpoint), ShowMenu("progress_details", current_storyline.get_chapter_by_name(current_chapter), current_storyline, is_current=True)]
+                                                if not tutorial_on:
+                                                    action ShowMenu("character_threads", current_storyline)
 
                                         bar:
                                             # yoffset 20
@@ -514,7 +514,7 @@ screen tooltip_display():
                 text tooltip
 
 
-screen info_card(item=None, item_type=None, is_small=False):  
+screen info_card(item=None, item_type=None, is_small=False, dimmed=False):
     python:
         if item:
             if item_type == 'object':
@@ -536,9 +536,10 @@ screen info_card(item=None, item_type=None, is_small=False):
             else:
                 locked = item.locked
 
-    imagebutton:                        
+    imagebutton:
         mouse "hover"
         action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+        at Transform(alpha=(0.55 if dimmed else 1.0))
 
         if is_small:
             # For the moment, only display the activated choices of this checkpoint

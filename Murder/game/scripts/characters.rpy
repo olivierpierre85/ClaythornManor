@@ -600,6 +600,12 @@ init -100 python:
                 if chapter in item.chapters:
                     choices_and_discoveries.append(item)
             return choices_and_discoveries
+
+        # field is 'chapters' (where the thread can be unlocked)
+        # or 'relevant_chapters' (where the thread is used)
+        def get_threads_for_chapter(self, chapter_key, field="chapters"):
+            return [item for item in self.get_choices_and_discoveries_ordered()
+                    if chapter_key in getattr(item, field, [])]
         
         def get_chapter_by_name(self, name):
             all_chapters = [chapter for line in self.progress for chapter in line]
