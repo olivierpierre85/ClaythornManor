@@ -1,0 +1,76 @@
+{
+  "type": "feedback",
+  "tester_id": "anonymous",
+  "timestamp": "2026-07-03T11:27:02.688820",
+  "version": "0.2",
+  "platform": "pc",
+  "context": {
+    "character": "captain",
+    "character_name": "Sushil Sinha",
+    "chapter": "saturday_morning",
+    "chapter_name": "A Shocking Morning",
+    "room": "bedroom_captain",
+    "time_left": 90,
+    "position": 3,
+    "run": 13
+  },
+  "message": "test",
+  "short_tb": null,
+  "full_tb": null,
+  "unlocked_threads": [],
+  "choices": [
+    {
+      "menu": "character_selection",
+      "character_choice": "captain",
+      "timestamp": "2026-07-03T11:26:35.880357"
+    },
+    {
+      "menu": "captain_day1_evening",
+      "other_choices": [
+        "Talk to Amelia Baxter",
+        "Ignore her"
+      ],
+      "selected": "Talk to Amelia Baxter",
+      "redirect": "captain_day1_dinner_psychic",
+      "time_left": 1,
+      "timestamp": "2026-07-03T11:26:40.342035",
+      "time_to_decide": 0.934803,
+      "time_since_last": 4.461678
+    },
+    {
+      "menu": "captain_day1_evening_map_menu",
+      "other_choices": [
+        "Storage Room",
+        "Male Servants Room",
+        "Female Servants Room",
+        "Butler's Room",
+        "William the Conqueror Bedroom",
+        "Henry IV Bedroom",
+        "Richard III Bedroom",
+        "Queen Alexandra",
+        "Edward II Bedroom",
+        "George IV Bedroom",
+        "Elizabeth I Bedroom",
+        "Tea room",
+        "Dining Room",
+        "Garden",
+        "Entrance Hall",
+        "Servant Stairs",
+        "Portrait Gallery",
+        "Library",
+        "Kitchen",
+        "Scullery",
+        "Garage",
+        "Gun room",
+        "Meet the others in the billiard room",
+        "Retire for the night"
+      ],
+      "selected": "Retire for the night",
+      "redirect": "generic_cancel",
+      "time_left": 90,
+      "timestamp": "2026-07-03T11:26:41.859644",
+      "time_to_decide": 5.204898,
+      "time_since_last": 1.517609
+    }
+  ]
+}

@@ -28,8 +28,18 @@ init -1000 python:
         • tb_file   → path to a .txt file Ren'Py already wrote
         """
 
-        if not debug_activated:
-            export_choices_to_file(all_choices)
+        try:
+            if not debug_activated:
+                try:
+                    sent = send_bug_report("crash", short_tb=short_tb, full_tb=full_tb)
+                except Exception:
+                    sent = False
+                if not sent:
+                    export_choices_to_file(
+                        getattr(renpy.store, "all_choices", []),
+                        tester_id=getattr(persistent, "tester_id", None))
+        except Exception:
+            pass
 
         return False
 
@@ -156,6 +166,9 @@ label start_testing_mode:
 label start():
 
     stop music fadeout 2.0 # Stops menu music
+
+    if BUG_REPORT_ENABLED and not debug_activated and not full_testing_mode and not persistent.tester_id:
+        $ persistent.tester_id = (renpy.input(_("Enter your tester name (used in bug reports):"), length=32).strip() or "anonymous")
 
     default  menu_level = -1
     default  selected_choice = [None, None, None, None, None]

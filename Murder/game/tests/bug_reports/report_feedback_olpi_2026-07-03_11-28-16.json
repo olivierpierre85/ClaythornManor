@@ -1,0 +1,37 @@
+{
+  "type": "feedback",
+  "tester_id": "olpi",
+  "timestamp": "2026-07-03T11:28:16.630617",
+  "version": "0.2",
+  "platform": "pc",
+  "context": {
+    "character": "lad",
+    "character_name": "Ted Harring",
+    "chapter": "friday_evening",
+    "chapter_name": "The Arrival",
+    "room": "tea_room",
+    "time_left": 20,
+    "position": 1,
+    "run": 1
+  },
+  "message": "test",
+  "short_tb": null,
+  "full_tb": null,
+  "unlocked_threads": [],
+  "choices": [
+    {
+      "menu": "lad_introduction",
+      "other_choices": [
+        "Talk to Samuel Manning",
+        "Talk to Amelia Baxter",
+        "Stand awkwardly in the corner"
+      ],
+      "selected": "Talk to Amelia Baxter",
+      "redirect": "lad_day1_drinks_psychic",
+      "time_left": 20,
+      "timestamp": "2026-07-03T11:28:08.664098",
+      "time_to_decide": 0.850792,
+      "time_since_last": null
+    }
+  ]
+}
