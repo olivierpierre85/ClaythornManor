@@ -190,10 +190,6 @@ init python:
         except Exception:
             return False
 
-    # TEMP-VERIFY: remove after verification
-    def _bug_report_test_crash():
-        raise Exception("bug report verification test crash")
-
     def open_bug_report_modal():
         store.bug_report_text = ""
         if not persistent.tester_id:
@@ -239,19 +235,6 @@ screen bug_report_button:
             xpadding 0
             textbutton _("Report"):
                 action Function(open_bug_report_modal)
-                xminimum 200
-                yminimum 80
-                text_size 18
-        # TEMP-VERIFY: remove after verification
-        frame:
-            xalign 1.0
-            yalign 0.0
-            xoffset -30
-            yoffset 230
-            ypadding 0
-            xpadding 0
-            textbutton "CrashTest":
-                action Function(_bug_report_test_crash)
                 xminimum 200
                 yminimum 80
                 text_size 18
