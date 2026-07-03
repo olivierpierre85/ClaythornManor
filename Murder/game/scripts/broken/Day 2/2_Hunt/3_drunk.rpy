@@ -17,8 +17,14 @@
 label broken_day2_hunt_drunk:
 
     broken """
-    If it is all the same to you, my lady, I should sooner go across with Doctor Baldwin.
+    If it is all the same to you, my lady, I should sooner go across with Doctor Baldwin and Mister Manning.
+    """
 
+    """
+    Then I say lower so Samuel Manning is not hearing what I am saying.
+    """
+
+    broken """
     Mr Manning looks as though he could do with a steady man at his elbow.
     """
 
@@ -47,9 +53,9 @@ label broken_day2_hunt_drunk:
 
     He has not stopped at the flask since we left the lawn. His hands shake so badly he can scarcely hold it to his lips.
 
-    And his eyes. They go to the doctor's back and stay there, again and again, with something in them that is very far from idle.
+    And his eyes. They go to the doctor's back and stay there, again and again.
 
-    The maid spoke of a surprise prepared for the guests. I am beginning to think I am watching another piece of it take shape.
+    He cleary is in some sort panic, if I want to talk to him, now is the time.
 
     I drop back a little, and fall into step beside him.
     """

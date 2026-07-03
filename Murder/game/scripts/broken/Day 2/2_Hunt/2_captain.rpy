@@ -20,12 +20,17 @@ label broken_day2_hunt_captain:
 
     call common_day2_hunt_north_field
 
-    #TODO read from here => Move captain discussion to common
+    """
+    The Captain says nothing to that. He only smiles, thin and correct.
+
+    We settle for luncheon in a clearing among the birches. The butler lays a cloth and pours the tea with his customary care.
+    """
+
 
     host """
-    Captain, you simply must tell us something of your soldiering.
+    Captain, I have been told you are an amazing story teller.
 
-    We have a real campaigner among us, and here I am letting him eat in silence.
+    Isn't there a story you would like to share with us.
     """
 
     captain """
@@ -41,7 +46,9 @@ label broken_day2_hunt_captain:
 
     I sit very still and let it wash over me.
 
-    This man held the safest billet in France, and came home to play the hero over the sandwiches, while Tom came home behind a mask and died by inches for the want of the very courage this fraud counterfeits so prettily.
+    This man was always safe behind a desk, but he is playing the hero over the sandwiches.
+    
+    While Tom came home behind a mask and died by inches for the want of the very courage this fraud counterfeits so prettily.
 
     My thumb finds the cold of the trigger guard where the rifle rests across my knee.
     """

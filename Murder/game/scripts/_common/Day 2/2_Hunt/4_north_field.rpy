@@ -192,30 +192,4 @@ label common_day2_hunt_north_field:
     Otherwise, I am certain a decorated veteran like Captain Sinha would have put me quite to shame.
     """
 
-    if current_character.text_id == "captain":
-
-        """
-        He says it politely enough, but I feel the mockery in his tone.
-
-        I force a thin smile and say no more.
-
-        We settle for luncheon in a clearing bordered by birches.
-
-        The butler lays out a spread upon a linen cloth and serves the tea with his customary care.
-
-        Mr Moody installs himself at Lady Claythorn's side and keeps up a steady flow of agreeable conversation.
-
-        I eat very little and say less.
-        """
-
-    elif current_character.text_id == "broken":
-
-        """
-        The Captain says nothing to that. He only smiles, thin and correct.
-
-        We settle for luncheon in a clearing among the birches. The butler lays a cloth and pours the tea with his customary care.
-        """
-
-    call change_time(13, 0)
-
     return

@@ -58,6 +58,32 @@ label captain_day2_hunt_moody_alive:
 
     call common_day2_hunt_north_field
 
+    """
+    He says it politely enough, but I feel the mockery in his tone.
+
+    I force a thin smile and say no more.
+
+    We settle for luncheon in a clearing bordered by birches.
+
+    The butler lays out a spread upon a linen cloth and serves the tea with his customary care.
+
+    Lady Claythorn ask me to tell them a story of one of my campaigns.
+
+    Mr Moody comments have shaken me and I would prefer to eat in silence.
+
+    But I cannot think of a reason to refuse her.
+
+    While I am talking, Thomas Moody gaze is on me.
+
+    Like he is seeing me for who I really am.
+    """
+    
+    call change_time(13, 0)
+
+    """
+    When the story is over, he turns to me.
+    """
+
     call common_day2_hunt_captain_confrontation
 
     jump captain_ending_shot_in_woods
