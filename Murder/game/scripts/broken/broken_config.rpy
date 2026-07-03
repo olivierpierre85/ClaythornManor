@@ -8,6 +8,8 @@ label init_broken:
 
     call broken_day1_evening_map_menu
 
+    call broken_day2_evening_map_menu
+
     python:
         broken_name = "Thomas Moody"
 
@@ -19,6 +21,7 @@ label init_broken:
 
             # MAP Menus
             "day1_evening_map_menu" : broken_day1_evening_map_menu,
+            "day2_evening_map_menu" : broken_day2_evening_map_menu,
 
             # Evening day 1
             "day1_evening_bedroom_refusals" : 0,
@@ -26,6 +29,11 @@ label init_broken:
             "day1_evening_billiard_room_butler_approached" : False,
             "day1_evening_downstairs_refused" : False,
             "day1_evening_wearing_livery" : False,
+
+            # Evening day 2 (found_poison path)
+            "day2_evening_billiard_room_visited" : False,
+            "day2_evening_billiard_captain_approached" : False,
+            "day2_evening_billiard_drunk_approached" : False,
         }
 
         broken_important_choices = CharacterImportantChoiceList([
@@ -44,6 +52,14 @@ label init_broken:
                 image_file="talked_to_maid",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
+            ),
+            CharacterInformation(
+                0, "left_together",
+                "You laid the whole truth before the others and convinced everyone to leave together",
+                content_negative="You could not convince the others, and set out with only the Captain",
+                image_file="leave_manor",
+                chapters=['sunday_morning'],
+                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
             ),
         ])
 
@@ -81,7 +97,7 @@ label init_broken:
                 content_negative="You didn't learn what was driving Samuel Manning",
                 image_file="drunk_letter",
                 chapters=['saturday_afternoon'],
-                relevant_chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
         ])
 
@@ -100,6 +116,9 @@ label init_broken:
             CharacterInformation(1, "throat_cut", "Your throat was cut in your sleep", image_file="throat_cut", chapters=['saturday_morning']),
             CharacterInformation(1, "silenced", "The butler strangled you the moment the Captain was dead", image_file="strangled_woods", chapters=['saturday_afternoon']),
             CharacterInformation(1, "overtaken", "The butler caught you alone and shot you down as the parties scattered", image_file="hunting_rifle", chapters=['saturday_afternoon']),
+            CharacterInformation(1, "burned", "You burned in your sleep when the manor was set alight", image_file="manor_burns", chapters=['saturday_evening']),
+            CharacterInformation(2, "ambushed", "You and the Captain were shot down on the road to the village", image_file="shot_from_behind_i", is_intuition=True, chapters=['sunday_afternoon']),
+            CharacterInformation(3, "walked_out", "You led everyone out of the manor together and reached the police station", image_file="leave_manor", chapters=['end']),
         ])
 
         broken_description_hidden = CharacterDescriptionHiddenList([

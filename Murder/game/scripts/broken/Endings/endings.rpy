@@ -88,3 +88,75 @@ label broken_ending_day1_throat_cut:
     """
 
     jump ending_generic
+
+
+# SATURDAY NIGHT — slept while the butler put the manor to the torch
+label broken_ending_burned:
+
+    $ broken_details.endings.unlock('burned')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('burned'))
+
+    call death_screen_transition
+
+    $ play_music('mysterious')
+
+    """
+    You never leave your bed.
+
+    By morning Claythorn Manor is a shell of blackened stone, and every question you meant to ask has gone up with it.
+
+    You felt all day that something in this house was wrong, yet you found nothing solid enough to keep you from your bed.
+
+    Perhaps you walked past it, somewhere below stairs, on your very first night.
+    """
+
+    jump ending_generic
+
+
+# SUNDAY - set out with only the Captain; the road was waiting for them
+# (intuition ending: separating is the mistake, take everyone)
+label broken_ending_ambushed:
+
+    $ broken_details.endings.unlock('ambushed')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('ambushed'))
+
+    call death_screen_transition
+
+    $ play_music('mysterious')
+
+    """
+    You were right to leave. You were wrong to leave like that.
+
+    Whoever holds this estate has shown you twice already that they like their work done quietly, away from watching eyes.
+
+    Two men on an empty road are quiet work.
+
+    Six people are witnesses. Six people are complications.
+
+    Next time, take everyone with you. Every single one.
+    """
+
+    jump ending_generic
+
+
+# SUNDAY - the final ending: everyone walks out together and reaches the police station
+label broken_ending_walked_out:
+
+    $ broken_details.endings.unlock('walked_out')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('walked_out'))
+
+    call survive_screen_transition
+
+    """
+    Seven miles of bad road, and every one of them a small victory.
+
+    You brought them out together. The Captain, the doctor, both ladies, and one sober lawyer. Every soul left alive under that roof.
+
+    You never learned who wrote the letters, who ended Ted Harring, or what the weekend was truly for.
+
+    But you are a journalist. You know the difference between an ending and a deadline.
+
+    This story is not finished. It has simply passed to other hands, and other eyes, on other nights in Claythorn Manor.
+    """
+
+    jump ending_generic

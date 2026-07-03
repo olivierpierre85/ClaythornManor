@@ -1,0 +1,17 @@
+{
+    "start_label": "broken_day3_morning",
+    "unlocked_threads": [
+        "talked_to_maid",
+        "host_lies",
+        "drunk_letter",
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day3_morning_menu_leave",
+            "selected": "Set out for the village with Captain Sinha",
+            "redirect": "broken_day3_morning_leave_pair"
+        }
+    ]
+}

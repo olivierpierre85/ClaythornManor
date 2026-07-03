@@ -1,0 +1,20 @@
+{
+    "start_label": "broken_day3_morning",
+    "unlocked_threads": [
+        "talked_to_maid",
+        "host_lies",
+        "drunk_letter",
+        "found_poison"
+    ],
+    "unlocked_endings": [
+        "ambushed"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day3_morning_menu_leave",
+            "selected": "Lay everything before them. All of it.{{intuition}}",
+            "redirect": "broken_day3_morning_reveal"
+        }
+    ]
+}

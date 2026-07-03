@@ -1,0 +1,67 @@
+{
+    "start_label": "broken_day2_evening",
+    "unlocked_threads": [
+        "talked_to_maid",
+        "host_lies",
+        "drunk_letter",
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day2_evening_menu_dinner",
+            "selected": "Speak to Mr Manning",
+            "redirect": "broken_day2_evening_dinner_manning"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Join the others in the billiard room",
+            "redirect": "broken_day2_evening_billiard_room"
+        },
+        {
+            "menu": "broken_day2_evening_billiard_menu",
+            "selected": "Join Captain Sinha by the fire",
+            "redirect": "broken_day2_evening_billiard_captain"
+        },
+        {
+            "menu": "broken_captain_night_menu",
+            "selected": "Sound him out about tomorrow",
+            "redirect": "broken_day2_evening_captain_tomorrow"
+        },
+        {
+            "menu": "broken_captain_night_menu",
+            "selected": "Leave him to the fire",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_billiard_menu",
+            "selected": "Sit with Mr Manning",
+            "redirect": "broken_day2_evening_billiard_drunk"
+        },
+        {
+            "menu": "broken_drunk_night_menu",
+            "selected": "Compare the two letters",
+            "redirect": "broken_day2_evening_drunk_letters"
+        },
+        {
+            "menu": "broken_drunk_night_menu",
+            "selected": "Leave him be",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_billiard_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Take up your watch for the night",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day3_morning_menu_leave",
+            "selected": "Set out for the village with Captain Sinha",
+            "redirect": "broken_day3_morning_leave_pair"
+        }
+    ]
+}

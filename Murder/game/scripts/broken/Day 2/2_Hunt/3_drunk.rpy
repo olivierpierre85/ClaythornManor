@@ -9,10 +9,10 @@
 #   letter question; asking it unlocks the drunk_letter thread and reveals that
 #   Manning, like Broken, was sent a letter (the Doctor killed his wife). That
 #   recognition lets Broken talk him down and save both Manning and the Doctor.
+#   That path continues into broken_day2_evening (Day 2/3_Evening/1_main.rpy).
 #
-#   TODO: the Saturday evening that follows everyone surviving is unwritten, and
-#   so is the branch where Broken never draws out the letter (the Drunk shoots
-#   the Doctor). Both currently end at work_in_progress.
+#   TODO: the branch where Broken never draws out the letter (the Drunk shoots
+#   the Doctor) is unwritten and still ends at work_in_progress.
 # --------------------------------------------
 label broken_day2_hunt_drunk:
 
@@ -108,9 +108,7 @@ label broken_day2_hunt_drunk:
         A man who was meant to die today is breathing, and a man who was meant to kill him is not a murderer. It is not much. But after this morning, I will take it.
         """
 
-        # TODO: Saturday evening. On this path the Captain, the Doctor and the
-        # Drunk all survive the hunt - the route back to choosing a partner for
-        # the rest of the day (docs/next_tasks.md). Not written yet.
+        jump broken_day2_evening
 
     else:
 
@@ -125,7 +123,7 @@ label broken_day2_hunt_drunk:
         # TODO: If Broken never draws out the Drunk's letter, the western-grove
         # accident should still occur (the Drunk shoots the Doctor). Not written yet.
 
-    jump work_in_progress
+        jump work_in_progress
 
 
 # --------------------------------------------
