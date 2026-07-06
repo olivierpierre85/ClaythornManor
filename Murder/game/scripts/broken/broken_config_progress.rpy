@@ -37,15 +37,24 @@ label broken_config_progress:
                 Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
                 Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
             ],
-            # Row 3: last branch on each trunk, on the same line -
-            #   col1 -> throat_cut (questioned the maid), col3 -> shot (spared the Captain)
+            # Row 3: col1's last branch (throat_cut) and col3's second hunt branch
+            #   (shot); the col3 trunk carries on one row lower to the grove death.
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_corner),          # col1 branch (last)
                 Chapter(image_ending_question, "ending", "throat_cut", "saturday_morning"),
                 Chapter(image_checkpoint_empty_half),      # filler completing the throat_cut cell
-                Chapter(image_checkpoint_corner),          # col3 branch (last)
+                Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
                 Chapter(image_ending_question, "ending", "shot", "saturday_afternoon"),
+            ],
+            # Row 4: the western-grove death hangs one row lower on the col3 trunk -
+            #   shielded (took Manning's bullet meant for Doctor Baldwin)
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),          # col3 branch (last)
+                Chapter(image_ending_question, "ending", "shielded", "saturday_afternoon"),
             ],
         ]
 

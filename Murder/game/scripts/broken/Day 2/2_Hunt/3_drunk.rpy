@@ -4,15 +4,17 @@
 #   Reached from broken_day2_hunt (1_main.rpy) only when talked_to_maid is set
 #   and the player chooses to join the Doctor and Mr Manning.
 #
-#   Broken notices Manning is dangerously on edge and approaches him. The Drunk
-#   generic menu (drunk_generic_menu_broken, broken_config_menu.rpy) carries a
-#   letter question; asking it unlocks the drunk_letter thread and reveals that
-#   Manning, like Broken, was sent a letter (the Doctor killed his wife). That
-#   recognition lets Broken talk him down and save both Manning and the Doctor.
-#   That path continues into broken_day2_evening (Day 2/3_Evening/1_main.rpy).
+#   At the halt, Broken must choose whom to spend the crucial minutes with:
+#   Doctor Baldwin or Mr Manning (broken_day2_hunt_menu_company). Only by sitting
+#   with Manning and putting the letter question in the Drunk generic menu
+#   (drunk_generic_menu_broken, broken_config_menu.rpy) does Broken unlock the
+#   drunk_letter thread and learn that Manning, like him, was sent a letter (the
+#   Doctor killed his wife). That recognition lets Broken talk him down and save
+#   both men, continuing into broken_day2_evening (Day 2/3_Evening/1_main.rpy).
 #
-#   TODO: the branch where Broken never draws out the letter (the Drunk shoots
-#   the Doctor) is unwritten and still ends at work_in_progress.
+#   Give the doctor your attention, keep to yourself, or sit with Manning but
+#   fail to draw out the letter, and Manning fires on Baldwin. Broken throws
+#   himself into the shot and dies: broken_ending_shielded.
 # --------------------------------------------
 label broken_day2_hunt_drunk:
 
@@ -45,21 +47,86 @@ label broken_day2_hunt_drunk:
 
     Baldwin is grey and sweating, sunk in some private misery of his own, and pays neither of us any mind.
 
-    Mr Manning, though, I cannot take my eyes from.
+    And Samuel Manning hands shake so badly he can scarcely hold its weapon.
 
-    His hands shake so badly he can scarcely hold its weapon.
+    And I am so busy observing the both of them, I barely notice the rabbits and pheasants that came our way.
 
-    And his eyes. They go to the doctor's back and stay there, again and again.
+    No wonder none of us shot anything this morning.
 
-    He clearly is in some sort panic, if I want to talk to him, now is the time.
+    It's empty handed that we settle for lunch.
 
-    I drop back a little, and fall into step beside him.
+    Doctor Baldwin settle next to the footman, Samuel Manning is sitting a bit apart.
+
+    None of them seem to want to engage in any kind of conversation.
     """
 
-    #TODO, Midday pause (copy LAD)
-    # Choice between talkin with doctor OR drunk
-    # If good questions to drunk, you can convince him not to shoot.
-    # If you can't, you jump to protect Doctor Baldwin
+    $ time_left = 1
+    call run_menu(
+        TimedMenu("broken_day2_hunt_menu_company", [
+            TimedMenuChoice("Draw Doctor Baldwin into talk", 'broken_day2_hunt_drunk_doctor', early_exit=True),
+            TimedMenuChoice("Sit down beside Samuel Manning", 'broken_day2_hunt_drunk_manning', early_exit=True),
+            TimedMenuChoice("Keep to yourself and watch them both", 'broken_day2_hunt_drunk_watch', early_exit=True),
+        ], image_left = "doctor", image_right = "drunk"))
+
+
+# --------------------------------------------
+#   Broken gives the doctor his attention and leaves Manning to stew.
+#   Whatever Baldwin lets slip, it comes too late to head off the shot.
+# --------------------------------------------
+label broken_day2_hunt_drunk_doctor:
+
+    """
+    Manning is the danger here, that much is plain.
+
+    But it is Baldwin the danger is aimed at, and it is Baldwin who might yet tell me why.
+
+    I fall in beside the doctor and try to draw him out.
+    """
+
+    call doctor_generic
+
+    """
+    Whatever I take from Baldwin, I take too slowly.
+
+    All the while I am at his elbow, Manning is at our backs, half forgotten, the flask working and his eyes fixed on a mark he has already settled upon.
+
+    I feel the moment turn before I see it.
+    """
+
+    jump broken_day2_hunt_drunk_grove_shot
+
+
+# --------------------------------------------
+#   Broken keeps his distance and trusts his eye. He reads the wood too late.
+# --------------------------------------------
+label broken_day2_hunt_drunk_watch:
+
+    """
+    No. I will keep my own counsel and my distance, and watch the pair of them.
+
+    I have always trusted my eye more than my tongue, and I tell myself I will read the moment before it breaks.
+
+    So I settle a little apart, where I can see them both, and I wait.
+
+    It is a fine theory, right up until the instant it fails me.
+    """
+
+    jump broken_day2_hunt_drunk_grove_shot
+
+
+# --------------------------------------------
+#   Broken sits with Manning. Draw out the letter (drunk_letter) and he is
+#   talked down; fail to, and the grove takes Broken in the doctor's place.
+# --------------------------------------------
+label broken_day2_hunt_drunk_manning:
+
+    """
+    Baldwin may keep his secrets a while longer.
+
+    It is Manning who frightens me, and a frightened man is best kept talking.
+
+    I settle myself beside him in the bracken and offer him a companionable word.
+    """
 
     call drunk_generic
 
@@ -121,10 +188,51 @@ label broken_day2_hunt_drunk:
         Something is going to happen in this wood. I can feel it coming, and I cannot for the life of me see how to head it off.
         """
 
-        # TODO: If Broken never draws out the Drunk's letter, the western-grove
-        # accident should still occur (the Drunk shoots the Doctor). Not written yet.
+        jump broken_day2_hunt_drunk_grove_shot
 
-        jump work_in_progress
+
+# --------------------------------------------
+#   The grove turns: Manning fires on the doctor and Broken takes the bullet
+# --------------------------------------------
+label broken_day2_hunt_drunk_grove_shot:
+
+    $ play_music('danger', 2)
+
+    """
+    It comes without a word of warning.
+
+    Manning is on his feet, the rifle up and level, and the muzzle finds the doctor's back as though it had been waiting there all along.
+
+    Baldwin has time only to half turn, grey and uncomprehending.
+
+    There is no thought in what I do.
+
+    There is no time for it.
+
+    I throw myself across the space between them.
+    """
+
+    play sound gun
+
+    pause 0.5
+
+    """
+    The shot takes me instead.
+
+    It is a strange thing, to feel so little at the moment it matters most.
+
+    Only a great dull blow, and the wet earth rising to meet me, and the trees leaning in overhead.
+
+    Baldwin is shouting something I cannot make out.
+
+    Manning has let the rifle fall and stands staring at his own hands.
+
+    I never learned who wrote his letter, nor who wrote mine.
+
+    But the doctor is on his feet, and I am the one in the bracken, and for the length of one failing breath that seems a fair enough bargain.
+    """
+
+    jump broken_ending_shielded
 
 
 # --------------------------------------------

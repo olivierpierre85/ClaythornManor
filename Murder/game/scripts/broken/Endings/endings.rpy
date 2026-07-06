@@ -60,6 +60,34 @@ label broken_ending_strangled:
     jump ending_generic
 
 
+# SATURDAY HUNT — shadowed the western grove, failed to talk Manning down,
+# and threw himself into the shot meant for Doctor Baldwin
+label broken_ending_shielded:
+
+    $ broken_details.endings.unlock('shielded')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('shielded'))
+
+    call death_screen_transition
+
+    $ play_music('mysterious')
+
+    """
+    You put yourself between a broken man and the mark someone else had chosen for him, and it cost you everything.
+
+    It was a brave thing.
+
+    It was not a clever one.
+
+    Manning was never the danger.
+
+    The danger was whoever loaded him and left him in that wood, and that person is still beneath this roof, unhurt and unhurried.
+
+    You might have saved the doctor and yourself both, had you only made him talk before he raised the gun.
+    """
+
+    jump ending_generic
+
+
 # DAY 1 — talked to the maid; the butler made certain he never woke
 label broken_ending_day1_throat_cut:
 

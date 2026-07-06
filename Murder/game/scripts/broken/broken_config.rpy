@@ -116,6 +116,7 @@ label init_broken:
             CharacterInformation(1, "throat_cut", "Your throat was cut in your sleep", image_file="throat_cut", chapters=['saturday_morning']),
             CharacterInformation(1, "strangled", "Someone strangled you from behind in the woods", image_file="strangled_woods", chapters=['saturday_afternoon']),
             CharacterInformation(1, "shot", "The butler shot you down after you killed captain Sinha", image_file="hunting_rifle", chapters=['saturday_afternoon']),
+            CharacterInformation(1, "shielded", "You threw yourself in front of Doctor Baldwin and took Manning's bullet in the western grove", image_file="hunting_rifle", chapters=['saturday_afternoon']),
             CharacterInformation(1, "burned", "You burned in your sleep when the manor was set alight", image_file="manor_burns", chapters=['saturday_evening']),
             CharacterInformation(2, "ambushed", "You and the Captain were shot down on the road to the village", image_file="shot_from_behind_i", is_intuition=True, chapters=['sunday_afternoon']),
             CharacterInformation(3, "walked_out", "You led everyone out of the manor together and reached the police station", image_file="leave_manor", chapters=['end']),
