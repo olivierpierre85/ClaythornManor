@@ -57,6 +57,8 @@ THE WHol stuff can be decided at the end of the writing
 
 ## Assets & artistic Tasks
 
+MORE woods image, one for picnic, one for dead doctor?
+
 NEED a version unmaske of broken for when he is downstairs. I think I have it
 
 PROBLEM, **PSYCHIC** death in attic during the day not as scary as during the night. Change that?
