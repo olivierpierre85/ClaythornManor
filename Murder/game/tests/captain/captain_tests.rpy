@@ -28,17 +28,6 @@ testsuite captain:
         python:
             test.run_chapter(captain_details, "sunday_afternoon", "captain_day3_afternoon")
 
-    # --- Local-LLM (Ollama) beta tester: a local model picks every choice. ---
-    # Requires Ollama serving the model (see tests/ollama_tester.rpy). Start small:
-    #   renpy.exe  <project>  --test captain::ollama_friday_afternoon
-    testcase ollama_friday_afternoon:
-        python:
-            test.run_chapter_ollama(captain_details, "friday_afternoon", "captain_introduction", runs=1)
-
-    testcase ollama_friday_evening:
-        python:
-            test.run_chapter_ollama(captain_details, "friday_evening", "captain_day1_evening", runs=1)
-
-    testcase ollama_saturday_morning:
-        python:
-            test.run_chapter_ollama(captain_details, "saturday_morning", "captain_day2_morning", runs=3)
+    # The local-LLM (Ollama) testcases live in the standalone `ollama`
+    # testsuite (tests/ollama_autoplay_tests.rpy) - still in development and
+    # excluded from the default test run.

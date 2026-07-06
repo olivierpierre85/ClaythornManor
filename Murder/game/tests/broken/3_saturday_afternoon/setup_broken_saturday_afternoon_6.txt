@@ -42,37 +42,26 @@ Menu Choice: Sit down beside Samuel Manning
 Baldwin may keep his secrets a while longer.
 It is Manning who frightens me, and a frightened man is best kept talking.
 I settle myself beside him in the bracken and offer him a companionable word.
-Menu Choice: Did you find anything odd in your room last night? A letter, perhaps?
-Thomas Moody: Tell me something, Mr Manning, and forgive the strangeness of it.
-Thomas Moody: Did you find anything in your room last night that ought not to have been there?
-Thomas Moody: A letter, perhaps. Left where you could not fail to see it.
-The flask stops halfway to his mouth.
-For a moment the drink seems to go clean out of him, and he stares at me as though I had reached into his skull.
-Samuel Manning: How... how could you possibly know that?
-Thomas Moody: Because I found one of my own.
-He searches my face, and whatever he finds there undoes him.
-The words come out in a rush, as though he has been holding them since the small hours.
-Samuel Manning: They told me what he did. The doctor.
-Samuel Manning: He treated my Margaret, years ago. Held back the medicine that might have saved her, the very stuff he wanted for himself.
-Samuel Manning: He is the reason she is in the ground.
-Samuel Manning: And he walks about this house as though he had never harmed a soul in his life.
-His letter and mine, cut from the very same cloth.
-A grievance dug up, and sharpened, and pressed into the hand of a broken man, with a target set conveniently near.
-The same author wrote us both.
-So there it is.
-The same hand that slid an old army order beneath my door slid a letter beneath his, and aimed him at the doctor as it aimed me at the Captain.
-We are not guests at all. We are loaded guns, laid out on a table for someone else to fire.
-Well. I will not go off on command, and I will be damned if I let him do it either.
-Thomas Moody: Listen to me, Mr Manning. Listen.
-Thomas Moody: Whoever wrote you that letter wrote me one of my own. They want a death of us today, and they do not greatly care whose.
-Thomas Moody: Do not give it to them.
-Samuel Manning: But she... my Margaret...
-Thomas Moody: I know. Believe me, I do.
-Thomas Moody: But the man who has earned your bullet is not in this wood.
-Thomas Moody: He is the one who put the pen in your hand.
-Something in him gives way, like a sail when the wind drops.
-The fight goes out of him, and what is left is only a tired and grieving old man, swaying in the bracken.
-I take the rifle gently from his hands, and he lets me.
-I do not leave his side for the rest of the morning.
-The doctor walks out of the wood at noon, alive, and never once the wiser for how near a thing it was.
-A man who was meant to die today is breathing, and a man who was meant to kill him is not a murderer. It is not much. But after this morning, I will take it.
+Menu Choice: Leave him to his flask
+I cannot find the words to reach him, and he will not be reached.
+He drinks, and mutters, and watches the doctor, and my unease only sharpens as the morning wears on.
+Something is going to happen in this wood. I can feel it coming, and I cannot for the life of me see how to head it off.
+It comes without a word of warning.
+Manning is on his feet, the rifle up and level, and the muzzle finds the doctor's back as though it had been waiting there all along.
+Baldwin has time only to half turn, grey and uncomprehending.
+There is no thought in what I do.
+There is no time for it.
+I throw myself across the space between them.
+The shot takes me instead.
+It is a strange thing, to feel so little at the moment it matters most.
+Only a great dull blow, and the wet earth rising to meet me, and the trees leaning in overhead.
+Baldwin is shouting something I cannot make out.
+Manning has let the rifle fall and stands staring at his own hands.
+I never learned who wrote his letter, nor who wrote mine.
+But the doctor is on his feet, and I am the one in the bracken, and for the length of one failing breath that seems a fair enough bargain.
+You put yourself between a broken man and the mark someone else had chosen for him, and it cost you everything.
+It was a brave thing.
+It was not a clever one.
+Manning was never the danger.
+The danger was whoever loaded him and left him in that wood, and that person is still beneath this roof, unhurt and unhurried.
+You might have saved the doctor and yourself both, had you only made him talk before he raised the gun.

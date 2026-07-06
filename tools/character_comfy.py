@@ -126,9 +126,9 @@ CHARACTERS = {
         description=(
             "a grizzled older man of about sixty, unkempt greying hair and a grey stubbled "
             "beard, ruddy weathered and deeply lined skin, bleary bloodshot eyes and a loose "
-            "wry half-smile, wearing a rumpled grey 1920s three-piece suit with a crooked "
-            "loosened tie and an unbuttoned waistcoat, the suit clean but well-worn and "
-            "creased, only subtly shabby with no visible dirt or stains, a once-respectable "
+            "wry half-smile, wearing a rumpled dark charcoal-grey 1920s three-piece suit with "
+            "a crooked loosened tie and an unbuttoned waistcoat, the suit clean but well-worn "
+            "and creased, only subtly shabby with no visible dirt or stains, a once-respectable "
             "barrister gone to drink"
         ),
     ),
@@ -151,7 +151,7 @@ CHARACTERS = {
             "an elegant woman of about forty-five, softly waved silver-grey hair set in a "
             "1920s finger-wave bob, arched brows, striking green eyes, pale powdered skin and "
             "dark red lips, a poised composed and faintly theatrical expression, wearing a "
-            "refined pale 1920s gown with a beaded lace collar and ropes of pearls, an "
+            "refined dark red 1920s evening gown with a beaded collar and ropes of pearls, an "
             "out-of-work actress playing the part of a grand lady"
         ),
     ),
@@ -168,10 +168,10 @@ CHARACTERS = {
     "footman": Character(
         head_shot="Images/characters_original_and_archive/side/side footman.png",
         description=(
-            "a handsome man of about thirty-five, dark brown hair combed back, a neat dark "
-            "moustache, blue-grey eyes and a smooth composed expression, wearing footman's "
-            "livery of a dark tailcoat with a high stand collar and brass buttons over a "
-            "white shirt, poised and well-groomed"
+            "a handsome man of about thirty-five, dark brown hair combed back, clean-shaven "
+            "with no moustache, blue-grey eyes and a smooth composed expression, wearing "
+            "footman's livery of a dark tailcoat with a high stand collar and brass buttons "
+            "over a white shirt, poised and well-groomed"
         ),
     ),
     "maid": Character(

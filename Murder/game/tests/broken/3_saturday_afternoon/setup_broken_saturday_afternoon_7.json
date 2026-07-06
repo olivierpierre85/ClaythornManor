@@ -12,13 +12,8 @@
         },
         {
             "menu": "broken_day2_hunt_menu_company",
-            "selected": "Sit down beside Mr Manning instead",
-            "redirect": "broken_day2_hunt_drunk_manning"
-        },
-        {
-            "menu": "drunk_generic_menu_broken",
-            "selected": "Did you find anything odd in your room last night? A letter, perhaps?",
-            "redirect": "broken_drunk_hunt_letter"
+            "selected": "Keep to yourself and watch them both",
+            "redirect": "broken_day2_hunt_drunk_watch"
         }
     ]
 }

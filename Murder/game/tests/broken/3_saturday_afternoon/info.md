@@ -10,10 +10,16 @@ Choices (all gated on `talked_to_maid`):
 2. **North path** (`broken_day2_hunt_menu_revenge`): spare or kill the Captain.
    Two of the Captain's actions stoke Broken's anger; `host_lies` tempers the
    shooting beat.
-3. **Grove path**: the Drunk generic menu (`drunk_generic_menu_broken`) carries
-   a letter question. Asking it unlocks the `drunk_letter` thread (Manning was
-   turned against the Doctor the same way Broken was turned against the
-   Captain) and saves both the Drunk and the Doctor.
+3. **Grove path**: after the walk west, Broken chooses whom to spend the halt
+   with (`broken_day2_hunt_menu_company`) - Doctor Baldwin or Mr Manning. Only by
+   sitting with Manning (`broken_day2_hunt_drunk_manning`) and putting the letter
+   question in the Drunk generic menu (`drunk_generic_menu_broken`) does Broken
+   unlock the `drunk_letter` thread (Manning was turned against the Doctor the
+   same way Broken was turned against the Captain) and save both men. Giving the
+   doctor his attention instead (`broken_day2_hunt_drunk_doctor`), keeping to
+   yourself (`broken_day2_hunt_drunk_watch`), or leaving Manning without drawing
+   out the letter sends the grove to ruin: Manning fires on Baldwin and Broken
+   takes the bullet -> `broken_ending_shielded`.
 
 The north-field hunt and the kill are shared with the Captain's storyline
 (`common_day2_hunt_pairing`, `common_day2_hunt_north_field`,
@@ -42,5 +48,17 @@ no maid warning there is no menu: forced north field, forced kill ->
 `broken_ending_silenced`. (`choices: []`)
 
 ## setup_broken_saturday_afternoon_5.json
-`talked_to_maid`. Party menu -> western grove; drunk menu -> the letter
-question, unlocking `drunk_letter` and the save-the-Drunk resolution.
+`talked_to_maid`. Party menu -> western grove; company menu -> sit with Manning;
+drunk menu -> the letter question, unlocking `drunk_letter` and the
+save-the-Drunk resolution.
+
+## setup_broken_saturday_afternoon_6.json
+`talked_to_maid`. Party menu -> western grove; company menu -> sit with Manning;
+drunk menu -> leave him without drawing out the letter. `drunk_letter` stays
+locked, so Manning fires on the doctor and Broken is shot shielding him ->
+`broken_ending_shielded`.
+
+## setup_broken_saturday_afternoon_7.json
+`talked_to_maid`. Party menu -> western grove; company menu -> keep to yourself.
+Neither man is engaged, so Manning fires on the doctor and Broken is shot
+shielding him -> `broken_ending_shielded`.
