@@ -72,19 +72,15 @@ PROBLEM, **PSYCHIC** death in attic during the day not as scary as during the ni
 #### Locations
 Finish normal list- last one is train_second
 Multiple Class in train for outside IMAGEs
-- Two class at the moment. I think One image by person is more appropriate, with hints in them (bags,...). See to do it later
+- Two class at the moment. I think One image by person is more appropriate, with hints in them (bags,...). See to do it later in V4 ()
   
 ### MAPS
 
-Redraw BETTER maps
-
+Redraw BETTER maps for manor, not
 
   
 ### MUSIC with producer AI
 Get new music from internet and put them at the right place
-
-
-
 
 
 
