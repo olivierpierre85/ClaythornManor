@@ -37,10 +37,7 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 ##### **Friday Evening**
 
 ##### Saturday — Hunt
-- Option to kill the Captain, or not, if Broken thinks it is a setup. To be sure it is a setup he needs more suspicious findings — e.g. the Drunk also received a message.
-  - If he hasn't found the Drunk's message → he kills the Captain, and the Drunk kills the Doctor (very gory new step).
-  - If he has found the message → he knows something is wrong, goes with the Drunk and prevents his death. Back to choosing a hunt partner (since the Lad is dead).
-- OPTION to not go on the hunt? maybe ????
+- DRUNK AND Survival PATH
 
 ##### Saturday — After the Hunt
 - **Only Ted is dead** — a normal dinner, but the same outcome: everyone dies. If you found the poison the day before, you can press on after diner; if you found nothing you die in your sleep when the Butler sets the house on fire.

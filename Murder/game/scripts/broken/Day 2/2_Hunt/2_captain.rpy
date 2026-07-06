@@ -8,8 +8,8 @@
 #   The north-field hunt and the kill are shared with the Captain's storyline
 #   (common_day2_hunt_north_field / common_day2_hunt_captain_confrontation).
 #   Either outcome gets Broken killed by the butler:
-#       - kill  -> broken_ending_silenced
-#       - spare -> broken_ending_overtaken
+#       - kill  -> broken_ending_shot
+#       - spare -> broken_ending_strangled
 #   The spare option requires talked_to_maid; without it the kill is forced.
 # --------------------------------------------
 label broken_day2_hunt_captain:
@@ -26,29 +26,32 @@ label broken_day2_hunt_captain:
     We settle for luncheon in a clearing among the birches. The butler lays a cloth and pours the tea with his customary care.
     """
 
-
     host """
     Captain, I have been told you are an amazing story teller.
 
-    Isn't there a story you would like to share with us.
+    Isn't there a story you would like to share with us?
     """
 
     captain """
     There is little worth the telling, my lady.
 
-    But if it would amuse you, I might give you the relief of Tientsin. The heat of it, and the walls.
+    But if it would amuse you, I might tell you about the "War of the Golden Stool", one of my first campaigns.
+    """
+
+    host """
+    What an intriguing name, please do tell.
     """
 
     """
-    And he is away, modest and precise, with the polished ease of a man who has told it across a hundred dinner tables.
+    So he does, modest and precise, with the ease of a man who has told it across a hundred dinner tables.
 
     Lady Claythorn leans in, delighted.
 
-    I sit very still and let it wash over me.
+    I, on the other hand, feel the anger rising as the story progresses.
 
-    This man was always safe behind a desk, but he is playing the hero over the sandwiches.
-    
-    While Tom came home behind a mask and died by inches for the want of the very courage this fraud counterfeits so prettily.
+    If the letter is correct, and I have started to accept it is, this man was always safe behind a desk.
+
+    But he is playing the hero, as if he were solely responsible for England's victory.
 
     My thumb finds the cold of the trigger guard where the rifle rests across my knee.
     """
@@ -58,33 +61,25 @@ label broken_day2_hunt_captain:
         """
         And still the maid's words will not leave me. A surprise, prepared for the guests.
 
-        The letter beneath my door. The hunt laid on the very next morning. The Captain set before me like a bottle on a wall.
+        The letter left in my room. The hunt laid on the very next morning.
 
-        Whoever arranged all this knew to a nicety what that order would do to me. They have written the scene and handed me the gun, and I am three lines from speaking my piece.
+        The Captain, set before me like a target on a wall.
 
-        A man who kills to another's design is no avenger. He is a tool. And I have spent a year despising the men who let themselves be used.
-        """
-
-        """
-        For the first time since I read that paper, I am not certain of my own hand.
+        It is too obvious that someone is trying to use me.
         """
 
         $ time_left = 1
         call run_menu(
             TimedMenu("broken_day2_hunt_menu_revenge", [
-                TimedMenuChoice("Stay my hand. I'll not dance to a stranger's tune.", 'broken_day2_hunt_spare', early_exit=True),
-                TimedMenuChoice("Design or not, his name is on the order. Lead him away.", 'broken_day2_hunt_kill', early_exit=True),
+                TimedMenuChoice("It doesn't matter. He is a liar and has to pay", 'broken_day2_hunt_kill', early_exit=True),
+                TimedMenuChoice("Spare him", 'broken_day2_hunt_spare', early_exit=True),
             ])
         )
 
     else:
 
         """
-        There is no doubt left in me to stay my hand.
-
-        Whatever game is being played beneath this roof, the name at the foot of that order is his, and Tom is in the ground.
-
-        That has always been enough.
+        There is no doubt left in me now.
         """
 
         jump broken_day2_hunt_kill
@@ -96,6 +91,8 @@ label broken_day2_hunt_captain:
 label broken_day2_hunt_kill:
 
     """
+    Anger has overwhelmed me and it is too late to go back now.
+
     I let the talk run on a little longer, and gather myself, and wait for my opening.
     """
 
@@ -108,68 +105,50 @@ label broken_day2_hunt_kill:
 
     Captain Sinha lies where he fell, and there is nothing of the soldier left in him now.
 
-    I wait for the satisfaction of it. For something to fill the hollow that has sat in my chest since they put Tom in the ground.
+    I wait for the satisfaction of it.
+
+    For something to fill the hole that has sat in my chest since they put Tom in the ground.
 
     It does not come.
 
     There is only a dead man in the bracken, and my two hands, and the quiet.
-    """
 
-    pause 1.0
+    What have I done?
 
-    play sound gun
+    My mind races, trying to work out what to do next.
 
-    pause 0.5
+    Then, I realise I am not alone.
 
-    """
-    Then, from the direction of the other party, another shot. And after it, faint and thin between the trees, a cry.
-
-    The doctor, or the drunkard, or both. It scarcely matters which.
-
-    Whoever drew us under this roof wanted blood this morning, and every one of us has proved so very willing to spill it.
-
-    Two men dead before the luncheon is cleared away, and the day not yet half gone.
-    """
-
-    """
-    I have no time for the horror of it. The shot will have carried back to the clearing, and they will come looking.
-
-    I compose my face behind the mask, take up my rifle, and turn to start back the way we came.
-    """
-
-    """
     The butler is standing not three paces away.
 
-    I never heard him come. A big man, and yet he moves through the wood without a sound.
+    I never heard him come.
 
-    He looks at the Captain's body, and then at me, with about as much feeling as a man might spare for a hare in a snare.
+    He looks at the Captain's body, and then kneels next to it.
     """
 
     butler """
     Cleanly done, Mr Moody.
 
-    Or whatever your name is, beneath that mask. It hardly signifies now.
+    Or whatever your name is, beneath that mask.
+
+    It hardly matters now.
     """
 
     """
-    He knows. Of course he knows.
+    Then he picks up the Captain's rifle,
 
-    The letter, the hunt, the Captain laid across my path. None of it was ever mine. It was theirs from the very first, and I have played my part exactly as it was written for me.
+    and turns it against me.
     """
 
-    broken """
-    You. You wanted this.
     """
-    
-    """
-    I bring the rifle up.
+    I bring my own rifle up.
 
-    Too slow. I was always going to be too slow.
-
-    He is behind me before the barrel has cleared my hip, and a thin band of leather draws tight across my throat.
+    Too late.
     """
 
-    jump broken_ending_silenced
+    play sound gun
+
+    jump broken_ending_shot
 
 
 # --------------------------------------------
@@ -179,27 +158,17 @@ label broken_day2_hunt_kill:
 label broken_day2_hunt_spare:
 
     """
-    No.
+    No, I cannot kill the man.
 
-    I have spent a year hating the men who did the cruel thing because a cleverer man had arranged for them to do it.
+    Even if he is a liar, a fraud, what is happening here is too suspicious.
 
-    I'll not become one more of them. Not even for Tom. Least of all for Tom.
+    I let the rage go cold in my hands.
 
-    I let the rage go cold in my hands. I let the Captain talk. I say nothing of the letter at all.
-    """
+    I let the Captain finish his story.
 
-    captain """
-    ... and so we held until the relief came up. A near thing, but a good one.
-    """
+    Whoever drew us here wanted him dead by my hand, or more likely by Thomas's hand.
 
-    broken """
-    A remarkable account, Captain.
-    """
-
-    """
-    Whoever drew us here wanted him dead by my hand. Of that I am now certain.
-
-    Which means the danger was never the Captain at all. The danger is whoever wrote this morning for us, and they will not have written only the one death.
+    That is the thing I must focus on.
     """
 
     $ play_music('danger', 2)
@@ -209,37 +178,27 @@ label broken_day2_hunt_spare:
     pause 0.5
 
     """
-    The thought has scarcely formed when a shot cracks from the direction of the other party. Then a second. And after them, thin between the trees, a cry.
+    The thought has scarcely formed when a shot cracks from the direction of the other party.
+
+    Then, thin between the trees, a cry.
 
     My blood runs cold.
 
-    The doctor. They have left him alone with that poor drunken wreck, and I have sat here playing at conscience while the next act began without me.
+    Before I can move, the Captain is on his feet and away.
+
+    I go after him but he is faster than I would have guessed, the gap between us widening with every stride.
+
+    After a while I have to stop to catch my breath.
+
+    Then I hear someone right behind me.
+
+    I try to turn to see who that is.
+
+    But before I can see, I feel a band of leather draw tight across my throat.
+
+    I struggle to fight it off.
+
+    But I am already out of breath, and have not enough strength left to defend myself.
     """
 
-    """
-    Before I can move, the Captain is on his feet and away, crashing through the undergrowth toward the sound far faster than I would have given him credit for.
-
-    Lady Claythorn does not follow. She stays beside the cloth, very still, her hands folded in her lap, watching us go.
-
-    I go after the Captain as best I can, the bracken dragging at my legs, the gap between us widening with every stride.
-
-    And somewhere in the green hush, between the fleeing man ahead and the seated woman behind, it comes to me that I have not once seen the butler since the shots rang out.
-    """
-
-    """
-    A footfall behind me. Close. Unhurried.
-
-    I begin to turn.
-    """
-
-    butler """
-    Not that way, sir.
-    """
-
-    """
-    Something hard presses itself between my shoulders, and I understand, far too late, that I was never meant to reach the other party at all.
-
-    Ahead of me, the Captain runs on, and does not look back, and never knows.
-    """
-
-    jump broken_ending_overtaken
+    jump broken_ending_strangled

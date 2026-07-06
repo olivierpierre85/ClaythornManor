@@ -114,8 +114,8 @@ label init_broken:
         broken_endings = CharacterEndingList([
             CharacterInformation(1, "deathbed", "You died in your sleep", image_file="deathbed", chapters=['saturday_morning']),
             CharacterInformation(1, "throat_cut", "Your throat was cut in your sleep", image_file="throat_cut", chapters=['saturday_morning']),
-            CharacterInformation(1, "silenced", "The butler strangled you the moment the Captain was dead", image_file="strangled_woods", chapters=['saturday_afternoon']),
-            CharacterInformation(1, "overtaken", "The butler caught you alone and shot you down as the parties scattered", image_file="hunting_rifle", chapters=['saturday_afternoon']),
+            CharacterInformation(1, "strangled", "Someone strangled you from behind in the woods", image_file="strangled_woods", chapters=['saturday_afternoon']),
+            CharacterInformation(1, "shot", "The butler shot you down after you killed captain Sinha", image_file="hunting_rifle", chapters=['saturday_afternoon']),
             CharacterInformation(1, "burned", "You burned in your sleep when the manor was set alight", image_file="manor_burns", chapters=['saturday_evening']),
             CharacterInformation(2, "ambushed", "You and the Captain were shot down on the road to the village", image_file="shot_from_behind_i", is_intuition=True, chapters=['sunday_afternoon']),
             CharacterInformation(3, "walked_out", "You led everyone out of the manor together and reached the police station", image_file="leave_manor", chapters=['end']),
@@ -150,7 +150,6 @@ label init_broken:
         broken_details  = CharacterDetails(
             text_id = "broken", 
             locked = True,
-            know_real_name = True,
             real_name = broken_name,
             nickname = "The Broken Face",
             description_short = "Masked Man",

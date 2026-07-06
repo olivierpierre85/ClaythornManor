@@ -41,11 +41,9 @@ label broken_day2_hunt:
 
     My hands are steady as I dress. Steadier than they have any right to be.
 
-    The letter still lies on my bedstand.
+    The letter still lies on my bedside table.
 
     If I am to believe it, Captain Sinha put his name to the order that sent Tom up to the line.
-
-    Picked him up amongst other possible candidates, likely due to his background.
 
     Because of that, Tom came back from the war behind a mask, and lived a small and lonely life until his wounds got the better of him.
 
@@ -61,7 +59,7 @@ label broken_day2_hunt:
     """
     The butler is in the gun room, attending the rifles with his unhurried care.
 
-    He hands me a piece.
+    He hands me a rifle.
 
     It has been years since I last held a rifle, yet it settles into my hands like an old habit.
 
@@ -74,21 +72,7 @@ label broken_day2_hunt:
 
     """
     The others are already gathering on the lawn.
-    """
 
-    if broken_details.threads.is_unlocked('talked_to_maid'):
-
-        """
-        The maid's words come back to me. A surprise, she said, prepared for the guests.
-
-        A letter slipped beneath my door, and a hunt laid on the very next morning.
-
-        It is too neat by half. I know it, somewhere beneath the anger.
-
-        But knowing a thing and heeding it are not at all the same, and the anger is by far the louder of the two.
-        """
-
-    """
     Two different groups are forming: Captain Sinha with Lady Claythorn and Samuel Manning with Doctor Baldwin.
 
     It looks like it is up to me to decide which party I will join.
@@ -99,7 +83,7 @@ label broken_day2_hunt:
         """
         My first instinct is to follow Captain Sinha.
 
-        Even if it is suspicious, I cannot ignore the letter.
+        I simply cannot ignore the letter.
 
         Being close to him will allow me to learn more of it.
 
@@ -107,20 +91,16 @@ label broken_day2_hunt:
         
         The letter, the hunt, the surprise the maid could not put a name to.
 
-        If the Captain has been set before me like a target, then perhaps he is not the only one who has been arranged.
+        Making me follow the captain is probably the goal of whoever organised this.
 
-        And there is the drunkard, wound tight as a watch-spring, his eyes forever sliding back to the doctor.
-
-        I should dearly like to know what is the matter with Mr Manning.
-
-        So, I am not sure which group I will join.
+        So, which group should I join?
         """
 
         $ time_left = 1
         call run_menu(
             TimedMenu("broken_day2_hunt_menu_party", [
-                TimedMenuChoice("Make up Lady Claythorn's party, and keep the Captain close", 'broken_day2_hunt_captain', early_exit=True),
-                TimedMenuChoice("Join the Doctor and Mr Manning instead", 'broken_day2_hunt_drunk', early_exit=True),
+                TimedMenuChoice("Lady Claythorn and Captain Sinha", 'broken_day2_hunt_captain', early_exit=True),
+                TimedMenuChoice("Join Doctor Baldwin and Samuel Manning instead", 'broken_day2_hunt_drunk', early_exit=True),
             ], image_right = "host", image_right_2 = "captain", image_left = "drunk", image_left_2 = "doctor"))
 
     else:

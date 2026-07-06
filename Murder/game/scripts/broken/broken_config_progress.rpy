@@ -28,24 +28,24 @@ label broken_config_progress:
                 Chapter(image_ending_question, "ending", "ambushed", "sunday_afternoon"),
             ],
             # Row 2: first branch on each trunk, on the same line -
-            #   col1 -> deathbed (Friday whisky), col3 -> silenced (killed the Captain)
+            #   col1 -> deathbed (Friday whisky), col3 -> strangled (killed the Captain)
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_double_corner),   # col1 branch (more below)
                 Chapter(image_ending_question, "ending", "deathbed", "saturday_morning"),
                 Chapter(image_checkpoint_empty_half),      # filler completing the deathbed cell
                 Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
-                Chapter(image_ending_question, "ending", "silenced", "saturday_afternoon"),
+                Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
             ],
             # Row 3: last branch on each trunk, on the same line -
-            #   col1 -> throat_cut (questioned the maid), col3 -> overtaken (spared the Captain)
+            #   col1 -> throat_cut (questioned the maid), col3 -> shot (spared the Captain)
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_corner),          # col1 branch (last)
                 Chapter(image_ending_question, "ending", "throat_cut", "saturday_morning"),
                 Chapter(image_checkpoint_empty_half),      # filler completing the throat_cut cell
                 Chapter(image_checkpoint_corner),          # col3 branch (last)
-                Chapter(image_ending_question, "ending", "overtaken", "saturday_afternoon"),
+                Chapter(image_ending_question, "ending", "shot", "saturday_afternoon"),
             ],
         ]
 

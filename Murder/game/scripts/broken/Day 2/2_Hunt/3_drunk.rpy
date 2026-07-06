@@ -17,27 +17,23 @@
 label broken_day2_hunt_drunk:
 
     broken """
-    If it is all the same to you, my lady, I should sooner go across with Doctor Baldwin and Mister Manning.
+    Well, if it is the same for everybody, I will go with Doctor Baldwin and Mister Manning.
     """
 
     """
-    Then I say lower so Samuel Manning is not hearing what I am saying.
+    The butler gives me a weird look, as if I should have shown preference in going with out host.
+    
+    As a way of apologizing, I whisper to her.
     """
 
     broken """
-    Mr Manning looks as though he could do with a steady man at his elbow.
+    I hope you'll forgive me, but I prefer not leave Doctor Baldwin alone with Samuel Manning.
     """
 
     """
+    She nods in agreement and gives me slight smile.
+    
     The Captain inclines his head, plainly relieved to see the back of me.
-
-    If he only knew how near I had come to choosing otherwise.
-    """
-
-    butler """
-    Very good. Captain Sinha shall accompany my lady, and Mr Moody will join Doctor Baldwin and Mr Manning.
-
-    The footman and I shall divide between the parties.
     """
 
     call change_time(11, 45)
@@ -51,14 +47,19 @@ label broken_day2_hunt_drunk:
 
     Mr Manning, though, I cannot take my eyes from.
 
-    He has not stopped at the flask since we left the lawn. His hands shake so badly he can scarcely hold it to his lips.
+    His hands shake so badly he can scarcely hold its weapon.
 
     And his eyes. They go to the doctor's back and stay there, again and again.
 
-    He cleary is in some sort panic, if I want to talk to him, now is the time.
+    He clearly is in some sort panic, if I want to talk to him, now is the time.
 
     I drop back a little, and fall into step beside him.
     """
+
+    #TODO, Midday pause (copy LAD)
+    # Choice between talkin with doctor OR drunk
+    # If good questions to drunk, you can convince him not to shoot.
+    # If you can't, you jump to protect Doctor Baldwin
 
     call drunk_generic
 
