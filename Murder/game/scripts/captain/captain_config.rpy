@@ -212,7 +212,6 @@ label init_captain:
         captain_details  = CharacterDetails(
             text_id = "captain", 
             locked = True,
-            know_real_name = True,
             real_name = captain_name,
             nickname = "The Captain",
             description_short = "Older Indian man",

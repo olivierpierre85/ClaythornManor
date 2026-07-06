@@ -18,7 +18,6 @@ transform map_button_right():
     repeat
 
 label init_map:
-    default tooltip = "Click on a room to move there"
     define MIN_FLOOR = 0
     define MAX_FLOOR = 3
 
@@ -47,7 +46,7 @@ label init_map:
             Room(2, (717, 90, 178, 190),   'bedroom_host',        'Henry IV Bedroom'), #  (Host)
             Room(2, (717, 280, 178, 130),   'bedroom_drunk',       'George IV Bedroom'), #  (drunk)
             Room(2, (717, 410, 178, 100),   'bedroom_broken',      'Richard III Bedroom'), #  (broken)
-            Room(2, (717, 510, 178, 105),   'bedroom_nurse',       'Queen Alexandra'), # (nurse)
+            Room(2, (717, 510, 178, 105),   'bedroom_nurse',       'Queen Alexandra Bedroom'), # (nurse)
             
             # Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), 
             # Ground Floor
@@ -122,6 +121,26 @@ label change_floor(floor):
     return
 
 
+# One arrow button for changing floors on the map screens. direction is -1
+# (left, down a floor) or +1 (right, up a floor). When there is no further
+# floor, a transparent spacer of the same size keeps the imagemap centred.
+screen map_floor_arrow(direction):
+
+    $ arrow_target = selected_floor + direction
+    $ arrow_side = "left" if direction < 0 else "right"
+
+    if MIN_FLOOR <= arrow_target and arrow_target <= MAX_FLOOR:
+        imagebutton:
+            mouse "hover"
+            idle "gui/button/page_button_[arrow_side]_idle_bright.png"
+            hover "gui/button/page_button_[arrow_side]_hover.png"
+            yalign 0.5
+            xoffset 0
+            action SetVariable("selected_floor", arrow_target) at (map_button_left if direction < 0 else map_button_right)
+    else:
+        add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
+
+
 # Display of manor map in menu => Make it more like
 screen manor_map:
     tag menu
@@ -130,58 +149,30 @@ screen manor_map:
     ## add text with explanation of previously visited rooms if needed
     use game_menu(_("Map of The Manor")):
 
-        # Copy of in_game_map_menu because problem with var when use in sub screen
-        $ left_floor = selected_floor - 1
-        $ right_floor = selected_floor + 1
         hbox:
             yoffset 130
             xoffset -120
-            if selected_floor > MIN_FLOOR:
-                imagebutton:
-                    mouse "hover"
-                    idle "gui/button/page_button_left_idle_bright.png" 
-                    hover "gui/button/page_button_left_hover.png" 
-                    yalign 0.5 
-                    xoffset 0                     
-                    action SetVariable("selected_floor", left_floor) at map_button_left
-            else:
-                add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
-                # imagebutton:
-                #     mouse "hover"
-                #     idle "gui/button/page_button_left_idle.png" 
-                #     yalign 0.5 
-                #     xoffset 0                     
-            
-            imagemap: 
-                xalign 0.5                       
+
+            use map_floor_arrow(-1)
+
+            imagemap:
+                xalign 0.5
                 idle "images/ui/map/map_idle_[selected_floor].png"
                 hover "images/ui/map/map_hover_[selected_floor].png"
-                use map_information
-                
-            if selected_floor < MAX_FLOOR:
-                imagebutton:
-                    mouse "hover"
-                    idle "gui/button/page_button_right_idle_bright.png" 
-                    hover "gui/button/page_button_right_hover.png" 
-                    yalign 0.5 
-                    xoffset 0                     
-                    action SetVariable("selected_floor", right_floor) at map_button_right
-            else:
-                add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
-                # imagebutton:
-                #     mouse "hover"
-                #     idle "gui/button/page_button_right_idle.png" 
-                #     yalign 0.5 
-                #     xoffset 0       
+                use map_annotations
 
-screen map_information:
+            use map_floor_arrow(1)
+
+
+# The names the player has written on the map (unlocked via unlock_map)
+screen map_annotations:
 
     for info in map_information:
         if info.floor == selected_floor and info.active:
                 text info.name:
                     pos info.area_points
                     size 16
-                    color gui.map_writing_color                    
+                    color gui.map_writing_color
                     font gui.map_writing_font
 
 screen in_game_map_menu(timed_menu):
@@ -194,56 +185,27 @@ screen in_game_map_menu(timed_menu):
     style_prefix "confirm"
 
     python:
-        choices = timed_menu.choices
-        # Logic change based on floor
-        left_floor = selected_floor - 1
-        right_floor = selected_floor + 1
+        ALREADY_TRIED_CHOICE = " (I already went there)"
 
-        
-        # TODO fix or remove.NOT VISIBLE at the moment, because inactive hotspot are invisible????
-        ALREADY_TRIED_CHOICE = " (I already went there)" 
-        
         hotspots = []
 
         for room in rooms:
-            if room.floor != selected_floor:
+            if room.floor != selected_floor or not room.area_points:
                 continue
 
-            new_hotspot     = None        # what we will eventually append
-            first_choice_ix = None        # remembered for the fallback case
+            # Same matching rule as display_choices, so the room shown and
+            # the choice executed always agree.
+            choice = find_choice_for_room(timed_menu, room.id)
 
-            for ix, choice in enumerate(choices):
-                if choice.room != room.id:
-                    continue               # not a choice for this room
-
-                # keep the index of *any* choice for the fallback
-                if first_choice_ix is None:
-                    first_choice_ix = ix
-
-                # ---------- normal, “active” branch ----------
-                if choice.get_condition():
-                    label      = choice.text if not choice.hidden else ALREADY_TRIED_CHOICE
-                    is_active  = not choice.hidden
-
-                    new_hotspot = Hotspot(label, ix, room.area_points, room.id,active=is_active)
-
-                    if choice.is_already_chosen():
-                        new_hotspot.description += "*"
-
-                    break                  # we found a usable choice → stop scanning MAKE sure there is only 1 choice possible at a time
-
-
-            # ---------- no usable choice found ----------
-            if new_hotspot is None:
-                # treat the whole thing as “already tried”
-                # (first_choice_ix is guaranteed to exist because every room has ≥1 choice)
-                new_hotspot = Hotspot(ALREADY_TRIED_CHOICE,first_choice_ix,room.area_points, room.id,active=False)     # greyed-out / inactive
-                # if you also want to flag the underlying Choice object as “used”
-                # you can do it here:
-                # choices[first_choice_ix].hidden = True
+            if choice is not None:
+                label = choice.text if not choice.hidden else ALREADY_TRIED_CHOICE
+                new_hotspot = Hotspot(label, room.area_points, room.id, active=not choice.hidden)
+                new_hotspot.already_chosen = choice.is_already_chosen()
+            else:
+                # No usable choice for this room - grey it out as already tried
+                new_hotspot = Hotspot(ALREADY_TRIED_CHOICE, room.area_points, room.id, active=False)
 
             hotspots.append(new_hotspot)
-                        
 
     frame:
         vbox:
@@ -256,76 +218,48 @@ screen in_game_map_menu(timed_menu):
                 text_size 46
                 xalign 0.5
 
-
-            # use show_map # TODO problem with hot var in tooltip not working, so instead we need to duplicate code
             hbox:
-                if selected_floor > MIN_FLOOR:
-                    imagebutton:
-                        mouse "hover"
-                        idle "gui/button/page_button_left_idle_bright.png" 
-                        hover "gui/button/page_button_left_hover.png" 
-                        yalign 0.5 
-                        xoffset 0                     
-                        action SetVariable("selected_floor", left_floor) at map_button_left
-                else:
-                    add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
-                    # imagebutton:
-                    #     mouse "hover"
-                    #     idle "gui/button/page_button_left_idle.png" 
-                    #     yalign 0.5 
-                    #     xoffset 0                     
-                
-                imagemap: 
-                    xalign 0.5                       
+                use map_floor_arrow(-1)
+
+                imagemap:
+                    xalign 0.5
                     idle "images/ui/map/map_idle_[selected_floor].png"
                     hover "images/ui/map/map_hover_[selected_floor].png"
                     insensitive "images/ui/map/map_insensitive_[selected_floor].png"
-                    
+
                     for hot in hotspots:
-                        if hot.area_points:
-                            hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
-                                if hot.active:
-                                    if '*' in hot.description and not seen_tutorial_already_chosen_map: 
-                                        action [ SetVariable("show_tutorial_already_chosen_map", True), Return(hot.room) ]
-                                    else:
-                                        action Return(hot.room)
+                        hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
+                            if hot.active:
+                                if hot.already_chosen and not seen_tutorial_already_chosen_map:
+                                    action [ SetVariable("show_tutorial_already_chosen_map", True), Return(hot.room) ]
                                 else:
-                                    action None
-                                tooltip hot.description
-                                mouse "hover"
+                                    action Return(hot.room)
+                            else:
+                                action None
+                            tooltip hot
+                            mouse "hover"
 
-                    use map_information
-                    
-                if selected_floor < MAX_FLOOR:
-                    imagebutton:
-                        mouse "hover"
-                        idle "gui/button/page_button_right_idle_bright.png" 
-                        hover "gui/button/page_button_right_hover.png" 
-                        yalign 0.5 
-                        xoffset 0                     
-                        action SetVariable("selected_floor", right_floor) at map_button_right
-                else:
-                    add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
-                    # imagebutton:
-                    #     mouse "hover"
-                    #     idle "gui/button/page_button_right_idle.png" 
-                    #     yalign 0.5 
-                    #     xoffset 0       
+                    use map_annotations
 
-            $ tooltip = GetTooltip()
-            if not tooltip:
-                $ tooltip = "Click on a room to move there"
-            
-            # Used the * to show the choices already made, then remove the * 
-            
-            label [tooltip.replace('*', '')]:
-                yoffset -10
-                if "*" in tooltip:
-                    text_color gui.accent_color
-                else:
+                use map_floor_arrow(1)
+
+            # The hovered hotspot (if any) drives the caption under the map
+            $ hovered_hotspot = GetTooltip()
+            if hovered_hotspot:
+                label hovered_hotspot.description:
+                    yoffset -10
+                    if hovered_hotspot.already_chosen:
+                        text_color gui.accent_color
+                    else:
+                        text_color gui.highlight_color
+                    text_size 46
+                    xalign 0.5
+            else:
+                label "Click on a room to move there":
+                    yoffset -10
                     text_color gui.highlight_color
-                text_size 46
-                xalign 0.5
+                    text_size 46
+                    xalign 0.5
 
 # Python classes
 init -1 python:
@@ -335,6 +269,14 @@ init -1 python:
                 # TODO if map unlock, show the name of the person, not the name of the room
                 return room.name
         return "-"
+
+    def map_choice(room, redirect, time_spent=10, **kwargs):
+        """
+        Shorthand for a map menu entry: the visible text is the room's
+        default name and the room id doubles as the hotspot key. Any extra
+        TimedMenuChoice argument (condition, early_exit, ...) passes through.
+        """
+        return TimedMenuChoice(default_room_text(room), redirect, time_spent, room=room, **kwargs)
 
     class Room:
         def __init__(
@@ -366,15 +308,15 @@ init -1 python:
 
     class Hotspot:
         def __init__(
-            self, 
-            description, 
-            position,
-            area_points, 
+            self,
+            description,
+            area_points,
             room,
-            active = True
+            active = True,
+            already_chosen = False
         ):
             self.description = description
-            self.position = position
             self.area_points = area_points
             self.room = room
             self.active = active
+            self.already_chosen = already_chosen

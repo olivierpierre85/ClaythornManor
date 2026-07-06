@@ -253,7 +253,6 @@ label init_lad:
         lad_details = CharacterDetails(
             text_id = "lad", 
             locked = False,
-            know_real_name = True,
             real_name = "Ted Harring",
             nickname = "The Lad",
             description_short = "Young man",

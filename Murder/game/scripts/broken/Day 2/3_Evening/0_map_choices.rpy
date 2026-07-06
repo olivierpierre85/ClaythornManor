@@ -16,12 +16,12 @@ label broken_day2_evening_map_menu:
             "broken_day2_evening_map_menu",
             [
             # Ground floor
-            TimedMenuChoice(default_room_text('tea_room'), 'broken_day2_evening_tea_room', 10, room='tea_room'),
-            TimedMenuChoice(default_room_text('dining_room'), 'broken_day2_evening_dining_room', 10, room='dining_room'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'broken_day2_evening_entrance_hall', 10, room='entrance_hall'),
-            TimedMenuChoice(default_room_text('manor_garden'), 'broken_day2_evening_garden', 10, room='manor_garden'),
-            TimedMenuChoice(default_room_text('portrait_gallery'), 'broken_day2_evening_portrait_gallery', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('library'), 'broken_day2_evening_library', 10, room='library'),
+            map_choice('tea_room', 'broken_day2_evening_tea_room'),
+            map_choice('dining_room', 'broken_day2_evening_dining_room'),
+            map_choice('entrance_hall', 'broken_day2_evening_entrance_hall'),
+            map_choice('manor_garden', 'broken_day2_evening_garden'),
+            map_choice('portrait_gallery', 'broken_day2_evening_portrait_gallery'),
+            map_choice('library', 'broken_day2_evening_library'),
             # Specific actions
             TimedMenuChoice('Join the others in the billiard room', 'broken_day2_evening_billiard_room', 10, room='billiard_room'),
             TimedMenuChoice('Take up your watch for the night', 'generic_cancel', early_exit=True, room='bedroom_broken'),

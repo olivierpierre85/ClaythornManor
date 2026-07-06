@@ -193,19 +193,6 @@ init python:
 
         return
 
-    # def is_sub_menu_active(sub_menu_id):
-
-    #     if all_menus.get(sub_menu_id):
-    #         sub_menu = all_menus[sub_menu_id]
-    #     else:
-    #         return True
-
-    #     # The menu has only 1 or less visible choice, so no reason to display it
-    #     if sub_menu.get_visible_choices_total() > 1:
-    #         return True
-
-    #     return False
-
     def export_choices_to_file(choices, tester_id=None):
         # ---- Build JSON payload ----
         data = {
@@ -353,31 +340,8 @@ label start_again():
 
         # Change current character
         current_character = current_storyline
-        
-        # Restart from zero TODO: This is not necessary anymore
-        # if  current_checkpoint.run == 1 and  current_checkpoint.position == 0:
-        #     current_position = 0
-        #     if len(current_character.checkpoints) > 0:
-        #         current_run = current_character.get_max_run() + 1
-        #     else:
-        #         # First run
-        #         current_run = 1 
-        # else:
-        #     has_been_restarted = True
-            
-        #     # For this character, update run +1  in all checkpoint above this
-        #     for checkpoint in current_character.checkpoints:
-        #         if checkpoint.run > current_checkpoint.run:
-        #             checkpoint.run += 1
 
-        #     # change current run to += 1
-        #     # current_run = current_checkpoint.run + 1
-        #     # Deduct one position because a new checkpoint will immediately be created with pos + 1
-        #     current_position = current_checkpoint.position - 1 
-
-        # Replacing the above by this creates selected chapter problem???
         has_been_restarted = True
-        # current_position = 0
 
         # Reset object, observation, choices...
         current_character.reset_information()
@@ -402,20 +366,25 @@ label start_again():
             current_character.important_choices.unlock(item, True)
             # current_character.important_choices.unlock(item)
 
-        # Reset Menus hidden property with debugging output
+        # Reset the menus' hidden state to what it was at the checkpoint.
+        # (already_chosen deliberately survives restarts: it greys choices the
+        # player has tried in any earlier run.)
+        checkpoint_menus_state = getattr(current_checkpoint, "menus_state", None)
+        if checkpoint_menus_state is None:
+            # Checkpoint from an older save: it carries full deep-copied menus
+            # in .all_menus - convert them to the sparse snapshot form.
+            legacy_menus = getattr(current_checkpoint, "all_menus", None)
+            if legacy_menus:
+                checkpoint_menus_state = {menu_id: capture_menu_state(menu) for menu_id, menu in legacy_menus.items()}
+
         for menu_id, menu in all_menus.items():
             menu.early_exit = False # Reset early_exit
-            if current_checkpoint.all_menus and menu_id in current_checkpoint.all_menus:
-                checkpoint_menu = current_checkpoint.all_menus[menu_id]
+            menu_state = (checkpoint_menus_state or {}).get(menu_id, {})
+            for choice in menu.choices:
+                choice_state = menu_state.get(menu_choice_state_key(choice))
+                choice.hidden = choice_state[0] if choice_state else False
 
-                for i, checkpoint_choice in enumerate(checkpoint_menu.choices):
-                    if i < len(menu.choices):
-                        menu.choices[i].hidden = checkpoint_choice.hidden
-            else:
-                for i, choice in enumerate(menu.choices):
-                    choice.hidden = False
-
-        current_character.saved_variables = copy.deepcopy(current_checkpoint.saved_variables)
+        current_character.saved_variables = copy_saved_variables(current_checkpoint.saved_variables)
 
         skip_clock_movement = True # Don't show move clock at first change time TODO NOT WORKING??
 
@@ -424,19 +393,6 @@ label start_again():
         renpy.jump(current_checkpoint.label_id) 
 
     return
-
-# NOT needed, imprint frame in picture
-# label show_character(character, talk_position = character_talking_left):
-#   $ renpy.show(character, at_list=[talk_position])
-#   # $ renpy.show("painting_frame", at_list=[talk_position], tag=character)
-#   return
-
-# label hide_character(character):
-#   $ renpy.hide(character)
-#   $ renpy.hide("painting_frame")
-#   return
-
-# Copy from screens.rpy
 
 # TODO remove when game finished
 label work_in_progress:

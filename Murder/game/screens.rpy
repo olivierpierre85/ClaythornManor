@@ -401,12 +401,14 @@ screen main_menu():
         # textbutton _("Continue") action Start() at button0
         textbutton _("New Game") action Start() at button1
         # textbutton _("Load") action ShowMenu("load") at button2
-        textbutton _("Debug") action Start("start_debug") at button2
+        if config.developer:
+            textbutton _("Debug") action Start("start_debug") at button2
         textbutton _("Options") action ShowMenu("preferences")at button3
         textbutton _("Help") action ShowMenu("help") at button4
         # textbutton _("About") action ShowMenu("about") at button5
         textbutton _("Quit") action Quit(confirm=not main_menu) at button5
-        textbutton _("Test Mode") action Start("start_testing_mode") at button6
+        if config.developer:
+            textbutton _("Test Mode") action Start("start_testing_mode") at button6
         
 
     # add "gui/overlay/main_menu_logo.png"
@@ -942,8 +944,6 @@ style history_name is gui_label
 style history_name_text is gui_label_text
 style history_text is gui_text
 
-style history_text is gui_text
-
 style history_label is gui_label
 style history_label_text is gui_label_text
 
@@ -1020,18 +1020,6 @@ screen help():
             action SetScreenVariable("help_tab", "Progress")
             selected (help_tab == "Progress")
 
-        textbutton _("Characters") style "help_button":
-            action SetScreenVariable("help_tab", "Progress")
-            selected (help_tab == "Progress")
-
-        textbutton _("About") style "help_button":
-            action SetScreenVariable("help_tab", "Progress")
-            selected (help_tab == "Progress")
-        
-        textbutton _("Max") style "help_button":
-            action SetScreenVariable("help_tab", "Progress")
-            selected (help_tab == "Progress")
-
 
     #################
     # RIGHT: CONTENT#
@@ -1097,6 +1085,14 @@ screen help():
                     label _("V")
                     text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
 
+                vbox:
+                    label _("M")
+                    text _("Opens the map of the manor (once introduced in the story).")
+
+                vbox:
+                    label _("P")
+                    text _("Opens the Progress screen (once introduced in the story).")
+
                 null height 12
                 label _("Mouse")
 
@@ -1123,21 +1119,30 @@ screen help():
             elif help_tab == "Clock & Time":
                 label _("Clock & Time")
                 text _(
-                    "Placeholder: This section will explain how in-game time works, "
-                    "how the clock UI updates, AM/PM display, and how time jumps occur during the story."
+                    "The clock in the top-left corner shows the current time in the story. "
+                    "Most chapters grant a limited amount of time, and moving between rooms "
+                    "or pursuing conversations costs minutes."
                 )
                 text _(
-                    "You’ll also find tips for enabling/disabling the clock overlay and what each indicator means."
+                    "When the time is spent, the chapter moves on and anything left undone "
+                    "stays undone for that attempt. You cannot see everything in a single "
+                    "playthrough - replaying a chapter and spending your time differently is "
+                    "often the only way to uncover the whole truth."
                 )
 
             elif help_tab == "Progress":
                 label _("Progress")
                 text _(
-                    "Placeholder: This section will describe the Progress screen—what each icon means, "
-                    "how to unlock nodes, and how retries affect completion."
+                    "The Progress screen shows each character's storyline as a row of "
+                    "chapters. Open a chapter to review the choices and discoveries made "
+                    "there, and to restart from an earlier checkpoint once that feature "
+                    "has been introduced."
                 )
                 text _(
-                    "It will also include notes about greyed choices, requirements, and any missable items."
+                    "Coloured cards are discoveries you have made. Question marks are "
+                    "discoveries still waiting to be found. Unlocking information about the "
+                    "other guests opens new characters to play, and each character's story "
+                    "sheds light on the others."
                 )
 
 
@@ -1525,115 +1530,3 @@ style nvl_button:
 
 style nvl_button_text:
     properties gui.button_text_properties("nvl_button")
-
-
-
-################################################################################
-## Mobile Variants
-################################################################################
-# TODO: Mobile, right now, NO difference between mobile and Deskopt => Check later if it's ok
-
-# style pref_vbox:
-#     variant "medium"
-#     xsize 675
-
-# ## Since a mouse may not be present, we replace the quick menu with a version
-# ## that uses fewer and bigger buttons that are easier to touch.
-# screen quick_menu():
-#     variant "touch"
-
-#     zorder 100
-
-#     if quick_menu:
-
-#         hbox:
-#             style_prefix "quick"
-
-#             xalign 0.5
-#             yalign 1.0
-
-#             textbutton _("Back") action Rollback()
-#             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-#             textbutton _("Auto") action Preference("auto-forward", "toggle")
-#             textbutton _("Menu") action ShowMenu()
-
-
-# style window:
-#     variant "small"
-#     background "gui/phone/textbox.png"
-
-# style radio_button:
-#     variant "small"
-#     foreground "gui/phone/button/radio_[prefix_]foreground.png"
-
-# style check_button:
-#     variant "small"
-#     foreground "gui/phone/button/check_[prefix_]foreground.png"
-
-# style nvl_window:
-#     variant "small"
-#     background "gui/phone/nvl.png"
-
-# style main_menu_frame:
-#     variant "small"
-#     background "gui/phone/overlay/main_menu.png"
-
-# style game_menu_outer_frame:
-#     variant "small"
-#     background "gui/phone/overlay/game_menu.png"
-
-# style game_menu_navigation_frame:
-#     variant "small"
-#     xsize 510
-
-# style game_menu_content_frame:
-#     variant "small"
-#     top_margin 0
-
-# style pref_vbox:
-#     variant "small"
-#     xsize 600
-
-# style bar:
-#     variant "small"
-#     ysize gui.bar_size
-#     left_bar Frame("gui/phone/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-#     right_bar Frame("gui/phone/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
-
-# style vbar:
-#     variant "small"
-#     xsize gui.bar_size
-#     top_bar Frame("gui/phone/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
-#     bottom_bar Frame("gui/phone/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
-
-# style scrollbar:
-#     variant "small"
-#     ysize gui.scrollbar_size
-#     base_bar Frame("gui/phone/scrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
-#     thumb Frame("gui/phone/scrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
-
-# style vscrollbar:
-#     variant "small"
-#     xsize gui.scrollbar_size
-#     base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-#     thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-
-# style slider:
-#     variant "small"
-#     ysize gui.slider_size
-#     base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-#     thumb "gui/phone/slider/horizontal_[prefix_]thumb.png"
-
-# style vslider:
-#     variant "small"
-#     xsize gui.slider_size
-#     base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
-#     thumb "gui/phone/slider/vertical_[prefix_]thumb.png"
-
-# style slider_vbox:
-#     variant "small"
-#     xsize None
-
-# style slider_slider:
-#     variant "small"
-#     xsize 900

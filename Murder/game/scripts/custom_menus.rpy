@@ -18,11 +18,20 @@ label run_menu(current_menu, change_level=True):
 
     window hide
 
-    # For custom choice: Add menu to a structure with menu
-    if current_menu.id in all_menus:
-        $ current_menu = all_menus[current_menu.id]
-    else:
-        $ all_menus[current_menu.id] = current_menu
+    # The instance cached in all_menus carries the dynamic state (hidden /
+    # already-chosen choices) and is the one every alias points at, so it
+    # stays the live menu. Its definition (texts, costs, conditions) is
+    # refreshed from the latest template constructed from code, so menu edits
+    # reach players whose saves already contain the menu.
+    python:
+        if current_menu.id in all_menus:
+            _cached_menu = all_menus[current_menu.id]
+            _template_menu = TimedMenu.templates.get(current_menu.id)
+            if _template_menu is not None and _template_menu is not _cached_menu:
+                refresh_menu_from_template(_cached_menu, _template_menu)
+            current_menu = _cached_menu
+        else:
+            all_menus[current_menu.id] = current_menu
 
     if change_level:
         $ menu_level += 1
@@ -151,6 +160,34 @@ label run_menu(current_menu, change_level=True):
     return
 
 
+# Rebuild menu templates from current code whenever a save is loaded, so that
+# menu edits reach existing saves. Only pure construction labels are called:
+# the per-character generic-menu configs (<char>_config_menu) and the
+# per-chapter map menus, whose label name matches the menu id by convention.
+# Constructing a TimedMenu registers it in TimedMenu.templates; run_menu then
+# refreshes the cached instances in place on their next open.
+label after_load:
+
+    python:
+        menu_rebuild_labels = []
+        for rebuild_char in (getattr(renpy.store, "char_list_flat", None) or []):
+            rebuild_label = rebuild_char.text_id + "_config_menu"
+            if renpy.has_label(rebuild_label):
+                menu_rebuild_labels.append(rebuild_label)
+        for rebuild_menu_id in all_menus:
+            if rebuild_menu_id.endswith("_map_menu") and renpy.has_label(rebuild_menu_id):
+                menu_rebuild_labels.append(rebuild_menu_id)
+        menu_rebuild_i = 0
+
+    while menu_rebuild_i < len(menu_rebuild_labels):
+
+        call expression menu_rebuild_labels[menu_rebuild_i]
+
+        $ menu_rebuild_i += 1
+
+    return
+
+
 init -1 python:
     # Used for Logs
     class ChoiceHistory(object):
@@ -203,6 +240,18 @@ init -1 python:
         if menu_id not in all_menus:
             return True
         return all_menus[menu_id].is_valid(next_menu=True)
+
+    def find_choice_for_room(menu, room_id):
+        """
+        The choice a map menu executes for a room: the first one whose
+        condition holds. Single source of truth shared by the map screen's
+        hotspot scan and display_choices, so the tooltip shown and the choice
+        executed can never disagree when two conditions overlap.
+        """
+        for choice in menu.choices:
+            if choice.room == room_id and choice.get_condition():
+                return choice
+        return None
 
     # Possible choices for a menu
     class TimedMenuChoice:
@@ -295,10 +344,17 @@ init -1 python:
 
     # A Timed
     class TimedMenu:
-    
-        def __init__(self, id, choices = [], is_map = False, image_left = None, image_right = None, image_left_2 = None,image_right_2 = None,):
+
+        # Latest instance constructed from code, per menu id. A class
+        # attribute is neither saved nor rolled back, and unpickling a menu
+        # from a save does not call __init__, so this only ever contains
+        # menus built by the current code - run_menu uses it to refresh
+        # cached menus (see refresh_menu_from_template).
+        templates = {}
+
+        def __init__(self, id, choices = None, is_map = False, image_left = None, image_right = None, image_left_2 = None,image_right_2 = None,):
             self.id = id
-            self.choices = choices
+            self.choices = choices if choices is not None else []
             self.is_map = is_map
             self.image_left = image_left
             self.image_right = image_right
@@ -308,6 +364,7 @@ init -1 python:
             # Make each choice aware of its parent menu
             for c in self.choices:
                 c.parent_menu_id = self.id
+            TimedMenu.templates[self.id] = self
     
         def get_all_redirects(self):
             all_redirects = set()
@@ -414,16 +471,8 @@ init -1 python:
 
                     room_id = renpy.call_screen('in_game_map_menu', timed_menu=self)
 
-                    selected_choice = None
-                    for idx, c in enumerate(self.choices):
-                        if c.room == room_id and c.get_condition():
-                            selected_choice = c
-                            selected_choice_i = idx
-                            # first match wins, same as the hotspot scan in the
-                            # map screen - otherwise tooltip and executed choice
-                            # disagree when two conditions overlap
-                            break
-                
+                    selected_choice = find_choice_for_room(self, room_id)
+
                 else:
                     selected_choice_i = renpy.call_screen('custom_choice', self) 
                     selected_choice = self.choices[selected_choice_i]
@@ -447,15 +496,75 @@ init -1 python:
                     menu_str += choice.text + "\n"
             return menu_str
 
-    class Room:
-        def __init__(
-            self, 
-            id,
-            name, 
-            floor, 
-            area_points, 
-        ):
-            self.id = id
-            self.name = name
-            self.floor = floor
-            self.area_points = area_points
+    # ------------------------------------------------------------------
+    # Menu dynamic state
+    #
+    # The dynamic state of a menu is which choices are hidden / already
+    # chosen (plus the next_menu links established at runtime). Checkpoints
+    # store only this state, keyed by menu id and choice key, instead of
+    # deep copies of whole TimedMenu graphs - keeping per-choice autosaves
+    # small and letting code edits to menus reach existing saves.
+    # ------------------------------------------------------------------
+
+    def menu_choice_state_key(choice):
+        # Stable identity of a choice across code edits: the room (map
+        # menus) or the visible text, plus the redirect. Keying map choices
+        # by room means their wording can be edited without losing state.
+        if choice.room:
+            return (choice.room, choice.redirect)
+        return (choice.text, choice.redirect)
+
+    def capture_menu_state(menu):
+        # Sparse snapshot: only choices with non-default state are recorded.
+        state = {}
+        for choice in menu.choices:
+            if choice.hidden or choice.already_chosen:
+                state[menu_choice_state_key(choice)] = (choice.hidden, choice.already_chosen)
+        return state
+
+    def capture_all_menus_state():
+        state = {}
+        for menu_id, menu in all_menus.items():
+            menu_state = capture_menu_state(menu)
+            if menu_state:
+                state[menu_id] = menu_state
+        return state
+
+    def refresh_menu_from_template(menu, template):
+        # In-place update of a cached menu's definition from a freshly
+        # constructed template, preserving the dynamic state of choices that
+        # survive the edit. In place, so every alias to the cached menu
+        # (saved_variables entries, the run_menu call stack) stays valid.
+        old_choices = {}
+        for choice in menu.choices:
+            old_choices[menu_choice_state_key(choice)] = choice
+
+        for choice in template.choices:
+            old_choice = old_choices.get(menu_choice_state_key(choice))
+            if old_choice is not None:
+                choice.hidden = old_choice.hidden
+                choice.already_chosen = old_choice.already_chosen
+                choice.next_menu = old_choice.next_menu
+            choice.parent_menu_id = menu.id
+
+        menu.choices = template.choices
+        menu.is_map = template.is_map
+        menu.image_left = template.image_left
+        menu.image_right = template.image_right
+        menu.image_left_2 = template.image_left_2
+        menu.image_right_2 = template.image_right_2
+
+    def copy_saved_variables(saved_variables):
+        # Copy of a saved_variables dict for storing in / restoring from a
+        # checkpoint. Scalars and containers are deep-copied; TimedMenu
+        # values are kept by reference - such an entry is only an id carrier
+        # (the live state of a menu is the all_menus instance), and sharing
+        # the reference lets the save pickler store the menu once instead of
+        # once per checkpoint.
+        copied = {}
+        for key, value in saved_variables.items():
+            if isinstance(value, TimedMenu):
+                copied[key] = value
+            else:
+                copied[key] = copy.deepcopy(value)
+        return copied

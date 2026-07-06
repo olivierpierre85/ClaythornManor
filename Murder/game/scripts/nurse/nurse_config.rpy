@@ -229,7 +229,6 @@ label init_nurse:
         nurse_details  = CharacterDetails(
             text_id = "nurse", 
             locked = True,
-            know_real_name = True,
             real_name = nurse_name,
             nickname = "The Nurse",
             description_short = "Middle-aged woman.",

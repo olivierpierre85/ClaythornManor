@@ -178,7 +178,7 @@ Map Choice: Butler's Room
 I try to open the room, but it's closed.
 Map Choice: Storage Room
 I try to open the attic storage room, but it's closed.
-Map Choice: Queen Alexandra
+Map Choice: Queen Alexandra Bedroom
 I knock on the door.
 Nobody answers.
 Should I try to enter anyway?

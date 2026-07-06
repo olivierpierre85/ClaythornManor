@@ -176,7 +176,6 @@ label init_psychic:
         psychic_details  = CharacterDetails(
             text_id = "psychic", 
             locked = True,
-            know_real_name = True,
             real_name = psychic_name,
             nickname = "The Psychic",
             description_short = "Middle-age Woman",

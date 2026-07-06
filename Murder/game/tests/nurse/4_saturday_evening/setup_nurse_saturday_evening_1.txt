@@ -140,7 +140,7 @@ Lady Claythorn: That is actually as good as it gets for the region, I am afraid.
 Lady Claythorn: One must learn to appreciate the mist as much as the sun.
 Menu Choice: Tell me more about yourself.
 Lady Claythorn: There isn't much to say.
-Lady Claythorn: I have been the mistress of this estate since my late father passed away.
+Lady Claythorn: I have been the mistress of this estate since I took over for my father.
 Lady Claythorn: That would have been nearly ten years ago.
 Lady Claythorn: I now manage the domain as well as I can.
 Lady Claythorn: But I don't really like to talk about myself.
@@ -154,9 +154,6 @@ Lady Claythorn: Such as yourself.
 Lady Claythorn: What a great sacrifice you have made, giving most of your life for the welfare of others.
 Lady Claythorn: It is my great pleasure to give you something in return, since I have been blessed myself.
 Rosalind Marsh: That's very generous.
-Rosalind Marsh: So you've been doing that often?
-Lady Claythorn: Well, no, that is the first time I am giving away this prize.
-Lady Claythorn: But I might do for other people in the future of course.
 Menu Choice: What do you think of the other guests?
 Lady Claythorn: A group of people of great value.
 Lady Claythorn: But we shouldn't talk about them behind their backs.

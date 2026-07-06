@@ -4,7 +4,6 @@ screen characters:
     tag menu
 
     on "show" action SetVariable("last_menu_screen", "characters")
-    $ last_menu_screen = "characters"
 
     use game_menu(_("Characters")):
         fixed:
@@ -34,15 +33,19 @@ screen character_selection:
 
 
 screen character_card(char, is_selection = False, card_x_offset = 0, card_y_offset = 0):
+    python:
+        # Same action for the name button and the portrait. On the selection
+        # screen a locked character gets no action (insensitive card).
+        if is_selection:
+            card_action = Return(char.text_id) if char.is_character_unlocked() else None
+        else:
+            card_action = ShowMenu("character_details", char)
+
     vbox:
         xoffset card_x_offset
         yoffset card_y_offset
         textbutton char.real_name:
-            if is_selection:
-                if char.is_character_unlocked():
-                    action Return(char.text_id)
-            else:
-                action ShowMenu("character_details", char)
+            action card_action
         imagebutton:
             mouse "hover"
             if char.is_character_unlocked():
@@ -53,11 +56,7 @@ screen character_card(char, is_selection = False, card_x_offset = 0, card_y_offs
                 if not is_selection:
                     hover "images/characters/side_bw_hover/side " + char.text_id + " bw hover.png"
 
-            if is_selection:
-                if char.is_character_unlocked():
-                    action Return(char.text_id)
-            else:
-                action ShowMenu("character_details", char)
+            action card_action
 
 
 screen character_list(is_selection = False):

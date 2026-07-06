@@ -2,53 +2,30 @@ Chapter: The Hunt
 Character: Thomas Moody
 I return to my room to change into the tweeds the household has laid out for me.
 My hands are steady as I dress. Steadier than they have any right to be.
-The letter is folded in my breast pocket, where I can feel the small weight of it against my chest.
-All night I turned it over, and all night the answer came back the same.
-Captain Sinha put his name to the order that sent Tom up to the line.
-Tom came back from it behind a mask, and lived a small and lonely life, and died of those wounds in his bed years after the guns fell silent.
-Whatever else is false in this house, that much I am certain of.
-And a hunt is a careless sort of business. Accidents happen. Everyone says so.
+The letter still lies on my bedside table.
+If I am to believe it, Captain Sinha put his name to the order that sent Tom up to the line.
+Because of that, Tom came back from the war behind a mask, and lived a small and lonely life until his wounds got the better of him.
+A thought occurs to me, one I do not like but cannot ignore.
+And a hunt is a careless sort of business.
+Accidents happen.
 The butler is in the gun room, attending the rifles with his unhurried care.
-He hands me a piece, and the weight of it settles into my hands like an old habit.
+He hands me a rifle.
+It has been years since I last held a rifle, yet it settles into my hands like an old habit.
 I check the action, sight along the barrel, and find it true.
-It has been years since I last held a rifle in earnest.
-They kept Tom and me well back of the guns through the war, shepherding the gentlemen of the press from one safe billet to the next.
-But the musketry stayed in the hands, and I always did have the eye for it.
 I shall not embarrass myself today.
 The others are already gathering on the lawn.
-Doctor Baldwin stands a little apart, grey and unwell.
-Samuel Manning is a sorry sight, swaying where he stands.
-Lady Claythorn is the last to come out.
-And the Captain. Upright. Correct.
-A decorated officer at his ease, at least in appearance.
-The maid's words come back to me. A surprise, she said, prepared for the guests.
-A letter slipped beneath my door, and a hunt laid on the very next morning.
-It is too neat by half. I know it, somewhere beneath the anger.
-But knowing a thing and heeding it are not at all the same, and the anger is by far the louder of the two.
-Butler: Good, now that everyone is ready, I propose we split into two groups.
-Butler: It will be easier to spot game that way.
-Sushil Sinha: If I may, my lady. I should consider it a privilege to accompany you.
-Lady Claythorn: How gallant of you, Captain. The privilege, I assure you, is mine.
-Samuel Manning: Doctor, I would be honoured to partner with you.
-Samuel Manning: You don't mind, do you?
-Doctor Baldwin's mouth opens and closes again. He plainly minds a great deal, yet he cannot find the words to refuse.
-Daniel Baldwin: Well... no, of course not.
-That settles one party, then. The doctor, the drunkard, and a footman to mind the pair of them.
-Which leaves our hostess and the Captain wanting a third gun for the other.
-I do not mean to leave that to chance.
-Thomas Moody: Doctor Baldwin and Mr Manning will do well enough together.
-Thomas Moody: I should be glad to make up your party, my lady, if you will have me.
-Lady Claythorn: Why, Mr Moody, of course.
-Lady Claythorn: The more the merrier.
-Sushil Sinha: A pleasure, Mr Moody.
-Thomas Moody: The pleasure is entirely mine, Captain.
-He returns my courtesy without a flicker.
-He has no notion of what I carry in my pocket, nor what I mean to make of the morning.
-Good.
-Butler: Very good. Doctor Baldwin and Mr Manning to the western grove.
-Butler: The footman will go along with them.
-Butler: My lady, Captain Sinha and Mr Moody to the north field, and I shall attend.
-We walk some distance before the first quarry breaks cover. A pheasant, not ten yards off our line.
+Two different groups are forming: Captain Sinha with Lady Claythorn and Samuel Manning with Doctor Baldwin.
+It looks like it is up to me to decide which party I will join.
+My first instinct is to follow Captain Sinha.
+I simply cannot ignore the letter.
+Being close to him will allow me to learn more of it.
+Yet, I do not trust what is happening here this weekend.
+The letter, the hunt, the surprise the maid could not put a name to.
+Making me follow the captain is probably the goal of whoever organised this.
+So, which group should I join?
+Menu Choice: Lady Claythorn and Captain Sinha
+Now that the groups are set, we make our way into the woods.
+We walk some distance before I spot a pheasant, not ten yards off our line.
 I have it before the Captain's rifle is even at his shoulder.
 The bird drops cleanly.
 Lady Claythorn: Bravo, Mr Moody. A splendid shot.
@@ -64,47 +41,49 @@ Sushil Sinha: I misjudged the lead.
 Thomas Moody: Quite. The lead.
 I let a little of the mockery show. I cannot help myself.
 So this is the great Captain Sinha. A man who cannot strike a rabbit at twenty paces, who holds forth each evening on Burma and the Boxers as though he had won the Empire single-handed.
-A counterfeit hero in a borrowed reputation. The very hand that signed Tom away to the guns, and then dined out, year upon year, on a war he never once smelt.
+A counterfeit hero in a borrowed reputation.
+Someone who sent others to the guns, and then dined out, year upon year, on a war he never once smelt.
 The anger rises in my throat like bile.
-Lady Claythorn fares no better with her piece, dipping the barrel and handling it like a parasol.
-But it is the Captain my eye keeps returning to.
-There is not an honest article in this whole party.
-Myself least of all.
 By the time the butler calls us in for luncheon, only I have any game to show for the morning.
 Lady Claythorn: Three birds and a pair of rabbits, Mr Moody. You are most impressive.
 Lady Claythorn: I confess I had no notion we should be so splendidly provided for.
 Thomas Moody: Your ladyship is too generous.
-Thomas Moody: I was simply very lucky today, that is all.
+Thomas Moody: I was just very lucky today, that is all.
 Thomas Moody: Otherwise, I am certain a decorated veteran like Captain Sinha would have put me quite to shame.
 The Captain says nothing to that. He only smiles, thin and correct.
 We settle for luncheon in a clearing among the birches. The butler lays a cloth and pours the tea with his customary care.
-Lady Claythorn: Captain, you simply must tell us something of your soldiering.
-Lady Claythorn: We have a real campaigner among us, and here I am letting him eat in silence.
+Lady Claythorn: Captain, I have been told you are an amazing story teller.
+Lady Claythorn: Isn't there a story you would like to share with us.
 Sushil Sinha: There is little worth the telling, my lady.
-Sushil Sinha: But if it would amuse you, I might give you the relief of Tientsin. The heat of it, and the walls.
-And he is away, modest and precise, with the polished ease of a man who has told it across a hundred dinner tables.
+Sushil Sinha: But if it would amuse you, I might tell you about the "War of the Golden Stool", one of my first campaigns.
+Lady Claythorn: What an intriguing name, please do tell.
+So he does, modest and precise, with the ease of a man who has told it across a hundred dinner tables.
 Lady Claythorn leans in, delighted.
-I sit very still and let it wash over me.
-This man held the safest billet in France, and came home to play the hero over the sandwiches, while Tom came home behind a mask and died by inches for the want of the very courage this fraud counterfeits so prettily.
+I, on the other hand, feels the anger rising as the story progress.
+If the letter is correct, and I have started to accept it is, this man was always safe behind a desk.
+But he is playing the hero, as if he was the sole responsible for England's victory.
 My thumb finds the cold of the trigger guard where the rifle rests across my knee.
 And still the maid's words will not leave me. A surprise, prepared for the guests.
-The letter beneath my door. The hunt laid on the very next morning. The Captain set before me like a bottle on a wall.
-Whoever arranged all this knew to a nicety what that order would do to me. They have written the scene and handed me the gun, and I am three lines from speaking my piece.
-A man who kills to another's design is no avenger. He is a tool. And I have spent a year despising the men who let themselves be used.
-For the first time since I read that paper, I am not certain of my own hand.
-Menu Choice: Stay my hand. I'll not dance to a stranger's tune.
-No.
-I have spent a year hating the men who did the cruel thing because a cleverer man had arranged for them to do it.
-I'll not become one more of them. Not even for Tom. Least of all for Tom.
-I let the rage go cold in my hands. I let the Captain talk. I say nothing of the letter at all.
-Sushil Sinha: ... and so we held until the relief came up. A near thing, but a good one.
-Thomas Moody: A remarkable account, Captain.
-Whoever drew us here wanted him dead by my hand. Of that I am now certain.
-Which means the danger was never the Captain at all. The danger is whoever wrote this morning for us, and they will not have written only the one death.
-The thought has scarcely formed when a shot cracks from the direction of the other party. Then a second. And after them, thin between the trees, a cry.
-Lady Claythorn is on her feet. The Captain reaches for his rifle.
+The letter left in my room. The hunt laid on the very next morning.
+The Captain, set before me like a target on a wall.
+It is too obvious that someone is trying to use me.
+Menu Choice: Spare him
+No, I cannot kill the man.
+Even if he is a liar, a fraud, what is happening here is too suspicious.
+I let the rage go cold in my hands.
+I let the Captain finish is story.
+Whoever drew us here wanted him dead by my hand, or more likely by Thomas'
+That is the thing I must focus on.
+The thought has scarcely formed when a shot cracks from the direction of the other party.
+Then, thin between the trees, a cry.
 My blood runs cold.
-The doctor. They have left him alone with that poor drunken wreck, and I have sat here playing at conscience while the next act began without me.
-Thomas Moody: Stay with her ladyship, Captain.
-Thomas Moody: I shall go.
-I am already moving, crashing through the bracken toward the sound, praying I am not as late as I fear.
+Before I can move, the Captain is on his feet and away, crashing through the undergrowth toward the sound far faster than I would have given him credit for..
+I go after the Captain as best I can, the butler is close behind me.
+The captain is faster that I would have guessed, the gap between us widening with every stride.
+After a while I have to stop to catch my breath.
+The butler stops with me.
+Butler: Not that way, sir.
+Something hard presses itself between my shoulders, and I understand, far too late, that I was never meant to reach the other party at all.
+Ahead of me, the Captain runs on, and does not look back, and never knows.
+You would not be made a murderer, and that was to your credit.
+But sparing the Captain did not spare you.

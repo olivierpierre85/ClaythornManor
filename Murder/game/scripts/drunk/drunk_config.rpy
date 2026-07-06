@@ -39,7 +39,6 @@ label init_drunk:
         drunk_details  = CharacterDetails(
             text_id = "drunk", 
             locked = True,
-            know_real_name = True,
             real_name = drunk_name,
             nickname = "The Drunk",
             description_short = "Drunk Man",

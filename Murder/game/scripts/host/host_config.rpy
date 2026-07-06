@@ -41,7 +41,6 @@ label init_host:
         host_details  = CharacterDetails(
             text_id = "host", 
             locked = True,
-            know_real_name = True,
             real_name = host_name,
             nickname = "The Host",
             description_short = "Older Lady",

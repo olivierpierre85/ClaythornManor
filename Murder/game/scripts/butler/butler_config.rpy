@@ -29,7 +29,6 @@ label init_butler:
         butler_details = CharacterDetails(
             text_id = "butler",
             locked = True,
-            know_real_name = True,
             real_name = butler_name,
             nickname = "The Butler",
             description_short = "The Butler",

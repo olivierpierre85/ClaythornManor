@@ -53,14 +53,11 @@ label init_characters:
 
     python:
 
-        #  Character full List
-        # TODO only use the flat one (refacto use chara)
-        char_list = [ 
-            [ lad_details, doctor_details, host_details, drunk_details ] , 
-            [ psychic_details, broken_details, captain_details, nurse_details ] 
-        ]
-
+        # Character full list, in display order
         char_list_flat = [lad_details, doctor_details, host_details, drunk_details, psychic_details, broken_details, captain_details, nurse_details]
+
+        # The two rows of four used by the character screens
+        char_list = [char_list_flat[:4], char_list_flat[4:]]
 
     return
 
@@ -94,7 +91,7 @@ label character_selection:
 
         current_position = 0
 
-        current_character = eval(character_choice + "_details")
+        current_character = get_char(character_choice)
         # current_run = current_character.get_max_run() + 1 # TODO why? wtf?
         current_storyline = current_character
 
@@ -108,24 +105,10 @@ label character_selection:
 
 init -100 python:
     def get_char(text_id):
-        if text_id == "lad":
-            return lad_details
-        elif text_id == "doctor":
-            return doctor_details
-        elif text_id == "host":
-            return host_details
-        elif text_id == "drunk":
-            return drunk_details
-        elif text_id == "psychic":
-            return psychic_details
-        elif text_id == "broken":
-            return broken_details
-        elif text_id == "captain":
-            return captain_details
-        elif text_id == "nurse":
-            return nurse_details
-        else:
-            return False
+        for char in char_list_flat:
+            if char.text_id == text_id:
+                return char
+        return False
 
     def is_butler_visible():
         # The butler joins the progress view once any information about him has been discovered
@@ -351,8 +334,8 @@ init -100 python:
             is_important = False,
             image_file = None,
             is_intuition = False,
-            chapters = [],
-            relevant_chapters = [],
+            chapters = None,
+            relevant_chapters = None,
         ):
             self.order = order
             self.text_id = text_id
@@ -362,8 +345,8 @@ init -100 python:
             self.is_important = is_important
             self.image_file = image_file
             self.is_intuition = is_intuition
-            self.chapters = chapters
-            self.relevant_chapters = relevant_chapters
+            self.chapters = chapters if chapters is not None else []
+            self.relevant_chapters = relevant_chapters if relevant_chapters is not None else []
             self.discovered = False
             self.type = None
 
@@ -378,10 +361,9 @@ init -100 python:
             objects,
             observations, 
             progress,
-            saved_variables = dict(),
-            test_checkpoints = dict(),
+            saved_variables = None,
+            test_checkpoints = None,
             locked = True,
-            know_real_name = True,
             real_name = "",
             nickname = "",
             description_short = "",
@@ -390,8 +372,7 @@ init -100 python:
         ):
             self.text_id = text_id
             self.locked = locked
-            self.know_real_name = False    
-            self.real_name = real_name 
+            self.real_name = real_name
             self.nickname = nickname
             self.description_short = description_short
             self.description_long = description_long
@@ -417,10 +398,7 @@ init -100 python:
                 )
 
         def get_name(self):
-            # if self.know_real_name:
             return self.real_name
-            # else:
-            #     return self.description_short
         
         def reset_information(self):
             for info in self.objects:
@@ -628,25 +606,25 @@ init -100 python:
         #                                Checkpoints
         # ---------------------------------------------------------------------------------------
         def add_checkpoint(self, label_id = ""):
-            global current_position, current_run, has_been_restarted, all_menus
+            global current_position, current_run, has_been_restarted
 
             current_position = current_position + 1
             if not has_been_restarted:
                 new_checkpoint = Checkpoint(
                     run = current_run,
                     position = current_position,
-                    objects = copy.deepcopy(self.objects.get_unlocked()), 
+                    objects = copy.deepcopy(self.objects.get_unlocked()),
                     observations = copy.deepcopy(self.observations.get_unlocked()),
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = label_id,
-                    saved_variables = copy.deepcopy(current_character.saved_variables),
-                    all_menus = copy.deepcopy(all_menus),
+                    saved_variables = copy_saved_variables(current_character.saved_variables),
+                    menus_state = capture_all_menus_state(),
                 )
                 self.checkpoints.append(new_checkpoint)
-                
+
             else:
                 has_been_restarted = False
-        
+
         def add_ending_checkpoint(self, ending):
             global current_position, current_run, has_been_restarted
 
@@ -656,11 +634,11 @@ init -100 python:
                 new_checkpoint = Checkpoint(
                     run = current_run,
                     position = current_position,
-                    objects = copy.deepcopy(self.objects.get_unlocked()), 
+                    objects = copy.deepcopy(self.objects.get_unlocked()),
                     observations = copy.deepcopy(self.observations.get_unlocked()),
                     important_choices = copy.deepcopy(self.important_choices.get_unlocked()),
                     label_id = ending.text_id,
-                    saved_variables = copy.deepcopy(current_character.saved_variables),
+                    saved_variables = copy_saved_variables(current_character.saved_variables),
                     ending = ending
                 )
                 self.checkpoints.append(new_checkpoint)
@@ -684,7 +662,7 @@ init -100 python:
                         observations = [],
                         important_choices = [],
                         label_id = current_storyline.text_id + "_introduction",
-                        saved_variables = eval(current_storyline.text_id + "_init_variables")
+                        saved_variables = getattr(renpy.store, current_storyline.text_id + "_init_variables")
                     )
             
         def get_max_run(self):
@@ -857,6 +835,7 @@ init -100 python:
 
                     # --- Always add the normal chapter checkpoint for this combo ---
                     self.add_checkpoint(label_id)
+                    normal_added = True
 
                     # --- And, in addition, add ending checkpoints if any fired ---
                     for eid in triggered:

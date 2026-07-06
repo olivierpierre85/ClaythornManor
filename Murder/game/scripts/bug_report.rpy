@@ -221,7 +221,7 @@ init python:
         renpy.restart_interaction()
 
 screen bug_report_button:
-    if BUG_REPORT_ENABLED and not renpy.get_screen("bug_report_modal") and not renpy.get_screen("input") and not renpy.get_screen("progress") and not renpy.get_screen("progress_details") and not renpy.get_screen("manor_map") and not renpy.get_screen("in_game_map_menu"):
+    if BUG_REPORT_ENABLED and not renpy.get_screen("bug_report_modal") and not renpy.get_screen("input") and not overlay_ui_hidden():
         modal False
         zorder 1000
         style_prefix "confirm"  # TODO use own style

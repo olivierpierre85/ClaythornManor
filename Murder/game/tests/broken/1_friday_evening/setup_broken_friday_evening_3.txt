@@ -162,8 +162,11 @@ The kitchen is all but empty, winding down for the night.
 The great range still breathes out its heat.
 A young maid stands at the sink with her back to me, scouring the last of the pots and pans.
 She has not heard me come in.
+I really want to ask her a few questions.
 But she would see at once that I do not belong here.
-And I have no reason to trouble her.
+She could expose me and reveal my true identity.
+And I have no reasons strong enough to justify that risk.
+So, it is better if she doesn't see me.
 I slip out the way I came, before she ever knows I was there.
 Map Choice: Garage
 The air is thick with petrol and cold iron.
@@ -175,11 +178,9 @@ The garage is just as I left it.
 There is nothing more for me here.
 Map Choice: Gun room
 The gun room.
-A rack of sporting guns behind glass.
-Locked.
-On a table lies a handgun.
+There is a rack of sporting guns behind glass, and on a table lies a handgun.
 That could prove useful.
-But ever since the war, I have avoided guns when I can.
+But if anyone notices me with a gun, that would attract questions I would rather avoid.
 So, I leave it as I found it.
 I cannot go back up among the guests dressed as a servant.
 I hang the livery on its peg, pull on my own coat, and fix the mask into place.

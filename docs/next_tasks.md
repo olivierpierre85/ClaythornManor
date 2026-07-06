@@ -14,7 +14,6 @@ When Someone is saved, it add a SAVED over their name in the progress view
 - Need a new var saved over time for each character. (is_saved)
 
 - [ ] BUG: **save_transcript_to_file** button not working during menu????
-- [ ] **BETTER retry & TESTing management**: I still need a full chapter testing (run EVERY possible choices => Maybe too much?)
 
 ----
 TODO myself, clean the tutorial highlights, text and position.

@@ -149,7 +149,7 @@ Daniel Baldwin: Good night.
 Footman: Goodnight, sir.
 Well, that was rather embarrassing.
 That is what happens when one wanders about a house without a clear purpose, I suppose.
-Map Choice: Queen Alexandra
+Map Choice: Queen Alexandra Bedroom
 Daniel Baldwin: Hello?
 Rosalind Marsh: Yes?
 Rosalind Marsh: Is that you Doctor Baldwin?

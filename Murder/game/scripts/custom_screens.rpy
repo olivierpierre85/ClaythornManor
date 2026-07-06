@@ -36,24 +36,6 @@ screen current_time:
             font gui.clock_text_font
             bold True
 
-    # Add current player face
-    # image "images/characters/side/side " + current_character.text_id + ".png" at character_progress:
-        # Right below Looks weird
-        # xoffset 77
-        # yoffset 280
-        # Right to clock, looks weird
-        # xoffset 220
-        # yoffset 30
-        # below left, looks weird
-        # yalign 1.0
-        # yoffset -100
-        # xoffset 70
-        # Picture Above plaque
-        # xoffset 237
-        # yoffset 20
-
-
-
 transform rotate_hours( angle = 0 ):
     xoffset -16
     yoffset -45
@@ -145,8 +127,16 @@ screen in_game_menu_btn:
             xminimum 200  # Adjust these values as needed
             yminimum 80
 
+# Screens where the corner overlays (version label, Report button) make way
+init python:
+    def overlay_ui_hidden():
+        for overlay_hide_screen in ("progress", "progress_details", "manor_map", "in_game_map_menu"):
+            if renpy.get_screen(overlay_hide_screen):
+                return True
+        return False
+
 screen version_screen:
-    if not renpy.get_screen("progress") and not renpy.get_screen("progress_details") and not renpy.get_screen("manor_map") and not renpy.get_screen("in_game_map_menu"):
+    if not overlay_ui_hidden():
         modal False
         zorder 1000
         style_prefix "confirm"  # TODO use own style
@@ -157,8 +147,10 @@ screen version_screen:
             yoffset 0
             ypadding 0
             xpadding 0
+            # Clicking exports a transcript - developer convenience only, players
+            # just see the version label.
             textbutton "Demo version:" + config.version:
-                action Function(export_transcript)
+                action (Function(export_transcript) if config.developer else NullAction())
                 xminimum 200  # Adjust these values as needed
                 yminimum 80
                 text_size 18
@@ -195,10 +187,13 @@ screen custom_key_listener():
     key "K_MENU" action ShowMenu(last_menu_screen)
     key "K_PAUSE" action ShowMenu(last_menu_screen)
     key "mouseup_3" action ShowMenu(last_menu_screen)
-    # Todo Explain the shortcuts in the tutorial?
-    key "K_m" action [SetVariable("last_menu_screen", "manor_map"), ShowMenu("manor_map")]
-    key "K_p" action [SetVariable("last_menu_screen", "progress"), ShowMenu("progress")]
-    key "K_c" action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
+    # Shortcuts match the navigation buttons: each screen only becomes
+    # reachable once its tutorial has introduced it (see screen navigation).
+    if seen_tutorial_map:
+        key "K_m" action [SetVariable("last_menu_screen", "manor_map"), ShowMenu("manor_map")]
+    if seen_tutorial_progress:
+        key "K_p" action [SetVariable("last_menu_screen", "progress"), ShowMenu("progress")]
+        key "K_c" action [SetVariable("last_menu_screen", "characters"), ShowMenu("characters")]
     
 
 # The standard choice menu is replaced with this one to be able to make easy changes to menu

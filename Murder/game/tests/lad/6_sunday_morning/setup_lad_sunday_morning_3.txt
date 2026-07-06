@@ -48,7 +48,7 @@ Amelia Baxter: It appears she left in haste.
 We search for any clues about what might have happened, but come up empty.
 Amelia Baxter: She's either left the manor or is still hidden somewhere within.
 Amelia Baxter: We shouldn't linger here any longer.
-Map Choice: Queen Alexandra
+Map Choice: Queen Alexandra Bedroom
 Amelia Baxter: This is Miss Marsh's room.
 I knock on the door.
 There's no response.

@@ -43,28 +43,6 @@ init -1000 python:
 
         return False
 
-    # Useful to track error when pickling (on save)
-    # def scan_pickle():
-    #     bad = []
-    #     for name, val in renpy.store.__dict__.items():
-    #         # direct file objects
-    #         if isinstance(val, io.TextIOWrapper):
-    #             bad.append((name, type(val).__name__, "DIRECT FILE"))
-    #         # logging.FileHandler or anything with .stream
-    #         try:
-    #             if hasattr(val, "stream") and isinstance(val.stream, io.TextIOWrapper):
-    #                 bad.append((name, type(val).__name__, "HAS .stream FILE"))
-    #         except Exception:
-    #             pass
-    #         # logger objects holding file handlers
-    #         if isinstance(val, logging.Logger):
-    #             for h in val.handlers:
-    #                 if getattr(h, "stream", None) and isinstance(h.stream, io.TextIOWrapper):
-    #                     bad.append((name, "logging.Logger", "LOGGER FILEHANDLER"))
-    #     for item in bad:
-    #         renpy.log("UNPICKLEABLE: {}".format(item))
-    #     return bad
-
     # Known character text_ids for parsing setup filenames
     _known_characters = {"lad", "doctor", "host", "drunk", "psychic", "broken", "captain", "nurse"}
 
@@ -219,7 +197,7 @@ label start():
                         
                         char_choice = first_choice.get("character_choice")
                         if char_choice:
-                            current_character = eval(char_choice + "_details")
+                            current_character = get_char(char_choice)
                             current_storyline = current_character
 
                         if full_testing_mode_unlocked_threads:
@@ -249,84 +227,93 @@ label start():
     return
 
 
+# Technical variables.
+#
+# Everything here uses `default` (mutable state, saved and rollback-aware) or
+# `define` (constants, never saved). `default` also fills the variable in when
+# an older save that predates it is loaded, so adding a new variable here can
+# no longer break existing saves on Continue.
+
 label init_technical_variables:
-    
+
     # Default Menu screen when press ESC in-game
     $ _game_menu_screen = "preferences"
-    default last_menu_screen = "preferences"
 
-    # NAME OF CHAPTERS
-    define chapters_names = {
-        'friday_afternoon': "Introduction",
-        'friday_evening': "The Arrival",
-        'saturday_morning': "A Shocking Morning",
-        'saturday_afternoon': "The Hunt",
-        'saturday_afternoon_no_hunt': "No Hunt",
-        'saturday_evening': "Things Get Darker",
-        'sunday_morning': "An Empty Manor",
-        'sunday_afternoon': "Final Decisions",
-        'end': "Ending"
-    }
+    return
 
-    define chapter_index = {
-        'friday_afternoon': 0,
-        'friday_evening': 1,
-        'saturday_morning': 2,
-        'saturday_afternoon': 3,
-        'saturday_afternoon_no_hunt': 3,
-        'saturday_evening': 4,
-        'sunday_morning': 5,
-        'sunday_afternoon': 6,
-        'end': 7
-    }
+default last_menu_screen = "preferences"
 
-    default current_chapter = "friday_afternoon"
-    default current_phase = None   # set by change_time; None/non-Evening is treated as day by resolve_room_image
+# NAME OF CHAPTERS
+define chapters_names = {
+    'friday_afternoon': "Introduction",
+    'friday_evening': "The Arrival",
+    'saturday_morning': "A Shocking Morning",
+    'saturday_afternoon': "The Hunt",
+    'saturday_afternoon_no_hunt': "No Hunt",
+    'saturday_evening': "Things Get Darker",
+    'sunday_morning': "An Empty Manor",
+    'sunday_afternoon': "Final Decisions",
+    'end': "Ending"
+}
 
-    define config.mouse = { }
-    define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
-    define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]
+define chapter_index = {
+    'friday_afternoon': 0,
+    'friday_evening': 1,
+    'saturday_morning': 2,
+    'saturday_afternoon': 3,
+    'saturday_afternoon_no_hunt': 3,
+    'saturday_evening': 4,
+    'sunday_morning': 5,
+    'sunday_afternoon': 6,
+    'end': 7
+}
 
-    python:
-        # Technical Variables
-        all_menus = {}
-        all_choices = []
+default current_chapter = "friday_afternoon"
+default current_phase = None   # set by change_time; None/non-Evening is treated as day by resolve_room_image
 
-        hide_notifications = False
+define config.mouse = { }
+define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]
+define config.mouse['hover'] = [ ( "images/ui/hover-cursor-icon.png", 13, 0) ]
 
-        show_minutes_movement = 0
-        show_hours_movement = 0
-        skip_clock_movement = True
+default all_menus = {}
+default all_choices = []
 
-        show_skip_hint_for_tutorial = False
+default hide_notifications = False
 
-        TIME_MAX = 999999
-        TIME_LOW = 5
+default show_minutes_movement = 0
+default show_hours_movement = 0
+default skip_clock_movement = True
 
-        current_room = "outside"
-        previous_room = "outside"
-        seen_tutorial_clock = False
-        seen_tutorial_description_hidden = False
-        seen_tutorial_map = False
-        seen_tutorial_unlock_character = False
-        show_tutorial_unlock_character = False
-        seen_tutorial_progress = False
-        seen_tutorial_butler = False
-        show_tutorial_butler = False
-        seen_tutorial_progress_details = False
-        seen_tutorial_threads = False
-        seen_tutorial_endings = False
-        seen_tutorial_restart = False
-        seen_tutorial_intuition = False
-        seen_tutorial_icon = False
-        seen_tutorial_already_chosen = False
-        show_tutorial_already_chosen = False
-        seen_tutorial_already_chosen_map = False
-        show_tutorial_already_chosen_map = False
+default show_skip_hint_for_tutorial = False
 
-        export_transcript_activated = False
-        infinite_time_activated = False
+define TIME_MAX = 999999
+define TIME_LOW = 5
 
+default current_room = "outside"
+default previous_room = "outside"
+default seen_tutorial_clock = False
+default seen_tutorial_description_hidden = False
+default seen_tutorial_map = False
+default seen_tutorial_unlock_character = False
+default show_tutorial_unlock_character = False
+default seen_tutorial_progress = False
+default seen_tutorial_butler = False
+default show_tutorial_butler = False
+default seen_tutorial_progress_details = False
+default seen_tutorial_threads = False
+default seen_tutorial_endings = False
+default seen_tutorial_restart = False
+default seen_tutorial_intuition = False
+default seen_tutorial_icon = False
+default seen_tutorial_already_chosen = False
+default show_tutorial_already_chosen = False
+default seen_tutorial_already_chosen_map = False
+default show_tutorial_already_chosen_map = False
+
+default export_transcript_activated = False
+default infinite_time_activated = False
+
+init python:
         # ─────── tutorial data (fractions of the screen) ───────
         #         keep_x  keep_y  keep_w  keep_h   txt_x  txt_y   message
         # PROGRESS TUTORIAL
@@ -361,7 +348,6 @@ label init_technical_variables:
             "The current chapter is blinking, try selecting it (after closing this tutorial)."
             ),
         ]
-        tutorial_step_progress = 0
         tutorial_steps_progress_details = [
             (486, 308, 797, 550, 960, 150, 
                 "You are now in the Detail Chapter view.\n" + 
@@ -383,7 +369,6 @@ label init_technical_variables:
                 "You will then be able to click this button to the restart the chapter, using the choices made in the selected checkpoint.\n" 
             ),
         ]
-        tutorial_step_progress_details = 0
         # THREADS OVERVIEW TUTORIAL (character_threads screen)
         # Text frames sit in the top band (over the darkened navigation),
         # the only spot that never collides with the day columns.
@@ -407,7 +392,6 @@ label init_technical_variables:
                 "Finally, the bar under the portrait shows your overall progress with this character's threads."
             ),
         ]
-        tutorial_step_threads = 0
         # ENDINGS OVERVIEW TUTORIAL (character_endings screen)
         tutorial_steps_endings = [
             (30, 260, 1860, 770, 960, 190,
@@ -423,22 +407,6 @@ label init_technical_variables:
                 "The bar under the portrait shows how many of this character's endings you have already reached."
             ),
         ]
-        tutorial_step_endings = 0
-        tutorial_on = False
-
-        current_run = 1 # TODO move
-        current_position = 0 # TODO move
-
-        has_been_restarted = False
-
-        is_death = True # Assume the ending is a death, unless written otherwise
-        first_ending = True
-        first_survive = True
-
-        current_checkpoint = None
-        current_day = None
-
-        action_needed_fix = False # Use to have a valid action that does nothing
 
         # Conditions for menu shortcuts
         condition_saturday_morning = "(current_day == 'Saturday' and current_phase == 'Morning')"
@@ -491,7 +459,24 @@ label init_technical_variables:
         # Endings
         image_ending_question = "images/info_cards/question_mark_bw.webp"
 
-    return
+# Current position within the in-screen tutorials
+default tutorial_step_progress = 0
+default tutorial_step_progress_details = 0
+default tutorial_step_threads = 0
+default tutorial_step_endings = 0
+default tutorial_on = False
+
+default current_run = 1 # TODO move
+default current_position = 0 # TODO move
+
+default has_been_restarted = False
+
+default is_death = True # Assume the ending is a death, unless written otherwise
+default first_ending = True
+default first_survive = True
+
+default current_checkpoint = None
+default current_day = None
 
 
 label init_story_variables:

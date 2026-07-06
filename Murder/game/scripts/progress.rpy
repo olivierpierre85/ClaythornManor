@@ -171,7 +171,7 @@ screen progress:
                                 hbox:
                                     yoffset 10
                                     spacing 15
-                                    $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy.deepcopy(current_character.saved_variables), ending=False)
+                                    $ current_status_checkpoint = Checkpoint(run=current_run, position=current_position, objects=copy.deepcopy(current_storyline.objects.get_unlocked()), observations=copy.deepcopy(current_storyline.observations.get_unlocked()), important_choices=copy.deepcopy(current_storyline.important_choices.get_unlocked()), label_id="current", saved_variables=copy_saved_variables(current_character.saved_variables), ending=False)
 
                                     # Auto-open the threads tutorial on the first visit:
                                     $ threads_tutorial_actions = []
@@ -418,7 +418,6 @@ screen progress:
                                                     tooltip str(current_storyline.endings.get_item(chapter.label).content + " {image=images/ui/intuition_icon.png}") 
                                                 else:
                                                     tooltip str(current_storyline.endings.get_item(chapter.label).content)  
-                                            # action SetVariable("action_needed_fix", True)
                                             mouse "hover"
                                             if not tutorial_on:
                                                 action [SetVariable("current_checkpoint", None), ShowMenu("progress_details", chapter, current_storyline, ending = True)]
@@ -574,7 +573,7 @@ screen info_card(item=None, item_type=None, is_small=False, dimmed=False):
 
     imagebutton:
         mouse "hover"
-        action SetVariable("action_needed_fix", True) #NOT used but needed for tooltip
+        action NullAction() # a button needs an action for its tooltip to show
         at Transform(alpha=(0.55 if dimmed else 1.0))
 
         if is_small:
@@ -607,18 +606,6 @@ screen info_card(item=None, item_type=None, is_small=False, dimmed=False):
 
 
 screen progress_details(selected_chapter, selected_char, ending = False, is_current = False):
-
-    #     on "show" action SetVariable("current_checkpoint", None)
-    # on "show" action If(
-    #         "not " + seen_flag_var,            # ← string expression
-    #         [                                   # ← actions if it’s still False
-    #             SetVariable(seen_flag_var, True),
-    #             SetVariable("tutorial_on", True),
-    #             SetVariable(tutorial_step_var, 0),
-    #         ]
-    #     )
-
-    on "show" action SetVariable("tutorial_on", True),
 
     tag menu
 
@@ -684,13 +671,13 @@ screen progress_details(selected_chapter, selected_char, ending = False, is_curr
                                         $ active_checkpoint = Checkpoint(
                                                 run = current_run,
                                                 position = current_position,
-                                                objects = copy.deepcopy(current_storyline.objects.get_unlocked()), 
+                                                objects = copy.deepcopy(current_storyline.objects.get_unlocked()),
                                                 observations = copy.deepcopy(current_storyline.observations.get_unlocked()),
                                                 important_choices = copy.deepcopy(current_storyline.important_choices.get_unlocked()),
                                                 label_id = "current",
-                                                saved_variables = copy.deepcopy(current_character.saved_variables),
+                                                saved_variables = copy_saved_variables(current_character.saved_variables),
                                                 ending = ending,
-                                                all_menus = copy.deepcopy(all_menus),
+                                                menus_state = capture_all_menus_state(),
                                             )
 
                                         textbutton str("Current Status"):
@@ -749,16 +736,10 @@ screen progress_details(selected_chapter, selected_char, ending = False, is_curr
 
                     if current_checkpoint and selected_chapter.chapter_type != "start":
 
-                        if current_checkpoint.label_id == "current":
-                            text "Previous Choices & Discoveries":
-                                font gui.name_text_font
-                                size 42
-                                color gui.accent_color
-                        else:
-                            text "Previous Choices & Discoveries":
-                                font gui.name_text_font
-                                size 42
-                                color gui.accent_color
+                        text "Previous Choices & Discoveries":
+                            font gui.name_text_font
+                            size 42
+                            color gui.accent_color
 
                         vbox:
                             yoffset 20
@@ -768,21 +749,19 @@ screen progress_details(selected_chapter, selected_char, ending = False, is_curr
                                 for item in current_storyline.get_choices_and_discoveries_by_chapter(selected_chapter.name, current_checkpoint.label_id == "current"):
                                     use info_card(item, item.type)
 
-                        # TODO: Decide if we want to see all the time or just current status?
-                        if current_checkpoint.label_id == "current" or True:
-                            text "Choices & Discoveries for this Chapter":
-                                yoffset 20
-                                font gui.name_text_font
-                                size 42
-                                color gui.accent_color
-                            
-                            vbox:
-                                yoffset 20
-                                $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter_only_current(selected_chapter.name)) + 5) // 6)
-                                grid 6 number_of_rows:
-                                    spacing 13
-                                    for item in current_storyline.get_choices_and_discoveries_by_chapter_only_current(selected_chapter.name):
-                                        use info_card(item, item.type)
+                        text "Choices & Discoveries for this Chapter":
+                            yoffset 20
+                            font gui.name_text_font
+                            size 42
+                            color gui.accent_color
+
+                        vbox:
+                            yoffset 20
+                            $ number_of_rows = ((len(current_storyline.get_choices_and_discoveries_by_chapter_only_current(selected_chapter.name)) + 5) // 6)
+                            grid 6 number_of_rows:
+                                spacing 13
+                                for item in current_storyline.get_choices_and_discoveries_by_chapter_only_current(selected_chapter.name):
+                                    use info_card(item, item.type)
                     else:
                         text "Select a checkpoint to see details.":
                             size 32
@@ -843,7 +822,7 @@ init -100 python:
 
     class Checkpoint():
         def __init__(
-            self, 
+            self,
             run,
             position,
             objects,
@@ -852,7 +831,7 @@ init -100 python:
             label_id,
             saved_variables,
             ending = None,
-            all_menus = None,
+            menus_state = None,
         ):
             self.run = run
             self.position = position
@@ -863,7 +842,11 @@ init -100 python:
             self.label_id = label_id
             self.saved_variables = saved_variables
             self.ending = ending
-            self.all_menus = all_menus
+            # Sparse menu snapshot {menu_id: {choice_key: (hidden, already_chosen)}}
+            # (see capture_all_menus_state). Checkpoints unpickled from older
+            # saves have a full .all_menus deep copy instead; start_again
+            # converts those on the fly.
+            self.menus_state = menus_state
 
         def get_format_created(self):
             return self.created.strftime("%A") + f" {self.created.day} " + self.created.strftime("%B %Y, %H:%M")

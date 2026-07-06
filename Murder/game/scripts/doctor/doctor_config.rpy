@@ -215,7 +215,6 @@ label init_doctor:
         doctor_details  = CharacterDetails(
             text_id = "doctor", 
             locked = True,
-            know_real_name = True,
             real_name = doctor_name,
             nickname = "The Doctor",
             description_short = "Middle-age man",

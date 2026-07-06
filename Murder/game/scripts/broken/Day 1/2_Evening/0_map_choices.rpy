@@ -21,41 +21,46 @@
 
 label broken_day1_evening_map_menu:
     python:
+        # Servants' floor rooms get two choices each. With the livery, the
+        # real room. Without it, a "staff only" refusal that greys the whole
+        # floor once tried (day1_evening_downstairs_refused), until the
+        # livery is found.
+        _has_livery = "broken_details.threads.is_unlocked('found_livery')"
+        _refused = "not broken_details.threads.is_unlocked('found_livery') and not broken_details.saved_variables['day1_evening_downstairs_refused']"
+
         broken_day1_evening_map_menu = TimedMenu(
             "broken_day1_evening_map_menu",
             [
             # Attic
-            TimedMenuChoice(default_room_text('storage'), 'broken_day1_evening_attic_default', 10, room='storage'),
-            TimedMenuChoice(default_room_text('males_room'), 'broken_day1_evening_attic_default', 10, room='males_room'),
-            TimedMenuChoice(default_room_text('females_room'), 'broken_day1_evening_attic_default', 10, room='females_room'),
-            TimedMenuChoice(default_room_text('attic_butler_room'), 'broken_day1_evening_attic_default', 10, room='attic_butler_room'),
+            map_choice('storage', 'broken_day1_evening_attic_default'),
+            map_choice('males_room', 'broken_day1_evening_attic_default'),
+            map_choice('females_room', 'broken_day1_evening_attic_default'),
+            map_choice('attic_butler_room', 'broken_day1_evening_attic_default'),
             # Bedrooms (his own room is the retire exit, so it is not listed here)
-            TimedMenuChoice(default_room_text('bedroom_lad'), 'broken_day1_evening_bedroom_avoid', 10, room='bedroom_lad'),
-            TimedMenuChoice(default_room_text('bedroom_host'), 'broken_day1_evening_bedroom_avoid', 10, room='bedroom_host'),
-            TimedMenuChoice(default_room_text('bedroom_nurse'), 'broken_day1_evening_bedroom_avoid', 10, room='bedroom_nurse'),
-            TimedMenuChoice(default_room_text('bedroom_doctor'), 'broken_day1_evening_bedroom_avoid', 10, room='bedroom_doctor'),
-            TimedMenuChoice(default_room_text('bedroom_drunk'), 'broken_day1_evening_bedroom_avoid', 10, room='bedroom_drunk'),
-            TimedMenuChoice(default_room_text('bedroom_psychic'), 'broken_day1_evening_bedroom_avoid', 10, room='bedroom_psychic'),
-            TimedMenuChoice(default_room_text('bedroom_captain'), 'broken_day1_evening_bedroom_avoid', 10, room='bedroom_captain'),
+            map_choice('bedroom_lad', 'broken_day1_evening_bedroom_avoid'),
+            map_choice('bedroom_host', 'broken_day1_evening_bedroom_avoid'),
+            map_choice('bedroom_nurse', 'broken_day1_evening_bedroom_avoid'),
+            map_choice('bedroom_doctor', 'broken_day1_evening_bedroom_avoid'),
+            map_choice('bedroom_drunk', 'broken_day1_evening_bedroom_avoid'),
+            map_choice('bedroom_psychic', 'broken_day1_evening_bedroom_avoid'),
+            map_choice('bedroom_captain', 'broken_day1_evening_bedroom_avoid'),
             # Ground floor
-            TimedMenuChoice(default_room_text('tea_room'), 'broken_day1_evening_tea_room', 10, room='tea_room'),
-            TimedMenuChoice(default_room_text('dining_room'), 'broken_day1_evening_dining_room', 10, room='dining_room'),
-            TimedMenuChoice(default_room_text('manor_garden'), 'broken_day1_evening_garden', 10, room='manor_garden'),
-            TimedMenuChoice(default_room_text('entrance_hall'), 'broken_day1_evening_entrance_hall', 10, room='entrance_hall'),
-            TimedMenuChoice(default_room_text('servant_stairs'), 'broken_day1_evening_servant_stairs', 10, room='servant_stairs'),
-            TimedMenuChoice(default_room_text('portrait_gallery'), 'broken_day1_evening_portrait_gallery', 10, room='portrait_gallery'),
-            TimedMenuChoice(default_room_text('library'), 'broken_day1_evening_library', 10, room='library'),
-            # Servants' floor — two choices each. With the livery, the real room.
-            # Without it, a "staff only" refusal that greys the whole floor once
-            # tried (day1_evening_downstairs_refused), until the livery is found.
-            TimedMenuChoice(default_room_text('kitchen'), 'broken_day1_evening_kitchen', 10, room='kitchen', condition="broken_details.threads.is_unlocked('found_livery')"),
-            TimedMenuChoice(default_room_text('kitchen'), 'broken_day1_evening_downstairs_refused', 10, room='kitchen', condition="not broken_details.threads.is_unlocked('found_livery') and not broken_details.saved_variables['day1_evening_downstairs_refused']"),
-            TimedMenuChoice(default_room_text('scullery'), 'broken_day1_evening_scullery', 10, room='scullery', condition="broken_details.threads.is_unlocked('found_livery')"),
-            TimedMenuChoice(default_room_text('scullery'), 'broken_day1_evening_downstairs_refused', 10, room='scullery', condition="not broken_details.threads.is_unlocked('found_livery') and not broken_details.saved_variables['day1_evening_downstairs_refused']"),
-            TimedMenuChoice(default_room_text('garage'), 'broken_day1_evening_garage', 10, room='garage', condition="broken_details.threads.is_unlocked('found_livery')"),
-            TimedMenuChoice(default_room_text('garage'), 'broken_day1_evening_downstairs_refused', 10, room='garage', condition="not broken_details.threads.is_unlocked('found_livery') and not broken_details.saved_variables['day1_evening_downstairs_refused']"),
-            TimedMenuChoice(default_room_text('gun_room'), 'broken_day1_evening_gun_room', 10, room='gun_room', condition="broken_details.threads.is_unlocked('found_livery')"),
-            TimedMenuChoice(default_room_text('gun_room'), 'broken_day1_evening_downstairs_refused', 10, room='gun_room', condition="not broken_details.threads.is_unlocked('found_livery') and not broken_details.saved_variables['day1_evening_downstairs_refused']"),
+            map_choice('tea_room', 'broken_day1_evening_tea_room'),
+            map_choice('dining_room', 'broken_day1_evening_dining_room'),
+            map_choice('manor_garden', 'broken_day1_evening_garden'),
+            map_choice('entrance_hall', 'broken_day1_evening_entrance_hall'),
+            map_choice('servant_stairs', 'broken_day1_evening_servant_stairs'),
+            map_choice('portrait_gallery', 'broken_day1_evening_portrait_gallery'),
+            map_choice('library', 'broken_day1_evening_library'),
+            # Servants' floor (see comment above)
+            map_choice('kitchen', 'broken_day1_evening_kitchen', condition=_has_livery),
+            map_choice('kitchen', 'broken_day1_evening_downstairs_refused', condition=_refused),
+            map_choice('scullery', 'broken_day1_evening_scullery', condition=_has_livery),
+            map_choice('scullery', 'broken_day1_evening_downstairs_refused', condition=_refused),
+            map_choice('garage', 'broken_day1_evening_garage', condition=_has_livery),
+            map_choice('garage', 'broken_day1_evening_downstairs_refused', condition=_refused),
+            map_choice('gun_room', 'broken_day1_evening_gun_room', condition=_has_livery),
+            map_choice('gun_room', 'broken_day1_evening_downstairs_refused', condition=_refused),
             # Specific actions
             TimedMenuChoice('Look in on the others in the billiard room', 'broken_day1_evening_billiard_room', 10, room='billiard_room'),
             TimedMenuChoice('Retire for the night', 'generic_cancel', early_exit=True, room='bedroom_broken'),

@@ -224,9 +224,11 @@ The kitchen is all but empty, winding down for the night.
 The great range still breathes out its heat.
 A young maid stands at the sink with her back to me, scouring the last of the pots and pans.
 She has not heard me come in.
-It would be risky to talk to her.
-She would probably see right away I am an impostor.
+I really want to ask her a few questions.
+But she would see at once that I do not belong here.
+She could expose me and reveal my true identity.
 But she could also help me understand why Lady Claythorn is lying to us.
+That could be a risk worth taking.
 Menu Choice: Ask her a few questions
 I step closer and clear my throat, softly, so as not to startle her.
 Thomas Moody: A long night of it, by the look of things.
@@ -235,7 +237,8 @@ Young woman: I am sorry, but who are you?
 Alright, now is the time to see if I can bluff my way here.
 Thomas Moody: Forgive me.
 Thomas Moody: I am only taken on for the weekend, to lend a hand.
-Thomas Moody: I was sent for in a hurry, and told precious little of what goes on.
+Thomas Moody: And I was hoping you could guide me through what is to be done.
+Thomas Moody: You see, I was sent for in a hurry, and told very little of what goes on.
 Young woman: Well, we all are.
 Young woman: The manor stood empty before this, you know.
 Young woman: If it is guidance you are after, find the butler.
@@ -244,8 +247,10 @@ Empty before this?
 So the place has been prepared for this weekend, especially for us. How curious.
 Thomas Moody: This is rather unusual.
 Thomas Moody: If this place was empty before, why re-open it for this weekend?
-Young woman: I could not say, exactly.
-Young woman: There is some manner of surprise in store for the guests, I think.
+Young woman: I think it is to award some prize to the guests, to give them a nice countryside weekend, and I believe a surprise is also planned for them.
+Thomas Moody: A surprise? You mean the prize money?
+Young woman: No, they should know about that.
+Young woman: There is to be something else, though I could not say what exactly.
 Young woman: So, of course, share none of this with them.
 Young woman: But ask the butler.
 Young woman: He will tell you more than I can.
