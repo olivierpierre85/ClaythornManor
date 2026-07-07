@@ -171,6 +171,33 @@ label drunk_generic_manor:
     return
 
 
+label drunk_generic_manor_broken:
+
+    drunk """
+    This place?
+
+    You mean the forest?
+
+    Well it is a decent spot in the woods I suppose.
+
+    Why do yo ask?
+    """
+
+    broken """
+    No, I meant the manor.
+
+    I think.
+    """
+
+    drunk """
+    Very grand house that is,
+
+    very impressive.
+    """
+
+    return
+
+
 label drunk_generic_age:
 
     drunk """
@@ -314,11 +341,9 @@ label drunk_generic_background_broken:
     """
     He takes a long pull from the flask and will not meet my eye.
 
-    A defence barrister, of all people.
+    A defence barrister
 
-    A man who spent his life among trials and verdicts, brought so low his hands shake.
-
-    Whatever ruined him, he carries it still.
+    An honourable job, but I am not sure it is one worthy of an award.
     """
 
     $ drunk_details.description_hidden.unlock('job')

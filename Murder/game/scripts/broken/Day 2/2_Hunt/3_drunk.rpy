@@ -116,6 +116,12 @@ label broken_day2_hunt_drunk_manning:
     Oh, Mr Moody, no, not all of course.
     """
 
+    """
+    I need to know if I can trust him, so I shouldn't waste time asking trivial questions.
+
+    If I want to know what is happening here, I need to be careful.
+    """
+
     call drunk_generic
 
     if broken_details.threads.is_unlocked('drunk_letter'):

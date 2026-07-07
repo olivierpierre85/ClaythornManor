@@ -40,7 +40,7 @@ label broken_config_menu:
     $ drunk_generic_menu_broken = TimedMenu("drunk_generic_menu_broken", [
         TimedMenuChoice('Tell me more about yourself.', 'drunk_generic_background_broken', 20, linked_choice = "drunk_generic_heroic_act_broken"),
         TimedMenuChoice('Why were you invited here?', 'drunk_generic_heroic_act_broken', 20, condition = "is_linked_choice_hidden('drunk_generic_menu_broken', 'drunk_generic_heroic_act_broken')"),
-        TimedMenuChoice('What do you think of this place?', 'drunk_generic_manor', 10),
+        TimedMenuChoice('What do you think of this place?', 'drunk_generic_manor_broken', 0),
         TimedMenuChoice('How old are you?', 'drunk_generic_age', 20),
         TimedMenuChoice('What room are you in?', 'drunk_generic_room', 10),
         TimedMenuChoice('You have the look of a man with something on his mind.', 'broken_drunk_hunt_burden', 10, linked_choice = "broken_drunk_hunt_letter", condition = "is_choice_hidden('drunk_generic_menu_broken', 'drunk_generic_background_broken')"),
