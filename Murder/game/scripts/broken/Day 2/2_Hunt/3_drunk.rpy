@@ -6,10 +6,12 @@
 #
 #   At the halt, Broken must choose whom to spend the crucial minutes with:
 #   Doctor Baldwin or Mr Manning (broken_day2_hunt_menu_company). Only by sitting
-#   with Manning and putting the letter question in the Drunk generic menu
-#   (drunk_generic_menu_broken, broken_config_menu.rpy) does Broken unlock the
-#   drunk_letter thread and learn that Manning, like him, was sent a letter (the
-#   Doctor killed his wife). That recognition lets Broken talk him down and save
+#   with Manning and working through the interrogation chain in the Drunk generic
+#   menu (drunk_generic_menu_broken, broken_config_menu.rpy: background unlocks
+#   the burden question, the burden question unlocks the letter admission, 50s of
+#   the 60s budget) does Broken unlock the drunk_letter thread. Broken confides
+#   that he found a letter in his own room, which unsettles Manning into
+#   admitting he was sent one too (the Doctor killed his wife). That recognition lets Broken talk him down and save
 #   both men, continuing into broken_day2_evening (Day 2/3_Evening/1_main.rpy).
 #
 #   Give the doctor your attention, keep to yourself, or sit with Manning but
@@ -34,8 +36,6 @@ label broken_day2_hunt_drunk:
 
     """
     She nods in agreement and gives me slight smile.
-    
-    The Captain inclines his head, plainly relieved to see the back of me.
     """
 
     call change_time(11, 45)
@@ -60,14 +60,17 @@ label broken_day2_hunt_drunk:
     None of them seem to want to engage in any kind of conversation.
     """
 
-    $ time_left = 1
+    $ time_left = 60
     call run_menu(
         TimedMenu("broken_day2_hunt_menu_company", [
             TimedMenuChoice("Draw Doctor Baldwin into talk", 'broken_day2_hunt_drunk_doctor', early_exit=True),
             TimedMenuChoice("Sit down beside Samuel Manning", 'broken_day2_hunt_drunk_manning', early_exit=True),
-            TimedMenuChoice("Keep to yourself and watch them both", 'broken_day2_hunt_drunk_watch', early_exit=True),
+            TimedMenuChoice("Keep to yourself", 'generic_cancel', early_exit=True),
         ], image_left = "doctor", image_right = "drunk"))
 
+    call broken_day2_hunt_drunk_grove_shot
+
+    return
 
 # --------------------------------------------
 #   Broken gives the doctor his attention and leaves Manning to stew.
@@ -76,43 +79,24 @@ label broken_day2_hunt_drunk:
 label broken_day2_hunt_drunk_doctor:
 
     """
-    Manning is the danger here, that much is plain.
+    Samuel Manning makes me uneasy, so I approach Dr Baldwin.
 
-    But it is Baldwin the danger is aimed at, and it is Baldwin who might yet tell me why.
+    I interrupt what looks like an intense conversation between him and the footman.
 
-    I fall in beside the doctor and try to draw him out.
+    But they act as if nothing had happened.
+    """
+
+    doctor """
+    Ah, Mr Moody.
+
+    Excellent day for a hunt, isn't it?
+
+    But tell me, what is on your mind?
     """
 
     call doctor_generic
 
-    """
-    Whatever I take from Baldwin, I take too slowly.
-
-    All the while I am at his elbow, Manning is at our backs, half forgotten, the flask working and his eyes fixed on a mark he has already settled upon.
-
-    I feel the moment turn before I see it.
-    """
-
-    jump broken_day2_hunt_drunk_grove_shot
-
-
-# --------------------------------------------
-#   Broken keeps his distance and trusts his eye. He reads the wood too late.
-# --------------------------------------------
-label broken_day2_hunt_drunk_watch:
-
-    """
-    No. I will keep my own counsel and my distance, and watch the pair of them.
-
-    I have always trusted my eye more than my tongue, and I tell myself I will read the moment before it breaks.
-
-    So I settle a little apart, where I can see them both, and I wait.
-
-    It is a fine theory, right up until the instant it fails me.
-    """
-
-    jump broken_day2_hunt_drunk_grove_shot
-
+    return
 
 # --------------------------------------------
 #   Broken sits with Manning. Draw out the letter (drunk_letter) and he is
@@ -121,11 +105,15 @@ label broken_day2_hunt_drunk_watch:
 label broken_day2_hunt_drunk_manning:
 
     """
-    Baldwin may keep his secrets a while longer.
+    Despite an initial reluctance, I feel like it is a good opportunity to get information from Samuel Manning while we are alone.
+    """
 
-    It is Manning who frightens me, and a frightened man is best kept talking.
+    broken """
+    Mr Manning, do you mind if I sit here?
+    """
 
-    I settle myself beside him in the bracken and offer him a companionable word.
+    drunk """
+    Oh, Mr Moody, no, not all of course.
     """
 
     call drunk_generic
@@ -145,7 +133,7 @@ label broken_day2_hunt_drunk_manning:
         broken """
         Listen to me, Mr Manning. Listen.
 
-        Whoever wrote you that letter wrote me one of my own. They want a death of us today, and they do not greatly care whose.
+        The same hand wrote your letter and mine. They want a death of us today, and they do not greatly care whose.
 
         Do not give it to them.
         """
@@ -188,7 +176,7 @@ label broken_day2_hunt_drunk_manning:
         Something is going to happen in this wood. I can feel it coming, and I cannot for the life of me see how to head it off.
         """
 
-        jump broken_day2_hunt_drunk_grove_shot
+        return
 
 
 # --------------------------------------------
@@ -271,12 +259,20 @@ label broken_drunk_hunt_burden:
 
 label broken_drunk_hunt_letter:
 
+    """
+    There is one card left to me, and no clever way to play it.
+
+    So I lay it face up on the table.
+    """
+
     broken """
-    Tell me something, Mr Manning, and forgive the strangeness of it.
+    Mr Manning, I am going to tell you something I have told nobody else in this house.
 
-    Did you find anything in your room last night that ought not to have been there?
+    Last night I found something in my room. A letter.
 
-    A letter, perhaps. Left where you could not fail to see it.
+    No signature. Left where I could not fail to find it.
+
+    It told me of a wrong done to me by a man under this roof, and it was written to make me hate him.
     """
 
     """
@@ -286,11 +282,11 @@ label broken_drunk_hunt_letter:
     """
 
     drunk """
-    How... how could you possibly know that?
-    """
+    A letter.
 
-    broken """
-    Because I found one of my own.
+    You as well.
+
+    I thought... I thought it was meant for me alone.
     """
 
     """
@@ -300,21 +296,13 @@ label broken_drunk_hunt_letter:
     """
 
     drunk """
-    They told me what he did. The doctor.
+    Mine told me what he did. The doctor.
 
     He treated my Margaret, years ago. Held back the medicine that might have saved her, the very stuff he wanted for himself.
 
     He is the reason she is in the ground.
 
     And he walks about this house as though he had never harmed a soul in his life.
-    """
-
-    """
-    His letter and mine, cut from the very same cloth.
-
-    A grievance dug up, and sharpened, and pressed into the hand of a broken man, with a target set conveniently near.
-
-    The same author wrote us both.
     """
 
     $ broken_details.threads.unlock('drunk_letter')

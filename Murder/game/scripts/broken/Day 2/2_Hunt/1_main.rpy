@@ -101,7 +101,7 @@ label broken_day2_hunt:
             TimedMenu("broken_day2_hunt_menu_party", [
                 TimedMenuChoice("Lady Claythorn and Captain Sinha", 'broken_day2_hunt_captain', early_exit=True),
                 TimedMenuChoice("Join Doctor Baldwin and Samuel Manning instead", 'broken_day2_hunt_drunk', early_exit=True),
-            ], image_right = "host", image_right_2 = "captain", image_left = "drunk", image_left_2 = "doctor"))
+            ], image_left = "host", image_left_2 = "captain", image_right = "drunk", image_right_2 = "doctor"))
 
     else:
 

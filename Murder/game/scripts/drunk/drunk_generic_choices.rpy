@@ -1,6 +1,7 @@
 # Generic drunk Dialogs.
 # Accessible from :
 #                   - The Nurse
+#                   - Broken (Saturday hunt, via the _broken variants below)
 
 label drunk_generic:
 
@@ -214,7 +215,7 @@ label drunk_generic_room_friday:
     return
 
 
-label drunk_generic_room_nurse:
+label drunk_generic_room:
 
     drunk """
     The... the "George IV" room, I believe.
@@ -250,6 +251,125 @@ label drunk_generic_other_guests_friday_dinner:
     """
 
     return
+
+
+# ---------------------------------------------------------------------------
+# BROKEN (Thomas Moody) variants
+# Manning is questioned at the Saturday hunt lunch, flask in hand, so his
+# answers cover the same ground as the nurse versions in a rougher state.
+# ---------------------------------------------------------------------------
+
+label drunk_generic_background_broken:
+
+    broken """
+    Tell me a little about yourself, Mr Manning.
+
+    What is your profession, if you don't mind my asking?
+    """
+
+    drunk """
+    My profession.
+
+    Ha.
+
+    You are looking at a man of the law, sir.
+
+    A barrister.
+
+    Or... or what remains of one.
+    """
+
+    broken """
+    A barrister, no less.
+
+    What sort of practice did you keep?
+    """
+
+    drunk """
+    Defence work.
+
+    I stood up for men the whole world had already hanged.
+
+    Somebody... somebody had to.
+    """
+
+    broken """
+    And why did you give it up?
+    """
+
+    drunk """
+    Give it up.
+
+    Is that what I did.
+
+    There were cases, Mr Moody.
+
+    Cases that went... that went badly.
+
+    The law is a merciless thing when you get it wrong.
+
+    Leave it there, will you.
+    """
+
+    """
+    He takes a long pull from the flask and will not meet my eye.
+
+    A defence barrister, of all people.
+
+    A man who spent his life among trials and verdicts, brought so low his hands shake.
+
+    Whatever ruined him, he carries it still.
+    """
+
+    $ drunk_details.description_hidden.unlock('job')
+
+    return
+
+
+label drunk_generic_heroic_act_broken:
+
+    broken """
+    And why were you invited here, Mr Manning?
+    """
+
+    drunk """
+    Well, I took the cases nobody else would touch, you see.
+
+    The poor.
+
+    The... the desperate.
+
+    A man of the people, the papers said.
+
+    Somebody has to speak for them, don't they?
+    """
+
+    broken """
+    That is a fine thing to be honoured for.
+    """
+
+    drunk """
+    Honoured.
+
+    Ha.
+
+    Don't go putting it in the papers.
+    """
+
+    """
+    A bitter little laugh, and nothing behind it.
+
+    So he too was fetched here on the strength of a kindness.
+
+    A doctor, a nurse, a captain, and a barrister for the poor.
+
+    A house full of virtue, and not one happy face among us.
+    """
+
+    $ drunk_details.description_hidden.unlock('heroic_act')
+
+    return
+
 
 # NOT NEED and not reviewed yet
 # label drunk_generic_other_guests_friday_nurse:

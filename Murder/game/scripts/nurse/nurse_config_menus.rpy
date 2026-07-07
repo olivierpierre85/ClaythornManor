@@ -9,7 +9,7 @@ label nurse_config_menu:
         TimedMenuChoice('What do you think of this place?', 'drunk_generic_manor', 10),
         TimedMenuChoice('How old are you?', 'drunk_generic_age', 20),
         TimedMenuChoice('What room are you in?', 'drunk_generic_room_friday', 10, condition = condition_friday_dinner),
-        TimedMenuChoice('What room are you in?', 'drunk_generic_room_nurse', 10, condition = "not " + condition_friday_dinner),
+        TimedMenuChoice('What room are you in?', 'drunk_generic_room', 10, condition = "not " + condition_friday_dinner),
         TimedMenuChoice('What do you think of the other guests?', 'drunk_generic_other_guests_friday_dinner', 10, condition = condition_friday_dinner),
         TimedMenuChoice('What do you think of the other guests?', 'drunk_generic_other_guests_friday_nurse', 10, condition = "not " + condition_friday_dinner + " and not " + condition_saturday),
         TimedMenuChoice('What do you think of the other guests?', 'drunk_generic_other_guests_saturday_nurse', 0, keep_alive = True, next_menu='drunk_generic_other_guests_menu_nurse', condition = condition_saturday),

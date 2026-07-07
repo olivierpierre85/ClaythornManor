@@ -17,7 +17,17 @@
         },
         {
             "menu": "drunk_generic_menu_broken",
-            "selected": "Did you find anything odd in your room last night? A letter, perhaps?",
+            "selected": "Tell me more about yourself.",
+            "redirect": "drunk_generic_background_broken"
+        },
+        {
+            "menu": "drunk_generic_menu_broken",
+            "selected": "You have the look of a man with something on his mind.",
+            "redirect": "broken_drunk_hunt_burden"
+        },
+        {
+            "menu": "drunk_generic_menu_broken",
+            "selected": "I found something in my room last night. A letter.",
             "redirect": "broken_drunk_hunt_letter"
         }
     ]

@@ -38,9 +38,13 @@ label broken_config_menu:
     #---------------------------------------------------------------------
     # Drunk (used when Broken shadows the western-grove party on the hunt)
     $ drunk_generic_menu_broken = TimedMenu("drunk_generic_menu_broken", [
-        TimedMenuChoice('What do you make of this place?', 'drunk_generic_manor', 10),
-        TimedMenuChoice('You have the look of a man with something on his mind.', 'broken_drunk_hunt_burden', 10),
-        TimedMenuChoice("Did you find anything odd in your room last night? A letter, perhaps?", 'broken_drunk_hunt_letter', 20, early_exit = True),
+        TimedMenuChoice('Tell me more about yourself.', 'drunk_generic_background_broken', 20, linked_choice = "drunk_generic_heroic_act_broken"),
+        TimedMenuChoice('Why were you invited here?', 'drunk_generic_heroic_act_broken', 20, condition = "is_linked_choice_hidden('drunk_generic_menu_broken', 'drunk_generic_heroic_act_broken')"),
+        TimedMenuChoice('What do you think of this place?', 'drunk_generic_manor', 10),
+        TimedMenuChoice('How old are you?', 'drunk_generic_age', 20),
+        TimedMenuChoice('What room are you in?', 'drunk_generic_room', 10),
+        TimedMenuChoice('You have the look of a man with something on his mind.', 'broken_drunk_hunt_burden', 10, linked_choice = "broken_drunk_hunt_letter", condition = "is_choice_hidden('drunk_generic_menu_broken', 'drunk_generic_background_broken')"),
+        TimedMenuChoice("I found something in my room last night. A letter.", 'broken_drunk_hunt_letter', 20, early_exit = True, condition = "is_linked_choice_hidden('drunk_generic_menu_broken', 'broken_drunk_hunt_letter')"),
         TimedMenuChoice("Leave him to his flask", 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "drunk")
 
