@@ -91,4 +91,8 @@ ROOM_DETAILS = {
         "a red stair runner carpet on the central staircase, "
         "a black grand piano in the far corner"
     ),
+    "library": (
+        "walls lined with tall floor-to-ceiling bookshelves packed with "
+        "leather-bound books, a leather reading armchair"
+    ),
 }
