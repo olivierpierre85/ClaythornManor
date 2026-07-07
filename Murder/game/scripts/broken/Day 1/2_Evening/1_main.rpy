@@ -134,13 +134,9 @@ label broken_day1_evening:
 
     One tale leads to another. A drunken officer in Calcutta, supply lines in Burma, a skirmish whose name I half recognise.
 
-    I make a show of close attention.
-
-    In truth I am listening for the seams, the small places where a story has been let out or taken in.
-
-    Everyone in this room is performing some version of themselves.
-
-    It is only a question of how well.
+    I listen carefully, not that I am really interested. 
+    
+    But I have learned on the job to never miss a detail when someone is telling a story.
     """
 
     call common_day1_evening_nurse_joins_captain

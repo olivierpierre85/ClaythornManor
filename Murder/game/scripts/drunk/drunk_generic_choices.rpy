@@ -382,13 +382,11 @@ label drunk_generic_heroic_act_broken:
     """
 
     """
-    A bitter little laugh, and nothing behind it.
+    That is a rather vague description, as was Thomas's actually.
 
-    So he too was fetched here on the strength of a kindness.
+    Now that I think of it, I don't think I have linked anyone to a particular act of heroism.
 
-    A doctor, a nurse, a captain, and a barrister for the poor.
-
-    A house full of virtue, and not one happy face among us.
+    That is someone worth thinking about.
     """
 
     $ drunk_details.description_hidden.unlock('heroic_act')
