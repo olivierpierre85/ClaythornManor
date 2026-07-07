@@ -127,13 +127,16 @@ label change_floor(floor):
 screen map_floor_arrow(direction):
 
     $ arrow_target = selected_floor + direction
+    # arrow_side is screen-local, so it cannot be used in [bracket] image
+    # interpolation (that resolves against the global store) - build the
+    # full paths here instead.
     $ arrow_side = "left" if direction < 0 else "right"
 
     if MIN_FLOOR <= arrow_target and arrow_target <= MAX_FLOOR:
         imagebutton:
             mouse "hover"
-            idle "gui/button/page_button_[arrow_side]_idle_bright.png"
-            hover "gui/button/page_button_[arrow_side]_hover.png"
+            idle "gui/button/page_button_{}_idle_bright.png".format(arrow_side)
+            hover "gui/button/page_button_{}_hover.png".format(arrow_side)
             yalign 0.5
             xoffset 0
             action SetVariable("selected_floor", arrow_target) at (map_button_left if direction < 0 else map_button_right)

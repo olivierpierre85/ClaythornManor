@@ -269,7 +269,8 @@ define chapter_index = {
 }
 
 default current_chapter = "friday_afternoon"
-default current_phase = None   # set by change_time; None/non-Evening is treated as day by resolve_room_image
+default current_phase = None   # set by change_time; display/menu-condition use only
+default current_time = time(14, 0)   # set by change_time; resolve_room_image picks day/night from it
 
 define config.mouse = { }
 define config.mouse['default'] = [ ( "images/ui/default-cursor-icon.png", 4, 0) ]

@@ -97,12 +97,20 @@ label breakpoint:
 
 # Smart music changes
 init python:
+    # Night runs from dusk to dawn on the in-game clock (Scottish autumn).
+    NIGHT_START_HOUR = 18
+    NIGHT_END_HOUR = 6
+
+    def is_night():
+        hour = store.current_time.hour
+        return hour >= NIGHT_START_HOUR or hour < NIGHT_END_HOUR
+
     def resolve_room_image(room_id):
         # 1. Time-independent scenes use a single _neutral image.
         if renpy.has_image(room_id + "_neutral"):
             return room_id + "_neutral"
-        # 2. Time-of-day variants: Evening is night, everything else is day.
-        if store.current_phase == "Evening":
+        # 2. Time-of-day variants, decided by the in-game clock.
+        if is_night():
             primary, secondary = "_night", "_day"
         else:
             primary, secondary = "_day", "_night"
