@@ -7,12 +7,14 @@
 #   At the halt, Broken must choose whom to spend the crucial minutes with:
 #   Doctor Baldwin or Mr Manning (broken_day2_hunt_menu_company). Only by sitting
 #   with Manning and working through the interrogation chain in the Drunk generic
-#   menu (drunk_generic_menu_broken, broken_config_menu.rpy: background unlocks
-#   the burden question, the burden question unlocks the letter admission, 50s of
-#   the 60s budget) does Broken unlock the drunk_letter thread. Broken confides
+#   menu (drunk_generic_menu_broken, broken_config_menu.rpy: the background
+#   question reveals the invitation question, whose answer slips the word
+#   "letter" and reveals the letter admission — the full chain costs the whole
+#   60s budget) does Broken unlock the drunk_letter thread. Broken confides
 #   that he found a letter in his own room, which unsettles Manning into
-#   admitting he was sent one too (the Doctor killed his wife). That recognition lets Broken talk him down and save
-#   both men, continuing into broken_day2_evening (Day 2/3_Evening/1_main.rpy).
+#   admitting he was sent one too (the Doctor killed his wife). That recognition
+#   lets Broken talk him down and save both men, continuing into
+#   broken_day2_evening (Day 2/3_Evening/1_main.rpy).
 #
 #   Give the doctor your attention, keep to yourself, or sit with Manning but
 #   fail to draw out the letter, and Manning fires on Baldwin. Broken throws
@@ -21,21 +23,21 @@
 label broken_day2_hunt_drunk:
 
     broken """
-    Well, if it is the same for everybody, I will go with Doctor Baldwin and Mister Manning.
+    Well, if it is all the same to everybody, I will go with Doctor Baldwin and Mr Manning.
     """
 
     """
-    The butler gives me a weird look, as if I should have shown preference in going with out host.
-    
-    As a way of apologizing, I whisper to her.
+    The butler gives me an odd look, as if I ought to have shown a preference for our host's party.
+
+    By way of apology, I whisper to him.
     """
 
     broken """
-    I hope you'll forgive me, but I prefer not leave Doctor Baldwin alone with Samuel Manning.
+    I hope you'll forgive me, but I prefer not to leave Doctor Baldwin alone with Samuel Manning.
     """
 
     """
-    She nods in agreement and gives me slight smile.
+    He nods in agreement and gives me a slight smile.
     """
 
     call change_time(11, 45)
@@ -47,17 +49,17 @@ label broken_day2_hunt_drunk:
 
     Baldwin is grey and sweating, sunk in some private misery of his own, and pays neither of us any mind.
 
-    And Samuel Manning hands shake so badly he can scarcely hold its weapon.
+    Samuel Manning's hands shake so badly he can scarcely hold his weapon.
 
-    And I am so busy observing the both of them, I barely notice the rabbits and pheasants that came our way.
+    And I am so busy observing the pair of them that I barely notice the rabbits and pheasants that come our way.
 
-    No wonder none of us shot anything this morning.
+    No wonder none of us has shot anything this morning.
 
-    It's empty handed that we settle for lunch.
+    We stop for lunch empty-handed.
 
-    Doctor Baldwin settle next to the footman, Samuel Manning is sitting a bit apart.
+    Doctor Baldwin settles next to the footman, and Samuel Manning sits a little apart.
 
-    None of them seem to want to engage in any kind of conversation.
+    None of them seems eager for conversation.
     """
 
     $ time_left = 60
@@ -68,7 +70,65 @@ label broken_day2_hunt_drunk:
             TimedMenuChoice("Keep to yourself", 'generic_cancel', early_exit=True),
         ], image_left = "doctor", image_right = "drunk"))
 
-    call broken_day2_hunt_drunk_grove_shot
+    if not broken_details.threads.is_unlocked('drunk_letter'):
+
+        # If you don't make the drunk confess about the letter, you get killed
+
+        $ play_music('danger', 2)
+
+        """
+        It comes without a word of warning.
+
+        Manning is on his feet, the rifle up and level, and the muzzle finds the doctor's back as though it had been waiting there all along.
+
+        The hands that trembled all morning are suddenly, terribly steady.
+
+        Baldwin has time only to half turn, grey and uncomprehending.
+
+        There is no thought in what I do.
+
+        There is no time for it.
+
+        I throw myself across the space between them.
+        """
+
+        play sound gun
+
+        pause 0.5
+
+        """
+        The shot takes me instead.
+
+        It is a strange thing, to feel so little at the moment it matters most.
+
+        Only a great dull blow, and the wet earth rising to meet me, and the trees leaning in overhead.
+
+        Baldwin is shouting something I cannot make out.
+
+        Manning has let the rifle fall and stands staring at his own hands, as though they are some other man's.
+
+        A letter sent me into this wood hating Captain Sinha. Too late, I wonder what was sent to him.
+
+        Somebody loaded that poor devil like a gun. I would stake my life on it.
+
+        I suppose I just have.
+
+        But the doctor is on his feet, and I am the one in the bracken, and for the length of one failing breath that seems a fair enough bargain.
+        """
+
+        jump broken_ending_shielded
+
+    # Only way to survive, make the drunk confess about the letter
+
+    """
+    I do not leave his side for the rest of the halt.
+
+    The doctor walks out of the wood that afternoon, alive, and never once the wiser for how near a thing it was.
+
+    A man who was meant to die today is breathing, and a man who was meant to kill him is not a murderer. It is not much. But after this morning, I will take it.
+    """
+
+    jump broken_day2_evening
 
     return
 
@@ -79,11 +139,11 @@ label broken_day2_hunt_drunk:
 label broken_day2_hunt_drunk_doctor:
 
     """
-    Samuel Manning makes me uneasy, so I approach Dr Baldwin.
+    Samuel Manning makes me uneasy, so I approach Doctor Baldwin.
 
-    I interrupt what looks like an intense conversation between him and the footman.
+    I interrupt what looks like a hushed exchange between him and the footman.
 
-    But they act as if nothing had happened.
+    They break off, and act as if nothing has passed between them.
     """
 
     doctor """
@@ -109,7 +169,7 @@ label broken_day2_hunt_drunk_manning:
     """
 
     drunk """
-    Oh, Mr Moody, no, not all of course.
+    Oh, Mr Moody, no, not at all, of course.
     """
 
     """
@@ -120,143 +180,8 @@ label broken_day2_hunt_drunk_manning:
 
     call drunk_generic
 
-    if broken_details.threads.is_unlocked('drunk_letter'):
-
-        """
-        So there it is.
-
-        The same hand that slid an old army order beneath my door slid a letter beneath his, and aimed him at the doctor as it aimed me at the Captain.
-
-        We are not guests at all. We are loaded guns, laid out on a table for someone else to fire.
-
-        Well. I will not go off on command, and I will be damned if I let him do it either.
-        """
-
-        broken """
-        Listen to me, Mr Manning. Listen.
-
-        The same hand wrote your letter and mine. They want a death of us today, and they do not greatly care whose.
-
-        Do not give it to them.
-        """
-
-        drunk """
-        But she... my Margaret...
-        """
-
-        broken """
-        I know. Believe me, I do.
-
-        But the man who has earned your bullet is not in this wood.
-
-        He is the one who put the pen in your hand.
-        """
-
-        """
-        Something in him gives way, like a sail when the wind drops.
-
-        The fight goes out of him, and what is left is only a tired and grieving old man, swaying in the bracken.
-
-        I take the rifle gently from his hands, and he lets me.
-
-        I do not leave his side for the rest of the morning.
-
-        The doctor walks out of the wood at noon, alive, and never once the wiser for how near a thing it was.
-
-        A man who was meant to die today is breathing, and a man who was meant to kill him is not a murderer. It is not much. But after this morning, I will take it.
-        """
-
-        jump broken_day2_evening
-
-    else:
-
-        """
-        I cannot find the words to reach him, and he will not be reached.
-
-        He drinks, and mutters, and watches the doctor, and my unease only sharpens as the morning wears on.
-
-        Something is going to happen in this wood. I can feel it coming, and I cannot for the life of me see how to head it off.
-        """
-
-        return
-
-
-# --------------------------------------------
-#   The grove turns: Manning fires on the doctor and Broken takes the bullet
-# --------------------------------------------
-label broken_day2_hunt_drunk_grove_shot:
-
-    $ play_music('danger', 2)
-
-    """
-    It comes without a word of warning.
-
-    Manning is on his feet, the rifle up and level, and the muzzle finds the doctor's back as though it had been waiting there all along.
-
-    Baldwin has time only to half turn, grey and uncomprehending.
-
-    There is no thought in what I do.
-
-    There is no time for it.
-
-    I throw myself across the space between them.
-    """
-
-    play sound gun
-
-    pause 0.5
-
-    """
-    The shot takes me instead.
-
-    It is a strange thing, to feel so little at the moment it matters most.
-
-    Only a great dull blow, and the wet earth rising to meet me, and the trees leaning in overhead.
-
-    Baldwin is shouting something I cannot make out.
-
-    Manning has let the rifle fall and stands staring at his own hands.
-
-    I never learned who wrote his letter, nor who wrote mine.
-
-    But the doctor is on his feet, and I am the one in the bracken, and for the length of one failing breath that seems a fair enough bargain.
-    """
-
-    jump broken_ending_shielded
-
-
-# --------------------------------------------
-#   Drunk dialogue while shadowing the western-grove party
-# --------------------------------------------
-label broken_drunk_hunt_burden:
-
-    broken """
-    You have the look of a man with something heavy on his mind, Mr Manning.
-    """
-
-    drunk """
-    Heavy. Ha.
-
-    You have no notion of it, sir. No notion at all.
-    """
-
-    """
-    He takes another pull from the flask, and his gaze drifts, as it always does, to the doctor's back.
-    """
-
-    drunk """
-    Some debts cannot be paid in money. That is all.
-
-    Some debts a man carries to his grave. Or sees carried to another's.
-    """
-
-    """
-    He will say no more than that. Not yet.
-
-    But the way he looks at Baldwin tells me a great deal.
-    """
-
     return
+
 
 
 label broken_drunk_hunt_letter:
@@ -288,7 +213,7 @@ label broken_drunk_hunt_letter:
 
     You as well.
 
-    I thought... I thought it was meant for me alone.
+    That is... strange...
     """
 
     """
@@ -304,9 +229,51 @@ label broken_drunk_hunt_letter:
 
     He is the reason she is in the ground.
 
-    And he walks about this house as though he had never harmed a soul in his life.
+    But he was never condemned for it.
+
+    I cannot let him get away so easily. He has to pay.
     """
 
     $ broken_details.threads.unlock('drunk_letter')
+    
+    """
+    So there it is.
+
+    The same hand that left an old army order upon my pillow left a letter for him, and aimed him at the doctor as it aimed me at the Captain.
+
+    We are not guests at all. We are loaded guns, laid out on a table for someone else to fire.
+
+    Well. I will not go off on command, and I will be damned if I let him do it either.
+    """
+
+    broken """
+    Listen to me, Mr Manning. Listen.
+
+    The same hand wrote your letter and mine. They want a death of us today, and they do not greatly care whose.
+
+    Do not give it to them.
+    """
+
+    drunk """
+    But she... my Margaret...
+    """
+
+    broken """
+    I know. Believe me, I do.
+
+    But the man who has earned your bullet is not in this wood.
+
+    He is the one who held the pen.
+    """
+
+    """
+    Something in him gives way, like a sail when the wind drops.
+
+    The fight goes out of him, and what is left is only a tired and grieving old man, swaying in the bracken.
+
+    I take the rifle gently from his hands, and he lets me.
+    """
+
+
 
     return

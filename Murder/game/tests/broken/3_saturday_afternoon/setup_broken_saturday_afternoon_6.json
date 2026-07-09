@@ -7,12 +7,12 @@
     "choices": [
         {
             "menu": "broken_day2_hunt_menu_party",
-            "selected": "Join the Doctor and Mr Manning instead",
+            "selected": "Join Doctor Baldwin and Samuel Manning instead",
             "redirect": "broken_day2_hunt_drunk"
         },
         {
             "menu": "broken_day2_hunt_menu_company",
-            "selected": "Sit down beside Mr Manning instead",
+            "selected": "Sit down beside Samuel Manning",
             "redirect": "broken_day2_hunt_drunk_manning"
         },
         {

@@ -24,55 +24,101 @@ The letter, the hunt, the surprise the maid could not put a name to.
 Making me follow the captain is probably the goal of whoever organised this.
 So, which group should I join?
 Menu Choice: Join Doctor Baldwin and Samuel Manning instead
-Thomas Moody: Well, if it is the same for everybody, I will go with Doctor Baldwin and Mister Manning.
-The butler gives me a weird look, as if I should have shown preference in going with out host.
-As a way of apologizing, I whisper to her.
-Thomas Moody: I hope you'll forgive me, but I prefer not leave Doctor Baldwin alone with Samuel Manning.
-She nods in agreement and gives me slight smile.
-The Captain inclines his head, plainly relieved to see the back of me.
+Thomas Moody: Well, if it is all the same to everybody, I will go with Doctor Baldwin and Mr Manning.
+The butler gives me an odd look, as if I ought to have shown a preference for our host's party.
+By way of apology, I whisper to him.
+Thomas Moody: I hope you'll forgive me, but I prefer not to leave Doctor Baldwin alone with Samuel Manning.
+He nods in agreement and gives me a slight smile.
 We strike off to the west, the doctor a few paces ahead, Mr Manning weaving along at my side.
 Baldwin is grey and sweating, sunk in some private misery of his own, and pays neither of us any mind.
-And Samuel Manning hands shake so badly he can scarcely hold its weapon.
-And I am so busy observing the both of them, I barely notice the rabbits and pheasants that came our way.
-No wonder none of us shot anything this morning.
-It's empty handed that we settle for lunch.
-Doctor Baldwin settle next to the footman, Samuel Manning is sitting a bit apart.
-None of them seem to want to engage in any kind of conversation.
+Samuel Manning's hands shake so badly he can scarcely hold his weapon.
+And I am so busy observing the pair of them that I barely notice the rabbits and pheasants that come our way.
+No wonder none of us has shot anything this morning.
+We stop for lunch empty-handed.
+Doctor Baldwin settles next to the footman, and Samuel Manning sits a little apart.
+None of them seems eager for conversation.
 Menu Choice: Sit down beside Samuel Manning
-Baldwin may keep his secrets a while longer.
-It is Manning who frightens me, and a frightened man is best kept talking.
-I settle myself beside him in the bracken and offer him a companionable word.
-Menu Choice: Did you find anything odd in your room last night? A letter, perhaps?
-Thomas Moody: Tell me something, Mr Manning, and forgive the strangeness of it.
-Thomas Moody: Did you find anything in your room last night that ought not to have been there?
-Thomas Moody: A letter, perhaps. Left where you could not fail to see it.
+Thomas Moody: Mr Manning, do you mind if I sit here?
+Samuel Manning: Oh, Mr Moody, no, not at all, of course.
+I need to know if I can trust him, so I shouldn't waste time asking trivial questions.
+If I want to know what is happening here, I need to be careful.
+Menu Choice: Tell me more about yourself.
+Thomas Moody: Tell me a little about yourself, Mr Manning.
+Thomas Moody: What is your profession, if you don't mind my asking?
+Samuel Manning: My profession.
+Samuel Manning: Ha.
+Samuel Manning: You are looking at a man of the law, sir.
+Samuel Manning: A barrister.
+Samuel Manning: Or... or what remains of one.
+Thomas Moody: A barrister, no less.
+Thomas Moody: What sort of practice did you keep?
+Samuel Manning: Defence work.
+Samuel Manning: I stood up for men the whole world had already hanged.
+Samuel Manning: Somebody... somebody had to.
+Thomas Moody: And why did you give it up?
+Samuel Manning: Give it up.
+Samuel Manning: Is that what I did.
+Samuel Manning: There were cases, Mr Moody.
+Samuel Manning: Cases that went... that went badly.
+Samuel Manning: The law is a merciless thing when you get it wrong.
+Samuel Manning: Leave it there, will you.
+He takes a long pull from the flask and will not meet my eye.
+A defence barrister.
+An honourable job, but I am not sure it is one worthy of an award.
+Menu Choice: Why were you invited here?
+Thomas Moody: And why were you invited here, Mr Manning?
+Samuel Manning: Well, I took the cases nobody else would touch, you see.
+Samuel Manning: The poor.
+Samuel Manning: The... the desperate.
+Samuel Manning: A man of the people, the papers said.
+Samuel Manning: Somebody has to speak for them, don't they?
+Thomas Moody: That is a fine thing to be honoured for.
+Samuel Manning: Honoured, that is a strong word to describe it.
+And that is also a rather vague reason to be invited here.
+Now that I think of it, so was Thomas's, actually.
+More a general sort of praise than anything tied to a particular event.
+Is the given reason for the award always vague?
+Thomas Moody: Mr Manning, if you do not mind, can you tell me exactly what the letter said?
+Samuel Manning: Letter, what letter? What do you know of a letter?
+Thomas Moody: I mean the invitation letter.
+Samuel Manning: Oh... Right, of course, well, it is like I said.
+Samuel Manning: Due to your commitment to defending the poor and the needy, you were awarded the what's-its-name award.
+Samuel Manning: Nothing special about it.
+Vague reason of course, but what was that hesitation about a letter?
+He clearly has another letter in mind, just as I do.
+Menu Choice: I found something in my room last night. A letter.
+There is one card left to me, and no clever way to play it.
+So I lay it face up on the table.
+Thomas Moody: Mr Manning, I am going to tell you something I have told nobody else in this house.
+Thomas Moody: Last night I found something in my room. A letter.
+Thomas Moody: No signature. Left where I could not fail to find it.
+Thomas Moody: It told me of a wrong done to me by a man under this roof, and it was written to make me hate him.
 The flask stops halfway to his mouth.
 For a moment the drink seems to go clean out of him, and he stares at me as though I had reached into his skull.
-Samuel Manning: How... how could you possibly know that?
-Thomas Moody: Because I found one of my own.
+Samuel Manning: A letter.
+Samuel Manning: You as well.
+Samuel Manning: That is... strange...
 He searches my face, and whatever he finds there undoes him.
 The words come out in a rush, as though he has been holding them since the small hours.
-Samuel Manning: They told me what he did. The doctor.
+Samuel Manning: Mine told me what he did. The doctor.
 Samuel Manning: He treated my Margaret, years ago. Held back the medicine that might have saved her, the very stuff he wanted for himself.
 Samuel Manning: He is the reason she is in the ground.
-Samuel Manning: And he walks about this house as though he had never harmed a soul in his life.
-His letter and mine, cut from the very same cloth.
-A grievance dug up, and sharpened, and pressed into the hand of a broken man, with a target set conveniently near.
-The same author wrote us both.
+Samuel Manning: But he was never condemned for it.
+Samuel Manning: I cannot let him get away so easily. He has to pay.
 So there it is.
-The same hand that slid an old army order beneath my door slid a letter beneath his, and aimed him at the doctor as it aimed me at the Captain.
+The same hand that left an old army order upon my pillow left a letter for him, and aimed him at the doctor as it aimed me at the Captain.
 We are not guests at all. We are loaded guns, laid out on a table for someone else to fire.
 Well. I will not go off on command, and I will be damned if I let him do it either.
 Thomas Moody: Listen to me, Mr Manning. Listen.
-Thomas Moody: Whoever wrote you that letter wrote me one of my own. They want a death of us today, and they do not greatly care whose.
+Thomas Moody: The same hand wrote your letter and mine. They want a death of us today, and they do not greatly care whose.
 Thomas Moody: Do not give it to them.
 Samuel Manning: But she... my Margaret...
 Thomas Moody: I know. Believe me, I do.
 Thomas Moody: But the man who has earned your bullet is not in this wood.
-Thomas Moody: He is the one who put the pen in your hand.
+Thomas Moody: He is the one who held the pen.
 Something in him gives way, like a sail when the wind drops.
 The fight goes out of him, and what is left is only a tired and grieving old man, swaying in the bracken.
 I take the rifle gently from his hands, and he lets me.
-I do not leave his side for the rest of the morning.
-The doctor walks out of the wood at noon, alive, and never once the wiser for how near a thing it was.
+I do not leave his side for the rest of the halt.
+The doctor walks out of the wood that afternoon, alive, and never once the wiser for how near a thing it was.
 A man who was meant to die today is breathing, and a man who was meant to kill him is not a murderer. It is not much. But after this morning, I will take it.

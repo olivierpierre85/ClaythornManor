@@ -7,12 +7,12 @@
     "choices": [
         {
             "menu": "broken_day2_hunt_menu_party",
-            "selected": "Join the Doctor and Mr Manning instead",
+            "selected": "Join Doctor Baldwin and Samuel Manning instead",
             "redirect": "broken_day2_hunt_drunk"
         },
         {
             "menu": "broken_day2_hunt_menu_company",
-            "selected": "Sit down beside Mr Manning instead",
+            "selected": "Sit down beside Samuel Manning",
             "redirect": "broken_day2_hunt_drunk_manning"
         },
         {
@@ -22,8 +22,8 @@
         },
         {
             "menu": "drunk_generic_menu_broken",
-            "selected": "You have the look of a man with something on his mind.",
-            "redirect": "broken_drunk_hunt_burden"
+            "selected": "Why were you invited here?",
+            "redirect": "drunk_generic_heroic_act_broken"
         },
         {
             "menu": "drunk_generic_menu_broken",

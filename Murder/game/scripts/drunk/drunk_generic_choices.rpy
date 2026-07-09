@@ -178,9 +178,9 @@ label drunk_generic_manor_broken:
 
     You mean the forest?
 
-    Well it is a decent spot in the woods I suppose.
+    Well, it is a decent spot in the woods, I suppose.
 
-    Why do yo ask?
+    Why do you ask?
     """
 
     broken """
@@ -190,9 +190,9 @@ label drunk_generic_manor_broken:
     """
 
     drunk """
-    Very grand house that is,
+    Very grand house, that is.
 
-    very impressive.
+    Very impressive.
     """
 
     return
@@ -361,7 +361,7 @@ label drunk_generic_background_broken:
     """
     He takes a long pull from the flask and will not meet my eye.
 
-    A defence barrister
+    A defence barrister.
 
     An honourable job, but I am not sure it is one worthy of an award.
     """
@@ -394,21 +394,21 @@ label drunk_generic_heroic_act_broken:
     """
 
     drunk """
-    Honoured, that is a strong word to  describe it.
+    Honoured, that is a strong word to describe it.
     """
 
     """
     And that is also a rather vague reason to be invited here.
-   
-    Now that I think of it, so was Thomas's actually.
 
-    It was more a general reason that linked to specific event.
+    Now that I think of it, so was Thomas's, actually.
+
+    More a general sort of praise than anything tied to a particular event.
 
     Is the given reason for the award always vague?
     """
 
     broken """
-    Mr Manning, if you do not mind, can you tell me exactly what the letter was saying?
+    Mr Manning, if you do not mind, can you tell me exactly what the letter said?
     """
 
     drunk """
@@ -420,17 +420,17 @@ label drunk_generic_heroic_act_broken:
     """
 
     drunk """
-    Oh... Right of course, well it is like I said.
+    Oh... Right, of course, well, it is like I said.
 
-    Due to you commitment to defending the poor and the needy, you were awarded the What's it's name award.
+    Due to your commitment to defending the poor and the needy, you were awarded the what's-its-name award.
 
     Nothing special about it.
     """
    
     """
-    Vague reason of course, but what was the hesitation about a letter.
+    Vague reason of course, but what was that hesitation about a letter?
 
-    He clearly had another letter in mind, just like myself.
+    He clearly has another letter in mind, just as I do.
     """
 
     $ drunk_details.description_hidden.unlock('heroic_act')
