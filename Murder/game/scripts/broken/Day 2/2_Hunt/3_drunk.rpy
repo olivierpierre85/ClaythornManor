@@ -63,7 +63,7 @@ label broken_day2_hunt_drunk:
     $ time_left = 60
     call run_menu(
         TimedMenu("broken_day2_hunt_menu_company", [
-            TimedMenuChoice("Draw Doctor Baldwin into talk", 'broken_day2_hunt_drunk_doctor', early_exit=True),
+            TimedMenuChoice("Talk to Doctor Baldwin", 'broken_day2_hunt_drunk_doctor', early_exit=True),
             TimedMenuChoice("Sit down beside Samuel Manning", 'broken_day2_hunt_drunk_manning', early_exit=True),
             TimedMenuChoice("Keep to yourself", 'generic_cancel', early_exit=True),
         ], image_left = "doctor", image_right = "drunk"))
@@ -103,10 +103,6 @@ label broken_day2_hunt_drunk_doctor:
 #   talked down; fail to, and the grove takes Broken in the doctor's place.
 # --------------------------------------------
 label broken_day2_hunt_drunk_manning:
-
-    """
-    Despite an initial reluctance, I feel like it is a good opportunity to get information from Samuel Manning while we are alone.
-    """
 
     broken """
     Mr Manning, do you mind if I sit here?

@@ -22,6 +22,8 @@ For the progress view, just say you can explore it and the other tutorials start
 ----------------------------------------------------------
 Chages for consistency:
    - Rethink the letter to the captain to comply more with the Journalist story
+  
+GARDEN and entrance same on map but not on pictures?
 
 Servant stairs as last room => needs testing for other characters
 

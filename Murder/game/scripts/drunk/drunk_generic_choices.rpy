@@ -197,8 +197,7 @@ label drunk_generic_manor_broken:
 
     return
 
-
-label drunk_generic_age:
+label drunk_generic_age_broken_intro:
 
     drunk """
     How old am I?
@@ -210,14 +209,35 @@ label drunk_generic_age:
     Fifty-five years and... and not a thing to show for it.
     """
 
+    return
+
+
+label drunk_generic_age_nurse:
+
+    call drunk_generic_age_broken_intro
+
     """
+    I would have guessed much older that that, but alcohol can ravage a man's body.
+
     He empties his glass.
 
     Then he waves to the footman for another one.
+    """
 
+    $ drunk_details.description_hidden.unlock('age')
+
+    return
+
+label drunk_generic_age_broken:
+
+    call drunk_generic_age_broken_intro
+
+    """
     Fifty-five years.
 
     Yet he looks a great deal older.
+
+    He takes a sip from his flask.
     """
 
     $ drunk_details.description_hidden.unlock('age')
@@ -374,19 +394,43 @@ label drunk_generic_heroic_act_broken:
     """
 
     drunk """
-    Honoured.
-
-    Ha.
-
-    Don't go putting it in the papers.
+    Honoured, that is a strong word to  describe it.
     """
 
     """
-    That is a rather vague description, as was Thomas's actually.
+    And that is also a rather vague reason to be invited here.
+   
+    Now that I think of it, so was Thomas's actually.
 
-    Now that I think of it, I don't think I have linked anyone to a particular act of heroism.
+    It was more a general reason that linked to specific event.
 
-    That is someone worth thinking about.
+    Is the given reason for the award always vague?
+    """
+
+    broken """
+    Mr Manning, if you do not mind, can you tell me exactly what the letter was saying?
+    """
+
+    drunk """
+    Letter, what letter? What do you know of a letter?
+    """
+
+    broken """
+    I mean the invitation letter.
+    """
+
+    drunk """
+    Oh... Right of course, well it is like I said.
+
+    Due to you commitment to defending the poor and the needy, you were awarded the What's it's name award.
+
+    Nothing special about it.
+    """
+   
+    """
+    Vague reason of course, but what was the hesitation about a letter.
+
+    He clearly had another letter in mind, just like myself.
     """
 
     $ drunk_details.description_hidden.unlock('heroic_act')
