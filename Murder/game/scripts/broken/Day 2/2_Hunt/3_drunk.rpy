@@ -70,62 +70,56 @@ label broken_day2_hunt_drunk:
             TimedMenuChoice("Keep to yourself", 'generic_cancel', early_exit=True),
         ], image_left = "doctor", image_right = "drunk"))
 
+    """
+    Lunch is over and the footman advises us to go back to hunting.
+
+    None of us seems particularly enthusiastic about it, but we go on anyway.
+    """
+
     if not broken_details.threads.is_unlocked('drunk_letter'):
 
         # If you don't make the drunk confess about the letter, you get killed
 
+        pause 1.0
+
         $ play_music('danger', 2)
 
         """
-        It comes without a word of warning.
+        This afternoon is no more successful than the morning.
 
-        Manning is on his feet, the rifle up and level, and the muzzle finds the doctor's back as though it had been waiting there all along.
+        We walk for a while without encountering anything, until a small rabbit appears in front of us.
+        """
 
-        The hands that trembled all morning are suddenly, terribly steady.
+        drunk """
+        Oh, a rabbit!
+        """
 
-        Baldwin has time only to half turn, grey and uncomprehending.
+        """
+        Samuel Manning raises his gun and tries to aim at the animal, but his aim is terribly off, and his rifle points towards Doctor Baldwin.
+        """
 
-        There is no thought in what I do.
+        broken """
+        Watch out!
+        """
 
-        There is no time for it.
-
-        I throw myself across the space between them.
+        """
+        Instinctively, I jump towards the rifle to redirect the shot.
         """
 
         play sound gun
 
         pause 0.5
 
-        """
-        The shot takes me instead.
-
-        It is a strange thing, to feel so little at the moment it matters most.
-
-        Only a great dull blow, and the wet earth rising to meet me, and the trees leaning in overhead.
-
-        Baldwin is shouting something I cannot make out.
-
-        Manning has let the rifle fall and stands staring at his own hands, as though they are some other man's.
-
-        A letter sent me into this wood hating Captain Sinha. Too late, I wonder what was sent to him.
-
-        Somebody loaded that poor devil like a gun. I would stake my life on it.
-
-        I suppose I just have.
-
-        But the doctor is on his feet, and I am the one in the bracken, and for the length of one failing breath that seems a fair enough bargain.
-        """
-
         jump broken_ending_shielded
 
     # Only way to survive, make the drunk confess about the letter
 
     """
-    I do not leave his side for the rest of the halt.
+    I do not leave Samuel Manning's side for the rest of the halt.
 
-    The doctor walks out of the wood that afternoon, alive, and never once the wiser for how near a thing it was.
+    I am afraid he will change his mind before the end of the hunt, but he does not.
 
-    A man who was meant to die today is breathing, and a man who was meant to kill him is not a murderer. It is not much. But after this morning, I will take it.
+    The doctor walks out of the wood that afternoon, alive, and without a clue about the fate he avoided.
     """
 
     jump broken_day2_evening
@@ -187,19 +181,17 @@ label broken_day2_hunt_drunk_manning:
 label broken_drunk_hunt_letter:
 
     """
-    There is one card left to me, and no clever way to play it.
-
-    So I lay it face up on the table.
+    No more questions now.
+    
+    If I want to move things forward, I will have to be blunt and take a risk.
     """
 
     broken """
-    Mr Manning, I am going to tell you something I have told nobody else in this house.
+    Mr Manning, last night I found something in my room, left there for me to see.
+    
+    An old army order.
 
-    Last night I found something in my room. A letter.
-
-    No signature. Left where I could not fail to find it.
-
-    It told me of a wrong done to me by a man under this roof, and it was written to make me hate him.
+    It told me that Captain Sinha was responsible for the death of someone dear to me.
     """
 
     """
@@ -209,49 +201,41 @@ label broken_drunk_hunt_letter:
     """
 
     drunk """
-    A letter.
-
     You as well.
 
     That is... strange...
     """
 
     """
-    He searches my face, and whatever he finds there undoes him.
-
-    The words come out in a rush, as though he has been holding them since the small hours.
+    He hesitates for a second, then decides he can trust me.
     """
 
     drunk """
-    Mine told me what he did. The doctor.
+    Mine told me what he did.
+
+    The doctor.
 
     He treated my Margaret, years ago. Held back the medicine that might have saved her, the very stuff he wanted for himself.
 
     He is the reason she is in the ground.
 
+    He is the cause of my misery.
+
     But he was never condemned for it.
 
-    I cannot let him get away so easily. He has to pay.
+    I cannot let him get away so easily.
+
+    He has to pay.
     """
 
-    $ broken_details.threads.unlock('drunk_letter')
-    
-    """
-    So there it is.
-
-    The same hand that left an old army order upon my pillow left a letter for him, and aimed him at the doctor as it aimed me at the Captain.
-
-    We are not guests at all. We are loaded guns, laid out on a table for someone else to fire.
-
-    Well. I will not go off on command, and I will be damned if I let him do it either.
-    """
+    $ drunk_details.threads.unlock('wife')    
 
     broken """
     Listen to me, Mr Manning. Listen.
 
-    The same hand wrote your letter and mine. They want a death of us today, and they do not greatly care whose.
+    The same person gave us those letters. They clearly meant to manipulate us.
 
-    Do not give it to them.
+    Do not let them.
     """
 
     drunk """
@@ -261,19 +245,55 @@ label broken_drunk_hunt_letter:
     broken """
     I know. Believe me, I do.
 
-    But the man who has earned your bullet is not in this wood.
+    I also lost someone close to me.
 
-    He is the one who held the pen.
+    But first, are we sure they are the right men?
+
+    I have received an official order, but it could have been fabricated.
+
+    And you, are you certain Daniel Baldwin is the same man who treated your wife years ago?
+    """
+
+    drunk """
+    Yes, I think it's him.
+
+    But it was a long time ago, my memory is not so good now.
+
+    And doctors, they tend to all look the same.
+
+    I can't say for sure now.
+    """
+
+    broken """
+    That's right, we cannot be sure now.
+
+    Please do not do anything hasty.
+
+    Let us search for more information first.
+
+    You do not want to do something you might regret later.
     """
 
     """
-    Something in him gives way, like a sail when the wind drops.
-
-    The fight goes out of him, and what is left is only a tired and grieving old man, swaying in the bracken.
-
-    I take the rifle gently from his hands, and he lets me.
+    He looks intently at me, and I can see a part of him is relieved not to have to go through with his plan.
     """
 
+    drunk """
+    Fine, I'll let him live, for now.
 
+    But you need to prove that he is not the same doctor, otherwise...
+    """
+
+    broken """
+    Understood. I'll get to the bottom of it, I assure you.
+    """
+
+    """
+    He grumbles something of an agreement, and returns to his drinking.
+
+    The conversation is over and it might have saved a man's life.
+    """
+
+    $ broken_details.threads.unlock('drunk_letter')
 
     return

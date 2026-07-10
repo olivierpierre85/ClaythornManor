@@ -31,6 +31,8 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ### Write Story: NEXT => Broken
 
+- ADD MORE MORE questions in the generic menus (Doctor, Drunk, host) to confuse the player and make the game more challenging.
+
 - Test the changing MALUS and the whole Broken branching logic.
 
 - **Broken is well suited to uncovering the Host**, but at the moment the Captain is the one who does it.
