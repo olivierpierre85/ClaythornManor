@@ -111,7 +111,31 @@ label broken_ending_day1_throat_cut:
     jump ending_generic
 
 
-# SATURDAY NIGHT — slept while the butler put the manor to the torch
+# SATURDAY DINNER — the rat poison left in the scullery found its way into
+# the meal (no found_poison)
+label broken_ending_poisoned:
+
+    $ broken_details.endings.unlock('poisoned')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('poisoned'))
+
+    call death_screen_transition
+
+    $ play_music('mysterious')
+
+    """
+    You never rise from the table.
+
+    Every guest at that dinner was served from the same bottles, and not one of you saw morning.
+
+    An open bottle of rat poison stood in plain sight below stairs on your very first night.
+
+    You walked past it, and left it where a murderer could reach it.
+    """
+
+    jump ending_generic
+
+
+# SATURDAY NIGHT — nobody kept watch, and the manor was put to the torch
 label broken_ending_burned:
 
     $ broken_details.endings.unlock('burned')
@@ -126,9 +150,9 @@ label broken_ending_burned:
 
     By morning Claythorn Manor is a shell of blackened stone, and every question you meant to ask has gone up with it.
 
-    You felt all day that something in this house was wrong, yet you found nothing solid enough to keep you from your bed.
+    You knew the danger, and you faced the night alone, and one man cannot watch a whole house.
 
-    Perhaps you walked past it, somewhere below stairs, on your very first night.
+    Perhaps, had you knocked on every door and set the household to guard one another, someone would have raised the alarm in time.
     """
 
     jump ending_generic

@@ -1,0 +1,22 @@
+{
+    "start_label": "broken_day2_evening",
+    "unlocked_threads": [
+        "talked_to_maid",
+        "host_lies",
+        "drunk_letter",
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day2_evening_menu_dinner",
+            "selected": "Keep my own counsel",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Turn in for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

@@ -12,9 +12,10 @@
 #       - Gone  : Lady Claythorn and all the staff (left by motor car in the night)
 #       - Dead  : Lad (Ted Harring)
 #
-#   Reached only from broken_day2_evening (found_poison path, the night vigil).
-#   Broken saw the car leave at four in the morning, so the empty manor is a
-#   confirmation for him, not a discovery.
+#   Reached only from broken_day2_evening (found_poison + gather_everyone:
+#   the household kept watch through the night). Broken had the small-hours
+#   watch and saw the car leave at four in the morning, so the empty manor
+#   is a confirmation for him, not a discovery.
 #
 #   Structure:
 #       - The empty house: cold grates, the butler's keys left by the door,
@@ -40,9 +41,9 @@ label broken_day3_morning:
     $ play_music('mysterious', 2)
 
     """
-    Dawn comes grey and slow, and I am there to meet it, stiff in my chair with the poison bottle still standing sentry on the table.
+    Dawn comes grey and slow, and I am there to meet it, stiff in my watch chair at the head of the stairs.
 
-    Nobody has tried my door.
+    Nobody has tried a single door on my watch.
 
     Nobody has needed to. They simply left.
 

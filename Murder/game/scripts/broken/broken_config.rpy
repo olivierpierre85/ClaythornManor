@@ -30,10 +30,16 @@ label init_broken:
             "day1_evening_downstairs_refused" : False,
             "day1_evening_wearing_livery" : False,
 
-            # Evening day 2 (found_poison path)
-            "day2_evening_billiard_room_visited" : False,
-            "day2_evening_billiard_captain_approached" : False,
-            "day2_evening_billiard_drunk_approached" : False,
+            # Evening day 2 (the night map and the gathering)
+            "day2_evening_tea_room_visited" : False,
+            "day2_evening_tea_captain_approached" : False,
+            "day2_evening_tea_drunk_approached" : False,
+            "day2_evening_watch_agreed" : False,
+            "day2_evening_called_doctor" : False,
+            "day2_evening_called_psychic" : False,
+            "day2_evening_called_nurse" : False,
+            "day2_evening_called_host" : False,
+            "day2_evening_phone_tried" : False,
         }
 
         broken_important_choices = CharacterImportantChoiceList([
@@ -52,6 +58,14 @@ label init_broken:
                 image_file="talked_to_maid",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening'],
+            ),
+            CharacterInformation(
+                0, "gather_everyone",
+                "You called on every guest and arranged a watch for the night",
+                content_negative="You didn't gather the others to keep watch through the night",
+                image_file="lord",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
             CharacterInformation(
                 0, "left_together",
@@ -117,6 +131,7 @@ label init_broken:
             CharacterInformation(1, "strangled", "Someone strangled you from behind in the woods", image_file="strangled_woods", chapters=['saturday_afternoon']),
             CharacterInformation(1, "shot", "The butler shot you down after you killed captain Sinha", image_file="hunting_rifle", chapters=['saturday_afternoon']),
             CharacterInformation(1, "shielded", "You threw yourself in front of Doctor Baldwin and took Manning's bullet in the western grove", image_file="hunting_rifle", chapters=['saturday_afternoon']),
+            CharacterInformation(1, "poisoned", "You were poisoned at dinner along with every other guest", image_file="rat_poison", chapters=['saturday_evening']),
             CharacterInformation(1, "burned", "You burned in your sleep when the manor was set alight", image_file="manor_burns", chapters=['saturday_evening']),
             CharacterInformation(2, "ambushed", "You and the Captain were shot down on the road to the village", image_file="shot_from_behind_i", is_intuition=True, chapters=['sunday_afternoon']),
             CharacterInformation(3, "walked_out", "You led everyone out of the manor together and reached the police station", image_file="leave_manor", chapters=['end']),

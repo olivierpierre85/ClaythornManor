@@ -3,13 +3,26 @@
 #
 #   Saturday - Evening (after the hunt)
 #
-#   15:00 -> 23:00
+#   15:00 -> 23:30
 #
 #   Music: chill, mysterious, sad, scary
 #
 #   Position
 #       - House : Lady Claythorn, Captain, Doctor, Mr Manning, Miss Baxter, Miss Marsh, Broken (+ staff)
 #       - Dead  : Lad (Ted Harring)
+#
+#   Structure:
+#       - Return from the hunt; the police are delayed by a fallen tree
+#       - Quiet dinner (only the hostess within talking distance)
+#       - Gate 1, at dinner: without found_poison (the scullery bottle stayed
+#         where the killer left it) the meal is poisoned and everyone
+#         collapses -> broken_ending_poisoned
+#       - Night map (0_map_choices.rpy): call on every bedroom, and find the
+#         Captain and Mr Manning in the tea room (2_tea_room.rpy) to arrange
+#         a watch -> unlocks gather_everyone
+#       - Gate 2, at night: without gather_everyone the manor is set alight
+#         while everyone sleeps -> broken_ending_burned; with it the watch
+#         holds, Broken sees the motor car leave at four -> broken_day3_morning
 # --------------------------------------------
 label broken_day2_evening:
 
@@ -24,13 +37,13 @@ label broken_day2_evening:
     $ change_room('entrance_hall', dissolve)
 
     """
-    We come back to the manor, exhausted and and quiet.
+    We come back to the manor, exhausted and quiet.
 
     The butler takes our rifle back to the gun room.
 
     He looks distraught for some reason.
 
-    Miss Baxter and Miss Marsh are in the hall to meet us.
+    Lady Claythorn, Miss Baxter and Miss Marsh are in the hall to meet us.
     """
 
     psychic """
@@ -38,35 +51,37 @@ label broken_day2_evening:
     """
 
     captain """
-    We had a nice day out in the woods, but sadly we are coming back empty handed.
+    We had a nice day out in the woods, but sadly we are coming back empty-handed.
     """
 
     host """
-    These things happen captain.
-    
+    These things happen, Captain.
+
     No need to worry, we didn't rely on this hunt for our dinner tonight.
     """
 
     captain """
-    Of course, I did not want to imply we were, I am sure the dinner will be lovely.
+    Of course, I did not want to imply we were.
+
+    I am sure the dinner will be lovely.
     """
 
     broken """
-    By the way, has the police arrived yet?
+    By the way, have the police arrived yet?
     """
 
     nurse """
-    No, nobody came yet.
+    No, nobody has come yet.
 
     But they should arrive soon.
     """
 
     host """
     I am sure they will.
-    
-    In the meantime, we can all take the opportunity to go get change.
 
-    We can rejoin for dinner at the usual time.
+    In the meantime, we can all take the opportunity to go and change.
+
+    We can gather again for dinner at the usual time.
     """
 
     $ change_room('bedroom_broken', dissolve)
@@ -74,35 +89,35 @@ label broken_day2_evening:
     call change_time(17, 00)
 
     """
-    I return to my room to change, and take the opportunity of the alone time to think.
+    I return to my room to change, and take the opportunity of a moment alone to think.
 
     I am still not sure what is happening here.
 
-    All I know is that this whole event is a lie, but cannot figure what it's ultimate goal.
+    All I know is that this whole event is a lie, but I cannot make out its ultimate goal.
 
     But the letters left for Thomas and Samuel Manning leave no doubt.
 
-    We are all in danger here. 
+    We are all in danger here.
 
     Maybe I should stop treating this like a story, and run while I still have the time.
 
     I really hope the police will arrive soon, and put an end to this madness.
 
     The police.
-    
-    A though occurs to me, am I really sure they will come?
+
+    A thought occurs to me, am I really sure they will come?
 
     The host didn't seem surprised they were not there yet.
 
-    But I would assume that when a unnatural death is reported, they would come at once.
+    But I would assume that when an unnatural death is reported, they would come at once.
 
     And I know that Lady Claythorn is lying and hiding something.
 
     She is obviously very suspicious here, I shouldn't trust whatever she said.
 
-    So maybe I should check myself. 
-    
-    The phone is the entrance hall, I should try it as soon as I have the opportunity.
+    So maybe I should check for myself.
+
+    The telephone is in the entrance hall, I should try it as soon as I have the opportunity.
 
     I sit on my bed, and try to think of what I should do.
     """
@@ -115,7 +130,6 @@ label broken_day2_evening:
     I am still deep in my thoughts when the gong rings.
     """
 
-
     $ change_room('dining_room', irisout)
 
     $ play_music('sad', 2)
@@ -123,7 +137,7 @@ label broken_day2_evening:
     """
     We all take our usual seats around the dining table.
 
-    I glance at Ted Harring empty chair, and think it could have been worse had not intervene with Samuel Manning.
+    I glance at Ted Harring's empty chair, and think it could have been worse had I not intervened with Samuel Manning.
 
     Lady Claythorn rises to address us.
     """
@@ -133,7 +147,7 @@ label broken_day2_evening:
 
     This isn't how I imagined our weekend.
 
-    Neverthless, I hope you enjoyed today's activities.
+    Nevertheless, I hope you enjoyed today's activities.
 
     Tomorrow, if the weather allows it, a game of croquet will be held in the garden, followed by an outdoor lunch.
 
@@ -145,39 +159,33 @@ label broken_day2_evening:
     """
 
     broken """
-    Excuse me Lady Claythorn, if I may, can I ask if you received news from the police?
+    Excuse me, Lady Claythorn, if I may, have you received any news from the police?
     """
 
     host """
-    Right, we phoned to the police station moments ago.
+    Right, I forgot to tell you.
+
+    We telephoned the police station moments ago.
 
     I am afraid they won't be coming today.
     """
 
-    captain """
-    What!? Why not?
-    """
+    call common_day2_evening_police_tree_explanation
 
     host """
-    They were on their way but encountered a huge tree blocking the road.
-    
-    They couldn't get past it.
-    
-    They said they'll be back tomorrow with assistance.
-
     But you should not worry, I am sure everything will be sorted tomorrow morning.
     """
 
     """
-    The police won't come, as I feared.
+    The police won't come, just as I feared.
 
-    One more reason to be cautious today.
+    One more reason to be cautious tonight.
 
-    The dinner comes quickly after that.
+    The meal is served quickly after that.
 
     Everyone is rather quiet and I do not feel like talking either.
 
-    But if I keep quiet, it could be seen as rude, or even suspicious.
+    But if I don't engage with our host, it could be seen as rude, or even suspicious.
     """
 
     call change_time(19, 30)
@@ -191,155 +199,162 @@ label broken_day2_evening:
 
     call change_time(21, 00)
 
+    if not broken_details.threads.is_unlocked('found_poison'):
+
+        # The bottle of rat poison stayed in the scullery, and tonight it has
+        # found its way into the dinner. Everyone is poisoned; he collapses
+        # among the first.
+        $ stop_music()
+
+        """
+        The wine goes round a last time, and I let the footman fill my glass.
+
+        It is Miss Marsh who falters first. Her spoon stops halfway to her lips, and her face goes the colour of the tablecloth.
+
+        Then a heat rises in my own chest, and the room tilts.
+
+        Across the table the Captain is on his feet, swaying, one hand knotted in the cloth.
+
+        Somebody's glass breaks. Somebody screams. The sounds reach me from a long way off.
+
+        My legs give before I can reach the door.
+
+        The last thing I see is our hostess rising from her chair, and I cannot tell if she is screaming too.
+        """
+
+        jump broken_ending_poisoned
+
     """
     The dinner ends as quietly as it began.
 
     Lady Claythorn wishes us each a good night, and the party rises from the table without ceremony.
+
+    The others drift towards the stairs and I follow them.
     """
 
-    if broken_details.threads.is_unlocked('found_poison'):
+    $ change_room('bedroom_broken', dissolve)
 
-        jump broken_day2_evening_stay_awake
+    call change_time(21, 15)
 
-    jump broken_day2_evening_retire
+    $ stop_music()
 
+    """
+    I lock my door, and take a moment to think of what to do.
 
-# --------------------------------------------
-#   FOUND THE POISON - he refuses to sleep and presses on
-# --------------------------------------------
-label broken_day2_evening_stay_awake:
+    I know Lady Claythorn is not to be trusted, she has probably conspired to hurt Captain Sinha, as well as Doctor Baldwin.
 
+    And Ted Harring's death is probably not accidental either.
+
+    Whatever is happening here, nobody is safe.
+
+    If I don't do anything, I am afraid some of us might not survive the night.
+
+    But leaving now is impossible, even if there were nothing wrong with the road.
+
+    I doubt Lady Claythorn will just lend us her car.
+
+    But what could I do?
+
+    First, I have opened up to Samuel Manning, he is the one person I feel I could trust tonight.
+
+    Doctor Baldwin and Captain Sinha were both intended victims, so logically, I could trust them as well.
+
+    Logically.
+
+    But everything is so twisted I am not sure of anything right now.
+    """
+
+    """
+    Then it comes to me that thinking is not what this night needs.
+
+    If nobody is safe alone, then nobody should be alone. It is as simple as that.
+
+    I shall knock on every door in this house if I must, and put a watch on the night.
+
+    Manning and the Captain first, if they are still up.
+
+    And there is the telephone in the entrance hall to try along the way.
+    """
+
+    # Night map: call on the bedrooms (most won't answer, some hide) and find
+    # the Captain and Mr Manning in the tea room. Warning the pair AND calling
+    # at every occupied door unlocks gather_everyone (see 0_map_choices.rpy).
     $ play_music('mysterious', 2)
-
-    """
-    The others drift towards the stairs and the billiard room, and I stand a moment in the hall with my hand on the banister.
-
-    I am tired to the bone, and a bed has rarely argued its case so well.
-
-    But the bottle sits in my coat like a stone.
-
-    Harring drank in this house, and slept in this house, and did not wake.
-
-    Whoever left that poison on a shelf has had a full day to find a new use for it, and here we all are, being wished a good night and sent up to our beds.
-
-    No.
-
-    Tonight I do not sleep.
-
-    There is a man in the billiard room who has lost his taste for drink, a staff below stairs hired for one weekend only, and questions enough between them to keep me up until dawn.
-
-    Time to go to work.
-    """
-
-    $ change_room('entrance_hall')
 
     call change_time(21, 30)
 
-    $ time_left = 90
+    $ time_left = 120
 
     call run_menu(broken_details.saved_variables["day2_evening_map_menu"])
 
-    call change_time(23, 00)
-
-    $ stop_music()
-
-    """
-    The house has gone quiet around me, room by room.
-
-    I have seen what there is to see for one night, and the hardest part of it still lies ahead.
-
-    Staying awake until morning.
-    """
+    call change_time(23, 30)
 
     $ change_room('bedroom_broken', dissolve)
 
-    $ play_music('mysterious', 2)
+    $ stop_music()
+
+    if not broken_details.threads.is_unlocked('gather_everyone'):
+
+        # He never gathered the others: the house sleeps unguarded, and the
+        # manor is set alight in the night.
+        """
+        The house is dark, and every man and woman in it is shut away alone behind their own door.
+
+        I meant to do more. The night ran out before my nerve found its feet.
+
+        I sit against the headboard, meaning to keep my eyes open until morning.
+
+        I do not manage it.
+        """
+
+        $ play_music('scary')
+
+        play sound fire loop
+
+        """
+        Somewhere very far away, glass breaks.
+
+        I swim up towards waking and do not reach it.
+
+        The room is warm. The dark has a taste to it now, thick and bitter.
+
+        Smoke.
+
+        My body understands before my mind does, but my arms are lead, and the door is a mile away across the carpet.
+
+        The last thing I know is the line of light beneath it. Bright, and orange, and moving.
+        """
+
+        jump broken_ending_burned
+
+    # gather_everyone path: the watch holds through the night.
+    """
+    The watches are set.
+
+    Captain Sinha takes the first, with Mr Manning for company, posted on the landing where every bedroom door can be seen.
+
+    The ladies are barred in their rooms, and the doctor sleeps his heavy sleep behind his own locked door.
+
+    Mine is the dead stretch, from two o'clock until dawn.
+
+    I sleep in my clothes, three grey hours of half-sleep, and take my chair out to the landing when Manning taps at my door.
+    """
+
+    pause 1
 
     """
-    I go up to my room at last, and I do not undress.
+    Some time past four, sounds rise from below.
 
-    I set the chair where it commands the door, stand the poison bottle on the table where I can see it, and turn the lamp down low.
+    Quiet feet on the gravel, a door eased shut, and then the cough of a motor car.
 
-    The house settles around me, board by board.
+    From the landing window I watch its lamps slide away down the drive until the dark takes them.
 
-    I have sat up all night for a story before. Never for my life.
-    """
+    So much for the tree across the road.
 
-    call wait_screen_transition()
-
-    """
-    Some time past four, when the dark is at its thickest, I hear it.
-
-    Not a footstep. An engine.
-
-    I put out the lamp and go to the window.
-
-    Below, on the drive, the motor car rolls away from the house with its lamps unlit, the gravel crackling soft under its wheels.
-
-    It does not hurry.
-
-    I watch its shape sink into the black of the trees, and I cannot see who is inside.
-
-    But no household slips away from its own guests in the dead of night, lamps out, unless the next part of the programme is one it would rather not be present for.
-
-    Morning cannot come quickly enough.
+    Nobody else stirs. I hold my post, and wait for the grey of morning.
     """
 
     jump broken_day3_morning
-
-
-# --------------------------------------------
-#   NO POISON - he retires, and the manor burns in the night
-# --------------------------------------------
-label broken_day2_evening_retire:
-
-    """
-    The others drift towards the stairs and the billiard room, and I stand a moment in the hall, weighing the evening.
-
-    Something in me does not care for any of it. The road, the letters, the empty chair at dinner.
-
-    But it is a feeling only, with nothing solid beneath it, and I have been carrying another man's face since Friday.
-
-    I am wrung dry.
-
-    The police come tomorrow. Whatever I mean to do about any of it, I shall do it better for a night's sleep.
-    """
-
-    $ change_room('bedroom_broken', dissolve)
-
-    call change_time(22, 30)
-
-    $ stop_music()
-
-    """
-    I lock my door, and take off the mask, and the face underneath it is more tired than the one on top.
-
-    The wine has made my limbs heavy and my thoughts slow.
-
-    Sleep takes me before I have finished deciding to allow it.
-    """
-
-    call wait_screen_transition()
-
-    $ play_music('scary')
-
-    play sound fire loop
-
-    """
-    Somewhere very far away, glass breaks.
-
-    I swim up towards waking and do not reach it.
-
-    The room is warm. The dark has a taste to it now, thick and bitter.
-
-    Smoke.
-
-    My body understands before my mind does, but my arms are lead, and the door is a mile away across the carpet.
-
-    The last thing I know is the line of light beneath it. Bright, and orange, and moving.
-    """
-
-    jump broken_ending_burned
 
 
 # ------------------------------------
@@ -355,18 +370,10 @@ label broken_day2_dinner_host:
 
     host """
     You are kind to say so, Mr Moody.
-
-    A hostess is not permitted a difficult day. She may only have busy ones.
     """
 
-    broken """
-    Well said.
-
-    Then I hope you will forgive me for adding to it with a little conversation.
     """
-
-    host """
-    That part of it, Mr Moody, is no burden at all.
+    I could ask her more questions, but I feel I have learned what I needed to know about her.
     """
 
     call host_generic

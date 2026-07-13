@@ -1,71 +1,130 @@
 # ------------------------------------
-#   BILLIARD ROOM - Saturday night (found_poison path)
+#   TEA ROOM - Saturday night
 #
-#   Present: Captain Sinha (drinking soda water) and a sober Mr Manning.
-#   The ladies and the doctor have retired, and the butler's corner stands
-#   empty - the staff are already preparing their departure in the night.
+#   Present: Captain Sinha (reading by the lamp, a soda water at his elbow)
+#   and Mr Manning (drinking, but holding the line). The ladies and the
+#   doctor have gone up, and no staff are anywhere to be seen.
 #
-#   The Captain's talk seeds Sunday: if the police have not come by morning,
-#   he means to walk to the village himself.
+#   The important business of the night happens here: laying his fears
+#   before the pair of them and proposing the watch
+#   (broken_day2_evening_propose_watch -> day2_evening_watch_agreed, one of
+#   the two conditions of gather_everyone).
+#
+#   The Captain's talk also seeds Sunday: if the police have not come by
+#   morning, he means to walk to the village himself.
 # ------------------------------------
-label broken_day2_evening_billiard_room:
+label broken_day2_evening_tea_room_scene:
 
-    $ change_room('billiard_room')
+    $ change_room('tea_room')
 
-    if not broken_details.saved_variables['day2_evening_billiard_room_visited']:
+    if not broken_details.saved_variables['day2_evening_tea_room_visited']:
 
-        $ broken_details.saved_variables['day2_evening_billiard_room_visited'] = True
+        $ broken_details.saved_variables['day2_evening_tea_room_visited'] = True
 
         """
-        The billiard room is a far quieter gathering than it was last night.
+        The tea room is not empty after all.
 
-        Captain Sinha stands by the fire with a glass of soda water. Mr Manning has taken the chair furthest from the bar, which tells its own story.
+        Captain Sinha sits in the good light with a book open on his knee and a glass of soda water at his elbow.
 
-        Of the ladies and the doctor there is no sign.
+        Mr Manning has the chair nearest the bar, and a glass of something that is not soda water stands guard beside him.
 
-        And for the first time this weekend, the butler's corner stands empty.
-
-        No one is serving. The bottles wait abandoned on the bar.
-
-        A billiard room without a servant in it, in a house like this, is a small wrongness all of its own.
+        No butler, no footman. The two of them have poured for themselves like men in a railway waiting room.
         """
-
-        $ broken_day2_evening_billiard_menu = TimedMenu("broken_day2_evening_billiard_menu", [
-            TimedMenuChoice('Join Captain Sinha by the fire', 'broken_day2_evening_billiard_captain', 0, keep_alive = True, next_menu = 'broken_captain_night_menu'),
-            TimedMenuChoice('Sit with Mr Manning', 'broken_day2_evening_billiard_drunk', 0, keep_alive = True, next_menu = 'broken_drunk_night_menu'),
-            TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
-        ])
 
     else:
+
         # Reset menu
-        $ broken_day2_evening_billiard_menu.early_exit = False
+        $ broken_day2_evening_tea_menu.early_exit = False
 
         """
-        I look in on the billiard room again.
+        I look in on the tea room again.
 
-        The fire has burned lower, and nobody has fed it.
+        The Captain has not turned many pages. Mr Manning's glass is no emptier than it was.
         """
 
-    call run_menu(broken_day2_evening_billiard_menu)
+    $ broken_day2_evening_tea_menu = TimedMenu("broken_day2_evening_tea_menu", [
+        TimedMenuChoice('Join Captain Sinha and his book', 'broken_day2_evening_tea_captain', 0, keep_alive = True, next_menu = 'broken_captain_night_menu'),
+        TimedMenuChoice('Sit with Mr Manning', 'broken_day2_evening_tea_drunk', 0, keep_alive = True, next_menu = 'broken_drunk_night_menu'),
+        TimedMenuChoice('Lay your fears before them and propose a watch', 'broken_day2_evening_propose_watch', 20, keep_alive = True, condition = "not broken_details.saved_variables['day2_evening_watch_agreed']"),
+        TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+    ])
+
+    call run_menu(broken_day2_evening_tea_menu)
 
     return
 
 
 # ------------------------------------
-#   CAPTAIN SINHA (by the fire)
+#   THE WATCH PROPOSAL
 # ------------------------------------
-label broken_day2_evening_billiard_captain:
+label broken_day2_evening_propose_watch:
 
-    if not broken_details.saved_variables['day2_evening_billiard_captain_approached']:
+    $ broken_details.saved_variables['day2_evening_watch_agreed'] = True
 
-        $ broken_details.saved_variables['day2_evening_billiard_captain_approached'] = True
+    """
+    I draw a chair between the two of them, and I do not dress it up.
+
+    Ted Harring dead without a mark. The letters. The staff packing in the dark, the telephone, the tree across the road.
+
+    And my belief, plainly stated, that someone under this roof does not intend all of us to see Monday.
+    """
+
+    captain """
+    You are proposing a watch.
+    """
+
+    broken """
+    I am proposing that nobody in this house spends tonight alone and asleep at the same time.
+
+    Watches in turn, on the landing, where every door can be seen.
+
+    And the ladies and the doctor warned to lock themselves in.
+    """
+
+    """
+    The Captain closes his book without marking the page.
+    """
+
+    captain """
+    In Burma we called it a stand-to, and I have never once regretted ordering it.
+
+    Mr Manning and I shall take the first watch together.
+
+    Come down when you have knocked on your doors, Mr Moody, and we shall divide the night.
+    """
+
+    drunk """
+    I'll stand mine sober, sir.
+
+    That much I can still promise a man.
+    """
+
+    """
+    He pushes the glass away as he says it, a whole arm's length, and looks rather surprised at his own hand.
+
+    Two of them. Now for the rest of the house.
+    """
+
+    call broken_day2_evening_check_gathered
+
+    return
+
+
+# ------------------------------------
+#   CAPTAIN SINHA (the good light)
+# ------------------------------------
+label broken_day2_evening_tea_captain:
+
+    if not broken_details.saved_variables['day2_evening_tea_captain_approached']:
+
+        $ broken_details.saved_variables['day2_evening_tea_captain_approached'] = True
 
         """
-        I cross to the fire.
+        I cross to the lamp.
 
         Two days ago I could not have stood this close to the man without my hands remembering the rifle.
 
-        Tonight I only want to know what he is made of, because tomorrow may require it.
+        Tonight I only want to know what he is made of, because tonight may require it.
         """
 
         captain """
@@ -83,14 +142,14 @@ label broken_day2_evening_billiard_captain:
         $ broken_captain_night_menu.early_exit = False
 
         """
-        I return to the Captain's post by the fire.
+        I return to the Captain's post by the lamp.
         """
 
     $ broken_captain_night_menu = TimedMenu("broken_captain_night_menu", [
         TimedMenuChoice('Ask what he makes of the fallen tree', 'broken_day2_evening_captain_tree', 15),
         TimedMenuChoice("Ask his opinion of Mr Harring's death", 'broken_day2_evening_captain_harring', 15),
         TimedMenuChoice('Sound him out about tomorrow', 'broken_day2_evening_captain_tomorrow', 20),
-        TimedMenuChoice('Leave him to the fire', 'generic_cancel', 0, keep_alive = True, early_exit = True)
+        TimedMenuChoice('Leave him to his book', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "captain")
 
     call run_menu(broken_captain_night_menu)
@@ -138,7 +197,7 @@ label broken_day2_evening_captain_harring:
     """
 
     """
-    He looks into the fire for a moment.
+    He looks into the lamplight for a moment.
     """
 
     captain """
@@ -188,16 +247,16 @@ label broken_day2_evening_captain_tomorrow:
 
 
 # ------------------------------------
-#   MR MANNING (the chair furthest from the bar)
+#   MR MANNING (the chair nearest the bar)
 # ------------------------------------
-label broken_day2_evening_billiard_drunk:
+label broken_day2_evening_tea_drunk:
 
-    if not broken_details.saved_variables['day2_evening_billiard_drunk_approached']:
+    if not broken_details.saved_variables['day2_evening_tea_drunk_approached']:
 
-        $ broken_details.saved_variables['day2_evening_billiard_drunk_approached'] = True
+        $ broken_details.saved_variables['day2_evening_tea_drunk_approached'] = True
 
         """
-        Manning sits with his hands folded in his lap, watching the fire as though it might try something.
+        Manning watches the fire as though it might try something, one hand curled round his glass.
 
         He looks up as I draw a chair beside his, and does not look away.
 
@@ -205,13 +264,13 @@ label broken_day2_evening_billiard_drunk:
         """
 
         broken """
-        You are not drinking, Mr Manning.
+        You are drinking again, Mr Manning.
         """
 
         drunk """
-        No.
+        Only enough to keep my hands still, sir.
 
-        No, I find I have rather lost the taste for it.
+        I have been counting my way down this one glass for two hours, and I am still winning.
         """
 
         """
@@ -237,13 +296,15 @@ label broken_day2_evening_billiard_drunk:
         drunk """
         A quiet morning. Yes.
 
-        Then I shall say only this, sir. If you should ever have need of me, for anything at all, you shall have me sober.
+        Then I shall say only this, sir. If you should ever have need of me, for anything at all, you shall have me.
+
+        And as near sober as I can manage.
         """
 
         """
         I have made no friends behind this mask.
 
-        It occurs to me, settling beside him in the firelight, that this ruined old fellow may prove to be the first.
+        It occurs to me, settling beside him in the lamplight, that this ruined old fellow may prove to be the first.
         """
 
     else:
@@ -317,7 +378,7 @@ label broken_day2_evening_drunk_bearing:
     drunk """
     Honestly.
 
-    My hands have not been still since noon, and I have counted the bottles on that bar eleven times.
+    My hands have not been still since noon, and this is the first glass of a day that would ordinarily have cost me a bottle.
     """
 
     """
@@ -327,13 +388,15 @@ label broken_day2_evening_drunk_bearing:
     drunk """
     I have not been dry two days together since Margaret died.
 
-    It is a poor time to start, with all this going on.
+    It is a poor time to make promises, with all this going on.
 
-    But then, it is the only time I have.
+    But a smaller glass tonight than last night, and a smaller one again tomorrow.
+
+    A lawyer knows better than to swear to more than he can prove.
     """
 
     broken """
-    Then we shall count the bottles together, and leave them where they stand.
+    Then we shall prove it one evening at a time, Mr Manning, and leave the bottles where they stand.
     """
 
     return

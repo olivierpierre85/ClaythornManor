@@ -108,17 +108,7 @@ label common_day2_evening_entrance_dialog:
     I just spoke with the police. They aren't coming today.
     """
 
-    captain """
-    What!? Why not?
-    """
-
-    host """
-    They were on their way but encountered a huge tree blocking the road.
-    
-    They couldn't get past it.
-    
-    They said they'll be back tomorrow with assistance.
-    """
+    call common_day2_evening_police_tree_explanation
 
     psychic -angry """
     But... what are we going to do with him until then?
@@ -360,6 +350,26 @@ label common_day2_evening_dinner_host:
     For now, enjoy your dinner.
 
     Drinks will be available in the billiard room afterwards, as they were yesterday.
+    """
+
+    return
+
+
+# The host's explanation for the police's absence (the fallen tree). Shared
+# between the entrance hall scene above and Broken's dinner (broken timeline,
+# where the exchange happens at the table instead).
+label common_day2_evening_police_tree_explanation:
+
+    captain """
+    What!? Why not?
+    """
+
+    host """
+    They were on their way but encountered a huge tree blocking the road.
+
+    They couldn't get past it.
+
+    They said they'll be back tomorrow with assistance.
     """
 
     return

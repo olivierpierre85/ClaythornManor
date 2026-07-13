@@ -14,40 +14,49 @@ label broken_config_progress:
                 Chapter(image_ending_question, "ending", "walked_out", "end"),
             ],
             # Row 1: trunks drop one row - friday_evening at col1, the hunt at col3,
-            # saturday_evening's single branch (burned) turns right at col4, and
+            # saturday_evening's first branch (poisoned, more below) at col4, and
             # sunday_afternoon's single branch (ambushed) turns right at col6
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_line),            # col1 trunk (Saturday-morning deaths)
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),            # col3 trunk (Saturday-hunt deaths)
-                Chapter(image_checkpoint_corner),          # col4 branch (burned - the only one)
-                Chapter(image_ending_question, "ending", "burned", "saturday_evening"),
-                Chapter(image_checkpoint_empty_half),      # filler completing the burned cell
+                Chapter(image_checkpoint_double_corner),   # col4 branch (poisoned, more below)
+                Chapter(image_ending_question, "ending", "poisoned", "saturday_evening"),
+                Chapter(image_checkpoint_empty_half),      # filler completing the poisoned cell
                 Chapter(image_checkpoint_corner),          # col6 branch (ambushed - the only one)
                 Chapter(image_ending_question, "ending", "ambushed", "sunday_afternoon"),
             ],
-            # Row 2: first branch on each trunk, on the same line -
-            #   col1 -> deathbed (Friday whisky), col3 -> strangled (killed the Captain)
+            # Row 2: col1's first branch (deathbed), the col3 trunk carries on,
+            # and col4's last branch (burned - the unguarded night)
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_double_corner),   # col1 branch (more below)
                 Chapter(image_ending_question, "ending", "deathbed", "saturday_morning"),
                 Chapter(image_checkpoint_empty_half),      # filler completing the deathbed cell
-                Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
-                Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
+                Chapter(image_checkpoint_line),            # col3 trunk carries on
+                Chapter(image_checkpoint_corner),          # col4 branch (last)
+                Chapter(image_ending_question, "ending", "burned", "saturday_evening"),
             ],
-            # Row 3: col1's last branch (throat_cut) and col3's second hunt branch
-            #   (shot); the col3 trunk carries on one row lower to the grove death.
+            # Row 3: col1's last branch (throat_cut) and col3's first hunt branch
+            #   (strangled - spared the Captain, caught in the rush)
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_corner),          # col1 branch (last)
                 Chapter(image_ending_question, "ending", "throat_cut", "saturday_morning"),
                 Chapter(image_checkpoint_empty_half),      # filler completing the throat_cut cell
                 Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
+                Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
+            ],
+            # Row 4: col3's second hunt branch (shot - killed the Captain)
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
                 Chapter(image_ending_question, "ending", "shot", "saturday_afternoon"),
             ],
-            # Row 4: the western-grove death hangs one row lower on the col3 trunk -
+            # Row 5: the western-grove death hangs last on the col3 trunk -
             #   shielded (took Manning's bullet meant for Doctor Baldwin)
             [
                 Chapter(image_checkpoint_empty_small),
@@ -99,19 +108,21 @@ label broken_config_progress:
             # ===== SATURDAY EVENING (AFTER THE HUNT) =====
             # Only reachable via the western grove with Mr Manning talked down,
             # so talked_to_maid, host_lies and drunk_letter are always unlocked
-            # here. Branches on found_poison (the scullery bottle, Friday night):
-            # with it Broken refuses to sleep, without it the manor burns.
+            # here. Two gates in the chapter itself: found_poison at dinner
+            # (without it everyone is poisoned), then gather_everyone at night
+            # (unlocked during the chapter's map; without it the manor burns).
             'saturday_evening': [
                 {"label": "broken_day2_evening", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': False}},
                 {"label": "broken_day2_evening", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': True}},
             ],
 
             # ===== SUNDAY MORNING (AN EMPTY MANOR) =====
-            # Only reachable from the vigil, so found_poison is always unlocked.
-            # The departure menu branches on the 'ambushed' ENDING (intuition),
-            # not on a thread, so a single checkpoint config suffices.
+            # Only reachable from the gathered watch, so found_poison and
+            # gather_everyone are always unlocked. The departure menu branches
+            # on the 'ambushed' ENDING (intuition), not on a thread, so a
+            # single checkpoint config suffices.
             'sunday_morning': [
-                {"label": "broken_day3_morning", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': True}},
+                {"label": "broken_day3_morning", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': True, 'gather_everyone': True}},
             ],
 
             # ===== SUNDAY AFTERNOON (THE WALK) =====
@@ -119,7 +130,7 @@ label broken_config_progress:
             # two-man walk ends in the ambush, with it the whole party reaches
             # the police station.
             'sunday_afternoon': [
-                {"label": "broken_day3_afternoon", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': True, 'left_together': False}},
-                {"label": "broken_day3_afternoon", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': True, 'left_together': True}},
+                {"label": "broken_day3_afternoon", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': True, 'gather_everyone': True, 'left_together': False}},
+                {"label": "broken_day3_afternoon", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': True, 'gather_everyone': True, 'left_together': True}},
             ],
         }

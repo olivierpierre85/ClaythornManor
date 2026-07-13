@@ -20,13 +20,13 @@
         },
         {
             "menu": "broken_day2_evening_map_menu",
-            "selected": "Join the others in the billiard room",
-            "redirect": "broken_day2_evening_billiard_room"
+            "selected": "Tea room",
+            "redirect": "broken_day2_evening_tea_room"
         },
         {
-            "menu": "broken_day2_evening_billiard_menu",
-            "selected": "Join Captain Sinha by the fire",
-            "redirect": "broken_day2_evening_billiard_captain"
+            "menu": "broken_day2_evening_tea_menu",
+            "selected": "Join Captain Sinha and his book",
+            "redirect": "broken_day2_evening_tea_captain"
         },
         {
             "menu": "broken_captain_night_menu",
@@ -35,13 +35,13 @@
         },
         {
             "menu": "broken_captain_night_menu",
-            "selected": "Leave him to the fire",
+            "selected": "Leave him to his book",
             "redirect": "generic_cancel"
         },
         {
-            "menu": "broken_day2_evening_billiard_menu",
+            "menu": "broken_day2_evening_tea_menu",
             "selected": "Sit with Mr Manning",
-            "redirect": "broken_day2_evening_billiard_drunk"
+            "redirect": "broken_day2_evening_tea_drunk"
         },
         {
             "menu": "broken_drunk_night_menu",
@@ -54,13 +54,38 @@
             "redirect": "generic_cancel"
         },
         {
-            "menu": "broken_day2_evening_billiard_menu",
+            "menu": "broken_day2_evening_tea_menu",
+            "selected": "Lay your fears before them and propose a watch",
+            "redirect": "broken_day2_evening_propose_watch"
+        },
+        {
+            "menu": "broken_day2_evening_tea_menu",
             "selected": "Leave the room",
             "redirect": "generic_cancel"
         },
         {
             "menu": "broken_day2_evening_map_menu",
-            "selected": "Take up your watch for the night",
+            "selected": "Edward II Bedroom",
+            "redirect": "broken_day2_evening_bedroom_doctor"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Elizabeth I Bedroom",
+            "redirect": "broken_day2_evening_bedroom_psychic"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Queen Alexandra Bedroom",
+            "redirect": "broken_day2_evening_bedroom_nurse"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Henry IV Bedroom",
+            "redirect": "broken_day2_evening_bedroom_host"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Turn in for the night",
             "redirect": "generic_cancel"
         },
         {
