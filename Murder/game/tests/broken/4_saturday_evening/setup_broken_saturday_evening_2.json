@@ -10,8 +10,13 @@
     "choices": [
         {
             "menu": "broken_day2_evening_menu_dinner",
-            "selected": "Speak to Mr Manning",
-            "redirect": "broken_day2_evening_dinner_manning"
+            "selected": "Speak to Lady Claythorn",
+            "redirect": "broken_day2_dinner_host"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
         },
         {
             "menu": "broken_day2_evening_map_menu",

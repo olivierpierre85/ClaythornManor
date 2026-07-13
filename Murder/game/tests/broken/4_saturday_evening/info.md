@@ -14,14 +14,17 @@ The chapter gates on `found_poison` (the scullery bottle from Friday night):
   to `broken_day3_morning`.
 
 Choices:
-1. **Dinner** (`broken_day2_evening_menu_dinner`):
-   - `broken_day2_evening_dinner_manning` — a quiet word with Mr Manning
-     (seeds the partnership).
+1. **Dinner** (`broken_day2_evening_menu_dinner`): as on Friday, only the
+   hostess is within talking distance at the table.
+   - `broken_day2_dinner_host` — speak to Lady Claythorn (opens the
+     `host_generic_menu_broken` conversation).
    - `generic_cancel` — keep his own counsel.
 2. **Map** (`broken_day2_evening_map_menu`, found_poison only): ground-floor
    rooms plus the billiard room (`broken_day2_evening_billiard_menu` -> the
    Captain's menu `broken_captain_night_menu` and Manning's menu
-   `broken_drunk_night_menu`). Early exit: take up the watch for the night.
+   `broken_drunk_night_menu`; the first approach to Manning plays the
+   gratitude exchange that seeds the partnership). Early exit: take up the
+   watch for the night.
 
 ## setup_broken_saturday_evening_1.json
 `talked_to_maid`, `host_lies`, `drunk_letter` (no `found_poison`). Dinner menu
@@ -29,7 +32,9 @@ Choices:
 -> `broken_ending_burned`.
 
 ## setup_broken_saturday_evening_2.json
-Same threads plus `found_poison`. Dinner menu -> speak to Mr Manning. Map ->
-billiard room (Captain: tomorrow question, Manning: the letters), then take up
-the watch. The run continues into Sunday morning (no intuition, so the only
-option is to leave with the Captain) and ends at `broken_ending_ambushed`.
+Same threads plus `found_poison`. Dinner menu -> speak to Lady Claythorn
+(immediate exit from her generic menu). Map -> billiard room (Captain:
+tomorrow question, Manning: the gratitude exchange on approach, then the
+letters), then take up the watch. The run continues into Sunday morning (no
+intuition, so the only option is to leave with the Captain) and ends at
+`broken_ending_ambushed`.

@@ -3,9 +3,10 @@
 Thomas Moody (Archibald in disguise) arrives at the manor, rests in the
 'Richard the Third' room, then comes down to the tea room where he meets the
 doctor, the nurse, the captain and the drunk. The gong calls everyone in to
-dinner, where he is seated beside Lady Claythorn. After her welcome speech he
-questions her directly over the first course (the `host_generic_menu_broken`
-conversation, 90 time units).
+dinner, where he is seated beside Lady Claythorn. After her welcome speech the
+dinner menu (`broken_day1_evening_menu_dinner`) lets him either engage her —
+`broken_day1_dinner_host`, opening the `host_generic_menu_broken` conversation
+(90 time units) — or keep to himself (`generic_cancel`).
 
 After dinner the chapter opens up: he returns to his room and the
 `broken_day1_evening_map_menu` map (a second 90-unit budget) lets him roam the
@@ -36,7 +37,9 @@ the unlock paths themselves are exercised.
 | Host Q: the manor                                      | 2         |
 | Host Q: her age                                        | 1         |
 | Host Q: her room                                       | 1         |
-| Host menu: explicit exit                               | 2–7       |
+| Dinner menu: talk to Lady Claythorn                    | 1, 2      |
+| Dinner menu: keep to yourself                          | 3–7       |
+| Host menu: explicit exit                               | 2         |
 | Map: tea room / dining room / garden / hall            | 2, 7      |
 | Map: portrait gallery / library                        | 2         |
 | Map: attic refusal (greys the attic)                   | 2         |

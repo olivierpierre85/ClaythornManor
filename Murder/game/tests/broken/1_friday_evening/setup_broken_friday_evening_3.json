@@ -4,8 +4,8 @@
     "saved_variables": {},
     "choices": [
         {
-            "menu": "host_generic_menu_broken",
-            "selected": "You don't have any more questions for her",
+            "menu": "broken_day1_evening_menu_dinner",
+            "selected": "Keep to yourself",
             "redirect": "generic_cancel"
         },
         {

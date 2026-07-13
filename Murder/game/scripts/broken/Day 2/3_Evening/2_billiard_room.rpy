@@ -204,6 +204,48 @@ label broken_day2_evening_billiard_drunk:
         A day ago he could not hold my eye at all.
         """
 
+        broken """
+        You are not drinking, Mr Manning.
+        """
+
+        drunk """
+        No.
+
+        No, I find I have rather lost the taste for it.
+        """
+
+        """
+        He glances at the bottles waiting on the bar, the way a man looks at an old enemy.
+        """
+
+        drunk """
+        Mr Moody. This morning, in the wood.
+
+        What you kept me from...
+        """
+
+        broken """
+        Was nothing at all, Mr Manning, because nothing at all took place.
+
+        A quiet morning, and poor shooting. We shall leave it there.
+        """
+
+        """
+        He nods, slowly, and something crosses his face that might, in a better week, have been a smile.
+        """
+
+        drunk """
+        A quiet morning. Yes.
+
+        Then I shall say only this, sir. If you should ever have need of me, for anything at all, you shall have me sober.
+        """
+
+        """
+        I have made no friends behind this mask.
+
+        It occurs to me, settling beside him in the firelight, that this ruined old fellow may prove to be the first.
+        """
+
     else:
 
         $ broken_drunk_night_menu.early_exit = False

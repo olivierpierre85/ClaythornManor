@@ -200,20 +200,17 @@ label broken_day1_evening:
     """
     Our host turns to me with a hostess's practised smile, ready to begin the rounds of polite enquiry.
 
-    I should make the most of it.
-
     I might not have a better chance to take her measure than I have now.
-
-    So I should conduct the conversation as an interview, and avoid any trivial questions.
-
-    Maybe this way I will learn something useful.
     """
 
     call change_time(19, 30)
 
     $ time_left = 90
 
-    call host_generic
+    call run_menu(TimedMenu("broken_day1_evening_menu_dinner", [
+        TimedMenuChoice("Talk to Lady Claythorn", 'broken_day1_dinner_host', early_exit=True),
+        TimedMenuChoice("Keep to yourself", 'generic_cancel', early_exit=True),
+    ], image_right = "host"))
 
     $ stop_music()
 
@@ -360,3 +357,21 @@ label broken_day1_evening:
 
 
     jump broken_day2_morning
+
+
+# ------------------------------------
+#   DINNER SCENES
+# ------------------------------------
+label broken_day1_dinner_host:
+
+    """
+    I should make the most of it.
+
+    I shall conduct the conversation as an interview, and avoid any trivial questions.
+
+    Maybe this way I will learn something useful.
+    """
+
+    call host_generic
+
+    return

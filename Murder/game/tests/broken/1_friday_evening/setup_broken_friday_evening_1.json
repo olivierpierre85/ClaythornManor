@@ -4,6 +4,11 @@
     "saved_variables": {},
     "choices": [
         {
+            "menu": "broken_day1_evening_menu_dinner",
+            "selected": "Talk to Lady Claythorn",
+            "redirect": "broken_day1_dinner_host"
+        },
+        {
             "menu": "host_generic_menu_broken",
             "selected": "Tell me more about yourself.",
             "redirect": "host_generic_background_broken"
