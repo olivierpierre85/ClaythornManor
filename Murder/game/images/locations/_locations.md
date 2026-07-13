@@ -7,7 +7,7 @@ Source tables for `tools/generate_location_images.py`. Each **description** is w
 Location images now encode the time of day in the filename suffix:
 
 - Most rooms ship a **`<id>_day.png`** / **`<id>_night.png`** pair.
-- Time-independent scenes (flashbacks, one-off cutscene shots — e.g. `boxer`, `broken_flat`, `train_station`, and the Day 2 hunt forest scenes `forest_clearing`, `forest_grove`, `forest_edge`) ship a single **`<id>_neutral.png`**.
+- Time-independent scenes (flashbacks, one-off cutscene shots — e.g. `boxer`, `broken_flat`, `train_station`, and the Day 2 hunt forest scenes `forest_clearing`, `forest_grove`, `forest_edge`, `forest_stream`) ship a single **`<id>_neutral.png`**.
 
 `change_room('<id>')` resolves the suffix automatically (see `resolve_room_image` in `scripts/custom_functions.rpy`): it prefers `_neutral`, otherwise picks `_night` when `current_phase == 'Evening'` and `_day` for every other phase (Morning / Afternoon / The Hunt / No Hunt), and finally falls back to a bare `<id>` for legacy/utility images with no variant (`black_background`, `india_young_captain`, `toolshed_outside_day`, `toolshed_outside_night`, `train_inside`).
 
@@ -86,8 +86,5 @@ Wrapped in the outdoor template:
 | inside_car             | 1920s motor car interior, view from the passenger seat towards the windscreen, a wooded country road and rainy sky outside, touch of warm colors                                                                             |
 | boxer_fight            | Boxer Rebellion in 1900 China, the Eight-Nation Alliance assault on Beijing, europeans soldiers storming a great fortified city gate amid smoke and fire                                                                     |
 | boxer                  | aftermath of the Boxer Rebellion in 1900 Beijing, a few european soldiers occupying the conquered city, looted goods piled in a square before grand Chinese gates, smoke hanging in the air, chinese merchants selling wares |
-
-Note: `forest_stream` has an approved image (`Images/locations_new/flux_2_final_choices/forest_stream_neutral.png`) but is not yet used in any scene — copy it into this folder if a scene ever mentions the stream.
-
 
 

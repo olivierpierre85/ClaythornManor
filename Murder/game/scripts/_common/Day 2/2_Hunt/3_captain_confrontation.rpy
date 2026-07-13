@@ -60,7 +60,7 @@ label common_day2_hunt_captain_confrontation:
 
     $ play_music('danger', 2)
 
-    $ change_room('forest', dissolve)
+    $ change_room('forest_stream', dissolve)
 
     if current_character.text_id == "captain":
 
@@ -69,11 +69,11 @@ label common_day2_hunt_captain_confrontation:
 
         He walks easily, his rifle slung over his shoulder.
 
-        Thirty yards from the clearing, the cover thickens.
+        Thirty yards from the clearing, the cover thickens and the track comes down to a shallow stream.
 
-        The voices from the luncheon fall away.
+        The voices from the luncheon fall away beneath the sound of water on stone.
 
-        He stops, turns, and lifts the rifle from his shoulder.
+        He stops at the water's edge, turns, and lifts the rifle from his shoulder.
 
         Not to show me.
 
@@ -87,7 +87,7 @@ label common_day2_hunt_captain_confrontation:
 
         He follows a careful step behind, the way a man follows when half of him already knows.
 
-        Thirty yards on, where the cover thickens and the voices of the luncheon fall away, I judge it far enough.
+        Thirty yards on, where the cover thickens and a stream swallows the last voices from the luncheon, I judge it far enough.
 
         I stop. I turn. I bring the rifle down from my shoulder.
 
@@ -131,7 +131,7 @@ label common_day2_hunt_captain_confrontation:
 
     An old army order, written in the autumn of 1917. A transfer.
 
-    Until then, the officer named upon it had held the safest billet in France.
+    Until then, the officer named upon it had held the safest assignment in the whole army.
 
     Conducting officer to the war correspondents, minding the gentlemen of the press well back of the guns, where no harm could come to him.
 

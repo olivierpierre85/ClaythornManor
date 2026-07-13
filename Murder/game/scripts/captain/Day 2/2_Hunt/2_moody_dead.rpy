@@ -234,8 +234,6 @@ label captain_day2_hunt_silent_luncheon:
     Without time to think it over, I rush towards their direction.
     """
 
-    call wait_screen_transition()
-
     $ change_room('forest_grove')
 
     """

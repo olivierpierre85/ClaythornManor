@@ -62,6 +62,8 @@ label lad_day2_hunt_noaccident:
 
     $ stop_music(3)
 
+    $ change_room('forest_clearing', dissolve)
+
     """
     We began setting up the picnic.
     """
@@ -86,7 +88,7 @@ label lad_day2_hunt_noaccident:
     We rushed in the direction of the cry.
     """
 
-    call wait_screen_transition()
+    $ change_room('forest_grove')
 
     $ play_music('danger')
 
