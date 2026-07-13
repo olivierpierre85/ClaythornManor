@@ -1,6 +1,6 @@
 label lad_day2_hunt_noaccident:
 
-    $ change_room("forest")
+    $ change_room("forest_edge")
     
     call change_time(12,30, 'The Hunt', 'Saturday')
 

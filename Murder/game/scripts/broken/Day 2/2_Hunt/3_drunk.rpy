@@ -42,7 +42,7 @@ label broken_day2_hunt_drunk:
 
     call change_time(11, 45)
 
-    $ change_room('forest')
+    $ change_room('forest_grove')
 
     """
     We strike off to the west, the doctor a few paces ahead, Mr Manning weaving along at my side.

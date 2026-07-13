@@ -7,7 +7,7 @@ Source tables for `tools/generate_location_images.py`. Each **description** is w
 Location images now encode the time of day in the filename suffix:
 
 - Most rooms ship a **`<id>_day.png`** / **`<id>_night.png`** pair.
-- Time-independent scenes (flashbacks, one-off cutscene shots — e.g. `boxer`, `broken_flat`, `train_station`) ship a single **`<id>_neutral.png`**.
+- Time-independent scenes (flashbacks, one-off cutscene shots — e.g. `boxer`, `broken_flat`, `train_station`, and the Day 2 hunt forest scenes `forest_clearing`, `forest_grove`, `forest_edge`) ship a single **`<id>_neutral.png`**.
 
 `change_room('<id>')` resolves the suffix automatically (see `resolve_room_image` in `scripts/custom_functions.rpy`): it prefers `_neutral`, otherwise picks `_night` when `current_phase == 'Evening'` and `_day` for every other phase (Morning / Afternoon / The Hunt / No Hunt), and finally falls back to a bare `<id>` for legacy/utility images with no variant (`black_background`, `india_young_captain`, `toolshed_outside_day`, `toolshed_outside_night`, `train_inside`).
 
@@ -72,6 +72,10 @@ Wrapped in the outdoor template:
 | manor_garden           | 1920s Scottish manor garden, gravel paths and a stone fountain, the dark house looming behind, tall trees around, touch of warm colors                                                                                       |
 | forest                 | dense Scottish forest, tall trees and tangled undergrowth, mist drifting between the trunks, touch of warm colors                                                                                                            |
 | forest_road            | narrow rutted road winding through a dark Scottish forest, tall trees crowding either side, touch of warm colors                                                                                                             |
+| forest_clearing        | grassy clearing in a dense Scottish forest ringed by silver birches, a fallen mossy log, thin mist beyond the treeline, touch of warm colors                                                                                 |
+| forest_grove           | shadowy grove deep in a Scottish forest, waist-high bracken and ferns between gnarled old oaks, dim light filtering through the canopy, mist drifting low, touch of warm colors                                              |
+| forest_edge            | edge of a Scottish forest opening onto a rough grassy field, scattered gorse bushes and tall grass, the treeline fading into mist, overcast sky, touch of warm colors                                                        |
+| forest_stream          | shallow rocky stream running through a dense Scottish forest, mossy boulders and ferns along the banks, mist between the tall trees, touch of warm colors                                                                    |
 | toolshed_outside_day   | small weathered wooden garden shed seen from outside, set among overgrown grass and tall trees, grey daylight                                                                                                                |
 | toolshed_outside_night | small weathered wooden garden shed seen from outside, set among overgrown grass and tall trees, moonlight and deep shadows at night                                                                                          |
 | train_station          | medium size Scottish railway station, daytime, old train from 1920, a few people on the platform, gas lamps, touch of warm colors                                                                                            |
@@ -82,6 +86,8 @@ Wrapped in the outdoor template:
 | inside_car             | 1920s motor car interior, view from the passenger seat towards the windscreen, a wooded country road and rainy sky outside, touch of warm colors                                                                             |
 | boxer_fight            | Boxer Rebellion in 1900 China, the Eight-Nation Alliance assault on Beijing, europeans soldiers storming a great fortified city gate amid smoke and fire                                                                     |
 | boxer                  | aftermath of the Boxer Rebellion in 1900 Beijing, a few european soldiers occupying the conquered city, looted goods piled in a square before grand Chinese gates, smoke hanging in the air, chinese merchants selling wares |
+
+Note: `forest_stream` has an approved image (`Images/locations_new/flux_2_final_choices/forest_stream_neutral.png`) but is not yet used in any scene — copy it into this folder if a scene ever mentions the stream.
 
 
 

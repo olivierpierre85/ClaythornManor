@@ -38,7 +38,7 @@ label captain_day2_hunt_moody_dead:
 
     call change_time(11, 45)
 
-    $ change_room('forest')
+    $ change_room('forest_edge')
 
     """
     We walk for some time through the undergrowth before coming across anything worth a shot.
@@ -118,6 +118,8 @@ label captain_day2_hunt_moody_dead:
     """
 
     call change_time(12, 30)
+
+    $ change_room('forest_clearing', dissolve)
 
     """
     The butler lays out a modest spread on a linen cloth, pours tea, then steps back with a brief bow.
@@ -202,6 +204,8 @@ label captain_day2_hunt_silent_luncheon:
     In due course the butler returns, composed as ever, and we resume the hunt.
     """
 
+    $ change_room('forest_edge', dissolve)
+
     pause 1.0
 
     play sound gun
@@ -231,6 +235,8 @@ label captain_day2_hunt_silent_luncheon:
     """
 
     call wait_screen_transition()
+
+    $ change_room('forest_grove')
 
     """
     When I reach the others, Doctor Baldwin lies on his back in the fern.

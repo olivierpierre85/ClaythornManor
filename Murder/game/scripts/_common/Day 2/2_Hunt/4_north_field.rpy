@@ -20,7 +20,7 @@ label common_day2_hunt_north_field:
 
     call change_time(11, 45)
 
-    $ change_room('forest')
+    $ change_room('forest_edge')
 
     # --- First bird: Moody shoots, the Captain does not even raise ---
     if current_character.text_id == "captain":
@@ -177,6 +177,8 @@ label common_day2_hunt_north_field:
         """
 
     call change_time(12, 30)
+
+    $ change_room('forest_clearing', dissolve)
 
     host """
     Three birds and a pair of rabbits, Mr Moody. You are most impressive.

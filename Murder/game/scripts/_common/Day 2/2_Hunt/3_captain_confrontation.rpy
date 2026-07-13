@@ -60,6 +60,8 @@ label common_day2_hunt_captain_confrontation:
 
     $ play_music('danger', 2)
 
+    $ change_room('forest', dissolve)
+
     if current_character.text_id == "captain":
 
         """
