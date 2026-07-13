@@ -12,6 +12,7 @@
 - [ ] **Discussion with Cpt Sinha (Day 2 Evening)**: Show generic choices, make the rest a submenu. Check if it works with Psychic.
 - [ ] Dialog: "Can you read mister Harring? 'I GET BY'".
 - [ ] $ lad_generic_menu NO MENTIONNED OF WEATHER? ADd ? or reason?
+- [ ] Forest images for the hunt do not change for lunch, to fix
 
 ### Ideas to think over (optional)
 
