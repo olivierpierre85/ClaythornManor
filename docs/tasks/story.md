@@ -138,6 +138,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 
 ### Important
 
+- When escaping with car, maybe mentionned that the road should blocked (and is actually not)
 
 
 ### Ideas to think over (optional)

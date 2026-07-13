@@ -323,3 +323,20 @@ init -1 python:
             self.room = room
             self.active = active
             self.already_chosen = already_chosen
+
+        # in_game_map_menu rebuilds a fresh hotspots list (fresh Hotspot
+        # instances) on every screen redraw. Ren'Py's tooltip tracking
+        # compares the old and new tooltip value to decide whether to call
+        # renpy.restart_interaction() - without this, two instances
+        # describing the same room are never equal, so every redraw looks
+        # like a tooltip change and the game restarts the interaction
+        # forever (100-restart safety abort) as soon as the mouse rests on
+        # a hotspot.
+        def __eq__(self, other):
+            if not isinstance(other, Hotspot):
+                return NotImplemented
+            return (self.room, self.description, self.active, self.already_chosen) == (
+                other.room, other.description, other.active, other.already_chosen)
+
+        def __hash__(self):
+            return hash((self.room, self.description, self.active, self.already_chosen))

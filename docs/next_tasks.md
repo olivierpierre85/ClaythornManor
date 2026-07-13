@@ -15,6 +15,8 @@ When Someone is saved, it add a SAVED over their name in the progress view
 
 - [ ] BUG: **save_transcript_to_file** button not working during menu????
 
+- [ ] BUG (structural FABLE FINDING): chapters are entered with `call <chapter_label>` from each character's `_main.rpy` (e.g. `call captain_day2_hunt_moody_alive`), but branches that reach an ending exit via `jump captain_ending_xxx` instead of `return`. Ren'Py's `call`/`return` stack is global and only popped by `return` - a `jump` leaves the pushed return address dangling forever (it's even saved in savegames). Over a full playthrough this piles up dozens of orphaned stack frames from every character death, and was directly visible in a crash traceback where a `captain` call frame sat as the "parent" of an unrelated, currently-executing `lad` call frame. Harmless by itself, but a stray extra `return` anywhere in the game could eventually pop into one of these stale frames and teleport execution into unrelated script. Proper fix likely means auditing every `_main.rpy` "call chapter" site + every ending label across all 8 characters, and either switching those calls to `jump` or making endings `return` instead of `jump`.
+
 ----
 TODO myself, clean the tutorial highlights, text and position.
 
