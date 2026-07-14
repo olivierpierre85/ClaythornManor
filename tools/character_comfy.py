@@ -84,10 +84,10 @@ CHARACTERS = {
             "a young man of about twenty-two, fair skin with a faint ruddy flush, tousled "
             "light blond hair swept across the forehead, clear green eyes, clean-shaven with "
             "soft youthful features and a full mouth, a wary watchful expression, wearing a "
-            "light brown 1920s three-piece lounge suit with a waistcoat and a loosened "
-            "collar, the suit clean but a little cheap and ill-fitting, only subtly worn with "
-            "no visible dirt or stains, the clothes of a working man trying to pass in gentry "
-            "company"
+            "a light brown 1920s waistcoat over a white collarless shirt with the sleeves "
+            "rolled up, no jacket, the clothes clean but a little cheap and ill-fitting, only "
+            "subtly worn with no visible dirt or stains, the clothes of a working man trying to "
+            "pass in gentry company"
         ),
     ),
     "psychic": Character(
