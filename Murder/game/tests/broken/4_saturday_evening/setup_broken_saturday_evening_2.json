@@ -20,13 +20,13 @@
         },
         {
             "menu": "broken_day2_evening_map_menu",
-            "selected": "Tea room",
-            "redirect": "broken_day2_evening_tea_room"
+            "selected": "Look in on the billiard room",
+            "redirect": "broken_day2_evening_billiard_room"
         },
         {
-            "menu": "broken_day2_evening_tea_menu",
+            "menu": "broken_day2_evening_billiard_menu",
             "selected": "Join Captain Sinha and his book",
-            "redirect": "broken_day2_evening_tea_captain"
+            "redirect": "broken_day2_evening_billiard_captain"
         },
         {
             "menu": "broken_captain_night_menu",
@@ -39,9 +39,9 @@
             "redirect": "generic_cancel"
         },
         {
-            "menu": "broken_day2_evening_tea_menu",
+            "menu": "broken_day2_evening_billiard_menu",
             "selected": "Sit with Mr Manning",
-            "redirect": "broken_day2_evening_tea_drunk"
+            "redirect": "broken_day2_evening_billiard_drunk"
         },
         {
             "menu": "broken_drunk_night_menu",
@@ -54,12 +54,12 @@
             "redirect": "generic_cancel"
         },
         {
-            "menu": "broken_day2_evening_tea_menu",
+            "menu": "broken_day2_evening_billiard_menu",
             "selected": "Lay your fears before them and propose a watch",
             "redirect": "broken_day2_evening_propose_watch"
         },
         {
-            "menu": "broken_day2_evening_tea_menu",
+            "menu": "broken_day2_evening_billiard_menu",
             "selected": "Leave the room",
             "redirect": "generic_cancel"
         },

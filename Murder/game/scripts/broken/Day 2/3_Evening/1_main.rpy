@@ -18,8 +18,8 @@
 #         where the killer left it) the meal is poisoned and everyone
 #         collapses -> broken_ending_poisoned
 #       - Night map (0_map_choices.rpy): call on every bedroom, and find the
-#         Captain and Mr Manning in the tea room (2_tea_room.rpy) to arrange
-#         a watch -> unlocks gather_everyone
+#         Captain and Mr Manning in the billiard room (2_billiard_room.rpy)
+#         to arrange a watch -> unlocks gather_everyone
 #       - Gate 2, at night: without gather_everyone the manor is set alight
 #         and the escape through the window ends on the iron fence
 #         -> broken_ending_impaled; with it the watch
@@ -212,9 +212,9 @@ label broken_day2_evening:
 
         The wine goes round a last time, and I let the footman fill my glass.
 
-        Everyone look rather exhausted.
+        Everyone looks rather exhausted.
 
-        Then, suddenly, Miss Marsh stands up. 
+        Then, suddenly, Miss Marsh stands up.
         """
 
         nurse """
@@ -224,7 +224,7 @@ label broken_day2_evening:
         """
 
         host """
-        Of course Miss Marsh, we will see you in the morning.
+        Of course, Miss Marsh, we will see you in the morning.
         """
 
         nurse """
@@ -238,7 +238,7 @@ label broken_day2_evening:
         play sound body_fall
 
         """
-        She collapses on the floor, and starts what looks like a bout of convulsion.
+        She collapses on the floor, and starts what looks like a bout of convulsions.
         """
 
         captain """
@@ -246,7 +246,7 @@ label broken_day2_evening:
         """
 
         """
-        The captain stands up and rushes towards her.
+        The Captain stands up and rushes towards her.
 
         I want to follow him but I notice something that stops me.
 
@@ -254,7 +254,7 @@ label broken_day2_evening:
 
         I didn't even notice it and I can't seem to stop it.
 
-        Panics overwhelms me.
+        Panic overwhelms me.
 
         I want to say something but can't open my mouth.
 
@@ -262,19 +262,19 @@ label broken_day2_evening:
 
         I look around me and see faces in utter panic.
 
-        Somebody's glass breaks. 
-        
-        Somebody screams. 
-        
+        Somebody's glass breaks.
+
+        Somebody screams.
+
         The sounds reach me sharp and loud.
 
-        I gather all my strength to stand but my legs give right after I leave my chair.
+        I gather all my strength to stand but my legs give way right after I leave my chair.
         """
 
         play sound body_fall
 
         """
-        The last thing I see is our hostess rising from her chair, screaming out of her lungs.
+        The last thing I see is our hostess rising from her chair, screaming at the top of her lungs.
         """
 
         jump broken_ending_poisoned
@@ -282,7 +282,7 @@ label broken_day2_evening:
     """
     The dinner ends as quietly as it began.
 
-    Lady Claythorn wishes us each a good night, and inform us that drinks are available in the billiard room, like yesterday.
+    Lady Claythorn wishes us each a good night, and informs us that drinks are available in the billiard room, like yesterday.
 
     The others drift towards the stairs and I follow them.
     """
@@ -297,7 +297,7 @@ label broken_day2_evening:
     I lock my door, and take a moment to think of what to do.
 
     I know Lady Claythorn is not to be trusted.
-    
+
     Most likely she is the one who conspired to hurt Captain Sinha, as well as Doctor Baldwin.
 
     That would mean Ted Harring's death is probably not accidental either.
@@ -321,10 +321,6 @@ label broken_day2_evening:
     But everything is so twisted I am not sure of anything right now.
     """
 
-
-    # Night map: call on the bedrooms (most won't answer, some hide) and find
-    # the Captain and Mr Manning in the tea room. Warning the pair AND calling
-    # at every occupied door unlocks gather_everyone (see 0_map_choices.rpy).
     $ play_music('mysterious', 2)
 
     call change_time(21, 30)
@@ -356,7 +352,7 @@ label broken_day2_evening:
         play sound fire loop
 
         """
-        I am half asleep when I hear glass breaking, too far away for being in my room.
+        I am half asleep when I hear glass breaking, too far away to be in my room.
 
         I stand up and notice that the room is warm, and there is something else.
 
@@ -364,25 +360,29 @@ label broken_day2_evening:
 
         It is coming from outside, through the door.
 
-        Instinctively I try to get up, but the handle is piping hot.
+        Instinctively I try to get out, but the handle is piping hot.
 
         I won't get out that way.
 
-        The smoke is getting thicker and I am afraid that I will pass out if I wait any longer. 
+        The smoke is getting thicker and I am afraid that I will pass out if I wait any longer.
 
         There is only one other escape route.
 
         The window.
+        """
 
-        I open it and look down.  
+        $ change_room('bedroom_window_view')
 
-        There is an iron fence that frighten me a bit.
+        """
+        I open it and look down.
 
-        But now the fire reaches the door.     
+        There is an iron fence that frightens me a bit.
 
-        So I do not have a chance, I cross over the window and hangs from arms.
+        But now the fire has reached the door.
 
-        If I manage my fall I should avoid any injuries.
+        I have no choice, so I climb over the sill and hang by my arms.
+
+        If I manage my fall, I should avoid any injury.
         """
 
         jump broken_ending_impaled

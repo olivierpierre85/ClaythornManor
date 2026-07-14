@@ -11,8 +11,8 @@ The chapter has two gates:
    poisoned and every guest collapses -> `broken_ending_poisoned`.
 2. **`gather_everyone` at night**: after dinner a night map opens
    (`broken_day2_evening_map_menu`). Warning the Captain and Mr Manning in
-   the tea room (the watch proposal) AND calling at every occupied bedroom
-   door (doctor, psychic, nurse, host) unlocks `gather_everyone`. Turning
+   the billiard room (the watch proposal) AND calling at every occupied
+   bedroom door (doctor, psychic, nurse, host) unlocks `gather_everyone`. Turning
    in without it -> `broken_ending_impaled`. With it the watch holds, Broken
    takes the small-hours shift, sees the motor car leave at four, and goes
    on to `broken_day3_morning`.
@@ -24,7 +24,7 @@ Choices:
      `host_generic_menu_broken` conversation).
    - `generic_cancel` — keep his own counsel.
 2. **Night map** (`broken_day2_evening_map_menu`): the Friday board, but at
-   night. The tea room (`broken_day2_evening_tea_menu`) holds Captain Sinha
+   night. The billiard room (`broken_day2_evening_billiard_menu`) holds Captain Sinha
    (reading; menu `broken_captain_night_menu`) and Mr Manning (drinking;
    menu `broken_drunk_night_menu`; the first approach plays the gratitude
    exchange that seeds the partnership), plus the watch proposal
@@ -41,7 +41,7 @@ Choices:
 
 ## setup_broken_saturday_evening_2.json
 Same threads plus `found_poison`. Dinner menu -> speak to Lady Claythorn
-(immediate exit from her generic menu). Map -> tea room (Captain: tomorrow
+(immediate exit from her generic menu). Map -> billiard room (Captain: tomorrow
 question; Manning: the gratitude exchange on approach, then the letters),
 the watch proposal, then all four occupied bedroom doors (gather_everyone
 unlocks on the last), then turn in. The run continues into Sunday morning

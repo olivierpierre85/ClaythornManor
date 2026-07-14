@@ -3,13 +3,13 @@
 # The same board as Friday night, but the game is different: he is not
 # snooping, he is raising the house. Calling at every occupied bedroom
 # (most won't answer, some hide) AND warning the Captain and Mr Manning
-# in the tea room (2_tea_room.rpy) unlocks gather_everyone - without it
-# the manor burns while everyone sleeps (see 1_main.rpy).
+# in the billiard room (2_billiard_room.rpy) unlocks gather_everyone -
+# without it the manor burns while everyone sleeps (see 1_main.rpy).
 #
 # Occupied doors that count towards the gathering: doctor, psychic, nurse,
 # host. The Captain's and Mr Manning's rooms stand empty (they are in the
-# tea room, where the Captain reads and Mr Manning drinks). Ted Harring's
-# room holds Ted Harring.
+# billiard room, where the Captain reads and Mr Manning drinks). Ted
+# Harring's room holds Ted Harring.
 #
 # No livery mechanics tonight: the door at the foot of the servant stair is
 # locked from the other side, and the attic answers nobody. The entrance
@@ -57,8 +57,8 @@ label broken_day2_evening_map_menu:
 #   THE GATHERING
 # ------------------------------------
 # gather_everyone unlocks once the Captain and Mr Manning have agreed to the
-# watch (day2_evening_watch_agreed, set in 2_tea_room.rpy) and every occupied
-# bedroom door has been called at.
+# watch (day2_evening_watch_agreed, set in 2_billiard_room.rpy) and every
+# occupied bedroom door has been called at.
 label broken_day2_evening_check_gathered:
 
     if broken_details.threads.is_unlocked('gather_everyone'):
@@ -313,8 +313,7 @@ label broken_day2_evening_attic_default:
 # ------------------------------------
 label broken_day2_evening_tea_room:
 
-    # The evening's real content: Captain Sinha reads, Mr Manning drinks.
-    call broken_day2_evening_tea_room_scene
+    call broken_tea_room_default
 
     return
 
@@ -421,16 +420,7 @@ label broken_day2_evening_library:
 
 label broken_day2_evening_billiard_room:
 
-    $ change_room('billiard_room')
-
-    """
-    Drinks in the billiard room, our hostess said, as there were yesterday.
-
-    But the room is empty. No butler at his corner, no glasses set out, the bottles abandoned on the bar.
-
-    The fire is dying in the grate and nobody has fed it.
-
-    A billiard room without a servant in it, in a house like this, is a small wrongness all of its own.
-    """
+    # The evening's real content: Captain Sinha reads, Mr Manning drinks.
+    call broken_day2_evening_billiard_room_scene
 
     return

@@ -103,7 +103,7 @@ label broken_ending_day1_throat_cut:
 
     Then you do not wake again.
 
-    This tragic ending was likely caused because you did something careless.
+    This tragic ending likely happened because you did something careless.
 
     You just need to figure out what.
     """
@@ -126,7 +126,7 @@ label broken_ending_poisoned:
     You never rise from the floor.
 
     People died around you, all at the same time and under horrific circumstances.
-    
+
     This made you think of the war.
 
     Only here you had no idea who the enemy was.
@@ -135,9 +135,9 @@ label broken_ending_poisoned:
 
     Now, you may try to understand why this terrible ending occurred.
 
-    You probably think you did not made a misstep here.
+    You probably think you did not make a misstep here.
 
-    But sometimes, things put in motions a long time ago can have consequences much later.
+    But sometimes, things put in motion a long time ago can have consequences much later.
 
     You should keep that in mind.
     """
@@ -157,7 +157,11 @@ label broken_ending_impaled:
     $ play_music('mysterious')
 
     """
-    TODO
+    You avoided being burnt alive, but ended up impaled on an iron fence.
+
+    Hard to say which ending would have been better.
+
+    It hardly matters anyway.
     """
 
     jump ending_generic

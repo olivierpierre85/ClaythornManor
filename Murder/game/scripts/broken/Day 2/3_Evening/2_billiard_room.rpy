@@ -1,5 +1,5 @@
 # ------------------------------------
-#   TEA ROOM - Saturday night
+#   BILLIARD ROOM - Saturday night
 #
 #   Present: Captain Sinha (reading by the lamp, a soda water at his elbow)
 #   and Mr Manning (drinking, but holding the line). The ladies and the
@@ -13,16 +13,16 @@
 #   The Captain's talk also seeds Sunday: if the police have not come by
 #   morning, he means to walk to the village himself.
 # ------------------------------------
-label broken_day2_evening_tea_room_scene:
+label broken_day2_evening_billiard_room_scene:
 
-    $ change_room('tea_room')
+    $ change_room('billiard_room')
 
-    if not broken_details.saved_variables['day2_evening_tea_room_visited']:
+    if not broken_details.saved_variables['day2_evening_billiard_room_visited']:
 
-        $ broken_details.saved_variables['day2_evening_tea_room_visited'] = True
+        $ broken_details.saved_variables['day2_evening_billiard_room_visited'] = True
 
         """
-        The tea room is not empty after all.
+        Drinks in the billiard room, our hostess said, and here is what remains of the promise.
 
         Captain Sinha sits in the good light with a book open on his knee and a glass of soda water at his elbow.
 
@@ -34,22 +34,22 @@ label broken_day2_evening_tea_room_scene:
     else:
 
         # Reset menu
-        $ broken_day2_evening_tea_menu.early_exit = False
+        $ broken_day2_evening_billiard_menu.early_exit = False
 
         """
-        I look in on the tea room again.
+        I look in on the billiard room again.
 
         The Captain has not turned many pages. Mr Manning's glass is no emptier than it was.
         """
 
-    $ broken_day2_evening_tea_menu = TimedMenu("broken_day2_evening_tea_menu", [
-        TimedMenuChoice('Join Captain Sinha and his book', 'broken_day2_evening_tea_captain', 0, keep_alive = True, next_menu = 'broken_captain_night_menu'),
-        TimedMenuChoice('Sit with Mr Manning', 'broken_day2_evening_tea_drunk', 0, keep_alive = True, next_menu = 'broken_drunk_night_menu'),
+    $ broken_day2_evening_billiard_menu = TimedMenu("broken_day2_evening_billiard_menu", [
+        TimedMenuChoice('Join Captain Sinha and his book', 'broken_day2_evening_billiard_captain', 0, keep_alive = True, next_menu = 'broken_captain_night_menu'),
+        TimedMenuChoice('Sit with Mr Manning', 'broken_day2_evening_billiard_drunk', 0, keep_alive = True, next_menu = 'broken_drunk_night_menu'),
         TimedMenuChoice('Lay your fears before them and propose a watch', 'broken_day2_evening_propose_watch', 20, keep_alive = True, condition = "not broken_details.saved_variables['day2_evening_watch_agreed']"),
         TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ])
 
-    call run_menu(broken_day2_evening_tea_menu)
+    call run_menu(broken_day2_evening_billiard_menu)
 
     return
 
@@ -113,11 +113,11 @@ label broken_day2_evening_propose_watch:
 # ------------------------------------
 #   CAPTAIN SINHA (the good light)
 # ------------------------------------
-label broken_day2_evening_tea_captain:
+label broken_day2_evening_billiard_captain:
 
-    if not broken_details.saved_variables['day2_evening_tea_captain_approached']:
+    if not broken_details.saved_variables['day2_evening_billiard_captain_approached']:
 
-        $ broken_details.saved_variables['day2_evening_tea_captain_approached'] = True
+        $ broken_details.saved_variables['day2_evening_billiard_captain_approached'] = True
 
         """
         I cross to the lamp.
@@ -249,11 +249,11 @@ label broken_day2_evening_captain_tomorrow:
 # ------------------------------------
 #   MR MANNING (the chair nearest the bar)
 # ------------------------------------
-label broken_day2_evening_tea_drunk:
+label broken_day2_evening_billiard_drunk:
 
-    if not broken_details.saved_variables['day2_evening_tea_drunk_approached']:
+    if not broken_details.saved_variables['day2_evening_billiard_drunk_approached']:
 
-        $ broken_details.saved_variables['day2_evening_tea_drunk_approached'] = True
+        $ broken_details.saved_variables['day2_evening_billiard_drunk_approached'] = True
 
         """
         Manning watches the fire as though it might try something, one hand curled round his glass.

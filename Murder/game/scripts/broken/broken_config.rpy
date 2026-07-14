@@ -31,9 +31,9 @@ label init_broken:
             "day1_evening_wearing_livery" : False,
 
             # Evening day 2 (the night map and the gathering)
-            "day2_evening_tea_room_visited" : False,
-            "day2_evening_tea_captain_approached" : False,
-            "day2_evening_tea_drunk_approached" : False,
+            "day2_evening_billiard_room_visited" : False,
+            "day2_evening_billiard_captain_approached" : False,
+            "day2_evening_billiard_drunk_approached" : False,
             "day2_evening_watch_agreed" : False,
             "day2_evening_called_doctor" : False,
             "day2_evening_called_psychic" : False,
