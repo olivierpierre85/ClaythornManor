@@ -108,17 +108,9 @@ label broken_day2_evening:
 
     A thought occurs to me, am I really sure they will come?
 
-    The host didn't seem surprised they were not there yet.
+    Lady Claythorn didn't seem surprised they were not there yet.
 
     But I would assume that when an unnatural death is reported, they would come at once.
-
-    And I know that Lady Claythorn is lying and hiding something.
-
-    She is obviously very suspicious here, I shouldn't trust whatever she said.
-
-    So maybe I should check for myself.
-
-    The telephone is in the entrance hall, I should try it as soon as I have the opportunity.
 
     I sit on my bed, and try to think of what I should do.
     """
@@ -182,6 +174,10 @@ label broken_day2_evening:
 
     One more reason to be cautious tonight.
 
+    But did she really call them, or is it another lie?
+    
+    The telephone is in the entrance hall, maybe I should check for myself.
+
     The meal is served quickly after that.
 
     Everyone is rather quiet and I do not feel like talking either.
@@ -195,7 +191,7 @@ label broken_day2_evening:
 
     call run_menu(TimedMenu("broken_day2_evening_menu_dinner", [
         TimedMenuChoice("Speak to Lady Claythorn", 'broken_day2_dinner_host', early_exit=True),
-        TimedMenuChoice("Keep my own counsel", 'generic_cancel', early_exit=True),
+        TimedMenuChoice("Keep to yourself", 'generic_cancel', early_exit=True),
     ], image_right = "host"))
 
     call change_time(20, 30)
@@ -205,7 +201,6 @@ label broken_day2_evening:
         # The bottle of rat poison stayed in the scullery, and tonight it has
         # found its way into the dinner. Everyone is poisoned; he collapses
         # among the first.
-        $ play_music('danger', 2)
 
         """
         The dinner is coming to an end.
@@ -216,6 +211,8 @@ label broken_day2_evening:
 
         Then, suddenly, Miss Marsh stands up.
         """
+
+        $ play_music('danger', 2)
 
         nurse """
         I hope you will excuse me, but I will retire to my room now.
@@ -250,9 +247,7 @@ label broken_day2_evening:
 
         I want to follow him but I notice something that stops me.
 
-        My right hand is shaking.
-
-        I didn't even notice it and I can't seem to stop it.
+        My right hand is shaking and I can't seem to stop it.
 
         Panic overwhelms me.
 
@@ -261,7 +256,11 @@ label broken_day2_evening:
         My jaw is locked.
 
         I look around me and see faces in utter panic.
+        """
 
+        play sound broken_glass
+
+        """
         Somebody's glass breaks.
 
         Somebody screams.
@@ -349,6 +348,8 @@ label broken_day2_evening:
 
         $ play_music('scary')
 
+        play sound broken_glass
+
         play sound fire loop
 
         """
@@ -434,7 +435,7 @@ label broken_day2_dinner_host:
     """
 
     """
-    I could ask her more questions, but I feel I have learned what I needed to know about her.
+    I should ask her more questions, even though I feel I have learned what I needed to know about her.
     """
 
     call host_generic

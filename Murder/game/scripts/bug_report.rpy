@@ -233,7 +233,7 @@ screen bug_report_button:
             yoffset 130
             ypadding 0
             xpadding 0
-            textbutton _("Report"):
+            textbutton _("Report BUG"):
                 action Function(open_bug_report_modal)
                 xminimum 200
                 yminimum 80

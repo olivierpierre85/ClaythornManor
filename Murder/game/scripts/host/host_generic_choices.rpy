@@ -146,15 +146,13 @@ label host_generic_age_broken:
     """
 
     broken """
-    Forgive me. I forgot myself.
-
-    I find a person's years often tell you a great deal about them.
+    Forgive me. 
+    
+    I wasn't thinking.
     """
 
     host -surprised """
-    Then you shall have to be content with a great deal of mystery, Mr Moody.
-
-    A woman of my standing never reveals her age.
+    Evidently.
     """
 
     return
