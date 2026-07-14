@@ -21,7 +21,8 @@
 #         Captain and Mr Manning in the tea room (2_tea_room.rpy) to arrange
 #         a watch -> unlocks gather_everyone
 #       - Gate 2, at night: without gather_everyone the manor is set alight
-#         while everyone sleeps -> broken_ending_burned; with it the watch
+#         and the escape through the window ends on the iron fence
+#         -> broken_ending_impaled; with it the watch
 #         holds, Broken sees the motor car leave at four -> broken_day3_morning
 # --------------------------------------------
 label broken_day2_evening:
@@ -190,36 +191,90 @@ label broken_day2_evening:
 
     call change_time(19, 30)
 
-    $ time_left = 90
+    $ time_left = 60
 
     call run_menu(TimedMenu("broken_day2_evening_menu_dinner", [
         TimedMenuChoice("Speak to Lady Claythorn", 'broken_day2_dinner_host', early_exit=True),
         TimedMenuChoice("Keep my own counsel", 'generic_cancel', early_exit=True),
     ], image_right = "host"))
 
-    call change_time(21, 00)
+    call change_time(20, 30)
 
     if not broken_details.threads.is_unlocked('found_poison'):
 
         # The bottle of rat poison stayed in the scullery, and tonight it has
         # found its way into the dinner. Everyone is poisoned; he collapses
         # among the first.
-        $ stop_music()
+        $ play_music('danger', 2)
 
         """
+        The dinner is coming to an end.
+
         The wine goes round a last time, and I let the footman fill my glass.
 
-        It is Miss Marsh who falters first. Her spoon stops halfway to her lips, and her face goes the colour of the tablecloth.
+        Everyone look rather exhausted.
 
-        Then a heat rises in my own chest, and the room tilts.
+        Then, suddenly, Miss Marsh stands up. 
+        """
 
-        Across the table the Captain is on his feet, swaying, one hand knotted in the cloth.
+        nurse """
+        I hope you will excuse me, but I will retire to my room now.
 
-        Somebody's glass breaks. Somebody screams. The sounds reach me from a long way off.
+        I must have caught something because I do not feel very well.
+        """
 
-        My legs give before I can reach the door.
+        host """
+        Of course Miss Marsh, we will see you in the morning.
+        """
 
-        The last thing I see is our hostess rising from her chair, and I cannot tell if she is screaming too.
+        nurse """
+        Thank you.
+        """
+
+        """
+        She leaves the table and starts walking towards the door, but slows down, then stops abruptly.
+        """
+
+        play sound body_fall
+
+        """
+        She collapses on the floor, and starts what looks like a bout of convulsion.
+        """
+
+        captain """
+        Miss Marsh!
+        """
+
+        """
+        The captain stands up and rushes towards her.
+
+        I want to follow him but I notice something that stops me.
+
+        My right hand is shaking.
+
+        I didn't even notice it and I can't seem to stop it.
+
+        Panics overwhelms me.
+
+        I want to say something but can't open my mouth.
+
+        My jaw is locked.
+
+        I look around me and see faces in utter panic.
+
+        Somebody's glass breaks. 
+        
+        Somebody screams. 
+        
+        The sounds reach me sharp and loud.
+
+        I gather all my strength to stand but my legs give right after I leave my chair.
+        """
+
+        play sound body_fall
+
+        """
+        The last thing I see is our hostess rising from her chair, screaming out of her lungs.
         """
 
         jump broken_ending_poisoned
@@ -227,7 +282,7 @@ label broken_day2_evening:
     """
     The dinner ends as quietly as it began.
 
-    Lady Claythorn wishes us each a good night, and the party rises from the table without ceremony.
+    Lady Claythorn wishes us each a good night, and inform us that drinks are available in the billiard room, like yesterday.
 
     The others drift towards the stairs and I follow them.
     """
@@ -241,9 +296,11 @@ label broken_day2_evening:
     """
     I lock my door, and take a moment to think of what to do.
 
-    I know Lady Claythorn is not to be trusted, she has probably conspired to hurt Captain Sinha, as well as Doctor Baldwin.
+    I know Lady Claythorn is not to be trusted.
+    
+    Most likely she is the one who conspired to hurt Captain Sinha, as well as Doctor Baldwin.
 
-    And Ted Harring's death is probably not accidental either.
+    That would mean Ted Harring's death is probably not accidental either.
 
     Whatever is happening here, nobody is safe.
 
@@ -255,7 +312,7 @@ label broken_day2_evening:
 
     But what could I do?
 
-    First, I have opened up to Samuel Manning, he is the one person I feel I could trust tonight.
+    Since I have already opened up to Samuel Manning, I feel I could trust him.
 
     Doctor Baldwin and Captain Sinha were both intended victims, so logically, I could trust them as well.
 
@@ -264,17 +321,6 @@ label broken_day2_evening:
     But everything is so twisted I am not sure of anything right now.
     """
 
-    """
-    Then it comes to me that thinking is not what this night needs.
-
-    If nobody is safe alone, then nobody should be alone. It is as simple as that.
-
-    I shall knock on every door in this house if I must, and put a watch on the night.
-
-    Manning and the Captain first, if they are still up.
-
-    And there is the telephone in the entrance hall to try along the way.
-    """
 
     # Night map: call on the bedrooms (most won't answer, some hide) and find
     # the Captain and Mr Manning in the tea room. Warning the pair AND calling
@@ -300,59 +346,74 @@ label broken_day2_evening:
         """
         The house is dark, and every man and woman in it is shut away alone behind their own door.
 
-        I meant to do more. The night ran out before my nerve found its feet.
-
-        I sit against the headboard, meaning to keep my eyes open until morning.
-
-        I do not manage it.
+        I sit against the headboard, intent on keeping my eyes open until morning.
         """
+
+        call wait_screen_transition()
 
         $ play_music('scary')
 
         play sound fire loop
 
         """
-        Somewhere very far away, glass breaks.
+        I am half asleep when I hear glass breaking, too far away for being in my room.
 
-        I swim up towards waking and do not reach it.
-
-        The room is warm. The dark has a taste to it now, thick and bitter.
+        I stand up and notice that the room is warm, and there is something else.
 
         Smoke.
 
-        My body understands before my mind does, but my arms are lead, and the door is a mile away across the carpet.
+        It is coming from outside, through the door.
 
-        The last thing I know is the line of light beneath it. Bright, and orange, and moving.
+        Instinctively I try to get up, but the handle is piping hot.
+
+        I won't get out that way.
+
+        The smoke is getting thicker and I am afraid that I will pass out if I wait any longer. 
+
+        There is only one other escape route.
+
+        The window.
+
+        I open it and look down.  
+
+        There is an iron fence that frighten me a bit.
+
+        But now the fire reaches the door.     
+
+        So I do not have a chance, I cross over the window and hangs from arms.
+
+        If I manage my fall I should avoid any injuries.
         """
 
-        jump broken_ending_burned
+        jump broken_ending_impaled
 
+    # SHITE:
     # gather_everyone path: the watch holds through the night.
-    """
-    The watches are set.
+    # """
+    # The watches are set.
 
-    Captain Sinha takes the first, with Mr Manning for company, posted on the landing where every bedroom door can be seen.
+    # Captain Sinha takes the first, with Mr Manning for company, posted on the landing where every bedroom door can be seen.
 
-    The ladies are barred in their rooms, and the doctor sleeps his heavy sleep behind his own locked door.
+    # The ladies are barred in their rooms, and the doctor sleeps his heavy sleep behind his own locked door.
 
-    Mine is the dead stretch, from two o'clock until dawn.
+    # Mine is the dead stretch, from two o'clock until dawn.
 
-    I sleep in my clothes, three grey hours of half-sleep, and take my chair out to the landing when Manning taps at my door.
-    """
+    # I sleep in my clothes, three grey hours of half-sleep, and take my chair out to the landing when Manning taps at my door.
+    # """
 
-    pause 1
+    # pause 1
 
-    """
-    Some time past four, sounds rise from below.
+    # """
+    # Some time past four, sounds rise from below.
 
-    Quiet feet on the gravel, a door eased shut, and then the cough of a motor car.
+    # Quiet feet on the gravel, a door eased shut, and then the cough of a motor car.
 
-    From the landing window I watch its lamps slide away down the drive until the dark takes them.
+    # From the landing window I watch its lamps slide away down the drive until the dark takes them.
 
-    So much for the tree across the road.
+    # So much for the tree across the road.
 
-    Nobody else stirs. I hold my post, and wait for the grey of morning.
-    """
+    # Nobody else stirs. I hold my post, and wait for the grey of morning.
+    # """
 
     jump broken_day3_morning
 

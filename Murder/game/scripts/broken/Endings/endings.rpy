@@ -123,36 +123,41 @@ label broken_ending_poisoned:
     $ play_music('mysterious')
 
     """
-    You never rise from the table.
+    You never rise from the floor.
 
-    Every guest at that dinner was served from the same bottles, and not one of you saw morning.
+    People died around you, all at the same time and under horrific circumstances.
+    
+    This made you think of the war.
 
-    An open bottle of rat poison stood in plain sight below stairs on your very first night.
+    Only here you had no idea who the enemy was.
 
-    You walked past it, and left it where a murderer could reach it.
+    That made the experience even more terrifying.
+
+    Now, you may try to understand why this terrible ending occurred.
+
+    You probably think you did not made a misstep here.
+
+    But sometimes, things put in motions a long time ago can have consequences much later.
+
+    You should keep that in mind.
     """
 
     jump ending_generic
 
 
-# SATURDAY NIGHT — nobody kept watch, and the manor was put to the torch
-label broken_ending_burned:
+# SATURDAY NIGHT — nobody kept watch, the manor was put to the torch,
+# and the leap from the window ended on the iron fence
+label broken_ending_impaled:
 
-    $ broken_details.endings.unlock('burned')
-    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('burned'))
+    $ broken_details.endings.unlock('impaled')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('impaled'))
 
     call death_screen_transition
 
     $ play_music('mysterious')
 
     """
-    You never leave your bed.
-
-    By morning Claythorn Manor is a shell of blackened stone, and every question you meant to ask has gone up with it.
-
-    You knew the danger, and you faced the night alone, and one man cannot watch a whole house.
-
-    Perhaps, had you knocked on every door and set the household to guard one another, someone would have raised the alarm in time.
+    TODO
     """
 
     jump ending_generic

@@ -13,7 +13,7 @@ The chapter has two gates:
    (`broken_day2_evening_map_menu`). Warning the Captain and Mr Manning in
    the tea room (the watch proposal) AND calling at every occupied bedroom
    door (doctor, psychic, nurse, host) unlocks `gather_everyone`. Turning
-   in without it -> `broken_ending_burned`. With it the watch holds, Broken
+   in without it -> `broken_ending_impaled`. With it the watch holds, Broken
    takes the small-hours shift, sees the motor car leave at four, and goes
    on to `broken_day3_morning`.
 
@@ -50,4 +50,4 @@ unlocks on the last), then turn in. The run continues into Sunday morning
 
 ## setup_broken_saturday_evening_3.json
 Same threads as 2 (`found_poison` unlocked), but he turns in for the night
-straight away without gathering anyone -> `broken_ending_burned`.
+straight away without gathering anyone -> `broken_ending_impaled`.

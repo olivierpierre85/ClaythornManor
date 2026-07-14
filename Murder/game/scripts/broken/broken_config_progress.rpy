@@ -14,49 +14,43 @@ label broken_config_progress:
                 Chapter(image_ending_question, "ending", "walked_out", "end"),
             ],
             # Row 1: trunks drop one row - friday_evening at col1, the hunt at col3,
-            # saturday_evening's first branch (poisoned, more below) at col4, and
+            # saturday_evening's first branch (impaled, more below) at col4, and
             # sunday_afternoon's single branch (ambushed) turns right at col6
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_line),            # col1 trunk (Saturday-morning deaths)
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),            # col3 trunk (Saturday-hunt deaths)
-                Chapter(image_checkpoint_double_corner),   # col4 branch (poisoned, more below)
-                Chapter(image_ending_question, "ending", "poisoned", "saturday_evening"),
-                Chapter(image_checkpoint_empty_half),      # filler completing the poisoned cell
+                Chapter(image_checkpoint_double_corner),   # col4 branch (impaled, more below)
+                Chapter(image_ending_question, "ending", "impaled", "saturday_evening"),
+                Chapter(image_checkpoint_empty_half),      # filler completing the impaled cell
                 Chapter(image_checkpoint_corner),          # col6 branch (ambushed - the only one)
                 Chapter(image_ending_question, "ending", "ambushed", "sunday_afternoon"),
             ],
-            # Row 2: col1's first branch (deathbed), the col3 trunk carries on,
-            # and col4's last branch (burned - the unguarded night)
+            # Row 2: col1's first branch (deathbed), col3's first hunt branch
+            #   (strangled - spared the Captain, caught in the rush), and the
+            #   col4 trunk turns right through the strangled cell (poisoned - last)
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_double_corner),   # col1 branch (more below)
                 Chapter(image_ending_question, "ending", "deathbed", "saturday_morning"),
                 Chapter(image_checkpoint_empty_half),      # filler completing the deathbed cell
-                Chapter(image_checkpoint_line),            # col3 trunk carries on
-                Chapter(image_checkpoint_corner),          # col4 branch (last)
-                Chapter(image_ending_question, "ending", "burned", "saturday_evening"),
+                Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
+                Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
+                Chapter(image_checkpoint_corner_half),     # col4 branch (last), sharing the strangled cell
+                Chapter(image_ending_question, "ending", "poisoned", "saturday_evening"),
             ],
-            # Row 3: col1's last branch (throat_cut) and col3's first hunt branch
-            #   (strangled - spared the Captain, caught in the rush)
+            # Row 3: col1's last branch (throat_cut) and col3's second hunt branch
+            #   (shot - killed the Captain)
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_corner),          # col1 branch (last)
                 Chapter(image_ending_question, "ending", "throat_cut", "saturday_morning"),
                 Chapter(image_checkpoint_empty_half),      # filler completing the throat_cut cell
                 Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
-                Chapter(image_ending_question, "ending", "strangled", "saturday_afternoon"),
-            ],
-            # Row 4: col3's second hunt branch (shot - killed the Captain)
-            [
-                Chapter(image_checkpoint_empty_small),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_double_corner),   # col3 branch (more below)
                 Chapter(image_ending_question, "ending", "shot", "saturday_afternoon"),
             ],
-            # Row 5: the western-grove death hangs last on the col3 trunk -
+            # Row 4: the western-grove death hangs last on the col3 trunk -
             #   shielded (took Manning's bullet meant for Doctor Baldwin)
             [
                 Chapter(image_checkpoint_empty_small),
