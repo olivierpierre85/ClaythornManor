@@ -42,18 +42,18 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ##### **Friday Evening**
 
-##### Saturday — Hunt
-- DRUNK AND Survival PATH
-
-##### Saturday — After the Hunt
-- **Only Ted is dead** — a normal dinner, but the same outcome: everyone dies. If you found the poison the day before, you can press on after diner; if you found nothing you die in your sleep when the Butler sets the house on fire.
-
 
 ##### Saturday — After Dinner
-- If you found the poison, you gain time to explore in both cases. Now you can partner up with the Drunk → unlocks him (at least partially). Or with someone else?
-- If you do not find [???], you burn in your sleep → INTUITION: DO NOT SLEEP. 
-  
-- The only way to reach Day 3 is to have found the poison AND successfully interrogated all the staff and befriend the drunk, which makes Broken decide to spend the night in the tea room ("no one should leave our sights"), and to convince everyone to do so. The staff and Lady CLaythorn are gone
+
+you need to convince everyone something is not right.
+=> You have to admit who you are.
+=> THere must be clues downstairs. 
+  - Kitchen totally empty, no staff;
+=> Lady Claythorn not there
+
+REDO FULL upstairs => Nobody is there?
+
+REDO full billiard room
 
 ##### Sunday Morning 
 If you survived with everyone but TED harring and host (who sneaked out after dinner), you are now face with what to do. You know you have to leave but how and with whom?

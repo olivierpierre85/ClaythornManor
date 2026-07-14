@@ -33,7 +33,7 @@ label broken_day2_evening:
 
     call black_screen_transition("Thomas Moody", chapters_names[current_chapter])
 
-    $ play_music('chill', 2)
+    $ play_music('sad', 2)
 
     $ change_room('entrance_hall', dissolve)
 
@@ -74,7 +74,7 @@ label broken_day2_evening:
     nurse """
     No, nobody has come yet.
 
-    But they should arrive soon.
+    But I hope they will arrive soon.
     """
 
     host """
@@ -125,8 +125,6 @@ label broken_day2_evening:
 
     $ change_room('dining_room', irisout)
 
-    $ play_music('sad', 2)
-
     """
     We all take our usual seats around the dining table.
 
@@ -136,7 +134,7 @@ label broken_day2_evening:
     """
 
     host """
-    Now that everyone is here, I want to express my deepest regret for what happened this morning.
+    Now that everyone is here, I want to express my deepest regret for what happened this morning to poor Mister Harring.
 
     This isn't how I imagined our weekend.
 
@@ -289,8 +287,6 @@ label broken_day2_evening:
     $ change_room('bedroom_broken', dissolve)
 
     call change_time(21, 15)
-
-    $ stop_music()
 
     """
     I lock my door, and take a moment to think of what to do.

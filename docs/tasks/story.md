@@ -160,6 +160,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 - the butler will poison Thomas Moody (Everybody is watching Sinha, he left his flask next to the bar) => It's a sleeping draught, don't worry about it. BUT then, it should be noted how horrified she is. SHe receives a letter, that is so unfortunate, but keep going.
 
 ### Ideas to think over (optional)
+- Why is her name never mentionned
 
 
 ## BUTLER

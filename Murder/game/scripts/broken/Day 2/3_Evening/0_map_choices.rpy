@@ -1,23 +1,4 @@
 # Map choices for Broken (Thomas Moody), Saturday night.
-#
-# The same board as Friday night, but the game is different: he is not
-# snooping, he is raising the house. Calling at every occupied bedroom
-# (most won't answer, some hide) AND warning the Captain and Mr Manning
-# in the billiard room (2_billiard_room.rpy) unlocks gather_everyone -
-# without it the manor burns while everyone sleeps (see 1_main.rpy).
-#
-# Occupied doors that count towards the gathering: doctor, psychic, nurse,
-# host. The Captain's and Mr Manning's rooms stand empty (they are in the
-# billiard room, where the Captain reads and Mr Manning drinks). Ted
-# Harring's room holds Ted Harring.
-#
-# No livery mechanics tonight: the door at the foot of the servant stair is
-# locked from the other side, and the attic answers nobody. The entrance
-# hall pays off the telephone he resolved to try (the line is dead).
-#
-# The early exit ("Turn in for the night") ends the exploration and leads
-# into the night in 1_main.rpy.
-
 
 label broken_day2_evening_map_menu:
     python:
@@ -25,28 +6,33 @@ label broken_day2_evening_map_menu:
             "broken_day2_evening_map_menu",
             [
             # Attic
-            map_choice('storage', 'broken_day2_evening_attic_default'),
-            map_choice('males_room', 'broken_day2_evening_attic_default'),
-            map_choice('females_room', 'broken_day2_evening_attic_default'),
-            map_choice('attic_butler_room', 'broken_day2_evening_attic_default'),
+            map_choice('storage', 'broken_day2_evening_attic_default', 10),
+            map_choice('males_room', 'broken_day2_evening_attic_default', 10),
+            map_choice('females_room', 'broken_day2_evening_attic_default', 10),
+            map_choice('attic_butler_room', 'broken_day2_evening_attic_default', 10),
             # Bedrooms (his own room is the retire exit, so it is not listed here)
-            map_choice('bedroom_lad', 'broken_day2_evening_bedroom_lad'),
-            map_choice('bedroom_host', 'broken_day2_evening_bedroom_host'),
-            map_choice('bedroom_nurse', 'broken_day2_evening_bedroom_nurse'),
-            map_choice('bedroom_doctor', 'broken_day2_evening_bedroom_doctor'),
-            map_choice('bedroom_drunk', 'broken_day2_evening_bedroom_empty'),
-            map_choice('bedroom_psychic', 'broken_day2_evening_bedroom_psychic'),
-            map_choice('bedroom_captain', 'broken_day2_evening_bedroom_empty'),
+            map_choice('bedroom_lad', 'broken_day2_evening_bedroom_lad', 5),
+            map_choice('bedroom_host', 'broken_day2_evening_bedroom_host', 10),
+            map_choice('bedroom_nurse', 'broken_day2_evening_bedroom_nurse', 10),
+            map_choice('bedroom_doctor', 'broken_day2_evening_bedroom_doctor', 10),
+            map_choice('bedroom_drunk', 'broken_day2_evening_bedroom_empty', 5),
+            map_choice('bedroom_psychic', 'broken_day2_evening_bedroom_psychic', 10),
+            map_choice('bedroom_captain', 'broken_day2_evening_bedroom_empty', 5),
             # Ground floor
-            map_choice('tea_room', 'broken_day2_evening_tea_room'),
-            map_choice('dining_room', 'broken_day2_evening_dining_room'),
-            map_choice('entrance_hall', 'broken_day2_evening_entrance_hall'),
-            map_choice('manor_garden', 'broken_day2_evening_garden'),
-            map_choice('servant_stairs', 'broken_day2_evening_servant_stairs'),
-            map_choice('portrait_gallery', 'broken_day2_evening_portrait_gallery'),
-            map_choice('library', 'broken_day2_evening_library'),
+            map_choice('tea_room', 'broken_day2_evening_tea_room', 5),
+            map_choice('dining_room', 'broken_day2_evening_dining_room', 5),
+            map_choice('entrance_hall', 'broken_day2_evening_entrance_hall', 10),
+            map_choice('manor_garden', 'broken_day2_evening_garden', 5),
+            map_choice('servant_stairs', 'broken_day2_evening_servant_stairs', 5),
+            map_choice('portrait_gallery', 'broken_day2_evening_portrait_gallery', 5),
+            map_choice('library', 'broken_day2_evening_library', 5),
+            # Servants' floor (open tonight, and deserted - see header comment)
+            map_choice('kitchen', 'broken_day2_evening_kitchen', 10),
+            map_choice('scullery', 'broken_day2_evening_scullery', 10),
+            map_choice('garage', 'broken_day2_evening_garage', 10),
+            map_choice('gun_room', 'broken_day2_evening_gun_room', 10),
             # Specific actions
-            TimedMenuChoice('Look in on the billiard room', 'broken_day2_evening_billiard_room', 10, room='billiard_room'),
+            TimedMenuChoice('Look in on the billiard room', 'broken_day2_evening_billiard_room', 20, room='billiard_room'),
             TimedMenuChoice('Turn in for the night', 'generic_cancel', early_exit=True, room='bedroom_broken'),
         ], is_map = True)
 
@@ -391,15 +377,63 @@ label broken_day2_evening_servant_stairs:
 
     $ change_room('servant_stairs')
 
+    if not broken_details.saved_variables['day2_evening_no_pretence']:
+
+        call broken_day2_evening_no_pretence
+
+        """
+        I stand at the head of the stair and listen.
+
+        Nothing comes up from below. No footsteps, no voices, not so much as a clatter of pans.
+
+        At this hour the staff should still be about their work.
+
+        That silence is wrong.
+        """
+
+    else:
+
+        """
+        The servant stair, dark and quiet.
+
+        The livery hangs untouched on its peg, and still no sound comes up from below.
+        """
+
+    return
+
+
+# The reflection that ends the disguise. Fired once, from the servant stair or
+# from the first room below stairs, whichever the player reaches first.
+label broken_day2_evening_no_pretence:
+
+    $ broken_details.saved_variables['day2_evening_no_pretence'] = True
+
     """
-    The livery hangs on its peg where I left it, but tonight it can do nothing for me.
+    The livery hangs on its peg where I left it.
 
-    The door at the foot of the stair is locked from the other side.
+    Last night I would not have set foot below stairs without it. A guest down there is marked and remembered, and I had every reason to pass unremarked.
 
-    Through it, faintly, come footsteps and the corded creak of trunks being moved.
+    Tonight I look at it and cannot think why I should bother.
 
-    The servants' floor is awake, and it has locked the house out.
+    Ted Harring is dead, the police are not coming, and this whole weekend has dropped its own mask.
+
+    There is no need to disguise myself any more.
+
+    There is nothing left to pretend.
     """
+
+    return
+
+
+# Going below stairs: the first crossing plays the no-pretence reflection in
+# the stairwell on the way down. After that it costs nothing.
+label broken_day2_evening_descend:
+
+    if not broken_details.saved_variables['day2_evening_no_pretence']:
+
+        $ change_room('servant_stairs')
+
+        call broken_day2_evening_no_pretence
 
     return
 
@@ -422,5 +456,98 @@ label broken_day2_evening_billiard_room:
 
     # The evening's real content: Captain Sinha reads, Mr Manning drinks.
     call broken_day2_evening_billiard_room_scene
+
+    return
+
+
+# ------------------------------------
+#   SERVANTS' FLOOR
+# ------------------------------------
+# Deserted tonight: the staff are up in the attic, packing. Each room shows a
+# piece of the flight being prepared for four in the morning.
+label broken_day2_evening_kitchen:
+
+    call broken_day2_evening_descend
+
+    $ change_room('kitchen')
+
+    """
+    The kitchen is empty.
+
+    The range is cold and raked out, the pans hang in their rows, and the long table has been scrubbed bare.
+
+    Last night this floor was awake and working at a later hour than this.
+
+    Tonight there is not a soul at work, and not a fire left burning.
+
+    Nothing stands ready for the morning either. No bread set to prove, no breakfast trays laid out.
+
+    This is not a kitchen put to bed for the night.
+
+    This is a kitchen that has been put away for good.
+    """
+
+    return
+
+
+label broken_day2_evening_scullery:
+
+    call broken_day2_evening_descend
+
+    $ change_room('scullery')
+
+    """
+    The scullery is cold, and as empty as the rest of the floor.
+
+    On the shelf above the sink, a clean ring in the dust marks where the rat poison stood before I took it.
+
+    Nothing has been set in its place.
+
+    Whoever left that bottle standing open will have found the shelf bare by now.
+
+    I am glad the bottle is in my keeping, and uneasy for the very same reason.
+    """
+
+    return
+
+
+label broken_day2_evening_garage:
+
+    call broken_day2_evening_descend
+
+    $ change_room('garage')
+
+    """
+    The garage smells of petrol, stronger than it should.
+
+    The motor car stands with its nose set square to the doors, and two petrol cans are strapped to the running board.
+
+    Nobody leaves a car facing out unless they mean to drive it out.
+
+    Somebody in this house is preparing to leave, and quietly.
+    """
+
+    return
+
+
+label broken_day2_evening_gun_room:
+
+    call broken_day2_evening_descend
+
+    $ change_room('gun_room')
+
+    """
+    The gun room.
+
+    The rack behind the glass stands empty, nothing left on it but the pegs.
+
+    The butler carried the rifles from the hunt back down here himself when we came in.
+
+    They are not here now.
+
+    Every gun in this house has been gathered up and carried off somewhere, tonight of all nights.
+
+    Somebody does not want us armed.
+    """
 
     return

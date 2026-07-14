@@ -40,6 +40,7 @@ label init_broken:
             "day2_evening_called_nurse" : False,
             "day2_evening_called_host" : False,
             "day2_evening_phone_tried" : False,
+            "day2_evening_no_pretence" : False,
         }
 
         broken_important_choices = CharacterImportantChoiceList([
