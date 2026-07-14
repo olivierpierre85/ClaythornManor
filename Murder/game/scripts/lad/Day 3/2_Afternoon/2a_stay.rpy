@@ -511,8 +511,12 @@ label lad_day3_afternoon_no_toilet:
     I throw open the window.
 
     Thankfully, it isn't locked.
+    """
 
-    Below, there is a picket fence.
+    $ change_room('bedroom_window_view')
+
+    """
+    Below, there is an iron fence.
 
     But if I can guide my descent, I might avoid it.
 
