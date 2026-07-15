@@ -335,9 +335,9 @@ label broken_day2_evening:
         # He never gathered the others: the house sleeps unguarded, and the
         # manor is set alight in the night.
         """
-        The house is dark, and every man and woman in it is shut away alone behind their own door.
+        I do no think there is more I can do tonight, so I return to my room.
 
-        I sit against the headboard, intent on keeping my eyes open until morning.
+        I sit on my bed but with the intent on keeping my eyes open until morning.
         """
 
         call wait_screen_transition()
@@ -351,7 +351,9 @@ label broken_day2_evening:
         """
         I am half asleep when I hear glass breaking, too far away to be in my room.
 
-        I stand up and notice that the room is warm, and there is something else.
+        I stand up and notice that the room is warm.
+        
+        Then I smell something.
 
         Smoke.
 

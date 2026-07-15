@@ -41,8 +41,11 @@ label broken_day2_evening_map_menu:
 # ------------------------------------
 #   SERVANTS' FLOOR
 # ------------------------------------
-# Deserted tonight: the staff are up in the attic, packing. Each room shows a
+# Deserted tonight: the staff are nowhere to be found, and each room shows a
 # piece of the flight being prepared for four in the morning.
+# The kitchen, scullery, gun room and attic each add one mark to the
+# day2_evening_staff_oddities count. All four marks are needed to unlock
+# staff_missing. The garage carries no clue and stays out of the count.
 label broken_day2_evening_kitchen:
 
     call broken_day2_evening_descend
@@ -57,7 +60,7 @@ label broken_day2_evening_kitchen:
     Nobody has troubled to see to it, which makes preparing breakfast tomorrow a hard task.
     """
 
-    $ broken_details.threads.unlock('staff_missing')
+    call broken_day2_evening_staff_oddity
 
     return
 
@@ -69,14 +72,14 @@ label broken_day2_evening_scullery:
     $ change_room('scullery')
 
     """
-    The scullery is cold and as empty.
+    The scullery is cold and empty.
 
     On the sink there are several unwashed pots and pans.
 
     Nobody bothered to clean the dishes tonight.
     """
 
-    $ broken_details.threads.unlock('staff_missing')
+    call broken_day2_evening_staff_oddity
 
     return
 
@@ -105,10 +108,61 @@ label broken_day2_evening_gun_room:
 
     They are not here now.
 
-    Every gun in this house has been gathered up and carried off somewhere, tonight of all nights.
-
-    Somebody does not want us armed.
+    Every gun in this house has been gathered up and carried off somewhere.
     """
+
+    call broken_day2_evening_staff_oddity
+
+    return
+
+
+# One mark per room, in whatever order the player finds them. The reflection
+# escalates with the count, and the fourth mark settles the question.
+label broken_day2_evening_staff_oddity:
+
+    $ broken_details.saved_variables['day2_evening_staff_oddities'] += 1
+
+    if broken_details.saved_variables['day2_evening_staff_oddities'] == 1:
+
+        """
+        That is rather odd.
+
+        But I should not jump to conclusions.
+        """
+
+    elif broken_details.saved_variables['day2_evening_staff_oddities'] == 2:
+
+        """
+        Another strange thing.
+
+        But there must be a reasonable explanation.
+
+        There usually is.
+        """
+
+    elif broken_details.saved_variables['day2_evening_staff_oddities'] == 3:
+
+        """
+        That is becoming weirder.
+
+        I am running out of explanations for the staff actions.
+
+        Where could they all be?        
+        """
+
+    elif broken_details.saved_variables['day2_evening_staff_oddities'] == 4:
+
+        """
+        Now that is concerning.
+
+        That is too many oddities to be an accident.
+
+        Something is happening here, and I can think of only one explanation.
+
+        The staff are gone, and they do not intend to come back.
+        """
+
+        $ broken_details.threads.unlock('staff_missing')
 
     return
 
@@ -352,17 +406,37 @@ label broken_day2_evening_attic_default:
     $ all_menus[broken_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
     $ all_menus[broken_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('attic_butler_room'))
 
+    $ change_room('attic_hallway')
+
     """
-    From the attic stair comes the scrape of something heavy being dragged, and low voices, and not one line of light under any door.
-
-    I knock. The dragging stops.
-
-    Nobody answers, and the voices do not start again until I am halfway back down the stair.
-
-    The staff are awake at this hour, and busy, and want no witnesses to it.
-
-    That is an answer of its own.
+    I climb the attic stair and knock.
     """
+
+    play sound door_knock
+
+    """
+    No answer, no light beneath it, and everything up here is quiet. 
+
+    I try the handle.
+    """
+
+    play sound door_locked
+
+    """
+    Closed, and it will not open.
+
+    I go along the corridor, knocking and trying every other door in turn.
+    """
+
+    play sound door_locked
+
+    """
+    Closed, all of them, and the same silence behind each.
+
+    Either the staff sleep like the dead, or there is nobody up here at all.
+    """
+
+    call broken_day2_evening_staff_oddity
 
     return
 
@@ -384,9 +458,9 @@ label broken_day2_evening_dining_room:
     """
     The table has been cleared, the cloth drawn, the chairs set straight.
 
-    Everything in perfect order, as though the household meant to be judged on it.
+    Everything in perfect order.
 
-    Nothing here but the ghost of an empty chair.
+    No reason to linger.
     """
 
     return
@@ -396,35 +470,27 @@ label broken_day2_evening_entrance_hall:
 
     $ change_room('entrance_hall')
 
-    if not broken_details.saved_variables['day2_evening_phone_tried']:
+    """
+    The hall stands empty.
+    
+    I find the telephone, its on a table behind the stair.
 
-        $ broken_details.saved_variables['day2_evening_phone_tried'] = True
+    I lift the receiver and hold it to my ear.
 
-        """
-        The hall stands empty, and the telephone waits on its table by the stair.
+    Nothing.
 
-        I lift the receiver and hold it to my ear.
+    No operator, no crackle from the exchange. 
+    
+    A dead silence.
 
-        Nothing.
+    Yet our hostess telephoned the police station this very evening, or so she told us at dinner.
 
-        No operator, no crackle from the exchange. A dead silence, like a shell held to the ear.
+    Either the line has died since, or no call was ever placed.
 
-        Yet our hostess telephoned the police station this very evening, or so she told us at dinner.
+    I set the receiver back on its cradle.
+    """
 
-        Either the line has died since, or no call was ever placed.
-
-        I set the receiver back on its cradle.
-
-        The house is cut off, and somebody has wished it so.
-        """
-
-    else:
-
-        """
-        I try the telephone once more.
-
-        The line is as dead as before.
-        """
+    $ broken_details.threads.unlock('phone_dead')
 
     return
 

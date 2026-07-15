@@ -318,12 +318,16 @@ label broken_day1_evening_attic_default:
     $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
     $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('attic_butler_room'))
 
+    $ change_room("attic_hallway")
+
     """
-    The servants sleep up under the eaves.
+    I start up the stairs towards the attic, but stop suddenly.
 
-    A stranger is no more welcome there than a guest would be below.
+    The attic is most likely where the servants sleep.
 
-    Whatever is up there will keep.
+    I should avoid it if I want to avoid to attract attention.
+
+    I go back down.
     """
 
     return

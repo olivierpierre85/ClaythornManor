@@ -33,6 +33,8 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ### Write Story: NEXT => Broken
 
+- REWRITE ALL THREADS, too complexe text
+
 - ADD MORE MORE questions in the generic menus (Doctor, Drunk, host) to confuse the player and make the game more challenging.
 
 - Test the changing MALUS and the whole Broken branching logic.
@@ -54,6 +56,10 @@ you need to convince everyone something is not right.
 REDO FULL upstairs => Nobody is there?
 
 REDO full billiard room
+
+Mybe Later => Staff oddities use the same picture with 4 Numbers
+
+MAYBE later => new ending, find the staff dead in the garden shed??? Not necessary for story but dramatic effect. Only if i can see it in the picture
 
 ##### Sunday Morning 
 If you survived with everyone but TED harring and host (who sneaked out after dinner), you are now face with what to do. You know you have to leave but how and with whom?
