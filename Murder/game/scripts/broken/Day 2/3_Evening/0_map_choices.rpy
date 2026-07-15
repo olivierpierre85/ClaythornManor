@@ -97,7 +97,7 @@ label broken_day2_evening_gun_room:
 
     call broken_day2_evening_descend
 
-    $ change_room('gun_room')
+    $ change_room('gun_room_empty')
 
     """
     The gun room.

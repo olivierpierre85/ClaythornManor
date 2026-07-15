@@ -47,19 +47,22 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ##### Saturday — After Dinner
 
-you need to convince everyone something is not right.
-=> You have to admit who you are.
-=> THere must be clues downstairs. 
-  - Kitchen totally empty, no staff;
-=> Lady Claythorn not there
 
-REDO FULL upstairs => Nobody is there?
 
-REDO full billiard room
+THursday : REDO FULL upstairs => Nobody is there?
+
+Friday: REDO full billiard room
+
+  you need to convince everyone something is not right.
+  => You have to admit who you are.
+  => THere must be clues downstairs. 
+    - Kitchen totally empty, no staff;
+  => Lady Claythorn not there
 
 Mybe Later => Staff oddities use the same picture with 4 Numbers
-
 MAYBE later => new ending, find the staff dead in the garden shed??? Not necessary for story but dramatic effect. Only if i can see it in the picture
+
+APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? OTDO check
 
 ##### Sunday Morning 
 If you survived with everyone but TED harring and host (who sneaked out after dinner), you are now face with what to do. You know you have to leave but how and with whom?
@@ -71,9 +74,6 @@ THE WHol stuff can be decided at the end of the writing
 
 
 ### BROKEN : 
-
-PHONE IMAGE 
-need a staff leaving image
 
 NEED a version unmaske of broken for when he is downstairs. I think I have it
 
