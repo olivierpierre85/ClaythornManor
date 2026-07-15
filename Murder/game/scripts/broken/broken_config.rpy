@@ -39,8 +39,8 @@ label init_broken:
             "day2_evening_called_psychic" : False,
             "day2_evening_called_nurse" : False,
             "day2_evening_called_host" : False,
-            "day2_evening_phone_tried" : False,
             "day2_evening_no_pretence" : False,
+            "day2_evening_staff_oddities" : 0,
         }
 
         broken_important_choices = CharacterImportantChoiceList([
@@ -113,6 +113,20 @@ label init_broken:
                 image_file="drunk_letter",
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
+            ),
+            CharacterInformation(1, "phone_dead",
+                "You tried the telephone in the entrance hall and found the line dead",
+                content_negative="You didn't try the telephone in the entrance hall",
+                image_file="phone",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(1, "staff_missing",
+                "You pieced together from the state of the servants' floor that the staff have deserted their posts and do not mean to return",
+                content_negative="You didn't notice the staff had deserted their posts",
+                image_file="staff_missing",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
         ])
 

@@ -31,12 +31,14 @@ Choices:
    (`broken_day2_evening_propose_watch`). The bedroom doors each have their
    own scene (the doctor won't wake, the psychic and the nurse answer
    through the wood, the host puts her light out). The entrance hall pays
-   off the telephone he resolved to try - the line is dead. The servants'
-   floor stands open tonight and deserted: the first visit to the servant
-   stair or to any room below stairs (whichever comes first) plays the
-   no-pretence reflection once (`day2_evening_no_pretence`), and the kitchen,
-   scullery, garage and gun room each show a piece of the household's
-   coming flight. Early exit: turn in for the night.
+   off the telephone he resolved to try - the line is dead (unlocks
+   `phone_dead`). The servants' floor stands open tonight and deserted: the
+   first visit to the servant stair or to any room below stairs (whichever
+   comes first) plays the no-pretence reflection once
+   (`day2_evening_no_pretence`). The kitchen, scullery and gun room each add
+   one staff-oddity mark (`day2_evening_staff_oddities`), and the third mark
+   unlocks `staff_missing` - the garage carries no clue and stays out of the
+   count. Early exit: turn in for the night.
 
 ## setup_broken_saturday_evening_1.json
 `talked_to_maid`, `host_lies`, `drunk_letter` (no `found_poison`). Dinner menu

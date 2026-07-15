@@ -73,27 +73,15 @@ label broken_garage_default:
 
     $ change_room('garage')
 
-    if broken_details.saved_variables.get("visited_garage"):
+    """
+    The air is thick with petrol and cold iron.
 
-        """
-        The garage is just as I left it.
+    A motor car stands in the middle of the room.
 
-        There is nothing more for me here.
-        """
+    An old tourer, well kept, though it has not been run in some time.
 
-    else:
-
-        $ broken_details.saved_variables["visited_garage"] = True
-
-        """
-        The air is thick with petrol and cold iron.
-
-        A motor car stands in the middle of the room.
-
-        An old tourer, well kept, though it has not been run in some time.
-
-        Nothing else gets my attention.
-        """
+    Nothing else gets my attention.
+    """
 
     return
 
