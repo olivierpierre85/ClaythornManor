@@ -17,7 +17,8 @@
       "Bash(awk 'NR>=418 && NR<=458 && \\(/^ *\\(if|elif|else\\)/ || /unlock/\\)' \"_common/Day 1/2_Evening/1_main.rpy\")",
       "Bash(awk 'NR>=19 && NR<=175 && \\(/^ *\\(if|elif|else\\)/ || /unlock/\\)' \"_common/Day 2/2_Hunt/4_north_field.rpy\")",
       "Bash(awk 'NR>=1 && NR<=195 && \\(/^ *\\(if|elif|else\\)/ || /unlock/\\)' \"_common/Day 3/2_Afternoon/2_lad_stay_with_psychic.rpy\")",
-      "Bash(echo \"exit=$?\")"
+      "Bash(echo \"exit=$?\")",
+      "Bash(python \"C:\\\\Users\\\\olivi\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Projects-ClaythornManor\\\\3a3fbf2c-538d-43ad-b18c-1f51083b549b\\\\scratchpad\\\\map_menu_mockup.py\")"
     ]
   }
 }
