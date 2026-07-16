@@ -6,6 +6,9 @@ Ongoing AI ollama tester, try with longer run. maybe needed to use a better LLM 
 
 IDEA => For choices already made (greyed out, add the time they will consume?)
 
+
+ACcept plan from THe thing
+
 ### ???? INTUITION system entirely FOR EVERYONE SAVED concept
 Now an intuition is needed to SAVE a person.
 When Someone is saved, it add a SAVED over their name in the progress view
@@ -30,6 +33,8 @@ GARDEN and entrance same on map but not on pictures?
 Servant stairs as last room => needs testing for other characters
 
 SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstairs? Add the servant stairs as the image when we try to reach downstairs? servant stairs could be servant room, or the upstairs stairs. But it will be fixed when we change the map
+
+=> CHECK there no servants in billiard room on day 2 in other path (like ted harring)
 
 ### Write Story: NEXT => Broken
 

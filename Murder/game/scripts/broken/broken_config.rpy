@@ -33,12 +33,7 @@ label init_broken:
             # Evening day 2 (the night map and the gathering)
             "day2_evening_billiard_room_visited" : False,
             "day2_evening_billiard_captain_approached" : False,
-            "day2_evening_billiard_drunk_approached" : False,
-            "day2_evening_watch_agreed" : False,
-            "day2_evening_called_doctor" : False,
-            "day2_evening_called_psychic" : False,
-            "day2_evening_called_nurse" : False,
-            "day2_evening_called_host" : False,
+            "day2_evening_gong_idea" : False,
             "day2_evening_no_pretence" : False,
             "day2_evening_staff_oddities" : 0,
         }
@@ -61,8 +56,16 @@ label init_broken:
                 relevant_chapters=['friday_evening'],
             ),
             CharacterInformation(
+                0, "manning_partner",
+                "You partnered with Samuel Manning, who pledged to follow your lead",
+                content_negative="You didn't partner with Samuel Manning",
+                image_file="drunk",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
                 0, "gather_everyone",
-                "You called on every guest and arranged a watch for the night",
+                "You rang the dinner gong, gathered the household, and arranged a watch for the night",
                 content_negative="You didn't gather the others to keep watch through the night",
                 image_file="lord",
                 chapters=['saturday_evening'],

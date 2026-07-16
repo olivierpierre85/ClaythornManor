@@ -6,9 +6,10 @@
 #   doctor have gone up, and no staff are anywhere to be seen.
 #
 #   The important business of the night happens here: laying his fears
-#   before the pair of them and proposing the watch
-#   (broken_day2_evening_propose_watch -> day2_evening_watch_agreed, one of
-#   the two conditions of gather_everyone).
+#   before the pair of them (broken_day2_evening_lay_fears). The Captain
+#   decides to trust Moody and offers the idea of the night: ring the
+#   dinner gong to bring the whole house down at once
+#   (day2_evening_gong_idea -> the gong choice on the night map).
 #
 #   The Captain's talk also seeds Sunday: if the police have not come by
 #   morning, he means to walk to the village himself.
@@ -22,13 +23,23 @@ label broken_day2_evening_billiard_room_scene:
         $ broken_details.saved_variables['day2_evening_billiard_room_visited'] = True
 
         """
-        Drinks in the billiard room, our hostess said, and here is what remains of the promise.
+        I head to the billiard room, where our hostess said, there would be drinks.
+
+        Only two other guests have come here.
 
         Captain Sinha sits in the good light with a book open on his knee and a glass of soda water at his elbow.
 
-        Mr Manning has the chair nearest the bar, and a glass of something that is not soda water stands guard beside him.
+        Mr Manning has the chair nearest the bar, with a glass of something that is not soda water.
 
-        No butler, no footman. The two of them have poured for themselves like men in a railway waiting room.
+        No butler, no footman, only the three of us.
+        
+        Good.
+
+        Here are two men I think I can reasonably trust.
+
+        I could convince them that something has to be done tonight.
+
+        But how to make them trust me?
         """
 
     else:
@@ -39,13 +50,12 @@ label broken_day2_evening_billiard_room_scene:
         """
         I look in on the billiard room again.
 
-        The Captain has not turned many pages. Mr Manning's glass is no emptier than it was.
+        Captain Sinha and Samuel Manning are still there.
         """
 
     $ broken_day2_evening_billiard_menu = TimedMenu("broken_day2_evening_billiard_menu", [
-        TimedMenuChoice('Join Captain Sinha and his book', 'broken_day2_evening_billiard_captain', 0, keep_alive = True, next_menu = 'broken_captain_night_menu'),
-        TimedMenuChoice('Sit with Mr Manning', 'broken_day2_evening_billiard_drunk', 0, keep_alive = True, next_menu = 'broken_drunk_night_menu'),
-        TimedMenuChoice('Lay your fears before them and propose a watch', 'broken_day2_evening_propose_watch', 20, keep_alive = True, condition = "not broken_details.saved_variables['day2_evening_watch_agreed']"),
+        TimedMenuChoice('Join Captain Sinha', 'broken_day2_evening_billiard_captain', 0, keep_alive = True, next_menu = 'broken_captain_night_menu'),
+        TimedMenuChoice('Sit with Mr Manning', 'broken_day2_evening_billiard_drunk', 10),
         TimedMenuChoice('Leave the room', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ])
 
@@ -55,11 +65,11 @@ label broken_day2_evening_billiard_room_scene:
 
 
 # ------------------------------------
-#   THE WATCH PROPOSAL
+#   LAYING THE FEARS - the Captain's idea
 # ------------------------------------
-label broken_day2_evening_propose_watch:
+label broken_day2_evening_lay_fears:
 
-    $ broken_details.saved_variables['day2_evening_watch_agreed'] = True
+    $ broken_details.saved_variables['day2_evening_gong_idea'] = True
 
     """
     I draw a chair between the two of them, and I do not dress it up.
@@ -69,43 +79,43 @@ label broken_day2_evening_propose_watch:
     And my belief, plainly stated, that someone under this roof does not intend all of us to see Monday.
     """
 
-    captain """
-    You are proposing a watch.
     """
-
-    broken """
-    I am proposing that nobody in this house spends tonight alone and asleep at the same time.
-
-    Watches in turn, on the landing, where every door can be seen.
-
-    And the ladies and the doctor warned to lock themselves in.
-    """
-
-    """
-    The Captain closes his book without marking the page.
+    The Captain closes his book without marking the page, and studies me for a long moment.
     """
 
     captain """
-    In Burma we called it a stand-to, and I have never once regretted ordering it.
+    I have spent thirty years weighing men, Mr Moody, so I shall tell you plainly what I make of you.
 
-    Mr Manning and I shall take the first watch together.
+    A great deal about you does not add up.
 
-    Come down when you have knocked on your doors, Mr Moody, and we shall divide the night.
+    But you are not lying about this. That much I can see.
+
+    So I will trust you, and act on what you say.
     """
 
     drunk """
-    I'll stand mine sober, sir.
+    That makes two of us, sir.
+    """
 
-    That much I can still promise a man.
+    captain """
+    Then take my advice.
+
+    If every soul in this house is in danger, you do not carry that news from door to door.
+
+    You ring the dinner gong.
+
+    Nobody sleeps through a gong. The whole house will come down, and you will say your piece once, to everyone at the same time.
     """
 
     """
-    He pushes the glass away as he says it, a whole arm's length, and looks rather surprised at his own hand.
+    The gong.
 
-    Two of them. Now for the rest of the house.
+    Simple, loud, and impossible to ignore.
+
+    It stands in the dining room, and nothing prevents me from walking in there and striking it.
+
+    All that remains is to decide whether I dare.
     """
-
-    call broken_day2_evening_check_gathered
 
     return
 
@@ -119,22 +129,12 @@ label broken_day2_evening_billiard_captain:
 
         $ broken_details.saved_variables['day2_evening_billiard_captain_approached'] = True
 
-        """
-        I cross to the lamp.
-
-        Two days ago I could not have stood this close to the man without my hands remembering the rifle.
-
-        Tonight I only want to know what he is made of, because tonight may require it.
-        """
-
         captain """
-        Mr Moody.
-
-        Not drinking either, I observe.
+        Mr Moody. How are you tonight?
         """
 
         broken """
-        It seems to be catching, Captain.
+        Fine, Captain.
         """
 
     else:
@@ -251,152 +251,58 @@ label broken_day2_evening_captain_tomorrow:
 # ------------------------------------
 label broken_day2_evening_billiard_drunk:
 
-    if not broken_details.saved_variables['day2_evening_billiard_drunk_approached']:
-
-        $ broken_details.saved_variables['day2_evening_billiard_drunk_approached'] = True
-
-        """
-        Manning watches the fire as though it might try something, one hand curled round his glass.
-
-        He looks up as I draw a chair beside his, and does not look away.
-
-        A day ago he could not hold my eye at all.
-        """
-
-        broken """
-        You are drinking again, Mr Manning.
-        """
-
-        drunk """
-        Only enough to keep my hands still, sir.
-
-        I have been counting my way down this one glass for two hours, and I am still winning.
-        """
-
-        """
-        He glances at the bottles waiting on the bar, the way a man looks at an old enemy.
-        """
-
-        drunk """
-        Mr Moody. This morning, in the wood.
-
-        What you kept me from...
-        """
-
-        broken """
-        Was nothing at all, Mr Manning, because nothing at all took place.
-
-        A quiet morning, and poor shooting. We shall leave it there.
-        """
-
-        """
-        He nods, slowly, and something crosses his face that might, in a better week, have been a smile.
-        """
-
-        drunk """
-        A quiet morning. Yes.
-
-        Then I shall say only this, sir. If you should ever have need of me, for anything at all, you shall have me.
-
-        And as near sober as I can manage.
-        """
-
-        """
-        I have made no friends behind this mask.
-
-        It occurs to me, settling beside him in the lamplight, that this ruined old fellow may prove to be the first.
-        """
-
-    else:
-
-        $ broken_drunk_night_menu.early_exit = False
-
-        """
-        I go back to Mr Manning's corner.
-        """
-
-    $ broken_drunk_night_menu = TimedMenu("broken_drunk_night_menu", [
-        TimedMenuChoice('Compare the two letters', 'broken_day2_evening_drunk_letters', 20),
-        TimedMenuChoice('Ask how he is bearing up', 'broken_day2_evening_drunk_bearing', 15),
-        TimedMenuChoice('Leave him be', 'generic_cancel', 0, keep_alive = True, early_exit = True)
-    ], image_left = "drunk")
-
-    call run_menu(broken_drunk_night_menu)
-
-    return
-
-
-label broken_day2_evening_drunk_letters:
-
     broken """
-    Mr Manning. The letter you were sent.
-
-    What it said about your wife, about the medicine. Had any of that ever been printed? Spoken of at an inquest? Anything public at all?
-    """
-
-    """
-    He is quiet a long moment, and when he answers, it is not the drunkard speaking. It is the lawyer.
+    You are drinking again, Mr Manning.
     """
 
     drunk """
-    No, sir.
+    Only enough to keep my hands still, sir.
 
-    I made certain of that at the time. For her sake.
-
-    What was in that letter was known to three people. One of them is in the ground beside her, and the other two are the doctor and myself.
-    """
-
-    broken """
-    And mine quoted an army transfer order, number and date, from an autumn seven years gone.
-
-    That is not gossip either. That is a records office.
-    """
-
-    drunk """
-    Then whoever wrote to us did not overhear our griefs, Mr Moody.
-
-    They went looking for them. Methodically. Long before any invitation was ever sent.
+    The events of today have shaken me rather badly.
     """
 
     """
-    We sit with that a while, the fire ticking between us.
+    I can understand that.
 
-    This weekend was not arranged in a week. It has been researched, the way I would research a story.
+    And it is true that he looks more exhausted than drunk.
 
-    And I doubt very much the research stopped at the two of us.
-    """
-
-    return
-
-
-label broken_day2_evening_drunk_bearing:
-
-    broken """
-    How are you bearing up, Mr Manning? And honestly, if you please.
+    That is good.
     """
 
     drunk """
-    Honestly.
+    Mr Moody. This morning, in the wood.
 
-    My hands have not been still since noon, and this is the first glass of a day that would ordinarily have cost me a bottle.
-    """
-
-    """
-    He gives a small, dry laugh, with no self-pity in it that I can hear.
-    """
-
-    drunk """
-    I have not been dry two days together since Margaret died.
-
-    It is a poor time to make promises, with all this going on.
-
-    But a smaller glass tonight than last night, and a smaller one again tomorrow.
-
-    A lawyer knows better than to swear to more than he can prove.
+    What you kept me from...
     """
 
     broken """
-    Then we shall prove it one evening at a time, Mr Manning, and leave the bottles where they stand.
+    No need to talk about it, Mr Manning.
+
+    The real question is what we are going to do now.
     """
+
+    drunk """
+    Right.
+
+    Whatever you want to do, I'll follow.
+
+    I owe you that much.
+    """
+
+    broken """
+    Perfect.
+
+    I am still not sure what our course of action should be, but it is good to know you are on my side.
+
+    I shall keep that in mind.
+    """
+
+    """
+    Well, that went well enough.
+
+    But I would feel more secure if I could rely on more people than just the two of us.
+    """
+
+    $ broken_details.threads.unlock('manning_partner')
 
     return

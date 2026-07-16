@@ -10,12 +10,15 @@ The chapter has two gates:
    without it the bottle stayed where the killer left it, the meal is
    poisoned and every guest collapses -> `broken_ending_poisoned`.
 2. **`gather_everyone` at night**: after dinner a night map opens
-   (`broken_day2_evening_map_menu`). Warning the Captain and Mr Manning in
-   the billiard room (the watch proposal) AND calling at every occupied
-   bedroom door (doctor, psychic, nurse, host) unlocks `gather_everyone`. Turning
-   in without it -> `broken_ending_impaled`. With it the watch holds, Broken
-   takes the small-hours shift, sees the motor car leave at four, and goes
-   on to `broken_day3_morning`.
+   (`broken_day2_evening_map_menu`). Laying his fears before the Captain and
+   Mr Manning in the billiard room (`broken_day2_evening_lay_fears`) earns
+   the Captain's trust and his idea: ring the dinner gong to bring the whole
+   house down at once (`day2_evening_gong_idea`). The dining room hotspot then
+   becomes "Ring the dinner gong" (`broken_day2_evening_ring_gong`): deciding
+   to ring it gathers the household, sets the watch, unlocks `gather_everyone`
+   and ends the night map. Turning in without it -> `broken_ending_impaled`.
+   With it the watch holds, Broken takes the small-hours shift, sees the
+   motor car leave at four, and goes on to `broken_day3_morning`.
 
 Choices:
 1. **Dinner** (`broken_day2_evening_menu_dinner`): as on Friday, only the
@@ -27,10 +30,10 @@ Choices:
    night. The billiard room (`broken_day2_evening_billiard_menu`) holds Captain Sinha
    (reading; menu `broken_captain_night_menu`) and Mr Manning (drinking;
    menu `broken_drunk_night_menu`; the first approach plays the gratitude
-   exchange that seeds the partnership), plus the watch proposal
-   (`broken_day2_evening_propose_watch`). The bedroom doors each have their
-   own scene (the doctor won't wake, the psychic and the nurse answer
-   through the wood, the host puts her light out). The entrance hall pays
+   exchange that seeds the partnership), plus laying the fears before them
+   (`broken_day2_evening_lay_fears` -> the gong idea). The bedroom doors each
+   have their own scene (the doctor won't wake, the psychic and the nurse
+   answer through the wood, the host puts her light out). The entrance hall pays
    off the telephone he resolved to try - the line is dead (unlocks
    `phone_dead`). The servants' floor stands open tonight and deserted: the
    first visit to the servant stair or to any room below stairs (whichever
@@ -49,10 +52,11 @@ Choices:
 Same threads plus `found_poison`. Dinner menu -> speak to Lady Claythorn
 (immediate exit from her generic menu). Map -> billiard room (Captain: tomorrow
 question; Manning: the gratitude exchange on approach, then the letters),
-the watch proposal, then all four occupied bedroom doors (gather_everyone
-unlocks on the last), then turn in. The run continues into Sunday morning
-(no intuition, so the only option is to leave with the Captain) and ends at
-`broken_ending_ambushed`.
+laying the fears (the Captain offers the gong idea), then three bedroom
+doors (doctor, psychic, nurse), then the dining room hotspot to ring the
+gong (unlocks `gather_everyone` and ends the night map). The run continues
+into Sunday morning (no intuition, so the only option is to leave with the
+Captain) and ends at `broken_ending_ambushed`.
 
 ## setup_broken_saturday_evening_3.json
 Same threads as 2 (`found_poison` unlocked), but he turns in for the night

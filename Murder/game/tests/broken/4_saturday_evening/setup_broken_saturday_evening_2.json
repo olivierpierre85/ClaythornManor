@@ -55,8 +55,8 @@
         },
         {
             "menu": "broken_day2_evening_billiard_menu",
-            "selected": "Lay your fears before them and propose a watch",
-            "redirect": "broken_day2_evening_propose_watch"
+            "selected": "Lay your fears before them",
+            "redirect": "broken_day2_evening_lay_fears"
         },
         {
             "menu": "broken_day2_evening_billiard_menu",
@@ -80,13 +80,8 @@
         },
         {
             "menu": "broken_day2_evening_map_menu",
-            "selected": "Henry IV Bedroom",
-            "redirect": "broken_day2_evening_bedroom_host"
-        },
-        {
-            "menu": "broken_day2_evening_map_menu",
-            "selected": "Turn in for the night",
-            "redirect": "generic_cancel"
+            "selected": "Ring the dinner gong",
+            "redirect": "broken_day2_evening_ring_gong"
         },
         {
             "menu": "broken_day3_morning_menu_leave",

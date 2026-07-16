@@ -12,6 +12,11 @@ label broken_day2_evening_map_menu:
             map_choice('gun_room', 'broken_day2_evening_gun_room', 10),
             # Ground floor
             map_choice('tea_room', 'broken_day2_evening_tea_room', 10),
+            # Placed before the plain dining room entry on purpose:
+            # find_choice_for_room takes the first choice whose condition
+            # holds, so once the Captain has planted the idea the dining
+            # room hotspot becomes the gong.
+            TimedMenuChoice('Ring the dinner gong', 'broken_day2_evening_ring_gong', 20, room='dining_room', early_exit=True, condition="broken_details.saved_variables['day2_evening_gong_idea']"),
             map_choice('dining_room', 'broken_day2_evening_dining_room', 10),
             map_choice('entrance_hall', 'broken_day2_evening_entrance_hall', 10),
             map_choice('manor_garden', 'broken_day2_evening_garden', 10),
@@ -167,37 +172,98 @@ label broken_day2_evening_staff_oddity:
     return
 
 # ------------------------------------
-#   THE GATHERING
+#   THE GONG
 # ------------------------------------
-# gather_everyone unlocks once the Captain and Mr Manning have agreed to the
-# watch (day2_evening_watch_agreed, set in 2_billiard_room.rpy) and every
-# occupied bedroom door has been called at.
-label broken_day2_evening_check_gathered:
+# The Captain's idea, planted in the billiard room (2_billiard_room.rpy):
+# ringing the dinner gong brings the whole house down at once. Deciding to
+# ring it unlocks gather_everyone and ends the night map (early_exit).
+label broken_day2_evening_ring_gong:
 
-    if broken_details.threads.is_unlocked('gather_everyone'):
+    $ change_room('dining_room')
 
-        return
+    """
+    The gong stands by the dining room door, the beater hanging at its side.
 
-    python:
-        _all_gathered = (
-            broken_details.saved_variables['day2_evening_watch_agreed']
-            and broken_details.saved_variables['day2_evening_called_doctor']
-            and broken_details.saved_variables['day2_evening_called_psychic']
-            and broken_details.saved_variables['day2_evening_called_nurse']
-            and broken_details.saved_variables['day2_evening_called_host']
-        )
+    A ridiculous instrument to be afraid of, and yet my hand hesitates over it.
 
-    if _all_gathered:
+    Once it sounds, there is no taking it back. Every person in this house will come down, and I shall have to tell them why.
 
-        $ broken_details.threads.unlock('gather_everyone')
+    I think of Ted Harring's empty chair, and I strike it.
+    """
 
-        """
-        That is every door I can knock upon.
+    play sound dinner_gong
 
-        The Captain and Mr Manning hold the ground floor, the ladies have barred themselves in, and heaven help the doctor, for he would not wake for the last trumpet.
+    """
+    The sound rolls through the house like a wave, twice, three times, and I stop only when I hear the first doors opening above.
+    """
 
-        Whatever comes for us tonight will not find this house asleep.
-        """
+    $ change_room('entrance_hall')
+
+    """
+    They come down in whatever they had to hand.
+
+    Captain Sinha and Mr Manning are first out of the billiard room, and neither looks the least surprised.
+
+    Miss Marsh next, with a coat over her nightdress, then Miss Baxter, wide awake, as though she had been sitting up waiting for exactly this.
+
+    Doctor Baldwin does not come at all. Whatever he takes of an evening, he has taken it, and his lock will have to stand guard in his stead.
+
+    Lady Claythorn appears last at the head of the stairs, dressed to the collar, not one hair out of place.
+    """
+
+    host """
+    Mr Moody. I trust the house is on fire, at the very least.
+    """
+
+    broken """
+    Not yet, madam.
+
+    And I mean to see it stays that way.
+    """
+
+    """
+    So I say it once, to everyone at the same time, exactly as the Captain advised.
+
+    Mr Harring dead without cause. The staff gone from their floor. The telephone dead, the road blocked, and letters written to set us at one another's throats.
+
+    Nobody laughs at me. Nobody calls it nonsense.
+
+    That silence tells me more than any confession could.
+    """
+
+    captain """
+    Then it is settled.
+
+    Nobody sleeps alone and unguarded tonight.
+
+    Every door locked, and a watch kept on the landing in turns until morning. Mr Manning and I shall take the first.
+    """
+
+    drunk """
+    I'll stand mine sober, sir.
+
+    That much I can still promise a man.
+    """
+
+    """
+    Lady Claythorn watches it all from the stairs, and offers neither protest nor help.
+    """
+
+    host """
+    Do as you please, gentlemen.
+
+    I shall be in my room.
+    """
+
+    """
+    She goes up without another word.
+
+    The rest of us divide the night between us.
+
+    Whatever comes for this house tonight will not find it asleep.
+    """
+
+    $ broken_details.threads.unlock('gather_everyone')
 
     return
 
@@ -209,31 +275,17 @@ label broken_day2_evening_bedroom_doctor:
 
     $ change_room('bedrooms_hallway')
 
-    if not broken_details.saved_variables['day2_evening_called_doctor']:
+    """
+    I knock at Doctor Baldwin's door. Nothing.
 
-        $ broken_details.saved_variables['day2_evening_called_doctor'] = True
+    I knock harder, hard enough to wake the corridor.
 
-        """
-        I knock at Doctor Baldwin's door. Nothing.
+    From within comes a sound like a man swimming up from deep water, a mumble, the creak of a bed. Then nothing again.
 
-        I knock harder, hard enough to wake the corridor.
+    Whatever the doctor takes of an evening, he has taken it.
 
-        From within comes a sound like a man swimming up from deep water, a mumble, the creak of a bed. Then nothing again.
-
-        Whatever the doctor takes of an evening, he has taken it.
-
-        No fire bell would rouse him now. His lock will have to stand guard in his stead.
-        """
-
-        call broken_day2_evening_check_gathered
-
-    else:
-
-        """
-        The doctor's door, and the doctor's silence behind it.
-
-        There is no more to be done for him tonight.
-        """
+    No fire bell would rouse him now. His lock will have to stand guard in his stead.
+    """
 
     return
 
@@ -242,41 +294,27 @@ label broken_day2_evening_bedroom_psychic:
 
     $ change_room('bedrooms_hallway')
 
-    if not broken_details.saved_variables['day2_evening_called_psychic']:
+    """
+    I knock at Miss Baxter's door, and give my name.
 
-        $ broken_details.saved_variables['day2_evening_called_psychic'] = True
+    Her voice comes through the wood at once, wide awake.
+    """
 
-        """
-        I knock at Miss Baxter's door, and give my name.
+    psychic """
+    Mr Moody. What a peculiar hour for a social call.
 
-        Her voice comes through the wood at once, wide awake.
-        """
+    You needn't explain yourself, I feel the same disquiet in this house that you do. It hangs in every corridor like smoke.
 
-        psychic """
-        Mr Moody. What a peculiar hour for a social call.
+    I shall not open my door tonight, not to you nor to anybody.
 
-        You needn't explain yourself, I feel the same disquiet in this house that you do. It hangs in every corridor like smoke.
+    But rest assured, it will be locked, and the chair set under the handle, and should anyone try it I shall scream this house down to its foundations.
+    """
 
-        I shall not open my door tonight, not to you nor to anybody.
+    """
+    A scream for an alarm bell.
 
-        But rest assured, it will be locked, and the chair set under the handle, and should anyone try it I shall scream this house down to its foundations.
-        """
-
-        """
-        A scream for an alarm bell.
-
-        From her, I believe it. It will do.
-        """
-
-        call broken_day2_evening_check_gathered
-
-    else:
-
-        """
-        Miss Baxter's door stays shut, as she promised it would.
-
-        I leave her be.
-        """
+    From her, I believe it. It will do.
+    """
 
     return
 
@@ -285,43 +323,29 @@ label broken_day2_evening_bedroom_nurse:
 
     $ change_room('bedrooms_hallway')
 
-    if not broken_details.saved_variables['day2_evening_called_nurse']:
+    """
+    I knock at Miss Marsh's door.
 
-        $ broken_details.saved_variables['day2_evening_called_nurse'] = True
+    Silence. But it is the wrong kind of silence, the held-breath kind, with a floorboard settling where somebody has just stopped moving.
 
-        """
-        I knock at Miss Marsh's door.
+    She is hiding.
 
-        Silence. But it is the wrong kind of silence, the held-breath kind, with a floorboard settling where somebody has just stopped moving.
+    I put my mouth near the jamb and keep my voice low. My name, and my fear plainly stated, and what I mean to do about it.
 
-        She is hiding.
+    A long moment. Then the bolt slides, and her voice comes through the gap of the door.
+    """
 
-        I put my mouth near the jamb and keep my voice low. My name, and my fear plainly stated, and what I mean to do about it.
+    nurse """
+    Forgive me, Mr Moody. After this morning I did not know whose knock to trust.
 
-        A long moment. Then the bolt slides, and her voice comes through the gap of the door.
-        """
+    I shall bar the door and keep the candle burning, and I am a light sleeper.
 
-        nurse """
-        Forgive me, Mr Moody. After this morning I did not know whose knock to trust.
+    If I hear anything at all, the whole house will hear me next.
+    """
 
-        I shall bar the door and keep the candle burning, and I am a light sleeper.
-
-        If I hear anything at all, the whole house will hear me next.
-        """
-
-        """
-        Practical and precise. I would expect nothing else of her.
-        """
-
-        call broken_day2_evening_check_gathered
-
-    else:
-
-        """
-        A thin line of candlelight shows beneath Miss Marsh's door, as she said it would.
-
-        She is keeping her word.
-        """
+    """
+    Practical and precise. I would expect nothing else of her.
+    """
 
     return
 
@@ -330,35 +354,21 @@ label broken_day2_evening_bedroom_host:
 
     $ change_room('bedrooms_hallway')
 
-    if not broken_details.saved_variables['day2_evening_called_host']:
+    """
+    A line of light shows beneath Lady Claythorn's door, and behind it, small sounds of movement.
 
-        $ broken_details.saved_variables['day2_evening_called_host'] = True
+    I knock.
 
-        """
-        A line of light shows beneath Lady Claythorn's door, and behind it, small sounds of movement.
+    The light goes out mid-knock. The movement stops.
 
-        I knock.
+    I knock again, and give my name, and the silence only deepens.
 
-        The light goes out mid-knock. The movement stops.
+    She is standing in the dark on the other side of that door, waiting for me to leave.
 
-        I knock again, and give my name, and the silence only deepens.
+    Very well. Let her hear that the house is awake, at least.
 
-        She is standing in the dark on the other side of that door, waiting for me to leave.
-
-        Very well. Let her hear that the house is awake, at least.
-
-        That is warning enough for a woman who needs none.
-        """
-
-        call broken_day2_evening_check_gathered
-
-    else:
-
-        """
-        Lady Claythorn's door, dark and silent.
-
-        She heard me the first time.
-        """
+    That is warning enough for a woman who needs none.
+    """
 
     return
 
@@ -381,16 +391,16 @@ label broken_day2_evening_bedroom_empty:
 
 label broken_day2_evening_bedroom_lad:
 
-    $ change_room('bedrooms_hallway')
+    $ change_room("bedroom_lad")
 
     """
-    Ted Harring's door.
+    I enter Ted Harring's room.
 
-    Behind it he is lying where we carried him, past all warning and all watches.
+    He lays on his bed, with bedsheets covering his body.
 
-    I stand a moment with my knuckles an inch from the wood, feeling a fool.
+    I don't know what possessed me to come here, I wont learn more then Doctor Baldwin.
 
-    Rest easy, Mr Harring. This is for the ones you left behind.
+    I leave. 
     """
 
     return

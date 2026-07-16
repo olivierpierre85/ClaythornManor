@@ -17,9 +17,12 @@
 #       - Gate 1, at dinner: without found_poison (the scullery bottle stayed
 #         where the killer left it) the meal is poisoned and everyone
 #         collapses -> broken_ending_poisoned
-#       - Night map (0_map_choices.rpy): call on every bedroom, and find the
-#         Captain and Mr Manning in the billiard room (2_billiard_room.rpy)
-#         to arrange a watch -> unlocks gather_everyone
+#       - Night map (0_map_choices.rpy): find the Captain and Mr Manning in
+#         the billiard room (2_billiard_room.rpy) and lay the danger before
+#         them; the Captain decides to trust Moody and offers his idea:
+#         ring the dinner gong to bring the whole house down at once
+#       - Deciding to ring the gong (broken_day2_evening_ring_gong) gathers
+#         everyone and sets the night's watch -> unlocks gather_everyone
 #       - Gate 2, at night: without gather_everyone the manor is set alight
 #         and the escape through the window ends on the iron fence
 #         -> broken_ending_impaled; with it the watch
@@ -332,7 +335,7 @@ label broken_day2_evening:
 
     if not broken_details.threads.is_unlocked('gather_everyone'):
 
-        # He never gathered the others: the house sleeps unguarded, and the
+        # He never rang the gong: the house sleeps unguarded, and the
         # manor is set alight in the night.
         """
         I do no think there is more I can do tonight, so I return to my room.
@@ -386,33 +389,27 @@ label broken_day2_evening:
 
         jump broken_ending_impaled
 
-    # SHITE:
-    # gather_everyone path: the watch holds through the night.
-    # """
-    # The watches are set.
+    # gather_everyone path: the gong was rung and the watch holds through
+    # the night.
+    """
+    Mine is the dead stretch of the watch, from two o'clock until dawn.
 
-    # Captain Sinha takes the first, with Mr Manning for company, posted on the landing where every bedroom door can be seen.
+    I sleep in my clothes until Mr Manning taps at my door, and carry my chair out to the landing where every bedroom door can be seen.
+    """
 
-    # The ladies are barred in their rooms, and the doctor sleeps his heavy sleep behind his own locked door.
+    pause 1
 
-    # Mine is the dead stretch, from two o'clock until dawn.
+    """
+    Some time past four, sounds rise from below.
 
-    # I sleep in my clothes, three grey hours of half-sleep, and take my chair out to the landing when Manning taps at my door.
-    # """
+    Quiet feet on the gravel, a door eased shut, and then the cough of a motor car.
 
-    # pause 1
+    From the landing window I watch its lamps slide away down the drive until the dark takes them.
 
-    # """
-    # Some time past four, sounds rise from below.
+    So much for the tree across the road.
 
-    # Quiet feet on the gravel, a door eased shut, and then the cough of a motor car.
-
-    # From the landing window I watch its lamps slide away down the drive until the dark takes them.
-
-    # So much for the tree across the road.
-
-    # Nobody else stirs. I hold my post, and wait for the grey of morning.
-    # """
+    Nobody else stirs. I hold my post, and wait for the grey of morning.
+    """
 
     jump broken_day3_morning
 
