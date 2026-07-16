@@ -14,11 +14,11 @@ label init_drunk:
             # CharacterInformation(0, "background", "???"), 
             CharacterInformation(1, "status", "prominent family"),
             CharacterInformation(2, "age", "55-year-old "),
-            CharacterInformation(2, "wife", "the untimely death of his wife. Still young and healthy, she would never have died if the doctor responsible for her operation hadn't been so high on opioids", is_important = True), # Confess to Doctor
-            CharacterInformation(3, "addict", "an addiction of his own. He started drinking regularly to numb the pain. It got worse and worse until he was no longer able", is_important = True), # Everyone
+            CharacterInformation(2, "wife", "the untimely death of his wife. Still young and healthy, she would never have died if the doctor responsible for her operation hadn't been so high on opioids", is_important = True, unlock_chapters=[('doctor', 'saturday_afternoon')]), # Confess to Doctor
+            CharacterInformation(3, "addict", "an addiction of his own. He started drinking regularly to numb the pain. It got worse and worse until he was no longer able", is_important = True, unlock_chapters=[('broken', 'friday_evening'), ('captain', 'friday_evening'), ('doctor', 'friday_evening'), ('lad', 'friday_evening')]), # Everyone
             CharacterInformation(60, "job", "lawyer, losing cases he should have won and disparaging his clients", is_important = True), # Confess to Broken
             CharacterInformation(60, "heroic_act", "have left him; only the poorest and the most desperate would ever hire him. He assumes that this choice of clients has made him look like a fervent defender of the poor in the eyes of Lady Claythorn, hence his invitation", is_important = True), # Confess to Broken 
-            CharacterInformation(60, "lie", "he can sober up, or at least act sober enough when the situation demands it. He has also become quite good at feigning drunkenness to avoid unpleasant situations", is_important = True), # Confess to Doctor
+            CharacterInformation(60, "lie", "he can sober up, or at least act sober enough when the situation demands it. He has also become quite good at feigning drunkenness to avoid unpleasant situations", is_important = True, unlock_chapters=[('doctor', 'saturday_afternoon')]), # Confess to Doctor
             ], drunk_name
         )
         drunk_description = """

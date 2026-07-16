@@ -16,11 +16,11 @@ label init_host:
         host_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "name_age", "Elisabeth - is born in 1865 and", is_important = True), 
             CharacterInformation(1, "down_to_earth", "look down upon 'lower class' individuals", is_important = True), 
-            CharacterInformation(60, "hunt", "cannot hunt at the level expected of a lady of her station", is_important = True),
-            CharacterInformation(60, "car", "to drive a car", is_important = True),
-            CharacterInformation(60, "table_manners", "table manners are not quite what they ought to be"),
-            CharacterInformation(60, "lie", "a progressive aristocrat close to the people. She is, in fact, one of the people - an out-of-work actress playing her most dangerous role", is_important = True),
-            CharacterInformation(60, "not_guilty", "guilty, she is not the mastermind behind the whole operation. She is not even in charge of it, the butler is.", is_important = True),
+            CharacterInformation(60, "hunt", "cannot hunt at the level expected of a lady of her station", is_important = True, unlock_chapters=[('broken', 'saturday_afternoon'), ('captain', 'saturday_afternoon')]),
+            CharacterInformation(60, "car", "to drive a car", is_important = True, unlock_chapters=[('nurse', 'saturday_evening')]),
+            CharacterInformation(60, "table_manners", "table manners are not quite what they ought to be", unlock_chapters=[('captain', 'friday_evening')]),
+            CharacterInformation(60, "lie", "a progressive aristocrat close to the people. She is, in fact, one of the people - an out-of-work actress playing her most dangerous role", is_important = True, unlock_chapters=[('captain', 'saturday_afternoon'), ('captain', 'saturday_evening')]),
+            CharacterInformation(60, "not_guilty", "guilty, she is not the mastermind behind the whole operation. She is not even in charge of it, the butler is.", is_important = True, unlock_chapters=[('captain', 'saturday_evening')]),
             ], host_name
         )
 

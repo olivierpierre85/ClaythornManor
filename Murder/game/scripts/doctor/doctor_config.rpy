@@ -191,8 +191,8 @@ label init_doctor:
             CharacterInformation(0, "heroic_act", "he maintained for over a decade", is_important = True), 
             CharacterInformation(1, "status", "well-regarded, it did not make him a wealthy man. However, it provided him with the opportunity to glimpse the glamorous life of the rich people of his time. Thus, he can at least sort of understand the rules of this kind of world", is_important = True),
             CharacterInformation(2, "age", "39-year-old"),
-            CharacterInformation(3, "addict", "sometimes fidgets for no apparent reason. This is common among opioid addicts", is_important = True),
-            CharacterInformation(3, "fraud", "an affliction that led him to stealing drugs from his patients", is_important = True),
+            CharacterInformation(3, "addict", "sometimes fidgets for no apparent reason. This is common among opioid addicts", is_important = True, unlock_chapters=[('lad', 'saturday_evening')]),
+            CharacterInformation(3, "fraud", "an affliction that led him to stealing drugs from his patients", is_important = True, unlock_chapters=[('lad', 'saturday_afternoon')]),
             # Hide as long as it is not relevant to the story
             # CharacterInformation(3, "gay", "A confirmed bachelor, he never married. This led to some rumours among his staff about his possible \"inversion\"")         <info:gay>.
             ], doctor_name

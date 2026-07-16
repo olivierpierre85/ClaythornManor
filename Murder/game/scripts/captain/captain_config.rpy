@@ -180,16 +180,16 @@ label init_captain:
 
         # Character Class
         captain_extra_information = CharacterDescriptionHiddenList ([
-            CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, during the Great War or the Boxer's Rebellion in China"), 
-            CharacterInformation(10, "talker",  "being at the centre of attention, so he tend to monopolize the conversation", is_important = True),
+            CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, during the Great War or the Boxer's Rebellion in China", unlock_chapters=[('broken', 'friday_evening'), ('lad', 'friday_evening'), ('nurse', 'friday_evening'), ('psychic', 'friday_evening'), ('lad', 'saturday_afternoon'), ('doctor', 'sunday_afternoon')]),
+            CharacterInformation(10, "talker",  "being at the centre of attention, so he tend to monopolize the conversation", is_important = True, unlock_chapters=[('broken', 'friday_evening'), ('lad', 'friday_evening'), ('nurse', 'friday_evening'), ('psychic', 'friday_evening')]),
             CharacterInformation(40, "heroic_act", "impressive military career", is_important = True),
             CharacterInformation(40, "city", "London"), # TODO unlock somewhere, ? In captain walkthroug?
             CharacterInformation(20, "age", "54 years ago"),
             CharacterInformation(30, "mansion", "running of a large mansion", is_important = True),
-            CharacterInformation(30, "table", "proper table manners", is_important = True),
+            CharacterInformation(30, "table", "proper table manners", is_important = True, unlock_chapters=[('psychic', 'friday_evening')]),
             CharacterInformation(30, "family", "noble lineage ensured he received an education far superior to most", is_important = True), # TODO unlock somewhere, ? In captain walkthroug?            
-            CharacterInformation(45, "embellishment", " some of the details may have been somewhat enhanced over the years"),
-            CharacterInformation(60, "lie", "they do not really include the fighting he claims to have participated in. As an administrative officer, he spent most of his time behind desks", is_important = True),
+            CharacterInformation(45, "embellishment", " some of the details may have been somewhat enhanced over the years", unlock_chapters=[('captain', 'friday_evening'), ('nurse', 'saturday_evening')]),
+            CharacterInformation(60, "lie", "they do not really include the fighting he claims to have participated in. As an administrative officer, he spent most of his time behind desks", is_important = True, unlock_chapters=[('nurse', 'saturday_evening')]),
             ], captain_name
         )
 

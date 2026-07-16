@@ -57,12 +57,13 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 THursday : REDO FULL upstairs => Nobody is there?
 
 Friday: REDO full billiard room
-
   you need to convince everyone something is not right.
   => You have to admit who you are.
   => THere must be clues downstairs. 
     - Kitchen totally empty, no staff;
   => Lady Claythorn not there
+
+ADD a counter to leads to final question (and thread, convince captain)
 
 Mybe Later => Staff oddities use the same picture with 4 Numbers
 MAYBE later => new ending, find the staff dead in the garden shed??? Not necessary for story but dramatic effect. Only if i can see it in the picture

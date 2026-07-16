@@ -336,6 +336,7 @@ init -100 python:
             is_intuition = False,
             chapters = None,
             relevant_chapters = None,
+            unlock_chapters = None,
         ):
             self.order = order
             self.text_id = text_id
@@ -347,6 +348,9 @@ init -100 python:
             self.is_intuition = is_intuition
             self.chapters = chapters if chapters is not None else []
             self.relevant_chapters = relevant_chapters if relevant_chapters is not None else []
+            # Hidden description infos only: (playing_character_text_id, chapter_key)
+            # pairs telling in which storyline chapter this info can be unlocked
+            self.unlock_chapters = unlock_chapters if unlock_chapters is not None else []
             self.discovered = False
             self.type = None
 
@@ -596,9 +600,24 @@ init -100 python:
                     return chapter
             return None
 
+        # Hidden description infos (about any character, including the butler)
+        # that can be unlocked while playing this storyline in the given chapter.
+        # Returns a list of (owner_details, info) pairs.
+        # getattr: infos coming from saves made before unlock_chapters existed
+        def get_hidden_infos_by_chapter(self, chapter_key):
+            result = []
+            for owner in char_list_flat + [butler_details]:
+                for info in owner.description_hidden.information_list:
+                    if (self.text_id, chapter_key) in getattr(info, 'unlock_chapters', []):
+                        result.append((owner, info))
+            return result
+
         def is_chapter_completed(self, chapter):
             for item in self.get_choices_and_discoveries_by_chapter_only_current(chapter):
                 if item.discovered == False:
+                    return False
+            for owner, info in self.get_hidden_infos_by_chapter(chapter):
+                if info.locked:
                     return False
             return True
 

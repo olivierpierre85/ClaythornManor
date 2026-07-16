@@ -157,7 +157,7 @@ label init_broken:
         ])
 
         broken_description_hidden = CharacterDescriptionHiddenList([
-            CharacterInformation(0, "mask", "injured at the start of the war, he is now what people call a 'Gueule Cassée' or broken face"),
+            CharacterInformation(0, "mask", "injured at the start of the war, he is now what people call a 'Gueule Cassée' or broken face", unlock_chapters=[('broken', 'friday_evening'), ('captain', 'friday_evening'), ('doctor', 'friday_evening'), ('lad', 'friday_evening')]),
             CharacterInformation(0, "age", "43-year-old", is_important = True),
             CharacterInformation(0, "background", "a fancy house as a boot boy before graduating to footman. There he learned how to behave among the rich and wealthy", is_important = True),
             CharacterInformation(0, "tall", "above-average height", is_important = True),
@@ -165,9 +165,9 @@ label init_broken:
             CharacterInformation(0, "heroic_act", "that led to his injuries is what made Lady Claythorn invite him to the Manor", is_important = True),
             CharacterInformation(0, "city", "Liverpool", is_important = True),
             CharacterInformation(0, "shy", "married, perhaps because his condition has rendered him rather shy towards the opposite sex", is_important = True),
-            CharacterInformation(0, "lie_mask", "however, a fiction - his face was never touched by the war", is_important = True),
-            CharacterInformation(0, "lie_name", "'Thomas' is not his own. His friends call him 'Archie'", is_important = True),
-            CharacterInformation(0, "lie_impostor", "not who he claims to be", is_important = True),
+            CharacterInformation(0, "lie_mask", "however, a fiction - his face was never touched by the war", is_important = True, unlock_chapters=[('doctor', 'saturday_morning')]),
+            CharacterInformation(0, "lie_name", "'Thomas' is not his own. His friends call him 'Archie'", is_important = True, unlock_chapters=[('broken', 'saturday_afternoon'), ('captain', 'saturday_afternoon')]),
+            CharacterInformation(0, "lie_impostor", "not who he claims to be", is_important = True, unlock_chapters=[('doctor', 'sunday_afternoon')]),
             ], broken_name
         )
 

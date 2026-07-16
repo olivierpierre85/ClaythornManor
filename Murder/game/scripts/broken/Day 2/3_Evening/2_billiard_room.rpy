@@ -65,7 +65,7 @@ label broken_day2_evening_billiard_room_scene:
 
 
 # ------------------------------------
-#   CAPTAIN SINHA (the good light)
+#   CAPTAIN SINHA
 # ------------------------------------
 label broken_day2_evening_billiard_captain:
 
@@ -133,22 +133,16 @@ label broken_day2_evening_captain_tree:
 
     broken """
     What do you make of this business with the road, Captain?
+
+    Don't you think that is strange?
     """
 
     captain """
-    A tree may fall by chance. I have seen it happen.
+    Strange? Far from it.
+    
+    With the storm we've had yesterday, it was to be expected to have some damage.
 
-    But consider what this one has accomplished.
-
-    No police. No telegraph boy. No tradesman's van. A full day, bought with one trunk of timber.
-
-    If I wished to cut a house such as this one off from the world, I should do precisely what has been done.
-    """
-
-    """
-    He says it evenly, the way another man would remark on the weather.
-
-    It is the first thing he has said all weekend that I am certain is not a performance.
+    I am just happy that the house was untouched.
     """
 
     call broken_day2_evening_captain_check_convinced

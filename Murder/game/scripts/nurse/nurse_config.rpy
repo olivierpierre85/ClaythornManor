@@ -204,9 +204,9 @@ label init_nurse:
             CharacterInformation(2, "clothes", "well-dressed in an understated style", is_important = True),
             CharacterInformation(3, "age", "42 years old", is_important = True),
             CharacterInformation(4, "manor", "got accustomed with grand mansions and how they are run", is_important = True),
-            CharacterInformation(5, "sick", "suffers from an incurable disease that leaves her weak and tired", is_important = True),
+            CharacterInformation(5, "sick", "suffers from an incurable disease that leaves her weak and tired", is_important = True, unlock_chapters=[('psychic', 'saturday_afternoon')]),
             CharacterInformation(0, "heroic_act", "She fought in almost all british wars since the cretan revolt. This also includes the Boxers Rebellion and, of course, the Great War", is_important = True),
-            CharacterInformation(60, "lie", "stealing from her patients, or from anyone whenever she has the opportunity.", is_important = True),
+            CharacterInformation(60, "lie", "stealing from her patients, or from anyone whenever she has the opportunity.", is_important = True, unlock_chapters=[('psychic', 'saturday_evening')]),
             ], nurse_name
         )
         # nurse_description_full = """

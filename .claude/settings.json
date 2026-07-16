@@ -3,7 +3,21 @@
     "allow": [
       "Bash(python -c \":*)",
       "Bash(find /c/Projects/ClaythornManor/Murder/game/scripts/nurse -type f -name *.rpy)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(python Murder/check_description_hidden_unlocks.py)",
+      "Bash(python Murder/check_description_hidden_unlocks.py --diff)",
+      "Bash(git -C . diff --stat)",
+      "Bash(ls /c/renpy*)",
+      "Bash(ls /d/renpy*)",
+      "Bash(\"/c/Program Files/renpy-8.4.1-sdk/renpy.exe\" \"C:/Projects/ClaythornManor/Murder\" lint)",
+      "Bash(echo \"---exit $?\")",
+      "Bash(\"/c/Program Files/renpy-8.4.1-sdk/renpy.exe\" \"C:/Projects/ClaythornManor/Murder\" test nurse.friday_afternoon)",
+      "Bash(\"/c/Program Files/renpy-8.4.1-sdk/renpy.exe\" \"C:/Projects/ClaythornManor/Murder\" test nurse::friday_afternoon)",
+      "Bash(\"/c/Program Files/renpy-8.4.1-sdk/renpy.exe\" \"C:/Projects/ClaythornManor/Murder\" test hidden_tmp::gating)",
+      "Bash(awk 'NR>=418 && NR<=458 && \\(/^ *\\(if|elif|else\\)/ || /unlock/\\)' \"_common/Day 1/2_Evening/1_main.rpy\")",
+      "Bash(awk 'NR>=19 && NR<=175 && \\(/^ *\\(if|elif|else\\)/ || /unlock/\\)' \"_common/Day 2/2_Hunt/4_north_field.rpy\")",
+      "Bash(awk 'NR>=1 && NR<=195 && \\(/^ *\\(if|elif|else\\)/ || /unlock/\\)' \"_common/Day 3/2_Afternoon/2_lad_stay_with_psychic.rpy\")",
+      "Bash(echo \"exit=$?\")"
     ]
   }
 }
