@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(python -c \":*)",
-      "Bash(find /c/Projects/ClaythornManor/Murder/game/scripts/nurse -type f -name *.rpy)"
+      "Bash(find /c/Projects/ClaythornManor/Murder/game/scripts/nurse -type f -name *.rpy)",
+      "Bash(python -c ' *)"
     ]
   }
 }
