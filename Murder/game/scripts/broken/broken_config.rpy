@@ -33,7 +33,8 @@ label init_broken:
             # Evening day 2 (the night map and the gathering)
             "day2_evening_billiard_room_visited" : False,
             "day2_evening_billiard_captain_approached" : False,
-            "day2_evening_gong_idea" : False,
+            "day2_evening_captain_facts" : 0,
+            "day2_evening_captain_convinced" : False,
             "day2_evening_no_pretence" : False,
             "day2_evening_staff_oddities" : 0,
         }

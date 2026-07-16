@@ -17,12 +17,14 @@
 #       - Gate 1, at dinner: without found_poison (the scullery bottle stayed
 #         where the killer left it) the meal is poisoned and everyone
 #         collapses -> broken_ending_poisoned
-#       - Night map (0_map_choices.rpy): find the Captain and Mr Manning in
-#         the billiard room (2_billiard_room.rpy) and lay the danger before
-#         them; the Captain decides to trust Moody and offers his idea:
-#         ring the dinner gong to bring the whole house down at once
-#       - Deciding to ring the gong (broken_day2_evening_ring_gong) gathers
-#         everyone and sets the night's watch -> unlocks gather_everyone
+#       - Night map (0_map_choices.rpy): gather three facts around the
+#         house (staff gone, telephone dead, Manning's letter) and bring
+#         each to the Captain in the billiard room (2_billiard_room.rpy);
+#         once all three are told, Moody shows him the army order, the
+#         Captain decides to trust him and proposes the dinner gong
+#       - The gong is rung straight from that scene
+#         (broken_day2_evening_ring_gong): the household gathers, the
+#         watch is set -> unlocks gather_everyone, and the night map ends
 #       - Gate 2, at night: without gather_everyone the manor is set alight
 #         and the escape through the window ends on the iron fence
 #         -> broken_ending_impaled; with it the watch

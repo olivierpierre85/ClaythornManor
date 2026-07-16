@@ -12,11 +12,6 @@ label broken_day2_evening_map_menu:
             map_choice('gun_room', 'broken_day2_evening_gun_room', 10),
             # Ground floor
             map_choice('tea_room', 'broken_day2_evening_tea_room', 10),
-            # Placed before the plain dining room entry on purpose:
-            # find_choice_for_room takes the first choice whose condition
-            # holds, so once the Captain has planted the idea the dining
-            # room hotspot becomes the gong.
-            TimedMenuChoice('Ring the dinner gong', 'broken_day2_evening_ring_gong', 20, room='dining_room', early_exit=True, condition="broken_details.saved_variables['day2_evening_gong_idea']"),
             map_choice('dining_room', 'broken_day2_evening_dining_room', 10),
             map_choice('entrance_hall', 'broken_day2_evening_entrance_hall', 10),
             map_choice('manor_garden', 'broken_day2_evening_garden', 10),
@@ -37,7 +32,9 @@ label broken_day2_evening_map_menu:
             map_choice('females_room', 'broken_day2_evening_attic_default', 10),
             map_choice('attic_butler_room', 'broken_day2_evening_attic_default', 10),
             # Specific actions
-            TimedMenuChoice('Look in on the billiard room', 'broken_day2_evening_billiard_room', 20, room='billiard_room'),
+            # keep_alive: the Captain's questions need facts gathered around
+            # the house, so the player must be able to come back here.
+            TimedMenuChoice('Look in on the billiard room', 'broken_day2_evening_billiard_room', 20, keep_alive=True, room='billiard_room'),
             TimedMenuChoice('Turn in for the night', 'generic_cancel', early_exit=True, room='bedroom_broken'),
         ], is_map = True)
 
@@ -174,9 +171,11 @@ label broken_day2_evening_staff_oddity:
 # ------------------------------------
 #   THE GONG
 # ------------------------------------
-# The Captain's idea, planted in the billiard room (2_billiard_room.rpy):
-# ringing the dinner gong brings the whole house down at once. Deciding to
-# ring it unlocks gather_everyone and ends the night map (early_exit).
+# Not a map choice: called straight from the billiard room once the Captain
+# has been shown the order (broken_day2_evening_captain_order in
+# 2_billiard_room.rpy). Ringing it gathers the household and unlocks
+# gather_everyone. The caller closes the billiard and map menus, so the
+# night ends when this scene returns.
 label broken_day2_evening_ring_gong:
 
     $ change_room('dining_room')
