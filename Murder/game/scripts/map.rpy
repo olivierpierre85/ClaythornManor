@@ -157,22 +157,36 @@ screen manor_map:
     use game_menu(_("Map of The Manor")):
 
         hbox:
-            # Centre the 960-wide map on the screen: content frame starts at
-            # x=480, the left arrow slot is 168 wide (140px image at zoom 1.2),
-            # so 480-168+168 = 480 and the map spans 480..1440 (screen centre).
-            # Vertically the content area is 180..1035, so (855-640)/2 = 108.
-            yoffset 108
-            xoffset -168
+            # Centre the framed map on the screen: content frame starts at
+            # x=480, the left arrow slot is 168 wide (140px image at zoom 1.2)
+            # and the gold frame adds 8px, so the framed block (976 wide) spans
+            # 472..1448 and the map itself 480..1440 (screen centre).
+            # Vertically the content area is 180..1035, so (855-656)/2 = 100.
+            yoffset 100
+            xoffset -176
 
             use map_floor_arrow(-1)
 
-            imagemap:
-                xalign 0.5
-                idle "images/ui/map/map_idle_[selected_floor].png"
-                hover "images/ui/map/map_hover_[selected_floor].png"
-                use map_annotations
+            use map_gold_frame:
+
+                imagemap:
+                    idle "images/ui/map/map_idle_[selected_floor].png"
+                    hover "images/ui/map/map_hover_[selected_floor].png"
+                    use map_annotations
 
             use map_floor_arrow(1)
+
+
+# Golden painting frame drawn around the map, same style as the character
+# side portraits and info cards. Sits outside the image via padding, so the
+# imagemap hotspot coordinates are unaffected.
+screen map_gold_frame():
+
+    frame:
+        background Frame("images/ui/map/map_gold_frame.png", 8, 8)
+        padding (8, 8, 8, 8)
+
+        transclude
 
 
 # The names the player has written on the map (unlocked via unlock_map)
@@ -241,25 +255,26 @@ screen in_game_map_menu(timed_menu):
             hbox:
                 use map_floor_arrow(-1)
 
-                imagemap:
-                    xalign 0.5
-                    idle "images/ui/map/map_idle_[selected_floor].png"
-                    hover "images/ui/map/map_hover_[selected_floor].png"
-                    insensitive "images/ui/map/map_insensitive_[selected_floor].png"
+                use map_gold_frame:
 
-                    for hot in hotspots:
-                        hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
-                            if hot.active:
-                                if hot.already_chosen and not seen_tutorial_already_chosen_map:
-                                    action [ SetVariable("show_tutorial_already_chosen_map", True), Return(hot.room) ]
+                    imagemap:
+                        idle "images/ui/map/map_idle_[selected_floor].png"
+                        hover "images/ui/map/map_hover_[selected_floor].png"
+                        insensitive "images/ui/map/map_insensitive_[selected_floor].png"
+
+                        for hot in hotspots:
+                            hotspot (hot.area_points[0], hot.area_points[1], hot.area_points[2], hot.area_points[3]):
+                                if hot.active:
+                                    if hot.already_chosen and not seen_tutorial_already_chosen_map:
+                                        action [ SetVariable("show_tutorial_already_chosen_map", True), Return(hot.room) ]
+                                    else:
+                                        action Return(hot.room)
                                 else:
-                                    action Return(hot.room)
-                            else:
-                                action None
-                            tooltip hot
-                            mouse "hover"
+                                    action None
+                                tooltip hot
+                                mouse "hover"
 
-                    use map_annotations
+                        use map_annotations
 
                 use map_floor_arrow(1)
 
