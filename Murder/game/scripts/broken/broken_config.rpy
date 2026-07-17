@@ -34,7 +34,6 @@ label init_broken:
             "day2_evening_billiard_room_visited" : False,
             "day2_evening_billiard_captain_approached" : False,
             "day2_evening_captain_facts" : 0,
-            "day2_evening_captain_convinced" : False,
             "day2_evening_no_pretence" : False,
             "day2_evening_staff_oddities" : 0,
         }
@@ -57,12 +56,20 @@ label init_broken:
                 relevant_chapters=['friday_evening'],
             ),
             CharacterInformation(
-                0, "manning_partner",
+                0, "drunk_partner",
                 "You partnered with Samuel Manning, who pledged to follow your lead",
                 content_negative="You didn't partner with Samuel Manning",
                 image_file="drunk",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
+                0, "captain_convinced",
+                "You laid the facts before Captain Sinha and won his trust",
+                content_negative="You didn't win Captain Sinha's trust",
+                image_file="captain",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening'],
             ),
             CharacterInformation(
                 0, "gather_everyone",

@@ -7,9 +7,9 @@
 #
 #   The important business of the night happens here: convincing the
 #   Captain. Three facts gathered around the house each open a question
-#   for him (staff_missing, phone_dead, manning_partner). Once all three
+#   for him (staff_missing, phone_dead, drunk_partner). Once all three
 #   have been told (day2_evening_captain_facts), Moody decides he can
-#   reveal the last part (day2_evening_captain_convinced) and the final
+#   reveal the last part (captain_convinced thread) and the final
 #   question appears: show him the order. Convinced, the Captain proposes
 #   the dinner gong, and it is rung straight from that scene
 #   (broken_day2_evening_ring_gong) - never from the map.
@@ -103,13 +103,12 @@ label broken_day2_evening_billiard_captain:
         Let's proceed carefully.
         """
 
-
     else:
 
         $ broken_captain_night_menu.early_exit = False
 
     # Convincing the Captain: three facts gathered around the house each
-    # open a question (staff_missing, phone_dead, manning_partner). Every
+    # open a question (staff_missing, phone_dead, drunk_partner). Every
     # question ends by calling the check label: once all three facts have
     # been told, the reveal monologue plays and 'Show him the order'
     # appears - it wins his trust, he proposes the gong, and the gong is
@@ -119,8 +118,7 @@ label broken_day2_evening_billiard_captain:
         TimedMenuChoice("Ask his opinion of Mr Harring's death", 'broken_day2_evening_captain_harring', 10),
         TimedMenuChoice('Tell him the staff are gone', 'broken_day2_evening_captain_staff', 10, condition = "broken_details.threads.is_unlocked('staff_missing')"),
         TimedMenuChoice('Tell him the telephone is dead', 'broken_day2_evening_captain_phone', 10, condition = "broken_details.threads.is_unlocked('phone_dead')"),
-        TimedMenuChoice('Tell him what happened in the wood', 'broken_day2_evening_captain_wood', 10, condition = "broken_details.threads.is_unlocked('manning_partner')"),
-        TimedMenuChoice('Show him the order', 'broken_day2_evening_captain_order', 0, early_exit = True, condition = "broken_details.saved_variables['day2_evening_captain_convinced']"),
+        TimedMenuChoice('Show him the order', 'broken_day2_evening_captain_order', 0, early_exit = True, condition = "broken_details.threads.is_unlocked('captain_convinced') and broken_details.threads.is_unlocked('drunk_partner')"),
         TimedMenuChoice('Leave him to his book', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "captain")
 
@@ -134,18 +132,16 @@ label broken_day2_evening_captain_tree:
     broken """
     What do you make of this business with the road, Captain?
 
-    Don't you think that is strange?
+    A tree preventing the police from coming, don't you think that is strange?
     """
 
     captain """
     Strange? Far from it.
     
-    With the storm we've had yesterday, it was to be expected to have some damage.
+    With the storm we've had yesterday, some damage was to be expected.
 
     I am just happy that the house was untouched.
     """
-
-    call broken_day2_evening_captain_check_convinced
 
     return
 
@@ -153,30 +149,26 @@ label broken_day2_evening_captain_tree:
 label broken_day2_evening_captain_harring:
 
     broken """
-    And Mr Harring?
+    You are really not surprised by Ted Harring's death.
+
+    Healthy young men do not just die in their sleep.
 
     You heard the doctor. No mark, and no cause.
     """
 
     captain """
-    I have known men die without a mark before, Mr Moody.
+    I admit it is unusual, but not unheard of.
 
-    It was rarely nature's doing.
+    Sadly, I have seen people not much older than Mr Harring dying the same way.
+
+    Of overdose, heart attacks, or other failing of the body.
+
+    Death comes sometimes out of the blue.
+    
+    And not just in the battlefield Mr Moody.
+
+    It is good to keep that in mind.
     """
-
-    """
-    He looks into the lamplight for a moment.
-    """
-
-    captain """
-    A healthy young man does not simply stop in the night.
-
-    I said nothing this morning because there was nothing useful to say.
-
-    But I have not stopped thinking it.
-    """
-
-    call broken_day2_evening_captain_check_convinced
 
     return
 
@@ -190,21 +182,34 @@ label broken_day2_evening_captain_harring:
 # order' question opens.
 label broken_day2_evening_captain_check_convinced:
 
-    if broken_details.saved_variables['day2_evening_captain_facts'] < 3 or broken_details.saved_variables['day2_evening_captain_convinced']:
+    if broken_details.saved_variables['day2_evening_captain_facts'] < 2:
 
         return
 
-    $ broken_details.saved_variables['day2_evening_captain_convinced'] = True
+    $ broken_details.threads.unlock('captain_convinced')
 
     """
-    The staff gone. The telephone dead. A letter written to turn one guest against another.
+    The staff gone. The telephone dead. 
+    
+    I don't know if that was enough to raise some suspicion.
 
-    He has weighed each piece like evidence, and put none of it aside.
-
-    Now I think I can reveal the last part.
-
-    The order that was slipped under my own door.
+    I hope so, because if not, he might not believe me when I tell him the full story.
     """
+
+    if broken_details.threads.is_unlocked('drunk_partner'):
+
+        """
+        Samuel Manning will go with what I say, so I can ask the question now.
+        """
+
+    else:
+
+        """
+        One last thing before I reveal the whole story.
+
+        I should see if Samuel Manning will go along with it.
+        """
+
 
     return
 
@@ -224,11 +229,37 @@ label broken_day2_evening_captain_staff:
     """
 
     captain """
-    Servants do not desert a good post in the night, Mr Moody.
+    Is that so?
 
-    They go when they have been warned, or when they have been paid to go.
+    They could be just sleeping, couldn't they?
+    """
 
-    And a man who gathers up the guns before a quiet night expects the night to be otherwise.
+    broken """
+    I thought so at first, but I made such noise in the attic that it is very unlikely nobody heard me.
+    """
+
+    captain """
+    Strange, but there could be a logical explanation.
+
+    For instance, maybe they had to go to the city for some errands.
+    """
+
+    broken """
+    In the middle of the night?
+    """
+
+    captain """
+    Right, that would be uncommon indeed.
+
+    But I am sure they will be back tomorrow.
+    """
+
+    broken """
+    I wouldn't be so sure of it.
+    """
+
+    captain """
+    Well, I guess we will see, won't we.
     """
 
     call broken_day2_evening_captain_check_convinced
@@ -249,100 +280,150 @@ label broken_day2_evening_captain_phone:
     """
 
     captain """
-    Then either the line has died since dinner, or no call was ever placed.
+    And you assume what? That the phone was cut intentionally?
+    """
 
-    Set it beside the tree across the road, Mr Moody.
+    broken """
+    Well, it is rather strange isn't it?
+    """
 
-    A blocked road and a dead wire. That is not misfortune. That is a siege.
+    captain """
+    Not that much.
+
+    You are aware there was a storm, it might have damaged the line.
+
+    Or maybe there is a problem with the operator.
+
+    Sadly, those rural lines are rarely reliable.
+    """
+
+    broken """
+    Right, of course.
+
+    But the timing is the reason for my suspicions.
+
+    A call was supposedly made, then a few moments later it is not working.
+
+    I find it hard to believe.
+    """
+
+    captain """
+    Well, I admit it is a big coincidence.
+
+    But not really a cause for alarm either.
     """
 
     call broken_day2_evening_captain_check_convinced
 
     return
 
+# ------------------------------------
+#   Captain 
+# ------------------------------------
+label broken_day2_evening_captain_order:
 
-label broken_day2_evening_captain_wood:
-
-    $ broken_details.saved_variables['day2_evening_captain_facts'] += 1
+    broken """
+    Captain, there is something you must know.
+    """
 
     """
     I glance at Mr Manning first.
 
-    He answers with a small nod. His story is mine to tell now.
+    He answers with a small nod.
     """
 
     broken """
-    This morning in the wood, Captain, there was very nearly a second death.
-
-    Somebody sent Mr Manning a letter blaming Doctor Baldwin for the loss of his wife.
-
-    It was written to put a rifle in a grieving man's hands, and it all but succeeded.
+    This morning in the wood, Captain, you did not realise it, but there was very nearly two more deaths.
     """
 
-    drunk """
-    It did succeed, sir, in everything but the trigger.
-
-    Mr Moody talked the rifle out of my hands. That is the whole of my part in this weekend.
+    """
+    At this, he shows a little surprise.
     """
 
     captain """
-    Then the letter is the crime, gentlemen, not the man who received it.
-
-    A grudge does not find its own way to a house party. Somebody posts it there.
-
-    Whoever gathered us under this roof knew what each of us carried, and meant to set us upon one another.
+    Two more deaths?
+    
+    What do you mean by that?
     """
 
-    call broken_day2_evening_captain_check_convinced
+    broken """
+    Well, somebody left Mr Manning a letter blaming Doctor Baldwin for the loss of his wife.
 
-    return
+    It was written to put a rifle in a grieving man's hands, and hope he would arm the doctor, without incriminating themselves.
+    """
 
+    """
+    He pauses for a second, then turns to Samuel Manning.
+    """
 
-# ------------------------------------
-#   THE ORDER - the Captain's trust, his idea, and the gong
-# ------------------------------------
-# The last question. Showing the order wins the Captain over: he proposes
-# the gong, and the gong is rung on the spot (broken_day2_evening_ring_gong,
-# 0_map_choices.rpy). Both outer menus are closed on the way out, so the
-# night map ends here.
-label broken_day2_evening_captain_order:
+    captain """
+    Mr Manning, is that true?
+    """
+
+    drunk """
+    Well, it is.
+
+    I don't know that I would really have hurt the doctor, but god knows I wanted to.
+
+    If it wasn't for Mr Moody, I can't say what would have happened.
+    """
+
+    captain """
+    Really, well if this is true, I guess Doctor Baldwin owes a lot of gratitude to you, Mr Moody.
+    """
+
+    drunk """
+    It is true, I swear!
+
+    I can't show you the letter, I burnt it, you see, and...
+    """
+
+    captain """
+    It is alright Mr Manning.
+
+    Let's say I believe you.
+
+    But, Mr Moody, how did you learn of Mr Manning's plan?
+    """
+
+    broken """
+    I was suspicious of Mr Manning for a simple reason.
+
+    I received a letter myself.
+    """
 
     """
     I take the order from my pocket and hand it to him.
 
-    An old army order, for the transfer of an officer, slipped under my door.
-
-    And at the foot of it, in a neat staff officer's hand, his own name.
-    """
-
-    """
     The Captain reads it once, and then again more slowly.
 
     For a long moment he says nothing at all.
     """
 
     captain """
-    That is my hand, and my name.
+    I see, that is clever.
 
-    I must have signed a hundred papers like this one, and thought no more of each than of the weather.
-    """
+    I suppose this order was meant to turn you against me.
 
-    """
-    He lays it flat on his knee, the way a man lays down a card.
-    """
+    But I can assure you it is obviously a fake.
 
-    captain """
+    It looks nothing like the one I used.
+
+    But I assumed you came to the same conclusion.
+
+    Otherwise I could have been another victim.
+
+    That is what you are implying Mr Moody is it not?
+
     Mr Manning was given a letter to make him hate the doctor.
 
     You were given this, to make you hate me.
 
-    Somebody is loading us like rifles, and pointing us at one another.
+    The goal was to have two more deaths this weekend.
     """
 
     broken """
-    That is my belief, Captain.
-
-    And I would rather show it to you than act upon it.
+    Yes, that is my belief, Captain.
     """
 
     """
@@ -350,15 +431,65 @@ label broken_day2_evening_captain_order:
     """
 
     captain """
-    I have spent thirty years weighing men, Mr Moody, so I shall tell you plainly what I make of you.
+    Tell me, Mr Moody, why would I trust you.
 
-    A great deal about you does not add up.
-
-    But a man who is handed a reason to hate me, and brings it to me instead, is no enemy of mine.
-
-    So I will trust you, and act on what you say.
+    You may have fabricated this whole story.
     """
 
+    broken """
+    I suppose, but to what end?
+
+    I have nothing to gain here.
+    """
+
+    captain """
+    Maybe not.
+
+    But this situation is surreal.
+
+    I do not know what to make of it.
+    """
+
+    broken """
+    I understand.
+
+    If you'll allow me, I'll try to explain how I see things.
+    """
+
+    captain """
+    Please, do.
+    """
+
+    drunk """
+    Yes, what on earth do you think is happening this weekend?
+    """
+
+    broken """
+    Very well, let me tell you something about myself first.
+
+    I am not a car mechanic like I let some people believe.
+
+    I am a journalist, and I made a bit of research before coming here.
+    """
+
+    captain """
+    A journalist, but why didn't you say so?
+    """
+
+    broken """
+    Because it is better not to attract attention when conducting an investigation.
+
+    If I had declared myself a journalist, I am sure that would have made some people reluctant to talk to me.
+    """
+
+    """
+    That should be enough of an explanation for now.
+
+    No need for the full story just yet.
+    """
+
+    # ENd of my writing
+    # SHITE to fix do later:
     drunk """
     That makes two of us, sir.
     """
@@ -449,6 +580,6 @@ label broken_day2_evening_billiard_drunk:
     But I would feel more secure if I could rely on more people than just the two of us.
     """
 
-    $ broken_details.threads.unlock('manning_partner')
+    $ broken_details.threads.unlock('drunk_partner')
 
     return
