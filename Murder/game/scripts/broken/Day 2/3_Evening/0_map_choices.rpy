@@ -23,9 +23,9 @@ label broken_day2_evening_map_menu:
             map_choice('bedroom_host', 'broken_day2_evening_bedroom_host', 10),
             map_choice('bedroom_nurse', 'broken_day2_evening_bedroom_nurse', 10),
             map_choice('bedroom_doctor', 'broken_day2_evening_bedroom_doctor', 10),
-            map_choice('bedroom_drunk', 'broken_day2_evening_bedroom_empty', 10),
+            map_choice('bedroom_drunk', 'broken_day2_evening_bedroom_drunk', 10),
             map_choice('bedroom_psychic', 'broken_day2_evening_bedroom_psychic', 10),
-            map_choice('bedroom_captain', 'broken_day2_evening_bedroom_empty', 10),
+            map_choice('bedroom_captain', 'broken_day2_evening_bedroom_captain', 10),
             # Attic
             map_choice('storage', 'broken_day2_evening_attic_default', 10),
             map_choice('males_room', 'broken_day2_evening_attic_default', 10),
@@ -176,16 +176,20 @@ label broken_day2_evening_bedroom_doctor:
 
     $ change_room('bedrooms_hallway')
 
+    play sound door_knock
+
     """
     I knock at Doctor Baldwin's door. Nothing.
+    """
 
-    I knock harder, hard enough to wake the corridor.
+    play sound door_knock
 
-    From within comes a sound like a man swimming up from deep water, a mumble, the creak of a bed. Then nothing again.
+    """
+    I knock a second time, harder.
 
-    Whatever the doctor takes of an evening, he has taken it.
+    From within comes a mumble, the creak of a bed.
 
-    No fire bell would rouse him now. His lock will have to stand guard in his stead.
+    Doctor Baldwin is there, but he won't come out.
     """
 
     return
@@ -195,26 +199,12 @@ label broken_day2_evening_bedroom_psychic:
 
     $ change_room('bedrooms_hallway')
 
+    play sound door_knock
+
     """
     I knock at Miss Baxter's door, and give my name.
 
-    Her voice comes through the wood at once, wide awake.
-    """
-
-    psychic """
-    Mr Moody. What a peculiar hour for a social call.
-
-    You needn't explain yourself, I feel the same disquiet in this house that you do. It hangs in every corridor like smoke.
-
-    I shall not open my door tonight, not to you nor to anybody.
-
-    But rest assured, it will be locked, and the chair set under the handle, and should anyone try it I shall scream this house down to its foundations.
-    """
-
-    """
-    A scream for an alarm bell.
-
-    From her, I believe it. It will do.
+    But she is not answering.
     """
 
     return
@@ -224,28 +214,14 @@ label broken_day2_evening_bedroom_nurse:
 
     $ change_room('bedrooms_hallway')
 
+    play sound door_knock
+
     """
     I knock at Miss Marsh's door.
 
-    Silence. But it is the wrong kind of silence, the held-breath kind, with a floorboard settling where somebody has just stopped moving.
+    No answer.
 
-    She is hiding.
-
-    I put my mouth near the jamb and keep my voice low. My name, and my fear plainly stated, and what I mean to do about it.
-
-    A long moment. Then the bolt slides, and her voice comes through the gap of the door.
-    """
-
-    nurse """
-    Forgive me, Mr Moody. After this morning I did not know whose knock to trust.
-
-    I shall bar the door and keep the candle burning, and I am a light sleeper.
-
-    If I hear anything at all, the whole house will hear me next.
-    """
-
-    """
-    Practical and precise. I would expect nothing else of her.
+    But I can't blame her if she wants to be alone tonight.
     """
 
     return
@@ -255,36 +231,51 @@ label broken_day2_evening_bedroom_host:
 
     $ change_room('bedrooms_hallway')
 
-    """
-    A line of light shows beneath Lady Claythorn's door, and behind it, small sounds of movement.
+    play sound door_knock
 
+    """
     I knock.
 
-    The light goes out mid-knock. The movement stops.
+    No answer.
 
-    I knock again, and give my name, and the silence only deepens.
+    It is probably best.
 
-    She is standing in the dark on the other side of that door, waiting for me to leave.
-
-    Very well. Let her hear that the house is awake, at least.
-
-    That is warning enough for a woman who needs none.
+    Confronting Lady Claythorn alone, and at this hour, might have been a bad idea.
     """
 
     return
 
 
-# The Captain's and Mr Manning's doors - both men are still downstairs.
-label broken_day2_evening_bedroom_empty:
+label broken_day2_evening_bedroom_captain:
 
     $ change_room('bedrooms_hallway')
 
+    play sound door_knock
+
     """
-    I knock. No light beneath the door, and no answer.
+    I knock. 
+    
+    No light beneath the door, and no answer.
+    """
 
-    He is not up here.
+    return
 
-    Whoever I mean to find tonight, I must look downstairs first.
+label broken_day2_evening_bedroom_drunk:
+
+    $ change_room('bedrooms_hallway')
+
+    play sound door_knock
+
+    """
+    I knock.
+
+    The door is not closed, so my touch is enough to open it.
+
+    From the hallway I glance into a room in a poor state.
+
+    There is nobody inside.
+
+    I do not go in. I do not want to be caught in someone else's room.
     """
 
     return
@@ -297,11 +288,21 @@ label broken_day2_evening_bedroom_lad:
     """
     I enter Ted Harring's room.
 
-    He lays on his bed, with bedsheets covering his body.
+    His body is still on the bed, with bedsheets covering his face.
 
-    I don't know what possessed me to come here, I wont learn more then Doctor Baldwin.
+    I don't know what possessed me to come here.
 
-    I leave. 
+    It is not as if I could learn anything from a dead man.
+
+    I prepare to turn back when I spot something peculiar.
+
+    A single rose has been laid next to him.
+
+    Somebody has been grieving strongly enough to want to show their affection.
+
+    But nobody in this house is supposed to have known him.
+
+    How peculiar.
     """
 
     return

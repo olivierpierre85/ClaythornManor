@@ -25,6 +25,9 @@
       "Bash(\"c:/renpy-8.4.1-sdk/renpy.exe\" \"c:/Projects/ClaythornManor/Murder\" lint)",
       "Read(//c//**)",
       "Bash(python \"c:\\\\Projects\\\\ClaythornManor\\\\tools\\\\build_map_images.py\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\olivi\\AppData\\Local\\Temp\\claude\\c--Projects-ClaythornManor\\3a3fbf2c-538d-43ae-b18c-000000000000"
     ]
   }
 }
