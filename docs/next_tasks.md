@@ -6,6 +6,9 @@ Ongoing AI ollama tester, try with longer run. maybe needed to use a better LLM 
 
 IDEA => For choices already made (greyed out, add the time they will consume?)
 
+NEW MAPS - Redraw
+- Bedrooms : not correctly connected and attic stair weirdly put. REDRAW
+- Remove "all things in feet"
 
 ACcept plan from THe thing
 

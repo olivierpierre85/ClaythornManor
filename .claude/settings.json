@@ -18,7 +18,13 @@
       "Bash(awk 'NR>=19 && NR<=175 && \\(/^ *\\(if|elif|else\\)/ || /unlock/\\)' \"_common/Day 2/2_Hunt/4_north_field.rpy\")",
       "Bash(awk 'NR>=1 && NR<=195 && \\(/^ *\\(if|elif|else\\)/ || /unlock/\\)' \"_common/Day 3/2_Afternoon/2_lad_stay_with_psychic.rpy\")",
       "Bash(echo \"exit=$?\")",
-      "Bash(python \"C:\\\\Users\\\\olivi\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Projects-ClaythornManor\\\\3a3fbf2c-538d-43ad-b18c-1f51083b549b\\\\scratchpad\\\\map_menu_mockup.py\")"
+      "Bash(python \"C:\\\\Users\\\\olivi\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Projects-ClaythornManor\\\\3a3fbf2c-538d-43ad-b18c-1f51083b549b\\\\scratchpad\\\\map_menu_mockup.py\")",
+      "Bash(python \"C:\\\\Users\\\\olivi\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Projects-ClaythornManor\\\\3a3fbf2c-538d-43ad-b18c-1f51083b549b\\\\scratchpad\\\\detect_walls.py\")",
+      "Bash(python \"C:\\\\Users\\\\olivi\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Projects-ClaythornManor\\\\3a3fbf2c-538d-43ad-b18c-1f51083b549b\\\\scratchpad\\\\build_maps.py\")",
+      "Bash(\"c:\\\\Projects\\\\renpy-8.4.1-sdk\\\\renpy.exe\" \"c:\\\\Projects\\\\ClaythornManor\\\\Murder\" lint)",
+      "Bash(\"c:/renpy-8.4.1-sdk/renpy.exe\" \"c:/Projects/ClaythornManor/Murder\" lint)",
+      "Read(//c//**)",
+      "Bash(python \"c:\\\\Projects\\\\ClaythornManor\\\\tools\\\\build_map_images.py\")"
     ]
   }
 }

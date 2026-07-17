@@ -30,57 +30,58 @@ label init_map:
         rooms = [
             # Attic
             Room(3, None,   'attic_hallway',         'Attic Hallway' ), # No area points so not a real destination
-            
-            Room(3, (165, 90, 270, 523),   'storage',         'Storage Room' ),
-            Room(3, (512, 204, 242, 127),   'males_room',      'Male Servants Room' ), # TODO Extra livery?
-            Room(3, (512, 332, 242, 129),   'females_room',     'Female Servants Room' ),
-            Room(3, (512, 460, 242, 155),   'attic_butler_room',      'Butler\'s Room' ),
+
+            Room(3, (194, 132, 196, 330),   'storage',         'Storage Room' ),
+            Room(3, (581, 124, 186, 109),   'males_room',      'Male Servants Room' ), # TODO Extra livery?
+            Room(3, (581, 241, 186, 112),   'females_room',     'Female Servants Room' ),
+            Room(3, (581, 361, 186, 104),   'attic_butler_room',      'Butler\'s Room' ),
             # Bedrooms
             Room(2, None,   'bedrooms_hallway',         'Bedrooms Hallway' ), # No area points so not a real destination
 
-            Room(2, (25, 90, 205, 190),   'bedroom_lad',         'William the Conqueror Bedroom' ), # (Lad)
-            Room(2, (25, 280, 205, 130),   'bedroom_doctor',      'Edward II Bedroom'), # (doctor)
-            Room(2, (25, 410, 205, 100),     'bedroom_captain',     'George I Bedroom'), # (captain)
-            Room(2, (25, 510, 205, 105),     'bedroom_psychic',     'Elizabeth I Bedroom'), # (Psychic)
-            
-            Room(2, (717, 90, 178, 190),   'bedroom_host',        'Henry IV Bedroom'), #  (Host)
-            Room(2, (717, 280, 178, 130),   'bedroom_drunk',       'George IV Bedroom'), #  (drunk)
-            Room(2, (717, 410, 178, 100),   'bedroom_broken',      'Richard III Bedroom'), #  (broken)
-            Room(2, (717, 510, 178, 105),   'bedroom_nurse',       'Queen Alexandra Bedroom'), # (nurse)
-            
-            # Room(2, (256 , 90, 434, 115),     'servant_stairs_2',          'Servant Stairs'), 
+            Room(2, (195, 128, 192, 92),   'bedroom_lad',         'William the Conqueror Bedroom' ), # (Lad)
+            Room(2, (195, 231, 192, 76),   'bedroom_doctor',      'Edward II Bedroom'), # (doctor)
+            Room(2, (195, 315, 192, 66),     'bedroom_captain',     'George I Bedroom'), # (captain)
+            Room(2, (195, 389, 192, 79),     'bedroom_psychic',     'Elizabeth I Bedroom'), # (Psychic)
+
+            Room(2, (592, 128, 172, 92),   'bedroom_host',        'Henry IV Bedroom'), #  (Host)
+            Room(2, (592, 231, 172, 76),   'bedroom_drunk',       'George IV Bedroom'), #  (drunk)
+            Room(2, (592, 315, 172, 66),   'bedroom_broken',      'Richard III Bedroom'), #  (broken)
+            Room(2, (592, 389, 172, 79),   'bedroom_nurse',       'Queen Alexandra Bedroom'), # (nurse)
+
+            # Room(2, (348 , 130, 253, 44),     'servant_stairs_2',          'Servant Stairs'),
             # Ground Floor
             Room(1, None,     'basement_stairs',          'Basement Stairs'),
 
-            Room(1, (25, 397, 230, 218),   'library',          'Library'),
-            Room(1, (25, 90, 230, 305),   'tea_room',         'Tea room'),
-            Room(1, (691, 90, 205, 204),     'billiard_room',    'Billiard room'),
-            Room(1, (691, 295, 205, 319),   'dining_room',      'Dining Room'),
-            Room(1, (360, 552, 203, 60),     'manor_garden',           'Garden'),
-            Room(1, (256, 293, 435, 260),     'entrance_hall',           'Entrance Hall'),
-            Room(1, (256 , 90, 435, 105),     'servant_stairs',          'Servant Stairs'),
-            Room(1, (256 , 195, 435, 100),     'portrait_gallery',          'Portrait Gallery'),
+            Room(1, (195, 290, 139, 177),   'library',          'Library'),
+            Room(1, (195, 133, 139, 148),   'tea_room',         'Tea room'),
+            Room(1, (616, 133, 151, 148),     'billiard_room',    'Billiard room'),
+            Room(1, (616, 290, 151, 177),   'dining_room',      'Dining Room'),
+            Room(1, (280, 490, 336, 70),     'manor_garden',           'Garden'),
+            Room(1, (348, 284, 253, 183),     'entrance_hall',           'Entrance Hall'),
+            Room(1, (348 , 130, 253, 44),     'servant_stairs',          'Servant Stairs'),
+            Room(1, (348 , 185, 253, 90),     'portrait_gallery',          'Portrait Gallery'),
             # Basement
-            Room(0, (25, 205, 360, 407),     'kitchen',          'Kitchen'),
-            Room(0, (25, 90, 360, 118),   'scullery',         'Scullery'),
-            Room(0, (691, 90, 206, 525),   'garage',           'Garage'),
-            Room(0, (385, 333, 306, 280),     'gun_room',         'Gun room'), #TODO check in basement geniric?
+            Room(0, (197, 239, 217, 233),     'kitchen',          'Kitchen'),
+            Room(0, (197, 129, 217, 102),   'scullery',         'Scullery'),
+            Room(0, (601, 132, 172, 339),   'garage',           'Garage'),
+            Room(0, (424, 340, 164, 136),     'gun_room',         'Gun room'), #TODO check in basement geniric?
             Room(0, (0, 0, 0, 0),     'black_background',         'Darkness'), # used or effect
         ]
         # TODO put in the ROOM class????? NOT if multiple info by room? Check at the end
-        y_map_info_offset = 60
-        x_map_info_offset = 10
+        # (x, y) is the anchor point in the parchment margin: x=170 hugs the
+        # left outer wall (right-aligned), x=789 the right one (left-aligned).
+        # y is the vertical centre of the room's row. See map_annotations.
         map_information = [
-            MapInfo('bedroom_psychic', 'Amelia Baxter',    2, (25 + x_map_info_offset, 510 + y_map_info_offset, 205, 105)),
-            MapInfo('bedroom_lad',     'Ted Harring',      2, (25 + x_map_info_offset, 90 + 100, 205, 190)),
-            MapInfo('bedroom_broken',  'Thomas Moody',     2, (717 + x_map_info_offset, 410 + y_map_info_offset, 178, 100)),
-            MapInfo('bedroom_host',    'Lady Claythorn',   2, (717 + x_map_info_offset, 90 + 100 , 178, 190)),
-            MapInfo('bedroom_captain', 'Sushil Sinha',     2, (25 + x_map_info_offset, 410 + y_map_info_offset, 205, 100)),
-            MapInfo('bedroom_doctor',  'Daniel Baldwin',   2, (25 + x_map_info_offset, 280 + y_map_info_offset, 205, 130)),
-            MapInfo('bedroom_drunk',  'Samuel Manning',   2, (717 + x_map_info_offset, 280 + y_map_info_offset, 178, 130)),
-            MapInfo('bedroom_nurse',  'Rosalind Marsh',   2, (717 + x_map_info_offset, 510 + y_map_info_offset, 178, 105)),
-            
-            MapInfo('bedroom_footman',  'Andrew',   3, (575 + x_map_info_offset, 200 + y_map_info_offset, 178, 105)),
+            MapInfo('bedroom_psychic', 'Amelia Baxter',    2, (170, 429, 192, 79)),
+            MapInfo('bedroom_lad',     'Ted Harring',      2, (170, 174, 192, 92)),
+            MapInfo('bedroom_broken',  'Thomas Moody',     2, (789, 348, 172, 66)),
+            MapInfo('bedroom_host',    'Lady Claythorn',   2, (789, 174, 172, 92)),
+            MapInfo('bedroom_captain', 'Sushil Sinha',     2, (170, 348, 192, 66)),
+            MapInfo('bedroom_doctor',  'Daniel Baldwin',   2, (170, 269, 192, 76)),
+            MapInfo('bedroom_drunk',  'Samuel Manning',   2, (789, 269, 172, 76)),
+            MapInfo('bedroom_nurse',  'Rosalind Marsh',   2, (789, 429, 172, 79)),
+
+            MapInfo('bedroom_footman',  'Andrew',   3, (789, 178, 186, 109)),
         ]
 
     call change_floor(1) # ground floor
@@ -141,6 +142,8 @@ screen map_floor_arrow(direction):
             xoffset 0
             action SetVariable("selected_floor", arrow_target) at (map_button_left if direction < 0 else map_button_right)
     else:
+        # Same width as the arrow buttons (140px images at zoom 1.2 = 168px)
+        # so the map never shifts on floors where an arrow disappears
         add Solid("#00000000", xsize=168, ysize=90) xpos 0 yalign 0.5
 
 
@@ -153,8 +156,12 @@ screen manor_map:
     use game_menu(_("Map of The Manor")):
 
         hbox:
-            yoffset 130
-            xoffset -120
+            # Centre the 960-wide map on the screen: content frame starts at
+            # x=480, the left arrow slot is 168 wide (140px image at zoom 1.2),
+            # so 480-168+168 = 480 and the map spans 480..1440 (screen centre).
+            # Vertically the content area is 180..1035, so (855-640)/2 = 108.
+            yoffset 108
+            xoffset -168
 
             use map_floor_arrow(-1)
 
@@ -168,13 +175,22 @@ screen manor_map:
 
 
 # The names the player has written on the map (unlocked via unlock_map)
+# The rooms are too small for the handwriting, so the names sit in the blank
+# parchment margins: left-column rooms anchor against the left outer wall,
+# right-column rooms against the right one, centred on their room's row.
 screen map_annotations:
 
     for info in map_information:
         if info.floor == selected_floor and info.active:
-                text info.name:
-                    pos info.area_points
-                    size 16
+                $ map_info_left_side = info.area_points[0] < 480
+                text info.name.replace(' ', '\n'):
+                    pos (info.area_points[0], info.area_points[1])
+                    anchor ((1.0, 0.5) if map_info_left_side else (0.0, 0.5))
+                    text_align (1.0 if map_info_left_side else 0.0)
+                    size 18
+                    # RockSalt has a very tall line height (43px at this size),
+                    # pull the two lines of the name together
+                    line_spacing -14
                     color gui.map_writing_color
                     font gui.map_writing_font
 
