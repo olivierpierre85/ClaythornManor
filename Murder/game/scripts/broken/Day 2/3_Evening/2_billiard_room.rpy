@@ -488,16 +488,40 @@ label broken_day2_evening_captain_order:
     No need for the full story just yet.
     """
 
-    # ENd of my writing
-    # SHITE to fix do later:
-    drunk """
-    That makes two of us, sir.
+    captain """
+    Right, so all this time you were investigating us. Interesting.
+
+    What have you found then?
+    """
+
+    broken """
+    Quite a few things.
+
+    But I realise now it is better I share them with everyone.
+
+    I just needed to trust a couple of people before I do.
+
+    Can I count on you, Captain?
     """
 
     captain """
-    Then take my advice.
+    You can.
 
-    If every soul in this house is in danger, you do not carry that news from door to door.
+    And you must know, I carry a pistol on me.
+    """
+
+    broken """
+    Good, I have no idea what kind of resistance we will encounter here.
+
+    Now we should gather the rest of the guests.
+    """
+
+    captain """
+    Indeed, then take my advice.
+
+    Do not waste time going from door to door.
+
+    There is a simple way to alert everyone in case of an emergency in a house like this one.
 
     You ring the dinner gong.
 
@@ -508,15 +532,13 @@ label broken_day2_evening_captain_order:
     The gong.
 
     Simple, loud, and impossible to ignore.
-
-    I am on my feet before my nerve can fail me, and I go straight to the dining room.
     """
 
-    # The decision is made here and now: close the billiard and map menus,
-    # then ring the gong directly. Unwinding the menus after the return
-    # lands back in 1_main at 23:30 with gather_everyone unlocked.
-    $ all_menus[broken_day2_evening_billiard_menu.id].early_exit = True
-    $ all_menus[broken_details.saved_variables["day2_evening_map_menu"].id].early_exit = True
+    broken """
+    Good idea, Captain.
+
+    Let's all go to the dining room then.
+    """
 
     call broken_day2_evening_ring_gong
 
