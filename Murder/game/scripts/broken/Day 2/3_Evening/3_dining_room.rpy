@@ -8,17 +8,19 @@ label broken_day2_evening_ring_gong:
     """
     The gong stands by the dining room door, the beater hanging at its side.
 
-    A ridiculous instrument to be afraid of, and yet my hand hesitates over it.
-
-    Once it sounds, there is no taking it back. Every person in this house will come down, and I shall have to tell them why.
-
-    I think of Ted Harring's empty chair, and I strike it.
+    I must make sure everybody hears it.
     """
 
     play sound dinner_gong
 
+    play sound dinner_gong
+
+    play sound dinner_gong
+
     """
-    The sound rolls through the house like a wave, twice, three times, and I stop only when I hear the first doors opening above.
+    The sound rolls through the house like a wave, twice, three times.
+    
+    I stop to check if anyone is coming.
     """
 
     $ change_room('entrance_hall')
