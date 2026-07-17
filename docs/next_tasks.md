@@ -10,8 +10,6 @@ NEW MAPS - Redraw
 - Bedrooms : not correctly connected and attic stair weirdly put. REDRAW
 - Remove "all things in feet"
 
-ACcept plan from THe thing
-
 ### ???? INTUITION system entirely FOR EVERYONE SAVED concept
 Now an intuition is needed to SAVE a person.
 When Someone is saved, it add a SAVED over their name in the progress view
@@ -52,6 +50,7 @@ SERVANT STAIRS and downstairs IS the same ?? shouldn' we cross it to go downstai
 
 ##### **Friday Evening**
 
+IMORTANT WHY Not just know on bedrooms? he doesn't have to enter them => Add logic for nobody answers? Or just rethink TEST
 
 ##### Saturday — After Dinner
 

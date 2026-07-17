@@ -68,20 +68,21 @@ label init_map:
             Room(0, (0, 0, 0, 0),     'black_background',         'Darkness'), # used or effect
         ]
         # TODO put in the ROOM class????? NOT if multiple info by room? Check at the end
-        # (x, y) is the anchor point in the parchment margin: x=170 hugs the
-        # left outer wall (right-aligned), x=789 the right one (left-aligned).
+        # (x, y) is the anchor point in the parchment margin: x=160 sits left
+        # of the left outer wall (right-aligned), x=799 right of the right one
+        # (left-aligned), with a small gap to the walls in both cases.
         # y is the vertical centre of the room's row. See map_annotations.
         map_information = [
-            MapInfo('bedroom_psychic', 'Amelia Baxter',    2, (170, 429, 192, 79)),
-            MapInfo('bedroom_lad',     'Ted Harring',      2, (170, 174, 192, 92)),
-            MapInfo('bedroom_broken',  'Thomas Moody',     2, (789, 348, 172, 66)),
-            MapInfo('bedroom_host',    'Lady Claythorn',   2, (789, 174, 172, 92)),
-            MapInfo('bedroom_captain', 'Sushil Sinha',     2, (170, 348, 192, 66)),
-            MapInfo('bedroom_doctor',  'Daniel Baldwin',   2, (170, 269, 192, 76)),
-            MapInfo('bedroom_drunk',  'Samuel Manning',   2, (789, 269, 172, 76)),
-            MapInfo('bedroom_nurse',  'Rosalind Marsh',   2, (789, 429, 172, 79)),
+            MapInfo('bedroom_psychic', 'Amelia Baxter',    2, (160, 429, 192, 79)),
+            MapInfo('bedroom_lad',     'Ted Harring',      2, (160, 174, 192, 92)),
+            MapInfo('bedroom_broken',  'Thomas Moody',     2, (799, 348, 172, 66)),
+            MapInfo('bedroom_host',    'Lady Claythorn',   2, (799, 174, 172, 92)),
+            MapInfo('bedroom_captain', 'Sushil Sinha',     2, (160, 348, 192, 66)),
+            MapInfo('bedroom_doctor',  'Daniel Baldwin',   2, (160, 269, 192, 76)),
+            MapInfo('bedroom_drunk',  'Samuel Manning',   2, (799, 269, 172, 76)),
+            MapInfo('bedroom_nurse',  'Rosalind Marsh',   2, (799, 429, 172, 79)),
 
-            MapInfo('bedroom_footman',  'Andrew',   3, (789, 178, 186, 109)),
+            MapInfo('bedroom_footman',  'Andrew',   3, (799, 178, 186, 109)),
         ]
 
     call change_floor(1) # ground floor
