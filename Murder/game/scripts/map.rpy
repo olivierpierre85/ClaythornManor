@@ -38,15 +38,15 @@ label init_map:
             # Bedrooms
             Room(2, None,   'bedrooms_hallway',         'Bedrooms Hallway' ), # No area points so not a real destination
 
-            Room(2, (195, 128, 192, 92),   'bedroom_lad',         'William the Conqueror Bedroom' ), # (Lad)
-            Room(2, (195, 231, 192, 76),   'bedroom_doctor',      'Edward II Bedroom'), # (doctor)
-            Room(2, (195, 315, 192, 66),     'bedroom_captain',     'George I Bedroom'), # (captain)
-            Room(2, (195, 389, 192, 79),     'bedroom_psychic',     'Elizabeth I Bedroom'), # (Psychic)
+            Room(2, (187, 124, 209, 97),   'bedroom_lad',         'William the Conqueror Bedroom' ), # (Lad)
+            Room(2, (187, 221, 209, 86),   'bedroom_doctor',      'Edward II Bedroom'), # (doctor)
+            Room(2, (187, 307, 209, 78),     'bedroom_captain',     'George I Bedroom'), # (captain)
+            Room(2, (187, 385, 209, 90),     'bedroom_psychic',     'Elizabeth I Bedroom'), # (Psychic)
 
-            Room(2, (592, 128, 172, 92),   'bedroom_host',        'Henry IV Bedroom'), #  (Host)
-            Room(2, (592, 231, 172, 76),   'bedroom_drunk',       'George IV Bedroom'), #  (drunk)
-            Room(2, (592, 315, 172, 66),   'bedroom_broken',      'Richard III Bedroom'), #  (broken)
-            Room(2, (592, 389, 172, 79),   'bedroom_nurse',       'Queen Alexandra Bedroom'), # (nurse)
+            Room(2, (574, 124, 198, 97),   'bedroom_host',        'Henry IV Bedroom'), #  (Host)
+            Room(2, (574, 221, 198, 86),   'bedroom_drunk',       'George IV Bedroom'), #  (drunk)
+            Room(2, (574, 307, 198, 78),   'bedroom_broken',      'Richard III Bedroom'), #  (broken)
+            Room(2, (574, 385, 198, 90),   'bedroom_nurse',       'Queen Alexandra Bedroom'), # (nurse)
 
             # Room(2, (348 , 130, 253, 44),     'servant_stairs_2',          'Servant Stairs'),
             # Ground Floor
@@ -73,14 +73,14 @@ label init_map:
         # (left-aligned), with a small gap to the walls in both cases.
         # y is the vertical centre of the room's row. See map_annotations.
         map_information = [
-            MapInfo('bedroom_psychic', 'Amelia Baxter',    2, (160, 429, 192, 79)),
-            MapInfo('bedroom_lad',     'Ted Harring',      2, (160, 174, 192, 92)),
-            MapInfo('bedroom_broken',  'Thomas Moody',     2, (799, 348, 172, 66)),
-            MapInfo('bedroom_host',    'Lady Claythorn',   2, (799, 174, 172, 92)),
-            MapInfo('bedroom_captain', 'Sushil Sinha',     2, (160, 348, 192, 66)),
-            MapInfo('bedroom_doctor',  'Daniel Baldwin',   2, (160, 269, 192, 76)),
-            MapInfo('bedroom_drunk',  'Samuel Manning',   2, (799, 269, 172, 76)),
-            MapInfo('bedroom_nurse',  'Rosalind Marsh',   2, (799, 429, 172, 79)),
+            MapInfo('bedroom_psychic', 'Amelia Baxter',    2, (160, 430, 209, 90)),
+            MapInfo('bedroom_lad',     'Ted Harring',      2, (160, 172, 209, 97)),
+            MapInfo('bedroom_broken',  'Thomas Moody',     2, (799, 346, 198, 78)),
+            MapInfo('bedroom_host',    'Lady Claythorn',   2, (799, 172, 198, 97)),
+            MapInfo('bedroom_captain', 'Sushil Sinha',     2, (160, 346, 209, 78)),
+            MapInfo('bedroom_doctor',  'Daniel Baldwin',   2, (160, 264, 209, 86)),
+            MapInfo('bedroom_drunk',  'Samuel Manning',   2, (799, 264, 198, 86)),
+            MapInfo('bedroom_nurse',  'Rosalind Marsh',   2, (799, 430, 198, 90)),
 
             MapInfo('bedroom_footman',  'Andrew',   3, (799, 178, 186, 109)),
         ]
@@ -161,8 +161,9 @@ screen manor_map:
             # x=480, the left arrow slot is 168 wide (140px image at zoom 1.2)
             # and the gold frame adds 8px, so the framed block (976 wide) spans
             # 472..1448 and the map itself 480..1440 (screen centre).
-            # Vertically the content area is 180..1035, so (855-656)/2 = 100.
-            yoffset 100
+            # Vertically the block sits below the overlay's swirl ornament
+            # (which ends around y=290): top at 180+132 = 312.
+            yoffset 132
             xoffset -176
 
             use map_floor_arrow(-1)

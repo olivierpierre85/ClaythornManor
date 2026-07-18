@@ -40,12 +40,17 @@ OUT = (960, 640)
 FS = OUT[0] / FW
 
 FLOORS = {
-    # floor: (file, wall rect in source, crop extras (L, T, R, B), pre-cover boxes)
-    0: ("new_downstairs.png",   (179, 180, 1357, 864), (6, 6, 8, 30), []),
+    # floor: (file, wall rect in source, crop extras (L, T, R, B),
+    #         pre-cover boxes, needs_arrows)
+    # needs_arrows: the source's "<FLOOR> PLAN" line has no side ornaments
+    # (basement), so the attic's are composed around it.
+    0: ("new_downstairs.png",   (179, 180, 1357, 864), (6, 6, 8, 30), [], True),
     1: ("new_ground_floor.png", (241, 165, 1301, 795), (8, 6, 8, 139),
-        [(1262, 918, 1345, 1005)]),   # source's own "All measurements" text
-    2: ("new_first_floor.png",  (205, 171, 1291, 866), (12, 6, 12, 8), []),
-    3: ("new_attic.png",        (185, 185, 1339, 856), (8, 10, 14, 16), []),
+        [(1262, 918, 1345, 1005)], False),   # source's own "All measurements" text
+    # B=12 keeps the wall's soft shadow (rows 903-912); the architect credit
+    # below it starts at y=939, well clear of the crop
+    2: ("better_bedrooms_image.png", (206, 165, 1318, 902), (12, 6, 12, 12), [], False),
+    3: ("new_attic.png",        (185, 185, 1339, 856), (8, 10, 14, 16), [], False),
 }
 
 MARGIN_SAMPLE = (58, 240, 150, 560)
@@ -158,7 +163,16 @@ def channel_scale(img, r, g, b):
 
 transforms = {}
 
-for floor, (fname, wall, extras, precover) in FLOORS.items():
+# Arrow ornaments flanking the title lines, borrowed from the attic's
+# "ATTIC FLOOR PLAN" (dark-run groups at x 569-614 and 939-983, 14px from
+# the text) for sources that lack them.
+_attic = Image.open(os.path.join(DIR, FLOORS[3][0])).convert("RGB")
+_abox, _ = title_lines(_attic.convert("L"), FLOORS[3][1][1])
+ARROW_L = _attic.crop((566, _abox[1], 618, _abox[3]))
+ARROW_R = _attic.crop((935, _abox[1], 987, _abox[3]))
+ARROW_GAP = 14
+
+for floor, (fname, wall, extras, precover, needs_arrows) in FLOORS.items():
     src = Image.open(os.path.join(DIR, fname)).convert("RGB")
     assert abs(src.width - FW) <= 4 and abs(src.height - FH) <= 4, (fname, src.size)
     gray = src.convert("L")
@@ -190,9 +204,22 @@ for floor, (fname, wall, extras, precover) in FLOORS.items():
     canvas = paste_feathered(canvas, crop, dest, feather=3)
 
     sw, sh = snippet.size
-    canvas = paste_feathered(
-        canvas, snippet,
-        (BAND_CENTER[0] - sw // 2, BAND_CENTER[1] - sh // 2))
+    if needs_arrows:
+        law, lah = ARROW_L.size
+        raw, rah = ARROW_R.size
+        total = law + ARROW_GAP + sw + ARROW_GAP + raw
+        x = BAND_CENTER[0] - total // 2
+        canvas = paste_feathered(canvas, ARROW_L, (x, BAND_CENTER[1] - lah // 2))
+        canvas = paste_feathered(
+            canvas, snippet,
+            (x + law + ARROW_GAP, BAND_CENTER[1] - sh // 2))
+        canvas = paste_feathered(
+            canvas, ARROW_R,
+            (x + law + ARROW_GAP + sw + ARROW_GAP, BAND_CENTER[1] - rah // 2))
+    else:
+        canvas = paste_feathered(
+            canvas, snippet,
+            (BAND_CENTER[0] - sw // 2, BAND_CENTER[1] - sh // 2))
 
     idle = canvas.resize(OUT, Image.LANCZOS)
     hover = channel_scale(ImageEnhance.Color(idle).enhance(1.25), 1.04, 0.97, 0.78)
@@ -214,14 +241,14 @@ ROOMS = {
         "attic_butler_room": (955, 635, 1310, 825),
     },
     2: {
-        "bedroom_lad": (235, 195, 580, 370),
-        "bedroom_doctor": (235, 390, 580, 535),
-        "bedroom_captain": (235, 550, 580, 675),
-        "bedroom_psychic": (235, 690, 580, 840),
-        "bedroom_host": (950, 195, 1260, 370),
-        "bedroom_drunk": (950, 390, 1260, 535),
-        "bedroom_broken": (950, 550, 1260, 675),
-        "bedroom_nurse": (950, 690, 1260, 840),
+        "bedroom_lad": (223, 182, 608, 377),
+        "bedroom_doctor": (223, 377, 608, 550),
+        "bedroom_captain": (223, 550, 608, 707),
+        "bedroom_psychic": (223, 707, 608, 888),
+        "bedroom_host": (936, 182, 1301, 377),
+        "bedroom_drunk": (936, 377, 1301, 550),
+        "bedroom_broken": (936, 550, 1301, 707),
+        "bedroom_nurse": (936, 707, 1301, 888),
     },
     1: {
         "tea_room": (270, 195, 515, 450),
