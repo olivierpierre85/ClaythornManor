@@ -77,7 +77,7 @@ A nurse who was also in China. She ratted out the Psychic to the Captain regardi
 She assumed she was invited by Lady Claythorn because of her service in the army.
 
 ### The Drunk (Samuel Manning)
-Drinks because of his deceased wife. He blames an incompetent doctor.
+Drinks because of his deceased wife (5 years ago). He blames an incompetent doctor.
 He forgets everything when he wakes up. This leads to a black-out, then a skip to the next day (with an option to drink more). You must find a way to make him stop drinking so that the option not to drink appears.
 He might have killed someone whilst drink-driving one day (the Captain's wife? TODO: develop).
 Invited because, despite everything, he managed to become a defence lawyer, albeit a terrible one.

@@ -25,7 +25,14 @@
       "Bash(\"c:/renpy-8.4.1-sdk/renpy.exe\" \"c:/Projects/ClaythornManor/Murder\" lint)",
       "Read(//c//**)",
       "Bash(python \"c:\\\\Projects\\\\ClaythornManor\\\\tools\\\\build_map_images.py\")",
-      "Bash(python \"C:\\\\Users\\\\olivi\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Projects-ClaythornManor\\\\3a3fbf2c-538d-43ad-b18c-1f51083b549b\\\\scratchpad\\\\gold_frame_mockup.py\")"
+      "Bash(python \"C:\\\\Users\\\\olivi\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Projects-ClaythornManor\\\\3a3fbf2c-538d-43ad-b18c-1f51083b549b\\\\scratchpad\\\\gold_frame_mockup.py\")",
+      "Bash(git --no-pager diff)",
+      "Bash(git --no-pager diff -- \"Murder/game/scripts/broken/Day 2/3_Evening/3_everyone_gathered.rpy\")",
+      "Bash(git --no-pager diff --stat)",
+      "Bash(git --no-pager status)",
+      "Bash(git --no-pager diff --cached --stat)",
+      "Bash(git --no-pager diff --cached -- docs/game_story/story_characters.md docs/next_tasks.md)",
+      "Bash(git --no-pager diff --cached -- \"Murder/game/scripts/broken/Day 2/3_Evening/3_everyone_gathered.rpy\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\olivi\\AppData\\Local\\Temp\\claude\\c--Projects-ClaythornManor\\3a3fbf2c-538d-43ae-b18c-000000000000"

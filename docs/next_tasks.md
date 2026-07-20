@@ -50,9 +50,13 @@ IMORTANT WHY Not just know on bedrooms? he doesn't have to enter them => Add log
 
 ##### Saturday — After Dinner
 
+FLASHBACK =>Add in inner dialogs that WE ARE NOT HERE FOR the same reasons BEFORE talking to everyone
 
+Flashback -> ADmit smauel manning has been pretending to be drunk
 
 THursday : REDO FULL upstairs => Nobody is there?
+
+drunk has seen dc baldwin abuse
 
 Friday: REDO full billiard room
   you need to convince everyone something is not right.
