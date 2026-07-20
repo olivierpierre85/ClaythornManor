@@ -345,7 +345,7 @@ label broken_day2_evening_ring_gong:
     drunk """
     Five years ago.
 
-    At (TODO claude add old london hospital name).
+    At St Bartholomew's, in London.
 
     But I remember it clearly.
 
@@ -363,7 +363,7 @@ label broken_day2_evening_ring_gong:
 
     That is the reason I am here.
 
-    That is what was written in the letter.
+    At least, that is what was written in the letter.
     """
 
     broken """
@@ -395,7 +395,7 @@ label broken_day2_evening_ring_gong:
     """
 
     doctor """
-    Thank you, it doesn't.
+    Right.
 
     Also, if your doctor had really stolen your wife's narcotics, that would not have changed her chances of survival.
 
@@ -433,15 +433,6 @@ label broken_day2_evening_ring_gong:
 
     I take a long breath and keep going.
     """
-
-
-
-
-
-
-
-
-
 
     $ broken_details.threads.unlock('gather_everyone')
 
