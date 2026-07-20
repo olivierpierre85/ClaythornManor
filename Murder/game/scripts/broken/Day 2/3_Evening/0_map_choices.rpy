@@ -305,6 +305,8 @@ label broken_day2_evening_bedroom_lad:
     How peculiar.
     """
 
+    # TODO: rose achievement
+
     return
 
 

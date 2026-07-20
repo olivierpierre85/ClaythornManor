@@ -9,24 +9,9 @@
 #
 #   Position
 #       - House : Captain, Doctor, Mr Manning, Miss Baxter, Miss Marsh, Broken
-#       - Gone  : Lady Claythorn and all the staff (left by motor car in the night)
+#       - Gone  : Lady Claythorn and all the staff (left in the night)
 #       - Dead  : Lad (Ted Harring)
 #
-#   Reached only from broken_day2_evening (found_poison + gather_everyone:
-#   the household kept watch through the night). Broken had the small-hours
-#   watch and saw the car leave at four in the morning, so the empty manor
-#   is a confirmation for him, not a discovery.
-#
-#   Structure:
-#       - The empty house: cold grates, the butler's keys left by the door,
-#         the garage empty, the telephone line dead
-#       - Broken proposes walking out to the police station together; the
-#         others refuse - only the Captain will come
-#       - The gate (broken_day3_morning_menu_leave):
-#           - set out with only the Captain (always available)
-#           - lay everything before them (intuition - requires the 'ambushed'
-#             ending) -> the reveal, everyone agrees, unlocks left_together
-#       - Both paths continue into broken_day3_afternoon
 # --------------------------------------------
 label broken_day3_morning:
 

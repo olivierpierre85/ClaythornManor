@@ -325,93 +325,13 @@ label broken_day2_evening:
 
     call change_time(21, 30)
 
-    $ time_left = 120
+    $ time_left = 145
 
     call run_menu(broken_details.saved_variables["day2_evening_map_menu"])
 
-    call change_time(23, 30)
-
-    $ change_room('bedroom_broken', dissolve)
-
-    $ stop_music()
-
     if not broken_details.threads.is_unlocked('gather_everyone'):
 
-        # He never rang the gong: the house sleeps unguarded, and the
-        # manor is set alight in the night.
-        """
-        I do no think there is more I can do tonight, so I return to my room.
-
-        I sit on my bed but with the intent on keeping my eyes open until morning.
-        """
-
-        call wait_screen_transition()
-
-        $ play_music('scary')
-
-        play sound broken_glass
-
-        play sound fire loop
-
-        """
-        I am half asleep when I hear glass breaking, too far away to be in my room.
-
-        I stand up and notice that the room is warm.
-        
-        Then I smell something.
-
-        Smoke.
-
-        It is coming from outside, through the door.
-
-        Instinctively I try to get out, but the handle is piping hot.
-
-        I won't get out that way.
-
-        The smoke is getting thicker and I am afraid that I will pass out if I wait any longer.
-
-        There is only one other escape route.
-
-        The window.
-        """
-
-        $ change_room('bedroom_window_view')
-
-        """
-        I open it and look down.
-
-        There is an iron fence that frightens me a bit.
-
-        But now the fire has reached the door.
-
-        I have no choice, so I climb over the sill and hang by my arms.
-
-        If I manage my fall, I should avoid any injury.
-        """
-
-        jump broken_ending_impaled
-
-    # gather_everyone path: the gong was rung and the watch holds through
-    # the night.
-    """
-    Mine is the dead stretch of the watch, from two o'clock until dawn.
-
-    I sleep in my clothes until Mr Manning taps at my door, and carry my chair out to the landing where every bedroom door can be seen.
-    """
-
-    pause 1
-
-    """
-    Some time past four, sounds rise from below.
-
-    Quiet feet on the gravel, a door eased shut, and then the cough of a motor car.
-
-    From the landing window I watch its lamps slide away down the drive until the dark takes them.
-
-    So much for the tree across the road.
-
-    Nobody else stirs. I hold my post, and wait for the grey of morning.
-    """
+        call broken_day2_evening_failed
 
     jump broken_day3_morning
 
@@ -438,3 +358,65 @@ label broken_day2_dinner_host:
     call host_generic
 
     return
+
+label broken_day2_evening_failed:
+    
+    call change_time(23, 55)
+
+    $ change_room('bedroom_broken', dissolve)
+
+    $ stop_music()
+
+    # He never rang the gong: the house sleeps unguarded, and the
+    # manor is set alight in the night.
+    """
+    I do no think there is more I can do tonight, so I return to my room.
+
+    I sit on my bed but with the intent on keeping my eyes open until morning.
+    """
+
+    call wait_screen_transition()
+
+    $ play_music('scary')
+
+    play sound broken_glass
+
+    play sound fire loop
+
+    """
+    I am half asleep when I hear glass breaking, too far away to be in my room.
+
+    I stand up and notice that the room is warm.
+    
+    Then I smell something.
+
+    Smoke.
+
+    It is coming from outside, through the door.
+
+    Instinctively I try to get out, but the handle is piping hot.
+
+    I won't get out that way.
+
+    The smoke is getting thicker and I am afraid that I will pass out if I wait any longer.
+
+    There is only one other escape route.
+
+    The window.
+    """
+
+    $ change_room('bedroom_window_view')
+
+    """
+    I open it and look down.
+
+    There is an iron fence that frightens me a bit.
+
+    But now the fire has reached the door.
+
+    I have no choice, so I climb over the sill and hang by my arms.
+
+    If I manage my fall, I should avoid any injury.
+    """
+
+    jump broken_ending_impaled

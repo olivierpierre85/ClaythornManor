@@ -6,10 +6,6 @@ Ongoing AI ollama tester, try with longer run. maybe needed to use a better LLM 
 
 IDEA => For choices already made (greyed out, add the time they will consume?)
 
-NEW MAPS - Redraw
-- Bedrooms : not correctly connected and attic stair weirdly put. REDRAW
-- Remove "all things in feet"
-
 ### ???? INTUITION system entirely FOR EVERYONE SAVED concept
 Now an intuition is needed to SAVE a person.
 When Someone is saved, it add a SAVED over their name in the progress view
