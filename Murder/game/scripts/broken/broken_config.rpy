@@ -73,9 +73,9 @@ label init_broken:
             ),
             CharacterInformation(
                 0, "gather_everyone",
-                "You rang the dinner gong, gathered the household, and arranged a watch for the night",
-                content_negative="You didn't gather the others to keep watch through the night",
-                image_file="lord",
+                "You rang the dinner gong and gathered everyone",
+                content_negative="You didn't gather everyone",
+                image_file="dinner_gong",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),
