@@ -1,0 +1,82 @@
+{
+    "start_label": "broken_day2_evening",
+    "unlocked_threads": [
+        "talked_to_maid",
+        "host_lies",
+        "drunk_letter",
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day2_evening_menu_dinner",
+            "selected": "Speak to Lady Claythorn",
+            "redirect": "broken_day2_dinner_host"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What do you think of the other guests?",
+            "redirect": "host_generic_other_guests_broken"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What do you think of this place?",
+            "redirect": "host_generic_manor"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "How old are you?",
+            "redirect": "host_generic_age_broken"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What room are you in?",
+            "redirect": "host_generic_room"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "You don't have any more questions for her",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Henry IV Bedroom",
+            "redirect": "broken_day2_evening_bedroom_host"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Queen Alexandra Bedroom",
+            "redirect": "broken_day2_evening_bedroom_nurse"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Edward II Bedroom",
+            "redirect": "broken_day2_evening_bedroom_doctor"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "George IV Bedroom",
+            "redirect": "broken_day2_evening_bedroom_drunk"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Elizabeth I Bedroom",
+            "redirect": "broken_day2_evening_bedroom_psychic"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "George I Bedroom",
+            "redirect": "broken_day2_evening_bedroom_captain"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "William the Conqueror Bedroom",
+            "redirect": "broken_day2_evening_bedroom_lad"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Turn in for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

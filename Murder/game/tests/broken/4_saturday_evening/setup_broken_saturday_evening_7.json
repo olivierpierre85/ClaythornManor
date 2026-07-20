@@ -10,12 +10,7 @@
     "choices": [
         {
             "menu": "broken_day2_evening_menu_dinner",
-            "selected": "Speak to Lady Claythorn",
-            "redirect": "broken_day2_dinner_host"
-        },
-        {
-            "menu": "host_generic_menu_broken",
-            "selected": "You don't have any more questions for her",
+            "selected": "Keep to yourself",
             "redirect": "generic_cancel"
         },
         {
@@ -50,11 +45,6 @@
         },
         {
             "menu": "broken_day2_evening_billiard_menu",
-            "selected": "Sit with Mr Manning",
-            "redirect": "broken_day2_evening_billiard_drunk"
-        },
-        {
-            "menu": "broken_day2_evening_billiard_menu",
             "selected": "Join Captain Sinha",
             "redirect": "broken_day2_evening_billiard_captain"
         },
@@ -67,6 +57,21 @@
             "menu": "broken_captain_night_menu",
             "selected": "Tell him the telephone is dead",
             "redirect": "broken_day2_evening_captain_phone"
+        },
+        {
+            "menu": "broken_captain_night_menu",
+            "selected": "Leave him to his book",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_billiard_menu",
+            "selected": "Sit with Mr Manning",
+            "redirect": "broken_day2_evening_billiard_drunk"
+        },
+        {
+            "menu": "broken_day2_evening_billiard_menu",
+            "selected": "Join Captain Sinha",
+            "redirect": "broken_day2_evening_billiard_captain"
         },
         {
             "menu": "broken_captain_night_menu",

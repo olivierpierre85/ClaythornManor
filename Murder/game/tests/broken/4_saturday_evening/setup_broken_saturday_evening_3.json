@@ -10,7 +10,7 @@
     "choices": [
         {
             "menu": "broken_day2_evening_menu_dinner",
-            "selected": "Keep my own counsel",
+            "selected": "Keep to yourself",
             "redirect": "generic_cancel"
         },
         {

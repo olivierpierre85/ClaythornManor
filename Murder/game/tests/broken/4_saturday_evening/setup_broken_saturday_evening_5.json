@@ -1,0 +1,87 @@
+{
+    "start_label": "broken_day2_evening",
+    "unlocked_threads": [
+        "talked_to_maid",
+        "host_lies",
+        "drunk_letter",
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day2_evening_menu_dinner",
+            "selected": "Speak to Lady Claythorn",
+            "redirect": "broken_day2_dinner_host"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "What do you think of this weather?",
+            "redirect": "host_generic_weather"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "Tell me more about yourself.",
+            "redirect": "host_generic_background_broken"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "Why did you invite us here?",
+            "redirect": "host_generic_invite_broken"
+        },
+        {
+            "menu": "host_generic_menu_broken",
+            "selected": "Have you been giving this prize away for long?",
+            "redirect": "host_generic_award"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Tea room",
+            "redirect": "broken_day2_evening_tea_room"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Dining Room",
+            "redirect": "broken_day2_evening_dining_room"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Garden",
+            "redirect": "broken_day2_evening_garden"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "broken_day2_evening_portrait_gallery"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Library",
+            "redirect": "broken_day2_evening_library"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Look in on the billiard room",
+            "redirect": "broken_day2_evening_billiard_room"
+        },
+        {
+            "menu": "broken_day2_evening_billiard_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Look in on the billiard room",
+            "redirect": "broken_day2_evening_billiard_room"
+        },
+        {
+            "menu": "broken_day2_evening_billiard_menu",
+            "selected": "Leave the room",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Turn in for the night",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

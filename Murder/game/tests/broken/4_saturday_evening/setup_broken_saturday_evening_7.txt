@@ -55,12 +55,7 @@ The telephone is in the entrance hall, maybe I should check for myself.
 The meal is served quickly after that.
 Everyone is rather quiet and I do not feel like talking either.
 But if I don't engage with our host, it could be seen as rude, or even suspicious.
-Menu Choice: Speak to Lady Claythorn
-Thomas Moody: You have kept a steady hand on the house today, Lady Claythorn.
-Thomas Moody: It cannot have been an easy day to preside over.
-Lady Claythorn: You are kind to say so, Mr Moody.
-I should ask her more questions, even though I feel I have learned what I needed to know about her.
-Menu Choice: You don't have any more questions for her
+Menu Choice: Keep to yourself
 The dinner ends as quietly as it began.
 Lady Claythorn wishes us each a good night, and informs us that drinks are available in the billiard room, like yesterday.
 The others drift towards the stairs and I follow them.
@@ -134,25 +129,6 @@ Good.
 Here are two men I think I can reasonably trust.
 I could convince them that something has to be done tonight.
 But how to make them trust me?
-Menu Choice: Sit with Mr Manning
-Thomas Moody: You are drinking again, Mr Manning.
-Samuel Manning: Only enough to keep my hands still, sir.
-Samuel Manning: The events of today have shaken me rather badly.
-I can understand that.
-And it is true that for once, he doesn't look drunk.
-That is good.
-Samuel Manning: Mr Moody. This morning, in the wood.
-Samuel Manning: What you kept me from...
-Thomas Moody: No need to talk about it, Mr Manning.
-Thomas Moody: The real question is what we are going to do now.
-Samuel Manning: Right.
-Samuel Manning: Whatever you want to do, I'll follow.
-Samuel Manning: I owe you that much.
-Thomas Moody: Perfect.
-Thomas Moody: I am still not sure what our course of action should be, but it is good to know you are on my side.
-Thomas Moody: I shall keep that in mind.
-Well, that went well enough.
-But I would feel more secure if I could rely on more people than just the two of us.
 Menu Choice: Join Captain Sinha
 Sushil Sinha: Mr Moody. How are you tonight?
 Thomas Moody: I am doing all right, considering, Captain.
@@ -199,7 +175,29 @@ Sushil Sinha: But not really a cause for alarm either.
 The staff gone. The telephone dead.
 I don't know if that was enough to raise some suspicion.
 I hope so, because if not, he might not believe me when I tell him the full story.
-Samuel Manning will go with what I say, so I can ask the question now.
+One last thing before I reveal the whole story.
+I should see if Samuel Manning will go along with it.
+Menu Choice: Leave him to his book
+Menu Choice: Sit with Mr Manning
+Thomas Moody: You are drinking again, Mr Manning.
+Samuel Manning: Only enough to keep my hands still, sir.
+Samuel Manning: The events of today have shaken me rather badly.
+I can understand that.
+And it is true that for once, he doesn't look drunk.
+That is good.
+Samuel Manning: Mr Moody. This morning, in the wood.
+Samuel Manning: What you kept me from...
+Thomas Moody: No need to talk about it, Mr Manning.
+Thomas Moody: The real question is what we are going to do now.
+Samuel Manning: Right.
+Samuel Manning: Whatever you want to do, I'll follow.
+Samuel Manning: I owe you that much.
+Thomas Moody: Perfect.
+Thomas Moody: I am still not sure what our course of action should be, but it is good to know you are on my side.
+Thomas Moody: I shall keep that in mind.
+Well, that went well enough.
+But I would feel more secure if I could rely on more people than just the two of us.
+Menu Choice: Join Captain Sinha
 Menu Choice: Show him the order
 Thomas Moody: Captain, there is something you must know.
 I glance at Mr Manning first.

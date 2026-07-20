@@ -1,90 +1,164 @@
-Generated:                2026-06-24 14:42:27
+Generated:                2026-07-20 11:23:11
 Scope:                    character=broken
-Dialogue entries scanned: 488
-Test lines collected:     926
-Covered:                  409
-Missing:                  79
+Dialogue entries scanned: 1236
+Test lines collected:     2148
+Covered:                  1093
+Missing:                  143
+
+  game/scripts/broken/Day 1/2_Evening/0_map_choices.rpy  (4 missing)
+    [broken_day1_evening_attic_default_a2763ec6] I start up the stairs towards the attic, but stop suddenly.
+    [broken_day1_evening_attic_default_95adcff0] The attic is most likely where the servants sleep.
+    [broken_day1_evening_attic_default_c925c780] I should avoid it if I want to avoid to attract attention.
+    [broken_day1_evening_attic_default_f915c5ea] I go back down.
+
+  game/scripts/broken/Day 1/2_Evening/1_main.rpy  (3 missing)
+    [broken_day1_evening_621f20e8] I listen carefully, not that I am really interested.
+    [broken_day1_evening_43c00fd0] But I have learned on the job to never miss a detail when someone is telling a story.
+    [broken_day1_dinner_host_3f7250cd] I shall conduct the conversation as an interview, and avoid any trivial questions.
 
   game/scripts/broken/Day 1/2_Evening/2_billiard_room.rpy  (1 missing)
     [broken_day1_evening_billiard_room_butler_8d64ba76] I head back towards the butler in his corner.
 
-  game/scripts/broken/Day 2/1_Morning/1_main.rpy  (78 missing)
-    [broken_day2_morning_080eb74a] I wake to a thin grey light and the unfamiliar weight of a strange bed.
+  game/scripts/broken/Day 2/1_Morning/1_main.rpy  (84 missing)
+    [broken_day2_morning_77063644] I wake up from a restless sleep.
     [broken_day2_morning_faf0c0e5] For a moment I cannot place myself.
     [broken_day2_morning_899577eb] Then it comes back to me. The manor. The mask. Thomas.
-    [broken_day2_morning_6983c569] Day two.
-    [broken_day2_morning_5ee9713e] I came through the first night without being found out, but the hardest part is still ahead of me.
-    [broken_day2_morning_feef3f60] I sit up and reach for the mask on the bedside table.
-    [broken_day2_morning_b7b6af24] The leather is cold against my skin.
-    [broken_day2_morning_71fa6fd5] I settle it into place, and Archie disappears beneath Thomas Moody for another day.
-    [broken_day2_morning_ab8c8838] I run through his history once more, the way another man might say his prayers.
-    [broken_day2_morning_61dbeac6] Liverpool. The boot-boy years. The commission. The War.
-    [broken_day2_morning_709d1737] When I am word-perfect, I go down.
+    [broken_day2_morning_e19d9e45] And then there is the letter.
+    [broken_day2_morning_dcae2c51] The proof that Captain Sinha's orders led Thomas to his injuries, and very likely, to his death.
+    [broken_day2_morning_f1b681b0] Who put it there, and why?
+    [broken_day2_morning_38a33c87] It is most likely the one who invited us here.
+    [broken_day2_morning_1b4a8dfa] And they want Thomas Moody to harm Sushil Sinha.
+    [broken_day2_morning_defd82a1] It is an obvious plot, and I am sure Thomas would have jumped at the chance to take revenge.
+    [broken_day2_morning_b1af6233] And a part of me wants to avenge him as well.
+    [broken_day2_morning_04802ea3] But there's also the matter of what the maid told me.
+    [broken_day2_morning_8cc552e5] The surprise prepared for the guests.
+    [broken_day2_morning_a3e8f6d9] Is the letter part of that surprise?
+    [broken_day2_morning_2bf00f09] If so, I dread what will come next.
+    [broken_day2_morning_4ba4a07d] With that in mind, I go down.
     [broken_day2_morning_4bc9e5d2] The dining room is already half filled.
     [broken_day2_morning_ef244c06] Captain Sinha sits at the far end, upright over his plate, eating as though it were a duty.
+    [broken_day2_morning_94a3fa9a] I am surprised at myself for feeling an overwhelming sense of anger towards him.
+    [broken_day2_morning_01553e5a] I try to remember that in war, terrible things happen no matter what.
+    [broken_day2_morning_e1fa5ce1] There is no reason to blame someone who simply signed a piece of paper.
+    [broken_day2_morning_6b5ea20b] Yet, that doesn't entirely calm me.
     [broken_day2_morning_4ec57449] Doctor Baldwin is opposite him, his eyes ringed and distant, a man who has slept badly or not at all.
     [broken_day2_morning_3f01033b] Miss Baxter and Miss Marsh have their heads bent together over the teapot.
     [broken_day2_morning_605f9d2f] I take the chair I was given last night, near the head of the table, and help myself to a modest plate.
-    [broken_day2_morning_c687ef02] Then I let my gaze travel the room as Thomas never would, marking who is present and who is not.
-    [broken_day2_morning_a804b40a] One place stands empty.
-    [broken_day2_morning_a4dea629] The young fellow, Harring, who sat beside Miss Baxter at dinner, has not come down.
-    [broken_day2_morning_9385ec19] A late riser, perhaps. The young so often are.
     [broken_day2_morning_d9cc65f7] Samuel Manning is the last to appear, or rather to fall through the door.
     [broken_day2_morning_d0cdbc75] His colour is dreadful and his hands will not be still.
     [broken_day2_morning_2d1fd6de] He makes for the coffee and nothing else, then drops into the nearest chair without a word to anyone.
     [broken_day2_morning_b7588ce6] Miss Baxter's mouth thins at the sight of him, though she holds her tongue.
+    [broken_day2_morning_c975e5b5] Only one place stands empty.
+    [broken_day2_morning_a4dea629] The young fellow, Harring, who sat beside Miss Baxter at dinner, has not come down.
+    [broken_day2_morning_f5e1a346] A late riser, perhaps.
     [broken_day2_morning_1ac3bc63] I am still taking the measure of them all when the butler slips in and bends to Lady Claythorn's ear.
-    [broken_day2_morning_5e6fa9a4] Whatever he tells her drains the colour from her face in an instant.
-    [broken_day2_morning_01e21fb7] She rises, gathers her composure back into place with an effort I should not have caught had I not been wat...
+    [broken_day2_morning_3f8284ee] She rises and crosses to the doctor, and asks him to follow them upstairs.
     [broken_day2_morning_3cf6e135] The three of them leave together, the butler leading, the doctor a pace behind.
+    [broken_day2_morning_2a0a7af5] I resist the urge to follow them, as I have no reason to.
     [broken_day2_morning_3e27e929] The door closes, and the room settles into a silence no one cares to break.
-    [broken_day2_morning_447e81fe] A summons for the doctor, before the plates are even cleared.
-    [broken_day2_morning_12afe03b] That is not a thing one does for a guest who has merely overslept.
-    [broken_day2_morning_80d04a99] Something is wrong in this house this morning.
-    [broken_day2_morning_b0c78101] I keep my eyes on my plate and my ears open.
-    [broken_day2_morning_5badbb62] The maid's words come back to me unbidden. A surprise prepared for the guests, she said.
-    [broken_day2_morning_6e91ed73] I begin to wonder what shape that surprise will take.
+    [broken_day2_morning_b207a9f4] There are no happy reasons to call a doctor for, and everybody here knows it.
     [broken_day2_morning_0cf2c61b] A long quarter of an hour passes before Lady Claythorn returns, the doctor a pace behind her.
     [broken_day2_morning_98a569b9] She does not sit.
     [broken_day2_morning_4fdfec79] She stands at the head of the table and folds her hands, and we all know before she speaks that the news is...
     [broken_day2_morning_fd402721] I am so dreadfully sorry to bring you such news.
     [broken_day2_morning_94bf85b6] It appears that Mr Harring passed away during the night.
-    [broken_day2_morning_0dfaf0ea] The room goes very still.
     [broken_day2_morning_01ca0d80] Mr Harring?
     [broken_day2_morning_32061f7b] But he was a young man, scarcely more than a boy.
     [broken_day2_morning_3ecaffea] Are you quite certain, Doctor?
     [broken_day2_morning_9e73b817] He seemed in perfect health only last evening.
     [broken_day2_morning_da52ab5a] I can find no mark upon him, and no cause I am able to point to.
     [broken_day2_morning_44094641] A man of his years, and sound by every appearance.
-    [broken_day2_morning_dc469c9f] I will not insult you by pretending I understand it.
+    [broken_day2_morning_a99dcdf9] I so not I understand it.
     [broken_day2_morning_6a571a9c] What I am certain of is that the authorities must be sent for.
     [broken_day2_morning_d41ff383] Yes. Of course.
     [broken_day2_morning_bb738044] My butler will see to it at once.
-    [broken_day2_morning_3d9e7282] That poor young man.
-    [broken_day2_morning_f7d13523] To be taken so early, with all his years still before him.
-    [broken_day2_morning_b173b4ac] It does not bear thinking on.
     [broken_day2_morning_2238bb2c] We sit a while in a heavy silence.
-    [broken_day2_morning_a5f3ce4f] A young man, sound as a bell at dinner, dead before breakfast, and no mark upon him.
-    [broken_day2_morning_650449e5] I have written up enough inquests to know how seldom the world arranges itself so tidily.
-    [broken_day2_morning_3c558c8c] Men of thirty do not simply stop in the night.
-    [broken_day2_morning_242321b0] The bottle from the scullery lies at the bottom of my case, a measure lighter than it ought to be.
-    [broken_day2_morning_f8eda20a] I had put that down to carelessness. I am no longer certain that is what it was.
-    [broken_day2_morning_e19d9e45] And then there is the letter.
-    [broken_day2_morning_dfc1fb56] Last night someone laid an old army order upon my pillow, and at the foot of it sat a name. Captain S. Sinha.
-    [broken_day2_morning_81efc7e7] A staff officer who signed better men forward to their deaths, and never once went himself.
-    [broken_day2_morning_fb8cceca] He sits not ten feet from me now, eating his breakfast as though nothing in the world were amiss.
-    [broken_day2_morning_989c0f44] A man with that upon his conscience would hardly balk at one death more.
-    [broken_day2_morning_48107b45] Whatever brought me beneath this roof, I had not reckoned on murder.
+    [broken_day2_morning_f6dff457] The bottle of rat poison I still have in my pocket suddenly comes to mind.
+    [broken_day2_morning_c20f8272] Why was it so carelessly left there, still open as if someone had just used it?
+    [broken_day2_morning_e4c2f55b] But it is too vague an intuition to bring it up.
+    [broken_day2_morning_a3b1ac28] Besides, I would have to explain what I was doing downstairs, and I am not ready for that.
+    [broken_day2_morning_e99624d3] So I say nothing for the moment.
+    [broken_day2_morning_62c6dbfb] Whatever brought me beneath this roof, I had not predicted a death would occur.
     [broken_day2_morning_9b06fbe7] And if it is murder, then no one here is safe, the false Thomas Moody least of all.
     [broken_day2_morning_1e6e9b14] I had best keep my wits about me, and my eyes upon the rest of them.
-    [broken_day2_morning_7e27c0f7] When the worst of the murmuring has died away, Lady Claythorn draws breath and speaks again.
-    [broken_day2_morning_1a268d06] A man lies dead above our heads, and our hostess speaks of sport as though we had lost no more than an hour...
-    [broken_day2_morning_40f9915c] That composure is a thing worth remembering.
-    [broken_day2_morning_8eac1d16] For my own part, I have no wish to be left behind in this house, picking at cold eggs while I wait to learn...
-    [broken_day2_morning_1ede266f] Better to be out of doors and among them, where I can watch.
-    [broken_day2_morning_610bc974] And a man invited for his soldiering could hardly cry off a morning's shooting without turning every head t...
+    [broken_day2_morning_42e03700] When the plates are empty and the worst of the murmuring has died away, Lady Claythorn speaks again.
+    [broken_day2_morning_5cb41989] Now, as I told you all yesterday, there were diversions arranged for this morning.
+    [broken_day2_morning_7223346d] A shooting party was to set out after breakfast, for those who cared to join it.
+    [broken_day2_morning_357305cd] I know how dreadful this is.
+    [broken_day2_morning_3851a09a] But I do not believe it would do any good to sit and brood the day away.
+    [broken_day2_morning_4e9bcac6] So, if no one objects, I should like us to carry on much as we had planned.
+    [broken_day2_morning_b0cfe87a] For a moment no one answers at all.
+    [broken_day2_morning_aed010c9] Forgive me, Lady Claythorn, but a young man has died in this house not an hour ago.
+    [broken_day2_morning_b29a9379] Surely you cannot mean for us to go out shooting as though nothing had happened?
+    [broken_day2_morning_f9c42444] A few quiet voices murmur their agreement with her.
+    [broken_day2_morning_8e10899b] I understand you, truly I do.
+    [broken_day2_morning_39da60ca] But the authorities cannot reach us much before the afternoon, and there is nothing any of us can do for hi...
+    [broken_day2_morning_c4fdfa89] I would far sooner keep you all occupied than leave you to dwell upon it.
+    [broken_day2_morning_b22e9f64] The objection falters, less from being really convinced but from the simple fact that Lady Claythorn is our...
+    [broken_day2_morning_04982078] And habit commands us to simply go along with what she is proposing.
+    [broken_day2_morning_0bd77de2] Amelia Baxter and Rosalind Marsh signals they would stay inside, as they would have done anyway.
+    [broken_day2_morning_30200c13] For my own part, I weight for a second staying with them.
+    [broken_day2_morning_21050c51] That would the perfect opportunity to explore the house.
+    [broken_day2_morning_269bbf13] And my injuries would be the perfect cover to explain my reluctance in participating.
+    [broken_day2_morning_a30e6291] But a hunt is a perfect opportunity to interrogate someone privately.
+    [broken_day2_morning_c2ff1c68] And there are a few question I would like to ask Captain Sinha.
+    [broken_day2_morning_3ce228f5] This could be the perfect opportunity to talk to him alone.
     [broken_day2_morning_37661fa6] So I shall go.
-    [broken_day2_morning_d1299f14] A low murmur of assent runs round the table.
-    [broken_day2_morning_6492b195] The Captain accepts at once, and Mr Manning allows that the air may do him some good, though he looks fit f...
-    [broken_day2_morning_8fbf3b15] The two ladies will keep to the house.
+
+  game/scripts/broken/Day 2/2_Hunt/3_drunk.rpy  (48 missing)
+    [broken_day2_hunt_drunk_c0ec7c95] Lunch is over and the footman advises us to go back to hunting.
+    [broken_day2_hunt_drunk_a315d71d] None of us seems particularly enthusiastic about it, but we go on anyway.
+    [broken_day2_hunt_drunk_f898feba] This afternoon is no more successful than the morning.
+    [broken_day2_hunt_drunk_bca3f6df] We walk for a while without encountering anything, until a small rabbit appears in front of us.
+    [broken_day2_hunt_drunk_498d2a19] Oh, a rabbit!
+    [broken_day2_hunt_drunk_e9dfd2e3] Samuel Manning raises his gun and tries to aim at the animal, but his aim is terribly off, and his rifle po...
+    [broken_day2_hunt_drunk_7e703c59] Watch out!
+    [broken_day2_hunt_drunk_1af3bb3d] Instinctively, I jump towards the rifle to redirect the shot.
+    [broken_day2_hunt_drunk_242cd468] I do not leave Samuel Manning's side for the rest of the halt.
+    [broken_day2_hunt_drunk_2189acc8] I am afraid he will change his mind before the end of the hunt, but he does not.
+    [broken_day2_hunt_drunk_ef5c9327] The doctor walks out of the wood that afternoon, alive, and without a clue about the fate he avoided.
+    [broken_day2_hunt_drunk_doctor_90e3d811] Samuel Manning makes me uneasy, so I approach Doctor Baldwin.
+    [broken_day2_hunt_drunk_doctor_3cc256f8] I interrupt what looks like a hushed exchange between him and the footman.
+    [broken_day2_hunt_drunk_doctor_de4ad2b5] They break off, and act as if nothing has passed between them.
+    [broken_day2_hunt_drunk_doctor_f7a230a1] Ah, Mr Moody.
+    [broken_day2_hunt_drunk_doctor_4f2ffdf6] Excellent day for a hunt, isn't it?
+    [broken_day2_hunt_drunk_doctor_7ae85078] But tell me, what is on your mind?
+    [broken_drunk_hunt_letter_054988e0] No more questions now.
+    [broken_drunk_hunt_letter_4979b4f9] If I want to move things forward, I will have to be blunt and take a risk.
+    [broken_drunk_hunt_letter_c6aed07a] Mr Manning, last night I found something in my room, left there for me to see.
+    [broken_drunk_hunt_letter_1e1e0532] An old army order.
+    [broken_drunk_hunt_letter_58f9d830] It told me that Captain Sinha was responsible for the death of someone dear to me.
+    [broken_drunk_hunt_letter_001f8c81] He hesitates for a second, then decides he can trust me.
+    [broken_drunk_hunt_letter_a593724a] Mine told me what he did.
+    [broken_drunk_hunt_letter_427a6bc8] The doctor.
+    [broken_drunk_hunt_letter_96ee461c] He is the cause of my misery.
+    [broken_drunk_hunt_letter_7f9a4eb4] I cannot let him get away so easily.
+    [broken_drunk_hunt_letter_d33a035d] He has to pay.
+    [broken_drunk_hunt_letter_4939c1ba] The same person gave us those letters. They clearly meant to manipulate us.
+    [broken_drunk_hunt_letter_6f7566e3] Do not let them.
+    [broken_drunk_hunt_letter_f0c1922a] I also lost someone close to me.
+    [broken_drunk_hunt_letter_3da6ae3e] But first, are we sure they are the right men?
+    [broken_drunk_hunt_letter_3b9c348d] I have received an official order, but it could have been fabricated.
+    [broken_drunk_hunt_letter_bd187d41] And you, are you certain Daniel Baldwin is the same man who treated your wife years ago?
+    [broken_drunk_hunt_letter_e6bb2cbc] Yes, I think it's him.
+    [broken_drunk_hunt_letter_8c0070ab] But it was a long time ago, my memory is not so good now.
+    [broken_drunk_hunt_letter_4ada0110] And doctors, they tend to all look the same.
+    [broken_drunk_hunt_letter_6bb114ae] I can't say for sure now.
+    [broken_drunk_hunt_letter_2d6476dc] That's right, we cannot be sure now.
+    [broken_drunk_hunt_letter_69d5f69d] Please do not do anything hasty.
+    [broken_drunk_hunt_letter_ca7651f7] Let us search for more information first.
+    [broken_drunk_hunt_letter_47350a03] You do not want to do something you might regret later.
+    [broken_drunk_hunt_letter_f5a40a52] He looks intently at me, and I can see a part of him is relieved not to have to go through with his plan.
+    [broken_drunk_hunt_letter_23769416] Fine, I'll let him live, for now.
+    [broken_drunk_hunt_letter_b97fecff] But you need to prove that he is not the same doctor, otherwise...
+    [broken_drunk_hunt_letter_8bfd4794] Understood. I'll get to the bottom of it, I assure you.
+    [broken_drunk_hunt_letter_0f5fcbf3] He grumbles something of an agreement, and returns to his drinking.
+    [broken_drunk_hunt_letter_5df4bab6] The conversation is over and it might have saved a man's life.
+
+  game/scripts/broken/Day 3/1_Morning/1_main.rpy  (2 missing)
+    [broken_day3_morning_a051c2ba] Dawn comes grey and slow, and I am there to meet it, stiff in my watch chair at the head of the stairs.
+    [broken_day3_morning_e78f2e63] Nobody has tried a single door on my watch.
+
+  game/scripts/broken/Endings/endings.rpy  (1 missing)
+    [broken_ending_day1_throat_cut_f4b7fa08] This tragic ending likely happened because you did something careless.
 

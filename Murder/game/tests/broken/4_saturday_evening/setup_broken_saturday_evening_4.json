@@ -10,33 +10,8 @@
     "choices": [
         {
             "menu": "broken_day2_evening_menu_dinner",
-            "selected": "Speak to Lady Claythorn",
-            "redirect": "broken_day2_dinner_host"
-        },
-        {
-            "menu": "host_generic_menu_broken",
-            "selected": "You don't have any more questions for her",
+            "selected": "Keep to yourself",
             "redirect": "generic_cancel"
-        },
-        {
-            "menu": "broken_day2_evening_map_menu",
-            "selected": "Kitchen",
-            "redirect": "broken_day2_evening_kitchen"
-        },
-        {
-            "menu": "broken_day2_evening_map_menu",
-            "selected": "Scullery",
-            "redirect": "broken_day2_evening_scullery"
-        },
-        {
-            "menu": "broken_day2_evening_map_menu",
-            "selected": "Gun room",
-            "redirect": "broken_day2_evening_gun_room"
-        },
-        {
-            "menu": "broken_day2_evening_map_menu",
-            "selected": "Storage Room",
-            "redirect": "broken_day2_evening_attic_default"
         },
         {
             "menu": "broken_day2_evening_map_menu",
@@ -45,13 +20,18 @@
         },
         {
             "menu": "broken_day2_evening_map_menu",
-            "selected": "Look in on the billiard room",
-            "redirect": "broken_day2_evening_billiard_room"
+            "selected": "Servant Stairs",
+            "redirect": "broken_day2_evening_servant_stairs"
         },
         {
-            "menu": "broken_day2_evening_billiard_menu",
-            "selected": "Sit with Mr Manning",
-            "redirect": "broken_day2_evening_billiard_drunk"
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Garage",
+            "redirect": "broken_day2_evening_garage"
+        },
+        {
+            "menu": "broken_day2_evening_map_menu",
+            "selected": "Look in on the billiard room",
+            "redirect": "broken_day2_evening_billiard_room"
         },
         {
             "menu": "broken_day2_evening_billiard_menu",
@@ -60,18 +40,23 @@
         },
         {
             "menu": "broken_captain_night_menu",
-            "selected": "Tell him the staff are gone",
-            "redirect": "broken_day2_evening_captain_staff"
+            "selected": "Ask what he makes of the fallen tree",
+            "redirect": "broken_day2_evening_captain_tree"
         },
         {
             "menu": "broken_captain_night_menu",
-            "selected": "Tell him the telephone is dead",
-            "redirect": "broken_day2_evening_captain_phone"
+            "selected": "Ask his opinion of Mr Harring's death",
+            "redirect": "broken_day2_evening_captain_harring"
         },
         {
             "menu": "broken_captain_night_menu",
-            "selected": "Show him the order",
-            "redirect": "broken_day2_evening_captain_order"
+            "selected": "Leave him to his book",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "broken_day2_evening_billiard_menu",
+            "selected": "Sit with Mr Manning",
+            "redirect": "broken_day2_evening_billiard_drunk"
         },
         {
             "menu": "broken_day2_evening_billiard_menu",
