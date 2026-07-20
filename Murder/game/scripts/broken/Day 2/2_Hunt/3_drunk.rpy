@@ -215,7 +215,7 @@ label broken_drunk_hunt_letter:
 
     The doctor.
 
-    He treated my Margaret, years ago. Held back the medicine that might have saved her, the very stuff he wanted for himself.
+    He treated my Eleanor, years ago. Held back the medicine that might have saved her, the very stuff he wanted for himself.
 
     He is the reason she is in the ground.
 
@@ -239,7 +239,7 @@ label broken_drunk_hunt_letter:
     """
 
     drunk """
-    But she... my Margaret...
+    But she... my Eleanor...
     """
 
     broken """

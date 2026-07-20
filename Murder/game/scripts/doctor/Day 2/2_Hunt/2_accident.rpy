@@ -301,7 +301,7 @@ label doctor_day2_hunt_accident_confront_drunk:
 
     You killed her.
 
-    My poor Margaret.
+    My poor Eleanor.
 
     My God, you stood by her bedside and watched her slip away.
     
