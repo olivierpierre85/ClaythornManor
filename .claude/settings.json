@@ -32,7 +32,8 @@
       "Bash(git --no-pager status)",
       "Bash(git --no-pager diff --cached --stat)",
       "Bash(git --no-pager diff --cached -- docs/game_story/story_characters.md docs/next_tasks.md)",
-      "Bash(git --no-pager diff --cached -- \"Murder/game/scripts/broken/Day 2/3_Evening/3_everyone_gathered.rpy\")"
+      "Bash(git --no-pager diff --cached -- \"Murder/game/scripts/broken/Day 2/3_Evening/3_everyone_gathered.rpy\")",
+      "Bash(grep -iE \"^\\(lad|host|doctor|nurse|captain|psychic|broken|drunk|butler|manning|lord\\)\\(_bw\\)?\\\\.webp$\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\olivi\\AppData\\Local\\Temp\\claude\\c--Projects-ClaythornManor\\3a3fbf2c-538d-43ae-b18c-000000000000"

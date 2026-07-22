@@ -13,9 +13,17 @@ label broken_day2_evening_ring_gong:
 
     play sound dinner_gong
 
-    queue sound dinner_gong
+    """
+    Once is probably not enough.
+    """
 
-    queue sound dinner_gong
+    play sound dinner_gong
+
+    """
+    And a third for good measure.
+    """
+
+    play sound dinner_gong
 
     """
     The sound rolls through the house like a wave.
@@ -28,7 +36,7 @@ label broken_day2_evening_ring_gong:
     $ change_room('entrance_hall')
 
     """
-    The first person coming down is Amelia Baxter.
+    The first person I see is Amelia Baxter.
 
     She gives us a puzzled look.
     """
