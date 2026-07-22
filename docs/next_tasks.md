@@ -79,7 +79,7 @@ THE WHol stuff can be decided at the end of the writing
 
 ### Write Story: NEXT => DRUNK
 
-
+THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point
 
 
 ## Assets & artistic Tasks
