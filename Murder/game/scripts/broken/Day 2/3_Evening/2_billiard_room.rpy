@@ -548,7 +548,7 @@ label broken_day2_evening_captain_order:
 
     call broken_day2_evening_ring_gong
 
-    return
+    jump broken_day3_morning
 
 
 # ------------------------------------

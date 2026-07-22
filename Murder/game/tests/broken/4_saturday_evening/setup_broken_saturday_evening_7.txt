@@ -109,7 +109,7 @@ Now that is concerning.
 That is too many oddities to be an accident.
 Something is happening here, and I can think of only one explanation.
 The staff are gone, and they do not intend to come back.
-Map Choice: Entrance Hall
+Map Choice: Check the telephone
 The hall stands empty.
 I find the telephone, its on a table behind the stair.
 I lift the receiver and hold it to my ear.
@@ -198,7 +198,7 @@ Thomas Moody: I shall keep that in mind.
 Well, that went well enough.
 But I would feel more secure if I could rely on more people than just the two of us.
 Menu Choice: Join Captain Sinha
-Menu Choice: Show him the order
+Menu Choice: Explain everything {{observation}}
 Thomas Moody: Captain, there is something you must know.
 I glance at Mr Manning first.
 He answers with a small nod.
@@ -207,7 +207,7 @@ At this, he shows a little surprise.
 Sushil Sinha: Two more deaths?
 Sushil Sinha: What do you mean by that?
 Thomas Moody: Well, somebody left Mr Manning a letter blaming Doctor Baldwin for the loss of his wife.
-Thomas Moody: It was written to put a rifle in a grieving man's hands, and hope he would arm the doctor, without incriminating themselves.
+Thomas Moody: It was very likely written in the hope he would arm the doctor.
 He pauses for a second, then turns to Samuel Manning.
 Sushil Sinha: Mr Manning, is that true?
 Samuel Manning: Well, it is.
@@ -226,16 +226,16 @@ The Captain reads it once, and then again more slowly.
 For a long moment he says nothing at all.
 Sushil Sinha: I see, that is clever.
 Sushil Sinha: I suppose this order was meant to turn you against me.
-Sushil Sinha: But I can assure you it is obviously a fake.
+Sushil Sinha: But I can assure you, it is obviously a fake.
 Sushil Sinha: It looks nothing like the one I used.
 Sushil Sinha: But I assumed you came to the same conclusion.
 Sushil Sinha: Otherwise I could have been another victim.
-Sushil Sinha: That is what you are implying Mr Moody is it not?
+Sushil Sinha: That is what you are implying Mr Moody, is it not?
 Sushil Sinha: Mr Manning was given a letter to make him hate the doctor.
 Sushil Sinha: You were given this, to make you hate me.
 Sushil Sinha: The goal was to have two more deaths this weekend.
 Thomas Moody: Yes, that is my belief, Captain.
-He closes his book without marking the page, and studies me for a long moment.
+He closes his book, and studies me for a long moment.
 Sushil Sinha: Tell me, Mr Moody, why would I trust you.
 Sushil Sinha: You may have fabricated this whole story.
 Thomas Moody: I suppose, but to what end?
@@ -255,19 +255,19 @@ Thomas Moody: Because it is better not to attract attention when conducting an i
 Thomas Moody: If I had declared myself a journalist, I am sure that would have made some people reluctant to talk to me.
 That should be enough of an explanation for now.
 No need for the full story just yet.
-Sushil Sinha: Right, so all this time you were investigating us. Interesting.
+Sushil Sinha: Right, so all this time you were investigating us.
+Sushil Sinha: Interesting.
 Sushil Sinha: What have you found then?
 Thomas Moody: Quite a few things.
 Thomas Moody: But I realise now it is better I share them with everyone.
 Thomas Moody: I just needed to trust a couple of people before I do.
 Thomas Moody: Can I count on you, Captain?
-Sushil Sinha: You can.
-Sushil Sinha: And you must know, I carry a pistol on me.
-Thomas Moody: Good, I have no idea what kind of resistance we will encounter here.
-Thomas Moody: Now we should gather the rest of the guests.
-Sushil Sinha: Indeed, then take my advice.
-Sushil Sinha: Do not waste time going from door to door.
+Sushil Sinha: I suppose you can.
+Sushil Sinha: What other choice do I have.
+Thomas Moody: Good, now we should gather the rest of the guests.
+Sushil Sinha: Indeed, then do not waste time going from door to door.
 Sushil Sinha: There is a simple way to alert everyone in case of an emergency in a house like this one.
+Thomas Moody: Really, what is it?
 Sushil Sinha: You ring the dinner gong.
 Sushil Sinha: Nobody sleeps through a gong. The whole house will come down, and you will say your piece once, to everyone at the same time.
 The gong.
@@ -276,34 +276,255 @@ Thomas Moody: Good idea, Captain.
 Thomas Moody: Let's all go to the dining room then.
 The gong stands by the dining room door, the beater hanging at its side.
 I must make sure everybody hears it.
-The sound rolls through the house like a wave, twice, three times.
+Once is probably not enough.
+And a third for good measure.
+The sound rolls through the house like a wave.
 I stop to check the entrance hall to see if anyone is coming down.
-The first person coming down is Amelia Baxter.
+The first person I see is Amelia Baxter.
 She gives us a puzzled look.
 Amelia Baxter: What is happening here?
-Amelia Baxter: Who ran the gong like that?
-Amelia Baxter: If this is some sort of drunken joke its in very pour taste.
-She looks intensily at Samuel Manning as she is saying that.
-Sushil Sinha: I am sorry Miss Baxter, but I am afraid it is not joke.
+Amelia Baxter: Who rang the gong like that?
+Amelia Baxter: If this is some sort of drunken joke, it's in very poor taste.
+She looks intensely at Samuel Manning as she is saying that.
+Sushil Sinha: I am sorry, Miss Baxter, but I am afraid it is not a joke.
 Sushil Sinha: There is some very serious matter we need to discuss urgently with everybody.
-Amelia Baxter: How serious you sound captain.
+Amelia Baxter: How serious you sound, Captain.
 Amelia Baxter: What is this about?
-Thomas Moody: We will wait everyone is here before discussing it all.
+Thomas Moody: We will wait until everyone is here before discussing it all.
 Rosalind Marsh is now coming down too, looking tired and perplexed.
 She is followed by Doctor Baldwin.
-Of the three, he is the one looking the worse, holding the stair rail as to not fall.
+Of the three, he is the one looking the worst, holding the stair rail so as not to fall.
 Daniel Baldwin: What is the meaning of this?
-Daniel Baldwin: I taught the house might have been on fire.
-Sushil Sinha: Nothing so dramatic Doctor.
+Daniel Baldwin: I thought the house might have been on fire.
+Sushil Sinha: Nothing so dramatic, Doctor.
 Sushil Sinha: But we do need to talk to everyone.
-Rosalind Marsh: Well in that case there is only Lady Claythorn missing.
-Rosalind Marsh: And the staff too of course, where could they be?
+Rosalind Marsh: Well, in that case there is only Lady Claythorn missing.
+Rosalind Marsh: And the staff too, of course.
+Rosalind Marsh: Where could they be?
 Thomas Moody: That is what we need to discuss.
-Thomas Moody: We believe the staff has left.
-Thomas Moody: Now we have proof.
-Sushil Sinha: And it is most then likely than Lady Claythorn is gone as well.
-He dramatically waves his arms at everyone.
+Thomas Moody: We believe the staff have left.
+Sushil Sinha: And it is then most likely that Lady Claythorn is gone as well.
+Rosalind Marsh: That is correct.
+Rosalind Marsh: I passed in front of her room before coming down.
+Rosalind Marsh: It was left wide open, and empty.
+Rosalind Marsh: I thought she would already be here.
+Sushil Sinha: I am not surprised.
 Sushil Sinha: We probably are the only living persons left in this house tonight.
-A silence follows this
-Menu Choice: Leave the room
-Map Choice: Turn in for the night
+A silence follows this.
+Daniel Baldwin: I am sorry Captain, but I am going to need more of an explanation than this.
+Sushil Sinha: Of course, Mr Moody will explain everything.
+Sushil Sinha: After all he is the closest we have to an investigator.
+Daniel Baldwin: An investigator?
+Daniel Baldwin: I thought you were a footman turned car mechanic, Mr Moody.
+Thomas Moody: I am afraid I led you on, Doctor.
+Thomas Moody: A necessity to avoid attracting attention.
+Thomas Moody: Nobody is suspicious of a car mechanic asking questions.
+Daniel Baldwin: Really, but why?
+Daniel Baldwin: Why were you investigating at all?
+Daniel Baldwin: I do not understand.
+Thomas Moody: Right, let me start at the beginning.
+Thomas Moody: I was suspicious of the letter the minute I saw it.
+Thomas Moody: A mysterious prize, given in a very remote location.
+Thomas Moody: I couldn't believe it.
+Thomas Moody: So I researched it before coming.
+Thomas Moody: You see, I am a journalist, so I knew where to look, and for what.
+Thomas Moody: And what I found brought enough questions to come here, though not in the hope of receiving any prize.
+Thomas Moody: More to try and understand what it was all about.
+Thomas Moody: And I immediately found that Lady Claythorn was lying about many things.
+Rosalind Marsh: Lying? About what?
+Thomas Moody: The award, for instance.
+Thomas Moody: She told me her family had been giving it away for years.
+Thomas Moody: But I couldn't find any trace of it during my research.
+Thomas Moody: No, all I found was that the family owning Claythorn Manor was actually in debt.
+Thomas Moody: Hardly in a position to give money away freely.
+Rosalind Marsh: Of course, there was never any money.
+Rosalind Marsh: I feared as much myself.
+Rosalind Marsh: But the idea of receiving such a large sum was too enticing to decline.
+Thomas Moody: Exactly.
+Thomas Moody: Very few of us were in a position to turn down that money.
+Thomas Moody: That is why most of us accepted the invitation.
+Thomas Moody: Even so, from what I learned, the reason given was often vague.
+Daniel Baldwin: What do you mean?
+Daniel Baldwin: Mine was very specific.
+Daniel Baldwin: It was true that I had been in charge of St Margaret Hospital for the longest time.
+Daniel Baldwin: I have actually checked the records to be sure.
+Thomas Moody: That may be true, but there are hundreds of such hospitals.
+Thomas Moody: Do you think you were the most deserving in the whole nation?
+Daniel Baldwin: I don't know...
+Daniel Baldwin: I suppose I can see why it would be a bit hard to believe.
+Amelia Baxter: But mine mentioned a very memorable fact.
+Amelia Baxter: Something that even reached the papers.
+Amelia Baxter: How my gift allowed for the miraculous saving of a child, the son of a prominent member of the aristocracy.
+Amelia Baxter: And Mr Harring had something in the press as well.
+Amelia Baxter: I believe he rescued someone from a fire and...
+Thomas Moody: All right, some reasons were more specific than others.
+Thomas Moody: But mine and Captain Sinha's were about things that happened during the war.
+Thomas Moody: Things that could have applied to hundreds, if not thousands, of people in this country.
+Rosalind Marsh: Then why are we all here, if not to receive a prize?
+I pause a little before answering.
+Thomas Moody: Well, I cannot say for certain.
+Thomas Moody: But I think someone invited us here to hurt us, or more precisely, to make some of us hurt the others.
+Rosalind Marsh: Hurt some of the others?
+Rosalind Marsh: Wait, what do you mean by that?
+Daniel Baldwin: Yes, please explain.
+Sushil Sinha: Well, to put it bluntly, doctor, Mr Moody was given a letter that was supposed to make him want to kill me.
+Amelia Baxter: What?!
+Rosalind Marsh: Kill you?
+Rosalind Marsh: But why?
+Sushil Sinha: That is not all.
+Sushil Sinha: Samuel Manning was also given a letter.
+Sushil Sinha: A letter that could very well have driven him to hurt you, Dr Baldwin.
+Sushil Sinha: Luckily, Mr Moody was clever enough to understand the plot, and perhaps save your life, Doctor.
+Daniel Baldwin: What on earth?
+Daniel Baldwin: But why?
+Daniel Baldwin: Why would Mr Manning do such a thing?
+Daniel Baldwin: I do not even know him.
+Samuel Manning: Are you sure of that, doctor?
+Samuel Manning: You might not remember.
+Samuel Manning: You have seen a lot of patients in your time, I suppose.
+Samuel Manning: And I think you have another reason to be more forgetful than most.
+Samuel Manning: I've seen you with your drugs.
+Daniel Baldwin: What are you talking about?
+Daniel Baldwin: And you are one to talk, Mr Manning.
+Daniel Baldwin: If someone here is forgetting things, I believe everyone would agree it is most likely yourself.
+Sushil Sinha: Stop it, both of you!
+Sushil Sinha: There is no reason for insults.
+Thomas Moody: Captain Sinha is right.
+Thomas Moody: It is better to settle this with logic than by shouting at one another.
+Daniel Baldwin: Right, and how are we supposed to do that?
+Thomas Moody: Easily.
+Thomas Moody: Mr Manning, where and when did your wife pass away?
+Samuel Manning: Five years ago.
+Samuel Manning: At St Bartholomew's, in London.
+Samuel Manning: But I remember it clearly.
+Samuel Manning: The doctor was out of his mind half the time, and barely competent the other half.
+Samuel Manning: I am sure he was using the drugs himself.
+Thomas Moody: Doctor, where were you working five years ago?
+Daniel Baldwin: Well, as I said, I have been at St Margaret Hospital for more than ten years.
+Daniel Baldwin: That is the reason I am here.
+Daniel Baldwin: At least, that is what was written in the letter.
+Thomas Moody: Good.
+Thomas Moody: Do you have it on you?
+He checks his pocket, then hands me a crumpled piece of paper.
+I read it, and it matches what he said.
+Thomas Moody: It appears Dr Baldwin was telling the truth.
+Thomas Moody: So he has nothing to do with the death of your wife, Mr Manning.
+Samuel Manning: But the drugs, they were...
+Thomas Moody: I am sorry, Mr Manning, but I think it is sadly not uncommon for a doctor to abuse his medicine.
+Thomas Moody: Not that I am saying this applies to you, Dr Baldwin.
+Daniel Baldwin: Right.
+Daniel Baldwin: Also, if your doctor had really stolen your wife's narcotics, that would not have changed her chances of survival.
+Daniel Baldwin: You see, the drugs were only supposed to make the patient feel better, not cure them.
+Samuel Manning: But that means she suffered for no reason!
+Samuel Manning: That does not make it any better.
+Samuel Manning: She was in such terrible pain.
+Daniel Baldwin: I am sorry, but that wouldn't have changed her fate in the end.
+Samuel Manning: Eleanor, she could have avoided so much pain...
+He then takes his flask in his hands and drinks it all in one go.
+Then he goes to sit on the stairs, still mumbling.
+Samuel Manning: So much pain, why...
+The room is silent again.
+The others all turn towards me, waiting for me to continue.
+Thomas Moody: So here it is, I am sorry but this is all I know for now.
+Thomas Moody: I believe we are here under false pretences.
+Thomas Moody: And that some of us, if not all, are in danger.
+Rosalind Marsh: I am willing to agree with you, but what are you suggesting we do now?
+Thomas Moody: Well, the most obvious choice would be to leave now.
+Thomas Moody: All of us, together.
+Amelia Baxter: But how?
+Amelia Baxter: Can you drive a motorcar?
+Thomas Moody: I can.
+Thomas Moody: But that is not the problem.
+Thomas Moody: Lady Claythorn and her staff probably left with it.
+Amelia Baxter: Oh, right of course.
+Amelia Baxter: Then how?
+Rosalind Marsh: I saw another car, in the garage downstairs.
+Rosalind Marsh: But I do not know if it is working.
+Sushil Sinha: I can go and check.
+Thomas Moody: Good idea, Miss Marsh, can you show the car to Captain Sinha?
+Rosalind Marsh: Of course.
+They both leave for downstairs.
+I now realise how odd it is that she visited the garage.
+But I am interrupted in my thoughts.
+Amelia Baxter: If the car is working, that is very good.
+Amelia Baxter: But it would probably be too small to carry us all.
+Amelia Baxter: Then we won't be able to leave together.
+Thomas Moody: Maybe not.
+Thomas Moody: Some of us might have to stay here while waiting for help.
+Amelia Baxter: Wait here!?
+Amelia Baxter: But you just said we were all in danger.
+Daniel Baldwin: That is true, how could we decide who is to leave and who is staying?
+Thomas Moody: I don't know, but let's wait to know more before discussing it.
+Everyone agrees and we wait in silence for Miss Marsh and Sushil Sinha.
+It only takes a few minutes before they are back.
+Sushil Sinha: The car won't start.
+Sushil Sinha: The tank is empty and the tyres are flat.
+Sushil Sinha: Probably too old to rely on them.
+Thomas Moody: I see, tough luck.
+Thomas Moody: That was our best chance to get out of here.
+Rosalind Marsh: But the police will come tomorrow, we could wait for them, right?
+Thomas Moody: I do not think so.
+Thomas Moody: I checked the phone earlier and it is out of order.
+Thomas Moody: I doubt anyone called the police today.
+Thomas Moody: We should not count on anyone coming to rescue us tomorrow.
+Daniel Baldwin: Really?
+Thomas Moody: You can see for yourself.
+He goes to the phone and puts it to his ear.
+Daniel Baldwin: No tone, this phone is broken.
+Thomas Moody: Yes, and I believe it never worked during the weekend.
+Thomas Moody: Lady Claythorn never planned on calling the police.
+Thomas Moody: That must be part of her plan.
+Rosalind Marsh: Oh my.
+Daniel Baldwin: All right, so what else could we do?
+Daniel Baldwin: Leave on foot?
+Thomas Moody: That is the only option I see for now, yes.
+Thomas Moody: Not tonight, of course.
+Thomas Moody: We wouldn't make it far in the dark.
+Thomas Moody: But we should go tomorrow at first light.
+Thomas Moody: No point in waiting for somebody to rescue us.
+Amelia Baxter: On foot! I would never make it!
+Rosalind Marsh: Me neither, I am afraid.
+Rosalind Marsh: My health is not very strong, you see.
+Rosalind Marsh: Is there another way?
+Thomas Moody: Not without splitting into groups and leaving someone behind.
+Thomas Moody: But I strongly believe it would be best if we stayed together.
+Sushil Sinha: Agreed.
+Sushil Sinha: Just because we assume the staff and Lady Claythorn have left, doesn't mean they have.
+Sushil Sinha: They could still be close.
+Sushil Sinha: Maybe they haven't given up on their plans yet.
+Rosalind Marsh: You mean they could be hiding somewhere, waiting for the right moment to hurt us?
+Rosalind Marsh: How scary you make all of it sound.
+Sushil Sinha: I am sorry to scare you, but it is the truth.
+Amelia Baxter: Captain, how are you expecting us to sleep if you keep telling us such stories?
+Sushil Sinha: I do not know that we should sleep at all, actually.
+Sushil Sinha: I probably won't.
+Sushil Sinha: It is better to have someone standing guard at all times.
+Thomas Moody: I won't sleep either.
+Thomas Moody: Better to have two guards than one.
+Amelia Baxter: Standing guard where?
+Amelia Baxter: In the hallway?
+Thomas Moody: I don't know, even that feels dangerous.
+Thomas Moody: I was thinking we should all stay together, in the same room.
+Amelia Baxter: Really? That is very improper.
+Thomas Moody: These are exceptional circumstances.
+Thomas Moody: The safest choice would be to all group in the billiard room.
+Thomas Moody: The couches there are comfortable enough for a decent sleep.
+Thomas Moody: And those standing guard could stay on a chair.
+Rosalind Marsh: That is not ideal, but I will concede it does sound the safest choice.
+Daniel Baldwin: I agree.
+Sushil Sinha: Me too.
+Even Samuel Manning wakes from his mumbling.
+Samuel Manning: Fine by me.
+Thomas Moody: We are in agreement then.
+Thomas Moody: Aren't we, Miss Baxter?
+Amelia Baxter: Fine, if everyone agrees, I guess I won't be the only one in my room.
+Thomas Moody: Perfect.
+Thomas Moody: Then let's prepare the room.
+We quickly got bedsheets from the bedroom.
+Everyone settled in as best they could.
+I am sure everyone still has plenty of questions, but we are too tired to talk more.
+Captain Sinha and I are taking chairs and beginning our watch.
+At first I thought nobody would be able to sleep, but soon enough Samuel Manning started snoring.
+The rest of them followed suit.
+I don't know how they can.
+I am clearly too stressed to close my eyes.
