@@ -9,36 +9,23 @@
 - Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.  If he does, the Killbreath discovery can come right at the start. 
 - ORRRRR **THE DRUNK is unlocked by Broken**, and host by drunk
 
+
+RE-READ EVERY fucking things, it is clumsy for now
+
 ##### **Friday Evening**
 
 IMORTANT WHY Not just know on bedrooms? he doesn't have to enter them => Add logic for nobody answers? Or just rethink TEST
 
-##### Saturday — After Dinner
 
 FLASHBACK =>Add in inner dialogs that WE ARE NOT HERE FOR the same reasons BEFORE talking to everyone
 
 Flashback -> ADmit smauel manning has been pretending to be drunk
 
-THursday : REDO FULL upstairs => Nobody is there?
-
-drunk has seen dc baldwin abuse => Add to his STORY
-
-Friday: REDO full billiard room
-  you need to convince everyone something is not right.
-  => You have to admit who you are?
-  => THere must be clues downstairs. 
-    - Kitchen totally empty, no staff;
-  => Lady Claythorn not there
 
 
 
+APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
 
-APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? OTDO check
-
-##### Sunday Morning 
-If you survived with everyone but TED harring and host (who sneaked out after dinner), you are now face with what to do. You know you have to leave but how and with whom?
-- The car is gone, can you use the other car? NOt enough room?
-THE WHol stuff can be decided at the end of the writing
 
 
 ### Write Story: NEXT => DRUNK

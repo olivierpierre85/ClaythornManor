@@ -127,6 +127,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 - [ ] Is the one that can go to sunday evening. he sees psychic waking up Ted harring in the ... IF he managed to SAVE him from poison. But how could he save everyone?
 - [ ] Put somewhere, dialog between an immigrant who would do anything to have the position of a wealthy person, and the wealthy person sharing suicidal thoughts? (Drunk vs LAD?, Drunk vs Captain? => Both not really immigrants One is british, the other rich)
 - [ ] ADD FOOD MENU - Only real enjoyer of this place
+- [ ] drunk has seen dc baldwin abuse => Add to his STORY
 
 ### Ideas to think over (optional)
 
