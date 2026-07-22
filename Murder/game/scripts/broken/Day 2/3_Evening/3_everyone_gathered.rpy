@@ -46,7 +46,7 @@ label broken_day2_evening_ring_gong:
 
     Who rang the gong like that?
 
-    If this is some sort of drunken joke it's in very poor taste.
+    If this is some sort of drunken joke, it's in very poor taste.
     """
 
     """
@@ -54,13 +54,13 @@ label broken_day2_evening_ring_gong:
     """
 
     captain """
-    I am sorry Miss Baxter, but I am afraid it is not a joke.
+    I am sorry, Miss Baxter, but I am afraid it is not a joke.
 
     There is some very serious matter we need to discuss urgently with everybody.
     """
 
     psychic -angry """
-    How serious you sound captain.
+    How serious you sound, Captain.
 
     What is this about?
     """
@@ -74,7 +74,7 @@ label broken_day2_evening_ring_gong:
 
     She is followed by Doctor Baldwin.
 
-    Of the three, he is the one looking the worse, holding the stair rail so as not to fall.
+    Of the three, he is the one looking the worst, holding the stair rail so as not to fall.
     """
 
     doctor """
@@ -84,15 +84,17 @@ label broken_day2_evening_ring_gong:
     """
 
     captain """
-    Nothing so dramatic Doctor.
+    Nothing so dramatic, Doctor.
 
     But we do need to talk to everyone.
     """
 
     nurse """
-    Well in that case there is only Lady Claythorn missing.
+    Well, in that case there is only Lady Claythorn missing.
 
-    And the staff too of course, where could they be?
+    And the staff too, of course.
+
+    Where could they be?
     """
 
     broken """
@@ -106,7 +108,9 @@ label broken_day2_evening_ring_gong:
     """
 
     nurse """
-    That is correct, I passed in front of her room before coming down.
+    That is correct.
+
+    I passed in front of her room before coming down.
 
     It was left wide open, and empty.
 
@@ -415,7 +419,9 @@ label broken_day2_evening_ring_gong:
     drunk angry """
     But that means she suffered for no reason!
 
-    That does not make it any better, she was in such terrible pain.
+    That does not make it any better.
+
+    She was in such terrible pain.
     """
 
     doctor """
@@ -455,7 +461,7 @@ label broken_day2_evening_ring_gong:
     """
 
     broken """
-    Well the most obvious choice would be to leave now,
+    Well, the most obvious choice would be to leave now.
 
     All of us, together.
     """
@@ -469,7 +475,9 @@ label broken_day2_evening_ring_gong:
     broken """
     I can.
 
-    But that is not the problem, Lady Claythorn and her staff probably left with it.
+    But that is not the problem.
+
+    Lady Claythorn and her staff probably left with it.
     """
 
     psychic """
@@ -539,35 +547,17 @@ label broken_day2_evening_ring_gong:
     """
 
     captain """
-    The car won't start, the tank is empty.
+    The car won't start.
 
-    We could search for some petrol. From what we saw, the car is an old Model T.
+    The tank is empty and the tyres are flat.
 
-    It can only carry four persons at a time, maybe five, but it would be uncomfortable.
+    Probably too old to rely on them.
     """
 
     broken """
-    So, even if we can make it start, it won't fit us all.
-
-    I do not like the idea of leaving anyone behind.
-
-    It would be best if we stay together.
-    """
-
-    captain """
-    Agreed. 
-
-    Because we assume the staff and Lady Claythorn have left.
-
-    But they could still be close.
-
-    Maybe they haven't given up on their plans yet.
-    """
-
-    broken """
-    That is true.
-
-    We are not out of the woods yet, literally.
+    I see, tough luck.
+    
+    That was our best chance to get out of here.
     """
 
     nurse """
@@ -602,6 +592,14 @@ label broken_day2_evening_ring_gong:
 
     broken """
     Yes, and I believe it never worked during the weekend.
+
+    Lady Claythorn never planned on calling the police.
+
+    That must be part of her plan.
+    """
+
+    nurse """
+    Oh my.
     """
 
     doctor """
@@ -613,7 +611,13 @@ label broken_day2_evening_ring_gong:
     broken """
     That is the only option I see for now, yes.
 
-    There is no point in waiting for somebody to rescue us.
+    Not tonight, of course.
+
+    We wouldn't make it far in the dark.
+     
+    But we should go tomorrow at first light.
+
+    No point in waiting for somebody to rescue us.
     """
 
     psychic scared """
@@ -621,20 +625,137 @@ label broken_day2_evening_ring_gong:
     """
 
     nurse """
-    Me neither I am afraid.
+    Me neither, I am afraid.
 
-    My health is not very strong you see.
+    My health is not very strong, you see.
 
     Is there another way?
     """
 
     broken """
     Not without splitting into groups and leaving someone behind.
+
+    But I strongly believe it would be best if we stayed together.
+    """
+
+    captain """
+    Agreed. 
+
+    Just because we assume the staff and Lady Claythorn have left, doesn't mean they have.
+
+    They could still be close.
+
+    Maybe they haven't given up on their plans yet.
     """
     
-    # TODO, how to make the player understand the killer coul be among them?
-    # need intuition? YESSS
+    nurse """
+    You mean they could be hiding somewhere, waiting for the right moment to hurt us?
 
+    How scary you make all of it sound.
+    """
 
+    captain """
+    I am sorry to scare you, but it is the truth.
+    """
+
+    psychic """
+    Captain, how are you expecting us to sleep if you keep telling us such stories?
+    """
+
+    captain """
+    I do not know that we should sleep at all, actually.
+
+    I probably won't.
+
+    It is better to have someone standing guard at all times.
+    """
+
+    broken """
+    I won't sleep either. 
+    
+    Better to have two guards than one.
+    """ 
+
+    psychic """
+    Standing guard where?
+
+    In the hallway?
+    """
+
+    broken """
+    I don't know, even that feels dangerous.
+
+    I was thinking we should all stay together, in the same room.
+    """
+
+    psychic """
+    Really? That is very improper.
+    """ 
+
+    broken """
+    These are exceptional circumstances.
+
+    The safest choice would be to all group in the billiard room.
+
+    The couches there are comfortable enough for a decent sleep.
+
+    And those standing guard could stay on a chair.
+    """
+
+    nurse """
+    That is not ideal, but I will concede it does sound the safest choice.
+    """
+
+    doctor """
+    I agree.
+    """
+
+    captain """
+    Me too.
+    """
+
+    """
+    Even Samuel Manning wakes from his mumbling.
+    """
+
+    drunk """
+    Fine by me.
+    """
+
+    broken """
+    We are in agreement then.
+
+    Aren't we, Miss Baxter?
+    """ 
+
+    psychic """
+    Fine, if everyone agrees, I guess I won't be the only one in my room.
+    """
+
+    broken """
+    Perfect.
+
+    Then let's prepare the room.
+    """
+
+    $ change_room('billiard_room', dissolve)
+
+    """
+    We quickly got bedsheets from the bedroom.
+
+    Everyone settled in as best they could.
+
+    I am sure everyone still has plenty of questions, but we are too tired to talk more.
+
+    Captain Sinha and I are taking chairs and beginning our watch.
+
+    At first I thought nobody would be able to sleep, but soon enough Samuel Manning started snoring.
+
+    The rest of them followed suit.
+
+    I don't know how they can.
+
+    I am clearly too stressed to close my eyes.
+    """
 
     return
