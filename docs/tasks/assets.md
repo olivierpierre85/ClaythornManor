@@ -1,7 +1,8 @@
 # 🎨 Assets Backlog ( Visual Assets generation )
 
 ## Locations
-- Redraw all location, from current map.
+- Double check new locations from NEW map.
+- Make the car in the garage an small one (ford T model?)
 - Add a Time for each location (day, night), should be automated when change room
 - Find a style explanation that will work everytime
 - TRAIN : Different picture by 1st (Cpatain?), 2nd (Most people) and 3 class (Ted Harring)
@@ -14,6 +15,7 @@
 | .....         |       |       |               |
 
 ## Characters
+- NEED a version unmaske of broken for when he is downstairs. **NOT REALLY**
 - From their heads, create full size avatar in the style. Also redraw the head with new style and add all needed expressions: Scared, amused, sad,....
 - Maybe have their side head of people out of the frame (like in “see how they run movie”)
 - Thomas Moddy new face is greenish and too soft, Make it better AND the same everywhere (it’s the old version in the info_cards)
@@ -48,14 +50,14 @@ Do it for all possibilities ( dining room with less and less persons as the time
 - Note need to turn mp4 into webdm. A video is about 3 mb. (HOw many do I need before it begins too much? A think even 100 videos should be ok.
 
 ## Maps 
-- When ALL rooms in the game are defined, create sensical maps. May need to redraw door on certain locations, that should take too long start making maps in the exact same style (not that easy)
+-   GARDEN and entrance same on map but not on pictures? **NOT that important**
 
 ## Progress view
 - Better progress for Final version: Visuals like a boardgame, with more images  
   - Like first night there is a storm, second nigh hunt, third night empty ?
 
 ## (Optional) Rebuild Icons ?
-- [ ] ?
+- [ ] For info_cards, RENAME so it's correct, then change everything to webp?
 
 ## (Optional) Rebuild Interface
 - [ ] ?
@@ -79,6 +81,7 @@ Each person could have the invitation letter as an image, not just part of a tex
 - [ ] Better sound for CLOCK rotating, not clear enough apparently
 
 ### Music
+- [ ] test that music order is still good (2 after 1 then 1 after 3,...)
 - [ ] Check every music choice (Hunt, Ending, Speed run).
 - [ ] Download AVIA copyright (50 for 1 month)
 - [ ] Add a Special music for "you survived"?

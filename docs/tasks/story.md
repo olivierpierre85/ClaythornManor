@@ -52,6 +52,7 @@
 - [ ] **The Lord**:
     - [ ] More story for the LORD? Add to list of playable characters? (Not easy but doable).
     - [ ] Need LORD QUESTIONS POSSIBLE.
+    - [ ] PROBLEM, **PSYCHIC** death in attic during the day not as scary as during the night. Change that? (force night, or change time she can unlock it? (the day before?))
 - [ ] **Lad Interaction**: Visited LAD is not exploited enough.
     - [ ] First no differences in the morning day 3?
     - [ ] Mention the “talk” to your left first even when respected?
@@ -85,18 +86,14 @@
 ## Broken
 
 ### Important
-- [ ] MORE DEAD!!! For some THOMAS MOODY,**the deaths are coming faster**. Because the psychic saw into his lies and loses it. VERY VERY hard to survive till the end
-    - [ ] For that, needs to observe poison => so possibility to avoid eating at dinner
-  - [ ] Psychic realise Moody is not who he is, she loses it.
-  - [ ] Moody also receives letter, telling him the captain is the reason of his disfigurement (see cap endings)
-  - [ ] Somebody realises the police will not come, so they go fetch them. Needs to accelerate stuff
-  - [ ] Can check the telephone as he is very sus (choice in the entrance hall)
-THE OUTside shed will show nothing of interest for captain. But the Broken will find the bodies of the staff there if he survives.
+- Mybe Later => Staff oddities use the same picture with 4 Numbers
+MAYBE later => new ending, find the staff dead in the garden shed??? Not necessary for story but dramatic effect. Only if i can see it in the picture
 - [ ] There is still a small hole in the whisky poisoned lying there, psychic would have made clear to give it to BROKEN. Not just stand there in the table? Minor?
 
 ### Ideas to think over (optional)
 
 - [ ] Thomas moody room ransacked?
+- [ ] 
 - [ ] Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
 - [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
 - [ ]   DO I have the opportunity to roam the **bedrooms** as a footman? It would be a great cover? I should allow this, but it makes it complicated, so no bedrooms for the moment.
@@ -139,6 +136,7 @@ Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies e
 ### Important
 
 - When escaping with car, maybe mentionned that the road should blocked (and is actually not)
+- Rethink the letter to the captain to comply more with the Journalist story
 
 
 ### Ideas to think over (optional)
