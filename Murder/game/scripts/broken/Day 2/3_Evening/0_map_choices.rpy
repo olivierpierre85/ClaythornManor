@@ -13,7 +13,7 @@ label broken_day2_evening_map_menu:
             # Ground floor
             map_choice('tea_room', 'broken_day2_evening_tea_room', 10),
             map_choice('dining_room', 'broken_day2_evening_dining_room', 10),
-            map_choice('entrance_hall', 'broken_day2_evening_entrance_hall', 10),
+
             map_choice('manor_garden', 'broken_day2_evening_garden', 10),
             map_choice('servant_stairs', 'broken_day2_evening_servant_stairs', 10),
             map_choice('portrait_gallery', 'broken_day2_evening_portrait_gallery', 10),
@@ -35,6 +35,7 @@ label broken_day2_evening_map_menu:
             # keep_alive: the Captain's questions need facts gathered around
             # the house, so the player must be able to come back here.
             TimedMenuChoice('Look in on the billiard room', 'broken_day2_evening_billiard_room', 20, keep_alive=True, room='billiard_room'),
+            TimedMenuChoice('Check the telephone', 'broken_day2_evening_entrance_hall', 10,  room='entrance_hall'),
             TimedMenuChoice('Turn in for the night', 'generic_cancel', early_exit=True, room='bedroom_broken'),
         ], is_map = True)
 

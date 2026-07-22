@@ -13,15 +13,17 @@ label broken_day2_evening_ring_gong:
 
     play sound dinner_gong
 
-    play sound dinner_gong
+    queue sound dinner_gong
 
-    play sound dinner_gong
+    queue sound dinner_gong
 
     """
     The sound rolls through the house like a wave.
     
     I stop to check the entrance hall to see if anyone is coming down.
     """
+    
+    $ broken_details.threads.unlock('gather_everyone')
 
     $ change_room('entrance_hall')
 
@@ -34,17 +36,17 @@ label broken_day2_evening_ring_gong:
     psychic angry """
     What is happening here?
 
-    Who ran the gong like that?
+    Who rang the gong like that?
 
-    If this is some sort of drunken joke its in very pour taste.
+    If this is some sort of drunken joke it's in very poor taste.
     """
 
     """
-    She looks intensily at Samuel Manning  as she is saying that.
+    She looks intensely at Samuel Manning as she is saying that.
     """
 
     captain """
-    I am sorry Miss Baxter, but I am afraid it is not joke.
+    I am sorry Miss Baxter, but I am afraid it is not a joke.
 
     There is some very serious matter we need to discuss urgently with everybody.
     """
@@ -56,7 +58,7 @@ label broken_day2_evening_ring_gong:
     """
 
     broken """
-    We will wait everyone is here before discussing it all.
+    We will wait until everyone is here before discussing it all.
     """
 
     """
@@ -64,13 +66,13 @@ label broken_day2_evening_ring_gong:
 
     She is followed by Doctor Baldwin.
 
-    Of the three, he is the one looking the worse, holding the stair rail as to not fall.
+    Of the three, he is the one looking the worse, holding the stair rail so as not to fall.
     """
 
     doctor """
     What is the meaning of this?
     
-    I taught the house might have been on fire.
+    I thought the house might have been on fire.
     """
 
     captain """
@@ -88,39 +90,39 @@ label broken_day2_evening_ring_gong:
     broken """
     That is what we need to discuss.
 
-    We believe the staff has left.
-
-    Now we have proof.
+    We believe the staff have left.
     """
 
     captain """
-    And it is most then likely than Lady Claythorn is gone as well.
+    And it is then most likely that Lady Claythorn is gone as well.
     """
 
     nurse """
-    That is correct, I checked her room before coming down.
+    That is correct, I passed in front of her room before coming down.
 
-    I taught she would already be here.
+    It was left wide open, and empty.
+
+    I thought she would already be here.
     """
 
     captain """
-    I am not sure surprised.
+    I am not surprised.
     
     We probably are the only living persons left in this house tonight.
     """
 
     """
-    A silence follows this 
+    A silence follows this.
     """
 
     doctor """
-    I am sorry Captain, but I am gonna need more explanation that this.
+    I am sorry Captain, but I am going to need more of an explanation than this.
     """
 
     captain """
     Of course, Mr Moody will explain everything.
 
-    After all he is the closest we have as a investigator.
+    After all he is the closest we have to an investigator.
     """
 
     doctor """
@@ -167,7 +169,7 @@ label broken_day2_evening_ring_gong:
     """
 
     nurse """
-    Lying about what, Mr Moody?
+    Lying? About what?
     """
 
     broken """
@@ -327,7 +329,7 @@ label broken_day2_evening_ring_gong:
     """
 
     broken """
-    The captain is right.
+    Captain Sinha is right.
 
     It is better to settle this with logic than by shouting at one another.
     """
@@ -430,10 +432,201 @@ label broken_day2_evening_ring_gong:
     The room is silent again.
 
     The others all turn towards me, waiting for me to continue.
-
-    I take a long breath and keep going.
     """
 
-    $ broken_details.threads.unlock('gather_everyone')
+    broken """
+    So here it is, I am sorry but this is all I know for now.
+
+    I believe we are here under false pretences.
+
+    And that some of us, if not all, are in danger.
+    """
+
+    nurse """
+    I am willing to agree with you, but what are you suggesting we do now?
+    """
+
+    broken """
+    Well the most obvious choice would be to leave now,
+
+    All of us, together.
+    """
+
+    psychic """
+    But how?
+
+    Can you drive a motorcar?
+    """
+
+    broken """
+    I can.
+
+    But that is not the problem, Lady Claythorn and her staff probably left with it.
+    """
+
+    psychic """
+    Oh, right of course.
+
+    Then how?
+    """
+
+    nurse """
+    I saw another car, in the garage downstairs.
+
+    But I do not know if it is working.
+    """
+
+    captain """
+    I can go and check.
+    """
+
+    broken """
+    Good idea, Miss Marsh, can you show the car to Captain Sinha?
+    """
+
+    nurse """
+    Of course.
+    """
+
+    """
+    They both leave for downstairs.
+
+    I now realise how odd it is that she visited the garage.
+
+    But I am interrupted in my thoughts.
+    """
+
+    psychic """
+    If the car is working, that is very good.
+    
+    But it would probably be too small to carry us all.
+
+    Then we won't be able to leave together.
+    """
+
+    broken """
+    Maybe not.
+
+    Some of us might have to stay here while waiting for help.
+    """
+
+    psychic """
+    Wait here!?
+
+    But you just said we were all in danger.
+    """
+
+    doctor """
+    That is true, how could we decide who is to leave and who is staying?
+    """
+
+    broken """
+    I don't know, but let's wait to know more before discussing it.
+    """ 
+
+    """
+    Everyone agrees and we wait in silence for Miss Marsh and Sushil Sinha.
+
+    It only takes a few minutes before they are back.
+    """
+
+    captain """
+    The car won't start, the tank is empty.
+
+    We could search for some petrol. From what we saw, the car is an old Model T.
+
+    It can only carry four persons at a time, maybe five, but it would be uncomfortable.
+    """
+
+    broken """
+    So, even if we can make it start, it won't fit us all.
+
+    I do not like the idea of leaving anyone behind.
+
+    It would be best if we stay together.
+    """
+
+    captain """
+    Agreed. 
+
+    Because we assume the staff and Lady Claythorn have left.
+
+    But they could still be close.
+
+    Maybe they haven't given up on their plans yet.
+    """
+
+    broken """
+    That is true.
+
+    We are not out of the woods yet, literally.
+    """
+
+    nurse """
+    But the police will come tomorrow, we could wait for them, right?
+    """
+
+    broken """
+    I do not think so.
+
+    I checked the phone earlier and it is out of order.
+
+    I doubt anyone called the police today.
+
+    We should not count on anyone coming to rescue us tomorrow.
+    """
+
+    doctor """
+    Really? 
+    """
+
+    broken """
+    You can see for yourself.
+    """
+
+    """
+    He goes to the phone and puts it to his ear.
+    """
+
+    doctor """
+    No tone, this phone is broken.
+    """
+
+    broken """
+    Yes, and I believe it never worked during the weekend.
+    """
+
+    doctor """
+    All right, so what else could we do?
+
+    Leave on foot?
+    """
+
+    broken """
+    That is the only option I see for now, yes.
+
+    There is no point in waiting for somebody to rescue us.
+    """
+
+    psychic scared """
+    On foot! I would never make it!
+    """
+
+    nurse """
+    Me neither I am afraid.
+
+    My health is not very strong you see.
+
+    Is there another way?
+    """
+
+    broken """
+    Not without splitting into groups and leaving someone behind.
+    """
+    
+    # TODO, how to make the player understand the killer coul be among them?
+    # need intuition? YESSS
+
+
 
     return

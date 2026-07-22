@@ -118,7 +118,7 @@ label broken_day2_evening_billiard_captain:
         TimedMenuChoice("Ask his opinion of Mr Harring's death", 'broken_day2_evening_captain_harring', 10),
         TimedMenuChoice('Tell him the staff are gone', 'broken_day2_evening_captain_staff', 10, condition = "broken_details.threads.is_unlocked('staff_missing')"),
         TimedMenuChoice('Tell him the telephone is dead', 'broken_day2_evening_captain_phone', 10, condition = "broken_details.threads.is_unlocked('phone_dead')"),
-        TimedMenuChoice('Show him the order', 'broken_day2_evening_captain_order', 0, early_exit = True, condition = "broken_details.threads.is_unlocked('captain_convinced') and broken_details.threads.is_unlocked('drunk_partner')"),
+        TimedMenuChoice('Explain everything {{observation}}', 'broken_day2_evening_captain_order', 0, early_exit = True, condition = "broken_details.threads.is_unlocked('captain_convinced') and broken_details.threads.is_unlocked('drunk_partner')"),
         TimedMenuChoice('Leave him to his book', 'generic_cancel', 0, keep_alive = True, early_exit = True)
     ], image_right = "captain")
 
@@ -199,7 +199,9 @@ label broken_day2_evening_captain_check_convinced:
     if broken_details.threads.is_unlocked('drunk_partner'):
 
         """
-        Samuel Manning will go with what I say, so I can ask the question now.
+        Samuel Manning will go with what I say, so I can tell Captain Sinha everything now.
+
+        Hopefully he will understand.
         """
 
     else:
@@ -349,7 +351,7 @@ label broken_day2_evening_captain_order:
     broken """
     Well, somebody left Mr Manning a letter blaming Doctor Baldwin for the loss of his wife.
 
-    It was written to put a rifle in a grieving man's hands, and hope he would arm the doctor, without incriminating themselves.
+    It was very likely written in the hope he would arm the doctor.
     """
 
     """
@@ -405,7 +407,7 @@ label broken_day2_evening_captain_order:
 
     I suppose this order was meant to turn you against me.
 
-    But I can assure you it is obviously a fake.
+    But I can assure you, it is obviously a fake.
 
     It looks nothing like the one I used.
 
@@ -413,7 +415,7 @@ label broken_day2_evening_captain_order:
 
     Otherwise I could have been another victim.
 
-    That is what you are implying Mr Moody is it not?
+    That is what you are implying Mr Moody, is it not?
 
     Mr Manning was given a letter to make him hate the doctor.
 
@@ -427,7 +429,7 @@ label broken_day2_evening_captain_order:
     """
 
     """
-    He closes his book without marking the page, and studies me for a long moment.
+    He closes his book, and studies me for a long moment.
     """
 
     captain """
@@ -489,7 +491,9 @@ label broken_day2_evening_captain_order:
     """
 
     captain """
-    Right, so all this time you were investigating us. Interesting.
+    Right, so all this time you were investigating us. 
+    
+    Interesting.
 
     What have you found then?
     """
@@ -505,24 +509,26 @@ label broken_day2_evening_captain_order:
     """
 
     captain """
-    You can.
+    I suppose you can.
 
-    And you must know, I carry a pistol on me.
+    What other choice do I have.
     """
 
     broken """
-    Good, I have no idea what kind of resistance we will encounter here.
-
-    Now we should gather the rest of the guests.
+    Good, now we should gather the rest of the guests.
     """
 
     captain """
-    Indeed, then take my advice.
-
-    Do not waste time going from door to door.
+    Indeed, then do not waste time going from door to door.
 
     There is a simple way to alert everyone in case of an emergency in a house like this one.
+    """
 
+    broken """
+    Really, what is it?
+    """
+
+    captain """
     You ring the dinner gong.
 
     Nobody sleeps through a gong. The whole house will come down, and you will say your piece once, to everyone at the same time.
