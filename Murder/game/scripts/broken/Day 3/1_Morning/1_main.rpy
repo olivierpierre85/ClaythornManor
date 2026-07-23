@@ -15,9 +15,6 @@
 #   Structure:
 #       - The watch ends, the Captain proposes to walk out
 #       - The ladies refuse the seven miles, the doctor is feverish and
-#         Mr Manning could not manage the road either. The Captain quietly
-#         proposes that the two of them go alone
-#         (broken_day3_morning_ladies_refuse - shared by both branches)
 #       - Without the 'ambushed' ending (no intuition) there is no choice at
 #         all: Moody accepts the split and the two of them set out
 #         -> broken_day3_afternoon_pair -> broken_ending_ambushed
@@ -112,66 +109,6 @@ label broken_day3_morning:
     And we believe we shall not make it.
     """
 
-    call broken_day3_morning_ladies_refuse
-
-    if not broken_details.endings.is_unlocked('ambushed'):
-
-        # No intuition yet. He has nothing to argue with, so the party splits
-        # and the two of them take the road.
-        call broken_day3_morning_accept_split
-
-        call broken_day3_morning_leave_pair
-
-        jump broken_day3_afternoon
-
-    # ------------------------------------
-    #   INTUITION - he has walked this road before
-    # ------------------------------------
-    $ play_music('danger', 2)
-
-    """
-    Two of us on the road, and four of us behind these walls.
-
-    Something in me refuses it, flatly, the way a hand refuses a hot plate.
-
-    I could not tell anyone why.
-
-    I only know that the thought of that lane, and the bracken banks along it, fills me with a dread I have not earned.
-
-    Ted Harring died alone in his bed.
-
-    Samuel Manning was found alone with his letter, and I was very nearly alone in a wood with a rifle at my back.
-
-    Everything that has happened in this house has happened to somebody who was on his own.
-    """
-
-    $ time_left = 1
-
-    call run_menu(TimedMenu("broken_day3_morning_menu_leave", [
-        TimedMenuChoice("Refuse. Nobody is to leave this house in halves.{{intuition}}", 'broken_day3_morning_insist', early_exit=True),
-        TimedMenuChoice("Set out for the village with Captain Sinha", 'generic_cancel', early_exit=True),
-    ], image_right = "captain"))
-
-    if broken_details.threads.is_unlocked('left_together'):
-
-        call broken_day3_morning_departure_together
-
-        jump broken_day3_afternoon
-
-    call broken_day3_morning_leave_pair
-
-    jump broken_day3_afternoon
-
-
-# ------------------------------------
-#   THE REFUSAL (shared by both branches)
-#
-#   The ladies will not walk, the doctor has his fever and Mr Manning
-#   could not manage the road. The Captain draws Moody aside and proposes
-#   that the two of them go alone.
-# ------------------------------------
-label broken_day3_morning_ladies_refuse:
-
     captain """
     Not make it, Miss Baxter?
 
@@ -250,7 +187,53 @@ label broken_day3_morning_ladies_refuse:
     Burdened with the rest, we should still be in the wood at nightfall, and I would rather not be.
     """
 
-    return
+    if not broken_details.endings.is_unlocked('ambushed'):
+
+        # No intuition yet. He has nothing to argue with, so the party splits
+        # and the two of them take the road.
+        call broken_day3_morning_accept_split
+
+        call broken_day3_morning_leave_pair
+
+        jump broken_day3_afternoon
+
+    # ------------------------------------
+    #   INTUITION - he has walked this road before
+    # ------------------------------------
+    $ play_music('danger', 2)
+
+    """
+    Two of us on the road, and four of us behind these walls.
+
+    Something in me refuses it, flatly, the way a hand refuses a hot plate.
+
+    I could not tell anyone why.
+
+    I only know that the thought of that lane, and the bracken banks along it, fills me with a dread I have not earned.
+
+    Ted Harring died alone in his bed.
+
+    Samuel Manning was found alone with his letter, and I was very nearly alone in a wood with a rifle at my back.
+
+    Everything that has happened in this house has happened to somebody who was on his own.
+    """
+
+    $ time_left = 1
+
+    call run_menu(TimedMenu("broken_day3_morning_menu_leave", [
+        TimedMenuChoice("Refuse. Nobody is to leave this house in halves.{{intuition}}", 'broken_day3_morning_insist', early_exit=True),
+        TimedMenuChoice("Set out for the village with Captain Sinha", 'generic_cancel', early_exit=True),
+    ], image_right = "captain"))
+
+    if broken_details.threads.is_unlocked('left_together'):
+
+        call broken_day3_morning_departure_together
+
+        jump broken_day3_afternoon
+
+    call broken_day3_morning_leave_pair
+
+    jump broken_day3_afternoon
 
 
 # ------------------------------------
