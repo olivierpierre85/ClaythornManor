@@ -36,6 +36,9 @@ label init_broken:
             "day2_evening_captain_facts" : 0,
             "day2_evening_no_pretence" : False,
             "day2_evening_staff_oddities" : 0,
+
+            # Morning day 3 (the argument against splitting the party)
+            "day3_morning_good_questions" : 0,
         }
 
         broken_important_choices = CharacterImportantChoiceList([
@@ -81,7 +84,7 @@ label init_broken:
             ),
             CharacterInformation(
                 0, "left_together",
-                "You laid the whole truth before the others and convinced everyone to leave together",
+                "You asked the right questions and convinced everyone to leave together",
                 content_negative="You could not convince the others, and set out with only the Captain",
                 image_file="leave_manor",
                 chapters=['sunday_morning'],
@@ -159,6 +162,7 @@ label init_broken:
             CharacterInformation(1, "shielded", "You threw yourself in front of Doctor Baldwin and took Manning's bullet in the western grove", image_file="hunting_rifle", chapters=['saturday_afternoon']),
             CharacterInformation(1, "poisoned", "You were poisoned at dinner along with every other guest", image_file="rat_poison", chapters=['saturday_evening']),
             CharacterInformation(1, "impaled", "You leapt from your window to escape the fire and were impaled on the iron fence below", image_file="fence", chapters=['saturday_evening']),
+            CharacterInformation(1, "burned", "You showed your true face, and the fire found you tied to your own bed", image_file="manor_burns", chapters=['sunday_morning']),
             CharacterInformation(2, "ambushed", "You and the Captain were shot down on the road to the village", image_file="shot_from_behind_i", is_intuition=True, chapters=['sunday_afternoon']),
             CharacterInformation(3, "walked_out", "You led everyone out of the manor together and reached the police station", image_file="leave_manor", chapters=['end']),
         ])

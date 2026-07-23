@@ -14,16 +14,18 @@ label broken_config_progress:
                 Chapter(image_ending_question, "ending", "walked_out", "end"),
             ],
             # Row 1: trunks drop one row - friday_evening at col1, the hunt at col3,
-            # saturday_evening's first branch (impaled, more below) at col4, and
+            # saturday_evening's first branch (impaled, more below) at col4, then
+            # sunday_morning's single branch (burned) turns right at col5 and
             # sunday_afternoon's single branch (ambushed) turns right at col6
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_line),            # col1 trunk (Saturday-morning deaths)
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),            # col3 trunk (Saturday-hunt deaths)
-                Chapter(image_checkpoint_line),            # col1 trunk (Saturday-morning deaths)
-                Chapter(image_checkpoint_empty),      # filler completing the impaled cell
-                Chapter(image_checkpoint_corner),          # col6 branch (ambushed - the only one)
+                Chapter(image_checkpoint_line),            # col4 trunk (Saturday-evening deaths)
+                Chapter(image_checkpoint_corner),          # col5 branch (burned - the only one)
+                Chapter(image_ending_question, "ending", "burned", "sunday_morning"),
+                Chapter(image_checkpoint_corner_half),     # completes the burned cell, col6 branch (ambushed)
                 Chapter(image_ending_question, "ending", "ambushed", "sunday_afternoon"),
             ],
             # Row 2: col1's first branch (deathbed), col3's first hunt branch
@@ -113,9 +115,10 @@ label broken_config_progress:
 
             # ===== SUNDAY MORNING (AN EMPTY MANOR) =====
             # Only reachable from the gathered watch, so found_poison and
-            # gather_everyone are always unlocked. The departure menu branches
-            # on the 'ambushed' ENDING (intuition), not on a thread, so a
-            # single checkpoint config suffices.
+            # gather_everyone are always unlocked. The chapter branches on the
+            # 'ambushed' ENDING (intuition), not on a thread: without it the
+            # party splits with no menu at all, with it the departure menu
+            # opens. A single checkpoint config therefore suffices.
             'sunday_morning': [
                 {"label": "broken_day3_morning", "threads": {'talked_to_maid': True, 'host_lies': True, 'drunk_letter': True, 'found_poison': True, 'gather_everyone': True}},
             ],

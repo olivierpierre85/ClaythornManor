@@ -19,18 +19,8 @@
         },
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - the Boxer Rebellion",
-            "redirect": "broken_day3_morning_question_boxer"
-        },
-        {
-            "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - who among us is the culprit",
-            "redirect": "broken_day3_morning_question_culprit"
-        },
-        {
-            "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - third question, to be written",
-            "redirect": "broken_day3_morning_question_three"
+            "selected": "Take off the mask and show them your true face",
+            "redirect": "broken_day3_morning_show_face"
         }
     ]
 }

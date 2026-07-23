@@ -37,7 +37,13 @@
       "Bash(python -c \"import PIL; from PIL import Image; print\\('Pillow', PIL.__version__\\)\")",
       "Bash(ffmpeg -hide_banner -version)",
       "Bash(cwebp -version)",
-      "Bash(python tools/process_infocards.py)"
+      "Bash(python tools/process_infocards.py)",
+      "Bash(git -C /c/Projects/ClaythornManor show fe34457d --stat)",
+      "Bash(git -C /c/Projects/ClaythornManor diff -- \"Murder/game/scripts/broken/Day 3/1_Morning/1_main.rpy\")",
+      "Bash(git -C /c/Projects/ClaythornManor show fe34457d -- docs/tasks/story.md docs/next_tasks.md)",
+      "Bash(git -C /c/Projects/ClaythornManor log --oneline -3 -- \"Murder/game/tests/broken/5_sunday_morning\")",
+      "Bash(git -C /c/Projects/ClaythornManor log --oneline --all -- \"Murder/game/scripts/broken/Day 3/1_Morning/1_main.rpy\")",
+      "Bash(git -C /c/Projects/ClaythornManor show e809bec0:\"Murder/game/scripts/broken/Day 3/1_Morning/1_main.rpy\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\olivi\\AppData\\Local\\Temp\\claude\\c--Projects-ClaythornManor\\3a3fbf2c-538d-43ae-b18c-000000000000"

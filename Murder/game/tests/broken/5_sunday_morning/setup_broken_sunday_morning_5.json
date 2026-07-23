@@ -1,0 +1,21 @@
+{
+    "start_label": "broken_day3_morning",
+    "unlocked_threads": [
+        "talked_to_maid",
+        "host_lies",
+        "drunk_letter",
+        "found_poison",
+        "gather_everyone"
+    ],
+    "unlocked_endings": [
+        "ambushed"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day3_morning_menu_leave",
+            "selected": "Set out for the village with Captain Sinha",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

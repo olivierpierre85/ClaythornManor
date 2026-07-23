@@ -1,4 +1,8 @@
 <!-- # cSpell:disable -->
+## Fable
+
+If you still have money in september, use fable to implemented the SURVIVE mechanic. That will start the META story each time a player is saved, up until you can play the butler!!
+
 ### Write Story: NEXT => Broken
 
 - ADD MORE MORE questions in the generic menus (Doctor, Drunk, host) to confuse the player and make the game more challenging.
@@ -30,7 +34,11 @@ APPLY the empty gun_room to other player who go there on day 2? I think it might
 
 ### Write Story: NEXT => DRUNK
 
-THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point
+THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point.
+
+Friday arrival.
+
+Train is a mess, he will jump from one place to the next until he will collapse in the tea room. 
 
 ## Assets & artistic Tasks
 

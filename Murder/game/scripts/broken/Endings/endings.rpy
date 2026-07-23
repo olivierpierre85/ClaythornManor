@@ -167,6 +167,32 @@ label broken_ending_impaled:
     jump ending_generic
 
 
+# SUNDAY MORNING - took off the mask to win the argument; the Captain
+# arrested the impostor, tied him to his bed and walked out alone
+label broken_ending_burned:
+
+    $ broken_details.endings.unlock('burned')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('burned'))
+
+    call death_screen_transition
+
+    $ play_music('mysterious')
+
+    """
+    The mask was not a lie you told them. It was the only armour you had.
+
+    Three days you spent making yourself into a harmless man, and it worked so well that a killer left you alone.
+
+    Then you took it off in front of frightened people, and gave the most sensible man in the house every reason to bind you to a bed.
+
+    He was not wrong to do it. That is the cruelty of it.
+
+    You had things worth telling them. You should have made them worth hearing on their own.
+    """
+
+    jump ending_generic
+
+
 # SUNDAY - set out with only the Captain; the road was waiting for them
 # (intuition ending: separating is the mistake, take everyone)
 label broken_ending_ambushed:
