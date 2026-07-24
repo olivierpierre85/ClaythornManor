@@ -41,29 +41,31 @@ Sushil Sinha: What do you think?
 Something in me refuses it, flatly, I could not tell why.
 If we do not leave together, something terrible will happen.
 But how can I convince everyone of this?
-Menu Choice: TODO - the Boxer Rebellion
-TODO - the Boxer Rebellion question, and what it shakes loose.
-Menu Choice: TODO - who among us is the culprit
-TODO - putting it to the room that one of them may be the culprit.
 Menu Choice: TODO - third question, to be written
 TODO - third question, a wasted one.
-I stop there, and let the room sit with it.
-Nobody says anything clever. Nobody says anything at all for a while.
-That silence is worth more than any of the words I have just spent.
-Rosalind Marsh: ...Very well.
-Rosalind Marsh: I shall make Mr Manning something to keep him on his feet, and we shall take the miles slowly.
-Rosalind Marsh: Rosalind Marsh has walked further on worse errands.
-Daniel Baldwin: I am not sure I can do it.
-Daniel Baldwin: But I am a good deal less sure I want to be left in this house.
-Daniel Baldwin: I shall walk until I cannot, and then I shall walk a little further.
-Amelia Baxter: Oh, this is madness.
-She looks at the window, and at the four faces around her, and something goes out of her shoulders.
-Amelia Baxter: But I won't be the only one left in here.
-Amelia Baxter: If you all leave, I will leave with you.
-Sushil Sinha: Then it is settled, and we have wasted enough of the morning.
-Sushil Sinha: Mr Moody, I hope you are right.
-Thomas Moody: So do I, Captain.
-It takes the better part of an hour to make six people fit for the journey.
-Coats and sound boots. Bread and cold water from the kitchen.
-At half past ten I open the front door, and we step out into the grey morning.
-All six of us.
+Menu Choice: TODO - fourth question, to be written
+TODO - fourth question, a wasted one.
+Menu Choice: TODO - the Boxer Rebellion
+TODO - the Boxer Rebellion question, and what it shakes loose.
+I can see it in their faces before anybody speaks.
+Whatever I said was not convincing enough.
+Amelia Baxter: I am sorry, Mr Moody. Truly.
+Amelia Baxter: But none of that is a reason to march me into a wood.
+Rosalind Marsh: Nor me.
+Sushil Sinha: Mr Moody, we cannot stand here arguing until sundown.
+And there it is.
+I have spent everything I had and moved not one of them an inch.
+The dread has not left me. It has only stopped being any use.
+Thomas Moody: Very well, Captain.
+Thomas Moody: The two of us, then.
+Thomas Moody: I assume Doctor Baldwin and Samuel Manning will stay here to protect the ladies.
+Samuel Manning is still deep in thoughts
+But Daniel Baldwin gives a slight nod in agreement.
+They will not be the best bodyguards today, but that will have to do.
+Thomas Moody: The rest of you keep together, with the door shut until we come back.
+Thomas Moody: Together, mind. Nobody wanders this house alone, not for a moment, not for any reason.
+Rosalind Marsh: We will stay here for as long as needed, do not worry.
+Sushil Sinha: Very well, no need to waste any more time then.
+Sushil Sinha: Mr Moody.
+Thomas Moody: Yes, let us go.
+We take our coats, exit the billiard room and leave Claythorn Manor behind us.

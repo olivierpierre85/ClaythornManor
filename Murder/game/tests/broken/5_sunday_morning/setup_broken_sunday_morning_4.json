@@ -13,11 +13,6 @@
     "saved_variables": {},
     "choices": [
         {
-            "menu": "broken_day3_morning_menu_leave",
-            "selected": "Refuse. Nobody is to leave this house in halves.{{intuition}}",
-            "redirect": "broken_day3_morning_insist"
-        },
-        {
             "menu": "broken_day3_morning_menu_convince",
             "selected": "Take off the mask and show them your true face",
             "redirect": "broken_day3_morning_show_face"

@@ -13,8 +13,8 @@
     "saved_variables": {},
     "choices": [
         {
-            "menu": "broken_day3_morning_menu_leave",
-            "selected": "Set out for the village with Captain Sinha",
+            "menu": "broken_day3_morning_menu_convince",
+            "selected": "Let it go. Leave with Captain Sinha",
             "redirect": "generic_cancel"
         }
     ]

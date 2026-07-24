@@ -2,8 +2,6 @@
 
 The walk from the manor to the village. No menus - the chapter branches
 entirely on the `left_together` thread set in the Sunday-morning chapter.
-Both variants pass the fallen tree and discover it was sawn, not felled
-(shared label `broken_day3_afternoon_sawn_tree`).
 
 - **Without `left_together`**: Broken and the Captain walk out alone. A mile
   past the tree they are shot down one after the other

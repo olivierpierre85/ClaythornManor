@@ -19,8 +19,6 @@
 #         many witnesses: they pass the sawn tree and reach the police station
 #         by late afternoon -> broken_ending_walked_out (final ending)
 #
-#   The sawn-tree observation is shared between both variants
-#   (broken_day3_afternoon_sawn_tree).
 # --------------------------------------------
 label broken_day3_afternoon:
 
@@ -67,8 +65,6 @@ label broken_day3_afternoon_pair:
     """
 
     call change_time(12, 30)
-
-    call broken_day3_afternoon_sawn_tree
 
     """
     The Captain runs his hand along the cut and looks at me, and neither of us says the obvious thing.
@@ -146,18 +142,6 @@ label broken_day3_afternoon_together:
 
     call change_time(13, 00)
 
-    call broken_day3_afternoon_sawn_tree
-
-    """
-    The Captain runs his hand along the cut, and straightens, and looks not at the tree but at the woods around us.
-
-    Nobody needs it explained.
-
-    Miss Marsh simply gathers Mr Manning's arm, and we help one another over the trunk, all six of us, hands to elbows, one by one.
-
-    On the far side of it, the doctor is trembling. But he walks faster.
-    """
-
     call change_time(14, 30)
 
     """
@@ -204,22 +188,3 @@ label broken_day3_afternoon_together:
 
     jump broken_ending_walked_out
 
-
-# --------------------------------------------
-#   THE SAWN TREE (shared by both variants)
-# --------------------------------------------
-label broken_day3_afternoon_sawn_tree:
-
-    """
-    Two miles out, we come upon the famous tree.
-
-    A full-grown oak, right across the road, its crown in the ditch and its roots... its roots still in the ground.
-
-    The trunk's end is not torn. It is flat, and pale, and ridged with the even strokes of a two-man saw.
-
-    No storm did this.
-
-    Somebody cut this road the way you would cut a telephone line.
-    """
-
-    return

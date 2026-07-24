@@ -12,28 +12,6 @@
 #       - Gone  : Lady Claythorn and all the staff (left in the night)
 #       - Dead  : Lad (Ted Harring)
 #
-#   Structure:
-#       - The watch ends, the Captain proposes to walk out
-#       - The ladies refuse the seven miles, the doctor is feverish and
-#       - Without the 'ambushed' ending (no intuition) there is no choice at
-#         all: Moody accepts the split and the two of them set out
-#         -> broken_day3_afternoon_pair -> broken_ending_ambushed
-#       - With it, the departure menu (broken_day3_morning_menu_leave) opens:
-#           - set out with the Captain anyway (replays the ambush)
-#           - refuse to be split {{intuition}} -> broken_day3_morning_insist
-#       - Insisting opens the argument menu
-#         (broken_day3_morning_menu_convince). The time budget allows three
-#         questions before the room stops listening, and two of the four must
-#         be the right ones. Enough good questions -> left_together;
-#         not enough -> the Captain and Moody go alone after all.
-#         TODO the four questions are placeholders for now (see the labels
-#         below). Only the Boxer Rebellion and the culprit questions count.
-#       - The menu also offers the trap: showing the true face
-#         (broken_day3_morning_show_face). The Captain arrests the impostor,
-#         binds him to his bed and leaves alone -> broken_ending_burned
-#
-#   (MAYBE => the psychic will say she saw part of your face while sleeping)
-#   keep for later.
 # --------------------------------------------
 label broken_day3_morning:
 
@@ -137,55 +115,29 @@ label broken_day3_morning:
     Maybe they are right Mr Moody.
 
     This journey might not be fit for the ladies, it would be best if they stay there.
+
+    And even the man might not be in perfect shape.
     """
 
     """
-    Doctor Baldwin has said nothing at all.
+    He looks at Samuel Manning, and Doctor Baldwin.
 
-    He is sitting very upright in his chair, which I have learned is what he does when he is trying not to shake.
-    """
-
-    doctor """
-    I shall save you the trouble of asking.
-
-    I am running a fever, and I have been since the small hours.
-
-    I would be a burden on the road, and I know it.
-
-    I shall stay, and I shall be of some use here at least, with two patients to look after.
-    """
-
-    drunk """
-    And I shall stay with them.
-
-    I am no great protection, God knows.
-
-    But I will not have the ladies left in this house with nobody but a sick doctor.
-    """
-
-    """
-    So that is the arithmetic of it.
-
-    Four here, and however many of us take the road.
-
-    Captain Sinha catches my eye, and moves a step or two away from the others before he speaks, low enough that only I can hear him.
+    They both look sickly and exhausted.
     """
 
     captain """
-    Mr Moody. A word.
+    We would go definitely faster just the two of us.
 
-    They are right, and it changes nothing. Somebody must fetch the police.
+    We could fetch help and be back before sundown.
 
-    If it is only the two of us, we shall be there by the middle of the afternoon.
-
-    Burdened with the rest, we should still be in the wood at nightfall, and I would rather not be.
+    What do you think?
     """
-
+   
     if not broken_details.endings.is_unlocked('ambushed'):
 
-        # No intuition yet. He has nothing to argue with, so the party splits
-        # and the two of them take the road.
-        call broken_day3_morning_accept_split
+        """
+        I do not like it, but cannot think of a strong argument against his idea.
+        """
 
         call broken_day3_morning_leave_pair
 
@@ -197,148 +149,11 @@ label broken_day3_morning:
     $ play_music('danger', 2)
 
     """
-    Two of us on the road, and four of us behind these walls.
+    Something in me refuses it, flatly, I could not tell why.
+    
+    If we do not leave together, something terrible will happen.
 
-    Something in me refuses it, flatly, the way a hand refuses a hot plate.
-
-    I could not tell anyone why.
-
-    I only know that the thought of that lane, and the bracken banks along it, fills me with a dread I have not earned.
-
-    Ted Harring died alone in his bed.
-
-    Samuel Manning was found alone with his letter, and I was very nearly alone in a wood with a rifle at my back.
-
-    Everything that has happened in this house has happened to somebody who was on his own.
-    """
-
-    $ time_left = 1
-
-    call run_menu(TimedMenu("broken_day3_morning_menu_leave", [
-        TimedMenuChoice("Refuse. Nobody is to leave this house in halves.{{intuition}}", 'broken_day3_morning_insist', early_exit=True),
-        TimedMenuChoice("Set out for the village with Captain Sinha", 'generic_cancel', early_exit=True),
-    ], image_right = "captain"))
-
-    if broken_details.threads.is_unlocked('left_together'):
-
-        call broken_day3_morning_departure_together
-
-        jump broken_day3_afternoon
-
-    call broken_day3_morning_leave_pair
-
-    jump broken_day3_afternoon
-
-
-# ------------------------------------
-#   NO INTUITION - he accepts the split
-# ------------------------------------
-label broken_day3_morning_accept_split:
-
-    """
-    I cannot find a single thing wrong with what he says.
-
-    Two men move quickly. Four people stay behind a locked door with a doctor and a lawyer to watch it.
-
-    It is sensible. It is what any reasonable person would arrange.
-
-    And still something turns over in me when I agree to it, and I cannot for the life of me say what.
-    """
-
-    broken """
-    Very well, Captain.
-
-    The two of us, then.
-    """
-
-    return
-
-
-# ------------------------------------
-#   THE DEPARTURE OF TWO
-#   (the split he accepted, and the argument he lost)
-# ------------------------------------
-label broken_day3_morning_leave_pair:
-
-    call change_time(9, 30)
-
-    $ change_room('entrance_hall', dissolve)
-
-    broken """
-    The rest of you keep together, in one room, with the door shut until we come back.
-
-    Together, mind. Nobody wanders this house alone, not for a moment, not for any reason.
-    """
-
-    nurse """
-    We shall be in the tea room. You will find us all exactly where you left us.
-    """
-
-    """
-    We take our coats, and two walking sticks from the stand by the door.
-
-    Mr Manning follows us out onto the step and grips my hand harder than his shaking ought to allow.
-    """
-
-    drunk """
-    Come back, sir.
-
-    I find I have grown accustomed to you.
-    """
-
-    return
-
-
-# ------------------------------------
-#   INSISTING - the argument
-#
-#   He refuses to be split, and must now give them a reason. Three
-#   questions may be put to the room before they stop listening, and two
-#   of the four are the right ones.
-#
-#   TODO all four questions are placeholders. The Boxer Rebellion and the
-#   culprit questions are the good ones and increment the counter.
-# ------------------------------------
-label broken_day3_morning_insist:
-
-    broken """
-    No.
-
-    Forgive me, Captain, but no. Not two of us, and not four of us.
-
-    Six of us, together, or none of us at all.
-    """
-
-    captain """
-    Mr Moody, you have heard the ladies. They cannot walk it.
-    """
-
-    broken """
-    Then we go slowly, and we stop when they need to stop, and we arrive at dusk instead of at three.
-
-    But we do not divide this house into a party on the road and a party behind a door.
-    """
-
-    psychic """
-    And why not, pray?
-
-    You say it as though you were reading it off a wall somewhere.
-    """
-
-    """
-    Because I know it.
-
-    That is not an answer I can give them.
-
-    A man who says he simply knows is a man they will smile at and walk around.
-
-    They will hear me out for a few minutes, no more, and every word had better be a stone in a wall.
-    """
-
-    nurse """
-    Mr Moody, we are all tired and frightened, and I would rather not be frightened by guesswork.
-
-    If you have a reason, give it to us plainly.
+    But how can I convince everyone of this?
     """
 
     $ time_left = 30
@@ -349,19 +164,60 @@ label broken_day3_morning_insist:
         TimedMenuChoice("TODO - third question, to be written", 'broken_day3_morning_question_three', 10),
         TimedMenuChoice("TODO - fourth question, to be written", 'broken_day3_morning_question_four', 10),
         TimedMenuChoice("Take off the mask and show them your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
-        TimedMenuChoice("Let it go. Their minds are made up.", 'generic_cancel', 0, keep_alive=True, early_exit=True),
-    ], image_right = "nurse"))
+        TimedMenuChoice("Let it go. Leave with Captain Sinha", 'generic_cancel', 0, early_exit=True),
+    ]))
+
+
 
     if broken_details.saved_variables['day3_morning_good_questions'] >= 2:
 
-        call broken_day3_morning_convinced
+        call broken_day3_morning_departure_together
 
-        return
+    else: 
 
-    call broken_day3_morning_not_convinced
+        if time_left <=0:
 
-    return
+            """
+            I can see it in their faces before anybody speaks.
 
+            Whatever I have given them, it has not fitted together into the one shape I needed them to see.
+            """
+
+            psychic """
+            I am sorry, Mr Moody. Truly.
+
+            But none of that is a reason to march me into a wood.
+            """
+
+            nurse """
+            Nor me, and certainly not Mr Manning.
+
+            We shall wait. It is what waiting rooms are for.
+            """
+
+            captain """
+            Mr Moody, we cannot stand here arguing until noon.
+
+            Two of us, and quickly, or nobody at all.
+            """
+
+            """
+            And there it is.
+
+            I have spent everything I had and moved not one of them an inch.
+
+            The dread has not left me. It has only stopped being any use.
+            """
+        
+        else:
+
+            """
+            I do not think I can convince them, that leaves me only one choice.
+            """
+
+        call broken_day3_morning_leave_pair
+
+    jump broken_day3_afternoon
 
 # ------------------------------------
 #   THE QUESTIONS (placeholders)
@@ -414,103 +270,6 @@ label broken_day3_morning_question_four:
 
     return
 
-
-# ------------------------------------
-#   THE ARGUMENT WON
-# ------------------------------------
-label broken_day3_morning_convinced:
-
-    """
-    I stop there, and let the room sit with it.
-
-    Nobody says anything clever. Nobody says anything at all for a while.
-
-    That silence is worth more than any of the words I have just spent.
-    """
-
-    nurse """
-    ...Very well.
-
-    I shall make Mr Manning something to keep him on his feet, and we shall take the miles slowly.
-
-    Rosalind Marsh has walked further on worse errands.
-    """
-
-    doctor """
-    I am not sure I can do it.
-
-    But I am a good deal less sure I want to be left in this house.
-
-    I shall walk until I cannot, and then I shall walk a little further.
-    """
-
-    psychic """
-    Oh, this is madness.
-    """
-
-    """
-    She looks at the window, and at the four faces around her, and something goes out of her shoulders.
-    """
-
-    psychic """
-    But it is a madness with company in it, and I have had quite enough of the other sort.
-
-    If we are all to walk, then let us walk.
-    """
-
-    captain """
-    Then it is settled, and we have wasted enough of the morning.
-
-    Mr Moody, I hope you are right.
-    """
-
-    broken """
-    So do I, Captain.
-    """
-
-    $ broken_details.threads.unlock('left_together')
-
-    return
-
-
-# ------------------------------------
-#   THE ARGUMENT LOST
-# ------------------------------------
-label broken_day3_morning_not_convinced:
-
-    """
-    I can see it in their faces before anybody speaks.
-
-    Whatever I have given them, it has not fitted together into the one shape I needed them to see.
-    """
-
-    psychic """
-    I am sorry, Mr Moody. Truly.
-
-    But none of that is a reason to march me into a wood.
-    """
-
-    nurse """
-    Nor me, and certainly not Mr Manning.
-
-    We shall wait. It is what waiting rooms are for.
-    """
-
-    captain """
-    Mr Moody, we cannot stand here arguing until noon.
-
-    Two of us, and quickly, or nobody at all.
-    """
-
-    """
-    And there it is.
-
-    I have spent everything I had and moved not one of them an inch.
-
-    The dread has not left me. It has only stopped being any use.
-    """
-
-    return
 
 
 # ------------------------------------
@@ -722,11 +481,108 @@ label broken_day3_morning_show_face:
 
     jump broken_ending_burned
 
+# ------------------------------------
+#   THE DEPARTURE OF TWO
+# ------------------------------------
+label broken_day3_morning_leave_pair:
+
+    broken """
+    Very well, Captain.
+
+    The two of us, then.
+
+    I assume Doctor Baldwin and Samuel Manning will stay here to protect the ladies.
+    """
+
+    """
+    Samuel Manning is still deep in thoughts
+
+    But Daniel Baldwin gives a slight nod in agreement.
+
+    They will not be the best bodyguards today, but that will have to do.
+    """
+
+    broken """
+    The rest of you keep together, with the door shut until we come back.
+
+    Together, mind. Nobody wanders this house alone, not for a moment, not for any reason.
+    """
+
+    nurse """
+    We will stay here for as long as needed, do not worry.
+    """
+
+    captain """
+    Very well, no need to waste any more time then.
+
+    Mr Moody.
+    """
+
+    broken """
+    Yes, let us go.
+    """
+
+    """
+    We take our coats, exit the billiard room and leave Claythorn Manor behind us.
+    """
+
+    return
+
 
 # ------------------------------------
 #   THE DEPARTURE OF SIX
 # ------------------------------------
 label broken_day3_morning_departure_together:
+
+    $ broken_details.threads.unlock('left_together')
+
+    """
+    I stop there, and let the room sit with it.
+
+    Nobody says anything clever. Nobody says anything at all for a while.
+
+    That silence is worth more than any of the words I have just spent.
+    """
+
+    nurse """
+    ...Very well.
+
+    I shall make Mr Manning something to keep him on his feet, and we shall take the miles slowly.
+
+    Rosalind Marsh has walked further on worse errands.
+    """
+
+    doctor """
+    I am not sure I can do it.
+
+    But I am a good deal less sure I want to be left in this house.
+
+    I shall walk until I cannot, and then I shall walk a little further.
+    """
+
+    psychic """
+    Oh, this is madness.
+    """
+
+    """
+    She looks at the window, and at the four faces around her, and something goes out of her shoulders.
+    """
+
+    psychic """
+    But it is a madness with company in it, and I have had quite enough of the other sort.
+
+    If we are all to walk, then let us walk.
+    """
+
+    captain """
+    Then it is settled, and we have wasted enough of the morning.
+
+    Mr Moody, I hope you are right.
+    """
+
+    broken """
+    So do I, Captain.
+    """
 
     call change_time(10, 30)
 
