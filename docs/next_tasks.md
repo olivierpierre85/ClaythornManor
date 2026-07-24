@@ -36,7 +36,7 @@ Flashback -> ADmit smauel manning has been pretending to be drunk
 APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
 
 
-
+MELISSA -> Inversion en anglais : nor am I not equipped for that type of activity.
 
 ### Write Story: NEXT => DRUNK
 GEN IDEAS

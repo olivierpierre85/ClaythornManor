@@ -112,37 +112,31 @@ label broken_day3_morning:
     captain """
     Not make it, Miss Baxter?
 
-    It is seven miles of road. Long, but no worse than that.
+    It is a long journey I'll admit it, but not a difficult one, merely following the road.
+    
+    And we will walk slowly, and make stops as you need.
     """
 
     psychic """
-    Seven miles for a soldier, Captain.
+    I know it looks like an easy stroll for you captain.
 
-    For me it might as well be seventy.
-
-    I have not walked further than a garden in fifteen years, and I would be sitting in a ditch before the second mile.
-
-    You would have to leave me there, and I do not think any of you would.
+    My condition is not what it used to be nor am I equipped for that type of activity.
     """
 
     nurse """
-    Miss Baxter is not exaggerating, and I am no better.
+    And I am no better.
 
-    My health has never been strong, and a whole day on a wet road would finish me.
-
-    Nor could Mr Manning manage it, whatever he tells you.
+    My health has never been strong, and a whole day on a wet road would be very taxing.
     """
 
-    drunk """
-    I could try, Miss Marsh.
     """
+    Captain Sinha is considering this, then turns towards me.
+    """ 
 
-    nurse """
-    You could try, and you would fall, and then we should have to carry you.
-    """
+    captain """
+    Maybe they are right Mr Moody.
 
-    drunk """
-    ...Yes. Yes, I suppose that is the truth of it.
+    This journey might not be fit for the ladies, it would be best if they stay there.
     """
 
     """
