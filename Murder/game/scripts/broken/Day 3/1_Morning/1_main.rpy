@@ -36,7 +36,7 @@ label broken_day3_morning:
     captain """
     I see you managed a little sleep, Mr Moody.
 
-    It is alright, I did not.
+    It is all right. I did not.
 
     Do not worry, nothing happened during the night.
     """
@@ -46,7 +46,7 @@ label broken_day3_morning:
     """
 
     captain """
-    It happens. Do not blame yourself too much over it.
+    It happens. Do not blame yourself too much for it.
     """
 
     """
@@ -64,7 +64,7 @@ label broken_day3_morning:
     """
 
     captain """
-    Alright, now that everyone is awake, I think it is time we planned our next move.
+    Very well, now that everyone is awake, I think it is time we planned our next move.
     """
 
     """
@@ -90,15 +90,15 @@ label broken_day3_morning:
     captain """
     Not make it, Miss Baxter?
 
-    It is a long journey I'll admit it, but not a difficult one, merely following the road.
-    
-    And we will walk slowly, and make stops as you need.
+    It is a long journey, I will admit, but not a difficult one, merely a matter of following the road.
+
+    And we shall walk slowly, and stop as often as you need.
     """
 
     psychic """
-    I know it looks like an easy stroll for you captain.
+    I know it must look an easy stroll to you, Captain.
 
-    My condition is not what it used to be nor am I equipped for that type of activity.
+    My condition is not what it once was, nor am I equipped for that sort of exertion.
     """
 
     nurse """
@@ -108,15 +108,15 @@ label broken_day3_morning:
     """
 
     """
-    Captain Sinha is considering this, then turns towards me.
-    """ 
+    Captain Sinha considers this, then turns towards me.
+    """
 
     captain """
-    Maybe they are right Mr Moody.
+    Perhaps they are right, Mr Moody.
 
-    This journey might not be fit for the ladies, it would be best if they stay there.
+    This journey might not be fit for the ladies. It would be best if they stayed here.
 
-    And even the man might not be in perfect shape.
+    And even the men are not in perfect shape.
     """
 
     """
@@ -126,7 +126,7 @@ label broken_day3_morning:
     """
 
     captain """
-    We would go definitely faster just the two of us.
+    We would certainly go faster, just the two of us.
 
     We could fetch help and be back before sundown.
 
@@ -149,8 +149,8 @@ label broken_day3_morning:
     $ play_music('danger', 2)
 
     """
-    Something in me refuses it, flatly, I could not tell why.
-    
+    Something in me refuses it, flatly, though I could not tell why.
+
     If we do not leave together, something terrible will happen.
 
     But how can I convince everyone of this?
@@ -167,8 +167,6 @@ label broken_day3_morning:
         TimedMenuChoice("Let it go. Leave with Captain Sinha", 'generic_cancel', 0, early_exit=True),
     ]))
 
-
-
     if broken_details.saved_variables['day3_morning_good_questions'] >= 2:
 
         call broken_day3_morning_departure_together
@@ -180,7 +178,7 @@ label broken_day3_morning:
             """
             I can see it in their faces before anybody speaks.
 
-            Whatever I have given them, it has not fitted together into the one shape I needed them to see.
+            Whatever I said was not convincing enough.
             """
 
             psychic """
@@ -190,15 +188,11 @@ label broken_day3_morning:
             """
 
             nurse """
-            Nor me, and certainly not Mr Manning.
-
-            We shall wait. It is what waiting rooms are for.
+            Nor me.
             """
 
             captain """
-            Mr Moody, we cannot stand here arguing until noon.
-
-            Two of us, and quickly, or nobody at all.
+            Mr Moody, we cannot stand here arguing until sundown.
             """
 
             """
@@ -208,11 +202,13 @@ label broken_day3_morning:
 
             The dread has not left me. It has only stopped being any use.
             """
-        
+
         else:
 
             """
-            I do not think I can convince them, that leaves me only one choice.
+            I see in their eyes that I shall not be able to convince them.
+
+            That leaves me only one choice.
             """
 
         call broken_day3_morning_leave_pair
@@ -495,7 +491,7 @@ label broken_day3_morning_leave_pair:
     """
 
     """
-    Samuel Manning is still deep in thoughts
+    Samuel Manning is still deep in thought.
 
     But Daniel Baldwin gives a slight nod in agreement.
 
@@ -509,11 +505,11 @@ label broken_day3_morning_leave_pair:
     """
 
     nurse """
-    We will stay here for as long as needed, do not worry.
+    We shall stay here for as long as needed. Do not worry.
     """
 
     captain """
-    Very well, no need to waste any more time then.
+    Very well. No need to waste any more time, then.
 
     Mr Moody.
     """
@@ -569,9 +565,9 @@ label broken_day3_morning_departure_together:
     """
 
     psychic """
-    But it is a madness with company in it, and I have had quite enough of the other sort.
+    But I shall not be the only one left in this house.
 
-    If we are all to walk, then let us walk.
+    If you all leave, I shall leave with you.
     """
 
     captain """
@@ -591,15 +587,9 @@ label broken_day3_morning_departure_together:
     $ change_room('entrance_hall', dissolve)
 
     """
-    It takes the better part of an hour to make six people fit for seven miles.
+    It takes the better part of an hour to make six people fit for the journey.
 
-    Coats and sound boots. Bread and cold water from the kitchen. Every walking stick the hall stand owns.
-
-    Miss Marsh mixes Mr Manning something in the cold scullery that smells of nothing pleasant, and stands over him until he drinks it.
-
-    The doctor is grey to the lips and says he is perfectly well.
-
-    I fix the mask back on before we go out. It has one more day of work in it, and I find I would rather have it between me and the road.
+    Coats and sound boots. Bread and cold water from the kitchen.
 
     At half past ten I open the front door, and we step out into the grey morning.
 
