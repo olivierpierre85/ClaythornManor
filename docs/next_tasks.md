@@ -21,6 +21,10 @@ If you still have money in september, use fable to implemented the SURVIVE mecha
 There is almost no hint of what really happened in Boxer's rebellion ADD in some of things. aDD in questions at the end.
 
 
+TODO, should we add the story of the baby and the nurse here (questions day3)OR way too obvious?
+
+Or maybe add Psychic saying somewhere she never had children of her own, ALMOSt one, **but god took him away from me at birth**
+
 ##### **Friday Evening**
 
 IMORTANT WHY Not just know on bedrooms? he doesn't have to enter them => Add logic for nobody answers? Or just rethink TEST
