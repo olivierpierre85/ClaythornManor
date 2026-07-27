@@ -18,6 +18,21 @@ The chapter gates on the `ambushed` ENDING (intuition), not on a thread:
   stops listening. Two of them must be the right ones
   (`day3_morning_good_questions >= 2`).
 
+The four questions:
+
+- `..._question_boxer` (GOOD) — the doctor's Boxer Rebellion service against
+  what his invitation actually praised him for: whoever wrote the letters
+  studied them all. Reads the `doctor_boxer` observation for its opening
+  lines only, never as a condition, so two good questions stay reachable for
+  every player.
+- `..._question_culprit` (GOOD) — nobody in the room can say who carried the
+  letters, so a shut door behind four people is worse than an open road.
+- `..._question_tree` (WEAK) — the Captain will not swear the tree was cut,
+  and Miss Baxter uses the doubt against him.
+- `..._question_poison` (WEAK) — the doctor rules out arsenic for Ted
+  Harring, and Miss Marsh notes who has been carrying the bottle since
+  Friday.
+
 - Two good questions -> `left_together` -> the whole party walks out.
 - Fewer -> the argument is lost and the pair sets out. The menu may end either
   because the time ran out (three questions asked) or because the player took
@@ -28,11 +43,6 @@ The chapter gates on the `ambushed` ENDING (intuition), not on a thread:
 Every plan except 4 leaves the chapter through `broken_day3_afternoon`, which
 branches on `left_together` for the endings themselves.
 
-TODO the four questions are placeholders. Only the Boxer Rebellion and the
-culprit questions increment the counter, so the plans below will need their
-`selected` text updated once the real questions are written (the `redirect`
-targets should stay).
-
 Plan 1 must remain first: it is the only plan that relies on `ambushed` still
 being locked, and the runner's `soft_reset` never re-locks endings.
 
@@ -41,11 +51,12 @@ No intuition, no menus at all. The forced split -> the two-man walk.
 
 ## setup_broken_sunday_morning_2.json
 `unlocked_endings: [ambushed]`. The Boxer Rebellion and the culprit questions
-(both good) plus one weak one -> `left_together` -> the departure of six.
+(both good) plus the tree -> `left_together` -> the departure of six.
 
 ## setup_broken_sunday_morning_3.json
-`unlocked_endings: [ambushed]`. Both weak questions and only one good one, so
-the whole 30 minutes are spent -> the room stops listening -> the pair sets out.
+`unlocked_endings: [ambushed]`. The tree and the poison, then only one good
+question, so the whole 30 minutes are spent -> the room stops listening ->
+the pair sets out.
 
 ## setup_broken_sunday_morning_4.json
 `unlocked_endings: [ambushed]`. Take off the mask on the first question

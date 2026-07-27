@@ -12,6 +12,13 @@
 #       - Gone  : Lady Claythorn and all the staff (left in the night)
 #       - Dead  : Lad (Ted Harring)
 #
+#   Gates on the 'ambushed' ENDING (intuition), not on a thread:
+#       - without it  -> no menu at all, the party splits, two men walk out
+#       - with it     -> the argument menu opens. 30 minutes of patience, ten
+#         minutes a question, so three may be asked. Two of them must be the
+#         right ones (day3_morning_good_questions >= 2) to unlock
+#         'left_together' and take the whole party out together.
+#
 # --------------------------------------------
 label broken_day3_morning:
 
@@ -36,7 +43,7 @@ label broken_day3_morning:
     captain """
     I see you managed a little sleep, Mr Moody.
 
-    It is all right. I did not.
+    It is all right, I did not.
 
     Do not worry, nothing happened during the night.
     """
@@ -46,7 +53,9 @@ label broken_day3_morning:
     """
 
     captain """
-    It happens. Do not blame yourself too much for it.
+    It happens.
+
+    Do not blame yourself too much for it.
     """
 
     """
@@ -72,7 +81,9 @@ label broken_day3_morning:
     """
 
     captain """
-    Good. What I suggest is this.
+    Good.
+
+    What I suggest is this.
 
     Let us go quickly to our rooms and get ready for the long walk.
 
@@ -82,9 +93,9 @@ label broken_day3_morning:
     """
 
     psychic """
-    Captain, Miss Marsh and I have just had a discussion.
+    Captain, Miss Marsh and I have been speaking quietly together these last few minutes.
 
-    And we believe we shall not make it.
+    And we have come to the sorry conclusion that we shall never make it.
     """
 
     captain """
@@ -96,9 +107,9 @@ label broken_day3_morning:
     """
 
     psychic """
-    I know it must look an easy stroll to you, Captain.
+    I do not doubt it is only a stroll to a man of your training, Captain.
 
-    My condition is not what it once was, nor am I equipped for that sort of exertion.
+    But my constitution is not the thing it once was, and I am not dressed for such an undertaking.
     """
 
     nurse """
@@ -114,7 +125,9 @@ label broken_day3_morning:
     captain """
     Perhaps they are right, Mr Moody.
 
-    This journey might not be fit for the ladies. It would be best if they stayed here.
+    This journey might not be fit for the ladies.
+
+    It would be best if they stayed here.
 
     And even the men are not in perfect shape.
     """
@@ -132,7 +145,7 @@ label broken_day3_morning:
 
     What do you think?
     """
-   
+
     if not broken_details.endings.is_unlocked('ambushed'):
 
         """
@@ -159,10 +172,10 @@ label broken_day3_morning:
     $ time_left = 30
 
     call run_menu(TimedMenu("broken_day3_morning_menu_convince", [
-        TimedMenuChoice("TODO - the Boxer Rebellion", 'broken_day3_morning_question_boxer', 10),
-        TimedMenuChoice("TODO - who among us is the culprit", 'broken_day3_morning_question_culprit', 10),
-        TimedMenuChoice("TODO - third question, to be written", 'broken_day3_morning_question_three', 10),
-        TimedMenuChoice("TODO - fourth question, to be written", 'broken_day3_morning_question_four', 10),
+        TimedMenuChoice("Ask Doctor Baldwin where he first served", 'broken_day3_morning_question_boxer', 10),
+        TimedMenuChoice("Ask who carried the letters through the house", 'broken_day3_morning_question_culprit', 10),
+        TimedMenuChoice("Ask the Captain whether the tree was cut", 'broken_day3_morning_question_tree', 10),
+        TimedMenuChoice("Show them the bottle of rat poison", 'broken_day3_morning_question_poison', 10),
         TimedMenuChoice("Take off the mask and show them your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
         TimedMenuChoice("Let it go. Leave with Captain Sinha", 'generic_cancel', 0, early_exit=True),
     ]))
@@ -171,9 +184,9 @@ label broken_day3_morning:
 
         call broken_day3_morning_departure_together
 
-    else: 
+    else:
 
-        if time_left <=0:
+        if time_left <= 0:
 
             """
             I can see it in their faces before anybody speaks.
@@ -182,9 +195,11 @@ label broken_day3_morning:
             """
 
             psychic """
-            I am sorry, Mr Moody. Truly.
+            I am sorry, Mr Moody.
 
-            But none of that is a reason to march me into a wood.
+            Truly, I am.
+
+            But not one word of it is reason enough to send me walking into a wood.
             """
 
             nurse """
@@ -200,7 +215,9 @@ label broken_day3_morning:
 
             I have spent everything I had and moved not one of them an inch.
 
-            The dread has not left me. It has only stopped being any use.
+            The dread has not left me.
+
+            It has only stopped being any use.
             """
 
         else:
@@ -216,56 +233,270 @@ label broken_day3_morning:
     jump broken_day3_afternoon
 
 # ------------------------------------
-#   THE QUESTIONS (placeholders)
+#   THE QUESTIONS
+#
+#   Two of the four move the room. Both weak ones are things Moody believes
+#   and cannot prove this morning, and the afternoon proves him right about
+#   the tree once it is far too late to matter.
 # ------------------------------------
-# TODO write the question, the answer it draws out, and what it proves to
-# the room. GOOD question - it counts towards convincing them.
-# TODO consider gating this on the doctor_boxer observation.
+# GOOD question - the invitations were written by somebody who studied us all.
+# The doctor_boxer observation only changes how Moody opens: knowing the
+# answer, he asks the doctor to repeat it, otherwise he asks blind and gets
+# the same one. It is deliberately not a condition on the choice, since two
+# good questions must stay reachable for every player.
 label broken_day3_morning_question_boxer:
 
     $ broken_details.saved_variables['day3_morning_good_questions'] += 1
 
+    if broken_details.threads.is_unlocked('doctor_boxer'):
+
+        broken """
+        Doctor, on Friday evening you told me where you first served.
+
+        Would you say it again, so that everybody hears it?
+        """
+
+    else:
+
+        broken """
+        Doctor, before the War, where did you first serve?
+
+        Say it aloud, if you will.
+        """
+
+    doctor """
+    China.
+
+    The summer of 1900, the Boxer Rebellion.
+
+    I was twenty-three, and the youngest surgeon in the column.
     """
-    TODO - the Boxer Rebellion question, and what it shakes loose.
+
+    broken """
+    Thank you.
+
+    Now, the letter that brought you to this house praised you for ten years at St Margaret's.
+
+    A charity hospital, and a worthy thing, and a thing four hundred other men in England could claim just as well.
+
+    It did not mention China at all.
+    """
+
+    doctor """
+    No.
+
+    No, it did not.
+    """
+
+    broken """
+    Nor did mine name anything a man could check.
+
+    Nor the Captain's.
+
+    But the letters that came afterwards, the ones pushed under our doors, were exact.
+
+    Mr Manning's named his wife, and her hospital, and the year she died.
+
+    Mine named the day I was sent forward, and the officer who signed the order.
+    """
+
+    """
+    I let that sit with them a moment.
+    """
+
+    broken """
+    Whoever brought us here praised us for things any clerk could find in a newspaper.
+
+    And then, once we were safely inside, showed us the things nobody could.
+
+    That is not a hostess who has run out of money and lost her nerve.
+
+    That is somebody who has spent months among our lives, and who is not finished with them.
+    """
+
+    """
+    The doctor has gone the colour of the sheet across his knees.
+
+    Miss Marsh says nothing at all, which from her is a great deal.
+    """
+
+    nurse """
+    Months.
+    """
+
+    broken """
+    Months.
     """
 
     return
 
 
-# TODO write the question and the answer.
-# GOOD question - it counts towards convincing them.
+# GOOD question - nobody in this room can clear anybody else, which makes a
+# shut door behind four people worse than an open road under six.
 label broken_day3_morning_question_culprit:
 
     $ broken_details.saved_variables['day3_morning_good_questions'] += 1
 
+    broken """
+    Then let me put a plain question to the room.
+
+    Those letters were not posted to us.
+
+    They were carried through this house in the night and pushed under our doors.
+
+    Can any one of you tell me who carried them?
     """
-    TODO - putting it to the room that one of them may be the culprit.
+
+    """
+    Nobody answers.
+
+    Miss Baxter looks at the doctor.
+
+    The doctor looks at Mr Manning.
+
+    Mr Manning, for once, looks at nobody at all.
+    """
+
+    broken """
+    No.
+
+    Neither can I.
+
+    And that is precisely my difficulty with leaving four of you sitting in this house.
+    """
+
+    nurse """
+    You are saying that one of us wrote them.
+    """
+
+    broken """
+    I am saying I cannot prove that none of us did.
+
+    The staff had keys to this house, certainly.
+
+    So has every person standing in this room.
+
+    If I am wrong, we have a long dull walk and a good story for the sergeant.
+
+    If I am right, then four of you will sit behind a shut door all afternoon, and one of you will already be on the inside of it.
+    """
+
+    """
+    Nobody has an answer to that.
+
+    Miss Marsh's hands have gone quite still in her lap, which I have not seen once all weekend.
+
+    Even Miss Baxter has stopped shaking her head.
     """
 
     return
 
 
-# TODO write the question and the answer.
-# WEAK question - it costs him time and proves nothing.
-label broken_day3_morning_question_three:
+# WEAK question - he is right about the tree and cannot show them a thing.
+# They walk past the saw cut in the afternoon, whichever way the morning goes.
+label broken_day3_morning_question_tree:
+
+    broken """
+    Captain, the tree across the road.
+
+    You looked at it yourself on Saturday.
+
+    Would you swear a storm brought it down?
+    """
+
+    captain """
+    I would swear I do not know.
+
+    The crown was in the ditch and the wind had been at it all night.
+
+    I did not examine the stump with a glass, Mr Moody.
+
+    I will not swear to a thing I did not see.
+    """
+
+    broken """
+    But if it were cut...
+    """
+
+    captain """
+    If.
+
+    I have been a soldier long enough to be careful with that word.
+    """
+
+    psychic """
+    There, you hear it for yourselves.
+
+    Mr Moody has raised us an entire cathedral upon the word if.
+
+    A tree fell in a storm, and a poor young man died in his sleep, and upon those two sorrows we are asked to walk seven miles through a wood.
+    """
 
     """
-    TODO - third question, a wasted one.
+    Ten minutes gone, and a good deal of ground with them.
+
+    I should have kept the tree to myself until I could stand somebody in front of the stump.
     """
 
     return
 
 
-# TODO write the question and the answer.
-# WEAK question - it costs him time and proves nothing.
-label broken_day3_morning_question_four:
+# WEAK question - the poison proves nothing except that Moody has been
+# carrying a bottle of it about since Friday. It hands Miss Marsh a stick to
+# beat him with, and sets up the arrest if he later takes off the mask.
+label broken_day3_morning_question_poison:
+
+    broken """
+    There is something none of you have seen.
+    """
 
     """
-    TODO - fourth question, a wasted one.
+    I take the bottle from my coat and set it down on the billiard table.
+
+    The label is plain enough, and so is the skull printed above it.
+    """
+
+    broken """
+    I took this from the scullery on Friday night.
+
+    Doctor, I believe Ted Harring was poisoned.
+    """
+
+    """
+    Doctor Baldwin picks the bottle up, turns it about, and hands it back to me with something close to pity.
+    """
+
+    doctor """
+    Arsenic, Mr Moody.
+
+    Had that young man swallowed this, he would have died on his knees, and the whole floor would have heard about it for hours.
+
+    He was quiet, and he was cold, and there was not a mark upon him.
+
+    I examined him myself.
+    """
+
+    nurse """
+    And how long have you been carrying it about, Mr Moody?
+    """
+
+    broken """
+    Since Friday.
+
+    For safe keeping.
+    """
+
+    nurse """
+    Quite.
+    """
+
+    """
+    Ten minutes gone, and I have put a bottle of poison in Miss Marsh's mind with my own name attached to it.
+
+    That was not clever.
     """
 
     return
-
 
 
 # ------------------------------------
@@ -290,7 +521,9 @@ label broken_day3_morning_show_face:
     broken """
     Very well.
 
-    You will not take my reasons. Take this instead.
+    You will not take my reasons.
+
+    Take this instead.
     """
 
     """
@@ -302,7 +535,9 @@ label broken_day3_morning_show_face:
     """
     The room goes very still.
 
-    Miss Baxter's hand rises to her mouth. Miss Marsh does not move at all.
+    Miss Baxter's hand rises to her mouth.
+
+    Miss Marsh does not move at all.
 
     Doctor Baldwin half stands, staring at a face that carries none of the ruin he has been imagining all weekend.
     """
@@ -310,7 +545,9 @@ label broken_day3_morning_show_face:
     broken """
     My name is not Thomas Moody.
 
-    Thomas Moody was my friend. He came home from Flanders behind that mask, and he died this spring in a rented room in Liverpool.
+    Thomas Moody was my friend.
+
+    He came home from Flanders behind that mask, and he died this spring in a rented room in Liverpool.
 
     His invitation arrived after he was buried. I took his name, and his face, and came here in his place, because I am a journalist and an invitation to a dead man is a story.
 
@@ -352,7 +589,9 @@ label broken_day3_morning_show_face:
     """
 
     """
-    He is not angry. That is the worst of it.
+    He is not angry.
+
+    That is the worst of it.
 
     He is doing arithmetic, and I have handed him the figures.
     """
@@ -366,7 +605,9 @@ label broken_day3_morning_show_face:
     psychic """
     And he has been asking questions of every one of us since Friday.
 
-    All those little kindnesses. All that patient interest.
+    All those little kindnesses.
+
+    All that patient interest.
     """
 
     broken """
@@ -394,7 +635,9 @@ label broken_day3_morning_show_face:
     """
 
     captain """
-    You will remain here until the police come. That is not a punishment, sir, it is an arrest.
+    You will remain here until the police come.
+
+    That is not a punishment, sir, it is an arrest.
 
     I would rather have locked the door and left it at that.
 
@@ -408,9 +651,13 @@ label broken_day3_morning_show_face:
     """
 
     captain """
-    I shall walk to the village alone. It is faster, and after this morning I do not think anyone else will come.
+    I shall walk to the village alone.
 
-    Miss Marsh has your keys. She will bring you water at noon.
+    It is faster, and after this morning I do not think anyone else will come.
+
+    Miss Marsh has your keys.
+
+    She will bring you water at noon.
 
     If you are what you say you are, you have my apology in advance, and you shall have it properly when I return with the constables.
     """
@@ -446,7 +693,9 @@ label broken_day3_morning_show_face:
     """
     I do not know how long I lie there.
 
-    Long enough for the light to move across the ceiling. Long enough to work the cord loose at one wrist, and no further.
+    Long enough for the light to move across the ceiling.
+
+    Long enough to work the cord loose at one wrist, and no further.
 
     Then, somewhere below me, glass breaks.
     """
@@ -454,7 +703,9 @@ label broken_day3_morning_show_face:
     play sound fire loop
 
     """
-    There is no shouting afterwards. That is the thing I cannot make sense of.
+    There is no shouting afterwards.
+
+    That is the thing I cannot make sense of.
 
     Glass breaks in a house with four people in it, and nobody calls out at all.
 
@@ -487,13 +738,13 @@ label broken_day3_morning_leave_pair:
 
     The two of us, then.
 
-    I assume Doctor Baldwin and Samuel Manning will stay here to protect the ladies.
+    I assume Doctor Baldwin and Mr Manning will stay here to protect the ladies.
     """
 
     """
     Samuel Manning is still deep in thought.
 
-    But Daniel Baldwin gives a slight nod in agreement.
+    But Doctor Baldwin gives a slight nod in agreement.
 
     They will not be the best bodyguards today, but that will have to do.
     """
@@ -505,11 +756,15 @@ label broken_day3_morning_leave_pair:
     """
 
     nurse """
-    We shall stay here for as long as needed. Do not worry.
+    We shall stay here for as long as needed.
+
+    Do not worry.
     """
 
     captain """
-    Very well. No need to waste any more time, then.
+    Very well.
+
+    No need to waste any more time, then.
 
     Mr Moody.
     """
@@ -545,7 +800,7 @@ label broken_day3_morning_departure_together:
 
     I shall make Mr Manning something to keep him on his feet, and we shall take the miles slowly.
 
-    Rosalind Marsh has walked further on worse errands.
+    I have walked further than that on worse errands.
     """
 
     doctor """
@@ -557,7 +812,7 @@ label broken_day3_morning_departure_together:
     """
 
     psychic """
-    Oh, this is madness.
+    Oh, this is madness, every word of it.
     """
 
     """
@@ -565,9 +820,9 @@ label broken_day3_morning_departure_together:
     """
 
     psychic """
-    But I shall not be the only one left in this house.
+    But I shall not be left the last soul rattling about in this house.
 
-    If you all leave, I shall leave with you.
+    If you are all set on going, then I shall go with you.
     """
 
     captain """

@@ -14,17 +14,17 @@
     "choices": [
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - third question, to be written",
-            "redirect": "broken_day3_morning_question_three"
+            "selected": "Ask the Captain whether the tree was cut",
+            "redirect": "broken_day3_morning_question_tree"
         },
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - fourth question, to be written",
-            "redirect": "broken_day3_morning_question_four"
+            "selected": "Show them the bottle of rat poison",
+            "redirect": "broken_day3_morning_question_poison"
         },
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - the Boxer Rebellion",
+            "selected": "Ask Doctor Baldwin where he first served",
             "redirect": "broken_day3_morning_question_boxer"
         }
     ]

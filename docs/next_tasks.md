@@ -30,7 +30,7 @@ FLASHBACK =>Add in inner dialogs that WE ARE NOT HERE FOR the same reasons BEFOR
 
 Flashback -> ADmit smauel manning has been pretending to be drunk
 
-
+REMOVE MASK only when telling everyone that THERE might be a killer among us
 
 
 APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check

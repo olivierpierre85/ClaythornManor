@@ -14,18 +14,18 @@
     "choices": [
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - the Boxer Rebellion",
+            "selected": "Ask Doctor Baldwin where he first served",
             "redirect": "broken_day3_morning_question_boxer"
         },
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - who among us is the culprit",
+            "selected": "Ask who carried the letters through the house",
             "redirect": "broken_day3_morning_question_culprit"
         },
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "TODO - third question, to be written",
-            "redirect": "broken_day3_morning_question_three"
+            "selected": "Ask the Captain whether the tree was cut",
+            "redirect": "broken_day3_morning_question_tree"
         }
     ]
 }
