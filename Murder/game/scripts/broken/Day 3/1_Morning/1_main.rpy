@@ -169,12 +169,13 @@ label broken_day3_morning:
     But how can I convince everyone of this?
     """
 
+    # TODO Lady CLaythorn culprit requires THREAD? but which one?
     $ time_left = 30
 
     call run_menu(TimedMenu("broken_day3_morning_menu_convince", [
-        TimedMenuChoice("Ask Doctor Baldwin where he first served", 'broken_day3_morning_question_boxer', 10),
-        TimedMenuChoice("Ask who carried the letters through the house", 'broken_day3_morning_question_culprit', 10),
-        TimedMenuChoice("Ask the Captain whether the tree was cut", 'broken_day3_morning_question_tree', 10),
+        TimedMenuChoice("Talk about the Boxer Rebellion{{observation}}", 'broken_day3_morning_question_boxer', 10, condition="broken_details.threads.is_unlocked('doctor_boxer')"),
+        TimedMenuChoice("Talk more about the letters", 'broken_day3_morning_question_letter', 10),
+        TimedMenuChoice("What if Lady Claythorn is not the culprit?", 'broken_day3_morning_question_culprit', 10),
         TimedMenuChoice("Show them the bottle of rat poison", 'broken_day3_morning_question_poison', 10),
         TimedMenuChoice("Take off the mask and show them your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
         TimedMenuChoice("Let it go. Leave with Captain Sinha", 'generic_cancel', 0, early_exit=True),
@@ -248,195 +249,87 @@ label broken_day3_morning_question_boxer:
 
     $ broken_details.saved_variables['day3_morning_good_questions'] += 1
 
-    if broken_details.threads.is_unlocked('doctor_boxer'):
-
-        broken """
-        Doctor, on Friday evening you told me where you first served.
-
-        Would you say it again, so that everybody hears it?
-        """
-
-    else:
-
-        broken """
-        Doctor, before the War, where did you first serve?
-
-        Say it aloud, if you will.
-        """
-
-    doctor """
-    China.
-
-    The summer of 1900, the Boxer Rebellion.
-
-    I was twenty-three, and the youngest surgeon in the column.
-    """
-
     broken """
-    Thank you.
+    Doctor, I remember you told me you served in the Boxer Rebellion.
 
-    Now, the letter that brought you to this house praised you for ten years at St Margaret's.
-
-    A charity hospital, and a worthy thing, and a thing four hundred other men in England could claim just as well.
-
-    It did not mention China at all.
+    Was that correct?
     """
 
     doctor """
-    No.
+    It was, that was my first job as a field surgeon.
+    """
 
-    No, it did not.
+    """
+    It is dangerous to talk as Thomas here, I do not know all of the details of his part in this conflict.
+
+    But I feel like I need to if I want to prove a point.
+    """ 
+
+    broken """
+    Right, that struck me as odd.
+
+    You see, I fought in this war as well.
+    """
+
+    doctor """
+    Really, why didn't you say it before?
     """
 
     broken """
-    Nor did mine name anything a man could check.
+    I do not like to dwell on the past much.
 
-    Nor the Captain's.
-
-    But the letters that came afterwards, the ones pushed under our doors, were exact.
-
-    Mr Manning's named his wife, and her hospital, and the year she died.
-
-    Mine named the day I was sent forward, and the officer who signed the order.
+    But now I feel this could be relevant.
     """
 
-    """
-    I let that sit with them a moment.
-    """
+    captain """
+    It sure is, since I was there as well you see,
 
-    broken """
-    Whoever brought us here praised us for things any clerk could find in a newspaper.
-
-    And then, once we were safely inside, showed us the things nobody could.
-
-    That is not a hostess who has run out of money and lost her nerve.
-
-    That is somebody who has spent months among our lives, and who is not finished with them.
-    """
-
-    """
-    The doctor has gone the colour of the sheet across his knees.
-
-    Miss Marsh says nothing at all, which from her is a great deal.
+    I was ...
     """
 
     nurse """
-    Months.
+    Oh my god!
+
+    So was I.
     """
 
-    broken """
-    Months.
+    """
+    A pause followed that declaration.
+
+    Everyone realises now that it cannot be a coincidence anymore.
+    """
+
+    captain """
+    You were miss Marsh?
+    """
+
+    nurse """
+    Yes, as a very young nurse
     """
 
     return
 
 
-# GOOD question - nobody in this room can clear anybody else, which makes a
-# shut door behind four people worse than an open road under six.
 label broken_day3_morning_question_culprit:
 
     $ broken_details.saved_variables['day3_morning_good_questions'] += 1
 
     broken """
-    Then let me put a plain question to the room.
-
-    Those letters were not posted to us.
-
-    They were carried through this house in the night and pushed under our doors.
-
-    Can any one of you tell me who carried them?
+    I also have another theory I would like to share with you.
     """
 
-    """
-    Nobody answers.
+    # When everyone is suspicious of the others: AMELIA BAXTER turns the suspicion towards him, and now you have to show you face or not. then DEATH, if not, people do not believe you more
+        # TimedMenuChoice("Take off the mask and show them your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
 
-    Miss Baxter looks at the doctor.
-
-    The doctor looks at Mr Manning.
-
-    Mr Manning, for once, looks at nobody at all.
-    """
-
-    broken """
-    No.
-
-    Neither can I.
-
-    And that is precisely my difficulty with leaving four of you sitting in this house.
-    """
-
-    nurse """
-    You are saying that one of us wrote them.
-    """
-
-    broken """
-    I am saying I cannot prove that none of us did.
-
-    The staff had keys to this house, certainly.
-
-    So has every person standing in this room.
-
-    If I am wrong, we have a long dull walk and a good story for the sergeant.
-
-    If I am right, then four of you will sit behind a shut door all afternoon, and one of you will already be on the inside of it.
-    """
-
-    """
-    Nobody has an answer to that.
-
-    Miss Marsh's hands have gone quite still in her lap, which I have not seen once all weekend.
-
-    Even Miss Baxter has stopped shaking her head.
-    """
 
     return
 
 
-# WEAK question - he is right about the tree and cannot show them a thing.
-# They walk past the saw cut in the afternoon, whichever way the morning goes.
-label broken_day3_morning_question_tree:
+label broken_day3_morning_question_letters:
 
-    broken """
-    Captain, the tree across the road.
+    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
 
-    You looked at it yourself on Saturday.
-
-    Would you swear a storm brought it down?
-    """
-
-    captain """
-    I would swear I do not know.
-
-    The crown was in the ditch and the wind had been at it all night.
-
-    I did not examine the stump with a glass, Mr Moody.
-
-    I will not swear to a thing I did not see.
-    """
-
-    broken """
-    But if it were cut...
-    """
-
-    captain """
-    If.
-
-    I have been a soldier long enough to be careful with that word.
-    """
-
-    psychic """
-    There, you hear it for yourselves.
-
-    Mr Moody has raised us an entire cathedral upon the word if.
-
-    A tree fell in a storm, and a poor young man died in his sleep, and upon those two sorrows we are asked to walk seven miles through a wood.
-    """
-
-    """
-    Ten minutes gone, and a good deal of ground with them.
-
-    I should have kept the tree to myself until I could stand somebody in front of the stump.
-    """
+    # TODO NOTHING new is learned, we cover this before
 
     return
 
