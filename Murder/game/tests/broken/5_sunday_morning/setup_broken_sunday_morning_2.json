@@ -19,8 +19,13 @@
         },
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "Ask who carried the letters through the house",
+            "selected": "What if Lady Claythorn is not the culprit?",
             "redirect": "broken_day3_morning_question_culprit"
+        },
+        {
+            "menu": "broken_day3_morning_menu_mask",
+            "selected": "Deny it. She was dreaming in the dark",
+            "redirect": "broken_day3_morning_deny_mask"
         },
         {
             "menu": "broken_day3_morning_menu_convince",

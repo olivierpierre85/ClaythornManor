@@ -25,8 +25,13 @@ The four questions:
   studied them all. Reads the `doctor_boxer` observation for its opening
   lines only, never as a condition, so two good questions stay reachable for
   every player.
-- `..._question_culprit` (GOOD) — nobody in the room can say who carried the
-  letters, so a shut door behind four people is worse than an open road.
+- `..._question_culprit` (GOOD) — if Lady Claythorn did not write the letters
+  then nobody may be crossed off, so a shut door behind four people is worse
+  than an open road. Miss Baxter answers it by claiming she saw beneath the
+  mask in the night, which opens a second menu
+  (`broken_day3_morning_menu_mask`): deny it (`..._deny_mask`, the Captain
+  hands the argument back and the question still counts) or take the mask off
+  (`..._show_face`, the arrest and `broken_ending_burned`).
 - `..._question_tree` (WEAK) — the Captain will not swear the tree was cut,
   and Miss Baxter uses the doubt against him.
 - `..._question_poison` (WEAK) — the doctor rules out arsenic for Ted
@@ -51,7 +56,8 @@ No intuition, no menus at all. The forced split -> the two-man walk.
 
 ## setup_broken_sunday_morning_2.json
 `unlocked_endings: [ambushed]`. The Boxer Rebellion and the culprit questions
-(both good) plus the tree -> `left_together` -> the departure of six.
+(both good, the mask accusation denied) plus the tree -> `left_together` ->
+the departure of six.
 
 ## setup_broken_sunday_morning_3.json
 `unlocked_endings: [ambushed]`. The tree and the poison, then only one good
