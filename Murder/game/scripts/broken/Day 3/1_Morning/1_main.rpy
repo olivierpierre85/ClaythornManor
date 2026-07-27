@@ -33,9 +33,9 @@ label broken_day3_morning:
     $ play_music('mysterious', 2)
 
     """
-    Dawn comes when I wake up, stiff in my watch chair.
+    Dawn has come by the time I wake, stiff in my watch chair.
 
-    I can't believe I fell asleep.
+    I cannot believe I fell asleep.
 
     Captain Sinha is looking at me with a hint of reproach.
     """
@@ -43,7 +43,7 @@ label broken_day3_morning:
     captain """
     I see you managed a little sleep, Mr Moody.
 
-    It is all right, I did not.
+    It is quite all right, I did not.
 
     Do not worry, nothing happened during the night.
     """
@@ -65,7 +65,7 @@ label broken_day3_morning:
 
     Samuel Manning is already back to drinking from his pocket flask.
 
-    The ladies have managed to make themselves presentable, and Captain Sinha looks as though he had a normal night's sleep.
+    The ladies have managed to make themselves presentable, and Captain Sinha looks as though he had had a perfectly normal night's sleep.
 
     I wonder what I look like, but it hardly matters now.
 
@@ -174,7 +174,7 @@ label broken_day3_morning:
 
     call run_menu(TimedMenu("broken_day3_morning_menu_convince", [
         TimedMenuChoice("Talk about the Boxer Rebellion{{observation}}", 'broken_day3_morning_question_boxer', 10, condition="broken_details.threads.is_unlocked('doctor_boxer')"),
-        TimedMenuChoice("Talk more about the letters", 'broken_day3_morning_question_letter', 10),
+        TimedMenuChoice("Talk more about the letters", 'broken_day3_morning_question_letters', 10),
         TimedMenuChoice("What if Lady Claythorn is not the culprit?", 'broken_day3_morning_question_culprit', 10),
         TimedMenuChoice("Show them the bottle of rat poison", 'broken_day3_morning_question_poison', 10),
         TimedMenuChoice("Take off the mask and show them your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
@@ -234,170 +234,7 @@ label broken_day3_morning:
     jump broken_day3_afternoon
 
 # ------------------------------------
-#   THE QUESTIONS
-#
-#   Two of the four move the room. Both weak ones are things Moody believes
-#   and cannot prove this morning, and the afternoon proves him right about
-#   the tree once it is far too late to matter.
-# ------------------------------------
-# GOOD question - the invitations were written by somebody who studied us all.
-# The doctor_boxer observation only changes how Moody opens: knowing the
-# answer, he asks the doctor to repeat it, otherwise he asks blind and gets
-# the same one. It is deliberately not a condition on the choice, since two
-# good questions must stay reachable for every player.
-label broken_day3_morning_question_boxer:
-
-    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
-
-    broken """
-    Doctor, I remember you told me you served in the Boxer Rebellion.
-
-    Was that correct?
-    """
-
-    doctor """
-    It was, that was my first job as a field surgeon.
-    """
-
-    """
-    It is dangerous to talk as Thomas here, I do not know all of the details of his part in this conflict.
-
-    But I feel like I need to if I want to prove a point.
-    """ 
-
-    broken """
-    Right, that struck me as odd.
-
-    You see, I fought in this war as well.
-    """
-
-    doctor """
-    Really, why didn't you say it before?
-    """
-
-    broken """
-    I do not like to dwell on the past much.
-
-    But now I feel this could be relevant.
-    """
-
-    captain """
-    It sure is, since I was there as well you see,
-
-    I was ...
-    """
-
-    nurse """
-    Oh my god!
-
-    So was I.
-    """
-
-    """
-    A pause followed that declaration.
-
-    Everyone realises now that it cannot be a coincidence anymore.
-    """
-
-    captain """
-    You were miss Marsh?
-    """
-
-    nurse """
-    Yes, as a very young nurse
-    """
-
-    return
-
-
-label broken_day3_morning_question_culprit:
-
-    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
-
-    broken """
-    I also have another theory I would like to share with you.
-    """
-
-    # When everyone is suspicious of the others: AMELIA BAXTER turns the suspicion towards him, and now you have to show you face or not. then DEATH, if not, people do not believe you more
-        # TimedMenuChoice("Take off the mask and show them your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
-
-
-    return
-
-
-label broken_day3_morning_question_letters:
-
-    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
-
-    # TODO NOTHING new is learned, we cover this before
-
-    return
-
-
-# WEAK question - the poison proves nothing except that Moody has been
-# carrying a bottle of it about since Friday. It hands Miss Marsh a stick to
-# beat him with, and sets up the arrest if he later takes off the mask.
-label broken_day3_morning_question_poison:
-
-    broken """
-    There is something none of you have seen.
-    """
-
-    """
-    I take the bottle from my coat and set it down on the billiard table.
-
-    The label is plain enough, and so is the skull printed above it.
-    """
-
-    broken """
-    I took this from the scullery on Friday night.
-
-    Doctor, I believe Ted Harring was poisoned.
-    """
-
-    """
-    Doctor Baldwin picks the bottle up, turns it about, and hands it back to me with something close to pity.
-    """
-
-    doctor """
-    Arsenic, Mr Moody.
-
-    Had that young man swallowed this, he would have died on his knees, and the whole floor would have heard about it for hours.
-
-    He was quiet, and he was cold, and there was not a mark upon him.
-
-    I examined him myself.
-    """
-
-    nurse """
-    And how long have you been carrying it about, Mr Moody?
-    """
-
-    broken """
-    Since Friday.
-
-    For safe keeping.
-    """
-
-    nurse """
-    Quite.
-    """
-
-    """
-    Ten minutes gone, and I have put a bottle of poison in Miss Marsh's mind with my own name attached to it.
-
-    That was not clever.
-    """
-
-    return
-
-
-# ------------------------------------
 #   THE TRAP - showing the true face
-#
-#   An impostor under a dead man's name, in a house with a murdered man in
-#   it. The Captain does the correct thing, and the correct thing kills
-#   Moody.
 # ------------------------------------
 label broken_day3_morning_show_face:
 
@@ -442,7 +279,9 @@ label broken_day3_morning_show_face:
 
     He came home from Flanders behind that mask, and he died this spring in a rented room in Liverpool.
 
-    His invitation arrived after he was buried. I took his name, and his face, and came here in his place, because I am a journalist and an invitation to a dead man is a story.
+    His invitation arrived after he was buried.
+
+    I took his name, and his face, and came here in his place, because I am a journalist and an invitation to a dead man is a story.
 
     Everything else I have told you this weekend is true.
 
@@ -472,7 +311,9 @@ label broken_day3_morning_show_face:
     """
 
     broken """
-    Captain, you know what was under my door. You read it yourself.
+    Captain, you know what was under my door.
+
+    You read it yourself.
     """
 
     captain """
@@ -556,7 +397,7 @@ label broken_day3_morning_show_face:
     """
 
     broken """
-    Captain. Listen to me.
+    Captain, listen to me.
 
     Do not leave this house with four people in it and one door.
     """
@@ -645,7 +486,9 @@ label broken_day3_morning_leave_pair:
     broken """
     The rest of you keep together, with the door shut until we come back.
 
-    Together, mind. Nobody wanders this house alone, not for a moment, not for any reason.
+    Together, mind.
+
+    Nobody wanders this house alone, not for a moment, not for any reason.
     """
 
     nurse """
@@ -667,7 +510,7 @@ label broken_day3_morning_leave_pair:
     """
 
     """
-    We take our coats, exit the billiard room and leave Claythorn Manor behind us.
+    We take our coats, leave the billiard room, and put Claythorn Manor behind us.
     """
 
     return
@@ -683,7 +526,9 @@ label broken_day3_morning_departure_together:
     """
     I stop there, and let the room sit with it.
 
-    Nobody says anything clever. Nobody says anything at all for a while.
+    Nobody says anything clever.
+
+    Nobody says anything at all for a while.
 
     That silence is worth more than any of the words I have just spent.
     """
@@ -737,7 +582,9 @@ label broken_day3_morning_departure_together:
     """
     It takes the better part of an hour to make six people fit for the journey.
 
-    Coats and sound boots. Bread and cold water from the kitchen.
+    Coats and sound boots.
+
+    Bread and cold water from the kitchen.
 
     At half past ten I open the front door, and we step out into the grey morning.
 
