@@ -43,7 +43,26 @@
       "Bash(git -C /c/Projects/ClaythornManor show fe34457d -- docs/tasks/story.md docs/next_tasks.md)",
       "Bash(git -C /c/Projects/ClaythornManor log --oneline -3 -- \"Murder/game/tests/broken/5_sunday_morning\")",
       "Bash(git -C /c/Projects/ClaythornManor log --oneline --all -- \"Murder/game/scripts/broken/Day 3/1_Morning/1_main.rpy\")",
-      "Bash(git -C /c/Projects/ClaythornManor show e809bec0:\"Murder/game/scripts/broken/Day 3/1_Morning/1_main.rpy\")"
+      "Bash(git -C /c/Projects/ClaythornManor show e809bec0:\"Murder/game/scripts/broken/Day 3/1_Morning/1_main.rpy\")",
+      "Bash(python tools/scene_comfy.py entrance_hall --chars captain host broken --dry-run)",
+      "Bash(python tools/scene_comfy.py entrance_hall --chars captain host broken --guidance 3.0 --seed 1924 -n 1 --stem entrance_hall_group_night_g30)",
+      "Bash(python tools/scene_comfy.py entrance_hall --chars captain host broken --guidance 3.0 --seed 1924 -n 1 --stem eh_v2_g30)",
+      "Bash(python tools/scene_comfy.py entrance_hall --chars captain host broken --guidance 3.5 --seed 1924 -n 1 --stem eh_v2_g35)",
+      "Bash(python -c \"import sys,json;q=json.load\\(sys.stdin\\);print\\('running',len\\(q.get\\('queue_running',[]\\)\\),'pending',len\\(q.get\\('queue_pending',[]\\)\\)\\)\")",
+      "Bash(curl -s -m 10 http://127.0.0.1:8188/prompt)",
+      "Bash(python -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('queue_remaining',d.get\\('exec_info',{}\\).get\\('queue_remaining'\\)\\)\")",
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars captain host broken --show-regions)",
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars captain host broken --show-regions --stem eh_regions_v2)",
+      "Bash(time python tools/scene_comfy.py insert entrance_hall --chars broken --model klein9b --seed 1924 --stem ab_broken_klein)",
+      "Bash(curl -s -m 20 http://127.0.0.1:8188/history/0142bd77-1bfb-4c4a-990c-0e4dc4a7a07e)",
+      "Bash(curl -s -m 30 http://127.0.0.1:8188/object_info/CLIPLoader)",
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars broken --model dev --seed 1924 --stem ab_broken_dev)",
+      "Bash(python -c \"import sys,json;print\\('queue',json.load\\(sys.stdin\\).get\\('exec_info',{}\\).get\\('queue_remaining'\\)\\)\")",
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars broken --model klein9b --seed 1924 --stem ab_broken_klein)",
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars broken --model dev --seed 1924 --stem ab2_broken_dev)",
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars broken --model dev --seed 1924 --guidance 3.8 --char-mp 1.0 --stem ab3_broken_dev_g38)",
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars broken --model dev --seed 1924 --guidance 3.8 --char-mp 1.0 --stem ab4_broken_masked)",
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars captain host broken --model dev --seed 1924 --guidance 3.8 --char-mp 1.0 --stem eh_trio)"
     ],
     "additionalDirectories": [
       "C:\\Users\\olivi\\AppData\\Local\\Temp\\claude\\c--Projects-ClaythornManor\\3a3fbf2c-538d-43ae-b18c-000000000000"

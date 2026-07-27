@@ -208,6 +208,33 @@
         "right"
       ],
       "default": "left"
+    },
+    {
+      "id": "sceneChars",
+      "type": "promptString",
+      "description": "Characters to place in the room, separated by spaces",
+      "default": "captain host broken"
+    },
+    {
+      "id": "sceneVariant",
+      "type": "pickString",
+      "description": "Which lighting variant of the room?",
+      "options": [
+        "night",
+        "day"
+      ],
+      "default": "night"
+    },
+    {
+      "id": "sceneModel",
+      "type": "pickString",
+      "description": "Which model? klein9b fits in VRAM and is much faster, dev has the best likeness",
+      "options": [
+        "klein9b",
+        "dev",
+        "klein4b"
+      ],
+      "default": "klein9b"
     }
   ],
   "tasks": [
@@ -464,6 +491,30 @@
         "${input:turnDirection}",
         "--count",
         "${input:characterCount}"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Scene: Bake characters into a location (Flux 2 Dev)",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "c:\\Projects\\ClaythornManor\\tools\\scene_comfy.py",
+        "insert",
+        "${input:locationId}",
+        "--chars",
+        "${input:sceneChars}",
+        "--variant",
+        "${input:sceneVariant}",
+        "--model",
+        "${input:sceneModel}"
       ],
       "presentation": {
         "reveal": "always",
