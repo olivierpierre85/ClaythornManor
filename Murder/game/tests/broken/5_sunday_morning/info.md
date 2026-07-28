@@ -29,9 +29,18 @@ The four questions:
   then nobody may be crossed off, so a shut door behind four people is worse
   than an open road. Miss Baxter answers it by claiming she saw beneath the
   mask in the night, which opens a second menu
-  (`broken_day3_morning_menu_mask`): deny it (`..._deny_mask`, the Captain
-  hands the argument back and the question still counts) or take the mask off
-  (`..._show_face`, the arrest and `broken_ending_burned`).
+  (`broken_day3_morning_menu_mask`) with four answers. Only one of them is
+  survivable:
+    - `..._mask_frighten` — plead the horror of the face, which brings Doctor
+      Baldwin forward offering to look alone. Refusing him would say the thing
+      plainly, so the mask comes off anyway.
+    - `..._mask_honour` — plead a soldier's honour. Captain Sinha takes his
+      part, the mask stays on, and the question still counts.
+    - `..._mask_decency` — take offence. Nobody buys it with a dead man
+      upstairs, and the mask comes off anyway.
+    - `..._show_face` — take it off at once.
+  Every route but the honour one falls through to
+  `..._mask_removed` (shared), then the arrest and `broken_ending_burned`.
 - `..._question_tree` (WEAK) — the Captain will not swear the tree was cut,
   and Miss Baxter uses the doubt against him.
 - `..._question_poison` (WEAK) — the doctor rules out arsenic for Ted
@@ -56,8 +65,8 @@ No intuition, no menus at all. The forced split -> the two-man walk.
 
 ## setup_broken_sunday_morning_2.json
 `unlocked_endings: [ambushed]`. The Boxer Rebellion and the culprit questions
-(both good, the mask accusation denied) plus the tree -> `left_together` ->
-the departure of six.
+(both good, the mask accusation answered on a soldier's honour) plus the tree
+-> `left_together` -> the departure of six.
 
 ## setup_broken_sunday_morning_3.json
 `unlocked_endings: [ambushed]`. The tree and the poison, then only one good

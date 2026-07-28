@@ -37,13 +37,19 @@ label broken_day3_morning:
 
     I cannot believe I fell asleep.
 
-    Captain Sinha is looking at me with a hint of reproach.
+    I check my mask at once, and find it slightly crooked.
+
+    I adjust it and look about the room, but nobody is watching me.
+
+    I turn to Captain Sinha, who is sitting perfectly straight on his chair.
     """
 
     captain """
-    I see you managed a little sleep, Mr Moody.
+    Ah, Mr Moody, you are awake.
 
-    It is quite all right, I did not.
+    I believe you managed a little sleep.
+
+    I did not, but it is quite all right.
 
     Do not worry, nothing happened during the night.
     """
@@ -65,7 +71,7 @@ label broken_day3_morning:
 
     Samuel Manning is already back to drinking from his pocket flask.
 
-    The ladies have managed to make themselves presentable, and Captain Sinha looks as though he had had a perfectly normal night's sleep.
+    The ladies have managed to make themselves presentable, and Captain Sinha looks as though he had passed a perfectly ordinary night in his own bed.
 
     I wonder what I look like, but it hardly matters now.
 
@@ -169,15 +175,14 @@ label broken_day3_morning:
     But how can I convince everyone of this?
     """
 
-    # TODO Lady CLaythorn culprit requires THREAD? but which one?
     $ time_left = 30
 
     call run_menu(TimedMenu("broken_day3_morning_menu_convince", [
+        TimedMenuChoice("Show them the bottle of rat poison{{object}}", 'broken_day3_morning_question_poison', 10),
         TimedMenuChoice("Talk about the Boxer Rebellion{{observation}}", 'broken_day3_morning_question_boxer', 10, condition="broken_details.threads.is_unlocked('doctor_boxer')"),
         TimedMenuChoice("Talk more about the letters", 'broken_day3_morning_question_letters', 10),
-        TimedMenuChoice("What if Lady Claythorn is not the culprit?", 'broken_day3_morning_question_culprit', 10),
-        TimedMenuChoice("Show them the bottle of rat poison", 'broken_day3_morning_question_poison', 10),
-        TimedMenuChoice("Take off the mask and show them your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
+        TimedMenuChoice("What if Lady Claythorn is not the culprit?", 'broken_day3_morning_question_culprit', 10, condition="is_choice_already_chosen('broken_day3_morning_menu_convince', 'broken_day3_morning_question_boxer')"),
+
         TimedMenuChoice("Let it go. Leave with Captain Sinha", 'generic_cancel', 0, early_exit=True),
     ]))
 

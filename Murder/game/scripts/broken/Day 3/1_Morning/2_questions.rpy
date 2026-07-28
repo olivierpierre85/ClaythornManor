@@ -2,7 +2,6 @@
 # ------------------------------------
 #   THE QUESTIONS
 #
-#   Good discussions points can save Moody
 # ------------------------------------
 label broken_day3_morning_question_boxer:
 
@@ -33,11 +32,13 @@ label broken_day3_morning_question_boxer:
     """
 
     doctor """
-    Really? Why did you not say so before?
+    Really?
+
+    Why did you not say so before?
     """
 
     broken """
-    I do not like to dwell on the past much.
+    I do not like to dwell on the past.
 
     But now I feel this could be relevant.
     """
@@ -45,7 +46,7 @@ label broken_day3_morning_question_boxer:
     captain """
     It is indeed, for I was there myself.
 
-    I was ...
+    I was...
     """
 
     nurse """
@@ -55,7 +56,7 @@ label broken_day3_morning_question_boxer:
     """
 
     """
-    A pause followed that declaration.
+    A pause follows that declaration.
     """
 
     captain """
@@ -105,7 +106,9 @@ label broken_day3_morning_question_boxer:
     """
 
     drunk """
-    China? No, I have never been there.
+    China?
+
+    No, I have never been there.
 
     And certainly not during any rebellion.
 
@@ -145,7 +148,7 @@ label broken_day3_morning_question_boxer:
 
     But we may still try, between ourselves, to understand what happened.
 
-    First, do you recognise any of the others?
+    Now, do you recognise any of the others?
 
     For myself, I do not recognise any of you.
     """
@@ -217,7 +220,7 @@ label broken_day3_morning_question_boxer:
     """
 
     nurse """
-    Nor can I, sorry.
+    Nor can I, I am sorry.
     """
 
     broken """
@@ -229,7 +232,7 @@ label broken_day3_morning_question_boxer:
     """
     But Thomas could have.
 
-    I feel a pang at my heart when I think of him.
+    I feel a pang in my heart when I think of him.
     """
 
     broken """
@@ -240,28 +243,19 @@ label broken_day3_morning_question_boxer:
 
 
 # GOOD question - if Lady Claythorn did not write the letters, then nobody in
-# this room may be crossed off, and four people shut behind a door with the
-# fifth is worse than six on an open road.
-#
-# Miss Baxter answers it by turning the suspicion on the mask: she claims she
-# saw beneath it during the night and found nothing wrong with the face. That
-# forces the binary choice at the end of the label:
-#   - hold the lie -> broken_day3_morning_deny_mask, the argument still stands
-#   - take the mask off -> broken_day3_morning_show_face, arrest and death
+# this room may be crossed off the list.
 label broken_day3_morning_question_culprit:
 
     $ broken_details.saved_variables['day3_morning_good_questions'] += 1
 
     broken """
-    I also have another theory I would like to share with you.
+    I have another theory I should like to share with you.
     """
 
     broken """
-    Since last night we have all settled on Lady Claythorn.
+    Last night we all settled on Lady Claythorn being behind this.
 
-    She lied to us, she emptied the house behind our backs, and she took the only motorcar.
-
-    I would ask you to consider that she may not be the one who wrote the letters.
+    But what if she was not?
     """
 
     doctor """
@@ -275,31 +269,23 @@ label broken_day3_morning_question_culprit:
 
     I am certain she came here to play a part.
 
-    But think of what was in those letters.
-    """
-
-    broken """
-    Mr Manning's named his wife, and the hospital, and the year she died.
-
-    Mine named a paper signed in France, and the officer who put his name to it.
-
-    Whoever wrote them had been through our lives with a pair of tweezers.
+    But now I am not so sure she is the only one involved.
     """
 
     captain """
-    Go on.
+    Well of course not, she had all of her staff to help her.
     """
 
     broken """
-    Then consider last night.
+    I do not mean the staff alone.
 
-    Whoever it is had a house full of sleeping people and every key in it.
+    I think the connection some of us share with the Boxer Rebellion must play a central part in what is happening this weekend.
 
-    Instead the staff drove off and left us breathing, and we are still here to complain about it.
+    And as Miss Marsh said, Lady Claythorn was in all likelihood only a child when that happened.
 
-    That is not a murderer finishing her work.
+    Even if she was in China at the time, which is a considerable if, how much could she truly remember?
 
-    That is a hired household getting clear of it.
+    I believe she was only helping somebody else.
     """
 
     nurse """
@@ -307,78 +293,132 @@ label broken_day3_morning_question_culprit:
     """
 
     broken """
-    That is my whole point, Miss Marsh.
+    Well, we assumed that those of us remaining here must be innocent, since we are all shut in together.
 
-    If Mr Harring was helped out of the world on Friday night, somebody stood in his room to do it.
+    But what if that is not the case?
 
-    And nothing whatever obliges that somebody to have been sitting in the motorcar.
+    What if there is someone here willing to do us harm?
+    """
+
+    captain """
+    You mean that someone here could be responsible for this weekend, and is playing the victim like the rest of us?
+    """
+
+    broken """
+    Precisely.
+    """
+
+    captain """
+    That is rather far-fetched, Mr Moody.
+
+    Whom amongst us do you believe capable of such a thing?
+
+    I think it safe to say that everyone could be a suspect.
+    """
+
+    broken """
+    Well, that I do not know.
     """
 
     """
-    I watch it take hold.
+    I pause there and watch my words take hold.
 
     Doctor Baldwin looks at Miss Marsh.
 
     Miss Marsh looks at Mr Manning.
 
-    Nobody looks at anybody for very long.
+    Miss Baxter stares at Captain Sinha.
 
-    It is an ugly thing to do to a room, and I have done it deliberately.
+    Everybody looks uneasy.
     """
 
     broken """
-    So I cannot name a culprit for you.
+    So I cannot name anyone for the moment, nor do I wish or need to.
 
-    I say only that we cannot cross a single name off, and that four of you shut behind a door with the fifth is precisely the arrangement our letter writer would choose.
+    I say only that we cannot wholly trust anybody, and that splitting up would give the culprit, if there is one, every advantage.
 
-    On an open road, in daylight, nobody is ever alone with anybody.
+    If we keep together at all times, and never let anybody out of our sight, we should be able to leave unharmed.
     """
 
     captain """
-    That is a serious thing to say.
+    That is a great deal to suppose, Mr Moody.
 
-    It is also, I am sorry to admit, a reasonable one.
-    """
+    To my mind the dangerous people have already left this house.
 
-    psychic """
-    Reasonable.
-
-    Yes, I dare say it is.
-
-    And how very neatly it is arranged, Captain, that the one man who profits by our suspicion of one another is the man who has just planted it among us.
+    Lady Claythorn may be too young to have met us in China, but her butler is not.
     """
 
     broken """
-    I profit by nothing, Miss Baxter.
+    True, but I do not think we should suspect the staff.
+    """
 
-    I have put myself on the list with the rest of you.
+    doctor """
+    Unless the butler was no servant at all, but playing a part.
+    """
+
+    """
+    I consider that for a moment.
+    """
+
+    broken """
+    True.
+
+    I confess I had not thought of it in that way.
+
+    But there is no way to prove it, so I should still counsel caution.
     """
 
     psychic """
-    Have you indeed.
+    Your argument is perfectly reasonable, Mr Moody.
 
-    Then you will not mind my saying the thing that has sat on my chest since first light.
+    But it supposes one thing, that we are to trust you.
+
+    You have said it yourself, everyone here could be dangerous.
+
+    That includes you.
+
+    And wandering into the woods seems more dangerous to me than staying here.
+
+    What if that is what you wanted?
+    """
+
+    broken """
+    I see.
+
+    It is true, I suppose, that I might be considered a suspect as well.
+
+    But why should I have raised the matter at all, in that case?
     """
 
     """
-    She folds her hands in her lap and takes her time over it, and I feel the room turn like a tide.
+    There is a pause now.
+
+    I can see that the argument has struck home with some of them.
+    """
+
+    nurse """
+    Perhaps you thought it the only way to make us trust you.
+
+    That would have been very clever indeed.
+
+    I am not saying it is the case, only that, as you said yourself, we should not trust anyone.
+    """
+
+    psychic """
+    And there is something else that has been nagging at me.
     """
 
     psychic """
     I slept very badly.
 
-    Some hour in the small of the night I woke, and the fire had burned down to ash, and every soul about me was asleep.
+    In the small hours of the night I woke.
 
-    You were asleep as well, Mr Moody, with your head fallen against the wing of your chair.
+    I saw that you had fallen asleep, Mr Moody, with your head against the wing of your chair.
 
     And the mask had come away from your face.
-    """
 
-    """
-    The room goes quiet in a manner I do not care for at all.
-    """
+    Not by much, perhaps an inch.
 
-    psychic """
     I looked at you a long while.
 
     I am not a squeamish woman, and I had prepared myself for something dreadful.
@@ -389,163 +429,227 @@ label broken_day3_morning_question_culprit:
 
     No scar.
 
-    Nothing but a man's face, as whole as my own.
+    Nothing but perfectly ordinary skin.
+
+    I assumed at the time that the mask was simply larger than it need be.
+
+    But now I am not so sure.
     """
 
-    nurse """
-    Miss Baxter, are you quite certain of what you saw?
+    """
+    Everybody is silent.
     """
 
     psychic """
-    I have spent a lifetime being told what I could not possibly have seen.
+    Mr Moody, I know it is very rude of me to ask.
 
-    I know the difference between a vision and a face.
-    """
+    But if we are in such danger as you would have us believe, then you would not mind showing us your true face, only to prove that we may trust you.
 
-    doctor """
-    Mr Moody.
-
-    I have never once pressed you about the mask, and I hope you will grant me that.
-
-    But I am a surgeon, and in three days you have not asked me for so much as an aspirin.
-
-    That did strike me at the time.
-    """
-
-    drunk """
-    A false face.
-
-    Half of London is wearing one.
-
-    Hers included.
-    """
-
-    """
-    Nobody laughs.
-
-    Captain Sinha has not moved at all, and that is a good deal worse than if he had.
-    """
-
-    captain """
-    Mr Moody, a moment ago you told us that nobody in this room may be crossed off.
-
-    You will understand that this includes you.
-
-    And that it is now the only question in front of us.
+    I am sorry, but I do not think I could trust you if you did not.
     """
 
     """
     And there it is.
 
-    Everything I have built these three days rests on a piece of painted tin and a woman who could not sleep.
+    It had always been a possibility that I should be found out.
 
-    I can deny it. The fire was out, she was three parts asleep, and the mask covers what it covers.
-
-    Or I can take the wretched thing off, and hand them the truth, and pray the truth is worth something in this house.
+    Still, I am not at all sure what I ought to do now.
     """
 
     call run_menu(TimedMenu("broken_day3_morning_menu_mask", [
-        TimedMenuChoice("Deny it. She was dreaming in the dark", 'broken_day3_morning_deny_mask', 0, early_exit=True),
-        TimedMenuChoice("Take off the mask and show them your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
+        TimedMenuChoice("Do not show. You do not wish to frighten anyone", 'broken_day3_morning_mask_frighten', 0, early_exit=True),
+        TimedMenuChoice("Do not show. Plead a soldier's honour", 'broken_day3_morning_mask_honour', 0, early_exit=True),
+        TimedMenuChoice("Do not show. Plead common decency", 'broken_day3_morning_mask_decency', 0, early_exit=True),
+        TimedMenuChoice("Take off the mask and show your true face", 'broken_day3_morning_show_face', 0, early_exit=True),
     ]))
 
     return
 
 
 # ------------------------------------
-#   HOLDING THE LIE
+#   THE MASK - SPARING THEM THE SIGHT
 #
-#   The mask stays on and nothing is proved either way. The Captain hands the
-#   argument back, so the question still counts, but the room will not look at
-#   Moody in the same way again.
+#   Pleading the horror of the face is the one answer that fetches the doctor
+#   out of his chair. Once he offers to look alone and the Captain calls the
+#   offer reasonable, there is no way back -> burned ending.
 # ------------------------------------
-label broken_day3_morning_deny_mask:
-
-    """
-    Thomas would have said nothing at all.
-
-    Thomas let people look, and waited, and they always looked away first.
-
-    So I do not hurry.
-    """
+label broken_day3_morning_mask_frighten:
 
     broken """
-    Miss Baxter, the fire was out and you had been three parts asleep since midnight.
+    Miss Baxter, you are quite right, the mask is larger than my wounds, as it must be to avoid any accident.
 
-    What you saw was my cheek.
-
-    The mask sits above it, it has never covered that side of my jaw, and there has never been anything the matter with it.
-    """
-
-    psychic """
-    That is not what I saw.
-    """
-
-    broken """
-    It is what there was to see.
+    But the rest of what lies beneath it is not a thing to set before a lady.
     """
 
     """
-    I keep my voice level, for a raised voice is a confession in this company.
+    Miss Baxter hesitates.
+
+    And I can see that the argument lands with most of the others.
+
+    I know that nobody would willingly ask to look behind my mask.
+
+    Then Doctor Baldwin sits forward, and I understand, far too late, what I have done.
     """
 
     doctor """
-    It would settle the matter in ten seconds, you know.
+    Then let me look.
 
-    I should not even need to touch it.
+    There is nothing under that mask I have not had my hands in.
+
+    Let us step into another room, the two of us alone, and no lady need see anything at all.
+
+    I shall come back and tell them you are what you say you are, and there will be an end of it.
+    """
+
+    captain """
+    That sounds reasonable enough, Doctor.
+
+    Do you not agree, Mr Moody?
+    """
+
+    """
+    And there it is.
+
+    I can see in their faces that there is no going back now.
     """
 
     broken """
     No, Doctor.
 
-    I have worn this thing since Flanders, so that men might stop staring at me over their soup.
+    Thank you, but no.
 
-    I shall not take it off in a cold room to satisfy a lady who dreamed badly.
+    If it is to be seen at all, it had better be seen by everybody at once.
+    """
+
+    jump broken_day3_morning_mask_removed
+
+
+# ------------------------------------
+#   THE MASK - A SOLDIER'S HONOUR
+#
+#   The one answer that holds. Nothing is proved either way, but Captain Sinha
+#   takes his part and nobody dares press it further, so the mask stays on and
+#   the question still counts.
+# ------------------------------------
+label broken_day3_morning_mask_honour:
+
+    broken """
+    Miss Baxter, I have worn this thing since Flanders.
+
+    I wore it home on the train, and I have worn it at every table I have sat at since, so that men might stop staring at me over their soup.
+
+    I shall not take it off in a cold room to settle a question that was put to me in the dark.
+
+    I have given this house three days of plain answers.
+
+    I ask for the one thing a man who served is owed, a little respect.
+
+    Is it too much to ask?
     """
 
     """
-    That is the correct answer.
-
-    It is the answer Thomas would have given, near enough word for word, and it is the answer that stops a decent Englishman where he stands.
-
-    Doctor Baldwin, who is decent enough, sits back and studies the carpet.
-    """
-
-    nurse """
-    ...Very well.
-    """
-
-    psychic """
-    Very well indeed.
-    """
-
-    """
-    Nobody presses me further.
-
-    Nobody believes me either, not altogether, and that is the trouble with winning a thing on manners instead of on proof.
+    The room is quiet for a moment, then Captain Sinha speaks first.
     """
 
     captain """
-    Enough of it.
+    It is not.
 
-    Miss Baxter, whatever Mr Moody carries beneath that mask, it does not answer the point he made before you spoke.
+    I know what you have had to sacrifice, and I shall not have anyone make light of it.
 
-    Somebody wrote those letters, and I cannot prove that somebody drove away last night.
-
-    I should like an answer to that before I take any man's face into account.
+    If you wish to keep your dignity, you shall keep it.
     """
 
     """
-    The Captain has handed me my argument back whole, and I do not believe I have ever been so grateful to a man in my life.
+    He turns towards the group.
+    """
 
-    But something has shifted in this room and it will not shift back.
+    captain """
+    Besides, Mr Moody is the one who warned us of what may be happening here.
 
-    Miss Marsh has moved half a foot away from me on the couch.
+    Why should he have done so, if he meant to trick us?
 
-    And Miss Baxter is watching the window with the calm of a woman who has said her piece and is content to let it work.
+    That makes no sense to me.
+
+    I trust him, and that should be enough for you as well.
+
+    I shall not have him humiliated.
+    """
+
+    """
+    Nobody argues with him.
+
+    They may not be entirely convinced, but they will not dare question Captain Sinha's authority.
+    """
+
+    psychic """
+    ...Very well.
     """
 
     return
+
+
+# ------------------------------------
+#   THE MASK - STANDING ON DECENCY
+#
+#   Taking offence works in a drawing room and nowhere else. With a dead man
+#   upstairs nobody owes anybody manners, and the refusal is taken for the
+#   answer -> burned ending.
+# ------------------------------------
+label broken_day3_morning_mask_decency:
+
+    broken """
+    I shall pretend I did not hear that, Miss Baxter.
+
+    In any house in England that question would not have been put, and you know it as well as I do.
+
+    You are asking a man to bare his face in a billiard room to settle a bad dream.
+
+    I shall not answer it, and no one here should expect me to.
+    """
+
+    """
+    I let my voice carry, hoping to shame them.
+
+    In a drawing room that would have been the end of it.
+
+    Everybody would have looked at their feet in embarrassment.
+
+    But nobody does.
+    """
+
+    nurse """
+    I understand your anger, Mr Moody, but in the circumstances I am afraid I have no manners left this morning.
+
+    And I do not think any of us can afford them.
+    """
+
+    """
+    Mr Manning lifts his head from his flask, and for a moment the lawyer comes up through the drink.
+    """
+
+    drunk """
+    I have defended a great many men in my time.
+
+    The innocent ones are humbled, as a rule.
+
+    It is the guilty who answer with anger.
+    """
+
+    """
+    He drinks again and sinks back.
+
+    They are all looking at me now, and not one of them looks away.
+
+    I have no choice left.
+    """
+
+    broken """
+    Very well.
+
+    You shall have it your way.
+    """
+
+    jump broken_day3_morning_mask_removed
 
 
 label broken_day3_morning_question_letters:
@@ -557,8 +661,7 @@ label broken_day3_morning_question_letters:
     return
 
 
-# WEAK question - the poison proves nothing except that Moody has been
-# carrying a bottle of it about since Friday.
+# TODO
 label broken_day3_morning_question_poison:
 
     broken """
@@ -572,13 +675,12 @@ label broken_day3_morning_question_poison:
     broken """
     I took this from the scullery on Friday night.
 
-    Doctor, I believe Ted Harring could have been poisoned.
+    Doctor, I believe Ted Harring may have been poisoned.
     """
 
     """
     Doctor Baldwin picks the bottle up, turns it about, and hands it back to me with something close to pity.
     """
-
 
     nurse """
     And how long have you been carrying it about, Mr Moody?
@@ -601,23 +703,24 @@ label broken_day3_morning_question_poison:
 # ------------------------------------
 label broken_day3_morning_show_face:
 
-    $ stop_music()
-
     """
-    Words have failed, and I have one thing left that is not a word.
+    There is no escaping this.
 
-    They have spent three days looking at a piece of painted tin and calling it a man.
-
-    Let them see what has been talking to them.
+    And if I am honest with them, perhaps they will understand.
     """
 
     broken """
-    Very well.
-
-    You will not take my reasons.
-
-    Take this instead.
+    Very well then.
     """
+
+    jump broken_day3_morning_mask_removed
+
+
+# ------------------------------------
+#   THE MASK COMES OFF
+# TODO 
+# ------------------------------------
+label broken_day3_morning_mask_removed:
 
     """
     I reach up, and unfasten the mask, and set it down on the billiard table.
