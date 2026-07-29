@@ -62,7 +62,8 @@
       "Bash(python tools/scene_comfy.py insert entrance_hall --chars broken --model dev --seed 1924 --stem ab2_broken_dev)",
       "Bash(python tools/scene_comfy.py insert entrance_hall --chars broken --model dev --seed 1924 --guidance 3.8 --char-mp 1.0 --stem ab3_broken_dev_g38)",
       "Bash(python tools/scene_comfy.py insert entrance_hall --chars broken --model dev --seed 1924 --guidance 3.8 --char-mp 1.0 --stem ab4_broken_masked)",
-      "Bash(python tools/scene_comfy.py insert entrance_hall --chars captain host broken --model dev --seed 1924 --guidance 3.8 --char-mp 1.0 --stem eh_trio)"
+      "Bash(python tools/scene_comfy.py insert entrance_hall --chars captain host broken --model dev --seed 1924 --guidance 3.8 --char-mp 1.0 --stem eh_trio)",
+      "Bash(git diff *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\olivi\\AppData\\Local\\Temp\\claude\\c--Projects-ClaythornManor\\3a3fbf2c-538d-43ae-b18c-000000000000"

@@ -3,6 +3,54 @@
 #   THE QUESTIONS
 #
 # ------------------------------------
+# TODO
+label broken_day3_morning_question_letters:
+
+    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
+
+    # TODO NOTHING new is learned, we cover this before
+
+    return
+
+
+# TODO
+label broken_day3_morning_question_poison:
+
+    broken """
+    There is something none of you have seen.
+    """
+
+    """
+    I take the bottle of rat poison from my coat and set it down on the billiard table.
+    """
+
+    broken """
+    I took this from the scullery on Friday night.
+
+    Doctor, I believe Ted Harring may have been poisoned.
+    """
+
+    """
+    Doctor Baldwin picks the bottle up, turns it about, and hands it back to me with something close to pity.
+    """
+
+    nurse """
+    And how long have you been carrying it about, Mr Moody?
+    """
+
+    broken """
+    Since Friday.
+
+    For safe keeping.
+    """
+
+    nurse """
+    Quite.
+    """
+
+    return
+
+
 label broken_day3_morning_question_boxer:
 
     $ broken_details.saved_variables['day3_morning_good_questions'] += 1
@@ -466,13 +514,6 @@ label broken_day3_morning_question_culprit:
     return
 
 
-# ------------------------------------
-#   THE MASK - SPARING THEM THE SIGHT
-#
-#   Pleading the horror of the face is the one answer that fetches the doctor
-#   out of his chair. Once he offers to look alone and the Captain calls the
-#   offer reasonable, there is no way back -> burned ending.
-# ------------------------------------
 label broken_day3_morning_mask_frighten:
 
     broken """
@@ -486,9 +527,7 @@ label broken_day3_morning_mask_frighten:
 
     And I can see that the argument lands with most of the others.
 
-    I know that nobody would willingly ask to look behind my mask.
-
-    Then Doctor Baldwin sits forward, and I understand, far too late, what I have done.
+    Most of them.
     """
 
     doctor """
@@ -524,25 +563,24 @@ label broken_day3_morning_mask_frighten:
     jump broken_day3_morning_mask_removed
 
 
-# ------------------------------------
-#   THE MASK - A SOLDIER'S HONOUR
-#
-#   The one answer that holds. Nothing is proved either way, but Captain Sinha
-#   takes his part and nobody dares press it further, so the mask stays on and
-#   the question still counts.
-# ------------------------------------
 label broken_day3_morning_mask_honour:
 
     broken """
-    Miss Baxter, I have worn this thing since Flanders.
+    Miss Baxter, you might think that removing my mask is a simple request.
 
-    I wore it home on the train, and I have worn it at every table I have sat at since, so that men might stop staring at me over their soup.
+    It is not.
 
-    I shall not take it off in a cold room to settle a question that was put to me in the dark.
+    After I was injured in the trenches, do you know what the worst part was?
 
-    I have given this house three days of plain answers.
+    Not the pain, nor the fear of never living a normal life again.
 
-    I ask for the one thing a man who served is owed, a little respect.
+    It was the horror I could see in the faces of the people who saw mine bare.
+
+    You see, I wear this mask not to protect those who look at me.
+
+    But to protect myself from their reaction.
+
+    I lost so much defending my country, all I want in return is a little respect.
 
     Is it too much to ask?
     """
@@ -588,21 +626,16 @@ label broken_day3_morning_mask_honour:
     return
 
 
-# ------------------------------------
-#   THE MASK - STANDING ON DECENCY
-#
-#   Taking offence works in a drawing room and nowhere else. With a dead man
-#   upstairs nobody owes anybody manners, and the refusal is taken for the
-#   answer -> burned ending.
-# ------------------------------------
 label broken_day3_morning_mask_decency:
 
     broken """
     I shall pretend I did not hear that, Miss Baxter.
 
-    In any house in England that question would not have been put, and you know it as well as I do.
+    You are asking me to display the marks of the worst experience of my life.
 
-    You are asking a man to bare his face in a billiard room to settle a bad dream.
+    And why? Merely to settle a bad dream?
+
+    You know as well as anybody that this is a most improper proposition.
 
     I shall not answer it, and no one here should expect me to.
     """
@@ -610,17 +643,17 @@ label broken_day3_morning_mask_decency:
     """
     I let my voice carry, hoping to shame them.
 
-    In a drawing room that would have been the end of it.
+    I was certain that would be the end of it.
 
-    Everybody would have looked at their feet in embarrassment.
+    And that everybody would look at their feet in embarrassment.
 
-    But nobody does.
+    But today nobody does.
     """
 
     nurse """
-    I understand your anger, Mr Moody, but in the circumstances I am afraid I have no manners left this morning.
+    I understand your anger, Mr Moody.
 
-    And I do not think any of us can afford them.
+    But in the circumstances I am afraid we shall have to put manners aside.
     """
 
     """
@@ -628,11 +661,9 @@ label broken_day3_morning_mask_decency:
     """
 
     drunk """
-    I have defended a great many men in my time.
+    In my experience, innocent people are humbled.
 
-    The innocent ones are humbled, as a rule.
-
-    It is the guilty who answer with anger.
+    It is the guilty who act outraged.
     """
 
     """
@@ -651,56 +682,6 @@ label broken_day3_morning_mask_decency:
 
     jump broken_day3_morning_mask_removed
 
-
-label broken_day3_morning_question_letters:
-
-    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
-
-    # TODO NOTHING new is learned, we cover this before
-
-    return
-
-
-# TODO
-label broken_day3_morning_question_poison:
-
-    broken """
-    There is something none of you have seen.
-    """
-
-    """
-    I take the bottle of rat poison from my coat and set it down on the billiard table.
-    """
-
-    broken """
-    I took this from the scullery on Friday night.
-
-    Doctor, I believe Ted Harring may have been poisoned.
-    """
-
-    """
-    Doctor Baldwin picks the bottle up, turns it about, and hands it back to me with something close to pity.
-    """
-
-    nurse """
-    And how long have you been carrying it about, Mr Moody?
-    """
-
-    broken """
-    Since Friday.
-
-    For safe keeping.
-    """
-
-    nurse """
-    Quite.
-    """
-
-    return
-
-# ------------------------------------
-#   THE TRAP - showing the true face
-# ------------------------------------
 label broken_day3_morning_show_face:
 
     """
@@ -716,10 +697,6 @@ label broken_day3_morning_show_face:
     jump broken_day3_morning_mask_removed
 
 
-# ------------------------------------
-#   THE MASK COMES OFF
-# TODO 
-# ------------------------------------
 label broken_day3_morning_mask_removed:
 
     """
@@ -730,15 +707,11 @@ label broken_day3_morning_mask_removed:
 
     """
     The room goes very still.
-
-    Miss Baxter's hand rises to her mouth.
-
-    Miss Marsh does not move at all.
-
-    Doctor Baldwin half stands, staring at a face that carries none of the ruin he has been imagining all weekend.
     """
 
     broken """
+    I might as well tell you the whole story now.
+
     My name is not Thomas Moody.
 
     Thomas Moody was my friend.
@@ -747,21 +720,17 @@ label broken_day3_morning_mask_removed:
 
     His invitation arrived after he was buried.
 
-    I took his name, and his face, and came here in his place, because I am a journalist and an invitation to a dead man is a story.
+    I took his name, and his face, and came here in his place, because I am a journalist and it was a good story.
 
     Everything else I have told you this weekend is true.
 
-    Now will you listen to me?
+    But please, now you must listen to me.
     """
 
     """
     Nobody answers.
 
-    The doctor sits down again, slowly.
-
-    And Captain Sinha, who has not said a word, walks around the billiard table and picks up the mask, and turns it over in his hands as though it were evidence.
-
-    Which, I realise a good deal too late, is exactly what it is.
+    Captain Sinha walks around the billiard table and picks up the mask, and turns it over in his hands.
     """
 
     $ play_music('danger', 2)
@@ -785,15 +754,7 @@ label broken_day3_morning_mask_removed:
     captain """
     I read a paper that you gave me.
 
-    I have no idea now who wrote it, and neither, I think, do you.
-    """
-
-    """
-    He is not angry.
-
-    That is the worst of it.
-
-    He is doing arithmetic, and I have handed him the figures.
+    I have no idea now who wrote it.
     """
 
     nurse """
@@ -804,32 +765,68 @@ label broken_day3_morning_mask_removed:
 
     psychic """
     And he has been asking questions of every one of us since Friday.
-
-    All those little kindnesses.
-
-    All that patient interest.
     """
 
     broken """
-    Miss Baxter, if I had wanted any of you dead, you would have died in your beds while I sat awake beside you.
+    Miss Baxter, if I were behind all of this, why bother with a mask at all?
+
+    I would simply have worn my own face.
     """
 
     captain """
-    That may be so.
+    That may be true.
 
-    But I am not able to prove it, and I am not able to disprove it either.
+    But I am no longer sure I trust you, Mr Moody.
 
-    So I shall do the only correct thing available to me.
+    Certainly not enough to go wandering into the woods with you.
     """
 
-    call change_time(10, 00)
+    broken """
+    So what are you saying?
+    """
+
+    captain """
+    That everyone would feel safer if you were held somewhere.
+
+    In your room, for instance.
+    """
+
+    broken scared """
+    What?!
+
+    This is madness, there is no need for it.
+    """
+
+    captain """
+    I am afraid there is.
+
+    At least, I believe so.
+
+    Does anyone disagree?
+    """
+
+    """
+    Nobody answers.
+
+    That settles it.
+
+    Captain Sinha takes out his pistol to make certain I do not escape.
+    """
+
+    captain """
+    Please, Mr Moody, let us go up to your room.
+    """
+
+    """
+    I can think of nothing to do but follow him.
+    """
+
+    call change_time(11, 00)
 
     $ change_room('bedroom_broken', dissolve)
 
     """
     There is no struggle worth the name.
-
-    The doctor is feverish and Mr Manning is drunk, but the Captain is neither, and I am a man of forty-three who has never in his life hit anybody.
 
     They walk me up to my own room, which is a courtesy of a sort.
     """
@@ -837,38 +834,40 @@ label broken_day3_morning_mask_removed:
     captain """
     You will remain here until the police come.
 
-    That is not a punishment, sir, it is an arrest.
+    That is not a punishment, sir, it is a precaution.
 
-    I would rather have locked the door and left it at that.
+    I would rather have just locked the door and left it at that.
 
-    But there is a lock on the inside of it as well, and I do not know this house well enough to be certain there is not another way out.
+    But I do not wish to take any chances.
     """
 
     """
-    They use the cord from the curtains, and the belt from my own coat.
+    He uses the cord from the curtains, and the belt from my own coat, to tie me to the bed.
 
-    The Captain does it himself, and does it well, and checks it twice, and I understand that he has done this before to men who deserved it more.
+    The Captain does it himself and checks it twice.
     """
 
     captain """
-    I shall walk to the village alone.
+    I shall walk to the town alone.
 
     It is faster, and after this morning I do not think anyone else will come.
 
-    Miss Marsh has your keys.
+    For what it is worth, I do not like doing this.
 
-    She will bring you water at noon.
-
-    If you are what you say you are, you have my apology in advance, and you shall have it properly when I return with the constables.
+    If you are what you say you are, you shall have my deepest apology when I return with the constables.
     """
 
     broken """
     Captain, listen to me.
 
     Do not leave this house with four people in it and one door.
+
+    Do not leave me with them.
     """
 
     captain """
+    Too late for that.
+
     Goodbye, Mr Moody.
     """
 
@@ -884,14 +883,14 @@ label broken_day3_morning_mask_removed:
 
     call wait_screen_transition()
 
-    call change_time(11, 00)
+    call change_time(12, 00)
 
     $ play_music('scary')
 
     play sound broken_glass
 
     """
-    I do not know how long I lie there.
+    I do not know how long I have lain there.
 
     Long enough for the light to move across the ceiling.
 
@@ -903,27 +902,19 @@ label broken_day3_morning_mask_removed:
     play sound fire loop
 
     """
-    There is no shouting afterwards.
-
-    That is the thing I cannot make sense of.
-
-    Glass breaks in a house with four people in it, and nobody calls out at all.
-
     Then I smell it.
 
-    Smoke, coming under the door, thin and grey and perfectly patient.
-    """
+    Smoke, coming under the door, thin and grey.
 
-    """
     I pull at the cord until my wrist is wet, and it does not give.
 
     The room grows warm, then hot.
 
-    I shout until there is nothing left in my throat to shout with, and the house does not answer.
+    My head feels heavy.
 
-    Somebody waited three days for a chance like this, and I gave it to them myself.
+    I shout until I have no strength left in me.
 
-    I took off the only thing that was keeping me alive, and I handed them a man tied to a bed.
+    Nobody answers.
     """
 
     jump broken_ending_burned

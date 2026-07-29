@@ -121,43 +121,39 @@ label broken_day3_afternoon_together:
     $ play_music('mysterious', 2)
 
     """
-    We go down the drive in a slow column, six abreast of nobody.
+    We go down the drive in a slow column.
 
-    The Captain leads. Mr Manning walks in the middle with Miss Marsh keeping his pace, the doctor and Miss Baxter behind them, and I bring up the rear, where I can count heads.
+    The Captain leads. Mr Manning walks in the middle with Miss Marsh keeping his pace.
 
-    I count them often.
+    The doctor and Miss Baxter follow behind them, and I bring up the rear, where I can watch them all.
+
+    Which I do often.
     """
 
     $ change_room('forest_road', dissolve)
 
     """
-    The wood takes us in, and the manor drops away behind the trees, and nobody looks back but me.
+    The wood takes us in, and the manor drops away behind the trees.
+
+    Nobody looks back but me.
 
     We are slow. Painfully slow.
 
-    Manning's breath saws at every rise, and twice the nurse calls a halt and doses him from a flask of something she mixed in the cold kitchen.
-
-    But slow together, I keep telling myself, beats quick apart.
+    Manning's breath saws at every rise, and twice the nurse calls a halt.
     """
-
-    call change_time(13, 00)
 
     call change_time(14, 30)
 
     """
     Somewhere in the third hour, in the deep of the wood, the feeling comes over me that we are observed.
 
-    No sound. No shape among the trunks. Only the itch between the shoulder blades that a man learns to trust.
-
     I drop back a pace and watch the treeline, and it gives me nothing.
 
     But nothing comes out of it either.
 
-    Whoever they are, they have shown me twice this weekend that they like their work done privately. One man in a bed. One man in a wood.
+    If there is anybody out there, they do not dare approach the whole party at once.
 
-    Six people on an open road, arm in arm, are the least private thing in Scotland.
-
-    I keep my eyes on the trees, and I keep us moving, and the itch follows us for a mile and then, like a cur that has run out of hedge, gives up.
+    I keep my eyes on the trees, and I keep us moving.
     """
 
     call change_time(15, 30)
@@ -165,25 +161,23 @@ label broken_day3_afternoon_together:
     $ play_music('sad', 3)
 
     """
-    The trees thin, and give way to stone walls and pasture, and then to the first grey cottages of the village.
+    The trees thin, and give way to stone walls and pasture, and then to the first grey cottages of the town.
 
-    Smoke from real chimneys. Washing on a line. A dog with strong opinions about strangers.
+    Smoke from chimneys. Washing on a line.
 
-    Mr Manning stops in the middle of the lane and laughs, once, at nothing at all, and Miss Marsh does not tell him to save his breath.
+    Until finally, we arrive at the police station.
     """
 
     $ change_room('police_station', dissolve)
 
     """
-    The police station is a squat stone box with a blue lamp over the door, and I have never in my life been so glad of an ugly building.
+    A sergeant looks up from his ledger as the six of us enter the small building together.
 
-    A sergeant looks up from his ledger as the six of us crowd in out of the afternoon. Muddy, spent, and every one of us alive.
+    Muddy and spent, we must make for a rather strange sight.
 
-    Where to even begin.
+    I approach him, finally taking off my mask.
 
-    A dead man in an upstairs bedroom. A vanished household. Two poisoned-pen letters, a bottle of rat poison, and a tree that was sawn, not fallen.
-
-    I take off the mask, and lay the army order on his counter, and begin at the beginning.
+    And I begin my story at the beginning.
     """
 
     jump broken_ending_walked_out

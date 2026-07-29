@@ -179,15 +179,13 @@ label broken_ending_burned:
     $ play_music('mysterious')
 
     """
-    The mask was not a lie you told them. It was the only armour you had.
+    You took off your mask in front of frightened people, hoping they would understand.
 
-    Three days you spent making yourself into a harmless man, and it worked so well that a killer left you alone.
+    But these were no ordinary circumstances.
 
-    Then you took it off in front of frightened people, and gave the most sensible man in the house every reason to bind you to a bed.
+    And it gave the most sensible man in the house every reason to bind you to a bed.
 
-    He was not wrong to do it. That is the cruelty of it.
-
-    You had things worth telling them. You should have made them worth hearing on their own.
+    The worst part is that, had you been in his place, you know you would probably have done the same.
     """
 
     jump ending_generic
@@ -228,15 +226,37 @@ label broken_ending_walked_out:
     call survive_screen_transition
 
     """
-    Seven miles of bad road, and every one of them a small victory.
+    It was a long and arduous road.
 
-    You brought them out together. The Captain, the doctor, both ladies, and one sober lawyer. Every soul left alive under that roof.
+    But you brought them out together.
 
-    You never learned who wrote the letters, who ended Ted Harring, or what the weekend was truly for.
+    A captain, a psychic, a doctor, a nurse and one drunkard.
 
-    But you are a journalist. You know the difference between an ending and a deadline.
+    The only casualty was Ted Harring.
 
-    This story is not finished. It has simply passed to other hands, and other eyes, on other nights in Claythorn Manor.
+    You later found out it was indeed the rat poison that killed him.
+
+    But who gave it to him remains a mystery.
+
+    Everything points towards Lady Claythorn.
+
+    But there is a catch.
+
+    In all your enquiries, you never thought to look into her properly.
+
+    The police did that job for you, and found there was no Lady Claythorn at all.
+
+    The owner of the manor is a certain Lady Kilbraith.
+
+    She lives peacefully in an apartment in London.
+
+    You visited her and learned that Claythorn Manor had been empty for years.
+
+    She had been trying to sell it and had no idea anyone had been staying there.
+
+    You kept searching for years, but you never learned what the weekend was truly about.
     """
+
+    # TODO add a UNLOCK FOR LADY CLAYTHORN?
 
     jump ending_generic

@@ -220,10 +220,6 @@ label broken_day3_morning:
             And there it is.
 
             I have spent everything I had and moved not one of them an inch.
-
-            The dread has not left me.
-
-            It has only stopped being any use.
             """
 
         else:
@@ -301,41 +297,33 @@ label broken_day3_morning_departure_together:
     $ broken_details.threads.unlock('left_together')
 
     """
-    I stop there, and let the room sit with it.
+    I stop there, and let the room sit with everything I have told them.
 
-    Nobody says anything clever.
-
-    Nobody says anything at all for a while.
-
-    That silence is worth more than any of the words I have just spent.
+    Nobody says anything for a while.
     """
 
     nurse """
     ...Very well.
 
-    I shall make Mr Manning something to keep him on his feet, and we shall take the miles slowly.
+    Perhaps you are right.
 
-    I have walked further than that on worse errands.
+    It is more dangerous to stay here than to attempt the walk.
+
+    I shall come with you.
     """
 
     doctor """
-    I am not sure I can do it.
+    So will I.
+    """
 
-    But I am a good deal less sure I want to be left in this house.
-
-    I shall walk until I cannot, and then I shall walk a little further.
+    drunk """
+    And me as well, then.
     """
 
     psychic """
     Oh, this is madness, every word of it.
-    """
 
-    """
-    She looks at the window, and at the four faces around her, and something goes out of her shoulders.
-    """
-
-    psychic """
-    But I shall not be left the last soul rattling about in this house.
+    But I shall not be left the only soul in this house.
 
     If you are all set on going, then I shall go with you.
     """
@@ -350,7 +338,7 @@ label broken_day3_morning_departure_together:
     So do I, Captain.
     """
 
-    call change_time(10, 30)
+    call change_time(11, 30)
 
     $ play_music('mysterious', 2)
 
@@ -363,7 +351,7 @@ label broken_day3_morning_departure_together:
 
     Bread and cold water from the kitchen.
 
-    At half past ten I open the front door, and we step out into the grey morning.
+    It is almost noon when we step outside.
 
     All six of us.
     """
