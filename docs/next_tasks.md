@@ -79,8 +79,7 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 
 Thread, leave together
 
-
-REDOFOREST ROAD
+REDO billiard room (couch weird) + fire version
 
 dead in car
 TRY to add the generated images in a scene with the renpy language.

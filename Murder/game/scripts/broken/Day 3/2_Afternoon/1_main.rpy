@@ -12,9 +12,11 @@
 #       - Dead        : Lad (Ted Harring)
 #
 #   Branches on the left_together thread (set in broken_day3_morning):
-#       - not left_together -> the two-man walk. The butler is waiting on the
-#         road: the Captain is shot, then Broken -> broken_ending_ambushed
-#         (intuition: do not separate, take everyone)
+#       - not left_together -> the two-man walk. They find Lady Claythorn and
+#         her staff shot dead in her motorcar, hidden off the road, and turn
+#         back. The manor is alight and the four left behind are dead in the
+#         billiard room. The roof comes down on Broken
+#         -> broken_ending_massacre (intuition: do not separate, take everyone)
 #       - left_together     -> the whole party walks out. Six together are too
 #         many witnesses: they pass the sawn tree and reach the police station
 #         by late afternoon -> broken_ending_walked_out (final ending)
@@ -52,7 +54,7 @@ label broken_day3_afternoon_pair:
     Simply to move away from this place gives me an enormous sense of relief.
     """
 
-    call change_time(12, 30)
+    call change_time(14, 30)
 
     $ change_room('forest_road', dissolve)
 
@@ -288,19 +290,199 @@ label broken_day3_afternoon_pair:
     Fast at first, but as our strength diminishes, we settle into a light jog.
     """
 
-    $ change_room('manor_on_fire', dissolve)
-
     """
     We reach the manor fast enough.
-    """
-    # TODO write the following ending.
-    # They notice the manor on fire
-    # Broken enter, captain reluctlaly follows.
-    # He rushes to the billiard room where they were
-    # and he sees dead bodies on the ground:
-    # All of them (name them), then the roofs make noise
-    # He watches the roof collapsing on him
 
+    But we smell it long before we see it.
+    """
+
+    $ play_music('scary', 2)
+
+    """
+    Smoke, first, carried down the drive to meet us.
+    """
+
+    $ change_room('manor_on_fire', dissolve)
+
+    play sound fire loop
+
+    """
+    Then the trees give way, and Claythorn Manor stands at the end of the gravel with fire in half its windows.
+    """
+
+    #TODO finish writing this.
+    
+    captain scared """
+    Good God.
+    """
+
+    broken """
+    They are inside.
+
+    All four of them are still inside.
+    """
+
+    captain """
+    Mr Moody, that house is coming down.
+    """
+
+    broken """
+    Then we had better be quick about it.
+    """
+
+    captain """
+    Mr Moody!
+    """
+
+    """
+    I am already running.
+
+    Behind me I hear him swear, which I have never once heard him do.
+
+    Then I hear his boots on the gravel, following.
+    """
+
+    play sound door_open
+
+    $ change_room('entrance_hall', dissolve)
+
+    """
+    The hall takes the breath out of me at the door.
+
+    The heat stands in it like a wall, and the smoke lies along the ceiling in a slow black river.
+
+    My mask fills with it at once.
+
+    I keep low, where the air is still worth something, and make for the billiard room.
+    """
+
+    captain """
+    The staircase is alight!
+
+    Keep to the left, man, keep to the left!
+    """
+
+    """
+    The billiard room door is shut fast.
+
+    I put my shoulder to it twice, and on the second it gives.
+    """
+
+    play sound door_open
+
+    $ change_room('billiard_room', dissolve)
+
+    $ play_music('sad', 3)
+
+    """
+    And there they are.
+
+    Doctor Baldwin lies nearest the door, face down, one arm still reaching for the handle.
+
+    Samuel Manning sits propped against the little bar, almost upright, his flask fallen from his hand.
+
+    Miss Marsh is on her side by the billiard table, her coat buttoned for a journey she never made.
+
+    And Miss Baxter is beyond her, on her back beneath the shuttered window, her eyes open.
+
+    The fire has not reached this room yet.
+
+    The fire is not what killed them.
+    """
+
+    """
+    I have seen this once already today, in a motorcar in the woods.
+
+    The same small dark holes.
+
+    The same dreadful tidiness of it.
+    """
+
+    broken scared """
+    No.
+
+    No, no, no.
+    """
+
+    """
+    I go from one to the next on my knees, because I cannot make myself stop.
+
+    Baldwin, then Manning, then Miss Marsh.
+
+    Nothing.
+
+    I reach Miss Baxter last and take her wrist, and there is nothing there either.
+
+    Four hours.
+
+    We were gone four hours.
+    """
+
+    captain """
+    Mr Moody.
+
+    Mr Moody, get up.
+
+    There is nothing here for you now.
+    """
+
+    """
+    He has come as far as the doorway and no further.
+
+    A handkerchief is pressed over his mouth, and his pistol is still in his other hand, quite uselessly.
+    """
+
+    broken """
+    We left them, Captain.
+
+    We stood in this very room and we left them here.
+    """
+
+    captain """
+    Yes.
+
+    We shall discuss it outside.
+
+    Now.
+    """
+
+    play sound moving_furniture
+
+    """
+    Above us, the house makes a sound I have heard before.
+
+    Not in Scotland, and not in peacetime.
+
+    It is the long groan a thing makes when it has finished deciding to fall.
+    """
+
+    captain """
+    Out!
+
+    Get out, man, now!
+    """
+
+    """
+    I look up.
+
+    The ceiling is bowing in the middle, slowly, almost gently, and the paint upon it runs like water.
+
+    I think, quite calmly, that I ought to move.
+
+    I do not move.
+
+    I have carried men out of worse than this and I have never once been late.
+
+    Today I was late.
+    """
+
+    play sound thunder_full
+
+    """
+    Then the whole of Claythorn Manor comes down upon me.
+    """
+
+    stop sound fadeout 2.0
 
     jump broken_ending_massacre
 

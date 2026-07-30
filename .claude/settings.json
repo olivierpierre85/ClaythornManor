@@ -64,7 +64,8 @@
       "PowerShell(Copy-Item \"c:\\\\Projects\\\\ClaythornManor\\\\Images\\\\locations_new\\\\generated\\\\forest_road_v1\\\\forest_road_day_1.png\" \"c:\\\\Projects\\\\ClaythornManor\\\\Images\\\\locations_new\\\\flux_2_final_choices\\\\forest_road_day.png\")",
       "Bash(python \"C:/Users/olivi/AppData/Local/Temp/claude/c--Projects-ClaythornManor/b83fba91-dff3-4317-a897-23c78bbd2225/scratchpad/manor_fire.py\")",
       "PowerShell(Copy-Item \"c:\\\\Projects\\\\ClaythornManor\\\\Images\\\\locations_new\\\\generated\\\\manor_on_fire\\\\manor_on_fire_d55_s303.png\" \"c:\\\\Projects\\\\ClaythornManor\\\\Murder\\\\game\\\\images\\\\locations\\\\manor_on_fire_day.png\")",
-      "PowerShell(Copy-Item \"c:\\\\Projects\\\\ClaythornManor\\\\Images\\\\locations_new\\\\generated\\\\manor_on_fire\\\\manor_on_fire_d55_s303.png\" \"c:\\\\Projects\\\\ClaythornManor\\\\Images\\\\locations_new\\\\flux_2_final_choices\\\\manor_on_fire_day.png\")"
+      "PowerShell(Copy-Item \"c:\\\\Projects\\\\ClaythornManor\\\\Images\\\\locations_new\\\\generated\\\\manor_on_fire\\\\manor_on_fire_d55_s303.png\" \"c:\\\\Projects\\\\ClaythornManor\\\\Images\\\\locations_new\\\\flux_2_final_choices\\\\manor_on_fire_day.png\")",
+      "Bash(python tools/set_on_fire.py \"Murder/game/images/locations/billiard_room_day.png\" -n 4)"
     ],
     "ask": [
       "Bash(git push:*)",

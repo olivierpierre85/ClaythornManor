@@ -16,7 +16,7 @@ label broken_config_progress:
             # Row 1: trunks drop one row - friday_evening at col1, the hunt at col3,
             # saturday_evening's first branch (impaled, more below) at col4, then
             # sunday_morning's single branch (burned) turns right at col5 and
-            # sunday_afternoon's single branch (ambushed) turns right at col6
+            # sunday_afternoon's single branch (massacre) turns right at col6
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_line),            # col1 trunk (Saturday-morning deaths)
@@ -25,8 +25,8 @@ label broken_config_progress:
                 Chapter(image_checkpoint_line),            # col4 trunk (Saturday-evening deaths)
                 Chapter(image_checkpoint_corner),          # col5 branch (burned - the only one)
                 Chapter(image_ending_question, "ending", "burned", "sunday_morning"),
-                Chapter(image_checkpoint_corner_half),     # completes the burned cell, col6 branch (ambushed)
-                Chapter(image_ending_question, "ending", "ambushed", "sunday_afternoon"),
+                Chapter(image_checkpoint_corner_half),     # completes the burned cell, col6 branch (massacre)
+                Chapter(image_ending_question, "ending", "massacre", "sunday_afternoon"),
             ],
             # Row 2: col1's first branch (deathbed), col3's first hunt branch
             #   (strangled - spared the Captain, caught in the rush), and the

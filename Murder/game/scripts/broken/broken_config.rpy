@@ -160,7 +160,9 @@ label init_broken:
             CharacterInformation(1, "poisoned", "You were poisoned at dinner along with every other guest", image_file="rat_poison", chapters=['saturday_evening']),
             CharacterInformation(1, "impaled", "You leapt from your window to escape the fire and were impaled on the iron fence below", image_file="fence", chapters=['saturday_evening']),
             CharacterInformation(1, "burned", "You showed your true face, and the fire found you tied to your own bed", image_file="manor_burns", chapters=['sunday_morning']),
-            CharacterInformation(2, "ambushed", "You and the Captain were shot down on the road to the village", image_file="shot_from_behind_i", is_intuition=True, chapters=['sunday_afternoon']),
+            CharacterInformation(2, "massacre", "You turned back too late, and the burning manor came down on you", image_file="manor_burns_1", is_intuition=True, chapters=['sunday_afternoon']),
+            # OLD AMBUSHED ENDING - TODO DELETE when sure not needed
+            # CharacterInformation(2, "ambushed", "You and the Captain were shot down on the road to the village", image_file="shot_from_behind_i", is_intuition=True, chapters=['sunday_afternoon']),
             CharacterInformation(3, "walked_out", "You led everyone out of the manor together and reached the police station", image_file="leave_manor", chapters=['end']),
         ])
 

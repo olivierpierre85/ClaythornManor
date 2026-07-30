@@ -12,7 +12,7 @@
 #       - Gone  : Lady Claythorn and all the staff (left in the night)
 #       - Dead  : Lad (Ted Harring)
 #
-#   Gates on the 'ambushed' ENDING (intuition), not on a thread:
+#   Gates on the 'massacre' ENDING (intuition), not on a thread:
 #       - without it  -> no menu at all, the party splits, two men walk out
 #       - with it     -> the argument menu opens. 30 minutes of patience, ten
 #         minutes a question, so three may be asked. Only one route unlocks
@@ -20,6 +20,9 @@
 #         'broken_day3_morning_question_culprit', then answer Miss Baxter's
 #         demand for the mask with a soldier's honour. Every other answer to
 #         that demand ends with the mask off and the ending burned.
+#
+#   NOTE: the intuition ending used to be 'ambushed'. That route is now the
+#   turn-back-to-the-burning-manor death, 'massacre'.
 #
 # --------------------------------------------
 label broken_day3_morning:
@@ -158,7 +161,7 @@ label broken_day3_morning:
     What do you think?
     """
 
-    if not broken_details.endings.is_unlocked('ambushed'):
+    if not broken_details.endings.is_unlocked('massacre'):
 
         """
         I do not like it, but I cannot think of a strong argument against his idea.
