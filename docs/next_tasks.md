@@ -77,6 +77,9 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 
 ## Assets & artistic Tasks
 
+forest_with_car
+
+dead in car
 TRY to add the generated images in a scene with the renpy language.
 
 BROKEN try to draw car in the woods with dead bodies on the passenger seats.

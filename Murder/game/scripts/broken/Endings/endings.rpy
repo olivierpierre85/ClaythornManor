@@ -11,11 +11,11 @@ label broken_ending_day1_deathbed:
     $ play_music('mysterious')
 
     """
-    You don't wake up.
+    You do not wake up.
 
-    You came to this house pretending to be someone else, putting all your energy in trying not to be recognized.
+    You came to this house pretending to be someone else, putting all your energy into trying not to be recognised.
 
-    Doing so, you forgot to watch the others.
+    In doing so, you forgot to watch the others.
 
     That was your mistake.
     """
@@ -204,13 +204,13 @@ label broken_ending_ambushed:
     $ play_music('mysterious')
 
     """
-    As you close you eyes for ever, an idea struck you hard.
+    As you closed your eyes for the last time, one thought struck you hard.
 
-    You were right to leave. 
-    
+    You were right to leave.
+
     You were wrong to leave people behind.
 
-    Try to not make the same mistake again.
+    Try not to make the same mistake again.
     """
 
     jump ending_generic
@@ -247,7 +247,7 @@ label broken_ending_walked_out:
 
     The owner of the manor is a certain Lady Kilbraith.
 
-    She lives peacefully in an apartment in London.
+    She lives peacefully in a flat in London.
 
     You visited her and learned that Claythorn Manor had been empty for years.
 

@@ -19,9 +19,9 @@ label broken_day3_morning_question_poison:
     broken """
     I took this from the scullery on Friday night.
 
-    It was lyaing there, opened. 
+    It was lying there, opened.
 
-    Like somebody just use it.
+    As if somebody had just used it.
 
     Doctor, I believe Ted Harring may have been poisoned.
     """
@@ -33,7 +33,7 @@ label broken_day3_morning_question_poison:
     doctor """
     Rat poison, I see.
 
-    The symptoms of Mr Harring could point to it that is right.
+    Mr Harring's symptoms could point to it, that is right.
 
     But there is no way to know for sure.
     """
@@ -43,15 +43,15 @@ label broken_day3_morning_question_poison:
     """
 
     doctor """
-    It is a strange coincidence maybe.
+    It is a strange coincidence, perhaps.
 
-    But that doesn't say much as well.
+    But that does not say much either.
 
-    Almost every house in England as some kind of poison like this one.
+    Almost every house in England has some kind of poison like this one.
     """
 
     broken """
-    Right, I guess that is not a proof in itself.
+    Right, I suppose that is not proof in itself.
     """
 
     return
@@ -62,11 +62,11 @@ label broken_day3_morning_question_boxer:
     broken """
     Doctor, I remember you told me you served in the Boxer Rebellion.
 
-    Was that correct?
+    Is that correct?
     """
 
     doctor """
-    It was.
+    It is.
 
     That was my first post as a field surgeon.
     """

@@ -57,7 +57,9 @@ label broken_day3_morning:
     """
 
     broken """
-    Good. I am sorry, I did not think I would fall asleep.
+    Good.
+
+    I am sorry, I did not think I would fall asleep.
     """
 
     captain """
@@ -67,7 +69,9 @@ label broken_day3_morning:
     """
 
     """
-    I look around the room. Everyone is awake now, all of them dishevelled.
+    I look around the room.
+
+    Everyone is awake now, all of them dishevelled.
 
     Doctor Baldwin is in particularly bad shape, having contracted a sort of fever.
 
@@ -157,7 +161,7 @@ label broken_day3_morning:
     if not broken_details.endings.is_unlocked('ambushed'):
 
         """
-        I do not like it, but cannot think of a strong argument against his idea.
+        I do not like it, but I cannot think of a strong argument against his idea.
         """
 
         call broken_day3_morning_leave_pair
