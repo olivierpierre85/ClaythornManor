@@ -77,7 +77,10 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 
 ## Assets & artistic Tasks
 
-forest_with_car
+Thread, leave together
+
+
+REDOFOREST ROAD
 
 dead in car
 TRY to add the generated images in a scene with the renpy language.

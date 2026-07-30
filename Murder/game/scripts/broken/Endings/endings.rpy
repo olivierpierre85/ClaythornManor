@@ -192,8 +192,38 @@ label broken_ending_burned:
     jump ending_generic
 
 
-# SUNDAY - set out with only the Captain; the road was waiting for them
-# (intuition ending: separating is the mistake, take everyone)
+label broken_ending_massacre:
+
+    $ broken_details.endings.unlock('massacre')
+    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('massacre'))
+
+    call death_screen_transition
+
+    $ play_music('mysterious')
+
+    """
+    What
+
+    a
+
+    mess.
+
+    The horror that happened there will forever scar you.
+
+    You may not understand much more now.
+
+    But there is one thing you are sure of:
+
+    You were right to leave.
+
+    But you were wrong to leave people behind.
+
+    Try not to make the same mistake again.
+    """
+
+    jump ending_generic
+
+# OLD AMBUSHED ENDING - TODO DELETE when sure not needed
 label broken_ending_ambushed:
 
     $ broken_details.endings.unlock('ambushed')

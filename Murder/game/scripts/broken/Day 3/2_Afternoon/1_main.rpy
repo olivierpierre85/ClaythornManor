@@ -155,6 +155,8 @@ label broken_day3_afternoon_pair:
     """
 
     captain scared """
+    Oh my God...
+
     Oh my God, they are dead.
 
     All of them.
@@ -181,7 +183,7 @@ label broken_day3_afternoon_pair:
     play sound door_open
 
     broken scared """
-    Oh my God, what happened?
+    Oh no, what happened?
     """
 
     captain """
@@ -234,14 +236,12 @@ label broken_day3_afternoon_pair:
     Maybe...
     """
 
-    captain """
-    Yes, what?
-
-    Please speak your mind!
-    """
-
     """
     A sudden realisation dawns on me.
+    """
+
+    captain """
+    Yes, what?
     """
 
     broken """
@@ -288,18 +288,21 @@ label broken_day3_afternoon_pair:
     Fast at first, but as our strength diminishes, we settle into a light jog.
     """
 
-    $ change_room('manor_exterior', dissolve)
+    $ change_room('manor_on_fire', dissolve)
 
-    # ?????? BURNED MANOR? Or dead people everywhere? TOn think over.
     """
     We reach the manor fast enough.
-
-    We catch our breath, then the Captain takes his gun out again and holds it in both hands.
     """
+    # TODO write the following ending.
+    # They notice the manor on fire
+    # Broken enter, captain reluctlaly follows.
+    # He rushes to the billiard room where they were
+    # and he sees dead bodies on the ground:
+    # All of them (name them), then the roofs make noise
+    # He watches the roof collapsing on him
 
-    captain """
-    Let us 
-    """
+
+    jump broken_ending_massacre
 
 
     ### OLD AMBUSHED VERSION
@@ -335,7 +338,7 @@ label broken_day3_afternoon_pair:
 
     # play sound gun
 
-    jump broken_ending_ambushed
+    # jump broken_ending_ambushed
 
 
 # --------------------------------------------
