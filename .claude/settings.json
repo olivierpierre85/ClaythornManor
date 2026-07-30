@@ -6,13 +6,11 @@
       "Bash(py:*)",
       "Bash(pip list:*)",
       "Bash(pip show:*)",
-
       "Bash(git:*)",
       "Bash(gh pr view:*)",
       "Bash(gh pr list:*)",
       "Bash(gh issue view:*)",
       "Bash(gh issue list:*)",
-
       "Bash(ls:*)",
       "Bash(find:*)",
       "Bash(cat:*)",
@@ -39,18 +37,15 @@
       "Bash(mkdir:*)",
       "Bash(cp:*)",
       "Bash(mv:*)",
-
       "Bash(curl:*)",
       "Bash(ffmpeg:*)",
       "Bash(ffprobe:*)",
       "Bash(cwebp:*)",
       "Bash(dwebp:*)",
       "Bash(magick:*)",
-
       "Bash(\"/c/Program Files/renpy-8.4.1-sdk/renpy.exe\":*)",
       "Bash(\"c:/renpy-8.4.1-sdk/renpy.exe\":*)",
       "Bash(\"c:\\\\Projects\\\\renpy-8.4.1-sdk\\\\renpy.exe\":*)",
-
       "PowerShell(Get-ChildItem:*)",
       "PowerShell(Get-Content:*)",
       "PowerShell(Get-Item:*)",
@@ -61,8 +56,9 @@
       "PowerShell(Measure-Object:*)",
       "PowerShell(python:*)",
       "PowerShell(git:*)",
-
-      "Read(//c//**)"
+      "Read(//c//**)",
+      "Bash(python tools/generate_location_images.py *)",
+      "PowerShell(Copy-Item *)"
     ],
     "ask": [
       "Bash(git push:*)",
