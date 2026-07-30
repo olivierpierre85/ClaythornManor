@@ -1,9 +1,14 @@
 <!-- # cSpell:disable -->
+# IN intuitions DEAD , add a special sound or text
+
+
 ## Fable
 
 If you still have money in september, use fable to implemented the SURVIVE mechanic. That will start the META story each time a player is saved, up until you can play the butler!!
 
 ### EVERYONE
+
+Maybe the butler doesnt' leave with the staff!!! He kills them and come back
 
 
 
@@ -17,6 +22,11 @@ If you still have money in september, use fable to implemented the SURVIVE mecha
 - Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.  If he does, the Killbreath discovery can come right at the start. 
 - ORRRRR **THE DRUNK is unlocked by Broken**, and host by drunk
 
+BETTER END
+!!!FIND CAR the next day, with the staff dead. BROKEN ??? => Discover the butler may still be in the house!!!!!!!!!!
+
+Broken see tracks (good eye), a
+BUT when with others, look at the road. PANIC, comes back to the house. Find all of them DEADDDDDDD and get shot (not sure by whom? Sinha, Harring or else?)
 
 There is almost no hint of what really happened in Boxer's rebellion ADD in some of things. aDD in questions at the end.
 
@@ -24,6 +34,9 @@ There is almost no hint of what really happened in Boxer's rebellion ADD in some
 TODO, should we add the story of the baby and the nurse here (questions day3)OR way too obvious?
 
 Or maybe add Psychic saying somewhere she never had children of her own, ALMOSt one, **but god took him away from me at birth**
+
+
+TODO maybe unmaskins is forced IF you do not ask the right questions.
 
 ##### **Friday Evening**
 
@@ -64,8 +77,9 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 
 ## Assets & artistic Tasks
 
+TRY to add the generated images in a scene with the renpy language.
 
-
+BROKEN try to draw car in the woods with dead bodies on the passenger seats.
 
 ### IMAGES NEXT REBUILD
 
@@ -108,6 +122,9 @@ container to this :
 ```
  
 
-
+## FUN, list of people to give your game to.
+- STuart thorton
+- Stephen king
+- Lucas Pope
 
 

@@ -15,9 +15,11 @@
 #   Gates on the 'ambushed' ENDING (intuition), not on a thread:
 #       - without it  -> no menu at all, the party splits, two men walk out
 #       - with it     -> the argument menu opens. 30 minutes of patience, ten
-#         minutes a question, so three may be asked. Two of them must be the
-#         right ones (day3_morning_good_questions >= 2) to unlock
-#         'left_together' and take the whole party out together.
+#         minutes a question, so three may be asked. Only one route unlocks
+#         'left_together' and takes the whole party out together: reach
+#         'broken_day3_morning_question_culprit', then answer Miss Baxter's
+#         demand for the mask with a soldier's honour. Every other answer to
+#         that demand ends with the mask off and the ending burned.
 #
 # --------------------------------------------
 label broken_day3_morning:
@@ -180,13 +182,13 @@ label broken_day3_morning:
     call run_menu(TimedMenu("broken_day3_morning_menu_convince", [
         TimedMenuChoice("Show them the bottle of rat poison{{object}}", 'broken_day3_morning_question_poison', 10),
         TimedMenuChoice("Talk about the Boxer Rebellion{{observation}}", 'broken_day3_morning_question_boxer', 10, condition="broken_details.threads.is_unlocked('doctor_boxer')"),
-        TimedMenuChoice("Talk more about the letters", 'broken_day3_morning_question_letters', 10),
         TimedMenuChoice("What if Lady Claythorn is not the culprit?", 'broken_day3_morning_question_culprit', 10, condition="is_choice_already_chosen('broken_day3_morning_menu_convince', 'broken_day3_morning_question_boxer')"),
-
         TimedMenuChoice("Let it go. Leave with Captain Sinha", 'generic_cancel', 0, early_exit=True),
     ]))
 
-    if broken_details.saved_variables['day3_morning_good_questions'] >= 2:
+    # The room only follows him if he got as far as naming the danger inside the
+    # house, and then kept his mask on by pleading a soldier's honour.
+    if is_choice_already_chosen('broken_day3_morning_menu_mask', 'broken_day3_morning_mask_honour'):
 
         call broken_day3_morning_departure_together
 

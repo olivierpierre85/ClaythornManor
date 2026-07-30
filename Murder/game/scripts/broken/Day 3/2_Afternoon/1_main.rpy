@@ -45,68 +45,56 @@ label broken_day3_afternoon_pair:
     $ play_music('mysterious', 2)
 
     """
-    The manor watches us go with all its windows, and gives away nothing.
+    We exit the manor without looking back.
 
     The Captain sets a soldier's pace down the drive, and I fall in beside him.
 
-    It is a relief, at first, simply to be moving. To be doing the thing instead of arguing for it.
+    Simply to move away from this place gives me a enormous sense of relief. 
     """
+
+    call change_time(12, 30)
 
     $ change_room('forest_road', dissolve)
 
     """
     Past the gate, the road runs into the trees and the trees close over it.
 
-    We walk without talking. The Captain watches the left side of the road, and I find myself watching the right, and neither of us has proposed the arrangement aloud.
+    We walk without talking. 
+    
+    The Captain watches the left side of the road, and I find myself watching the right.
+    
+    Neither of us has proposed the arrangement aloud, but our military training just made us do so. 
 
-    The wood is quiet.
-
-    Not peaceful. Quiet the way the house was quiet this morning.
-    """
-
-    call change_time(12, 30)
-
-    """
-    The Captain runs his hand along the cut and looks at me, and neither of us says the obvious thing.
-
-    We climb over the trunk and walk on.
-
-    Perhaps a mile further, the road bends between two banks of bracken, and the Captain slows.
-    """
-
-    captain """
-    Mr Moody.
-
-    From here to the bend, there is no cover at all. If I were laying a...
+    For a while, the woods stay quiet.
     """
 
     $ play_music('danger', 2)
 
     play sound gun
 
-    pause 0.5
-
     """
-    He does not finish.
+    But suddenly, a gunshot.
 
-    The shot takes him mid-word, and he goes down into the road like a coat slipping from a hook.
+    Captain Sinha goes down into the road.
 
-    I do not think. I am running before the sound has finished rolling off the hills, for the trees, for anywhere that is not this open lane.
+    I do not think. 
+    
+    I am running for the trees, to avoid staying as sittings ducks in the middle of the road.
 
-    The bracken drags at my legs. The second shot sounds almost leisurely.
+    A bullet hits my left leg.
     """
 
     play sound body_fall
-
+    
     """
-    The road comes up to meet me.
+    I fall instantly.
 
-    I lie with my cheek against the wet stone, and my last thought is not of the man behind the rifle at all.
+    I turns towards where the shot came and notice a gun peering out of the woods.
 
-    It is of four people, sitting in a tea room, waiting for help that is now lying in the road.
-
-    I should never have split us apart.
+    Another shot is fired before I can make out who holds it.
     """
+
+    play sound gun
 
     jump broken_ending_ambushed
 
@@ -177,7 +165,7 @@ label broken_day3_afternoon_together:
 
     I approach him, finally taking off my mask.
 
-    And I begin my story at the beginning.
+    Then I tell our story from the beginning.
     """
 
     jump broken_ending_walked_out

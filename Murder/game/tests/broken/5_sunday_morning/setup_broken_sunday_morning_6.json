@@ -25,8 +25,8 @@
         },
         {
             "menu": "broken_day3_morning_menu_mask",
-            "selected": "Take off the mask and show your true face",
-            "redirect": "broken_day3_morning_show_face"
+            "selected": "Do not show. You do not wish to frighten anyone",
+            "redirect": "broken_day3_morning_mask_frighten"
         }
     ]
 }

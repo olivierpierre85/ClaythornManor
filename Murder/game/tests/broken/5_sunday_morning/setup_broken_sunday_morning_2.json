@@ -5,7 +5,8 @@
         "host_lies",
         "drunk_letter",
         "found_poison",
-        "gather_everyone"
+        "gather_everyone",
+        "doctor_boxer"
     ],
     "unlocked_endings": [
         "ambushed"
@@ -14,7 +15,7 @@
     "choices": [
         {
             "menu": "broken_day3_morning_menu_convince",
-            "selected": "Ask Doctor Baldwin where he first served",
+            "selected": "Talk about the Boxer Rebellion",
             "redirect": "broken_day3_morning_question_boxer"
         },
         {
@@ -26,11 +27,6 @@
             "menu": "broken_day3_morning_menu_mask",
             "selected": "Do not show. Plead a soldier's honour",
             "redirect": "broken_day3_morning_mask_honour"
-        },
-        {
-            "menu": "broken_day3_morning_menu_convince",
-            "selected": "Ask the Captain whether the tree was cut",
-            "redirect": "broken_day3_morning_question_tree"
         }
     ]
 }

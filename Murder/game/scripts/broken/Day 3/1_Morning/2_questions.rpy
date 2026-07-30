@@ -2,22 +2,14 @@
 # ------------------------------------
 #   THE QUESTIONS
 #
+#   Only the culprit question can win the argument, and only when the demand
+#   for the mask is answered on a soldier's honour. The others buy nothing but
+#   spent minutes.
 # ------------------------------------
-# TODO
-label broken_day3_morning_question_letters:
-
-    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
-
-    # TODO NOTHING new is learned, we cover this before
-
-    return
-
-
-# TODO
 label broken_day3_morning_question_poison:
 
     broken """
-    There is something none of you have seen.
+    There is something I think you should see.
     """
 
     """
@@ -27,33 +19,45 @@ label broken_day3_morning_question_poison:
     broken """
     I took this from the scullery on Friday night.
 
+    It was lyaing there, opened. 
+
+    Like somebody just use it.
+
     Doctor, I believe Ted Harring may have been poisoned.
     """
 
     """
-    Doctor Baldwin picks the bottle up, turns it about, and hands it back to me with something close to pity.
+    Doctor Baldwin picks the bottle up, turns it about, and hands it back to me.
     """
 
-    nurse """
-    And how long have you been carrying it about, Mr Moody?
+    doctor """
+    Rat poison, I see.
+
+    The symptoms of Mr Harring could point to it that is right.
+
+    But there is no way to know for sure.
     """
 
     broken """
-    Since Friday.
-
-    For safe keeping.
+    Of course, but you admit it is strange, right?
     """
 
-    nurse """
-    Quite.
+    doctor """
+    It is a strange coincidence maybe.
+
+    But that doesn't say much as well.
+
+    Almost every house in England as some kind of poison like this one.
+    """
+
+    broken """
+    Right, I guess that is not a proof in itself.
     """
 
     return
 
 
 label broken_day3_morning_question_boxer:
-
-    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
 
     broken """
     Doctor, I remember you told me you served in the Boxer Rebellion.
@@ -290,11 +294,10 @@ label broken_day3_morning_question_boxer:
     return
 
 
-# GOOD question - if Lady Claythorn did not write the letters, then nobody in
-# this room may be crossed off the list.
+# THE question - if Lady Claythorn did not write the letters, then nobody in
+# this room may be crossed off the list. It is the only one that can carry the
+# room, and it costs Moody his mask unless he answers on his honour.
 label broken_day3_morning_question_culprit:
-
-    $ broken_details.saved_variables['day3_morning_good_questions'] += 1
 
     broken """
     I have another theory I should like to share with you.
@@ -622,6 +625,10 @@ label broken_day3_morning_mask_honour:
     psychic """
     ...Very well.
     """
+
+    # The argument is won here, so the room stops listening for further
+    # questions and broken_day3_morning moves straight to the departure of six.
+    $ all_menus['broken_day3_morning_menu_convince'].early_exit = True
 
     return
 

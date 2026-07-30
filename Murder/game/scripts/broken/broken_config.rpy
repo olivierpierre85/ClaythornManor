@@ -36,9 +36,6 @@ label init_broken:
             "day2_evening_captain_facts" : 0,
             "day2_evening_no_pretence" : False,
             "day2_evening_staff_oddities" : 0,
-
-            # Morning day 3 (the argument against splitting the party)
-            "day3_morning_good_questions" : 0,
         }
 
         broken_important_choices = CharacterImportantChoiceList([

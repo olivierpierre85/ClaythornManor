@@ -13,9 +13,11 @@ label broken_ending_day1_deathbed:
     """
     You don't wake up.
 
-    You came to this house behind another man's face, certain you were the one doing the watching.
+    You came to this house pretending to be someone else, putting all your energy in trying not to be recognized.
 
-    You were wrong.
+    Doing so, you forgot to watch the others.
+
+    That was your mistake.
     """
 
     jump ending_generic
@@ -26,7 +28,6 @@ label broken_ending_shot:
 
     $ broken_details.endings.unlock('shot')
     $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('shot'))
-
 
     call death_screen_transition
 
@@ -203,15 +204,13 @@ label broken_ending_ambushed:
     $ play_music('mysterious')
 
     """
-    You were right to leave. You were wrong to leave like that.
+    As you close you eyes for ever, an idea struck you hard.
 
-    Whoever holds this estate has shown you twice already that they like their work done quietly, away from watching eyes.
+    You were right to leave. 
+    
+    You were wrong to leave people behind.
 
-    Two men on an empty road are quiet work.
-
-    Six people are witnesses. Six people are complications.
-
-    Next time, take everyone with you. Every single one.
+    Try to not make the same mistake again.
     """
 
     jump ending_generic
@@ -230,7 +229,7 @@ label broken_ending_walked_out:
 
     But you brought them out together.
 
-    A captain, a psychic, a doctor, a nurse and one drunkard.
+    A captain, a psychic, a doctor, a nurse and a drunk.
 
     The only casualty was Ted Harring.
 
