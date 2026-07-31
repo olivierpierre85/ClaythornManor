@@ -24,10 +24,10 @@ Start real work again : 2027 (start looking in november)
 | **Doctor**  | Feb 2026           |
 | **Nurse**   | March 2026         |
 | **Captain** | June 2026          |
-| Broken      | July 2026????      |
-| Drunk       | September 2026???? |
+| **Broken**  | august 2026        |
 | Host        | November 2026????  |
-| BUTLER      | DEcember 2026????  |
+| Drunk       | September 2026???? |
+| BUTLER+meta | DEcember 2026????  |
 
 
 # Total hours count
@@ -42,5 +42,5 @@ Start real work again : 2027 (start looking in november)
 | 2026      | 206 AND counting |
 | **Total** | **970**          |
 
-≈ **150 days** in real FTE (5h coding a day)
+≈ **200 days** in real FTE (5h coding a day) => Full year of work at least
 

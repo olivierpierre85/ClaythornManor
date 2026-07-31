@@ -202,11 +202,7 @@ label broken_ending_massacre:
     $ play_music('mysterious')
 
     """
-    What
-
-    a
-
-    mess.
+    What an end.
 
     The horror that happened there will forever scar you.
 
@@ -223,27 +219,27 @@ label broken_ending_massacre:
 
     jump ending_generic
 
-# OLD AMBUSHED ENDING - TODO DELETE when sure not needed
-label broken_ending_ambushed:
+# # OLD AMBUSHED ENDING - TODO DELETE when sure not needed
+# label broken_ending_ambushed:
 
-    $ broken_details.endings.unlock('ambushed')
-    $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('ambushed'))
+#     $ broken_details.endings.unlock('ambushed')
+#     $ broken_details.add_ending_checkpoint(ending = broken_details.endings.get_item('ambushed'))
 
-    call death_screen_transition
+#     call death_screen_transition
 
-    $ play_music('mysterious')
+#     $ play_music('mysterious')
 
-    """
-    As you closed your eyes for the last time, one thought struck you hard.
+#     """
+#     As you closed your eyes for the last time, one thought struck you hard.
 
-    You were right to leave.
+#     You were right to leave.
 
-    You were wrong to leave people behind.
+#     You were wrong to leave people behind.
 
-    Try not to make the same mistake again.
-    """
+#     Try not to make the same mistake again.
+#     """
 
-    jump ending_generic
+#     jump ending_generic
 
 
 # SUNDAY - the final ending: everyone walks out together and reaches the police station

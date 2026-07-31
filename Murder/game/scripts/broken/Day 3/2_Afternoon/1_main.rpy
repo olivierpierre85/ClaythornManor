@@ -272,34 +272,58 @@ label broken_day3_afternoon_pair:
 
     """
     He hesitates for a second, not even trying to hide his fear.
-
-    But then makes a choice.
     """
 
     captain """
-    You are right.
+    You go.
 
-    Let us go, now!
-    """
+    Try to warn the others.
 
-    $ change_room('forest_road', dissolve)
+    And I will go towards the town.
 
-    """
-    We rush back to the road, then start running.
-
-    Fast at first, but as our strength diminishes, we settle into a light jog.
+    With the police car I might even be back before you.
     """
 
     """
-    We reach the manor fast enough.
+    I highly doubt that, but I have no time to argue.
+    """
 
-    But we smell it long before we see it.
+    broken """
+    Fine, but let us not waste any time.
+    """
+
+    $ change_room('forest_road')
+
+    """
+    We rush back to the road.
+    """
+
+    captain """
+    I will go this way.
+
+    Do not worry, I will be back to the manor as fast as possible.
+
+    Good luck, Mr Moody.
+    """
+
+    broken """
+    Goodbye, Captain.
+    """
+
+    """
+    I have no opportunity to say more, as he is already on his way.
+
+    He looks more as though he is fleeing than bravely going to fetch help.
+
+    So I start running in the opposite direction.
+
+    I go fast at first, but as my strength diminishes, I settle into a light jog.
     """
 
     $ play_music('scary', 2)
 
     """
-    Smoke, first, carried down the drive to meet us.
+    As I approach the manor, I catch a faint smell of smoke and begin to worry.
     """
 
     $ change_room('manor_on_fire', dissolve)
@@ -307,70 +331,52 @@ label broken_day3_afternoon_pair:
     play sound fire loop
 
     """
-    Then the trees give way, and Claythorn Manor stands at the end of the gravel with fire in half its windows.
+    As I feared, Claythorn Manor stands at the end of the gravel with fire in half its windows.
     """
 
-    #TODO finish writing this.
-    
-    captain scared """
-    Good God.
-    """
-
-    broken """
-    They are inside.
-
-    All four of them are still inside.
-    """
-
-    captain """
-    Mr Moody, that house is coming down.
-    """
-
-    broken """
-    Then we had better be quick about it.
-    """
-
-    captain """
-    Mr Moody!
-    """
+    pause 1.0
 
     """
-    I am already running.
+    I am frozen for a second.
 
-    Behind me I hear him swear, which I have never once heard him do.
+    But I realise the others might still be inside.
 
-    Then I hear his boots on the gravel, following.
+    I feel like I do not have a choice and rush towards the entrance.
     """
 
     play sound door_open
 
-    $ change_room('entrance_hall', dissolve)
+    $ change_room('entrance_hall_fire', dissolve)
 
     """
     The hall takes the breath out of me at the door.
 
     The heat stands in it like a wall, and the smoke lies along the ceiling in a slow black river.
 
-    My mask fills with it at once.
+    My mask fills with it at once, so I throw it to the ground.
 
-    I keep low, where the air is still worth something, and make for the billiard room.
+    I manage to shout at the top of my lungs.
     """
 
-    captain """
-    The staircase is alight!
+    broken """
+    Is anyone here?
 
-    Keep to the left, man, keep to the left!
+    It is Thomas Moody!
     """
 
     """
-    The billiard room door is shut fast.
+    No answer.
 
-    I put my shoulder to it twice, and on the second it gives.
+    So I make for the billiard room.
+
+    Luckily, the door is intact.
+
+    The flames have not reached it yet.
     """
 
     play sound door_open
 
-    $ change_room('billiard_room', dissolve)
+    $ change_room('billiard_room_fire', dissolve)
 
     $ play_music('sad', 3)
 
@@ -381,21 +387,9 @@ label broken_day3_afternoon_pair:
 
     Samuel Manning sits propped against the little bar, almost upright, his flask fallen from his hand.
 
-    Miss Marsh is on her side by the billiard table, her coat buttoned for a journey she never made.
+    Miss Marsh is on her side by the billiard table.
 
-    And Miss Baxter is beyond her, on her back beneath the shuttered window, her eyes open.
-
-    The fire has not reached this room yet.
-
-    The fire is not what killed them.
-    """
-
-    """
-    I have seen this once already today, in a motorcar in the woods.
-
-    The same small dark holes.
-
-    The same dreadful tidiness of it.
+    And Miss Baxter is beyond her, blood all over her face.
     """
 
     broken scared """
@@ -411,69 +405,21 @@ label broken_day3_afternoon_pair:
 
     Nothing.
 
-    I reach Miss Baxter last and take her wrist, and there is nothing there either.
+    I try to make sense of what I see.
 
-    Four hours.
-
-    We were gone four hours.
-    """
-
-    captain """
-    Mr Moody.
-
-    Mr Moody, get up.
-
-    There is nothing here for you now.
-    """
-
-    """
-    He has come as far as the doorway and no further.
-
-    A handkerchief is pressed over his mouth, and his pistol is still in his other hand, quite uselessly.
-    """
-
-    broken """
-    We left them, Captain.
-
-    We stood in this very room and we left them here.
-    """
-
-    captain """
-    Yes.
-
-    We shall discuss it outside.
-
-    Now.
+    The fire was not set to kill them.
     """
 
     play sound moving_furniture
 
     """
-    Above us, the house makes a sound I have heard before.
+    Above me, the house makes a sound.
 
-    Not in Scotland, and not in peacetime.
-
-    It is the long groan a thing makes when it has finished deciding to fall.
-    """
-
-    captain """
-    Out!
-
-    Get out, man, now!
-    """
-
-    """
     I look up.
 
-    The ceiling is bowing in the middle, slowly, almost gently, and the paint upon it runs like water.
+    The ceiling is bowing in the middle, slowly, almost gently.
 
-    I think, quite calmly, that I ought to move.
-
-    I do not move.
-
-    I have carried men out of worse than this and I have never once been late.
-
-    Today I was late.
+    I know I should move, but I am paralysed by fear.
     """
 
     play sound thunder_full
@@ -485,43 +431,7 @@ label broken_day3_afternoon_pair:
     stop sound fadeout 2.0
 
     jump broken_ending_massacre
-
-
-    ### OLD AMBUSHED VERSION
-    # """
-    # For a while, the woods stay quiet.
-    # """
-
-    # $ play_music('danger', 2)
-
-    # play sound gun
-
-    # """
-    # But suddenly, a gunshot.
-
-    # Captain Sinha goes down into the road.
-
-    # I do not think. 
     
-    # I am running for the trees, to avoid staying as sittings ducks in the middle of the road.
-
-    # A bullet hits my left leg.
-    # """
-
-    # play sound body_fall
-    
-    # """
-    # I fall instantly.
-
-    # I turns towards where the shot came and notice a gun peering out of the woods.
-
-    # Another shot is fired before I can make out who holds it.
-    # """
-
-    # play sound gun
-
-    # jump broken_ending_ambushed
-
 
 # --------------------------------------------
 #   ALL TOGETHER (left_together)

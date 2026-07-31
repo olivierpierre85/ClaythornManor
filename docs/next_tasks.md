@@ -1,15 +1,7 @@
 <!-- # cSpell:disable -->
 # IN intuitions DEAD , add a special sound or text
 
-
-## Fable
-
-If you still have money in september, use fable to implemented the SURVIVE mechanic. That will start the META story each time a player is saved, up until you can play the butler!!
-
-### EVERYONE
-
-Maybe the butler doesnt' leave with the staff!!! He kills them and come back
-
+# Double CHECK nightime (AROUND 16h30 !!! )!! important for endings with PSYCHIC and BROKEN
 
 
 ### Write Story: NEXT => Broken
@@ -22,21 +14,13 @@ Maybe the butler doesnt' leave with the staff!!! He kills them and come back
 - Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.  If he does, the Killbreath discovery can come right at the start. 
 - ORRRRR **THE DRUNK is unlocked by Broken**, and host by drunk
 
-BETTER END
-!!!FIND CAR the next day, with the staff dead. BROKEN ??? => Discover the butler may still be in the house!!!!!!!!!!
-
-Broken see tracks (good eye), a
-BUT when with others, look at the road. PANIC, comes back to the house. Find all of them DEADDDDDDD and get shot (not sure by whom? Sinha, Harring or else?)
 
 There is almost no hint of what really happened in Boxer's rebellion ADD in some of things. aDD in questions at the end.
-
 
 TODO, should we add the story of the baby and the nurse here (questions day3)OR way too obvious?
 
 Or maybe add Psychic saying somewhere she never had children of her own, ALMOSt one, **but god took him away from me at birth**
 
-
-TODO maybe unmaskins is forced IF you do not ask the right questions.
 
 ##### **Friday Evening**
 
@@ -47,13 +31,7 @@ FLASHBACK =>Add in inner dialogs that WE ARE NOT HERE FOR the same reasons BEFOR
 
 Flashback -> ADmit smauel manning has been pretending to be drunk
 
-REMOVE MASK only when telling everyone that THERE might be a killer among us
-
-
 APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
-
-
-MELISSA -> Inversion en anglais : nor am I not equipped for that type of activity.
 
 ### Write Story: NEXT => DRUNK
 GEN IDEAS
@@ -75,9 +53,14 @@ OR there is a killer, I must hide PRETEND TO kill YOURSELF, hide your cut's and 
 
 He will observe what is happening during eating with TEd Harring,nurse and psychic. witness the breakdown, and then THE butler comes clean the mess of psychic crying over TED harring. NURSE wakes up, and looks up at the butler cleaning the mess.
 
+OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mister Harring. How are you feelin?" => Unlocks TED Harring? Or unlock Butler
+
+### Write Story: NEXT => HOST
+Broken unlocks host, host unlocks full drunk?
+
 ## Assets & artistic Tasks
 
-Thread, leave together
+Thread, leave together: CHeck others
 
 REDO billiard room (couch weird) + fire version
 
@@ -98,14 +81,13 @@ Finish normal list- last one is train_second
 Multiple Class in train for outside IMAGEs
 - Two class at the moment. I think One image by person is more appropriate, with hints in them (bags,...). See to do it later in V4 ()
   
-### MAPS
-
-Redraw BETTER maps for manor, not
-
   
 ### MUSIC with producer AI
 Get new music from internet and put them at the right place
 
+## Fable
+
+If you still have money in september, use fable to implemented the SURVIVE mechanic. That will start the META story each time a player is saved, up until you can play the butler!!
 
 
 ## Update ITCH.IO
