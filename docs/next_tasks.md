@@ -6,6 +6,8 @@
 
 ### Write Story: NEXT => Broken
 
+FIX impossible to reach coverage
+
 - ADD MORE MORE questions in the generic menus (Doctor, Drunk, host) to confuse the player and make the game more challenging.
 
 - Test the changing MALUS and the whole Broken branching logic.
