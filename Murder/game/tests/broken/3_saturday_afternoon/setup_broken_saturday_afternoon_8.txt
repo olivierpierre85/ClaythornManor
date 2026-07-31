@@ -37,7 +37,14 @@ No wonder none of us has shot anything this morning.
 We stop for lunch empty-handed.
 Doctor Baldwin settles next to the footman, and Samuel Manning sits a little apart.
 None of them seems eager for conversation.
-Menu Choice: Keep to yourself
+Menu Choice: Talk to Doctor Baldwin
+Samuel Manning makes me uneasy, so I approach Doctor Baldwin.
+I interrupt what looks like a hushed exchange between him and the footman.
+They break off, and act as if nothing has passed between them.
+Daniel Baldwin: Ah, Mr Moody.
+Daniel Baldwin: Excellent day for a hunt, isn't it?
+Daniel Baldwin: But tell me, what is on your mind?
+Menu Choice: You don't have any more questions for him
 Lunch is over and the footman advises us to go back to hunting.
 None of us seems particularly enthusiastic about it, but we go on anyway.
 This afternoon is no more successful than the morning.

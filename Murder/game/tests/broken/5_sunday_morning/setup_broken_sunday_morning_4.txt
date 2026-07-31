@@ -1,114 +1,288 @@
 Chapter: An Empty Manor
 Character: Thomas Moody
-Dawn comes when I wake up, stiff in my watch chair.
-I can't believe I fell asleep.
-Captain Sinha is looking at me with a hint of reproach.
-Sushil Sinha: I see you managed a little sleep, Mr Moody.
-Sushil Sinha: It is alright, I did not.
+Dawn has come by the time I wake, stiff in my watch chair.
+I cannot believe I fell asleep.
+I check my mask at once, and find it slightly crooked.
+I adjust it and look about the room, but nobody is watching me.
+I turn to Captain Sinha, who is sitting perfectly straight on his chair.
+Sushil Sinha: Ah, Mr Moody, you are awake.
+Sushil Sinha: I believe you managed a little sleep.
+Sushil Sinha: I did not, but it is quite all right.
 Sushil Sinha: Do not worry, nothing happened during the night.
-Thomas Moody: Good. I am sorry, I did not think I would fall asleep.
-Sushil Sinha: It happens. Do not blame yourself too much over it.
-I look around the room. Everyone is awake now, all of them dishevelled.
+Thomas Moody: Good.
+Thomas Moody: I am sorry, I did not think I would fall asleep.
+Sushil Sinha: It happens.
+Sushil Sinha: Do not blame yourself too much for it.
+I look around the room.
+Everyone is awake now, all of them dishevelled.
 Doctor Baldwin is in particularly bad shape, having contracted a sort of fever.
 Samuel Manning is already back to drinking from his pocket flask.
-The ladies have managed to make themselves presentable, and Captain Sinha looks as though he had a normal night's sleep.
+The ladies have managed to make themselves presentable, and Captain Sinha looks as though he had passed a perfectly ordinary night in his own bed.
 I wonder what I look like, but it hardly matters now.
 It is time for action, and Captain Sinha takes the lead.
-Sushil Sinha: Alright, now that everyone is awake, I think it is time we planned our next move.
+Sushil Sinha: Very well, now that everyone is awake, I think it is time we planned our next move.
 People murmur in agreement.
-Sushil Sinha: Good. What I suggest is this.
+Sushil Sinha: Good.
+Sushil Sinha: What I suggest is this.
 Sushil Sinha: Let us go quickly to our rooms and get ready for the long walk.
 Sushil Sinha: We can meet afterwards in the entrance hall.
 Sushil Sinha: The sooner we leave, the better.
-Amelia Baxter: Captain, Miss Marsh and I have just had a discussion.
-Amelia Baxter: And we believe we shall not make it.
+Amelia Baxter: Captain, Miss Marsh and I have been speaking quietly together these last few minutes.
+Amelia Baxter: And we have come to the sorry conclusion that we shall never make it.
 Sushil Sinha: Not make it, Miss Baxter?
-Sushil Sinha: It is a long journey I'll admit it, but not a difficult one, merely following the road.
-Sushil Sinha: And we will walk slowly, and make stops as you need.
-Amelia Baxter: I know it looks like an easy stroll for you captain.
-Amelia Baxter: My condition is not what it used to be nor am I equipped for that type of activity.
+Sushil Sinha: It is a long journey, I will admit, but not a difficult one, merely a matter of following the road.
+Sushil Sinha: And we shall walk slowly, and stop as often as you need.
+Amelia Baxter: I do not doubt it is only a stroll to a man of your training, Captain.
+Amelia Baxter: But my constitution is not the thing it once was, and I am not dressed for such an undertaking.
 Rosalind Marsh: And I am no better.
 Rosalind Marsh: My health has never been strong, and a whole day on a wet road would be very taxing.
-Captain Sinha is considering this, then turns towards me.
-Sushil Sinha: Maybe they are right Mr Moody.
-Sushil Sinha: This journey might not be fit for the ladies, it would be best if they stay there.
-Sushil Sinha: And even the man might not be in perfect shape.
+Captain Sinha considers this, then turns towards me.
+Sushil Sinha: Perhaps they are right, Mr Moody.
+Sushil Sinha: This journey might not be fit for the ladies.
+Sushil Sinha: It would be best if they stayed here.
+Sushil Sinha: And even the men are not in perfect shape.
 He looks at Samuel Manning, and Doctor Baldwin.
 They both look sickly and exhausted.
-Sushil Sinha: We would go definitely faster just the two of us.
+Sushil Sinha: We would certainly go faster, just the two of us.
 Sushil Sinha: We could fetch help and be back before sundown.
 Sushil Sinha: What do you think?
-Something in me refuses it, flatly, I could not tell why.
+Something in me refuses it, flatly, though I could not tell why.
 If we do not leave together, something terrible will happen.
 But how can I convince everyone of this?
-Menu Choice: Take off the mask and show them your true face
-Words have failed, and I have one thing left that is not a word.
-They have spent three days looking at a piece of painted tin and calling it a man.
-Let them see what has been talking to them.
-Thomas Moody: Very well.
-Thomas Moody: You will not take my reasons. Take this instead.
+Menu Choice: Talk about the Boxer Rebellion{{observation}}
+Thomas Moody: Doctor, I remember you told me you served in the Boxer Rebellion.
+Thomas Moody: Is that correct?
+Daniel Baldwin: It is.
+Daniel Baldwin: That was my first post as a field surgeon.
+It is dangerous to speak as Thomas here, for I do not know the details of his part in that conflict.
+But I must, if I am to prove my point.
+Thomas Moody: Quite.
+Thomas Moody: That struck me as odd, you see, because I fought in that war as well.
+Daniel Baldwin: Really?
+Daniel Baldwin: Why did you not say so before?
+Thomas Moody: I do not like to dwell on the past.
+Thomas Moody: But now I feel this could be relevant.
+Sushil Sinha: It is indeed, for I was there myself.
+Sushil Sinha: I was...
+Rosalind Marsh: Good heavens!
+Rosalind Marsh: So was I.
+A pause follows that declaration.
+Sushil Sinha: You were, Miss Marsh?
+Rosalind Marsh: Yes, as a very young nurse.
+Sushil Sinha: That is extraordinary.
+Sushil Sinha: Such a coincidence...
+Thomas Moody: Captain, it is clear this is no longer a coincidence.
+Thomas Moody: Four of us served in a relatively small conflict, decades ago.
+Thomas Moody: It is very likely the reason we have been gathered here.
+Daniel Baldwin: What do you mean?
+Daniel Baldwin: What could have happened there?
+Thomas Moody: I do not know, but if we can find out, we might begin to understand what is happening here.
+Thomas Moody: First, it is important to know whether anyone else was with us in China at that time.
+Thomas Moody: Mr Manning?
+Samuel Manning: Yes?
+Samuel Manning: I am sorry, what is it?
+Thomas Moody: We were wondering whether you fought in China, or were there at all, during the Boxer Rebellion.
+Samuel Manning: China?
+Samuel Manning: No, I have never been there.
+Samuel Manning: And certainly not during any rebellion.
+Samuel Manning: I should remember that.
+Amelia Baxter: Nor I.
+Amelia Baxter: I have never so much as left this country.
+Thomas Moody: Indeed.
+Thomas Moody: And Ted Harring was obviously too young to have been there.
+Thomas Moody: As for Lady Claythorn, she was in all likelihood too young as well.
+Thomas Moody: I am not certain of her age, but...
+Rosalind Marsh: She would have been too young indeed.
+Rosalind Marsh: I was so young myself, and Lady Claythorn is a few years younger than I am.
+Rosalind Marsh: She would have been a child at that time.
+Thomas Moody: I see.
+Thomas Moody: Unlikely, but not impossible.
+Thomas Moody: Sadly, we shall not hear her point of view.
+Thomas Moody: But we may still try, between ourselves, to understand what happened.
+Thomas Moody: Now, do you recognise any of the others?
+Thomas Moody: For myself, I do not recognise any of you.
+I can only hope Thomas did not know them either.
+Rosalind Marsh: Well, we never spoke of it, but I believe I worked with Doctor Baldwin.
+Daniel Baldwin: We did?
+Daniel Baldwin: I am sorry, I am not sure I remember you.
+Rosalind Marsh: Of course, I was very young, and there were a great many nurses.
+Daniel Baldwin: Of course.
+Sushil Sinha: Now that I think of it, I may have heard or seen your name as well.
+Sushil Sinha: But I do not believe we ever spoke.
+Daniel Baldwin: I am sorry, Captain.
+Daniel Baldwin: I do not remember.
+Sushil Sinha: I am not surprised.
+Sushil Sinha: There were a great many other soldiers of Indian descent.
+An awkward silence follows.
+Thomas Moody: Well, that is not much to go on.
+Thomas Moody: Do you remember anything of note that could have linked the four of us together?
+Sushil Sinha: That is hard to say.
+Sushil Sinha: It was a long time ago.
+Sushil Sinha: And a great many things of importance happened.
+Sushil Sinha: As they tend to, in wartime.
+Sushil Sinha: But I cannot think of anything in particular.
+Daniel Baldwin: Neither can I.
+Rosalind Marsh: Nor can I, I am sorry.
+Thomas Moody: It is all right.
+Thomas Moody: I cannot think of anything myself.
+But Thomas could have.
+I feel a pang in my heart when I think of him.
+Thomas Moody: Well, that does not help us much for the moment, but it is a start.
+Menu Choice: What if Lady Claythorn is not the culprit?
+Thomas Moody: I have another theory I should like to share with you.
+Thomas Moody: Last night we all settled on Lady Claythorn being behind this.
+Thomas Moody: But what if she was not?
+Daniel Baldwin: Not her?
+Daniel Baldwin: You were the one who proved to us she was lying, Mr Moody.
+Thomas Moody: She lied about the award and about the money, and I am certain of that.
+Thomas Moody: I am certain she came here to play a part.
+Thomas Moody: But now I am not so sure she is the only one involved.
+Sushil Sinha: Well of course not, she had all of her staff to help her.
+Thomas Moody: I do not mean the staff alone.
+Thomas Moody: I think the connection some of us share with the Boxer Rebellion must play a central part in what is happening this weekend.
+Thomas Moody: And as Miss Marsh said, Lady Claythorn was in all likelihood only a child when that happened.
+Thomas Moody: Even if she was in China at the time, which is a considerable if, how much could she truly remember?
+Thomas Moody: I believe she was only helping somebody else.
+Rosalind Marsh: Then who is left, Mr Moody?
+Thomas Moody: Well, we assumed that those of us remaining here must be innocent, since we are all shut in together.
+Thomas Moody: But what if that is not the case?
+Thomas Moody: What if there is someone here willing to do us harm?
+Sushil Sinha: You mean that someone here could be responsible for this weekend, and is playing the victim like the rest of us?
+Thomas Moody: Precisely.
+Sushil Sinha: That is rather far-fetched, Mr Moody.
+Sushil Sinha: Whom amongst us do you believe capable of such a thing?
+Sushil Sinha: I think it safe to say that everyone could be a suspect.
+Thomas Moody: Well, that I do not know.
+I pause there and watch my words take hold.
+Doctor Baldwin looks at Miss Marsh.
+Miss Marsh looks at Mr Manning.
+Miss Baxter stares at Captain Sinha.
+Everybody looks uneasy.
+Thomas Moody: So I cannot name anyone for the moment, nor do I wish or need to.
+Thomas Moody: I say only that we cannot wholly trust anybody, and that splitting up would give the culprit, if there is one, every advantage.
+Thomas Moody: If we keep together at all times, and never let anybody out of our sight, we should be able to leave unharmed.
+Sushil Sinha: That is a great deal to suppose, Mr Moody.
+Sushil Sinha: To my mind the dangerous people have already left this house.
+Sushil Sinha: Lady Claythorn may be too young to have met us in China, but her butler is not.
+Thomas Moody: True, but I do not think we should suspect the staff.
+Daniel Baldwin: Unless the butler was no servant at all, but playing a part.
+I consider that for a moment.
+Thomas Moody: True.
+Thomas Moody: I confess I had not thought of it in that way.
+Thomas Moody: But there is no way to prove it, so I should still counsel caution.
+Amelia Baxter: Your argument is perfectly reasonable, Mr Moody.
+Amelia Baxter: But it supposes one thing, that we are to trust you.
+Amelia Baxter: You have said it yourself, everyone here could be dangerous.
+Amelia Baxter: That includes you.
+Amelia Baxter: And wandering into the woods seems more dangerous to me than staying here.
+Amelia Baxter: What if that is what you wanted?
+Thomas Moody: I see.
+Thomas Moody: It is true, I suppose, that I might be considered a suspect as well.
+Thomas Moody: But why should I have raised the matter at all, in that case?
+There is a pause now.
+I can see that the argument has struck home with some of them.
+Rosalind Marsh: Perhaps you thought it the only way to make us trust you.
+Rosalind Marsh: That would have been very clever indeed.
+Rosalind Marsh: I am not saying it is the case, only that, as you said yourself, we should not trust anyone.
+Amelia Baxter: And there is something else that has been nagging at me.
+Amelia Baxter: I slept very badly.
+Amelia Baxter: In the small hours of the night I woke.
+Amelia Baxter: I saw that you had fallen asleep, Mr Moody, with your head against the wing of your chair.
+Amelia Baxter: And the mask had come away from your face.
+Amelia Baxter: Not by much, perhaps an inch.
+Amelia Baxter: I looked at you a long while.
+Amelia Baxter: I am not a squeamish woman, and I had prepared myself for something dreadful.
+Amelia Baxter: But there was nothing dreadful to see.
+Amelia Baxter: No burn.
+Amelia Baxter: No scar.
+Amelia Baxter: Nothing but perfectly ordinary skin.
+Amelia Baxter: I assumed at the time that the mask was simply larger than it need be.
+Amelia Baxter: But now I am not so sure.
+Everybody is silent.
+Amelia Baxter: Mr Moody, I know it is very rude of me to ask.
+Amelia Baxter: But if we are in such danger as you would have us believe, then you would not mind showing us your true face, only to prove that we may trust you.
+Amelia Baxter: I am sorry, but I do not think I could trust you if you did not.
+And there it is.
+It had always been a possibility that I should be found out.
+Still, I am not at all sure what I ought to do now.
+Menu Choice: Take off the mask and show your true face
+There is no escaping this.
+And if I am honest with them, perhaps they will understand.
+Thomas Moody: Very well then.
 I reach up, and unfasten the mask, and set it down on the billiard table.
 The room goes very still.
-Miss Baxter's hand rises to her mouth. Miss Marsh does not move at all.
-Doctor Baldwin half stands, staring at a face that carries none of the ruin he has been imagining all weekend.
+Thomas Moody: I might as well tell you the whole story now.
 Thomas Moody: My name is not Thomas Moody.
-Thomas Moody: Thomas Moody was my friend. He came home from Flanders behind that mask, and he died this spring in a rented room in Liverpool.
-Thomas Moody: His invitation arrived after he was buried. I took his name, and his face, and came here in his place, because I am a journalist and an invitation to a dead man is a story.
+Thomas Moody: Thomas Moody was my friend.
+Thomas Moody: He came home from Flanders behind that mask, and he died this spring in a rented room in Liverpool.
+Thomas Moody: His invitation arrived after he was buried.
+Thomas Moody: I took his name, and his face, and came here in his place, because I am a journalist and it was a good story.
 Thomas Moody: Everything else I have told you this weekend is true.
-Thomas Moody: Now will you listen to me?
+Thomas Moody: But please, now you must listen to me.
 Nobody answers.
-The doctor sits down again, slowly.
-And Captain Sinha, who has not said a word, walks around the billiard table and picks up the mask, and turns it over in his hands as though it were evidence.
-Which, I realise a good deal too late, is exactly what it is.
+Captain Sinha walks around the billiard table and picks up the mask, and turns it over in his hands.
 Sushil Sinha: Let us be clear about what you have just told us, sir.
 Sushil Sinha: You entered this house under a false name.
 Sushil Sinha: You have lied to every person in this room for three days, at every meal, with a straight face and a good deal of skill.
 Sushil Sinha: And there is a young man lying dead upstairs.
-Thomas Moody: Captain, you know what was under my door. You read it yourself.
+Thomas Moody: Captain, you know what was under my door.
+Thomas Moody: You read it yourself.
 Sushil Sinha: I read a paper that you gave me.
-Sushil Sinha: I have no idea now who wrote it, and neither, I think, do you.
-He is not angry. That is the worst of it.
-He is doing arithmetic, and I have handed him the figures.
+Sushil Sinha: I have no idea now who wrote it.
 Rosalind Marsh: He talked us into that room last night.
 Rosalind Marsh: He told us where to sleep, and who should keep watch, and when.
 Amelia Baxter: And he has been asking questions of every one of us since Friday.
-Amelia Baxter: All those little kindnesses. All that patient interest.
-Thomas Moody: Miss Baxter, if I had wanted any of you dead, you would have died in your beds while I sat awake beside you.
-Sushil Sinha: That may be so.
-Sushil Sinha: But I am not able to prove it, and I am not able to disprove it either.
-Sushil Sinha: So I shall do the only correct thing available to me.
+Thomas Moody: Miss Baxter, if I were behind all of this, why bother with a mask at all?
+Thomas Moody: I would simply have worn my own face.
+Sushil Sinha: That may be true.
+Sushil Sinha: But I am no longer sure I trust you, Mr Moody.
+Sushil Sinha: Certainly not enough to go wandering into the woods with you.
+Thomas Moody: So what are you saying?
+Sushil Sinha: That everyone would feel safer if you were held somewhere.
+Sushil Sinha: In your room, for instance.
+Thomas Moody: What?!
+Thomas Moody: This is madness, there is no need for it.
+Sushil Sinha: I am afraid there is.
+Sushil Sinha: At least, I believe so.
+Sushil Sinha: Does anyone disagree?
+Nobody answers.
+That settles it.
+Captain Sinha takes out his pistol to make certain I do not escape.
+Sushil Sinha: Please, Mr Moody, let us go up to your room.
+I can think of nothing to do but follow him.
 There is no struggle worth the name.
-The doctor is feverish and Mr Manning is drunk, but the Captain is neither, and I am a man of forty-three who has never in his life hit anybody.
 They walk me up to my own room, which is a courtesy of a sort.
-Sushil Sinha: You will remain here until the police come. That is not a punishment, sir, it is an arrest.
-Sushil Sinha: I would rather have locked the door and left it at that.
-Sushil Sinha: But there is a lock on the inside of it as well, and I do not know this house well enough to be certain there is not another way out.
-They use the cord from the curtains, and the belt from my own coat.
-The Captain does it himself, and does it well, and checks it twice, and I understand that he has done this before to men who deserved it more.
-Sushil Sinha: I shall walk to the village alone. It is faster, and after this morning I do not think anyone else will come.
-Sushil Sinha: Miss Marsh has your keys. She will bring you water at noon.
-Sushil Sinha: If you are what you say you are, you have my apology in advance, and you shall have it properly when I return with the constables.
-Thomas Moody: Captain. Listen to me.
+Sushil Sinha: You will remain here until the police come.
+Sushil Sinha: That is not a punishment, sir, it is a precaution.
+Sushil Sinha: I would rather have just locked the door and left it at that.
+Sushil Sinha: But I do not wish to take any chances.
+He uses the cord from the curtains, and the belt from my own coat, to tie me to the bed.
+The Captain does it himself and checks it twice.
+Sushil Sinha: I shall walk to the town alone.
+Sushil Sinha: It is faster, and after this morning I do not think anyone else will come.
+Sushil Sinha: For what it is worth, I do not like doing this.
+Sushil Sinha: If you are what you say you are, you shall have my deepest apology when I return with the constables.
+Thomas Moody: Captain, listen to me.
 Thomas Moody: Do not leave this house with four people in it and one door.
+Thomas Moody: Do not leave me with them.
+Sushil Sinha: Too late for that.
 Sushil Sinha: Goodbye, Mr Moody.
 The door shuts.
 The key turns.
 I lie on my own bed, in my own room, tied at the wrists and the ankles with my own belt, and I listen to the front door close beneath me.
 And I have never in my life felt so entirely alone.
-I do not know how long I lie there.
-Long enough for the light to move across the ceiling. Long enough to work the cord loose at one wrist, and no further.
+I do not know how long I have lain there.
+Long enough for the light to move across the ceiling.
+Long enough to work the cord loose at one wrist, and no further.
 Then, somewhere below me, glass breaks.
-There is no shouting afterwards. That is the thing I cannot make sense of.
-Glass breaks in a house with four people in it, and nobody calls out at all.
 Then I smell it.
-Smoke, coming under the door, thin and grey and perfectly patient.
+Smoke, coming under the door, thin and grey.
 I pull at the cord until my wrist is wet, and it does not give.
 The room grows warm, then hot.
-I shout until there is nothing left in my throat to shout with, and the house does not answer.
-Somebody waited three days for a chance like this, and I gave it to them myself.
-I took off the only thing that was keeping me alive, and I handed them a man tied to a bed.
-The mask was not a lie you told them. It was the only armour you had.
-Three days you spent making yourself into a harmless man, and it worked so well that a killer left you alone.
-Then you took it off in front of frightened people, and gave the most sensible man in the house every reason to bind you to a bed.
-He was not wrong to do it. That is the cruelty of it.
-You had things worth telling them. You should have made them worth hearing on their own.
+My head feels heavy.
+I shout until I have no strength left in me.
+Nobody answers.
+You took off your mask in front of frightened people, hoping they would understand.
+But these were no ordinary circumstances.
+And it gave the most sensible man in the house every reason to bind you to a bed.
+The worst part is that, had you been in his place, you know you would probably have done the same.

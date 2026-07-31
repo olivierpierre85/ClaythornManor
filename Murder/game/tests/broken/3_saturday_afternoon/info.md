@@ -65,3 +65,10 @@ locked, so Manning fires on the doctor and Broken is shot shielding him ->
 `talked_to_maid`. Party menu -> western grove; company menu -> keep to yourself.
 Neither man is engaged, so Manning fires on the doctor and Broken is shot
 shielding him -> `broken_ending_shielded`.
+
+## setup_broken_saturday_afternoon_8.json
+`talked_to_maid`. Party menu -> western grove; company menu -> talk to Doctor
+Baldwin (`broken_day2_hunt_drunk_doctor`), a brief detour into the shared
+`doctor_generic_menu_broken` conversation. Manning is left to stew, so
+`drunk_letter` stays locked and Manning fires on the doctor -> Broken is shot
+shielding him -> `broken_ending_shielded`.

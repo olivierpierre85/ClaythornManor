@@ -1,0 +1,22 @@
+{
+    "start_label": "broken_day2_hunt",
+    "unlocked_threads": ["talked_to_maid"],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "broken_day2_hunt_menu_party",
+            "selected": "Join Doctor Baldwin and Samuel Manning instead",
+            "redirect": "broken_day2_hunt_drunk"
+        },
+        {
+            "menu": "broken_day2_hunt_menu_company",
+            "selected": "Talk to Doctor Baldwin",
+            "redirect": "broken_day2_hunt_drunk_doctor"
+        },
+        {
+            "menu": "doctor_generic_menu_broken",
+            "selected": "You don't have any more questions for him",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

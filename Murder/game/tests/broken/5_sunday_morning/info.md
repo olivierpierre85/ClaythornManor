@@ -8,7 +8,7 @@ seven-mile walk to the police station, but Miss Baxter and Miss Marsh cannot
 manage the road, and neither Mr Manning nor the feverish doctor is fit for it.
 The Captain therefore proposes that the two men go alone.
 
-The chapter gates on the `ambushed` ENDING (intuition), not on a thread:
+The chapter gates on the `massacre` ENDING (intuition), not on a thread:
 
 - **Without the intuition** there is no menu at all. Moody accepts the split
   -> the two-man walk -> `broken_day3_afternoon`.
@@ -54,37 +54,42 @@ left to spend the last 10 on is the culprit question, which either wins the
 argument or ends in `broken_ending_burned`. Wiring `..._question_letters` back
 into the menu would make that branch reachable again.
 
-Every plan except 4 and 6 leaves the chapter through `broken_day3_afternoon`,
+Every plan except 4, 6 and 7 leaves the chapter through `broken_day3_afternoon`,
 which branches on `left_together` for the endings themselves.
 
-Plan 1 must remain first: it is the only plan that relies on `ambushed` still
+Plan 1 must remain first: it is the only plan that relies on `massacre` still
 being locked, and the runner's `soft_reset` never re-locks endings.
 
 ## setup_broken_sunday_morning_1.json
 No intuition, no menus at all. The forced split -> the two-man walk.
 
 ## setup_broken_sunday_morning_2.json
-`unlocked_endings: [ambushed]`, `doctor_boxer` unlocked. The winning line:
+`unlocked_endings: [massacre]`, `doctor_boxer` unlocked. The winning line:
 Boxer -> culprit -> the mask answered on a soldier's honour -> the menu
 early-exits with 10 minutes still on the clock -> `left_together` -> the
 departure of six.
 
 ## setup_broken_sunday_morning_3.json
-`unlocked_endings: [ambushed]`, `doctor_boxer` unlocked. The poison and the
+`unlocked_endings: [massacre]`, `doctor_boxer` unlocked. The poison and the
 Boxer question, then the exit with 10 minutes still on the clock. The culprit
 question is offered after the Boxer one but never asked -> the pair sets out.
 
 ## setup_broken_sunday_morning_4.json
-`unlocked_endings: [ambushed]`, `doctor_boxer` unlocked. Reach the culprit
+`unlocked_endings: [massacre]`, `doctor_boxer` unlocked. Reach the culprit
 question, then take the mask off at once -> arrested, tied to the bed ->
 `broken_ending_burned`.
 
 ## setup_broken_sunday_morning_5.json
-`unlocked_endings: [ambushed]`. The intuition is there but the player argues
+`unlocked_endings: [massacre]`. The intuition is there but the player argues
 nothing and takes the exit choice with time still on the clock -> the pair sets
 out.
 
 ## setup_broken_sunday_morning_6.json
-`unlocked_endings: [ambushed]`, `doctor_boxer` unlocked. Reach the culprit
+`unlocked_endings: [massacre]`, `doctor_boxer` unlocked. Reach the culprit
 question, then plead the horror of the face. Doctor Baldwin offers to look
 alone, which cannot be refused -> the mask comes off -> `broken_ending_burned`.
+
+## setup_broken_sunday_morning_7.json
+`unlocked_endings: [massacre]`, `doctor_boxer` unlocked. Reach the culprit
+question, then plead common decency. Nobody buys it with a dead man upstairs
+-> the mask comes off -> `broken_ending_burned`.

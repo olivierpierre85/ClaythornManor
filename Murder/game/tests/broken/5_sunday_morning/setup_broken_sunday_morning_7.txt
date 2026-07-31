@@ -205,45 +205,100 @@ Amelia Baxter: I am sorry, but I do not think I could trust you if you did not.
 And there it is.
 It had always been a possibility that I should be found out.
 Still, I am not at all sure what I ought to do now.
-Menu Choice: Do not show. Plead a soldier's honour
-Thomas Moody: Miss Baxter, you might think that removing my mask is a simple request.
-Thomas Moody: It is not.
-Thomas Moody: After I was injured in the trenches, do you know what the worst part was?
-Thomas Moody: Not the pain, nor the fear of never living a normal life again.
-Thomas Moody: It was the horror I could see in the faces of the people who saw mine bare.
-Thomas Moody: You see, I wear this mask not to protect those who look at me.
-Thomas Moody: But to protect myself from their reaction.
-Thomas Moody: I lost so much defending my country, all I want in return is a little respect.
-Thomas Moody: Is it too much to ask?
-The room is quiet for a moment, then Captain Sinha speaks first.
-Sushil Sinha: It is not.
-Sushil Sinha: I know what you have had to sacrifice, and I shall not have anyone make light of it.
-Sushil Sinha: If you wish to keep your dignity, you shall keep it.
-He turns towards the group.
-Sushil Sinha: Besides, Mr Moody is the one who warned us of what may be happening here.
-Sushil Sinha: Why should he have done so, if he meant to trick us?
-Sushil Sinha: That makes no sense to me.
-Sushil Sinha: I trust him, and that should be enough for you as well.
-Sushil Sinha: I shall not have him humiliated.
-Nobody argues with him.
-They may not be entirely convinced, but they will not dare question Captain Sinha's authority.
-Amelia Baxter: ...Very well.
-I stop there, and let the room sit with everything I have told them.
-Nobody says anything for a while.
-Rosalind Marsh: ...Very well.
-Rosalind Marsh: Perhaps you are right.
-Rosalind Marsh: It is more dangerous to stay here than to attempt the walk.
-Rosalind Marsh: I shall come with you.
-Daniel Baldwin: So will I.
-Samuel Manning: And me as well, then.
-Amelia Baxter: Oh, this is madness, every word of it.
-Amelia Baxter: But I shall not be left the only soul in this house.
-Amelia Baxter: If you are all set on going, then I shall go with you.
-Sushil Sinha: Then it is settled, and we have wasted enough of the morning.
-Sushil Sinha: Mr Moody, I hope you are right.
-Thomas Moody: So do I, Captain.
-It takes the better part of an hour to make six people fit for the journey.
-Coats and sound boots.
-Bread and cold water from the kitchen.
-It is almost noon when we step outside.
-All six of us.
+Menu Choice: Do not show. Plead common decency
+Thomas Moody: I shall pretend I did not hear that, Miss Baxter.
+Thomas Moody: You are asking me to display the marks of the worst experience of my life.
+Thomas Moody: And why? Merely to settle a bad dream?
+Thomas Moody: You know as well as anybody that this is a most improper proposition.
+Thomas Moody: I shall not answer it, and no one here should expect me to.
+I let my voice carry, hoping to shame them.
+I was certain that would be the end of it.
+And that everybody would look at their feet in embarrassment.
+But today nobody does.
+Rosalind Marsh: I understand your anger, Mr Moody.
+Rosalind Marsh: But in the circumstances I am afraid we shall have to put manners aside.
+Mr Manning lifts his head from his flask, and for a moment the lawyer comes up through the drink.
+Samuel Manning: In my experience, innocent people are humbled.
+Samuel Manning: It is the guilty who act outraged.
+He drinks again and sinks back.
+They are all looking at me now, and not one of them looks away.
+I have no choice left.
+Thomas Moody: Very well.
+Thomas Moody: You shall have it your way.
+I reach up, and unfasten the mask, and set it down on the billiard table.
+The room goes very still.
+Thomas Moody: I might as well tell you the whole story now.
+Thomas Moody: My name is not Thomas Moody.
+Thomas Moody: Thomas Moody was my friend.
+Thomas Moody: He came home from Flanders behind that mask, and he died this spring in a rented room in Liverpool.
+Thomas Moody: His invitation arrived after he was buried.
+Thomas Moody: I took his name, and his face, and came here in his place, because I am a journalist and it was a good story.
+Thomas Moody: Everything else I have told you this weekend is true.
+Thomas Moody: But please, now you must listen to me.
+Nobody answers.
+Captain Sinha walks around the billiard table and picks up the mask, and turns it over in his hands.
+Sushil Sinha: Let us be clear about what you have just told us, sir.
+Sushil Sinha: You entered this house under a false name.
+Sushil Sinha: You have lied to every person in this room for three days, at every meal, with a straight face and a good deal of skill.
+Sushil Sinha: And there is a young man lying dead upstairs.
+Thomas Moody: Captain, you know what was under my door.
+Thomas Moody: You read it yourself.
+Sushil Sinha: I read a paper that you gave me.
+Sushil Sinha: I have no idea now who wrote it.
+Rosalind Marsh: He talked us into that room last night.
+Rosalind Marsh: He told us where to sleep, and who should keep watch, and when.
+Amelia Baxter: And he has been asking questions of every one of us since Friday.
+Thomas Moody: Miss Baxter, if I were behind all of this, why bother with a mask at all?
+Thomas Moody: I would simply have worn my own face.
+Sushil Sinha: That may be true.
+Sushil Sinha: But I am no longer sure I trust you, Mr Moody.
+Sushil Sinha: Certainly not enough to go wandering into the woods with you.
+Thomas Moody: So what are you saying?
+Sushil Sinha: That everyone would feel safer if you were held somewhere.
+Sushil Sinha: In your room, for instance.
+Thomas Moody: What?!
+Thomas Moody: This is madness, there is no need for it.
+Sushil Sinha: I am afraid there is.
+Sushil Sinha: At least, I believe so.
+Sushil Sinha: Does anyone disagree?
+Nobody answers.
+That settles it.
+Captain Sinha takes out his pistol to make certain I do not escape.
+Sushil Sinha: Please, Mr Moody, let us go up to your room.
+I can think of nothing to do but follow him.
+There is no struggle worth the name.
+They walk me up to my own room, which is a courtesy of a sort.
+Sushil Sinha: You will remain here until the police come.
+Sushil Sinha: That is not a punishment, sir, it is a precaution.
+Sushil Sinha: I would rather have just locked the door and left it at that.
+Sushil Sinha: But I do not wish to take any chances.
+He uses the cord from the curtains, and the belt from my own coat, to tie me to the bed.
+The Captain does it himself and checks it twice.
+Sushil Sinha: I shall walk to the town alone.
+Sushil Sinha: It is faster, and after this morning I do not think anyone else will come.
+Sushil Sinha: For what it is worth, I do not like doing this.
+Sushil Sinha: If you are what you say you are, you shall have my deepest apology when I return with the constables.
+Thomas Moody: Captain, listen to me.
+Thomas Moody: Do not leave this house with four people in it and one door.
+Thomas Moody: Do not leave me with them.
+Sushil Sinha: Too late for that.
+Sushil Sinha: Goodbye, Mr Moody.
+The door shuts.
+The key turns.
+I lie on my own bed, in my own room, tied at the wrists and the ankles with my own belt, and I listen to the front door close beneath me.
+And I have never in my life felt so entirely alone.
+I do not know how long I have lain there.
+Long enough for the light to move across the ceiling.
+Long enough to work the cord loose at one wrist, and no further.
+Then, somewhere below me, glass breaks.
+Then I smell it.
+Smoke, coming under the door, thin and grey.
+I pull at the cord until my wrist is wet, and it does not give.
+The room grows warm, then hot.
+My head feels heavy.
+I shout until I have no strength left in me.
+Nobody answers.
+You took off your mask in front of frightened people, hoping they would understand.
+But these were no ordinary circumstances.
+And it gave the most sensible man in the house every reason to bind you to a bed.
+The worst part is that, had you been in his place, you know you would probably have done the same.

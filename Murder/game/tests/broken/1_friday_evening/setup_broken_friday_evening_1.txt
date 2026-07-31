@@ -61,10 +61,8 @@ Sushil Sinha: He was my superior, but I swear I never saw him sober.
 Sushil Sinha: Even in the mornings, he was always still drunk from the day before.
 The captain needs little encouragement to talk.
 One tale leads to another. A drunken officer in Calcutta, supply lines in Burma, a skirmish whose name I half recognise.
-I make a show of close attention.
-In truth I am listening for the seams, the small places where a story has been let out or taken in.
-Everyone in this room is performing some version of themselves.
-It is only a question of how well.
+I listen carefully, not that I am really interested.
+But I have learned on the job to never miss a detail when someone is telling a story.
 Sushil Sinha: Oh, hello Miss ... ?
 Rosalind Marsh: Miss Marsh.
 Sushil Sinha: How do you do, Miss Marsh. Captain Sushil Sinha.
@@ -107,9 +105,10 @@ Lady Claythorn: This is my way of thanking those as selfless as yourselves, who 
 Following her speech, our host settles back down in her chair.
 The first course arrives on the heels of her speech.
 Our host turns to me with a hostess's practised smile, ready to begin the rounds of polite enquiry.
-I should make the most of it.
 I might not have a better chance to take her measure than I have now.
-So I should conduct the conversation as an interview, and avoid any trivial questions.
+Menu Choice: Talk to Lady Claythorn
+I should make the most of it.
+I shall conduct the conversation as an interview, and avoid any trivial questions.
 Maybe this way I will learn something useful.
 Menu Choice: Tell me more about yourself.
 Lady Claythorn: There isn't much to say.
@@ -148,10 +147,9 @@ I did not want to admit it to myself, but I was really counting on the prize mon
 With that revelation, I am almost certain I will not get a penny here.
 Menu Choice: How old are you?
 Lady Claythorn: My age? What a peculiar thing to ask a lady.
-Thomas Moody: Forgive me. I forgot myself.
-Thomas Moody: I find a person's years often tell you a great deal about them.
-Lady Claythorn: Then you shall have to be content with a great deal of mystery, Mr Moody.
-Lady Claythorn: A woman of my standing never reveals her age.
+Thomas Moody: Forgive me.
+Thomas Moody: I wasn't thinking.
+Lady Claythorn: Evidently.
 Menu Choice: What room are you in?
 Lady Claythorn: The master bedroom is named after Henry IV.
 Lady Claythorn: Why, I am not sure exactly.

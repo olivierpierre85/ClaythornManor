@@ -61,10 +61,8 @@ Sushil Sinha: He was my superior, but I swear I never saw him sober.
 Sushil Sinha: Even in the mornings, he was always still drunk from the day before.
 The captain needs little encouragement to talk.
 One tale leads to another. A drunken officer in Calcutta, supply lines in Burma, a skirmish whose name I half recognise.
-I make a show of close attention.
-In truth I am listening for the seams, the small places where a story has been let out or taken in.
-Everyone in this room is performing some version of themselves.
-It is only a question of how well.
+I listen carefully, not that I am really interested.
+But I have learned on the job to never miss a detail when someone is telling a story.
 Sushil Sinha: Oh, hello Miss ... ?
 Rosalind Marsh: Miss Marsh.
 Sushil Sinha: How do you do, Miss Marsh. Captain Sushil Sinha.
@@ -107,11 +105,8 @@ Lady Claythorn: This is my way of thanking those as selfless as yourselves, who 
 Following her speech, our host settles back down in her chair.
 The first course arrives on the heels of her speech.
 Our host turns to me with a hostess's practised smile, ready to begin the rounds of polite enquiry.
-I should make the most of it.
 I might not have a better chance to take her measure than I have now.
-So I should conduct the conversation as an interview, and avoid any trivial questions.
-Maybe this way I will learn something useful.
-Menu Choice: You don't have any more questions for her
+Menu Choice: Keep to yourself
 At length the dinner breaks up.
 Lady Claythorn lets it be known that drinks will be laid on in the billiard room for those who care to sit up a while.
 I assume most of the guests will be there, so it is a good opportunity to learn more about them.
@@ -174,8 +169,10 @@ A motor car stands in the middle of the room.
 An old tourer, well kept, though it has not been run in some time.
 Nothing else gets my attention.
 Map Choice: Garage
-The garage is just as I left it.
-There is nothing more for me here.
+The air is thick with petrol and cold iron.
+A motor car stands in the middle of the room.
+An old tourer, well kept, though it has not been run in some time.
+Nothing else gets my attention.
 Map Choice: Gun room
 The gun room.
 There is a rack of sporting guns behind glass, and on a table lies a handgun.

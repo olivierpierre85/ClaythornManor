@@ -25,8 +25,8 @@
         },
         {
             "menu": "broken_day3_morning_menu_mask",
-            "selected": "Do not show. Plead a soldier's honour",
-            "redirect": "broken_day3_morning_mask_honour"
+            "selected": "Do not show. Plead common decency",
+            "redirect": "broken_day3_morning_mask_decency"
         }
     ]
 }

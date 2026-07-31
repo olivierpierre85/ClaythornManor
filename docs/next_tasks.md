@@ -38,6 +38,7 @@ GEN IDEAS
 
 THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point.
 
+THe drunk will describe the food with delight.
 
 Train is a mess, he will jump from one place to the next until he will collapse in the tea room. at dinner he will also have glimpse of weird stuff.
 
@@ -56,11 +57,23 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mister Harring. How are you feelin?" => Unlocks TED Harring? Or unlock Butler
 
 ### Write Story: NEXT => HOST
-Broken unlocks host, host unlocks full drunk?
+Broken unlocks host, host unlocks full drunk? AND BUTLER?
+
+FRiday,
+
+Before dinner, set what up? Read instructions carefully
+
+After dinner, put letters? Or let butler do it?
+
+options to go over the manor. But nothing to do really.
+Can go to the kitchen to talk with maid.
+
+
 
 ## Assets & artistic Tasks
 
 Thread, leave together: CHeck others
+THread DOCTOR Image for broken
 
 REDO billiard room (couch weird) + fire version
 

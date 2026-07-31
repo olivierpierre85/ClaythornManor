@@ -61,10 +61,8 @@ Sushil Sinha: He was my superior, but I swear I never saw him sober.
 Sushil Sinha: Even in the mornings, he was always still drunk from the day before.
 The captain needs little encouragement to talk.
 One tale leads to another. A drunken officer in Calcutta, supply lines in Burma, a skirmish whose name I half recognise.
-I make a show of close attention.
-In truth I am listening for the seams, the small places where a story has been let out or taken in.
-Everyone in this room is performing some version of themselves.
-It is only a question of how well.
+I listen carefully, not that I am really interested.
+But I have learned on the job to never miss a detail when someone is telling a story.
 Sushil Sinha: Oh, hello Miss ... ?
 Rosalind Marsh: Miss Marsh.
 Sushil Sinha: How do you do, Miss Marsh. Captain Sushil Sinha.
@@ -107,9 +105,10 @@ Lady Claythorn: This is my way of thanking those as selfless as yourselves, who 
 Following her speech, our host settles back down in her chair.
 The first course arrives on the heels of her speech.
 Our host turns to me with a hostess's practised smile, ready to begin the rounds of polite enquiry.
-I should make the most of it.
 I might not have a better chance to take her measure than I have now.
-So I should conduct the conversation as an interview, and avoid any trivial questions.
+Menu Choice: Talk to Lady Claythorn
+I should make the most of it.
+I shall conduct the conversation as an interview, and avoid any trivial questions.
 Maybe this way I will learn something useful.
 Menu Choice: What do you think of this weather?
 Lady Claythorn: A mixture of rain and good weather.
@@ -155,9 +154,10 @@ A heavy book lies open on the table — a dictionary of the landed gentry.
 But I don't have the time to read it.
 Tonight I have more important things to investigate.
 Map Choice: Storage Room
-The servants sleep up under the eaves.
-A stranger is no more welcome there than a guest would be below.
-Whatever is up there will keep.
+I start up the stairs towards the attic, but stop suddenly.
+The attic is most likely where the servants sleep.
+I should avoid it if I want to avoid to attract attention.
+I go back down.
 Map Choice: William the Conqueror Bedroom
 I pause at the door.
 No.
