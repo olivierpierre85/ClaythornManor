@@ -1,39 +1,9 @@
 <!-- # cSpell:disable -->
-# IN intuitions DEAD , add a special sound or text
+# General TODO
+- IN intuitions DEAD , add a special sound or text
+- Double CHECK nightime (AROUND 16h30 !!! )!! important for endings with PSYCHIC and BROKEN
+- APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
 
-# Double CHECK nightime (AROUND 16h30 !!! )!! important for endings with PSYCHIC and BROKEN
-
-
-### Write Story: NEXT => Broken
-
-FIX impossible to reach coverage
-
-- ADD MORE MORE questions in the generic menus (Doctor, Drunk, host) to confuse the player and make the game more challenging.
-
-- Test the changing MALUS and the whole Broken branching logic.
-
-- **Broken is well suited to uncovering the Host**, but at the moment the Captain is the one who does it.
-- Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.  If he does, the Killbreath discovery can come right at the start. 
-- ORRRRR **THE DRUNK is unlocked by Broken**, and host by drunk
-
-
-There is almost no hint of what really happened in Boxer's rebellion ADD in some of things. aDD in questions at the end.
-
-TODO, should we add the story of the baby and the nurse here (questions day3)OR way too obvious?
-
-Or maybe add Psychic saying somewhere she never had children of her own, ALMOSt one, **but god took him away from me at birth**
-
-
-##### **Friday Evening**
-
-IMORTANT WHY Not just know on bedrooms? he doesn't have to enter them => Add logic for nobody answers? Or just rethink TEST
-
-
-FLASHBACK =>Add in inner dialogs that WE ARE NOT HERE FOR the same reasons BEFORE talking to everyone
-
-Flashback -> ADmit smauel manning has been pretending to be drunk
-
-APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
 
 ### Write Story: NEXT => DRUNK
 GEN IDEAS
@@ -74,22 +44,19 @@ Can go to the kitchen to talk with maid.
 
 ## Assets & artistic Tasks
 
+BROKEN
 Thread, leave together: CHeck others
 THread DOCTOR Image for broken
 
 REDO billiard room (couch weird) + fire version
 
-dead in car
-TRY to add the generated images in a scene with the renpy language.
-
-BROKEN try to draw car in the woods with dead bodies on the passenger seats.
 
 ### IMAGES NEXT REBUILD
 
-- [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
-
 ### Characters
 - [ ] Redraw character face AND add full body size images ? Is it necessary?
+
+- [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
 
 #### Locations
 Finish normal list- last one is train_second
@@ -100,7 +67,7 @@ Multiple Class in train for outside IMAGEs
 ### MUSIC with producer AI
 Get new music from internet and put them at the right place
 
-## Fable
+## SURVIVE MECHANIC Fable
 
 If you still have money in september, use fable to implemented the SURVIVE mechanic. That will start the META story each time a player is saved, up until you can play the butler!!
 

@@ -43,6 +43,9 @@ Do it for all possibilities ( dining room with less and less persons as the time
 - ! Tried with chatgpt, it's about the same problem. Not ready with chatgpt 5.2 NOR nano banana pro 2 yet. See whisk projects to understand problems
 - !!! ? ==> wait for BETTER Nano banana version (3.0)
 
+## ENDINGS
+
+Create specific images for endings. Take a location and add the dead bodies? Maybe too complicated but it would add good things
 
 ## Animations
 

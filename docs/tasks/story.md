@@ -67,6 +67,7 @@
 - [ ] **Mrs Baxter**: Make sure she was married. If yes, replace every Miss to Mrs Baxter.
 - [ ] **Meta Logs**: For the Psychic, replace the logs with **“She talks to herself”** while talking to the lord? **YES VERY technical but also very cool**
 - [ ] **Burning Ending**: Problem with music transition => SLOW down text? Add pauses?
+- [ ] saying somewhere she never had children of her own, ALMOSt one, **but god took him away from me at birth**
 
 
 ## Doctor
@@ -87,16 +88,22 @@
 
 ### Important
 - Mybe Later => Staff oddities use the same picture with 4 Numbers
-MAYBE later => new ending, find the staff dead in the garden shed??? Not necessary for story but dramatic effect. Only if i can see it in the picture
 - [ ] There is still a small hole in the whisky poisoned lying there, psychic would have made clear to give it to BROKEN. Not just stand there in the table? Minor?
-
+- [ ] FIX impossible to reach coverage
+- [ ] ADD MORE MORE questions in the generic menus (Doctor, Drunk, host) to confuse the player and make the game more challenging.
+- [ ] Test the changing MALUS and the whole Broken branching logic.
+- [ ] IMORTANT WHY Not just know on bedrooms? he doesn't have to enter them => Add logic for nobody answers? Or just rethink TEST
+- [ ] Hear  samuel manning ADmitting has been pretending to be drunk
+- **Broken is well suited to uncovering the Host**, but at the moment the Captain is the one who does it.
+- Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.  If he does, the Killbreath discovery can come right at the start. 
+- ORRRRR **THE DRUNK is unlocked by Broken**, and host by drunk
 ### Ideas to think over (optional)
 
-- [ ] Thomas moody room ransacked?
-- [ ] 
+
+
 - [ ] Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
 - [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
-- [ ]   DO I have the opportunity to roam the **bedrooms** as a footman? It would be a great cover? I should allow this, but it makes it complicated, so no bedrooms for the moment.
+- [ ] There is almost no hint of what really happened in Boxer's rebellion ADD in some of things. aDD in questions at the end.TODO, should we add the story of the baby and the nurse here (questions day3)OR way too obvious?
   
 
 ## Nurse
