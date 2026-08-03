@@ -4,283 +4,258 @@
 
 ### Important
 - [ ] Add "Sir, do you know how to eat?" (footman interaction).
-- [ ] After lad has entered every room: Notice his is the best of them all.
-  - [ ] Just text or thread?
-- [ ] Joke about the lad not knowing Roman Numbers (mistaking rooms).
-- [ ] **Rosalind Marsh**: Add cough on "NO hunt",same as with psychic? + Explanation why nobody cares? (Not super important).
-- [ ] **Transitions**: Day 2 morning transitions between Sam Manning and Doctor are too fast.
-- [ ] **Discussion with Cpt Sinha (Day 2 Evening)**: Show generic choices, make the rest a submenu. Check if it works with Psychic.
-- [ ] Dialog: "Can you read mister Harring? 'I GET BY'".
-- [ ] $ lad_generic_menu NO MENTIONNED OF WEATHER? ADd ? or reason?
-- [ ] Forest images for the hunt do not change for lunch, to fix
+- [ ] After the lad has entered every room, have him notice his is the best of them all.
+  - [ ] Decide: just narration, or a thread?
+- [ ] Joke about the lad not knowing Roman numerals (mistaking room numbers).
+- [ ] **Rosalind Marsh**: add a cough on "no hunt", same as with the psychic? Plus an explanation of why nobody cares? (Not super important.)
+- [ ] **Transitions**: Day 2 morning transitions between Samuel Manning and the doctor are too fast.
+- [ ] **Discussion with Captain Sinha (Day 2 Evening)**: show the generic choices, make the rest a submenu. Check it still works with the psychic.
+- [ ] Dialogue: "Can you read, Mister Harring? 'I GET BY'".
+- [ ] `lad_generic_menu`: no mention of the weather? Add one, or a reason why not.
+- [ ] Forest images for the hunt do not change for lunch — fix.
+- [ ] REthing the logic of psychic meeting him in between map choices. It becomes to confusing when playing psychic. see psychic too
 
 ### Ideas to think over (optional)
-
-- [ ] I the complicated way to meet the captain on day 3 necessary? Overcomplicated thing for no reason? Maybe just meet him at the end of the time has passed (but then we need a way to skip time?)
+- [ ] Is the complicated way of meeting the captain on Day 3 necessary? Overcomplicated for no reason? Maybe just meet him once the time has passed (but then we need a way to skip time).
 - [ ] Make him afraid of ghosts.
-    - [ ] Scared to go to the attic. Let him go once then cancel all attic choices.
-- [ ] "So I tell her my story" => Only time doing that? Is it necessary?
-- [ ] Add "you follow Daniel Baldwin" upstairs as an important choice, even for misdirect?
-- [ ] Make him fake his own death on day3, so he can spy on everyone when he realises he has been tricked killing the doctor
-- [ ] **New Ending**: Snooping is bad!
-    - [ ] "You can’t enter their room" (lad day3 morning) ALWAYS offer to open the door?
-    - [ ] If spotted too many times (or right time) -> Arrest and death (Suspicious LAD DEATH).
-- [ ] Get keys for the attic at the end? Lad can open locked doors, but won't at first (needs combination). Cheating -> Ending (assumed killer). Captain can force open.
-- [ ] **Achievements**: Add achievement with all "Stand alone" choices.
-- [ ] **Items/Inventory**: "Object drink on hand?" instead of unlock `day3_drunk` -> Add object glass of sherry for the last day (option to throw it?). LOVE IT
-- [ ] **Attic**: Attic not closed, but only rooms closed? Add "First time in attic" label.
-- [ ] **Gun Mechanics**:
-    - [ ] More difference when you have gun for fell ending? Maybe need bullets?
-    - [ ] Option to get in Captain's room/attic to get BULLETS (he sees you and kills you?) if you got bullets Day 2?
-- [ ] **Billiard Room**: More options in TALK to butler? OR remove him entirely
-- [ ] "Trust Psychic": Add more meaning, not just more time. Real ending possible only if trust?
-- [ ] Day 3 morning ?Add a way to skip search and to just wait?
+  - [ ] Scared to go to the attic. Let him go once, then cancel all further attic choices.
+- [ ] "So I tell her my story" — is this the only time we do that? Is it necessary?
+- [ ] Add "you follow Daniel Baldwin upstairs" as an important choice, even as a misdirection?
+- [ ] Make him fake his own death on Day 3, so he can spy on everyone once he realises he has been tricked into killing the doctor.
+- [ ] **New ending**: snooping is bad.
+  - [ ] "You can't enter their room" (lad, Day 3 morning) — always offer to open the door?
+  - [ ] If spotted too many times (or at the wrong time) → arrest and death (suspicious lad death).
+- [ ] Get keys for the attic at the end? The lad can open locked doors, but won't at first (needs the combination). Cheating leads to an ending (assumed killer). The captain can force it open.
+- [ ] **Achievements**: add an achievement for all "stand alone" choices.
+- [ ] **Items/Inventory**: "object: drink in hand?" instead of unlocking `day3_drunk` — add an object, glass of sherry, for the last day (option to throw it?). Love it.
+- [ ] **Attic**: only individual rooms should be closed, not the whole attic. Add a "first time in attic" label.
+- [ ] **Gun mechanics**:
+  - [ ] More difference when you have the gun for the "fell" ending? Maybe requires bullets?
+  - [ ] Option to sneak into the captain's room/attic to get bullets (he sees you and kills you) if you got the gun on Day 2?
+- [ ] **Billiard room**: more options in "talk" with the butler, or remove him entirely?
+- [ ] "Trust the psychic": give it more meaning than just extra time. Should the real ending only be possible with trust?
+- [ ] Day 3 morning: add a way to skip the search and just wait?
 
 
 ## Psychic
 
 ### Important
+- [ ] **Minor, Day 2 Morning**: a specific other guest for everyone on Day 2 evening with the captain.
+- [ ] **Day 2 Evening**: Ted alliance logic is wobbly — rewrite to keep it consistent with Ted Harring's path.
+- [ ] **Refactoring**: better factor out `common_day3_morning_lad_psychic_journey` and `psychic_day3_morning_has_not_visited_lad`.
+- [ ] **Day 1 Evening**: lord path — on a second visit to the portrait gallery/library, show different text since it's already been seen?
+- [ ] **Nurse's death**: the killing by the nurse is too violent, or it lacks an explanation, and it makes players hate the psychic. Needs a reason.
 
-- [ ] **Minor Day 2 Morning**: Specific other guest for everyone on day 2 evening with captain.
-- [ ] **Day 2 Evening**: Ted Alliance Logic wobbly. Rewrite to keep consistent with Ted Harring Path.
-- [ ] **Refactoring**: Better factorisation of `Common_day3_morning_lad_psychic_journey` and `Psychic_day3_morning_has_not_visited_lad`.
-- [ ] **Day 1 Evening**: Lord path, second visit to portrait gallery/library => Other text when already visited?
-- [ ] **Nurse death**: The killing by nurse is too violent, or it lacks an explanation => **HATE** psychic. Because?
-  
 ### Ideas to think over (optional)
-
-- [ ] **The Lord**:
-    - [ ] More story for the LORD? Add to list of playable characters? (Not easy but doable).
-    - [ ] Need LORD QUESTIONS POSSIBLE.
-    - [ ] PROBLEM, **PSYCHIC** death in attic during the day not as scary as during the night. Change that? (force night, or change time she can unlock it? (the day before?))
-- [ ] **Lad Interaction**: Visited LAD is not exploited enough.
-    - [ ] First no differences in the morning day 3?
-    - [ ] Mention the “talk” to your left first even when respected?
-- [ ] **Rooms**: Add the rooms with the obvious choice BUT only if you went there with the Lad first? (Like the choice about the gun).
-- [ ] **Unlockables**: "You left the manor while you could" (`leave_manor`) is used nowhere. Do we really need it?
-- [ ] **Broken Room**: If not enough choices => add important choice "Error enter broken Room" => add macabre scene? (Replace `day2_has_seen_bedroom_broken`?).
-- [ ] **Captain Sinha**: Be rude to him? Lead to an ending where he doesn’t want to go out with her?
+- [ ] **The lord**:
+  - [ ] More story for the lord? Add him to the list of playable characters? (Not easy, but doable.)
+  - [ ] Need a set of possible lord questions.
+  - [ ] Problem: the psychic's death in the attic isn't as scary during the day as at night. Change that (force night, or move when she can unlock it, e.g. the day before)?
+- [ ] **Lad interaction**: having visited the lad isn't exploited enough.
+  - [ ] No difference on the morning of Day 3 currently?
+  - [ ] Mention the "talk" option to her left first, even once respected?
+- [ ] **Rooms**: add the obvious room choice, but only if she went there with the lad first (like the choice about the gun)?
+- [ ] **Unlockables**: "you left the manor while you could" (`leave_manor`) is unused. Do we need it?
+- [ ] **Broken's room**: if there aren't enough choices, add an important choice "wrongly entered Broken's room" → a macabre scene? (Replace `day2_has_seen_bedroom_broken`?)
+- [ ] **Captain Sinha**: option to be rude to him, leading to an ending where he doesn't want to leave with her?
 - [ ] **Ted Harring**:
-    - [ ] If you didn’t approach him, he’ll leave you alone? Then and only then you could escape?
-    - [ ] Rewrite dialogs with Ted Harring?
-    - [ ] When there is an alliance vs when there isn't => maybe another conclusion or option?
-- [ ] **Mrs Baxter**: Make sure she was married. If yes, replace every Miss to Mrs Baxter.
-- [ ] **Meta Logs**: For the Psychic, replace the logs with **“She talks to herself”** while talking to the lord? **YES VERY technical but also very cool**
-- [ ] **Burning Ending**: Problem with music transition => SLOW down text? Add pauses?
-- [ ] saying somewhere she never had children of her own, ALMOSt one, **but god took him away from me at birth**
+  - [ ] If she didn't approach him, does he leave her alone? Only then could she escape?
+  - [ ] Rewrite the dialogue with Ted Harring?
+  - [ ] Different conclusion or options depending on whether there is an alliance?
+- [ ] **Mrs Baxter**: confirm whether she was married — if so, replace every "Miss" with "Mrs Baxter".
+- [ ] **Meta logs**: for the psychic, replace the logs with "she talks to herself" while talking to the lord? Very technical, but also very cool.
+- [ ] **Burning ending**: problem with the music transition — slow down the text, add pauses?
+- [ ] Have her say, somewhere, that she never had children of her own — almost one, "but God took him away from me at birth".
 
 
 ## Doctor
 
 ### Important
+- [ ] See next.
+- [ ] Once other characters are done, rewrite the part where the doctor gets out of the library and is immediately caught by the lad and the psychic — too lazy as written.
+  - [ ] Also, the end of the nurse's paths teaches you almost nothing — change that.
 
-- [ ] SEE NEXT
-- [ ] When other characters are done, rewrite part where the doctor gets out of the library and is immediately caught by lad and psychic. too lazy.
-  - [ ] Also, the end of the nurse paths teaches you almost nothing => CHANGE THAT
-  
 ### Ideas to think over (optional)
-- [ ] ADD choice end of day1 when footman comes. Should I let him in ? This way the FRENCH thing is not mandatory
-- [ ] **Doctor** Day 2 Nurse sleep_no. ending Ending to mirror captain, but maybe do something to allow start again with captain? => **TECH** Check how easy it is to send back to menu that is a level above?
-- [ ] Add drunk filter when HIGH
+- [ ] Add a choice at the end of Day 1 when the footman comes: should I let him in? This way the French subplot isn't mandatory.
+- [ ] **Doctor, Day 2, nurse "sleep_no" ending**: mirror the captain's ending, but find a way to allow restarting with the captain? **Tech**: check how easy it is to send the player back to a menu one level above.
+- [ ] Add a drunk filter when high.
 
 
 ## Broken
 
 ### Important
-- Mybe Later => Staff oddities use the same picture with 4 Numbers
-- [ ] There is still a small hole in the whisky poisoned lying there, psychic would have made clear to give it to BROKEN. Not just stand there in the table? Minor?
-- [ ] FIX impossible to reach coverage
-- [ ] ADD MORE MORE questions in the generic menus (Doctor, Drunk, host) to confuse the player and make the game more challenging.
-- [ ] Test the changing MALUS and the whole Broken branching logic.
-- [ ] IMORTANT WHY Not just know on bedrooms? he doesn't have to enter them => Add logic for nobody answers? Or just rethink TEST
-- [ ] Hear  samuel manning ADmitting has been pretending to be drunk
-- **Broken is well suited to uncovering the Host**, but at the moment the Captain is the one who does it.
-- Decide: either make Broken the character who unlocks the Host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff.  If he does, the Killbreath discovery can come right at the start. 
-- ORRRRR **THE DRUNK is unlocked by Broken**, and host by drunk
+- [ ] Maybe later: staff oddities use the same picture with four numbers.
+- [ ] There's still a small hole in the poisoned-whisky scene — the psychic would have made clear it was meant for Broken, not just left standing there on the table. Minor.
+- [ ] Fix impossible-to-reach coverage.
+- [ ] Add more questions to the generic menus (doctor, drunk, host) to confuse the player and raise the challenge.
+- [ ] Test the changing malus and the whole Broken branching logic.
+- [ ] Important: why not just knock on bedrooms? He doesn't have to enter them — add logic for "nobody answers"? Rethink and test.
+- [ ] Hear Samuel Manning admit he has been pretending to be drunk.
+- [ ] Broken is well suited to uncovering the host, but at the moment the captain is the one who does it.
+  - Decide: either make Broken the character who unlocks the host, or have him simply realise she is keeping information to herself. In the latter case, the natural way to learn more about her is to interrogate the staff — if he does, the Killbreath discovery can come right at the start.
+  - Or: the drunk is unlocked by Broken, and the host is unlocked by the drunk.
+
 ### Ideas to think over (optional)
+- [ ] Could add a "go to the bar first" option, so Ted Harring doesn't die. (Keeping him alive is complicated, though.)
+- [ ] Make it so the captain unlocking Broken for the "three Moody lives" reads better if the captain plays it first.
+- [ ] There's almost no hint of what really happened in the Boxer Rebellion — add some of that in, in the Day 3 questions. Should the story of the baby and the nurse go here too, or is that too obvious?
 
-
-
-- [ ] Could add a "go to the bar first" option → then Ted Harring doesn't die. (But keeping him alive is complicated.)
-- [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
-- [ ] There is almost no hint of what really happened in Boxer's rebellion ADD in some of things. aDD in questions at the end.TODO, should we add the story of the baby and the nurse here (questions day3)OR way too obvious?
-  
 
 ## Nurse
 
 ### Important
-
-- If she look for treasure on the last day, she will die, but also she won't find the jewlery. The butler has taken it all with him before leaving
+- If she looks for treasure on the last day, she will die, and also won't find the jewellery — the butler has taken it all with him before leaving.
 
 ### Ideas to think over (optional)
+- [ ] Add dialogue with the doctor to help draw the connection with the Boxer Rebellion (billiard room, Day 1)?
+- [ ] Intro is too generic. Add a dream, or something more personal? Decent as it is, but could be improved.
+- [ ] **Last day, rethink**: too many last-day endings. Only one escape should be possible.
+  - Nurse dies exhausted on the road? Maybe not a very useful ending — if she's exhausted, she simply can't escape and is forced to nap instead.
+  - If she doesn't have enough money, she just can't leave. That would remove both "escape and die exhausted" and "escape poor" — or just delete "escape poor"?
+- [ ] Money counter? E.g. "if I had £500, I'll be fine" — needs pearls + silverware? Maybe not.
+- [ ] Queen Alexandra reference isn't clearly tied to the nurse.
+  - [ ] Replace with a thief king or queen for foreshadowing? Henry VIII, Charles I, or Prince John (Robin Hood)?
 
-- TODO maybe add dialog with the doctor to help see connection with boxer rebellion? (billiard room day 1)
-
-- Intro too generic. Add a dream ? Something more personal? Decent as it is but could be improved
-
-- LAST DAY REST
-Rethink too many last day endings =>>> Only one escape possible !!! Nurse dies exhausted on the road ? Maybe not very useful ending? If you were exhausted, you just can't escape, you are forced to nap? ANd if not enough money, you just can't leave. That would remove Escape and die exhausted, and escape poor? Or delete just escape poor?
-
-- MONEY COUNTER?? Like if I had 500 pounds, I'll be fine. needs pearl + silverware? Maybe not
-
-- [ ] queen alexandra => Not clear it's a nurse Queen
-  - [ ] => Replace with a THIEF king or queen for foreshadowing? Henry 8 or charles 1 ? (or Prince John of Robin hood)
 
 ## Drunk
 
 ### Important
-
-- [ ] Same kind story as Doctor when find the letter => Tell everyone about the letter, everyone want’s to leave, but die in FIREE. The discussions will give an idea of what could have been said in the doctor timeline !
-- [ ] Is the one that can go to sunday evening. he sees psychic waking up Ted harring in the ... IF he managed to SAVE him from poison. But how could he save everyone?
-- [ ] Put somewhere, dialog between an immigrant who would do anything to have the position of a wealthy person, and the wealthy person sharing suicidal thoughts? (Drunk vs LAD?, Drunk vs Captain? => Both not really immigrants One is british, the other rich)
-- [ ] ADD FOOD MENU - Only real enjoyer of this place
-- [ ] drunk has seen dc baldwin abuse => Add to his STORY
+- [ ] Same kind of story as the doctor's when he finds the letter: tell everyone about the letter, everyone wants to leave, but they die in the fire. The discussions could hint at what could have been said in the doctor's timeline.
+- [ ] He's the one who can reach Sunday evening — he sees the psychic waking Ted Harring up, if he managed to save him from the poison. How could he save everyone, though?
+- [ ] Somewhere, add a dialogue between an immigrant who would do anything for a wealthy person's position, and the wealthy person sharing suicidal thoughts. (Drunk vs. lad? Drunk vs. captain? Though neither is really an immigrant — one is British, the other rich.)
+- [ ] Add a food menu — the only real enjoyer of this place.
+- [ ] The drunk has seen Dr Baldwin's abuse — add this to his story.
 
 ### Ideas to think over (optional)
+- (none yet)
 
 
 ## Captain
 
 ### Important
-
-- When escaping with car, maybe mentionned that the road should blocked (and is actually not)
-- Rethink the letter to the captain to comply more with the Journalist story
-
+- [ ] When escaping by car, maybe mention that the road should be blocked (and isn't, actually).
+- [ ] Rethink the letter to the captain so it fits the journalist story better.
 
 ### Ideas to think over (optional)
-- add a mysterious Sound when Thomas Moody comes. That's the first time we see him make it alive for day 2. Or maybe at least an ominous "There is no reason he shouldn't be ther?" No to obvious
-- Expands story about his noble upbringing in generic dialogs.
-- [ ] Captain can't have key if it's in his hunting jacket. What would make you take it? MINOR, NOT big 
-- [ ] - [ ] Make the captain unlock him for the 3 moody live would read better if the captain plays it first
-- [ ] NOT important : Weird that the captain doesn't run into the others DAY 3 morning? Should he hide on purpose? To think about, but LATER
-- [ ] No config GENERIC menu for captain? No way to ask random question to host or other? Change that? Or ok like this?
+- [ ] Add a mysterious sound when Thomas Moody appears — the first time we see him alive on Day 2. Or at least an ominous "there's no reason he shouldn't be there," though maybe too obvious.
+- [ ] Expand on his noble upbringing in the generic dialogues.
+- [ ] The captain can't have the key if it's in his hunting jacket — what would make him take it? Minor.
+- [ ] Make it so the captain unlocking Broken for the "three Moody lives" reads better if the captain plays it first.
+- [ ] Not important: odd that the captain doesn't run into the others on Day 3 morning — is he hiding on purpose? Think about it later.
+- [ ] No generic menu for the captain — no way to ask a random question to the host or others? Change that, or leave it as is?
+
 
 ## Host
 
 ### Important
-- NOt many choices, but very different story
-- Lots of going over previously seen dialogs.
-- Her goal is to save most people as possible without getting killed by suspicious butler. If she escape with butler, they will all be killed => All killed in the outdoor shed, mirror way to get there by Broken
-- Explain that the butler will act as a real one (that's why is checking the possible missing silverware). And the staff doesn't know how their buyer is?
-- It was suppose to be a surprised, on return of old friends, where everything would be revealed on the last day.
-- the butler will poison Thomas Moody (Everybody is watching Sinha, he left his flask next to the bar) => It's a sleeping draught, don't worry about it. BUT then, it should be noted how horrified she is. SHe receives a letter, that is so unfortunate, but keep going.
+- [ ] Not many choices, but a very different story.
+- [ ] Lots of revisiting previously seen dialogue.
+- [ ] Her goal is to save as many people as possible without being killed by the suspicious butler. If she escapes with the butler, everyone dies in the outdoor shed — mirroring the way Broken gets there.
+- [ ] Make clear the butler acts like a real one (hence checking for missing silverware), and that the staff don't know who their real employer is.
+- [ ] It was meant to be a surprise: on the return of old friends, everything would be revealed on the last day.
+- [ ] The butler poisons Thomas Moody (everyone is watching Sinha, and he left his flask next to the bar) — it's a sleeping draught, nothing to worry about. But her horror at this should still be noted. She receives a letter — unfortunate timing, but she keeps going.
 
 ### Ideas to think over (optional)
-- Why is her name never mentionned
+- [ ] Why is her name never mentioned?
 
 
-## BUTLER
+## Butler
 
 ### Unlock mechanic (partly implemented)
 - To finish the game, the butler must be unlocked like any other character (all important hidden infos).
-- [x] First info `manages_weekend` (he is managing the weekend for someone) unlocks after the death text of the captain `burned` and `shot_butler` endings (same paths as host `not_guilty`).
+- [x] First info, `manages_weekend` (he is managing the weekend for someone), unlocks after the death text of the captain's `burned` and `shot_butler` endings (same paths as the host's `not_guilty`).
 - [x] He appears in the progress view as soon as any info about him is discovered (`is_butler_visible()` replaces the old static flag).
-- [x] A butler-specific tutorial text is shown after the death text on the first unlocked info (same pattern as the first-death tutorial in `ending_generic`).
-- [ ] TODO unlock points for the remaining infos (`poisoned_moody`, `took_valuables`).
-
-ADD somewhere that in the cannon story, **TED harring DRINKS from the Broken flasks**, but survives by drinking so much he pukes !!
+- [x] A butler-specific tutorial text is shown after the death text, on the first unlocked info (same pattern as the first-death tutorial in `ending_generic`).
+- [ ] TODO: unlock points for the remaining infos (`poisoned_moody`, `took_valuables`).
 
 ### Important
-That is the last test. The real path (as asked by meta dialogs)
-LAST question, is when the butler meat the Person behind all of this? (he escapes, and meet them in town. Last choice)
-- First will Thomas moody listen to sinha? Yes, so poisoned
-- and so forth. It shoul be straightforward
-IDEA THE Butler is hired thug, in here for the money, not to kill, but not not to kill. OR LOVER of Psychic, they met in service? => Check afternoon deaths
+- Add somewhere that, in the canon story, Ted Harring drinks from Broken's flask but survives by drinking so much he pukes.
+- This is the last test — the real path (as asked by the meta dialogues).
+- Last question: when does the butler meet the person behind all of this? He escapes and meets them in town — the final choice.
+  - First: will Thomas Moody listen to Sinha? Yes, so he's poisoned. And so forth — it should be straightforward.
+- Idea: the butler is a hired thug, in it for the money, not to kill, but not unwilling to either. Or a lover of the psychic, having met her in service? Check against the afternoon deaths.
+
 
 ## 🧠 The AI Concept (CLAITHORN)
 
 **C**rime **L**ocation **A**rtificial **I**ntelligence **T**echniques for **H**unting **O**ffenders and **R**esolving **N**arrative.
 
-TODO rename !!!!!
+- [ ] TODO: rename — urgently.
 
-### The Player as AI
-- You, the player, ARE the AI. The AI is conscious and trying to find a path. It walks several paths to identify the best one.
-- **Transitions**: After death, a voice/text appears: "Ok this not the right path try again", "Computation complete", etc.
-- **Visuals**: Show lines of code in some scenes between deaths. Fake bugs where we see part of the code/simulation.
+### The player as AI
+- You, the player, ARE the AI. The AI is conscious and trying to find a path, walking several to identify the best one.
+- **Transitions**: after a death, a voice/text appears: "OK, this is not the right path, try again," "Computation complete," etc.
+- **Visuals**: show lines of code in some scenes between deaths — fake bugs where part of the code/simulation is visible.
 
-### Second idea : Claythorn is training game
-You are an inspector (two juniors inspectors for dialog), you are in charge of learning how to use the AI solve crime, with visual aid. 
+### Second idea: Claythorn as a training game
+You are an inspector (with two junior inspectors for dialogue), in charge of learning to use the AI to solve crime, with visual aid.
 
-Visual AID  Crime solving A I  : VAcsAI
-Or a variation of that.
+Working title: **VAcsAI** (Visual Aid Crime Solving AI), or a variation on that.
 
-### The "Almost Ending"
-*Dialogue between Detective and AI:*
-- **AI**: "Computation complete. Total computation too complex, chose manually next possibility. (waiting time between 3 to 876 days)."
-- **Detective**: "So it’s up to us now. It means we are not totally obsolete yet."
-- **Mechanic**: The machine is at a deadlock. The player must manually introduce the "path" (guess the guilty party) to run extra analysis.
+### The "almost ending"
+*Dialogue between detective and AI:*
+- **AI**: "Computation complete. Total computation too complex — chose manually next possibility. (Waiting time between 3 and 876 days.)"
+- **Detective**: "So it's up to us now. It means we are not totally obsolete yet."
+- **Mechanic**: the machine is at a deadlock. The player must manually introduce "the path" (guess the guilty party) to run extra analysis.
 
-THen the last path, the what happened path is played, but without saying who it is? And if it is wrong, it stops as soon as it doesn't make sense.... Game broken,restart.
+Then the final path — what actually happened — is played, but without saying who did it. If the player is wrong, it stops as soon as it stops making sense: game broken, restart.
 
+### Final option?
+Once you have the "what happened" path right, you can activate the **Saved Everyone** path — send it to the past, and change the future. That's the beauty of the new technology (maybe too convoluted?). AI is not the future — changing the past is. Or maybe this is the alpha version, setting up a prequel for the next game?
 
-## FINAL option?
-once you have the WHAT happened RIGHT, you can activate the : 
-SAVED everyone PATH, sent it tot he past, and change the future
-that's the beauty of that new technology !! (maybe too convoluted?) => AI is not the future, changing the past is? Or maybe it is in the alpha version => Prequel for the new game?
+### Real run
+You must guess the right path:
+- When does Thomas Moody die, and why, and when? His flask was switched while he was listening to the captain's story.
+  - TODO: change the lad's dialogue — he was so absorbed in Captain Sinha's story that he forgot his flask next to the bar. Without that, Moody doesn't die.
+- Did Ted Harring follow the doctor upstairs?
+- What are the groups for the hunt?
+- Who comes to see the captain in the billiard room on Saturday evening?
+- Who survives?
 
-## Real RUN
+### Last run (maybe — check if still doable)
+At the very end, or at the start, you must guess the killer for a special achievement, either straight away or by answering questions.
 
-You must guess the right PATH. 
-  - When dies thomas Moody? WHY poisoned WHEN? => His flasks was switched as when he was listening to the captain story.
-    - TODO change LAd dialog, he was so into captain sinha story that he forgot his flasks next to the bar. NO story he doesn't die.
-  - Has ted Harring followed the doctor upstairs
-  - What are the groups for the hunt
-  - Who comes to see the captain in the billiard room sat evening
-  - Who survives
+Once you've unlocked the real ending — where the hero is alive, in front of the nurse — you can go with the flow and just call the police later. You escape alone, and everyone else is dead.
 
-## Last run (Maybe, check if still doable)
-At the very end OR at the start, you must GUESS the killer for special achievement. Straight away or by answering questions.
+But you think of the ghost stories, and since you've understood everything, you can start a new run where everyone does everything they weren't supposed to do:
+- The drunk spares the doctor.
+- Broken finds the poison.
+- The host confesses instead of being found out.
+- The captain finds the car to escape.
+- The doctor replaces the gun with fake cartridges.
+- The psychic really meets the old lord in the attic — he tells her where the key to his old car is.
 
+Once the trees are cleared, everyone is packed into the car. The nurse loses it and pulls a gun, but the barrel is empty — she is captured and arrested. She would have burned the whole place down if the doctor were still alive.
 
-Once you’ve unlock the real ending, where the hero is alive and in front of the nurse. You can go with the flow and just call the police later. You escape alone and everyone else is dead.
+Then the nurse's intro plays again. The end.
 
-BUT you think of the ghosts stories, and since you have understood everything, you can do a new run, with everyone doing everything they weren’t supposed to do :
-
-The drunk spare the doc
-The broken face finds the poison
-The host CONFESS instead of being found out
-The captain finds The car to escape
-The doctor replace gun with fake cartridges
-The psychic really meets the old lord in the attic. He tells him where the key of his old car is.
-
-
-Once you remove the trees, everyone stacked in the car. The nurse loses it and shows a gun. BUT the barrel is empty. She is captured and arrested. She would have burned the whole thing if the doctor was stil alive…
-
-THe nurse intro is played? The end
-
-JUMP FROM ONE CHARACTER TO ANOTHER
-
+Jump from one character to another.
 
 ---
 
-### 🔮 Unlocking & Intuitions
-
-- **Last Run Killer**: Before the last part, you must GUESS the killer for special achievement. 
-- **Last Run Story**: 
-- **Real Ending**: Hero is alive in front of the nurse.
-- **Meta Run**: Once you understand everything, do a new run where everyone does what they *shouldn't* do (e.g., Drunk spares Doctor, Host confesses).
-
+### 🔮 Unlocking & intuitions
+- **Last run killer**: before the last part, you must guess the killer for a special achievement.
+- **Last run story**: *(to be defined)*
+- **Real ending**: hero is alive, in front of the nurse.
+- **Meta run**: once you understand everything, do a new run where everyone does what they *shouldn't* (e.g. the drunk spares the doctor, the host confesses).
 
 ---
 
-## 💡Generic Ideas
-- [ ] Access to servants if you befriend one? (Doctor or Captain likely, NOT Lad).
-
-- [ ] - **End Note**: "For those who haven't realised it, you are not gonna leave this place alive."
-- [ ] **Phone**: Where to put the phone? Add phone room? Basement?
-- [ ] SOMETIMES, someone should be caught entering a room. 
-- [ ] Rewrite the generic ENTER/don’t enter bedroom text by Character
-- [ ] How come nobody is suspicious to receive an award, it’s not just the money. Deep down, everyone believe they deserve praise and glory for something they have done. It was just a matter of finding that thing for everyone.
-- [ ] Thinking DO I need to say exactly the same things in the same way? Or the texts can be a bit different based on the character who sees it? Don’t, know, it’s not a story telling? 
-- [ ] RIGHT place at the right time. Make SOME Important choices need to be timed exactly right. Example : Go to a room at 10:30 ( condition between 10h15 & 10h45)
-- [ ] For everyone so far, when don’t change time AFTER a map_menu, because it doesn’t map sense. CHECK EVERY WHERE for everyone
-- [ ] Well, if we check everyone backstory, and we can figure out who is not an impostor, then we can reveal the murderer
-- [ ] Should add   mention of drinks in tea room for lad and psychic? DAY 1 evening?
-- [ ] In later characters,Discuss the “INTuitions” and how sometimes we are compelled to do something that goes against everything we are or believe in. 
-- [ ] **Attic Knocking** : DOCTOR (and possibly everyone else) in ATTIC, they don’t knock ??? why? Check not weird => Or normal because we are exploring? NO add knocking => Maybe add no need to knock here, it’s for the servants
-- [ ] **Misunderstandings**: Situations seen from one POV but understood differently when playing another character.
-- [ ] **Kings and Queens**: Discussion of clues behind room names.
-- [ ] **SECRET PASSAGE** ! Where are the staff, In a small room BEHIND servant stairs? Other?
-All dead=> Who found them => Unlocks plenty?
-
-
+## 💡 Generic Ideas
+- [ ] Access to servants if you befriend one? (Doctor or captain, most likely — not the lad.)
+- [ ] **End note**: "For those who haven't realised it, you are not going to leave this place alive."
+- [ ] **Phone**: where to put the phone? Add a phone room? Basement?
+- [ ] Sometimes, the player should be caught entering a room.
+- [ ] Rewrite the generic enter/don't-enter-bedroom text per character.
+- [ ] Why isn't anyone suspicious about receiving an award? It's not just the money — deep down, everyone believes they deserve praise and glory for something they've done. It's just a matter of finding that thing for each character.
+- [ ] Do all characters need to say exactly the same things in the same way, or can the text differ slightly depending on who witnesses it? Unclear if that undermines the storytelling.
+- [ ] **Right place, right time**: some important choices could need precise timing, e.g. go to a room at 10:30 (condition between 10:15 and 10:45).
+- [ ] For everyone so far, check that time never advances right after a `map_menu`, since it wouldn't make sense — check everywhere, for every character.
+- [ ] If we examine everyone's backstory and work out who isn't an impostor, can we reveal the murderer that way?
+- [ ] Should there be a mention of drinks in the tea room for the lad and the psychic on Day 1 evening?
+- [ ] In later characters, discuss "intuitions" — how we're sometimes compelled to do something that goes against everything we are or believe in.
+- [ ] **Attic knocking**: the doctor (and possibly everyone else) doesn't knock in the attic — is that weird, or normal since they're exploring? Maybe no need to knock there, since it's for the servants.
+- [ ] **Misunderstandings**: situations seen from one POV but understood differently when playing another character.
+- [ ] **Kings and queens**: discuss the clues behind room names.
+- [ ] **Secret passage**: where is the staff quarters — a small room behind the servants' stairs? Something else?
+  - All dead → who finds them → unlocks plenty?
