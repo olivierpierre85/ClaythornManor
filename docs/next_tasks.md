@@ -14,7 +14,7 @@ THe drunk will describe the food with delight.
 
 Train is a mess, he will jump from one place to the next until he will collapse in the tea room. at dinner he will also have glimpse of weird stuff.
 
-Then you go to your room and see the doctor letter. Without Broken to save you, you got to make choice. LEAN into drunkness OR Pretend you are drunk and kill captain. DRINK or not? DRINKS counter
+Then you go to your room and see the doctor letter. Without Broken to save you, you got to make choice. LEAN into drunkness OR Pretend you are drunk and kill doc. DRINK or not? DRINKS counter
 
 Wake up drunk at breakfast, but either take whisky, and be really drunk in the woods. Kill yourself of sadness.
 
@@ -26,7 +26,7 @@ OR there is a killer, I must hide PRETEND TO kill YOURSELF, hide your cut's and 
 
 He will observe what is happening during eating with TEd Harring,nurse and psychic. witness the breakdown, and then THE butler comes clean the mess of psychic crying over TED harring. NURSE wakes up, and looks up at the butler cleaning the mess.
 
-OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mister Harring. How are you feelin?" => Unlocks TED Harring? Or unlock Butler
+OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mister Harring. How are you feelin?" => Unlocks TED Harring? Or **unlock Butler**
 
 ### Write Story: NEXT => HOST
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
@@ -40,6 +40,9 @@ After dinner, put letters? Or let butler do it?
 options to go over the manor. But nothing to do really.
 Can go to the kitchen to talk with maid.
 
+# Unlocks ted HARRING
+## Unlocks backstory (new start point for TED harring, at his birth), with ending credis rolling.
+## OR Full rerun where everyone lives (TOO complicated)
 
 
 ## Assets & artistic Tasks
