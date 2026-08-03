@@ -10,4 +10,8 @@ label host_day1_evening:
 
     call change_time(18, 0, 'Evening', 'Friday', hide_minutes=True, chapter='friday_evening')
 
+    call black_screen_transition("Lady Claythorn", "Friday Evening")
+
+    
+
     jump work_in_progress

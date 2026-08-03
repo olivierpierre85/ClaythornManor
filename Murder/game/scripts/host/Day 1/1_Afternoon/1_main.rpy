@@ -3,7 +3,7 @@
 #           
 #   Friday - Afternoon
 #   
-#   14:00 -> 16:30
+#   10:00 -> 16:30
 #
 #   Music: Elegant, slightly mysterious
 #
@@ -16,14 +16,40 @@ label host_introduction:
 
     call black_screen_transition("", "Lady Claythorn")
 
-    $ change_room("manor_exterior", irisout)
+    $ play_music('chill')
 
-    # play sound car_engine_stop
+    $ change_room("train_inside_second")
 
-    # $ play_music('elegant')
+    """
+    The journey from London is finally coming to a close.
+
+    After the train, I was picked up.
+
+    I can spot the Manor from afar.
+
+    I wonder what I have set myself into.
+    """
+
+    $ change_room("train_station", irisout)
+
+    """
+    I have barely stepped out of the coach when he approaches me.
+    """
 
     butler """
-    Al right, from now on you are the lady of this place. Don't forget it.
+    Good, you made it on time.
+
+    Please come this way.
+    """
+
+    """
+    Without ceremony, he guides me inside a car.
+    """
+
+    $ change_room("car_interior", irisout)
+
+    butler """
+    All right, from now on you are the lady of this place. Don't forget it.
     """
 
     host """
@@ -49,7 +75,7 @@ label host_introduction:
 
     But that's precisely why I should be the butler.
 
-    You see, in this kind of environment, the staff is more scrutinize that than the host.
+    You see, in this kind of environment, the staff are scrutinised more than the host.
 
     That's a rule.
 
@@ -65,25 +91,57 @@ label host_introduction:
     """
 
     host """
-    Right.
+    Right. But I've been assured that the guests we are receiving won't be accustomed to all this.
+
+    None of them is from a standing important enough so that they should notice little mistakes with the service.
     """
 
     butler """
-    But let's go in, the rest of our staff arrived yesterday to prepare the house.
+    Maybe so, but the rest of our staff are all actors too.
+    
+    They have very little domestic experience, if any.
 
-    Now it's time to explain what's expected of them.
+    So we shouldn't take any chances. 
     """
 
+    $ change_room("manor_exterior", irisout)
+
     """
-    The "Staff", are actually all actors, some with very little domestic experience, if any.
+    We stay silent for the rest of the journey, until finally, I can spot the Manor from afar.
 
-    But I've been assured that the guests we are receiving won't be accustomed to all this.
-
-    None of them is from a standing important enough so that they should notice little mistakes with the service.
-
-    Still, that would an incredible feat if the weekend goes as planned.
+    This is becoming real now.
+    
+    I feel a knot inside my stomach and wonder what I have set myself into.
+    """
+    
+    butler """
+    Alright, the others are already there to prepare the house.
+    
+    Let us not waste any time.
     """
 
-    # $ stop_music()
+    $ change_room("entrance_hall")
+
+    """
+    Two other people are gathered in the entrance hall.
+
+    A young man, rather dashing, and a girl that looks that she can't be more than 18 years old.
+    """
+
+    host """
+    Is that everyone?
+    """
+
+    butler """
+    I am afraid so, it would have been dangerous to bring more people in.
+    """
+
+    host """
+    Is that enough for a house this size?
+    """
+
+    butler """
+    Normally no, but for the weekend we will have to make this work.
+    """ 
 
     jump host_day1_evening
