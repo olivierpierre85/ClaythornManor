@@ -32,22 +32,27 @@ OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mist
 ## HOST
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
 
-### FRiday, afternoon
+**The fun part**. You know where everything is (poison,...) 
+ANd you must have learned about **manners**.
+You'll have questions on how to behave (like butter bread, who talk to first,...)
+
+### FRiday, =>>>> DOUBLE CHECK CLAUDE MESSY SHITS
 
 Before dinner
 - Meet staff
 - Get ready => First task hide letters behing the sheets for CAPTAIN and thomas moody. (I was assured it is just a joke played on the guest. => Maybe a murder mystery party)
 
-Then go down for dinner. And say you piece as an actor would. 
+Then go down for dinner. 
 
 ### FRiday, dinner
+Say you piece as an actor would. use common text.
+
 Talk with DRUNK => UNLOCK him over his love of food! 
 FIRST drunk for manners, then broken. 
 OTHERWISE => Add suspicious acting 1 (talk with Samuel Manning first)
 
 ### FRiday, night
 MAP => 
-
 
 **Library** => Maybe I should learn about this family => Learn your real name and TITLE(useful for later, will serve as defense when everyone is accusing you).
 
@@ -76,33 +81,54 @@ Have private talk to recap with butler. He will assure that is an unfortunate ac
 ### hunt 
 Just go along and hunt with Captain and butler. 
 Nothing special but the normal story. NOtice captain can't shoot.
+HERE add option to make another suspicious thing, TODO find what, and add a clue in the captain or lad path to be able to prevent it.
 
 ### evening.
-If you did suspicious thing, you might be accused by captain as in it's path? REfine this thinking
 
+#### Sus
+If you did MANYsuspicious thing, you might be accused by captain as soon as you reach the MANOR.
 
-rest everything as usual, but private talk more serious with butler. IF you noticed poison you threatened to tell everything to everyone, you can accuse him and he kills you?
+(see captain story)
+
+He will then ask you questions about and you'll have to answer correctly. He will apologize profusly then say nothing. To know you own name, you must have had gone.
+
+If not, usual path. You go you room to change, and the butler comes for a recap.
+ IF you noticed poison you threatened to tell everything to everyone, you can accuse him and he kills you?
 
 ### Dinner 
 
-Same as usual.
+Same as usual. You do not care about manners now.
 
 ### After dinner
-Or he offers to leave now,I received news from the mastermind (who is it? butler: I do not know, I just received that message and recognize the style). Things are not going exactly as planned so we should leave. no need to linger further. 
+Go back to your room, the butler comes after you.
+He received news from the mastermind. (who is it? butler: I do not know, I just received that message and recognize the style). Things are not going exactly as planned so we should leave. no need to linger further. Our job is done isn't it great? 
 
 IF you leave, you are killed as in broken timeline (car in the woods)
 
-Or you do not leave and stay with people (TRUST captain Sinha?). And explain on the Saturday night or sunday morning?
+IF You do not trust captain sinha and go to bed alone. You are killed in your bed (throat)
 
-=> CONVINCE sinha to TRUST samuel MANNING **is being setup**. 
-You go into the room and find him dead? throat slashed?
+Or you do not leave and stay with people NEED INTUITION, you have the map choice
+- Billiard room (**TRUST captain Sinha?**). And explain on the Saturday night or sunday morning? you need his key to open to samuel MANNING. 
+You go into the room and find him dead? throat slashed.
 
+  PANICK rabbits! You have a choice with captain:
+    You run to every room to wake everyone who is still alive (not available before, you do not know who master mind is)
+    Gather them in tea room, EXPLAIN everything. You unlock the butler?
+    NOw it is getting very suspicious.
+    Nobody sleeps, people try to sneek then sunday death. (MAYBE HERE the intuition)
+  Or if intuition, I do not trust anyone but you captain. Let's leave now!!!! 
+    => wait the two of you. Say, let's meet up in the entrance hall.
 
 ### Sunday
 
-You wake up, and expect to see the staff is gone to ?
-If sinha convinced, you leave alive.
-If not, he leaves you at the dinner table.
+TODO? Add the drunk appearing out of nowhere?
+
+You wake up nobody really slept.
+
+You talked throught the night but the conclusion is SINCE we can't trust anyone, let's all go together, do not let anyone out of sight. => You get shot? Everyone around you is. You see the butler holding the rifle. He looks at you says "I am sorry, but I do not want to be traced to this."
+
+
+OR leave just the two us (TOO close to broken's ending)
 
 
 
