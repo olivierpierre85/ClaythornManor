@@ -65,9 +65,10 @@ label init_debug:
     # TODO check where to put this
     # $ broken_name = "Archibald Devereux"
 
-    # $ current_character = host_details
-    # $ current_storyline = host_details
-    # call unlock_host
+    $ current_character = host_details
+    $ current_storyline = host_details
+    call unlock_host
+    $ host_details.load_manual_checkpoints()
 
     # Uncomment to make the butler visible (centre of character selection / progress view)
     # $ butler_details.description_hidden.unlock('manages_weekend')

@@ -17,4 +17,7 @@ label host_config_progress:
             'friday_afternoon': [
                 {"label": "host_introduction", "threads": {}},
             ],
+            'friday_evening': [
+                {"label": "host_day1_evening", "threads": {}},
+            ],
         }

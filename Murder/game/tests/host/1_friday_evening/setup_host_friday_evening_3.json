@@ -1,0 +1,52 @@
+{
+    "start_label": "host_day1_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day1_evening_menu_dinner",
+            "selected": "Keep to yourself and see out the meal",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Tea room",
+            "redirect": "host_day1_evening_tea_room"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Dining Room",
+            "redirect": "host_day1_evening_dining_room"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Entrance Hall",
+            "redirect": "host_day1_evening_entrance_hall"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Garden",
+            "redirect": "host_day1_evening_garden"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Servant Stairs",
+            "redirect": "host_day1_evening_servant_stairs"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Retire for the night",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "host_day1_evening_debrief_menu",
+            "selected": "Who is paying for all this?",
+            "redirect": "host_day1_evening_debrief_employer"
+        },
+        {
+            "menu": "host_day1_evening_debrief_menu",
+            "selected": "Let him go to bed",
+            "redirect": "generic_cancel"
+        }
+    ]
+}

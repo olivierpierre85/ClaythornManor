@@ -51,19 +51,7 @@ label captain_day1_evening_billiard_room_story:
     I make my way towards Lady Claythorn and the others.
     """
 
-    host """
-    Captain Sinha. Do come and join us.
-    """
-
-    captain """
-    Thank you, Lady Claythorn.
-    """
-
-    nurse """
-    Captain, you must tell us one of your stories.
-
-    Mr Moody was just saying what a fine storyteller you are.
-    """
+    call common_day1_evening_billiard_room_captain_invited
 
     """
     My old standby rises to the tip of my tongue. The Boxer Rebellion.

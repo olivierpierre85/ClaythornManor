@@ -54,13 +54,28 @@ label common_day1_evening_host_welcome_speech:
 
     During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
 
-    My second gift is a sum of one thousand pounds, awarded to each and every one of you. 
-    
+    My second gift is a sum of one thousand pounds, awarded to each and every one of you.
+
     This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
     """
-    
-    """
-    Following her speech, our host settles back down in her chair.
+
+    if current_character != host_details:
+
+        """
+        Following her speech, our host settles back down in her chair.
+        """
+
+    return
+
+
+label common_day1_evening_host_dinner_enjoy_meal:
+
+    host """
+    Please, there's no need to thank me.
+
+    The food will be served shortly.
+
+    Enjoy your meal.
     """
 
     return
@@ -111,6 +126,27 @@ label common_day1_evening_second_arrival_part_2:
 # ------------------------------------
 #               CAPTAIN
 # ------------------------------------
+# The billiard room asks the captain for a story. Heard from his side as he
+# crosses the room, and from Lady Claythorn's as she calls him over.
+label common_day1_evening_billiard_room_captain_invited:
+
+    host """
+    Captain Sinha. Do come and join us.
+    """
+
+    captain """
+    Thank you, Lady Claythorn.
+    """
+
+    nurse """
+    Captain, you must tell us one of your stories.
+
+    Mr Moody was just saying what a fine storyteller you are.
+    """
+
+    return
+
+
 label common_day1_evening_captain_billiard_room_speech_part_1:
     
     captain """

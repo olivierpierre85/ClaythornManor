@@ -438,6 +438,201 @@ label drunk_generic_heroic_act_broken:
     return
 
 
+# ---------------------------------------------------------------------------
+# HOST (Lady Claythorn) variants
+# Manning is seated on her left at the Friday dinner. She cannot ask him why he
+# was invited - she is supposed to be the one who invited him - so her questions
+# are the ones a hostess is allowed. The food is what wakes him up, and what
+# lets an actress see the performance underneath.
+# ---------------------------------------------------------------------------
+
+label drunk_generic_food_host:
+
+    host """
+    I hope the dinner is to your liking, Mr Manning.
+    """
+
+    drunk """
+    The dinner.
+    """
+
+    """
+    He looks down at his plate as though he had not noticed it was there.
+
+    Then something in his face settles.
+    """
+
+    drunk """
+    The sole is poached, not boiled, and whoever made that sauce was in no hurry whatsoever.
+
+    Butter, cream, a little of the cooking liquor, and just enough lemon to keep the whole thing honest.
+
+    It has been worked at the side of the stove the best part of an hour. You cannot rush it. It splits if you do.
+
+    And the shallots in the beef were sweated, never fried. There is not a scorched edge anywhere on that plate.
+
+    Whoever you have in that kitchen is a serious person, Lady Claythorn.
+
+    I should like to shake their hand.
+    """
+
+    """
+    Not one slurred word in the whole of it.
+
+    Not one.
+
+    I have spent fifteen years watching people pretend, and I know what I have just seen.
+
+    He was in character a moment ago, and for the length of that sauce he stepped out of it.
+    """
+
+    host """
+    You know a great deal about a kitchen, Mr Manning.
+    """
+
+    """
+    And the instant I say it, he is drunk again.
+    """
+
+    drunk """
+    Do I.
+
+    My father kept a good table.
+
+    Very good. Very... good table.
+    """
+
+    """
+    The hand goes back round the glass. The eyes go soft. The vowels come apart.
+
+    It is a decent performance. Better than decent.
+
+    But I have known actors sober up for a matinee and be legless again by six, and this is not that.
+
+    This is a man who has learnt that nobody asks a drunk anything difficult.
+
+    So he stays one.
+
+    I ought to admire it. Instead it makes me cold.
+
+    Because if he is playing a part at this table, then he has as much reason to hide as I have.
+    """
+
+    $ drunk_details.description_hidden.unlock('status')
+
+    $ drunk_details.description_hidden.unlock('lie')
+
+    $ host_details.threads.unlock('manning_act')
+
+    return
+
+
+label drunk_generic_background_host:
+
+    host """
+    You must forgive me, Mr Manning. I have had your name and nothing else all evening.
+
+    What is it that you do?
+    """
+
+    drunk """
+    Do.
+
+    I am a man of the law, madam.
+
+    A barrister.
+
+    Or I was one. At this hour it comes to much the same thing.
+    """
+
+    host """
+    And what sort of law?
+    """
+
+    drunk """
+    Defence.
+
+    I stood up for people nobody else would stand up for.
+    """
+
+    host """
+    That is not a small thing.
+    """
+
+    drunk """
+    It is not a large one either.
+
+    There were cases I got wrong, Lady Claythorn.
+
+    The law does not forgive a man for that.
+
+    Neither do the people he got wrong.
+    """
+
+    """
+    He says it plainly, without asking for sympathy, and reaches for the wine.
+
+    Whatever ruined him, he has told himself the story often enough to have worn the edges off it.
+    """
+
+    $ drunk_details.description_hidden.unlock('job')
+
+    return
+
+
+label drunk_generic_heroic_act_host:
+
+    """
+    I should like to know what he did to earn his place at this table.
+
+    But I cannot possibly ask him. I am the woman who invited him.
+
+    I shall have to come at it the long way round.
+    """
+
+    host """
+    I should like to hear it from you, Mr Manning, rather than from a letter.
+
+    In your own words. What is it that brought you to my table?
+    """
+
+    drunk """
+    In my own words.
+
+    I took the cases nobody else would touch.
+
+    The poor. The desperate.
+
+    The ones with nothing to pay me with and nothing to lose.
+
+    A man of the people, one of the papers called me once. I have never quite recovered from it.
+    """
+
+    host """
+    Somebody has to speak for them.
+    """
+
+    drunk """
+    So they tell me.
+
+    Nobody ever mentions what it costs the man doing the speaking.
+    """
+
+    """
+    So that is what his letter said, near enough.
+
+    A defender of the poor, honoured for his selflessness.
+
+    Whoever wrote those invitations knew exactly what to say to each of them.
+
+    And I have been handed the part of the woman who means every word of it.
+    """
+
+    $ drunk_details.description_hidden.unlock('heroic_act')
+
+    return
+
+
 # NOT NEED and not reviewed yet
 # label drunk_generic_other_guests_friday_nurse:
 

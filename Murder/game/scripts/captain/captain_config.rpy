@@ -180,8 +180,8 @@ label init_captain:
 
         # Character Class
         captain_extra_information = CharacterDescriptionHiddenList ([
-            CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, during the Great War or the Boxer's Rebellion in China", unlock_chapters=[('broken', 'friday_evening'), ('lad', 'friday_evening'), ('nurse', 'friday_evening'), ('psychic', 'friday_evening'), ('lad', 'saturday_afternoon'), ('doctor', 'sunday_afternoon')]),
-            CharacterInformation(10, "talker",  "being at the centre of attention, so he tend to monopolize the conversation", is_important = True, unlock_chapters=[('broken', 'friday_evening'), ('lad', 'friday_evening'), ('nurse', 'friday_evening'), ('psychic', 'friday_evening')]),
+            CharacterInformation(0, "wars", "his exploits in one of the several wars he fought in. Whether it was Burma, during the Great War or the Boxer's Rebellion in China", unlock_chapters=[('broken', 'friday_evening'), ('lad', 'friday_evening'), ('nurse', 'friday_evening'), ('psychic', 'friday_evening'), ('host', 'friday_evening'), ('lad', 'saturday_afternoon'), ('doctor', 'sunday_afternoon')]),
+            CharacterInformation(10, "talker",  "being at the centre of attention, so he tend to monopolize the conversation", is_important = True, unlock_chapters=[('broken', 'friday_evening'), ('lad', 'friday_evening'), ('nurse', 'friday_evening'), ('psychic', 'friday_evening'), ('host', 'friday_evening')]),
             CharacterInformation(40, "heroic_act", "impressive military career", is_important = True),
             CharacterInformation(40, "city", "London"), # TODO unlock somewhere, ? In captain walkthroug?
             CharacterInformation(20, "age", "54 years ago"),

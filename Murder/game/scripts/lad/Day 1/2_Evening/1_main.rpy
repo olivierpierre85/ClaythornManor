@@ -189,13 +189,7 @@ label lad_day1_evening:
     A few of the guests begin to express their appreciation to the host.
     """
 
-    host """
-    Please, there's no need to thank me. 
-    
-    The food will be served shortly. 
-    
-    Enjoy your meal.
-    """
+    call common_day1_evening_host_dinner_enjoy_meal
 
     """
     At that moment, the butler enters the room, accompanied by the footman. 

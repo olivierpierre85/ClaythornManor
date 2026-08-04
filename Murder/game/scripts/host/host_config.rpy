@@ -1,20 +1,93 @@
 label init_host:
-    # call host_config_menu
-    
+
     call host_config_progress
-    
+
+    call host_config_menu
+
+    call host_day1_evening_map_menu
+
     python:
         host_name = "Lady Claythorn"
-        
+
         host_init_variables = {
+            # Generic Menus
+            "drunk_generic_menu" : drunk_generic_menu_host,
+
+            # MAP Menus
+            "day1_evening_map_menu" : host_day1_evening_map_menu,
+
+            # Evening day 1
+            # Every lapse in the performance the butler could hear about later
+            "day1_evening_suspicious_acting" : 0,
+            # Which neighbour she turned to first at dinner ('drunk' / 'broken')
+            "day1_evening_dinner_first_guest" : None,
+            # She invented the history of the award for Thomas Moody
+            "day1_evening_told_tradition" : False,
+            "day1_evening_bedroom_refusals" : 0,
+            "day1_evening_attic_tried" : False,
+            "day1_evening_billiard_room_visited" : False,
+            "day1_evening_staff_seen" : False,
         }
 
-        host_important_choices = CharacterImportantChoiceList([])
-        host_observations = CharacterObservationList([])
-        host_objects = CharacterObjectList([])
+        host_important_choices = CharacterImportantChoiceList([
+            CharacterInformation(
+                0, "suspicious_acting",
+                "Your performance slipped in front of the guests",
+                content_negative="You played Lady Claythorn all evening without a slip",
+                image_file="host",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
+            ),
+            CharacterInformation(
+                1, "stayed_with_guests",
+                "You sat up with your guests in the billiard room",
+                content_negative="You left your guests to themselves for the whole evening",
+                image_file="captain",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
+            ),
+        ])
+
+        host_observations = CharacterObservationList([
+            CharacterInformation(
+                1, "family_history",
+                "You read the Claythorn entry in the library and learned the family's real name and title",
+                content_negative="You didn't look up the family in the library",
+                image_file="captain_host_suspicion_name",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
+                2, "no_portrait",
+                "You noticed there is no portrait of Lady Claythorn anywhere in the gallery",
+                content_negative="You didn't visit the portrait gallery",
+                image_file="captain_host_suspicion_portrait",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
+            ),
+            CharacterInformation(
+                3, "manning_act",
+                "You saw through Samuel Manning's drunkenness. Some of it is a performance",
+                content_negative="You didn't see anything unusual about Samuel Manning",
+                image_file="drunk_character",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening', 'sunday_morning'],
+            ),
+        ])
+
+        host_objects = CharacterObjectList([
+            CharacterInformation(
+                1, "found_poison",
+                "You found an open bottle of rat poison in the scullery",
+                content_negative="You didn't go below stairs to the scullery",
+                image_file="rat_poison",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
+            ),
+        ])
 
         host_extra_information = CharacterDescriptionHiddenList ([
-            CharacterInformation(0, "name_age", "Elisabeth - is born in 1865 and", is_important = True), 
+            CharacterInformation(0, "name_age", "Elisabeth - is born in 1865 and", is_important = True, unlock_chapters=[('host', 'friday_evening')]),
             CharacterInformation(1, "down_to_earth", "look down upon 'lower class' individuals", is_important = True), 
             CharacterInformation(60, "hunt", "cannot hunt at the level expected of a lady of her station", is_important = True, unlock_chapters=[('broken', 'saturday_afternoon'), ('captain', 'saturday_afternoon')]),
             CharacterInformation(60, "car", "to drive a car", is_important = True, unlock_chapters=[('nurse', 'saturday_evening')]),
@@ -35,7 +108,7 @@ label init_host:
         Elegant and well-spoken, Lady Claythorn - first name <info:name_age> appears at first glance to embody everything expected of a wealthy lady.
         However, if you delve deeper, you'll notice her <info:table_manners>. Also, she <info:hunt>, a telling failing in a house such as this, though she has, oddly, learnt <info:car>.
         And, for a member of the nobility, she does not <info:down_to_earth>.
-        But as it turns out, she is not <info:lie>. Even if it makes her look <not_guilty>.
+        But as it turns out, she is not <info:lie>. Even if it makes her look <info:not_guilty>.
         """
 
         host_details  = CharacterDetails(

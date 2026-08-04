@@ -186,9 +186,7 @@ label psychic_day1_evening:
     I join in the applause with the rest of the guests.
     """
 
-    host """
-    Please no need to thank me. The food will be served, enjoy your meal.
-    """
+    call common_day1_evening_host_dinner_enjoy_meal
 
     """
 

@@ -1,0 +1,87 @@
+{
+    "start_label": "host_day1_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day1_evening_menu_dinner",
+            "selected": "Turn to Mr Manning, on your left",
+            "redirect": "host_day1_dinner_drunk"
+        },
+        {
+            "menu": "drunk_generic_menu_host",
+            "selected": "I hope the dinner is to your liking?",
+            "redirect": "drunk_generic_food_host"
+        },
+        {
+            "menu": "drunk_generic_menu_host",
+            "selected": "What is it that you do, Mr Manning?",
+            "redirect": "drunk_generic_background_host"
+        },
+        {
+            "menu": "drunk_generic_menu_host",
+            "selected": "Ask him to tell you, in his own words, why he is here",
+            "redirect": "drunk_generic_heroic_act_host"
+        },
+        {
+            "menu": "drunk_generic_menu_host",
+            "selected": "Turn back to the rest of the table",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "host_day1_evening_menu_dinner",
+            "selected": "Turn to Mr Moody, on your right",
+            "redirect": "host_day1_dinner_broken"
+        },
+        {
+            "menu": "host_day1_dinner_broken_menu",
+            "selected": "Turn the question back on him",
+            "redirect": "host_day1_dinner_broken_deflect"
+        },
+        {
+            "menu": "host_day1_evening_menu_dinner",
+            "selected": "Keep to yourself and see out the meal",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Sit up with your guests in the billiard room",
+            "redirect": "host_day1_evening_billiard_room"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Library",
+            "redirect": "host_day1_evening_library"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Library",
+            "redirect": "host_day1_evening_library"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "host_day1_evening_portrait_gallery"
+        },
+        {
+            "menu": "host_day1_evening_debrief_menu",
+            "selected": "I am not Lady Claythorn. I am Lady Kilbraith.",
+            "redirect": "host_day1_evening_debrief_name"
+        },
+        {
+            "menu": "host_day1_evening_debrief_menu",
+            "selected": "There is no portrait of me in this house",
+            "redirect": "host_day1_evening_debrief_portrait"
+        },
+        {
+            "menu": "host_day1_evening_debrief_menu",
+            "selected": "Who is paying for all this?",
+            "redirect": "host_day1_evening_debrief_employer"
+        },
+        {
+            "menu": "host_day1_evening_debrief_menu",
+            "selected": "Let him go to bed",
+            "redirect": "generic_cancel"
+        }
+    ]
+}
