@@ -148,15 +148,10 @@
 ## Host
 
 ### Important
-- [ ] Not many choices, but a very different story.
-- [ ] Lots of revisiting previously seen dialogue.
-- [ ] Her goal is to save as many people as possible without being killed by the suspicious butler. If she escapes with the butler, everyone dies in the outdoor shed — mirroring the way Broken gets there.
-- [ ] Make clear the butler acts like a real one (hence checking for missing silverware), and that the staff don't know who their real employer is.
-- [ ] It was meant to be a surprise: on the return of old friends, everything would be revealed on the last day.
-- [ ] The butler poisons Thomas Moody (everyone is watching Sinha, and he left his flask next to the bar) — it's a sleeping draught, nothing to worry about. But her horror at this should still be noted. She receives a letter — unfortunate timing, but she keeps going.
 
 ### Ideas to think over (optional)
 - [ ] Why is her name never mentioned?
+- [ ] broadway backstage or outside image for the introduction?
 
 
 ## Butler

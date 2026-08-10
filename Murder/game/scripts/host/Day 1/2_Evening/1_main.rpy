@@ -35,41 +35,33 @@ label host_day1_evening:
     $ play_music('upbeat')
 
     """
-    They have all arrived. I have heard every one of them come in without setting eyes on a single one.
+    They have all arrived.
 
-    The car on the gravel, the door, the butler's voice going smoothly through the same speech again and again, and me at the top of the house being kept out of sight like a surprise.
+    I have heard every one of them come in without setting eyes on a single one.
 
-    Which, I suppose, is what I am.
+    The car on the gravel, the door, the butler's voice going smoothly through the same speech again and again.
 
-    The afternoon went on tasks. Learning which door leads where, so that I never have to ask. Learning the names of my own guests off a sheet of paper.
+    The afternoon went by fast.
 
-    And now I am dressed in eighty pounds of somebody else's clothes, looking at a woman in the glass whom I have never met.
+    I learnt which door leads where, so that I never have to ask.
 
-    Not bad. Not bad at all.
+    I studied the names of the guests from a sheet of paper.
 
-    The hair is wrong for my face and exactly right for hers.
+    And now I am dressed in elegant clothes.
+
+    The sort I am only accustomed to wearing onstage.
+
+    That should help me remember that I am playing a role here.
     """
 
     play sound door_knock
 
-    """
-    Two knocks. Always two.
-    """
-
-    butler """
-    May I come in, my lady?
-    """
-
     host """
-    There is nobody in the corridor, is there.
-    """
-
-    butler """
-    There is always somebody in the corridor.
+    Come in!
     """
 
     """
-    He comes in with a sheet of paper and that maddening calm of his, and I want to throw something at him and thank him at the same time.
+    He comes in.
     """
 
     butler """
@@ -77,60 +69,40 @@ label host_day1_evening:
 
     Mr Manning is on your left. Mr Moody on your right. The others as written.
 
-    You will turn to your left first, then to your right when the plates change. A hostess who takes them out of order tells the whole table she was not raised to it.
+    Do you remember the etiquette?
+    """
 
-    You do not eat much, you do not drink at all, and you keep the conversation moving round you rather than at you.
+    host """
+    Of course I do.
     """
 
     """
-    I run my eye down the list. Seven guests, seven rooms, and beside each name a line or two in his handwriting.
+    He spent hours teaching me proper dinner table manners.
 
-    Where they come from. What they do. What each of them is supposed to have done to deserve a thousand pounds.
-
-    Whoever put this weekend together knows a great deal about the people coming up my stairs tonight.
+    As if the whole plot depended on it.
     """
-
-    $ unlock_map('bedroom_lad')
-
-    $ unlock_map('bedroom_doctor')
-
-    $ unlock_map('bedroom_captain')
-
-    $ unlock_map('bedroom_psychic')
-
-    $ unlock_map('bedroom_host')
-
-    $ unlock_map('bedroom_drunk')
-
-    $ unlock_map('bedroom_broken')
-
-    $ unlock_map('bedroom_nurse')
 
     host """
     And the speech?
     """
 
     butler """
-    Word for word, as written.
+    Here it is.
 
-    Do not improve it.
+    You should know it by heart by dinner.
+
+    That would establish you without a doubt as the lady of the house.
+
+    Do it well and they will not question who you are.
+
+    Just pretend you are telling it to an audience in a theatre.
     """
 
     host """
-    It could stand a little improving.
-    """
-
-    butler """
-    So could most things.
-
-    My lady. In an hour a great deal will depend on seven people believing you without being asked to.
-
-    Say it as you would say it to a house of nine hundred who have paid to be there.
+    Very well.
     """
 
     """
-    Well.
-
     That, at least, I know how to do.
     """
 
@@ -139,7 +111,9 @@ label host_day1_evening:
     play sound dinner_gong
 
     """
-    The gong goes below, and every nerve I have goes with it.
+    The gong goes below.
+
+    It is time to play my part.
 
     Curtain up.
     """
@@ -151,31 +125,19 @@ label host_day1_evening:
     $ play_music('chill', 2)
 
     """
-    I come in last, because that is the only entrance worth making.
+    I come in last.
 
-    Seven faces turn, and I take the long walk to my chair with my chin at the angle I have been practising in a cold room in Camden for a fortnight.
-
-    Nobody stands up quickly enough, which means nobody is quite certain how grand I am. Good. Let them work it out.
+    Seven faces turn, and I take the long walk to my chair.
 
     I do not look at any of them until I am seated. Then I look at all of them.
 
-    An old soldier, very upright. A doctor with a glass already half down. A young man in a suit that is not his.
-
-    A woman in mourning colours who has done her own hair. A masked man on my right, who has not stopped watching me since I came through the door.
-
-    My audience.
-
-    I let the silence sit half a beat longer than is comfortable, the way you do when a house is still coughing, and I begin.
+    I let the silence sit half a beat longer than is comfortable, and I begin.
     """
 
     call common_day1_evening_host_welcome_speech
 
     """
-    I take them slowly. I give them the pause before the money, because a pause before money is worth more than the money.
-
-    And I keep my hands still, which is the hardest part of the whole performance.
-
-    When I sit down there is that warm shuffle round a table that means it landed.
+    When I am done there is that warm shuffle round a table that means it landed.
 
     A few of them murmur their thanks.
     """
@@ -185,37 +147,17 @@ label host_day1_evening:
     """
     The first course comes in on the heels of it, and the room turns into a dinner party.
 
-    My hands are shaking under the cloth. Nobody can see them. That is all that matters.
-    """
+    My hands are shaking slightly under the cloth.
 
-    pause 1.0
+    But nobody can see them.
 
-    call change_time(19, 00)
+    The first act is over.
 
-    """
-    On my left, Mr Manning has already emptied his glass and is watching the footman's progress round the table with an air of quiet mathematics.
+    I sit down and relax for a second.
 
-    When the wine reaches him he does not lift the glass so much as meet it.
+    But only a second, because I must start talking to the guests now.
 
-    He has done that a great many times, and not one person at this table is surprised by it.
-    """
-
-    $ drunk_details.description_hidden.unlock('addict')
-
-    """
-    On my right, Mr Moody sits behind a mask of painted tin, cut and coloured to stand in for the face the war took off him.
-
-    I have seen them in the street and looked away like everybody else. It is a different thing entirely to have one turned towards you over the soup.
-
-    I make myself hold his eye rather than the mask, which he notices, and which I meant him to notice.
-    """
-
-    $ broken_details.description_hidden.unlock('mask')
-
-    """
-    Two neighbours, then. Two hours of it.
-
-    And a very great deal depends on which of them I turn to first.
+    I remember that it matters who I turn to first.
     """
 
     $ time_left = 90

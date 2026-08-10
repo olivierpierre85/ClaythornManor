@@ -3,7 +3,7 @@
 - IN intuitions DEAD , add a special sound or text
 - Double CHECK nightime (AROUND 16h30 !!! )!! important for endings with PSYCHIC and BROKEN
 - APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
-
+- ARRIVAL manor, the storm happens it is already night time
 
 ### Write Story: NEXT => DRUNK
 GEN IDEAS
@@ -37,6 +37,10 @@ ANd you must have learned about **manners**.
 You'll have questions on how to behave (like butter bread, who talk to first,...)
 
 ### FRiday, =>>>> DOUBLE CHECK CLAUDE MESSY SHITS
+
+TODO add inner dialog with BACKSTORY in intro
+
+ADd the butler's name?
 
 Before dinner
 - Meet staff

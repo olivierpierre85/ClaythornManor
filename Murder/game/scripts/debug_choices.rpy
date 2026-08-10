@@ -188,6 +188,7 @@ label unlock_host:
     $ host_details.description_hidden.unlock('hunt')
     $ host_details.description_hidden.unlock('car')
     $ host_details.description_hidden.unlock('lie')
+    $ host_details.description_hidden.unlock('not_guilty')
 
     return
 
