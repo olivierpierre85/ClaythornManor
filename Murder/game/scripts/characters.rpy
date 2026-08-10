@@ -126,6 +126,60 @@ init -100 python:
         else:
             return "Footman"
 
+    # ---------------
+    # Clickable notifications
+    # ---------------
+    def get_char_any(text_id):
+        # get_char only covers the playable characters, the butler lives apart
+        for char in char_list_flat + [butler_details]:
+            if char.text_id == text_id:
+                return char
+        return None
+
+    def get_notify_jump_action(target_screen, target_char_id = None):
+        # Actions run when the player clicks an unlock notification: hide the
+        # card, point the journal at the right character and open the screen
+        # holding the new entry. Returns None (an insensitive button) while a
+        # tutorial is up, like every other button in the game.
+        if tutorial_on or not target_screen:
+            return None
+
+        char = get_char_any(target_char_id) if target_char_id else None
+
+        actions = [Hide('thread_unlock_notify'), Hide('notify_link')]
+
+        if target_screen == "manor_map":
+            actions.append(SetVariable("last_menu_screen", "manor_map"))
+        else:
+            actions.append(SetVariable("last_menu_screen", "progress"))
+
+        # Same as the progress screen: the first visit opens the tutorial
+        if target_screen == "character_threads" and not seen_tutorial_threads:
+            actions.append(SetVariable("tutorial_on", True))
+            actions.append(SetVariable("seen_tutorial_threads", True))
+
+        if char:
+            actions.append(SetVariable("current_storyline", char))
+            # The overview screens read lock state from current_checkpoint
+            actions.append(SetVariable("current_checkpoint", None))
+            actions.append(ShowMenu(target_screen, char))
+        else:
+            actions.append(ShowMenu(target_screen))
+
+        return actions
+
+    def show_notify_link(message, target_screen = None, target_char_id = None):
+        # Text-only notification the player can click to open a screen. Falls
+        # back to the plain toast when there is nowhere to jump to.
+        if not target_screen:
+            renpy.notify(message)
+            return
+
+        renpy.hide_screen('notify')
+        renpy.hide_screen('thread_unlock_notify')
+        renpy.show_screen('notify_link', message=message, target_screen=target_screen, target_char_id=target_char_id)
+        renpy.restart_interaction()
+
     # Python Classes
     class CharacterInformationList:
         def __init__(
@@ -146,9 +200,22 @@ init -100 python:
         
         def get_item(self, text_id ):
             for info in self.information_list:
-                if text_id == info.text_id: 
+                if text_id == info.text_id:
                     return info
-        
+
+        def get_owner_character(self):
+            # Which character this list belongs to - used to point a clicked
+            # notification at the right page of the journal
+            for char in char_list_flat + [butler_details]:
+                if (self is char.description_hidden
+                        or self is char.important_choices
+                        or self is char.endings
+                        or self is char.objects
+                        or self is char.observations
+                        or self is char.threads):
+                    return char
+            return None
+
         def unlock(self, text_id, is_restart = False):
             global seen_tutorial_progress
             for info in self.information_list:
@@ -172,12 +239,18 @@ init -100 python:
                                 notify_sound = "audio/sound_effects/writing_short.ogg"
 
                         if notify_text:
+                            # Clicking the notification opens this character's threads
+                            owner = self.get_owner_character()
+                            target_screen = "character_threads" if owner else None
+                            target_char_id = owner.text_id if owner else None
+
                             if getattr(info, "image_file", None):
                                 renpy.hide_screen('notify')
-                                renpy.show_screen('thread_unlock_notify', message=notify_text, image_file=info.image_file)
+                                renpy.hide_screen('notify_link')
+                                renpy.show_screen('thread_unlock_notify', message=notify_text, image_file=info.image_file, target_screen=target_screen, target_char_id=target_char_id)
                                 renpy.restart_interaction()
                             else:
-                                renpy.notify(notify_text)
+                                show_notify_link(notify_text, target_screen, target_char_id)
                         if notify_sound:
                             renpy.play(notify_sound, "sound")
 
@@ -269,16 +342,19 @@ init -100 python:
 
         def get_owner_image_path(self):
             # Side portrait of the character this description list belongs to
-            for char in char_list_flat + [butler_details]:
-                if char.description_hidden is self:
-                    return "images/characters/side/side " + char.text_id + ".png"
+            char = self.get_owner_character()
+            if char:
+                return "images/characters/side/side " + char.text_id + ".png"
             return None
 
         def show_character_notify(self, message):
+            # Clicking the notification opens this character's backstory
+            owner = self.get_owner_character()
             image_path = self.get_owner_image_path()
             if image_path:
                 renpy.hide_screen('notify')
-                renpy.show_screen('thread_unlock_notify', message=message, image_path=image_path)
+                renpy.hide_screen('notify_link')
+                renpy.show_screen('thread_unlock_notify', message=message, image_path=image_path, target_screen="character_details", target_char_id=owner.text_id)
                 renpy.restart_interaction()
             else:
                 renpy.notify(message)

@@ -97,7 +97,8 @@ init python:
             if info.id == room and not info.active:
                 info.active = True
                 if not hide_notifications:
-                    renpy.notify("You have written new information on the map.")
+                    # Clicking the notification opens the manor map
+                    show_notify_link("You have written new information on the map.", "manor_map")
                     renpy.play("audio/sound_effects/writing_short.ogg", "sound")
 
         if not seen_tutorial_map:

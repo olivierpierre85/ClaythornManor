@@ -1360,24 +1360,53 @@ screen notify(message):
 
     timer 5 action Hide('notify')
 
-screen thread_unlock_notify(message, image_file=None, image_path=None):
+## The unlock card. When target_screen is set the whole card becomes a button
+## that takes the player straight to the new entry (see get_notify_jump_action).
+screen thread_unlock_notify(message, image_file=None, image_path=None, target_screen=None, target_char_id=None):
 
     zorder 1000
     style_prefix "thread_unlock_notify"
 
-    frame at notify_appear:
-        vbox:
-            spacing 14
-            xalign 0.5
-            text "[message!tq]" xalign 0.5
-            if image_file:
-                add Transform("images/info_cards/" + image_file + ".webp", zoom=0.7) xalign 0.5
-            elif image_path:
-                # Full path to an arbitrary image (e.g. a character side portrait),
-                # scaled to match the info card size (75px * 0.7)
-                add Transform(image_path, zoom=0.2) xalign 0.5
+    if target_screen:
+        button at notify_appear:
+            mouse "hover"
+            action get_notify_jump_action(target_screen, target_char_id)
+            use thread_unlock_notify_content(message, image_file, image_path)
+    else:
+        frame at notify_appear:
+            use thread_unlock_notify_content(message, image_file, image_path)
 
     timer 5 action Hide('thread_unlock_notify')
+
+
+screen thread_unlock_notify_content(message, image_file=None, image_path=None):
+
+    style_prefix "thread_unlock_notify"
+
+    vbox:
+        spacing 14
+        xalign 0.5
+        text "[message!tq]" xalign 0.5
+        if image_file:
+            add Transform("images/info_cards/" + image_file + ".webp", zoom=0.7) xalign 0.5
+        elif image_path:
+            # Full path to an arbitrary image (e.g. a character side portrait),
+            # scaled to match the info card size (75px * 0.7)
+            add Transform(image_path, zoom=0.2) xalign 0.5
+
+
+## Text-only notification that can be clicked, same look as the plain toast
+screen notify_link(message, target_screen=None, target_char_id=None):
+
+    zorder 1000
+    style_prefix "notify_link"
+
+    button at notify_appear:
+        mouse "hover"
+        action get_notify_jump_action(target_screen, target_char_id)
+        text "[message!tq]"
+
+    timer 5 action Hide('notify_link')
 
 transform notify_appear:
     on show:
@@ -1412,6 +1441,24 @@ style thread_unlock_notify_frame:
 
 style thread_unlock_notify_text:
     properties gui.text_properties("notify")
+    hover_color gui.highlight_color
+
+
+## Clickable variants: same parchment, brightened while the mouse is over it
+style thread_unlock_notify_button is thread_unlock_notify_frame
+
+style thread_unlock_notify_button:
+    hover_background Transform(Frame("gui/notify_vertical.png", Borders(12, 128, 12, 128), tile=gui.frame_tile), matrixcolor=BrightnessMatrix(0.12))
+
+style notify_link_button is notify_frame
+
+style notify_link_button:
+    hover_background Transform(Frame("gui/notify.png", gui.notify_frame_borders, tile=gui.frame_tile), matrixcolor=BrightnessMatrix(0.12))
+
+style notify_link_text is notify_text
+
+style notify_link_text:
+    hover_color gui.highlight_color
 
 
 ## NVL screen ##################################################################
