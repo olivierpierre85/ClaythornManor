@@ -35,19 +35,17 @@ label host_day1_evening:
     $ play_music('upbeat')
 
     """
-    They have all arrived.
-
-    I have heard every one of them come in without setting eyes on a single one.
-
-    The car on the gravel, the door, the butler's voice going smoothly through the same speech again and again.
-
     The afternoon went by fast.
 
     I learnt which door leads where, so that I never have to ask.
 
     I studied the names of the guests from a sheet of paper.
 
-    And now I am dressed in elegant clothes.
+    Most of them must have arrived by now.
+
+    I take a look in the mirror.
+
+    And I see myself dressed in elegant clothes.
 
     The sort I am only accustomed to wearing onstage.
 
@@ -56,18 +54,18 @@ label host_day1_evening:
 
     play sound door_knock
 
-    host """
-    Come in!
+    """
+    Someone knocks on my door.
     """
 
-    """
-    He comes in.
+    host """
+    Come in!
     """
 
     butler """
     The placement. Learn it now, because you will not have it in your hand at the table.
 
-    Mr Manning is on your left. Mr Moody on your right. The others as written.
+    Mr Manning is on your left. Mr Moody on your right.
 
     Do you remember the etiquette?
     """
