@@ -4,6 +4,7 @@
 - Double CHECK nightime (AROUND 16h30 !!! )!! important for endings with PSYCHIC and BROKEN
 - APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
 - ARRIVAL manor, the storm happens it is already night time
+- Harmonize the Dinner menu (are choices keep_alive or not pick one a keep it)
 
 ### Write Story: NEXT => DRUNK
 GEN IDEAS
@@ -145,9 +146,6 @@ BROKEN
 Thread, leave together: CHeck others
 THread DOCTOR Image for broken
 
-REDO billiard room (couch weird) + fire version
-
-
 ### IMAGES NEXT REBUILD
 
 ### Characters
@@ -167,6 +165,9 @@ Get new music from internet and put them at the right place
 ## SURVIVE MECHANIC Fable
 
 If you still have money in september, use fable to implemented the SURVIVE mechanic. That will start the META story each time a player is saved, up until you can play the butler!!
+
+
+## FAble idea => Move all the Image tasks to comfy ui (one with klein one with dev)
 
 
 ## Update ITCH.IO
