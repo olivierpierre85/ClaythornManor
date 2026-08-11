@@ -21,14 +21,6 @@
 #         only way that thread is ever unlocked. Turning to Moody first, or
 #         sitting through dinner in silence, leaves it locked and costs a mark
 #         (day1_evening_suspicious_acting), as does never joining the party.
-#       - Moody first and silence are told apart by whether the Moody choice
-#         has been taken at all (is_choice_already_chosen on the dinner menu -
-#         both neighbours are keep_alive, so they are never hidden).
-#       - Each neighbour has one scene of his own on the first turn of the head
-#         (Manning on the food, Moody on the award), then his generic menu.
-#         She may go back and forth between them until the dinner runs out.
-#       - Marks are settled by the butler at the end of the night. Any mark at
-#         all unlocks the suspicious_acting thread.
 # --------------------------------------------
 label host_day1_evening:
 
@@ -189,15 +181,15 @@ label host_day1_evening:
     call change_time(21, 00)
 
     """
-    The last plates go out, and it is up to me to call then end of dinner.
+    The last plates go out, and it is up to me to call the end of dinner.
     """
 
     host """
-    TODO
-    
-    There will be drinks in the billiard room for anyone who cares to sit up a while.
+    It looks as though everyone has finished their meal.
 
-    Please do not feel obliged. It has been a long day for all of you.
+    I shall let you return to your rooms, then.
+
+    Afterwards there will be drinks in the billiard room for anyone who cares to sit up a while.
     """
 
     """

@@ -46,6 +46,8 @@ Before dinner
 ### FRiday, dinner
 Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem
 
+BROKEN, same dynamic as doctor? Or simply he deflects all of my questions?
+
 
 ### FRiday, night
 MAP => 

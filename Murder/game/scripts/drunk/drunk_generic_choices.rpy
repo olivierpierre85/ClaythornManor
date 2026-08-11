@@ -167,7 +167,6 @@ label drunk_generic_heroic_act_nurse:
 
     return
 
-
 label drunk_generic_manor:
 
     drunk """
@@ -177,6 +176,34 @@ label drunk_generic_manor:
     """
 
     return
+
+label drunk_generic_manor_host:
+
+    call drunk_generic_manor
+
+    host """
+    It is. It has been in my family for generations.
+    """
+
+    drunk """
+    Right.
+
+    Well, it is splendid.
+    """
+
+    host """
+    Thank you.
+    """
+
+    """
+    I am lucky he did not ask any follow-up questions.
+
+    I do not know enough about this place.
+    """
+
+    return
+
+
 
 
 label drunk_generic_manor_broken:
@@ -460,19 +487,11 @@ label drunk_generic_weather_friday_dinner_host:
     call drunk_generic_weather_friday_dinner_intro
 
     host """
-    Dreadful, I should have said. The road was under water at four.
-    """
-
-    drunk """
-    Then dreadful it is, Lady Claythorn.
-
-    I shall take your word for it. You have the better view of the window.
+    Right.
     """
 
     """
-    He agreed with the question before he heard it, and he agreed with me the moment I gave him something to agree with.
-
-    A man who has learnt to be no trouble to anybody.
+    Has he even noticed the weather at all?
     """
 
     return
@@ -485,7 +504,7 @@ label drunk_generic_age_host:
     """
     Fifty-five, and he could pass for seventy by this light.
 
-    Nobody arrives at that face on the wine at my table. That is years of steady work.
+    How dreadful.
     """
 
     $ drunk_details.description_hidden.unlock('age')
@@ -496,105 +515,46 @@ label drunk_generic_age_host:
 label drunk_generic_background_host:
 
     host """
-    You must forgive me, Mr Manning. I have had your name and nothing else all evening.
+    Tell me about yourself, Mr Manning.
 
-    What is it that you do?
+    I already know all about your admirable work as a barrister.
+
+    But do tell me about your family.
+
+    Do you have any children?
     """
 
     drunk """
-    Do.
+    Children?
 
-    I am a man of the law, madam.
+    No.
 
-    A barrister.
-
-    Or I was one. At this hour it comes to much the same thing.
+    Sadly, my wife passed away before we could have any.
     """
 
     host """
-    And what sort of law?
+    I am so sorry.
     """
 
     drunk """
-    Defence.
-
-    I stood up for people nobody else would stand up for.
+    Do not worry, it was long ago.
     """
-
-    host """
-    That is not a small thing.
-    """
-
-    drunk """
-    It is not a large one either.
-
-    There were cases I got wrong, Lady Claythorn.
-
-    The law does not forgive a man for that.
-
-    Neither do the people he got wrong.
-    """
-
-    """
-    He says it plainly, without asking for sympathy, and reaches for the wine.
-
-    Whatever ruined him, he has told himself the story often enough to have worn the edges off it.
-    """
-
-    $ drunk_details.description_hidden.unlock('job')
 
     return
 
-
-label drunk_generic_heroic_act_host:
-
-    """
-    I should like to know what he did to earn his place at this table.
-
-    But I cannot possibly ask him. I am the woman who invited him.
-
-    I shall have to come at it the long way round.
-    """
+label drunk_generic_wife:
 
     host """
-    I should like to hear it from you, Mr Manning, rather than from a letter.
-
-    In your own words. What is it that brought you to my table?
-    """
-
-    drunk """
-    In my own words.
-
-    I took the cases nobody else would touch.
-
-    The poor. The desperate.
-
-    The ones with nothing to pay me with and nothing to lose.
-
-    A man of the people, one of the papers called me once. I have never quite recovered from it.
-    """
-
-    host """
-    Somebody has to speak for them.
-    """
-
-    drunk """
-    So they tell me.
-
-    Nobody ever mentions what it costs the man doing the speaking.
+    Forgive me if I am intruding, but how did your wife die?
     """
 
     """
-    So that is what his letter said, near enough.
-
-    A defender of the poor, honoured for his selflessness.
-
-    Whoever wrote those invitations knew exactly what to say to each of them.
-
-    And I have been handed the part of the woman who means every word of it.
+    TODO
     """
 
-    $ drunk_details.description_hidden.unlock('heroic_act')
+    # TODO
+
+    $ drunk_details.description_hidden.unlock('wife')
 
     return
 
