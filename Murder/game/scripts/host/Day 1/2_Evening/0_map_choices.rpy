@@ -64,13 +64,9 @@ label host_day1_evening_tea_room:
     $ change_room('tea_room')
 
     """
-    The tea room has been put straight already. Cushions plumped, glasses gone, not a ring left on the wood.
-
-    They are quick, my staff. Quicker than they have any right to be.
-
-    That worries me more than it comforts me.
-
-    A house of amateurs ought to look like one.
+    The tea room has been put straight already. 
+    
+    Cushions plumped, glasses gone, not a ring left on the wood.
     """
 
     return
@@ -81,11 +77,9 @@ label host_day1_evening_dining_room:
     $ change_room('dining_room')
 
     """
-    The table is being cleared, and the footman gives me a small bow as I look in.
-
-    Perfect. He does not overplay it.
-
-    I stand a moment where I sat two hours ago and try to remember whether I ate anything at all.
+    The table has already being cleared.
+    
+    It looks goods considering the small number of staff.
     """
 
     return
@@ -98,13 +92,11 @@ label host_day1_evening_entrance_hall:
     """
     The hall, empty, with the lamps turned low.
 
-    This morning I walked in through that door with a suitcase and a knot in my stomach.
-
-    The knot has not gone anywhere.
-
     I notice the carpet has worn thin along the line a footman would walk, and the brass could do with attention.
 
-    If I can see it, so can they.
+    Not what one would expect from a well kept house.
+
+    Hopefully, nobody will think too much of it.
     """
 
     return
@@ -117,7 +109,9 @@ label host_day1_evening_garden:
     """
     Rain, and a wind coming up through the trees.
 
-    I stand in the doorway long enough to feel the cold on my face, which is the first honest thing I have felt all evening.
+    I stand in the doorway long enough to feel the cold on my face.
+
+    It gives me the boost I did not know I needed.
 
     Then I go back inside before anyone sees the lady of the house standing in the wet.
     """
@@ -132,9 +126,7 @@ label host_day1_evening_servant_stairs:
     """
     The narrow stair the staff use, with a footman's livery hanging on its peg.
 
-    Nobody down there rings for me, and nobody up here would think to look for me on it.
-
-    For a moment it is a very tempting place simply to sit down.
+    There is nothing for me to do here.
     """
 
     return
@@ -281,30 +273,26 @@ label host_day1_evening_bedroom_avoid:
 
     $ change_room('bedrooms_hallway')
 
-    $ host_details.saved_variables['day1_evening_bedroom_refusals'] += 1
+    """
+    I have my hand on the door before the sense of it catches up with me.
 
-    if host_details.saved_variables['day1_evening_bedroom_refusals'] >= 1:
+    No.
 
-        """
-        I have my hand on the door before the sense of it catches up with me.
+    There is nothing in that room worth what it would cost me.
 
-        No.
+    A guest found on the wrong landing is an eccentric. The lady of the house coming out of a guest's bedroom is a story that reaches the village by Monday.
 
-        There is nothing in that room worth what it would cost me.
+    And if there is one thing this house cannot afford, it is a story it did not write itself.
+    """
 
-        A guest found on the wrong landing is an eccentric. The lady of the house coming out of a guest's bedroom is a story that reaches the village by Monday.
-
-        And if there is one thing this house cannot afford, it is a story it did not write itself.
-        """
-
-        # Block all bedrooms on the first refusal
-        $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
-        $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))
-        $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
-        $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
-        $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
-        $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
-        $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_captain'))
+    # Block all bedrooms on the first refusal
+    $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
+    $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_broken'))
+    $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
+    $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
+    $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
+    $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
+    $ all_menus[host_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_captain'))
 
     return
 
@@ -328,7 +316,7 @@ label host_day1_evening_attic_default:
 
     Every room in this house is mine, and I do not have the key to that one.
 
-    He does.
+    Only he does.
 
     I stand on the stair a moment longer than I need to, and then I go back down.
     """

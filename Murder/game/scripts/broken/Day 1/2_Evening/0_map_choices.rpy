@@ -274,34 +274,30 @@ label broken_day1_evening_bedroom_avoid:
 
     call broken_ascend_if_needed
 
-    $ broken_details.saved_variables['day1_evening_bedroom_refusals'] += 1
+    $ change_room('bedrooms_hallway')
 
-    if broken_details.saved_variables['day1_evening_bedroom_refusals'] >= 1:
+    """
+    I pause at the door.
 
-        $ change_room('bedrooms_hallway')
+    No.
 
-        """
-        I pause at the door.
+    I am already running risk enough passing myself off as another man.
 
-        No.
+    I cannot afford to be caught coming out of a guest's room.
 
-        I am already running risk enough passing myself off as another man.
+    Besides, this is not how I care to come by my information.
 
-        I cannot afford to be caught coming out of a guest's room.
+    As a journalist, I know I will learn far more from talking to people than from rummaging through their belongings.
+    """
 
-        Besides, this is not how I care to come by my information.
-
-        As a journalist, I know I will learn far more from talking to people than from rummaging through their belongings.
-        """
-
-        # Block all bedrooms on the first refusal
-        $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
-        $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
-        $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
-        $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
-        $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
-        $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
-        $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_captain'))
+    # Block all bedrooms on the first refusal
+    $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
+    $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_host'))
+    $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
+    $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_doctor'))
+    $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_drunk'))
+    $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
+    $ all_menus[broken_details.saved_variables["day1_evening_map_menu"].id].hide_specific_choice(default_room_text('bedroom_captain'))
 
     return
 

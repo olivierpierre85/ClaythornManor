@@ -243,98 +243,40 @@ label host_day1_evening:
 # ------------------------------------
 label host_day1_dinner_drunk:
 
-    if not host_details.saved_variables['day1_evening_manning_spoken']:
+    # TODO rewrite Something about food with unlock? But may not be necessary sort out later.
 
-        $ host_details.saved_variables['day1_evening_manning_spoken'] = True
+    # """
+    # He has not touched his wine since the plates came in, which at this table makes him remarkable all on his own.
+    # """
 
-        # TODO rewrite Something about food with unlock? But may not be necessary sort out later.
+    # drunk """
+    # The sole is poached, not boiled, and whoever made that sauce was in no hurry whatsoever.
 
-        # """
-        # He has not touched his wine since the plates came in, which at this table makes him remarkable all on his own.
-        # """
+    # Butter, cream, a little of the cooking liquor, and just enough lemon to keep the whole thing honest.
 
-        # drunk """
-        # The sole is poached, not boiled, and whoever made that sauce was in no hurry whatsoever.
+    # It has been worked at the side of the stove the best part of an hour. You cannot rush it. It splits if you do.
 
-        # Butter, cream, a little of the cooking liquor, and just enough lemon to keep the whole thing honest.
+    # And the shallots in the beef were sweated, never fried. There is not a scorched edge anywhere on that plate.
 
-        # It has been worked at the side of the stove the best part of an hour. You cannot rush it. It splits if you do.
+    # host """
+    # You know a great deal about a kitchen, Mr Manning.
+    # """
 
-        # And the shallots in the beef were sweated, never fried. There is not a scorched edge anywhere on that plate.
+    # """
+    # And the instant I say it, he is drunk again.
+    # """
 
-        # Whoever you have in that kitchen is a serious person, Lady Claythorn.
+    # drunk """
+    # Do I.
 
-        # I should like to shake their hand.
-        # """
+    # My father kept a good table.
 
-        # """
-        # Not one slurred word in the whole of it.
+    # Very good. Very... good table.
+    # """
 
-        # Not one.
-
-        # I have spent fifteen years watching people pretend, and I know what I have just seen.
-
-        # He was in character a moment ago, and for the length of that sauce he stepped out of it.
-        # """
-
-        # host """
-        # You know a great deal about a kitchen, Mr Manning.
-        # """
-
-        # """
-        # And the instant I say it, he is drunk again.
-        # """
-
-        # drunk """
-        # Do I.
-
-        # My father kept a good table.
-
-        # Very good. Very... good table.
-        # """
-
-        # """
-        # The hand goes back round the glass. The eyes go soft. The vowels come apart.
-
-        # It is a decent performance. Better than decent.
-
-        # But I have known actors sober up for a matinee and be legless again by six, and this is not that.
-
-        # This is a man who has learnt that nobody asks a drunk anything difficult.
-
-        # So he stays one.
-
-        # I ought to admire it. Instead it makes me cold.
-
-        # Because if he is playing a part at this table, then he has as much reason to hide as I have.
-        # """
-
-        # $ drunk_details.description_hidden.unlock('food')
-
-        # $ drunk_details.description_hidden.unlock('status')
-
-        # $ drunk_details.description_hidden.unlock('lie')
-
-        # $ host_details.threads.unlock('manning_act')
-
-    else:
-
-        """
-        I turn back to my Mr Moody.
-        """
+    # $ drunk_details.description_hidden.unlock('food')
 
     call drunk_generic
-
-    return
-
-
-# ------------------------------------
-#   His verdict on the sole. He is not asked for it, and it is the one thing
-#   at this table that is said stone cold sober.
-# ------------------------------------
-label host_day1_dinner_drunk_food:
-
-
 
     return
 

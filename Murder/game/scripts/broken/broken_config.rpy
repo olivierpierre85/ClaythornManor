@@ -24,7 +24,6 @@ label init_broken:
             "day2_evening_map_menu" : broken_day2_evening_map_menu,
 
             # Evening day 1
-            "day1_evening_bedroom_refusals" : 0,
             "day1_evening_billiard_room_visited" : False,
             "day1_evening_billiard_room_butler_approached" : False,
             "day1_evening_downstairs_refused" : False,
