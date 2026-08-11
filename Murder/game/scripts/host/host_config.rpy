@@ -12,6 +12,7 @@ label init_host:
         host_init_variables = {
             # Generic Menus
             "drunk_generic_menu" : drunk_generic_menu_host,
+            "broken_generic_menu" : broken_generic_menu_host,
 
             # MAP Menus
             "day1_evening_map_menu" : host_day1_evening_map_menu,
@@ -19,8 +20,10 @@ label init_host:
             # Evening day 1
             # Every lapse in the performance the butler could hear about later
             "day1_evening_suspicious_acting" : 0,
-            # Which neighbour she turned to first at dinner ('drunk' / 'broken')
-            "day1_evening_dinner_first_guest" : None,
+            # Her neighbours at dinner keep their opening scene for the first
+            # turn of the head only - after that she goes straight to questions
+            "day1_evening_manning_spoken" : False,
+            "day1_evening_moody_spoken" : False,
             # She invented the history of the award for Thomas Moody
             "day1_evening_told_tradition" : False,
             "day1_evening_bedroom_refusals" : 0,
@@ -39,7 +42,15 @@ label init_host:
                 relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
             CharacterInformation(
-                1, "stayed_with_guests",
+                1, "addressed_manning_first",
+                "You turned to Mr Manning, on your left, before anyone else at dinner",
+                content_negative="You did not turn first to the guest on your left at dinner",
+                image_file="drunk_character",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
+            ),
+            CharacterInformation(
+                2, "stayed_with_guests",
                 "You sat up with your guests in the billiard room",
                 content_negative="You left your guests to themselves for the whole evening",
                 image_file="captain",

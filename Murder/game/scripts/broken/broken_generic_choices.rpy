@@ -1,8 +1,8 @@
 
 # Generic Broken Dialogs.
 # Accessible from :
-#                   - Doctor
-#                   - ?
+#                   - Doctor (Friday tea room, the plain labels below)
+#                   - The Host (Friday dinner, via the _host variants below)
 label broken_generic:
 
     # Reset if previous early exit
@@ -177,17 +177,24 @@ label broken_generic_background_offended_2:
     return
     
 
-label broken_generic_heroic_act:
+label broken_generic_heroic_act_intro:
 
     broken """
     Well, I suppose it is related to what I did in the war.
 
-    But there were a lot of heroic acts that happened at that time. 
-    
-    I am not sure mine was particularly exceptional. 
+    But there were a lot of heroic acts that happened at that time.
+
+    I am not sure mine was particularly exceptional.
 
     I suppose I am here for a different reason.
     """
+
+    return
+
+
+label broken_generic_heroic_act:
+
+    call broken_generic_heroic_act_intro
 
     call run_menu( TimedMenu("broken_generic_heroic_act_offended", [
         TimedMenuChoice("What do you mean?", 'broken_generic_heroic_act_offended', 20, early_exit=True),
@@ -228,9 +235,9 @@ label broken_generic_manor:
     broken """
     It is a decent-sized house.
 
-    Probably originally for a wealthy local landowner. 
+    Probably originally for a wealthy local landowner.
 
-    Though it is not large enough for an important aristocrat like a Duke or an Earl. 
+    Though it is not large enough for an important aristocrat like a Duke or an Earl.
 
     I do not know much about this Lady Claythorn, but her family are probably squires or baronets.
 
@@ -330,13 +337,20 @@ label broken_generic_manor_not_offended:
     return 
 
 
-label broken_generic_age:
+label broken_generic_age_intro:
 
     broken """
     43 years old.
 
     I know it is hard to guess, considering.
     """
+
+    return
+
+
+label broken_generic_age:
+
+    call broken_generic_age_intro
 
     doctor """
     I am sorry, I did not want to imply anything.
@@ -353,7 +367,7 @@ label broken_generic_age:
     return
 
 
-label broken_generic_room:
+label broken_generic_room_intro:
 
     broken """
     My room is named "Richard the Third".
@@ -362,6 +376,13 @@ label broken_generic_room:
     """
 
     $ unlock_map('bedroom_broken')
+
+    return
+
+
+label broken_generic_room:
+
+    call broken_generic_room_intro
 
     call run_menu( TimedMenu("broken_generic_room_offense", [
         TimedMenuChoice("Me neither", 'generic_cancel', 10, early_exit=True),
@@ -395,6 +416,245 @@ label broken_generic_room_offended:
     """
 
     call broken_generic_doctor_improprieties
+
+    return
+
+
+# ---------------------------------------------------------------------------
+# HOST (Lady Claythorn) variants
+# Moody is seated on her right at the Friday dinner, and he is the one man at
+# that table who was raised below stairs. Every answer he gives her is also a
+# reminder that he can read this house better than she can.
+# She cannot ask a guest why he was invited - she is supposed to have invited
+# him - so that question is dressed up as a hostess asking for the tale itself.
+# ---------------------------------------------------------------------------
+
+label broken_generic_background_host:
+
+    broken """
+    There is very little to tell, I am afraid.
+
+    I mend motor cars in Liverpool. I have done since the war.
+    """
+
+    host """
+    And before the war?
+    """
+
+    broken """
+    Before the war I was in service, my lady.
+
+    Boot boy, then footman, in a house not unlike this one.
+    """
+
+    $ broken_details.description_hidden.unlock('job')
+
+    $ broken_details.description_hidden.unlock('city')
+
+    $ broken_details.description_hidden.unlock('background')
+
+    """
+    Well.
+
+    That explains a great deal.
+
+    He has stood at the wall through a hundred dinners exactly like this one, and there is not a thing I do at this table that he has not watched a real one do first.
+
+    Of all the people to seat on my right.
+    """
+
+    host """
+    Then you must tell me if my staff go wrong. You will see it long before I do.
+    """
+
+    broken """
+    They have gone wrong twice already.
+
+    But since you are good enough to ask, my lady, I shall say nothing about either.
+    """
+
+    """
+    He says it lightly, as a joke against my footmen.
+
+    I laugh, because it is expected, and because the alternative is to ask him which two things, and I cannot possibly ask him which two things.
+    """
+
+    return
+
+
+label broken_generic_heroic_act_host:
+
+    """
+    I know what those letters said. I do not know what any of them believe they said.
+    """
+
+    host """
+    I should like to hear it from you rather than off a sheet of paper, Mr Moody.
+
+    In your own words. What is it that brought you to my table?
+    """
+
+    call broken_generic_heroic_act_intro
+
+    host """
+    A different reason.
+    """
+
+    broken """
+    Only that a man with a face like mine is remembered for what he did, my lady, and a man with an ordinary one is not.
+
+    There were braver things done that week than anything I managed. Nobody has written to those fellows.
+    """
+
+    $ broken_details.description_hidden.unlock('heroic_act')
+
+    """
+    He has just told me he does not believe the reason he was given.
+
+    And he has told it to the woman who is supposed to have written it, in the mildest voice in the room, and then gone back to his plate.
+
+    I have worked with actors who feed you a line to see what you will do with it.
+
+    That is what that was.
+    """
+
+    return
+
+
+label broken_generic_manor_host:
+
+    broken """
+    It is a decent-sized house, my lady.
+
+    Built for a landowner with money rather than for a title, if you will forgive me. It is not large enough for a Duke or an Earl.
+
+    Squires, I should have guessed. Baronets at the most.
+    """
+
+    host """
+    You are very nearly rude, Mr Moody.
+    """
+
+    broken """
+    I am very nearly right, though. There is a third possibility, of course.
+
+    Industrialists who bought the land and had the word "Lady" painted on the gate afterwards.
+
+    That would be quite outrageous, if that were the case.
+    """
+
+    """
+    Squires. Baronets. Or a name somebody bought.
+
+    I do not know which of those I am supposed to be. Nobody has ever told me, because nobody thought a woman playing a part would need it.
+    """
+
+    host """
+    And where does a motor mechanic learn to price a house from the soup?
+    """
+
+    broken """
+    In service, my lady. I was raised in one of these.
+
+    One learns to read a place the way other men read a newspaper.
+    """
+
+    $ broken_details.description_hidden.unlock('background')
+
+    """
+    He was in service. In a house of this sort, at a table of this sort, run by a woman of this sort.
+
+    He is not making conversation. He is telling me he can read this house, and watching to see whether that troubles me.
+    """
+
+    return
+
+
+label broken_generic_age_host:
+
+    call broken_generic_age_intro
+
+    host """
+    Forgive me. That was a rude question, and I asked it anyway.
+    """
+
+    broken """
+    It was an honest one. I would sooner have those.
+    """
+
+    $ broken_details.description_hidden.unlock('age')
+
+    """
+    Forty-three, and the half of the face I can see is a great deal older than that.
+
+    Whatever was done to him was done to a young man.
+    """
+
+    return
+
+
+label broken_generic_room_host:
+
+    call broken_generic_room_intro
+
+    host """
+    Nobody knows much about him, Mr Moody. That is rather the point of him.
+    """
+
+    broken """
+    Then I am in excellent company, my lady.
+    """
+
+    """
+    And there I sit, having asked a guest which of my own bedrooms I put him in.
+
+    He answered as though it were the most natural question in the world.
+
+    A man who lets a mistake go by as smoothly as that has noticed it. They always have.
+    """
+
+    return
+
+
+label broken_generic_other_guests_friday_dinner_host:
+
+    broken """
+    A remarkable table, my lady.
+
+    A doctor, a nurse, a soldier, a barrister, a young man who has not taken his eyes off the silver, and a lady in a good deal of jewellery who I am told reads palms.
+
+    Not one of them had met another before this afternoon.
+    """
+
+    host """
+    That is rather the charm of it.
+    """
+
+    broken """
+    Of course.
+
+    Though I confess I keep looking for the thread that joins them, and I cannot find it.
+
+    You would know it better than anybody. What made you settle on these seven?
+    """
+
+    """
+    Nothing made me settle on anything. I was handed a list of names and told to learn them by Friday.
+    """
+
+    host """
+    Merit, Mr Moody. Nothing half so interesting as a thread.
+    """
+
+    broken """
+    A pity. A thread would have made the better story.
+    """
+
+    """
+    That is the same question he asked me over the fish, in a different coat.
+
+    He has counted the table, and he has worked out that not one of us belongs at it.
+    """
 
     return
 

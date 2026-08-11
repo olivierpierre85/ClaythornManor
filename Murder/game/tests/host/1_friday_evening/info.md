@@ -7,7 +7,9 @@ walks into her own dinner. After the welcome speech
 (`host_day1_evening_menu_dinner`, 90 units) offers her two neighbours:
 
 - **Mr Manning on her left** — `host_day1_dinner_drunk`, opening
-  `drunk_generic_menu_host`. The food question is the one that matters: it
+  `drunk_generic_menu_host`. Going to him before anyone else is the correct
+  order and unlocks the `addressed_manning_first` thread, the only place that
+  thread is ever unlocked. The food question is the one that matters: it
   unlocks his `status` and `lie` infos and her own `manning_act` observation.
 - **Mr Moody on her right** — `host_day1_dinner_broken`, a single interview
   with three possible answers (`host_day1_dinner_broken_menu`).
@@ -31,6 +33,12 @@ not written yet.
 
 Any mark at all sends the butler up to correct her (and unlocks the
 `suspicious_acting` thread). None, and he comes up to say it went well.
+
+Turning to Moody first and saying nothing at all both leave
+`addressed_manning_first` locked. The debrief tells the two apart by whether
+the Moody choice was ever taken (`is_choice_hidden` on the dinner menu), so a
+player who goes to Moody first and only then to Manning is still corrected for
+the order.
 
 ---
 

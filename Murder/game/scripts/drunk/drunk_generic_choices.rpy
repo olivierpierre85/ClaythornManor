@@ -2,6 +2,7 @@
 # Accessible from :
 #                   - The Nurse
 #                   - Broken (Saturday hunt, via the _broken variants below)
+#                   - The Host (Friday dinner, via the _host variants below)
 
 label drunk_generic:
 
@@ -13,7 +14,7 @@ label drunk_generic:
     return
 
 
-label drunk_generic_weather_friday_dinner:
+label drunk_generic_weather_friday_dinner_intro:
 
     drunk """
     The weather?
@@ -28,6 +29,13 @@ label drunk_generic_weather_friday_dinner:
 
     No matter.
     """
+
+    return
+
+
+label drunk_generic_weather_friday_dinner:
+
+    call drunk_generic_weather_friday_dinner_intro
 
     nurse """
     Of course.
@@ -441,88 +449,46 @@ label drunk_generic_heroic_act_broken:
 # ---------------------------------------------------------------------------
 # HOST (Lady Claythorn) variants
 # Manning is seated on her left at the Friday dinner. She cannot ask him why he
-# was invited - she is supposed to be the one who invited him - so her questions
-# are the ones a hostess is allowed. The food is what wakes him up, and what
-# lets an actress see the performance underneath.
+# was invited - she is supposed to be the one who invited him - so that question
+# is dressed up as a hostess asking for the tale in his own words.
+# The food is not a question here: he offers his verdict on the sole of his own
+# accord before she can ask him anything (host_day1_dinner_drunk_food).
 # ---------------------------------------------------------------------------
 
-label drunk_generic_food_host:
+label drunk_generic_weather_friday_dinner_host:
+
+    call drunk_generic_weather_friday_dinner_intro
 
     host """
-    I hope the dinner is to your liking, Mr Manning.
+    Dreadful, I should have said. The road was under water at four.
     """
 
     drunk """
-    The dinner.
+    Then dreadful it is, Lady Claythorn.
+
+    I shall take your word for it. You have the better view of the window.
     """
 
     """
-    He looks down at his plate as though he had not noticed it was there.
+    He agreed with the question before he heard it, and he agreed with me the moment I gave him something to agree with.
 
-    Then something in his face settles.
+    A man who has learnt to be no trouble to anybody.
     """
 
-    drunk """
-    The sole is poached, not boiled, and whoever made that sauce was in no hurry whatsoever.
+    return
 
-    Butter, cream, a little of the cooking liquor, and just enough lemon to keep the whole thing honest.
 
-    It has been worked at the side of the stove the best part of an hour. You cannot rush it. It splits if you do.
+label drunk_generic_age_host:
 
-    And the shallots in the beef were sweated, never fried. There is not a scorched edge anywhere on that plate.
-
-    Whoever you have in that kitchen is a serious person, Lady Claythorn.
-
-    I should like to shake their hand.
-    """
+    call drunk_generic_age_broken_intro
 
     """
-    Not one slurred word in the whole of it.
+    Fifty-five, and he could pass for seventy by this light.
 
-    Not one.
-
-    I have spent fifteen years watching people pretend, and I know what I have just seen.
-
-    He was in character a moment ago, and for the length of that sauce he stepped out of it.
+    Nobody arrives at that face on the wine at my table. That is years of steady work.
     """
 
-    host """
-    You know a great deal about a kitchen, Mr Manning.
-    """
-
-    """
-    And the instant I say it, he is drunk again.
-    """
-
-    drunk """
-    Do I.
-
-    My father kept a good table.
-
-    Very good. Very... good table.
-    """
-
-    """
-    The hand goes back round the glass. The eyes go soft. The vowels come apart.
-
-    It is a decent performance. Better than decent.
-
-    But I have known actors sober up for a matinee and be legless again by six, and this is not that.
-
-    This is a man who has learnt that nobody asks a drunk anything difficult.
-
-    So he stays one.
-
-    I ought to admire it. Instead it makes me cold.
-
-    Because if he is playing a part at this table, then he has as much reason to hide as I have.
-    """
-
-    $ drunk_details.description_hidden.unlock('status')
-
-    $ drunk_details.description_hidden.unlock('lie')
-
-    $ host_details.threads.unlock('manning_act')
+    $ drunk_details.description_hidden.unlock('age')
 
     return
 

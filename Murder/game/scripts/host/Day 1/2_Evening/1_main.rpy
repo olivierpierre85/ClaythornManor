@@ -16,9 +16,17 @@
 #       - Bedroom : the butler's debrief
 #
 #   Notes :
-#       - Etiquette: a hostess turns to the guest on her left first. Turning to
-#         Moody first, or sitting through dinner in silence, costs a mark
+#       - Etiquette: a hostess turns to the guest on her left first. Doing it
+#         correctly unlocks the addressed_manning_first thread, which is the
+#         only way that thread is ever unlocked. Turning to Moody first, or
+#         sitting through dinner in silence, leaves it locked and costs a mark
 #         (day1_evening_suspicious_acting), as does never joining the party.
+#       - Moody first and silence are told apart by whether the Moody choice
+#         has been taken at all (is_choice_already_chosen on the dinner menu -
+#         both neighbours are keep_alive, so they are never hidden).
+#       - Each neighbour has one scene of his own on the first turn of the head
+#         (Manning on the food, Moody on the award), then his generic menu.
+#         She may go back and forth between them until the dinner runs out.
 #       - Marks are settled by the butler at the end of the night. Any mark at
 #         all unlocks the suspicious_acting thread.
 # --------------------------------------------
@@ -63,9 +71,7 @@ label host_day1_evening:
     """
 
     butler """
-    The placement. Learn it now, because you will not have it in your hand at the table.
-
-    Mr Manning is on your left. Mr Moody on your right.
+    I come to see that everything is ready.
 
     Do you remember the etiquette?
     """
@@ -75,16 +81,14 @@ label host_day1_evening:
     """
 
     """
-    He spent hours teaching me proper dinner table manners.
+    I spent hours on a book about proper dinner table manners.
 
     As if the whole plot depended on it.
     """
 
-    host """
-    And the speech?
-    """
-
     butler """
+    Good, I also wrote the speech you are gonna give for dinner.
+    
     Here it is.
 
     You should know it by heart by dinner.
@@ -102,16 +106,16 @@ label host_day1_evening:
 
     """
     That, at least, I know how to do.
+
+    He leaves without ceremony, and I start memorize my lines.
     """
 
-    $ stop_music()
+    call wait_screen_transition()
 
     play sound dinner_gong
 
     """
     The gong goes below.
-
-    It is time to play my part.
 
     Curtain up.
     """
@@ -127,7 +131,7 @@ label host_day1_evening:
 
     Seven faces turn, and I take the long walk to my chair.
 
-    I do not look at any of them until I am seated. Then I look at all of them.
+    I do not look at any of them until I reach my chair.
 
     I let the silence sit half a beat longer than is comfortable, and I begin.
     """
@@ -153,20 +157,20 @@ label host_day1_evening:
 
     I sit down and relax for a second.
 
-    But only a second, because I must start talking to the guests now.
+    But I must start talking to the guests now.
 
-    I remember that it matters who I turn to first.
+    I remember that it matters who I address first.
     """
 
     $ time_left = 90
 
     call run_menu(TimedMenu("host_day1_evening_menu_dinner", [
         TimedMenuChoice('Turn to Mr Manning, on your left', 'host_day1_dinner_drunk', 0, keep_alive = True, next_menu = 'drunk_generic_menu_host'),
-        TimedMenuChoice('Turn to Mr Moody, on your right', 'host_day1_dinner_broken', 0, next_menu = 'host_day1_dinner_broken_menu'),
+        TimedMenuChoice('Turn to Mr Moody, on your right', 'host_day1_dinner_broken', 0, keep_alive = True, next_menu = 'broken_generic_menu_host'),
         TimedMenuChoice('Keep to yourself and see out the meal', 'generic_cancel', early_exit=True),
     ], image_left = "drunk", image_right = "broken"))
 
-    if not host_details.saved_variables['day1_evening_dinner_first_guest']:
+    if not host_details.threads.is_unlocked('addressed_manning_first') and not is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
 
         $ host_details.saved_variables['day1_evening_suspicious_acting'] += 1
 
@@ -185,10 +189,12 @@ label host_day1_evening:
     call change_time(21, 00)
 
     """
-    The last plates go out, the covers come off, and I say the sentence I have been holding all evening.
+    The last plates go out, and it is up to me to call then end of dinner.
     """
 
     host """
+    TODO
+    
     There will be drinks in the billiard room for anyone who cares to sit up a while.
 
     Please do not feel obliged. It has been a long day for all of you.
@@ -255,16 +261,30 @@ label host_day1_evening:
 
 # ------------------------------------
 #   DINNER — MR MANNING (on her left)
+#   The first turn of the head carries his verdict on the sole, which is the
+#   whole of what she learns about him without asking a single question.
 # ------------------------------------
 label host_day1_dinner_drunk:
 
-    if not host_details.saved_variables['day1_evening_dinner_first_guest']:
+    if not host_details.saved_variables['day1_evening_manning_spoken']:
 
-        $ host_details.saved_variables['day1_evening_dinner_first_guest'] = 'drunk'
+        $ host_details.saved_variables['day1_evening_manning_spoken'] = True
 
-        """
-        Left first. I turn to my left.
-        """
+        if not is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
+
+            $ host_details.threads.unlock('addressed_manning_first')
+
+            """
+            Left first. I turn to my left.
+            """
+
+        else:
+
+            """
+            I turn to my left, a good deal later than I ought to have done.
+            """
+
+        call host_day1_dinner_drunk_food
 
     else:
 
@@ -278,67 +298,154 @@ label host_day1_dinner_drunk:
 
 
 # ------------------------------------
+#   His verdict on the sole. He is not asked for it, and it is the one thing
+#   at this table that is said stone cold sober.
+# ------------------------------------
+label host_day1_dinner_drunk_food:
+
+    """
+    He has not touched his wine since the plates came in, which at this table makes him remarkable all on his own.
+    """
+
+    drunk """
+    The sole is poached, not boiled, and whoever made that sauce was in no hurry whatsoever.
+
+    Butter, cream, a little of the cooking liquor, and just enough lemon to keep the whole thing honest.
+
+    It has been worked at the side of the stove the best part of an hour. You cannot rush it. It splits if you do.
+
+    And the shallots in the beef were sweated, never fried. There is not a scorched edge anywhere on that plate.
+
+    Whoever you have in that kitchen is a serious person, Lady Claythorn.
+
+    I should like to shake their hand.
+    """
+
+    """
+    Not one slurred word in the whole of it.
+
+    Not one.
+
+    I have spent fifteen years watching people pretend, and I know what I have just seen.
+
+    He was in character a moment ago, and for the length of that sauce he stepped out of it.
+    """
+
+    host """
+    You know a great deal about a kitchen, Mr Manning.
+    """
+
+    """
+    And the instant I say it, he is drunk again.
+    """
+
+    drunk """
+    Do I.
+
+    My father kept a good table.
+
+    Very good. Very... good table.
+    """
+
+    """
+    The hand goes back round the glass. The eyes go soft. The vowels come apart.
+
+    It is a decent performance. Better than decent.
+
+    But I have known actors sober up for a matinee and be legless again by six, and this is not that.
+
+    This is a man who has learnt that nobody asks a drunk anything difficult.
+
+    So he stays one.
+
+    I ought to admire it. Instead it makes me cold.
+
+    Because if he is playing a part at this table, then he has as much reason to hide as I have.
+    """
+
+    $ drunk_details.description_hidden.unlock('food')
+
+    $ drunk_details.description_hidden.unlock('status')
+
+    $ drunk_details.description_hidden.unlock('lie')
+
+    $ host_details.threads.unlock('manning_act')
+
+    return
+
+
+# ------------------------------------
 #   DINNER — MR MOODY (on her right)
 #   Going to him first is a breach of the order of things, and of all the men
 #   at this table he is the one who was raised below stairs and knows it.
 # ------------------------------------
 label host_day1_dinner_broken:
 
-    if not host_details.saved_variables['day1_evening_dinner_first_guest']:
+    if not host_details.saved_variables['day1_evening_moody_spoken']:
 
-        $ host_details.saved_variables['day1_evening_dinner_first_guest'] = 'broken'
+        $ host_details.saved_variables['day1_evening_moody_spoken'] = True
 
-        $ host_details.saved_variables['day1_evening_suspicious_acting'] += 1
+        if not host_details.threads.is_unlocked('addressed_manning_first'):
+
+            $ host_details.saved_variables['day1_evening_suspicious_acting'] += 1
+
+            """
+            I turn to my right, because he has been watching me since I came in and I would rather have him where I can see him.
+
+            I am three words into the pleasantry before I remember.
+
+            Left first.
+
+            He said left first, and I have gone straight past Mr Manning as though the man were furniture.
+
+            Mr Moody's head tilts a quarter of an inch.
+
+            That is all. A quarter of an inch, and it goes through me like cold water, because it is not the movement of a man who has noticed nothing.
+            """
+
+        else:
+
+            """
+            The plates change, and I turn to my right as I ought.
+            """
+
+        broken """
+        Lady Claythorn.
+
+        A remarkable speech, if I may say so.
+        """
+
+        host """
+        You may, Mr Moody. It is a good deal easier to give away money than to earn it.
+        """
+
+        broken """
+        Easier, certainly.
+
+        Rarer, though.
+
+        Forgive me, but I confess the whole business puzzles me a little.
+
+        An award of this size, given quietly, out here, to seven people who have never met.
+
+        However did it come about?
+        """
 
         """
-        I turn to my right, because he has been watching me since I came in and I would rather have him where I can see him.
+        And there it is, over the fish, in the pleasantest voice in the room.
 
-        I am three words into the pleasantry before I remember.
-
-        Left first.
-
-        He said left first, and I have gone straight past Mr Manning as though the man were furniture.
-
-        Mr Moody's head tilts a quarter of an inch.
-
-        That is all. A quarter of an inch, and it goes through me like cold water, because it is not the movement of a man who has noticed nothing.
+        He is not making conversation. That was a question with a shape to it.
         """
+
+        call run_menu(host_day1_dinner_broken_menu)
 
     else:
 
         """
-        The plates change, and I turn to my right as I ought.
+        I turn back to my right.
         """
 
-    broken """
-    Lady Claythorn.
-
-    A remarkable speech, if I may say so.
-    """
-
-    host """
-    You may, Mr Moody. It is a good deal easier to give away money than to earn it.
-    """
-
-    broken """
-    Easier, certainly.
-
-    Rarer, though.
-
-    Forgive me, but I confess the whole business puzzles me a little.
-
-    An award of this size, given quietly, out here, to seven people who have never met.
-
-    However did it come about?
-    """
-
-    """
-    And there it is, over the fish, in the pleasantest voice in the room.
-
-    He is not making conversation. That was a question with a shape to it.
-    """
-
-    call run_menu(host_day1_dinner_broken_menu)
+    call broken_generic
 
     return
 
@@ -419,6 +526,9 @@ label host_day1_dinner_broken_vague:
     return
 
 
+# Turning the question back on him is her "tell me about yourself" question by
+# another road, so it runs the same scene and that choice then drops out of
+# broken_generic_menu_host.
 label host_day1_dinner_broken_deflect:
 
     host """
@@ -427,52 +537,6 @@ label host_day1_dinner_broken_deflect:
     That is hardly fair, Mr Moody. Your turn.
     """
 
-    broken """
-    There is very little to tell, I am afraid.
-
-    I mend motor cars in Liverpool. I have done since the war.
-    """
-
-    host """
-    And before the war?
-    """
-
-    broken """
-    Before the war I was in service, my lady.
-
-    Boot boy, then footman, in a house not unlike this one.
-    """
-
-    $ broken_details.description_hidden.unlock('job')
-
-    $ broken_details.description_hidden.unlock('city')
-
-    $ broken_details.description_hidden.unlock('background')
-
-    """
-    Well.
-
-    That accounts for the quarter of an inch.
-
-    He has stood at the wall through a hundred dinners exactly like this one, and there is not a thing I do at this table that he has not watched a real one do first.
-
-    Of all the people to seat on my right.
-    """
-
-    host """
-    Then you must tell me if my staff go wrong. You will see it long before I do.
-    """
-
-    broken """
-    They have gone wrong twice already.
-
-    But since you are good enough to ask, my lady, I shall say nothing about either.
-    """
-
-    """
-    He says it lightly, as a joke against my footmen.
-
-    I laugh, because it is expected, and because the alternative is to ask him which two things, and I cannot possibly ask him which two things.
-    """
+    call broken_generic_background_host
 
     return

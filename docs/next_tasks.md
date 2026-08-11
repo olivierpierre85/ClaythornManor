@@ -38,22 +38,14 @@ You'll have questions on how to behave (like butter bread, who talk to first,...
 
 ### FRiday, =>>>> DOUBLE CHECK CLAUDE MESSY SHITS
 
-TODO add inner dialog with BACKSTORY in intro
-
-ADd the butler's name?
-
 Before dinner
-- Meet staff
-- Get ready => First task hide letters behing the sheets for CAPTAIN and thomas moody. (I was assured it is just a joke played on the guest. => Maybe a murder mystery party)
 
-Then go down for dinner. 
+- Get ready => First task hide letters behing the sheets for CAPTAIN and thomas moody. (I was assured it is just a joke played on the guest. => Maybe a murder mystery party) NO it is the butler who placed them?????
+
 
 ### FRiday, dinner
-Say you piece as an actor would. use common text.
+Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem
 
-Talk with DRUNK => UNLOCK him over his love of food! 
-FIRST drunk for manners, then broken. 
-OTHERWISE => Add suspicious acting 1 (talk with Samuel Manning first)
 
 ### FRiday, night
 MAP => 

@@ -19,12 +19,14 @@ label init_drunk:
             CharacterInformation(60, "job", "lawyer, losing cases he should have won and disparaging his clients", is_important = True, unlock_chapters=[('host', 'friday_evening')]), # Confess to Broken, and to the Host at the Friday dinner
             CharacterInformation(60, "heroic_act", "have left him; only the poorest and the most desperate would ever hire him. He assumes that this choice of clients has made him look like a fervent defender of the poor in the eyes of Lady Claythorn, hence his invitation", is_important = True, unlock_chapters=[('host', 'friday_evening')]), # Confess to Broken, and to the Host at the Friday dinner
             CharacterInformation(60, "lie", "he can sober up, or at least act sober enough when the situation demands it. He has also become quite good at feigning drunkenness to avoid unpleasant situations", is_important = True, unlock_chapters=[('doctor', 'saturday_afternoon'), ('host', 'friday_evening')]), # Confess to Doctor - the Host catches the act at dinner
+            CharacterInformation(60, "food", "his palate. He can tell how a sauce was made from a single mouthful, and he speaks of a kitchen like a man who grew up beside one", is_important = True, unlock_chapters=[('host', 'friday_evening')]), # He praises the sole at the Host's dinner, stone cold sober
             ], drunk_name
         )
         drunk_description = """
         A <info:age> gentleman, raised in a <info:status>, he hasn't been the same since <info:wife>.
         Ironically, the ordeal drove Samuel Manning to <info:addict> to perform his duties as a <info:job>.
         Now, almost all of them <info:heroic_act>.
+        The one pleasure the drink has never taken from him is <info:food>.
         His particular situation has given him certain skills: for one, <info:lie>.
         """
 

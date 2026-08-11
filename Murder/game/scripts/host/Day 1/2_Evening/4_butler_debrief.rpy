@@ -37,31 +37,33 @@ label host_day1_evening_debrief:
         He shuts the door behind him and stands with his back to it, which is a thing servants do not do.
         """
 
-        if host_details.saved_variables['day1_evening_dinner_first_guest'] == 'broken':
+        if not host_details.threads.is_unlocked('addressed_manning_first'):
 
-            butler """
-            You went to your right first at dinner.
-            """
+            if is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
 
-            host """
-            One man. One turn of the head.
-            """
+                butler """
+                You went to your right first at dinner.
+                """
 
-            butler """
-            To the one man at that table who has been in service.
+                host """
+                One man. One turn of the head.
+                """
 
-            I know another footman when I see one. He has stood at a wall through a hundred dinners watching real ones do it correctly.
+                butler """
+                To the one man at that table who has been in service.
 
-            And he knew the moment you did it. So did I, from the door.
-            """
+                I know another footman when I see one. He has stood at a wall through a hundred dinners watching real ones do it correctly.
 
-        elif not host_details.saved_variables['day1_evening_dinner_first_guest']:
+                And he knew the moment you did it. So did I, from the door.
+                """
 
-            butler """
-            You sat through your own dinner between two guests and spoke to neither of them.
+            else:
 
-            A silent hostess is a frightened one, and there is no reason on earth for that woman to be frightened at her own table.
-            """
+                butler """
+                You sat through your own dinner between two guests and spoke to neither of them.
+
+                A silent hostess is a frightened one, and there is no reason on earth for that woman to be frightened at her own table.
+                """
 
         if not host_details.saved_variables['day1_evening_billiard_room_visited']:
 

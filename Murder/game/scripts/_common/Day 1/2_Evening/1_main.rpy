@@ -59,12 +59,6 @@ label common_day1_evening_host_welcome_speech:
     This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
     """
 
-    if current_character != host_details:
-
-        """
-        Following her speech, our host settles back down in her chair.
-        """
-
     return
 
 
