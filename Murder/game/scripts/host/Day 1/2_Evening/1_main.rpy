@@ -19,8 +19,8 @@
 #       - Etiquette: a hostess turns to the guest on her left first. Doing it
 #         correctly unlocks the addressed_manning_first thread, which is the
 #         only way that thread is ever unlocked. Turning to Moody first, or
-#         sitting through dinner in silence, leaves it locked and costs a mark
-#         (day1_evening_suspicious_acting), as does never joining the party.
+#         sitting through dinner in silence, leaves it locked and costs her a
+#         mark at the debrief, as does never joining the party.
 # --------------------------------------------
 label host_day1_evening:
 
@@ -393,7 +393,6 @@ label host_day1_dinner_broken_tradition:
 
     $ host_details.saved_variables['day1_evening_told_tradition'] = True
 
-    $ host_details.saved_variables['day1_evening_suspicious_acting'] += 1
 
     return
 

@@ -8,8 +8,9 @@
 #     to Thomas Moody. A hostess caught coming out of a guest's room is finished.
 #   - The attic is locked and the butler holds the key, which is the whole
 #     problem with this weekend in miniature.
-#   - The billiard room is not a curiosity but a duty. Skipping it costs her a
-#     mark against the performance (day1_evening_suspicious_acting).
+#   - The billiard room is not a curiosity but a duty. Sitting up with them
+#     unlocks stayed_with_guests, and skipping it costs her a mark against the
+#     performance at the debrief.
 #
 # Budget: 120 units. A look into an empty room costs the usual 10, the rooms
 # with something in them 20, the library 30 (she reads the whole entry), and

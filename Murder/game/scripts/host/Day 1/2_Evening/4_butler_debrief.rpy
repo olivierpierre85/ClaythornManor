@@ -1,9 +1,11 @@
 # The debrief, Friday, last thing at night.
 #
 # The butler comes up whatever happens. What changes is why:
-#   - day1_evening_suspicious_acting > 0 -> he comes to correct her, and every
-#     lapse of the evening is read back to her in order (suspicious_acting).
-#   - otherwise                          -> he comes to say it went well, which
+#   - at least one lapse in the evening -> he comes to correct her, and every
+#     one of them is read back to her in order (suspicious_acting). The lapses
+#     are: addressed_manning_first left locked, stayed_with_guests left locked,
+#     and day1_evening_told_tradition.
+#   - otherwise                         -> he comes to say it went well, which
 #     from him is a considerable speech.
 #
 # Then she gets her questions. Each one is gated on what she actually found
@@ -15,7 +17,7 @@ label host_day1_evening_debrief:
 
     play sound door_knock
 
-    if host_details.saved_variables['day1_evening_suspicious_acting'] > 0:
+    if not host_details.threads.is_unlocked('addressed_manning_first') or not host_details.threads.is_unlocked('stayed_with_guests') or host_details.saved_variables['day1_evening_told_tradition']:
 
         """
         Two knocks, and he does not wait to be asked.

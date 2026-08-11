@@ -55,6 +55,8 @@ MAP =>
 
 **Library** => Maybe I should learn about this family => Learn your real name and TITLE(useful for later, will serve as defense when everyone is accusing you).
 
+THE BOOK is for you ADD foreshadowing from the butler => If you have the time check the library
+
 **Downstairs**, just to chat and learn about the staff. Notice the poison? Thread => Ask the butler later.
 
 **Bedrooms**, dialog says I SHOULDN'T, it is too suspicious (same as broken.)
