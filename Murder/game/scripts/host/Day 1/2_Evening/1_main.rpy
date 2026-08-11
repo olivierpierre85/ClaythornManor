@@ -162,20 +162,6 @@ label host_day1_evening:
         TimedMenuChoice('Keep to yourself and see out the meal', 'generic_cancel', early_exit=True),
     ], image_left = "drunk", image_right = "broken"))
 
-    if not host_details.threads.is_unlocked('addressed_manning_first') and not is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
-
-        $ host_details.saved_variables['day1_evening_suspicious_acting'] += 1
-
-        """
-        And so I sit through the whole of my own dinner saying nothing to the men on either side of me.
-
-        A shy woman may do that. A nervous one may do that.
-
-        The mistress of a house may not, because a table is hers to run, and a table that runs itself has no mistress.
-
-        Miss Marsh looks up at me twice from the far end, and the second time she does not look away quickly.
-        """
-
     $ stop_music()
 
     call change_time(21, 00)
@@ -226,7 +212,6 @@ label host_day1_evening:
 
     if not host_details.saved_variables['day1_evening_billiard_room_visited']:
 
-        $ host_details.saved_variables['day1_evening_suspicious_acting'] += 1
 
         """
         Somewhere below, the last of them are going up to bed.
@@ -262,26 +247,80 @@ label host_day1_dinner_drunk:
 
         $ host_details.saved_variables['day1_evening_manning_spoken'] = True
 
-        if not is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
+        # TODO rewrite Something about food with unlock? But may not be necessary sort out later.
 
-            $ host_details.threads.unlock('addressed_manning_first')
+        # """
+        # He has not touched his wine since the plates came in, which at this table makes him remarkable all on his own.
+        # """
 
-            """
-            Left first. I turn to my left.
-            """
+        # drunk """
+        # The sole is poached, not boiled, and whoever made that sauce was in no hurry whatsoever.
 
-        else:
+        # Butter, cream, a little of the cooking liquor, and just enough lemon to keep the whole thing honest.
 
-            """
-            I turn to my left, a good deal later than I ought to have done.
-            """
+        # It has been worked at the side of the stove the best part of an hour. You cannot rush it. It splits if you do.
 
-        call host_day1_dinner_drunk_food
+        # And the shallots in the beef were sweated, never fried. There is not a scorched edge anywhere on that plate.
+
+        # Whoever you have in that kitchen is a serious person, Lady Claythorn.
+
+        # I should like to shake their hand.
+        # """
+
+        # """
+        # Not one slurred word in the whole of it.
+
+        # Not one.
+
+        # I have spent fifteen years watching people pretend, and I know what I have just seen.
+
+        # He was in character a moment ago, and for the length of that sauce he stepped out of it.
+        # """
+
+        # host """
+        # You know a great deal about a kitchen, Mr Manning.
+        # """
+
+        # """
+        # And the instant I say it, he is drunk again.
+        # """
+
+        # drunk """
+        # Do I.
+
+        # My father kept a good table.
+
+        # Very good. Very... good table.
+        # """
+
+        # """
+        # The hand goes back round the glass. The eyes go soft. The vowels come apart.
+
+        # It is a decent performance. Better than decent.
+
+        # But I have known actors sober up for a matinee and be legless again by six, and this is not that.
+
+        # This is a man who has learnt that nobody asks a drunk anything difficult.
+
+        # So he stays one.
+
+        # I ought to admire it. Instead it makes me cold.
+
+        # Because if he is playing a part at this table, then he has as much reason to hide as I have.
+        # """
+
+        # $ drunk_details.description_hidden.unlock('food')
+
+        # $ drunk_details.description_hidden.unlock('status')
+
+        # $ drunk_details.description_hidden.unlock('lie')
+
+        # $ host_details.threads.unlock('manning_act')
 
     else:
 
         """
-        I turn back to my left.
+        I turn back to my Mr Moody.
         """
 
     call drunk_generic
@@ -295,73 +334,7 @@ label host_day1_dinner_drunk:
 # ------------------------------------
 label host_day1_dinner_drunk_food:
 
-    """
-    He has not touched his wine since the plates came in, which at this table makes him remarkable all on his own.
-    """
 
-    drunk """
-    The sole is poached, not boiled, and whoever made that sauce was in no hurry whatsoever.
-
-    Butter, cream, a little of the cooking liquor, and just enough lemon to keep the whole thing honest.
-
-    It has been worked at the side of the stove the best part of an hour. You cannot rush it. It splits if you do.
-
-    And the shallots in the beef were sweated, never fried. There is not a scorched edge anywhere on that plate.
-
-    Whoever you have in that kitchen is a serious person, Lady Claythorn.
-
-    I should like to shake their hand.
-    """
-
-    """
-    Not one slurred word in the whole of it.
-
-    Not one.
-
-    I have spent fifteen years watching people pretend, and I know what I have just seen.
-
-    He was in character a moment ago, and for the length of that sauce he stepped out of it.
-    """
-
-    host """
-    You know a great deal about a kitchen, Mr Manning.
-    """
-
-    """
-    And the instant I say it, he is drunk again.
-    """
-
-    drunk """
-    Do I.
-
-    My father kept a good table.
-
-    Very good. Very... good table.
-    """
-
-    """
-    The hand goes back round the glass. The eyes go soft. The vowels come apart.
-
-    It is a decent performance. Better than decent.
-
-    But I have known actors sober up for a matinee and be legless again by six, and this is not that.
-
-    This is a man who has learnt that nobody asks a drunk anything difficult.
-
-    So he stays one.
-
-    I ought to admire it. Instead it makes me cold.
-
-    Because if he is playing a part at this table, then he has as much reason to hide as I have.
-    """
-
-    $ drunk_details.description_hidden.unlock('food')
-
-    $ drunk_details.description_hidden.unlock('status')
-
-    $ drunk_details.description_hidden.unlock('lie')
-
-    $ host_details.threads.unlock('manning_act')
 
     return
 
@@ -372,70 +345,6 @@ label host_day1_dinner_drunk_food:
 #   at this table he is the one who was raised below stairs and knows it.
 # ------------------------------------
 label host_day1_dinner_broken:
-
-    if not host_details.saved_variables['day1_evening_moody_spoken']:
-
-        $ host_details.saved_variables['day1_evening_moody_spoken'] = True
-
-        if not host_details.threads.is_unlocked('addressed_manning_first'):
-
-            $ host_details.saved_variables['day1_evening_suspicious_acting'] += 1
-
-            """
-            I turn to my right, because he has been watching me since I came in and I would rather have him where I can see him.
-
-            I am three words into the pleasantry before I remember.
-
-            Left first.
-
-            He said left first, and I have gone straight past Mr Manning as though the man were furniture.
-
-            Mr Moody's head tilts a quarter of an inch.
-
-            That is all. A quarter of an inch, and it goes through me like cold water, because it is not the movement of a man who has noticed nothing.
-            """
-
-        else:
-
-            """
-            The plates change, and I turn to my right as I ought.
-            """
-
-        broken """
-        Lady Claythorn.
-
-        A remarkable speech, if I may say so.
-        """
-
-        host """
-        You may, Mr Moody. It is a good deal easier to give away money than to earn it.
-        """
-
-        broken """
-        Easier, certainly.
-
-        Rarer, though.
-
-        Forgive me, but I confess the whole business puzzles me a little.
-
-        An award of this size, given quietly, out here, to seven people who have never met.
-
-        However did it come about?
-        """
-
-        """
-        And there it is, over the fish, in the pleasantest voice in the room.
-
-        He is not making conversation. That was a question with a shape to it.
-        """
-
-        call run_menu(host_day1_dinner_broken_menu)
-
-    else:
-
-        """
-        I turn back to my right.
-        """
 
     call broken_generic
 

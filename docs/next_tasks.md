@@ -32,6 +32,8 @@ OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mist
 ## HOST
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
 
+=> TODO at end check interactions with drunk and add necessary unlocks
+
 **The fun part**. You know where everything is (poison,...) 
 ANd you must have learned about **manners**.
 You'll have questions on how to behave (like butter bread, who talk to first,...)
@@ -39,14 +41,13 @@ You'll have questions on how to behave (like butter bread, who talk to first,...
 ### FRiday, =>>>> DOUBLE CHECK CLAUDE MESSY SHITS
 
 Before dinner
-
-- Get ready => First task hide letters behing the sheets for CAPTAIN and thomas moody. (I was assured it is just a joke played on the guest. => Maybe a murder mystery party) NO it is the butler who placed them?????
+=> First task hide letters behing the sheets for CAPTAIN and thomas moody. NO it is the butler who placed them?????
 
 
 ### FRiday, dinner
-Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem
+Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
 
-BROKEN, same dynamic as doctor? Or simply he deflects all of my questions?
+BROKEN, same dynamic as doctor? Or simply he deflects all of my questions? TODO rethingk
 
 
 ### FRiday, night

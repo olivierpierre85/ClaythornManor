@@ -19,7 +19,6 @@ label init_host:
 
             # Evening day 1
             # Every lapse in the performance the butler could hear about later
-            "day1_evening_suspicious_acting" : 0,
             # Her neighbours at dinner keep their opening scene for the first
             # turn of the head only - after that she goes straight to questions
             "day1_evening_manning_spoken" : False,
