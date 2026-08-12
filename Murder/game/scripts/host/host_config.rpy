@@ -48,9 +48,9 @@ label init_host:
                 relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
             CharacterInformation(
-                3, "go_downstair",
+                3, "go_downstairs",
                 "You went below stairs, where the mistress of the house has no business being",
-                content_negative="You kept above stairs, as a lady of the house should",
+                content_negative="You did not go below stairs",
                 image_file="downstairs",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],

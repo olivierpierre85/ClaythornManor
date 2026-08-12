@@ -212,7 +212,6 @@ label host_day1_evening:
 
     if not host_details.saved_variables['day1_evening_billiard_room_visited']:
 
-
         """
         Somewhere below, the last of them are going up to bed.
 

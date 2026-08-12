@@ -42,124 +42,71 @@ label host_day1_evening_map_menu:
 # ------------------------------------
 #   DOWNSTAIRS
 # ------------------------------------
-# Called at the top of every servants' floor room. Only the first descent of
-# the evening plays (go_downstair) - she knows quite well she has no business
-# below stairs, and goes down all the same.
 label host_day1_evening_go_downstairs:
 
-    if host_details.threads.is_unlocked('go_downstair'):
+    if host_details.threads.is_unlocked('go_downstairs'):
 
         return
 
     $ change_room('servant_stairs')
 
     """
-    The stair down is narrow and smells of soap and coal.
+    I look at the narrow stair down.
 
-    A lady does not go below stairs. A lady rings, and waits, and has the thing brought up to her.
+    It should lead to the servants' quarters.
 
-    If he found me on this step he would have a great deal to say about it, and every word of it would be right.
+    A lady should not go there. 
+    
+    She should ring, and wait for the servants to come up to her.
 
-    I go down anyway.
-
-    I have spent seven hours in a house I am meant to have been born in, and I have not the first notion what is underneath it.
-
-    Call it curiosity. It is the only part of me tonight that is not borrowed.
+    But curiosity is too strong, and I go down anyway.
     """
 
-    $ host_details.threads.unlock('go_downstair')
+    $ host_details.threads.unlock('go_downstairs')
 
     return
 
 
 label host_day1_evening_kitchen:
 
-    # TODO rewrite
-
     call host_day1_evening_go_downstairs
 
     $ change_room('kitchen')
 
     """
-    I should like five minutes among people who know exactly what I am.
+    I reach the most important room below stairs, the kitchen.
+    
+    The girl is there alone, sorting the pots and pans used for dinner.
 
-    The range is still breathing out its heat. The girl is at the sink with her sleeves pushed up, and the footman is polishing something that does not need polishing.
+    I wonder how she managed to prepare an entire dinner.
 
-    They both stand as I come in.
-
-    Both of them. Properly. Without being told.
-    """
-
-    host """
-    Please, sit down.
-
-    There is nobody here but us.
-    """
-
-    """
-    The footman glances at the door to the passage before he answers me, which is answer enough.
-    """
-
-    footman """
-    We would rather stand, my lady. If it is all the same.
-    """
-
-    """
-    My lady.
-
-    Down here, with the door shut, and a dishcloth in his hand.
-    """
-
-    host """
-    You needn't do that when there is no one to hear it.
+    She notices me.
     """
 
     maid """
-    We were told, ma'am.
-
-    From the moment we came through the gate to the moment we are through it again. No names, no letting up, not even to each other.
-
-    He said a house is like a stage with no wings. There is nowhere to stand where you are not on.
-    """
-
-    """
-    That is not a bad note, as notes go. I have had worse from better-paid men.
-
-    And it is being obeyed, which is the part that unsettles me.
-
-    I have worked with companies who could not hold a curtain call together, and this pair have not dropped a stitch in seven hours.
+    Ma'am, I do not think you should be here.
     """
 
     host """
-    And are you managing? Truthfully.
+    I know, but I wanted to check on you.
+
+    And how are you managing so far?
     """
 
     maid """
-    The plates are heavier than I thought, ma'am.
+    Everything went well, ma'am. We all pitched in for dinner.
 
-    I dropped nothing.
+    And we will probably spend the night clearing it all up, but we will manage.
     """
 
-    """
-    Eighteen, if she is a day. She has the flat vowels of somewhere north of here and a rep company's way of standing with her weight on one hip, which she has almost trained out of herself.
+    host """
+    Very well, I will not disturb you then.
 
-    The footman is better. The footman is very good indeed. He is enjoying himself, and enjoying yourself is the thing that gets an actor caught.
-    """
-
-    footman """
-    We shall manage, my lady. It is three days.
-
-    And the money is the money.
+    Good night.
     """
 
-    """
-    The money is the money.
-
-    That is what I said to myself in a cold room in London when the letter came, and it sounded just as thin then.
-
-    Whoever cooked that dinner is not in this room, and I do not ask where she is, because a woman who owns a house knows who cooks in it.
-
-    So I say something dull about the fires, and I take my five minutes and leave with none of the comfort I came down for.
+    maid """
+    Good night, m'lady.
     """
 
     return
@@ -172,11 +119,11 @@ label host_day1_evening_scullery:
     $ change_room('scullery')
 
     """
-    The scullery is empty, cold, and smells of soda and wet stone.
+    The scullery is empty and cold, and smells of soda and wet stone.
 
     I take a quick look about the room.
 
-    On the shelf above the sink, stands a bottle with its cork out.
+    On the shelf above the sink stands a bottle with its cork out.
 
     Rat poison. 
     
@@ -188,7 +135,7 @@ label host_day1_evening_scullery:
 
     Except that this one was shut up until yesterday, and will be again at the end of this weekend.
 
-    Why would anyone bother getting rid of rats for merely a couple of days?
+    Why would anyone bother getting rid of rats for a mere couple of days?
 
     I leave without a good answer.
     """
@@ -208,11 +155,11 @@ label host_day1_evening_garage:
     $ change_room('garage')
 
     """
-    Petrol and cold iron, and a different car that the one we came up in.
+    Petrol and cold iron, and a different car from the one we came up in.
 
     An old tourer, well kept.
 
-    It doesn't look like will start.
+    It does not look as though it will start.
 
     Nothing for me here.
     """
@@ -228,7 +175,7 @@ label host_day1_evening_gun_room:
     """
     Sporting guns behind glass, and a handgun lying out on the table.
 
-    It reminds me of a theater trope I read about.
+    It reminds me of a theatre trope I once read about.
 
     Chekhov's Gun.
 
@@ -293,9 +240,9 @@ label host_day1_evening_garden:
 
     I stand in the doorway long enough to feel the cold on my face.
 
-    It gives me the boost I did not know I needed.
+    I won't be able to go further without ruining my dress.
 
-    Then I go back inside before anyone sees the lady of the house standing in the wet.
+    So I go back inside before anyone sees the lady of the house standing in the wet.
     """
 
     return
@@ -314,9 +261,6 @@ label host_day1_evening_servant_stairs:
     return
 
 
-# ------------------------------------
-#   LIBRARY (who she is supposed to be)
-# ------------------------------------
 label host_day1_evening_library:
 
     $ change_room('library')

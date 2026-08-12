@@ -41,7 +41,7 @@ Broken unlocks host, host unlocks full drunk? AND BUTLER?
 ANd you must have learned about **manners**.
 You'll have questions on how to behave (like butter bread, who talk to first,...)
 
-### FRiday, =>>>> DOUBLE CHECK CLAUDE MESSY SHITS
+### FRiday,
 
 Before dinner
 => First task hide letters behing the sheets for CAPTAIN and thomas moody. NO it is the butler who placed them?????
@@ -60,7 +60,7 @@ MAP =>
 
 THE BOOK is for you ADD foreshadowing from the butler => If you have the time check the library
 
-**Downstairs**, just to chat and learn about the staff. Notice the poison? Thread => Ask the butler later.
+**Downstairs**, add CHOICE before going down? Maybe later
 
 **Bedrooms**, dialog says I SHOULDN'T, it is too suspicious (same as broken.)
 **your own** Say you can't take anymore 
