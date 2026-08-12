@@ -12,15 +12,12 @@ label init_host:
         host_init_variables = {
             # Generic Menus
             "drunk_generic_menu" : drunk_generic_menu_host,
-            "broken_generic_menu" : broken_generic_menu_host,
 
             # MAP Menus
             "day1_evening_map_menu" : host_day1_evening_map_menu,
 
             "day1_evening_manning_spoken" : False,
             "day1_evening_moody_spoken" : False,
-            # She invented the history of the award for Thomas Moody
-            "day1_evening_told_tradition" : False,
             "day1_evening_attic_tried" : False,
             "day1_evening_billiard_room_visited" : False,
             "day1_evening_staff_seen" : False,

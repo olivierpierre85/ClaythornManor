@@ -3,8 +3,8 @@
 # The butler comes up whatever happens. What changes is why:
 #   - at least one lapse in the evening -> he comes to correct her, and every
 #     one of them is read back to her in order (suspicious_acting). The lapses
-#     are: addressed_manning_first left locked, stayed_with_guests left locked,
-#     and day1_evening_told_tradition.
+#     are: addressed_manning_first left locked, and stayed_with_guests left
+#     locked.
 #   - otherwise                         -> he comes to say it went well, which
 #     from him is a considerable speech.
 #
@@ -17,7 +17,7 @@ label host_day1_evening_debrief:
 
     play sound door_knock
 
-    if not host_details.threads.is_unlocked('addressed_manning_first') or not host_details.threads.is_unlocked('stayed_with_guests') or host_details.saved_variables['day1_evening_told_tradition']:
+    if not host_details.threads.is_unlocked('addressed_manning_first') or not host_details.threads.is_unlocked('stayed_with_guests'):
 
         """
         Two knocks, and he does not wait to be asked.
@@ -81,26 +81,6 @@ label host_day1_evening_debrief:
 
             butler """
             You will not get one. Not this weekend.
-            """
-
-        if host_details.saved_variables['day1_evening_told_tradition']:
-
-            butler """
-            And you gave Mr Moody a history of the award.
-
-            Your father, and the years of it, and the name of the thing.
-            """
-
-            host """
-            He asked me a direct question with the whole table listening.
-            """
-
-            butler """
-            Then you say something charming that means nothing.
-
-            You invented a tradition for a man who can walk into a records office on Monday morning.
-
-            Never furnish a detail. A detail can be checked. Nothing else can.
             """
 
         butler """

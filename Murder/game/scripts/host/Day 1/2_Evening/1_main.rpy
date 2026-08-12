@@ -158,7 +158,7 @@ label host_day1_evening:
 
     call run_menu(TimedMenu("host_day1_evening_menu_dinner", [
         TimedMenuChoice('Turn to Mr Manning, on your left', 'host_day1_dinner_drunk', 0, keep_alive = True, next_menu = 'drunk_generic_menu_host'),
-        TimedMenuChoice('Turn to Mr Moody, on your right', 'host_day1_dinner_broken', 0, keep_alive = True, next_menu = 'broken_generic_menu_host'),
+        TimedMenuChoice('Turn to Mr Moody, on your right', 'host_day1_dinner_broken', 0, keep_alive = True),
         TimedMenuChoice('Keep to yourself and see out the meal', 'generic_cancel', early_exit=True),
     ], image_left = "drunk", image_right = "broken"))
 
@@ -243,6 +243,12 @@ label host_day1_evening:
 # ------------------------------------
 label host_day1_dinner_drunk:
 
+    # Only the first turn of the head counts. If she has already been to Mr Moody
+    # on her right, coming back to her left afterwards does not put the order right.
+    if not is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
+
+        $ host_details.threads.unlock('addressed_manning_first')
+
     # TODO rewrite Something about food with unlock? But may not be necessary sort out later.
 
     # """
@@ -285,148 +291,68 @@ label host_day1_dinner_drunk:
 #   DINNER — MR MOODY (on her right)
 #   Going to him first is a breach of the order of things, and of all the men
 #   at this table he is the one who was raised below stairs and knows it.
+#   She gets no questions of her own here. He asks them all, which is the whole
+#   point of the scene, and it is also the only place the Host can learn his
+#   background, his pension and his city.
 # ------------------------------------
 label host_day1_dinner_broken:
 
     host """
-    Mister Moody.
+    Mr Moody.
     """
 
     broken """
     Lady Claythorn.
 
-    I should thank you again for your amazing generosity.
+    I must thank you again for your generosity.
     """
 
     host """
-    There is no need to thank me, I am happy to do it.
+    There is no need to thank me.
+
+    I am very happy to do it.
 
     But let us not talk about that.
 
-    I would like to know more about you.
+    I should like to know a little more about you.
     """
 
     broken """
-    I am afraid there isn't much to say.
+    There is not much to tell, I am afraid.
 
-    I spent my youth in service, then joined the army.
+    I spent my youth in service, boot boy and then footman, and after that I enlisted.
 
-    And now I live of my pension mostly.
+    Now I live quietly on my pension, in Liverpool.
 
-    But I would rather talk about you.
+    But I would far rather talk about you.
     """
+
+    $ broken_details.description_hidden.unlock('background')
+
+    $ broken_details.description_hidden.unlock('job')
+
+    $ broken_details.description_hidden.unlock('city')
 
     host """
     Of course, but ...
     """
 
     broken """
-    For instance, this house is splendid, was it in you family for a long time?
+    This house is splendid, for instance.
+
+    Has it been in your family long?
     """
 
     host """
-    Well, yes..
+    Well, yes ...
     """
 
     """
-    He doesn't give me a chance to ask any question.
+    He does not give me the chance to ask a single question of my own.
 
-    And that will be the case during the whole dinner.
+    And that is how it goes for the whole of dinner.
 
-    I feel like I am being interrogated and I have to be extremely cautious not to reveal anything.
+    I feel as though I am being interrogated, and I must be extremely careful not to give anything away.
     """
-
-    # call broken_generic
-
-    return
-
-
-label host_day1_dinner_broken_tradition:
-
-    host """
-    It is my father's doing, really.
-
-    He began it years ago and I have simply kept it up. One does not like to let a thing lapse.
-
-    The sum has changed, and the number of recipients. But the award itself is quite an old tradition in this house.
-    """
-
-    """
-    It comes out beautifully. Warm, faintly bored, the small self-deprecating turn at the end.
-
-    I could not have written it better, which is fortunate, because I did not write it.
-
-    And Mr Moody says, oh, how splendid, and asks me the name of it, and I give him that too.
-
-    Then he says nothing at all for a moment.
-    """
-
-    broken """
-    How splendid. And under that same name all along?
-    """
-
-    host """
-    I believe so, yes.
-    """
-
-    """
-    He smiles, agrees that it is a fine thing, and turns his attention to his plate.
-
-    And I know, with a certainty I cannot explain and cannot ignore, that I have just told a lie to the one man at this table who had already looked it up.
-
-    An old tradition in a great house is a matter of record. Somebody writes those things down.
-
-    He asked me a question he knew the answer to.
-
-    That is not what a guest does. That is what a policeman does, or a journalist.
-    """
-
-    $ host_details.saved_variables['day1_evening_told_tradition'] = True
-
-
-    return
-
-
-label host_day1_dinner_broken_vague:
-
-    host """
-    It came about because it could, Mr Moody.
-
-    I have the means and very little occasion out here to put them to any decent use.
-
-    I am afraid that is the whole of the mystery.
-    """
-
-    broken """
-    A pity. I had hoped for a better story than that.
-    """
-
-    host """
-    So had I. One never gets one.
-    """
-
-    """
-    He laughs, which is a good sign, and lets it go, which is a better one.
-
-    Nothing offered, nothing to check, nothing to write down.
-
-    Say less. It is the first thing you learn and the last thing you remember.
-    """
-
-    return
-
-
-# Turning the question back on him is her "tell me about yourself" question by
-# another road, so it runs the same scene and that choice then drops out of
-# broken_generic_menu_host.
-label host_day1_dinner_broken_deflect:
-
-    host """
-    You have a great many questions for a man who has not told me a thing about himself.
-
-    That is hardly fair, Mr Moody. Your turn.
-    """
-
-    call broken_generic_background_host
 
     return
