@@ -157,8 +157,8 @@ label host_day1_evening:
     $ time_left = 90
 
     call run_menu(TimedMenu("host_day1_evening_menu_dinner", [
-        TimedMenuChoice('Turn to Mr Manning, on your left', 'host_day1_dinner_drunk', 0, keep_alive = True, next_menu = 'drunk_generic_menu_host'),
-        TimedMenuChoice('Turn to Mr Moody, on your right', 'host_day1_dinner_broken', 0, keep_alive = True),
+        TimedMenuChoice('Turn to Mr Manning, on your left', 'host_day1_dinner_drunk', 20, next_menu = 'drunk_generic_menu_host'),
+        TimedMenuChoice('Turn to Mr Moody, on your right', 'host_day1_dinner_broken', 90),
         TimedMenuChoice('Keep to yourself and see out the meal', 'generic_cancel', early_exit=True),
     ], image_left = "drunk", image_right = "broken"))
 
@@ -243,13 +243,8 @@ label host_day1_evening:
 # ------------------------------------
 label host_day1_dinner_drunk:
 
-    # Only the first turn of the head counts. If she has already been to Mr Moody
-    # on her right, coming back to her left afterwards does not put the order right.
-    if not is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
 
-        $ host_details.threads.unlock('addressed_manning_first')
-
-    # TODO rewrite Something about food with unlock? But may not be necessary sort out later.
+    $ host_details.threads.unlock('addressed_manning_first')
 
     # """
     # He has not touched his wine since the plates came in, which at this table makes him remarkable all on his own.
@@ -289,11 +284,6 @@ label host_day1_dinner_drunk:
 
 # ------------------------------------
 #   DINNER — MR MOODY (on her right)
-#   Going to him first is a breach of the order of things, and of all the men
-#   at this table he is the one who was raised below stairs and knows it.
-#   She gets no questions of her own here. He asks them all, which is the whole
-#   point of the scene, and it is also the only place the Host can learn his
-#   background, his pension and his city.
 # ------------------------------------
 label host_day1_dinner_broken:
 
@@ -327,12 +317,6 @@ label host_day1_dinner_broken:
     But I would far rather talk about you.
     """
 
-    $ broken_details.description_hidden.unlock('background')
-
-    $ broken_details.description_hidden.unlock('job')
-
-    $ broken_details.description_hidden.unlock('city')
-
     host """
     Of course, but ...
     """
@@ -353,6 +337,8 @@ label host_day1_dinner_broken:
     And that is how it goes for the whole of dinner.
 
     I feel as though I am being interrogated, and I must be extremely careful not to give anything away.
+
+    In the end, I do not manage to ask him a single question.
     """
 
     return
