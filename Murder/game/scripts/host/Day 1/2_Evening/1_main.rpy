@@ -9,18 +9,6 @@
 #
 #   Alive: Everyone
 #
-#   Position
-#       - Bedroom : the butler's last briefing before the curtain goes up
-#       - Dining Room : everyone. Manning on her left, Moody on her right
-#       - The house : free roam (library, gallery, below stairs, billiard room)
-#       - Bedroom : the butler's debrief
-#
-#   Notes :
-#       - Etiquette: a hostess turns to the guest on her left first. Doing it
-#         correctly unlocks the addressed_manning_first thread, which is the
-#         only way that thread is ever unlocked. Turning to Moody first, or
-#         sitting through dinner in silence, leaves it locked and costs her a
-#         mark at the debrief, as does never joining the party.
 # --------------------------------------------
 label host_day1_evening:
 
@@ -98,8 +86,20 @@ label host_day1_evening:
 
     """
     That, at least, I know how to do.
+    """
 
-    He leaves without ceremony, and I start memorize my lines.
+    butler """
+    One more thing. I have left a book out for you in the library.
+
+    When you have the time, you should read the part about this place.
+
+    That might be helpful.
+    """
+
+    """
+    I nod, and he leaves without ceremony.
+
+    So I start to memorise my lines.
     """
 
     call wait_screen_transition()

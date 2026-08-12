@@ -31,7 +31,7 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 
 OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mister Harring. How are you feelin?" => Unlocks TED Harring? Or **unlock Butler**
 
-### Write Story: NEXT => 
+### Write Story: NEXT => FRIDAY MAP ATTIC
 ## HOST
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
 

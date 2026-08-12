@@ -262,13 +262,23 @@ label host_day1_evening_attic_default:
     $ change_room("attic_hallway")
 
     """
-    The attic stair, and the door at the top of it locked.
+    I climb the stairs, even though I probably should not.
 
-    I try it twice, which is once more than there was any point in trying it.
+    I try to open the door.
+    """
 
-    Every room in this house is mine, and I do not have the key to that one.
+    play sound door_locked
+
+    """
+    Locked, of course.
+
+    And I do not have the key.
 
     Only he does.
+
+    Out of curiosity, I try another door, then a third, then the last.
+
+    All of them closed.
 
     I stand on the stair a moment longer than I need to, and then I go back down.
     """

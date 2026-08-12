@@ -60,8 +60,8 @@ label init_host:
         host_observations = CharacterObservationList([
             CharacterInformation(
                 1, "family_history",
-                "You read the Claythorn entry in the library and learned the family's real name and title",
-                content_negative="You didn't look up the family in the library",
+                "You learned the family's real name and title",
+                content_negative="You didn't learn the family's real name and title",
                 image_file="captain_host_suspicion_name",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening', 'sunday_morning'],
