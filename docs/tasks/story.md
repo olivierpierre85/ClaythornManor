@@ -97,6 +97,7 @@
 
 ### Ideas to think over (optional)
 - [ ] Could add a "go to the bar first" option, so Ted Harring doesn't die. (Keeping him alive is complicated, though.)
+- [ ] Sounds like the mask shouldn't be tin, not wood
 - [ ] Make it so the captain unlocking Broken for the "three Moody lives" reads better if the captain plays it first.
 - [ ] There's almost no hint of what really happened in the Boxer Rebellion — add some of that in, in the Day 3 questions. Should the story of the baby and the nurse go here too, or is that too obvious?
 

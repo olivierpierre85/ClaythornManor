@@ -469,7 +469,7 @@ label broken_day2_evening_captain_order:
     broken """
     Very well, let me tell you something about myself first.
 
-    I am not a car mechanic like I let some people believe.
+    I have not been living quietly on a pension, whatever I let some of you believe.
 
     I am a journalist, and I made a bit of research before coming here.
     """

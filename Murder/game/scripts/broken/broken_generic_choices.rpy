@@ -119,13 +119,15 @@ label broken_generic_background:
     broken """
     There is not much to say, I am afraid.
 
-    I am a mechanic. I have been doing this since the end of the war.
+    The Army was my trade, and the Army had done with me in 'seventeen.
+
+    I have kept no other since. There is a pension, and it is enough.
     """
 
-    $ broken_details.description_hidden.unlock('job') 
-        
+    $ broken_details.description_hidden.unlock('job')
+
     call run_menu( TimedMenu("broken_generic_background_offense", [
-        TimedMenuChoice("Did you have to change profession because of the war?", 'broken_generic_background_offended_1', 0, early_exit=True, next_menu="broken_generic_background_offended_1" ),
+        TimedMenuChoice("And you have not worked since?", 'broken_generic_background_offended_1', 0, early_exit=True, next_menu="broken_generic_background_offended_1" ),
         TimedMenuChoice("That's a very noble profession", 'broken_generic_background_not_offended', 10, early_exit=True),
         ])
     )
@@ -135,9 +137,9 @@ label broken_generic_background:
 label broken_generic_background_not_offended:
 
     broken """
-    Thank you. 
-    
-    It is not saving lives, but I like it well enough.
+    Thank you.
+
+    It was not saving lives, but I was good at it.
     """
 
     return
@@ -146,7 +148,7 @@ label broken_generic_background_not_offended:
 label broken_generic_background_offended_1:
 
     broken """
-    Well yes, I was a famous actor before.
+    Not since, no. I was a famous actor before, you understand.
 
     Sadly I can't do that anymore.
     """
@@ -257,14 +259,14 @@ label broken_generic_manor:
 
     I started as a bootboy when I was a wee lad, but quickly rose in rank to become a footman.
 
-    Then the war happened and everything changed.
+    Then I took the King's shilling, and everything changed.
     """
 
-    $ broken_details.description_hidden.unlock('background') 
+    $ broken_details.description_hidden.unlock('background')
 
     call run_menu( TimedMenu("broken_generic_manor_offense", [
-        TimedMenuChoice("Of course, the war changed everyone perspective", 'broken_generic_manor_offended', 20, early_exit=True),
-        TimedMenuChoice("The war didn't change much for me", 'broken_generic_manor_not_offended', 20, early_exit=True),
+        TimedMenuChoice("You were glad to be out of service, I imagine", 'broken_generic_manor_offended', 20, early_exit=True),
+        TimedMenuChoice("The army suited you better, then", 'broken_generic_manor_not_offended', 20, early_exit=True),
         ])
     )
 
@@ -274,33 +276,33 @@ label broken_generic_manor:
 label broken_generic_manor_offended:
 
     doctor """
-    I understand that you did not want to keep doing this after the war.
+    I understand. It must have seemed a small sort of life for a young man.
 
-    It must have seemed too trivial to keep being a servant after such a horrific experience.
+    Handing round the soup while other men did something with themselves.
     """
 
     broken """
     Not really.
-    
+
     I do not think there is anything wrong with being a servant.
-    
-    I would have loved to keep doing this job. 
-    
+
+    I was good at it, and I liked it well enough.
+
     I even hoped to be a butler someday.
 
-    But it turns out a footman has to fit certain characteristics. 
+    And I had the one thing they cannot train into you.
 
-    For instance, they have to be tall. 
-    
+    A footman has to be tall, you see.
+
     I am not sure why, but it is a matter of pride for them to have the tallest servants possible.
 
     It is all part of us being seen as part of the "image" of their property.
 
-    As you can guess, when I returned from the war, I was not considered "footman" material and was relegated to grunt work.
+    So the post was mine for as long as I wanted it.
 
-    I decided it was better to leave.
+    But I found I wanted to be looked at rather less, and to see rather more.
 
-    But it is not easy talking about it.
+    So I enlisted, and I stayed enlisted for twenty years.
     """
 
     doctor """
@@ -327,20 +329,18 @@ label broken_generic_manor_offended:
 label broken_generic_manor_not_offended:
 
     broken """
-    Really? 
-    
-    That is quite a unique perspective.
+    It suited me for twenty years.
 
-    How refreshing.
+    Whether that is quite the same thing, I have never decided.
     """
 
-    return 
+    return
 
 
 label broken_generic_age_intro:
 
     broken """
-    43 years old.
+    47 years old.
 
     I know it is hard to guess, considering.
     """
@@ -434,17 +434,17 @@ label broken_generic_background_host:
     broken """
     There is very little to tell, I am afraid.
 
-    I mend motor cars in Liverpool. I have done since the war.
+    I soldiered for twenty years, and there has been a pension in Liverpool since.
     """
 
     host """
-    And before the war?
+    And before that?
     """
 
     broken """
-    Before the war I was in service, my lady.
+    Before that I was in service, my lady.
 
-    Boot boy, then footman, in a house not unlike this one.
+    Boot boy, then footman, in a house not unlike this one. Then I enlisted.
     """
 
     $ broken_details.description_hidden.unlock('job')
@@ -550,7 +550,7 @@ label broken_generic_manor_host:
     """
 
     host """
-    And where does a motor mechanic learn to price a house from the soup?
+    And where does an old soldier learn to price a house from the soup?
     """
 
     broken """
@@ -585,7 +585,7 @@ label broken_generic_age_host:
     $ broken_details.description_hidden.unlock('age')
 
     """
-    Forty-three, and the half of the face I can see is a great deal older than that.
+    Forty-seven, and the half of the face I can see is a great deal older than that.
 
     Whatever was done to him was done to a young man.
     """

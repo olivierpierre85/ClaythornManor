@@ -6,6 +6,7 @@
 - ARRIVAL manor, the storm happens it is already night time
 - Harmonize the Dinner menu (are choices keep_alive or not pick one a keep it)
 
+
 ### Write Story: NEXT => DRUNK
 GEN IDEAS
 

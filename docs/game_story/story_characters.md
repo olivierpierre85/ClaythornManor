@@ -2,13 +2,13 @@
 
 ## Backstory
 
-1901 - Boxer Rebellion (Officer and Captain)
+1900 - Boxer Rebellion (Corporal and Captain)
 
-In China, a young girl is saved by a **young officer** during the Boxer Rebellion. They grow close, and she falls in love.
+In China, a young girl is saved by a **young corporal** during the Boxer Rebellion. They grow close, and she falls in love.
 
-A **Nurse** there was also in love with the officer. Out of jealousy, she ratted her out to management.
+A **Nurse** there was also in love with the corporal. Out of jealousy, she ratted her out to management.
 
-The **Captain** receives the news. He then reassigns the young officer back to another company, for the sake of the girl's honour (because he is a nobleman, etc.).!!!!!! The captain has no real power back then, he will just transfer the information to a "real" officer!!!!!
+The **Captain** receives the news. He then reassigns the young corporal back to another company, for the sake of the girl's honour (because he is a nobleman, etc.).!!!!!! The captain has no real power back then, he will just transfer the information to a "real" officer!!!!!
 
 The woman is left pregnant. In 1902, she gives birth to the **young Lad**. She wants to keep the baby, but he is stolen by the doctor in charge, who claims she would not be a decent mother. She does not know where he has been taken. The **Doctor** sends the baby to an orphanage in England.
 
@@ -29,7 +29,7 @@ She needs help for her plan, and she manages to find a company of actors needing
 However, the first part of the plan is that her love does not show up. Someone else has taken his place; she does not realise it at first because of his mask. But when she sees the truth, she kills him.
 
 ### 📝 Summary
-- **1901**: Young girl saved by officer during Boxer Rebellion. Nurse is jealous and rats her out.
+- **1900**: Young girl saved by a corporal during the Boxer Rebellion. Nurse is jealous and rats her out.
 - **1902**: Girl gives birth to the Lad. Doctor steals the baby for money.
 - **1923**: Girl (now the Host/Lady Claythorn?) realises her son is alive.
 - **1924 (Current)**: She gathers everyone who wronged her at Claythorn Manor to make them pay. Her plan involves her old love (who is actually dead/replaced by Broken Face).
@@ -83,12 +83,15 @@ He might have killed someone whilst drink-driving one day (the Captain's wife? T
 Invited because, despite everything, he managed to become a defence lawyer, albeit a terrible one.
 
 ### The Broken Face (Thomas Moody / Imposter)
-Badly injured in the war, he wears a mask to cover his face.
-He is supposed to be the young officer whom the Psychic loved, invited for his service.
-However, it turns out that the officer is dead, and a friend saw the invitation made in his name. That is why he stole the papers and put on a mask in case anyone was supposed to recognise him (which turned out to be unnecessary).
-Upon his arrival at the manor, the Psychic quickly realises he is not the right person, so she poisons his drink immediately.
+Badly injured late in the war, he wears a mask to cover his face.
+He is supposed to be the young corporal whom the Psychic loved in China, invited for his service.
+However, it turns out that Moody is dead, and a friend saw the invitation made in his name. That is why he stole the papers and put on a mask in case anyone was supposed to recognise him (which turned out to be unnecessary).
+Upon his arrival at the manor, the Psychic realises he is not the right person, so she poisons his drink on the first night. (TODO: reconcile with the planted transfer order below, which only pays off in Saturday's hunt — in the playable Broken route he survives the poisoning.)
 He is an amateur sleuth and is skilled at interrogation; he can sneak into certain places.
-MOODY and ARCHIE (real name Archibald Devereux) WERE war buddies, both officers, maybe lovers. Both served as Intelligence Service officers chaperoning the senior war correspondents (they met at Talbot House, Poperinge, in 1916) — the safest billet in France, well back of the guns. In the autumn of 1917 the Army combed the rear billets for officers to feed into the Flanders fighting, and Moody was the one sent up to the front (B Company, 2nd Battalion, Lancashire Fusiliers), chosen over Archie most likely on account of his lower-class background (a boot-boy risen to a commission). Moody was badly wounded and disfigured there; he came home behind a mask, lived as a lonely recluse, and died in his bed years after the war when his injuries finally got the better of him. The transfer order was countersigned by Captain Sinha at General Headquarters. Archie, racked with survivor's guilt, took up the very trade they had once only escorted and became a reporter (now at The Times). On Day 1 the killer (the Psychic, who also loved Moody) plants that old order on Archie's bed to turn him against the Captain — paying off in the Saturday hunt, where Moody confronts and shoots Sinha (`captain_ending_shot_in_woods`).
+
+**Career — he never had a civilian trade.** A Liverpool boy. Boot boy at about twelve, footman by fifteen in a house much like Claythorn Manor: tall enough for the post, good enough at it to have hoped for a butler's place one day. He left service for the Army all the same, at about seventeen, and stayed more than twenty years — a young corporal in China during the Boxer Rebellion of 1900, then steadily up through the ranks, and commissioned during the Great War. After 1917 he was finished as a soldier and lived on his Army pension, alone in his rooms and rarely going out. He is 47 in 1924 (born 1877).
+
+MOODY and ARCHIE (real name Archibald Devereux) WERE war buddies, both officers, maybe lovers. Both served as Intelligence Service officers chaperoning the senior war correspondents (they met at Talbot House, Poperinge, in 1916) — the safest billet in France, well back of the guns. In the autumn of 1917 the Army combed the rear billets for officers to feed into the Flanders fighting, and Moody was the one sent up to the front (B Company, 2nd Battalion, Lancashire Fusiliers), chosen over Archie most likely on account of his lower-class background (a boot-boy and twenty-year ranker risen to a commission). Moody was badly wounded and disfigured there; he came home behind a mask, lived as a lonely recluse, and died in his bed years after the war when his injuries finally got the better of him. The transfer order was countersigned by Captain Sinha at General Headquarters. Archie, racked with survivor's guilt, took up the very trade they had once only escorted and became a reporter (now at The Times). On Day 1 the killer (the Psychic, who also loved Moody) plants that old order on Archie's bed to turn him against the Captain — paying off in the Saturday hunt, where Moody confronts and shoots Sinha (`captain_ending_shot_in_woods`).
 
 ### The Host - Lady Claythorn (OR ????)
 An out-of-work actress, she stole the job that the Psychic wanted some years ago. It is not a revenge as strong as the others, but as they say, 'you cannot make an omelette without breaking eggs.'

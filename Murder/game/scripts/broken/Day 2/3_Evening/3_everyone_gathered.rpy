@@ -140,7 +140,7 @@ label broken_day2_evening_ring_gong:
     doctor """
     An investigator?
 
-    I thought you were a footman turned car mechanic, Mr Moody.
+    I thought you were a footman turned soldier, Mr Moody.
     """
 
     broken """
@@ -148,7 +148,7 @@ label broken_day2_evening_ring_gong:
 
     A necessity to avoid attracting attention.
 
-    Nobody is suspicious of a car mechanic asking questions.
+    Nobody is suspicious of a broken-faced old soldier asking questions.
     """
 
     doctor """
@@ -473,7 +473,7 @@ label broken_day2_evening_ring_gong:
     """
 
     broken """
-    I can.
+    I can. The Army saw to that.
 
     But that is not the problem.
 

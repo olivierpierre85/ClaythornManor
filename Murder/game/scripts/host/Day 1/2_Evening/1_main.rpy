@@ -288,7 +288,55 @@ label host_day1_dinner_drunk:
 # ------------------------------------
 label host_day1_dinner_broken:
 
-    call broken_generic
+    host """
+    Mister Moody.
+    """
+
+    broken """
+    Lady Claythorn.
+
+    I should thank you again for your amazing generosity.
+    """
+
+    host """
+    There is no need to thank me, I am happy to do it.
+
+    But let us not talk about that.
+
+    I would like to know more about you.
+    """
+
+    broken """
+    I am afraid there isn't much to say.
+
+    I spent my youth in service, then joined the army.
+
+    And now I live of my pension mostly.
+
+    But I would rather talk about you.
+    """
+
+    host """
+    Of course, but ...
+    """
+
+    broken """
+    For instance, this house is splendid, was it in you family for a long time?
+    """
+
+    host """
+    Well, yes..
+    """
+
+    """
+    He doesn't give me a chance to ask any question.
+
+    And that will be the case during the whole dinner.
+
+    I feel like I am being interrogated and I have to be extremely cautious not to reveal anything.
+    """
+
+    # call broken_generic
 
     return
 

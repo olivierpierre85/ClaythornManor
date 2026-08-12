@@ -166,11 +166,11 @@ label init_broken:
         ])
 
         broken_description_hidden = CharacterDescriptionHiddenList([
-            CharacterInformation(0, "mask", "injured at the start of the war, he is now what people call a 'Gueule Cassée' or broken face", unlock_chapters=[('broken', 'friday_evening'), ('captain', 'friday_evening'), ('doctor', 'friday_evening'), ('lad', 'friday_evening'), ('host', 'friday_evening')]),
-            CharacterInformation(0, "age", "43-year-old", is_important = True),
+            CharacterInformation(0, "mask", "injured late in the war, he is now what people call a 'Gueule Cassée' or broken face", unlock_chapters=[('broken', 'friday_evening'), ('captain', 'friday_evening'), ('doctor', 'friday_evening'), ('lad', 'friday_evening'), ('host', 'friday_evening')]),
+            CharacterInformation(0, "age", "47-year-old", is_important = True),
             CharacterInformation(0, "background", "a fancy house as a boot boy before graduating to footman. There he learned how to behave among the rich and wealthy", is_important = True, unlock_chapters=[('host', 'friday_evening')]),
             CharacterInformation(0, "tall", "above-average height", is_important = True),
-            CharacterInformation(0, "job", "a car mechanic", is_important = True, unlock_chapters=[('host', 'friday_evening')]),
+            CharacterInformation(0, "job", "kept no trade since, and lives quietly on his Army pension", is_important = True, unlock_chapters=[('host', 'friday_evening')]),
             CharacterInformation(0, "heroic_act", "that led to his injuries is what made Lady Claythorn invite him to the Manor", is_important = True),
             CharacterInformation(0, "city", "Liverpool", is_important = True, unlock_chapters=[('host', 'friday_evening')]),
             CharacterInformation(0, "shy", "married, perhaps because his condition has rendered him rather shy towards the opposite sex", is_important = True),
@@ -182,8 +182,8 @@ label init_broken:
 
         broken_description = """
         Thomas Moody is a <info:age> working-class fellow. Born in <info:city>, he started working in <info:background>. His <info:tall> helped him secure the post.
-        His life took a dramatic turn when he was called to serve during the Great War. Badly <info:mask>. The act of bravery <info:heroic_act>.
-        After the war, he managed to find a job as <info:job>. 
+        He left service for the Army as a young man and rose steadily through the ranks, until the Great War made an officer of him. Badly <info:mask>. The act of bravery <info:heroic_act>.
+        The Army had done with him after that. He has <info:job>.
         He is not <info:shy>. 
         The wounds beneath that mask are, <info:lie_mask>.
         The name <info:lie_name>.
