@@ -47,6 +47,14 @@ label init_host:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
+            CharacterInformation(
+                3, "go_downstair",
+                "You went below stairs, where the mistress of the house has no business being",
+                content_negative="You kept above stairs, as a lady of the house should",
+                image_file="downstairs",
+                chapters=['friday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening'],
+            ),
         ])
 
         host_observations = CharacterObservationList([

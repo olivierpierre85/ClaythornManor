@@ -42,18 +42,46 @@ label host_day1_evening_map_menu:
 # ------------------------------------
 #   DOWNSTAIRS
 # ------------------------------------
-label host_day1_evening_kitchen:
+# Called at the top of every servants' floor room. Only the first descent of
+# the evening plays (go_downstair) - she knows quite well she has no business
+# below stairs, and goes down all the same.
+label host_day1_evening_go_downstairs:
 
-    # TODO rewrite
+    if host_details.threads.is_unlocked('go_downstair'):
 
-    $ change_room('kitchen')
+        return
+
+    $ change_room('servant_stairs')
 
     """
     The stair down is narrow and smells of soap and coal.
 
-    A lady does not go below stairs. A lady rings.
+    A lady does not go below stairs. A lady rings, and waits, and has the thing brought up to her.
 
-    But I have spent seven hours being looked at, and I should like five minutes among people who know exactly what I am.
+    If he found me on this step he would have a great deal to say about it, and every word of it would be right.
+
+    I go down anyway.
+
+    I have spent seven hours in a house I am meant to have been born in, and I have not the first notion what is underneath it.
+
+    Call it curiosity. It is the only part of me tonight that is not borrowed.
+    """
+
+    $ host_details.threads.unlock('go_downstair')
+
+    return
+
+
+label host_day1_evening_kitchen:
+
+    # TODO rewrite
+
+    call host_day1_evening_go_downstairs
+
+    $ change_room('kitchen')
+
+    """
+    I should like five minutes among people who know exactly what I am.
 
     The range is still breathing out its heat. The girl is at the sink with her sleeves pushed up, and the footman is polishing something that does not need polishing.
 
@@ -139,6 +167,8 @@ label host_day1_evening_kitchen:
 
 label host_day1_evening_scullery:
 
+    call host_day1_evening_go_downstairs
+
     $ change_room('scullery')
 
     """
@@ -173,6 +203,8 @@ label host_day1_evening_scullery:
 # ------------------------------------
 label host_day1_evening_garage:
 
+    call host_day1_evening_go_downstairs
+
     $ change_room('garage')
 
     """
@@ -188,6 +220,8 @@ label host_day1_evening_garage:
     return
 
 label host_day1_evening_gun_room:
+
+    call host_day1_evening_go_downstairs
 
     $ change_room('gun_room')
 
