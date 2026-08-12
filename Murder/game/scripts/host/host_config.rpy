@@ -34,8 +34,8 @@ label init_host:
             ),
             CharacterInformation(
                 1, "addressed_manning_first",
-                "You turned to Mr Manning, on your left, before anyone else at dinner",
-                content_negative="You did not turn first to the guest on your left at dinner",
+                "You turned first to Mr Manning, on your left, at dinner",
+                content_negative="You did not turn  first to Mr Manning, on your left, at dinner",
                 image_file="drunk_character",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],

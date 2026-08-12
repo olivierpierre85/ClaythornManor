@@ -123,7 +123,7 @@ label host_day1_evening:
 
     Seven faces turn, and I take the long walk to my chair.
 
-    I do not look at any of them until I reach my chair.
+    I do not look at any of them until I reach my place.
 
     I let the silence sit half a beat longer than is comfortable, and I begin.
     """
@@ -179,23 +179,23 @@ label host_day1_evening:
     """
 
     """
-    Chairs go back. The party moves off in twos and threes.
+    Chairs go back. The party moves off.
 
-    And that is dinner survived.
+    And that is it for dinner.
     """
 
     $ change_room('bedroom_host', dissolve)
 
     """
-    I go up first, because I need the door shut and thirty seconds of not being looked at.
+    I go up first, because I need the door shut and regroup for a while.
 
-    I sit on the end of the bed in eighty pounds of somebody else's clothes and let my face come off.
+    But not too long. 
+    
+    I am expected downstairs and not showing up would raise questions.
 
-    Thirty seconds. That is what I allow myself.
+    But I do not need to reach the billiard room right away.
 
-    Then I stand up, because there is a great deal in this house I have not seen, and this is the only hour I shall have to myself.
-
-    They are all in the billiard room, the staff are run off their feet, and nobody in the world knows where I am.
+    What should I do?
     """
 
     $ play_music('upbeat')
@@ -298,13 +298,9 @@ label host_day1_dinner_broken:
     """
 
     host """
-    There is no need to thank me.
+    No need, I am very happy to do it.
 
-    I am very happy to do it.
-
-    But let us not talk about that.
-
-    I should like to know a little more about you.
+    But now I would like to know a little more about you.
     """
 
     broken """

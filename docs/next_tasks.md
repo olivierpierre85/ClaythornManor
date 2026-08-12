@@ -5,8 +5,8 @@
 - APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
 - ARRIVAL manor, the storm happens it is already night time
 - Harmonize the Dinner menu (are choices keep_alive or not pick one a keep it)
-
 - Rething broken unlock backstory, not need much of host
+- TRain sound not in all characters. Add or ok to avoid?
 - 
 ### Write Story: NEXT => DRUNK
 GEN IDEAS
