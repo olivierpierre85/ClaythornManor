@@ -1,40 +1,15 @@
 # Map choices for the Host (Lady Claythorn), Friday evening
-#
-# She is the only guest in this house who is supposed to own it, which turns
-# the usual rules inside out:
-#   - Below stairs is hers by right, so the servants' floor needs no disguise.
-#     It is the one place she can hear her own people speak, if they will.
-#   - The guest bedrooms are barred to her by common sense, exactly as they are
-#     to Thomas Moody. A hostess caught coming out of a guest's room is finished.
-#   - The attic is locked and the butler holds the key, which is the whole
-#     problem with this weekend in miniature.
-#   - The billiard room is not a curiosity but a duty. Sitting up with them
-#     unlocks stayed_with_guests, and skipping it costs her a mark against the
-#     performance at the debrief.
-#
-# Budget: 120 units. A look into an empty room costs the usual 10, the rooms
-# with something in them 20, the library 30 (she reads the whole entry), and
-# the billiard room 40, because she cannot sit down with them and leave again
-# after five minutes.
 
 label host_day1_evening_map_menu:
     python:
         host_day1_evening_map_menu = TimedMenu(
             "host_day1_evening_map_menu",
-            [
-            # Attic
-            map_choice('storage', 'host_day1_evening_attic_default', 10),
-            map_choice('males_room', 'host_day1_evening_attic_default', 10),
-            map_choice('females_room', 'host_day1_evening_attic_default', 10),
-            map_choice('attic_butler_room', 'host_day1_evening_attic_default', 10),
-            # Bedrooms (her own room is the retire exit, so it is not listed here)
-            map_choice('bedroom_lad', 'host_day1_evening_bedroom_avoid', 10),
-            map_choice('bedroom_broken', 'host_day1_evening_bedroom_avoid', 10),
-            map_choice('bedroom_nurse', 'host_day1_evening_bedroom_avoid', 10),
-            map_choice('bedroom_doctor', 'host_day1_evening_bedroom_avoid', 10),
-            map_choice('bedroom_drunk', 'host_day1_evening_bedroom_avoid', 10),
-            map_choice('bedroom_psychic', 'host_day1_evening_bedroom_avoid', 10),
-            map_choice('bedroom_captain', 'host_day1_evening_bedroom_avoid', 10),
+            [   
+            # Servants' floor
+            map_choice('kitchen', 'host_day1_evening_kitchen', 20),
+            map_choice('scullery', 'host_day1_evening_scullery', 20),
+            map_choice('garage', 'host_day1_evening_garage', 10),
+            map_choice('gun_room', 'host_day1_evening_gun_room', 10),        
             # Ground floor
             map_choice('tea_room', 'host_day1_evening_tea_room', 10),
             map_choice('dining_room', 'host_day1_evening_dining_room', 10),
@@ -43,15 +18,188 @@ label host_day1_evening_map_menu:
             map_choice('servant_stairs', 'host_day1_evening_servant_stairs', 10),
             map_choice('portrait_gallery', 'host_day1_evening_portrait_gallery', 20),
             map_choice('library', 'host_day1_evening_library', 30),
-            # Servants' floor
-            map_choice('kitchen', 'host_day1_evening_kitchen', 20),
-            map_choice('scullery', 'host_day1_evening_scullery', 20),
-            map_choice('garage', 'host_day1_evening_garage', 10),
-            map_choice('gun_room', 'host_day1_evening_gun_room', 10),
+            # Bedrooms (her own room is the retire exit, so it is not listed here)
+            map_choice('bedroom_lad', 'host_day1_evening_bedroom_avoid', 10),
+            map_choice('bedroom_broken', 'host_day1_evening_bedroom_avoid', 10),
+            map_choice('bedroom_nurse', 'host_day1_evening_bedroom_avoid', 10),
+            map_choice('bedroom_doctor', 'host_day1_evening_bedroom_avoid', 10),
+            map_choice('bedroom_drunk', 'host_day1_evening_bedroom_avoid', 10),
+            map_choice('bedroom_psychic', 'host_day1_evening_bedroom_avoid', 10),
+            map_choice('bedroom_captain', 'host_day1_evening_bedroom_avoid', 10),
+            # Attic
+            map_choice('storage', 'host_day1_evening_attic_default', 10),
+            map_choice('males_room', 'host_day1_evening_attic_default', 10),
+            map_choice('females_room', 'host_day1_evening_attic_default', 10),
+            map_choice('attic_butler_room', 'host_day1_evening_attic_default', 10),
             # Specific actions
             TimedMenuChoice('Sit up with your guests in the billiard room', 'host_day1_evening_billiard_room', 40, room='billiard_room'),
             TimedMenuChoice('Retire for the night', 'generic_cancel', early_exit=True, room='bedroom_host'),
         ], is_map = True)
+
+    return
+
+
+# ------------------------------------
+#   DOWNSTAIRS
+# ------------------------------------
+label host_day1_evening_kitchen:
+
+    # TODO rewrite
+
+    $ change_room('kitchen')
+
+    """
+    The stair down is narrow and smells of soap and coal.
+
+    A lady does not go below stairs. A lady rings.
+
+    But I have spent seven hours being looked at, and I should like five minutes among people who know exactly what I am.
+
+    The range is still breathing out its heat. The girl is at the sink with her sleeves pushed up, and the footman is polishing something that does not need polishing.
+
+    They both stand as I come in.
+
+    Both of them. Properly. Without being told.
+    """
+
+    host """
+    Please, sit down.
+
+    There is nobody here but us.
+    """
+
+    """
+    The footman glances at the door to the passage before he answers me, which is answer enough.
+    """
+
+    footman """
+    We would rather stand, my lady. If it is all the same.
+    """
+
+    """
+    My lady.
+
+    Down here, with the door shut, and a dishcloth in his hand.
+    """
+
+    host """
+    You needn't do that when there is no one to hear it.
+    """
+
+    maid """
+    We were told, ma'am.
+
+    From the moment we came through the gate to the moment we are through it again. No names, no letting up, not even to each other.
+
+    He said a house is like a stage with no wings. There is nowhere to stand where you are not on.
+    """
+
+    """
+    That is not a bad note, as notes go. I have had worse from better-paid men.
+
+    And it is being obeyed, which is the part that unsettles me.
+
+    I have worked with companies who could not hold a curtain call together, and this pair have not dropped a stitch in seven hours.
+    """
+
+    host """
+    And are you managing? Truthfully.
+    """
+
+    maid """
+    The plates are heavier than I thought, ma'am.
+
+    I dropped nothing.
+    """
+
+    """
+    Eighteen, if she is a day. She has the flat vowels of somewhere north of here and a rep company's way of standing with her weight on one hip, which she has almost trained out of herself.
+
+    The footman is better. The footman is very good indeed. He is enjoying himself, and enjoying yourself is the thing that gets an actor caught.
+    """
+
+    footman """
+    We shall manage, my lady. It is three days.
+
+    And the money is the money.
+    """
+
+    """
+    The money is the money.
+
+    That is what I said to myself in a cold room in London when the letter came, and it sounded just as thin then.
+
+    Whoever cooked that dinner is not in this room, and I do not ask where she is, because a woman who owns a house knows who cooks in it.
+
+    So I say something dull about the fires, and I take my five minutes and leave with none of the comfort I came down for.
+    """
+
+    return
+
+
+label host_day1_evening_scullery:
+
+    $ change_room('scullery')
+
+    """
+    The scullery is empty, cold, and smells of soda and wet stone.
+
+    I take a quick look about the room.
+
+    On the shelf above the sink, stands a bottle with its cork out.
+
+    Rat poison. 
+    
+    And it is half-empty.
+
+    In itself, it is not unusual. 
+    
+    Old houses have rats.
+
+    Except that this one was shut up until yesterday, and will be again at the end of this weekend.
+
+    Why would anyone bother getting rid of rats for merely a couple of days?
+
+    I leave without a good answer.
+    """
+
+    $ host_details.threads.unlock('found_poison')
+
+    return
+
+
+# ------------------------------------
+#   GARAGE
+# ------------------------------------
+label host_day1_evening_garage:
+
+    $ change_room('garage')
+
+    """
+    Petrol and cold iron, and a different car that the one we came up in.
+
+    An old tourer, well kept.
+
+    It doesn't look like will start.
+
+    Nothing for me here.
+    """
+
+    return
+
+label host_day1_evening_gun_room:
+
+    $ change_room('gun_room')
+
+    """
+    Sporting guns behind glass, and a handgun lying out on the table.
+
+    It reminds me of a theater trope I read about.
+
+    Chekhov's Gun.
+
+    Better leave it there.
+    """
 
     return
 
