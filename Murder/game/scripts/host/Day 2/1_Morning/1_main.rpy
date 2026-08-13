@@ -25,12 +25,18 @@ label host_day2_morning:
 
     $ play_music('chill', 3)
 
-    # TODO: She wakes before the house, because the hostess must be downstairs first.
-    # TODO: The second morning of the part. Last night she got away with it, which is
-    #       the dangerous part of any run: the night you stop watching yourself.
-    # TODO: Optional callback to what she took away from the debrief, gated on
-    #       family_history / no_portrait / found_poison / day1_evening_attic_tried.
+    """
+    I wake and stat getting ready for breakfast.
 
+    I realise I have the easy role in all of this.
+
+    The rest of the staff must have been at work a big part of the night.
+    
+    Then awake sooner than I do.
+
+    I hope they will still be all right today.
+    """
+    
     call change_time(8, 30)
 
     $ change_room('dining_room', dissolve)
@@ -91,33 +97,16 @@ label host_day2_morning:
 
     $ stop_music()
 
-    # TODO: The hunt. Cancelling it would be the decent thing, and the butler has made
-    #       it plain that the weekend goes on. She has to sell it as her own idea.
+    # TODO: The hunt. Cancelling it would be the decent thing, and the butler has made it plain that the weekend goes on. She has to sell it as her own idea.
 
     call common_day2_morning_host_hunt
 
-    call common_day2_morning_hunt_captain_drunk
+    """
+    As expected, Miss Marsh and Miss Baxter excuse themselves.
 
-    # TODO: Mr Manning is in no state for a gun, and nobody says so aloud.
+    The men all agree to come.
 
-    call common_day2_morning_hunt_psychic
+    Well I should get ready too.
+    """
 
-    # TODO: Host line accepting Miss Baxter's refusal, then turning to Miss Marsh.
-
-    call common_day2_morning_hunt_nurse
-
-    call common_day2_morning_hunt_lad
-
-    call common_day2_morning_hunt_host_to_doctor
-
-    # TODO: The whole table waits on the doctor.
-
-    call doctor_day2_hunt_choice
-
-    call common_day2_morning_hunt_end
-
-    # TODO: The men go up to change. She stays, because she cannot shoot, and because
-    #       an empty house is the first hour she has had to herself since Friday.
-
-    # TODO: replace with "jump host_day2_hunt" once the Saturday afternoon chapter exists
     jump work_in_progress
