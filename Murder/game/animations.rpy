@@ -61,3 +61,53 @@ transform button6():
     xpos -50
     pause 1.0
     linear 0.5 xpos 0 alpha 1.0
+
+
+##BODY SPRITES
+##
+## The body_<character> images are built by tools/build_character_sprites.py.
+## They are 880px tall and stand on the bottom edge of the screen, so the waist
+## sits just behind the text box.
+##
+## Convention: show the people the player is looking at, and hide them again
+## before a timed menu opens, since the menu shows its own portraits.
+
+## Three people spread across the room.
+transform body_left:
+    subpixel True
+    xcenter 0.22
+    yalign 1.0
+
+transform body_center:
+    subpixel True
+    xcenter 0.5
+    yalign 1.0
+
+transform body_right:
+    subpixel True
+    xcenter 0.78
+    yalign 1.0
+
+## Two people, standing a little closer together.
+transform body_pair_left:
+    subpixel True
+    xcenter 0.30
+    yalign 1.0
+
+transform body_pair_right:
+    subpixel True
+    xcenter 0.70
+    yalign 1.0
+
+## Lighting, added after the position so the two can be combined:
+##     show body_captain at body_left, body_focus
+## Only needed when several people are on screen and one of them holds the
+## attention. A character shown on their own needs no lighting transform, and a
+## character whose lighting does not change need not be shown again.
+transform body_focus:
+    matrixcolor BrightnessMatrix(-0.18)
+    linear 0.25 matrixcolor BrightnessMatrix(0.0)
+
+transform body_dim:
+    matrixcolor BrightnessMatrix(0.0)
+    linear 0.25 matrixcolor BrightnessMatrix(-0.18)

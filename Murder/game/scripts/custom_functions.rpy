@@ -121,6 +121,11 @@ init python:
         # 3. Legacy / utility images with no suffix (black_background, india_young_captain, etc.)
         return room_id
 
+    def body_sprites_showing():
+        # True while at least one body_<character> sprite stands in the room.
+        # change_room clears the master layer, so this resets on its own.
+        return any(tag.startswith('body_') for tag in renpy.get_showing_tags())
+
     def change_room(new_room, transition = dissolve):
         global current_floor, selected_floor, current_room, previous_room
 

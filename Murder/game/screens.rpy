@@ -118,8 +118,9 @@ screen say(who, what):
 
 
     ## If there's a side image, display it above the text. Do not display on the
-    ## phone variant - there's no room.
-    if not renpy.variant("small"):
+    ## phone variant - there's no room. It also steps aside while body sprites
+    ## are on screen, since they already show who is in the room.
+    if not renpy.variant("small") and not body_sprites_showing():
         add SideImage() xalign 0.0 yalign 1.0 yoffset -310 xoffset 220
 
 

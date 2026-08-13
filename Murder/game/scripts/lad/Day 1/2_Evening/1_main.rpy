@@ -28,6 +28,9 @@ label lad_day1_evening:
 
     $ play_music('upbeat')
 
+    show body_butler at body_center
+    with dissolve
+
     butler """
     Welcome, sir.
     """
@@ -52,7 +55,11 @@ label lad_day1_evening:
     Well, it's not as if I have multiple changes of clothes anyway. So, I follow him.
     """
 
+    # The room change clears the entrance hall and the butler with it.
     $ change_room('tea_room')
+
+    show body_butler at body_center
+    with dissolve
 
     """
     As I step into the room, the butler loudly announces me.
@@ -62,52 +69,70 @@ label lad_day1_evening:
     Mr Ted Harring!
     """
 
+    # He withdraws, and carries on with the introductions from across the room.
+    hide body_butler
+    with dissolve
+
     """
     Everyone turns their heads towards me.
-    
+
     Some people nod in my direction, while others barely acknowledge my presence.
 
     From afar, the butler provides me with a brief introduction to each guest.
     """
 
-    show captain at truecenter
-    butler """ 
+    show body_captain at body_left, body_focus
+    with dissolve
+
+    butler """
     The older gentleman speaking is from India, and his name is Sushil Sinha.
     """
 
-    hide captain
+    show body_captain at body_left, body_dim
+    show body_nurse at body_center, body_focus
+    with dissolve
 
-    show nurse at truecenter
     butler """
     He is in conversation with Rosalind Marsh...
     """
-    hide nurse
 
-    show doctor at truecenter
+    show body_nurse at body_center, body_dim
+    show body_doctor at body_right, body_focus
+    with dissolve
+
     butler """
     ... and with Daniel Baldwin, the gentleman with spectacles.
     """
-    hide doctor
 
-    show broken at truecenter
+    hide body_captain
+    hide body_nurse
+    hide body_doctor
+    with dissolve
+
+    show body_broken at body_left, body_focus
+    with dissolve
+
     butler """
-    Do not be alarmed by the man in the mask. 
+    Do not be alarmed by the man in the mask.
 
     He is a war veteran, Mr Thomas Moody.
     """
-    hide broken
 
-    show drunk at truecenter
+    show body_broken at body_left, body_dim
+    show body_drunk at body_center, body_focus
+    with dissolve
+
     butler """
     The person on the sofa, who looks rather exhausted, is Mr Samuel Manning.
     """
-    hide drunk
 
-    show psychic at truecenter
+    show body_drunk at body_center, body_dim
+    show body_psychic at body_right, body_focus
+    with dissolve
+
     butler """
     The lady in the corner is Mrs Amelia Baxter.
     """
-    hide psychic
 
     lad """
     I don't see our host in the room.
@@ -119,6 +144,10 @@ label lad_day1_evening:
     You'll meet her at dinner.
     """
 
+    hide body_broken
+    show body_drunk at body_center, body_focus
+    with dissolve
+
     """
     After this introduction, he leaves me and goes to stand in the corner of the room.
 
@@ -128,7 +157,12 @@ label lad_day1_evening:
 
     They seem more approachable than the rest.
     """
-    
+
+    # The timed menu brings its own portraits, so the room empties first.
+    hide body_drunk
+    hide body_psychic
+    with dissolve
+
     $ time_left = 20
     
     call run_menu( TimedMenu("lad_introduction", [
@@ -181,27 +215,43 @@ label lad_day1_evening:
 
     $ play_music('chill', 2)
 
+    show body_host at body_center
+    with dissolve
+
     call common_day1_evening_host_welcome_speech
 
     """
     After her speech, everyone appears pleased.
-    
+
     A few of the guests begin to express their appreciation to the host.
     """
 
     call common_day1_evening_host_dinner_enjoy_meal
 
+    hide body_host
+    with dissolve
+
     """
-    At that moment, the butler enters the room, accompanied by the footman. 
+    At that moment, the butler enters the room, accompanied by the footman.
 
     They begin to serve the first dish and pour drinks for everyone.
 
     The mood in the room gradually relaxes, and the sound of various conversations fills the space.
 
     I turn my attention to the guests seated next to me.
+    """
 
+    show body_doctor at body_pair_left
+    show body_psychic at body_pair_right
+    with dissolve
+
+    """
     I find myself sitting between Amelia Baxter and Daniel Baldwin.
     """
+
+    hide body_doctor
+    hide body_psychic
+    with dissolve
 
     call change_time(19, 30)
 
@@ -236,6 +286,9 @@ label lad_day1_evening:
     The footman escorts me up the grand staircase, leading me to the first floor.
     """
 
+    show body_footman at body_center
+    with dissolve
+
     footman """
     Here you are, sir.
 
@@ -252,6 +305,9 @@ label lad_day1_evening:
     It is more spacious than my flat, and more luxurious than I could have imagined.
     """
 
+    show body_footman at body_right
+    with dissolve
+
     footman """
     I hope the room suits your taste.
     """
@@ -259,6 +315,9 @@ label lad_day1_evening:
     lad """
     This is... this is good, yes. Thank you.
     """
+
+    hide body_footman
+    with dissolve
 
     """
     The footman exits the room.
@@ -348,9 +407,15 @@ label lad_day1_drinks_psychic:
     I am approaching the middle-aged woman.
     """
 
+    show body_psychic at body_center
+    with dissolve
+
     call common_day1_drinks_lad_psychic_encounter
 
     call psychic_generic
+
+    hide body_psychic
+    with dissolve
 
     return
 
@@ -362,7 +427,10 @@ label lad_day1_drinks_drunk:
 
     He holds an empty glass in his hand. His gaze is empty.
     """
-    
+
+    show body_drunk at body_center
+    with dissolve
+
     lad """
     Hello, sir. How are you?
     """
@@ -374,6 +442,9 @@ label lad_day1_drinks_drunk:
     """
     He reeks of booze, and he is deeply asleep. Talking to him is useless.
     """
+
+    hide body_drunk
+    with dissolve
 
     return
 
@@ -420,7 +491,10 @@ label lad_day1_evening_bedroom_psychic:
 
 
 label lad_day1_evening_dinner_psychic:
-    
+
+    show body_psychic at body_pair_right
+    with dissolve
+
     lad """
     Hi again Miss Baxter.
     """
@@ -430,11 +504,17 @@ label lad_day1_evening_dinner_psychic:
     """
 
     call psychic_generic
-    
+
+    hide body_psychic
+    with dissolve
+
     return
-    
+
 
 label lad_day1_evening_dinner_doctor:
+
+    show body_doctor at body_pair_left
+    with dissolve
 
     lad """
     Hello. I am Ted Harring.
@@ -449,5 +529,8 @@ label lad_day1_evening_dinner_doctor:
     """
 
     call doctor_generic
+
+    hide body_doctor
+    with dissolve
 
     return
