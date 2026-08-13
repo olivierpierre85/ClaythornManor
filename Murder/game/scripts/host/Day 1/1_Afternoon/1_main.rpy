@@ -24,7 +24,11 @@ label host_introduction:
     The journey from London is finally coming to a close.
 
     I am eager, but also nervous, about the most unusual role I have ever been hired to play.
+    """
 
+    play sound train_stopping
+    
+    """
     The hostess of a Scottish manor.
 
     A prominent lady.

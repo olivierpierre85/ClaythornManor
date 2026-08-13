@@ -177,7 +177,7 @@ label host_day1_evening:
 
     I shall let you return to your rooms, then.
 
-    Afterwards there will be drinks in the billiard room for anyone who cares to sit up a while.
+    Afterwards there will be drinks in the billiard room for anyone who is inclined.
     """
 
     """
@@ -317,13 +317,11 @@ label host_day1_dinner_broken:
     """
 
     """
-    He does not give me the chance to ask a single question of my own.
+    He does not give me the chance to ask him another question.
 
     And that is how it goes for the whole of dinner.
 
     I feel as though I am being interrogated, and I must be extremely careful not to give anything away.
-
-    In the end, I do not manage to ask him a single question.
     """
 
     return

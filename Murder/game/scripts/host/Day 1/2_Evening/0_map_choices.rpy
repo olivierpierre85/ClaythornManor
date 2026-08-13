@@ -48,7 +48,7 @@ label host_day1_evening_go_downstairs:
 
         return
 
-    $ change_room('servant_stairs')
+    $ change_room('basement_stairs')
 
     """
     I look at the narrow stair down.
@@ -133,7 +133,7 @@ label host_day1_evening_scullery:
     
     Old houses have rats.
 
-    Except that this one was shut up until yesterday, and will be again at the end of this weekend.
+    Except that this house was shut up until yesterday, and will be again at the end of this weekend.
 
     Why would anyone bother getting rid of rats for a mere couple of days?
 
@@ -157,7 +157,7 @@ label host_day1_evening_garage:
     """
     Petrol and cold iron, and a different car from the one we came up in.
 
-    An old tourer, well kept.
+    An old tourer.
 
     It does not look as though it will start.
 
@@ -177,7 +177,7 @@ label host_day1_evening_gun_room:
 
     It reminds me of a Chekhov's play I once saw.
 
-    I am not sure why.
+    Though I am not sure why.
 
     Better leave it there.
     """

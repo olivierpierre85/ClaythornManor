@@ -110,12 +110,11 @@ label host_day1_evening_debrief:
             host """
             Surely that cannot be so bad.
 
-            I am sure nobody noticed.
+            I am certain nobody noticed.
             """
 
             butler """
-            You cannot be certain of that.
-
+            
             Even so, you might have run by chance into a guest, and that would have raised questions.
 
             You should not take such a risk.

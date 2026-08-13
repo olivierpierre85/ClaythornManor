@@ -65,9 +65,6 @@ label init_host:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
-        ])
-
-        host_objects = CharacterObjectList([
             CharacterInformation(
                 1, "found_poison",
                 "You found an open bottle of rat poison in the scullery",
@@ -77,6 +74,8 @@ label init_host:
                 relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
             ),
         ])
+
+        host_objects = CharacterObjectList([])
 
         host_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "name_age", "Elisabeth - is born in 1865 and", is_important = True, unlock_chapters=[('host', 'friday_evening')]),
