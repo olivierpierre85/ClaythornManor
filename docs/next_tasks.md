@@ -31,7 +31,7 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 
 OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mister Harring. How are you feelin?" => Unlocks TED Harring? Or **unlock Butler**
 
-### Write Story: NEXT => FRIDAY MAP ATTIC
+### Write Story:
 ## HOST
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
 
@@ -39,37 +39,19 @@ Broken unlocks host, host unlocks full drunk? AND BUTLER?
 
 **The fun part**. You know where everything is (poison,...) 
 ANd you must have learned about **manners**.
-You'll have questions on how to behave (like butter bread, who talk to first,...)
+You'll have questions on how to behave (like butter bread, who talk to first,...) ??? 
 
 ### FRiday,
 
 Before dinner
 => First task hide letters behing the sheets for CAPTAIN and thomas moody. NO it is the butler who placed them?????
 
-
 ### FRiday, dinner
+add another thread from Thomas Moody interrogation ?
+
 Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
 
-BROKEN, same dynamic as doctor? Or simply he deflects all of my questions? TODO rethingk
-
-
-### FRiday, night
-MAP => 
-
-**Library** => Maybe I should learn about this family => Learn your real name and TITLE(useful for later, will serve as defense when everyone is accusing you).
-
-THE BOOK is for you ADD foreshadowing from the butler => If you have the time check the library
-
-**Downstairs**, add CHOICE before going down? Maybe later
-
-**Bedrooms**, dialog says I SHOULDN'T, it is too suspicious (same as broken.)
-**your own** Say you can't take anymore 
-
-**Attic**, I do not even have the key for this place. The butler will have it.
-
-**Portrait** => I should think of something to say for not having my portrait. => thread, thing to ask butler.
-
-**Billiard room** => Just listen to captain sinha. If you do add visiting billiar room thread. If you do not, it will be suspicious
+###  NEXT => FRiday, night
 
 **Back to room to rest**. Butler comes for debrief;
 IF any suspicious acting the butler comes knocking at the door to chastesize you. DO better, people start asking questions. otherwise, everything fine

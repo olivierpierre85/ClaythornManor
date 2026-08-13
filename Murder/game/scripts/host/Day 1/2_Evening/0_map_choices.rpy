@@ -32,7 +32,7 @@ label host_day1_evening_map_menu:
             map_choice('females_room', 'host_day1_evening_attic_default', 10),
             map_choice('attic_butler_room', 'host_day1_evening_attic_default', 10),
             # Specific actions
-            TimedMenuChoice('Sit up with your guests in the billiard room', 'host_day1_evening_billiard_room', 40, room='billiard_room'),
+            TimedMenuChoice('Sit up with your guests in the billiard room', 'host_day1_evening_billiard_room', 90, room='billiard_room'),
             TimedMenuChoice('Retire for the night', 'generic_cancel', early_exit=True, room='bedroom_host'),
         ], is_map = True)
 

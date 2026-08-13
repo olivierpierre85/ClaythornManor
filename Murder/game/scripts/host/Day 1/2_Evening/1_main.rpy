@@ -202,7 +202,7 @@ label host_day1_evening:
 
     call change_time(21, 15)
 
-    $ time_left = 120
+    $ time_left = 90
 
     call run_menu(host_details.saved_variables["day1_evening_map_menu"])
 
@@ -210,16 +210,10 @@ label host_day1_evening:
 
     $ stop_music()
 
-    if not host_details.saved_variables['day1_evening_billiard_room_visited']:
+    if not host_details.threads.is_unlocked('stayed_with_guests'):
 
         """
-        Somewhere below, the last of them are going up to bed.
-
-        I never went near the billiard room.
-
-        A hostess who gives a party and then puts herself away for the evening is a hostess with something the matter with her.
-
-        They will have noticed. People always notice the chair that stays empty.
+        It has got rather late, so I head back to my room for the night.
         """
 
     $ change_room('bedroom_host', dissolve)
