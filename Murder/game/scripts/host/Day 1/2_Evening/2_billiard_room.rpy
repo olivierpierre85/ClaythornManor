@@ -50,13 +50,13 @@ label host_day1_evening_billiard_room:
     host """
     Thank you, Captain. I doubt any of us will forget it.
 
-    Now, if you excuse me, it has gotten rather late.
+    Now, if you will excuse me, it has gotten rather late.
     
     I should head back to my room for the night.
     """
 
     """
-    The others follow me lead.
+    The others follow my lead.
     """
 
     $ host_details.threads.unlock('stayed_with_guests')

@@ -175,9 +175,9 @@ label host_day1_evening_gun_room:
     """
     Sporting guns behind glass, and a handgun lying out on the table.
 
-    It reminds me of a theatre trope I once read about.
+    It reminds me of a Chekhov's play I once saw.
 
-    Chekhov's Gun.
+    I am not sure why.
 
     Better leave it there.
     """
@@ -210,7 +210,7 @@ label host_day1_evening_garden:
 
     I stand in the doorway long enough to feel the cold on my face.
 
-    I won't be able to go further without ruining my dress.
+    I will not be able to go further without ruining my dress.
 
     So I go back inside before anyone sees the lady of the house standing in the wet.
     """
