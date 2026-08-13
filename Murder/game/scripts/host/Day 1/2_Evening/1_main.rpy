@@ -218,15 +218,246 @@ label host_day1_evening:
 
     $ change_room('bedroom_host', dissolve)
 
+    $ play_music('mysterious', 2)
+
+    play sound door_knock
+
     """
-    The house goes quiet by degrees. Doors, water in the pipes, the last of the footsteps on the landing.
+    Someone knocking at this hour.
 
-    I take the clothes off, and the woman in the glass goes with them.
-
-    One day of three.
+    That can only be him.
     """
 
-    jump host_day1_evening_debrief
+    butler """
+    My lady? May I come in.
+    """
+
+    host """
+    Yes, come on in.
+    """
+
+    """
+    He enters and immediately loses his air of obedience.
+    """
+
+    # TODO add picture not smiling? seriouS?
+
+    python:
+        host_debrief_fault_count = 0
+        host_debrief_fault_index = 0
+
+        if not host_details.threads.is_unlocked('addressed_manning_first'):
+            host_debrief_fault_count += 1
+
+        if host_details.threads.is_unlocked('go_downstairs'):
+            host_debrief_fault_count += 1
+
+        if not host_details.threads.is_unlocked('stayed_with_guests'):
+            host_debrief_fault_count += 1
+
+    if host_debrief_fault_count > 0:
+
+        if host_debrief_fault_count == 1:
+
+            butler """
+            Well, the first day is gone, and better than I feared.
+
+            There is one thing, though.
+            """
+
+            host """
+            Oh? What was it?
+            """
+
+        else:
+            
+            butler """
+            Well, the first day is gone, but I am afraid it was not without mistakes.
+            """
+
+            host """
+            Really, what happened?
+            """
+
+        if not host_details.threads.is_unlocked('addressed_manning_first'):
+
+            call host_day1_evening_debrief_next_fault
+
+            if is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
+
+                butler """
+                You went to your right first at dinner.
+
+                You should have gone to your left, as was plainly set out in the book of rules I gave you.
+                """
+
+                host """
+                Oh sorry, I forgot about that rule.
+
+                But surely nobody noticed.
+                """
+
+                butler """
+                Maybe, but I am not sure.
+
+                I think some of them might be more accustomed to that sort of thing than we first thought.
+                """
+
+            else:
+
+                butler """
+                You sat through your own dinner between two guests and spoke to neither of them.
+
+                That is not how a hostess behaves, and people have noticed.
+
+                It was making everyone uncomfortable.
+                """
+
+        if host_details.threads.is_unlocked('go_downstairs'):
+
+            call host_day1_evening_debrief_next_fault
+
+            butler """
+            You went below stairs.
+            """
+
+            host """
+            I wanted to see the house I am supposed to have grown up in.
+            """
+
+            butler """
+            The mistress of a house does not go down to the servants' floor.
+
+            She rings, and she waits, and they come up to her.
+            """
+
+            host """
+            Nobody saw me.
+            """
+
+            butler """
+            You cannot know that.
+
+            There are seven people under this roof, and not one of them was where I expected them to be this evening.
+
+            If one of them saw the lady of the house on the servants' stair, they will remember it.
+            """
+
+        if not host_details.threads.is_unlocked('stayed_with_guests'):
+
+            call host_day1_evening_debrief_next_fault
+
+            butler """
+            You gave them drinks and did not come.
+
+            They sat up until eleven waiting for their hostess to look in.
+            """
+
+            host """
+            I needed an hour where nobody was looking at me.
+            """
+
+            butler """
+            You will not get one. Not this weekend.
+            """
+
+        if host_debrief_fault_count == 1:
+
+            butler """
+            It is not fatal in itself. But it is the sort of small thing that sits badly with people, and they do not forget it.
+
+            You should do better tomorrow.
+            """
+
+        else:
+
+            butler """
+            None of it is fatal on its own. But all put together and it might attract attention.
+
+            You should do better tomorrow.
+            """
+
+        """
+        He is right, which is the worst of it.
+
+        I have been telling myself all evening that I got away with it, and he has stood in a corner keeping score.
+        """
+
+    else:
+
+        butler """
+        I shall not keep you.
+
+        It went well. The speech was better than I expected.
+
+        And you acted the part without a mistake.
+
+        At least not one I could notice.
+        """
+
+        host """
+        Of course, I assume you were observing me all evening.
+        """
+
+        butler """
+        Yes, sorry if that is unnerving, but I need to make sure everything is going according to plan.
+        """
+
+        host """
+        Of course.
+        """
+
+    butler """
+    Now, if you'll excuse me.
+    
+    We will meet again tomorrow.
+    """
+
+    host """
+    Of course, good night.
+    """
+
+    """
+    He leaves without a word.
+
+    So I take the clothes off, and get ready for the next day.
+    """
+
+    jump host_day2_morning
+
+
+# ------------------------------------
+#   DEBRIEF — JOINING THE FAULTS UP
+#   Called at the top of each fault block. The first one needs no lead-in,
+#   because the opening line has already announced it.
+# ------------------------------------
+label host_day1_evening_debrief_next_fault:
+
+    $ host_debrief_fault_index += 1
+
+    if host_debrief_fault_index == 1:
+
+        return
+
+    if host_debrief_fault_index == 3:
+
+        butler """
+        And the last of it.
+        """
+
+    elif host_debrief_fault_count == 2:
+
+        butler """
+        And there is one other thing.
+        """
+
+    else:
+
+        butler """
+        That is not the whole of it.
+        """
+
+    return
 
 
 # ------------------------------------

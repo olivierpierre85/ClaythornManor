@@ -1,15 +1,4 @@
-# The debrief, Friday, last thing at night.
-#
-# The butler comes up whatever happens. What changes is why:
-#   - at least one lapse in the evening -> he comes to correct her, and every
-#     one of them is read back to her in order (suspicious_acting). The lapses
-#     are: addressed_manning_first left locked, and stayed_with_guests left
-#     locked.
-#   - otherwise                         -> he comes to say it went well, which
-#     from him is a considerable speech.
-#
-# Then she gets her questions. Each one is gated on what she actually found
-# tonight, and none of the answers are as reassuring as he means them to be.
+# OBSOLETE FOR NOW
 
 label host_day1_evening_debrief:
 
@@ -17,28 +6,39 @@ label host_day1_evening_debrief:
 
     play sound door_knock
 
-    if not host_details.threads.is_unlocked('addressed_manning_first') or not host_details.threads.is_unlocked('stayed_with_guests'):
+    """
+    Someone knocking at this hour.
 
-        """
-        Two knocks, and he does not wait to be asked.
-        """
+    That can only be him.
+    """
+
+    butler """
+    My lady? May I come in.
+    """
+
+    host """
+    Yes, come on in.
+    """
+
+    """
+    He enters and immediately lose his air of obedience.
+    """
+
+    # TODO add picture not smiling? seriouS?
+
+    if host_details.threads.is_unlocked('addressed_manning_first') or host_details.threads.is_unlocked('stayed_with_guests') or host_details.threads.is_unlocked('go_downstairs'):
 
         butler """
-        My lady.
+        Well, the first day is gone, but I am afraid it was not without mistakes.
         """
 
         host """
-        It is gone eleven.
+        Really, what happened?
         """
 
         butler """
-        It is. And I would rather have this now than at breakfast.
+        TODO
         """
-
-        """
-        He shuts the door behind him and stands with his back to it, which is a thing servants do not do.
-        """
-
         if not host_details.threads.is_unlocked('addressed_manning_first'):
 
             if is_choice_already_chosen('host_day1_evening_menu_dinner', 'host_day1_dinner_broken'):
@@ -99,45 +99,45 @@ label host_day1_evening_debrief:
         I have been telling myself all evening that I got away with it, and he has stood in a corner counting the places where I did not.
         """
 
-        $ host_details.threads.unlock('suspicious_acting')
-
     else:
-
-        """
-        Two knocks, and then he waits to be asked, which he does not always trouble to do.
-        """
-
-        butler """
-        May I, my lady?
-        """
-
-        host """
-        You may.
-        """
 
         butler """
         I shall not keep you.
 
-        It went well. The speech was better than the speech deserved, and you held the table without appearing to hold it.
+        It went well. The speech was better than I expected.
 
-        Mr Moody watched you all evening and learned nothing worth having.
+        And you acted the part without a mistake.
+
+        At least not one I could notice.
         """
 
         host """
-        High praise, from a man in a corner.
+        Of course, I assume you were observing me all evening.
         """
 
         butler """
-        The corner is where one sees it, my lady.
-
-        Two more days of tonight and we are all of us paid and gone.
+        Yes, sorry if that is unnerving, but I need to make sure everything is going according to plan.
         """
 
+        host """
+        Of course.
         """
-        And for one moment, standing in my own borrowed bedroom in my own borrowed name, I am as pleased with myself as I have ever been in a dressing room.
 
-        Which is when the rest of the evening comes back to me, item by item.
-        """
+    butler """
+    Now, if you'll excuse me.
+    
+    We will meet again tomorrow.
+    """
+
+    host """
+    Of course, good night.
+    """
+
+    """
+    He leaves without a word.
+    """
+
+
 
     """
     He is at the door already.

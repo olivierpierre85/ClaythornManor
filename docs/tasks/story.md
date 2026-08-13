@@ -153,6 +153,7 @@
 ### Ideas to think over (optional)
 - [ ] Why is her name never mentioned?
 - [ ] broadway backstage or outside image for the introduction?
+- [ ] Add thread book of etiquitte in her room? Another clue for whoever visit her room?
 
 
 ## Butler

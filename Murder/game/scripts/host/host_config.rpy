@@ -24,14 +24,6 @@ label init_host:
 
         host_important_choices = CharacterImportantChoiceList([
             CharacterInformation(
-                0, "suspicious_acting",
-                "Your performance slipped in front of the guests",
-                content_negative="You played Lady Claythorn all evening without a slip",
-                image_file="host",
-                chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_evening'],
-            ),
-            CharacterInformation(
                 1, "addressed_manning_first",
                 "You turned first to Mr Manning, on your left, at dinner",
                 content_negative="You did not turn  first to Mr Manning, on your left, at dinner",
@@ -73,14 +65,6 @@ label init_host:
                 image_file="captain_host_suspicion_portrait",
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],
-            ),
-            CharacterInformation(
-                3, "manning_act",
-                "You saw through Samuel Manning's drunkenness. Some of it is a performance",
-                content_negative="You didn't see anything unusual about Samuel Manning",
-                image_file="drunk_character",
-                chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_evening', 'sunday_morning'],
             ),
         ])
 
