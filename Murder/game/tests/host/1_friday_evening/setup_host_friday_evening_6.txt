@@ -57,6 +57,26 @@ The first act is over.
 I sit down and relax for a second.
 But I must start talking to the guests now.
 I remember that it matters who I address first.
+Menu Choice: Turn to Mr Manning, on your left
+Menu Choice: What do you think of this weather?
+Samuel Manning: The weather?
+Samuel Manning: Splendid.
+Samuel Manning: Absolutely... splendid.
+Samuel Manning: Or is it dreadful?
+Samuel Manning: No matter.
+Lady Claythorn: Right.
+Has he even noticed the weather at all?
+Menu Choice: Tell me more about yourself.
+Lady Claythorn: Tell me about yourself, Mr Manning.
+Lady Claythorn: I already know all about your admirable work as a barrister.
+Lady Claythorn: But do tell me about your family.
+Lady Claythorn: Do you have any children?
+Samuel Manning: Children?
+Samuel Manning: No.
+Samuel Manning: Sadly, my wife passed away before we could have any.
+Lady Claythorn: I am so sorry.
+Samuel Manning: Do not worry, it was long ago.
+Menu Choice: You don't have any more questions for him
 Menu Choice: Keep to yourself and see out the meal
 The last plates go out, and it is up to me to call the end of dinner.
 Lady Claythorn: It looks as though everyone has finished their meal.
@@ -70,6 +90,47 @@ But not too long.
 I am expected downstairs, and failing to appear would raise questions.
 But I do not need to reach the billiard room right away.
 What should I do?
+Map Choice: Library
+A better library than I expected.
+A heavy book lies open on the table.
+I assume it is the one left out for me, so that I might learn about this place.
+'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
+I turn to the index. Clarendon, Claridge, Clark.
+Claythorn.
+Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith.
+Book: Born on June 22, 1813.
+Book: His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
+Book: With Mary Kirwan, his wife, he fathered one son and one daughter:
+Book: 1. Elisabeth, his heir, born in 1865.
+Book: 2. Andrew, born in 1867, died in 1869.
+Book: Lineage...
+Elisabeth.
+My name is Elisabeth, and I was born in 1865.
+Which makes me fifty-nine years old, and I have been telling myself all evening that I look my age.
+Then, something strange.
+The family name is Claythorn. The title is not.
+They hold a peerage. The Earldom of Kilbraith.
+The daughter and heir of the Earl of Kilbraith is not 'Lady Claythorn'.
+She is Lady Kilbraith.
+That is a small mistake. Still, I should be prepared if anyone else makes the same realisation I did.
+I think of a few explanations and land on one that should satisfy anyone who asks.
+But I doubt that will happen.
+I close the book and leave the room.
+Map Choice: Portrait Gallery
+A dozen Claythorns in gilt frames, looking down the gallery.
+Many generations of people who have lived and died at Claythorn Manor.
+Then a sudden realisation dawns on me.
+There is no portrait of me, the supposed mistress of the house.
+Not impossible in itself, but I should think of a good excuse.
+If somebody asks me about it, I ought to be ready.
+Map Choice: Tea room
+The tea room has been put straight already.
+Cushions plumped, glasses gone, not a ring left on the wood.
+Map Choice: Garden
+Rain, and a wind coming up through the trees.
+I stand in the doorway long enough to feel the cold on my face.
+I won't be able to go further without ruining my dress.
+So I go back inside before anyone sees the lady of the house standing in the wet.
 Map Choice: Dining Room
 The table has already been cleared.
 It looks good, considering the small number of staff.
@@ -78,32 +139,20 @@ The hall, empty, with the lamps turned low.
 I notice the carpet has worn thin along the line a footman would walk, and the brass could do with attention.
 Not what one would expect from a well kept house.
 Hopefully, nobody will think too much of it.
-Map Choice: Servant Stairs
-The narrow stair the staff use, with a footman's livery hanging on its peg.
-There is nothing for me to do here.
-Map Choice: Garden
-Rain, and a wind coming up through the trees.
-I stand in the doorway long enough to feel the cold on my face.
-I won't be able to go further without ruining my dress.
-So I go back inside before anyone sees the lady of the house standing in the wet.
-Map Choice: Retire for the night
 I am exhausted, so I head back to my room for the night.
 Someone knocking at this hour.
 That can only be him.
 Butler: My lady?
 Lady Claythorn: Yes, come on in.
 He enters and immediately loses his air of obedience.
-Butler: Well, the first day is done, but I am afraid it was not without mistakes.
-Lady Claythorn: Really, what happened?
-Butler: You sat through your own dinner between two guests and spoke to neither of them.
-Butler: That is not how a hostess behaves, and people have noticed.
-Butler: It made everyone uncomfortable.
-Butler: And there is one other thing.
+Butler: Well, the first day is done, and better than I feared.
+Butler: There is one thing, though.
+Lady Claythorn: Oh? What was it?
 Butler: You invited them for drinks and then did not appear in the billiard room at all.
 Butler: They sat up waiting for their hostess to look in.
 Butler: No doubt questions were raised.
-Butler: None of it is fatal on its own.
-Butler: But taken all together, it might attract attention.
+Butler: It is not fatal in itself.
+Butler: But it is the sort of small thing that sits badly with people, and they do not forget it.
 Butler: You should do better tomorrow.
 He is right, of course.
 I have not been careful enough.

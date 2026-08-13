@@ -1,0 +1,13 @@
+Generated:                2026-08-13 11:32:03
+Scope:                    character=host
+Dialogue entries scanned: 315
+Test lines collected:     737
+Covered:                  311
+Missing:                  4
+
+  game/scripts/host/host_generic_locations.rpy  (4 missing)
+    [host_library_default_aa764d6b] I have learned all I needed from the book on the table.
+    [host_library_default_7da5e42c] There is nothing more for me here.
+    [host_portrait_gallery_default_a05173c1] The portraits are still there, and not one of them wears my face.
+    [host_portrait_gallery_default_46c0ca7e] Nothing about that has changed.
+

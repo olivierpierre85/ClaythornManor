@@ -1,43 +1,40 @@
 Chapter: The Arrival
 Character: Lady Claythorn
-They have all arrived. I have heard every one of them come in without setting eyes on a single one.
-The car on the gravel, the door, the butler's voice going smoothly through the same speech again and again, and me at the top of the house being kept out of sight like a surprise.
-Which, I suppose, is what I am.
-The afternoon went on tasks. Learning which door leads where, so that I never have to ask. Learning the names of my own guests off a sheet of paper.
-And now I am dressed in eighty pounds of somebody else's clothes, looking at a woman in the glass whom I have never met.
-Not bad. Not bad at all.
-The hair is wrong for my face and exactly right for hers.
-Two knocks. Always two.
-Butler: May I come in, my lady?
-Lady Claythorn: There is nobody in the corridor, is there.
-Butler: There is always somebody in the corridor.
-He comes in with a sheet of paper and that maddening calm of his, and I want to throw something at him and thank him at the same time.
-Butler: The placement. Learn it now, because you will not have it in your hand at the table.
-Butler: Mr Manning is on your left. Mr Moody on your right. The others as written.
-Butler: You will turn to your left first, then to your right when the plates change. A hostess who takes them out of order tells the whole table she was not raised to it.
-Butler: You do not eat much, you do not drink at all, and you keep the conversation moving round you rather than at you.
-I run my eye down the list. Seven guests, seven rooms, and beside each name a line or two in his handwriting.
-Where they come from. What they do. What each of them is supposed to have done to deserve a thousand pounds.
-Whoever put this weekend together knows a great deal about the people coming up my stairs tonight.
-Lady Claythorn: And the speech?
-Butler: Word for word, as written.
-Butler: Do not improve it.
-Lady Claythorn: It could stand a little improving.
-Butler: So could most things.
-Butler: My lady. In an hour a great deal will depend on seven people believing you without being asked to.
-Butler: Say it as you would say it to a house of nine hundred who have paid to be there.
-Well.
+The afternoon went by quickly.
+I learnt which door leads where, so that I never have to ask.
+I studied the names of the guests from a sheet of paper.
+Most of them must have arrived by now.
+I take a look in the mirror.
+And I see myself dressed in elegant clothes.
+The sort I am only accustomed to wearing onstage.
+That should help me remember that I am playing a role here.
+Someone knocks on my door.
+Lady Claythorn: Come in!
+Butler: I come to see that everything is ready.
+Butler: Do you remember the etiquette?
+Lady Claythorn: Of course I do.
+I spent hours on a book about proper dinner table manners.
+As if the whole plot depended on it.
+Butler: Good, I have also written the speech you are to give at dinner.
+Butler: Here it is.
+Butler: You should know it by heart by dinner.
+Butler: That would establish you without a doubt as the lady of the house.
+Butler: Do it well and they will not question who you are.
+Butler: Just pretend you are telling it to an audience in a theatre.
+Lady Claythorn: Very well.
 That, at least, I know how to do.
-The gong goes below, and every nerve I have goes with it.
+Butler: One more thing.
+Butler: I have left a book out for you in the library.
+Butler: When you have the time, you should read the part about this place.
+Butler: That might be helpful.
+I nod, and he leaves without ceremony.
+So I start to memorise my lines.
+The gong goes below.
 Curtain up.
-I come in last, because that is the only entrance worth making.
-Seven faces turn, and I take the long walk to my chair with my chin at the angle I have been practising in a cold room in Camden for a fortnight.
-Nobody stands up quickly enough, which means nobody is quite certain how grand I am. Good. Let them work it out.
-I do not look at any of them until I am seated. Then I look at all of them.
-An old soldier, very upright. A doctor with a glass already half down. A young man in a suit that is not his.
-A woman in mourning colours who has done her own hair. A masked man on my right, who has not stopped watching me since I came through the door.
-My audience.
-I let the silence sit half a beat longer than is comfortable, the way you do when a house is still coughing, and I begin.
+I come in last.
+Seven faces turn, and I take the long walk to my chair.
+I do not look at any of them until I reach my place.
+I let the silence sit half a beat longer than is comfortable, and I begin.
 Lady Claythorn: Welcome, everyone. My apologies for keeping you waiting.
 Lady Claythorn: Now that we're all gathered, I'd like to express my gratitude once more.
 Lady Claythorn: As you already know, you are here because of the heroic acts you've committed in the past.
@@ -48,152 +45,134 @@ Lady Claythorn: You'll be fully catered to, enjoying the most refined food, expe
 Lady Claythorn: During the three days we'll spend together, we'll also partake in various activities, which I'm sure you'll find enjoyable.
 Lady Claythorn: My second gift is a sum of one thousand pounds, awarded to each and every one of you.
 Lady Claythorn: This is my way of thanking those as selfless as yourselves, who help others without thought of reward.
-I take them slowly. I give them the pause before the money, because a pause before money is worth more than the money.
-And I keep my hands still, which is the hardest part of the whole performance.
-When I sit down there is that warm shuffle round a table that means it landed.
+When I am done there is that warm shuffle round a table that means it landed.
 A few of them murmur their thanks.
 Lady Claythorn: Please, there's no need to thank me.
 Lady Claythorn: The food will be served shortly.
 Lady Claythorn: Enjoy your meal.
 The first course comes in on the heels of it, and the room turns into a dinner party.
-My hands are shaking under the cloth. Nobody can see them. That is all that matters.
-On my left, Mr Manning has already emptied his glass and is watching the footman's progress round the table with an air of quiet mathematics.
-When the wine reaches him he does not lift the glass so much as meet it.
-He has done that a great many times, and not one person at this table is surprised by it.
-On my right, Mr Moody sits behind a mask of painted tin, cut and coloured to stand in for the face the war took off him.
-I have seen them in the street and looked away like everybody else. It is a different thing entirely to have one turned towards you over the soup.
-I make myself hold his eye rather than the mask, which he notices, and which I meant him to notice.
-Two neighbours, then. Two hours of it.
-And a very great deal depends on which of them I turn to first.
+My hands are shaking slightly under the cloth.
+But nobody can see them.
+The first act is over.
+I sit down and relax for a second.
+But I must start talking to the guests now.
+I remember that it matters who I address first.
 Menu Choice: Turn to Mr Manning, on your left
-Left first. I turn to my left.
-Menu Choice: I hope the dinner is to your liking?
-Lady Claythorn: I hope the dinner is to your liking, Mr Manning.
-Samuel Manning: The dinner.
-He looks down at his plate as though he had not noticed it was there.
-Then something in his face settles.
-Samuel Manning: The sole is poached, not boiled, and whoever made that sauce was in no hurry whatsoever.
-Samuel Manning: Butter, cream, a little of the cooking liquor, and just enough lemon to keep the whole thing honest.
-Samuel Manning: It has been worked at the side of the stove the best part of an hour. You cannot rush it. It splits if you do.
-Samuel Manning: And the shallots in the beef were sweated, never fried. There is not a scorched edge anywhere on that plate.
-Samuel Manning: Whoever you have in that kitchen is a serious person, Lady Claythorn.
-Samuel Manning: I should like to shake their hand.
-Not one slurred word in the whole of it.
-Not one.
-I have spent fifteen years watching people pretend, and I know what I have just seen.
-He was in character a moment ago, and for the length of that sauce he stepped out of it.
-Lady Claythorn: You know a great deal about a kitchen, Mr Manning.
-And the instant I say it, he is drunk again.
-Samuel Manning: Do I.
-Samuel Manning: My father kept a good table.
-Samuel Manning: Very good. Very... good table.
-The hand goes back round the glass. The eyes go soft. The vowels come apart.
-It is a decent performance. Better than decent.
-But I have known actors sober up for a matinee and be legless again by six, and this is not that.
-This is a man who has learnt that nobody asks a drunk anything difficult.
-So he stays one.
-I ought to admire it. Instead it makes me cold.
-Because if he is playing a part at this table, then he has as much reason to hide as I have.
-Menu Choice: What is it that you do, Mr Manning?
-Lady Claythorn: You must forgive me, Mr Manning. I have had your name and nothing else all evening.
-Lady Claythorn: What is it that you do?
-Samuel Manning: Do.
-Samuel Manning: I am a man of the law, madam.
-Samuel Manning: A barrister.
-Samuel Manning: Or I was one. At this hour it comes to much the same thing.
-Lady Claythorn: And what sort of law?
-Samuel Manning: Defence.
-Samuel Manning: I stood up for people nobody else would stand up for.
-Lady Claythorn: That is not a small thing.
-Samuel Manning: It is not a large one either.
-Samuel Manning: There were cases I got wrong, Lady Claythorn.
-Samuel Manning: The law does not forgive a man for that.
-Samuel Manning: Neither do the people he got wrong.
-He says it plainly, without asking for sympathy, and reaches for the wine.
-Whatever ruined him, he has told himself the story often enough to have worn the edges off it.
-Menu Choice: Ask him to tell you, in his own words, why he is here
-I should like to know what he did to earn his place at this table.
-But I cannot possibly ask him. I am the woman who invited him.
-I shall have to come at it the long way round.
-Lady Claythorn: I should like to hear it from you, Mr Manning, rather than from a letter.
-Lady Claythorn: In your own words. What is it that brought you to my table?
-Samuel Manning: In my own words.
-Samuel Manning: I took the cases nobody else would touch.
-Samuel Manning: The poor. The desperate.
-Samuel Manning: The ones with nothing to pay me with and nothing to lose.
-Samuel Manning: A man of the people, one of the papers called me once. I have never quite recovered from it.
-Lady Claythorn: Somebody has to speak for them.
-Samuel Manning: So they tell me.
-Samuel Manning: Nobody ever mentions what it costs the man doing the speaking.
-So that is what his letter said, near enough.
-A defender of the poor, honoured for his selflessness.
-Whoever wrote those invitations knew exactly what to say to each of them.
-And I have been handed the part of the woman who means every word of it.
-Menu Choice: Turn back to the rest of the table
+Menu Choice: What do you think of this weather?
+Samuel Manning: The weather?
+Samuel Manning: Splendid.
+Samuel Manning: Absolutely... splendid.
+Samuel Manning: Or is it dreadful?
+Samuel Manning: No matter.
+Lady Claythorn: Right.
+Has he even noticed the weather at all?
+Menu Choice: Tell me more about yourself.
+Lady Claythorn: Tell me about yourself, Mr Manning.
+Lady Claythorn: I already know all about your admirable work as a barrister.
+Lady Claythorn: But do tell me about your family.
+Lady Claythorn: Do you have any children?
+Samuel Manning: Children?
+Samuel Manning: No.
+Samuel Manning: Sadly, my wife passed away before we could have any.
+Lady Claythorn: I am so sorry.
+Samuel Manning: Do not worry, it was long ago.
+Menu Choice: Ask him more about his wife
+Lady Claythorn: Forgive me if I am intruding, but how did your wife die?
+TODO
+Menu Choice: What do you think of the other guests?
+Samuel Manning: The other guests?
+Samuel Manning: Interesting lot.
+Samuel Manning: Very... very interesting.
+Samuel Manning: I'm sure they're all perfectly fine.
+He waves a hand vaguely in the direction of the dining table.
+I suppose that is as much as I shall get from him.
+Menu Choice: You don't have any more questions for him
 Menu Choice: Turn to Mr Moody, on your right
-The plates change, and I turn to my right as I ought.
+Lady Claythorn: Mr Moody.
 Thomas Moody: Lady Claythorn.
-Thomas Moody: A remarkable speech, if I may say so.
-Lady Claythorn: You may, Mr Moody. It is a good deal easier to give away money than to earn it.
-Thomas Moody: Easier, certainly.
-Thomas Moody: Rarer, though.
-Thomas Moody: Forgive me, but I confess the whole business puzzles me a little.
-Thomas Moody: An award of this size, given quietly, out here, to seven people who have never met.
-Thomas Moody: However did it come about?
-And there it is, over the fish, in the pleasantest voice in the room.
-He is not making conversation. That was a question with a shape to it.
-Menu Choice: Turn the question back on him
-Lady Claythorn: You have a great many questions for a man who has not told me a thing about himself.
-Lady Claythorn: That is hardly fair, Mr Moody. Your turn.
-Thomas Moody: There is very little to tell, I am afraid.
-Thomas Moody: I mend motor cars in Liverpool. I have done since the war.
-Lady Claythorn: And before the war?
-Thomas Moody: Before the war I was in service, my lady.
-Thomas Moody: Boot boy, then footman, in a house not unlike this one.
-Well.
-That accounts for the quarter of an inch.
-He has stood at the wall through a hundred dinners exactly like this one, and there is not a thing I do at this table that he has not watched a real one do first.
-Of all the people to seat on my right.
-Lady Claythorn: Then you must tell me if my staff go wrong. You will see it long before I do.
-Thomas Moody: They have gone wrong twice already.
-Thomas Moody: But since you are good enough to ask, my lady, I shall say nothing about either.
-He says it lightly, as a joke against my footmen.
-I laugh, because it is expected, and because the alternative is to ask him which two things, and I cannot possibly ask him which two things.
-Menu Choice: Keep to yourself and see out the meal
-The last plates go out, the covers come off, and I say the sentence I have been holding all evening.
-Lady Claythorn: There will be drinks in the billiard room for anyone who cares to sit up a while.
-Lady Claythorn: Please do not feel obliged. It has been a long day for all of you.
-Chairs go back. The party moves off in twos and threes.
-And that is dinner survived.
-I go up first, because I need the door shut and thirty seconds of not being looked at.
-I sit on the end of the bed in eighty pounds of somebody else's clothes and let my face come off.
-Thirty seconds. That is what I allow myself.
-Then I stand up, because there is a great deal in this house I have not seen, and this is the only hour I shall have to myself.
-They are all in the billiard room, the staff are run off their feet, and nobody in the world knows where I am.
+Thomas Moody: I must thank you again for your generosity.
+Lady Claythorn: No need, I am very happy to do it.
+Lady Claythorn: But now I would like to know a little more about you.
+Thomas Moody: There is not much to tell, I am afraid.
+Thomas Moody: I spent my youth in service, boot boy and then footman, and after that I enlisted.
+Thomas Moody: Now I live quietly on my pension in Liverpool.
+Thomas Moody: But I would far rather talk about you.
+Lady Claythorn: Of course, but ...
+Thomas Moody: This house is splendid, for instance.
+Thomas Moody: Has it been in your family long?
+Lady Claythorn: Well, yes ...
+He does not give me the chance to ask a single question of my own.
+And that is how it goes for the whole of dinner.
+I feel as though I am being interrogated, and I must be extremely careful not to give anything away.
+In the end, I do not manage to ask him a single question.
+The last plates go out, and it is up to me to call the end of dinner.
+Lady Claythorn: It looks as though everyone has finished their meal.
+Lady Claythorn: I shall let you return to your rooms, then.
+Lady Claythorn: Afterwards there will be drinks in the billiard room for anyone who cares to sit up a while.
+Chairs go back.
+The party moves off.
+And that is it for dinner.
+I go up first, because I need the door shut and a moment to regroup.
+But not too long.
+I am expected downstairs, and failing to appear would raise questions.
+But I do not need to reach the billiard room right away.
+What should I do?
+Map Choice: Library
+A better library than I expected.
+A heavy book lies open on the table.
+I assume it is the one left out for me, so that I might learn about this place.
+'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
+I turn to the index. Clarendon, Claridge, Clark.
+Claythorn.
+Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith.
+Book: Born on June 22, 1813.
+Book: His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
+Book: With Mary Kirwan, his wife, he fathered one son and one daughter:
+Book: 1. Elisabeth, his heir, born in 1865.
+Book: 2. Andrew, born in 1867, died in 1869.
+Book: Lineage...
+Elisabeth.
+My name is Elisabeth, and I was born in 1865.
+Which makes me fifty-nine years old, and I have been telling myself all evening that I look my age.
+Then, something strange.
+The family name is Claythorn. The title is not.
+They hold a peerage. The Earldom of Kilbraith.
+The daughter and heir of the Earl of Kilbraith is not 'Lady Claythorn'.
+She is Lady Kilbraith.
+That is a small mistake. Still, I should be prepared if anyone else makes the same realisation I did.
+I think of a few explanations and land on one that should satisfy anyone who asks.
+But I doubt that will happen.
+I close the book and leave the room.
+Map Choice: Portrait Gallery
+A dozen Claythorns in gilt frames, looking down the gallery.
+Many generations of people who have lived and died at Claythorn Manor.
+Then a sudden realisation dawns on me.
+There is no portrait of me, the supposed mistress of the house.
+Not impossible in itself, but I should think of a good excuse.
+If somebody asks me about it, I ought to be ready.
 Map Choice: Sit up with your guests in the billiard room
 The billiard room is warm, and near enough everyone is in it.
-Miss Marsh has taken the chair by the fire and Mr Moody the one beside her. Mr Harring is standing about at the edge of things, holding his glass as though it might be taken off him.
-Dr Baldwin has found a corner and a bottle. Mr Manning has found the bar, which was never in doubt.
+Miss Marsh stands by the fire, with Mr Moody beside her.
+Mr Harring is standing about at the edge of things, holding his glass as though it might be taken off him.
+Dr Baldwin has found himself a chair.
+Mr Manning has found the bar, which was never in doubt.
 And the butler is in the shadow by the door with his hands folded, missing nothing.
-I take the seat they leave for me, and the room arranges itself around it.
-That is the part nobody warns you about. They give you the best chair without thinking, and you have to take it without thinking too.
-Captain Sinha comes in last.
+I head towards Miss Marsh and Mr Moody and strike up a light conversation.
+Soon, I notice Captain Sinha entering the room.
+Talking to him seems the safest option for me.
 Lady Claythorn: Captain Sinha. Do come and join us.
 Sushil Sinha: Thank you, Lady Claythorn.
 Rosalind Marsh: Captain, you must tell us one of your stories.
 Rosalind Marsh: Mr Moody was just saying what a fine storyteller you are.
 He makes the little show of reluctance that a man makes when he has been waiting all evening to be asked.
-Then he takes up his position by the fireplace, and I mean position.
-Feet apart, weight back, the glass held where his hands can be seen.
-Whoever taught him did a thorough job.
+Then he takes up his position by the fireplace and begins.
 Sushil Sinha: It was in June of 1900, so some of you might remember.
 Sushil Sinha: In China, a group of rebels, called the "Boxers," had taken up arms against foreign presence in their country.
 Sushil Sinha: They were a group of mostly peasants, poorly armed.
 Sushil Sinha: We called them "Boxers" because of their use of martial arts in their fights.
 I let my eyes go round the room while he settles into it.
-Miss Marsh is watching him rather harder than the story requires. Mr Moody has not moved at all.
-Mr Manning is at the bar with his back to the whole performance, and I find I am no longer certain he is not listening to every word.
-Then I put my chin on my hand and give the captain my whole face, because that is what I am for tonight.
+I feel it is going to be a long story.
+Good. The less I talk, the better.
 Sushil Sinha: They managed to surround the Europeans and Japanese in the "International Legations" quarter, in China's capital, Beijing.
 Sushil Sinha: There, the besieged did their best to resist the Chinese assaults, but it was obvious to everyone that they wouldn't last very long.
 Sushil Sinha: In order to break the siege and rescue their compatriots, the largest foreign nations formed expeditions to help lift the siege of Beijing.
@@ -237,134 +216,27 @@ Sushil Sinha: In the end, my commanders were really pleased with me.
 Sushil Sinha: So, I was sent to London to lead a training regiment nearby.
 Sushil Sinha: That was very rare for someone of Indian descent.
 Sushil Sinha: In any case, that's why I live in England today.
-He finishes to a small, warm silence, which is the only applause a room like this gives.
-It was well told. That is what strikes me.
-Not well remembered. Well told.
-The pauses fall in the same places a good speech puts them, and the awful parts come exactly where an audience is ready for them.
-Every man tells his war twice, I suppose. The second time it has become a piece.
+He finishes to a small, warm silence.
 Lady Claythorn: Thank you, Captain. I doubt any of us will forget it.
-The evening loosens after that. Somebody proposes billiards, somebody else pours, and for the best part of an hour I am nothing more than a woman being agreeable in a warm room.
-It is the easiest work I have ever been paid for, and it frightens me more than the speech did.
-Because I can feel how much I like it.
-I catch the butler's eye once, in the shadow by the door.
-There is a great deal I should like to ask him, and not one of it can be asked here.
-Map Choice: Library
-A better library than the rest of the house deserves.
-A heavy book lies open on the table, left there for the guests to find, no doubt.
-'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
-And there is a thought I do not much care for.
-Every person at that table knows more about my family than I do.
-I was given a house, a voice, a way of holding a fork, and not one word about the woman I am supposed to be.
-That will not do. An actress who does not know her part is only a woman in a good dress.
-I turn to the index. Clarendon, Claridge, Clark.
-Claythorn.
-Book: Nicholas Claythorn, of Claythorn Manor, 3rd Earl of Kilbraith.
-Book: Born on June 22, 1813.
-Book: His parents were Nicholas Claythorn, 2nd Earl of Kilbraith, and Agnes Cicely.
-Book: With Mary Kirwan, his wife, he fathered one son and one daughter:
-Book: 1. Elisabeth, his heir, born in 1865.
-Book: 2. Andrew, born in 1867, died in 1869.
-Book: Lineage...
-Elisabeth.
-My name is Elisabeth, and I was born in 1865.
-Which makes me fifty-nine years old, and I have been telling myself all evening that I look my age.
-Then the rest of it, and the rest of it is worse.
-The family name is Claythorn. The title is not.
-They hold a peerage. The Earldom of Kilbraith.
-A peer is addressed by his title and never by his surname. The daughter and heir of the Earl of Kilbraith is not 'Lady Claythorn'.
-She is Lady Kilbraith.
-I have spent the whole evening introducing myself by a name that does not exist.
-And he had me learn the fork.
-Very well. Panicking is for the rehearsal room.
-If anyone puts it to me, I let the villagers take the blame. They have called this house Claythorn since before I was born, and in time I simply let it stick.
-It is thin. But said with enough boredom, thin will hold.
-I close the book and set it back exactly as I found it.
-Map Choice: Library
-I have had what I came for out of that book.
-Elisabeth Claythorn, and a title I was never given.
-There is nothing more here for me tonight.
-Map Choice: Portrait Gallery
-A dozen Claythorns in gilt frames, looking down the gallery at me with no expression I would call welcoming.
-Powdered wigs. Stiff collars. A rather fine hunting scene with a heavy-jawed gentleman in the middle of it.
-I look for something of myself in any of those faces, out of habit more than hope, and of course there is nothing.
-I walk the whole length of it twice.
-Then I understand what is wrong with this room.
-There is no portrait of the mistress of the house.
-Every one of these people had themselves painted, and the only one missing is the woman who owns the place.
-All it takes is one guest standing where I am standing, asking which one is you, Lady Claythorn.
-And I have nothing.
-No. I shall have something.
-A portrait was begun in the spring and the man made me look like my own mother, so I sent it back and have not had the heart to sit again.
-That is the sort of thing a woman says about a portrait. Vain, dull, and impossible to check.
-I say it twice under my breath in the empty gallery until it sounds like something I have said before.
-But the butler ought to have thought of this before I did. I shall be having a word with him about it.
-The house goes quiet by degrees. Doors, water in the pipes, the last of the footsteps on the landing.
-I take the clothes off, and the woman in the glass goes with them.
-One day of three.
-Two knocks, and then he waits to be asked, which he does not always trouble to do.
-Butler: May I, my lady?
-Lady Claythorn: You may.
+Lady Claythorn: Now, if you excuse me, it has gotten rather late.
+Lady Claythorn: I should head back to my room for the night.
+The others follow me lead.
+Someone knocking at this hour.
+That can only be him.
+Butler: My lady?
+Lady Claythorn: Yes, come on in.
+He enters and immediately loses his air of obedience.
 Butler: I shall not keep you.
-Butler: It went well. The speech was better than the speech deserved, and you held the table without appearing to hold it.
-Butler: Mr Moody watched you all evening and learned nothing worth having.
-Lady Claythorn: High praise, from a man in a corner.
-Butler: The corner is where one sees it, my lady.
-Butler: Two more days of tonight and we are all of us paid and gone.
-And for one moment, standing in my own borrowed bedroom in my own borrowed name, I am as pleased with myself as I have ever been in a dressing room.
-Which is when the rest of the evening comes back to me, item by item.
-He is at the door already.
-No. Not yet.
-There are things about this house I would like explained while there is nobody about to hear me ask.
-Menu Choice: I am not Lady Claythorn. I am Lady Kilbraith.
-Lady Claythorn: I read the book in the library tonight.
-Lady Claythorn: The family is Claythorn. The title is Kilbraith. Earls of Kilbraith, since before Waterloo.
-Lady Claythorn: Which means the woman I am playing has been introducing herself all evening by a name no peer would ever use.
-Lady Claythorn: You had me learn which fork. You did not think to give me my own name.
-He does not apologise. I did not expect him to.
-Butler: Then you know more than you did this morning, and you had it out of a book that anybody in that house may read.
-Lady Claythorn: That is not an answer.
-Butler: No. Here is one.
-Butler: We were given the name to use. It was on the letters, and the letters went out before either of us was engaged.
-Butler: I could hardly send eight people an invitation from Lady Claythorn and produce a Lady Kilbraith at the door.
-Lady Claythorn: Then whoever wrote those letters does not know how a peerage works.
-Butler: Or did not care.
-He says it evenly, and something in the evenness of it is worse than if he had looked worried.
-Lady Claythorn: And if one of them puts it to me?
-Butler: You will say the village has called this house Claythorn since your grandfather's day, and you long ago stopped correcting people.
-Butler: Say it as though it bores you.
-Butler: You will find that the truth and a bored woman are very difficult to tell apart.
-Menu Choice: There is no portrait of me in this house
-Lady Claythorn: There is a gallery downstairs with a dozen of my ancestors in it and not one of me.
-Lady Claythorn: A house like this has a portrait of its mistress. It is the whole point of a house like this.
-Lady Claythorn: All it takes is one of them standing in that gallery asking which one is you.
-Butler: I know.
-Lady Claythorn: You know.
-Butler: There was to have been one.
-Butler: A canvas was to be hung in the gallery before the guests arrived, and it did not come.
-Butler: I have written twice about it and had no reply.
-That is the first time tonight that he has told me something without deciding to.
-He has been sending letters to somebody and getting nothing back.
-Lady Claythorn: Then I shall have to be vain about it. A portrait was begun in the spring, the man made me look like my own mother, and I sent it back.
-Butler: That will do very well.
-Butler: Be sure to be a little ashamed of it. Vanity is only believed when it is admitted.
-Menu Choice: Who is paying for all this?
-Lady Claythorn: Before you go.
-Lady Claythorn: Who is paying for this?
-Lady Claythorn: Not the wages. I know where my wages come from. The house, the staff, the seven thousand pounds we are to hand out on Sunday.
-Butler: A gentleman who prefers his name kept out of it.
-Lady Claythorn: You have met him.
-Butler: I have had letters from him.
-Butler: Terms, dates, the guest list, the sums. Everything one could want, in a very fine hand.
-Lady Claythorn: And a joke to be played on the guests before we go.
-Butler: A surprise, my lady. That was the word used.
-Butler: Which is what I was told, and it is all I was told, and I have taken the money on the strength of it exactly as you have.
-We look at one another for a moment across a very expensive bedroom.
-Two people who have been hired out of an empty season by a man neither of us has met, to be somebody else in a house nobody lives in, for three days.
-When you say it out loud like that it does not sound like a joke at all.
-Butler: Get some sleep, my lady.
-Butler: You have a shoot in the morning, and you cannot shoot.
-Menu Choice: Let him go to bed
-When he has gone I sit a while with the lamp on and my hands flat on my knees, which is what I do before a first night.
-Seven people asleep along that corridor, and every one of them believes a thing about me that is not true.
-I have never had a better part.
-I have never once been frightened of one before.
+Butler: It went well. The speech was better than I expected.
+Butler: And you acted the part without a mistake.
+Butler: At least not one I could notice.
+Lady Claythorn: Of course, I assume you were observing me all evening.
+Butler: Yes, sorry if that is unnerving, but I need to make sure everything is going according to plan.
+Lady Claythorn: Of course.
+Butler: Now, if you will excuse me.
+Butler: We shall meet again tomorrow.
+Lady Claythorn: Of course, good night.
+He leaves without another word.
+I suppose he will only play the dutiful servant when we have company.
+Anyway, it has been a long day, so I take my clothes off and get into bed.
+It is not long before I fall asleep.

@@ -1,0 +1,17 @@
+{
+    "start_label": "host_day1_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day1_evening_menu_dinner",
+            "selected": "Keep to yourself and see out the meal",
+            "redirect": "generic_cancel"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Sit up with your guests in the billiard room",
+            "redirect": "host_day1_evening_billiard_room"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "start_label": "host_day1_evening",
+    "unlocked_threads": [],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day1_evening_menu_dinner",
+            "selected": "Turn to Mr Moody, on your right",
+            "redirect": "host_day1_dinner_broken"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "host_portrait_gallery_default"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Sit up with your guests in the billiard room",
+            "redirect": "host_day1_evening_billiard_room"
+        }
+    ]
+}

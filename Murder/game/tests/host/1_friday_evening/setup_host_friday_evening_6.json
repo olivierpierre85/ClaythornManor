@@ -20,23 +20,13 @@
         },
         {
             "menu": "drunk_generic_menu_host",
-            "selected": "Ask him more about his wife",
-            "redirect": "drunk_generic_wife"
-        },
-        {
-            "menu": "drunk_generic_menu_host",
-            "selected": "What do you think of the other guests?",
-            "redirect": "drunk_generic_other_guests_friday_dinner"
-        },
-        {
-            "menu": "drunk_generic_menu_host",
             "selected": "You don't have any more questions for him",
             "redirect": "generic_cancel"
         },
         {
             "menu": "host_day1_evening_menu_dinner",
-            "selected": "Turn to Mr Moody, on your right",
-            "redirect": "host_day1_dinner_broken"
+            "selected": "Keep to yourself and see out the meal",
+            "redirect": "generic_cancel"
         },
         {
             "menu": "host_day1_evening_map_menu",
@@ -50,8 +40,23 @@
         },
         {
             "menu": "host_day1_evening_map_menu",
-            "selected": "Sit up with your guests in the billiard room",
-            "redirect": "host_day1_evening_billiard_room"
+            "selected": "Tea room",
+            "redirect": "host_day1_evening_tea_room"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Garden",
+            "redirect": "host_day1_evening_garden"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Dining Room",
+            "redirect": "host_dining_room_default"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Entrance Hall",
+            "redirect": "host_entrance_hall_default"
         }
     ]
 }

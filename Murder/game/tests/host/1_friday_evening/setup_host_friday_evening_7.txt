@@ -57,24 +57,6 @@ The first act is over.
 I sit down and relax for a second.
 But I must start talking to the guests now.
 I remember that it matters who I address first.
-Menu Choice: Turn to Mr Manning, on your left
-Menu Choice: What do you think of this place?
-Samuel Manning: Grand old place, isn't it.
-Samuel Manning: Full of... full of history, I suppose.
-Lady Claythorn: It is. It has been in my family for generations.
-Samuel Manning: Right.
-Samuel Manning: Well, it is splendid.
-Lady Claythorn: Thank you.
-I am lucky he did not ask any follow-up questions.
-I do not know enough about this place.
-Menu Choice: How old are you?
-Samuel Manning: How old am I?
-Samuel Manning: Too old for all of this.
-Samuel Manning: Fifty-five years, if you must know.
-Samuel Manning: Fifty-five years and... and not a thing to show for it.
-Fifty-five, and he could pass for seventy by this light.
-How dreadful.
-Menu Choice: You don't have any more questions for him
 Menu Choice: Keep to yourself and see out the meal
 The last plates go out, and it is up to me to call the end of dinner.
 Lady Claythorn: It looks as though everyone has finished their meal.
@@ -88,21 +70,6 @@ But not too long.
 I am expected downstairs, and failing to appear would raise questions.
 But I do not need to reach the billiard room right away.
 What should I do?
-Map Choice: Garage
-I look at the narrow stair down.
-It should lead to the servants' quarters.
-A lady should not go there.
-She should ring, and wait for the servants to come up to her.
-But curiosity is too strong, and I go down anyway.
-Petrol and cold iron, and a different car from the one we came up in.
-An old tourer, well kept.
-It does not look as though it will start.
-Nothing for me here.
-Map Choice: Gun room
-Sporting guns behind glass, and a handgun lying out on the table.
-It reminds me of a theatre trope I once read about.
-Chekhov's Gun.
-Better leave it there.
 Map Choice: Sit up with your guests in the billiard room
 The billiard room is warm, and near enough everyone is in it.
 Miss Marsh stands by the fire, with Mr Moody beside her.
@@ -182,15 +149,9 @@ He enters and immediately loses his air of obedience.
 Butler: Well, the first day is done, and better than I feared.
 Butler: There is one thing, though.
 Lady Claythorn: Oh? What was it?
-Butler: You went below stairs.
-Butler: The mistress of a house does not go down to the servants' floor.
-Butler: She rings, and she waits, and they come up to her.
-Lady Claythorn: Surely that cannot be so bad.
-Lady Claythorn: I am sure nobody noticed.
-Butler: You cannot be certain of that.
-Butler: Even so, you might have run by chance into a guest, and that would have raised questions.
-Butler: You should not take such a risk.
-Lady Claythorn: Very well.
+Butler: You sat through your own dinner between two guests and spoke to neither of them.
+Butler: That is not how a hostess behaves, and people have noticed.
+Butler: It made everyone uncomfortable.
 Butler: It is not fatal in itself.
 Butler: But it is the sort of small thing that sits badly with people, and they do not forget it.
 Butler: You should do better tomorrow.

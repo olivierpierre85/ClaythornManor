@@ -10,28 +10,18 @@
         },
         {
             "menu": "drunk_generic_menu_host",
-            "selected": "What is it that you do, Mr Manning?",
-            "redirect": "drunk_generic_background_host"
+            "selected": "What do you think of this place?",
+            "redirect": "drunk_generic_manor_host"
         },
         {
             "menu": "drunk_generic_menu_host",
-            "selected": "Ask him to tell you, in his own words, why he is here",
-            "redirect": "drunk_generic_heroic_act_host"
+            "selected": "How old are you?",
+            "redirect": "drunk_generic_age_host"
         },
         {
             "menu": "drunk_generic_menu_host",
-            "selected": "Turn back to the rest of the table",
+            "selected": "You don't have any more questions for him",
             "redirect": "generic_cancel"
-        },
-        {
-            "menu": "host_day1_evening_menu_dinner",
-            "selected": "Turn to Mr Moody, on your right",
-            "redirect": "host_day1_dinner_broken"
-        },
-        {
-            "menu": "host_day1_dinner_broken_menu",
-            "selected": "Say as little as you can decently say",
-            "redirect": "host_day1_dinner_broken_vague"
         },
         {
             "menu": "host_day1_evening_menu_dinner",
@@ -40,33 +30,18 @@
         },
         {
             "menu": "host_day1_evening_map_menu",
-            "selected": "Sit up with your guests in the billiard room",
-            "redirect": "host_day1_evening_billiard_room"
+            "selected": "Garage",
+            "redirect": "host_day1_evening_garage"
+        },
+        {
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Gun room",
+            "redirect": "host_day1_evening_gun_room"
         },
         {
             "menu": "host_day1_evening_map_menu",
             "selected": "Sit up with your guests in the billiard room",
             "redirect": "host_day1_evening_billiard_room"
-        },
-        {
-            "menu": "host_day1_evening_map_menu",
-            "selected": "Portrait Gallery",
-            "redirect": "host_day1_evening_portrait_gallery"
-        },
-        {
-            "menu": "host_day1_evening_map_menu",
-            "selected": "Portrait Gallery",
-            "redirect": "host_day1_evening_portrait_gallery"
-        },
-        {
-            "menu": "host_day1_evening_debrief_menu",
-            "selected": "There is no portrait of me in this house",
-            "redirect": "host_day1_evening_debrief_portrait"
-        },
-        {
-            "menu": "host_day1_evening_debrief_menu",
-            "selected": "Let him go to bed",
-            "redirect": "generic_cancel"
         }
     ]
 }

@@ -9,59 +9,9 @@
             "redirect": "host_day1_dinner_broken"
         },
         {
-            "menu": "host_day1_dinner_broken_menu",
-            "selected": "Give him the story you were taught",
-            "redirect": "host_day1_dinner_broken_tradition"
-        },
-        {
-            "menu": "host_day1_evening_menu_dinner",
-            "selected": "Turn to Mr Manning, on your left",
-            "redirect": "host_day1_dinner_drunk"
-        },
-        {
-            "menu": "drunk_generic_menu_host",
-            "selected": "I hope the dinner is to your liking?",
-            "redirect": "drunk_generic_food_host"
-        },
-        {
-            "menu": "drunk_generic_menu_host",
-            "selected": "What do you think of this place?",
-            "redirect": "drunk_generic_manor"
-        },
-        {
-            "menu": "drunk_generic_menu_host",
-            "selected": "Have they given you a comfortable room?",
-            "redirect": "drunk_generic_room_friday"
-        },
-        {
-            "menu": "drunk_generic_menu_host",
-            "selected": "What do you think of the other guests?",
-            "redirect": "drunk_generic_other_guests_friday_dinner"
-        },
-        {
-            "menu": "drunk_generic_menu_host",
-            "selected": "Turn back to the rest of the table",
-            "redirect": "generic_cancel"
-        },
-        {
-            "menu": "host_day1_evening_menu_dinner",
-            "selected": "Keep to yourself and see out the meal",
-            "redirect": "generic_cancel"
-        },
-        {
             "menu": "host_day1_evening_map_menu",
             "selected": "Scullery",
             "redirect": "host_day1_evening_scullery"
-        },
-        {
-            "menu": "host_day1_evening_map_menu",
-            "selected": "Scullery",
-            "redirect": "host_day1_evening_scullery"
-        },
-        {
-            "menu": "host_day1_evening_map_menu",
-            "selected": "Kitchen",
-            "redirect": "host_day1_evening_kitchen"
         },
         {
             "menu": "host_day1_evening_map_menu",
@@ -89,24 +39,9 @@
             "redirect": "host_day1_evening_bedroom_avoid"
         },
         {
-            "menu": "host_day1_evening_debrief_menu",
-            "selected": "There is an open bottle of rat poison in the scullery",
-            "redirect": "host_day1_evening_debrief_poison"
-        },
-        {
-            "menu": "host_day1_evening_debrief_menu",
-            "selected": "Why do I not have the key to my own attic?",
-            "redirect": "host_day1_evening_debrief_attic"
-        },
-        {
-            "menu": "host_day1_evening_debrief_menu",
-            "selected": "Who is paying for all this?",
-            "redirect": "host_day1_evening_debrief_employer"
-        },
-        {
-            "menu": "host_day1_evening_debrief_menu",
-            "selected": "Let him go to bed",
-            "redirect": "generic_cancel"
+            "menu": "host_day1_evening_map_menu",
+            "selected": "Tea room",
+            "redirect": "host_day1_evening_tea_room"
         }
     ]
 }

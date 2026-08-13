@@ -3,20 +3,6 @@ label host_day1_evening_billiard_room:
 
     $ change_room('billiard_room')
 
-    if host_details.saved_variables['day1_evening_billiard_room_visited']:
-
-        """
-        I look in on them again.
-
-        The fire has been made up, the glasses are full, and nobody wants anything from me but my presence.
-
-        I can do presence.
-        """
-
-        return
-
-    $ host_details.saved_variables['day1_evening_billiard_room_visited'] = True
-
     """
     The billiard room is warm, and near enough everyone is in it.
 
