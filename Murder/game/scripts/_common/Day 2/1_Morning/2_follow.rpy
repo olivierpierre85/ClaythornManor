@@ -25,7 +25,9 @@ label common_day2_breakfast_follow_doctor_lad_host:
     elif current_character.text_id == "host":
 
         """
-        TODO
+        We climb the stairs quickly, the butler a step ahead of me.
+
+        Ted Harring follows without being asked.
         """
 
     butler """
@@ -61,9 +63,11 @@ label common_day2_breakfast_follow_doctor_lad_host:
         """
 
     elif current_character.text_id == "host":
-    
+
         """
-        TODO
+        He lies on his back with the mask still on, and the bedclothes hardly disturbed.
+
+        The doctor takes him by the wrist.
         """
 
     $ stop_music(fadeout_length=1)

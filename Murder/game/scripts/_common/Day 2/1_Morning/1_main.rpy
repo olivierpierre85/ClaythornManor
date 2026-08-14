@@ -3,17 +3,21 @@
 # ------------------------------------
 label common_day2_morning_host_death:
 
-    """
-    Suddenly, Lady Claythorn and the butler are back in the room.
-    """
+    if current_character != host_details:
+        # TODO maybe  make a different sentence for everyone
+        """
+        Suddenly, Lady Claythorn and the butler are back in the room.
+        """
 
     captain """
     Lady Claythorn, what is happening?
     """
 
-    """
-    The lady is visibly distressed.
-    """
+    if current_character != host_details:
+        # TODO maybe  make a different sentence for everyone
+        """
+        The lady is visibly distressed.
+        """
 
     host """
     I'm sorry to announce such horrible news, everyone.
@@ -23,9 +27,11 @@ label common_day2_morning_host_death:
 
     $ play_music('scary')
 
-    """
-    The room instantly falls silent.
-    """
+    if current_character != host_details:
+        # TODO maybe  make a different sentence for everyone
+        """
+        The room instantly falls silent.
+        """
 
     captain """
     Do we know what happened?
@@ -37,11 +43,13 @@ label common_day2_morning_host_death:
     He will likely tell us more later.
     """
 
-    """
-    She then sits down in her chair.
+    if current_character != host_details:
+        # TODO maybe  make a different sentence for everyone
+        """
+        She then sits down in her chair.
 
-    Everyone looks shaken up.
-    """
+        Everyone looks shaken up.
+        """
 
     captain """
     How terrible.
@@ -51,9 +59,11 @@ label common_day2_morning_host_death:
     Yes, such sad news.
     """
 
-    """
-    We continue eating slowly in silence for a moment when the doctor enters the room.
-    """
+    if current_character != host_details:
+        # TODO maybe  make a different sentence for everyone
+        """
+        We continue eating slowly in silence for a moment when the doctor enters the room.
+        """
 
     return
 
