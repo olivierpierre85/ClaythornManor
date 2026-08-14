@@ -23,4 +23,7 @@ label host_config_progress:
             'saturday_morning': [
                 {"label": "host_day2_morning", "threads": {}},
             ],
+            'saturday_afternoon': [
+                {"label": "host_day2_hunt", "threads": {}},
+            ],
         }

@@ -26,7 +26,7 @@ label host_day2_morning:
     $ play_music('chill', 3)
 
     """
-    I wake and stat getting ready for breakfast.
+    I wake and start getting ready for breakfast.
 
     I realise I have the easy role in all of this.
 
@@ -41,22 +41,32 @@ label host_day2_morning:
 
     $ change_room('dining_room', dissolve)
 
-    # TODO: She is down before any of them, which is deliberate. A hostess is never
-    #       seen arriving.
-    # TODO: The guests come down in order: the Captain, the Doctor, Miss Baxter and
-    #       Miss Marsh, Mr Harring, and finally Mr Manning in a dreadful state.
-    # TODO: One place stays empty. Mr Moody does not come down, and she notices it
-    #       only as a small failure of her table.
-    # TODO: Menu candidate - which of them she works on over breakfast. Needs a menu id
-    #       and threads before it can be written.
+
+    """
+    I reach the dining room hoping to be the first one there.
+
+    To my surprise, Captain Sinha is already seated, enjoy a light breakfast.
+    """
+
+    captain """
+    Good morning, I am sorry, I am already.
+
+    It is a soldier's habit, I am afraid.
+    """
+
+    host """
+    Do not worry Captain.
+
+    I will fix myself a plate and join you soon.
+    """
+
+    """
+    I take my place at the table and the guests arrive one by one.
+    """
 
     call change_time(9, 15)
 
     $ play_music('mysterious', 2)
-
-    # TODO: The butler comes in and bends to her ear. Whatever face she has on, she
-    #       must keep it, with seven people watching her receive the news.
-    # TODO: The line the butler gives her, and the effort of standing up calmly.
 
     call common_day2_morning_host_to_doctor
 
@@ -64,8 +74,9 @@ label host_day2_morning:
 
     $ change_room('bedrooms_hallway', dissolve)
 
-    # TODO: The walk along the corridor with the two of them behind her. The butler
-    #       leads and she follows, which is the wrong way round for a house she owns.
+    """
+    todo
+    """
 
     $ change_room('bedroom_broken', dissolve)
 
@@ -97,7 +108,9 @@ label host_day2_morning:
 
     $ stop_music()
 
-    # TODO: The hunt. Cancelling it would be the decent thing, and the butler has made it plain that the weekend goes on. She has to sell it as her own idea.
+    """
+    What now?
+    """
 
     call common_day2_morning_host_hunt
 
@@ -109,4 +122,4 @@ label host_day2_morning:
     Well I should get ready too.
     """
 
-    jump work_in_progress
+    jump host_day2_hunt

@@ -185,27 +185,29 @@ label host_day1_evening_debrief:
         """
 
         host """
-        Of course.
+        Right.
         """
 
     butler """
-    Now, if you will excuse me.
+    Now, I brought the speech to introduce the hunt tomorrow morning.
 
-    We shall meet again tomorrow.
+    Be ready to say it from memory.
     """
 
     host """
-    Of course, good night.
+    Of course.
     """
 
     """
-    He leaves without another word.
+    He hands me a piece of paper then leaves without another word.
 
     I suppose he will only play the dutiful servant when we have company.
 
     Anyway, it has been a long day, so I take my clothes off and get into bed.
 
-    It is not long before I fall asleep.
+    I read the speech a few times until I am confident I know it by heart.
+
+    Afterwards, I quickly fall asleep.
     """
 
     return

@@ -7,6 +7,7 @@
 - Harmonize the Dinner menu (are choices keep_alive or not pick one a keep it)
 - Rething broken unlock backstory, not need much of host
 - TRain sound not in all characters. Add or ok to avoid?
+- harmonize breakfast order arrival (captain must not lady is first)
 - 
 ### Write Story: NEXT => DRUNK
 GEN IDEAS
