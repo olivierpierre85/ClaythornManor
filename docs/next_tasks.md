@@ -8,7 +8,27 @@
 - Rething broken unlock backstory, not need much of host
 - TRain sound not in all characters. Add or ok to avoid?
 - harmonize breakfast order arrival (captain must not lady is first)
-- 
+
+
+
+# MAIN CHANGE
+The last character is not the butler, but the psychic without her make up.
+
+The backstory is the real story.
+
+Once you learn a tidbit about real information, it adds up here.
+
+Nobody cares about the butler.
+
+Put an interrogation point at first
+- Add the name once you discoverd it (Doctors?).
+- Add the picture when you find it (Thomas moody wallet + revelation from????)
+- Once you have everything unlocked Add a new start point => Introduction
+
+RED HARRING (is ted harring) WTF how did I not see that?
+
+LORD, add the lord the characters once the psychic discover him, but with weird things!!!!!!
+ 
 ### Write Story: NEXT => DRUNK
 GEN IDEAS
 
