@@ -16,18 +16,18 @@ Start real work again : spring 2027 (start looking in november)
 
 ---
 # 🚀 Project Completion Timeline (Revised Draft)
-| Finished    | Month          |
-| :---------- | :------------- |
-| **Lad**     | 2024           |
-| **Psychic** | 2025           |
-| **Doctor**  | Feb 2026       |
-| **Nurse**   | March 2026     |
-| **Captain** | June 2026      |
-| **Broken**  | august 2026    |
-| Host        | september 2026 |
-| Drunk       | november 2026  |
-| BUTLER+meta | January 2027   |
-| Full DEMO   | February 2027  |
+| Finished               | Month          |
+| :--------------------- | :------------- |
+| **Lad**                | 2024           |
+| **Psychic**            | 2025           |
+| **Doctor**             | Feb 2026       |
+| **Nurse**              | March 2026     |
+| **Captain**            | June 2026      |
+| **Broken**             | august 2026    |
+| Host                   | september 2026 |
+| Drunk                  | november 2026  |
+| BUTLER/or culprit+meta | January 2027   |
+| Full DEMO              | February 2027  |
 
 
 

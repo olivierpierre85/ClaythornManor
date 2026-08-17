@@ -95,7 +95,7 @@ label init_host:
                 content_negative="You didn't go below stairs to the scullery",
                 image_file="rat_poison",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_afternoon', 'saturday_evening'],
             ),
         ])
 

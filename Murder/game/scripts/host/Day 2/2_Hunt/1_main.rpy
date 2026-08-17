@@ -197,7 +197,9 @@ label host_day2_hunt:
 
     A rabbit, some twenty paces off.
 
-    The Captain has not seen it. Nor has the butler.
+    The Captain has not seen it.
+
+    Nor has the butler.
 
     For the moment it belongs to me alone.
 
@@ -227,14 +229,16 @@ label host_day2_hunt:
 
     $ change_room('forest_clearing', dissolve)
 
+    call common_day2_hunt_luncheon_served
+
     """
-    The pic-nic is set and I am left alone with the Captain.
+    And so I am left alone with the Captain.
 
     We talk of the weather, and other things of no consequence.
 
-    I am glad I do not have to the opportunity to make a mistake.
+    I am glad I am not given the opportunity to make a mistake.
 
-    So the lunch goes pleasantly.
+    So the luncheon goes pleasantly.
     """
 
     call change_time(13, 30)
