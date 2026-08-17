@@ -46,6 +46,14 @@ label init_host:
                 chapters=['friday_evening'],
                 relevant_chapters=['friday_evening', 'saturday_evening'],
             ),
+            CharacterInformation(
+                4, "terrible_shot",
+                "You fired at a sitting rabbit in front of Captain Sinha, and missed it by a yard",
+                content_negative="You gave the rabbit to Captain Sinha rather than fire a second time",
+                image_file="poor_shot",
+                chapters=['saturday_afternoon'],
+                relevant_chapters=['saturday_afternoon', 'saturday_evening'],
+            ),
         ])
 
         host_observations = CharacterObservationList([

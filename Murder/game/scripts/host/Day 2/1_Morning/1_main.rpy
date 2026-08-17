@@ -250,32 +250,4 @@ label host_day2_morning:
     Well, I should get ready too.
     """
 
-    $ change_room('bedroom_host', irisout)
-
-    """
-    I am back in my room, and I try to make sense of what is happening.
-
-    But I do not have much time, so I dress without thinking about it.
-    """
-
-    if host_details.threads.is_unlocked('found_poison'):
-
-        """
-        While I dress myself, an image pops into my mind.
-
-        The bottle in the scullery, standing open as though somebody had just used it.
-
-        Is it possible that it was for...
-
-        No, I cannot start thinking that way.
-
-        I will lose my mind.
-
-        I push the thought aside.
-        """
-
-    """
-    Soon, I am ready to join the others for the hunt.
-    """
-
     jump host_day2_hunt

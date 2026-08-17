@@ -8,6 +8,7 @@
 - Rething broken unlock backstory, not need much of host
 - TRain sound not in all characters. Add or ok to avoid?
 - harmonize breakfast order arrival (captain must not lady is first)
+- ADD in grammar rules : use shall for HOST and upper class, will or 'll for other. MAKE moody use shall to reveal his fancy background?
 
 
 
@@ -72,20 +73,21 @@ add another thread from Thomas Moody interrogation ?
 
 Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
 
-###  FRiday, night
-
 ## SAturday
-### Morning NEXT => 
-=> REuse all dialogs about Broken death, with insight for host. "THat is not what I was planning" => If you went to scullery(found_poison thread). You add insight that what the fuck is happening.
 
-Say you have no choice but to say your lines for the hunt, "improvise just a little"
-
-Have private talk to recap with butler. He will assure that is an unfortunate accident. Nobody could have predicted this. 
-
-### hunt 
+### NEXT =>  hunt 
 Just go along and hunt with Captain and butler. 
 Nothing special but the normal story. NOtice captain can't shoot.
-HERE add option to make another suspicious thing, TODO find what, and add a clue in the captain or lad path to be able to prevent it.
+DONE: the rabbit menu in host_day2_hunt. The missed pheasant stays the main timeline.
+Afterwards she alone spots a rabbit sitting still, and either fires (misses by a yard
+in front of the Captain => thread 'terrible_shot') or offers it to her guest, which
+passes for courtesy and lets her watch him miss a sitting target at twenty paces.
+No clue needed from another path, it is manners not knowledge.
+Still TODO: the gun room, the pairing on the lawn and the luncheon.
+
+Maybe: A pheasant comes to you: 
+Aim and risk missing? => can't shoot (TERRIBLE)
+let the captain have it (nice for a hostess)?
 
 ### evening.
 
