@@ -32,7 +32,7 @@ label host_day2_morning:
 
     The rest of the staff must have been at work for a good part of the night.
 
-    And yet they are awake sooner than I am.
+    And yet they were probably up long before I was.
 
     I hope they will still be all right today.
     """
@@ -153,8 +153,6 @@ label host_day2_morning:
     host """
     An accident, yes.
 
-    God, I hope that is what it is.
-
     But what should we do?
 
     Surely we cannot carry on.
@@ -222,36 +220,17 @@ label host_day2_morning:
     I suppose I can manage that.
     """
 
-    # =>>> NEXT
-    # TODO add what to do next:
-    # K
-
-    # if host_details.threads.is_unlocked('found_poison'):
-
-    #     """
-    #     And I cannot stop thinking of that bottle in the scullery, standing open in a house with no rats worth the trouble.
-    #     """
-
-    # TODO: The authorities. The doctor asks for them to be sent for, the butler
-    #       undertakes to see to it, and she is the only one in the room who knows
-    #       what his undertakings are worth.
-    # TODO: Menu candidate - press the butler about the telephone or the car now, or
-    #       hold her tongue until the guests are out of the house. Needs threads.
-
     call change_time(10, 00)
 
     $ change_room('dining_room', dissolve)
 
-    # TODO: Going back in. The whole table turns, and she has to say it out loud.
+    """
+    I return to the dining room, and as soon as I enter, all eyes are on me.
+    """
 
     call common_day2_morning_host_death
 
     call common_day2_morning_host_death_doctor
-
-    # TODO: Sitting through the silence afterwards, counting how many of them are
-    #       looking at her rather than at their plates.
-    # TODO: And the thing she cannot say: a man is dead in a house that was opened for
-    #       three days by a gentleman neither she nor the butler has ever met.
 
     call change_time(10, 15)
 
@@ -269,6 +248,34 @@ label host_day2_morning:
     The men all agree to come.
 
     Well, I should get ready too.
+    """
+
+    $ change_room('bedroom_host', irisout)
+
+    """
+    I am back in my room, and I try to make sense of what is happening.
+
+    But I do not have much time, so I dress without thinking about it.
+    """
+
+    if host_details.threads.is_unlocked('found_poison'):
+
+        """
+        While I dress myself, an image pops into my mind.
+
+        The bottle in the scullery, standing open as though somebody had just used it.
+
+        Is it possible that it was for...
+
+        No, I cannot start thinking that way.
+
+        I will lose my mind.
+
+        I push the thought aside.
+        """
+
+    """
+    Soon, I am ready to join the others for the hunt.
     """
 
     jump host_day2_hunt

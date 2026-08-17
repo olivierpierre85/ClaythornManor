@@ -29,7 +29,7 @@ RED HARRING (is ted harring) WTF how did I not see that?
 
 LORD, add the lord the characters once the psychic discover him, but with weird things!!!!!!
  
-### Write Story: NEXT => DRUNK
+### Write Story: DRUNK
 GEN IDEAS
 
 THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point.
@@ -72,13 +72,10 @@ add another thread from Thomas Moody interrogation ?
 
 Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
 
-###  NEXT => FRiday, night
-
-**Back to room to rest**. Butler comes for debrief;
-IF any suspicious acting the butler comes knocking at the door to chastesize you. DO better, people start asking questions. otherwise, everything fine
+###  FRiday, night
 
 ## SAturday
-### Morning 
+### Morning NEXT => 
 => REuse all dialogs about Broken death, with insight for host. "THat is not what I was planning" => If you went to scullery(found_poison thread). You add insight that what the fuck is happening.
 
 Say you have no choice but to say your lines for the hunt, "improvise just a little"

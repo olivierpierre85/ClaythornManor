@@ -89,15 +89,31 @@ label common_day2_morning_host_death_doctor:
     My butler will take care of it.
     """
 
+    if current_character == host_details:
+
+        """
+        I look to him, and he gives me a slight nod.
+
+        Then he heads to the entrance hall to make the call.
+        """
+
     doctor """
     Very well.
     """
 
-    """
-    We continue eating in a heavy silence.
+    if current_character != host_details:
 
-    Nobody speaks much.
-    """
+        """
+        We continue eating in a heavy silence.
+
+        Nobody speaks much.
+        """
+
+    else:
+
+        """
+        After that, the others resume eating in silence.
+        """
 
     call wait_screen_transition()
 
@@ -118,9 +134,19 @@ label common_day2_morning_host_hunt:
     So, if no one objects, I propose that we continue according to what was planned.
     """
 
-    """
-    A faint murmur of assent passes through the room.
-    """
+    if current_character != host_details:
+
+        """
+        A faint murmur of assent passes through the room.
+        """
+
+    else:
+
+        """
+        I hold my breath for a second, expecting someone to say something.
+
+        But nobody does.
+        """
 
     host """
     Excellent.
