@@ -21,8 +21,7 @@
 #   WITH it, the player picks the party (broken_day2_hunt_menu_party); shadowing
 #   the Captain still ends in Broken's death, while the grove path can save him.
 #
-#   The pairing is shared with the Captain's storyline:
-#       - common_day2_hunt_pairing
+#   Moody does the pairing himself, through broken_day2_hunt_menu_party.
 # --------------------------------------------
 label broken_day2_hunt:
 

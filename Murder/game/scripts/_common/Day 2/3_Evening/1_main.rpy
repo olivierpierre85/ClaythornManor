@@ -88,6 +88,22 @@ label common_day2_evening_entrance_dialog:
         No one utters a word until Lady Claythorn has returned.
         """
 
+    elif current_character == host_details:
+
+        # TODO expand : the telephone in the passage, the butler standing close
+        # enough to hear every word of it, and the constable's fallen tree.
+        """
+        I walk down the passage to the telephone with the butler at my heel.
+
+        The constable is very sorry, and very slow about it.
+
+        A tree is down across the road below the village, and nothing will come up it before morning.
+
+        A tree, on the one night this house has two bodies in it.
+
+        I put the receiver back and take a moment before I return to them.
+        """
+
     elif current_character == nurse_details:
 
         """
@@ -153,9 +169,17 @@ label common_day2_evening_samuel_manning_discussion_part_1:
 
     # Present: psychic, host, drunk, nurse, butler
     # Later Captain
-    """
-    Lady Claythorn discreetly approaches her butler to converse with him, almost whispering.
-    """
+    if current_character == host_details:
+
+        """
+        I draw the butler a little aside, and I keep my voice down.
+        """
+
+    else:
+
+        """
+        Lady Claythorn discreetly approaches her butler to converse with him, almost whispering.
+        """
 
     host """
     What should we do about him?
