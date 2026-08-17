@@ -12,7 +12,6 @@
 - the end is a mess now, the captain and host commons do not make full sense. Rewrite all => in general, use less common text, just put summury when we are sure we already have seen this part.
 
 
-
 # MAIN CHANGE
 The last character is not the butler, but the psychic without her make up.
 
@@ -76,21 +75,9 @@ Talk with DRUNK => UNLOCK him over his love of food => but who? the questions mu
 
 ## SAturday
 
-### NEXT =>  hunt 
-Just go along and hunt with Captain and butler. 
-Nothing special but the normal story. NOtice captain can't shoot.
-DONE: the rabbit menu in host_day2_hunt. The missed pheasant stays the main timeline.
-Afterwards she alone spots a rabbit sitting still, and either fires (misses by a yard
-in front of the Captain => thread 'terrible_shot') or offers it to her guest, which
-passes for courtesy and lets her watch him miss a sitting target at twenty paces.
-No clue needed from another path, it is manners not knowledge.
-Still TODO: the gun room, the pairing on the lawn and the luncheon.
+MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
 
-Maybe: A pheasant comes to you: 
-Aim and risk missing? => can't shoot (TERRIBLE)
-let the captain have it (nice for a hostess)?
-
-### evening.
+### NEXT =>  evening.
 
 #### Sus
 If you did MANYsuspicious thing, you might be accused by captain as soon as you reach the MANOR.

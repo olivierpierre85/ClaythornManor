@@ -13,19 +13,6 @@
 #       - Dead     : broken (Thomas Moody), doctor (Daniel Baldwin)
 #
 #   Notes :
-#       - SKELETON. The chapter plays from end to end, but the scenes are only
-#         sketched. Every '# TODO' marks writing still to be done.
-#       - Shared beats live in _common/Day 2/3_Evening/1_main.rpy:
-#           - common_day2_evening_entrance_dialog
-#           - common_day2_evening_samuel_manning_discussion_part_1 to part_4
-#           - common_day2_evening_dinner_host
-#       - Captain Sinha only presses her if she has been careless. Her slips are
-#         counted the same way as in host_day1_evening_debrief, and the library
-#         book ('family_history') is what lets her answer him.
-#       - Three ways out of the evening (see docs/next_tasks.md) :
-#           - she leaves with the butler    -> the car in the woods (TODO ending)
-#           - she retires alone             -> her throat cut in bed (TODO ending)
-#           - she confides in the Captain   -> Sunday
 # --------------------------------------------
 label host_day2_evening:
 
@@ -35,21 +22,14 @@ label host_day2_evening:
 
     call black_screen_transition("Lady Claythorn", chapters_names[current_chapter])
 
-    $ change_room('manor_garden', irisout)
+    $ change_room('entrance_hall')
 
     $ play_music('sad', 2)
 
-    # TODO expand : the walk up the drive behind the stretcher, and what she is
-    # rehearsing to say to the two women waiting in the house.
+    #NEXT =>
     """
-    We come up the drive in a slow procession, and nobody speaks for the whole length of it.
-
-    I have spent the walk trying to decide what a lady does with her hands at a time like this.
-
-    That is what I am reduced to.
+    TODO We reach
     """
-
-    $ change_room('entrance_hall')
 
     call common_day2_evening_entrance_dialog
 
@@ -67,30 +47,9 @@ label host_day2_evening:
 
     call common_day2_evening_samuel_manning_discussion_part_2
 
-    # ------------------------------------
-    #   HER SLIPS, COUNTED
-    #   The same counter as the Friday debrief. He needs the rabbit, which he
-    #   watched her miss this morning, and at least one older doubt to set
-    #   beside it. Give him the rabbit and he has nothing to open with.
-    # ------------------------------------
-    python:
-        host_day2_evening_slip_count = 0
 
-        if host_details.threads.is_unlocked('go_downstairs'):
-            host_day2_evening_slip_count += 1
-
-        if not host_details.threads.is_unlocked('addressed_manning_first'):
-            host_day2_evening_slip_count += 1
-
-        if not host_details.threads.is_unlocked('stayed_with_guests'):
-            host_day2_evening_slip_count += 1
-
-        host_day2_evening_pressed = (
-            host_details.threads.is_unlocked('terrible_shot')
-            and host_day2_evening_slip_count >= 1
-        )
-
-    if host_day2_evening_pressed:
+    # You made too many mistakes and now you accused
+    if not host_details.threads.is_unlocked('stayed_with_guests') and not host_details.threads.is_unlocked('addressed_manning_first') and host_details.threads.is_unlocked('terrible_shot'):
 
         call host_day2_evening_captain_accusation
 
@@ -218,8 +177,7 @@ label host_day2_evening_captain_accusation:
     Only when the two of them are on the stair do I understand what I have just agreed to.
     """
 
-    # TODO expand : the tea room, the door closed, Miss Baxter and Miss Marsh
-    # on the settee, and the list he has been keeping all weekend.
+    # TODO Reuse the same lines as for captain?
     $ change_room('tea_room', dissolve)
 
     captain """
