@@ -1,0 +1,14 @@
+{
+    "start_label": "host_day2_hunt",
+    "unlocked_threads": [
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day2_hunt_menu_rabbit",
+            "selected": "Raise the gun and fire",
+            "redirect": "host_day2_hunt_rabbit_shoot"
+        }
+    ]
+}

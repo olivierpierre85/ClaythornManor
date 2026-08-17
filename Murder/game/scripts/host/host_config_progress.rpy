@@ -25,5 +25,11 @@ label host_config_progress:
             ],
             'saturday_afternoon': [
                 {"label": "host_day2_hunt", "threads": {}},
+                {"label": "host_day2_hunt", "threads": {"found_poison": True}},
+            ],
+            'saturday_evening': [
+                {"label": "host_day2_evening", "threads": {}},
+                {"label": "host_day2_evening", "threads": {"terrible_shot": True, "go_downstairs": True}},
+                {"label": "host_day2_evening", "threads": {"found_poison": True, "family_history": True, "terrible_shot": True, "go_downstairs": True}},
             ],
         }

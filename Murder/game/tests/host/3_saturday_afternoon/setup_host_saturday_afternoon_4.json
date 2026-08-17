@@ -1,0 +1,16 @@
+{
+    "start_label": "host_day2_hunt",
+    "unlocked_threads": [
+        "found_poison",
+        "go_downstairs",
+        "family_history"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day2_hunt_menu_rabbit",
+            "selected": "Point the rabbit out to the Captain",
+            "redirect": "host_day2_hunt_rabbit_offer"
+        }
+    ]
+}
