@@ -15,8 +15,13 @@
 #
 #   Notes :
 #       - The same morning as captain_day2_hunt_moody_dead, seen from her side.
-#       - Shared beats (the pairing, the accident) must be extracted into
-#         _common as they are written here.
+#       - Shared beats live in _common/Day 2/2_Hunt:
+#           - common_day2_hunt_luncheon_served
+#           - common_day2_hunt_shots_heard
+#           - common_day2_hunt_doctor_aftermath
+#       - The lawn is hers alone. She reports the splitting of the parties in
+#         her own voice rather than calling the shared labels, since none of
+#         those lines are hers and she is only watching them happen.
 #       - The north field stays in her own file. The missed pheasant is the
 #         main timeline and happens in the captain's script too. Only the
 #         rabbit afterwards is hers to decide, and it carries 'terrible_shot'.
@@ -101,9 +106,27 @@ label host_day2_hunt:
     Do not worry, I will be fine.
     """
 
-    $ change_room('manor_garden', fadein)
+    $ change_room('manor_garden', fade)
 
-    # Todo inner dialog, everybody is there the groups are made....
+    """
+    They are all waiting on the lawn.
+
+    I take my place among them and put my smile back on.
+
+    The butler proposes we divide into two parties, since it will be easier to spot game that way.
+
+    Nobody thinks to disagree with him.
+
+    Captain Sinha asks whether he might have the privilege of accompanying me, and I see no reason why not.
+
+    Mr Manning joins Doctor Baldwin, who clearly minds but cannot find the words to say so.
+
+    Mr Harring hovers at the edge of it all until he is put with them.
+
+    Then the butler settles where to go in a few quiet sentences. 
+    
+    And we are on our way.
+    """
 
     call change_time(11, 30)
 
@@ -116,7 +139,7 @@ label host_day2_hunt:
 
     A pheasant goes up out of the grass with a noise like a slammed door.
 
-    Instinctivaly, I raise my rifle.
+    Instinctively, I raise my rifle.
     """
 
     play sound gun
@@ -124,7 +147,7 @@ label host_day2_hunt:
     """
     The shot comes up late, and too high.
 
-    The bird fly off into the trees.
+    The bird flies off into the trees.
 
     The gun kicks back into my shoulder hard enough to bring water to my eyes.
 
@@ -138,21 +161,21 @@ label host_day2_hunt:
     """
     Nobody answers me.
 
-    The light is perfectly fine, and they know it.
+    That is a flimsy excuse.
 
     I ought to have said nothing at all.
     """    
 
     butler """
-    It is true Captain, as her ladyship says.
+    It is true, Captain, as her ladyship says.
 
     I have known mornings here when a man could not hit a barn door at ten paces.
     """
 
     """
-    He smile at me and nods.
+    He smiles at me and nods.
 
-    But I am certain he noticed how poor was my shot.
+    But I am certain he noticed how poor my shot was.
     """
 
     call wait_screen_transition()
@@ -160,9 +183,9 @@ label host_day2_hunt:
     call change_time(11, 45)
 
     """
-    A while later, the Captain misses a shot of its own.
+    A while later, the Captain misses a shot of his own.
 
-    I am starting to think he is not a natural hunter as well.
+    I am starting to think he is not a natural hunter either.
 
     Or maybe he is a little rusty.
     """
@@ -204,14 +227,39 @@ label host_day2_hunt:
 
     $ change_room('forest_clearing', dissolve)
 
-    # TODO: Inner dialog to say they make small talk
+    """
+    The pic-nic is set and I am left alone with the Captain.
+
+    We talk of the weather, and other things of no consequence.
+
+    I am glad I do not have to the opportunity to make a mistake.
+
+    So the lunch goes pleasantly.
+    """
 
     call change_time(13, 30)
 
     $ change_room('forest_edge', dissolve)
 
-    # TODO: add dialogs of the death of doctor baldwin, use the common dialog already presents and add inner dialogs for the host
+    call common_day2_hunt_shots_heard
 
+    call common_day2_hunt_doctor_aftermath
+
+    """
+    The butler walks a few paces behind me on the way back, and says nothing at all.
+
+    He was away the whole hour, and he came back to us only minutes before those shots were fired.
+    """
+
+
+
+    """
+    Two deaths in one day.
+
+    My mind goes into a race.
+
+    And I notice my hands are shaking convulsively.
+    """
 
     jump host_day2_evening
 
@@ -231,17 +279,17 @@ label host_day2_hunt_rabbit_shoot:
     """
     The earth jumps a yard to the left of the animal, which is into the bush before the sound has finished with the trees.
 
-    Nobody says anything, and the nothing goes on rather too long.
+    Nobody says anything, and the silence goes on rather too long.
     """
 
     host """
     Too bad.
 
-    I am a bit quite out of practice.
+    I am quite out of practice.
     """
 
     butler """
-    It was a nice shot my lady, just a difficult angle.
+    It was a nice shot, my lady, just a difficult angle.
     """
 
     """
@@ -253,7 +301,7 @@ label host_day2_hunt_rabbit_shoot:
 
     And he will probably understand the implications of this.
 
-    What was I thinking taking that shot.
+    What was I thinking, taking that shot.
     """
 
     $ host_details.threads.unlock('terrible_shot')
@@ -274,7 +322,7 @@ label host_day2_hunt_rabbit_offer:
     """
 
     host """
-    Captain. Over there is rabbit. Do you see it?
+    Captain. Over there is a rabbit. Do you see it?
 
     Take it, please. I insist.
 

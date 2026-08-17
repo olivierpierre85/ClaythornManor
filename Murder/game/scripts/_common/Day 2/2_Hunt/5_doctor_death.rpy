@@ -39,9 +39,11 @@ label common_day2_hunt_luncheon_served:
 # The hunt is taken up again, and the western grove is heard from.
 label common_day2_hunt_shots_heard:
 
-    """
-    In due course the butler returns, composed as ever, and we resume the hunt.
-    """
+    if current_character.text_id == "host":
+
+        """
+        In due course the butler returns, composed as ever, and we resume the hunt.
+        """
 
     pause 1.0
 
@@ -113,10 +115,6 @@ label common_day2_hunt_doctor_aftermath:
         Doctor Baldwin lies on his back in the fern, his shirt torn open and dark with blood.
 
         Mr Harring kneels beside him, white as paper. Samuel Manning stands a few paces off, trembling, his rifle in the moss at his feet.
-
-        I played a scene very like this one years ago, in a theatre in Sheffield.
-
-        I remember thinking the blood was overdone.
         """
 
     drunk """
@@ -157,19 +155,6 @@ label common_day2_hunt_doctor_aftermath:
         The colour is gone from her face.
         """
 
-    elif current_character.text_id == "host":
-
-        """
-        An accident, then.
-
-        That is the second one in a single day, and I am to stand here and believe both of them.
-
-        Nobody is doing anything for the doctor, and that is how I know he is already gone.
-        """
-
-        """
-        I step back from him, and back again, until a sapling stops me.
-        """
 
     host -scared """
     He is... he is truly dead?
@@ -192,7 +177,7 @@ label common_day2_hunt_doctor_aftermath:
 
         A pleasant weekend. That is what it was meant to be.
 
-        I turn my face away from the doctor and remember, far too late, who I am supposed to be.
+        I turn my face away from the doctor and remember who I am supposed to be.
         """
 
     host -scared """
@@ -200,14 +185,6 @@ label common_day2_hunt_doctor_aftermath:
 
     Captain, you must... you must tell us what is to be done.
     """
-
-    if current_character.text_id == "captain":
-
-        """
-        There is no time for grief, and even less for shock.
-
-        The doctor must be brought back.
-        """
 
     captain """
     Of course.

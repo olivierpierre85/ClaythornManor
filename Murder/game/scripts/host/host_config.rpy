@@ -54,6 +54,22 @@ label init_host:
                 chapters=['saturday_afternoon'],
                 relevant_chapters=['saturday_afternoon', 'saturday_evening'],
             ),
+            CharacterInformation(
+                5, "accused_butler",
+                "You put the open bottle of rat poison to the butler, to his face",
+                content_negative="You kept what you saw in the scullery to yourself",
+                image_file="rat_poison",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
+                6, "trust_captain",
+                "You told Captain Sinha what you truly are, and put yourself in his hands",
+                content_negative="You told nobody in the house what you truly are",
+                image_file="trust_captain",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
         ])
 
         host_observations = CharacterObservationList([

@@ -9,6 +9,7 @@
 - TRain sound not in all characters. Add or ok to avoid?
 - harmonize breakfast order arrival (captain must not lady is first)
 - ADD in grammar rules : use shall for HOST and upper class, will or 'll for other. MAKE moody use shall to reveal his fancy background?
+- the end is a mess now, the captain and host commons do not make full sense. Rewrite all => in general, use less common text, just put summury when we are sure we already have seen this part.
 
 
 
