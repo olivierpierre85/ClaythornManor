@@ -78,7 +78,6 @@ label captain_day2_hunt_moody_dead:
 
     $ host_details.description_hidden.unlock('hunt')
 
-
     """
     A rabbit bolts from the fern.
 
