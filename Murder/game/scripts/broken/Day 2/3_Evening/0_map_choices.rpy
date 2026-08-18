@@ -388,7 +388,7 @@ label broken_day2_evening_entrance_hall:
     """
     The hall stands empty.
     
-    I find the telephone, its on a table behind the stair.
+    I find the telephone at the back of it, on a table beneath the stair.
 
     I lift the receiver and hold it to my ear.
 

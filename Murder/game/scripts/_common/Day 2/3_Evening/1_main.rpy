@@ -63,7 +63,7 @@ label common_day2_evening_entrance_dialog:
     if current_character == lad_details:
 
         """
-        The hostess and her butler clear off down the corridor.
+        The hostess goes to the back of the hall, where the telephone sits on a table under the stair, and the butler goes with her.
 
         Then the room goes dead quiet.
 
@@ -73,41 +73,27 @@ label common_day2_evening_entrance_dialog:
 
         Best to keep my mouth shut.
 
-        When the hostess comes back, no one has moved an inch.
+        Behind the stair her voice runs on, low and steady, and not one word of it carries this far.
+
+        When she comes back, no one has moved an inch.
         """
 
     elif current_character == psychic_details:
 
         """
-        Our hostess exits the hall, her butler trailing in her wake.
+        Our hostess withdraws to the far end of the hall, where the telephone waits upon its table beneath the stair, and her butler trails in her wake.
 
         I look upon Mr Manning.
 
         The drunkard is altogether elsewhere. His eyes have gone soft as mist, his hands trembling upon his knees.
 
-        No one utters a word until Lady Claythorn has returned.
-        """
-
-    elif current_character == host_details:
-
-        # TODO expand : the telephone in the passage, the butler standing close
-        # enough to hear every word of it, and the constable's fallen tree.
-        """
-        I walk down the passage to the telephone with the butler at my heel.
-
-        The constable is very sorry, and very slow about it.
-
-        A tree is down across the road below the village, and nothing will come up it before morning.
-
-        A tree, on the one night this house has two bodies in it.
-
-        I put the receiver back and take a moment before I return to them.
+        Her voice reaches us from behind the stair, though the words themselves do not, and no one utters a syllable until Lady Claythorn has returned.
         """
 
     elif current_character == nurse_details:
 
         """
-        Lady Claythorn leaves with the butler.
+        Lady Claythorn crosses to the telephone at the back of the hall, beneath the stair, and the butler follows her.
 
         I keep my hands folded before me. It is what one is taught to do, when there is nothing useful left to be done.
 
@@ -117,8 +103,31 @@ label common_day2_evening_entrance_dialog:
 
         I hold my peace.
 
-        The hostess returns presently.
+        We can all hear that she is speaking, and none of us can hear what she says.
+
+        She returns presently.
         """
+
+    elif current_character == host_details:
+
+        # TODO expand : the telephone at the back of the hall, the butler standing
+        # close enough to hear every word of it, and the constable's fallen tree.
+        """
+        The telephone stands on its table at the back of the hall, beneath the stair, and I go to it with the butler at my heel.
+
+        He keeps at my shoulder, near enough to hear the constable as plainly as I do.
+
+        The man is very sorry, and very slow about it.
+
+        A tree is down across the road below the village, and nothing will come up it before morning.
+
+        A tree, on the one night this house has two bodies in it.
+
+        I set the receiver back. The others are ten paces behind me, and they have all heard my half of it.
+
+        I take a moment before I turn round.
+        """
+
 
     host """
     I just spoke with the police. They aren't coming today.

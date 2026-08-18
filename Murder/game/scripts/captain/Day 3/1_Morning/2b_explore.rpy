@@ -53,13 +53,13 @@ label captain_day3_morning_explore:
 
     Something is clearly wrong in this house.
 
-    I think about the telephone, I believe it was somewhere in the entrance hall.
+    I think about the telephone, at the back of the entrance hall, beneath the stair.
     """
 
     $ change_room("entrance_hall")
 
     """
-    I found the telephone in the corner of the room and pick it up.
+    It is on its table under the stair, where Lady Claythorn used it, and I pick it up.
 
     No signal.
 
