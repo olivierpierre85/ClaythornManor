@@ -10,8 +10,15 @@
 - [ ] **Map**: Add "You are here" on the map.
 - [ ] Create **NEW OPTIONS Page**
 - [ ] Add Icon for web distribution
+- [ ] - IN intuitions DEAD , add a special sound or text
 - [ ] REvise NEW **Help Page + Tutorials** TODO myself, clean the tutorial highlights, text and position.
 - **Tutorial** Explain that restarting from a chapter doesn't mean all branches are accessibles from there
+- Double CHECK nightime (AROUND 16h30 !!! )!! important for endings with PSYCHIC and BROKEN
+  - ARRIVAL manor, the storm happens it is already night time
+  - Harmonize the Dinner menu (are choices keep_alive or not pick one a keep it)
+  - APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
+  - TRain sound not in all characters. Add or ok to avoid?
+
 
 ## Technical Tasks !IMPORTANT USE FABLE 5 why we can!!!!!
 

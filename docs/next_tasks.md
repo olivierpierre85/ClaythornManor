@@ -1,15 +1,12 @@
 <!-- # cSpell:disable -->
 # General TODO
-- IN intuitions DEAD , add a special sound or text
-- Double CHECK nightime (AROUND 16h30 !!! )!! important for endings with PSYCHIC and BROKEN
-- APPLY the empty gun_room to other player who go there on day 2? I think it might be only nurse? TODO check
-- ARRIVAL manor, the storm happens it is already night time
-- Harmonize the Dinner menu (are choices keep_alive or not pick one a keep it)
-- Rething broken unlock backstory, not need much of host
-- TRain sound not in all characters. Add or ok to avoid?
-- harmonize breakfast order arrival (captain must not lady is first)
-- ADD in grammar rules : use shall for HOST and upper class, will or 'll for other. MAKE moody use shall to reveal his fancy background?
-- the end is a mess now, the captain and host commons do not make full sense. Rewrite all => in general, use less common text, just put summury when we are sure we already have seen this part.
+
+
+
+
+
+
+
 
 
 # MAIN CHANGE

@@ -45,7 +45,7 @@ Do it for all possibilities ( dining room with less and less persons as the time
 
 ## ENDINGS
 
-Create specific images for endings. Take a location and add the dead bodies? Maybe too complicated but it would add good things
+Create specific images for endings. Take a location and add the dead bodies? Maybe too complicated but it would add good things. Only for endings now
 
 ## Animations
 
@@ -53,7 +53,7 @@ Create specific images for endings. Take a location and add the dead bodies? May
 - Note need to turn mp4 into webdm. A video is about 3 mb. (HOw many do I need before it begins too much? A think even 100 videos should be ok.
 
 ## Maps 
--   GARDEN and entrance same on map but not on pictures? **NOT that important**
+-   GARDEN and entrance same on map but not on pictures? **NOT really important**
 
 ## Progress view
 - Better progress for Final version: Visuals like a boardgame, with more images  
