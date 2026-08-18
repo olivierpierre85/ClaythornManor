@@ -57,6 +57,7 @@
   - [ ] More story for the lord? Add him to the list of playable characters? (Not easy, but doable.)
   - [ ] Need a set of possible lord questions.
   - [ ] Problem: the psychic's death in the attic isn't as scary during the day as at night. Change that (force night, or move when she can unlock it, e.g. the day before)?
+  - [ ] ADD the lord as a character as a gimmick. Use the butler/interregation point logic
 - [ ] **Lad interaction**: having visited the lad isn't exploited enough.
   - [ ] No difference on the morning of Day 3 currently?
   - [ ] Mention the "talk" option to her left first, even once respected?

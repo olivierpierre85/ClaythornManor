@@ -34,16 +34,19 @@ THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell ever
 
 THe drunk will describe the food with delight.
 
+### FRiday
 Train is a mess, he will jump from one place to the next until he will collapse in the tea room. at dinner he will also have glimpse of weird stuff.
 
 Then you go to your room and see the doctor letter. Without Broken to save you, you got to make choice. LEAN into drunkness OR Pretend you are drunk and kill doc. DRINK or not? DRINKS counter
 
+### SAturday
 Wake up drunk at breakfast, but either take whisky, and be really drunk in the woods. Kill yourself of sadness.
 
 ONLY possible to kill doctor to move on. Weird choice but I can explain it (somethings you know are wrong but you also know you have to make EVEN if he is not guilty he has been using drugs, he is scum and doesn't diserve to die.)
 
 Do not kill yourself, you can kill doctor. and pretend it is an accident, THEN you are locked in your room. CHOICE accept fate and drink (KILL YOURSELF by throat cutting => He was never killed!!!) OR try to make sense of everything. USE your superb thinking to understand everything (talk to yourself GENERIC CHOICEs!!!!) => Two choices CONFRONT everyone THERE is a killer among us, but nobody believes you, you die. 
 
+### Sunday
 OR there is a killer, I must hide PRETEND TO kill YOURSELF, hide your cut's and leave the room after the captain has come. YOU are free!!!!!!!!! You would need blood for that. PORT makes an excellent fake BLOOD, you just had to got the billiard room, take VERYTHING that is why the choice is rather small for the other guests.
 
 He will observe what is happening during eating with TEd Harring,nurse and psychic. witness the breakdown, and then THE butler comes clean the mess of psychic crying over TED harring. NURSE wakes up, and looks up at the butler cleaning the mess.
