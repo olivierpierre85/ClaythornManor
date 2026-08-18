@@ -26,17 +26,16 @@ label host_day2_evening:
 
     $ play_music('sad', 2)
 
-    #NEXT =>
     """
-    TODO We reach
+    After the long walk home, we finally reach the manor.
+
+    I am a wreck, and I am still not sure what to do now.
     """
 
     call common_day2_evening_entrance_dialog
 
-    # TODO expand : the doctor carried up the stair, and her waiting below with
-    # the two women while it is done.
     """
-    The Captain takes charge of it all, and I am grateful to be given nothing to do.
+    The Captain takes charge of it all.
 
     Mr Harring helps him carry the doctor up the stair.
 
@@ -47,9 +46,9 @@ label host_day2_evening:
 
     call common_day2_evening_samuel_manning_discussion_part_2
 
-
-    # You made too many mistakes and now you accused
-    if not host_details.threads.is_unlocked('stayed_with_guests') and not host_details.threads.is_unlocked('addressed_manning_first') and host_details.threads.is_unlocked('terrible_shot'):
+    # NEXT =>
+    # On a major mistake and you are out (going downstairs is ok)
+    if not host_details.threads.is_unlocked('stayed_with_guests') or not host_details.threads.is_unlocked('addressed_manning_first') or host_details.threads.is_unlocked('terrible_shot'):
 
         call host_day2_evening_captain_accusation
 
@@ -57,8 +56,6 @@ label host_day2_evening:
 
         call common_day2_evening_samuel_manning_discussion_part_3
 
-        # TODO expand : Manning led up the stair, and her relief at not being
-        # asked to decide anything at all.
         """
         Mr Manning rises and follows the Captain without a word of protest.
 
@@ -154,49 +151,119 @@ label host_day2_evening:
     call host_day2_evening_alone_at_night
 
 
+label host_day2_evening_telephone:
+
+    """
+    The telephone stands on its table at the back of the hall, beneath the stair, and I go to it with the butler at my heel.
+
+    He speaks low, to make sure that nobody can overhear us.
+    """
+
+    butler """
+    The telephone will not work.
+
+    It was disconnected a long time ago.
+    """
+
+    host """
+    What?
+
+    But how did you call the police this morning, then?
+    """
+
+    butler """
+    I did not.
+
+    I was hoping we could wait until tomorrow to warn them, at the end of the weekend.
+
+    I could not risk jeopardising all that we have accomplished so far.
+    """
+
+    host """
+    No, that is unacceptable!
+
+    Two lives have been lost now.
+
+    We have to tell everyone, right now!
+    """
+
+    butler """
+    No, we will not do that.
+
+    First, do not speak to me as though you are in charge.
+
+    You are playing the Lady, but I am the one giving the orders.
+
+    And you had better do as I say for now.
+    """
+
+    host """
+    Are you threatening me?
+    """
+
+    butler """
+    I am just warning you, that is all.
+
+    And please keep your voice down.
+
+    We need to pretend a little while longer.
+
+    I will explain everything later tonight, I promise.
+    """
+
+    """
+    I consider this for a moment.
+
+    I am too shaken to think further.
+
+    Waiting until tonight seems the wisest choice.
+    """
+
+    host """
+    Fine, but you will need to explain everything to me then.
+    """
+
+    butler """
+    All right.
+
+    I will tell you everything.
+
+    You will only have to act for a little while longer.
+
+    Starting with a 'telephone call' to the police, now.
+    """
+
+    host """
+    And what should I say?
+    """
+
+    butler """
+    Pretend that they will come tomorrow.
+
+    By then our job will be done.
+    """
+
+    host """
+    Well, I do not like it, but fine.
+    """
+
+    """
+    So I summon the last of my strength to make a false call to the police, just in case somebody is eavesdropping.
+
+    It is not my greatest performance, but it should be enough to convince everyone.
+
+    When my act is done, I set the receiver back and return to the others.
+    """
+
+    return
+
 # --------------------------------------------
 #   CAPTAIN SINHA PRESSES HER
-#
-#   Mirrors captain_day2_evening_confront_host, seen from her chair. He sends
-#   the butler up with Manning so that he may put it to her without the staff
-#   in the room.
-#
-#   TODO : move to 2_captain_accusation.rpy once the scene is written in full.
 # --------------------------------------------
 label host_day2_evening_captain_accusation:
 
-    $ play_music('mysterious', 3, fadeout_val=4)
-
-    # TODO expand : he asks the butler to take Manning up, and she understands,
-    # a moment too late, exactly why he has done it.
-    """
-    The Captain turns to the butler and asks him, very civilly, to see Mr Manning to his room.
-
-    The butler looks to me, and I nod, because a hostess would.
-
-    Only when the two of them are on the stair do I understand what I have just agreed to.
-    """
-
-    # TODO Reuse the same lines as for captain?
-    $ change_room('tea_room', dissolve)
-
-    captain """
-    Forgive the abruptness, my lady.
-
-    There is no portrait of you in the gallery.
-
-    You do not keep the manners of this table.
-
-    And this morning I watched you fire at a sitting rabbit at twenty paces.
-
-    So I shall ask you a very simple thing, and I hope you will forgive me for asking it.
-
-    What is your title?
-    """
-
-    """
-    The room settles into the question and waits.
-    """
+    # THIS should be a common? Or try it differently?
+    call captain_day2_evening_confront_host
 
     # TODO : the second choice is the interesting one. Decide what it costs her.
     $ time_left = 1

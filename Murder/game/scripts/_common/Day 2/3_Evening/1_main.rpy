@@ -95,7 +95,7 @@ label common_day2_evening_entrance_dialog:
         """
         Lady Claythorn crosses to the telephone at the back of the hall, beneath the stair, and the butler follows her.
 
-        I keep my hands folded before me. It is what one is taught to do, when there is nothing useful left to be done.
+        I keep my hands folded before me.
 
         Mr Manning sits upon the bottom stair, drained of whatever spirit he had this morning.
 
@@ -110,23 +110,7 @@ label common_day2_evening_entrance_dialog:
 
     elif current_character == host_details:
 
-        # TODO expand : the telephone at the back of the hall, the butler standing
-        # close enough to hear every word of it, and the constable's fallen tree.
-        """
-        The telephone stands on its table at the back of the hall, beneath the stair, and I go to it with the butler at my heel.
-
-        He keeps at my shoulder, near enough to hear the constable as plainly as I do.
-
-        The man is very sorry, and very slow about it.
-
-        A tree is down across the road below the village, and nothing will come up it before morning.
-
-        A tree, on the one night this house has two bodies in it.
-
-        I set the receiver back. The others are ten paces behind me, and they have all heard my half of it.
-
-        I take a moment before I turn round.
-        """
+        call host_day2_evening_telephone
 
 
     host """

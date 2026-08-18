@@ -55,6 +55,8 @@ OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mist
 
 ### Write Story:
 ## HOST
+If there are not enough deaths, add one after the hunt, at the telephone
+
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
 
 => TODO at end check interactions with drunk and add necessary unlocks
