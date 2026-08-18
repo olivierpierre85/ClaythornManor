@@ -210,7 +210,10 @@ CHARACTERS = {
             "lips touched with dark red, greying hair wrapped in a soft draped grey headscarf "
             "or cloche, small drop earrings, wearing a layered dark 1920s dress with a fringed "
             "shawl and long strings of beads, the skirt falling to mid-calf over dark "
-            "stockings, plain black leather shoes with a low heel and a button strap, the "
+            "stockings, old-fashioned black leather ankle boots of the Edwardian sort an "
+            "elderly woman would still be wearing, laced high over the ankle through small "
+            "metal eyelets, narrow and close-fitting with a slender pointed-oval toe, a thin "
+            "leather sole and a slim curved heel, the "
             "theatrical look of a spiritualist medium"
         ),
     ),
@@ -221,8 +224,10 @@ CHARACTERS = {
             "high forehead, round wire-rimmed spectacles, sunken tired eyes with dark shadows "
             "beneath, pale sallow skin and hollow lined cheeks, clean-shaven, a weary faintly "
             "furtive expression, wearing a respectable bottle-green 1920s three-piece tweed "
-            "suit with a waistcoat and a warm brown tie, tidy and well-kept, the proper "
-            "middle-class look of a charity-hospital doctor with a quiet morphine habit"
+            "suit with a waistcoat and a warm brown tie, tidy and well-kept, matching tweed "
+            "trousers with turn-ups at the ankle, black leather 1920s Oxford shoes with a "
+            "plain rounded toe, closed lacing over the instep and a low stacked leather heel, "
+            "the proper middle-class look of a charity-hospital doctor with a quiet morphine habit"
         ),
     ),
     "nurse": Character(
@@ -232,7 +237,9 @@ CHARACTERS = {
             "the centre and drawn loosely back, pale lined skin, cool blue-grey eyes, an "
             "unadorned ageing face with a reserved, faintly severe and disapproving "
             "expression, wearing a plain high-collared dark 1920s dress with a pale collar and "
-            "a small brooch, austere, spinsterish and respectable"
+            "a small brooch, the skirt falling to mid-calf over dark stockings, sensible black "
+            "leather laced walking shoes with a rounded toe, a stitched toe cap and a low "
+            "stacked heel, austere, spinsterish and respectable"
         ),
     ),
     "drunk": Character(
@@ -242,8 +249,10 @@ CHARACTERS = {
             "beard, ruddy weathered and deeply lined skin, bleary bloodshot eyes and a loose "
             "wry half-smile, wearing a rumpled dark charcoal-grey 1920s three-piece suit with "
             "a crooked loosened tie and an unbuttoned waistcoat, the suit clean but well-worn "
-            "and creased, only subtly shabby with no visible dirt or stains, a once-respectable "
-            "barrister gone to drink"
+            "and creased, only subtly shabby with no visible dirt or stains, matching "
+            "charcoal-grey trousers bagging at the knee and rumpled over the shoe, scuffed "
+            "black leather 1920s Oxford shoes with a rounded toe, closed lacing and a low "
+            "stacked heel, a once-respectable barrister gone to drink"
         ),
     ),
     "broken": Character(
@@ -255,7 +264,10 @@ CHARACTERS = {
             "pale carved wood in muted browns, with a visible wood grain) that covers the "
             "disfigured nose and upper face, weary watchful eyes visible through it, a soft "
             "flat cloth cap over short hair, wearing a plain working-class 1920s outfit of "
-            "collarless pale shirt, waistcoat and jacket in muted tones, a disfigured war "
+            "collarless pale shirt, waistcoat and jacket in muted tones, full-length dark "
+            "hard-wearing wool trousers hanging straight down to cover the ankle and break "
+            "over the top of the boot, sturdy black leather working boots laced over the "
+            "ankle with a blunt squared toe and thick stitched soles, a disfigured war "
             "veteran hiding behind the mask"
         ),
     ),
@@ -266,8 +278,11 @@ CHARACTERS = {
             "1920s finger-wave bob, arched brows, striking green eyes, pale powdered skin and "
             "dark red lips, a poised composed and faintly theatrical expression, wearing a "
             "refined dark red 1920s evening gown with a beaded collar and ropes of pearls, "
-            "the gown falling to the ankle, dark red satin evening shoes with a low heel and "
-            "a slender ankle strap, an out-of-work actress playing the part of a grand lady"
+            "the gown hanging straight down to the ankle, pale silk stockings, dark red satin "
+            "1920s evening bar shoes with a rounded almond toe and a single narrow strap "
+            "buttoned across the instep, set on a curved Louis heel of middling height that "
+            "flares out again where it meets the ground, no slender modern stiletto and no "
+            "strap around the ankle, an out-of-work actress playing the part of a grand lady"
         ),
     ),
     # --- staff ---
@@ -277,7 +292,9 @@ CHARACTERS = {
             "a solidly built older man of about sixty, broad-shouldered and powerfully built, "
             "greying hair swept back from a weathered composed face, green-hazel eyes and a "
             "faint reserved smile, clean-shaven, wearing formal butler's attire of a black "
-            "1920s tailcoat, white wing-collar shirt and black bow tie, dignified and imposing"
+            "1920s tailcoat, white wing-collar shirt and black bow tie, black formal trousers "
+            "with a sharp crease, highly polished black leather Oxford shoes with a plain "
+            "rounded toe and a low heel, dignified and imposing"
         ),
     ),
     "footman": Character(
@@ -286,7 +303,9 @@ CHARACTERS = {
             "a handsome man of about thirty-five, dark brown hair combed back, clean-shaven "
             "with no moustache, blue-grey eyes and a smooth composed expression, wearing "
             "footman's livery of a dark tailcoat with a high stand collar and brass buttons "
-            "over a white shirt, poised and well-groomed"
+            "over a white shirt, dark livery trousers with a narrow braid stripe down the "
+            "outside seam, polished black leather shoes with a rounded toe and a low heel, "
+            "poised and well-groomed"
         ),
     ),
     "maid": Character(
@@ -294,8 +313,9 @@ CHARACTERS = {
         description=(
             "a young woman of about twenty-two, dark brown hair pinned back beneath a white "
             "cap, fair freckled skin, blue-grey eyes and a plain fresh reserved face, wearing "
-            "a black 1920s housemaid's dress with a white apron, white collar and cuffs, neat "
-            "and demure"
+            "a black 1920s housemaid's dress with a white apron, white collar and cuffs, the "
+            "skirt falling to mid-calf over black stockings, plain flat black leather laced "
+            "shoes with a rounded toe and a low stacked heel, neat and demure"
         ),
     ),
 }
