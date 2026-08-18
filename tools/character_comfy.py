@@ -36,10 +36,15 @@ TWO STAGES:
                   head-shot (fed through ReferenceLatent); the outfit and everything
                   else come from the character description.
 
-    turn <char>   Take the APPROVED frontal base and turn the figure a little into a
-                  moderate three-quarter view (still full-body, head to feet). The
-                  reference is now the front image, which already carries the outfit,
-                  so the clothes stay identical across the turn -- only the pose changes.
+    turn <char>   Take the APPROVED frontal base and turn the figure (still full-body,
+                  head to feet). The reference is now the front image, which already
+                  carries the outfit, so the clothes stay identical across the turn --
+                  only the pose changes. Two angles:
+                    --angle three_quarter  45 degrees (default). BIMODAL on Klein: some
+                                           seeds collapse back to frontal, so roll 3-4
+                                           and pick.
+                    --angle profile        side-on, face in silhouette. Reliable.
+                  --direction left|right picks which way they turn.
 
 WORKFLOW
 --------
@@ -57,8 +62,9 @@ EXAMPLES
   python tools/character_comfy.py base lad --count 3
   python tools/character_comfy.py base lad --model dev --count 3
   python tools/character_comfy.py base captain --seed 1924 --count 1
-  python tools/character_comfy.py turn captain --count 3
-  python tools/character_comfy.py turn captain --direction right --count 2
+  python tools/character_comfy.py turn captain --count 4
+  python tools/character_comfy.py turn lad --angle profile --count 2
+  python tools/character_comfy.py turn lad --angle profile --direction right --count 2
 """
 import argparse
 import json
@@ -69,6 +75,7 @@ import urllib.parse
 from pathlib import Path
 
 import requests
+from PIL import Image
 
 ROOT = Path(__file__).parent.parent.resolve()
 OUT_ROOT = ROOT / "Images" / "characters_new"
@@ -176,7 +183,8 @@ CHARACTERS = {
             "deep-set tired eyes, hollow cheeks, prominent cheekbones, lined weathered "
             "face, clean-shaven, thin stern mouth, wearing a dark olive-drab and deep "
             "brown 1920s military dress uniform in muted low-key tones with a brown "
-            "leather Sam Browne belt and diagonal shoulder strap"
+            "leather Sam Browne belt and diagonal shoulder strap, matching olive-drab "
+            "uniform trousers with a sharp crease, polished dark brown leather ankle boots"
         ),
     ),
     "lad": Character(
@@ -201,7 +209,9 @@ CHARACTERS = {
             "cheeks, pale skin and calm pale hazel eyes with an ordinary, steady gaze, thin "
             "lips touched with dark red, greying hair wrapped in a soft draped grey headscarf "
             "or cloche, small drop earrings, wearing a layered dark 1920s dress with a fringed "
-            "shawl and long strings of beads, the theatrical look of a spiritualist medium"
+            "shawl and long strings of beads, the skirt falling to mid-calf over dark "
+            "stockings, plain black leather shoes with a low heel and a button strap, the "
+            "theatrical look of a spiritualist medium"
         ),
     ),
     "doctor": Character(
@@ -255,8 +265,9 @@ CHARACTERS = {
             "an elegant woman of about forty-five, softly waved silver-grey hair set in a "
             "1920s finger-wave bob, arched brows, striking green eyes, pale powdered skin and "
             "dark red lips, a poised composed and faintly theatrical expression, wearing a "
-            "refined dark red 1920s evening gown with a beaded collar and ropes of pearls, an "
-            "out-of-work actress playing the part of a grand lady"
+            "refined dark red 1920s evening gown with a beaded collar and ropes of pearls, "
+            "the gown falling to the ankle, dark red satin evening shoes with a low heel and "
+            "a slender ankle strap, an out-of-work actress playing the part of a grand lady"
         ),
     ),
     # --- staff ---
@@ -312,21 +323,45 @@ BASE_PROMPT = (
     "neutral warm-grey background."
 )
 
-# Stage 2: turn the approved front a little. No "still facing viewer / not a profile"
-# hedges -- those collapse it back to frontal (see memory). Plain moderate-turn wording.
-TURN_PROMPT = (
-    "Show the exact same character from the reference image, {desc}. Keep the outfit, "
-    "face, hair and colours identical to the reference, only change the pose: they "
-    "stand in a relaxed three-quarter view, their body rotated about twenty degrees "
-    "to their {direction} so the {shoulder} shoulder comes gently forward and the "
-    "other side turns slightly away. A natural standing three-quarter pose. A full-length "
-    "full-body standing portrait, the whole figure visible from the top of the head down "
-    "to the feet, both shoes entirely inside the frame, nothing cut off at any edge, a "
-    "clear margin of empty background above the head and below the shoes, the standing "
-    "figure filling the height of the tall narrow frame, natural head-to-body proportions, "
-    "hands resting at their sides, {style}, matte illustration, soft even studio lighting, "
-    "plain neutral warm-grey background."
+# Stage 2: turn the approved front. Klein ignores a polite "about twenty degrees" and
+# hands back a frontal figure, so each angle is spelled out anatomically -- which side
+# comes forward, what happens to the far cheek and the far ear. No hedges like "still
+# facing the viewer": those collapse it straight back to frontal (see memory).
+# NOTE: no left/right wording. Klein ignores it -- it turns the figure to the viewer's
+# left whatever the prompt says -- and asking made the 45-degree pose land less often.
+# Use --mirror for the other side.
+TURN_POSES = {
+    "three_quarter": (
+        "Show the exact same character from the reference image, {desc}. Keep the outfit, "
+        "face, hair and colours identical to the reference, only change the pose: they have "
+        "turned halfway to the side, standing at forty-five degrees to the camera, their "
+        "near shoulder closer to the viewer and the far shoulder drawn back behind them, "
+        "the head turned the same way so the face is seen at three-quarters, the far cheek "
+        "narrowed and the far ear hidden, the line of the nose breaking the edge of the far "
+        "cheek. A three-quarter view of a standing figure."
+    ),
+    "profile": (
+        "Show the exact same character from the reference image, {desc}. Keep the outfit, "
+        "face, hair and colours identical to the reference, only change the pose: they have "
+        "turned to stand side-on to the viewer, their whole body rotated ninety degrees so "
+        "we see them from the side, one shoulder toward the camera and the other hidden "
+        "behind it, the face in full profile looking off to the side, the nose and chin in "
+        "silhouette against the background, the far arm hidden behind the torso. A side "
+        "view of a standing figure."
+    ),
+}
+
+# Shared tail: same full-body framing as the base stage.
+TURN_FRAME = (
+    " A full-length full-body standing portrait, the whole figure visible from the top of "
+    "the head down to the feet, both shoes entirely inside the frame, a clear margin of "
+    "empty background above the head and below the shoes, hands resting at their sides, "
+    "{style}, matte illustration, soft even studio lighting, plain neutral warm-grey "
+    "background."
 )
+
+# Filename tag per angle.
+ANGLE_TAGS = {"three_quarter": "3q", "profile": "profile"}
 
 # ---- ComfyUI client ---------------------------------------------------------
 
@@ -586,10 +621,9 @@ def mode_turn(args):
             f"Run `base {args.char}` first, then copy your chosen candidate to that path."
         )
 
-    direction = args.direction
-    shoulder = "right" if direction == "left" else "left"
     prompt = args.prompt or (
-        TURN_PROMPT.format(style=STYLE, desc=desc, direction=direction, shoulder=shoulder)
+        TURN_POSES[args.angle].format(desc=desc)
+        + TURN_FRAME.format(style=STYLE)
         + be.style_suffix
     )
     guidance = args.guidance if args.guidance is not None else be.turn_guidance
@@ -598,8 +632,15 @@ def mode_turn(args):
     # The front IS the style when it came out of the same model family as the exemplar.
     if style and style.resolve() != front.resolve():
         refs.append(str(style))
-    print(f"[turn] char={args.char}  (front -> moderate 3/4 turn to their {direction})")
-    made, out_dir = run_batch(args, be, refs, prompt, guidance, f"{args.char}_{be.tag}_turn")
+    angle_word = "side-on profile" if args.angle == "profile" else "three-quarter turn"
+    stem = f"{args.char}_{be.tag}_{ANGLE_TAGS[args.angle]}"
+    print(f"[turn] char={args.char}  (front -> {angle_word}, facing the viewer's left)")
+    made, out_dir = run_batch(args, be, refs, prompt, guidance, stem)
+    if args.mirror:
+        for path in made:
+            Image.open(path).transpose(Image.FLIP_LEFT_RIGHT).save(path)
+        print(f"[turn] mirrored to face the other way "
+              f"(check any asymmetric kit -- straps, buttoning -- ended up on the right side)")
     print(f"[turn] {len(made)} image(s) -> {out_dir}")
 
 
@@ -640,7 +681,11 @@ def main():
     pt = sub.add_parser("turn", help="Turn the approved front into a moderate 3/4 view.")
     add_common(pt)
     pt.add_argument("--front", default=None, help="Override the approved front reference path.")
-    pt.add_argument("--direction", choices=["left", "right"], default="left", help="Which way the figure turns.")
+    pt.add_argument("--angle", choices=sorted(TURN_POSES), default="three_quarter",
+                    help="How far round: three_quarter (45 degrees) or profile (side-on).")
+    pt.add_argument("--mirror", action="store_true",
+                    help="Flip the finished image so he faces the other way. Mirrors any "
+                         "asymmetric kit too (a Sam Browne strap swaps shoulders).")
     pt.set_defaults(func=mode_turn)
 
     args = ap.parse_args()
