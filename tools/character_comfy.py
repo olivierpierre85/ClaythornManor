@@ -1,34 +1,61 @@
 """
-Character art harness for the local ComfyUI Flux 2 Dev server
-(native API at http://127.0.0.1:8188).
+Character art harness for the local ComfyUI server (native API at
+http://127.0.0.1:8188).
 
-This is the ComfyUI / Flux 2 Dev counterpart of tools/character_flux.py (which
-drives the Forge Neo Klein server). It follows the proven pipeline recorded in the
-`comfyui-flux2-character` memory. There are TWO stages:
+TWO MODELS drive the very same pipeline -- pick with --model / -m:
 
-    base <char>   Head-shot  ->  a darker, subtly-stylised 3/4-body FRONTAL figure.
-                  The likeness comes from the head-shot (fed through ReferenceLatent);
-                  the outfit and everything else come from the character description.
+    klein9b   (default) Flux 2 Klein 9B distilled: cfg 1.0, 12 steps, ~35 s an
+              image. It fits in VRAM, so nothing is streamed from system RAM.
+    dev       Flux 2 Dev: guidance 3.5, 24 steps, ~140 s an image. The reference
+              finish and the strongest likeness -- worth a final pass once the
+              pose and outfit are settled.
+
+MATCHING DEV'S FINISH ON KLEIN
+------------------------------
+Left alone, Klein paints flat cel shading with hard outlines. Two things fix it and
+both are on by default: the PAINTERLY suffix appended to its prompts, and -- doing
+most of the work -- a Dev render chained in as a SECOND reference, which carries the
+painterly house style across. The exemplar transfers style only: another character's
+Dev picture does not leak their face or clothes, so a character with no Dev render of
+their own still gets the right finish from STYLE_EXEMPLAR.
+
+    --style-ref <path>   use this Dev render as the exemplar
+    --no-style-ref       identity reference alone (flat Klein look)
+
+Resolution order: --style-ref, then <char>_flux2dev_front.png, then any Dev render of
+that character, then STYLE_EXEMPLAR.
+
+Outputs are tagged with the model (`lad_klein9b_base.png` vs `lad_flux2dev_base.png`)
+so the two never overwrite each other, and each model has its own approved front
+slot (`<char>_klein9b_front.png` / `<char>_flux2dev_front.png`).
+
+TWO STAGES:
+
+    base <char>   Head-shot  ->  a darker, subtly-stylised FULL-BODY FRONTAL figure
+                  (head to feet, shoes included). The likeness comes from the
+                  head-shot (fed through ReferenceLatent); the outfit and everything
+                  else come from the character description.
 
     turn <char>   Take the APPROVED frontal base and turn the figure a little into a
-                  moderate three-quarter view. The reference is now the front image,
-                  which already carries the outfit, so the uniform/clothes stay
-                  identical across the turn -- only the pose changes.
+                  moderate three-quarter view (still full-body, head to feet). The
+                  reference is now the front image, which already carries the outfit,
+                  so the clothes stay identical across the turn -- only the pose changes.
 
 WORKFLOW
 --------
 1.  python tools/character_comfy.py base captain            # a few frontal candidates
 2.  pick the best one and copy it to the approved front slot:
-        Images/characters_new/captain/base/captain_flux2dev_front.png
+        Images/characters_new/captain/base/captain_klein9b_front.png
 3.  python tools/character_comfy.py turn captain            # 3/4 turns of that front
 
-Each character has an entry in CHARACTERS (head-shot path + description). Only the
-captain's description is written; add the others (see the TODO stubs) as you go.
+Each character has an entry in CHARACTERS (head-shot path + description). Because both
+stages render the whole body, descriptions must cover trousers/skirt and footwear too.
 Outputs are numbered (never overwritten) under Images/characters_new/<char>/base/.
 
 EXAMPLES
 --------
-  python tools/character_comfy.py base captain --count 3
+  python tools/character_comfy.py base lad --count 3
+  python tools/character_comfy.py base lad --model dev --count 3
   python tools/character_comfy.py base captain --seed 1924 --count 1
   python tools/character_comfy.py turn captain --count 3
   python tools/character_comfy.py turn captain --direction right --count 2
@@ -47,16 +74,90 @@ ROOT = Path(__file__).parent.parent.resolve()
 OUT_ROOT = ROOT / "Images" / "characters_new"
 SERVER = "http://127.0.0.1:8188"
 
-# ---- Flux 2 Dev model files (as installed on this box) ----------------------
-UNET_NAME = "flux2-dev-nvfp4.safetensors"
-CLIP_NAME = "mistral_3_small_flux2_fp4_mixed.safetensors"
+# ---- Models ----------------------------------------------------------------
+# Two models drive the very same pipeline (same registry names as
+# tools/scene_comfy.py). They differ in three places only: which loader carries
+# the weights, how the reference image is rescaled, and how the conditioning is
+# guided.
+#
+#   guider "flux"  -> FluxGuidance + BasicGuider                  (dev, guidance 3.5)
+#   guider "cfg"   -> CFGGuider against a ConditioningZeroOut negative, cfg 1.0
+#                     (klein9b -- it is guidance-distilled, so FluxGuidance is inert)
+
+
+# Left to itself Klein paints flat cel shading with hard outlines. This pushes it back
+# towards the painterly finish Dev gives for free -- it is only half the job, though:
+# the style REFERENCE below does the rest.
+PAINTERLY = (
+    " Rendered as a soft oil painting: visible painted brushwork, smoothly blended "
+    "gradient shading, warm reflected light and soft shadow edges, fine skin texture "
+    "and woven cloth grain, delicate painted detail throughout. No flat cel shading, "
+    "no hard black ink outlines, no clean vector lineart, no comic-book look."
+)
+
+# A Dev render chained in as a SECOND reference is what actually carries the house
+# finish over to Klein. It transfers style only -- a picture of another character does
+# not leak that character's face or clothes -- so any approved Dev image works as the
+# fallback exemplar for a character that has no Dev render of their own yet.
+STYLE_EXEMPLAR = "Images/characters_new/captain/base/captain_flux2dev_base.png"
+
+
+class Model:
+    """A diffusion model plus the text encoder, loaders and dials it needs.
+
+    kind "unet" loads through UNETLoader (models/diffusion_models), kind "ckpt"
+    through CheckpointLoaderSimple (models/checkpoints) taking ONLY its MODEL
+    output -- both files are transformer-only, so the text encoder and the VAE
+    are always loaded separately.
+
+    The text encoder is NOT interchangeable: Klein was trained against Qwen 3 8B
+    and Dev against Mistral 3 Small: pairing the wrong one fails in the sampler
+    with "mat1 and mat2 shapes cannot be multiplied" (see tools/scene_comfy.py).
+    """
+
+    def __init__(self, kind, file, tag, clip, clip_type, steps, base_guidance,
+                 turn_guidance, guider, note, style_suffix="", wants_style_ref=False):
+        self.kind = kind
+        self.file = file
+        self.tag = tag                      # goes into the output filenames
+        self.clip = clip
+        self.clip_type = clip_type
+        self.steps = steps
+        self.base_guidance = base_guidance
+        self.turn_guidance = turn_guidance
+        self.guider = guider                # "flux" | "cfg"
+        self.note = note
+        self.style_suffix = style_suffix     # extra prompt wording this model needs
+        self.wants_style_ref = wants_style_ref
+
+
 VAE_NAME = "flux2-vae.safetensors"
+
+MODELS = {
+    # Default. Klein 9B is size- AND step-distilled and fits in the 12.8 GB card
+    # outright, so a figure lands in ~35 s instead of ~140 s. cfg 1.0 comes from
+    # ComfyUI's own "Image Edit (Flux.2 Klein 9B Distilled)" template (which samples
+    # at 4 steps); 12 steps is where the painted texture stops improving -- 20 looked
+    # no better, and 8 came out smoother and more airbrushed.
+    "klein9b": Model("ckpt", "flux-2-klein-9b-nvfp4.safetensors", "klein9b",
+                     "qwen_3_8b.safetensors", "flux2", 12, 1.0, 1.0, "cfg",
+                     "Flux 2 Klein 9B, 5.4 GB -- fits in VRAM, distilled, fast",
+                     style_suffix=PAINTERLY, wants_style_ref=True),
+    # The original path: slower and heavier, but the strongest likeness and the finish
+    # everything else is matched against. Dev paints it unprompted, so it needs neither
+    # the PAINTERLY suffix nor an exemplar. Worth it for a final approved front.
+    "dev": Model("unet", "flux2-dev-nvfp4.safetensors", "flux2dev",
+                 "mistral_3_small_flux2_fp4_mixed.safetensors", "flux2", 24, 3.5, 3.0, "flux",
+                 "Flux 2 Dev, 19.6 GB -- best likeness, offloads to RAM, slow"),
+}
 
 # ---- Per-character registry -------------------------------------------------
 # head_shot: source portrait for the `base` stage (relative to repo root).
 # description: the full subject sentence injected into the prompts -- spell out
 #   face AND clothing/uniform, or the likeness and outfit will drift. Set to None
 #   until written; the tool refuses to run a character whose description is None.
+#   The stages render the FULL body (head to feet), so describe trousers/skirt and
+#   footwear as well -- anything left unsaid is re-invented on every seed.
 
 
 class Character:
@@ -85,9 +186,12 @@ CHARACTERS = {
             "light blond hair swept across the forehead, clear green eyes, clean-shaven with "
             "soft youthful features and a full mouth, a wary watchful expression, wearing a "
             "a light brown 1920s waistcoat over a white collarless shirt with the sleeves "
-            "rolled up, no jacket, the clothes clean but a little cheap and ill-fitting, only "
-            "subtly worn with no visible dirt or stains, the clothes of a working man trying to "
-            "pass in gentry company"
+            "rolled up, no jacket, dark brown wool trousers held up by braces and a little "
+            "loose at the ankle, heavy old-fashioned 1920s working boots of scuffed brown "
+            "leather, laced high over the ankle through metal eyelets, with a blunt rounded "
+            "toe, thick stitched leather soles and a low stacked heel, the clothes clean but "
+            "a little cheap and ill-fitting, only subtly worn with no visible dirt or stains, "
+            "the clothes of a working man trying to pass in gentry company"
         ),
     ),
     "psychic": Character(
@@ -192,15 +296,20 @@ STYLE = (
     "of cartoon stylisation, muted low-key colour palette"
 )
 
-# Stage 1: head-shot -> frontal 3/4-body figure.
+# Stage 1: head-shot -> frontal FULL-BODY figure (head to feet, nothing cropped).
 BASE_PROMPT = (
-    "{style}, of {desc}. Depict them as a full standing portrait cropped at the "
-    "thighs, facing directly forward toward the viewer, body squared to the camera, "
-    "shoulders straight and level, the head small within the frame with the full "
-    "torso and waist visible, natural head-to-body proportions, hands resting at "
-    "their sides. Soft naturalistic brushwork with slightly cleaner, gently stylised "
-    "shading, realistic facial structure and lifelike proportions, matte illustration, "
-    "soft even studio lighting, plain neutral warm-grey background."
+    "{style}, of {desc}. Depict them as a full-length full-body standing portrait, the "
+    "whole figure visible from the top of the head down to the feet, both legs and both "
+    "shoes entirely inside the frame, nothing cut off at any edge, a clear margin of "
+    "empty background above the head and below the shoes, the standing figure filling "
+    "the height of the tall narrow frame. Shot from a distance at eye level with the "
+    "whole body in view, facing directly forward toward the viewer, body squared to the "
+    "camera, shoulders straight and level, feet flat on the ground and slightly apart, "
+    "the head small within the frame, natural head-to-body proportions with the figure "
+    "about seven and a half heads tall, hands resting at their sides. Soft naturalistic "
+    "brushwork with slightly cleaner, gently stylised shading, realistic facial structure "
+    "and lifelike proportions, matte illustration, soft even studio lighting, plain "
+    "neutral warm-grey background."
 )
 
 # Stage 2: turn the approved front a little. No "still facing viewer / not a profile"
@@ -210,9 +319,13 @@ TURN_PROMPT = (
     "face, hair and colours identical to the reference, only change the pose: they "
     "stand in a relaxed three-quarter view, their body rotated about twenty degrees "
     "to their {direction} so the {shoulder} shoulder comes gently forward and the "
-    "other side turns slightly away. A natural standing three-quarter pose. Full "
-    "standing portrait cropped at the thighs, hands resting at their sides, {style}, "
-    "matte illustration, soft even studio lighting, plain neutral warm-grey background."
+    "other side turns slightly away. A natural standing three-quarter pose. A full-length "
+    "full-body standing portrait, the whole figure visible from the top of the head down "
+    "to the feet, both shoes entirely inside the frame, nothing cut off at any edge, a "
+    "clear margin of empty background above the head and below the shoes, the standing "
+    "figure filling the height of the tall narrow frame, natural head-to-body proportions, "
+    "hands resting at their sides, {style}, matte illustration, soft even studio lighting, "
+    "plain neutral warm-grey background."
 )
 
 # ---- ComfyUI client ---------------------------------------------------------
@@ -289,19 +402,26 @@ def next_available_path(out_dir, stem):
 # ---- Graph ------------------------------------------------------------------
 
 
-def build_graph(ref_name, prompt, seed, guidance, width, height, steps, prefix):
-    """The Flux 2 Dev reference/pose graph (single reference image via ReferenceLatent)."""
-    return {
-        "10": {"class_type": "UNETLoader", "inputs": {"unet_name": UNET_NAME, "weight_dtype": "default"}},
-        "11": {"class_type": "CLIPLoader", "inputs": {"clip_name": CLIP_NAME, "type": "flux2"}},
+def build_graph(be, refs, prompt, seed, guidance, width, height, steps, prefix):
+    """The Flux 2 reference/pose graph, wired for model `be`.
+
+    refs: [server_image_name, ...] in conditioning order -- the identity reference
+    (head-shot, or the approved front) first, then an optional style exemplar. Each
+    one is encoded and stacked onto the conditioning as its own ReferenceLatent.
+
+    Same skeleton for both models. Only the loaders, the reference rescale node and
+    the guider change.
+    """
+    if be.kind == "ckpt":
+        loader = {"class_type": "CheckpointLoaderSimple", "inputs": {"ckpt_name": be.file}}
+    else:
+        loader = {"class_type": "UNETLoader", "inputs": {"unet_name": be.file, "weight_dtype": "default"}}
+
+    g = {
+        "10": loader,
+        "11": {"class_type": "CLIPLoader", "inputs": {"clip_name": be.clip, "type": be.clip_type}},
         "12": {"class_type": "VAELoader", "inputs": {"vae_name": VAE_NAME}},
-        "20": {"class_type": "LoadImage", "inputs": {"image": ref_name}},
-        "21": {"class_type": "FluxKontextImageScale", "inputs": {"image": ["20", 0]}},
-        "22": {"class_type": "VAEEncode", "inputs": {"pixels": ["21", 0], "vae": ["12", 0]}},
         "6": {"class_type": "CLIPTextEncode", "inputs": {"clip": ["11", 0], "text": prompt}},
-        "23": {"class_type": "ReferenceLatent", "inputs": {"conditioning": ["6", 0], "latent": ["22", 0]}},
-        "13": {"class_type": "FluxGuidance", "inputs": {"conditioning": ["23", 0], "guidance": guidance}},
-        "14": {"class_type": "BasicGuider", "inputs": {"model": ["10", 0], "conditioning": ["13", 0]}},
         "5": {"class_type": "EmptyFlux2LatentImage", "inputs": {"width": width, "height": height, "batch_size": 1}},
         "15": {"class_type": "KSamplerSelect", "inputs": {"sampler_name": "euler"}},
         "16": {"class_type": "Flux2Scheduler", "inputs": {"steps": steps, "width": width, "height": height}},
@@ -314,19 +434,59 @@ def build_graph(ref_name, prompt, seed, guidance, width, height, steps, prefix):
         "9": {"class_type": "SaveImage", "inputs": {"images": ["8", 0], "filename_prefix": prefix}},
     }
 
+    # Klein guides with a real (if toothless) CFG pair, so the references have to be
+    # stacked onto the zeroed-out negative as well -- the Dev path has no negative.
+    pos = ["6", 0]
+    neg = None
+    if be.guider == "cfg":
+        g["7"] = {"class_type": "ConditioningZeroOut", "inputs": {"conditioning": ["6", 0]}}
+        neg = ["7", 0]
 
-def run_batch(args, ref_path, prompt, guidance, stem):
-    """Upload the reference, then generate args.count images (incrementing/rolling seeds)."""
+    for i, name in enumerate(refs):
+        n = 200 + i * 10
+        if be.guider == "cfg":
+            # Klein has no Kontext rescale step: it takes its references at 1 megapixel.
+            scale = {"class_type": "ImageScaleToTotalPixels",
+                     "inputs": {"image": [f"{n}", 0], "upscale_method": "lanczos",
+                                "megapixels": 1.0, "resolution_steps": 16}}
+        else:
+            scale = {"class_type": "FluxKontextImageScale", "inputs": {"image": [f"{n}", 0]}}
+        g[f"{n}"] = {"class_type": "LoadImage", "inputs": {"image": name}}
+        g[f"{n + 1}"] = scale
+        g[f"{n + 2}"] = {"class_type": "VAEEncode", "inputs": {"pixels": [f"{n + 1}", 0], "vae": ["12", 0]}}
+        g[f"{n + 3}"] = {"class_type": "ReferenceLatent",
+                         "inputs": {"conditioning": pos, "latent": [f"{n + 2}", 0]}}
+        pos = [f"{n + 3}", 0]
+        if neg:
+            g[f"{n + 4}"] = {"class_type": "ReferenceLatent",
+                             "inputs": {"conditioning": neg, "latent": [f"{n + 2}", 0]}}
+            neg = [f"{n + 4}", 0]
+
+    if be.guider == "cfg":
+        g["14"] = {"class_type": "CFGGuider",
+                   "inputs": {"model": ["10", 0], "positive": pos, "negative": neg, "cfg": guidance}}
+    else:
+        g["13"] = {"class_type": "FluxGuidance", "inputs": {"conditioning": pos, "guidance": guidance}}
+        g["14"] = {"class_type": "BasicGuider", "inputs": {"model": ["10", 0], "conditioning": ["13", 0]}}
+    return g
+
+
+def run_batch(args, be, ref_paths, prompt, guidance, stem):
+    """Upload the references, then generate args.count images (incrementing/rolling seeds)."""
     out_dir = OUT_ROOT / args.char / "base"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"       reference = {Path(ref_path).name}  guidance = {guidance}  size = {args.width}x{args.height}")
-    ref_name = upload_image(ref_path, args.server)
+    steps = args.steps if args.steps is not None else be.steps
+    dial = "cfg" if be.guider == "cfg" else "guidance"
+    shown = "  +  ".join(Path(r).name for r in ref_paths)
+    print(f"       model = {args.model}  reference = {shown}")
+    print(f"       {dial} = {guidance}  steps = {steps}  size = {args.width}x{args.height}")
+    refs = [upload_image(r, args.server) for r in ref_paths]
 
     made = []
     for k in range(max(1, args.count)):
         seed = random.randint(0, 2**31 - 1) if args.seed < 0 else args.seed + k
-        graph = build_graph(ref_name, prompt, seed, guidance, args.width, args.height, args.steps, stem)
+        graph = build_graph(be, refs, prompt, seed, guidance, args.width, args.height, steps, stem)
         out_path = next_available_path(out_dir, stem)
         label = f"{k + 1}/{args.count}" if args.count > 1 else "1/1"
         print(f"  gen {label} seed={seed} -> {out_path.name} ...", end="", flush=True)
@@ -359,23 +519,67 @@ def resolve_character(args):
     return ch, desc
 
 
+def resolve_model(args):
+    if args.model not in MODELS:
+        sys.exit(f"Unknown model '{args.model}'. Known: {', '.join(MODELS)}")
+    return MODELS[args.model]
+
+
+def resolve_style_ref(args, be):
+    """The Dev render chained in behind the identity reference to carry the house finish.
+
+    --style-ref wins; --no-style-ref switches it off. Otherwise, for a model that asks
+    for one, take this character's own approved Dev front, else any Dev render of them,
+    else the project exemplar.
+    """
+    if args.no_style_ref:
+        return None
+    if args.style_ref:
+        path = Path(args.style_ref)
+        if not path.exists():
+            sys.exit(f"Style reference not found: {path}")
+        return path
+    if not be.wants_style_ref:
+        return None
+
+    base_dir = OUT_ROOT / args.char / "base"
+    front = base_dir / f"{args.char}_flux2dev_front.png"
+    if front.exists():
+        return front
+    own = sorted(base_dir.glob(f"{args.char}_flux2dev_*.png"))
+    if own:
+        return own[0]
+    exemplar = ROOT / STYLE_EXEMPLAR
+    if exemplar.exists():
+        return exemplar
+    print(f"  ! no style reference found -- {args.model} will paint flatter than Dev. "
+          f"Pass --style-ref <a Dev render> or generate one with --model dev.")
+    return None
+
+
 def mode_base(args):
     ch, desc = resolve_character(args)
+    be = resolve_model(args)
     head = Path(args.head_shot) if args.head_shot else (ROOT / ch.head_shot) if ch.head_shot else None
     if not head or not head.exists():
         sys.exit(f"Head-shot not found for '{args.char}'. Set it in CHARACTERS or pass --head-shot.")
 
-    prompt = args.prompt or BASE_PROMPT.format(style=STYLE, desc=desc)
-    guidance = args.guidance if args.guidance is not None else 3.5
-    print(f"[base] char={args.char}  (head-shot -> frontal 3/4 figure)")
-    made, out_dir = run_batch(args, str(head), prompt, guidance, f"{args.char}_flux2dev_base")
+    prompt = args.prompt or (BASE_PROMPT.format(style=STYLE, desc=desc) + be.style_suffix)
+    guidance = args.guidance if args.guidance is not None else be.base_guidance
+    refs = [str(head)]
+    style = resolve_style_ref(args, be)
+    if style:
+        refs.append(str(style))
+    print(f"[base] char={args.char}  (head-shot -> frontal full-body figure)")
+    made, out_dir = run_batch(args, be, refs, prompt, guidance, f"{args.char}_{be.tag}_base")
     print(f"[base] {len(made)} image(s) -> {out_dir}")
-    print(f"       promote your pick to: {out_dir / (args.char + '_flux2dev_front.png')}")
+    print(f"       promote your pick to: {out_dir / (args.char + '_' + be.tag + '_front.png')}")
 
 
 def mode_turn(args):
     ch, desc = resolve_character(args)
-    front = Path(args.front) if args.front else OUT_ROOT / args.char / "base" / f"{args.char}_flux2dev_front.png"
+    be = resolve_model(args)
+    front = Path(args.front) if args.front else OUT_ROOT / args.char / "base" / f"{args.char}_{be.tag}_front.png"
     if not front.exists():
         sys.exit(
             f"Approved front not found: {front}\n"
@@ -384,10 +588,18 @@ def mode_turn(args):
 
     direction = args.direction
     shoulder = "right" if direction == "left" else "left"
-    prompt = args.prompt or TURN_PROMPT.format(style=STYLE, desc=desc, direction=direction, shoulder=shoulder)
-    guidance = args.guidance if args.guidance is not None else 3.0
+    prompt = args.prompt or (
+        TURN_PROMPT.format(style=STYLE, desc=desc, direction=direction, shoulder=shoulder)
+        + be.style_suffix
+    )
+    guidance = args.guidance if args.guidance is not None else be.turn_guidance
+    refs = [str(front)]
+    style = resolve_style_ref(args, be)
+    # The front IS the style when it came out of the same model family as the exemplar.
+    if style and style.resolve() != front.resolve():
+        refs.append(str(style))
     print(f"[turn] char={args.char}  (front -> moderate 3/4 turn to their {direction})")
-    made, out_dir = run_batch(args, str(front), prompt, guidance, f"{args.char}_flux2dev_turn")
+    made, out_dir = run_batch(args, be, refs, prompt, guidance, f"{args.char}_{be.tag}_turn")
     print(f"[turn] {len(made)} image(s) -> {out_dir}")
 
 
@@ -398,10 +610,18 @@ def add_common(p):
     p.add_argument("char", help="Character id (e.g. captain). See CHARACTERS.")
     p.add_argument("--count", "-n", type=int, default=3, help="How many images (each a different seed).")
     p.add_argument("--seed", type=int, default=-1, help="-1 = random per image; a fixed value increments per --count.")
-    p.add_argument("--guidance", type=float, default=None, help="FluxGuidance (default: base 3.5, turn 3.0).")
-    p.add_argument("--steps", type=int, default=24)
-    p.add_argument("--width", type=int, default=832)
-    p.add_argument("--height", type=int, default=1216)
+    p.add_argument("--model", "-m", choices=sorted(MODELS), default="klein9b",
+                   help="Which model to sample with (default: klein9b, the fast distilled one).")
+    p.add_argument("--guidance", type=float, default=None,
+                   help="klein9b: CFG (default 1.0). dev: FluxGuidance (default base 3.5, turn 3.0).")
+    p.add_argument("--steps", type=int, default=None, help="Sampling steps (default: klein9b 8, dev 24).")
+    p.add_argument("--width", type=int, default=768)
+    p.add_argument("--height", type=int, default=1408)
+    p.add_argument("--style-ref", default=None, dest="style_ref",
+                   help="Dev render to chain in as the style exemplar (default: this "
+                        "character's Dev render, else the project exemplar).")
+    p.add_argument("--no-style-ref", action="store_true", dest="no_style_ref",
+                   help="Generate from the identity reference alone.")
     p.add_argument("--desc", default=None, help="Override the character description for this run.")
     p.add_argument("--prompt", default=None, help="Override the ENTIRE prompt for this run.")
     p.add_argument("--server", default=SERVER)
@@ -412,7 +632,7 @@ def main():
     ap = argparse.ArgumentParser(description="ComfyUI Flux 2 Dev character art harness.")
     sub = ap.add_subparsers(dest="mode", required=True)
 
-    pb = sub.add_parser("base", help="Head-shot -> frontal 3/4-body figure.")
+    pb = sub.add_parser("base", help="Head-shot -> frontal full-body figure (head to feet).")
     add_common(pb)
     pb.add_argument("--head-shot", default=None, dest="head_shot", help="Override the source head-shot path.")
     pb.set_defaults(func=mode_base)

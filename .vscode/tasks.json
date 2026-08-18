@@ -180,7 +180,7 @@
     {
       "id": "characterId",
       "type": "pickString",
-      "description": "Pick a character (Flux 2 Dev art)",
+      "description": "Pick a character to generate art for",
       "options": [
         "captain",
         "lad",
@@ -192,6 +192,16 @@
         "host"
       ],
       "default": "captain"
+    },
+    {
+      "id": "characterModel",
+      "type": "pickString",
+      "description": "Which model? klein9b is distilled and takes seconds, dev has the best likeness but takes minutes",
+      "options": [
+        "klein9b",
+        "dev"
+      ],
+      "default": "klein9b"
     },
     {
       "id": "characterCount",
