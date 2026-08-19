@@ -2,6 +2,13 @@
 # General TODO
 
 
+IMAGE.
+
+Psychic, revert to previous shoes, and add some colors to her clothes too.
+
+I do not like new shoes of the psychic. in the end, the previous one were better. Can you revert and also add a bit of color to her clothers. After all she is a psychic
+
+
 
 IDEA: Maybe the psychic did not want to kill anybody => BUT does it when she realises that Thomas Moody is not him (color of his eyes?)
 

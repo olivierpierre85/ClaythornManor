@@ -207,13 +207,14 @@ CHARACTERS = {
         description=(
             "a gaunt woman in her early sixties, a deeply lined careworn face with hollow "
             "cheeks, pale skin and calm pale hazel eyes with an ordinary, steady gaze, thin "
-            "lips touched with dark red, greying hair wrapped in a soft draped grey headscarf "
-            "or cloche, small drop earrings, wearing a layered dark 1920s dress with a fringed "
-            "shawl and long strings of beads, the skirt falling to mid-calf over dark "
-            "stockings, old-fashioned black leather ankle boots of the Edwardian sort an "
-            "elderly woman would still be wearing, laced high over the ankle through small "
-            "metal eyelets, narrow and close-fitting with a slender pointed-oval toe, a thin "
-            "leather sole and a slim curved heel, the "
+            "lips touched with dark red, greying hair wrapped in a soft draped headscarf or "
+            "cloche of dusky violet silk, small drop earrings, wearing a layered 1920s dress "
+            "in deep plum, a long fringed shawl in muted teal and burnt orange with an "
+            "embroidered paisley border, long strings of amber and amethyst beads, colours "
+            "that are rich and jewel-toned but softened and dusty rather than bright, the "
+            "skirt falling to mid-calf over dark warm-brown stockings, soft worn "
+            "oxblood-brown leather shoes with a low heel and a button strap, the leather a "
+            "warm reddish brown that picks up the amber beads rather than plain black, the "
             "theatrical look of a spiritualist medium"
         ),
     ),
@@ -260,15 +261,22 @@ CHARACTERS = {
         # disfigured face instead, point at the maskless portrait and describe the scarring.
         head_shot="Images/characters_original_and_archive/side/side broken.png",
         description=(
-            "a lean man of about forty wearing a carved painted wooden half-mask (a mask of "
+            "a lean young man of about thirty, a smooth unlined youthful face with a firm "
+            "jaw and taut clear skin, no grey whatsoever in his hair and none at the "
+            "temples, wearing a carved painted wooden half-mask (a mask of "
             "pale carved wood in muted browns, with a visible wood grain) that covers the "
             "disfigured nose and upper face, weary watchful eyes visible through it, a soft "
-            "flat cloth cap over short hair, wearing a plain working-class 1920s outfit of "
+            "flat cloth cap over short dark brown hair, wearing a plain working-class 1920s "
+            "outfit of "
             "collarless pale shirt, waistcoat and jacket in muted tones, full-length dark "
-            "hard-wearing wool trousers hanging straight down to cover the ankle and break "
-            "over the top of the boot, sturdy black leather working boots laced over the "
-            "ankle with a blunt squared toe and thick stitched soles, a disfigured war "
-            "veteran hiding behind the mask"
+            "hard-wearing wool trousers hanging straight down, narrow at the ankle with the "
+            "hem resting on the top of the boot, scuffed dark brown leather 1920s working "
+            "boots on a narrow close-fitting last, laced high over the ankle through six "
+            "pairs of small metal eyelets, with a tapered almond toe, a thin stitched "
+            "leather sole with a slim welted edge and a low stacked heel built of visible "
+            "layers of leather, the leather matte and worn rather than polished, no thick "
+            "moulded rubber sole and no bulbous round-toed modern work boot, a disfigured "
+            "war veteran hiding behind the mask"
         ),
     ),
     "host": Character(
