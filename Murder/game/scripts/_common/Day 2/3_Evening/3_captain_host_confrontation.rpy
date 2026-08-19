@@ -44,9 +44,7 @@ label common_day2_evening_captain_confronts_host:
         """
         The butler's eyes come to me, and he waits.
 
-        There is nothing for it but the small nod the mistress of a house would give, so I give it.
-
-        And with that I have sent away the only man under this roof who knows what I am.
+        There is nothing for me to do but give him a nod.
         """
 
     else:
@@ -64,11 +62,7 @@ label common_day2_evening_captain_confronts_host:
         """
         Mr Manning is taken up by the elbow, and does not resist.
 
-        The Captain waits until their steps have left the stair.
-
-        He has been perfectly courteous the whole weekend, and he is in a hurry now.
-
-        I do not care for that at all.
+        The Captain waits until their steps have left the stair before he speaks.
         """
 
     else:
@@ -88,7 +82,7 @@ label common_day2_evening_captain_confronts_host:
     """
 
     host """
-    Captain, whatever can be the matter?
+    Captain, what is this about?
     """
 
     captain """
@@ -100,31 +94,21 @@ label common_day2_evening_captain_confronts_host:
     if current_character == host_details:
 
         """
-        Miss Baxter and Miss Marsh take the small settee.
-
-        I take the wingback chair, because it is the chair the mistress of a house would take, and because I should like something solid behind my back.
+        We all settle in the tea room.
 
         The Captain closes the door and places himself in front of it.
-
-        Three of them, one of me, and the only way out of the room at his shoulder.
-
-        I have played this scene before, on the other side of it.
-
-        Never one I was not at liberty to walk out of.
         """
 
     else:
 
         """
-        Miss Baxter and Miss Marsh take the small settee.
-
-        Lady Claythorn lowers herself into the wingback chair as though it were a witness box.
+        They all settle in the tea room.
 
         I close the door behind us and place myself between it and our hostess.
         """
 
     captain """
-    Forgive the abruptness. I have my reasons for the haste.
+    Forgive the abruptness, but you will see I have a good reason for it.
 
     Throughout this weekend I have observed a number of things that do not sit easily with the position our hostess claims to hold.
 
@@ -150,13 +134,17 @@ label common_day2_evening_captain_confronts_host:
     if current_character == host_details:
 
         """
-        They speak up for me, both of them, and for a moment I could kiss them for it.
+        They speak up for me, both of them, which is reassuring.
 
-        Then I look at their faces.
+        But then I look at their faces.
 
         Neither of them means a word of it.
 
-        They have been keeping count of my mistakes as well. They have simply been better mannered about it.
+        They have been keeping count of my mistakes as well.
+
+        They have simply been better mannered about it.
+
+        Luckily, there might be enough doubt left for me to explain myself.
         """
 
     else:
@@ -170,16 +158,10 @@ label common_day2_evening_captain_confronts_host:
     host """
     Captain, you have plainly taken the events of today rather harder than the rest of us.
 
-    Whatever small oddities you have been collecting, each of them has a perfectly ordinary explanation.
+    Whatever small oddities you have been collecting, I am sure each of them has a perfectly ordinary explanation.
 
     I would gladly walk you through them, if I thought it would settle your nerves.
     """
-
-    if current_character == host_details:
-
-        """
-        It is the right line, said in the right way, and I feel it land upon nothing at all.
-        """
 
     captain """
     We could review them all in detail, of course.
@@ -221,49 +203,63 @@ label common_day2_evening_captain_confronts_host:
 # --------------------------------------------
 label common_day2_evening_host_unmasked:
 
-    if current_character == host_details:
+    if current_character == host_details and host_details.saved_variables['day2_evening_confessed_freely']:
 
         """
-        I have nothing left to give him that anybody in this room would believe.
+        Miss Baxter begins the name I have worn all weekend, and gets no further than the first sound of it.
 
-        So I say nothing at all, and I let the silence do what silence always does.
-        """
+        Then she thinks better of it, and lets it go.
 
-    else:
+        That is the whole burial of Lady Claythorn.
 
-        """
-        She opens her mouth.
-
-        She closes it again. Her eyes go to her hands, then to the door, then back to me.
-
-        The room takes the silence and settles into it.
-        """
-
-    psychic """
-    Lady Claythorn?
-    """
-
-    if current_character == host_details:
-
-        """
-        Miss Baxter says the name gently, the way one calls a person back into a room.
-
-        It is not my name. It never was.
-
-        And I have not the strength to answer to it once more.
+        Half a word, in a tea room, on a Saturday evening.
         """
 
     else:
 
+        if current_character == host_details:
+
+            """
+            I have nothing left to give him that anybody in this room would believe.
+
+            So I say nothing at all, and I let the silence do what silence always does.
+            """
+
+        else:
+
+            """
+            She opens her mouth.
+
+            She closes it again. Her eyes go to her hands, then to the door, then back to me.
+
+            The room takes the silence and settles into it.
+            """
+
+        psychic """
+        Lady Claythorn?
         """
-        There is no answer.
 
-        Whatever air of authority she has worn this weekend leaves her by inches.
+        if current_character == host_details:
 
-        Instead, her calm composure changes to something else.
+            """
+            Miss Baxter says the name gently, the way one calls a person back into a room.
 
-        Fear.
-        """
+            It is not my name. It never was.
+
+            And I have not the strength to answer to it once more.
+            """
+
+        else:
+
+            """
+            There is no answer.
+
+            Whatever air of authority she has worn this weekend leaves her by inches.
+
+            Instead, her calm composure changes to something else.
+
+            Fear.
+            """
 
     host """
     Very well, Captain.
@@ -401,15 +397,7 @@ label common_day2_evening_host_unmasked:
     And about yours.
     """
 
-    if current_character == host_details:
-
-        """
-        I watched this man carry a dead doctor up my staircase today without altering his breathing.
-
-        He is not calm now.
-        """
-
-    else:
+    if current_character == captain_details:
 
         """
         He receives this in silence.
@@ -530,11 +518,9 @@ label common_day2_evening_host_unmasked:
     if current_character == host_details:
 
         """
-        He brings a revolver out from under his coat as easily as another man produces his watch.
+        He brings a revolver out from under his coat.
 
-        I engaged the maid and the cook myself. I did not engage him.
-
-        And in all the days I have spent in this house, it never once crossed my mind that he was carrying that about beneath his livery.
+        It never once crossed my mind that he was carrying that about beneath his livery.
         """
 
     else:
@@ -554,21 +540,13 @@ label common_day2_evening_host_unmasked:
     butler """
     I will not, unless I am forced to.
 
-    This is for my own protection, I assure you.
+    This is only for my own protection, I assure you.
     """
 
-    if current_character == host_details:
+    if current_character == captain_details:
 
         """
-        He holds it the way a man holds a thing he has held a great many times before.
-
-        Nobody in this room is going to talk him out of anything.
-        """
-
-    else:
-
-        """
-        He looks very sure of him, holding the gun with a firm hand.
+        He looks very sure of himself, holding the gun with a firm hand.
 
         Whatever this man was before he was a butler, he was no stranger to a revolver.
         """

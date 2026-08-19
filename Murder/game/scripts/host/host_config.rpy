@@ -19,6 +19,8 @@ label init_host:
             "day1_evening_manning_spoken" : False,
             "day1_evening_moody_spoken" : False,
             "day1_evening_attic_tried" : False,
+
+            "day2_evening_confessed_freely" : False,
         }
 
         host_important_choices = CharacterImportantChoiceList([

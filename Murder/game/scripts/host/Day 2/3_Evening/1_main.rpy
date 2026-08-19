@@ -60,7 +60,7 @@ label host_day2_evening:
         Mr Manning rises and follows the Captain without a word of protest.
         """
 
-    call common_day2_evening_samuel_manning_discussion_part_4
+        call common_day2_evening_samuel_manning_discussion_part_4
 
     call change_time(16, 00)
 
@@ -68,9 +68,6 @@ label host_day2_evening:
 
     # ------------------------------------
     #   DINNER
-    #   TODO : the manners no longer matter to her, and that ought to show.
-    #   Miss Marsh has been moved up to her elbow, so there is room for a menu
-    #   here if the scene needs one.
     # ------------------------------------
     call change_time(18, 30)
 
@@ -265,17 +262,19 @@ label host_day2_evening_captain_accusation:
     """
     The room waits for me.
 
-    Three seconds, perhaps four. On a stage that is a very long time indeed.
+    I am tired and scared.
 
-    Whatever leaves my mouth now, all three of them will remember it.
+    Nothing has happened as I imagined.
+
+    Maybe it is time to confess and hope the Captain will understand.
     """
 
-    # TODO : the second choice is the interesting one. Decide what it costs her.
     $ time_left = 1
     call run_menu(
         TimedMenu("host_day2_evening_menu_accusation", [
-            TimedMenuChoice("Give him the title from the library book", 'host_day2_evening_accusation_answer', early_exit=True, condition = "host_details.threads.is_unlocked('family_history')"),
+            TimedMenuChoice("Give him the title from the library book{{observation}}", 'host_day2_evening_accusation_answer', early_exit=True, condition = "host_details.threads.is_unlocked('family_history')"),
             TimedMenuChoice("Take offence and refuse the question", 'host_day2_evening_accusation_refuse', early_exit=True),
+            TimedMenuChoice("Confess the truth", 'host_day2_evening_accusation_confess', early_exit=True),
         ])
     )
 
@@ -288,29 +287,74 @@ label host_day2_evening_captain_accusation:
 label host_day2_evening_accusation_answer:
 
     """
-    A heavy book, left open on the library table for me on the first evening.
+    The history book, left open on the library table for me on the first evening.
 
-    I had thought it a courtesy. I see now that it was a rehearsal.
+    A title was mentioned in it.
+
+    My title.
+
+    What was it again?
     """
 
     host """
     Kilbraith, Captain.
 
-    The family name is Claythorn. The peerage is the Earldom of Kilbraith, and I am styled Lady Kilbraith by anybody who troubles himself over such things.
+    The family name is Claythorn.
 
-    My late husband had grown weary of ceremony, as a great many did after the war, and preferred that we be known by the house.
+    The peerage is the Earldom of Kilbraith, and I am styled Lady Kilbraith by anybody who troubles himself over such things.
 
-    I have kept to it since, out of habit, and out of fondness for him.
-    """
+    My father had grown weary of ceremony, as a great many did after the war, and preferred that we be known by the house.
 
-    """
-    I give him the name exactly as the book had it, and I do not hurry over any part of it.
-
-    Then I sit quite still, and leave him to find his own way out of the room he has built.
+    I have kept to it since, out of habit.
     """
 
     captain """
     Lady Kilbraith.
+
+    Right, that is correct.
+    """
+
+    """
+    I watch him lose all his composure.
+
+    He was certain he had caught me in a lie, and now he does not know what to do.
+
+    I should take advantage of that.
+    """
+
+    host """
+    Is that all you wanted to know, Captain?
+
+    You mentioned other things you noticed about me.
+
+    Would you care to share them with us?
+    """
+
+    """
+    He is silent and ashamed.
+    """
+
+    if host_details.threads.unlock('no_portrait'):
+
+        host """
+        Or maybe I can do it for you?
+
+        Maybe you noticed there was no portrait of me in the whole house?
+
+        Do you also need to know why?
+
+        Do you plan to accuse me all evening over trivial things like that?
+        """
+
+        """
+        He is clearly shocked by the ease of my answer.
+
+        I can see all the doubts he had about me vanish in an instant.
+        """
+
+
+    captain """
+    I am sorry, my lady.
 
     Then I have wronged you, and before your own guests, which is a good deal worse.
 
@@ -318,11 +362,9 @@ label host_day2_evening_accusation_answer:
     """
 
     """
-    He apologises for a full minute, and I have to bear every second of it with a gracious face.
+    He keeps on apologising for a full minute, and I have to bear every second of it with a gracious face.
 
-    Miss Baxter is delighted. Miss Marsh says nothing at all.
-
-    Then he says nothing further, all evening.
+    After what feels like an eternity, we all return to our rooms to get ready for dinner.
     """
 
     return
@@ -372,6 +414,57 @@ label host_day2_evening_accusation_refuse:
     Two men dead upstairs, and I am tired of being somebody else.
     """
 
+    jump host_day2_evening_unmasked_end
+
+
+# --------------------------------------------
+#   She does not fight it at all. It buys her
+#   nothing, because the butler was coming down
+#   those stairs whatever she said.
+# --------------------------------------------
+label host_day2_evening_accusation_confess:
+
+    $ host_details.saved_variables['day2_evening_confessed_freely'] = True
+
+    """
+    There is a moment, in every part I have ever played, when the house decides whether it believes me.
+
+    This one has decided already. I can hear it in how quiet they are.
+
+    I could dress the thing up.
+
+    I have the words for it, and the voice for it, and I am very good indeed at both.
+
+    But there are two men lying dead above our heads, and I find I would rather be taken for a fraud than go on being a liar.
+    """
+
+    host """
+    Sit down, Captain.
+
+    I shall not be loomed over for this.
+
+    And do not put the question to me a second time.
+
+    I know quite well what answer you are waiting for, and I have not got it to give you.
+    """
+
+    """
+    Miss Marsh sits up very slowly, as though the chair had turned unsafe beneath her.
+
+    The Captain does not look pleased at all.
+
+    He has the face of a man who was hoping to be wrong.
+    """
+
+    jump host_day2_evening_unmasked_end
+
+
+# --------------------------------------------
+#   Refusal and confession arrive at the same
+#   room, and the same revolver.
+# --------------------------------------------
+label host_day2_evening_unmasked_end:
+
     call common_day2_evening_host_unmasked
 
     """
@@ -402,58 +495,24 @@ label host_day2_evening_butler_recap:
     play sound door_knock
 
     """
-    He knocks, as he did last night, and comes in before I have finished telling him to.
+    He knocks and enters without bothering to wait for my answer.
     """
 
-    # TODO expand : no notes tonight, no speech for tomorrow. Only him asking,
-    # in his flat way, whether she intends to keep going.
     butler """
-    Two of them in one day.
+    I know.
 
     I know how it looks.
 
     But I need you at that table tonight, and I need you steady.
     """
 
-    if host_details.threads.is_unlocked('found_poison'):
+    # NEXT =>
 
-        # TODO expand : the bottle standing open on the scullery shelf, and the
-        # fact that she has told nobody she was ever down there.
-        """
-        The bottle in the scullery is in my mouth before I have decided whether to let it out.
-
-        If I say it, he will know I went below stairs, and he will know I have been counting.
-        """
-
-        $ time_left = 1
-        call run_menu(
-            TimedMenu("host_day2_evening_menu_poison", [
-                TimedMenuChoice("Put the rat poison to him", 'host_day2_evening_accuse_butler', early_exit=True),
-                TimedMenuChoice("Say nothing about the scullery", 'generic_cancel', early_exit=True),
-            ])
-        )
 
     return
 
 
-# --------------------------------------------
-#   She accuses him over the bottle
-#
-#   TODO : next_tasks.md has her threatening to tell the others, and him
-#   killing her for it. That would be a mid-story ending and needs writing.
-#   For now she only frightens him, and herself.
-# --------------------------------------------
-label host_day2_evening_accuse_butler:
 
-    """
-    I tell him what I saw on the scullery shelf, and I tell him what I think of it.
-
-    For the first time since I met him, he has no answer ready.
-    """
-
-    $ host_details.threads.unlock('accused_butler')
-
-    return
 
 
 # --------------------------------------------

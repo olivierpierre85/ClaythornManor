@@ -10,15 +10,13 @@ label host_ending_shot_tea_room:
     call death_screen_transition
 
     """
-    Captain Sinha asked you for a single word, and you had not a single word to give him.
+    Captain Sinha asked you for one simple thing, and you could not give it to him.
 
-    So the mask came off in front of witnesses, and the man who had been giving you your orders all weekend came down to see what had become of his weekend.
+    That was one mistake too many, and it led to this unfortunate end.
 
-    The bullet was never meant for you.
+    You are getting closer to the truth.
 
-    That is the whole of your part, in the end.
-
-    You had been standing in the wrong corner of somebody else's play since the day you took the fee.
+    If you want to reach the end of this story, you should stop making bad decisions like this.
     """
 
     jump ending_generic
