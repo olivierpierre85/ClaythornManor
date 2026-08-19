@@ -46,7 +46,6 @@ label host_day2_evening:
 
     call common_day2_evening_samuel_manning_discussion_part_2
 
-    # NEXT =>
     # One major mistake and you are out (going downstairs is ok)
     if not host_details.threads.is_unlocked('stayed_with_guests') or not host_details.threads.is_unlocked('addressed_manning_first') or host_details.threads.is_unlocked('terrible_shot'):
 
@@ -64,6 +63,7 @@ label host_day2_evening:
 
     call change_time(16, 00)
 
+    # NEXT =>
     call host_day2_evening_butler_recap
 
     # ------------------------------------
@@ -252,239 +252,11 @@ label host_day2_evening_telephone:
 
     return
 
-# --------------------------------------------
-#   CAPTAIN SINHA PRESSES HER
-# --------------------------------------------
-label host_day2_evening_captain_accusation:
 
-    call common_day2_evening_captain_confronts_host
-
-    """
-    The room waits for me.
-
-    I am tired and scared.
-
-    Nothing has happened as I imagined.
-
-    Maybe it is time to confess and hope the Captain will understand.
-    """
-
-    $ time_left = 1
-    call run_menu(
-        TimedMenu("host_day2_evening_menu_accusation", [
-            TimedMenuChoice("Give him the title from the library book{{observation}}", 'host_day2_evening_accusation_answer', early_exit=True, condition = "host_details.threads.is_unlocked('family_history')"),
-            TimedMenuChoice("Take offence and refuse the question", 'host_day2_evening_accusation_refuse', early_exit=True),
-            TimedMenuChoice("Confess the truth", 'host_day2_evening_accusation_confess', early_exit=True),
-        ])
-    )
-
-    return
-
-
-# --------------------------------------------
-#   She read the book, so she has the answer
-# --------------------------------------------
-label host_day2_evening_accusation_answer:
-
-    """
-    The history book, left open on the library table for me on the first evening.
-
-    A title was mentioned in it.
-
-    My title.
-
-    What was it again?
-    """
-
-    host """
-    Kilbraith, Captain.
-
-    The family name is Claythorn.
-
-    The peerage is the Earldom of Kilbraith, and I am styled Lady Kilbraith by anybody who troubles himself over such things.
-
-    My father had grown weary of ceremony, as a great many did after the war, and preferred that we be known by the house.
-
-    I have kept to it since, out of habit.
-    """
-
-    captain """
-    Lady Kilbraith.
-
-    Right, that is correct.
-    """
-
-    """
-    I watch him lose all his composure.
-
-    He was certain he had caught me in a lie, and now he does not know what to do.
-
-    I should take advantage of that.
-    """
-
-    host """
-    Is that all you wanted to know, Captain?
-
-    You mentioned other things you noticed about me.
-
-    Would you care to share them with us?
-    """
-
-    """
-    He is silent and ashamed.
-    """
-
-    if host_details.threads.unlock('no_portrait'):
-
-        host """
-        Or maybe I can do it for you?
-
-        Maybe you noticed there was no portrait of me in the whole house?
-
-        Do you also need to know why?
-
-        Do you plan to accuse me all evening over trivial things like that?
-        """
-
-        """
-        He is clearly shocked by the ease of my answer.
-
-        I can see all the doubts he had about me vanish in an instant.
-        """
-
-
-    captain """
-    I am sorry, my lady.
-
-    Then I have wronged you, and before your own guests, which is a good deal worse.
-
-    I offer you my apology without reservation. I shall not raise the matter again.
-    """
-
-    """
-    He keeps on apologising for a full minute, and I have to bear every second of it with a gracious face.
-
-    After what feels like an eternity, we all return to our rooms to get ready for dinner.
-    """
-
-    return
-
-
-# --------------------------------------------
-#   She cannot give him a title, so she takes
-#   offence instead. It does not work.
-#
-#   The mask comes off, the butler returns with
-#   a revolver, and the Captain goes for him.
-#   The first shot is the one that finds her.
-# --------------------------------------------
-label host_day2_evening_accusation_refuse:
-
-    host """
-    I shall not be catechised in my own house, Captain.
-
-    Two men have died beneath this roof today.
-
-    I have had the police on the telephone, and a body carried up my stair, and I have borne both without complaint.
-
-    You will forgive me if I decline to recite my lineage for the amusement of the company.
-    """
-
-    """
-    It is a good exit line, and I have delivered better ones to larger rooms.
-
-    Miss Baxter looks at her hands.
-
-    But Miss Marsh does not look away from me, and she does not look convinced.
-    """
-
-    captain """
-    That is not a refusal, madam. That is an answer, and everybody here has just heard it.
-
-    A woman who has a title has no need to defend the not saying of it.
-    """
-
-    """
-    He is quite right, and he takes no pleasure at all in being right, which is a good deal worse.
-
-    I have one more line ready. I can feel the shape of it in my mouth.
-
-    And I find I have not the appetite to say it.
-
-    Two men dead upstairs, and I am tired of being somebody else.
-    """
-
-    jump host_day2_evening_unmasked_end
-
-
-# --------------------------------------------
-#   She does not fight it at all. It buys her
-#   nothing, because the butler was coming down
-#   those stairs whatever she said.
-# --------------------------------------------
-label host_day2_evening_accusation_confess:
-
-    $ host_details.saved_variables['day2_evening_confessed_freely'] = True
-
-    """
-    There is a moment, in every part I have ever played, when the house decides whether it believes me.
-
-    This one has decided already. I can hear it in how quiet they are.
-
-    I could dress the thing up.
-
-    I have the words for it, and the voice for it, and I am very good indeed at both.
-
-    But there are two men lying dead above our heads, and I find I would rather be taken for a fraud than go on being a liar.
-    """
-
-    host """
-    Sit down, Captain.
-
-    I shall not be loomed over for this.
-
-    And do not put the question to me a second time.
-
-    I know quite well what answer you are waiting for, and I have not got it to give you.
-    """
-
-    """
-    Miss Marsh sits up very slowly, as though the chair had turned unsafe beneath her.
-
-    The Captain does not look pleased at all.
-
-    He has the face of a man who was hoping to be wrong.
-    """
-
-    jump host_day2_evening_unmasked_end
-
-
-# --------------------------------------------
-#   Refusal and confession arrive at the same
-#   room, and the same revolver.
-# --------------------------------------------
-label host_day2_evening_unmasked_end:
-
-    call common_day2_evening_host_unmasked
-
-    """
-    The Captain does not look at the revolver. He looks at the hand holding it.
-
-    I have watched enough men in enough parts to know what that means.
-    """
-
-    call common_day2_evening_butler_gunfight
-
-    jump host_ending_shot_tea_room
 
 
 # --------------------------------------------
 #   THE BUTLER'S RECAP
-#
-#   The Friday debrief, without the manners. He wants only to know whether she
-#   will hold. If she found the bottle in the scullery, she can put it to him.
-#
-#   TODO : move to 3_butler_recap.rpy once written in full.
 # --------------------------------------------
 label host_day2_evening_butler_recap:
 
@@ -507,6 +279,14 @@ label host_day2_evening_butler_recap:
     """
 
     # NEXT =>
+    # Write doubts, questions of HOst, and denials of butler
+
+    # WHO is behind this? I never saw them right?
+
+    # Maybe you are the one pulling the strings?
+
+    # Hmm and why would I do that?
+    # WHy would anyone want to do that?!!!!!
 
 
     return

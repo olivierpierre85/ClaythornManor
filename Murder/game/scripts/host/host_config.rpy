@@ -19,8 +19,6 @@ label init_host:
             "day1_evening_manning_spoken" : False,
             "day1_evening_moody_spoken" : False,
             "day1_evening_attic_tried" : False,
-
-            "day2_evening_confessed_freely" : False,
         }
 
         host_important_choices = CharacterImportantChoiceList([
@@ -69,6 +67,14 @@ label init_host:
                 "You told Captain Sinha what you truly are, and put yourself in his hands",
                 content_negative="You told nobody in the house what you truly are",
                 image_file="trust_captain",
+                chapters=['saturday_evening'],
+                relevant_chapters=['saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
+                7, "bested_captain",
+                "You answered Captain Sinha's accusation with your title, and he apologised before the whole house",
+                content_negative="You did not best Captain Sinha before the other guests",
+                image_file="captain_host_suspicion_name",
                 chapters=['saturday_evening'],
                 relevant_chapters=['saturday_evening', 'sunday_morning'],
             ),

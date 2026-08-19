@@ -67,17 +67,15 @@ That should give me a little time, but probably no more than a quarter of an hou
 I should not waste any of it.
 Sushil Sinha: Ladies, I know it is rather unusual, but I would like all of you to follow me into the tea room.
 Sushil Sinha: There is a matter I should put before everyone.
-Lady Claythorn: Captain, whatever can be the matter?
+Lady Claythorn: Captain, what is this about?
 Sushil Sinha: Please, my lady. It will not take long.
-Miss Baxter and Miss Marsh take the small settee.
-Lady Claythorn lowers herself into the wingback chair as though it were a witness box.
+They all settle in the tea room.
 I close the door behind us and place myself between it and our hostess.
-Sushil Sinha: Forgive the abruptness. I have my reasons for the haste.
-Sushil Sinha: Throughout this weekend I have noticed a great many things that do not sit comfortably with the role our hostess claims to hold.
-Sushil Sinha: Her portrait is nowhere in the gallery.
-Sushil Sinha: She either does not know, or does not follow, the proper manners at table.
-Sushil Sinha: The hunt she herself arranged appears to be quite beyond her skill.
-Sushil Sinha: And, worst of all, the surname she is using is not her title, as it ought to be.
+Sushil Sinha: Forgive the abruptness, but you will see I have a good reason for it.
+Sushil Sinha: Throughout this weekend I have observed a number of things that do not sit easily with the position our hostess claims to hold.
+Sushil Sinha: Small things, most of them, and I shall not weary you with the whole of the list.
+Sushil Sinha: But one of them is not small at all.
+Sushil Sinha: The name she goes by is the name of this house. It is not a title.
 Sushil Sinha: I do not believe she is Lady Claythorn.
 Sushil Sinha: In truth, I do not believe there is a Lady Claythorn at all.
 Amelia Baxter: Captain! What an extraordinary thing to say.
@@ -85,7 +83,7 @@ Rosalind Marsh: Surely there is some misunderstanding.
 Their voices come on her behalf. Their eyes do not.
 They have noticed things too. I see that now.
 Lady Claythorn: Captain, you have plainly taken the events of today rather harder than the rest of us.
-Lady Claythorn: Each of those small oddities has a perfectly ordinary explanation.
+Lady Claythorn: Whatever small oddities you have been collecting, I am sure each of them has a perfectly ordinary explanation.
 Lady Claythorn: I would gladly walk you through them, if I thought it would settle your nerves.
 Sushil Sinha: We could review them all in detail, of course.
 Sushil Sinha: But why not begin with the simplest of them, my lady.
@@ -94,7 +92,7 @@ Lady Claythorn: Well, it is Claythorn of course, the...
 Sushil Sinha: That is not what I have seen. There is no 'Claythorn' title. That is meant to be your family name.
 Sushil Sinha: What is your title?
 Sushil Sinha: Surely you have not forgotten the title you were raised under.
-Sushil Sinha: Your father would have say it aloud in your presence a hundred times.
+Sushil Sinha: Your father would have said it aloud in your presence a hundred times.
 Sushil Sinha: Letters would have come addressed to it.
 Sushil Sinha: You must have heard it pronounced when you were presented at court.
 Sushil Sinha: What is it?
@@ -104,8 +102,6 @@ The room takes the silence and settles into it.
 Amelia Baxter: Lady Claythorn?
 There is no answer.
 Whatever air of authority she has worn this weekend leaves her by inches.
-Instead, her calm composure changes to something else.
-Fear.
 Lady Claythorn: Very well, Captain.
 Lady Claythorn: You are right.
 Lady Claythorn: I believe it is time I dropped the mask.
@@ -121,7 +117,7 @@ Lady Claythorn: What has happened to Mr Moody, and to Doctor Baldwin, I had no n
 Lady Claythorn: None of that was in any script I was given.
 Lady Claythorn: I am every bit as frightened as you are. More so, perhaps.
 Sushil Sinha: Frightened of whom, madam?
-Lady Claythorn: I don't know, I don't understand most of what is happening here.
+Lady Claythorn: I do not know, and I do not understand the half of what is happening here.
 Lady Claythorn: The staff. They are not staff.
 Lady Claythorn: They were hired the same way I was.
 Lady Claythorn: I think they know less than I do, if anything at all.
@@ -164,7 +160,7 @@ Sushil Sinha: To make a play of us all?
 Sushil Sinha: To hurt us?
 Sushil Sinha: To kill us, as you killed Mr Moody and Doctor Baldwin?
 Butler: No, of course not. Nobody was supposed to get hurt!
-Butler: It was supposed to be just a— just a—
+Butler: It was supposed to be just a... just a...
 Sushil Sinha: Just what?
 Butler: I cannot say more than that.
 Butler: There is no reason for you to know.
@@ -191,8 +187,8 @@ I came armed myself. But the pistol is in the pocket of my other jacket, in my b
 At present, I am defenceless.
 Rosalind Marsh: But you swore you would not hurt us.
 Butler: I will not, unless I am forced to.
-Butler: This is for my own protection, I assure you.
-He looks very sure of him, holding the gun with a firm hand.
+Butler: This is only for my own protection, I assure you.
+He looks very sure of himself, holding the gun with a firm hand.
 Whatever this man was before he was a butler, he was no stranger to a revolver.
 Menu Choice: Accepts being confined
 I have worn the King's uniform the better part of twenty years, and never once stood in proper combat.

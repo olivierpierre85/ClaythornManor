@@ -180,23 +180,27 @@ label captain_day2_evening_butler_offer_attack:
 
     Here is my chance to see what mettle I am made of.
 
-    I lunge for his wrist.
+    Without thinking, I lunge for his wrist.
     """
 
-    call common_day2_evening_butler_gunfight
+    play sound gun
 
     """
+    He fires, but misses, and the shot goes over my shoulder.
+
+    Then my hands are upon his wrist, and the two of us go into the tea table together.
+
+    Miss Marsh cries out something behind me, but I can not make out what.
+
+    I have his wrist in both hands, and the muzzle is coming back towards me by inches.
+
     And then, for one whole moment, I have him.
 
     His arm is bent back against the edge of the table and the revolver is pointing at the ceiling, and I am the stronger of us.
 
-    Twenty years of drill are worth something after all.
-    """
-
-    """
     Then he does something small and practised with his elbow, and the moment is finished.
 
-    The barrel comes down between us, quite unhurried, as though he had all evening for it.
+    The barrel comes back down between us.
     """
 
     play sound gun
@@ -220,11 +224,9 @@ label captain_day2_evening_butler_offer_attack:
     """
 
     """
-    He sounds, of all things, sincere.
-
     Somewhere to my left a woman is being told to lie still.
 
-    The room narrows to a single point of grey.
+    Then the room narrows to a single point of grey.
     """
 
     $ host_details.description_hidden.unlock('not_guilty')

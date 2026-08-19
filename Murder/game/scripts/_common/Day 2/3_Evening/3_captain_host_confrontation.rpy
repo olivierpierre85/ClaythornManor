@@ -203,63 +203,35 @@ label common_day2_evening_captain_confronts_host:
 # --------------------------------------------
 label common_day2_evening_host_unmasked:
 
-    if current_character == host_details and host_details.saved_variables['day2_evening_confessed_freely']:
+    if current_character == host_details:
 
         """
-        Miss Baxter begins the name I have worn all weekend, and gets no further than the first sound of it.
+        I have nothing left to give him that anybody in this room would believe.
 
-        Then she thinks better of it, and lets it go.
-
-        That is the whole burial of Lady Claythorn.
-
-        Half a word, in a tea room, on a Saturday evening.
+        So I say nothing at all, and I let the silence do what silence always does.
         """
 
     else:
 
-        if current_character == host_details:
+        """
+        She opens her mouth.
 
-            """
-            I have nothing left to give him that anybody in this room would believe.
+        She closes it again. Her eyes go to her hands, then to the door, then back to me.
 
-            So I say nothing at all, and I let the silence do what silence always does.
-            """
-
-        else:
-
-            """
-            She opens her mouth.
-
-            She closes it again. Her eyes go to her hands, then to the door, then back to me.
-
-            The room takes the silence and settles into it.
-            """
-
-        psychic """
-        Lady Claythorn?
+        The room takes the silence and settles into it.
         """
 
-        if current_character == host_details:
+    psychic """
+    Lady Claythorn?
+    """
 
-            """
-            Miss Baxter says the name gently, the way one calls a person back into a room.
+    if current_character == captain_details:
 
-            It is not my name. It never was.
+        """
+        There is no answer.
 
-            And I have not the strength to answer to it once more.
-            """
-
-        else:
-
-            """
-            There is no answer.
-
-            Whatever air of authority she has worn this weekend leaves her by inches.
-
-            Instead, her calm composure changes to something else.
-
-            Fear.
-            """
+        Whatever air of authority she has worn this weekend leaves her by inches.
+        """
 
     host """
     Very well, Captain.
@@ -283,9 +255,7 @@ label common_day2_evening_host_unmasked:
     I was given a script of sorts, and the run of the house, and a fee.
     """
 
-    if current_character == captain_details:
-
-        $ host_details.description_hidden.unlock('lie')
+    $ host_details.description_hidden.unlock('lie')
 
     nurse """
     Hired? You mean to tell us this entire weekend has been a... a performance?
@@ -343,10 +313,6 @@ label common_day2_evening_host_unmasked:
 
         """
         Three knocks upon the tea room door. Unhurried.
-
-        I have heard that knock at my own door twice already this weekend.
-
-        I know exactly who is standing behind it, and I have no notion at all how long he has been there.
         """
 
     else:
@@ -549,72 +515,6 @@ label common_day2_evening_host_unmasked:
         He looks very sure of himself, holding the gun with a firm hand.
 
         Whatever this man was before he was a butler, he was no stranger to a revolver.
-        """
-
-    return
-
-
-# --------------------------------------------
-#   Captain Sinha goes for the revolver.
-#   The first shot is lost, and it takes the
-#   hostess in the side.
-#
-#   Shared by the Captain and the Host.
-# --------------------------------------------
-label common_day2_evening_butler_gunfight:
-
-    play sound gun
-
-    if current_character == host_details:
-
-        """
-        Captain Sinha moves before anybody in the room has finished breathing.
-
-        The revolver goes off, and the sound of it is nothing whatever like the sound we used to make for it on a stage.
-
-        He is already beneath the line of the barrel.
-
-        And something takes me in the side, very hard, as though the chair had been kicked out from under me.
-
-        There is no pain in it at all. That is the strange part.
-        """
-
-    else:
-
-        """
-        I am moving before I have properly decided to.
-
-        He fires, and I am already beneath the line of it, and the shot goes over my shoulder.
-
-        Behind me there is a small sound that the room has no business making.
-
-        Then my hands are upon his wrist, and the two of us go into the tea table together.
-        """
-
-    nurse """
-    She is hit! Lady Claythorn is hit!
-    """
-
-    if current_character == host_details:
-
-        """
-        Miss Marsh is on her knees beside me with both hands pressed to my dress, telling me to lie still.
-
-        Above us the two men turn over one another on the floor, for the revolver.
-
-        I should like very much to tell one of them my own name.
-
-        And I cannot think of a single person in this house who would know what to do with it.
-        """
-
-    else:
-
-        """
-        Miss Marsh cries out behind me, and I have not half a second to spare for it.
-
-        The woman is hit. I heard where the shot went, and I know well enough what it found.
-
-        I have his wrist in both hands, and the muzzle is coming back towards me by inches.
         """
 
     return

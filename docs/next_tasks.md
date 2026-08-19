@@ -3,8 +3,12 @@
 
 
 
+IDEA: Maybe the psychic did not want to kill anybody => BUT does it when she realises that Thomas Moody is not him (color of his eyes?)
 
+The butler DID ( he saw an opportunity to make a lot of money?), just create fights, scares, and be reunited with the people she love:
+Thomas moody (former lover ) and Lad (son)
 
+- Ted Harring => Red Herring (What to do with that?)
 
 
 
