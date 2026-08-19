@@ -47,7 +47,7 @@ label host_day2_evening:
     call common_day2_evening_samuel_manning_discussion_part_2
 
     # NEXT =>
-    # On a major mistake and you are out (going downstairs is ok)
+    # One major mistake and you are out (going downstairs is ok)
     if not host_details.threads.is_unlocked('stayed_with_guests') or not host_details.threads.is_unlocked('addressed_manning_first') or host_details.threads.is_unlocked('terrible_shot'):
 
         call host_day2_evening_captain_accusation
@@ -58,8 +58,6 @@ label host_day2_evening:
 
         """
         Mr Manning rises and follows the Captain without a word of protest.
-
-        Nobody asks me what I think should be done, and I am glad of it.
         """
 
     call common_day2_evening_samuel_manning_discussion_part_4
@@ -262,8 +260,15 @@ label host_day2_evening_telephone:
 # --------------------------------------------
 label host_day2_evening_captain_accusation:
 
-    # THIS should be a common? Or try it differently?
-    call captain_day2_evening_confront_host
+    call common_day2_evening_captain_confronts_host
+
+    """
+    The room waits for me.
+
+    Three seconds, perhaps four. On a stage that is a very long time indeed.
+
+    Whatever leaves my mouth now, all three of them will remember it.
+    """
 
     # TODO : the second choice is the interesting one. Decide what it costs her.
     $ time_left = 1
@@ -282,12 +287,40 @@ label host_day2_evening_captain_accusation:
 # --------------------------------------------
 label host_day2_evening_accusation_answer:
 
-    # TODO expand : the title said plainly, as though it had never been in
-    # doubt, and his apology, which is worse to sit through than the question.
     """
-    I give him the name and the title exactly as the book had them, and I do not hurry over either.
+    A heavy book, left open on the library table for me on the first evening.
 
-    He apologises for a full minute, and I have to bear every second of it.
+    I had thought it a courtesy. I see now that it was a rehearsal.
+    """
+
+    host """
+    Kilbraith, Captain.
+
+    The family name is Claythorn. The peerage is the Earldom of Kilbraith, and I am styled Lady Kilbraith by anybody who troubles himself over such things.
+
+    My late husband had grown weary of ceremony, as a great many did after the war, and preferred that we be known by the house.
+
+    I have kept to it since, out of habit, and out of fondness for him.
+    """
+
+    """
+    I give him the name exactly as the book had it, and I do not hurry over any part of it.
+
+    Then I sit quite still, and leave him to find his own way out of the room he has built.
+    """
+
+    captain """
+    Lady Kilbraith.
+
+    Then I have wronged you, and before your own guests, which is a good deal worse.
+
+    I offer you my apology without reservation. I shall not raise the matter again.
+    """
+
+    """
+    He apologises for a full minute, and I have to bear every second of it with a gracious face.
+
+    Miss Baxter is delighted. Miss Marsh says nothing at all.
 
     Then he says nothing further, all evening.
     """
@@ -296,23 +329,60 @@ label host_day2_evening_accusation_answer:
 
 
 # --------------------------------------------
-#   She cannot answer, and has to brazen it out
+#   She cannot give him a title, so she takes
+#   offence instead. It does not work.
 #
-#   TODO : this is the open question. Either the butler comes back down and
-#   takes the room in hand, or she is left half undone in front of the two
-#   women and must carry it into Sunday. Decide before writing the prose.
+#   The mask comes off, the butler returns with
+#   a revolver, and the Captain goes for him.
+#   The first shot is the one that finds her.
 # --------------------------------------------
 label host_day2_evening_accusation_refuse:
 
-    """
-    I draw myself up and tell him that I will not be questioned in my own house on the day two men have died in it.
+    host """
+    I shall not be catechised in my own house, Captain.
 
+    Two men have died beneath this roof today.
+
+    I have had the police on the telephone, and a body carried up my stair, and I have borne both without complaint.
+
+    You will forgive me if I decline to recite my lineage for the amusement of the company.
+    """
+
+    """
     It is a good exit line, and I have delivered better ones to larger rooms.
+
+    Miss Baxter looks at her hands.
 
     But Miss Marsh does not look away from me, and she does not look convinced.
     """
 
-    return
+    captain """
+    That is not a refusal, madam. That is an answer, and everybody here has just heard it.
+
+    A woman who has a title has no need to defend the not saying of it.
+    """
+
+    """
+    He is quite right, and he takes no pleasure at all in being right, which is a good deal worse.
+
+    I have one more line ready. I can feel the shape of it in my mouth.
+
+    And I find I have not the appetite to say it.
+
+    Two men dead upstairs, and I am tired of being somebody else.
+    """
+
+    call common_day2_evening_host_unmasked
+
+    """
+    The Captain does not look at the revolver. He looks at the hand holding it.
+
+    I have watched enough men in enough parts to know what that means.
+    """
+
+    call common_day2_evening_butler_gunfight
+
+    jump host_ending_shot_tea_room
 
 
 # --------------------------------------------

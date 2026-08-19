@@ -70,6 +70,8 @@ You'll have questions on how to behave (like butter bread, who talk to first,...
 Before dinner
 => First task hide letters behing the sheets for CAPTAIN and thomas moody. NO it is the butler who placed them?????
 
+Library => Add joke for the butler. "I do not think any of the guest will want to read, some might not even be able to"
+
 ### FRiday, dinner
 add another thread from Thomas Moody interrogation ?
 
@@ -82,11 +84,10 @@ MAYBE add a explanation for the butler? Needed for the reason the phone is dead 
 ### NEXT =>  evening.
 
 #### Sus
-If you did MANYsuspicious thing, you might be accused by captain as soon as you reach the MANOR.
 
 (see captain story)
 
-He will then ask you questions about and you'll have to answer correctly. He will apologize profusly then say nothing. To know you own name, you must have had gone.
+He will then ask you questions about and you'll have to answer correctly. He will apologize profusly then say nothing. To know you own name, you must have had gone. => But he will hide in shame and not come to the billiard room later. Add  a thread to remember this (captain_humiliated)
 
 If not, usual path. You go you room to change, and the butler comes for a recap.
  IF you noticed poison you threatened to tell everything to everyone, you can accuse him and he kills you?

@@ -101,6 +101,13 @@ label init_host:
 
         host_objects = CharacterObjectList([])
 
+        host_endings = CharacterEndingList([
+            CharacterInformation(1, "shot_tea_room",
+                "You were shot in the tea room when Captain Sinha went for the butler's revolver",
+                image_file="gun_firing",
+                chapters=['saturday_evening']),
+        ])
+
         host_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "name_age", "Elisabeth - is born in 1865 and", is_important = True, unlock_chapters=[('host', 'friday_evening')]),
             CharacterInformation(1, "down_to_earth", "look down upon 'lower class' individuals", is_important = True), 
@@ -135,7 +142,7 @@ label init_host:
             description_long = host_description,
             description_hidden = host_extra_information,
             important_choices = host_important_choices,
-            endings = CharacterInformationList([]),
+            endings = host_endings,
             observations = host_observations,
             objects = host_objects,
             progress = host_progress,
