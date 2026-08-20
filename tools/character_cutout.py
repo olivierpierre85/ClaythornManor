@@ -14,6 +14,10 @@ Two steps, both local (no ComfyUI, no network):
                     so only his top half is on screen: waist-up, chest-up and
                     shoulders-up, one preview each.
 
+    head <char>     A square head shot cut from that sprite -- 256x256 by default,
+                    background still transparent -- squared up on the neck so every
+                    character's head lands at the same size in the frame.
+
 Matting uses rembg's `u2net_human_seg` model (cached in ~/.u2net). Its raw mask is
 hardened, eroded a pixel or two and feathered, which beats rembg's own alpha matting
 here: against a flat low-contrast backdrop that leaves a smoky halo. Nothing is written
@@ -26,6 +30,8 @@ EXAMPLES
   python tools/character_cutout.py place lad --room library_night --heights 0.5 0.7 0.9
   python tools/character_cutout.py bust  lad --room entrance_hall_day
   python tools/character_cutout.py bust  lad --framing chest --x 0.35
+  python tools/character_cutout.py head  lad
+  python tools/character_cutout.py head  lad --size 512 --frame 1.8
 """
 import argparse
 import sys
@@ -191,6 +197,60 @@ def mode_bust(args):
     print(f"[bust] {len(wanted)} preview(s) -> {OUT_ROOT / args.char}")
 
 
+# A head shot is squared up on the neck: the narrowest row of the silhouette between
+# the crown and the shoulders. Hats, turbans and piled-up hair all move the crown, so
+# the pinch is a steadier landmark than the top of the image.
+HEAD_FRAME = 1.55      # square side, as a multiple of crown-to-neck height
+HEAD_ROOM = 0.14       # how much of the square sits above the crown
+
+
+def head_path(src):
+    return src.with_name(src.stem.replace("_cutout", "") + "_head.png")
+
+
+def neck_row(mask, top, figure_height):
+    """The row where the silhouette pinches in between the crown and the shoulders."""
+    widths = mask.sum(1)
+    crown = int(np.argmax(widths[top:top + int(figure_height * 0.12)]))
+    return top + crown + int(np.argmin(widths[top + crown:top + int(figure_height * 0.22)]))
+
+
+def mode_head(args):
+    src = Path(args.src) if args.src else OUT_ROOT / args.char / "base" / f"{args.char}_full_size_front_cutout.png"
+    if not src.exists():
+        sys.exit(f"Cutout not found: {src}\nRun `cut {args.char}` first, or pass --src <path>.")
+
+    img = Image.open(src)
+    if img.mode != "RGBA":
+        sys.exit(f"{src.name} has no alpha channel -- run `cut` on it first.")
+
+    mask = np.array(img.split()[-1]) > 128
+    rows = np.flatnonzero(mask.any(1))
+    if not rows.size:
+        sys.exit(f"{src.name} is entirely transparent.")
+    top, bottom = int(rows[0]), int(rows[-1])
+    neck = neck_row(mask, top, bottom - top)
+
+    # Centre on the head's own silhouette -- an arm held out would drag the body's
+    # centre sideways and take the face off the middle of the frame.
+    cols = np.flatnonzero(mask[top:neck].any(0))
+    centre = (int(cols[0]) + int(cols[-1])) // 2
+
+    side = round((neck - top) * args.frame)
+    left = centre - side // 2
+    upper = top - round(side * args.headroom)
+    # crop() pads anything outside the sprite with transparent pixels, which is what
+    # a head sitting near the top edge needs.
+    head = img.crop((left, upper, left + side, upper + side)).resize(
+        (args.size, args.size), Image.LANCZOS)
+
+    out = head_path(src)
+    head.save(out)
+    print(f"[head] {src.name} -> {out.name}  (crown y={top}, neck y={neck}, "
+          f"{side}px square from x={left} y={upper}, resized to {args.size}x{args.size})")
+    print(f"       {out}")
+
+
 def main():
     ap = argparse.ArgumentParser(description="Cut a character out and preview them in a room.")
     sub = ap.add_subparsers(dest="mode", required=True)
@@ -223,6 +283,16 @@ def main():
                     help="Just one framing (default: all three).")
     pb.add_argument("--x", type=float, default=0.5, help="Where he stands across the frame (0-1).")
     pb.set_defaults(func=mode_bust)
+
+    ph = sub.add_parser("head", help="Square head shot cut from the sprite, background still clear.")
+    ph.add_argument("char")
+    ph.add_argument("--src", default=None, help="Sprite to crop (default: <char>_full_size_front_cutout.png).")
+    ph.add_argument("--size", type=int, default=256, help="Output edge in pixels (default 256).")
+    ph.add_argument("--frame", type=float, default=HEAD_FRAME,
+                    help=f"Square side as a multiple of head height (default {HEAD_FRAME}).")
+    ph.add_argument("--headroom", type=float, default=HEAD_ROOM,
+                    help=f"Share of the square above the crown (default {HEAD_ROOM}).")
+    ph.set_defaults(func=mode_head)
 
     args = ap.parse_args()
     args.func(args)
