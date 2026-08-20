@@ -30,7 +30,7 @@ label host_day2_evening_captain_accusation:
 label host_day2_evening_accusation_answer:
 
     """
-    The history book, left open on the library table for me on the first evening.
+    The book, left open on the library table for me on the first evening.
 
     A title was mentioned in it.
 
@@ -99,7 +99,7 @@ label host_day2_evening_accusation_answer:
     captain """
     I am sorry, my lady.
 
-    Then I have wronged you, and before your own guests, which is a good deal worse.
+    I have wronged you, and before your own guests, which is unforgivable.
 
     I offer you my apology without reservation. I shall not raise the matter again.
     """

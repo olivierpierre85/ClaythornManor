@@ -2,12 +2,13 @@
 # General TODO
 
 
+
+## NOT ENOUGH DEATHS ????
+I wanted a ANd there were none, but in the end, only two deaths happen on the first day.
+
+
+
 IMAGE.
-
-Psychic, revert to previous shoes, and add some colors to her clothes too.
-
-I do not like new shoes of the psychic. in the end, the previous one were better. Can you revert and also add a bit of color to her clothers. After all she is a psychic
-
 
 
 IDEA: Maybe the psychic did not want to kill anybody => BUT does it when she realises that Thomas Moody is not him (color of his eyes?)
@@ -45,6 +46,11 @@ THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell ever
 
 THe drunk will describe the food with delight.
 
+=> MAKE the drunk kill himself ON DAY 2 during dinner? Bring a tray and he is dead? => Faster and simpler
+  BUT could it possibly be a fake death? Doctor  wouldn't know, but captain could taje his pulse? LAUDANUM CAN induce deep sleep similar looking to death
+
+  NEEDS BIG REWRITE OF EVERYONE, but not impossible
+
 ### FRiday
 Train is a mess, he will jump from one place to the next until he will collapse in the tea room. at dinner he will also have glimpse of weird stuff.
 
@@ -66,6 +72,8 @@ OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mist
 
 ### Write Story:
 ## HOST
+WHEN TO introduce the "THE culprit is among the guests?" => If the butler received a word after day one, then question this BEFORE doctor's death
+
 If there are not enough deaths, add one after the hunt, at the telephone
 
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
@@ -128,6 +136,11 @@ You go into the room and find him dead? throat slashed.
     Nobody sleeps, people try to sneek then sunday death. (MAYBE HERE the intuition)
   Or if intuition, I do not trust anyone but you captain. Let's leave now!!!! 
     => wait the two of you. Say, let's meet up in the entrance hall.
+
+
+Should I increase the rate of deaths for some characters?
+
+=> Or host !!!!! Day 2 evening ( better than dissapearing actually) => But can only see it on **day 3 morning?**
 
 ### Sunday
 

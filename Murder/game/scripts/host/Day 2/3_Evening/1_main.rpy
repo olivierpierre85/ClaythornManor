@@ -63,8 +63,80 @@ label host_day2_evening:
 
     call change_time(16, 00)
 
-    # NEXT =>
-    call host_day2_evening_butler_recap
+
+    $ change_room('bedroom_host', dissolve)
+
+    $ play_music('mysterious', 2)
+
+    play sound door_knock
+
+    """
+    He knocks and enters without bothering to wait for my answer.
+    """
+
+    butler """
+    I know.
+
+    I know how it looks.
+
+    But I promise this is not as bad as it looks.
+    """
+
+    host anger """
+    Not as bad as it looks?
+
+    Two deaths now.
+
+    And we have no means of calling the authorities.
+
+    So they will wait in their rooms until God knows when.
+    """
+
+    butler """
+    Until tomorrow, that is all.
+
+    Our work is coming to an end now.
+
+    All you need to do now is make it through dinner.
+    """
+
+    host """
+    Right, and I suppose you still won't tell me the full story of why we are here?
+    """
+
+    butler """
+    It is better you do not know.
+
+    Just tell them that everything will be over tomorrow.
+
+    Make it simple.
+    """
+
+    """
+    I want to ask more questions, but part of me prevents me from doing so.
+
+    If there really is something sinister that was planned, maybe it is better I do not know in advance.
+
+    I really do not like that train of thought.
+
+    I realise I am no longer guided by logic, but by fear.
+    """
+
+    host """
+    All right, dinner then.
+    """
+
+    butler """
+    Great.
+
+    Be strong, it is almost the end.
+    """
+
+    """
+    He exits abruptly and leaves me with my thoughts.
+
+    There is nothing to do but get ready.
+    """
 
     # ------------------------------------
     #   DINNER
@@ -74,9 +146,11 @@ label host_day2_evening:
     play sound dinner_gong
 
     """
-    The gong sounds, exactly as it did last night.
+    The gong sounds downstairs.
 
-    Somebody below stairs is still keeping to the order of the house, and I find that I could weep for them.
+    Time for dinner.
+
+    Hopefully this will be the final act of it all.
     """
 
     $ change_room('dining_room', irisout)
@@ -88,16 +162,20 @@ label host_day2_evening:
     """
     Three chairs stand empty.
 
-    I take my place at the head of a table I have no right to sit at, and I rise to speak.
+    I take my place at the head of a table, and I rise to speak.
     """
 
     call common_day2_evening_dinner_host
 
     """
-    They listen, and they thank me, and not one of them believes a word of it.
+    They listen, and then fall silent.
 
-    Nor do I.
+    I have no idea whether they believe me.
+
+    It hardly matters at this point.
     """
+
+    # NEXT => What happens during dinner?
 
     call change_time(21, 00)
 
@@ -260,33 +338,6 @@ label host_day2_evening_telephone:
 # --------------------------------------------
 label host_day2_evening_butler_recap:
 
-    $ change_room('bedroom_host', dissolve)
-
-    $ play_music('mysterious', 2)
-
-    play sound door_knock
-
-    """
-    He knocks and enters without bothering to wait for my answer.
-    """
-
-    butler """
-    I know.
-
-    I know how it looks.
-
-    But I need you at that table tonight, and I need you steady.
-    """
-
-    # NEXT =>
-    # Write doubts, questions of HOst, and denials of butler
-
-    # WHO is behind this? I never saw them right?
-
-    # Maybe you are the one pulling the strings?
-
-    # Hmm and why would I do that?
-    # WHy would anyone want to do that?!!!!!
 
 
     return
