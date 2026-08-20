@@ -1,7 +1,8 @@
 <!-- # cSpell:disable -->
 # General TODO
 
-
+art? Wait for a faster 9b KV?
+=> THen Force to use locations images that works to generate others
 
 ## NOT ENOUGH DEATHS ????
 I wanted a ANd there were none, but in the end, only two deaths happen on the first day.
