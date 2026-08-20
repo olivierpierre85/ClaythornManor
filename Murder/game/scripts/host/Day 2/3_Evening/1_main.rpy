@@ -171,19 +171,15 @@ label host_day2_evening:
 
     Doctor Baldwin. Mr Moody. Mr Manning.
 
-    I count them on my way to my place, which is the only thing I do all evening that is not acting.
-
     Miss Marsh is left stranded at the far end of the table with nobody in front of her and nobody at her side.
     """
 
     call common_day2_evening_dinner_marsh_seated
 
     """
-    She gathers her things and comes up to me, and the table looks a little less empty for it.
+    She gathers her things and comes up to me.
 
-    I take my place at the head of it, with the butler's paper folded small in my hand.
-
-    Then I rise to speak.
+    I take my place at the head of it, then I rise to speak.
     """
 
     call common_day2_evening_dinner_host
@@ -194,10 +190,6 @@ label host_day2_evening:
     I have no idea whether they believe me.
 
     It hardly matters at this point.
-
-    What matters is that I have just promised four frightened people a police force that was never sent for.
-
-    And that the last thing the butler put in my mouth, with two men lying dead upstairs, was an invitation to drinks.
     """
 
     """
@@ -207,18 +199,6 @@ label host_day2_evening:
     """
 
     call common_day2_evening_dinner_host_marsh
-
-    """
-    Every word of it correct.
-
-    Correct is not the same as felt, and I have heard that particular tone from the wings a hundred times.
-
-    She is not grieving for Doctor Baldwin.
-
-    She is watching me over the top of her grief to see how I take it.
-
-    And when she is not watching me, her eyes go to the silver.
-    """
 
     """
     The butler comes round with the dishes.
@@ -249,67 +229,34 @@ label host_day2_evening:
     else:
 
         """
-        This afternoon he stood beside me at the telephone and told me the line has been dead for years.
-
-        He said it as easily as he says everything else.
-
-        I have no idea what else he has said to me this weekend that was not true.
-
         I eat very little.
         """
-
-    """
-    The rest of them are easier to read than he is.
-    """
 
     if host_details.threads.is_unlocked('bested_captain'):
 
         """
         Captain Sinha does not look at me once for the whole of the meal.
 
-        Not once, and a man does not manage that by accident.
+        Not doubt he is filled with remorse and shame after he accused me.
 
-        I made him apologise in front of the whole house this afternoon, and I was rather pleased with myself at the time.
-
-        Now I sit at the head of my table and understand what it cost me.
-
-        There was one person under this roof who was paying proper attention, and I have taught him to keep his eyes on his plate.
+        He must be in as much hurry as me to see the end of this week-end.
         """
-
-    else:
-
-        """
-        Captain Sinha eats slowly and says almost nothing, and every time I look up he is already looking at me.
-
-        He does not trouble to hide it.
-
-        I am not sure whether that is a warning or an invitation.
-        """
-
-    """
-    Mr Harring keeps his head down and answers only what is put directly to him.
-
-    He carried a dead man up my stairs this afternoon and nobody has thanked him for it.
-
-    Miss Baxter has scarcely spoken a dozen words since we sat down.
-
-    For a woman who makes her living from the dead, she has remarkably little to say about them tonight.
-    """
 
     call change_time(21, 00)
 
     """
-    The plates go out, and it falls to me to end it.
-
-    So I get to my feet and wish them each a good-night by name, which takes longer than it ought to and is the one part of the evening I mean.
-
-    Then I say the last line on the butler's paper, about the drinks laid out in the billiard room, and I hear how it sounds in that room.
+    The plates go out, so I say the last line on the butler's paper.
+    
+    It is about drinks laid out in the billiard room, and I hear how it sounds in that room.
 
     Nobody answers me.
 
-    Chairs go back, and they let me leave first.
+    Chairs go back, and they leave for their room.
+
+    I doubt a lot of them will come back down tonight.
     """
 
+    # Next =>
     $ change_room('bedroom_host', dissolve)
 
     call host_day2_evening_butler_departure
@@ -462,21 +409,6 @@ label host_day2_evening_telephone:
     return
 
 
-
-
-# --------------------------------------------
-#   THE BUTLER'S RECAP
-# --------------------------------------------
-label host_day2_evening_butler_recap:
-
-
-
-    return
-
-
-
-
-
 # --------------------------------------------
 #   AFTER DINNER - THE MASTERMIND SENDS WORD
 #
@@ -624,11 +556,6 @@ label host_day2_evening_leave_with_butler:
 
 # --------------------------------------------
 #   THE BILLIARD ROOM - CAPTAIN SINHA
-#
-#   TODO : the whole scene. She goes down meaning to sit with whoever is still
-#   awake, and finds the Captain alone. Telling him the truth is the only way
-#   out of the night, and it carries into Sunday.
-#   next_tasks.md also floats finding him already dead, throat cut. Decide.
 # --------------------------------------------
 label host_day2_evening_billiard_room:
 
