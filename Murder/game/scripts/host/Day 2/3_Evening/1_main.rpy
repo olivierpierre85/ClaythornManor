@@ -13,6 +13,15 @@
 #       - Dead     : broken (Thomas Moody), doctor (Daniel Baldwin)
 #
 #   Notes :
+#       - Dinner is deliberately without a menu. The captain, nurse, lad and
+#         psychic all describe the same silent meal, so nothing can happen at
+#         that table without rewriting their chapters. Hers is observation only.
+#       - Shared beats live in _common/Day 2/3_Evening/1_main.rpy :
+#           - common_day2_evening_dinner_marsh_seated  (she moves Miss Marsh up)
+#           - common_day2_evening_dinner_host          (the speech)
+#           - common_day2_evening_dinner_host_marsh    (Miss Marsh's condolences)
+#       - The butler serving the plates is what arms 'accused_butler', which is
+#         put to him upstairs in host_day2_evening_butler_departure.
 # --------------------------------------------
 label host_day2_evening:
 
@@ -107,9 +116,9 @@ label host_day2_evening:
     butler """
     It is better you do not know.
 
-    Just tell them that everything will be over tomorrow.
+    All you have to say is on this piece of paper, you can read at dinner.
 
-    Make it simple.
+    That will be you final task for this week-end.
     """
 
     """
@@ -135,7 +144,7 @@ label host_day2_evening:
     """
     He exits abruptly and leaves me with my thoughts.
 
-    There is nothing to do but get ready.
+    There is nothing for me to do but get ready.
     """
 
     # ------------------------------------
@@ -157,12 +166,24 @@ label host_day2_evening:
 
     $ play_music('sad', 3)
 
-    # TODO expand : three empty chairs, Miss Marsh moved up beside her, and the
-    # speech she has to give without a written word of it from the butler.
     """
     Three chairs stand empty.
 
-    I take my place at the head of a table, and I rise to speak.
+    Doctor Baldwin. Mr Moody. Mr Manning.
+
+    I count them on my way to my place, which is the only thing I do all evening that is not acting.
+
+    Miss Marsh is left stranded at the far end of the table with nobody in front of her and nobody at her side.
+    """
+
+    call common_day2_evening_dinner_marsh_seated
+
+    """
+    She gathers her things and comes up to me, and the table looks a little less empty for it.
+
+    I take my place at the head of it, with the butler's paper folded small in my hand.
+
+    Then I rise to speak.
     """
 
     call common_day2_evening_dinner_host
@@ -173,11 +194,121 @@ label host_day2_evening:
     I have no idea whether they believe me.
 
     It hardly matters at this point.
+
+    What matters is that I have just promised four frightened people a police force that was never sent for.
+
+    And that the last thing the butler put in my mouth, with two men lying dead upstairs, was an invitation to drinks.
     """
 
-    # NEXT => What happens during dinner?
+    """
+    The plates come in.
+
+    Miss Marsh turns to me before I have my napkin across my lap.
+    """
+
+    call common_day2_evening_dinner_host_marsh
+
+    """
+    Every word of it correct.
+
+    Correct is not the same as felt, and I have heard that particular tone from the wings a hundred times.
+
+    She is not grieving for Doctor Baldwin.
+
+    She is watching me over the top of her grief to see how I take it.
+
+    And when she is not watching me, her eyes go to the silver.
+    """
+
+    """
+    The butler comes round with the dishes.
+
+    He serves from the left, he holds the platter at exactly the height he ought, and he does not hurry.
+
+    I cannot take my eyes off his hands.
+    """
+
+    if host_details.threads.is_unlocked('found_poison'):
+
+        """
+        The bottle in the scullery, standing open on the shelf.
+
+        I pushed the thought away this morning, and it has come back to sit at my table.
+
+        I find myself watching which plate goes to which guest, as though I should be able to tell by looking.
+
+        Miss Marsh. Miss Baxter. Mr Harring. The Captain.
+
+        And Mr Manning's tray, gone up the back stairs to a locked door.
+
+        When my own plate is set in front of me I do not touch it.
+
+        I move the food about a little, the way one does, and I wonder whether I am the only person at this table who is not eating.
+        """
+
+    else:
+
+        """
+        This afternoon he stood beside me at the telephone and told me the line has been dead for years.
+
+        He said it as easily as he says everything else.
+
+        I have no idea what else he has said to me this weekend that was not true.
+
+        I eat very little.
+        """
+
+    """
+    The rest of them are easier to read than he is.
+    """
+
+    if host_details.threads.is_unlocked('bested_captain'):
+
+        """
+        Captain Sinha does not look at me once for the whole of the meal.
+
+        Not once, and a man does not manage that by accident.
+
+        I made him apologise in front of the whole house this afternoon, and I was rather pleased with myself at the time.
+
+        Now I sit at the head of my table and understand what it cost me.
+
+        There was one person under this roof who was paying proper attention, and I have taught him to keep his eyes on his plate.
+        """
+
+    else:
+
+        """
+        Captain Sinha eats slowly and says almost nothing, and every time I look up he is already looking at me.
+
+        He does not trouble to hide it.
+
+        I am not sure whether that is a warning or an invitation.
+        """
+
+    """
+    Mr Harring keeps his head down and answers only what is put directly to him.
+
+    He carried a dead man up my stairs this afternoon and nobody has thanked him for it.
+
+    Miss Baxter has scarcely spoken a dozen words since we sat down.
+
+    For a woman who makes her living from the dead, she has remarkably little to say about them tonight.
+    """
 
     call change_time(21, 00)
+
+    """
+    The plates go out, and it falls to me to end it.
+
+    So I get to my feet and wish them each a good-night by name, which takes longer than it ought to and is the one part of the evening I mean.
+
+    Then I say the last line on the butler's paper, about the drinks laid out in the billiard room, and I hear how it sounds in that room.
+
+    Nobody answers me.
+
+    Chairs go back, and they let me leave first.
+    """
 
     $ change_room('bedroom_host', dissolve)
 
@@ -382,6 +513,7 @@ label host_day2_evening_butler_departure:
     $ time_left = 1
     call run_menu(
         TimedMenu("host_day2_evening_menu_departure", [
+            TimedMenuChoice("Ask him about the open bottle in the scullery{{observation}}", 'host_day2_evening_accuse_butler', keep_alive=True, condition = "host_details.threads.is_unlocked('found_poison')"),
             TimedMenuChoice("Go with him tonight", 'host_day2_evening_leave_with_butler', early_exit=True),
             TimedMenuChoice("Refuse, and stay in the house", 'generic_cancel', early_exit=True),
         ])
@@ -393,6 +525,73 @@ label host_day2_evening_butler_departure:
 
     That, more than anything he has said, is what frightens me.
     """
+
+    return
+
+
+# --------------------------------------------
+#   SHE PUTS THE SCULLERY BOTTLE TO HIM
+#
+#   Needs 'found_poison'. He does not deny it and he does not explain it, which
+#   is what makes the car in the garage look rather different.
+# --------------------------------------------
+label host_day2_evening_accuse_butler:
+
+    host """
+    Before I answer you, there is something I should like to ask.
+
+    On Friday night you told me I had no business below stairs.
+
+    While I was down there I saw a bottle of rat poison in the scullery, standing open on the shelf and half gone.
+
+    This house was shut up until the day before we arrived, and it will be shut up again at the end of the weekend.
+
+    So who has been poisoning rats here, and when?
+    """
+
+    """
+    He does not answer at once, and that is answer enough for me.
+
+    A man with nothing to hide says 'what bottle' before you have finished the question.
+    """
+
+    butler """
+    There are rats in a house this old, my lady.
+
+    There is poison in every scullery in Scotland.
+    """
+
+    host """
+    That is not what I asked you.
+    """
+
+    butler """
+    No.
+
+    It is not.
+    """
+
+    """
+    He looks at me for a long moment, and I watch him decide how much I am worth.
+    """
+
+    butler """
+    I would not think about that bottle any more tonight, if I were you.
+
+    Nobody at that table has come to any harm, and nobody is going to.
+
+    The car is still in the garage, and my offer stands until it does not.
+    """
+
+    """
+    Nobody at that table.
+
+    He chose those three words with a great deal of care, and there is a man locked in a room upstairs who was not at that table.
+
+    His tray went up the back stairs while I was watching the plates.
+    """
+
+    $ host_details.threads.unlock('accused_butler')
 
     return
 

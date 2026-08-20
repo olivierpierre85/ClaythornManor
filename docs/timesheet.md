@@ -14,6 +14,8 @@
 
 Start real work again : spring 2027 (start looking in november)
 
+META story. Keep it for the full game?
+
 ---
 # 🚀 Project Completion Timeline (Revised Draft)
 | Finished               | Month          |

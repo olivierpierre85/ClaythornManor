@@ -138,15 +138,7 @@ label nurse_day2_evening:
     Lady Claythorn observes my awkward position.
     """
 
-    host """
-    I think it's better if you come sit next to me tonight.
-
-    No reason to leave you alone at the end of the table.
-    """
-
-    nurse """
-    Thank you.
-    """
+    call common_day2_evening_dinner_marsh_seated
 
     """
     Everyone is subdued.
@@ -257,31 +249,7 @@ label nurse_day2_evening:
 
 label nurse_day2_dinner_host:
 
-    nurse """
-    It has been a dreadful day, has it not, Lady Claythorn?
-
-    To lose such a man as Doctor Baldwin in such a manner...
-    """
-
-    host """
-    It is indeed a tragedy.
-    """
-
-    nurse """
-    And poor Mr Manning.
-
-    One can only hope the authorities arrive soon to settle this matter.
-    """
-
-    host """
-    Indeed.
-    
-    But please, let us not dwell on such dark matters while we eat, my dear.
-    """
-
-    nurse """
-    Of course.
-    """
+    call common_day2_evening_dinner_host_marsh
 
     call host_generic
 

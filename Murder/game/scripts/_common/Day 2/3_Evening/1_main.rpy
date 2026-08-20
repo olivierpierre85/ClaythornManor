@@ -349,6 +349,24 @@ label common_day2_evening_samuel_manning_discussion_part_4:
     
     return
 
+# The hostess moves Miss Marsh up to her own end of the table, since the three
+# empty chairs have left her sitting alone. Shared between the nurse's dinner
+# and the host's, and referred to in the captain's narration.
+label common_day2_evening_dinner_marsh_seated:
+
+    host """
+    I think it's better if you come sit next to me tonight.
+
+    No reason to leave you alone at the end of the table.
+    """
+
+    nurse """
+    Thank you.
+    """
+
+    return
+
+
 label common_day2_evening_dinner_host:
 
     host """
@@ -367,6 +385,39 @@ label common_day2_evening_dinner_host:
     For now, enjoy your dinner.
 
     Drinks will be available in the billiard room afterwards, as they were yesterday.
+    """
+
+    return
+
+
+# Miss Marsh, seated at the hostess's elbow, offers her condolences over the
+# meal. The nurse continues into host_generic afterwards, the host does not.
+label common_day2_evening_dinner_host_marsh:
+
+    nurse """
+    It has been a dreadful day, has it not, Lady Claythorn?
+
+    To lose such a man as Doctor Baldwin in such a manner...
+    """
+
+    host """
+    It is indeed a tragedy.
+    """
+
+    nurse """
+    And poor Mr Manning.
+
+    One can only hope the authorities arrive soon to settle this matter.
+    """
+
+    host """
+    Indeed.
+
+    But please, let us not dwell on such dark matters while we eat, my dear.
+    """
+
+    nurse """
+    Of course.
     """
 
     return
