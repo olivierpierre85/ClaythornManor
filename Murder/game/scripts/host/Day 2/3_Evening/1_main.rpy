@@ -13,15 +13,6 @@
 #       - Dead     : broken (Thomas Moody), doctor (Daniel Baldwin)
 #
 #   Notes :
-#       - Dinner is deliberately without a menu. The captain, nurse, lad and
-#         psychic all describe the same silent meal, so nothing can happen at
-#         that table without rewriting their chapters. Hers is observation only.
-#       - Shared beats live in _common/Day 2/3_Evening/1_main.rpy :
-#           - common_day2_evening_dinner_marsh_seated  (she moves Miss Marsh up)
-#           - common_day2_evening_dinner_host          (the speech)
-#           - common_day2_evening_dinner_host_marsh    (Miss Marsh's condolences)
-#       - The butler serving the plates is what arms 'accused_butler', which is
-#         put to him upstairs in host_day2_evening_butler_departure.
 # --------------------------------------------
 label host_day2_evening:
 
@@ -116,9 +107,9 @@ label host_day2_evening:
     butler """
     It is better you do not know.
 
-    All you have to say is on this piece of paper, you can read at dinner.
+    All you have to say is on this piece of paper, which you can read at dinner.
 
-    That will be you final task for this week-end.
+    That will be your final task for this weekend.
     """
 
     """
@@ -237,46 +228,135 @@ label host_day2_evening:
         """
         Captain Sinha does not look at me once for the whole of the meal.
 
-        Not doubt he is filled with remorse and shame after he accused me.
+        No doubt he is filled with remorse and shame after he accused me.
 
-        He must be in as much hurry as me to see the end of this week-end.
+        He must be in as much of a hurry as I am to see the end of this weekend.
         """
 
     call change_time(21, 00)
 
     """
     The plates go out, so I say the last line on the butler's paper.
-    
+
     It is about drinks laid out in the billiard room, and I hear how it sounds in that room.
 
     Nobody answers me.
 
-    Chairs go back, and they leave for their room.
+    Chairs go back, and they leave for their rooms.
 
     I doubt a lot of them will come back down tonight.
     """
 
     # Next =>
+    call change_time(21, 15)
+
     $ change_room('bedroom_host', dissolve)
 
-    call host_day2_evening_butler_departure
+    $ play_music('mysterious', 2)
+
+    play sound door_knock
+
+    butler """
+    Well done for dinner.
+
+    Now, I have just received word from our 'patron'.
+
+    They say that things are not going as they were meant to, so they are cancelling the whole thing.
+
+    There is no reason for either of us to remain here any longer.
+    """
+
+    host """
+    You received word? How?
+
+    How could they know what is happening?
+
+    I thought the telephone was dead.
+
+    Were you able to repair it?
+    """
+
+    butler """
+    Never mind how, it does not matter.
+
+    All you need to know is that our part is done.
+
+    The car is in the garden.
+
+    I will gather the rest of the staff, and we can leave as soon as we are ready.
+
+    You will get your money when we reach the town.
+    """
+
+    """
+    Leaving this place, finally.
+
+    Yet, I am unsure about it.
+
+    Leaving like robbers in the middle of the night.
+
+    That is not how I pictured this weekend ending.
+    """
+
+    host """
+    I do not know.
+
+    Maybe it is better to wait for the morning.
+
+    At least so we can see the road properly.
+
+    I am not sure that leaving now is the best idea.
+    """
+
+    butler """
+    Do what you want.
+
+    If you prefer to stay here with the rest, that is your business.
+
+    But I will leave with the others, no matter what.
+
+    If you are not in the car by eleven, we will leave without you.
+    """
+
+    """
+    He leaves without giving me more explanation.
+
+    I am now filled with questions.
+
+    The most pressing one is how he could have received news from the person who organised this weekend.
+
+    Until now I thought they were still in London.
+
+    But now I learn they are not.
+
+    Are they hidden somewhere in this place? Or hiding in the woods?
+
+    I do not have a good answer to that, and I probably will not have one staying here.
+
+    I should get out of this room.
+    """
 
     # ------------------------------------
     #   THE NIGHT
-    #   TODO : replace with a proper map menu in 0_map_choices.rpy, built on the
-    #   model of host_day1_evening_map_menu. The billiard room and retiring for
-    #   the night are the two exits that matter.
+    #
+    #   Ninety minutes, and two doors decide how it ends (see 0_map_choices.rpy) :
+    #     - the garden, where the car is waiting, which is the ending in the woods
+    #     - the billiard room, where the Captain sits up, which is the only ally
+    #       she can still make
+    #   The Captain is only in that room if she did not humiliate him in the tea
+    #   room, so 'bested_captain' closes her happy ending for good.
     # ------------------------------------
+    call change_time(21, 30)
+
     $ play_music('mysterious', 2)
 
-    $ time_left = 60
+    """
+    An hour and a half, and then a car goes down that drive with me in it or without me.
+    """
 
-    call run_menu(
-        TimedMenu("host_day2_evening_menu_night", [
-            TimedMenuChoice('Go down to the billiard room', 'host_day2_evening_billiard_room', 60, room='billiard_room'),
-            TimedMenuChoice('Retire for the night', 'generic_cancel', early_exit=True, room='bedroom_host'),
-        ])
-    )
+    $ time_left = 90
+
+    call run_menu(host_details.saved_variables["day2_evening_map_menu"])
 
     call change_time(23, 00)
 
@@ -408,59 +488,6 @@ label host_day2_evening_telephone:
 
     return
 
-
-# --------------------------------------------
-#   AFTER DINNER - THE MASTERMIND SENDS WORD
-#
-#   He has had a message. The weekend is over, and he means to drive her out
-#   tonight. Going with him is the car in the woods, as in Broken's timeline.
-#
-#   TODO : move to 4_departure.rpy once written in full.
-# --------------------------------------------
-label host_day2_evening_butler_departure:
-
-    $ play_music('mysterious', 2)
-
-    play sound door_knock
-
-    # TODO expand : the message, and how little he will say about who sent it.
-    butler """
-    I have had word.
-
-    Matters are not going as they were meant to, so there is no reason for either of us to remain.
-
-    Our part is done.
-
-    The car is in the garage.
-
-    I can have us on the road within the hour, and you need never hear of this house again.
-    """
-
-    """
-    An hour ago I would have taken his arm and run for it.
-
-    And that is precisely what troubles me now.
-    """
-
-    $ time_left = 1
-    call run_menu(
-        TimedMenu("host_day2_evening_menu_departure", [
-            TimedMenuChoice("Ask him about the open bottle in the scullery{{observation}}", 'host_day2_evening_accuse_butler', keep_alive=True, condition = "host_details.threads.is_unlocked('found_poison')"),
-            TimedMenuChoice("Go with him tonight", 'host_day2_evening_leave_with_butler', early_exit=True),
-            TimedMenuChoice("Refuse, and stay in the house", 'generic_cancel', early_exit=True),
-        ])
-    )
-
-    # TODO expand : her refusal, and the look he gives her before he withdraws.
-    """
-    I tell him I shall not leave this house tonight, and he does not argue with me.
-
-    That, more than anything he has said, is what frightens me.
-    """
-
-    return
-
-
 # --------------------------------------------
 #   SHE PUTS THE SCULLERY BOTTLE TO HIM
 #
@@ -512,13 +539,13 @@ label host_day2_evening_accuse_butler:
 
     Nobody at that table has come to any harm, and nobody is going to.
 
-    The car is still in the garage, and my offer stands until it does not.
+    The car is standing in the garden, and my offer stands until it does not.
     """
 
     """
     Nobody at that table.
 
-    He chose those three words with a great deal of care, and there is a man locked in a room upstairs who was not at that table.
+    He chose those four words with a great deal of care, and there is a man locked in a room upstairs who was not at that table.
 
     His tray went up the back stairs while I was watching the plates.
     """
@@ -537,13 +564,37 @@ label host_day2_evening_accuse_butler:
 # --------------------------------------------
 label host_day2_evening_leave_with_butler:
 
-    $ play_music('danger', 2)
+    $ change_room("manor_garden")
 
     """
     I take what will fit into one bag, and I do not look back at the room.
 
-    The car is waiting with its lamps already lit.
+    The car is waiting on the gravel with its lamps already lit and nobody in it at all.
+
+    I am the first, which I had not expected.
+
+    I get into the back and I put the bag on my knees and I sit there in the dark.
     """
+
+    call change_time(23, 00)
+
+    """
+    They come out to me one at a time over the next hour, and none of them says a word to me.
+
+    The girl from the kitchen, with her carpet bag. The footman. Then the rest of them.
+
+    Not one of them is surprised to find me sitting there, and that is the part I keep turning over.
+
+    They were told I would be coming, and they were told before I had decided.
+
+    The last door of the house shuts at eleven exactly, and he takes his seat and lets the brake off.
+    """
+
+    $ stop_music()
+
+    $ play_music('danger_short')
+
+    play sound car_driving
 
     # TODO expand : the drive, the trees, and the bend he takes far too fast.
     """

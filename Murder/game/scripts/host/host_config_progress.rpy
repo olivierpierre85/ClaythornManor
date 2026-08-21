@@ -31,5 +31,8 @@ label host_config_progress:
                 {"label": "host_day2_evening", "threads": {}},
                 {"label": "host_day2_evening", "threads": {"terrible_shot": True, "go_downstairs": True}},
                 {"label": "host_day2_evening", "threads": {"found_poison": True, "family_history": True, "terrible_shot": True, "go_downstairs": True}},
+                # No mistake at all, so the Captain never confronts her and he is
+                # still sitting up in the billiard room at night.
+                {"label": "host_day2_evening", "threads": {"found_poison": True, "family_history": True, "go_downstairs": True, "stayed_with_guests": True, "addressed_manning_first": True}},
             ],
         }

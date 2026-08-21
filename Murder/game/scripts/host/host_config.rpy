@@ -6,6 +6,8 @@ label init_host:
 
     call host_day1_evening_map_menu
 
+    call host_day2_evening_map_menu
+
     python:
         host_name = "Lady Claythorn"
 
@@ -15,6 +17,7 @@ label init_host:
 
             # MAP Menus
             "day1_evening_map_menu" : host_day1_evening_map_menu,
+            "day2_evening_map_menu" : host_day2_evening_map_menu,
 
             "day1_evening_manning_spoken" : False,
             "day1_evening_moody_spoken" : False,
