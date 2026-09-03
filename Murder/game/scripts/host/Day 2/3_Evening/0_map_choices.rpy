@@ -74,12 +74,6 @@ label host_day2_evening_map_menu:
     return
 
 
-# ------------------------------------
-#   SERVANTS' FLOOR
-#
-#   Everyone below stairs was told before she was, which is the whole of what
-#   she learns down here.
-# ------------------------------------
 label host_day2_evening_kitchen:
 
     $ change_room('kitchen')

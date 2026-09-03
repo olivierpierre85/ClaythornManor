@@ -327,32 +327,18 @@ label host_day2_evening:
 
     Until now I thought they were still in London.
 
-    But now I learn they are not.
+    But what if they are not.
 
     Are they hidden somewhere in this place? Or hiding in the woods?
 
-    I do not have a good answer to that, and I probably will not have one staying here.
+    I do not have a good answer to that, and I probably will not find one staying here.
 
     I should get out of this room.
     """
 
-    # ------------------------------------
-    #   THE NIGHT
-    #
-    #   Ninety minutes, and two doors decide how it ends (see 0_map_choices.rpy) :
-    #     - the garden, where the car is waiting, which is the ending in the woods
-    #     - the billiard room, where the Captain sits up, which is the only ally
-    #       she can still make
-    #   The Captain is only in that room if she did not humiliate him in the tea
-    #   room, so 'bested_captain' closes her happy ending for good.
-    # ------------------------------------
     call change_time(21, 30)
 
     $ play_music('mysterious', 2)
-
-    """
-    An hour and a half, and then a car goes down that drive with me in it or without me.
-    """
 
     $ time_left = 90
 

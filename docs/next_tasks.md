@@ -3,6 +3,7 @@
 
 art? Wait for a faster 9b KV?
 => THen Force to use locations images that works to generate others
+=> Check when it is getting obvious the killer is among the guests? From start for seasoned murder mystery fan, or never for casual players? Needs to be articulate (Now by host)
 
 ## NOT ENOUGH DEATHS ????
 I wanted a ANd there were none, but in the end, only two deaths happen on the first day.
@@ -101,58 +102,27 @@ Talk with DRUNK => UNLOCK him over his love of food => but who? the questions mu
 
 MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
 
-### NEXT =>  evening.
+### NEXT =>  evening map choices and endings (check previous map choice to reuse to dialogs)
 
-#### Sus
-
-(see captain story)
-
-He will then ask you questions about and you'll have to answer correctly. He will apologize profusly then say nothing. To know you own name, you must have had gone. => But he will hide in shame and not come to the billiard room later. Add  a thread to remember this (captain_humiliated)
-
-=> Add the 
-
-If not, usual path. You go you room to change, and the butler comes for a recap.
- IF you noticed poison you threatened to tell everything to everyone, you can accuse him and he kills you?
-
-### Dinner 
-
-Same as usual. You do not care about manners now.
-
-### After dinner
-Go back to your room, the butler comes after you.
-He received news from the mastermind. (who is it? butler: I do not know, I just received that message and recognize the style). Things are not going exactly as planned so we should leave. no need to linger further. Our job is done isn't it great? 
 
 IF you leave, you are killed as in broken timeline (car in the woods)
+=> Intuition should be "THE KILLER is among us" => Get when leave with butler ending?
 
-IF You do not trust captain sinha and go to bed alone. You are killed in your bed (throat)
-
-Or you do not leave and stay with people NEED INTUITION, you have the map choice
-- Billiard room (**TRUST captain Sinha?**). And explain on the Saturday night or sunday morning? you need his key to open to samuel MANNING. 
-You go into the room and find him dead? throat slashed.
-
-  PANICK rabbits! You have a choice with captain:
-    You run to every room to wake everyone who is still alive (not available before, you do not know who master mind is)
-    Gather them in tea room, EXPLAIN everything. You unlock the butler?
-    NOw it is getting very suspicious.
-    Nobody sleeps, people try to sneek then sunday death. (MAYBE HERE the intuition)
-  Or if intuition, I do not trust anyone but you captain. Let's leave now!!!! 
-    => wait the two of you. Say, let's meet up in the entrance hall.
+IF You do not trust captain sinha and go to bed alone. You are killed in your bed (throat) => need a friend
+- Billiard room (**TRUST captain Sinha?**). And explain everything, he will want to alert eveyone, find the butler, ...
+  you have choice CONVINCE HIM somebody in might be the killer, they should not be alerted, better to stay silent and leave in the morning.
+   OR tell everyone => Big gathering
 
 
-Should I increase the rate of deaths for some characters?
-
-=> Or host !!!!! Day 2 evening ( better than dissapearing actually) => But can only see it on **day 3 morning?**
 
 ### Sunday
+sunday morning? you wake and see cpt sinha sleeping on chair next to you.
 
-TODO? Add the drunk appearing out of nowhere?
+You do not wait and leave straight away.
 
-You wake up nobody really slept.
+You hear Ted Harring and Amelia Baxter roaming the house and avoid them.
+Out of conscience, cpt goes to Sam manning door to open it so he can escape as well, glimpse inside and see the dead body, so they both ran walking to the village.
 
-You talked throught the night but the conclusion is SINCE we can't trust anyone, let's all go together, do not let anyone out of sight. => You get shot? Everyone around you is. You see the butler holding the rifle. He looks at you says "I am sorry, but I do not want to be traced to this."
-
-
-OR leave just the two us (TOO close to broken's ending)
 
 
 

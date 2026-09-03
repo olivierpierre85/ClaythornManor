@@ -114,15 +114,6 @@ label host_day2_evening_accusation_answer:
 
     return
 
-
-# --------------------------------------------
-#   She cannot give him a title, so she takes
-#   offence instead. It does not work.
-#
-#   The mask comes off, the butler returns with
-#   a revolver, and the Captain goes for him.
-#   The first shot is the one that finds her.
-# --------------------------------------------
 label host_day2_evening_accusation_refuse:
 
     host """
