@@ -16,8 +16,8 @@ label host_day1_evening_map_menu:
             map_choice('manor_garden', 'host_day1_evening_garden', 10),
             map_choice('entrance_hall', 'host_entrance_hall_default', 10),
             map_choice('servant_stairs', 'host_servant_stairs_default', 10),
-            map_choice('portrait_gallery', 'host_portrait_gallery_default', 20),
-            map_choice('library', 'host_library_default', 30),
+            map_choice('portrait_gallery', 'host_day1_evening_portrait_gallery', 20),
+            map_choice('library', 'host_day1_evening_library', 30),
             # Bedrooms (her own room is the retire exit, so it is not listed here)
             map_choice('bedroom_lad', 'host_day1_evening_bedroom_avoid', 10),
             map_choice('bedroom_broken', 'host_day1_evening_bedroom_avoid', 10),
@@ -152,19 +152,10 @@ label host_day1_evening_garage:
 
     call host_day1_evening_go_downstairs
 
-    $ change_room('garage')
-
-    """
-    Petrol and cold iron, and a different car from the one we came up in.
-
-    An old tourer.
-
-    It does not look as though it will start.
-
-    Nothing for me here.
-    """
+    call host_garage_default
 
     return
+
 
 label host_day1_evening_gun_room:
 
@@ -284,5 +275,79 @@ label host_day1_evening_attic_default:
     """
 
     $ host_details.saved_variables['day1_evening_attic_tried'] = True
+
+    return
+
+
+label host_day1_evening_portrait_gallery:
+
+    $ change_room('portrait_gallery')
+
+    """
+    A dozen Claythorns in gilt frames, looking down the gallery.
+
+    Many generations of people who have lived and died at Claythorn Manor.
+
+    Then a sudden realisation dawns on me.
+
+    There is no portrait of me, the supposed mistress of the house.
+
+    Not impossible in itself, but I should think of a good excuse.
+
+    If somebody asks me about it, I ought to be ready.
+    """
+
+    $ host_details.threads.unlock('no_portrait')
+
+    return
+
+
+label host_day1_evening_library:
+
+    $ change_room('library')
+
+    """
+    A better library than I expected.
+
+    A heavy book lies open on the table.
+
+    I assume it is the one left out for me, so that I might learn about this place.
+
+    'A Genealogical and Heraldic Dictionary of the Landed Gentry of Great Britain.'
+
+    I turn to the index. Clarendon, Claridge, Clark.
+
+    Claythorn.
+    """
+
+    call library_book_content
+
+    """
+    Elisabeth.
+
+    My name is Elisabeth, and I was born in 1865.
+
+    Which makes me fifty-nine years old, and I have been telling myself all evening that I look my age.
+
+    Then, something strange.
+
+    The family name is Claythorn. The title is not.
+
+    They hold a peerage. The Earldom of Kilbraith.
+
+    The daughter and heir of the Earl of Kilbraith is not 'Lady Claythorn'.
+
+    She is Lady Kilbraith.
+
+    That is a small mistake. Still, I should be prepared if anyone else makes the same realisation I did.
+
+    I think of a few explanations and land on one that should satisfy anyone who asks.
+
+    But I doubt that will happen.
+
+    I close the book and leave the room.
+    """
+
+    $ host_details.threads.unlock('family_history')
 
     return

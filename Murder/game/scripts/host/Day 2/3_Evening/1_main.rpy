@@ -321,9 +321,7 @@ label host_day2_evening:
     """
     He leaves without giving me more explanation.
 
-    I am now filled with questions.
-
-    The most pressing one is how he could have received news from the person who organised this weekend.
+    I am wondering how he could have received news from the person who organised this weekend.
 
     Until now I thought they were still in London.
 
@@ -598,16 +596,11 @@ label host_day2_evening_billiard_room:
 
     $ change_room('billiard_room')
 
-    # TODO expand : the room, the decanters untouched, and the Captain sitting
-    # up alone with no drink in front of him at all.
     """
-    The Captain is alone in the billiard room, sitting where he can see the door.
-
-    There is a glass at his elbow that he has not touched.
+    The Captain is alone in the billiard room, sitting with a book in his hands.
     """
 
-    # TODO expand : the confession. She tells him what she is, and why she
-    # cannot be alone in this house tonight.
+    # TODO add choice of talking telling him the truth or just making small talks?
     host """
     Captain.
 

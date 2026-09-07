@@ -5,13 +5,12 @@ art? Wait for a faster 9b KV?
 => THen Force to use locations images that works to generate others
 => Check when it is getting obvious the killer is among the guests? From start for seasoned murder mystery fan, or never for casual players? Needs to be articulate (Now by host)
 
+art => Only one outside manor image? no front or back ?
+
 ## NOT ENOUGH DEATHS ????
 I wanted a ANd there were none, but in the end, only two deaths happen on the first day.
 
-
-
 IMAGE.
-
 
 IDEA: Maybe the psychic did not want to kill anybody => BUT does it when she realises that Thomas Moody is not him (color of his eyes?)
 
@@ -103,6 +102,10 @@ Talk with DRUNK => UNLOCK him over his love of food => but who? the questions mu
 MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
 
 ### NEXT =>  evening map choices and endings (check previous map choice to reuse to dialogs)
+ - TODO: Billiard room talk with captain
+ - TODO: Exit the house with butler => DEATH in the car
+ - TODO: Bedrooms: Nurse, psychic
+ - TODO: ATTIC
 
 
 IF you leave, you are killed as in broken timeline (car in the woods)
