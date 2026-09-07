@@ -10,6 +10,9 @@
 #
 # The Captain only sits up if she has not already humiliated him in the tea
 # room, so 'bested_captain' shuts that door for good and leaves her alone.
+#
+# The butler cannot be reached tonight. He is out on the gravel loading the car
+# from a quarter past nine, so the attic holds nothing but the staff packing.
 
 label host_day2_evening_map_menu:
     python:
@@ -36,11 +39,11 @@ label host_day2_evening_map_menu:
             map_choice('bedroom_captain', 'host_day2_evening_bedroom_captain', 10),
             map_choice('bedroom_doctor', 'host_day2_evening_bedroom_doctor', 10),
             map_choice('bedroom_broken', 'host_day2_evening_bedroom_broken', 10),
-            # Attic
-            map_choice('attic_butler_room', 'host_day2_evening_attic_butler_room', 20),
-            map_choice('storage', 'host_day2_evening_attic_default', 10),
-            map_choice('males_room', 'host_day2_evening_attic_default', 10),
-            map_choice('females_room', 'host_day2_evening_attic_default', 10),
+            # Attic: the staff are packing, and the butler is already outside
+            map_choice('attic_butler_room', 'host_day2_evening_attic_butler_room', 10),
+            map_choice('storage', 'host_day2_evening_attic_storage', 10),
+            map_choice('males_room', 'host_day2_evening_attic_males_room', 10),
+            map_choice('females_room', 'host_day2_evening_attic_females_room', 20),
             # The Captain sits up alone, unless she made an enemy of him this afternoon
             TimedMenuChoice(
                 'Sit up with Captain Sinha in the billiard room',
@@ -285,28 +288,10 @@ label host_day2_evening_bedroom_nurse:
 
     play sound door_knock
 
-    nurse """
-    Who is there?
     """
+    No answer.
 
-    host """
-    Lady Claythorn.
-
-    I only wished to be sure that you were settled.
-    """
-
-    nurse """
-    That is very good of you, my lady.
-
-    I am quite settled, thank you. I shall not need anything further tonight.
-    """
-
-    """
-    She does not open the door, and she has no intention of opening it.
-
-    Her voice comes through two inches of oak perfectly level, which is a great deal more than mine would manage.
-
-    I have spent two days watching that woman miss nothing at all.
+    I suppose she is either asleep or too frightened to answer.
     """
 
     return
@@ -318,28 +303,10 @@ label host_day2_evening_bedroom_psychic:
 
     play sound door_knock
 
-    psychic """
-    Come no further, I beg you.
-
-    I have had the most dreadful evening, and I am no fit company for a living soul.
     """
+    I hear movement but nobody answers.
 
-    host """
-    Then I shall leave you in peace, Miss Baxter.
-    """
-
-    psychic """
-    You are kindness itself, my lady.
-
-    Sleep, if you are able. There is a great deal of grief loose in this house tonight, and grief has never cared to be left alone.
-    """
-
-    """
-    I stand in the corridor a moment after she has stopped speaking.
-
-    That woman has said something to unsettle me every day since Friday, and every time I have decided afterwards that she meant nothing at all by it.
-
-    I am no longer certain that I believe that.
+    She is probably too afraid to open the door, and I do not have the strength to insist.
     """
 
     return
@@ -431,142 +398,219 @@ label host_day2_evening_bedroom_broken:
 
 # ------------------------------------
 #   ATTIC
-# ------------------------------------
-label host_day2_evening_attic_default:
-
-    $ change_room('attic_hallway')
-
-    """
-    The servants' doors stand open tonight, every one of them, and there is nothing behind any of them but a stripped bed and an empty peg.
-
-    They packed while we were at dinner.
-
-    Every person in this house who was told what we came here to do is ready to leave it.
-
-    I am the only one still asking what it was.
-    """
-
-    $ all_menus[host_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('storage'))
-    $ all_menus[host_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('males_room'))
-    $ all_menus[host_details.saved_variables["day2_evening_map_menu"].id].hide_specific_choice(default_room_text('females_room'))
-
-    return
-
-
-# ------------------------------------
-#   THE BUTLER'S ROOM
 #
-#   The only place she can put the scullery bottle to him before the car goes.
+#   The staff are packing. The butler is already down at the car, the footman
+#   will not be drawn, and only the girl says what she is afraid of.
 # ------------------------------------
 label host_day2_evening_attic_butler_room:
 
     $ change_room('attic_butler_room')
 
     """
-    His door is open, and his case is shut and standing beside it.
+    His door stands open and the room has already been stripped.
 
-    He has taken the crucifix off the wall and left the nail in the plaster.
+    The crucifix has come off the wall and the nail has been left in the plaster.
 
-    He looks up at me without the smallest sign of surprise, as though he had allowed for this in his arrangements.
-    """
+    No case, no coat, nothing of his at all.
 
-    butler """
-    The car goes at eleven, my lady.
+    He will be down at the car with the lamps lit, loading it himself rather than trust any of it to the footman.
 
-    Have you decided?
-    """
-
-    call run_menu(
-        TimedMenu("host_day2_evening_menu_butler_room", [
-            TimedMenuChoice(
-                'Ask him how the word reached him',
-                'host_day2_evening_butler_word',
-                0,
-            ),
-            TimedMenuChoice(
-                'Ask him about the bottle in the scullery',
-                'host_day2_evening_accuse_butler',
-                0,
-                condition="host_details.threads.is_unlocked('found_poison') and not host_details.threads.is_unlocked('accused_butler')",
-            ),
-            TimedMenuChoice(
-                'Tell him you have not decided',
-                'host_day2_evening_butler_undecided',
-                0,
-                keep_alive = True,
-                early_exit = True,
-            ),
-        ], image_left = "butler")
-    )
-
-    return
-
-
-# The question the butler left her with at a quarter past nine, and the answer
-# he has no intention of giving her.
-label host_day2_evening_butler_word:
-
-    host """
-    You told me on Friday that the telephone in this house has not worked for years.
-
-    So how does a man in a shut-up manor receive word from London on a Saturday night?
-    """
-
-    butler """
-    I did not say it came from London.
-    """
-
-    host """
-    Then where is he?
-    """
-
-    """
-    He goes on folding a shirt into the case, and he takes his time over the sleeves.
-    """
-
-    butler """
-    My lady, you have spent two days being told a very little and paid rather well for it.
-
-    That was the arrangement, and it has suited you perfectly until this evening.
-    """
-
-    host """
-    Two men are dead since that arrangement was made.
-    """
-
-    butler """
-    Which is precisely why I am not going to add to what you know.
-
-    A woman who knows nothing has nothing to tell anybody, and that is the safest thing you can be tonight.
-    """
-
-    """
-    He says it without any menace at all, which is what makes it stay with me.
-
-    He is not threatening me. He is telling me the terms.
+    There is nothing left up here that he has not decided to leave behind.
     """
 
     return
 
 
-label host_day2_evening_butler_undecided:
+label host_day2_evening_attic_males_room:
+
+    $ change_room('attic_males_room')
+
+    """
+    The footman has his bag open on the bed and he is filling it as fast as his hands will go.
+
+    He does not stop when I come in, and he barely looks up.
+    """
 
     host """
-    I have not.
+    You are in a great hurry.
     """
 
-    butler """
-    Then do not be long about it.
-
-    I shall not send anyone up for you, and I shall not sound the horn.
-
-    Eleven o'clock, and the car goes whether you are in it or not.
+    footman """
+    Car goes at eleven, my lady.
     """
 
     """
-    He turns back to his case, and I am dismissed in my own house.
+    He folds nothing.
 
-    Which is fair enough, since it is not my house and I am not a lady.
+    He pushes it all in and presses it down with the flat of his hand.
+    """
+
+    host """
+    Are you quite all right?
+    """
+
+    footman """
+    I was engaged for a weekend and I have done the weekend.
+
+    That is all there is to it.
+    """
+
+    """
+    That is not what I asked him, and he knows it.
+    """
+
+    host """
+    If something has happened that I ought to know about, you may tell me.
+    """
+
+    footman """
+    Nothing has happened, my lady.
+
+    And if it had, it would be no business of mine.
+    """
+
+    """
+    He pulls the strap through the buckle and drags it tight.
+
+    He has not once looked at me straight, and he will not while I am standing here.
+
+    Whatever he thinks of this weekend, he means to carry it down the stairs with him and out through the gate.
+    """
+
+    return
+
+
+label host_day2_evening_attic_females_room:
+
+    $ change_room('attic_females_room')
+
+    """
+    The girl has her things laid out on the bed in a neat square, and she is folding each piece as though somebody will inspect it.
+
+    Her hands are not steady.
+    """
+
+    maid """
+    Ma'am.
+
+    I am nearly ready, I promise.
+    """
+
+    host """
+    Nobody is timing you, Elsie.
+    """
+
+    """
+    She puts a folded apron into the bag, takes it out again, and puts it back in the very same place.
+    """
+
+    maid """
+    May I say something, ma'am?
+
+    It will sound foolish.
+    """
+
+    host """
+    You may.
+    """
+
+    maid """
+    I feel like a thief.
+
+    Creeping down the back stairs in the dark with my bag, and the gentlemen upstairs not knowing a thing about it.
+
+    And I have not stolen anything.
+
+    Not so much as a spoon.
+
+    You may look in my bag if you care to, ma'am, I would rather you did.
+    """
+
+    host """
+    I shall do nothing of the kind.
+    """
+
+    """
+    She stops folding, and now she does look at me.
+    """
+
+    maid """
+    Then tell me something else instead.
+
+    Have we done wrong, ma'am?
+
+    Two gentlemen are dead in this house and we are going out of it at eleven at night, and I cannot make those two things sit quietly together.
+    """
+
+    """
+    She has asked me the question I have been carrying about the house all evening, and she has asked it far better than I could.
+    """
+
+    host """
+    Listen to me.
+
+    One of them was shot in the woods by a man who could not hold a gun properly, and the other went in his sleep.
+
+    Both of them accidents, and neither of them anything to do with you.
+
+    The rest of it was a piece of theatre got up by people with more money than sense.
+
+    A joke, of a sort, that has ended a great deal worse than any of them intended.
+    """
+
+    maid """
+    Then why are we not going in the morning, in the daylight, like honest people?
+    """
+
+    host """
+    Because honest people spend a fortnight answering a policeman's questions in a village hall.
+
+    You cooked and you carried, and that is the whole of what you did.
+
+    But you would still be a young woman in a house where two gentlemen died, and they would put the same question to you forty times over to see whether you changed your answer.
+
+    Far better to be well away before anybody thinks to ask it.
+    """
+
+    maid """
+    Yes, ma'am.
+
+    Thank you.
+
+    I did not like to ask Mr Barrow.
+    """
+
+    """
+    She goes back to her folding, and her hands are steadier for it.
+
+    It is the only useful thing I have done all day.
+
+    I have told a frightened girl that leaving in the dark is the sensible course, and I told it well, because telling things well is the one trade I have.
+
+    I only wish I believed a word of it.
+    """
+
+    return
+
+
+label host_day2_evening_attic_storage:
+
+    $ change_room('attic_hallway')
+
+    """
+    The servants' doors stand open tonight, every one of them.
+
+    The storage room does not.
+    """
+
+    play sound door_locked
+
+    """
+    I try the handle twice, which is twice more than there is any sense in.
+
+    Locked on Friday, and locked still.
+
+    It is the one door in this house that has never been open to me, and he will have the key in his pocket, down on the gravel, packing the car.
     """
 
     return

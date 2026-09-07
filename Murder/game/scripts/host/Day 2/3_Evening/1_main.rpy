@@ -472,72 +472,6 @@ label host_day2_evening_telephone:
 
     return
 
-# --------------------------------------------
-#   SHE PUTS THE SCULLERY BOTTLE TO HIM
-#
-#   Needs 'found_poison'. He does not deny it and he does not explain it, which
-#   is what makes the car in the garage look rather different.
-# --------------------------------------------
-label host_day2_evening_accuse_butler:
-
-    host """
-    Before I answer you, there is something I should like to ask.
-
-    On Friday night you told me I had no business below stairs.
-
-    While I was down there I saw a bottle of rat poison in the scullery, standing open on the shelf and half gone.
-
-    This house was shut up until the day before we arrived, and it will be shut up again at the end of the weekend.
-
-    So who has been poisoning rats here, and when?
-    """
-
-    """
-    He does not answer at once, and that is answer enough for me.
-
-    A man with nothing to hide says 'what bottle' before you have finished the question.
-    """
-
-    butler """
-    There are rats in a house this old, my lady.
-
-    There is poison in every scullery in Scotland.
-    """
-
-    host """
-    That is not what I asked you.
-    """
-
-    butler """
-    No.
-
-    It is not.
-    """
-
-    """
-    He looks at me for a long moment, and I watch him decide how much I am worth.
-    """
-
-    butler """
-    I would not think about that bottle any more tonight, if I were you.
-
-    Nobody at that table has come to any harm, and nobody is going to.
-
-    The car is standing in the garden, and my offer stands until it does not.
-    """
-
-    """
-    Nobody at that table.
-
-    He chose those four words with a great deal of care, and there is a man locked in a room upstairs who was not at that table.
-
-    His tray went up the back stairs while I was watching the plates.
-    """
-
-    $ host_details.threads.unlock('accused_butler')
-
-    return
-
 
 # --------------------------------------------
 #   She takes the car
@@ -587,29 +521,6 @@ label host_day2_evening_leave_with_butler:
 
     # TODO jump host_ending_car_woods once the ending is written
     jump work_in_progress
-
-
-# --------------------------------------------
-#   THE BILLIARD ROOM - CAPTAIN SINHA
-# --------------------------------------------
-label host_day2_evening_billiard_room:
-
-    $ change_room('billiard_room')
-
-    """
-    The Captain is alone in the billiard room, sitting with a book in his hands.
-    """
-
-    # TODO add choice of talking telling him the truth or just making small talks?
-    host """
-    Captain.
-
-    I am going to tell you something, and I would ask you to hear all of it before you say anything at all.
-    """
-
-    $ host_details.threads.unlock('trust_captain')
-
-    return
 
 
 # --------------------------------------------

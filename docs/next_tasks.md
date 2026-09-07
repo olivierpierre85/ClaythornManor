@@ -104,8 +104,6 @@ MAYBE add a explanation for the butler? Needed for the reason the phone is dead 
 ### NEXT =>  evening map choices and endings (check previous map choice to reuse to dialogs)
  - TODO: Billiard room talk with captain
  - TODO: Exit the house with butler => DEATH in the car
- - TODO: Bedrooms: Nurse, psychic
- - TODO: ATTIC
 
 
 IF you leave, you are killed as in broken timeline (car in the woods)
