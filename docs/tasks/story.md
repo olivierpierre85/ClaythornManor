@@ -115,8 +115,10 @@
 - If she looks for treasure on the last day, she will die, and also won't find the jewellery — the butler has taken it all with him before leaving.
 
 ### Ideas to think over (optional)
+
 - [ ] Add dialogue with the doctor to help draw the connection with the Boxer Rebellion (billiard room, Day 1)?
 - [ ] Intro is too generic. Add a dream, or something more personal? Decent as it is, but could be improved.
+- [ ] Last night attic, (Host meets staff, nurse nobody => Maybe infer that the maid was hiding behind the bed when the nurse came?)
 - [ ] **Last day, rethink**: too many last-day endings. Only one escape should be possible.
   - Nurse dies exhausted on the road? Maybe not a very useful ending — if she's exhausted, she simply can't escape and is forced to nap instead.
   - If she doesn't have enough money, she just can't leave. That would remove both "escape and die exhausted" and "escape poor" — or just delete "escape poor"?

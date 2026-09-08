@@ -396,26 +396,22 @@ label host_day2_evening_bedroom_broken:
     return
 
 
-# ------------------------------------
-#   ATTIC
-#
-#   The staff are packing. The butler is already down at the car, the footman
-#   will not be drawn, and only the girl says what she is afraid of.
-# ------------------------------------
 label host_day2_evening_attic_butler_room:
 
-    $ change_room('attic_butler_room')
+    $ change_room('attic_hallway')
+
+    play sound door_knock
 
     """
-    His door stands open and the room has already been stripped.
+    Nothing answers me, and there is no sound at all behind the door.
 
-    The crucifix has come off the wall and the nail has been left in the plaster.
+    He must be at the car already, loading it himself rather than trust any of it to the footman.
 
-    No case, no coat, nothing of his at all.
+    I try the handle out of habit.
 
-    He will be down at the car with the lamps lit, loading it himself rather than trust any of it to the footman.
+    Locked, of course.
 
-    There is nothing left up here that he has not decided to leave behind.
+    There is nothing up here he has not decided to leave behind.
     """
 
     return
@@ -423,58 +419,14 @@ label host_day2_evening_attic_butler_room:
 
 label host_day2_evening_attic_males_room:
 
-    $ change_room('attic_males_room')
+    $ change_room('attic_hallway')
+
+    play sound door_knock
 
     """
-    The footman has his bag open on the bed and he is filling it as fast as his hands will go.
+    Nobody answers.
 
-    He does not stop when I come in, and he barely looks up.
-    """
-
-    host """
-    You are in a great hurry.
-    """
-
-    footman """
-    Car goes at eleven, my lady.
-    """
-
-    """
-    He folds nothing.
-
-    He pushes it all in and presses it down with the flat of his hand.
-    """
-
-    host """
-    Are you quite all right?
-    """
-
-    footman """
-    I was engaged for a weekend and I have done the weekend.
-
-    That is all there is to it.
-    """
-
-    """
-    That is not what I asked him, and he knows it.
-    """
-
-    host """
-    If something has happened that I ought to know about, you may tell me.
-    """
-
-    footman """
-    Nothing has happened, my lady.
-
-    And if it had, it would be no business of mine.
-    """
-
-    """
-    He pulls the strap through the buckle and drags it tight.
-
-    He has not once looked at me straight, and he will not while I am standing here.
-
-    Whatever he thinks of this weekend, he means to carry it down the stairs with him and out through the gate.
+    He has probably gone down already.
     """
 
     return
@@ -482,12 +434,20 @@ label host_day2_evening_attic_males_room:
 
 label host_day2_evening_attic_females_room:
 
-    $ change_room('attic_females_room')
+    $ change_room('attic_hallway')
+
+    play sound door_knock
 
     """
-    The girl has her things laid out on the bed in a neat square, and she is folding each piece as though somebody will inspect it.
+    No answer, and no sound behind the door.
 
-    Her hands are not steady.
+    But I notice a ray of light coming from beneath the door.
+    """
+
+    host """
+    It is only Lady Claythorn.
+
+    You may open the door, it is quite safe.
     """
 
     maid """
@@ -496,54 +456,26 @@ label host_day2_evening_attic_females_room:
     I am nearly ready, I promise.
     """
 
-    host """
-    Nobody is timing you, Elsie.
+    """
+    As she says this, she opens the door and lets me in.
     """
 
-    """
-    She puts a folded apron into the bag, takes it out again, and puts it back in the very same place.
+    $ change_room('attic_females_room')
+
+    host """
+    No need to apologise.
+
+    I just wanted to see how you were holding up.
+
+    We were not expecting this weekend to end so terribly.
     """
 
     maid """
-    May I say something, ma'am?
+    Well, to be honest, I rather feel like a thief.
 
-    It will sound foolish.
-    """
+    Leaving like this in the dark, and the guests not knowing a thing about it.
 
-    host """
-    You may.
-    """
-
-    maid """
-    I feel like a thief.
-
-    Creeping down the back stairs in the dark with my bag, and the gentlemen upstairs not knowing a thing about it.
-
-    And I have not stolen anything.
-
-    Not so much as a spoon.
-
-    You may look in my bag if you care to, ma'am, I would rather you did.
-    """
-
-    host """
-    I shall do nothing of the kind.
-    """
-
-    """
-    She stops folding, and now she does look at me.
-    """
-
-    maid """
-    Then tell me something else instead.
-
-    Have we done wrong, ma'am?
-
-    Two gentlemen are dead in this house and we are going out of it at eleven at night, and I cannot make those two things sit quietly together.
-    """
-
-    """
-    She has asked me the question I have been carrying about the house all evening, and she has asked it far better than I could.
+    I have been wondering, have we done something wrong, ma'am?
     """
 
     host """
@@ -551,43 +483,39 @@ label host_day2_evening_attic_females_room:
 
     One of them was shot in the woods by a man who could not hold a gun properly, and the other went in his sleep.
 
-    Both of them accidents, and neither of them anything to do with you.
+    Both of them accidents.
 
-    The rest of it was a piece of theatre got up by people with more money than sense.
+    Our part in this had nothing to do with either of them.
 
-    A joke, of a sort, that has ended a great deal worse than any of them intended.
+    It was a piece of theatre, a joke of a sort, that has gone wrong.
     """
 
     maid """
-    Then why are we not going in the morning, in the daylight, like honest people?
+    Then if we have done nothing wrong, why are we not telling this to the guests?
     """
 
     host """
-    Because honest people spend a fortnight answering a policeman's questions in a village hall.
+    Because whatever we were doing here will attract suspicion.
 
-    You cooked and you carried, and that is the whole of what you did.
+    We ought to have called the police this morning.
 
-    But you would still be a young woman in a house where two gentlemen died, and they would put the same question to you forty times over to see whether you changed your answer.
-
-    Far better to be well away before anybody thinks to ask it.
+    We might be blamed for that, even if we have done nothing wrong.
     """
 
     maid """
-    Yes, ma'am.
+    Maybe.
 
-    Thank you.
-
-    I did not like to ask Mr Barrow.
+    I should finish my packing, then.
     """
 
     """
-    She goes back to her folding, and her hands are steadier for it.
+    I do not think she believes me entirely, but she does not want to press the matter further.
 
-    It is the only useful thing I have done all day.
+    I cannot blame her.
+    """
 
-    I have told a frightened girl that leaving in the dark is the sensible course, and I told it well, because telling things well is the one trade I have.
-
-    I only wish I believed a word of it.
+    host """
+    Of course. I shall leave you to it.
     """
 
     return
@@ -597,20 +525,20 @@ label host_day2_evening_attic_storage:
 
     $ change_room('attic_hallway')
 
-    """
-    The servants' doors stand open tonight, every one of them.
+    play sound door_knock
 
-    The storage room does not.
+    """
+    No answer, as I expected.
+    """
+
+    """
+    I try the handle.
     """
 
     play sound door_locked
 
     """
-    I try the handle twice, which is twice more than there is any sense in.
-
-    Locked on Friday, and locked still.
-
-    It is the one door in this house that has never been open to me, and he will have the key in his pocket, down on the gravel, packing the car.
+    Locked.
     """
 
     return
