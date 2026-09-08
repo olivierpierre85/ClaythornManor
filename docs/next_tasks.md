@@ -7,6 +7,8 @@ art? Wait for a faster 9b KV?
 
 art => Only one outside manor image? no front or back ?
 
+
+
 ## NOT ENOUGH DEATHS ????
 I wanted a ANd there were none, but in the end, only two deaths happen on the first day.
 
@@ -103,9 +105,9 @@ MAYBE add a explanation for the butler? Needed for the reason the phone is dead 
 
 ### NEXT =>  evening map choices and endings (check previous map choice to reuse to dialogs)
  - TODO: Billiard room talk with captain
- - TODO: Exit the house with butler => DEATH in the car
 
 
+- Who is driving car butler or lady? check nurse?
 IF you leave, you are killed as in broken timeline (car in the woods)
 => Intuition should be "THE KILLER is among us" => Get when leave with butler ending?
 

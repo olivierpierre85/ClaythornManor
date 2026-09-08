@@ -117,6 +117,14 @@ label init_host:
                 "You were shot in the tea room when Captain Sinha went for the butler's revolver",
                 image_file="gun_firing",
                 chapters=['saturday_evening']),
+            CharacterInformation(2, "die_in_sleep",
+                "You died in your sleep, alone behind a locked door, on the second night",
+                image_file="deathbed",
+                chapters=['saturday_evening']),
+            CharacterInformation(3, "shot_in_car",
+                "The butler shot you on the forest road, in the car you took to be your way out",
+                image_file="escape_car",
+                chapters=['saturday_evening']),
         ])
 
         host_extra_information = CharacterDescriptionHiddenList ([

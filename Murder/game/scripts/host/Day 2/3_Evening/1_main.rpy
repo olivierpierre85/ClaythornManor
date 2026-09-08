@@ -363,7 +363,19 @@ label host_day2_evening:
         # TODO jump host_day3_morning once Sunday is written
         jump work_in_progress
 
-    call host_day2_evening_alone_at_night
+    else :
+
+        """
+        I did not leave with the car.
+
+        For whatever reason, I prefer to spend the night here.
+
+        I lock my door, and I put a chair beneath the handle, and I lie down in my clothes.
+
+        I was not expecting to fall asleep, but the events of the day have taken their toll, and I close my eyes.
+        """
+
+        jump host_ending_die_in_sleep
 
 
 label host_day2_evening_telephone:
@@ -476,9 +488,10 @@ label host_day2_evening_telephone:
 # --------------------------------------------
 #   She takes the car
 #
-#   TODO ending : the wreck in the woods, as Thomas Moody sees it from the
-#   other side of the story. Needs a host ending label and an entry in
-#   host_config.rpy -> endings.
+#   Ends with the wreck in the woods, the same car Thomas Moody and Captain
+#   Sinha find on the Sunday afternoon of the other storylines. There is
+#   nothing wrong with the engine - the butler invents the fault to put her in
+#   the driver's seat, so that she is found in front and the other two behind.
 # --------------------------------------------
 label host_day2_evening_leave_with_butler:
 
@@ -494,60 +507,82 @@ label host_day2_evening_leave_with_butler:
     I get into the back and I put the bag on my knees and I sit there in the dark.
     """
 
+    call wait_screen_transition()
+
     call change_time(23, 00)
 
     """
     They come out to me one at a time over the next hour, and none of them says a word to me.
 
-    The girl from the kitchen, with her carpet bag. The footman. Then the rest of them.
-
-    Not one of them is surprised to find me sitting there, and that is the part I keep turning over.
-
-    They were told I would be coming, and they were told before I had decided.
-
-    The last door of the house shuts at eleven exactly, and he takes his seat and lets the brake off.
+    The girl from the kitchen, with her carpet bag. The footman. Then the butler takes his place in the driver's seat.
     """
 
-    $ stop_music()
+    butler """
+    Good, you are all here.
 
-    $ play_music('danger_short')
+    No need to wait any longer then.
+
+    They must be all in their room by now, they won't hear us leaving.
+    """
+
+    """
+    I wonder why this is important, but I do not ask him.
+
+    He has a serious face that says we should leave him alone.
+
+    So the ride starts in complete silence.
+    """
 
     play sound car_driving
 
-    # TODO expand : the drive, the trees, and the bend he takes far too fast.
-    """
-    We are perhaps two miles into the woods when he puts his hand out and tells me, quite gently, to hold on.
-    """
-
-    # TODO jump host_ending_car_woods once the ending is written
-    jump work_in_progress
-
-
-# --------------------------------------------
-#   SHE GOES UP ALONE
-#
-#   TODO ending : her throat cut in her own bed, as the Captain's is in his.
-#   Needs a host ending label and an entry in host_config.rpy -> endings.
-# --------------------------------------------
-label host_day2_evening_alone_at_night:
-
-    $ play_music('danger_short')
+    $ change_room('forest_road', dissolve)
 
     """
-    I lock my door, and I put a chair beneath the handle, and I lie down in my clothes.
-
-    Neither of those things will matter in the least, but they let me close my eyes.
+    We go down the drive and out through the gates, and the manor is behind the trees before I have thought to look back at it.
     """
 
-    call wait_screen_transition()
+    call change_time(23, 30)
 
-    # TODO expand : the weight on the edge of the bed, and how little time she
-    # is given to understand it.
+    $ play_music('danger', 2)
+
     """
-    I wake because there is somebody sitting on the edge of my bed.
+    The road narrows, and the trees close over us.
 
-    He does not hurry, and he is not unkind about it.
+    Then, for no reason that I can see, we slow down.
     """
 
-    # TODO jump host_ending_throat_cut once the ending is written
-    jump work_in_progress
+    butler """
+    I do not care for the sound the engine makes.
+    """
+
+    host """
+    I cannot hear anything at all.
+    """
+
+    butler """
+    It is a small thing, but I am sure there is something.
+
+    I do not want to take any chances.
+    """
+
+    """
+    He brings us to a stop at the side of the road.
+    """
+
+    play sound door_open
+
+    """
+    He steps down and lifts the bonnet, and I can see nothing of him but his back.
+
+    I turn towards the staff, and they are both asleep in the back seat.
+
+    When I look straight ahead again, there is a gun pointing right at me.
+    """
+
+    butler """
+    I am sorry.
+    """
+
+    play sound gun
+
+    jump host_ending_shot_in_car
