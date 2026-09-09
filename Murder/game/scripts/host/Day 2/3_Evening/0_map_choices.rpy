@@ -6,7 +6,8 @@
 # eleven whether she is in it or not. Two destinations decide how her night
 # ends:
 #   - the garden        : she takes the seat she was offered
-#   - the billiard room : she tells Captain Sinha what she really is
+#   - the billiard room : she may tell Captain Sinha what she really is,
+#                         or keep the mask on and sleep alone
 #
 # The Captain only sits up if she has not already humiliated him in the tea
 # room, so 'bested_captain' shuts that door for good and leaves her alone.
@@ -48,7 +49,7 @@ label host_day2_evening_map_menu:
             TimedMenuChoice(
                 'Sit up with Captain Sinha in the billiard room',
                 'host_day2_evening_billiard_room',
-                90,
+                20,
                 room='billiard_room',
                 condition="not host_details.threads.is_unlocked('bested_captain')",
             ),
@@ -176,25 +177,6 @@ label host_day2_evening_entrance_hall:
     But I know that outside there is a car waiting for me.
 
     If I want, I could go right now and never look back.
-    """
-
-    return
-
-
-label host_day2_evening_billiard_room_empty:
-
-    $ change_room('billiard_room')
-
-    """
-    The decanters have been set out on the side table, the lamps are lit, but there is not a soul in the room.
-
-    It is not really surprising, though.
-
-    Two deaths in the same weekend are enough to scare just about anybody.
-
-    I do not think anyone will show up here tonight.
-
-    I leave the room.
     """
 
     return
