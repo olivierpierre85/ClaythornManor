@@ -219,7 +219,14 @@ def build_region_prompt(room_id, variant, char_id, region_override=None):
     if not entry and not region_override:
         sys.exit(f"No region entry for ({room_id}, {char_id}).")
     entry = entry or {}
-    return REGION_PROMPTS[variant].format(
+    # A region may ask for a different wording than the plain standing one -- a
+    # diner at a table wants <variant>_seated. The key falls back to the variant
+    # itself, so every existing entry is unaffected.
+    template = entry.get("template")
+    key = f"{variant}_{template}" if template else variant
+    if key not in REGION_PROMPTS:
+        sys.exit(f"No REGION_PROMPTS entry '{key}' for ({room_id}, {char_id}).")
+    return REGION_PROMPTS[key].format(
         style_lead=STYLE_LEAD,
         surround=entry.get("surround", f"part of the {room_id.replace('_', ' ')} of a 1920s Scottish manor"),
         desc=CHARACTERS[char_id].description,
@@ -536,12 +543,22 @@ def mode_insert(args):
     for i, (cid, char_path, box, prompt) in enumerate(zip(args.chars, char_paths, boxes, prompts), 1):
         x, y, w, h = box
         patch_src = frame.crop((x, y, x + w, y + h))
+        # A face 55 px across is about where Klein stops resolving eyes and mouths.
+        # Rendering the patch at --scale and letting the paste-back resize handle the
+        # return trip buys that face real pixels without touching the frame's own
+        # resolution. Sizes stay multiples of 16 for the VAE.
+        rw, rh = w, h
+        if args.scale != 1:
+            rw = max(16, int(w * args.scale)) // 16 * 16
+            rh = max(16, int(h * args.scale)) // 16 * 16
+        patch_render = patch_src if (rw, rh) == (w, h) else patch_src.resize((rw, rh), Image.LANCZOS)
         patch_path = work_dir / f"{stem}_{i}_{cid}_src.png"
-        patch_src.save(patch_path)
+        patch_render.save(patch_path)
 
         seed = random.randint(0, 2**31 - 1) if args.seed < 0 else args.seed + i - 1
         out_path = next_available_path(out_dir, f"{stem}_{i}_{cid}")
-        print(f"pass {i}/{len(args.chars)} {cid:9} seed={seed} {w}x{h} -> {out_path.name} ...",
+        size_note = f"{w}x{h}" if (rw, rh) == (w, h) else f"{w}x{h} rendered {rw}x{rh}"
+        print(f"pass {i}/{len(args.chars)} {cid:9} seed={seed} {size_note} -> {out_path.name} ...",
               end="", flush=True)
         try:
             # The patch goes in at its native size (mp=None); only the character
@@ -550,14 +567,20 @@ def mode_insert(args):
                     (upload_image(char_path, args.server), args.char_mp)]
             init_name = mask_name = None
             if not args.no_mask_figure:
-                mask_img = figure_mask((w, h), width_frac=args.mask_width,
-                                       feather=max(8, args.feather // 2))
+                band = (REGIONS.get((args.room, cid)) or {}).get("band") or {}
+                mask_img = figure_mask(
+                    (rw, rh),
+                    width_frac=band.get("width", args.mask_width),
+                    top_frac=band.get("top", args.mask_top),
+                    bottom_frac=band.get("bottom", args.mask_bottom),
+                    feather=max(8, args.feather // 2),
+                )
                 mask_path = work_dir / f"{stem}_{i}_{cid}_mask.png"
                 mask_img.convert("RGB").save(mask_path)
                 init_name = upload_image(patch_path, args.server)
                 mask_name = upload_image(mask_path, args.server)
             rendered_path = work_dir / f"{stem}_{i}_{cid}_raw.png"
-            elapsed = render(args, refs, prompt, seed, w, h, model, steps, guidance,
+            elapsed = render(args, refs, prompt, seed, rw, rh, model, steps, guidance,
                              rendered_path, f"scene_{stem}_{cid}",
                              init=init_name, mask=mask_name)
         except requests.exceptions.ConnectionError:
@@ -634,6 +657,18 @@ def main():
                          "(lets the model re-imagine the background inside the patch).")
     pi.add_argument("--mask-width", type=float, default=0.62, dest="mask_width",
                     help="Width of the repainted band as a fraction of the patch (default 0.62).")
+    pi.add_argument("--scale", type=float, default=1.0,
+                    help="Supersample the patch by this factor before rendering, then "
+                         "downscale it back on paste (default 1.0). Use 2.0 when the face "
+                         "is small in frame -- it is the fix for mushy eyes and mouths.")
+    pi.add_argument("--mask-top", type=float, default=0.02, dest="mask_top",
+                    help="Where the repainted band starts, as a fraction of the patch height "
+                         "(default 0.02). This sets the top of the head: raise it for a seated "
+                         "figure so they cannot be painted at standing height.")
+    pi.add_argument("--mask-bottom", type=float, default=0.99, dest="mask_bottom",
+                    help="Where the repainted band stops, as a fraction of the patch height "
+                         "(default 0.99). Lower it for a seated figure so the table in front "
+                         "of them is left alone.")
     pi.add_argument("--show-regions", action="store_true", dest="show_regions",
                     help="Write an overlay of the patch boxes and stop -- costs no GPU time.")
     pi.set_defaults(func=mode_insert)
