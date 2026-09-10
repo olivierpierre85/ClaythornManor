@@ -350,18 +350,19 @@ label host_day2_evening:
 
     if host_details.threads.is_unlocked('trust_captain'):
 
-        # TODO expand : she is not alone with it any more, and that is the only
-        # reason she sleeps at all.
+        $ change_room("bedroom_host", fadein)
+
         """
-        I lock my door and lie down in the dark.
+        We both go to my room.
 
-        Somebody else in this house now knows what I am, and knows it from my own mouth.
+        If anyone were to see us, it would look very bad, but I am beyond caring about that tonight.
 
-        It ought to frighten me more than it does.
+        As agreed, the Captain takes a chair, and I lie down fully clothed on the bed.
+
+        It takes a while, but in the end I feel myself growing tired.
         """
 
-        # TODO jump host_day3_morning once Sunday is written
-        jump work_in_progress
+        jump host_day3_morning
 
     else :
 

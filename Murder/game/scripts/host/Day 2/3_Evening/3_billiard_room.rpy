@@ -67,7 +67,7 @@ label host_day2_evening_billiard_room:
 
     call run_menu(
         TimedMenu("host_day2_evening_menu_billiard_room", [
-            TimedMenuChoice("Tell him what you really are", 'host_day2_evening_billiard_room_truth', early_exit=True),
+            TimedMenuChoice("Tell him what you really are", 'host_day2_evening_billiard_room_truth', 666, early_exit=True),
             TimedMenuChoice("Keep to small talk", 'host_day2_evening_billiard_room_small_talk', early_exit=True),
         ])
     )
@@ -171,11 +171,11 @@ label host_day2_evening_billiard_room_truth:
     """
 
     captain """
-    And the police?
+    And what did you tell the police?
     """
 
     host """
-    Were never called.
+    They were never called.
 
     The telephone was disconnected long before any of us arrived.
 
@@ -232,11 +232,10 @@ label host_day2_evening_billiard_room_truth:
     Do not worry, I have a pistol on me if he tries anything.
     """
 
-    ## TEST FROM here
     $ play_music('danger', 2)
 
     """
-    He sets the book down and takes the lamp from the table.
+    He sets the book down and rushes to the entrance hall.
     """
 
     $ change_room('entrance_hall')
@@ -244,7 +243,7 @@ label host_day2_evening_billiard_room_truth:
     """
     The hall is dark and the stair is empty.
 
-    Whatever the others are doing behind their doors, they are doing it quietly.
+    But we can hear the sound of an engine in the driveway.
     """
 
     $ change_room('manor_garden', dissolve)
@@ -276,73 +275,115 @@ label host_day2_evening_billiard_room_truth:
     play sound car_driving
 
     """
-    The lamps swing away down the drive and the engine grows smaller and smaller.
+    Captain Sinha chases the car for a moment, but he quickly realises it is pointless.
 
-    There goes my answer, and my ride out of here besides.
+    It is on the road now, and we will not catch it.
     """
 
     captain """
-    He will not come back tonight.
+    Well, he felt guilty enough to run without even trying to give an explanation.
 
-    Whatever was meant for this house, I believe we are safe until morning at least.
+    That tells us all we need to know.
     """
 
     host """
-    You do not sound very pleased about it.
+    But what should we do now?
     """
 
     captain """
-    I would rather have had the man and his answers.
+    Well, I am afraid we will have to wait until tomorrow.
+    """
 
-    Still, a fellow who runs at the sight of me knows he has done wrong.
+    host """
+    And then?
+    """
+
+    captain """
+    Then we will leave as well, on foot if we must.
+    """
+
+    host """
+    Right.
     """
 
     """
     The cold comes up through my shoes.
 
     I have walked out here in my dinner things without a coat, and only noticed now.
+
+    The Captain notices my shivering.
     """
 
     captain """
-    We must wake the others and tell them what you have told me.
+    Let us go back inside, there is no point waiting here in the cold.
+    """
 
-    They have a right to know what has been done to them.
+    $ change_room('entrance_hall')
+
+    captain """
+    I think now we should wake the others and tell them what you have told me.
+
+    They have a right to know what is happening.
     """
 
     host """
-    No, Captain.
+    I don't know, Captain.
 
-    Two people are dead, and the man responsible has just driven off and left the work half done.
-
-    He would not do that unless somebody in that house is willing to finish it for him.
+    Maybe telling everyone is not the best way.
     """
 
     captain """
-    You believe one of them is his.
+    Why is that?
     """
 
     host """
-    I believe I cannot tell which, and nor can you.
+    Well, earlier today the butler claimed that he had received word from whoever is behind this.
 
-    If we speak tonight, we tell the accomplice exactly how much we know.
-    """
+    But as I told you, the phone is down.
 
-    """
-    He is quiet for a moment.
+    So I am not sure how he got that message.
 
-    He does not argue before he has finished thinking, and I have come to like that in him.
+    Unless...
     """
 
     captain """
+    Unless the culprit is somewhere in this house.
+    """
+
+    host """
+    Yes, the house is big enough that they could hide in a room, but I have also imagined that...
+    """
+
+    captain """
+    That they could be among us.
+
+    One of the guests could be manipulating what is happening here.
+    """
+
+    host """
+    Yes, I may sound paranoid, but I do not want to exclude that possibility.
+    """
+
+    captain """
+    I see.
+
     Very well.
 
     We say nothing to anyone until daylight.
 
-    But I will not have you sleeping alone at the end of that corridor.
+    We will decide what to do next then.
+
+    In the meantime, I do not like to leave you alone in your room.
+    """
+
+    host """
+    What do you propose?
     """
 
     captain """
-    I shall sit up in your room tonight.
+    I could sit up in your room tonight.
+
+    It would be safer this way.
     """
 
     host """
@@ -357,20 +398,35 @@ label host_day2_evening_billiard_room_truth:
     I am rather more concerned with how the alternative might look in the morning.
     """
 
-    """
-    A lady would refuse.
+    host """
+    Thank you, Captain.
 
-    I have been a lady all weekend, and it has very nearly got me killed.
+    You are right, it is probably safer for me.
+
+    You are sure you won't be too uncomfortable in a chair?
+    """
+
+    captain """
+    I have slept on worse.
+
+    And besides, I do not think I will be able to sleep much tonight.
     """
 
     host """
-    Thank you, Captain.
+    You are right, me neither.
     """
 
-    """
-    We go back up to the house together, and neither of us says another word.
+    captain """
+    Then it is decided.
+
+    We can go up now if you wish.
+
+    It is late enough.
     """
 
+    host """
+    All right.
+    """
 
     $ host_details.threads.unlock('trust_captain')
 
