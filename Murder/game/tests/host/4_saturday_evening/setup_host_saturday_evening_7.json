@@ -1,0 +1,46 @@
+{
+    "start_label": "host_day2_evening",
+    "unlocked_threads": [
+        "addressed_manning_first",
+        "stayed_with_guests",
+        "go_downstairs"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Kitchen",
+            "redirect": "host_day2_evening_kitchen"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Scullery",
+            "redirect": "host_day2_evening_scullery"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Garage",
+            "redirect": "host_day2_evening_garage"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Gun room",
+            "redirect": "host_day2_evening_gun_room"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Library",
+            "redirect": "host_day2_evening_library"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Servant Stairs",
+            "redirect": "host_servant_stairs_default"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Go to the car and leave with the staff",
+            "redirect": "host_day2_evening_leave_with_butler"
+        }
+    ]
+}

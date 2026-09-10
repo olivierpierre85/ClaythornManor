@@ -1,0 +1,46 @@
+{
+    "start_label": "host_day2_evening",
+    "unlocked_threads": [
+        "stayed_with_guests",
+        "family_history",
+        "no_portrait"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day2_evening_menu_accusation",
+            "selected": "Give him the title from the library book{{observation}}",
+            "redirect": "host_day2_evening_accusation_answer"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "host_day2_evening_portrait_gallery"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Library",
+            "redirect": "host_day2_evening_library"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Edward II Bedroom",
+            "redirect": "host_day2_evening_bedroom_doctor"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Richard III Bedroom",
+            "redirect": "host_day2_evening_bedroom_broken"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Look into the billiard room",
+            "redirect": "host_day2_evening_billiard_room_empty"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Go to the car and leave with the staff",
+            "redirect": "host_day2_evening_leave_with_butler"
+        }
+    ]
+}

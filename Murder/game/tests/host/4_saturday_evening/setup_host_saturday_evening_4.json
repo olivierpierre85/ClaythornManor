@@ -1,0 +1,18 @@
+{
+    "start_label": "host_day2_evening",
+    "unlocked_threads": [
+        "addressed_manning_first",
+        "stayed_with_guests",
+        "terrible_shot",
+        "family_history",
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day2_evening_menu_accusation",
+            "selected": "Confess the truth",
+            "redirect": "host_day2_evening_unmasked_end"
+        }
+    ]
+}

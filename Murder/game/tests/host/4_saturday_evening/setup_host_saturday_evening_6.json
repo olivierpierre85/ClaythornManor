@@ -1,0 +1,50 @@
+{
+    "start_label": "host_day2_evening",
+    "unlocked_threads": [
+        "addressed_manning_first",
+        "family_history"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day2_evening_menu_accusation",
+            "selected": "Give him the title from the library book{{observation}}",
+            "redirect": "host_day2_evening_accusation_answer"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "host_day2_evening_portrait_gallery"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "William the Conqueror Bedroom",
+            "redirect": "host_day2_evening_bedroom_lad"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Queen Alexandra Bedroom",
+            "redirect": "host_day2_evening_bedroom_nurse"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Elizabeth I Bedroom",
+            "redirect": "host_day2_evening_bedroom_psychic"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "George IV Bedroom",
+            "redirect": "host_day2_evening_bedroom_drunk"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "George I Bedroom",
+            "redirect": "host_day2_evening_bedroom_captain"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Look into the billiard room",
+            "redirect": "host_day2_evening_billiard_room_empty"
+        }
+    ]
+}

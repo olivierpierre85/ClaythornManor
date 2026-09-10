@@ -1,0 +1,52 @@
+{
+    "start_label": "host_day2_evening",
+    "unlocked_threads": [
+        "addressed_manning_first",
+        "stayed_with_guests",
+        "go_downstairs",
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Female Servants Room",
+            "redirect": "host_day2_evening_attic_females_room"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Storage Room",
+            "redirect": "host_day2_evening_attic_storage"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Male Servants Room",
+            "redirect": "host_day2_evening_attic_males_room"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Butler's Room",
+            "redirect": "host_day2_evening_attic_butler_room"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "George I Bedroom",
+            "redirect": "host_day2_evening_bedroom_captain"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Sit up with Captain Sinha in the billiard room",
+            "redirect": "host_day2_evening_billiard_room"
+        },
+        {
+            "menu": "host_day2_evening_menu_billiard_room",
+            "selected": "Keep to small talk",
+            "redirect": "host_day2_evening_billiard_room_small_talk"
+        },
+        {
+            "menu": "host_day2_evening_map_menu",
+            "selected": "Lock your door and try to sleep",
+            "redirect": "generic_cancel"
+        }
+    ]
+}
