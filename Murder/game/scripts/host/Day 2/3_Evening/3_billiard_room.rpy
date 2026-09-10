@@ -74,63 +74,100 @@ label host_day2_evening_billiard_room:
 
     return
 
-
-# --------------------------------------------
-#   She drops the mask
-#   -> 'trust_captain'
-# --------------------------------------------
 label host_day2_evening_billiard_room_truth:
-
-    """
-    He missed a rabbit sitting still at twenty paces this morning, and he took my excuse about the light without a blink.
-
-    If he is wearing a costume of his own, he may understand mine.
-
-    And if he is not, there is nobody else left in this house to tell.
-    """
 
     host """
     Not well, Captain.
 
-    And I cannot answer you honestly without telling you something first.
+    I am very disturbed by what happened today.
+    """
 
-    I am not who I say I am.
+    captain """
+    I understand, but you should not blame yourself.
+
+    Accidents like this happen all the time.
+    """
+
+    host """
+    Maybe, but the circumstances of this weekend were not really ordinary.
+
+    I am afraid that played a part in all that.
     """
 
     """
     He closes the book on his finger and waits.
-
-    He does not look surprised in the least.
     """
 
     captain """
-    Go on.
+    What do you mean?
     """
 
     host """
-    There is no Lady Claythorn.
+    Let me tell you a story.
 
-    I am an actress. I was hired in London to play her for the weekend, and paid an advance to do it.
+    I warn you, it is rather unsettling, and you will have a thousand questions for me, I am sure.
 
-    The staff were hired the same way. None of us had set foot in this house before Friday.
+    But please, I need you to wait until the end, then we can discuss further.
     """
 
     captain """
-    I had wondered.
+    You intrigue me, Lady Claythorn.
 
-    I have met a good many people this weekend who are not quite what they say they are.
+    But please, do tell your story.
+    """
 
-    You are simply the first to admit it.
+    """
+    First, I am not Lady Claythorn.
 
-    Who hired you?
+    I don't even think there is one.
+
+    I'm an actress playing a role.
+
+    I have been doing it this entire weekend.
+    """
+
+    """
+    At this revelation he flinches a little, but as promised he does not stop me.
     """
 
     host """
-    I do not know. I was never given a name.
+    A few months ago.
 
-    The butler deals with them. He gives the orders, and I am handed a piece of paper to read at dinner.
+    An acquaintance of mine approached me to offer me a rather unusual acting job.
 
-    Tonight he told me the whole affair is cancelled, and that he leaves in the car at eleven, with or without me.
+    Impersonating a Lady in her Manor to entertain guests.
+
+    The explanations were scarce but the money was good.
+
+    The reason for the weekend remained evasive, he just told me it was a prank of sorts.
+
+    At that point, my career was not going so well that I could afford to turn down a job.
+
+    So I agreed.
+
+    My role was explained in detail, what I should know, how I should act.
+
+    Then I came to this manor with two other actors, who played the footman and the maid you saw this weekend.
+
+    The butler was the one who offered me the job and is in charge of the whole operation.
+    """
+
+    """
+    I look to Captain Sinha and his face is as still as ever.
+    """
+
+    captain """
+    So the butler is the one managing this weekend, but on whose behalf?
+
+    And what is the purpose of all this?
+    """
+
+    host """
+    I do not know who is behind this.
+
+    I was never given a name.
+
+    And I still have no idea of the reasons, but I am starting to suspect it was not just to play a harmless joke.
     """
 
     captain """
@@ -147,63 +184,193 @@ label host_day2_evening_billiard_room_truth:
 
     """
     For a moment he says nothing at all.
-
-    I have just told a stranger that two of his fellow guests died in a house with no way of reaching help, and that I helped to hide it.
-
-    If he is going to call for the others, it will be now.
-    """
-
-    captain """
-    A moment ago I told you I took today for accidents.
-
-    I said that to my hostess. I will not say it to you.
-
-    Two men do not die in one day by chance, and I do not believe you had a hand in either of them.
-
-    You would not be sitting here telling me this if you had.
     """
 
     host """
-    Then what am I to do? He leaves at eleven.
+    I know it is a lot, Captain, but please believe me.
+
+    I did not know things would turn this bad, I am in the same boat as everyone else.
     """
 
     captain """
-    Stay.
+    Do not worry, I believe you.
 
-    A man who drives away in the dark is not a man I should get into a car with.
+    I do not think you would be telling me this if you were responsible.
 
-    Go up and lock your door.
+    Also, even though I acted as though everything were pure coincidence, the truth is I suspected something was wrong.
 
-    I have a pistol in my room, and I sleep lightly. If anything troubles you in the night, make a noise and I shall hear it.
+    I just could not understand what.
 
-    In the morning we shall see who is left in this house, and then you and I will have a long talk about the butler.
+    Now it is clear what should be done.
+    """
 
-    Until then, nobody else needs to know any of this. Not Miss Marsh, not Miss Baxter, and certainly not him.
+    host """
+    Good, so what do you have in mind?
+    """
+
+    captain """
+    There is only one logical thing to do.
+
+    Ask the only person who must know exactly what is happening.
+    """
+
+    host """
+    The butler, he will leave soon with the car.
+
+    We should hurry if we want to catch him before he leaves.
+    """
+
+    captain """
+    Let us not waste time then.
+    """
+
+    host """
+    But he might be dangerous.
+    """
+
+    captain """
+    Do not worry, I have a pistol on me if he tries anything.
+    """
+
+    ## TEST FROM here
+    $ play_music('danger', 2)
+
+    """
+    He sets the book down and takes the lamp from the table.
+    """
+
+    $ change_room('entrance_hall')
+
+    """
+    The hall is dark and the stair is empty.
+
+    Whatever the others are doing behind their doors, they are doing it quietly.
+    """
+
+    $ change_room('manor_garden', dissolve)
+
+    """
+    The car stands on the gravel with its lamps lit and the luggage already strapped behind.
+
+    The maid and the footman are in the back, sitting very straight, looking at nothing.
+    """
+
+    host """
+    There he is.
     """
 
     """
-    I have put myself in the hands of a man I have known for two days.
+    The butler turns at my voice, and the Captain steps into the light before I can put a hand out to stop him.
 
-    But he says it all as though it were the simplest thing in the world.
+    He sees the Captain first.
 
-    For the first time since the shots in the wood, my hands are still.
+    He does not look at me at all.
+    """
+
+    """
+    Whatever he reads in that face, he does not care to discuss it.
+
+    He is behind the wheel before either of us has crossed the gravel.
+    """
+
+    play sound car_driving
+
+    """
+    The lamps swing away down the drive and the engine grows smaller and smaller.
+
+    There goes my answer, and my ride out of here besides.
+    """
+
+    captain """
+    He will not come back tonight.
+
+    Whatever was meant for this house, I believe we are safe until morning at least.
+    """
+
+    host """
+    You do not sound very pleased about it.
+    """
+
+    captain """
+    I would rather have had the man and his answers.
+
+    Still, a fellow who runs at the sight of me knows he has done wrong.
+    """
+
+    """
+    The cold comes up through my shoes.
+
+    I have walked out here in my dinner things without a coat, and only noticed now.
+    """
+
+    captain """
+    We must wake the others and tell them what you have told me.
+
+    They have a right to know what has been done to them.
+    """
+
+    host """
+    No, Captain.
+
+    Two people are dead, and the man responsible has just driven off and left the work half done.
+
+    He would not do that unless somebody in that house is willing to finish it for him.
+    """
+
+    captain """
+    You believe one of them is his.
+    """
+
+    host """
+    I believe I cannot tell which, and nor can you.
+
+    If we speak tonight, we tell the accomplice exactly how much we know.
+    """
+
+    """
+    He is quiet for a moment.
+
+    He does not argue before he has finished thinking, and I have come to like that in him.
+    """
+
+    captain """
+    Very well.
+
+    We say nothing to anyone until daylight.
+
+    But I will not have you sleeping alone at the end of that corridor.
+    """
+
+    captain """
+    I shall sit up in your room tonight.
+    """
+
+    host """
+    In my room.
+    """
+
+    captain """
+    In a chair, by the door, with the lamp out.
+
+    I am aware of how that looks.
+
+    I am rather more concerned with how the alternative might look in the morning.
+    """
+
+    """
+    A lady would refuse.
+
+    I have been a lady all weekend, and it has very nearly got me killed.
     """
 
     host """
     Thank you, Captain.
-
-    Good night.
-    """
-
-    captain """
-    Good night, madam.
     """
 
     """
-    Madam. Not my lady.
-
-    It is the kindest thing anybody has said to me all weekend.
+    We go back up to the house together, and neither of us says another word.
     """
+
 
     $ host_details.threads.unlock('trust_captain')
 
@@ -219,7 +386,9 @@ label host_day2_evening_billiard_room_small_talk:
 
     And the police will want to know why no call was ever made from this house.
 
-    I have kept the part this long. I can keep it one more night.
+    I have kept up the part this long.
+
+    I can keep it one more night.
     """
 
     host """
