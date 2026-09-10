@@ -35,4 +35,8 @@ label host_config_progress:
                 # still sitting up in the billiard room at night.
                 {"label": "host_day2_evening", "threads": {"found_poison": True, "family_history": True, "go_downstairs": True, "stayed_with_guests": True, "addressed_manning_first": True}},
             ],
+            'sunday_morning': [
+                # Sunday is only reachable once she has confided in Captain Sinha.
+                {"label": "host_day3_morning", "threads": {"trust_captain": True}},
+            ],
         }
