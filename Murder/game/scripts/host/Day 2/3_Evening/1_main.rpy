@@ -355,7 +355,7 @@ label host_day2_evening:
         """
         We both go to my room.
 
-        If anyone were to see us, it would look very bad, but I am beyond caring about that tonight.
+        If anyone were to see us, it would look a little scandalous, but I am beyond caring about that tonight.
 
         As agreed, the Captain takes a chair, and I lie down fully clothed on the bed.
 

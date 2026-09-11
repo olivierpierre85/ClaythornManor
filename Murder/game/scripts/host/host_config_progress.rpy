@@ -11,6 +11,43 @@ label host_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "host_day3_afternoon", "sunday_afternoon"),
                 Chapter(image_ending_question, "ending", "todo", "end"),
             ],
+            # Row 1: the trunk drops one row under col4 before the first branch
+            #   (a corner right under the checkpoint clashes with its image)
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_line),            # col4 trunk
+            ],
+            # Rows 2-4: the three Saturday-evening deaths hang on that trunk.
+            #   Shot in the tea room when the Captain confronts her, died in her
+            #   sleep behind the locked door, or shot by the butler on the forest
+            #   road after taking the car.
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),   # col4 first branch
+                Chapter(image_ending_question, "ending", "shot_tea_room", "sunday_morning"),
+            ],
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_double_corner),   # col4 second branch
+                Chapter(image_ending_question, "ending", "die_in_sleep", "sunday_morning"),
+            ],
+            [
+                Chapter(image_checkpoint_empty_small),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_empty),
+                Chapter(image_checkpoint_corner),          # col4 last branch
+                Chapter(image_ending_question, "ending", "shot_in_car", "sunday_morning"),
+            ],
         ]
 
         host_test_checkpoints = {

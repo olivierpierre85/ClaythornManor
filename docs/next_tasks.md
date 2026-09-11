@@ -45,7 +45,7 @@ LORD, add the lord the characters once the psychic discover him, but with weird 
 ### Write Story: DRUNK
 GEN IDEAS
 
-THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point.
+THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point. (done already with host)
 
 THe drunk will describe the food with delight.
 
@@ -75,8 +75,6 @@ OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mist
 
 ### Write Story:
 ## HOST
-WHEN TO introduce the "THE culprit is among the guests?" => If the butler received a word after day one, then question this BEFORE doctor's death
-
 If there are not enough deaths, add one after the hunt, at the telephone
 
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
@@ -104,27 +102,32 @@ Talk with DRUNK => UNLOCK him over his love of food => but who? the questions mu
 MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
 
 ### NEXT =>  evening map choices and endings (check previous map choice to reuse to dialogs)
- - TODO: Billiard room talk with captain
 
-
-- Who is driving car butler or lady? check nurse?
-IF you leave, you are killed as in broken timeline (car in the woods)
 => Intuition should be "THE KILLER is among us" => Get when leave with butler ending?
-
-IF You do not trust captain sinha and go to bed alone. You are killed in your bed (throat) => need a friend
-- Billiard room (**TRUST captain Sinha?**). And explain everything, he will want to alert eveyone, find the butler, ...
-  you have choice CONVINCE HIM somebody in might be the killer, they should not be alerted, better to stay silent and leave in the morning.
-   OR tell everyone => Big gathering
-
 
 
 ### Sunday
-sunday morning? you wake and see cpt sinha sleeping on chair next to you.
+you wake and see cpt sinha sleeping on chair next to you.
+
+Discuss what to do, and come to the conclusion that you should prepare before leaving. Let's have a last pass at the manor to take what we will need.
+- find car in the garage
+- find petrol in the garden
+- find food in the kitchen
+- Check on Sam Manning to see if he is alright => find his dead body
+- The rest is similar to what wcould be found the day before
+
+Now it is noon, you have the choice to:
+- Leave by car if you have everything => Escape
+- Leave by foot otherwise => death
+- Stay and talk to the others (you avoided TEd harring and Amelia Baxter while exploring (at the end)) => Leads to lunch with an imbruglio (different chairs or nurse plate switching again?) => you end up dead, but actually wake up in the dining room. And see Samuel Manning. He wakes you up, you freak out, everyone else around you is dead. He claims he doesn't know why. And tells his story => Pretended to be dead to escape safely. Then the butler comes back, speech then kills you. Samuel Manning is unlock => ready for the last CHARACTER
+
+
+
 
 You do not wait and leave straight away.
 
 You hear Ted Harring and Amelia Baxter roaming the house and avoid them.
-Out of conscience, cpt goes to Sam manning door to open it so he can escape as well, glimpse inside and see the dead body, so they both ran walking to the village.
+Out of conscience, cpt goes to Sam manning door to open it so he can escape as well, glimpse inside and see the dead body, so they both ran walking to the village. "I want to check the only sure killer in the this place !!" => BUT not here? FIND a way that this UNLOCKS DRUNK => Final piece of the puzzle? final suspect?
 
 
 
