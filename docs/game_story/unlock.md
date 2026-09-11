@@ -24,6 +24,7 @@ graph TD;
     captain -->|is a killer| butler;
     drunk -->|TODO| butler;
     drunk -->|TODO| host;
+    host -->|Manning faked his death| drunk;
     host -->|TODO| butler;
     broken -->|TODO| butler;
     broken -->|TODO| drunk;
@@ -52,6 +53,8 @@ The last piece of the puzzle, needs info from DRUNK & Captain
 
 ## 6 Drunk
 TODO be unlocked by Broken ? How?
+
+The last piece comes from the Host: on the Sunday afternoon, if she stays for lunch, Samuel Manning wakes her in the dining room and tells her how he faked his own death (`faked_death`, plus `lie`). `food` still needs an unlock site (the Friday dinner, see next_tasks.md).
 
 
 

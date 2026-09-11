@@ -121,18 +121,6 @@ Now it is noon, you have the choice to:
 - Leave by foot otherwise => death
 - Stay and talk to the others (you avoided TEd harring and Amelia Baxter while exploring (at the end)) => Leads to lunch with an imbruglio (different chairs or nurse plate switching again?) => you end up dead, but actually wake up in the dining room. And see Samuel Manning. He wakes you up, you freak out, everyone else around you is dead. He claims he doesn't know why. And tells his story => Pretended to be dead to escape safely. Then the butler comes back, speech then kills you. Samuel Manning is unlock => ready for the last CHARACTER
 
-
-
-
-You do not wait and leave straight away.
-
-You hear Ted Harring and Amelia Baxter roaming the house and avoid them.
-Out of conscience, cpt goes to Sam manning door to open it so he can escape as well, glimpse inside and see the dead body, so they both ran walking to the village. "I want to check the only sure killer in the this place !!" => BUT not here? FIND a way that this UNLOCKS DRUNK => Final piece of the puzzle? final suspect?
-
-
-
-
-
 # Unlocks ted HARRING
 ## Unlocks backstory (new start point for TED harring, at his birth), with ending credis rolling.
 ## OR Full rerun where everyone lives (TOO complicated)

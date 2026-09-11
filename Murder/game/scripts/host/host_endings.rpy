@@ -56,3 +56,71 @@ label host_ending_shot_in_car:
     """
 
     jump ending_generic
+
+
+label host_ending_escape:
+
+    call survive_screen_transition
+
+    $ play_music('end_credits')
+
+    $ host_details.endings.unlock('escape')
+    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('escape'))
+
+    """
+    You told one man the truth, and you spent a morning preparing instead of running.
+
+    A car, a tin of petrol, a basket of food, and a locked door opened out of conscience.
+
+    Then you left three people behind in that house, and you sent help from the town.
+
+    You will never know whether it arrived in time, and you will have a great deal to explain.
+
+    But you are alive to explain it.
+    """
+
+    $ is_death = False
+
+    jump ending_generic
+
+
+label host_ending_run_over:
+
+    $ host_details.endings.unlock('run_over')
+    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('run_over'))
+
+    call death_screen_transition
+
+    """
+    You set out on foot, on an open road, in the middle of the day.
+
+    You knew the sound of that engine before you saw the car, and there was nowhere to go.
+
+    A road is not a way out when the people you are running from are the only ones who use it.
+
+    There was a motor in the garage. It only wanted a little more preparation.
+    """
+
+    jump ending_generic
+
+
+label host_ending_shot_by_butler:
+
+    $ host_details.endings.unlock('shot_by_butler')
+    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('shot_by_butler'))
+
+    call death_screen_transition
+
+    """
+    You read that table rightly.
+
+    The plate Miss Marsh got rid of was meant to kill her, and the one she wanted was only meant to make a young man sleep.
+
+    You gave the poison back to the woman it was meant for, and you took the sleep for yourself.
+
+    It was the cleverest thing anybody did in that house all weekend, and you were unconscious for everything that came of it.
+
+    Samuel Manning had the better idea. He had it on Saturday, and it worked.
+    """
+
+    jump ending_generic

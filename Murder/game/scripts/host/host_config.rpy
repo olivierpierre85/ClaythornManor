@@ -8,6 +8,8 @@ label init_host:
 
     call host_day2_evening_map_menu
 
+    call host_day3_morning_map_menu
+
     python:
         host_name = "Lady Claythorn"
 
@@ -18,10 +20,19 @@ label init_host:
             # MAP Menus
             "day1_evening_map_menu" : host_day1_evening_map_menu,
             "day2_evening_map_menu" : host_day2_evening_map_menu,
+            "day3_morning_map_menu" : host_day3_morning_map_menu,
 
             "day1_evening_manning_spoken" : False,
             "day1_evening_moody_spoken" : False,
             "day1_evening_attic_tried" : False,
+
+            # Sunday morning: first-visit framings, and the two doors that
+            # the Captain opens with the master key
+            "day3_morning_downstairs_visited" : False,
+            "day3_morning_attic_visited" : False,
+            "day3_morning_others_heard" : False,
+            "day3_morning_manning_checked" : False,
+            "day3_morning_nurse_checked" : False,
         }
 
         host_important_choices = CharacterImportantChoiceList([
@@ -106,11 +117,36 @@ label init_host:
                 content_negative="You didn't go below stairs to the scullery",
                 image_file="rat_poison",
                 chapters=['friday_evening'],
-                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_afternoon', 'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_afternoon', 'saturday_evening', 'sunday_morning', 'sunday_afternoon'],
+            ),
+            CharacterInformation(
+                4, "seen_car",
+                "You looked over the old tourer in the garage with Captain Sinha. The engine is sound, and the tank is dry",
+                content_negative="You never went down to look at the old car in the garage",
+                image_file="seen_car",
+                chapters=['sunday_morning'],
+                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
             ),
         ])
 
-        host_objects = CharacterObjectList([])
+        host_objects = CharacterObjectList([
+            CharacterInformation(
+                1, "petrol_tin",
+                "You found a full tin of petrol in the garden shed, behind the butler's lock",
+                content_negative="You found no petrol for the car",
+                image_file="petrol_tin",
+                chapters=['sunday_morning'],
+                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
+            ),
+            CharacterInformation(
+                2, "provisions",
+                "You packed what food was left in the kitchen into a basket for the road",
+                content_negative="You left the kitchen as you found it",
+                image_file="cutlery",   # TODO proper image, a basket of provisions
+                chapters=['sunday_morning'],
+                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
+            ),
+        ])
 
         host_endings = CharacterEndingList([
             CharacterInformation(1, "shot_tea_room",
@@ -125,13 +161,25 @@ label init_host:
                 "The butler shot you on the forest road, in the car you took to be your way out",
                 image_file="escape_car",
                 chapters=['saturday_evening']),
+            CharacterInformation(4, "escape",
+                "You drove out of Claythorn Manor with Captain Sinha, and you did not look back",
+                image_file="escape_car",
+                chapters=['sunday_afternoon']),
+            CharacterInformation(5, "run_over",
+                "You set out on foot with Captain Sinha, and the butler's car met you on the forest road",
+                image_file="run_over",
+                chapters=['sunday_afternoon']),
+            CharacterInformation(6, "shot_by_butler",
+                "The butler came back for what he had left behind, and found you the only one left alive at the table",
+                image_file="butler",
+                chapters=['sunday_afternoon']),
         ])
 
         host_extra_information = CharacterDescriptionHiddenList ([
             CharacterInformation(0, "name_age", "Elisabeth - is born in 1865 and", is_important = True, unlock_chapters=[('host', 'friday_evening')]),
             CharacterInformation(1, "down_to_earth", "look down upon 'lower class' individuals", is_important = True), 
             CharacterInformation(60, "hunt", "cannot hunt at the level expected of a lady of her station", is_important = True, unlock_chapters=[('broken', 'saturday_afternoon'), ('captain', 'saturday_afternoon')]),
-            CharacterInformation(60, "car", "to drive a car", is_important = True, unlock_chapters=[('nurse', 'saturday_evening')]),
+            CharacterInformation(60, "car", "to drive a car", is_important = True, unlock_chapters=[('nurse', 'saturday_evening'), ('host', 'sunday_afternoon')]),
             CharacterInformation(60, "table_manners", "table manners are not quite what they ought to be", unlock_chapters=[('captain', 'friday_evening')]),
             CharacterInformation(60, "lie", "a progressive aristocrat close to the people. She is, in fact, one of the people - an out-of-work actress playing her most dangerous role", is_important = True, unlock_chapters=[('captain', 'saturday_afternoon'), ('captain', 'saturday_evening')]),
             CharacterInformation(60, "not_guilty", "guilty, she is not the mastermind behind the whole operation. She is not even in charge of it, the butler is.", is_important = True, unlock_chapters=[('captain', 'saturday_evening')]),

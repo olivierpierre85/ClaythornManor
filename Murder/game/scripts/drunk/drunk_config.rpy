@@ -18,8 +18,9 @@ label init_drunk:
             CharacterInformation(3, "addict", "an addiction of his own. He started drinking regularly to numb the pain. It got worse and worse until he was no longer able", is_important = True, unlock_chapters=[('broken', 'friday_evening'), ('captain', 'friday_evening'), ('doctor', 'friday_evening'), ('lad', 'friday_evening'), ('host', 'friday_evening')]), # Everyone
             CharacterInformation(60, "job", "lawyer, losing cases he should have won and disparaging his clients", is_important = True, unlock_chapters=[('host', 'friday_evening')]), # Confess to Broken, and to the Host at the Friday dinner
             CharacterInformation(60, "heroic_act", "have left him; only the poorest and the most desperate would ever hire him. He assumes that this choice of clients has made him look like a fervent defender of the poor in the eyes of Lady Claythorn, hence his invitation", is_important = True, unlock_chapters=[('host', 'friday_evening')]), # Confess to Broken, and to the Host at the Friday dinner
-            CharacterInformation(60, "lie", "he can sober up, or at least act sober enough when the situation demands it. He has also become quite good at feigning drunkenness to avoid unpleasant situations", is_important = True, unlock_chapters=[('doctor', 'saturday_afternoon'), ('host', 'friday_evening')]), # Confess to Doctor - the Host catches the act at dinner
+            CharacterInformation(60, "lie", "he can sober up, or at least act sober enough when the situation demands it. He has also become quite good at feigning drunkenness to avoid unpleasant situations", is_important = True, unlock_chapters=[('doctor', 'saturday_afternoon'), ('host', 'friday_evening'), ('host', 'sunday_afternoon')]), # Confess to Doctor - the Host catches the act at dinner, and hears it from him on the Sunday
             CharacterInformation(60, "food", "his palate. He can tell how a sauce was made from a single mouthful, and he speaks of a kitchen like a man who grew up beside one", is_important = True, unlock_chapters=[('host', 'friday_evening')]), # He praises the sole at the Host's dinner, stone cold sober
+            CharacterInformation(70, "faked_death", "he can play dead as well as drunk. He lay a whole day in his bed at Claythorn Manor with his throat painted in port, and nobody came close enough to look twice", is_important = True, unlock_chapters=[('host', 'sunday_afternoon')]), # He tells the Host himself, in the dining room, once he has woken her
             ], drunk_name
         )
         drunk_description = """
@@ -28,6 +29,7 @@ label init_drunk:
         Now, almost all of them <info:heroic_act>.
         The one pleasure the drink has never taken from him is <info:food>.
         His particular situation has given him certain skills: for one, <info:lie>.
+        It turns out <info:faked_death>.
         """
 
         # drunk_description_full = """
