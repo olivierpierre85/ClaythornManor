@@ -112,56 +112,28 @@ label host_day3_morning_hear_others:
     return
 
 
-# ------------------------------------
-#   SERVANTS' FLOOR
-# ------------------------------------
-label host_day3_morning_first_downstairs:
-
-    if not host_details.saved_variables["day3_morning_downstairs_visited"]:
-
-        $ host_details.saved_variables["day3_morning_downstairs_visited"] = True
-
-        $ change_room('basement_stairs')
-
-        """
-        The narrow stair down.
-
-        On Friday I stood here and told myself a lady does not go below.
-
-        This morning there is nobody left below to see her do it.
-
-        The Captain goes first.
-        """
-
-    return
-
-
 label host_day3_morning_kitchen:
-
-    call host_day3_morning_first_downstairs
 
     $ change_room('kitchen')
 
     """
-    The range is cold, and the pans from Saturday night are still on it.
+    The kitchen is empty.
 
-    The girl was a fine cook, for an actress. It is a pity nobody will ever know it.
+    But the food that was meant to be prepared today is still lying on the counter.
+    """
 
-    I open the larder.
-
-    Half a loaf, the end of a ham, a piece of cheese in its cloth, and a few apples.
-
-    Not a feast. Enough for a road.
+    host """
+    We do not know how long the journey will take, so we should take some provisions.
     """
 
     captain """
-    Take all of it.
+    Good idea.
 
-    Whoever is left in this house can find their own.
+    Let us take enough to get us through the afternoon.
     """
 
     """
-    I put it into a basket with a bottle of water, and we set the basket at the foot of the stair, to be picked up on our way out.
+    I put bread and some cheese into a basket, with a bottle of water, in case it proves useful later.
     """
 
     $ host_details.objects.unlock('provisions')
@@ -171,8 +143,6 @@ label host_day3_morning_kitchen:
 
 label host_day3_morning_scullery:
 
-    call host_day3_morning_first_downstairs
-
     $ change_room('scullery')
 
     """
@@ -181,71 +151,59 @@ label host_day3_morning_scullery:
 
     if host_details.threads.is_unlocked('found_poison'):
 
-        """
-        My eyes go to the shelf above the sink before I can stop them.
+        host """
+        Captain, on Friday I noticed a bottle of rat poison standing on that shelf, open.
 
-        The rat poison stood there on Friday, open. It was gone last night, and it has not come back.
+        I did not think much of it at the time.
+
+        But now, I do not know.
         """
 
         captain """
-        What are you looking for?
+        You think it could have been used against Mr Moody?
         """
 
         host """
-        A bottle of rat poison.
+        Perhaps.
 
-        It was on that shelf on Friday. I did not think much of it then.
+        I am not sure of anything any more.
         """
 
         captain """
-        And now it is not.
+        If it was, then this weekend was arranged for something terrible.
+
+        That is one more reason to be extremely cautious.
         """
 
         host """
-        No.
+        Of course.
         """
 
-        captain """
-        Then it is in somebody's pocket.
-        """
-
-        """
-        He does not say whose. Neither do I.
-        """
-
-    else:
-
-        """
-        Nobody will wash them now.
-
-        There is nothing here for us.
-        """
+    """
+    There is nothing else for us here.
+    """
 
     return
 
 
 label host_day3_morning_garage:
 
-    call host_day3_morning_first_downstairs
-
     $ change_room('garage')
+
+    """
+    The garage holds an assortment of discarded things from the house.
+    """
 
     if host_details.threads.is_unlocked('saw_car'):
 
         """
-        Petrol and cold iron.
-
-        The good car is gone, of course. The old tourer is still here, under its dust.
+        The old tourer is still here, under its dust.
         """
 
     else:
 
         """
-        Petrol and cold iron.
-
-        The good car is gone, of course.
-
-        But the Captain was right. At the back, under a sheet, there is an old tourer, thick with dust.
+        At the back, under a sheet, there is an old tourer, thick with dust.
         """
 
     """
@@ -255,9 +213,7 @@ label host_day3_morning_garage:
     """
 
     captain """
-    The engine is in order.
-
-    Better than I expected.
+    The engine seems to be in order.
     """
 
     """
@@ -281,33 +237,17 @@ label host_day3_morning_garage:
     if host_details.threads.is_unlocked('petrol_tin'):
 
         captain """
-        The tin from the shed will see to that.
+        But the tin from the shed should see to that.
 
-        I will not fill it now. If anybody comes down here, I want it to look exactly as it did.
-        """
-
-        host """
-        You think somebody would tamper with it?
-        """
-
-        captain """
-        I think I have stopped assuming anything about this house.
+        We should fetch it once we are ready to leave.
         """
 
     else:
 
         captain """
-        Without petrol it is a dead weight.
+        Without petrol it is no use to us.
 
-        If there is any on the estate, it is not in here.
-        """
-
-        host """
-        The shed in the garden.
-        """
-
-        captain """
-        Yes. Let us hope so.
+        But there may be some elsewhere on the estate.
         """
 
     """
@@ -319,24 +259,18 @@ label host_day3_morning_garage:
 
 label host_day3_morning_gun_room:
 
-    call host_day3_morning_first_downstairs
-
     $ change_room('gun_room_empty')
 
-    """
-    Still empty.
+    host """
+    It is empty.
 
-    Whatever was in here went into the car last night, with the luggage.
+    The butler must have taken every weapon he could carry.
     """
 
     captain """
     No matter.
 
     I have mine.
-    """
-
-    """
-    He does not take it out to show me, and I am glad of it.
     """
 
     return

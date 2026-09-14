@@ -189,7 +189,7 @@ label host_day3_morning:
 
     Nothing moves.
 
-    We go down.
+    The way is safe.
     """
 
     call change_time(9, 30)

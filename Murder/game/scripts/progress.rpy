@@ -412,7 +412,7 @@ screen progress:
                                 elif chapter.chapter_type == "ending": 
                                     imagebutton:
                                         if current_storyline.endings.is_unlocked(chapter.label):
-                                            idle current_storyline.endings.get_item(chapter.label).image_file
+                                            idle "images/info_cards/" + current_storyline.endings.get_item(chapter.label).image_file + ".webp"
                                             if not tutorial_on:
                                                 if current_storyline.endings.get_item(chapter.label).is_intuition:
                                                     tooltip str(current_storyline.endings.get_item(chapter.label).content + " {image=images/ui/intuition_icon.png}") 
