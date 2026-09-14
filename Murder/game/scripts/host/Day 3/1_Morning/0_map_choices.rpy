@@ -11,7 +11,10 @@
 # here as well (day3_morning_manning_checked), and is opened at noon if not.
 #
 # Ted Harring and Amelia Baxter are up and walking the house. They are heard
-# from the ground floor rooms and avoided (day3_morning_others_heard).
+# from the ground floor rooms and avoided (day3_morning_others_heard). Their
+# doors, and Miss Marsh's, are never opened: each of those three rooms names
+# its door and calls host_day3_morning_bedroom_others, which greys out all
+# three on the map.
 #
 # The Captain carries the master key, so every door in the house opens today,
 # including the attic, which was closed to her on Friday.
@@ -39,7 +42,8 @@ label host_day3_morning_map_menu:
             map_choice('servant_stairs', 'host_servant_stairs_default', 10),
             map_choice('portrait_gallery', 'host_day3_morning_portrait_gallery', 10),
             map_choice('library', 'host_day3_morning_library', 10),
-            # Bedrooms (her own room holds nothing she wants, so it is not listed)
+            # Bedrooms (her own room is the way out of the map, see below)
+            # The three doors she will not knock on, greyed out together
             map_choice('bedroom_lad', 'host_day3_morning_bedroom_lad', 10),
             map_choice('bedroom_nurse', 'host_day3_morning_bedroom_nurse', 10),
             map_choice('bedroom_psychic', 'host_day3_morning_bedroom_psychic', 10),
@@ -52,12 +56,13 @@ label host_day3_morning_map_menu:
             map_choice('storage', 'host_day3_morning_attic_storage', 10),
             map_choice('males_room', 'host_day3_morning_attic_males_room', 10),
             map_choice('females_room', 'host_day3_morning_attic_females_room', 10),
-            # Out of the map: back to the hall to decide
+            # Out of the map: her own room, where she packs what is hers
+            # before going down to decide
             TimedMenuChoice(
-                'Stop searching and decide what to do',
-                'generic_cancel',
+                'Stop searching and prepare to leave',
+                'host_day3_morning_bedroom_host',
                 early_exit=True,
-                room='entrance_hall',
+                room='bedroom_host',
             ),
         ], is_map = True)
 
@@ -88,25 +93,19 @@ label host_day3_morning_hear_others:
         """
 
         captain """
-        They are looking for people.
+        I can hear Ted Harring and Amelia Baxter.
+
+        They are probably trying to understand where everyone is.
         """
 
         host """
-        Or for a way out.
+        Maybe, but we should not take any chance.
+        
+        Not yet, at least.
         """
 
         captain """
-        Either way, not for us.
-
-        Not yet.
-        """
-
-    else:
-
-        """
-        Their voices again, further off this time.
-
-        We keep to the far side of the house from them.
+        You are right, better to avoid them for the time being.
         """
 
     return
@@ -237,10 +236,10 @@ label host_day3_morning_garage:
     if host_details.threads.is_unlocked('petrol_tin'):
 
         captain """
-        But the tin from the shed should see to that.
-
-        We should fetch it once we are ready to leave.
+        But the petrol tin from the shed should solve that.
         """
+
+        call host_day3_morning_leave_with_car
 
     else:
 
@@ -270,7 +269,13 @@ label host_day3_morning_gun_room:
     captain """
     No matter.
 
-    I have mine.
+    I have mine and that is more than enough for us.
+    """
+
+    """
+    I think I would feel better with a gun of my own.
+
+    But I don't tell him that.
     """
 
     return
@@ -284,7 +289,7 @@ label host_day3_morning_tea_room:
     $ change_room('tea_room')
 
     """
-    The fire is dead, and the cushions are as the girl left them on Saturday.
+    The fire is dead, and there is nothing of interest here.
     """
 
     call host_day3_morning_hear_others
@@ -297,11 +302,7 @@ label host_day3_morning_dining_room:
     $ change_room('dining_room')
 
     """
-    The table is bare.
-
-    My chair at the head of it, and the three empty ones, and the rest.
-
-    I said a line from a piece of paper at that table last night, and I hope it is the last line of his I ever say.
+    The table is bare, the room empty.
     """
 
     call host_day3_morning_hear_others
@@ -314,24 +315,12 @@ label host_day3_morning_billiard_room:
     $ change_room('billiard_room')
 
     """
-    The decanters stand on the side table, where the butler set them out on Friday.
+    The billiard is empty and silent.
 
-    All but one.
-
-    There was a decanter of port here on the first night, and it was gone by Saturday morning.
-
-    The butler put it down to Mr Manning, and I did not doubt him for a second.
+    No reason to linger there.
     """
 
-    captain """
-    This is where you found me last night.
-
-    It seems a long time ago.
-    """
-
-    host """
-    It does.
-    """
+    call host_day3_morning_hear_others
 
     return
 
@@ -341,37 +330,19 @@ label host_day3_morning_entrance_hall:
     $ change_room('entrance_hall')
 
     """
-    The hall, with the lamps out.
+    The hall is silent.
 
-    The telephone sits on its table under the stair, as dead as it was on Friday.
+    The telephone sits on its table under the stair.
 
-    On the side table by the door, something small catches the light.
-
-    A key on a plain chain.
-    """
-
-    """
-    The Captain takes it up and lays it beside his own.
-
-    They are the same.
+    Captain Sinha picks it up to make sure it is actually dead.
     """
 
     captain """
-    A master key.
-
-    The butler gave me one. He did not mention a third.
-    """
-
-    host """
-    It was not there last night. I would have seen it.
-    """
-
-    captain """
-    Then somebody wants it found.
+    No tonality. It is useless.
     """
 
     """
-    He puts it in his pocket with the other.
+    There is nothing else to do here.
     """
 
     call host_day3_morning_hear_others
@@ -388,22 +359,21 @@ label host_day3_morning_garden:
 
     A mist hangs over the lawn.
 
-    At the bottom of the garden stands the squat timber shed the butler kept locked all weekend.
+    At the bottom of the garden stands a small shed.
 
     We walk down to it.
     """
 
-    # TODO add this image
     $ change_room('toolshed_outside_day')
 
     play sound door_locked
 
     """
-    Locked, as it has been since Friday.
+    I try to open it but it is locked.
     """
 
     captain """
-    Not to this.
+    Let me try the key the butler gave me yesterday.
     """
 
     play sound door_open
@@ -411,34 +381,53 @@ label host_day3_morning_garden:
     $ change_room('toolshed')
 
     """
+    It is working, so we go in.
+
     A workbench, a coil of rope, tools that have not been touched in years.
 
-    And in the middle of the floor, set down as neatly as a parcel, a metal petrol tin.
+    And in the middle of the floor, a metal petrol tin catches my eye.
 
     The Captain unscrews the cap and puts his nose to it.
     """
 
     captain """
-    Full.
-
-    That is more than enough to reach the town.
+    It is petrol, and it is half full.
     """
+    
+    if host_details.threads.is_unlocked('car_checked'):
+
+        captain """
+        That should help us reach the town with the car from the garage.
+        """
+
+        call host_day3_morning_leave_with_car
+
+    else:
+
+        captain """
+        If we had a car, there is more than enough to reach the town.        
+        """
+
+        host """
+        Good, let's keep searching in that case.
+        """
+
+    $ host_details.objects.unlock('petrol_tin')
+
+    return
+
+
+label host_day3_morning_leave_with_car:
 
     host """
-    Why would he lock away a tin of petrol?
+    Great! Now we can finally leave.
     """
 
     captain """
-    So that nobody could leave without asking him.
+    Yes, we could actually leave now, but we could also keep searching to make sure we did not forget anything.
 
-    He did not expect anybody else to have a key.
+    It your decision.
     """
-
-    """
-    He leaves the tin where it is, and locks the door behind us as carefully as he opened it.
-    """
-
-    $ host_details.objects.unlock('petrol_tin')
 
     return
 
@@ -486,109 +475,72 @@ label host_day3_morning_library:
 # ------------------------------------
 #   BEDROOMS
 # ------------------------------------
-label host_day3_morning_bedroom_knock:
+label host_day3_morning_bedroom_others:
 
-    $ change_room('bedrooms_hallway')
+    """
+    I raise my hand to knock, but the Captain stops me.
+    """
 
-    play sound door_knock
+    captain """
+    Wait, maybe we should avoid risking meeting someone else for now.
+    """
+
+    host """
+    You are right, let us stay only the two of us, it is safer.
+    """
+
+    # Block the other two on the first refusal
+    $ all_menus[host_details.saved_variables["day3_morning_map_menu"].id].hide_specific_choice(default_room_text('bedroom_lad'))
+    $ all_menus[host_details.saved_variables["day3_morning_map_menu"].id].hide_specific_choice(default_room_text('bedroom_nurse'))
+    $ all_menus[host_details.saved_variables["day3_morning_map_menu"].id].hide_specific_choice(default_room_text('bedroom_psychic'))
 
     return
 
 
 label host_day3_morning_bedroom_lad:
 
-    call host_day3_morning_bedroom_knock
+    $ change_room('bedrooms_hallway')
 
     host """
-    Mr Harring?
+    Mr Harring's room.
     """
 
-    """
-    No answer.
-
-    The Captain tries the handle, and the door is not locked.
-    """
-
-    $ change_room('bedroom_lad')
-
-    """
-    The bed has been slept in.
-
-    The chest of drawers stands a yard from the door, where he dragged it on Saturday night.
-
-    He moved it back this morning to get out.
-
-    Wherever he is now, he is not hiding any more.
-    """
+    call host_day3_morning_bedroom_others
 
     return
 
 
 label host_day3_morning_bedroom_nurse:
 
-    call host_day3_morning_bedroom_knock
+    $ change_room('bedrooms_hallway')
 
     host """
-    Miss Marsh?
+    Miss Marsh's room.
     """
 
-    """
-    Nothing.
-
-    The door is locked, and the Captain fits the key.
-    """
-
-    play sound door_open
-
-    $ change_room('bedroom_nurse')
-
-    $ host_details.saved_variables["day3_morning_nurse_checked"] = True
-
-    """
-    Empty.
-
-    The bed is made, and it has not been slept in.
-
-    Miss Marsh is somewhere in this house, or she is not, and there is nothing in these four walls to say which.
-    """
-
-    """
-    The Captain locks the door again behind us.
-    """
+    call host_day3_morning_bedroom_others
 
     return
 
 
 label host_day3_morning_bedroom_psychic:
 
-    call host_day3_morning_bedroom_knock
+    $ change_room('bedrooms_hallway')
 
     host """
-    Miss Baxter?
+    Miss Baxter's room.
     """
 
-    """
-    No answer.
-
-    The door swings open at the Captain's touch.
-    """
-
-    $ change_room('bedroom_psychic')
-
-    """
-    The bed has been slept in, and her things are laid out as neatly as on the day she arrived.
-
-    Everything in its place.
-
-    She is not here, and she has not packed.
-    """
+    call host_day3_morning_bedroom_others
 
     return
 
 
 label host_day3_morning_bedroom_drunk:
 
-    call host_day3_morning_bedroom_knock
+    $ change_room('bedrooms_hallway')
+
+    play sound door_knock
 
     captain """
     Mr Manning?
@@ -665,19 +617,13 @@ label host_day3_morning_manning_body:
     """
 
     host """
-    He left at eleven. We watched him go.
+    But he left, we watched him go!
     """
 
     captain """
     Then either he came back in the night, or there is another key in this house.
 
     A locked door means nothing here.
-    """
-
-    """
-    I slept behind one last night.
-
-    I do not want to think about how easily it might have been mine.
     """
 
     captain """
@@ -708,7 +654,7 @@ label host_day3_morning_bedroom_captain:
     """
     I think of my own room, and the clothes I brought for a part.
 
-    There is nothing in it I want.
+    Precious little of it is mine.
     """
 
     return
@@ -739,6 +685,50 @@ label host_day3_morning_bedroom_broken:
     The first of them.
 
     On Saturday morning I thought it was the worst thing that could happen to this weekend.
+    """
+
+    return
+
+
+# Early exit of the map: played once, when she stops searching
+label host_day3_morning_bedroom_host:
+
+    $ change_room('bedroom_host')
+
+    """
+    My own room, where I woke this morning.
+
+    The Captain stays by the door and keeps an eye on the corridor.
+    """
+
+    host """
+    I shall not be long.
+    """
+
+    """
+    I open the wardrobe.
+
+    Most of what hangs in it came up in a hamper from London, and it can go back to London without me.
+
+    I take my own coat from the back of it, my own shoes, and the handbag with my papers and what little money is mine.
+
+    The rest I leave where it falls.
+    """
+
+    captain """
+    Is that everything?
+    """
+
+    host """
+    Everything that belongs to me.
+
+    The rest belongs to Lady Claythorn, and she is welcome to it.
+    """
+
+    """
+    I do not look back at the room.
+
+    Whatever we decide at noon, I am done with this place.
     """
 
     return

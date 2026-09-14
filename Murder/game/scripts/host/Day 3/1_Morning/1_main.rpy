@@ -188,8 +188,10 @@ label host_day3_morning:
     The doors are all shut.
 
     Nothing moves.
+    """
 
-    The way is safe.
+    captain """
+    Please, lead the way.
     """
 
     call change_time(9, 30)

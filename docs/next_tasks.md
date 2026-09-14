@@ -101,9 +101,11 @@ Talk with DRUNK => UNLOCK him over his love of food => but who? the questions mu
 
 MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
 
-### NEXT =>  evening map choices and endings (check previous map choice to reuse to dialogs)
+### NEXT =>  morning map choices and endings (check previous map choice to reuse to dialogs)
 
-=> Intuition should be "THE KILLER is among us" => Get when leave with butler ending?
+=> Check MANNING
+- Check attic
+- WRITE WHAT TO DO now => And move to last chapter
 
 
 ### Sunday
