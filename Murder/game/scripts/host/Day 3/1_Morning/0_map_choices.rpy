@@ -4,7 +4,7 @@
 #
 # She and the Captain go through the house together, to take what they will
 # need on the road. Three things can be found:
-#   - the garage      : the old tourer, sound but dry (seen_car)
+#   - the garage      : the old tourer, sound but dry (car_checked)
 #   - the garden shed : a full tin of petrol, behind the butler's lock (petrol_tin)
 #   - the kitchen     : what food is left, packed for the road (provisions)
 # All three are needed for the car at noon. Mr Manning's door can be opened
@@ -15,6 +15,10 @@
 #
 # The Captain carries the master key, so every door in the house opens today,
 # including the attic, which was closed to her on Friday.
+#
+# A room can be picked only once in a chapter, so there are no revisit texts.
+# The three saved flags (downstairs, attic, others heard) each span several
+# rooms and play their framing on whichever of those rooms comes first.
 
 label host_day3_morning_map_menu:
     python:
@@ -138,16 +142,6 @@ label host_day3_morning_kitchen:
 
     $ change_room('kitchen')
 
-    if host_details.threads.is_unlocked('provisions'):
-
-        """
-        The basket is where we left it, at the foot of the stair.
-
-        There is nothing more to take from here.
-        """
-
-        return
-
     """
     The range is cold, and the pans from Saturday night are still on it.
 
@@ -236,33 +230,25 @@ label host_day3_morning_garage:
 
     $ change_room('garage')
 
-    if host_details.threads.is_unlocked('seen_car'):
+    if host_details.threads.is_unlocked('saw_car'):
 
         """
-        The tourer stands where it stood.
+        Petrol and cold iron.
+
+        The good car is gone, of course. The old tourer is still here, under its dust.
         """
 
-        if host_details.threads.is_unlocked('petrol_tin'):
+    else:
 
-            """
-            With the tin from the shed, the Captain says it will run.
+        """
+        Petrol and cold iron.
 
-            There is nothing more to do here until we are ready to go.
-            """
+        The good car is gone, of course.
 
-        else:
-
-            """
-            It will not move an inch until we find it something to drink.
-            """
-
-        return
+        But the Captain was right. At the back, under a sheet, there is an old tourer, thick with dust.
+        """
 
     """
-    Petrol and cold iron.
-
-    The good car is gone, of course. The old tourer is still here, under its dust.
-
     The Captain lifts the bonnet and puts his head under it.
 
     I stand back and try to look as though I know what he is doing.
@@ -290,7 +276,7 @@ label host_day3_morning_garage:
     There is not a drop in the tank.
     """
 
-    $ host_details.observations.unlock('seen_car')
+    $ host_details.observations.unlock('car_checked')
 
     if host_details.threads.is_unlocked('petrol_tin'):
 
@@ -462,16 +448,6 @@ label host_day3_morning_entrance_hall:
 label host_day3_morning_garden:
 
     $ change_room('manor_garden')
-
-    if host_details.threads.is_unlocked('petrol_tin'):
-
-        """
-        The gravel, the wet grass, and the tracks of the car that left last night.
-
-        The tin waits in the shed. There is no need to go down to it again.
-        """
-
-        return
 
     """
     The gravel is empty, and the tracks of the car go off down the drive in the wet.
@@ -679,16 +655,6 @@ label host_day3_morning_bedroom_psychic:
 label host_day3_morning_bedroom_drunk:
 
     call host_day3_morning_bedroom_knock
-
-    if host_details.saved_variables["day3_morning_manning_checked"]:
-
-        """
-        We have opened this door once this morning.
-
-        Neither of us has any wish to open it again.
-        """
-
-        return
 
     captain """
     Mr Manning?

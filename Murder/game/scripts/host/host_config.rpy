@@ -120,10 +120,18 @@ label init_host:
                 relevant_chapters=['friday_evening', 'saturday_morning', 'saturday_afternoon', 'saturday_evening', 'sunday_morning', 'sunday_afternoon'],
             ),
             CharacterInformation(
-                4, "seen_car",
-                "You looked over the old tourer in the garage with Captain Sinha. The engine is sound, and the tank is dry",
-                content_negative="You never went down to look at the old car in the garage",
+                4, "saw_car",
+                "You noticed an old tourer in the garage, a different car from the one you came up in",
+                content_negative="You never went down to the garage before the Sunday",
                 image_file="seen_car",
+                chapters=['friday_evening', 'saturday_evening'],
+                relevant_chapters=['friday_evening', 'saturday_evening', 'sunday_morning'],
+            ),
+            CharacterInformation(
+                5, "car_checked",
+                "You looked over the old tourer in the garage with Captain Sinha. The engine is sound, and the tank is dry",
+                content_negative="You never went down to look at the old car with Captain Sinha",
+                image_file="seen_car",   # TODO proper image, the bonnet up
                 chapters=['sunday_morning'],
                 relevant_chapters=['sunday_morning', 'sunday_afternoon'],
             ),

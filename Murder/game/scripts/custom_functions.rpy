@@ -98,6 +98,7 @@ label breakpoint:
 # Smart music changes
 init python:
     # Night runs from dusk to dawn on the in-game clock (Scottish autumn).
+    # GOOd like this, but adapt some time (like after the hunt should start at 16)
     NIGHT_START_HOUR = 16
     NIGHT_END_HOUR = 6
 

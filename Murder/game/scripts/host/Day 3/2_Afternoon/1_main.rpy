@@ -95,7 +95,7 @@ label host_day3_afternoon:
     $ time_left = 1
     call run_menu(
         TimedMenu("host_day3_afternoon_menu_decision", [
-            TimedMenuChoice("Take the car, and go now", 'host_day3_afternoon_car', early_exit=True, condition="host_details.threads.is_unlocked('seen_car') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions')"),
+            TimedMenuChoice("Take the car, and go now", 'host_day3_afternoon_car', early_exit=True, condition="host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions')"),
             TimedMenuChoice("Set out on foot, and go now", 'host_day3_afternoon_foot', early_exit=True),
             TimedMenuChoice("Stay, and go in to the others", 'host_day3_afternoon_stay', early_exit=True),
         ], image_left="captain")
@@ -109,7 +109,7 @@ label host_day3_afternoon:
 # --------------------------------------------
 label host_day3_afternoon_inventory:
 
-    if host_details.threads.is_unlocked('seen_car') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions'):
+    if host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions'):
 
         captain """
         The car will run. The tin in the shed will fill it, and the basket is at the foot of the stair.
@@ -133,7 +133,7 @@ label host_day3_afternoon_inventory:
 
     else:
 
-        if host_details.threads.is_unlocked('seen_car') and host_details.threads.is_unlocked('petrol_tin'):
+        if host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin'):
 
             captain """
             The car will run, and the tin in the shed will fill it.
@@ -145,7 +145,7 @@ label host_day3_afternoon_inventory:
             I would rather walk from the start than be caught halfway.
             """
 
-        elif host_details.threads.is_unlocked('seen_car'):
+        elif host_details.threads.is_unlocked('car_checked'):
 
             captain """
             The car is sound, but there is not a drop of petrol in it, and we found none.

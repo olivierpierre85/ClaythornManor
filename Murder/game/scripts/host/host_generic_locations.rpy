@@ -48,14 +48,28 @@ label host_garage_default:
 
     $ change_room('garage')
 
-    """
-    Petrol and cold iron, and a different car from the one we came up in.
+    if host_details.threads.is_unlocked('saw_car'):
 
-    An old tourer.
+        """
+        The old tourer is still here.
 
-    It does not look as though it will start.
+        It does not look any more likely to start than it did the last time.
 
-    Nothing for me here.
-    """
+        Nothing for me here.
+        """
+
+    else:
+
+        """
+        Petrol and cold iron, and a different car from the one we came up in.
+
+        An old tourer.
+
+        It does not look as though it will start.
+
+        Nothing for me here.
+        """
+
+        $ host_details.observations.unlock('saw_car')
 
     return

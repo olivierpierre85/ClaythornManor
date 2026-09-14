@@ -89,15 +89,17 @@ label host_config_progress:
             'sunday_morning': [
                 # Sunday is only reachable once she has confided in Captain Sinha.
                 {"label": "host_day3_morning", "threads": {"trust_captain": True}},
-                {"label": "host_day3_morning", "threads": {"trust_captain": True, "found_poison": True, "family_history": True}},
+                # She noticed the old tourer on an earlier evening, so she is the one to bring it up.
+                {"label": "host_day3_morning", "threads": {"trust_captain": True, "saw_car": True}},
+                {"label": "host_day3_morning", "threads": {"trust_captain": True, "found_poison": True, "family_history": True, "saw_car": True}},
             ],
             'sunday_afternoon': [
                 # Nothing found in the morning: on foot, or stay for lunch.
                 {"label": "host_day3_afternoon", "threads": {"trust_captain": True}},
                 # Car and petrol but no food: the Captain will not take the car.
-                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "seen_car": True, "petrol_tin": True}},
+                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "car_checked": True, "petrol_tin": True}},
                 # Everything found: the car is on the menu.
-                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "seen_car": True, "petrol_tin": True, "provisions": True}},
-                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "found_poison": True, "seen_car": True, "petrol_tin": True, "provisions": True}},
+                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "car_checked": True, "petrol_tin": True, "provisions": True}},
+                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "found_poison": True, "car_checked": True, "petrol_tin": True, "provisions": True}},
             ],
         }
