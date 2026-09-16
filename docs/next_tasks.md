@@ -103,7 +103,11 @@ MAYBE add a explanation for the butler? Needed for the reason the phone is dead 
 
 ### NEXT =>  morning map choices and endings (check previous map choice to reuse to dialogs)
 
-**WHERE to include intuition to HOST? **
+**SATURDAY => CHECK ATTIC**
+
+
+
+**WHERE to include intuition to HOST?**
  When leaving by car, you get an intuition to stay?
  Or when seeing 
 
