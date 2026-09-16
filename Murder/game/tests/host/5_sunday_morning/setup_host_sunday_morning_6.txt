@@ -1,0 +1,88 @@
+Chapter: An Empty Manor
+Character: Lady Claythorn
+I wake in my clothes, with the light already coming through the curtains.
+The house is eerly quiet.
+No footsteps below. No fires being laid. No trays.
+For a brief moment that seems odd to me, then I remember.
+The staff is gone, we are on our own.
+Captain Sinha is in the chair by the door.
+His chin is on his chest, the revolver lies in his lap, and he is fast asleep.
+So much for the watch.
+I stand up, and the noise wakes him up.
+Sushil Sinha: Forgive me.
+Sushil Sinha: I closed my eyes for a moment.
+He puts the revolver back into his pocket without looking at it, and he straightens his coat.
+Lady Claythorn: Do not worry.
+Lady Claythorn: Nobody came to my door in the night.
+Lady Claythorn: That is all that matters.
+Sushil Sinha: Right.
+Sushil Sinha: Well, I guess now there is daylight, we can leave.
+Sushil Sinha: That has not changed since last night.
+Sushil Sinha: The question is how.
+Lady Claythorn: The town is a long way.
+Lady Claythorn: We came up from the station on Friday, and it took the car the better part of an hour.
+Sushil Sinha: Ten miles, then. Perhaps more.
+Sushil Sinha: On foot, and on that road, it is the whole of the afternoon.
+Sushil Sinha: We could do it, though it is not ideal.
+Sushil Sinha: It would be easier if we had a car.
+Sushil Sinha: Do you know if there is another one on the estate?
+Lady Claythorn: I am not sure.
+Sushil Sinha: Well, it is worth looking for one then.
+Lady Claythorn: Another thing.
+Lady Claythorn: What shall we do about Mr Manning?
+Sushil Sinha: Right.
+Sushil Sinha: I locked him up in his room last night.
+Sushil Sinha: It would not be fair to let him in there.
+Sushil Sinha: We should at least open his door before we go.
+Lady Claythorn: Alright, so we can sort those things out before deciding on our next move.
+Sushil Sinha: Ver well.
+Sushil Sinha: One more note, we shouldn't say anything to anybody until we are out of this house.
+Sushil Sinha: If one of them is behind this, I do not want to see their face when they learn what we know.
+Lady Claythorn: Then we keep away from them.
+Sushil Sinha: As long as we can.
+So that is the plan.
+A few things to check and then we are out of here.
+I put my shoes on, and we go out into the corridor together.
+The doors are all shut.
+Nothing moves.
+Sushil Sinha: Please, lead the way.
+Map Choice: Garden
+The gravel is empty, and the tracks of the car go off down the drive in the wet.
+A mist hangs over the lawn.
+At the bottom of the garden stands a small shed.
+We walk down to it.
+I try to open it but it is locked.
+Sushil Sinha: Let me try the key the butler gave me yesterday.
+The key turns, and we go in.
+A workbench, a coil of rope, tools that have not been touched in years.
+And in the middle of the floor, a metal petrol tin catches my eye.
+The Captain unscrews the cap and puts his nose to it.
+Sushil Sinha: It is petrol, and it is half full.
+Sushil Sinha: If we had a car, there would be more than enough to reach the town.
+Lady Claythorn: Good, let us keep searching in that case.
+Map Choice: Garage
+The garage holds an assortment of discarded things from the house.
+At the back, under a sheet, there is an old tourer, thick with dust.
+The Captain lifts the bonnet and puts his head under it.
+I stand back and try to look as though I know what he is doing.
+Sushil Sinha: The engine seems to be in order.
+He gets in and tries the starter.
+It turns over once and dies.
+Sushil Sinha: Dry.
+Sushil Sinha: There is not a drop in the tank.
+Sushil Sinha: Without petrol it is no use to us.
+Sushil Sinha: But there may be some elsewhere on the estate.
+He closes the bonnet gently, and we leave the car as it was.
+Map Choice: Stop searching and prepare to leave
+My own room, where I woke this morning.
+The Captain stays by the door and keeps an eye on the corridor.
+Lady Claythorn: I shall not be long.
+I open the wardrobe.
+I take my own coat from the back of it, my own shoes, and the handbag with my papers and what little money is mine.
+Sushil Sinha: Is that everything?
+Lady Claythorn: Everything that belongs to me.
+Sushil Sinha: Good, then I will fetch my things as well.
+Sushil Sinha: We can meet in the hall afterwards.
+Lady Claythorn: All right, please do not be long.
+I do not look back at the room.
+Whatever we decide now, I am done with this place.

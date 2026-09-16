@@ -19,3 +19,7 @@ testsuite host:
     testcase saturday_evening:
         python:
             test.run_chapter(host_details, "saturday_evening", "host_day2_evening")
+
+    testcase sunday_morning:
+        python:
+            test.run_chapter(host_details, "sunday_morning", "host_day3_morning")

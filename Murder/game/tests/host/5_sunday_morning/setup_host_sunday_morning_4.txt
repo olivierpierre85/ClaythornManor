@@ -1,0 +1,150 @@
+Chapter: An Empty Manor
+Character: Lady Claythorn
+I wake in my clothes, with the light already coming through the curtains.
+The house is eerly quiet.
+No footsteps below. No fires being laid. No trays.
+For a brief moment that seems odd to me, then I remember.
+The staff is gone, we are on our own.
+Captain Sinha is in the chair by the door.
+His chin is on his chest, the revolver lies in his lap, and he is fast asleep.
+So much for the watch.
+I stand up, and the noise wakes him up.
+Sushil Sinha: Forgive me.
+Sushil Sinha: I closed my eyes for a moment.
+He puts the revolver back into his pocket without looking at it, and he straightens his coat.
+Lady Claythorn: Do not worry.
+Lady Claythorn: Nobody came to my door in the night.
+Lady Claythorn: That is all that matters.
+Sushil Sinha: Right.
+Sushil Sinha: Well, I guess now there is daylight, we can leave.
+Sushil Sinha: That has not changed since last night.
+Sushil Sinha: The question is how.
+Lady Claythorn: The town is a long way.
+Lady Claythorn: We came up from the station on Friday, and it took the car the better part of an hour.
+Sushil Sinha: Ten miles, then. Perhaps more.
+Sushil Sinha: On foot, and on that road, it is the whole of the afternoon.
+Sushil Sinha: We could do it, though it is not ideal.
+Sushil Sinha: It would be easier if we had a car.
+Sushil Sinha: Do you know if there is another one on the estate?
+Lady Claythorn: I am not sure.
+Sushil Sinha: Well, it is worth looking for one then.
+Lady Claythorn: Another thing.
+Lady Claythorn: What shall we do about Mr Manning?
+Sushil Sinha: Right.
+Sushil Sinha: I locked him up in his room last night.
+Sushil Sinha: It would not be fair to let him in there.
+Sushil Sinha: We should at least open his door before we go.
+Lady Claythorn: Alright, so we can sort those things out before deciding on our next move.
+Sushil Sinha: Ver well.
+Sushil Sinha: One more note, we shouldn't say anything to anybody until we are out of this house.
+Sushil Sinha: If one of them is behind this, I do not want to see their face when they learn what we know.
+Lady Claythorn: Then we keep away from them.
+Sushil Sinha: As long as we can.
+So that is the plan.
+A few things to check and then we are out of here.
+I put my shoes on, and we go out into the corridor together.
+The doors are all shut.
+Nothing moves.
+Sushil Sinha: Please, lead the way.
+Map Choice: Scullery
+Dirty dishes from Saturday night, and the smell of wet stone.
+There is nothing else for us here.
+Map Choice: Gun room
+Lady Claythorn: It is empty.
+Lady Claythorn: The butler must have taken every weapon he could carry.
+Sushil Sinha: No matter.
+Sushil Sinha: I have mine and that is more than enough for us.
+I think I would feel better with a gun of my own.
+But I do not tell him that.
+Map Choice: Servant Stairs
+The narrow stair the staff use, with a footman's livery hanging on its peg.
+There is nothing for me to do here.
+Map Choice: Billiard room
+The billiard room is empty and silent.
+No reason to linger here.
+Voices, somewhere on the other side of the hall.
+Ted Harring: Hello? Is anyone there?
+Mr Harring, and Miss Baxter answering him, too low for me to catch the words.
+The Captain's hand closes on my arm, and we stand very still behind the door until the voices go up the stair.
+Sushil Sinha: I can hear Ted Harring and Amelia Baxter.
+Sushil Sinha: They are probably trying to understand where everyone is.
+Lady Claythorn: Maybe, but we should not take any chances.
+Lady Claythorn: Not yet, at least.
+Sushil Sinha: You are right, better to avoid them for the time being.
+Map Choice: Entrance Hall
+The hall is silent.
+The telephone sits on its table under the stair.
+Captain Sinha picks it up to make sure it is actually dead.
+Sushil Sinha: The line is dead. It is useless.
+There is nothing else to do here.
+Map Choice: Library
+A heavy book lies open on the table.
+I never did find the time to read it, and it is too late for it to be of any use to me now.
+Map Choice: William the Conqueror Bedroom
+Lady Claythorn: Mr Harring's room.
+I raise my hand to knock, but the Captain stops me.
+Sushil Sinha: Wait, perhaps we should avoid the risk of meeting anyone else for now.
+Lady Claythorn: You are right, let us keep it to the two of us. It is safer.
+Map Choice: George I Bedroom
+Sushil Sinha: Why do you want to come here?
+Sushil Sinha: Is there something of interest in my room?
+Lady Claythorn: I do not know.
+I look around and see nothing out of the ordinary.
+Sushil Sinha: Well, if you do not know, maybe we should go somewhere else.
+Lady Claythorn: Yes, of course.
+Map Choice: Edward II Bedroom
+Doctor Baldwin lies where the Captain and Mr Harring set him down on Saturday.
+The handkerchief is still over his face.
+Nobody has been in here since.
+Map Choice: Richard III Bedroom
+Mr Moody, under his sheet, in the cold.
+The first of them.
+On Saturday morning I thought it was the worst thing that could happen to this weekend.
+Map Choice: Butler's Room
+The attic stair.
+On Friday every door up here was locked against me, and I had no key.
+This morning the Captain has two.
+His room.
+The bed is stripped and the wardrobe is empty. He took his own things, at least.
+Against the far wall stands a cabinet with an iron band across its doors.
+The master key opens it.
+The candlesticks from the dining table. The salver. The good spoons.
+A flat case, and inside it the pearls I wore on Friday night.
+Everything the house was dressed with for this weekend, packed and ready, and left behind.
+Sushil Sinha: He left in a hurry.
+Lady Claythorn: No.
+Lady Claythorn: He had the whole evening to load that car, and he had this key.
+Lady Claythorn: He did not leave it. He means to come back for it.
+The Captain closes the cabinet and turns the key in it again.
+Sushil Sinha: Then we had better not be here when he does.
+Map Choice: Female Servants Room
+The girl's room.
+A hairbrush on the washstand, forgotten in the hurry.
+She was the youngest of us, and the most frightened, and she had the least to be frightened of.
+I hope she is a long way from here too.
+Map Choice: George IV Bedroom
+Sushil Sinha: Mr Manning?
+Nothing.
+Sushil Sinha: He may still be asleep.
+Sushil Sinha: Stand back a little.
+He turns the key and pushes the door open, and he stops in the doorway.
+Mr Manning lies on his bed with his head turned to the wall.
+The sheet is dark from his chin to his chest, and the dark has run down onto the floor.
+His throat has been cut.
+I do not scream.
+I put my hand over my mouth and I stay where I am, and the Captain takes two steps into the room and no more.
+Sushil Sinha: There is no need to go closer.
+Sushil Sinha: He is dead, there is no doubt about it.
+He comes back out and pulls the door to behind him, and for a moment we both stand in the corridor and say nothing.
+Sushil Sinha: The door was locked.
+Sushil Sinha: I locked it myself.
+Lady Claythorn: The butler is the only one with another key.
+Lady Claythorn: But that cannot be. He left yesterday, we watched him go!
+Sushil Sinha: Indeed, there is something else at play here.
+Sushil Sinha: I do not understand what has happened, and I do not like it.
+I feel a shiver roll down my spine.
+Sushil Sinha: Let us go. There is no reason to stay here any longer.
+Sushil Sinha: And there is nothing we can do for him now.
+We have been through the house for the better part of the morning.
+The Captain looks at his watch, and we go back to the hall.
+There is no time left for anything else.

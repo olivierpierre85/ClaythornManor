@@ -1,0 +1,24 @@
+{
+    "start_label": "host_day3_morning",
+    "unlocked_threads": [
+        "trust_captain"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Garden",
+            "redirect": "host_day3_morning_garden"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Garage",
+            "redirect": "host_day3_morning_garage"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Stop searching and prepare to leave",
+            "redirect": "host_day3_morning_bedroom_host"
+        }
+    ]
+}

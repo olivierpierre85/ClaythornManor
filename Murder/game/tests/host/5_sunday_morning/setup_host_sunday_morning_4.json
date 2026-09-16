@@ -1,0 +1,74 @@
+{
+    "start_label": "host_day3_morning",
+    "unlocked_threads": [
+        "trust_captain"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Scullery",
+            "redirect": "host_day3_morning_scullery"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Gun room",
+            "redirect": "host_day3_morning_gun_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Servant Stairs",
+            "redirect": "host_servant_stairs_default"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Billiard room",
+            "redirect": "host_day3_morning_billiard_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Entrance Hall",
+            "redirect": "host_day3_morning_entrance_hall"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Library",
+            "redirect": "host_day3_morning_library"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "William the Conqueror Bedroom",
+            "redirect": "host_day3_morning_bedroom_lad"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "George I Bedroom",
+            "redirect": "host_day3_morning_bedroom_captain"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Edward II Bedroom",
+            "redirect": "host_day3_morning_bedroom_doctor"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Richard III Bedroom",
+            "redirect": "host_day3_morning_bedroom_broken"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Butler's Room",
+            "redirect": "host_day3_morning_attic_butler_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Female Servants Room",
+            "redirect": "host_day3_morning_attic_females_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "George IV Bedroom",
+            "redirect": "host_day3_morning_bedroom_drunk"
+        }
+    ]
+}

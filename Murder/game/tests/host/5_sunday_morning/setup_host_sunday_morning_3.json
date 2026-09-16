@@ -1,0 +1,59 @@
+{
+    "start_label": "host_day3_morning",
+    "unlocked_threads": [
+        "trust_captain"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Dining Room",
+            "redirect": "host_day3_morning_dining_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Billiard room",
+            "redirect": "host_day3_morning_billiard_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Garage",
+            "redirect": "host_day3_morning_garage"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Gun room",
+            "redirect": "host_day3_morning_gun_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Garden",
+            "redirect": "host_day3_morning_garden"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Queen Alexandra Bedroom",
+            "redirect": "host_day3_morning_bedroom_nurse"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "George IV Bedroom",
+            "redirect": "host_day3_morning_bedroom_drunk"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Edward II Bedroom",
+            "redirect": "host_day3_morning_bedroom_doctor"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Richard III Bedroom",
+            "redirect": "host_day3_morning_bedroom_broken"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Stop searching and prepare to leave",
+            "redirect": "host_day3_morning_bedroom_host"
+        }
+    ]
+}

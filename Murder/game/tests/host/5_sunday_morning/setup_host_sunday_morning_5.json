@@ -1,0 +1,55 @@
+{
+    "start_label": "host_day3_morning",
+    "unlocked_threads": [
+        "trust_captain",
+        "found_poison"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Kitchen",
+            "redirect": "host_day3_morning_kitchen"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Scullery",
+            "redirect": "host_day3_morning_scullery"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Garden",
+            "redirect": "host_day3_morning_garden"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Tea room",
+            "redirect": "host_day3_morning_tea_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Portrait Gallery",
+            "redirect": "host_day3_morning_portrait_gallery"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Elizabeth I Bedroom",
+            "redirect": "host_day3_morning_bedroom_psychic"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Storage Room",
+            "redirect": "host_day3_morning_attic_storage"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Male Servants Room",
+            "redirect": "host_day3_morning_attic_males_room"
+        },
+        {
+            "menu": "host_day3_morning_map_menu",
+            "selected": "Stop searching and prepare to leave",
+            "redirect": "host_day3_morning_bedroom_host"
+        }
+    ]
+}
