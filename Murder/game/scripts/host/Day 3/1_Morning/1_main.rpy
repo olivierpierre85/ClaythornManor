@@ -212,8 +212,6 @@ label host_day3_morning:
         There is no time left for anything else.
         """
 
-    call change_time(12, 00)
-
     $ stop_music()
 
     jump host_day3_afternoon

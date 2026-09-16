@@ -145,6 +145,7 @@
 ### Important
 - [ ] When escaping by car, maybe mention that the road should be blocked (and isn't, actually).
 - [ ] Rethink the letter to the captain so it fits the journalist story better.
+- [ ] When examining Manning, pretend to go close, but too disgusted to do it (clue as he is not dead)
 
 ### Ideas to think over (optional)
 - [ ] Add a mysterious sound when Thomas Moody appears — the first time we see him alive on Day 2. Or at least an ominous "there's no reason he shouldn't be there," though maybe too obvious.

@@ -37,8 +37,6 @@ label host_day3_afternoon:
     $ play_music('mysterious', 2)
 
     """
-    Noon.
-
     We stand in the hall with the morning behind us and nobody in sight.
     """
 
@@ -86,28 +84,6 @@ label host_day3_afternoon:
     Here is where we stand.
     """
 
-    call host_day3_afternoon_inventory
-
-    """
-    I look at the tea room door, and then at the front door.
-    """
-
-    $ time_left = 1
-    call run_menu(
-        TimedMenu("host_day3_afternoon_menu_decision", [
-            TimedMenuChoice("Take the car, and go now", 'host_day3_afternoon_car', early_exit=True, condition="host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions')"),
-            TimedMenuChoice("Set out on foot, and go now", 'host_day3_afternoon_foot', early_exit=True),
-            TimedMenuChoice("Stay, and go in to the others", 'host_day3_afternoon_stay', early_exit=True),
-        ], image_left="captain")
-    )
-
-    return
-
-
-# --------------------------------------------
-#   The Captain counts what the morning gave them
-# --------------------------------------------
-label host_day3_afternoon_inventory:
 
     if host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions'):
 
@@ -177,10 +153,20 @@ label host_day3_afternoon_inventory:
     He does not say which he would choose.
 
     I think he has decided it is mine to make.
+
+    I look at the tea room door, and then at the front door.
     """
 
-    return
+    $ time_left = 1
+    call run_menu(
+        TimedMenu("host_day3_afternoon_menu_decision", [
+            TimedMenuChoice("Take the car, and go now", 'host_day3_afternoon_car', early_exit=True, condition="host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions')"),
+            TimedMenuChoice("Set out on foot, and go now", 'host_day3_afternoon_foot', early_exit=True),
+            TimedMenuChoice("Stay, and go in to the others", 'host_day3_afternoon_stay', early_exit=True),
+        ], image_left="captain")
+    )
 
+    return
 
 # --------------------------------------------
 #   The car. She drives.

@@ -99,8 +99,8 @@ label host_day3_morning_hear_others:
         """
 
         host """
-        Maybe, but we should not take any chance.
-        
+        Maybe, but we should not take any chances.
+
         Not yet, at least.
         """
 
@@ -275,7 +275,7 @@ label host_day3_morning_gun_room:
     """
     I think I would feel better with a gun of my own.
 
-    But I don't tell him that.
+    But I do not tell him that.
     """
 
     return
@@ -315,9 +315,9 @@ label host_day3_morning_billiard_room:
     $ change_room('billiard_room')
 
     """
-    The billiard is empty and silent.
+    The billiard room is empty and silent.
 
-    No reason to linger there.
+    No reason to linger here.
     """
 
     call host_day3_morning_hear_others
@@ -338,7 +338,7 @@ label host_day3_morning_entrance_hall:
     """
 
     captain """
-    No tonality. It is useless.
+    The line is dead. It is useless.
     """
 
     """
@@ -381,7 +381,7 @@ label host_day3_morning_garden:
     $ change_room('toolshed')
 
     """
-    It is working, so we go in.
+    The key turns, and we go in.
 
     A workbench, a coil of rope, tools that have not been touched in years.
 
@@ -393,7 +393,7 @@ label host_day3_morning_garden:
     captain """
     It is petrol, and it is half full.
     """
-    
+
     if host_details.threads.is_unlocked('car_checked'):
 
         captain """
@@ -405,11 +405,11 @@ label host_day3_morning_garden:
     else:
 
         captain """
-        If we had a car, there is more than enough to reach the town.        
+        If we had a car, there would be more than enough to reach the town.
         """
 
         host """
-        Good, let's keep searching in that case.
+        Good, let us keep searching in that case.
         """
 
     $ host_details.objects.unlock('petrol_tin')
@@ -424,9 +424,9 @@ label host_day3_morning_leave_with_car:
     """
 
     captain """
-    Yes, we could actually leave now, but we could also keep searching to make sure we did not forget anything.
+    Yes, we could actually leave now, but we could also keep searching to make sure we have not forgotten anything.
 
-    It your decision.
+    It is your decision.
     """
 
     return
@@ -482,11 +482,11 @@ label host_day3_morning_bedroom_others:
     """
 
     captain """
-    Wait, maybe we should avoid risking meeting someone else for now.
+    Wait, perhaps we should avoid the risk of meeting anyone else for now.
     """
 
     host """
-    You are right, let us stay only the two of us, it is safer.
+    You are right, let us keep it to the two of us. It is safer.
     """
 
     # Block the other two on the first refusal
@@ -595,7 +595,7 @@ label host_day3_morning_manning_body:
     captain """
     There is no need to go closer.
 
-    Nobody survives that.
+    He is dead, there is no doubt about it.
     """
 
     """
@@ -604,32 +604,32 @@ label host_day3_morning_manning_body:
 
     $ change_room('bedrooms_hallway')
 
-    host """
+    captain """
     The door was locked.
 
-    It was locked from the outside, Captain. I saw you turn the key.
-    """
-
-    captain """
-    And I have had that key in my pocket since.
-
-    The butler had the other.
+    I locked it myself.
     """
 
     host """
-    But he left, we watched him go!
+    The butler is the only one with another key.
+
+    But that cannot be. He left yesterday, we watched him go!
     """
 
     captain """
-    Then either he came back in the night, or there is another key in this house.
+    Indeed, there is something else at play here.
 
-    A locked door means nothing here.
+    I do not understand what has happened, and I do not like it.
+    """
+
+    """
+    I feel a shiver roll down my spine.
     """
 
     captain """
-    Come.
+    Let us go. There is no reason to stay here any longer.
 
-    There is nothing we can do for him, and I do not want to be found standing here.
+    And there is nothing we can do for him now.
     """
 
     $ play_music('PREVIOUS')
@@ -641,20 +641,26 @@ label host_day3_morning_bedroom_captain:
 
     $ change_room('bedroom_captain')
 
-    """
-    His own room.
+    captain """
+    Why do you want to come here?
 
-    He takes his greatcoat from the wardrobe and a few things from the drawer, and he does not linger.
+    Is there something of interest in my room?
+    """
+
+    host """
+    I do not know.
+    """
+
+    """
+    I look around and see nothing out of the ordinary.
     """
 
     captain """
-    Whatever happens at noon, I shall not be coming back up here.
+    Well, if you do not know, maybe we should go somewhere else.
     """
 
-    """
-    I think of my own room, and the clothes I brought for a part.
-
-    Precious little of it is mine.
+    host """
+    Yes, of course.
     """
 
     return
@@ -708,11 +714,7 @@ label host_day3_morning_bedroom_host:
     """
     I open the wardrobe.
 
-    Most of what hangs in it came up in a hamper from London, and it can go back to London without me.
-
     I take my own coat from the back of it, my own shoes, and the handbag with my papers and what little money is mine.
-
-    The rest I leave where it falls.
     """
 
     captain """
@@ -721,14 +723,22 @@ label host_day3_morning_bedroom_host:
 
     host """
     Everything that belongs to me.
+    """
 
-    The rest belongs to Lady Claythorn, and she is welcome to it.
+    captain """
+    Good, then I will fetch my things as well.
+
+    We can meet in the hall afterwards.
+    """
+
+    host """
+    All right, please do not be long.
     """
 
     """
     I do not look back at the room.
 
-    Whatever we decide at noon, I am done with this place.
+    Whatever we decide now, I am done with this place.
     """
 
     return
