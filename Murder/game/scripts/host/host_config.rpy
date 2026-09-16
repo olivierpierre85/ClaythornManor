@@ -146,14 +146,6 @@ label init_host:
                 chapters=['sunday_morning'],
                 relevant_chapters=['sunday_morning', 'sunday_afternoon'],
             ),
-            CharacterInformation(
-                2, "provisions",
-                "You packed what food was left in the kitchen into a basket for the road",
-                content_negative="You left the kitchen as you found it",
-                image_file="cutlery",   # TODO proper image, a basket of provisions
-                chapters=['sunday_morning'],
-                relevant_chapters=['sunday_morning', 'sunday_afternoon'],
-            ),
         ])
 
         host_endings = CharacterEndingList([

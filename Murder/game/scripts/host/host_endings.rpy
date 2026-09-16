@@ -70,7 +70,7 @@ label host_ending_escape:
     """
     You told one man the truth, and you spent a morning preparing instead of running.
 
-    A car, a tin of petrol, a basket of food, and a locked door opened out of conscience.
+    A car, a tin of petrol, and a locked door opened out of conscience.
 
     Then you left three people behind in that house, and you sent help from the town.
 

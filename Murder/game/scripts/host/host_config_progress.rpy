@@ -23,7 +23,8 @@ label host_config_progress:
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_line),            # col4 trunk
                 Chapter(image_checkpoint_empty),
-                Chapter(image_checkpoint_line),            # col6 trunk
+                Chapter(image_checkpoint_double_corner),   # col6 first branch
+                Chapter(image_ending_question, "ending", "escape", "end"),
             ],
             # Rows 2-4: the three Saturday-evening deaths hang on the col4 trunk.
             #   Shot in the tea room when the Captain confronts her, died in her
@@ -40,8 +41,9 @@ label host_config_progress:
                 Chapter(image_checkpoint_double_corner),   # col4 first branch
                 Chapter(image_ending_question, "ending", "shot_tea_room", "sunday_morning"),
                 Chapter(image_checkpoint_empty_half),      # completes col5
-                Chapter(image_checkpoint_double_corner),   # col6 first branch
-                Chapter(image_ending_question, "ending", "escape", "end"),
+                Chapter(image_checkpoint_corner),          # col6 last branch
+                Chapter(image_ending_question, "ending", "run_over", "end"),
+
             ],
             [
                 Chapter(image_checkpoint_empty_small),
@@ -51,8 +53,7 @@ label host_config_progress:
                 Chapter(image_checkpoint_double_corner),   # col4 second branch
                 Chapter(image_ending_question, "ending", "die_in_sleep", "sunday_morning"),
                 Chapter(image_checkpoint_empty_half),      # completes col5
-                Chapter(image_checkpoint_corner),          # col6 last branch
-                Chapter(image_ending_question, "ending", "run_over", "end"),
+
             ],
             [
                 Chapter(image_checkpoint_empty_small),
@@ -96,10 +97,8 @@ label host_config_progress:
             'sunday_afternoon': [
                 # Nothing found in the morning: on foot, or stay for lunch.
                 {"label": "host_day3_afternoon", "threads": {"trust_captain": True}},
-                # Car and petrol but no food: the Captain will not take the car.
+                # Car and petrol found: the car is on the menu.
                 {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "car_checked": True, "petrol_tin": True}},
-                # Everything found: the car is on the menu.
-                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "car_checked": True, "petrol_tin": True, "provisions": True}},
-                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "found_poison": True, "car_checked": True, "petrol_tin": True, "provisions": True}},
+                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "found_poison": True, "car_checked": True, "petrol_tin": True}},
             ],
         }

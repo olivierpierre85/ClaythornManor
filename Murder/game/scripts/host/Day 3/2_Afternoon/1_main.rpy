@@ -14,8 +14,8 @@
 #
 #   Notes :
 #       - Three ways out of the noon decision:
-#           * escape         - the car, if she found all three of car, petrol
-#                              and food in the morning. She drives.
+#           * escape         - the car, if she found both the car and the
+#                              petrol in the morning. She drives.
 #           * run_over       - on foot, and the butler's car meets them on the
 #                              forest road
 #           * shot_by_butler - she stays, sits down to lunch with the others,
@@ -38,42 +38,10 @@ label host_day3_afternoon:
 
     """
     We stand in the hall with the morning behind us and nobody in sight.
-    """
 
-    if not host_details.saved_variables["day3_morning_manning_checked"]:
-
-        captain """
-        Mr Manning first.
-
-        I said I would open that door, and I shall not go without doing it.
-        """
-
-        $ change_room('bedrooms_hallway', dissolve)
-
-        play sound door_knock
-
-        captain """
-        Mr Manning?
-        """
-
-        """
-        Nothing.
-
-        He turns the key and pushes the door open, and he stops in the doorway.
-        """
-
-        call host_day3_morning_manning_body
-
-        $ change_room('entrance_hall', dissolve)
-
-        """
-        We come back down to the hall, and neither of us has said a word on the stair.
-        """
-
-    """
     Somewhere on the other side of the house a door closes, and there are voices in the tea room.
 
-    Mr Harring, and Miss Baxter. Nobody else.
+    Mr Harring, and Miss Baxter.
 
     They have stopped searching, then, and they are waiting for something to happen.
     """
@@ -85,10 +53,10 @@ label host_day3_afternoon:
     """
 
 
-    if host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions'):
+    if host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin'):
 
         captain """
-        The car will run. The tin in the shed will fill it, and the basket is at the foot of the stair.
+        The car will run, and the tin in the shed will fill it.
 
         We can be on the road in a quarter of an hour, and in the town within the hour.
 
@@ -109,19 +77,7 @@ label host_day3_afternoon:
 
     else:
 
-        if host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin'):
-
-            captain """
-            The car will run, and the tin in the shed will fill it.
-
-            But we have nothing to eat, and the others are between us and the kitchen now.
-
-            If that motor gives out five miles down the road, we finish on foot, and hungry.
-
-            I would rather walk from the start than be caught halfway.
-            """
-
-        elif host_details.threads.is_unlocked('car_checked'):
+        if host_details.threads.is_unlocked('car_checked'):
 
             captain """
             The car is sound, but there is not a drop of petrol in it, and we found none.
@@ -160,7 +116,7 @@ label host_day3_afternoon:
     $ time_left = 1
     call run_menu(
         TimedMenu("host_day3_afternoon_menu_decision", [
-            TimedMenuChoice("Take the car, and go now", 'host_day3_afternoon_car', early_exit=True, condition="host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin') and host_details.threads.is_unlocked('provisions')"),
+            TimedMenuChoice("Take the car, and go now", 'host_day3_afternoon_car', early_exit=True, condition="host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin')"),
             TimedMenuChoice("Set out on foot, and go now", 'host_day3_afternoon_foot', early_exit=True),
             TimedMenuChoice("Stay, and go in to the others", 'host_day3_afternoon_stay', early_exit=True),
         ], image_left="captain")
@@ -186,7 +142,7 @@ label host_day3_afternoon_car:
     """
     He does not argue, and I am grateful for that too.
 
-    I pick up the basket at the foot of the stair, and we go out the back way, so that nobody at the tea room window sees us cross the gravel.
+    We go out the back way, so that nobody at the tea room window sees us cross the gravel.
     """
 
     call change_time(12, 15)
@@ -194,7 +150,7 @@ label host_day3_afternoon_car:
     $ change_room('manor_garden', dissolve)
 
     """
-    The Captain goes down to the shed for the tin, and I stand at the garage door with the basket and watch the house.
+    The Captain goes down to the shed for the tin, and I stand at the garage door and watch the house.
 
     Nobody comes to a window.
     """
@@ -340,12 +296,6 @@ label host_day3_afternoon_foot:
     captain """
     Now.
     """
-
-    if host_details.threads.is_unlocked('provisions'):
-
-        """
-        I pick up the basket at the foot of the stair.
-        """
 
     """
     We go out the back way, so that nobody at the tea room window sees us cross the gravel.

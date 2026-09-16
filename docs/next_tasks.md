@@ -103,20 +103,9 @@ MAYBE add a explanation for the butler? Needed for the reason the phone is dead 
 
 ### NEXT =>  morning map choices and endings (check previous map choice to reuse to dialogs)
 
-=> Check MANNING
-- Check attic
-- WRITE WHAT TO DO now => And move to last chapter
-
-
-### Sunday
-you wake and see cpt sinha sleeping on chair next to you.
-
-Discuss what to do, and come to the conclusion that you should prepare before leaving. Let's have a last pass at the manor to take what we will need.
-- find car in the garage
-- find petrol in the garden
-- find food in the kitchen
-- Check on Sam Manning to see if he is alright => find his dead body
-- The rest is similar to what wcould be found the day before
+**WHERE to include intuition to HOST? **
+ When leaving by car, you get an intuition to stay?
+ Or when seeing 
 
 Now it is noon, you have the choice to:
 - Leave by car if you have everything => Escape

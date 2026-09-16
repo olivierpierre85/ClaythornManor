@@ -23,9 +23,9 @@
 #         a garage visit on the Friday or Saturday evening. If she does, she
 #         brings it up herself. If not, the Captain asks and the garage goes
 #         on the list as a place to look.
-#       - The morning map (0_map_choices.rpy) is where the three things they
-#         need are found: the car (car_checked), the petrol (petrol_tin) and
-#         the food (provisions). Mr Manning's door can be opened there as well
+#       - The morning map (0_map_choices.rpy) is where the two things they
+#         need are found: the car (car_checked) and the petrol (petrol_tin).
+#         Mr Manning's door can be opened there as well
 #         (day3_morning_manning_checked). If it is not, the Captain opens it
 #         at noon before anything is decided (host_day3_afternoon).
 #       - Ted Harring and Amelia Baxter are walking the house all morning.
@@ -210,6 +210,40 @@ label host_day3_morning:
         The Captain looks at his watch, and we go back to the hall.
 
         There is no time left for anything else.
+        """
+
+    if not host_details.saved_variables["day3_morning_manning_checked"]:
+
+        captain """
+        We forgot about Mr Manning.
+
+        We should check he is safe.
+        """
+
+        host """
+        Of course.
+        """
+
+        $ change_room('bedrooms_hallway', dissolve)
+
+        play sound door_knock
+
+        captain """
+        Mr Manning?
+        """
+
+        """
+        Nothing.
+
+        He turns the key and pushes the door open, and he stops in the doorway.
+        """
+
+        call host_day3_morning_manning_body
+
+        $ change_room('entrance_hall', dissolve)
+
+        """
+        We come back down to the hall, too shocked to speak.
         """
 
     $ stop_music()

@@ -3,11 +3,10 @@
 # 09:30 -> 12:00, one hundred and fifty minutes on the clock.
 #
 # She and the Captain go through the house together, to take what they will
-# need on the road. Three things can be found:
+# need on the road. Two things can be found:
 #   - the garage      : the old tourer, sound but dry (car_checked)
 #   - the garden shed : a full tin of petrol, behind the butler's lock (petrol_tin)
-#   - the kitchen     : what food is left, packed for the road (provisions)
-# All three are needed for the car at noon. Mr Manning's door can be opened
+# Both are needed for the car at noon. Mr Manning's door can be opened
 # here as well (day3_morning_manning_checked), and is opened at noon if not.
 #
 # Ted Harring and Amelia Baxter are up and walking the house. They are heard
@@ -122,20 +121,18 @@ label host_day3_morning_kitchen:
     """
 
     host """
-    We do not know how long the journey will take, so we should take some provisions.
+    Sunday luncheon, for the whole party. Nobody is going to cook it now.
     """
 
     captain """
-    Good idea.
+    No.
 
-    Let us take enough to get us through the afternoon.
+    And if the morning goes as I hope, we shall not be here to eat it.
     """
 
     """
-    I put bread and some cheese into a basket, with a bottle of water, in case it proves useful later.
+    I leave it where it lies.
     """
-
-    $ host_details.objects.unlock('provisions')
 
     return
 
