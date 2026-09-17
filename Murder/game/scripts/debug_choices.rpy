@@ -70,6 +70,11 @@ label init_debug:
     call unlock_host
     $ host_details.load_manual_checkpoints()
 
+    $ current_character = drunk_details
+    $ current_storyline = drunk_details
+    call unlock_drunk
+    $ drunk_details.load_manual_checkpoints()
+
     # Uncomment to make the butler visible (centre of character selection / progress view)
     # $ butler_details.description_hidden.unlock('manages_weekend')
 
@@ -194,14 +199,16 @@ label unlock_host:
 
 
 label unlock_drunk:
-    
-    # $ drunk_details.description_hidden.unlock('background')
-    # $ drunk_details.description_hidden.unlock('status')
-    # $ drunk_details.description_hidden.unlock('age')
-    # $ drunk_details.description_hidden.unlock('wife') 
-    $ drunk_details.description_hidden.unlock('addict') 
-    # $ drunk_details.description_hidden.unlock('job')
-    # $ drunk_details.description_hidden.unlock('heroic_act')
-    # $ drunk_details.description_hidden.unlock('lie') 
+
+    $ drunk_details.description_hidden.unlock('status')
+    $ drunk_details.description_hidden.unlock('age')
+    $ drunk_details.description_hidden.unlock('wife')
+    $ drunk_details.description_hidden.unlock('addict')
+    $ drunk_details.description_hidden.unlock('job')
+    $ drunk_details.description_hidden.unlock('heroic_act')
+    $ drunk_details.description_hidden.unlock('lie')
+    $ drunk_details.description_hidden.unlock('food')
+    $ drunk_details.description_hidden.unlock('faked_death')
+    $ drunk_details.description_hidden.unlock('lost_case')
 
     return

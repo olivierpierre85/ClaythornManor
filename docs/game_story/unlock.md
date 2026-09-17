@@ -22,7 +22,7 @@ graph TD;
     broken -->|Wife Story| drunk;
     drunk -->|Final info, observes lad waking up after scene with psychic| lad;
     captain -->|is a killer| butler;
-    drunk -->|TODO| butler;
+    drunk -->|Survives, watches the butler return for the silver| butler;
     drunk -->|TODO| host;
     host -->|Manning faked his death| drunk;
     host -->|TODO| butler;
@@ -52,9 +52,19 @@ Can be unlocked by doctor ? And other? or just doctor is enough?
 The last piece of the puzzle, needs info from DRUNK & Captain
 
 ## 6 Drunk
-TODO be unlocked by Broken ? How?
 
-The last piece comes from the Host: on the Sunday afternoon, if she stays for lunch, Samuel Manning wakes her in the dining room and tells her how he faked his own death (`faked_death`, plus `lie`). `food` still needs an unlock site (the Friday dinner, see next_tasks.md).
+Samuel Manning's storyline is written (`scripts/drunk/`). It is a self-contained roguelike arc rather than a piece unlocked from others:
+
+- **First run is forced.** After the doctor's letter on Friday night, the only choice is to drink, so he wakes hungover, takes a whisky flask into the woods, and shoots Daniel Baldwin blind drunk. That death (`despair`) is an intuition ending, and it unlocks the Friday-night choice to put the bottle down.
+- **Once sober**, the tree opens: watered flask -> controlled hunt -> shoot the doctor deliberately (`shot_doctor`) to move on, or lower the rifle and be tidied away in the night (`spared`).
+- **Locked in his room on Saturday night**, he reasons the whole plot out with a self-talk menu (the letter, the dead telephone line, the butler's face). If he understands it, he can play dead with port for blood (`played_dead`, needs the `port` bottle he takes from the billiard-room bar on Friday), accept his fate and cut his own throat for real (`throat_cut`), or warn the house and be silenced by the one person who believes him (`silenced`).
+- **Sunday**, playing dead, the Captain pronounces him dead without touching him. He then witnesses the dining-room poisoning and can swap the plates back to save Ted Harring, escaping before the butler's car returns (`survived`), or freeze and be found by the butler, who checks the bed the Captain did not (`found_out`).
+
+The last piece of his own backstory (`lost_case`) lands on the survived Sunday: he recognises Amelia Baxter as the client he was too drunk to defend years ago, which is why he was on the guest list.
+
+Cross-character unlocks he provides: the **lad** (he watches Ted Harring wake to the butler's greeting) and the **butler** (appears in the roster, plus `manages_weekend`, `job`, `mob`, `took_valuables`, on the survived path).
+
+The Host also reaches him from her side: on the Sunday afternoon, if she stays for lunch, Samuel Manning wakes her in the dining room and tells her how he faked his own death (`faked_death`, plus `lie`). `food` still needs its host-side unlock site (the Friday dinner, see next_tasks.md).
 
 
 
