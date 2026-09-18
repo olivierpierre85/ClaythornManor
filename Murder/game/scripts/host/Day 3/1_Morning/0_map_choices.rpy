@@ -120,18 +120,16 @@ label host_day3_morning_kitchen:
     But the food that was meant to be prepared today is still lying on the counter.
     """
 
-    host """
-    Sunday luncheon, for the whole party. Nobody is going to cook it now.
-    """
-
     captain """
-    No.
+    Sunday luncheon, for the whole party.
+    """
 
-    And if the morning goes as I hope, we shall not be here to eat it.
+    host """
+    Nobody is going to cook it now.
     """
 
     """
-    I leave it where it lies.
+    We leave it where it lies.
     """
 
     return
@@ -331,7 +329,7 @@ label host_day3_morning_entrance_hall:
 
     The telephone sits on its table under the stair.
 
-    Captain Sinha picks it up to make sure it is actually dead.
+    Captain Sinha picks it up.
     """
 
     captain """
@@ -353,8 +351,6 @@ label host_day3_morning_garden:
 
     """
     The gravel is empty, and the tracks of the car go off down the drive in the wet.
-
-    A mist hangs over the lawn.
 
     At the bottom of the garden stands a small shed.
 
@@ -752,12 +748,34 @@ label host_day3_morning_attic_default:
 
         $ host_details.saved_variables["day3_morning_attic_visited"] = True
 
+        captain """
+        The attic? Are you sure there is something of use up here?
         """
-        The attic stair.
 
-        On Friday every door up here was locked against me, and I had no key.
+        host """
+        I don't know. I assume most of the rooms would be closed.
+        """
 
-        This morning the Captain has two.
+        captain """
+        Maybe, but the key the butler gave me might work here.
+        """
+
+        host """
+        Let us try, then.
+        """
+
+        """
+        The Captain inserts the key into the door.
+
+        It opens.
+        """
+
+        captain """
+        It works, so I assume we can open all of them now.
+        """
+
+        host """
+        That is good to know.
         """
 
     return
@@ -772,41 +790,35 @@ label host_day3_morning_attic_butler_room:
     $ change_room('attic_butler_room')
 
     """
-    His room.
+    The butler's room. It is clear that someone left it in a hurry.
 
-    The bed is stripped and the wardrobe is empty. He took his own things, at least.
+    Against the far wall stands a tall cabinet with glass doors, and the doors are open.
 
-    Against the far wall stands a cabinet with an iron band across its doors.
-
-    The master key opens it.
-    """
-
-    """
-    The candlesticks from the dining table. The salver. The good spoons.
-
-    A flat case, and inside it the pearls I wore on Friday night.
-
-    Everything the house was dressed with for this weekend, packed and ready, and left behind.
+    The shelves behind them are bare.
     """
 
     captain """
-    He left in a hurry.
+    I would assume the silver was kept in there.
+
+    The candlesticks, the salver...
+
+    It looks like it is gone.
     """
 
     host """
-    No.
-
-    He had the whole evening to load that car, and he had this key.
-
-    He did not leave it. He means to come back for it.
-    """
-
-    """
-    The Captain closes the cabinet and turns the key in it again.
+    I swear, it was never part of the plan to steal anything.
     """
 
     captain """
-    Then we had better not be here when he does.
+    Plan or not, it is clear our friend had few scruples about taking what was not his.
+    """
+
+    """
+    I stand and look at the empty shelves.
+
+    He gave the orders all weekend, and I took him for an actor.
+
+    But he was a thief as well, it seems.
     """
 
     return
@@ -821,11 +833,31 @@ label host_day3_morning_attic_storage:
     $ change_room('attic_storage_room')
 
     """
-    Trunks, mostly empty.
+    Trunks stacked three deep, furniture under dust sheets, boxes that cannot have been opened in a generation.
+    """
 
-    A spare livery on a hanger, and a hamper with the name of a London theatrical supplier on the lid.
+    host """
+    There could be anything in here.
+    """
 
-    The whole weekend came up here in these boxes, and it will not be going back in them.
+    captain """
+    There could.
+
+    And it would take us the better part of a day to find it.
+    """
+
+    host """
+    I don't think we have that kind of time.
+    """
+
+    captain """
+    Nor do I.
+
+    Let us leave it for now.
+    """
+
+    """
+    I pull the door to behind us, and the dust settles back over the lot of it.
     """
 
     return
@@ -840,11 +872,25 @@ label host_day3_morning_attic_males_room:
     $ change_room('attic_males_room')
 
     """
-    The footman's room, stripped to the bed frame.
+    Two narrow beds, both stripped to the mattress, and an empty peg behind the door.
+    """
 
-    He was the best of us, I think. Not one word out of place all weekend.
+    host """
+    The footman slept here.
 
-    I hope he is a long way from here.
+    Thomas, he asked me to call him, which was not his name either.
+    """
+
+    captain """
+    Whoever he was, he is gone now.
+
+    And he most likely took his belongings with him.
+
+    So there is no need to linger here.
+    """
+
+    host """
+    You are right.
     """
 
     return
@@ -859,13 +905,19 @@ label host_day3_morning_attic_females_room:
     $ change_room('attic_females_room')
 
     """
-    The girl's room.
+    Two beds, a washstand, and the shelf above them swept bare.
 
-    A hairbrush on the washstand, forgotten in the hurry.
+    She has left nothing behind at all.
+    """
 
-    She was the youngest of us, and the most frightened, and she had the least to be frightened of.
+    captain """
+    It is empty. I do not think we will find anything here.
+    """
 
-    I hope she is a long way from here too.
+    host """
+    No.
+
+    Let us look somewhere else.
     """
 
     return
