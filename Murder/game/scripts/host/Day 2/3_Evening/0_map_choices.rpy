@@ -490,15 +490,17 @@ label host_day2_evening_attic_females_room:
     I should finish my packing, then.
     """
 
+    host """
+    Of course. I shall leave you to it.
+    """
+
     """
     I do not think she believes me entirely, but she does not want to press the matter further.
 
     I cannot blame her.
     """
 
-    host """
-    Of course. I shall leave you to it.
-    """
+
 
     return
 
