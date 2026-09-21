@@ -69,21 +69,20 @@ graph TB
 
 ## Host Path
 
-Five at the table: the host, the captain, the lad, the psychic and the nurse. The host arrives as the nurse is swapping her plate with the lad's, and she undoes it her own way: she gives the lad her own (clean) plate, gives the nurse "her" plate back (the one the nurse got rid of, the poisoned one), and keeps the plate the nurse wanted (the lad's, the sedative) for herself.
+Only reachable without a car: the captain has gone for the town on foot, so the host goes in to the lad and the psychic alone, and the nurse never comes down. Three at the table. The psychic keeps the sedative for the lad and gives the plate meant for the nurse to the host. There is no swap and nothing for the host to read.
 
 ```mermaid
 graph TB
     nurse_poison["🍽️ Nurse's plate (☠️ Poison)"]
     lad_sedative["🍽️ Lad's plate (💤 Sedative)"]
-    host_clean["🍽️ Host's plate (🍽️ Clean)"]
+    host_clean["🍽️ Host's place"]
     psychic_clean["🍽️ Psychic's plate (🍽️ Clean)"]
-    captain_clean["🍽️ Captain's plate (🍽️ Clean)"]
 
-    nurse_poison -->|eaten by| nurse_poison
-    lad_sedative -->|eaten by| host_clean
-    host_clean -->|eaten by| lad_sedative
+    nurse_poison -->|served to| host_clean
+    lad_sedative -->|eaten by| lad_sedative
     psychic_clean -->|eaten by| psychic_clean
-    captain_clean -->|eaten by| captain_clean
 ```
 
-The nurse dies at the table and the host falls asleep. What happens between the captain, the lad and the psychic after that is off-screen (shots, heard by Samuel Manning from his room). The host wakes at three with everyone dead, Manning alive, and the butler's car on the gravel.
+The host dies at the table, first. The lad goes to sleep after her.
+
+With a car the host never sits down to lunch: either she and the captain leave at once (intuition) or the whole house gets into the car and it is stopped in the wood. If she hides in the attic instead, lunch happens without her (lad path, scenario A) and she comes down to Samuel Manning alive among the dead.

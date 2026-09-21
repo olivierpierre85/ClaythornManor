@@ -165,13 +165,18 @@ label init_host:
                 "You drove out of Claythorn Manor with Captain Sinha, and you did not look back",
                 image_file="escape_car",
                 chapters=['sunday_afternoon']),
-            CharacterInformation(5, "run_over",
-                "You set out on foot with Captain Sinha, and the butler's car met you on the forest road",
-                image_file="run_over",
+            CharacterInformation(5, "car_ambush",
+                "You filled the car with everyone left in the house, and it was stopped on the forest road",
+                image_file="hunting_rifle_road",   # TODO proper image, the stalled car
                 chapters=['sunday_afternoon']),
-            CharacterInformation(6, "shot_by_butler",
-                "The butler came back for what he had left behind, and found you the only one left alive at the table",
-                image_file="butler",
+            CharacterInformation(6, "poisoned",
+                "You sat down to lunch with Mr Harring and Miss Baxter, and you did not get up again",
+                image_file="poison_food",
+                chapters=['sunday_afternoon']),
+            CharacterInformation(7, "shot_by_butler",
+                "The butler came back for what he had left behind, and found you sitting among the dead in the dining room",
+                image_file="butler",   # TODO butler_i, the intuition variant
+                is_intuition=True,
                 chapters=['sunday_afternoon']),
         ])
 

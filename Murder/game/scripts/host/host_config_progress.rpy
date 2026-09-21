@@ -9,13 +9,12 @@ label host_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "host_day2_evening", "saturday_evening"),
                 Chapter(image_checkpoint_right, "checkpoint", "host_day3_morning", "sunday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "host_day3_afternoon", "sunday_afternoon"),
-                # She stays for lunch, wakes with the house dead around her,
-                # and the butler comes back for the silver
-                Chapter(image_ending_question, "ending", "shot_by_butler", "end"),
+                # The Captain goes for the town alone, and she sits down to
+                # lunch with Mr Harring and Miss Baxter
+                Chapter(image_ending_question, "ending", "poisoned", "end"),
             ],
-            # Row 1: the trunks drop one row under col4 and col6 before the
-            #   first branch (a corner right under the checkpoint clashes with
-            #   its image)
+            # Row 1: the col4 trunk drops one row before its first branch (a
+            #   corner right under the checkpoint clashes with its image)
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
@@ -24,15 +23,17 @@ label host_config_progress:
                 Chapter(image_checkpoint_line),            # col4 trunk
                 Chapter(image_checkpoint_empty),
                 Chapter(image_checkpoint_double_corner),   # col6 first branch
-                Chapter(image_ending_question, "ending", "escape", "end"),
+                Chapter(image_ending_question, "ending", "shot_by_butler", "end"),
             ],
             # Rows 2-4: the three Saturday-evening deaths hang on the col4 trunk.
             #   Shot in the tea room when the Captain confronts her, died in her
             #   sleep behind the locked door, or shot by the butler on the forest
             #   road after taking the car.
-            # Rows 2-3: the two other Sunday endings hang on the col6 trunk.
-            #   She drives out with the Captain (escape), or they set out on
-            #   foot and the butler's car meets them (run_over).
+            # Rows 1-3: the three other Sunday endings hang on the col6 trunk.
+            #   She hides in the attic and the butler finds her at the table
+            #   (shot_by_butler, the intuition), the whole house leaves in the
+            #   car and it is stopped in the wood (car_ambush), or the two of
+            #   them go now and she drives (escape).
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
@@ -41,8 +42,8 @@ label host_config_progress:
                 Chapter(image_checkpoint_double_corner),   # col4 first branch
                 Chapter(image_ending_question, "ending", "shot_tea_room", "sunday_morning"),
                 Chapter(image_checkpoint_empty_half),      # completes col5
-                Chapter(image_checkpoint_corner),          # col6 last branch
-                Chapter(image_ending_question, "ending", "run_over", "end"),
+                Chapter(image_checkpoint_double_corner),   # col6 second branch
+                Chapter(image_ending_question, "ending", "car_ambush", "end"),
 
             ],
             [
@@ -53,6 +54,8 @@ label host_config_progress:
                 Chapter(image_checkpoint_double_corner),   # col4 second branch
                 Chapter(image_ending_question, "ending", "die_in_sleep", "sunday_morning"),
                 Chapter(image_checkpoint_empty_half),      # completes col5
+                Chapter(image_checkpoint_corner),          # col6 last branch
+                Chapter(image_ending_question, "ending", "escape", "end"),
 
             ],
             [
@@ -95,10 +98,14 @@ label host_config_progress:
                 {"label": "host_day3_morning", "threads": {"trust_captain": True, "found_poison": True, "family_history": True, "saw_car": True}},
             ],
             'sunday_afternoon': [
-                # Nothing found in the morning: on foot, or stay for lunch.
+                # No car: the Captain goes alone, and she goes in to the others
+                # or hides in the attic.
                 {"label": "host_day3_afternoon", "threads": {"trust_captain": True}},
-                # Car and petrol found: the car is on the menu.
+                # No car, and she knows about the missing bottle when she sits
+                # down to lunch.
+                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "found_poison": True}},
+                # Car and petrol found: in to the others and the road, or the
+                # car now (intuition, always on the menu in debug).
                 {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "car_checked": True, "petrol_tin": True}},
-                {"label": "host_day3_afternoon", "threads": {"trust_captain": True, "found_poison": True, "car_checked": True, "petrol_tin": True}},
             ],
         }

@@ -84,21 +84,39 @@ label host_ending_escape:
     jump ending_generic
 
 
-label host_ending_run_over:
+label host_ending_car_ambush:
 
-    $ host_details.endings.unlock('run_over')
-    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('run_over'))
+    $ host_details.endings.unlock('car_ambush')
+    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('car_ambush'))
 
     call death_screen_transition
 
     """
-    You set out on foot, on an open road, in the middle of the day.
+    You would not leave without them, so you took them all, and the car never got past the wood.
 
-    You knew the sound of that engine before you saw the car, and there was nowhere to go.
+    Somebody had seen to that engine before it left the garage, and you never saw who fired.
 
-    A road is not a way out when the people you are running from are the only ones who use it.
+    Captain Sinha knew what you were, and he would have let you drive. In front of the others you kept to the part, and the part put you in the back seat with your hands in your lap.
 
-    There was a motor in the garage. It only wanted a little more preparation.
+    Two people in a motor get through. Five do not.
+    """
+
+    jump ending_generic
+
+
+label host_ending_poisoned:
+
+    $ host_details.endings.unlock('poisoned')
+    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('poisoned'))
+
+    call death_screen_transition
+
+    """
+    Three people have died in that house since Friday, and you sat down at its table with nobody at your back and ate what was put in front of you.
+
+    Captain Sinha asked you for one thing before he went. Lock yourself in.
+
+    You had the key to every door in the house in your pocket, and you used it on none of them.
     """
 
     jump ending_generic
@@ -112,15 +130,15 @@ label host_ending_shot_by_butler:
     call death_screen_transition
 
     """
-    You read that table rightly.
+    You hid, and it worked, for the better part of three hours.
 
-    The plate Miss Marsh got rid of was meant to kill her, and the one she wanted was only meant to make a young man sleep.
+    Then the house went quiet, and you came down to see why, and you were sitting at your own table when the car came up the drive.
 
-    You gave the poison back to the woman it was meant for, and you took the sleep for yourself.
+    He came back for what he was owed, and you were the one person left in that house who could put a name to him.
 
-    It was the cleverest thing anybody did in that house all weekend, and you were unconscious for everything that came of it.
+    Captain Sinha walked out of that house at a quarter past twelve, and there was no motor to go with him in.
 
-    Samuel Manning had the better idea. He had it on Saturday, and it worked.
+    There is one in the garage. Look harder for what it wants.
     """
 
     jump ending_generic
