@@ -102,8 +102,10 @@ Talk with DRUNK => UNLOCK him over his love of food => but who? the questions mu
 
 MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
 
-### NEXT =>  morning map choices and endings (check previous map choice to reuse to dialogs)
-host_day3_afternoon_tea_room_talk
+### NEXT =>  
+
+3 Possible endings for HOST
+Find a use for intuition here => right, now if you escape with butler, you learn to trust noone (they are with you) => Will make it possible to confide in Captain and move on to next day. (Weak but passable for first draft)
 
 
 **WHERE to include intuition to HOST?**

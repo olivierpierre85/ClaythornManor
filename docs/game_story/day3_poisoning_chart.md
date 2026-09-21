@@ -69,20 +69,4 @@ graph TB
 
 ## Host Path
 
-Only reachable without a car: the captain has gone for the town on foot, so the host goes in to the lad and the psychic alone, and the nurse never comes down. Three at the table. The psychic keeps the sedative for the lad and gives the plate meant for the nurse to the host. There is no swap and nothing for the host to read.
-
-```mermaid
-graph TB
-    nurse_poison["🍽️ Nurse's plate (☠️ Poison)"]
-    lad_sedative["🍽️ Lad's plate (💤 Sedative)"]
-    host_clean["🍽️ Host's place"]
-    psychic_clean["🍽️ Psychic's plate (🍽️ Clean)"]
-
-    nurse_poison -->|served to| host_clean
-    lad_sedative -->|eaten by| lad_sedative
-    psychic_clean -->|eaten by| psychic_clean
-```
-
-The host dies at the table, first. The lad goes to sleep after her.
-
-With a car the host never sits down to lunch: either she and the captain leave at once (intuition) or the whole house gets into the car and it is stopped in the wood. If she hides in the attic instead, lunch happens without her (lad path, scenario A) and she comes down to Samuel Manning alive among the dead.
+The host never sits down to Sunday lunch. She and the captain have agreed to say nothing to the others, so at noon it is the two of them: out in the car if she found the car and the petrol, on foot with him otherwise, or she sends him alone and hides in the attic. On the attic path lunch happens without her (lad path, scenario A) and she comes down at three to Samuel Manning alive among the dead.
