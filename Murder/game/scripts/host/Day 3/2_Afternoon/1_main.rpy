@@ -13,25 +13,21 @@
 #       - Gone  : butler and the staff, and the butler on his way back
 #
 #   Notes :
-#       - She cannot walk ten miles of that road, so there is no going out
-#         on foot. What she found in the morning decides the noon menu.
-#       - No car, or no petrol (Case A): the Captain goes for the town alone
-#         and leaves her the butler's key. Then she chooses:
-#           * poisoned       - she goes in to Mr Harring and Miss Baxter,
-#                              sits down to lunch with them, and Miss Marsh
-#                              never comes down (2_stay.rpy)
-#           * shot_by_butler - she locks herself into the attic, the house
-#                              goes quiet under her, and she comes down to
-#                              Samuel Manning alive among the dead and the
-#                              butler's car on the gravel (3_attic.rpy)
-#       - Car and petrol (Case B):
-#           * car_ambush     - she will not leave without the others, so the
-#                              Captain drives all five of them, and the car
-#                              is stopped in the wood (4_together.rpy)
-#           * escape         - INTUITION, unlocked by shot_by_butler. The two
-#                              of them go now, and she drives.
-#         Without the intuition there is no menu in Case B, the same as the
-#         Captain's Sunday.
+#       - She and the Captain keep to what they agreed in the morning:
+#         nothing is said to the others, and they do not go in to them. She
+#         has lied to those people for three days and they would not take
+#         the truth from her now. So it is the two of them, and the only
+#         question is how.
+#       - Car and petrol found in the morning: no menu. They go now, and
+#         she drives (escape).
+#       - Otherwise it is the road on foot, and she chooses:
+#           * run_over       - she walks out with him, and the butler's car
+#                              meets them on the forest road
+#           * shot_by_butler - she cannot face the walk, sends him alone and
+#                              keeps the butler's key, hides in the attic,
+#                              and comes down to Samuel Manning alive among
+#                              the dead and the butler's car on the gravel
+#                              (2_attic.rpy)
 # --------------------------------------------
 label host_day3_afternoon:
 
@@ -59,8 +55,21 @@ label host_day3_afternoon:
     Well.
 
     Here is where we stand.
+
+    We keep to what we agreed. Nothing is said to the three of them, and we do not go in to them.
     """
 
+    host """
+    No.
+
+    I have lied to those people for three days. They would not take the truth from me now, and I would not blame them.
+    """
+
+    """
+    It is the two of us, then.
+
+    The only question is how.
+    """
 
     if host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin'):
 
@@ -72,51 +81,7 @@ label host_day3_afternoon:
         I see nothing to keep us here.
         """
 
-        host """
-        Nothing, except the three of them.
-        """
-
-        captain """
-        Yes.
-
-        We could go in to them. Tell them what we know, and take them with us.
-
-        Or we could go now, and send help from the town.
-        """
-
-        """
-        He does not say which he would choose.
-
-        I think he has decided it is mine to make.
-
-        I look at the tea room door, and then at the front door.
-        """
-
-        if host_details.endings.is_unlocked('shot_by_butler'):
-
-            # Intuition. She has stood in that dining room before, with the
-            # butler in the doorway.
-            """
-            And then, with my hand almost on the tea room door, it comes.
-
-            A room full of the dead and the smell of cold food, and a man in the doorway with his coat open and a revolver pointed at the floor, telling me he is sorry.
-
-            I have never seen it. I know it the way I know my own lines.
-
-            If I go through that door, I shall not come out of this house alive.
-            """
-
-            $ time_left = 1
-            call run_menu(
-                TimedMenu("host_day3_afternoon_menu_car", [
-                    TimedMenuChoice("Take the car, and go now{{intuition}}", 'host_day3_afternoon_car', early_exit=True),
-                    TimedMenuChoice("We cannot leave them. Go in to the others", 'host_day3_afternoon_together', early_exit=True),
-                ], image_left="captain")
-            )
-
-        else:
-
-            jump host_day3_afternoon_together
+        jump host_day3_afternoon_car
 
     else:
 
@@ -128,96 +93,34 @@ label host_day3_afternoon:
             It is a dead weight.
             """
 
-        elif host_details.threads.is_unlocked('petrol_tin'):
-
-            captain """
-            We have a full tin of petrol and nothing to put it in.
-
-            I never got as far as the garage.
-            """
-
         else:
 
             captain """
-            We have no motor and no petrol.
+            We have no car to leave in.
             """
 
         captain """
-        So it is the road, on foot, this afternoon.
+        So we have to leave on foot.
 
-        Ten miles of it, and the whole of the afternoon to do it in.
+        It is at least ten miles, but we have the whole of the afternoon to do it.
         """
 
         """
-        I look at the front door, and I do the sum.
+        I look out of the windows.
 
-        Ten miles of mud, in these shoes, at my age.
+        The weather is uncertain. It could rain any minute now.
 
-        I have walked out of a great many houses in my life, and never one that was ten miles from anywhere.
-        """
+        The idea of walking in the rain for hours, in these shoes, fills me with dread.
 
-        host """
-        I cannot walk it, Captain.
-
-        I should not get as far as the gates before you had to carry me.
-        """
-
-        captain """
-        Then I will not go.
-        """
-
-        host """
-        You will.
-
-        One of us must reach the town, and it cannot be me.
-
-        Go now, while there is daylight, and send them up here as fast as they will come.
-        """
-
-        """
-        He does not like it.
-
-        He looks at the tea room door, and at me, and at the tea room door again, and then he takes the key out of his pocket.
-        """
-
-        captain """
-        The butler's key.
-
-        It opens every door in this house. Lock yourself in somewhere, and open to nobody but me.
-        """
-
-        """
-        I take it. It is still warm from his pocket.
-        """
-
-        captain """
-        I will be back before dark, with the police or without them.
-        """
-
-        host """
-        I know you will.
-        """
-
-        """
-        Neither of us believes it, and neither of us says so.
-
-        He goes out by the back way, so that nobody at the tea room window sees him cross the gravel, and I stand in the hall and listen to his feet on the path until I cannot hear them any more.
-        """
-
-        call change_time(12, 15)
-
-        """
-        Then it is very quiet.
-
-        Voices in the tea room, and the stair going up into the dark, and the key in my hand.
+        So does the idea of staying behind, alone in this house.
         """
 
         $ time_left = 1
         call run_menu(
-            TimedMenu("host_day3_afternoon_menu_alone", [
-                TimedMenuChoice("Go in to the others", 'host_day3_afternoon_stay', early_exit=True),
-                TimedMenuChoice("Hide in the attic, and wait", 'host_day3_afternoon_attic', early_exit=True),
-            ])
+            TimedMenu("host_day3_afternoon_menu_foot", [
+                TimedMenuChoice("Walk out with him, now", 'host_day3_afternoon_foot', early_exit=True),
+                TimedMenuChoice("Let him go alone, and hide in the attic", 'host_day3_afternoon_attic', early_exit=True),
+            ], image_left="captain")
         )
 
     return
@@ -228,18 +131,20 @@ label host_day3_afternoon:
 label host_day3_afternoon_car:
 
     host """
-    We go now.
+    We go now, and alone.
 
-    We send help from the town. It is the best we can do for them.
+    We can send help from the town.
+
+    It is too risky to trust anyone else in this house.
     """
 
     captain """
-    Agreed.
+    I agree.
+
+    So let us waste no time.
     """
 
     """
-    He does not argue, and I am grateful for that too.
-
     We go out the back way, so that nobody at the tea room window sees us cross the gravel.
     """
 
@@ -381,183 +286,92 @@ label host_day3_afternoon_car:
 
 
 # --------------------------------------------
-#   The tea room. Mr Harring and Miss Baxter get the news, with or
-#   without the Captain in the room to give it.
+#   On foot, the two of them. The butler's car meets them on the road.
 # --------------------------------------------
-label host_day3_afternoon_tea_room_talk(with_captain):
-
-    $ change_room('tea_room', dissolve)
-
-    """
-    Mr Harring is at the window, and Miss Baxter is in the chair by the dead fire.
-
-    They both turn when the door opens, and the boy's face goes through three things at once before it settles on relief.
-    """
-
-    if with_captain:
-
-        lad """
-        Captain! Lady Claythorn!
-
-        We've been over the whole house. We thought...
-        """
-
-    else:
-
-        lad """
-        Lady Claythorn!
-
-        We've been over the whole house. We thought...
-        """
-
-    psychic """
-    We thought we were the only ones left.
-
-    Where is everybody? Where are the servants?
-    """
-
-    if with_captain:
-
-        captain """
-        Gone.
-
-        The car went in the night, and the staff with it. Every one of them.
-        """
-
-        psychic surprised """
-        Gone? But why?
-        """
-
-        captain """
-        That I cannot tell you.
-        """
-
-        """
-        He does not look at me as he says it, and I am grateful.
-        """
-
-        lad """
-        And Mr Manning?
-
-        You had his key.
-        """
-
-        captain """
-        I opened his door this morning.
-
-        He is dead. Killed in his bed, some time in the night.
-        """
-
-    else:
-
-        host """
-        Gone.
-
-        The car went in the night, and the staff with it. Every one of them.
-        """
-
-        psychic surprised """
-        Gone? But why?
-        """
-
-        host """
-        I cannot tell you.
-        """
-
-        """
-        It is not even a lie. I know who. I have never known why.
-        """
-
-        lad """
-        And the Captain? Where is he?
-        """
-
-        host """
-        Gone for help. On foot, to the town, a quarter of an hour ago.
-        """
-
-        psychic """
-        On foot? Alone?
-        """
-
-        host """
-        He would not wait.
-
-        He will send help up the moment he reaches the town.
-        """
-
-        lad """
-        And Mr Manning?
-
-        The Captain had his key.
-        """
-
-        host """
-        He opened his door this morning.
-
-        Mr Manning is dead. Killed in his bed, some time in the night.
-        """
-
-    psychic surprised """
-    Oh dear God.
-    """
-
-    lad -scared """
-    Killed? You mean somebody...
-    """
-
-    if with_captain:
-
-        captain """
-        His throat was cut.
-
-        Whoever did it had a key to that door.
-        """
-
-    else:
-
-        host """
-        His throat was cut.
-
-        Whoever did it had a key to that door.
-        """
-
-    """
-    Miss Baxter sinks back into her chair, and the boy has to find his voice before he can go on.
-    """
-
-    lad """
-    What about the police, then?
-
-    Lady Claythorn, you spoke to them yesterday. They're coming today, aren't they?
-    """
-
-    """
-    Here it is.
-    """
-
-    if with_captain:
-
-        """
-        The Captain does not look at me. He is looking at the fire.
-        """
+label host_day3_afternoon_foot:
 
     host """
-    They said today, Mr Harring.
+    Then we walk.
 
-    The road was blocked. They will come as soon as it is clear.
+    Now, before I think better of it.
+    """
+
+    captain """
+    Now.
     """
 
     """
-    It comes out of my mouth as smoothly as it did on Saturday, and I hate the sound of it.
-
-    The boy nods. Miss Baxter does not.
+    We go out the back way, so that nobody at the tea room window sees us cross the gravel.
     """
 
-    psychic """
-    Then we wait for them.
+    call change_time(12, 15)
 
-    There is nothing else we can do, is there?
+    $ change_room('manor_garden', dissolve)
+
+    """
+    The gravel, the wet lawn, the drive going off into the trees.
+
+    I have walked out of a great many houses in my life, most of them with my wages unpaid.
+
+    This is the first one I have been afraid to look back at.
     """
 
-    return
+    $ change_room('forest_road', dissolve)
+
+    """
+    The road is mud from Saturday's rain, and my shoes were made for a drawing room.
+
+    The Captain sets a pace I can keep, and keeps his hand in his coat pocket, and says very little.
+
+    We go a mile, and another.
+    """
+
+    call change_time(13, 15)
+
+    call wait_screen_transition()
+
+    """
+    Then, from the trees ahead, an engine.
+    """
+
+    play sound car_driving fadein 4 loop
+
+    $ play_music('danger', 2)
+
+    """
+    A motor, coming up the road from the town.
+
+    The Captain stops, and puts up a hand, and for one moment his face is the face of a man who thinks help has come.
+    """
+
+    """
+    I know the sound of that engine.
+
+    I sat behind it on Friday, all the way from the station.
+    """
+
+    host """
+    Captain. It is his.
+    """
+
+    """
+    He understands me at once.
+
+    His hand comes out of his pocket with the revolver in it, and his other hand takes me by the arm and pulls me towards the ditch.
+
+    The car does not slow.
+
+    It comes off the crown of the road, straight for us, and there is nowhere on that road to go.
+    """
+
+    play sound gun
+
+    """
+    The Captain fires once.
+
+    It makes no difference at all.
+    """
+
+    play sound body_fall
+
+    jump host_ending_run_over

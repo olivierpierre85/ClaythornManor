@@ -1,22 +1,69 @@
 # --------------------------------------------
 #   Host - Sunday afternoon, she hides
 #
-#   The Captain has gone for the town on foot and left her the butler's
-#   key. She locks herself into the attic storage room and waits.
+#   She cannot face ten miles of that road, so the Captain goes for the
+#   town alone and leaves her the butler's key. She locks herself into the
+#   attic storage room and waits.
 #
 #   Lunch happens two floors below without her. She hears the end of it
 #   through the boards, and then nothing, for a long time.
 #
 #   She comes down at three and finds Samuel Manning alive in the dining
 #   room, everyone else dead, and then the butler's car on the gravel.
-#   She can stand this time, so it is her choice to be found at the table.
+#   She can stand, so it is her choice to be found at the table.
 #
 #   Unlocks : drunk 'faked_death' and 'lie', butler 'took_valuables'
 # --------------------------------------------
 label host_day3_afternoon_attic:
 
+    host """
+    I cannot walk it, Captain.
+
+    I should not get as far as the gates before you had to carry me.
     """
-    I have the key to every door in this house, and a house full of doors.
+
+    captain """
+    Then I go alone, and come back with help.
+    """
+
+    host """
+    You should.
+
+    I do not like it, but one of us must reach the town.
+
+    Go now, while there is daylight, and send them up here as fast as they will come.
+    """
+
+    captain """
+    The butler's key.
+
+    It opens every door in this house. Lock yourself in somewhere, and open to nobody but me.
+    """
+
+    """
+    I take it.
+    """
+
+    captain """
+    I will be back before dark, with the police.
+    """
+
+    host """
+    I hope so.
+    """
+
+    """
+    Without further ceremony, he goes out by the main door.
+
+    I stand in the hall and listen to his feet on the gravel until I cannot hear them any more.
+    """
+
+    call change_time(12, 15)
+
+    """
+    Then it is very quiet.
+
+    Voices in the tea room, and the stair going up into the dark, and the key in my hand.
 
     Lady Claythorn does not hide in attics.
 

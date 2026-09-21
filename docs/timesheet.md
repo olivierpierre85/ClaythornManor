@@ -7,8 +7,8 @@
 | **Captain**                         | Apr/May |             Apr 06 [x]              |   Apr 13 [x]   |        Apr 27 [ ]         |    May 04 [x]    | May 11 [x] | May 18 [x] |
 | **Broken**                          | Jun/Jul |             Jun 15 [x]              |   Jun 22 [x]   |        Jun 29 [x]         |    Jul 06 [x]    | Jul 13 [x] | Jul 20 [x] |
 | **Host**                            | Aug/Sep |             Aug 10 [x]              |   Aug 17 [x]   |      Aug 31 [x]*      |    Sep 07 [x]    | Sep 14 [x] | Sep 21 [ ] |
-| **Drunk**                           | Sep 26/Feb 27 |             Sep 28 [ ]              |   Oct 28 [ ]   |        Nov 28 [ ]         |    Dec 28 [ ]    | Jan 28 [ ] | Feb 28 [ ] |
-| **Butler/New psychic + META story** | Mar/Aug 27 |             Mar 28* [ ]             |   Apr 28 [ ]   |        May 28 [ ]         |    Jun 28 [ ]    | Jul 28 [ ] | Aug 28 [ ] |
+| **Drunk**                           | Sep 26/Feb 27 |             Oct  [ ]   |        Nov  [ ]         |    Dec  [ ]    | Jan [ ] | Feb [ ] | Mar [ ]|
+| **Butler/New psychic + META story** | Mar/Aug 27 |              Apr  [ ]   |        May  [ ]         |    Jun  [ ]    | Jul  [ ] | Aug  [ ] | Sep |
 
 \* vacation !
 

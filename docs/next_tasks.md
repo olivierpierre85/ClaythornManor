@@ -80,9 +80,11 @@ Broken unlocks host, host unlocks full drunk? AND BUTLER?
 
 => TODO at end check interactions with drunk and add necessary unlocks
 
-**The fun part**. You know where everything is (poison,...) 
-ANd you must have learned about **manners**.
-You'll have questions on how to behave (like butter bread, who talk to first,...) ??? 
+
+**Captain leaves alone** => not consistent with host getting ready in her room. Change that!
+
+
+
 
 ### FRiday,
 
@@ -101,10 +103,7 @@ Talk with DRUNK => UNLOCK him over his love of food => but who? the questions mu
 MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
 
 ### NEXT =>  morning map choices and endings (check previous map choice to reuse to dialogs)
-ATTIC last map choices.
-
-THEN last day
-
+host_day3_afternoon_tea_room_talk
 
 
 **WHERE to include intuition to HOST?**

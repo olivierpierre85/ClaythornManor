@@ -84,39 +84,21 @@ label host_ending_escape:
     jump ending_generic
 
 
-label host_ending_car_ambush:
+label host_ending_run_over:
 
-    $ host_details.endings.unlock('car_ambush')
-    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('car_ambush'))
-
-    call death_screen_transition
-
-    """
-    You would not leave without them, so you took them all, and the car never got past the wood.
-
-    Somebody had seen to that engine before it left the garage, and you never saw who fired.
-
-    Captain Sinha knew what you were, and he would have let you drive. In front of the others you kept to the part, and the part put you in the back seat with your hands in your lap.
-
-    Two people in a motor get through. Five do not.
-    """
-
-    jump ending_generic
-
-
-label host_ending_poisoned:
-
-    $ host_details.endings.unlock('poisoned')
-    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('poisoned'))
+    $ host_details.endings.unlock('run_over')
+    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('run_over'))
 
     call death_screen_transition
 
     """
-    Three people have died in that house since Friday, and you sat down at its table with nobody at your back and ate what was put in front of you.
+    You set out on foot, on an open road, in the middle of the day.
 
-    Captain Sinha asked you for one thing before he went. Lock yourself in.
+    You knew the sound of that engine before you saw the car, and there was nowhere to go.
 
-    You had the key to every door in the house in your pocket, and you used it on none of them.
+    A road is not a way out when the people you are running from are the only ones who use it.
+
+    There was a motor in the garage. It only wanted a little more preparation.
     """
 
     jump ending_generic
