@@ -43,7 +43,7 @@ label host_day3_afternoon_attic:
     """
 
     host """
-    I will find a place to hide and what for you.
+    I will find a place to hide and wait for you.
 
     I do not want to risk talking with anyone else until then.
     """
@@ -77,51 +77,23 @@ label host_day3_afternoon_attic:
     call change_time(12, 15)
 
     """
-    Then it is very quiet.
-
-    Voices in the tea room, and the stair going up into the dark, and the key in my hand.
-
-    Lady Claythorn does not hide in attics.
-
-    Lady Claythorn is not the one who has to get through the afternoon.
-    """
-
-    """
-    I go up the main stair with my shoes in my hand, and nobody comes out of the tea room to see me go.
-    """
-
-    $ change_room('bedrooms_hallway', dissolve)
-
-    """
-    The doors along the corridor are all shut but one.
-
-    Mr Manning's, standing open as the Captain left it.
-
-    I do not look in.
+    I go up the main stair as quietly as possible.
     """
 
     $ change_room('attic_hallway', dissolve)
-
-    if host_details.saved_variables["day3_morning_attic_visited"]:
-
-        """
-        The attic door is unlocked, the way the Captain left it this morning.
-        """
-
-    else:
-
-        """
-        The attic door, which was locked against me on Friday night.
-
-        The key turns as if it had never been anything else.
-        """
 
     play sound door_open
 
     $ change_room('attic_storage_room', dissolve)
 
     """
-    Trunks stacked three deep, furniture under dust sheets, boxes that cannot have been opened in a generation.
+    I am in the largest room of the attic.
+
+    Filled with stacked trunks, furniture under dust sheets, boxes that cannot have been opened in a generation.
+
+    It is the perfect place. 
+    
+    Even if someones comes here, I will be able to hide.
 
     I lock the door behind me, and I put the key back in my pocket, and I sit down on a trunk in the half dark.
 
