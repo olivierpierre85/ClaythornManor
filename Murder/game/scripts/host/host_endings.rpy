@@ -84,21 +84,19 @@ label host_ending_escape:
     jump ending_generic
 
 
-label host_ending_run_over:
+label host_ending_shot_on_road:
 
-    $ host_details.endings.unlock('run_over')
-    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('run_over'))
+    $ host_details.endings.unlock('shot_on_road')
+    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('shot_on_road'))
 
     call death_screen_transition
 
     """
     You set out on foot, on an open road, in the middle of the day.
 
-    You knew the sound of that engine before you saw the car, and there was nowhere to go.
+    Had you looked a little harder, you could have left better prepared, and with a motorcar.
 
-    A road is not a way out when the people you are running from are the only ones who use it.
-
-    There was a motor in the garage. It only wanted a little more preparation.
+    Perhaps things would have been different then.
     """
 
     jump ending_generic

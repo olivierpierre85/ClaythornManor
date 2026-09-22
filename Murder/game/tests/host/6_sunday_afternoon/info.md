@@ -20,7 +20,7 @@ jumps to `ending_generic`, and that shows the `test_end` screen in test mode.
 
 ```
 if car_checked and petrol_tin:
-    jump host_day3_afternoon_car            # no menu, she drives
+    jump host_day3_afternoon_car            # no menu, they leave
 else:
     if car_checked: "dead weight"           # a sound car with a dry tank
     else:           "no car to leave in"
@@ -37,7 +37,7 @@ same as nothing: the road on foot. The kitchen basket is not read.
 
 | Choice | Redirect | Ending |
 | ------ | -------- | ------ |
-| Walk out with him, now | `host_day3_afternoon_foot` | `run_over` |
+| Walk out with him, now | `host_day3_afternoon_foot` | `shot_on_road` |
 | Let him go alone, and hide in the attic | `host_day3_afternoon_attic` | `shot_by_butler` |
 
 ## The attic
@@ -50,8 +50,8 @@ Samuel Manning alive on the dining room floor, and the butler in the doorway
 all play in one run.
 
 The attic path unlocks hidden information on other characters — `faked_death`
-and `lie` on the drunk, `took_valuables` on the butler — and the car path
-unlocks `car` on the host.
+and `lie` on the drunk, `took_valuables` on the butler. The car path unlocks
+nothing.
 
 ## Threads and variables read in the chapter
 
@@ -70,7 +70,7 @@ unlocks `car` on the host.
 | Plan | Morning state | Hall | Menu | Attic door | Ending |
 | ---- | ------------- | ---- | ---- | ---------- | ------ |
 | 1 | car, petrol | the car will run | none | — | `escape` |
-| 2 | petrol, no car | no car to leave in | walk | — | `run_over` |
+| 2 | petrol, no car | no car to leave in | walk | — | `shot_on_road` |
 | 3 | nothing | no car to leave in | attic | locked since Friday | `shot_by_butler` |
 | 4 | car, no petrol | dead weight | attic | left unlocked this morning | `shot_by_butler` |
 
@@ -88,10 +88,9 @@ unlocks `car` on the host.
 | Attic door: locked against her on Friday | 3 |
 | Attic door: unlocked by the Captain in the morning | 4 |
 | Dining room: Samuel Manning alive (`_attic_manning`) | 3, 4 |
-| The butler's return (`_attic_butler`) | 3, 4 |
-| She can drive (`description_hidden` `car`) | 1 |
+| The butler's return, on foot (`_attic_butler`) | 3, 4 |
 | Ending `escape` | 1 |
-| Ending `run_over` | 2 |
+| Ending `shot_on_road` | 2 |
 | Ending `shot_by_butler` | 3, 4 |
 
 ---
@@ -99,18 +98,19 @@ unlocks `car` on the host.
 ## setup_host_sunday_afternoon_1.json
 **The car, and the only way out.** The second debug checkpoint plus `saw_car`:
 `trust_captain`, `saw_car`, `car_checked`, `petrol_tin`. The Captain says the
-car will run and the tin will fill it, and there is no menu. Out the back way,
-the shed, the garage, the engine catches on the third pull, and she takes the
-wheel because she learnt to drive for a part. The butler's car passes them a
-mile past the gates and does not turn round. The police station at half past
-one, `host_ending_escape`. No choices at all.
+car will run and the tin will fill it, and there is no menu. Out the front
+door, the shed, the garage, the engine catches on the third pull, and they are
+down the drive and into the trees. In the town she gives the Captain the slip
+rather than face the police with him, and takes the first train south at half
+past one, `host_ending_escape`. No choices at all.
 
 ## setup_host_sunday_afternoon_2.json
 **Petrol and nothing to put it in.** `trust_captain` and `petrol_tin`, the
 noon state of a morning that found the shed but never the garage. The Captain
 says they have no car to leave in, and she walks out with him rather than stay
-behind. Two miles of mud, an engine from the trees, and the car that does not
-slow. `host_ending_run_over`.
+behind. Two miles of mud, and the butler walking up the road from the town to
+meet them. The Captain fires twice and misses twice, the butler shoots him and
+then her. `host_ending_shot_on_road`.
 
 ## setup_host_sunday_afternoon_3.json
 **Nothing found, and she hides.** `trust_captain` alone, the first debug

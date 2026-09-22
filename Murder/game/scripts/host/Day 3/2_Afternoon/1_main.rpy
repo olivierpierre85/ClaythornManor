@@ -19,14 +19,15 @@
 #         the truth from her now. So it is the two of them, and the only
 #         question is how.
 #       - Car and petrol found in the morning: no menu. They go now, and
-#         she drives (escape).
+#         she slips away from him in the town (escape).
 #       - Otherwise it is the road on foot, and she chooses:
-#           * run_over       - she walks out with him, and the butler's car
-#                              meets them on the forest road
+#           * shot_on_road   - she walks out with him, and the butler, walking
+#                              back from the town, meets them on the forest road.
+#                              The Captain fires and misses, the butler does not
 #           * shot_by_butler - she cannot face the walk, sends him alone and
 #                              keeps the butler's key, hides in the attic,
 #                              and comes down to Samuel Manning alive among
-#                              the dead and the butler's car on the gravel
+#                              the dead and the butler walking up the drive
 #                              (2_attic.rpy)
 # --------------------------------------------
 label host_day3_afternoon:
@@ -208,22 +209,22 @@ label host_day3_afternoon_car:
 
 
 # --------------------------------------------
-#   On foot, the two of them. The butler's car meets them on the road.
+#   On foot, the two of them. The butler meets them on the road.
 # --------------------------------------------
 label host_day3_afternoon_foot:
 
     host """
     Then we walk.
 
-    Now, before I think better of it.
+    It will not be pleasant, but I prefer that to staying one more second in this place.
     """
 
     captain """
-    Now.
+    Very well, let us leave, then.
     """
 
     """
-    We go out the back way, so that nobody at the tea room window sees us cross the gravel.
+    We go out quietly, so that nobody at the tea room window hears us.
     """
 
     call change_time(12, 15)
@@ -231,11 +232,11 @@ label host_day3_afternoon_foot:
     $ change_room('manor_garden', dissolve)
 
     """
-    The gravel, the wet lawn, the drive going off into the trees.
+    We walk on the gravel slowly at first, so as not to attract attention.
 
-    I have walked out of a great many houses in my life, most of them with my wages unpaid.
+    Then faster as we leave the driveway.
 
-    This is the first one I have been afraid to look back at.
+    We reach the road without so much as a glance back towards the house.
     """
 
     $ change_room('forest_road', dissolve)
@@ -253,47 +254,103 @@ label host_day3_afternoon_foot:
     call wait_screen_transition()
 
     """
-    Then, from the trees ahead, an engine.
+    Then, where the road comes out of the trees ahead, a man.
     """
-
-    play sound car_driving fadein 4 loop
 
     $ play_music('danger', 2)
 
     """
-    A motor, coming up the road from the town.
+    He is on foot, coming up from the town.
 
-    The Captain stops, and puts up a hand, and for one moment his face is the face of a man who thinks help has come.
-    """
+    The Captain slows, and puts up a hand, and for one moment his face is the face of a man who thinks help has come.
 
-    """
-    I know the sound of that engine.
-
-    I sat behind it on Friday, all the way from the station.
+    But I recognise him at once.
     """
 
     host """
-    Captain. It is his.
+    Captain. It is him.
     """
 
     """
-    He understands me at once.
+    His attitude changes in an instant.
 
-    His hand comes out of his pocket with the revolver in it, and his other hand takes me by the arm and pulls me towards the ditch.
+    His hand comes out of his pocket with the revolver in it, and his other hand takes me by the arm and puts me behind him.
 
-    The car does not slow.
+    The butler does not stop, and he does not hurry.
 
-    It comes off the crown of the road, straight for us, and there is nowhere on that road to go.
+    Captain Sinha shouts at him.
+    """
+
+    captain """
+    Stop right there!
+
+    I have a weapon and will not hesitate to use it.
+    """
+
+    """
+    He stops.
+
+    Twenty yards, perhaps less. Close enough that I can see the mud on his boots, and that his own hand is in his coat.
+    """
+
+    butler """
+    My lady. Captain.
+
+    I had hoped you would have the sense to stay in the house.
+
+    It would have been simpler for everyone.
+    """
+
+    captain """
+    Take your hand out of your coat, slowly, and step off the road.
+
+    I will not ask twice.
+    """
+
+    butler """
+    No. I do not suppose you will.
+    """
+
+    host """
+    What are you doing back here?
+
+    You were supposed to leave and never come back.
+    """
+
+    """
+    He does not answer.
+
+    Instead, his hand comes quickly out of his coat.
     """
 
     play sound gun
 
     """
-    The Captain fires once.
+    The Captain fires first.
 
-    It makes no difference at all.
+    The butler steps to one side as the shot goes off.
+
+    The bark jumps off a tree a yard behind him.
     """
+
+    play sound gun
+
+    """
+    The Captain fires again.
+
+    He misses again, and this time the butler fires back.
+    """
+
+    play sound gun
 
     play sound body_fall
 
-    jump host_ending_run_over
+    """
+    The Captain goes down on the road beside me, without a word.
+
+    The butler walks the rest of the way to us, and looks down at the Captain, and then at me.
+    """
+
+    play sound gun
+
+    jump host_ending_shot_on_road

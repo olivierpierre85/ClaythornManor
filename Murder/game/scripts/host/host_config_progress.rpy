@@ -31,7 +31,7 @@ label host_config_progress:
             #   road after taking the car.
             # Rows 1-2: the two other Sunday endings hang on the col6 trunk.
             #   She drives out with the Captain (escape), or they set out on
-            #   foot and the butler's car meets them (run_over).
+            #   foot and the butler meets them on the road (shot_on_road).
             [
                 Chapter(image_checkpoint_empty_small),
                 Chapter(image_checkpoint_empty),
@@ -41,7 +41,7 @@ label host_config_progress:
                 Chapter(image_ending_question, "ending", "shot_tea_room", "sunday_morning"),
                 Chapter(image_checkpoint_empty_half),      # completes col5
                 Chapter(image_checkpoint_corner),          # col6 last branch
-                Chapter(image_ending_question, "ending", "run_over", "end"),
+                Chapter(image_ending_question, "ending", "shot_on_road", "end"),
 
             ],
             [
