@@ -56,19 +56,19 @@ label host_day3_afternoon:
 
     Here is where we stand.
 
-    We keep to what we agreed. Nothing is said to the three of them, and we do not go in to them.
+    We could still go and tell them what is happening.
     """
 
     host """
     No.
 
-    I have lied to those people for three days. They would not take the truth from me now, and I would not blame them.
+    I have lied to those people for three days. They would not trust me no matter what I say now.
+
+    Besides, I still do not trust them.
     """
 
-    """
-    It is the two of us, then.
-
-    The only question is how.
+    captain """
+    Fine, it is the two of us, then.
     """
 
     if host_details.threads.is_unlocked('car_checked') and host_details.threads.is_unlocked('petrol_tin'):
@@ -76,7 +76,7 @@ label host_day3_afternoon:
         captain """
         The car will run, and the tin in the shed will fill it.
 
-        We can be on the road in a quarter of an hour, and in the town within the hour.
+        We can be in town within the hour if we leave now.
 
         I see nothing to keep us here.
         """
@@ -96,7 +96,7 @@ label host_day3_afternoon:
         else:
 
             captain """
-            We have no car to leave in.
+            But we have no car to leave in.
             """
 
         captain """
@@ -118,8 +118,8 @@ label host_day3_afternoon:
         $ time_left = 1
         call run_menu(
             TimedMenu("host_day3_afternoon_menu_foot", [
-                TimedMenuChoice("Walk out with him, now", 'host_day3_afternoon_foot', early_exit=True),
-                TimedMenuChoice("Let him go alone, and hide in the attic", 'host_day3_afternoon_attic', early_exit=True),
+                TimedMenuChoice("Walk out with him", 'host_day3_afternoon_foot', early_exit=True),
+                TimedMenuChoice("Let him go alone", 'host_day3_afternoon_attic', early_exit=True),
             ], image_left="captain")
         )
 
@@ -131,7 +131,7 @@ label host_day3_afternoon:
 label host_day3_afternoon_car:
 
     host """
-    We go now, and alone.
+    Let us go now, then.
 
     We can send help from the town.
 
@@ -139,13 +139,11 @@ label host_day3_afternoon_car:
     """
 
     captain """
-    I agree.
-
-    So let us waste no time.
+    Very well.
     """
 
     """
-    We go out the back way, so that nobody at the tea room window sees us cross the gravel.
+    We go out the main door as quietly as possible, so that the others do not hear us.
     """
 
     call change_time(12, 15)
@@ -161,125 +159,49 @@ label host_day3_afternoon_car:
     $ change_room('garage', dissolve)
 
     """
+    We reach the garage from outside.
+
     He fills the tank and sets the choke and swings the handle.
     """
 
     play sound car_start
 
     """
-    The engine coughs twice, catches on the third pull, and settles into a rough idle.
+    The engine coughs twice, catches on the third pull, and settles into a rough purr.
 
-    The Captain looks at the wheel, and then at the revolver in his pocket, and then at me.
+    I get into the car, and we are out of the garage and onto the gravel.
     """
 
-    captain """
-    I would rather have my hands free on that road.
-
-    I do not suppose you...
-    """
-
-    host """
-    I can drive.
-    """
-
-    """
-    He does not hide his surprise, and I do not blame him.
-    """
-
-    host """
-    I learnt it for a part, years ago. A modern girl in a modern play.
-
-    The play closed inside a week. The lessons stayed.
-    """
-
-    $ host_details.description_hidden.unlock('car')
-
-    captain """
-    Then you drive, and I shall watch the road.
-    """
-
-    """
-    I take the wheel.
-
-    It is heavier than I remember, and the gears fight me on the first change.
-
-    Then we are out of the garage and onto the gravel, and the house is behind us.
-    """
+    $ change_room('manor_garden')
 
     play sound car_driving
 
-    $ change_room('forest_road', dissolve)
-
     """
-    Down the drive, through the gates, and into the trees.
+    We go down the drive, through the gates, and into the trees.
 
-    The Captain sits with his hand in his coat pocket and his eyes on the verges.
-
-    I keep my eyes on the road and my hands on the wheel, and I do not look back once.
+    Soon, the house is behind us, and I can finally feel relieved.
     """
-
-    call change_time(12, 45)
-
-    """
-    A mile past the gates the trees open out, and there is another motor on the road ahead, coming up towards us.
-    """
-
-    $ play_music('danger', 2)
-
-    """
-    I know it before I can see who is in it.
-
-    I sat in the back of that car on Friday.
-    """
-
-    host """
-    It is his.
-    """
-
-    captain """
-    Do not slow down.
-
-    Keep your head down, and do not look at him.
-    """
-
-    """
-    The road is barely wide enough for two.
-
-    I put our wheels on the grass and I hold the speed, and for one second there is nothing between us but a foot of air and his face at the window.
-
-    Then he is past.
-    """
-
-    """
-    I watch him in the mirror until the bend takes him.
-
-    He does not turn round.
-
-    I do not know whether he saw my face. I shall never know.
-
-    Whatever he has come back for, it is not us.
-    """
-
-    call wait_screen_transition()
-
-    $ stop_music()
-
-    $ change_room('police_station', dissolve)
 
     call change_time(13, 30)
 
-    $ play_music('end_credits')
+    $ change_room('train_inside_second', dissolve)
 
     """
-    The town, and the police station, and a sergeant who does not believe a word of it until the Captain gives his name and his rank.
+    Captain Sinha wanted to go straight to the police station.
 
-    They go up to the manor that afternoon.
+    He promised he would vouch for me and help me make the authorities understand that I was innocent in this whole affair.
 
-    I am not there to see what they find, and I do not ask.
+    But I did not want to take that chance.
 
-    I shall have a great deal to explain in the days to come, and I shall explain it.
+    Besides, he does not know my real name, and it is unlikely our paths will cross again.
 
-    I will do it alive.
+    So I thought of an excuse to leave him as soon as we reached the town.
+
+    Then I headed for the railway station, where I hopped on the first train going south.
+
+    I am not proud of this, but now I can finally relax and try to put this whole affair behind me.
+
+    I will probably never know exactly what happened at Claythorn Manor, but right now, I am at peace with it.
     """
 
     jump host_ending_escape

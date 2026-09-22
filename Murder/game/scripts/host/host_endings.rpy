@@ -62,21 +62,21 @@ label host_ending_escape:
 
     call survive_screen_transition
 
-    $ play_music('end_credits')
-
     $ host_details.endings.unlock('escape')
     $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('escape'))
 
     """
-    You told one man the truth, and you spent a morning preparing instead of running.
+    You made all the right decisions.
 
-    A car, a tin of petrol, and a locked door opened out of conscience.
+    You trusted the right person.
 
-    Then you left three people behind in that house, and you sent help from the town.
+    You knew where to find everything you needed to escape.
 
-    You will never know whether it arrived in time, and you will have a great deal to explain.
+    But then you left people behind.
 
-    But you are alive to explain it.
+    And you might never know what happened to them.
+
+    Not quite the right ending, is it?
     """
 
     $ is_death = False
