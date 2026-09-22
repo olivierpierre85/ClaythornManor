@@ -92,8 +92,13 @@ MAYBE add a explanation for the butler? Needed for the reason the phone is dead 
 
 **Captain leaves alone** => not consistent with host getting ready in her room. Change that!
 
-3 Possible endings for HOST
-Find a use for intuition here => right, now if you escape with butler, you learn to trust noone (they are with you) => Will make it possible to confide in Captain and move on to next day. (Weak but passable for first draft)
+finish attic ending :
+
+You see sam manning in the dining room. Every one else is dead, you assume he killed them. start to scream. But somebody arrives from behind
+
+Mr Manning? And you are alive, how fascinating.
+
+"Oh you came back, why?"
 
 
 

@@ -22,41 +22,44 @@ So does the idea of staying behind, alone in this house.
 Menu Choice: Let him go alone
 Lady Claythorn: I cannot walk it, Captain.
 Lady Claythorn: I should not get as far as the gates before you had to carry me.
-Sushil Sinha: Then I go alone, and come back with help.
+Sushil Sinha: I see.
+Sushil Sinha: I could go alone then, and come back with help.
 Lady Claythorn: You should.
 Lady Claythorn: I do not like it, but one of us must reach the town.
+Lady Claythorn: You will be much faster this way.
 Lady Claythorn: Go now, while there is daylight, and send them up here as fast as they will come.
-Sushil Sinha: The butler's key.
-Sushil Sinha: It opens every door in this house. Lock yourself in somewhere, and open to nobody but me.
+Sushil Sinha: understood, but what will you do?
+Lady Claythorn: I will find a place to hide and wait for you.
+Lady Claythorn: I do not want to risk talking with anyone else until then.
+Sushil Sinha: It is probably for the best.
+Sushil Sinha: Here, takes the butler's key then. It opens every door in this house.
+Sushil Sinha: Lock yourself in somewhere, and open to nobody but me.
 I take it.
 Sushil Sinha: I will be back before dark, with the police.
 Lady Claythorn: I hope so.
 Without further ceremony, he goes out by the main door.
 I stand in the hall and listen to his feet on the gravel until I cannot hear them any more.
-Then it is very quiet.
-Voices in the tea room, and the stair going up into the dark, and the key in my hand.
-Lady Claythorn does not hide in attics.
-Lady Claythorn is not the one who has to get through the afternoon.
-I go up the main stair with my shoes in my hand, and nobody comes out of the tea room to see me go.
-The doors along the corridor are all shut but one.
-Mr Manning's, standing open as the Captain left it.
-I do not look in.
-The attic door is unlocked, the way the Captain left it this morning.
-Trunks stacked three deep, furniture under dust sheets, boxes that cannot have been opened in a generation.
+I go up the main stair as quietly as possible.
+I am in the largest room of the attic.
+Filled with stacked trunks, furniture under dust sheets, boxes that cannot have been opened in a generation.
+It is the perfect place.
+Even if someones comes here, I will be able to find a place to hide.
 I lock the door behind me, and I put the key back in my pocket, and I sit down on a trunk in the half dark.
 Then I wait.
-A house makes its own noises when it is left alone.
-A door, below. The stair, once. The boy's voice, a long way down, calling for the Captain, and then for me.
-I sit with my hands in my lap and my shoes beside me, and I do not answer.
+For a while, the house is silent, if anything is happening downstairs, it happening quietly.
 Then, from two floors down, shouting.
 A man's voice, and a woman's over it, and then something that might have been a shot, or a door, or a chair going over.
 I cannot tell through this much house.
 I stand up. I sit down again.
 Then nothing.
+I want to go and see what happened, but I am paralyzed with fear.
+I remind myself that I should wait for Captain Sinha.
+So I remain here and try to listen to what might be happening downstairs.
 I do not know how long I have been listening to nothing.
-An hour, by the light. Perhaps more.
-Whatever happened down there, it is over, and nobody has come up the stair to tell me who won.
-I put my shoes on, and I unlock the door.
+An hour, perhaps more.
+Whatever happened down there, it is over.
+next =>
+So I gather all the courage a can muster, put my shoes on, and unlock the door.
 The corridor, with all the doors shut but one.
 The hall. Nobody.
 The tea room door stands open on an empty room and a dead fire.
@@ -124,10 +127,12 @@ Samuel Manning: I was every bit as drunk as I let you think.
 Samuel Manning: I was simply not drunk the whole time.
 Samuel Manning: It is a useful thing to be thought, my lady. People stop watching you.
 And then we both hear it.
-An engine on the drive, and tyres on the gravel, and then nothing.
-The engine stops.
-Samuel Manning: That is a motor.
-Lady Claythorn: It is his.
+Feet on the gravel, outside. One man, walking, and in no hurry.
+Samuel Manning: Somebody on the drive.
+I go to the window, and keep to the side of it, and look out.
+A man coming up from the gates on foot, with his hat down and his coat open, and mud on him to the knee.
+I do not need to see his face.
+Lady Claythorn: It is him.
 Lady Claythorn: The butler. He has come back.
 Mr Manning is on his feet faster than a man of his years has any right to be.
 Samuel Manning: Then I am going back to bed.
