@@ -39,7 +39,7 @@ label host_day3_afternoon_attic:
     """
 
     captain """
-    understood, but what will you do?
+    Understood, but what will you do?
     """
 
     host """
@@ -51,7 +51,7 @@ label host_day3_afternoon_attic:
     captain """
     It is probably for the best.
 
-    Here, takes the butler's key then. It opens every door in this house. 
+    Here, take the butler's key then. It opens every door in this house.
     
     Lock yourself in somewhere, and open to nobody but me.
     """
@@ -93,23 +93,11 @@ label host_day3_afternoon_attic:
 
     It is the perfect place. 
     
-    Even if someones comes here, I will be able to hide.
+    Even if someone comes here, I will be able to find a place to hide.
 
-    I lock the door behind me, and I put the key back in my pocket, and I sit down on a trunk in the half dark.
+    I lock the door behind me, and I put the key back in my pocket, and I sit down on a trunk in the half-dark.
 
     Then I wait.
-    """
-
-    call change_time(13, 00)
-
-    call wait_screen_transition()
-
-    """
-    A house makes its own noises when it is left alone.
-
-    A door, below. The stair, once. The boy's voice, a long way down, calling for the Captain, and then for me.
-
-    I sit with my hands in my lap and my shoes beside me, and I do not answer.
     """
 
     call change_time(14, 00)
@@ -117,6 +105,8 @@ label host_day3_afternoon_attic:
     call wait_screen_transition()
 
     """
+    For a while, the house is silent. If anything is happening downstairs, it is happening quietly.
+
     Then, from two floors down, shouting.
 
     A man's voice, and a woman's over it, and then something that might have been a shot, or a door, or a chair going over.
@@ -124,57 +114,47 @@ label host_day3_afternoon_attic:
     I cannot tell through this much house.
 
     I stand up. I sit down again.
-    """
 
-    """
     Then nothing.
+
+    I want to go and see what happened, but I am paralysed with fear.
+
+    I remind myself that I should wait for Captain Sinha.
+
+    So I remain here and try to listen to what might be happening downstairs.
     """
 
-    call change_time(15, 00)
+    call change_time(16, 00)
 
     call wait_screen_transition()
+    
+    $ change_room('attic_storage_room')
 
     """
     I do not know how long I have been listening to nothing.
 
-    An hour, by the light. Perhaps more.
+    An hour at least, probably more.
 
-    Whatever happened down there, it is over, and nobody has come up the stair to tell me who won.
-    """
+    It is dark outside now, and I begin to worry that Captain Sinha will not come back.
+    
+    I cannot stand staying here any more.
 
-    """
-    I put my shoes on, and I unlock the door.
+    So I gather all the courage I can muster, put my shoes on, and unlock the door.
+
+    I will try to peek at what is happening downstairs.
     """
 
     play sound door_open
 
-    $ change_room('bedrooms_hallway', dissolve)
-
-    """
-    The corridor, with all the doors shut but one.
-    """
-
     $ change_room('entrance_hall', dissolve)
 
     """
-    The hall. Nobody.
+    First I go to the main hall.
 
-    The tea room door stands open on an empty room and a dead fire.
+    There is nobody here.
 
-    The dining room door is open too.
+    The dining room door is open. I try to see what is in it.
     """
-
-    call host_day3_afternoon_attic_manning
-
-    call host_day3_afternoon_attic_butler
-
-    jump host_ending_shot_by_butler
-
-
-# --------------------------------------------
-#   The dining room. Samuel Manning.
-# --------------------------------------------
-label host_day3_afternoon_attic_manning:
 
     $ change_room('dining_room', dissolve)
 
@@ -185,16 +165,10 @@ label host_day3_afternoon_attic_manning:
 
     The first thing I see is a man sitting on the floor with his back to the sideboard and his collar open, looking at me.
 
-    The second thing is who he is.
-    """
-
-    """
     Samuel Manning.
 
-    Samuel Manning, whose throat I saw cut this morning.
-    """
+    With the blood on his throat still visible.
 
-    """
     I do not scream. I have no breath to do it with.
 
     I have my hand on the door frame and I cannot feel it.
@@ -202,8 +176,6 @@ label host_day3_afternoon_attic_manning:
 
     drunk """
     Do not scream.
-
-    For God's sake. I have heard enough of it for one day.
     """
 
     """
@@ -212,39 +184,24 @@ label host_day3_afternoon_attic_manning:
 
     drunk """
     I am not going to hurt you.
-
-    Look at me. Look.
-
-    I am not one of them.
     """
 
     host """
+    But...
+    
     You were dead.
 
     I saw you. Your throat...
     """
 
     drunk """
-    Port.
+    It is not real.
 
-    A decent one, from the billiard room. And a razor, for the edge of it. Not deep. It did not need to be.
+    It is just port wine.
     """
 
-    """
-    He pulls his collar down.
+    # Next =>
 
-    Under it, a line of scab from one side of his neck to the other, shallow as a cat's scratch and black with dried wine.
-    """
-
-    drunk """
-    Nobody checks a cut throat, my lady.
-
-    That was the whole of my case.
-    """
-
-    """
-    And then, because I have not looked anywhere else yet, I look.
-    """
 
     """
     Miss Marsh is on her side by her chair, with her eyes open.
@@ -362,14 +319,6 @@ label host_day3_afternoon_attic_manning:
 
     $ drunk_details.description_hidden.unlock('lie')
 
-    return
-
-
-# --------------------------------------------
-#   The butler comes back
-# --------------------------------------------
-label host_day3_afternoon_attic_butler:
-
     """
     And then we both hear it.
 
@@ -431,7 +380,7 @@ label host_day3_afternoon_attic_butler:
     """
     He looks at me for one second longer, and then he goes, quickly and quietly, by the service door.
 
-    He does not look back. I did not want him to.
+    He does not look back. I do not want him to.
     """
 
     play sound door_open
@@ -588,4 +537,4 @@ label host_day3_afternoon_attic_butler:
 
     play sound gun
 
-    return
+    jump host_ending_shot_by_butler
