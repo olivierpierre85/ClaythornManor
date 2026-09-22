@@ -1,0 +1,15 @@
+{
+    "start_label": "host_day3_afternoon",
+    "unlocked_threads": [
+        "trust_captain",
+        "petrol_tin"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day3_afternoon_menu_foot",
+            "selected": "Walk out with him, now",
+            "redirect": "host_day3_afternoon_foot"
+        }
+    ]
+}

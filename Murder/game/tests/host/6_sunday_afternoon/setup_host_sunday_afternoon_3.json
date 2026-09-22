@@ -1,0 +1,14 @@
+{
+    "start_label": "host_day3_afternoon",
+    "unlocked_threads": [
+        "trust_captain"
+    ],
+    "saved_variables": {},
+    "choices": [
+        {
+            "menu": "host_day3_afternoon_menu_foot",
+            "selected": "Let him go alone, and hide in the attic",
+            "redirect": "host_day3_afternoon_attic"
+        }
+    ]
+}
