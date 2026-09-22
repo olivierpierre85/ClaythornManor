@@ -9,7 +9,7 @@
 #   through the boards, and then nothing, for a long time.
 #
 #   She comes down at three and finds Samuel Manning alive in the dining
-#   room, everyone else dead, and then the butler's car on the gravel.
+#   room, everyone else dead, and then the butler walking up the drive.
 #   She can stand, so it is her choice to be found at the table.
 #
 #   Unlocks : drunk 'faked_death' and 'lie', butler 'took_valuables'
@@ -23,7 +23,9 @@ label host_day3_afternoon_attic:
     """
 
     captain """
-    Then I go alone, and come back with help.
+    I see.
+
+    I could go alone then, and come back with help.
     """
 
     host """
@@ -31,13 +33,27 @@ label host_day3_afternoon_attic:
 
     I do not like it, but one of us must reach the town.
 
+    You will be much faster this way.
+
     Go now, while there is daylight, and send them up here as fast as they will come.
     """
 
     captain """
-    The butler's key.
+    understood, but what will you do?
+    """
 
-    It opens every door in this house. Lock yourself in somewhere, and open to nobody but me.
+    host """
+    I will find a place to hide and what for you.
+
+    I do not want to risk talking with anyone else until then.
+    """
+
+    captain """
+    It is probably for the best.
+
+    Here, takes the butler's key then. It opens every door in this house. 
+    
+    Lock yourself in somewhere, and open to nobody but me.
     """
 
     """
@@ -384,26 +400,26 @@ label host_day3_afternoon_attic_butler:
 
     """
     And then we both hear it.
+
+    Feet on the gravel, outside. One man, walking, and in no hurry.
     """
-
-    play sound car_driving fadein 3
-
-    """
-    An engine on the drive, and tyres on the gravel, and then nothing.
-
-    The engine stops.
-    """
-
-    stop sound
 
     $ play_music('danger', 2)
 
     drunk """
-    That is a motor.
+    Somebody on the drive.
+    """
+
+    """
+    I go to the window, and keep to the side of it, and look out.
+
+    A man coming up from the gates on foot, with his hat down and his coat open, and mud on him to the knee.
+
+    I do not need to see his face.
     """
 
     host """
-    It is his.
+    It is him.
 
     The butler. He has come back.
     """
