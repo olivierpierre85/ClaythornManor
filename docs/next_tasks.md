@@ -7,8 +7,6 @@ art? Wait for a faster 9b KV?
 
 art => Only one outside manor image? no front or back ?
 
-
-
 ## NOT ENOUGH DEATHS ????
 I wanted a ANd there were none, but in the end, only two deaths happen on the first day.
 
@@ -20,8 +18,6 @@ The butler DID ( he saw an opportunity to make a lot of money?), just create fig
 Thomas moody (former lover ) and Lad (son)
 
 - Ted Harring => Red Herring (What to do with that?)
-
-
 
 
 # MAIN CHANGE
@@ -37,8 +33,6 @@ Put an interrogation point at first
 - Add the name once you discoverd it (Doctors?).
 - Add the picture when you find it (Thomas moody wallet + revelation from????)
 - Once you have everything unlocked Add a new start point => Introduction
-
-RED HARRING (is ted harring) WTF how did I not see that?
 
 LORD, add the lord the characters once the psychic discover him, but with weird things!!!!!!
  
@@ -74,26 +68,18 @@ OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mist
 
 ### Write Story:
 ## HOST
-If there are not enough deaths, add one after the hunt, at the telephone
-
 Broken unlocks host, host unlocks full drunk? AND BUTLER?
 
 => TODO at end check interactions with drunk and add necessary unlocks
 
-
-**Captain leaves alone** => not consistent with host getting ready in her room. Change that!
-
-
-
-
-### FRiday,
+### FRiday
 
 Before dinner
 => First task hide letters behing the sheets for CAPTAIN and thomas moody. NO it is the butler who placed them?????
 
 Library => Add joke for the butler. "I do not think any of the guest will want to read, some might not even be able to"
 
-### FRiday, dinner
+
 add another thread from Thomas Moody interrogation ?
 
 Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
@@ -102,24 +88,13 @@ Talk with DRUNK => UNLOCK him over his love of food => but who? the questions mu
 
 MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
 
-### NEXT =>  
+### sunday NEXT =>  
+
+**Captain leaves alone** => not consistent with host getting ready in her room. Change that!
 
 3 Possible endings for HOST
 Find a use for intuition here => right, now if you escape with butler, you learn to trust noone (they are with you) => Will make it possible to confide in Captain and move on to next day. (Weak but passable for first draft)
 
-
-**WHERE to include intuition to HOST?**
- When leaving by car, you get an intuition to stay?
- Or when seeing 
-
-Now it is noon, you have the choice to:
-- Leave by car if you have everything => Escape
-- Leave by foot otherwise => death
-- Stay and talk to the others (you avoided TEd harring and Amelia Baxter while exploring (at the end)) => Leads to lunch with an imbruglio (different chairs or nurse plate switching again?) => you end up dead, but actually wake up in the dining room. And see Samuel Manning. He wakes you up, you freak out, everyone else around you is dead. He claims he doesn't know why. And tells his story => Pretended to be dead to escape safely. Then the butler comes back, speech then kills you. Samuel Manning is unlock => ready for the last CHARACTER
-
-# Unlocks ted HARRING
-## Unlocks backstory (new start point for TED harring, at his birth), with ending credis rolling.
-## OR Full rerun where everyone lives (TOO complicated)
 
 
 ## Assets & artistic Tasks

@@ -20,6 +20,7 @@
 - [ ] `lad_generic_menu`: no mention of the weather? Add one, or a reason why not.
 - [ ] Forest images for the hunt do not change for lunch — fix.
 - [ ] REthing the logic of psychic meeting him in between map choices. It becomes to confusing when playing psychic. see psychic too
+- [ ] RED HARRING (is ted harring) WTF how did I not see that?
 
 ### Ideas to think over (optional)
 - [ ] Is the complicated way of meeting the captain on Day 3 necessary? Overcomplicated for no reason? Maybe just meet him once the time has passed (but then we need a way to skip time).
