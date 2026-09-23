@@ -84,30 +84,6 @@ add another thread from Thomas Moody interrogation ?
 
 Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
 
-## SAturday
-
-MAYBE add a explanation for the butler? Needed for the reason the phone is dead .Could have been said earlie
-
-### sunday NEXT =>  
-
-**Captain leaves alone** => not consistent with host getting ready in her room. Change that!
-
-finish attic ending :
-
-LAD dead by accident
-Nurse will wake up
-Psychic kills herself when she realises nurse has awaken and lad is dead. 
-Before she also kills nurse.
-
-SO the main storyline scene is : 
-Lad poisoned, Nurse and psychic shot. You do not understand
-
-THen the drunk comes in, so she starts accusing him.
-
-she regret not asking for a gun but then found the gun on the floor between nurse and psychic, grabs it.
-
-And menace him. He starts talking about him and you unlock him (TODO later find how)
-
 
 
 ## Assets & artistic Tasks

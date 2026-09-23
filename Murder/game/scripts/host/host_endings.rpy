@@ -110,17 +110,17 @@ label host_ending_burned:
     call death_screen_transition
 
     """
-    You hid, and it worked, for the better part of four hours.
+    You hid, and it worked, for a while.
 
-    Then the silence got the better of you, and you came down to see why.
+    Then the silence became too much for you, and you came down to see why.
 
-    You found a gun, and you would not believe the one man left who could have told you what happened.
+    Curiosity got the better of you.
 
-    And when the smoke came, there was nobody left to open a door for you.
+    But do not blame yourself.
 
-    Captain Sinha walked out of that house at a quarter past twelve, and there was no motor to go with him in.
+    Perhaps there was no way out.
 
-    There is one in the garage. Look harder for what it wants.
+    Maybe it was always supposed to end like this.
     """
 
     jump ending_generic

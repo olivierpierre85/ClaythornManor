@@ -272,35 +272,19 @@ label host_day3_afternoon_attic:
     """
 
     drunk """
-    As you wish.
-
-    Do you know how to use that thing, my lady?
-    """
-
-    host """
-    I have fired one before.
-
-    On the stage, with blanks.
-
-    But I expect it works the same way.
-    """
-
-    drunk """
-    I expect it does.
-
-    Then allow me to explain myself, before you find out.
+    Please, allow me to explain myself.
     """
 
     host """
     Go on.
 
-    Your throat. I saw it.
+    You were dead, with your throat cut.
     """
 
     drunk """
-    What you saw was port wine.
+    What you saw was an act.
 
-    A whole bottle of it, and not a very good one.
+    I staged it with port wine.
     """
 
     host """
@@ -310,25 +294,23 @@ label host_day3_afternoon_attic:
     drunk """
     Because I was going to be next.
 
-    I worked that out on Saturday, in my room, with the door locked on me and a tray coming up the back stair.
+    I worked that out yesterday, in my room, with the door locked on me and a tray coming up the back stair.
 
-    Two men dead in two days, and both of them accidents, and the whole house nodding along.
+    I might have killed Doctor Baldwin, but someone drove me to it.
 
-    I have stood up in court for twenty years and watched juries nod like that.
+    And it dawned on me that nobody would organise such an elaborate scheme just to kill one man.
 
-    It is what people do when they have decided not to see something.
+    No, we were probably all going to be killed in the end.
 
-    A locked door is nothing to whoever has been walking this house at night.
+    I realised that too late.
 
-    I could not get out, and I could not fight. I am not built for either.
+    I could not escape, so I reasoned that if it looked as though I had killed myself, the real killer might leave me alone.
 
-    But I could be no longer worth the trouble.
+    When the Captain found me, he cannot have looked very closely.
 
-    So I took the bottle I had put by, and I made a mess of the bed, and I lay down in it and waited for somebody to open the door and decide I was finished.
+    And that was that.
 
-    It was the Captain who did, and I heard him tell you not to come closer.
-
-    I could have kissed him.
+    From then on, I was free to explore on my own.
     """
 
     $ drunk_details.description_hidden.unlock('faked_death')
@@ -342,31 +324,17 @@ label host_day3_afternoon_attic:
     """
 
     host """
-    You were never as drunk as you let us think.
+    No, that makes no sense.
+
+    There are only the two of us left in this house.
+
+    And I know I am not the killer.
+
+    So it must be you.
     """
 
     drunk """
-    I was every bit as drunk as I let you think.
-
-    I was simply not drunk the whole time.
-
-    It is a useful thing to be thought, my lady. People stop watching you.
-    """
-
-    $ drunk_details.description_hidden.unlock('lie')
-
-    # TODO: unlock the drunk here (find how)
-
-    host """
-    And them?
-
-    If it was not you, who did this?
-    """
-
-    drunk """
-    I was behind that door when it happened.
-
-    I saw all of it.
+    I swear I had nothing to do with these deaths.
 
     Put that down, my lady, and I will tell you everything.
     """
@@ -386,13 +354,7 @@ label host_day3_afternoon_attic:
     """
 
     """
-    He keeps coming, slowly, round the end of the table, with one hand held out.
-
-    I do not believe a word of it.
-
-    A man who can play dead for a whole day, and play the drunk for years, can play anything he likes.
-
-    And he is getting too close.
+    He keeps coming towards me, slowly, with one hand held out.
     """
 
     host """
@@ -428,15 +390,15 @@ label host_day3_afternoon_attic:
 
     Mr Moody and Doctor Baldwin before them.
 
-    Everyone who came to this house for the weekend is dead.
+    Almost everyone who came to this house for the weekend is dead.
 
-    Everyone except me.
+    And they will blame me for it.
 
-    And Captain Sinha, somewhere on the road.
+    I cannot afford to talk to the police now.
 
-    All I can do now is wait for him to come back with the police.
+    They will never believe me.
 
-    And explain to them why I am standing among the dead with a gun in my hand.
+    I need to leave as fast as I can, before Captain Sinha comes back with them.
     """
 
     play sound fire loop
@@ -478,11 +440,7 @@ label host_day3_afternoon_attic:
     """
     Nobody answers.
 
-    I turn to the service door.
-
-    Smoke is pouring out of the passage behind it, thick and grey, and I can hear the fire roaring up the back stair.
-
-    The windows, then.
+    I turn to the windows.
 
     I cross the room and pull at the catch of the nearest one.
 
@@ -499,20 +457,22 @@ label host_day3_afternoon_attic:
     The smoke is in my throat now.
 
     I strike the glass with the butt of the revolver.
+    """
 
-    A pane breaks, but the frame holds, and the gap is no bigger than my hand.
+    play sound broken_glass
+
+    """
+    It breaks, but there is a steel frame behind it.
+
+    There is not enough room for me to get through.
 
     I try to lift a chair to break the whole frame, but I have no strength left.
-
-    I sink to my knees under the window, where the air is still a little clearer.
 
     The room is filling with smoke, and there is a red glow under the door now.
 
     I think of Captain Sinha, coming back up the drive with the police.
 
     I hope he gets here in time.
-
-    I know he will not.
     """
 
     jump host_ending_burned
