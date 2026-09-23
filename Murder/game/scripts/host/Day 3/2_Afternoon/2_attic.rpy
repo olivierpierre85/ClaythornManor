@@ -108,13 +108,17 @@ label host_day3_afternoon_attic:
     """
     For a while, the house is silent. If anything is happening downstairs, it is happening quietly.
 
-    Then, from two floors down, shouting.
+    Then, from two floors down, a scream.
 
-    A man's voice, and a woman's over it, and then something that might have been a shot, or a door, or a chair going over.
-
-    I cannot tell through this much house.
+    A woman's voice, and then nothing.
 
     I stand up. I sit down again.
+
+    A long time passes. Nearly an hour, perhaps.
+
+    Then a shot.
+
+    And, a moment later, another.
 
     Then nothing.
 
@@ -140,7 +144,7 @@ label host_day3_afternoon_attic:
     
     I cannot stand staying here any more.
 
-    So I gather all the courage I can muster, put my shoes on, and unlock the door.
+    So I gather all the courage I can muster, and unlock the door.
 
     I will try to peek at what is happening downstairs.
     """
@@ -164,125 +168,156 @@ label host_day3_afternoon_attic:
     """
     I stop in the doorway.
 
-    The first thing I see is a man sitting on the floor with his back to the sideboard and his collar open, looking at me.
+    Mr Harring is lying on the floor beside his chair.
 
-    Samuel Manning.
+    There is not a mark on him.
 
-    With the blood on his throat still visible.
+    But his jaw is clenched and his hands are drawn up tight, as though he died in great pain.
 
-    I do not scream. I have no breath to do it with.
+    Miss Baxter lies next to him, with one arm across his chest.
 
-    I have my hand on the door frame and I cannot feel it.
-    """
+    There is blood in her hair, and a dark pool of it on the carpet under her head.
 
-    drunk """
-    Do not scream.
-    """
+    A few feet away, Miss Marsh is still in her chair, slumped forward over her plate, as though she had fallen asleep at the table.
 
-    """
-    He does not get up. He does not come towards me.
-    """
-
-    drunk """
-    I am not going to hurt you.
+    There is a red stain spreading across the tablecloth under her.
     """
 
     host """
-    But...
-    
+    Good God...
+    """
+
+    """
+    I do not scream. I have no breath to do it with.
+
+    I hold on to the door frame and try to make sense of what I see.
+
+    The two women have been shot. That much is clear.
+
+    But Mr Harring has no wound at all.
+
+    And why would Miss Baxter be lying beside him like that, as if she had been holding him?
+
+    I do not understand any of it.
+    """
+
+    play sound door_open
+
+    """
+    On the other side of the table, the service door opens.
+    """
+
+    $ play_music('danger', 2)
+
+    """
+    A man steps into the room.
+
+    Samuel Manning.
+
+    His collar is open, and the front of his shirt is stiff with dried blood.
+
+    The same blood I saw on his throat this morning, when Captain Sinha found him in his bed.
+    """
+
+    host """
+    No...
+
     You were dead.
 
     I saw you. Your throat...
     """
 
     drunk """
-    It is not real.
+    My lady, please.
 
-    It is just port wine.
-    """
-
-    # Next =>
-
-
-    """
-    Miss Marsh is on her side by her chair, with her eyes open.
-
-    Mr Harring is by the window, half under the curtain, as though he had tried to get behind it.
-
-    And Miss Baxter lies across the far end of the table with her hair in the plates.
+    Do not scream.
     """
 
     host """
-    Are they...
+    It was you.
+
+    You pretended to be dead, and then you came down here and killed them all.
     """
 
     drunk """
-    All of them.
+    No.
 
-    I have looked. I did not want to.
+    I have not killed anybody. Listen to me...
+    """
+
+    """
+    He takes a step towards me.
+
+    I take a step back.
+
+    I should have asked Captain Sinha for a gun before he left.
+
+    Then I see it.
+
+    On the carpet, between Miss Marsh and Miss Baxter, there is a revolver.
+
+    I do not think. I bend down and take it.
+
+    It is heavier than I expected.
+
+    I point it at him with both hands.
     """
 
     host """
-    What happened?
+    Stay where you are.
+    """
 
-    What happened here?
+    """
+    He stops, and slowly raises his hands.
     """
 
     drunk """
-    I do not know.
+    As you wish.
 
-    I was upstairs, in my bed, being dead.
-
-    There was shouting. The boy, and a woman screaming over him, I could not say which.
-
-    Then a shot. Two, perhaps. I did not count.
-
-    Then nothing, for a very long time.
-
-    I waited an hour after the nothing before I came down.
+    Do you know how to use that thing, my lady?
     """
 
     host """
-    So did I.
-    """
+    I have fired one before.
 
-    """
-    He looks at me, and then at the ceiling, and something that is nearly a laugh goes through him and does not come out.
+    On the stage, with blanks.
+
+    But I expect it works the same way.
     """
 
     drunk """
-    Two of us, then.
+    I expect it does.
 
-    Sitting in the dark at either end of the house, waiting for the other one to go first.
-    """
-
-    """
-    He looks at his hands.
+    Then allow me to explain myself, before you find out.
     """
 
     host """
-    Why?
+    Go on.
 
+    Your throat. I saw it.
+    """
+
+    drunk """
+    What you saw was port wine.
+
+    A whole bottle of it, and not a very good one.
+    """
+
+    host """
     Why would you do such a thing?
     """
 
     drunk """
     Because I was going to be next.
 
-    I worked that out on Saturday, in that room, with the door locked on me and a tray coming up the back stair.
+    I worked that out on Saturday, in my room, with the door locked on me and a tray coming up the back stair.
 
     Two men dead in two days, and both of them accidents, and the whole house nodding along.
 
     I have stood up in court for twenty years and watched juries nod like that.
 
     It is what people do when they have decided not to see something.
-    """
 
-    host """
-    But to cut yourself...
-    """
-
-    drunk """
     A locked door is nothing to whoever has been walking this house at night.
 
     I could not get out, and I could not fight. I am not built for either.
@@ -299,9 +334,9 @@ label host_day3_afternoon_attic:
     $ drunk_details.description_hidden.unlock('faked_death')
 
     """
-    I look at him.
+    I look at him, over the barrel of the revolver.
 
-    Samuel Manning, who could not find his own chair at dinner on Friday, sitting on the floor of this dining room stone cold sober and telling me how he outlived the whole house.
+    Samuel Manning, who could not find his own chair at dinner on Friday, standing in this dining room stone cold sober and telling me how he outlived the whole house.
 
     I do not know whether to laugh or to be sick.
     """
@@ -320,222 +355,164 @@ label host_day3_afternoon_attic:
 
     $ drunk_details.description_hidden.unlock('lie')
 
-    """
-    And then we both hear it.
+    # TODO: unlock the drunk here (find how)
 
-    Feet on the gravel, outside. One man, walking, and in no hurry.
+    host """
+    And them?
+
+    If it was not you, who did this?
+    """
+
+    drunk """
+    I was behind that door when it happened.
+
+    I saw all of it.
+
+    Put that down, my lady, and I will tell you everything.
+    """
+
+    """
+    He lowers his hands, and takes a step towards me.
+    """
+
+    host """
+    Stay where you are.
+    """
+
+    drunk """
+    I only want to talk.
+
+    You are shaking. Give me the gun, before somebody else gets hurt.
+    """
+
+    """
+    He keeps coming, slowly, round the end of the table, with one hand held out.
+
+    I do not believe a word of it.
+
+    A man who can play dead for a whole day, and play the drunk for years, can play anything he likes.
+
+    And he is getting too close.
+    """
+
+    host """
+    I said stay where you are!
+    """
+
+    $ stop_music()
+
+    play sound gun
+
+    """
+    The noise fills the room.
+
+    Mr Manning stops.
+
+    He looks down at his shirt, where a new stain is spreading over the old one.
+
+    This time, it is not port.
+
+    He sits down heavily against the sideboard, and then he slides onto his side.
+    """
+
+    play sound body_fall
+
+    pause 1.0
+
+    """
+    I lower the revolver.
+
+    My hands will not stop shaking.
+
+    Mr Harring. Miss Baxter. Miss Marsh. And now Mr Manning.
+
+    Mr Moody and Doctor Baldwin before them.
+
+    Everyone who came to this house for the weekend is dead.
+
+    Everyone except me.
+
+    And Captain Sinha, somewhere on the road.
+
+    All I can do now is wait for him to come back with the police.
+
+    And explain to them why I am standing among the dead with a gun in my hand.
+    """
+
+    play sound fire loop
+
+    """
+    That is when I smell it.
+
+    Smoke.
+
+    It is coming from under the door to the hall.
+
+    The door is shut. I do not remember shutting it.
     """
 
     $ play_music('danger', 2)
 
-    drunk """
-    Somebody on the drive.
     """
+    I run to it and take hold of the handle.
 
-    """
-    I go to the window, and keep to the side of it, and look out.
+    It is warm.
 
-    A man coming up from the gates on foot, with his hat down and his coat open, and mud on him to the knee.
+    It turns, but the door does not open.
 
-    I do not need to see his face.
-    """
+    I take out the butler's key and push it into the lock with shaking fingers.
 
-    host """
-    It is him.
+    The lock turns.
 
-    The butler. He has come back.
-    """
+    The door still does not move.
 
-    """
-    Mr Manning is on his feet faster than a man of his years has any right to be.
-    """
-
-    drunk """
-    Then I am going back to bed.
-
-    It has served me well for a day. It can serve me a while longer.
-
-    Come. It is a wide bed, and he will not look under it twice.
-    """
-
-    """
-    I look at the service door, and I look at the three of them, and I do the sum.
+    Something is holding it shut from the other side.
     """
 
     host """
-    No.
-    """
+    Help!
 
-    drunk """
-    My lady...
-    """
-
-    host """
-    He has come back for the silver and the pearls, and for me.
-
-    If he finds this room with nobody alive in it, he will go through the house until he finds me, and he will find you.
-
-    If I am here, he has no reason to look.
+    Is anybody there?
     """
 
     """
-    He looks at me for one second longer, and then he goes, quickly and quietly, by the service door.
+    Nobody answers.
 
-    He does not look back. I do not want him to.
+    I turn to the service door.
+
+    Smoke is pouring out of the passage behind it, thick and grey, and I can hear the fire roaring up the back stair.
+
+    The windows, then.
+
+    I cross the room and pull at the catch of the nearest one.
+
+    It will not move.
+
+    I try the next one, and the one after that.
+
+    They are all shut fast.
     """
 
-    play sound door_open
+    play sound woman_cough
 
     """
-    The front door.
+    The smoke is in my throat now.
 
-    Footsteps in the hall, unhurried, the way they always were.
+    I strike the glass with the butt of the revolver.
 
-    He was the best butler I ever saw, and he was never a butler at all.
+    A pane breaks, but the frame holds, and the gap is no bigger than my hand.
+
+    I try to lift a chair to break the whole frame, but I have no strength left.
+
+    I sink to my knees under the window, where the air is still a little clearer.
+
+    The room is filling with smoke, and there is a red glow under the door now.
+
+    I think of Captain Sinha, coming back up the drive with the police.
+
+    I hope he gets here in time.
+
+    I know he will not.
     """
 
-    """
-    I sit down in my own chair at the head of the table.
-
-    If I am going to be found, I am going to be found there.
-    """
-
-    """
-    He stops in the dining room doorway, and he looks round the room the way he looked round the tea room on Saturday night.
-
-    All of it, in one glance. The three of them, and me.
-
-    He is out of livery. He looks like what he is.
-    """
-
-    butler """
-    Well.
-
-    Still with us, my lady.
-    """
-
-    host """
-    You came back.
-    """
-
-    butler """
-    I was owed a great deal of money for this weekend, and I have seen nothing of it since the advance.
-
-    I do not think our patron will be paying now.
-
-    So I have come to pay myself, with what the house has to offer.
-    """
-
-    host """
-    The silver.
-
-    The pearls.
-    """
-
-    butler """
-    It is not what I was promised.
-
-    It is what there is.
-    """
-
-    $ butler_details.description_hidden.unlock('took_valuables')
-
-    host """
-    And them?
-    """
-
-    """
-    I do not look at the floor. He does.
-    """
-
-    butler """
-    None of my doing.
-
-    I have been on the road since eleven last night, and I have the mud to prove it.
-
-    They did this to each other, or somebody did it for them. I was not here.
-    """
-
-    host """
-    Then who?
-
-    You said nobody was supposed to be hurt.
-    """
-
-    butler """
-    Nobody was.
-
-    I did not think it would end like this. I am not sure I was meant to think at all.
-    """
-
-    """
-    He takes his hand out of his coat, and the revolver is in it, and it is pointed at the floor.
-
-    For now.
-    """
-
-    butler """
-    You told the Captain.
-
-    I saw his face last night, on the gravel. He knew what I was, and there is only one way he could have known it.
-
-    I met him on the road, a mile past the gates. He will not be sending anybody.
-    """
-
-    """
-    I knew it when he went. It is different, hearing it.
-    """
-
-    butler """
-    Who else?
-    """
-
-    host """
-    Nobody.
-    """
-
-    butler """
-    I should like to believe that.
-
-    It is not enough.
-    """
-
-    host """
-    Manning...
-    """
-
-    """
-    It is out before I can stop it.
-
-    His eyes go to the ceiling for a moment, and come back.
-    """
-
-    butler """
-    Mr Manning is upstairs with his throat cut, where the Captain found him.
-
-    You are not going to confuse me at this hour of the day, my lady.
-    """
-
-    """
-    I do not correct him.
-
-    It is the last thing I have to give anybody, and I give it to Samuel Manning.
-    """
-
-    butler """
-    You know my face. You know my name.
-
-    You are the only one left in this house who does.
-    """
-
-    host """
-    You said nobody was supposed to get hurt.
-    """
-
-    butler """
-    I am sorry.
-    """
-
-    play sound gun
-
-    jump host_ending_shot_by_butler
+    jump host_ending_burned

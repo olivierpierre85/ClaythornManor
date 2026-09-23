@@ -10,8 +10,8 @@ label host_config_progress:
                 Chapter(image_checkpoint_right, "checkpoint", "host_day3_morning", "sunday_morning"),
                 Chapter(image_checkpoint_right, "checkpoint", "host_day3_afternoon", "sunday_afternoon"),
                 # She sends the Captain for the town alone, hides in the attic,
-                # and the butler comes back for the silver
-                Chapter(image_ending_question, "ending", "shot_by_butler", "end"),
+                # shoots Samuel Manning, and is trapped in the burning dining room
+                Chapter(image_ending_question, "ending", "burned", "end"),
             ],
             # Row 1: the col4 trunk drops one row before its first branch (a
             #   corner right under the checkpoint clashes with its image)

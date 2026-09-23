@@ -169,9 +169,9 @@ label init_host:
                 "You set out on foot with Captain Sinha, and the butler met you on the forest road, walking back from the town",
                 image_file="hunting_rifle_road",
                 chapters=['sunday_afternoon']),
-            CharacterInformation(6, "shot_by_butler",
-                "The butler came back for what he had left behind, and found you sitting among the dead in the dining room",
-                image_file="butler",
+            CharacterInformation(6, "burned",
+                "You shot Samuel Manning in the dining room, and burnt with the house behind a door that would not open",
+                image_file="manor_burns",
                 chapters=['sunday_afternoon']),
         ])
 

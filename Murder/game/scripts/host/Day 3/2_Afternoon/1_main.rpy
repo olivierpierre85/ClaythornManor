@@ -24,11 +24,12 @@
 #           * shot_on_road   - she walks out with him, and the butler, walking
 #                              back from the town, meets them on the forest road.
 #                              The Captain fires and misses, the butler does not
-#           * shot_by_butler - she cannot face the walk, sends him alone and
+#           * burned         - she cannot face the walk, sends him alone and
 #                              keeps the butler's key, hides in the attic,
-#                              and comes down to Samuel Manning alive among
-#                              the dead and the butler walking up the drive
-#                              (2_attic.rpy)
+#                              and comes down to Harring poisoned and the two
+#                              women shot. She does not believe Samuel Manning,
+#                              shoots him, and is trapped in the dining room
+#                              when the house burns (2_attic.rpy)
 # --------------------------------------------
 label host_day3_afternoon:
 

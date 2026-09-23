@@ -102,19 +102,21 @@ label host_ending_shot_on_road:
     jump ending_generic
 
 
-label host_ending_shot_by_butler:
+label host_ending_burned:
 
-    $ host_details.endings.unlock('shot_by_butler')
-    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('shot_by_butler'))
+    $ host_details.endings.unlock('burned')
+    $ host_details.add_ending_checkpoint(ending=host_details.endings.get_item('burned'))
 
     call death_screen_transition
 
     """
-    You hid, and it worked, for the better part of three hours.
+    You hid, and it worked, for the better part of four hours.
 
-    Then the house went quiet, and you came down to see why, and you were sitting at your own table when the car came up the drive.
+    Then the silence got the better of you, and you came down to see why.
 
-    He came back for what he was owed, and you were the one person left in that house who could put a name to him.
+    You found a gun, and you would not believe the one man left who could have told you what happened.
+
+    And when the smoke came, there was nobody left to open a door for you.
 
     Captain Sinha walked out of that house at a quarter past twelve, and there was no motor to go with him in.
 
