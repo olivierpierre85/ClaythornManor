@@ -20,182 +20,171 @@ The weather is uncertain. It could rain any minute now.
 The idea of walking in the rain for hours, in these shoes, fills me with dread.
 So does the idea of staying behind, alone in this house.
 Menu Choice: Let him go alone
-Lady Claythorn: I cannot walk it, Captain.
-Lady Claythorn: I should not get as far as the gates before you had to carry me.
+Lady Claythorn: I don't think I can make the journey on foot, Captain.
+Lady Claythorn: I should not get as far as the gates before you would have to carry me.
+Lady Claythorn: And even if I could, I would slow you down.
+Lady Claythorn: We might get caught in the dark before reaching the town.
 Sushil Sinha: I see.
 Sushil Sinha: I could go alone then, and come back with help.
 Lady Claythorn: You should.
-Lady Claythorn: I do not like it, but one of us must reach the town.
-Lady Claythorn: You will be much faster this way.
-Lady Claythorn: Go now, while there is daylight, and send them up here as fast as they will come.
-Sushil Sinha: understood, but what will you do?
+Lady Claythorn: I do not like it, but you will be much faster this way.
+Sushil Sinha: Understood, if that is what you think is best, I will leave now and walk as fast as possible.
+Weird, I was expecting he argue against leaving me here alone.
+But I guess he is even more eager than I am to leave this place as fast as possible.
+Could he be scared?
+Lady Claythorn: Very well.
+Sushil Sinha: But what will you do?
 Lady Claythorn: I will find a place to hide and wait for you.
-Lady Claythorn: I do not want to risk talking with anyone else until then.
+Lady Claythorn: I do not want to risk talking with anyone until then.
 Sushil Sinha: It is probably for the best.
-Sushil Sinha: Here, takes the butler's key then. It opens every door in this house.
+Sushil Sinha: Here, take the butler's key then. It opens every door in this house.
 Sushil Sinha: Lock yourself in somewhere, and open to nobody but me.
-I take it.
+I take the key.
 Sushil Sinha: I will be back before dark, with the police.
 Lady Claythorn: I hope so.
 Without further ceremony, he goes out by the main door.
 I stand in the hall and listen to his feet on the gravel until I cannot hear them any more.
-I go up the main stair as quietly as possible.
-I am in the largest room of the attic.
+I go up the main stair as quietly as possible and head for the attic.
+I enter the largest room of the attic.
 Filled with stacked trunks, furniture under dust sheets, boxes that cannot have been opened in a generation.
 It is the perfect place.
-Even if someones comes here, I will be able to find a place to hide.
-I lock the door behind me, and I put the key back in my pocket, and I sit down on a trunk in the half dark.
+Even if someone comes here, I will be able to find a place to hide.
+I lock the door behind me, and I put the key back in my pocket, and I sit down on a trunk in the half-dark.
 Then I wait.
-For a while, the house is silent, if anything is happening downstairs, it happening quietly.
-Then, from two floors down, shouting.
-A man's voice, and a woman's over it, and then something that might have been a shot, or a door, or a chair going over.
-I cannot tell through this much house.
+For a while, the house is silent. If anything is happening downstairs, it is happening quietly.
+Then, from two floors down, a scream.
+A woman's voice, and then nothing.
 I stand up. I sit down again.
+A long time passes. Nearly an hour, perhaps.
+Then a shot.
+And, a moment later, another.
 Then nothing.
-I want to go and see what happened, but I am paralyzed with fear.
+I want to go and see what happened, but I am paralysed with fear.
 I remind myself that I should wait for Captain Sinha.
 So I remain here and try to listen to what might be happening downstairs.
 I do not know how long I have been listening to nothing.
-An hour, perhaps more.
-Whatever happened down there, it is over.
-next =>
-So I gather all the courage a can muster, put my shoes on, and unlock the door.
-The corridor, with all the doors shut but one.
-The hall. Nobody.
-The tea room door stands open on an empty room and a dead fire.
-The dining room door is open too.
+An hour at least, probably more.
+It is dark outside now, and I begin to worry that Captain Sinha will not come back.
+I cannot stand staying here any more.
+So I gather all the courage I can muster, and unlock the door.
+I will try to peek at what is happening downstairs.
+First I go to the main hall.
+There is nobody here.
+The dining room door is open. I try to see what is in it.
 I stop in the doorway.
-The first thing I see is a man sitting on the floor with his back to the sideboard and his collar open, looking at me.
-The second thing is who he is.
-Samuel Manning.
-Samuel Manning, whose throat I saw cut this morning.
+Mr Harring is lying on the floor beside his chair.
+There is not a mark on him.
+But his jaw is clenched and his hands are drawn up tight, as though he died in great pain.
+Miss Baxter lies next to him, with one arm across his chest.
+There is blood in her hair, and a dark pool of it on the carpet under her head.
+A few feet away, Miss Marsh is still in her chair, slumped forward over her plate, as though she had fallen asleep at the table.
+There is a red stain spreading across the tablecloth under her.
+Lady Claythorn: Good God...
 I do not scream. I have no breath to do it with.
-I have my hand on the door frame and I cannot feel it.
-Samuel Manning: Do not scream.
-Samuel Manning: For God's sake. I have heard enough of it for one day.
-He does not get up. He does not come towards me.
-Samuel Manning: I am not going to hurt you.
-Samuel Manning: Look at me. Look.
-Samuel Manning: I am not one of them.
+I hold on to the door frame and try to make sense of what I see.
+The two women have been shot. That much is clear.
+But Mr Harring has no wound at all.
+And why would Miss Baxter be lying beside him like that, as if she had been holding him?
+I do not understand any of it.
+On the other side of the table, the service door opens.
+A man steps into the room.
+Samuel Manning.
+His collar is open, and the front of his shirt is stiff with dried blood.
+The same blood I saw on his throat this morning, when Captain Sinha found him in his bed.
+Lady Claythorn: No...
 Lady Claythorn: You were dead.
 Lady Claythorn: I saw you. Your throat...
-Samuel Manning: Port.
-Samuel Manning: A decent one, from the billiard room. And a razor, for the edge of it. Not deep. It did not need to be.
-He pulls his collar down.
-Under it, a line of scab from one side of his neck to the other, shallow as a cat's scratch and black with dried wine.
-Samuel Manning: Nobody checks a cut throat, my lady.
-Samuel Manning: That was the whole of my case.
-And then, because I have not looked anywhere else yet, I look.
-Miss Marsh is on her side by her chair, with her eyes open.
-Mr Harring is by the window, half under the curtain, as though he had tried to get behind it.
-And Miss Baxter lies across the far end of the table with her hair in the plates.
-Lady Claythorn: Are they...
-Samuel Manning: All of them.
-Samuel Manning: I have looked. I did not want to.
-Lady Claythorn: What happened?
-Lady Claythorn: What happened here?
-Samuel Manning: I do not know.
-Samuel Manning: I was upstairs, in my bed, being dead.
-Samuel Manning: There was shouting. The boy, and a woman screaming over him, I could not say which.
-Samuel Manning: Then a shot. Two, perhaps. I did not count.
-Samuel Manning: Then nothing, for a very long time.
-Samuel Manning: I waited an hour after the nothing before I came down.
-Lady Claythorn: So did I.
-He looks at me, and then at the ceiling, and something that is nearly a laugh goes through him and does not come out.
-Samuel Manning: Two of us, then.
-Samuel Manning: Sitting in the dark at either end of the house, waiting for the other one to go first.
-He looks at his hands.
-Lady Claythorn: Why?
+Samuel Manning: My lady, please.
+Samuel Manning: Do not scream.
+Lady Claythorn: It was you.
+Lady Claythorn: You pretended to be dead, and then you came down here and killed them all.
+Samuel Manning: No.
+Samuel Manning: I have not killed anybody. Listen to me...
+He takes a step towards me.
+I take a step back.
+I should have asked Captain Sinha for a gun before he left.
+Then I see it.
+On the carpet, between Miss Marsh and Miss Baxter, there is a revolver.
+I do not think. I bend down and take it.
+It is heavier than I expected.
+I point it at him with both hands.
+Lady Claythorn: Stay where you are.
+He stops, and slowly raises his hands.
+Samuel Manning: Please, allow me to explain myself.
+Lady Claythorn: Go on.
+Lady Claythorn: You were dead, with your throat cut.
+Samuel Manning: What you saw was an act.
+Samuel Manning: I staged it with port wine.
 Lady Claythorn: Why would you do such a thing?
 Samuel Manning: Because I was going to be next.
-Samuel Manning: I worked that out on Saturday, in that room, with the door locked on me and a tray coming up the back stair.
-Samuel Manning: Two men dead in two days, and both of them accidents, and the whole house nodding along.
-Samuel Manning: I have stood up in court for twenty years and watched juries nod like that.
-Samuel Manning: It is what people do when they have decided not to see something.
-Lady Claythorn: But to cut yourself...
-Samuel Manning: A locked door is nothing to whoever has been walking this house at night.
-Samuel Manning: I could not get out, and I could not fight. I am not built for either.
-Samuel Manning: But I could be no longer worth the trouble.
-Samuel Manning: So I took the bottle I had put by, and I made a mess of the bed, and I lay down in it and waited for somebody to open the door and decide I was finished.
-Samuel Manning: It was the Captain who did, and I heard him tell you not to come closer.
-Samuel Manning: I could have kissed him.
-I look at him.
-Samuel Manning, who could not find his own chair at dinner on Friday, sitting on the floor of this dining room stone cold sober and telling me how he outlived the whole house.
+Samuel Manning: I worked that out yesterday, in my room, with the door locked on me and a tray coming up the back stair.
+Samuel Manning: I might have killed Doctor Baldwin, but someone drove me to it.
+Samuel Manning: And it dawned on me that nobody would organise such an elaborate scheme just to kill one man.
+Samuel Manning: No, we were probably all going to be killed in the end.
+Samuel Manning: I realised that too late.
+Samuel Manning: I could not escape, so I reasoned that if it looked as though I had killed myself, the real killer might leave me alone.
+Samuel Manning: When the Captain found me, he cannot have looked very closely.
+Samuel Manning: And that was that.
+Samuel Manning: From then on, I was free to explore on my own.
+I look at him, over the barrel of the revolver.
+Samuel Manning, who could not find his own chair at dinner on Friday, standing in this dining room stone cold sober and telling me how he outlived the whole house.
 I do not know whether to laugh or to be sick.
-Lady Claythorn: You were never as drunk as you let us think.
-Samuel Manning: I was every bit as drunk as I let you think.
-Samuel Manning: I was simply not drunk the whole time.
-Samuel Manning: It is a useful thing to be thought, my lady. People stop watching you.
-And then we both hear it.
-Feet on the gravel, outside. One man, walking, and in no hurry.
-Samuel Manning: Somebody on the drive.
-I go to the window, and keep to the side of it, and look out.
-A man coming up from the gates on foot, with his hat down and his coat open, and mud on him to the knee.
-I do not need to see his face.
-Lady Claythorn: It is him.
-Lady Claythorn: The butler. He has come back.
-Mr Manning is on his feet faster than a man of his years has any right to be.
-Samuel Manning: Then I am going back to bed.
-Samuel Manning: It has served me well for a day. It can serve me a while longer.
-Samuel Manning: Come. It is a wide bed, and he will not look under it twice.
-I look at the service door, and I look at the three of them, and I do the sum.
-Lady Claythorn: No.
-Samuel Manning: My lady...
-Lady Claythorn: He has come back for the silver and the pearls, and for me.
-Lady Claythorn: If he finds this room with nobody alive in it, he will go through the house until he finds me, and he will find you.
-Lady Claythorn: If I am here, he has no reason to look.
-He looks at me for one second longer, and then he goes, quickly and quietly, by the service door.
-He does not look back. I did not want him to.
-The front door.
-Footsteps in the hall, unhurried, the way they always were.
-He was the best butler I ever saw, and he was never a butler at all.
-I sit down in my own chair at the head of the table.
-If I am going to be found, I am going to be found there.
-He stops in the dining room doorway, and he looks round the room the way he looked round the tea room on Saturday night.
-All of it, in one glance. The three of them, and me.
-He is out of livery. He looks like what he is.
-Butler: Well.
-Butler: Still with us, my lady.
-Lady Claythorn: You came back.
-Butler: I was owed a great deal of money for this weekend, and I have seen nothing of it since the advance.
-Butler: I do not think our patron will be paying now.
-Butler: So I have come to pay myself, with what the house has to offer.
-Lady Claythorn: The silver.
-Lady Claythorn: The pearls.
-Butler: It is not what I was promised.
-Butler: It is what there is.
-Lady Claythorn: And them?
-I do not look at the floor. He does.
-Butler: None of my doing.
-Butler: I have been on the road since eleven last night, and I have the mud to prove it.
-Butler: They did this to each other, or somebody did it for them. I was not here.
-Lady Claythorn: Then who?
-Lady Claythorn: You said nobody was supposed to be hurt.
-Butler: Nobody was.
-Butler: I did not think it would end like this. I am not sure I was meant to think at all.
-He takes his hand out of his coat, and the revolver is in it, and it is pointed at the floor.
-For now.
-Butler: You told the Captain.
-Butler: I saw his face last night, on the gravel. He knew what I was, and there is only one way he could have known it.
-Butler: I met him on the road, a mile past the gates. He will not be sending anybody.
-I knew it when he went. It is different, hearing it.
-Butler: Who else?
-Lady Claythorn: Nobody.
-Butler: I should like to believe that.
-Butler: It is not enough.
-Lady Claythorn: Manning...
-It is out before I can stop it.
-His eyes go to the ceiling for a moment, and come back.
-Butler: Mr Manning is upstairs with his throat cut, where the Captain found him.
-Butler: You are not going to confuse me at this hour of the day, my lady.
-I do not correct him.
-It is the last thing I have to give anybody, and I give it to Samuel Manning.
-Butler: You know my face. You know my name.
-Butler: You are the only one left in this house who does.
-Lady Claythorn: You said nobody was supposed to get hurt.
-Butler: I am sorry.
-You hid, and it worked, for the better part of three hours.
-Then the house went quiet, and you came down to see why, and you were sitting at your own table when the car came up the drive.
-He came back for what he was owed, and you were the one person left in that house who could put a name to him.
-Captain Sinha walked out of that house at a quarter past twelve, and there was no motor to go with him in.
-There is one in the garage. Look harder for what it wants.
+Lady Claythorn: No, that makes no sense.
+Lady Claythorn: There are only the two of us left in this house.
+Lady Claythorn: And I know I am not the killer.
+Lady Claythorn: So it must be you.
+Samuel Manning: I swear I had nothing to do with these deaths.
+Samuel Manning: Put that down, my lady, and I will tell you everything.
+He lowers his hands, and takes a step towards me.
+Lady Claythorn: Stay where you are.
+Samuel Manning: I only want to talk.
+Samuel Manning: You are shaking. Give me the gun, before somebody else gets hurt.
+He keeps coming towards me, slowly, with one hand held out.
+Lady Claythorn: I said stay where you are!
+The noise fills the room.
+Mr Manning stops.
+He looks down at his shirt, where a new stain is spreading over the old one.
+This time, it is not port.
+He sits down heavily against the sideboard, and then he slides onto his side.
+I lower the revolver.
+My hands will not stop shaking.
+Mr Harring. Miss Baxter. Miss Marsh. And now Mr Manning.
+Mr Moody and Doctor Baldwin before them.
+Almost everyone who came to this house for the weekend is dead.
+And they will blame me for it.
+I cannot afford to talk to the police now.
+They will never believe me.
+I need to leave as fast as I can, before Captain Sinha comes back with them.
+That is when I smell it.
+Smoke.
+It is coming from under the door to the hall.
+The door is shut. I do not remember shutting it.
+I run to it and take hold of the handle.
+It is warm.
+It turns, but the door does not open.
+I take out the butler's key and push it into the lock with shaking fingers.
+The lock turns.
+The door still does not move.
+Something is holding it shut from the other side.
+Lady Claythorn: Help!
+Lady Claythorn: Is anybody there?
+Nobody answers.
+I turn to the windows.
+I cross the room and pull at the catch of the nearest one.
+It will not move.
+I try the next one, and the one after that.
+They are all shut fast.
+The smoke is in my throat now.
+I strike the glass with the butt of the revolver.
+It breaks, but there is a steel frame behind it.
+There is not enough room for me to get through.
+I try to lift a chair to break the whole frame, but I have no strength left.
+The room is filling with smoke, and there is a red glow under the door now.
+I think of Captain Sinha, coming back up the drive with the police.
+I hope he gets here in time.
+You hid, and it worked, for a while.
+Then the silence became too much for you, and you came down to see why.
+Curiosity got the better of you.
+But do not blame yourself.
+Perhaps there was no way out.
+Maybe it was always supposed to end like this.
