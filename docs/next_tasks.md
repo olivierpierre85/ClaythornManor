@@ -94,11 +94,19 @@ MAYBE add a explanation for the butler? Needed for the reason the phone is dead 
 
 finish attic ending :
 
-You see sam manning in the dining room. Every one else is dead, you assume he killed them. start to scream. But somebody arrives from behind
+LAD dead by accident
+Nurse will wake up
+Psychic kills herself when she realises nurse has awaken and lad is dead. 
+Before she also kills nurse.
 
-Mr Manning? And you are alive, how fascinating.
+SO the main storyline scene is : 
+Lad poisoned, Nurse and psychic shot. You do not understand
 
-"Oh you came back, why?"
+THen the drunk comes in, so she starts accusing him.
+
+she regret not asking for a gun but then found the gun on the floor between nurse and psychic, grabs it.
+
+And menace him. He starts talking about him and you unlock him (TODO later find how)
 
 
 

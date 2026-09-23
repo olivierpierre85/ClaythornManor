@@ -41,6 +41,9 @@ graph TB
 ### Scenario A: Normal
 He comes late and didn't notice the nurse switching their plates, so he eats hers and vice versa.
 
+### NOTE 
+what if normal path is both nurses and lad have the same thing in it. And when switching plates, psychic falls, then the house burns and everyone is dead. But main path, everyone wakes up. NO main path LAD is dead. Psychic waits for him to wake up but he didn't, so she kills herself. THAt is when DRUNK comes in (main story) (and host in her version)
+
 ```mermaid
 graph TB
     nurse_poison["🍽️ Nurse's plate (☠️ Poison)"]

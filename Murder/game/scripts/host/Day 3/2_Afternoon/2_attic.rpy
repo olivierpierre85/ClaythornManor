@@ -1,25 +1,16 @@
 # --------------------------------------------
 #   Host - Sunday afternoon, she hides
-#
-#   She cannot face ten miles of that road, so the Captain goes for the
-#   town alone and leaves her the butler's key. She locks herself into the
-#   attic storage room and waits.
-#
-#   Lunch happens two floors below without her. She hears the end of it
-#   through the boards, and then nothing, for a long time.
-#
-#   She comes down at three and finds Samuel Manning alive in the dining
-#   room, everyone else dead, and then the butler walking up the drive.
-#   She can stand, so it is her choice to be found at the table.
-#
-#   Unlocks : drunk 'faked_death' and 'lie', butler 'took_valuables'
 # --------------------------------------------
 label host_day3_afternoon_attic:
 
     host """
-    I cannot walk it, Captain.
+    I don't think I can make the journey on foot, Captain.
 
-    I should not get as far as the gates before you had to carry me.
+    I should not get as far as the gates before you would have to carry me.
+
+    And even if I could, I would slow you down.
+
+    We might get caught in the dark before reaching the town.
     """
 
     captain """
@@ -31,21 +22,33 @@ label host_day3_afternoon_attic:
     host """
     You should.
 
-    I do not like it, but one of us must reach the town.
-
-    You will be much faster this way.
-
-    Go now, while there is daylight, and send them up here as fast as they will come.
+    I do not like it, but you will be much faster this way.
     """
 
     captain """
-    Understood, but what will you do?
+    Understood, if that is what you think is best, I will leave now and walk as fast as possible.
+    """
+
+    """
+    Weird, I was expecting he argue against leaving me here alone.
+
+    But I guess he is even more eager than I am to leave this place as fast as possible.
+
+    Could he be scared?
+    """
+
+    host """
+    Very well.
+    """
+
+    captain """
+    But what will you do?
     """
 
     host """
     I will find a place to hide and wait for you.
 
-    I do not want to risk talking with anyone else until then.
+    I do not want to risk talking with anyone until then.
     """
 
     captain """
@@ -57,7 +60,7 @@ label host_day3_afternoon_attic:
     """
 
     """
-    I take it.
+    I take the key.
     """
 
     captain """
@@ -77,17 +80,15 @@ label host_day3_afternoon_attic:
     call change_time(12, 15)
 
     """
-    I go up the main stair as quietly as possible.
+    I go up the main stair as quietly as possible and head for the attic.
     """
-
-    $ change_room('attic_hallway', dissolve)
 
     play sound door_open
 
     $ change_room('attic_storage_room', dissolve)
 
     """
-    I am in the largest room of the attic.
+    I enter the largest room of the attic.
 
     Filled with stacked trunks, furniture under dust sheets, boxes that cannot have been opened in a generation.
 
@@ -99,10 +100,10 @@ label host_day3_afternoon_attic:
 
     Then I wait.
     """
+    
+    call wait_screen_transition()
 
     call change_time(14, 00)
-
-    call wait_screen_transition()
 
     """
     For a while, the house is silent. If anything is happening downstairs, it is happening quietly.
@@ -124,9 +125,9 @@ label host_day3_afternoon_attic:
     So I remain here and try to listen to what might be happening downstairs.
     """
 
-    call change_time(16, 00)
-
     call wait_screen_transition()
+
+    call change_time(16, 00)
     
     $ change_room('attic_storage_room')
 

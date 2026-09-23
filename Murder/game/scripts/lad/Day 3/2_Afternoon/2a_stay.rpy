@@ -110,6 +110,7 @@ label lad_day3_afternoon_toilet:
 
     $ change_room('bedroom_lad')
 
+    # TODO: change spend a penny? Very weird here
     """
     Once I reached my room, I try not to waste any time. 
     
