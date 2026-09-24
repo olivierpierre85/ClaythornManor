@@ -66,7 +66,7 @@ label init_drunk:
             ),
             CharacterInformation(
                 6, "played_dead",
-                "You painted your throat with port, made a ruin of the bed, and lay down to be found",
+                "You painted your throat with port, let your razor fall beneath your hand, and lay down to be found a suicide",
                 content_negative="You did not play dead",
                 image_file="throat_cut",   # TODO proper image, a razor and a port bottle on the washstand
                 chapters=['saturday_evening'],
@@ -150,7 +150,7 @@ label init_drunk:
             CharacterInformation(60, "heroic_act", "have left him; only the poorest and the most desperate would ever hire him. He assumes that this choice of clients has made him look like a fervent defender of the poor in the eyes of Lady Claythorn, hence his invitation", is_important = True, unlock_chapters=[('host', 'friday_evening'), ('drunk', 'friday_afternoon')]), # Confess to Broken, and to the Host at the Friday dinner
             CharacterInformation(60, "lie", "he can sober up, or at least act sober enough when the situation demands it. He has also become quite good at feigning drunkenness to avoid unpleasant situations", is_important = True, unlock_chapters=[('doctor', 'saturday_afternoon'), ('host', 'friday_evening'), ('host', 'sunday_afternoon'), ('drunk', 'saturday_morning')]), # Confess to Doctor - the Host catches the act at dinner, and hears it from him on the Sunday - the watered flask
             CharacterInformation(60, "food", "his palate. He can tell how a sauce was made from a single mouthful, and he speaks of a kitchen like a man who grew up beside one", is_important = True, unlock_chapters=[('host', 'friday_evening'), ('drunk', 'friday_evening')]), # He praises the sole at the Host's dinner, stone cold sober
-            CharacterInformation(70, "faked_death", "he can play dead as well as drunk. He lay a whole day in his bed at Claythorn Manor with his throat painted in port, and nobody came close enough to look twice", is_important = True, unlock_chapters=[('host', 'sunday_afternoon'), ('drunk', 'sunday_morning')]), # He tells the Host himself, in the dining room, once she has come down from the attic and found him
+            CharacterInformation(70, "faked_death", "he can play dead as well as drunk. He lay a whole day in his bed at Claythorn Manor, a suicide with his throat painted in port, and nobody came close enough to look twice", is_important = True, unlock_chapters=[('host', 'sunday_afternoon'), ('drunk', 'sunday_morning')]), # He tells the Host himself, in the dining room, once she has come down from the attic and found him
             # Not needed to unlock him: the one thing he learns about himself in his own story
             CharacterInformation(80, "lost_case", "the woman he was too drunk to defend, years ago, over a break-in at an orphanage. She was sent down for it, and she remembered him", unlock_chapters=[('drunk', 'sunday_afternoon')]),
             ], drunk_name

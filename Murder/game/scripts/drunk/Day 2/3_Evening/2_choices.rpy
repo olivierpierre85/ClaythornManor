@@ -3,8 +3,10 @@
 #
 #   - drink    -> he cuts his own throat (throat_cut)
 #   - confront -> he warns the house and one of them silences him (silenced)
-#   - play dead -> he paints his throat with port and lies down (played_dead),
-#                  and the story goes on to Sunday
+#   - play dead -> he paints his throat with port, drops his razor beneath his
+#                  hand and lies down (played_dead), and the story goes on to
+#                  Sunday. Real or staged, every other route reads the body the
+#                  same way: a suicide behind a locked door
 # --------------------------------------------
 
 

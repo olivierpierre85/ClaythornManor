@@ -139,15 +139,19 @@ label common_day3_morning_lad_psychic_captain_death_manning:
         """
         The sight inside is beyond horrifying.
 
-        Samuel Manning lies in his bed, drenched in blood, his throat slashed multiple times.
+        Samuel Manning lies in his bed, drenched in blood, his throat cut wide open.
 
         Pale as a sheet, his eyes frozen in a blank stare.
+
+        One arm hangs over the side of the bed, and there's a razor on the floor right under his hand.
 
         Miss Baxter almost screams.
         """
     elif current_character.text_id == "captain":
         """
         Samuel Manning lies in his bed, the sheets dark with blood, his throat cut through.
+
+        His arm hangs over the edge of the mattress. An open razor lies on the boards beneath his fingers.
 
         I have seen dead men before. It does not make this one easier to look upon.
 
@@ -158,6 +162,8 @@ label common_day3_morning_lad_psychic_captain_death_manning:
         There lies Samuel Manning, dead in his bed.
 
         Blood is all over him.
+
+        Beneath his dangling hand, a razor gleams on the floor.
 
         I let out a gasp.
         """
@@ -222,6 +228,22 @@ label common_day3_morning_lad_psychic_captain_death_manning:
 
     psychic """
     Oh my God.
+    """
+
+    lad """
+    Did he... do that to himself?
+    """
+
+    captain """
+    It looks that way.
+
+    That's his own razor, and the door was still locked, just as I left it yesterday.
+    """
+
+    psychic """
+    The poor, wretched man.
+
+    What he did to Doctor Baldwin must have been more than his soul could bear.
     """
 
     if current_character.text_id == "lad":

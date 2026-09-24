@@ -542,6 +542,7 @@ label drunk_generic_background_host:
 
     return
 
+
 label drunk_generic_wife:
 
     host """
@@ -549,10 +550,38 @@ label drunk_generic_wife:
     """
 
     """
-    TODO
+    He looks down into his glass for a long moment.
+
+    When he speaks again, the slur has gone out of his voice.
     """
 
-    # TODO
+    drunk """
+    She fell ill and needed an operation.
+
+    It was routine, they told me.
+
+    She was young and in good health, so there was nothing to fear.
+
+    But something went wrong all the same.
+
+    She suffered for days, in terrible agony, before she finally passed away.
+    """
+
+    """
+    Then he drains the glass, and the drink closes over him again.
+    """
+
+    drunk """
+    Bad luck, they called it.
+
+    Bad... bad luck, my lady.
+
+    But I would rather not say any more about it.
+    """
+
+    host """
+    I am so sorry, Mr Manning.
+    """
 
     $ drunk_details.description_hidden.unlock('wife')
 

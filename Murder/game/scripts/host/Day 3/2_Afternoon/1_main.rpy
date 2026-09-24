@@ -153,6 +153,8 @@ label host_day3_afternoon_car:
     $ change_room('manor_garden', dissolve)
 
     """
+    We reach the garage from outside.
+
     The Captain goes down to the shed for the tin, and I stand at the garage door and watch the house.
 
     Nobody comes to a window.
@@ -161,7 +163,7 @@ label host_day3_afternoon_car:
     $ change_room('garage', dissolve)
 
     """
-    We reach the garage from outside.
+    He comes back with the tin.
 
     He fills the tank and sets the choke and swings the handle.
     """

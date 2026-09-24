@@ -445,7 +445,7 @@ label host_day2_evening_attic_females_room:
     $ change_room('attic_females_room')
 
     host """
-    No need to apologise.
+    No need to hurry.
 
     I just wanted to see how you were holding up.
 

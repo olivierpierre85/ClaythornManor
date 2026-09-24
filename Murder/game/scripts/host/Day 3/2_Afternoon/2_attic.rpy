@@ -284,7 +284,7 @@ label host_day3_afternoon_attic:
     drunk """
     What you saw was an act.
 
-    I staged it with port wine.
+    I staged it with port wine and my own razor.
     """
 
     host """

@@ -123,7 +123,7 @@ label captain_day3_morning_explore:
         captain """
         Mr Manning will not be coming down.
 
-        I went into his room myself. He was killed in his bed during the night.
+        I went into his room myself. He took his own life during the night.
         """
 
         psychic surprised """
@@ -131,13 +131,15 @@ label captain_day3_morning_explore:
         """
 
         lad -scared """
-        Killed?
+        He killed himself?
         """
 
         captain """
-        Throat cut.
+        With his own razor.
 
-        Whoever did it had a key. He never woke.
+        The door was still locked, as I left it yesterday.
+
+        I should not have left him alone with what he had done.
         """
 
         """

@@ -395,6 +395,16 @@ label host_day3_morning_garden:
 
         call host_day3_morning_leave_with_car
 
+    elif host_details.threads.is_unlocked('saw_car'):
+
+        captain """
+        If that tourer of yours will run, this will take us to the town.
+        """
+
+        host """
+        Then let us go and look at it.
+        """
+
     else:
 
         captain """
@@ -402,7 +412,7 @@ label host_day3_morning_garden:
         """
 
         host """
-        Good, let us keep searching in that case.
+        Then let us keep looking.
         """
 
     $ host_details.objects.unlock('petrol_tin')
@@ -577,6 +587,8 @@ label host_day3_morning_manning_body:
     The sheet is dark from his chin to his chest, and the dark has run down onto the floor.
 
     His throat has been cut.
+
+    One arm hangs over the side of the bed, and beneath his hand, on the floor, lies an open razor.
     """
 
     """
@@ -600,19 +612,19 @@ label host_day3_morning_manning_body:
     captain """
     The door was locked.
 
-    I locked it myself.
+    I locked it myself yesterday, and the razor is his own.
+
+    He did it himself.
     """
 
     host """
-    The butler is the only one with another key.
-
-    But that cannot be. He left yesterday, we watched him go!
+    Because of Doctor Baldwin?
     """
 
     captain """
-    Indeed, there is something else at play here.
+    I would think so.
 
-    I do not understand what has happened, and I do not like it.
+    He killed a man yesterday, and I left him alone with it all night.
     """
 
     """

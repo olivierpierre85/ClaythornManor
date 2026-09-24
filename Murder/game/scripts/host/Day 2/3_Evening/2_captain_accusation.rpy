@@ -46,7 +46,7 @@ label host_day2_evening_accusation_answer:
 
     The peerage is the Earldom of Kilbraith, and I am styled Lady Kilbraith by anybody who troubles himself over such things.
 
-    My father had grown weary of ceremony, as a great many did after the war, and preferred that we be known by the house.
+    My father had no patience for ceremony, and preferred that we be known by the house.
 
     I have kept to it since, out of habit.
     """

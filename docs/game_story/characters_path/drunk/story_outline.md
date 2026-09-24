@@ -33,9 +33,11 @@ Western grove, with the doctor, the boy and the footman.
 
 ### 🔒 Saturday Evening — `drunk_day2_evening`
 Carried home a killer, accused, locked in the George IV room. The chapter is one long think (`drunk_day2_evening_menu_think`). Three topics make the picture whole — the letter, the dead telephone call (`phone_call`), the butler's face from a dock (`butler_face`) — and unlock `understood`. Then:
-- **Play dead** with port for blood (`played_dead`; needs `understood` + `port`). → Sunday.
+- **Play dead** with port for blood and his own razor dropped beneath his hand, so the house reads it as suicide (`played_dead`; needs `understood` + `port`). → Sunday.
 - **Confront the house** — nobody believes the drunk who shot the doctor, and the one who does has the key (`silenced`).
-- **Accept it and drink** — he cuts his own throat for real; in the morning it reads as murder (`throat_cut`).
+- **Accept it and drink** — he cuts his own throat for real; in the morning the house finds exactly what it would have found had he played dead (`throat_cut`).
+
+Whether real or staged, every other route sees the same body: throat cut, razor on the floor beneath his hand, door still locked as the Captain left it. Nobody reads it as murder: it passes for a drunk who could not live with having shot Doctor Baldwin.
 
 ### 🌫️ Sunday Morning — `drunk_day3_morning`
 Playing dead. The door opens, the Captain takes two steps, pronounces him dead and does not touch him (`faked_death`). He waits out the morning, then slips down the drainpipe once the living have thinned.

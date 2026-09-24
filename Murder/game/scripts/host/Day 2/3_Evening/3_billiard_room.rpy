@@ -116,7 +116,7 @@ label host_day2_evening_billiard_room_truth:
     But please, do tell your story.
     """
 
-    """
+    host """
     First, I am not Lady Claythorn.
 
     I don't even think there is one.
@@ -139,7 +139,7 @@ label host_day2_evening_billiard_room_truth:
 
     The explanations were scarce but the money was good.
 
-    The reason for the weekend remained evasive, he just told me it was a prank of sorts.
+    He was evasive about the reason, and only told me it was a prank of sorts.
 
     At that point, my career was not going so well that I could afford to turn down a job.
 
@@ -147,7 +147,7 @@ label host_day2_evening_billiard_room_truth:
 
     My role was explained in detail, what I should know, how I should act.
 
-    Then I came to this manor with two other actors, who played the footman and the maid you saw this weekend.
+    Then I came to this manor, where two other actors were waiting to play the footman and the maid you saw this weekend.
 
     The butler was the one who offered me the job and is in charge of the whole operation.
     """
@@ -337,7 +337,7 @@ label host_day2_evening_billiard_room_truth:
     """
 
     host """
-    Well, earlier today the butler claimed that he had received word from whoever is behind this.
+    Well, after dinner, the butler claimed that he had received word from whoever is behind this.
 
     But as I told you, the phone is down.
 

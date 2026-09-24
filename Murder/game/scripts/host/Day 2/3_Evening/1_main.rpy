@@ -71,8 +71,20 @@ label host_day2_evening:
     play sound door_knock
 
     """
-    He knocks and enters without bothering to wait for my answer.
+    The butler knocks and enters without bothering to wait for my answer.
     """
+
+    if host_details.threads.is_unlocked('bested_captain'):
+
+        butler """
+        I heard about the tea room.
+
+        You answered the Captain well. I doubt he will try that again.
+        """
+
+        host """
+        The Captain is the least of my worries.
+        """
 
     butler """
     I know.
@@ -511,7 +523,7 @@ label host_day2_evening_leave_with_butler:
     call change_time(23, 00)
 
     """
-    They come out to me one at a time over the next hour, and none of them says a word to me.
+    They come out to me one at a time, and none of them says a word to me.
 
     The girl from the kitchen, with her carpet bag. The footman. Then the butler takes his place in the driver's seat.
     """

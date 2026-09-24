@@ -31,17 +31,15 @@ label lad_day3_escape:
     """
 
     psychic """
-    Really? Like Mr Manning was safe?
+    Really? Mr Manning was locked in his room too, and look what became of him.
     """
 
     captain """
-    That's different. Samuel Manning didn't expect anyone would come for him.
-    
-    He was probably killed in his sleep.
-    
-    Or maybe he took his own life.
-    
-    For you, it'll be different. You'll be on your guard.
+    That's different. Nobody came for Samuel Manning.
+
+    He took his own life.
+
+    You'll lock your door, and you'll be on your guard.
     """
 
     psychic """

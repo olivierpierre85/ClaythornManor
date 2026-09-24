@@ -163,7 +163,7 @@ label host_day3_morning:
 
     One more note, we shouldn't say anything to anybody until we are out of this house.
 
-    If one of them is behind this, I do not want to see their face when they learn what we know.
+    If one of them is behind this, I would rather they did not learn what we know.
     """
 
     host """

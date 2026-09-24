@@ -111,7 +111,7 @@ label common_day3_afternoon_lad_psychic_stay:
 
         They tell me what has happened since this morning.
 
-        Mr Manning — dead. Lady Claythorn — vanished.
+        Mr Manning — dead by his own hand. Lady Claythorn — vanished.
 
         Captain Sinha has gone to fetch help.
 

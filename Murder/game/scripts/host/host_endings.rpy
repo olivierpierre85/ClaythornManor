@@ -50,7 +50,7 @@ label host_ending_shot_in_car:
     call death_screen_transition
 
     """
-    You got into a car in the dark with a man you barely knew.
+    You got into a car in the dark with a man you had never really known.
 
     There were plenty of signs that could have warned you about the risk, but you ignored them.
     """

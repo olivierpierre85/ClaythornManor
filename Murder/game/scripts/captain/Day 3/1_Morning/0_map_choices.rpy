@@ -551,17 +551,21 @@ label captain_day3_morning_bedroom_drunk:
 
     I jump back in horror.
 
-    I thought I had seen death enough to be hardened to it. 
+    Then I see the razor, lying open on the floor beneath his hand.
 
-    But this turns my stomach. 
-    
-    A man killed in his bed, not given the chance to lift a hand.
+    His own shaving razor, by the look of it.
+
+    I thought I had seen death enough to be hardened to it.
+
+    But this turns my stomach.
+
+    A man alone behind a locked door with what he had done, and nobody there to stop him.
 
     Shivers run through my body and guilt overwhelms me.
 
     I was the one who shut him in to keep the peace.
-    
-    That made him easy prey for whoever is behind this horrific weekend.
+
+    I left a man who had killed another that very afternoon alone for the night, with a razor on his washstand.
 
     Tears start running down my face and my hands begin to shake.
 
