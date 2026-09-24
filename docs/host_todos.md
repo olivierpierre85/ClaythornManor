@@ -44,63 +44,63 @@ Script paths are relative to `Murder/game/scripts/`. Line numbers are as of that
 - [ ] **B1** Moody's `background`, `job` and `city` are declared **only** for `('host','friday_evening')`, and nothing unlocks them, so nobody can ever get them. His dinner line ("boot boy and then footman… pension in Liverpool") is the right place: add `broken_details.description_hidden.unlock('background')` / `'job'` / `'city'` after it (`host/Day 1/2_Evening/1_main.rpy:~303`).
 - [ ] **B2** The host's question unlocks Manning's `wife`, but `('host','friday_evening')` is missing from its `unlock_chapters` (`drunk/drunk_config.rpy:147`).
 - [ ] **B3** Manning's `lie` is declared for `('host','sunday_afternoon')` but never unlocked. His sober confession in the dining room is exactly that info: add `unlock('lie')` next to `faked_death` (`host/Day 3/2_Afternoon/2_attic.rpy:316`).
-- [ ] **B4** The butler's `took_valuables` is declared for `('host','sunday_afternoon')` and never unlocked. Unlock it at the empty silver cabinet in Sunday morning's butler room, and change the pair to `('host','sunday_morning')` (`host/Day 3/1_Morning/0_map_choices.rpy`, `butler/butler_config.rpy:21`).
-- [ ] **B5** Smaller declaration fixes:
+- [x] **B4** The butler's `took_valuables` is declared for `('host','sunday_afternoon')` and never unlocked. Unlock it at the empty silver cabinet in Sunday morning's butler room, and change the pair to `('host','sunday_morning')` (`host/Day 3/1_Morning/0_map_choices.rpy`, `butler/butler_config.rpy:21`).
+- [x] **B5** Smaller declaration fixes:
   - The butler's `job` and `name` are unlocked on Friday afternoon but not declared: add `('host','friday_afternoon')` (`butler/butler_config.rpy:17,22`).
   - The host's own `lie` is unlocked on Saturday evening but not declared: add `('host','saturday_evening')` (`host/host_config.rpy:184`).
-  - The host's `car` is declared for Sunday afternoon and never unlocked: remove it, or unlock it in the escape where the Captain drives (`host/host_config.rpy:182`).
+  - The host's `car` is declared for Sunday afternoon and never unlocked: remove it, or unlock it in the escape where the Captain drives (`host/host_config.rpy:182`). **Done:** she now takes the wheel in the escape ("Better than I shoot, Captain.") and `car` is unlocked there.
 
 ## C. Grammar, spelling, British English and period (host files)
 
-- [ ] Fri afternoon `host/Day 1/1_Afternoon/1_main.rpy:158`: "cannot look more than eighteen" → "cannot be more than eighteen"
-- [ ] Fri eve `host/Day 1/2_Evening/1_main.rpy:54`: "I come to see" → "I have come to see"
-- [ ] Fri eve `host/Day 1/2_Evening/0_map_choices.rpy:169`: "a Chekhov's play" → "a Chekhov play"
-- [ ] Fri eve `host/Day 1/2_Evening/2_billiard_room.rpy:53`: "it has gotten rather late" → "it is getting rather late"
-- [ ] Sat morning `host/Day 2/1_Morning/1_main.rpy:62`: "fix myself a plate" → "help myself from the sideboard"
-- [ ] Hunt `host/Day 2/2_Hunt/1_main.rpy:263`: "My mind goes into a race." → "My mind begins to race."
-- [ ] Sat eve `host/Day 2/3_Evening/1_main.rpy`:
+- [x] Fri afternoon `host/Day 1/1_Afternoon/1_main.rpy:158`: "cannot look more than eighteen" → "cannot be more than eighteen"
+- [x] Fri eve `host/Day 1/2_Evening/1_main.rpy:54`: "I come to see" → "I have come to see"
+- [x] Fri eve `host/Day 1/2_Evening/0_map_choices.rpy:169`: "a Chekhov's play" → "a Chekhov play"
+- [x] Fri eve `host/Day 1/2_Evening/2_billiard_room.rpy:53`: "it has gotten rather late" → "it is getting rather late"
+- [x] Sat morning `host/Day 2/1_Morning/1_main.rpy:62`: "fix myself a plate" → "help myself from the sideboard"
+- [x] Hunt `host/Day 2/2_Hunt/1_main.rpy:263`: "My mind goes into a race." → "My mind begins to race."
+- [x] Sat eve `host/Day 2/3_Evening/1_main.rpy`:
   - `:130` butler "Great." → "Good."
   - `:328` "But what if they are not." → add "?"
   - `:524` "They must be all in their room" → "They must all be in their rooms"
-- [ ] Sat eve `host/Day 2/3_Evening/0_map_choices.rpy:310`: "I guess he is already asleep" → "I suppose…"
-- [ ] Sat eve `host/Day 2/3_Evening/3_billiard_room.rpy`:
+- [x] Sat eve `host/Day 2/3_Evening/0_map_choices.rpy:310`: "I guess he is already asleep" → "I suppose…"
+- [x] Sat eve `host/Day 2/3_Evening/3_billiard_room.rpy`:
   - `:342` "the phone is down" → "the telephone is dead"
   - `:416` "You are right, me neither." → "Nor shall I."
   - `:461` remove the stray comma after "we agree"
-- [ ] Accusation `host/Day 2/3_Evening/2_captain_accusation.rpy`:
+- [x] Accusation `host/Day 2/3_Evening/2_captain_accusation.rpy`:
   - `:120` "talked like that" → "spoken to like that"
   - `:124` "the right of making" → "the right to make"
   - `:128` "this not an answer" → "this is not an answer"
   - `:130` → "I doubt it would cost you much to simply name your title."
-- [ ] Sun morning `host/Day 3/1_Morning/1_main.rpy`:
+- [x] Sun morning `host/Day 3/1_Morning/1_main.rpy`:
   - `:49` "eerly" → "eerily"
   - `:55` "The staff is gone, we are on our own." → "The staff are gone. We are on our own."
   - `:87` "Well, I guess now there is daylight" → "Well, now that it is daylight"
   - `:158` "Alright" → "All right"
   - `:162` "Ver well." → "Very well."
-- [ ] Sun morning `host/Day 3/1_Morning/0_map_choices.rpy:416`: "Great! Now we can finally leave." → "Then we can leave at last."
-- [ ] Sun afternoon `host/Day 3/2_Afternoon/1_main.rpy`:
+- [x] Sun morning `host/Day 3/1_Morning/0_map_choices.rpy:416`: "Great! Now we can finally leave." → "Then we can leave at last."
+- [x] Sun afternoon `host/Day 3/2_Afternoon/1_main.rpy`:
   - `:67` "for three days" → "all weekend"
   - `:202` "hopped on the first train going south" → "caught the first train south"
-- [ ] Sun afternoon `host/Day 3/2_Afternoon/2_attic.rpy`:
+- [x] Sun afternoon `host/Day 3/2_Afternoon/2_attic.rpy`:
   - `:33` "Weird, I was expecting he argue…" → "Strange. I expected him to argue…"
   - `:35` "I guess" → "I suppose"
 
 ## D. Shared `_common` lines (also change other routes)
 
-- [ ] `_common/Day 1/2_Evening/1_main.rpy`:
+- [x] `_common/Day 1/2_Evening/1_main.rpy`:
   - `:197` "hundred of men" → "hundreds of men"
   - `:205` "civilized" → "civilised"
-- [ ] `_common/Day 2/1_Morning/2_follow.rpy`:
+- [x] `_common/Day 2/1_Morning/2_follow.rpy`:
   - `:84` "Dead?!!!" → "Dead?"
   - `:98` "Please, My Lady—this way." → "Please, my lady, this way."
-- [ ] `_common/Day 2/3_Evening/1_main.rpy`:
+- [x] `_common/Day 2/3_Evening/1_main.rpy`:
   - `:12` the Captain's "I'm sorry, dear, but he is." → "I am sorry, Miss Baxter, but he is.", which fits his formal voice
   - `:42` "anyone from the city" → "anyone from the police"
   - `:322` "Mr Sinha" → "Captain Sinha"
   - `:341-343` "What a sad business. But, sadly, there is nothing else…" → "…But I am afraid there is nothing else to be done at the moment."
   - `:358` "come sit next to me" → "come and sit next to me"
-- [ ] `_common/Day 2/3_Evening/3_captain_host_confrontation.rpy`:
+- [x] `_common/Day 2/3_Evening/3_captain_host_confrontation.rpy`:
   - `:253` "I was hired for being here." → "I was hired to be here."
   - `:301` → "He answers directly to whoever is behind this."
   - `:457` "week-end" → "weekend"

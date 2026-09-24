@@ -51,7 +51,7 @@ label host_day1_evening:
     """
 
     butler """
-    I come to see that everything is ready.
+    I have come to see that everything is ready.
 
     Do you remember the etiquette?
     """

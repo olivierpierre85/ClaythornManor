@@ -81,7 +81,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
     $ play_music('scary')
 
     host surprised """
-    Dead?!!!
+    Dead?
 
     How is that possible?
     """
@@ -95,7 +95,7 @@ label common_day2_breakfast_follow_doctor_lad_host:
     """
 
     butler """
-    Please, My Lady—this way.
+    Please, my lady, this way.
     """
 
     host """

@@ -3,20 +3,8 @@
 ## Write Story: HOST
 
 ### Maybe test it
-### CHECK the todo file md
-Broken unlocks host, host unlocks full drunk? AND BUTLER?
-
-=> TODO at end check interactions with drunk and add necessary unlocks
-
-
-FRiday Before dinner
-=> First task hide letters behing the sheets for CAPTAIN and thomas moody. NO it is the butler who placed them?????
 
 Library => Add joke for the butler. "I do not think any of the guest will want to read, some might not even be able to"
-
-add another thread from Thomas Moody interrogation ?
-
-Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
 
 
 ## Write Story: DRUNK

@@ -260,7 +260,7 @@ label host_day2_hunt:
     """
     Two deaths in one day.
 
-    My mind goes into a race.
+    My mind begins to race.
 
     And I notice my hands are shaking convulsively.
     """

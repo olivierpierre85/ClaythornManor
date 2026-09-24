@@ -46,13 +46,13 @@ label host_day3_morning:
     """
     I wake in my clothes, with the light already coming through the curtains.
 
-    The house is eerly quiet.
+    The house is eerily quiet.
 
     No footsteps below. No fires being laid. No trays.
 
     For a brief moment that seems odd to me, then I remember.
 
-    The staff is gone, we are on our own.
+    The staff are gone. We are on our own.
 
     Captain Sinha is in the chair by the door.
 
@@ -84,7 +84,7 @@ label host_day3_morning:
     captain """
     Right.
 
-    Well, I guess now there is daylight, we can leave.
+    Well, now that it is daylight, we can leave.
 
     That has not changed since last night.
 
@@ -155,11 +155,11 @@ label host_day3_morning:
     """
 
     host """
-    Alright, so we can sort those things out before deciding on our next move.
+    All right, so we can sort those things out before deciding on our next move.
     """
 
     captain """
-    Ver well.
+    Very well.
 
     One more note, we shouldn't say anything to anybody until we are out of this house.
 

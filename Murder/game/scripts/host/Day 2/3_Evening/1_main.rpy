@@ -139,7 +139,7 @@ label host_day2_evening:
     """
 
     butler """
-    Great.
+    Good.
 
     Be strong, it is almost the end.
     """
@@ -337,7 +337,7 @@ label host_day2_evening:
 
     Until now I thought they were still in London.
 
-    But what if they are not.
+    But what if they are not?
 
     Are they hidden somewhere in this place? Or hiding in the woods?
 
@@ -533,7 +533,7 @@ label host_day2_evening_leave_with_butler:
 
     No need to wait any longer then.
 
-    They must be all in their room by now, they won't hear us leaving.
+    They must all be in their rooms by now, they won't hear us leaving.
     """
 
     """

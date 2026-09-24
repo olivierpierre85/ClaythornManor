@@ -30,9 +30,9 @@ label host_day3_afternoon_attic:
     """
 
     """
-    Weird, I was expecting he argue against leaving me here alone.
+    Strange. I expected him to argue against leaving me here alone.
 
-    But I guess he is even more eager than I am to leave this place as fast as possible.
+    But I suppose he is even more eager than I am to leave this place as fast as possible.
 
     Could he be scared?
     """

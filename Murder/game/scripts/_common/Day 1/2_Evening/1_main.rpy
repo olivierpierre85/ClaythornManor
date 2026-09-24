@@ -194,7 +194,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     Even my fellow Indian soldiers were not immune to it, and many died of sunstroke.
 
-    By the time we reached Peking, our expedition had lost hundred of men.
+    By the time we reached Peking, our expedition had lost hundreds of men.
 
     By that time, the soldiers were angry, tired, and restless.
 
@@ -202,7 +202,7 @@ label common_day1_evening_captain_billiard_room_speech_part_2:
 
     I was expecting the exactions of the Japanese and the Russians, who were known for their ruthlessness.
 
-    But in the end, our proud "civilized" European nations fared no better.
+    But in the end, our proud "civilised" European nations fared no better.
 
     The final assault of the besieged was also an example of a lack of discipline among the soldiers and their commanders.
 

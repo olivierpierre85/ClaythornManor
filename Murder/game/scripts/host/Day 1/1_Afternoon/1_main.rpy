@@ -155,7 +155,7 @@ label host_introduction:
     """
     Two other people are gathered in the entrance hall.
 
-    A young man, rather dashing, and a girl who cannot look more than eighteen years old.
+    A young man, rather dashing, and a girl who cannot be more than eighteen years old.
     """
 
     host """

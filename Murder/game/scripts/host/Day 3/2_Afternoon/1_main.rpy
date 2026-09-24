@@ -64,7 +64,7 @@ label host_day3_afternoon:
     host """
     No.
 
-    I have lied to those people for three days. They would not trust me no matter what I say now.
+    I have lied to those people all weekend. They would not trust me no matter what I say now.
 
     Besides, I still do not trust them.
     """
@@ -163,9 +163,21 @@ label host_day3_afternoon_car:
     $ change_room('garage', dissolve)
 
     """
-    He comes back with the tin.
+    He comes back with the tin and fills the tank.
 
-    He fills the tank and sets the choke and swings the handle.
+    By then, I am already behind the wheel.
+    """
+
+    captain """
+    You drive, Lady Claythorn?
+    """
+
+    host """
+    Better than I shoot, Captain.
+    """
+
+    """
+    I set the choke, and he goes round to the front and swings the handle.
     """
 
     play sound car_start
@@ -173,8 +185,10 @@ label host_day3_afternoon_car:
     """
     The engine coughs twice, catches on the third pull, and settles into a rough purr.
 
-    I get into the car, and we are out of the garage and onto the gravel.
+    He climbs in beside me, and I take us out of the garage and onto the gravel.
     """
+
+    $ host_details.description_hidden.unlock('car')
 
     $ change_room('manor_garden')
 
@@ -201,7 +215,7 @@ label host_day3_afternoon_car:
 
     So I thought of an excuse to leave him as soon as we reached the town.
 
-    Then I headed for the railway station, where I hopped on the first train going south.
+    Then I headed for the railway station, where I caught the first train south.
 
     I am not proud of this, but now I can finally relax and try to put this whole affair behind me.
 

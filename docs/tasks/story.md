@@ -160,6 +160,9 @@
 ## Host
 
 ### Important
+- [ ] add another thread from Thomas Moody interrogation ?
+- [ ] Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
+
 
 ### Ideas to think over (optional)
 - [ ] Why is her name never mentioned?

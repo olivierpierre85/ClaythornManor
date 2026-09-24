@@ -59,7 +59,7 @@ label host_day2_morning:
     host """
     Do not worry, Captain.
 
-    I will fix myself a plate and join you shortly.
+    I will help myself from the sideboard and join you shortly.
     """
 
     """

@@ -166,7 +166,7 @@ label host_day1_evening_gun_room:
     """
     Sporting guns behind glass, and a handgun lying out on the table.
 
-    It reminds me of a Chekhov's play I once saw.
+    It reminds me of a Chekhov play I once saw.
 
     Though I am not sure why.
 

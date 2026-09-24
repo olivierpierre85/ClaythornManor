@@ -339,7 +339,7 @@ label host_day2_evening_billiard_room_truth:
     host """
     Well, after dinner, the butler claimed that he had received word from whoever is behind this.
 
-    But as I told you, the phone is down.
+    But as I told you, the telephone is dead.
 
     So I am not sure how he got that message.
 
@@ -413,7 +413,7 @@ label host_day2_evening_billiard_room_truth:
     """
 
     host """
-    You are right, me neither.
+    Nor shall I.
     """
 
     captain """
@@ -458,7 +458,7 @@ label host_day2_evening_billiard_room_small_talk:
     """
 
     """
-    I ask him about the book in his hands, he asks me about the estate, and we agree, that the poor hunt of this morning was due to bad luck.
+    I ask him about the book in his hands, he asks me about the estate, and we agree that the poor hunt of this morning was due to bad luck.
 
     When the conversation dies down, I rise.
     """

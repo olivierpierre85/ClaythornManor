@@ -423,7 +423,7 @@ label host_day3_morning_garden:
 label host_day3_morning_leave_with_car:
 
     host """
-    Great! Now we can finally leave.
+    Then we can leave at last.
     """
 
     captain """
@@ -832,6 +832,8 @@ label host_day3_morning_attic_butler_room:
 
     But he was a thief as well, it seems.
     """
+
+    $ butler_details.description_hidden.unlock('took_valuables')
 
     return
 

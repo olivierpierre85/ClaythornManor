@@ -307,7 +307,7 @@ label host_day2_evening_bedroom_drunk:
     """
     No answer.
 
-    I guess he is already asleep.
+    I suppose he is already asleep.
 
     There is no reason for me to insist.
     """

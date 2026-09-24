@@ -50,7 +50,7 @@ label host_day1_evening_billiard_room:
     host """
     Thank you, Captain. I doubt any of us will forget it.
 
-    Now, if you will excuse me, it has gotten rather late.
+    Now, if you will excuse me, it is getting rather late.
     
     I should head back to my room for the night.
     """

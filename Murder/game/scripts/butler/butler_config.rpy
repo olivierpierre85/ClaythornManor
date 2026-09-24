@@ -14,12 +14,12 @@ label init_butler:
             # Unlocked after the death text of the captain 'burned' and
             # 'shot_butler' endings (same paths as the host 'not_guilty' info)
             CharacterInformation(0, "manages_weekend", "managing this entire weekend on behalf of someone else", is_important = True),
-            CharacterInformation(0, "job", "professional actor, down on his luck", is_important = True),
+            CharacterInformation(0, "job", "professional actor, down on his luck", is_important = True, unlock_chapters=[('host', 'friday_afternoon')]),
             CharacterInformation(0, "mob", "some unsavoury people, who taught him that violence is sometimes the best way to achieve one's ends", is_important = True),
             CharacterInformation(10, "poisoned_moody", "slipped the poison into Thomas Moody's flask", is_important = True),
-            # Unlocked when he comes back for the silver on the Sunday afternoon (host, stayed for lunch)
-            CharacterInformation(20, "took_valuables", "long gone, and the jewellery and silverware with him", is_important = True, unlock_chapters=[('host', 'sunday_afternoon'), ('drunk', 'sunday_afternoon')]),
-            CharacterInformation(0, "name", "Barrow at Claythorn Manor, an alias that is oddly not heard at all by the guests", is_important = True),
+            # Host: unlocked at the empty silver cabinet in his attic room on the Sunday morning
+            CharacterInformation(20, "took_valuables", "long gone, and the jewellery and silverware with him", is_important = True, unlock_chapters=[('host', 'sunday_morning'), ('drunk', 'sunday_afternoon')]),
+            CharacterInformation(0, "name", "Barrow at Claythorn Manor, an alias that is oddly not heard at all by the guests", is_important = True, unlock_chapters=[('host', 'friday_afternoon')]),
         ], butler_name)
 
         butler_description = """

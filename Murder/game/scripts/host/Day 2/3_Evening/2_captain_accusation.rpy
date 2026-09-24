@@ -117,17 +117,17 @@ label host_day2_evening_accusation_answer:
 label host_day2_evening_accusation_refuse:
 
     host """
-    I shall not be talked like that in my own house, Captain.
+    I shall not be spoken to like that in my own house, Captain.
 
     Two men have died beneath this roof today.
 
-    Everyone is in shock and upset, but that doesn't give you the right of making absurd accusations.
+    Everyone is in shock and upset, but that doesn't give you the right to make absurd accusations.
     """
 
     captain """
-    I am sorry, but this not an answer.
+    I am sorry, but this is not an answer.
 
-    You might be outraged, but I doubt it cost you this much to simply name your title.
+    You might be outraged, but I doubt it would cost you much to simply name your title.
     """
 
     """

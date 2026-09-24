@@ -9,7 +9,7 @@ label common_day2_evening_entrance_dialog:
     """
 
     captain """
-    I'm sorry, dear, but he is.
+    I am sorry, Miss Baxter, but he is.
     """
 
     psychic """
@@ -39,7 +39,7 @@ label common_day2_evening_entrance_dialog:
 
     The police will handle it.
 
-    Speaking of which, has anyone from the city arrived yet?
+    Speaking of which, has anyone from the police arrived yet?
     """
 
     psychic """
@@ -319,7 +319,7 @@ label common_day2_evening_samuel_manning_discussion_part_3:
     else:
 
         """
-        After sifting through them, he presents one to Mr Sinha.
+        After sifting through them, he presents one to Captain Sinha.
         """
 
     butler """
@@ -340,7 +340,7 @@ label common_day2_evening_samuel_manning_discussion_part_4:
     host """
     What a sad business.
 
-    But, sadly, there is nothing else to be done at the moment.
+    But I am afraid there is nothing else to be done at the moment.
 
     I suggest you all return to your rooms for now.
 
@@ -355,7 +355,7 @@ label common_day2_evening_samuel_manning_discussion_part_4:
 label common_day2_evening_dinner_marsh_seated:
 
     host """
-    I think it's better if you come sit next to me tonight.
+    I think it's better if you come and sit next to me tonight.
 
     No reason to leave you alone at the end of the table.
     """

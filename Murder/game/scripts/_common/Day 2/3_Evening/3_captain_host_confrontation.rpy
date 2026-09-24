@@ -250,7 +250,7 @@ label common_day2_evening_host_unmasked:
     host """
     An actress.
 
-    I was hired for being here.
+    I was hired to be here.
 
     I was given a script of sorts, and the run of the house, and a fee.
     """
@@ -298,7 +298,7 @@ label common_day2_evening_host_unmasked:
     host """
     Yes.
 
-    He answers to whoever is behind this directly.
+    He answers directly to whoever is behind this.
 
     He gives the orders. He chooses what we are told and what we are not.
 
@@ -454,7 +454,7 @@ label common_day2_evening_host_unmasked:
     host """
     He is.
 
-    There was never any money. From what was explained to me, all of this was meant to attract you all here for the week-end.
+    There was never any money. From what was explained to me, all of this was meant to attract you all here for the weekend.
 
     But I have no notion of the reasons behind it.
     """
@@ -464,7 +464,7 @@ label common_day2_evening_host_unmasked:
 
     Here is what is going to happen now.
 
-    You will all go to your rooms, give me your key as I close the door behind you.
+    You will all go to your rooms, and you will give me your keys as I lock the doors behind you.
 
     You will have to do without supper, but I daresay it will not kill you.
 
