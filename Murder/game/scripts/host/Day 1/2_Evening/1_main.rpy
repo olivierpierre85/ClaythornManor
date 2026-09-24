@@ -98,8 +98,24 @@ label host_day1_evening:
     That might be helpful.
     """
 
+    host """
+    Is it safe?
+
+    Wouldn't it risk alerting the guests to this place?
     """
-    I nod, and he leaves without ceremony.
+
+    butler """
+    I would not worry about that.
+
+    I do not think any of the guests will want to read that sort of book.
+
+    Some might not even be able to, even if they wanted to.
+    """
+
+    """
+    I nod, though I am not as sure as he is.
+
+    Then he leaves without ceremony.
 
     So I start to memorise my lines.
     """
