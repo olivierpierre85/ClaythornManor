@@ -157,7 +157,7 @@ label common_day2_hunt_doctor_aftermath:
 
 
     host -scared """
-    He is... he is truly dead?
+    He is... he is dead?
 
     But this cannot be. This was meant to be...
     """

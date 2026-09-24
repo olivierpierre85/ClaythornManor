@@ -85,8 +85,6 @@ label host_day2_morning:
 
     The butler enters the room and comes directly towards me.
 
-    I did not even notice him come in.
-
     He whispers in my ear.
     """
 

@@ -201,3 +201,9 @@ BETTER, show there are dead with their faces changes (if chatgpt allows it), or 
 - Easter Egg options => use old visual (same_name but add old in the change location function!!!) SEE META
 - Test -angry is still necessary, it doens’t feel like it is
 - Replace all day1, day2 with the real day?
+
+
+## FUN, list of people to give your game to.
+- STuart thorton
+- Stephen king
+- Lucas Pope

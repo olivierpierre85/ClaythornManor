@@ -1,43 +1,26 @@
 <!-- # cSpell:disable -->
-# General TODO
+# Story
+## Write Story: HOST
 
-art? Wait for a faster 9b KV?
-=> THen Force to use locations images that works to generate others
-=> Check when it is getting obvious the killer is among the guests? From start for seasoned murder mystery fan, or never for casual players? Needs to be articulate (Now by host)
+### Maybe test it
+### CHECK the todo file md
+Broken unlocks host, host unlocks full drunk? AND BUTLER?
 
-art => Only one outside manor image? no front or back ?
-
-## NOT ENOUGH DEATHS ????
-I wanted a ANd there were none, but in the end, only two deaths happen on the first day.
-
-IMAGE.
-
-IDEA: Maybe the psychic did not want to kill anybody => BUT does it when she realises that Thomas Moody is not him (color of his eyes?)
-
-The butler DID ( he saw an opportunity to make a lot of money?), just create fights, scares, and be reunited with the people she love:
-Thomas moody (former lover ) and Lad (son)
-
-- Ted Harring => Red Herring (What to do with that?)
+=> TODO at end check interactions with drunk and add necessary unlocks
 
 
-# MAIN CHANGE
-The last character is not the butler, but the psychic without her make up.
+FRiday Before dinner
+=> First task hide letters behing the sheets for CAPTAIN and thomas moody. NO it is the butler who placed them?????
 
-The backstory is the real story.
+Library => Add joke for the butler. "I do not think any of the guest will want to read, some might not even be able to"
 
-Once you learn a tidbit about real information, it adds up here.
+add another thread from Thomas Moody interrogation ?
 
-Nobody cares about the butler.
+Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
 
-Put an interrogation point at first
-- Add the name once you discoverd it (Doctors?).
-- Add the picture when you find it (Thomas moody wallet + revelation from????)
-- Once you have everything unlocked Add a new start point => Introduction
 
-LORD, add the lord the characters once the psychic discover him, but with weird things!!!!!!
- 
-### Write Story: DRUNK
-GEN IDEAS
+## Write Story: DRUNK
+**GEN IDEAS**
 
 THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point. (done already with host)
 
@@ -67,26 +50,39 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mister Harring. How are you feelin?" => Unlocks TED Harring? Or **unlock Butler**
 
 ### Write Story:
-## HOST
-Broken unlocks host, host unlocks full drunk? AND BUTLER?
-
-=> TODO at end check interactions with drunk and add necessary unlocks
-
-### FRiday
-
-Before dinner
-=> First task hide letters behing the sheets for CAPTAIN and thomas moody. NO it is the butler who placed them?????
-
-Library => Add joke for the butler. "I do not think any of the guest will want to read, some might not even be able to"
 
 
-add another thread from Thomas Moody interrogation ?
-
-Talk with DRUNK => UNLOCK him over his love of food => but who? the questions must rem FOR LATER
 
 
+# General TODOs
+
+## Unlocks
+Review ALL possible unlocks leading to drunk story. What is missing ...
+
+## Suspicion
+=> Check when it is getting obvious the killer is among the guests? From start for seasoned murder mystery fan, or never for casual players? Needs to be articulate (Now by host)
+
+## NOT ENOUGH DEATHS ????
+I wanted a ANd there were none, but in the end, only two deaths happen on the first day.
+
+## Survive mechanice
+When a character survives, add a text SAFE on them, and use that (everybody must be safe) to unlock an ending
+
+## LAST Character? 
+### Put an interrogation point at first
+- Add the name once you discoverd it (Doctors?).
+- Add the picture when you find it (Thomas moody wallet + revelation from????)
+- Once you have everything unlocked Add a new start point => Introduction
+### Butler or Psychic point of view?
+### Lad backstory real end? 
+The last character is not the butler, but the psychic without her make up.
+The backstory is the real story.
+### LORD, 
+add the lord the characters once the psychic discover him, but with weird things!!!!!!
+ 
 
 ## Assets & artistic Tasks
+**MANOR outside** Only one outside manor image? no front or back ? AND the storm should be at night!
 
 BROKEN
 Thread, leave together: CHeck others
@@ -95,9 +91,22 @@ THread DOCTOR Image for broken
 ### IMAGES NEXT REBUILD
 
 ### Characters
-- [ ] Redraw character face AND add full body size images ? Is it necessary?
 
+- [ ] Redraw character face AND add full body size images ? Is it necessary?
 - [ ] NEW NAME NEEDED ("Blackthorn Manor" / AIMERE (Artificial Intelligence Module for Evidence Reconstruction & Evaluation : AImere House => look again (AI-MERE I am here?))).
+
+
+#### HOW TO integrate characters in locations
+**renpy positioning**
+- EAsier
+- Not working with dinner table and other sitting config
+**Flux integration**
+- Complicated and inconsistent
+- Lot of work, duplicate image
+- BEtter integration
+
+
+
 
 #### Locations
 Finish normal list- last one is train_second
@@ -107,14 +116,6 @@ Multiple Class in train for outside IMAGEs
   
 ### MUSIC with producer AI
 Get new music from internet and put them at the right place
-
-## SURVIVE MECHANIC Fable
-
-If you still have money in september, use fable to implemented the SURVIVE mechanic. That will start the META story each time a player is saved, up until you can play the butler!!
-
-
-## FAble idea => Move all the Image tasks to comfy ui (one with klein one with dev)
-
 
 ## Update ITCH.IO
 - Update itch.io
@@ -134,10 +135,3 @@ container to this :
     }
 ```
  
-
-## FUN, list of people to give your game to.
-- STuart thorton
-- Stephen king
-- Lucas Pope
-
-

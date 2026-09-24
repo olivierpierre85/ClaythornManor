@@ -1,4 +1,8 @@
 # 🎨 Assets Backlog ( Visual Assets generation )
+## GEN
+
+art? Wait for a faster 9b KV?
+=> REGENERATE image locations based on images that works to generate others? like it is done with characters?
 
 ## Locations
 - Double check new locations from NEW map.

@@ -159,7 +159,7 @@ label host_day2_hunt:
     """
 
     """
-    Nobody answers me.
+    For a moment, nobody answers me.
 
     That is a flimsy excuse.
 
@@ -173,7 +173,7 @@ label host_day2_hunt:
     """
 
     """
-    He smiles at me and nods.
+    Captain Sinha smiles at me and nods.
 
     But I am certain he noticed how poor my shot was.
     """

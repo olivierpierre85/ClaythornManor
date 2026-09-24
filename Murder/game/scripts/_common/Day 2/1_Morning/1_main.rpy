@@ -60,9 +60,13 @@ label common_day2_morning_host_death:
     """
 
     if current_character != host_details:
-        # TODO maybe  make a different sentence for everyone
         """
         We continue eating slowly in silence for a moment when the doctor enters the room.
+        """
+    
+    else:
+        """
+        Some minutes later, Doctor Baldwin comes back down.
         """
 
     return
