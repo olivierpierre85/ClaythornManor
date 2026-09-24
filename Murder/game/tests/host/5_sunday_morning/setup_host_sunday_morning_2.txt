@@ -61,7 +61,6 @@ Lady Claythorn: Of course.
 There is nothing else for us here.
 Map Choice: Garden
 The gravel is empty, and the tracks of the car go off down the drive in the wet.
-A mist hangs over the lawn.
 At the bottom of the garden stands a small shed.
 We walk down to it.
 I try to open it but it is locked.
@@ -83,8 +82,10 @@ He gets in and tries the starter.
 It turns over once and dies.
 Sushil Sinha: Dry.
 Sushil Sinha: There is not a drop in the tank.
-Sushil Sinha: Without petrol it is no use to us.
-Sushil Sinha: But there may be some elsewhere on the estate.
+Sushil Sinha: But the petrol tin from the shed should solve that.
+Lady Claythorn: Great! Now we can finally leave.
+Sushil Sinha: Yes, we could actually leave now, but we could also keep searching to make sure we have not forgotten anything.
+Sushil Sinha: It is your decision.
 He closes the bonnet gently, and we leave the car as it was.
 Map Choice: Library
 The book is still open on the table, at the page I read on Friday.
@@ -95,35 +96,48 @@ A dozen Claythorns in their frames, looking down the gallery at nobody.
 They were here before this weekend, and they will be here when we are gone.
 Not one of them wears my face, and this morning I am glad of it.
 Map Choice: Butler's Room
-The attic stair.
-On Friday every door up here was locked against me, and I had no key.
-This morning the Captain has two.
-His room.
-The bed is stripped and the wardrobe is empty. He took his own things, at least.
-Against the far wall stands a cabinet with an iron band across its doors.
-The master key opens it.
-The candlesticks from the dining table. The salver. The good spoons.
-A flat case, and inside it the pearls I wore on Friday night.
-Everything the house was dressed with for this weekend, packed and ready, and left behind.
-Sushil Sinha: He left in a hurry.
-Lady Claythorn: No.
-Lady Claythorn: He had the whole evening to load that car, and he had this key.
-Lady Claythorn: He did not leave it. He means to come back for it.
-The Captain closes the cabinet and turns the key in it again.
-Sushil Sinha: Then we had better not be here when he does.
+Sushil Sinha: The attic? Are you sure there is something of use up here?
+Lady Claythorn: I don't know. I assume most of the rooms would be closed.
+Sushil Sinha: Maybe, but the key the butler gave me might work here.
+Lady Claythorn: Let us try, then.
+The Captain inserts the key into the door.
+It opens.
+Sushil Sinha: It works, so I assume we can open all of them now.
+Lady Claythorn: That is good to know.
+The butler's room. It is clear that someone left it in a hurry.
+Against the far wall stands a tall cabinet with glass doors, and the doors are open.
+The shelves behind them are bare.
+Sushil Sinha: I would assume the silver was kept in there.
+Sushil Sinha: The candlesticks, the salver...
+Sushil Sinha: It looks like it is gone.
+Lady Claythorn: I swear, it was never part of the plan to steal anything.
+Sushil Sinha: Plan or not, it is clear our friend had few scruples about taking what was not his.
+I stand and look at the empty shelves.
+He gave the orders all weekend, and I took him for an actor.
+But he was a thief as well, it seems.
 Map Choice: Storage Room
-Trunks, mostly empty.
-A spare livery on a hanger, and a hamper with the name of a London theatrical supplier on the lid.
-The whole weekend came up here in these boxes, and it will not be going back in them.
+Trunks stacked three deep, furniture under dust sheets, boxes that cannot have been opened in a generation.
+Lady Claythorn: There could be anything in here.
+Sushil Sinha: There could.
+Sushil Sinha: And it would take us the better part of a day to find it.
+Lady Claythorn: I don't think we have that kind of time.
+Sushil Sinha: Nor do I.
+Sushil Sinha: Let us leave it for now.
+I pull the door to behind us, and the dust settles back over the lot of it.
 Map Choice: Male Servants Room
-The footman's room, stripped to the bed frame.
-He was the best of us, I think. Not one word out of place all weekend.
-I hope he is a long way from here.
+Two narrow beds, both stripped to the mattress, and an empty peg behind the door.
+Lady Claythorn: The footman slept here.
+Lady Claythorn: Thomas, he asked me to call him, which was not his name either.
+Sushil Sinha: Whoever he was, he is gone now.
+Sushil Sinha: And he most likely took his belongings with him.
+Sushil Sinha: So there is no need to linger here.
+Lady Claythorn: You are right.
 Map Choice: Female Servants Room
-The girl's room.
-A hairbrush on the washstand, forgotten in the hurry.
-She was the youngest of us, and the most frightened, and she had the least to be frightened of.
-I hope she is a long way from here too.
+Two beds, a washstand, and the shelf above them swept bare.
+She has left nothing behind at all.
+Sushil Sinha: It is empty. I do not think we will find anything here.
+Lady Claythorn: No.
+Lady Claythorn: Let us look somewhere else.
 Map Choice: Tea room
 The fire is dead, and there is nothing of interest here.
 Voices, somewhere on the other side of the hall.
@@ -138,10 +152,33 @@ Sushil Sinha: You are right, better to avoid them for the time being.
 Map Choice: Kitchen
 The kitchen is empty.
 But the food that was meant to be prepared today is still lying on the counter.
-Lady Claythorn: We do not know how long the journey will take, so we should take some provisions.
-Sushil Sinha: Good idea.
-Sushil Sinha: Let us take enough to get us through the afternoon.
-I put bread and some cheese into a basket, with a bottle of water, in case it proves useful later.
+Sushil Sinha: Sunday luncheon, for the whole party.
+Lady Claythorn: Nobody is going to cook it now.
+We leave it where it lies.
 We have been through the house for the better part of the morning.
 The Captain looks at his watch, and we go back to the hall.
 There is no time left for anything else.
+Sushil Sinha: We forgot about Mr Manning.
+Sushil Sinha: We should check he is safe.
+Lady Claythorn: Of course.
+Sushil Sinha: Mr Manning?
+Nothing.
+He turns the key and pushes the door open, and he stops in the doorway.
+Mr Manning lies on his bed with his head turned to the wall.
+The sheet is dark from his chin to his chest, and the dark has run down onto the floor.
+His throat has been cut.
+I do not scream.
+I put my hand over my mouth and I stay where I am, and the Captain takes two steps into the room and no more.
+Sushil Sinha: There is no need to go closer.
+Sushil Sinha: He is dead, there is no doubt about it.
+He comes back out and pulls the door to behind him, and for a moment we both stand in the corridor and say nothing.
+Sushil Sinha: The door was locked.
+Sushil Sinha: I locked it myself.
+Lady Claythorn: The butler is the only one with another key.
+Lady Claythorn: But that cannot be. He left yesterday, we watched him go!
+Sushil Sinha: Indeed, there is something else at play here.
+Sushil Sinha: I do not understand what has happened, and I do not like it.
+I feel a shiver roll down my spine.
+Sushil Sinha: Let us go. There is no reason to stay here any longer.
+Sushil Sinha: And there is nothing we can do for him now.
+We come back down to the hall, too shocked to speak.

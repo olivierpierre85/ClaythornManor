@@ -37,6 +37,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DIALOGUE_TAB = ROOT / "dialogue.tab"
 TESTS_ROOT = ROOT / "game" / "tests"
+REPORT_NAME = "dialogue_coverage.txt"
 
 SKIP_PREFIXES = ("Chapter:", "Character:", "Menu Choice:", "Map Choice:")
 
@@ -88,6 +89,9 @@ def collect_test_lines(tests_root: Path, character: str | None) -> set[str]:
 
     lines: set[str] = set()
     for txt in search_root.rglob("*.txt"):
+        # Skip the reports this script writes, which quote the missing lines.
+        if txt.name == REPORT_NAME:
+            continue
         for raw in txt.read_text(encoding="utf-8").splitlines():
             stripped = raw.strip()
             if not stripped or stripped.startswith(SKIP_PREFIXES):
@@ -164,9 +168,9 @@ def main() -> int:
 
     # Save the report alongside the tests it describes.
     if character:
-        report_path = tests_path / character / "dialogue_coverage.txt"
+        report_path = tests_path / character / REPORT_NAME
     else:
-        report_path = tests_path / "dialogue_coverage.txt"
+        report_path = tests_path / REPORT_NAME
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text("\n".join(output_lines) + "\n", encoding="utf-8")
     print(f"Report saved to: {report_path}")

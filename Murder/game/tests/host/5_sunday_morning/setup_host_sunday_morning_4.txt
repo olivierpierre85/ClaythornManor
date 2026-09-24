@@ -74,7 +74,7 @@ Sushil Sinha: You are right, better to avoid them for the time being.
 Map Choice: Entrance Hall
 The hall is silent.
 The telephone sits on its table under the stair.
-Captain Sinha picks it up to make sure it is actually dead.
+Captain Sinha picks it up.
 Sushil Sinha: The line is dead. It is useless.
 There is nothing else to do here.
 Map Choice: Library
@@ -101,27 +101,31 @@ Mr Moody, under his sheet, in the cold.
 The first of them.
 On Saturday morning I thought it was the worst thing that could happen to this weekend.
 Map Choice: Butler's Room
-The attic stair.
-On Friday every door up here was locked against me, and I had no key.
-This morning the Captain has two.
-His room.
-The bed is stripped and the wardrobe is empty. He took his own things, at least.
-Against the far wall stands a cabinet with an iron band across its doors.
-The master key opens it.
-The candlesticks from the dining table. The salver. The good spoons.
-A flat case, and inside it the pearls I wore on Friday night.
-Everything the house was dressed with for this weekend, packed and ready, and left behind.
-Sushil Sinha: He left in a hurry.
-Lady Claythorn: No.
-Lady Claythorn: He had the whole evening to load that car, and he had this key.
-Lady Claythorn: He did not leave it. He means to come back for it.
-The Captain closes the cabinet and turns the key in it again.
-Sushil Sinha: Then we had better not be here when he does.
+Sushil Sinha: The attic? Are you sure there is something of use up here?
+Lady Claythorn: I don't know. I assume most of the rooms would be closed.
+Sushil Sinha: Maybe, but the key the butler gave me might work here.
+Lady Claythorn: Let us try, then.
+The Captain inserts the key into the door.
+It opens.
+Sushil Sinha: It works, so I assume we can open all of them now.
+Lady Claythorn: That is good to know.
+The butler's room. It is clear that someone left it in a hurry.
+Against the far wall stands a tall cabinet with glass doors, and the doors are open.
+The shelves behind them are bare.
+Sushil Sinha: I would assume the silver was kept in there.
+Sushil Sinha: The candlesticks, the salver...
+Sushil Sinha: It looks like it is gone.
+Lady Claythorn: I swear, it was never part of the plan to steal anything.
+Sushil Sinha: Plan or not, it is clear our friend had few scruples about taking what was not his.
+I stand and look at the empty shelves.
+He gave the orders all weekend, and I took him for an actor.
+But he was a thief as well, it seems.
 Map Choice: Female Servants Room
-The girl's room.
-A hairbrush on the washstand, forgotten in the hurry.
-She was the youngest of us, and the most frightened, and she had the least to be frightened of.
-I hope she is a long way from here too.
+Two beds, a washstand, and the shelf above them swept bare.
+She has left nothing behind at all.
+Sushil Sinha: It is empty. I do not think we will find anything here.
+Lady Claythorn: No.
+Lady Claythorn: Let us look somewhere else.
 Map Choice: George IV Bedroom
 Sushil Sinha: Mr Manning?
 Nothing.

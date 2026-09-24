@@ -62,7 +62,6 @@ Sushil Sinha: But there may be some elsewhere on the estate.
 He closes the bonnet gently, and we leave the car as it was.
 Map Choice: Garden
 The gravel is empty, and the tracks of the car go off down the drive in the wet.
-A mist hangs over the lawn.
 At the bottom of the garden stands a small shed.
 We walk down to it.
 I try to open it but it is locked.
@@ -79,10 +78,9 @@ Sushil Sinha: It is your decision.
 Map Choice: Kitchen
 The kitchen is empty.
 But the food that was meant to be prepared today is still lying on the counter.
-Lady Claythorn: We do not know how long the journey will take, so we should take some provisions.
-Sushil Sinha: Good idea.
-Sushil Sinha: Let us take enough to get us through the afternoon.
-I put bread and some cheese into a basket, with a bottle of water, in case it proves useful later.
+Sushil Sinha: Sunday luncheon, for the whole party.
+Lady Claythorn: Nobody is going to cook it now.
+We leave it where it lies.
 Map Choice: George IV Bedroom
 Sushil Sinha: Mr Manning?
 Nothing.
@@ -109,7 +107,7 @@ Sushil Sinha: And there is nothing we can do for him now.
 Map Choice: Entrance Hall
 The hall is silent.
 The telephone sits on its table under the stair.
-Captain Sinha picks it up to make sure it is actually dead.
+Captain Sinha picks it up.
 Sushil Sinha: The line is dead. It is useless.
 There is nothing else to do here.
 Voices, somewhere on the other side of the hall.

@@ -81,7 +81,7 @@ Menu Choice: Keep to yourself and see out the meal
 The last plates go out, and it is up to me to call the end of dinner.
 Lady Claythorn: It looks as though everyone has finished their meal.
 Lady Claythorn: I shall let you return to your rooms, then.
-Lady Claythorn: Afterwards there will be drinks in the billiard room for anyone who cares to sit up a while.
+Lady Claythorn: Afterwards there will be drinks in the billiard room for anyone who is inclined.
 Chairs go back.
 The party moves off.
 And that is it for dinner.
@@ -129,7 +129,7 @@ Cushions plumped, glasses gone, not a ring left on the wood.
 Map Choice: Garden
 Rain, and a wind coming up through the trees.
 I stand in the doorway long enough to feel the cold on my face.
-I won't be able to go further without ruining my dress.
+I will not be able to go further without ruining my dress.
 So I go back inside before anyone sees the lady of the house standing in the wet.
 Map Choice: Dining Room
 The table has already been cleared.
@@ -157,10 +157,11 @@ Butler: You should do better tomorrow.
 He is right, of course.
 I have not been careful enough.
 If I want this weekend to be a success, I should pay more attention to details.
-Butler: Now, if you will excuse me.
-Butler: We shall meet again tomorrow.
-Lady Claythorn: Of course, good night.
-He leaves without another word.
+Butler: Now, I brought the speech to introduce the hunt tomorrow morning.
+Butler: Be ready to say it from memory.
+Lady Claythorn: Of course.
+He hands me a piece of paper then leaves without another word.
 I suppose he will only play the dutiful servant when we have company.
 Anyway, it has been a long day, so I take my clothes off and get into bed.
-It is not long before I fall asleep.
+I read the speech a few times until I am confident I know it by heart.
+Afterwards, I quickly fall asleep.

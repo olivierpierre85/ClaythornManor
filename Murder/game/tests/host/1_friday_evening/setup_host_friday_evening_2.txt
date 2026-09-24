@@ -71,14 +71,13 @@ Lady Claythorn: Of course, but ...
 Thomas Moody: This house is splendid, for instance.
 Thomas Moody: Has it been in your family long?
 Lady Claythorn: Well, yes ...
-He does not give me the chance to ask a single question of my own.
+He does not give me the chance to ask him another question.
 And that is how it goes for the whole of dinner.
 I feel as though I am being interrogated, and I must be extremely careful not to give anything away.
-In the end, I do not manage to ask him a single question.
 The last plates go out, and it is up to me to call the end of dinner.
 Lady Claythorn: It looks as though everyone has finished their meal.
 Lady Claythorn: I shall let you return to your rooms, then.
-Lady Claythorn: Afterwards there will be drinks in the billiard room for anyone who cares to sit up a while.
+Lady Claythorn: Afterwards there will be drinks in the billiard room for anyone who is inclined.
 Chairs go back.
 The party moves off.
 And that is it for dinner.
@@ -100,7 +99,7 @@ Rat poison.
 And it is half-empty.
 In itself, it is not unusual.
 Old houses have rats.
-Except that this one was shut up until yesterday, and will be again at the end of this weekend.
+Except that this house was shut up until yesterday, and will be again at the end of this weekend.
 Why would anyone bother getting rid of rats for a mere couple of days?
 I leave without a good answer.
 Map Choice: Kitchen
@@ -118,13 +117,13 @@ Lady Claythorn: Good night.
 Young woman: Good night, m'lady.
 Map Choice: Garage
 Petrol and cold iron, and a different car from the one we came up in.
-An old tourer, well kept.
+An old tourer.
 It does not look as though it will start.
 Nothing for me here.
 Map Choice: Gun room
 Sporting guns behind glass, and a handgun lying out on the table.
-It reminds me of a theatre trope I once read about.
-Chekhov's Gun.
+It reminds me of a Chekhov's play I once saw.
+Though I am not sure why.
 Better leave it there.
 Map Choice: Storage Room
 I climb the stairs, even though I probably should not.
@@ -163,8 +162,7 @@ Butler: You went below stairs.
 Butler: The mistress of a house does not go down to the servants' floor.
 Butler: She rings, and she waits, and they come up to her.
 Lady Claythorn: Surely that cannot be so bad.
-Lady Claythorn: I am sure nobody noticed.
-Butler: You cannot be certain of that.
+Lady Claythorn: I am certain nobody noticed.
 Butler: Even so, you might have run by chance into a guest, and that would have raised questions.
 Butler: You should not take such a risk.
 Lady Claythorn: Very well.
@@ -178,10 +176,11 @@ Butler: You should do better tomorrow.
 He is right, of course.
 I have not been careful enough.
 If I want this weekend to be a success, I should pay more attention to details.
-Butler: Now, if you will excuse me.
-Butler: We shall meet again tomorrow.
-Lady Claythorn: Of course, good night.
-He leaves without another word.
+Butler: Now, I brought the speech to introduce the hunt tomorrow morning.
+Butler: Be ready to say it from memory.
+Lady Claythorn: Of course.
+He hands me a piece of paper then leaves without another word.
 I suppose he will only play the dutiful servant when we have company.
 Anyway, it has been a long day, so I take my clothes off and get into bed.
-It is not long before I fall asleep.
+I read the speech a few times until I am confident I know it by heart.
+Afterwards, I quickly fall asleep.

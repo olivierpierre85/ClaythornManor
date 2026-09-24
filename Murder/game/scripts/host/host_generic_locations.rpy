@@ -53,9 +53,7 @@ label host_garage_default:
         """
         The old tourer is still here.
 
-        It does not look any more likely to start than it did the last time.
-
-        Nothing for me here.
+        Nothing else for me here.
         """
 
     else:
@@ -65,7 +63,7 @@ label host_garage_default:
 
         An old tourer.
 
-        It does not look as though it will start.
+        It looks so old I am not sure it could start.
 
         Nothing for me here.
         """

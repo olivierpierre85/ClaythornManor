@@ -71,14 +71,13 @@ Lady Claythorn: Of course, but ...
 Thomas Moody: This house is splendid, for instance.
 Thomas Moody: Has it been in your family long?
 Lady Claythorn: Well, yes ...
-He does not give me the chance to ask a single question of my own.
+He does not give me the chance to ask him another question.
 And that is how it goes for the whole of dinner.
 I feel as though I am being interrogated, and I must be extremely careful not to give anything away.
-In the end, I do not manage to ask him a single question.
 The last plates go out, and it is up to me to call the end of dinner.
 Lady Claythorn: It looks as though everyone has finished their meal.
 Lady Claythorn: I shall let you return to your rooms, then.
-Lady Claythorn: Afterwards there will be drinks in the billiard room for anyone who cares to sit up a while.
+Lady Claythorn: Afterwards there will be drinks in the billiard room for anyone who is inclined.
 Chairs go back.
 The party moves off.
 And that is it for dinner.
@@ -162,9 +161,9 @@ Sushil Sinha: That was very rare for someone of Indian descent.
 Sushil Sinha: In any case, that's why I live in England today.
 He finishes to a small, warm silence.
 Lady Claythorn: Thank you, Captain. I doubt any of us will forget it.
-Lady Claythorn: Now, if you excuse me, it has gotten rather late.
+Lady Claythorn: Now, if you will excuse me, it has gotten rather late.
 Lady Claythorn: I should head back to my room for the night.
-The others follow me lead.
+The others follow my lead.
 Someone knocking at this hour.
 That can only be him.
 Butler: My lady?
@@ -185,10 +184,11 @@ Butler: You should do better tomorrow.
 He is right, of course.
 I have not been careful enough.
 If I want this weekend to be a success, I should pay more attention to details.
-Butler: Now, if you will excuse me.
-Butler: We shall meet again tomorrow.
-Lady Claythorn: Of course, good night.
-He leaves without another word.
+Butler: Now, I brought the speech to introduce the hunt tomorrow morning.
+Butler: Be ready to say it from memory.
+Lady Claythorn: Of course.
+He hands me a piece of paper then leaves without another word.
 I suppose he will only play the dutiful servant when we have company.
 Anyway, it has been a long day, so I take my clothes off and get into bed.
-It is not long before I fall asleep.
+I read the speech a few times until I am confident I know it by heart.
+Afterwards, I quickly fall asleep.

@@ -48,7 +48,6 @@ Nothing moves.
 Sushil Sinha: Please, lead the way.
 Map Choice: Garden
 The gravel is empty, and the tracks of the car go off down the drive in the wet.
-A mist hangs over the lawn.
 At the bottom of the garden stands a small shed.
 We walk down to it.
 I try to open it but it is locked.
@@ -70,8 +69,10 @@ He gets in and tries the starter.
 It turns over once and dies.
 Sushil Sinha: Dry.
 Sushil Sinha: There is not a drop in the tank.
-Sushil Sinha: Without petrol it is no use to us.
-Sushil Sinha: But there may be some elsewhere on the estate.
+Sushil Sinha: But the petrol tin from the shed should solve that.
+Lady Claythorn: Great! Now we can finally leave.
+Sushil Sinha: Yes, we could actually leave now, but we could also keep searching to make sure we have not forgotten anything.
+Sushil Sinha: It is your decision.
 He closes the bonnet gently, and we leave the car as it was.
 Map Choice: Stop searching and prepare to leave
 My own room, where I woke this morning.
@@ -86,3 +87,27 @@ Sushil Sinha: We can meet in the hall afterwards.
 Lady Claythorn: All right, please do not be long.
 I do not look back at the room.
 Whatever we decide now, I am done with this place.
+Sushil Sinha: We forgot about Mr Manning.
+Sushil Sinha: We should check he is safe.
+Lady Claythorn: Of course.
+Sushil Sinha: Mr Manning?
+Nothing.
+He turns the key and pushes the door open, and he stops in the doorway.
+Mr Manning lies on his bed with his head turned to the wall.
+The sheet is dark from his chin to his chest, and the dark has run down onto the floor.
+His throat has been cut.
+I do not scream.
+I put my hand over my mouth and I stay where I am, and the Captain takes two steps into the room and no more.
+Sushil Sinha: There is no need to go closer.
+Sushil Sinha: He is dead, there is no doubt about it.
+He comes back out and pulls the door to behind him, and for a moment we both stand in the corridor and say nothing.
+Sushil Sinha: The door was locked.
+Sushil Sinha: I locked it myself.
+Lady Claythorn: The butler is the only one with another key.
+Lady Claythorn: But that cannot be. He left yesterday, we watched him go!
+Sushil Sinha: Indeed, there is something else at play here.
+Sushil Sinha: I do not understand what has happened, and I do not like it.
+I feel a shiver roll down my spine.
+Sushil Sinha: Let us go. There is no reason to stay here any longer.
+Sushil Sinha: And there is nothing we can do for him now.
+We come back down to the hall, too shocked to speak.

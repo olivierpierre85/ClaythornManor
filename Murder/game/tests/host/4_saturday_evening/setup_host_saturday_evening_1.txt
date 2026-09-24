@@ -309,7 +309,7 @@ Lady Claythorn: We should hurry if we want to catch him before he leaves.
 Sushil Sinha: Let us not waste time then.
 Lady Claythorn: But he might be dangerous.
 Sushil Sinha: Do not worry, I have a pistol on me if he tries anything.
-He sets the book down and rush to the entrance hall.
+He sets the book down and rushes to the entrance hall.
 The hall is dark and the stair is empty.
 But we can hear the sound of an engine in the driveway.
 The car stands on the gravel with its lamps lit and the luggage already strapped behind.
@@ -320,42 +320,56 @@ He sees the Captain first.
 He does not look at me at all.
 Whatever he reads in that face, he does not care to discuss it.
 He is behind the wheel before either of us has crossed the gravel.
-Captain Sinha chase the car for a second but quickly realise it is pointless.
-It is on the road now and we wil not catch it.
-Sushil Sinha: Well, he fell guilty enough to run without even trying to give an explanation.
+Captain Sinha chases the car for a moment, but he quickly realises it is pointless.
+It is on the road now, and we will not catch it.
+Sushil Sinha: Well, he felt guilty enough to run without even trying to give an explanation.
 Sushil Sinha: That tells us all we need to know.
 Lady Claythorn: But what should we do now?
-Sushil Sinha: Well I am afraid we will have to wait tomorrow.
+Sushil Sinha: Well, I am afraid we will have to wait until tomorrow.
 Lady Claythorn: And then?
-Sushil Sinha: Then we will leave as well, on foot if we need.
+Sushil Sinha: Then we will leave as well, on foot if we must.
 Lady Claythorn: Right.
 The cold comes up through my shoes.
 I have walked out here in my dinner things without a coat, and only noticed now.
-The captain notices my shivering.
+The Captain notices my shivering.
 Sushil Sinha: Let us go back inside, there is no point waiting here in the cold.
-We must wake the others and tell them what you have told me.
-They have a right to know what has been done to them.
-Lady Claythorn: No, Captain.
-Lady Claythorn: Two people are dead, and the man responsible has just driven off and left the work half done.
-Lady Claythorn: He would not do that unless somebody in that house is willing to finish it for him.
-Sushil Sinha: You believe one of them is his.
-Lady Claythorn: I believe I cannot tell which, and nor can you.
-Lady Claythorn: If we speak tonight, we tell the accomplice exactly how much we know.
-He is quiet for a moment.
-He does not argue before he has finished thinking, and I have come to like that in him.
+Sushil Sinha: I think now we should wake the others and tell them what you have told me.
+Sushil Sinha: They have a right to know what is happening.
+Lady Claythorn: I don't know, Captain.
+Lady Claythorn: Maybe telling everyone is not the best way.
+Sushil Sinha: Why is that?
+Lady Claythorn: Well, earlier today the butler claimed that he had received word from whoever is behind this.
+Lady Claythorn: But as I told you, the phone is down.
+Lady Claythorn: So I am not sure how he got that message.
+Lady Claythorn: Unless...
+Sushil Sinha: Unless the culprit is somewhere in this house.
+Lady Claythorn: Yes, the house is big enough that they could hide in a room, but I have also imagined that...
+Sushil Sinha: That they could be among us.
+Sushil Sinha: One of the guests could be manipulating what is happening here.
+Lady Claythorn: Yes, I may sound paranoid, but I do not want to exclude that possibility.
+Sushil Sinha: I see.
 Sushil Sinha: Very well.
 Sushil Sinha: We say nothing to anyone until daylight.
-Sushil Sinha: But I will not have you sleeping alone at the end of that corridor.
-Sushil Sinha: I shall sit up in your room tonight.
+Sushil Sinha: We will decide what to do next then.
+Sushil Sinha: In the meantime, I do not like to leave you alone in your room.
+Lady Claythorn: What do you propose?
+Sushil Sinha: I could sit up in your room tonight.
+Sushil Sinha: It would be safer this way.
 Lady Claythorn: In my room.
 Sushil Sinha: In a chair, by the door, with the lamp out.
 Sushil Sinha: I am aware of how that looks.
 Sushil Sinha: I am rather more concerned with how the alternative might look in the morning.
-A lady would refuse.
-I have been a lady all weekend, and it has very nearly got me killed.
 Lady Claythorn: Thank you, Captain.
-We go back up to the house together, and neither of us says another word.
-Map Choice: Lock your door and try to sleep
-I lock my door and lie down in the dark.
-Somebody else in this house now knows what I am, and knows it from my own mouth.
-It ought to frighten me more than it does.
+Lady Claythorn: You are right, it is probably safer for me.
+Lady Claythorn: You are sure you won't be too uncomfortable in a chair?
+Sushil Sinha: I have slept on worse.
+Sushil Sinha: And besides, I do not think I will be able to sleep much tonight.
+Lady Claythorn: You are right, me neither.
+Sushil Sinha: Then it is decided.
+Sushil Sinha: We can go up now if you wish.
+Sushil Sinha: It is late enough.
+Lady Claythorn: All right.
+We both go to my room.
+If anyone were to see us, it would look a little scandalous, but I am beyond caring about that tonight.
+As agreed, the Captain takes a chair, and I lie down fully clothed on the bed.
+It takes a while, but in the end I feel myself growing tired.

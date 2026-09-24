@@ -145,6 +145,21 @@ init python in test:
             if hasattr(details_obj, 'endings'):
                 details_obj.endings.unlock(n)
 
+    # threads is a view over the very same items as important_choices, objects
+    # and observations, so the four lists are copied in a single deepcopy to keep
+    # sharing them. Copied one by one, threads.is_unlocked('petrol_tin') would
+    # never see the objects.unlock('petrol_tin') made by the script.
+    INFO_LISTS = ('important_choices', 'objects', 'observations', 'threads')
+
+    def snapshot_info_lists(character):
+        import copy
+        return copy.deepcopy(tuple(getattr(character, name) for name in INFO_LISTS))
+
+    def restore_info_lists(character, snapshot):
+        import copy
+        for name, info_list in zip(INFO_LISTS, copy.deepcopy(snapshot)):
+            setattr(character, name, info_list)
+
     def start(character, chapter, plan_file=None, threads=None):
         """
         Consolidated setup for a chapter test.
@@ -157,10 +172,9 @@ init python in test:
         # Save a clean snapshot if not already saved to restore fully between plans
         if not hasattr(character, '_test_pristine_snapshot'):
             character._test_pristine_snapshot = copy.deepcopy(character.saved_variables)
-            # We also snapshot threads, progress, and observations.
-            character._test_pristine_threads = copy.deepcopy(character.threads)
+            # We also snapshot threads (with the lists behind them) and progress.
+            character._test_pristine_info = snapshot_info_lists(character)
             character._test_pristine_progress = copy.deepcopy(character.progress)
-            character._test_pristine_observations = copy.deepcopy(character.observations)
         
         autorunner.reset()
         if plan_file:
@@ -223,10 +237,9 @@ init python in test:
                     import copy
                     if hasattr(character, '_test_pristine_snapshot'):
                         character.saved_variables = copy.deepcopy(character._test_pristine_snapshot)
-                        character.threads = copy.deepcopy(character._test_pristine_threads)
+                        restore_info_lists(character, character._test_pristine_info)
                         character.progress = copy.deepcopy(character._test_pristine_progress)
-                        character.observations = copy.deepcopy(character._test_pristine_observations)
-                        
+
                     if hasattr(character, 'reset_information'):
                         character.reset_information()
 
@@ -316,9 +329,8 @@ init python in test:
             import copy
             if hasattr(character, '_test_pristine_snapshot'):
                 character.saved_variables = copy.deepcopy(character._test_pristine_snapshot)
-                character.threads = copy.deepcopy(character._test_pristine_threads)
+                restore_info_lists(character, character._test_pristine_info)
                 character.progress = copy.deepcopy(character._test_pristine_progress)
-                character.observations = copy.deepcopy(character._test_pristine_observations)
 
             if hasattr(character, 'reset_information'):
                 character.reset_information()

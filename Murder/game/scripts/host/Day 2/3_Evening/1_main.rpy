@@ -350,8 +350,6 @@ label host_day2_evening:
 
     if host_details.threads.is_unlocked('trust_captain'):
 
-        $ change_room("bedroom_host", fadein)
-
         """
         We both go to my room.
 

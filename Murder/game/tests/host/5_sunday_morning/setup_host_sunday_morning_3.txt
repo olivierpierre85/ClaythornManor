@@ -82,7 +82,6 @@ I think I would feel better with a gun of my own.
 But I do not tell him that.
 Map Choice: Garden
 The gravel is empty, and the tracks of the car go off down the drive in the wet.
-A mist hangs over the lawn.
 At the bottom of the garden stands a small shed.
 We walk down to it.
 I try to open it but it is locked.
@@ -92,8 +91,10 @@ A workbench, a coil of rope, tools that have not been touched in years.
 And in the middle of the floor, a metal petrol tin catches my eye.
 The Captain unscrews the cap and puts his nose to it.
 Sushil Sinha: It is petrol, and it is half full.
-Sushil Sinha: If we had a car, there would be more than enough to reach the town.
-Lady Claythorn: Good, let us keep searching in that case.
+Sushil Sinha: That should help us reach the town with the car from the garage.
+Lady Claythorn: Great! Now we can finally leave.
+Sushil Sinha: Yes, we could actually leave now, but we could also keep searching to make sure we have not forgotten anything.
+Sushil Sinha: It is your decision.
 Map Choice: Queen Alexandra Bedroom
 Lady Claythorn: Miss Marsh's room.
 I raise my hand to knock, but the Captain stops me.

@@ -246,9 +246,9 @@ Lady Claythorn: We ought to have called the police this morning.
 Lady Claythorn: We might be blamed for that, even if we have done nothing wrong.
 Young woman: Maybe.
 Young woman: I should finish my packing, then.
+Lady Claythorn: Of course. I shall leave you to it.
 I do not think she believes me entirely, but she does not want to press the matter further.
 I cannot blame her.
-Lady Claythorn: Of course. I shall leave you to it.
 Map Choice: Storage Room
 No answer, as I expected.
 I try the handle.
