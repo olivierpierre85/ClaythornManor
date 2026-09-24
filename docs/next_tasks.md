@@ -2,10 +2,7 @@
 # Story
 ## Write Story: HOST
 
-### Maybe test it
-
-Library => Add joke for the butler. "I do not think any of the guest will want to read, some might not even be able to"
-
+### TEST full story
 
 ## Write Story: DRUNK
 **GEN IDEAS**
@@ -15,8 +12,7 @@ THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell ever
 THe drunk will describe the food with delight.
 
 => MAKE the drunk kill himself ON DAY 2 during dinner? Bring a tray and he is dead? => Faster and simpler
-  BUT could it possibly be a fake death? Doctor  wouldn't know, but captain could taje his pulse? LAUDANUM CAN induce deep sleep similar looking to death AND captain actually do not check very strongly, he just pretending
-
+  BUT could it possibly be a fake death? Doctor  wouldn't know, but captain could taje his pulse? LAUDANUM CAN induce deep sleep similar looking to death AND captain actually do not check very str
 
 ### FRiday
 Train is a mess, the story will jump from one place to the next until he will collapse in the tea room. at dinner he will also have glimpse of weird stuff.
@@ -37,12 +33,8 @@ He will observe what is happening during eating with TEd Harring,nurse and psych
 
 OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mister Harring. How are you feelin?" => Unlocks TED Harring? Or **unlock Butler**
 
-### Write Story:
 
-
-
-
-# General TODOs
+# General TODOs - From the top
 
 ## Unlocks
 Review ALL possible unlocks leading to drunk story. What is missing ...
