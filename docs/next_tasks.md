@@ -10,6 +10,10 @@ NEVER tested music, images,...
 ## Write Story: DRUNK
 **GEN IDEAS**
 
+CHeck drunk mode strenght!!
+
+**Make his speech incoherent? Or coherent for him but nobody understands? Yessssssss. But the you need to make dialos like that in the nurse and captain version!!!!!**
+
 THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point. (done already with host)
 
 THe drunk will describe the food with delight.
