@@ -128,21 +128,7 @@ label psychic_introduction:
     Since we're the only people left on the platform, he walks towards us, looking uncertain.
     """
 
-    footman """
-    Hello, sir. Are you going to Claythorn Manor?
-    """
-
-    drunk """ 
-    I am indeed.
-    """
-
-    footman """
-    Perfect, that should be everyone.
-    
-    You can follow me to the car, and we'll be on our way.
-
-    It will take about an hour to reach the manor.
-    """
+    call common_day1_afternoon_station_drunk
 
     $ change_room("inside_car")
 

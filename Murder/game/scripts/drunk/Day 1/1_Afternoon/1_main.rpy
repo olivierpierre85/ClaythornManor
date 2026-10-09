@@ -34,19 +34,19 @@ label drunk_introduction:
     #       - Still aboard when the train pulls into the station (Aberdeen, per the lad's invitation).
 
     inspector """
-    Sir, excuse me, can I see your ticket please?
+    Excuse me, sir. May I see your ticket, please?
     """
 
     drunk """
-    hum, sorry what?
+    Hm, sorry, what?
 
-    Where am I ?
+    Where am I?
     """
 
     inspector """
     We are in Scotland now.
 
-    We just passed Dundee a few moments ago.
+    We passed Dundee a few moments ago.
     """
 
     drunk """
@@ -54,17 +54,17 @@ label drunk_introduction:
     """
 
     inspector """
-    May I see your ticket now Sir please?
+    May I see your ticket now, please, sir?
     """
 
     drunk """
     My ticket?
 
-    Yes yes,
+    Yes, yes.
 
-    It is in my pocket I think.
+    It is in my pocket, I think.
 
-    Ah there is is.
+    Ah, there it is.
 
     Here you are.
     """
@@ -72,63 +72,130 @@ label drunk_introduction:
     inspector """
     Thank you.
 
-    I see you are getting off at aberdeen, it is the next stop.
+    I see you are getting off at Aberdeen. It is the next stop.
 
     We should arrive there soon, so be ready.
     """
 
     drunk """
-    Yes, thank you sir.
+    Yes, thank you, sir.
     """
 
     """
     Ready? To step off a train?
 
-    Even I can manage that, no worries about it.
+    Even I can manage that, surely.
 
     I look around me and notice I am alone in the compartment.
 
     Good.
 
-    My hand reach into my jacket and grasp my flask.
+    My hand reaches into my jacket and grasps my flask.
 
-    I still have a bit of time before arriving, it will be fine.
+    I hesitate for a second.
 
-    I put the flask to my lisp, then back in my pocket.
+    Maybe I should keep my wits about me a little while longer.
+
+    But the dark thoughts resurface.
+
+    Anxiety steps in again.
+
+    I put the flask to my lips.
+
+    I still have a little time before we arrive. It will be fine.
     """
 
-    play sound train_stopping
+    stop sound
 
     call wait_screen_transition()
 
     """
-    Wait are we there already?
+    Wait, are we there already?
 
     I grab my bag and rush out the door.
+
+    I almost fall on the platform, but manage to keep standing.
+
+    The platform is already emptying.
+
+    There is a group of people still waiting, so I go to them.
     """
 
     $ change_room("train_station")
 
-    #   Platform (psychic_introduction, captain_introduction)
-    #       - Sinha is first off and finds the footman, then Baxter joins them.
-    #       - The footman asks after "a Mr Manning". Neither of them has met him, so they wait for the train to empty.
-    #       - As the train is about to leave, he stumbles out of a door, almost falling
-    #         ("an inebriated gentleman erupts from the train at the last minute").
-    #       - The three of them are the only ones left on the platform. He walks over, looking uncertain.
-    #       - footman: "Hello, sir. Are you going to Claythorn Manor?" / drunk: "I am indeed."
-    #       - The footman announces about an hour's drive to the manor.
-    #       - He does not recognise Amelia Baxter (that only comes back on Sunday, 'lost_case').
-    #
-    #   ~16:00 Car (inside_car) (psychic_introduction, captain_introduction)
-    #       - Sinha joins Baxter in the back ("better to let Mr Manning sit in front"),
-    #         so he rides up front beside the footman, who is driving.
-    #       - He tries to make small talk with the driver, but his speech is incoherent.
-    #         The driver ignores him and keeps his eyes on the road.
-    #       - When he realises no one wishes to talk to him, he takes a sip from his flask
-    #         and falls asleep at once. The driver sighs with relief.
-    #       - Behind him, Sinha says he has had one too many, then monopolises the
-    #         conversation with Baxter for the rest of the drive.
-    #
+    call common_day1_afternoon_station_drunk
+
+    """
+    I look at my fellow travellers.
+
+    A middle-aged lady and an Indian fellow.
+
+    They keep talking amongst themselves and let me sit in the front.
+
+    I happily oblige.
+    """
+
+    $ change_room("inside_car")
+
+    drunk """
+    So, it looks like a storm is coming our way.
+    """
+
+    footman """
+    Yes, I do not like it.
+
+    I am not used to driving in such weather.
+    """
+
+    drunk """
+    Do not worry. I am sure we will be there before the worst of it is upon us.
+
+    But please, tell me about this place we are going to.
+    """
+
+    footman """
+    Claythorn Manor.
+
+    A grand place, with a rich history.
+    """
+
+    drunk """
+    Really? What kind of history?
+    """
+
+    footman """
+    Oh, there is a lot to say.
+
+    But I am sorry, I should focus on the road.
+
+    Lady Claythorn will be happy to tell you all about her house, I am certain.
+    """
+
+    drunk """
+    Right.
+    """
+
+    """
+    This man is not the talking type, it seems.
+
+    I glance at the back seat, but the other passengers avoid my gaze.
+
+    Well, there is not much to do for the next hour.
+
+    So be it, then.
+    """
+
+    call wait_screen_transition()
+
+    call change_time(16,15, 'Evening', 'Friday')
+
+    # Arrival to manor
+    $ stop_music(3)
+    
+    play sound thunder loop
+    
+    $ change_room("manor_exterior_storm")
+
     #   16:15 Manor exterior, storm (psychic_introduction)
     #       - He wakes up when the car stops, looking somewhat better than before.
     #       - The three of them walk to the door while the driver sees to the luggage.

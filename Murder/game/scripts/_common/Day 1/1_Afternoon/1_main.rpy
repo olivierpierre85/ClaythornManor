@@ -120,3 +120,32 @@ label common_day1_afternoon_station_doctor_nurse_broken:
 
 
     return
+
+
+# ------------------------------------
+#   PSYCHIC / DRUNK (shared arrival scene)
+#   Friday Afternoon - Train Station, Manning reaches the footman
+# ------------------------------------
+label common_day1_afternoon_station_drunk:
+
+    footman """
+    Hello, sir. Are you going to Claythorn Manor?
+    """
+
+    drunk """
+    I am indeed.
+
+    Samuel Manning.
+    """
+
+    footman """
+    Nice to meet you, Mr Manning.
+
+    Well, that should be everyone.
+
+    You can follow me to the car, and we'll be on our way.
+
+    It will take about an hour to reach the manor.
+    """
+
+    return
