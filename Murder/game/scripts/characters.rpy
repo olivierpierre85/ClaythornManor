@@ -46,6 +46,7 @@ label init_characters:
     define book         = Character("Book", what_style="letter_style")
     define butler       = Character("Butler", image="butler")
     define footman      = Character("[get_footman_name()]", image="footman")
+    define inspector    = Character("Ticket inspector")
     define maid_name    = "Young woman"
     define maid         = Character(maid_name, image="maid")
     define lord_name    = "Older Man"

@@ -1,8 +1,11 @@
 <!-- # cSpell:disable -->
 # Story
+There was no "second class" in 1924. Most British railways had dropped it long before. Trains had first and third class only, and third wasn't renamed second until 1956. Manning should be in a third-class compartment. The image file name train_inside_second doesn't matter, but any dialogue or narration should say "third class". My timeline comment at 1_main.rpy:32 says "second-class carriage", which is wrong. I can change it if you like.
+
 ## Write Story: HOST
 
 ### TEST full story
+NEVER tested music, images,...
 
 ## Write Story: DRUNK
 **GEN IDEAS**
