@@ -134,7 +134,7 @@ init python:
         renpy.show(resolve_room_image(new_room))
 
         if store.drunk_mode:
-            renpy.show_layer_at(drunk_wobble_layer, layer="master")
+            renpy.show_layer_at(drunk_wobble_layer(store.drunk_strength), layer="master")
         else:
             renpy.show_layer_at([], layer="master")
 
@@ -148,6 +148,15 @@ init python:
                 selected_floor = room.floor
 
         return
+
+    def set_drunk_mode(strength):
+        # 0 sobers up; 1 = slight wobble, 2 = average, 3 = huge.
+        store.drunk_mode = strength > 0
+        if store.drunk_mode:
+            store.drunk_strength = strength
+            renpy.show_layer_at(drunk_wobble_layer(strength), layer="master")
+        else:
+            renpy.show_layer_at([], layer="master")
 
     def play_music(music_style, start_song = 1, fadein_val = 5, fadeout_val = 5, loop_val = True):
         global current_music, previous_music, current_start_song, previous_start_song

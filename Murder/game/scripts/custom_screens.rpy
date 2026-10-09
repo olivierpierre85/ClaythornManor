@@ -266,36 +266,49 @@ init python:
         (3, "#FFFFFF20", 0, 0),
     ]
 
-# Replace your wobble with this one.
-transform drunk_wobble_layer:
+    # Wobble dials per strength: 1 = slight, 2 = average, 3 = huge.
+    # shift = drift in pixels, sway = rotation in degrees, *_time = seconds per swing.
+    # zoom overscans the layer so the rotated edges never show: it must cover
+    # cos(sway) + 16/9 * sin(sway) + 2 * shift_y / 1080 (about 1.02, 1.04, 1.11).
+    DRUNK_WOBBLE_LEVELS = {
+        1: dict(zoom=1.04, shift_x=3, shift_y=1.5, shift_time=1.6, sway=0.5, sway_time=1.7, text_x=1, text_y=0.5),
+        2: dict(zoom=1.10, shift_x=6, shift_y=3, shift_time=1.2, sway=1.2, sway_time=1.3, text_x=2, text_y=1),
+        3: dict(zoom=1.14, shift_x=16, shift_y=8, shift_time=1.6, sway=3.0, sway_time=1.9, text_x=4, text_y=2),
+    }
+
+    def drunk_dial(strength, name):
+        # strength None follows drunk_strength, so a bare
+        # "show layer master at drunk_wobble_layer" matches what change_room applies.
+        return DRUNK_WOBBLE_LEVELS[strength or store.drunk_strength][name]
+
+transform drunk_wobble_layer(strength=None):
     subpixel True
 
-    # Place the layer’s CENTER on the screen’s CENTER
+    # Place the layer's centre on the screen's centre
     xpos 0.5
     ypos 0.5
     xanchor 0.5
-    yanchor 0.5  # (typo-proofing below; keep yanchor)
     yanchor 0.5
 
-    # Rotate/offset around that center and overscan to hide edges
-    zoom 1.10
+    # Rotate/offset around that centre and overscan to hide edges
+    zoom (drunk_dial(strength, "zoom"))
     parallel:
-        linear 1.2 xoffset 6 yoffset -3
-        linear 1.2 xoffset -6 yoffset 3
+        linear (drunk_dial(strength, "shift_time")) xoffset (drunk_dial(strength, "shift_x")) yoffset (-drunk_dial(strength, "shift_y"))
+        linear (drunk_dial(strength, "shift_time")) xoffset (-drunk_dial(strength, "shift_x")) yoffset (drunk_dial(strength, "shift_y"))
         repeat
     parallel:
-        linear 1.3 rotate 1.2
-        linear 1.3 rotate -1.2
+        linear (drunk_dial(strength, "sway_time")) rotate (drunk_dial(strength, "sway"))
+        linear (drunk_dial(strength, "sway_time")) rotate (-drunk_dial(strength, "sway"))
         repeat
 
-transform drunk_text_wobble:
+transform drunk_text_wobble(strength=None):
     subpixel True
     # Much gentler than the scene wobble
     parallel:
-        linear 0.7 xoffset 2
-        linear 0.7 xoffset -2
+        linear 0.7 xoffset (drunk_dial(strength, "text_x"))
+        linear 0.7 xoffset (-drunk_dial(strength, "text_x"))
         repeat
     parallel:
-        linear 1.0 yoffset -1
-        linear 1.0 yoffset 1
+        linear 1.0 yoffset (-drunk_dial(strength, "text_y"))
+        linear 1.0 yoffset (drunk_dial(strength, "text_y"))
         repeat

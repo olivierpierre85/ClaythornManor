@@ -18,11 +18,9 @@ label drunk_introduction:
 
     call black_screen_transition("", "Samuel Manning")
 
-    $ drunk_mode = True
-
     $ change_room("train_inside_second", irisout)
 
-    show layer master at drunk_wobble_layer
+    $ set_drunk_mode(1) 
 
     play sound train_moving loop
 
@@ -147,6 +145,9 @@ label drunk_introduction:
     I am not used to driving in such weather.
     """
 
+
+    # She says his speech in the car is "incoherent". Here he speaks clearly. That could work on purpose, as he thinks he's making sense and they don't, but it's worth deciding.
+
     drunk """
     Do not worry. I am sure we will be there before the worst of it is upon us.
 
@@ -170,6 +171,7 @@ label drunk_introduction:
 
     Lady Claythorn will be happy to tell you all about her house, I am certain.
     """
+
 
     drunk """
     Right.

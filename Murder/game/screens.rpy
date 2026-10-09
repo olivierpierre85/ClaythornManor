@@ -112,7 +112,7 @@ screen say(who, what):
                 text who id "who"
 
         if drunk_mode:
-            text what id "what" at drunk_text_wobble style "drunk_dialogue"
+            text what id "what" at drunk_text_wobble(drunk_strength) style "drunk_dialogue"
         else:
             text what id "what"
 

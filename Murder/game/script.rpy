@@ -99,6 +99,8 @@ default full_testing_mode_unlocked_threads = []
 # default persistent.not_already_chosen = {}
 
 default drunk_mode = False
+# Wobble strength while drunk_mode is on: 1 = slight, 2 = average, 3 = huge.
+default drunk_strength = 2
 
 
 # My config variables
