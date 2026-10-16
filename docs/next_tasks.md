@@ -12,7 +12,7 @@ NEVER tested music, images,...
 
 CHeck drunk mode strenght!!
 
-**Make his speech incoherent? Or coherent for him but nobody understands? Yessssssss. But the you need to make dialos like that in the nurse and captain version!!!!!**
+**Make his speech very coherent for him but nobody understands? Yessssssss. But the you need to make dialog like that in the nurse and captain version!!!!!** => see no more common dialog
 
 THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point. (done already with host)
 
@@ -43,6 +43,19 @@ OR EVEN BETTER, he looks at TED HARRING waking up, the butler saying "Hello Mist
 
 # General TODOs - From the top
 
+## Doctor and Drunk
+
+the doctor and the drunk are too similar, how to differentiate?
+- The drunk could be faking it ? ALL of it? then I'll have to skip some funny parts.
+**- The drunk has no possibility to stop? No choice in the matter, it is too late for him unlike the doctor. (He tried, but could not, also do not want)**
+
+## No more common dialogs
+Each dialogs that needs to be repeated should be done using inner dialog OR dialog slight different to reflect the personality of the point of view.
+
+"Relatedly, the “reconstructive memory” tradition (Bartlett) and source-monitoring research show that we often recall what others said in our own words and voice, and sometimes misattribute their ideas to ourselves (cryptomnesia) or ours to them."
+
+Also could be link to the way AI works somehow.
+
 ## Unlocks
 Review ALL possible unlocks leading to drunk story. What is missing ...
 
@@ -69,6 +82,10 @@ add the lord the characters once the psychic discover him, but with weird things
  
 
 ## Assets & artistic Tasks
+
+# Drunk 
+drunk transition, wobbly and weird? Try later.
+
 **MANOR outside** Only one outside manor image? no front or back ? AND the storm should be at night!
 
 BROKEN
