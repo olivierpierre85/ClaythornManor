@@ -26,11 +26,6 @@ label drunk_introduction:
 
     $ play_music('chill')
 
-
-    #   15:45 Train, third-class carriage
-    #       - Baxter and Sinha travel first class, so they never see him on board.
-    #       - Still aboard when the train pulls into the station (Aberdeen, per the lad's invitation).
-
     inspector """
     Excuse me, sir. May I see your ticket, please?
     """
@@ -90,17 +85,9 @@ label drunk_introduction:
 
     My hand reaches into my jacket and grasps my flask.
 
-    I hesitate for a second.
+    I still have a little time before we arrive.
 
-    Maybe I should keep my wits about me a little while longer.
-
-    But the dark thoughts resurface.
-
-    Anxiety steps in again.
-
-    I put the flask to my lips.
-
-    I still have a little time before we arrive. It will be fine.
+    Without even thinking about it, I put the flask to my lips.
     """
 
     stop sound
@@ -110,9 +97,9 @@ label drunk_introduction:
     """
     Wait, are we there already?
 
-    I grab my bag and rush out the door.
+    I grab my bag and rush out of the door.
 
-    I almost fall on the platform, but manage to keep standing.
+    I almost fall onto the platform, but manage to keep my footing.
 
     The platform is already emptying.
 
@@ -139,14 +126,9 @@ label drunk_introduction:
     So, it looks like a storm is coming our way.
     """
 
-    footman """
-    Yes, I do not like it.
-
-    I am not used to driving in such weather.
     """
-
-
-    # She says his speech in the car is "incoherent". Here he speaks clearly. That could work on purpose, as he thinks he's making sense and they don't, but it's worth deciding.
+    The driver gives me a strange look.
+    """
 
     drunk """
     Do not worry. I am sure we will be there before the worst of it is upon us.
@@ -155,23 +137,10 @@ label drunk_introduction:
     """
 
     footman """
-    Claythorn Manor.
+    I am really sorry, sir.
 
-    A grand place, with a rich history.
+    I should focus on the road.
     """
-
-    drunk """
-    Really? What kind of history?
-    """
-
-    footman """
-    Oh, there is a lot to say.
-
-    But I am sorry, I should focus on the road.
-
-    Lady Claythorn will be happy to tell you all about her house, I am certain.
-    """
-
 
     drunk """
     Right.
@@ -197,33 +166,17 @@ label drunk_introduction:
     play sound thunder loop
     
     $ change_room("manor_exterior_storm")
+    
+    """
+    I am woken by thunder.
 
-    #   16:15 Manor exterior, storm (psychic_introduction)
-    #       - He wakes up when the car stops, looking somewhat better than before.
-    #       - The three of them walk to the door while the driver sees to the luggage.
-    #       - The butler greets them at the main door.
-    #
-    #   16:30 Entrance hall (common_day1_evening_second_arrival_part_1 / _part_2, called from captain_day1_evening)
-    #       - Butler: Lady Claythorn is busy, drinks are served in the tea room, or he can show them to their rooms.
-    #       - drunk: "I'm good, but I could use a drink. Which way is the tea room?"
-    #       - The butler points to the tea room on the left. Sinha goes with him, Baxter goes up to freshen up.
-    #
-    #   After the arrival (for reference)
-    #       - 16:45 Tea room: he rushes to the drinks tray, then drifts over to Rosalind Marsh
-    #         ("Ah! Samuel Manning, at your... at your service."), misses her hand,
-    #         and she makes her excuses. Baldwin, Moody and Sinha talk apart. (nurse/captain_day1_evening)
-    #       - 18:15 On the sofa, "rather exhausted", when the butler introduces him to Ted Harring (lad_day1_evening).
-    #       - 18:30 drunk_day1_evening opens in the tea room on the dinner gong.
-    #
-    #   Notes
-    #       - Hidden infos this chapter must reveal (unlock_chapters ('drunk', 'friday_afternoon')):
-    #         status, age, addict, job, heroic_act.
-    #       - 'lie' (feigning drunkenness) only unlocks on Saturday morning, so the sleep
-    #         in the car should not be explained as an act yet.
-    #       - next_tasks.md: the train is a mess, the story jumps from one place to the next
-    #         until he collapses in the tea room.
-    # --------------------------------------------
+    In front of me stands Claythorn Manor, even more impressive than I imagined.
 
-    # TRain arrival
+    Well, the weekend should be comfortable, at least.
+
+    The car pulls up in the driveway.
+
+    I grab my luggage and head to the entrance.
+    """
 
     jump drunk_day1_evening
