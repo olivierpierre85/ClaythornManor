@@ -52,5 +52,14 @@ label drunk_day1_evening:
 
     play sound dinner_gong
 
+    # Drunk is between nurse and host. 
+    # Focus on the food and ask for more drinks often? NO possibility to say no, he is unredeemable, unlike doctor.
+
+    # "I think our host politely asks me a few questions, that I manage to answer the best I can, but ""
+
+    # Describe the meal, a possible aristocracy meal for the situation
+
+    # VISIT manor MAKE the map choices.
+    # Billiard room to drink and sleep.
 
     jump drunk_day2_morning
