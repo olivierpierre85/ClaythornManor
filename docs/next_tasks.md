@@ -16,6 +16,9 @@ CHeck drunk mode strenght!!
 
 THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point. (done already with host)
 
+
+Claythorn doctor drun discussion. Doctor: You can still change. Drunk I don't want to change doctor, I am ok like that.
+
 THe drunk will describe the food with delight.
 
 => MAKE the drunk kill himself ON DAY 2 during dinner? Bring a tray and he is dead? => Faster and simpler
