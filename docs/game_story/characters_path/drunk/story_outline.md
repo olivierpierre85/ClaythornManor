@@ -16,10 +16,11 @@ Second class, drunk from the first line. The chapter is a chain of places with b
 ### 🍽️ Friday Evening — `drunk_day1_evening`
 Seated on Lady Claythorn's left. Dinner is half-seen through the drink, except the **sole**, which he reads whole and sober for one paragraph (`food`) — and which tells the hostess he is not the man he plays. He half-registers the things that come back to haunt him on Saturday night: the butler's fighter's hands, the psychic counting the boy's fingers, the doctor's addict sweat, Moody drinking only from his own flask.
 
-- **Billiard room** (before the others): he carries off every bottle worth the name (`raided_bar`, and the `port` he will need on Sunday).
-- **The letter**: on his desk, in a woman's hand, naming the doctor as Eleanor's killer (`wife`, and doctor `fraud`). He writes the burned second half. Then **DRINK or not**:
+- **Dinner**: he turns to Lady Claythorn (the food) or Miss Marsh (the wine), or to nobody. Either way he hears himself, shuts up, and the table leaves him to his plate and his glass.
+- **The letter** (his room, straight after dinner, so it is already on the desk when the doctor looks in during the party): in a woman's hand, naming the doctor as Eleanor's killer (`wife`, and doctor `fraud`). He writes the burned second half. Then **DRINK or not**:
   - **Drink** (`day1_drink`) — the only option on a first run.
   - **Put the bottle down** — an intuition option, unlocked only after dying `despair`.
+- **The house** (map), then the **billiard room** to drink and sleep. He wakes alone and carries off every bottle worth the name (`raided_bar`, and the `port` he will need on Sunday), or leaves them on the bar.
 
 ### ☀️ Saturday Morning — `drunk_day2_morning`
 Two versions. Drank: he wakes remembering nothing, reads the letter as new, finds his own handwriting on it, burns it, and fills the flask because his hands demand it. Sober: first clear morning in years, he burns the letter and chooses the flask — **water with a finger of whisky for the smell** (`watered_flask`, unlocks `lie`) or whisky. Then the shared breakfast: Moody found dead, the hunt announced, the men take rifles.

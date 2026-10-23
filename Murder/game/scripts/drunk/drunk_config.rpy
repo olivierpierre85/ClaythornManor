@@ -4,12 +4,22 @@ label init_drunk:
 
     call drunk_config_menu
 
+    call drunk_day1_evening_map_menu
+
     python:
         drunk_name = "Samuel Manning"
 
         drunk_init_variables = {
             # Generic Menus
             "day2_evening_think_menu" : drunk_day2_evening_menu_think,
+
+            # MAP Menus
+            "day1_evening_map_menu" : drunk_day1_evening_map_menu,
+
+            # Friday evening: first-visit framing below stairs, and whether
+            # he made it to the billiard room before bed
+            "day1_evening_downstairs_visited" : False,
+            "day1_evening_billiard_room_visited" : False,
 
             # Friday: every glass he empties. The sherry in the tea room and
             # the wine at dinner are the story's, the rest are his.

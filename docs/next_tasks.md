@@ -17,14 +17,16 @@ CHeck drunk mode strenght!!
 THE DRUNK will understand that one of the guest is the KILLER. HE WILL tell everyone at some point. (done already with host)
 
 
-Claythorn doctor drun discussion. Doctor: You can still change. Drunk I don't want to change doctor, I am ok like that.
+Claythorn doctor drun discussion. Doctor: You can still change. Drunk I don't want to change doctor, "You do not understand, I am ok like that.  Not because I think I can't, that I am too old too change.  I do not want to change. This is the best way I can live"
 
 THe drunk will describe the food with delight.
 
 => MAKE the drunk kill himself ON DAY 2 during dinner? Bring a tray and he is dead? => Faster and simpler
   BUT could it possibly be a fake death? Doctor  wouldn't know, but captain could taje his pulse? LAUDANUM CAN induce deep sleep similar looking to death AND captain actually do not check very str
 
-### FRiday
+### FRiday => NEXT
+READ new generated dialogs
+
 Train is a mess, the story will jump from one place to the next until he will collapse in the tea room. at dinner he will also have glimpse of weird stuff.
 
 Then you go to your room and see the doctor letter. Without Broken to save you, you got to make choice. LEAN into drunkness OR Pretend you are drunk and kill doc. DRINK or not? DRINKS counter
