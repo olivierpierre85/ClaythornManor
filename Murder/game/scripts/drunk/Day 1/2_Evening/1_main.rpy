@@ -153,15 +153,17 @@ label drunk_day1_evening:
     """
     After that, I keep to my plate and my glass.
 
-    Whenever the glass runs low, somebody fills it again.
+    Whenever the glass runs low, I ask for more.
 
-    I never say no.
+    They never say no.
+    
+    That tell me they follow proper etiquette. Good.
     """
 
     $ drunk_details.saved_variables["day1_drinks"] += 1
 
     """
-    I think our host politely asks me a few questions, which I manage to answer as best I can, but then the conversation dies out...
+    Our host politely asks me a few questions, which I manage to answer as best I can, but then the conversation dies out...
     """
 
     """
@@ -273,9 +275,7 @@ label drunk_day1_dinner_host:
 
     Sole, poached, under a butter sauce.
 
-    I take a mouthful, and the evening improves considerably.
-
-    Whoever made this sauce stood over it for the best part of an hour, and did not let it split once.
+    It is exquisite.
 
     The lady of the house ought to know that her cook deserves a rise.
 
@@ -300,18 +300,14 @@ label drunk_day1_dinner_host:
     Give your cook a rise.
     """
 
-    host """
-    I am so glad you are enjoying it, Mr Manning.
     """
+    She looks at me perplexed, not knowing what to answer.
 
-    """
-    She gives me the polite smile usually reserved for children and drunkards.
+    The she nods with a polite smile one would give a child.
 
     I go back over what I have just said.
 
     It did not come out the way it sounded in my head.
-
-    The cook will have to manage without the rise.
 
     I return to my plate and keep my mouth for eating.
     """
@@ -330,13 +326,7 @@ label drunk_day1_dinner_nurse:
     """
     Miss Marsh, on my left, has hardly touched her wine.
 
-    A claret, younger than it should be, and served too warm.
-
-    But it is honest, and there is plenty of it, which, for my purposes, is all a man can ask.
-
-    She ought to know that before she lets it go to waste.
-
-    I lean towards her to say so.
+    I lean towards her.
     """
 
     drunk """

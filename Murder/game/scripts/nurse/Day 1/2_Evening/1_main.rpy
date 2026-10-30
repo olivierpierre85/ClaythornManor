@@ -309,7 +309,7 @@ label nurse_day1_dinner_drunk:
     drunk """
     Me? Oh very well.
 
-    The wine is first rate, you should take a sip.
+    The claret is first rate, you should take a sip.
     """
 
     """
