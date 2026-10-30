@@ -188,13 +188,7 @@ label host_day1_evening:
     The last plates go out, and it is up to me to call the end of dinner.
     """
 
-    host """
-    It looks as though everyone has finished their meal.
-
-    I shall let you return to your rooms, then.
-
-    Afterwards there will be drinks in the billiard room for anyone who is inclined.
-    """
+    call common_day1_evening_host_dinner_end
 
     """
     Chairs go back.

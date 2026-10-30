@@ -57,7 +57,7 @@ label drunk_day1_evening:
 
     If anyone wants to talk to me, they can come to me.
 
-    I make myself comfortable in the couch.
+    I make myself comfortable on the couch.
     """
 
     $ drunk_details.saved_variables["day1_drinks"] += 1
@@ -73,7 +73,7 @@ label drunk_day1_evening:
 
     What was that, a gong?
 
-    I must have doze off a little.
+    I must have dozed off a little.
 
     Around me the rest of the guests head to the dining room, so I follow suit.
     """
@@ -156,8 +156,8 @@ label drunk_day1_evening:
     Whenever the glass runs low, I ask for more.
 
     They never say no.
-    
-    That tell me they follow proper etiquette. Good.
+
+    That tells me they follow proper etiquette. Good.
     """
 
     $ drunk_details.saved_variables["day1_drinks"] += 1
@@ -173,54 +173,20 @@ label drunk_day1_evening:
 
     After the fish come lamb cutlets, still pink at the bone, in a sauce made from their own juices with a spoonful of redcurrant jelly.
 
-    Simple, and done exactly right.
+    Simple, but delicious nonetheless.
 
-    Further down the table, one of the guests keeps wiping his forehead with his napkin.
-
-    The room is not that warm.
-
-    Odd, but my glass is empty again, and that seems more pressing.
-    """
-
-    """
-    The butler fills it himself this time.
-
-    His knuckles are flat and scarred.
-
-    I have seen hands like those before, though I cannot think where.
-    """
-
-    $ drunk_details.saved_variables["day1_drinks"] += 1
-
-    """
-    Then the beef, carved at the sideboard.
-
-    The shallots with it were sweated slowly in butter, never fried.
-
-    There is not one burnt edge on the plate.
-
-    Across the table, the man in the mask has not touched his wine.
-
-    Now and then, he drinks from a flask of his own.
-
-    A man after my own heart, I suppose.
-
-    The pudding is a charlotte russe, and it holds its shape when the spoon goes in, which is harder than it looks.
-
-    The lady who shared my car this afternoon sits further down, beside the young man.
-
-    She watches him all through the pudding.
-
-    At one point, I could swear she is counting his fingers.
-
-    Then the savoury arrives, angels on horseback, oysters wrapped in bacon on hot toast, and I forget about her entirely.
-
-    I have long since stopped counting the glasses.
+    The pudding is a charlotte russe, and it holds its shape when the spoon goes in.
 
     I have not eaten like this in years.
-    """
 
-    $ drunk_details.saved_variables["day1_drinks"] += 1
+    Yet I remember other suppers I have shared with members of the aristocracy.
+
+    In comparison, this meal is simpler, smaller.
+
+    I was expecting more. A joint of beef, perhaps, carved at the sideboard. Or shallots cooked slowly in butter.
+
+    Well, at least there is enough wine.
+    """
 
     $ drunk_details.description_hidden.unlock('food')
 
@@ -228,8 +194,21 @@ label drunk_day1_evening:
 
     call change_time(21, 00)
 
-    # TODO add dialogs
-    #   - Lady Claythorn ends the dinner: back to the rooms first, then drinks in the billiard room
+    """
+    The last plates go out.
+
+    Lady Claythorn looks round the table and addresses us once more.
+    
+    I understand that there will be drinks in the billiard room.
+
+    That is good news.
+
+    But I supposed I should head to my room first.
+
+    I have not even seen it yet, and my bag is up there.
+
+    A footman shows me the way.
+    """
 
     call drunk_day1_evening_letter
 
@@ -301,9 +280,9 @@ label drunk_day1_dinner_host:
     """
 
     """
-    She looks at me perplexed, not knowing what to answer.
+    She looks at me, perplexed, with no idea what to answer.
 
-    The she nods with a polite smile one would give a child.
+    Then she nods, with the polite smile one gives a child.
 
     I go back over what I have just said.
 
