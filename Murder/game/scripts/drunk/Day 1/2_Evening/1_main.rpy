@@ -210,7 +210,97 @@ label drunk_day1_evening:
     A footman shows me the way.
     """
 
-    call drunk_day1_evening_letter
+    $ change_room('bedroom_drunk', dissolve)
+
+    $ unlock_map('bedroom_drunk')
+
+    $ play_music('scary', 2)
+
+    """
+    The footman leaves me at the door.
+
+    The room is larger than I expected.
+
+    A good bed, a fire already lit, and a desk by the window.
+
+    I set my bag on the bed and open it.
+    """
+
+    play sound broken_glass
+
+    """
+    I put it too close to the edge, and everything spills out of it at once.
+
+    The bottles break or roll in every direction.
+
+    Most of them were empty by the time the train reached Scotland.
+
+    But not all of them.
+
+    Then I notice the envelope on the desk.
+
+    A welcome letter from our host, I assume.
+    """
+
+    call drunk_letter_first_part
+
+    """
+    I read it twice.
+
+    Then a third time, to be sure the drink is not reading it for me.
+
+    My wife.
+
+    Eleanor.
+
+    Nobody has spoken to me of Eleanor in years.
+
+    I made sure of that.
+
+    The doctor.
+
+    I never looked at his face at the inquest.
+
+    And I do not remember the name.
+
+    There was a Doctor Baldwin a few chairs away from me at dinner.
+
+    That could very well be him.
+
+    In fact, the more I think about it, the more I recognise his kind.
+
+    Confident, as doctors always are.
+
+    They make life-and-death decisions as if they were nothing.
+
+    And sometimes innocent people die.
+
+    I pick up one of the full bottles from the floor and pull the cork.
+
+    I do not bother with a glass.
+    """
+
+    call wait_screen_transition()
+
+    $ set_drunk_mode(3)
+
+    """
+    My mind is calmer now, filled with one simple idea.
+
+    The doctor. It is good that he is here.
+
+    I finally have a chance to put all of this behind me.
+
+    I can set things right.
+
+    I look at the letter and, without thinking, add my own part to it.
+
+    Then I stand up, with difficulty.
+
+    I should probably go straight to bed, but my legs carry me out of the door.
+
+    I am standing in the hallway, not sure what to do next.
+    """
 
     call change_time(21, 30)
 
@@ -341,70 +431,5 @@ label drunk_day1_dinner_nurse:
 
     So I nod at her glass, and say nothing more.
     """
-
-    return
-
-
-# ------------------------------------
-#   THE LETTER (his room, straight after dinner)
-#   -> day1_drink, or the bottle put down (intuition, after 'despair')
-# ------------------------------------
-label drunk_day1_evening_letter:
-
-    $ change_room('bedroom_drunk', dissolve)
-
-    $ unlock_map('bedroom_drunk')
-
-    $ play_music('scary', 2)
-
-    # TODO add dialogs
-    #   - His room. A letter on the desk, in a fine, elegant hand
-    # TODO he empties his bag, whisky bottles fall on the floor.
-
-    call drunk_letter_first_part
-
-    $ drunk_details.description_hidden.unlock('wife')
-
-    $ doctor_details.description_hidden.unlock('fraud')
-
-    # TODO add dialogs
-    #   - Eleanor. The doctor, a few chairs away at dinner
-    #   - He takes up a pen and writes the second half himself
-
-    call drunk_letter_second_part
-
-    # TODO add dialogs
-    #   - The bottle in his bag
-
-    $ time_left = 1
-
-    call run_menu(TimedMenu("drunk_day1_evening_menu_letter", [
-        TimedMenuChoice("Drink until it goes away", 'drunk_day1_evening_letter_drink', early_exit=True),
-        TimedMenuChoice("Put the bottle down{{intuition}}", 'drunk_day1_evening_letter_sober', early_exit=True, condition="drunk_details.endings.is_unlocked('despair')"),
-    ]))
-
-    return
-
-
-label drunk_day1_evening_letter_drink:
-
-    $ drunk_details.threads.unlock('day1_drink')
-
-    $ drunk_details.saved_variables["day1_drinks"] += 1
-
-    $ set_drunk_mode(3)
-
-    # TODO add dialogs
-
-    return
-
-
-label drunk_day1_evening_letter_sober:
-
-    # TODO check the strength: the sherry and the dinner wine are still in him
-    $ set_drunk_mode(1)
-
-    # TODO add dialogs
-    #   - From here on he only plays the drunk (lie). The others still see him slumped at the bar
 
     return
